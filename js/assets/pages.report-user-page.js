@@ -1,4 +1,4 @@
-webpackJsonp([62], {
+webpackJsonp([61], {
     DkuH: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -38,7 +38,7 @@ webpackJsonp([62], {
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.props.isLoggedIn || this.props.login()
                 }, t.prototype.render = function() {
-                    return c.createElement(k._6, {
+                    return c.createElement(k._4, {
                         "data-test-selector": "report-user-page",
                         alignItems: k.c.Center,
                         display: k.P.Flex,
@@ -47,7 +47,7 @@ webpackJsonp([62], {
                         padding: 3
                     }, this.renderPage())
                 }, t.prototype.renderPage = function() {
-                    return this.props.isLoggedIn ? this.props.userToReportData.error ? c.createElement(k._6, {
+                    return this.props.isLoggedIn ? this.props.userToReportData.error ? c.createElement(k._4, {
                         margin: {
                             bottom: 1
                         }
@@ -59,14 +59,14 @@ webpackJsonp([62], {
                         title: Object(u.d)("Report {channelName}", {
                             channelName: this.props.match.params.channelName
                         }, "ReportUserPage")
-                    }) : c.createElement(k._12, {
+                    }) : c.createElement(k._10, {
                         lineCount: 3
-                    }) : c.createElement(k._6, {
+                    }) : c.createElement(k._4, {
                         "data-test-selector": "report-user-page__logged-out",
                         alignItems: k.c.Center,
                         display: k.P.Flex,
                         flexDirection: k.R.Column
-                    }, c.createElement(k._6, {
+                    }, c.createElement(k._4, {
                         margin: {
                             bottom: 1
                         }
@@ -192,4 +192,4 @@ webpackJsonp([62], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.report-user-page-d865e3cdafdaff4ea288f3ef8a18b72b.js.map
+//# sourceMappingURL=pages.report-user-page-6ad663e611562fd3e669b6b2d84d1bf7.js.map

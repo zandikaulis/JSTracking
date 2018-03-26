@@ -2,12 +2,12 @@ webpackJsonp([60], {
     "9u8h": function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
-            return a
+            return s
         });
         var r = i("TToO"),
             n = i("6sO2"),
-            s = i("Aj/L"),
-            a = function() {
+            a = i("Aj/L"),
+            s = function() {
                 function e() {}
                 return e.get = function(e, t, i) {
                     return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
@@ -15,19 +15,6 @@ webpackJsonp([60], {
                             switch (n.label) {
                                 case 0:
                                     return [4, this.request(e, r.__assign({}, t, {
-                                        method: "GET"
-                                    }), i)];
-                                case 1:
-                                    return [2, n.sent()]
-                            }
-                        })
-                    })
-                }, e.getOrThrow = function(e, t, i) {
-                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                         method: "GET"
                                     }), i)];
                                 case 1:
@@ -48,38 +35,12 @@ webpackJsonp([60], {
                             }
                         })
                     })
-                }, e.putOrThrow = function(e, t, i) {
-                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
-                                        method: "PUT"
-                                    }), i)];
-                                case 1:
-                                    return [2, n.sent()]
-                            }
-                        })
-                    })
                 }, e.post = function(e, t, i) {
                     return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
                         return r.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
                                     return [4, this.request(e, r.__assign({}, t, {
-                                        method: "POST"
-                                    }), i)];
-                                case 1:
-                                    return [2, n.sent()]
-                            }
-                        })
-                    })
-                }, e.postOrThrow = function(e, t, i) {
-                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                         method: "POST"
                                     }), i)];
                                 case 1:
@@ -100,51 +61,17 @@ webpackJsonp([60], {
                             }
                         })
                     })
-                }, e.deleteOrThrow = function(e, t, i) {
-                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), i)];
-                                case 1:
-                                    return [2, n.sent()]
-                            }
-                        })
-                    })
                 }, e.request = function(e, t, i) {
                     return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
-                        var n, s, a, o;
-                        return r.__generator(this, function(u) {
-                            switch (u.label) {
+                        var n, a;
+                        return r.__generator(this, function(r) {
+                            switch (r.label) {
                                 case 0:
-                                    return t = this.constructOptions(t, i), n = t.headers ? t.headers["Content-Type"] : void 0, s = this.serialize(t.body, n), a = r.__assign({}, t, {
-                                        body: s
-                                    }), [4, this._fetch(e, a)];
+                                    return t = this.constructOptions(t, i), n = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, n), [4, this._fetch(e, t)];
                                 case 1:
-                                    return o = u.sent(), [4, this.constructLegacyAPIResponse(o)];
+                                    return a = r.sent(), [4, this.constructLegacyAPIResponse(a)];
                                 case 2:
-                                    return [2, u.sent()]
-                            }
-                        })
-                    })
-                }, e.requestOrThrow = function(e, t, i) {
-                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
-                        var n, s;
-                        return r.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return a.trys.push([0, 2, , 3]), [4, this.request(e, t, i)];
-                                case 1:
-                                    if ((n = a.sent()).error || n.requestError) throw new Error("Error while making request");
-                                    return s = r.__assign({}, n, {
-                                        body: n.body
-                                    }), [2, Promise.resolve(s)];
-                                case 2:
-                                    throw a.sent();
-                                case 3:
-                                    return [2]
+                                    return [2, r.sent()]
                             }
                         })
                     })
@@ -152,7 +79,7 @@ webpackJsonp([60], {
                     return new URL(e, n.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return r.__awaiter(this, void 0, void 0, function() {
-                        var t, i, n, s;
+                        var t, i, n, a;
                         return r.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
@@ -164,7 +91,7 @@ webpackJsonp([60], {
                                 case 2:
                                     return i = r.sent(), e.ok ? t.body = i : t.error = i, [3, 4];
                                 case 3:
-                                    return n = r.sent(), e.headers && e.headers.get && (s = e.headers.get("Content-Type")) && -1 !== s.indexOf("application/json") && (t.requestError = n), [3, 4];
+                                    return n = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = n), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -186,9 +113,7 @@ webpackJsonp([60], {
                         headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
-                        contentType: t
-                    }), null) : null
+                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
                     var i = n.o.store.getState(),
                         r = {
@@ -198,11 +123,11 @@ webpackJsonp([60], {
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                    var a = Object(s.c)(i);
-                    return a && (r.Authorization = "OAuth " + a.authToken, a.legacyCSRFToken && (r["Twitch-Api-Token"] = a.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                    var s = Object(a.c)(i);
+                    return s && (r.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (r["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                         r[e] && delete r[e]
                     }), r
-                }, e.logger = n.o.logger.withCategory("legacy-api"), e
+                }, e
             }()
     },
     CNsG: function(e, t, i) {
@@ -211,25 +136,25 @@ webpackJsonp([60], {
             value: !0
         });
         var r, n = i("TToO"),
-            s = i("GiK3"),
-            a = i("CIox"),
+            a = i("GiK3"),
+            s = i("CIox"),
             o = i("2KeS"),
             u = i("6sO2"),
             c = i("7vx8"),
             l = i("CSlQ"),
             d = i("R0Kh"),
-            h = i("9u8h"),
-            m = this,
-            f = u.o.logger.withCategory("verify-email"),
+            m = i("9u8h"),
+            f = this,
+            h = u.o.logger.withCategory("verify-email"),
             p = function(e, t) {
-                return n.__awaiter(m, void 0, void 0, function() {
+                return n.__awaiter(f, void 0, void 0, function() {
                     var i, r;
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
                                 i = "/kraken/users/" + e, n.label = 1;
                             case 1:
-                                return n.trys.push([1, 3, , 4]), [4, h.a.putOrThrow(i, {
+                                return n.trys.push([1, 3, , 4]), [4, m.a.put(i, {
                                     body: {
                                         email: t
                                     }
@@ -237,40 +162,40 @@ webpackJsonp([60], {
                             case 2:
                                 return n.sent(), [2, !0];
                             case 3:
-                                return r = n.sent(), f.error(r, "Verify Email Service"), [2, !1];
+                                return r = n.sent(), h.error(r, "Verify Email Service"), [2, !1];
                             case 4:
                                 return [2]
                         }
                     })
                 })
             },
-            _ = i("vH/s");
+            y = i("vH/s");
         ! function(e) {
             e.Click = "click", e.Dismiss = "dismiss"
         }(r || (r = {}));
         var v = i("Odds"),
-            y = (i("yY1M"), i("RDCx"));
+            _ = (i("yY1M"), i("RDCx"));
         i.d(t, "DISMISSAL_DATA_STORAGE_KEY", function() {
-            return g
+            return S
         }), i.d(t, "DISMISS_BTN_SELECTOR", function() {
             return D
         }), i.d(t, "VERIFY_BTN_SELECTOR", function() {
-            return b
-        }), i.d(t, "VerifyEmailBarPresentation", function() {
-            return w
-        }), i.d(t, "VerifyEmailBar", function() {
             return C
+        }), i.d(t, "VerifyEmailBarPresentation", function() {
+            return b
+        }), i.d(t, "VerifyEmailBar", function() {
+            return k
         });
-        var E, g = "verifyemailbar_dismissal",
-            S = 18e5,
-            T = 5e3,
-            I = new Set(["/"]),
+        var E, S = "verifyemailbar_dismissal",
+            I = 18e5,
+            g = 5e3,
+            T = new Set(["/"]),
             D = "dimiss-btn",
-            b = "verify-email-btn";
+            C = "verify-email-btn";
         ! function(e) {
             e[e.INITIAL = 0] = "INITIAL", e[e.CLICK_TO_VERIFY = 1] = "CLICK_TO_VERIFY", e[e.EMAIL_SENT = 2] = "EMAIL_SENT", e[e.ERROR_SENDING = 3] = "ERROR_SENDING", e[e.DISMISSED = 4] = "DISMISSED"
         }(E || (E = {}));
-        var w = function(e) {
+        var b = function(e) {
                 function t(t) {
                     var i = e.call(this, t) || this;
                     return i.state = {
@@ -282,7 +207,7 @@ webpackJsonp([60], {
                         i.dismissalData = {
                             dismissalCount: t + 1,
                             dismissalDateTimeMs: Date.now()
-                        }, u.l.set(g, i.dismissalData), i.setState({
+                        }, u.l.set(S, i.dismissalData), i.setState({
                             verifyEmailBarState: E.DISMISSED
                         }), i.resetAfterDismissalTimeoutID = setTimeout(function() {
                             return n.__awaiter(i, void 0, void 0, function() {
@@ -297,7 +222,7 @@ webpackJsonp([60], {
                                     }
                                 })
                             })
-                        }, 1.01 * S), u.o.tracking.track(_.SpadeEventType.VerifyEmailBar, {
+                        }, 1.01 * I), u.o.tracking.track(y.SpadeEventType.VerifyEmailBar, {
                             action: r.Dismiss
                         })
                     }, i.onClickToVerify = function(e) {
@@ -316,13 +241,13 @@ webpackJsonp([60], {
                                             i.setState({
                                                 verifyEmailBarState: E.DISMISSED
                                             }), i.afterVerifyDismissTimeoutID = null
-                                        }, T), u.o.tracking.track(_.SpadeEventType.VerifyEmailBar, {
+                                        }, g), u.o.tracking.track(y.SpadeEventType.VerifyEmailBar, {
                                             action: r.Click
                                         }), [2]
                                 }
                             })
                         })
-                    }, i.dismissalData = u.l.getOptional(g), i
+                    }, i.dismissalData = u.l.getOptional(S), i
                 }
                 return n.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
                     var i = this;
@@ -360,57 +285,57 @@ webpackJsonp([60], {
                 }, t.prototype.isVisible = function() {
                     return this.state.verifyEmailBarState !== E.INITIAL && this.state.verifyEmailBarState !== E.DISMISSED
                 }, t.prototype.renderClickToVerify = function() {
-                    return s.createElement(v._6, {
+                    return a.createElement(v._4, {
                         fullWidth: !0,
-                        position: v._13.Relative
-                    }, s.createElement(v._29, {
+                        position: v._11.Relative
+                    }, a.createElement(v._27, {
                         className: "verify-email-banner",
                         display: v.P.Flex,
-                        justifyContent: v._5.Center,
+                        justifyContent: v._3.Center,
                         alignItems: v.c.Center
-                    }, s.createElement(v._0, {
+                    }, a.createElement(v.Y, {
                         fullHeight: !0,
                         fullWidth: !0
-                    }, s.createElement("button", {
+                    }, a.createElement("button", {
                         onClick: this.onClickToVerify,
-                        "data-test-selector": b
-                    }, s.createElement(v.O, {
+                        "data-test-selector": C
+                    }, a.createElement(v.O, {
                         color: v.J.Alt,
                         fontSize: v.T.Size5
-                    }, Object(u.d)("Click here to verify your email", "VerifyEmail")))), s.createElement(v._29, {
+                    }, Object(u.d)("Click here to verify your email", "VerifyEmail")))), a.createElement(v._27, {
                         className: "verify-email-banner__dismiss",
-                        position: v._13.Absolute,
+                        position: v._11.Absolute,
                         attachRight: !0,
                         margin: {
                             right: 2
                         }
-                    }, s.createElement(v.u, {
+                    }, a.createElement(v.u, {
                         type: v.A.Text,
                         onClick: this.dismissBarClickHandler,
                         "data-test-selector": D
                     }, Object(u.d)("Not Now", "VerifyEmail")))))
                 }, t.prototype.renderEmailSent = function() {
-                    return s.createElement(v._29, {
+                    return a.createElement(v._27, {
                         className: "verify-email-banner verify-email-banner--success",
                         display: v.P.Flex,
-                        justifyContent: v._5.Center,
+                        justifyContent: v._3.Center,
                         alignItems: v.c.Center
-                    }, s.createElement(v._6, {
+                    }, a.createElement(v._4, {
                         className: "verify-email-banner__body"
-                    }, s.createElement(v.O, {
+                    }, a.createElement(v.O, {
                         fontSize: v.T.Size5
                     }, Object(u.d)("Verification email sent to {email}", {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail"))))
                 }, t.prototype.renderErrorSending = function() {
-                    return s.createElement(v._29, {
+                    return a.createElement(v._27, {
                         className: "verify-email-banner verify-email-banner--error",
                         display: v.P.Flex,
-                        justifyContent: v._5.Center,
+                        justifyContent: v._3.Center,
                         alignItems: v.c.Center
-                    }, s.createElement(v._6, {
+                    }, a.createElement(v._4, {
                         className: "verify-email-banner__body"
-                    }, s.createElement(v.O, {
+                    }, a.createElement(v.O, {
                         fontSize: v.T.Size5
                     }, Object(u.d)("Unable to send an email to {email}. Please try again later.", {
                         email: this.props.data.currentUser.email
@@ -418,7 +343,7 @@ webpackJsonp([60], {
                 }, t.prototype.shouldHide = function() {
                     return !(this.isDataLoaded() && !this.props.data.currentUser.isEmailVerified) || (this.shouldRespectDismissal() || this.isShowingPrimeUpsell())
                 }, t.prototype.isShowingPrimeUpsell = function() {
-                    if (I.has(this.props.location.pathname)) {
+                    if (T.has(this.props.location.pathname)) {
                         var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                             t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
                         return Object(d.i)(e, t)
@@ -426,12 +351,12 @@ webpackJsonp([60], {
                     return !1
                 }, t.prototype.shouldRespectDismissal = function() {
                     var e = this.dismissalData;
-                    return null !== e && (e.dismissalCount > 0 && Date.now() < e.dismissalDateTimeMs + S)
+                    return null !== e && (e.dismissalCount > 0 && Date.now() < e.dismissalDateTimeMs + I)
                 }, t.prototype.isDataLoaded = function() {
                     return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                 }, t
-            }(s.Component),
-            C = Object(o.d)(Object(l.d)("VerifyEmail"), Object(c.a)(y), a.f)(w)
+            }(a.Component),
+            k = Object(o.d)(Object(l.d)("VerifyEmail"), Object(c.a)(_), s.e)(b)
     },
     RDCx: function(e, t) {
         var i = {
@@ -539,4 +464,4 @@ webpackJsonp([60], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-0ffa78f29abcae13a2b05cb8b49c9cab.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-a8dc282e4cde828e742ff8da0717db4a.js.map
