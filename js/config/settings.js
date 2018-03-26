@@ -447,6 +447,18 @@ window.__twilightSettings = {
                 "value": "control"
             }]
         },
+        "6699df7d-9f23-494c-87a1-06fdf80f1e68": {
+            "name": "twilight_video_card_updates",
+            "v": 3375,
+            "t": 1,
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "variation"
+            }]
+        },
         "6f822381-f41d-445e-bf88-36fb9095a7b5": {
             "name": "twilight_v_ember",
             "v": 3139,
