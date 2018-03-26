@@ -1,4 +1,4 @@
-webpackJsonp([62], {
+webpackJsonp([63], {
     "0zm4": function(e, t) {
         var i = {
             kind: "Document",
@@ -111,43 +111,43 @@ webpackJsonp([62], {
                         isLoading: !1,
                         isSuccess: !1
                     }, t.renderStatus = function() {
-                        return t.state.isError ? a.createElement(E._4, {
+                        return t.state.isError ? a.createElement(E._6, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": v
                         }, a.createElement(E.O, {
-                            type: E._41.H5,
+                            type: E._43.H5,
                             color: E.J.Error
-                        }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? a.createElement(E._4, {
+                        }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? a.createElement(E._6, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": f
                         }, a.createElement(E.O, {
-                            type: E._41.H5,
+                            type: E._43.H5,
                             color: E.J.Alt2
-                        }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? a.createElement(E._4, {
+                        }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? a.createElement(E._6, {
                             margin: {
                                 top: 1
                             }
                         }, a.createElement(E.O, {
-                            type: E._41.H5,
+                            type: E._43.H5,
                             bold: !0
-                        }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : a.createElement(E._27, {
+                        }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : a.createElement(E._29, {
                             display: E.P.Flex,
                             flexDirection: E.R.Column,
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(E._4, {
+                        }, a.createElement(E._6, {
                             margin: {
                                 bottom: 1
                             }
                         }, a.createElement(E.O, {
-                            type: E._41.H5,
+                            type: E._43.H5,
                             color: E.J.Alt2
-                        }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), a.createElement(E._4, {
+                        }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), a.createElement(E._6, {
                             flexGrow: 0
                         }, a.createElement(E.u, {
                             type: E.A.Default,
@@ -190,7 +190,7 @@ webpackJsonp([62], {
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(E._27, {
+                    return a.createElement(E._29, {
                         padding: {
                             x: 3,
                             top: 3,
@@ -200,7 +200,7 @@ webpackJsonp([62], {
                         flexDirection: E.R.Column
                     }, a.createElement(E.O, {
                         className: "title",
-                        type: E._41.H2
+                        type: E._43.H2
                     }, Object(c.d)("Email Unsubscribe", "EmailUnsubscribe")), this.renderStatus())
                 }, t
             }(a.Component),
@@ -216,4 +216,4 @@ webpackJsonp([62], {
         })
     }
 });
-//# sourceMappingURL=pages.email-unsubscribe-92182fb31d66cc526f722f429d2996d6.js.map
+//# sourceMappingURL=pages.email-unsubscribe-9f500a3801b74e0f375879910e027067.js.map

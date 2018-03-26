@@ -75,7 +75,7 @@ webpackJsonp([59], {
                 }, t.prototype.render = function() {
                     var e = this.props.title.length < 1 || this.state.publishState === s.Error,
                         t = !this.props.isClipResolved || this.state.publishState === s.Sending;
-                    return r.createElement(g._4, null, this.props.slug, r.createElement(g.u, {
+                    return r.createElement(g._6, null, this.props.slug, r.createElement(g.u, {
                         onClick: this.onPublish,
                         disabled: e,
                         state: t ? g.z.Loading : g.z.Default,
@@ -86,7 +86,7 @@ webpackJsonp([59], {
                     name: "publishClip"
                 })], t)
             }(r.Component),
-            k = Object(o.e)(b);
+            k = Object(o.f)(b);
         ! function(e) {
             e.creating = "creating", e.created = "created", e.failed = "failed"
         }(f || (f = {}));
@@ -128,16 +128,16 @@ webpackJsonp([59], {
                     var e = this.getIsClipResolved(this.props) && !this.getIsCreationFailed(this.props);
                     !this.hasSentEditClip && e && this.state.isPlayerIframeLoaded && this.props.data.clip && this.props.data.clip.rawMedia && (this.props.playerConnection.sendMessage(Object(u.r)(this.props.data.clip.rawMedia)), this.hasSentEditClip = !0)
                 }, t.prototype.render = function() {
-                    if (this.state.isPollingTimedOut || this.getIsCreationFailed(this.props)) return r.createElement(o.a, {
+                    if (this.state.isPollingTimedOut || this.getIsCreationFailed(this.props)) return r.createElement(o.b, {
                         to: "/500"
                     });
                     var e = this.props.data.clip;
-                    if (!e || !e.rawMedia) return r.createElement(g._4, null);
+                    if (!e || !e.rawMedia) return r.createElement(g._6, null);
                     var t, i, n = (t = e.rawMedia.defaultClipInitialOffset, i = e.rawMedia.duration - e.rawMedia.defaultClipInitialOffset, {
                         startOffset: t,
                         endOffset: t + i
                     });
-                    return r.createElement(g._4, null, r.createElement(S.b, {
+                    return r.createElement(g._6, null, r.createElement(S.b, {
                         slug: this.props.slug,
                         onLoaded: this.onLoaded,
                         playerType: S.a.Editing
@@ -171,16 +171,16 @@ webpackJsonp([59], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e;
-                    return "/:slug/edit" === this.props.match.path ? (e = this.props.match.params.slug, r.createElement(o.a, {
+                    return "/:slug/edit" === this.props.match.path ? (e = this.props.match.params.slug, r.createElement(o.b, {
                         to: {
                             pathname: "/create",
                             state: {
                                 slug: e
                             }
                         }
-                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, r.createElement(g._4, null, r.createElement(O, {
+                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, r.createElement(g._6, null, r.createElement(O, {
                         slug: e
-                    }))) : r.createElement(o.a, {
+                    }))) : r.createElement(o.b, {
                         to: "/"
                     })
                 }, t
@@ -690,12 +690,13 @@ webpackJsonp([59], {
             o = i("rqhk"),
             l = i("kJau"),
             d = i("icZh"),
-            u = i("Odds");
+            u = i("46tX"),
+            p = i("Odds");
         i("vtXo");
         ! function(e) {
             e.Viewing = "clips-viewing", e.Editing = "clips-editing"
         }(n || (n = {}));
-        var p = function(e) {
+        var c = function(e) {
             function t(t) {
                 var i = e.call(this, t) || this;
                 i.hasSetPlayerRef = !1, i.setInitialSlug = function(e) {
@@ -724,29 +725,29 @@ webpackJsonp([59], {
             }, t.prototype.componentDidUpdate = function() {
                 !this.hasSetPlayerRef && this.playerRef && (this.hasSetPlayerRef = !0, Object(o.s)(this.props.slug, this.playerRef.contentWindow), this.playerRef.contentWindow.postMessage(Object(o.m)(), l.a))
             }, t.prototype.render = function() {
-                return this.state.initialSlug ? a.createElement(u._27, {
+                return this.state.initialSlug ? a.createElement(p._29, {
                     className: "clips-video-iframe",
-                    position: u._11.Relative,
+                    position: p._13.Relative,
                     fullWidth: !0,
                     fullHeight: !0
-                }, a.createElement(u._27, {
-                    display: this.state.isLoaded ? u.P.Hide : u.P.Flex,
-                    color: u.J.Overlay,
-                    alignItems: u.c.Center,
-                    justifyContent: u._3.Center,
-                    position: u._11.Absolute,
+                }, a.createElement(p._29, {
+                    display: this.state.isLoaded ? p.P.Hide : p.P.Flex,
+                    color: p.J.Overlay,
+                    alignItems: p.c.Center,
+                    justifyContent: p._5.Center,
+                    position: p._13.Absolute,
                     fullHeight: !0,
                     fullWidth: !0
-                }, a.createElement(u._6, {
-                    size: u._25.Large,
+                }, a.createElement(p._8, {
+                    size: p._27.Large,
                     inheritColor: !0
-                })), a.createElement(u.Y, {
-                    display: this.state.isLoaded ? u.P.Block : u.P.HideAccessible,
-                    position: u._11.Absolute,
+                })), a.createElement(p._0, {
+                    display: this.state.isLoaded ? p.P.Block : p.P.HideAccessible,
+                    position: p._13.Absolute,
                     fullHeight: !0,
                     fullWidth: !0
                 }, a.createElement("iframe", {
-                    src: l.a + "/?player=" + this.props.playerType + "&clip=" + this.state.initialSlug + "&origin=" + window.location.origin + "&branding=false&externalfullscreen=true",
+                    src: l.a + "/?player=" + this.props.playerType + "&clip=" + this.state.initialSlug + "&origin=" + window.location.origin + "&branding=false&externalfullscreen=" + !Object(u.c)(navigator.userAgent),
                     frameBorder: "0",
                     scrolling: "no",
                     allowFullScreen: !0,
@@ -762,8 +763,8 @@ webpackJsonp([59], {
         i.d(t, "a", function() {
             return n
         }), i.d(t, "b", function() {
-            return p
+            return c
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-4c73873d94ea5c2ea466edaf824d5941.js.map
+//# sourceMappingURL=sites.clips.pages.create-f5cde57becd3af98385cd8d5dca27583.js.map

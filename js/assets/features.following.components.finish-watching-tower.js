@@ -178,18 +178,18 @@ webpackJsonp([73], {
                             }
                         }) : i = i.slice(0, n)
                     }
-                    return r.createElement("div", null, r.createElement(m._4, {
+                    return r.createElement("div", null, r.createElement(m._6, {
                         margin: {
                             bottom: 2
                         }
                     }, r.createElement(m.O, {
-                        type: m._41.H4,
+                        type: m._43.H4,
                         color: m.J.Alt2,
                         fontSize: m.T.Size5,
-                        transform: m._40.Uppercase
+                        transform: m._42.Uppercase
                     }, Object(a.d)("Resume Watching", "viewedVideos"))), r.createElement(u.b, {
                         videos: i,
-                        videoCardSize: m._48.Medium,
+                        videoCardSize: m._50.Medium,
                         trackingMedium: s.PageviewMedium.Following,
                         trackingContent: s.PageviewContent.ResumeWatchingVideos,
                         viewAllButtonProps: e
@@ -210,4 +210,4 @@ webpackJsonp([73], {
         })
     }
 });
-//# sourceMappingURL=features.following.components.finish-watching-tower-3da9ff336878c85ca0a650a1fb631d1e.js.map
+//# sourceMappingURL=features.following.components.finish-watching-tower-f66ee365ef503a16ea4c5bd6fab02788.js.map
