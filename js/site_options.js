@@ -4280,13 +4280,13 @@ window.SiteOptions = {
         },
         "c3312752-b5ec-49f5-b248-046a65124797": {
             "name": "android_branch_io",
-            "v": 3376,
+            "v": 3378,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "active"
             }]
         },
