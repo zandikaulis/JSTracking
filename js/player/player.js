@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".83ce8c1112c7007e9a22.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".bd3d0ff63c11f0dcdc9f.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -2389,33 +2389,33 @@
 
         function r(e) {
             return {
-                type: p,
+                type: h,
                 video: e
             }
         }
 
         function i() {
             return {
-                type: h
+                type: m
             }
         }
 
         function o() {
             return {
-                type: m
+                type: y
             }
         }
 
         function a() {
             return {
-                type: y
+                type: v
             }
         }
 
         function s(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             return {
-                type: v,
+                type: g,
                 muted: e,
                 automated: t
             }
@@ -2424,69 +2424,79 @@
         function u() {
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
             return {
-                type: g,
+                type: b,
                 volume: e
             }
         }
 
         function c(e) {
             return {
-                type: b,
+                type: _,
                 backendType: e
             }
         }
 
         function l(e) {
             return {
-                type: _,
+                type: w,
                 issueType: e
             }
         }
 
         function d(e) {
             return {
-                type: w,
+                type: k,
                 playbackRate: e
             }
         }
 
         function f(e) {
             return {
-                type: k,
+                type: E,
                 seekTime: e
             }
         }
+
+        function p(e) {
+            return {
+                type: S,
+                time: e
+            }
+        }
         n.d(t, "b", function() {
-            return p
-        }), n.d(t, "h", function() {
             return h
-        }), n.d(t, "g", function() {
+        }), n.d(t, "h", function() {
             return m
-        }), n.d(t, "a", function() {
+        }), n.d(t, "g", function() {
             return y
-        }), n.d(t, "f", function() {
+        }), n.d(t, "a", function() {
             return v
-        }), n.d(t, "e", function() {
+        }), n.d(t, "f", function() {
             return g
-        }), n.d(t, "c", function() {
+        }), n.d(t, "e", function() {
             return b
-        }), n.d(t, "i", function() {
+        }), n.d(t, "c", function() {
             return _
-        }), n.d(t, "d", function() {
+        }), n.d(t, "i", function() {
             return w
-        }), n.d(t, "j", function() {
+        }), n.d(t, "d", function() {
             return k
-        }), t.t = r, t.q = i, t.p = o, t.k = a, t.o = s, t.n = u, t.l = c, t.s = l, t.m = d, t.r = f;
-        var p = "load video api",
-            h = "video api play content",
-            m = "video api pause content",
-            y = "automated pause content",
-            v = "video api mute player",
-            g = "video api change volume",
-            b = "video api change backend",
-            _ = "video api report video issue",
-            w = "video api change playback rate",
-            k = "video api seek"
+        }), n.d(t, "j", function() {
+            return E
+        }), n.d(t, "k", function() {
+            return S
+        }), t.v = r, t.r = i, t.q = o, t.l = a, t.p = s, t.o = u, t.m = c, t.u = l, t.n = d, t.s = f, t.t = p;
+        var h = "load video api",
+            m = "video api play content",
+            y = "video api pause content",
+            v = "automated pause content",
+            g = "video api mute player",
+            b = "video api change volume",
+            _ = "video api change backend",
+            w = "video api report video issue",
+            k = "video api change playback rate",
+            E = "video api seek",
+            S = "video api set live max latency"
     }, function(e, t, n) {
         "use strict";
 
@@ -7386,6 +7396,9 @@
                         return !(!this.core || !this.core.absAvailable) && this.core.absAvailable()
                     }
                 }, {
+                    key: "setLiveMaxLatency",
+                    value: function() {}
+                }, {
                     key: "destroy",
                     value: function() {
                         this.core && (this.core.pause(), this.core.destroy()), this.store.getState().window.clearInterval(this.statsUpdateLoop)
@@ -7856,6 +7869,11 @@
                     key: "absAvailable",
                     value: function() {
                         return !0
+                    }
+                }, {
+                    key: "setLiveMaxLatency",
+                    value: function(e) {
+                        null === this._mediaPlayer && this._apiCallQueue.push(this.setLiveMaxLatency.bind(this, e)), this._mediaPlayer.setLiveMaxLatency(e)
                     }
                 }, {
                     key: "destroy",
@@ -10992,7 +11010,7 @@
                     qe.emit(g.m)
                 }, Le.getPlayed = function() {}, Le.getSrc = function() {}, Le.setSrc = function() {}, Le.getCaption = function() {
                     return nt
-                }, Le.absAvailable = function() {}, Le.requestAdFill = function(e, t, n) {
+                }, Le.absAvailable = function() {}, Le.setLiveMaxLatency = function() {}, Le.requestAdFill = function(e, t, n) {
                     Ae("requestFlashAd", [e, t, n])
                 }, Le.destroy = function() {
                     Te(), v.e(ot), it = null
@@ -12778,7 +12796,7 @@
                 return []
             }, e.setChannel = function(e, t) {}, e.elapsedTime = function() {}, e.setVideo = function(e, t) {}, e.getVideoInfo = function() {}, e.getCaption = function() {}, e.getBackend = function() {
                 return s
-            }, e.absAvailable = function() {}
+            }, e.absAvailable = function() {}, e.setLiveMaxLatency = function(e) {}
         }
         n.d(t, "a", function() {
             return s
@@ -12954,7 +12972,7 @@
                     return {}
                 }, n.getCaption = function() {}, n.getBackend = function() {
                     return y
-                }, n.getVersion = function() {}, n.elapsedTime = function() {}, n.absAvailable = function() {},
+                }, n.getVersion = function() {}, n.elapsedTime = function() {}, n.absAvailable = function() {}, n.setLiveMaxLatency = function() {},
                 function() {
                     i = new u.a, o = document.createElement("video"), o.autoplay = e.autoplay, e.playsinline && (o.setAttribute("webkit-playsinline", ""), o.setAttribute("playsinline", "")), e.muted && o.setAttribute("muted", ""), setTimeout(function() {
                         i.emit(l.p)
@@ -15175,7 +15193,7 @@
             Ne = function(e) {
                 return {
                     pausePlayback: function() {
-                        e(Object(_e.p)())
+                        e(Object(_e.q)())
                     },
                     hideSettingsMenu: function() {
                         e(Object(Oe.r)(Oe.j))
@@ -15616,7 +15634,7 @@
                     },
                     toggleHTML5Player: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                        e(t ? Object(_e.l)(ke.a) : Object(_e.l)(yt.a))
+                        e(t ? Object(_e.m)(ke.a) : Object(_e.m)(yt.a))
                     }
                 }
             },
@@ -15866,7 +15884,7 @@
             Vt = function(e) {
                 return {
                     handleVideoIssueReport: function(t) {
-                        e(Object(_e.s)(t))
+                        e(Object(_e.u)(t))
                     },
                     hideSettingsMenu: function() {
                         e(Object(Oe.r)(Oe.j))
@@ -15937,7 +15955,7 @@
             Qt = function(e) {
                 return {
                     selectNewPlaybackRate: function(t) {
-                        e(Object(_e.m)(t)), e(Object(Oe.r)(Oe.j))
+                        e(Object(_e.n)(t)), e(Object(Oe.r)(Oe.j))
                     }
                 }
             },
@@ -22675,16 +22693,16 @@
             U = function(e) {
                 return {
                     mutePlayer: function(t, n) {
-                        e(Object(x.o)(t, n))
+                        e(Object(x.p)(t, n))
                     },
                     contentIsShowing: function() {
                         e(Object(R.v)())
                     },
                     play: function() {
-                        e(Object(x.q)())
+                        e(Object(x.r)())
                     },
                     pause: function() {
-                        e(Object(x.p)())
+                        e(Object(x.q)())
                     },
                     requestAds: function(t, n) {
                         e(Object(j.n)(t, n))
@@ -23721,16 +23739,16 @@
             Pe = function(e) {
                 return {
                     mutePlayer: function(t, n) {
-                        e(Object(ve.o)(t, n))
+                        e(Object(ve.p)(t, n))
                     },
                     contentIsShowing: function() {
                         e(Object(ge.v)())
                     },
                     play: function() {
-                        e(Object(ve.q)())
+                        e(Object(ve.r)())
                     },
                     pause: function() {
-                        e(Object(ve.p)())
+                        e(Object(ve.q)())
                     },
                     requestAds: function(t, n) {
                         e(Object(be.n)(t, n))
@@ -24017,29 +24035,33 @@
                 NOT_SUPPORTED: {
                     spadeEventName: y.SPADE_EVENT_NAME,
                     spadeEventData: {
-                        core_error_code: 3e3,
-                        core_error_msg: "Player Core Not Supported"
+                        video_error_value: 3e3,
+                        video_error_message: "Player Core Not Supported",
+                        video_error_source: "player-core-loader"
                     }
                 },
                 SCRIPT_ERROR: {
                     spadeEventName: y.SPADE_EVENT_NAME,
                     spadeEventData: {
-                        core_error_code: 3001,
-                        core_error_msg: "Script Error"
+                        video_error_value: 3001,
+                        video_error_message: "Script Error",
+                        video_error_source: "player-core-loader"
                     }
                 },
                 BAD_RESPONSE: {
                     spadeEventName: y.SPADE_EVENT_NAME,
                     spadeEventData: {
-                        core_error_code: 3002,
-                        core_error_msg: "Bad Response"
+                        video_error_value: 3002,
+                        video_error_message: "Bad Response",
+                        video_error_source: "player-core-loader"
                     }
                 },
                 BAD_CONFIG: {
                     spadeEventName: y.SPADE_EVENT_NAME,
                     spadeEventData: {
-                        core_error_code: 3003,
-                        core_error_msg: "Bad Config"
+                        video_error_value: 3003,
+                        video_error_message: "Bad Config",
+                        video_error_source: "player-core-loader"
                     }
                 }
             };
@@ -25899,7 +25921,7 @@
             P = function(e) {
                 return {
                     playStream: function() {
-                        e(Object(w.q)())
+                        e(Object(w.r)())
                     }
                 }
             },
@@ -26835,16 +26857,16 @@
             Ze = function(e) {
                 return {
                     play: function() {
-                        e(Object(Ge.q)())
+                        e(Object(Ge.r)())
                     },
                     pause: function() {
-                        e(Object(Ge.p)())
+                        e(Object(Ge.q)())
                     },
                     trackPlayPause: function() {
                         e(Object(Ye.d)("player_click_playpause"))
                     },
                     unmutePlayer: function() {
-                        e(Object(Ge.o)(!1))
+                        e(Object(Ge.p)(!1))
                     }
                 }
             },
@@ -27264,10 +27286,10 @@
             Tt = function(e) {
                 return {
                     mutePlayer: function(t) {
-                        e(Object(Ge.o)(t, !1))
+                        e(Object(Ge.p)(t, !1))
                     },
                     changeVolume: function(t) {
-                        e(Object(Ge.n)(t))
+                        e(Object(Ge.o)(t))
                     },
                     trackVolumeButtonClick: function(t) {
                         var n = t ? "mute" : "unmute";
@@ -29103,7 +29125,7 @@
             so = function(e) {
                 return {
                     pausePlayer: function() {
-                        e(Object(Ge.p)())
+                        e(Object(Ge.q)())
                     }
                 }
             },
@@ -29870,7 +29892,7 @@
             ha = function(e) {
                 return {
                     seek: function(t) {
-                        e(Object(Ge.r)(t)), e(Object(Yo.E)(!0))
+                        e(Object(Ge.s)(t)), e(Object(Yo.E)(!0))
                     }
                 }
             },
@@ -30715,7 +30737,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.27-211655+896521836ad0c6421bcfb96808a8f925dd0f5c15",
+                    app_version: "2018.03.27-221634+101e57a6abb1b10b13d698ac8a5089aebeb0affd",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
@@ -31002,6 +31024,10 @@
                     return a.getVideoInfo()
                 }, s.getCaption = function() {
                     return a.getCaption()
+                }, s.setLiveMaxLatency = function(e) {
+                    l.forEach(function(t) {
+                        t.setLiveMaxLatency(e)
+                    })
                 },
                 function() {
                     a = e.getReadyState() >= e.HAVE_CURRENT_DATA && !e.getEnded() ? e : t, e.addEventListener(ls.b, function() {
@@ -31592,7 +31618,7 @@
                 J = void 0,
                 X = void 0;
             G._loadVideoAPI = function() {
-                    t.dispatch(Object(Ds.t)(G))
+                    t.dispatch(Object(Ds.v)(G))
                 }, G._propagateBackendMutliEvents = function() {
                     [ls.d, ps.p, ls.i, ls.h, ls.k, ls.j, ls.s, ls.l, ls.e, ls.o, ls.q, ls.b, ps.v, ps.b, ps.t, ls.n, ps.x].forEach(function(e) {
                         $.addEventListener(e, function(t) {
@@ -31751,6 +31777,8 @@
                     return $.getCaption()
                 }, G.getEventEmitter = function() {
                     return Y
+                }, G.setLiveMaxLatency = function(e) {
+                    return $.setLiveMaxLatency(e)
                 }, G.trackMiniPlayerAction = function(e, n) {
                     t.dispatch(Object(ku.d)(fa.f, {
                         action: e,
@@ -35714,6 +35742,11 @@
                                     return e.setCurrentTime(r.seekTime)
                                 });
                                 break;
+                            case Ds.k:
+                                n.then(function(e) {
+                                    return e.setLiveMaxLatency(r.time)
+                                });
+                                break;
                             case Tu.c:
                                 n.then(function(e) {
                                     return e.startCast()
@@ -36445,7 +36478,7 @@
                 g && g.stop()
             }, h.getDevice = function() {
                 if (g && g.receiver) return g.receiver.friendlyName
-            }, h.absAvailable = function() {}
+            }, h.absAvailable = function() {}, h.setLiveMaxLatency = function() {}
         }();
         var bs, _s, ws = n(472),
             ks = n.n(ws),
@@ -37035,7 +37068,7 @@
                     value: function() {
                         var e = this._store.getState(),
                             t = e.stream;
-                        t instanceof Os.b ? this._backend.setMuted(!0) : t instanceof Ps.b && !this._backend.getEnded() && this._store.dispatch(Object(Ds.k)())
+                        t instanceof Os.b ? this._backend.setMuted(!0) : t instanceof Ps.b && !this._backend.getEnded() && this._store.dispatch(Object(Ds.l)())
                     }
                 }, {
                     key: "_resumeContent",
@@ -37043,7 +37076,7 @@
                         var e = this._store.getState(),
                             t = e.playback,
                             n = e.stream;
-                        this._backend.setVolume(t.volume), this._backend.setMuted(t.muted), n instanceof Ps.b && !this._backend.getEnded() && this._store.dispatch(Object(Ds.q)())
+                        this._backend.setVolume(t.volume), this._backend.setMuted(t.muted), n instanceof Ps.b && !this._backend.getEnded() && this._store.dispatch(Object(Ds.r)())
                     }
                 }, {
                     key: "_onAdError",
@@ -37874,10 +37907,10 @@
                                 this._addClient(e.source);
                                 break;
                             case "play":
-                                this._store.dispatch(Object(Ds.q)());
+                                this._store.dispatch(Object(Ds.r)());
                                 break;
                             case "pause":
-                                this._store.dispatch(Object(Ds.p)());
+                                this._store.dispatch(Object(Ds.q)());
                                 break;
                             case "setcontent":
                                 this._store.dispatch(nc.h({
@@ -37920,10 +37953,10 @@
                                 this._store.dispatch(Object(ju.k)(e.data.args[0]));
                                 break;
                             case "mute":
-                                this._store.dispatch(Object(Ds.o)(!!e.data.args[0]));
+                                this._store.dispatch(Object(Ds.p)(!!e.data.args[0]));
                                 break;
                             case "volume":
-                                this._store.dispatch(Object(Ds.n)(e.data.args[0]));
+                                this._store.dispatch(Object(Ds.o)(e.data.args[0]));
                                 break;
                             case "theatre":
                                 this._store.dispatch(Object(Nu.h)(e.data.args[0]));
@@ -37955,7 +37988,10 @@
                                 }));
                                 break;
                             case "closeModeration":
-                                this._store.dispatch(Object(kc.h)(e.data.args[0]))
+                                this._store.dispatch(Object(kc.h)(e.data.args[0]));
+                                break;
+                            case "setLiveMaxLatency":
+                                this._store.dispatch(Object(Ds.t)(parseFloat(e.data.args[0])))
                         }
                     }
                 }, {
@@ -38237,7 +38273,7 @@
                     key: "togglePlayback",
                     value: function() {
                         var e = this.store;
-                        e.getState().playback.paused ? e.dispatch(Object(Ds.q)()) : e.dispatch(Object(Ds.p)())
+                        e.getState().playback.paused ? e.dispatch(Object(Ds.r)()) : e.dispatch(Object(Ds.q)())
                     }
                 }, {
                     key: "changeVolumeByStep",
@@ -38247,7 +38283,7 @@
                             n = t.getState().playback.volume,
                             r = ma.E,
                             i = void 0;
-                        i = e ? Math.round(100 * Math.min(n + r, 1)) / 100 : Math.round(100 * Math.max(n - r, 0)) / 100, t.dispatch(Object(Ds.n)(i))
+                        i = e ? Math.round(100 * Math.min(n + r, 1)) / 100 : Math.round(100 * Math.max(n - r, 0)) / 100, t.dispatch(Object(Ds.o)(i))
                     }
                 }, {
                     key: "updatePlaybackRate",
@@ -38259,7 +38295,7 @@
                                 return e === n
                             }),
                             i = n;
-                        e && r < Ic.a.length - 1 ? i = Ic.a[r + 1] : !e && r > 0 && (i = Ic.a[r - 1]), n !== i && t.dispatch(Object(Ds.m)(i))
+                        e && r < Ic.a.length - 1 ? i = Ic.a[r + 1] : !e && r > 0 && (i = Ic.a[r - 1]), n !== i && t.dispatch(Object(Ds.n)(i))
                     }
                 }, {
                     key: "handlePlayerHotkeys",
@@ -39996,7 +40032,7 @@
             $d = function(e) {
                 return {
                     pause: function() {
-                        e(Object(Ds.p)())
+                        e(Object(Ds.q)())
                     }
                 }
             },
@@ -43650,7 +43686,7 @@
             Qg = function(e) {
                 return {
                     play: function() {
-                        e(Object(Ds.q)())
+                        e(Object(Ds.r)())
                     }
                 }
             };
@@ -43854,7 +43890,7 @@
             Nb = function(e) {
                 return {
                     unmutePlayer: function() {
-                        e(Object(Ds.o)(!1))
+                        e(Object(Ds.p)(!1))
                     },
                     trackOverlayClick: function() {
                         e(Object(ku.d)("player_click", {
@@ -45122,7 +45158,7 @@
                 }, {
                     key: "_showEmptyCollectionOverlay",
                     value: function() {
-                        this._store.dispatch(Object(Au.q)(Au.f)), this._store.dispatch(Object(Ds.p)())
+                        this._store.dispatch(Object(Au.q)(Au.f)), this._store.dispatch(Object(Ds.q)())
                     }
                 }, {
                     key: "_streamEnded",
@@ -49386,7 +49422,7 @@
                     return console.log(e), !1
                 }
             }(),
-            SPADE_EVENT_NAME: "player_core_error",
+            SPADE_EVENT_NAME: "video_error",
             MAX_ATTEMPTS: 3,
             SETTING_CRITERIA: {
                 fxf: !r(),
