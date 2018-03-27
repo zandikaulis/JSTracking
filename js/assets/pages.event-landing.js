@@ -5698,19 +5698,17 @@ webpackJsonp([48], {
                             backgroundImage: "url(" + T + ")"
                         });
                         var o = null;
-                        this.props.canEdit && (o = r.createElement(E._4, {
-                            "data-test-selector": "channel-banner__edit-overlay-interactable",
-                            onClick: this.openModal
-                        }, r.createElement(E._29, {
+                        this.props.canEdit && (o = r.createElement(E._29, {
                             className: "channel-banner__edit-overlay",
                             background: E.m.Overlay,
                             position: E._13.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
-                            fullWidth: !0,
-                            display: E.P.InlineFlex,
-                            alignItems: E.c.Center,
-                            justifyContent: E._5.Center
+                            fullWidth: !0
+                        }, r.createElement("button", {
+                            className: "channel-banner__edit-overlay__button",
+                            "data-test-selector": "channel-banner__edit-overlay-interactable",
+                            onClick: this.openModal
                         }, r.createElement(E._6, {
                             display: E.P.Flex,
                             alignItems: E.c.Center,
@@ -9893,4 +9891,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-86cb4f5e4bedf36a23f39933472d9104.js.map
+//# sourceMappingURL=pages.event-landing-af71804d8f1589645ff4582e0a9d3493.js.map

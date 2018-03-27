@@ -83,7 +83,7 @@ webpackJsonp([76, 77], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, i.o.experiments.getAssignment(c.k)];
+                                    return [4, i.o.experiments.getAssignment(c.j)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         isFollowCategoriesExperimentEnabled: e === c.d.ENABLED
@@ -1016,7 +1016,7 @@ webpackJsonp([76, 77], {
             i = function() {
                 return a.__awaiter(r, void 0, void 0, function() {
                     return a.__generator(this, function(e) {
-                        return [2, n.e(85).then(n.bind(null, "Revh"))]
+                        return [2, n.e(84).then(n.bind(null, "Revh"))]
                     })
                 })
             }
@@ -2978,13 +2978,13 @@ webpackJsonp([76, 77], {
                         return a.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return o.o.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.o.experiments.getAssignment(y.j)];
+                                    return o.o.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.o.experiments.getAssignment(y.i)];
                                 case 1:
-                                    return e = n.sent(), [4, o.o.experiments.getAssignment(y.i)];
+                                    return e = n.sent(), [4, o.o.experiments.getAssignment(y.h)];
                                 case 2:
                                     return t = n.sent(), this.setState({
-                                        inOnboardingExperiment: Object(y.p)(e),
-                                        inChannelSurfingExperiment: Object(y.o)(e, t)
+                                        inOnboardingExperiment: Object(y.n)(e),
+                                        inChannelSurfingExperiment: Object(y.m)(e, t)
                                     }), [2]
                             }
                         })
@@ -3770,4 +3770,4 @@ webpackJsonp([76, 77], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-65fd2c762ad61d88c679fcb39eb41390.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-ea67de3cfbb0e6705fdd0051d3c6591e.js.map

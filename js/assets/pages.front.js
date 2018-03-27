@@ -2010,7 +2010,7 @@ webpackJsonp([50], {
                     return t.state = {
                         isOnboardingDismissedCookieSet: void 0 !== k.get(R)
                     }, t.handleAutoOnboardingRedirect = function() {
-                        void 0 === k.get(I) && Object(b.q)(new Date(t.props.data.currentUser.createdAt)) && (k.set(I, "true", P), t.redirectToOnboarding(_.b.NewSignup))
+                        void 0 === k.get(I) && Object(b.o)(new Date(t.props.data.currentUser.createdAt)) && (k.set(I, "true", P), t.redirectToOnboarding(_.b.NewSignup))
                     }, t.startOnboarding = function() {
                         t.redirectToOnboarding(_.b.HomepageCTA)
                     }, t.redirectToOnboarding = function(e) {
@@ -2024,7 +2024,7 @@ webpackJsonp([50], {
                     }, t.followedGamesForUserHasLoaded = function() {
                         return t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.currentUser && t.props.data.currentUser.followedGames
                     }, t.shouldSeeOnboarding = function() {
-                        return !t.state.isOnboardingDismissedCookieSet && t.followedGamesForUserHasLoaded() && t.state.inOnboardingExperiment && t.props.data.currentUser.followedGames.nodes.length < x && Object(b.q)(new Date(t.props.data.currentUser.createdAt))
+                        return !t.state.isOnboardingDismissedCookieSet && t.followedGamesForUserHasLoaded() && t.state.inOnboardingExperiment && t.props.data.currentUser.followedGames.nodes.length < x && Object(b.o)(new Date(t.props.data.currentUser.createdAt))
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -2033,10 +2033,10 @@ webpackJsonp([50], {
                         return i.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, r.o.experiments.getAssignment(b.j)];
+                                    return [4, r.o.experiments.getAssignment(b.i)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        inOnboardingExperiment: Object(b.p)(e)
+                                        inOnboardingExperiment: Object(b.n)(e)
                                     }), [2]
                             }
                         })
@@ -7612,4 +7612,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-d4560d2c3b2cba37618c704d116d9d53.js.map
+//# sourceMappingURL=pages.front-99fe86ffbb7d03eb06dfdaac07940abb.js.map

@@ -1840,8 +1840,8 @@ webpackJsonp([33, 83], {
                         monthsSubbed: e.months
                     }, "ChatResubNotification"))))
                 }, t.prototype.getRandomEmoteId = function() {
-                    var e = Math.floor(Math.random() * $.a.length);
-                    return $.a[e]
+                    var e = Math.floor(Math.random() * $.b.length);
+                    return $.b[e]
                 }, t = i.__decorate([Object(c.a)(K, {
                     options: function(e) {
                         return {
@@ -14893,7 +14893,7 @@ webpackJsonp([33, 83], {
                         headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
+                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
                         contentType: t
                     }), null) : null
                 }, e.getDefaultHeaders = function(e, t) {
@@ -24221,19 +24221,17 @@ webpackJsonp([33, 83], {
                             backgroundImage: "url(" + x + ")"
                         });
                         var o = null;
-                        this.props.canEdit && (o = r.createElement(C._4, {
-                            "data-test-selector": "channel-banner__edit-overlay-interactable",
-                            onClick: this.openModal
-                        }, r.createElement(C._29, {
+                        this.props.canEdit && (o = r.createElement(C._29, {
                             className: "channel-banner__edit-overlay",
                             background: C.m.Overlay,
                             position: C._13.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
-                            fullWidth: !0,
-                            display: C.P.InlineFlex,
-                            alignItems: C.c.Center,
-                            justifyContent: C._5.Center
+                            fullWidth: !0
+                        }, r.createElement("button", {
+                            className: "channel-banner__edit-overlay__button",
+                            "data-test-selector": "channel-banner__edit-overlay-interactable",
+                            onClick: this.openModal
                         }, r.createElement(C._6, {
                             display: C.P.Flex,
                             alignItems: C.c.Center,
@@ -39889,4 +39887,4 @@ webpackJsonp([33, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-4b0d066ede781dcdaf1c1c83c2ffee6e.js.map
+//# sourceMappingURL=pages.channel-videos-c980474a49be10e7dee5d730393c5592.js.map

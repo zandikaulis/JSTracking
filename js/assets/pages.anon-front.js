@@ -1451,10 +1451,10 @@ webpackJsonp([54], {
                         return r.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, o.o.experiments.getAssignment(b.f)];
+                                    return [4, o.o.experiments.getAssignment(b.e)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        categoriesExperimentAssignment: Object(b.m)(e) ? e : null
+                                        categoriesExperimentAssignment: Object(b.k)(e) ? e : null
                                     }), this.props.latencyTracking.reportInteractive(), o.o.setPageTitle(), [2]
                             }
                         })
@@ -2204,7 +2204,7 @@ webpackJsonp([54], {
                         headers: a.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
+                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
                         contentType: t
                     }), null) : null
                 }, e.getDefaultHeaders = function(e, t) {
@@ -2322,7 +2322,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(90).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(89).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2334,7 +2334,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2346,7 +2346,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2358,7 +2358,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(87).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3897,4 +3897,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-c5da071d27e465037756dcd5081caaf5.js.map
+//# sourceMappingURL=pages.anon-front-a1ae2244a2251b4fef52fba77e1b0bf8.js.map

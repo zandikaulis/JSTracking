@@ -186,7 +186,7 @@ webpackJsonp([61], {
                         headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
+                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
                         contentType: t
                     }), null) : null
                 }, e.getDefaultHeaders = function(e, t) {
@@ -708,4 +708,4 @@ webpackJsonp([61], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-f7dc229987476c537359ecffcc404d53.js.map
+//# sourceMappingURL=pages.dev-only-5cfbe3fd55acfd69b6128ad230cb8faf.js.map

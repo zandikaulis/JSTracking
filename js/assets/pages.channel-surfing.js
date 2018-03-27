@@ -1625,8 +1625,8 @@ webpackJsonp([74], {
                         monthsSubbed: e.months
                     }, "ChatResubNotification"))))
                 }, t.prototype.getRandomEmoteId = function() {
-                    var e = Math.floor(Math.random() * Y.a.length);
-                    return Y.a[e]
+                    var e = Math.floor(Math.random() * Y.b.length);
+                    return Y.b[e]
                 }, t = a.__decorate([Object(d.a)($, {
                     options: function(e) {
                         return {
@@ -14492,6 +14492,17 @@ webpackJsonp([74], {
         e.exports = n
     },
     Sra5: function(e, t) {},
+    T0IN: function(e, t, n) {
+        "use strict";
+        t.a = function(e) {
+            for (var t = e.length - 1; t > 0; t--) {
+                var n = Math.floor(Math.random() * (t + 1)),
+                    a = e[t];
+                e[t] = e[n], e[n] = a
+            }
+            return e
+        }
+    },
     "Ti/Y": function(e, t, n) {
         var a = {
             kind: "Document",
@@ -21614,18 +21625,18 @@ webpackJsonp([74], {
                         return a.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return o.o.setPageTitle(Object(p.d)("Welcome", "ChannelSurfingPage")), [4, o.o.experiments.getAssignment(f.j)];
+                                    return o.o.setPageTitle(Object(p.d)("Welcome", "ChannelSurfingPage")), [4, o.o.experiments.getAssignment(f.i)];
                                 case 1:
-                                    return e = n.sent(), [4, o.o.experiments.getAssignment(f.i)];
+                                    return e = n.sent(), [4, o.o.experiments.getAssignment(f.h)];
                                 case 2:
                                     return t = n.sent(), this.setState({
-                                        channelSurfingExperimentAssignment: Object(f.o)(e, t) ? t : null
+                                        channelSurfingExperimentAssignment: Object(f.m)(e, t) ? t : null
                                     }), i.bind("left", this.trackAndMoveToPreviousChannel), i.bind("right", this.trackAndMoveToNextChannel), [2]
                             }
                         })
                     })
                 }, t.prototype.componentDidUpdate = function() {
-                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive(), null !== this.state.channelSurfingExperimentAssignment && (!this.props.data.currentUser || Object(f.q)(new Date(this.props.data.currentUser.createdAt))) || r.parse(window.location.search).onboarding_override || window.location.assign("/" + location.search)
+                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive(), null !== this.state.channelSurfingExperimentAssignment && (!this.props.data.currentUser || Object(f.o)(new Date(this.props.data.currentUser.createdAt))) || r.parse(window.location.search).onboarding_override || window.location.assign("/" + location.search)
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this,
                         n = this.followedGamesDataLoaded(e) && !this.dataMappedToState,
@@ -23365,4 +23376,4 @@ webpackJsonp([74], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-41013479baa8cba1943f2ad2a523196e.js.map
+//# sourceMappingURL=pages.channel-surfing-35ea67cc29b72caab921b616bfe1a769.js.map

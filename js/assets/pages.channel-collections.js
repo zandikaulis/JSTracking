@@ -933,7 +933,7 @@ webpackJsonp([51], {
                         headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
+                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
                         contentType: t
                     }), null) : null
                 }, e.getDefaultHeaders = function(e, t) {
@@ -1066,7 +1066,7 @@ webpackJsonp([51], {
             var u = this;
             return d(function(d) {
                 return i.__awaiter(u, void 0, void 0, function() {
-                    var u, p, h, v, b, _, k, y, C;
+                    var u, p, h, v, b, _, k, y, E;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
@@ -1114,7 +1114,7 @@ webpackJsonp([51], {
                             case 5:
                                 return [3, 7];
                             case 6:
-                                return C = i.sent(), a.j.error(C, "Failed to fetch collections"), d.store.dispatch({
+                                return E = i.sent(), a.j.error(E, "Failed to fetch collections"), d.store.dispatch({
                                     type: g,
                                     errorType: "Update Failed",
                                     errorMessage: "Updating collection " + e.id + " for channel " + n + " and video " + t + " failed."
@@ -1586,8 +1586,8 @@ webpackJsonp([51], {
             _ = n("ySfT"),
             k = n("ZJYd"),
             y = n("/LBW"),
-            C = n("Odds"),
-            E = (n("fHoP"), function(e) {
+            E = n("Odds"),
+            C = (n("fHoP"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handlePromoBuy = function(e) {
@@ -1602,43 +1602,43 @@ webpackJsonp([51], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = r.createElement(C._6, null, r.createElement(C._6, {
+                    var e = r.createElement(E._6, null, r.createElement(E._6, {
                         padding: {
                             x: 5,
                             y: 2
                         },
-                        textAlign: C._39.Center
-                    }, r.createElement(C.O, {
-                        type: C._43.H4,
+                        textAlign: E._39.Center
+                    }, r.createElement(E.O, {
+                        type: E._43.H4,
                         bold: !0
-                    }, Object(s.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), r.createElement(C._6, {
+                    }, Object(s.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), r.createElement(E._6, {
                         padding: {
                             x: 2,
                             bottom: 1
                         }
-                    }, r.createElement(C.O, {
-                        type: C._43.Span,
-                        color: C.J.Alt
-                    }, Object(s.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), r.createElement(C._0, {
+                    }, r.createElement(E.O, {
+                        type: E._43.Span,
+                        color: E.J.Alt
+                    }, Object(s.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), r.createElement(E._0, {
                         margin: {
                             left: .5
                         }
                     }, r.createElement("a", {
                         onClick: this.props.toggleShowTutorial
-                    }, Object(s.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), r.createElement(C._6, {
+                    }, Object(s.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), r.createElement(E._6, {
                         padding: {
                             bottom: 2
                         },
-                        textAlign: C._39.Center
-                    }, r.createElement(C._0, {
+                        textAlign: E._39.Center
+                    }, r.createElement(E._0, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(C.O, {
-                        type: C._43.H6,
+                    }, r.createElement(E.O, {
+                        type: E._43.H6,
                         bold: !0,
                         className: "bits-first-time-user-prompt__promo-header"
-                    }, Object(s.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), r.createElement(C.u, {
+                    }, Object(s.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), r.createElement(E.u, {
                         onClick: this.handlePromoBuy,
                         "data-purchase-url": this.props.promo.url,
                         "data-bits-amount": this.props.promo.bits,
@@ -1647,36 +1647,36 @@ webpackJsonp([51], {
                         price: this.props.promo.price,
                         amount: this.props.promo.bits
                     }, "Bits--FirstTimeUserPrompt"))));
-                    return this.props.isShowingTutorial ? r.createElement(C._6, {
+                    return this.props.isShowingTutorial ? r.createElement(E._6, {
                         className: "bits-first-time-user-prompt",
                         fullWidth: !0
-                    }, r.createElement(C._6, {
+                    }, r.createElement(E._6, {
                         className: "bits-first-time-user-prompt__tutorial-back-button"
-                    }, r.createElement(C.u, {
+                    }, r.createElement(E.u, {
                         onClick: this.props.toggleShowTutorial,
-                        type: C.A.Text
-                    }, r.createElement(C._19, {
-                        asset: C._20.Play,
+                        type: E.A.Text
+                    }, r.createElement(E._19, {
+                        asset: E._20.Play,
                         height: 8
-                    }), " ", Object(s.d)("Back", "Bits--FirstTimeUserPrompt"))), r.createElement(C._6, {
-                        textAlign: C._39.Center,
+                    }), " ", Object(s.d)("Back", "Bits--FirstTimeUserPrompt"))), r.createElement(E._6, {
+                        textAlign: E._39.Center,
                         padding: {
                             x: 2,
                             bottom: 2,
                             top: 5
                         },
                         fullHeight: !0
-                    }, r.createElement(C.e, {
-                        type: C.i.SlideInLeft,
-                        duration: C.g.Long,
+                    }, r.createElement(E.e, {
+                        type: E.i.SlideInLeft,
+                        duration: E.g.Long,
                         enabled: !0
-                    }, r.createElement(_.a, null)))) : this.props.animateFirstTimeUserIntro ? r.createElement(C._0, {
+                    }, r.createElement(_.a, null)))) : this.props.animateFirstTimeUserIntro ? r.createElement(E._0, {
                         className: "bits-first-time-user-prompt"
-                    }, r.createElement(C.e, {
-                        type: C.i.SlideInRight,
-                        duration: C.g.Long,
+                    }, r.createElement(E.e, {
+                        type: E.i.SlideInRight,
+                        duration: E.g.Long,
                         enabled: this.props.animateFirstTimeUserIntro
-                    }, e)) : r.createElement(C._6, {
+                    }, e)) : r.createElement(E._6, {
                         className: "bits-first-time-user-prompt"
                     }, e)
                 }, t
@@ -1708,23 +1708,23 @@ webpackJsonp([51], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.loading) return r.createElement(C._29, {
+                    if (this.props.loading) return r.createElement(E._29, {
                         "data-a-target": "get-bits-button-content-loading",
-                        display: C.P.Flex,
-                        flexDirection: C.R.Column,
-                        alignItems: C.c.Center,
-                        justifyContent: C._5.Center,
-                        textAlign: C._39.Center,
+                        display: E.P.Flex,
+                        flexDirection: E.R.Column,
+                        alignItems: E.c.Center,
+                        justifyContent: E._5.Center,
+                        textAlign: E._39.Center,
                         padding: {
                             y: 5
                         }
-                    }, r.createElement(C._8, {
+                    }, r.createElement(E._8, {
                         delay: 0
-                    }), r.createElement(C._6, {
+                    }), r.createElement(E._6, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(C.O, {
+                    }, r.createElement(E.O, {
                         italic: !0
                     }, Object(s.d)("Fetching bits", "Bits--GetBitsButtonContent"))));
                     var e = null;
@@ -1732,7 +1732,7 @@ webpackJsonp([51], {
                         var t = this.props.bitsOffers.find(function(e) {
                             return Object(k.c)(e)
                         });
-                        t && t.type === S.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = r.createElement(E, {
+                        t && t.type === S.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = r.createElement(C, {
                             promo: t,
                             animateFirstTimeUserIntro: this.props.animateFirstTimeUserIntro,
                             isShowingTutorial: this.props.isShowingTutorial,
@@ -1743,15 +1743,15 @@ webpackJsonp([51], {
                         }))
                     }
                     var n = null;
-                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? n = r.createElement(C._29, {
+                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? n = r.createElement(E._29, {
                         borderBottom: !0,
-                        textAlign: C._39.Center,
+                        textAlign: E._39.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, r.createElement(C.O, {
-                        type: C._43.Span
+                    }, r.createElement(E.O, {
+                        type: E._43.Span
                     }, Object(s.d)("You have {bitsBalance}", {
                         bitsBalance: r.createElement(v.a, {
                             withImage: !0,
@@ -1759,15 +1759,15 @@ webpackJsonp([51], {
                             count: this.props.bitsBalance,
                             bitsConfig: this.props.bitsConfig
                         })
-                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (n = r.createElement(C._29, {
+                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (n = r.createElement(E._29, {
                         borderBottom: !0,
-                        textAlign: C._39.Center,
+                        textAlign: E._39.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, r.createElement(C.O, {
-                        type: C._43.Span
+                    }, r.createElement(E.O, {
+                        type: E._43.Span
                     }, Object(s.d)("{bitsGem} Log in to see your Bits balance", {
                         bitsGem: r.createElement(v.a, {
                             count: 100,
@@ -1788,7 +1788,7 @@ webpackJsonp([51], {
                         fullsize: !0
                     })), r.createElement(g.b, {
                         className: "get-bits-button-content"
-                    }, r.createElement(C._6, null, n, e, i))
+                    }, r.createElement(E._6, null, n, e, i))
                 }, t = i.__decorate([Object(w.d)("GetBitsButtonContent"), Object(u.a)(N, {
                     name: "data",
                     props: function(e) {
@@ -1848,11 +1848,11 @@ webpackJsonp([51], {
                         animateFirstTimeUserIntro: this.state.animateFirstTimeUserIntro
                     })), r.createElement(d.a, {
                         onToggle: this.toggleBalloon
-                    }, r.createElement(C.u, {
+                    }, r.createElement(E.u, {
                         dropdown: !0
-                    }, Object(s.d)("Get Bits", "Bits--GetBitsButton")), r.createElement(C.p, {
-                        direction: C.q.BottomRight,
-                        size: C.r.Large
+                    }, Object(s.d)("Get Bits", "Bits--GetBitsButton")), r.createElement(E.p, {
+                        direction: E.q.BottomRight,
+                        size: E.r.Large
                     }, e))
                 }, t = i.__decorate([Object(w.d)("GetBitsButton")], t)
             }(r.Component),
@@ -1889,7 +1889,7 @@ webpackJsonp([51], {
                             "channel-banner--open": !this.props.collapsed
                         },
                         i = this.props.data;
-                    if (i && i.loading || !this.props.firstPageLoaded) e = r.createElement(C._12, {
+                    if (i && i.loading || !this.props.firstPageLoaded) e = r.createElement(E._12, {
                         height: 380,
                         "data-test-selector": "channel-banner__placeholder"
                     });
@@ -1900,26 +1900,24 @@ webpackJsonp([51], {
                             backgroundImage: "url(" + F + ")"
                         });
                         var o = null;
-                        this.props.canEdit && (o = r.createElement(C._4, {
-                            "data-test-selector": "channel-banner__edit-overlay-interactable",
-                            onClick: this.openModal
-                        }, r.createElement(C._29, {
+                        this.props.canEdit && (o = r.createElement(E._29, {
                             className: "channel-banner__edit-overlay",
-                            background: C.m.Overlay,
-                            position: C._13.Absolute,
+                            background: E.m.Overlay,
+                            position: E._13.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
-                            fullWidth: !0,
-                            display: C.P.InlineFlex,
-                            alignItems: C.c.Center,
-                            justifyContent: C._5.Center
-                        }, r.createElement(C._6, {
-                            display: C.P.Flex,
-                            alignItems: C.c.Center,
-                            flexDirection: C.R.Column,
-                            justifyContent: C._5.Center
-                        }, r.createElement(C._6, null, r.createElement(C._19, {
-                            asset: C._20.Edit
+                            fullWidth: !0
+                        }, r.createElement("button", {
+                            className: "channel-banner__edit-overlay__button",
+                            "data-test-selector": "channel-banner__edit-overlay-interactable",
+                            onClick: this.openModal
+                        }, r.createElement(E._6, {
+                            display: E.P.Flex,
+                            alignItems: E.c.Center,
+                            flexDirection: E.R.Column,
+                            justifyContent: E._5.Center
+                        }, r.createElement(E._6, null, r.createElement(E._19, {
+                            asset: E._20.Edit
                         })), Object(s.d)("Update Profile Banner", "ChannelBanner"))))), e = r.createElement("div", {
                             className: "channel-banner__image",
                             "data-test-selector": "channel-banner",
@@ -1929,7 +1927,7 @@ webpackJsonp([51], {
                     return r.createElement("div", {
                         className: a("channel-banner", n),
                         onTransitionEnd: this.props.onTransitionEnd
-                    }, r.createElement(C._0, {
+                    }, r.createElement(E._0, {
                         fullWidth: !0
                     }, e))
                 }, t.prototype.componentWillUnmount = function() {
@@ -1974,17 +1972,17 @@ webpackJsonp([51], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return r.createElement(C._6, {
+                    return r.createElement(E._6, {
                         className: "edit-profile-overlay",
-                        display: C.P.Flex,
-                        justifyContent: C._5.Center,
-                        alignContent: C.b.Center,
+                        display: E.P.Flex,
+                        justifyContent: E._5.Center,
+                        alignContent: E.b.Center,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, r.createElement(C.v, {
+                    }, r.createElement(E.v, {
                         overlay: !0,
                         ariaLabel: Object(s.d)("Edit Profile", "ChannelHeader"),
-                        icon: C._20.Edit,
+                        icon: E._20.Edit,
                         onClick: this.openModal
                     }))
                 }, t = i.__decorate([Object(w.d)("EditProfileOverlay")], t)
@@ -2014,42 +2012,42 @@ webpackJsonp([51], {
                     live: !1,
                     bannerHidden: !0,
                     bannerSlideIn: !1
-                }, t.verifiedBadgeElement = r.createElement(C._46, {
+                }, t.verifiedBadgeElement = r.createElement(E._46, {
                     label: Object(s.d)("Verified", "ChannelHeader"),
-                    direction: C._48.Right
-                }, r.createElement(C._6, {
+                    direction: E._48.Right
+                }, r.createElement(E._6, {
                     className: "channel-header__verified",
                     "data-target": J,
-                    display: C.P.Flex,
-                    alignItems: C.c.Center,
+                    display: E.P.Flex,
+                    alignItems: E.c.Center,
                     margin: {
                         left: 1
                     }
-                }, r.createElement(C._19, {
-                    asset: C._20.Verified
-                }))), t.ChannelStatusIndicatorElement = r.createElement(C._6, {
+                }, r.createElement(E._19, {
+                    asset: E._20.Verified
+                }))), t.ChannelStatusIndicatorElement = r.createElement(E._6, {
                     margin: {
                         left: 1
                     },
                     "data-target": K
-                }, r.createElement(C._46, {
+                }, r.createElement(E._46, {
                     label: Object(s.d)("Live Now", "ChannelHeader"),
-                    direction: C._48.Right
-                }, r.createElement(C.F, {
-                    status: C.H.Live,
+                    direction: E._48.Right
+                }, r.createElement(E.F, {
+                    status: E.H.Live,
                     pulse: !0
                 }))), t.renderAvatarEditButton = function() {
-                    return t.props.data && t.props.data.user && t.isChannelEditor() ? r.createElement(C._29, {
+                    return t.props.data && t.props.data.user && t.isChannelEditor() ? r.createElement(E._29, {
                         className: G,
-                        background: C.m.Overlay,
-                        position: C._13.Absolute,
+                        background: E.m.Overlay,
+                        position: E._13.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullHeight: !0,
                         fullWidth: !0,
-                        display: C.P.InlineFlex,
-                        alignItems: C.c.Center,
-                        justifyContent: C._5.Center
+                        display: E.P.InlineFlex,
+                        alignItems: E.c.Center,
+                        justifyContent: E._5.Center
                     }, r.createElement(M, {
                         userID: t.props.data.user.id,
                         login: t.props.data.user.login,
@@ -2108,37 +2106,37 @@ webpackJsonp([51], {
                         "channel-header__user--selected": this.isActiveTab(q.Channel)
                     },
                     f = null;
-                this.canRenderBitsButton() && (f = r.createElement(C._6, {
+                this.canRenderBitsButton() && (f = r.createElement(E._6, {
                     margin: {
                         left: 1
                     }
                 }, r.createElement(T, {
                     channelLogin: this.props.channelLogin
                 })));
-                var v, b = r.createElement(C._6, {
-                    display: C.P.Flex,
-                    flexWrap: C.S.NoWrap,
-                    alignItems: C.c.Center,
+                var v, b = r.createElement(E._6, {
+                    display: E.P.Flex,
+                    flexWrap: E.S.NoWrap,
+                    alignItems: E.c.Center,
                     flexShrink: 0
-                }, r.createElement(C._6, {
+                }, r.createElement(E._6, {
                     className: "channel-header__user-avatar channel-header__user-avatar--active",
                     margin: {
                         right: 1
                     },
-                    display: C.P.Flex,
+                    display: E.P.Flex,
                     flexShrink: 0,
-                    alignItems: C.c.Stretch
-                }, r.createElement(C._6, {
-                    position: C._13.Relative
-                }, r.createElement(C.l, {
+                    alignItems: E.c.Stretch
+                }, r.createElement(E._6, {
+                    position: E._13.Relative
+                }, r.createElement(E.l, {
                     size: 36,
                     src: m,
                     alt: e || ""
-                }), this.renderAvatarEditButton())), e ? r.createElement(C.O, {
-                    type: C._43.H5
-                }, e) : r.createElement(C._6, {
-                    alignItems: C.c.Center
-                }, r.createElement(C._12, {
+                }), this.renderAvatarEditButton())), e ? r.createElement(E.O, {
+                    type: E._43.H5
+                }, e) : r.createElement(E._6, {
+                    alignItems: E.c.Center
+                }, r.createElement(E._12, {
                     lineCount: 1,
                     width: 120
                 })), p && this.ChannelStatusIndicatorElement, t && this.verifiedBadgeElement);
@@ -2152,74 +2150,74 @@ webpackJsonp([51], {
                     "data-target": "channel-header__channel-link",
                     "data-a-target": "user-channel-header-item"
                 }, b) : b;
-                var _ = this.state.bannerHidden ? C.P.HideAccessible : C.P.Block,
+                var _ = this.state.bannerHidden ? E.P.HideAccessible : E.P.Block,
                     k = null;
-                return this.isActiveTab(q.Channel) && (k = r.createElement(C._6, {
+                return this.isActiveTab(q.Channel) && (k = r.createElement(E._6, {
                     display: _
                 }, r.createElement(W, {
                     channelLogin: this.props.channelLogin,
                     canEdit: this.isChannelEditor(),
                     collapsed: !this.state.bannerSlideIn,
                     onTransitionEnd: this.completedBannerAnimation
-                }))), r.createElement(C._6, {
+                }))), r.createElement(E._6, {
                     className: "channel-header",
                     flexShrink: 0
-                }, k, r.createElement(C._6, {
-                    display: C.P.Flex,
-                    justifyContent: C._5.Between,
-                    flexWrap: C.S.NoWrap,
+                }, k, r.createElement(E._6, {
+                    display: E.P.Flex,
+                    justifyContent: E._5.Between,
+                    flexWrap: E.S.NoWrap,
                     fullHeight: !0,
                     refDelegate: this.saveChannelHeaderRef,
                     margin: {
                         x: 3
                     }
-                }, r.createElement(C._6, {
-                    display: C.P.Flex,
-                    alignItems: C.c.Stretch,
+                }, r.createElement(E._6, {
+                    display: E.P.Flex,
+                    alignItems: E.c.Stretch,
                     flexShrink: 0,
-                    flexWrap: C.S.NoWrap,
+                    flexWrap: E.S.NoWrap,
                     "data-target": "channel-header-left"
-                }, r.createElement(C._0, {
+                }, r.createElement(E._0, {
                     className: a(g),
                     padding: {
                         y: .5,
                         right: 2
                     },
-                    display: C.P.Flex,
-                    flexWrap: C.S.NoWrap,
-                    alignItems: C.c.Center,
+                    display: E.P.Flex,
+                    flexWrap: E.S.NoWrap,
+                    alignItems: E.c.Center,
                     flexShrink: 0
-                }, v), this.renderTabs(h), r.createElement(C._6, {
+                }, v), this.renderTabs(h), r.createElement(E._6, {
                     className: "channel-header__item channel-header__item--no-underline",
                     padding: {
                         x: 1
                     },
                     flexShrink: 0,
-                    alignSelf: C.d.Center,
+                    alignSelf: E.d.Center,
                     "data-target": "channel-header-button"
                 }, r.createElement(d.a, {
                     alwaysMountBalloonContent: !0
-                }, r.createElement(C.v, {
-                    icon: C._20.NavMore,
+                }, r.createElement(E.v, {
+                    icon: E._20.NavMore,
                     ariaLabel: Object(s.d)("More", "ChannelHeader")
-                }), r.createElement(C.p, {
-                    direction: C.q.Bottom,
+                }), r.createElement(E.p, {
+                    direction: E.q.Bottom,
                     noTail: !0
-                }, r.createElement(C._6, {
+                }, r.createElement(E._6, {
                     padding: {
                         y: 1
                     }
-                }, this.renderDropdown(h)))))), r.createElement(C._6, {
-                    display: C.P.Flex,
-                    flexWrap: C.S.NoWrap,
+                }, this.renderDropdown(h)))))), r.createElement(E._6, {
+                    display: E.P.Flex,
+                    flexWrap: E.S.NoWrap,
                     flexShrink: 0,
-                    alignItems: C.c.Center,
+                    alignItems: E.c.Center,
                     className: "channel-header__right",
                     "data-target": "channel-header-right"
-                }, r.createElement(C._6, {
+                }, r.createElement(E._6, {
                     className: "channel-header__follow-button",
-                    display: C.P.Flex,
-                    alignItems: C.c.Stretch,
+                    display: E.P.Flex,
+                    alignItems: E.c.Stretch,
                     margin: {
                         left: 1
                     }
@@ -2229,7 +2227,7 @@ webpackJsonp([51], {
                     channelLogin: this.props.channelLogin,
                     followUIType: l.b.IconAndText,
                     unfollowUIType: l.b.IconOnly
-                })), r.createElement(C._6, {
+                })), r.createElement(E._6, {
                     margin: {
                         left: 1
                     }
@@ -2252,21 +2250,21 @@ webpackJsonp([51], {
             }, t.prototype.renderTabs = function(e) {
                 var t = this;
                 return e.map(function(e) {
-                    var n = e.count ? r.createElement(C._6, {
+                    var n = e.count ? r.createElement(E._6, {
                             className: "channel-header__item-count",
-                            display: C.P.Flex,
+                            display: E.P.Flex,
                             margin: {
                                 left: .5
                             }
-                        }, r.createElement(C.O, {
-                            type: C._43.Span,
-                            fontSize: C.T.Size5
+                        }, r.createElement(E.O, {
+                            type: E._43.Span,
+                            fontSize: E.T.Size5
                         }, e.count)) : null,
                         a = t.generateUserLink(e.pathSuffix, e.isExternal),
                         s = {};
-                    return e.isExternal && (s.target = Object(m.b)() ? "_blank" : ""), r.createElement(C._0, {
+                    return e.isExternal && (s.target = Object(m.b)() ? "_blank" : ""), r.createElement(E._0, {
                         key: "channel-header__item--" + e.label,
-                        alignItems: C.c.Center,
+                        alignItems: E.c.Center,
                         flexShrink: 0
                     }, r.createElement(o.a, i.__assign({
                         className: "channel-header__item channel-header__item--hide " + (e.isSelected ? "channel-header__item--selected" : "")
@@ -2274,46 +2272,46 @@ webpackJsonp([51], {
                         to: a,
                         "data-target": "channel-header-item",
                         "data-a-target": e.label.toLowerCase() + "-channel-header-item"
-                    }), r.createElement(C._6, {
+                    }), r.createElement(E._6, {
                         padding: {
                             x: 2,
                             y: .5
                         },
-                        display: C.P.Flex
-                    }, r.createElement(C.O, {
-                        type: C._43.Span,
-                        fontSize: C.T.Size5
+                        display: E.P.Flex
+                    }, r.createElement(E.O, {
+                        type: E._43.Span,
+                        fontSize: E.T.Size5
                     }, e.label), n)))
                 })
             }, t.prototype.renderDropdown = function(e) {
                 var t = this;
                 return e.map(function(e) {
-                    var n = e.count ? r.createElement(C._6, {
+                    var n = e.count ? r.createElement(E._6, {
                             className: "channel-header__item-count",
-                            display: C.P.Flex,
+                            display: E.P.Flex,
                             margin: {
                                 left: .5
                             }
-                        }, r.createElement(C.O, {
-                            type: C._43.Span
+                        }, r.createElement(E.O, {
+                            type: E._43.Span
                         }, e.count)) : null,
                         a = t.generateUserLink(e.pathSuffix, e.isExternal),
                         o = {};
-                    return e.isExternal && (o.targetBlank = !0), r.createElement(C._6, {
+                    return e.isExternal && (o.targetBlank = !0), r.createElement(E._6, {
                         key: "channel-header__dropdown-item--" + e.label,
                         "data-target": "channel-header-dropdown-item"
-                    }, r.createElement(C._4, i.__assign({
+                    }, r.createElement(E._4, i.__assign({
                         linkTo: a,
                         disabled: "#" === a
-                    }, o), r.createElement(C._6, {
+                    }, o), r.createElement(E._6, {
                         className: "channel-header__dropdown-hover-target",
                         padding: {
                             y: .5,
                             x: 1
                         },
-                        display: C.P.Flex
-                    }, r.createElement(C.O, {
-                        type: C._43.Span
+                        display: E.P.Flex
+                    }, r.createElement(E.O, {
+                        type: E._43.Span
                     }, e.label), n)))
                 })
             }, t.prototype.createChannelLinks = function(e, t, n) {
@@ -2608,8 +2606,8 @@ webpackJsonp([51], {
                     closeModal: r.c
                 }, e)
             })(_),
-            C = n("HW6M"),
-            E = n("3zLD"),
+            E = n("HW6M"),
+            C = n("3zLD"),
             S = n("jF7o"),
             O = n("w9tK"),
             w = n("zCIC");
@@ -3079,7 +3077,7 @@ webpackJsonp([51], {
                         })
                     }, t.renderWatebTerms = function(e, n) {
                         return c.createElement(v._29, l.__assign({
-                            className: C(e),
+                            className: E(e),
                             display: v.P.Flex,
                             flexDirection: v.R.Column,
                             justifyContent: v._5.Center,
@@ -3174,7 +3172,7 @@ webpackJsonp([51], {
                             fullWidth: !0,
                             elevation: 3
                         },
-                        t = C({
+                        t = E({
                             "bits-buy-card": !0,
                             "bits-buy-card__chat-tooltip": this.props.location === f.b.ChatTooltip
                         }),
@@ -3205,7 +3203,7 @@ webpackJsonp([51], {
                         italic: !0
                     }, Object(u.d)("Fetching bits", "Bits--BuyCard"))));
                     if (this.props.data.error) return c.createElement(v._6, l.__assign({
-                        className: C(t, "bits-buy-card--shorter"),
+                        className: E(t, "bits-buy-card--shorter"),
                         display: v.P.Flex,
                         flexDirection: v.R.Column,
                         alignItems: v.c.Center,
@@ -3219,7 +3217,7 @@ webpackJsonp([51], {
                     if (this.state.showWatebTerms) return this.renderWatebTerms(t, e);
                     var i = this.renderWatebCard();
                     if (i) return c.createElement(v._29, l.__assign({
-                        className: C(t, "bits-buy-card--shorter"),
+                        className: E(t, "bits-buy-card--shorter"),
                         display: v.P.Flex,
                         flexDirection: v.R.Column,
                         alignItems: v.c.Center,
@@ -3306,7 +3304,7 @@ webpackJsonp([51], {
                     }
                 })], t)
             }(c.Component),
-            X = Object(E.compose)(Object(q.d)("BitsBuyCard", {
+            X = Object(C.compose)(Object(q.d)("BitsBuyCard", {
                 autoReportInteractive: !0,
                 destination: O.a.BitsBuyCard
             }))(Q);
@@ -4117,7 +4115,7 @@ webpackJsonp([51], {
             _ = n("Odds"),
             k = (n("+Aaf"), n("0H+u")),
             y = ["image/*"],
-            C = function(e) {
+            E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4322,7 +4320,7 @@ webpackJsonp([51], {
                     }
                 })], t)
             }(l.Component),
-            E = Object(b.d)("User Image Upload")(C);
+            C = Object(b.d)("User Image Upload")(E);
         var S = Object(i.b)(function(e) {
             return {
                 authToken: Object(o.a)(e)
@@ -4333,7 +4331,7 @@ webpackJsonp([51], {
                     return t.successCallback && t.successCallback(), Object(r.c)()
                 }
             }, e)
-        })(E);
+        })(C);
         n.d(t, "a", function() {
             return S
         })
@@ -5132,8 +5130,8 @@ webpackJsonp([51], {
             _ = n("Tt3k"),
             k = n("W6ca"),
             y = n("xgnX"),
-            C = n("CSlQ"),
-            E = (n("AL3x"), n("nmDn")),
+            E = n("CSlQ"),
+            C = (n("AL3x"), n("nmDn")),
             S = ["image/*"],
             O = function(e) {
                 function t() {
@@ -5417,7 +5415,7 @@ webpackJsonp([51], {
                             }
                         })
                     })
-                }, t = s.__decorate([Object(p.a)(E, {
+                }, t = s.__decorate([Object(p.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -5427,7 +5425,7 @@ webpackJsonp([51], {
                     }
                 })], t)
             }(c.Component),
-            w = Object(C.d)("Profile Edit")(O);
+            w = Object(E.d)("Profile Edit")(O);
         var N = Object(i.b)(function(e) {
             return {
                 authToken: Object(o.a)(e)
@@ -5671,8 +5669,8 @@ webpackJsonp([51], {
                     }
                 }, t)
             },
-            C = n("Ic9h"),
-            E = n("4Uxc"),
+            E = n("Ic9h"),
+            C = n("4Uxc"),
             S = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -5765,7 +5763,7 @@ webpackJsonp([51], {
                     return a.createElement(v._6, {
                         fullHeight: !0,
                         "data-test-selector": "channel-collections-page"
-                    }, a.createElement(C.a, {
+                    }, a.createElement(E.a, {
                         currentPage: p.b.Collections,
                         ownerLogin: this.props.match.params.channelLogin
                     }, e))
@@ -5786,7 +5784,7 @@ webpackJsonp([51], {
                     return i.__assign({}, e, {
                         loadMore: function() {
                             return e.data.fetchMore({
-                                query: E,
+                                query: C,
                                 variables: i.__assign({}, e.data.variables, {
                                     cursor: e.data.user.collections.edges[Math.max(e.data.user.collections.edges.length - 1, 0)].cursor
                                 }),
@@ -5805,7 +5803,7 @@ webpackJsonp([51], {
                     })
                 }
             },
-            w = Object(r.compose)(Object(r.graphql)(E, O), Object(h.d)("ChannelCollectionsPage", {
+            w = Object(r.compose)(Object(r.graphql)(C, O), Object(h.d)("ChannelCollectionsPage", {
                 destination: u.a.ChannelCollections
             }), Object(c.a)({
                 location: m.PageviewLocation.ChannelCollections,
@@ -5908,4 +5906,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-a4398472f3d0603e323254f1b2640e57.js.map
+//# sourceMappingURL=pages.channel-collections-ae208c6f030cbed2809f1aaca3d08fe0.js.map

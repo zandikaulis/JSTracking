@@ -1,4 +1,4 @@
-webpackJsonp([37, 83], {
+webpackJsonp([36, 83], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -2272,7 +2272,7 @@ webpackJsonp([37, 83], {
                         headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
+                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
                         contentType: t
                     }), null) : null
                 }, e.getDefaultHeaders = function(e, t) {
@@ -6741,19 +6741,17 @@ webpackJsonp([37, 83], {
                             backgroundImage: "url(" + M + ")"
                         });
                         var o = null;
-                        this.props.canEdit && (o = a.createElement(C._4, {
-                            "data-test-selector": "channel-banner__edit-overlay-interactable",
-                            onClick: this.openModal
-                        }, a.createElement(C._29, {
+                        this.props.canEdit && (o = a.createElement(C._29, {
                             className: "channel-banner__edit-overlay",
                             background: C.m.Overlay,
                             position: C._13.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
-                            fullWidth: !0,
-                            display: C.P.InlineFlex,
-                            alignItems: C.c.Center,
-                            justifyContent: C._5.Center
+                            fullWidth: !0
+                        }, a.createElement("button", {
+                            className: "channel-banner__edit-overlay__button",
+                            "data-test-selector": "channel-banner__edit-overlay-interactable",
+                            onClick: this.openModal
                         }, a.createElement(C._6, {
                             display: C.P.Flex,
                             alignItems: C.c.Center,
@@ -20454,4 +20452,4 @@ webpackJsonp([37, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-d96f13ad2b56a1d26d35feabfd2a8010.js.map
+//# sourceMappingURL=pages.video-watch-ec0b3475fee174f9b6d9dcc2ea3f875f.js.map
