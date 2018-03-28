@@ -672,7 +672,7 @@ function getLocalStorage(prefix) {
 // If the setting doesn't exits, we return empty (default) settings
 function loadSettings(settings) {
     try {
-        return __webpack_require__(21)("./" + settings + '.json');
+        return !(function webpackMissingModule() { var e = new Error("Cannot find module \"settings\""); e.code = 'MODULE_NOT_FOUND'; throw e; }());
     } catch(e) {
         return {};
     }
@@ -3497,32 +3497,15 @@ module.exports = {
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./sjorge.json": 22
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number or string
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 21;
-
-/***/ }),
-/* 22 */
 /***/ (function(module, exports) {
 
-module.exports = {"buffercontrol":{"liveSpeedUpBuffer":7,"liveSpeedUpReset":4,"liveSpeedUpRate":1.03},"lowLatency":{"minBuffer":1,"rebufferPenalty":1,"maxRebufferDuration":6,"prefetchOffset":2}}
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 21;
 
 /***/ })
 /******/ ]);
