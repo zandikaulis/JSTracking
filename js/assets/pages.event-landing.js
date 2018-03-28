@@ -8544,7 +8544,7 @@ webpackJsonp([48], {
                     return t.bits <= e.count
                 });
                 if (u) {
-                    var m = Object(s.b)(u);
+                    var m = Object(s.b)(u, void 0, e.animated);
                     return void 0 !== e.themeOverride && (e.themeOverride === r.a.Light ? m.dark = m.light : m.light = m.dark), t = i.createElement(d.a, {
                         className: "bits-count--img",
                         sources: m
@@ -9891,4 +9891,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-af71804d8f1589645ff4582e0a9d3493.js.map
+//# sourceMappingURL=pages.event-landing-cd595957fb6e6b559e7c343edce083d8.js.map

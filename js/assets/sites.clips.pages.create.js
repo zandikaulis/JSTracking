@@ -83,6 +83,26 @@ webpackJsonp([59], {
                                         directives: []
                                     }]
                                 }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "error"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "message"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
                             }]
                         }
                     }]
@@ -90,11 +110,11 @@ webpackJsonp([59], {
             }],
             loc: {
                 start: 0,
-                end: 112
+                end: 130
             }
         };
         i.loc.source = {
-            body: "mutation ClipsTitleEdit_UpdateClip($input: UpdateClipInput!) {\nupdateClip(input: $input) {\nclip {\nid\ntitle\n}\n}\n}",
+            body: "mutation ClipsTitleEdit_UpdateClip($input: UpdateClipInput!) {\nupdateClip(input: $input) {\nclip {\nid\ntitle\n}\nerror {\nmessage\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -237,15 +257,16 @@ webpackJsonp([59], {
     },
     QIXk: function(e, t, i) {
         "use strict";
-        var n, r, a = i("TToO"),
-            s = i("GiK3"),
-            o = i("6sO2"),
-            l = i("7vx8"),
-            d = i("6BvN"),
-            u = i("vH/s"),
-            c = function(e, t, i, n, r) {
+        var n, r, a, s = i("TToO"),
+            o = i("GiK3"),
+            l = i("6sO2"),
+            d = i("7vx8"),
+            u = i("6BvN"),
+            c = i("oIkB"),
+            p = i("vH/s"),
+            m = function(e, t, i, n, r) {
                 var a = Date.now() / 1e3;
-                o.o.tracking.track(u.SpadeEventType.ClipEdit, {
+                l.o.tracking.track(p.SpadeEventType.ClipEdit, {
                     channel_id: e,
                     client_time: a,
                     clip_edit_session_id: t + "," + Math.floor(a),
@@ -257,45 +278,47 @@ webpackJsonp([59], {
                     location: r
                 })
             },
-            p = i("CIox"),
-            m = i("oIkB");
+            f = i("CIox");
         ! function(e) {
-            e.AlreadyPublished = "already_published", e.EditingWindowExpired = "editing_window_expired", e.InvalidSpeedDuration = "invalid_speed_duration", e.InvalidDuration = "invalid_duration", e.Unknown = "unknown"
+            e.AlreadyPublished = "already_published", e.EditingWindowExpired = "editing_window_expired", e.InvalidSpeedDuration = "invalid_speed_duration", e.InvalidDuration = "invalid_duration", e.InvalidTitle = "invalid_title", e.Unknown = "unknown"
         }(n || (n = {})),
         function(e) {
+            e.InvalidTitle = "invalid_title"
+        }(r || (r = {})),
+        function(e) {
             e.Unsent = "unsent", e.Sending = "sending", e.Error = "error", e.Successful = "successful"
-        }(r || (r = {}));
-        var f, h = 5,
-            g = 60,
-            v = i("Odds"),
-            E = i("isxN"),
-            y = {
-                publishState: r.Unsent,
+        }(a || (a = {}));
+        var h, g = 5,
+            v = 60,
+            E = i("Odds"),
+            y = i("isxN"),
+            S = {
+                publishState: a.Unsent,
                 errorMessage: null
             },
-            S = function(e) {
+            k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = y, t.onError = function(e) {
+                    return t.state = S, t.onError = function(e) {
                         t.setState({
-                            publishState: r.Error,
+                            publishState: a.Error,
                             errorMessage: e
                         }), t.props.onError(e)
                     }, t.onPublish = function() {
-                        return a.__awaiter(t, void 0, void 0, function() {
+                        return s.__awaiter(t, void 0, void 0, function() {
                             var e, t, i;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+                            return s.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
                                         if (this.setState({
-                                                publishState: r.Sending
-                                            }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < h || e > g) return this.setState({
-                                            publishState: r.Error,
+                                                publishState: a.Sending
+                                            }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < g || e > v) return this.setState({
+                                            publishState: a.Error,
                                             errorMessage: n.InvalidDuration
                                         }), [2];
-                                        a.label = 1;
+                                        r.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, this.props.publishClip(Object(m.a)({
+                                        return r.trys.push([1, 3, , 4]), [4, this.props.publishClip(Object(c.a)({
                                             segments: [{
                                                 offsetSeconds: this.props.startOffset,
                                                 durationSeconds: this.props.endOffset - this.props.startOffset,
@@ -305,11 +328,11 @@ webpackJsonp([59], {
                                             title: this.props.title
                                         }))];
                                     case 2:
-                                        return (t = a.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (i = t.data.publishClip.error.message, this.onError(i)) : (this.setState({
-                                            publishState: r.Successful
+                                        return (t = r.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (i = t.data.publishClip.error.message, this.onError(i)) : (this.setState({
+                                            publishState: a.Successful
                                         }), this.props.history.push("/" + this.props.slug)), [3, 4];
                                     case 3:
-                                        return a.sent(), i = n.Unknown, this.onError(i), [3, 4];
+                                        return r.sent(), i = n.Unknown, this.onError(i), [3, 4];
                                     case 4:
                                         return [2]
                                 }
@@ -317,143 +340,142 @@ webpackJsonp([59], {
                         })
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.publishState === r.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(y), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
+                return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    this.state.publishState === a.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(S), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
                 }, t.prototype.render = function() {
-                    var e = this.props.title.length < 1 || this.state.publishState === r.Error,
-                        t = this.state.publishState === r.Sending;
-                    return s.createElement(v._6, null, s.createElement(v.u, {
+                    var e = this.props.title.length < 1 || this.state.publishState === a.Error,
+                        t = this.state.publishState === a.Sending;
+                    return o.createElement(E._6, null, o.createElement(E.u, {
                         onClick: this.onPublish,
                         disabled: e,
-                        state: t ? v.z.Loading : v.z.Default,
-                        size: v.y.Large,
+                        state: t ? E.z.Loading : E.z.Default,
+                        size: E.y.Large,
                         blurAfterClick: !0
-                    }, Object(o.d)("Publish", "ClipsPublishButton")))
-                }, t = a.__decorate([Object(l.a)(E, {
+                    }, Object(l.d)("Publish", "ClipsPublishButton")))
+                }, t = s.__decorate([Object(d.a)(y, {
                     name: "publishClip"
                 })], t)
-            }(s.Component),
-            b = Object(p.f)(S),
-            k = i("2TZ0"),
-            C = this,
-            _ = {
+            }(o.Component),
+            b = Object(f.f)(k),
+            C = i("2TZ0"),
+            T = {
                 TITLE_INPUT: "cmgr-title-input",
                 TITLE_SAVE: "cmgr-title-save",
                 TITLE_SAVE_TOOLTIP: "cmgr-title-save-tooltip"
             };
         ! function(e) {
             e.emptySubmission = "emptySubmission", e.characterLimitReached = "characterLimitReached", e.channelViolation = "channelViolation", e.notCurator = "notCurator", e.unknown = "unknown"
-        }(f || (f = {}));
-        var T = 100,
+        }(h || (h = {}));
+        var _ = 100,
             w = function(e) {
                 function t(t) {
                     var i = e.call(this, t) || this;
                     return i.renderForClipsViewing = function() {
-                        return s.createElement("div", null, s.createElement(v._40, {
-                            id: _.TITLE_INPUT,
-                            "data-test-selector": _.TITLE_INPUT,
+                        return o.createElement("div", null, o.createElement(E._40, {
+                            id: T.TITLE_INPUT,
+                            "data-test-selector": T.TITLE_INPUT,
                             value: i.state.title,
                             onChange: i.handleTitleEdit,
                             onKeyDown: i.handleKeyDown
-                        }), s.createElement(v._6, {
-                            display: v.P.Flex,
-                            justifyContent: v._5.Between,
-                            alignItems: v.c.Center,
+                        }), o.createElement(E._6, {
+                            display: E.P.Flex,
+                            justifyContent: E._5.Between,
+                            alignItems: E.c.Center,
                             padding: {
                                 top: 1
                             }
-                        }, i.state.showError ? s.createElement(v.O, {
-                            color: v.J.Error
-                        }, i.getErrorMessage()) : s.createElement(v.O, {
-                            color: v.J.Alt2
-                        }, i.getRemainingCharacterText()), s.createElement(v._6, {
-                            display: v.P.Flex
-                        }, s.createElement(v.u, {
-                            "data-test-selector": _.TITLE_SAVE,
+                        }, i.state.showError ? o.createElement(E.O, {
+                            color: E.J.Error
+                        }, i.getErrorMessage()) : o.createElement(E.O, {
+                            color: E.J.Alt2
+                        }, i.getRemainingCharacterText()), o.createElement(E._6, {
+                            display: E.P.Flex
+                        }, o.createElement(E.u, {
+                            "data-test-selector": T.TITLE_SAVE,
                             onClick: i.props.onCancel,
-                            type: v.A.Hollow
-                        }, Object(o.d)("Cancel", "ClipsTitleEdit")), s.createElement(v._6, {
+                            type: E.A.Hollow
+                        }, Object(l.d)("Cancel", "ClipsTitleEdit")), o.createElement(E._6, {
                             padding: {
                                 left: 1
                             }
                         }, i.renderSave()))))
                     }, i.renderForManager = function() {
-                        return s.createElement(v.U, {
-                            id: _.TITLE_INPUT,
-                            label: Object(o.d)("Title", "ClipsTitleEdit"),
+                        return o.createElement(E.U, {
+                            id: T.TITLE_INPUT,
+                            label: Object(l.d)("Title", "ClipsTitleEdit"),
                             hint: i.getRemainingCharacterText()
-                        }, s.createElement(v._6, {
-                            display: v.P.Flex,
-                            flexWrap: v.S.NoWrap
-                        }, s.createElement(v._6, {
+                        }, o.createElement(E._6, {
+                            display: E.P.Flex,
+                            flexWrap: E.S.NoWrap
+                        }, o.createElement(E._6, {
                             flexGrow: 1,
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(v._2, {
-                            id: _.TITLE_INPUT,
-                            "data-test-selector": _.TITLE_INPUT,
-                            type: v._3.Text,
+                        }, o.createElement(E._2, {
+                            id: T.TITLE_INPUT,
+                            "data-test-selector": T.TITLE_INPUT,
+                            type: E._3.Text,
                             value: i.state.title,
                             onChange: i.handleTitleEdit,
                             onKeyDown: i.handleKeyDown
-                        })), s.createElement(v._6, {
+                        })), o.createElement(E._6, {
                             flexShrink: 0,
                             flexGrow: 0
-                        }, s.createElement(v._6, {
-                            position: v._13.Relative
-                        }, i.renderSave(), s.createElement(v._4, {
+                        }, o.createElement(E._6, {
+                            position: E._13.Relative
+                        }, i.renderSave(), o.createElement(E._4, {
                             onClick: i.dismissMessage,
-                            "data-test-selector": _.TITLE_SAVE_TOOLTIP
-                        }, s.createElement(v.p, {
-                            direction: v.q.TopRight,
+                            "data-test-selector": T.TITLE_SAVE_TOOLTIP
+                        }, o.createElement(E.p, {
+                            direction: E.q.TopRight,
                             show: i.state.showError || i.state.showSuccess
-                        }, s.createElement(v._6, {
+                        }, o.createElement(E._6, {
                             padding: 1
-                        }, i.state.showSuccess ? s.createElement(v.O, {
-                            color: v.J.Link
-                        }, Object(o.d)("Title Saved!", "ClipsTitleEdit")) : s.createElement(v.O, {
-                            color: v.J.Error
+                        }, i.state.showSuccess ? o.createElement(E.O, {
+                            color: E.J.Link
+                        }, Object(l.d)("Title Saved!", "ClipsTitleEdit")) : o.createElement(E.O, {
+                            color: E.J.Error
                         }, i.getErrorMessage()))))))))
                     }, i.renderForEdit = function() {
                         var e;
-                        if ((i.props.startOffset || 0 === i.props.startOffset) && i.props.endOffset) return e = i.state.showError ? s.createElement(v.O, {
-                            color: v.J.Alt2
-                        }, i.getErrorMessage()) : 0 === i.state.title.length && i.props.broadcasterName ? s.createElement(v.O, {
-                            color: v.J.Alt2
-                        }, Object(o.d)("Clips with titles get more views. Help {broadcasterName} get discovered by adding a title.", {
+                        if ((i.props.startOffset || 0 === i.props.startOffset) && i.props.endOffset) return e = i.state.showError ? o.createElement(E.O, {
+                            color: E.J.Alt2
+                        }, i.getErrorMessage()) : 0 === i.state.title.length && i.props.broadcasterName ? o.createElement(E.O, {
+                            color: E.J.Alt2
+                        }, Object(l.d)("Clips with titles get more views. Help {broadcasterName} get discovered by adding a title.", {
                             broadcasterName: i.props.broadcasterName
-                        }, "ClipsTitleEdit")) : s.createElement(v.O, {
-                            color: v.J.Alt2
-                        }, i.getRemainingCharacterText()), s.createElement(v._6, {
-                            display: v.P.Flex,
-                            flexWrap: v.S.NoWrap
-                        }, s.createElement(v._6, {
+                        }, "ClipsTitleEdit")) : o.createElement(E.O, {
+                            color: E.J.Alt2
+                        }, i.getRemainingCharacterText()), o.createElement(E._6, {
+                            display: E.P.Flex,
+                            flexWrap: E.S.NoWrap
+                        }, o.createElement(E._6, {
                             flexGrow: 1,
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(v._2, {
-                            id: _.TITLE_INPUT,
-                            "data-test-selector": _.TITLE_INPUT,
-                            type: v._3.Text,
+                        }, o.createElement(E._2, {
+                            id: T.TITLE_INPUT,
+                            "data-test-selector": T.TITLE_INPUT,
+                            type: E._3.Text,
                             value: i.state.title,
                             onChange: i.handleTitleEdit,
                             onKeyDown: i.handleKeyDown
-                        })), s.createElement(v._6, {
-                            display: v.P.Flex,
-                            justifyContent: v._5.Between,
-                            alignItems: v.c.Center,
+                        })), o.createElement(E._6, {
+                            display: E.P.Flex,
+                            justifyContent: E._5.Between,
+                            alignItems: E.c.Center,
                             padding: {
                                 top: 1
                             }
-                        }, e, s.createElement(v._6, {
-                            display: v.P.Flex
-                        }, s.createElement(v._6, {
+                        }, e, o.createElement(E._6, {
+                            display: E.P.Flex
+                        }, o.createElement(E._6, {
                             padding: {
                                 left: 1
                             }
-                        }, s.createElement(b, {
+                        }, o.createElement(b, {
                             isSubmitted: i.state.showSuccess,
                             title: i.state.title,
                             slug: i.props.clipSlug,
@@ -462,19 +484,16 @@ webpackJsonp([59], {
                             onError: i.onPublishClipError
                         })))))
                     }, i.renderSave = function() {
-                        return s.createElement(v.u, {
-                            "data-test-selector": _.TITLE_SAVE,
+                        return o.createElement(E.u, {
+                            "data-test-selector": T.TITLE_SAVE,
                             disabled: !i.canSaveEditedTitle(),
                             onClick: i.editClipTitle
-                        }, Object(o.d)("Save", "ClipsTitleEdit"))
+                        }, Object(l.d)("Save", "ClipsTitleEdit"))
                     }, i.onPublishClipError = function(e) {
-                        i.setState({
-                            showError: !0,
-                            error: e
-                        })
+                        i.errorMessageToError(e)
                     }, i.getRemainingCharacterText = function() {
-                        return Object(o.d)("{characterCount, number} remaining", {
-                            characterCount: T - i.state.title.length
+                        return Object(l.d)("{characterCount, number} remaining", {
+                            characterCount: _ - i.state.title.length
                         }, "ClipsTitleEdit")
                     }, i.onSuccess = function() {
                         i.props.onSuccess && i.props.onSuccess(), i.setState({
@@ -492,31 +511,37 @@ webpackJsonp([59], {
                             showSuccess: !1
                         })
                     }, i.handleTitleEdit = function(e) {
-                        var t = e.currentTarget.value.slice(0, T);
+                        var t = e.currentTarget.value.slice(0, _);
                         i.setState({
                             title: t,
                             showError: !1,
                             showSuccess: !1
                         })
                     }, i.editClipTitle = function() {
-                        return a.__awaiter(i, void 0, void 0, function() {
-                            var e;
-                            return a.__generator(this, function(t) {
-                                switch (t.label) {
+                        return s.__awaiter(i, void 0, void 0, function() {
+                            var e, t;
+                            return s.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         if ("" === this.state.title.trim()) return this.setState({
                                             showError: !0,
-                                            error: f.emptySubmission
+                                            error: h.emptySubmission
                                         }), [2];
-                                        t.label = 1;
+                                        i.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, this.props.editTitle(this.state.title.trim())];
+                                        return i.trys.push([1, 3, , 4]), [4, this.props.editTitle(Object(c.a)({
+                                            title: this.state.title.trim(),
+                                            slug: this.props.clipSlug
+                                        }))];
                                     case 2:
-                                        return t.sent(), this.props.clipBroadcasterId && this.props.clipId && this.props.clipTitle && c(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.clipSlug, this.props.clipTitle, this.props.location), this.onSuccess(), [3, 4];
-                                    case 3:
-                                        return e = t.sent(), this.setState({
+                                        return (e = i.sent()).data.updateClip && e.data.updateClip.error ? (this.setState({
                                             showError: !0,
-                                            error: this.errorMessageToError(e)
+                                            error: this.errorMessageToError(e.data.updateClip.error.message)
+                                        }), [2]) : (this.props.clipBroadcasterId && this.props.clipId && this.props.clipTitle && m(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.clipSlug, this.props.clipTitle, this.props.location), this.onSuccess(), [3, 4]);
+                                    case 3:
+                                        return t = i.sent(), this.setState({
+                                            showError: !0,
+                                            error: this.errorMessageToError(t.message)
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -527,8 +552,8 @@ webpackJsonp([59], {
                         return i.props.clipTitle !== i.state.title.trim()
                     }, i.handleKeyDown = function(e) {
                         switch (e.keyCode) {
-                            case d.a.Enter:
-                                return void(i.props.location === u.PageviewLocation.ClipsEditing ? i.setState({
+                            case u.a.Enter:
+                                return void(i.props.location === p.PageviewLocation.ClipsEditing ? i.setState({
                                     showSuccess: !0
                                 }) : i.canSaveEditedTitle() && i.editClipTitle());
                             default:
@@ -541,62 +566,32 @@ webpackJsonp([59], {
                         error: null
                     }, i
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.location === u.PageviewLocation.MyClipsManager ? this.renderForManager() : this.props.location === u.PageviewLocation.ClipsEditing ? this.renderForEdit() : this.renderForClipsViewing()
+                return s.__extends(t, e), t.prototype.render = function() {
+                    return this.props.location === p.PageviewLocation.MyClipsManager ? this.renderForManager() : this.props.location === p.PageviewLocation.ClipsEditing ? this.renderForEdit() : this.renderForClipsViewing()
                 }, t.prototype.getErrorMessage = function() {
                     switch (this.state.error) {
-                        case f.channelViolation:
-                            return Object(o.d)("Uh-oh. Check for inappropriate language and try again!", "ClipsTitleEdit");
-                        case f.emptySubmission:
-                            return Object(o.d)("Please add a title.", "ClipsTitleEdit");
+                        case h.channelViolation:
+                            return Object(l.d)("Uh-oh. Check for inappropriate language and try again!", "ClipsTitleEdit");
+                        case h.emptySubmission:
+                            return Object(l.d)("Please add a title.", "ClipsTitleEdit");
                         default:
-                            return Object(o.d)("Whoops. Something went wrong.", "ClipsTitleEdit")
+                            return Object(l.d)("Whoops. Something went wrong.", "ClipsTitleEdit")
                     }
                 }, t.prototype.errorMessageToError = function(e) {
-                    return e.message.includes("403:") ? f.channelViolation : f.unknown
+                    return e.includes("403:") || e.toLowerCase() === n.InvalidTitle.toLowerCase() || e.toLowerCase() === r.InvalidTitle.toLowerCase() ? h.channelViolation : h.unknown
                 }, t
-            }(s.Component),
-            O = function(e) {
-                return {
-                    editTitle: function(t) {
-                        return a.__awaiter(C, void 0, void 0, function() {
-                            var i;
-                            return a.__generator(this, function(n) {
-                                switch (n.label) {
-                                    case 0:
-                                        return n.trys.push([0, 2, , 3]), [4, e.mutate({
-                                            variables: {
-                                                input: {
-                                                    slug: e.ownProps.clipSlug,
-                                                    title: t
-                                                }
-                                            }
-                                        })];
-                                    case 1:
-                                        return n.sent(), [3, 3];
-                                    case 2:
-                                        throw i = n.sent(), o.j.error(i, "Failed to edit clip title"), i;
-                                    case 3:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }
-                }
-            },
-            P = Object(l.a)(k, {
-                props: O
+            }(o.Component),
+            O = Object(d.a)(C, {
+                name: "editTitle"
             })(w);
         i.d(t, !1, function() {
-            return _
+            return T
         }), i.d(t, !1, function() {
-            return f
+            return h
         }), i.d(t, !1, function() {
             return w
-        }), i.d(t, !1, function() {
-            return O
         }), i.d(t, "a", function() {
-            return P
+            return O
         })
     },
     f8OD: function(e, t) {
@@ -1025,34 +1020,34 @@ webpackJsonp([59], {
 
         function y(e) {
             return f({
-                method: T,
+                method: _,
                 arg: e
             })
         }
 
         function S(e) {
             return f({
-                method: _,
+                method: T,
                 arg: e
             })
         }
 
-        function b() {
+        function k() {
             return f({
                 method: "fullscreen",
                 arg: !1
             })
         }
 
-        function k(e) {
+        function b(e) {
             return f({
                 method: "setEditClip",
                 arg: e
             })
         }
         var C = "subscribe",
-            _ = "setclip",
-            T = "setAutoplay",
+            T = "setclip",
+            _ = "setAutoplay",
             w = "bridgestateupdate",
             O = "bridgestorestateupdate",
             P = "player.embed.host",
@@ -1086,15 +1081,15 @@ webpackJsonp([59], {
         }), i.d(t, "l", function() {
             return S
         }), i.d(t, "j", function() {
-            return b
-        }), i.d(t, "r", function() {
             return k
+        }), i.d(t, "r", function() {
+            return b
         }), i.d(t, "g", function() {
             return C
         }), i.d(t, "f", function() {
-            return _
-        }), i.d(t, "e", function() {
             return T
+        }), i.d(t, "e", function() {
+            return _
         }), i.d(t, "c", function() {
             return w
         }), i.d(t, "d", function() {
@@ -1197,4 +1192,4 @@ webpackJsonp([59], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-d8b97cd4224bd435f2f74b20a3b61d6e.js.map
+//# sourceMappingURL=sites.clips.pages.create-9e075af47072f9d962abfe745d8ad02a.js.map

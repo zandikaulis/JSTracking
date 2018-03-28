@@ -703,7 +703,7 @@ webpackJsonp([58], {
                     return t.bits <= e.count
                 });
                 if (m) {
-                    var u = Object(l.b)(m);
+                    var u = Object(l.b)(m, void 0, e.animated);
                     return void 0 !== e.themeOverride && (e.themeOverride === r.a.Light ? u.dark = u.light : u.light = u.dark), t = i.createElement(c.a, {
                         className: "bits-count--img",
                         sources: u
@@ -1042,4 +1042,4 @@ webpackJsonp([58], {
         i.definitions = i.definitions.concat(r(n("UP6l").definitions)), i.definitions = i.definitions.concat(r(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-54c8cfcf1d34f1c2a0bbd3ce357d5ecb.js.map
+//# sourceMappingURL=pages.inventory-2fa3d7abec58da2e35f4c29ba42fe1a5.js.map

@@ -2769,7 +2769,7 @@ var BROWSER = (function(){
     return browser;
 }());
 
-function frameByFrame(browser) {
+function supportsSingleFrameFragments(browser) {
     if (navigator.userAgent.toLowerCase().indexOf('crkey') > -1) {
         // Don't allow frame by frame for chromecast
         return false;
@@ -2784,7 +2784,7 @@ function frameByFrame(browser) {
 }
 
 // Hardcoded results from DRMManager.DRMBrowserSupportMapping
-function CDMSupportByBrowserBitmask (browser) {
+function supportedCDMs(browser) {
     var DRM_CAPABILITIES_BY_BROWSER_BITMASK = {
         chrome: 5,
         firefox: 5,
@@ -2797,10 +2797,16 @@ function CDMSupportByBrowserBitmask (browser) {
         : 0;
 }
 
+// Only chrome exposes sufficient network information
+function supportsLowLatencyABR(browser) {
+    return browser.name === 'chrome';
+}
+
 module.exports = {
     browser: BROWSER,
-    supportedCDMs: CDMSupportByBrowserBitmask(BROWSER),
-    supportsSingleFrameFragments: frameByFrame(BROWSER),
+    supportsSingleFrameFragments: supportsSingleFrameFragments(BROWSER),
+    supportedCDMs: supportedCDMs(BROWSER),
+    supportsLowLatencyABR: supportsLowLatencyABR(BROWSER),
 };
 
 

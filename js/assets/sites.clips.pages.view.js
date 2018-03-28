@@ -871,7 +871,7 @@ webpackJsonp([46], {
                 gutterSize: k._51.Small
             }, [1, 2, 3, 4].map(E)))))
         }
-        var w = function(e) {
+        var T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.trackedLoad = !1, t.renderRow = function(e, n) {
@@ -956,7 +956,7 @@ webpackJsonp([46], {
                     }, [1, 2, 3].map(O))
                 }, t
             }(o.Component),
-            T = Object(p.d)("ClipsRecommendations")(Object(m.a)(N)(w)),
+            w = Object(p.d)("ClipsRecommendations")(Object(m.a)(N)(T)),
             F = n("hdYS"),
             R = n("CMkR"),
             I = n("U5tC"),
@@ -1308,7 +1308,7 @@ webpackJsonp([46], {
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0
-                    }, this.state.isChatContentCollapsed && o.createElement(ce, {
+                    }, this.state.isChatContentCollapsed && o.createElement(de, {
                         slug: e
                     }), o.createElement(M.b, {
                         className: "clips-chat",
@@ -1341,7 +1341,7 @@ webpackJsonp([46], {
                         refDelegate: this.setChatContentRef
                     }, o.createElement(W, {
                         slug: e
-                    }), this.renderClipTitle()), o.createElement(se, {
+                    }), this.renderClipTitle()), o.createElement(ce, {
                         autoScrollChatToBottom: this.autoScrollChatToBottom,
                         videoOffsetSeconds: this.props.data.clip ? this.props.data.clip.videoOffsetSeconds : null,
                         slug: e
@@ -1551,14 +1551,15 @@ webpackJsonp([46], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.prevCommentId = ae, t.filterChatLines = function(e) {
                         var n = t.props.videoOffsetSeconds,
-                            i = n + Number(t.props.playerConnection.playerProps.currentTime);
-                        return e.node.contentOffsetSeconds >= n && e.node.contentOffsetSeconds <= i
+                            i = n + Number(t.props.playerConnection.playerProps.currentTime),
+                            a = e.node.contentOffsetSeconds;
+                        return a >= n && a <= i
                     }, t.maybeLoadMore = function(e) {
                         var n = t.props.data && t.props.data.clip,
                             i = n && n.video;
                         if (!i || !i.comments || t.props.data.error || !t.props.videoOffsetSeconds) return null;
                         var a = oe(i.comments.edges).node,
-                            r = e.videoOffsetSeconds + Number(e.data.clip.durationSeconds);
+                            r = e.videoOffsetSeconds + Number(e.data.clip && e.data.clip.durationSeconds);
                         a.contentOffsetSeconds <= r && t.props.loadMore()
                     }, t
                 }
@@ -1569,7 +1570,7 @@ webpackJsonp([46], {
                 }, t.prototype.render = function() {
                     var e = this.props.data && this.props.data.clip,
                         t = e && e.video;
-                    if (!t || !t.comments || this.props.data.error || !this.props.videoOffsetSeconds) return null;
+                    if (!e || !t || !t.comments || this.props.data.error || !this.props.videoOffsetSeconds) return null;
                     var n = t.comments.edges.filter(this.filterChatLines);
                     return 0 === n.length ? null : o.createElement(k._6, {
                         className: "clips-chat-replay",
@@ -1593,12 +1594,7 @@ webpackJsonp([46], {
                     }))
                 }, t
             }(o.Component),
-            se = Object(ne.t)({
-                playerId: function(e) {
-                    return e.slug
-                },
-                requestedPlayerProps: ["currentTime"]
-            })(Object(m.a)(ie, {
+            se = Object(m.a)(ie, {
                 skip: function(e) {
                     return !e.videoOffsetSeconds
                 },
@@ -1640,8 +1636,14 @@ webpackJsonp([46], {
                         }
                     })
                 }
-            })(le)),
-            ce = function(e) {
+            })(le),
+            ce = Object(ne.t)({
+                playerId: function(e) {
+                    return e.slug
+                },
+                requestedPlayerProps: ["currentTime"]
+            })(se),
+            de = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1692,10 +1694,10 @@ webpackJsonp([46], {
                     }))
                 }, t
             }(o.Component),
-            de = (n("tIhJ"), n("3Fw+")),
-            ue = n("J4ib"),
-            pe = n("dQ/z"),
-            me = function(e) {
+            ue = (n("tIhJ"), n("3Fw+")),
+            pe = n("J4ib"),
+            me = n("dQ/z"),
+            he = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1710,13 +1712,13 @@ webpackJsonp([46], {
                     }, o.createElement(k.u, {
                         targetBlank: !0,
                         linkTo: Object(f.g)(this.props.data.clip.video.id, {
-                            t: Object(de.a)(this.props.data.clip.video.offsetSeconds),
+                            t: Object(ue.a)(this.props.data.clip.video.offsetSeconds),
                             tt_medium: "clips_web",
                             tt_content: "full_vod_button"
                         })
-                    }, Object(ue.d)("Watch Full Video", "ClipsFullVideoButton"))) : o.createElement(k.u, {
+                    }, Object(pe.d)("Watch Full Video", "ClipsFullVideoButton"))) : o.createElement(k.u, {
                         disabled: !0
-                    }, Object(ue.d)("Full Video Unavailable", "ClipsFullVideoButton")), o.createElement(k._6, {
+                    }, Object(pe.d)("Full Video Unavailable", "ClipsFullVideoButton")), o.createElement(k._6, {
                         display: k.P.InlineBlock
                     }, e)) : o.createElement(k._6, null, this.renderPlaceholders());
                     var e
@@ -1735,14 +1737,14 @@ webpackJsonp([46], {
                         width: 108,
                         height: 28
                     }))
-                }, t = a.__decorate([Object(p.d)("ClipsFullVideoButton"), Object(m.a)(pe)], t)
+                }, t = a.__decorate([Object(p.d)("ClipsFullVideoButton"), Object(m.a)(me)], t)
             }(o.Component),
-            he = n("2KeS"),
-            ge = n("+xm8"),
-            ve = n("f2i/"),
-            fe = n("+Znq"),
-            ke = n("287o"),
-            be = function() {
+            ge = n("2KeS"),
+            ve = n("+xm8"),
+            fe = n("f2i/"),
+            ke = n("+Znq"),
+            be = n("287o"),
+            ye = function() {
                 return function(e) {
                     var t = this;
                     this.timerId = null, this.start = function() {
@@ -1756,10 +1758,10 @@ webpackJsonp([46], {
                     }, this.onInterval = e.onInterval, this.intervalMillis = e.intervalMillis
                 }
             }(),
-            ye = n("HW6M"),
-            _e = n("l21v"),
-            Se = n("YhVV"),
-            Ce = (n("HyIc"), function(e) {
+            _e = n("HW6M"),
+            Se = n("l21v"),
+            Ce = n("YhVV"),
+            Ne = (n("HyIc"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.addReaction = function() {
@@ -1773,7 +1775,7 @@ webpackJsonp([46], {
                     }, n.removeReaction = function() {
                         return n.props.removeClipReaction(n.props.emote)
                     }, n.renderEmote = function() {
-                        var e = ye("clips-emote-button", {
+                        var e = _e("clips-emote-button", {
                                 "clips-emote-button--selected": n.props.hasReacted
                             }),
                             t = null;
@@ -1810,7 +1812,7 @@ webpackJsonp([46], {
                         }, o.createElement(k._1, {
                             fullWidth: !0
                         }, o.createElement("img", {
-                            src: Object(_e.e)(n.props.emote.id, 1)
+                            src: Object(Se.e)(n.props.emote.id, 1)
                         })))), t))
                     }, n.state = {
                         isAnimating: !1
@@ -1825,19 +1827,19 @@ webpackJsonp([46], {
                         isAnimating: !1
                     })
                 }, t.prototype.getToken = function(e) {
-                    var t = Se.a[this.props.emote.token];
+                    var t = Ce.a[this.props.emote.token];
                     return t && t.length > 0 ? t[0] : e
                 }, t
             }(o.Component)),
-            Ne = n("Ldv2");
+            Ee = n("Ldv2");
         n("axV2");
-        var Ee = function(e) {
+        var Oe = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
                     emoteSearchText: ""
                 }, t.renderEmoteSet = function(e, n) {
-                    var i = ye({
+                    var i = _e({
                         "clips-emote-picker__emote-set": n < t.getEmoteSets().length - 1
                     });
                     return o.createElement(k._6, {
@@ -1858,7 +1860,7 @@ webpackJsonp([46], {
                     return o.createElement(k._6, {
                         className: "clips-emote-picker__emote",
                         key: "emote-" + e.id
-                    }, o.createElement(Ce, {
+                    }, o.createElement(Ne, {
                         emote: e,
                         addClipReaction: t.props.addClipReaction,
                         removeClipReaction: t.props.removeClipReaction,
@@ -1911,13 +1913,13 @@ webpackJsonp([46], {
                 }, this.getEmoteSets().slice().reverse().map(this.renderEmoteSet)))
             }, t.prototype.attemptReportInteractive = function(e) {
                 !this.getEmoteSets(e).length && e.isLoggedIn || this.props.latencyTracking.reportInteractive()
-            }, t = a.__decorate([Object(Ne.a)(), Object(p.d)("ClipsUserEmotes")], t)
+            }, t = a.__decorate([Object(Ee.a)(), Object(p.d)("ClipsUserEmotes")], t)
         }(o.Component);
-        var Oe = Object(j.b)(function(e) {
+        var Te = Object(j.b)(function(e) {
                 return {
                     isLoggedIn: Object(A.d)(e)
                 }
-            })(Ee),
+            })(Oe),
             we = (n("dRtS"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1932,7 +1934,7 @@ webpackJsonp([46], {
                                 bottom: .5
                             },
                             key: "reaction-" + e.emote.id
-                        }, o.createElement(Ce, {
+                        }, o.createElement(Ne, {
                             emote: e.emote,
                             addClipReaction: t.props.addClipReaction,
                             removeClipReaction: t.props.removeClipReaction,
@@ -1991,7 +1993,7 @@ webpackJsonp([46], {
                         onClick: this.toggleShowHiddenReactions,
                         "data-test-selector": "clips-emote-picker-toggler",
                         icon: this.state.showHiddenReactions ? k._20.AngleLeft : k._20.AngleRight
-                    })))), o.createElement(Oe, {
+                    })))), o.createElement(Te, {
                         addClipReaction: this.props.addClipReaction,
                         removeClipReaction: this.props.removeClipReaction,
                         sortedReactions: this.props.sortedReactions
@@ -2000,11 +2002,11 @@ webpackJsonp([46], {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component)),
-            Te = n("xwy4"),
-            Fe = n("jFCw"),
-            Re = n("hMIs"),
-            Ie = (n("LepZ"), 3e3),
-            xe = {
+            Fe = n("xwy4"),
+            Re = n("jFCw"),
+            Ie = n("hMIs"),
+            xe = (n("LepZ"), 3e3),
+            De = {
                 count: 0,
                 emote: {
                     id: "62835",
@@ -2014,7 +2016,7 @@ webpackJsonp([46], {
                     hasReacted: !1
                 }
             },
-            De = function(e) {
+            je = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -2033,7 +2035,7 @@ webpackJsonp([46], {
                             blurAfterClick: !0
                         }, t))
                     }, n.renderEmotePickerBalloon = function() {
-                        return o.createElement(fe.a, {
+                        return o.createElement(ke.a, {
                             display: k.P.InlineBlock,
                             onToggle: n.handleAutoplayTimer,
                             ref: n.saveBalloonWrapperRef
@@ -2064,7 +2066,7 @@ webpackJsonp([46], {
                             key: e.emote.id,
                             onMouseEnter: n.reactionCarouselTimer.stop,
                             onMouseLeave: n.reactionCarouselTimer.start
-                        }, o.createElement(Ce, {
+                        }, o.createElement(Ne, {
                             emote: e.emote,
                             addClipReaction: i ? n.addActiveClipReaction : n.toggleReactionDummy,
                             removeClipReaction: i ? n.removeActiveClipReaction : n.toggleReactionDummy,
@@ -2083,11 +2085,11 @@ webpackJsonp([46], {
                     }, n.removeActiveClipReaction = function() {
                         n.getActiveReaction() && n.removeClipReaction(n.getActiveReaction().emote)
                     }, n.addClipReaction = function(e) {
-                        n.toggleReaction(ke.a.Add, e)
+                        n.toggleReaction(be.a.Add, e)
                     }, n.removeClipReaction = function(e) {
-                        n.toggleReaction(ke.a.Remove, e)
+                        n.toggleReaction(be.a.Remove, e)
                     }, n.toggleReaction = function(e, t) {
-                        return n.props.isLoggedIn ? (n.updateReactionLocal(e, t), (e === ke.a.Add ? n.props.addClipReaction : n.props.removeClipReaction)(Object(te.a)({
+                        return n.props.isLoggedIn ? (n.updateReactionLocal(e, t), (e === be.a.Add ? n.props.addClipReaction : n.props.removeClipReaction)(Object(te.a)({
                             entityID: "clip:" + n.props.slug.toLowerCase(),
                             emoteID: t.id
                         }))) : (n.props.login(), Promise.reject(new Error("user not logged in")))
@@ -2098,8 +2100,8 @@ webpackJsonp([46], {
                         return e >= n.state.sortedReactions.length ? 0 : e
                     }, n.saveBalloonWrapperRef = function(e) {
                         n.balloonWrapperRef = e
-                    }, n.reactionCarouselTimer = new be({
-                        intervalMillis: Ie,
+                    }, n.reactionCarouselTimer = new ye({
+                        intervalMillis: xe,
                         onInterval: n.showNextReaction
                     }), n
                 }
@@ -2132,7 +2134,7 @@ webpackJsonp([46], {
                 }, t.prototype.initializeSortedReactions = function(e) {
                     if (void 0 === e && (e = this.props), e.data.clip && e.data.clip.reactions && e.slug === e.data.clip.slug) {
                         this.hasInitializedSortedReactions = !0;
-                        var t = 0 === e.data.clip.reactions.length ? [xe] : e.data.clip.reactions.slice().sort(function(e, t) {
+                        var t = 0 === e.data.clip.reactions.length ? [De] : e.data.clip.reactions.slice().sort(function(e, t) {
                             return t.count - e.count
                         });
                         this.setState({
@@ -2148,7 +2150,7 @@ webpackJsonp([46], {
                         i = this.state.sortedReactions.slice();
                     if (-1 !== n) {
                         var a = this.state.sortedReactions[n],
-                            r = e === ke.a.Add,
+                            r = e === be.a.Add,
                             o = {
                                 count: a.count + (r ? 1 : -1),
                                 emote: a.emote,
@@ -2185,24 +2187,24 @@ webpackJsonp([46], {
                     })))
                 }, t.prototype.reportInterative = function() {
                     this.props.data.clip && this.props.latencyTracking.reportInteractive()
-                }, t = a.__decorate([Object(m.a)(Te, {
+                }, t = a.__decorate([Object(m.a)(Fe, {
                     name: "addClipReaction"
-                }), Object(m.a)(Re, {
+                }), Object(m.a)(Ie, {
                     name: "removeClipReaction"
-                }), Object(m.a)(Fe), Object(p.d)("ClipsReactionCarousel")], t)
+                }), Object(m.a)(Re), Object(p.d)("ClipsReactionCarousel")], t)
             }(o.Component);
-        var je = Object(j.b)(function(e) {
+        var Ae = Object(j.b)(function(e) {
                 return {
                     isLoggedIn: Object(A.d)(e)
                 }
             }, function(e) {
-                return Object(he.b)({
+                return Object(ge.b)({
                     login: function() {
-                        return Object(ve.f)(ge.a.FeedReactionToggle)
+                        return Object(fe.f)(ve.a.FeedReactionToggle)
                     }
                 }, e)
-            })(De),
-            Ae = (n("mK8J"), function(e) {
+            })(je),
+            Me = (n("mK8J"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2232,26 +2234,26 @@ webpackJsonp([46], {
                         padding: {
                             x: 1
                         }
-                    }, o.createElement(je, {
+                    }, o.createElement(Ae, {
                         slug: e
-                    }), o.createElement(me, {
+                    }), o.createElement(he, {
                         slug: e
                     }))))
                 }, t
             }(o.Component)),
-            Me = Object(p.d)("ClipsSidebar", {
+            Le = Object(p.d)("ClipsSidebar", {
                 autoReportInteractive: !0
-            })(Ae),
-            Le = n("V5M+"),
-            Ue = n("xX9u"),
-            Pe = n("8Wuk"),
-            Be = n("yDzg"),
-            Ve = n("sEID"),
-            ze = n("46tX"),
-            We = n("+8VM"),
-            qe = n("C5rq"),
-            He = n("QX2Z"),
-            Ge = (n("u0B+"), function(e) {
+            })(Me),
+            Ue = n("V5M+"),
+            Pe = n("xX9u"),
+            Be = n("8Wuk"),
+            Ve = n("yDzg"),
+            ze = n("sEID"),
+            We = n("46tX"),
+            qe = n("+8VM"),
+            He = n("C5rq"),
+            Ge = n("QX2Z"),
+            $e = (n("u0B+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2349,7 +2351,7 @@ webpackJsonp([46], {
                     var e;
                     return e = this.props.data.clip ? this.state.hasShared ? this.renderHasShared() : this.renderHasNotShared() : o.createElement(k._6, null), o.createElement(k._6, {
                         className: "clips-feed-share"
-                    }, o.createElement(We.a, {
+                    }, o.createElement(qe.a, {
                         closeOnBackdropClick: !0
                     }), o.createElement(k._29, {
                         background: k.m.Alt
@@ -2362,7 +2364,7 @@ webpackJsonp([46], {
                     }, Object(l.d)("Close", "ClipsFeedShare"))
                 }, t
             }(o.Component)),
-            $e = Object(m.a)(qe)(Object(m.a)(He, {
+            Ke = Object(m.a)(He)(Object(m.a)(Ge, {
                 props: function(e) {
                     return {
                         createPost: function(t) {
@@ -2375,26 +2377,26 @@ webpackJsonp([46], {
                         }
                     }
                 }
-            })(Object(p.d)("ClipsFeedShare")(Ge)));
-        var Ke, Qe = Object(j.b)(function(e) {
+            })(Object(p.d)("ClipsFeedShare")($e)));
+        var Qe, Je = Object(j.b)(function(e) {
                 var t = Object(A.c)(e);
                 return {
                     userId: t ? t.id : "",
                     login: t ? t.login : ""
                 }
             }, function(e) {
-                return Object(he.b)({
-                    closeModal: Le.c
+                return Object(ge.b)({
+                    closeModal: Ue.c
                 }, e)
-            })($e),
-            Je = n("rCmJ"),
-            Ye = n("2hJ3"),
-            Xe = n("f6Cj");
+            })(Ke),
+            Ye = n("rCmJ"),
+            Xe = n("2hJ3"),
+            Ze = n("f6Cj");
         n("Jjeq");
         ! function(e) {
             e.ChannelFeed = "channel_feed"
-        }(Ke || (Ke = {}));
-        var Ze = function(e) {
+        }(Qe || (Qe = {}));
+        var et = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getUrl = function() {
@@ -2402,7 +2404,7 @@ webpackJsonp([46], {
                     }, t.onShareClick = function() {
                         t.props.onShareClick && t.props.onShareClick(t.props.type)
                     }, t.copyPageUrl = function() {
-                        t.onShareClick(), Object(Ye.a)(t.getUrl())
+                        t.onShareClick(), Object(Xe.a)(t.getUrl())
                     }, t.renderIcon = function() {
                         var e = t.getAssetFromType();
                         return o.createElement(k._6, {
@@ -2412,54 +2414,54 @@ webpackJsonp([46], {
                             fill: !0
                         }))
                     }, t.isLink = function() {
-                        return t.props.type !== Pe.b.Copy && t.props.type !== Ke.ChannelFeed
+                        return t.props.type !== Be.b.Copy && t.props.type !== Qe.ChannelFeed
                     }, t.getAssetFromType = function() {
                         switch (t.props.type) {
-                            case Pe.b.Twitter:
+                            case Be.b.Twitter:
                                 return k._20.Twitter;
-                            case Pe.b.Facebook:
+                            case Be.b.Facebook:
                                 return k._20.Facebook;
-                            case Pe.b.VKontakte:
+                            case Be.b.VKontakte:
                                 return k._20.VKontakte;
-                            case Pe.b.Reddit:
+                            case Be.b.Reddit:
                                 return k._20.Reddit;
-                            case Pe.b.Copy:
+                            case Be.b.Copy:
                                 return k._20.Copy;
-                            case Ke.ChannelFeed:
+                            case Qe.ChannelFeed:
                                 return k._20.LogoGlitch;
                             default:
                                 return k._20.Copy
                         }
                     }, t.getLabelFromType = function() {
                         switch (t.props.type) {
-                            case Pe.b.Twitter:
+                            case Be.b.Twitter:
                                 return Object(l.d)("Twitter", "ClipsSocialShare");
-                            case Pe.b.Facebook:
+                            case Be.b.Facebook:
                                 return Object(l.d)("Facebook", "ClipsSocialShare");
-                            case Pe.b.VKontakte:
+                            case Be.b.VKontakte:
                                 return Object(l.d)("VK", "ClipsSocialShare");
-                            case Pe.b.Reddit:
+                            case Be.b.Reddit:
                                 return Object(l.d)("Reddit", "ClipsSocialShare");
-                            case Pe.b.Copy:
+                            case Be.b.Copy:
                                 return Object(l.d)("Copy", "ClipsSocialShare");
-                            case Ke.ChannelFeed:
+                            case Qe.ChannelFeed:
                                 return Object(l.d)("Pulse", "ClipsSocialShare");
                             default:
                                 return ""
                         }
                     }, t.addSocialClassModifier = function(e) {
                         switch (t.props.type) {
-                            case Pe.b.Twitter:
+                            case Be.b.Twitter:
                                 return e + "--twitter";
-                            case Pe.b.Reddit:
+                            case Be.b.Reddit:
                                 return e + "--reddit";
-                            case Pe.b.Facebook:
+                            case Be.b.Facebook:
                                 return e + "--facebook";
-                            case Pe.b.VKontakte:
+                            case Be.b.VKontakte:
                                 return e + "--vkontakte";
-                            case Pe.b.Copy:
+                            case Be.b.Copy:
                                 return e + "--copy";
-                            case Ke.ChannelFeed:
+                            case Qe.ChannelFeed:
                                 return e + "--pulse";
                             default:
                                 return ""
@@ -2471,14 +2473,14 @@ webpackJsonp([46], {
                             a = t.getUrl(),
                             r = n || "";
                         switch (i) {
-                            case Pe.b.Reddit:
-                                return Object(Xe.b)(a, r);
-                            case Pe.b.VKontakte:
-                                return Object(Xe.d)(a);
-                            case Pe.b.Facebook:
-                                return Object(Xe.a)(a);
-                            case Pe.b.Twitter:
-                                return Object(Xe.c)(a, r);
+                            case Be.b.Reddit:
+                                return Object(Ze.b)(a, r);
+                            case Be.b.VKontakte:
+                                return Object(Ze.d)(a);
+                            case Be.b.Facebook:
+                                return Object(Ze.a)(a);
+                            case Be.b.Twitter:
+                                return Object(Ze.c)(a, r);
                             default:
                                 return ""
                         }
@@ -2515,7 +2517,7 @@ webpackJsonp([46], {
                     }, e)
                 }, t
             }(o.Component),
-            et = function(e) {
+            tt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2530,7 +2532,7 @@ webpackJsonp([46], {
                     }, t.onShareClick = function(e) {
                         t.setState({
                             isModalOpen: !1
-                        }), e === Pe.b.Copy && (t.setState({
+                        }), e === Be.b.Copy && (t.setState({
                             isCopiedModalOpen: !0
                         }), setTimeout(function() {
                             return t.setState({
@@ -2575,7 +2577,7 @@ webpackJsonp([46], {
                         attachTop: !0,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, o.createElement(Je.a, {
+                    }, o.createElement(Ye.a, {
                         onClickOut: this.onClickOut
                     }, o.createElement(k._6, {
                         position: k._13.Absolute,
@@ -2622,16 +2624,16 @@ webpackJsonp([46], {
                         ariaLabel: "Close Share",
                         size: k.w.Large,
                         onClick: this.onToggleShareButton
-                    })), o.createElement(k._6, null, o.createElement(Ze, {
-                        key: Ke.ChannelFeed,
-                        type: Ke.ChannelFeed,
+                    })), o.createElement(k._6, null, o.createElement(et, {
+                        key: Qe.ChannelFeed,
+                        type: Qe.ChannelFeed,
                         onShareClick: this.onOpenFeedShare
-                    }), Ve.b.map(function(t) {
-                        return o.createElement(Ze, {
+                    }), ze.b.map(function(t) {
+                        return o.createElement(et, {
                             key: t.type,
                             type: t.type,
                             text: e.props.clip.title,
-                            url: Object(Be.a)(e.props.clip.url, t.params),
+                            url: Object(Ve.a)(e.props.clip.url, t.params),
                             onShareClick: e.onShareClick
                         })
                     }))))))), this.state.isCopiedModalOpen && o.createElement(k._6, {
@@ -2674,12 +2676,12 @@ webpackJsonp([46], {
                     }, n)))))
                 }, t
             }(o.Component),
-            tt = n("bnNq"),
-            nt = (n("twHn"), function(e) {
+            nt = n("bnNq"),
+            it = (n("twHn"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openFeedShare = function() {
-                        t.props.isLoggedIn ? t.props.showModal(Qe, {
+                        t.props.isLoggedIn ? t.props.showModal(Je, {
                             slug: t.props.slug
                         }) : t.props.login()
                     }, t
@@ -2690,9 +2692,9 @@ webpackJsonp([46], {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (!this.props.data.clip && !Object(ze.d)(window.navigator.userAgent)) return o.createElement(k._6, null, this.renderPlaceholders());
-                    if (!this.props.data.clip && Object(ze.d)(window.navigator.userAgent)) return o.createElement(k._6, null, this.renderMobilePlaceholders());
-                    if (Object(ze.d)(window.navigator.userAgent)) return o.createElement(et, {
+                    if (!this.props.data.clip && !Object(We.d)(window.navigator.userAgent)) return o.createElement(k._6, null, this.renderPlaceholders());
+                    if (!this.props.data.clip && Object(We.d)(window.navigator.userAgent)) return o.createElement(k._6, null, this.renderMobilePlaceholders());
+                    if (Object(We.d)(window.navigator.userAgent)) return o.createElement(tt, {
                         clip: this.props.data.clip,
                         openFeedShare: this.openFeedShare
                     });
@@ -2706,18 +2708,18 @@ webpackJsonp([46], {
                         }
                     }, o.createElement("div", {
                         onClick: this.cancelAutoplayTimer
-                    }, Ve.b.map(function(t) {
+                    }, ze.b.map(function(t) {
                         return o.createElement(k._6, {
                             display: k.P.InlineBlock,
                             key: t.type,
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(Pe.a, {
+                        }, o.createElement(Be.a, {
                             key: t.type,
                             type: t.type,
                             text: e.props.data.clip.title,
-                            url: Object(Be.a)(e.props.data.clip.url, t.params)
+                            url: Object(Ve.a)(e.props.data.clip.url, t.params)
                         }))
                     }), o.createElement(k._29, {
                         margin: {
@@ -2744,7 +2746,7 @@ webpackJsonp([46], {
                     })))))), o.createElement(k._6, {
                         display: k.P.InlineBlock,
                         position: k._13.Relative
-                    }, o.createElement(fe.a, null, o.createElement(k.u, {
+                    }, o.createElement(ke.a, null, o.createElement(k.u, {
                         type: k.A.Hollow,
                         ariaLabel: t,
                         "data-test-selector": "social-share-button"
@@ -2758,7 +2760,7 @@ webpackJsonp([46], {
                         orientation: k.V.Vertical,
                         label: Object(l.d)("Link", "ClipsSocialShare"),
                         "data-test-selector": "social-share-link"
-                    }, o.createElement(Ue.a, {
+                    }, o.createElement(Pe.a, {
                         value: this.props.data.clip.url
                     })), o.createElement(k._6, {
                         padding: {
@@ -2768,7 +2770,7 @@ webpackJsonp([46], {
                         id: "social-share-embed-link",
                         orientation: k.V.Vertical,
                         label: Object(l.d)("Embed Code", "ClipsSocialShare")
-                    }, o.createElement(Ue.a, {
+                    }, o.createElement(Pe.a, {
                         value: this.props.data.clip.embedURL
                     })))))))))
                 }, t.prototype.cancelAutoplayTimer = function() {
@@ -2841,25 +2843,25 @@ webpackJsonp([46], {
                         width: 72,
                         height: 30
                     })))
-                }, t = a.__decorate([Object(p.d)("ClipsSocialShare"), Object(m.a)(tt)], t)
+                }, t = a.__decorate([Object(p.d)("ClipsSocialShare"), Object(m.a)(nt)], t)
             }(o.Component));
-        var it = Object(j.b)(function(e) {
+        var at = Object(j.b)(function(e) {
                 return {
                     isLoggedIn: Object(A.d)(e)
                 }
             }, function(e) {
-                return Object(he.b)({
-                    showModal: Le.d,
+                return Object(ge.b)({
+                    showModal: Ue.d,
                     login: function() {
-                        return Object(ve.f)(ge.a.FeedReactionToggle)
+                        return Object(fe.f)(ve.a.FeedReactionToggle)
                     }
                 }, e)
-            })(nt),
-            at = n("BhGt"),
-            rt = n("vwd7"),
-            ot = n("CIox"),
-            lt = n("icZh"),
-            st = function(e) {
+            })(it),
+            rt = n("BhGt"),
+            ot = n("vwd7"),
+            lt = n("CIox"),
+            st = n("icZh"),
+            ct = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.setImage = function(e) {
@@ -2893,8 +2895,8 @@ webpackJsonp([46], {
                     })
                 }, t
             }(o.Component),
-            ct = 9,
-            dt = (n("r+Hw"), function(e) {
+            dt = 9,
+            ut = (n("r+Hw"), function(e) {
                 var t, n = e.autoplayClip && e.autoplayClip.broadcaster && e.autoplayClip.game && Object(l.d)("{broadcasterDisplayName} playing {gameDisplayName}", {
                     broadcasterDisplayName: e.autoplayClip.broadcaster.displayName,
                     gameDisplayName: e.autoplayClip.game.displayName
@@ -2967,7 +2969,7 @@ webpackJsonp([46], {
                 }, o.createElement(k.j, {
                     ratio: k.k.Aspect16x9,
                     overflow: !1
-                }, o.createElement(st, {
+                }, o.createElement(ct, {
                     className: "clips-autoplay__image",
                     src: e.autoplayClip.thumbnailURL,
                     altText: Object(l.d)("clip image preview", "ClipsAutoplayView"),
@@ -2977,7 +2979,7 @@ webpackJsonp([46], {
                     attachBottom: !0,
                     fullWidth: !0
                 }, o.createElement(k._16, {
-                    countdown: ct,
+                    countdown: dt,
                     size: k._17.Small
                 }))), o.createElement(k._29, {
                     position: k._13.Absolute,
@@ -3021,7 +3023,7 @@ webpackJsonp([46], {
                 }, n)))))))
             });
 
-        function ut(e, t, n) {
+        function pt(e, t, n) {
             return {
                 vod: e.video ? e.video.id : null,
                 content_mode: "clip",
@@ -3032,30 +3034,30 @@ webpackJsonp([46], {
             }
         }
 
-        function pt(e, t, n) {
-            _(u.SpadeEventType.PlayerRecShow, e.slug, a.__assign({}, ut(e, t, n), {
+        function mt(e, t, n) {
+            _(u.SpadeEventType.PlayerRecShow, e.slug, a.__assign({}, pt(e, t, n), {
                 type: "clip"
             }))
         }
 
-        function mt(e, t, n) {
-            _(u.SpadeEventType.PlayerShowFeatured, e.slug, a.__assign({}, ut(e, t, n), {
+        function ht(e, t, n) {
+            _(u.SpadeEventType.PlayerShowFeatured, e.slug, a.__assign({}, pt(e, t, n), {
                 type: "clip"
             }))
         }
-        var ht = n("3yr7"),
-            gt = 7,
-            vt = function(e) {
+        var gt = n("3yr7"),
+            vt = 7,
+            ft = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
-                        countdownValue: ct,
+                        countdownValue: dt,
                         timerState: "running",
                         autoplayClip: null,
                         autoplayClipCategory: null
                     }, n.autoplayTimerInfluencerState = R.c, n.hasSetAutoplayClip = !1, n.autoplayCount = 1, n.removeAutoplay = function() {
                         n.setState({
-                            countdownValue: ct,
+                            countdownValue: dt,
                             autoplayClip: null,
                             autoplayClipCategory: null
                         }), n.hasSetAutoplayClip = !1, n.countdownTimer.stop()
@@ -3079,10 +3081,10 @@ webpackJsonp([46], {
                             r = t.autoplayClipCategory,
                             o = n.props.data.clip;
                         i && (o && r && e && function(e, t, n) {
-                            _(u.SpadeEventType.PlayerRecAutoplay, e.slug, a.__assign({}, ut(e, t, n), {
+                            _(u.SpadeEventType.PlayerRecAutoplay, e.slug, a.__assign({}, pt(e, t, n), {
                                 recommended_vod_view: "featured"
                             }))
-                        }(o, i, r), n.props.history.push("/" + i.slug), n.autoplayCount = e ? n.autoplayCount + 1 : 1, n.autoplayCount > gt ? n.cancelAutoplayTimer() : (n.removeAutoplay(), n.setState({
+                        }(o, i, r), n.props.history.push("/" + i.slug), n.autoplayCount = e ? n.autoplayCount + 1 : 1, n.autoplayCount > vt ? n.cancelAutoplayTimer() : (n.removeAutoplay(), n.setState({
                             timerState: "running"
                         })))
                     }, n.onAutoplayInfluencerUpdate = function(e, t) {
@@ -3100,13 +3102,13 @@ webpackJsonp([46], {
                     }, n.setAutoplayClip = function(e) {
                         if (!e.data.clip || n.hasSetAutoplayClip) return null;
                         n.hasSetAutoplayClip = !0;
-                        for (var t = Object(lt.a)(), i = 0; i < h.length; i++) {
+                        for (var t = Object(st.a)(), i = 0; i < h.length; i++) {
                             var a = e.data.clip.relatedClips[h[i]].find(function(e) {
                                 return !t.includes(e.slug)
                             });
                             if (a) {
                                 var r = h[i];
-                                return pt(e.data.clip, a, r), mt(e.data.clip, a, r), void n.setState({
+                                return mt(e.data.clip, a, r), ht(e.data.clip, a, r), void n.setState({
                                     autoplayClip: a,
                                     autoplayClipCategory: r
                                 })
@@ -3114,7 +3116,7 @@ webpackJsonp([46], {
                         }
                     }, n.setAutoplayRef = function(e) {
                         n.autoplayRef = e
-                    }, n.countdownTimer = new be({
+                    }, n.countdownTimer = new ye({
                         onInterval: n.onTimerUpdate,
                         intervalMillis: 1e3
                     }), Object(R.f)(n.onAutoplayInfluencerUpdate), n
@@ -3135,7 +3137,7 @@ webpackJsonp([46], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return null === this.state.autoplayClip ? o.createElement(k._6, null) : o.createElement(dt, {
+                    return null === this.state.autoplayClip ? o.createElement(k._6, null) : o.createElement(ut, {
                         countdownValue: this.state.countdownValue,
                         timerState: this.state.timerState,
                         autoplayClip: this.state.autoplayClip,
@@ -3146,7 +3148,7 @@ webpackJsonp([46], {
                 }, t.prototype.showAutoplay = function() {
                     this.setAutoplayClip(this.props);
                     var e = {
-                        countdownValue: ct,
+                        countdownValue: dt,
                         timerState: this.state.timerState
                     };
                     this.autoplayTimerIsBlocked() || (e.timerState = "running", this.countdownTimer.start()), this.setState(e)
@@ -3157,33 +3159,33 @@ webpackJsonp([46], {
                     registerReceiver: r.func
                 }, t
             }(o.Component),
-            ft = Object(ot.f)(Object(m.a)(ht)(Object(p.d)("ClipsAutoplayContainer")(Object(ne.t)({
+            kt = Object(lt.f)(Object(m.a)(gt)(Object(p.d)("ClipsAutoplayContainer")(Object(ne.t)({
                 playerId: function(e) {
                     return e.slug
                 },
                 requestedPlayerProps: ["playback"]
-            })(vt)))),
-            kt = function(e) {
+            })(ft)))),
+            bt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.playerConnection.playerProps.screenMode && this.props.playerConnection.playerProps.screenMode.isFullScreen;
-                    return (Object(ze.d)(navigator.userAgent) || Object(ze.c)(navigator.userAgent)) && e ? null : o.createElement(ft, {
+                    return (Object(We.d)(navigator.userAgent) || Object(We.c)(navigator.userAgent)) && e ? null : o.createElement(kt, {
                         slug: this.props.slug
                     })
                 }, t
             }(o.Component),
-            bt = Object(ne.t)({
+            yt = Object(ne.t)({
                 playerId: function(e) {
                     return e.slug
                 },
                 requestedPlayerProps: ["screenMode"]
             })(Object(p.d)("ClipsAutoplay", {
                 autoReportInteractive: !0
-            })(kt)),
-            yt = (n("+g5R"), n("RsNJ")),
-            _t = function(e) {
+            })(bt)),
+            _t = (n("+g5R"), n("RsNJ")),
+            St = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3279,15 +3281,15 @@ webpackJsonp([46], {
                     !this.state.isShowingLiveCTA && r > o && 18 <= a && this.setState({
                         isShowingLiveCTA: !0
                     })
-                }, t = a.__decorate([Object(m.a)(yt)], t)
+                }, t = a.__decorate([Object(m.a)(_t)], t)
             }(o.Component),
-            St = Object(ne.t)({
+            Ct = Object(ne.t)({
                 playerId: function(e) {
                     return e.slug
                 },
                 requestedPlayerProps: ["currentTime", "duration", "playback", "ui"]
-            })(_t),
-            Ct = (n("zU1d"), function(e) {
+            })(St),
+            Nt = (n("zU1d"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3304,9 +3306,9 @@ webpackJsonp([46], {
                         fullWidth: !0,
                         position: k._13.Absolute,
                         overflow: k._9.Hidden
-                    }, o.createElement(bt, {
+                    }, o.createElement(yt, {
                         slug: this.props.slug
-                    }), !Object(ze.d)(window.navigator.userAgent) && o.createElement(St, {
+                    }), !Object(We.d)(window.navigator.userAgent) && o.createElement(Ct, {
                         slug: this.props.slug
                     })), o.createElement(k._6, {
                         position: k._13.Absolute,
@@ -3315,11 +3317,11 @@ webpackJsonp([46], {
                     }, this.props.children)))
                 }, t
             }(o.Component)),
-            Nt = n("sikP"),
-            Et = n("oSFp"),
-            Ot = n("mw/a"),
+            Et = n("sikP"),
+            Ot = n("oSFp"),
+            Tt = n("mw/a"),
             wt = n("Ev5K"),
-            Tt = function(e) {
+            Ft = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleModalOpened = function(e) {
@@ -3332,19 +3334,19 @@ webpackJsonp([46], {
                     if (!n || !t) return null;
                     if (!t.isClipsReportModalOpen && n.isClipsReportModalOpen) {
                         var i = this.props.data.clip && this.props.data.clip.broadcaster ? this.props.data.clip.broadcaster.id : "";
-                        this.props.showModal(Et.a, {
+                        this.props.showModal(Ot.a, {
                             title: Object(l.d)("Report this Clip", "ClipsViewModerationModals"),
                             reportContext: {
-                                contentType: Ot.a.Clip,
+                                contentType: Tt.a.Clip,
                                 contentID: this.props.slug,
                                 targetUserID: i
                             },
                             onClose: this.props.closeModal
                         }), this.handleModalOpened("report")
-                    }!t.isClipsDeleteModalOpen && n.isClipsDeleteModalOpen && (this.props.showModal(Nt.d, {
+                    }!t.isClipsDeleteModalOpen && n.isClipsDeleteModalOpen && (this.props.showModal(Et.d, {
                         slug: this.props.slug,
                         onClose: this.props.closeModal
-                    }), this.handleModalOpened("delete")), !t.isClipsDeleteAllModalOpen && n.isClipsDeleteAllModalOpen && (this.props.showModal(Nt.e, {
+                    }), this.handleModalOpened("delete")), !t.isClipsDeleteAllModalOpen && n.isClipsDeleteAllModalOpen && (this.props.showModal(Et.e, {
                         slug: this.props.slug,
                         onClose: this.props.closeModal
                     }), this.handleModalOpened("deleteAll"))
@@ -3352,21 +3354,21 @@ webpackJsonp([46], {
                     return null
                 }, t
             }(o.Component),
-            Ft = Object(ne.t)({
+            Rt = Object(ne.t)({
                 playerId: function(e) {
                     return e.slug
                 },
                 requestedPlayerProps: ["clipsModeration"]
             })(Object(m.a)(wt)(Object(p.d)("ClipsViewModerationModals", {
                 autoReportInteractive: !0
-            })(Tt)));
-        var Rt = Object(j.b)(null, function(e) {
-                return Object(he.b)({
-                    showModal: Le.d,
-                    closeModal: Le.c
+            })(Ft)));
+        var It = Object(j.b)(null, function(e) {
+                return Object(ge.b)({
+                    showModal: Ue.d,
+                    closeModal: Ue.c
                 }, e)
-            })(Ft),
-            It = function(e) {
+            })(Rt),
+            xt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.playerWrapperRef = null, t.hasSetAutoplay = !1, t.setPlayerWrapperRef = function(e) {
@@ -3384,7 +3386,7 @@ webpackJsonp([46], {
                     (t && t.isSettingsShown) !== (n && n.isSettingsShown) && (n && n.isSettingsShown ? Object(R.e)(R.b.playerMenu) : Object(R.g)(R.b.playerMenu));
                     var i = this.props.playerConnection.playerProps.screenMode,
                         a = e.playerConnection.playerProps.screenMode;
-                    this.playerWrapperRef && (i && i.isFullScreen) !== (a && a.isFullScreen) && (at.videoEnabled(this.playerWrapperRef) ? a && a.isFullScreen ? at.request(this.playerWrapperRef, void 0, this.sendExitFullscreenMessage) : at.exit() : this.sendExitFullscreenMessage());
+                    this.playerWrapperRef && (i && i.isFullScreen) !== (a && a.isFullScreen) && (rt.videoEnabled(this.playerWrapperRef) ? a && a.isFullScreen ? rt.request(this.playerWrapperRef, void 0, this.sendExitFullscreenMessage) : rt.exit() : this.sendExitFullscreenMessage());
                     var r = this.props.playerConnection.playerProps.playSessionId,
                         o = e.playerConnection.playerProps.playSessionId;
                     r !== o && o && l.n.setVideoPlayerTrackingData({
@@ -3394,16 +3396,16 @@ webpackJsonp([46], {
                     var e = this.props.slug;
                     return o.createElement(k._6, {
                         flexGrow: 1
-                    }, o.createElement(Rt, {
+                    }, o.createElement(It, {
                         slug: this.props.slug
                     }), o.createElement(k.j, {
                         ratio: k.k.Aspect16x9
-                    }, o.createElement(Ct, {
+                    }, o.createElement(Nt, {
                         slug: e,
                         setPlayerWrapperRef: this.setPlayerWrapperRef
-                    }, o.createElement(rt.b, {
+                    }, o.createElement(ot.b, {
                         slug: e,
-                        playerType: rt.a.Viewing
+                        playerType: ot.a.Viewing
                     }))))
                 }, t = a.__decorate([Object(ne.t)({
                     playerId: function(e) {
@@ -3412,7 +3414,7 @@ webpackJsonp([46], {
                     requestedPlayerProps: ["ui", "screenMode", "playSessionId", "playback"]
                 }), Object(p.d)("ClipsVideoPlayer")], t)
             }(o.Component),
-            xt = (n("IcDq"), function(e) {
+            Dt = (n("IcDq"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3448,7 +3450,7 @@ webpackJsonp([46], {
                                 bottom: 5
                             }
                         }
-                    }, o.createElement(it, {
+                    }, o.createElement(at, {
                         slug: e
                     }), o.createElement(k._29, {
                         background: k.m.Base,
@@ -3458,11 +3460,11 @@ webpackJsonp([46], {
                         breakpointLarge: {
                             flexDirection: k.R.Row
                         }
-                    }, o.createElement(It, {
+                    }, o.createElement(xt, {
                         slug: e
-                    }), o.createElement(Me, {
+                    }), o.createElement(Le, {
                         slug: e
-                    })), o.createElement(T, {
+                    })), o.createElement(w, {
                         slug: e
                     }))
                 }, t.contextTypes = {
@@ -3474,7 +3476,7 @@ webpackJsonp([46], {
                 })], t)
             }(o.Component));
         n.d(t, "ClipsView", function() {
-            return xt
+            return Dt
         })
     },
     "1EXI": function(e, t) {
@@ -3886,6 +3888,26 @@ webpackJsonp([46], {
                                         directives: []
                                     }]
                                 }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "error"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "message"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
                             }]
                         }
                     }]
@@ -3893,11 +3915,11 @@ webpackJsonp([46], {
             }],
             loc: {
                 start: 0,
-                end: 112
+                end: 130
             }
         };
         n.loc.source = {
-            body: "mutation ClipsTitleEdit_UpdateClip($input: UpdateClipInput!) {\nupdateClip(input: $input) {\nclip {\nid\ntitle\n}\n}\n}",
+            body: "mutation ClipsTitleEdit_UpdateClip($input: UpdateClipInput!) {\nupdateClip(input: $input) {\nclip {\nid\ntitle\n}\nerror {\nmessage\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -5482,7 +5504,7 @@ webpackJsonp([46], {
                     return Object(s.d)("Thank you for your report", "ReportModalWizard")
                 }
             },
-            w = {
+            T = {
                 getLabel: function() {
                     return Object(s.d)("Tell us where the problem is:", "ReportModalWizard")
                 },
@@ -5490,7 +5512,7 @@ webpackJsonp([46], {
                 type: y.MultipleChoice,
                 value: "content type"
             },
-            T = {
+            w = {
                 type: y.Confirm,
                 value: "tell us more"
             },
@@ -5638,8 +5660,8 @@ webpackJsonp([46], {
                 type: y.Info,
                 value: "ip end"
             },
-            B = w,
-            V = T,
+            B = T,
+            V = w,
             z = F,
             W = {
                 video: I.video,
@@ -7510,15 +7532,16 @@ webpackJsonp([46], {
     NjaO: function(e, t) {},
     QIXk: function(e, t, n) {
         "use strict";
-        var i, a, r = n("TToO"),
-            o = n("GiK3"),
-            l = n("6sO2"),
-            s = n("7vx8"),
-            c = n("6BvN"),
-            d = n("vH/s"),
-            u = function(e, t, n, i, a) {
+        var i, a, r, o = n("TToO"),
+            l = n("GiK3"),
+            s = n("6sO2"),
+            c = n("7vx8"),
+            d = n("6BvN"),
+            u = n("oIkB"),
+            p = n("vH/s"),
+            m = function(e, t, n, i, a) {
                 var r = Date.now() / 1e3;
-                l.o.tracking.track(d.SpadeEventType.ClipEdit, {
+                s.o.tracking.track(p.SpadeEventType.ClipEdit, {
                     channel_id: e,
                     client_time: r,
                     clip_edit_session_id: t + "," + Math.floor(r),
@@ -7530,45 +7553,47 @@ webpackJsonp([46], {
                     location: a
                 })
             },
-            p = n("CIox"),
-            m = n("oIkB");
+            h = n("CIox");
         ! function(e) {
-            e.AlreadyPublished = "already_published", e.EditingWindowExpired = "editing_window_expired", e.InvalidSpeedDuration = "invalid_speed_duration", e.InvalidDuration = "invalid_duration", e.Unknown = "unknown"
+            e.AlreadyPublished = "already_published", e.EditingWindowExpired = "editing_window_expired", e.InvalidSpeedDuration = "invalid_speed_duration", e.InvalidDuration = "invalid_duration", e.InvalidTitle = "invalid_title", e.Unknown = "unknown"
         }(i || (i = {})),
         function(e) {
+            e.InvalidTitle = "invalid_title"
+        }(a || (a = {})),
+        function(e) {
             e.Unsent = "unsent", e.Sending = "sending", e.Error = "error", e.Successful = "successful"
-        }(a || (a = {}));
-        var h, g = 5,
-            v = 60,
-            f = n("Odds"),
-            k = n("isxN"),
-            b = {
-                publishState: a.Unsent,
+        }(r || (r = {}));
+        var g, v = 5,
+            f = 60,
+            k = n("Odds"),
+            b = n("isxN"),
+            y = {
+                publishState: r.Unsent,
                 errorMessage: null
             },
-            y = function(e) {
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = b, t.onError = function(e) {
+                    return t.state = y, t.onError = function(e) {
                         t.setState({
-                            publishState: a.Error,
+                            publishState: r.Error,
                             errorMessage: e
                         }), t.props.onError(e)
                     }, t.onPublish = function() {
-                        return r.__awaiter(t, void 0, void 0, function() {
+                        return o.__awaiter(t, void 0, void 0, function() {
                             var e, t, n;
-                            return r.__generator(this, function(r) {
-                                switch (r.label) {
+                            return o.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         if (this.setState({
-                                                publishState: a.Sending
-                                            }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < g || e > v) return this.setState({
-                                            publishState: a.Error,
+                                                publishState: r.Sending
+                                            }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < v || e > f) return this.setState({
+                                            publishState: r.Error,
                                             errorMessage: i.InvalidDuration
                                         }), [2];
-                                        r.label = 1;
+                                        a.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, this.props.publishClip(Object(m.a)({
+                                        return a.trys.push([1, 3, , 4]), [4, this.props.publishClip(Object(u.a)({
                                             segments: [{
                                                 offsetSeconds: this.props.startOffset,
                                                 durationSeconds: this.props.endOffset - this.props.startOffset,
@@ -7578,11 +7603,11 @@ webpackJsonp([46], {
                                             title: this.props.title
                                         }))];
                                     case 2:
-                                        return (t = r.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (this.setState({
-                                            publishState: a.Successful
+                                        return (t = a.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (this.setState({
+                                            publishState: r.Successful
                                         }), this.props.history.push("/" + this.props.slug)), [3, 4];
                                     case 3:
-                                        return r.sent(), n = i.Unknown, this.onError(n), [3, 4];
+                                        return a.sent(), n = i.Unknown, this.onError(n), [3, 4];
                                     case 4:
                                         return [2]
                                 }
@@ -7590,25 +7615,24 @@ webpackJsonp([46], {
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.publishState === a.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(b), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
+                return o.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    this.state.publishState === r.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(y), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
                 }, t.prototype.render = function() {
-                    var e = this.props.title.length < 1 || this.state.publishState === a.Error,
-                        t = this.state.publishState === a.Sending;
-                    return o.createElement(f._6, null, o.createElement(f.u, {
+                    var e = this.props.title.length < 1 || this.state.publishState === r.Error,
+                        t = this.state.publishState === r.Sending;
+                    return l.createElement(k._6, null, l.createElement(k.u, {
                         onClick: this.onPublish,
                         disabled: e,
-                        state: t ? f.z.Loading : f.z.Default,
-                        size: f.y.Large,
+                        state: t ? k.z.Loading : k.z.Default,
+                        size: k.y.Large,
                         blurAfterClick: !0
-                    }, Object(l.d)("Publish", "ClipsPublishButton")))
-                }, t = r.__decorate([Object(s.a)(k, {
+                    }, Object(s.d)("Publish", "ClipsPublishButton")))
+                }, t = o.__decorate([Object(c.a)(b, {
                     name: "publishClip"
                 })], t)
-            }(o.Component),
-            _ = Object(p.f)(y),
-            S = n("2TZ0"),
-            C = this,
+            }(l.Component),
+            S = Object(h.f)(_),
+            C = n("2TZ0"),
             N = {
                 TITLE_INPUT: "cmgr-title-input",
                 TITLE_SAVE: "cmgr-title-save",
@@ -7616,117 +7640,117 @@ webpackJsonp([46], {
             };
         ! function(e) {
             e.emptySubmission = "emptySubmission", e.characterLimitReached = "characterLimitReached", e.channelViolation = "channelViolation", e.notCurator = "notCurator", e.unknown = "unknown"
-        }(h || (h = {}));
+        }(g || (g = {}));
         var E = 100,
             O = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderForClipsViewing = function() {
-                        return o.createElement("div", null, o.createElement(f._40, {
+                        return l.createElement("div", null, l.createElement(k._40, {
                             id: N.TITLE_INPUT,
                             "data-test-selector": N.TITLE_INPUT,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
                             onKeyDown: n.handleKeyDown
-                        }), o.createElement(f._6, {
-                            display: f.P.Flex,
-                            justifyContent: f._5.Between,
-                            alignItems: f.c.Center,
+                        }), l.createElement(k._6, {
+                            display: k.P.Flex,
+                            justifyContent: k._5.Between,
+                            alignItems: k.c.Center,
                             padding: {
                                 top: 1
                             }
-                        }, n.state.showError ? o.createElement(f.O, {
-                            color: f.J.Error
-                        }, n.getErrorMessage()) : o.createElement(f.O, {
-                            color: f.J.Alt2
-                        }, n.getRemainingCharacterText()), o.createElement(f._6, {
-                            display: f.P.Flex
-                        }, o.createElement(f.u, {
+                        }, n.state.showError ? l.createElement(k.O, {
+                            color: k.J.Error
+                        }, n.getErrorMessage()) : l.createElement(k.O, {
+                            color: k.J.Alt2
+                        }, n.getRemainingCharacterText()), l.createElement(k._6, {
+                            display: k.P.Flex
+                        }, l.createElement(k.u, {
                             "data-test-selector": N.TITLE_SAVE,
                             onClick: n.props.onCancel,
-                            type: f.A.Hollow
-                        }, Object(l.d)("Cancel", "ClipsTitleEdit")), o.createElement(f._6, {
+                            type: k.A.Hollow
+                        }, Object(s.d)("Cancel", "ClipsTitleEdit")), l.createElement(k._6, {
                             padding: {
                                 left: 1
                             }
                         }, n.renderSave()))))
                     }, n.renderForManager = function() {
-                        return o.createElement(f.U, {
+                        return l.createElement(k.U, {
                             id: N.TITLE_INPUT,
-                            label: Object(l.d)("Title", "ClipsTitleEdit"),
+                            label: Object(s.d)("Title", "ClipsTitleEdit"),
                             hint: n.getRemainingCharacterText()
-                        }, o.createElement(f._6, {
-                            display: f.P.Flex,
-                            flexWrap: f.S.NoWrap
-                        }, o.createElement(f._6, {
+                        }, l.createElement(k._6, {
+                            display: k.P.Flex,
+                            flexWrap: k.S.NoWrap
+                        }, l.createElement(k._6, {
                             flexGrow: 1,
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(f._2, {
+                        }, l.createElement(k._2, {
                             id: N.TITLE_INPUT,
                             "data-test-selector": N.TITLE_INPUT,
-                            type: f._3.Text,
+                            type: k._3.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
                             onKeyDown: n.handleKeyDown
-                        })), o.createElement(f._6, {
+                        })), l.createElement(k._6, {
                             flexShrink: 0,
                             flexGrow: 0
-                        }, o.createElement(f._6, {
-                            position: f._13.Relative
-                        }, n.renderSave(), o.createElement(f._4, {
+                        }, l.createElement(k._6, {
+                            position: k._13.Relative
+                        }, n.renderSave(), l.createElement(k._4, {
                             onClick: n.dismissMessage,
                             "data-test-selector": N.TITLE_SAVE_TOOLTIP
-                        }, o.createElement(f.p, {
-                            direction: f.q.TopRight,
+                        }, l.createElement(k.p, {
+                            direction: k.q.TopRight,
                             show: n.state.showError || n.state.showSuccess
-                        }, o.createElement(f._6, {
+                        }, l.createElement(k._6, {
                             padding: 1
-                        }, n.state.showSuccess ? o.createElement(f.O, {
-                            color: f.J.Link
-                        }, Object(l.d)("Title Saved!", "ClipsTitleEdit")) : o.createElement(f.O, {
-                            color: f.J.Error
+                        }, n.state.showSuccess ? l.createElement(k.O, {
+                            color: k.J.Link
+                        }, Object(s.d)("Title Saved!", "ClipsTitleEdit")) : l.createElement(k.O, {
+                            color: k.J.Error
                         }, n.getErrorMessage()))))))))
                     }, n.renderForEdit = function() {
                         var e;
-                        if ((n.props.startOffset || 0 === n.props.startOffset) && n.props.endOffset) return e = n.state.showError ? o.createElement(f.O, {
-                            color: f.J.Alt2
-                        }, n.getErrorMessage()) : 0 === n.state.title.length && n.props.broadcasterName ? o.createElement(f.O, {
-                            color: f.J.Alt2
-                        }, Object(l.d)("Clips with titles get more views. Help {broadcasterName} get discovered by adding a title.", {
+                        if ((n.props.startOffset || 0 === n.props.startOffset) && n.props.endOffset) return e = n.state.showError ? l.createElement(k.O, {
+                            color: k.J.Alt2
+                        }, n.getErrorMessage()) : 0 === n.state.title.length && n.props.broadcasterName ? l.createElement(k.O, {
+                            color: k.J.Alt2
+                        }, Object(s.d)("Clips with titles get more views. Help {broadcasterName} get discovered by adding a title.", {
                             broadcasterName: n.props.broadcasterName
-                        }, "ClipsTitleEdit")) : o.createElement(f.O, {
-                            color: f.J.Alt2
-                        }, n.getRemainingCharacterText()), o.createElement(f._6, {
-                            display: f.P.Flex,
-                            flexWrap: f.S.NoWrap
-                        }, o.createElement(f._6, {
+                        }, "ClipsTitleEdit")) : l.createElement(k.O, {
+                            color: k.J.Alt2
+                        }, n.getRemainingCharacterText()), l.createElement(k._6, {
+                            display: k.P.Flex,
+                            flexWrap: k.S.NoWrap
+                        }, l.createElement(k._6, {
                             flexGrow: 1,
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(f._2, {
+                        }, l.createElement(k._2, {
                             id: N.TITLE_INPUT,
                             "data-test-selector": N.TITLE_INPUT,
-                            type: f._3.Text,
+                            type: k._3.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
                             onKeyDown: n.handleKeyDown
-                        })), o.createElement(f._6, {
-                            display: f.P.Flex,
-                            justifyContent: f._5.Between,
-                            alignItems: f.c.Center,
+                        })), l.createElement(k._6, {
+                            display: k.P.Flex,
+                            justifyContent: k._5.Between,
+                            alignItems: k.c.Center,
                             padding: {
                                 top: 1
                             }
-                        }, e, o.createElement(f._6, {
-                            display: f.P.Flex
-                        }, o.createElement(f._6, {
+                        }, e, l.createElement(k._6, {
+                            display: k.P.Flex
+                        }, l.createElement(k._6, {
                             padding: {
                                 left: 1
                             }
-                        }, o.createElement(_, {
+                        }, l.createElement(S, {
                             isSubmitted: n.state.showSuccess,
                             title: n.state.title,
                             slug: n.props.clipSlug,
@@ -7735,18 +7759,15 @@ webpackJsonp([46], {
                             onError: n.onPublishClipError
                         })))))
                     }, n.renderSave = function() {
-                        return o.createElement(f.u, {
+                        return l.createElement(k.u, {
                             "data-test-selector": N.TITLE_SAVE,
                             disabled: !n.canSaveEditedTitle(),
                             onClick: n.editClipTitle
-                        }, Object(l.d)("Save", "ClipsTitleEdit"))
+                        }, Object(s.d)("Save", "ClipsTitleEdit"))
                     }, n.onPublishClipError = function(e) {
-                        n.setState({
-                            showError: !0,
-                            error: e
-                        })
+                        n.errorMessageToError(e)
                     }, n.getRemainingCharacterText = function() {
-                        return Object(l.d)("{characterCount, number} remaining", {
+                        return Object(s.d)("{characterCount, number} remaining", {
                             characterCount: E - n.state.title.length
                         }, "ClipsTitleEdit")
                     }, n.onSuccess = function() {
@@ -7772,24 +7793,30 @@ webpackJsonp([46], {
                             showSuccess: !1
                         })
                     }, n.editClipTitle = function() {
-                        return r.__awaiter(n, void 0, void 0, function() {
-                            var e;
-                            return r.__generator(this, function(t) {
-                                switch (t.label) {
+                        return o.__awaiter(n, void 0, void 0, function() {
+                            var e, t;
+                            return o.__generator(this, function(n) {
+                                switch (n.label) {
                                     case 0:
                                         if ("" === this.state.title.trim()) return this.setState({
                                             showError: !0,
-                                            error: h.emptySubmission
+                                            error: g.emptySubmission
                                         }), [2];
-                                        t.label = 1;
+                                        n.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, this.props.editTitle(this.state.title.trim())];
+                                        return n.trys.push([1, 3, , 4]), [4, this.props.editTitle(Object(u.a)({
+                                            title: this.state.title.trim(),
+                                            slug: this.props.clipSlug
+                                        }))];
                                     case 2:
-                                        return t.sent(), this.props.clipBroadcasterId && this.props.clipId && this.props.clipTitle && u(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.clipSlug, this.props.clipTitle, this.props.location), this.onSuccess(), [3, 4];
-                                    case 3:
-                                        return e = t.sent(), this.setState({
+                                        return (e = n.sent()).data.updateClip && e.data.updateClip.error ? (this.setState({
                                             showError: !0,
-                                            error: this.errorMessageToError(e)
+                                            error: this.errorMessageToError(e.data.updateClip.error.message)
+                                        }), [2]) : (this.props.clipBroadcasterId && this.props.clipId && this.props.clipTitle && m(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.clipSlug, this.props.clipTitle, this.props.location), this.onSuccess(), [3, 4]);
+                                    case 3:
+                                        return t = n.sent(), this.setState({
+                                            showError: !0,
+                                            error: this.errorMessageToError(t.message)
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -7800,8 +7827,8 @@ webpackJsonp([46], {
                         return n.props.clipTitle !== n.state.title.trim()
                     }, n.handleKeyDown = function(e) {
                         switch (e.keyCode) {
-                            case c.a.Enter:
-                                return void(n.props.location === d.PageviewLocation.ClipsEditing ? n.setState({
+                            case d.a.Enter:
+                                return void(n.props.location === p.PageviewLocation.ClipsEditing ? n.setState({
                                     showSuccess: !0
                                 }) : n.canSaveEditedTitle() && n.editClipTitle());
                             default:
@@ -7814,60 +7841,30 @@ webpackJsonp([46], {
                         error: null
                     }, n
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return this.props.location === d.PageviewLocation.MyClipsManager ? this.renderForManager() : this.props.location === d.PageviewLocation.ClipsEditing ? this.renderForEdit() : this.renderForClipsViewing()
+                return o.__extends(t, e), t.prototype.render = function() {
+                    return this.props.location === p.PageviewLocation.MyClipsManager ? this.renderForManager() : this.props.location === p.PageviewLocation.ClipsEditing ? this.renderForEdit() : this.renderForClipsViewing()
                 }, t.prototype.getErrorMessage = function() {
                     switch (this.state.error) {
-                        case h.channelViolation:
-                            return Object(l.d)("Uh-oh. Check for inappropriate language and try again!", "ClipsTitleEdit");
-                        case h.emptySubmission:
-                            return Object(l.d)("Please add a title.", "ClipsTitleEdit");
+                        case g.channelViolation:
+                            return Object(s.d)("Uh-oh. Check for inappropriate language and try again!", "ClipsTitleEdit");
+                        case g.emptySubmission:
+                            return Object(s.d)("Please add a title.", "ClipsTitleEdit");
                         default:
-                            return Object(l.d)("Whoops. Something went wrong.", "ClipsTitleEdit")
+                            return Object(s.d)("Whoops. Something went wrong.", "ClipsTitleEdit")
                     }
                 }, t.prototype.errorMessageToError = function(e) {
-                    return e.message.includes("403:") ? h.channelViolation : h.unknown
+                    return e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === a.InvalidTitle.toLowerCase() ? g.channelViolation : g.unknown
                 }, t
-            }(o.Component),
-            w = function(e) {
-                return {
-                    editTitle: function(t) {
-                        return r.__awaiter(C, void 0, void 0, function() {
-                            var n;
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
-                                    case 0:
-                                        return i.trys.push([0, 2, , 3]), [4, e.mutate({
-                                            variables: {
-                                                input: {
-                                                    slug: e.ownProps.clipSlug,
-                                                    title: t
-                                                }
-                                            }
-                                        })];
-                                    case 1:
-                                        return i.sent(), [3, 3];
-                                    case 2:
-                                        throw n = i.sent(), l.j.error(n, "Failed to edit clip title"), n;
-                                    case 3:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }
-                }
-            },
-            T = Object(s.a)(S, {
-                props: w
+            }(l.Component),
+            T = Object(c.a)(C, {
+                name: "editTitle"
             })(O);
         n.d(t, !1, function() {
             return N
         }), n.d(t, !1, function() {
-            return h
+            return g
         }), n.d(t, !1, function() {
             return O
-        }), n.d(t, !1, function() {
-            return w
         }), n.d(t, "a", function() {
             return T
         })
@@ -11486,7 +11483,7 @@ webpackJsonp([46], {
                                 t(e.data)
                             })
                         }, a.updatePlayerProps = function(t) {
-                            if (e.requestedPlayerProps && (t.method === O || t.method === w)) {
+                            if (e.requestedPlayerProps && (t.method === O || t.method === T)) {
                                 var n = t.args[0],
                                     r = e.requestedPlayerProps.reduce(function(e, t) {
                                         var i = n[t];
@@ -11539,7 +11536,7 @@ webpackJsonp([46], {
             return {
                 args: [void 0 === e.arg ? {} : e.arg],
                 method: e.method,
-                namespace: void 0 === e.namespace ? T : e.namespace
+                namespace: void 0 === e.namespace ? w : e.namespace
             }
         }
 
@@ -11599,8 +11596,8 @@ webpackJsonp([46], {
             N = "setclip",
             E = "setAutoplay",
             O = "bridgestateupdate",
-            w = "bridgestorestateupdate",
-            T = "player.embed.host",
+            T = "bridgestorestateupdate",
+            w = "player.embed.host",
             F = "player.embed.client";
         n.d(t, "t", function() {
             return o
@@ -11643,9 +11640,9 @@ webpackJsonp([46], {
         }), n.d(t, "c", function() {
             return O
         }), n.d(t, "d", function() {
-            return w
-        }), n.d(t, "b", function() {
             return T
+        }), n.d(t, "b", function() {
+            return w
         }), n.d(t, "a", function() {
             return F
         }), n.d(t, !1, function() {
@@ -12050,7 +12047,7 @@ webpackJsonp([46], {
                 hasErrored: !1,
                 hasSucceeded: !1
             },
-            w = function(e) {
+            T = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.deleteAll = function() {
@@ -12108,7 +12105,7 @@ webpackJsonp([46], {
                     })
                 }, t
             }(a.Component),
-            T = Object(C.compose)(Object(u.d)("ClipsModalDeleteAll"), f({
+            w = Object(C.compose)(Object(u.d)("ClipsModalDeleteAll"), f({
                 props: function(e) {
                     return {
                         deleteAllClips: function(t, n) {
@@ -12168,7 +12165,7 @@ webpackJsonp([46], {
                         }
                     }
                 }
-            }))(w),
+            }))(T),
             F = this,
             R = {
                 isLoading: !1,
@@ -12268,7 +12265,7 @@ webpackJsonp([46], {
         }), n.d(t, "d", function() {
             return S
         }), n.d(t, "e", function() {
-            return T
+            return w
         }), n.d(t, "c", function() {
             return x
         })
@@ -13532,4 +13529,4 @@ webpackJsonp([46], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-eecd72895fdcafb5fc45b77dee77a60c.js.map
+//# sourceMappingURL=sites.clips.pages.view-a1f84c1ad57744ec51b2ca81114fce8a.js.map

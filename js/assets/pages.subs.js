@@ -6292,6 +6292,7 @@ webpackJsonp([39], {
                 return r.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(Z, {
                         authToken: this.props.authToken,
+                        sessionUser: this.props.sessionUser,
                         hostChannelID: this.props.hostChannelID,
                         hostChannelLogin: this.props.hostChannelLogin,
                         channelLogin: this.props.channelLogin,
@@ -6302,7 +6303,8 @@ webpackJsonp([39], {
             }(a.Component);
         var ee = Object(o.b)(function(e) {
             return {
-                authToken: Object(s.a)(e)
+                authToken: Object(s.a)(e),
+                sessionUser: Object(s.c)(e)
             }
         })(X);
         n.d(t, !1, function() {
@@ -7292,13 +7294,21 @@ webpackJsonp([39], {
                     })
                 }, t = r.__decorate([Object(c.a)(C), Object(p.d)("PrimeInstructions")], t)
             }(o.Component),
-            T = function(e) {
+            T = n("F8kA"),
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getErrorMessage = function() {
                         switch (t.props.errorType || k.a.UNKNOWN_ERROR) {
                             case k.a.OFFER_ALREADY_CLAIMED:
-                                return Object(s.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Please check accounts and try again.", "PrimeError");
+                                return Object(s.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Click here to {learnMoreLink}.", {
+                                    learnMoreLink: o.createElement(T.a, {
+                                        to: "https://help.twitch.tv/customer/portal/articles/2572060-twitch-prime-guide#MultipleAccounts",
+                                        target: "_blank",
+                                        className: "prime-error__link",
+                                        "data-a-target": "prime-error_link"
+                                    }, "learn more")
+                                }, "PrimeError");
                             default:
                                 return Object(s.d)("Something has gone wrong. Please try again later.", "PrimeError")
                         }
@@ -7330,6 +7340,7 @@ webpackJsonp([39], {
                         flexGrow: 1,
                         flexWrap: m.S.NoWrap,
                         alignItems: m.c.Center,
+                        textAlign: m._39.Left,
                         fontSize: this.props.fontSize ? this.props.fontSize : m.T.Size5,
                         "data-a-target": "prime-error-glitch"
                     }, o.createElement(m._6, {
@@ -7345,10 +7356,12 @@ webpackJsonp([39], {
                         type: m._21.Alert,
                         width: 20,
                         height: 20
-                    })), e)))
+                    })), o.createElement(m.O, {
+                        type: m._43.P
+                    }, e))))
                 }, t = r.__decorate([Object(p.d)("PrimeError")], t)
             }(o.Component),
-            w = (n("nFc2"), function(e) {
+            P = (n("nFc2"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.setRef = function(e) {
@@ -7391,7 +7404,7 @@ webpackJsonp([39], {
                     }))
                 }, t = r.__decorate([Object(p.d)("CopyButton")], t)
             }(o.Component)),
-            P = function(e) {
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -7421,12 +7434,12 @@ webpackJsonp([39], {
                         value: this.state.value,
                         disabled: this.props.disabled,
                         readOnly: this.props.readOnly
-                    })), o.createElement(m._6, null, o.createElement(w, {
+                    })), o.createElement(m._6, null, o.createElement(P, {
                         clipboardText: this.state.value
                     }))) : null
                 }, t = r.__decorate([Object(p.d)("CopyableItem")], t)
             }(o.Component),
-            D = function(e) {
+            I = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7454,7 +7467,7 @@ webpackJsonp([39], {
                     })))
                 }, t = r.__decorate([Object(p.d)("PrimeClaimInstructions")], t)
             }(o.Component),
-            I = function(e) {
+            x = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7468,7 +7481,7 @@ webpackJsonp([39], {
                         }
                     }, this.getCodeOrConfirmation(), this.getPrimeClaimInstructions())
                 }, t.prototype.getCodeOrConfirmation = function() {
-                    return this.props.code && this.props.deliveryMethod === k.b.CLAIM_CODE ? o.createElement(m._6, null, o.createElement(P, {
+                    return this.props.code && this.props.deliveryMethod === k.b.CLAIM_CODE ? o.createElement(m._6, null, o.createElement(D, {
                         initialText: this.props.code,
                         readOnly: !0,
                         textCenter: !0
@@ -7507,14 +7520,14 @@ webpackJsonp([39], {
                         height: 20
                     })), Object(s.d)("Added To Your Twitch Account", "PrimeRedeem"))))
                 }, t.prototype.getPrimeClaimInstructions = function() {
-                    if (this.props.claimInstructions) return o.createElement(D, {
+                    if (this.props.claimInstructions) return o.createElement(I, {
                         claimInstructions: this.props.claimInstructions || ""
                     })
                 }, t = r.__decorate([Object(p.d)("PrimeRedeem")], t)
             }(o.Component),
-            x = n("el3o"),
-            R = (n("v+rJ"), n("rM0q")),
-            F = function(e) {
+            R = n("el3o"),
+            F = (n("v+rJ"), n("rM0q")),
+            U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7530,7 +7543,7 @@ webpackJsonp([39], {
                             r = (t.props.data || {}).currentUser || {};
                         if (t.state.error) {
                             var a = t.getErrorType();
-                            return o.createElement(T, {
+                            return o.createElement(w, {
                                 fontSize: m.T.Size6,
                                 testTarget: "prime-offer-error",
                                 errorType: a
@@ -7538,7 +7551,7 @@ webpackJsonp([39], {
                         }
                         if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
                             var s = t.state.claimData || i.claimData;
-                            return o.createElement(I, {
+                            return o.createElement(x, {
                                 claimInstructions: e.claimInstructions,
                                 code: s,
                                 deliveryMethod: e.deliveryMethod
@@ -7656,13 +7669,13 @@ webpackJsonp([39], {
                             i = k.c(t.id, n);
                         return k.d().includes(i)
                     }
-                }, t = r.__decorate([Object(c.a)(R, {
+                }, t = r.__decorate([Object(c.a)(F, {
                     name: "data"
-                }), Object(c.a)(x, {
+                }), Object(c.a)(R, {
                     name: "claimPrimeOffer"
                 }), Object(p.d)("PrimeOffer")], t)
             }(o.Component),
-            U = function(e) {
+            j = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7710,7 +7723,7 @@ webpackJsonp([39], {
                     })))
                 }, t = r.__decorate([Object(p.d)("PrimeOfferPlaceholder")], t)
             }(o.Component),
-            j = (n("7L7x"), function(e) {
+            L = (n("7L7x"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7746,9 +7759,9 @@ webpackJsonp([39], {
                     }, Object(s.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), o.createElement(N, null))
                 }, t = r.__decorate([Object(p.d)("PrimeUpsell")], t)
             }(o.Component)),
-            L = n("eY4D"),
-            M = (n("DgR+"), n("65au")),
-            A = function(e) {
+            M = n("eY4D"),
+            A = (n("DgR+"), n("65au")),
+            B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.shouldShowPlaceholders = function() {
@@ -7758,7 +7771,7 @@ webpackJsonp([39], {
                             i = null == n;
                         return e.loading || !e.error && i
                     }, t.renderOfferPlaceholders = function() {
-                        for (var e = [], t = 0; t < 3; ++t) e.push(o.createElement(U, {
+                        for (var e = [], t = 0; t < 3; ++t) e.push(o.createElement(j, {
                             key: t
                         }));
                         return e
@@ -7779,7 +7792,7 @@ webpackJsonp([39], {
                     }, this.renderUpsell(), this.renderOfferExperience()))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
-                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e)) return o.createElement(j, null)
+                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e)) return o.createElement(L, null)
                 }, t.prototype.renderOfferExperience = function() {
                     var e = this.props.offersData;
                     if (this.shouldShowPlaceholders()) return this.renderOfferPlaceholders();
@@ -7787,7 +7800,7 @@ webpackJsonp([39], {
                         var t = this.getSortedOffers(),
                             n = t[t.length - 1];
                         return t.map(function(e) {
-                            return o.createElement(F, {
+                            return o.createElement(U, {
                                 key: e.id,
                                 offer: e,
                                 isLast: n.id === e.id
@@ -7816,7 +7829,7 @@ webpackJsonp([39], {
                 }, t.prototype.currentUserHasPrime = function(e) {
                     var t = e.currentUser;
                     return t && t.hasPrime
-                }, t = r.__decorate([Object(c.a)(L, {
+                }, t = r.__decorate([Object(c.a)(M, {
                     name: "offersData",
                     options: function() {
                         return {
@@ -7828,7 +7841,7 @@ webpackJsonp([39], {
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
-                }), Object(c.a)(M, {
+                }), Object(c.a)(A, {
                     name: "userData",
                     skip: function(e) {
                         return !e.firstPageLoaded
@@ -7837,14 +7850,14 @@ webpackJsonp([39], {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component);
-        var B = Object(i.b)(function(e) {
+        var W = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(A),
-            W = n("tTbW"),
-            H = (n("9856"), n("wjhu")),
-            V = function(e) {
+            })(B),
+            H = n("tTbW"),
+            V = (n("9856"), n("wjhu")),
+            G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7897,7 +7910,7 @@ webpackJsonp([39], {
                             className: "prime-offers__list"
                         }, o.createElement(h, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), o.createElement(B, null)) : null
+                        }), o.createElement(W, null)) : null
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -7946,7 +7959,7 @@ webpackJsonp([39], {
                         label: e.toString(),
                         type: m._11.Notification
                     })))
-                }, t = r.__decorate([Object(c.a)(W, {
+                }, t = r.__decorate([Object(c.a)(H, {
                     name: "offersData",
                     skip: function(e) {
                         return !e.firstPageLoaded
@@ -7958,19 +7971,19 @@ webpackJsonp([39], {
                             }
                         }
                     }
-                }), Object(c.a)(H, {
+                }), Object(c.a)(V, {
                     name: "userData"
                 }), Object(p.d)("PrimeOffers", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component);
-        var G = Object(i.b)(function(e) {
+        var q = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: !!e.session.firstPageLoaded
                 }
-            })(V),
-            q = (n("ukY1"), n("F1v6")),
-            z = function(e) {
+            })(G),
+            z = (n("ukY1"), n("F1v6")),
+            K = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8079,7 +8092,7 @@ webpackJsonp([39], {
                         target: "_blank",
                         rel: "noopener noreferrer"
                     }, l)))))
-                }, t = r.__decorate([Object(c.a)(q, {
+                }, t = r.__decorate([Object(c.a)(z, {
                     options: function() {
                         return {
                             variables: {
@@ -8091,11 +8104,11 @@ webpackJsonp([39], {
                 }), Object(p.d)("BlueBarComponent")], t)
             }(o.Component);
         n.d(t, "c", function() {
-            return G
+            return q
         }), n.d(t, "a", function() {
-            return z
+            return K
         }), n.d(t, "b", function() {
-            return T
+            return w
         }), n.d(t, "d", function() {
             return k.e
         })
@@ -34517,4 +34530,4 @@ webpackJsonp([39], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-9ccba77e0148055fb5ff710ab09b9b58.js.map
+//# sourceMappingURL=pages.subs-44b058ac196e9b4ccb41732495ba86b8.js.map

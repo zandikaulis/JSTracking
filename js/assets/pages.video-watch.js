@@ -11351,7 +11351,7 @@ webpackJsonp([36, 83], {
             if (e.isPrime) return i.createElement("span", null, y(e.userLogin, b(e.channel)));
             return i.createElement("span", null, _(e.userLogin, e.tier))
         }, t.r = function(e) {
-            if ("custom" === e.tier) return i.createElement("span", null, (t = e.userLogin, n = e.recipient, Object(r.d)("{userLogin} gifted a subscription to {recipient}!", {
+            if ("custom" === e.tier) return i.createElement("span", null, (t = e.userDisplayName, n = e.recipient, Object(r.d)("{userLogin} gifted a subscription to {recipient}!", {
                 userLogin: t,
                 recipient: n
             }, "ChatLine")));
@@ -11363,7 +11363,7 @@ webpackJsonp([36, 83], {
                     subTier: i,
                     recipient: n
                 }, "ChatLine")
-            }(e.userLogin, e.tier, e.recipient))
+            }(e.userDisplayName, e.tier, e.recipient))
         }, t.d = function(e) {
             var t = e.daysLeft;
             0 === t && (t = e.hoursLeft);
@@ -11692,7 +11692,7 @@ webpackJsonp([36, 83], {
                     return t.bits <= e.count
                 });
                 if (u) {
-                    var m = Object(s.b)(u);
+                    var m = Object(s.b)(u, void 0, e.animated);
                     return void 0 !== e.themeOverride && (e.themeOverride === a.a.Light ? m.dark = m.light : m.light = m.dark), t = i.createElement(c.a, {
                         className: "bits-count--img",
                         sources: m
@@ -20452,4 +20452,4 @@ webpackJsonp([36, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-ec0b3475fee174f9b6d9dcc2ea3f875f.js.map
+//# sourceMappingURL=pages.video-watch-0c2b2a38c6e470e3b6ee767ba382b70f.js.map

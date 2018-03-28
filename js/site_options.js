@@ -4181,7 +4181,7 @@ window.SiteOptions = {
         },
         "bb654f3c-166a-49fa-9030-c6f4bcda2ebd": {
             "name": "android_autoplay_browse",
-            "v": 1262,
+            "v": 3399,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -5085,16 +5085,16 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3394,
+            "v": 3400,
             "t": 1,
             "groups": [{
                 "weight": 5,
                 "value": "2.2.404"
             }, {
-                "weight": 95,
+                "weight": 93,
                 "value": "2.3.3"
             }, {
-                "weight": 0,
+                "weight": 2,
                 "value": "2.4.0"
             }]
         },

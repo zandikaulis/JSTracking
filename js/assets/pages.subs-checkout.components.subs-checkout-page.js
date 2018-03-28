@@ -1777,13 +1777,21 @@ webpackJsonp([38], {
                     })
                 }, t = r.__decorate([Object(l.a)(w), Object(p.d)("PrimeInstructions")], t)
             }(o.Component),
-            C = function(e) {
+            C = n("F8kA"),
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getErrorMessage = function() {
                         switch (t.props.errorType || b.a.UNKNOWN_ERROR) {
                             case b.a.OFFER_ALREADY_CLAIMED:
-                                return Object(s.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Please check accounts and try again.", "PrimeError");
+                                return Object(s.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Click here to {learnMoreLink}.", {
+                                    learnMoreLink: o.createElement(C.a, {
+                                        to: "https://help.twitch.tv/customer/portal/articles/2572060-twitch-prime-guide#MultipleAccounts",
+                                        target: "_blank",
+                                        className: "prime-error__link",
+                                        "data-a-target": "prime-error_link"
+                                    }, "learn more")
+                                }, "PrimeError");
                             default:
                                 return Object(s.d)("Something has gone wrong. Please try again later.", "PrimeError")
                         }
@@ -1815,6 +1823,7 @@ webpackJsonp([38], {
                         flexGrow: 1,
                         flexWrap: m.S.NoWrap,
                         alignItems: m.c.Center,
+                        textAlign: m._39.Left,
                         fontSize: this.props.fontSize ? this.props.fontSize : m.T.Size5,
                         "data-a-target": "prime-error-glitch"
                     }, o.createElement(m._6, {
@@ -1830,10 +1839,12 @@ webpackJsonp([38], {
                         type: m._21.Alert,
                         width: 20,
                         height: 20
-                    })), e)))
+                    })), o.createElement(m.O, {
+                        type: m._43.P
+                    }, e))))
                 }, t = r.__decorate([Object(p.d)("PrimeError")], t)
             }(o.Component),
-            x = (n("nFc2"), function(e) {
+            T = (n("nFc2"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.setRef = function(e) {
@@ -1876,7 +1887,7 @@ webpackJsonp([38], {
                     }))
                 }, t = r.__decorate([Object(p.d)("CopyButton")], t)
             }(o.Component)),
-            T = function(e) {
+            P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -1906,12 +1917,12 @@ webpackJsonp([38], {
                         value: this.state.value,
                         disabled: this.props.disabled,
                         readOnly: this.props.readOnly
-                    })), o.createElement(m._6, null, o.createElement(x, {
+                    })), o.createElement(m._6, null, o.createElement(T, {
                         clipboardText: this.state.value
                     }))) : null
                 }, t = r.__decorate([Object(p.d)("CopyableItem")], t)
             }(o.Component),
-            P = function(e) {
+            D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1939,7 +1950,7 @@ webpackJsonp([38], {
                     })))
                 }, t = r.__decorate([Object(p.d)("PrimeClaimInstructions")], t)
             }(o.Component),
-            D = function(e) {
+            F = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1953,7 +1964,7 @@ webpackJsonp([38], {
                         }
                     }, this.getCodeOrConfirmation(), this.getPrimeClaimInstructions())
                 }, t.prototype.getCodeOrConfirmation = function() {
-                    return this.props.code && this.props.deliveryMethod === b.b.CLAIM_CODE ? o.createElement(m._6, null, o.createElement(T, {
+                    return this.props.code && this.props.deliveryMethod === b.b.CLAIM_CODE ? o.createElement(m._6, null, o.createElement(P, {
                         initialText: this.props.code,
                         readOnly: !0,
                         textCenter: !0
@@ -1992,14 +2003,14 @@ webpackJsonp([38], {
                         height: 20
                     })), Object(s.d)("Added To Your Twitch Account", "PrimeRedeem"))))
                 }, t.prototype.getPrimeClaimInstructions = function() {
-                    if (this.props.claimInstructions) return o.createElement(P, {
+                    if (this.props.claimInstructions) return o.createElement(D, {
                         claimInstructions: this.props.claimInstructions || ""
                     })
                 }, t = r.__decorate([Object(p.d)("PrimeRedeem")], t)
             }(o.Component),
-            F = n("el3o"),
-            I = (n("v+rJ"), n("rM0q")),
-            R = function(e) {
+            I = n("el3o"),
+            R = (n("v+rJ"), n("rM0q")),
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2015,7 +2026,7 @@ webpackJsonp([38], {
                             r = (t.props.data || {}).currentUser || {};
                         if (t.state.error) {
                             var a = t.getErrorType();
-                            return o.createElement(C, {
+                            return o.createElement(x, {
                                 fontSize: m.T.Size6,
                                 testTarget: "prime-offer-error",
                                 errorType: a
@@ -2023,7 +2034,7 @@ webpackJsonp([38], {
                         }
                         if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
                             var s = t.state.claimData || i.claimData;
-                            return o.createElement(D, {
+                            return o.createElement(F, {
                                 claimInstructions: e.claimInstructions,
                                 code: s,
                                 deliveryMethod: e.deliveryMethod
@@ -2141,13 +2152,13 @@ webpackJsonp([38], {
                             i = b.c(t.id, n);
                         return b.d().includes(i)
                     }
-                }, t = r.__decorate([Object(l.a)(I, {
+                }, t = r.__decorate([Object(l.a)(R, {
                     name: "data"
-                }), Object(l.a)(F, {
+                }), Object(l.a)(I, {
                     name: "claimPrimeOffer"
                 }), Object(p.d)("PrimeOffer")], t)
             }(o.Component),
-            A = function(e) {
+            U = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2195,7 +2206,7 @@ webpackJsonp([38], {
                     })))
                 }, t = r.__decorate([Object(p.d)("PrimeOfferPlaceholder")], t)
             }(o.Component),
-            U = (n("7L7x"), function(e) {
+            M = (n("7L7x"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2231,9 +2242,9 @@ webpackJsonp([38], {
                     }, Object(s.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), o.createElement(E, null))
                 }, t = r.__decorate([Object(p.d)("PrimeUpsell")], t)
             }(o.Component)),
-            M = n("eY4D"),
-            j = (n("DgR+"), n("65au")),
-            L = function(e) {
+            j = n("eY4D"),
+            L = (n("DgR+"), n("65au")),
+            B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.shouldShowPlaceholders = function() {
@@ -2243,7 +2254,7 @@ webpackJsonp([38], {
                             i = null == n;
                         return e.loading || !e.error && i
                     }, t.renderOfferPlaceholders = function() {
-                        for (var e = [], t = 0; t < 3; ++t) e.push(o.createElement(A, {
+                        for (var e = [], t = 0; t < 3; ++t) e.push(o.createElement(U, {
                             key: t
                         }));
                         return e
@@ -2264,7 +2275,7 @@ webpackJsonp([38], {
                     }, this.renderUpsell(), this.renderOfferExperience()))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
-                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e)) return o.createElement(U, null)
+                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e)) return o.createElement(M, null)
                 }, t.prototype.renderOfferExperience = function() {
                     var e = this.props.offersData;
                     if (this.shouldShowPlaceholders()) return this.renderOfferPlaceholders();
@@ -2272,7 +2283,7 @@ webpackJsonp([38], {
                         var t = this.getSortedOffers(),
                             n = t[t.length - 1];
                         return t.map(function(e) {
-                            return o.createElement(R, {
+                            return o.createElement(A, {
                                 key: e.id,
                                 offer: e,
                                 isLast: n.id === e.id
@@ -2301,7 +2312,7 @@ webpackJsonp([38], {
                 }, t.prototype.currentUserHasPrime = function(e) {
                     var t = e.currentUser;
                     return t && t.hasPrime
-                }, t = r.__decorate([Object(l.a)(M, {
+                }, t = r.__decorate([Object(l.a)(j, {
                     name: "offersData",
                     options: function() {
                         return {
@@ -2313,7 +2324,7 @@ webpackJsonp([38], {
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
-                }), Object(l.a)(j, {
+                }), Object(l.a)(L, {
                     name: "userData",
                     skip: function(e) {
                         return !e.firstPageLoaded
@@ -2322,14 +2333,14 @@ webpackJsonp([38], {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component);
-        var B = Object(i.b)(function(e) {
+        var H = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(L),
-            H = n("tTbW"),
-            W = (n("9856"), n("wjhu")),
-            G = function(e) {
+            })(B),
+            W = n("tTbW"),
+            G = (n("9856"), n("wjhu")),
+            V = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2382,7 +2393,7 @@ webpackJsonp([38], {
                             className: "prime-offers__list"
                         }, o.createElement(f, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), o.createElement(B, null)) : null
+                        }), o.createElement(H, null)) : null
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -2431,7 +2442,7 @@ webpackJsonp([38], {
                         label: e.toString(),
                         type: m._11.Notification
                     })))
-                }, t = r.__decorate([Object(l.a)(H, {
+                }, t = r.__decorate([Object(l.a)(W, {
                     name: "offersData",
                     skip: function(e) {
                         return !e.firstPageLoaded
@@ -2443,19 +2454,19 @@ webpackJsonp([38], {
                             }
                         }
                     }
-                }), Object(l.a)(W, {
+                }), Object(l.a)(G, {
                     name: "userData"
                 }), Object(p.d)("PrimeOffers", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component);
-        var V = Object(i.b)(function(e) {
+        var z = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: !!e.session.firstPageLoaded
                 }
-            })(G),
-            z = (n("ukY1"), n("F1v6")),
-            q = function(e) {
+            })(V),
+            q = (n("ukY1"), n("F1v6")),
+            Y = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2564,7 +2575,7 @@ webpackJsonp([38], {
                         target: "_blank",
                         rel: "noopener noreferrer"
                     }, c)))))
-                }, t = r.__decorate([Object(l.a)(z, {
+                }, t = r.__decorate([Object(l.a)(q, {
                     options: function() {
                         return {
                             variables: {
@@ -2576,11 +2587,11 @@ webpackJsonp([38], {
                 }), Object(p.d)("BlueBarComponent")], t)
             }(o.Component);
         n.d(t, "c", function() {
-            return V
+            return z
         }), n.d(t, "a", function() {
-            return q
+            return Y
         }), n.d(t, "b", function() {
-            return C
+            return x
         }), n.d(t, "d", function() {
             return b.e
         })
@@ -4332,6 +4343,26 @@ webpackJsonp([38], {
                         kind: "Field",
                         name: {
                             kind: "Name",
+                            value: "requestInfo"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "countryCode"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
                             value: "subscriptionProduct"
                         },
                         arguments: [{
@@ -5261,11 +5292,11 @@ webpackJsonp([38], {
             }],
             loc: {
                 start: 0,
-                end: 1386
+                end: 1414
             }
         };
         i.loc.source = {
-            body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery CheckoutPayments($productName: String! $includePromotion: Boolean! $isGift: Boolean! $recipientID: ID) {\ncurrentUser {\nid\ndisplayName\n}\nsubscriptionProduct(productName: $productName) {\nid\ntier\nname\nprice\ntype\ninterval {\nduration\nunit\n}\nurl\nhasSubonlyVideoArchive\nhasAdFree\nhasFastChat\ndisplayName\nemotes {\nid\ntoken\n}\nself {\ncheckoutConfigs (isGift: $isGift recipientID: $recipientID) {\ncanGift\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\nstate\ncancelledAt\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\ncancelledAt\nproductType\nproductTier\n}\n}\nbenefit {\nid\ntier\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\n}\nowner {\nid\ndisplayName\ndescription\nlogin\nroles{\nisPartner\n}\nbannerImageURL\nbroadcastBadges{\n...badge\n}\nprofileImageURL(width:300)\nsubscriptionProducts{\nid\ntier\ndisplayName\nurl\nprice\nemotes{\nid\ntoken\n}\nemoteSetID\nself {\npromotion {\nnewPrice\noldPrice\ndiscountValue\ndiscountType\n}\n}\n}\n}\n}\n}',
+            body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery CheckoutPayments($productName: String! $includePromotion: Boolean! $isGift: Boolean! $recipientID: ID) {\ncurrentUser {\nid\ndisplayName\n}\nrequestInfo {\ncountryCode\n}\nsubscriptionProduct(productName: $productName) {\nid\ntier\nname\nprice\ntype\ninterval {\nduration\nunit\n}\nurl\nhasSubonlyVideoArchive\nhasAdFree\nhasFastChat\ndisplayName\nemotes {\nid\ntoken\n}\nself {\ncheckoutConfigs (isGift: $isGift recipientID: $recipientID) {\ncanGift\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\nstate\ncancelledAt\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\ncancelledAt\nproductType\nproductTier\n}\n}\nbenefit {\nid\ntier\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\n}\nowner {\nid\ndisplayName\ndescription\nlogin\nroles{\nisPartner\n}\nbannerImageURL\nbroadcastBadges{\n...badge\n}\nprofileImageURL(width:300)\nsubscriptionProducts{\nid\ntier\ndisplayName\nurl\nprice\nemotes{\nid\ntoken\n}\nemoteSetID\nself {\npromotion {\nnewPrice\noldPrice\ndiscountValue\ndiscountType\n}\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -6260,6 +6291,15 @@ webpackJsonp([38], {
                 }, t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
+                    if ("US" !== this.props.countryCode) {
+                        this.state.selectedProvider !== E.Xsolla && this.setState({
+                            selectedProvider: E.Xsolla
+                        });
+                        var e = this.paymentProviders.find(function(e) {
+                            return e.name === E.Xsolla
+                        });
+                        return e && this.renderProvider(e)
+                    }
                     return u.createElement(y._6, null, u.createElement(y._6, {
                         margin: {
                             bottom: 1
@@ -7347,19 +7387,19 @@ webpackJsonp([38], {
                     }, d.n.track(h.SpadeEventType.PaymentFormInteraction, i)
                 }, t.completePurchase = function(e) {
                     return c.__awaiter(t, void 0, void 0, function() {
-                        var t;
-                        return c.__generator(this, function(n) {
-                            switch (n.label) {
+                        var t, n;
+                        return c.__generator(this, function(i) {
+                            switch (i.label) {
                                 case 0:
-                                    e.recipient_id = this.props.recipientID, e.is_gift = this.props.isGift, t = "/kraken/checkout/users/" + this.props.data.currentUser.id + "/products/" + this.props.productShortName + "/purchase/complete", n.label = 1;
+                                    e.recipient_id = this.props.recipientID, e.is_gift = this.props.isGift, t = "/kraken/checkout/users/" + this.props.data.currentUser.id + "/products/" + this.props.productShortName + "/purchase/complete", i.label = 1;
                                 case 1:
-                                    return n.trys.push([1, 3, , 4]), [4, v.a.post(t, {
+                                    return i.trys.push([1, 3, , 4]), [4, v.a.post(t, {
                                         body: e
                                     }, {
                                         version: 5
                                     })];
                                 case 2:
-                                    return n.sent().error ? (this.trackPaymentFormInteraction({
+                                    return (n = i.sent()).error ? (this.trackPaymentFormInteraction({
                                         paymentFlow: e.payment_flow,
                                         action: w.CompletePurchaseClick,
                                         actionDetail: S.Failed
@@ -7368,10 +7408,11 @@ webpackJsonp([38], {
                                         action: w.CompletePurchaseClick,
                                         actionDetail: S.Success
                                     }), this.props.isGift ? this.setState({
-                                        giftSubPurchased: !0
+                                        giftSubPurchased: !0,
+                                        giftPurchaseInfo: n.body
                                     }) : this.props.data.refetch(), [3, 4]);
                                 case 3:
-                                    return n.sent(), this.trackPaymentFormInteraction({
+                                    return i.sent(), this.trackPaymentFormInteraction({
                                         paymentFlow: e.payment_flow,
                                         action: w.CompletePurchaseClick,
                                         actionDetail: S.Failed
@@ -7400,11 +7441,11 @@ webpackJsonp([38], {
                 }, t.renderReceipt = function() {
                     var e = t.props.data.subscriptionProduct.self.benefit,
                         n = t.props.data.subscriptionProduct.self.purchase.details;
-                    return t.props.data.subscriptionProduct.owner && n && t.state.giftSubPurchased ? u.createElement(De, {
+                    return t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo ? u.createElement(De, {
                         recipientDisplayName: t.props.recipientDisplayName,
                         productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
                         productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
-                        invoicePrice: n.price,
+                        invoicePrice: t.state.giftPurchaseInfo.invoice_total.price,
                         invoiceCurrency: "USD"
                     }) : t.props.data.subscriptionProduct.owner && n && t.purchased ? u.createElement(Me, {
                         purchaserDisplayName: t.props.data.currentUser.displayName,
@@ -7493,7 +7534,8 @@ webpackJsonp([38], {
                 })), this.purchased && this.renderReceipt(), !this.purchased && u.createElement(u.Fragment, null, this.renderPurchaseInfo(), this.showPaymenOptions && u.createElement(se, {
                     onSuccess: this.completePurchase,
                     configs: n,
-                    trackPaymentFormInteraction: this.trackPaymentFormInteraction
+                    trackPaymentFormInteraction: this.trackPaymentFormInteraction,
+                    countryCode: this.props.data.requestInfo.countryCode
                 }), u.createElement(y._6, {
                     margin: {
                         top: 5
@@ -16683,4 +16725,4 @@ webpackJsonp([38], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-0be46e1a248a7e66033bdc6a9b9da9c9.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-0401861bf6caf082a9d4e2fbc4ad3bc3.js.map
