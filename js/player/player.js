@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e8dd9af9fe9893683b9f.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8622b0b47c2163759089.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -24546,11 +24546,12 @@
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         n.d(t, "a", function() {
-            return o
+            return a
         }), n.d(t, "b", function() {
-            return u
+            return c
         });
-        var i = function() {
+        var i = n(6),
+            o = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -24561,28 +24562,28 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = "clip backend",
-            a = Object.freeze({
+            a = "clip backend",
+            s = Object.freeze({
                 autoplay: !0
             }),
-            s = Object.freeze({
+            u = Object.freeze({
                 mp4: "video/mp4"
             }),
-            u = function() {
+            c = function() {
                 function e() {
-                    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a,
+                    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s,
                         n = arguments[1];
                     r(this, e), this._store = n, this._options = t, this._src = "", this._initVideoTag()
                 }
-                return i(e, [{
+                return o(e, [{
                     key: "getBackend",
                     value: function() {
-                        return o
+                        return a
                     }
                 }, {
                     key: "_initVideoTag",
                     value: function() {
-                        this._video = document.createElement("video"), this._video.autoplay = this._options.autoplay, this._video.preload = "auto", this._video.type = s.mp4
+                        this._video = document.createElement("video"), this._video.autoplay = this._options.autoplay, this._video.preload = "auto", this._video.type = u.mp4
                     }
                 }, {
                     key: "attach",
@@ -24711,14 +24712,15 @@
                                 return t.group === e
                             });
                         if (r) return void this.setSrc(r.source);
-                        var i = parseInt(e, 10),
-                            o = n.available.reverse().find(function(e) {
-                                return parseInt(e.group, 10) > i
+                        var o = parseInt(e, 10),
+                            a = n.available.reverse().find(function(e) {
+                                return parseInt(e.group, 10) > o
                             });
-                        if (o) return void this.setSrc(o.source);
-                        var a = document.body.clientWidth > 500 ? n.available.length - 1 : 0,
-                            s = n.available[a];
-                        s && this.setSrc(s.source), console.warn("Invalid quality '" + e + "'. Available qualities: " + n.available.map(function(e) {
+                        if (a) return void this.setSrc(a.source);
+                        var s = document.body.clientWidth > 500 && this._options.player !== i.f,
+                            u = s ? n.available.length - 1 : 0,
+                            c = n.available[u];
+                        c && this.setSrc(c.source), console.warn("Invalid quality '" + e + "'. Available qualities: " + n.available.map(function(e) {
                             return e.group
                         }).join(", "))
                     }
@@ -30739,7 +30741,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.28-012634+59a09b47a574a21f3bfa8f1c6f2f92265ae1a994",
+                    app_version: "2018.03.28-164139+28c47fa44555f679bed83b19664403a333573442",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
