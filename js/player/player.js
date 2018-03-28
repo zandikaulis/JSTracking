@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".bd3d0ff63c11f0dcdc9f.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c8616e18e38f1be9fa40.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -4007,7 +4007,7 @@
                 permissionsState: d,
                 role: "viewer"
             },
-            k = (s = {}, r(s, l.i, !0), r(s, l.n, !0), r(s, l.e, !0), r(s, l.m, !0), r(s, l.l, !0), r(s, l.o, !0), r(s, l.s, !0), r(s, l.v, !0), r(s, l.d, !0), s),
+            k = (s = {}, r(s, l.i, !0), r(s, l.n, !0), r(s, l.e, !0), r(s, l.m, !0), r(s, l.l, !0), r(s, l.o, !0), r(s, l.s, !0), r(s, l.v, !0), r(s, l.d, !0), r(s, l.q, !0), s),
             E = {
                 "twitch-ext-follow-action": g,
                 "twitch-ext-login-request": b
@@ -16706,7 +16706,7 @@
             m = n(6),
             y = n(7),
             v = n.n(y),
-            g = Object.freeze([m.p, m.d, m.o, m.c, m.g, m.f]),
+            g = Object.freeze([m.p, m.d, m.o, m.c, m.g, m.f, m.q]),
             b = Object.freeze(["misterrogers", "contv", "failarmy", "primevideo"]),
             _ = Object.freeze({
                 recordClip: function() {
@@ -30737,7 +30737,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.27-221634+101e57a6abb1b10b13d698ac8a5089aebeb0affd",
+                    app_version: "2018.03.27-235102+f41049b5b52ab800e1cf7c4c27213ec3d77b37eb",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
@@ -37817,7 +37817,8 @@
                                 r = n.paused;
                             n.ended ? e._sendPlayerEvent("ended") : r && e._sendPlayerEvent("pause")
                         })), this._unsubscribes.push(Object(Ts.a)(this._store, ["onlineStatus"], function(t) {
-                            t.onlineStatus === Qu.b ? e._sendPlayerEvent("online") : e._sendPlayerEvent("offline")
+                            var n = t.onlineStatus;
+                            n === Qu.b ? e._sendPlayerEvent("online") : n === Qu.a && e._sendPlayerEvent("offline")
                         })), this._unsubscribes.push(Object(Ts.a)(this._store, ["screenMode.isTheatreMode"], function(t) {
                             var n = t.screenMode;
                             e._sendStoreState(), n.isTheatreMode ? e._sendPlayerEvent("theatreentered") : e._sendPlayerEvent("theatreexited")
