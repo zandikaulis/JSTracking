@@ -1810,6 +1810,18 @@ window.SiteOptions = {
                 "value": "FullPageTakeover"
             }]
         },
+        "4c0bf04d-9696-40ad-9589-a22684abb735": {
+            "name": "mobile_web_branch_open_in_app",
+            "v": 3404,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "treatment"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "4ce15ce7-a4fc-40df-812d-847467f0572d": {
             "name": "ios_mobile_promotions",
             "v": 2867,
@@ -4681,6 +4693,18 @@ window.SiteOptions = {
             "groups": [{
                 "weight": 100,
                 "value": "active"
+            }, {
+                "weight": 0,
+                "value": "control"
+            }]
+        },
+        "d5d96231-332d-4538-92c5-bdadbf938201": {
+            "name": "mobile_web_branch_upsells",
+            "v": 3405,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "treatment"
             }, {
                 "weight": 0,
                 "value": "control"
