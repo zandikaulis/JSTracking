@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8622b0b47c2163759089.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".0cce5802c5e8e82f8d06.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -24116,7 +24116,7 @@
                 case s.b:
                     return o()({}, e, {
                         data: t.captions.data,
-                        available: e.available || t.captions.data.data.length > 0
+                        available: e.available || t.captions.data.text.length > 0
                     });
                 case u.a:
                     return o()({}, e, {
@@ -30465,8 +30465,8 @@
             var t = e.captionsText,
                 n = e.captionsStyle,
                 r = t.map(function(e, t) {
-                    return p.a.createElement("div", {
-                        className: O,
+                    return d.a.createElement("div", {
+                        className: E,
                         key: t + "-" + e
                     }, e)
                 }),
@@ -30474,13 +30474,13 @@
                 a = o.containerStyles,
                 s = o.textStyles,
                 u = o.windowStyles;
-            return p.a.createElement("div", {
+            return d.a.createElement("div", {
                 className: "player-captions-container",
                 style: a
-            }, p.a.createElement("div", {
+            }, d.a.createElement("div", {
                 style: u,
                 className: "player-captions-window"
-            }, p.a.createElement("div", {
+            }, d.a.createElement("div", {
                 className: "player-captions",
                 style: s
             }, r)))
@@ -30490,12 +30490,12 @@
             var t = o(e),
                 n = a(e),
                 r = s(e),
-                i = b()({}, e, t, v.h[e.font], v.d[e.edge], v.m[e.verticalPosition], v.j[e.fontUnderline], v.g[e.fontItalic], v.e[e.fontBold], v.a[e.alignment], {
+                i = v()({}, e, t, m.h[e.font], m.d[e.edge], m.m[e.verticalPosition], m.j[e.fontUnderline], m.g[e.fontItalic], m.e[e.fontBold], m.a[e.alignment], {
                     backgroundColor: n
                 });
             return {
-                textStyles: w()(i, P),
-                containerStyles: E()(i, P),
+                textStyles: b()(i, S),
+                containerStyles: w()(i, S),
                 windowStyles: r
             }
         }
@@ -30506,8 +30506,8 @@
                 r = e.fontOpacity,
                 i = void 0 === r ? "solid" : r;
             return {
-                color: v.c(v.f[n].fontColorValue, v.k[i].opacityValue),
-                animation: v.k[i].animation
+                color: m.c(m.f[n].fontColorValue, m.k[i].opacityValue),
+                animation: m.k[i].animation
             }
         }
 
@@ -30516,7 +30516,7 @@
                 n = void 0 === t ? "solid" : t,
                 r = e.backgroundColorName,
                 i = void 0 === r ? "black" : r;
-            return v.c(v.b[i].backgroundColorValue, v.k[n].opacityValue)
+            return m.c(m.b[i].backgroundColorValue, m.k[n].opacityValue)
         }
 
         function s(e) {
@@ -30525,7 +30525,7 @@
                 r = e.windowOpacity,
                 i = void 0 === r ? "solid" : r;
             return {
-                backgroundColor: v.c(v.b[n].backgroundColorValue, v.k[i].opacityValue)
+                backgroundColor: m.c(m.b[n].backgroundColorValue, m.k[i].opacityValue)
             }
         }
 
@@ -30533,115 +30533,74 @@
             var t = e.enabled,
                 n = e.captionsData,
                 i = e.captionsStyle;
-            if (!t || !n || Array.isArray(n.data) && n.data.length < 1) return null;
+            if (!t || !n) return null;
             var o = c(n);
-            return p.a.createElement(r, {
+            return d.a.createElement(r, {
                 captionsText: o,
                 captionsStyle: i
             })
         }
 
         function c(e) {
-            var t = e.data,
-                n = e.text,
-                r = n && n.length > 0 ? n.trim() : "";
-            return r ? d(r) : Array.isArray(t) ? l(t) : void 0
+            var t = e.text;
+            return (t && t.length > 0 ? t.trim() : "") ? String(t).split(P) : []
         }
-
-        function l(e) {
-            return e.reduce(function(e, t) {
-                var n = t.char;
-                0 === t.col && e.push("");
-                var r = C(n, 1),
-                    i = r[0];
-                return e[e.length - 1] += i || "", e
-            }, [])
-        }
-
-        function d(e) {
-            return String(e).split(x)
-        }
-        var f = n(0),
+        var l = n(0),
+            d = n.n(l),
+            f = n(1),
             p = n.n(f),
-            h = n(1),
-            m = n.n(h),
-            y = n(3),
-            v = n(89),
-            g = n(30),
+            h = n(3),
+            m = n(89),
+            y = n(30),
+            v = n.n(y),
+            g = n(184),
             b = n.n(g),
-            _ = n(184),
+            _ = n(23),
             w = n.n(_),
-            k = n(23),
-            E = n.n(k),
-            S = {
-                captionsText: m.a.array.isRequired,
-                captionsStyle: m.a.shape({
-                    fontSize: m.a.number,
-                    font: m.a.string,
-                    fontOpacity: m.a.string,
-                    alignment: m.a.string,
-                    edge: m.a.string,
-                    verticalPosition: m.a.string,
-                    backgroundColorName: m.a.string,
-                    backgroundOpacity: m.a.string,
-                    windowColorName: m.a.string,
-                    windowOpacity: m.a.string,
-                    fontUnderline: m.a.string,
-                    fontBold: m.a.string,
-                    fontItalic: m.a.string
+            k = {
+                captionsText: p.a.array.isRequired,
+                captionsStyle: p.a.shape({
+                    fontSize: p.a.number,
+                    font: p.a.string,
+                    fontOpacity: p.a.string,
+                    alignment: p.a.string,
+                    edge: p.a.string,
+                    verticalPosition: p.a.string,
+                    backgroundColorName: p.a.string,
+                    backgroundOpacity: p.a.string,
+                    windowColorName: p.a.string,
+                    windowOpacity: p.a.string,
+                    fontUnderline: p.a.string,
+                    fontBold: p.a.string,
+                    fontItalic: p.a.string
                 }).isRequired
             },
-            O = "player-captions-row",
-            P = Object.freeze(["top", "bottom", "textAlign", "fontSize"]);
-        r.propTypes = S, n.d(t, "a", function() {
-            return j
+            E = "player-captions-row",
+            S = Object.freeze(["top", "bottom", "textAlign", "fontSize"]);
+        r.propTypes = k, n.d(t, "a", function() {
+            return T
         });
-        var C = function() {
-                function e(e, t) {
-                    var n = [],
-                        r = !0,
-                        i = !1,
-                        o = void 0;
-                    try {
-                        for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0);
-                    } catch (e) {
-                        i = !0, o = e
-                    } finally {
-                        try {
-                            !r && s.return && s.return()
-                        } finally {
-                            if (i) throw o
-                        }
-                    }
-                    return n
-                }
-                return function(t, n) {
-                    if (Array.isArray(t)) return t;
-                    if (Symbol.iterator in Object(t)) return e(t, n);
-                    throw new TypeError("Invalid attempt to destructure non-iterable instance")
-                }
-            }(),
-            T = {
-                enabled: m.a.bool.isRequired,
-                captionsData: m.a.object,
-                captionsStyle: m.a.shape({
-                    fontSize: m.a.number,
-                    font: m.a.string,
-                    fontOpacity: m.a.string,
-                    alignment: m.a.string,
-                    edge: m.a.string,
-                    verticalPosition: m.a.string,
-                    backgroundColorName: m.a.string,
-                    backgroundOpacity: m.a.string,
-                    windowColorName: m.a.string,
-                    windowOpacity: m.a.string,
-                    fontUnderline: m.a.string,
-                    fontBold: m.a.string,
-                    fontItalic: m.a.string
+        var O = {
+                enabled: p.a.bool.isRequired,
+                captionsData: p.a.object,
+                captionsStyle: p.a.shape({
+                    fontSize: p.a.number,
+                    font: p.a.string,
+                    fontOpacity: p.a.string,
+                    alignment: p.a.string,
+                    edge: p.a.string,
+                    verticalPosition: p.a.string,
+                    backgroundColorName: p.a.string,
+                    backgroundOpacity: p.a.string,
+                    windowColorName: p.a.string,
+                    windowOpacity: p.a.string,
+                    fontUnderline: p.a.string,
+                    fontBold: p.a.string,
+                    fontItalic: p.a.string
                 }).isRequired
             },
-            x = /\r?\n|\r/g,
-            R = function(e) {
+            P = /\r?\n|\r/g,
+            C = function(e) {
                 var t = e.captions,
                     n = e.ui;
                 return {
@@ -30650,8 +30609,8 @@
                     captionsStyle: t.style
                 }
             };
-        u.propTypes = T;
-        var j = Object(y.b)(R)(u)
+        u.propTypes = O;
+        var T = Object(h.b)(C)(u)
     }, function(e, t, n) {
         "use strict";
 
@@ -30741,7 +30700,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.28-164139+28c47fa44555f679bed83b19664403a333573442",
+                    app_version: "2018.03.28-180529+a556749ccb4744db022f7bda3f83c14de93e11ed",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
