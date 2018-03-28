@@ -585,6 +585,18 @@ window.__twilightSettings = {
                 "value": "variant_a"
             }]
         },
+        "b2dec62d-9e65-4ba8-80f4-f785a1412039": {
+            "name": "twilight_clips_never_enough",
+            "v": 3402,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "d54399a7-7956-4a20-b46b-47af282d7f66": {
             "name": "twilight_theatre_fullscreen",
             "v": 3316,
