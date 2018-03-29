@@ -71,6 +71,7 @@ window.__twilightSettings = {
     "tvapp_xbox_preroll_duration": 30,
     "tvapp_xbox_preroll_frequency": 900,
     "twilight_clips_already": "on",
+    "twilight_collections_manager_enabled": true,
     "twilight_moonstone": "dev",
     "twilight_routes": ["channel", "channelFollowing", "channelFollowers", "channelEvents", "clips", "collections", "community", "dashboardAchievements", "dashboardExtensions", "dashboardExtensionsConfigure", "dashboardModeration", "dashboardStreamSummary", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGameDetails", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "extensionDetails", "index", "inventory", "managerClips", "managerClipsChannel", "managerHighlights", "managerIndex", "managerPastBroadcast", "managerUploads", "merchStore", "settingsNotifications", "settingsProfile", "video", "videos"],
     "twilight_routes_enabled": true,
