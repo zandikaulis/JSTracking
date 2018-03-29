@@ -15824,8 +15824,9 @@ webpackJsonp([68], {
                                             }
                                         })
                                     } else if ("subgift" === s) {
-                                        var v = e.tags["msg-param-recipient-display-name"];
-                                        d = e.tags["msg-param-sub-plan"], h = a.decodeTag(e.tags["msg-param-sub-plan-name"]), m = d.includes("Prime");
+                                        var v = e.tags["msg-param-recipient-display-name"],
+                                            g = (d = e.tags["msg-param-sub-plan"], h = a.decodeTag(e.tags["msg-param-sub-plan-name"]), a.getInteger(e.tags["msg-param-sender-count"], 0));
+                                        m = d.includes("Prime");
                                         i && (e.tags["message-type"] = "subgift"), this.events.subgift({
                                             channel: o,
                                             user: this.createUser(e),
@@ -15834,157 +15835,158 @@ webpackJsonp([68], {
                                                 plan: d,
                                                 planName: h
                                             },
-                                            recipientName: v
+                                            recipientName: v,
+                                            senderCount: g
                                         })
                                     } else if ("charity" === s) {
-                                        var g = e.tags["msg-param-charity-name"],
-                                            b = Number(e.tags["msg-param-total"]),
-                                            _ = Number(e.tags["msg-param-charity-days-remaining"]),
-                                            w = Number(e.tags["msg-param-charity-hours-remaining"]),
-                                            x = e.tags["msg-param-charity-hashtag"],
-                                            k = e.tags["msg-param-charity-learn-more"];
-                                        if (isNaN(b) || isNaN(_) || isNaN(w) || !g || !x || !k) break;
+                                        var b = e.tags["msg-param-charity-name"],
+                                            _ = Number(e.tags["msg-param-total"]),
+                                            w = Number(e.tags["msg-param-charity-days-remaining"]),
+                                            x = Number(e.tags["msg-param-charity-hours-remaining"]),
+                                            k = e.tags["msg-param-charity-hashtag"],
+                                            E = e.tags["msg-param-charity-learn-more"];
+                                        if (isNaN(_) || isNaN(w) || isNaN(x) || !b || !k || !E) break;
                                         this.events.charity({
-                                            total: b,
-                                            charityName: a.decodeTag(g),
-                                            daysLeft: _,
-                                            hoursLeft: w,
-                                            hashtag: x,
-                                            learnMore: k
+                                            total: _,
+                                            charityName: a.decodeTag(b),
+                                            daysLeft: w,
+                                            hoursLeft: x,
+                                            hashtag: k,
+                                            learnMore: E
                                         })
                                     } else if ("unraid" === s) {
-                                        var E = e.tags["display-name"] || e.tags.login,
-                                            O = a.decodeTag(e.tags["system-msg"]);
+                                        var O = e.tags["display-name"] || e.tags.login,
+                                            C = a.decodeTag(e.tags["system-msg"]);
                                         this.events.unraid({
                                             channel: o,
-                                            userLogin: E,
-                                            message: O
+                                            userLogin: O,
+                                            message: C
                                         })
                                     } else if ("raid" === s) {
-                                        E = e.tags["display-name"] || e.tags.login;
-                                        var C = e.tags["msg-param-displayName"],
-                                            T = e.tags["msg-param-viewerCount"],
-                                            S = e.tags["msg-param-login"];
+                                        O = e.tags["display-name"] || e.tags.login;
+                                        var T = e.tags["msg-param-displayName"],
+                                            S = e.tags["msg-param-viewerCount"],
+                                            P = e.tags["msg-param-login"];
                                         this.events.raid({
                                             channel: o,
-                                            userLogin: E,
+                                            userLogin: O,
                                             params: {
-                                                displayName: C,
-                                                viewerCount: T,
+                                                displayName: T,
+                                                viewerCount: S,
                                                 msgId: s,
-                                                login: S
+                                                login: P
                                             }
                                         })
                                     } else if ("crate" === s) {
-                                        var P = a.getInteger(e.tags["msg-param-selectedCount"]),
-                                            A = this.createChatMessage(e, i);
+                                        var A = a.getInteger(e.tags["msg-param-selectedCount"]),
+                                            j = this.createChatMessage(e, i);
                                         this.events.crate({
-                                            selectedCount: P,
-                                            message: A,
+                                            selectedCount: A,
+                                            message: j,
                                             timestamp: Date.now(),
                                             type: u.Crate
                                         })
                                     } else if ("purchase" === s) {
-                                        var j = e.tags,
-                                            R = {
+                                        var R = e.tags,
+                                            I = {
                                                 purchased: {
                                                     type: "game",
-                                                    title: j["msg-param-title"].split("\\s").join(" "),
-                                                    boxart: j["msg-param-imageURL"]
+                                                    title: R["msg-param-title"].split("\\s").join(" "),
+                                                    boxart: R["msg-param-imageURL"]
                                                 },
-                                                numCrates: parseInt(j["msg-param-crateCount"], 10) || 0,
+                                                numCrates: parseInt(R["msg-param-crateCount"], 10) || 0,
                                                 crateLoot: []
                                             },
-                                            I = j["msg-param-emoticons"];
-                                        I && (t = R.crateLoot).push.apply(t, I.split(",").map(function(e) {
+                                            M = R["msg-param-emoticons"];
+                                        M && (t = I.crateLoot).push.apply(t, M.split(",").map(function(e) {
                                             return {
                                                 id: e,
                                                 type: p.a.Emote
                                             }
                                         }));
-                                        var M = j["msg-param-badges"];
-                                        M && (n = R.crateLoot).push.apply(n, M.split(",").map(function(e) {
+                                        var D = R["msg-param-badges"];
+                                        D && (n = I.crateLoot).push.apply(n, D.split(",").map(function(e) {
                                             return {
                                                 img: e,
                                                 type: p.a.Badge
                                             }
                                         }));
-                                        var D = +j["msg-param-bits"];
-                                        D && R.crateLoot.push({
-                                            quantity: D,
+                                        var L = +R["msg-param-bits"];
+                                        L && I.crateLoot.push({
+                                            quantity: L,
                                             type: p.a.Bits
                                         });
-                                        var L = j["msg-param-inGameContent"];
-                                        L && (r = R.crateLoot).push.apply(r, L.split(",").map(function(e) {
+                                        var N = R["msg-param-inGameContent"];
+                                        N && (r = I.crateLoot).push.apply(r, N.split(",").map(function(e) {
                                             return {
                                                 img: e,
                                                 type: p.a.InGameContent
                                             }
                                         }));
-                                        A = {
+                                        j = {
                                             user: this.createUser(e),
-                                            timestamp: +j["tmi-sent-ts"],
+                                            timestamp: +R["tmi-sent-ts"],
                                             body: i
                                         };
                                         this.events.purchase({
-                                            message: A,
-                                            purchase: R,
+                                            message: j,
+                                            purchase: I,
                                             timestamp: Date.now(),
                                             type: u.Purchase
                                         })
                                     } else if ("ritual" === s) {
-                                        var N = e.tags["msg-param-ritual-name"];
-                                        A = {
+                                        var F = e.tags["msg-param-ritual-name"];
+                                        j = {
                                             user: this.createUser(e),
                                             timestamp: +e.tags["tmi-sent-ts"],
                                             body: i
                                         };
                                         this.events.ritual({
-                                            type: N,
-                                            message: A
+                                            type: F,
+                                            message: j
                                         })
                                     } else {
-                                        A = this.createChatMessage(e, i);
-                                        this.events.usernotice(this.createChatMessageEvent(u.UserNotice, s, o, A, !1))
+                                        j = this.createChatMessage(e, i);
+                                        this.events.usernotice(this.createChatMessageEvent(u.UserNotice, s, o, j, !1))
                                     }
                                     break;
                                 case "HOSTTARGET":
-                                    var F = +i.split(" ")[1] || 0;
+                                    var q = +i.split(" ")[1] || 0;
                                     if ("-" === i.split(" ")[0]) this.commands.unhost.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
                                     }), this.events.unhost({
                                         channel: o,
-                                        viewers: F
+                                        viewers: q
                                     });
                                     else {
-                                        var q = i.split(" ")[0];
+                                        var U = i.split(" ")[0];
                                         this.commands.host.signal({
                                             channel: o,
                                             msgid: s,
                                             succeeded: !0
                                         }), this.events.hosting({
                                             channel: o,
-                                            target: q,
-                                            viewers: F
+                                            target: U,
+                                            viewers: q
                                         })
                                     }
                                     break;
                                 case "CLEARCHAT":
                                     if (e.params.length > 1) {
-                                        var U = +e.tags["ban-duration"] || null,
-                                            B = a.decodeTag(e.tags["ban-reason"]);
-                                        null === U ? this.events.ban({
+                                        var B = +e.tags["ban-duration"] || null,
+                                            H = a.decodeTag(e.tags["ban-reason"]);
+                                        null === B ? this.events.ban({
                                             channel: o,
-                                            reason: B,
+                                            reason: H,
                                             userLogin: i,
                                             duration: null
                                         }) : this.events.timeout({
                                             channel: o,
-                                            reason: B,
+                                            reason: H,
                                             userLogin: i,
-                                            duration: U
+                                            duration: B
                                         })
                                     } else this.events.clearchat({
                                         channel: o
@@ -16001,19 +16003,19 @@ webpackJsonp([68], {
                                     break;
                                 case "USERSTATE":
                                     e.tags.username = this.session.username;
-                                    var H = this.createUser(e);
+                                    var Q = this.createUser(e);
                                     this.commands.sendMessage.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
-                                    }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(o, this.session.username), a.isJustinfan(this.session.username) || this.session.hasJoinedChannel(o) || (this.session.onJoinedChannel(o, H), this.events.joined({
+                                    }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(o, this.session.username), a.isJustinfan(this.session.username) || this.session.hasJoinedChannel(o) || (this.session.onJoinedChannel(o, Q), this.events.joined({
                                         channel: o,
                                         username: this.session.username,
                                         gotUsername: !0
                                     })), this.session.updateBadges(o, e.badges) && this.events.badgesupdated({
                                         badges: e.badges,
                                         username: a.username(this.session.username)
-                                    }), this.session.updateUserState(o, H);
+                                    }), this.session.updateUserState(o, Q);
                                     break;
                                 case "GLOBALUSERSTATE":
                                     this.logger.debug("Updated global user state", {
@@ -16021,27 +16023,27 @@ webpackJsonp([68], {
                                     }), this.session.globaluserstate = e.tags;
                                     break;
                                 case "ROOMSTATE":
-                                    var Q = a.channel(e.params[0]),
-                                        V = this.createRoomState(e);
-                                    this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === Q && this.commands.join.signal({
+                                    var V = a.channel(e.params[0]),
+                                        z = this.createRoomState(e);
+                                    this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === V && this.commands.join.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
                                     }), this.events.roomstate({
                                         channel: o,
-                                        state: V
-                                    }), e.tags.hasOwnProperty("slow") && !e.tags.hasOwnProperty("subs-only") && (V.slowMode ? this.events.slowmode({
+                                        state: z
+                                    }), e.tags.hasOwnProperty("slow") && !e.tags.hasOwnProperty("subs-only") && (z.slowMode ? this.events.slowmode({
                                         channel: o,
                                         enabled: !0,
-                                        length: V.slowModeDuration
+                                        length: z.slowModeDuration
                                     }) : this.events.slowmode({
                                         channel: o,
                                         enabled: !1,
                                         length: 0
-                                    })), e.tags.hasOwnProperty("followers-only") && !e.tags.hasOwnProperty("subs-only") && (V.followersOnly ? this.events.followersonly({
+                                    })), e.tags.hasOwnProperty("followers-only") && !e.tags.hasOwnProperty("subs-only") && (z.followersOnly ? this.events.followersonly({
                                         channel: o,
                                         enabled: !0,
-                                        length: V.followersOnlyRequirement
+                                        length: z.followersOnlyRequirement
                                     }) : this.events.followersonly({
                                         channel: o,
                                         enabled: !1,
@@ -16052,12 +16054,12 @@ webpackJsonp([68], {
                                     this.logger.warn("Could not parse message from tmi.twitch.tv:\n" + JSON.stringify(e, null, 4))
                             } else if ("jtv" === e.prefix) switch (e.command) {
                                 case "MODE":
-                                    var z = e.params[2];
-                                    "+o" === i ? (this.session.addChannelModerator(o, z), this.events.mod({
-                                        username: z,
+                                    var W = e.params[2];
+                                    "+o" === i ? (this.session.addChannelModerator(o, W), this.events.mod({
+                                        username: W,
                                         channel: o
-                                    })) : "-o" === i && (this.session.removeChannelModerator(o, z), this.events.unmod({
-                                        username: z,
+                                    })) : "-o" === i && (this.session.removeChannelModerator(o, W), this.events.unmod({
+                                        username: W,
                                         channel: o
                                     }));
                                     break;
@@ -16073,28 +16075,28 @@ webpackJsonp([68], {
                                 case "366":
                                     break;
                                 case "JOIN":
-                                    var W = e.prefix.split("!")[0];
-                                    a.isJustinfan(this.session.username) && this.session.username === W && (this.session.onJoinedChannel(o, this.createUser(e)), this.events.joined({
+                                    var K = e.prefix.split("!")[0];
+                                    a.isJustinfan(this.session.username) && this.session.username === K && (this.session.onJoinedChannel(o, this.createUser(e)), this.events.joined({
                                         channel: o,
-                                        username: W,
+                                        username: K,
                                         gotUsername: !0
-                                    })), this.session.username !== W && this.events.joined({
+                                    })), this.session.username !== K && this.events.joined({
                                         channel: o,
-                                        username: W,
+                                        username: K,
                                         gotUsername: !1
                                     });
                                     break;
                                 case "PART":
-                                    var K = e.prefix.split("!")[0],
-                                        G = this.session.username === K;
-                                    G && (this.session.onPartedChannel(o), this.commands.part.signal({
+                                    var G = e.prefix.split("!")[0],
+                                        J = this.session.username === G;
+                                    J && (this.session.onPartedChannel(o), this.commands.part.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
                                     })), this.events.parted({
                                         channel: o,
-                                        username: K,
-                                        isSelf: G
+                                        username: G,
+                                        isSelf: J
                                     });
                                     break;
                                 case "WHISPER":
@@ -16106,36 +16108,36 @@ webpackJsonp([68], {
                                     break;
                                 case "PRIVMSG":
                                     if (e.tags.username = e.prefix.split("!")[0], "jtv" === e.tags.username) {
-                                        var J = a.username(i.split(" ")[0]);
+                                        var Y = a.username(i.split(" ")[0]);
                                         if (i.includes("hosting you for")) {
-                                            F = a.extractNumber(i);
+                                            q = a.extractNumber(i);
                                             this.events.hosted({
                                                 channel: o,
-                                                from: J,
+                                                from: Y,
                                                 isAuto: i.includes("auto"),
-                                                viewers: F
+                                                viewers: q
                                             })
                                         } else i.includes("hosting you") && this.events.hosted({
                                             channel: o,
-                                            from: J,
+                                            from: Y,
                                             isAuto: i.includes("auto"),
                                             viewers: 0
                                         })
                                     } else {
-                                        var Y = i.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
-                                        A = this.createChatMessage(e, i);
-                                        if (Y && Y.length >= 2) {
+                                        var X = i.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
+                                        j = this.createChatMessage(e, i);
+                                        if (X && X.length >= 2) {
                                             e.tags["message-type"] = "action";
-                                            var X = Y[1];
+                                            var $ = X[1];
                                             this.events.action({
                                                 type: u.Action,
                                                 timestamp: Date.now(),
-                                                action: X,
+                                                action: $,
                                                 channel: o,
-                                                message: A,
+                                                message: j,
                                                 sentByCurrentUser: !1
                                             })
-                                        } else this.events.chat(this.createChatMessageEvent(u.Message, s, o, A, !1))
+                                        } else this.events.chat(this.createChatMessageEvent(u.Message, s, o, j, !1))
                                     }
                                     break;
                                 default:
@@ -35101,4 +35103,4 @@ webpackJsonp([68], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-82846b3ace8acd8f3650c1a4476abdaf.js.map
+//# sourceMappingURL=vendor-5d1c770f92a46a4c0ccdbeb47fa7c9fc.js.map

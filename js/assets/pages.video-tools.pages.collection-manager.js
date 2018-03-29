@@ -109,36 +109,36 @@ webpackJsonp([80], {
             return l
         });
         var i = n("TToO"),
-            o = n("GiK3"),
-            r = (n.n(o), n("5kgt")),
+            r = n("GiK3"),
+            o = (n.n(r), n("5kgt")),
             a = n("Odds"),
             l = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = o.createElement(a._6, {
+                    var e = r.createElement(a._6, {
                             alignItems: a.c.Center,
                             display: a.P.Flex,
                             fullHeight: !0,
                             justifyContent: a._5.Center,
                             padding: 2
-                        }, o.createElement(a._28, {
+                        }, r.createElement(a._28, {
                             icon: this.props.icon,
                             label: this.props.label,
                             value: this.props.value
                         })),
-                        t = this.props.linkTo ? o.createElement(a._4, {
+                        t = this.props.linkTo ? r.createElement(a._4, {
                             alpha: !0,
                             linkTo: this.props.linkTo,
                             targetBlank: !0
                         }, e) : e;
-                    return o.createElement(a._6, i.__assign({
+                    return r.createElement(a._6, i.__assign({
                         display: a.P.InlineFlex,
                         fullHeight: !0
-                    }, Object(r.a)(this.props)), t)
+                    }, Object(o.a)(this.props)), t)
                 }, t
-            }(o.Component)
+            }(r.Component)
     },
     "Dk8+": function(e, t, n) {
         "use strict";
@@ -146,97 +146,150 @@ webpackJsonp([80], {
             value: !0
         });
         var i = n("TToO"),
-            o = n("GiK3"),
-            r = n("3zLD"),
-            a = n("6sO2"),
-            l = n("zCIC"),
-            c = n("j7/Y"),
-            s = n("oIkB"),
-            d = n("w9tK"),
-            u = n("vH/s"),
-            m = n("CSlQ"),
-            p = n("Z8qZ"),
-            h = n("PwTO"),
-            g = n("N8CH"),
-            v = n("Odds"),
-            k = function(e) {
+            r = n("GiK3"),
+            o = n("6sO2"),
+            a = n("yWCw"),
+            l = n("3zLD"),
+            c = n("7vx8"),
+            s = n("CSlQ"),
+            d = n("acVP"),
+            u = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        loading: !0,
+                        permitted: !1,
+                        roles: {
+                            staff: !1,
+                            editor: !1,
+                            owner: !1
+                        },
+                        error: null
+                    }, t.logger = o.j.withCategory("role-restricted"), t
+                }
+                return i.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
+                    e.data.loading && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    var t = function(e) {
+                            var t = e.data,
+                                n = {
+                                    staff: !1,
+                                    editor: !1,
+                                    owner: !1
+                                };
+                            !t.error && !t.loading && t.user && t.currentUser && (n.staff = !(!t.currentUser.roles || !t.currentUser.roles.isStaff), n.editor = !(!t.user.self || !t.user.self.isEditor), n.owner = t.user.id === t.currentUser.id);
+                            return n
+                        }(e),
+                        n = {
+                            loading: e.data.loading,
+                            permitted: function(e, t) {
+                                if (e.owner) return !0;
+                                if (e.staff && t.staff) return !0;
+                                if (e.editor && t.editor) return !0;
+                                return !1
+                            }(t, e.permittedRoles),
+                            roles: t,
+                            error: null
+                        };
+                    e.data.error ? (n.error = new Error(e.data.error.toString()), this.logger.warn("Unable to retrieve data from GraphQL.", {
+                        err: n.error
+                    })) : e.data.loading || e.data.user && e.data.currentUser || (n.error = new Error("Failed to fetch user information"), this.logger.warn("Failed to fetch user information.", {
+                        err: n.error
+                    })), this.setState(n)
+                }, t.prototype.render = function() {
+                    return this.props.children(this.state)
+                }, t
+            }(r.Component);
+        var m, p = Object(l.compose)(Object(c.a)(d, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            contentOwnerLogin: e.ownerLogin
+                        }
+                    }
+                }
+            }), Object(s.d)("RoleRestricted"))(u),
+            g = n("zCIC"),
+            h = n("j7/Y"),
+            f = n("oIkB"),
+            v = n("w9tK"),
+            k = n("vH/s"),
+            C = n("Z8qZ"),
+            b = n("PwTO"),
+            E = n("N8CH"),
+            y = n("Odds"),
+            S = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(p.a, null, o.createElement(v._6, null, o.createElement(v._12, {
+                    return r.createElement(C.a, null, r.createElement(y._6, null, r.createElement(y._12, {
                         height: 75,
                         width: 133
-                    })), o.createElement(g.a, null, o.createElement(v.O, null, o.createElement(v._12, {
+                    })), r.createElement(E.a, null, r.createElement(y.O, null, r.createElement(y._12, {
                         width: 600,
                         lineCount: 1
-                    }), o.createElement(v._12, {
+                    }), r.createElement(y._12, {
                         width: 200,
                         lineCount: 1
-                    }))), o.createElement(h.a, null, o.createElement(v.O, null, o.createElement(v._12, {
+                    }))), r.createElement(b.a, null, r.createElement(y.O, null, r.createElement(y._12, {
                         width: 40,
                         lineCount: 1
-                    }))), o.createElement(v._6, {
+                    }))), r.createElement(y._6, {
                         flexGrow: 0,
                         flexShrink: 0
-                    }, o.createElement(v._6, {
+                    }, r.createElement(y._6, {
                         fullHeight: !0,
-                        display: v.P.Flex,
-                        alignItems: v.c.Center,
-                        justifyContent: v._5.Center,
+                        display: y.P.Flex,
+                        alignItems: y.c.Center,
+                        justifyContent: y._5.Center,
                         padding: 1
-                    }, o.createElement(v.O, null, o.createElement(v._12, {
+                    }, r.createElement(y.O, null, r.createElement(y._12, {
                         width: 20,
                         lineCount: 1
                     })))))
                 }, t
-            }(o.PureComponent),
-            f = n("CIox"),
-            C = n("7vx8"),
-            E = n("jXn2"),
-            b = n("1myv"),
-            _ = function(e) {
+            }(r.PureComponent),
+            _ = n("CIox"),
+            O = n("jXn2"),
+            N = n("F0UT"),
+            w = n("1myv"),
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        collectionTitle: "",
                         creationErrorMessage: ""
-                    }, t.defaultCreationError = Object(a.d)("Creation attempt failed. Please try again.", "CollectionCreator"), t.onNameInputChangeHandler = function(e) {
-                        t.setState({
-                            collectionTitle: e.currentTarget.value,
-                            creationErrorMessage: ""
-                        })
-                    }, t.onCreateButtonClickHandler = function() {
+                    }, t.defaultCreationError = Object(o.d)("Creation attempt failed. Please try again.", "CollectionCreator"), t.onCreateButtonClickHandler = function(e) {
                         t.setState({
                             creationErrorMessage: ""
                         }, function() {
                             return i.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, o, r, l, c, d;
+                                var t, n, r, a, l, c, s, d;
                                 return i.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
-                                            if (!this.props.context) return a.j.error(new Error("Collection creation attempt occurred without valid creation context"), "CreateCollection"), this.setState({
+                                            if (!this.props.context) return o.j.error(new Error("Collection creation attempt occurred without valid creation context"), "CreateCollection"), this.setState({
                                                 creationErrorMessage: this.defaultCreationError
                                             }), [2];
-                                            e = this.props.context, t = e.ownerID, n = e.ownerLogin, o = e.sessionUserID, r = Object(s.a)({
-                                                ownerID: t,
-                                                title: this.state.collectionTitle
+                                            t = this.props.context, n = t.ownerID, r = t.ownerLogin, a = t.sessionUserID, l = Object(f.a)({
+                                                ownerID: n,
+                                                title: e
                                             }), i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, this.props.createCollection(r)];
+                                            return i.trys.push([1, 3, , 4]), [4, this.props.createCollection(l)];
                                         case 2:
-                                            return l = i.sent().data, c = l.createCollection.collection, Object(E.b)({
-                                                channelID: t,
-                                                playlistID: c.id,
-                                                userID: o,
-                                                title: c.title
-                                            }), this.props.history.push("/" + n + "/manager/collections/" + c.id, {
-                                                content: u.PageviewContent.CollectionCreator,
-                                                medium: u.PageviewMedium.VideoManagerCollectionManager
-                                            }), [3, 4];
+                                            return c = i.sent().data, s = c.createCollection.collection, Object(O.b)({
+                                                channelID: n,
+                                                playlistID: s.id,
+                                                userID: a,
+                                                title: s.title
+                                            }), this.props.history.push("/" + r + "/manager/collections/" + s.id, {
+                                                content: k.PageviewContent.CollectionCreator,
+                                                medium: k.PageviewMedium.VideoManagerCollectionManager
+                                            }), this.props.onAdd(), [3, 4];
                                         case 3:
-                                            return d = i.sent(), a.j.error(d, "CreateCollection", {
-                                                mutationInput: r
+                                            return d = i.sent(), o.j.error(d, "CreateCollection", {
+                                                mutationInput: l
                                             }), this.setState({
                                                 creationErrorMessage: this.defaultCreationError
                                             }), [3, 4];
@@ -249,46 +302,28 @@ webpackJsonp([80], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(a.d)("{currentLength} of {maxLength} characters.", {
-                            currentLength: this.state.collectionTitle.length.toString(),
-                            maxLength: 100..toString()
-                        }, "CollectionCreator"),
-                        t = null;
-                    return 0 === this.state.creationErrorMessage.length && (t = o.createElement(v._6, {
-                        visibility: this.state.collectionTitle.length > 0 ? v._54.Visible : v._54.Hidden,
-                        "data-test-selector": "length-hint"
-                    }, o.createElement(v.O, null, e))), o.createElement(v.U, {
-                        error: this.state.creationErrorMessage.length > 0,
-                        errorMessage: this.state.creationErrorMessage,
-                        label: ""
-                    }, o.createElement(v.W, null, o.createElement(v.K, {
-                        cols: {
-                            default: 3,
-                            xl: 2
-                        }
-                    }, o.createElement(v._2, {
+                    return r.createElement(y.W, null, r.createElement(y.K, {
+                        cols: 4
+                    }, r.createElement(N.a, {
                         disabled: !this.props.context,
-                        maxLength: 100,
-                        onChange: this.onNameInputChangeHandler,
-                        placeholder: Object(a.d)("Collection name", "CollectionCreator"),
-                        type: v._3.Text
-                    }), t), o.createElement(v.K, {
-                        cols: 3
-                    }, o.createElement(v.u, {
-                        disabled: !this.props.context || "" === this.state.collectionTitle,
-                        onClick: this.onCreateButtonClickHandler
-                    }, Object(a.d)("Create Collection", "CollectionCreator")))))
+                        onSubmit: this.onCreateButtonClickHandler,
+                        callToAction: Object(o.d)("Create Collection", "CollectionCreator"),
+                        errorMessage: this.state.creationErrorMessage
+                    })))
                 }, t
-            }(o.Component),
-            y = Object(r.compose)(Object(C.a)(b, {
+            }(r.Component),
+            D = Object(l.compose)(Object(c.a)(w, {
                 name: "createCollection"
-            }))(Object(f.f)(_)),
-            O = n("rvrg"),
-            S = n("I9kX"),
-            N = function(e) {
+            }))(Object(_.f)(T)),
+            M = n("rvrg"),
+            x = n("I9kX");
+        ! function(e) {
+            e.CollectionsUnavailableError = "CollectionsUnavailableError", e.CreateCollection = "CreateCollection", e.noCollectionsCTA = "noCollectionsCTA"
+        }(m || (m = {}));
+        var j = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onDeleteCollectionHandler = function() {
+                    return t.refetchCreatorCollection = function() {
                         t.props.data.refetch({
                             creatorLogin: t.props.match.params.creatorLogin
                         })
@@ -298,61 +333,85 @@ webpackJsonp([80], {
                     e.data.loading && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e, t = !1;
-                    return this.props.data.loading ? e = this.collectionCardPlaceholders() : !this.props.data.error && this.props.data.user && this.props.data.user.collections ? this.props.data.user.collections.edges.length > 0 ? (e = this.renderCollections(this.props.data.user.collections.edges), t = this.props.data.user.collections.pageInfo.hasNextPage || !1) : e = this.noCollectionsCTA() : e = this.contentUnavaibleError(), o.createElement(l.b, null, o.createElement(v._6, {
+                    return this.props.data.loading ? e = this.collectionCardPlaceholders() : !this.props.data.error && this.props.data.user && this.props.data.user.collections ? this.props.data.user.collections.edges.length > 0 ? (e = this.renderCollections(this.props.data.user.collections.edges), t = this.props.data.user.collections.pageInfo.hasNextPage || !1) : e = this.noCollectionsCTA() : e = this.contentUnavaibleError(), r.createElement(g.b, null, r.createElement(y._6, {
                         fullHeight: !0,
                         padding: {
                             top: 2,
                             x: 2
+                        },
+                        margin: {
+                            bottom: 5
                         }
-                    }, o.createElement(v._6, {
+                    }, r.createElement(y._6, {
                         padding: {
                             bottom: 2
                         }
-                    }, o.createElement(v.O, {
-                        type: v._43.H2
-                    }, Object(a.d)("Collections", "CollectionManager"))), o.createElement(y, {
+                    }, r.createElement(y.O, {
+                        type: y._43.H2
+                    }, Object(o.d)("Collections", "CollectionManager"))), r.createElement(D, {
                         context: this.props.data.user && this.props.data.currentUser ? {
                             ownerID: this.props.data.user.id,
                             ownerLogin: this.props.match.params.creatorLogin,
                             sessionUserID: this.props.data.currentUser.id
-                        } : void 0
-                    }), o.createElement(v._6, {
+                        } : void 0,
+                        onAdd: this.refetchCreatorCollection
+                    }), r.createElement(y._6, {
                         fullWidth: !0,
                         padding: {
                             top: 2
+                        },
+                        margin: {
+                            bottom: 5
                         }
-                    }, e, o.createElement(l.a, {
+                    }, e, r.createElement(g.a, {
                         enabled: t,
                         loadMore: this.props.loadMore
                     }))))
                 }, t.prototype.renderCollections = function(e) {
                     var t = this;
                     return e.map(function(e, n) {
-                        return o.createElement(v._6, {
+                        return r.createElement(y._6, {
                             key: n,
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(O.a, {
+                        }, r.createElement(M.a, {
                             collection: e.node,
-                            onDelete: t.onDeleteCollectionHandler
+                            onDelete: t.refetchCreatorCollection
                         }))
                     })
                 }, t.prototype.collectionCardPlaceholders = function() {
-                    for (var e = [], t = 0; t < 3; t++) e.push(o.createElement(v._6, {
+                    for (var e = [], t = 0; t < 3; t++) e.push(r.createElement(y._6, {
                         key: t,
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(k, null)));
+                    }, r.createElement(S, null)));
                     return e
                 }, t.prototype.noCollectionsCTA = function() {
-                    return o.createElement("div", null)
+                    return r.createElement(y._6, {
+                        alignItems: y.c.Center,
+                        "data-test-selector": m.noCollectionsCTA,
+                        display: y.P.Flex,
+                        flexDirection: y.R.Column,
+                        justifyContent: y._5.Center,
+                        margin: {
+                            top: 5
+                        }
+                    }, r.createElement(y.O, {
+                        type: y._43.H4
+                    }, Object(o.d)("Put all your best videos in one spot.", "CollectionManager")), r.createElement(y.O, {
+                        type: y._43.H4
+                    }, Object(o.d)("Videos organized into collections help your viewers easily find related content.", "CollectionManager")), r.createElement(y.O, {
+                        type: y._43.H4
+                    }, Object(o.d)("Your most recently updated Collection will be featured at the top of channel’s video page.", "CollectionManager")))
                 }, t.prototype.contentUnavaibleError = function() {
-                    return o.createElement("div", null)
+                    return r.createElement(y._6, {
+                        "data-test-selector": m.CollectionsUnavailableError
+                    }, Object(o.d)("Something went wrong loading your collections. Please try again.", "CollectionEditorPagePresentation"))
                 }, t
-            }(o.Component),
-            M = Object(r.compose)(Object(r.graphql)(S, {
+            }(r.Component),
+            F = Object(l.compose)(Object(l.graphql)(x, {
                 options: function(e) {
                     return {
                         variables: {
@@ -366,30 +425,31 @@ webpackJsonp([80], {
                             var t = e.data.user && e.data.user.collections ? e.data.user.collections.edges : [],
                                 n = t.length > 0 ? t[t.length - 1].cursor : void 0;
                             return e.data.fetchMore({
-                                query: S,
+                                query: x,
                                 variables: i.__assign({}, e.data.variables, {
                                     after: n
                                 }),
                                 updateQuery: function(e, t) {
                                     var n = t.fetchMoreResult;
                                     if (!n.user || !n.user.collections) return e;
-                                    var o = e.user && e.user.collections ? e.user.collections.edges : [];
+                                    var r = e.user && e.user.collections ? e.user.collections.edges : [];
                                     return {
                                         user: i.__assign({}, n.user, {
                                             collections: i.__assign({}, n.user.collections, {
-                                                edges: Object(s.b)(o, n.user.collections.edges)
+                                                edges: Object(f.b)(r, n.user.collections.edges)
                                             })
-                                        })
+                                        }),
+                                        currentUser: e.currentUser
                                     }
                                 }
                             })
                         }
                     })
                 }
-            }), Object(m.d)("CollectionManager", {
-                destination: d.a.VideoManagerCollectionsManager
-            }), Object(c.a)({
-                location: u.PageviewLocation.VideoManagerCollectionManager,
+            }), Object(s.d)("CollectionManager", {
+                destination: v.a.VideoManagerCollectionsManager
+            }), Object(h.a)({
+                location: k.PageviewLocation.VideoManagerCollectionManager,
                 properties: function(e) {
                     return {
                         channel: e.match.params.creatorLogin,
@@ -399,17 +459,107 @@ webpackJsonp([80], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(N),
-            D = n("L2R7"),
-            w = function(e) {
+            }))(j),
+            I = function(e) {
+                return r.createElement(p, {
+                    ownerLogin: e.match.params.creatorLogin,
+                    permittedRoles: {
+                        editor: !0,
+                        staff: !0
+                    }
+                }, function(t) {
+                    var n = t.loading,
+                        l = t.permitted;
+                    return n || l ? r.createElement(F, i.__assign({}, e)) : r.createElement(a.a, {
+                        message: Object(o.d)("Something went wrong. Please try again.", "CollectionManagerPage")
+                    })
+                })
+            },
+            L = n("L2R7"),
+            P = function(e) {
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections"), null
             },
-            x = function(e) {
-                return Object(D.a)() ? o.createElement(M, i.__assign({}, e)) : o.createElement(w, i.__assign({}, e))
+            U = function(e) {
+                return Object(L.a)() ? r.createElement(I, i.__assign({}, e)) : r.createElement(P, i.__assign({}, e))
             };
         n.d(t, "CollectionManagerPage", function() {
-            return x
+            return U
         })
+    },
+    F0UT: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return d
+        });
+        var i, r = n("TToO"),
+            o = n("GiK3"),
+            a = (n.n(o), n("6sO2")),
+            l = n("6BvN"),
+            c = n("Odds"),
+            s = String.fromCharCode(160);
+        ! function(e) {
+            e.SubmitButton = "SubmitButton", e.TitleInput = "TitleInput"
+        }(i || (i = {}));
+        var d = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.state = {
+                    collectionTitle: "",
+                    localTitleChanges: !1
+                }, t.onNameInputChange = function(e) {
+                    t.setState({
+                        collectionTitle: e.currentTarget.value,
+                        localTitleChanges: !0
+                    })
+                }, t.onSubmit = function() {
+                    t.setState({
+                        localTitleChanges: !1
+                    }, function() {
+                        return t.props.onSubmit(t.state.collectionTitle)
+                    })
+                }, t.onKeyDown = function(e) {
+                    e.keyCode !== l.a.Enter || t.canSaveTitle() || t.onSubmit()
+                }, t
+            }
+            return r.__extends(t, e), t.prototype.render = function() {
+                var e = Object(a.d)("{currentLength} of {maxLength} characters.", {
+                        currentLength: this.state.collectionTitle.length.toString(),
+                        maxLength: 100..toString()
+                    }, "CollectionCreator"),
+                    t = "";
+                return !this.state.localTitleChanges && this.props.errorMessage.length > 0 && (t = this.props.errorMessage), o.createElement(c.U, {
+                    hint: this.state.collectionTitle.length > 0 ? e : s,
+                    error: t.length > 0,
+                    errorMessage: t,
+                    label: ""
+                }, o.createElement(c.W, null, o.createElement(c.K, {
+                    cols: {
+                        default: 6,
+                        xl: 4
+                    }
+                }, o.createElement(c._2, {
+                    "data-test-selector": i.TitleInput,
+                    defaultValue: this.props.defaultTitle,
+                    disabled: this.props.disabled,
+                    maxLength: 100,
+                    onChange: this.onNameInputChange,
+                    placeholder: Object(a.d)("Collection name", "CollectionCreator"),
+                    type: c._3.Text,
+                    onKeyDown: this.onKeyDown
+                })), o.createElement(c.K, {
+                    cols: 1
+                }, o.createElement(c.u, {
+                    "data-test-selector": i.SubmitButton,
+                    disabled: !this.canSaveTitle(),
+                    onClick: this.onSubmit
+                }, this.props.callToAction))))
+            }, t.prototype.canSaveTitle = function() {
+                var e = !(this.state.collectionTitle && this.state.collectionTitle.replace(/\s/g, "").length > 0),
+                    t = Boolean(this.state.collectionTitle && this.state.collectionTitle.length > 100),
+                    n = this.state.collectionTitle === this.props.defaultTitle;
+                return !(e || t || n)
+            }, t
+        }(o.Component)
     },
     I9kX: function(e, t) {
         var n = {
@@ -757,26 +907,26 @@ webpackJsonp([80], {
     KRtN: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
-            o = n("GiK3"),
-            r = n("rCmJ"),
+            r = n("GiK3"),
+            o = n("rCmJ"),
             a = n("Odds"),
             l = function(e) {
-                var t = e.asset ? o.createElement(a._19, {
+                var t = e.asset ? r.createElement(a._19, {
                     asset: e.asset
                 }) : null;
-                return o.createElement(a._4, {
+                return r.createElement(a._4, {
                     linkTo: e.linkTo,
                     onClick: e.onClick
-                }, o.createElement(a._6, {
+                }, r.createElement(a._6, {
                     alignItems: a.c.Center,
                     display: a.P.Flex,
                     flexGrow: 1,
                     padding: 1
-                }, t, o.createElement(a._0, {
+                }, t, r.createElement(a._0, {
                     margin: {
                         left: 1
                     }
-                }, o.createElement(a.O, null, e.title))))
+                }, r.createElement(a.O, null, e.title))))
             };
         n.d(t, "a", function() {
             return c
@@ -802,20 +952,20 @@ webpackJsonp([80], {
             }
             return i.__extends(t, e), t.prototype.render = function() {
                 var e = null;
-                return this.state.showDropMenu && (e = this.dropMenu()), o.createElement(a._6, {
+                return this.state.showDropMenu && (e = this.dropMenu()), r.createElement(a._6, {
                     flexGrow: 0,
                     flexShrink: 0,
                     display: a.P.Flex,
                     position: a._13.Relative
-                }, o.createElement(a._0, {
+                }, r.createElement(a._0, {
                     fullHeight: !0
-                }, o.createElement(r.a, {
+                }, r.createElement(o.a, {
                     onClickOut: this.clickOutHandler
-                }, o.createElement(a._6, {
+                }, r.createElement(a._6, {
                     fullHeight: !0,
                     display: a.P.Flex,
                     alignItems: a.c.Stretch
-                }, o.createElement(a.u, {
+                }, r.createElement(a.u, {
                     disabled: 0 === this.props.options.length,
                     icon: a._20.More,
                     onClick: this.menuButtonClickHandler,
@@ -823,23 +973,23 @@ webpackJsonp([80], {
                 })), e)))
             }, t.prototype.dropMenu = function() {
                 var e = this.props.options.map(function(e, t) {
-                    return o.createElement(l, i.__assign({
+                    return r.createElement(l, i.__assign({
                         key: t
                     }, e))
                 });
-                return o.createElement(a.p, {
+                return r.createElement(a.p, {
                     size: a.r.Small,
                     direction: a.q.BottomRight,
                     noTail: !0,
                     show: !0
                 }, e)
             }, t
-        }(o.Component)
+        }(r.Component)
     },
     M0wY: function(e, t, n) {
         "use strict";
-        var i, o = n("TToO"),
-            r = n("GiK3"),
+        var i, r = n("TToO"),
+            o = n("GiK3"),
             a = n("3zLD"),
             l = n("RH2O"),
             c = n("6sO2"),
@@ -848,91 +998,91 @@ webpackJsonp([80], {
             u = n("V5M+"),
             m = n("+8VM"),
             p = n("rvrg"),
-            h = n("Odds");
+            g = n("Odds");
         ! function(e) {
             e[e.CancelButton = 0] = "CancelButton", e[e.ConfirmButton = 1] = "ConfirmButton", e[e.ErrorAlert = 2] = "ErrorAlert"
         }(i || (i = {}));
-        var g = function(e) {
+        var h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return o.__extends(t, e), t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.collection,
                         t = null;
-                    return this.props.error && (t = r.createElement(h.e, {
-                        delay: h.f.Short,
-                        type: h.i.BounceIn,
+                    return this.props.error && (t = o.createElement(g.e, {
+                        delay: g.f.Short,
+                        type: g.i.BounceIn,
                         enabled: !0
-                    }, r.createElement(h._29, {
+                    }, o.createElement(g._29, {
                         border: !0,
                         margin: {
                             bottom: 1
                         },
                         padding: 1,
                         fullWidth: !0
-                    }, r.createElement(h.O, {
+                    }, o.createElement(g.O, {
                         bold: !0,
-                        color: h.J.Error,
+                        color: g.J.Error,
                         "data-test-selector": i.ErrorAlert
-                    }, this.props.error)))), r.createElement(h.e, {
-                        type: h.i.FadeIn,
-                        delay: h.f.Medium,
-                        duration: h.g.Medium,
+                    }, this.props.error)))), o.createElement(g.e, {
+                        type: g.i.FadeIn,
+                        delay: g.f.Medium,
+                        duration: g.g.Medium,
                         enabled: !0
-                    }, r.createElement(h._29, {
-                        background: h.m.Base,
+                    }, o.createElement(g._29, {
+                        background: g.m.Base,
                         padding: {
                             x: 3,
                             top: 2,
                             bottom: 3
                         }
-                    }, r.createElement(h._0, {
+                    }, o.createElement(g._0, {
                         padding: {
                             bottom: 1
                         }
-                    }, r.createElement(h.O, {
-                        fontSize: h.T.Size3
-                    }, Object(c.d)("Delete Collection", "DeleteCollectionModal"))), r.createElement(h.O, {
-                        fontSize: h.T.Size6
-                    }, Object(c.d)("Are you sure you want to delete this collection?", "DeleteCollectionModal")), r.createElement(h.O, {
-                        fontSize: h.T.Size6
-                    }, Object(c.d)("This action cannot be undone. ", "DeleteCollectionModal")), r.createElement(h._6, {
+                    }, o.createElement(g.O, {
+                        fontSize: g.T.Size3
+                    }, Object(c.d)("Delete Collection", "DeleteCollectionModal"))), o.createElement(g.O, {
+                        fontSize: g.T.Size6
+                    }, Object(c.d)("Are you sure you want to delete this collection?", "DeleteCollectionModal")), o.createElement(g.O, {
+                        fontSize: g.T.Size6
+                    }, Object(c.d)("This action cannot be undone. ", "DeleteCollectionModal")), o.createElement(g._6, {
                         padding: {
                             y: 2
                         }
-                    }, r.createElement(p.a, {
+                    }, o.createElement(p.a, {
                         collection: e,
                         hideOptionsMenu: !0
-                    })), t, r.createElement(h._6, {
-                        display: h.P.Flex,
-                        flexDirection: h.R.Row,
-                        justifyContent: h._5.Center
-                    }, r.createElement(h._6, {
+                    })), t, o.createElement(g._6, {
+                        display: g.P.Flex,
+                        flexDirection: g.R.Row,
+                        justifyContent: g._5.Center
+                    }, o.createElement(g._6, {
                         margin: {
                             x: .5
                         }
-                    }, r.createElement(h.u, {
+                    }, o.createElement(g.u, {
                         "data-test-selector": i.CancelButton,
                         onClick: this.props.onCancel,
-                        type: h.A.Hollow
-                    }, Object(c.d)("Cancel", "DeleteCollectionModal"))), r.createElement(h._6, {
+                        type: g.A.Hollow
+                    }, Object(c.d)("Cancel", "DeleteCollectionModal"))), o.createElement(g._6, {
                         margin: {
                             x: .5
                         }
-                    }, r.createElement(h.u, {
+                    }, o.createElement(g.u, {
                         "data-test-selector": i.ConfirmButton,
                         onClick: this.props.onDeleteRequest,
-                        type: h.A.Alert
-                    }, Object(c.d)("Delete", "DeleteCollectionModal")))), r.createElement(m.a, {
+                        type: g.A.Alert
+                    }, Object(c.d)("Delete", "DeleteCollectionModal")))), o.createElement(m.a, {
                         closeOnBackdropClick: !0
                     })))
                 }, t
-            }(r.Component),
-            v = n("e6eF");
+            }(o.Component),
+            f = n("e6eF");
         n.d(t, "a", function() {
             return C
         });
-        var k = function(e) {
+        var v = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.defaultUserError = Object(c.d)("Unable to delete this collection, try again later.", "DeleteCollectionModal"), t.onCancelHandler = function() {
@@ -941,9 +1091,9 @@ webpackJsonp([80], {
                         t.setState({
                             deletionError: void 0
                         }, function() {
-                            return o.__awaiter(t, void 0, void 0, function() {
+                            return r.__awaiter(t, void 0, void 0, function() {
                                 var e;
-                                return o.__generator(this, function(t) {
+                                return r.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
                                             if (!this.props.collection.owner) return this.setState({
@@ -968,18 +1118,18 @@ webpackJsonp([80], {
                         })
                     }, t
                 }
-                return o.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(g, {
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return o.createElement(h, {
                         collection: this.props.collection,
                         error: this.state.deletionError,
                         onCancel: this.onCancelHandler,
                         onDeleteRequest: this.onDeleteHandler
                     })
                 }, t
-            }(r.Component),
-            f = Object(a.compose)(Object(s.a)(v, {
+            }(o.Component),
+            k = Object(a.compose)(Object(s.a)(f, {
                 name: "onDeleteRequest"
-            }))(k);
+            }))(v);
         var C = Object(l.b)(null, function(e, t) {
             return {
                 onClose: function() {
@@ -989,23 +1139,23 @@ webpackJsonp([80], {
                     e(Object(u.c)()), t.onSuccess && t.onSuccess()
                 }
             }
-        })(f)
+        })(k)
     },
     N8CH: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return r
+            return o
         });
         var i = n("GiK3"),
-            o = (n.n(i), n("Odds")),
-            r = function(e) {
-                return i.createElement(o._6, {
-                    alignItems: o.c.Start,
-                    display: o.P.Flex,
-                    flexDirection: o.R.Column,
+            r = (n.n(i), n("Odds")),
+            o = function(e) {
+                return i.createElement(r._6, {
+                    alignItems: r.c.Start,
+                    display: r.P.Flex,
+                    flexDirection: r.R.Column,
                     flexGrow: 1,
                     flexShrink: 1,
-                    justifyContent: o._5.Center,
+                    justifyContent: r._5.Center,
                     padding: {
                         x: 2
                     }
@@ -1018,17 +1168,17 @@ webpackJsonp([80], {
             return a
         });
         var i = n("GiK3"),
-            o = (n.n(i), n("Odds")),
-            r = n("QmYP"),
-            a = (n.n(r), function(e) {
-                return i.createElement(o._6, {
+            r = (n.n(i), n("Odds")),
+            o = n("QmYP"),
+            a = (n.n(o), function(e) {
+                return i.createElement(r._6, {
                     className: "manager-card__stats-container",
-                    display: o.P.Flex,
+                    display: r.P.Flex,
                     flexGrow: 0,
                     flexShrink: 0,
-                    flexWrap: o.S.NoWrap,
-                    flexDirection: o.R.Row,
-                    alignItems: o.c.Center
+                    flexWrap: r.S.NoWrap,
+                    flexDirection: r.R.Row,
+                    alignItems: r.c.Center
                 }, e.children)
             })
     },
@@ -1036,25 +1186,169 @@ webpackJsonp([80], {
     Z8qZ: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
-            o = n("GiK3"),
-            r = n("Odds"),
+            r = n("GiK3"),
+            o = n("Odds"),
             a = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(r._29, {
-                        background: r.m.Base,
+                    return r.createElement(o._29, {
+                        background: o.m.Base,
                         elevation: 1,
-                        display: r.P.Flex,
-                        flexDirection: r.R.Row,
-                        alignItems: r.c.Stretch
+                        display: o.P.Flex,
+                        flexDirection: o.R.Row,
+                        alignItems: o.c.Stretch
                     }, this.props.children)
                 }, t
-            }(o.Component);
+            }(r.Component);
         n.d(t, "a", function() {
             return a
         })
+    },
+    acVP: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "RoleRestricted"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "contentOwnerLogin"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "roles"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isStaff"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "contentOwnerLogin"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isEditor"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 147
+            }
+        };
+        n.loc.source = {
+            body: "query RoleRestricted($contentOwnerLogin: String!) {\ncurrentUser {\nid\nroles {\nisStaff\n}\n}\nuser(login: $contentOwnerLogin) {\nid\nself {\nisEditor\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     e6eF: function(e, t) {
         var n = {
@@ -1155,8 +1449,8 @@ webpackJsonp([80], {
     rvrg: function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
-            o = n("V5M+"),
-            r = n("TToO"),
+            r = n("V5M+"),
+            o = n("TToO"),
             a = n("GiK3"),
             l = n("6sO2"),
             c = n("mi6k"),
@@ -1165,42 +1459,45 @@ webpackJsonp([80], {
             u = n("CSlQ"),
             m = n("Z8qZ"),
             p = n("KRtN"),
-            h = n("4o7v"),
-            g = n("PwTO"),
-            v = n("N8CH"),
-            k = n("Odds"),
-            f = function(e) {
+            g = n("4o7v"),
+            h = n("PwTO"),
+            f = n("N8CH"),
+            v = n("Odds"),
+            k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onDeleteOptionClickHandler = function() {
                         t.props.onDeleteOptionClick(t.props.collection)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = this.props.collection;
-                    return a.createElement(m.a, null, a.createElement(k._6, {
+                return o.__extends(t, e), t.prototype.render = function() {
+                    var e, t = this.props.collection;
+                    return t.thumbnailURL && (e = {
+                        "160w": t.thumbnailURL
+                    }), a.createElement(m.a, null, a.createElement(v._6, {
                         flexShrink: 0
                     }, a.createElement(d.a, {
-                        alt: e.title,
+                        alt: t.title,
                         sizes: [{
                             size: "160px"
                         }],
-                        src: e.thumbnailURL,
-                        videoCount: e.items.totalCount
-                    })), a.createElement(v.a, null, a.createElement(k.O, {
+                        src: t.thumbnailURL,
+                        srcSet: e,
+                        videoCount: t.items.totalCount
+                    })), a.createElement(f.a, null, a.createElement(v.O, {
                         bold: !0,
-                        type: k._43.H4,
-                        color: k.J.Alt
-                    }, e.title), a.createElement(k._46, {
-                        direction: k._48.Bottom,
+                        type: v._43.H4,
+                        color: v.J.Alt
+                    }, t.title), a.createElement(v._46, {
+                        direction: v._48.Bottom,
                         label: Object(l.d)("Last Updated", "CollectionManagerCard")
-                    }, a.createElement(k.O, {
-                        color: k.J.Alt2
-                    }, Object(l.c)(new Date(e.updatedAt), "long")))), a.createElement(g.a, null, this.collectionStats(e)), this.renderCardMenu())
+                    }, a.createElement(v.O, {
+                        color: v.J.Alt2
+                    }, Object(l.c)(new Date(t.updatedAt), "long")))), a.createElement(h.a, null, this.collectionStats(t)), this.renderCardMenu())
                 }, t.prototype.renderCardMenu = function() {
                     if (this.props.hideOptionsMenu || !this.props.collection.owner) return null;
                     var e = [{
-                        asset: k._20.Edit,
+                        asset: v._20.Edit,
                         linkTo: {
                             pathname: "/" + this.props.collection.owner.login + "/manager/collections/" + this.props.collection.id,
                             state: {
@@ -1210,7 +1507,7 @@ webpackJsonp([80], {
                         },
                         title: Object(l.d)("Edit", "CollectionManagerCard")
                     }, {
-                        asset: k._20.Trash,
+                        asset: v._20.Trash,
                         onClick: this.onDeleteOptionClickHandler,
                         title: Object(l.d)("Delete", "CollectionManagerCard")
                     }];
@@ -1220,14 +1517,14 @@ webpackJsonp([80], {
                 }, t.prototype.collectionStats = function(e) {
                     return [{
                         value: Object(c.a)(e.lengthSeconds),
-                        icon: k._20.GlyphLength,
+                        icon: v._20.GlyphLength,
                         label: Object(l.d)("Collection length", "CollectionManagerCard")
                     }, {
                         value: "" + e.viewCount,
-                        icon: k._20.GlyphViews,
+                        icon: v._20.GlyphViews,
                         label: Object(l.d)("Views", "CollectionManagerCard")
                     }].map(function(e, t) {
-                        return a.createElement(h.a, r.__assign({
+                        return a.createElement(g.a, o.__assign({
                             key: t
                         }, e))
                     })
@@ -1235,15 +1532,15 @@ webpackJsonp([80], {
             }(a.Component),
             C = Object(u.d)("CollectionManagerCard", {
                 autoReportInteractive: !0
-            })(f),
-            E = n("M0wY");
+            })(k),
+            b = n("M0wY");
         n.d(t, "a", function() {
-            return b
+            return E
         });
-        var b = Object(i.b)(null, function(e, t) {
+        var E = Object(i.b)(null, function(e, t) {
             return {
                 onDeleteOptionClick: function(n) {
-                    e(Object(o.d)(E.a, {
+                    e(Object(r.d)(b.a, {
                         collection: n,
                         onSuccess: t.onDelete
                     }))
@@ -1252,4 +1549,4 @@ webpackJsonp([80], {
         })(C)
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-e6eea387bb14b8782ca3fdd3040ba461.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-20112de5d164c1271e52cb3e67e0ad67.js.map

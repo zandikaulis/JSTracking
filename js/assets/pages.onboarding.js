@@ -247,7 +247,7 @@ webpackJsonp([52, 77], {
                     }, "Live Channel Card");
                     return i.createElement("div", a.__assign({
                         className: "live-channel-card"
-                    }, Object(b._56)(this.props)), i.createElement(b.B, {
+                    }, Object(b._55)(this.props)), i.createElement(b.B, {
                         key: this.props.title
                     }, i.createElement(b._6, {
                         fullWidth: !0
@@ -937,7 +937,7 @@ webpackJsonp([52, 77], {
                         }, a.createElement(y._6, {
                             padding: .5,
                             position: y._13.Absolute,
-                            zIndex: y._55.Above
+                            zIndex: y._54.Above
                         }, a.createElement(u.a, {
                             type: m.a.Live
                         })), a.createElement(v, {
@@ -1371,7 +1371,7 @@ webpackJsonp([52, 77], {
                     onMouseEnter: this.onMouseEnter,
                     onMouseLeave: this.onMouseLeave,
                     onClick: this.onClick
-                }, Object(c._56)(this.props)), a.createElement(c.B, {
+                }, Object(c._55)(this.props)), a.createElement(c.B, {
                     key: this.props.title
                 }, a.createElement(c._6, {
                     position: c._13.Relative
@@ -1790,7 +1790,7 @@ webpackJsonp([52, 77], {
                     return a.createElement("div", r.__assign({
                         className: e,
                         "data-test-selector": "live-channel-preview-card"
-                    }, Object(p._56)(this.props)), a.createElement(s.a, r.__assign({}, this.props), a.createElement(p.j, {
+                    }, Object(p._55)(this.props)), a.createElement(s.a, r.__assign({}, this.props), a.createElement(p.j, {
                         ratio: p.k.Aspect16x9
                     }, this.props.videoPlayer)))
                 }, t
@@ -2382,7 +2382,7 @@ webpackJsonp([52, 77], {
                         margin: .5,
                         padding: .5,
                         position: p._13.Absolute,
-                        zIndex: p._55.Above
+                        zIndex: p._54.Above
                     }, a.createElement(p._8, {
                         fillContent: !0,
                         inheritColor: !0,
@@ -5130,4 +5130,4 @@ webpackJsonp([52, 77], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-4139757d8aad0c350c84629a1d0acafa.js.map
+//# sourceMappingURL=pages.onboarding-e5c867ee4d8b96b935a8b5888ad33b54.js.map

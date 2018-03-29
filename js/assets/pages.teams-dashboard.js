@@ -6055,7 +6055,7 @@ webpackJsonp([44], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: i._55.Above
+                        zIndex: i._54.Above
                     }, r.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
@@ -17139,7 +17139,7 @@ webpackJsonp([44], {
                     destination: g.a.TeamsDashboardStats
                 })], t)
             }(c.Component),
-            _a = new Date(Date.UTC(2017, 5)),
+            _a = new Date(Date.UTC(2017, 0)),
             fa = function(e) {
                 function t(t) {
                     var a = e.call(this, t) || this;
@@ -20142,4 +20142,4 @@ webpackJsonp([44], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-7837fd6b0b1a0ee2999d61202726dd12.js.map
+//# sourceMappingURL=pages.teams-dashboard-eb7100aeed74170bb4f8d5fd7c2ed1c9.js.map

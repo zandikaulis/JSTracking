@@ -4461,7 +4461,7 @@ webpackJsonp([39], {
                     onClick: e,
                     size: this.props.size,
                     tabIndex: this.props.tabIndex
-                }, Object(f._56)(this.props)), this.props.followUIType === k.IconOnly ? null : t)
+                }, Object(f._55)(this.props)), this.props.followUIType === k.IconOnly ? null : t)
             }, t.prototype.renderUnfollowButton = function() {
                 var e = Object(a.d)("Unfollow", "FollowButton");
                 return r.createElement(f.u, i.__assign({
@@ -4475,7 +4475,7 @@ webpackJsonp([39], {
                     tabIndex: this.props.tabIndex,
                     size: this.props.size,
                     onClick: this.toggleFollowing
-                }, Object(f._56)(this.props)), this.props.unfollowUIType === k.IconOnly ? null : Object(a.d)("Followed", "FollowButton"))
+                }, Object(f._55)(this.props)), this.props.unfollowUIType === k.IconOnly ? null : Object(a.d)("Followed", "FollowButton"))
             }, t.prototype.renderUnfollowButtonWithDropdown = function() {
                 var e = this.props.balloonDirection ? this.props.balloonDirection : f.q.BottomRight,
                     t = this.getFollowData(),
@@ -4997,125 +4997,95 @@ webpackJsonp([39], {
             m = n("vBst"),
             h = n("S1vB"),
             f = n("HZww"),
-            g = n("oIkB"),
-            v = n("HM6l"),
-            b = n("YEG/"),
-            k = n("FDYX"),
-            y = n("Odds"),
-            _ = function(e) {
+            g = n("QCL8"),
+            v = n("oIkB"),
+            b = n("HM6l"),
+            k = n("Odds"),
+            y = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(k._6, {
+                        className: "esports-top-page-details"
+                    }, a.createElement(k._6, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, a.createElement(k._12, {
+                        width: 360,
+                        height: 100
+                    })), a.createElement(k._0, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, a.createElement(k.O, {
+                        type: k._43.H4,
+                        bold: !0
+                    }, Object(c.d)("Your VIP pass to the best of the Overwatch League", "EsportsTopPageDetails"))), a.createElement(k._6, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, a.createElement(k.O, {
+                        type: k._43.H5,
+                        bold: !0
+                    }, Object(c.d)("Overwatch In-Game Content", "EsportsTopPageDetails")), a.createElement(k.O, null, Object(c.d)("3 Hero Skins • OWL Player Icon • OWL Spray", "EsportsTopPageDetails"), " ", a.createElement(k.O, {
+                        type: k._43.Span,
+                        italic: !0
+                    }, Object(c.d)("• Plus more content coming soon", "EsportsTopPageDetails")))), a.createElement(k._6, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, a.createElement(k.O, {
+                        type: k._43.H5,
+                        bold: !0
+                    }, Object(c.d)("The Overwatch League All-Access Experience", "EsportsTopPageDetails")), a.createElement(k.O, null, Object(c.d)("Exclusive Multi-View stream • Match analysis videos by players • Ask questions in post-match Q&A with players • Passholder-only chat • 23 Twitch emotes • OWL chat badges • Ad-free viewing on OWL", "EsportsTopPageDetails"))))
+                }, t
+            }(a.PureComponent),
+            _ = n("YEG/"),
+            S = n("FDYX"),
+            E = function(e) {
                 var t = e.subscriptionProducts[0].price;
-                return Object(k.d)(e.subscriptionProducts) && (t = Object(k.a)(e.subscriptionProducts[0])), a.createElement(y._6, {
+                return Object(S.d)(e.subscriptionProducts) && (t = Object(S.a)(e.subscriptionProducts[0])), a.createElement(k._6, {
                     padding: 2
-                }, a.createElement(y._6, null, a.createElement(y._6, {
-                    margin: {
-                        bottom: 1
-                    }
-                }, a.createElement(y._12, {
-                    width: 360,
-                    height: 100
-                })), a.createElement(y._0, {
-                    margin: {
-                        bottom: 1
-                    }
-                }, a.createElement(y.O, {
-                    type: y._43.H4,
+                }, a.createElement(y, null), a.createElement(k.O, {
+                    type: k._43.H4,
                     bold: !0
-                }, Object(c.d)("Your VIP pass to the best of the Overwatch League!", "EsportsNonSubbedTopPage"))), a.createElement(y._6, {
-                    margin: {
-                        bottom: 1
-                    }
-                }, a.createElement(y.O, {
-                    type: y._43.H5,
-                    bold: !0
-                }, Object(c.d)("Overwatch Content", "EsportsNonSubbedTopPage")), a.createElement(y.O, null, Object(c.d)("3 Hero Skins • OWL Player Icon • OWL Spray", "EsportsNonSubbedTopPage"), " ", a.createElement(y.O, {
-                    type: y._43.Span,
-                    italic: !0
-                }, Object(c.d)("• Plus more content coming soon", "EsportsNonSubbedTopPage")))), a.createElement(y._6, {
-                    margin: {
-                        bottom: 1
-                    }
-                }, a.createElement(y.O, {
-                    type: y._43.H5,
-                    bold: !0
-                }, Object(c.d)("The Overwatch League Insider Experience", "EsportsNonSubbedTopPage")), a.createElement(y.O, null, Object(c.d)("Exclusive Multi-View stream • Behind-the-scenes video content • Ask questions in post-match Q&A with players • Insider-only chat • 23 global emotes • OWL chat badges • Ad-free viewing on OWL", "EsportsNonSubbedTopPage"))), a.createElement(y.O, {
-                    type: y._43.H4,
-                    bold: !0
-                }, Object(c.d)("One-Time Purchase", "EsportsNonSubbedTopPage")), a.createElement(y.O, null, t, " ", Object(c.d)("for ALL of Overwatch League 2018", "EsportsNonSubbedTopPage")), a.createElement(y._6, {
-                    display: y.P.Flex
-                }, a.createElement(y._6, {
+                }, Object(c.d)("One-Time Purchase for the 2018 Season", "EsportsNonSubbedTopPage")), a.createElement(k.O, null, t, " ", Object(c.d)("All-Access benefits last up to the start of the 2019 OWL Season. Twitch emotes, badges, and in-game content are yours to keep.", "EsportsNonSubbedTopPage")), a.createElement(k._6, {
+                    display: k.P.Flex
+                }, a.createElement(k._6, {
                     margin: {
                         right: 1,
                         top: 1
                     }
-                }, a.createElement(b.a, {
+                }, a.createElement(_.a, {
                     isSubbedToTier: !1,
                     tierPrice: t,
                     "data-a-target": "tier1-subscribe-button",
                     reportSubAction: e.handleTopPageSubButtonClick,
                     url: e.subscriptionProducts[0].url,
                     isEsportChannel: !0
-                })))))
+                }))))
             },
-            S = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(y._6, {
-                        className: "esports-top-page-details"
-                    }, a.createElement(y._6, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, a.createElement(y._12, {
-                        width: 360,
-                        height: 100
-                    })), a.createElement(y._0, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, a.createElement(y.O, {
-                        type: y._43.H4,
-                        bold: !0
-                    }, Object(c.d)("Your VIP pass to the best of the Overwatch League!", "EsportsTopPageDetails"))), a.createElement(y._6, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, a.createElement(y.O, {
-                        type: y._43.H5,
-                        bold: !0
-                    }, Object(c.d)("Overwatch Content", "EsportsTopPageDetails")), a.createElement(y.O, null, Object(c.d)("3 Hero Skins • OWL Player Icon • OWL Spray", "EsportsTopPageDetails"), " ", a.createElement(y.O, {
-                        type: y._43.Span,
-                        italic: !0
-                    }, Object(c.d)("• Plus more content coming soon", "EsportsTopPageDetails")))), a.createElement(y._6, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, a.createElement(y.O, {
-                        type: y._43.H5,
-                        bold: !0
-                    }, Object(c.d)("The Overwatch League Insider Experience", "EsportsTopPageDetails")), a.createElement(y.O, null, Object(c.d)("Exclusive Multi-View stream • Behind-the-scenes video content • Ask questions in post-match Q&A with players • Insider-only chat • 23 global emotes • OWL chat badges • Ad-free viewing on OWL", "EsportsTopPageDetails"))))
-                }, t
-            }(a.PureComponent),
-            E = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(y._6, {
-                        padding: 2
-                    }, a.createElement(S, null), a.createElement(y.O, {
-                        type: y._43.H4,
-                        bold: !0
-                    }, Object(c.d)("You have the Insider Pass", "EsportsSubbedTopPage")), a.createElement(y.O, null, Object(c.d)("for ALL of Overwatch League 2018", "EsportsSubbedTopPage")))
-                }, t
-            }(a.PureComponent),
             N = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isSubscribed ? a.createElement(E, null) : a.createElement(_, {
+                    return a.createElement(k._6, {
+                        padding: 2
+                    }, a.createElement(y, null), a.createElement(k.O, {
+                        type: k._43.H4,
+                        bold: !0
+                    }, Object(c.d)("You have the All-Access Pass", "EsportsSubbedTopPage")), a.createElement(k.O, null, Object(c.d)("All-Access benefits last up to the start of the 2019 OWL Season. Twitch emotes, badges, and in-game content are yours to keep.", "EsportsSubbedTopPage")))
+                }, t
+            }(a.PureComponent),
+            C = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return this.props.isSubscribed ? a.createElement(N, null) : a.createElement(E, {
                         channelLogin: this.props.channelLogin,
                         handleTopPageSubButtonClick: this.props.handleTopPageSubButtonClick,
                         reportSubMenuAction: this.props.reportSubMenuAction,
@@ -5123,31 +5093,31 @@ webpackJsonp([39], {
                     })
                 }, t
             }(a.Component),
-            C = n("6BvN"),
-            O = n("5LoI"),
-            T = n("MAZT"),
-            w = n("uTyw"),
-            P = n("zCIC"),
-            D = n("SZoP"),
-            I = n("2KeS"),
-            x = n("lK86"),
-            R = function(e) {
+            O = n("6BvN"),
+            T = n("5LoI"),
+            w = n("MAZT"),
+            P = n("uTyw"),
+            D = n("zCIC"),
+            I = n("SZoP"),
+            x = n("2KeS"),
+            R = n("lK86"),
+            F = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return !this.props.data || this.props.data.loading || !this.props.recipientLogin || this.props.data.user.self.canGift ? null : a.createElement(y._6, {
+                    return !this.props.data || this.props.data.loading || !this.props.recipientLogin || this.props.data.user.self.canGift ? null : a.createElement(k._6, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(y.O, {
+                    }, a.createElement(k.O, {
                         italic: !0,
-                        color: y.J.Alt2,
+                        color: k.J.Alt2,
                         "data-test-selector": "gift-eligibility-message-selector"
                     }, Object(c.d)("Sorry, a gift subscription to this channel is not available for this user.", "GiftRecipientIneligibleMessage")))
                 }, t
             }(a.Component),
-            F = Object(I.d)(Object(l.d)("GiftRecipientIneligibleMessage"), Object(u.a)(x, {
+            U = Object(x.d)(Object(l.d)("GiftRecipientIneligibleMessage"), Object(u.a)(R, {
                 options: function(e) {
                     return {
                         variables: {
@@ -5159,17 +5129,17 @@ webpackJsonp([39], {
                 skip: function(e) {
                     return !e.recipientLogin || !e.subProductId
                 }
-            }))(R),
-            U = n("daN3"),
-            j = n("CwIZ"),
-            L = (n("+YN9"), function(e) {
+            }))(F),
+            j = n("daN3"),
+            L = n("CwIZ"),
+            M = (n("+YN9"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         selectedUser: null
                     }, t.reportGiftCheckoutAction = function() {
                         t.props.reportSubMenuAction({
-                            action: j.a.BuyGiftSub,
+                            action: L.a.BuyGiftSub,
                             checkoutButtonTier: t.props.selectedProductPrice,
                             giftRecipient: t.state.selectedUser ? t.state.selectedUser.login : null
                         })
@@ -5194,75 +5164,75 @@ webpackJsonp([39], {
                     })
                 }, t.prototype.render = function() {
                     var e;
-                    return e = this.props.isWaiting ? a.createElement(y._6, {
+                    return e = this.props.isWaiting ? a.createElement(k._6, {
                         fullHeight: !0
-                    }, a.createElement(y._8, {
+                    }, a.createElement(k._8, {
                         fillContent: !0
-                    })) : this.props.hasInput ? this.props.isErrored ? this.getErrorMessage() : this.props.userResults && this.props.userResults.totalHits > 0 ? this.getUserResultContent() : this.getNoResultsMessage() : a.createElement(y._6, {
+                    })) : this.props.hasInput ? this.props.isErrored ? this.getErrorMessage() : this.props.userResults && this.props.userResults.totalHits > 0 ? this.getUserResultContent() : this.getNoResultsMessage() : a.createElement(k._6, {
                         margin: 1
-                    }, a.createElement(y.O, {
-                        color: y.J.Alt2
+                    }, a.createElement(k.O, {
+                        color: k.J.Alt2
                     }, Object(c.d)("Start typing to see a list of suggestions here.", "GiftRecipientSearchResult"))), a.createElement("div", {
                         onKeyDown: this.props.onKeyDown
-                    }, a.createElement(y._29, {
+                    }, a.createElement(k._29, {
                         className: "gift-recipient-search-result-view",
-                        background: y.m.Alt,
-                        position: y._13.Relative,
-                        overflow: y._9.Hidden,
-                        display: y.P.Block,
+                        background: k.m.Alt,
+                        position: k._13.Relative,
+                        overflow: k._9.Hidden,
+                        display: k.P.Block,
                         margin: {
                             bottom: 2
                         },
                         borderLeft: !0,
                         borderBottom: !0,
                         borderRight: !0
-                    }, a.createElement(y._0, {
-                        overflow: y._9.Hidden,
-                        position: y._13.Relative
-                    }, a.createElement(P.b, {
+                    }, a.createElement(k._0, {
+                        overflow: k._9.Hidden,
+                        position: k._13.Relative
+                    }, a.createElement(D.b, {
                         suppressScrollX: !0
-                    }, a.createElement(y._6, null, e, a.createElement(P.a, {
+                    }, a.createElement(k._6, null, e, a.createElement(D.a, {
                         enabled: !this.props.isWaiting && this.props.hasInput,
                         loadMore: this.props.loadMore
-                    }))))), a.createElement(y._6, null, a.createElement(y._6, {
-                        display: y.P.Flex,
-                        alignItems: y.c.Center,
+                    }))))), a.createElement(k._6, null, a.createElement(k._6, {
+                        display: k.P.Flex,
+                        alignItems: k.c.Center,
                         fullWidth: !0
-                    }, this.getBuyGiftButton(), a.createElement(y._0, {
+                    }, this.getBuyGiftButton(), a.createElement(k._0, {
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(y.O, {
+                    }, a.createElement(k.O, {
                         "data-test-selector": "gift-recipient-display-name-selector"
                     }, Object(c.d)("for {displayName}", {
-                        displayName: a.createElement(y.O, {
+                        displayName: a.createElement(k.O, {
                             bold: !0,
-                            type: y._43.Span
+                            type: k._43.Span
                         }, this.getFormattedDisplayName())
-                    }, "GiftRecipientCheckoutButton")))), a.createElement(F, {
+                    }, "GiftRecipientCheckoutButton")))), a.createElement(U, {
                         subProductId: this.props.selectedProductId,
                         recipientLogin: this.state.selectedUser ? this.state.selectedUser.login : null
                     })))
                 }, t.prototype.getBuyGiftButton = function() {
-                    return a.createElement(U.a, {
+                    return a.createElement(j.a, {
                         subProductId: this.props.selectedProductId,
                         giftRecipient: this.state.selectedUser ? this.state.selectedUser.login : null,
                         checkoutURL: this.props.selectedProductURL,
                         onClick: this.reportGiftCheckoutAction
                     })
                 }, t.prototype.getFormattedDisplayName = function() {
-                    return this.state.selectedUser ? Object(D.a)(this.state.selectedUser.login, this.state.selectedUser.name) : ""
+                    return this.state.selectedUser ? Object(I.a)(this.state.selectedUser.login, this.state.selectedUser.name) : ""
                 }, t.prototype.getErrorMessage = function() {
-                    return a.createElement(y._6, {
+                    return a.createElement(k._6, {
                         fullWidth: !0,
-                        textAlign: y._39.Center,
-                        justifyContent: y._5.Center
-                    }, a.createElement(y.O, null, Object(c.d)("Something went wrong", "GiftRecipientSearchResult")))
+                        textAlign: k._39.Center,
+                        justifyContent: k._5.Center
+                    }, a.createElement(k.O, null, Object(c.d)("Something went wrong", "GiftRecipientSearchResult")))
                 }, t.prototype.getUserResultContent = function() {
                     var e = this;
                     return this.props.userResults ? this.props.userResults.results.map(function(t) {
-                        var n = Object(D.a)(t.login || "", t.name || "");
-                        return a.createElement(y._4, {
+                        var n = Object(I.a)(t.login || "", t.name || "");
+                        return a.createElement(k._4, {
                             tabIndex: -1,
                             "data-ts_selectable": !0,
                             "data-tt_content": !0,
@@ -5272,35 +5242,35 @@ webpackJsonp([39], {
                             "data-user_name": t.name,
                             onClick: e.onUserClick,
                             "data-test-selector": "subscribe-button__gift_search_result"
-                        }, a.createElement(y._6, {
+                        }, a.createElement(k._6, {
                             padding: .5
-                        }, a.createElement(y.B, {
+                        }, a.createElement(k.B, {
                             row: !0
-                        }, a.createElement(y.D, {
+                        }, a.createElement(k.D, {
                             alt: t.thumbnailAltText,
                             src: t.thumbnail ? t.thumbnail : "",
-                            size: y.E.Size4,
-                            aspect: y.k.Aspect1x1
-                        }), a.createElement(y.C, {
-                            overflow: y._9.Hidden
-                        }, a.createElement(y._0, {
+                            size: k.E.Size4,
+                            aspect: k.k.Aspect1x1
+                        }), a.createElement(k.C, {
+                            overflow: k._9.Hidden
+                        }, a.createElement(k._0, {
                             padding: {
                                 x: 1
                             }
-                        }, a.createElement(y.O, {
-                            type: y._43.H5,
+                        }, a.createElement(k.O, {
+                            type: k._43.H5,
                             ellipsis: !0
                         }, n))))))
-                    }) : a.createElement(y._12, null)
+                    }) : a.createElement(k._12, null)
                 }, t.prototype.getNoResultsMessage = function() {
-                    return a.createElement(y._6, {
+                    return a.createElement(k._6, {
                         margin: 1
-                    }, a.createElement(y.O, {
-                        color: y.J.Alt2
+                    }, a.createElement(k.O, {
+                        color: k.J.Alt2
                     }, Object(c.d)("No Results", "GiftRecipientSearchResult")))
                 }, t = r.__decorate([Object(l.d)("GiftRecipientSearchResultPanel")], t)
             }(a.Component)),
-            M = (n("m0Vj"), function(e) {
+            A = (n("m0Vj"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleChange = function(e) {
@@ -5312,7 +5282,7 @@ webpackJsonp([39], {
                         var e = null;
                         if (this.props.selectedSubProduct && this.props.selectedSubProduct.giftPromotion) {
                             var t = this.props.selectedSubProduct && this.props.selectedSubProduct.giftPromotion ? this.props.selectedSubProduct.giftPromotion : null;
-                            e = a.createElement(y.O, {
+                            e = a.createElement(k.O, {
                                 bold: !0,
                                 className: "subscription-gift-recipient-search__discount-message"
                             }, Object(c.d)("{price} (Save {percent})", {
@@ -5320,47 +5290,47 @@ webpackJsonp([39], {
                                 percent: Object(c.e)(t ? t.discountValue / 100 : 0, "percent")
                             }, "GiftRecipientSearch"))
                         }
-                        return a.createElement(y._6, {
+                        return a.createElement(k._6, {
                             padding: 2,
                             className: "subscription-gift-recipient-search"
-                        }, a.createElement(y._6, null, a.createElement(y._6, {
-                            display: y.P.Flex,
-                            justifyContent: y._5.Between,
-                            alignItems: y.c.Center,
+                        }, a.createElement(k._6, null, a.createElement(k._6, {
+                            display: k.P.Flex,
+                            justifyContent: k._5.Between,
+                            alignItems: k.c.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(y.O, {
-                            type: y._43.H4,
+                        }, a.createElement(k.O, {
+                            type: k._43.H4,
                             bold: !0
-                        }, Object(c.d)("Choose a Gift Recipient", "GiftRecipientSearch")), a.createElement(y.u, {
-                            type: y.A.Text,
+                        }, Object(c.d)("Choose a Gift Recipient", "GiftRecipientSearch")), a.createElement(k.u, {
+                            type: k.A.Text,
                             "data-a-target": "subscribe-back-button",
-                            icon: y._20.AngleLeft,
+                            icon: k._20.AngleLeft,
                             onClick: this.props.onBack,
                             "data-test-selector": "gift-recipient-search-back-button"
-                        }, a.createElement(y._6, {
-                            alignItems: y.c.Center,
-                            display: y.P.InlineFlex
-                        }, a.createElement(y.O, null, Object(c.d)("Back", "GiftRecipientSearch"))))), a.createElement(y._6, null, a.createElement(y.O, null, Object(c.d)("{subDisplayName}: {giftPrice} Gift Subscription (Single Month)", {
+                        }, a.createElement(k._6, {
+                            alignItems: k.c.Center,
+                            display: k.P.InlineFlex
+                        }, a.createElement(k.O, null, Object(c.d)("Back", "GiftRecipientSearch"))))), a.createElement(k._6, null, a.createElement(k.O, null, Object(c.d)("{subDisplayName}: {giftPrice} Gift Subscription (Single Month)", {
                             subDisplayName: this.props.selectedSubProduct ? this.props.selectedSubProduct.displayName : "",
                             giftPrice: this.props.selectedSubProduct ? this.props.selectedSubProduct.price : ""
-                        }, "GiftRecipientSearch")), e, a.createElement(y._6, {
-                            display: y.P.Flex,
-                            justifyContent: y._5.Center,
+                        }, "GiftRecipientSearch")), e, a.createElement(k._6, {
+                            display: k.P.Flex,
+                            justifyContent: k._5.Center,
                             padding: {
                                 top: 1
                             },
                             fullWidth: !0
-                        }, a.createElement(y._0, {
+                        }, a.createElement(k._0, {
                             fullWidth: !0
-                        }, a.createElement("div", null, a.createElement(y._22, {
+                        }, a.createElement("div", null, a.createElement(k._22, {
                             onChange: this.handleChange,
                             onKeyDown: this.props.onKeyDown,
                             id: "gift-recipient-search",
                             placeholder: Object(c.d)("Search for a Twitch ID", "GiftRecipientSearch"),
                             "data-test-selector": "gift-recipient-search-input-selector"
-                        }), a.createElement(L, {
+                        }), a.createElement(M, {
                             hasInput: this.props.hasInput,
                             userResults: this.props.userResults,
                             isErrored: this.props.isErrored,
@@ -5373,11 +5343,11 @@ webpackJsonp([39], {
                             reportSubMenuAction: this.props.reportSubMenuAction
                         })))))))
                     }
-                    return a.createElement(y._12, null)
+                    return a.createElement(k._12, null)
                 }, t
             }(a.Component)),
-            A = 50,
-            B = function(e) {
+            B = 50,
+            W = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onChange = function(e) {
@@ -5385,7 +5355,7 @@ webpackJsonp([39], {
                             isWaiting: !0
                         }), n.inputTimer = setTimeout(function() {
                             return n.doSearch(e)
-                        }, A)) : n.setState(n.getEmptyState())
+                        }, B)) : n.setState(n.getEmptyState())
                     }, n.loadMore = function() {
                         return r.__awaiter(n, void 0, void 0, function() {
                             var e, t, n;
@@ -5395,7 +5365,7 @@ webpackJsonp([39], {
                                         if (this.state.queryID || !0 === this.state.exhaustedHits) return [2];
                                         e = this.state.currentPage + 1, i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(O.a.Users, this.state.term, "", {
+                                        return i.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(T.a.Users, this.state.term, "", {
                                             page: e
                                         })];
                                     case 2:
@@ -5406,7 +5376,7 @@ webpackJsonp([39], {
                                             hasInput: !0
                                         })), [2];
                                     case 4:
-                                        return t ? (n = Object(w.b)({
+                                        return t ? (n = Object(P.b)({
                                             searchResults: t,
                                             append: e > 0,
                                             currentUserResults: this.state.currentUserResults
@@ -5425,10 +5395,10 @@ webpackJsonp([39], {
                             })
                         })
                     }, n.onKeyDown = function(e) {
-                        n.state.term && (e.keyCode === C.a.Esc ? n.setState({
+                        n.state.term && (e.keyCode === O.a.Esc ? n.setState({
                             hasInput: !1
-                        }) : e.keyCode === C.a.Up ? n.focusNext(-1) : e.keyCode === C.a.Down && n.focusNext(1))
-                    }, n.state = n.getEmptyState(), n.searchClient = new T.a({
+                        }) : e.keyCode === O.a.Up ? n.focusNext(-1) : e.keyCode === O.a.Down && n.focusNext(1))
+                    }, n.state = n.getEmptyState(), n.searchClient = new w.a({
                         appId: c.a.algoliaApplicationID,
                         apiKey: c.a.algoliaAPIKey,
                         apolloClient: c.o.apollo.client,
@@ -5437,7 +5407,7 @@ webpackJsonp([39], {
                     }), n
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(M, {
+                    return a.createElement(A, {
                         onChange: this.onChange,
                         loadMore: this.loadMore,
                         onKeyDown: this.onKeyDown,
@@ -5470,12 +5440,12 @@ webpackJsonp([39], {
                         return r.__generator(this, function(s) {
                             switch (s.label) {
                                 case 0:
-                                    this.inputTimer = 0, t = -1, n = v.a(), i = "INPUT" === document.activeElement.tagName, this.setState({
+                                    this.inputTimer = 0, t = -1, n = b.a(), i = "INPUT" === document.activeElement.tagName, this.setState({
                                         queryID: n,
                                         focusSelectable: !i && !!this.state.currentFocus
                                     }), s.label = 1;
                                 case 1:
-                                    return s.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(O.a.Users, e, n)];
+                                    return s.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(T.a.Users, e, n)];
                                 case 2:
                                     return a = s.sent(), [3, 4];
                                 case 3:
@@ -5485,7 +5455,7 @@ webpackJsonp([39], {
                                         term: e
                                     })), [2];
                                 case 4:
-                                    return a ? this.state.queryID !== a.id ? [2] : (o = Object(w.b)({
+                                    return a ? this.state.queryID !== a.id ? [2] : (o = Object(P.b)({
                                         searchResults: a,
                                         append: !1
                                     }), this.setState(function(n) {
@@ -5516,14 +5486,14 @@ webpackJsonp([39], {
                     }
                 }, t = r.__decorate([Object(l.d)("GiftRecipientSearch")], t)
             }(a.Component),
-            W = n("37Pp"),
-            H = n("jYA1"),
-            V = function(e) {
+            H = n("37Pp"),
+            V = n("jYA1"),
+            G = function(e) {
                 var t = null,
                     n = null,
                     i = null,
                     r = e.subscriptionProducts[0].price;
-                if (Object(k.d)(e.subscriptionProducts) && (r = Object(k.a)(e.subscriptionProducts[0])), e.channelLogin && (e.inPrimeRegion || e.userHasPrime)) {
+                if (Object(S.d)(e.subscriptionProducts) && (r = Object(S.a)(e.subscriptionProducts[0])), e.channelLogin && (e.inPrimeRegion || e.userHasPrime)) {
                     var o = e.userHasPrime ? Object(c.d)("Use your free channel subscription to directly support your favorite streamer. {upsellTextLink}", {
                         upsellTextLink: a.createElement("a", {
                             href: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
@@ -5532,22 +5502,22 @@ webpackJsonp([39], {
                     }, "NonSubbedTopPage") : Object(c.d)("{upsellTextBold}, plus get free game loot every month, ad-free viewing, and loads more with Twitch Prime.", {
                         upsellTextBold: a.createElement("strong", null, Object(c.d)("Support your favorite streamer", "NonSubbedTopPage"))
                     }, "NonSubbedTopPage");
-                    i = a.createElement(y._6, {
+                    i = a.createElement(k._6, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(y._6, {
+                    }, a.createElement(k._6, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(y.O, {
-                        type: y._43.H4,
+                    }, a.createElement(k.O, {
+                        type: k._43.H4,
                         bold: !0
-                    }, Object(c.d)("Free Channel Sub with Twitch Prime", "NonSubbedTopPage"))), a.createElement(y._6, null, a.createElement(y._6, {
+                    }, Object(c.d)("Free Channel Sub with Twitch Prime", "NonSubbedTopPage"))), a.createElement(k._6, null, a.createElement(k._6, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(y.O, null, o)), a.createElement(H.a, {
+                    }, a.createElement(k.O, null, o)), a.createElement(V.a, {
                         authToken: e.authToken,
                         "data-a-target": "subscribe-with-prime-button",
                         isSubscribed: !1,
@@ -5561,77 +5531,77 @@ webpackJsonp([39], {
                 }
                 if (!e.isNonStandardSub) {
                     var s = Object(c.d)("More Paid Subscription Options", "NonSubbedTopPage");
-                    t = a.createElement(y._6, {
+                    t = a.createElement(k._6, {
                         margin: {
                             right: 1
                         },
-                        display: y.P.Inline
-                    }, a.createElement(y.u, {
+                        display: k.P.Inline
+                    }, a.createElement(k.u, {
                         ariaLabel: s,
                         onClick: e.showSubOptions,
-                        type: y.A.Hollow,
+                        type: k.A.Hollow,
                         "data-test-selector": "subscribe-button__more-sub-options-button",
                         "data-a-target": "see-more-sub-options-button"
                     }, s));
                     var l = Object(c.d)("Gift a Subscription", "NonSubbedTopPage");
-                    n = a.createElement(y._6, {
-                        display: y.P.Inline
-                    }, a.createElement(y.u, {
+                    n = a.createElement(k._6, {
+                        display: k.P.Inline
+                    }, a.createElement(k.u, {
                         ariaLabel: l,
                         onClick: e.showGiftOptions,
-                        type: y.A.Hollow,
+                        type: k.A.Hollow,
                         "data-test-selector": "subscribe-button__gift"
                     }, l))
                 }
-                return a.createElement(y._6, {
+                return a.createElement(k._6, {
                     padding: 2
-                }, i, a.createElement(y._6, null, a.createElement(y.O, {
-                    type: y._43.H4,
+                }, i, a.createElement(k._6, null, a.createElement(k.O, {
+                    type: k._43.H4,
                     bold: !0
-                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(W.a, {
+                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(H.a, {
                     subscriptionProduct: e.subscriptionProducts[0]
-                }), a.createElement(y._6, {
-                    display: y.P.Flex
-                }, a.createElement(y._6, {
+                }), a.createElement(k._6, {
+                    display: k.P.Flex
+                }, a.createElement(k._6, {
                     margin: {
                         right: 1,
                         top: 1
                     }
-                }, a.createElement(b.a, {
+                }, a.createElement(_.a, {
                     isSubbedToTier: !1,
                     tierPrice: r,
                     "data-a-target": "tier1-subscribe-button",
                     reportSubAction: e.handleTopPageSubButtonClick,
                     url: e.subscriptionProducts[0].url
-                })))), a.createElement(y._6, {
+                })))), a.createElement(k._6, {
                     margin: {
                         right: 1,
                         top: 2
                     }
                 }, t, n))
             },
-            G = n("YH6m"),
-            q = function(e) {
-                return a.createElement(y._6, {
+            q = n("YH6m"),
+            z = function(e) {
+                return a.createElement(k._6, {
                     padding: 2
-                }, a.createElement(y._6, null, a.createElement(y._6, {
-                    display: y.P.Flex,
-                    justifyContent: y._5.Between,
-                    alignItems: y.c.Center,
+                }, a.createElement(k._6, null, a.createElement(k._6, {
+                    display: k.P.Flex,
+                    justifyContent: k._5.Between,
+                    alignItems: k.c.Center,
                     fullWidth: !0
-                }, a.createElement(y.O, {
-                    type: y._43.H4,
+                }, a.createElement(k.O, {
+                    type: k._43.H4,
                     bold: !0
-                }, e.header), a.createElement(y.u, {
-                    type: y.A.Text,
+                }, e.header), a.createElement(k.u, {
+                    type: k.A.Text,
                     "data-a-target": "subscribe-back-button",
                     "data-test-selector": "subscribe-button__back-button",
-                    icon: y._20.AngleLeft,
+                    icon: k._20.AngleLeft,
                     onClick: e.onBack
-                }, a.createElement(y._6, {
-                    alignItems: y.c.Center,
-                    display: y.P.InlineFlex
-                }, a.createElement(y.O, null, Object(c.d)("Back", "PaidSubOptions"))))), a.createElement(G.a, {
+                }, a.createElement(k._6, {
+                    alignItems: k.c.Center,
+                    display: k.P.InlineFlex
+                }, a.createElement(k.O, null, Object(c.d)("Back", "PaidSubOptions"))))), a.createElement(q.a, {
                     canPrimeSubscribe: !1,
                     channelDisplayName: e.channelDisplayName,
                     isSubscribed: e.isSubscribed,
@@ -5644,8 +5614,8 @@ webpackJsonp([39], {
                     userHasPrime: !1
                 })))
             },
-            z = n("pQNb"),
-            K = (n("DquS"), function(e) {
+            K = n("pQNb"),
+            Q = (n("DquS"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5654,16 +5624,16 @@ webpackJsonp([39], {
                         t = e || this.props.isGift ? null : this.getTopPageUpgradeSection(),
                         n = e ? this.getMobileSubbedSection() : null,
                         i = this.getGiftSection();
-                    return a.createElement(y._6, {
+                    return a.createElement(k._6, {
                         className: "channel-header__subscription-modal-main",
                         padding: 2
                     }, i, n, t)
                 }, t.prototype.getTopPageUpgradeSection = function() {
                     var e = this.props.subbedTier !== m.a.Tier3 ? Object(c.d)("Change Your Subscription", "SubbedTopPage") : this.getSubbedHeader();
-                    return a.createElement(y._6, null, a.createElement(y.O, {
-                        type: y._43.H4,
+                    return a.createElement(k._6, null, a.createElement(k.O, {
+                        type: k._43.H4,
                         bold: !0
-                    }, e), a.createElement(G.a, {
+                    }, e), a.createElement(q.a, {
                         authToken: this.props.authToken,
                         onSubscribedWithPrime: this.props.onSubscribedWithPrime,
                         subLogin: this.props.channelLogin,
@@ -5689,32 +5659,32 @@ webpackJsonp([39], {
                             platform: "IOS" === this.props.subbedPlatform ? "Apple" : "Google"
                         }, "SubbedTopPage"),
                         r = "IOS" === this.props.subbedPlatform ? "https://help.twitch.tv/customer/portal/articles/2921095#ManageiOS" : "https://help.twitch.tv/customer/portal/articles/2921095#ManageGoogle";
-                    return a.createElement(y._6, {
+                    return a.createElement(k._6, {
                         "data-test-selector": "subscribed-view-mobile"
-                    }, a.createElement(y._6, {
+                    }, a.createElement(k._6, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(y.O, {
-                        type: y._43.H4,
+                    }, a.createElement(k.O, {
+                        type: k._43.H4,
                         bold: !0
-                    }, this.getSubbedHeader())), a.createElement(y._6, {
+                    }, this.getSubbedHeader())), a.createElement(k._6, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(y._6, null, n), a.createElement(y._6, null, i), a.createElement(y._6, null, a.createElement(y.M, {
+                    }, a.createElement(k._6, null, n), a.createElement(k._6, null, i), a.createElement(k._6, null, a.createElement(k.M, {
                         to: r
                     }, Object(c.d)("How do I manage this subscription?", "SubbedTopPage")))))
                 }, t.prototype.getGiftSection = function() {
-                    return this.props.giftSender ? this.props.giftSender && !this.props.giftPaidUpgrade ? a.createElement(y._6, null, a.createElement(y._6, {
+                    return this.props.giftSender ? this.props.giftSender && !this.props.giftPaidUpgrade ? a.createElement(k._6, null, a.createElement(k._6, {
                         margin: {
                             bottom: 2
                         }
-                    }, this.getGiftInfoSection()), this.getGiftExtendSection()) : a.createElement(y._6, null, a.createElement(y._6, {
+                    }, this.getGiftInfoSection()), this.getGiftExtendSection()) : a.createElement(k._6, null, a.createElement(k._6, {
                         margin: {
                             bottom: 2
                         }
-                    }, this.getGiftInfoSection()), this.getTopPageGiftSection()) : a.createElement(y._6, {
+                    }, this.getGiftInfoSection()), this.getTopPageGiftSection()) : a.createElement(k._6, {
                         margin: {
                             bottom: 2
                         }
@@ -5723,28 +5693,28 @@ webpackJsonp([39], {
                     var e, t, n = null;
                     return this.props.giftPaidUpgrade ? (e = this.getSubbedHeader(), t = Object(c.d)("{giftPrice} Gift Subscription from {giftSender}", {
                         giftPrice: this.getCurrentSubPrice(),
-                        giftSender: a.createElement(y.O, {
+                        giftSender: a.createElement(k.O, {
                             bold: !0,
-                            type: y._43.Span
+                            type: k._43.Span
                         }, this.props.giftSender || "")
                     }, "SubbedTopPage"), n = Object(c.d)("Your new {upgradePrice} Paid Subscription will begin on {subStartDate}", {
                         upgradePrice: this.props.giftPaidUpgrade ? this.props.giftPaidUpgrade.price : "",
                         subStartDate: this.getFormattedGiftUpgradeStartDate()
                     }, "SubbedTopPage")) : (e = Object(c.d)("Your Gift Subscription", "SubbedTopPage"), t = Object(c.d)("{giftPrice} Subscription from {giftSender} - Benefits expire on {giftEndDate}", {
                         giftPrice: this.getCurrentSubPrice(),
-                        giftSender: a.createElement(y.O, {
+                        giftSender: a.createElement(k.O, {
                             bold: !0,
-                            type: y._43.Span
+                            type: k._43.Span
                         }, this.props.giftSender || ""),
                         giftEndDate: this.getFormattedGiftEndDate()
-                    }, "SubbedTopPage")), a.createElement(y._6, null, a.createElement(y.O, {
+                    }, "SubbedTopPage")), a.createElement(k._6, null, a.createElement(k.O, {
                         bold: !0,
-                        type: y._43.H4
-                    }, e), a.createElement(y._0, {
+                        type: k._43.H4
+                    }, e), a.createElement(k._0, {
                         margin: {
                             y: 1
                         }
-                    }, a.createElement(y.O, null, t)), a.createElement(y.O, {
+                    }, a.createElement(k.O, null, t)), a.createElement(k.O, {
                         className: "balloon-subscribed-user__gift-upgrade-info",
                         bold: !0
                     }, n))
@@ -5752,52 +5722,52 @@ webpackJsonp([39], {
                     var e, t = null;
                     if (!this.props.isNonStandardSub) {
                         var n = Object(c.d)("More Paid Subscription Options", "SubbedTopPage");
-                        t = a.createElement(y._6, {
+                        t = a.createElement(k._6, {
                             margin: {
                                 right: 1
                             },
-                            display: y.P.Inline
-                        }, a.createElement(y.u, {
+                            display: k.P.Inline
+                        }, a.createElement(k.u, {
                             ariaLabel: n,
                             onClick: this.props.showSubOptions,
-                            type: y.A.Hollow,
+                            type: k.A.Hollow,
                             "data-a-target": "see-more-sub-options-button"
                         }, n))
                     }
                     var i = this.getGiftMessage();
-                    return e = a.createElement(y._6, {
-                        display: y.P.Inline
-                    }, a.createElement(y.u, {
+                    return e = a.createElement(k._6, {
+                        display: k.P.Inline
+                    }, a.createElement(k.u, {
                         "data-test-selector": "subscribe-button__gift",
                         ariaLabel: i,
                         onClick: this.props.showGiftOptions,
-                        type: y.A.Hollow
-                    }, i)), a.createElement(y._6, null, a.createElement(y._6, {
+                        type: k.A.Hollow
+                    }, i)), a.createElement(k._6, null, a.createElement(k._6, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(y.O, {
-                        type: y._43.H4,
+                    }, a.createElement(k.O, {
+                        type: k._43.H4,
                         bold: !0
-                    }, Object(c.d)("Extend Your Subscription", "SubbedTopPage")), a.createElement(y._0, {
+                    }, Object(c.d)("Extend Your Subscription", "SubbedTopPage")), a.createElement(k._0, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(y.O, null, Object(c.d)("{price} / Month", {
+                    }, a.createElement(k.O, null, Object(c.d)("{price} / Month", {
                         price: this.props.subscriptionProducts[0].price
-                    }, "SubbedTopPage"))), a.createElement(y._6, {
+                    }, "SubbedTopPage"))), a.createElement(k._6, {
                         margin: {
                             right: 1,
                             top: 1
                         }
-                    }, a.createElement(y.u, {
+                    }, a.createElement(k.u, {
                         ariaLabel: this.props.subscriptionProducts[0].price,
                         "data-a-target": "tier1-subscribe-button",
                         linkTo: this.props.subscriptionProducts[0].url,
                         onClick: this.props.handleTopPageSubButtonClick,
                         purchase: this.props.subscriptionProducts[0].price,
                         targetBlank: !0
-                    }, Object(c.d)("Subscribe Now", "SubbedTopPage")))), a.createElement(y._6, {
+                    }, Object(c.d)("Subscribe Now", "SubbedTopPage")))), a.createElement(k._6, {
                         margin: {
                             right: 1,
                             top: 2
@@ -5805,32 +5775,32 @@ webpackJsonp([39], {
                     }, t, e))
                 }, t.prototype.getTopPageGiftSection = function() {
                     var e = this.props.subscriptionProducts[0].price;
-                    Object(k.c)(this.props.subscriptionProducts) && (e = Object(k.a)(this.props.subscriptionProducts[0], !0));
+                    Object(S.c)(this.props.subscriptionProducts) && (e = Object(S.a)(this.props.subscriptionProducts[0], !0));
                     var t = this.getGiftMessage(),
                         n = Object(c.d)("More Gift Options", "SubbedTopPage");
-                    return a.createElement(y._6, null, a.createElement(y.O, {
-                        type: y._43.H4,
+                    return a.createElement(k._6, null, a.createElement(k.O, {
+                        type: k._43.H4,
                         bold: !0
                     }, Object(c.d)("Help Grow {streamer}'s Community", {
                         streamer: this.props.channelDisplayName
-                    }, "SubbedTopPage")), a.createElement(y._6, {
+                    }, "SubbedTopPage")), a.createElement(k._6, {
                         margin: {
                             top: 1,
                             bottom: 1
                         },
-                        display: y.P.Flex
-                    }, a.createElement(y.u, {
+                        display: k.P.Flex
+                    }, a.createElement(k.u, {
                         ariaLabel: t + " " + e,
                         onClick: this.props.onGiftSelect,
                         purchase: e
-                    }, t), a.createElement(y._6, {
+                    }, t), a.createElement(k._6, {
                         margin: {
                             left: 1
                         }
-                    }, a.createElement(y.u, {
+                    }, a.createElement(k.u, {
                         ariaLabel: n,
                         onClick: this.props.showGiftOptions,
-                        type: y.A.Hollow
+                        type: k.A.Hollow
                     }, n))))
                 }, t.prototype.getFormattedGiftUpgradeStartDate = function() {
                     var e = "";
@@ -5886,8 +5856,8 @@ webpackJsonp([39], {
             e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
         }(i || (i = {}));
         n("UKw0");
-        var Q = n("+p4h"),
-            $ = function(e) {
+        var $ = n("+p4h"),
+            J = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5908,7 +5878,7 @@ webpackJsonp([39], {
                         })
                     }, t.showGiftOptions = function() {
                         t.props.reportSubMenuAction({
-                            action: j.a.ClickGiftSubOptions,
+                            action: L.a.ClickGiftSubOptions,
                             modalLevel: "second_page"
                         }), t.setState(function() {
                             return {
@@ -5917,7 +5887,7 @@ webpackJsonp([39], {
                         })
                     }, t.showSubOptions = function() {
                         t.props.reportSubMenuAction({
-                            action: j.a.ClickMoreSubOptions,
+                            action: L.a.ClickMoreSubOptions,
                             modalLevel: "second_page"
                         }), t.setState(function() {
                             return {
@@ -5926,7 +5896,7 @@ webpackJsonp([39], {
                         })
                     }, t.goToPreviousPage = function() {
                         if (t.props.reportSubMenuAction({
-                                action: j.a.ClickBack,
+                                action: L.a.ClickBack,
                                 modalLevel: t.state.currentPage === i.SubOptions || t.state.currentPage === i.GiftOptions ? "top_page" : "second_page"
                             }), t.state.currentPage === i.GiftOptions || t.state.currentPage === i.SubOptions || t.state.giftShortcut) return t.showTop(), void t.setState({
                             giftShortcut: !1
@@ -5940,13 +5910,13 @@ webpackJsonp([39], {
                         }) : t.setState({
                             giftShortcut: !1
                         }), t.props.reportSubMenuAction({
-                            action: j.a.GiftASub,
+                            action: L.a.GiftASub,
                             checkoutButtonTier: t.props.data.user.subscriptionProducts[t.state.selectedSubProductIndex].price
                         }), t.showRecipientSelect()
                     }, t.onSelectTierTab = function(e) {
                         if (!t.props.data.user || !t.props.data.user.subscriptionProducts) return null;
                         var n, i;
-                        t.tabToSubProduct || (t.tabToSubProduct = (n = t.props.data.user.subscriptionProducts, (i = new Map).set(G.b.Prime, null), n.forEach(function(e, t) {
+                        t.tabToSubProduct || (t.tabToSubProduct = (n = t.props.data.user.subscriptionProducts, (i = new Map).set(q.b.Prime, null), n.forEach(function(e, t) {
                             i.set(t + 1, e)
                         }), i));
                         var r = t.tabToSubProduct.get(e);
@@ -5961,15 +5931,15 @@ webpackJsonp([39], {
                     }, t.handleTopPageSubButtonClick = function() {
                         if (!t.props.data.user || !t.props.data.user.subscriptionProducts) return null;
                         t.props.reportSubMenuAction({
-                            action: j.a.ClickCheckout,
+                            action: L.a.ClickCheckout,
                             checkoutButtonTier: t.props.data.user.subscriptionProducts[0].price
                         })
                     }, t.onSubscribedWithPrime = function() {
-                        t.props.onSubscribedWithPrime(), Object(g.d)(Q, {
+                        t.props.onSubscribedWithPrime(), Object(v.d)($, {
                             login: t.props.channelLogin
                         }, function(e) {
                             return e.user && e.user.self && (e.user.self.canPrimeSubscribe = !1, e.user.self.subscriptionBenefit = {
-                                id: Object(v.a)(),
+                                id: Object(b.a)(),
                                 platform: "WEB",
                                 purchasedWithPrime: !0,
                                 tier: m.a.Prime,
@@ -5997,12 +5967,12 @@ webpackJsonp([39], {
                 }, t.prototype.render = function() {
                     if (this.props.data.loading) return c.j.debug("NOT rendering sub balloon; sub data not yet ready", {
                         state: this.state
-                    }), a.createElement(y._6, {
-                        display: y.P.Flex,
-                        alignItems: y.c.Center,
-                        justifyContent: y._5.Center,
+                    }), a.createElement(k._6, {
+                        display: k.P.Flex,
+                        alignItems: k.c.Center,
+                        justifyContent: k._5.Center,
                         className: "channel-header__subscription-modal"
-                    }, a.createElement(y._8, {
+                    }, a.createElement(k._8, {
                         fillContent: !0
                     }));
                     if (!this.props.data.user || !this.props.data.user.subscriptionProducts) return c.j.debug("NOT rendering sub balloon; sub data not yet ready", {
@@ -6011,7 +5981,7 @@ webpackJsonp([39], {
                     c.j.debug("rendering balloon", {
                         state: this.state
                     });
-                    var e, t = a.createElement(y._12, null),
+                    var e, t = a.createElement(k._12, null),
                         n = !1,
                         r = this.props.data.user.subscriptionProducts,
                         o = !0;
@@ -6044,21 +6014,21 @@ webpackJsonp([39], {
                             }
                             e = this.getSubbedTopPage(), n = !0
                     }
-                    return o && (t = a.createElement(z.a, {
+                    return o && (t = a.createElement(K.a, {
                         subscriptionProducts: r,
                         isGift: n
-                    })), a.createElement(y._6, {
+                    })), a.createElement(k._6, {
                         key: "subscribe-balloon"
                     }, t, e)
                 }, t.prototype.getGiftRecipientSearchPage = function() {
-                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(B, {
+                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(W, {
                         key: "gift-recipient-search-page",
                         onBack: this.goToPreviousPage,
                         selectedSubProduct: this.props.data.user.subscriptionProducts[this.state.selectedSubProductIndex],
                         reportSubMenuAction: this.props.reportSubMenuAction
                     }) : null
                 }, t.prototype.getGiftOptionsPage = function() {
-                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(q, {
+                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(z, {
                         onBack: this.goToPreviousPage,
                         channelDisplayName: this.props.data.user.displayName,
                         onSelectTierTab: this.onSelectTierTab,
@@ -6070,7 +6040,7 @@ webpackJsonp([39], {
                         header: Object(c.d)("Choose A Gift Subscription", "SubscribeBalloon")
                     }) : null
                 }, t.prototype.getPaidOptionsPage = function(e) {
-                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(q, {
+                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(z, {
                         onBack: this.goToPreviousPage,
                         channelDisplayName: this.props.data.user.displayName,
                         onSelectTierTab: this.onSelectTierTab,
@@ -6084,7 +6054,7 @@ webpackJsonp([39], {
                     var e = this.props.data.user.self.subscriptionBenefit.gift,
                         t = e && e.isGift ? e.gifter.displayName : null,
                         n = !(!e || !e.isGift);
-                    return a.createElement(K, {
+                    return a.createElement(Q, {
                         authToken: this.props.authToken,
                         channelLogin: this.props.channelLogin,
                         channelDisplayName: this.props.data.user.displayName,
@@ -6109,7 +6079,7 @@ webpackJsonp([39], {
                         userHasPrime: !!this.props.data.currentUser && this.props.data.currentUser.hasPrime
                     })
                 }, t.prototype.getUnsubbedTopPage = function() {
-                    return this.props.data.user ? a.createElement(V, {
+                    return this.props.data.user ? a.createElement(G, {
                         authToken: this.props.authToken,
                         channelLogin: this.props.channelLogin,
                         canPrimeSubscribe: !!this.props.data.user.self && this.props.data.user.self.canPrimeSubscribe,
@@ -6124,16 +6094,16 @@ webpackJsonp([39], {
                         userHasPrime: !!this.props.data.currentUser && this.props.data.currentUser.hasPrime
                     }) : null
                 }, t.prototype.getEsportPage = function() {
-                    return this.props.data.user ? a.createElement(y._6, {
+                    return this.props.data.user ? a.createElement(k._6, {
                         key: "subscribe-balloon"
-                    }, a.createElement(N, {
+                    }, a.createElement(C, {
                         channelLogin: this.props.channelLogin,
                         handleTopPageSubButtonClick: this.handleTopPageSubButtonClick,
                         reportSubMenuAction: this.props.reportSubMenuAction,
                         subscriptionProducts: this.props.data.user ? this.props.data.user.subscriptionProducts : [],
                         isSubscribed: this.props.isSubscribed
                     })) : null
-                }, t = r.__decorate([Object(u.a)(Q, {
+                }, t = r.__decorate([Object(u.a)($, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -6147,8 +6117,7 @@ webpackJsonp([39], {
                     }
                 }), Object(l.d)("SubscribeBalloon")], t)
             }(a.Component),
-            J = n("4MRZ"),
-            Y = "esport_insider_pass_whitelist",
+            Y = n("4MRZ"),
             Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6158,7 +6127,7 @@ webpackJsonp([39], {
                     }, t.modalLevel = "top_page", t.reportSubMenuAction = function(e) {
                         var n = !!(t.props.data.user && t.props.data.user.self && t.props.data.user.self.subscriptionBenefit),
                             i = t.props.data.requestInfo && Object(h.a)(t.props.data.requestInfo.countryCode);
-                        Object(j.b)({
+                        Object(L.b)({
                             action: e.action || "",
                             channelLogin: t.props.channelLogin || "",
                             channelID: t.props.data && t.props.data.user.id,
@@ -6166,18 +6135,18 @@ webpackJsonp([39], {
                             hasSubCredit: !!t.props.data.user.self && t.props.data.user.self.canPrimeSubscribe,
                             hostChannelID: t.props.hostChannelID,
                             hostChannelLogin: t.props.hostChannelLogin,
-                            isMenuOpen: !(e.action === j.a.OpenSubMenu),
+                            isMenuOpen: !(e.action === L.a.OpenSubMenu),
                             sub_location: "channel_page",
                             modal: !n,
                             modalLevel: n ? "" : t.modalLevel.slice(),
                             showPrimeContent: i,
                             giftRecipient: e.giftRecipient || null
-                        }), !e.modalLevel || e.action !== j.a.ClickMoreSubOptions && e.action !== j.a.ClickBack || (t.modalLevel = e.modalLevel, t.setState({
+                        }), !e.modalLevel || e.action !== L.a.ClickMoreSubOptions && e.action !== L.a.ClickBack || (t.modalLevel = e.modalLevel, t.setState({
                             activeTierPrice: m.a.Prime
                         }))
                     }, t.handleMenuToggle = function(e) {
                         t.reportSubMenuAction({
-                            action: e ? j.a.CloseSubMenu : j.a.OpenSubMenu
+                            action: e ? L.a.CloseSubMenu : L.a.OpenSubMenu
                         })
                     }, t.onSelectTierTab = function(e) {
                         t.state.activeTierPrice !== e && t.setState({
@@ -6185,12 +6154,8 @@ webpackJsonp([39], {
                         })
                     }, t.onSubscribedWithPrime = function() {
                         t.reportSubMenuAction({
-                            action: j.a.SubWithPrime
+                            action: L.a.SubWithPrime
                         }), t.modalLevel = ""
-                    }, t.isEsportChannel = function(e) {
-                        var n = c.b.get(Y, []),
-                            i = t.props.sessionUser && t.props.sessionUser.roles && t.props.sessionUser.roles.isStaff || !1;
-                        return n.includes(e) || n.includes(e + "-staff") && i
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
@@ -6205,7 +6170,7 @@ webpackJsonp([39], {
                     if (!this.isUserDataReady(this.props) || !this.hasSubscriptionProducts(this.props)) return null;
                     var e = this.props.data.requestInfo && Object(h.a)(this.props.data.requestInfo.countryCode),
                         t = !!(this.props.data.user && this.props.data.user.self && this.props.data.user.self.subscriptionBenefit),
-                        n = this.isEsportChannel(this.props.data.user.id),
+                        n = Object(g.a)(this.props.data.user.id, this.props.sessionUser),
                         i = 1 === this.props.data.user.subscriptionProducts.length,
                         r = null;
                     this.props.data.user.self && this.props.data.user.self.subscriptionBenefit && (r = this.props.data.user.self.subscriptionBenefit.purchasedWithPrime ? m.a.Prime : this.props.data.user.self.subscriptionBenefit.tier, this.modalLevel = ""), this.props.data.user.subscriptionProducts.some(this.isSubscriptionProductInvalid) && (i = !0);
@@ -6214,33 +6179,33 @@ webpackJsonp([39], {
                         var l = i ? Object(c.d)("Subscribed", "SubscribeButton") : Object(c.d)("Gift A Sub", "SubscribeButton");
                         if (o = this.props.hostChannelID ? Object(c.d)("Subscribed to {username}", {
                                 username: this.props.data.user.displayName
-                            }, "SubscribeButton") : l, i && !n) return a.createElement(y.u, {
+                            }, "SubscribeButton") : l, i && !n) return a.createElement(k.u, {
                             disabled: !0,
                             ariaLabel: o,
-                            icon: y._20.Star
+                            icon: k._20.Star
                         }, o);
                         n && (o = s)
                     } else o = n ? s : this.props.hostChannelID ? Object(c.d)("Subscribe to {username}", {
                         username: this.props.data.user.displayName
                     }, "SubscribeButton") : Object(c.d)("Subscribe", "SubscribeButton");
-                    var u = r === m.a.Prime ? y._20.Crown : y._20.Star,
+                    var u = r === m.a.Prime ? k._20.Crown : k._20.Star,
                         p = t ? "subscribed-button" : "subscribe-button",
-                        f = a.createElement(y.u, {
+                        f = a.createElement(k.u, {
                             "data-a-target": p,
                             "data-test-selector": "subscribe-button__dropdown",
                             ariaLabel: o,
-                            type: t ? y.A.Success : y.A.Default,
+                            type: t ? k.A.Success : k.A.Default,
                             dropdown: !0,
                             icon: t ? u : void 0
                         }, o),
-                        g = this.props.hostChannelID ? y.q.TopLeft : y.q.BottomRight;
+                        v = this.props.hostChannelID ? k.q.TopLeft : k.q.BottomRight;
                     return a.createElement(d.a, {
                         onToggle: this.handleMenuToggle
-                    }, f, a.createElement(y.p, {
-                        size: y.r.Large,
-                        direction: g,
+                    }, f, a.createElement(k.p, {
+                        size: k.r.Large,
+                        direction: v,
                         "data-a-target": "sub-balloon"
-                    }, a.createElement($, {
+                    }, a.createElement(J, {
                         authToken: this.props.authToken,
                         channelLogin: this.props.channelLogin || "",
                         inPrimeRegion: e,
@@ -6259,7 +6224,7 @@ webpackJsonp([39], {
                     return e.data && e.data.user && !e.data.loading && !e.data.error
                 }, t.prototype.isSubscriptionProductInvalid = function(e) {
                     return !e.emoteSetID
-                }, t = r.__decorate([Object(u.a)(J, {
+                }, t = r.__decorate([Object(u.a)(Y, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6313,8 +6278,6 @@ webpackJsonp([39], {
             return ee
         }), n.d(t, !1, function() {
             return "subscribe-button__dropdown"
-        }), n.d(t, !1, function() {
-            return Y
         }), n.d(t, !1, function() {
             return Z
         })
@@ -6634,7 +6597,7 @@ webpackJsonp([39], {
                             display: l.P.InlineFlex,
                             justifyContent: l._5.Center,
                             position: l._13.Absolute,
-                            zIndex: l._55.Above
+                            zIndex: l._54.Above
                         }, a.createElement(l._19, {
                             asset: l._20.Lock,
                             height: 10,
@@ -8030,7 +7993,7 @@ webpackJsonp([39], {
                         className: "blue-bar",
                         position: m._13.Relative,
                         fullWidth: !0,
-                        zIndex: m._55.Above
+                        zIndex: m._54.Above
                     }, o.createElement(m._6, {
                         className: "blue-bar__bar",
                         display: m.P.Flex,
@@ -10433,7 +10396,7 @@ webpackJsonp([39], {
                             justifyContent: g._5.Between,
                             flexWrap: g.S.NoWrap,
                             className: "persistent-player__title",
-                            zIndex: g._55.Above,
+                            zIndex: g._54.Above,
                             "data-test-selector": "persistent-player-mini-title"
                         }, l.createElement(g._6, {
                             ellipsis: !0,
@@ -10468,7 +10431,7 @@ webpackJsonp([39], {
                                 top: 4
                             },
                             position: g._13.Absolute,
-                            zIndex: g._55.Above,
+                            zIndex: g._54.Above,
                             "data-test-selector": "persistent-player-mini-hover"
                         }, t.renderMiniControl(g._20.MiniPlayerExpand, Object(d.d)("Expand Player", "PersistentPlayerMini"), "persistent-player-mini-expand", t.props.onClickExpand), l.createElement(g._6, {
                             margin: {
@@ -10493,7 +10456,7 @@ webpackJsonp([39], {
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            zIndex: g._55.Above,
+                            zIndex: g._54.Above,
                             "data-test-selector": "persistent-player-mini-cover"
                         })
                     }, t.togglePause = function() {
@@ -12760,9 +12723,9 @@ webpackJsonp([39], {
             return a
         }), n.d(t, "d", function() {
             return o
-        }), t.g = function(e) {
+        }), t.h = function(e) {
             return !(!e.vendorCode || !e.SKU)
-        }, t.e = function(e) {
+        }, t.f = function(e) {
             return Object.keys(e.views).reduce(function(t, n) {
                 if (!e.views[n]) return t;
                 switch (n) {
@@ -12780,10 +12743,12 @@ webpackJsonp([39], {
                 }
                 return t
             }, [])
-        }, t.f = function(e) {
+        }, t.g = function(e) {
             var t = [s.ExtensionPlatform.Web];
             e.views.mobile && e.views.mobile.viewerURL && t.push(s.ExtensionPlatform.Mobile);
             return t
+        }, t.e = function(e) {
+            return e.extension.id + ":" + e.extension.version
         };
         var i, r, a, o, s = n("BwgW");
         n.n(s);
@@ -15104,7 +15069,7 @@ webpackJsonp([39], {
                         to: this.props.linkTo,
                         className: "side-nav-card__link",
                         onClick: this.props.onClick
-                    }, Object(y._56)(this.props)), a.createElement(y._6, {
+                    }, Object(y._55)(this.props)), a.createElement(y._6, {
                         className: r("side-nav-card__avatar", {
                             "side-nav-card__avatar--offline": this.props.offline
                         }),
@@ -15626,7 +15591,7 @@ webpackJsonp([39], {
                         titleElement: Object(b.a)(this.props.user.login, this.props.user.displayName),
                         tooltipLabel: this.props.collapsed && !this.props.premieresEnabled ? e : void 0,
                         tooltipContent: this.getTooltipContent()
-                    }, Object(y._56)(this.props)))
+                    }, Object(y._55)(this.props)))
                 }, t.prototype.getMetadataLeft = function() {
                     return this.props.user.stream && this.props.user.stream.game ? this.props.user.stream.game.name : this.props.user.stream && this.props.user.stream.id && this.props.user.lastBroadcast && this.props.user.lastBroadcast.game && this.props.user.lastBroadcast.game.name ? this.props.user.lastBroadcast.game.name : this.props.recentChannelVideos && this.props.recentChannelVideos.length > 0 ? Object(s.d)("{numVideos, plural, one {{numVideos} new video} other {{numVideos} new videos}}", {
                         numVideos: this.props.recentChannelVideos.length
@@ -16049,7 +16014,7 @@ webpackJsonp([39], {
                         }),
                         slideInContent: this.renderJoinButton(),
                         collapsed: this.props.collapsed
-                    }, Object(y._56)(this.props))))
+                    }, Object(y._55)(this.props))))
                 }, t = i.__decorate([Object(h.d)("OnlineFriend")], t)
             }(a.Component);
         var de = Object(f.b)(function(e) {
@@ -16208,7 +16173,7 @@ webpackJsonp([39], {
                         slideInContent: this.getSlideInContent(),
                         collapsed: this.props.collapsed,
                         tooltipLabel: t
-                    }, Object(y._56)(this.props)))
+                    }, Object(y._55)(this.props)))
                 }, t = i.__decorate([Object(h.d)("RecommendedChannel")], t)
             }(a.Component);
         var fe = Object(f.b)(function(e) {
@@ -16353,7 +16318,7 @@ webpackJsonp([39], {
                         metadataLeft: "",
                         collapsed: this.props.collapsed,
                         slideInContent: this.getSlideInContent()
-                    }, Object(y._56)(this.props))))
+                    }, Object(y._55)(this.props))))
                 }, t = i.__decorate([Object(c.a)(ke, {
                     name: "createFriendRequest"
                 }), Object(c.a)(ye, {
@@ -17224,7 +17189,7 @@ webpackJsonp([39], {
                                 case 0:
                                     return r = [], (n = []).push(this.getTopResult(d.games, e)), n.push(this.getTopResult(d.videos, e)), n.push(this.getTopResult(d.users, e)), n.push(this.getTopResult(d.channels, e)), n.push(this.getTopResult(d.communities, e)), r.push(this.getTotalResult(d.games, e)), r.push(this.getTotalResult(d.videos, e)), r.push(this.getTotalResult(d.users, e)), r.push(this.getTotalResult(d.channels, e)), r.push(this.getTotalResult(d.communities, e)), [4, this.query(n.concat(r))];
                                 case 1:
-                                    return a = i.sent(), o = a.results, [2, {
+                                    return (a = i.sent()) ? (o = a.results, [2, {
                                         id: t,
                                         games: {
                                             totalHits: o[5].nbHits,
@@ -17246,7 +17211,31 @@ webpackJsonp([39], {
                                             totalHits: o[9].nbHits,
                                             hits: o[4].hits
                                         }
-                                    }]
+                                    }]) : [2, function(e) {
+                                        return {
+                                            id: e,
+                                            games: {
+                                                totalHits: 0,
+                                                hits: []
+                                            },
+                                            videos: {
+                                                totalHits: 0,
+                                                hits: []
+                                            },
+                                            users: {
+                                                totalHits: 0,
+                                                hits: []
+                                            },
+                                            channels: {
+                                                totalHits: 0,
+                                                hits: []
+                                            },
+                                            communities: {
+                                                totalHits: 0,
+                                                hits: []
+                                            }
+                                        }
+                                    }(t)]
                             }
                         })
                     })
@@ -17285,10 +17274,13 @@ webpackJsonp([39], {
                                                             }
                                                         }, [4, this.query([n])];
                                                     case 1:
-                                                        return a = i.sent(), r.exhaustedHits = !a.results[0].nbHits || a.results[0].hits.length < u, [2, {
+                                                        return (a = i.sent()) ? (r.exhaustedHits = !a.results[0].nbHits || a.results[0].hits.length < u, [2, {
                                                             totalHits: a.results[0].nbHits,
                                                             hits: a.results[0].hits
-                                                        }]
+                                                        }]) : (r.exhaustedHits = !0, [2, {
+                                                            totalHits: 0,
+                                                            hits: []
+                                                        }])
                                                 }
                                             })
                                         })
@@ -17375,10 +17367,14 @@ webpackJsonp([39], {
                                     }
                                     return [4, this.query([o])];
                                 case 1:
-                                    return c = i.sent(), [2, {
+                                    return (c = i.sent()) ? [2, {
                                         id: t,
                                         totalHits: c.results[0].nbHits,
                                         hits: c.results[0].hits
+                                    }] : [2, {
+                                        id: t,
+                                        totalHits: 0,
+                                        hits: []
                                     }]
                             }
                         })
@@ -17415,15 +17411,21 @@ webpackJsonp([39], {
                     }
                 }, e.prototype.query = function(e) {
                     return i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, r;
+                        var t, n, r, a;
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return n = (new Date).getTime(), [4, this.client.search(e)];
+                                    n = Date.now(), a = !1, i.label = 1;
                                 case 1:
-                                    t = i.sent(), r = (new Date).getTime();
+                                    return i.trys.push([1, 3, , 4]), [4, this.client.search(e)];
+                                case 2:
+                                    return t = i.sent(), [3, 4];
+                                case 3:
+                                    return i.sent(), a = !0, t = null, [3, 4];
+                                case 4:
+                                    r = Date.now();
                                     try {
-                                        this.countryCode && (this.stats.logCounter("success." + this.countryCode, 1), this.stats.logTimer("success_duration." + this.countryCode, r - n))
+                                        this.countryCode && (a ? (this.stats.logCounter("error." + this.countryCode, 1), this.stats.logTimer("error_duration." + this.countryCode, r - n)) : (this.stats.logCounter("success." + this.countryCode, 1), this.stats.logTimer("success_duration." + this.countryCode, r - n)))
                                     } catch (t) {
                                         this.logger.error(t, "Failed to send search stats", e)
                                     }
@@ -18321,6 +18323,17 @@ webpackJsonp([39], {
             }(a || (a = {}))
     },
     Q8Dy: function(e, t) {},
+    QCL8: function(e, t, n) {
+        "use strict";
+        t.a = function(e, t, n) {
+            void 0 === n && (n = !1);
+            var a = i.b.get(r, []),
+                o = void 0 !== t && t.roles && t.roles.isStaff || !1;
+            return a.includes(e) || a.includes(e + "-staff") && (o || n)
+        };
+        var i = n("6sO2"),
+            r = "esport_insider_pass_whitelist"
+    },
     QPF3: function(e, t, n) {
         "use strict";
         t.a = function() {
@@ -20395,9 +20408,9 @@ webpackJsonp([39], {
             Ie = n("VHHT"),
             xe = function(e) {
                 var t = e.extension,
-                    n = Object(Ee.e)(t).map(function(e) {
+                    n = Object(Ee.f)(t).map(function(e) {
                         return Object(De.a)(e, !1)
-                    }).concat(Object(Ee.f)(t).filter(function(e) {
+                    }).concat(Object(Ee.g)(t).filter(function(e) {
                         return e !== Pe.ExtensionPlatform.Web
                     }).map(function(e) {
                         return Object(Ie.a)(e, !1)
@@ -20461,7 +20474,7 @@ webpackJsonp([39], {
                         rel: "noopener",
                         href: t.termsURL
                     }, t.termsURL)
-                }, "ExtensionDetails"))), Object(Ee.g)(t) && r.createElement(g._29, {
+                }, "ExtensionDetails"))), Object(Ee.h)(t) && r.createElement(g._29, {
                     borderTop: !0,
                     padding: {
                         top: 1
@@ -20661,7 +20674,7 @@ webpackJsonp([39], {
                             if (i) {
                                 t.props.showUninstallModal({
                                     extensionName: n.name,
-                                    isExtensionMonetized: Object(Ee.g)(n),
+                                    isExtensionMonetized: Object(Ee.h)(n),
                                     onConfirm: function() {
                                         return t.uninstallExtension(i.id)
                                     }
@@ -21199,7 +21212,7 @@ webpackJsonp([39], {
                         fullWidth: !0,
                         display: g.P.Flex,
                         flexDirection: g.R.Column,
-                        zIndex: this.props.theatreModeEnabled ? void 0 : g._55.Default
+                        zIndex: this.props.theatreModeEnabled ? void 0 : g._54.Default
                     }, r.createElement("main", {
                         className: St
                     }, r.createElement(k.b, null), r.createElement(s.a, {
@@ -21735,7 +21748,7 @@ webpackJsonp([39], {
                     onClick: e.onHeaderClick,
                     tabIndex: -1,
                     alpha: !0
-                }, Object(B._56)(e), {
+                }, Object(B._55)(e), {
                     "data-ts_selectable": !0
                 }), d.createElement(B._6, {
                     display: B.P.Flex,
@@ -21781,7 +21794,7 @@ webpackJsonp([39], {
                         display: B.P.Flex,
                         alignItems: B.c.Center,
                         position: B._13.Relative,
-                        zIndex: B._55.Above,
+                        zIndex: B._54.Above,
                         borderBottom: !0,
                         "data-a-target": "nav-search-title-bar"
                     }, d.createElement(B._6, {
@@ -22201,7 +22214,7 @@ webpackJsonp([39], {
                         alignItems: B.c.Center,
                         flexGrow: 1,
                         fullHeight: !0,
-                        zIndex: B._55.Above,
+                        zIndex: B._54.Above,
                         className: "search-results-panel__notice-wrap"
                     }, d.createElement(B._29, {
                         color: B.J.Alt2,
@@ -22230,7 +22243,7 @@ webpackJsonp([39], {
                         alignItems: B.c.Center,
                         flexGrow: 1,
                         fullHeight: !0,
-                        zIndex: B._55.Above,
+                        zIndex: B._54.Above,
                         className: "search-results-panel__notice-wrap"
                     }, d.createElement(B._29, {
                         color: B.J.Alt2,
@@ -22827,7 +22840,7 @@ webpackJsonp([39], {
                         "data-a-target": t,
                         "data-test-selector": n,
                         attachRight: !0,
-                        zIndex: B._55.Below
+                        zIndex: B._54.Below
                     }, d.createElement(F.b, {
                         className: "top-nav-user-menu-dropdown__scrollable",
                         suppressScrollX: !0
@@ -26883,7 +26896,7 @@ webpackJsonp([39], {
                         linkTo: this.state.hasPopupExperiment ? void 0 : this.props.url,
                         onClick: this.handleClick,
                         purchase: this.props.tierPrice
-                    }, Object(c._56)(this.props), {
+                    }, Object(c._55)(this.props), {
                         targetBlank: void 0 === this.props.targetBlank || this.props.targetBlank
                     }), t)
                 }, t = i.__decorate([Object(s.d)("SubTierButton", {
@@ -28158,7 +28171,7 @@ webpackJsonp([39], {
                         flexGrow: 0,
                         flexShrink: 0,
                         display: p.P.Block,
-                        zIndex: p._55.Above
+                        zIndex: p._54.Above
                     }, s.createElement("button", {
                         onClick: this.handleToggleVisibility,
                         "data-a-target": "right-column__toggle-collapse-btn"
@@ -28951,7 +28964,7 @@ webpackJsonp([39], {
                     }, this.props.children), r.createElement(m._6, {
                         display: e ? m.P.Block : m.P.Hide,
                         position: m._13.Relative,
-                        zIndex: m._55.Above
+                        zIndex: m._54.Above
                     }, e && this.renderFooter()))
                 }, t.prototype.renderHeader = function() {
                     return r.createElement(m.e, {
@@ -30250,7 +30263,7 @@ webpackJsonp([39], {
                         e = a.createElement(s._0, {
                             className: "user-card-layer",
                             position: s._13.Fixed,
-                            zIndex: s._55.Above
+                            zIndex: s._54.Above
                         }, a.createElement("div", {
                             style: t,
                             ref: this.setRef
@@ -31198,7 +31211,7 @@ webpackJsonp([39], {
                             icon: c._20.Crown,
                             linkTo: a.a.tryPrimeURI,
                             onClick: this.handleStartPrimeTrialClick
-                        }, Object(c._56)(this.props), {
+                        }, Object(c._55)(this.props), {
                             targetBlank: !0
                         }), t)
                     }
@@ -31209,7 +31222,7 @@ webpackJsonp([39], {
                             "data-test-selector": d,
                             disabled: !0,
                             icon: c._20.Crown
-                        }, Object(c._56)(this.props)), n)
+                        }, Object(c._55)(this.props)), n)
                     }
                     if (!this.props.canPrimeSubscribe) {
                         var o = Object(a.d)("Not yet!", "SubscribeWithPrime");
@@ -31218,7 +31231,7 @@ webpackJsonp([39], {
                             "data-test-selector": d,
                             disabled: !0,
                             icon: c._20.Crown
-                        }, Object(c._56)(this.props)), o)
+                        }, Object(c._55)(this.props)), o)
                     }
                     if (this.state.primeSubFailure) return r.createElement(l.b, {
                         fontSize: c.T.Size6,
@@ -31232,7 +31245,7 @@ webpackJsonp([39], {
                         icon: c._20.Crown,
                         state: this.state.isSubscribing ? c.z.Loading : c.z.Default,
                         onClick: this.handleSubWithPrimeClick
-                    }, Object(c._56)(this.props)), s)
+                    }, Object(c._55)(this.props)), s)
                 }, t
             }(r.Component);
         n.d(t, !1, function() {
@@ -34530,4 +34543,4 @@ webpackJsonp([39], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-44b058ac196e9b4ccb41732495ba86b8.js.map
+//# sourceMappingURL=pages.subs-06f7471992123321db1ed7fe140a82fb.js.map

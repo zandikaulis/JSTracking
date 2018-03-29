@@ -1066,8 +1066,8 @@ webpackJsonp([74], {
             D = n("HW6M"),
             T = n("RweG"),
             I = n("aMxy"),
-            M = n("oIkB"),
-            L = n("HZww"),
+            L = n("oIkB"),
+            M = n("HZww"),
             R = n("vH/s"),
             x = n("iMOk"),
             A = n("Odds"),
@@ -1259,7 +1259,7 @@ webpackJsonp([74], {
                                     case 1:
                                         return n.trys.push([1, , 3, 4]), e = this.props.data.user.self.purchaseTokens[0], t = function(e) {
                                             return e.user.self && (e.user.self.purchaseTokens = e.user.self.purchaseTokens.slice(1)), e
-                                        }, Object(M.d)(P, {
+                                        }, Object(L.d)(P, {
                                             channelLogin: this.props.channelLogin
                                         }, t), i.n.track(R.SpadeEventType.FuelSocialShare, {
                                             channel_id: this.props.data.user.id,
@@ -1268,7 +1268,7 @@ webpackJsonp([74], {
                                             item_name: e.title,
                                             context: V,
                                             payout_enabled: this.props.data.user.settings.isCommerceRevShareEnabled
-                                        }), [4, this.props.dismissPurchaseToken(Object(M.a)({
+                                        }), [4, this.props.dismissPurchaseToken(Object(L.a)({
                                             token: e.id,
                                             channelID: this.props.data.user.id
                                         }))];
@@ -1294,7 +1294,7 @@ webpackJsonp([74], {
                                             sendingMessage: !0
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, , 3, 4]), t = this.props.data.user.self.purchaseTokens[0], [4, this.props.sharePurchaseTokenInChat(Object(M.a)({
+                                        return a.trys.push([1, , 3, 4]), t = this.props.data.user.self.purchaseTokens[0], [4, this.props.sharePurchaseTokenInChat(Object(L.a)({
                                             token: t.id,
                                             channelID: this.props.data.user.id,
                                             message: e
@@ -1310,7 +1310,7 @@ webpackJsonp([74], {
                                             payout_enabled: this.props.data.user.settings.isCommerceRevShareEnabled
                                         }), n = function(e) {
                                             return e.user.self && (e.user.self.purchaseTokens = e.user.self.purchaseTokens.slice(1)), e
-                                        }, Object(M.d)(P, {
+                                        }, Object(L.d)(P, {
                                             channelLogin: this.props.channelLogin
                                         }, n), [3, 4];
                                     case 3:
@@ -1453,7 +1453,7 @@ webpackJsonp([74], {
                     }
                 }), Object(T.a)([{
                     topic: function(e) {
-                        return Object(L.u)(e.currentUserID)
+                        return Object(M.u)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (_ = {}, _[I.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", _)
                 }])], t)
@@ -1479,14 +1479,14 @@ webpackJsonp([74], {
                     overflow: A._9.Hidden,
                     className: "rare-emote"
                 }, c.createElement(A._0, {
-                    zIndex: A._55.Above,
+                    zIndex: A._54.Above,
                     position: A._13.Relative
                 }, c.createElement("img", {
                     className: t,
                     src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
                 })), c.createElement(A._6, {
                     position: A._13.Relative,
-                    zIndex: A._55.Default,
+                    zIndex: A._54.Default,
                     className: n
                 }, c.createElement(A._19, {
                     width: 28,
@@ -1573,7 +1573,7 @@ webpackJsonp([74], {
                                     case 2:
                                         r.sent(), t = function(e) {
                                             return e.user.self && (e.user.self.resubNotification = null), e
-                                        }, Object(M.d)($, {
+                                        }, Object(L.d)($, {
                                             channelLogin: this.props.channelLogin
                                         }, t), this.dismissResubNotification(), r.label = 3;
                                     case 3:
@@ -2138,7 +2138,7 @@ webpackJsonp([74], {
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(L.o)(e.channelID),
+                    topic: Object(M.o)(e.channelID),
                     type: I.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -2351,8 +2351,8 @@ webpackJsonp([74], {
                     configurable: !0
                 }), e
             }(),
-            Me = n("INp2");
-        var Le = n("6Agf");
+            Le = n("INp2");
+        var Me = n("6Agf");
         var Re = n("aUOx"),
             xe = n("l21v");
 
@@ -2360,7 +2360,7 @@ webpackJsonp([74], {
             return void 0 === o && (o = !1), a.__assign({}, Object(xe.a)(t, n, i, r, s, o), {
                 type: Ce.b.Message,
                 messageType: e,
-                id: n.id || Object(Me.a)(n.username)
+                id: n.id || Object(Le.a)(n.username)
             })
         }
         var Be = n("Ncf8");
@@ -2372,7 +2372,7 @@ webpackJsonp([74], {
                         userDisplayName: e,
                         userLogin: e,
                         userID: null,
-                        userType: Le.a.User,
+                        userType: Me.a.User,
                         color: void 0,
                         isIntl: !1
                     }
@@ -2380,7 +2380,7 @@ webpackJsonp([74], {
             }(t);
             return a.__assign({}, c, {
                 type: Ce.b.Resubscription,
-                id: Object(Me.a)(t + "-sub"),
+                id: Object(Le.a)(t + "-sub"),
                 channel: e.slice(1),
                 isPrime: n,
                 months: i,
@@ -2395,24 +2395,24 @@ webpackJsonp([74], {
                     this.onJoinedEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, {
                             type: Ce.b.Connected,
-                            id: Object(Me.a)("connected")
+                            id: Object(Le.a)("connected")
                         })
                     }, this.onDisconnectedEvent = function(e) {
                         return r.postMessage((t = e.reason, {
                             type: Ce.b.Disconnected,
-                            id: Object(Me.a)("disconnected"),
+                            id: Object(Le.a)("disconnected"),
                             reason: t
                         }));
                         var t
                     }, this.onReconnectingEvent = function(e) {
                         return r.postMessage({
                             type: Ce.b.Reconnect,
-                            id: Object(Me.a)("reconnect")
+                            id: Object(Le.a)("reconnect")
                         })
                     }, this.onHostedEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.from, n = e.isAuto, a = e.viewers, {
                             type: Ce.b.Hosted,
-                            id: Object(Me.a)("hosted-" + t),
+                            id: Object(Le.a)("hosted-" + t),
                             hostingChannel: t,
                             isAutohost: n,
                             viewerCount: a
@@ -2421,14 +2421,14 @@ webpackJsonp([74], {
                     }, this.onHostingEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.target, {
                             type: Ce.b.Hosting,
-                            id: Object(Me.a)("hosting"),
+                            id: Object(Le.a)("hosting"),
                             hostedChannel: t
                         }));
                         var t
                     }, this.onUnhostEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.channel, {
                             type: Ce.b.Unhost,
-                            id: Object(Me.a)("unhost-" + t)
+                            id: Object(Le.a)("unhost-" + t)
                         }));
                         var t
                     }, this.onChatMessageEvent = function(e) {
@@ -2442,7 +2442,7 @@ webpackJsonp([74], {
                         if ("msg_rejected" !== e.msgid) {
                             var t = (n = e.channel, a = e.msgid, i = e.body, {
                                 type: Ce.b.Notice,
-                                id: Object(Me.a)("notice"),
+                                id: Object(Le.a)("notice"),
                                 channel: n,
                                 msgid: a,
                                 message: i
@@ -2473,14 +2473,14 @@ webpackJsonp([74], {
                         }
                         r.postMessageToCurrentChannel(e, (n = e.channel, i = e.user.displayName, s = e.methods.prime, o = t, l = e.user, c = Object(xe.a)("", l, S.a, !1), a.__assign({}, c, {
                             type: Ce.b.Subscription,
-                            id: Object(Me.a)(i + "-sub"),
+                            id: Object(Le.a)(i + "-sub"),
                             channel: n.slice(1),
                             isPrime: s,
                             userLogin: i,
                             tier: o
                         })))
                     }, this.onSubscriptionGiftEvent = function(e) {
-                        var t, n, a, i, s, o, l;
+                        var t, n, a, i, s, o, l, c;
                         switch (e.methods.plan) {
                             case "1000":
                                 t = "Tier 1";
@@ -2494,21 +2494,22 @@ webpackJsonp([74], {
                             default:
                                 t = "custom"
                         }
-                        r.postMessageToCurrentChannel(e, (n = e.channel, a = e.user.username, i = e.user.displayName, s = e.methods.prime, o = t, l = e.recipientName, {
+                        r.postMessageToCurrentChannel(e, (n = e.channel, a = e.user.username, i = e.user.displayName, s = e.methods.prime, o = t, l = e.recipientName, c = e.senderCount, {
                             type: Ce.b.SubGift,
-                            id: Object(Me.a)(a + "-sub"),
+                            id: Object(Le.a)(a + "-sub"),
                             channel: n.slice(1),
                             isPrime: s,
                             userDisplayName: i,
                             userLogin: a,
                             tier: o,
-                            recipient: l
+                            recipient: l,
+                            senderCount: c
                         }))
                     }, this.onBitsCharityEvent = function(e) {
                         var t, n, a, i, s, o;
                         r.postMessage((t = e.total, n = e.charityName, a = e.daysLeft, i = e.hoursLeft, s = e.hashtag, o = e.learnMore, {
                             type: Ce.b.BitsCharity,
-                            id: Object(Me.a)("charity"),
+                            id: Object(Le.a)("charity"),
                             total: t,
                             charityName: n,
                             daysLeft: a,
@@ -2535,21 +2536,21 @@ webpackJsonp([74], {
                     }, this.onRoomModsEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.usernames, {
                             type: Ce.b.RoomMods,
-                            id: Object(Me.a)("roommods"),
+                            id: Object(Le.a)("roommods"),
                             moderatorLogins: t
                         }));
                         var t
                     }, this.onRoomStateEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.state, {
                             type: Ce.b.RoomState,
-                            id: Object(Me.a)("roomstate"),
+                            id: Object(Le.a)("roomstate"),
                             state: t
                         }));
                         var t
                     }, this.onSlowModeEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.enabled, n = e.length, {
                             type: Ce.b.SlowMode,
-                            id: Object(Me.a)("slowmode"),
+                            id: Object(Le.a)("slowmode"),
                             enabled: t,
                             length: n
                         }));
@@ -2557,14 +2558,14 @@ webpackJsonp([74], {
                     }, this.onEmoteOnlyModeEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.enabled, {
                             type: Ce.b.EmoteOnlyMode,
-                            id: Object(Me.a)("emoteonlymode"),
+                            id: Object(Le.a)("emoteonlymode"),
                             enabled: t
                         }));
                         var t
                     }, this.onFollowerOnlyModeEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.enabled, n = e.length, {
                             type: Ce.b.FollowerOnlyMode,
-                            id: Object(Me.a)("follower-only"),
+                            id: Object(Le.a)("follower-only"),
                             enabled: t,
                             length: n
                         }));
@@ -2572,19 +2573,19 @@ webpackJsonp([74], {
                     }, this.onSubscriberOnlyModeEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.enabled, {
                             type: Ce.b.SubscriberOnlyMode,
-                            id: Object(Me.a)("subscriber-only"),
+                            id: Object(Le.a)("subscriber-only"),
                             enabled: t
                         }));
                         var t
                     }, this.onClearChatEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, {
                             type: Ce.b.Clear,
-                            id: Object(Me.a)("clear")
+                            id: Object(Le.a)("clear")
                         })
                     }, this.onRaidEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.channel, n = e.userLogin, a = e.params, {
                             type: Ce.b.Raid,
-                            id: Object(Me.a)("raid"),
+                            id: Object(Le.a)("raid"),
                             channel: t,
                             userLogin: n,
                             params: a
@@ -2593,7 +2594,7 @@ webpackJsonp([74], {
                     }, this.onUnraidEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.channel, n = e.userLogin, a = e.message, {
                             type: Ce.b.Unraid,
-                            id: Object(Me.a)("unraid"),
+                            id: Object(Le.a)("unraid"),
                             channel: t,
                             userLogin: n,
                             message: a
@@ -2603,14 +2604,14 @@ webpackJsonp([74], {
                         var t, n;
                         r.postMessage((t = e.type, n = r.convertMessage(e), {
                             type: Ce.b.Ritual,
-                            id: Object(Me.a)(n.user.userLogin + "-" + t + "-ritual"),
+                            id: Object(Le.a)(n.user.userLogin + "-" + t + "-ritual"),
                             ritualType: t,
                             message: n
                         }))
                     }, this.onBadgesUpdatedEvent = function(e) {
                         return r.postMessage((t = e.username, n = e.badges, {
                             type: Ce.b.BadgesUpdated,
-                            id: Object(Me.a)("updateBadges"),
+                            id: Object(Le.a)("updateBadges"),
                             userName: t,
                             badges: n
                         }));
@@ -2623,7 +2624,7 @@ webpackJsonp([74], {
                                 message: t,
                                 purchase: e,
                                 timestamp: n,
-                                id: Object(Me.a)(t.user.userLogin + "-purchase"),
+                                id: Object(Le.a)(t.user.userLogin + "-purchase"),
                                 type: Ce.b.Purchase
                             }
                         }(e.purchase, r.convertMessage(e), e.timestamp, t))
@@ -2631,7 +2632,7 @@ webpackJsonp([74], {
                         var t, n;
                         r.postMessage((t = r.convertMessage(e), n = e.selectedCount, {
                             type: Ce.b.CrateGift,
-                            id: Object(Me.a)("crate"),
+                            id: Object(Le.a)("crate"),
                             message: t,
                             selectedCount: n
                         }))
@@ -2683,7 +2684,7 @@ webpackJsonp([74], {
                 }, e.prototype.connectHandlers = function() {
                     this.client.events.removeAll(), this.client.events.joined(this.onJoinedEvent), this.client.events.disconnected(this.onDisconnectedEvent), this.client.events.reconnecting(this.onReconnectingEvent), this.client.events.chat(this.onChatMessageEvent), this.client.events.usernotice(this.onChatMessageEvent), this.client.events.notice(this.onChatNoticeEvent), this.client.events.action(this.onChatActionEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.hosted(this.onHostedEvent), this.client.events.hosting(this.onHostingEvent), this.client.events.unhost(this.onUnhostEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.purchase(this.onPurchaseEvent), this.client.events.crate(this.onCrateEvent), this.client.events.ritual(this.onRitualEvent), this.client.events.subscription(this.onSubscriptionEvent), this.client.events.resub(this.onResubscriptionEvent), this.client.events.subgift(this.onSubscriptionGiftEvent), this.client.events.timeout(this.onTimeoutEvent), this.client.events.ban(this.onBanEvent), this.client.events.clearchat(this.onClearChatEvent), this.client.events.raid(this.onRaidEvent), this.client.events.unraid(this.onUnraidEvent), this.client.events.mods(this.onRoomModsEvent), this.client.events.roomstate(this.onRoomStateEvent), this.client.events.followersonly(this.onFollowerOnlyModeEvent), this.client.events.slowmode(this.onSlowModeEvent), this.client.events.subscribers(this.onSubscriberOnlyModeEvent), this.client.events.emoteonlymode(this.onEmoteOnlyModeEvent), this.client.events.charity(this.onBitsCharityEvent)
                 }, e.prototype.shouldBlockLinks = function(e) {
-                    return e.username !== this.channelLogin && e.userType !== Le.a.Staff && e.userType !== Le.a.GlobalMod && e.userType !== Le.a.Moderator && this.blockLinks
+                    return e.username !== this.channelLogin && e.userType !== Me.a.Staff && e.userType !== Me.a.GlobalMod && e.userType !== Me.a.Moderator && this.blockLinks
                 }, e.prototype.postMessageToCurrentChannel = function(e, t) {
                     e.channel.toLowerCase().replace("#", "") === this.channelLogin.toLowerCase() && this.postMessage(t)
                 }, e
@@ -2692,7 +2693,7 @@ webpackJsonp([74], {
             Ve = function() {
                 return function(e, t, n) {
                     this.channelID = e, this.sessionUserID = t, this.unsubscribe = i.k.subscribe({
-                        topic: Object(L.j)(this.sessionUserID, this.channelID),
+                        topic: Object(M.j)(this.sessionUserID, this.channelID),
                         onMessage: function(e) {
                             switch (e.data.moderation_action) {
                                 case I.ModerationActions.AutoModRejected:
@@ -4113,7 +4114,7 @@ webpackJsonp([74], {
                         className: "pinned-cheer",
                         flexGrow: 0,
                         flexShrink: 0,
-                        zIndex: A._55.Default
+                        zIndex: A._54.Default
                     }, c.createElement("div", {
                         className: D(m),
                         ref: this.saveRootRef
@@ -4196,7 +4197,7 @@ webpackJsonp([74], {
                     var e = null,
                         t = this.renderRecentCheer();
                     return null === t && (e = this.renderLeaderboard()), c.createElement(A._6, {
-                        zIndex: A._55.Default
+                        zIndex: A._54.Default
                     }, e, t)
                 }, t.prototype.renderLeaderboard = function() {
                     if (this.props.data.error || !(this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.leaderboard)) return null;
@@ -4223,7 +4224,7 @@ webpackJsonp([74], {
                         bitsConfig: this.props.bitsConfig
                     })), c.createElement(A._6, {
                         className: "pinned-cheer-v2",
-                        zIndex: A._55.Default
+                        zIndex: A._54.Default
                     }, c.createElement(A._29, {
                         borderBottom: !0
                     }, i, a))
@@ -4274,7 +4275,7 @@ webpackJsonp([74], {
                     variables: {
                         channelID: e.channelID
                     },
-                    topic: Object(L.b)(e.channelID),
+                    topic: Object(M.b)(e.channelID),
                     type: I.PubsubMessageType.BitsPinEvent,
                     mutator: function(t, n) {
                         if (n && n.user && n.user.cheer) {
@@ -4323,8 +4324,8 @@ webpackJsonp([74], {
         function(e) {
             e.Badge = "badge_update", e.Balance = "balance_update"
         }(Dt || (Dt = {}));
-        var It, Mt = n("6BvN"),
-            Lt = n("+xm8"),
+        var It, Lt = n("6BvN"),
+            Mt = n("+xm8"),
             Rt = n("HM6l"),
             xt = n("f2i/"),
             At = n("c3pS"),
@@ -5484,8 +5485,8 @@ webpackJsonp([74], {
                     "data-test-selector": "raids-settings-tooltip"
                 }, Object(i.d)("If a raid is offensive, moderate in chat settings.", "RaidReportingChat")))
             },
-            Mn = n("QCOJ"),
-            Ln = n("hcyD"),
+            Ln = n("QCOJ"),
+            Mn = n("hcyD"),
             Rn = n("VB5+"),
             xn = n("Umoc"),
             An = n("ieBa"),
@@ -5520,10 +5521,10 @@ webpackJsonp([74], {
                     }))
                 }, n.onKeyDown = function(e) {
                     var t = e.charCode || e.keyCode;
-                    switch (n.props.onKeyDown && t !== Mt.a.Enter && n.props.onKeyDown(e), t) {
-                        case Mt.a.Enter:
+                    switch (n.props.onKeyDown && t !== Lt.a.Enter && n.props.onKeyDown(e), t) {
+                        case Lt.a.Enter:
                             return void(e.shiftKey || (e.preventDefault(), n.onMessageSend()));
-                        case Mt.a.Esc:
+                        case Lt.a.Esc:
                             return void(n.state.showCard === hn.Bits && n.setState({
                                 showCard: hn.None
                             }));
@@ -5752,7 +5753,7 @@ webpackJsonp([74], {
                     }
                 }, c.createElement(A._0, {
                     position: A._13.Relative,
-                    zIndex: A._55.Default
+                    zIndex: A._54.Default
                 }, c.createElement("div", {
                     onMouseEnter: this.onMouseEnterInput
                 }, t, n, c.createElement(At.b, {
@@ -5824,11 +5825,11 @@ webpackJsonp([74], {
                     showCard: hn.None
                 }))
             }, t.prototype.trackChatEvent = function() {
-                Object(Ln.a)({
+                Object(Mn.a)({
                     channelID: this.props.channelID,
                     channelLogin: this.props.channelLogin,
                     isHostMode: this.props.isHostMode,
-                    player: this.props.isPopout ? Mn.a.Embed : Mn.a.Web,
+                    player: this.props.isPopout ? Ln.a.Embed : Ln.a.Web,
                     subOnlyMode: this.props.isSubsOnlyModeEnabled
                 })
             }, t.prototype.trackMentions = function() {
@@ -5856,7 +5857,7 @@ webpackJsonp([74], {
             }, function(e) {
                 return Object(m.b)({
                     login: function() {
-                        return Object(xt.f)(Lt.a.Chat)
+                        return Object(xt.f)(Mt.a.Chat)
                     },
                     updateRenderSentChatMessageEvent: ee.U
                 }, e)
@@ -6014,7 +6015,7 @@ webpackJsonp([74], {
                             t.handleFilter(a, t.props.viewers)
                         }, 350)
                     }, t.onKeyDown = function(e) {
-                        e.keyCode === Mt.a.Esc && t.props.closeViewersList()
+                        e.keyCode === Lt.a.Esc && t.props.closeViewersList()
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
@@ -6055,7 +6056,7 @@ webpackJsonp([74], {
                             display: A.P.Flex,
                             alignItems: A.c.Center,
                             justifyContent: A._5.Center,
-                            zIndex: A._55.Above,
+                            zIndex: A._54.Above,
                             position: A._13.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
@@ -6067,7 +6068,7 @@ webpackJsonp([74], {
                         fullWidth: !0,
                         fullHeight: !0,
                         flexShrink: 0,
-                        zIndex: A._55.Default
+                        zIndex: A._54.Default
                     }, c.createElement(A._6, {
                         className: "chat-viewers__pane",
                         display: A.P.Flex,
@@ -6338,7 +6339,7 @@ webpackJsonp([74], {
                     }), c.createElement(A._6, {
                         className: "chat-room__notifications",
                         position: A._13.Absolute,
-                        zIndex: A._55.Default,
+                        zIndex: A._54.Default,
                         fullWidth: !0
                     }, this.props.children), a, this.props.isOwnChannel && !this.props.isEmbedded && c.createElement($e, {
                         hostedChannelLogin: this.props.hostedChannelLogin
@@ -6411,7 +6412,7 @@ webpackJsonp([74], {
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(L.s)(e.userID),
+                    topic: Object(M.s)(e.userID),
                     type: I.PubsubMessageType.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
@@ -7273,8 +7274,8 @@ webpackJsonp([74], {
             D = "chat-unban-button",
             T = "chat-timeout-button",
             I = "chat-deleted-message-placeholder",
-            M = 600,
-            L = function(e) {
+            L = 600,
+            M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7365,14 +7366,14 @@ webpackJsonp([74], {
                             }
                         })
                     }, t.timeoutUser = function() {
-                        t.props.banUserMutation(t.props.message.user.userLogin, M).then(function(e) {
+                        t.props.banUserMutation(t.props.message.user.userLogin, L).then(function(e) {
                             var n = e.banUserFromChatRoom;
                             if (t.props.onPushMessage)
                                 if (n.error) {
                                     var a = Object(v.a)(Object(S.a)(t.props.message.user.userLogin, n.error.code, !0));
                                     t.props.onPushMessage(a)
                                 } else {
-                                    var i = Object(k.a)(y.e.Timeout, t.props.message.user.userLogin, null, M);
+                                    var i = Object(k.a)(y.e.Timeout, t.props.message.user.userLogin, null, L);
                                     t.props.onPushMessage(i)
                                 }
                         }).catch(function() {
@@ -7427,7 +7428,7 @@ webpackJsonp([74], {
                 return Object(h.b)({
                     onUsernameClick: f.d
                 }, e)
-            }), Object(_.b)(R), Object(E.b)(R))(L),
+            }), Object(_.b)(R), Object(E.b)(R))(M),
             A = n("6Agf"),
             B = n("l21v"),
             j = n("3LYq"),
@@ -10001,7 +10002,7 @@ webpackJsonp([74], {
                 n = a.__rest(e, ["component"]);
             return i.createElement(t, a.__assign({}, n))
         });
-        var M, L = {
+        var L, M = {
                 "data-test-selector": "current-raiders"
             },
             R = function(e) {
@@ -10025,7 +10026,7 @@ webpackJsonp([74], {
                         background: E.m.AccentAlt2,
                         color: E.J.Overlay,
                         position: E._13.Absolute,
-                        zIndex: E._55.Above,
+                        zIndex: E._54.Above,
                         fullWidth: !0
                     }, i.createElement(E._6, {
                         className: "raid-notification__content",
@@ -10063,7 +10064,7 @@ webpackJsonp([74], {
                         targetDisplayName: n.displayName
                     }, "RaidCTATargetChannel")), i.createElement(E.O, a.__assign({
                         bold: !0
-                    }, L), Object(l.d)("{viewerCount, plural, one {# raider} other {# raiders}}", {
+                    }, M), Object(l.d)("{viewerCount, plural, one {# raider} other {# raiders}}", {
                         viewerCount: this.props.raid.viewerCount
                     }, "RaidCTATotalRaiders")))), this.props.children), i.createElement(w, {
                         totalCountdownTime: 1e3 * this.props.raid.totalDurationInSeconds,
@@ -10072,9 +10073,9 @@ webpackJsonp([74], {
                     }))
                 }, t
             }(i.Component),
-            x = (M = R, function(e) {
+            x = (L = R, function(e) {
                 return i.createElement(I, a.__assign({}, e, {
-                    component: M
+                    component: L
                 }))
             }),
             A = {
@@ -11664,8 +11665,8 @@ webpackJsonp([74], {
                 }, t
             }(i.Component)),
             I = n("OAwv"),
-            M = n("AaXK"),
-            L = (n("7LVu"), function(e) {
+            L = n("AaXK"),
+            M = (n("7LVu"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.onGlobalBadgeClicked = function(e) {
@@ -11899,7 +11900,7 @@ webpackJsonp([74], {
                             }
                         })
                     })
-                }, t = a.__decorate([Object(S.a)(M, {
+                }, t = a.__decorate([Object(S.a)(L, {
                     options: function(e) {
                         return {
                             variables: {
@@ -12064,7 +12065,7 @@ webpackJsonp([74], {
                     }, Object(_.d)("Ban", "RecentRaid")), i.createElement(D._6, {
                         key: "recent-raids-layout-" + this.props.raiderUserID,
                         className: "recent-raids-item__hover-content",
-                        zIndex: D._55.Above,
+                        zIndex: D._54.Above,
                         "data-a-target": "recent-raids-item-hover"
                     }, this.props.slideInContent, e)
                 }, t = a.__decorate([Object(S.a)(G, {
@@ -12683,7 +12684,7 @@ webpackJsonp([74], {
                         asset: D._20.ChatSettingsBack,
                         height: 10,
                         width: 10
-                    }), Object(_.d)("Back", "ChatSettingsAppearance")))), e, i.createElement(L, {
+                    }), Object(_.d)("Back", "ChatSettingsAppearance")))), e, i.createElement(M, {
                         key: "edit-appearance",
                         onColorSelected: this.onColorSelected,
                         editAppearance: this.props.editAppearance,
@@ -15248,7 +15249,7 @@ webpackJsonp([74], {
                 }, t)))
             },
             I = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-            M = function(e) {
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -15279,7 +15280,7 @@ webpackJsonp([74], {
                     }))
                 }, t
             }(c.Component),
-            L = n("jxGs"),
+            M = n("jxGs"),
             R = n("3iBR"),
             x = n("iydZ"),
             A = n("ZJYd"),
@@ -15302,10 +15303,10 @@ webpackJsonp([74], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.offer.type === L.a) {
+                    if (this.props.offer.type === M.a) {
                         if (!this.props.channelLogin) return null;
                         var e = this.props.currentUserSHA || "";
-                        return c.createElement(M, {
+                        return c.createElement(L, {
                             key: "wateb",
                             minPayout: this.props.offer.bits,
                             onWatchAdClick: this.props.handleWatchAdClick,
@@ -15320,7 +15321,7 @@ webpackJsonp([74], {
                     }, c.createElement(b.O, {
                         type: b._43.Strong,
                         fontSize: b.T.Size6
-                    }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(A.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === L.c && (t = c.createElement(b._6, {
+                    }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(A.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === M.c && (t = c.createElement(b._6, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, c.createElement(b.O, {
                         type: b._43.Strong,
@@ -15416,7 +15417,7 @@ webpackJsonp([74], {
                         }),
                         o = Object(A.d)(i),
                         l = Object(A.c)(i),
-                        d = i.type === L.a;
+                        d = i.type === M.a;
                     l && !e.hidePromos ? t.push(s) : o && !l ? t.push(s) : d && !e.hideWateb ? a = s : d || o || n.push(s)
                 }), e.fullsize ? c.createElement(b._6, {
                     className: "bits-buy-card-offers__full-size",
@@ -15798,7 +15799,7 @@ webpackJsonp([74], {
                     var i = [];
                     this.props.data.currentUser ? i = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (i = this.props.data.bitsOffers);
                     var r = i.filter(function(e) {
-                            return e.type === L.b
+                            return e.type === M.b
                         }).some(function(e) {
                             return e.includesVAT
                         }),
@@ -16191,8 +16192,8 @@ webpackJsonp([74], {
             D = n("Dc1A"),
             T = n("1Eny"),
             I = n("zVM8"),
-            M = "10 minutes",
-            L = function(e) {
+            L = "10 minutes",
+            M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onBanClick = function() {
@@ -16212,7 +16213,7 @@ webpackJsonp([74], {
                         n(Object(O.a)({
                             channelID: a,
                             bannedUserLogin: i,
-                            expiresIn: M
+                            expiresIn: L
                         }))
                     }, t.onUnbanClick = function() {
                         var e = t.props,
@@ -16719,7 +16720,7 @@ webpackJsonp([74], {
                     })))
                 }, t.prototype.renderChatActions = function() {
                     var e = [];
-                    return this.isModeratorOrHigher() && e.push(h.createElement(L, {
+                    return this.isModeratorOrHigher() && e.push(h.createElement(M, {
                         key: "ModActions",
                         channelID: this.props.data.channelUser.id,
                         userID: this.props.data.targetUser.id,
@@ -16843,7 +16844,7 @@ webpackJsonp([74], {
                         fullHeight: !0,
                         fullWidth: !0,
                         position: y._13.Relative,
-                        zIndex: y._55.Default
+                        zIndex: y._54.Default
                     }, h.createElement("div", {
                         onMouseUp: this.onDragEnd,
                         ref: function(t) {
@@ -18234,19 +18235,35 @@ webpackJsonp([74], {
             if (e.isPrime) return a.createElement("span", null, y(e.userLogin, v(e.channel)));
             return a.createElement("span", null, C(e.userLogin, e.tier))
         }, t.r = function(e) {
-            if ("custom" === e.tier) return a.createElement("span", null, (t = e.userDisplayName, n = e.recipient, Object(i.d)("{userLogin} gifted a subscription to {recipient}!", {
+            if ("custom" === e.tier) return a.createElement("span", null, (t = e.userDisplayName, n = e.recipient, 1 === (r = e.senderCount) ? Object(i.d)("{userLogin} gifted a Sub to {recipient}! It's their first Gift Sub in the channel!", {
+                userLogin: t,
+                recipient: n
+            }, "ChatLine") : r > 1 ? Object(i.d)("{userLogin} gifted a Sub to {recipient}! They've given {senderCount} Gift Subs in the channel!", {
+                userLogin: t,
+                recipient: n,
+                senderCount: r
+            }, "ChatLine") : Object(i.d)("{userLogin} gifted a subscription to {recipient}!", {
                 userLogin: t,
                 recipient: n
             }, "ChatLine")));
-            var t, n;
-            return a.createElement("span", null, function(e, t, n) {
-                var a = k(t);
-                return Object(i.d)("{userLogin} gifted a {subTier} sub to {recipient}!", {
+            var t, n, r;
+            return a.createElement("span", null, function(e, t, n, a) {
+                var r = k(t);
+                return 1 === a ? Object(i.d)("{userLogin} gifted a {subTier} Sub to {recipient}! It's their first Gift Sub in the channel!", {
                     userLogin: e,
-                    subTier: a,
+                    subTier: r,
+                    recipient: n
+                }, "ChatLine") : a > 1 ? Object(i.d)("{userLogin} gifted a {subTier} Sub to {recipient}! They've given {senderCount} Gift Subs in the channel!", {
+                    userLogin: e,
+                    subTier: r,
+                    recipient: n,
+                    senderCount: a
+                }, "ChatLine") : Object(i.d)("{userLogin} gifted a {subTier} Sub to {recipient}!", {
+                    userLogin: e,
+                    subTier: r,
                     recipient: n
                 }, "ChatLine")
-            }(e.userDisplayName, e.tier, e.recipient))
+            }(e.userDisplayName, e.tier, e.recipient, e.senderCount))
         }, t.d = function(e) {
             var t = e.daysLeft;
             0 === t && (t = e.hoursLeft);
@@ -20862,7 +20879,7 @@ webpackJsonp([74], {
                 }, e.stream.broadcaster.displayName)), s.createElement(O._29, {
                     color: O.J.Live,
                     display: O.P.InlineFlex,
-                    zIndex: O._55.Above
+                    zIndex: O._54.Above
                 }, s.createElement(N.a, {
                     login: e.stream.broadcaster.login
                 }))))
@@ -21039,12 +21056,12 @@ webpackJsonp([74], {
                     })))
                 }, t
             }(s.Component));
-        var I, M = Object(v.b)(function(e) {
+        var I, L = Object(v.b)(function(e) {
                 return {
                     user: Object(k.c)(e)
                 }
             })(T),
-            L = n("DtWM"),
+            M = n("DtWM"),
             R = (n("DbMg"), 500),
             x = 16 / 9;
         ! function(e) {
@@ -21078,7 +21095,7 @@ webpackJsonp([74], {
                     return s.createElement(O._29, {
                         className: y(e),
                         position: O._13.Absolute,
-                        zIndex: O._55.Above,
+                        zIndex: O._54.Above,
                         alignItems: O.c.Center,
                         attachLeft: this.props.position === I.Left,
                         attachRight: this.props.position === I.Right,
@@ -21088,7 +21105,7 @@ webpackJsonp([74], {
                         breakpointMedium: {
                             display: O.P.Flex
                         }
-                    }, s.createElement(L.a, {
+                    }, s.createElement(M.a, {
                         onResize: this.handleResize
                     }), s.createElement("div", {
                         "data-test-selector": "channel-surfing-preview-card",
@@ -21134,7 +21151,7 @@ webpackJsonp([74], {
                         flexDirection: O.R.Row,
                         position: O._13.Relative,
                         fullWidth: !0
-                    }, this.renderPreviousCard(), this.renderPreviousButton(), s.createElement(M, {
+                    }, this.renderPreviousCard(), this.renderPreviousButton(), s.createElement(L, {
                         stream: this.props.stream,
                         chatEnabled: this.props.chatEnabled
                     }), this.renderNextButton(), this.renderNextCard()))
@@ -23417,4 +23434,4 @@ webpackJsonp([74], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-f2a3178eaabe832de485a5a9f8ed5873.js.map
+//# sourceMappingURL=pages.channel-surfing-3f61c5d8f62111d342ce52f5659f08c7.js.map

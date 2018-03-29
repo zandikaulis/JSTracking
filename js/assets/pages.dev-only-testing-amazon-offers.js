@@ -113,6 +113,7 @@ webpackJsonp([56], {
                     return t.state = {
                         amendmentAccepted: !1
                     }, t.onAmendmentClick = function() {
+                        if (!t.props.data) return !1;
                         var e = {
                                 channel: t.props.channelName,
                                 channel_id: t.props.data.user && t.props.data.user.id,
@@ -130,12 +131,12 @@ webpackJsonp([56], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    var t = e.data.user && e.data.user.twitch && e.data.user.twitch.commerceAmendment[0].isSigned || !1;
+                    var t = e.data && e.data.user && e.data.user.twitch && e.data.user.twitch.commerceAmendment[0].isSigned || !1;
                     t !== this.state.amendmentAccepted && this.setState({
                         amendmentAccepted: t
                     })
                 }, t.prototype.render = function() {
-                    return this.props.data.loading ? null : s.createElement(m.a, {
+                    return !this.props.data || this.props.data.loading ? null : s.createElement(m.a, {
                         orientation: u.V.Horizontal,
                         label: Object(c.d)("Opt in to earn revenue", "AmazonRetailOffersAmendment")
                     }, s.createElement("div", {
@@ -159,12 +160,11 @@ webpackJsonp([56], {
                         }
                     }
                 })], t)
-            }(s.Component),
-            k = h,
-            g = n("oIkB"),
-            A = n("Wedf"),
-            v = "amendment-modal-accept-button",
-            b = function(e) {
+            }(s.PureComponent),
+            k = n("oIkB"),
+            g = n("Wedf"),
+            A = "amendment-modal-accept-button",
+            v = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -180,7 +180,7 @@ webpackJsonp([56], {
                                 right: .5
                             }
                         }, s.createElement(u.u, {
-                            "data-test-selector": v,
+                            "data-test-selector": A,
                             type: u.A.Text,
                             onClick: t.onAccept,
                             disabled: !t.state.hasUserScrolled
@@ -195,7 +195,7 @@ webpackJsonp([56], {
                                         if (!0 === this.props.amendmentAccepted || !this.props.setAmendmentAcceptance) return [3, 4];
                                         e.label = 1;
                                     case 1:
-                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(g.a)(f))];
+                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(k.a)(f))];
                                     case 2:
                                         return e.sent(), Object(d.d)(a.__assign({
                                             action: d.b.AcceptCommerceAddendum
@@ -291,11 +291,11 @@ webpackJsonp([56], {
                         onClick: this.onClose
                     }, Object(c.d)("Cancel", "AmazonRetailOffersAmendmentModal"))), this.renderAcceptButton(this.props.amendmentAccepted)))
                 }, t
-            }(s.Component),
-            y = Object(l.a)(A, {
+            }(s.PureComponent),
+            b = Object(l.a)(g, {
                 name: "setAmendmentAcceptance"
-            })(b),
-            O = (n("4mOb"), function(e) {
+            })(v),
+            y = (n("4mOb"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -303,7 +303,7 @@ webpackJsonp([56], {
                     return s.createElement(u._29, {
                         className: "amendment-modal__container",
                         background: u.m.Base
-                    }, s.createElement(y, {
+                    }, s.createElement(b, {
                         "data-test-selector": "amendment-modal-selector",
                         trackingParameters: this.props.trackingParameters,
                         onClose: this.props.closeModal,
@@ -311,21 +311,21 @@ webpackJsonp([56], {
                     }))
                 }, t
             }(s.Component));
-        var S = Object(i.b)(null, function(e) {
+        var O = Object(i.b)(null, function(e) {
             return Object(r.b)({
                 closeModal: o.c
             }, e)
-        })(O);
-        var N = Object(i.b)(null, function(e) {
+        })(y);
+        var S = Object(i.b)(null, function(e) {
             return Object(r.b)({
                 showAmendmentModal: function(e) {
                     var t = a.__rest(e, []);
-                    return Object(o.d)(S, t)
+                    return Object(o.d)(O, t)
                 }
             }, e)
-        })(k);
+        })(h);
         n.d(t, "a", function() {
-            return N
+            return S
         })
     },
     LHN4: function(e, t) {
@@ -1034,4 +1034,4 @@ webpackJsonp([56], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-testing-amazon-offers-6e4dbd9888982f388199b13ff98177a6.js.map
+//# sourceMappingURL=pages.dev-only-testing-amazon-offers-42269ec075aa79a9903d8fb04dc0b0ba.js.map

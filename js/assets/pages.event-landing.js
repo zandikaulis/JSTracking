@@ -1281,11 +1281,11 @@ webpackJsonp([48], {
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(d._56)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
+                    }, Object(d._55)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(d._56)(n.props)), n.renderIcon())
+                    }, Object(d._55)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -2755,7 +2755,7 @@ webpackJsonp([48], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: r._55.Above
+                        zIndex: r._54.Above
                     }, a.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
@@ -3295,7 +3295,7 @@ webpackJsonp([48], {
                     return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += Object(I.a)(this.props.offsetSeconds)), l.createElement("div", s.__assign({
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(S._56)(this.props)), l.createElement(S.B, null, l.createElement(C.a, {
+                    }, Object(S._55)(this.props)), l.createElement(S.B, null, l.createElement(C.a, {
                         to: {
                             pathname: "/videos/" + this.props.video.id,
                             search: e,
@@ -3313,7 +3313,7 @@ webpackJsonp([48], {
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: S._55.Default,
+                        zIndex: S._54.Default,
                         fontSize: S.T.Size6,
                         background: S.m.Overlay,
                         color: S.J.Overlay,
@@ -3329,7 +3329,7 @@ webpackJsonp([48], {
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: S._55.Default,
+                        zIndex: S._54.Default,
                         fontSize: S.T.Size6,
                         background: S.m.Overlay,
                         color: S.J.Overlay,
@@ -3907,7 +3907,7 @@ webpackJsonp([48], {
                     }, n
                 }
                 return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    null === this.state.expandedEvent && e.eventLeaves && e.eventLeaves.length && this.setState({
+                    this.props.eventLeaves && this.props.eventLeaves.length || null === this.state.expandedEvent && e.eventLeaves && e.eventLeaves.length && this.setState({
                         expandedEvent: e.eventLeaves[0].id
                     })
                 }, t.prototype.componentDidMount = function() {
@@ -7303,7 +7303,7 @@ webpackJsonp([48], {
                         onClick: this.onClickHandler,
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(m._56)(this.props)), o.createElement(m.B, null, o.createElement(m._6, {
+                    }, Object(m._55)(this.props)), o.createElement(m.B, null, o.createElement(m._6, {
                         fullWidth: !0
                     }, o.createElement(m.j, {
                         overflow: !0
@@ -7313,7 +7313,7 @@ webpackJsonp([48], {
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: m._55.Default,
+                        zIndex: m._54.Default,
                         fontSize: m.T.Size6,
                         background: m.m.Overlay,
                         color: m.J.Overlay,
@@ -7329,7 +7329,7 @@ webpackJsonp([48], {
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: m._55.Default,
+                        zIndex: m._54.Default,
                         fontSize: m.T.Size6,
                         background: m.m.Overlay,
                         color: m.J.Overlay,
@@ -9891,4 +9891,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-cd595957fb6e6b559e7c343edce083d8.js.map
+//# sourceMappingURL=pages.event-landing-abe44a4f2525fb65cdfe8698ee2a09e3.js.map

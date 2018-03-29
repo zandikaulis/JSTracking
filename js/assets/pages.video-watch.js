@@ -1830,11 +1830,11 @@ webpackJsonp([36, 83], {
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(c._56)(n.props)), n.renderIcon()) : a.createElement("button", r.__assign({
+                    }, Object(c._55)(n.props)), n.renderIcon()) : a.createElement("button", r.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(c._56)(n.props)), n.renderIcon())
+                    }, Object(c._55)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -3811,7 +3811,7 @@ webpackJsonp([36, 83], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: a._55.Above
+                        zIndex: a._54.Above
                     }, r.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
@@ -4485,7 +4485,7 @@ webpackJsonp([36, 83], {
                     }, Object(C.d)("Ban", "RecentRaid")), r.createElement(N._6, {
                         key: "recent-raids-layout-" + this.props.raiderUserID,
                         className: "recent-raids-item__hover-content",
-                        zIndex: N._55.Above,
+                        zIndex: N._54.Above,
                         "data-a-target": "recent-raids-item-hover"
                     }, this.props.slideInContent, e)
                 }, t = i.__decorate([Object(E.a)(z, {
@@ -9177,7 +9177,7 @@ webpackJsonp([36, 83], {
                         onClick: this.onClickHandler,
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(m._56)(this.props)), o.createElement(m.B, null, o.createElement(m._6, {
+                    }, Object(m._55)(this.props)), o.createElement(m.B, null, o.createElement(m._6, {
                         fullWidth: !0
                     }, o.createElement(m.j, {
                         overflow: !0
@@ -9187,7 +9187,7 @@ webpackJsonp([36, 83], {
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: m._55.Default,
+                        zIndex: m._54.Default,
                         fontSize: m.T.Size6,
                         background: m.m.Overlay,
                         color: m.J.Overlay,
@@ -9203,7 +9203,7 @@ webpackJsonp([36, 83], {
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: m._55.Default,
+                        zIndex: m._54.Default,
                         fontSize: m.T.Size6,
                         background: m.m.Overlay,
                         color: m.J.Overlay,
@@ -10236,7 +10236,7 @@ webpackJsonp([36, 83], {
                     ellipsis: !0
                 }, r.createElement(a.a, i.__assign({
                     to: e.linkTo
-                }, Object(o._56)(e), {
+                }, Object(o._55)(e), {
                     target: e.target
                 }), e.title))))
             };
@@ -11351,19 +11351,35 @@ webpackJsonp([36, 83], {
             if (e.isPrime) return i.createElement("span", null, y(e.userLogin, b(e.channel)));
             return i.createElement("span", null, _(e.userLogin, e.tier))
         }, t.r = function(e) {
-            if ("custom" === e.tier) return i.createElement("span", null, (t = e.userDisplayName, n = e.recipient, Object(r.d)("{userLogin} gifted a subscription to {recipient}!", {
+            if ("custom" === e.tier) return i.createElement("span", null, (t = e.userDisplayName, n = e.recipient, 1 === (a = e.senderCount) ? Object(r.d)("{userLogin} gifted a Sub to {recipient}! It's their first Gift Sub in the channel!", {
+                userLogin: t,
+                recipient: n
+            }, "ChatLine") : a > 1 ? Object(r.d)("{userLogin} gifted a Sub to {recipient}! They've given {senderCount} Gift Subs in the channel!", {
+                userLogin: t,
+                recipient: n,
+                senderCount: a
+            }, "ChatLine") : Object(r.d)("{userLogin} gifted a subscription to {recipient}!", {
                 userLogin: t,
                 recipient: n
             }, "ChatLine")));
-            var t, n;
-            return i.createElement("span", null, function(e, t, n) {
-                var i = k(t);
-                return Object(r.d)("{userLogin} gifted a {subTier} sub to {recipient}!", {
+            var t, n, a;
+            return i.createElement("span", null, function(e, t, n, i) {
+                var a = k(t);
+                return 1 === i ? Object(r.d)("{userLogin} gifted a {subTier} Sub to {recipient}! It's their first Gift Sub in the channel!", {
                     userLogin: e,
-                    subTier: i,
+                    subTier: a,
+                    recipient: n
+                }, "ChatLine") : i > 1 ? Object(r.d)("{userLogin} gifted a {subTier} Sub to {recipient}! They've given {senderCount} Gift Subs in the channel!", {
+                    userLogin: e,
+                    subTier: a,
+                    recipient: n,
+                    senderCount: i
+                }, "ChatLine") : Object(r.d)("{userLogin} gifted a {subTier} Sub to {recipient}!", {
+                    userLogin: e,
+                    subTier: a,
                     recipient: n
                 }, "ChatLine")
-            }(e.userDisplayName, e.tier, e.recipient))
+            }(e.userDisplayName, e.tier, e.recipient, e.senderCount))
         }, t.d = function(e) {
             var t = e.daysLeft;
             0 === t && (t = e.hoursLeft);
@@ -14661,7 +14677,7 @@ webpackJsonp([36, 83], {
                             x: 2
                         },
                         position: yt._13.Absolute,
-                        zIndex: yt._55.Above
+                        zIndex: yt._54.Above
                     }, kt.createElement(yt.O, {
                         type: yt._43.Span
                     }, this.props.message, e), kt.createElement(yt._6, {
@@ -20452,4 +20468,4 @@ webpackJsonp([36, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-0c2b2a38c6e470e3b6ee767ba382b70f.js.map
+//# sourceMappingURL=pages.video-watch-92943311ac82baef9ac8eeb9f79668f7.js.map

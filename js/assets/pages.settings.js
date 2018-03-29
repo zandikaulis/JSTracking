@@ -1470,7 +1470,7 @@ webpackJsonp([47], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: a._55.Above
+                        zIndex: a._54.Above
                     }, r.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
@@ -3422,7 +3422,8 @@ webpackJsonp([47], {
                     connected: !1,
                     region: Ve.NorthAmerica,
                     summonerName: "",
-                    error: !1
+                    error: !1,
+                    working: !0
                 }, t.logger = d.j.withCategory("LeagueOfLegendsConnection"), t.getData = function() {
                     return c.__awaiter(t, void 0, void 0, function() {
                         var e, t, n;
@@ -3434,18 +3435,22 @@ webpackJsonp([47], {
                                         user_id: this.props.userID
                                     }), t = "/api/lol/summonername?" + e, i.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, ie.a.get(t)];
+                                    return i.trys.push([1, 3, 4, 5]), [4, ie.a.get(t)];
                                 case 2:
                                     return (n = i.sent()).error || n.requestError ? this.setState({
                                         connected: !1
                                     }) : n.body && this.setState({
                                         connected: !0
-                                    }), [3, 4];
+                                    }), [3, 5];
                                 case 3:
                                     return i.sent(), this.setState({
                                         connected: !1
-                                    }), [3, 4];
+                                    }), [3, 5];
                                 case 4:
+                                    return this.setState({
+                                        working: !1
+                                    }), [7];
+                                case 5:
                                     return [2]
                             }
                         })
@@ -3458,13 +3463,14 @@ webpackJsonp([47], {
                                 case 0:
                                     if (!this.props.userID) return this.logger.info("Tried to disconnect from League of Legends but user is not logged in."), [2];
                                     this.setState({
-                                        error: !1
+                                        error: !1,
+                                        working: !0
                                     }), e = We.stringify({
                                         user_id: this.props.userID,
                                         client_id: d.a.authClientID
                                     }), t = "/api/lol/delete?" + e, r.label = 1;
                                 case 1:
-                                    return r.trys.push([1, 3, , 4]), [4, ie.a.get(t)];
+                                    return r.trys.push([1, 3, 4, 5]), [4, ie.a.get(t)];
                                 case 2:
                                     return (n = r.sent()).error || n.requestError ? (this.logger.warn("Failed to disconnect League of Legends account", {
                                         error: n.error,
@@ -3473,12 +3479,16 @@ webpackJsonp([47], {
                                         error: !0
                                     })) : this.setState({
                                         connected: !1
-                                    }), [3, 4];
+                                    }), [3, 5];
                                 case 3:
                                     return i = r.sent(), this.logger.warn("Failed to disconnect League of Legends account", i), this.setState({
                                         error: !0
-                                    }), [3, 4];
+                                    }), [3, 5];
                                 case 4:
+                                    return this.setState({
+                                        working: !1
+                                    }), [7];
+                                case 5:
                                     return [2]
                             }
                         })
@@ -3491,7 +3501,8 @@ webpackJsonp([47], {
                                 case 0:
                                     if (!this.props.userID) return this.logger.info("Tried to connect to League of Legends but user is not logged in."), [2];
                                     this.setState({
-                                        error: !1
+                                        error: !1,
+                                        working: !0
                                     }), e = We.stringify({
                                         user_id: this.props.userID,
                                         client_id: d.a.authClientID,
@@ -3499,7 +3510,7 @@ webpackJsonp([47], {
                                         region: this.state.region
                                     }), t = "/api/lol/verify?" + e, r.label = 1;
                                 case 1:
-                                    return r.trys.push([1, 3, , 4]), [4, ie.a.get(t)];
+                                    return r.trys.push([1, 3, 4, 5]), [4, ie.a.get(t)];
                                 case 2:
                                     return n = r.sent(), n.error || n.requestError || !n.body || 0 === n.body.summoner_id || "" === n.body.summoner_name || "" === n.body.twitch_id ? (this.logger.warn("Failed to connect League of Legends account.", {
                                         error: n.error,
@@ -3508,12 +3519,16 @@ webpackJsonp([47], {
                                         error: !0
                                     })) : this.setState({
                                         connected: !0
-                                    }), [3, 4];
+                                    }), [3, 5];
                                 case 3:
                                     return i = r.sent(), this.logger.warn("Failed to connect League of Legends account.", i), this.setState({
                                         error: !0
-                                    }), [3, 4];
+                                    }), [3, 5];
                                 case 4:
+                                    return this.setState({
+                                        working: !1
+                                    }), [7];
+                                case 5:
                                     return [2]
                             }
                         })
@@ -3544,7 +3559,8 @@ webpackJsonp([47], {
                     connected: this.state.connected,
                     onClick: this.state.connected ? this.disconnect : this.connect,
                     footer: n,
-                    error: this.state.error
+                    error: this.state.error,
+                    working: this.state.working
                 })
             }, t.prototype.renderBody = function() {
                 var e = [{
@@ -3631,7 +3647,8 @@ webpackJsonp([47], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        error: !1
+                        error: !1,
+                        working: !1
                     }, t.logger = d.j.withCategory("PSNConnection"), t.handleClick = function() {
                         return c.__awaiter(t, void 0, void 0, function() {
                             var e, t;
@@ -3639,21 +3656,26 @@ webpackJsonp([47], {
                                 switch (n.label) {
                                     case 0:
                                         this.setState({
-                                            error: !1
+                                            error: !1,
+                                            working: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, Promise.all([ie.a.post("/api/platform/psn/disconnect"), ie.a.post("/api/platform/psn_dev/disconnect"), ie.a.post("/api/platform/psn_cert/disconnect")])];
+                                        return n.trys.push([1, 3, 4, 5]), [4, Promise.all([ie.a.post("/api/platform/psn/disconnect"), ie.a.post("/api/platform/psn_dev/disconnect"), ie.a.post("/api/platform/psn_cert/disconnect")])];
                                     case 2:
                                         return e = n.sent(), e.every(function(e) {
                                             return !(!e.error && !e.requestError)
                                         }) ? (this.logger.warn("Failed to disconnect from PSN"), this.setState({
                                             error: !0
-                                        })) : this.props.data && this.props.data.refetch(), [3, 4];
+                                        })) : this.props.data && this.props.data.refetch(), [3, 5];
                                     case 3:
                                         return t = n.sent(), this.logger.warn("Failed to disconnect from PSN", t), this.setState({
                                             error: !0
-                                        }), [3, 4];
+                                        }), [3, 5];
                                     case 4:
+                                        return this.setState({
+                                            working: !1
+                                        }), [7];
+                                    case 5:
                                         return [2]
                                 }
                             })
@@ -3672,7 +3694,8 @@ webpackJsonp([47], {
                         subtitle: t,
                         connected: !0,
                         onClick: this.handleClick,
-                        error: this.state.error
+                        error: this.state.error,
+                        working: this.state.working
                     })
                 }, t.prototype.isUserConnected = function() {
                     return !!(this.props.data.currentUser && this.props.data.currentUser.ssoLinks && this.props.data.currentUser.ssoLinks[0] && this.props.data.currentUser.ssoLinks[0].app && this.props.data.currentUser.ssoLinks[0].ssoID)
@@ -3761,7 +3784,8 @@ webpackJsonp([47], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        error: !1
+                        error: !1,
+                        working: !1
                     }, t.logger = d.j.withCategory("XboxOneConnection"), t.handleClick = function() {
                         return c.__awaiter(t, void 0, void 0, function() {
                             var e, t, n, i, r, a;
@@ -3769,10 +3793,11 @@ webpackJsonp([47], {
                                 switch (o.label) {
                                     case 0:
                                         this.setState({
-                                            error: !1
+                                            error: !1,
+                                            working: !0
                                         }), o.label = 1;
                                     case 1:
-                                        return o.trys.push([1, 3, , 4]), e = We.stringify({
+                                        return o.trys.push([1, 3, 4, 5]), e = We.stringify({
                                             app: "xb1"
                                         }), t = "/api/xbox/disconnect?" + e, [4, ie.a.post(t)];
                                     case 2:
@@ -3781,12 +3806,16 @@ webpackJsonp([47], {
                                             requestError: r
                                         }), this.setState({
                                             error: !0
-                                        })) : this.props.data && this.props.data.refetch(), [3, 4];
+                                        })) : this.props.data && this.props.data.refetch(), [3, 5];
                                     case 3:
                                         return a = o.sent(), this.logger.warn("Failed to disconnect from Xbox One", a), this.setState({
                                             error: !0
-                                        }), [3, 4];
+                                        }), [3, 5];
                                     case 4:
+                                        return this.setState({
+                                            working: !1
+                                        }), [7];
+                                    case 5:
                                         return [2]
                                 }
                             })
@@ -3805,7 +3834,8 @@ webpackJsonp([47], {
                         subtitle: t,
                         connected: !0,
                         onClick: this.handleClick,
-                        error: this.state.error
+                        error: this.state.error,
+                        working: this.state.working
                     })
                 }, t.prototype.isUserConnected = function() {
                     return !!(this.props.data && this.props.data.currentUser && this.props.data.currentUser.ssoLinks && this.props.data.currentUser.ssoLinks[0] && this.props.data.currentUser.ssoLinks[0].app && this.props.data.currentUser.ssoLinks[0].ssoID)
@@ -10129,4 +10159,4 @@ webpackJsonp([47], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-f3ec97dbe6e7c5e5ff8a06abce490ac5.js.map
+//# sourceMappingURL=pages.settings-c2c2c647028705b411e7c9a60ceb60c5.js.map

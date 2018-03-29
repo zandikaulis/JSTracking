@@ -398,7 +398,7 @@ webpackJsonp([76, 77], {
                         }, r.createElement(f._6, {
                             padding: .5,
                             position: f._13.Absolute,
-                            zIndex: f._55.Above
+                            zIndex: f._54.Above
                         }, r.createElement(c.a, {
                             type: u.a.Live
                         })), r.createElement(v, {
@@ -832,7 +832,7 @@ webpackJsonp([76, 77], {
                     onMouseEnter: this.onMouseEnter,
                     onMouseLeave: this.onMouseLeave,
                     onClick: this.onClick
-                }, Object(d._56)(this.props)), r.createElement(d.B, {
+                }, Object(d._55)(this.props)), r.createElement(d.B, {
                     key: this.props.title
                 }, r.createElement(d._6, {
                     position: d._13.Relative
@@ -1045,7 +1045,7 @@ webpackJsonp([76, 77], {
                     return r.createElement("div", a.__assign({
                         className: e,
                         "data-test-selector": "live-channel-preview-card"
-                    }, Object(p._56)(this.props)), r.createElement(s.a, a.__assign({}, this.props), r.createElement(p.j, {
+                    }, Object(p._55)(this.props)), r.createElement(s.a, a.__assign({}, this.props), r.createElement(p.j, {
                         ratio: p.k.Aspect16x9
                     }, this.props.videoPlayer)))
                 }, t
@@ -1637,7 +1637,7 @@ webpackJsonp([76, 77], {
                         margin: .5,
                         padding: .5,
                         position: p._13.Absolute,
-                        zIndex: p._55.Above
+                        zIndex: p._54.Above
                     }, r.createElement(p._8, {
                         fillContent: !0,
                         inheritColor: !0,
@@ -3770,4 +3770,4 @@ webpackJsonp([76, 77], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-ea67de3cfbb0e6705fdd0051d3c6591e.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-42968719f98a1dd57e68d724c6a6beec.js.map

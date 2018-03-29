@@ -1231,7 +1231,7 @@ webpackJsonp([51], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: r._55.Above
+                        zIndex: r._54.Above
                     }, a.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
@@ -5590,7 +5590,7 @@ webpackJsonp([51], {
                     }, "ChannelCollections");
                     return a.createElement(v.B, i.__assign({
                         key: this.props.title
-                    }, Object(v._56)(this.props)), a.createElement(v._0, {
+                    }, Object(v._55)(this.props)), a.createElement(v._0, {
                         position: v._13.Relative
                     }, a.createElement(g.a, {
                         to: {
@@ -5906,4 +5906,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-3ce9d59909fa115d5b6a05578d176b69.js.map
+//# sourceMappingURL=pages.channel-collections-0499f78f73dcd977d8d1741a988b2d93.js.map
