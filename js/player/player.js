@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".926d15ec37294fc22fce.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4e30fcc6c8518cbd7015.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -1564,7 +1564,7 @@
             i = n.n(r),
             a = n(48),
             o = n(82),
-            s = n(29),
+            s = n(31),
             u = n(27),
             c = n(171),
             l = n(173),
@@ -2070,7 +2070,7 @@
         });
         var o = n(5),
             s = n.n(o),
-            u = n(30),
+            u = n(29),
             c = n.n(u),
             l = n(229),
             d = n(10),
@@ -2200,7 +2200,7 @@
         });
         var o = n(5),
             s = n.n(o),
-            u = n(30),
+            u = n(29),
             c = n.n(u),
             l = n(229),
             d = n(10),
@@ -2733,7 +2733,7 @@
             }(),
             T = n(12),
             x = n(10),
-            R = n(31),
+            R = n(30),
             j = n(7),
             I = n.n(j),
             A = n(46),
@@ -3257,12 +3257,12 @@
         }), n.d(t, "o", function() {
             return Z
         }), t.w = r, t.u = i, t.I = a, t.J = o, t.D = s, t.y = u, t.K = c, t.E = l, t.H = d, t.G = f, t.v = p, t.x = h, t.F = m, t.A = y, t.z = v, t.C = g, t.B = b;
-        var S = n(31),
+        var S = n(30),
             O = n(27),
             P = n(39),
             C = n(6),
             T = n(86),
-            x = n(30),
+            x = n(29),
             R = n.n(x),
             j = n(38),
             I = (n.n(j), n(17)),
@@ -3722,114 +3722,6 @@
             l = "set theatre mode",
             d = "toggle theatre mode"
     }, function(e, t, n) {
-        "use strict";
-        n.d(t, "p", function() {
-            return r
-        }), n.d(t, "f", function() {
-            return i
-        }), n.d(t, "o", function() {
-            return a
-        }), n.d(t, "e", function() {
-            return o
-        }), n.d(t, "F", function() {
-            return s
-        }), n.d(t, "g", function() {
-            return u
-        }), n.d(t, "a", function() {
-            return c
-        }), n.d(t, "h", function() {
-            return l
-        }), n.d(t, "B", function() {
-            return d
-        }), n.d(t, "b", function() {
-            return f
-        }), n.d(t, "v", function() {
-            return p
-        }), n.d(t, "E", function() {
-            return h
-        }), n.d(t, "c", function() {
-            return m
-        }), n.d(t, "u", function() {
-            return y
-        }), n.d(t, "I", function() {
-            return v
-        }), n.d(t, "z", function() {
-            return g
-        }), n.d(t, "G", function() {
-            return b
-        }), n.d(t, "H", function() {
-            return _
-        }), n.d(t, "s", function() {
-            return w
-        }), n.d(t, "l", function() {
-            return k
-        }), n.d(t, "k", function() {
-            return E
-        }), n.d(t, "t", function() {
-            return S
-        }), n.d(t, "d", function() {
-            return O
-        }), n.d(t, "A", function() {
-            return P
-        }), n.d(t, "j", function() {
-            return C
-        }), n.d(t, "i", function() {
-            return T
-        }), n.d(t, "C", function() {
-            return x
-        }), n.d(t, "D", function() {
-            return R
-        }), n.d(t, "y", function() {
-            return j
-        }), n.d(t, "x", function() {
-            return I
-        }), n.d(t, "n", function() {
-            return A
-        }), n.d(t, "w", function() {
-            return N
-        }), n.d(t, "r", function() {
-            return L
-        }), n.d(t, "m", function() {
-            return M
-        }), n.d(t, "q", function() {
-            return D
-        });
-        var r = "init",
-            i = "contentShowing",
-            a = "playbackStatistics",
-            o = "chansubRequired",
-            s = "videoFailure",
-            u = "videoFormats",
-            c = "abs_stream_format_change",
-            l = "videoFormatChanged",
-            d = "timeChange",
-            f = "bufferChange",
-            p = "segmentchange",
-            h = "usherFail",
-            m = "captions",
-            y = "seekfailed",
-            v = "viewerschange",
-            g = "streamLoaded",
-            b = "videoLoaded",
-            _ = "videoPaused",
-            w = "qualitychange",
-            k = "online",
-            E = "offline",
-            S = "restricted",
-            O = "castingchange",
-            P = "theatrechange",
-            C = "midrollrequested",
-            T = "manifestExtraInfo",
-            x = "transitionToCollectionVod",
-            R = "transitionToRecommendedVod",
-            j = "stitchedadstart",
-            I = "stitchedadend",
-            A = "persistentPlayerEnableToggle",
-            N = "statsupdate",
-            L = "prompt login modal",
-            M = "openStream",
-            D = "ready"
-    }, function(e, t, n) {
         e.exports = n(323)
     }, function(e, t, n) {
         "use strict";
@@ -3943,6 +3835,114 @@
             c = new s(i("sessionStorage")),
             l = new s(i("localStorage"));
         new s(new u)
+    }, function(e, t, n) {
+        "use strict";
+        n.d(t, "p", function() {
+            return r
+        }), n.d(t, "f", function() {
+            return i
+        }), n.d(t, "o", function() {
+            return a
+        }), n.d(t, "e", function() {
+            return o
+        }), n.d(t, "F", function() {
+            return s
+        }), n.d(t, "g", function() {
+            return u
+        }), n.d(t, "a", function() {
+            return c
+        }), n.d(t, "h", function() {
+            return l
+        }), n.d(t, "B", function() {
+            return d
+        }), n.d(t, "b", function() {
+            return f
+        }), n.d(t, "v", function() {
+            return p
+        }), n.d(t, "E", function() {
+            return h
+        }), n.d(t, "c", function() {
+            return m
+        }), n.d(t, "u", function() {
+            return y
+        }), n.d(t, "I", function() {
+            return v
+        }), n.d(t, "z", function() {
+            return g
+        }), n.d(t, "G", function() {
+            return b
+        }), n.d(t, "H", function() {
+            return _
+        }), n.d(t, "s", function() {
+            return w
+        }), n.d(t, "l", function() {
+            return k
+        }), n.d(t, "k", function() {
+            return E
+        }), n.d(t, "t", function() {
+            return S
+        }), n.d(t, "d", function() {
+            return O
+        }), n.d(t, "A", function() {
+            return P
+        }), n.d(t, "j", function() {
+            return C
+        }), n.d(t, "i", function() {
+            return T
+        }), n.d(t, "C", function() {
+            return x
+        }), n.d(t, "D", function() {
+            return R
+        }), n.d(t, "y", function() {
+            return j
+        }), n.d(t, "x", function() {
+            return I
+        }), n.d(t, "n", function() {
+            return A
+        }), n.d(t, "w", function() {
+            return N
+        }), n.d(t, "r", function() {
+            return L
+        }), n.d(t, "m", function() {
+            return M
+        }), n.d(t, "q", function() {
+            return D
+        });
+        var r = "init",
+            i = "contentShowing",
+            a = "playbackStatistics",
+            o = "chansubRequired",
+            s = "videoFailure",
+            u = "videoFormats",
+            c = "abs_stream_format_change",
+            l = "videoFormatChanged",
+            d = "timeChange",
+            f = "bufferChange",
+            p = "segmentchange",
+            h = "usherFail",
+            m = "captions",
+            y = "seekfailed",
+            v = "viewerschange",
+            g = "streamLoaded",
+            b = "videoLoaded",
+            _ = "videoPaused",
+            w = "qualitychange",
+            k = "online",
+            E = "offline",
+            S = "restricted",
+            O = "castingchange",
+            P = "theatrechange",
+            C = "midrollrequested",
+            T = "manifestExtraInfo",
+            x = "transitionToCollectionVod",
+            R = "transitionToRecommendedVod",
+            j = "stitchedadstart",
+            I = "stitchedadend",
+            A = "persistentPlayerEnableToggle",
+            N = "statsupdate",
+            L = "prompt login modal",
+            M = "openStream",
+            D = "ready"
     }, function(e, t, n) {
         "use strict";
 
@@ -4158,13 +4158,13 @@
         }), n.d(t, "f", function() {
             return S
         }), t.k = r, t.g = i, t.h = a, t.i = o, t.j = s;
-        var c = n(30),
+        var c = n(29),
             l = n.n(c),
             d = n(477),
             f = n.n(d),
             p = n(269),
             h = n(91),
-            m = n(31),
+            m = n(30),
             y = "captionsEnabled",
             v = "captionsPreset",
             g = "captionsStyle",
@@ -4491,7 +4491,7 @@
         }), n.d(t, "i", function() {
             return R
         }), t.m = i, t.r = a, t.k = o, t.o = c, t.n = l, t.q = d, t.s = f, t.p = y, t.l = v;
-        var g = n(31),
+        var g = n(30),
             b = n(85),
             _ = n(260),
             w = "request collection",
@@ -5075,7 +5075,7 @@
         var d = n(7),
             f = n.n(d),
             p = n(19),
-            h = n(31),
+            h = n(30),
             m = n(44),
             y = n.n(m),
             v = "select quality",
@@ -5945,7 +5945,7 @@
         }
         var y = n(5),
             v = n.n(y),
-            g = n(30),
+            g = n(29),
             b = n.n(g),
             _ = n(23),
             w = n.n(_),
@@ -5957,7 +5957,7 @@
             C = n.n(P),
             T = n(164),
             x = n(293),
-            R = n(31),
+            R = n(30),
             j = n(38);
         r.prototype._trackEvent = function(e) {
             (new Image).src = e
@@ -5976,7 +5976,7 @@
         };
         var I = n(12),
             A = n(437),
-            N = n(29),
+            N = n(31),
             L = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -7003,7 +7003,7 @@
         var i = n(41),
             a = n.n(i),
             o = n(45),
-            s = n(29),
+            s = n(31),
             u = n(27),
             c = n(12),
             l = n(16),
@@ -7551,7 +7551,7 @@
         }), n.d(t, "b", function() {
             return I
         });
-        var a = n(29),
+        var a = n(31),
             o = n(63),
             s = n(62),
             u = n(27),
@@ -10665,7 +10665,7 @@
         }), n.d(t, "i", function() {
             return b
         });
-        var i = n(30),
+        var i = n(29),
             a = n.n(i),
             o = {
                 fontSize: 20,
@@ -11357,7 +11357,7 @@
         var y = n(10),
             v = n(265),
             g = n(27),
-            b = n(29),
+            b = n(31),
             _ = n(186),
             w = n(139),
             k = n(12),
@@ -13235,7 +13235,7 @@
             s = n(41),
             u = n.n(s),
             c = n(27),
-            l = n(29),
+            l = n(31),
             d = n(52),
             f = n(57),
             p = "loadedmetadata",
@@ -13294,7 +13294,7 @@
         }), n.d(t, "b", function() {
             return c
         }), t.e = r, t.d = i, t.c = a;
-        var o = n(31),
+        var o = n(30),
             s = n(63),
             u = "initialize ui settings",
             c = "set persistence"
@@ -22940,7 +22940,7 @@
             };
         r.propTypes = S;
         var O = Object(m.c)()(r),
-            P = n(31),
+            P = n(30),
             C = n(7),
             T = n.n(C),
             x = n(15),
@@ -23620,7 +23620,7 @@
             }),
             D = Object.freeze((g = {}, r(g, M.JANUARY, 31), r(g, M.FEBRUARY, 28), r(g, M.MARCH, 31), r(g, M.APRIL, 30), r(g, M.MAY, 31), r(g, M.JUNE, 30), r(g, M.JULY, 31), r(g, M.AUGUST, 31), r(g, M.SEPTEMBER, 30), r(g, M.OCTOBER, 31), r(g, M.NOVEMBER, 30), r(g, M.DECEMBER, 31), g)),
             q = Object.freeze(x()({}, D, r({}, M.FEBRUARY, 29))),
-            B = n(31),
+            B = n(30),
             U = n(14),
             F = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -24441,7 +24441,7 @@
         n.d(t, "a", function() {
             return l
         }), t.b = r;
-        var i = n(30),
+        var i = n(29),
             a = n.n(i),
             o = n(91),
             s = n(34),
@@ -30857,7 +30857,7 @@
             p = n.n(f),
             h = n(2),
             m = n(91),
-            y = n(30),
+            y = n(29),
             v = n.n(y),
             g = n(188),
             b = n.n(g),
@@ -31006,7 +31006,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.29-161009+60ca1e3408c1de80d26bbf3299beadfbdbbd7992",
+                    app_version: "2018.03.29-212836+2b585c7d9a08c532081ae1704f2cf5bd4b6e18db",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
@@ -36615,7 +36615,7 @@
             Oo = n(209),
             Po = n(62),
             Co = n(63),
-            To = n(30),
+            To = n(29),
             xo = n.n(To),
             Ro = n(9),
             jo = n(164),
@@ -36772,7 +36772,7 @@
             Os = n(27),
             Ps = n(186),
             Cs = n(139),
-            Ts = n(29),
+            Ts = n(31),
             xs = n(58),
             Rs = n(52),
             js = n(57),
@@ -37005,7 +37005,7 @@
         var Ns, Ls, Ms = n(475),
             Ds = n.n(Ms),
             qs = n(140),
-            Bs = n(31),
+            Bs = n(30),
             Us = n(12),
             Fs = n(11),
             Vs = n(87),
@@ -44913,9 +44913,7 @@
                         o.dispatch(Object(zs.g)(s)), o.dispatch(Object(Wu.w)()), o.dispatch(Object(Ql.e)());
                         var u = new $l.a(i, a, o, r),
                             c = new li(i, a, o, r);
-                        a.setAttribute("data-initializing", !0), i.addEventListener(Ts.p, function() {
-                            a.setAttribute("data-initializing", !1)
-                        }), a.addEventListener("wheel", function(e) {
+                        a.addEventListener("wheel", function(e) {
                             o.dispatch(Object(Bo.h)(e))
                         }), t.hookUpForm(a), this.setState({
                             legacyUI: [u, c]

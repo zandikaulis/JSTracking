@@ -23,7 +23,7 @@ window.__twilightSettings = {
     "crate_snowman_launch": "off",
     "crate_trickster_launch": "off",
     "env_test": "This is a test in Production",
-    "esport_channel_page_whitelist": ["137512364", "188863650", "188864445", "27697171-staff", "180833069-staff", "104874624-staff"],
+    "esport_channel_page_whitelist": ["137512364", "188863650", "188864445", "27697171", "180833069", "104874624"],
     "esport_insider_pass_secondary_channel": "overwatchleague",
     "esport_insider_pass_show_as_new": true,
     "esport_insider_pass_whitelist": ["27697171-staff", "180833069-staff", "104874624-staff"],
@@ -164,13 +164,13 @@ window.__twilightSettings = {
         },
         "1f57c754-ceb2-40e4-8d49-c51cfc007f14": {
             "name": "TWILIGHT_SUB_CHECKOUT",
-            "v": 3092,
+            "v": 3411,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 99,
                 "value": "no"
             }]
         },
