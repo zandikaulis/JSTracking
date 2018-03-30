@@ -6091,18 +6091,12 @@ webpackJsonp([46], {
                         closeEventSent: !0
                     }))
                 }, t.trackWizardAction = function(e, n, i, a) {
-                    var r = null;
-                    if (t.props.reportContext.extra) try {
-                        r = JSON.parse(t.props.reportContext.extra).channel_id
-                    } catch (e) {
-                        r = null
-                    }
                     s.o.tracking.track(h.SpadeEventType.ReportWizardFlowAction, {
                         ui_context: t.props.reportContext.contentType,
                         target_user_id: t.props.reportContext.targetUserID,
                         report_sent: t.state.submitStatus === $.b.Success,
                         modal_type: "wizard_v1",
-                        channel_id: r,
+                        extra_user_id: t.props.reportContext.additionalTrackingID,
                         action: e,
                         close_type: a,
                         report_session_id: t.reportID,
@@ -6110,17 +6104,11 @@ webpackJsonp([46], {
                         navigated_to: i
                     })
                 }, t.trackAction = function(e) {
-                    var n = null;
-                    if (t.props.reportContext.extra) try {
-                        n = JSON.parse(t.props.reportContext.extra).channel_id
-                    } catch (e) {
-                        n = null
-                    }
                     s.o.tracking.track(h.SpadeEventType.ReportFlowAction, {
                         ui_context: t.props.reportContext.contentType,
                         target_user_id: t.props.reportContext.targetUserID,
                         report_sent: t.state.submitStatus === $.b.Success,
-                        channel_id: n,
+                        extra_user_id: t.props.reportContext.additionalTrackingID,
                         action: e,
                         report_session_id: t.reportID
                     })
@@ -13529,4 +13517,4 @@ webpackJsonp([46], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-5b88e0f5a85f15223d04018b8f27ffeb.js.map
+//# sourceMappingURL=sites.clips.pages.view-21e90fbb6a83c756faa98fcea0f226d8.js.map

@@ -1344,30 +1344,14 @@ webpackJsonp([52, 77], {
             return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                 !e.categoryChange || this.props.categoryChange && this.props.categoryChange.timestampMs === e.categoryChange.timestampMs || !e.categoryChange.category.games.includes(this.props.title) || this.isFollowing() !== e.categoryChange.shouldFollow && this.onClick()
             }, t.prototype.render = function() {
-                var e;
-                return this.state.inProgress ? e = a.createElement("div", {
-                    className: "follow-game-card__overlay"
-                }, a.createElement(c._8, {
-                    fillContent: !0
-                })) : this.state.hovered ? e = a.createElement("div", {
-                    className: "follow-game-card__overlay"
-                }, a.createElement(c._19, {
-                    width: 50,
-                    height: 50,
-                    asset: this.isFollowing() ? c._20.Unheart : c._20.Heart
-                })) : this.isFollowing() && (e = a.createElement("div", {
-                    className: "follow-game-card__overlay follow-game-card__overlay--followed",
-                    "data-a-target": "follow-game-card--followed"
-                }, a.createElement(c._19, {
-                    width: 50,
-                    height: 50,
-                    asset: c._20.Heart
-                }))), a.createElement(c._0, {
+                return a.createElement(c._0, {
+                    position: c._13.Relative,
                     margin: {
                         bottom: 1
                     }
                 }, a.createElement("div", r.__assign({
                     className: "follow-game-card",
+                    "data-test-selector": "follow-game-card",
                     onMouseEnter: this.onMouseEnter,
                     onMouseLeave: this.onMouseLeave,
                     onClick: this.onClick
@@ -1375,7 +1359,7 @@ webpackJsonp([52, 77], {
                     key: this.props.title
                 }, a.createElement(c._6, {
                     position: c._13.Relative
-                }, e, a.createElement(c.D, {
+                }, this.renderOverlay(), a.createElement(c.D, {
                     aspect: c.k.Aspect3x4,
                     alt: this.props.imageAlt,
                     src: this.props.imageSrc
@@ -1391,6 +1375,33 @@ webpackJsonp([52, 77], {
                     color: c.J.Alt,
                     fontSize: c.T.Size6
                 }, this.props.info))))))
+            }, t.prototype.renderOverlay = function() {
+                var e, t = this.isFollowing();
+                return this.state.inProgress ? e = a.createElement(c._8, {
+                    delay: 0
+                }) : this.state.hovered ? e = a.createElement(c._19, {
+                    width: 50,
+                    height: 50,
+                    asset: t ? c._20.Unheart : c._20.Heart
+                }) : t && (e = a.createElement(c._19, {
+                    width: 50,
+                    height: 50,
+                    asset: c._20.Heart
+                })), e ? a.createElement(c._29, {
+                    className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
+                    background: c.m.Overlay,
+                    color: c.J.Overlay,
+                    "data-a-target": t ? "follow-game-card--followed" : "",
+                    display: c.P.Flex,
+                    alignItems: c.c.Center,
+                    justifyContent: c._5.Center,
+                    position: c._13.Absolute,
+                    zIndex: c._54.Above,
+                    attachBottom: !0,
+                    attachTop: !0,
+                    attachLeft: !0,
+                    attachRight: !0
+                }, e) : null
             }, t.prototype.followGame = function(e) {
                 return r.__awaiter(this, void 0, void 0, function() {
                     var t, n = this;
@@ -5130,4 +5141,4 @@ webpackJsonp([52, 77], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-e5c867ee4d8b96b935a8b5888ad33b54.js.map
+//# sourceMappingURL=pages.onboarding-67336333d60c60e1194da4261c20f699.js.map

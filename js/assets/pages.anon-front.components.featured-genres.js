@@ -683,30 +683,14 @@ webpackJsonp([77], {
             return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                 !e.categoryChange || this.props.categoryChange && this.props.categoryChange.timestampMs === e.categoryChange.timestampMs || !e.categoryChange.category.games.includes(this.props.title) || this.isFollowing() !== e.categoryChange.shouldFollow && this.onClick()
             }, t.prototype.render = function() {
-                var e;
-                return this.state.inProgress ? e = r.createElement("div", {
-                    className: "follow-game-card__overlay"
-                }, r.createElement(m._8, {
-                    fillContent: !0
-                })) : this.state.hovered ? e = r.createElement("div", {
-                    className: "follow-game-card__overlay"
-                }, r.createElement(m._19, {
-                    width: 50,
-                    height: 50,
-                    asset: this.isFollowing() ? m._20.Unheart : m._20.Heart
-                })) : this.isFollowing() && (e = r.createElement("div", {
-                    className: "follow-game-card__overlay follow-game-card__overlay--followed",
-                    "data-a-target": "follow-game-card--followed"
-                }, r.createElement(m._19, {
-                    width: 50,
-                    height: 50,
-                    asset: m._20.Heart
-                }))), r.createElement(m._0, {
+                return r.createElement(m._0, {
+                    position: m._13.Relative,
                     margin: {
                         bottom: 1
                     }
                 }, r.createElement("div", a.__assign({
                     className: "follow-game-card",
+                    "data-test-selector": "follow-game-card",
                     onMouseEnter: this.onMouseEnter,
                     onMouseLeave: this.onMouseLeave,
                     onClick: this.onClick
@@ -714,7 +698,7 @@ webpackJsonp([77], {
                     key: this.props.title
                 }, r.createElement(m._6, {
                     position: m._13.Relative
-                }, e, r.createElement(m.D, {
+                }, this.renderOverlay(), r.createElement(m.D, {
                     aspect: m.k.Aspect3x4,
                     alt: this.props.imageAlt,
                     src: this.props.imageSrc
@@ -730,6 +714,33 @@ webpackJsonp([77], {
                     color: m.J.Alt,
                     fontSize: m.T.Size6
                 }, this.props.info))))))
+            }, t.prototype.renderOverlay = function() {
+                var e, t = this.isFollowing();
+                return this.state.inProgress ? e = r.createElement(m._8, {
+                    delay: 0
+                }) : this.state.hovered ? e = r.createElement(m._19, {
+                    width: 50,
+                    height: 50,
+                    asset: t ? m._20.Unheart : m._20.Heart
+                }) : t && (e = r.createElement(m._19, {
+                    width: 50,
+                    height: 50,
+                    asset: m._20.Heart
+                })), e ? r.createElement(m._29, {
+                    className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
+                    background: m.m.Overlay,
+                    color: m.J.Overlay,
+                    "data-a-target": t ? "follow-game-card--followed" : "",
+                    display: m.P.Flex,
+                    alignItems: m.c.Center,
+                    justifyContent: m._5.Center,
+                    position: m._13.Absolute,
+                    zIndex: m._54.Above,
+                    attachBottom: !0,
+                    attachTop: !0,
+                    attachLeft: !0,
+                    attachRight: !0
+                }, e) : null
             }, t.prototype.followGame = function(e) {
                 return a.__awaiter(this, void 0, void 0, function() {
                     var t, n = this;
@@ -1225,12 +1236,12 @@ webpackJsonp([77], {
             x = Object(_.compose)(Object(b.a)(D, {
                 name: "timeoutUserFromCommunity"
             }))(I);
-        var j = Object(y.b)(null, function(e) {
+        var A = Object(y.b)(null, function(e) {
                 return Object(f.b)({
                     onCloseModal: v.c
                 }, e)
             })(x),
-            A = n("PO03"),
+            j = n("PO03"),
             M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1245,7 +1256,7 @@ webpackJsonp([77], {
                         })
                     }, t.onStreamTimeoutClick = function() {
                         var e = Object(m.a)(t.props.login, t.props.displayName, !0);
-                        t.props.onShowModal(j, {
+                        t.props.onShowModal(A, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName,
                             currentUserID: t.props.data.currentUser.id,
@@ -1283,7 +1294,7 @@ webpackJsonp([77], {
                             x: 1
                         }
                     }, Object(o.d)("Timeout", "StreamFlag"))) : null
-                }, t = a.__decorate([Object(b.a)(A, {
+                }, t = a.__decorate([Object(b.a)(j, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -3480,4 +3491,4 @@ webpackJsonp([77], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.featured-genres-e1286020d98ff925961a05fe77fded4f.js.map
+//# sourceMappingURL=pages.anon-front.components.featured-genres-3e4d7672173a41975ea33b94a1381f02.js.map

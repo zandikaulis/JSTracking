@@ -3583,7 +3583,7 @@ module.exports = {
      * Profiler event with profiler data
      * @param {string} event The profiler event name
      */
-    PROFILER: 'PlayerProfiler'
+    PROFILE: 'PlayerProfile'
 };
 
 

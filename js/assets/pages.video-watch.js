@@ -4573,7 +4573,8 @@ webpackJsonp([36, 83], {
                                 contentID: n,
                                 extra: JSON.stringify({
                                     channel_id: i.toString()
-                                })
+                                }),
+                                additionalTrackingID: t.props.targetChannelID
                             },
                             title: Object(C.d)("Report {channelDisplayName}", {
                                 channelDisplayName: r
@@ -5894,6 +5895,32 @@ webpackJsonp([36, 83], {
     OvUa: function(e, t) {},
     PNnM: function(e, t) {},
     PPK2: function(e, t) {},
+    PRb0: function(e, t, n) {
+        "use strict";
+        t.a = function() {
+            if (r.a.buildType === a.a.Dev) return !0;
+            var e = r.b.get(s, i.Dev);
+            switch (e) {
+                case i.Dev:
+                    return !1;
+                case i.Staff:
+                    var t = Object(o.c)(r.o.store.getState());
+                    return !!(t && t.roles && t.roles.isStaff);
+                case i.Everyone:
+                    return !0;
+                default:
+                    var n = e;
+                    return n
+            }
+        };
+        var i, r = n("6sO2"),
+            a = n("Ejve"),
+            o = n("Aj/L"),
+            s = "twilight_moonstone";
+        ! function(e) {
+            e.Dev = "dev", e.Staff = "staff", e.Everyone = "everyone"
+        }(i || (i = {}))
+    },
     PeVI: function(e, t) {},
     Ptqd: function(e, t) {
         e.exports = function() {
@@ -18595,7 +18622,8 @@ webpackJsonp([36, 83], {
                     autoReportInteractive: !0
                 })], t)
             }(u.Component),
-            me = function(e) {
+            me = n("PRb0"),
+            pe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleReportModalClose = function(e) {
@@ -18669,7 +18697,7 @@ webpackJsonp([36, 83], {
                     if (e.broadcastType === V.a.Archive && this.isVODOwner(e, t) && e.owner) return u.createElement(ue, {
                         key: "highlight-option",
                         interactableProps: {
-                            linkTo: (n = e.owner.login, i = e.id, "https://twitch.tv/" + n + "/manager/v" + i + "/highlight")
+                            linkTo: (n = e.owner.login, i = e.id, Object(me.a)() ? "/" + n + "/manager/highlighter/" + i : "https://twitch.tv/" + n + "/manager/v" + i + "/highlight")
                         },
                         testSelector: "qa-video-highlight-button"
                     }, Object(P.d)("Highlight", "VideoOptions"))
@@ -18689,7 +18717,7 @@ webpackJsonp([36, 83], {
                     autoReportInteractive: !0
                 })], t)
             }(u.Component);
-        var pe = Object(i.b)(null, function(e) {
+        var he = Object(i.b)(null, function(e) {
                 return Object(r.b)({
                     onShowLogin: function() {
                         return Object(o.f)(a.a.VODOptions)
@@ -18703,8 +18731,8 @@ webpackJsonp([36, 83], {
                         return Object(ee.d)(te.a, t)
                     }
                 }, e)
-            })(Object(X.f)(me)),
-            he = (n("YhgU"), function(e) {
+            })(Object(X.f)(pe)),
+            fe = (n("YhgU"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18773,20 +18801,20 @@ webpackJsonp([36, 83], {
                         tracking: {
                             location: y.PageviewLocation.VideoWatchPage
                         }
-                    })), u.createElement(pe, {
+                    })), u.createElement(he, {
                         currentUser: this.props.currentUser,
                         video: this.props.video,
                         lastVideoOffset: this.props.lastVideoOffset
                     })))), e)
                 }, t
             }(u.Component)),
-            fe = Object(S.d)("VideoInfoBar", {
+            ge = Object(S.d)("VideoInfoBar", {
                 autoReportInteractive: !0
-            })(he),
-            ge = n("Aj/L");
-        var ve = Object(i.b)(function(e) {
+            })(fe),
+            ve = n("Aj/L");
+        var be = Object(i.b)(function(e) {
                 return {
-                    isLoggedIn: Object(ge.d)(e)
+                    isLoggedIn: Object(ve.d)(e)
                 }
             })(function(e) {
                 var t;
@@ -18841,9 +18869,9 @@ webpackJsonp([36, 83], {
                     }
                 }, t))
             }),
-            be = (n("VnsS"), n("eeM1")),
-            ke = -1,
-            ye = function(e) {
+            ke = (n("VnsS"), n("eeM1")),
+            ye = -1,
+            _e = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onPlayerSeekRequest = function(e) {
@@ -18854,7 +18882,7 @@ webpackJsonp([36, 83], {
                         n.props.onLogin()
                     }, n.getInitialVideoOffsetTime = function() {
                         var e, t, i = d.parse(n.props.location.search);
-                        return i.t ? (e = i.t, (t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "")) ? 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0) : 0) : ke
+                        return i.t ? (e = i.t, (t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "")) ? 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0) : 0) : ye
                     }, n.onPlayerNavigationEvent = function(e) {
                         var t = n.getVideo(),
                             i = t ? t.id : "",
@@ -18870,7 +18898,7 @@ webpackJsonp([36, 83], {
                         }, function() {
                             n.props.onVideoTimeChange(t)
                         }) : n.state.requestedVideoOffset === t && n.setState({
-                            requestedVideoOffset: ke
+                            requestedVideoOffset: ye
                         })
                     }, n.getMiniPlayerTitle = function() {
                         var e = n.getVideo();
@@ -18879,7 +18907,7 @@ webpackJsonp([36, 83], {
                         return e || t ? !e && t ? "/collections/" + t : "/videos/" + e + (t ? "?collection=" + t : "") : (p.j.withCategory("VideoWatchPage").error(new Error, "Tried to generate a mini player URL based on the current route, but critical options were missing."), "/")
                     }, n.state = {
                         requestedVideoOffset: n.getInitialVideoOffsetTime(),
-                        lastVideoOffset: ke,
+                        lastVideoOffset: ye,
                         miniPlayerRouteLink: n.getMiniPlayerURL(t.match.params.videoID, t.match.params.collectionID)
                     }, n
                 }
@@ -18906,10 +18934,10 @@ webpackJsonp([36, 83], {
                     if (this.props.data.error || e && e.id && !e.owner) return u.createElement(h.a, {
                         message: Object(p.d)("Whoops, we can't load that video right now.", "VideoWatchPage")
                     });
-                    if (!this.props.data.loading && (!e || e && "" === e.id) && !t) return u.createElement(ve, null);
+                    if (!this.props.data.loading && (!e || e && "" === e.id) && !t) return u.createElement(be, null);
                     var r = c("video-watch-page__right-column", ((d = {})[Object(v.c)(g.a.Dark)] = this.props.theatreModeEnabled, d)),
                         a = {};
-                    this.state.requestedVideoOffset !== ke && (a.nextVideoOffset = this.state.requestedVideoOffset), "" !== t && (a.collectionID = t);
+                    this.state.requestedVideoOffset !== ye && (a.nextVideoOffset = this.state.requestedVideoOffset), "" !== t && (a.collectionID = t);
                     var o = this.props.match.params.videoID;
                     o && (a.vodID = o);
                     var d, m = null;
@@ -18931,7 +18959,7 @@ webpackJsonp([36, 83], {
                         }, a),
                         miniPlayerTitle: this.getMiniPlayerTitle(),
                         miniPlayerContentRoute: this.state.miniPlayerRouteLink
-                    })), !n && u.createElement(fe, {
+                    })), !n && u.createElement(ge, {
                         collectionID: Object(b.a)(this.props),
                         currentUser: this.props.data.currentUser || null,
                         video: e || null,
@@ -18966,7 +18994,7 @@ webpackJsonp([36, 83], {
                     var e = {},
                         t = d.parse(this.props.location.search),
                         n = this.getInitialVideoOffsetTime();
-                    return n !== ke && (e.highlightTimestamp = n), t.comment && (e.highlightedMessageID = t.comment), e
+                    return n !== ye && (e.highlightTimestamp = n), t.comment && (e.highlightedMessageID = t.comment), e
                 }, t.prototype.reportInteractive = function() {
                     this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.getVideo = function() {
@@ -18981,7 +19009,7 @@ webpackJsonp([36, 83], {
                     }
                 }, t
             }(u.Component),
-            _e = Object(m.compose)(Object(m.graphql)(be, {
+            Ce = Object(m.compose)(Object(m.graphql)(ke, {
                 options: function(e) {
                     return {
                         variables: {
@@ -19019,8 +19047,8 @@ webpackJsonp([36, 83], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(ye);
-        var Ce = Object(i.b)(function(e) {
+            }))(_e);
+        var Se = Object(i.b)(function(e) {
             return {
                 theatreModeEnabled: e.ui.theatreModeEnabled
             }
@@ -19031,9 +19059,9 @@ webpackJsonp([36, 83], {
                 },
                 onVideoTimeChange: s.q
             }, e)
-        })(_e);
+        })(Ce);
         n.d(t, "VideoWatchPage", function() {
-            return Ce
+            return Se
         })
     },
     uwZN: function(e, t, n) {
@@ -20468,4 +20496,4 @@ webpackJsonp([36, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-92943311ac82baef9ac8eeb9f79668f7.js.map
+//# sourceMappingURL=pages.video-watch-ad20310daa579cb71c59f0fe66213a65.js.map

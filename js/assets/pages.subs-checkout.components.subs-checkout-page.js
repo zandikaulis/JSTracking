@@ -5360,7 +5360,7 @@ webpackJsonp([38], {
                 return u.createElement(y._6, null, u.createElement(y.O, {
                     type: y._43.H2,
                     bold: !0
-                }, Object(d.d)("Get Your Insider Pass", "EsportsTicketPurchaseInfo")), u.createElement(y.O, null, Object(d.d)("Buying a Pass is fast, easy, and secure. Don't hesitate to contatct Purchase Support if you need help", "EsportsTicketPurchaseInfo")))
+                }, Object(d.d)("Get Your All-Access Pass", "EsportsTicketPurchaseInfo")), u.createElement(y.O, null, Object(d.d)("Buying a Pass is fast, easy, and secure. Don't hesitate to contatct Purchase Support if you need help", "EsportsTicketPurchaseInfo")))
             },
             _ = n("QCL8"),
             k = function(e) {
@@ -6827,7 +6827,7 @@ webpackJsonp([38], {
                         type: y._43.H2,
                         color: y.J.Overlay,
                         transform: y._42.Uppercase
-                    }, Object(d.d)("Insider Pass", "EsportsTicketDescription"))), u.createElement(y.O, {
+                    }, Object(d.d)("All-Access Pass", "EsportsTicketDescription"))), u.createElement(y.O, {
                         type: y._43.H5,
                         color: y.J.Overlay,
                         transform: y._42.Uppercase
@@ -16788,4 +16788,4 @@ webpackJsonp([38], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-17ea312d7eb76640479648221e905d44.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-c7d90c166a41e5a2ef06f53f2882181d.js.map

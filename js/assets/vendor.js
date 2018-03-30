@@ -6989,6 +6989,8 @@ webpackJsonp([68], {
                             var t = e ? n.contextManager.context : null;
                             n.coordinator.sendVisibilityChanged(e, t)
                         }
+                    }, n.setPosition = function(e) {
+                        n.coordinator.sendPositionChange(e)
                     }, n.buildTracker = function() {
                         var e = n.params;
                         return e.extensionTracker || new d.ExtensionTracker({
@@ -7203,7 +7205,7 @@ webpackJsonp([68], {
                     }, n.registerFunctionModals = function() {
                         n.functionManager.registerFunctionModal(c.FunctionAction.FollowAction, new _.FollowModal(n.params.loginId, n.tracker)), n.canRequestIdLink && n.functionManager.registerFunctionModal(c.FunctionAction.IdShareRequest, new w.SimpleRequestModal), n.extension.bitsEnabled && n.functionManager.registerFunctionModal(c.FunctionAction.UseBitsPromptRequired, new x.BitsConfirmationModal(String(n.params.loginId), n.tracker))
                     }, n.unregisterFunctionModals = function() {
-                        n.functionManager.unregisterFunctionModal(c.FunctionAction.FollowAction), n.functionManager.unregisterFunctionModal(c.FunctionAction.UseBitsPromptRequired)
+                        n.functionManager.unregisterFunctionModal(c.FunctionAction.FollowAction), n.extension.bitsEnabled && n.functionManager.unregisterFunctionModal(c.FunctionAction.UseBitsPromptRequired)
                     }, n.handlePurchaseCompleted = function(e) {
                         var t = e.msg.sku;
                         n.extensionProducts.then(function(e) {
@@ -17233,7 +17235,7 @@ webpackJsonp([68], {
         t.ExtensionStateMap = ((c = {})[s.Testing] = u.Testing, c[s.HostedTest] = u.HostedTest, c[s.Approved] = u.Approved, c[s.Released] = u.Released, c[s.ReadyForReview] = u.ReadyForReview, c[s.InReview] = u.InReview, c[s.PendingAction] = u.PendingAction, c[s.Uploading] = u.Uploading, c);
         var c, l = t.ExtensionAction = void 0;
         ! function(e) {
-            e.TwitchExtAuth = "twitch-ext-auth", e.TwitchExtBootstrap = "twitch-ext-bootstrap", e.TwitchExtContext = "twitch-ext-context", e.TwitchExtError = "twitch-ext-error", e.TwitchExtLoaded = "twitch-ext-loaded", e.TwitchExtNetworkTiming = "twitch-ext-network-timing", e.TwitchExtReload = "twitch-ext-reload", e.TwitchExtUserAction = "twitch-ext-user-action", e.TwitchExtConfirmationRequest = "twitch-ext-confirmation-request", e.TwitchExtBeginPurchase = "twitch-ext-begin-purchase", e.TwitchExtReloadEntitlements = "twitch-ext-reload-entitlements", e.TwitchExtProductPrices = "twitch-ext-product-prices", e.TwitchExtVisibilityChanged = "twitch-ext-visibility-changed", e.TwitchExtBitsProducts = "twitch-ext-bits-products", e.TwitchExtUseBits = "twitch-ext-use-bits", e.TwitchExtBitsTransactionComplete = "twitch-ext-bits-transaction-complete", e.TwitchExtBitsOnHover = "twitch-ext-bits-on-hover"
+            e.TwitchExtAuth = "twitch-ext-auth", e.TwitchExtBootstrap = "twitch-ext-bootstrap", e.TwitchExtContext = "twitch-ext-context", e.TwitchExtError = "twitch-ext-error", e.TwitchExtLoaded = "twitch-ext-loaded", e.TwitchExtNetworkTiming = "twitch-ext-network-timing", e.TwitchExtReload = "twitch-ext-reload", e.TwitchExtUserAction = "twitch-ext-user-action", e.TwitchExtConfirmationRequest = "twitch-ext-confirmation-request", e.TwitchExtBeginPurchase = "twitch-ext-begin-purchase", e.TwitchExtReloadEntitlements = "twitch-ext-reload-entitlements", e.TwitchExtProductPrices = "twitch-ext-product-prices", e.TwitchExtVisibilityChanged = "twitch-ext-visibility-changed", e.TwitchExtBitsProducts = "twitch-ext-bits-products", e.TwitchExtUseBits = "twitch-ext-use-bits", e.TwitchExtBitsTransactionComplete = "twitch-ext-bits-transaction-complete", e.TwitchExtBitsOnHover = "twitch-ext-bits-on-hover", e.TwitchExtPositionChanged = "twitch-ext-position-changed"
         }(l || (t.ExtensionAction = l = {}))
     },
     J7Qi: function(e, t, n) {
@@ -17300,6 +17302,11 @@ webpackJsonp([68], {
                         action: o.ExtensionAction.TwitchExtVisibilityChanged,
                         isVisible: e,
                         context: t
+                    })
+                }, n.sendPositionChange = function(e) {
+                    n.sendMessage({
+                        action: o.ExtensionAction.TwitchExtPositionChanged,
+                        position: e
                     })
                 }, n.sendBitsProductsMessage = function(e) {
                     n.sendMessage({
@@ -35103,4 +35110,4 @@ webpackJsonp([68], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-5d1c770f92a46a4c0ccdbeb47fa7c9fc.js.map
+//# sourceMappingURL=vendor-e9ba20b6de8a7703a8530a69495fc573.js.map

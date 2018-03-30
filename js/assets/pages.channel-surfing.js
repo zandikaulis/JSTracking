@@ -6524,7 +6524,7 @@ webpackJsonp([74], {
                         })
                     }, n.clearBufferHandle = function() {
                         n.syncBufferHandle && (clearTimeout(n.syncBufferHandle), n.syncBufferHandle = 0)
-                    }, n.chatService = new Pe(t.userLogin, t.channelLogin, n.onChatMessage), n.logger = i.j.withCategory("chat-room"), n.registerCustomLatencyEvents(), n.createOutgoingTokenMatchers([ra]), n.activeChatters = new Ee(t.channelID), n.chatBuffer = new Ie(ia, n.onChatBufferUpdate), n.chatBuffer.setBlockedUsers(t.blockedUsers), t.userLogin && (n.chatBuffer.setCurrentUserLogin(t.userLogin), n.activeChatters.setCurrentUserLogin(t.userLogin)), n
+                    }, n.chatService = new Pe(t.userLogin, t.channelLogin, n.onChatMessage), n.logger = i.j.withCategory("chat-room"), n.registerCustomLatencyEvents(), n.createOutgoingTokenMatchers([ra]), n.activeChatters = new Ee(t.channelLogin), n.chatBuffer = new Ie(ia, n.onChatBufferUpdate), n.chatBuffer.setBlockedUsers(t.blockedUsers), t.userLogin && (n.chatBuffer.setCurrentUserLogin(t.userLogin), n.activeChatters.setCurrentUserLogin(t.userLogin)), n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.shouldConnectOnMount() ? this.connect(this.props) : this.props.latencyTracking.reportInteractive(), this.props.bitsConfig && this.updateBitsConfig(this.props.bitsConfig), this.updateBlockLinks(this.props.blockLinks), this.props.emoteSetsData && this.props.emoteSetsData.emoteSets && (this.logger.debug("Updating emote sets after mount", {
@@ -12153,7 +12153,8 @@ webpackJsonp([74], {
                                 contentID: n,
                                 extra: JSON.stringify({
                                     channel_id: a.toString()
-                                })
+                                }),
+                                additionalTrackingID: t.props.targetChannelID
                             },
                             title: Object(_.d)("Report {channelDisplayName}", {
                                 channelDisplayName: i
@@ -16557,7 +16558,8 @@ webpackJsonp([74], {
                                 contentID: t.props.sourceID,
                                 extra: JSON.stringify({
                                     channel_id: t.props.channelID.toString()
-                                })
+                                }),
+                                additionalTrackingID: t.props.channelID
                             },
                             title: Object(g.d)("Report {channelDisplayName}", {
                                 channelDisplayName: t.props.data.targetUser.displayName
@@ -23434,4 +23436,4 @@ webpackJsonp([74], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-3f61c5d8f62111d342ce52f5659f08c7.js.map
+//# sourceMappingURL=pages.channel-surfing-c09260e2eb2905b320bf205e60397c2a.js.map

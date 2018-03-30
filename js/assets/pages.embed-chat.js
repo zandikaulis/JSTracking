@@ -7023,7 +7023,7 @@ webpackJsonp([35], {
                         })
                     }, n.clearBufferHandle = function() {
                         n.syncBufferHandle && (clearTimeout(n.syncBufferHandle), n.syncBufferHandle = 0)
-                    }, n.chatService = new Be(t.userLogin, t.channelLogin, n.onChatMessage), n.logger = a.j.withCategory("chat-room"), n.registerCustomLatencyEvents(), n.createOutgoingTokenMatchers([ri]), n.activeChatters = new Se(t.channelID), n.chatBuffer = new Ie(ai, n.onChatBufferUpdate), n.chatBuffer.setBlockedUsers(t.blockedUsers), t.userLogin && (n.chatBuffer.setCurrentUserLogin(t.userLogin), n.activeChatters.setCurrentUserLogin(t.userLogin)), n
+                    }, n.chatService = new Be(t.userLogin, t.channelLogin, n.onChatMessage), n.logger = a.j.withCategory("chat-room"), n.registerCustomLatencyEvents(), n.createOutgoingTokenMatchers([ri]), n.activeChatters = new Se(t.channelLogin), n.chatBuffer = new Ie(ai, n.onChatBufferUpdate), n.chatBuffer.setBlockedUsers(t.blockedUsers), t.userLogin && (n.chatBuffer.setCurrentUserLogin(t.userLogin), n.activeChatters.setCurrentUserLogin(t.userLogin)), n
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.shouldConnectOnMount() ? this.connect(this.props) : this.props.latencyTracking.reportInteractive(), this.props.bitsConfig && this.updateBitsConfig(this.props.bitsConfig), this.updateBlockLinks(this.props.blockLinks), this.props.emoteSetsData && this.props.emoteSetsData.emoteSets && (this.logger.debug("Updating emote sets after mount", {
@@ -19522,18 +19522,12 @@ webpackJsonp([35], {
                         closeEventSent: !0
                     }))
                 }, t.trackWizardAction = function(e, n, i, a) {
-                    var r = null;
-                    if (t.props.reportContext.extra) try {
-                        r = JSON.parse(t.props.reportContext.extra).channel_id
-                    } catch (e) {
-                        r = null
-                    }
                     l.o.tracking.track(h.SpadeEventType.ReportWizardFlowAction, {
                         ui_context: t.props.reportContext.contentType,
                         target_user_id: t.props.reportContext.targetUserID,
                         report_sent: t.state.submitStatus === $.b.Success,
                         modal_type: "wizard_v1",
-                        channel_id: r,
+                        extra_user_id: t.props.reportContext.additionalTrackingID,
                         action: e,
                         close_type: a,
                         report_session_id: t.reportID,
@@ -19541,17 +19535,11 @@ webpackJsonp([35], {
                         navigated_to: i
                     })
                 }, t.trackAction = function(e) {
-                    var n = null;
-                    if (t.props.reportContext.extra) try {
-                        n = JSON.parse(t.props.reportContext.extra).channel_id
-                    } catch (e) {
-                        n = null
-                    }
                     l.o.tracking.track(h.SpadeEventType.ReportFlowAction, {
                         ui_context: t.props.reportContext.contentType,
                         target_user_id: t.props.reportContext.targetUserID,
                         report_sent: t.state.submitStatus === $.b.Success,
-                        channel_id: n,
+                        extra_user_id: t.props.reportContext.additionalTrackingID,
                         action: e,
                         report_session_id: t.reportID
                     })
@@ -26067,7 +26055,8 @@ webpackJsonp([35], {
                                 contentID: n,
                                 extra: JSON.stringify({
                                     channel_id: i.toString()
-                                })
+                                }),
+                                additionalTrackingID: t.props.targetChannelID
                             },
                             title: Object(C.d)("Report {channelDisplayName}", {
                                 channelDisplayName: a
@@ -33057,7 +33046,7 @@ webpackJsonp([35], {
                             icon: d._20.Star
                         }, e)
                     }
-                    var t = this.props.isEsportChannel ? Object(r.d)("Get the Insider Pass", "SubTierButton") : Object(r.d)("Subscribe Now", "SubTierButton");
+                    var t = this.props.isEsportChannel ? Object(r.d)("Get the All-Access Pass", "SubTierButton") : Object(r.d)("Subscribe Now", "SubTierButton");
                     return a.createElement(d.u, i.__assign({
                         ariaLabel: t + " " + this.props.tierPrice,
                         "data-test-selector": c,
@@ -33969,7 +33958,8 @@ webpackJsonp([35], {
                                 contentID: t.props.sourceID,
                                 extra: JSON.stringify({
                                     channel_id: t.props.channelID.toString()
-                                })
+                                }),
+                                additionalTrackingID: t.props.channelID
                             },
                             title: Object(g.d)("Report {channelDisplayName}", {
                                 channelDisplayName: t.props.data.targetUser.displayName
@@ -46270,4 +46260,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-ccdd99bb89ca075bd21800a4100ee791.js.map
+//# sourceMappingURL=pages.embed-chat-ec51191ed0a392e749622b3f0f296556.js.map

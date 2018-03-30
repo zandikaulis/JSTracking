@@ -6305,7 +6305,7 @@ webpackJsonp([67], {
                         i = 1 === this.props.data.user.subscriptionProducts.length,
                         r = null;
                     this.props.data.user.self && this.props.data.user.self.subscriptionBenefit && (r = this.props.data.user.self.subscriptionBenefit.purchasedWithPrime ? m.a.Prime : this.props.data.user.self.subscriptionBenefit.tier, this.modalLevel = ""), this.props.data.user.subscriptionProducts.some(this.isSubscriptionProductInvalid) && (i = !0);
-                    var o, s = Object(c.d)("Insider Pass for OWL", "SubscribeButton");
+                    var o, s = Object(c.d)("All-Access Pass for OWL", "SubscribeButton");
                     if (t) {
                         var l = i ? Object(c.d)("Subscribed", "SubscribeButton") : Object(c.d)("Gift A Sub", "SubscribeButton");
                         if (o = this.props.hostChannelID ? Object(c.d)("Subscribed to {username}", {
@@ -10691,18 +10691,12 @@ webpackJsonp([67], {
                         closeEventSent: !0
                     }))
                 }, t.trackWizardAction = function(e, n, i, r) {
-                    var a = null;
-                    if (t.props.reportContext.extra) try {
-                        a = JSON.parse(t.props.reportContext.extra).channel_id
-                    } catch (e) {
-                        a = null
-                    }
                     l.o.tracking.track(h.SpadeEventType.ReportWizardFlowAction, {
                         ui_context: t.props.reportContext.contentType,
                         target_user_id: t.props.reportContext.targetUserID,
                         report_sent: t.state.submitStatus === K.b.Success,
                         modal_type: "wizard_v1",
-                        channel_id: a,
+                        extra_user_id: t.props.reportContext.additionalTrackingID,
                         action: e,
                         close_type: r,
                         report_session_id: t.reportID,
@@ -10710,17 +10704,11 @@ webpackJsonp([67], {
                         navigated_to: i
                     })
                 }, t.trackAction = function(e) {
-                    var n = null;
-                    if (t.props.reportContext.extra) try {
-                        n = JSON.parse(t.props.reportContext.extra).channel_id
-                    } catch (e) {
-                        n = null
-                    }
                     l.o.tracking.track(h.SpadeEventType.ReportFlowAction, {
                         ui_context: t.props.reportContext.contentType,
                         target_user_id: t.props.reportContext.targetUserID,
                         report_sent: t.state.submitStatus === K.b.Success,
-                        channel_id: n,
+                        extra_user_id: t.props.reportContext.additionalTrackingID,
                         action: e,
                         report_session_id: t.reportID
                     })
@@ -34619,7 +34607,7 @@ webpackJsonp([67], {
                             icon: c._20.Star
                         }, e)
                     }
-                    var t = this.props.isEsportChannel ? Object(a.d)("Get the Insider Pass", "SubTierButton") : Object(a.d)("Subscribe Now", "SubTierButton");
+                    var t = this.props.isEsportChannel ? Object(a.d)("Get the All-Access Pass", "SubTierButton") : Object(a.d)("Subscribe Now", "SubTierButton");
                     return r.createElement(c.u, i.__assign({
                         ariaLabel: t + " " + this.props.tierPrice,
                         "data-test-selector": d,
@@ -44769,4 +44757,4 @@ webpackJsonp([67], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-65d87c18959f4d09d17ffd70e25e7435.js.map
+//# sourceMappingURL=core-ea21e88dc3fc29d8865b7189d124c0e5.js.map
