@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6612de93604c8c2f2a6a.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cd0758e78513f2c29672.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -26328,24 +26328,21 @@
         "use strict";
 
         function r(e, t, n, r) {
-            function a() {
-                e.getVideo() ? t.setAttribute("data-video", e.getVideo()) : t.removeAttribute("data-video")
-            }
-            var o = [];
+            var a = [];
             this.destroy = function() {
-                    o.forEach(function(e) {
+                    a.forEach(function(e) {
                         return e()
-                    }), o = null
+                    }), a = null
                 },
                 function() {
                     var e = r.player;
-                    e && t.setAttribute("data-playertype", e), o.push(Object(i.a)(n, ["viewercount"], function(e) {
+                    e && t.setAttribute("data-playertype", e), a.push(Object(i.a)(n, ["viewercount"], function(e) {
                         var n = e.viewercount;
                         t.setAttribute("data-viewers", n)
-                    })), o.push(Object(i.a)(n, ["screen"], function(e) {
+                    })), a.push(Object(i.a)(n, ["screen"], function(e) {
                         var n = e.screen;
                         t.setAttribute("data-screen", n[0])
-                    })), o.push(Object(i.a)(n, ["streamMetadata"], a))
+                    }))
                 }()
         }
         t.a = r;
@@ -30168,6 +30165,7 @@
                 duration: xe.a.number,
                 getCurrentTime: xe.a.func,
                 isSeekableStream: xe.a.bool.isRequired,
+                isShowingAds: xe.a.bool.isRequired,
                 mutedSegments: xe.a.arrayOf(xe.a.shape({
                     duration: xe.a.number,
                     offset: xe.a.number
@@ -30182,20 +30180,22 @@
             po = function(e) {
                 var t = e.env,
                     n = e.playback,
-                    r = e.stream,
-                    i = e.timelineMetadata,
-                    a = e.window,
-                    o = e.analyticsTracker;
+                    r = e.screen,
+                    i = e.stream,
+                    a = e.timelineMetadata,
+                    o = e.window,
+                    s = e.analyticsTracker;
                 return {
                     buffer: n.buffer,
                     currentTime: n.currentTime,
                     duration: n.duration,
-                    isSeekableStream: je()(co.a, r.contentType),
-                    mutedSegments: i.mutedSegments,
-                    seekbarMarkers: i.markers,
-                    thumbnailPreviews: i.previews,
-                    windowObj: a,
-                    trackEvent: o.trackEvent,
+                    isSeekableStream: je()(co.a, i.contentType),
+                    isShowingAds: r[0] === da.c,
+                    mutedSegments: a.mutedSegments,
+                    seekbarMarkers: a.markers,
+                    thumbnailPreviews: a.previews,
+                    windowObj: o,
+                    trackEvent: s.trackEvent,
                     isClipsPlayerType: je()(Qe.b, t.playerType)
                 }
             },
@@ -30230,16 +30230,17 @@
                             t = e.currentTime,
                             n = e.duration,
                             r = e.isSeekableStream,
-                            i = e.isClipsPlayerType;
-                        if (!r) return null;
-                        var a = this.createSliderComponent(),
-                            o = {
+                            i = e.isShowingAds,
+                            a = e.isClipsPlayerType;
+                        if (!r || i) return null;
+                        var o = this.createSliderComponent(),
+                            s = {
                                 currentTime: t,
                                 duration: n
                             };
                         return Ce.a.createElement("div", {
                             className: "player-seek"
-                        }, i ? Ce.a.createElement(Ka, o) : Ce.a.createElement(za, o), a)
+                        }, a ? Ce.a.createElement(Ka, s) : Ce.a.createElement(za, s), o)
                     }
                 }, {
                     key: "createSliderComponent",
@@ -31006,7 +31007,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.29-215448+c7429cc42d4650eab41651eca328065f441e956e",
+                    app_version: "2018.03.29-233337+be0cafb0e83bbeeac4d842e65405204fb1114966",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,

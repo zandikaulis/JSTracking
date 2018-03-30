@@ -61,18 +61,795 @@ var MediaPlayer =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var EventEmiter = __webpack_require__(1);
-var MediaSink = __webpack_require__(2).MediaSink;
+var Constants = __webpack_require__(1);
+var Utils = __webpack_require__(6);
+var PlayReady = __webpack_require__(7);
+
+//setup constants/utils
+var MODES = Constants.MODES;
+var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
+var ALL_KEY_SYSTEMS = ALL_KEY_SYSTEMS;
+var KEY_SYSTEMS_BY_STRING = Constants.KEY_SYSTEMS_BY_STRING;
+var TEST_AUTH_XML = Constants.TEST_AUTH_XML;
+var ENCRYPTION_TYPES = Constants.ENCRYPTION_TYPES;
+var SUPPORTED_DRM_MAP = Constants.SUPPORTED_DRM_MAP;
+var DRM_SUPPORT_BY_BROWSER = Constants.DRM_SUPPORT_BY_BROWSER;
+var DRM_SUPPORT_VALUES = Constants.DRM_SUPPORT_VALUES;
+var SUPPORTED_BROWSERS = Constants.SUPPORTED_BROWSERS;
+var DEFAULT_AUDIO_CAPABILITIES = Constants.DEFAULT_AUDIO_CAPABILITIES;
+var DEFAULT_VIDEO_CAPABILITIES = Constants.DEFAULT_VIDEO_CAPABILITIES;
+var arrayBuffersEqual = Utils.arrayBuffersEqual;
+var getHostnameFromUri = Utils.getHostnameFromUri;
+var arrayBufferFrom = Utils.arrayBufferFrom;
+var uintArrayToString = Utils.uintArrayToString;
+var fetchArrayBuffer = Utils.fetchArrayBuffer;
+var parsePSSHSupport = Utils.parsePSSHSupport;
+var parsePSSHSupportFromInitData = Utils.parsePSSHSupportFromInitData;
+var checkErrorFormat = Utils.checkErrorFormat;
+
+var ERRORS = Constants.ERRORS;
+
+// When using this fetch shim, FF loses support for response.arrayBuffer();
+// not sure if I should use a different shim like `github/fetch` for this instead
+// current browser support: https://caniuse.com/#feat=fetch
+// var fetch = require('./fetch'); // get fetch or fetchShim
+
+/* TODO Robustness levels for Chrome best practices
+    Spec notes that:
+        robustness of type DOMString, defaulting to ""
+        The robustness level associated with the content type.
+        The empty string indicates that any ability to decrypt
+        and decode the content type is acceptable.
+
+    If we get requirements, we can set it to one of the settings below:
+    https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf
+    Definition           EME Level     Widevine Device Security Level
+    SW_SECURE_CRYPTO     1             3
+    SW_SECURE_DECODE     2             3
+    HW_SECURE_CRYPTO     3             2
+    HW_SECURE_DECODE     4             1
+    HW_SECURE_ALL        5             1
+*/
+
+// this is only used for W3C spec following EME feature check
+var supportedConfig = [{
+  "initDataTypes": [ENCRYPTION_TYPES.CENC],
+  "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
+  "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
+}];
+
+/**
+ * This is a temporary setting that makes sure development player
+ * doesn't break when trying to use clearkey implementation.
+ * This can be set to false and/or cleaned up once `configureCDMSupport`
+ * call always accurately describes the PSSH on the media.
+ * When this is set to true, it manually parses the entire `event.initData`
+ * passed to `encrypted` event instead of listening to mediaSink's configure
+ * track data `track.protectionData`.
+ */
+var PARSE_PSSH_DURING_ENCRYPTED_EVENT = true;
+
+/**
+ * DRMManager sets up and handles media that contains DRM encryption
+ * @param {Object} config
+ * @param {HTMLElement} config.video - video element
+ * @param {function(MediaError)} config.onerror - video error with error code
+ */
+var DRMManager = function(config) {
+    this.video = config.video;
+    this.cdmSupport = null;
+    this.selectedCDM = null;
+    this.mediaKeys = undefined; // we will reserve null
+    this.initialized = false;
+    this._handleError = config.onerror;
+    this._certificate = null;
+    this._currentSrc = null;
+    this._pendingSessions = [];
+    this._sessions = [];
+
+    this._init();
+};
+
+/**
+ * Check Browser CDM Capabilities
+ * Based on the recommendations of MDN, a feature check could result in
+ * 'user-visible effects such as asking for permission to access one or more
+ * system resources.' It also would need to be an async check.
+ * @param {string} browserName - browser name
+ */
+DRMManager.CDMCapabilitiesByBrowser = function(browserName) {
+    if (DRM_SUPPORT_BY_BROWSER[browserName]) {
+        return DRM_SUPPORT_BY_BROWSER[browserName].reduce(function(total, drm) {
+            var value = drm ? drm.value : 0;
+            return total + value;
+        }, 0);
+    } else {
+        // TODO: may want to warn/error here, since browser settings was not found
+        return 0;
+    }
+};
+
+/**
+ * Used to create the hardcoded bitmask map in 'capability.js'
+ * This helper saves workers from importing this entire file to
+ * use constants relevant to only DRM.
+ * @param {Array} browsers
+ */
+DRMManager.DRMBrowserSupportMapping = function(browsers) {
+    var browserMapping = {};
+    SUPPORTED_BROWSERS.forEach(function(browserName) {
+        browserMapping[browserName] = DRMManager.CDMCapabilitiesByBrowser(browserName);
+    });
+    return browserMapping;
+};
+
+/*  Feature check of browsers capabilities
+    Notes: This is more accurate than checking by browser, but currently not used because:
+        1. It has to be async, navigator.requestMediaKeySystemAccess returns a promise, which makes it hard to make a constant.
+        2. MDN web docs don't seem to be very keen on using except when necessary:
+            From: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess
+            "This method may have user-visible effects such as asking for permission to access one or more system resources. Consider that when deciding when to call requestMediaKeySystemAccess(); you don't want those requests to happen at inconvenient times. As a general rule, this function should be called only when it's about time to create and use a MediaKeys object by calling the returned MediaKeySystemAccess object's createMediaKeys() method."
+*/
+DRMManager.CDMCapabilitiesFeatureCheck = function() {
+    var checkSupported = function(settings) {
+        var config = [{
+            "initDataTypes": [settings.type],
+            "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
+            "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
+        }]
+        return navigator.requestMediaKeySystemAccess(settings.cdm.keySystem, config)
+            .then(function() {
+                return settings;
+            })
+            .catch(function() {
+                // not a supported type
+            });
+    };
+
+    var checkSupportedSafari = function(settings) {
+        // Apple devices only support 'cbcs'
+        // fMP4 sample encryption which is specified in ISO/IEC 23001:7 2016, Common Encryption in ISO BMFF [CENC]. Apple devices only support 'cbcs', which is specified in CENC Section 10.4. [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
+        if (settings.type !== ENCRYPTION_TYPES.CBCS){
+            return Promise.resolve(undefined);
+        } else {
+            try {
+                return WebKitMediaKeys.isTypeSupported(settings.cdm.keySystem)
+                    ? Promise.resolve(settings)
+                    : Promise.resolve(undefined);
+            } catch(err) {
+                return Promise.resolve(undefined);
+            }
+        }
+    };
+
+    var promiseRequests;
+    if (navigator.requestMediaKeySystemAccess) {
+        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
+            return checkSupported(settings);
+        });
+    } else if (WebKitMediaKeys) {
+        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
+            return checkSupportedSafari(settings);
+        });
+    }
+    return Promise.all(promiseRequests)
+        .then(function(results){
+            // results is an array of SUPPORTED_DRM_MAP values or undefined if not supported
+            return results.reduce(function(memo, result){
+                var value = result ? result.value : 0;
+                return memo + value;
+            }, 0);
+        });
+}
+/**
+ * Initializes instance, and adds 'encrypted' handlers
+ * to support DRM functionality
+ */
+DRMManager.prototype._init = function() {
+    this._checkSrcSessions();
+    this.video.addEventListener('encrypted', this._handleEncrypted.bind(this), false);
+    this.video.addEventListener('webkitneedkey', this._handleSafariEncrypted.bind(this), false);
+};
+
+DRMManager.prototype.configureCDMSupport = function(protectionData) {
+    // if we want to directly parse the encrypted event
+    if (PARSE_PSSH_DURING_ENCRYPTED_EVENT) return;
+    if (this.cdmSupport === null && protectionData.length > 0) {
+        this.cdmSupport = parsePSSHSupport(protectionData);
+    }
+};
+
+/**
+ * Checks to see if system is already handling
+ * a session that matches initData
+ * @param {ArrayBuffer} initData
+ */
+DRMManager.prototype._hasSession = function(initData) {
+    for (var i = 0; i < this._sessions.length; i++) {
+        var session = this._sessions[i];
+        if (!session.initData) continue;
+        if (arrayBuffersEqual(arrayBufferFrom(session.initData), arrayBufferFrom(initData))) {
+            return true;
+        }
+    }
+    return false;
+};
+
+/**
+ * Clears out sessions when video source changes.
+ * TODO: Our system currently doesn't not change the src, but may need
+ * to clear out sessions at some point?
+ */
+DRMManager.prototype._checkSrcSessions = function() {
+    var src = this.video.src;
+    if (src !== this._currentSrc) {
+        this._currentSrc = src;
+        this._sessions = [];
+    }
+};
+
+/**
+ * Builds a promise catch chain to feature detect a keysystem that works.
+ * This will get refactored once we have real systems working and we know
+ * which format is requested/returned
+ */
+DRMManager.prototype._createKeySystemSupportChain = function() {
+    if (this.cdmSupport === null || this.cdmSupport.length === 0){
+        return Promise.reject(ERRORS.NO_PSSH_FOUND);
+    }
+    var promise;
+    this.cdmSupport.forEach(function(cdm){
+        if (!promise) {
+            promise = navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
+        } else {
+            promise = promise.catch(function(e) {
+                return navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
+            });
+        }
+    });
+
+    promise = promise.catch(function() {
+        return Promise.reject(ERRORS.NO_CDM_SUPPORT);
+    });
+
+    return promise;
+}
+
+/**
+ * Handles embeded DRM in initial video file
+ * @param {Object} event - EncryptedMediaEvent [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent]
+ */
+DRMManager.prototype._handleEncrypted = function(event){
+    this._checkSrcSessions();
+    // if we already have this same session setup, ignore this event;
+    if (this._hasSession(event.initData)) {
+        return;
+    }
+    this._sessions.push({ initData: event.initData });
+
+    // this can be removed once `configureCDMSupport` gets all DRM implementations
+    if (PARSE_PSSH_DURING_ENCRYPTED_EVENT && this.cdmSupport === null) {
+        this.cdmSupport = parsePSSHSupportFromInitData(event.initData);
+    }
+
+    var keySystemPromise;
+    // if mediakeys have not started
+    if (typeof this.mediaKeys === 'undefined') {
+        // TODO there is a better way to check/manage state instead of using undefined -> null as loading
+        // this will make sure things will not fire twice, since there is async that could be happening.
+        this.mediaKeys = null;
+        this._pendingSessions = [];
+
+        // create a promise chain of keySystem support
+        keySystemPromise = this._createKeySystemSupportChain()
+            .then(this._getCertificate.bind(this))
+            .then(function(keySystemAccess){
+                return keySystemAccess.createMediaKeys();
+            })
+            .then(this._setMediaKeys.bind(this))
+            .catch(function(err) {
+                this._handleError(checkErrorFormat(err));
+            }.bind(this));
+    }
+
+    this._addSession(event.initDataType, event.initData);
+    return keySystemPromise;
+};
+
+/**
+ * Stores and sets mediaKeys/certificate
+ * It will also create sessions for any sessions that are pending to be created
+ * @param {Object} createdMediaKeys - MediaKeys [https://www.w3.org/TR/encrypted-media/#dom-mediakeys]
+ */
+DRMManager.prototype._setMediaKeys = function(createdMediaKeys){
+    this.mediaKeys = createdMediaKeys;
+
+    if (this._certificate) {
+        this.setServerCertificate(certificate);
+    }
+    this._pendingSessions.forEach(function(pending){
+        this._createSessionRequest(pending.initDataType, pending.initData);
+    }.bind(this));
+    this._pendingSessions = [];
+    return this.video.setMediaKeys(this.mediaKeys);
+};
+
+/**
+ * Creates Sessions if MediaKeys is ready, otherwise it stores data
+ * to create session once the MediaKeys is ready.
+ * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
+ * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
+ */
+DRMManager.prototype._addSession = function(initDataType, initData){
+    if (this.mediaKeys) {
+        this._createSessionRequest(initDataType, initData)
+            .catch(function(err){
+                this._handleError(ERRORS.KEY_SESSION_CREATION);
+            }.bind(this));
+    } else {
+        this._pendingSessions.push({
+            initDataType: initDataType,
+            initData: initData
+        });
+    }
+};
+
+/**
+ * Creates key session, prepares event handling of sessions messages,
+ * and then generates a key session request.
+ * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
+ * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
+ */
+DRMManager.prototype._createSessionRequest = function(initDataType, initData){
+    var keySession = this.mediaKeys.createSession();
+    keySession.addEventListener('message', this._handleMessage.bind(this), false);
+    keySession.addEventListener('keystatuseschange', function(event) {
+        this._handleKeyStatusesChange(keySession, event, initData);
+    }.bind(this), false);
+    return keySession.generateRequest(initDataType, initData);
+};
+
+/**
+ * Handles the event of a key changing, will be used for expiring and removing
+ * key sessions.
+ * @param {Object} keySession - MediaKeySession [https://www.w3.org/TR/encrypted-media/#dom-mediakeysession]
+ * @param {Object} event - Event
+ * @param {ArrayBuffer} initData - ArrayBuffer [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
+ */
+DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, initData) {
+    var expired = false;
+
+    // based on https://www.w3.org/TR/encrypted-media/#example-using-all-events
+    keySession.keyStatuses.forEach(function(status, keyId){
+        switch (status) {
+            case 'expired':
+                // "All other keys in the session must have this status."
+                // https://www.w3.org/TR/encrypted-media/#dom-mediakeystatus-expired
+                expired = true;
+                break;
+            case 'internal-error':
+                // https://www.w3.org/TR/encrypted-media/#dom-mediakeystatus-internal-error
+                console.warn("Key status reported 'internal-error'. Leaving it open since we aren't sure it is fatal", event);
+                break;
+        }
+    });
+
+    if (expired) {
+        keySession.close().then(function(){
+            this._removeSession(initData);
+        }.bind(this));
+    }
+}
+
+/**
+ * Removes a session that matches initData
+ * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
+ */
+DRMManager.prototype._removeSession = function(initData) {
+    for (var i = 0; i < this._sessions.length; i++) {
+        var session = this._sessions[i];
+        if (session.initData === initData) {
+            this._sessions.splice(i, 1);
+            return;
+        }
+    }
+}
+
+/**
+ * Requests a certificate
+ * TODO: Still needs implementation for FairPlay Cert
+ * @param {Object} keySystemAccess - [https://www.w3.org/TR/encrypted-media/#dom-mediakeysystemaccess]
+ */
+DRMManager.prototype._getCertificate = function(keySystemAccess) {
+    this.selectedCDM = KEY_SYSTEMS_BY_STRING[keySystemAccess.keySystem];
+    return Promise.resolve(keySystemAccess);
+}
+
+/**
+ * Handles key session 'message' event and generates/updates
+ * license
+ * @param {Object} event - [https://www.w3.org/TR/encrypted-media/#dom-mediakeymessageevent]
+ */
+DRMManager.prototype._handleMessage = function(event) {
+    // grabs relevant session
+    var keySession = event.target;
+    this._generateLicense(event.message)
+        .then(function(license){
+            return keySession.update(license)
+                .catch(function(error) {
+                    return Promise.reject(ERRORS.SESSION_UPDATE);
+                });
+        })
+        .catch(function(error) {
+            this._handleError(checkErrorFormat(error));
+        }.bind(this));
+};
+
+/**
+ * Currently a ClearKey license generation
+ * @param {Object} message - Message returned from CDM message event
+ */
+DRMManager.prototype._generateLicense = function(message) {
+    if (this.selectedCDM === KEY_SYSTEMS.CLEAR_KEY) {
+        // clearkey implementation where KID is key
+        var request = JSON.parse(new TextDecoder().decode(message));
+        var keyObj = {
+            kty: 'oct',
+            alg: 'A128KW',
+            kid: request.kids[0],
+            k: request.kids[0]
+        };
+        var result = new TextEncoder().encode(JSON.stringify({
+            keys: [keyObj]
+        }));
+        return Promise.resolve(result);
+    } else {
+        var requestData = this._prepareLicenseRequest(message);
+        return fetchArrayBuffer(requestData.url, requestData.options)
+            .catch(function(error) {
+                return Promise.reject(ERRORS.LICENSE_REQUEST);
+            });
+    }
+};
+
+DRMManager.prototype._prepareLicenseRequest = function(message) {
+    var body = message;
+    var headers = {
+        customdata: TEST_AUTH_XML
+    };
+
+    // get additional data for specifics CDM license request calls
+    var additionalData = {};
+    if (this.selectedCDM === KEY_SYSTEMS.PLAYREADY) {
+        additionalData = PlayReady.licenseRequestData(message);
+    }
+
+    if (additionalData.body) {
+        body = additionalData.body;
+    }
+    if (additionalData.headers) {
+        headers = Object.assign(headers, additionalData.headers);
+    }
+
+    return {
+        url: this.selectedCDM.licenseUrl,
+        options: {
+            method: 'POST',
+            body: body,
+            headers: headers,
+        }
+    };
+}
+
+
+// SAFARI FAIRPLAY SUPPORT
+// untested since it does not allow for clearkey testing
+DRMManager.prototype._handleSafariEncrypted = function(event){
+    this._getSafariCertificate()
+        .then(this._setupSafariMediaKeys.bind(this, event))
+        .catch(function(err){
+            console.error('there was an error creating safari key', err);
+        })
+};
+
+// TODO: Fairplay Cert, once we have test video/BuyDRM
+DRMManager.prototype._getSafariCertificate = function(){
+    return Promise.resolve();
+};
+
+DRMManager.prototype._getSafariContentId = function(initData){
+    return getHostnameFromUri(uintArrayToString(initData));
+};
+
+/*
+    Safari Events for Fairplay [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
+
+    Notes:
+    - Depending on the Fairplay key version we plan on targetting,
+    'com.apple.fps.1_0' will need to concat initData and Certificate, where may not be necessary with 'com.apple.fps.2_0'
+
+    3 year old clearkey test, doesn't seem to work:
+    ClearKey (AES128-encrypted HLS)
+    https://github.com/WebKit/webkit/blob/master/LayoutTests/http/tests/media/clearkey/clear-key-hls-aes128.html
+
+    WORK IN PROGRESS
+*/
+
+/**
+ * Safari's 'encrypted' initialization event. This works to
+ * start initialization
+ * TODO: needs some work to be split up a bit more
+ * @param {Object} needKeyEvent - Similar to 'encrypted' event
+ */
+DRMManager.prototype._setupSafariMediaKeys = function(needKeyEvent){
+    return new Promise(function(resolve, reject) {
+        if (!this.video.webkitKeys){
+            // this.video.webkitSetMediaKeys(new window.WebkitMediaKeys(KEY_SYSTEMS.FAIRPLAY.keySystem));
+            this.video.webkitSetMediaKeys(new WebkitMediaKeys(KEY_SYSTEMS.CLEAR_KEY.keySystem));
+        }
+
+        if (!this.video.webkitKeys){
+            reject('Issue setting fairplay media keys');
+        }
+
+        // this may be needed for 1_0 it appears
+        // var keySession = this.video.webkitKeys.createSession(
+        //     'video/mp4',
+        //     concatInitDataIdAndCertificate(contentId, initData, cert));
+        var keySession = this.video.webkitKeys.createSession(
+            'video/mp4',
+            needKeyEvent.initData);
+
+        if (!keySession) {
+            return reject('Could not create key session');
+        }
+
+        keySession.contentId = contentId;
+        keySession.addEventListener('webkitkeymessage', function(keyMessageEvent){
+            // get license, and keySession.update()
+            this._getWebkitLicense(keyMessageEvent)
+                .then(function(license) {
+                    keySession.update(new Uint8Array(license));
+                })
+                .catch(function(err){
+                    reject(err);
+                });
+        });
+
+        keySession.addEventListener('webkitkeyadded', function(event){
+            resolve(event);
+        });
+
+        keySession.addEventListener('webkitkeyerror', function(event){
+            reject(event);
+        });
+    }.bind(this));
+};
+
+/**
+ * Get the webkit license
+ * @param {Object} keyMessageEvent - Message event from current session
+ */
+DRMManager.prototype._getWebkitLicense = function(keyMessageEvent) {
+    return Promise.reject('Non-development License is not implemented');
+};
+
+module.exports = DRMManager;
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// This is a temporary variable between using ClearKey, or Production.
+// ENV variable/test setup will be a better indicator in future
+var MODES = {
+    DEVELOPMENT: 'DEVELOPMENT',
+    PRODUCTION: 'PRODUCTION',
+};
+
+/**
+ * Note:
+ * There may need to be multiple uuids, I have seen there
+ * are two uuids for clearkey, but have only seen this one
+ * used on our content.
+ */
+
+var KEY_SYSTEMS = {
+    CLEAR_KEY: {
+        title: 'ClearKey',
+        keySystem: 'org.w3.clearkey',
+        uuid: '1077efec-c0b2-4d02-ace3-3c1e52e2fb4b',
+    },
+    FAIRPLAY: {
+        title: 'Fairplay',
+        keySystem: 'com.apple.fps.1_0',
+        uuid: null,
+    },
+    PLAYREADY: {
+        title: 'PlayReady',
+        keySystem: 'com.microsoft.playready',
+        licenseUrl: 'https://pr-keyos.licensekeyserver.com/core/rightsmanager.asmx',
+        uuid: '9a04f079-9840-4286-ab92-e65be0885f95',
+    },
+    WIDEVINE: {
+        title: 'Widevine',
+        keySystem: 'com.widevine.alpha',
+        licenseUrl: 'https://wv-keyos.licensekeyserver.com',
+        uuid: 'edef8ba9-79d6-4ace-a3c8-27dcd51d21ed',
+    },
+};
+
+var ALL_KEY_SYSTEMS = [
+    KEY_SYSTEMS.WIDEVINE,
+    KEY_SYSTEMS.PLAYREADY,
+    KEY_SYSTEMS.FAIRPLAY,
+    KEY_SYSTEMS.CLEAR_KEY,
+];
+
+var KEY_SYSTEMS_BY_STRING = {
+    'com.widevine.alpha': KEY_SYSTEMS.WIDEVINE,
+    'com.microsoft.playready': KEY_SYSTEMS.PLAYREADY,
+    'com.apple.fps.1_0': KEY_SYSTEMS.FAIRPLAY,
+    'org.w3.clearkey': KEY_SYSTEMS.CLEAR_KEY,
+};
+
+// This is an auth.xml in base64, this works with sample data provided by BuyDRM.
+// The other one is currently in use since it does not allow testing in
+// Windows VM, but this should be used/tested when on Windows machine
+// var TEST_AUTH_XML = 'PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxLZXlPU0F1dGhlbnRpY2F0aW9uWE1MPjxEYXRhPjxXaWRldmluZVBvbGljeSBmbF9DYW5QZXJzaXN0PSJmYWxzZSIgZmxfQ2FuUGxheT0idHJ1ZSIvPjxXaWRldmluZUNvbnRlbnRLZXlTcGVjIFRyYWNrVHlwZT0iSEQiPjxTZWN1cml0eUxldmVsPjE8L1NlY3VyaXR5TGV2ZWw+PC9XaWRldmluZUNvbnRlbnRLZXlTcGVjPjxGYWlyUGxheVBvbGljeSBwZXJzaXN0ZW50PSJmYWxzZSIvPjxMaWNlbnNlIHR5cGU9InNpbXBsZSIvPjxHZW5lcmF0aW9uVGltZT4yMDE4LTAyLTIyIDIwOjU2OjI5LjAwMDwvR2VuZXJhdGlvblRpbWU+PEV4cGlyYXRpb25UaW1lPjIwMTgtMDQtMjIgMjA6NTY6MjkuMDAwPC9FeHBpcmF0aW9uVGltZT48VW5pcXVlSWQ+MmQ2ZGVjZjRmOTJkNmNhNDRkMjA5MTE4NmI0YzM3YWY8L1VuaXF1ZUlkPjxSU0FQdWJLZXlJZD5hMTdmZDMzZDM4NDNkZjliMTc2NzljY2Y1MGE0MTliMjwvUlNBUHViS2V5SWQ+PC9EYXRhPjxTaWduYXR1cmU+Q3hxUTFwOUtRVi9rSlRCdXdsK2QwTnVEa25uWnBqdktHY08zOEZ6MFh5RXBtajlPV0h0eCtvdVJPT3pUWDdEdkU1elU5SG50MXlWZEc4UUZYc043WSsvUHRWVDZuV1NFdWNwL1gzdit3MWFadG1leFpCa1BDc3g4VXhxZ1IvT1JlWmJmM1VXNUxMYXZSVkZXdzUzeWJGUUhsK2I3S2lxVTBpaHFTd3BCZ3ROenJIVnRKYXFXeHRmR2xRRXdtZ0ZZcG5aM3NUdHAvVDNCeCtRMjRKTHhOSjFhb3p3elhwdGlNaTE0alhLU2c1MXdOWWh6cm84YTJrVml2UzdRbTE0SEFCUnRGb1lCbjhGUldmanhHNTlXVk1IUlhUTGRJUlR6dDJmVFR5dUhTSS9xRkpjYmZ5VmpaSmRTeVlFOEJmTDZvUlNXdkdRMkVTYlJHbFZGTysyMXJRPT08L1NpZ25hdHVyZT48L0tleU9TQXV0aGVudGljYXRpb25YTUw+Cg==';
+
+// This one has 'PlayEnable', allows PlayReady to work on Edge in Windows VM
+var TEST_AUTH_XML = 'PEtleU9TQXV0aGVudGljYXRpb25YTUw+PERhdGE+PEdlbmVyYXRpb25UaW1lPjIwMTgtMDMtMDEgMTk6MjE6NTQuMTEzPC9HZW5lcmF0aW9uVGltZT48RXhwaXJhdGlvblRpbWU+MjAxOC0wNS0wMSAxOToyMTo1NC4xMTQ8L0V4cGlyYXRpb25UaW1lPjxVbmlxdWVJZD5iZDc4OTk2YzU5NTg0OTNmYmQ2YTcwMzI3YzVlNWI1NzwvVW5pcXVlSWQ+PFJTQVB1YktleUlkPmExN2ZkMzNkMzg0M2RmOWIxNzY3OWNjZjUwYTQxOWIyPC9SU0FQdWJLZXlJZD48V2lkZXZpbmVQb2xpY3kgZmxfQ2FuUGxheT0idHJ1ZSIgZmxfQ2FuUGVyc2lzdD0iZmFsc2UiIC8+PFdpZGV2aW5lQ29udGVudEtleVNwZWMgVHJhY2tUeXBlPSJIRCI+PFNlY3VyaXR5TGV2ZWw+MTwvU2VjdXJpdHlMZXZlbD48L1dpZGV2aW5lQ29udGVudEtleVNwZWM+PEZhaXJQbGF5UG9saWN5IC8+PExpY2Vuc2UgdHlwZT0ic2ltcGxlIj48UGxheT48SWQ+YTU0NWRiNTUtNDQ3Ny00ODhhLTlhNzEtMWNkZGUyMzNkZGUxPC9JZD48L1BsYXk+PC9MaWNlbnNlPjxQbGF5IGlkPSJhNTQ1ZGI1NS00NDc3LTQ4OGEtOWE3MS0xY2RkZTIzM2RkZTEiPjxFbmFibGVycz48SWQ+Nzg2NjI3ZDgtYzJhNi00NGJlLThmODgtMDhhZTI1NWIwMWE3PC9JZD48L0VuYWJsZXJzPjwvUGxheT48L0RhdGE+PFNpZ25hdHVyZT5HTVEzbFF2Q0I3SVo5ekY3b3U4eVJmMHdYTmttZXV0NitEdXVBY0pwMnJ3L3ZaTSt6ZllnOU1GbkpJa0N6cTdWb1p3a3hTdUQ1K0FSV2lvMm9wMTVRVHBlVHVubHZ2MktJYTRHM3p5Ukc5MmkzZk5qbmlFSTVROFVJeXcwMmxIVjEyZkU1eFdSTlJhc255azlISlFHSUlqWkIxazFad2RUMmpNVTNoK1JSNjFXdUpRcjlHVzgxSXdHYld3dGtlOSs3aXRxZ2Qxa2JmbGR4aHRnK2RnQW5YM3pnVzlDOFRoNm8vdnVBVUI3dVdBSFlGVWc2WEQrYTBteHpPQ29DZnh2aFg3VlQ3YzhWa1RKQzE1dCtTUmgyTUlpUUdidzNtRlNZWHpvaUljc2tFbnBtakVmWFJnazZxMFQxR1VJQTN4MXM4US8rS2RsMXg2WWpmV2UvOUltM3c9PTwvU2lnbmF0dXJlPjwvS2V5T1NBdXRoZW50aWNhdGlvblhNTD4=';
+
+var ENCRYPTION_TYPES = {
+    CENC: 'cenc',
+    CBCS: 'cbcs',
+};
+
+var SUPPORTED_DRM_MAP = {
+    ClearKey_CENC: {
+        cdm: KEY_SYSTEMS.CLEAR_KEY,
+        type: ENCRYPTION_TYPES.CENC,
+        value: 1,
+    },
+    ClearKey_CBCS: {
+        cdm: KEY_SYSTEMS.CLEAR_KEY,
+        type: ENCRYPTION_TYPES.CBCS,
+        value: 2,
+    },
+    Widevine_CENC: {
+        cdm: KEY_SYSTEMS.WIDEVINE,
+        type: ENCRYPTION_TYPES.CENC,
+        value: 4,
+    },
+    Widevine_CBCS: {
+        cdm: KEY_SYSTEMS.WIDEVINE,
+        type: ENCRYPTION_TYPES.CBCS,
+        value: 8,
+    },
+    PlayReady_CENC: {
+        cdm: KEY_SYSTEMS.PLAYREADY,
+        type: ENCRYPTION_TYPES.CENC,
+        value: 16,
+    },
+    PlayReady_CBCS: {
+        cdm: KEY_SYSTEMS.PLAYREADY,
+        type: ENCRYPTION_TYPES.CBCS,
+        value: 32,
+    },
+    FairPlay_CENC: {
+        cdm: KEY_SYSTEMS.FAIRPLAY,
+        type: ENCRYPTION_TYPES.CENC,
+        value: 64,
+    },
+    FairPlay_CBCS: {
+        cdm: KEY_SYSTEMS.FAIRPLAY,
+        type: ENCRYPTION_TYPES.CBCS,
+        value: 128,
+    },
+};
+
+var DRM_SUPPORT_BY_BROWSER = {
+    'chrome': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
+    'firefox': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
+    'edge': [SUPPORTED_DRM_MAP.PlayReady_CENC],
+    'safari': [SUPPORTED_DRM_MAP.FairPlay_CBCS]
+};
+var SUPPORTED_BROWSERS = ['chrome', 'firefox', 'edge', 'safari'];
+
+// Turns mapping above into an iterable array (usually would use lodash or Object.values)
+var DRM_SUPPORT_VALUES = [
+    SUPPORTED_DRM_MAP.ClearKey_CENC,
+    SUPPORTED_DRM_MAP.ClearKey_CBCS,
+    SUPPORTED_DRM_MAP.Widevine_CENC,
+    SUPPORTED_DRM_MAP.Widevine_CBCS,
+    SUPPORTED_DRM_MAP.PlayReady_CENC,
+    SUPPORTED_DRM_MAP.PlayReady_CBCS,
+    SUPPORTED_DRM_MAP.FairPlay_CENC,
+    SUPPORTED_DRM_MAP.FairPlay_CBCS,
+];
+
+var DEFAULT_AUDIO_CAPABILITIES = [{
+    "contentType": 'audio/mp4;codecs="mp4a.40.2"'
+}];
+var DEFAULT_VIDEO_CAPABILITIES = [{
+    "contentType": 'video/mp4;codecs="avc1.42E01E"'
+}];
+
+var NO_CDM_SUPPORT_ERROR = {
+    code: 4,
+    message: 'Your browser does not support any DRM Content Decryption Modules',
+};
+
+var SESSION_UPDATE_ERROR = {
+    code: 4,
+    message: 'There was an issue while updating DRM License',
+};
+
+var LICENSE_REQUEST_ERROR = {
+    code: 4,
+    message: 'Error while requesting DRM license',
+};
+
+var KEY_SESSION_CREATION_ERROR = {
+    code: 4,
+    message: 'Error while requesting DRM license',
+};
+
+var NO_PSSH_FOUND_ERROR = {
+    code: 4,
+    message: "Unable to find valid CDM support on media",
+};
+
+var UNCAUGHT_ERROR = {
+    code: 4,
+    message: 'An uncaught error occurred',
+};;
+
+var ERRORS = {
+    NO_CDM_SUPPORT: NO_CDM_SUPPORT_ERROR,
+    SESSION_UPDATE: SESSION_UPDATE_ERROR,
+    LICENSE_REQUEST: LICENSE_REQUEST_ERROR,
+    KEY_SESSION_CREATION: KEY_SESSION_CREATION_ERROR,
+    NO_PSSH_FOUND: NO_PSSH_FOUND_ERROR,
+    UNCAUGHT_ERROR: UNCAUGHT_ERROR,
+};
+
+module.exports = {
+    MODES: MODES,
+    KEY_SYSTEMS: KEY_SYSTEMS,
+    KEY_SYSTEMS_BY_STRING: KEY_SYSTEMS_BY_STRING,
+    TEST_AUTH_XML: TEST_AUTH_XML,
+    ENCRYPTION_TYPES: ENCRYPTION_TYPES,
+    SUPPORTED_DRM_MAP: SUPPORTED_DRM_MAP,
+    DRM_SUPPORT_BY_BROWSER: DRM_SUPPORT_BY_BROWSER,
+    DRM_SUPPORT_VALUES: DRM_SUPPORT_VALUES,
+    ALL_KEY_SYSTEMS: ALL_KEY_SYSTEMS,
+    SUPPORTED_BROWSERS: SUPPORTED_BROWSERS,
+    DEFAULT_VIDEO_CAPABILITIES: DEFAULT_VIDEO_CAPABILITIES,
+    DEFAULT_AUDIO_CAPABILITIES: DEFAULT_AUDIO_CAPABILITIES,
+    ERRORS: ERRORS,
+};
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var EventEmiter = __webpack_require__(3);
+var MediaSink = __webpack_require__(4).MediaSink;
 var Browser = __webpack_require__(10).browser;
 var WorkerMessage = __webpack_require__(13);
 var ClientMessage = __webpack_require__(14);
+var DRMManager = __webpack_require__(0);
 
 // Export events and states to public consumers
 var PlayerEvent = exports.PlayerEvent = __webpack_require__(15);
@@ -372,6 +1149,12 @@ MediaPlayer.prototype.getNetworkProfile = function () {
 
 MediaPlayer.prototype.getABSStats = function () {
     return this._state.absStats;
+}
+
+// This returns a promise that resolves into a bitmask value
+// found in SUPPORTED_DRM_MAP in drm/constants.js
+MediaPlayer.prototype.getCDMCapabilities = function() {
+    return DRMManager.CDMCapabilitiesFeatureCheck();
 }
 
 // private helpers
@@ -699,7 +1482,7 @@ function getClientTrackingInfo() {
 
 
 /***/ }),
-/* 1 */
+/* 3 */
 /***/ (function(module, exports) {
 
 // Copyright Joyent, Inc. and other Node contributors.
@@ -1007,10 +1790,10 @@ function isUndefined(arg) {
 
 
 /***/ }),
-/* 2 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var DRMManager = __webpack_require__(4);
+/* WEBPACK VAR INJECTION */(function(global) {var DRMManager = __webpack_require__(0);
 var Queue = __webpack_require__(8);
 var Promise = global.Promise ? global.Promise : __webpack_require__(9);
 var VTTCue = global.VTTCue ? global.VTTCue : global.TextTrackCue;
@@ -1057,6 +1840,7 @@ var MediaSink = exports.MediaSink = function MediaSink(config) {
  * Prepare for video playback
  */
 MediaSink.prototype.configure = function (track) {
+    this._drmManager.configureCDMSupport(track.protectionData);
     // Add a native source directly
     if (track.src) {
         this._video.src = track.src;
@@ -1562,10 +2346,10 @@ SafeSourceBuffer.prototype._updating = function () {
     return (!this._srcBuf || this._srcBuf.updating || this._video.error !== null);
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports) {
 
 var g;
@@ -1592,750 +2376,12 @@ module.exports = g;
 
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Constants = __webpack_require__(5);
-var Utils = __webpack_require__(6);
-var PlayReady = __webpack_require__(7);
+var Constants = __webpack_require__(1);
 
-//setup constants/utils
-var MODES = Constants.MODES;
-var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
-var KEY_SYSTEMS_BY_STRING = Constants.KEY_SYSTEMS_BY_STRING;
-var TEST_LICENSE = Constants.TEST_LICENSE;
-var ENCRYPTION_TYPES = Constants.ENCRYPTION_TYPES;
-var SUPPORTED_DRM_MAP = Constants.SUPPORTED_DRM_MAP;
-var DRM_SUPPORT_BY_BROWSER = Constants.DRM_SUPPORT_BY_BROWSER;
-var DRM_SUPPORT_VALUES = Constants.DRM_SUPPORT_VALUES;
-var DEVELOPMENT_CDMS = Constants.DEVELOPMENT_CDMS;
-var STANDARD_CDMS = Constants.STANDARD_CDMS;
-var SUPPORTED_BROWSERS = Constants.SUPPORTED_BROWSERS;
-var DEFAULT_AUDIO_CAPABILITIES = Constants.DEFAULT_AUDIO_CAPABILITIES;
-var DEFAULT_VIDEO_CAPABILITIES = Constants.DEFAULT_VIDEO_CAPABILITIES;
-var arrayBuffersEqual = Utils.arrayBuffersEqual;
-var getHostnameFromUri = Utils.getHostnameFromUri;
-var arrayBufferFrom = Utils.arrayBufferFrom;
-var uintArrayToString = Utils.uintArrayToString;
-var fetchArrayBuffer = Utils.fetchArrayBuffer;
-
-var ERRORS = Constants.ERRORS;
-
-// When using this fetch shim, FF loses support for response.arrayBuffer();
-// not sure if I should use a different shim like `github/fetch` for this instead
-// current browser support: https://caniuse.com/#feat=fetch
-// var fetch = require('./fetch'); // get fetch or fetchShim
-
-/* TODO Robustness levels for Chrome best practices
-    Spec notes that:
-        robustness of type DOMString, defaulting to ""
-        The robustness level associated with the content type.
-        The empty string indicates that any ability to decrypt
-        and decode the content type is acceptable.
-
-    If we get requirements, we can set it to one of the settings below:
-    https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf
-    Definition           EME Level     Widevine Device Security Level
-    SW_SECURE_CRYPTO     1             3
-    SW_SECURE_DECODE     2             3
-    HW_SECURE_CRYPTO     3             2
-    HW_SECURE_DECODE     4             1
-    HW_SECURE_ALL        5             1
-*/
-
-// this is only used for W3C spec following EME feature check
-var supportedConfig = [{
-  "initDataTypes": [ENCRYPTION_TYPES.CENC],
-  "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
-  "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
-}];
-
-/**
- * DRMManager sets up and handles media that contains DRM encryption
- * @param {Object} config
- * @param {HTMLElement} config.video - video element
- * @param {function(MediaError)} config.onerror - video error with error code
- */
-var DRMManager = function(config) {
-    this.video = config.video;
-    this.config = {
-        env: MODES.DEVELOPMENT
-        // env: MODES.PRODUCTION
-    };
-    this.selectedCDM = null;
-    this.mediaKeys = undefined; // we will reserve null
-    this.initialized = false;
-    this._handleError = config.onerror;
-    this._certificate = null;
-    this._currentSrc = null;
-    this._pendingSessions = [];
-    this._sessions = [];
-
-    this._init();
-};
-
-/**
- * Check Browser CDM Capabilities
- * Based on the recommendations of MDN, a feature check could result in
- * 'user-visible effects such as asking for permission to access one or more
- * system resources.' It also would need to be an async check.
- * @param {string} browserName - browser name
- */
-DRMManager.CDMCapabilitiesByBrowser = function(browserName) {
-    if (DRM_SUPPORT_BY_BROWSER[browserName]) {
-        return DRM_SUPPORT_BY_BROWSER[browserName].reduce(function(total, drm) {
-            var value = drm ? drm.value : 0;
-            return total + value;
-        }, 0);
-    } else {
-        // TODO: may want to warn/error here, since browser settings was not found
-        return 0;
-    }
-};
-
-/**
- * Used to create the hardcoded bitmask map in 'capability.js'
- * This helper saves workers from importing this entire file to
- * use constants relevant to only DRM.
- * @param {Array} browsers
- */
-DRMManager.DRMBrowserSupportMapping = function(browsers) {
-    var browserMapping = {};
-    SUPPORTED_BROWSERS.forEach(function(browserName) {
-        browserMapping[browserName] = DRMManager.CDMCapabilitiesByBrowser(browserName);
-    });
-    return browserMapping;
-};
-
-/*  Feature check of browsers capabilities
-    Notes: This is more accurate than checking by browser, but currently not used because:
-        1. It has to be async, navigator.requestMediaKeySystemAccess returns a promise, which makes it hard to make a constant.
-        2. MDN web docs don't seem to be very keen on using except when necessary:
-            From: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess
-            "This method may have user-visible effects such as asking for permission to access one or more system resources. Consider that when deciding when to call requestMediaKeySystemAccess(); you don't want those requests to happen at inconvenient times. As a general rule, this function should be called only when it's about time to create and use a MediaKeys object by calling the returned MediaKeySystemAccess object's createMediaKeys() method."
-*/
-DRMManager.CDMCapabilitiesFeatureCheck = function() {
-    var checkSupported = function(settings) {
-        var config = [{
-            "initDataTypes": [settings.type],
-            "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
-            "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
-        }]
-        return navigator.requestMediaKeySystemAccess(settings.cdm.keySystem, config)
-            .then(function() {
-                return settings;
-            })
-            .catch(function() {
-                // not a supported type
-            });
-    };
-
-    var checkSupportedSafari = function(settings) {
-        // Apple devices only support 'cbcs'
-        // fMP4 sample encryption which is specified in ISO/IEC 23001:7 2016, Common Encryption in ISO BMFF [CENC]. Apple devices only support 'cbcs', which is specified in CENC Section 10.4. [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
-        if (settings.type !== ENCRYPTION_TYPES.CBCS){
-            return Promise.resolve(undefined);
-        } else {
-            try {
-                return WebKitMediaKeys.isTypeSupported(settings.cdm.keySystem)
-                    ? Promise.resolve(settings)
-                    : Promise.resolve(undefined);
-            } catch(err) {
-                return Promise.resolve(undefined);
-            }
-        }
-    };
-
-    var promiseRequests;
-    if (navigator.requestMediaKeySystemAccess) {
-        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
-            return checkSupported(settings);
-        });
-    } else if (WebKitMediaKeys) {
-        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
-            return checkSupportedSafari(settings);
-        });
-    }
-    return Promise.all(promiseRequests)
-        .then(function(results){
-            console.log('finished all browser requests', results);
-            // results is an array of SUPPORTED_DRM_MAP values or undefined if not supported
-            return results.reduce(function(memo, result){
-                var value = result ? result.value : 0;
-                return memo + value;
-            }, 0);
-        });
-}
-/**
- * Initializes instance, and adds 'encrypted' handlers
- * to support DRM functionality
- */
-DRMManager.prototype._init = function() {
-    this._checkSrcSessions();
-    this.video.addEventListener('encrypted', this._handleEncrypted.bind(this), false);
-    this.video.addEventListener('webkitneedkey', this._handleSafariEncrypted.bind(this), false);
-};
-
-/**
- * Checks to see if system is already handling
- * a session that matches initData
- * @param {ArrayBuffer} initData
- */
-DRMManager.prototype._hasSession = function(initData) {
-    for (var i = 0; i < this._sessions.length; i++) {
-        var session = this._sessions[i];
-        if (!session.initData) continue;
-        if (arrayBuffersEqual(arrayBufferFrom(session.initData), arrayBufferFrom(initData))) {
-            return true;
-        }
-    }
-    return false;
-};
-
-/**
- * Clears out sessions when video source changes.
- * TODO: Our system currently doesn't not change the src, but may need
- * to clear out sessions at some point?
- */
-DRMManager.prototype._checkSrcSessions = function() {
-    var src = this.video.src;
-    if (src !== this._currentSrc) {
-        this._currentSrc = src;
-        this._sessions = [];
-    }
-};
-
-/**
- * Builds a promise catch chain to feature detect a keysystem that works.
- * This will get refactored once we have real systems working and we know
- * which format is requested/returned
- */
-DRMManager.prototype._createKeySystemSupportChain = function() {
-    var promise;
-    var CDMList = this.config.env === MODES.DEVELOPMENT
-        ? DEVELOPMENT_CDMS
-        : STANDARD_CDMS;
-    CDMList.forEach(function(cdm){
-        if (!promise) {
-            promise = navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
-        } else {
-            promise = promise.catch(function(e) {
-                return navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
-            });
-        }
-    });
-
-    promise = promise.catch(function() {
-        return Promise.reject(ERRORS.NO_CDM_SUPPORT);
-    });
-
-    return promise;
-}
-
-/**
- * Handles embeded DRM in initial video file
- * @param {Object} event - EncryptedMediaEvent [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent]
- */
-DRMManager.prototype._handleEncrypted = function(event){
-    console.log('handling encrypted');
-    this._checkSrcSessions();
-    // if we already have this same session setup, ignore this event;
-    if (this._hasSession(event.initData)) {
-        console.log("already have session setup, ignoring 'encryped' event");
-        return;
-    }
-    this._sessions.push({ initData: event.initData });
-
-    var keySystemPromise;
-    // if mediakeys have not started
-    if (typeof this.mediaKeys === 'undefined') {
-        // TODO there is a better way to check/manage state instead of using undefined -> null as loading
-        // this will make sure things will not fire twice, since there is async that could be happening.
-        this.mediaKeys = null;
-        this._pendingSessions = [];
-
-        // create a promise chain of keySystem support
-        keySystemPromise = this._createKeySystemSupportChain()
-            .then(this._getCertificate.bind(this))
-            .then(function(keySystemAccess){
-                return keySystemAccess.createMediaKeys();
-            })
-            .then(this._setMediaKeys.bind(this))
-            .catch(function(err) {
-                this._handleError(err);
-            }.bind(this));
-    }
-
-    this._addSession(event.initDataType, event.initData);
-    return keySystemPromise;
-};
-
-/**
- * Stores and sets mediaKeys/certificate
- * It will also create sessions for any sessions that are pending to be created
- * @param {Object} createdMediaKeys - MediaKeys [https://www.w3.org/TR/encrypted-media/#dom-mediakeys]
- */
-DRMManager.prototype._setMediaKeys = function(createdMediaKeys){
-    this.mediaKeys = createdMediaKeys;
-
-    if (this._certificate) {
-        this.setServerCertificate(certificate);
-    }
-    this._pendingSessions.forEach(function(pending){
-        console.log('creating session during pending', pending);
-        this._createSessionRequest(pending.initDataType, pending.initData);
-    }.bind(this));
-    this._pendingSessions = [];
-    return this.video.setMediaKeys(this.mediaKeys);
-};
-
-/**
- * Creates Sessions if MediaKeys is ready, otherwise it stores data
- * to create session once the MediaKeys is ready.
- * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
- * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
- */
-DRMManager.prototype._addSession = function(initDataType, initData){
-    if (this.mediaKeys) {
-        this._createSessionRequest(initDataType, initData)
-            .catch(function(err){
-                this._handleError({
-                    code: 4,
-                    message: 'There was an issue creating a session request'
-                });
-            }.bind(this));
-    } else {
-        this._pendingSessions.push({
-            initDataType: initDataType,
-            initData: initData
-        });
-    }
-};
-
-/**
- * Creates key session, prepares event handling of sessions messages,
- * and then generates a key session request.
- * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
- * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
- */
-DRMManager.prototype._createSessionRequest = function(initDataType, initData){
-    var keySession = this.mediaKeys.createSession();
-    keySession.addEventListener('message', this._handleMessage.bind(this), false);
-    keySession.addEventListener('keystatuseschange', function(event) {
-        this._handleKeyStatusesChange(keySession, event, initData);
-    }.bind(this), false);
-    return keySession.generateRequest(initDataType, initData);
-};
-
-/**
- * Handles the event of a key changing, will be used for expiring and removing
- * key sessions.
- * @param {Object} keySession - MediaKeySession [https://www.w3.org/TR/encrypted-media/#dom-mediakeysession]
- * @param {Object} event - Event
- * @param {ArrayBuffer} initData - ArrayBuffer [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
- */
-DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, initData) {
-    var expired = false;
-
-    // based on https://www.w3.org/TR/encrypted-media/#example-using-all-events
-    keySession.keyStatuses.forEach(function(status, keyId){
-        switch (status) {
-            case 'expired':
-                // "All other keys in the session must have this status."
-                // https://www.w3.org/TR/encrypted-media/#dom-mediakeystatus-expired
-                expired = true;
-                break;
-            case 'internal-error':
-                // https://www.w3.org/TR/encrypted-media/#dom-mediakeystatus-internal-error
-                console.warn("Key status reported 'internal-error'. Leaving it open since we aren't sure it is fatal", event);
-                break;
-        }
-    });
-
-    if (expired) {
-        console.log('found expired keySession, removing');
-        keySession.close().then(function(){
-            this._removeSession(initData);
-        }.bind(this));
-    }
-}
-
-/**
- * Removes a session that matches initData
- * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
- */
-DRMManager.prototype._removeSession = function(initData) {
-    for (var i = 0; i < this._sessions.length; i++) {
-        var session = this._sessions[i];
-        if (session.initData === initData) {
-            this._sessions.splice(i, 1);
-            return;
-        }
-    }
-}
-
-/**
- * Requests a certificate
- * TODO: Still needs implementation for FairPlay Cert
- * @param {Object} keySystemAccess - [https://www.w3.org/TR/encrypted-media/#dom-mediakeysystemaccess]
- */
-DRMManager.prototype._getCertificate = function(keySystemAccess) {
-    this.selectedCDM = KEY_SYSTEMS_BY_STRING[keySystemAccess.keySystem];
-    return Promise.resolve(keySystemAccess);
-}
-
-/**
- * Handles key session 'message' event and generates/updates
- * license
- * @param {Object} event - [https://www.w3.org/TR/encrypted-media/#dom-mediakeymessageevent]
- */
-DRMManager.prototype._handleMessage = function(event) {
-    // grabs relevant session
-    var keySession = event.target;
-    this._generateLicense(event.message)
-        .then(function(license){
-            return keySession.update(license)
-                .catch(function(error) {
-                    return Promise.reject(ERRORS.SESSION_UPDATE);
-                });
-        })
-        .catch(function(error) {
-            this._handleError(error);
-        }.bind(this));
-};
-
-/**
- * Currently a ClearKey license generation
- * @param {Object} message - Message returned from CDM message event
- */
-DRMManager.prototype._generateLicense = function(message) {
-    if (this.config.env === MODES.DEVELOPMENT) {
-        // clearkey implementation where KID is key
-        var request = JSON.parse(new TextDecoder().decode(message));
-        var keyObj = {
-            kty: 'oct',
-            alg: 'A128KW',
-            kid: request.kids[0],
-            k: request.kids[0]
-        };
-        var result = new TextEncoder().encode(JSON.stringify({
-            keys: [keyObj]
-        }));
-        return Promise.resolve(result);
-    } else {
-        var requestData = this._prepareLicenseRequest(message);
-        return fetchArrayBuffer(requestData.url, requestData.options)
-            .catch(function(error) {
-                return Promise.reject(ERRORS.LICENSE_REQUEST);
-            });
-    }
-};
-
-DRMManager.prototype._prepareLicenseRequest = function(message) {
-    var body = message;
-    var headers = {
-        customdata: TEST_LICENSE
-    };
-
-    // get additional data for specifics CDM license request calls
-    var additionalData = {};
-    if (this.selectedCDM === KEY_SYSTEMS.PLAYREADY) {
-        additionalData = PlayReady.licenseRequestData(message);
-    }
-
-    if (additionalData.body) {
-        body = additionalData.body;
-    }
-    if (additionalData.headers) {
-        headers = Object.assign(headers, additionalData.headers);
-    }
-
-    return {
-        url: this.selectedCDM.licenseUrl,
-        options: {
-            method: 'POST',
-            body: body,
-            headers: headers,
-        }
-    };
-}
-
-
-// SAFARI FAIRPLAY SUPPORT
-// untested since it does not allow for clearkey testing
-DRMManager.prototype._handleSafariEncrypted = function(event){
-    console.log('handling safari needkey event');
-    this._getSafariCertificate()
-        .then(this._setupSafariMediaKeys.bind(this, event))
-        .catch(function(err){
-            console.error('there was an error creating safari key', err);
-        })
-};
-
-// TODO: Fairplay Cert, once we have test video/BuyDRM
-DRMManager.prototype._getSafariCertificate = function(){
-    return Promise.resolve();
-};
-
-DRMManager.prototype._getSafariContentId = function(initData){
-    return getHostnameFromUri(uintArrayToString(initData));
-};
-
-/*
-    Safari Events for Fairplay [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
-
-    Notes:
-    - Depending on the Fairplay key version we plan on targetting,
-    'com.apple.fps.1_0' will need to concat initData and Certificate, where may not be necessary with 'com.apple.fps.2_0'
-
-    3 year old clearkey test, doesn't seem to work:
-    ClearKey (AES128-encrypted HLS)
-    https://github.com/WebKit/webkit/blob/master/LayoutTests/http/tests/media/clearkey/clear-key-hls-aes128.html
-
-    WORK IN PROGRESS
-*/
-
-/**
- * Safari's 'encrypted' initialization event. This works to
- * start initialization
- * TODO: needs some work to be split up a bit more
- * @param {Object} needKeyEvent - Similar to 'encrypted' event
- */
-DRMManager.prototype._setupSafariMediaKeys = function(needKeyEvent){
-    console.log('setting up Safari Key');
-    return new Promise(function(resolve, reject) {
-        if (!this.video.webkitKeys){
-            // this.video.webkitSetMediaKeys(new window.WebkitMediaKeys(KEY_SYSTEMS.FAIRPLAY.keySystem));
-            this.video.webkitSetMediaKeys(new WebkitMediaKeys(KEY_SYSTEMS.CLEAR_KEY.keySystem));
-        }
-
-        if (!this.video.webkitKeys){
-            reject('Issue setting fairplay media keys');
-        }
-
-        // this may be needed for 1_0 it appears
-        // var keySession = this.video.webkitKeys.createSession(
-        //     'video/mp4',
-        //     concatInitDataIdAndCertificate(contentId, initData, cert));
-        var keySession = this.video.webkitKeys.createSession(
-            'video/mp4',
-            needKeyEvent.initData);
-
-        if (!keySession) {
-            return reject('Could not create key session');
-        }
-
-        keySession.contentId = contentId;
-        keySession.addEventListener('webkitkeymessage', function(keyMessageEvent){
-            console.log('got webkit key message');
-            // get license, and keySession.update()
-            this._getWebkitLicense(keyMessageEvent)
-                .then(function(license) {
-                    keySession.update(new Uint8Array(license));
-                })
-                .catch(function(err){
-                    reject(err);
-                });
-        });
-
-        keySession.addEventListener('webkitkeyadded', function(event){
-            resolve(event);
-        });
-
-        keySession.addEventListener('webkitkeyerror', function(event){
-            reject(event);
-        });
-    }.bind(this));
-};
-
-/**
- * Get the webkit license
- * @param {Object} keyMessageEvent - Message event from current session
- */
-DRMManager.prototype._getWebkitLicense = function(keyMessageEvent) {
-    if (this.config.env === MODES.DEVELOPMENT) {
-        return Promise.resolve(this._generateLicense(keyMessageEvent.message));
-    } else {
-        return Promise.reject('Non-development License is not implemented');
-    }
-};
-
-module.exports = DRMManager;
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-// This is a temporary variable between using ClearKey, or Production.
-// ENV variable/test setup will be a better indicator in future
-var MODES = {
-    DEVELOPMENT: 'DEVELOPMENT',
-    PRODUCTION: 'PRODUCTION',
-};
-
-var KEY_SYSTEMS = {
-    CLEAR_KEY: {
-        title: 'ClearKey',
-        keySystem: 'org.w3.clearkey'
-    },
-    FAIRPLAY: {
-        title: 'Fairplay',
-        keySystem: 'com.apple.fps.1_0'
-    },
-    PLAYREADY: {
-        title: 'PlayReady',
-        keySystem: 'com.microsoft.playready',
-        licenseUrl: 'https://pr-keyos.licensekeyserver.com/core/rightsmanager.asmx',
-        // licenseUrl: 'https://pr-keyos.licensekeyserver.net/core/rightsmanager.asmx'
-    },
-    WIDEVINE: {
-        title: 'Widevine',
-        keySystem: 'com.widevine.alpha',
-        licenseUrl: 'https://wv-keyos.licensekeyserver.com',
-    },
-};
-
-var KEY_SYSTEMS_BY_STRING = {
-    'com.widevine.alpha': KEY_SYSTEMS.WIDEVINE,
-    'com.microsoft.playready': KEY_SYSTEMS.PLAYREADY,
-    'com.apple.fps.1_0': KEY_SYSTEMS.FAIRPLAY,
-    'org.w3.clearkey': KEY_SYSTEMS.CLEAR_KEY,
-};
-
-// var TEST_LICENSE = 'PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxLZXlPU0F1dGhlbnRpY2F0aW9uWE1MPjxEYXRhPjxXaWRldmluZVBvbGljeSBmbF9DYW5QZXJzaXN0PSJmYWxzZSIgZmxfQ2FuUGxheT0idHJ1ZSIvPjxXaWRldmluZUNvbnRlbnRLZXlTcGVjIFRyYWNrVHlwZT0iSEQiPjxTZWN1cml0eUxldmVsPjE8L1NlY3VyaXR5TGV2ZWw+PC9XaWRldmluZUNvbnRlbnRLZXlTcGVjPjxGYWlyUGxheVBvbGljeSBwZXJzaXN0ZW50PSJmYWxzZSIvPjxMaWNlbnNlIHR5cGU9InNpbXBsZSIvPjxHZW5lcmF0aW9uVGltZT4yMDE4LTAyLTIyIDIwOjU2OjI5LjAwMDwvR2VuZXJhdGlvblRpbWU+PEV4cGlyYXRpb25UaW1lPjIwMTgtMDQtMjIgMjA6NTY6MjkuMDAwPC9FeHBpcmF0aW9uVGltZT48VW5pcXVlSWQ+MmQ2ZGVjZjRmOTJkNmNhNDRkMjA5MTE4NmI0YzM3YWY8L1VuaXF1ZUlkPjxSU0FQdWJLZXlJZD5hMTdmZDMzZDM4NDNkZjliMTc2NzljY2Y1MGE0MTliMjwvUlNBUHViS2V5SWQ+PC9EYXRhPjxTaWduYXR1cmU+Q3hxUTFwOUtRVi9rSlRCdXdsK2QwTnVEa25uWnBqdktHY08zOEZ6MFh5RXBtajlPV0h0eCtvdVJPT3pUWDdEdkU1elU5SG50MXlWZEc4UUZYc043WSsvUHRWVDZuV1NFdWNwL1gzdit3MWFadG1leFpCa1BDc3g4VXhxZ1IvT1JlWmJmM1VXNUxMYXZSVkZXdzUzeWJGUUhsK2I3S2lxVTBpaHFTd3BCZ3ROenJIVnRKYXFXeHRmR2xRRXdtZ0ZZcG5aM3NUdHAvVDNCeCtRMjRKTHhOSjFhb3p3elhwdGlNaTE0alhLU2c1MXdOWWh6cm84YTJrVml2UzdRbTE0SEFCUnRGb1lCbjhGUldmanhHNTlXVk1IUlhUTGRJUlR6dDJmVFR5dUhTSS9xRkpjYmZ5VmpaSmRTeVlFOEJmTDZvUlNXdkdRMkVTYlJHbFZGTysyMXJRPT08L1NpZ25hdHVyZT48L0tleU9TQXV0aGVudGljYXRpb25YTUw+Cg==';
-
-var TEST_LICENSE = 'PEtleU9TQXV0aGVudGljYXRpb25YTUw+PERhdGE+PEdlbmVyYXRpb25UaW1lPjIwMTgtMDMtMDEgMTk6MjE6NTQuMTEzPC9HZW5lcmF0aW9uVGltZT48RXhwaXJhdGlvblRpbWU+MjAxOC0wNS0wMSAxOToyMTo1NC4xMTQ8L0V4cGlyYXRpb25UaW1lPjxVbmlxdWVJZD5iZDc4OTk2YzU5NTg0OTNmYmQ2YTcwMzI3YzVlNWI1NzwvVW5pcXVlSWQ+PFJTQVB1YktleUlkPmExN2ZkMzNkMzg0M2RmOWIxNzY3OWNjZjUwYTQxOWIyPC9SU0FQdWJLZXlJZD48V2lkZXZpbmVQb2xpY3kgZmxfQ2FuUGxheT0idHJ1ZSIgZmxfQ2FuUGVyc2lzdD0iZmFsc2UiIC8+PFdpZGV2aW5lQ29udGVudEtleVNwZWMgVHJhY2tUeXBlPSJIRCI+PFNlY3VyaXR5TGV2ZWw+MTwvU2VjdXJpdHlMZXZlbD48L1dpZGV2aW5lQ29udGVudEtleVNwZWM+PEZhaXJQbGF5UG9saWN5IC8+PExpY2Vuc2UgdHlwZT0ic2ltcGxlIj48UGxheT48SWQ+YTU0NWRiNTUtNDQ3Ny00ODhhLTlhNzEtMWNkZGUyMzNkZGUxPC9JZD48L1BsYXk+PC9MaWNlbnNlPjxQbGF5IGlkPSJhNTQ1ZGI1NS00NDc3LTQ4OGEtOWE3MS0xY2RkZTIzM2RkZTEiPjxFbmFibGVycz48SWQ+Nzg2NjI3ZDgtYzJhNi00NGJlLThmODgtMDhhZTI1NWIwMWE3PC9JZD48L0VuYWJsZXJzPjwvUGxheT48L0RhdGE+PFNpZ25hdHVyZT5HTVEzbFF2Q0I3SVo5ekY3b3U4eVJmMHdYTmttZXV0NitEdXVBY0pwMnJ3L3ZaTSt6ZllnOU1GbkpJa0N6cTdWb1p3a3hTdUQ1K0FSV2lvMm9wMTVRVHBlVHVubHZ2MktJYTRHM3p5Ukc5MmkzZk5qbmlFSTVROFVJeXcwMmxIVjEyZkU1eFdSTlJhc255azlISlFHSUlqWkIxazFad2RUMmpNVTNoK1JSNjFXdUpRcjlHVzgxSXdHYld3dGtlOSs3aXRxZ2Qxa2JmbGR4aHRnK2RnQW5YM3pnVzlDOFRoNm8vdnVBVUI3dVdBSFlGVWc2WEQrYTBteHpPQ29DZnh2aFg3VlQ3YzhWa1RKQzE1dCtTUmgyTUlpUUdidzNtRlNZWHpvaUljc2tFbnBtakVmWFJnazZxMFQxR1VJQTN4MXM4US8rS2RsMXg2WWpmV2UvOUltM3c9PTwvU2lnbmF0dXJlPjwvS2V5T1NBdXRoZW50aWNhdGlvblhNTD4=';
-
-var ENCRYPTION_TYPES = {
-    CENC: 'cenc',
-    CBCS: 'cbcs',
-};
-
-var SUPPORTED_DRM_MAP = {
-    ClearKey_CENC: {
-        cdm: KEY_SYSTEMS.CLEAR_KEY,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 1,
-    },
-    ClearKey_CBCS: {
-        cdm: KEY_SYSTEMS.CLEAR_KEY,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 2,
-    },
-    Widevine_CENC: {
-        cdm: KEY_SYSTEMS.WIDEVINE,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 4,
-    },
-    Widevine_CBCS: {
-        cdm: KEY_SYSTEMS.WIDEVINE,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 8,
-    },
-    PlayReady_CENC: {
-        cdm: KEY_SYSTEMS.PLAYREADY,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 16,
-    },
-    PlayReady_CBCS: {
-        cdm: KEY_SYSTEMS.PLAYREADY,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 32,
-    },
-    FairPlay_CENC: {
-        cdm: KEY_SYSTEMS.FAIRPLAY,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 64,
-    },
-    FairPlay_CBCS: {
-        cdm: KEY_SYSTEMS.FAIRPLAY,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 128,
-    },
-};
-
-var DRM_SUPPORT_BY_BROWSER = {
-    'chrome': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
-    'firefox': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
-    'edge': [SUPPORTED_DRM_MAP.PlayReady_CENC],
-    'safari': [SUPPORTED_DRM_MAP.FairPlay_CBCS]
-};
-var SUPPORTED_BROWSERS = ['chrome', 'firefox', 'edge', 'safari'];
-
-// Turns mapping above into an iterable array (usually would use lodash or Object.values)
-var DRM_SUPPORT_VALUES = [
-    SUPPORTED_DRM_MAP.ClearKey_CENC,
-    SUPPORTED_DRM_MAP.ClearKey_CBCS,
-    SUPPORTED_DRM_MAP.Widevine_CENC,
-    SUPPORTED_DRM_MAP.Widevine_CBCS,
-    SUPPORTED_DRM_MAP.PlayReady_CENC,
-    SUPPORTED_DRM_MAP.PlayReady_CBCS,
-    SUPPORTED_DRM_MAP.FairPlay_CENC,
-    SUPPORTED_DRM_MAP.FairPlay_CBCS,
-];
-
-// Testing constant for order to check, this will eventually come from video?
-// This is also just for browsers that support W3C standards, Safari is handled alone
-// and does not allow clearkey testing at the moment.
-var DEVELOPMENT_CDMS = [
-    KEY_SYSTEMS.CLEAR_KEY
-];
-
-var STANDARD_CDMS = [
-    KEY_SYSTEMS.PLAYREADY,
-    KEY_SYSTEMS.WIDEVINE,
-];
-
-var DEFAULT_AUDIO_CAPABILITIES = [{
-    "contentType": 'audio/mp4;codecs="mp4a.40.2"'
-}];
-var DEFAULT_VIDEO_CAPABILITIES = [{
-    "contentType": 'video/mp4;codecs="avc1.42E01E"'
-}];
-
-var NO_CDM_SUPPORT_ERROR = {
-    code: 4,
-    message: 'Your browser does not support any DRM Content Decryption Modules',
-};
-
-var SESSION_UPDATE_ERROR = {
-    code: 4,
-    message: 'There was an issue while updating DRM License',
-};
-
-var LICENSE_REQUEST_ERROR = {
-    code: 4,
-    message: 'Error while requesting DRM license',
-};
-
-var ERRORS = {
-    NO_CDM_SUPPORT: NO_CDM_SUPPORT_ERROR,
-    SESSION_UPDATE: SESSION_UPDATE_ERROR,
-    LICENSE_REQUEST: LICENSE_REQUEST_ERROR,
-};
-
-module.exports = {
-    MODES: MODES,
-    KEY_SYSTEMS: KEY_SYSTEMS,
-    KEY_SYSTEMS_BY_STRING: KEY_SYSTEMS_BY_STRING,
-    TEST_LICENSE: TEST_LICENSE,
-    ENCRYPTION_TYPES: ENCRYPTION_TYPES,
-    SUPPORTED_DRM_MAP: SUPPORTED_DRM_MAP,
-    DRM_SUPPORT_BY_BROWSER: DRM_SUPPORT_BY_BROWSER,
-    DRM_SUPPORT_VALUES: DRM_SUPPORT_VALUES,
-    DEVELOPMENT_CDMS: DEVELOPMENT_CDMS,
-    STANDARD_CDMS: STANDARD_CDMS,
-    SUPPORTED_BROWSERS: SUPPORTED_BROWSERS,
-    DEFAULT_VIDEO_CAPABILITIES: DEFAULT_VIDEO_CAPABILITIES,
-    DEFAULT_AUDIO_CAPABILITIES: DEFAULT_AUDIO_CAPABILITIES,
-    ERRORS: ERRORS,
-};
-
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
+var ALL_KEY_SYSTEMS = Constants.ALL_KEY_SYSTEMS;
 
 // some utils from https://github.com/videojs/videojs-contrib-eme/
 // should probably revise these if our needs differ
@@ -2379,6 +2425,206 @@ var getHostnameFromUri = function (uri) {
     return link.hostname;
 };
 
+/**
+ * Takes in array of PSSH data and returns KEY_SYSTEM objects
+ * that are supported.
+ *
+ * @param {Array} psshArrayBuffer
+ */
+var parsePSSHSupportFromInitData = function(initData) {
+    var uuids = parseAllPSSHData(initData);
+    return mapPSSHSystemIds(uuids);
+};
+
+/**
+ * Takes in array of PSSH data and returns KEY_SYSTEM objects
+ * that are supported.
+ *
+ * @param {Array} psshArrayBuffer
+ */
+var parsePSSHSupport = function(psshArrayBuffer) {
+    var uuids = psshArrayBuffer.map(parsePSSHList);
+    return mapPSSHSystemIds(uuids);
+}
+
+var mapPSSHSystemIds = function(uuids){
+    var supportedKeySystems = [];
+    uuids.forEach(function(uuid) {
+        ALL_KEY_SYSTEMS.forEach(function(ks) {
+            if (ks.uuid === uuid) {
+                supportedKeySystems.push(ks);
+            }
+        });
+    });
+    return supportedKeySystems;
+};
+
+/**
+ * Takes in PSSH box data and returns key system uuid
+ * This is from the Dash.js implementation to dynamically read
+ * media's CDM support
+ *
+ * @param {ArrayBuffer} data - event.initData
+ */
+var parsePSSHList = function(data) {
+    var uint8a = new Uint8Array(data);
+    var dv = new DataView(uint8a.buffer);
+    // first 4 bytes for size
+    var byteCursor = 4;
+
+    // verify PSSH
+    if (dv.getUint32(byteCursor) !== 0x70737368) {
+        byteCursor = nextBox;
+        console.warn('pssh was not verified')
+        return null;
+    }
+    byteCursor += 4;
+
+    /* Version must be 0 or 1 */
+    version = dv.getUint8(byteCursor);
+    if (version !== 0 && version !== 1) {
+        byteCursor = nextBox;
+        console.warn('pssh version must be 0 or 1')
+        return null;
+    }
+    byteCursor++;
+    byteCursor += 3; /* skip flags */
+
+    // 16-byte UUID/SystemID
+    systemID = '';
+    var i, val;
+    for (i = 0; i < 4; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 4;
+    systemID += '-';
+    for (i = 0; i < 2; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 2;
+    systemID += '-';
+    for (i = 0; i < 2; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 2;
+    systemID += '-';
+    for (i = 0; i < 2; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 2;
+    systemID += '-';
+    for (i = 0; i < 6; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 6;
+
+    return systemID.toLowerCase();
+};
+
+/**
+ * This is currently unused, but it allows you to pass in `encrypted`
+ * event.initData and it will return PSSH data by key system uuid
+ * This is from the Dash.js implementation to dynamically read
+ * media's CDM support
+ *
+ * @param {ArrayBuffer} data - event.initData
+ */
+var parseAllPSSHData = function(data) {
+    if (data === null)
+        return [];
+
+    var dv = new DataView(data.buffer || data); // data.buffer first for Uint8Array support
+    var done = false;
+    var uuids = [];
+
+    // TODO: Need to check every data read for end of buffer
+    var byteCursor = 0;
+    while (!done) {
+
+        var size,
+            nextBox,
+            version,
+            systemID,
+            psshDataSize;
+        var boxStart = byteCursor;
+
+        if (byteCursor >= dv.buffer.byteLength)
+            break;
+
+        /* Box size */
+        size = dv.getUint32(byteCursor);
+        nextBox = byteCursor + size;
+        byteCursor += 4;
+
+        /* Verify PSSH */
+        if (dv.getUint32(byteCursor) !== 0x70737368) {
+            byteCursor = nextBox;
+            continue;
+        }
+        byteCursor += 4;
+
+        /* Version must be 0 or 1 */
+        version = dv.getUint8(byteCursor);
+        if (version !== 0 && version !== 1) {
+            byteCursor = nextBox;
+            continue;
+        }
+        byteCursor++;
+
+        byteCursor += 3; /* skip flags */
+
+        // 16-byte UUID/SystemID
+        systemID = '';
+        var i, val;
+        for (i = 0; i < 4; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 4;
+        systemID += '-';
+        for (i = 0; i < 2; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 2;
+        systemID += '-';
+        for (i = 0; i < 2; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 2;
+        systemID += '-';
+        for (i = 0; i < 2; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 2;
+        systemID += '-';
+        for (i = 0; i < 6; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 6;
+
+        systemID = systemID.toLowerCase();
+
+        /* PSSH Data Size */
+        psshDataSize = dv.getUint32(byteCursor);
+        byteCursor += 4;
+
+        /* PSSH Data */
+        uuids.push(systemID);
+        byteCursor = nextBox;
+    }
+
+    return uuids;
+};
+
 var fetchArrayBuffer = function (url, options) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
@@ -2406,12 +2652,31 @@ var fetchArrayBuffer = function (url, options) {
     });
 };
 
+/**
+ * Ensuring that uncaught errors are sent in the correct format.
+ * Most issues should be a constant error found in ERRORS, but
+ * in case we have an issue we weren't expecting, we should handle
+ * the error in the same format.
+ */
+var checkErrorFormat = function(err) {
+    if (err.code && err.message) {
+        return err;
+    } else {
+        // you can use this to debug uncaught errors
+        //console.warn('uncaught error contents:', err);
+        return Constants.ERRORS.UNCAUGHT_ERROR;
+    }
+};
+
 module.exports = {
     arrayBuffersEqual: arrayBuffersEqual,
     arrayBufferFrom: arrayBufferFrom,
     uintArrayToString: uintArrayToString,
     getHostnameFromUri: getHostnameFromUri,
     fetchArrayBuffer: fetchArrayBuffer,
+    parsePSSHSupport: parsePSSHSupport,
+    parsePSSHSupportFromInitData: parsePSSHSupportFromInitData,
+    checkErrorFormat: checkErrorFormat,
 };
 
 
@@ -2427,7 +2692,7 @@ var getBody = function(xmlDoc) {
             licenseRequest = atob(Challenge);
         }
     }
-    return licenseRequest; 
+    return licenseRequest;
 };
 
 var getHeaders = function(xmlDoc) {
@@ -2455,7 +2720,7 @@ var licenseRequestData = function(message) {
 
     msg = String.fromCharCode.apply(null, dataview);
     xmlDoc = parser.parseFromString(msg, 'application/xml');
-    
+
     return {
         headers: getHeaders(xmlDoc),
         body: getBody(xmlDoc),
