@@ -448,6 +448,18 @@ window.__twilightSettings = {
                 "value": "control"
             }]
         },
+        "5fd568be-2073-4f99-84d5-565e8b2a3343": {
+            "name": "TWILIGHT_AAX_DISPLAY",
+            "v": 3416,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 1,
+                "value": "no"
+            }]
+        },
         "6699df7d-9f23-494c-87a1-06fdf80f1e68": {
             "name": "twilight_video_card_updates",
             "v": 3375,
