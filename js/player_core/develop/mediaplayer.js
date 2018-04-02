@@ -1332,7 +1332,7 @@ MediaSink.prototype.play = function () {
     this._paused = false;
     var promise = this._video.play();
     if (promise) {
-        promise.catch(noop);
+        promise.catch(this._checkStopped.bind(this));
     }
 };
 
@@ -1586,6 +1586,17 @@ MediaSink.prototype._fixStall = function (bufferDuration) {
     }
 };
 
+// Fire 'onstop' if playback was stopped by the browser.
+MediaSink.prototype._checkStopped = function () {
+    // Notify mediaplayer if the browser paused on its own. This can happen
+    // when the player is muted and hidden. When iOS is in fullscreen, native
+    // playback controls are shown. These may pause the video element directly,
+    // so don't count pause events while iOS is fullscreen as a 'browser' pause.
+    if (this._video.paused && !this._video.error && !this._paused && !this._iosFullScreen){
+        this._onstop();
+    }
+}
+
 MediaSink.prototype._createOnVideoTimeUpdate = function () {
     var lastUpdateTime = global.performance.now(),
         lastBufEnd = 0;
@@ -1640,13 +1651,7 @@ MediaSink.prototype._onWebkitEndFullscreen = function() {
 }
 
 MediaSink.prototype._onVideoPause = function () {
-    // Notify mediaplayer if the browser paused on its own. This can happen
-    // when the player is muted and hidden. When iOS is in fullscreen, native
-    // playback controls are shown. These may pause the video element directly,
-    // so don't count pause events while iOS is fullscreen as a 'browser' pause.
-    if (this._video.paused && !this._video.error && !this._paused && !this._iosFullScreen){
-        this._onstop();
-    }
+    this._checkStopped();
 };
 
 MediaSink.prototype._onVideoError = function () {
