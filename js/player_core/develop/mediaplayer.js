@@ -514,6 +514,10 @@ MediaPlayer.prototype.setAdInsertionEnabled = function (enable) {
     this._postMessage(WorkerMessage.SET_AD_INSERTION_ENABLED, enable);
 }
 
+MediaPlayer.prototype.setLiveLowLatency = function (enable) {
+    this._postMessage(WorkerMessage.SET_LIVE_LOW_LATENCY, enable);
+}
+
 MediaPlayer.prototype.setLiveMaxLatency = function (latency) {
     this._postMessage(WorkerMessage.SET_LIVE_MAX_LATENCY, latency);
 }
@@ -3403,6 +3407,11 @@ module.exports = {
      * @param {number} latency max latency value
      */
     SET_LIVE_MAX_LATENCY: 'WorkerSetLiveMaxLatency',
+    /**
+     * Set boolean to enable/disable live low latency
+     * @param {boolean} enable The boolean value to enable/disable
+     */
+    SET_LIVE_LOW_LATENCY: 'WorkerSetLiveLowLatency'
 };
 
 

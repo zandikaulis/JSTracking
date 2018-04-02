@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".629bfa921db429fe5082.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".fcf02785e9cf415eec0a.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -31714,7 +31714,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.02-193000+1283e4af4339b3127c74374a195527f40a11f080",
+                    app_version: "2018.04.02-200926+48f5b46288af49ab37dbd631ce95da680f9c664d",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
@@ -56049,7 +56049,9 @@
             "Check out this clip from {{displayName}}'s broadcast": "Check out this clip from {{displayName}}'s broadcast",
             "Tap to unmute": "Tap to unmute",
             "{{time}} sec.": "{{time}} sec.",
-            "{{time}} sec._plural": "{{time}} sec."
+            "{{time}} sec._plural": "{{time}} sec.",
+            "Bits Balance {{bitsCount}}": "Bits Balance {{bitsCount}}",
+            "{{bitsCount}} Bits": "{{bitsCount}} Bits"
         }
     }, function(e, t, n) {
         /**
