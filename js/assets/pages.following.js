@@ -2625,7 +2625,7 @@ webpackJsonp([49], {
                     if (this.props.hosting) return Object(d.d)("Hosting", "StreamTypeIndicator");
                     switch (this.props.type) {
                         case c.a.Live:
-                            return Object(d.d)("Live", "StreamTypeIndicator");
+                            return Object(d.d)("LIVE", "StreamTypeIndicator");
                         case c.a.Premiere:
                             return Object(d.d)("Premiere", "StreamTypeIndicator");
                         case c.a.Rerun:
@@ -9367,4 +9367,4 @@ webpackJsonp([49], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-67e28a9811d3a02173161b5d8d24a50e.js.map
+//# sourceMappingURL=pages.following-7957c95bbc893de41ae600e63b7f0edd.js.map

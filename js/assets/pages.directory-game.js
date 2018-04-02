@@ -9505,7 +9505,7 @@ webpackJsonp([45], {
                     if (this.props.hosting) return Object(d.d)("Hosting", "StreamTypeIndicator");
                     switch (this.props.type) {
                         case c.a.Live:
-                            return Object(d.d)("Live", "StreamTypeIndicator");
+                            return Object(d.d)("LIVE", "StreamTypeIndicator");
                         case c.a.Premiere:
                             return Object(d.d)("Premiere", "StreamTypeIndicator");
                         case c.a.Rerun:
@@ -17863,4 +17863,4 @@ webpackJsonp([45], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-c29e0133faf95ebc579ddc6d95d4b6de.js.map
+//# sourceMappingURL=pages.directory-game-07dcab4aad2d2dffcfa63e9bcaa92471.js.map

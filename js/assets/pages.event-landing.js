@@ -2650,7 +2650,7 @@ webpackJsonp([48], {
                     if (this.props.hosting) return Object(d.d)("Hosting", "StreamTypeIndicator");
                     switch (this.props.type) {
                         case c.a.Live:
-                            return Object(d.d)("Live", "StreamTypeIndicator");
+                            return Object(d.d)("LIVE", "StreamTypeIndicator");
                         case c.a.Premiere:
                             return Object(d.d)("Premiere", "StreamTypeIndicator");
                         case c.a.Rerun:
@@ -9891,4 +9891,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-abe44a4f2525fb65cdfe8698ee2a09e3.js.map
+//# sourceMappingURL=pages.event-landing-2de52f09899b72dc4288d342fa249b2c.js.map

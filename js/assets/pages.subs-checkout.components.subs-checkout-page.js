@@ -1433,6 +1433,7 @@ webpackJsonp([38], {
                                 justifyContent: c._5.Center
                             }, a.createElement("button", {
                                 className: t,
+                                "aria-label": i.displayName,
                                 name: i.displayName,
                                 onClick: e.props.locked ? void 0 : e.handleClickEmote.bind(e, i.id),
                                 "data-a-target": i.displayName
@@ -2251,7 +2252,7 @@ webpackJsonp([38], {
                         if (!t.props.offersData) return !0;
                         var e = t.props.offersData,
                             n = e.primeOffers,
-                            i = null == n;
+                            i = void 0 === n || null === n;
                         return e.loading || !e.error && i
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], t = 0; t < 3; ++t) e.push(o.createElement(U, {
@@ -6171,10 +6172,10 @@ webpackJsonp([38], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         selectedProvider: E.ZuoraCreditCard,
-                        subsCheckoutVariantAssignment: "recurly"
+                        subsCheckoutVariantAssignment: "zuora"
                     }, t.submitButtonCopy = Object(d.d)("Complete Purchase", "PaymentMethods"), t.paymentProviders = [{
                         name: E.ZuoraCreditCard,
-                        enabled: "zuora" === t.state.subsCheckoutVariantAssignment,
+                        enabled: "zuora" === t.state.subsCheckoutVariantAssignment || "owlallaccess2018" === t.props.productShortName,
                         button: {
                             label: oe.CreditCard(),
                             src: F.a,
@@ -6191,7 +6192,7 @@ webpackJsonp([38], {
                         }, t.props.configs.zuora))
                     }, {
                         name: E.RecurlyCreditCard,
-                        enabled: "recurly" === t.state.subsCheckoutVariantAssignment,
+                        enabled: "recurly" === t.state.subsCheckoutVariantAssignment && !("owlallaccess2018" === t.props.productShortName),
                         button: {
                             label: oe.CreditCard(),
                             src: F.a,
@@ -6208,7 +6209,7 @@ webpackJsonp([38], {
                         })
                     }, {
                         name: E.RecurlyPaypal,
-                        enabled: !0,
+                        enabled: !("owlallaccess2018" === t.props.productShortName),
                         button: {
                             label: oe.Paypal(),
                             src: B.a,
@@ -6226,7 +6227,7 @@ webpackJsonp([38], {
                         })
                     }, {
                         name: E.RecurlyPayWithAmazon,
-                        enabled: !0,
+                        enabled: !("owlallaccess2018" === t.props.productShortName),
                         button: {
                             label: oe.AmazonPay(),
                             src: x.a,
@@ -6306,7 +6307,7 @@ webpackJsonp([38], {
                                 case 0:
                                     return [4, d.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_VARIANT")];
                                 case 1:
-                                    return e = n.sent() || this.state.subsCheckoutVariantAssignment, this.setState({
+                                    return e = n.sent() || this.state.subsCheckoutVariantAssignment, "owlallaccess2018" !== this.props.productShortName && this.setState({
                                         selectedProvider: "recurly" === e ? E.RecurlyCreditCard : E.ZuoraCreditCard,
                                         subsCheckoutVariantAssignment: e
                                     }), document.querySelector("#recurly-script") ? [2] : ((t = document.createElement("script")).src = "https://js.recurly.com/v4/recurly.js", t.async = !0, t.id = "recurly-script", document.body.appendChild(t), [2])
@@ -7510,7 +7511,7 @@ webpackJsonp([38], {
                     flexWrap: y.S.Wrap
                 }, u.createElement(y._6, {
                     display: y.P.Hide,
-                    alignItems: y.c.Center,
+                    alignItems: y.c.Start,
                     margin: {
                         bottom: 4
                     },
@@ -7547,10 +7548,11 @@ webpackJsonp([38], {
                     product: t,
                     mobile: !0
                 })), this.purchased && this.renderReceipt(), !this.purchased && u.createElement(u.Fragment, null, this.renderPurchaseInfo(), this.showPaymenOptions && u.createElement(se, {
-                    onSuccess: this.completePurchase,
                     configs: n,
-                    trackPaymentFormInteraction: this.trackPaymentFormInteraction,
-                    countryCode: this.props.data.requestInfo.countryCode
+                    countryCode: this.props.data.requestInfo.countryCode,
+                    onSuccess: this.completePurchase,
+                    productShortName: this.props.productShortName,
+                    trackPaymentFormInteraction: this.trackPaymentFormInteraction
                 }), u.createElement(y._6, {
                     margin: {
                         top: 5
@@ -7854,13 +7856,14 @@ webpackJsonp([38], {
         var i = n("xA5w");
         e.exports = function(e, t, n) {
             var r = i(e),
-                a = void 0 !== n ? n : 1,
-                o = i(t).getTime();
-            if (r.getTime() > o) throw new Error("The first date cannot be after the second date");
-            var s = [],
-                c = r;
-            for (c.setHours(0, 0, 0, 0); c.getTime() <= o;) s.push(i(c)), c.setDate(c.getDate() + a);
-            return s
+                a = i(t),
+                o = void 0 !== n ? n : 1,
+                s = a.getTime();
+            if (r.getTime() > s) throw new Error("The first date cannot be after the second date");
+            var c = [],
+                l = r;
+            for (l.setHours(0, 0, 0, 0); l.getTime() <= s;) c.push(i(l)), l.setDate(l.getDate() + o);
+            return c
         }
     },
     MAZT: function(e, t, n) {
@@ -14966,27 +14969,30 @@ webpackJsonp([38], {
                     n = e.image1x,
                     i = e.image2x,
                     a = e.image4x,
-                    s = r.createElement("img", {
+                    c = r.createElement("img", {
                         alt: t,
+                        "aria-label": Object(s.d)("{badgeTitle} badge", {
+                            badgeTitle: t
+                        }, "Badge"),
                         className: "chat-badge",
                         src: n,
                         srcSet: n + " 1x, " + i + " 2x, " + a + " 4x",
                         onMouseOver: this.onMouseOver,
                         onMouseOut: this.onMouseOut
                     });
-                return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (s = r.createElement("a", {
+                return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (c = r.createElement("a", {
                     href: this.targetURL,
                     onClick: this.onBadgeClickHandler,
                     target: "_blank",
                     "data-a-target": "chat-badge"
-                }, s)), this.state.isHovering ? r.createElement(o._46, {
+                }, c)), this.state.isHovering ? r.createElement(o._46, {
                     align: o._47.Left,
                     "data-a-target": "chat-badge",
                     display: o.P.Inline,
                     key: n,
                     label: t,
                     offsetY: "0.9rem"
-                }, s) : s
+                }, c) : c
             }, t.prototype.getTargetURL = function() {
                 var e = this.props.badge;
                 switch (e.clickAction) {
@@ -16788,4 +16794,4 @@ webpackJsonp([38], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-c7d90c166a41e5a2ef06f53f2882181d.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-9b832d1eaccb016ab56a69b42cb2a7bf.js.map

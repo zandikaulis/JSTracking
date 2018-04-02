@@ -4012,7 +4012,52 @@ webpackJsonp([36, 83], {
             E = n("7vx8"),
             w = n("HW6M"),
             O = n("6BvN"),
-            D = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
+            D = [{
+                name: "Red",
+                hex: "#FF0000"
+            }, {
+                name: "Blue",
+                hex: "#0000FF"
+            }, {
+                name: "Green",
+                hex: "#008000"
+            }, {
+                name: "Firebrick",
+                hex: "#B22222"
+            }, {
+                name: "Coral",
+                hex: "#FF7F50"
+            }, {
+                name: "Yellow Green",
+                hex: "#9ACD32"
+            }, {
+                name: "Orange Red",
+                hex: "#FF4500"
+            }, {
+                name: "Sea Green",
+                hex: "#2E8B57"
+            }, {
+                name: "Goldenrod",
+                hex: "#DAA520"
+            }, {
+                name: "Chocolate",
+                hex: "#D2691E"
+            }, {
+                name: "Cadet Blue",
+                hex: "#5F9EA0"
+            }, {
+                name: "Dodger Blue",
+                hex: "#1E90FF"
+            }, {
+                name: "Hot Pink",
+                hex: "#FF69B4"
+            }, {
+                name: "Blue Violet",
+                hex: "#8A2BE2"
+            }, {
+                name: "Spring Green",
+                hex: "#00FF7F"
+            }],
             N = n("Odds"),
             T = (n("90yy"), function(e) {
                 function t() {
@@ -4032,29 +4077,34 @@ webpackJsonp([36, 83], {
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = D.map(function(t) {
-                            var n = {
-                                "color-chooser": !0,
-                                "color-chooser--selected": t === e.props.selectedColor
-                            };
+                            var n = t.hex === e.props.selectedColor,
+                                i = {
+                                    "color-chooser": !0,
+                                    "color-chooser--selected": n
+                                };
                             return r.createElement("div", {
-                                key: t,
-                                "data-color": t,
+                                role: "radio",
+                                "aria-checked": n,
+                                key: t.hex,
+                                "data-color": t.hex,
+                                title: t.name,
                                 onClick: e.onColorSelected,
                                 onKeyPress: e.onKeyPress,
-                                className: w(n),
+                                className: w(i),
                                 style: {
-                                    backgroundColor: t
+                                    backgroundColor: t.hex
                                 },
-                                "data-test-selector": "color_swatch_" + t,
-                                "data-a-target": "color_swatch_" + t,
+                                "data-test-selector": "color_swatch_" + t.hex,
+                                "data-a-target": "color_swatch_" + t.hex,
                                 tabIndex: 0
                             })
                         }),
-                        n = r.createElement(N.O, {
+                        n = Object(C.d)("Name Color", "ChatSettings"),
+                        i = r.createElement(N.O, {
                             transform: N._42.Uppercase,
                             color: N.J.Alt2
-                        }, Object(C.d)("Name Color", "ChatSettings"));
-                    return this.props.borderTop && (n = r.createElement(N._29, {
+                        }, n);
+                    return this.props.borderTop && (i = r.createElement(N._29, {
                         margin: {
                             top: 2
                         },
@@ -4062,7 +4112,7 @@ webpackJsonp([36, 83], {
                         padding: {
                             top: 2
                         }
-                    }, n)), r.createElement("div", null, r.createElement(N._29, {
+                    }, i)), r.createElement("div", null, r.createElement(N._29, {
                         margin: {
                             bottom: 1
                         },
@@ -4071,17 +4121,20 @@ webpackJsonp([36, 83], {
                         display: N.P.InlineFlex,
                         flexDirection: N.R.Column,
                         fullWidth: !0
-                    }, n), r.createElement(N._6, {
+                    }, i), r.createElement(N._0, {
                         margin: {
                             y: 1
                         },
                         display: N.P.Flex,
                         flexWrap: N.S.Wrap
+                    }, r.createElement("div", {
+                        role: "radiogroup",
+                        "aria-label": n
                     }, t, r.createElement(N.O, {
                         fontSize: N.T.Size7
                     }, r.createElement("a", {
                         href: "https://twitch.tv/products/turbo?ref=more_colors_direct"
-                    }, Object(C.d)("more colors →", "ChatSettings")))))
+                    }, Object(C.d)("more colors →", "ChatSettings"))))))
                 }, t
             }(r.Component)),
             x = n("OAwv"),
@@ -4122,22 +4175,26 @@ webpackJsonp([36, 83], {
                             a = this.props.data.currentUser.selectedBadge;
                         if (!t) return null;
                         var o = void 0 === this.state.channelBadgeID && n ? n.setID : this.state.channelBadgeID,
-                            s = {
+                            s = !o,
+                            l = {
                                 "edit-appearance__badge-chooser": !0,
-                                "edit-appearance__badge-chooser--selected": !o
+                                "edit-appearance__badge-chooser--selected": s
                             },
-                            l = Object(C.d)("No channel badges :(", "ChatSettings");
-                        t && t.length > 0 && (l = t.map(function(t) {
-                            var i = {
-                                "edit-appearance__badge-chooser": !0,
-                                "edit-appearance__badge-chooser--selected": n && t.setID === o
-                            };
+                            c = Object(C.d)("No channel badges :(", "ChatSettings");
+                        t && t.length > 0 && (c = t.map(function(t) {
+                            var i = Boolean(n && t.setID === o),
+                                a = {
+                                    "edit-appearance__badge-chooser": !0,
+                                    "edit-appearance__badge-chooser--selected": i
+                                };
                             return r.createElement("div", {
+                                role: "radio",
+                                "aria-checked": i,
                                 "data-badge": t.setID,
                                 onClick: e.onChannelBadgeClicked,
                                 onKeyPress: e.onChannelBadgeKeyPress,
                                 key: t.setID + "/" + t.version,
-                                className: w(i),
+                                className: w(a),
                                 "data-test-selector": "channel_badge_" + t.setID,
                                 "data-a-target": "channel_badge_" + t.setID,
                                 tabIndex: 0
@@ -4150,10 +4207,12 @@ webpackJsonp([36, 83], {
                             })))
                         })).push(r.createElement("div", {
                             key: "none",
+                            role: "radio",
+                            "aria-checked": s,
                             "data-badge": "",
                             onClick: this.onChannelBadgeClicked,
                             onKeyPress: this.onChannelBadgeKeyPress,
-                            className: w(s),
+                            className: w(l),
                             "data-test-selector": "channel_badge_none",
                             "data-a-target": "channel_badge_none",
                             tabIndex: 0
@@ -4164,23 +4223,27 @@ webpackJsonp([36, 83], {
                         }, r.createElement(N._19, {
                             asset: N._20.Global
                         })))));
-                        var c = void 0 === this.state.globalBadgeID && a ? a.setID : this.state.globalBadgeID,
-                            d = {
+                        var d = void 0 === this.state.globalBadgeID && a ? a.setID : this.state.globalBadgeID,
+                            u = !d,
+                            m = {
                                 "edit-appearance__badge-chooser": !0,
-                                "edit-appearance__badge-chooser--selected": !c
+                                "edit-appearance__badge-chooser--selected": u
                             },
-                            u = Object(C.d)("No global badges :(", "ChatSettings");
-                        return i && i.length > 0 && (u = i.map(function(t) {
-                            var n = {
-                                "edit-appearance__badge-chooser": !0,
-                                "edit-appearance__badge-chooser--selected": a && t.setID === c
-                            };
+                            p = Object(C.d)("No global badges :(", "ChatSettings");
+                        return i && i.length > 0 && (p = i.map(function(t) {
+                            var n = Boolean(a && t.setID === d),
+                                i = {
+                                    "edit-appearance__badge-chooser": !0,
+                                    "edit-appearance__badge-chooser--selected": n
+                                };
                             return r.createElement("div", {
+                                role: "radio",
+                                "aria-checked": n,
                                 "data-badge": t.setID,
                                 onClick: e.onGlobalBadgeClicked,
                                 onKeyPress: e.onGlobalBadgeKeyPress,
                                 key: t.setID + "/" + t.version,
-                                className: w(n),
+                                className: w(i),
                                 "data-test-selector": "global_badge_" + t.setID,
                                 "data-a-target": "global_badge_" + t.setID,
                                 tabIndex: 0
@@ -4192,11 +4255,13 @@ webpackJsonp([36, 83], {
                                 srcSet: t.image1x + " 1x, " + t.image2x + " 2x, " + t.image4x + " 4x"
                             })))
                         })).push(r.createElement("div", {
+                            role: "radio",
+                            "aria-checked": u,
                             key: "none",
                             "data-badge": "",
                             onClick: this.onGlobalBadgeClicked,
                             onKeyPress: this.onGlobalBadgeKeyPress,
-                            className: w(d),
+                            className: w(m),
                             "data-test-selector": "global_badge_none",
                             "data-a-target": "global_badge_none",
                             tabIndex: 0
@@ -4227,7 +4292,7 @@ webpackJsonp([36, 83], {
                         }, r.createElement(N.O, {
                             color: N.J.Alt2,
                             transform: N._42.Uppercase
-                        }, Object(C.d)("Global Badge [?]", "ChatSettings")))), r.createElement(N._6, {
+                        }, Object(C.d)("Global Badge [?]", "ChatSettings")))), r.createElement(N._0, {
                             margin: {
                                 y: 1
                             },
@@ -4236,7 +4301,9 @@ webpackJsonp([36, 83], {
                             },
                             display: N.P.Flex,
                             "data-a-target": "global-badge-selector"
-                        }, u)), r.createElement(N._29, {
+                        }, r.createElement("div", {
+                            role: "radiogroup"
+                        }, p))), r.createElement(N._29, {
                             background: N.m.Base,
                             color: N.J.Base,
                             display: N.P.InlineFlex,
@@ -4257,7 +4324,7 @@ webpackJsonp([36, 83], {
                         }, r.createElement(N.O, {
                             color: N.J.Alt2,
                             transform: N._42.Uppercase
-                        }, Object(C.d)("Channel Badge [?]", "ChatSettings")))), r.createElement(N._6, {
+                        }, Object(C.d)("Channel Badge [?]", "ChatSettings")))), r.createElement(N._0, {
                             margin: {
                                 y: 1
                             },
@@ -4266,7 +4333,9 @@ webpackJsonp([36, 83], {
                             },
                             display: N.P.Flex,
                             "data-a-target": "channel-badge-selector"
-                        }, l)))
+                        }, r.createElement("div", {
+                            role: "radiogroup"
+                        }, c))))
                     }
                 }, t.prototype.setChannelBadge = function(e, t, n) {
                     return i.__awaiter(this, void 0, void 0, function() {
@@ -5142,7 +5211,7 @@ webpackJsonp([36, 83], {
                         recentRaids: this.state.recentRaids,
                         onClickRecentRaids: this.onClickRecentRaids,
                         onUsernameClick: this.props.onShowViewerCard
-                    })] : (n = [e, this.renderUniversalOptions()], this.props.isCurrentUserModerator && n.push(r.createElement(Z, {
+                    })] : (n = [e, this.renderUniversalOptions()], this.props.isCurrentUserModerator && !this.props.isEmbedded && n.push(r.createElement(Z, {
                         key: "moderation-tools",
                         channelLogin: this.props.channelLogin,
                         channelID: this.props.channelID,
@@ -5182,12 +5251,12 @@ webpackJsonp([36, 83], {
                             label: Object(C.d)("Dark Mode", "ChatSettings"),
                             onChange: this.props.onDarkModeToggle
                         }),
-                        t = r.createElement("button", {
+                        t = !this.props.isEmbedded && r.createElement("button", {
                             onClick: this.props.onChatPopout,
                             "data-a-target": "popout-chat-button",
                             "data-test-selector": "popout-button"
                         }, Object(C.d)("Popout", "ChatSettings")),
-                        n = !this.props.isPopout && (window.BetterTTV || window.FrankerFaceZ) && r.createElement("button", {
+                        n = !this.props.isPopout && !this.props.isEmbedded && (window.BetterTTV || window.FrankerFaceZ) && r.createElement("button", {
                             onClick: this.props.onLegacyChatPopout,
                             "data-test-selector": "legacy-popout-button"
                         }, Object(C.d)("Legacy Popout", "ChatSettings")),
@@ -5306,7 +5375,6 @@ webpackJsonp([36, 83], {
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(ce, {
-                        disabled: this.props.disabled,
                         onToggle: this.handleSettingsToggle
                     }, r.createElement(ae, {
                         authToken: this.props.authToken,
@@ -5315,6 +5383,7 @@ webpackJsonp([36, 83], {
                         isCurrentUserModerator: this.props.isCurrentUserModerator,
                         isHostMode: this.props.isHostMode,
                         isPopout: this.props.isPopout,
+                        isEmbedded: this.props.isEmbedded,
                         onChatCommand: this.props.onChatCommand,
                         onChatHide: this.onChatHide,
                         onChatPopout: this.onChatPopout,
@@ -16193,27 +16262,30 @@ webpackJsonp([36, 83], {
                     n = e.image1x,
                     i = e.image2x,
                     a = e.image4x,
-                    s = r.createElement("img", {
+                    l = r.createElement("img", {
                         alt: t,
+                        "aria-label": Object(s.d)("{badgeTitle} badge", {
+                            badgeTitle: t
+                        }, "Badge"),
                         className: "chat-badge",
                         src: n,
                         srcSet: n + " 1x, " + i + " 2x, " + a + " 4x",
                         onMouseOver: this.onMouseOver,
                         onMouseOut: this.onMouseOut
                     });
-                return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (s = r.createElement("a", {
+                return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (l = r.createElement("a", {
                     href: this.targetURL,
                     onClick: this.onBadgeClickHandler,
                     target: "_blank",
                     "data-a-target": "chat-badge"
-                }, s)), this.state.isHovering ? r.createElement(o._46, {
+                }, l)), this.state.isHovering ? r.createElement(o._46, {
                     align: o._47.Left,
                     "data-a-target": "chat-badge",
                     display: o.P.Inline,
                     key: n,
                     label: t,
                     offsetY: "0.9rem"
-                }, s) : s
+                }, l) : l
             }, t.prototype.getTargetURL = function() {
                 var e = this.props.badge;
                 switch (e.clickAction) {
@@ -20496,4 +20568,4 @@ webpackJsonp([36, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-ad20310daa579cb71c59f0fe66213a65.js.map
+//# sourceMappingURL=pages.video-watch-fe018ee2e2acf3cf9b2f0e34fa7e3f8b.js.map

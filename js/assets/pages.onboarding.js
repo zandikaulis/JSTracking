@@ -2200,14 +2200,14 @@ webpackJsonp([52, 77], {
                 oauth_token: ""
             };
 
-        function W() {
+        function V() {
             return !!window.Twitch && !!window.Twitch.Player
         }
-        var V = function(e) {
+        var W = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.checkPlayerDependencyStatus = function() {
-                        W() ? (n.setState({
+                        V() ? (n.setState({
                             canInitializePlayer: !0
                         }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
                     }, n.attachRef = function(e) {
@@ -2221,7 +2221,7 @@ webpackJsonp([52, 77], {
                     }, n.onPlayerPlaying = function() {
                         n.player.setQuality("160p30"), n.props.onPlayerPlaying && n.props.onPlayerPlaying()
                     }, n.state = {
-                        canInitializePlayer: W(),
+                        canInitializePlayer: V(),
                         playerInitialized: !1
                     }, n
                 }
@@ -2339,7 +2339,7 @@ webpackJsonp([52, 77], {
                         var e = {
                             onPlayerPlaying: n.onStreamLoaded
                         };
-                        if (n.props.showPreview && n.state.hovered && n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.login) return a.createElement(V, r.__assign({
+                        if (n.props.showPreview && n.state.hovered && n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.login) return a.createElement(W, r.__assign({
                             channelLogin: n.props.streamNode.broadcaster.login
                         }, e))
                     }, n.clearTimeouts = function() {
@@ -2616,7 +2616,7 @@ webpackJsonp([52, 77], {
                     if (this.props.hosting) return Object(c.d)("Hosting", "StreamTypeIndicator");
                     switch (this.props.type) {
                         case d.a.Live:
-                            return Object(c.d)("Live", "StreamTypeIndicator");
+                            return Object(c.d)("LIVE", "StreamTypeIndicator");
                         case d.a.Premiere:
                             return Object(c.d)("Premiere", "StreamTypeIndicator");
                         case d.a.Rerun:
@@ -5141,4 +5141,4 @@ webpackJsonp([52, 77], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-67336333d60c60e1194da4261c20f699.js.map
+//# sourceMappingURL=pages.onboarding-ca862e24492ab69fd3448a4a336421ed.js.map

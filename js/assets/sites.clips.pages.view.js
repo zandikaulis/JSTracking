@@ -10894,27 +10894,30 @@ webpackJsonp([46], {
                     n = e.image1x,
                     i = e.image2x,
                     r = e.image4x,
-                    l = a.createElement("img", {
+                    s = a.createElement("img", {
                         alt: t,
+                        "aria-label": Object(l.d)("{badgeTitle} badge", {
+                            badgeTitle: t
+                        }, "Badge"),
                         className: "chat-badge",
                         src: n,
                         srcSet: n + " 1x, " + i + " 2x, " + r + " 4x",
                         onMouseOver: this.onMouseOver,
                         onMouseOut: this.onMouseOut
                     });
-                return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (l = a.createElement("a", {
+                return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (s = a.createElement("a", {
                     href: this.targetURL,
                     onClick: this.onBadgeClickHandler,
                     target: "_blank",
                     "data-a-target": "chat-badge"
-                }, l)), this.state.isHovering ? a.createElement(o._46, {
+                }, s)), this.state.isHovering ? a.createElement(o._46, {
                     align: o._47.Left,
                     "data-a-target": "chat-badge",
                     display: o.P.Inline,
                     key: n,
                     label: t,
                     offsetY: "0.9rem"
-                }, l) : l
+                }, s) : s
             }, t.prototype.getTargetURL = function() {
                 var e = this.props.badge;
                 switch (e.clickAction) {
@@ -13517,4 +13520,4 @@ webpackJsonp([46], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-21e90fbb6a83c756faa98fcea0f226d8.js.map
+//# sourceMappingURL=sites.clips.pages.view-e22d2c993e0d7ad33e54227ccae4accd.js.map

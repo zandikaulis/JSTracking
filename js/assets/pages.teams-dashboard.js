@@ -546,8 +546,8 @@ webpackJsonp([44], {
                         var v = [],
                             L = [];
                         b = e.Tooltip.positioners[m.position].call(c, f, c._eventPosition);
-                        var k = [];
-                        for (a = 0, n = f.length; a < n; ++a) k.push((r = f[a], s = void 0, d = void 0, void 0, void 0, s = r._xScale, d = r._yScale || r._scale, l = r._index, u = r._datasetIndex, {
+                        var D = [];
+                        for (a = 0, n = f.length; a < n; ++a) D.push((r = f[a], s = void 0, d = void 0, void 0, void 0, s = r._xScale, d = r._yScale || r._scale, l = r._index, u = r._datasetIndex, {
                             xLabel: s ? s.getLabelForIndex(l, u) : "",
                             yLabel: d ? d.getLabelForIndex(l, u) : "",
                             index: l,
@@ -555,13 +555,13 @@ webpackJsonp([44], {
                             x: r._model.x,
                             y: r._model.y
                         }));
-                        m.filter && (k = k.filter(function(e) {
+                        m.filter && (D = D.filter(function(e) {
                             return m.filter(e, p)
-                        })), m.itemSort && (k = k.sort(function(e, t) {
+                        })), m.itemSort && (D = D.sort(function(e, t) {
                             return m.itemSort(e, t, p)
-                        })), i.each(k, function(e) {
+                        })), i.each(D, function(e) {
                             v.push(m.callbacks.labelColor.call(c, e, c._chart)), L.push(m.callbacks.labelTextColor.call(c, e, c._chart))
-                        }), _.title = c.getTitle(k, p), _.beforeBody = c.getBeforeBody(k, p), _.body = c.getBody(k, p), _.afterBody = c.getAfterBody(k, p), _.footer = c.getFooter(k, p), _.x = Math.round(b.x), _.y = Math.round(b.y), _.caretPadding = m.caretPadding, _.labelColors = v, _.labelTextColors = L, _.dataPoints = k, y = function(e, t, a) {
+                        }), _.title = c.getTitle(D, p), _.beforeBody = c.getBeforeBody(D, p), _.body = c.getBody(D, p), _.afterBody = c.getAfterBody(D, p), _.footer = c.getFooter(D, p), _.x = Math.round(b.x), _.y = Math.round(b.y), _.caretPadding = m.caretPadding, _.labelColors = v, _.labelTextColors = L, _.dataPoints = D, y = function(e, t, a) {
                             var n = e.x,
                                 r = e.y,
                                 i = e.caretSize,
@@ -7071,17 +7071,17 @@ webpackJsonp([44], {
                     return e < 0 ? Math.ceil(e) || 0 : Math.floor(e)
                 }
 
-                function k(e) {
+                function D(e) {
                     var t = +e,
                         a = 0;
                     return 0 !== t && isFinite(t) && (a = L(t)), a
                 }
 
-                function D(e, t, a) {
+                function k(e, t, a) {
                     var n, r = Math.min(e.length, t.length),
                         i = Math.abs(e.length - t.length),
                         o = 0;
-                    for (n = 0; n < r; n++)(a && e[n] !== t[n] || !a && k(e[n]) !== k(t[n])) && o++;
+                    for (n = 0; n < r; n++)(a && e[n] !== t[n] || !a && D(e[n]) !== D(t[n])) && o++;
                     return o + i
                 }
 
@@ -7247,7 +7247,7 @@ webpackJsonp([44], {
                 function ge(e, t) {
                     var a, n = t;
                     for ("string" == typeof e && (e = [e]), s(t) && (n = function(e, a) {
-                            a[t] = k(e)
+                            a[t] = D(e)
                         }), a = 0; a < e.length; a++) pe[e[a]] = n
                 }
 
@@ -7263,8 +7263,8 @@ webpackJsonp([44], {
                 var be = 0,
                     ve = 1,
                     Le = 2,
-                    ke = 3,
-                    De = 4,
+                    De = 3,
+                    ke = 4,
                     Ye = 5,
                     we = 6,
                     Te = 7,
@@ -7290,7 +7290,7 @@ webpackJsonp([44], {
                 }), he("MMMM", function(e, t) {
                     return t.monthsRegex(e)
                 }), ge(["M", "MM"], function(e, t) {
-                    t[ve] = k(e) - 1
+                    t[ve] = D(e) - 1
                 }), ge(["MMM", "MMMM"], function(e, t, a, n) {
                     var r = a._locale.monthsParse(e, n, a._strict);
                     null != r ? t[ve] = r : h(a).invalidMonth = e
@@ -7303,7 +7303,7 @@ webpackJsonp([44], {
                     var a;
                     if (!e.isValid()) return e;
                     if ("string" == typeof t)
-                        if (/^\d+$/.test(t)) t = k(t);
+                        if (/^\d+$/.test(t)) t = D(t);
                         else if (!s(t = e.localeData().monthsParse(t))) return e;
                     return a = Math.min(e.date(), Oe(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, a), e
                 }
@@ -7340,13 +7340,13 @@ webpackJsonp([44], {
                 }), G(0, ["YY", 2], 0, function() {
                     return this.year() % 100
                 }), G(0, ["YYYY", 4], 0, "year"), G(0, ["YYYYY", 5], 0, "year"), G(0, ["YYYYYY", 6, !0], 0, "year"), C("year", "y"), W("year", 1), he("Y", de), he("YY", te, X), he("YYYY", ie, $), he("YYYYY", oe, ee), he("YYYYYY", oe, ee), ge(["YYYYY", "YYYYYY"], be), ge("YYYY", function(e, t) {
-                    t[be] = 2 === e.length ? n.parseTwoDigitYear(e) : k(e)
+                    t[be] = 2 === e.length ? n.parseTwoDigitYear(e) : D(e)
                 }), ge("YY", function(e, t) {
                     t[be] = n.parseTwoDigitYear(e)
                 }), ge("Y", function(e, t) {
                     t[be] = parseInt(e, 10)
                 }), n.parseTwoDigitYear = function(e) {
-                    return k(e) + (k(e) > 68 ? 1900 : 2e3)
+                    return D(e) + (D(e) > 68 ? 1900 : 2e3)
                 };
                 var Ne = I("FullYear", !0);
 
@@ -7383,7 +7383,7 @@ webpackJsonp([44], {
                     return (Ie(e) - n + r) / 7
                 }
                 G("w", ["ww", 2], "wo", "week"), G("W", ["WW", 2], "Wo", "isoWeek"), C("week", "w"), C("isoWeek", "W"), W("week", 5), W("isoWeek", 5), he("w", te), he("ww", te, X), he("W", te), he("WW", te, X), ye(["w", "ww", "W", "WW"], function(e, t, a, n) {
-                    t[n.substr(0, 1)] = k(e)
+                    t[n.substr(0, 1)] = D(e)
                 });
                 G("d", 0, "do", "day"), G("dd", 0, 0, function(e) {
                     return this.localeData().weekdaysMin(this, e)
@@ -7401,7 +7401,7 @@ webpackJsonp([44], {
                     var r = a._locale.weekdaysParse(e, n, a._strict);
                     null != r ? t.d = r : h(a).invalidWeekday = e
                 }), ye(["d", "e", "E"], function(e, t, a, n) {
-                    t[n] = k(e)
+                    t[n] = D(e)
                 });
                 var Ge = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_");
                 var qe = "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_");
@@ -7446,27 +7446,27 @@ webpackJsonp([44], {
                     return "" + this.hours() + z(this.minutes(), 2)
                 }), G("Hmmss", 0, 0, function() {
                     return "" + this.hours() + z(this.minutes(), 2) + z(this.seconds(), 2)
-                }), tt("a", !0), tt("A", !1), C("hour", "h"), W("hour", 13), he("a", at), he("A", at), he("H", te), he("h", te), he("k", te), he("HH", te, X), he("hh", te, X), he("kk", te, X), he("hmm", ae), he("hmmss", ne), he("Hmm", ae), he("Hmmss", ne), ge(["H", "HH"], ke), ge(["k", "kk"], function(e, t, a) {
-                    var n = k(e);
-                    t[ke] = 24 === n ? 0 : n
+                }), tt("a", !0), tt("A", !1), C("hour", "h"), W("hour", 13), he("a", at), he("A", at), he("H", te), he("h", te), he("k", te), he("HH", te, X), he("hh", te, X), he("kk", te, X), he("hmm", ae), he("hmmss", ne), he("Hmm", ae), he("Hmmss", ne), ge(["H", "HH"], De), ge(["k", "kk"], function(e, t, a) {
+                    var n = D(e);
+                    t[De] = 24 === n ? 0 : n
                 }), ge(["a", "A"], function(e, t, a) {
                     a._isPm = a._locale.isPM(e), a._meridiem = e
                 }), ge(["h", "hh"], function(e, t, a) {
-                    t[ke] = k(e), h(a).bigHour = !0
+                    t[De] = D(e), h(a).bigHour = !0
                 }), ge("hmm", function(e, t, a) {
                     var n = e.length - 2;
-                    t[ke] = k(e.substr(0, n)), t[De] = k(e.substr(n)), h(a).bigHour = !0
+                    t[De] = D(e.substr(0, n)), t[ke] = D(e.substr(n)), h(a).bigHour = !0
                 }), ge("hmmss", function(e, t, a) {
                     var n = e.length - 4,
                         r = e.length - 2;
-                    t[ke] = k(e.substr(0, n)), t[De] = k(e.substr(n, 2)), t[Ye] = k(e.substr(r)), h(a).bigHour = !0
+                    t[De] = D(e.substr(0, n)), t[ke] = D(e.substr(n, 2)), t[Ye] = D(e.substr(r)), h(a).bigHour = !0
                 }), ge("Hmm", function(e, t, a) {
                     var n = e.length - 2;
-                    t[ke] = k(e.substr(0, n)), t[De] = k(e.substr(n))
+                    t[De] = D(e.substr(0, n)), t[ke] = D(e.substr(n))
                 }), ge("Hmmss", function(e, t, a) {
                     var n = e.length - 4,
                         r = e.length - 2;
-                    t[ke] = k(e.substr(0, n)), t[De] = k(e.substr(n, 2)), t[Ye] = k(e.substr(r))
+                    t[De] = D(e.substr(0, n)), t[ke] = D(e.substr(n, 2)), t[Ye] = D(e.substr(r))
                 });
                 var nt, rt = I("Hours", !0),
                     it = {
@@ -7565,7 +7565,7 @@ webpackJsonp([44], {
                         for (var t, a, n, r, i = 0; i < e.length;) {
                             for (t = (r = dt(e[i]).split("-")).length, a = (a = dt(e[i + 1])) ? a.split("-") : null; t > 0;) {
                                 if (n = lt(r.slice(0, t).join("-"))) return n;
-                                if (a && a.length >= t && D(r, a, !0) >= t - 1) break;
+                                if (a && a.length >= t && k(r, a, !0) >= t - 1) break;
                                 t--
                             }
                             i++
@@ -7576,7 +7576,7 @@ webpackJsonp([44], {
 
                 function ht(e) {
                     var t, a = e._a;
-                    return a && -2 === h(e).overflow && (t = a[ve] < 0 || a[ve] > 11 ? ve : a[Le] < 1 || a[Le] > Oe(a[be], a[ve]) ? Le : a[ke] < 0 || a[ke] > 24 || 24 === a[ke] && (0 !== a[De] || 0 !== a[Ye] || 0 !== a[we]) ? ke : a[De] < 0 || a[De] > 59 ? De : a[Ye] < 0 || a[Ye] > 59 ? Ye : a[we] < 0 || a[we] > 999 ? we : -1, h(e)._overflowDayOfYear && (t < be || t > Le) && (t = Le), h(e)._overflowWeeks && -1 === t && (t = Te), h(e)._overflowWeekday && -1 === t && (t = xe), h(e).overflow = t), e
+                    return a && -2 === h(e).overflow && (t = a[ve] < 0 || a[ve] > 11 ? ve : a[Le] < 1 || a[Le] > Oe(a[be], a[ve]) ? Le : a[De] < 0 || a[De] > 24 || 24 === a[De] && (0 !== a[ke] || 0 !== a[Ye] || 0 !== a[we]) ? De : a[ke] < 0 || a[ke] > 59 ? ke : a[Ye] < 0 || a[Ye] > 59 ? Ye : a[we] < 0 || a[we] > 999 ? we : -1, h(e)._overflowDayOfYear && (t < be || t > Le) && (t = Le), h(e)._overflowWeeks && -1 === t && (t = Te), h(e)._overflowWeekday && -1 === t && (t = xe), h(e).overflow = t), e
                 }
                 var _t = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
                     ft = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
@@ -7666,11 +7666,11 @@ webpackJsonp([44], {
                     } else e._isValid = !1
                 }
 
-                function kt(e, t, a) {
+                function Dt(e, t, a) {
                     return null != e ? e : null != t ? t : a
                 }
 
-                function Dt(e) {
+                function kt(e) {
                     var t, a, r, i, o = [];
                     if (!e._d) {
                         for (r = function(e) {
@@ -7678,19 +7678,19 @@ webpackJsonp([44], {
                                 return e._useUTC ? [t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate()] : [t.getFullYear(), t.getMonth(), t.getDate()]
                             }(e), e._w && null == e._a[Le] && null == e._a[ve] && function(e) {
                                 var t, a, n, r, i, o, s, d;
-                                if (null != (t = e._w).GG || null != t.W || null != t.E) i = 1, o = 4, a = kt(t.GG, e._a[be], Ve(xt(), 1, 4).year), n = kt(t.W, 1), ((r = kt(t.E, 1)) < 1 || r > 7) && (d = !0);
+                                if (null != (t = e._w).GG || null != t.W || null != t.E) i = 1, o = 4, a = Dt(t.GG, e._a[be], Ve(xt(), 1, 4).year), n = Dt(t.W, 1), ((r = Dt(t.E, 1)) < 1 || r > 7) && (d = !0);
                                 else {
                                     i = e._locale._week.dow, o = e._locale._week.doy;
                                     var l = Ve(xt(), i, o);
-                                    a = kt(t.gg, e._a[be], l.year), n = kt(t.w, l.week), null != t.d ? ((r = t.d) < 0 || r > 6) && (d = !0) : null != t.e ? (r = t.e + i, (t.e < 0 || t.e > 6) && (d = !0)) : r = i
+                                    a = Dt(t.gg, e._a[be], l.year), n = Dt(t.w, l.week), null != t.d ? ((r = t.d) < 0 || r > 6) && (d = !0) : null != t.e ? (r = t.e + i, (t.e < 0 || t.e > 6) && (d = !0)) : r = i
                                 }
                                 n < 1 || n > Ue(a, i, o) ? h(e)._overflowWeeks = !0 : null != d ? h(e)._overflowWeekday = !0 : (s = Je(a, n, r, i, o), e._a[be] = s.year, e._dayOfYear = s.dayOfYear)
-                            }(e), null != e._dayOfYear && (i = kt(e._a[be], r[be]), (e._dayOfYear > Ie(i) || 0 === e._dayOfYear) && (h(e)._overflowDayOfYear = !0), a = ze(i, 0, e._dayOfYear), e._a[ve] = a.getUTCMonth(), e._a[Le] = a.getUTCDate()), t = 0; t < 3 && null == e._a[t]; ++t) e._a[t] = o[t] = r[t];
+                            }(e), null != e._dayOfYear && (i = Dt(e._a[be], r[be]), (e._dayOfYear > Ie(i) || 0 === e._dayOfYear) && (h(e)._overflowDayOfYear = !0), a = ze(i, 0, e._dayOfYear), e._a[ve] = a.getUTCMonth(), e._a[Le] = a.getUTCDate()), t = 0; t < 3 && null == e._a[t]; ++t) e._a[t] = o[t] = r[t];
                         for (; t < 7; t++) e._a[t] = o[t] = null == e._a[t] ? 2 === t ? 1 : 0 : e._a[t];
-                        24 === e._a[ke] && 0 === e._a[De] && 0 === e._a[Ye] && 0 === e._a[we] && (e._nextDay = !0, e._a[ke] = 0), e._d = (e._useUTC ? ze : function(e, t, a, n, r, i, o) {
+                        24 === e._a[De] && 0 === e._a[ke] && 0 === e._a[Ye] && 0 === e._a[we] && (e._nextDay = !0, e._a[De] = 0), e._d = (e._useUTC ? ze : function(e, t, a, n, r, i, o) {
                             var s = new Date(e, t, a, n, r, i, o);
                             return e < 100 && e >= 0 && isFinite(s.getFullYear()) && s.setFullYear(e), s
-                        }).apply(null, o), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[ke] = 24)
+                        }).apply(null, o), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[De] = 24)
                     }
                 }
 
@@ -7702,11 +7702,11 @@ webpackJsonp([44], {
                                 d = s.length,
                                 l = 0;
                             for (r = K(e._f, e._locale).match(B) || [], t = 0; t < r.length; t++) i = r[t], (a = (s.match(_e(i, e)) || [])[0]) && ((o = s.substr(0, s.indexOf(a))).length > 0 && h(e).unusedInput.push(o), s = s.slice(s.indexOf(a) + a.length), l += a.length), U[i] ? (a ? h(e).empty = !1 : h(e).unusedTokens.push(i), Me(i, a, e)) : e._strict && !a && h(e).unusedTokens.push(i);
-                            h(e).charsLeftOver = d - l, s.length > 0 && h(e).unusedInput.push(s), e._a[ke] <= 12 && !0 === h(e).bigHour && e._a[ke] > 0 && (h(e).bigHour = void 0), h(e).parsedDateParts = e._a.slice(0), h(e).meridiem = e._meridiem, e._a[ke] = function(e, t, a) {
+                            h(e).charsLeftOver = d - l, s.length > 0 && h(e).unusedInput.push(s), e._a[De] <= 12 && !0 === h(e).bigHour && e._a[De] > 0 && (h(e).bigHour = void 0), h(e).parsedDateParts = e._a.slice(0), h(e).meridiem = e._meridiem, e._a[De] = function(e, t, a) {
                                 var n;
                                 if (null == a) return t;
                                 return null != e.meridiemHour ? e.meridiemHour(t, a) : null != e.isPM ? ((n = e.isPM(a)) && t < 12 && (t += 12), n || 12 !== t || (t = 0), t) : t
-                            }(e._locale, e._a[ke], e._meridiem), Dt(e), ht(e)
+                            }(e._locale, e._a[De], e._meridiem), kt(e), ht(e)
                         } else Lt(e);
                     else bt(e)
                 }
@@ -7728,12 +7728,12 @@ webpackJsonp([44], {
                             null === t ? (bt(e), !1 === e._isValid && (delete e._isValid, Lt(e), !1 === e._isValid && (delete e._isValid, n.createFromInputFallback(e)))) : e._d = new Date(+t[1])
                         }(e) : r(t) ? (e._a = l(t.slice(0), function(e) {
                             return parseInt(e, 10)
-                        }), Dt(e)) : i(t) ? function(e) {
+                        }), kt(e)) : i(t) ? function(e) {
                             if (!e._d) {
                                 var t = E(e._i);
                                 e._a = l([t.year, t.month, t.day || t.date, t.hour, t.minute, t.second, t.millisecond], function(e) {
                                     return e && parseInt(e, 10)
-                                }), Dt(e)
+                                }), kt(e)
                             }
                         }(e) : s(t) ? e._d = new Date(t) : n.createFromInputFallback(e)
                     }(e), f(e) || (e._d = null), e))
@@ -7788,7 +7788,7 @@ webpackJsonp([44], {
                         for (var a = !1, n = 0; n < Ht.length; ++n)
                             if (e[Ht[n]]) {
                                 if (a) return !1;
-                                parseFloat(e[Ht[n]]) !== k(e[Ht[n]]) && (a = !0)
+                                parseFloat(e[Ht[n]]) !== D(e[Ht[n]]) && (a = !0)
                             }
                         return !0
                     }(t), this._milliseconds = +u + 1e3 * l + 6e4 * d + 1e3 * s * 60 * 60, this._days = +o + 7 * i, this._months = +r + 3 * n + 12 * a, this._data = {}, this._locale = mt(), this._bubble()
@@ -7818,7 +7818,7 @@ webpackJsonp([44], {
                     var a = (t || "").match(e);
                     if (null === a) return null;
                     var n = ((a[a.length - 1] || []) + "").match(Ft) || ["-", 0, 0],
-                        r = 60 * n[1] + k(n[2]);
+                        r = 60 * n[1] + D(n[2]);
                     return 0 === r ? 0 : "+" === n[0] ? r : -r
                 }
 
@@ -7847,11 +7847,11 @@ webpackJsonp([44], {
                         M: e._months
                     } : s(e) ? (i = {}, t ? i[t] = e : i.milliseconds = e) : (o = zt.exec(e)) ? (a = "-" === o[1] ? -1 : 1, i = {
                         y: 0,
-                        d: k(o[Le]) * a,
-                        h: k(o[ke]) * a,
-                        m: k(o[De]) * a,
-                        s: k(o[Ye]) * a,
-                        ms: k(At(1e3 * o[we])) * a
+                        d: D(o[Le]) * a,
+                        h: D(o[De]) * a,
+                        m: D(o[ke]) * a,
+                        s: D(o[Ye]) * a,
+                        ms: D(At(1e3 * o[we])) * a
                     }) : (o = Bt.exec(e)) ? (a = "-" === o[1] ? -1 : 1, i = {
                         y: Vt(o[2], a),
                         M: Vt(o[3], a),
@@ -7933,20 +7933,20 @@ webpackJsonp([44], {
                 }), G(0, ["GG", 2], 0, function() {
                     return this.isoWeekYear() % 100
                 }), ea("gggg", "weekYear"), ea("ggggg", "weekYear"), ea("GGGG", "isoWeekYear"), ea("GGGGG", "isoWeekYear"), C("weekYear", "gg"), C("isoWeekYear", "GG"), W("weekYear", 1), W("isoWeekYear", 1), he("G", de), he("g", de), he("GG", te, X), he("gg", te, X), he("GGGG", ie, $), he("gggg", ie, $), he("GGGGG", oe, ee), he("ggggg", oe, ee), ye(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, a, n) {
-                    t[n.substr(0, 2)] = k(e)
+                    t[n.substr(0, 2)] = D(e)
                 }), ye(["gg", "GG"], function(e, t, a, r) {
                     t[r] = n.parseTwoDigitYear(e)
                 }), G("Q", 0, "Qo", "quarter"), C("quarter", "Q"), W("quarter", 7), he("Q", Z), ge("Q", function(e, t) {
-                    t[ve] = 3 * (k(e) - 1)
+                    t[ve] = 3 * (D(e) - 1)
                 }), G("D", ["DD", 2], "Do", "date"), C("date", "D"), W("date", 9), he("D", te), he("DD", te, X), he("Do", function(e, t) {
                     return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient
                 }), ge(["D", "DD"], Le), ge("Do", function(e, t) {
-                    t[Le] = k(e.match(te)[0])
+                    t[Le] = D(e.match(te)[0])
                 });
                 var aa = I("Date", !0);
                 G("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), C("dayOfYear", "DDD"), W("dayOfYear", 4), he("DDD", re), he("DDDD", Q), ge(["DDD", "DDDD"], function(e, t, a) {
-                    a._dayOfYear = k(e)
-                }), G("m", ["mm", 2], 0, "minute"), C("minute", "m"), W("minute", 14), he("m", te), he("mm", te, X), ge(["m", "mm"], De);
+                    a._dayOfYear = D(e)
+                }), G("m", ["mm", 2], 0, "minute"), C("minute", "m"), W("minute", 14), he("m", te), he("mm", te, X), ge(["m", "mm"], ke);
                 var na = I("Minutes", !1);
                 G("s", ["ss", 2], 0, "second"), C("second", "s"), W("second", 15), he("s", te), he("ss", te, X), ge(["s", "ss"], Ye);
                 var ra, ia = I("Seconds", !1);
@@ -7969,7 +7969,7 @@ webpackJsonp([44], {
                     }), C("millisecond", "ms"), W("millisecond", 16), he("S", re, Z), he("SS", re, X), he("SSS", re, Q), ra = "SSSS"; ra.length <= 9; ra += "S") he(ra, se);
 
                 function oa(e, t) {
-                    t[we] = k(1e3 * ("0." + e))
+                    t[we] = D(1e3 * ("0." + e))
                 }
                 for (ra = "S"; ra.length <= 9; ra += "S") ge(ra, oa);
                 var sa = I("Milliseconds", !1);
@@ -8196,7 +8196,7 @@ webpackJsonp([44], {
                     var e = {};
                     if (y(e, this), (e = wt(e))._a) {
                         var t = e._isUTC ? m(e._a) : xt(e._a);
-                        this._isDSTShifted = this.isValid() && D(e._a, t.toArray()) > 0
+                        this._isDSTShifted = this.isValid() && k(e._a, t.toArray()) > 0
                     } else this._isDSTShifted = !1;
                     return this._isDSTShifted
                 });
@@ -8308,7 +8308,7 @@ webpackJsonp([44], {
                     dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
                     ordinal: function(e) {
                         var t = e % 10;
-                        return e + (1 === k(e % 100 / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th")
+                        return e + (1 === D(e % 100 / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th")
                     }
                 }), n.lang = w("moment.lang is deprecated. Use moment.locale instead.", ut), n.langData = w("moment.langData is deprecated. Use moment.localeData instead.", mt);
                 var _a = Math.abs;
@@ -8338,8 +8338,8 @@ webpackJsonp([44], {
                 var ba = Ma("ms"),
                     va = Ma("s"),
                     La = Ma("m"),
-                    ka = Ma("h"),
-                    Da = Ma("d"),
+                    Da = Ma("h"),
+                    ka = Ma("d"),
                     Ya = Ma("w"),
                     wa = Ma("M"),
                     Ta = Ma("y");
@@ -8412,8 +8412,8 @@ webpackJsonp([44], {
                         default:
                             throw new Error("Unknown unit " + e)
                     }
-                }, Ra.asMilliseconds = ba, Ra.asSeconds = va, Ra.asMinutes = La, Ra.asHours = ka, Ra.asDays = Da, Ra.asWeeks = Ya, Ra.asMonths = wa, Ra.asYears = Ta, Ra.valueOf = function() {
-                    return this.isValid() ? this._milliseconds + 864e5 * this._days + this._months % 12 * 2592e6 + 31536e6 * k(this._months / 12) : NaN
+                }, Ra.asMilliseconds = ba, Ra.asSeconds = va, Ra.asMinutes = La, Ra.asHours = Da, Ra.asDays = ka, Ra.asWeeks = Ya, Ra.asMonths = wa, Ra.asYears = Ta, Ra.valueOf = function() {
+                    return this.isValid() ? this._milliseconds + 864e5 * this._days + this._months % 12 * 2592e6 + 31536e6 * D(this._months / 12) : NaN
                 }, Ra._bubble = function() {
                     var e, t, a, n, r, i = this._milliseconds,
                         o = this._days,
@@ -8445,7 +8445,7 @@ webpackJsonp([44], {
                 }, Ra.toISOString = Ia, Ra.toString = Ia, Ra.toJSON = Ia, Ra.locale = Xt, Ra.localeData = $t, Ra.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", Ia), Ra.lang = Qt, G("X", 0, 0, "unix"), G("x", 0, 0, "valueOf"), he("x", de), he("X", /[+-]?\d+(\.\d{1,3})?/), ge("X", function(e, t, a) {
                     a._d = new Date(1e3 * parseFloat(e, 10))
                 }), ge("x", function(e, t, a) {
-                    a._d = new Date(k(e))
+                    a._d = new Date(D(e))
                 }), n.version = "2.18.1", t = xt, n.fn = da, n.min = function() {
                     return jt("isBefore", [].slice.call(arguments, 0))
                 }, n.max = function() {
@@ -9238,11 +9238,11 @@ webpackJsonp([44], {
                             e.longestLabelWidth = g;
                             var v = i.toRadians(e.labelRotation),
                                 L = Math.cos(v),
-                                k = Math.sin(v) * g + _.size * y + M * (y - 1) + M;
-                            n.height = Math.min(e.maxHeight, n.height + k + b), e.ctx.font = _.font;
-                            var D = t(e.ctx, r[0], _.font),
+                                D = Math.sin(v) * g + _.size * y + M * (y - 1) + M;
+                            n.height = Math.min(e.maxHeight, n.height + D + b), e.ctx.font = _.font;
+                            var k = t(e.ctx, r[0], _.font),
                                 Y = t(e.ctx, r[r.length - 1], _.font);
-                            0 !== e.labelRotation ? (e.paddingLeft = "bottom" === d.position ? L * D + 3 : L * M + 3, e.paddingRight = "bottom" === d.position ? L * M + 3 : L * Y + 3) : (e.paddingLeft = D / 2 + 3, e.paddingRight = Y / 2 + 3)
+                            0 !== e.labelRotation ? (e.paddingLeft = "bottom" === d.position ? L * k + 3 : L * M + 3, e.paddingRight = "bottom" === d.position ? L * M + 3 : L * Y + 3) : (e.paddingLeft = k / 2 + 3, e.paddingRight = Y / 2 + 3)
                         } else l.mirror ? g = 0 : g += b + M, n.width = Math.min(e.maxWidth, n.width + g), e.paddingTop = _.size / 2, e.paddingBottom = _.size / 2
                     }
                     e.handleMargins(), e.width = n.width, e.height = n.height
@@ -9333,8 +9333,8 @@ webpackJsonp([44], {
                             b = a(c),
                             v = m.drawTicks ? m.tickMarkLength : 0,
                             L = i.valueOrDefault(h.fontColor, l.defaultFontColor),
-                            k = a(h),
-                            D = i.options.toPadding(h.padding),
+                            D = a(h),
+                            k = i.options.toPadding(h.padding),
                             Y = i.toRadians(t.labelRotation),
                             w = [],
                             T = "right" === r.position ? t.left : t.right - v,
@@ -9343,7 +9343,7 @@ webpackJsonp([44], {
                             O = "bottom" === r.position ? t.top + v : t.bottom;
                         if (i.each(p, function(a, n) {
                                 if (!i.isNullOrUndef(a.label)) {
-                                    var o, s, c, h, g, y, M, b, L, k, D, j, H, P, C = a.label;
+                                    var o, s, c, h, g, y, M, b, L, D, k, j, H, P, C = a.label;
                                     n === t.zeroLineIndex && r.offset === m.offsetGridLines ? (o = m.zeroLineWidth, s = m.zeroLineColor, c = m.zeroLineBorderDash, h = m.zeroLineBorderDashOffset) : (o = i.valueAtIndexOrDefault(m.lineWidth, n), s = i.valueAtIndexOrDefault(m.color, n), c = i.valueOrDefault(m.borderDash, l.borderDash), h = i.valueOrDefault(m.borderDashOffset, l.borderDashOffset));
                                     var A = "middle",
                                         E = "middle",
@@ -9352,12 +9352,12 @@ webpackJsonp([44], {
                                         var W = v + F;
                                         "bottom" === r.position ? (E = _ ? "middle" : "top", A = _ ? "right" : "center", P = t.top + W) : (E = _ ? "middle" : "bottom", A = _ ? "left" : "center", P = t.bottom - W);
                                         var I = d(t, n, m.offsetGridLines && p.length > 1);
-                                        I < t.left && (s = "rgba(0,0,0,0)"), I += i.aliasPixel(o), H = t.getPixelForTick(n) + u.labelOffset, g = M = L = D = I, y = S, b = O, k = e.top, j = e.bottom
+                                        I < t.left && (s = "rgba(0,0,0,0)"), I += i.aliasPixel(o), H = t.getPixelForTick(n) + u.labelOffset, g = M = L = k = I, y = S, b = O, D = e.top, j = e.bottom
                                     } else {
                                         var R, N = "left" === r.position;
                                         u.mirror ? (A = N ? "left" : "right", R = F) : (A = N ? "right" : "left", R = v + F), H = N ? t.right - R : t.left + R;
                                         var z = d(t, n, m.offsetGridLines && p.length > 1);
-                                        z < t.top && (s = "rgba(0,0,0,0)"), z += i.aliasPixel(o), P = t.getPixelForTick(n) + u.labelOffset, g = T, M = x, L = e.left, D = e.right, y = b = k = j = z
+                                        z < t.top && (s = "rgba(0,0,0,0)"), z += i.aliasPixel(o), P = t.getPixelForTick(n) + u.labelOffset, g = T, M = x, L = e.left, k = e.right, y = b = D = j = z
                                     }
                                     w.push({
                                         tx1: g,
@@ -9365,8 +9365,8 @@ webpackJsonp([44], {
                                         tx2: M,
                                         ty2: b,
                                         x1: L,
-                                        y1: k,
-                                        x2: D,
+                                        y1: D,
+                                        x2: k,
                                         y2: j,
                                         labelX: H,
                                         labelY: P,
@@ -9393,12 +9393,12 @@ webpackJsonp([44], {
                             }), h.display) {
                             var j, H, P = 0,
                                 C = o(h) / 2;
-                            if (f) j = t.left + (t.right - t.left) / 2, H = "bottom" === r.position ? t.bottom - C - D.bottom : t.top + C + D.top;
+                            if (f) j = t.left + (t.right - t.left) / 2, H = "bottom" === r.position ? t.bottom - C - k.bottom : t.top + C + k.top;
                             else {
                                 var A = "left" === r.position;
-                                j = A ? t.left + C + D.top : t.right - C - D.top, H = t.top + (t.bottom - t.top) / 2, P = A ? -.5 * Math.PI : .5 * Math.PI
+                                j = A ? t.left + C + k.top : t.right - C - k.top, H = t.top + (t.bottom - t.top) / 2, P = A ? -.5 * Math.PI : .5 * Math.PI
                             }
-                            s.save(), s.translate(j, H), s.rotate(P), s.textAlign = "center", s.textBaseline = "middle", s.fillStyle = L, s.font = k.font, s.fillText(h.labelString, 0, 0), s.restore()
+                            s.save(), s.translate(j, H), s.rotate(P), s.textAlign = "center", s.textBaseline = "middle", s.fillStyle = L, s.font = D.font, s.fillText(h.labelString, 0, 0), s.restore()
                         }
                         if (m.drawBorder) {
                             s.lineWidth = i.valueAtIndexOrDefault(m.lineWidth, 0), s.strokeStyle = i.valueAtIndexOrDefault(m.color, 0);
@@ -9889,7 +9889,7 @@ webpackJsonp([44], {
         }
 
         function s(e) {
-            return D[JSON.stringify(e)]
+            return k[JSON.stringify(e)]
         }
 
         function d(e) {
@@ -10031,7 +10031,7 @@ webpackJsonp([44], {
         }
 
         function L(e) {
-            return k[e]
+            return D[e]
         }
         e.exports = {
             rgb2hsl: a,
@@ -10138,7 +10138,7 @@ webpackJsonp([44], {
                 return M(v(e))
             }
         };
-        var k = {
+        var D = {
                 aliceblue: [240, 248, 255],
                 antiquewhite: [250, 235, 215],
                 aqua: [0, 255, 255],
@@ -10288,8 +10288,8 @@ webpackJsonp([44], {
                 yellow: [255, 255, 0],
                 yellowgreen: [154, 205, 50]
             },
-            D = {};
-        for (var Y in k) D[JSON.stringify(k[Y])] = Y
+            k = {};
+        for (var Y in D) k[JSON.stringify(D[Y])] = Y
     },
     ZFGz: function(e, t, a) {
         (function(e) {
@@ -10542,11 +10542,11 @@ webpackJsonp([44], {
                                 b = e.columnWidths = [],
                                 v = a.padding,
                                 L = 0,
-                                k = 0,
-                                D = u + M;
+                                D = 0,
+                                k = u + M;
                             i.each(e.legendItems, function(e, t) {
                                 var n = o(a, u) + u / 2 + s.measureText(e.text).width;
-                                k + D > f.height && (v += L + a.padding, b.push(L), L = 0, k = 0), L = Math.max(L, n), k += D, _[t] = {
+                                D + k > f.height && (v += L + a.padding, b.push(L), L = 0, D = 0), L = Math.max(L, n), D += k, _[t] = {
                                     left: 0,
                                     top: 0,
                                     width: n,
@@ -12410,11 +12410,11 @@ webpackJsonp([44], {
                             b = (r - g / 2) / (m.length + h.length),
                             v = (i - M) / (_.length + f.length),
                             L = g,
-                            k = y,
-                            D = [];
+                            D = y,
+                            k = [];
                         n.each(m.concat(h, _, f), function(e) {
                             var t, a = e.isHorizontal();
-                            a ? (t = e.update(e.fullWidth ? g : L, v), k -= t.height) : (t = e.update(b, M), L -= t.width), D.push({
+                            a ? (t = e.update(e.fullWidth ? g : L, v), D -= t.height) : (t = e.update(b, M), L -= t.width), k.push({
                                 horizontal: a,
                                 minSize: t,
                                 box: e
@@ -12448,7 +12448,7 @@ webpackJsonp([44], {
                         }), n.each(f, function(e) {
                             H += e.height
                         }), n.each(m.concat(h), function(e) {
-                            var t = n.findNextWhere(D, function(t) {
+                            var t = n.findNextWhere(k, function(t) {
                                     return t.box === e
                                 }),
                                 a = {
@@ -12457,7 +12457,7 @@ webpackJsonp([44], {
                                     top: j,
                                     bottom: H
                                 };
-                            t && e.update(t.minSize.width, k, a)
+                            t && e.update(t.minSize.width, D, a)
                         }), S = d, O = l, j = u, H = c, n.each(m, function(e) {
                             S += e.width
                         }), n.each(h, function(e) {
@@ -12473,7 +12473,7 @@ webpackJsonp([44], {
                         j += C, H += Math.max(x - H, 0);
                         var A = i - j - H,
                             E = r - S - O;
-                        E === L && A === k || (n.each(m, function(e) {
+                        E === L && A === D || (n.each(m, function(e) {
                             e.height = A
                         }), n.each(h, function(e) {
                             e.height = A
@@ -12481,21 +12481,21 @@ webpackJsonp([44], {
                             e.fullWidth || (e.width = E)
                         }), n.each(f, function(e) {
                             e.fullWidth || (e.width = E)
-                        }), k = A, L = E);
+                        }), D = A, L = E);
                         var F = d + P,
                             W = u + C;
-                        n.each(m.concat(_), R), F += L, W += k, n.each(h, R), n.each(f, R), e.chartArea = {
+                        n.each(m.concat(_), R), F += L, W += D, n.each(h, R), n.each(f, R), e.chartArea = {
                             left: S,
                             top: j,
                             right: S + L,
-                            bottom: j + k
+                            bottom: j + D
                         }, n.each(p, function(t) {
-                            t.left = e.chartArea.left, t.top = e.chartArea.top, t.right = e.chartArea.right, t.bottom = e.chartArea.bottom, t.update(L, k)
+                            t.left = e.chartArea.left, t.top = e.chartArea.top, t.right = e.chartArea.right, t.bottom = e.chartArea.bottom, t.update(L, D)
                         })
                     }
 
                     function I(e) {
-                        var t = n.findNextWhere(D, function(t) {
+                        var t = n.findNextWhere(k, function(t) {
                             return t.box === e
                         });
                         if (t)
@@ -12507,11 +12507,11 @@ webpackJsonp([44], {
                                     bottom: 0
                                 };
                                 e.update(e.fullWidth ? g : L, y / 2, a)
-                            } else e.update(t.minSize.width, k)
+                            } else e.update(t.minSize.width, D)
                     }
 
                     function R(e) {
-                        e.isHorizontal() ? (e.left = e.fullWidth ? d : S, e.right = e.fullWidth ? r - l : S + L, e.top = W, e.bottom = W + e.height, W = e.bottom) : (e.left = F, e.right = F + e.width, e.top = j, e.bottom = j + k, F = e.right)
+                        e.isHorizontal() ? (e.left = e.fullWidth ? d : S, e.right = e.fullWidth ? r - l : S + L, e.top = W, e.bottom = W + e.height, W = e.bottom) : (e.left = F, e.right = F + e.width, e.top = j, e.bottom = j + D, F = e.right)
                     }
                 }
             }
@@ -13392,7 +13392,7 @@ webpackJsonp([44], {
                         t.fillStyle = a(r.fontColor, o.defaultFontColor), t.font = h, e.isHorizontal() ? (d = y + (b - y) / 2, l = g + f, s = b - y) : (d = "left" === r.position ? y + f : b - f, l = g + (M - g) / 2, s = M - g, p = Math.PI * ("left" === r.position ? -.5 : .5)), t.save(), t.translate(d, l), t.rotate(p), t.textAlign = "center", t.textBaseline = "middle";
                         var v = r.text;
                         if (i.isArray(v))
-                            for (var L = 0, k = 0; k < v.length; ++k) t.fillText(v[k], 0, L, s), L += _;
+                            for (var L = 0, D = 0; D < v.length; ++D) t.fillText(v[D], 0, L, s), L += _;
                         else t.fillText(v, 0, 0, s);
                         t.restore()
                     }
@@ -14284,7 +14284,7 @@ webpackJsonp([44], {
         function(e) {
             e.AllButtons = "all-buttons", e.RemoveOnly = "remove-button-only", e.MoveUpAndRemoveOnly = "move-up-and-remove-buttons-only", e.MoveDownAndRemoveOnly = "move-down-and-remove-buttons-only"
         }(r || (r = {}));
-        var L, k, D = function(e) {
+        var L, D, k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -14425,7 +14425,7 @@ webpackJsonp([44], {
                     display: M.P.Flex,
                     flexDirection: M.R.Column
                 }, t.map(function(n, i) {
-                    return c.createElement(D, {
+                    return c.createElement(k, {
                         key: n.id,
                         buttonConfiguration: function(t, a) {
                             if (!e.onMoveClick) return r.RemoveOnly;
@@ -14463,21 +14463,21 @@ webpackJsonp([44], {
         }(L || (L = {})),
         function(e) {
             e.ChannelNotFoundByLogin = "CHANNEL_NOT_FOUND_BY_LOGIN", e.ChannelPendingInvitation = "CHANNEL_PENDING_INVITATION", e.ChannelAlreadyMember = "CHANNEL_ALREADY_MEMBER", e.ChannelAlreadyFeatured = "CHANNEL_ALREADY_FEATURED"
-        }(k || (k = {}));
+        }(D || (D = {}));
         var T, x = function(e) {
-                for (var t in k)
-                    if (e.includes(k[t])) return k[t];
+                for (var t in D)
+                    if (e.includes(D[t])) return D[t];
                 return ""
             },
             S = function(e) {
                 switch (e) {
-                    case k.ChannelNotFoundByLogin:
+                    case D.ChannelNotFoundByLogin:
                         return Object(h.d)("Channel not found", "TeamsDashboard");
-                    case k.ChannelPendingInvitation:
+                    case D.ChannelPendingInvitation:
                         return Object(h.d)("Channel has a pending invitation", "TeamsDashboard");
-                    case k.ChannelAlreadyMember:
+                    case D.ChannelAlreadyMember:
                         return Object(h.d)("Channel is already a member", "TeamsDashboard");
-                    case k.ChannelAlreadyFeatured:
+                    case D.ChannelAlreadyFeatured:
                         return Object(h.d)("Channel is already featured", "TeamsDashboard");
                     default:
                         return Object(h.d)("Unknown Error", "TeamsDashboard")
@@ -15175,7 +15175,7 @@ webpackJsonp([44], {
         ! function(e) {
             e.Title = "revenue-summary-item-title", e.Symbol = "revenue-summary-item-symbol", e.Dollars = "revenue-summary-item-dollars"
         }(ee || (ee = {}));
-        var ve, Le, ke = function(e) {
+        var ve, Le, De = function(e) {
                 var t, a;
                 return e.isLoading ? (t = c.createElement(M.O, {
                     type: M._43.H5
@@ -15209,12 +15209,12 @@ webpackJsonp([44], {
                     margin: 1
                 }, t, a)
             },
-            De = function(e) {
+            ke = function(e) {
                 var t = e.revenues.reduce(function(e, t) {
                         return e + t.cents
                     }, 0),
                     a = e.revenues.map(function(t, a) {
-                        return c.createElement(ke, {
+                        return c.createElement(De, {
                             cents: t.cents,
                             key: a,
                             isLoading: e.isLoading,
@@ -15230,14 +15230,14 @@ webpackJsonp([44], {
                     justifyContent: M._5.Between,
                     alignItems: M.c.Center,
                     padding: 1
-                }, c.createElement(ke, {
+                }, c.createElement(De, {
                     cents: t,
                     isLoading: e.isLoading,
                     title: Object(h.d)("Total", "TeamsDashboardRevenueSummaryBrick") + " *"
                 }), a)
             },
             Ye = function(e) {
-                return c.createElement(De, {
+                return c.createElement(ke, {
                     isLoading: e.isLoading,
                     revenues: we(e.data)
                 })
@@ -16321,15 +16321,15 @@ webpackJsonp([44], {
                     this.myChart.data.datasets && (this.myChart.data.labels = e.timeLabels, this.myChart.data.datasets[0].label = e.chartLabel, this.myChart.data.datasets[0].data = e.data, this.myChart.update())
                 }, t.prototype.setCanvasResolution = function() {
                     if (this.canvas) {
-                        var e = kt(this.canvas.getContext("2d"));
+                        var e = Dt(this.canvas.getContext("2d"));
                         this.canvas.height = 36 * e, this.canvas.style.height = "36rem", this.canvas.getContext("2d").setTransform(e, 0, 0, e, 0, 0)
                     }
                 }, t = u.__decorate([Object(y.d)("StatsCanvas")], t)
             }(c.Component),
-            kt = function(e) {
+            Dt = function(e) {
                 return 1 / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            Dt = Lt,
+            kt = Lt,
             Yt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -16382,7 +16382,7 @@ webpackJsonp([44], {
                         default:
                             throw new Error("Data type: " + a + " is unrecognized")
                     }
-                    return c.createElement(Dt, {
+                    return c.createElement(kt, {
                         chartData: n
                     })
                 }, t
@@ -16605,7 +16605,7 @@ webpackJsonp([44], {
                     }, n = 0, r = Object.keys(t.geo); n < r.length; n++) {
                     var i = r[n];
                     a.geographical.push({
-                        name: Object(Et.a)(i),
+                        name: Object(Et.b)(i),
                         views: t.geo[i]
                     })
                 }
@@ -17727,21 +17727,21 @@ webpackJsonp([44], {
                             b = _ <= -Math.PI && -Math.PI <= f || _ <= Math.PI && Math.PI <= f,
                             v = _ <= .5 * -Math.PI && .5 * -Math.PI <= f || _ <= 1.5 * Math.PI && 1.5 * Math.PI <= f,
                             L = m / 100,
-                            k = {
+                            D = {
                                 x: b ? -1 : Math.min(p.x * (p.x < 0 ? 1 : L), g.x * (g.x < 0 ? 1 : L)),
                                 y: v ? -1 : Math.min(p.y * (p.y < 0 ? 1 : L), g.y * (g.y < 0 ? 1 : L))
                             },
-                            D = {
+                            k = {
                                 x: y ? 1 : Math.max(p.x * (p.x > 0 ? 1 : L), g.x * (g.x > 0 ? 1 : L)),
                                 y: M ? 1 : Math.max(p.y * (p.y > 0 ? 1 : L), g.y * (g.y > 0 ? 1 : L))
                             },
                             Y = {
-                                width: .5 * (D.x - k.x),
-                                height: .5 * (D.y - k.y)
+                                width: .5 * (k.x - D.x),
+                                height: .5 * (k.y - D.y)
                             };
                         l = Math.min(s / Y.width, d / Y.height), u = {
-                            x: -.5 * (D.x + k.x),
-                            y: -.5 * (D.y + k.y)
+                            x: -.5 * (k.x + D.x),
+                            y: -.5 * (k.y + D.y)
                         }
                     }
                     a.borderWidth = t.getMaxBorderWidth(c.data), a.outerRadius = Math.max((l - a.borderWidth) / 2, 0), a.innerRadius = Math.max(m ? a.outerRadius / 100 * m : 0, 0), a.radiusLength = (a.outerRadius - a.innerRadius) / a.getVisibleDatasetCount(), a.offsetX = u.x * a.outerRadius, a.offsetY = u.y * a.outerRadius, c.total = t.calculateTotal(), t.outerRadius = a.outerRadius - a.radiusLength * t.getRingIndex(t.index), t.innerRadius = Math.max(t.outerRadius - a.radiusLength, 0), i.each(c.data, function(a, n) {
@@ -19464,7 +19464,7 @@ webpackJsonp([44], {
     },
     yLtb: function(e, t, a) {
         "use strict";
-        t.a = function(e) {
+        t.b = function(e) {
             switch (e.toUpperCase()) {
                 case "A1":
                     return Object(n.d)("Anonymous Proxy", "format-country");
@@ -19977,8 +19977,11 @@ webpackJsonp([44], {
                 default:
                     return e
             }
-        };
-        var n = a("6sO2")
+        }, a.d(t, "a", function() {
+            return r
+        });
+        var n = a("6sO2");
+        var r = ["US", "CA", "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "A1", "AQ", "AG", "AR", "AM", "AW", "AP", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "DK", "DJ", "DM", "DO", "TL", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "EU", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "CI", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "KP", "MP", "NO", "OM", "O1", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "A2", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "KR", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "VI", "UG", "UA", "AE", "GB", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "WF", "EH", "YE", "ZM", "ZW"]
     },
     yRTJ: function(e, t, a) {
         (function(e) {
@@ -20142,4 +20145,4 @@ webpackJsonp([44], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-eb7100aeed74170bb4f8d5fd7c2ed1c9.js.map
+//# sourceMappingURL=pages.teams-dashboard-06f38dad1ba7e3724061822f740714db.js.map

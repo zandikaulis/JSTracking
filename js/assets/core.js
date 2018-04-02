@@ -6796,6 +6796,7 @@ webpackJsonp([67], {
                                 justifyContent: l._5.Center
                             }, a.createElement("button", {
                                 className: t,
+                                "aria-label": i.displayName,
                                 name: i.displayName,
                                 onClick: e.props.locked ? void 0 : e.handleClickEmote.bind(e, i.id),
                                 "data-a-target": i.displayName
@@ -26570,7 +26571,8 @@ webpackJsonp([67], {
                         o = this.props.unreadMessageCount,
                         s = Object(g.d)("Unknown", "ThreadListItem");
                     return i ? ((e = i.displayName || i.login) || (e = s), t = i.login, n = i.profileImageURL) : (e = s, t = s, n = null), r.createElement("div", {
-                        onClick: this.handleThreadClick
+                        onClick: this.handleThreadClick,
+                        role: "listitem"
                     }, r.createElement(f._29, {
                         className: "whispers-list-item",
                         borderBottom: !0,
@@ -26798,7 +26800,7 @@ webpackJsonp([67], {
                 return i.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(P.a, {
                         onClickOut: this.handleClose
-                    }, r.createElement(f._29, {
+                    }, r.createElement(f._1, {
                         className: "whispers-threads-box__container " + (this.state.open ? "whispers-threads-box__container--open" : ""),
                         display: f.P.Flex,
                         flexDirection: f.R.Column,
@@ -26810,7 +26812,9 @@ webpackJsonp([67], {
                         attachRight: !0,
                         "data-click-out-id": "threads-box",
                         "data-a-target": "threads-box-" + (this.state.open ? "open" : "closed")
-                    }, this.renderHeader(), this.renderList(), this.renderFooter()))
+                    }, r.createElement("div", {
+                        "aria-labelledby": "whispers-box-header"
+                    }, this.renderHeader(), this.renderList(), this.renderFooter())))
                 }, t.prototype.renderOpenCloseButton = function() {
                     var e = null;
                     if (this.props.unreadCount > 0) {
@@ -26901,7 +26905,9 @@ webpackJsonp([67], {
                     }
                     return r.createElement(x.b, {
                         suppressScrollX: !0
-                    }, r.createElement(f._6, null, e, n, i, r.createElement(x.a, {
+                    }, r.createElement("div", {
+                        role: "list"
+                    }, e, n, i, r.createElement(x.a, {
                         enabled: this.state.open,
                         loadMore: this.props.loadMore,
                         pixelThreshold: 200
@@ -26923,13 +26929,15 @@ webpackJsonp([67], {
                             x: 1
                         },
                         "data-click-hide-id": "threads-box-header"
-                    }, r.createElement(f._6, {
+                    }, r.createElement(f._0, {
                         flexGrow: 1,
                         display: f.P.Flex
+                    }, r.createElement("div", {
+                        id: "whispers-box-header"
                     }, r.createElement(f.O, {
                         type: f._43.Span,
                         bold: !0
-                    }, Object(g.d)("Whispers", "WhisperThreadsBox"))), r.createElement(R.a, {
+                    }, Object(g.d)("Whispers", "WhisperThreadsBox")))), r.createElement(R.a, {
                         ref: this.saveSettingsMenuRef
                     }, r.createElement(f.v, {
                         ariaLabel: Object(g.d)("Settings", "WhisperThreadsBox"),
@@ -44757,4 +44765,4 @@ webpackJsonp([67], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-ea21e88dc3fc29d8865b7189d124c0e5.js.map
+//# sourceMappingURL=core-572512abeb01da7d94430b37a5c8a04b.js.map
