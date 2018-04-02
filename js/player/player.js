@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".78cea472802b7a2adbe8.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".629bfa921db429fe5082.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -31714,7 +31714,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.30-213926+bb746a22b525fbdef8843187f41581d736de1cba",
+                    app_version: "2018.04.02-193000+1283e4af4339b3127c74374a195527f40a11f080",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
@@ -37272,7 +37272,7 @@
                 }]), e
             }(),
             No = n(105),
-            Lo = "//video-edge-b9b162.sjc01.hls.ttvnw.net/v1/segment/CpHG5P5wBo-47HD2IZCX7RxjuBERb7STCbufdPZsLIw2sMn1mVHEZHmBVAHMdvgJrkhHNoH8lWjLmDDTZ0YH3DlBZGk5S20PbynqxX-1upTd0MRwCjfdDVnt0V77hw9TDDDLS--SzMCOpsLNMkcUW3jtcnyTr_LDHOmCEKw_4ZQLtztnXKQRnjc4bdyiXzb_ISCQ-Xn7LbFoxwVzJf8vDjlrjOZPRzN26B3zAtHq82Mm53vOnk8rYibGVE5OP9UYm4bl2xVMcNZ6y9my5Pgc3NFFAJd6s-qHreS0-NvrSehUOb82-dNRvhhL6ENN4Hd2Hw4s5Q0xCWq_QtOO-jY7pZq_VBXLQrLRLM2tyn-2TtX0rVP_WVuNB3K5TMv4ektlr34d33CmMj6YHkKBAD1-a3aadfQS0_a09YyvxHtGiL2peM4YgzCpViNproLbaXp3C4p34e8bAgVvL2mZF5rIR4xE8fF5lK3iJDUjEG-Na1xEIY5KDVud5R0vrwwrrHQeeNjHz5wQwJ_mwUDixpsQOJXvPGOTMhDqvufetnBhtQ.ts",
+            Lo = "//video-edge-da0d86.sjc01.hls.ttvnw.net/v1/segment/ChLcxDS5at7O1CVFZxIJWYe9cm06rYiOa74fxiun9QszOMjfPtOCh4thCCCSAu6ANHL_aS2TycIABd6OfnqAzhkVVQCGJSPZNEN1rZsusUCN0VJDTBJMepBb5VRK5Qni9B9fKtKZnV1ShkMZd2a248dfTKHQzohIYeOX_eqPexhpd_vXjl2cvtpLpE9CwBTGRFCcVrKENSTK_wCB3nKy27GUf3dcm6UEklF1QS1A5MCLNhYAbizQPBoSsx11FARrQK69DCTQO-Ws0EN2_URlgz2_7y-UzY2T-SJ3xDuupNsppS1J3TF1nb5ojGTPo26UmD2i0BBb8s3xVUZYyZFZ4kmXZQPKNjQnvRR2NWvTnRRa4Tb9h9xLTX6IkF4wrsgZytDlOV2lpRs7aHSf8UdZaIA_qmzCzxTAP1-PcDyuynH5WCbDomjg3VvjtCregUzffbAKKXApfd-vCORIsmfn8RR1rjqf1NncqKfY48yvhgMgSo-1fUIMHHjgCrNO_xQMp5rIiV6GZ-YyNMCazTVz4XQA-h6aeRrrxI_Sk9jK.ts",
             Mo = n(48),
             Do = n(254),
             qo = n(136),
