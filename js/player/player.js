@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".fcf02785e9cf415eec0a.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".0942ec6a16843b29c16a.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -26950,16 +26950,15 @@
     }, function(e, t, n) {
         "use strict";
 
-        function r(e, t, n, r) {
-            var a = [];
+        function r(e, t, n) {
+            var r = [];
             this.destroy = function() {
-                    a.forEach(function(e) {
+                    r.forEach(function(e) {
                         return e()
-                    }), a = null
+                    }), r = null
                 },
                 function() {
-                    var e = r.player;
-                    e && t.setAttribute("data-playertype", e), a.push(Object(i.a)(n, ["screen"], function(e) {
+                    r.push(Object(i.a)(n, ["screen"], function(e) {
                         var n = e.screen;
                         t.setAttribute("data-screen", n[0])
                     }))
@@ -31714,7 +31713,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.02-200926+48f5b46288af49ab37dbd631ce95da680f9c664d",
+                    app_version: "2018.04.02-214107+d9a5c51ce0aae652be18d718c9be15ee69876335",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
