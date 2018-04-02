@@ -24,7 +24,7 @@ window.__twilightSettings = {
     "crate_trickster_launch": "off",
     "env_test": "This is a test in Production",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445", "27697171", "180833069", "104874624"],
-    "esport_insider_pass_secondary_channel": "overwatchleague",
+    "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
     "esport_insider_pass_show_as_new": true,
     "esport_insider_pass_whitelist": ["27697171-staff", "180833069-staff", "104874624-staff"],
     "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on", "hackweek esports", "wrestling"],
