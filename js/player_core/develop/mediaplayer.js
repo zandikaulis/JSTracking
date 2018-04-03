@@ -522,6 +522,10 @@ MediaPlayer.prototype.setLiveMaxLatency = function (latency) {
     this._postMessage(WorkerMessage.SET_LIVE_MAX_LATENCY, latency);
 }
 
+MediaPlayer.prototype.setAnalyticsSendEvents = function (enable) {
+    this._postMessage(WorkerMessage.SET_ANALYTICS_SEND_EVENTS, enable);
+}
+
 // Extra Functions
 
 MediaPlayer.prototype.addEventListener = function (name, fn) {
@@ -3416,7 +3420,12 @@ module.exports = {
      * Set boolean to enable/disable live low latency
      * @param {boolean} enable The boolean value to enable/disable
      */
-    SET_LIVE_LOW_LATENCY: 'WorkerSetLiveLowLatency'
+    SET_LIVE_LOW_LATENCY: 'WorkerSetLiveLowLatency',
+    /**
+     * Enable player core analytics
+     * @param {boolean} enable The boolean value to enable/disable
+     */
+    SET_ANALYTICS_SEND_EVENTS: 'WorkerSetAnalyticsSendEvents'
 };
 
 
