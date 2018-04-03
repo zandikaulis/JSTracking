@@ -1841,7 +1841,7 @@ webpackJsonp([44], {
                 return n++
             }),
             isNullOrUndef: function(e) {
-                return null == e
+                return null === e || void 0 === e
             },
             isArray: Array.isArray ? Array.isArray : function(e) {
                 return "[object Array]" === Object.prototype.toString.call(e)
@@ -1958,19 +1958,20 @@ webpackJsonp([44], {
                     var a, n = this,
                         r = n.options.offset,
                         i = Math.max(n.maxIndex + 1 - n.minIndex - (r ? 0 : 1), 1);
-                    if (null != e && (a = n.isHorizontal() ? e.x : e.y), void 0 !== a || void 0 !== e && isNaN(t)) {
+                    if (void 0 !== e && null !== e && (a = n.isHorizontal() ? e.x : e.y), void 0 !== a || void 0 !== e && isNaN(t)) {
+                        var o = n.getLabels();
                         e = a || e;
-                        var o = n.getLabels().indexOf(e);
-                        t = -1 !== o ? o : t
+                        var s = o.indexOf(e);
+                        t = -1 !== s ? s : t
                     }
                     if (n.isHorizontal()) {
-                        var s = n.width / i,
-                            d = s * (t - n.minIndex);
-                        return r && (d += s / 2), n.left + Math.round(d)
+                        var d = n.width / i,
+                            l = d * (t - n.minIndex);
+                        return r && (l += d / 2), n.left + Math.round(l)
                     }
-                    var l = n.height / i,
-                        u = l * (t - n.minIndex);
-                    return r && (u += l / 2), n.top + Math.round(u)
+                    var u = n.height / i,
+                        c = u * (t - n.minIndex);
+                    return r && (c += u / 2), n.top + Math.round(c)
                 },
                 getPixelForTick: function(e) {
                     return this.getPixelForValue(this.ticks[e], e + this.minIndex, null)
@@ -2542,7 +2543,8 @@ webpackJsonp([44], {
             }, e
         }()
     },
-    "72Lu": function(e, t) {
+    "72Lu": function(e, t, a) {
+        "use strict";
         e.exports = {
             aliceblue: [240, 248, 255],
             antiquewhite: [250, 235, 215],
@@ -3482,7 +3484,7 @@ webpackJsonp([44], {
                     r = e.fill,
                     i = null;
                 if (isFinite(r)) return null;
-                if ("start" === r ? i = void 0 === a.scaleBottom ? n.bottom : a.scaleBottom : "end" === r ? i = void 0 === a.scaleTop ? n.top : a.scaleTop : void 0 !== a.scaleZero ? i = a.scaleZero : n.getBasePosition ? i = n.getBasePosition() : n.getBasePixel && (i = n.getBasePixel()), null != i) {
+                if ("start" === r ? i = void 0 === a.scaleBottom ? n.bottom : a.scaleBottom : "end" === r ? i = void 0 === a.scaleTop ? n.top : a.scaleTop : void 0 !== a.scaleZero ? i = a.scaleZero : n.getBasePosition ? i = n.getBasePosition() : n.getBasePixel && (i = n.getBasePixel()), void 0 !== i && null !== i) {
                     if (void 0 !== i.x && void 0 !== i.y) return i;
                     if ("number" == typeof i && isFinite(i)) return {
                         x: (t = n.isHorizontal()) ? i : null,
@@ -6939,8 +6941,8 @@ webpackJsonp([44], {
         }
 
         function c(e, t) {
-            var a = null != e,
-                n = null != t;
+            var a = null !== e && void 0 !== e,
+                n = null !== t && void 0 !== t;
             return a && n ? e > t ? 1 : e < t ? -1 : 0 : a ? -1 : n ? 1 : 0
         }! function(e) {
             e[e.Ascending = 1] = "Ascending", e[e.Descending = -1] = "Descending"
@@ -7636,7 +7638,7 @@ webpackJsonp([44], {
                 var vt = /^((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d?\d\s(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(?:\d\d)?\d\d\s)(\d\d:\d\d)(\:\d\d)?(\s(?:UT|GMT|[ECMP][SD]T|[A-IK-Za-ik-z]|[+-]\d{4}))$/;
 
                 function Lt(e) {
-                    var t, a, n, r, i, o, s, d = {
+                    var t, a, n, r, i, o, s, d, l = {
                         " GMT": " +0000",
                         " EDT": " -0400",
                         " EST": " -0500",
@@ -7649,20 +7651,20 @@ webpackJsonp([44], {
                     };
                     if (t = e._i.replace(/\([^\)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s|\s$/g, ""), a = vt.exec(t)) {
                         if (n = a[1] ? "ddd" + (5 === a[1].length ? ", " : " ") : "", r = "D MMM " + (a[2].length > 10 ? "YYYY " : "YY "), i = "HH:mm" + (a[4] ? ":ss" : ""), a[1]) {
-                            var l = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(a[2]).getDay()];
-                            if (a[1].substr(0, 3) !== l) return h(e).weekdayMismatch = !0, void(e._isValid = !1)
+                            var u = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(a[2]).getDay()];
+                            if (a[1].substr(0, 3) !== u) return h(e).weekdayMismatch = !0, void(e._isValid = !1)
                         }
                         switch (a[5].length) {
                             case 2:
-                                o = 0 === s ? " +0000" : ((s = "YXWVUTSRQPONZABCDEFGHIKLM".indexOf(a[5][1].toUpperCase()) - 12) < 0 ? " -" : " +") + ("" + s).replace(/^-?/, "0").match(/..$/)[0] + "00";
+                                s = 0 === d ? " +0000" : ((d = "YXWVUTSRQPONZABCDEFGHIKLM".indexOf(a[5][1].toUpperCase()) - 12) < 0 ? " -" : " +") + ("" + d).replace(/^-?/, "0").match(/..$/)[0] + "00";
                                 break;
                             case 4:
-                                o = d[a[5]];
+                                s = l[a[5]];
                                 break;
                             default:
-                                o = d[" GMT"]
+                                s = l[" GMT"]
                         }
-                        a[5] = o, e._i = a.splice(1).join(""), " ZZ", e._f = n + r + i + " ZZ", Yt(e), h(e).rfc2822 = !0
+                        a[5] = s, e._i = a.splice(1).join(""), o = " ZZ", e._f = n + r + i + o, Yt(e), h(e).rfc2822 = !0
                     } else e._isValid = !1
                 }
 
@@ -9948,7 +9950,7 @@ webpackJsonp([44], {
                 s = e[1] / 100,
                 d = e[2] / 100,
                 l = s + d;
-            switch (l > 1 && (s /= l, d /= l), n = 6 * o - (t = Math.floor(6 * o)), 0 != (1 & t) && (n = 1 - n), i = s + n * ((a = 1 - d) - s), t) {
+            switch (l > 1 && (s /= l, d /= l), a = 1 - d, n = 6 * o - (t = Math.floor(6 * o)), 0 != (1 & t) && (n = 1 - n), i = s + n * (a - s), t) {
                 default:
                     case 6:
                     case 0:
@@ -13012,7 +13014,7 @@ webpackJsonp([44], {
             }
 
             function a(e) {
-                return null != e && "none" !== e
+                return void 0 !== e && null !== e && "none" !== e
             }
 
             function o(e, n, r) {
@@ -13211,8 +13213,8 @@ webpackJsonp([44], {
                 n.font !== t && (r = n.data = {}, o = n.garbageCollect = [], n.font = t), e.font = t;
                 var s = 0;
                 i.each(a, function(t) {
-                    null != t && !0 !== i.isArray(t) ? s = i.measureText(e, r, o, s, t) : i.isArray(t) && i.each(t, function(t) {
-                        null == t || i.isArray(t) || (s = i.measureText(e, r, o, s, t))
+                    void 0 !== t && null !== t && !0 !== i.isArray(t) ? s = i.measureText(e, r, o, s, t) : i.isArray(t) && i.each(t, function(t) {
+                        void 0 === t || null === t || i.isArray(t) || (s = i.measureText(e, r, o, s, t))
                     })
                 });
                 var d = o.length / 2;
@@ -20145,4 +20147,4 @@ webpackJsonp([44], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-06f38dad1ba7e3724061822f740714db.js.map
+//# sourceMappingURL=pages.teams-dashboard-60e9671892221af49f4fd62be89adcea.js.map

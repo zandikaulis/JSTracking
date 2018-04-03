@@ -1824,16 +1824,36 @@ webpackJsonp([50], {
                                 }
                             }]
                         }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "curator"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 331
+                end: 346
             }
         };
         i.loc.source = {
-            body: '#import "twilight/features/feed/models/user-fragment.gql"\nfragment feedItemClip on Clip {\nid\nclipCreatedAt: createdAt\nembedURL\nthumbnailURL(width:480 height:272)\nviewCount\nslug\ndurationSeconds\nclipTitle: title\nbroadcaster {\n...feedUser\n}\nreactions {\nemote {\nid\ntoken\nsetID\n}\ncount\nself {\nhasReacted\n}\n}\nvideo {\ngame {\nid\nname\n}\n}\n}',
+            body: '#import "twilight/features/feed/models/user-fragment.gql"\nfragment feedItemClip on Clip {\nid\nclipCreatedAt: createdAt\nembedURL\nthumbnailURL(width:480 height:272)\nviewCount\nslug\ndurationSeconds\nclipTitle: title\nbroadcaster {\n...feedUser\n}\nreactions {\nemote {\nid\ntoken\nsetID\n}\ncount\nself {\nhasReacted\n}\n}\nvideo {\ngame {\nid\nname\n}\n}\ncurator {\nid\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -6916,7 +6936,8 @@ webpackJsonp([50], {
                         return {
                             contentType: h.a.Clip,
                             targetUserID: t.broadcaster.id,
-                            contentID: t.id
+                            contentID: t.id,
+                            additionalTrackingID: t.curator ? t.curator.id : ""
                         };
                     case N:
                         var n = e;
@@ -7612,4 +7633,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-7d01f860e4cd61b806060597d5405f9c.js.map
+//# sourceMappingURL=pages.front-09b278193b88ddc7572c94750796211d.js.map

@@ -8337,39 +8337,58 @@ webpackJsonp([42], {
                 }), Object(k.d)("JoinRoomsButton")], t)
             }(l.Component);
         var jn, Bn = Object(i.b)(function(e) {
-                return {
-                    sessionUser: Object(r.c)(e)
-                }
-            })(Fn),
-            Un = n("q+qZ"),
+            return {
+                sessionUser: Object(r.c)(e)
+            }
+        })(Fn);
+        ! function(e) {
+            e.Moderator = "moderator", e.Subscriber = "subscriber"
+        }(jn || (jn = {}));
+        var Un = function(e) {
+                return c.l.get("roomUpsellHistory", {})[e] || !1
+            },
             Pn = function(e) {
+                var t;
+                c.l.set("roomUpsellHistory", s.__assign({}, c.l.get("roomUpsellHistory", {}), ((t = {})[e] = !0, t)))
+            },
+            Vn = n("q+qZ"),
+            Hn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.createRoom = function() {
-                        if (Z(t.props.roomName)) t.props.createRoom(Object(E.a)({
-                            name: t.props.roomName,
-                            topic: t.props.roomTopic,
-                            isPreviewable: t.props.isRoomPreviewable,
-                            minimumAllowedRole: t.props.roomMinimumAllowedRole
-                        })).then(function(e) {
-                            if (e.data.createRoom.error && t.props.onCreateHandler) {
-                                var n = e.data.createRoom.error,
-                                    i = n.code,
-                                    a = n.minLength,
-                                    r = q(i, {
-                                        maxChars: n.maxLength,
-                                        minChars: a
-                                    });
-                                t.props.onCreateHandler(r)
-                            } else t.props.onCreateHandler && t.props.onCreateHandler()
-                        });
-                        else if (t.props.onCreateHandler) {
-                            var e = q("NAME_LENGTH_INVALID", {
-                                maxChars: $,
-                                minChars: J
-                            });
-                            t.props.onCreateHandler(e)
-                        }
+                        return s.__awaiter(t, void 0, void 0, function() {
+                            var e, t, n, i, a, r;
+                            return s.__generator(this, function(o) {
+                                switch (o.label) {
+                                    case 0:
+                                        return Z(this.props.roomName) ? [4, this.props.createRoom(Object(E.a)({
+                                            name: this.props.roomName,
+                                            topic: this.props.roomTopic,
+                                            isPreviewable: this.props.isRoomPreviewable,
+                                            minimumAllowedRole: this.props.roomMinimumAllowedRole
+                                        }))] : [3, 2];
+                                    case 1:
+                                        if (!(e = o.sent()).data.createRoom.error) switch (this.props.roomMinimumAllowedRole) {
+                                            case V.b.Subscriber:
+                                                Pn(jn.Subscriber);
+                                                break;
+                                            case V.b.Moderator:
+                                                Pn(jn.Moderator)
+                                        }
+                                        return this.props.onCreateHandler && (r = void 0, e.data.createRoom.error && (t = e.data.createRoom.error, n = t.code, i = t.minLength, a = t.maxLength, r = q(n, {
+                                            maxChars: a,
+                                            minChars: i
+                                        })), this.props.onCreateHandler(r)), [3, 3];
+                                    case 2:
+                                        this.props.onCreateHandler && (r = q("NAME_LENGTH_INVALID", {
+                                            maxChars: $,
+                                            minChars: J
+                                        }), this.props.onCreateHandler(r)), o.label = 3;
+                                    case 3:
+                                        return [2]
+                                }
+                            })
+                        })
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
@@ -8381,17 +8400,18 @@ webpackJsonp([42], {
                     }, this.getButtonText())
                 }, t.prototype.getButtonText = function() {
                     return Object(c.d)("Create", "CreateRoomButton")
-                }, t = s.__decorate([Object(m.a)(Un, {
-                    name: "createRoom"
-                })], t)
+                }, t
             }(l.Component),
-            Vn = (n("E9JN"), {
+            Wn = Object(d.compose)(Object(m.a)(Vn, {
+                name: "createRoom"
+            }))(Hn),
+            Gn = (n("E9JN"), {
                 align: w._47.Right,
                 direction: w._48.Top,
                 label: "",
                 offsetX: "-2%"
             }),
-            Hn = function(e) {
+            qn = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCreateHandler = function(e) {
@@ -8426,7 +8446,7 @@ webpackJsonp([42], {
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
                     var e = V.a[this.state.roomMinimumAllowedRole];
-                    Vn.label = Object(c.d)("Chat Permission: {permissionRole}", {
+                    Gn.label = Object(c.d)("Chat Permission: {permissionRole}", {
                         permissionRole: e
                     }, "RoomCreator");
                     var t = {
@@ -8464,7 +8484,7 @@ webpackJsonp([42], {
                             right: 1
                         }
                     }, l.createElement(y.a, {
-                        tooltipProps: Vn
+                        tooltipProps: Gn
                     }, l.createElement(w.M, null, l.createElement(w._6, {
                         display: w.P.Flex
                     }, l.createElement(w._6, {
@@ -8496,7 +8516,7 @@ webpackJsonp([42], {
                     }, l.createElement(w.u, {
                         onClick: this.props.onCloseRoomCreator,
                         type: w.A.Text
-                    }, Object(c.d)("Cancel", "RoomCreator"))), l.createElement(Pn, {
+                    }, Object(c.d)("Cancel", "RoomCreator"))), l.createElement(Wn, {
                         isPrimaryCTA: !0,
                         roomName: this.state.roomName,
                         roomTopic: this.state.roomTopic,
@@ -8518,9 +8538,9 @@ webpackJsonp([42], {
                     }, this.state.roomCreationError)
                 }, t
             }(l.Component),
-            Wn = n("rCmJ"),
-            Gn = n("pe3h"),
-            qn = (n("XViT"), function(e) {
+            zn = n("rCmJ"),
+            $n = n("pe3h"),
+            Jn = (n("XViT"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onClick = function() {
@@ -8611,7 +8631,7 @@ webpackJsonp([42], {
                         attachTop: !0,
                         display: t ? void 0 : w.P.Block,
                         className: "room-picker-option__settings " + (t ? "" : "room-picker-option__settings--disabled")
-                    }, l.createElement(Wn.a, {
+                    }, l.createElement(zn.a, {
                         onClickOut: this.closeViews
                     }, l.createElement("div", {
                         className: "room-picker-option__picker-settings " + (this.state.showOptionView ? "room-picker-option__picker-settings--show" : "")
@@ -8640,7 +8660,7 @@ webpackJsonp([42], {
                         label: this.props.data.room.self.unreadMentionCount.toString(),
                         type: w._11.Alert
                     }))
-                }, t = s.__decorate([Object(m.a)(Gn, {
+                }, t = s.__decorate([Object(m.a)($n, {
                     options: function(e) {
                         return {
                             variables: {
@@ -8654,14 +8674,10 @@ webpackJsonp([42], {
                         return !e.sessionUser
                     }
                 })], t)
-            }(l.Component));
-        n("fNhT");
-        ! function(e) {
-            e[e.SUB = 0] = "SUB", e[e.MOD = 1] = "MOD"
-        }(jn || (jn = {}));
-        var zn = function(e) {
+            }(l.Component)),
+            Qn = (n("fNhT"), function(e) {
                 var t, n, i, a, r, o;
-                return e.type === jn.SUB ? (t = Object(c.d)("subscriber-room", "RoomUpsell_SubUpsellName"), n = Object(c.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopic"), i = Object(c.d)("subscriber-room", "RoomUpsell_SubUpsellNameCreate"), a = Object(c.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopicCreate"), r = V.b.Subscriber, o = !0) : (t = Object(c.d)("moderator-room", "RoomUpsell_ModUpsellName"), n = Object(c.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopic"), i = Object(c.d)("moderator-room", "RoomUpsell_ModUpsellNameCreate"), a = Object(c.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopicCreate"), r = V.b.Moderator, o = !1), l.createElement(w._29, {
+                return e.type === jn.Subscriber ? (t = Object(c.d)("subscriber-room", "RoomUpsell_SubUpsellName"), n = Object(c.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopic"), i = Object(c.d)("subscriber-room", "RoomUpsell_SubUpsellNameCreate"), a = Object(c.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopicCreate"), r = V.b.Subscriber, o = !0) : (t = Object(c.d)("moderator-room", "RoomUpsell_ModUpsellName"), n = Object(c.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopic"), i = Object(c.d)("moderator-room", "RoomUpsell_ModUpsellNameCreate"), a = Object(c.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopicCreate"), r = V.b.Moderator, o = !1), l.createElement(w._29, {
                     display: w.P.Flex,
                     padding: {
                         y: 1,
@@ -8701,17 +8717,17 @@ webpackJsonp([42], {
                     padding: {
                         left: .5
                     }
-                }, l.createElement(Pn, {
+                }, l.createElement(Wn, {
                     isPrimaryCTA: !1,
                     roomName: i,
                     roomTopic: a,
                     isRoomPreviewable: o,
                     roomMinimumAllowedRole: r
                 })))))
-            },
-            $n = n("d7Cs"),
-            Jn = n("4hnS"),
-            Qn = function(e) {
+            }),
+            Kn = n("d7Cs"),
+            Yn = n("4hnS"),
+            Zn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleLeave = function() {
@@ -8739,7 +8755,7 @@ webpackJsonp([42], {
                                     case 1:
                                         return t = i.sent(), n = function(e) {
                                             return e.user.self.isChannelMember = t.data.leaveChannelRooms.channel.self.isChannelMember, e
-                                        }, Object(E.d)($n, {
+                                        }, Object(E.d)(Kn, {
                                             id: this.props.channelID
                                         }, n), [2]
                                 }
@@ -8782,9 +8798,9 @@ webpackJsonp([42], {
                         onClick: this.props.handleDismiss,
                         type: w.A.Hollow
                     }, Object(c.d)("Cancel", "LeaveRoomsPrompt"))))
-                }, t = s.__decorate([Object(k.d)("LeaveRoomsPrompt"), Object(m.a)(Jn, {
+                }, t = s.__decorate([Object(k.d)("LeaveRoomsPrompt"), Object(m.a)(Yn, {
                     name: "leaveRooms"
-                }), Object(m.a)($n, {
+                }), Object(m.a)(Kn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -8794,8 +8810,8 @@ webpackJsonp([42], {
                     }
                 })], t)
             }(l.Component),
-            Kn = n("Fvfv"),
-            Yn = function(e) {
+            Xn = n("Fvfv"),
+            ei = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8827,7 +8843,7 @@ webpackJsonp([42], {
                 }, t.prototype.shouldRender = function() {
                     return this.props.isLoggedIn && this.props.data.user.self.isChannelMember
                 }, t.prototype.renderLeaveOption = function() {
-                    return this.state.shouldShowLeaveRoomsPrompt ? l.createElement(Qn, {
+                    return this.state.shouldShowLeaveRoomsPrompt ? l.createElement(Zn, {
                         channelID: this.props.channelID,
                         handleDismiss: this.closeLeaveRoomsPrompt
                     }) : l.createElement(w._4, {
@@ -8844,7 +8860,7 @@ webpackJsonp([42], {
                             left: .5
                         }
                     }, Object(c.d)("Leave", "RoomsMemberOptions")))
-                }, t = s.__decorate([Object(m.a)(Kn, {
+                }, t = s.__decorate([Object(m.a)(Xn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -8854,15 +8870,15 @@ webpackJsonp([42], {
                     }
                 })], t)
             }(l.Component),
-            Zn = n("QY1R"),
-            Xn = (n("nhCy"), "Stream Chat"),
-            ei = function(e) {
+            ti = n("QY1R"),
+            ni = (n("nhCy"), "Stream Chat"),
+            ii = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         shouldShowRoomCreator: !1
                     }, t.onPickChat = function() {
-                        t.props.handleRoomSelect(Xn, Xn)
+                        t.props.handleRoomSelect(ni, ni)
                     }, t.showRoomCreator = function() {
                         t.setState({
                             shouldShowRoomCreator: !0
@@ -8944,8 +8960,8 @@ webpackJsonp([42], {
                         "data-test-selector": "stream-chat-room-picker-option",
                         onClick: this.onPickChat
                     }, l.createElement(w._6, {
-                        className: "room-picker__label " + (this.props.activeRoomID === Xn ? "room-picker__label--active-main" : ""),
-                        key: Xn,
+                        className: "room-picker__label " + (this.props.activeRoomID === ni ? "room-picker__label--active-main" : ""),
+                        key: ni,
                         padding: {
                             y: .5,
                             x: 2
@@ -8965,7 +8981,7 @@ webpackJsonp([42], {
                         t = this.props.data.user.channelRooms;
                     if (0 === t.length) return null;
                     var n = t.map(function(t) {
-                        return l.createElement(qn, {
+                        return l.createElement(Jn, {
                             channelID: e.props.channelID,
                             isActiveRoom: t.id === e.props.activeRoomID,
                             key: "room-picker-option-" + t.id,
@@ -8987,15 +9003,15 @@ webpackJsonp([42], {
                             n = e.maxAllowedChannelRooms,
                             i = [];
                         if (n && t.length < n) {
-                            var a = !0,
-                                r = !0;
+                            var a = !Un(jn.Subscriber),
+                                r = !Un(jn.Moderator);
                             t.forEach(function(e) {
                                 e.name !== Object(c.d)("subscriber-room", "RoomPicker_SubUpsellCheck") && e.minimumAllowedRole !== V.b.Subscriber || (a = !1), e.name !== Object(c.d)("moderator-room", "RoomPicker_ModUpsellCheck") && e.minimumAllowedRole !== V.b.Moderator || (r = !1)
-                            }), a && this.props.data.user.subscriptionProducts.length > 0 && i.push(l.createElement(zn, {
-                                type: jn.SUB,
+                            }), a && this.props.data.user.subscriptionProducts.length > 0 && i.push(l.createElement(Qn, {
+                                type: jn.Subscriber,
                                 key: "sub-upsell"
-                            })), r && i.push(l.createElement(zn, {
-                                type: jn.MOD,
+                            })), r && i.push(l.createElement(Qn, {
+                                type: jn.Moderator,
                                 key: "mod-upsell"
                             }))
                         }
@@ -9068,7 +9084,7 @@ webpackJsonp([42], {
                         displayName: e
                     }, "RoomPicker")))
                 }, t.prototype.renderRoomCreator = function() {
-                    if (this.state.shouldShowRoomCreator) return l.createElement(Hn, {
+                    if (this.state.shouldShowRoomCreator) return l.createElement(qn, {
                         onCloseRoomCreator: this.hideRoomCreator
                     })
                 }, t.prototype.renderRoomOnboarding = function() {
@@ -9125,13 +9141,13 @@ webpackJsonp([42], {
                                     width: 160
                                 }, t)
                             }
-                        } else n || (t = l.createElement(Yn, {
+                        } else n || (t = l.createElement(ei, {
                             channelID: this.props.channelID,
                             isLoggedIn: this.props.isLoggedIn
                         }));
                         return t
                     }
-                }, t = s.__decorate([Object(m.a)(Zn, {
+                }, t = s.__decorate([Object(m.a)(ti, {
                     options: function(e) {
                         return {
                             fetchPolicy: "cache-and-network",
@@ -9143,32 +9159,32 @@ webpackJsonp([42], {
                     }
                 }), Object(k.d)("RoomPicker")], t)
             }(l.Component);
-        var ti, ni = Object(i.b)(function(e) {
+        var ai, ri = Object(i.b)(function(e) {
             return {
                 sessionUser: Object(r.c)(e),
                 isLoggedIn: Object(r.d)(e)
             }
-        })(ei);
+        })(ii);
         ! function(e) {
             e.MentionPill = "mentionPill", e.ViewRooms = "viewRooms"
-        }(ti || (ti = {}));
-        var ii = function(e) {
+        }(ai || (ai = {}));
+        var oi = function(e) {
                 return c.l.get("hasSeenRoomsOnboarding", {})[e] || !1
             },
-            ai = function(e) {
+            si = function(e) {
                 var t;
                 c.l.set("hasSeenRoomsOnboarding", s.__assign({}, c.l.get("hasSeenRoomsOnboarding", {}), ((t = {})[e] = !0, t)))
             };
-        var ri = n("BKhP"),
-            oi = n("go0B"),
-            si = (n("w0qa"), "Stream Chat"),
-            li = function(e) {
+        var li = n("BKhP"),
+            di = n("go0B"),
+            ci = (n("w0qa"), "Stream Chat"),
+            ui = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        activeRoomID: si,
-                        activeRoomName: si,
-                        hasSeenGeneralOnboarding: ii(ti.ViewRooms),
+                        activeRoomID: ci,
+                        activeRoomName: ci,
+                        hasSeenGeneralOnboarding: oi(ai.ViewRooms),
                         isActiveRoomDeleted: !1,
                         showRoomPicker: !1
                     }, t.renderOnboardingBalloon = function() {
@@ -9214,15 +9230,15 @@ webpackJsonp([42], {
                             showRoomPicker: !1
                         })
                     }, t.onActiveRoomDelete = function() {
-                        t.state.activeRoomID !== si && t.setState({
+                        t.state.activeRoomID !== ci && t.setState({
                             isActiveRoomDeleted: !0
                         })
                     }, t.goToStreamChat = function() {
-                        t.handleRoomSelect(si, si)
+                        t.handleRoomSelect(ci, ci)
                     }, t.dismissGeneralOnboarding = function() {
                         t.setState({
                             hasSeenGeneralOnboarding: !0
-                        }), ai(ti.ViewRooms)
+                        }), si(ai.ViewRooms)
                     }, t.closeRoomPicker = function() {
                         t.setState({
                             showRoomPicker: !1
@@ -9250,7 +9266,7 @@ webpackJsonp([42], {
                             activeRoomID: a.id,
                             activeRoomName: a.name
                         })
-                    } else this.props.channelLogin !== e.channelLogin && this.state.activeRoomID !== si && this.goToStreamChat()
+                    } else this.props.channelLogin !== e.channelLogin && this.state.activeRoomID !== ci && this.goToStreamChat()
                 }, t.prototype.render = function() {
                     return l.createElement(w._6, {
                         fullWidth: !0,
@@ -9264,7 +9280,7 @@ webpackJsonp([42], {
                     }, this.renderHeader(), this.renderRoomPicker(), this.renderHiddenState(), this.renderChat(), this.renderCurrentRoom())
                 }, t.prototype.renderChat = function() {
                     if (this.props.isHidden && !this.props.isPopout) return null;
-                    var e = this.state.activeRoomID !== si;
+                    var e = this.state.activeRoomID !== ci;
                     return l.createElement(f.a, {
                         channelLogin: this.props.channelLogin,
                         clientID: c.a.authClientID,
@@ -9276,7 +9292,7 @@ webpackJsonp([42], {
                         hostedChannelDisplayName: this.props.hostedChannelDisplayName
                     })
                 }, t.prototype.renderCurrentRoom = function() {
-                    return this.props.isHidden && !this.props.isPopout || !this.props.data.user || this.state.activeRoomID === si ? null : l.createElement(Tn, {
+                    return this.props.isHidden && !this.props.isPopout || !this.props.data.user || this.state.activeRoomID === ci ? null : l.createElement(Tn, {
                         isDeleted: this.state.isActiveRoomDeleted,
                         isPopout: this.props.isPopout,
                         channelID: this.props.data.user.id,
@@ -9338,7 +9354,7 @@ webpackJsonp([42], {
                 }, t.prototype.renderRoomPicker = function() {
                     if (this.state.showRoomPicker && this.props.data.user) return l.createElement(u.a, {
                         onClickOut: this.closeRoomPicker
-                    }, l.createElement(ni, {
+                    }, l.createElement(ri, {
                         channelID: this.props.data.user.id,
                         handleRoomSelect: this.handleRoomSelect,
                         isChannelLive: this.isChannelLive(this.props.data),
@@ -9347,7 +9363,7 @@ webpackJsonp([42], {
                 }, t.prototype.renderActiveRoomName = function() {
                     return this.state.showRoomPicker ? l.createElement(w.O, {
                         color: w.J.Alt
-                    }, Object(c.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === si || this.state.isActiveRoomDeleted ? l.createElement(w.O, {
+                    }, Object(c.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === ci || this.state.isActiveRoomDeleted ? l.createElement(w.O, {
                         color: w.J.Alt
                     }, this.state.activeRoomName) : l.createElement(le, {
                         roomID: this.state.activeRoomID,
@@ -9395,7 +9411,7 @@ webpackJsonp([42], {
                     }, Object(c.d)("Show Chat", "RoomSelector")))
                 }, t
             }(l.Component),
-            di = Object(d.compose)(Object(m.a)(oi, {
+            mi = Object(d.compose)(Object(m.a)(di, {
                 options: function(e) {
                     return {
                         variables: {
@@ -9405,7 +9421,7 @@ webpackJsonp([42], {
                 }
             }), Object(p.a)(function(e) {
                 return {
-                    query: oi,
+                    query: di,
                     skip: !e.data.user,
                     variables: {
                         login: e.channelLogin
@@ -9440,7 +9456,7 @@ webpackJsonp([42], {
                 }
             }), Object(p.a)(function(e) {
                 return {
-                    query: ri,
+                    query: li,
                     skip: !e.sessionUser || !e.data.user,
                     variables: {
                         channelID: e.data.user && e.data.user.id,
@@ -9457,7 +9473,7 @@ webpackJsonp([42], {
                 }
             }), Object(p.a)(function(e) {
                 return {
-                    query: oi,
+                    query: di,
                     skip: !e.sessionUser || !e.data.user,
                     variables: {
                         login: e.channelLogin
@@ -9470,8 +9486,8 @@ webpackJsonp([42], {
                         })), e.type === h.PubsubMessageType.ChatRoomsRoomViewUpdated && t.user && (e = e, t.user.self.isModerator = e.data.room_view.permissions.moderate), t
                     }
                 }
-            }), Object(k.d)("RoomSelector"))(li);
-        var ci = Object(i.b)(function(e) {
+            }), Object(k.d)("RoomSelector"))(ui);
+        var pi = Object(i.b)(function(e) {
             return {
                 isHidden: e.chat.isHidden,
                 sessionUser: Object(r.c)(e)
@@ -9482,9 +9498,9 @@ webpackJsonp([42], {
                     return o.T()
                 }
             }, e)
-        })(di);
+        })(mi);
         n.d(t, "a", function() {
-            return ci
+            return pi
         })
     },
     "4hnS": function(e, t) {
@@ -35766,4 +35782,4 @@ webpackJsonp([42], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-following-da64617311806fc05c4d42d6bdc0cd56.js.map
+//# sourceMappingURL=pages.channel-following-76ddd6c9cab8fe7b51ca1dc264057ff6.js.map

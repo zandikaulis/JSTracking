@@ -1554,7 +1554,8 @@ webpackJsonp([45], {
                                 reportContext: {
                                     contentType: y.a.Clip,
                                     contentID: this.props.clip.slug,
-                                    targetUserID: this.props.clip.broadcaster ? this.props.clip.broadcaster.id : ""
+                                    targetUserID: this.props.clip.broadcaster ? this.props.clip.broadcaster.id : "",
+                                    additionalTrackingID: this.props.clip.curator ? this.props.clip.curator.id : ""
                                 },
                                 onClose: this.setToViewState
                             });
@@ -6510,11 +6511,13 @@ webpackJsonp([45], {
                         return !(n || i)
                     },
                     options: function(e) {
-                        var t = zn.parse(e.location.search);
+                        var t = zn.parse(e.location.search),
+                            n = t.br_name,
+                            i = t.br_id;
                         return {
                             variables: {
-                                login: t.br_name || null,
-                                id: t.br_id || null
+                                login: n || null,
+                                id: i || null
                             }
                         }
                     }
@@ -17863,4 +17866,4 @@ webpackJsonp([45], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-07dcab4aad2d2dffcfa63e9bcaa92471.js.map
+//# sourceMappingURL=pages.directory-game-6792c7001d9aeada7434e7c47096c9f0.js.map

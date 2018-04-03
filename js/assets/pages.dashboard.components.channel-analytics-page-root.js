@@ -40,17 +40,17 @@ webpackJsonp([78], {
                     }, this.location = e, this.history = t, this.rawParams = s.parse(e.search);
                     var u = l(this.rawParams.start) || Object(r.startOfMonth)(n),
                         p = Object(r.endOfDay)(l(this.rawParams.end) || n),
-                        d = function(e) {
+                        m = function(e) {
                             var t = Number(e);
                             if (!t) return 0;
                             return t = Math.floor(t), t = Math.max(0, t)
                         }(this.rawParams.topStatsIndex),
-                        m = Object(i.b)(this.rawParams.topStatsAggregation);
+                        d = Object(i.b)(this.rawParams.topStatsAggregation);
                     this.params = {
                         start: u,
                         end: p,
-                        topStatsIndex: d,
-                        topStatsAggregation: m
+                        topStatsIndex: m,
+                        topStatsAggregation: d
                     }
                 }
                 return e.fromRouter = function(t) {
@@ -268,24 +268,33 @@ webpackJsonp([78], {
     },
     JNds: function(e, t) {},
     JczT: function(e, t) {},
+    KiQY: function(e, t, n) {
+        "use strict";
+        t.a = function(e) {
+            var t = new Date(e);
+            return new Date(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate())
+        }
+    },
     MXAS: function(e, t) {},
     RpnM: function(e, t) {},
     T0UN: function(e, t) {},
+    Ukf0: function(e, t) {},
     WHrl: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
-        }), n.d(t, "b", function() {
             return o
+        }), n.d(t, "b", function() {
+            return l
         });
         var a = n("TToO"),
             r = n("tiQ5"),
-            s = n("x9gg"),
-            i = {
+            s = n("yvDY"),
+            i = n("KiQY"),
+            o = {
                 prime_subscriptions: [],
                 twitch_subscriptions: []
             },
-            o = function() {
+            l = function() {
                 function e(e) {
                     var t = this,
                         n = e.twitchSubscriptionProducts.length ? e.twitchSubscriptionProducts : r.c;
@@ -313,27 +322,24 @@ webpackJsonp([78], {
                             primeSubscriptions: [],
                             twitchSubscriptionProducts: []
                         },
-                        o = function(e) {
-                            return e.date > n.end
-                        },
-                        l = Object(s.a)(a.primeSubscriptions, o),
-                        c = l[0],
-                        u = l[1];
-                    return r.primeSubscriptions = c, i.primeSubscriptions = u, a.twitchSubscriptionProducts.forEach(function(e) {
+                        o = Object(s.a)(a.primeSubscriptions, n),
+                        l = o[0],
+                        c = o[1];
+                    return r.primeSubscriptions = l, i.primeSubscriptions = c, a.twitchSubscriptionProducts.forEach(function(e) {
                         var t = {
                                 defaultPrice: e.defaultPrice,
                                 productID: e.productID,
                                 timeseries: []
                             },
-                            n = {
+                            a = {
                                 defaultPrice: e.defaultPrice,
                                 productID: e.productID,
                                 timeseries: []
                             },
-                            a = Object(s.a)(e.timeseries, o),
-                            l = a[0],
-                            c = a[1];
-                        t.timeseries = l, n.timeseries = c, r.twitchSubscriptionProducts.push(t), i.twitchSubscriptionProducts.push(n)
+                            o = Object(s.a)(e.timeseries, n),
+                            l = o[0],
+                            c = o[1];
+                        t.timeseries = l, a.timeseries = c, r.twitchSubscriptionProducts.push(t), i.twitchSubscriptionProducts.push(a)
                     }), [new e(r), new e(i)]
                 }, e.buildEmpty = function() {
                     return new e({
@@ -358,7 +364,7 @@ webpackJsonp([78], {
                     return e.map(function(e) {
                         return {
                             count: e.count,
-                            date: new Date(e.timestamp),
+                            date: Object(i.a)(e.timestamp),
                             product: t
                         }
                     })
@@ -393,6 +399,49 @@ webpackJsonp([78], {
                 }
             }
     },
+    dPMn: function(e, t, n) {
+        "use strict";
+        var a = n("TToO"),
+            r = n("GiK3"),
+            s = n("6sO2"),
+            i = n("Odds"),
+            o = {
+                "data-test-selector": "no-data"
+            },
+            l = {
+                src: "https://static-cdn.jtvnw.net/emoticons/v1/160403/3.0",
+                alt: "TearGlove"
+            },
+            c = function() {
+                return r.createElement(i._6, a.__assign({
+                    alignItems: i.c.Center,
+                    display: i.P.Flex,
+                    flexDirection: i.R.Column,
+                    justifyContent: i._5.Center,
+                    flexGrow: 0,
+                    flexShrink: 1,
+                    fullWidth: !0,
+                    padding: {
+                        top: 5,
+                        bottom: 5
+                    }
+                }, o), r.createElement(i._6, {
+                    padding: {
+                        bottom: 1
+                    }
+                }, r.createElement(i.l, a.__assign({}, l, {
+                    size: 50
+                }))), r.createElement(i.O, {
+                    color: i.J.Alt2,
+                    fontSize: i.T.Size5
+                }, Object(s.d)("Not enough data for us to display", "ChannelAnalyticsNoData")))
+            };
+        n.d(t, !1, function() {
+            return o
+        }), n.d(t, "a", function() {
+            return c
+        })
+    },
     ehuU: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -407,8 +456,8 @@ webpackJsonp([78], {
             c = n("j7/Y"),
             u = n("w9tK"),
             p = n("vH/s"),
-            d = n("CSlQ"),
-            m = n("wuJz"),
+            m = n("CSlQ"),
+            d = n("wuJz"),
             h = n("3zLD"),
             g = n("6UW8"),
             f = (n("eZz2"), function(e) {
@@ -418,17 +467,17 @@ webpackJsonp([78], {
                         null === e ? t.picker.destroy() : (t.picker = new g({
                             onSelect: t.props.onChange,
                             theme: "inline",
-                            minDate: t.props.minDate && Object(m.startOfDay)(t.props.minDate),
-                            maxDate: Object(m.startOfDay)(t.props.maxDate),
-                            defaultDate: Object(m.startOfDay)(t.props.date),
-                            startRange: Object(m.startOfDay)(t.props.startRange),
-                            endRange: Object(m.startOfDay)(t.props.endRange),
+                            minDate: t.props.minDate && Object(d.startOfDay)(t.props.minDate),
+                            maxDate: Object(d.startOfDay)(t.props.maxDate),
+                            defaultDate: Object(d.startOfDay)(t.props.date),
+                            startRange: Object(d.startOfDay)(t.props.startRange),
+                            endRange: Object(d.startOfDay)(t.props.endRange),
                             setDefaultDate: !0
                         }), e.appendChild(t.picker.el))
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                    this.picker.setStartRange(Object(m.startOfDay)(this.props.startRange)), this.picker.setEndRange(Object(m.startOfDay)(this.props.endRange)), this.props.minDate && this.picker.setMinDate(Object(m.startOfDay)(this.props.minDate)), this.picker.setMaxDate(Object(m.startOfDay)(this.props.maxDate)), this.picker.setDate(Object(m.startOfDay)(this.props.date), !0)
+                    this.picker.setStartRange(Object(d.startOfDay)(this.props.startRange)), this.picker.setEndRange(Object(d.startOfDay)(this.props.endRange)), this.props.minDate && this.picker.setMinDate(Object(d.startOfDay)(this.props.minDate)), this.picker.setMaxDate(Object(d.startOfDay)(this.props.maxDate)), this.picker.setDate(Object(d.startOfDay)(this.props.date), !0)
                 }, t.prototype.render = function() {
                     return r.createElement("div", {
                         ref: this.setContainerRef
@@ -441,19 +490,19 @@ webpackJsonp([78], {
                 function t(t) {
                     var n = e.call(this, t) || this,
                         a = t.now || new Date,
-                        r = Object(m.endOfDay)(a),
-                        s = Object(m.startOfDay)(a),
-                        i = Object(m.startOfMonth)(a);
+                        r = Object(d.endOfDay)(a),
+                        s = Object(d.startOfDay)(a),
+                        i = Object(d.startOfMonth)(a);
                     return n.presets = [{
                         message: Object(o.d)("Last 7 Days", "ChannelAnalyticsDateRangePickerPresets"),
                         interval: {
-                            start: Object(m.subDays)(s, 6),
+                            start: Object(d.subDays)(s, 6),
                             end: r
                         }
                     }, {
                         message: Object(o.d)("Last 30 Days", "ChannelAnalyticsDateRangePickerPresets"),
                         interval: {
-                            start: Object(m.subDays)(s, 29),
+                            start: Object(d.subDays)(s, 29),
                             end: r
                         }
                     }, {
@@ -466,22 +515,22 @@ webpackJsonp([78], {
                             end: r
                         }
                     }, {
-                        message: Object(o.c)(Object(m.subMonths)(r, 1), {
+                        message: Object(o.c)(Object(d.subMonths)(r, 1), {
                             month: "long",
                             year: "numeric"
                         }),
                         interval: {
-                            start: Object(m.startOfMonth)(Object(m.subMonths)(a, 1)),
-                            end: Object(m.endOfMonth)(Object(m.subMonths)(a, 1))
+                            start: Object(d.startOfMonth)(Object(d.subMonths)(a, 1)),
+                            end: Object(d.endOfMonth)(Object(d.subMonths)(a, 1))
                         }
                     }, {
-                        message: Object(o.c)(Object(m.subMonths)(r, 2), {
+                        message: Object(o.c)(Object(d.subMonths)(r, 2), {
                             month: "long",
                             year: "numeric"
                         }),
                         interval: {
-                            start: Object(m.startOfMonth)(Object(m.subMonths)(a, 2)),
-                            end: Object(m.endOfMonth)(Object(m.subMonths)(a, 2))
+                            start: Object(d.startOfMonth)(Object(d.subMonths)(a, 2)),
+                            end: Object(d.endOfMonth)(Object(d.subMonths)(a, 2))
                         }
                     }], n
                 }
@@ -516,17 +565,17 @@ webpackJsonp([78], {
         function S(e, t, n) {
             void 0 === n && (n = new Date);
             var r = a.__assign({}, e, t);
-            if (Object(m.differenceInDays)(r.end, r.start) >= 0) return r;
-            var s = Object(m.differenceInDays)(e.end, e.start);
-            if (Object(m.isEqual)(e.end, r.end)) {
-                var i = Object(m.startOfDay)(n),
-                    o = Object(m.addDays)(r.start, s);
+            if (Object(d.differenceInDays)(r.end, r.start) >= 0) return r;
+            var s = Object(d.differenceInDays)(e.end, e.start);
+            if (Object(d.isEqual)(e.end, r.end)) {
+                var i = Object(d.startOfDay)(n),
+                    o = Object(d.addDays)(r.start, s);
                 return o > i && (o = i), a.__assign({}, r, {
                     end: o
                 })
             }
-            return Object(m.isEqual)(e.start, r.start) ? a.__assign({}, r, {
-                start: Object(m.subDays)(r.end, s)
+            return Object(d.isEqual)(e.start, r.start) ? a.__assign({}, r, {
+                start: Object(d.subDays)(r.end, s)
             }) : e
         }
         var C = n("PGY2");
@@ -675,12 +724,12 @@ webpackJsonp([78], {
             }(r.Component);
 
         function D(e, t) {
-            return void 0 === t && (t = new Date), e.start <= e.end && e.end <= Object(m.endOfDay)(t)
+            return void 0 === t && (t = new Date), e.start <= e.end && e.end <= Object(d.endOfDay)(t)
         }
         var A = n("ylrR"),
             x = n("9uzc"),
-            k = n("u4Vk"),
-            R = {
+            R = n("u4Vk"),
+            k = {
                 "data-test-selector": "time-range"
             },
             P = {
@@ -712,7 +761,7 @@ webpackJsonp([78], {
                                 type: v.A.Text,
                                 onClick: s,
                                 fullWidth: !0
-                            }), r.createElement(v.O, a.__assign({}, R, {
+                            }), r.createElement(v.O, a.__assign({}, k, {
                                 fontSize: v.T.Size4
                             }), e.formatDateRange(t)), r.createElement(v.O, a.__assign({}, P, {
                                 fontSize: v.T.Size6,
@@ -757,22 +806,22 @@ webpackJsonp([78], {
                         }))))
                     }))
                 }, t.prototype.formatDateRange = function(e) {
-                    return 1 === Object(m.differenceInDays)(e.end, e.start) + 1 ? Object(o.c)(e.start, "medium") : Object(o.d)("{start, date, medium} – {end, date, medium}", {
+                    return 1 === Object(d.differenceInDays)(e.end, e.start) + 1 ? Object(o.c)(e.start, "medium") : Object(o.d)("{start, date, medium} – {end, date, medium}", {
                         start: e.start,
                         end: e.end
                     }, "ChannelAnalyticsNavBar")
                 }, t.prototype.formatDaysInRange = function(e) {
-                    var t = Object(m.differenceInDays)(e.end, e.start) + 1;
+                    var t = Object(d.differenceInDays)(e.end, e.start) + 1;
                     return Object(o.d)("{numDays, plural, one {# day} other {# days}}", {
                         numDays: t
                     }, "ChannelAnalyticsNavBar")
                 }, t.prototype.pathWithShiftedInterval = function(e) {
-                    var t = Object(k.f)(this.props.urlStore.params, e);
+                    var t = Object(R.h)(this.props.urlStore.params, e);
                     return D(t) ? this.props.urlStore.buildPathWithParams(t) : ""
                 }, t
             }(r.Component),
             L = n("zCIC"),
-            N = (n("JNds"), function(e) {
+            M = (n("JNds"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -783,7 +832,7 @@ webpackJsonp([78], {
                     }, this.props.children))
                 }, t
             }(r.Component)),
-            M = n("BoWu"),
+            N = n("BoWu"),
             W = (n("Bgox"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -846,15 +895,16 @@ webpackJsonp([78], {
                     hoverText: e.infoText
                 }))
             },
-            I = n("FeZP"),
-            U = n("xygp"),
-            z = n("vTHh"),
+            I = n("dPMn"),
+            U = n("FeZP"),
+            z = n("xygp"),
+            G = n("vTHh"),
             q = 3,
-            G = function(e) {
+            H = function(e) {
                 return e
             };
 
-        function H(e) {
+        function J(e) {
             var t = e.streamSessions,
                 n = e.channelName,
                 a = e.urlStore;
@@ -864,18 +914,42 @@ webpackJsonp([78], {
                     bottom: 1
                 }
             }, r.createElement(v._12, {
-                height: 375
+                height: 448
             }));
-            var s = Object(U.a)(t.sessions.map(function(e) {
+            var s = Object(z.a)(t.sessions.map(function(e) {
                     return e.videoPlayInternalTwitchReferrers
                 })),
-                i = Object(U.a)(t.sessions.map(function(e) {
+                i = Object(z.a)(t.sessions.map(function(e) {
                     return e.videoPlayInternalChannelsReferrers
                 })),
-                l = Object(U.a)(t.sessions.map(function(e) {
+                l = Object(z.a)(t.sessions.map(function(e) {
                     return e.videoPlayExternalReferrers
-                }));
-            return r.createElement(v._6, {
+                })),
+                c = r.createElement(I.a, null);
+            return (s.totals || i.totals || l.totals) && (c = r.createElement(r.Fragment, null, r.createElement(v._29, {
+                borderBottom: !0,
+                padding: {
+                    bottom: 1
+                }
+            }, r.createElement(G.a, {
+                referrals: s.items.slice(0, q),
+                totals: s.totals,
+                translationFunc: N.b,
+                title: Object(o.d)("Twitch", "ChannelAnalyticsReferralPanel")
+            }), r.createElement(G.a, {
+                referrals: i.items.slice(0, q),
+                totals: i.totals,
+                translationFunc: H,
+                title: Object(o.d)("Channels", "ChannelAnalyticsReferralPanel")
+            }), r.createElement(G.a, {
+                referrals: l.items.slice(0, q),
+                totals: l.totals,
+                translationFunc: N.a,
+                title: Object(o.d)("External", "ChannelAnalyticsReferralPanel")
+            })), r.createElement(U.a, {
+                message: Object(o.d)("View details", "ChannelAnalyticsReferralPanel"),
+                url: "/" + n + "/dashboard/channel-analytics/referrals" + a.searchStringWith()
+            }))), r.createElement(v._6, {
                 margin: {
                     top: 3,
                     bottom: 1
@@ -883,33 +957,10 @@ webpackJsonp([78], {
             }, r.createElement(B, null, Object(o.d)("Where did my views come from?", "ChannelAnalyticsReferralPanel")), r.createElement(v._29, {
                 elevation: 1,
                 background: v.m.Base
-            }, r.createElement(v._29, {
-                borderBottom: !0,
-                padding: {
-                    bottom: 1
-                }
-            }, r.createElement(z.a, {
-                referrals: s.items.slice(0, q),
-                totals: s.totals,
-                translationFunc: M.b,
-                title: Object(o.d)("Twitch", "ChannelAnalyticsReferralPanel")
-            }), r.createElement(z.a, {
-                referrals: i.items.slice(0, q),
-                totals: i.totals,
-                translationFunc: G,
-                title: Object(o.d)("Channels", "ChannelAnalyticsReferralPanel")
-            }), r.createElement(z.a, {
-                referrals: l.items.slice(0, q),
-                totals: l.totals,
-                translationFunc: M.a,
-                title: Object(o.d)("External", "ChannelAnalyticsReferralPanel")
-            })), r.createElement(I.a, {
-                message: Object(o.d)("View details", "ChannelAnalyticsReferralPanel"),
-                url: "/" + n + "/dashboard/channel-analytics/referrals" + a.searchStringWith()
-            })))
+            }, c))
         }
-        var J = n("XTbU"),
-            K = (n("MXAS"), function(e) {
+        var K = n("XTbU"),
+            Y = (n("MXAS"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.handleHover = function() {
@@ -966,13 +1017,13 @@ webpackJsonp([78], {
                     }, this.props.children) : null))
                 }, t
             }(r.Component)),
-            Y = function(e) {
+            X = function(e) {
                 return Object(o.e)(e / 100, {
                     style: "currency",
                     currency: "USD"
                 })
             },
-            X = function(e) {
+            Q = function(e) {
                 return r.createElement(v._6, {
                     padding: {
                         x: 1,
@@ -997,9 +1048,9 @@ webpackJsonp([78], {
                 }, r.createElement(v.O, {
                     bold: !0
                 }, Object(o.d)("Revenue", "ChannelAnalyticsPaidSubs")))))), r.createElement("tbody", null, e.subCounts.streams.twitchSubscriptionProducts.map(function(t, n) {
-                    return r.createElement(Q, {
+                    return r.createElement($, {
                         key: n,
-                        tier: Y(t.defaultPrice),
+                        tier: X(t.defaultPrice),
                         subscribers: Object(o.e)(t.total),
                         revenue: function(e, t) {
                             var n = t.twitchSubscriptionProducts.filter(function(t) {
@@ -1017,13 +1068,13 @@ webpackJsonp([78], {
                     })
                 }))))
             };
-        var Q = function(e) {
+        var $ = function(e) {
                 return r.createElement("tr", null, r.createElement("td", null, r.createElement(v.O, null, e.tier)), r.createElement("td", null, r.createElement(v.O, null, e.subscribers)), r.createElement("td", null, r.createElement(v.O, null, e.revenue)))
             },
-            $ = (n("JczT"), {
+            Z = (n("JczT"), {
                 "data-test-selector": "total-revenue"
             }),
-            Z = function(e) {
+            ee = function(e) {
                 if (e.channel.role === b.d.None) return null;
                 if (e.revenue.isLoading) return r.createElement(v._6, {
                     margin: {
@@ -1035,18 +1086,9 @@ webpackJsonp([78], {
                 var t = e.revenue,
                     n = t.streams,
                     a = t.lookbackStreams,
-                    s = e.channel.role === b.d.Affiliate ? Object(o.d)("Your estimated revenue minus Twitch’s share, fees, and taxes. Your payment is sent 60 days after the end of each month your balance reaches $100 or more.", "ChannelAnalyticsRevenueBreakdownPanel") : Object(o.d)("Your estimated revenue minus Twitch’s share, fees, and taxes. Your payment is sent 45 days after the end of each month your balance reaches $100 or more.", "ChannelAnalyticsRevenueBreakdownPanel");
-                return r.createElement(v._6, {
-                    margin: {
-                        top: 3,
-                        bottom: 1
-                    }
-                }, r.createElement(B, {
-                    infoText: s
-                }, Object(o.d)("Where does my revenue come from?", "ChannelAnalyticsRevenueBreakdownPanel")), r.createElement(v._29, {
-                    elevation: 1,
-                    background: v.m.Base
-                }, r.createElement(ee, {
+                    s = e.channel.role === b.d.Affiliate ? Object(o.d)("Your estimated revenue minus Twitch’s share, fees, and taxes. Your payment is sent 60 days after the end of each month your balance reaches $100 or more.", "ChannelAnalyticsRevenueBreakdownPanel") : Object(o.d)("Your estimated revenue minus Twitch’s share, fees, and taxes. Your payment is sent 45 days after the end of each month your balance reaches $100 or more.", "ChannelAnalyticsRevenueBreakdownPanel"),
+                    i = r.createElement(I.a, null);
+                return n.getTotalAmountAllStreams() && (i = r.createElement(r.Fragment, null, r.createElement(te, {
                     totalAmount: n.getTotalAmountAllStreams()
                 }), r.createElement(v._6, {
                     padding: {
@@ -1062,43 +1104,53 @@ webpackJsonp([78], {
                     type: v._43.H6,
                     bold: !0,
                     color: v.J.Alt2
-                }, Object(o.d)("Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel"))), r.createElement(v._6, null, r.createElement(K, {
+                }, Object(o.d)("Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel"))), r.createElement(v._6, null, r.createElement(Y, {
                     title: Object(o.d)("Paid subs", "ChannelAnalyticsRevenueBreakdownPanel"),
-                    revenue: te(n.twitchSubscriptions.total),
-                    lastRevenue: te(a.twitchSubscriptions.total),
+                    revenue: ne(n.twitchSubscriptions.total),
+                    lastRevenue: ne(a.twitchSubscriptions.total),
                     className: "revenue-breakdown-panel__key--paid-subs"
-                }, e.subCounts.isLoading ? null : r.createElement(X, {
+                }, e.subCounts.isLoading ? null : r.createElement(Q, {
                     subCounts: e.subCounts,
                     revenue: e.revenue
-                })), r.createElement(K, {
+                })), r.createElement(Y, {
                     title: Object(o.d)("Twitch Prime subs", "ChannelAnalyticsRevenueBreakdownPanel"),
-                    revenue: te(n.primeSubscriptions.total),
-                    lastRevenue: te(a.primeSubscriptions.total),
+                    revenue: ne(n.primeSubscriptions.total),
+                    lastRevenue: ne(a.primeSubscriptions.total),
                     className: "revenue-breakdown-panel__key--prime-subs"
-                }), r.createElement(K, {
+                }), r.createElement(Y, {
                     title: Object(o.d)("Ads", "ChannelAnalyticsRevenueBreakdownPanel"),
-                    revenue: te(n.ads.total),
-                    lastRevenue: te(a.ads.total),
+                    revenue: ne(n.ads.total),
+                    lastRevenue: ne(a.ads.total),
                     className: "revenue-breakdown-panel__key--ads"
-                }), r.createElement(K, {
+                }), r.createElement(Y, {
                     title: Object(o.d)("Bits", "ChannelAnalyticsRevenueBreakdownPanel"),
-                    revenue: te(n.bits.total),
-                    lastRevenue: te(a.bits.total),
+                    revenue: ne(n.bits.total),
+                    lastRevenue: ne(a.bits.total),
                     className: "revenue-breakdown-panel__key--bits"
-                }), r.createElement(K, {
+                }), r.createElement(Y, {
                     title: Object(o.d)("Game Sales", "ChannelAnalyticsRevenueBreakdownPanel"),
-                    revenue: te(n.gameCommerce.total),
-                    lastRevenue: te(a.gameCommerce.total),
+                    revenue: ne(n.gameCommerce.total),
+                    lastRevenue: ne(a.gameCommerce.total),
                     className: "revenue-breakdown-panel__key--game-sales"
-                }), r.createElement(K, {
+                }), r.createElement(Y, {
                     title: Object(o.d)("Extensions", "ChannelAnalyticsRevenueBreakdownPanel"),
-                    revenue: te(n.extensions.total),
-                    lastRevenue: te(a.extensions.total),
+                    revenue: ne(n.extensions.total),
+                    lastRevenue: ne(a.extensions.total),
                     className: "revenue-breakdown-panel__key--extensions"
-                })))))
+                }))))), r.createElement(v._6, {
+                    margin: {
+                        top: 3,
+                        bottom: 1
+                    }
+                }, r.createElement(B, {
+                    infoText: s
+                }, Object(o.d)("Where does my revenue come from?", "ChannelAnalyticsRevenueBreakdownPanel")), r.createElement(v._29, {
+                    elevation: 1,
+                    background: v.m.Base
+                }, i))
             },
-            ee = function(e) {
-                var t = Object(J.a)(e.totalAmount),
+            te = function(e) {
+                var t = Object(K.a)(e.totalAmount),
                     n = t.sign,
                     s = t.dollars,
                     i = t.cents;
@@ -1107,7 +1159,7 @@ webpackJsonp([78], {
                     padding: {
                         y: 2
                     }
-                }, $), r.createElement(v._6, {
+                }, Z), r.createElement(v._6, {
                     display: v.P.Flex,
                     justifyContent: v._5.Center
                 }, r.createElement(v._29, {
@@ -1129,7 +1181,7 @@ webpackJsonp([78], {
                     type: v._43.H6
                 }, Object(o.d)("Total Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel")))
             },
-            te = function(e) {
+            ne = function(e) {
                 return Object(o.e)(e, {
                     style: "currency",
                     currency: "USD"
@@ -1137,7 +1189,7 @@ webpackJsonp([78], {
             };
         n("z39C");
 
-        function ne(e) {
+        function ae(e) {
             var t = e.messages,
                 n = e.urls;
             return r.createElement(v._29, {
@@ -1162,7 +1214,7 @@ webpackJsonp([78], {
             }))
         }
         n("G70b");
-        var ae = {
+        var re = {
                 1000: function() {
                     return Object(o.d)("Tier 1 subs", "ChannelAnalyticsSubscribersPanel")
                 },
@@ -1173,13 +1225,13 @@ webpackJsonp([78], {
                     return Object(o.d)("Tier 3 subs", "ChannelAnalyticsSubscribersPanel")
                 }
             },
-            re = function(e) {
+            se = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.subscriptionRows = function() {
                         return n.state.subscriptions.map(function(e) {
-                            return r.createElement(ie, {
-                                name: ae[e.plan](),
+                            return r.createElement(oe, {
+                                name: re[e.plan](),
                                 revSplit: e.revenueSplit + " / " + (100 - e.revenueSplit),
                                 score: Object(o.e)(e.score),
                                 count: Object(o.e)(e.count),
@@ -1203,14 +1255,27 @@ webpackJsonp([78], {
                     }, r.createElement(v._12, {
                         height: 448
                     }));
-                    if (0 === this.state.subscriptions.length) return null;
-                    var e = this.state.subscriptions.reduce(function(e, t) {
+                    var e = r.createElement(I.a, null),
+                        t = this.state.subscriptions.reduce(function(e, t) {
                             return e + t.score
                         }, 0),
-                        t = this.state.subscriptions.reduce(function(e, t) {
+                        n = this.state.subscriptions.reduce(function(e, t) {
                             return e + t.count
                         }, 0);
-                    return r.createElement(v._6, {
+                    return this.state.subscriptions.length && (e = r.createElement(r.Fragment, null, r.createElement(v._29, {
+                        borderBottom: !0,
+                        padding: {
+                            top: 1,
+                            bottom: 2
+                        }
+                    }, r.createElement(ie, null), this.subscriptionRows(), r.createElement(oe, {
+                        name: Object(o.d)("Total", "ChannelAnalyticsSubscribersPanel"),
+                        score: Object(o.e)(t),
+                        count: Object(o.e)(n)
+                    })), r.createElement(ae, {
+                        messages: [Object(o.d)("E-mail me my subscriber list", "ChannelAnalyticsSubscribersPanel"), Object(o.d)("Send e-mail to my subs", "ChannelAnalyticsSubscribersPanel")],
+                        urls: ["", ""]
+                    }))), r.createElement(v._6, {
                         margin: {
                             top: 3,
                             bottom: 1
@@ -1218,20 +1283,7 @@ webpackJsonp([78], {
                     }, r.createElement(B, null, Object(o.d)("How many subscribers do I have today?", "ChannelAnalyticsSubscribersPanel")), r.createElement(v._29, {
                         elevation: 1,
                         background: v.m.Base
-                    }, r.createElement(v._29, {
-                        borderBottom: !0,
-                        padding: {
-                            top: 1,
-                            bottom: 2
-                        }
-                    }, r.createElement(se, null), this.subscriptionRows(), r.createElement(ie, {
-                        name: Object(o.d)("Total", "ChannelAnalyticsSubscribersPanel"),
-                        score: Object(o.e)(e),
-                        count: Object(o.e)(t)
-                    })), r.createElement(ne, {
-                        messages: [Object(o.d)("E-mail me my subscriber list", "ChannelAnalyticsSubscribersPanel"), Object(o.d)("Send e-mail to my subs", "ChannelAnalyticsSubscribersPanel")],
-                        urls: ["", ""]
-                    })))
+                    }, e))
                 }, t.prototype.fetchSubscriptions = function() {
                     return a.__awaiter(this, void 0, void 0, function() {
                         var e;
@@ -1256,7 +1308,7 @@ webpackJsonp([78], {
                     })
                 }, t
             }(r.Component),
-            se = function() {
+            ie = function() {
                 return r.createElement(v._29, {
                     padding: {
                         x: 2,
@@ -1289,7 +1341,7 @@ webpackJsonp([78], {
                     color: v.J.Alt2
                 }, Object(o.d)("Subscribers", "ChannelAnalyticsSubscribersPanel"))))))
             },
-            ie = function(e) {
+            oe = function(e) {
                 return r.createElement(v._29, {
                     className: "subscribers-panel-row",
                     padding: {
@@ -1326,8 +1378,8 @@ webpackJsonp([78], {
                     bold: !0
                 }, e.count)))))
             },
-            oe = n("a+9f"),
-            le = function(e) {
+            le = n("a+9f"),
+            ce = function(e) {
                 var t = e.channel,
                     n = e.topClips;
                 if (n.isLoading) return r.createElement(v._6, {
@@ -1338,9 +1390,14 @@ webpackJsonp([78], {
                 }, r.createElement(v._12, {
                     height: 448
                 }));
-                if (!n.isLoading && !n.clips.length) return null;
-                var a = Object(o.d)("View details", "ChannelAnalyticsTopClipsPanel");
-                return r.createElement(v._6, {
+                var a = r.createElement(I.a, null),
+                    s = Object(o.d)("View details", "ChannelAnalyticsTopClipsPanel");
+                return n.clips.length && (a = r.createElement(r.Fragment, null, r.createElement(ue, {
+                    clipsAttrs: n
+                }), t ? r.createElement(U.a, {
+                    message: s,
+                    url: "/" + t + "/manager/clips/channel"
+                }) : r.createElement("p", null, s))), r.createElement(v._6, {
                     margin: {
                         top: 3,
                         bottom: 1
@@ -1348,14 +1405,9 @@ webpackJsonp([78], {
                 }, r.createElement(B, null, Object(o.d)("What were my top clips?", "ChannelAnalyticsTopClipsPanel")), r.createElement(v._29, {
                     elevation: 1,
                     background: v.m.Base
-                }, r.createElement(ce, {
-                    clipsAttrs: n
-                }), t ? r.createElement(I.a, {
-                    message: a,
-                    url: "/" + t + "/manager/clips/channel"
-                }) : r.createElement("p", null, a)))
+                }, a))
             },
-            ce = function(e) {
+            ue = function(e) {
                 if (e.clipsAttrs.isLoading)
                     for (var t = [], n = 0; n < 5; n++) t.push(r.createElement(v._29, {
                         borderBottom: !0,
@@ -1368,12 +1420,12 @@ webpackJsonp([78], {
                         height: 50
                     })));
                 return r.createElement("span", null, e.clipsAttrs.clips.slice(0, 5).map(function(e, t) {
-                    return r.createElement(oe.a, a.__assign({}, e, {
+                    return r.createElement(le.a, a.__assign({}, e, {
                         key: t
                     }))
                 }))
             },
-            ue = function(e, t) {
+            pe = function(e, t) {
                 if ("function" == typeof window.navigator.msSaveBlob) {
                     var n = new Blob([t], {
                         type: "text/csv;charset=utf-8;"
@@ -1385,7 +1437,7 @@ webpackJsonp([78], {
                 void 0 === a.download ? a.href = "data:attachment/csv;charset=utf-8," + r : (a.href = "data:text/csv;charset=utf-8," + r, a.download = e), a.target = "_blank", a.setAttribute("style", "visibility: hidden"), document.body.appendChild(a), a.click(), document.body.removeChild(a)
             };
 
-        function pe(e) {
+        function me(e) {
             for (var t = [], n = e[0].length, a = function(n) {
                     t.push(e.map(function(e) {
                         return e[n]
@@ -1442,7 +1494,7 @@ webpackJsonp([78], {
                         }))
                     ].concat(a.twitchSubscriptionProducts.map(function(e) {
                         return [Object(o.d)("{price} Sub", {
-                            price: Y(e.defaultPrice)
+                            price: X(e.defaultPrice)
                         }, "CSVExporterRevenue")].concat(t.sum(e.timeseries, function(e) {
                             return {
                                 date: e.date,
@@ -1461,16 +1513,16 @@ webpackJsonp([78], {
                         start: t.interval.start,
                         end: t.interval.end
                     }, "CSVExporterRevenue"),
-                    csv: pe(r).join("\n")
+                    csv: me(r).join("\n")
                 }
             },
-            me = function(e, t) {
+            he = function(e, t) {
                 return t.isByDay ? function(e, t) {
                     var n = [
                         [Object(o.d)("Start Time", "CSVExporterStreamSessions"), Object(o.d)("End Time", "CSVExporterStreamSessions"), Object(o.d)("Average Viewers", "CSVExporterStreamSessions"), Object(o.d)("Max. Viewers", "CSVExporterStreamSessions"), Object(o.d)("Total Views", "CSVExporterStreamSessions"), Object(o.d)("Unique Views", "CSVExporterStreamSessions"), Object(o.d)("Minutes Watched", "CSVExporterStreamSessions"), Object(o.d)("New Followers", "CSVExporterStreamSessions"), Object(o.d)("Chatters", "CSVExporterStreamSessions"), Object(o.d)("Chat Messages", "CSVExporterStreamSessions"), Object(o.d)("Clips Created", "CSVExporterStreamSessions"), Object(o.d)("Clip Views", "CSVExporterStreamSessions"), Object(o.d)("Ad Breaks (Minutes)", "CSVExporterStreamSessions"), Object(o.d)("Minutes Streamed", "CSVExporterStreamSessions")]
                     ];
                     return e.forEach(function(e) {
-                        n.push(['"' + e.interval.start + '"', '"' + e.interval.end + '"', "" + e.avgViewerCount, "" + e.maxViewerCount, "" + e.totalViewers, "" + e.uniqueViewers, "" + e.totalMinutesWatched, "" + e.followersChange, "" + e.uniqueChatters, "" + e.messagesTotal, "" + e.clipCreatesTotal, "" + e.clipPlaysTotal, "" + e.commercialLengthTotal / 60, "" + Object(k.a)(e.interval)])
+                        n.push(['"' + e.interval.start + '"', '"' + e.interval.end + '"', "" + e.avgViewerCount, "" + e.maxViewerCount, "" + e.totalViewers, "" + e.uniqueViewers, "" + e.totalMinutesWatched, "" + e.followersChange, "" + e.uniqueChatters, "" + e.messagesTotal, "" + e.clipCreatesTotal, "" + e.clipPlaysTotal, "" + e.commercialLengthTotal / 60, "" + Object(R.a)(e.interval)])
                     }), {
                         fileName: Object(o.d)("Stream Sessions {start, date} to {end, date}.csv", {
                             start: t.start,
@@ -1484,7 +1536,7 @@ webpackJsonp([78], {
                             return e.toDateString()
                         })), [Object(o.d)("Average Viewers", "CSVExporterStreamSessionsAggregated")].concat(t.weightedAverage(e, function(e) {
                             return {
-                                weight: Object(k.a)(e.interval),
+                                weight: Object(R.a)(e.interval),
                                 value: e.avgViewerCount,
                                 date: e.interval.start
                             }
@@ -1500,7 +1552,7 @@ webpackJsonp([78], {
                             }
                         })), [Object(o.d)("Average Unique Views", "CSVExporterStreamSessionsAggregated")].concat(t.weightedAverage(e, function(e) {
                             return {
-                                weight: Object(k.a)(e.interval),
+                                weight: Object(R.a)(e.interval),
                                 value: e.uniqueViewers,
                                 date: e.interval.start
                             }
@@ -1516,7 +1568,7 @@ webpackJsonp([78], {
                             }
                         })), [Object(o.d)("Average Unique Chatters", "CSVExporterStreamSessionsAggregated")].concat(t.weightedAverage(e, function(e) {
                             return {
-                                weight: Object(k.a)(e.interval),
+                                weight: Object(R.a)(e.interval),
                                 value: e.uniqueChatters,
                                 date: e.interval.start
                             }
@@ -1542,7 +1594,7 @@ webpackJsonp([78], {
                             }
                         })), [Object(o.d)("Minutes Streamed", "CSVExporterStreamSessionsAggregated")].concat(t.sum(e, function(e) {
                             return {
-                                value: Object(k.a)(e.interval),
+                                value: Object(R.a)(e.interval),
                                 date: e.interval.start
                             }
                         }))
@@ -1556,30 +1608,33 @@ webpackJsonp([78], {
                     }, "CSVExporterStreamSessionsAggregated");
                     return {
                         fileName: n,
-                        csv: pe(a).join("\n")
+                        csv: me(a).join("\n")
                     }
                 }(e, t)
             };
-        var he = function(e) {
+        var ge = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.download = function() {
                         var e;
-                        e = t.props.dataGroup === _.b.StreamSummaries ? me(t.props.analyticsResponse.streamSessions.sessions, t.props.aggregation) : de({
+                        e = t.props.dataGroup === _.b.StreamSummaries ? he(t.props.analyticsResponse.streamSessions.sessions, t.props.aggregation) : de({
                             revenue: t.props.analyticsResponse.revenue.streams,
                             subscriptions: t.props.analyticsResponse.subCounts.streams
-                        }, t.props.aggregation), ue(e.fileName, e.csv)
+                        }, t.props.aggregation), pe(e.fileName, e.csv)
+                    }, t.isDataAvailable = function() {
+                        return t.props.dataGroup === _.b.StreamSummaries ? t.props.analyticsResponse.streamSessions.sessions.length > 0 : t.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() > 0
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.analyticsResponse.streamSessions.isLoading || this.props.analyticsResponse.revenue.isLoading ? null : r.createElement(I.a, {
+                    return this.props.analyticsResponse.streamSessions.isLoading || this.props.analyticsResponse.revenue.isLoading ? null : r.createElement(U.a, {
+                        disabled: !this.isDataAvailable(),
                         message: Object(o.d)("Export Data", "ChannelAnalyticsRevenueBreakdownPanel"),
                         onClick: this.download
                     })
                 }, t
             }(r.Component),
-            ge = n("IJpv"),
-            fe = function() {
+            fe = n("IJpv"),
+            be = function() {
                 function e(e, t) {
                     var n = this;
                     switch (this.formatDateFromLabel = function(e) {
@@ -1587,8 +1642,8 @@ webpackJsonp([78], {
                     }, this.formatShortDateFromLabel = function(e) {
                         return n.formatShortDate(new Date(Number(e)))
                     }, this.aggregationInterval = e, this.interval = t, this.aggregationInterval) {
-                        case ge.a.Day:
-                            this.addInterval = m.addDays, this.startOf = m.startOfDay, this.formatDate = function(e) {
+                        case fe.a.Day:
+                            this.addInterval = d.addDays, this.startOf = d.startOfDay, this.formatDate = function(e) {
                                 return Object(o.c)(e, {
                                     weekday: "short",
                                     month: "short",
@@ -1601,12 +1656,12 @@ webpackJsonp([78], {
                                 })
                             };
                             break;
-                        case ge.a.Week:
-                            this.addInterval = m.addWeeks, this.startOf = m.startOfWeek, this.formatDate = function(e) {
+                        case fe.a.Week:
+                            this.addInterval = d.addWeeks, this.startOf = d.startOfWeek, this.formatDate = function(e) {
                                 return Object(o.c)(e, {
                                     month: "short",
                                     day: "numeric"
-                                }) + " – " + Object(o.c)(Object(m.endOfWeek)(e), {
+                                }) + " – " + Object(o.c)(Object(d.endOfWeek)(e), {
                                     month: "short",
                                     day: "numeric"
                                 })
@@ -1617,8 +1672,8 @@ webpackJsonp([78], {
                                 })
                             };
                             break;
-                        case ge.a.Month:
-                            this.addInterval = m.addMonths, this.startOf = m.startOfMonth, this.formatDate = function(e) {
+                        case fe.a.Month:
+                            this.addInterval = d.addMonths, this.startOf = d.startOfMonth, this.formatDate = function(e) {
                                 return Object(o.c)(e, {
                                     month: "short",
                                     year: "numeric"
@@ -1710,19 +1765,19 @@ webpackJsonp([78], {
                     })
                 }, Object.defineProperty(e.prototype, "isByDay", {
                     get: function() {
-                        return this.aggregationInterval === ge.a.Day
+                        return this.aggregationInterval === fe.a.Day
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(e.prototype, "isByWeek", {
                     get: function() {
-                        return this.aggregationInterval === ge.a.Week
+                        return this.aggregationInterval === fe.a.Week
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(e.prototype, "isByMonth", {
                     get: function() {
-                        return this.aggregationInterval === ge.a.Month
+                        return this.aggregationInterval === fe.a.Month
                     },
                     enumerable: !0,
                     configurable: !0
@@ -1733,8 +1788,8 @@ webpackJsonp([78], {
                     return t
                 }, e
             }(),
-            be = "channel-analytics-stats",
-            ve = function(e) {
+            ve = "channel-analytics-stats",
+            ye = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.defaultTopStats = [], n.topStatsKeys = [], n.handleUpdateStat = function(e, t) {
@@ -1743,7 +1798,7 @@ webpackJsonp([78], {
                                 i = r.selectedStats.indexOf(e);
                             s[t] = e, -1 !== i && (s[i] = n.getRemainingStats(s)[0]);
                             var l, c = n.storedStats;
-                            return o.l.set(be, a.__assign({}, c, ((l = {})[n.statsStorageKey] = s, l))), {
+                            return o.l.set(ve, a.__assign({}, c, ((l = {})[n.statsStorageKey] = s, l))), {
                                 selectedStats: s
                             }
                         })
@@ -1770,7 +1825,7 @@ webpackJsonp([78], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "storedStats", {
                     get: function() {
-                        return o.l.get(be, ((e = {})[this.statsStorageKey] = [], e));
+                        return o.l.get(ve, ((e = {})[this.statsStorageKey] = [], e));
                         var e
                     },
                     enumerable: !0,
@@ -1790,13 +1845,13 @@ webpackJsonp([78], {
                     })
                 }, t
             }(r.Component),
-            ye = {
+            Se = {
                 "data-test-selector": "stats-dropdown-title"
             },
-            Se = {
+            Ce = {
                 "data-test-selector": "date-picker-toggle"
             },
-            Ce = function(e) {
+            Oe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1814,7 +1869,7 @@ webpackJsonp([78], {
                                 ariaLabel: Object(o.d)("Select top statistic", "ChannelAnalyticsDropdownAria"),
                                 icon: v._20.AngleDown,
                                 onClick: t
-                            }, Se)))
+                            }, Ce)))
                         }
                     }, function(t) {
                         var n = t.close;
@@ -1827,7 +1882,7 @@ webpackJsonp([78], {
                                 onClick: Object(h.compose)(n, e.props.onUpdateStat.bind(e, t, e.props.index)),
                                 key: t,
                                 alpha: !0
-                            }, ye), r.createElement(v._6, {
+                            }, Se), r.createElement(v._6, {
                                 padding: 1
                             }, r.createElement(v.O, {
                                 color: v.J.Link
@@ -1836,14 +1891,14 @@ webpackJsonp([78], {
                     }))
                 }, t
             }(r.Component),
-            Oe = {
+            _e = {
                 "data-test-selector": "current-chart"
             },
-            _e = function(e) {
+            we = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.chart = function(e) {
-                        return r.createElement(e.definition.Chart, a.__assign({}, Oe, {
+                        return r.createElement(e.definition.Chart, a.__assign({}, _e, {
                             analyticsResponse: t.props.analyticsResponse,
                             aggregation: e.aggregation
                         }))
@@ -1851,13 +1906,15 @@ webpackJsonp([78], {
                         t.props.urlStore.replace({
                             topStatsAggregation: e.currentTarget.value
                         })
+                    }, t.isDataAvailable = function(e) {
+                        return e === _.b.StreamSummaries ? t.props.analyticsResponse.streamSessions.sessions.length > 0 : t.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() > 0
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
-                        t = new fe(this.props.urlStore.params.topStatsAggregation, this.props.urlStore.params),
+                        t = new be(this.props.urlStore.params.topStatsAggregation, this.props.urlStore.params),
                         n = this.cappedIndex;
-                    return r.createElement(ve, {
+                    return r.createElement(ye, {
                         channel: this.props.channel
                     }, function(a) {
                         var s = a.stats,
@@ -1874,7 +1931,7 @@ webpackJsonp([78], {
                                 }),
                                 isActive: n === a,
                                 key: a
-                            }, r.createElement(Ce, {
+                            }, r.createElement(Oe, {
                                 availableStats: w(e.props.channel.role),
                                 index: a,
                                 onUpdateStat: i
@@ -1889,18 +1946,19 @@ webpackJsonp([78], {
                                 bottom: 1
                             }
                         }, r.createElement("div", null, r.createElement(v._25, {
+                            disabled: !e.isDataAvailable(s[n].dataGroup),
                             onChange: e.handleAggregationChange,
                             value: e.props.urlStore.params.topStatsAggregation
                         }, r.createElement("option", {
-                            value: ge.a.Day
+                            value: fe.a.Day
                         }, Object(o.d)("Day", "ChannelAnalyticsTopStats")), r.createElement("option", {
-                            value: ge.a.Week
+                            value: fe.a.Week
                         }, Object(o.d)("Week", "ChannelAnalyticsTopStats")), r.createElement("option", {
-                            value: ge.a.Month
+                            value: fe.a.Month
                         }, Object(o.d)("Month", "ChannelAnalyticsTopStats"))))), r.createElement(e.chart, {
                             definition: s[n],
                             aggregation: t
-                        })), r.createElement(he, {
+                        })), r.createElement(ge, {
                             analyticsResponse: e.props.analyticsResponse,
                             aggregation: t,
                             dataGroup: s[n].dataGroup
@@ -1915,10 +1973,10 @@ webpackJsonp([78], {
                     configurable: !0
                 }), t
             }(r.Component),
-            we = (n("G6h4"), {
+            Ee = (n("G6h4"), {
                 "data-test-selector": "card-image"
             }),
-            Ee = function(e) {
+            Te = function(e) {
                 var t = e.stream,
                     n = e.statNum;
                 return r.createElement(v._6, {
@@ -1940,7 +1998,7 @@ webpackJsonp([78], {
                     alt: t.startChannelStatus,
                     size: v.E.Size8,
                     aspect: v.k.Aspect16x9
-                }, we)), r.createElement(v.C, {
+                }, Ee)), r.createElement(v.C, {
                     overflow: v._9.Hidden
                 }, r.createElement(v._6, {
                     display: v.P.Flex,
@@ -1991,11 +2049,11 @@ webpackJsonp([78], {
                     }(n)
                 }, "ChannelAnalyticsStreamCard")))))))
             };
-        var Te, je = 5;
+        var je, De = 5;
         ! function(e) {
             e.AvgViewers = "avg_viewers", e.NewFollowers = "new_followers"
-        }(Te || (Te = {}));
-        var De = function(e) {
+        }(je || (je = {}));
+        var Ae = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.sortDropdown = function() {
@@ -2003,13 +2061,13 @@ webpackJsonp([78], {
                             value: n.state.sortType,
                             onChange: n.handleSortTypeChange
                         }, r.createElement("option", {
-                            value: Te.AvgViewers
+                            value: je.AvgViewers
                         }, Object(o.d)("Average Viewers", "ChannelAnalyticsTopStreamsPanel")), r.createElement("option", {
-                            value: Te.NewFollowers
+                            value: je.NewFollowers
                         }, Object(o.d)("New Followers", "ChannelAnalyticsTopStreamsPanel")))
                     }, n.streamsList = function() {
-                        return r.createElement(v._6, null, n.sortedStreamSummaries().slice(0, je).map(function(e, t) {
-                            return r.createElement(Ee, {
+                        return r.createElement(v._6, null, n.sortedStreamSummaries().slice(0, De).map(function(e, t) {
+                            return r.createElement(Te, {
                                 stream: e,
                                 statNum: n.statNumForStreamSummary(e),
                                 key: t
@@ -2021,46 +2079,40 @@ webpackJsonp([78], {
                         })
                     }, n.statNumForStreamSummary = function(e) {
                         switch (n.state.sortType) {
-                            case Te.NewFollowers:
+                            case je.NewFollowers:
                                 return e.followersChange;
-                            case Te.AvgViewers:
+                            case je.AvgViewers:
                             default:
                                 return e.avgViewerCount
                         }
                     }, n.sortedStreamSummaries = function() {
                         var e = n.props.streamSessions.sessions.slice();
                         switch (n.state.sortType) {
-                            case Te.NewFollowers:
+                            case je.NewFollowers:
                                 return Object(C.d)(e, [function(e) {
                                     return e.followersChange
                                 }], [C.a.Descending]);
-                            case Te.AvgViewers:
+                            case je.AvgViewers:
                             default:
                                 return Object(C.d)(e, [function(e) {
                                     return e.avgViewerCount
                                 }], [C.a.Descending])
                         }
                     }, n.state = {
-                        sortType: Te.AvgViewers
+                        sortType: je.AvgViewers
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.streamSessions.isLoading ? r.createElement(v._6, {
+                    if (this.props.streamSessions.isLoading) return r.createElement(v._6, {
                         margin: {
                             top: 3,
                             bottom: 1
                         }
                     }, r.createElement(v._12, {
                         height: 448
-                    })) : this.props.streamSessions.sessions.length < 3 ? null : r.createElement(v._6, {
-                        margin: {
-                            top: 3,
-                            bottom: 1
-                        }
-                    }, r.createElement(B, null, Object(o.d)("What were my top streams?", "ChannelAnalyticsTopStreamsPanel")), r.createElement(v._29, {
-                        elevation: 1,
-                        background: v.m.Base
-                    }, r.createElement(v._6, {
+                    }));
+                    var e = r.createElement(I.a, null);
+                    return this.props.streamSessions.sessions.length >= 3 && (e = r.createElement(r.Fragment, null, r.createElement(v._6, {
                         padding: {
                             x: 2,
                             top: 2
@@ -2075,16 +2127,24 @@ webpackJsonp([78], {
                         type: v._43.H5,
                         bold: !0
                     }, Object(o.d)("Top {limit}", {
-                        limit: je
+                        limit: De
                     }, "ChannelAnalyticsTopStreamsPanel"))), r.createElement(v._6, null, this.sortDropdown())), r.createElement(v._6, {
                         padding: {
                             top: 1,
                             bottom: 1
                         }
-                    }, this.streamsList())))
+                    }, this.streamsList()))), r.createElement(v._6, {
+                        margin: {
+                            top: 3,
+                            bottom: 1
+                        }
+                    }, r.createElement(B, null, Object(o.d)("What were my top streams?", "ChannelAnalyticsTopStreamsPanel")), r.createElement(v._29, {
+                        elevation: 1,
+                        background: v.m.Base
+                    }, e))
                 }, t
             }(r.Component),
-            Ae = (n("T0UN"), function(e) {
+            xe = (n("T0UN"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2093,9 +2153,9 @@ webpackJsonp([78], {
                         t = e.urlStore,
                         n = e.channelAnalyticsResponse,
                         a = e.channel;
-                    return r.createElement(N, null, r.createElement(F, {
+                    return r.createElement(M, null, r.createElement(F, {
                         urlStore: t
-                    }), r.createElement(_e, {
+                    }), r.createElement(we, {
                         channel: a,
                         urlStore: t,
                         analyticsResponse: n
@@ -2122,15 +2182,15 @@ webpackJsonp([78], {
                             left: 1,
                             right: 1
                         }
-                    }, r.createElement(Z, {
+                    }, r.createElement(ee, {
                         channel: a,
                         revenue: n.revenue,
                         subCounts: n.subCounts
-                    }), r.createElement(H, {
+                    }), r.createElement(J, {
                         streamSessions: n.streamSessions,
                         urlStore: t,
                         channelName: a.name
-                    }), r.createElement(le, {
+                    }), r.createElement(ce, {
                         channel: a.name,
                         topClips: n.topClips
                     })), r.createElement(v._6, {
@@ -2143,45 +2203,47 @@ webpackJsonp([78], {
                             left: 1,
                             right: 1
                         }
-                    }, r.createElement(re, {
+                    }, r.createElement(se, {
                         channel: a
-                    }), r.createElement(De, {
+                    }), r.createElement(Ae, {
                         streamSessions: n.streamSessions
                     }))))
                 }, t
             }(r.Component)),
-            xe = Object(i.d)(Object(d.d)("ChannelAnalyticsIndexPage", {
+            Re = Object(i.d)(Object(m.d)("ChannelAnalyticsIndexPage", {
                 destination: u.a.ChannelDashboardChannelAnalytics,
                 autoReportInteractive: !0
             }), Object(c.a)({
                 location: p.PageviewLocation.DashboardChannelAnalytics
-            }))(Ae),
+            }))(xe),
             ke = n("yLtb"),
-            Re = (n("lV23"), function(e) {
+            Pe = (n("lV23"), function(e) {
                 return e
             }),
-            Pe = function(e) {
+            Ve = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    var e = this.props.channelAnalyticsResponse.streamSessions.sessions,
-                        t = Object(U.a)(e.map(function(e) {
+                    var e = this.props.channelAnalyticsResponse.streamSessions,
+                        t = e.isLoading,
+                        n = e.sessions,
+                        a = Object(z.a)(n.map(function(e) {
                             return e.videoPlayPlatforms
                         })),
-                        n = Object(U.a)(e.map(function(e) {
+                        s = Object(z.a)(n.map(function(e) {
                             return e.videoPlayGeographics
                         })),
-                        a = Object(U.a)(e.map(function(e) {
+                        i = Object(z.a)(n.map(function(e) {
                             return e.videoPlayInternalChannelsReferrers
                         })),
-                        s = Object(U.a)(e.map(function(e) {
+                        l = Object(z.a)(n.map(function(e) {
                             return e.videoPlayInternalTwitchReferrers
                         })),
-                        i = Object(U.a)(e.map(function(e) {
+                        c = Object(z.a)(n.map(function(e) {
                             return e.videoPlayExternalReferrers
                         }));
-                    return r.createElement(N, null, r.createElement(v._29, {
+                    return r.createElement(M, null, r.createElement(v._29, {
                         elevation: 1,
                         background: v.m.Base,
                         display: v.P.Flex,
@@ -2217,7 +2279,7 @@ webpackJsonp([78], {
                         bold: !0
                     }, Object(o.d)("Views by Source", "ChannelAnalyticsReferralPage")))), r.createElement(F, {
                         urlStore: this.props.urlStore
-                    }), !this.props.channelAnalyticsResponse.streamSessions.isLoading && r.createElement(v._6, {
+                    }), r.createElement(v._6, {
                         className: "channel-analytics-referrals-page",
                         display: v.P.Flex,
                         flexDirection: v.R.Column,
@@ -2238,35 +2300,19 @@ webpackJsonp([78], {
                             left: 1,
                             right: 1
                         }
-                    }, r.createElement(v._29, {
-                        padding: {
-                            bottom: 1
-                        },
-                        margin: {
-                            bottom: 2
-                        },
-                        elevation: 1,
-                        background: v.m.Base
-                    }, r.createElement(z.a, {
-                        referrals: n.items.slice(0, 15),
-                        totals: n.totals,
+                    }, r.createElement(Fe, {
+                        isLoading: t,
+                        referrals: s.items.slice(0, 15),
+                        totals: s.totals,
                         translationFunc: ke.b,
                         title: Object(o.d)("Views by Location", "ChannelAnalyticsReferralPage")
-                    })), r.createElement(v._29, {
-                        padding: {
-                            bottom: 1
-                        },
-                        margin: {
-                            bottom: 2
-                        },
-                        elevation: 1,
-                        background: v.m.Base
-                    }, r.createElement(z.a, {
-                        referrals: t.items.slice(0, 15),
-                        totals: t.totals,
-                        translationFunc: M.c,
+                    }), r.createElement(Fe, {
+                        isLoading: t,
+                        referrals: a.items.slice(0, 15),
+                        totals: a.totals,
+                        translationFunc: N.c,
                         title: Object(o.d)("Views by Platform", "ChannelAnalyticsReferralPage")
-                    }))), r.createElement(v._6, {
+                    })), r.createElement(v._6, {
                         className: "channel-analytics-referrals-page__col",
                         display: v.P.Flex,
                         flexWrap: v.S.NoWrap,
@@ -2275,112 +2321,89 @@ webpackJsonp([78], {
                             left: 1,
                             right: 1
                         }
-                    }, r.createElement(v._29, {
-                        padding: {
-                            bottom: 1
-                        },
-                        margin: {
-                            bottom: 2
-                        },
-                        elevation: 1,
-                        background: v.m.Base
-                    }, r.createElement(z.a, {
-                        referrals: s.items.slice(0, 15),
-                        totals: s.totals,
-                        translationFunc: M.b,
+                    }, r.createElement(Fe, {
+                        isLoading: t,
+                        referrals: l.items.slice(0, 15),
+                        totals: l.totals,
+                        translationFunc: N.b,
                         title: Object(o.d)("Views from Twitch", "ChannelAnalyticsReferralPage")
-                    })), r.createElement(v._29, {
-                        padding: {
-                            bottom: 1
-                        },
-                        margin: {
-                            bottom: 2
-                        },
-                        elevation: 1,
-                        background: v.m.Base
-                    }, r.createElement(z.a, {
-                        referrals: a.items.slice(0, 15),
-                        totals: a.totals,
-                        translationFunc: Re,
-                        title: Object(o.d)("Views from Channels", "ChannelAnalyticsReferralPage")
-                    })), r.createElement(v._29, {
-                        padding: {
-                            bottom: 1
-                        },
-                        margin: {
-                            bottom: 2
-                        },
-                        elevation: 1,
-                        background: v.m.Base
-                    }, r.createElement(z.a, {
+                    }), r.createElement(Fe, {
+                        isLoading: t,
                         referrals: i.items.slice(0, 15),
                         totals: i.totals,
-                        translationFunc: M.a,
+                        translationFunc: Pe,
+                        title: Object(o.d)("Views from Channels", "ChannelAnalyticsReferralPage")
+                    }), r.createElement(Fe, {
+                        isLoading: t,
+                        referrals: c.items.slice(0, 15),
+                        totals: c.totals,
+                        translationFunc: N.a,
                         title: Object(o.d)("Views from Outside Twitch", "ChannelAnalyticsReferralPage")
-                    })))))
+                    }))))
                 }, t
-            }(r.Component),
-            Ve = Object(i.d)(Object(d.d)("ChannelAnalyticsReferralsPage", {
+            }(r.Component);
+
+        function Fe(e) {
+            var t = e.isLoading,
+                n = e.referrals,
+                a = e.totals,
+                s = e.translationFunc,
+                i = e.title;
+            return t ? r.createElement(v._6, {
+                margin: {
+                    bottom: 2
+                }
+            }, r.createElement(v._12, {
+                height: 350
+            })) : r.createElement(v._29, {
+                padding: {
+                    bottom: 1
+                },
+                margin: {
+                    bottom: 2
+                },
+                elevation: 1,
+                background: v.m.Base
+            }, r.createElement(G.a, {
+                referrals: n,
+                totals: a,
+                translationFunc: s,
+                title: i
+            }))
+        }
+        var Le = Object(i.d)(Object(m.d)("ChannelAnalyticsReferralsPage", {
                 destination: u.a.ChannelDashboardChannelAnalyticsReferrals,
                 autoReportInteractive: !0
             }), Object(c.a)({
                 location: p.PageviewLocation.DashboardChannelAnalyticsReferrals
-            }))(Pe),
-            Fe = n("kA6m"),
-            Le = function(e) {
+            }))(Ve),
+            Me = n("kA6m"),
+            Ne = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
                     return e.location.pathname !== this.props.location.pathname || e.location.search !== this.props.location.search
                 }, t.prototype.render = function() {
-                    var e = new Fe.URLStore(this.props.location, this.props.history, this.props.now);
+                    var e = new Me.URLStore(this.props.location, this.props.history, this.props.now);
                     return D(e.params, this.props.now) ? this.props.children(e) : (e.replace({
                         start: void 0,
                         end: void 0
                     }), null)
                 }, t
             }(r.Component),
-            Ne = n("HCOe"),
-            Me = n("OAwv");
+            We = n("HCOe"),
+            Be = n("OAwv");
 
-        function We(e, t) {
+        function Ie(e, t) {
             return {
                 start_date: e.toJSON(),
                 end_date: t.toJSON()
             }
         }
-
-        function Be(e, t) {
-            return a.__awaiter(this, void 0, void 0, function() {
-                var n, r, s, i;
-                return a.__generator(this, function(o) {
-                    switch (o.label) {
-                        case 0:
-                            return e.role === b.d.None ? [2, {
-                                isError: !1,
-                                streams: Fe.RevenueStreams.buildEmpty()
-                            }] : (n = "/kraken/channels/" + e.id + "/dashboard/revenues", r = Me.stringify(a.__assign({}, We(t.start, t.end), {
-                                fraction: "day"
-                            })), s = [n, r].join("?"), [4, Object(C.c)({
-                                path: s
-                            })]);
-                        case 1:
-                            return (i = o.sent()).isError() ? [2, {
-                                isError: !0,
-                                streams: Fe.RevenueStreams.buildEmpty()
-                            }] : [2, {
-                                isError: !1,
-                                streams: Fe.RevenueStreams.fromPayload(i.body)
-                            }]
-                    }
-                })
-            })
-        }
-        var Ie = n("+TF1"),
-            Ue = n("DNvj"),
-            ze = n("x9gg"),
-            qe = function(e) {
+        var Ue = n("+TF1"),
+            ze = n("DNvj");
+        var Ge = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -2389,13 +2412,13 @@ webpackJsonp([78], {
                             isLoading: !0
                         },
                         revenue: {
-                            streams: Fe.RevenueStreams.buildEmpty(),
-                            lookbackStreams: Fe.RevenueStreams.buildEmpty(),
+                            streams: Me.RevenueStreams.buildEmpty(),
+                            lookbackStreams: Me.RevenueStreams.buildEmpty(),
                             isLoading: !0
                         },
                         subCounts: {
-                            streams: Fe.SubCountStreams.buildEmpty(),
-                            lookbackStreams: Fe.SubCountStreams.buildEmpty(),
+                            streams: Me.SubCountStreams.buildEmpty(),
+                            lookbackStreams: Me.SubCountStreams.buildEmpty(),
                             isLoading: !0
                         },
                         streamSessions: {
@@ -2424,11 +2447,7 @@ webpackJsonp([78], {
                                     }), e = {
                                         start: this.props.lookbackInterval.start,
                                         end: this.props.interval.end
-                                    }, [4, Object(Ie.a)({
-                                        channelID: this.props.channel.id,
-                                        channelName: this.props.channel.name,
-                                        interval: e
-                                    })]) : [2];
+                                    }, [4, Object(Ue.b)(this.props.channel, e)]) : [2];
                                 case 1:
                                     return (t = o.sent()).isError ? (this.setState({
                                         streamSessions: {
@@ -2436,7 +2455,13 @@ webpackJsonp([78], {
                                             sessions: [],
                                             lookbackSessions: []
                                         }
-                                    }), [2]) : (n = Object(ze.a)(t.streamSummaries, function(e) {
+                                    }), [2]) : (n = function(e, t) {
+                                        for (var n = [], a = [], r = 0, s = e; r < s.length; r++) {
+                                            var i = s[r];
+                                            t(i) ? n.push(i) : a.push(i)
+                                        }
+                                        return [n, a]
+                                    }(t.streamSummaries, function(e) {
                                         return e.interval.start > i.props.lookbackInterval.end
                                     }), r = n[0], s = n[1], this.setState({
                                         streamSessions: {
@@ -2459,7 +2484,7 @@ webpackJsonp([78], {
                                             clips: [],
                                             isLoading: !0
                                         }
-                                    }), [4, Object(Ue.a)(this.props.channel.name, this.props.interval)]) : [2];
+                                    }), [4, Object(ze.a)(this.props.channel.name, this.props.interval)]) : [2];
                                 case 1:
                                     return (e = t.sent()).isError ? [2] : (this.setState({
                                         topClips: {
@@ -2472,44 +2497,14 @@ webpackJsonp([78], {
                     })
                 }, t.prototype.fetchRevenues = function() {
                     return a.__awaiter(this, void 0, void 0, function() {
-                        var e = this;
-                        return a.__generator(this, function(t) {
-                            return this.props.channel ? (this.setState({
-                                revenue: {
-                                    streams: Fe.RevenueStreams.buildEmpty(),
-                                    lookbackStreams: Fe.RevenueStreams.buildEmpty(),
-                                    isLoading: !0
-                                }
-                            }), Be(this.props.channel, this.props.interval).then(function(t) {
-                                e.setState(function(e) {
-                                    return {
-                                        revenue: a.__assign({}, e.revenue, {
-                                            streams: t.streams,
-                                            isLoading: !1
-                                        })
-                                    }
-                                })
-                            }), Be(this.props.channel, this.props.lookbackInterval).then(function(t) {
-                                e.setState(function(e) {
-                                    return {
-                                        revenue: a.__assign({}, e.revenue, {
-                                            lookbackStreams: t.streams
-                                        })
-                                    }
-                                })
-                            }), [2]) : [2]
-                        })
-                    })
-                }, t.prototype.fetchSubCounts = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
                         var e, t, n, r, s;
                         return a.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
                                     return this.props.channel ? (this.setState({
-                                        subCounts: {
-                                            streams: Fe.SubCountStreams.buildEmpty(),
-                                            lookbackStreams: Fe.SubCountStreams.buildEmpty(),
+                                        revenue: {
+                                            streams: Me.RevenueStreams.buildEmpty(),
+                                            lookbackStreams: Me.RevenueStreams.buildEmpty(),
                                             isLoading: !0
                                         }
                                     }), e = {
@@ -2523,8 +2518,8 @@ webpackJsonp([78], {
                                                     case 0:
                                                         return e.role === b.d.None ? [2, {
                                                             isError: !1,
-                                                            subscriptions: Fe.EMPTY_SUB_COUNT_RESPONSE
-                                                        }] : (n = "/kraken/channels/" + e.id + "/dashboard/sub_counts", r = Me.stringify(a.__assign({}, We(t.start, Object(m.addDays)(t.end, 1)), {
+                                                            streams: Me.EMPTY_REVENUE_RESPONSE
+                                                        }] : (n = "/kraken/channels/" + e.id + "/dashboard/revenues", r = Be.stringify(a.__assign({}, Ie(t.start, Object(d.addDays)(t.end, 1)), {
                                                             fraction: "day"
                                                         })), s = [n, r].join("?"), [4, Object(C.c)({
                                                             path: s
@@ -2532,7 +2527,62 @@ webpackJsonp([78], {
                                                     case 1:
                                                         return (i = o.sent()).isError() ? [2, {
                                                             isError: !0,
-                                                            subscriptions: Fe.EMPTY_SUB_COUNT_RESPONSE
+                                                            streams: Me.EMPTY_REVENUE_RESPONSE
+                                                        }] : [2, {
+                                                            isError: !1,
+                                                            streams: i.body
+                                                        }]
+                                                }
+                                            })
+                                        })
+                                    }(this.props.channel, e)]) : [2];
+                                case 1:
+                                    return (t = i.sent()).isError ? [2] : (n = Me.RevenueStreams.partitionFromPayload(t.streams, {
+                                        splitAt: this.props.lookbackInterval.end,
+                                        max: this.props.interval.end
+                                    }), r = n[0], s = n[1], this.setState({
+                                        revenue: {
+                                            isLoading: !1,
+                                            streams: r,
+                                            lookbackStreams: s
+                                        }
+                                    }), [2])
+                            }
+                        })
+                    })
+                }, t.prototype.fetchSubCounts = function() {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var e, t, n, r, s;
+                        return a.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    return this.props.channel ? (this.setState({
+                                        subCounts: {
+                                            streams: Me.SubCountStreams.buildEmpty(),
+                                            lookbackStreams: Me.SubCountStreams.buildEmpty(),
+                                            isLoading: !0
+                                        }
+                                    }), e = {
+                                        start: this.props.lookbackInterval.start,
+                                        end: this.props.interval.end
+                                    }, [4, function(e, t) {
+                                        return a.__awaiter(this, void 0, void 0, function() {
+                                            var n, r, s, i;
+                                            return a.__generator(this, function(o) {
+                                                switch (o.label) {
+                                                    case 0:
+                                                        return e.role === b.d.None ? [2, {
+                                                            isError: !1,
+                                                            subscriptions: Me.EMPTY_SUB_COUNT_RESPONSE
+                                                        }] : (n = "/kraken/channels/" + e.id + "/dashboard/sub_counts", r = Be.stringify(a.__assign({}, Ie(t.start, Object(d.addDays)(t.end, 1)), {
+                                                            fraction: "day"
+                                                        })), s = [n, r].join("?"), [4, Object(C.c)({
+                                                            path: s
+                                                        })]);
+                                                    case 1:
+                                                        return (i = o.sent()).isError() ? [2, {
+                                                            isError: !0,
+                                                            subscriptions: Me.EMPTY_SUB_COUNT_RESPONSE
                                                         }] : [2, {
                                                             isError: !1,
                                                             subscriptions: i.body
@@ -2542,7 +2592,10 @@ webpackJsonp([78], {
                                         })
                                     }(this.props.channel, e)]) : [2];
                                 case 1:
-                                    return (t = i.sent()).isError ? [2] : (n = Fe.SubCountStreams.partitionFromPayload(t.subscriptions, this.props.lookbackInterval), r = n[0], s = n[1], this.setState({
+                                    return (t = i.sent()).isError ? [2] : (n = Me.SubCountStreams.partitionFromPayload(t.subscriptions, {
+                                        splitAt: this.props.lookbackInterval.end,
+                                        max: this.props.interval.end
+                                    }), r = n[0], s = n[1], this.setState({
                                         subCounts: {
                                             isLoading: !1,
                                             streams: r,
@@ -2554,7 +2607,7 @@ webpackJsonp([78], {
                     })
                 }, t
             }(r.Component),
-            Ge = function(e) {
+            qe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2564,13 +2617,13 @@ webpackJsonp([78], {
                     var e = this;
                     if (!this.props.data.channel) return null;
                     var t = b.c.fromChannelData(this.props.data.channel);
-                    return r.createElement(Le, {
+                    return r.createElement(Ne, {
                         location: this.props.location,
                         history: this.props.history
                     }, function(n) {
-                        return r.createElement(qe, {
+                        return r.createElement(Ge, {
                             interval: n.params,
-                            lookbackInterval: Object(k.f)(n.params, -1),
+                            lookbackInterval: Object(R.h)(n.params, -1),
                             channel: t
                         }, function(a) {
                             return r.createElement(r.Fragment, null, r.createElement(s.c, {
@@ -2587,20 +2640,20 @@ webpackJsonp([78], {
                 }, t
             }(r.Component),
             He = function(e, t, n) {
-                return r.createElement(xe, {
+                return r.createElement(Re, {
                     channel: e,
                     urlStore: t,
                     channelAnalyticsResponse: n
                 })
             },
             Je = function(e, t, n) {
-                return r.createElement(Ve, {
+                return r.createElement(Le, {
                     channel: e,
                     urlStore: t,
                     channelAnalyticsResponse: n
                 })
             },
-            Ke = Object(i.d)(Object(l.a)(Ne, {
+            Ke = Object(i.d)(Object(l.a)(We, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2608,9 +2661,9 @@ webpackJsonp([78], {
                         }
                     }
                 }
-            }))(Ge);
+            }))(qe);
         n.d(t, "ChannelAnalyticsPageComponent", function() {
-            return Ge
+            return qe
         }), n.d(t, "ChannelAnalyticsPageRoot", function() {
             return Ke
         })
@@ -2620,11 +2673,23 @@ webpackJsonp([78], {
     jUGK: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return s
+            return o
+        }), n.d(t, "b", function() {
+            return l
         });
         var a = n("TToO"),
             r = n("tiQ5"),
-            s = function() {
+            s = n("yvDY"),
+            i = n("KiQY"),
+            o = {
+                ads: [],
+                bits: [],
+                extensions: [],
+                game_commerce: [],
+                prime_subscriptions: [],
+                twitch_subscriptions: []
+            },
+            l = function() {
                 function e(e) {
                     var t = this,
                         n = e.twitchSubscriptionProducts.length ? e.twitchSubscriptionProducts : r.c;
@@ -2639,21 +2704,41 @@ webpackJsonp([78], {
                     this.twitchSubscriptions = this.getTimeseriesWithTotal(s)
                 }
                 return e.fromPayload = function(t) {
-                    var n = this;
-                    return new e({
-                        ads: this.normalizeTimeseries(t.ads),
-                        bits: this.normalizeTimeseries(t.bits),
-                        extensions: this.normalizeTimeseries(t.extensions),
-                        gameCommerce: this.normalizeTimeseries(t.game_commerce),
-                        primeSubscriptions: this.normalizeTimeseries(t.prime_subscriptions),
-                        twitchSubscriptionProducts: t.twitch_subscriptions.map(function(e) {
-                            return {
-                                defaultPrice: e.default_price,
-                                productID: e.product_id,
-                                timeseries: n.normalizeTimeseries(e.revenue)
-                            }
-                        })
-                    })
+                    return new e(this.normalizePayload(t))
+                }, e.partitionFromPayload = function(t, n) {
+                    var a, r, i, o, l, c = this.normalizePayload(t),
+                        u = {
+                            ads: [],
+                            bits: [],
+                            extensions: [],
+                            gameCommerce: [],
+                            primeSubscriptions: [],
+                            twitchSubscriptionProducts: []
+                        },
+                        p = {
+                            ads: [],
+                            bits: [],
+                            extensions: [],
+                            gameCommerce: [],
+                            primeSubscriptions: [],
+                            twitchSubscriptionProducts: []
+                        };
+                    return a = Object(s.a)(c.ads, n), u.ads = a[0], p.ads = a[1], r = Object(s.a)(c.bits, n), u.bits = r[0], p.bits = r[1], i = Object(s.a)(c.extensions, n), u.extensions = i[0], p.extensions = i[1], o = Object(s.a)(c.gameCommerce, n), u.gameCommerce = o[0], p.gameCommerce = o[1], l = Object(s.a)(c.primeSubscriptions, n), u.primeSubscriptions = l[0], p.primeSubscriptions = l[1], c.twitchSubscriptionProducts.forEach(function(e) {
+                        var t = {
+                                defaultPrice: e.defaultPrice,
+                                productID: e.productID,
+                                timeseries: []
+                            },
+                            a = {
+                                defaultPrice: e.defaultPrice,
+                                productID: e.productID,
+                                timeseries: []
+                            },
+                            r = Object(s.a)(e.timeseries, n),
+                            i = r[0],
+                            o = r[1];
+                        t.timeseries = i, a.timeseries = o, u.twitchSubscriptionProducts.push(t), p.twitchSubscriptionProducts.push(a)
+                    }), [new e(u), new e(p)]
                 }, e.buildEmpty = function() {
                     return new e({
                         ads: [],
@@ -2663,11 +2748,27 @@ webpackJsonp([78], {
                         primeSubscriptions: [],
                         twitchSubscriptionProducts: []
                     })
+                }, e.normalizePayload = function(e) {
+                    var t = this;
+                    return {
+                        ads: this.normalizeTimeseries(e.ads),
+                        bits: this.normalizeTimeseries(e.bits),
+                        extensions: this.normalizeTimeseries(e.extensions),
+                        gameCommerce: this.normalizeTimeseries(e.game_commerce),
+                        primeSubscriptions: this.normalizeTimeseries(e.prime_subscriptions),
+                        twitchSubscriptionProducts: e.twitch_subscriptions.map(function(e) {
+                            return {
+                                defaultPrice: e.default_price,
+                                productID: e.product_id,
+                                timeseries: t.normalizeTimeseries(e.revenue)
+                            }
+                        })
+                    }
                 }, e.normalizeTimeseries = function(e) {
                     return e.map(function(e) {
                         return {
                             amount: e.amount / 100,
-                            date: new Date(e.timestamp)
+                            date: Object(i.a)(e.timestamp)
                         }
                     })
                 }, e.prototype.getTotalAmountAllStreams = function() {
@@ -2689,8 +2790,10 @@ webpackJsonp([78], {
             return a.a
         });
         var r = n("jUGK");
-        n.d(t, "RevenueStreams", function() {
+        n.d(t, "EMPTY_REVENUE_RESPONSE", function() {
             return r.a
+        }), n.d(t, "RevenueStreams", function() {
+            return r.b
         });
         var s = n("WHrl");
         n.d(t, "EMPTY_SUB_COUNT_RESPONSE", function() {
@@ -2734,8 +2837,8 @@ webpackJsonp([78], {
             }(s.Component),
             u = (n("i/9b"), "#898395"),
             p = ["#7752ba", "#0e9bd8", "#c5b6e2", "#3dc6ae", "#ffb300", "#69d420"],
-            d = "rgba(0, 0, 0, 0)",
-            m = "#ffffff",
+            m = "rgba(0, 0, 0, 0)",
+            d = "#ffffff",
             h = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -2760,7 +2863,7 @@ webpackJsonp([78], {
                                             callback: t.formatXAxes
                                         },
                                         gridLines: {
-                                            color: m,
+                                            color: d,
                                             lineWidth: 1,
                                             drawBorder: !1,
                                             display: !1
@@ -2795,13 +2898,13 @@ webpackJsonp([78], {
                                     intersect: !1,
                                     mode: "index",
                                     titleFontColor: "#BEACDE",
-                                    bodyFontColor: m,
+                                    bodyFontColor: d,
                                     titleFontSize: 15,
                                     xPadding: 15,
                                     yPadding: 12,
                                     cornerRadius: 3,
                                     displayColors: !0,
-                                    multiKeyBackground: d,
+                                    multiKeyBackground: m,
                                     footerFontStyle: "normal",
                                     callbacks: {
                                         title: t.formatTooltipTitle,
@@ -2859,7 +2962,7 @@ webpackJsonp([78], {
                         }
                     }, t.getLabelColor = function(e, t) {
                         return {
-                            borderColor: d,
+                            borderColor: m,
                             backgroundColor: t.data.datasets[e.datasetIndex].backgroundColor
                         }
                     }, t
@@ -2894,22 +2997,13 @@ webpackJsonp([78], {
                     fillContent: !0
                 }))
             }),
-            f = {
-                "data-test-selector": "no-data"
-            },
-            b = function() {
-                return s.createElement(l._6, r.__assign({
-                    flexGrow: 0,
-                    flexShrink: 1,
-                    fullWidth: !0,
-                    textAlign: l._39.Center
-                }, f), s.createElement(l.O, {
-                    type: l._43.H3
-                }, Object(a.d)("Nothing to show yet", "ChannelAnalyticsChartNoData")), s.createElement(l.O, {
-                    color: l.J.Alt2,
-                    fontSize: l.T.Size5
-                }, Object(a.d)("Not enough data for us to display", "ChannelAnalyticsChartNoData")))
-            },
+            f = n("dPMn"),
+            b = (n("Ukf0"), function() {
+                return s.createElement(l._6, {
+                    className: "top-stats-chart-no-data",
+                    display: l.P.Flex
+                }, s.createElement(f.a, null))
+            }),
             v = n("u4Vk"),
             y = function(e) {
                 function t() {
@@ -2919,8 +3013,8 @@ webpackJsonp([78], {
                             var a = t.props.streamSessionsResponse.sessions[0].channel.name;
                             if (a && n && n.length > 0) {
                                 var r = n[0],
-                                    s = r._chart.data.labels[r._index];
-                                window.open("/" + a + "/dashboard/stream-summary/" + s)
+                                    s = t.props.streamSessionsResponse.sessions[r._index];
+                                window.open("/" + a + "/dashboard/stream-summary/" + s.id)
                             }
                         }
                     }, t.formatTooltipTitle = function(e) {
@@ -2948,7 +3042,7 @@ webpackJsonp([78], {
                     var e = this;
                     if (this.props.streamSessionsResponse.isLoading) return s.createElement(g, null);
                     var t, n, a = this.props.streamSessionsResponse.sessions;
-                    return 0 === a.length ? s.createElement(b, null) : (this.props.aggregation.isByDay ? (t = a.map(function(e) {
+                    return a.length ? (this.props.aggregation.isByDay ? (t = a.map(function(e) {
                         return e.interval.start.getTime().toString()
                     }), n = this.props.datasetBuilders.map(function(e) {
                         return {
@@ -2969,7 +3063,7 @@ webpackJsonp([78], {
                         formatTooltipTitle: this.formatTooltipTitle,
                         formatXAxis: this.props.aggregation.formatShortDateFromLabel,
                         onDatasetClick: this.handleDatasetClick
-                    }))
+                    })) : s.createElement(b, null)
                 }, t
             }(s.Component),
             S = function(e) {
@@ -3375,29 +3469,31 @@ webpackJsonp([78], {
                     })
                 }, t
             }(s.Component),
-            k = function(e) {
+            R = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatTooltipLabel = function(e) {
-                        var t = Object(a.e)(e.value, {
-                            style: "currency",
-                            currency: "USD",
-                            maximumFractionDigits: 0,
-                            minimumFractionDigits: 0
-                        });
+                        var t = e.value <= 10 && 0 !== e.value ? 2 : 0,
+                            n = Object(a.e)(e.value, {
+                                style: "currency",
+                                currency: "USD",
+                                maximumFractionDigits: t,
+                                minimumFractionDigits: t
+                            });
                         return Object(a.d)("{currency} {label}", {
-                            currency: t,
+                            currency: n,
                             label: e.label
                         }, "ChannelAnalyticsTopStatsRevenueTooltip")
                     }, t.formatTooltipTitle = function(e) {
-                        var n = Object(a.e)(e.value, {
-                            style: "currency",
-                            currency: "USD",
-                            maximumFractionDigits: 0,
-                            minimumFractionDigits: 0
-                        });
+                        var n = e.value <= 10 && 0 !== e.value ? 2 : 0,
+                            r = Object(a.e)(e.value, {
+                                style: "currency",
+                                currency: "USD",
+                                maximumFractionDigits: n,
+                                minimumFractionDigits: n
+                            });
                         return Object(a.d)("{currency} {label}", {
-                            currency: n,
+                            currency: r,
                             label: t.props.aggregation.formatDateFromLabel(e.label)
                         }, "ChannelAnalyticsTopStatsRevenueTitle")
                     }, t
@@ -3407,7 +3503,7 @@ webpackJsonp([78], {
                 }, t.prototype.render = function() {
                     if (this.props.analyticsResponse.revenue.isLoading) return s.createElement(g, null);
                     var e = this.props.analyticsResponse.revenue.streams;
-                    return s.createElement(h, {
+                    return e.getTotalAmountAllStreams() ? s.createElement(h, {
                         labels: this.props.aggregation.datesAsLabels,
                         datasets: [{
                             label: Object(a.d)("Paid subs", "ChannelAnalyticsTopStatsRevenue"),
@@ -3431,7 +3527,7 @@ webpackJsonp([78], {
                         formatTooltipLabel: this.formatTooltipLabel,
                         formatTooltipTitle: this.formatTooltipTitle,
                         formatXAxis: this.props.aggregation.formatShortDateFromLabel
-                    })
+                    }) : s.createElement(b, null)
                 }, t.prototype.getAggregationData = function(e) {
                     return {
                         value: e.amount,
@@ -3439,7 +3535,7 @@ webpackJsonp([78], {
                     }
                 }, t
             }(s.Component),
-            R = function(e) {
+            k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatTooltipLabel = function(e) {
@@ -3456,22 +3552,21 @@ webpackJsonp([78], {
                         }, "ChannelAnalyticsTopStatsSubscriptions")
                     }, t.formatTooltipAfterLabel = function(e) {
                         if (e.label === t.paidSubMessage && e.value && e.time) {
-                            var n = t.props.analyticsResponse.subCounts.streams.twitchSubscriptions.timeseries,
-                                r = {};
-                            return n.forEach(function(n) {
-                                if (t.props.aggregation.startOf(n.date).getTime() === e.time) {
-                                    var a = n.product.defaultPrice;
-                                    void 0 === r[a] && (r[a] = 0), r[a] += n.count
+                            var n = {};
+                            return t.props.analyticsResponse.subCounts.streams.twitchSubscriptions.timeseries.forEach(function(a) {
+                                if (t.props.aggregation.startOf(a.date).getTime() === e.time) {
+                                    var r = a.product.defaultPrice;
+                                    void 0 === n[r] && (n[r] = 0), n[r] += a.count
                                 }
-                            }), Object.keys(r).map(function(e) {
+                            }), Object.keys(n).map(function(e) {
                                 var t = Object(a.e)(Number(e) / 100, {
                                         style: "currency",
                                         currency: "USD"
                                     }),
-                                    n = r[e];
+                                    r = n[e];
                                 return Object(a.d)("{numOfSubs, plural, one {# {usd} Sub} other {# {usd} Subs}}", {
                                     usd: t,
-                                    numOfSubs: n
+                                    numOfSubs: r
                                 }, "ChannelAnalyticsTopStatsSubscriptions")
                             })
                         }
@@ -3482,7 +3577,7 @@ webpackJsonp([78], {
                 }, t.prototype.render = function() {
                     if (this.props.analyticsResponse.subCounts.isLoading) return s.createElement(g, null);
                     var e = this.props.analyticsResponse.subCounts.streams;
-                    return s.createElement(h, {
+                    return e.getTotalSubCount() ? s.createElement(h, {
                         labels: this.props.aggregation.dates.map(function(e) {
                             return e.getTime().toString()
                         }),
@@ -3496,7 +3591,7 @@ webpackJsonp([78], {
                         formatTooltipLabel: this.formatTooltipLabel,
                         formatTooltipTitle: this.formatTooltipTitle,
                         formatTooltipAfterLabel: this.formatTooltipAfterLabel
-                    })
+                    }) : s.createElement(b, null)
                 }, Object.defineProperty(t.prototype, "paidSubMessage", {
                     get: function() {
                         return Object(a.d)("Paid subs", "ChannelAnalyticsTopStatsSubscriptions")
@@ -3560,10 +3655,10 @@ webpackJsonp([78], {
             }(s.Component),
             F = n("HW6M"),
             L = n("F8kA"),
-            N = (n("fnik"), {
+            M = (n("fnik"), {
                 "data-test-selector": "up-trend-indicator"
             }),
-            M = {
+            N = {
                 "data-test-selector": "down-trend-indicator"
             },
             W = {
@@ -3617,7 +3712,7 @@ webpackJsonp([78], {
                     }, s.createElement(l._19, r.__assign({
                         asset: l._20.GlyphArrUp,
                         type: l._21.Success
-                    }, N))) : this.props.trend < 0 ? s.createElement(l._6, {
+                    }, M))) : this.props.trend < 0 ? s.createElement(l._6, {
                         display: l.P.Inline,
                         margin: {
                             left: .5
@@ -3625,7 +3720,7 @@ webpackJsonp([78], {
                     }, s.createElement(l._19, r.__assign({
                         asset: l._20.GlyphArrDown,
                         type: l._21.Warn
-                    }, M))) : null : null
+                    }, N))) : null : null
                 }, t
             }(s.Component),
             I = function(e) {
@@ -3634,10 +3729,11 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.adBreaks,
-                        n = this.previousAdBreaks;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : Object(i.b)(t), s.createElement(B, {
+                        n = this.previousAdBreaks,
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(i.b)(t), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Ad Breaks", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3666,10 +3762,11 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.averageUniqueViewers(this.props.analyticsResponse.streamSessions.sessions || []),
-                        n = this.averageUniqueViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []);
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : this.formatTitle(t), s.createElement(B, {
+                        n = this.averageUniqueViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Average Unique Viewers", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3696,16 +3793,17 @@ webpackJsonp([78], {
                 a += r.weight * r.value, n += r.weight
             }), 0 === n ? 0 : a / n
         }
-        var q = function(e) {
+        var G = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.averageViewers(this.props.analyticsResponse.streamSessions.sessions || []),
-                        n = this.averageViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []);
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : this.formatTitle(t), s.createElement(B, {
+                        n = this.averageViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Average Viewers", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3726,18 +3824,19 @@ webpackJsonp([78], {
                     })
                 }, t
             }(s.Component),
-            G = function(e) {
+            q = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.averageMessages(this.props.analyticsResponse.streamSessions.sessions),
-                        n = this.averageMessages(this.props.analyticsResponse.streamSessions.lookbackSessions);
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : Object(a.e)(t, {
+                        n = this.averageMessages(this.props.analyticsResponse.streamSessions.lookbackSessions),
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t, {
                         maximumFractionDigits: 0
                     }), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Average Chat Messages", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3757,12 +3856,13 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.averageUniqueChatters(this.props.analyticsResponse.streamSessions.sessions),
-                        n = this.averageUniqueChatters(this.props.analyticsResponse.streamSessions.lookbackSessions);
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : Object(a.e)(t, {
+                        n = this.averageUniqueChatters(this.props.analyticsResponse.streamSessions.lookbackSessions),
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t, {
                         maximumFractionDigits: 0
                     }), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Average Chatters", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3782,15 +3882,16 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.previousTotalClipViews,
-                        n = this.totalClipViews;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : Object(a.e)(n, {
+                        n = this.totalClipViews,
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(n, {
                         maximumFractionDigits: 0
                     }), s.createElement(B, {
                         title: e,
                         subtitle: Object(a.d)("Clip Views", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive,
-                        trend: Math.sign(n - t)
+                        trend: r.length ? Math.sign(n - t) : 0
                     }, this.props.children)
                 }, Object.defineProperty(t.prototype, "totalClipViews", {
                     get: function() {
@@ -3816,10 +3917,11 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.clipsCreated,
-                        n = this.previousClipsCreated;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : Object(a.e)(t), s.createElement(B, {
+                        n = this.previousClipsCreated,
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Clips Created", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3848,10 +3950,11 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.liveViews,
-                        n = this.previousLiveViews;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : Object(a.e)(t), s.createElement(B, {
+                        n = this.previousLiveViews,
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Live Views", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3880,10 +3983,11 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.maxViewers,
-                        n = this.previousMaxViewers;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : Object(a.e)(t), s.createElement(B, {
+                        n = this.previousMaxViewers,
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Max Viewers", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3912,10 +4016,11 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.minutesWatched,
-                        n = this.previousMinutesWatched;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : Object(a.e)(t), s.createElement(B, {
+                        n = this.previousMinutesWatched,
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Minutes Watched", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3944,8 +4049,9 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.followersChange,
-                        n = this.previousFollowersChange;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : function(e) {
+                        n = this.previousFollowersChange,
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : function(e) {
                         if ("number" != typeof e) return "";
                         var t = e < 0 ? "-" : "+";
                         return Object(a.d)("{sign}{followersDiff, number}", {
@@ -3954,7 +4060,7 @@ webpackJsonp([78], {
                         }, "ChannelAnalyticsTopStats")
                     }(t), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("New Followers", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -3987,13 +4093,13 @@ webpackJsonp([78], {
                         t = this.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams();
                     return s.createElement(B, {
                         title: this.renderTitle(t),
-                        trend: Math.sign(t - e),
+                        trend: t ? Math.sign(t - e) : 0,
                         subtitle: Object(a.d)("Revenue", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
                     }, this.props.children)
                 }, t.prototype.renderTitle = function(e) {
-                    if (this.props.analyticsResponse.revenue.isLoading) return "–";
+                    if (this.props.analyticsResponse.revenue.isLoading || !this.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams()) return "—";
                     var t = Object(te.a)(e),
                         n = t.sign,
                         a = t.dollars,
@@ -4018,11 +4124,11 @@ webpackJsonp([78], {
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.props.analyticsResponse.subCounts.streams.getTotalSubCount(),
                         n = this.props.analyticsResponse.subCounts.lookbackStreams.getTotalSubCount();
-                    return e = this.props.analyticsResponse.subCounts.isLoading ? "—" : Object(a.e)(t, {
+                    return e = this.props.analyticsResponse.subCounts.isLoading || !t ? "—" : Object(a.e)(t, {
                         maximumFractionDigits: 0
                     }), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: t ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Subscriptions", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -4035,10 +4141,11 @@ webpackJsonp([78], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e, t = this.timeStreamed,
-                        n = this.previousTimeStreamed;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading ? "—" : Object(P.a)(t), s.createElement(B, {
+                        n = this.previousTimeStreamed,
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(P.a)(t), s.createElement(B, {
                         title: e,
-                        trend: Math.sign(t - n),
+                        trend: r.length ? Math.sign(t - n) : 0,
                         subtitle: Object(a.d)("Time Streamed", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
                         isActive: this.props.isActive
@@ -4071,7 +4178,7 @@ webpackJsonp([78], {
                 title: function() {
                     return Object(a.d)("Average Viewers", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: q,
+                Tab: G,
                 Chart: O,
                 dataGroup: ee.StreamSummaries
             }, se[Z.LiveViews] = {
@@ -4093,14 +4200,14 @@ webpackJsonp([78], {
                     return Object(a.d)("Subscriptions", "ChannelAnalyticsTopStatsDropdown")
                 },
                 Tab: ae,
-                Chart: R,
+                Chart: k,
                 dataGroup: ee.Revenue
             }, se[Z.Revenue] = {
                 title: function() {
                     return Object(a.d)("Revenue", "ChannelAnalyticsTopStatsDropdown")
                 },
                 Tab: ne,
-                Chart: k,
+                Chart: R,
                 dataGroup: ee.Revenue
             }, se[Z.MinutesWatched] = {
                 title: function() {
@@ -4141,7 +4248,7 @@ webpackJsonp([78], {
                 title: function() {
                     return Object(a.d)("Average Chat Messages", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: G,
+                Tab: q,
                 Chart: _,
                 dataGroup: ee.StreamSummaries
             }, se[Z.ClipsCreated] = {
@@ -4201,16 +4308,16 @@ webpackJsonp([78], {
         })
     },
     w5Qh: function(e, t) {},
-    x9gg: function(e, t, n) {
+    yvDY: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
-            for (var n = [], a = [], r = 0, s = e; r < s.length; r++) {
-                var i = s[r];
-                t(i) ? n.push(i) : a.push(i)
-            }
-            return [n, a]
+            var n = [],
+                a = [];
+            return e.forEach(function(e) {
+                e.date > t.splitAt ? e.date <= t.max && n.push(e) : a.push(e)
+            }), [n, a]
         }
     },
     z39C: function(e, t) {}
 });
-//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-root-e424e13aa95eff3df0ccb95e6d4fa905.js.map
+//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-root-d12268942f64b1333ac0590bf5c11a74.js.map

@@ -319,102 +319,149 @@ webpackJsonp([38], {
     },
     "2Hj/": function(e, t, n) {
         "use strict";
-        var i = n("GiK3"),
-            r = n("6sO2"),
-            a = n("Ex+h");
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = n("6sO2"),
+            o = n("Ex+h"),
+            s = n("l4QG");
 
-        function o(e, t) {
-            if (!e) return null;
-            switch (e.type) {
-                case a.a.Playing:
-                    return e.game && e.game.name ? Object(r.d)("playing {game}", {
-                        game: e.game.name
-                    }, "PresenceActivity") : Object(r.d)("playing", "PresenceActivity");
-                case a.a.Watching:
-                    if (!t && e.user.hosting && e.user.hosting.displayName) return Object(r.d)("watching {user} with the {community} community", {
-                        user: e.user.hosting.displayName,
-                        community: e.user.displayName
-                    }, "PresenceActivity");
-                    if (!t && e.user.stream && e.user.stream.game && e.user.stream.game.name) return Object(r.d)("watching {user} stream {game}", {
-                        user: e.user.displayName,
-                        game: e.user.stream.game.name
-                    }, "PresenceActivity");
-                    var n = e.user.hosting && e.user.hosting.displayName ? e.user.hosting.displayName : e.user.displayName;
-                    return Object(r.d)("watching {user}", {
-                        user: n
-                    }, "PresenceActivity");
-                case a.a.Streaming:
-                    return e.stream && e.stream.game && e.stream.game.name ? Object(r.d)("streaming {game}", {
-                        game: e.stream.game.name
-                    }, "PresenceActivity") : Object(r.d)("streaming", "PresenceActivity");
+        function c(e, t) {
+            var n = e.activity,
+                i = e.availability;
+            if (!n) return null;
+            switch (n.type) {
+                case o.a.Playing:
+                    return n.game && n.game.name ? Object(a.d)("playing {game}", {
+                        game: n.game.name
+                    }, "PresenceActivity") : Object(a.d)("playing", "PresenceActivity");
+                case o.a.Watching:
+                    var r = function(e) {
+                        if (e && e.type === o.a.Watching && e.user) return e.user.hosting && e.user.hosting.displayName ? {
+                            isHost: !0,
+                            displayName: e.user.hosting.displayName
+                        } : {
+                            isHost: !1,
+                            displayName: e.user.displayName
+                        };
+                        return null
+                    }(n);
+                    return r ? i && i === s.a.Offline ? !t && r.isHost ? Object(a.d)("was watching {user} with the {community} community", {
+                        user: r.displayName,
+                        community: n.user.displayName
+                    }, "PresenceActivity") : !t && n.user.stream && n.user.stream.game && n.user.stream.game.name ? Object(a.d)("was watching {user} stream {game}", {
+                        user: r.displayName,
+                        game: n.user.stream.game.name
+                    }, "PresenceActivity") : Object(a.d)("was watching {user}", {
+                        user: r.displayName
+                    }, "PresenceActivity") : !t && r.isHost ? Object(a.d)("watching {user} with the {community} community", {
+                        user: r.displayName,
+                        community: n.user.displayName
+                    }, "PresenceActivity") : !t && n.user.stream && n.user.stream.game && n.user.stream.game.name ? Object(a.d)("watching {user} stream {game}", {
+                        user: r.displayName,
+                        game: n.user.stream.game.name
+                    }, "PresenceActivity") : Object(a.d)("watching {user}", {
+                        user: r.displayName
+                    }, "PresenceActivity") : null;
+                case o.a.Streaming:
+                    return n.stream && n.stream.game && n.stream.game.name ? Object(a.d)("streaming {game}", {
+                        game: n.stream.game.name
+                    }, "PresenceActivity") : Object(a.d)("streaming", "PresenceActivity");
                 default:
                     return null
             }
         }
 
-        function s(e, t) {
+        function l(e, t) {
             if (!t) return null;
             switch (t.type) {
-                case a.a.Streaming:
+                case o.a.Streaming:
                     return "/" + e;
-                case a.a.Watching:
+                case o.a.Watching:
                     return "/" + t.user.login;
                 default:
                     return null
             }
         }
-        var c = n("l4QG");
 
-        function l(e) {
-            var t = Object(r.d)("Online", "PresenceAvailability");
+        function u(e) {
+            var t = Object(a.d)("Online", "PresenceAvailability");
             switch (e) {
-                case c.a.Idle:
-                case c.a.Away:
-                    return Object(r.d)("Away", "PresenceAvailability");
-                case c.a.Busy:
-                    return Object(r.d)("Busy", "PresenceAvailability");
-                case c.a.Offline:
-                    return Object(r.d)("Offline", "PresenceAvailability");
-                case c.a.Invisible:
-                    return Object(r.d)("Invisible", "PresenceAvailability");
-                case c.a.Online:
+                case s.a.Idle:
+                case s.a.Away:
+                    return Object(a.d)("Away", "PresenceAvailability");
+                case s.a.Busy:
+                    return Object(a.d)("Busy", "PresenceAvailability");
+                case s.a.Offline:
+                    return Object(a.d)("Offline", "PresenceAvailability");
+                case s.a.Invisible:
+                    return Object(a.d)("Invisible", "PresenceAvailability");
+                case s.a.Online:
                 default:
                     return t
             }
         }
-        var u = function(e) {
-                return i.createElement("span", {
-                    "data-a-target": "presence-text"
-                }, o(e.activity, e.condensed) || l(e.availability))
-            },
-            d = n("Odds"),
-            p = function(e) {
-                var t = d._15.Online;
+        var d = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {}, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return i.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, a.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE")];
+                                case 1:
+                                    return e = t.sent(), this.setState({
+                                        hasExtendedRichPresence: "variant_a" === e
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t.prototype.render = function() {
+                    var e = this.props,
+                        t = e.activity,
+                        n = e.availability,
+                        i = e.condensed,
+                        a = this.state.hasExtendedRichPresence ? {
+                            activity: t,
+                            availability: n
+                        } : {
+                            activity: t
+                        };
+                    return r.createElement("span", {
+                        "data-a-target": "presence-text"
+                    }, c(a, i) || u(n))
+                }, t
+            }(r.Component),
+            p = n("Odds"),
+            m = function(e) {
+                var t = p._15.Online;
                 switch (e.availability) {
-                    case c.a.Idle:
-                    case c.a.Away:
-                        t = d._15.Away;
+                    case s.a.Idle:
+                    case s.a.Away:
+                        t = p._15.Away;
                         break;
-                    case c.a.Busy:
-                        t = d._15.Busy;
+                    case s.a.Busy:
+                        t = p._15.Busy;
                         break;
-                    case c.a.Invisible:
-                        t = d._15.Invisible;
+                    case s.a.Invisible:
+                        t = p._15.Invisible;
                         break;
-                    case c.a.Offline:
-                        t = d._15.Offline;
+                    case s.a.Offline:
+                        t = p._15.Offline;
                         break;
-                    case c.a.Online:
-                        t = d._15.Online;
+                    case s.a.Online:
+                        t = p._15.Online;
                         break;
                     default:
-                        t = d._15.Online
+                        t = p._15.Online
                 }
-                return i.createElement(d._14, {
+                return r.createElement(p._14, {
                     status: t
                 })
             },
-            m = n("TToO"),
             f = n("HZww");
         var g = n("aMxy"),
             h = n("mqvl"),
@@ -425,20 +472,20 @@ webpackJsonp([38], {
                 return function(e) {
                     return function(t) {
                         return function(n) {
-                            function r(t) {
+                            function a(t) {
                                 var i = n.call(this, t) || this;
                                 return i.options = e(t), i
                             }
-                            return m.__extends(r, n), r.prototype.componentDidMount = function() {
+                            return i.__extends(a, n), a.prototype.componentDidMount = function() {
                                 this.options.skip || this.subscribe(this.options)
-                            }, r.prototype.componentWillReceiveProps = function(t) {
+                            }, a.prototype.componentWillReceiveProps = function(t) {
                                 var n = e(t);
                                 n.topic === this.options.topic || n.skip || (this.unsubscribe(), this.subscribe(n)), this.options = n
-                            }, r.prototype.componentWillUnmount = function() {
+                            }, a.prototype.componentWillUnmount = function() {
                                 this.unsubscribe()
-                            }, r.prototype.render = function() {
-                                return i.createElement(t, m.__assign({}, this.props))
-                            }, r.prototype.subscribe = function(e) {
+                            }, a.prototype.render = function() {
+                                return r.createElement(t, i.__assign({}, this.props))
+                            }, a.prototype.subscribe = function(e) {
                                 this.unsubscriber = Object(f.p)({
                                     fragment: e.fragment,
                                     id: e.id,
@@ -446,10 +493,10 @@ webpackJsonp([38], {
                                     type: e.type,
                                     mutator: e.mutator
                                 })
-                            }, r.prototype.unsubscribe = function() {
+                            }, a.prototype.unsubscribe = function() {
                                 this.unsubscriber && this.unsubscriber()
-                            }, r
-                        }(i.Component)
+                            }, a
+                        }(r.Component)
                     }
                 }(function(t) {
                     var n = e(t);
@@ -471,17 +518,17 @@ webpackJsonp([38], {
             }
         }
         n.d(t, "b", function() {
-            return u
+            return d
         }), n.d(t, "a", function() {
-            return p
+            return m
         }), n.d(t, !1, function() {
             return y
         }), n.d(t, "c", function() {
-            return o
+            return c
         }), n.d(t, "d", function() {
-            return s
-        }), n.d(t, !1, function() {
             return l
+        }), n.d(t, !1, function() {
+            return u
         })
     },
     "2IkU": function(e, t) {},
@@ -1724,7 +1771,7 @@ webpackJsonp([38], {
                 }, t = r.__decorate([Object(p.d)("PrimeClaimDescription")], t)
             }(o.Component),
             N = n("Hs3O"),
-            E = function(e) {
+            w = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1746,7 +1793,7 @@ webpackJsonp([38], {
                     }, Object(s.d)("Start Your Free Trial", "PrimeUpsellButton")))
                 }, t = r.__decorate([Object(p.d)("PrimeUpsellButton")], t)
             }(o.Component),
-            w = n("e2wA"),
+            E = n("e2wA"),
             O = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -1769,14 +1816,14 @@ webpackJsonp([38], {
                         claimCallback: this.props.claimCallback,
                         claiming: this.props.claiming,
                         offerLinkUri: this.props.externalUri
-                    }) : o.createElement(E, {
+                    }) : o.createElement(w, {
                         externalUri: this.props.externalUri
                     })
                 }, t.prototype.getClaimDescriptionSection = function() {
                     return this.props.offerType === b.b.EXTERNAL_OFFER ? null : o.createElement(S, {
                         description: this.props.offerDescription
                     })
-                }, t = r.__decorate([Object(l.a)(w), Object(p.d)("PrimeInstructions")], t)
+                }, t = r.__decorate([Object(l.a)(E), Object(p.d)("PrimeInstructions")], t)
             }(o.Component),
             C = n("F8kA"),
             x = function(e) {
@@ -2240,7 +2287,7 @@ webpackJsonp([38], {
                         type: m._21.Brand
                     })), o.createElement(m.O, {
                         type: m._43.P
-                    }, Object(s.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), o.createElement(E, null))
+                    }, Object(s.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), o.createElement(w, null))
                 }, t = r.__decorate([Object(p.d)("PrimeUpsell")], t)
             }(o.Component)),
             j = n("eY4D"),
@@ -4000,6 +4047,28 @@ webpackJsonp([38], {
         };
         e.exports = n
     },
+    FDYX: function(e, t, n) {
+        "use strict";
+        t.d = function(e) {
+            return e.some(function(e) {
+                return !!e.self && !!e.self.promotion
+            })
+        }, t.c = function(e) {
+            return e.some(function(e) {
+                return !!e.giftPromotion
+            })
+        }, t.a = function(e, t) {
+            var n;
+            t ? n = e.giftPromotion : e.self && (n = e.self.promotion);
+            if (n) return n.newPrice;
+            return e.price
+        }, t.b = function(e, t) {
+            var n;
+            t ? n = e.giftPromotion : e.self && (n = e.self.promotion);
+            if (n) return n.discountValue;
+            return 0
+        }
+    },
     FLwB: function(e, t, n) {
         "use strict";
         t.f = function(e) {
@@ -5376,7 +5445,7 @@ webpackJsonp([38], {
                     }, this.props.isGift ? Object(d.d)("Gift A Subscription", "PurchaseSubInfo") : Object(d.d)("Start Your Subscription", "PersonalSubPurchaseInfo"))
                 }, t
             }(u.Component);
-        var S, N, E, w, O = Object(i.b)(function(e) {
+        var S, N, w, E, O = Object(i.b)(function(e) {
                 return {
                     sessionUser: Object(s.c)(e)
                 }
@@ -5405,10 +5474,10 @@ webpackJsonp([38], {
         }(N || (N = {})),
         function(e) {
             e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlyPayWithAmazon = "recurly_pay_with_amazon", e.ZuoraCreditCard = "zuora_credit_card", e.Xsolla = "xsolla"
-        }(E || (E = {})),
+        }(w || (w = {})),
         function(e) {
             e.VendorLoginClick = "vendor_login_click", e.CompletePurchaseClick = "complete_purchase_click", e.PaypalTokenError = "paypal_token_error", e.RadioButtonClick = "radio_button_click", e.TokenError = "token_error"
-        }(w || (w = {}));
+        }(E || (E = {}));
         var G = n("CSlQ"),
             V = (n("aMOL"), function() {
                 function e(e) {}
@@ -5431,7 +5500,7 @@ webpackJsonp([38], {
                                         }), e.label = 1;
                                     case 1:
                                         return e.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
-                                            payment_flow: E.RecurlyPayWithAmazon,
+                                            payment_flow: w.RecurlyPayWithAmazon,
                                             payment_provider: "recurly",
                                             payment_info: {
                                                 token: this.state.billingAgreementId,
@@ -5587,7 +5656,7 @@ webpackJsonp([38], {
                                 switch (t.label) {
                                     case 0:
                                         return t.trys.push([0, 2, , 3]), [4, this.props.onSuccess({
-                                            payment_flow: E.RecurlyCreditCard,
+                                            payment_flow: w.RecurlyCreditCard,
                                             payment_provider: "recurly",
                                             payment_info: {
                                                 token: e.id,
@@ -5829,7 +5898,7 @@ webpackJsonp([38], {
                                 switch (t.label) {
                                     case 0:
                                         return t.trys.push([0, 2, , 3]), [4, this.props.onSuccess({
-                                            payment_flow: E.RecurlyPaypal,
+                                            payment_flow: w.RecurlyPaypal,
                                             payment_provider: "recurly",
                                             payment_info: {
                                                 token: e.id,
@@ -5917,22 +5986,22 @@ webpackJsonp([38], {
                                 if (n.data && n.data.paymentInfo) switch (n.data.paymentInfo.status) {
                                     case "done":
                                         return t.props.trackPaymentFormInteraction({
-                                            paymentFlow: E.Xsolla,
-                                            action: w.CompletePurchaseClick,
+                                            paymentFlow: w.Xsolla,
+                                            action: E.CompletePurchaseClick,
                                             actionDetail: S.Pending
                                         }), t.props.trackPaymentFormInteraction({
-                                            paymentFlow: E.Xsolla,
-                                            action: w.CompletePurchaseClick,
+                                            paymentFlow: w.Xsolla,
+                                            action: E.CompletePurchaseClick,
                                             actionDetail: S.Success
                                         });
                                     case "troubled":
                                         return t.props.trackPaymentFormInteraction({
-                                            paymentFlow: E.Xsolla,
-                                            action: w.CompletePurchaseClick,
+                                            paymentFlow: w.Xsolla,
+                                            action: E.CompletePurchaseClick,
                                             actionDetail: S.Pending
                                         }), t.props.trackPaymentFormInteraction({
-                                            paymentFlow: E.Xsolla,
-                                            action: w.CompletePurchaseClick,
+                                            paymentFlow: w.Xsolla,
+                                            action: E.CompletePurchaseClick,
                                             actionDetail: S.Failed
                                         })
                                 }
@@ -6027,7 +6096,7 @@ webpackJsonp([38], {
                                     t.label = 1;
                                 case 1:
                                     return t.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
-                                        payment_flow: E.ZuoraCreditCard,
+                                        payment_flow: w.ZuoraCreditCard,
                                         payment_provider: "zuora",
                                         payment_info: {
                                             token: e.refId,
@@ -6171,10 +6240,10 @@ webpackJsonp([38], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        selectedProvider: E.ZuoraCreditCard,
+                        selectedProvider: w.ZuoraCreditCard,
                         subsCheckoutVariantAssignment: "zuora"
                     }, t.submitButtonCopy = Object(d.d)("Complete Purchase", "PaymentMethods"), t.paymentProviders = [{
-                        name: E.ZuoraCreditCard,
+                        name: w.ZuoraCreditCard,
                         enabled: "zuora" === t.state.subsCheckoutVariantAssignment || "owlallaccess2018" === t.props.productShortName,
                         button: {
                             label: oe.CreditCard(),
@@ -6191,7 +6260,7 @@ webpackJsonp([38], {
                             isProductionConfig: t.props.configs.recurly.payWithAmazonConfigs.isProduction
                         }, t.props.configs.zuora))
                     }, {
-                        name: E.RecurlyCreditCard,
+                        name: w.RecurlyCreditCard,
                         enabled: "recurly" === t.state.subsCheckoutVariantAssignment && !("owlallaccess2018" === t.props.productShortName),
                         button: {
                             label: oe.CreditCard(),
@@ -6208,7 +6277,7 @@ webpackJsonp([38], {
                             onSuccess: t.props.onSuccess
                         })
                     }, {
-                        name: E.RecurlyPaypal,
+                        name: w.RecurlyPaypal,
                         enabled: !("owlallaccess2018" === t.props.productShortName),
                         button: {
                             label: oe.Paypal(),
@@ -6226,7 +6295,7 @@ webpackJsonp([38], {
                             onSuccess: t.props.onSuccess
                         })
                     }, {
-                        name: E.RecurlyPayWithAmazon,
+                        name: w.RecurlyPayWithAmazon,
                         enabled: !("owlallaccess2018" === t.props.productShortName),
                         button: {
                             label: oe.AmazonPay(),
@@ -6242,7 +6311,7 @@ webpackJsonp([38], {
                             onSuccess: t.props.onSuccess
                         }, t.props.configs.recurly.payWithAmazonConfigs))
                     }, {
-                        name: E.Xsolla,
+                        name: w.Xsolla,
                         enabled: !0,
                         button: {
                             label: oe.MoreMethods(),
@@ -6288,12 +6357,12 @@ webpackJsonp([38], {
                         return function() {
                             if (t.props.trackPaymentFormInteraction({
                                     paymentFlow: e,
-                                    action: w.RadioButtonClick,
+                                    action: E.RadioButtonClick,
                                     actionDetail: e
                                 }), t.setState({
                                     selectedProvider: e
-                                }), e === E.RecurlyPaypal) document.querySelector('[data-a-target="recurly-paypal__button"]').click();
-                            else if (e === E.RecurlyPayWithAmazon) {
+                                }), e === w.RecurlyPaypal) document.querySelector('[data-a-target="recurly-paypal__button"]').click();
+                            else if (e === w.RecurlyPayWithAmazon) {
                                 document.querySelector('[data-metric-name="amazon-pay-button-load"]').click()
                             }
                         }
@@ -6308,7 +6377,7 @@ webpackJsonp([38], {
                                     return [4, d.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_VARIANT")];
                                 case 1:
                                     return e = n.sent() || this.state.subsCheckoutVariantAssignment, "owlallaccess2018" !== this.props.productShortName && this.setState({
-                                        selectedProvider: "recurly" === e ? E.RecurlyCreditCard : E.ZuoraCreditCard,
+                                        selectedProvider: "recurly" === e ? w.RecurlyCreditCard : w.ZuoraCreditCard,
                                         subsCheckoutVariantAssignment: e
                                     }), document.querySelector("#recurly-script") ? [2] : ((t = document.createElement("script")).src = "https://js.recurly.com/v4/recurly.js", t.async = !0, t.id = "recurly-script", document.body.appendChild(t), [2])
                             }
@@ -6318,11 +6387,11 @@ webpackJsonp([38], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if ("US" !== this.props.countryCode) {
-                        this.state.selectedProvider !== E.Xsolla && this.setState({
-                            selectedProvider: E.Xsolla
+                        this.state.selectedProvider !== w.Xsolla && this.setState({
+                            selectedProvider: w.Xsolla
                         });
                         var e = this.paymentProviders.find(function(e) {
-                            return e.name === E.Xsolla
+                            return e.name === w.Xsolla
                         });
                         return e && this.renderProvider(e)
                     }
@@ -6421,17 +6490,17 @@ webpackJsonp([38], {
                     }, u.createElement(y.O, {
                         className: "ticket-description__description__line-item",
                         bold: !0
-                    }, be["Subscription benefits"]())), u.createElement(y.O, {
+                    }, Ee["Subscription benefits"]())), u.createElement(y.O, {
                         className: "ticket-description__description__line-item"
-                    }, be["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(y.O, {
+                    }, Ee["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(y.O, {
                         className: "ticket-description__description__line-item"
-                    }, be["Ad-free (with limited exceptions)"]()), u.createElement(y.O, {
+                    }, Ee["Ad-free (with limited exceptions)"]()), u.createElement(y.O, {
                         className: "ticket-description__description__line-item"
-                    }, be["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(y.O, {
+                    }, Ee["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(y.O, {
                         className: "ticket-description__description__line-item"
-                    }, be["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(y.O, {
+                    }, Ee["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(y.O, {
                         className: "ticket-description__description__line-item"
-                    }, be["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()))))
+                    }, Ee["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()))))
                 }, t = c.__decorate([Object(G.d)("TicketDescription")], t)
             }(u.Component)),
             ue = (n("kgE+"), function(e) {
@@ -6529,17 +6598,17 @@ webpackJsonp([38], {
                     }, u.createElement(y.O, {
                         className: "mobile-ticket-description__description__line-item",
                         bold: !0
-                    }, be["Subscription benefits"]())), u.createElement(y.O, {
+                    }, Ee["Subscription benefits"]())), u.createElement(y.O, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, be["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(y.O, {
+                    }, Ee["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(y.O, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, be["Ad-free (with limited exceptions)"]()), u.createElement(y.O, {
+                    }, Ee["Ad-free (with limited exceptions)"]()), u.createElement(y.O, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, be["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(y.O, {
+                    }, Ee["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(y.O, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, be["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(y.O, {
+                    }, Ee["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(y.O, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, be["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()), u.createElement(y._4, {
+                    }, Ee["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()), u.createElement(y._4, {
                         onClick: this.toggleCollapsed,
                         hover: !1,
                         alpha: !0
@@ -6561,24 +6630,24 @@ webpackJsonp([38], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.turboBenefitsList = [{
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_ad-free.png",
-                        benefitHeader: _e["Ad-Free*"](),
-                        benefitDescription: _e["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
+                        benefitHeader: Oe["Ad-Free*"](),
+                        benefitDescription: Oe["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_custom-emotes.png",
-                        benefitHeader: _e["Custom Emoticon Set"](),
-                        benefitDescription: _e["Express your emotions with an exclusive set of faces."]()
+                        benefitHeader: Oe["Custom Emoticon Set"](),
+                        benefitDescription: Oe["Express your emotions with an exclusive set of faces."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png",
-                        benefitHeader: _e.Badge(),
-                        benefitDescription: _e["Show everyone how Turbo you are with a shiny new chat badge."]()
+                        benefitHeader: Oe.Badge(),
+                        benefitDescription: Oe["Show everyone how Turbo you are with a shiny new chat badge."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_chat-color.png",
-                        benefitHeader: _e["Extended Chat Colors"](),
-                        benefitDescription: _e["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
+                        benefitHeader: Oe["Extended Chat Colors"](),
+                        benefitDescription: Oe["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_storage.png",
-                        benefitHeader: _e["Increased Video Storage"](),
-                        benefitDescription: _e["Save your past broadcasts on Twitch for 60 days."]()
+                        benefitHeader: Oe["Increased Video Storage"](),
+                        benefitDescription: Oe["Save your past broadcasts on Twitch for 60 days."]()
                     }], t.renderTurboBenefit = function(e) {
                         return u.createElement(y.K, {
                             cols: 12,
@@ -6605,7 +6674,7 @@ webpackJsonp([38], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = _e.Features();
+                    var e = Oe.Features();
                     return u.createElement(y._29, {
                         className: "turbo-mobile-ticket-description",
                         background: y.m.Alt2,
@@ -6622,7 +6691,7 @@ webpackJsonp([38], {
                         cols: 12
                     }, u.createElement(y.O, {
                         type: y._43.H4
-                    }, _e["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(y.K, {
+                    }, Oe["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(y.K, {
                         cols: 12
                     }, u.createElement(y._29, {
                         borderBottom: !0,
@@ -6640,24 +6709,24 @@ webpackJsonp([38], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.turboBenefitsList = [{
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_ad-free.png",
-                        benefitHeader: _e["Ad-Free*"](),
-                        benefitDescription: _e["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
+                        benefitHeader: Oe["Ad-Free*"](),
+                        benefitDescription: Oe["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_custom-emotes.png",
-                        benefitHeader: _e["Custom Emoticon Set"](),
-                        benefitDescription: _e["Express your emotions with an exclusive set of faces."]()
+                        benefitHeader: Oe["Custom Emoticon Set"](),
+                        benefitDescription: Oe["Express your emotions with an exclusive set of faces."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png",
-                        benefitHeader: _e.Badge(),
-                        benefitDescription: _e["Show everyone how Turbo you are with a shiny new chat badge."]()
+                        benefitHeader: Oe.Badge(),
+                        benefitDescription: Oe["Show everyone how Turbo you are with a shiny new chat badge."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_chat-color.png",
-                        benefitHeader: _e["Extended Chat Colors"](),
-                        benefitDescription: _e["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
+                        benefitHeader: Oe["Extended Chat Colors"](),
+                        benefitDescription: Oe["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_storage.png",
-                        benefitHeader: _e["Increased Video Storage"](),
-                        benefitDescription: _e["Save your past broadcasts on Twitch for 60 days."]()
+                        benefitHeader: Oe["Increased Video Storage"](),
+                        benefitDescription: Oe["Save your past broadcasts on Twitch for 60 days."]()
                     }], t.renderTurboBenefit = function(e) {
                         return u.createElement(y.K, {
                             cols: 12,
@@ -6684,7 +6753,7 @@ webpackJsonp([38], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = _e.Features();
+                    var e = Oe.Features();
                     return u.createElement(y._29, {
                         className: "turbo-ticket-description",
                         background: y.m.Alt2,
@@ -6700,7 +6769,7 @@ webpackJsonp([38], {
                         cols: 12
                     }, u.createElement(y.O, {
                         type: y._43.H4
-                    }, _e["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(y.K, {
+                    }, Oe["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(y.K, {
                         cols: 12
                     }, u.createElement(y._29, {
                         borderBottom: !0,
@@ -6715,47 +6784,98 @@ webpackJsonp([38], {
             }(u.Component)),
             me = n("7LIQ"),
             fe = n("Tzcg"),
-            ge = n("3iBR"),
-            he = n("D0Fd"),
-            ve = (n("iLMR"), [{
-                name: "McCree",
-                imageURL: ge.c + "/owl-2017/global-rewards/full-skin/mccree.png"
-            }, {
-                name: "Moira",
-                imageURL: ge.c + "/owl-2017/global-rewards/full-skin/moira.png"
-            }, {
-                name: "Soldier 76",
-                imageURL: ge.c + "/owl-2017/global-rewards/full-skin/soldier-76.png"
-            }]),
-            ye = function(e) {
+            ge = n("3zLD"),
+            he = n("3iBR"),
+            ve = n("D0Fd"),
+            ye = n("FDYX"),
+            be = n("PGoF"),
+            _e = (n("iLMR"), "skin-selector"),
+            ke = "igc-selector",
+            Se = "badge-selector",
+            Ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.renderInGameContent = function() {
-                        return ve.map(function(e) {
+                    return t.renderHeroSkins = function() {
+                        if (t.props.owner && !t.props.data.loading && !t.props.data.error) {
+                            var e = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.heroSkins.map(function(e) {
+                                return u.createElement(y._0, {
+                                    margin: {
+                                        x: .5
+                                    },
+                                    key: "skin-" + e.id,
+                                    display: y.P.Flex,
+                                    flexDirection: y.R.Row,
+                                    alignItems: y.c.Center,
+                                    "data-test-selector": _e
+                                }, u.createElement("li", null, u.createElement(ve.a, {
+                                    imageURL: e.imageURL,
+                                    size: ve.b.Small
+                                })))
+                            }) : null;
                             return u.createElement(y._0, {
-                                margin: {
-                                    x: .5
-                                },
-                                key: e.name,
                                 display: y.P.Flex,
                                 flexDirection: y.R.Row,
+                                flexWrap: y.S.Wrap,
+                                justifyContent: y._5.Center,
                                 alignItems: y.c.Center
-                            }, u.createElement("li", null, u.createElement(he.a, {
-                                imageURL: "",
-                                comingSoon: !0,
-                                size: he.b.Small
-                            })))
-                        })
+                            }, u.createElement("ul", null, e))
+                        }
+                    }, t.renderInGameContent = function() {
+                        if (t.props.owner && !t.props.data.loading && !t.props.data.error) {
+                            var e = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.inGameContent.map(function(e) {
+                                return u.createElement(y.l, {
+                                    key: "igc-" + e.id,
+                                    src: e.imageURL,
+                                    alt: e.name,
+                                    size: 64,
+                                    "data-test-selector": ke
+                                })
+                            }) : null;
+                            return u.createElement(y._6, {
+                                display: y.P.Flex,
+                                flexDirection: y.R.Row,
+                                flexWrap: y.S.Wrap,
+                                justifyContent: y._5.Center,
+                                alignItems: y.c.Center
+                            }, e)
+                        }
                     }, t.renderSubBadges = function() {
-                        return u.createElement(y._6, null, u.createElement(y.O, {
-                            className: "ticket-description__description__line-item"
-                        }, Object(d.d)("{numBadges, number} All-Access Pass Twitch Badges:", {
-                            numBadges: 2
-                        }, "EsportsTicketDescription")), u.createElement(y._6, {
-                            display: y.P.Flex,
-                            flexWrap: y.S.Wrap,
-                            justifyContent: y._5.Center
-                        }, u.createElement(y._12, null)))
+                        if (t.props.owner && !t.props.data.loading && !t.props.data.error) {
+                            var e = t.props.owner.broadcastBadges.map(function(e) {
+                                    return {
+                                        name: e.title,
+                                        imageURL: e.image4x
+                                    }
+                                }),
+                                n = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.badges.map(function(e) {
+                                    return {
+                                        name: e.name,
+                                        imageURL: e.imageURL
+                                    }
+                                }) : null;
+                            n && (e = e.concat(n));
+                            var i = e.map(function(e) {
+                                return u.createElement(y._0, {
+                                    margin: {
+                                        x: 1
+                                    },
+                                    key: "access-badge-" + e.name
+                                }, u.createElement("li", null, u.createElement(y.l, {
+                                    src: e.imageURL,
+                                    alt: e.name,
+                                    size: 36,
+                                    "data-test-selector": Se
+                                })))
+                            });
+                            return u.createElement(y._6, null, u.createElement(y.O, {
+                                className: "ticket-description__description__line-item"
+                            }, Object(d.d)("{numBadges, number} All-Access Pass Twitch Badges:", {
+                                numBadges: 2
+                            }, "EsportsTicketDescription")), u.createElement(y._0, {
+                                display: y.P.Flex,
+                                flexWrap: y.S.Wrap
+                            }, u.createElement("ul", null, i)))
+                        }
                     }, t.renderSubEmotes = function() {
                         if (t.props.owner) {
                             var e = t.props.owner.subscriptionProducts.map(function(e) {
@@ -6779,107 +6899,81 @@ webpackJsonp([38], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    var e = this.props.owner;
-                    if (e) return u.createElement(y._29, {
-                        className: "ticket-description"
-                    }, u.createElement(y.B, {
-                        border: !0,
-                        elevation: 1
-                    }, u.createElement("div", {
-                        className: "ticket-description__banner-image",
-                        style: {
-                            backgroundImage: "url(" + e.bannerImageURL
-                        }
-                    }, u.createElement(y._6, {
-                        className: "ticket-description__broadcaster-info",
-                        textAlign: y._39.Center,
-                        display: y.P.Flex,
-                        flexDirection: y.R.Column,
-                        alignItems: y.c.Center,
-                        flexWrap: y.S.NoWrap,
-                        padding: {
-                            x: 1,
-                            y: 3
-                        },
-                        breakpointMedium: {
-                            padding: 4
-                        },
-                        breakpointLarge: {
+                    if (this.props.owner) {
+                        var e = this.props.product.price;
+                        return this.props.owner && Object(ye.d)(this.props.owner.subscriptionProducts) && (e = Object(ye.a)(this.props.owner.subscriptionProducts[0])), u.createElement(y._29, {
+                            className: "ticket-description"
+                        }, u.createElement(y.B, {
+                            border: !0,
+                            elevation: 1
+                        }, u.createElement(y._6, {
+                            className: "ticket-description__banner-image",
                             padding: 3
-                        }
-                    }, u.createElement(y._29, {
-                        borderBottom: !0,
-                        padding: 2
-                    }, u.createElement(y._0, {
-                        margin: 1,
-                        breakpointLarge: {
-                            margin: 2
-                        }
-                    }, u.createElement(y.l, {
-                        alt: e.displayName,
-                        size: 96,
-                        src: e.profileImageURL
-                    }))), u.createElement(y._0, {
-                        margin: {
-                            top: 1
-                        }
-                    }, u.createElement(y.O, {
-                        className: "ticket-description__pass-name",
-                        type: y._43.H2,
-                        color: y.J.Overlay,
-                        transform: y._42.Uppercase
-                    }, Object(d.d)("All-Access Pass", "EsportsTicketDescription"))), u.createElement(y.O, {
-                        type: y._43.H5,
-                        color: y.J.Overlay,
-                        transform: y._42.Uppercase
-                    }, Object(d.d)("For Overwatch League 2018", "EsportsTicketDescription")))), u.createElement(y.C, null, u.createElement(y._29, {
-                        borderBottom: !0,
-                        textAlign: y._39.Center,
-                        background: y.m.Alt,
-                        padding: 2
-                    }, u.createElement(y.O, {
-                        type: y._43.H4
-                    }, Object(d.d)("{price} {interval}", {
-                        price: u.createElement(y.O, {
-                            type: y._43.Span,
-                            bold: !0
-                        }, this.props.product.price),
-                        interval: "One-Time Purchase"
-                    }, "EsportsTicketDescription"))), u.createElement(y._29, {
-                        className: "ticket-description__description",
-                        padding: {
-                            x: 1,
-                            y: 2
-                        },
-                        textAlign: y._39.Left,
-                        background: y.m.Alt
-                    }, u.createElement(y.O, {
-                        className: "ticket-description__description__line-item"
-                    }, Object(d.d)("All-Access benefits last up to the start of the 2019 OWL Season. Twitch emotes, badges, and in-game content are yours to keep.", "EsportsTicketDescription")), u.createElement(y.O, {
-                        className: "ticket-description__description__line-item",
-                        bold: !0
-                    }, Object(d.d)("Overwatch League All-Access Pass Benefits", "EsportsTicketDescription")), u.createElement(y.O, {
-                        className: "ticket-description__description__line-item"
-                    }, Object(d.d)("Exclusive Command Center Stream", "EsportsTicketDescription")), u.createElement(y.O, {
-                        className: "ticket-description__description__line-item"
-                    }, Object(d.d)("Match Analysis Videos by Players", "EsportsTicketDescription")), u.createElement(y.O, {
-                        className: "ticket-description__description__line-item"
-                    }, Object(d.d)("Participate in Post-Match Q&A", "EsportsTicketDescription")), u.createElement(y.O, {
-                        className: "ticket-description__description__line-item"
-                    }, Object(d.d)("Passholder-Only Chat Access", "EsportsTicketDescription")), u.createElement(y.O, {
-                        className: "ticket-description__description__line-item"
-                    }, Object(d.d)("Ad-Free Viewing on Overwatch League", "EsportsTicketDescription")), u.createElement(y.O, {
-                        className: "ticket-description__description__line-item"
-                    }, Object(d.d)("Overwatch In-Game Content:", "EsportsTicketDescription")), u.createElement(y._0, {
-                        display: y.P.Flex,
-                        flexDirection: y.R.Row,
-                        flexWrap: y.S.Wrap,
-                        justifyContent: y._5.Center,
-                        alignItems: y.c.Center
-                    }, u.createElement("ul", null, this.renderInGameContent())), this.renderSubBadges(), this.renderSubEmotes()))))
+                        }, u.createElement("img", {
+                            src: he.c + "/owl-2017/all-access-logo.svg",
+                            alt: Object(d.d)("Overwatch League All-Access Pass on Twitch", "EsportsTicketDescription"),
+                            height: "80px"
+                        })), u.createElement(y.C, null, u.createElement(y._29, {
+                            borderBottom: !0,
+                            textAlign: y._39.Center,
+                            background: y.m.Alt,
+                            padding: 2
+                        }, u.createElement(y.O, {
+                            type: y._43.H4,
+                            "data-test-selector": "esport-ticket-description-price"
+                        }, Object(d.d)("{price} {interval}", {
+                            price: u.createElement(y.O, {
+                                type: y._43.Span,
+                                bold: !0
+                            }, e),
+                            interval: "One-Time Purchase"
+                        }, "EsportsTicketDescription"))), u.createElement(y._29, {
+                            className: "ticket-description__description",
+                            padding: {
+                                x: 1,
+                                y: 2
+                            },
+                            textAlign: y._39.Left,
+                            background: y.m.Alt
+                        }, u.createElement(y.O, {
+                            className: "ticket-description__description__line-item",
+                            bold: !0,
+                            "data-test-selector": "ticket-feature"
+                        }, Object(d.d)("Overwatch League All-Access Pass Benefits", "EsportsTicketDescription")), u.createElement(y.O, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(d.d)("Exclusive Command Center Stream", "EsportsTicketDescription")), u.createElement(y.O, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(d.d)("Match Analysis Videos by Players", "EsportsTicketDescription")), u.createElement(y.O, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(d.d)("Participate in Post-Match Q&A", "EsportsTicketDescription")), u.createElement(y.O, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(d.d)("Passholder-Only Chat Access", "EsportsTicketDescription")), u.createElement(y.O, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(d.d)("Ad-Free Viewing on Overwatch League", "EsportsTicketDescription")), u.createElement(y.O, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(d.d)("Overwatch In-Game Content:", "EsportsTicketDescription")), this.renderHeroSkins(), this.renderInGameContent(), this.renderSubBadges(), this.renderSubEmotes(), u.createElement(y.O, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "disclaimer"
+                        }, Object(d.d)("All-Access benefits last up to the start of the 2019 OWL Season. Twitch emotes, badges, and in-game content are yours to keep.", "EsportsTicketDescription"))))))
+                    }
                 }, t
             }(u.PureComponent),
-            be = {
+            we = Object(ge.compose)(Object(m.a)(be, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            channelID: e.owner.id
+                        }
+                    }
+                }
+            }))(Ne),
+            Ee = {
                 "Subscription benefits": function() {
                     return Object(d.d)("Subscription benefits", "TicketDescription")
                 },
@@ -6905,7 +6999,7 @@ webpackJsonp([38], {
                     return Object(d.d)("Subscriber Emotes:", "TicketDescription")
                 }
             },
-            _e = {
+            Oe = {
                 "Ad-Free*": function() {
                     return Object(d.d)("Ad-Free*", "TicketDescription")
                 },
@@ -6943,7 +7037,7 @@ webpackJsonp([38], {
                     return Object(d.d)("This list doesn’t even include how much of a baller you’ll become after upgrading.", "TicketDescription")
                 }
             },
-            ke = {
+            Ce = {
                 "One Time": function() {
                     return Object(d.d)("One Time", "TicketDescription")
                 },
@@ -6954,7 +7048,7 @@ webpackJsonp([38], {
                     return Object(d.d)("Month", "TicketDescription")
                 }
             },
-            Se = function(e, t) {
+            xe = function(e, t) {
                 return Object(d.d)("{price} / {interval}", {
                     price: u.createElement(y.O, {
                         type: y._43.Span,
@@ -6963,25 +7057,25 @@ webpackJsonp([38], {
                     interval: t
                 }, "TicketDescription")
             },
-            Ne = function(e) {
+            Te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderPrice = function() {
                         var e;
                         switch (t.props.product.interval.unit) {
-                            case Ee.OneTime:
-                                e = ke["One Time"]();
+                            case Pe.OneTime:
+                                e = Ce["One Time"]();
                                 break;
-                            case Ee.Year:
-                                e = ke.Year();
+                            case Pe.Year:
+                                e = Ce.Year();
                                 break;
-                            case Ee.Month:
+                            case Pe.Month:
                             default:
-                                e = ke.Month()
+                                e = Ce.Month()
                         }
                         return u.createElement(y.O, {
                             type: y._43.H4
-                        }, Se(t.props.product.price, e))
+                        }, xe(t.props.product.price, e))
                     }, t.renderSubBadges = function() {
                         if (!t.props.owner) return u.createElement(u.Fragment, null);
                         var e = t.props.owner.broadcastBadges.filter(function(e) {
@@ -7000,7 +7094,7 @@ webpackJsonp([38], {
                         });
                         return u.createElement(u.Fragment, null, u.createElement(y.O, {
                             className: "ticket-description__description__line-item"
-                        }, be["Subscriber Badges:"]()), u.createElement(y._6, {
+                        }, Ee["Subscriber Badges:"]()), u.createElement(y._6, {
                             display: y.P.Flex,
                             flexWrap: y.S.Wrap,
                             justifyContent: y._5.Center
@@ -7016,7 +7110,7 @@ webpackJsonp([38], {
                         }, []);
                         return 0 === e.length ? u.createElement(u.Fragment, null) : u.createElement(u.Fragment, null, u.createElement(y.O, {
                             className: "ticket-description__description__line-item"
-                        }, e.length, " ", be["Subscriber Emotes:"]()), u.createElement(me.a, {
+                        }, e.length, " ", Ee["Subscriber Emotes:"]()), u.createElement(me.a, {
                             emoteSet: {
                                 id: "",
                                 emotes: Object(fe.b)(e)
@@ -7030,7 +7124,10 @@ webpackJsonp([38], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = !this.props.owner && "turbo" === this.props.product.type;
-                    return this.props.owner && Object(_.a)(this.props.owner.id, this.props.sessionUser) ? u.createElement(ye, c.__assign({}, this.props)) : this.props.mobile && e ? u.createElement(de, c.__assign({}, this.props, {
+                    return this.props.owner && Object(_.a)(this.props.owner.id, this.props.sessionUser) ? u.createElement(we, {
+                        owner: this.props.owner,
+                        product: this.props.product
+                    }) : this.props.mobile && e ? u.createElement(de, c.__assign({}, this.props, {
                         renderPrice: this.renderPrice
                     })) : e ? u.createElement(pe, c.__assign({}, this.props, {
                         renderPrice: this.renderPrice
@@ -7045,13 +7142,13 @@ webpackJsonp([38], {
                     })) : void 0
                 }, t = c.__decorate([Object(G.d)("TicketDescription")], t)
             }(u.Component);
-        var Ee, we = Object(i.b)(function(e) {
+        var Pe, De = Object(i.b)(function(e) {
                 return {
                     sessionUser: Object(s.c)(e)
                 }
-            })(Ne),
-            Oe = n("Heyg"),
-            Ce = function(e) {
+            })(Te),
+            Fe = n("Heyg"),
+            Ie = function(e) {
                 var t;
                 return t = e.canGift ? u.createElement(y.O, null, Object(d.d)("You are buying a single month {price} Gift Subscription for {recipientName}.", {
                     price: e.price,
@@ -7074,8 +7171,8 @@ webpackJsonp([38], {
                     }
                 }, t)
             },
-            xe = n("CIox"),
-            Te = (n("pOYM"), function(e) {
+            Re = n("CIox"),
+            Ae = (n("pOYM"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goBackToChannel = function() {
@@ -7150,9 +7247,9 @@ webpackJsonp([38], {
                     }, "GiftSubReceipt"))))
                 }, t
             }(u.Component)),
-            Pe = Object(xe.f)(Te),
-            De = n("j6Ui"),
-            Fe = function(e) {
+            Ue = Object(Re.f)(Ae),
+            Me = n("j6Ui"),
+            je = function(e) {
                 return u.createElement(y._29, {
                     background: y.m.Base,
                     borderMarked: !0,
@@ -7175,7 +7272,7 @@ webpackJsonp([38], {
                     }
                 }, u.createElement(y.O, null, Object(d.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30-days after you last used your free subscription.", "UpgradePrimeWarning"))), u.createElement(y.O, null, Object(d.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
             },
-            Ie = function(e) {
+            Le = function(e) {
                 return u.createElement(y._29, {
                     background: y.m.Base,
                     borderMarked: !0,
@@ -7207,12 +7304,12 @@ webpackJsonp([38], {
                     })
                 }, "UpgradeTierWarning"))), u.createElement(y.O, null, Object(d.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
             },
-            Re = function(e) {
+            Be = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderOneMonthFree = function() {
                         var e = new Date;
-                        null !== t.props.endsAt && (e = Object(De.c)(t.props.endsAt));
+                        null !== t.props.endsAt && (e = Object(Me.c)(t.props.endsAt));
                         var n = new Date(e);
                         return n.setMonth(e.getMonth() + 1), u.createElement(y._29, {
                             background: y.m.Base,
@@ -7233,12 +7330,12 @@ webpackJsonp([38], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return u.createElement(y._6, null, this.props.isOneMonthFreeEligible && this.renderOneMonthFree(), this.tierUpgrade && u.createElement(Ie, {
+                    return u.createElement(y._6, null, this.props.isOneMonthFreeEligible && this.renderOneMonthFree(), this.tierUpgrade && u.createElement(Le, {
                         originalPrice: this.originalPrice,
                         originalCurrency: "USD",
                         newPrice: this.newPrice,
                         newCurrency: "USD"
-                    }), this.primeUpgrade && u.createElement(Fe, {
+                    }), this.primeUpgrade && u.createElement(je, {
                         newPrice: this.newPrice,
                         newCurrency: "USD"
                     }), this.props.hasGift && this.props.endsAt && u.createElement(y._29, {
@@ -7249,7 +7346,7 @@ webpackJsonp([38], {
                             y: 1
                         }
                     }, u.createElement(y.O, null, Object(d.d)("You will be charged when your Gift Subscription ends on <x:strong>{date}</x:strong>.", {
-                        date: Object(d.c)(Object(De.c)(this.props.endsAt), "short"),
+                        date: Object(d.c)(Object(Me.c)(this.props.endsAt), "short"),
                         "x:strong": function(e) {
                             return u.createElement(y.O, {
                                 type: y._43.Span,
@@ -7287,7 +7384,7 @@ webpackJsonp([38], {
                     configurable: !0
                 }), t
             }(u.Component),
-            Ae = (n("McJK"), function(e) {
+            He = (n("McJK"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goBackToChannel = function() {
@@ -7370,12 +7467,12 @@ webpackJsonp([38], {
                     }, "PersonalSubReceipt"))))
                 }, t
             }(u.Component)),
-            Ue = Object(xe.f)(Ae);
+            We = Object(Re.f)(He);
         n("gKy9");
         ! function(e) {
             e.Week = "WEEK", e.Month = "MONTH", e.Year = "YEAR", e.OneTime = "ONE_TIME"
-        }(Ee || (Ee = {}));
-        var Me = function(e) {
+        }(Pe || (Pe = {}));
+        var Ge = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -7417,11 +7514,11 @@ webpackJsonp([38], {
                                 case 2:
                                     return (n = i.sent()).error ? (this.trackPaymentFormInteraction({
                                         paymentFlow: e.payment_flow,
-                                        action: w.CompletePurchaseClick,
+                                        action: E.CompletePurchaseClick,
                                         actionDetail: S.Failed
                                     }), [2]) : (this.trackPaymentFormInteraction({
                                         paymentFlow: e.payment_flow,
-                                        action: w.CompletePurchaseClick,
+                                        action: E.CompletePurchaseClick,
                                         actionDetail: S.Success
                                     }), this.props.isGift ? this.setState({
                                         giftSubPurchased: !0,
@@ -7430,7 +7527,7 @@ webpackJsonp([38], {
                                 case 3:
                                     return i.sent(), this.trackPaymentFormInteraction({
                                         paymentFlow: e.payment_flow,
-                                        action: w.CompletePurchaseClick,
+                                        action: E.CompletePurchaseClick,
                                         actionDetail: S.Failed
                                     }), [3, 4];
                                 case 4:
@@ -7440,13 +7537,13 @@ webpackJsonp([38], {
                     })
                 }, t.renderPurchaseInfo = function() {
                     if (!t.purchased) {
-                        if (t.props.isGift) return u.createElement(Ce, {
+                        if (t.props.isGift) return u.createElement(Ie, {
                             canGift: t.props.data.subscriptionProduct.self.checkoutConfigs.canGift,
                             recipientDisplayName: t.props.recipientDisplayName,
                             price: t.props.data.subscriptionProduct.price
                         });
                         var e = t.props.data.subscriptionProduct.self.benefit;
-                        return u.createElement(Re, {
+                        return u.createElement(Be, {
                             price: t.props.data.subscriptionProduct.price,
                             hasGift: e && e.gift.isGift,
                             purchase: t.props.data.subscriptionProduct.self.purchase,
@@ -7457,13 +7554,13 @@ webpackJsonp([38], {
                 }, t.renderReceipt = function() {
                     var e = t.props.data.subscriptionProduct.self.benefit,
                         n = t.props.data.subscriptionProduct.self.purchase.details;
-                    return t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo ? u.createElement(Pe, {
+                    return t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo ? u.createElement(Ue, {
                         recipientDisplayName: t.props.recipientDisplayName,
                         productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
                         productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
                         invoicePrice: t.state.giftPurchaseInfo.invoice_total.price,
                         invoiceCurrency: "USD"
-                    }) : t.props.data.subscriptionProduct.owner && n && t.purchased ? u.createElement(Ue, {
+                    }) : t.props.data.subscriptionProduct.owner && n && t.purchased ? u.createElement(We, {
                         purchaserDisplayName: t.props.data.currentUser.displayName,
                         productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
                         productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
@@ -7521,7 +7618,7 @@ webpackJsonp([38], {
                     breakpointMedium: {
                         display: y.P.Flex
                     }
-                }, u.createElement(we, {
+                }, u.createElement(De, {
                     owner: e,
                     product: t
                 })), u.createElement(y._6, {
@@ -7543,7 +7640,7 @@ webpackJsonp([38], {
                     breakpointMedium: {
                         display: y.P.Hide
                     }
-                }, u.createElement(we, {
+                }, u.createElement(De, {
                     owner: e,
                     product: t,
                     mobile: !0
@@ -7553,7 +7650,7 @@ webpackJsonp([38], {
                     onSuccess: this.completePurchase,
                     productShortName: this.props.productShortName,
                     trackPaymentFormInteraction: this.trackPaymentFormInteraction
-                }), u.createElement(y._6, {
+                }), "689376" !== t.id && u.createElement(y._6, {
                     margin: {
                         top: 5
                     }
@@ -7576,7 +7673,7 @@ webpackJsonp([38], {
                 },
                 enumerable: !0,
                 configurable: !0
-            }), t = c.__decorate([Object(G.d)("CheckoutPayments"), Object(m.a)(Oe, {
+            }), t = c.__decorate([Object(G.d)("CheckoutPayments"), Object(m.a)(Fe, {
                 options: function(e) {
                     return {
                         fetchPolicy: "network-only",
@@ -7590,7 +7687,7 @@ webpackJsonp([38], {
                 }
             })], t)
         }(u.Component);
-        var je = Object(i.b)(function(e) {
+        var Ve = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e)
                 }
@@ -7600,11 +7697,11 @@ webpackJsonp([38], {
                         return Object(o.f)(a.a.DashboardPage)
                     }
                 }, e)
-            })(Me),
-            Le = n("tnNl"),
-            Be = n("TP6L"),
-            He = n("EaWz"),
-            We = function(e) {
+            })(Ge),
+            ze = n("tnNl"),
+            qe = n("TP6L"),
+            Ye = n("EaWz"),
+            Ke = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t
@@ -7633,19 +7730,19 @@ webpackJsonp([38], {
                         position: y._13.Relative,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, u.createElement(Be.a, null), u.createElement(y._6, {
+                    }, u.createElement(qe.a, null), u.createElement(y._6, {
                         breakpointExtraSmall: {
                             display: y.P.Inline
                         },
                         breakpointMedium: {
                             display: y.P.Hide
                         }
-                    }, u.createElement(Le.a, null)), u.createElement(y._6, {
+                    }, u.createElement(ze.a, null)), u.createElement(y._6, {
                         display: y.P.Flex,
                         flexWrap: y.S.NoWrap,
                         position: y._13.Relative,
                         fullHeight: !0
-                    }, u.createElement(je, {
+                    }, u.createElement(Ve, {
                         productShortName: e,
                         isGift: !(!t || !t.id),
                         recipientID: t && t.id,
@@ -7655,7 +7752,7 @@ webpackJsonp([38], {
                     destination: g.a.SubsCheckoutPage
                 }), Object(f.a)({
                     location: h.PageviewLocation.SubsCheckoutPage
-                }), Object(m.a)(He, {
+                }), Object(m.a)(Ye, {
                     options: function(e) {
                         return {
                             fetchPolicy: "cache-first",
@@ -7669,7 +7766,7 @@ webpackJsonp([38], {
                     }
                 })], t)
             }(u.Component);
-        var Ge = Object(i.b)(function(e) {
+        var Qe = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(s.d)(e)
             }
@@ -7679,9 +7776,9 @@ webpackJsonp([38], {
                     return Object(o.f)(a.a.SubsCheckoutPage)
                 }
             }, e)
-        })(We);
+        })(Ke);
         n.d(t, "SubsCheckoutPage", function() {
-            return Ge
+            return Qe
         })
     },
     I7cV: function(e, t, n) {
@@ -8273,6 +8370,196 @@ webpackJsonp([38], {
         ! function(e) {
             e[e.UserMenu = 1] = "UserMenu", e[e.TypedCommand = 2] = "TypedCommand"
         }(i || (i = {}))
+    },
+    PGoF: function(e, t, n) {
+        var i = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "EsportsTicketDescription_GetBadges"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "channelID"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ID"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "channelID"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "tournament"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "rewards"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "insider"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "heroSkins"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "FragmentSpread",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "reward"
+                                                                },
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "inGameContent"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "FragmentSpread",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "reward"
+                                                                },
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "badges"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "FragmentSpread",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "reward"
+                                                                },
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 272
+            }
+        };
+        i.loc.source = {
+            body: '#import "twilight/features/esports-campaign-tabs/models/reward.gql"\nquery EsportsTicketDescription_GetBadges($channelID: ID!) {\nuser(id: $channelID) {\nid\ntournament {\nid\nrewards {\ninsider {\nheroSkins {\n...reward\n}\ninGameContent {\n...reward\n}\nbadges {\n...reward\n}\n}\n}\n}\n}\n}',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var r = {};
+        i.definitions = i.definitions.concat(n("lKyS").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var t = e.name.value;
+            return !r[t] && (r[t] = !0, !0)
+        })), e.exports = i
     },
     PHcJ: function(e, t, n) {
         "use strict";
@@ -8927,8 +9214,8 @@ webpackJsonp([38], {
             k = n("CIox"),
             S = n("6BvN"),
             N = n("HM6l"),
-            E = n("ZVME"),
-            w = n("MAZT"),
+            w = n("ZVME"),
+            E = n("MAZT"),
             O = n("uTyw"),
             C = n("5LoI"),
             x = "search_tracking_enabled";
@@ -9707,12 +9994,12 @@ webpackJsonp([38], {
                             n.didSelectCategory = !0, n.doSearch(n.state.term)
                         })
                     }, n.onChange = function(e) {
-                        n.inputTimer && (clearTimeout(n.inputTimer), n.inputTimer = 0), n.props.latencyTracking.resetCustomEvents(E.a.Search), e ? (n.searchResultsFirstPage = n.props.latencyTracking.registerCustomEvent({
+                        n.inputTimer && (clearTimeout(n.inputTimer), n.inputTimer = 0), n.props.latencyTracking.resetCustomEvents(w.a.Search), e ? (n.searchResultsFirstPage = n.props.latencyTracking.registerCustomEvent({
                             benchmark: J,
-                            group: E.a.Search,
-                            key: E.b.SearchResultsFirstPage,
-                            label: E.c.FirstPageLoaded,
-                            start: E.d.Registration
+                            group: w.a.Search,
+                            key: w.b.SearchResultsFirstPage,
+                            label: w.c.FirstPageLoaded,
+                            start: w.d.Registration
                         }), n.inputTimer = setTimeout(function() {
                             n.setState({
                                 topGameResults: null,
@@ -9758,12 +10045,12 @@ webpackJsonp([38], {
                                 switch (o.label) {
                                     case 0:
                                         if (this.state.queryID || null === this.state.currentCategory || !0 === this.state.exhaustedHits || this.state.videoOptions) return [2];
-                                        e = this.state.currentPage + 1, this.props.latencyTracking.resetCustomEvents(E.a.Search), n = this.props.latencyTracking.registerCustomEvent({
+                                        e = this.state.currentPage + 1, this.props.latencyTracking.resetCustomEvents(w.a.Search), n = this.props.latencyTracking.registerCustomEvent({
                                             benchmark: $,
-                                            group: E.a.Search,
-                                            key: E.b.SearchResultsLaterPage,
-                                            label: E.c.LaterPageLoaded,
-                                            start: E.d.Registration
+                                            group: w.a.Search,
+                                            key: w.b.SearchResultsLaterPage,
+                                            label: w.c.LaterPageLoaded,
+                                            start: w.d.Registration
                                         }), o.label = 1;
                                     case 1:
                                         return o.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(this.state.currentCategory, this.state.term, "", {
@@ -9840,7 +10127,7 @@ webpackJsonp([38], {
                         }, function() {
                             n.doVideosSearch(n.state.term, e)
                         })
-                    }, n.searchClient = new w.a({
+                    }, n.searchClient = new E.a({
                         appId: d.a.algoliaApplicationID,
                         apiKey: d.a.algoliaAPIKey,
                         apolloClient: d.o.apollo.client,
@@ -10473,8 +10760,8 @@ webpackJsonp([38], {
                     })), u.createElement(B.O, null, Object(d.d)("Log Out", "UserMenuDropdown"))))))))
                 }, t = l.__decorate([Object(v.d)("UserMenuDropdown")], t)
             }(u.Component),
-            Ee = n("jAYy"),
-            we = n("94wQ"),
+            we = n("jAYy"),
+            Ee = n("94wQ"),
             Oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -10520,15 +10807,15 @@ webpackJsonp([38], {
                         logout: this.props.logout,
                         theme: this.props.theme
                     })
-                }, t = l.__decorate([Object(f.a)(Ee, {
+                }, t = l.__decorate([Object(f.a)(we, {
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
-                }), Object(f.a)(we, {
+                }), Object(f.a)(Ee, {
                     name: "updateIsSharingActivity"
                 }), Object(pe.a)(function(e) {
                     return {
-                        query: Ee,
+                        query: we,
                         topic: e.data && e.data.currentUser ? Object(he.m)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                         type: fe.PubsubMessageType.PresenceSettings,
@@ -11564,7 +11851,7 @@ webpackJsonp([38], {
             S = n("vH/s"),
             N = new Set(["affiliateinvite", "chatroommention", "feedcomment", "friendrequests", "partneragreementupdate", "partnerinvite"]);
 
-        function E(e, t) {
+        function w(e, t) {
             var n, i = {},
                 a = function(e) {
                     var t = e.actions.filter(function(e) {
@@ -11597,7 +11884,7 @@ webpackJsonp([38], {
                 }
             }, i
         }
-        var w = {};
+        var E = {};
         var O = {
                 Center: "center",
                 Toast: "toast",
@@ -11703,7 +11990,7 @@ webpackJsonp([38], {
                     }, a.createElement(F._4, i.__assign({
                         "data-test-selector": "persistent-notification__click",
                         onClick: this.clickNotification
-                    }, E(this.props.data, S.PageviewMedium.NotificationCenter), {
+                    }, w(this.props.data, S.PageviewMedium.NotificationCenter), {
                         alpha: !0
                     }), a.createElement(F._6, {
                         className: "persistent-notification__area",
@@ -11744,7 +12031,7 @@ webpackJsonp([38], {
                             top: .5
                         }
                     }, a.createElement(F._19, {
-                        asset: (e = this.props.data.type, t = F._20.MessagesSC, e in w ? w[e] : t),
+                        asset: (e = this.props.data.type, t = F._20.MessagesSC, e in E ? E[e] : t),
                         height: 12,
                         width: 12,
                         type: F._21.Alt2
@@ -12036,7 +12323,7 @@ webpackJsonp([38], {
                     }, a.createElement(F._4, i.__assign({
                         onClick: this.view,
                         alpha: !0
-                    }, E(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(F._6, {
+                    }, w(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(F._6, {
                         className: "onsite-notification-toast__container",
                         display: F.P.Flex,
                         flexWrap: F.S.NoWrap
@@ -12092,7 +12379,7 @@ webpackJsonp([38], {
                         onClick: this.view,
                         "data-test-selector": "onsite-notification-toast__view",
                         alpha: !0
-                    }, E(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(F._29, {
+                    }, w(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(F._29, {
                         display: F.P.Flex,
                         alignItems: F.c.Center,
                         justifyContent: F._5.Center,
@@ -14872,6 +15159,99 @@ webpackJsonp([38], {
             return i(e).getMonth()
         }
     },
+    lKyS: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "reward"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "TournamentReward"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "name"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "type"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "description"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "canBeFulfilled"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "isEntitled"
+                        },
+                        arguments: [],
+                        directives: []
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 99
+            }
+        };
+        n.loc.source = {
+            body: "fragment reward on TournamentReward {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     lQzg: function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e) {
@@ -14922,8 +15302,8 @@ webpackJsonp([38], {
             if (S < d) return g("aboutXMonths", b = Math.round(S / u), y);
             if ((b = o(v, h)) < 12) return g("xMonths", Math.round(S / u), y);
             var N = b % 12,
-                E = Math.floor(b / 12);
-            return N < 3 ? g("aboutXYears", E, y) : N < 9 ? g("overXYears", E, y) : g("almostXYears", E + 1, y)
+                w = Math.floor(b / 12);
+            return N < 3 ? g("aboutXYears", w, y) : N < 9 ? g("overXYears", w, y) : g("almostXYears", w + 1, y)
         }
     },
     mbxv: function(e, t, n) {
@@ -16423,9 +16803,9 @@ webpackJsonp([38], {
             k = /([Z+-].*)$/,
             S = /^(Z)$/,
             N = /^([+-])(\d{2})$/,
-            E = /^([+-])(\d{2}):?(\d{2})$/;
+            w = /^([+-])(\d{2}):?(\d{2})$/;
 
-        function w(e, t, n) {
+        function E(e, t, n) {
             t = t || 0, n = n || 0;
             var i = new Date(0);
             i.setUTCFullYear(e, 0, 4);
@@ -16483,11 +16863,11 @@ webpackJsonp([38], {
                         var s = parseInt(n[2], 10);
                         return i.setUTCFullYear(t, r, s), i
                     }
-                    if (n = h.exec(e)) return a = parseInt(n[1], 10) - 1, w(t, a);
+                    if (n = h.exec(e)) return a = parseInt(n[1], 10) - 1, E(t, a);
                     if (n = v.exec(e)) {
                         a = parseInt(n[1], 10) - 1;
                         var c = parseInt(n[2], 10) - 1;
-                        return w(t, a, c)
+                        return E(t, a, c)
                     }
                     return null
                 }(C.restDateString, x);
@@ -16504,7 +16884,7 @@ webpackJsonp([38], {
                         return n % 24 * r + i * a + 1e3 * o
                     }
                     return null
-                }(O.time)), O.timezone ? (I = O.timezone, P = (R = S.exec(I)) ? 0 : (R = N.exec(I)) ? (A = 60 * parseInt(R[2], 10), "+" === R[1] ? -A : A) : (R = E.exec(I)) ? (A = 60 * parseInt(R[2], 10) + parseInt(R[3], 10), "+" === R[1] ? -A : A) : 0) : (P = new Date(D + F).getTimezoneOffset(), P = new Date(D + F + P * a).getTimezoneOffset()), new Date(D + F + P * a)
+                }(O.time)), O.timezone ? (I = O.timezone, P = (R = S.exec(I)) ? 0 : (R = N.exec(I)) ? (A = 60 * parseInt(R[2], 10), "+" === R[1] ? -A : A) : (R = w.exec(I)) ? (A = 60 * parseInt(R[2], 10) + parseInt(R[3], 10), "+" === R[1] ? -A : A) : 0) : (P = new Date(D + F).getTimezoneOffset(), P = new Date(D + F + P * a).getTimezoneOffset()), new Date(D + F + P * a)
             }
             var I, R, A;
             return new Date(e)
@@ -16794,4 +17174,4 @@ webpackJsonp([38], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-9b832d1eaccb016ab56a69b42cb2a7bf.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-c8ef93ce1c3d08772baa6c02cf2514c9.js.map
