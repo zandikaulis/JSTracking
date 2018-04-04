@@ -80,6 +80,7 @@ window.__twilightSettings = {
     "twilight_routes_enabled": true,
     "twilight_video_manager_public": false,
     "twilight_video_manager_staff": true,
+    "twitch_prime_fortnite": false,
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
     "update_manager_enabled": false,
     "viewer_milestones_enabled": true,
