@@ -1,4 +1,4 @@
-webpackJsonp([68], {
+webpackJsonp([69], {
     "+I6p": function(e, t, n) {
         "use strict";
         var r = n("Y7BN"),
@@ -290,7 +290,7 @@ webpackJsonp([68], {
         function c(e) {
             for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
             return t.forEach(function(t) {
-                null != t && Object.keys(t).forEach(function(n) {
+                void 0 !== t && null !== t && Object.keys(t).forEach(function(n) {
                     e[n] = t[n]
                 })
             }), e
@@ -389,7 +389,7 @@ webpackJsonp([68], {
         var w = Object.create({});
 
         function x(e) {
-            if ("number" == typeof e || "boolean" == typeof e || "string" == typeof e || null == e) return null;
+            if ("number" == typeof e || "boolean" == typeof e || "string" == typeof e || void 0 === e || null === e) return null;
             if (Array.isArray(e)) return x(e[0]);
             var t = [];
             return Object.keys(e).forEach(function(n) {
@@ -1699,7 +1699,7 @@ webpackJsonp([68], {
         function C(e) {
             for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
             return t.forEach(function(t) {
-                null != t && Object.keys(t).forEach(function(n) {
+                void 0 !== t && null !== t && Object.keys(t).forEach(function(n) {
                     e[n] = t[n]
                 })
             }), e
@@ -2093,6 +2093,14 @@ webpackJsonp([68], {
     },
     "/OLF": function(e, t, n) {
         "use strict";
+        /** @license React v16.2.0
+         * react-dom.production.min.js
+         *
+         * Copyright (c) 2013-present, Facebook, Inc.
+         *
+         * This source code is licensed under the MIT license found in the
+         * LICENSE file in the root directory of this source tree.
+         */
         var r = n("GiK3"),
             o = n("czSA"),
             i = n("BEQ0"),
@@ -3823,7 +3831,7 @@ webpackJsonp([68], {
             kr = "function" == typeof Symbol && Symbol.iterator;
 
         function Er(e) {
-            return null == e ? null : "function" == typeof(e = kr && e[kr] || e["@@iterator"]) ? e : null
+            return null === e || void 0 === e ? null : "function" == typeof(e = kr && e[kr] || e["@@iterator"]) ? e : null
         }
         var Or = Array.isArray;
 
@@ -3831,9 +3839,8 @@ webpackJsonp([68], {
             var n = t.ref;
             if (null !== n && "function" != typeof n) {
                 if (t._owner) {
-                    t = t._owner;
                     var r = void 0;
-                    t && (2 !== t.tag && d("110"), r = t.stateNode), r || d("147", n);
+                    (t = t._owner) && (2 !== t.tag && d("110"), r = t.stateNode), r || d("147", n);
                     var o = "" + n;
                     return null !== e && null !== e.ref && e.ref._stringRef === o ? e.ref : ((e = function(e) {
                         var t = r.refs === p ? r.refs = {} : r.refs;
@@ -4510,7 +4517,7 @@ webpackJsonp([68], {
                                     l = a._debugSource,
                                     f = Bt(a),
                                     p = null;
-                                u && (p = Bt(u)), f = "\n    in " + (f || "Unknown") + ((u = l) ? " (at " + u.fileName.replace(/^.*[\\\/]/, "") + ":" + u.lineNumber + ")" : p ? " (created by " + p + ")" : "");
+                                u && (p = Bt(u)), u = l, f = "\n    in " + (f || "Unknown") + (u ? " (at " + u.fileName.replace(/^.*[\\\/]/, "") + ":" + u.lineNumber + ")" : p ? " (created by " + p + ")" : "");
                                 break e;
                             default:
                                 f = ""
@@ -5243,8 +5250,9 @@ webpackJsonp([68], {
                     var s = t.current;
                     if (n) {
                         var u;
+                        n = n._reactInternalFiber;
                         e: {
-                            for (2 === Ht(n = n._reactInternalFiber) && 2 === n.tag || d("170"), u = n; 3 !== u.tag;) {
+                            for (2 === Ht(n) && 2 === n.tag || d("170"), u = n; 3 !== u.tag;) {
                                 if (Wn(u)) {
                                     u = u.stateNode.__reactInternalMemoizedMergedChildContext;
                                     break e
@@ -8192,7 +8200,7 @@ webpackJsonp([68], {
                     }
                     l = s.index, c = s.keys, f = s.edits, u = s.inArray, s = s.prev
                 } else {
-                    if (d = h ? u ? l : c[l] : void 0, null == (p = h ? h[d] : v)) continue;
+                    if (d = h ? u ? l : c[l] : void 0, null === (p = h ? h[d] : v) || void 0 === p) continue;
                     h && y.push(d)
                 }
                 var C = void 0;
@@ -8386,7 +8394,7 @@ webpackJsonp([68], {
         e.exports = function(e, t) {
             return function(n, o, i) {
                 if ("function" == typeof n && "object" == typeof o || "object" == typeof i) throw new r.AlgoliaSearchError("index.search usage is index.search(query, params, cb)");
-                0 === arguments.length || "function" == typeof n ? (i = n, n = "") : 1 !== arguments.length && "function" != typeof o || (i = o, o = void 0), "object" == typeof n && null !== n ? (o = n, n = void 0) : null == n && (n = "");
+                0 === arguments.length || "function" == typeof n ? (i = n, n = "") : 1 !== arguments.length && "function" != typeof o || (i = o, o = void 0), "object" == typeof n && null !== n ? (o = n, n = void 0) : void 0 !== n && null !== n || (n = "");
                 var a, s = "";
                 return void 0 !== n && (s += e + "=" + encodeURIComponent(n)), void 0 !== o && (o.additionalUA && (a = o.additionalUA, delete o.additionalUA), s = this.as._getSearchParams(o, s)), this._search(s, t, i, a)
             }
@@ -9077,7 +9085,7 @@ webpackJsonp([68], {
                     }
                     l = s.index, c = s.keys, f = s.edits, u = s.inArray, s = s.prev
                 } else {
-                    if (d = h ? u ? l : c[l] : void 0, null == (p = h ? h[d] : v)) continue;
+                    if (d = h ? u ? l : c[l] : void 0, null === (p = h ? h[d] : v) || void 0 === p) continue;
                     h && y.push(d)
                 }
                 var C = void 0;
@@ -12723,6 +12731,11 @@ webpackJsonp([68], {
     },
     BEQ0: function(e, t, n) {
         "use strict";
+        /*
+        object-assign
+        (c) Sindre Sorhus
+        @license MIT
+        */
         var r = Object.getOwnPropertySymbols,
             o = Object.prototype.hasOwnProperty,
             i = Object.prototype.propertyIsEnumerable;
@@ -12744,7 +12757,7 @@ webpackJsonp([68], {
             }
         }() ? Object.assign : function(e, t) {
             for (var n, a, s = function(e) {
-                    if (null == e) throw new TypeError("Object.assign cannot be called with null or undefined");
+                    if (null === e || void 0 === e) throw new TypeError("Object.assign cannot be called with null or undefined");
                     return Object(e)
                 }(e), u = 1; u < arguments.length; u++) {
                 for (var c in n = Object(arguments[u])) o.call(n, c) && (s[c] = n[c]);
@@ -12935,6 +12948,17 @@ webpackJsonp([68], {
         }), t.default = function(e) {
             return [].slice.call(e.querySelectorAll("*"), 0).filter(a)
         };
+        /*!
+         * Adapted from jQuery UI core
+         *
+         * http://jqueryui.com
+         *
+         * Copyright 2014 jQuery Foundation and other contributors
+         * Released under the MIT license.
+         * http://jquery.org/license
+         *
+         * http://api.jqueryui.com/category/ui-core/
+         */
         var r = /input|select|textarea|button|object/;
 
         function o(e) {
@@ -13566,8 +13590,8 @@ webpackJsonp([68], {
                     return e = this.x64Xor(e, [0, e[0] >>> 1]), e = this.x64Multiply(e, [4283543511, 3981806797]), e = this.x64Xor(e, [0, e[0] >>> 1]), e = this.x64Multiply(e, [3301882366, 444984403]), e = this.x64Xor(e, [0, e[0] >>> 1])
                 },
                 x64hash128: function(e, t) {
-                    t = t || 0;
-                    for (var n = (e = e || "").length % 16, r = e.length - n, o = [0, t], i = [0, t], a = [0, 0], s = [0, 0], u = [2277735313, 289559509], c = [1291169091, 658871167], l = 0; l < r; l += 16) a = [255 & e.charCodeAt(l + 4) | (255 & e.charCodeAt(l + 5)) << 8 | (255 & e.charCodeAt(l + 6)) << 16 | (255 & e.charCodeAt(l + 7)) << 24, 255 & e.charCodeAt(l) | (255 & e.charCodeAt(l + 1)) << 8 | (255 & e.charCodeAt(l + 2)) << 16 | (255 & e.charCodeAt(l + 3)) << 24], s = [255 & e.charCodeAt(l + 12) | (255 & e.charCodeAt(l + 13)) << 8 | (255 & e.charCodeAt(l + 14)) << 16 | (255 & e.charCodeAt(l + 15)) << 24, 255 & e.charCodeAt(l + 8) | (255 & e.charCodeAt(l + 9)) << 8 | (255 & e.charCodeAt(l + 10)) << 16 | (255 & e.charCodeAt(l + 11)) << 24], a = this.x64Multiply(a, u), a = this.x64Rotl(a, 31), a = this.x64Multiply(a, c), o = this.x64Xor(o, a), o = this.x64Rotl(o, 27), o = this.x64Add(o, i), o = this.x64Add(this.x64Multiply(o, [0, 5]), [0, 1390208809]), s = this.x64Multiply(s, c), s = this.x64Rotl(s, 33), s = this.x64Multiply(s, u), i = this.x64Xor(i, s), i = this.x64Rotl(i, 31), i = this.x64Add(i, o), i = this.x64Add(this.x64Multiply(i, [0, 5]), [0, 944331445]);
+                    e = e || "", t = t || 0;
+                    for (var n = e.length % 16, r = e.length - n, o = [0, t], i = [0, t], a = [0, 0], s = [0, 0], u = [2277735313, 289559509], c = [1291169091, 658871167], l = 0; l < r; l += 16) a = [255 & e.charCodeAt(l + 4) | (255 & e.charCodeAt(l + 5)) << 8 | (255 & e.charCodeAt(l + 6)) << 16 | (255 & e.charCodeAt(l + 7)) << 24, 255 & e.charCodeAt(l) | (255 & e.charCodeAt(l + 1)) << 8 | (255 & e.charCodeAt(l + 2)) << 16 | (255 & e.charCodeAt(l + 3)) << 24], s = [255 & e.charCodeAt(l + 12) | (255 & e.charCodeAt(l + 13)) << 8 | (255 & e.charCodeAt(l + 14)) << 16 | (255 & e.charCodeAt(l + 15)) << 24, 255 & e.charCodeAt(l + 8) | (255 & e.charCodeAt(l + 9)) << 8 | (255 & e.charCodeAt(l + 10)) << 16 | (255 & e.charCodeAt(l + 11)) << 24], a = this.x64Multiply(a, u), a = this.x64Rotl(a, 31), a = this.x64Multiply(a, c), o = this.x64Xor(o, a), o = this.x64Rotl(o, 27), o = this.x64Add(o, i), o = this.x64Add(this.x64Multiply(o, [0, 5]), [0, 1390208809]), s = this.x64Multiply(s, c), s = this.x64Rotl(s, 33), s = this.x64Multiply(s, u), i = this.x64Xor(i, s), i = this.x64Rotl(i, 31), i = this.x64Add(i, o), i = this.x64Add(this.x64Multiply(i, [0, 5]), [0, 944331445]);
                     switch (a = [0, 0], s = [0, 0], n) {
                         case 15:
                             s = this.x64Xor(s, this.x64LeftShift([0, e.charCodeAt(l + 14)], 48));
@@ -14930,6 +14954,16 @@ webpackJsonp([68], {
     },
     HW6M: function(e, t, n) {
         var r;
+        /*!
+          Copyright (c) 2016 Jed Watson.
+          Licensed under the MIT License (MIT), see
+          http://jedwatson.github.io/classnames
+        */
+        /*!
+          Copyright (c) 2016 Jed Watson.
+          Licensed under the MIT License (MIT), see
+          http://jedwatson.github.io/classnames
+        */
         ! function() {
             "use strict";
             var n = {}.hasOwnProperty;
@@ -15013,7 +15047,7 @@ webpackJsonp([68], {
                     }
                     l = s.index, c = s.keys, f = s.edits, u = s.inArray, s = s.prev
                 } else {
-                    if (d = h ? u ? l : c[l] : void 0, null == (p = h ? h[d] : v)) continue;
+                    if (d = h ? u ? l : c[l] : void 0, null === (p = h ? h[d] : v) || void 0 === p) continue;
                     h && y.push(d)
                 }
                 var C = void 0;
@@ -15178,7 +15212,7 @@ webpackJsonp([68], {
                 }, e.randomGuestUsername = function() {
                     return "justinfan" + Math.floor(8e4 * Math.random() + 1e3)
                 }, e.replaceAll = function(e, t) {
-                    if (null == e) return null;
+                    if (null === e || void 0 === e) return null;
                     for (var n in t) e = e.replace(new RegExp(n, "g"), t[n]);
                     return e
                 }, e.unescapeHtml = function(e) {
@@ -17409,6 +17443,13 @@ webpackJsonp([68], {
     JNfv: function(e, t, n) {
         (function(r) {
             var o;
+            /*!
+             * EventEmitter2
+             * https://github.com/hij1nx/EventEmitter2
+             *
+             * Copyright (c) 2013 hij1nx
+             * Licensed under the MIT license.
+             */
             ! function(i) {
                 var a = Array.isArray ? Array.isArray : function(e) {
                         return "[object Array]" === Object.prototype.toString.call(e)
@@ -17705,6 +17746,7 @@ webpackJsonp([68], {
         }).call(t, n("W2nU"))
     },
     JPz4: function(e, t) {
+        /*! http://mths.be/repeat v0.2.0 by @mathias */
         String.prototype.repeat || function() {
             "use strict";
             var e = function() {
@@ -18181,7 +18223,7 @@ webpackJsonp([68], {
                                             }
                                     }
                                     var n, a = e[t];
-                                    if (null == a) return a;
+                                    if (void 0 === a || null === a) return a;
                                     n = "object" != typeof a ? {
                                         valueOf: function() {
                                             return a
@@ -18220,17 +18262,17 @@ webpackJsonp([68], {
             }
 
             function u(e, t, n) {
-                return void 0 === e && (e = {}), n && (e.freeze = n.freeze, e.freezeInput = n.freezeInput, e.freezeOutput = n.freezeOutput, e.useConstructor = n.useConstructor, e.copyFunc = n.copyFunc, e.ignoreIfNoChange = n.ignoreIfNoChange), t && (null != t.freeze && (e.freeze = t.freeze), null != t.freezeInput && (e.freezeInput = t.freezeInput), null != t.freezeOutput && (e.freezeOutput = t.freezeOutput), null != t.useConstructor && (e.useConstructor = t.useConstructor), null != t.copyFunc && (e.copyFunc = t.copyFunc), null != t.ignoreIfNoChange && (e.ignoreIfNoChange = t.ignoreIfNoChange)), e
+                return void 0 === e && (e = {}), n && (e.freeze = n.freeze, e.freezeInput = n.freezeInput, e.freezeOutput = n.freezeOutput, e.useConstructor = n.useConstructor, e.copyFunc = n.copyFunc, e.ignoreIfNoChange = n.ignoreIfNoChange), t && (void 0 != t.freeze && (e.freeze = t.freeze), void 0 != t.freezeInput && (e.freezeInput = t.freezeInput), void 0 != t.freezeOutput && (e.freezeOutput = t.freezeOutput), void 0 != t.useConstructor && (e.useConstructor = t.useConstructor), void 0 != t.copyFunc && (e.copyFunc = t.copyFunc), void 0 != t.ignoreIfNoChange && (e.ignoreIfNoChange = t.ignoreIfNoChange)), e
             }
 
             function c(e, t, n, r) {
-                if (null != e && !(e instanceof Date)) {
+                if (void 0 != e && !(e instanceof Date)) {
                     if (e instanceof Array) return e.slice();
                     if ("object" == typeof e) {
                         if (n) return l(new e.constructor, e);
                         if (r) {
                             var o = r(e, t);
-                            if (null != o) return o
+                            if (void 0 != o) return o
                         }
                         return l({}, e)
                     }
@@ -20875,6 +20917,20 @@ webpackJsonp([68], {
                 default: e
             }
         };
+        /*! *****************************************************************************
+        Copyright (c) Microsoft Corporation. All rights reserved.
+        Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+        this file except in compliance with the License. You may obtain a copy of the
+        License at http://www.apache.org/licenses/LICENSE-2.0
+
+        THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+        KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+        WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+        MERCHANTABLITY OR NON-INFRINGEMENT.
+
+        See the Apache Version 2.0 License for specific language governing permissions
+        and limitations under the License.
+        ***************************************************************************** */
         var r = Object.setPrototypeOf || {
             __proto__: []
         }
@@ -21532,7 +21588,7 @@ webpackJsonp([68], {
                 }
             }, function(e, t) {
                 e.exports = function(e) {
-                    if (null == e) throw TypeError("Can't call method on  " + e);
+                    if (void 0 == e) throw TypeError("Can't call method on  " + e);
                     return e
                 }
             }, function(e, t) {
@@ -22155,7 +22211,7 @@ webpackJsonp([68], {
                             m = void 0 !== y,
                             v = 0,
                             g = l(p);
-                        if (m && (y = r(y, h > 2 ? arguments[2] : void 0, 2)), null == g || d == Array && s(g))
+                        if (m && (y = r(y, h > 2 ? arguments[2] : void 0, 2)), void 0 == g || d == Array && s(g))
                             for (n = new d(t = u(p.length)); t > v; v++) c(n, v, m ? y(p[v], v) : p[v]);
                         else
                             for (f = g.call(p), n = new d; !(o = f.next()).done; v++) c(n, v, m ? a(f, y, [o.value, v], !0) : o.value);
@@ -22191,7 +22247,7 @@ webpackJsonp([68], {
                     o = n(0)("iterator"),
                     i = n(13);
                 e.exports = n(3).getIteratorMethod = function(e) {
-                    if (null != e) return e[o] || e["@@iterator"] || i[r(e)]
+                    if (void 0 != e) return e[o] || e["@@iterator"] || i[r(e)]
                 }
             }, function(e, t, n) {
                 var r = n(21),
@@ -22235,7 +22291,7 @@ webpackJsonp([68], {
                     return n
                 }
             }, function(e, t, n) {
-                var r, o, i;
+                var r, o, i; /*! scrollbarWidth.js v0.1.3 | felixexter | MIT | https://github.com/felixexter/scrollbarWidth */
                 o = [], void 0 !== (i = "function" == typeof(r = function() {
                     "use strict";
                     return function() {
@@ -22617,6 +22673,11 @@ webpackJsonp([68], {
                 t.default = E
             }, function(e, t) {}, function(e, t, n) {
                 "use strict";
+                /*
+                object-assign
+                (c) Sindre Sorhus
+                @license MIT
+                */
                 var r = Object.getOwnPropertySymbols,
                     o = Object.prototype.hasOwnProperty,
                     i = Object.prototype.propertyIsEnumerable;
@@ -22638,7 +22699,7 @@ webpackJsonp([68], {
                     }
                 }() ? Object.assign : function(e, t) {
                     for (var n, a, s = function(e) {
-                            if (null == e) throw new TypeError("Object.assign cannot be called with null or undefined");
+                            if (null === e || void 0 === e) throw new TypeError("Object.assign cannot be called with null or undefined");
                             return Object(e)
                         }(e), u = 1; u < arguments.length; u++) {
                         for (var c in n = Object(arguments[u])) o.call(n, c) && (s[c] = n[c]);
@@ -22723,22 +22784,22 @@ webpackJsonp([68], {
     VyNg: function(e, t, n) {
         var r;
         r = function(e) {
-            var t, n, r, o, i, a, s;
-            return n = (t = e).lib, r = n.WordArray, o = n.Hasher, i = t.algo, a = [], s = i.SHA1 = o.extend({
+            var t, n, r, o, i, a;
+            return n = (t = e).lib, r = n.WordArray, o = n.Hasher, i = [], a = t.algo.SHA1 = o.extend({
                 _doReset: function() {
                     this._hash = new r.init([1732584193, 4023233417, 2562383102, 271733878, 3285377520])
                 },
                 _doProcessBlock: function(e, t) {
-                    for (var n = this._hash.words, r = n[0], o = n[1], i = n[2], s = n[3], u = n[4], c = 0; c < 80; c++) {
-                        if (c < 16) a[c] = 0 | e[t + c];
+                    for (var n = this._hash.words, r = n[0], o = n[1], a = n[2], s = n[3], u = n[4], c = 0; c < 80; c++) {
+                        if (c < 16) i[c] = 0 | e[t + c];
                         else {
-                            var l = a[c - 3] ^ a[c - 8] ^ a[c - 14] ^ a[c - 16];
-                            a[c] = l << 1 | l >>> 31
+                            var l = i[c - 3] ^ i[c - 8] ^ i[c - 14] ^ i[c - 16];
+                            i[c] = l << 1 | l >>> 31
                         }
-                        var f = (r << 5 | r >>> 27) + u + a[c];
-                        f += c < 20 ? 1518500249 + (o & i | ~o & s) : c < 40 ? 1859775393 + (o ^ i ^ s) : c < 60 ? (o & i | o & s | i & s) - 1894007588 : (o ^ i ^ s) - 899497514, u = s, s = i, i = o << 30 | o >>> 2, o = r, r = f
+                        var f = (r << 5 | r >>> 27) + u + i[c];
+                        f += c < 20 ? 1518500249 + (o & a | ~o & s) : c < 40 ? 1859775393 + (o ^ a ^ s) : c < 60 ? (o & a | o & s | a & s) - 1894007588 : (o ^ a ^ s) - 899497514, u = s, s = a, a = o << 30 | o >>> 2, o = r, r = f
                     }
-                    n[0] = n[0] + r | 0, n[1] = n[1] + o | 0, n[2] = n[2] + i | 0, n[3] = n[3] + s | 0, n[4] = n[4] + u | 0
+                    n[0] = n[0] + r | 0, n[1] = n[1] + o | 0, n[2] = n[2] + a | 0, n[3] = n[3] + s | 0, n[4] = n[4] + u | 0
                 },
                 _doFinalize: function() {
                     var e = this._data,
@@ -22751,7 +22812,7 @@ webpackJsonp([68], {
                     var e = o.clone.call(this);
                     return e._hash = this._hash.clone(), e
                 }
-            }), t.SHA1 = o._createHelper(s), t.HmacSHA1 = o._createHmacHelper(s), e.SHA1
+            }), t.SHA1 = o._createHelper(a), t.HmacSHA1 = o._createHmacHelper(a), e.SHA1
         }, e.exports = r(n("t1/b"))
     },
     W2Ff: function(e, t, n) {
@@ -23070,6 +23131,7 @@ webpackJsonp([68], {
     },
     X3oT: function(e, t, n) {
         "use strict";
+        /*! http://mths.be/fromcodepoint v0.2.1 by @mathias */
         if (String.fromCodePoint) e.exports = function(e) {
             try {
                 return String.fromCodePoint(e)
@@ -23835,22 +23897,21 @@ webpackJsonp([68], {
                             } : function(e, t) {
                                 o("set"), this[e] = t
                             },
-                            p = Object.getOwnPropertyNames(e),
-                            d = {};
-                        p.forEach(function(t) {
+                            p = {};
+                        Object.getOwnPropertyNames(e).forEach(function(t) {
                             if (!(u && t in s)) {
                                 var n = {
                                     enumerable: !!Object.getOwnPropertyDescriptor(e, t).enumerable,
                                     get: l.bind(e, t),
                                     set: f.bind(e, t)
                                 };
-                                Object.defineProperty(s, t, n), d[t] = !0
+                                Object.defineProperty(s, t, n), p[t] = !0
                             }
                         });
-                        var h = !0;
-                        if (Object.setPrototypeOf ? Object.setPrototypeOf(s, Object.getPrototypeOf(e)) : s.__proto__ ? s.__proto__ = e.__proto__ : h = !1, n.get || !h)
-                            for (var y in e) d[y] || Object.defineProperty(s, y, {
-                                get: l.bind(e, y)
+                        var d = !0;
+                        if (Object.setPrototypeOf ? Object.setPrototypeOf(s, Object.getPrototypeOf(e)) : s.__proto__ ? s.__proto__ = e.__proto__ : d = !1, n.get || !d)
+                            for (var h in e) p[h] || Object.defineProperty(s, h, {
+                                get: l.bind(e, h)
                             });
                         return Object.seal(e), Object.seal(s), s
                     }, e.Proxy.revocable = function(n, r) {
@@ -24300,17 +24361,16 @@ webpackJsonp([68], {
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            i = n("fzFz"),
-            a = (r = i) && r.__esModule ? r : {
+            i = n("fzFz");
+        var a = 1e4,
+            s = ((r = i) && r.__esModule ? r : {
                 default: r
-            };
-        var s = 1e4,
-            u = a.default._getLogger("IframeHost"),
-            c = function() {
+            }).default._getLogger("IframeHost"),
+            u = function() {
                 function e(t) {
                     ! function(e, t) {
                         if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-                    }(this, e), this._driver = t, this._sources = [], this._listeners = [], this._driver.on("connected", this.handleConnected, this), this._driver.on("disconnected", this.handleDisconnected, this), window.addEventListener("message", this.receiveMessage.bind(this), !1), this._orphanedListenerCheckTimer = setInterval(this._checkOrphanedListeners.bind(this), s)
+                    }(this, e), this._driver = t, this._sources = [], this._listeners = [], this._driver.on("connected", this.handleConnected, this), this._driver.on("disconnected", this.handleDisconnected, this), window.addEventListener("message", this.receiveMessage.bind(this), !1), this._orphanedListenerCheckTimer = setInterval(this._checkOrphanedListeners.bind(this), a)
                 }
                 return o(e, [{
                     key: "destroy",
@@ -24320,7 +24380,7 @@ webpackJsonp([68], {
                 }, {
                     key: "receiveMessage",
                     value: function(e) {
-                        if ("pubsub" == e.data.twitch_protocol && e.source) switch (u.debug("Received message: " + JSON.stringify(e.data)), e.data.type) {
+                        if ("pubsub" == e.data.twitch_protocol && e.source) switch (s.debug("Received message: " + JSON.stringify(e.data)), e.data.type) {
                             case "LISTEN":
                                 this.handleListen(e.source, e.data.nonce, e.data.data);
                                 break;
@@ -24371,13 +24431,13 @@ webpackJsonp([68], {
                 }, {
                     key: "_cleanUpOrphanedListener",
                     value: function(e) {
-                        u.debug("Cleaning up orphaned listener for topic: " + e.topic), this._driver.Unlisten({
+                        s.debug("Cleaning up orphaned listener for topic: " + e.topic), this._driver.Unlisten({
                             topic: e.topic,
                             success: function() {
-                                u.debug("Success when cleaning up orphaned listener for topic: " + e.topic)
+                                s.debug("Success when cleaning up orphaned listener for topic: " + e.topic)
                             },
                             failure: function(t) {
-                                u.debug("Error when cleaning up orphaned listener for topic: " + e.topic + " Error: " + t)
+                                s.debug("Error when cleaning up orphaned listener for topic: " + e.topic + " Error: " + t)
                             },
                             message: e.message
                         })
@@ -24434,7 +24494,7 @@ webpackJsonp([68], {
                                 }, "*")
                             },
                             message: r.message
-                        }) : u.debug("Failed to unlisten, could not find listener for topic " + n.topics[0])
+                        }) : s.debug("Failed to unlisten, could not find listener for topic " + n.topics[0])
                     }
                 }, {
                     key: "handleConnected",
@@ -24454,7 +24514,7 @@ webpackJsonp([68], {
                     }
                 }]), e
             }();
-        t.default = c
+        t.default = u
     },
     bXVx: function(e, t, n) {
         "use strict";
@@ -24838,7 +24898,7 @@ webpackJsonp([68], {
                 }, c._setTimeout || setTimeout)
             })
         }, u.prototype._getSearchParams = function(e, t) {
-            if (null == e) return t;
+            if (void 0 === e || null === e) return t;
             for (var n in e) null !== n && void 0 !== e[n] && e.hasOwnProperty(n) && (t += "" === t ? "" : "&", t += n + "=" + encodeURIComponent("[object Array]" === Object.prototype.toString.call(e[n]) ? l(e[n]) : e[n]));
             return t
         }, u.prototype._computeRequestHeaders = function(e) {
@@ -25072,12 +25132,19 @@ webpackJsonp([68], {
         }, a.prototype.as = null, a.prototype.indexName = null, a.prototype.typeAheadArgs = null, a.prototype.typeAheadValueOption = null
     },
     cAiE: function(e, t) {
-        e.exports = function(e) {
-            if ("string" != typeof e) throw new TypeError("expected a string.");
-            return 1 === (e = e.replace(/([A-Z])/g, " $1")).length ? e.toUpperCase() : (e = (e = e.replace(/^[\W_]+|[\W_]+$/g, "").toLowerCase()).charAt(0).toUpperCase() + e.slice(1)).replace(/[\W_]+(\w|$)/g, function(e, t) {
-                return t.toUpperCase()
-            })
-        }
+        e.exports =
+            /*!
+             * pascalcase <https://github.com/jonschlinkert/pascalcase>
+             *
+             * Copyright (c) 2015, Jon Schlinkert.
+             * Licensed under the MIT License.
+             */
+            function(e) {
+                if ("string" != typeof e) throw new TypeError("expected a string.");
+                return 1 === (e = e.replace(/([A-Z])/g, " $1")).length ? e.toUpperCase() : (e = (e = e.replace(/^[\W_]+|[\W_]+$/g, "").toLowerCase()).charAt(0).toUpperCase() + e.slice(1)).replace(/[\W_]+(\w|$)/g, function(e, t) {
+                    return t.toUpperCase()
+                })
+            }
     },
     cDyk: function(e, t, n) {
         "use strict";
@@ -26102,6 +26169,20 @@ webpackJsonp([68], {
     hKoQ: function(e, t, n) {
         (function(t, r) {
             var o;
+            /*!
+             * @overview es6-promise - a tiny implementation of Promises/A+.
+             * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
+             * @license   Licensed under MIT license
+             *            See https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
+             * @version   4.1.0
+             */
+            /*!
+             * @overview es6-promise - a tiny implementation of Promises/A+.
+             * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
+             * @license   Licensed under MIT license
+             *            See https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
+             * @version   4.1.0
+             */
             o = function() {
                 "use strict";
 
@@ -27034,7 +27115,7 @@ webpackJsonp([68], {
             }
             return e = {
                 frCoPt: function(e) {
-                    return null == e ? "" : !isFinite(e = Number(e)) || e <= 0 || e > 1114111 || e >= 1 && e <= 8 || e >= 14 && e <= 31 || e >= 127 && e <= 159 || e >= 64976 && e <= 65007 || 11 === e || 65535 == (65535 & e) || 65534 == (65535 & e) ? "�" : x(e)
+                    return void 0 === e || null === e ? "" : !isFinite(e = Number(e)) || e <= 0 || e > 1114111 || e >= 1 && e <= 8 || e >= 14 && e <= 31 || e >= 127 && e <= 159 || e >= 64976 && e <= 65007 || 11 === e || 65535 == (65535 & e) || 65534 == (65535 & e) ? "�" : x(e)
                 },
                 d: E,
                 yup: function(e) {
@@ -27353,11 +27434,10 @@ webpackJsonp([68], {
     kn9v: function(e, t, n) {
         e.exports = function(e, t) {
             var r = n("bidq"),
-                o = n("oZD7"),
-                i = {};
-            return o(r(e), function(n) {
-                !0 !== t(n) && (i[n] = e[n])
-            }), i
+                o = {};
+            return n("oZD7")(r(e), function(n) {
+                !0 !== t(n) && (o[n] = e[n])
+            }), o
         }
     },
     knr3: function(e, t, n) {
@@ -27596,6 +27676,13 @@ webpackJsonp([68], {
     },
     lbHh: function(e, t, n) {
         var r, o;
+        /*!
+         * JavaScript Cookie v2.2.0
+         * https://github.com/js-cookie/js-cookie
+         *
+         * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+         * Released under the MIT license
+         */
         ! function(i) {
             if (void 0 === (o = "function" == typeof(r = i) ? r.call(t, n, t, e) : r) || (e.exports = o), !0, e.exports = i(), !!0) {
                 var a = window.Cookies,
@@ -31662,7 +31749,7 @@ webpackJsonp([68], {
                     }(),
                     i = r.WordArray = o.extend({
                         init: function(e, t) {
-                            e = this.words = e || [], this.sigBytes = null != t ? t : 4 * e.length
+                            e = this.words = e || [], this.sigBytes = void 0 != t ? t : 4 * e.length
                         },
                         toString: function(e) {
                             return (e || s).stringify(this)
@@ -31833,10 +31920,10 @@ webpackJsonp([68], {
                 }) : t
             },
             m = function(e) {
-                return "string" == typeof e ? Object(f.parsePath)(e) : (n = (t = e).pathname, r = void 0 === n ? "/" : n, o = t.search, i = void 0 === o ? "" : o, a = t.hash, {
+                return "string" == typeof e ? Object(f.parsePath)(e) : (n = (t = e).pathname, r = void 0 === n ? "/" : n, o = t.search, i = void 0 === o ? "" : o, a = t.hash, s = void 0 === a ? "" : a, {
                     pathname: r,
                     search: "?" === i ? "" : i,
-                    hash: "#" === (s = void 0 === a ? "" : a) ? "" : s
+                    hash: "#" === s ? "" : s
                 });
                 var t, n, r, o, i, a, s
             },
@@ -32914,37 +33001,39 @@ webpackJsonp([68], {
                         v = "network-only" === h || "no-cache" === h;
                     if (n !== d.refetch && "network-only" !== h && "no-cache" !== h) {
                         var g = this.dataStore.getCache().diff({
-                            query: m,
-                            variables: c,
-                            returnPartialData: !0,
-                            optimistic: !1
-                        });
-                        v = !g.complete || "cache-and-network" === h, a = g.result
+                                query: m,
+                                variables: c,
+                                returnPartialData: !0,
+                                optimistic: !1
+                            }),
+                            b = g.complete,
+                            _ = g.result;
+                        v = !b || "cache-and-network" === h, a = _
                     }
-                    var b = v && "cache-only" !== h && "standby" !== h;
-                    Object(i.i)(["live"], m) && (b = !0);
-                    var _ = this.generateRequestId(),
-                        w = this.updateQueryWatch(e, m, t);
+                    var w = v && "cache-only" !== h && "standby" !== h;
+                    Object(i.i)(["live"], m) && (w = !0);
+                    var x = this.generateRequestId(),
+                        k = this.updateQueryWatch(e, m, t);
                     if (this.setQuery(e, function() {
                             return {
                                 document: m,
-                                lastRequestId: _,
+                                lastRequestId: x,
                                 invalidated: !0,
-                                cancel: w
+                                cancel: k
                             }
                         }), this.invalidate(!0, r), this.queryStore.initQuery({
                             queryId: e,
                             queryString: Object(o.print)(m),
                             document: m,
-                            storePreviousVariables: b,
+                            storePreviousVariables: w,
                             variables: c,
                             isPoll: n === d.poll,
                             isRefetch: n === d.refetch,
                             metadata: f,
                             fetchMoreForQueryId: r
-                        }), this.broadcastQueries(), (!b || "cache-and-network" === h) && (this.queryStore.markQueryResultClient(e, !b), this.invalidate(!0, e, r), this.broadcastQueries()), b) {
-                        var x = this.fetchRequest({
-                            requestId: _,
+                        }), this.broadcastQueries(), (!w || "cache-and-network" === h) && (this.queryStore.markQueryResultClient(e, !w), this.invalidate(!0, e, r), this.broadcastQueries()), w) {
+                        var E = this.fetchRequest({
+                            requestId: x,
                             queryId: e,
                             document: m,
                             options: t,
@@ -32952,12 +33041,12 @@ webpackJsonp([68], {
                         }).catch(function(t) {
                             if (t.hasOwnProperty("graphQLErrors")) throw t;
                             var n = s.getQuery(e).lastRequestId;
-                            throw _ >= (n || 1) && (s.queryStore.markQueryError(e, t, r), s.invalidate(!0, e, r), s.broadcastQueries()), s.removeFetchQueryPromise(_), new y({
+                            throw x >= (n || 1) && (s.queryStore.markQueryError(e, t, r), s.invalidate(!0, e, r), s.broadcastQueries()), s.removeFetchQueryPromise(x), new y({
                                 networkError: t
                             })
                         });
-                        if ("cache-and-network" !== h) return x;
-                        x.catch(function() {})
+                        if ("cache-and-network" !== h) return E;
+                        E.catch(function() {})
                     }
                     return Promise.resolve({
                         data: a
@@ -33606,6 +33695,16 @@ webpackJsonp([68], {
     },
     "u4m+": function(e, t, n) {
         var r;
+        /*!
+          Copyright (c) 2015 Jed Watson.
+          Based on code that is Copyright 2013-2015, Facebook, Inc.
+          All rights reserved.
+        */
+        /*!
+          Copyright (c) 2015 Jed Watson.
+          Based on code that is Copyright 2013-2015, Facebook, Inc.
+          All rights reserved.
+        */
         ! function() {
             "use strict";
             var o = !("undefined" == typeof window || !window.document || !window.document.createElement),
@@ -34108,6 +34207,14 @@ webpackJsonp([68], {
     },
     vttU: function(e, t, n) {
         "use strict";
+        /** @license React v16.2.0
+         * react.production.min.js
+         *
+         * Copyright (c) 2013-present, Facebook, Inc.
+         *
+         * This source code is licensed under the MIT license found in the
+         * LICENSE file in the root directory of this source tree.
+         */
         var r = n("BEQ0"),
             o = n("TJez"),
             i = n("e6+Q"),
@@ -34239,7 +34346,7 @@ webpackJsonp([68], {
                 for (var a = 0; a < e.length; a++) {
                     var f = t + j(o = e[a], a);
                     i += A(o, f, n, r)
-                } else if (null == e ? f = null : f = "function" == typeof(f = p && e[p] || e["@@iterator"]) ? f : null, "function" == typeof f)
+                } else if (null === e || void 0 === e ? f = null : f = "function" == typeof(f = p && e[p] || e["@@iterator"]) ? f : null, "function" == typeof f)
                     for (e = f.call(e), a = 0; !(o = e.next()).done;) i += A(o = o.value, f = t + j(o, a++), n, r);
                 else "object" === o && d("31", "[object Object]" === (n = "" + e) ? "object with keys {" + Object.keys(e).join(", ") + "}" : n, "");
             return i
@@ -35110,4 +35217,4 @@ webpackJsonp([68], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-e9ba20b6de8a7703a8530a69495fc573.js.map
+//# sourceMappingURL=vendor-be8abd6eb2ebd999b97ec214b73b9b7a.js.map

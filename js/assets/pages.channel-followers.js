@@ -9372,7 +9372,7 @@ webpackJsonp([43], {
                     var e = this.state.activeRoomID !== ci;
                     return l.createElement(f.a, {
                         channelLogin: this.props.channelLogin,
-                        clientID: c.a.authClientID,
+                        clientID: c.a.authSettings.clientID,
                         isBackground: e,
                         isEmbedded: this.props.isEmbedded,
                         isPopout: this.props.isPopout,
@@ -14588,7 +14588,7 @@ webpackJsonp([43], {
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return i.trys.push([0, 2, , 3]), [4, B.a.get("/kraken/raids?client_id=" + C.a.authClientID + "&api_version=" + C.a.defaultAPIVersion + "&target_id=" + e)];
+                                    return i.trys.push([0, 2, , 3]), [4, B.a.get("/kraken/raids?client_id=" + C.a.authSettings.clientID + "&api_version=" + C.a.defaultAPIVersion + "&target_id=" + e)];
                                 case 1:
                                     return t = i.sent(), [2, this.deserialize(t)];
                                 case 2:
@@ -16865,157 +16865,6 @@ webpackJsonp([43], {
         }), n.d(t, "b", function() {
             return l
         })
-    },
-    "QU+n": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "badge"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "Badge"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "id"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "setID"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "version"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "title"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        alias: {
-                            kind: "Name",
-                            value: "image1x"
-                        },
-                        name: {
-                            kind: "Name",
-                            value: "imageURL"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "size"
-                            },
-                            value: {
-                                kind: "EnumValue",
-                                value: "NORMAL"
-                            }
-                        }],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        alias: {
-                            kind: "Name",
-                            value: "image2x"
-                        },
-                        name: {
-                            kind: "Name",
-                            value: "imageURL"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "size"
-                            },
-                            value: {
-                                kind: "EnumValue",
-                                value: "DOUBLE"
-                            }
-                        }],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        alias: {
-                            kind: "Name",
-                            value: "image4x"
-                        },
-                        name: {
-                            kind: "Name",
-                            value: "imageURL"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "size"
-                            },
-                            value: {
-                                kind: "EnumValue",
-                                value: "QUADRUPLE"
-                            }
-                        }],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "clickAction"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "clickURL"
-                        },
-                        arguments: [],
-                        directives: []
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 170
-            }
-        };
-        n.loc.source = {
-            body: "fragment badge on Badge {\nid\nsetID\nversion\ntitle\nimage1x: imageURL(size: NORMAL)\nimage2x: imageURL(size: DOUBLE)\nimage4x: imageURL(size: QUADRUPLE)\nclickAction\nclickURL\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     },
     QY1R: function(e, t) {
         var n = {
@@ -19864,7 +19713,7 @@ webpackJsonp([43], {
             })
         }, t.b = function(e, t, n) {
             if (void 0 === n) throw new Error("No default avatar selected.");
-            return fetch(a.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + a.a.authClientID + "&api_version=" + a.a.defaultAPIVersion, {
+            return fetch(a.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + a.a.authSettings.clientID + "&api_version=" + a.a.defaultAPIVersion, {
                 method: "PUT",
                 headers: {
                     Authorization: "OAuth " + t,
@@ -19880,7 +19729,7 @@ webpackJsonp([43], {
                 return i.__generator(this, function(i) {
                     switch (i.label) {
                         case 0:
-                            return [4, fetch(a.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + a.a.authClientID + "&api_version=" + a.a.defaultAPIVersion + "&image_type=" + n + "&format=" + r, {
+                            return [4, fetch(a.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + a.a.authSettings.clientID + "&api_version=" + a.a.defaultAPIVersion + "&image_type=" + n + "&format=" + r, {
                                 method: "POST",
                                 headers: {
                                     Authorization: "OAuth " + t
@@ -35782,4 +35631,4 @@ webpackJsonp([43], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-followers-591304ce24058a0b312ba34161b09fd6.js.map
+//# sourceMappingURL=pages.channel-followers-4059ccf5f471f447688e483d520c61f1.js.map

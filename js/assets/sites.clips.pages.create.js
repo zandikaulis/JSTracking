@@ -1,6 +1,6 @@
-webpackJsonp([59], {
+webpackJsonp([57], {
     "2TZ0": function(e, t) {
-        var i = {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -113,7 +113,7 @@ webpackJsonp([59], {
                 end: 130
             }
         };
-        i.loc.source = {
+        n.loc.source = {
             body: "mutation ClipsTitleEdit_UpdateClip($input: UpdateClipInput!) {\nupdateClip(input: $input) {\nclip {\nid\ntitle\n}\nerror {\nmessage\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -121,44 +121,340 @@ webpackJsonp([59], {
                 column: 1
             }
         };
-        e.exports = i
+        e.exports = n
     },
-    "7WFF": function(e, t, i) {
+    "3HXW": function(e, t, n) {
+        "use strict";
+        var i, r = n("TToO"),
+            a = n("GiK3"),
+            s = n("Odds");
+        n("cJZy");
+        ! function(e) {
+            e.Left = "left", e.Right = "right"
+        }(i || (i = {}));
+        var o, l = function(e) {
+            function t(t) {
+                var n = e.call(this, t) || this;
+                return n.leftHandleRef = null, n.rightHandleRef = null, n.renderHandle = function(e) {
+                    var t, r;
+                    switch (e) {
+                        case i.Left:
+                            t = n.onLeftMouseDown, r = n.leftHandleRefHandler;
+                            break;
+                        case i.Right:
+                            t = n.onRightMouseDown, r = n.rightHandleRefHandler;
+                            break;
+                        default:
+                            return e
+                    }
+                    return a.createElement(s._0, {
+                        className: "draggable-slider__handle",
+                        display: s.P.Flex,
+                        fullHeight: !0
+                    }, a.createElement("div", {
+                        onMouseDown: t,
+                        ref: r
+                    }, a.createElement(s._19, {
+                        asset: s._20.DragHandle
+                    })))
+                }, n.getHandleHandlers = function(e) {
+                    switch (e) {
+                        case i.Left:
+                            return {
+                                handleRef: n.leftHandleRef,
+                                mouseMoveHandler: n.onLeftMouseMove,
+                                mouseUpHandler: n.onLeftMouseUp
+                            };
+                        case i.Right:
+                            return {
+                                handleRef: n.rightHandleRef,
+                                mouseMoveHandler: n.onRightMouseMove,
+                                mouseUpHandler: n.onRightMouseUp
+                            };
+                        default:
+                            return e
+                    }
+                }, n.addHandleListeners = function(e) {
+                    var t = n.getHandleHandlers(e),
+                        i = t.handleRef,
+                        r = t.mouseMoveHandler,
+                        a = t.mouseUpHandler;
+                    i && (i.ownerDocument.addEventListener("mousemove", r), i.ownerDocument.addEventListener("mouseup", a))
+                }, n.removeHandleListeners = function(e) {
+                    var t = n.getHandleHandlers(e),
+                        i = t.handleRef,
+                        r = t.mouseMoveHandler,
+                        a = t.mouseUpHandler;
+                    i && (i.ownerDocument.removeEventListener("mousemove", r), i.ownerDocument.removeEventListener("mouseup", a))
+                }, n.leftHandleRefHandler = function(e) {
+                    n.leftHandleRef = e
+                }, n.onLeftMouseDown = function(e) {
+                    var t = e.clientX;
+                    n.setState(function(e) {
+                        return {
+                            startDragX: t,
+                            startDragValue: e.startOffset
+                        }
+                    }, function() {
+                        n.props.onLeftDragStart && n.props.onLeftDragStart({
+                            startOffset: n.state.startOffset,
+                            endOffset: n.state.endOffset
+                        }), n.addHandleListeners(i.Left)
+                    })
+                }, n.onLeftMouseUp = function() {
+                    n.setState({
+                        startDragX: null,
+                        startDragValue: null
+                    }, function() {
+                        n.props.onLeftDragEnd && n.props.onLeftDragEnd({
+                            startOffset: n.state.startOffset,
+                            endOffset: n.state.endOffset
+                        }), n.removeHandleListeners(i.Left)
+                    })
+                }, n.onLeftMouseMove = function(e) {
+                    var t = e.clientX;
+                    n.setState(function(e, i) {
+                        return {
+                            startOffset: n.calculateOffset(t, {
+                                startBoundary: i.minOffset,
+                                endBoundary: e.endOffset,
+                                currentValue: e.startOffset
+                            }),
+                            endOffset: e.endOffset
+                        }
+                    }, function() {
+                        n.props.onLeftDrag && n.props.onLeftDrag({
+                            startOffset: n.state.startOffset,
+                            endOffset: n.state.endOffset
+                        })
+                    })
+                }, n.rightHandleRefHandler = function(e) {
+                    n.rightHandleRef = e
+                }, n.onRightMouseDown = function(e) {
+                    var t = e.clientX;
+                    n.setState(function(e) {
+                        return {
+                            startDragX: t,
+                            startDragValue: e.endOffset
+                        }
+                    }, function() {
+                        n.props.onRightDragStart && n.props.onRightDragStart({
+                            startOffset: n.state.startOffset,
+                            endOffset: n.state.endOffset
+                        }), n.addHandleListeners(i.Right)
+                    })
+                }, n.onRightMouseUp = function() {
+                    n.setState({
+                        startDragX: null,
+                        startDragValue: null
+                    }, function() {
+                        n.props.onRightDragEnd && n.props.onRightDragEnd({
+                            startOffset: n.state.startOffset,
+                            endOffset: n.state.endOffset
+                        }), n.removeHandleListeners(i.Right)
+                    })
+                }, n.onRightMouseMove = function(e) {
+                    var t = e.clientX;
+                    n.setState(function(e, i) {
+                        return {
+                            startOffset: e.startOffset,
+                            endOffset: n.calculateOffset(t, {
+                                startBoundary: e.startOffset,
+                                endBoundary: i.maxOffset,
+                                currentValue: e.endOffset
+                            })
+                        }
+                    }, function() {
+                        n.props.onRightDrag && n.props.onRightDrag({
+                            startOffset: n.state.startOffset,
+                            endOffset: n.state.endOffset
+                        })
+                    })
+                }, n.calculateOffset = function(e, t) {
+                    if (null === n.state.startDragX || null === n.state.startDragValue) return t.currentValue;
+                    var i = n.convertPixelsToOffsetUnits(e - n.state.startDragX),
+                        r = n.state.startDragValue + i;
+                    return r < t.startBoundary ? t.startBoundary : r > t.endBoundary ? t.endBoundary : r
+                }, n.convertPixelsToOffsetUnits = function(e) {
+                    return n.props.parentContainerRef ? 0 === n.props.parentContainerRef.clientWidth ? 0 : e * ((n.props.maxOffset - n.props.minOffset) / n.props.parentContainerRef.clientWidth) : 0
+                }, n.state = {
+                    startOffset: t.startOffset,
+                    endOffset: t.endOffset,
+                    startDragX: null,
+                    startDragValue: null
+                }, n
+            }
+            return r.__extends(t, e), t.prototype.render = function() {
+                return a.createElement(s._6, {
+                    position: s._13.Relative,
+                    display: s.P.Flex,
+                    justifyContent: s._5.Center
+                }, a.createElement(s._6, {
+                    className: "draggable-slider__popover",
+                    position: s._13.Absolute
+                }, this.props.popover), a.createElement(s._29, {
+                    background: s.m.AccentAlt2,
+                    fullWidth: !0,
+                    display: s.P.Flex,
+                    justifyContent: s._5.Between
+                }, this.renderHandle(i.Left), a.createElement(s._6, {
+                    display: s.P.InlineBlock,
+                    fullWidth: !0
+                }, this.props.children), this.renderHandle(i.Right)))
+            }, t
+        }(a.Component);
+        ! function(e) {
+            e[e.SegmentBox = 0] = "SegmentBox"
+        }(o || (o = {}));
+        var d = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.state = {
+                    startOffset: t.props.startOffset,
+                    endOffset: t.props.endOffset
+                }, t.handleParentContainerRef = function(e) {
+                    return t.parentContainerRef = e
+                }, t
+            }
+            return r.__extends(t, e), t.prototype.render = function() {
+                var e = {
+                    width: this.calculateWidthPercentage() + "%",
+                    marginLeft: this.calculateOffsetPercentage() + "%"
+                };
+                return a.createElement("div", {
+                    ref: this.handleParentContainerRef
+                }, a.createElement(s._0, {
+                    flexGrow: 0,
+                    flexShrink: 0
+                }, a.createElement("div", {
+                    "data-test-selector": o.SegmentBox,
+                    style: e
+                }, a.createElement(l, {
+                    minOffset: this.props.minOffset,
+                    maxOffset: this.props.maxOffset,
+                    startOffset: this.props.startOffset,
+                    endOffset: this.props.endOffset,
+                    parentContainerRef: this.parentContainerRef,
+                    onLeftDragStart: this.props.onLeftDragStart,
+                    onLeftDrag: this.props.onLeftDrag,
+                    onLeftDragEnd: this.props.onLeftDragEnd,
+                    onRightDragStart: this.props.onRightDragStart,
+                    onRightDrag: this.props.onRightDrag,
+                    onRightDragEnd: this.props.onRightDragEnd,
+                    popover: this.props.popover
+                }, this.props.children))))
+            }, t.prototype.calculateOffsetPercentage = function() {
+                return this.props.startOffset / this.getTotalLength() * 100
+            }, t.prototype.calculateWidthPercentage = function() {
+                return (this.props.endOffset - this.props.startOffset) / this.getTotalLength() * 100
+            }, t.prototype.getTotalLength = function() {
+                return this.props.maxOffset - this.props.minOffset
+            }, t
+        }(a.Component);
+        n.d(t, !1, function() {
+            return o
+        }), n.d(t, "a", function() {
+            return d
+        })
+    },
+    "7WFF": function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var n, r = i("TToO"),
-            a = i("GiK3"),
-            s = i("CIox"),
-            o = i("3zLD"),
-            l = i("7vx8"),
-            d = i("rqhk"),
-            u = i("vH/s"),
-            c = i("QIXk"),
-            p = i("Odds"),
-            m = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isClipResolved ? a.createElement(p._6, null, a.createElement(c.a, {
-                        clipSlug: this.props.slug,
-                        location: u.PageviewLocation.ClipsEditing,
-                        broadcasterName: this.props.broadcasterName,
-                        startOffset: this.props.startOffset,
-                        endOffset: this.props.endOffset
-                    })) : a.createElement(p._6, null, a.createElement(p.u, {
-                        disabled: !0
-                    }))
-                }, t
-            }(a.Component);
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = n("CIox"),
+            s = n("3zLD"),
+            o = n("7vx8"),
+            l = n("rqhk"),
+            d = n("vH/s"),
+            u = n("3HXW"),
+            c = n("QIXk");
+        var p = n("Odds"),
+            f = 5,
+            m = 60,
+            h = 1;
+
+        function g(e) {
+            return parseFloat(e.toFixed(h))
+        }
+        var v, O = function(e) {
+            function t() {
+                var t, n, i = null !== e && e.apply(this, arguments) || this;
+                return i.initialOffsets = (t = i.props.rawMedia.defaultClipInitialOffset, n = i.props.rawMedia.duration - i.props.rawMedia.defaultClipInitialOffset, {
+                    startOffset: t,
+                    endOffset: t + n
+                }), i.state = {
+                    startOffset: i.initialOffsets.startOffset,
+                    endOffset: i.initialOffsets.endOffset,
+                    minOffset: 0,
+                    maxOffset: i.props.rawMedia.duration
+                }, i.onDrag = function(e) {
+                    var t = e.endOffset - e.startOffset;
+                    t > m || t < f || i.setState({
+                        startOffset: g(e.startOffset),
+                        endOffset: g(e.endOffset)
+                    })
+                }, i.renderDurationPopover = function() {
+                    return r.createElement(p._29, {
+                        background: p.m.Overlay,
+                        padding: {
+                            y: 2,
+                            x: 1
+                        },
+                        fullWidth: !0,
+                        textAlign: p._39.Center,
+                        overflow: p._9.Hidden
+                    }, r.createElement(p.O, {
+                        align: p._53.Middle,
+                        ellipsis: !0
+                    }, i.state.startOffset + " - " + i.state.endOffset))
+                }, i
+            }
+            return i.__extends(t, e), t.prototype.render = function() {
+                return this.props.isClipResolved ? r.createElement(p._6, null, r.createElement(p._29, {
+                    padding: {
+                        y: 2,
+                        x: 1
+                    }
+                }, r.createElement(u.a, {
+                    startOffset: this.state.startOffset,
+                    endOffset: this.state.endOffset,
+                    minOffset: this.state.minOffset,
+                    maxOffset: this.state.maxOffset,
+                    onLeftDrag: this.onDrag,
+                    onRightDrag: this.onDrag,
+                    popover: this.renderDurationPopover()
+                }, r.createElement(p._29, {
+                    background: p.m.Overlay,
+                    padding: {
+                        y: 2,
+                        x: 1
+                    },
+                    fullWidth: !0,
+                    textAlign: p._39.Center,
+                    overflow: p._9.Hidden
+                }, r.createElement(p.O, {
+                    align: p._53.Middle,
+                    ellipsis: !0
+                }, this.state.startOffset + " - " + this.state.endOffset)))), r.createElement(c.a, {
+                    clipSlug: this.props.slug,
+                    location: d.PageviewLocation.ClipsEditing,
+                    broadcasterName: this.props.broadcasterName,
+                    startOffset: this.state.startOffset,
+                    endOffset: this.state.endOffset
+                })) : r.createElement(p._6, null, r.createElement(p.u, {
+                    disabled: !0
+                }))
+            }, t
+        }(r.Component);
         ! function(e) {
             e.creating = "CREATING", e.created = "CREATED", e.failed = "FAILED"
-        }(n || (n = {}));
-        var f = i("vwd7"),
-            h = i("f8OD"),
-            g = function(e) {
+        }(v || (v = {}));
+        var E = n("vwd7"),
+            y = n("f8OD"),
+            S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -169,17 +465,17 @@ webpackJsonp([59], {
                             isPlayerIframeLoaded: !0
                         })
                     }, t.getIsClipResolved = function(e) {
-                        var i = t.getRawMediaStatus(e);
-                        return t.getRawMediaExists(e) && (i === n.created || i === n.failed)
+                        var n = t.getRawMediaStatus(e);
+                        return t.getRawMediaExists(e) && (n === v.created || n === v.failed)
                     }, t.getIsCreationFailed = function(e) {
-                        return t.getRawMediaExists(e) && t.getRawMediaStatus(e) === n.failed
+                        return t.getRawMediaExists(e) && t.getRawMediaStatus(e) === v.failed
                     }, t.getRawMediaStatus = function(e) {
                         return e.data.clip && e.data.clip.rawMedia && e.data.clip.rawMedia.status || ""
                     }, t.getRawMediaExists = function(e) {
                         return Boolean(e.data.clip && e.data.clip.rawMedia)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this;
                     this.getIsClipResolved(this.props) ? this.props.data.stopPolling() : this.timeoutID = setTimeout(function() {
                         return e.setState({
@@ -192,35 +488,29 @@ webpackJsonp([59], {
                     this.timeoutID && clearTimeout(this.timeoutID), this.props.data.stopPolling()
                 }, t.prototype.componentDidUpdate = function() {
                     var e = this.getIsClipResolved(this.props) && !this.getIsCreationFailed(this.props);
-                    !this.hasSentEditClip && e && this.state.isPlayerIframeLoaded && this.props.data.clip && this.props.data.clip.rawMedia && (this.props.playerConnection.sendMessage(Object(d.r)(this.props.data.clip.rawMedia)), this.hasSentEditClip = !0)
+                    !this.hasSentEditClip && e && this.state.isPlayerIframeLoaded && this.props.data.clip && this.props.data.clip.rawMedia && (this.props.playerConnection.sendMessage(Object(l.r)(this.props.data.clip.rawMedia)), this.hasSentEditClip = !0)
                 }, t.prototype.render = function() {
-                    if (this.state.isPollingTimedOut || this.getIsCreationFailed(this.props)) return a.createElement(s.b, {
+                    if (this.state.isPollingTimedOut || this.getIsCreationFailed(this.props)) return r.createElement(a.b, {
                         to: "/500"
                     });
                     var e = this.props.data.clip;
-                    if (!e || !e.rawMedia) return a.createElement(p._6, null);
-                    var t, i, n = (t = e.rawMedia.defaultClipInitialOffset, i = e.rawMedia.duration - e.rawMedia.defaultClipInitialOffset, {
-                        startOffset: t,
-                        endOffset: t + i
-                    });
-                    return a.createElement(p._6, null, a.createElement(f.b, {
+                    return e && e.rawMedia && this.getIsClipResolved(this.props) ? r.createElement(p._6, null, r.createElement(E.b, {
                         slug: this.props.slug,
                         onLoaded: this.onLoaded,
-                        playerType: f.a.Editing
-                    }), a.createElement(m, {
+                        playerType: E.a.Editing
+                    }), r.createElement(O, {
                         isClipResolved: this.getIsClipResolved(this.props),
                         slug: this.props.slug,
                         broadcasterName: e.broadcaster && e.broadcaster.displayName || "",
-                        startOffset: n.startOffset,
-                        endOffset: n.endOffset
-                    }))
+                        rawMedia: e.rawMedia
+                    })) : r.createElement(p._6, null)
                 }, t
-            }(a.Component),
-            v = Object(o.compose)(Object(d.t)({
+            }(r.Component),
+            C = Object(s.compose)(Object(l.t)({
                 playerId: function(e) {
                     return e.slug
                 }
-            }), Object(l.a)(h, {
+            }), Object(o.a)(y, {
                 options: function(e) {
                     return {
                         pollInterval: 1e3,
@@ -230,58 +520,58 @@ webpackJsonp([59], {
                         }
                     }
                 }
-            }))(g),
-            E = function(e) {
+            }))(S),
+            k = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e;
-                    return "/:slug/edit" === this.props.match.path ? (e = this.props.match.params.slug, a.createElement(s.b, {
+                    return "/:slug/edit" === this.props.match.path ? (e = this.props.match.params.slug, r.createElement(a.b, {
                         to: {
                             pathname: "/create",
                             state: {
                                 slug: e
                             }
                         }
-                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, a.createElement(p._6, null, a.createElement(v, {
+                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, r.createElement(p._6, null, r.createElement(C, {
                         slug: e
-                    }))) : a.createElement(s.b, {
+                    }))) : r.createElement(a.b, {
                         to: "/"
                     })
                 }, t
-            }(a.Component);
-        i.d(t, "ClipsCreate", function() {
-            return E
+            }(r.Component);
+        n.d(t, "ClipsCreate", function() {
+            return k
         })
     },
-    QIXk: function(e, t, i) {
+    QIXk: function(e, t, n) {
         "use strict";
-        var n, r, a, s = i("TToO"),
-            o = i("GiK3"),
-            l = i("6sO2"),
-            d = i("7vx8"),
-            u = i("6BvN"),
-            c = i("oIkB"),
-            p = i("vH/s"),
-            m = function(e, t, i, n, r) {
+        var i, r, a, s = n("TToO"),
+            o = n("GiK3"),
+            l = n("6sO2"),
+            d = n("7vx8"),
+            u = n("6BvN"),
+            c = n("oIkB"),
+            p = n("vH/s"),
+            f = function(e, t, n, i, r) {
                 var a = Date.now() / 1e3;
                 l.o.tracking.track(p.SpadeEventType.ClipEdit, {
                     channel_id: e,
                     client_time: a,
                     clip_edit_session_id: t + "," + Math.floor(a),
                     clip_id: t,
-                    clip_slug: i,
+                    clip_slug: n,
                     effect_name: "title",
-                    effect_setting: n,
+                    effect_setting: i,
                     front_end: !0,
                     location: r
                 })
             },
-            f = i("CIox");
+            m = n("CIox");
         ! function(e) {
             e.AlreadyPublished = "already_published", e.EditingWindowExpired = "editing_window_expired", e.InvalidSpeedDuration = "invalid_speed_duration", e.InvalidDuration = "invalid_duration", e.InvalidTitle = "invalid_title", e.Unknown = "unknown"
-        }(n || (n = {})),
+        }(i || (i = {})),
         function(e) {
             e.InvalidTitle = "invalid_title"
         }(r || (r = {})),
@@ -290,23 +580,23 @@ webpackJsonp([59], {
         }(a || (a = {}));
         var h, g = 5,
             v = 60,
-            E = i("Odds"),
-            y = i("isxN"),
-            S = {
+            O = n("Odds"),
+            E = n("isxN"),
+            y = {
                 publishState: a.Unsent,
                 errorMessage: null
             },
-            k = function(e) {
+            S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = S, t.onError = function(e) {
+                    return t.state = y, t.onError = function(e) {
                         t.setState({
                             publishState: a.Error,
                             errorMessage: e
                         }), t.props.onError(e)
                     }, t.onPublish = function() {
                         return s.__awaiter(t, void 0, void 0, function() {
-                            var e, t, i;
+                            var e, t, n;
                             return s.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
@@ -314,7 +604,7 @@ webpackJsonp([59], {
                                                 publishState: a.Sending
                                             }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < g || e > v) return this.setState({
                                             publishState: a.Error,
-                                            errorMessage: n.InvalidDuration
+                                            errorMessage: i.InvalidDuration
                                         }), [2];
                                         r.label = 1;
                                     case 1:
@@ -328,11 +618,11 @@ webpackJsonp([59], {
                                             title: this.props.title
                                         }))];
                                     case 2:
-                                        return (t = r.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (i = t.data.publishClip.error.message, this.onError(i)) : (this.setState({
+                                        return (t = r.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (this.setState({
                                             publishState: a.Successful
                                         }), this.props.history.push("/" + this.props.slug)), [3, 4];
                                     case 3:
-                                        return r.sent(), i = n.Unknown, this.onError(i), [3, 4];
+                                        return r.sent(), n = i.Unknown, this.onError(n), [3, 4];
                                     case 4:
                                         return [2]
                                 }
@@ -341,24 +631,24 @@ webpackJsonp([59], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.publishState === a.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(S), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
+                    this.state.publishState === a.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(y), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
                 }, t.prototype.render = function() {
                     var e = this.props.title.length < 1 || this.state.publishState === a.Error,
                         t = this.state.publishState === a.Sending;
-                    return o.createElement(E._6, null, o.createElement(E.u, {
+                    return o.createElement(O._6, null, o.createElement(O.u, {
                         onClick: this.onPublish,
                         disabled: e,
-                        state: t ? E.z.Loading : E.z.Default,
-                        size: E.y.Large,
+                        state: t ? O.z.Loading : O.z.Default,
+                        size: O.y.Large,
                         blurAfterClick: !0
                     }, Object(l.d)("Publish", "ClipsPublishButton")))
-                }, t = s.__decorate([Object(d.a)(y, {
+                }, t = s.__decorate([Object(d.a)(E, {
                     name: "publishClip"
                 })], t)
             }(o.Component),
-            b = Object(f.f)(k),
-            C = i("2TZ0"),
-            T = {
+            C = Object(m.f)(S),
+            k = n("2TZ0"),
+            _ = {
                 TITLE_INPUT: "cmgr-title-input",
                 TITLE_SAVE: "cmgr-title-save",
                 TITLE_SAVE_TOOLTIP: "cmgr-title-save-tooltip"
@@ -366,180 +656,180 @@ webpackJsonp([59], {
         ! function(e) {
             e.emptySubmission = "emptySubmission", e.characterLimitReached = "characterLimitReached", e.channelViolation = "channelViolation", e.notCurator = "notCurator", e.unknown = "unknown"
         }(h || (h = {}));
-        var _ = 100,
-            w = function(e) {
+        var b = 100,
+            T = function(e) {
                 function t(t) {
-                    var i = e.call(this, t) || this;
-                    return i.renderForClipsViewing = function() {
-                        return o.createElement("div", null, o.createElement(E._40, {
-                            id: T.TITLE_INPUT,
-                            "data-test-selector": T.TITLE_INPUT,
-                            value: i.state.title,
-                            onChange: i.handleTitleEdit,
-                            onKeyDown: i.handleKeyDown
-                        }), o.createElement(E._6, {
-                            display: E.P.Flex,
-                            justifyContent: E._5.Between,
-                            alignItems: E.c.Center,
+                    var n = e.call(this, t) || this;
+                    return n.renderForClipsViewing = function() {
+                        return o.createElement("div", null, o.createElement(O._40, {
+                            id: _.TITLE_INPUT,
+                            "data-test-selector": _.TITLE_INPUT,
+                            value: n.state.title,
+                            onChange: n.handleTitleEdit,
+                            onKeyDown: n.handleKeyDown
+                        }), o.createElement(O._6, {
+                            display: O.P.Flex,
+                            justifyContent: O._5.Between,
+                            alignItems: O.c.Center,
                             padding: {
                                 top: 1
                             }
-                        }, i.state.showError ? o.createElement(E.O, {
-                            color: E.J.Error
-                        }, i.getErrorMessage()) : o.createElement(E.O, {
-                            color: E.J.Alt2
-                        }, i.getRemainingCharacterText()), o.createElement(E._6, {
-                            display: E.P.Flex
-                        }, o.createElement(E.u, {
-                            "data-test-selector": T.TITLE_SAVE,
-                            onClick: i.props.onCancel,
-                            type: E.A.Hollow
-                        }, Object(l.d)("Cancel", "ClipsTitleEdit")), o.createElement(E._6, {
+                        }, n.state.showError ? o.createElement(O.O, {
+                            color: O.J.Error
+                        }, n.getErrorMessage()) : o.createElement(O.O, {
+                            color: O.J.Alt2
+                        }, n.getRemainingCharacterText()), o.createElement(O._6, {
+                            display: O.P.Flex
+                        }, o.createElement(O.u, {
+                            "data-test-selector": _.TITLE_SAVE,
+                            onClick: n.props.onCancel,
+                            type: O.A.Hollow
+                        }, Object(l.d)("Cancel", "ClipsTitleEdit")), o.createElement(O._6, {
                             padding: {
                                 left: 1
                             }
-                        }, i.renderSave()))))
-                    }, i.renderForManager = function() {
-                        return o.createElement(E.U, {
-                            id: T.TITLE_INPUT,
+                        }, n.renderSave()))))
+                    }, n.renderForManager = function() {
+                        return o.createElement(O.U, {
+                            id: _.TITLE_INPUT,
                             label: Object(l.d)("Title", "ClipsTitleEdit"),
-                            hint: i.getRemainingCharacterText()
-                        }, o.createElement(E._6, {
-                            display: E.P.Flex,
-                            flexWrap: E.S.NoWrap
-                        }, o.createElement(E._6, {
+                            hint: n.getRemainingCharacterText()
+                        }, o.createElement(O._6, {
+                            display: O.P.Flex,
+                            flexWrap: O.S.NoWrap
+                        }, o.createElement(O._6, {
                             flexGrow: 1,
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(E._2, {
-                            id: T.TITLE_INPUT,
-                            "data-test-selector": T.TITLE_INPUT,
-                            type: E._3.Text,
-                            value: i.state.title,
-                            onChange: i.handleTitleEdit,
-                            onKeyDown: i.handleKeyDown
-                        })), o.createElement(E._6, {
+                        }, o.createElement(O._2, {
+                            id: _.TITLE_INPUT,
+                            "data-test-selector": _.TITLE_INPUT,
+                            type: O._3.Text,
+                            value: n.state.title,
+                            onChange: n.handleTitleEdit,
+                            onKeyDown: n.handleKeyDown
+                        })), o.createElement(O._6, {
                             flexShrink: 0,
                             flexGrow: 0
-                        }, o.createElement(E._6, {
-                            position: E._13.Relative
-                        }, i.renderSave(), o.createElement(E._4, {
-                            onClick: i.dismissMessage,
-                            "data-test-selector": T.TITLE_SAVE_TOOLTIP
-                        }, o.createElement(E.p, {
-                            direction: E.q.TopRight,
-                            show: i.state.showError || i.state.showSuccess
-                        }, o.createElement(E._6, {
+                        }, o.createElement(O._6, {
+                            position: O._13.Relative
+                        }, n.renderSave(), o.createElement(O._4, {
+                            onClick: n.dismissMessage,
+                            "data-test-selector": _.TITLE_SAVE_TOOLTIP
+                        }, o.createElement(O.p, {
+                            direction: O.q.TopRight,
+                            show: n.state.showError || n.state.showSuccess
+                        }, o.createElement(O._6, {
                             padding: 1
-                        }, i.state.showSuccess ? o.createElement(E.O, {
-                            color: E.J.Link
-                        }, Object(l.d)("Title Saved!", "ClipsTitleEdit")) : o.createElement(E.O, {
-                            color: E.J.Error
-                        }, i.getErrorMessage()))))))))
-                    }, i.renderForEdit = function() {
+                        }, n.state.showSuccess ? o.createElement(O.O, {
+                            color: O.J.Link
+                        }, Object(l.d)("Title Saved!", "ClipsTitleEdit")) : o.createElement(O.O, {
+                            color: O.J.Error
+                        }, n.getErrorMessage()))))))))
+                    }, n.renderForEdit = function() {
                         var e;
-                        if ((i.props.startOffset || 0 === i.props.startOffset) && i.props.endOffset) return e = i.state.showError ? o.createElement(E.O, {
-                            color: E.J.Alt2
-                        }, i.getErrorMessage()) : 0 === i.state.title.length && i.props.broadcasterName ? o.createElement(E.O, {
-                            color: E.J.Alt2
+                        if ((n.props.startOffset || 0 === n.props.startOffset) && n.props.endOffset) return e = n.state.showError ? o.createElement(O.O, {
+                            color: O.J.Alt2
+                        }, n.getErrorMessage()) : 0 === n.state.title.length && n.props.broadcasterName ? o.createElement(O.O, {
+                            color: O.J.Alt2
                         }, Object(l.d)("Clips with titles get more views. Help {broadcasterName} get discovered by adding a title.", {
-                            broadcasterName: i.props.broadcasterName
-                        }, "ClipsTitleEdit")) : o.createElement(E.O, {
-                            color: E.J.Alt2
-                        }, i.getRemainingCharacterText()), o.createElement(E._6, {
-                            display: E.P.Flex,
-                            flexWrap: E.S.NoWrap
-                        }, o.createElement(E._6, {
+                            broadcasterName: n.props.broadcasterName
+                        }, "ClipsTitleEdit")) : o.createElement(O.O, {
+                            color: O.J.Alt2
+                        }, n.getRemainingCharacterText()), o.createElement(O._6, {
+                            display: O.P.Flex,
+                            flexWrap: O.S.NoWrap
+                        }, o.createElement(O._6, {
                             flexGrow: 1,
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(E._2, {
-                            id: T.TITLE_INPUT,
-                            "data-test-selector": T.TITLE_INPUT,
-                            type: E._3.Text,
-                            value: i.state.title,
-                            onChange: i.handleTitleEdit,
-                            onKeyDown: i.handleKeyDown
-                        })), o.createElement(E._6, {
-                            display: E.P.Flex,
-                            justifyContent: E._5.Between,
-                            alignItems: E.c.Center,
+                        }, o.createElement(O._2, {
+                            id: _.TITLE_INPUT,
+                            "data-test-selector": _.TITLE_INPUT,
+                            type: O._3.Text,
+                            value: n.state.title,
+                            onChange: n.handleTitleEdit,
+                            onKeyDown: n.handleKeyDown
+                        })), o.createElement(O._6, {
+                            display: O.P.Flex,
+                            justifyContent: O._5.Between,
+                            alignItems: O.c.Center,
                             padding: {
                                 top: 1
                             }
-                        }, e, o.createElement(E._6, {
-                            display: E.P.Flex
-                        }, o.createElement(E._6, {
+                        }, e, o.createElement(O._6, {
+                            display: O.P.Flex
+                        }, o.createElement(O._6, {
                             padding: {
                                 left: 1
                             }
-                        }, o.createElement(b, {
-                            isSubmitted: i.state.showSuccess,
-                            title: i.state.title,
-                            slug: i.props.clipSlug,
-                            startOffset: i.props.startOffset,
-                            endOffset: i.props.endOffset,
-                            onError: i.onPublishClipError
+                        }, o.createElement(C, {
+                            isSubmitted: n.state.showSuccess,
+                            title: n.state.title,
+                            slug: n.props.clipSlug,
+                            startOffset: n.props.startOffset,
+                            endOffset: n.props.endOffset,
+                            onError: n.onPublishClipError
                         })))))
-                    }, i.renderSave = function() {
-                        return o.createElement(E.u, {
-                            "data-test-selector": T.TITLE_SAVE,
-                            disabled: !i.canSaveEditedTitle(),
-                            onClick: i.editClipTitle
+                    }, n.renderSave = function() {
+                        return o.createElement(O.u, {
+                            "data-test-selector": _.TITLE_SAVE,
+                            disabled: !n.canSaveEditedTitle(),
+                            onClick: n.editClipTitle
                         }, Object(l.d)("Save", "ClipsTitleEdit"))
-                    }, i.onPublishClipError = function(e) {
-                        i.errorMessageToError(e)
-                    }, i.getRemainingCharacterText = function() {
+                    }, n.onPublishClipError = function(e) {
+                        n.errorMessageToError(e)
+                    }, n.getRemainingCharacterText = function() {
                         return Object(l.d)("{characterCount, number} remaining", {
-                            characterCount: _ - i.state.title.length
+                            characterCount: b - n.state.title.length
                         }, "ClipsTitleEdit")
-                    }, i.onSuccess = function() {
-                        i.props.onSuccess && i.props.onSuccess(), i.setState({
+                    }, n.onSuccess = function() {
+                        n.props.onSuccess && n.props.onSuccess(), n.setState({
                             showSuccess: !0,
                             showError: !1,
                             error: null
                         }), setTimeout(function() {
-                            i.setState({
+                            n.setState({
                                 showSuccess: !1
                             })
                         }, 1500)
-                    }, i.dismissMessage = function() {
-                        i.setState({
+                    }, n.dismissMessage = function() {
+                        n.setState({
                             showError: !1,
                             showSuccess: !1
                         })
-                    }, i.handleTitleEdit = function(e) {
-                        var t = e.currentTarget.value.slice(0, _);
-                        i.setState({
+                    }, n.handleTitleEdit = function(e) {
+                        var t = e.currentTarget.value.slice(0, b);
+                        n.setState({
                             title: t,
                             showError: !1,
                             showSuccess: !1
                         })
-                    }, i.editClipTitle = function() {
-                        return s.__awaiter(i, void 0, void 0, function() {
+                    }, n.editClipTitle = function() {
+                        return s.__awaiter(n, void 0, void 0, function() {
                             var e, t;
-                            return s.__generator(this, function(i) {
-                                switch (i.label) {
+                            return s.__generator(this, function(n) {
+                                switch (n.label) {
                                     case 0:
                                         if ("" === this.state.title.trim()) return this.setState({
                                             showError: !0,
                                             error: h.emptySubmission
                                         }), [2];
-                                        i.label = 1;
+                                        n.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.props.editTitle(Object(c.a)({
+                                        return n.trys.push([1, 3, , 4]), [4, this.props.editTitle(Object(c.a)({
                                             title: this.state.title.trim(),
                                             slug: this.props.clipSlug
                                         }))];
                                     case 2:
-                                        return (e = i.sent()).data.updateClip && e.data.updateClip.error ? (this.setState({
+                                        return (e = n.sent()).data.updateClip && e.data.updateClip.error ? (this.setState({
                                             showError: !0,
                                             error: this.errorMessageToError(e.data.updateClip.error.message)
-                                        }), [2]) : (this.props.clipBroadcasterId && this.props.clipId && this.props.clipTitle && m(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.clipSlug, this.props.clipTitle, this.props.location), this.onSuccess(), [3, 4]);
+                                        }), [2]) : (this.props.clipBroadcasterId && this.props.clipId && this.props.clipTitle && f(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.clipSlug, this.props.clipTitle, this.props.location), this.onSuccess(), [3, 4]);
                                     case 3:
-                                        return t = i.sent(), this.setState({
+                                        return t = n.sent(), this.setState({
                                             showError: !0,
                                             error: this.errorMessageToError(t.message)
                                         }), [3, 4];
@@ -548,23 +838,23 @@ webpackJsonp([59], {
                                 }
                             })
                         })
-                    }, i.canSaveEditedTitle = function() {
-                        return i.props.clipTitle !== i.state.title.trim()
-                    }, i.handleKeyDown = function(e) {
+                    }, n.canSaveEditedTitle = function() {
+                        return n.props.clipTitle !== n.state.title.trim()
+                    }, n.handleKeyDown = function(e) {
                         switch (e.keyCode) {
                             case u.a.Enter:
-                                return void(i.props.location === p.PageviewLocation.ClipsEditing ? i.setState({
+                                return void(n.props.location === p.PageviewLocation.ClipsEditing ? n.setState({
                                     showSuccess: !0
-                                }) : i.canSaveEditedTitle() && i.editClipTitle());
+                                }) : n.canSaveEditedTitle() && n.editClipTitle());
                             default:
                                 return
                         }
-                    }, i.state = {
+                    }, n.state = {
                         title: t.clipTitle ? t.clipTitle.trim() : "",
                         showError: !1,
                         showSuccess: !1,
                         error: null
-                    }, i
+                    }, n
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
                     return this.props.location === p.PageviewLocation.MyClipsManager ? this.renderForManager() : this.props.location === p.PageviewLocation.ClipsEditing ? this.renderForEdit() : this.renderForClipsViewing()
@@ -578,24 +868,25 @@ webpackJsonp([59], {
                             return Object(l.d)("Whoops. Something went wrong.", "ClipsTitleEdit")
                     }
                 }, t.prototype.errorMessageToError = function(e) {
-                    return e.includes("403:") || e.toLowerCase() === n.InvalidTitle.toLowerCase() || e.toLowerCase() === r.InvalidTitle.toLowerCase() ? h.channelViolation : h.unknown
+                    return e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === r.InvalidTitle.toLowerCase() ? h.channelViolation : h.unknown
                 }, t
             }(o.Component),
-            O = Object(d.a)(C, {
+            w = Object(d.a)(k, {
                 name: "editTitle"
-            })(w);
-        i.d(t, !1, function() {
-            return T
-        }), i.d(t, !1, function() {
+            })(T);
+        n.d(t, !1, function() {
+            return _
+        }), n.d(t, !1, function() {
             return h
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
+            return T
+        }), n.d(t, "a", function() {
             return w
-        }), i.d(t, "a", function() {
-            return O
         })
     },
+    cJZy: function(e, t) {},
     f8OD: function(e, t) {
-        var i = {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -764,7 +1055,7 @@ webpackJsonp([59], {
                 end: 227
             }
         };
-        i.loc.source = {
+        n.loc.source = {
             body: "query ClipsRawMedia($slug: ID!) {\nclip(slug: $slug) {\nbroadcaster {\ndisplayName\n}\nrawMedia {\ndefaultClipInitialOffset\nduration\nfilmStripFrames\nfilmStripSecondsPerFrame\nframeHeight\nframeWidth\nspritesheetURL\nstatus\nvideoURL\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -772,25 +1063,25 @@ webpackJsonp([59], {
                 column: 1
             }
         };
-        e.exports = i
+        e.exports = n
     },
-    icZh: function(e, t, i) {
+    icZh: function(e, t, n) {
         "use strict";
         t.a = s, t.b = function(e) {
             var t = s();
             t && t.length >= a && (t = t.slice(1, a));
-            n.l.set(r, JSON.stringify(t.concat([e])))
+            i.l.set(r, JSON.stringify(t.concat([e])))
         };
-        var n = i("6sO2"),
+        var i = n("6sO2"),
             r = "MOST_RECENT_CLIPS_WATCHED_STORAGE_KEY",
             a = 10;
 
         function s() {
-            return JSON.parse(n.l.get(r, "[]"))
+            return JSON.parse(i.l.get(r, "[]"))
         }
     },
     isxN: function(e, t) {
-        var i = {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -903,7 +1194,7 @@ webpackJsonp([59], {
                 end: 120
             }
         };
-        i.loc.source = {
+        n.loc.source = {
             body: "mutation PublishClip($input: PublishClipInput!) {\npublishClip(input: $input) {\nclip {\ntitle\nslug\n}\nerror {\nmessage\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -911,19 +1202,19 @@ webpackJsonp([59], {
                 column: 1
             }
         };
-        e.exports = i
+        e.exports = n
     },
-    rqhk: function(e, t, i) {
+    rqhk: function(e, t, n) {
         "use strict";
-        var n = i("TToO"),
-            r = i("GiK3"),
-            a = i("kJau");
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = n("kJau");
 
         function s(e) {
             return function(t) {
-                return function(i) {
+                return function(n) {
                     function o(t) {
-                        var r = i.call(this, t) || this;
+                        var r = n.call(this, t) || this;
                         return r.messageHandlers = [], r.handlePlayerAdded = function() {
                             r.getPlayer() && !r.isConnected && (r.isConnected = !0, c.off(d, r.handlePlayerAdded), c.on(u, r.handlePlayerRemoved), window.addEventListener("message", r.onIncomingPlayerMessage))
                         }, r.handlePlayerRemoved = function() {
@@ -932,25 +1223,25 @@ webpackJsonp([59], {
                             var t = r.getPlayer();
                             t && t.postMessage(e, a.a)
                         }, r.onIncomingPlayerMessage = function(e) {
-                            e.origin === a.a && e.data.namespace === I && r.messageHandlers.forEach(function(t) {
+                            e.origin === a.a && e.data.namespace === R && r.messageHandlers.forEach(function(t) {
                                 t(e.data)
                             })
                         }, r.updatePlayerProps = function(t) {
-                            if (e.requestedPlayerProps && (t.method === w || t.method === O)) {
-                                var i = t.args[0],
+                            if (e.requestedPlayerProps && (t.method === T || t.method === w)) {
+                                var n = t.args[0],
                                     a = e.requestedPlayerProps.reduce(function(e, t) {
-                                        var n = i[t];
-                                        return void 0 !== n && r.state.playerProps[t] !== n && (e[t] = n), e
+                                        var i = n[t];
+                                        return void 0 !== i && r.state.playerProps[t] !== i && (e[t] = i), e
                                     }, {});
                                 Object.keys(a).length && r.setState({
-                                    playerProps: n.__assign({}, r.state.playerProps, a)
+                                    playerProps: i.__assign({}, r.state.playerProps, a)
                                 })
                             }
                         }, e.requestedPlayerProps && r.messageHandlers.push(r.updatePlayerProps), r.state = {
                             playerProps: {}
                         }, r
                     }
-                    return n.__extends(o, i), o.prototype.componentWillMount = function() {
+                    return i.__extends(o, n), o.prototype.componentWillMount = function() {
                         c.on(d, this.handlePlayerAdded)
                     }, o.prototype.componentWillUnmount = function() {
                         c.off(d, this.handlePlayerAdded), c.off(u, this.handlePlayerRemoved)
@@ -962,7 +1253,7 @@ webpackJsonp([59], {
                                 playerProps: this.state.playerProps
                             }
                         };
-                        return r.createElement(t, n.__assign({}, this.props, e))
+                        return r.createElement(t, i.__assign({}, this.props, e))
                     }, o.prototype.getPlayer = function() {
                         return l[e.playerId(this.props)]
                     }, o.prototype.registerMessageHandler = function(e) {
@@ -971,7 +1262,7 @@ webpackJsonp([59], {
                 }(r.Component)
             }
         }
-        var o = i("BzvE"),
+        var o = n("BzvE"),
             l = {},
             d = "player-storage-added",
             u = "player-storage-removed",
@@ -981,11 +1272,11 @@ webpackJsonp([59], {
             l[e] = t, c.emit(d)
         }
 
-        function m(e) {
+        function f(e) {
             delete l[e], c.emit(u)
         }
 
-        function f(e) {
+        function m(e) {
             return {
                 args: [void 0 === e.arg ? {} : e.arg],
                 method: e.method,
@@ -994,152 +1285,152 @@ webpackJsonp([59], {
         }
 
         function h() {
-            return f({
+            return m({
                 method: "pause"
             })
         }
 
         function g() {
-            return f({
+            return m({
                 method: "play"
             })
         }
 
         function v(e) {
-            return f({
+            return m({
                 method: "closeModeration",
                 arg: e
             })
         }
 
-        function E() {
-            return f({
-                method: C
+        function O() {
+            return m({
+                method: k
+            })
+        }
+
+        function E(e) {
+            return m({
+                method: b,
+                arg: e
             })
         }
 
         function y(e) {
-            return f({
+            return m({
                 method: _,
                 arg: e
             })
         }
 
-        function S(e) {
-            return f({
-                method: T,
-                arg: e
-            })
-        }
-
-        function k() {
-            return f({
+        function S() {
+            return m({
                 method: "fullscreen",
                 arg: !1
             })
         }
 
-        function b(e) {
-            return f({
+        function C(e) {
+            return m({
                 method: "setEditClip",
                 arg: e
             })
         }
-        var C = "subscribe",
-            T = "setclip",
-            _ = "setAutoplay",
-            w = "bridgestateupdate",
-            O = "bridgestorestateupdate",
+        var k = "subscribe",
+            _ = "setclip",
+            b = "setAutoplay",
+            T = "bridgestateupdate",
+            w = "bridgestorestateupdate",
             P = "player.embed.host",
-            I = "player.embed.client";
-        i.d(t, "t", function() {
+            R = "player.embed.client";
+        n.d(t, "t", function() {
             return s
-        }), i.d(t, "p", function() {
+        }), n.d(t, "p", function() {
             return l
-        }), i.d(t, "n", function() {
+        }), n.d(t, "n", function() {
             return d
-        }), i.d(t, "o", function() {
+        }), n.d(t, "o", function() {
             return u
-        }), i.d(t, "i", function() {
+        }), n.d(t, "i", function() {
             return c
-        }), i.d(t, "s", function() {
+        }), n.d(t, "s", function() {
             return p
-        }), i.d(t, "q", function() {
-            return m
-        }), i.d(t, !1, function() {
+        }), n.d(t, "q", function() {
             return f
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
+            return m
+        }), n.d(t, !1, function() {
             return h
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
             return g
-        }), i.d(t, "h", function() {
+        }), n.d(t, "h", function() {
             return v
-        }), i.d(t, "m", function() {
-            return E
-        }), i.d(t, "k", function() {
-            return y
-        }), i.d(t, "l", function() {
-            return S
-        }), i.d(t, "j", function() {
-            return k
-        }), i.d(t, "r", function() {
-            return b
-        }), i.d(t, "g", function() {
-            return C
-        }), i.d(t, "f", function() {
-            return T
-        }), i.d(t, "e", function() {
-            return _
-        }), i.d(t, "c", function() {
-            return w
-        }), i.d(t, "d", function() {
+        }), n.d(t, "m", function() {
             return O
-        }), i.d(t, "b", function() {
+        }), n.d(t, "k", function() {
+            return E
+        }), n.d(t, "l", function() {
+            return y
+        }), n.d(t, "j", function() {
+            return S
+        }), n.d(t, "r", function() {
+            return C
+        }), n.d(t, "g", function() {
+            return k
+        }), n.d(t, "f", function() {
+            return _
+        }), n.d(t, "e", function() {
+            return b
+        }), n.d(t, "c", function() {
+            return T
+        }), n.d(t, "d", function() {
+            return w
+        }), n.d(t, "b", function() {
             return P
-        }), i.d(t, "a", function() {
-            return I
-        }), i.d(t, !1, function() {
+        }), n.d(t, "a", function() {
+            return R
+        }), n.d(t, !1, function() {
             return "report"
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
             return "delete"
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
             return "deleteAll"
         })
     },
     vtXo: function(e, t) {},
-    vwd7: function(e, t, i) {
+    vwd7: function(e, t, n) {
         "use strict";
-        var n, r = i("TToO"),
-            a = i("GiK3"),
-            s = i("CSlQ"),
-            o = i("rqhk"),
-            l = i("kJau"),
-            d = i("icZh"),
-            u = i("46tX"),
-            c = i("Odds");
-        i("vtXo");
+        var i, r = n("TToO"),
+            a = n("GiK3"),
+            s = n("CSlQ"),
+            o = n("rqhk"),
+            l = n("kJau"),
+            d = n("icZh"),
+            u = n("46tX"),
+            c = n("Odds");
+        n("vtXo");
         ! function(e) {
             e.Viewing = "clips-viewing", e.Editing = "clips-editing"
-        }(n || (n = {}));
+        }(i || (i = {}));
         var p = function(e) {
             function t(t) {
-                var i = e.call(this, t) || this;
-                i.hasSetPlayerRef = !1, i.setInitialSlug = function(e) {
-                    i.state.initialSlug || (i.setState({
+                var n = e.call(this, t) || this;
+                n.hasSetPlayerRef = !1, n.setInitialSlug = function(e) {
+                    n.state.initialSlug || (n.setState({
                         initialSlug: e
                     }), Object(d.b)(e))
-                }, i.setPlayerRef = function(e) {
-                    i.playerRef = e
-                }, i.setIsLoaded = function() {
-                    i.setState({
+                }, n.setPlayerRef = function(e) {
+                    n.playerRef = e
+                }, n.setIsLoaded = function() {
+                    n.setState({
                         isLoaded: !0
-                    }), i.props.onLoaded && i.props.onLoaded()
+                    }), n.props.onLoaded && n.props.onLoaded()
                 };
-                var n = i.props.slug;
-                return i.state = {
-                    initialSlug: n,
+                var i = n.props.slug;
+                return n.state = {
+                    initialSlug: i,
                     isLoaded: !1
-                }, n && Object(d.b)(n), i
+                }, i && Object(d.b)(i), n
             }
             return r.__extends(t, e), t.prototype.componentDidMount = function() {
                 this.setInitialSlug(this.props.slug)
@@ -1185,11 +1476,11 @@ webpackJsonp([59], {
                 autoReportInteractive: !0
             })], t)
         }(a.Component);
-        i.d(t, "a", function() {
-            return n
-        }), i.d(t, "b", function() {
+        n.d(t, "a", function() {
+            return i
+        }), n.d(t, "b", function() {
             return p
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-c859fa0a862490769a092c38a6545f05.js.map
+//# sourceMappingURL=sites.clips.pages.create-8b91625b6d6e81b66e9d3dc93af72fcb.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([36, 83], {
+webpackJsonp([37, 84], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -4446,7 +4446,7 @@ webpackJsonp([36, 83], {
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return i.trys.push([0, 2, , 3]), [4, U.a.get("/kraken/raids?client_id=" + C.a.authClientID + "&api_version=" + C.a.defaultAPIVersion + "&target_id=" + e)];
+                                    return i.trys.push([0, 2, , 3]), [4, U.a.get("/kraken/raids?client_id=" + C.a.authSettings.clientID + "&api_version=" + C.a.defaultAPIVersion + "&target_id=" + e)];
                                 case 1:
                                     return t = i.sent(), [2, this.deserialize(t)];
                                 case 2:
@@ -4478,8 +4478,8 @@ webpackJsonp([36, 83], {
             P = n("g7wA"),
             H = n("O9wU"),
             W = n("jPU6"),
-            z = n("y1/w"),
-            q = (n("MSFW"), n("L0RX")),
+            q = n("y1/w"),
+            z = (n("MSFW"), n("L0RX")),
             G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4557,7 +4557,7 @@ webpackJsonp([36, 83], {
                         zIndex: N._54.Above,
                         "data-a-target": "recent-raids-item-hover"
                     }, this.props.slideInContent, e)
-                }, t = i.__decorate([Object(E.a)(z, {
+                }, t = i.__decorate([Object(E.a)(q, {
                     options: function(e) {
                         return {
                             variables: {
@@ -4574,7 +4574,7 @@ webpackJsonp([36, 83], {
                             update: function(t, n) {
                                 ! function(e, t, n) {
                                     var i = e.readQuery({
-                                        query: z,
+                                        query: q,
                                         variables: {
                                             targetUserID: n.raiderUserID,
                                             channelID: n.channelID
@@ -4584,7 +4584,7 @@ webpackJsonp([36, 83], {
                                         isPermanent: !0,
                                         __typename: "ChatRoomBanStatus"
                                     }), e.writeQuery({
-                                        query: z,
+                                        query: q,
                                         variables: {
                                             targetUserID: n.raiderUserID,
                                             channelID: n.channelID
@@ -4595,14 +4595,14 @@ webpackJsonp([36, 83], {
                             }
                         }
                     }
-                }), Object(E.a)(q, {
+                }), Object(E.a)(z, {
                     name: "unbanUser",
                     options: function(e) {
                         return {
                             update: function(t) {
                                 ! function(e, t) {
                                     var n = e.readQuery({
-                                        query: z,
+                                        query: q,
                                         variables: {
                                             targetUserID: t.raiderUserID,
                                             channelID: t.channelID
@@ -4613,7 +4613,7 @@ webpackJsonp([36, 83], {
                                             chatRoomBanStatus: null
                                         });
                                         e.writeQuery({
-                                            query: z,
+                                            query: q,
                                             variables: {
                                                 targetUserID: t.raiderUserID,
                                                 channelID: t.channelID
@@ -5467,13 +5467,14 @@ webpackJsonp([36, 83], {
         var i = n("xA5w");
         e.exports = function(e, t, n) {
             var r = i(e),
-                a = void 0 !== n ? n : 1,
-                o = i(t).getTime();
-            if (r.getTime() > o) throw new Error("The first date cannot be after the second date");
-            var s = [],
-                l = r;
-            for (l.setHours(0, 0, 0, 0); l.getTime() <= o;) s.push(i(l)), l.setDate(l.getDate() + a);
-            return s
+                a = i(t),
+                o = void 0 !== n ? n : 1,
+                s = a.getTime();
+            if (r.getTime() > s) throw new Error("The first date cannot be after the second date");
+            var l = [],
+                c = r;
+            for (c.setHours(0, 0, 0, 0); c.getTime() <= s;) l.push(i(c)), c.setDate(c.getDate() + o);
+            return l
         }
     },
     MIQa: function(e, t, n) {
@@ -6116,157 +6117,6 @@ webpackJsonp([36, 83], {
                     client_time: Math.floor(e.clientTime / 1e3)
                 }))
             }
-    },
-    "QU+n": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "badge"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "Badge"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "id"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "setID"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "version"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "title"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        alias: {
-                            kind: "Name",
-                            value: "image1x"
-                        },
-                        name: {
-                            kind: "Name",
-                            value: "imageURL"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "size"
-                            },
-                            value: {
-                                kind: "EnumValue",
-                                value: "NORMAL"
-                            }
-                        }],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        alias: {
-                            kind: "Name",
-                            value: "image2x"
-                        },
-                        name: {
-                            kind: "Name",
-                            value: "imageURL"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "size"
-                            },
-                            value: {
-                                kind: "EnumValue",
-                                value: "DOUBLE"
-                            }
-                        }],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        alias: {
-                            kind: "Name",
-                            value: "image4x"
-                        },
-                        name: {
-                            kind: "Name",
-                            value: "imageURL"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "size"
-                            },
-                            value: {
-                                kind: "EnumValue",
-                                value: "QUADRUPLE"
-                            }
-                        }],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "clickAction"
-                        },
-                        arguments: [],
-                        directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "clickURL"
-                        },
-                        arguments: [],
-                        directives: []
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 170
-            }
-        };
-        n.loc.source = {
-            body: "fragment badge on Badge {\nid\nsetID\nversion\ntitle\nimage1x: imageURL(size: NORMAL)\nimage2x: imageURL(size: DOUBLE)\nimage4x: imageURL(size: QUADRUPLE)\nclickAction\nclickURL\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     },
     Qbo9: function(e, t, n) {
         var i = n("Moxe");
@@ -6930,18 +6780,18 @@ webpackJsonp([36, 83], {
                 }, e)
             })(P),
             W = n("70dR"),
-            z = (n("z4Db"), n("kOMe"));
+            q = (n("z4Db"), n("kOMe"));
         n.d(t, "b", function() {
-            return q
+            return z
         }), n.d(t, "a", function() {
             return J
         });
-        var q, G = "channel-header__edit-profile-overlay",
+        var z, G = "channel-header__edit-profile-overlay",
             Y = "channel-header__verified-badge",
             K = "channel-header__live-indicator";
         ! function(e) {
             e[e.Channel = 1] = "Channel", e[e.Clips = 2] = "Clips", e[e.Collections = 3] = "Collections", e[e.Events = 4] = "Events", e[e.Success = 5] = "Success", e[e.Followers = 6] = "Followers", e[e.Following = 7] = "Following", e[e.Videos = 8] = "Videos"
-        }(q || (q = {}));
+        }(z || (z = {}));
         var J = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
@@ -7036,11 +6886,11 @@ webpackJsonp([36, 83], {
                     u = 0,
                     m = s.a.defaultAvatarURL;
                 this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, u = this.props.data.user.follows.totalCount, m = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles && this.props.data.user.roles.isPartner);
-                var p = this.state.live && !this.isActiveTab(q.Channel),
+                var p = this.state.live && !this.isActiveTab(z.Channel),
                     h = this.createChannelLinks(n, i, u),
                     f = {
                         "channel-header__user": !0,
-                        "channel-header__user--selected": this.isActiveTab(q.Channel)
+                        "channel-header__user--selected": this.isActiveTab(z.Channel)
                     },
                     g = null;
                 this.canRenderBitsButton() && (g = a.createElement(C._6, {
@@ -7077,7 +6927,7 @@ webpackJsonp([36, 83], {
                     lineCount: 1,
                     width: 120
                 })), p && this.ChannelStatusIndicatorElement, t && this.verifiedBadgeElement);
-                v = this.isActiveTab(q.Channel) ? a.createElement("div", {
+                v = this.isActiveTab(z.Channel) ? a.createElement("div", {
                     className: "channel-header__banner-toggle",
                     onClick: this.toggleChannelBanner,
                     "data-target": "channel-header__channel-link",
@@ -7089,7 +6939,7 @@ webpackJsonp([36, 83], {
                 }, b) : b;
                 var k = this.state.bannerHidden ? C.P.HideAccessible : C.P.Block,
                     y = null;
-                return this.isActiveTab(q.Channel) && (y = a.createElement(C._6, {
+                return this.isActiveTab(z.Channel) && (y = a.createElement(C._6, {
                     display: k
                 }, a.createElement(B, {
                     channelLogin: this.props.channelLogin,
@@ -7257,37 +7107,37 @@ webpackJsonp([36, 83], {
                     count: Object(s.e)(e),
                     pathSuffix: "videos/all",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(q.Videos)
+                    isSelected: this.isActiveTab(z.Videos)
                 }, {
                     label: Object(s.d)("Clips", "ChannelHeader"),
                     pathSuffix: "clips",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(q.Clips)
+                    isSelected: this.isActiveTab(z.Clips)
                 }, {
                     label: Object(s.d)("Collections", "ChannelHeader"),
                     pathSuffix: "collections",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(q.Collections)
+                    isSelected: this.isActiveTab(z.Collections)
                 }, {
                     label: Object(s.d)("Events", "ChannelHeader"),
                     pathSuffix: "events",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(q.Events)
+                    isSelected: this.isActiveTab(z.Events)
                 }, {
                     label: Object(s.d)("Followers", "ChannelHeader"),
                     count: Object(s.e)(t),
                     pathSuffix: "followers",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(q.Followers)
+                    isSelected: this.isActiveTab(z.Followers)
                 }, {
                     label: Object(s.d)("Following", "ChannelHeader"),
                     count: Object(s.e)(n),
                     pathSuffix: "following",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(q.Following)
+                    isSelected: this.isActiveTab(z.Following)
                 }]
             }, t.prototype.isActiveTab = function(e) {
-                return q[this.props.currentPage] === q[e]
+                return z[this.props.currentPage] === z[e]
             }, t.prototype.isChannelEditor = function() {
                 return !!this.props.data && !!this.props.data.currentUser && !!this.props.data.user && !!this.props.data.currentUser.roles && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin)
             }, t.prototype.getChannelHeaderSize = function() {
@@ -7324,7 +7174,7 @@ webpackJsonp([36, 83], {
                     }
                 }
             }, t.prototype.canRenderBitsButton = function() {
-                return this.props.data && !this.props.data.loading && this.props.currentPage !== q.Clips && this.props.data.currentUser && this.props.data.user && this.props.data.user.cheer
+                return this.props.data && !this.props.data.loading && this.props.currentPage !== z.Clips && this.props.data.currentUser && this.props.data.user && this.props.data.user.cheer
             }, t.prototype.getWidth = function(e) {
                 return e ? {
                     width: e.clientWidth
@@ -7333,7 +7183,7 @@ webpackJsonp([36, 83], {
                 }
             }, t.prototype.reportInteractive = function() {
                 !this.props.data || this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
-            }, t = i.__decorate([Object(u.a)(z, {
+            }, t = i.__decorate([Object(u.a)(q, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7669,7 +7519,7 @@ webpackJsonp([36, 83], {
             })
         }, t.b = function(e, t, n) {
             if (void 0 === n) throw new Error("No default avatar selected.");
-            return fetch(r.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + r.a.authClientID + "&api_version=" + r.a.defaultAPIVersion, {
+            return fetch(r.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + r.a.authSettings.clientID + "&api_version=" + r.a.defaultAPIVersion, {
                 method: "PUT",
                 headers: {
                     Authorization: "OAuth " + t,
@@ -7685,7 +7535,7 @@ webpackJsonp([36, 83], {
                 return i.__generator(this, function(i) {
                     switch (i.label) {
                         case 0:
-                            return [4, fetch(r.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + r.a.authClientID + "&api_version=" + r.a.defaultAPIVersion + "&image_type=" + n + "&format=" + a, {
+                            return [4, fetch(r.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + r.a.authSettings.clientID + "&api_version=" + r.a.defaultAPIVersion + "&image_type=" + n + "&format=" + a, {
                                 method: "POST",
                                 headers: {
                                     Authorization: "OAuth " + t
@@ -8400,7 +8250,7 @@ webpackJsonp([36, 83], {
                     }))
                 }, t
             }(c.Component),
-            z = (n("q8Cw"), function(e) {
+            q = (n("q8Cw"), function(e) {
                 var t = Object(u.d)("Something's wrong!", "Bits--WatchAdError"),
                     n = Object(u.d)("Something went wrong. Wait a while and try again.", "Bits--WatchAdError"),
                     r = "adserrorgeneric";
@@ -8466,7 +8316,7 @@ webpackJsonp([36, 83], {
                     color: v.J.Alt2
                 }, n), a)
             }),
-            q = n("CSlQ"),
+            z = n("CSlQ"),
             G = n("aqNN"),
             Y = (n("6Rwu"), "storage.wateb.agreedToWatebTerms.v1"),
             K = "bits-show-wateb-terms",
@@ -8692,7 +8542,7 @@ webpackJsonp([36, 83], {
                                 truexUserID: this.props.data.currentUser.idSHA1
                             });
                         case N.Error:
-                            return c.createElement(z, {
+                            return c.createElement(q, {
                                 type: this.state.watebError || i.Unknown,
                                 onClose: this.props.onClose,
                                 onTryAgain: this.resetAdErrorState
@@ -8721,7 +8571,7 @@ webpackJsonp([36, 83], {
                     }
                 })], t)
             }(c.Component),
-            $ = Object(S.compose)(Object(q.d)("BitsBuyCard", {
+            $ = Object(S.compose)(Object(z.d)("BitsBuyCard", {
                 autoReportInteractive: !0,
                 destination: w.a.BitsBuyCard
             }))(Q);
@@ -13322,11 +13172,11 @@ webpackJsonp([36, 83], {
                 return "" !== e.parentId
             },
             W = Number.MAX_VALUE,
-            z = Number.MIN_VALUE,
-            q = function(e) {
+            q = Number.MIN_VALUE,
+            z = function(e) {
                 return a.__assign({
                     commentCount: 0,
-                    maxOffset: z,
+                    maxOffset: q,
                     minOffset: W,
                     parentComments: {},
                     offsets: {},
@@ -13453,7 +13303,7 @@ webpackJsonp([36, 83], {
         }
         var oe = function(e) {
                 return a.__assign({
-                    comments: q(),
+                    comments: z(),
                     currentVideoTime: 0,
                     cursor: {
                         future: P,
@@ -13534,7 +13384,7 @@ webpackJsonp([36, 83], {
                         });
                     case v:
                         return a.__assign({}, e, {
-                            comments: G(q(), t.comments),
+                            comments: G(z(), t.comments),
                             hasLoadedData: !0,
                             cursor: t.cursor,
                             replyCursorMap: {}
@@ -13545,7 +13395,7 @@ webpackJsonp([36, 83], {
                         });
                     case o:
                         return a.__assign({}, e, {
-                            comments: G(q(), t.comments),
+                            comments: G(z(), t.comments),
                             cursor: t.cursor,
                             hasLoadedData: !0,
                             errorMessage: ""
@@ -13901,18 +13751,18 @@ webpackJsonp([36, 83], {
             Pe = "channel_id",
             He = "limit",
             We = "video_id",
-            ze = 50;
+            qe = 50;
 
-        function qe(e) {
+        function ze(e) {
             var t;
             return t = function(e) {
                 return "userId" in e
             }(e) ? function(e) {
                 var t = {};
-                return t[He] = ze.toString(), t[Pe] = e.userId, void 0 !== e.cursor && (t[Te] = e.cursor), "/v5/videos/comments?" + pe.stringify(t)
+                return t[He] = qe.toString(), t[Pe] = e.userId, void 0 !== e.cursor && (t[Te] = e.cursor), "/v5/videos/comments?" + pe.stringify(t)
             }(e) : function(e) {
                 var t = {};
-                return t[He] = ze.toString(), t[We] = e.videoId, void 0 !== e.cursor && (t[Te] = e.cursor), "/v5/videos/comments?" + pe.stringify(t)
+                return t[He] = qe.toString(), t[We] = e.videoId, void 0 !== e.cursor && (t[Te] = e.cursor), "/v5/videos/comments?" + pe.stringify(t)
             }(e), he.a.getOrThrow(t).then(function(t) {
                 return Be(t.body, e.bitsConfig)
             })
@@ -14031,7 +13881,7 @@ webpackJsonp([36, 83], {
             mt = n("uTyw"),
             pt = n("E8Jt"),
             ht = function(e, t) {
-                return qe(t).then(function(n) {
+                return ze(t).then(function(n) {
                     var i, r;
                     e.dispatch((i = n, r = t.bitsConfig, a.__assign({
                         type: o
@@ -14227,7 +14077,7 @@ webpackJsonp([36, 83], {
             Pt = "",
             Ht = -1,
             Wt = !1,
-            zt = function(e, t) {
+            qt = function(e, t) {
                 return a.__awaiter(Bt, void 0, void 0, function() {
                     return a.__generator(this, function(n) {
                         if (Wt) return [2, Promise.resolve()];
@@ -14256,7 +14106,7 @@ webpackJsonp([36, 83], {
                     })
                 })
             },
-            qt = function(e, t) {
+            zt = function(e, t) {
                 return a.__awaiter(Bt, void 0, void 0, function() {
                     return a.__generator(this, function(n) {
                         return [2, Fe(t).then(function(t) {
@@ -15034,8 +14884,8 @@ webpackJsonp([36, 83], {
             },
             Hn = n("+V/3"),
             Wn = n("5Nu7"),
-            zn = n("rCmJ"),
-            qn = n("2hJ3"),
+            qn = n("rCmJ"),
+            zn = n("2hJ3"),
             Gn = function(e, t) {
                 var n = new URL("https://www.twitch.tv/videos/" + e);
                 if (t) {
@@ -15202,7 +15052,7 @@ webpackJsonp([36, 83], {
                                 t: Object(Yn.a)(e.contentOffset),
                                 comment: e.id
                             });
-                        return Object(qn.a)(i.toString()), t.setState({
+                        return Object(zn.a)(i.toString()), t.setState({
                             isLinkCopied: !0
                         }, function() {
                             return t.dismissTimeoutID = setTimeout(function() {
@@ -15240,7 +15090,7 @@ webpackJsonp([36, 83], {
                 }, t.prototype.render = function() {
                     return kt.createElement(yt._6, {
                         position: yt._13.Relative
-                    }, kt.createElement(zn.a, {
+                    }, kt.createElement(qn.a, {
                         onClickOut: this.closeMenu
                     }, kt.createElement(yt.v, {
                         ariaLabel: Object(r.d)("Message Actions Menu", "VideoCommentsMenu"),
@@ -15996,7 +15846,7 @@ webpackJsonp([36, 83], {
                                     videoID: n.videoID
                                 };
                                 if (n.highlightTimestamp && n.currentVideoTime !== n.highlightTimestamp) return;
-                                return n.highlightedMessageID && (r.highlightedMessageID = n.highlightedMessageID), void e(vt(zt, r))
+                                return n.highlightedMessageID && (r.highlightedMessageID = n.highlightedMessageID), void e(vt(qt, r))
                             }
                             if (n.offsetRange !== Ke) {
                                 if (st((l = {
@@ -16011,12 +15861,12 @@ webpackJsonp([36, 83], {
                                         currentVideoTime: l.currentVideoTime,
                                         offsetEndTime: l.offsetEndTime,
                                         offsetThreshold: l.offsetThreshold
-                                    })) return void e(vt(zt, {
+                                    })) return void e(vt(qt, {
                                     bitsConfig: t.bitsConfig,
                                     cursor: n.cursor.future,
                                     videoID: n.videoID
                                 }));
-                                if (o = (a = n).currentVideoTime < a.offsetRange.beginSec, s = a.currentVideoTime > a.offsetRange.endSec, o && lt(a.cursor) || s && st(a.cursor)) return void e(vt(zt, {
+                                if (o = (a = n).currentVideoTime < a.offsetRange.beginSec, s = a.currentVideoTime > a.offsetRange.endSec, o && lt(a.cursor) || s && st(a.cursor)) return void e(vt(qt, {
                                     bitsConfig: t.bitsConfig,
                                     offset: n.currentVideoTime,
                                     videoID: n.videoID
@@ -16029,7 +15879,7 @@ webpackJsonp([36, 83], {
                         if (Object(bn.m)(t.message)) {
                             var n = Object(re.d)("Sorry, commands are not supported in Chat on Videos yet.", "VideoChatPresentation");
                             e(h(n))
-                        } else e(vt(qt, t)), e(bt(Zt, t))
+                        } else e(vt(zt, t)), e(bt(Zt, t))
                     },
                     onError: function(t) {
                         e(h(t))
@@ -16041,7 +15891,7 @@ webpackJsonp([36, 83], {
                         e(y())
                     },
                     onLoadMoreReplies: function(t, n, i, r) {
-                        e(vt(zt, ot(t, n, i, r)))
+                        e(vt(qt, ot(t, n, i, r)))
                     },
                     onDisableSync: function() {
                         e(w())
@@ -16127,11 +15977,11 @@ webpackJsonp([36, 83], {
         }), n.d(t, "k", function() {
             return _t
         }), n.d(t, "p", function() {
-            return qt
+            return zt
         }), n.d(t, "r", function() {
             return Gt
         }), n.d(t, "y", function() {
-            return zt
+            return qt
         }), n.d(t, "H", function() {
             return Yt
         }), n.d(t, "D", function() {
@@ -18307,7 +18157,7 @@ webpackJsonp([36, 83], {
             }, u.createElement("li", null, e.children))
         }
 
-        function z(e) {
+        function q(e) {
             switch (e.level) {
                 case 4:
                     return u.createElement(A.O, {
@@ -18332,7 +18182,7 @@ webpackJsonp([36, 83], {
             }
         }
 
-        function q(e) {
+        function z(e) {
             return u.createElement(A.O, {
                 type: A._43.P,
                 ellipsis: !0
@@ -18360,8 +18210,8 @@ webpackJsonp([36, 83], {
                                 n = u.createElement(B, l.__assign({
                                     source: r,
                                     renderers: {
-                                        Paragraph: q,
-                                        Heading: z,
+                                        Paragraph: z,
+                                        Heading: q,
                                         Item: W
                                     }
                                 }, H))
@@ -20568,4 +20418,4 @@ webpackJsonp([36, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-fe018ee2e2acf3cf9b2f0e34fa7e3f8b.js.map
+//# sourceMappingURL=pages.video-watch-84f929fdd3c2e45d315b78e8f5703993.js.map

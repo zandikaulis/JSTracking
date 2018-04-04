@@ -11809,7 +11809,7 @@ webpackJsonp([34], {
                     var e = this.state.activeRoomID !== ci;
                     return l.createElement(f.a, {
                         channelLogin: this.props.channelLogin,
-                        clientID: c.a.authClientID,
+                        clientID: c.a.authSettings.clientID,
                         isBackground: e,
                         isEmbedded: this.props.isEmbedded,
                         isPopout: this.props.isPopout,
@@ -22325,7 +22325,7 @@ webpackJsonp([34], {
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return i.trys.push([0, 2, , 3]), [4, P.a.get("/kraken/raids?client_id=" + C.a.authClientID + "&api_version=" + C.a.defaultAPIVersion + "&target_id=" + e)];
+                                    return i.trys.push([0, 2, , 3]), [4, P.a.get("/kraken/raids?client_id=" + C.a.authSettings.clientID + "&api_version=" + C.a.defaultAPIVersion + "&target_id=" + e)];
                                 case 1:
                                     return t = i.sent(), [2, this.deserialize(t)];
                                 case 2:
@@ -46687,4 +46687,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-cd57a7182f68390567f46b4b5e69ff11.js.map
+//# sourceMappingURL=pages.popout-chat-2eb2bf7325737a1d50e7bf1fd14d0d8b.js.map

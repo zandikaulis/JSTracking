@@ -1,4 +1,4 @@
-webpackJsonp([80], {
+webpackJsonp([81], {
     "1myv": function(e, t) {
         var n = {
             kind: "Document",
@@ -1349,4 +1349,4 @@ webpackJsonp([80], {
         })(k)
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-973070957ab08cb20e8aafe1b3c2c137.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-5b7806f11c9e21b27c57f378a4a3a8a2.js.map

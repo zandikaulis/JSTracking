@@ -2442,7 +2442,7 @@ webpackJsonp([51], {
             })
         }, t.b = function(e, t, n) {
             if (void 0 === n) throw new Error("No default avatar selected.");
-            return fetch(a.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + a.a.authClientID + "&api_version=" + a.a.defaultAPIVersion, {
+            return fetch(a.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + a.a.authSettings.clientID + "&api_version=" + a.a.defaultAPIVersion, {
                 method: "PUT",
                 headers: {
                     Authorization: "OAuth " + t,
@@ -2458,7 +2458,7 @@ webpackJsonp([51], {
                 return i.__generator(this, function(i) {
                     switch (i.label) {
                         case 0:
-                            return [4, fetch(a.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + a.a.authClientID + "&api_version=" + a.a.defaultAPIVersion + "&image_type=" + n + "&format=" + r, {
+                            return [4, fetch(a.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + a.a.authSettings.clientID + "&api_version=" + a.a.defaultAPIVersion + "&image_type=" + n + "&format=" + r, {
                                 method: "POST",
                                 headers: {
                                     Authorization: "OAuth " + t
@@ -5906,4 +5906,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-0499f78f73dcd977d8d1741a988b2d93.js.map
+//# sourceMappingURL=pages.channel-collections-ccac562dd216f3ab5c5c0bf46ba6c7a2.js.map

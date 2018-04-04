@@ -1,4 +1,4 @@
-webpackJsonp([72], {
+webpackJsonp([73], {
     "1f48": function(e, t) {},
     "2TZ0": function(e, t) {
         var n = {
@@ -1582,9 +1582,12 @@ webpackJsonp([72], {
                         display: P.P.Flex,
                         overflow: P._9.Hidden,
                         alignItems: P.c.Center
-                    }, r.createElement(P._4, {
+                    }, r.createElement("div", {
                         onClick: this.onRowClick,
-                        alpha: !0
+                        style: {
+                            cursor: "pointer",
+                            width: "100%"
+                        }
                     }, r.createElement(P.W, {
                         "data-target": this.props.dataTarget
                     }, r.createElement(P.K, {
@@ -1706,11 +1709,13 @@ webpackJsonp([72], {
                         })
                     }, n.selectClip = function(e, t) {
                         void 0 === t && (t = !0), n.setState(function(n) {
-                            var a;
-                            if (t) a = n.selectedClipSlugs.concat([e]);
+                            var a = n.selectedClipSlugs;
+                            if (t) a = a.concat([e]);
                             else {
-                                var i = n.selectedClipSlugs.indexOf(e);
-                                a = n.selectedClipSlugs.splice(i, 1)
+                                var i = a.indexOf(e);
+                                a = a.filter(function(e, t) {
+                                    return t !== i
+                                })
                             }
                             return {
                                 selectedClipSlugs: a
@@ -3794,4 +3799,4 @@ webpackJsonp([72], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-29fa4312bf81fe6707b94d4f5181b9e3.js.map
+//# sourceMappingURL=pages.clips-manager-74f0f2bfb8b594d95344348220b097a2.js.map

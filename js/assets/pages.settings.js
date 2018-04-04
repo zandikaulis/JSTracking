@@ -1578,15 +1578,14 @@ webpackJsonp([47], {
             v = n("Ejve"),
             b = n("w9tK"),
             y = n("vH/s"),
-            S = n("WrTc"),
-            k = n("GH+X"),
-            _ = n("AQc/"),
-            E = n("F8kA"),
-            C = function(e) {
+            S = n("GH+X"),
+            k = n("AQc/"),
+            _ = n("F8kA"),
+            E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderDashboardLink = function(e) {
-                        return t.props.user ? l.createElement(E.a, {
+                        return t.props.user ? l.createElement(_.a, {
                             key: "link",
                             to: "/" + t.props.user.login + "/dashboard/settings/autohost"
                         }, e) : l.createElement("span", {
@@ -1598,23 +1597,67 @@ webpackJsonp([47], {
                     var e = Object(d.d)("Auto Host settings have moved. You can find them in <x:link>your dashboard</x:link>.", {
                         "x:link": this.renderDashboardLink
                     }, "SettingsChannelPage");
-                    return l.createElement(_.a, {
+                    return l.createElement(k.a, {
                         title: Object(d.d)("Auto Hosting", "AutohostSettingsComponent"),
                         description: e
                     })
                 }, t
             }(l.Component);
-        var O = Object(i.b)(function(e) {
+        var C = Object(i.b)(function(e) {
                 return {
                     user: Object(s.c)(e)
                 }
-            })(C),
-            w = n("3zLD"),
-            N = n("7vx8"),
-            j = n("oIkB"),
-            T = n("bX1P");
+            })(E),
+            w = n("7vx8"),
+            O = n("Jo6h"),
+            N = n("Odds"),
+            U = n("nqey"),
+            j = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.data.currentUser && this.props.data.currentUser.bannedUsers && this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.props.data.currentUser && this.props.data.currentUser.bannedUsers && this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.data.currentUser && this.props.data.currentUser.bannedUsers && this.props.data.currentUser.bannedUsers.length > 0;
+                    return l.createElement(O.a, {
+                        label: Object(d.d)("Banned Chatters", "BannedChatters")
+                    }, e ? this.renderBannedChatters() : this.renderEmptyMessage())
+                }, t.prototype.renderBannedChatters = function() {
+                    var e = this.props.data.currentUser && this.props.data.currentUser.bannedUsers;
+                    return e ? e.filter(function(e) {
+                        return e && e.bannedUser && e.bannedUser.id
+                    }).map(function(e) {
+                        return l.createElement(N._46, {
+                            key: e.bannedUser.id,
+                            offsetY: "0",
+                            label: Object(d.d)("Banned by {modUserDisplayName} {durationAgo}", {
+                                modUserDisplayName: e.modUser && e.modUser.displayName || Object(d.d)("an unknown user", "BannedChatters"),
+                                durationAgo: Object(d.g)(new Date(e.bannedAt))
+                            }, "BannedChatters")
+                        }, l.createElement(N._29, {
+                            background: N.m.Alt2,
+                            padding: {
+                                x: 1,
+                                y: .5
+                            },
+                            margin: .5
+                        }, e.bannedUser && e.bannedUser.login))
+                    }) : null
+                }, t.prototype.renderEmptyMessage = function() {
+                    return l.createElement(N.O, {
+                        bold: !0
+                    }, Object(d.d)("There are no users banned from your chat.", "BannedChatters"))
+                }, t
+            }(l.Component),
+            T = Object(r.d)(Object(w.a)(U), Object(m.d)("BannedChatters"))(j),
+            D = n("3zLD"),
+            P = n("oIkB"),
+            I = n("bX1P");
 
-        function D() {
+        function x() {
             return function(e) {
                 var t = function(t) {
                     function n() {
@@ -1624,7 +1667,7 @@ webpackJsonp([47], {
                             return 0 === n.length ? Promise.reject("No channelID - unable to update chat settings.") : (e.logger.debug("Updating chat settings", {
                                 data: t,
                                 channelID: n
-                            }), e.props.updateChatSettings(Object(j.a)(c.__assign({}, t, {
+                            }), e.props.updateChatSettings(Object(P.a)(c.__assign({}, t, {
                                 channelID: n
                             }))))
                         }, e
@@ -1640,25 +1683,23 @@ webpackJsonp([47], {
                     return {
                         channelID: e.session.user && e.session.user.id || ""
                     }
-                }), Object(N.a)(T, {
+                }), Object(w.a)(I, {
                     name: "updateChatSettings"
                 }))(t)
             }
         }
-        var P = n("gLfK"),
-            x = n("Jo6h"),
-            I = n("Odds"),
-            U = function(e) {
+        var F = n("gLfK"),
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderBody = function() {
-                        return t.props.showPlaceholder ? l.createElement(I._12, null) : l.createElement(I._6, null, l.createElement(I._45, {
+                        return t.props.showPlaceholder ? l.createElement(N._12, null) : l.createElement(N._6, null, l.createElement(N._45, {
                             checked: t.props.checked,
                             error: t.props.error,
                             disabled: t.props.disabled,
                             onChange: t.onChange,
                             id: t.props.id
-                        }), l.createElement(P.a, {
+                        }), l.createElement(F.a, {
                             text: t.props.description
                         }))
                     }, t.onChange = function(e) {
@@ -1666,18 +1707,18 @@ webpackJsonp([47], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(x.a, {
+                    return l.createElement(O.a, {
                         id: this.props.id,
                         label: this.props.label,
                         error: this.props.error,
                         errorMessage: this.props.errorMessage,
-                        orientation: I.V.Horizontal
+                        orientation: N.V.Horizontal
                     }, this.renderBody())
                 }, t
             }(l.Component),
-            F = function(e) {
+            M = function(e) {
                 var t = e.saving || e.errorLoading;
-                return l.createElement(U, {
+                return l.createElement(A, {
                     id: "settings-channel-page-block-hyperlinks",
                     label: Object(d.d)("Block Hyperlinks", "BlockHyperlinksToggle"),
                     description: Object(d.d)("Your channel's chat will automatically delete posted URLs except for ones posted by you, moderators, and admins.", "BlockHyperlinksToggle"),
@@ -1688,8 +1729,8 @@ webpackJsonp([47], {
                     showPlaceholder: e.loading
                 })
             },
-            M = n("ar1V"),
-            A = function(e) {
+            L = n("ar1V"),
+            R = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1723,7 +1764,7 @@ webpackJsonp([47], {
                                                     })
                                                 })
                                             } : t
-                                        }, Object(j.d)(M, {}, t), this.logger.debug("Updated chat setting", {
+                                        }, Object(P.d)(L, {}, t), this.logger.debug("Updated chat setting", {
                                             hideLinks: e
                                         }), this.setState({
                                             saving: !1,
@@ -1759,7 +1800,7 @@ webpackJsonp([47], {
                     var e = this.props.data.currentUser,
                         t = e && e.chatSettings,
                         n = !!this.props.data.error || !this.props.data.loading && !t;
-                    return l.createElement(F, {
+                    return l.createElement(M, {
                         loading: this.props.data.loading,
                         saving: this.state.saving,
                         checked: this.state.checked,
@@ -1769,12 +1810,12 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            L = Object(w.compose)(Object(m.d)("BlockHyperlinksToggle"), Object(N.a)(M, {
+            B = Object(D.compose)(Object(m.d)("BlockHyperlinksToggle"), Object(w.a)(L, {
                 options: {
                     fetchPolicy: "network-only"
                 }
-            }), D())(A),
-            R = function(e) {
+            }), x())(R),
+            q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -1802,23 +1843,23 @@ webpackJsonp([47], {
                             label: Object(d.d)("6 seconds", "ChatDelayRadioButtons"),
                             selected: 6e3 === this.props.chatDelayMs
                         }];
-                    return l.createElement(x.a, {
-                        orientation: I.V.Horizontal,
+                    return l.createElement(O.a, {
+                        orientation: N.V.Horizontal,
                         label: Object(d.d)("Non-Mod Chat Delay", "ChatDelayRadioButtons"),
                         error: this.props.errorLoading || this.props.errorSaving
-                    }, l.createElement(I._6, {
-                        display: I.P.Flex,
-                        flexDirection: I.R.Row
+                    }, l.createElement(N._6, {
+                        display: N.P.Flex,
+                        flexDirection: N.R.Row
                     }, n.map(function(n) {
                         var i = "chat-delay:" + n.label;
-                        return l.createElement(I._6, {
+                        return l.createElement(N._6, {
                             key: i,
                             margin: {
                                 right: 2
                             },
-                            display: I.P.Flex,
-                            flexDirection: I.R.Row
-                        }, l.createElement(I._18, {
+                            display: N.P.Flex,
+                            flexDirection: N.R.Row
+                        }, l.createElement(N._18, {
                             checked: n.selected,
                             value: n.delay.toString(),
                             label: n.label,
@@ -1827,13 +1868,13 @@ webpackJsonp([47], {
                             disabled: t,
                             "data-test-selector": "chat-delay-radio:" + n.delay
                         }))
-                    })), l.createElement(P.a, {
+                    })), l.createElement(F.a, {
                         text: Object(d.d)("Adds a short delay before non-mods see messages. Any message that is timed out or banned during the delay is removed from chat completely.", "ChatDelayRadioButtons")
                     }))
                 }, t
             }(l.Component),
-            B = n("D2cp"),
-            V = function(e) {
+            V = n("D2cp"),
+            z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1868,7 +1909,7 @@ webpackJsonp([47], {
                                                     })
                                                 })
                                             } : t
-                                        }, Object(j.d)(B, {}, t), this.logger.debug("Updated chat setting", {
+                                        }, Object(P.d)(V, {}, t), this.logger.debug("Updated chat setting", {
                                             chatDelayInMs: e
                                         }), this.setState({
                                             saving: !1,
@@ -1902,7 +1943,7 @@ webpackJsonp([47], {
                     var e = this.props.data.currentUser,
                         t = e && e.chatSettings,
                         n = !!this.props.data.error || !this.props.data.loading && !t;
-                    return l.createElement(R, {
+                    return l.createElement(q, {
                         chatDelayMs: this.state.chatDelayMs,
                         saving: this.state.saving,
                         loading: this.props.data.loading,
@@ -1915,41 +1956,44 @@ webpackJsonp([47], {
                     return t && t.chatSettings && t.chatSettings.chatDelayMs || 0
                 }, t
             }(l.Component),
-            z = Object(w.compose)(Object(m.d)("ChatDelayRadioButtons"), Object(N.a)(B, {
+            H = Object(D.compose)(Object(m.d)("ChatDelayRadioButtons"), Object(w.a)(V, {
                 options: {
                     fetchPolicy: "network-only"
                 }
-            }), D())(V),
-            q = function(e) {
+            }), x())(z),
+            G = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
                     var e = null,
                         t = this.props.loading || this.props.saving || this.props.errorLoading;
-                    return (this.props.dirty || this.props.saving) && (e = l.createElement(I._6, {
+                    return (this.props.dirty || this.props.saving) && (e = l.createElement(N._6, {
                         margin: {
                             top: 1
                         }
-                    }, l.createElement(I.u, {
+                    }, l.createElement(N.u, {
                         onClick: this.props.onClickSave,
-                        state: this.props.saving ? I.z.Loading : I.z.Default
-                    }, Object(d.d)("Save Changes", "ChatRulesTextArea")))), l.createElement(x.a, {
-                        orientation: I.V.Horizontal,
+                        state: this.props.saving ? N.z.Loading : N.z.Default
+                    }, Object(d.d)("Save Changes", "ChatRulesTextArea")))), l.createElement(O.a, {
+                        orientation: N.V.Horizontal,
                         label: Object(d.d)("Chat Rules", "ChatRulesTextArea"),
                         error: this.props.errorLoading || this.props.errorSaving
-                    }, l.createElement(I._40, {
+                    }, l.createElement(N._40, {
                         disabled: t,
                         value: this.props.rules,
                         onChange: this.props.onChange,
+                        placeholder: this.renderPlaceholderString(),
                         rows: 5
-                    }), l.createElement(P.a, {
+                    }), l.createElement(F.a, {
                         text: Object(d.d)("Require first-time viewers to agree to your rules before chatting. One rule per line.", "ChatRulesTextArea")
                     }), e)
+                }, t.prototype.renderPlaceholderString = function() {
+                    return "- " + [Object(d.d)("Be excellent to each other.", "ChatRulesTextArea"), Object(d.d)("Have fun!", "ChatRulesTextArea")].join("\n- ")
                 }, t
             }(l.Component),
-            H = n("WaOj"),
-            W = function(e) {
+            W = n("WaOj"),
+            Y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1985,7 +2029,7 @@ webpackJsonp([47], {
                                                     })
                                                 })
                                             } : t
-                                        }, Object(j.d)(H, {}, t), this.logger.debug("Updated chat setting", {
+                                        }, Object(P.d)(W, {}, t), this.logger.debug("Updated chat setting", {
                                             rules: e
                                         }), this.setState(function(e) {
                                             return {
@@ -2022,7 +2066,7 @@ webpackJsonp([47], {
                     var e = this.props.data.currentUser,
                         t = e && e.chatSettings,
                         n = !!this.props.data.error || !this.props.data.loading && !t;
-                    return l.createElement(q, {
+                    return l.createElement(G, {
                         rules: this.state.rules,
                         dirty: this.state.initialRules !== this.state.rules,
                         saving: this.state.saving,
@@ -2037,14 +2081,14 @@ webpackJsonp([47], {
                     return t && t.chatSettings && t.chatSettings.rules.join("\n") || ""
                 }, t
             }(l.Component),
-            G = Object(w.compose)(Object(m.d)("ChatRulesTextArea"), Object(N.a)(H, {
+            J = Object(D.compose)(Object(m.d)("ChatRulesTextArea"), Object(w.a)(W, {
                 options: {
                     fetchPolicy: "network-only"
                 }
-            }), D())(W),
-            Y = function(e) {
+            }), x())(Y),
+            Q = function(e) {
                 var t = e.saving || e.errorLoading;
-                return l.createElement(U, {
+                return l.createElement(A, {
                     id: "settings-channel-page-email-verification",
                     label: Object(d.d)("Email Verification", "EmailVerificationToggle"),
                     description: Object(d.d)("Anyone that would like to send messages to your chat room must first verify their email address.", "EmailVerificationToggle"),
@@ -2055,8 +2099,8 @@ webpackJsonp([47], {
                     showPlaceholder: e.loading
                 })
             },
-            J = n("woYr"),
-            Q = function(e) {
+            K = n("woYr"),
+            X = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2090,7 +2134,7 @@ webpackJsonp([47], {
                                                     })
                                                 })
                                             } : t
-                                        }, Object(j.d)(J, {}, t), this.logger.debug("Updated chat setting", {
+                                        }, Object(P.d)(K, {}, t), this.logger.debug("Updated chat setting", {
                                             requireVerifiedAccount: e
                                         }), this.setState({
                                             saving: !1,
@@ -2126,7 +2170,7 @@ webpackJsonp([47], {
                     var e = this.props.data.currentUser,
                         t = e && e.chatSettings,
                         n = !!this.props.data.error || !this.props.data.loading && !t;
-                    return l.createElement(Y, {
+                    return l.createElement(Q, {
                         loading: this.props.data.loading,
                         saving: this.state.saving,
                         checked: this.state.checked,
@@ -2136,14 +2180,14 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            K = Object(w.compose)(Object(m.d)("EmailVerificationToggle"), Object(N.a)(J, {
+            $ = Object(D.compose)(Object(m.d)("EmailVerificationToggle"), Object(w.a)(K, {
                 options: {
                     fetchPolicy: "network-only"
                 }
-            }), D())(Q),
-            X = function(e) {
+            }), x())(X),
+            Z = function(e) {
                 var t = e.saving || e.errorLoading;
-                return l.createElement(U, {
+                return l.createElement(A, {
                     id: "settings-channel-page-mature-content",
                     label: Object(d.d)("Mature Content", "MatureContentToggle"),
                     description: Object(d.d)("Enable this setting if your stream contains content that may be inappropriate for younger audiences. You may never broadcast sexual activity, nudity, threats or extreme violence. Doing so will result in immediate, irrevocable termination of your account. Please make sure your content will comply with the <x:link>Terms of Service</x:link> before broadcasting", {
@@ -2161,9 +2205,9 @@ webpackJsonp([47], {
                     showPlaceholder: e.loading
                 })
             },
-            $ = n("UD8e"),
-            Z = n("oYVU"),
-            ee = function(e) {
+            ee = n("UD8e"),
+            te = n("oYVU"),
+            ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2188,7 +2232,7 @@ webpackJsonp([47], {
                                             }), !(t = this.props.data.currentUser && this.props.data.currentUser.id)) return this.logger.warn("No currentUser - unable to update broadcast settings."), [2];
                                         r.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, this.props.updateBroadcastSettings(Object(j.a)({
+                                        return r.trys.push([1, 3, , 4]), [4, this.props.updateBroadcastSettings(Object(P.a)({
                                             userID: t,
                                             isMature: e
                                         }))];
@@ -2203,7 +2247,7 @@ webpackJsonp([47], {
                                                     })
                                                 })
                                             } : t
-                                        }, Object(j.d)(Z, {}, n), this.logger.debug("Updated broadcast settings", {
+                                        }, Object(P.d)(te, {}, n), this.logger.debug("Updated broadcast settings", {
                                             isMature: e
                                         }), this.setState({
                                             saving: !1,
@@ -2239,7 +2283,7 @@ webpackJsonp([47], {
                     var e = this.props.data.currentUser,
                         t = e && e.broadcastSettings,
                         n = !!this.props.data.error || !this.props.data.loading && !t;
-                    return l.createElement(X, {
+                    return l.createElement(Z, {
                         checked: this.state.checked,
                         saving: this.state.saving,
                         loading: this.props.data.loading,
@@ -2249,19 +2293,19 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            te = Object(r.d)(Object(m.d)("MatureContentToggle"), Object(N.a)(Z, {
+            ie = Object(r.d)(Object(m.d)("MatureContentToggle"), Object(w.a)(te, {
                 options: {
                     fetchPolicy: "network-only"
                 }
-            }), Object(N.a)($, {
+            }), Object(w.a)(ee, {
                 name: "updateBroadcastSettings"
-            }))(ee),
-            ne = n("LIeg"),
-            ie = n("9u8h"),
-            re = n("6T7P"),
-            ae = n.n(re),
-            oe = n("5kgt"),
-            se = (n("jtEV"), function(e) {
+            }))(ne),
+            re = n("LIeg"),
+            ae = n("9u8h"),
+            oe = n("6T7P"),
+            se = n.n(oe),
+            ce = n("5kgt"),
+            le = (n("jtEV"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onDeclineClicked = function() {
@@ -2275,55 +2319,55 @@ webpackJsonp([47], {
                 }, t.prototype.render = function() {
                     var e = Object(d.d)("Accept", "TeamInvitationsItem"),
                         t = Object(d.d)("Decline", "TeamInvitationsItem");
-                    return l.createElement(I._6, c.__assign({
+                    return l.createElement(N._6, c.__assign({
                         padding: {
                             y: 1,
                             x: 1
                         }
-                    }, Object(oe.a)(this.props), {
+                    }, Object(ce.a)(this.props), {
                         className: "team-invitations-item"
-                    }), l.createElement(I.B, {
+                    }), l.createElement(N.B, {
                         row: !0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         className: "team-invitations-item__avatar"
-                    }, l.createElement(I.j, {
-                        ratio: I.k.Aspect1x1
+                    }, l.createElement(N.j, {
+                        ratio: N.k.Aspect1x1
                     }, l.createElement(m.b, {
-                        src: this.props.invitation.logo || ae.a,
+                        src: this.props.invitation.logo || se.a,
                         alt: Object(d.d)("{displayName} Team Logo", {
                             displayName: this.props.invitation.displayName
                         }, "TeamInvitationsItem")
-                    }))), l.createElement(I._6, {
+                    }))), l.createElement(N._6, {
                         flexGrow: 1,
-                        display: I.P.Flex,
-                        position: I._13.Relative
-                    }, l.createElement(I._0, {
+                        display: N.P.Flex,
+                        position: N._13.Relative
+                    }, l.createElement(N._0, {
                         padding: {
                             x: 1
                         },
                         flexGrow: 1
-                    }, l.createElement(I.O, {
-                        type: I._43.Span,
+                    }, l.createElement(N.O, {
+                        type: N._43.Span,
                         ellipsis: !0
-                    }, this.props.invitation.name))), l.createElement(I._6, {
+                    }, this.props.invitation.name))), l.createElement(N._6, {
                         padding: {
                             right: 2
                         }
-                    }, l.createElement(I.u, {
+                    }, l.createElement(N.u, {
                         ariaLabel: e,
                         onClick: this.onAcceptClick,
-                        type: I.A.Success,
+                        type: N.A.Success,
                         "data-test-selector": "TEAM_INVITATIONS_ITEM_ACCEPT_LINK"
-                    }, e)), l.createElement(I._6, null, l.createElement(I.u, {
+                    }, e)), l.createElement(N._6, null, l.createElement(N.u, {
                         ariaLabel: t,
                         onClick: this.onDeclineClicked,
-                        type: I.A.Alert,
+                        type: N.A.Alert,
                         "data-test-selector": "TEAM_INVITATIONS_ITEM_DECLINE_LINK"
                     }, t))))
                 }, t = c.__decorate([Object(m.d)("TeamInvitationsItem")], t)
             }(l.Component)),
-            ce = Object(m.d)("TeamInvitationsItem")(se),
-            le = function(e) {
+            ue = Object(m.d)("TeamInvitationsItem")(le),
+            de = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2331,12 +2375,12 @@ webpackJsonp([47], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this;
-                    return this.props.invitations.length < 1 && !this.props.formErrorMessage ? null : l.createElement(x.a, {
+                    return this.props.invitations.length < 1 && !this.props.formErrorMessage ? null : l.createElement(O.a, {
                         label: Object(d.d)("Invitations", "TeamInvitations"),
                         error: !!this.props.formErrorMessage,
                         errorMessage: this.props.formErrorMessage
                     }, this.props.invitations.map(function(t, n) {
-                        return l.createElement(ce, {
+                        return l.createElement(ue, {
                             key: t.name,
                             invitation: t,
                             index: n,
@@ -2346,77 +2390,77 @@ webpackJsonp([47], {
                     }))
                 }, t
             }(l.Component),
-            ue = Object(m.d)("TeamInvitations")(le),
-            de = (n("yHYq"), function(e) {
+            pe = Object(m.d)("TeamInvitations")(de),
+            me = (n("yHYq"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return l.createElement(I._6, c.__assign({
+                    return l.createElement(N._6, c.__assign({
                         padding: {
                             y: 1,
                             x: 1
                         }
-                    }, Object(oe.a)(this.props), {
+                    }, Object(ce.a)(this.props), {
                         className: "team-manager-item"
-                    }), l.createElement(I.B, {
+                    }), l.createElement(N.B, {
                         row: !0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         className: "team-manager-item__avatar"
-                    }, l.createElement(I.j, {
-                        ratio: I.k.Aspect1x1
+                    }, l.createElement(N.j, {
+                        ratio: N.k.Aspect1x1
                     }, l.createElement(m.b, {
-                        src: this.props.team.logo || ae.a,
+                        src: this.props.team.logo || se.a,
                         alt: Object(d.d)("{displayName} Team Logo", {
                             displayName: this.props.team.displayName
                         }, "TeamManagerItem")
-                    }))), l.createElement(I._6, {
+                    }))), l.createElement(N._6, {
                         flexGrow: 1,
-                        display: I.P.Flex,
-                        position: I._13.Relative
-                    }, l.createElement(I._0, {
+                        display: N.P.Flex,
+                        position: N._13.Relative
+                    }, l.createElement(N._0, {
                         padding: {
                             x: 1
                         },
                         flexGrow: 1
-                    }, l.createElement(I.O, {
-                        type: I._43.Span,
+                    }, l.createElement(N.O, {
+                        type: N._43.Span,
                         ellipsis: !0
-                    }, this.props.team.name))), l.createElement(I._6, {
+                    }, this.props.team.name))), l.createElement(N._6, {
                         padding: {
                             right: 2
                         }
-                    }, l.createElement(I.M, {
+                    }, l.createElement(N.M, {
                         to: "https://www.twitch.tv/team/" + this.props.team.name + "/edit"
-                    }, Object(d.d)("Edit", "TeamManagerItem"))), l.createElement(I._6, null, l.createElement(I.M, {
+                    }, Object(d.d)("Edit", "TeamManagerItem"))), l.createElement(N._6, null, l.createElement(N.M, {
                         to: "https://www.twitch.tv/team/" + this.props.team.name
                     }, Object(d.d)("View", "TeamManagerItem")))))
                 }, t
             }(l.Component)),
-            pe = Object(m.d)("TeamManagerItem")(de),
-            me = function(e) {
+            ge = Object(m.d)("TeamManagerItem")(me),
+            he = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.teams.length < 1 && !this.props.formErrorMessage ? null : l.createElement(x.a, {
+                    return this.props.teams.length < 1 && !this.props.formErrorMessage ? null : l.createElement(O.a, {
                         label: Object(d.d)("Manager", "TeamManager"),
                         error: !!this.props.formErrorMessage,
                         errorMessage: this.props.formErrorMessage
                     }, this.props.teams.map(function(e) {
-                        return l.createElement(pe, {
+                        return l.createElement(ge, {
                             key: e.name,
                             team: e
                         })
                     }))
                 }, t
             }(l.Component),
-            ge = Object(m.d)("TeamManager")(me),
-            he = (n("zpQV"), function(e) {
+            fe = Object(m.d)("TeamManager")(he),
+            ve = (n("zpQV"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClickRemove = function() {
@@ -2434,81 +2478,81 @@ webpackJsonp([47], {
                 }, t.prototype.render = function() {
                     var e = Object(d.d)("Remove", "TeamMembershipsItem"),
                         t = null;
-                    return this.props.showPrimaryInput && (t = l.createElement(I._6, {
+                    return this.props.showPrimaryInput && (t = l.createElement(N._6, {
                         padding: {
                             right: 2
                         }
-                    }, l.createElement(I._18, {
+                    }, l.createElement(N._18, {
                         "data-test-selector": "TEAM_MEMBERSHIPS_ITEM_PRIMARY_INPUT",
                         name: "team-memberships-main-radio",
                         onChange: this.onChangePrimary,
                         label: Object(d.d)("Main", "TeamMembershipsItem"),
                         disabled: this.props.updating,
                         checked: this.props.membership.primary
-                    }))), l.createElement(I._6, c.__assign({
+                    }))), l.createElement(N._6, c.__assign({
                         padding: {
                             y: 1,
                             x: 1
                         }
-                    }, Object(oe.a)(this.props), {
+                    }, Object(ce.a)(this.props), {
                         className: "team-memberships-item"
-                    }), l.createElement(I.B, {
+                    }), l.createElement(N.B, {
                         row: !0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         className: "team-memberships-item__avatar",
                         flexShrink: 0
-                    }, l.createElement(I.j, {
-                        ratio: I.k.Aspect1x1
+                    }, l.createElement(N.j, {
+                        ratio: N.k.Aspect1x1
                     }, l.createElement(m.b, {
-                        src: this.props.membership.team.logo || ae.a,
+                        src: this.props.membership.team.logo || se.a,
                         alt: Object(d.d)("{displayName} Team Logo", {
                             displayName: this.props.membership.team.displayName
                         }, "TeamMembershipsItem")
-                    }))), l.createElement(I._6, {
+                    }))), l.createElement(N._6, {
                         padding: {
                             x: 1
                         },
                         flexGrow: 1,
-                        position: I._13.Relative,
+                        position: N._13.Relative,
                         ellipsis: !0
-                    }, l.createElement(I.M, {
+                    }, l.createElement(N.M, {
                         to: "/team/" + this.props.membership.team.name
-                    }, l.createElement(I.O, {
-                        type: I._43.Span,
+                    }, l.createElement(N.O, {
+                        type: N._43.Span,
                         ellipsis: !0
-                    }, this.props.membership.team.displayName))), l.createElement(I._6, {
+                    }, this.props.membership.team.displayName))), l.createElement(N._6, {
                         padding: {
                             right: 2
                         }
-                    }, l.createElement(I.I, {
+                    }, l.createElement(N.I, {
                         "data-test-selector": "TEAM_MEMBERSHIPS_ITEM_STATS_INPUT",
                         onChange: this.onChangeStats,
                         label: Object(d.d)("Stats", "TeamMembershipsItem"),
                         disabled: this.props.updating,
                         checked: this.props.membership.statsRevealed
-                    })), l.createElement(I._6, {
+                    })), l.createElement(N._6, {
                         padding: {
                             right: 2
                         }
-                    }, l.createElement(I.I, {
+                    }, l.createElement(N.I, {
                         "data-test-selector": "TEAM_MEMBERSHIPS_ITEM_REVENUE_INPUT",
                         onChange: this.onChangeRevenue,
                         label: Object(d.d)("Revenue", "TeamMembershipsItem"),
                         disabled: this.props.updating,
                         checked: this.props.membership.revenueRevealed
-                    })), t, l.createElement(I._46, {
+                    })), t, l.createElement(N._46, {
                         label: e
-                    }, l.createElement(I.v, {
+                    }, l.createElement(N.v, {
                         "data-test-selector": "TEAM_MEMBERSHIPS_ITEM_REMOVE_BUTTON",
                         ariaLabel: e,
-                        icon: I._20.Trash,
+                        icon: N._20.Trash,
                         onClick: this.onClickRemove,
                         disabled: this.props.updating
                     }))))
                 }, t = c.__decorate([Object(m.d)("TeamMembershipItem")], t)
             }(l.Component)),
-            fe = Object(m.d)("TeamMembershipsItem")(he),
-            ve = function(e) {
+            be = Object(m.d)("TeamMembershipsItem")(ve),
+            ye = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2516,12 +2560,12 @@ webpackJsonp([47], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this;
-                    return this.props.memberships.length < 1 && !this.props.formErrorMessage ? null : l.createElement(x.a, {
+                    return this.props.memberships.length < 1 && !this.props.formErrorMessage ? null : l.createElement(O.a, {
                         label: Object(d.d)("Member", "TeamMemberships"),
                         error: !!this.props.formErrorMessage,
                         errorMessage: this.props.formErrorMessage
                     }, this.props.memberships.map(function(t, n) {
-                        return l.createElement(fe, {
+                        return l.createElement(be, {
                             index: n,
                             key: t.team.name,
                             onClickRemove: e.props.onClickRemove,
@@ -2535,23 +2579,23 @@ webpackJsonp([47], {
                     }))
                 }, t
             }(l.Component),
-            be = Object(m.d)("TeamMemberships")(ve),
-            ye = function(e) {
+            Se = Object(m.d)("TeamMemberships")(ye),
+            ke = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return l.createElement(k.a, null, l.createElement(ge, {
+                    return l.createElement(S.a, null, l.createElement(fe, {
                         teams: this.props.teams,
                         formErrorMessage: this.props.managedError
-                    }), l.createElement(ue, {
+                    }), l.createElement(pe, {
                         invitations: this.props.invitations,
                         acceptInvitation: this.props.acceptInvitation,
                         declineInvitation: this.props.declineInvitation,
                         formErrorMessage: this.props.invitationsError
-                    }), l.createElement(be, {
+                    }), l.createElement(Se, {
                         memberships: this.props.memberships,
                         formErrorMessage: this.props.membershipsError,
                         onClickRemove: this.props.onClickRemove,
@@ -2562,8 +2606,8 @@ webpackJsonp([47], {
                     }))
                 }, t
             }(l.Component),
-            Se = Object(m.d)("TeamSettings")(ye),
-            ke = function(e) {
+            _e = Object(m.d)("TeamSettings")(ke),
+            Ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2586,7 +2630,7 @@ webpackJsonp([47], {
                                             updatingToggles: !0
                                         }), r = this.state.memberships[e], a = "/v5/channels/" + this.props.user.id + "/teams/" + r.team.name + "/membership", c.label = 1;
                                     case 1:
-                                        return c.trys.push([1, 3, , 4]), [4, ie.a.deleteOrThrow(a)];
+                                        return c.trys.push([1, 3, , 4]), [4, ae.a.deleteOrThrow(a)];
                                     case 2:
                                         return i = c.sent(), [3, 4];
                                     case 3:
@@ -2631,7 +2675,7 @@ webpackJsonp([47], {
                                             var n = o.state.memberships.findIndex(function(e) {
                                                     return e.primary
                                                 }),
-                                                i = ne(t.memberships, function(t) {
+                                                i = re(t.memberships, function(t) {
                                                     return t[e]
                                                 }, function(e) {
                                                     return e.primary = !0, e
@@ -2667,7 +2711,7 @@ webpackJsonp([47], {
                                             updatingToggles: !1
                                         }), [2]) : (this.setState(function(t) {
                                             return {
-                                                memberships: ne(t.memberships, function(t) {
+                                                memberships: re(t.memberships, function(t) {
                                                     return t[e]
                                                 }, function(e) {
                                                     return e.revenueRevealed = !e.revenueRevealed, e
@@ -2701,7 +2745,7 @@ webpackJsonp([47], {
                                             updatingToggles: !1
                                         }), [2]) : (this.setState(function(t) {
                                             return {
-                                                memberships: ne(t.memberships, function(t) {
+                                                memberships: re(t.memberships, function(t) {
                                                     return t[e]
                                                 }, function(e) {
                                                     return e.statsRevealed = !e.statsRevealed, e
@@ -2718,7 +2762,7 @@ webpackJsonp([47], {
                             return c.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return this.props.user ? (t = "/v5/channels/" + this.props.user.id + "/teams/" + e.team.name + "/membership", [4, ie.a.put(t, {
+                                        return this.props.user ? (t = "/v5/channels/" + this.props.user.id + "/teams/" + e.team.name + "/membership", [4, ae.a.put(t, {
                                             body: {
                                                 primary: e.primary,
                                                 revenue_revealed: e.revenueRevealed,
@@ -2739,7 +2783,7 @@ webpackJsonp([47], {
                                         if (!this.props.user) return [2];
                                         i = "/v5/channels/" + this.props.user.id + "/memberships", o.label = 1;
                                     case 1:
-                                        return o.trys.push([1, 3, , 4]), [4, ie.a.get(i)];
+                                        return o.trys.push([1, 3, , 4]), [4, ae.a.get(i)];
                                     case 2:
                                         return t = o.sent(), this.setState({
                                             memberships: this.deserializeMemberships(t),
@@ -2776,7 +2820,7 @@ webpackJsonp([47], {
                                         if (!this.props.user) return [2];
                                         e = "/v5/channels/" + this.props.user.id + "/invitations", r.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, ie.a.getOrThrow(e)];
+                                        return r.trys.push([1, 3, , 4]), [4, ae.a.getOrThrow(e)];
                                     case 2:
                                         return t = r.sent(), this.setState({
                                             invitations: this.deserializeInvitations(t)
@@ -2823,7 +2867,7 @@ webpackJsonp([47], {
                                             updatingInvitations: !0
                                         }), a = this.state.invitations[e], o = "/v5/channels/" + this.props.user.id + "/teams/" + a.name + "/invitation", u.label = 1;
                                     case 1:
-                                        return u.trys.push([1, 3, , 4]), [4, ie.a.put(o, {
+                                        return u.trys.push([1, 3, , 4]), [4, ae.a.put(o, {
                                             body: {
                                                 accepted: n
                                             }
@@ -2871,7 +2915,7 @@ webpackJsonp([47], {
                                         if (!this.props.user) return [2];
                                         e = "/v5/users/" + this.props.user.id + "/teams", r.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, ie.a.getOrThrow(e)];
+                                        return r.trys.push([1, 3, , 4]), [4, ae.a.getOrThrow(e)];
                                     case 2:
                                         return t = r.sent(), this.setState({
                                             teams: this.deserializeTeams(t)
@@ -2898,7 +2942,7 @@ webpackJsonp([47], {
                 return c.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.fetchTeamsMembership(), this.fetchInvitations(), this.fetchTeams()
                 }, t.prototype.render = function() {
-                    return l.createElement(Se, {
+                    return l.createElement(_e, {
                         memberships: this.state.memberships,
                         membershipsError: this.state.membershipsError,
                         onClickRemove: this.deleteMembership,
@@ -2915,18 +2959,18 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component);
-        var _e = Object(i.b)(function(e) {
+        var Ce = Object(i.b)(function(e) {
                 return {
                     user: Object(s.c)(e)
                 }
-            })(ke),
-            Ee = n("V5M+"),
-            Ce = n("ebTC"),
-            Oe = n("4Q9N"),
-            we = n("J4ib"),
-            Ne = n("OjIq"),
-            je = n("vm+z"),
-            Te = function(e) {
+            })(Ee),
+            we = n("V5M+"),
+            Oe = n("ebTC"),
+            Ne = n("4Q9N"),
+            Ue = n("J4ib"),
+            je = n("OjIq"),
+            Te = n("vm+z"),
+            De = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.showModal = function() {
@@ -2943,31 +2987,31 @@ webpackJsonp([47], {
                             width: "160",
                             src: this.props.data.user.offlineImageURL
                         });
-                        var n = Object(we.d)("Remove my Video Player Banner Image", "UploadVideoPlayerBanner");
-                        t = l.createElement(I.v, {
-                            icon: I._20.Trash,
+                        var n = Object(Ue.d)("Remove my Video Player Banner Image", "UploadVideoPlayerBanner");
+                        t = l.createElement(N.v, {
+                            icon: N._20.Trash,
                             ariaLabel: n
                         })
                     }
-                    return l.createElement(I._6, null, l.createElement(_.a, {
-                        title: Object(we.d)("Video Player Banner", "UploadVideoPlayerBanner"),
-                        description: Object(we.d)("This is displayed on the player when your channel is offline.", "UploadVideoPlayerBanner")
-                    }), l.createElement(k.a, null, l.createElement(Ne.a, null, l.createElement(I._6, {
-                        display: I.P.Flex
-                    }, e, l.createElement(I._6, {
+                    return l.createElement(N._6, null, l.createElement(k.a, {
+                        title: Object(Ue.d)("Video Player Banner", "UploadVideoPlayerBanner"),
+                        description: Object(Ue.d)("This is displayed on the player when your channel is offline.", "UploadVideoPlayerBanner")
+                    }), l.createElement(S.a, null, l.createElement(je.a, null, l.createElement(N._6, {
+                        display: N.P.Flex
+                    }, e, l.createElement(N._6, {
                         padding: {
                             left: 1,
                             top: 1
                         }
-                    }, l.createElement(I._6, {
-                        display: I.P.Flex
-                    }, l.createElement(I.u, {
+                    }, l.createElement(N._6, {
+                        display: N.P.Flex
+                    }, l.createElement(N.u, {
                         "data-test-selector": "test-upload-video-player-banner-selector",
                         onClick: this.showModal
-                    }, "Update"), t), l.createElement(P.a, {
-                        text: Object(we.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
+                    }, "Update"), t), l.createElement(F.a, {
+                        text: Object(Ue.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
                     }))))))
-                }, t = c.__decorate([Object(N.a)(je, {
+                }, t = c.__decorate([Object(w.a)(Te, {
                     options: function(e) {
                         return {
                             skip: !e.user,
@@ -2978,54 +3022,45 @@ webpackJsonp([47], {
                     }
                 })], t)
             }(l.Component);
-        var De = Object(i.b)(function(e) {
+        var Pe = Object(i.b)(function(e) {
                 return {
                     user: Object(s.c)(e)
                 }
             }, function(e) {
                 return Object(r.b)({
                     showUploaderModal: function(e) {
-                        return Object(Ee.d)(Ce.a, {
+                        return Object(we.d)(Oe.a, {
                             userID: e.id,
                             login: e.login,
                             displayName: e.displayName,
-                            imageType: Oe.a.ChannelOfflineImage,
+                            imageType: Ne.a.ChannelOfflineImage,
                             showCloser: !0
                         })
                     }
                 }, e)
-            })(Te),
-            Pe = function(e) {
+            })(De),
+            Ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        saveStatus: S.b.NoChanges
-                    }, t.renderTeamsSettingsSection = function() {
-                        return l.createElement(I._6, null, l.createElement(_.a, {
+                    return t.renderTeamsSettingsSection = function() {
+                        return l.createElement(N._6, null, l.createElement(k.a, {
                             title: Object(d.d)("My Teams", "SettingsChannelPage"),
                             description: Object(d.d)("Manage your teams here", "SettingsChannelPage")
-                        }), l.createElement(_e, null))
+                        }), l.createElement(Ce, null))
                     }, t.renderContentSettingsSection = function() {
-                        return l.createElement(I._6, null, l.createElement(_.a, {
+                        return l.createElement(N._6, null, l.createElement(k.a, {
                             title: Object(d.d)("Content Settings", "SettingsChannelPage"),
                             description: Object(d.d)("Choose how your channel will display for certain users", "SettingsChannelPage")
-                        }), l.createElement(k.a, null, l.createElement(te, null)))
+                        }), l.createElement(S.a, null, l.createElement(ie, null)))
                     }, t.renderChatSettingsSection = function() {
-                        return l.createElement(I._6, null, l.createElement(_.a, {
+                        return l.createElement(N._6, null, l.createElement(k.a, {
                             title: Object(d.d)("Chat Options", "SettingsChannelPage"),
                             description: Object(d.d)("Moderate your channel's chat and who you allow in it", "SettingsChannelPage")
-                        }), l.createElement(k.a, null, l.createElement(L, null), l.createElement(K, null), l.createElement(G, null), l.createElement(z, null)))
-                    }, t.onClickSave = function() {
-                        t.setState({
-                            saveStatus: S.b.Working
-                        }, function() {})
+                        }), l.createElement(S.a, null, l.createElement(B, null), l.createElement($, null), l.createElement(J, null), l.createElement(H, null), l.createElement(T, null)))
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return d.a.buildType === v.a.Production ? null : l.createElement("div", null, l.createElement(De, null), this.renderContentSettingsSection(), this.renderTeamsSettingsSection(), this.renderChatSettingsSection(), l.createElement(O, null), l.createElement(S.a, {
-                        status: this.state.saveStatus,
-                        onClickSave: this.onClickSave
-                    }))
+                    return d.a.buildType === v.a.Production ? null : l.createElement(l.Fragment, null, l.createElement(Pe, null), this.renderContentSettingsSection(), this.renderTeamsSettingsSection(), this.renderChatSettingsSection(), l.createElement(C, null))
                 }, t = c.__decorate([Object(m.d)("SettingsChannelPage", {
                     autoReportInteractive: !0,
                     destination: b.a.SettingsChannel
@@ -3041,11 +3076,11 @@ webpackJsonp([47], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(Ne.a, null, l.createElement(I._6, {
+                    return l.createElement(je.a, null, l.createElement(N._6, {
                         className: "connection-component",
-                        display: I.P.Flex,
-                        flexDirection: I.R.Row
-                    }, this.props.image && l.createElement(I._6, {
+                        display: N.P.Flex,
+                        flexDirection: N.R.Row
+                    }, this.props.image && l.createElement(N._6, {
                         className: "connection-component__image",
                         "data-test-selector": "connection-image-test-selector",
                         padding: {
@@ -3053,45 +3088,45 @@ webpackJsonp([47], {
                             top: .5
                         },
                         flexShrink: 0
-                    }, this.props.image), l.createElement(I._6, {
+                    }, this.props.image), l.createElement(N._6, {
                         className: "connection-component__right",
                         padding: {
                             x: 1
                         },
-                        display: I.P.Flex,
+                        display: N.P.Flex,
                         flexGrow: 1,
-                        flexDirection: I.R.Column,
+                        flexDirection: N.R.Column,
                         fullWidth: !0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         className: "connection-component__header",
-                        display: I.P.Flex,
-                        flexDirection: I.R.Row,
-                        alignItems: I.c.Center
-                    }, l.createElement(I._6, {
+                        display: N.P.Flex,
+                        flexDirection: N.R.Row,
+                        alignItems: N.c.Center
+                    }, l.createElement(N._6, {
                         className: "connection-component__header-text",
-                        display: I.P.Flex,
-                        flexDirection: I.R.Column,
+                        display: N.P.Flex,
+                        flexDirection: N.R.Column,
                         flexGrow: 1
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size5,
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size5,
                         "data-test-selector": "connection-title-test-selector",
                         bold: !0
-                    }, this.props.title), this.props.subtitle && l.createElement(I._0, {
+                    }, this.props.title), this.props.subtitle && l.createElement(N._0, {
                         padding: {
                             top: 1
                         }
-                    }, l.createElement(I.O, {
+                    }, l.createElement(N.O, {
                         "data-test-selector": "connection-subtitle-test-selector"
-                    }, this.props.subtitle))), this.renderButton()), this.renderError(), this.props.body && l.createElement(I._6, {
+                    }, this.props.subtitle))), this.renderButton()), this.renderError(), this.props.body && l.createElement(N._6, {
                         className: "connection-component__body",
                         "data-test-selector": "connection-body-test-selector",
                         padding: {
                             top: 2
                         }
-                    }, this.props.body), this.props.footer && l.createElement(I._29, {
+                    }, this.props.body), this.props.footer && l.createElement(N._29, {
                         className: "connection-component__footer",
                         "data-test-selector": "connection-footer-test-selector",
-                        color: I.J.Alt2,
+                        color: N.J.Alt2,
                         padding: {
                             top: 2
                         }
@@ -3101,28 +3136,28 @@ webpackJsonp([47], {
                         var e = Object(d.d)("Failed to connect. Please try again.", "ThirdPartyConnection"),
                             t = Object(d.d)("Failed to disconnect. Please try again.", "ThirdPartyConnection"),
                             n = this.props.connected ? t : e;
-                        return l.createElement(I._6, {
+                        return l.createElement(N._6, {
                             padding: {
                                 top: .5
                             },
-                            alignSelf: I.d.End,
+                            alignSelf: N.d.End,
                             "data-test-selector": "connection-error-test-selector"
-                        }, l.createElement(I.O, {
-                            color: I.J.Error
+                        }, l.createElement(N.O, {
+                            color: N.J.Error
                         }, n))
                     }
                 }, t.prototype.renderButton = function() {
                     var e = Object(d.d)("Disconnect", "ThirdPartyConnection"),
                         t = Object(d.d)("Connect", "ThirdPartyConnection"),
-                        n = this.props.working ? I.z.Loading : I.z.Default;
-                    return l.createElement(I.u, {
-                        type: I.A.Hollow,
+                        n = this.props.working ? N.z.Loading : N.z.Default;
+                    return l.createElement(N.u, {
+                        type: N.A.Hollow,
                         state: n,
                         onClick: this.handleClick
                     }, this.props.connected ? e : t)
                 }, t
             }(l.Component)),
-            Ie = (n("XCQF"), function(e) {
+            Fe = (n("XCQF"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClickDisconnect = function() {
@@ -3146,7 +3181,7 @@ webpackJsonp([47], {
                         working: this.props.working
                     })
                 }, t.prototype.renderNameLink = function() {
-                    return 0 === this.props.name.length ? this.props.id : l.createElement(I.M, {
+                    return 0 === this.props.name.length ? this.props.id : l.createElement(N.M, {
                         to: "/ext/" + this.props.id
                     }, this.props.name)
                 }, Object.defineProperty(t.prototype, "iconOrFallback", {
@@ -3163,10 +3198,10 @@ webpackJsonp([47], {
                     configurable: !0
                 }), t
             }(l.Component)),
-            Ue = Object(m.d)("ExtensionConnection", {
+            Ae = Object(m.d)("ExtensionConnection", {
                 autoReportInteractive: !0
-            })(Ie),
-            Fe = function(e) {
+            })(Fe),
+            Me = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3183,7 +3218,7 @@ webpackJsonp([47], {
                                             working: !0
                                         }), t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, ie.a.putOrThrow("/v5/extensions/" + e + "/auth/link_user", {
+                                        return t.trys.push([1, 3, , 4]), [4, ae.a.putOrThrow("/v5/extensions/" + e + "/auth/link_user", {
                                             body: {
                                                 show_user: !1
                                             }
@@ -3217,7 +3252,7 @@ webpackJsonp([47], {
                     for (var e = [], t = 0, n = Object.keys(this.state.linkedExtensionsByID); t < n.length; t++) {
                         var i = n[t],
                             r = this.state.linkedExtensionsByID[i];
-                        e.push(l.createElement(Ue, c.__assign({
+                        e.push(l.createElement(Ae, c.__assign({
                             key: r.id,
                             onClickDisconnect: this.onClickDisconnect
                         }, r)))
@@ -3225,8 +3260,8 @@ webpackJsonp([47], {
                     return 0 === e.length ? this.renderEmptyState(!1) : l.createElement(l.Fragment, null, e)
                 }, t.prototype.renderEmptyState = function(e) {
                     var t = e ? Object(d.d)("Sorry, something went wrong fetching your extension connections. Please try again later.", "ExtensionConnectionList") : Object(d.d)("You have not shared your Twitch username with any extensions.", "ExtensionConnectionList");
-                    return l.createElement(Ne.a, null, l.createElement(I.O, {
-                        color: e ? I.J.Error : void 0
+                    return l.createElement(je.a, null, l.createElement(N.O, {
+                        color: e ? N.J.Error : void 0
                     }, t))
                 }, t.prototype.fetchExtensionConnections = function() {
                     return c.__awaiter(this, void 0, void 0, function() {
@@ -3236,7 +3271,7 @@ webpackJsonp([47], {
                                 case 0:
                                     e = {}, t = !1, s.label = 1;
                                 case 1:
-                                    return s.trys.push([1, 3, , 4]), [4, ie.a.get("/v5/extensions/linked")];
+                                    return s.trys.push([1, 3, , 4]), [4, ae.a.get("/v5/extensions/linked")];
                                 case 2:
                                     if ((n = s.sent()) && n.body && n.body.extensions.length > 0)
                                         for (i = 0, r = n.body.extensions; i < r.length; i++) a = r[i], e[a.id] = {
@@ -3279,41 +3314,42 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            Me = Object(m.d)("ExtensionsConnectionList")(Fe);
-        var Ae, Le = Object(i.b)(function(e) {
+            Le = Object(m.d)("ExtensionsConnectionList")(Me);
+        var Re, Be = Object(i.b)(function(e) {
                 return {
                     sessionUser: Object(s.c)(e)
                 }
-            })(Me),
-            Re = n("jF7o"),
-            Be = n("HW6M");
+            })(Le),
+            qe = n("jF7o"),
+            Ve = n("HW6M");
         n("EQRc");
         ! function(e) {
-            e[e.Blizzard = 0] = "Blizzard", e[e.Facebook = 1] = "Facebook", e[e.LeagueOfLegends = 2] = "LeagueOfLegends", e[e.PSN = 3] = "PSN", e[e.Twitter = 4] = "Twitter", e[e.Steam = 5] = "Steam", e[e.Xbox = 6] = "Xbox", e[e.Youtube = 7] = "Youtube"
-        }(Ae || (Ae = {}));
-        var Ve, ze = function(e) {
+            e[e.Blizzard = 0] = "Blizzard", e[e.Facebook = 1] = "Facebook", e[e.LeagueOfLegends = 2] = "LeagueOfLegends", e[e.Roku = 3] = "Roku", e[e.PSN = 4] = "PSN", e[e.Twitter = 5] = "Twitter", e[e.Steam = 6] = "Steam", e[e.Xbox = 7] = "Xbox", e[e.Youtube = 8] = "Youtube"
+        }(Re || (Re = {}));
+        var ze, He = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
                     var e = {
                         "connection-image": !0,
-                        "connection-image--blizzard": this.props.type === Ae.Blizzard,
-                        "connection-image--facebook": this.props.type === Ae.Facebook,
-                        "connection-image--league-of-legends": this.props.type === Ae.LeagueOfLegends,
-                        "connection-image--psn": this.props.type === Ae.PSN,
-                        "connection-image--steam": this.props.type === Ae.Steam,
-                        "connection-image--twitter": this.props.type === Ae.Twitter,
-                        "connection-image--xbox": this.props.type === Ae.Xbox,
-                        "connection-image--youtube": this.props.type === Ae.Youtube
+                        "connection-image--blizzard": this.props.type === Re.Blizzard,
+                        "connection-image--facebook": this.props.type === Re.Facebook,
+                        "connection-image--league-of-legends": this.props.type === Re.LeagueOfLegends,
+                        "connection-image--roku": this.props.type === Re.Roku,
+                        "connection-image--psn": this.props.type === Re.PSN,
+                        "connection-image--steam": this.props.type === Re.Steam,
+                        "connection-image--twitter": this.props.type === Re.Twitter,
+                        "connection-image--xbox": this.props.type === Re.Xbox,
+                        "connection-image--youtube": this.props.type === Re.Youtube
                     };
                     return l.createElement("div", {
-                        className: Be(e)
+                        className: Ve(e)
                     })
                 }, t
             }(l.Component),
-            qe = n("h08i"),
-            He = function(e) {
+            Ge = n("h08i"),
+            We = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3334,8 +3370,8 @@ webpackJsonp([47], {
                         t = Object(d.d)("One-click log in to Twitch with your Facebook account", "FacebookConnection"),
                         n = Object(d.d)("By connecting your account with Facebook, you acknowledge and agree that information you choose to share will be uploaded to these services and may be viewed by these services and other users of these services.", "FacebookConnection");
                     return l.createElement(xe, {
-                        image: l.createElement(ze, {
-                            type: Ae.Facebook
+                        image: l.createElement(He, {
+                            type: Re.Facebook
                         }),
                         title: e,
                         subtitle: t,
@@ -3365,7 +3401,7 @@ webpackJsonp([47], {
                         });
                         var t = d.a.apiBaseURL + "/v5/facebook/" + this.props.data.currentUser.id + "/auth",
                             n = window.open(t, "Twitch", "width=1024,height=637");
-                        n ? Object(Re.a)(n, function(t) {
+                        n ? Object(qe.a)(n, function(t) {
                             t && e.updateConnectionInCache(!0), e.setState({
                                 error: !t,
                                 working: !1
@@ -3385,7 +3421,7 @@ webpackJsonp([47], {
                                         working: !0
                                     }), e.label = 1;
                                 case 1:
-                                    return e.trys.push([1, 3, 4, 5]), [4, ie.a.deleteOrThrow("/v5/facebook/" + this.props.data.currentUser.id)];
+                                    return e.trys.push([1, 3, 4, 5]), [4, ae.a.deleteOrThrow("/v5/facebook/" + this.props.data.currentUser.id)];
                                 case 2:
                                     return e.sent(), this.updateConnectionInCache(!1), [3, 5];
                                 case 3:
@@ -3402,23 +3438,23 @@ webpackJsonp([47], {
                         })
                     })
                 }, t.prototype.updateConnectionInCache = function(e) {
-                    Object(j.d)(qe, {}, function(t) {
+                    Object(P.d)(Ge, {}, function(t) {
                         return t.currentUser.accountConnections.facebook.hasConnection = e, t
                     })
                 }, t
             }(l.Component),
-            We = Object(N.a)(qe)(He),
-            Ge = n("OAwv");
+            Ye = Object(w.a)(Ge)(We),
+            Je = n("OAwv");
         n("WKFf");
         ! function(e) {
             e.NorthAmerica = "na", e.Brazil = "br", e.EuropeWest = "euw", e.EuropeNordicAndEast = "eune", e.Japan = "jp", e.Korea = "kr", e.LatinAmericaNorth = "lan", e.LatinAmericaSouth = "las", e.Oceanic = "oce", e.Turkey = "tr", e.Russia = "ru", e.PublicBetaEnvironment = "pbe"
-        }(Ve || (Ve = {}));
-        var Ye = function(e) {
+        }(ze || (ze = {}));
+        var Qe = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
                     connected: !1,
-                    region: Ve.NorthAmerica,
+                    region: ze.NorthAmerica,
                     summonerName: "",
                     error: !1,
                     working: !0
@@ -3429,11 +3465,11 @@ webpackJsonp([47], {
                             switch (i.label) {
                                 case 0:
                                     if (!this.props.userID) return this.logger.info("Tried to get League of Legends connection info, but the user is not logged in."), [2];
-                                    e = Ge.stringify({
+                                    e = Je.stringify({
                                         user_id: this.props.userID
                                     }), t = "/api/lol/summonername?" + e, i.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, 4, 5]), [4, ie.a.get(t)];
+                                    return i.trys.push([1, 3, 4, 5]), [4, ae.a.get(t)];
                                 case 2:
                                     return (n = i.sent()).error || n.requestError ? this.setState({
                                         connected: !1
@@ -3463,12 +3499,12 @@ webpackJsonp([47], {
                                     this.setState({
                                         error: !1,
                                         working: !0
-                                    }), e = Ge.stringify({
+                                    }), e = Je.stringify({
                                         user_id: this.props.userID,
-                                        client_id: d.a.authClientID
+                                        client_id: d.a.authSettings.clientID
                                     }), t = "/api/lol/delete?" + e, r.label = 1;
                                 case 1:
-                                    return r.trys.push([1, 3, 4, 5]), [4, ie.a.get(t)];
+                                    return r.trys.push([1, 3, 4, 5]), [4, ae.a.get(t)];
                                 case 2:
                                     return (n = r.sent()).error || n.requestError ? (this.logger.warn("Failed to disconnect League of Legends account", {
                                         error: n.error,
@@ -3501,14 +3537,14 @@ webpackJsonp([47], {
                                     this.setState({
                                         error: !1,
                                         working: !0
-                                    }), e = Ge.stringify({
+                                    }), e = Je.stringify({
                                         user_id: this.props.userID,
-                                        client_id: d.a.authClientID,
+                                        client_id: d.a.authSettings.clientID,
                                         summoner: this.state.summonerName,
                                         region: this.state.region
                                     }), t = "/api/lol/verify?" + e, r.label = 1;
                                 case 1:
-                                    return r.trys.push([1, 3, 4, 5]), [4, ie.a.get(t)];
+                                    return r.trys.push([1, 3, 4, 5]), [4, ae.a.get(t)];
                                 case 2:
                                     return n = r.sent(), n.error || n.requestError || !n.body || 0 === n.body.summoner_id || "" === n.body.summoner_name || "" === n.body.twitch_id ? (this.logger.warn("Failed to connect League of Legends account.", {
                                         error: n.error,
@@ -3548,8 +3584,8 @@ webpackJsonp([47], {
                     t = Object(d.d)("Show rank and live in-game information.", "LeagueOfLegendsConnection"),
                     n = Object(d.d)("By connecting your Riot [or, League of Legends] account, you agree to share with Twitch, and allow Twitch to make public, metadata regarding your user profile, gameplay history, and statistics associated with League of Legends. If you no longer want to share this information, please disconnect your accounts.", "LeagueOfLegendsConnection");
                 return l.createElement(xe, {
-                    image: l.createElement(ze, {
-                        type: Ae.LeagueOfLegends
+                    image: l.createElement(He, {
+                        type: Re.LeagueOfLegends
                     }),
                     title: e,
                     subtitle: t,
@@ -3563,68 +3599,68 @@ webpackJsonp([47], {
             }, t.prototype.renderBody = function() {
                 var e = [{
                     label: Object(d.d)("North America", "LeagueOfLegendsConnection"),
-                    value: Ve.NorthAmerica
+                    value: ze.NorthAmerica
                 }, {
                     label: Object(d.d)("Brazil", "LeagueOfLegendsConnection"),
-                    value: Ve.Brazil
+                    value: ze.Brazil
                 }, {
                     label: Object(d.d)("Europe West", "LeagueOfLegendsConnection"),
-                    value: Ve.EuropeWest
+                    value: ze.EuropeWest
                 }, {
                     label: Object(d.d)("Europe Nordic & East", "LeagueOfLegendsConnection"),
-                    value: Ve.EuropeNordicAndEast
+                    value: ze.EuropeNordicAndEast
                 }, {
                     label: Object(d.d)("Japan", "LeagueOfLegendsConnection"),
-                    value: Ve.Japan
+                    value: ze.Japan
                 }, {
                     label: Object(d.d)("Korea", "LeagueOfLegendsConnection"),
-                    value: Ve.Korea
+                    value: ze.Korea
                 }, {
                     label: Object(d.d)("Latin America North", "LeagueOfLegendsConnection"),
-                    value: Ve.LatinAmericaNorth
+                    value: ze.LatinAmericaNorth
                 }, {
                     label: Object(d.d)("Latin America South", "LeagueOfLegendsConnection"),
-                    value: Ve.LatinAmericaSouth
+                    value: ze.LatinAmericaSouth
                 }, {
                     label: Object(d.d)("Oceanic", "LeagueOfLegendsConnection"),
-                    value: Ve.Oceanic
+                    value: ze.Oceanic
                 }, {
                     label: Object(d.d)("Turkey", "LeagueOfLegendsConnection"),
-                    value: Ve.Turkey
+                    value: ze.Turkey
                 }, {
                     label: Object(d.d)("Russia", "LeagueOfLegendsConnection"),
-                    value: Ve.Russia
+                    value: ze.Russia
                 }, {
                     label: Object(d.d)("Public Beta Environment", "LeagueOfLegendsConnection"),
-                    value: Ve.PublicBetaEnvironment
+                    value: ze.PublicBetaEnvironment
                 }];
-                return l.createElement(I._6, {
+                return l.createElement(N._6, {
                     className: "league-of-legends-connection__body",
                     "data-test-selector": "league-connection-body"
-                }, l.createElement(I._6, {
+                }, l.createElement(N._6, {
                     padding: {
                         bottom: 1
                     }
-                }, l.createElement(I._6, null, Object(d.d)("1. Log into your League of Legends account. Go to the verification section of your settings, and copy the following into the field: {code}", {
-                    code: l.createElement(I.O, {
-                        type: I._43.Span,
+                }, l.createElement(N._6, null, Object(d.d)("1. Log into your League of Legends account. Go to the verification section of your settings, and copy the following into the field: {code}", {
+                    code: l.createElement(N.O, {
+                        type: N._43.Span,
                         bold: !0
                     }, "ttv-" + this.props.userID)
-                }, "LeagueOfLegendsConnection")), l.createElement(I._6, null, Object(d.d)("2. Enter your summoner name below, select your region, and press the connect button to link your accounts! Note, you may need to wait up to 30 seconds for your changes to take effect.", "LeagueOfLegendsConnection"))), l.createElement(I._6, {
-                    display: I.P.Flex
-                }, l.createElement(I._6, {
+                }, "LeagueOfLegendsConnection")), l.createElement(N._6, null, Object(d.d)("2. Enter your summoner name below, select your region, and press the connect button to link your accounts! Note, you may need to wait up to 30 seconds for your changes to take effect.", "LeagueOfLegendsConnection"))), l.createElement(N._6, {
+                    display: N.P.Flex
+                }, l.createElement(N._6, {
                     padding: {
                         right: 1
                     },
                     flexGrow: 1
-                }, l.createElement(I._2, {
-                    type: I._3.Text,
+                }, l.createElement(N._2, {
+                    type: N._3.Text,
                     placeholder: Object(d.d)("Enter Summoner Name", "LeagueOfLegendsConnection"),
                     value: this.state.summonerName,
                     onChange: this.handleSummonerNameChange
-                })), l.createElement(I._6, {
+                })), l.createElement(N._6, {
                     flexGrow: 1
-                }, l.createElement(I._25, {
+                }, l.createElement(N._25, {
                     value: this.state.region,
                     onChange: this.handleRegionSelect
                 }, e.map(function(e) {
@@ -3635,17 +3671,17 @@ webpackJsonp([47], {
                 })))))
             }, t
         }(l.Component);
-        var Je = Object(i.b)(function(e) {
+        var Ke = Object(i.b)(function(e) {
             var t = Object(s.c)(e);
             return {
                 userID: t && t.id
             }
-        })(Ye);
+        })(Qe);
 
-        function Qe(e) {
+        function Xe(e) {
             return "OAuth " + e.authToken
         }
-        var Ke, Xe = function(e) {
+        var $e, Ze = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3670,9 +3706,9 @@ webpackJsonp([47], {
                                                 var a = (i = r.slice()).findIndex(function(e) {
                                                     return "Authorization" === e[0]
                                                 });
-                                                a >= 0 && i.splice(a, 1), i.push(["Authorization", Qe(n)])
-                                            } else r instanceof Headers ? (i = new Headers(r)).set("Authorization", Qe(n)) : i = c.__assign({}, r, {
-                                                Authorization: Qe(n)
+                                                a >= 0 && i.splice(a, 1), i.push(["Authorization", Xe(n)])
+                                            } else r instanceof Headers ? (i = new Headers(r)).set("Authorization", Xe(n)) : i = c.__assign({}, r, {
+                                                Authorization: Xe(n)
                                             });
                                             return fetch(e, c.__assign({}, t, {
                                                 headers: i
@@ -3712,8 +3748,8 @@ webpackJsonp([47], {
                     }, "OtherConnection")
                 }, t
             }(l.Component),
-            $e = n("WYac"),
-            Ze = function(e) {
+            et = n("WYac"),
+            tt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3724,21 +3760,21 @@ webpackJsonp([47], {
                 }, t.prototype.render = function() {
                     var e = this;
                     return this.props.data.currentUser && this.props.data.currentUser.clientAuthorizations ? 0 === this.props.data.currentUser.clientAuthorizations.length ? this.renderEmptyState(!1) : l.createElement(l.Fragment, null, this.props.data.currentUser.clientAuthorizations.map(function(t) {
-                        return l.createElement(Xe, {
+                        return l.createElement(Ze, {
                             key: t.clientID,
                             clientID: t.clientID,
                             createdAt: t.createdAt,
                             name: t.clientName,
                             onDisconnectSuccess: e.onDisconnectSuccess
                         })
-                    })) : this.props.data.loading ? l.createElement(I._12, null) : this.renderEmptyState(!0)
+                    })) : this.props.data.loading ? l.createElement(N._12, null) : this.renderEmptyState(!0)
                 }, t.prototype.renderEmptyState = function(e) {
                     var t = e ? Object(d.d)("Sorry, we couldn't fetch your authorized apps right now. Try again later.", "OtherConnectionsList") : Object(d.d)("You have not authorized any apps.", "OtherConnectionsList");
-                    return l.createElement(Ne.a, null, l.createElement(I.O, {
-                        color: e ? I.J.Error : void 0
+                    return l.createElement(je.a, null, l.createElement(N.O, {
+                        color: e ? N.J.Error : void 0
                     }, t))
                 }, t.prototype.onDisconnectSuccess = function(e) {
-                    Object(j.d)($e, {}, function(t) {
+                    Object(P.d)(et, {}, function(t) {
                         if (!t.currentUser || !t.currentUser.clientAuthorizations) return t;
                         var n = t.currentUser.clientAuthorizations.slice();
                         return n.splice(n.findIndex(function(t) {
@@ -3751,8 +3787,8 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            et = Object(r.d)(Object(m.d)("OtherConnectionsList"), Object(N.a)($e))(Ze),
-            tt = function(e) {
+            nt = Object(r.d)(Object(m.d)("OtherConnectionsList"), Object(w.a)(et))(tt),
+            it = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3769,7 +3805,7 @@ webpackJsonp([47], {
                                             working: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, 4, 5]), [4, Promise.all([ie.a.post("/api/platform/psn/disconnect"), ie.a.post("/api/platform/psn_dev/disconnect"), ie.a.post("/api/platform/psn_cert/disconnect")])];
+                                        return n.trys.push([1, 3, 4, 5]), [4, Promise.all([ae.a.post("/api/platform/psn/disconnect"), ae.a.post("/api/platform/psn_dev/disconnect"), ae.a.post("/api/platform/psn_cert/disconnect")])];
                                     case 2:
                                         return e = n.sent(), e.every(function(e) {
                                             return !(!e.error && !e.requestError)
@@ -3796,8 +3832,8 @@ webpackJsonp([47], {
                     var e = Object(d.d)("PlayStation", "PSNConnectionPresentation"),
                         t = Object(d.d)("Log in on your PlayStation", "PSNConnectionPresentation");
                     return l.createElement(xe, {
-                        image: l.createElement(ze, {
-                            type: Ae.PSN
+                        image: l.createElement(He, {
+                            type: Re.PSN
                         }),
                         title: e,
                         subtitle: t,
@@ -3810,10 +3846,71 @@ webpackJsonp([47], {
                     return !!(this.props.data.currentUser && this.props.data.currentUser.ssoLinks && this.props.data.currentUser.ssoLinks[0] && this.props.data.currentUser.ssoLinks[0].app && this.props.data.currentUser.ssoLinks[0].ssoID)
                 }, t
             }(l.Component),
-            nt = n("Op8X"),
-            it = Object(N.a)(nt)(tt),
-            rt = n("jZb3"),
-            at = function(e) {
+            rt = n("Op8X"),
+            at = Object(w.a)(rt)(it),
+            ot = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        error: !1,
+                        working: !1
+                    }, t.logger = d.j.withCategory("RokuConnection"), t.handleClick = function() {
+                        return c.__awaiter(t, void 0, void 0, function() {
+                            var e, t, n, i, r;
+                            return c.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        this.setState({
+                                            error: !1,
+                                            working: !0
+                                        }), a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, 4, 5]), e = "/api/roku/disconnect", [4, ae.a.post(e)];
+                                    case 2:
+                                        return t = a.sent(), n = t.error, i = t.requestError, n || i ? (this.logger.warn("Failed to disconnect from Roku", {
+                                            error: n,
+                                            requestError: i
+                                        }), this.setState({
+                                            error: !0
+                                        })) : this.props.data && this.props.data.refetch(), [3, 5];
+                                    case 3:
+                                        return r = a.sent(), this.logger.warn("Failed to disconnect from Roku", r), this.setState({
+                                            error: !0
+                                        }), [3, 5];
+                                    case 4:
+                                        return this.setState({
+                                            working: !1
+                                        }), [7];
+                                    case 5:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.render = function() {
+                    if (!this.isUserConnected()) return null;
+                    var e = Object(d.d)("Roku", "RokuConnectionPresentation"),
+                        t = Object(d.d)("Log in on your Roku", "RokuConnectionPresentation");
+                    return l.createElement(xe, {
+                        image: l.createElement(He, {
+                            type: Re.Roku
+                        }),
+                        title: e,
+                        subtitle: t,
+                        connected: !0,
+                        onClick: this.handleClick,
+                        error: this.state.error,
+                        working: this.state.working
+                    })
+                }, t.prototype.isUserConnected = function() {
+                    return !!(this.props.data && this.props.data.currentUser && this.props.data.currentUser.ssoLinks && this.props.data.currentUser.ssoLinks[0] && this.props.data.currentUser.ssoLinks[0].app && this.props.data.currentUser.ssoLinks[0].ssoID)
+                }, t
+            }(l.Component),
+            st = n("iLlo"),
+            ct = Object(w.a)(st)(ot),
+            lt = n("jZb3"),
+            ut = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3831,8 +3928,8 @@ webpackJsonp([47], {
                         n = Object(d.d)("By connecting your Steam account, you acknowledge and agree that your Steam ID will be publicly visible in the Twitch API and that Steam will automatically receive information about the Steam content you view while your accounts are connected. If you do not want this information shared, please disconnect your accounts.", "SteamConnectionComponent"),
                         i = this.props.data.loading;
                     return l.createElement(xe, {
-                        image: l.createElement(ze, {
-                            type: Ae.Steam
+                        image: l.createElement(He, {
+                            type: Re.Steam
                         }),
                         title: e,
                         subtitle: t,
@@ -3853,7 +3950,7 @@ webpackJsonp([47], {
                                         working: !0
                                     }), n.label = 1;
                                 case 1:
-                                    return n.trys.push([1, 3, 4, 5]), e = "/v5/steam/" + this.userID, [4, ie.a.deleteOrThrow(e)];
+                                    return n.trys.push([1, 3, 4, 5]), e = "/v5/steam/" + this.userID, [4, ae.a.deleteOrThrow(e)];
                                 case 2:
                                     return n.sent(), this.updateConnectionInCache(!1), [3, 5];
                                 case 3:
@@ -3877,20 +3974,23 @@ webpackJsonp([47], {
                         return c.__generator(this, function(r) {
                             return this.userID ? (this.setState({
                                 working: !0
-                            }), e = Ge.stringify({
+                            }), e = Je.stringify({
                                 client_id: d.a.legacyClientID
-                            }), t = d.a.apiBaseURL + "/v5/steam/" + this.userID + "/auth?" + e, (n = window.open(t, "steamPopout", "width=1024,height=780")) ? (Object(Re.a)(n, function(e) {
+                            }), t = d.a.apiBaseURL + "/v5/steam/" + this.userID + "/auth?" + e, (n = window.open(t, "steamPopout", "width=1024,height=780")) ? (Object(qe.a)(n, function(e) {
                                 i.logger.debug("Steam connection window closed", {
                                     success: e
                                 }), i.setState({
                                     error: !e,
                                     working: !1
                                 }), i.updateConnectionInCache(e)
-                            }), [2]) : [2]) : (this.logger.debug("Unable to start Steam connection - current user's ID is unknown."), [2])
+                            }), [2]) : (this.setState({
+                                working: !1,
+                                error: !0
+                            }), [2])) : (this.logger.debug("Unable to start Steam connection - current user's ID is unknown."), [2])
                         })
                     })
                 }, t.prototype.updateConnectionInCache = function(e) {
-                    Object(j.d)(rt, {}, function(t) {
+                    Object(P.d)(lt, {}, function(t) {
                         return t.currentUser && t.currentUser.accountConnections.steam && (t.currentUser.accountConnections.steam.hasConnection = e), t
                     })
                 }, Object.defineProperty(t.prototype, "userID", {
@@ -3907,8 +4007,106 @@ webpackJsonp([47], {
                     configurable: !0
                 }), t
             }(l.Component),
-            ot = Object(N.a)(rt)(at),
-            st = function(e) {
+            dt = Object(w.a)(lt)(ut),
+            pt = n("st1H"),
+            mt = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        error: !1,
+                        working: !1
+                    }, t.logger = d.j.withCategory("TwitterConnection"), t.handleClick = function() {
+                        t.setState({
+                            error: !1
+                        }), t.connected ? t.disconnect() : t.connect()
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.render = function() {
+                    var e = Object(d.d)("Twitter", "TwitterConnection"),
+                        t = Object(d.d)("Tweet your Channel Feed posts to your followers.", "TwitterConnection"),
+                        n = Object(d.d)("By connecting your account with Twitter, you acknowledge and agree that information you choose to share will be uploaded to these services and may be viewed by these services and other users of these services.", "TwitterConnection"),
+                        i = this.props.data.loading;
+                    return l.createElement(xe, {
+                        image: l.createElement(He, {
+                            type: Re.Twitter
+                        }),
+                        title: e,
+                        subtitle: t,
+                        footer: n,
+                        error: this.state.error,
+                        connected: this.connected,
+                        working: this.state.working || i,
+                        onClick: this.handleClick
+                    })
+                }, t.prototype.connect = function() {
+                    var e = this;
+                    if (this.userID) {
+                        this.setState({
+                            working: !0
+                        });
+                        var t = d.a.apiBaseURL + "/v5/twitter/" + this.userID + "/auth",
+                            n = window.open(t, "twitterPopout", "width=760,height=760");
+                        n ? Object(qe.a)(n, function(t) {
+                            e.logger.debug("Twitter connection window closed", {
+                                success: t
+                            }), e.setState({
+                                error: !t,
+                                working: !1
+                            }), e.updateConnectionInCache(t)
+                        }) : this.setState({
+                            working: !1,
+                            error: !0
+                        })
+                    } else this.logger.debug("Unable to start Twitter connection - current user's ID is unknown.")
+                }, t.prototype.disconnect = function() {
+                    return c.__awaiter(this, void 0, void 0, function() {
+                        var e, t;
+                        return c.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    if (!this.userID) return this.logger.debug("Unable to disconnect from Twitter - current user's ID is unknown."), [2];
+                                    this.setState({
+                                        working: !0
+                                    }), n.label = 1;
+                                case 1:
+                                    return n.trys.push([1, 3, 4, 5]), e = "/v5/twitter/" + this.userID, [4, ae.a.deleteOrThrow(e)];
+                                case 2:
+                                    return n.sent(), this.updateConnectionInCache(!1), [3, 5];
+                                case 3:
+                                    return t = n.sent(), this.logger.warn("Failed to disconnect from Twitter", {
+                                        error: t
+                                    }), this.setState({
+                                        error: !0
+                                    }), [3, 5];
+                                case 4:
+                                    return this.setState({
+                                        working: !1
+                                    }), [7];
+                                case 5:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, t.prototype.updateConnectionInCache = function(e) {
+                    Object(P.d)(pt, {}, function(t) {
+                        return t.currentUser && t.currentUser.accountConnections.twitter && (t.currentUser.accountConnections.twitter.hasConnection = e), t
+                    })
+                }, Object.defineProperty(t.prototype, "userID", {
+                    get: function() {
+                        return this.props.data.currentUser && this.props.data.currentUser.id
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "connected", {
+                    get: function() {
+                        return !!(this.props.data.currentUser && this.props.data.currentUser.accountConnections.twitter && this.props.data.currentUser.accountConnections.twitter.hasConnection)
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t
+            }(l.Component),
+            gt = Object(w.a)(pt)(mt),
+            ht = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3923,9 +4121,9 @@ webpackJsonp([47], {
                                             error: !1
                                         }), o.label = 1;
                                     case 1:
-                                        return o.trys.push([1, 3, , 4]), e = Ge.stringify({
+                                        return o.trys.push([1, 3, , 4]), e = Je.stringify({
                                             app: "xb360"
-                                        }), t = "/api/xbox/disconnect?" + e, [4, ie.a.post(t)];
+                                        }), t = "/api/xbox/disconnect?" + e, [4, ae.a.post(t)];
                                     case 2:
                                         return n = o.sent(), i = n.error, r = n.requestError, i || r ? (this.logger.warn("Failed to disconnect from Xbox 360", {
                                             error: i,
@@ -3949,8 +4147,8 @@ webpackJsonp([47], {
                     var e = Object(d.d)("Xbox 360", "Xbox360ConnectionPresentation"),
                         t = Object(d.d)("Log in on your Xbox 360", "Xbox360ConnectionPresentation");
                     return l.createElement(xe, {
-                        image: l.createElement(ze, {
-                            type: Ae.Xbox
+                        image: l.createElement(He, {
+                            type: Re.Xbox
                         }),
                         title: e,
                         subtitle: t,
@@ -3962,9 +4160,9 @@ webpackJsonp([47], {
                     return !!(this.props.data.currentUser && this.props.data.currentUser.ssoLinks && this.props.data.currentUser.ssoLinks[0] && this.props.data.currentUser.ssoLinks[0].app && this.props.data.currentUser.ssoLinks[0].ssoID)
                 }, t
             }(l.Component),
-            ct = n("upQt"),
-            lt = Object(N.a)(ct)(st),
-            ut = function(e) {
+            ft = n("upQt"),
+            vt = Object(w.a)(ft)(ht),
+            bt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3981,9 +4179,9 @@ webpackJsonp([47], {
                                             working: !0
                                         }), o.label = 1;
                                     case 1:
-                                        return o.trys.push([1, 3, 4, 5]), e = Ge.stringify({
+                                        return o.trys.push([1, 3, 4, 5]), e = Je.stringify({
                                             app: "xb1"
-                                        }), t = "/api/xbox/disconnect?" + e, [4, ie.a.post(t)];
+                                        }), t = "/api/xbox/disconnect?" + e, [4, ae.a.post(t)];
                                     case 2:
                                         return n = o.sent(), i = n.error, r = n.requestError, i || r ? (this.logger.warn("Failed to disconnect from Xbox One", {
                                             error: i,
@@ -4011,8 +4209,8 @@ webpackJsonp([47], {
                     var e = Object(d.d)("Xbox One", "XboxOneConnectionPresentation"),
                         t = Object(d.d)("Log in and Broadcast directly from your console", "XboxOneConnectionPresentation");
                     return l.createElement(xe, {
-                        image: l.createElement(ze, {
-                            type: Ae.Xbox
+                        image: l.createElement(He, {
+                            type: Re.Xbox
                         }),
                         title: e,
                         subtitle: t,
@@ -4025,9 +4223,9 @@ webpackJsonp([47], {
                     return !!(this.props.data && this.props.data.currentUser && this.props.data.currentUser.ssoLinks && this.props.data.currentUser.ssoLinks[0] && this.props.data.currentUser.ssoLinks[0].app && this.props.data.currentUser.ssoLinks[0].ssoID)
                 }, t
             }(l.Component),
-            dt = n("UAbV"),
-            pt = Object(N.a)(dt)(ut),
-            mt = function(e) {
+            yt = n("UAbV"),
+            St = Object(w.a)(yt)(bt),
+            kt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleClick = function() {}, t
@@ -4037,8 +4235,8 @@ webpackJsonp([47], {
                         t = Object(d.d)("Export archives and enable Live Annotation", "YoutubeConnectionComponent"),
                         n = Object(d.d)("Automatically notify your Youtube viewers when you are live on Twitch. You can change this from your Twitch account settings later.", "YoutubeConnectionComponent");
                     return l.createElement(xe, {
-                        image: l.createElement(ze, {
-                            type: Ae.Youtube
+                        image: l.createElement(He, {
+                            type: Re.Youtube
                         }),
                         title: e,
                         subtitle: t,
@@ -4048,24 +4246,24 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            gt = function(e) {
+            _t = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return d.a.buildType === v.a.Production ? null : l.createElement("div", null, l.createElement(_.a, {
+                    return d.a.buildType === v.a.Production ? null : l.createElement("div", null, l.createElement(k.a, {
                         title: Object(d.d)("Recommended Connections", "SettingsConnectionsPage"),
                         description: Object(d.d)("Manage your connected accounts and services", "SettingsConnectionsPage")
-                    }), l.createElement(k.a, null, l.createElement(ot, null), l.createElement(mt, null), l.createElement(We, null), l.createElement(Je, null), l.createElement(pt, null), l.createElement(lt, null), l.createElement(it, null)), l.createElement(_.a, {
+                    }), l.createElement(S.a, null, l.createElement(dt, null), l.createElement(kt, null), l.createElement(Ye, null), l.createElement(gt, null), l.createElement(Ke, null), l.createElement(St, null), l.createElement(vt, null), l.createElement(at, null), l.createElement(ct, null)), l.createElement(k.a, {
                         title: Object(d.d)("Extensions Connections", "SettingsConnectionsPage"),
                         description: Object(d.d)("You have shared your Twitch username with these extensions", "SettingsConnectionsPage")
-                    }), l.createElement(k.a, null, l.createElement(Le, null)), l.createElement(_.a, {
+                    }), l.createElement(S.a, null, l.createElement(Be, null)), l.createElement(k.a, {
                         title: Object(d.d)("Other Connections", "SettingsConnectionsPage"),
                         description: Object(d.d)("You have authorized these apps to use your Twitch account", "SettingsConnectionsPage")
-                    }), l.createElement(k.a, null, l.createElement(et, null)), l.createElement(_.a, {
+                    }), l.createElement(S.a, null, l.createElement(nt, null)), l.createElement(k.a, {
                         title: Object(d.d)("Developer Applications", "SettingsConnectionsPage"),
                         description: Object(d.d)("Developer Application management has moved to {devPortalURL}", {
-                            devPortalURL: l.createElement(I.M, {
+                            devPortalURL: l.createElement(N.M, {
                                 to: "https://dev.twitch.tv"
                             }, "https://dev.twitch.tv")
                         }, "SettingsConnectionsPage")
@@ -4077,10 +4275,10 @@ webpackJsonp([47], {
                     location: y.PageviewLocation.SettingsPage
                 })], t)
             }(l.Component),
-            ht = n("LBNC"),
-            ft = n("UbVv"),
-            vt = n("zCIC"),
-            bt = (n("hPJb"), function(e) {
+            Et = n("LBNC"),
+            Ct = n("UbVv"),
+            wt = n("zCIC"),
+            Ot = (n("hPJb"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -4088,77 +4286,77 @@ webpackJsonp([47], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(I._29, {
+                    return l.createElement(N._29, {
                         className: "advanced-notification-settings-toggle",
-                        display: I.P.Flex,
-                        justifyContent: I._5.Between,
-                        background: I.m.Base,
+                        display: N.P.Flex,
+                        justifyContent: N._5.Between,
+                        background: N.m.Base,
                         padding: {
                             x: 5,
                             y: 1
                         },
                         borderBottom: !0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         margin: {
                             left: 5
                         },
-                        display: I.P.Flex,
+                        display: N.P.Flex,
                         flexGrow: 1,
-                        alignItems: I.c.Center,
-                        flexWrap: I.S.NoWrap
-                    }, l.createElement(I._6, {
-                        display: I.P.Flex,
+                        alignItems: N.c.Center,
+                        flexWrap: N.S.NoWrap
+                    }, l.createElement(N._6, {
+                        display: N.P.Flex,
                         flexGrow: 1,
-                        flexWrap: I.S.NoWrap
-                    }, l.createElement(I._6, {
+                        flexWrap: N.S.NoWrap
+                    }, l.createElement(N._6, {
                         flexShrink: 0,
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(I._4, {
+                    }, l.createElement(N._4, {
                         linkTo: "/" + this.props.login
-                    }, l.createElement(I.l, {
+                    }, l.createElement(N.l, {
                         src: this.props.thumbnail,
                         alt: this.props.text,
                         size: 40
-                    }))), l.createElement(I._6, {
+                    }))), l.createElement(N._6, {
                         flexGrow: 1,
-                        display: I.P.Flex,
-                        flexDirection: I.R.Column
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size5
-                    }, l.createElement(E.a, {
+                        display: N.P.Flex,
+                        flexDirection: N.R.Column
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size5
+                    }, l.createElement(_.a, {
                         to: "/" + this.props.login
-                    }, this.props.text)), l.createElement(I.O, {
-                        type: I._43.Span,
-                        color: I.J.Alt2
-                    }, this.props.description))), l.createElement(I._6, {
-                        display: I.P.Flex,
+                    }, this.props.text)), l.createElement(N.O, {
+                        type: N._43.Span,
+                        color: N.J.Alt2
+                    }, this.props.description))), l.createElement(N._6, {
+                        display: N.P.Flex,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(I._45, {
+                    }, l.createElement(N._45, {
                         checked: this.props.isEnabled,
                         onChange: this.changeHandler,
                         "data-test-selector": "toggle-selector",
                         id: this.props.userId
-                    })), l.createElement(I._6, {
+                    })), l.createElement(N._6, {
                         className: this.props.saved ? "advanced-notification-settings-toggle__saved" : "advanced-notification-settings-toggle__saved--hide",
                         padding: {
                             x: 1
                         }
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size5,
-                        color: I.J.Link
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size5,
+                        color: N.J.Link
                     }, Object(d.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(l.Component)),
-            yt = n("AQCV"),
-            St = (n("t4xU"), n("EaRL")),
-            kt = function(e) {
+            Nt = n("AQCV"),
+            Ut = (n("t4xU"), n("EaRL")),
+            jt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4176,7 +4374,7 @@ webpackJsonp([47], {
                             return c.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return this.props.data && this.props.data.currentUser && this.props.setAdvancedNotificationSetting ? (t = c.__assign({}, Object(j.a)({
+                                        return this.props.data && this.props.data.currentUser && this.props.setAdvancedNotificationSetting ? (t = c.__assign({}, Object(P.a)({
                                             disableNotifications: n,
                                             targetID: e
                                         }), {
@@ -4198,7 +4396,7 @@ webpackJsonp([47], {
                                                 a.node.id === e && (a.notificationSettings.isEnabled = !i.data.followUser.follow.disableNotifications)
                                             }
                                             return t
-                                        }, Object(j.d)(St, {
+                                        }, Object(P.d)(Ut, {
                                             limit: 50
                                         }, r), this.markSaved(e), [2]
                                 }
@@ -4209,18 +4407,18 @@ webpackJsonp([47], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return l.createElement(I._29, {
+                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return l.createElement(N._29, {
                         padding: {
                             y: 1
                         },
                         borderBottom: !0
-                    }, l.createElement(I._8, {
+                    }, l.createElement(N._8, {
                         fillContent: !0
                     }));
                     if (this.props.data.error) return l.createElement(p.a, {
                         message: Object(d.d)("Error loading data.", "AdvancedNotificationSettings")
                     });
-                    if (!this.props.data.currentUser) return l.createElement(I._29, {
+                    if (!this.props.data.currentUser) return l.createElement(N._29, {
                         padding: {
                             y: 1
                         },
@@ -4231,64 +4429,64 @@ webpackJsonp([47], {
                     var e = Object(d.d)("{followCount, plural, one {You follow # channel} other {You follow # channels}}", {
                             followCount: this.props.data.currentUser.follows.totalCount
                         }, "AdvancedNotificationSettings"),
-                        t = l.createElement(I._29, {
-                            background: I.m.Alt2,
+                        t = l.createElement(N._29, {
+                            background: N.m.Alt2,
                             borderBottom: !0
-                        }, l.createElement(I._4, {
+                        }, l.createElement(N._4, {
                             onClick: this.toggleCollapse,
                             alpha: !0,
                             "data-test-selector": "header-selector"
-                        }, l.createElement(I._6, {
-                            display: I.P.Flex,
+                        }, l.createElement(N._6, {
+                            display: N.P.Flex,
                             padding: {
                                 x: 2,
                                 y: 1
                             }
-                        }, l.createElement(I._6, {
+                        }, l.createElement(N._6, {
                             className: "advanced-notification-settings__header",
                             flexGrow: 0
-                        }, l.createElement(I.O, {
-                            fontSize: I.T.Size5,
-                            color: I.J.Alt2,
+                        }, l.createElement(N.O, {
+                            fontSize: N.T.Size5,
+                            color: N.J.Alt2,
                             bold: !0
-                        }, Object(d.d)("Advanced", "AdvancedNotificationSettings"))), l.createElement(I._6, {
+                        }, Object(d.d)("Advanced", "AdvancedNotificationSettings"))), l.createElement(N._6, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, l.createElement(I.O, {
+                        }, l.createElement(N.O, {
                             "data-test-selector": "description-selector",
-                            fontSize: I.T.Size5,
-                            color: I.J.Alt2
-                        }, e)), l.createElement(I._6, {
+                            fontSize: N.T.Size5,
+                            color: N.J.Alt2
+                        }, e)), l.createElement(N._6, {
                             className: this.state.collapsed ? "advanced-notification-settings--collapse" : "advanced-notification-settings--expand",
                             flexGrow: 0,
                             flexShrink: 1,
-                            display: I.P.Flex,
-                            justifyContent: I._5.Center
-                        }, l.createElement(I._19, {
-                            asset: I._20.AngleRight,
-                            type: I._21.Alt2
+                            display: N.P.Flex,
+                            justifyContent: N._5.Center
+                        }, l.createElement(N._19, {
+                            asset: N._20.AngleRight,
+                            type: N._21.Alt2
                         }))))),
                         n = !this.props.data.loading && !this.props.data.error && !!this.props.data.currentUser.follows.pageInfo.hasNextPage;
-                    return this.props.data.currentUser.follows.totalCount > 0 ? this.state.collapsed ? l.createElement(I._29, null, t) : l.createElement(I._29, null, t, l.createElement(I._29, {
+                    return this.props.data.currentUser.follows.totalCount > 0 ? this.state.collapsed ? l.createElement(N._29, null, t) : l.createElement(N._29, null, t, l.createElement(N._29, {
                         borderBottom: !0,
                         padding: 2
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         padding: {
                             bottom: 1
                         }
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size5,
-                        color: I.J.Alt2
-                    }, Object(d.d)("Manage which channels you receive notifications for.", "AdvancedNotificationSettings"))), l.createElement(I._6, {
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size5,
+                        color: N.J.Alt2
+                    }, Object(d.d)("Manage which channels you receive notifications for.", "AdvancedNotificationSettings"))), l.createElement(N._6, {
                         padding: {
                             bottom: 1
                         }
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size4,
-                        color: I.J.Alt
-                    }, e)), l.createElement(I._29, {
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size4,
+                        color: N.J.Alt
+                    }, e)), l.createElement(N._29, {
                         className: "advanced-notification-settings__toggle-container",
                         borderTop: !0,
                         borderLeft: !0,
@@ -4296,7 +4494,7 @@ webpackJsonp([47], {
                         margin: {
                             bottom: .5
                         }
-                    }, this.renderToggles(), l.createElement(vt.a, {
+                    }, this.renderToggles(), l.createElement(wt.a, {
                         loadMore: this.props.loadMore,
                         enabled: n,
                         pixelThreshold: 200
@@ -4305,7 +4503,7 @@ webpackJsonp([47], {
                     if (this.props.data && this.props.data.currentUser) {
                         for (var e = [], t = 0, n = this.props.data.currentUser.follows.edges; t < n.length; t++) {
                             var i = n[t];
-                            i.node && i.node.id && i.node.followers && e.push(l.createElement(bt, {
+                            i.node && i.node.id && i.node.followers && e.push(l.createElement(Ot, {
                                 userId: i.node.id,
                                 text: i.node.displayName,
                                 login: i.node.login,
@@ -4340,7 +4538,7 @@ webpackJsonp([47], {
                     }
                 }, t
             }(l.Component),
-            _t = Object(r.d)(Object(N.a)(St, {
+            Tt = Object(r.d)(Object(w.a)(Ut, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network",
@@ -4353,7 +4551,7 @@ webpackJsonp([47], {
                     return c.__assign({}, e, {
                         loadMore: function() {
                             return e.data.fetchMore({
-                                query: St,
+                                query: Ut,
                                 variables: c.__assign({}, e.data.variables, {
                                     cursor: e.data.currentUser && e.data.currentUser.follows.edges[e.data.currentUser.follows.edges.length - 1].cursor
                                 }),
@@ -4362,7 +4560,7 @@ webpackJsonp([47], {
                                     return e.currentUser && n.currentUser ? {
                                         currentUser: c.__assign({}, n.currentUser, {
                                             follows: c.__assign({}, n.currentUser.follows, {
-                                                edges: Object(j.b)(e.currentUser.follows.edges, n.currentUser.follows.edges)
+                                                edges: Object(P.b)(e.currentUser.follows.edges, n.currentUser.follows.edges)
                                             })
                                         })
                                     } : n
@@ -4371,13 +4569,13 @@ webpackJsonp([47], {
                         }
                     })
                 }
-            }), Object(N.a)(yt, {
+            }), Object(w.a)(Nt, {
                 name: "setAdvancedNotificationSetting"
-            }), Object(m.d)("AdvancedNotificationSettings"))(kt),
-            Et = n("OOv5"),
-            Ct = n("JBcW"),
-            Ot = (n("mVHD"), d.o.logger.withCategory("browser-push-notifications-settings")),
-            wt = function(e) {
+            }), Object(m.d)("AdvancedNotificationSettings"))(jt),
+            Dt = n("OOv5"),
+            Pt = n("JBcW"),
+            It = (n("mVHD"), d.o.logger.withCategory("browser-push-notifications-settings")),
+            xt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4393,26 +4591,26 @@ webpackJsonp([47], {
                                     case 0:
                                         return this.setState({
                                             deciding: !0
-                                        }), [4, Et.a.hasPushSubscription()];
+                                        }), [4, Dt.a.hasPushSubscription()];
                                     case 1:
                                         if (!n.sent()) return [3, 6];
                                         n.label = 2;
                                     case 2:
-                                        return n.trys.push([2, 4, , 5]), [4, Et.a.userUnsubscribe(Ct.a.Settings)];
+                                        return n.trys.push([2, 4, , 5]), [4, Dt.a.userUnsubscribe(Pt.a.Settings)];
                                     case 3:
                                         return n.sent(), [3, 5];
                                     case 4:
-                                        return e = n.sent(), Ot.error(e, "user unsubscribe failed"), [3, 5];
+                                        return e = n.sent(), It.error(e, "user unsubscribe failed"), [3, 5];
                                     case 5:
                                         return [3, 9];
                                     case 6:
-                                        return n.trys.push([6, 8, , 9]), [4, Et.a.userSubscribe(Ct.a.Settings)];
+                                        return n.trys.push([6, 8, , 9]), [4, Dt.a.userSubscribe(Pt.a.Settings)];
                                     case 7:
                                         return n.sent(), [3, 9];
                                     case 8:
-                                        return t = n.sent(), Object(ft.a)() ? (this.setState({
+                                        return t = n.sent(), Object(Ct.a)() ? (this.setState({
                                             hide: !0
-                                        }), [2]) : (Ot.error(t, "user subscribe failed"), [3, 9]);
+                                        }), [2]) : (It.error(t, "user subscribe failed"), [3, 9]);
                                     case 9:
                                         return [4, this.updateSubscriptionState()];
                                     case 10:
@@ -4430,13 +4628,13 @@ webpackJsonp([47], {
                         return c.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return t.trys.push([0, 3, , 4]), [4, Et.a.initialize()];
+                                    return t.trys.push([0, 3, , 4]), [4, Dt.a.initialize()];
                                 case 1:
                                     return t.sent(), [4, this.updateSubscriptionState()];
                                 case 2:
                                     return t.sent(), [3, 4];
                                 case 3:
-                                    return e = t.sent(), Ot.error(e, "unexpected error initializing push manager"), this.setState({
+                                    return e = t.sent(), It.error(e, "unexpected error initializing push manager"), this.setState({
                                         hide: !0
                                     }), [2];
                                 case 4:
@@ -4452,7 +4650,7 @@ webpackJsonp([47], {
                 }, t.prototype.render = function() {
                     if (this.state.hide || this.state.loading) return null;
                     var e = this.state.hasSubscription ? Object(d.d)("Turn Off", "BrowserPushNotificationsSettings") : Object(d.d)("Turn On", "BrowserPushNotificationsSettings");
-                    return l.createElement(I._29, {
+                    return l.createElement(N._29, {
                         borderTop: !0,
                         padding: {
                             right: 2,
@@ -4463,39 +4661,39 @@ webpackJsonp([47], {
                         },
                         "data-test-selector": "qa-browser-push-notifications-settings",
                         "data-a-target": "browser-push-notifications-settings"
-                    }, l.createElement(I._29, {
+                    }, l.createElement(N._29, {
                         className: "browser-push-notification-settings",
                         padding: {
                             left: 5,
                             right: 4
                         },
-                        display: I.P.Flex,
+                        display: N.P.Flex,
                         margin: {
                             x: 5
                         }
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         className: "browser-push-notification-settings__body",
-                        display: I.P.Flex,
-                        flexWrap: I.S.NoWrap,
+                        display: N.P.Flex,
+                        flexWrap: N.S.NoWrap,
                         flexGrow: 1
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         margin: {
                             right: 1
                         },
                         flexGrow: 1
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size4,
-                        color: I.J.Alt
-                    }, Object(d.d)("Receive Browser Notifications for this Device", "BrowserPushNotificationsSettings")), l.createElement(I._6, {
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size4,
+                        color: N.J.Alt
+                    }, Object(d.d)("Receive Browser Notifications for this Device", "BrowserPushNotificationsSettings")), l.createElement(N._6, {
                         padding: {
                             top: .5
                         }
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size5,
-                        color: I.J.Alt2
-                    }, Object(d.d)("See notifications at the corner of your screen, even when you’re not on Twitch", "BrowserPushNotificationsSettings")))), l.createElement(I._6, {
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size5,
+                        color: N.J.Alt2
+                    }, Object(d.d)("See notifications at the corner of your screen, even when you’re not on Twitch", "BrowserPushNotificationsSettings")))), l.createElement(N._6, {
                         flexShrink: 0
-                    }, l.createElement(I.u, {
+                    }, l.createElement(N.u, {
                         "data-test-selector": "qa-browser-push-notifications-settings-toggle",
                         disabled: this.state.deciding,
                         onClick: this.toggle
@@ -4506,7 +4704,7 @@ webpackJsonp([47], {
                         return c.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, Et.a.hasPushSubscription()];
+                                    return [4, Dt.a.hasPushSubscription()];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         hasSubscription: e
@@ -4516,8 +4714,8 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            Nt = Object(w.compose)(Object(m.d)("BrowserPushNotificationsSettings"))(wt),
-            jt = (n("iOZM"), function(e) {
+            Ft = Object(D.compose)(Object(m.d)("BrowserPushNotificationsSettings"))(xt),
+            At = (n("iOZM"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -4525,12 +4723,12 @@ webpackJsonp([47], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(I._29, {
+                    return l.createElement(N._29, {
                         className: "platform-notification-settings-toggle",
-                        display: I.P.Flex,
-                        flexWrap: I.S.NoWrap,
-                        alignItems: I.c.Start,
-                        background: I.m.Alt,
+                        display: N.P.Flex,
+                        flexWrap: N.S.NoWrap,
+                        alignItems: N.c.Start,
+                        background: N.m.Alt,
                         margin: {
                             top: 1,
                             bottom: .5
@@ -4538,56 +4736,56 @@ webpackJsonp([47], {
                         padding: {
                             right: 5
                         }
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         className: "platform-notification-settings-toggle__body",
-                        display: I.P.Flex,
-                        flexDirection: I.R.Column,
+                        display: N.P.Flex,
+                        flexDirection: N.R.Column,
                         flexGrow: 1,
                         padding: {
                             right: 1
                         }
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         margin: {
                             bottom: .5
                         }
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size4
-                    }, this.props.text)), l.createElement(I.O, {
-                        fontSize: I.T.Size5,
-                        color: I.J.Alt2
-                    }, this.props.description)), l.createElement(I._6, {
-                        display: I.P.Flex,
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size4
+                    }, this.props.text)), l.createElement(N.O, {
+                        fontSize: N.T.Size5,
+                        color: N.J.Alt2
+                    }, this.props.description)), l.createElement(N._6, {
+                        display: N.P.Flex,
                         margin: {
                             top: .5
                         },
                         flexGrow: 0,
                         flexShrink: 0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(I._45, {
+                    }, l.createElement(N._45, {
                         checked: this.props.isEnabled,
                         disabled: this.props.disabled,
                         onChange: this.changeHandler,
                         "data-test-selector": "toggle-selector"
-                    })), l.createElement(I._6, {
+                    })), l.createElement(N._6, {
                         className: this.props.saved ? "platform-notification-settings-toggle__saved" : "platform-notification-settings-toggle__saved--hide",
                         padding: {
                             x: 1
                         }
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size5,
-                        color: I.J.Link
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size5,
+                        color: N.J.Link
                     }, Object(d.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(l.Component)),
-            Tt = n("g+dK"),
-            Dt = (n("RC0U"), n("1f5k"));
+            Mt = n("g+dK"),
+            Lt = (n("RC0U"), n("1f5k"));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
-        }(Ke || (Ke = {}));
-        var Pt = function(e) {
+        }($e || ($e = {}));
+        var Rt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4643,7 +4841,7 @@ webpackJsonp([47], {
                             return c.__generator(this, function(s) {
                                 switch (s.label) {
                                     case 0:
-                                        return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", i = c.__assign({}, Object(j.a)({
+                                        return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", i = c.__assign({}, Object(P.a)({
                                             category: e,
                                             platform: this.props.platformName,
                                             settingState: t
@@ -4662,7 +4860,7 @@ webpackJsonp([47], {
                                                     return e.platformName === o.props.platformName && (e.isEnabled = "on" === r.data.setNotificationSetting.settingState, e.settingState = r.data.setNotificationSetting.settingState), e
                                                 })), t
                                             }), t) : t
-                                        }, Object(j.d)(Dt, {}, a), this.markSaved(e), [2]
+                                        }, Object(P.d)(Lt, {}, a), this.markSaved(e), [2]
                                 }
                             })
                         })
@@ -4671,122 +4869,122 @@ webpackJsonp([47], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return l.createElement(I._6, {
+                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return l.createElement(N._6, {
                         padding: 1
-                    }, l.createElement(I._8, {
+                    }, l.createElement(N._8, {
                         fillContent: !0
                     }));
                     if (this.props.data.error) return l.createElement(p.a, {
                         message: Object(d.d)("Error loading data.", "PlatformNotificationSettings")
                     });
-                    if (!this.props.data.currentUser) return l.createElement(I._29, {
+                    if (!this.props.data.currentUser) return l.createElement(N._29, {
                         margin: {
                             top: 1
                         }
                     }, l.createElement(p.a, {
                         message: Object(d.d)("You must be logged in to update your settings.", "PlatformNotificationSettings")
                     }));
-                    var e = l.createElement(I._29, {
-                        background: I.m.Alt2,
+                    var e = l.createElement(N._29, {
+                        background: N.m.Alt2,
                         borderBottom: !0
-                    }, l.createElement(I._4, {
+                    }, l.createElement(N._4, {
                         onClick: this.toggleCollapse,
                         alpha: !0
-                    }, l.createElement(I._6, {
-                        display: I.P.Flex,
+                    }, l.createElement(N._6, {
+                        display: N.P.Flex,
                         padding: {
                             x: 2,
                             y: 1
                         }
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         className: "platform-notification-settings__header",
                         flexGrow: 0,
                         "data-test-selector": "collapsible-header"
-                    }, l.createElement(I.O, {
+                    }, l.createElement(N.O, {
                         "data-test-selector": "display-name",
-                        fontSize: I.T.Size5,
-                        color: I.J.Alt2,
+                        fontSize: N.T.Size5,
+                        color: N.J.Alt2,
                         bold: !0
-                    }, this.props.displayName)), l.createElement(I._6, {
+                    }, this.props.displayName)), l.createElement(N._6, {
                         padding: {
                             x: 1
                         },
                         flexGrow: 1
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size5,
-                        color: I.J.Alt2
-                    }, this.getSettingTurnedOnMessage())), l.createElement(I._6, {
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size5,
+                        color: N.J.Alt2
+                    }, this.getSettingTurnedOnMessage())), l.createElement(N._6, {
                         className: this.state.collapsed ? "platform-notification-settings--collapse" : "platform-notification-settings--expand",
                         flexGrow: 0,
                         flexShrink: 1,
-                        display: I.P.Flex,
-                        justifyContent: I._5.Center
-                    }, l.createElement(I._19, {
-                        asset: I._20.AngleRight,
-                        type: I._21.Alt2
+                        display: N.P.Flex,
+                        justifyContent: N._5.Center
+                    }, l.createElement(N._19, {
+                        asset: N._20.AngleRight,
+                        type: N._21.Alt2
                     })))));
-                    return this.state.collapsed ? l.createElement(I._29, null, e) : l.createElement(I._29, null, e, l.createElement(I._29, {
+                    return this.state.collapsed ? l.createElement(N._29, null, e) : l.createElement(N._29, null, e, l.createElement(N._29, {
                         padding: 2,
                         borderBottom: !0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         padding: {
                             bottom: 1
                         }
-                    }, l.createElement(I.O, {
+                    }, l.createElement(N.O, {
                         "data-test-selector": "description",
-                        fontSize: I.T.Size5,
-                        color: I.J.Alt2
-                    }, this.props.description)), l.createElement(I._29, {
-                        display: I.P.Flex,
+                        fontSize: N.T.Size5,
+                        color: N.J.Alt2
+                    }, this.props.description)), l.createElement(N._29, {
+                        display: N.P.Flex,
                         margin: {
                             y: .5
                         },
                         borderBottom: !0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         className: "platform-notification-settings__all",
-                        display: I.P.Flex,
+                        display: N.P.Flex,
                         padding: {
                             bottom: 1,
                             right: 5
                         },
-                        justifyContent: I._5.Center,
+                        justifyContent: N._5.Center,
                         flexGrow: 1,
-                        flexWrap: I.S.NoWrap
-                    }, l.createElement(I._6, {
+                        flexWrap: N.S.NoWrap
+                    }, l.createElement(N._6, {
                         className: "platform-notification-settings__all-body",
                         flexGrow: 1,
                         padding: {
                             right: 1
                         }
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size4,
-                        color: I.J.Alt,
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size4,
+                        color: N.J.Alt,
                         "data-test-selector": "explanation"
-                    }, this.props.explanation)), l.createElement(I._6, {
-                        display: I.P.Flex,
+                    }, this.props.explanation)), l.createElement(N._6, {
+                        display: N.P.Flex,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(I._45, {
+                    }, l.createElement(N._45, {
                         "data-test-selector": "all-toggle",
                         checked: this.getGlobalStateForPlatform(),
                         onChange: this.toggleAll
-                    })), l.createElement(I._6, {
+                    })), l.createElement(N._6, {
                         padding: {
                             x: 1
                         },
                         "data-test-selector": "saved-selector",
                         className: this.getDisplaySaved("ALL") ? "platform-notification-settings__saved" : "platform-notification-settings__saved--hide"
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size5,
-                        color: I.J.Link
-                    }, Object(d.d)("Saved", "PlatformNotificationSettings")))))), l.createElement(I._6, {
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size5,
+                        color: N.J.Link
+                    }, Object(d.d)("Saved", "PlatformNotificationSettings")))))), l.createElement(N._6, {
                         className: "platform-notification-settings__toggle-container",
-                        display: I.P.Flex,
-                        flexDirection: I.R.Column,
+                        display: N.P.Flex,
+                        flexDirection: N.R.Column,
                         margin: {
                             left: 5
                         },
@@ -4821,7 +5019,7 @@ webpackJsonp([47], {
                     for (var e = [], t = 0, n = this.VisibleSettings; t < n.length; t++) {
                         var i = n[t],
                             r = this.getSettingByCategory(i.category);
-                        r && e.push(l.createElement(jt, {
+                        r && e.push(l.createElement(At, {
                             category: i.category,
                             text: i.name,
                             description: i.description,
@@ -4852,16 +5050,16 @@ webpackJsonp([47], {
                     }
                 }, t
             }(l.Component),
-            xt = Object(r.d)(Object(m.d)("PlatformNotificationSettings"), Object(N.a)(Dt, {
+            Bt = Object(r.d)(Object(m.d)("PlatformNotificationSettings"), Object(w.a)(Lt, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network"
                     }
                 }
-            }), Object(N.a)(Tt, {
+            }), Object(w.a)(Mt, {
                 name: "setNotificationSetting"
-            }))(Pt),
-            It = (n("nq6q"), function(e) {
+            }))(Rt),
+            qt = (n("nq6q"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -4870,57 +5068,57 @@ webpackJsonp([47], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
-                    var e = "" !== location.search ? Ge.parse(location.search) : {},
+                    var e = "" !== location.search ? Je.parse(location.search) : {},
                         t = !!e["open-advanced"] && "true" === e["open-advanced"];
-                    return l.createElement(I._29, {
+                    return l.createElement(N._29, {
                         className: "notification-settings__body",
                         borderRight: !0,
                         borderLeft: !0,
                         borderTop: !0
-                    }, l.createElement(I._29, {
-                        background: I.m.Alt,
+                    }, l.createElement(N._29, {
+                        background: N.m.Alt,
                         padding: {
                             x: 2,
                             y: 1
                         },
                         borderBottom: !0
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         margin: {
                             bottom: .5
                         }
-                    }, l.createElement(I.O, {
-                        fontSize: I.T.Size3,
-                        color: I.J.Alt
-                    }, Object(d.d)("Notifications", "SettingsNotificationsPage"))), l.createElement(I._6, null, l.createElement(I.O, {
-                        fontSize: I.T.Size5,
-                        color: I.J.Alt2
-                    }, Object(d.d)("Get the notifications you care about, where you want to see them.", "SettingsNotificationsPage")))), l.createElement(xt, {
+                    }, l.createElement(N.O, {
+                        fontSize: N.T.Size3,
+                        color: N.J.Alt
+                    }, Object(d.d)("Notifications", "SettingsNotificationsPage"))), l.createElement(N._6, null, l.createElement(N.O, {
+                        fontSize: N.T.Size5,
+                        color: N.J.Alt2
+                    }, Object(d.d)("Get the notifications you care about, where you want to see them.", "SettingsNotificationsPage")))), l.createElement(Bt, {
                         startCollapsed: t,
-                        platformName: Ke.onsite,
+                        platformName: $e.onsite,
                         displayName: Object(d.d)("On Twitch", "SettingsNotificationsPage"),
                         description: Object(d.d)("We'll always keep you informed on important updates to Twitch and your account.", "SettingsNotificationsPage"),
                         explanation: Object(d.d)("Send me notifications on Twitch about", "SettingsNotificationsPage"),
                         key: "onsite",
                         extraSettings: this.renderBrowserPushNotifications()
-                    }), l.createElement(xt, {
+                    }), l.createElement(Bt, {
                         startCollapsed: !0,
-                        platformName: Ke.email,
+                        platformName: $e.email,
                         displayName: Object(d.d)("By Email", "SettingsNotificationsPage"),
                         description: Object(d.d)("Receive important notifications through email. You may receive additional emails about features and content on Twitch. You can turn off specific emails using the unsubscribe link included in each message.", "SettingsNotificationsPage"),
                         explanation: Object(d.d)("Send me emails about", "SettingsNotificationsPage"),
                         key: "email"
-                    }), l.createElement(xt, {
-                        platformName: Ke.push,
+                    }), l.createElement(Bt, {
+                        platformName: $e.push,
                         startCollapsed: !0,
                         displayName: Object(d.d)("On Mobile", "SettingsNotificationsPage"),
                         description: Object(d.d)("Get Twitch updates on the go. Receive notifications right on your phone's home screen.", "SettingsNotificationsPage"),
                         explanation: Object(d.d)("Send me push notifications", "SettingsNotificationsPage"),
                         key: "push"
-                    }), l.createElement(_t, {
+                    }), l.createElement(Tt, {
                         startCollapsed: !t
                     }))
                 }, t.prototype.renderBrowserPushNotifications = function() {
-                    return Object(ht.a)() && !Object(ft.a)() ? l.createElement(Nt, null) : null
+                    return Object(Et.a)() && !Object(Ct.a)() ? l.createElement(Ft, null) : null
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t = c.__decorate([Object(m.d)("SettingsNotificationsPage", {
@@ -4929,42 +5127,42 @@ webpackJsonp([47], {
                     location: y.PageviewLocation.SettingsPage
                 })], t)
             }(l.Component)),
-            Ut = n("S1vB"),
-            Ft = n("UILf"),
-            Mt = n("XdSf"),
-            At = n("SZoP"),
-            Lt = n("cAbv"),
-            Rt = (n("OB6b"), n("vgA0")),
-            Bt = n("s/Z0"),
-            Vt = [255, 255, 255],
-            zt = [32, 28, 43],
-            qt = 3,
-            Ht = /^#[A-Fa-f0-9]{3,6}$/;
+            Vt = n("S1vB"),
+            zt = n("UILf"),
+            Ht = n("XdSf"),
+            Gt = n("SZoP"),
+            Wt = n("cAbv"),
+            Yt = (n("OB6b"), n("vgA0")),
+            Jt = n("s/Z0"),
+            Qt = [255, 255, 255],
+            Kt = [32, 28, 43],
+            Xt = 3,
+            $t = /^#[A-Fa-f0-9]{3,6}$/;
 
-        function Wt(e) {
+        function Zt(e) {
             var t = [e[0], e[1], e[2]].map(function(e) {
                 return (e /= 255) <= .03928 ? e / 12.92 : Math.pow((e + .055) / 1.055, 2.4)
             });
             return .2126 * t[0] + .7152 * t[1] + .0722 * t[2]
         }
 
-        function Gt(e, t) {
-            return (Wt(e) + .05) / (Wt(t) + .05)
+        function en(e, t) {
+            return (Zt(e) + .05) / (Zt(t) + .05)
         }
-        var Yt, Jt, Qt = "#b22222";
+        var tn, nn, rn = "#b22222";
         ! function(e) {
             e.ConfirmButton = "confirm-button", e.ContrastWarning = "contrast-warning", e.InvalidWarning = "invalid-warning", e.SaveError = "save-error"
-        }(Yt || (Yt = {})),
+        }(tn || (tn = {})),
         function(e) {
             e.Empty = "empty", e.Dirty = "dirty", e.SaveError = "save-error", e.InvalidInput = "invalid-input", e.Success = "success", e.Loading = "loading"
-        }(Jt || (Jt = {}));
-        var Kt, Xt, $t = function(e) {
+        }(nn || (nn = {}));
+        var an, on, sn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        selectedColor: t.props.data.currentUser && t.props.data.currentUser.chatColor || Qt,
-                        inputColor: t.props.data.currentUser && t.props.data.currentUser.chatColor || Qt,
-                        status: Jt.Empty,
+                        selectedColor: t.props.data.currentUser && t.props.data.currentUser.chatColor || rn,
+                        inputColor: t.props.data.currentUser && t.props.data.currentUser.chatColor || rn,
+                        status: nn.Empty,
                         isHighContrast: !0
                     }, t.onChangeInput = function(e) {
                         var n = e.currentTarget.value.trim();
@@ -4972,9 +5170,9 @@ webpackJsonp([47], {
                             inputColor: n
                         })
                     }, t.onBlurInput = function() {
-                        t.state.status !== Jt.InvalidInput && t.onChangeColor(t.state.inputColor)
+                        t.state.status !== nn.InvalidInput && t.onChangeColor(t.state.inputColor)
                     }, t.onChangeColor = function(e) {
-                        var n, i = (4 === (n = Bt(e)).length && (n = [n[0], n[1], n[2]]), Rt(n));
+                        var n, i = (4 === (n = Jt(e)).length && (n = [n[0], n[1], n[2]]), Yt(n));
                         t.validateColor(i), t.setState({
                             selectedColor: i,
                             inputColor: i
@@ -4986,17 +5184,17 @@ webpackJsonp([47], {
                                     case 0:
                                         if (!this.state.selectedColor) return [2];
                                         this.setState({
-                                            status: Jt.Loading
+                                            status: nn.Loading
                                         }), e.label = 1;
                                     case 1:
                                         return e.trys.push([1, 3, , 4]), [4, this.props.updateChatColorMutation(this.state.selectedColor)];
                                     case 2:
                                         return e.sent(), this.setState({
-                                            status: Jt.Success
+                                            status: nn.Success
                                         }), [3, 4];
                                     case 3:
                                         return e.sent(), this.setState({
-                                            status: Jt.SaveError
+                                            status: nn.SaveError
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -5011,110 +5209,110 @@ webpackJsonp([47], {
                         inputColor: e.data.currentUser.chatColor
                     })
                 }, t.prototype.render = function() {
-                    return !this.props.data.currentUser || this.props.data.networkStatus < 3 ? null : l.createElement(I._6, {
+                    return !this.props.data.currentUser || this.props.data.networkStatus < 3 ? null : l.createElement(N._6, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(_.a, {
+                    }, l.createElement(k.a, {
                         title: Object(d.d)("Chat Color", "ChatColorPicker"),
                         description: Object(d.d)("Pick a color, any color! It may take several minutes for your color to update in the chat room.", "ChatColorPicker")
-                    }), l.createElement(I._6, {
-                        display: I.P.Flex,
+                    }), l.createElement(N._6, {
+                        display: N.P.Flex,
                         margin: {
                             bottom: 1
                         },
                         className: "react-simple-colorpicker"
-                    }, l.createElement(Ft, {
+                    }, l.createElement(zt, {
                         color: this.state.selectedColor,
                         onChange: this.onChangeColor
-                    }), this.renderPreview(Object(d.d)("Light Mode", "ChatColorPicker"), "light-mode-preview", I.J.Base, this.props.data.currentUser), this.renderPreview(Object(d.d)("Dark Mode", "ChatColorPicker"), "dark-mode-preview", I.J.OverlayAlt, this.props.data.currentUser)), l.createElement(I._6, {
+                    }), this.renderPreview(Object(d.d)("Light Mode", "ChatColorPicker"), "light-mode-preview", N.J.Base, this.props.data.currentUser), this.renderPreview(Object(d.d)("Dark Mode", "ChatColorPicker"), "dark-mode-preview", N.J.OverlayAlt, this.props.data.currentUser)), l.createElement(N._6, {
                         padding: {
                             bottom: 2
                         },
                         className: "color-picker-input",
-                        display: I.P.Flex,
-                        alignItems: I.c.Baseline
-                    }, l.createElement(I._2, {
-                        type: I._3.Text,
+                        display: N.P.Flex,
+                        alignItems: N.c.Baseline
+                    }, l.createElement(N._2, {
+                        type: N._3.Text,
                         value: this.state.inputColor,
                         onChange: this.onChangeInput,
                         onBlur: this.onBlurInput,
                         maxLength: 7
-                    }), l.createElement(I._6, {
+                    }), l.createElement(N._6, {
                         margin: {
                             left: 2
                         }
                     }, this.renderStatus())), this.renderSaveButton())
                 }, t.prototype.renderStatus = function() {
-                    return this.state.status === Jt.SaveError ? l.createElement(I.O, {
-                        color: I.J.Error,
-                        "data-test-selector": Yt.SaveError
-                    }, Object(d.d)("Oops, something went wrong. Please try again.", "ChatColorPicker")) : this.state.status === Jt.InvalidInput ? l.createElement(I.O, {
-                        color: I.J.Error,
-                        "data-test-selector": Yt.InvalidWarning
+                    return this.state.status === nn.SaveError ? l.createElement(N.O, {
+                        color: N.J.Error,
+                        "data-test-selector": tn.SaveError
+                    }, Object(d.d)("Oops, something went wrong. Please try again.", "ChatColorPicker")) : this.state.status === nn.InvalidInput ? l.createElement(N.O, {
+                        color: N.J.Error,
+                        "data-test-selector": tn.InvalidWarning
                     }, Object(d.d)("Please enter a valid hexadecimal color code.", "ChatColorPicker")) : this.state.isHighContrast ? void 0 : this.renderContrastWarning()
                 }, t.prototype.renderContrastWarning = function() {
                     var e = 1,
                         t = Object(d.d)("<x:strong>Heads up!</x:strong> Some colors may be <x:strong>hard to read</x:strong> in light or dark themes. Check it here before chatting.", {
                             "x:strong": function(t) {
-                                return l.createElement(I.O, {
+                                return l.createElement(N.O, {
                                     key: "bold-text-" + e++,
-                                    type: I._43.Span,
+                                    type: N._43.Span,
                                     bold: !0
                                 }, t)
                             }
                         }, "ChatColorPicker"),
-                        n = l.createElement(I._6, {
-                            display: I.P.Inline,
-                            verticalAlign: I._53.TextTop,
+                        n = l.createElement(N._6, {
+                            display: N.P.Inline,
+                            verticalAlign: N._53.TextTop,
                             margin: {
                                 right: .5
                             }
-                        }, l.createElement(I._19, {
-                            asset: I._20.Warning
+                        }, l.createElement(N._19, {
+                            asset: N._20.Warning
                         }));
-                    return l.createElement(I._6, {
-                        "data-test-selector": Yt.ContrastWarning
-                    }, n, l.createElement(I.O, {
-                        type: I._43.Span,
-                        color: I.J.Alt2
+                    return l.createElement(N._6, {
+                        "data-test-selector": tn.ContrastWarning
+                    }, n, l.createElement(N.O, {
+                        type: N._43.Span,
+                        color: N.J.Alt2
                     }, t))
                 }, t.prototype.renderSaveButton = function() {
-                    var e = this.state.status !== Jt.Dirty && this.state.status !== Jt.SaveError && this.state.status !== Jt.Success,
-                        t = I.z.Default;
-                    this.state.status === Jt.Loading ? t = I.z.Loading : this.state.status === Jt.Success && (t = I.z.Success);
-                    var n = I.A.Default;
-                    return this.state.status === Jt.Success && (n = I.A.Success), l.createElement(I.u, {
-                        "data-test-selector": Yt.ConfirmButton,
+                    var e = this.state.status !== nn.Dirty && this.state.status !== nn.SaveError && this.state.status !== nn.Success,
+                        t = N.z.Default;
+                    this.state.status === nn.Loading ? t = N.z.Loading : this.state.status === nn.Success && (t = N.z.Success);
+                    var n = N.A.Default;
+                    return this.state.status === nn.Success && (n = N.A.Success), l.createElement(N.u, {
+                        "data-test-selector": tn.ConfirmButton,
                         disabled: e,
                         onClick: this.onClickSave,
                         state: t,
                         type: n
                     }, Object(d.d)("Confirm Color", "ChatColorPicker"))
                 }, t.prototype.renderPreview = function(e, t, n, i) {
-                    return l.createElement(I._6, {
-                        display: I.P.Flex,
-                        flexDirection: I.R.Column,
-                        justifyContent: I._5.Center,
+                    return l.createElement(N._6, {
+                        display: N.P.Flex,
+                        flexDirection: N.R.Column,
+                        justifyContent: N._5.Center,
                         margin: {
                             left: 2
                         }
-                    }, l.createElement(I.O, {
-                        color: I.J.Alt2
+                    }, l.createElement(N.O, {
+                        color: N.J.Alt2
                     }, e), l.createElement("div", {
                         style: {
                             width: "165px",
                             height: "60px",
                             backgroundColor: this.state.selectedColor
                         }
-                    }), l.createElement(I._6, {
+                    }), l.createElement(N._6, {
                         className: t,
                         padding: {
                             y: 2
                         },
-                        justifyContent: I._5.Center,
-                        display: I.P.Flex
-                    }, l.createElement(I._6, {
+                        justifyContent: N._5.Center,
+                        display: N.P.Flex
+                    }, l.createElement(N._6, {
                         margin: {
                             right: .5
                         }
@@ -5122,29 +5320,29 @@ webpackJsonp([47], {
                         style: {
                             color: this.state.selectedColor
                         }
-                    }, l.createElement(I.O, {
+                    }, l.createElement(N.O, {
                         bold: !0
-                    }, Object(At.a)(i.login, i.displayName)))), l.createElement(I.O, {
+                    }, Object(Gt.a)(i.login, i.displayName)))), l.createElement(N.O, {
                         color: n
                     }, Object(d.d)("Hi there!", "ChatColorPicker"))))
                 }, t.prototype.validateColor = function(e) {
                     var t, n, i;
-                    e && (i = e, Ht.test(i.trim())) ? this.setState({
-                        status: Jt.Dirty,
-                        isHighContrast: (t = e, n = Bt(t), Gt(Vt, n) >= qt && Gt(n, zt) >= qt)
+                    e && (i = e, $t.test(i.trim())) ? this.setState({
+                        status: nn.Dirty,
+                        isHighContrast: (t = e, n = Jt(t), en(Qt, n) >= Xt && en(n, Kt) >= Xt)
                     }) : this.setState({
-                        status: Jt.InvalidInput
+                        status: nn.InvalidInput
                     })
                 }, t
             }(l.Component),
-            Zt = Object(w.compose)(Object(N.a)(Lt), Object(Mt.a)())($t),
-            en = n("cumT"),
-            tn = function(e) {
+            cn = Object(D.compose)(Object(w.a)(Wt), Object(Ht.a)())(sn),
+            ln = n("cumT"),
+            un = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return d.a.buildType === v.a.Production ? null : this.props.data.currentUser && this.props.data.requestInfo ? this.props.data.currentUser.hasPrime ? l.createElement("div", null, l.createElement(Zt, null)) : Object(Ut.a)(this.props.data.requestInfo.countryCode) ? (window.location.replace("https://twitch.amazon.com/prime?ref_=sm_w_tsp_p_t"), null) : l.createElement(u.b, {
+                    return d.a.buildType === v.a.Production ? null : this.props.data.currentUser && this.props.data.requestInfo ? this.props.data.currentUser.hasPrime ? l.createElement("div", null, l.createElement(cn, null)) : Object(Vt.a)(this.props.data.requestInfo.countryCode) ? (window.location.replace("https://twitch.amazon.com/prime?ref_=sm_w_tsp_p_t"), null) : l.createElement(u.b, {
                         to: "/settings/turbo"
                     }) : null
                 }, t = c.__decorate([Object(m.d)("SettingsPrimePage", {
@@ -5152,17 +5350,18 @@ webpackJsonp([47], {
                     destination: b.a.SettingsPrime
                 }), Object(f.a)({
                     location: y.PageviewLocation.SettingsPage
-                }), Object(N.a)(en)], t)
+                }), Object(w.a)(ln)], t)
             }(l.Component),
-            nn = function() {
+            dn = n("WrTc"),
+            pn = function() {
                 return l.createElement(p.a, {
                     message: Object(d.d)("Error loading user data. Please try again later.", "SettingsPageError")
                 })
             },
-            rn = function() {
-                return l.createElement(x.a, {
+            mn = function() {
+                return l.createElement(O.a, {
                     label: Object(d.d)("Disable Your Twitch Account", "DisableAccountLink"),
-                    orientation: I.V.Horizontal
+                    orientation: N.V.Horizontal
                 }, Object(d.d)("If you want to disable your Twitch account, you can do so from the <x:link>Disable Account</x:link> page.", {
                     "x:link": function(e) {
                         return l.createElement("a", {
@@ -5173,14 +5372,14 @@ webpackJsonp([47], {
                     }
                 }, "DisableAccountLink"))
             },
-            an = 5e3;
+            gn = 5e3;
         ! function(e) {
             e[e.InvalidAddress = 1] = "InvalidAddress", e[e.InvalidDomain = 2] = "InvalidDomain"
-        }(Kt || (Kt = {})),
+        }(an || (an = {})),
         function(e) {
             e[e.Error = 0] = "Error", e[e.CanSendVerificationEmail = 1] = "CanSendVerificationEmail", e[e.VerificationEmailSent = 2] = "VerificationEmailSent", e[e.Verified = 3] = "Verified"
-        }(Xt || (Xt = {}));
-        var on, sn = function(e) {
+        }(on || (on = {}));
+        var hn, fn = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = d.j.withCategory("email-setting"), n.onClickVerify = function() {
@@ -5191,15 +5390,15 @@ webpackJsonp([47], {
                                     case 0:
                                         this.setState({
                                             working: !0
-                                        }), e = Xt.Error, n.label = 1;
+                                        }), e = on.Error, n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, ie.a.put("/kraken/users/" + this.props.id, {
+                                        return n.trys.push([1, 3, , 4]), [4, ae.a.put("/kraken/users/" + this.props.id, {
                                             body: {
                                                 email: this.props.email
                                             }
                                         })];
                                     case 2:
-                                        return 200 === n.sent().status && (e = Xt.VerificationEmailSent), [3, 4];
+                                        return 200 === n.sent().status && (e = on.VerificationEmailSent), [3, 4];
                                     case 3:
                                         return n.sent(), this.logger.warn("Request to send verification email failed for user:", {
                                             login: this.props.login
@@ -5211,105 +5410,105 @@ webpackJsonp([47], {
                                         }, function() {
                                             return t.feedbackTimerHandle = setTimeout(function() {
                                                 return t.setState({
-                                                    status: Xt.CanSendVerificationEmail
+                                                    status: on.CanSendVerificationEmail
                                                 })
-                                            }, an)
+                                            }, gn)
                                         }), [2]
                                 }
                             })
                         })
                     }, n.state = {
-                        status: t.verified ? Xt.Verified : Xt.CanSendVerificationEmail,
+                        status: t.verified ? on.Verified : on.CanSendVerificationEmail,
                         working: !1
                     }, n
                 }
                 return c.__extends(t, e), t.prototype.componentWillUnmount = function() {
                     this.feedbackTimerHandle && clearTimeout(this.feedbackTimerHandle)
                 }, t.prototype.render = function() {
-                    var e = !!this.props.error || this.state.status === Xt.Error,
+                    var e = !!this.props.error || this.state.status === on.Error,
                         t = this.props.disabled || this.state.working;
-                    return l.createElement(I._6, {
-                        display: I.P.Flex,
-                        flexWrap: I.S.NoWrap
-                    }, l.createElement(x.a, {
+                    return l.createElement(N._6, {
+                        display: N.P.Flex,
+                        flexWrap: N.S.NoWrap
+                    }, l.createElement(O.a, {
                         id: "profile-account-info-setting__email-input",
                         error: e,
                         errorMessage: e ? this.renderEmailError() : void 0,
                         label: Object(d.d)("Email", "EmailSetting")
-                    }, l.createElement(I._6, {
-                        display: I.P.Flex
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
+                        display: N.P.Flex
+                    }, l.createElement(N._6, {
                         flexGrow: 1
-                    }, l.createElement(I._2, {
+                    }, l.createElement(N._2, {
                         id: "profile-account-info-setting__email-input",
-                        type: I._3.Email,
+                        type: N._3.Email,
                         disabled: t,
                         onChange: this.props.onChange,
                         required: !0,
                         value: this.props.email,
                         "data-a-target": "profile-email-input"
-                    })), this.renderVerifyButton(t)), l.createElement(P.a, {
+                    })), this.renderVerifyButton(t)), l.createElement(F.a, {
                         text: this.renderVerificationMessage(),
                         dataTarget: "profile-email-description"
                     })))
                 }, t.prototype.renderVerifyButton = function(e) {
                     switch (this.state.status) {
-                        case Xt.CanSendVerificationEmail:
-                            return l.createElement(I.u, {
-                                type: I.A.Default,
+                        case on.CanSendVerificationEmail:
+                            return l.createElement(N.u, {
+                                type: N.A.Default,
                                 disabled: this.props.dirty || e,
                                 onClick: this.onClickVerify,
                                 "data-a-target": "profile-email-verify-button"
                             }, Object(d.d)("Verify", "EmailSetting"));
-                        case Xt.VerificationEmailSent:
-                            return l.createElement(I.u, {
-                                type: I.A.Success,
+                        case on.VerificationEmailSent:
+                            return l.createElement(N.u, {
+                                type: N.A.Success,
                                 disabled: !0,
                                 "data-a-target": "profile-email-sent-button"
                             }, Object(d.d)("Email Sent", "EmailSetting"));
-                        case Xt.Error:
-                            return l.createElement(I.u, {
-                                type: I.A.Alert,
+                        case on.Error:
+                            return l.createElement(N.u, {
+                                type: N.A.Alert,
                                 disabled: !0,
                                 "data-a-target": "profile-email-error-button"
                             }, Object(d.d)("Error", "EmailSetting"));
-                        case Xt.Verified:
+                        case on.Verified:
                         default:
                             return null
                     }
                 }, t.prototype.renderVerificationMessage = function() {
                     switch (this.state.status) {
-                        case Xt.CanSendVerificationEmail:
+                        case on.CanSendVerificationEmail:
                             return Object(d.d)("This email is linked to your account - please take a moment to verify", "EmailSetting");
-                        case Xt.VerificationEmailSent:
+                        case on.VerificationEmailSent:
                             return Object(d.d)("Verification email sent!", "EmailSetting");
-                        case Xt.Verified:
+                        case on.Verified:
                             return Object(d.d)("This email is linked to your account", "EmailSetting");
                         default:
                             return null
                     }
                 }, t.prototype.renderEmailError = function() {
-                    if (this.state.status === Xt.Error) return Object(d.d)("Failed to send verification email - please try again later", "EmailSetting");
+                    if (this.state.status === on.Error) return Object(d.d)("Failed to send verification email - please try again later", "EmailSetting");
                     switch (this.props.error) {
-                        case Kt.InvalidAddress:
+                        case an.InvalidAddress:
                             return Object(d.d)("Please provide a valid email address", "EmailSetting");
-                        case Kt.InvalidDomain:
+                        case an.InvalidDomain:
                             return Object(d.d)("Admins must use their work email address", "EmailSetting");
                         default:
                             return
                     }
                 }, t
             }(l.Component),
-            cn = n("FuaS"),
-            ln = n("FsFC");
+            vn = n("FuaS"),
+            bn = n("FsFC");
         ! function(e) {
             e[e.Loading = 0] = "Loading", e[e.Error = 1] = "Error", e[e.Eligible = 2] = "Eligible", e[e.NotEligible = 3] = "NotEligible"
-        }(on || (on = {}));
-        var un = function(e) {
+        }(hn || (hn = {}));
+        var yn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        status: on.Loading
+                        status: hn.Loading
                     }, t.logger = d.j.withCategory("username-setting"), t
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -5317,44 +5516,44 @@ webpackJsonp([47], {
                 }, t.prototype.componentDidUpdate = function(e) {
                     !e.emailVerified && this.props.emailVerified && this.fetchChangeEligibility()
                 }, t.prototype.render = function() {
-                    return l.createElement(I._6, {
-                        display: I.P.Flex,
-                        flexWrap: I.S.NoWrap
-                    }, l.createElement(x.a, {
+                    return l.createElement(N._6, {
+                        display: N.P.Flex,
+                        flexWrap: N.S.NoWrap
+                    }, l.createElement(O.a, {
                         label: Object(d.d)("Username", "UsernameSetting"),
-                        error: this.state.status === on.Error,
-                        errorMessage: this.state.status === on.Error ? this.renderErrorMessage() : void 0
-                    }, l.createElement(I._6, {
-                        display: I.P.Flex
-                    }, l.createElement(I._6, {
+                        error: this.state.status === hn.Error,
+                        errorMessage: this.state.status === hn.Error ? this.renderErrorMessage() : void 0
+                    }, l.createElement(N._6, {
+                        display: N.P.Flex
+                    }, l.createElement(N._6, {
                         flexGrow: 1
-                    }, l.createElement(I._2, {
-                        type: I._3.Text,
+                    }, l.createElement(N._2, {
+                        type: N._3.Text,
                         disabled: !0,
                         value: this.props.login,
                         "data-a-target": "profile-username-input"
-                    })), this.state.status === on.Eligible && l.createElement(I.v, {
+                    })), this.state.status === hn.Eligible && l.createElement(N.v, {
                         ariaLabel: Object(d.d)("Edit Username", "UsernameSetting"),
-                        icon: I._20.Edit,
+                        icon: N._20.Edit,
                         linkTo: "https://www.twitch.tv/logins/new",
                         "data-a-target": "profile-edit-username-button"
-                    })), l.createElement(P.a, {
+                    })), l.createElement(F.a, {
                         dataTarget: "profile-username-description",
                         text: this.renderChangeEligibilityMessage()
                     })))
                 }, t.prototype.renderChangeEligibilityMessage = function() {
                     if (!1 === this.props.emailVerified) return Object(d.d)("You must have a verified email to update your username", "UsernameSetting");
                     switch (this.state.status) {
-                        case on.Loading:
+                        case hn.Loading:
                             return Object(d.d)("Loading username change eligibility...", "UsernameSetting");
-                        case on.Eligible:
+                        case hn.Eligible:
                             return Object(d.d)("You may update your username", "UsernameSetting");
-                        case on.NotEligible:
+                        case hn.NotEligible:
                             return this.state.eligibilityTimeISO && Object(d.d)("You may update your username again in {distanceFromNow}", {
                                 distanceFromNow: function(e) {
                                     var t = Date.now(),
                                         n = (new Date(e).getTime() - t) / 1e3;
-                                    if (!(n <= 0)) return Object(ln.a)(n)
+                                    if (!(n <= 0)) return Object(bn.a)(n)
                                 }(this.state.eligibilityTimeISO) || ""
                             }, "UsernameSetting");
                         default:
@@ -5368,19 +5567,19 @@ webpackJsonp([47], {
                         return c.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return t.trys.push([0, 2, , 3]), [4, ie.a.get("/kraken/user/rename_status?scope=user_read")];
+                                    return t.trys.push([0, 2, , 3]), [4, ae.a.get("/kraken/user/rename_status?scope=user_read")];
                                 case 1:
                                     return (e = t.sent()).body && e.body.is_rename_eligible ? this.setState({
-                                        status: on.Eligible
+                                        status: hn.Eligible
                                     }) : e.body && !1 === e.body.is_rename_eligible ? this.setState({
-                                        status: on.NotEligible,
+                                        status: hn.NotEligible,
                                         eligibilityTimeISO: e.body.rename_eligible_at
                                     }) : this.setState({
-                                        status: on.Error
+                                        status: hn.Error
                                     }), [3, 3];
                                 case 2:
                                     return t.sent(), this.logger.warn("Failed to fetch rename_status for user " + this.props.login), this.setState({
-                                        status: on.Error
+                                        status: hn.Error
                                     }), [3, 3];
                                 case 3:
                                     return [2]
@@ -5389,14 +5588,14 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            dn = ["ko", "ja", "zh", "zh-cn", "zh-tw", "zh-hk"],
-            pn = "profile-account-info-setting__bio-input",
-            mn = function(e) {
+            Sn = ["ko", "ja", "zh", "zh-cn", "zh-tw", "zh-hk"],
+            kn = "profile-account-info-setting__bio-input",
+            _n = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement("div", null, l.createElement(sn, {
+                    return l.createElement("div", null, l.createElement(fn, {
                         disabled: this.props.controlsDisabled,
                         dirty: this.props.emailDirty,
                         email: this.props.email,
@@ -5405,38 +5604,38 @@ webpackJsonp([47], {
                         login: this.props.login,
                         onChange: this.props.onEmailChange,
                         verified: this.props.emailVerified
-                    }), l.createElement(un, {
+                    }), l.createElement(yn, {
                         emailVerified: this.props.emailVerified,
                         login: this.props.login
-                    }), l.createElement(x.a, {
+                    }), l.createElement(O.a, {
                         id: "profile-account-info-setting__displayname-input",
                         error: !!this.props.displayNameError,
                         errorMessage: this.props.displayNameError ? this.renderDisplayNameError() : void 0,
                         label: Object(d.d)("Display Name", "ProfileAccountInfo")
-                    }, l.createElement(I._2, {
+                    }, l.createElement(N._2, {
                         id: "profile-account-info-setting__displayname-input",
                         "data-a-target": "profile-displayname-input",
-                        type: I._3.Text,
+                        type: N._3.Text,
                         disabled: this.props.controlsDisabled,
                         onChange: this.props.onDisplayNameChange,
                         value: this.props.displayName
-                    }), l.createElement(P.a, {
+                    }), l.createElement(F.a, {
                         dataTarget: "profile-displayname-description",
                         text: this.renderDisplayNameDescription()
-                    })), l.createElement(x.a, {
-                        id: pn,
+                    })), l.createElement(O.a, {
+                        id: kn,
                         error: !!this.props.bioError,
                         errorMessage: this.props.bioError ? this.renderBioError() : void 0,
                         label: Object(d.d)("Bio", "ProfileAccountInfo")
-                    }, l.createElement(I._40, {
-                        id: pn,
+                    }, l.createElement(N._40, {
+                        id: kn,
                         disabled: this.props.controlsDisabled,
                         onChange: this.props.onBioChange,
                         maxLength: 300,
                         noResize: !0,
                         value: this.props.bio,
                         "data-a-target": "profile-bio-input"
-                    }), l.createElement(P.a, {
+                    }), l.createElement(F.a, {
                         dataTarget: "profile-bio-description",
                         text: Object(d.d)("Who you are in fewer than 300 characters", "ProfileAccountInfo")
                     })))
@@ -5447,23 +5646,23 @@ webpackJsonp([47], {
                 }, t.prototype.renderDisplayNameError = function() {
                     return Object(d.d)("You may not change your display name, only the capitalization of it", "ProfileAccountInfo")
                 }, t.prototype.userHasCJKLanguageSet = function() {
-                    var e = Object(cn.a)();
-                    return !!e && dn.includes(e)
+                    var e = Object(vn.a)();
+                    return !!e && Sn.includes(e)
                 }, t
             }(l.Component),
-            gn = n("E9Qg"),
-            hn = n.n(gn),
-            fn = n("tL94"),
-            vn = (n("i1sU"), function(e) {
+            En = n("E9Qg"),
+            Cn = n.n(En),
+            wn = n("tL94"),
+            On = (n("i1sU"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
                         var e = t.props.data && t.props.data.currentUser;
-                        e && t.props.showModal(Ce.a, {
+                        e && t.props.showModal(Oe.a, {
                             userID: e.id,
                             login: e.login,
                             displayName: e.displayName,
-                            imageType: Oe.a.ProfileBanner,
+                            imageType: Ne.a.ProfileBanner,
                             showCloser: !0,
                             successCallback: t.imageUploaded
                         })
@@ -5484,13 +5683,13 @@ webpackJsonp([47], {
                 }, t.prototype.render = function() {
                     var e = this.props.data,
                         t = e && e.currentUser;
-                    if (!e.loading && !t) return l.createElement(I.O, {
-                        type: I._43.Span,
-                        color: I.J.Error
+                    if (!e.loading && !t) return l.createElement(N.O, {
+                        type: N._43.Span,
+                        color: N.J.Error
                     }, Object(d.d)("Sorry, something went wrong. Please try again later.", "ProfileBannerSetting"));
                     var n = Object(d.d)("Profile Banner", "ProfileBannerSetting"),
                         i = null;
-                    return i = e.loading ? l.createElement(I._12, {
+                    return i = e.loading ? l.createElement(N._12, {
                         "data-test-selector": "profile-banner__placeholder",
                         "data-a-target": "profile-banner-image",
                         height: 140,
@@ -5503,51 +5702,51 @@ webpackJsonp([47], {
                     }) : l.createElement("div", {
                         className: "profile-banner-setting__current-image profile-banner-setting__current-image--default",
                         style: {
-                            backgroundImage: "url(" + hn.a + ")"
+                            backgroundImage: "url(" + Cn.a + ")"
                         },
                         "data-a-target": "profile-banner-image"
-                    }), l.createElement(I._6, {
+                    }), l.createElement(N._6, {
                         className: "profile-banner-setting"
-                    }, l.createElement(I._6, {
-                        display: I.P.Flex,
-                        flexDirection: I.R.Row
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
+                        display: N.P.Flex,
+                        flexDirection: N.R.Row
+                    }, l.createElement(N._6, {
                         margin: {
                             right: 2
                         }
-                    }, i), l.createElement(I._6, {
+                    }, i), l.createElement(N._6, {
                         margin: {
                             y: "auto"
                         }
-                    }, l.createElement(I.u, {
+                    }, l.createElement(N.u, {
                         ariaLabel: Object(d.d)("Update Profile Banner", "ProfileBannerSetting"),
-                        type: I.A.Hollow,
+                        type: N.A.Hollow,
                         onClick: this.openModal,
                         "data-a-target": "profile-banner-upload-button",
                         "data-test-selector": "profile-banner-upload-button"
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         padding: {
                             x: 1
                         }
-                    }, Object(d.d)("Update", "ProfileBannerSetting"))), l.createElement(P.a, {
+                    }, Object(d.d)("Update", "ProfileBannerSetting"))), l.createElement(F.a, {
                         text: Object(d.d)("File format: JPEG, PNG, GIF (recommended 1200x380, max 10MB)", "ProfileBannerSetting")
                     }))))
                 }, t
             }(l.Component)),
-            bn = Object(w.compose)(Object(m.d)("ProfileBannerSetting"), Object(N.a)(fn))(vn);
-        var yn = Object(i.b)(null, function(e) {
+            Nn = Object(D.compose)(Object(m.d)("ProfileBannerSetting"), Object(w.a)(wn))(On);
+        var Un = Object(i.b)(null, function(e) {
                 return Object(r.b)({
-                    showModal: Ee.d
+                    showModal: we.d
                 }, e)
-            })(bn),
-            Sn = n("x9n8"),
-            kn = n("goep"),
-            _n = (n("eppJ"), function(e) {
+            })(Nn),
+            jn = n("x9n8"),
+            Tn = n("goep"),
+            Dn = (n("eppJ"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
                         var e = t.props.data && t.props.data.currentUser;
-                        e && t.props.showModal(Sn.a, {
+                        e && t.props.showModal(jn.a, {
                             userID: e.id,
                             login: e.login,
                             displayName: e.displayName,
@@ -5562,7 +5761,7 @@ webpackJsonp([47], {
                     this.props.latencyTracking.reportInteractive(1)
                 }, t.prototype.render = function() {
                     var e = this.props.data && this.props.data.currentUser,
-                        t = l.createElement(I._12, {
+                        t = l.createElement(N._12, {
                             height: 140,
                             width: 140
                         });
@@ -5571,51 +5770,51 @@ webpackJsonp([47], {
                         alt: Object(d.d)("Profile Picture", "ProfileImageSetting"),
                         className: "profile-image-setting__current-image",
                         "data-a-target": "profile-image"
-                    })), l.createElement(I._6, {
+                    })), l.createElement(N._6, {
                         className: "profile-image-setting"
-                    }, l.createElement(I._6, {
-                        display: I.P.Flex,
-                        flexDirection: I.R.Row
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
+                        display: N.P.Flex,
+                        flexDirection: N.R.Row
+                    }, l.createElement(N._6, {
                         margin: {
                             right: 2
                         }
-                    }, t), l.createElement(I._6, {
+                    }, t), l.createElement(N._6, {
                         margin: {
                             y: "auto"
                         }
-                    }, l.createElement(I.u, {
+                    }, l.createElement(N.u, {
                         ariaLabel: Object(d.d)("Update Profile Picture", "ProfileImageSetting"),
-                        type: I.A.Hollow,
+                        type: N.A.Hollow,
                         onClick: this.openModal,
                         "data-a-target": "profile-image-upload-button",
                         "data-test-selector": "profile-image-upload-button"
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         padding: {
                             x: 1
                         }
-                    }, Object(d.d)("Update", "ProfileImageSetting"))), l.createElement(P.a, {
+                    }, Object(d.d)("Update", "ProfileImageSetting"))), l.createElement(F.a, {
                         text: Object(d.d)("File format: JPEG, PNG, GIF (max size 256x256, 10MB)", "ProfileImageSetting")
                     }))))
                 }, t
             }(l.Component)),
-            En = Object(w.compose)(Object(m.d)("ProfileImageSetting"), Object(N.a)(kn))(_n);
-        var Cn, On = Object(i.b)(null, function(e) {
+            Pn = Object(D.compose)(Object(m.d)("ProfileImageSetting"), Object(w.a)(Tn))(Dn);
+        var In, xn = Object(i.b)(null, function(e) {
                 return Object(r.b)({
-                    showModal: Ee.d
+                    showModal: we.d
                 }, e)
-            })(En),
-            wn = n("OA9H");
+            })(Pn),
+            Fn = n("OA9H");
         ! function(e) {
             e.Bio = "Error (403): Description specified is too long", e.DisplayName = "Error (403): You may not change your display name, only the capitalization of it.", e.EmailNotValid = "Error (403): Email address is not valid", e.EmailDomainNotAllowed = "Error (403): Admins must use their work email"
-        }(Cn || (Cn = {}));
-        var Nn = function(e) {
+        }(In || (In = {}));
+        var An = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         bioError: !1,
                         displayNameError: !1,
-                        saveStatus: S.b.Working
+                        saveStatus: dn.b.Working
                     }, t.logger = d.j.withCategory("settings-profile-page"), t.onClickSave = function() {
                         return c.__awaiter(t, void 0, void 0, function() {
                             var e, t, n, i, r, a, o = this;
@@ -5624,25 +5823,25 @@ webpackJsonp([47], {
                                     case 0:
                                         if (!this.props.data.currentUser) return [2];
                                         this.setState({
-                                            saveStatus: S.b.Working
-                                        }), e = S.b.Error, t = !1, n = !1, i = void 0, s.label = 1;
+                                            saveStatus: dn.b.Working
+                                        }), e = dn.b.Error, t = !1, n = !1, i = void 0, s.label = 1;
                                     case 1:
-                                        return s.trys.push([1, 3, , 4]), [4, ie.a.put("/kraken/users/" + this.props.data.currentUser.id, {
+                                        return s.trys.push([1, 3, , 4]), [4, ae.a.put("/kraken/users/" + this.props.data.currentUser.id, {
                                             body: this.buildRequestBody()
                                         })];
                                     case 2:
-                                        if (200 === (r = s.sent()).status) e = S.b.Success;
+                                        if (200 === (r = s.sent()).status) e = dn.b.Success;
                                         else if (403 === r.status) switch (r.error && r.error.message) {
-                                            case Cn.EmailNotValid:
-                                                i = Kt.InvalidAddress;
+                                            case In.EmailNotValid:
+                                                i = an.InvalidAddress;
                                                 break;
-                                            case Cn.EmailDomainNotAllowed:
-                                                i = Kt.InvalidDomain;
+                                            case In.EmailDomainNotAllowed:
+                                                i = an.InvalidDomain;
                                                 break;
-                                            case Cn.DisplayName:
+                                            case In.DisplayName:
                                                 t = !0;
                                                 break;
-                                            case Cn.Bio:
+                                            case In.Bio:
                                                 n = !0;
                                                 break;
                                             default:
@@ -5661,7 +5860,7 @@ webpackJsonp([47], {
                                             displayNameError: t,
                                             emailError: i
                                         }, function() {
-                                            e === S.b.Success && o.props.data.refetch && o.props.data.refetch()
+                                            e === dn.b.Success && o.props.data.refetch && o.props.data.refetch()
                                         }), [2]
                                 }
                             })
@@ -5688,26 +5887,26 @@ webpackJsonp([47], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.props.data.loading && !e.data.loading && e.data.currentUser && this.hydrateState(e)
                 }, t.prototype.render = function() {
-                    if (!this.props.data.currentUser) return this.props.data.loading ? l.createElement(I._8, {
+                    if (!this.props.data.currentUser) return this.props.data.loading ? l.createElement(N._8, {
                         fillContent: !0
-                    }) : l.createElement(nn, null);
-                    var e = l.createElement(S.a, {
+                    }) : l.createElement(pn, null);
+                    var e = l.createElement(dn.a, {
                         status: this.state.saveStatus,
                         onClickSave: this.onClickSave
                     });
-                    return l.createElement("div", null, l.createElement(_.a, {
+                    return l.createElement("div", null, l.createElement(k.a, {
                         title: Object(d.d)("Profile Picture", "SettingsProfilePage")
-                    }), l.createElement(k.a, null, l.createElement(Ne.a, null, l.createElement(On, null))), l.createElement(_.a, {
+                    }), l.createElement(S.a, null, l.createElement(je.a, null, l.createElement(xn, null))), l.createElement(k.a, {
                         title: Object(d.d)("Profile Banner", "SettingsProfilePage")
-                    }), l.createElement(k.a, null, l.createElement(Ne.a, null, l.createElement(yn, null))), l.createElement(_.a, {
+                    }), l.createElement(S.a, null, l.createElement(je.a, null, l.createElement(Un, null))), l.createElement(k.a, {
                         title: Object(d.d)("Profile Settings", "SettingsProfilePage"),
                         description: Object(d.d)("Change identifying details for your account", "SettingsProfilePage")
-                    }), l.createElement(k.a, {
+                    }), l.createElement(S.a, {
                         footer: e
-                    }, l.createElement(mn, {
+                    }, l.createElement(_n, {
                         bio: this.state.bio || "",
                         bioError: this.state.bioError,
-                        controlsDisabled: this.state.saveStatus === S.b.Working,
+                        controlsDisabled: this.state.saveStatus === dn.b.Working,
                         displayName: this.state.displayName || "",
                         displayNameError: this.state.displayNameError,
                         email: this.state.email || "",
@@ -5719,16 +5918,16 @@ webpackJsonp([47], {
                         onBioChange: this.onBioChange,
                         onDisplayNameChange: this.onDisplayNameChange,
                         onEmailChange: this.onEmailChange
-                    })), l.createElement(_.a, {
+                    })), l.createElement(k.a, {
                         title: Object(d.d)("Disabling Your Twitch Account", "SettingsProfilePage"),
                         description: Object(d.d)("Completely deactivate your account", "SettingsProfilePage")
-                    }), l.createElement(k.a, null, l.createElement(rn, null)))
+                    }), l.createElement(S.a, null, l.createElement(mn, null)))
                 }, t.prototype.hydrateState = function(e) {
                     e.data.currentUser && this.setState({
                         bio: e.data.currentUser.description,
                         displayName: e.data.currentUser.displayName,
                         email: e.data.currentUser.email,
-                        saveStatus: S.b.NoChanges
+                        saveStatus: dn.b.NoChanges
                     })
                 }, t.prototype.logErrorToSentinel = function(e) {
                     this.logger.error(e.requestError || new Error("Unrecognized User Service response error"), "Unrecognized erorr response submitting profile for user", {
@@ -5748,19 +5947,19 @@ webpackJsonp([47], {
                     if (!this.props.data.currentUser) return !1;
                     var e = this.state.bio !== this.props.data.currentUser.description || this.state.email !== this.props.data.currentUser.email || this.state.displayName !== this.props.data.currentUser.displayName;
                     this.setState({
-                        saveStatus: e ? S.b.DirtyChanges : S.b.NoChanges
+                        saveStatus: e ? dn.b.DirtyChanges : dn.b.NoChanges
                     })
                 }, t
             }(l.Component),
-            jn = Object(w.compose)(Object(N.a)(wn), Object(m.d)("SettingsProfilePage", {
+            Mn = Object(D.compose)(Object(w.a)(Fn), Object(m.d)("SettingsProfilePage", {
                 autoReportInteractive: !0,
                 destination: b.a.SettingsProfile
             }), Object(f.a)({
                 location: y.PageviewLocation.SettingsPage
-            }))(Nn),
-            Tn = function(e) {
+            }))(An),
+            Ln = function(e) {
                 var t = e.saving || e.errorLoading;
-                return l.createElement(U, {
+                return l.createElement(A, {
                     id: "settings-security-page-block-subs",
                     label: Object(d.d)("Block Receiving Gifts on Channels You don't Follow", "BlockGiftedSubsToggle"),
                     description: Object(d.d)("Block incoming gift subscriptions to channels you don't follow", "BlockGiftedSubsToggle"),
@@ -5771,9 +5970,9 @@ webpackJsonp([47], {
                     showPlaceholder: e.loading
                 })
             },
-            Dn = n("sVk6"),
-            Pn = n("CePw"),
-            xn = function(e) {
+            Rn = n("sVk6"),
+            Bn = n("CePw"),
+            qn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5798,7 +5997,7 @@ webpackJsonp([47], {
                                             }), !(this.props.data.currentUser && this.props.data.currentUser.id)) return this.logger.warn("No currentUser - unable to update subscription settings."), [2];
                                         i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.props.updateUserSubscriptionSettings(Object(j.a)({
+                                        return i.trys.push([1, 3, , 4]), [4, this.props.updateUserSubscriptionSettings(Object(P.a)({
                                             giftsInFollowedChannelsOnly: e
                                         }))];
                                     case 2:
@@ -5812,7 +6011,7 @@ webpackJsonp([47], {
                                                     })
                                                 })
                                             } : t
-                                        }, Object(j.d)(Pn, {}, t), this.logger.debug("Updated subscription settings", {
+                                        }, Object(P.d)(Bn, {}, t), this.logger.debug("Updated subscription settings", {
                                             giftsInFollowedChannelsOnly: e
                                         }), this.setState({
                                             saving: !1,
@@ -5848,7 +6047,7 @@ webpackJsonp([47], {
                     var e = this.props.data.currentUser,
                         t = e && e.subscriptionSettings,
                         n = !!this.props.data.error || !this.props.data.loading && !t;
-                    return l.createElement(Tn, {
+                    return l.createElement(Ln, {
                         checked: this.state.checked,
                         saving: this.state.saving,
                         loading: this.props.data.loading,
@@ -5858,15 +6057,15 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            In = Object(r.d)(Object(m.d)("BlockGiftedSubs"), Object(N.a)(Pn, {
+            Vn = Object(r.d)(Object(m.d)("BlockGiftedSubs"), Object(w.a)(Bn, {
                 options: {
                     fetchPolicy: "network-only"
                 }
-            }), Object(N.a)(Dn, {
+            }), Object(w.a)(Rn, {
                 name: "updateUserSubscriptionSettings"
-            }))(xn),
-            Un = "/v5/whispers/settings",
-            Fn = function(e) {
+            }))(qn),
+            zn = "/v5/whispers/settings",
+            Hn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5883,7 +6082,7 @@ webpackJsonp([47], {
                                             updating: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, ie.a.post(Un, {
+                                        return n.trys.push([1, 3, , 4]), [4, ae.a.post(zn, {
                                             body: {
                                                 restrict_whispers: e
                                             }
@@ -5914,7 +6113,7 @@ webpackJsonp([47], {
                         return c.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return t.trys.push([0, 2, , 3]), [4, ie.a.get(Un)];
+                                    return t.trys.push([0, 2, , 3]), [4, ae.a.get(zn)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         enabled: e.body && e.body.restrict_whispers || !1,
@@ -5933,7 +6132,7 @@ webpackJsonp([47], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return l.createElement(U, {
+                    return l.createElement(A, {
                         id: "settings-security-page-block-whispers",
                         label: Object(d.d)("Block Whispers from Strangers", "SettingsSecurityPage"),
                         description: Object(d.d)("Block whispers from people you don't follow", "SettingsSecurityPage"),
@@ -5946,11 +6145,11 @@ webpackJsonp([47], {
                 }, t
             }(l.Component);
 
-        function Mn() {
-            return l.createElement(x.a, {
+        function Gn() {
+            return l.createElement(O.a, {
                 label: Object(d.d)("Password", "ChangePasswordLink"),
-                orientation: I.V.Horizontal
-            }, l.createElement(I.O, null, Object(d.d)("<x:link>Change password.</x:link> Improve your security with a strong password.", {
+                orientation: N.V.Horizontal
+            }, l.createElement(N.O, null, Object(d.d)("<x:link>Change password.</x:link> Improve your security with a strong password.", {
                 "x:link": function(e) {
                     return l.createElement("a", {
                         key: "change-password-link",
@@ -5959,8 +6158,8 @@ webpackJsonp([47], {
                 }
             }, "ChangePasswordLink")))
         }
-        var An = function(e) {
-                return e.loading || e.errorLoading || !e.checked && !e.saving ? null : l.createElement(U, {
+        var Wn = function(e) {
+                return e.loading || e.errorLoading || !e.checked && !e.saving ? null : l.createElement(A, {
                     id: "settings-security-hide-directory",
                     label: Object(d.d)("Hide channel from directory", "HideDirectoryToggle"),
                     description: Object(d.d)("Live video, past broadcasts, and highlights are listed publicly in the directory by default. Turning this off is irreversible.", "HideDirectoryToggle"),
@@ -5970,9 +6169,9 @@ webpackJsonp([47], {
                     disabled: e.saving
                 })
             },
-            Ln = n("UIkr"),
-            Rn = n("j7X+"),
-            Bn = function(e) {
+            Yn = n("UIkr"),
+            Jn = n("j7X+"),
+            Qn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5997,7 +6196,7 @@ webpackJsonp([47], {
                                             }), !(this.props.data.currentUser && this.props.data.currentUser.id)) return this.logger.warn("No currentUser - unable to update user settings."), [2];
                                         i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.props.updateUserDirectoryHidden(Object(j.a)({
+                                        return i.trys.push([1, 3, , 4]), [4, this.props.updateUserDirectoryHidden(Object(P.a)({
                                             IsDirectoryHidden: e
                                         }))];
                                     case 2:
@@ -6011,7 +6210,7 @@ webpackJsonp([47], {
                                                     })
                                                 })
                                             } : t
-                                        }, Object(j.d)(Rn, {}, t), this.logger.debug("Updated user settings", {
+                                        }, Object(P.d)(Jn, {}, t), this.logger.debug("Updated user settings", {
                                             IsDirectoryHidden: e
                                         }), this.setState({
                                             saving: !1,
@@ -6047,7 +6246,7 @@ webpackJsonp([47], {
                     var e = this.props.data.currentUser,
                         t = e && e.settings,
                         n = !!this.props.data.error || !this.props.data.loading && !t;
-                    return l.createElement(An, {
+                    return l.createElement(Wn, {
                         checked: this.state.checked,
                         saving: this.state.saving,
                         loading: this.props.data.loading,
@@ -6057,14 +6256,14 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            Vn = Object(r.d)(Object(m.d)("HideDirectoryToggle"), Object(N.a)(Rn, {
+            Kn = Object(r.d)(Object(m.d)("HideDirectoryToggle"), Object(w.a)(Jn, {
                 options: {
                     fetchPolicy: "network-only"
                 }
-            }), Object(N.a)(Ln, {
+            }), Object(w.a)(Yn, {
                 name: "updateUserDirectoryHidden"
-            }))(Bn),
-            zn = function(e) {
+            }))(Qn),
+            Xn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -6082,7 +6281,7 @@ webpackJsonp([47], {
                                             updating: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, ie.a.put(this.hidePastBroadcastsEndpoint + "?hide_archives=" + e)];
+                                        return n.trys.push([1, 3, , 4]), [4, ae.a.put(this.hidePastBroadcastsEndpoint + "?hide_archives=" + e)];
                                     case 2:
                                         return t = n.sent(), this.setState(function(n) {
                                             return {
@@ -6110,7 +6309,7 @@ webpackJsonp([47], {
                         return c.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return t.trys.push([0, 2, , 3]), [4, ie.a.get(this.hidePastBroadcastsEndpoint)];
+                                    return t.trys.push([0, 2, , 3]), [4, ae.a.get(this.hidePastBroadcastsEndpoint)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         enabled: e.body && e.body.hide_archives || !1,
@@ -6130,7 +6329,7 @@ webpackJsonp([47], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return this.state.show ? l.createElement(U, {
+                    return this.state.show ? l.createElement(A, {
                         id: "settings-security-page-hide-past-broadcasts",
                         label: Object(d.d)("Hide Past Broadcasts", "HidePastBroadcastsSetting"),
                         description: Object(d.d)("Only allow your editors to view your past broadcasts", "HidePastBroadcastsSetting"),
@@ -6147,54 +6346,54 @@ webpackJsonp([47], {
                     configurable: !0
                 }), t
             }(l.Component);
-        var qn, Hn = Object(i.b)(function(e) {
+        var $n, Zn = Object(i.b)(function(e) {
                 var t = Object(s.c)(e);
                 return {
                     sessionUserID: t && t.id
                 }
-            })(zn),
-            Wn = n("NoSW"),
-            Gn = function(e) {
+            })(Xn),
+            ei = n("NoSW"),
+            ti = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(x.a, {
+                    return l.createElement(O.a, {
                         label: Object(d.d)("Two-Factor Authentication", "TwoFactorAuthenticationSetting"),
-                        orientation: I.V.Horizontal,
-                        error: this.props.status === qn.Error,
+                        orientation: N.V.Horizontal,
+                        error: this.props.status === $n.Error,
                         errorMessage: Object(d.d)("Sorry, something went wrong. Please try again later.", "TwoFactorAuthenticationSetting")
                     }, this.renderBody())
                 }, t.prototype.renderBody = function() {
                     switch (this.props.status) {
-                        case qn.Loading:
+                        case $n.Loading:
                             return this.renderLoading();
-                        case qn.Error:
+                        case $n.Error:
                             return this.renderError();
-                        case qn.UnverifiedEmail:
+                        case $n.UnverifiedEmail:
                             return this.renderVerifyEmail();
-                        case qn.CanEnable:
+                        case $n.CanEnable:
                             return this.renderEnableButton();
-                        case qn.Enabled:
+                        case $n.Enabled:
                             return this.renderDisableButton();
-                        case qn.EnabledAndRequired:
+                        case $n.EnabledAndRequired:
                             return this.renderEnabledAndRequired();
                         default:
                             return null
                     }
                 }, t.prototype.renderLoading = function() {
-                    return l.createElement(I._12, null)
+                    return l.createElement(N._12, null)
                 }, t.prototype.renderError = function() {
                     return null
                 }, t.prototype.renderVerifyEmail = function() {
-                    return l.createElement(I._6, null, l.createElement(I.O, {
+                    return l.createElement(N._6, null, l.createElement(N.O, {
                         "data-a-target": "tfa-verify-email"
                     }, Object(d.d)("Just verify your email address and two-factor authentication can be enabled.", "TwoFactorAuthenticationSetting")))
                 }, t.prototype.renderEnableButton = function() {
-                    return l.createElement(I._6, null, l.createElement(I.u, {
+                    return l.createElement(N._6, null, l.createElement(N.u, {
                         linkTo: "https://passport.twitch.tv/register_2fa/new",
                         "data-a-target": "tfa-enable-button"
-                    }, Object(d.d)("Set Up Two-Factor Authentication", "TwoFactorAuthenticationSetting")), l.createElement(P.a, {
+                    }, Object(d.d)("Set Up Two-Factor Authentication", "TwoFactorAuthenticationSetting")), l.createElement(F.a, {
                         dataTarget: "tfa-pitch-message",
                         text: Object(d.d)("It's dangerous to go alone. <x:link>Two-factor authentication</x:link> adds an extra layer of security to your Twitch account by requiring both a password and your mobile phone to login.", {
                             "x:link": function(e) {
@@ -6208,16 +6407,16 @@ webpackJsonp([47], {
                         }, "TwoFactorAuthenticationSetting")
                     }))
                 }, t.prototype.renderDisableButton = function() {
-                    return l.createElement(I._6, null, l.createElement(I.u, {
+                    return l.createElement(N._6, null, l.createElement(N.u, {
                         linkTo: "https://passport.twitch.tv/disable_2fa/new",
                         "data-a-target": "tfa-disable-button"
                     }, Object(d.d)("Disable two-factor authentication", "TwoFactorAuthenticationSetting")), this.renderEnabledMessage())
                 }, t.prototype.renderEnabledAndRequired = function() {
-                    return l.createElement(I._6, null, l.createElement(I.O, {
+                    return l.createElement(N._6, null, l.createElement(N.O, {
                         "data-a-target": "tfa-required-message"
                     }, Object(d.d)("You must have two-factor authentication enabled.", "TwoFactorAuthenticationSetting")), this.renderEnabledMessage())
                 }, t.prototype.renderEnabledMessage = function() {
-                    return l.createElement(P.a, {
+                    return l.createElement(F.a, {
                         dataTarget: "tfa-successful-message",
                         text: Object(d.d)("Woohoo! Two-factor authentication is enabled! To reset or change your phone, visit the Authy <x:link>phone reset form</x:link>.", {
                             "x:link": function(e) {
@@ -6231,15 +6430,15 @@ webpackJsonp([47], {
                     })
                 }, t
             }(l.Component),
-            Yn = n("Q6se");
+            ni = n("Q6se");
         ! function(e) {
             e[e.Loading = 0] = "Loading", e[e.Error = 1] = "Error", e[e.UnverifiedEmail = 2] = "UnverifiedEmail", e[e.CanEnable = 3] = "CanEnable", e[e.Enabled = 4] = "Enabled", e[e.EnabledAndRequired = 5] = "EnabledAndRequired"
-        }(qn || (qn = {}));
-        var Jn, Qn = function(e) {
+        }($n || ($n = {}));
+        var ii, ri = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        status: qn.Loading,
+                        status: $n.Loading,
                         restLoading: !0,
                         restError: !1
                     }, t
@@ -6247,11 +6446,11 @@ webpackJsonp([47], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.fetchTwoFactorEnabled()
                 }, t.prototype.componentDidUpdate = function(e, t) {
-                    t.status === qn.Loading && this.state.status !== qn.Loading && this.props.latencyTracking.reportInteractive()
+                    t.status === $n.Loading && this.state.status !== $n.Loading && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.status !== qn.Loading || e.data.loading || this.reconcileStatus(e)
+                    this.state.status !== $n.Loading || e.data.loading || this.reconcileStatus(e)
                 }, t.prototype.render = function() {
-                    return l.createElement(Gn, {
+                    return l.createElement(ti, {
                         status: this.state.status
                     })
                 }, t.prototype.fetchTwoFactorEnabled = function() {
@@ -6262,7 +6461,7 @@ webpackJsonp([47], {
                                 case 0:
                                     e = "/api/users/auth_validator?check_2fa=true&onsite=1", i.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, ie.a.get(e, {
+                                    return i.trys.push([1, 3, , 4]), [4, ae.a.get(e, {
                                         credentials: "include"
                                     }, {
                                         version: 4
@@ -6289,7 +6488,7 @@ webpackJsonp([47], {
                     })
                 }, t.prototype.reconcileStatus = function(e) {
                     var t;
-                    e.data.loading || this.state.restLoading ? t = qn.Loading : !e.data.currentUser || this.state.restError ? t = qn.Error : this.state.twoFactorEnabled || e.data.currentUser.isEmailVerified ? !this.state.twoFactorEnabled && e.data.currentUser.isEmailVerified ? t = qn.CanEnable : this.state.twoFactorEnabled && !this.userRoleRequiresTwoFactor(e) ? t = qn.Enabled : this.state.twoFactorEnabled && this.userRoleRequiresTwoFactor(e) && (t = qn.EnabledAndRequired) : t = qn.UnverifiedEmail, t && this.setState({
+                    e.data.loading || this.state.restLoading ? t = $n.Loading : !e.data.currentUser || this.state.restError ? t = $n.Error : this.state.twoFactorEnabled || e.data.currentUser.isEmailVerified ? !this.state.twoFactorEnabled && e.data.currentUser.isEmailVerified ? t = $n.CanEnable : this.state.twoFactorEnabled && !this.userRoleRequiresTwoFactor(e) ? t = $n.Enabled : this.state.twoFactorEnabled && this.userRoleRequiresTwoFactor(e) && (t = $n.EnabledAndRequired) : t = $n.UnverifiedEmail, t && this.setState({
                         status: t
                     })
                 }, t.prototype.userRoleRequiresTwoFactor = function(e) {
@@ -6297,70 +6496,70 @@ webpackJsonp([47], {
                     return !(!t || !(t.isGlobalMod || t.isSiteAdmin || t.isStaff))
                 }, t
             }(l.Component),
-            Kn = Object(w.compose)(Object(Wn.a)("TwoFactorAuthenticationSetting"), Object(N.a)(Yn))(Qn),
-            Xn = function(e) {
+            ai = Object(D.compose)(Object(ei.a)("TwoFactorAuthenticationSetting"), Object(w.a)(ni))(ri),
+            oi = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return d.a.buildType === v.a.Production ? null : l.createElement("div", null, l.createElement(_.a, {
+                    return l.createElement("div", null, l.createElement(k.a, {
                         title: Object(d.d)("Security", "SettingsSecurityPage"),
                         description: Object(d.d)("Keep your account safe and sound", "SettingsSecurityPage")
-                    }), l.createElement(Mn, null), l.createElement(Kn, null), l.createElement(_.a, {
+                    }), l.createElement(Gn, null), l.createElement(ai, null), l.createElement(k.a, {
                         title: Object(d.d)("Privacy", "SettingsSecurityPage")
-                    }), l.createElement(Fn, null), l.createElement(In, null), l.createElement(Vn, null), l.createElement(Hn, null))
+                    }), l.createElement(Hn, null), l.createElement(Vn, null), l.createElement(Kn, null), l.createElement(Zn, null))
                 }, t
             }(l.Component),
-            $n = Object(w.compose)(Object(m.d)("SettingsSecurityPage", {
+            si = Object(D.compose)(Object(m.d)("SettingsSecurityPage", {
                 autoReportInteractive: !0,
                 destination: b.a.SettingsSecurity
             }), Object(f.a)({
                 location: y.PageviewLocation.SettingsPage
-            }))(Xn),
-            Zn = n("CkX/");
+            }))(oi),
+            ci = n("CkX/");
         ! function(e) {
             e.Channel = "channel", e.Notifications = "notifications", e.Profile = "profile", e.Security = "security", e.Connections = "connections", e.Prime = "prime", e.Turbo = "turbo"
-        }(Jn || (Jn = {}));
-        var ei = function(e) {
+        }(ii || (ii = {}));
+        var li = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.data.loading ? null : l.createElement(I._6, {
+                    return this.props.data.loading ? null : l.createElement(N._6, {
                         className: "settings-tabs",
                         padding: {
-                            x: ai,
-                            top: ai
+                            x: gi,
+                            top: gi
                         }
-                    }, l.createElement(I._6, {
+                    }, l.createElement(N._6, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(I.O, {
-                        type: I._43.H2
-                    }, Object(d.d)("Settings", "SettingsTabs"))), l.createElement(I._6, null, l.createElement(I._31, null, l.createElement(I._30, {
+                    }, l.createElement(N.O, {
+                        type: N._43.H2
+                    }, Object(d.d)("Settings", "SettingsTabs"))), l.createElement(N._6, null, l.createElement(N._31, null, l.createElement(N._30, {
                         linkTo: "/settings/profile",
-                        active: this.props.tabName === Jn.Profile,
+                        active: this.props.tabName === ii.Profile,
                         "data-a-target": "profile-tab"
-                    }, Object(d.d)("Profile", "SettingsTabs")), this.renderPremiumTab(), l.createElement(I._30, {
+                    }, Object(d.d)("Profile", "SettingsTabs")), this.renderPremiumTab(), l.createElement(N._30, {
                         linkTo: "/settings/channel",
-                        active: this.props.tabName === Jn.Channel,
+                        active: this.props.tabName === ii.Channel,
                         "data-a-target": "channel-tab"
-                    }, Object(d.d)("Channel and Videos", "SettingsTabs")), l.createElement(I._30, {
+                    }, Object(d.d)("Channel and Videos", "SettingsTabs")), l.createElement(N._30, {
                         linkTo: "/settings/security",
-                        active: this.props.tabName === Jn.Security,
+                        active: this.props.tabName === ii.Security,
                         "data-a-target": "security-tab"
-                    }, Object(d.d)("Security and Privacy", "SettingsTabs")), l.createElement(I._30, {
+                    }, Object(d.d)("Security and Privacy", "SettingsTabs")), l.createElement(N._30, {
                         linkTo: "/settings/notifications",
-                        active: this.props.tabName === Jn.Notifications,
+                        active: this.props.tabName === ii.Notifications,
                         "data-a-target": "notifications-tab"
-                    }, Object(d.d)("Notifications", "SettingsTab")), l.createElement(I._30, {
+                    }, Object(d.d)("Notifications", "SettingsTab")), l.createElement(N._30, {
                         linkTo: "/settings/connections",
-                        active: this.props.tabName === Jn.Connections,
+                        active: this.props.tabName === ii.Connections,
                         "data-a-target": "connections-tab"
-                    }, Object(d.d)("Connections", "SettingsTabs")), l.createElement(I._30, {
+                    }, Object(d.d)("Connections", "SettingsTabs")), l.createElement(N._30, {
                         linkTo: "/subscriptions",
                         active: !1,
                         "data-a-target": "subscriptions-tab"
@@ -6369,55 +6568,55 @@ webpackJsonp([47], {
                     if (this.props.data.currentUser && this.props.data.requestInfo) {
                         var e = this.props.data.currentUser,
                             t = e.hasPrime;
-                        return !e.hasTurbo && Object(Ut.a)(this.props.data.requestInfo.countryCode) || t ? l.createElement(I._30, {
+                        return !e.hasTurbo && Object(Vt.a)(this.props.data.requestInfo.countryCode) || t ? l.createElement(N._30, {
                             linkTo: "/settings/prime",
-                            active: this.props.tabName === Jn.Prime,
+                            active: this.props.tabName === ii.Prime,
                             "data-test-selector": "test-settings-prime-tab",
                             "data-a-target": "prime-tab"
-                        }, Object(d.d)("Twitch Prime", "SettingsTabs")) : l.createElement(I._30, {
+                        }, Object(d.d)("Twitch Prime", "SettingsTabs")) : l.createElement(N._30, {
                             linkTo: "/settings/turbo",
-                            active: this.props.tabName === Jn.Turbo,
+                            active: this.props.tabName === ii.Turbo,
                             "data-test-selector": "test-settings-turbo-tab",
                             "data-a-target": "turbo-tab"
                         }, Object(d.d)("Twitch Turbo", "SettingsTabs"))
                     }
                 }, t
             }(l.Component),
-            ti = Object(w.compose)(Object(m.d)("SettingsTabs"), Object(N.a)(Zn))(ei),
-            ni = function() {
-                return l.createElement(I._6, {
+            ui = Object(D.compose)(Object(m.d)("SettingsTabs"), Object(w.a)(ci))(li),
+            di = function() {
+                return l.createElement(N._6, {
                     fullWidth: !0,
-                    display: I.P.Flex,
-                    flexDirection: I.R.Column,
-                    alignItems: I.c.Center
-                }, l.createElement(I.O, {
-                    fontSize: I.T.Size2
-                }, Object(d.d)("You've gone Turbo!", "CancelTurboLink")), l.createElement(I.O, null, Object(d.d)("We hope you're enjoying your new chat shwag and watching ad-free.", "CancelTurboLink")), l.createElement(I.M, {
+                    display: N.P.Flex,
+                    flexDirection: N.R.Column,
+                    alignItems: N.c.Center
+                }, l.createElement(N.O, {
+                    fontSize: N.T.Size2
+                }, Object(d.d)("You've gone Turbo!", "CancelTurboLink")), l.createElement(N.O, null, Object(d.d)("We hope you're enjoying your new chat shwag and watching ad-free.", "CancelTurboLink")), l.createElement(N.M, {
                     to: "/products/turbo/ticket/edit"
                 }, Object(d.d)("Cancel Turbo", "CancelTurboLink")))
             },
-            ii = n("hRPz"),
-            ri = function(e) {
+            pi = n("hRPz"),
+            mi = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
                     return d.a.buildType === v.a.Production ? null : this.props.data.currentUser ? this.props.data.currentUser.hasPrime ? l.createElement(u.b, {
                         to: "/settings/prime"
-                    }) : this.props.data.currentUser.hasTurbo ? l.createElement("div", null, l.createElement(k.a, null, l.createElement(Ne.a, null, l.createElement(ni, null)))) : Object(Ut.a)(this.props.data.requestInfo.countryCode) ? l.createElement(u.b, {
+                    }) : this.props.data.currentUser.hasTurbo ? l.createElement("div", null, l.createElement(S.a, null, l.createElement(je.a, null, l.createElement(di, null)))) : Object(Vt.a)(this.props.data.requestInfo.countryCode) ? l.createElement(u.b, {
                         to: "/settings/prime"
-                    }) : (window.location.replace("https://www.twitch.tv/products/turbo/ticket"), null) : this.props.data.loading ? l.createElement(I._8, {
+                    }) : (window.location.replace("https://www.twitch.tv/products/turbo/ticket"), null) : this.props.data.loading ? l.createElement(N._8, {
                         fillContent: !0
-                    }) : l.createElement(nn, null)
+                    }) : l.createElement(pn, null)
                 }, t = c.__decorate([Object(m.d)("SettingsTurboPage", {
                     autoReportInteractive: !0,
                     destination: b.a.SettingsTurbo
                 }), Object(f.a)({
                     location: y.PageviewLocation.SettingsPage
-                }), Object(N.a)(ii)], t)
+                }), Object(w.a)(pi)], t)
             }(l.Component),
-            ai = 3,
-            oi = function(e) {
+            gi = 3,
+            hi = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.redirectToProfilePage = function() {
@@ -6429,44 +6628,44 @@ webpackJsonp([47], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     d.o.setPageTitle()
                 }, t.prototype.render = function() {
-                    return this.props.isLoggedIn ? l.createElement(I._6, {
+                    return this.props.isLoggedIn ? l.createElement(N._6, {
                         padding: {
-                            x: ai
+                            x: gi
                         },
                         fullHeight: !0,
                         fullWidth: !0,
-                        display: I.P.Flex,
-                        flexDirection: I.R.Column,
-                        flexWrap: I.S.NoWrap
+                        display: N.P.Flex,
+                        flexDirection: N.R.Column,
+                        flexWrap: N.S.NoWrap
                     }, l.createElement(g.b, {
                         addPaddingWhenPlayerIsPersisting: !0
-                    }), l.createElement(h.a, null, l.createElement(ti, {
+                    }), l.createElement(h.a, null, l.createElement(ui, {
                         tabName: this.props.match.params.tab
-                    })), l.createElement(I._6, {
+                    })), l.createElement(N._6, {
                         padding: {
                             y: 2
                         }
                     }, l.createElement(u.e, null, l.createElement(u.c, {
                         path: "/settings/profile",
-                        component: jn
+                        component: Mn
                     }), l.createElement(u.c, {
                         path: "/settings/prime",
-                        component: tn
+                        component: un
                     }), l.createElement(u.c, {
                         path: "/settings/turbo",
-                        component: ri
+                        component: mi
                     }), l.createElement(u.c, {
                         path: "/settings/channel",
-                        component: Pe
+                        component: Ie
                     }), l.createElement(u.c, {
                         path: "/settings/security",
-                        component: $n
+                        component: si
                     }), l.createElement(u.c, {
                         path: "/settings/notifications",
-                        component: It
+                        component: qt
                     }), l.createElement(u.c, {
                         path: "/settings/connections",
-                        component: gt
+                        component: _t
                     }), l.createElement(u.c, {
                         path: "/settings",
                         render: this.redirectToProfilePage
@@ -6477,8 +6676,8 @@ webpackJsonp([47], {
                     autoReportInteractive: !0
                 })], t)
             }(l.Component),
-            si = Object(u.f)(oi);
-        var ci = Object(i.b)(function(e) {
+            fi = Object(u.f)(hi);
+        var vi = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(s.d)(e)
             }
@@ -6488,9 +6687,9 @@ webpackJsonp([47], {
                     return Object(o.f)(a.a.SettingsPage)
                 }
             }, e)
-        })(si);
+        })(fi);
         n.d(t, "SettingsRoot", function() {
-            return ci
+            return vi
         })
     },
     LBNC: function(e, t, n) {
@@ -7677,7 +7876,7 @@ webpackJsonp([47], {
             })
         }, t.b = function(e, t, n) {
             if (void 0 === n) throw new Error("No default avatar selected.");
-            return fetch(r.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + r.a.authClientID + "&api_version=" + r.a.defaultAPIVersion, {
+            return fetch(r.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + r.a.authSettings.clientID + "&api_version=" + r.a.defaultAPIVersion, {
                 method: "PUT",
                 headers: {
                     Authorization: "OAuth " + t,
@@ -7693,7 +7892,7 @@ webpackJsonp([47], {
                 return i.__generator(this, function(i) {
                     switch (i.label) {
                         case 0:
-                            return [4, fetch(r.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + r.a.authClientID + "&api_version=" + r.a.defaultAPIVersion + "&image_type=" + n + "&format=" + a, {
+                            return [4, fetch(r.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + r.a.authSettings.clientID + "&api_version=" + r.a.defaultAPIVersion + "&image_type=" + n + "&format=" + a, {
                                 method: "POST",
                                 headers: {
                                     Authorization: "OAuth " + t
@@ -8950,6 +9149,97 @@ webpackJsonp([47], {
         e.exports = n
     },
     i1sU: function(e, t) {},
+    iLlo: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Settings_Connections_RokuConnection"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "ssoLinks"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "app"
+                                    },
+                                    value: {
+                                        kind: "StringValue",
+                                        value: "roku",
+                                        block: !1
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "app"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "ssoID"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 100
+            }
+        };
+        n.loc.source = {
+            body: 'query Settings_Connections_RokuConnection {\ncurrentUser {\nid\nssoLinks(app: "roku") {\napp\nssoID\n}\n}\n}',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     iOZM: function(e, t) {},
     "j7X+": function(e, t) {
         var n = {
@@ -9241,6 +9531,134 @@ webpackJsonp([47], {
         e.exports = n
     },
     nq6q: function(e, t) {},
+    nqey: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Settings_ChannelChat_BannedChatters"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "bannedUsers"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "bannedAt"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "bannedUser"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "login"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "modUser"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "displayName"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 140
+            }
+        };
+        n.loc.source = {
+            body: "query Settings_ChannelChat_BannedChatters {\ncurrentUser {\nid\nbannedUsers {\nbannedAt\nbannedUser {\nid\nlogin\n}\nmodUser {\nid\ndisplayName\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     oYVU: function(e, t) {
         var n = {
             kind: "Document",
@@ -9459,6 +9877,90 @@ webpackJsonp([47], {
         };
         n.loc.source = {
             body: "mutation UpdateUserSubscriptionSettings($input: UpdateUserSubscriptionSettingsInput!) {\nupdateUserSubscriptionSettings(input: $input) {\nsubscriptionSettings {\ngiftsToFollowedChannelsOnly\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    st1H: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Settings_Connections_Twitter"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "accountConnections"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "twitter"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "hasConnection"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 106
+            }
+        };
+        n.loc.source = {
+            body: "query Settings_Connections_Twitter {\ncurrentUser {\nid\naccountConnections {\ntwitter {\nhasConnection\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -10068,7 +10570,7 @@ webpackJsonp([47], {
             _ = n("CSlQ"),
             E = (n("AL3x"), n("nmDn")),
             C = ["image/*"],
-            O = function(e) {
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10360,7 +10862,7 @@ webpackJsonp([47], {
                     }
                 })], t)
             }(l.Component),
-            w = Object(_.d)("Profile Edit")(O);
+            O = Object(_.d)("Profile Edit")(w);
         var N = Object(i.b)(function(e) {
             return {
                 authToken: Object(o.a)(e)
@@ -10371,7 +10873,7 @@ webpackJsonp([47], {
                     return t.successCallback && t.successCallback(), Object(a.c)()
                 }
             }, e)
-        })(w);
+        })(O);
         n.d(t, "a", function() {
             return N
         })
@@ -10518,4 +11020,4 @@ webpackJsonp([47], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-fe78f6b804699c65efa64302ef984f91.js.map
+//# sourceMappingURL=pages.settings-aaf95f532824a9774dd7aefe17c28cb5.js.map
