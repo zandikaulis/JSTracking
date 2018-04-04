@@ -2542,11 +2542,11 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 3382,
+            "v": 3448,
             "t": 1,
             "s": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 60,
                 "value": "control"
             }, {
                 "weight": 10,
@@ -2554,9 +2554,6 @@ window.SiteOptions = {
             }, {
                 "weight": 20,
                 "value": "control20"
-            }, {
-                "weight": 10,
-                "value": "reverse"
             }, {
                 "weight": 10,
                 "value": "business_logic_reverse"
