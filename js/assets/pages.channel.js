@@ -55700,7 +55700,7 @@ webpackJsonp([32], {
                         totalRewards: i,
                         rewardsEntitled: a,
                         tournamentId: this.props.tournamentId,
-                        showClaimAllButton: void 0 !== this.props.blizzardAccount && "cn" !== this.props.blizzardAccount.region,
+                        showClaimAllButton: this.props.blizzardAccount && "cn" !== this.props.blizzardAccount.region,
                         canClaimRewards: this.props.canClaimRewards
                     }, r, this.props.canShowInsiderLoot && u.createElement(w._6, {
                         padding: {
@@ -65904,4 +65904,4 @@ webpackJsonp([32], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-2eca66b7d44dd6625df436da82b021dc.js.map
+//# sourceMappingURL=pages.channel-08244e296fa3cbad52cfc7eb0b69afab.js.map
