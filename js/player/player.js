@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".73248728bf413bffa2c5.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".d33c461145fe1b48b47a.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -31844,7 +31844,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.03-225918+0c391a4cfe809ce4587d60d38a35e7a63d6d0384",
+                    app_version: "2018.04.04-171911+d8fa41b89bc6fc3088f95da90a141c32e0d2df58",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
@@ -37119,7 +37119,7 @@
                     deviceId: Ba.a(!1)
                 })), h.dispatch(Object(kc.e)(t.player)), h.dispatch($(t.tracking)), T.push(new G_(h, t)), T.push(new lE(h)), T.push(new fE(h)), T.push(new Qs(h)), T.push(new mE(h)), y = new c(h, t), h.dispatch(Object(Su.c)(y)), h.dispatch(Object(Au.k)()), o(), v = t.allowfullscreen ? t.externalfullscreen && Object(Q_.c)() ? new Q_.b(n, h) : new Y_.b(n, h) : new Z_(n, h), E = new oE.c(h), S = new Yk(h), b = new G(n, h, t), O = new Zk(h), O.observe(n), P = new nE(h), t.player === Va.w && (T.push(new iE(h)), t.targetOrigin || console.error("Missing targetOrigin option"), h.dispatch(Object(kc.f)({
                     targetOrigin: t.targetOrigin
-                }))), Y(p, b), w = new jc(b, h, {
+                }))), Y(p, b), w = new jc(p, h, {
                     origin: t.origin
                 }), _ = new ga.a(b, y, h, t), h.dispatch(Object(Iu.D)(t.autoplay)), s(t), T.push(new Bc(b, n, h, t)), t.controls && (k = new zk(h), h.dispatch(Object(Wk.b)(k)), g = Si(b, n, h, k, t)), C = new wE(b, h, t), a(t).then(function() {
                     h.dispatch($({
@@ -37412,7 +37412,7 @@
                 }]), e
             }(),
             La = n(105),
-            Ma = "//video-edge-d12094.sjc01.hls.ttvnw.net/v1/segment/CqXt3hZG3Re5FQpsr703X97uM_LSy-VKUofKlTb3GO4kiKFe_D9d97SB4sV7fzjT75ANdyZfJy4PAAJYU3aR4BiK95OHsRXmzZgToQfgCPe-OxQgFNRi8X2y-ptN2VdzRarqKiBhfoPpKurfQNGTnBd9bREFXh2-7IwQ3UomohPMwZ7iEKYtVn3f8vmO5qHK9jc2DDNhJELOZyKEHNFjxIBZRvFYY7o0zpUCjq6x5s5-zP6IfyTSXB_8GbgkpFoYsAC2YNiPDoQRTp3vujejnDajIC_D6vFQi25P9oZSele8SVbY-Ke5XEhqrtKPr-pTajf8ad0ksrhV6QGOfnYcfmPRXmJxPxufSS67_c93Ep-fXkjfL3izO2724p65mmz3LCMfC2kNdAWnWxc-BE6vNXPNXHSGXFJIG5mqDKwXeOwWpqg6M7_VLLrPOhZKQODQUG1XpfgsKdf6orIcp9QhXBHe_t_vPRI-0mQK3bH8exj-PBmgLrEXSkADIurL9ap5o-U_BkX246kTjJVZCZrWevOY3qyZndIfKQ.ts",
+            Ma = "//video-edge-65fa39.sjc01.hls.ttvnw.net/v1/segment/Cq6Prdi1uWwDwqA-7tGsBTQ2qbBUD0lpZlcfxJgtRQbFLtSQ0hQCCUSxeVtrxOpUNargnMO8_rIx4QeBbqGd_G0Oo1a2O4E0GWCC5NRTrlw5-V8U2xIwAL53CQDjmEpQzL6hCqaXdENsRM6WyGSgfUfHTneeKis7hWmv4qIBvewDp2XejIqNSsythp8RZfmE9pQgAhaLQLTd-X_EDUQJu_GSmnyLeM4y_3_Z6WS0nHs1ArsdnDSYmPkEHXcW0sLYIDtHbTNDsNknSZDOXKRj-RsvBHImF2dZPbgzNwYKxlW24AtBZmZL7uNnXL-qpFjsPsAetgvWiGTZSU8DJzIL5lC1oxz9OCrAvKi7DV7nWRvjppeaZzokw6hJc3mmAuuJFS5OmPfcnx_ElkTf-5zhU6EsT86mjk_cWyXRlD8QE8qZl6Izwe5AT0AL2WR2fWOnJ3Q7pfym7DThjmclDj9kjqN8IIaEv57Qu-rSkj0g2T4no6MbC-nEQ8LLTVFayS4BdlS1j2BAug1kI32lD0SMG2MnPrcr63rWAAO2aEXss.ts",
             Da = n(48),
             qa = n(254),
             Ba = n(136),
@@ -38901,7 +38901,7 @@
                                 this._storeState = e.data.args[0];
                                 break;
                             case "bridgedestroy":
-                                this._iframe.parentNode.removeChild(this._iframe), delete this._iframe, delete this._host
+                                this._iframe.parentNode.removeChild(this._iframe), window.removeEventListener("message", this), delete this._iframe, delete this._host
                         }
                     }
                 }, {
@@ -39186,7 +39186,7 @@
                                 this._store.dispatch(Object(Mu.g)(e.data.args[0]));
                                 break;
                             case "destroy":
-                                this._player.destroy(), this.destroy(), this._sendAll("bridgedestroy");
+                                this._player.destroy(), this._sendAll("bridgedestroy");
                                 break;
                             case "setminiplayermode":
                                 this._store.dispatch(Object(oc.q)(e.data.args[0]));
