@@ -26,7 +26,7 @@ window.__twilightSettings = {
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445"],
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
     "esport_insider_pass_show_as_new": true,
-    "esport_insider_pass_whitelist": ["137512364-staff", "188863650-staff", "188864445-staff"],
+    "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445"],
     "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on", "wrestling"],
     "extensions_mobile_banner_enabled": true,
     "first_page_loaded_timeout": 30000,
