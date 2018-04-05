@@ -2774,16 +2774,16 @@ window.SiteOptions = {
         },
         "76a67969-399d-44c3-ad37-f726a10bf54d": {
             "name": "android_end_of_clips",
-            "v": 3306,
+            "v": 3456,
             "t": 1,
             "groups": [{
-                "weight": 1,
+                "weight": 33,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 33,
                 "value": "recommendations"
             }, {
-                "weight": 1,
+                "weight": 33,
                 "value": "autoplay"
             }]
         },
