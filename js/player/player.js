@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".32c0d367c7c56ed77759.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6792576c1b3978dcee7c.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -31173,7 +31173,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.05-185241+87a0977a1f6377150e64bca8b2ef7ae80d89efaf",
+                    app_version: "2018.04.05-210336+a5cc3ae37ecfcb6fc8bf5a438ffd891e7af2cddc",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
@@ -36785,7 +36785,7 @@
             es = n(240),
             ts = n.n(es),
             ns = "https://spade.twitch.tv",
-            rs = "http://c.amazon-adsystem.com/aax2/apstag.js",
+            rs = "https://c.amazon-adsystem.com/aax2/apstag.js",
             is = n(81),
             os = n(34),
             as = n(42),
