@@ -42927,23 +42927,22 @@ webpackJsonp([68], {
                                 })
                             }))];
                         case 2:
-                            return i.sent(),
-                                function(e) {
-                                    for (var t = e.config, n = 0, i = l; n < i.length; n++) {
-                                        var a = i[n];
-                                        r.remove(a, u)
-                                    }
-                                    for (var o = 0, s = Object.keys(t.allAuthSettings); o < s.length; o++) {
-                                        var c = s[o];
-                                        r.remove(t.allAuthSettings[c].cookieName, u)
-                                    }
-                                }({
-                                    config: n
-                                }), [3, 4];
+                            return i.sent(), [3, 4];
                         case 3:
                             return o = i.sent(), a.error(o, "Failed to revoke one or more OAuth tokens."), [3, 4];
                         case 4:
-                            return [2]
+                            return function(e) {
+                                for (var t = e.config, n = 0, i = l; n < i.length; n++) {
+                                    var a = i[n];
+                                    r.remove(a, u)
+                                }
+                                for (var o = 0, s = Object.keys(t.allAuthSettings); o < s.length; o++) {
+                                    var c = s[o];
+                                    r.remove(t.allAuthSettings[c].cookieName, u)
+                                }
+                            }({
+                                config: n
+                            }), [2]
                     }
                 })
             })
@@ -47116,4 +47115,4 @@ webpackJsonp([68], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-7cf8187973d8c7cb05ea164552f6e8a9.js.map
+//# sourceMappingURL=core-b523e5bd2a58a4392b160e4dd88cd3ee.js.map
