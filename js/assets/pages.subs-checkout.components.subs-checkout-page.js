@@ -244,6 +244,7 @@ webpackJsonp([36], {
                 ChannelBitsPinEvents: "channel-bit-events-public",
                 ChannelEventUpdates: "channel-event-updates",
                 ChannelSubscribeEvents: "channel-subscribe-events-v1",
+                BroadcastSettingsUpdate: "broadcast-settings-update",
                 ChatRoom: "chatrooms-room-v1",
                 ChatRoomsChannel: "chatrooms-channel-v1",
                 ChatRoomsUser: "chatrooms-user-v1",
@@ -271,6 +272,7 @@ webpackJsonp([36], {
                 BitsLeaderboardEvent: "bits-leaderboard-event",
                 ChannelStreamDown: "stream-down",
                 ChannelStreamUp: "stream-up",
+                BroadcastSettingsUpdate: "broadcast_settings_update",
                 ChatNotification: "chat-notification",
                 ChatRoomCreated: "created_room",
                 ChatRoomDeleted: "deleted_room",
@@ -651,7 +653,7 @@ webpackJsonp([36], {
                             }, a.prototype.render = function() {
                                 return r.createElement(t, i.__assign({}, this.props))
                             }, a.prototype.subscribe = function(e) {
-                                this.unsubscriber = Object(f.p)({
+                                this.unsubscriber = Object(f.q)({
                                     fragment: e.fragment,
                                     id: e.id,
                                     topic: e.topic,
@@ -669,7 +671,7 @@ webpackJsonp([36], {
                         id: "User:" + n.id,
                         skip: n.skip,
                         fragment: v,
-                        topic: Object(f.m)(n.currentUserID),
+                        topic: Object(f.n)(n.currentUserID),
                         type: g.PubsubMessageType.Presence,
                         mutator: function(e, t) {
                             if (!t) return null;
@@ -2429,7 +2431,7 @@ webpackJsonp([36], {
                     })))
                 }, t = r.__decorate([Object(p.d)("PrimeOfferPlaceholder")], t)
             }(s.Component),
-            M = (n("7L7x"), function(e) {
+            j = (n("7L7x"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2465,7 +2467,7 @@ webpackJsonp([36], {
                     }, Object(o.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), s.createElement(N, null))
                 }, t = r.__decorate([Object(p.d)("PrimeUpsell")], t)
             }(s.Component)),
-            j = n("eY4D"),
+            M = n("eY4D"),
             L = (n("DgR+"), n("65au")),
             B = function(e) {
                 function t() {
@@ -2498,7 +2500,7 @@ webpackJsonp([36], {
                     }, this.renderUpsell(), this.renderOfferExperience()))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
-                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e)) return s.createElement(M, null)
+                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e)) return s.createElement(j, null)
                 }, t.prototype.renderOfferExperience = function() {
                     var e = this.props.offersData;
                     if (this.shouldShowPlaceholders()) return this.renderOfferPlaceholders();
@@ -2535,7 +2537,7 @@ webpackJsonp([36], {
                 }, t.prototype.currentUserHasPrime = function(e) {
                     var t = e.currentUser;
                     return t && t.hasPrime
-                }, t = r.__decorate([Object(l.a)(j, {
+                }, t = r.__decorate([Object(l.a)(M, {
                     name: "offersData",
                     options: function() {
                         return {
@@ -4750,55 +4752,57 @@ webpackJsonp([36], {
     },
     HZww: function(e, t, n) {
         "use strict";
-        t.d = function(e) {
-            return r.PubsubTopic.ChatRoom + "." + e
+        t.c = function(e) {
+            return r.PubsubTopic.BroadcastSettingsUpdate + "." + e
         }, t.e = function(e) {
-            return r.PubsubTopic.ChatRoomsChannel + "." + e
+            return r.PubsubTopic.ChatRoom + "." + e
         }, t.f = function(e) {
-            return r.PubsubTopic.ChatRoomsUser + "." + e
-        }, t.y = function(e) {
-            return r.PubsubTopic.VideoThumbnailProcessing + "." + e
-        }, t.i = function(e) {
-            return r.PubsubTopic.ImageUpload + "." + e
-        }, t.r = function(e) {
-            return r.PubsubTopic.UploadService + "." + e
-        }, t.x = function(e) {
-            return r.PubsubTopic.VideoPlaybackById + "." + e
-        }, t.l = function(e) {
-            return r.PubsubTopic.PayoutOnboardingEvents + "." + e
-        }, t.m = function(e) {
-            return r.PubsubTopic.Presence + "." + e
-        }, t.j = function(e, t) {
-            return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
-        }, t.n = function(e) {
-            return r.PubsubTopic.Raid + "." + e
+            return r.PubsubTopic.ChatRoomsChannel + "." + e
         }, t.g = function(e) {
+            return r.PubsubTopic.ChatRoomsUser + "." + e
+        }, t.z = function(e) {
+            return r.PubsubTopic.VideoThumbnailProcessing + "." + e
+        }, t.j = function(e) {
+            return r.PubsubTopic.ImageUpload + "." + e
+        }, t.s = function(e) {
+            return r.PubsubTopic.UploadService + "." + e
+        }, t.y = function(e) {
+            return r.PubsubTopic.VideoPlaybackById + "." + e
+        }, t.m = function(e) {
+            return r.PubsubTopic.PayoutOnboardingEvents + "." + e
+        }, t.n = function(e) {
+            return r.PubsubTopic.Presence + "." + e
+        }, t.k = function(e, t) {
+            return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
+        }, t.o = function(e) {
+            return r.PubsubTopic.Raid + "." + e
+        }, t.h = function(e) {
             return r.PubsubTopic.Friendship + "." + e
         }, t.b = function(e) {
             return r.PubsubTopic.ChannelBitsPinEvents + "." + e
         }, t.a = function(e) {
             return r.PubsubTopic.BitsLeaderboardEvents + "." + e.id
-        }, t.s = function(e) {
-            return r.PubsubTopic.UserBitsUpdates + "." + e
-        }, t.w = function(e) {
-            return r.PubsubTopic.UserSubscribeEvents + "." + e
-        }, t.v = function(e) {
-            return r.PubsubTopic.UserCrateEvents + "." + e
-        }, t.h = function(e) {
-            return r.PubsubTopic.CampaignGlobalEvents + "." + e
         }, t.t = function(e) {
-            return r.PubsubTopic.CampaignUserEvents + "." + e
+            return r.PubsubTopic.UserBitsUpdates + "." + e
+        }, t.x = function(e) {
+            return r.PubsubTopic.UserSubscribeEvents + "." + e
+        }, t.w = function(e) {
+            return r.PubsubTopic.UserCrateEvents + "." + e
+        }, t.i = function(e) {
+            return r.PubsubTopic.CampaignGlobalEvents + "." + e
         }, t.u = function(e) {
+            return r.PubsubTopic.CampaignUserEvents + "." + e
+        }, t.v = function(e) {
             return r.PubsubTopic.UserCommerceEvents + "." + e
-        }, t.z = function(e) {
+        }, t.A = function(e) {
             return r.PubsubTopic.Whispers + "." + e
-        }, t.k = function(e) {
+        }, t.l = function(e) {
             return r.PubsubTopic.OnsiteNotifications + "." + e
-        }, t.o = function(e) {
+        }, t.p = function(e) {
             return r.PubsubTopic.StreamChatRoom + "." + e
-        }, t.c = function(e) {
+        }, t.d = function(e) {
             return r.PubsubTopic.ChannelEventUpdates + "." + e
-        }, t.q = function(e) {
+        }, t.r = function(e) {
             return i.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -4809,7 +4813,7 @@ webpackJsonp([36], {
                     })
                 }
             })
-        }, t.p = function(e) {
+        }, t.q = function(e) {
             return i.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -5993,8 +5997,8 @@ webpackJsonp([36], {
             R = n.n(I),
             A = n("ekbR"),
             U = n.n(A),
-            M = n("p2Aq"),
-            j = n.n(M),
+            j = n("p2Aq"),
+            M = n.n(j),
             L = n("SgWI"),
             B = n.n(L),
             H = n("YkGD"),
@@ -6102,29 +6106,32 @@ webpackJsonp([36], {
                     };
                     new window.OffAmazonPayments.Widgets.Wallet(e).bind("recurly-amazon-pay__wallet")
                 }, t.prototype.render = function() {
-                    return this.state.amazonScriptLoaded ? u.createElement(y._6, {
-                        padding: {
-                            top: 1
-                        },
+                    return this.state.amazonScriptLoaded ? u.createElement(y._29, {
+                        background: y.m.Base,
+                        border: !0,
                         className: "recurly-amazon-pay"
                     }, u.createElement(y._6, {
                         display: this.state.walletLoaded ? y.P.Hide : y.P.Flex,
-                        alignItems: y.c.Center,
-                        justifyContent: y._5.Center
+                        justifyContent: y._5.Center,
+                        margin: 5
                     }, u.createElement("div", {
                         id: "recurly-amazon-pay__button"
                     })), u.createElement(y._6, {
                         display: this.state.walletLoaded ? y.P.Flex : y.P.Hide,
                         flexDirection: y.R.Column,
                         alignItems: y.c.Center,
-                        justifyContent: y._5.Center
+                        margin: {
+                            top: 2
+                        }
                     }, u.createElement("div", {
                         id: "recurly-amazon-pay__wallet",
                         className: "recurly-amazon-pay__wallet"
                     }), u.createElement(y._6, {
                         padding: {
                             top: 1
-                        }
+                        },
+                        display: y.P.Flex,
+                        justifyContent: y._5.Center
                     }, u.createElement(y.u, {
                         onClick: this.handleSubmit,
                         state: this.state.awaitingResponse ? y.z.Loading : y.z.Default,
@@ -6345,11 +6352,17 @@ webpackJsonp([36], {
                         type: "hidden",
                         name: "recurly-token",
                         "data-recurly": "token"
-                    }), u.createElement(y.u, {
+                    }), u.createElement(y._6, {
+                        margin: {
+                            top: 1
+                        },
+                        display: y.P.Flex,
+                        justifyContent: y._5.Center
+                    }, u.createElement(y.u, {
                         onClick: this.handleSubmit,
                         state: this.state.awaitingResponse ? y.z.Loading : y.z.Default,
                         disabled: this.state.awaitingResponse
-                    }, this.props.submitButtonCopy))))
+                    }, this.props.submitButtonCopy)))))
                 }, t.prototype.pollForHostedField = function() {
                     var e = this;
                     this.hostedFieldPollId = setInterval(function() {
@@ -6470,18 +6483,22 @@ webpackJsonp([36], {
                 }, t.prototype.componentWillUnmount = function() {
                     clearInterval(this.pollForRecurly)
                 }, t.prototype.render = function() {
-                    return this.state.paypalConfigured ? u.createElement(y._6, {
+                    return this.state.paypalConfigured ? u.createElement(y._29, {
                         className: "recurly-paypal",
+                        background: y.m.Base,
+                        border: !0,
                         display: y.P.Flex,
+                        justifyContent: y._5.Center
+                    }, u.createElement(y._6, {
                         margin: {
-                            y: 2
+                            top: 5
                         }
                     }, u.createElement(y.u, {
                         "data-a-target": "recurly-paypal__button",
                         onClick: this.handleClick,
                         state: this.state.awaitingResponse ? y.z.Loading : y.z.Default,
                         disabled: this.state.awaitingResponse
-                    }, this.props.submitButtonCopy)) : u.createElement(y._6, {
+                    }, this.props.submitButtonCopy))) : u.createElement(y._6, {
                         margin: {
                             y: 2
                         }
@@ -6701,10 +6718,11 @@ webpackJsonp([36], {
                     className: this.state.awaitingResponse ? "zuora-disabled" : ""
                 }), u.createElement(y._6, {
                     margin: {
-                        left: .5,
                         top: 2,
                         bottom: 1
-                    }
+                    },
+                    display: y.P.Flex,
+                    justifyContent: y._5.Center
                 }, u.createElement(y.u, {
                     onClick: this.handleSubmit,
                     state: this.state.awaitingResponse ? y.z.Loading : y.z.Default,
@@ -6852,7 +6870,7 @@ webpackJsonp([36], {
                             alt: se.MoreMethods(),
                             srcSet: {
                                 "1x": U.a,
-                                "2x": j.a
+                                "2x": M.a
                             }
                         },
                         component: u.createElement(te, c.__assign({
@@ -6863,7 +6881,7 @@ webpackJsonp([36], {
                             key: e.name,
                             cols: {
                                 default: 6,
-                                md: 3
+                                sm: 3
                             }
                         }, u.createElement(y._6, {
                             margin: {
@@ -6888,16 +6906,13 @@ webpackJsonp([36], {
                         }, e.component)
                     }, t.setProviderFactory = function(e) {
                         return function() {
-                            if (t.props.trackPaymentFormInteraction({
-                                    paymentFlow: e,
-                                    action: w.RadioButtonClick,
-                                    actionDetail: e
-                                }), t.setState({
-                                    selectedProvider: e
-                                }), e === N.RecurlyPaypal) document.querySelector('[data-a-target="recurly-paypal__button"]').click();
-                            else if (e === N.RecurlyPayWithAmazon) {
-                                document.querySelector('[data-metric-name="amazon-pay-button-load"]').click()
-                            }
+                            t.props.trackPaymentFormInteraction({
+                                paymentFlow: e,
+                                action: w.RadioButtonClick,
+                                actionDetail: e
+                            }), t.setState({
+                                selectedProvider: e
+                            })
                         }
                     }, t
                 }
@@ -6931,6 +6946,10 @@ webpackJsonp([36], {
                     return u.createElement(y._6, null, u.createElement(y._6, {
                         margin: {
                             bottom: 1
+                        },
+                        textAlign: y._39.Center,
+                        breakpointLarge: {
+                            textAlign: y._39.Left
                         }
                     }, u.createElement(y.O, {
                         type: y._43.H4,
@@ -6970,9 +6989,6 @@ webpackJsonp([36], {
                         padding: {
                             x: 1,
                             y: 3
-                        },
-                        breakpointMedium: {
-                            padding: 4
                         },
                         breakpointLarge: {
                             padding: 5
@@ -7057,7 +7073,9 @@ webpackJsonp([36], {
                     if (t) return u.createElement(y._29, {
                         className: "mobile-ticket-description",
                         fullWidth: !0,
-                        margin: 1
+                        margin: {
+                            bottom: 2
+                        }
                     }, u.createElement(y.B, {
                         border: !0,
                         elevation: 1
@@ -7488,7 +7506,7 @@ webpackJsonp([36], {
                             "data-test-selector": "prime-language"
                         }, u.createElement(y.M, {
                             to: ye.b
-                        }, Object(d.d)("Offer available for a limted time. Terms and conditions apply", "EsportsTicketDescription")))), u.createElement(y.O, {
+                        }, Object(d.d)("Offer available for a limited time. Terms and conditions apply", "EsportsTicketDescription")))), u.createElement(y.O, {
                             className: "ticket-description__description__line-item",
                             bold: !0,
                             "data-test-selector": "ticket-feature"
@@ -7513,7 +7531,7 @@ webpackJsonp([36], {
                         }, Object(d.d)("Overwatch In-Game Content:", "EsportsTicketDescription")), this.renderHeroSkins(), this.renderInGameContent(), this.renderSubBadges(), this.renderSubEmotes(), u.createElement(y.O, {
                             className: "ticket-description__description__line-item",
                             "data-test-selector": "disclaimer"
-                        }, Object(d.d)("All-Access benefits last up to the start of the 2019 OWL Season. Twitch emotes, badges, and in-game content are yours to keep.", "EsportsTicketDescription"))))))
+                        }, Object(d.d)("All-Access benefits last up to the start of the 2019 Overwatch League Season. Twitch emotes, badges, and in-game content are yours to keep forever!", "EsportsTicketDescription"))))))
                     }
                 }, t
             }(u.PureComponent),
@@ -7800,8 +7818,8 @@ webpackJsonp([36], {
                     }, "GiftSubReceipt"))))
                 }, t
             }(u.Component)),
-            Me = Object(Ae.f)(Ue),
-            je = n("j6Ui"),
+            je = Object(Ae.f)(Ue),
+            Me = n("j6Ui"),
             Le = function(e) {
                 return u.createElement(y._29, {
                     background: y.m.Base,
@@ -7862,7 +7880,7 @@ webpackJsonp([36], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderOneMonthFree = function() {
                         var e = new Date;
-                        null !== t.props.endsAt && (e = Object(je.c)(t.props.endsAt));
+                        null !== t.props.endsAt && (e = Object(Me.c)(t.props.endsAt));
                         var n = new Date(e);
                         return n.setMonth(e.getMonth() + 1), u.createElement(y._29, {
                             background: y.m.Base,
@@ -7899,7 +7917,7 @@ webpackJsonp([36], {
                             y: 1
                         }
                     }, u.createElement(y.O, null, Object(d.d)("You will be charged when your Gift Subscription ends on <x:strong>{date}</x:strong>.", {
-                        date: Object(d.c)(Object(je.c)(this.props.endsAt), "short"),
+                        date: Object(d.c)(Object(Me.c)(this.props.endsAt), "short"),
                         "x:strong": function(e) {
                             return u.createElement(y.O, {
                                 type: y._43.Span,
@@ -8107,7 +8125,7 @@ webpackJsonp([36], {
                 }, t.renderReceipt = function() {
                     var e = t.props.data.subscriptionProduct.self.benefit,
                         n = t.props.data.subscriptionProduct.self.purchase.details;
-                    return t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo ? u.createElement(Me, {
+                    return t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo ? u.createElement(je, {
                         recipientDisplayName: t.props.recipientDisplayName,
                         productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
                         productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
@@ -8165,10 +8183,7 @@ webpackJsonp([36], {
                     margin: {
                         bottom: 4
                     },
-                    breakpointExtraSmall: {
-                        display: y.P.Hide
-                    },
-                    breakpointMedium: {
+                    breakpointLarge: {
                         display: y.P.Flex
                     }
                 }, u.createElement(Fe, {
@@ -8176,21 +8191,28 @@ webpackJsonp([36], {
                     product: t
                 })), u.createElement(y._6, {
                     className: "checkout-payments__content",
-                    breakpointMedium: {
+                    breakpointLarge: {
                         margin: {
-                            x: 4
+                            left: 4
                         }
                     }
                 }, !this.purchased && u.createElement(y._6, {
                     margin: {
                         bottom: 1
+                    },
+                    textAlign: y._39.Center,
+                    breakpointLarge: {
+                        margin: {
+                            bottom: 2
+                        },
+                        textAlign: y._39.Left
                     }
                 }, u.createElement(O, {
                     channel: this.props.data.subscriptionProduct.owner && this.props.data.subscriptionProduct.owner.id,
                     isGift: this.props.isGift
                 })), u.createElement(y._6, {
                     display: y.P.Flex,
-                    breakpointMedium: {
+                    breakpointLarge: {
                         display: y.P.Hide
                     }
                 }, u.createElement(Fe, {
@@ -8205,7 +8227,7 @@ webpackJsonp([36], {
                     trackPaymentFormInteraction: this.trackPaymentFormInteraction
                 }), "689376" !== t.id && u.createElement(y._6, {
                     margin: {
-                        top: 5
+                        top: 3
                     }
                 }, u.createElement(y.O, null, i), u.createElement(y.O, null, r))))))
             }, Object.defineProperty(t.prototype, "personalSubPurchased", {
@@ -8284,10 +8306,7 @@ webpackJsonp([36], {
                         fullWidth: !0,
                         fullHeight: !0
                     }, u.createElement(Ye.a, null), u.createElement(y._6, {
-                        breakpointExtraSmall: {
-                            display: y.P.Inline
-                        },
-                        breakpointMedium: {
+                        breakpointLarge: {
                             display: y.P.Hide
                         }
                     }, u.createElement(qe.a, null)), u.createElement(y._6, {
@@ -10137,8 +10156,8 @@ webpackJsonp([36], {
             R = n("zCIC"),
             A = n("czpb"),
             U = n("SZoP"),
-            M = n("mi6k"),
-            j = n("7Nlu"),
+            j = n("mi6k"),
+            M = n("7Nlu"),
             L = n("5kgt"),
             B = n("Odds"),
             H = (n("afun"), n("y+bN")),
@@ -10482,7 +10501,7 @@ webpackJsonp([36], {
                 }, t.prototype.getGameCards = function() {
                     var e = this;
                     return this.props.gameResults ? this.props.gameResults.results.map(function(t) {
-                        return u.createElement(j.a, {
+                        return u.createElement(M.a, {
                             onClick: e.onClick,
                             id: "game_" + t.id,
                             key: "game_" + t.id,
@@ -10555,7 +10574,7 @@ webpackJsonp([36], {
                     var e = this;
                     return this.props.videoResults ? this.props.videoResults.results.map(function(t) {
                         var n = Object(U.a)(t.login || "", t.name || ""),
-                            i = Object(M.a)(t.length || 0);
+                            i = Object(j.a)(t.length || 0);
                         return u.createElement(B._4, {
                             key: "video_" + t.id,
                             linkTo: t.linkTo,
@@ -11709,7 +11728,7 @@ webpackJsonp([36], {
                 }), Object(pe.a)(function(e) {
                     return {
                         query: Ne,
-                        topic: e.data && e.data.currentUser ? Object(he.m)(e.data.currentUser.id) : "",
+                        topic: e.data && e.data.currentUser ? Object(he.n)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                         type: fe.PubsubMessageType.PresenceSettings,
                         mutator: function(e, t) {
@@ -11999,7 +12018,7 @@ webpackJsonp([36], {
                 }, t = l.__decorate([Object(f.a)(De), Object(pe.a)(function(e) {
                     return {
                         query: De,
-                        topic: e.data.currentUser ? Object(he.m)(e.data.currentUser.id) : "",
+                        topic: e.data.currentUser ? Object(he.n)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                         type: fe.PubsubMessageType.PresenceSettings,
                         mutator: function(e, t) {
@@ -12008,7 +12027,7 @@ webpackJsonp([36], {
                     }
                 }), Object(de.a)([{
                     topic: function(e) {
-                        return e.data.currentUser ? Object(he.m)(e.data.currentUser.id) : ""
+                        return e.data.currentUser ? Object(he.n)(e.data.currentUser.id) : ""
                     },
                     mapMessageTypesToProps: (Ie = {}, Ie[fe.PubsubMessageType.Presence] = "presence", Ie),
                     skip: function(e) {
@@ -12030,7 +12049,7 @@ webpackJsonp([36], {
             })(Object(r.f)(Fe)),
             Ae = n("8PKe"),
             Ue = n("p+06"),
-            Me = (n("HTB+"), function(e) {
+            je = (n("HTB+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -12368,7 +12387,7 @@ webpackJsonp([36], {
                     }
                 }), Object(v.d)("TopNav")], t)
             }(u.Component));
-        var je = Object(r.f)(Object(i.b)(function(e) {
+        var Me = Object(r.f)(Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(c.d)(e)
             }
@@ -12382,13 +12401,13 @@ webpackJsonp([36], {
                     return Object(o.h)(s.a.TopNavSignupButton)
                 }
             }, e)
-        })(Me));
+        })(je));
         n.d(t, !1, function() {
             return "5rem"
         }), n.d(t, !1, function() {
             return "9.5rem"
         }), n.d(t, "a", function() {
-            return je
+            return Me
         })
     },
     TVUY: function(e, t) {
@@ -12952,7 +12971,7 @@ webpackJsonp([36], {
             }(a.Component),
             A = n("+e5i"),
             U = n("UUPo"),
-            M = function(e) {
+            j = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -12995,9 +13014,9 @@ webpackJsonp([36], {
                     })
                 }, t
             }(a.Component),
-            j = Object(v.compose)(Object(c.a)(A, {
+            M = Object(v.compose)(Object(c.a)(A, {
                 name: "clearUnreadFriendRequests"
-            }))(M),
+            }))(j),
             L = (n("cLQP"), "center-window__empty"),
             B = "center-window__content-footer",
             H = "center-window__footer__text",
@@ -13041,7 +13060,7 @@ webpackJsonp([36], {
                                 onViewNotification: t.props.onViewNotification
                             })
                         });
-                        return t.props.friendRequestsData && e.unshift(a.createElement(j, i.__assign({
+                        return t.props.friendRequestsData && e.unshift(a.createElement(M, i.__assign({
                             key: "friend-requests"
                         }, t.props.friendRequestsData))), e
                     }, t.renderEmptyCenterWindowElement = function() {
@@ -13411,7 +13430,7 @@ webpackJsonp([36], {
                     })
                 }, t = i.__decorate([Object(g.d)("OnsiteNotificationToastManager"), Object(Y.a)([{
                     topic: function(e) {
-                        return Object(m.k)("" + (e.currentUser && e.currentUser.id))
+                        return Object(m.l)("" + (e.currentUser && e.currentUser.id))
                     },
                     mapMessageTypesToProps: (Z = {}, Z[d.PubsubMessageType.OnsiteNotificationCreate] = "info", Z[d.PubsubMessageType.OnsiteNotificationUpdate] = "info", Z),
                     skip: function(e) {
@@ -13898,7 +13917,7 @@ webpackJsonp([36], {
                     return {
                         query: ce,
                         skip: !e.currentUser,
-                        topic: Object(m.k)("" + (e.currentUser && e.currentUser.id)),
+                        topic: Object(m.l)("" + (e.currentUser && e.currentUser.id)),
                         types: [d.PubsubMessageType.OnsiteNotificationSummaryUpdate, d.PubsubMessageType.OnsiteNotificationUpdate, d.PubsubMessageType.OnsiteNotificationCreate, d.PubsubMessageType.OnsiteNotificationDelete],
                         mutator: ne
                     }
@@ -13909,7 +13928,7 @@ webpackJsonp([36], {
                             language: e.languageCode
                         }),
                         skip: !(e.currentUser && e.listData && e.listData.currentUser && e.listData.currentUser.notifications && e.listData.currentUser.notifications.edges),
-                        topic: Object(m.k)("" + (e.currentUser && e.currentUser.id)),
+                        topic: Object(m.l)("" + (e.currentUser && e.currentUser.id)),
                         types: [d.PubsubMessageType.OnsiteNotificationsRead, d.PubsubMessageType.OnsiteNotificationUpdate, d.PubsubMessageType.OnsiteNotificationCreate, d.PubsubMessageType.OnsiteNotificationDelete],
                         mutator: ie
                     }
@@ -14403,7 +14422,7 @@ webpackJsonp([36], {
                     }, s.prototype.render = function() {
                         return r.createElement(t, i.__assign({}, this.props))
                     }, s.prototype.subscribe = function(e) {
-                        this.unsubscriber = Object(a.q)({
+                        this.unsubscriber = Object(a.r)({
                             query: e.query,
                             variables: e.variables,
                             topic: e.topic,
@@ -14899,38 +14918,39 @@ webpackJsonp([36], {
             o = n("VAT8"),
             c = n("3iBR"),
             l = n("WKaT"),
-            u = n("CWW0"),
-            d = n("0uo5"),
-            p = n("RZjb"),
-            m = n("Odds"),
-            f = function(e) {
+            u = n("sEXz"),
+            d = n("CWW0"),
+            p = n("0uo5"),
+            m = n("RZjb"),
+            f = n("Odds"),
+            g = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(m._6, {
-                        display: m.P.Flex,
-                        flexDirection: m.R.Column,
+                    return r.createElement(f._6, {
+                        display: f.P.Flex,
+                        flexDirection: f.R.Column,
                         padding: {
                             top: 2,
                             bottom: 4
                         }
-                    }, r.createElement(m._6, {
-                        textAlign: m._39.Center,
+                    }, r.createElement(f._6, {
+                        textAlign: f._39.Center,
                         padding: {
                             bottom: 2
                         }
-                    }, r.createElement(m.O, {
-                        fontSize: m.T.Size3,
+                    }, r.createElement(f.O, {
+                        fontSize: f.T.Size3,
                         bold: !0
-                    }, Object(a.d)("The Overwatch League All-Access Experience", "EsportsInsiderPassTab"))), r.createElement(m._6, {
-                        display: m.P.Flex,
-                        flexDirection: m.R.Column,
+                    }, Object(a.d)("The Overwatch League All-Access Experience", "EsportsInsiderPassTab"))), r.createElement(f._6, {
+                        display: f.P.Flex,
+                        flexDirection: f.R.Column,
                         breakpointSmall: {
-                            flexDirection: m.R.Row
+                            flexDirection: f.R.Row
                         },
-                        justifyContent: m._5.Center
-                    }, r.createElement(m._6, {
+                        justifyContent: f._5.Center
+                    }, r.createElement(f._6, {
                         margin: {
                             x: 2
                         },
@@ -14940,12 +14960,12 @@ webpackJsonp([36], {
                         breakpointSmall: {
                             padding: 0
                         }
-                    }, r.createElement(p.a, {
-                        type: p.b.Major,
+                    }, r.createElement(m.a, {
+                        type: m.b.Major,
                         title: Object(a.d)("Exclusive Command Center livestream", "EsportsInsiderPassTab"),
                         body: Object(a.d)("This game-changing stream shows you alternate camera angles, live stats, player POVs, and team facecams all on one multiviewer overlay. Try it for free until Stage 4.", "EsportsInsiderPassTab"),
                         imageURL: c.c + "/owl-2017/marketing/insider-stream.jpg"
-                    })), r.createElement(m._6, {
+                    })), r.createElement(f._6, {
                         margin: {
                             x: 2
                         },
@@ -14955,78 +14975,78 @@ webpackJsonp([36], {
                         breakpointSmall: {
                             padding: 0
                         }
-                    }, r.createElement(p.a, {
-                        type: p.b.Major,
+                    }, r.createElement(m.a, {
+                        type: m.b.Major,
                         title: Object(a.d)("Your questions, answered!", "EsportsInsiderPassTab"),
                         body: Object(a.d)("After Overwatch League match day broadcasts, enjoy an interactive player Q&A session by submitting your questions in Passholder-only chat. Selected questions will be answered by players live on the Command Center stream.", "EsportsInsiderPassTab"),
                         imageURL: c.c + "/owl-2017/marketing/insider-questions.jpg"
-                    })), r.createElement(m._6, {
+                    })), r.createElement(f._6, {
                         margin: {
                             x: 2
                         }
-                    }, r.createElement(p.a, {
-                        type: p.b.Major,
+                    }, r.createElement(m.a, {
+                        type: m.b.Major,
                         title: Object(a.d)("Behind the Screens: Match analysis by players", "EsportsInsiderPassTab"),
                         body: Object(a.d)("Top players from each team will walk you through their thoughts on a match and explain what they did and why in an exclusive video every week, starting April 6th!", "EsportsInsiderPassTab"),
                         imageURL: c.c + "/owl-2017/marketing/insider-vods.jpg"
                     }))))
                 }, t
             }(r.PureComponent),
-            g = function(e) {
+            h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(m.W, {
-                        gutterSize: m.X.Large
-                    }, r.createElement(m.K, {
+                    return r.createElement(f.W, {
+                        gutterSize: f.X.Large
+                    }, r.createElement(f.K, {
                         cols: {
                             default: 12,
                             lg: 6
                         }
-                    }, r.createElement(m._6, {
+                    }, r.createElement(f._6, {
                         padding: {
                             bottom: 2
                         },
                         breakpointLarge: {
                             padding: 0
                         }
-                    }, r.createElement(p.a, {
-                        type: p.b.Minor,
+                    }, r.createElement(m.a, {
+                        type: m.b.Minor,
                         title: Object(a.d)("Passholder-Only Chat", "InsiderPassMarketingMinorCallouts"),
                         body: Object(a.d)("Hang out and chat with people who love the game as much as you do.", "InsiderPassMarketingMinorCallouts"),
                         imageURL: c.c + "/owl-2017/marketing/insider-pre-purchase-chat.png"
-                    }))), r.createElement(m.K, {
+                    }))), r.createElement(f.K, {
                         cols: {
                             default: 12,
                             lg: 6
                         }
-                    }, r.createElement(m._6, {
+                    }, r.createElement(f._6, {
                         padding: {
                             bottom: 2
                         },
                         breakpointLarge: {
                             padding: 0
                         }
-                    }, r.createElement(p.a, {
-                        type: p.b.Minor,
+                    }, r.createElement(m.a, {
+                        type: m.b.Minor,
                         title: Object(a.d)("Ad-free viewing on Overwatch League", "InsiderPassMarketingMinorCallouts"),
                         body: Object(a.d)("With the All-Access Pass you won’t have to sit through Twitch ads before you can watch the game.", "InsiderPassMarketingMinorCallouts"),
                         imageURL: c.c + "/owl-2017/marketing/insider-pre-purchase-ads.png"
                     }))))
                 }, t
             }(r.PureComponent),
-            h = n("E1ro"),
-            v = n("FDYX"),
-            y = (n("Yy4F"), "esports-insider-pass-trial-displayed"),
-            b = "https://blog.twitch.tv/overwatch-league-all-access-pass-on-twitch-8cbf3e23df0a",
-            k = function(e) {
+            v = n("E1ro"),
+            y = n("FDYX"),
+            b = (n("Yy4F"), "esports-insider-pass-trial-displayed"),
+            k = "https://blog.twitch.tv/overwatch-league-all-access-pass-on-twitch-8cbf3e23df0a",
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        dismissedTrial: a.l.get(y, !1)
+                        dismissedTrial: a.l.get(b, !1)
                     }, t.enableTrial = function() {
-                        a.l.set(y, !0), t.setState({
+                        a.l.set(b, !0), t.setState({
                             dismissedTrial: !0
                         })
                     }, t
@@ -15034,96 +15054,97 @@ webpackJsonp([36], {
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = Object(a.d)("Get the All-Access Pass", "EsportsCampaignTabs"),
-                        n = Object(v.d)(this.props.subscriptionProducts),
-                        i = n ? Object(v.a)(this.props.subscriptionProducts[0]) : this.props.subscriptionProducts[0].price;
-                    return r.createElement(m._6, {
+                        n = Object(y.d)(this.props.subscriptionProducts),
+                        i = n ? Object(y.a)(this.props.subscriptionProducts[0]) : this.props.subscriptionProducts[0].price;
+                    return r.createElement(f._6, {
                         className: "insider-pass-pre-purchase"
-                    }, r.createElement(m._29, {
+                    }, r.createElement(f._29, {
                         className: "insider-pass-pre-purchase__header",
                         margin: {
                             top: 3
                         },
                         padding: {
                             x: 2,
-                            y: 5
+                            bottom: 5,
+                            top: 3
                         }
-                    }, r.createElement(m.W, {
-                        gutterSize: m.X.Large
-                    }, r.createElement(m.K, {
+                    }, r.createElement(f.W, {
+                        gutterSize: f.X.Large
+                    }, r.createElement(f.K, {
                         cols: 6
-                    }, r.createElement(m._29, {
+                    }, r.createElement(f._29, {
                         fullHeight: !0,
-                        display: m.P.Flex,
-                        alignItems: m.c.Center,
-                        justifyContent: m._5.End
+                        display: f.P.Flex,
+                        alignItems: f.c.Center,
+                        justifyContent: f._5.End
                     }, r.createElement("img", {
                         src: c.c + "/owl-2017/all-access-logo.svg",
                         alt: Object(a.d)("Overwatch League All-Access Pass on Twitch", "EsportsCampaignTabs"),
                         height: "120px"
-                    }))), r.createElement(m.K, {
+                    }))), r.createElement(f.K, {
                         cols: 6
-                    }, r.createElement(m._0, {
+                    }, r.createElement(f._0, {
                         margin: {
                             bottom: .5
                         }
-                    }, r.createElement(m.O, {
-                        color: m.J.Overlay,
-                        fontSize: m.T.Size4,
+                    }, r.createElement(f.O, {
+                        color: f.J.Overlay,
+                        fontSize: f.T.Size4,
                         bold: !0
-                    }, Object(a.d)("Your VIP pass to the best of the Overwatch League.", "EsportsCampaignTabs"))), r.createElement(m.O, {
-                        color: m.J.Overlay,
-                        fontSize: m.T.Size6,
+                    }, Object(a.d)("Your VIP pass to the best of the Overwatch League.", "EsportsCampaignTabs"))), r.createElement(f.O, {
+                        color: f.J.Overlay,
+                        fontSize: f.T.Size6,
                         className: "insider-pass-pre-purchase__sub-header"
-                    }, Object(a.d)("All-Access benefits last up to the start of the 2019 OWL Season. Twitch emotes, badges, and in-game content are yours to keep forever.", "EsportsCampaignTabs")), r.createElement(m._6, {
+                    }, Object(a.d)("All-Access benefits last up to the start of the 2019 Overwatch League Season. Twitch emotes, badges, and in-game content are yours to keep forever!", "EsportsCampaignTabs")), r.createElement(f._6, {
                         margin: {
                             top: 2,
                             bottom: 1
                         }
-                    }, r.createElement(m.u, {
+                    }, r.createElement(f.u, {
                         targetBlank: !0,
                         ariaLabel: t + " " + i,
                         linkTo: this.props.subscriptionProducts[0].url,
                         purchase: i
-                    }, t)), r.createElement(m._6, {
-                        display: m.P.Flex
-                    }, r.createElement(m._6, {
+                    }, t)), r.createElement(f._6, {
+                        display: f.P.Flex
+                    }, r.createElement(f._6, {
                         margin: {
                             right: .5
                         }
-                    }, r.createElement(m._19, {
-                        asset: m._20.Crown,
-                        type: m._21.Prime
-                    })), this.props.userHasPrime && n && r.createElement(m.O, {
-                        color: m.J.Overlay
-                    }, Object(a.d)("You’re saving $10 off the $29.99 price with Twitch Prime", "EsportsCampaignTabs")), !this.props.userHasPrime && r.createElement(m.O, {
-                        color: m.J.Overlay,
+                    }, r.createElement(f._19, {
+                        asset: f._20.Crown,
+                        type: f._21.Prime
+                    })), this.props.userHasPrime && n && r.createElement(f.O, {
+                        color: f.J.Overlay
+                    }, Object(a.d)("You’re saving $10 off the $29.99 price with Twitch Prime", "EsportsCampaignTabs")), !this.props.userHasPrime && r.createElement(f.O, {
+                        color: f.J.Overlay,
                         className: Object(o.c)(s.a.Dark)
                     }, Object(a.d)("Get $10 off with Twitch Prime <x:link>Sign up now</x:link>", {
                         "x:link": function(e) {
-                            return r.createElement(m.M, {
+                            return r.createElement(f.M, {
                                 key: "insider-prime-link",
                                 to: "https://twitch.amazon.com/prime/",
-                                type: m.N.Overlay,
+                                type: f.N.Overlay,
                                 targetBlank: !0
                             }, e)
                         }
-                    }, "EsportsCampaignTabs"))), r.createElement(m.O, {
-                        fontSize: m.T.Size7,
+                    }, "EsportsCampaignTabs"))), r.createElement(f.O, {
+                        fontSize: f.T.Size7,
                         className: Object(o.c)(s.a.Dark)
-                    }, r.createElement(m.M, {
-                        to: b
-                    }, Object(a.d)("Offer available for a limted time. Terms and conditions apply", "EsportsCampaignTabs"))))), r.createElement(m._6, {
-                        position: m._13.Absolute,
-                        display: m.P.Flex,
-                        justifyContent: m._5.Center,
+                    }, r.createElement(f.M, {
+                        to: k
+                    }, Object(a.d)("Offer available for a limited time. Terms and conditions apply", "EsportsCampaignTabs"))))), r.createElement(f._6, {
+                        position: f._13.Absolute,
+                        display: f.P.Flex,
+                        justifyContent: f._5.Center,
                         margin: {
                             top: 3
                         },
                         fullWidth: !0
-                    }, this.state.dismissedTrial && r.createElement(m._6, {
-                        textAlign: m._39.Center
-                    }, r.createElement(m._29, {
-                        background: m.m.Base,
+                    }, this.state.dismissedTrial && r.createElement(f._6, {
+                        textAlign: f._39.Center
+                    }, r.createElement(f._29, {
+                        background: f.m.Base,
                         margin: {
                             bottom: 1
                         },
@@ -15132,30 +15153,30 @@ webpackJsonp([36], {
                             y: 1
                         },
                         elevation: 3,
-                        borderRadius: m.s.Medium
-                    }, r.createElement(d.a, {
+                        borderRadius: f.s.Medium
+                    }, r.createElement(p.a, {
                         hosting: this.props.hosting,
                         showInsiderChannel: this.props.showInsiderChannel,
                         onVideoToggle: this.props.onVideoToggle
-                    })), r.createElement(m.O, null, Object(a.d)("Command Center access ends May 16! <x:link>Get the Pass</x:link>", {
+                    })), r.createElement(f.O, null, Object(a.d)("Command Center access ends May 16! <x:link>Get the Pass</x:link>", {
                         "x:link": function(t) {
-                            return r.createElement(m.M, {
+                            return r.createElement(f.M, {
                                 to: e.props.subscriptionProducts[0].url,
                                 key: "insider-get-pass"
                             }, t)
                         }
-                    }, "EsportsCampaignTabs"))), !this.state.dismissedTrial && r.createElement(m._29, {
+                    }, "EsportsCampaignTabs"))), !this.state.dismissedTrial && r.createElement(f._29, {
                         className: "insider-pass-pre-purchase__command-center-trial",
-                        background: m.m.Base,
+                        background: f.m.Base,
                         padding: {
                             x: 2,
                             y: 1
                         },
                         elevation: 3,
-                        borderRadius: m.s.Medium,
-                        display: m.P.Flex,
-                        alignItems: m.c.Center
-                    }, r.createElement(m._0, {
+                        borderRadius: f.s.Medium,
+                        display: f.P.Flex,
+                        alignItems: f.c.Center
+                    }, r.createElement(f._0, {
                         margin: {
                             right: 1
                         }
@@ -15163,56 +15184,56 @@ webpackJsonp([36], {
                         src: c.c + "/owl-2017/switcher-command-center.png",
                         height: "44px",
                         width: "69px"
-                    })), r.createElement(m.O, null, Object(a.d)("Preview the Command Center stream for free until Stage 4 <x:nowrap>(begins May 16)!</x:nowrap> <x:link>Try Command Center Now</x:link>", {
+                    })), r.createElement(f.O, null, Object(a.d)("Preview the Command Center stream for free until Stage 4 <x:nowrap>(begins May 16)!</x:nowrap> <x:link>Try Command Center Now</x:link>", {
                         "x:nowrap": function(e) {
-                            return r.createElement(m.O, {
-                                type: m._43.Span,
+                            return r.createElement(f.O, {
+                                type: f._43.Span,
                                 key: "insider-nowrap",
                                 noWrap: !0
                             }, e)
                         },
                         "x:link": function(t) {
-                            return r.createElement(m.M, {
+                            return r.createElement(f.M, {
                                 onClick: e.enableTrial,
                                 key: "insider-trial-link",
                                 "data-test-selector": "insider-pass-video-toggle-button-selector"
                             }, t)
                         }
-                    }, "EsportsCampaignTabs"))))), r.createElement(m._29, {
+                    }, "EsportsCampaignTabs"))))), r.createElement(f._29, {
                         padding: {
                             bottom: 2
                         },
                         borderBottom: !0
-                    }, r.createElement(f, null)), r.createElement(m._29, {
+                    }, r.createElement(g, null)), r.createElement(f._29, {
                         borderBottom: !0
-                    }, r.createElement(u.a, {
+                    }, r.createElement(d.a, {
                         channelID: this.props.channelID,
-                        insiderPurchaseState: h.a.PrePurchase
-                    })), r.createElement(m._6, {
+                        insiderPurchaseState: v.a.PrePurchase
+                    })), r.createElement(f._6, {
                         className: "insider-pass-pre-purchase__marketing",
                         padding: {
                             y: 3
                         }
-                    }, r.createElement(m._6, {
+                    }, r.createElement(f._6, {
                         padding: {
                             y: 2
                         }
                     }, r.createElement(l.a, {
                         channelID: this.props.channelID,
-                        insiderPurchaseState: h.a.PrePurchase
-                    })), r.createElement(m._6, {
+                        insiderPurchaseState: v.a.PrePurchase
+                    })), r.createElement(f._6, {
                         padding: {
                             y: 2
                         }
-                    }, r.createElement(g, null))))
+                    }, r.createElement(h, null))), r.createElement(u.a, null))
                 }, t
             }(r.PureComponent);
         n.d(t, !1, function() {
             return "insider-pass-video-toggle-button-selector"
         }), n.d(t, "b", function() {
-            return b
-        }), n.d(t, "a", function() {
             return k
+        }), n.d(t, "a", function() {
+            return _
         })
     },
     c8sn: function(e, t) {
@@ -17824,6 +17845,24 @@ webpackJsonp([36], {
     ryON: function(e, t, n) {
         e.exports = n.p + "assets/amazon_pay_1x-94c97f413ee6005ab1a198c77cbfdd6c.png"
     },
+    sEXz: function(e, t, n) {
+        "use strict";
+        var i = n("GiK3"),
+            r = n("6sO2"),
+            a = n("Odds"),
+            s = function() {
+                return i.createElement(a._6, {
+                    className: "insider-pass-footer",
+                    textAlign: a._39.Center,
+                    padding: {
+                        top: 1
+                    }
+                }, i.createElement(a.O, null, Object(r.d)("All-Access benefits last up to the start of the 2019 Overwatch League Season.", "InsiderPassFooter")), i.createElement(a.O, null, Object(r.d)("Twitch emotes, badges, and in-game content are yours to keep forever.", "InsiderPassFooter")))
+            };
+        n.d(t, "a", function() {
+            return s
+        })
+    },
     sdTe: function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -19041,4 +19080,4 @@ webpackJsonp([36], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-fa9369f8d463f4456925ccdb2b01cfd7.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-11bddd38026773f395bf92fd0d7c3993.js.map

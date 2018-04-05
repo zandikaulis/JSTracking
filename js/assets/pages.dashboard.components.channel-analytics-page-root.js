@@ -1,4 +1,4 @@
-webpackJsonp([79], {
+webpackJsonp([78], {
     "+ear": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -588,8 +588,12 @@ webpackJsonp([79], {
                         case 0:
                             return t = "/api/channels/" + e + "/revenue_splits", n = "/api/channels/" + e + "/subscriber_count", [4, Promise.all([Object(C.c)({
                                 path: t
+                            }, {
+                                excludeHeaders: ["Twitch-Api-Token"]
                             }), Object(C.c)({
                                 path: n
+                            }, {
+                                excludeHeaders: ["Twitch-Api-Token"]
                             })])];
                         case 1:
                             return r = a.sent(), s = r[0], i = r[1], s.isError() || i.isError() ? [2, {
@@ -627,10 +631,10 @@ webpackJsonp([79], {
                 })
             })
         }
-        var _ = n("tiQ5");
+        var w = n("tiQ5");
 
-        function w(e) {
-            return e === b.d.None ? _.f : Object.keys(_.g)
+        function _(e) {
+            return e === b.d.None ? w.f : Object.keys(w.g)
         }
         var E = {
                 "data-test-selector": "commit-button"
@@ -1617,12 +1621,12 @@ webpackJsonp([79], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.download = function() {
                         var e;
-                        e = t.props.dataGroup === _.b.StreamSummaries ? he(t.props.analyticsResponse.streamSessions.sessions, t.props.aggregation) : de({
+                        e = t.props.dataGroup === w.b.StreamSummaries ? he(t.props.analyticsResponse.streamSessions.sessions, t.props.aggregation) : de({
                             revenue: t.props.analyticsResponse.revenue.streams,
                             subscriptions: t.props.analyticsResponse.subCounts.streams
                         }, t.props.aggregation), pe(e.fileName, e.csv)
                     }, t.isDataAvailable = function() {
-                        return t.props.dataGroup === _.b.StreamSummaries ? t.props.analyticsResponse.streamSessions.sessions.length > 0 : t.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() > 0
+                        return t.props.dataGroup === w.b.StreamSummaries ? t.props.analyticsResponse.streamSessions.sessions.length > 0 : t.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() > 0
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
@@ -1804,7 +1808,7 @@ webpackJsonp([79], {
                                 selectedStats: s
                             }
                         }))
-                    }, n.defaultTopStats = n.props.channel.role === b.d.None ? _.e : _.a, n.topStatsKeys = w(n.props.channel.role), n.state = {
+                    }, n.defaultTopStats = n.props.channel.role === b.d.None ? w.e : w.a, n.topStatsKeys = _(n.props.channel.role), n.state = {
                         selectedStats: n.defaultTopStats
                     }, n
                 }
@@ -1815,7 +1819,7 @@ webpackJsonp([79], {
                 }, t.prototype.render = function() {
                     return this.props.children({
                         stats: this.state.selectedStats.map(function(e) {
-                            return _.g[e]
+                            return w.g[e]
                         }),
                         onUpdateStat: this.handleUpdateStat
                     })
@@ -1840,7 +1844,7 @@ webpackJsonp([79], {
                         r = this.topStatsKeys.slice();
                     return n.forEach(function(t) {
                         if (e.topStatsKeys.includes(t) && !a.includes(t)) return r.splice(r.indexOf(t), 1), a.push(t)
-                    }), a.length ? a.length < _.d && (a = a.concat(r)) : a = this.defaultTopStats, a.slice(0, _.d)
+                    }), a.length ? a.length < w.d && (a = a.concat(r)) : a = this.defaultTopStats, a.slice(0, w.d)
                 }, t.prototype.getRemainingStats = function(e) {
                     return this.topStatsKeys.filter(function(t) {
                         return !e.includes(t)
@@ -1888,19 +1892,19 @@ webpackJsonp([79], {
                                 padding: 1
                             }, r.createElement(v.O, {
                                 color: v.J.Link
-                            }, _.g[t].title())))
+                            }, w.g[t].title())))
                         }))
                     }))
                 }, t
             }(r.Component),
-            _e = {
+            we = {
                 "data-test-selector": "current-chart"
             },
-            we = function(e) {
+            _e = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.chart = function(e) {
-                        return r.createElement(e.definition.Chart, a.__assign({}, _e, {
+                        return r.createElement(e.definition.Chart, a.__assign({}, we, {
                             analyticsResponse: t.props.analyticsResponse,
                             aggregation: e.aggregation
                         }))
@@ -1909,7 +1913,7 @@ webpackJsonp([79], {
                             topStatsAggregation: e.currentTarget.value
                         })
                     }, t.isDataAvailable = function(e) {
-                        return e === _.b.StreamSummaries ? t.props.analyticsResponse.streamSessions.sessions.length > 0 : t.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() > 0
+                        return e === w.b.StreamSummaries ? t.props.analyticsResponse.streamSessions.sessions.length > 0 : t.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() > 0
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
@@ -1935,7 +1939,7 @@ webpackJsonp([79], {
                                 isActive: n === a,
                                 key: a
                             }, r.createElement(Oe, {
-                                availableStats: w(e.props.channel.role),
+                                availableStats: _(e.props.channel.role),
                                 index: a,
                                 onUpdateStat: i
                             }))
@@ -1969,7 +1973,7 @@ webpackJsonp([79], {
                     })
                 }, Object.defineProperty(t.prototype, "cappedIndex", {
                     get: function() {
-                        var e = _.d - 1;
+                        var e = w.d - 1;
                         return Math.min(e, this.props.urlStore.params.topStatsIndex)
                     },
                     enumerable: !0,
@@ -2158,7 +2162,7 @@ webpackJsonp([79], {
                         a = e.channel;
                     return r.createElement(M, null, r.createElement(F, {
                         urlStore: t
-                    }), r.createElement(we, {
+                    }), r.createElement(_e, {
                         channel: a,
                         urlStore: t,
                         analyticsResponse: n
@@ -3139,7 +3143,7 @@ webpackJsonp([79], {
                     })
                 }, t
             }(s.Component),
-            _ = function(e) {
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatTooltipLabel = function(e) {
@@ -3172,7 +3176,7 @@ webpackJsonp([79], {
                     })
                 }, t
             }(s.Component),
-            w = function(e) {
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
@@ -4186,7 +4190,7 @@ webpackJsonp([79], {
                     return Object(a.d)("Average Viewers", "ChannelAnalyticsTopStatsDropdown")
                 },
                 Tab: q,
-                Chart: _,
+                Chart: w,
                 dataGroup: te.StreamSummaries
             }, ie[ee.LiveViews] = {
                 title: function() {
@@ -4256,7 +4260,7 @@ webpackJsonp([79], {
                     return Object(a.d)("Average Chat Messages", "ChannelAnalyticsTopStatsDropdown")
                 },
                 Tab: H,
-                Chart: w,
+                Chart: _,
                 dataGroup: te.StreamSummaries
             }, ie[ee.ClipsCreated] = {
                 title: function() {
@@ -4327,4 +4331,4 @@ webpackJsonp([79], {
     },
     z39C: function(e, t) {}
 });
-//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-root-ad9e7b8721fccb88301cc6d7bb9038ad.js.map
+//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-root-b2ed0327ae916ed779672924b0e1eb9a.js.map

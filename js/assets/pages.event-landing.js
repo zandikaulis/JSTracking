@@ -8307,7 +8307,7 @@ webpackJsonp([48], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = d.k.subscribe({
-                                                    topic: Object(p.i)(this.props.userID),
+                                                    topic: Object(p.j)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(g.c)(n, o.currentImage)
@@ -9456,7 +9456,7 @@ webpackJsonp([48], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = c.k.subscribe({
-                                            topic: Object(h.i)(this.props.userID),
+                                            topic: Object(h.j)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(_.c)(n, r.currentImage)
@@ -9891,4 +9891,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-eb650567fc25a78cd8cd8533a111cab6.js.map
+//# sourceMappingURL=pages.event-landing-412fd0395176d1754bc53e93abb0516b.js.map

@@ -2517,15 +2517,16 @@ webpackJsonp([44], {
     },
     "6w0d": function(e, t, a) {
         "use strict";
-        t.a = function(e) {
+        t.a = function(e, t) {
+            void 0 === t && (t = {});
             return n.__awaiter(this, void 0, void 0, function() {
-                var t;
-                return n.__generator(this, function(a) {
-                    switch (a.label) {
+                var a;
+                return n.__generator(this, function(n) {
+                    switch (n.label) {
                         case 0:
-                            return [4, r.a.request(e.path, e)];
+                            return [4, r.a.request(e.path, e, t)];
                         case 1:
-                            return t = a.sent(), [2, new i(t, e)]
+                            return a = n.sent(), [2, new i(a, e)]
                     }
                 })
             })
@@ -20147,4 +20148,4 @@ webpackJsonp([44], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-60e9671892221af49f4fd62be89adcea.js.map
+//# sourceMappingURL=pages.teams-dashboard-ba233f17ecb157f0bf9d5dec23c8fffe.js.map

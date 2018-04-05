@@ -1,4 +1,4 @@
-webpackJsonp([75], {
+webpackJsonp([74], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -1436,7 +1436,7 @@ webpackJsonp([75], {
                     }
                 }), Object(D.a)([{
                     topic: function(e) {
-                        return Object(M.u)(e.currentUserID)
+                        return Object(M.v)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (C = {}, C[T.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", C)
                 }])], t)
@@ -2121,7 +2121,7 @@ webpackJsonp([75], {
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(M.o)(e.channelID),
+                    topic: Object(M.p)(e.channelID),
                     type: T.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -2676,7 +2676,7 @@ webpackJsonp([75], {
             He = function() {
                 return function(e, t, n) {
                     this.channelID = e, this.sessionUserID = t, this.unsubscribe = u.k.subscribe({
-                        topic: Object(M.j)(this.sessionUserID, this.channelID),
+                        topic: Object(M.k)(this.sessionUserID, this.channelID),
                         onMessage: function(e) {
                             switch (e.data.moderation_action) {
                                 case T.ModerationActions.AutoModRejected:
@@ -6533,7 +6533,7 @@ webpackJsonp([75], {
                     }))
                 }, t.prototype.subscribe = function(e) {
                     this.unsubscribe = l.o.pubsub.subscribe({
-                        topic: Object(d.n)(e),
+                        topic: Object(d.o)(e),
                         onMessage: this.handlePubsubMessage
                     })
                 }, t.prototype.renderCTAButton = function() {
@@ -15984,7 +15984,7 @@ webpackJsonp([75], {
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(m.s)(e.userID),
+                    topic: Object(m.t)(e.userID),
                     type: d.PubsubMessageType.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
@@ -19170,7 +19170,7 @@ webpackJsonp([75], {
                         variables: {
                             login: e.login
                         },
-                        topic: e.data.user ? Object(c.x)(e.data.user.id) : "",
+                        topic: e.data.user ? Object(c.y)(e.data.user.id) : "",
                         type: l.PubsubMessageType.ViewCount,
                         mutator: function(e, t) {
                             return t.user && t.user.stream ? (t.user.stream.viewersCount = e.viewers, t) : t
@@ -19648,7 +19648,7 @@ webpackJsonp([75], {
                 return !e.channelID
             },
             topic: function(e) {
-                return e.channelID ? Object(d.o)(e.channelID) : ""
+                return e.channelID ? Object(d.p)(e.channelID) : ""
             },
             mapMessageTypesToProps: (_ = {}, _[c.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", _)
         }]))(C);
@@ -22227,7 +22227,7 @@ webpackJsonp([75], {
                     variables: {
                         id: t.channelID
                     },
-                    topic: Object(p.o)(t.channelID),
+                    topic: Object(p.p)(t.channelID),
                     type: u.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(n, a) {
                         return n.data.is_rituals_enabled ? e(function() {
@@ -22238,7 +22238,7 @@ webpackJsonp([75], {
                 }
             }), Object(c.a)([{
                 topic: function(e) {
-                    return Object(p.x)(e.channelID)
+                    return Object(p.y)(e.channelID)
                 },
                 mapMessageTypesToProps: (T = {}, T[u.PubsubMessageType.ChannelStreamUp] = "streamUp", T[u.PubsubMessageType.ChannelStreamDown] = "streamDown", T),
                 skip: D
@@ -23432,4 +23432,4 @@ webpackJsonp([75], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-08f2c74c0b32f5954ad99cebf08a5f61.js.map
+//# sourceMappingURL=pages.channel-surfing-b232cb4cb83e1914667ba91727e620f2.js.map

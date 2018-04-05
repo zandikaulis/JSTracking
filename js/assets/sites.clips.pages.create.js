@@ -1,4 +1,4 @@
-webpackJsonp([57], {
+webpackJsonp([56], {
     "2TZ0": function(e, t) {
         var n = {
             kind: "Document",
@@ -371,90 +371,102 @@ webpackJsonp([57], {
             d = n("vH/s"),
             u = n("3HXW"),
             c = n("QIXk");
-        var p = n("Odds"),
-            f = 5,
-            m = 60,
-            h = 1;
 
-        function g(e) {
-            return parseFloat(e.toFixed(h))
+        function p(e, t) {
+            return {
+                startOffset: e,
+                endOffset: e + t
+            }
         }
-        var v, O = function(e) {
-            function t() {
-                var t, n, i = null !== e && e.apply(this, arguments) || this;
-                return i.initialOffsets = (t = i.props.rawMedia.defaultClipInitialOffset, n = i.props.rawMedia.duration - i.props.rawMedia.defaultClipInitialOffset, {
-                    startOffset: t,
-                    endOffset: t + n
-                }), i.state = {
-                    startOffset: i.initialOffsets.startOffset,
-                    endOffset: i.initialOffsets.endOffset,
-                    minOffset: 0,
-                    maxOffset: i.props.rawMedia.duration
-                }, i.onDrag = function(e) {
-                    var t = e.endOffset - e.startOffset;
-                    t > m || t < f || i.setState({
-                        startOffset: g(e.startOffset),
-                        endOffset: g(e.endOffset)
-                    })
-                }, i.renderDurationPopover = function() {
-                    return r.createElement(p._29, {
-                        background: p.m.Overlay,
+        var f = n("Odds"),
+            m = 5,
+            h = 60,
+            g = 1;
+
+        function v(e) {
+            return parseFloat(e.toFixed(g))
+        }
+        var O, E = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.initialOffsets = p(t.props.rawMedia.defaultClipInitialOffset, t.props.rawMedia.duration - t.props.rawMedia.defaultClipInitialOffset), t.state = {
+                        startOffset: t.initialOffsets.startOffset,
+                        endOffset: t.initialOffsets.endOffset,
+                        minOffset: 0,
+                        maxOffset: t.props.rawMedia.duration
+                    }, t.onDrag = function(e) {
+                        var n = e.endOffset - e.startOffset;
+                        n > h || n < m || (t.setState({
+                            startOffset: v(e.startOffset),
+                            endOffset: v(e.endOffset)
+                        }), t.props.playerConnection.sendMessage(Object(l.r)({
+                            startOffset: t.state.startOffset,
+                            endOffset: t.state.endOffset
+                        })))
+                    }, t.renderDurationPopover = function() {
+                        return r.createElement(f._29, {
+                            background: f.m.Overlay,
+                            padding: {
+                                y: 2,
+                                x: 1
+                            },
+                            fullWidth: !0,
+                            textAlign: f._39.Center,
+                            overflow: f._9.Hidden
+                        }, r.createElement(f.O, {
+                            align: f._53.Middle,
+                            ellipsis: !0
+                        }, t.state.startOffset + " - " + t.state.endOffset))
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return this.props.isClipResolved ? r.createElement(f._6, null, r.createElement(f._29, {
+                        padding: {
+                            y: 2,
+                            x: 1
+                        }
+                    }, r.createElement(u.a, {
+                        startOffset: this.state.startOffset,
+                        endOffset: this.state.endOffset,
+                        minOffset: this.state.minOffset,
+                        maxOffset: this.state.maxOffset,
+                        onLeftDrag: this.onDrag,
+                        onRightDrag: this.onDrag,
+                        popover: this.renderDurationPopover()
+                    }, r.createElement(f._29, {
+                        background: f.m.Overlay,
                         padding: {
                             y: 2,
                             x: 1
                         },
                         fullWidth: !0,
-                        textAlign: p._39.Center,
-                        overflow: p._9.Hidden
-                    }, r.createElement(p.O, {
-                        align: p._53.Middle,
+                        textAlign: f._39.Center,
+                        overflow: f._9.Hidden
+                    }, r.createElement(f.O, {
+                        align: f._53.Middle,
                         ellipsis: !0
-                    }, i.state.startOffset + " - " + i.state.endOffset))
-                }, i
-            }
-            return i.__extends(t, e), t.prototype.render = function() {
-                return this.props.isClipResolved ? r.createElement(p._6, null, r.createElement(p._29, {
-                    padding: {
-                        y: 2,
-                        x: 1
-                    }
-                }, r.createElement(u.a, {
-                    startOffset: this.state.startOffset,
-                    endOffset: this.state.endOffset,
-                    minOffset: this.state.minOffset,
-                    maxOffset: this.state.maxOffset,
-                    onLeftDrag: this.onDrag,
-                    onRightDrag: this.onDrag,
-                    popover: this.renderDurationPopover()
-                }, r.createElement(p._29, {
-                    background: p.m.Overlay,
-                    padding: {
-                        y: 2,
-                        x: 1
-                    },
-                    fullWidth: !0,
-                    textAlign: p._39.Center,
-                    overflow: p._9.Hidden
-                }, r.createElement(p.O, {
-                    align: p._53.Middle,
-                    ellipsis: !0
-                }, this.state.startOffset + " - " + this.state.endOffset)))), r.createElement(c.a, {
-                    clipSlug: this.props.slug,
-                    location: d.PageviewLocation.ClipsEditing,
-                    broadcasterName: this.props.broadcasterName,
-                    startOffset: this.state.startOffset,
-                    endOffset: this.state.endOffset
-                })) : r.createElement(p._6, null, r.createElement(p.u, {
-                    disabled: !0
-                }))
-            }, t
-        }(r.Component);
+                    }, this.state.startOffset + " - " + this.state.endOffset)))), r.createElement(c.a, {
+                        clipSlug: this.props.slug,
+                        location: d.PageviewLocation.ClipsEditing,
+                        broadcasterName: this.props.broadcasterName,
+                        startOffset: this.state.startOffset,
+                        endOffset: this.state.endOffset
+                    })) : r.createElement(f._6, null, r.createElement(f.u, {
+                        disabled: !0
+                    }))
+                }, t
+            }(r.Component),
+            y = Object(l.t)({
+                playerId: function(e) {
+                    return e.slug
+                }
+            })(E);
         ! function(e) {
             e.creating = "CREATING", e.created = "CREATED", e.failed = "FAILED"
-        }(v || (v = {}));
-        var E = n("vwd7"),
-            y = n("f8OD"),
-            S = function(e) {
+        }(O || (O = {}));
+        var S = n("vwd7"),
+            C = n("f8OD"),
+            b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -466,9 +478,9 @@ webpackJsonp([57], {
                         })
                     }, t.getIsClipResolved = function(e) {
                         var n = t.getRawMediaStatus(e);
-                        return t.getRawMediaExists(e) && (n === v.created || n === v.failed)
+                        return t.getRawMediaExists(e) && (n === O.created || n === O.failed)
                     }, t.getIsCreationFailed = function(e) {
-                        return t.getRawMediaExists(e) && t.getRawMediaStatus(e) === v.failed
+                        return t.getRawMediaExists(e) && t.getRawMediaStatus(e) === O.failed
                     }, t.getRawMediaStatus = function(e) {
                         return e.data.clip && e.data.clip.rawMedia && e.data.clip.rawMedia.status || ""
                     }, t.getRawMediaExists = function(e) {
@@ -488,29 +500,47 @@ webpackJsonp([57], {
                     this.timeoutID && clearTimeout(this.timeoutID), this.props.data.stopPolling()
                 }, t.prototype.componentDidUpdate = function() {
                     var e = this.getIsClipResolved(this.props) && !this.getIsCreationFailed(this.props);
-                    !this.hasSentEditClip && e && this.state.isPlayerIframeLoaded && this.props.data.clip && this.props.data.clip.rawMedia && (this.props.playerConnection.sendMessage(Object(l.r)(this.props.data.clip.rawMedia)), this.hasSentEditClip = !0)
+                    if (!this.hasSentEditClip && e && this.state.isPlayerIframeLoaded && this.props.data.clip && this.props.data.clip.rawMedia) {
+                        var t = this.props.data.clip.rawMedia,
+                            n = t.defaultClipInitialOffset,
+                            i = t.duration,
+                            r = t.videoURL,
+                            a = p(n, i - n);
+                        this.props.playerConnection.sendMessage(Object(l.r)({
+                            startOffset: a.startOffset,
+                            endOffset: a.endOffset,
+                            videoUrl: r,
+                            slug: this.props.slug
+                        })), this.hasSentEditClip = !0
+                    }
                 }, t.prototype.render = function() {
                     if (this.state.isPollingTimedOut || this.getIsCreationFailed(this.props)) return r.createElement(a.b, {
                         to: "/500"
                     });
                     var e = this.props.data.clip;
-                    return e && e.rawMedia && this.getIsClipResolved(this.props) ? r.createElement(p._6, null, r.createElement(E.b, {
+                    return e && e.rawMedia && this.getIsClipResolved(this.props) ? r.createElement(f._6, null, r.createElement(f.j, {
+                        ratio: f.k.Aspect16x9
+                    }, r.createElement(f._6, {
+                        position: f._13.Absolute,
+                        fullHeight: !0,
+                        fullWidth: !0
+                    }, r.createElement(S.b, {
                         slug: this.props.slug,
                         onLoaded: this.onLoaded,
-                        playerType: E.a.Editing
-                    }), r.createElement(O, {
+                        playerType: S.a.Editing
+                    }))), r.createElement(y, {
                         isClipResolved: this.getIsClipResolved(this.props),
                         slug: this.props.slug,
                         broadcasterName: e.broadcaster && e.broadcaster.displayName || "",
                         rawMedia: e.rawMedia
-                    })) : r.createElement(p._6, null)
+                    })) : r.createElement(f._6, null)
                 }, t
             }(r.Component),
-            C = Object(s.compose)(Object(l.t)({
+            _ = Object(s.compose)(Object(l.t)({
                 playerId: function(e) {
                     return e.slug
                 }
-            }), Object(o.a)(y, {
+            }), Object(o.a)(C, {
                 options: function(e) {
                     return {
                         pollInterval: 1e3,
@@ -520,7 +550,7 @@ webpackJsonp([57], {
                         }
                     }
                 }
-            }))(S),
+            }))(b),
             k = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -534,7 +564,7 @@ webpackJsonp([57], {
                                 slug: e
                             }
                         }
-                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, r.createElement(p._6, null, r.createElement(C, {
+                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, r.createElement(f._6, null, r.createElement(_, {
                         slug: e
                     }))) : r.createElement(a.b, {
                         to: "/"
@@ -647,7 +677,7 @@ webpackJsonp([57], {
                 })], t)
             }(o.Component),
             C = Object(m.f)(S),
-            k = n("2TZ0"),
+            b = n("2TZ0"),
             _ = {
                 TITLE_INPUT: "cmgr-title-input",
                 TITLE_SAVE: "cmgr-title-save",
@@ -656,7 +686,7 @@ webpackJsonp([57], {
         ! function(e) {
             e.emptySubmission = "emptySubmission", e.characterLimitReached = "characterLimitReached", e.channelViolation = "channelViolation", e.notCurator = "notCurator", e.unknown = "unknown"
         }(h || (h = {}));
-        var b = 100,
+        var k = 100,
             T = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -783,7 +813,7 @@ webpackJsonp([57], {
                         n.errorMessageToError(e)
                     }, n.getRemainingCharacterText = function() {
                         return Object(l.d)("{characterCount, number} remaining", {
-                            characterCount: b - n.state.title.length
+                            characterCount: k - n.state.title.length
                         }, "ClipsTitleEdit")
                     }, n.onSuccess = function() {
                         n.props.onSuccess && n.props.onSuccess(), n.setState({
@@ -801,7 +831,7 @@ webpackJsonp([57], {
                             showSuccess: !1
                         })
                     }, n.handleTitleEdit = function(e) {
-                        var t = e.currentTarget.value.slice(0, b);
+                        var t = e.currentTarget.value.slice(0, k);
                         n.setState({
                             title: t,
                             showError: !1,
@@ -871,7 +901,7 @@ webpackJsonp([57], {
                     return e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === r.InvalidTitle.toLowerCase() ? h.channelViolation : h.unknown
                 }, t
             }(o.Component),
-            w = Object(d.a)(k, {
+            w = Object(d.a)(b, {
                 name: "editTitle"
             })(T);
         n.d(t, !1, function() {
@@ -1305,13 +1335,13 @@ webpackJsonp([57], {
 
         function O() {
             return m({
-                method: k
+                method: b
             })
         }
 
         function E(e) {
             return m({
-                method: b,
+                method: k,
                 arg: e
             })
         }
@@ -1336,9 +1366,9 @@ webpackJsonp([57], {
                 arg: e
             })
         }
-        var k = "subscribe",
+        var b = "subscribe",
             _ = "setclip",
-            b = "setAutoplay",
+            k = "setAutoplay",
             T = "bridgestateupdate",
             w = "bridgestorestateupdate",
             P = "player.embed.host",
@@ -1376,11 +1406,11 @@ webpackJsonp([57], {
         }), n.d(t, "r", function() {
             return C
         }), n.d(t, "g", function() {
-            return k
+            return b
         }), n.d(t, "f", function() {
             return _
         }), n.d(t, "e", function() {
-            return b
+            return k
         }), n.d(t, "c", function() {
             return T
         }), n.d(t, "d", function() {
@@ -1483,4 +1513,4 @@ webpackJsonp([57], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-8b91625b6d6e81b66e9d3dc93af72fcb.js.map
+//# sourceMappingURL=sites.clips.pages.create-56e597271a366edd37dade9ec72efff1.js.map

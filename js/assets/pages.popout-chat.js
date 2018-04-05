@@ -649,6 +649,7 @@ webpackJsonp([34], {
                 ChannelBitsPinEvents: "channel-bit-events-public",
                 ChannelEventUpdates: "channel-event-updates",
                 ChannelSubscribeEvents: "channel-subscribe-events-v1",
+                BroadcastSettingsUpdate: "broadcast-settings-update",
                 ChatRoom: "chatrooms-room-v1",
                 ChatRoomsChannel: "chatrooms-channel-v1",
                 ChatRoomsUser: "chatrooms-user-v1",
@@ -676,6 +677,7 @@ webpackJsonp([34], {
                 BitsLeaderboardEvent: "bits-leaderboard-event",
                 ChannelStreamDown: "stream-down",
                 ChannelStreamUp: "stream-up",
+                BroadcastSettingsUpdate: "broadcast_settings_update",
                 ChatNotification: "chat-notification",
                 ChatRoomCreated: "created_room",
                 ChatRoomDeleted: "deleted_room",
@@ -1935,7 +1937,7 @@ webpackJsonp([34], {
                     }
                 }), Object(D.a)([{
                     topic: function(e) {
-                        return Object(R.u)(e.currentUserID)
+                        return Object(R.v)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (_ = {}, _[T.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", _)
                 }])], t)
@@ -2620,7 +2622,7 @@ webpackJsonp([34], {
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(R.o)(e.channelID),
+                    topic: Object(R.p)(e.channelID),
                     type: T.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -3175,7 +3177,7 @@ webpackJsonp([34], {
             Ve = function() {
                 return function(e, t, n) {
                     this.channelID = e, this.sessionUserID = t, this.unsubscribe = u.k.subscribe({
-                        topic: Object(R.j)(this.sessionUserID, this.channelID),
+                        topic: Object(R.k)(this.sessionUserID, this.channelID),
                         onMessage: function(e) {
                             switch (e.data.moderation_action) {
                                 case T.ModerationActions.AutoModRejected:
@@ -4943,7 +4945,7 @@ webpackJsonp([34], {
                 }
             }), Object(f.a)([{
                 topic: function(e) {
-                    return Object(_.z)(e.currentUserID)
+                    return Object(_.A)(e.currentUserID)
                 },
                 mapMessageTypesToProps: (ce = {}, ce[b.PubsubMessageType.WhisperReceived] = "whisperReceived", ce[b.PubsubMessageType.WhisperSent] = "whisperSent", ce),
                 skipMessage: function(e, t) {
@@ -5274,7 +5276,7 @@ webpackJsonp([34], {
                             }, r.prototype.render = function() {
                                 return a.createElement(t, i.__assign({}, this.props))
                             }, r.prototype.subscribe = function(e) {
-                                this.unsubscriber = Object(h.p)({
+                                this.unsubscriber = Object(h.q)({
                                     fragment: e.fragment,
                                     id: e.id,
                                     topic: e.topic,
@@ -5292,7 +5294,7 @@ webpackJsonp([34], {
                         id: "User:" + n.id,
                         skip: n.skip,
                         fragment: v,
-                        topic: Object(h.m)(n.currentUserID),
+                        topic: Object(h.n)(n.currentUserID),
                         type: g.PubsubMessageType.Presence,
                         mutator: function(e, t) {
                             if (!t) return null;
@@ -8470,7 +8472,7 @@ webpackJsonp([34], {
                     this.roomID = e, this.channelID = t, this.consumeRoomEvent = n, this.unsubscribe = function() {
                         i.unsubscribeChatRoomTopic && i.unsubscribeChatRoomTopic(), i.unsubscribeChatRoomsChanneTopic && i.unsubscribeChatRoomsChanneTopic()
                     }, this.unsubscribeChatRoomTopic = c.k.subscribe({
-                        topic: Object(g.d)(this.roomID),
+                        topic: Object(g.e)(this.roomID),
                         onMessage: function(e) {
                             var t, n, a, r, o, s = (t = e.data, n = t.message, a = t.cursor, r = n.content.fragments.map(function(e) {
                                 var t = {
@@ -8535,7 +8537,7 @@ webpackJsonp([34], {
                             }
                         }
                     }), this.unsubscribeChatRoomsChanneTopic = c.k.subscribe({
-                        topic: Object(g.e)(this.channelID),
+                        topic: Object(g.f)(this.channelID),
                         onMessage: function(e) {
                             switch (e.type) {
                                 case h.PubsubMessageType.PurgeMessageRequest:
@@ -10369,9 +10371,10 @@ webpackJsonp([34], {
             }(),
             yn = n("gv4B"),
             _n = n("/eRw"),
-            Cn = (n("TT/W"), 3e4),
-            Sn = 6e4,
-            En = function(e) {
+            Cn = (n("TT/W"), ["137512364", "188864445", "188863650", "190160460", "192718746"]),
+            Sn = 3e4,
+            En = 6e4,
+            Nn = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -10472,7 +10475,7 @@ webpackJsonp([34], {
                             roomID: e
                         }))))))
                     }, n.throttleLastReadAtUpdate = function() {
-                        n.onUpdateLastReadAt(), n.isLastReadAtThrottled = !0, n.lastReadAtThrottleTimer = setTimeout(n.unthrottleLastReadAtUpdate, Cn)
+                        n.onUpdateLastReadAt(), n.isLastReadAtThrottled = !0, n.lastReadAtThrottleTimer = setTimeout(n.unthrottleLastReadAtUpdate, Sn)
                     }, n.unthrottleLastReadAtUpdate = function() {
                         n.hasQueuedUpdate ? (n.throttleLastReadAtUpdate(), n.hasQueuedUpdate = !1) : n.isLastReadAtThrottled = !1
                     }, n.activeMembers = new kn(t.channelID), t.sessionUser && n.activeMembers.setCurrentUserID(t.sessionUser.id), n.trackingIntervalHandle = setInterval(function() {
@@ -10484,14 +10487,14 @@ webpackJsonp([34], {
                             roomID: n.props.roomID,
                             roomMinimumRole: n.props.minimumAllowedRole
                         })
-                    }, Sn), n
+                    }, En), n
                 }
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t, n, i = this,
                         a = this.props;
-                    !e.loading && (e.isFirstTimeVisit && e.roomTopic.length > 0 && !this.state.hasSeenFirstTimeRoomTopic || void 0 !== this.props.roomTopic && this.props.roomTopic !== e.roomTopic) && (this.setState({
+                    !e.loading && ((e.isFirstTimeVisit || Cn.includes(this.props.channelID)) && e.roomTopic.length > 0 && !this.state.hasSeenFirstTimeRoomTopic || void 0 !== this.props.roomTopic && this.props.roomTopic !== e.roomTopic) && (this.setState({
                         hasSeenFirstTimeRoomTopic: !0
                     }), this.props.onRoomEvent((t = e.roomTopic, n = Object(c.d)('Broadcaster set this room\'s topic to "{topic}"', {
                         topic: t
@@ -10595,7 +10598,7 @@ webpackJsonp([34], {
                     })))
                 }, t
             }(l.Component),
-            Nn = Object(d.compose)(Object(m.a)(yn, {
+            On = Object(d.compose)(Object(m.a)(yn, {
                 props: function(e) {
                     var t;
                     e.data && e.data.room && e.data.room.owner.cheer && (t = Object(Ie.a)(e.data.room.owner.cheer.emotes || []));
@@ -10625,8 +10628,8 @@ webpackJsonp([34], {
                 }
             }), Object(De.a)(), Object(m.a)(_n, {
                 name: "sendRoomMessage"
-            }), Object(k.d)("RoomPane"))(En),
-            On = function(e) {
+            }), Object(k.d)("RoomPane"))(Nn),
+            wn = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onRoomBufferUpdate = function() {
@@ -10660,7 +10663,7 @@ webpackJsonp([34], {
                 }, t.prototype.componentDidMount = function() {
                     this.roomBuffer.loadOlder()
                 }, t.prototype.render = function() {
-                    return l.createElement(Nn, s.__assign({}, this.props, {
+                    return l.createElement(On, s.__assign({}, this.props, {
                         hasOlderLeft: this.state.hasOlderLeft,
                         hasNewerLeft: this.state.hasNewerLeft,
                         isBulkLoad: this.state.isBulkLoad,
@@ -10674,7 +10677,7 @@ webpackJsonp([34], {
                     }))
                 }, t
             }(l.Component);
-        var wn = Object(d.compose)(Object(i.b)(function(e) {
+        var Dn = Object(d.compose)(Object(i.b)(function(e) {
                 return {
                     sessionUser: Object(r.c)(e),
                     isLoggedIn: Object(r.d)(e),
@@ -10685,16 +10688,16 @@ webpackJsonp([34], {
                 return Object(a.b)({
                     onUsernameClick: pe.d
                 }, e)
-            }), Object(me.a)())(On),
-            Dn = n("CHV0"),
-            Tn = function(e) {
+            }), Object(me.a)())(wn),
+            Tn = n("CHV0"),
+            In = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this;
                     c.k.subscribe({
-                        topic: Object(g.e)(this.props.channelID),
+                        topic: Object(g.f)(this.props.channelID),
                         onMessage: function(t) {
                             t.type === h.PubsubMessageType.ChatRoomDeleted && e.props.roomID === t.data.room.room_id && e.props.onDelete && e.props.onDelete()
                         }
@@ -10715,7 +10718,7 @@ webpackJsonp([34], {
                         handleStreamChatClick: this.props.handleStreamChatClick,
                         roomID: this.props.roomID,
                         type: oe.Banned
-                    }) : l.createElement(wn, {
+                    }) : l.createElement(Dn, {
                         key: this.props.roomID,
                         allowedToChat: this.props.data.room.self.permissions.sendMessages,
                         channelID: this.props.channelID,
@@ -10732,7 +10735,7 @@ webpackJsonp([34], {
                     }) : null
                 }, t
             }(l.Component),
-            In = Object(d.compose)(Object(m.a)(Dn, {
+            Rn = Object(d.compose)(Object(m.a)(Tn, {
                 options: function(e) {
                     return {
                         variables: {
@@ -10747,13 +10750,13 @@ webpackJsonp([34], {
                 }
             }), Object(p.a)(function(e) {
                 return {
-                    query: Dn,
+                    query: Tn,
                     variables: {
                         roomID: e.roomID,
                         channelID: e.channelID,
                         userID: e.sessionUser && e.sessionUser.id
                     },
-                    topic: Object(g.d)(e.roomID),
+                    topic: Object(g.e)(e.roomID),
                     type: h.PubsubMessageType.ChatRoomUpdated,
                     mutator: function(e, t) {
                         return e.type === h.PubsubMessageType.ChatRoomUpdated && (t.room.name = e.data.room.name, t.room.topic = e.data.room.topic, t.room.isPreviewable = e.data.room.is_previewable, t.room.minimumAllowedRole = e.data.room.minimum_allowed_role), t
@@ -10761,29 +10764,29 @@ webpackJsonp([34], {
                 }
             }), Object(p.a)(function(e) {
                 return {
-                    query: Dn,
+                    query: Tn,
                     variables: {
                         roomID: e.roomID,
                         channelID: e.channelID,
                         userID: e.sessionUser && e.sessionUser.id
                     },
-                    topic: Object(g.f)("" + (e.sessionUser && e.sessionUser.id)),
+                    topic: Object(g.g)("" + (e.sessionUser && e.sessionUser.id)),
                     type: h.PubsubMessageType.ChatRoomsRoomViewUpdated,
                     mutator: function(t, n) {
                         return t.data.room_view.room.room_id === e.roomID && (n.room.self.permissions.readMessages = t.data.room_view.permissions.read_messages, n.room.self.permissions.sendMessages = t.data.room_view.permissions.send_messages, n.user.self.isModerator = t.data.room_view.permissions.moderate), n
                     }
                 }
-            }), Object(k.d)("Room"))(Tn);
-        var Rn = Object(i.b)(function(e) {
+            }), Object(k.d)("Room"))(In);
+        var Mn = Object(i.b)(function(e) {
                 return {
                     sessionUser: Object(r.c)(e)
                 }
-            })(In),
-            Mn = n("M8zv"),
-            xn = n.n(Mn),
-            Ln = n("cxb0"),
-            jn = n("Oioc"),
-            An = function(e) {
+            })(Rn),
+            xn = n("M8zv"),
+            Ln = n.n(xn),
+            jn = n("cxb0"),
+            An = n("Oioc"),
+            Fn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleClick = function() {
@@ -10804,13 +10807,13 @@ webpackJsonp([34], {
                             }
                         });
                         t.props.joinRooms(e).then(function(e) {
-                            Object(E.d)(Ln, {
+                            Object(E.d)(jn, {
                                 channelID: t.props.channelID,
                                 userID: t.props.sessionUser && t.props.sessionUser.id
                             }, function(t) {
                                 return t.user.self.isChannelMember = e.data.joinChannelRooms.channel.self.isChannelMember, t
                             })
-                        }), t.props.handleJoinRooms && t.props.handleJoinRooms()
+                        })
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -10828,7 +10831,7 @@ webpackJsonp([34], {
                             }, "JoinRoomsButton");
                         return l.createElement(O.u, {
                             "data-test-selector": "join-rooms-button",
-                            disabled: e.chatRoomBanStatus && e.chatRoomBanStatus.isPermanent,
+                            disabled: !(!e.chatRoomBanStatus || !e.chatRoomBanStatus.isPermanent),
                             onClick: this.handleClick
                         }, n)
                     }
@@ -10846,39 +10849,40 @@ webpackJsonp([34], {
                         "data-test-selector": "ban-status-text",
                         color: O.J.Error
                     }, Object(c.d)("You are banned and can't rejoin Rooms", "JoinRoomsButton")))
-                }, t = s.__decorate([Object(m.a)(jn, {
-                    name: "joinRooms"
-                }), Object(m.a)(Ln, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                channelID: e.channelID,
-                                userID: e.sessionUser && e.sessionUser.id
-                            }
+                }, t
+            }(l.Component),
+            Pn = Object(d.compose)(Object(m.a)(An, {
+                name: "joinRooms"
+            }), Object(m.a)(jn, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            channelID: e.channelID,
+                            userID: e.sessionUser && e.sessionUser.id
                         }
-                    },
-                    skip: function(e) {
-                        return !e.sessionUser
                     }
-                }), Object(k.d)("JoinRoomsButton")], t)
-            }(l.Component);
-        var Fn, Pn = Object(i.b)(function(e) {
+                },
+                skip: function(e) {
+                    return !e.sessionUser
+                }
+            }), Object(k.d)("JoinRoomsButton"))(Fn);
+        var Un, Bn = Object(i.b)(function(e) {
             return {
                 sessionUser: Object(r.c)(e)
             }
-        })(An);
+        })(Pn);
         ! function(e) {
             e.Moderator = "moderator", e.Subscriber = "subscriber"
-        }(Fn || (Fn = {}));
-        var Un = function(e) {
+        }(Un || (Un = {}));
+        var Vn = function(e) {
                 return c.l.get("roomUpsellHistory", {})[e] || !1
             },
-            Bn = function(e) {
+            Wn = function(e) {
                 var t;
                 c.l.set("roomUpsellHistory", s.__assign({}, c.l.get("roomUpsellHistory", {}), ((t = {})[e] = !0, t)))
             },
-            Vn = n("q+qZ"),
-            Wn = function(e) {
+            Hn = n("q+qZ"),
+            Gn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.createRoom = function() {
@@ -10896,10 +10900,10 @@ webpackJsonp([34], {
                                     case 1:
                                         if (!(e = o.sent()).data.createRoom.error) switch (this.props.roomMinimumAllowedRole) {
                                             case V.b.Subscriber:
-                                                Bn(Fn.Subscriber);
+                                                Wn(Un.Subscriber);
                                                 break;
                                             case V.b.Moderator:
-                                                Bn(Fn.Moderator)
+                                                Wn(Un.Moderator)
                                         }
                                         return this.props.onCreateHandler && (r = void 0, e.data.createRoom.error && (t = e.data.createRoom.error, n = t.code, i = t.minLength, a = t.maxLength, r = q(n, {
                                             maxChars: a,
@@ -10928,16 +10932,16 @@ webpackJsonp([34], {
                     return Object(c.d)("Create", "CreateRoomButton")
                 }, t
             }(l.Component),
-            Hn = Object(d.compose)(Object(m.a)(Vn, {
+            qn = Object(d.compose)(Object(m.a)(Hn, {
                 name: "createRoom"
-            }))(Wn),
-            Gn = (n("E9JN"), {
+            }))(Gn),
+            zn = (n("E9JN"), {
                 align: O._47.Right,
                 direction: O._48.Top,
                 label: "",
                 offsetX: "-2%"
             }),
-            qn = function(e) {
+            $n = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCreateHandler = function(e) {
@@ -10972,7 +10976,7 @@ webpackJsonp([34], {
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
                     var e = V.a[this.state.roomMinimumAllowedRole];
-                    Gn.label = Object(c.d)("Chat Permission: {permissionRole}", {
+                    zn.label = Object(c.d)("Chat Permission: {permissionRole}", {
                         permissionRole: e
                     }, "RoomCreator");
                     var t = {
@@ -11010,7 +11014,7 @@ webpackJsonp([34], {
                             right: 1
                         }
                     }, l.createElement(y.a, {
-                        tooltipProps: Gn
+                        tooltipProps: zn
                     }, l.createElement(O.M, null, l.createElement(O._6, {
                         display: O.P.Flex
                     }, l.createElement(O._6, {
@@ -11042,7 +11046,7 @@ webpackJsonp([34], {
                     }, l.createElement(O.u, {
                         onClick: this.props.onCloseRoomCreator,
                         type: O.A.Text
-                    }, Object(c.d)("Cancel", "RoomCreator"))), l.createElement(Hn, {
+                    }, Object(c.d)("Cancel", "RoomCreator"))), l.createElement(qn, {
                         isPrimaryCTA: !0,
                         roomName: this.state.roomName,
                         roomTopic: this.state.roomTopic,
@@ -11064,9 +11068,9 @@ webpackJsonp([34], {
                     }, this.state.roomCreationError)
                 }, t
             }(l.Component),
-            zn = n("rCmJ"),
-            $n = n("pe3h"),
-            Qn = (n("XViT"), function(e) {
+            Qn = n("rCmJ"),
+            Kn = n("pe3h"),
+            Jn = (n("XViT"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onClick = function() {
@@ -11157,7 +11161,7 @@ webpackJsonp([34], {
                         attachTop: !0,
                         display: t ? void 0 : O.P.Block,
                         className: "room-picker-option__settings " + (t ? "" : "room-picker-option__settings--disabled")
-                    }, l.createElement(zn.a, {
+                    }, l.createElement(Qn.a, {
                         onClickOut: this.closeViews
                     }, l.createElement("div", {
                         className: "room-picker-option__picker-settings " + (this.state.showOptionView ? "room-picker-option__picker-settings--show" : "")
@@ -11186,7 +11190,7 @@ webpackJsonp([34], {
                         label: this.props.data.room.self.unreadMentionCount.toString(),
                         type: O._11.Alert
                     }))
-                }, t = s.__decorate([Object(m.a)($n, {
+                }, t = s.__decorate([Object(m.a)(Kn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11201,9 +11205,9 @@ webpackJsonp([34], {
                     }
                 })], t)
             }(l.Component)),
-            Kn = (n("fNhT"), function(e) {
+            Yn = (n("fNhT"), function(e) {
                 var t, n, i, a, r, o;
-                return e.type === Fn.Subscriber ? (t = Object(c.d)("subscriber-room", "RoomUpsell_SubUpsellName"), n = Object(c.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopic"), i = Object(c.d)("subscriber-room", "RoomUpsell_SubUpsellNameCreate"), a = Object(c.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopicCreate"), r = V.b.Subscriber, o = !0) : (t = Object(c.d)("moderator-room", "RoomUpsell_ModUpsellName"), n = Object(c.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopic"), i = Object(c.d)("moderator-room", "RoomUpsell_ModUpsellNameCreate"), a = Object(c.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopicCreate"), r = V.b.Moderator, o = !1), l.createElement(O._29, {
+                return e.type === Un.Subscriber ? (t = Object(c.d)("subscriber-room", "RoomUpsell_SubUpsellName"), n = Object(c.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopic"), i = Object(c.d)("subscriber-room", "RoomUpsell_SubUpsellNameCreate"), a = Object(c.d)("Create a place for your subscribers to hang out", "RoomUpsell_SubUpsellTopicCreate"), r = V.b.Subscriber, o = !0) : (t = Object(c.d)("moderator-room", "RoomUpsell_ModUpsellName"), n = Object(c.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopic"), i = Object(c.d)("moderator-room", "RoomUpsell_ModUpsellNameCreate"), a = Object(c.d)("Give your moderators a place to sharpen their swords", "RoomUpsell_ModUpsellTopicCreate"), r = V.b.Moderator, o = !1), l.createElement(O._29, {
                     display: O.P.Flex,
                     padding: {
                         y: 1,
@@ -11243,7 +11247,7 @@ webpackJsonp([34], {
                     padding: {
                         left: .5
                     }
-                }, l.createElement(Hn, {
+                }, l.createElement(qn, {
                     isPrimaryCTA: !1,
                     roomName: i,
                     roomTopic: a,
@@ -11251,9 +11255,9 @@ webpackJsonp([34], {
                     roomMinimumAllowedRole: r
                 })))))
             }),
-            Jn = n("d7Cs"),
-            Yn = n("4hnS"),
-            Xn = function(e) {
+            Xn = n("d7Cs"),
+            Zn = n("4hnS"),
+            ei = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleLeave = function() {
@@ -11281,7 +11285,7 @@ webpackJsonp([34], {
                                     case 1:
                                         return t = i.sent(), n = function(e) {
                                             return e.user.self.isChannelMember = t.data.leaveChannelRooms.channel.self.isChannelMember, e
-                                        }, Object(E.d)(Jn, {
+                                        }, Object(E.d)(Xn, {
                                             id: this.props.channelID
                                         }, n), [2]
                                 }
@@ -11324,9 +11328,9 @@ webpackJsonp([34], {
                         onClick: this.props.handleDismiss,
                         type: O.A.Hollow
                     }, Object(c.d)("Cancel", "LeaveRoomsPrompt"))))
-                }, t = s.__decorate([Object(k.d)("LeaveRoomsPrompt"), Object(m.a)(Yn, {
+                }, t = s.__decorate([Object(k.d)("LeaveRoomsPrompt"), Object(m.a)(Zn, {
                     name: "leaveRooms"
-                }), Object(m.a)(Jn, {
+                }), Object(m.a)(Xn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11336,8 +11340,8 @@ webpackJsonp([34], {
                     }
                 })], t)
             }(l.Component),
-            Zn = n("Fvfv"),
-            ei = function(e) {
+            ti = n("Fvfv"),
+            ni = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11369,7 +11373,7 @@ webpackJsonp([34], {
                 }, t.prototype.shouldRender = function() {
                     return this.props.isLoggedIn && this.props.data.user.self.isChannelMember
                 }, t.prototype.renderLeaveOption = function() {
-                    return this.state.shouldShowLeaveRoomsPrompt ? l.createElement(Xn, {
+                    return this.state.shouldShowLeaveRoomsPrompt ? l.createElement(ei, {
                         channelID: this.props.channelID,
                         handleDismiss: this.closeLeaveRoomsPrompt
                     }) : l.createElement(O._4, {
@@ -11386,7 +11390,7 @@ webpackJsonp([34], {
                             left: .5
                         }
                     }, Object(c.d)("Leave", "RoomsMemberOptions")))
-                }, t = s.__decorate([Object(m.a)(Zn, {
+                }, t = s.__decorate([Object(m.a)(ti, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11396,15 +11400,15 @@ webpackJsonp([34], {
                     }
                 })], t)
             }(l.Component),
-            ti = n("QY1R"),
-            ni = (n("nhCy"), "Stream Chat"),
-            ii = function(e) {
+            ii = n("QY1R"),
+            ai = (n("nhCy"), "Stream Chat"),
+            ri = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         shouldShowRoomCreator: !1
                     }, t.onPickChat = function() {
-                        t.props.handleRoomSelect(ni, ni)
+                        t.props.handleRoomSelect(ai, ai)
                     }, t.showRoomCreator = function() {
                         t.setState({
                             shouldShowRoomCreator: !0
@@ -11486,8 +11490,8 @@ webpackJsonp([34], {
                         "data-test-selector": "stream-chat-room-picker-option",
                         onClick: this.onPickChat
                     }, l.createElement(O._6, {
-                        className: "room-picker__label " + (this.props.activeRoomID === ni ? "room-picker__label--active-main" : ""),
-                        key: ni,
+                        className: "room-picker__label " + (this.props.activeRoomID === ai ? "room-picker__label--active-main" : ""),
+                        key: ai,
                         padding: {
                             y: .5,
                             x: 2
@@ -11507,7 +11511,7 @@ webpackJsonp([34], {
                         t = this.props.data.user.channelRooms;
                     if (0 === t.length) return null;
                     var n = t.map(function(t) {
-                        return l.createElement(Qn, {
+                        return l.createElement(Jn, {
                             channelID: e.props.channelID,
                             isActiveRoom: t.id === e.props.activeRoomID,
                             key: "room-picker-option-" + t.id,
@@ -11529,15 +11533,15 @@ webpackJsonp([34], {
                             n = e.maxAllowedChannelRooms,
                             i = [];
                         if (n && t.length < n) {
-                            var a = !Un(Fn.Subscriber),
-                                r = !Un(Fn.Moderator);
+                            var a = !Vn(Un.Subscriber),
+                                r = !Vn(Un.Moderator);
                             t.forEach(function(e) {
                                 e.name !== Object(c.d)("subscriber-room", "RoomPicker_SubUpsellCheck") && e.minimumAllowedRole !== V.b.Subscriber || (a = !1), e.name !== Object(c.d)("moderator-room", "RoomPicker_ModUpsellCheck") && e.minimumAllowedRole !== V.b.Moderator || (r = !1)
-                            }), a && this.props.data.user.subscriptionProducts.length > 0 && i.push(l.createElement(Kn, {
-                                type: Fn.Subscriber,
+                            }), a && this.props.data.user.subscriptionProducts.length > 0 && i.push(l.createElement(Yn, {
+                                type: Un.Subscriber,
                                 key: "sub-upsell"
-                            })), r && i.push(l.createElement(Kn, {
-                                type: Fn.Moderator,
+                            })), r && i.push(l.createElement(Yn, {
+                                type: Un.Moderator,
                                 key: "mod-upsell"
                             }))
                         }
@@ -11593,7 +11597,7 @@ webpackJsonp([34], {
                         margin: {
                             top: .5
                         }
-                    }, l.createElement(Pn, {
+                    }, l.createElement(Bn, {
                         channelID: this.props.channelID
                     }))) : l.createElement(O._6, {
                         "data-test-selector": "room-picker-logged-out-cta",
@@ -11610,7 +11614,7 @@ webpackJsonp([34], {
                         displayName: e
                     }, "RoomPicker")))
                 }, t.prototype.renderRoomCreator = function() {
-                    if (this.state.shouldShowRoomCreator) return l.createElement(qn, {
+                    if (this.state.shouldShowRoomCreator) return l.createElement($n, {
                         onCloseRoomCreator: this.hideRoomCreator
                     })
                 }, t.prototype.renderRoomOnboarding = function() {
@@ -11631,7 +11635,7 @@ webpackJsonp([34], {
                         },
                         fullWidth: !0
                     }, l.createElement("img", {
-                        src: xn.a,
+                        src: Ln.a,
                         height: "50"
                     })), l.createElement(O._6, {
                         padding: {
@@ -11667,13 +11671,13 @@ webpackJsonp([34], {
                                     width: 160
                                 }, t)
                             }
-                        } else n || (t = l.createElement(ei, {
+                        } else n || (t = l.createElement(ni, {
                             channelID: this.props.channelID,
                             isLoggedIn: this.props.isLoggedIn
                         }));
                         return t
                     }
-                }, t = s.__decorate([Object(m.a)(ti, {
+                }, t = s.__decorate([Object(m.a)(ii, {
                     options: function(e) {
                         return {
                             fetchPolicy: "cache-and-network",
@@ -11685,32 +11689,32 @@ webpackJsonp([34], {
                     }
                 }), Object(k.d)("RoomPicker")], t)
             }(l.Component);
-        var ai, ri = Object(i.b)(function(e) {
+        var oi, si = Object(i.b)(function(e) {
             return {
                 sessionUser: Object(r.c)(e),
                 isLoggedIn: Object(r.d)(e)
             }
-        })(ii);
+        })(ri);
         ! function(e) {
             e.MentionPill = "mentionPill", e.ViewRooms = "viewRooms"
-        }(ai || (ai = {}));
-        var oi = function(e) {
+        }(oi || (oi = {}));
+        var li = function(e) {
                 return c.l.get("hasSeenRoomsOnboarding", {})[e] || !1
             },
-            si = function(e) {
+            di = function(e) {
                 var t;
                 c.l.set("hasSeenRoomsOnboarding", s.__assign({}, c.l.get("hasSeenRoomsOnboarding", {}), ((t = {})[e] = !0, t)))
             };
-        var li = n("BKhP"),
-            di = n("go0B"),
-            ci = (n("w0qa"), "Stream Chat"),
-            ui = function(e) {
+        var ci = n("BKhP"),
+            ui = n("go0B"),
+            mi = (n("w0qa"), "Stream Chat"),
+            pi = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        activeRoomID: ci,
-                        activeRoomName: ci,
-                        hasSeenGeneralOnboarding: oi(ai.ViewRooms),
+                        activeRoomID: mi,
+                        activeRoomName: mi,
+                        hasSeenGeneralOnboarding: li(oi.ViewRooms),
                         isActiveRoomDeleted: !1,
                         showRoomPicker: !1
                     }, t.renderOnboardingBalloon = function() {
@@ -11756,15 +11760,15 @@ webpackJsonp([34], {
                             showRoomPicker: !1
                         })
                     }, t.onActiveRoomDelete = function() {
-                        t.state.activeRoomID !== ci && t.setState({
+                        t.state.activeRoomID !== mi && t.setState({
                             isActiveRoomDeleted: !0
                         })
                     }, t.goToStreamChat = function() {
-                        t.handleRoomSelect(ci, ci)
+                        t.handleRoomSelect(mi, mi)
                     }, t.dismissGeneralOnboarding = function() {
                         t.setState({
                             hasSeenGeneralOnboarding: !0
-                        }), si(ai.ViewRooms)
+                        }), di(oi.ViewRooms)
                     }, t.closeRoomPicker = function() {
                         t.setState({
                             showRoomPicker: !1
@@ -11792,7 +11796,7 @@ webpackJsonp([34], {
                             activeRoomID: a.id,
                             activeRoomName: a.name
                         })
-                    } else this.props.channelLogin !== e.channelLogin && this.state.activeRoomID !== ci && this.goToStreamChat()
+                    } else this.props.channelLogin !== e.channelLogin && this.state.activeRoomID !== mi && this.goToStreamChat()
                 }, t.prototype.render = function() {
                     return l.createElement(O._6, {
                         fullWidth: !0,
@@ -11806,7 +11810,7 @@ webpackJsonp([34], {
                     }, this.renderHeader(), this.renderRoomPicker(), this.renderHiddenState(), this.renderChat(), this.renderCurrentRoom())
                 }, t.prototype.renderChat = function() {
                     if (this.props.isHidden && !this.props.isPopout) return null;
-                    var e = this.state.activeRoomID !== ci;
+                    var e = this.state.activeRoomID !== mi;
                     return l.createElement(f.a, {
                         channelLogin: this.props.channelLogin,
                         clientID: c.a.authSettings.clientID,
@@ -11818,7 +11822,7 @@ webpackJsonp([34], {
                         hostedChannelDisplayName: this.props.hostedChannelDisplayName
                     })
                 }, t.prototype.renderCurrentRoom = function() {
-                    return this.props.isHidden && !this.props.isPopout || !this.props.data.user || this.state.activeRoomID === ci ? null : l.createElement(Rn, {
+                    return this.props.isHidden && !this.props.isPopout || !this.props.data.user || this.state.activeRoomID === mi ? null : l.createElement(Mn, {
                         isDeleted: this.state.isActiveRoomDeleted,
                         isPopout: this.props.isPopout,
                         channelID: this.props.data.user.id,
@@ -11880,7 +11884,7 @@ webpackJsonp([34], {
                 }, t.prototype.renderRoomPicker = function() {
                     if (this.state.showRoomPicker && this.props.data.user) return l.createElement(u.a, {
                         onClickOut: this.closeRoomPicker
-                    }, l.createElement(ri, {
+                    }, l.createElement(si, {
                         channelID: this.props.data.user.id,
                         handleRoomSelect: this.handleRoomSelect,
                         isChannelLive: this.isChannelLive(this.props.data),
@@ -11889,7 +11893,7 @@ webpackJsonp([34], {
                 }, t.prototype.renderActiveRoomName = function() {
                     return this.state.showRoomPicker ? l.createElement(O.O, {
                         color: O.J.Alt
-                    }, Object(c.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === ci || this.state.isActiveRoomDeleted ? l.createElement(O.O, {
+                    }, Object(c.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === mi || this.state.isActiveRoomDeleted ? l.createElement(O.O, {
                         color: O.J.Alt
                     }, this.state.activeRoomName) : l.createElement(le, {
                         roomID: this.state.activeRoomID,
@@ -11937,7 +11941,7 @@ webpackJsonp([34], {
                     }, Object(c.d)("Show Chat", "RoomSelector")))
                 }, t
             }(l.Component),
-            mi = Object(d.compose)(Object(m.a)(di, {
+            hi = Object(d.compose)(Object(m.a)(ui, {
                 options: function(e) {
                     return {
                         variables: {
@@ -11947,12 +11951,12 @@ webpackJsonp([34], {
                 }
             }), Object(p.a)(function(e) {
                 return {
-                    query: di,
+                    query: ui,
                     skip: !e.data.user,
                     variables: {
                         login: e.channelLogin
                     },
-                    topic: Object(g.e)("" + (e.data.user && e.data.user.id)),
+                    topic: Object(g.f)("" + (e.data.user && e.data.user.id)),
                     types: [h.PubsubMessageType.ChatRoomCreated, h.PubsubMessageType.ChatRoomDeleted],
                     mutator: function(e, t) {
                         if (e.type === h.PubsubMessageType.ChatRoomDeleted && t.user && t.user.channelRooms) return t.user.channelRooms = t.user.channelRooms.filter(function(t) {
@@ -11982,13 +11986,13 @@ webpackJsonp([34], {
                 }
             }), Object(p.a)(function(e) {
                 return {
-                    query: li,
+                    query: ci,
                     skip: !e.sessionUser || !e.data.user,
                     variables: {
                         channelID: e.data.user && e.data.user.id,
                         userID: e.sessionUser && e.sessionUser.id
                     },
-                    topic: Object(g.f)("" + (e.sessionUser && e.sessionUser.id)),
+                    topic: Object(g.g)("" + (e.sessionUser && e.sessionUser.id)),
                     type: h.PubsubMessageType.ChatRoomsUserModAction,
                     mutator: function(e, t) {
                         return e.type === h.PubsubMessageType.ChatRoomsUserModAction && (t.chatRoomBanStatus = {
@@ -11999,12 +12003,12 @@ webpackJsonp([34], {
                 }
             }), Object(p.a)(function(e) {
                 return {
-                    query: di,
+                    query: ui,
                     skip: !e.sessionUser || !e.data.user,
                     variables: {
                         login: e.channelLogin
                     },
-                    topic: Object(g.f)("" + (e.sessionUser && e.sessionUser.id)),
+                    topic: Object(g.g)("" + (e.sessionUser && e.sessionUser.id)),
                     types: [h.PubsubMessageType.UserMention, h.PubsubMessageType.ChatRoomsRoomViewUpdated],
                     mutator: function(e, t) {
                         return e.type === h.PubsubMessageType.UserMention && t.user && t.user.channelRooms && (t.user.channelRooms = t.user.channelRooms.map(function(t) {
@@ -12012,8 +12016,8 @@ webpackJsonp([34], {
                         })), e.type === h.PubsubMessageType.ChatRoomsRoomViewUpdated && t.user && (e = e, t.user.self.isModerator = e.data.room_view.permissions.moderate), t
                     }
                 }
-            }), Object(k.d)("RoomSelector"))(ui);
-        var pi = Object(i.b)(function(e) {
+            }), Object(k.d)("RoomSelector"))(pi);
+        var gi = Object(i.b)(function(e) {
             return {
                 isHidden: e.chat.isHidden,
                 sessionUser: Object(r.c)(e)
@@ -12024,9 +12028,9 @@ webpackJsonp([34], {
                     return o.T()
                 }
             }, e)
-        })(mi);
+        })(hi);
         n.d(t, "a", function() {
-            return pi
+            return gi
         })
     },
     "4hnS": function(e, t) {
@@ -14952,7 +14956,7 @@ webpackJsonp([34], {
                 }
             })(b);
         ! function(e) {
-            e[e.Link = 0] = "Link", e[e.MultipleChoice = 1] = "MultipleChoice", e[e.Text = 2] = "Text"
+            e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
         }(i || (i = {}));
         var y, _ = {
                 generalFilter: function() {
@@ -14966,6 +14970,22 @@ webpackJsonp([34], {
                 }
             },
             C = {
+                reportDescription: {
+                    getTitle: function() {
+                        return Object(l.d)("Could you tell us more? You may include links to videos, clips, screenshots, or content outside Twitch", "ReportModalWizard")
+                    },
+                    value: "description",
+                    type: i.Textarea,
+                    required: !0
+                },
+                reportLink: {
+                    getTitle: function() {
+                        return Object(l.d)("If possible, please provide a link to show us where the issue occurred. Links that do not lead to the original source of the content may not be usable as evidence.", "ReportModalWizard")
+                    },
+                    rows: 2,
+                    value: "external links",
+                    type: i.Textarea
+                },
                 reportContent_chat: {
                     getTitle: function() {
                         return Object(l.d)("In a chat message", "ReportModalWizard")
@@ -15269,11 +15289,91 @@ webpackJsonp([34], {
                     value: "https://www.twitch.tv/p/legal/dmca-guidelines/",
                     type: i.Link
                 }
-            };
+            },
+            S = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onChange = function(e) {
+                        var n = e.target,
+                            i = n.name,
+                            a = n.value;
+                        t.props.onChangeText(i, a)
+                    }, t.onSelect = function(e) {
+                        if (t.props.currentCard.items && e.currentTarget.parentElement) {
+                            var n = Number(e.currentTarget.parentElement.getAttribute("data-a-index")),
+                                i = t.props.currentCard.items[n];
+                            t.props.onChangeRadio(i)
+                        }
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(f._6, {
+                        className: "reporting-wizard-card"
+                    }, r.createElement(f.U, {
+                        label: this.props.currentCard.getLabel ? this.props.currentCard.getLabel() : ""
+                    }, this.renderCardItems()))
+                }, t.prototype.renderCardItems = function() {
+                    var e = this,
+                        t = this.props.currentCard,
+                        n = [];
+                    return t.items && (n = t.items.map(function(t, n) {
+                        switch (t.type) {
+                            case i.Text:
+                                return r.createElement(f._6, {
+                                    key: n,
+                                    padding: {
+                                        y: 1
+                                    }
+                                }, t.getTitle());
+                            case i.Link:
+                                return r.createElement(f.M, {
+                                    key: n,
+                                    to: t.value,
+                                    targetBlank: !0
+                                }, t.getTitle());
+                            case i.Textarea:
+                                var a = t.value ? e.props.userTextInputs[t.value] : void 0,
+                                    o = t.required && (!a || !!a && 0 === a.trim().length);
+                                return r.createElement(f._6, {
+                                    key: n,
+                                    padding: {
+                                        bottom: 1
+                                    }
+                                }, r.createElement(f.U, {
+                                    label: t.getTitle(),
+                                    labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
+                                }, r.createElement(f._40, {
+                                    onChange: e.onChange,
+                                    rows: t.rows || 6,
+                                    name: t.value,
+                                    error: e.props.error && o,
+                                    value: a,
+                                    "data-test-selector": "report-wizard-textarea"
+                                })));
+                            case i.MultipleChoice:
+                            default:
+                                return r.createElement(f._6, {
+                                    key: n,
+                                    padding: {
+                                        y: .5
+                                    }
+                                }, r.createElement(f._18, {
+                                    checked: !!e.props.currentSelection && e.props.currentSelection.value === t.value,
+                                    onChange: e.onSelect,
+                                    label: t.getTitle(),
+                                    "data-a-index": n,
+                                    name: "card",
+                                    value: t.value
+                                }))
+                        }
+                    })), n
+                }, t
+            }(r.Component),
+            E = n("LjAQ");
         ! function(e) {
             e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
         }(y || (y = {}));
-        var S, E, N, O = {
+        var N, O, w, D = {
                 contentFilter: function() {
                     return Object(l.d)("Tell us more about this account:", "ReportModalWizard")
                 },
@@ -15284,7 +15384,7 @@ webpackJsonp([34], {
                     return Object(l.d)("Thank you for your report", "ReportModalWizard")
                 }
             },
-            w = {
+            T = {
                 getLabel: function() {
                     return Object(l.d)("Tell us where the problem is:", "ReportModalWizard")
                 },
@@ -15292,62 +15392,68 @@ webpackJsonp([34], {
                 type: y.MultipleChoice,
                 value: "content type"
             },
-            D = {
+            I = {
                 type: y.Confirm,
-                value: "tell us more"
+                value: "tell us more",
+                items: [C.reportDescription]
             },
-            T = {
-                getTitle: O.thanks,
+            R = {
+                type: y.Confirm,
+                value: "tell us more",
+                items: [C.reportDescription, C.reportLink]
+            },
+            M = {
+                getTitle: D.thanks,
                 type: y.Info,
                 value: "default end"
             },
-            I = {
-                getTitle: O.thanks,
+            x = {
+                getTitle: D.thanks,
                 type: y.Info,
                 blockPrompt: !0,
                 value: "thanks and block end"
             },
-            R = {
+            L = {
                 messaging: {
-                    getLabel: O.contentFilter,
+                    getLabel: D.contentFilter,
                     type: y.MultipleChoice,
                     items: [C.reportFilter_general_messaging, C.reportFilter_selfHarm, C.reportFilter_spam],
                     value: "report reason"
                 },
                 profile: {
-                    getLabel: O.contentFilter,
+                    getLabel: D.contentFilter,
                     type: y.MultipleChoice,
                     items: [C.reportFilter_general_profile, C.reportFilter_selfHarm, C.reportFilter_spam],
                     value: "report reason"
                 },
                 video: {
-                    getLabel: O.contentFilter,
+                    getLabel: D.contentFilter,
                     type: y.MultipleChoice,
                     items: [C.reportFilter_labeling, C.reportFilter_general_video, C.reportFilter_selfHarm],
                     value: "report reason"
                 }
             },
-            M = {
+            j = {
                 video: {
-                    getLabel: O.contentGeneral,
+                    getLabel: D.contentGeneral,
                     type: y.MultipleChoice,
                     items: [C.report_rude, C.report_violence, C.report_abusive, C.report_inappropriate_stream, C.report_emptyStream, C.report_banEvasion, C.report_impersonation, C.report_underage, C.report_ip],
                     value: "report reason"
                 },
                 profile: {
-                    getLabel: O.contentGeneral,
+                    getLabel: D.contentGeneral,
                     type: y.MultipleChoice,
                     items: [C.report_username, C.report_violence, C.report_abusive, C.report_inappropriate_content, C.report_banEvasion, C.report_impersonation, C.report_underage, C.report_ip],
                     value: "report reason"
                 },
                 messaging: {
-                    getLabel: O.contentGeneral,
+                    getLabel: D.contentGeneral,
                     type: y.MultipleChoice,
                     items: [C.report_rude, C.report_username, C.report_violence, C.report_abusive, C.report_inappropriate_messages, C.report_banEvasion, C.report_impersonation, C.report_underage, C.report_ip],
                     value: "report reason"
                 }
             },
-            x = {
+            A = {
                 type: {
                     getLabel: function() {
                         return Object(l.d)("Tell us more about the account sending spam.", "ReportModalWizard")
@@ -15357,7 +15463,7 @@ webpackJsonp([34], {
                     value: "spam type"
                 }
             },
-            L = {
+            F = {
                 info: {
                     getLabel: function() {
                         return Object(l.d)("Thank you for your report and your concern. We will reach out to the person you reported with resources they can use to seek help.", "ReportModalWizard")
@@ -15367,7 +15473,7 @@ webpackJsonp([34], {
                     value: "selfharm end"
                 }
             },
-            j = {
+            P = {
                 type: {
                     items: [C.report_hate_speech, C.report_harassment, C.report_abusive_violence],
                     getLabel: function() {
@@ -15399,7 +15505,7 @@ webpackJsonp([34], {
                     value: "violence end"
                 }
             },
-            A = {
+            U = {
                 type: {
                     getLabel: function() {
                         return Object(l.d)("What's wrong with this content?", "ReportModalWizard")
@@ -15409,7 +15515,7 @@ webpackJsonp([34], {
                     value: "inappropriate content type"
                 }
             },
-            F = {
+            B = {
                 type: {
                     getLabel: function() {
                         return Object(l.d)("What kind of ban are they evading?", "ReportModalWizard")
@@ -15419,7 +15525,7 @@ webpackJsonp([34], {
                     type: y.MultipleChoice
                 }
             },
-            P = {
+            V = {
                 type: {
                     getLabel: function() {
                         return Object(l.d)("Who is being impersonated?", "ReportModalWizard")
@@ -15429,7 +15535,7 @@ webpackJsonp([34], {
                     value: "impersonation type"
                 }
             },
-            U = {
+            W = {
                 getTitle: function() {
                     return Object(l.d)("Thank you for your concern.", "ReportModalWizard")
                 },
@@ -15440,146 +15546,76 @@ webpackJsonp([34], {
                 type: y.Info,
                 value: "ip end"
             },
-            B = w,
-            V = D,
-            W = T,
-            H = {
-                video: R.video,
-                whisper: R.messaging,
-                profile: R.profile,
-                chat: R.messaging,
-                other: R.profile,
-                general_messaging: M.messaging,
-                general_profile: M.profile,
-                general_video: M.video,
-                abusive: j.type,
-                "ban evasion": F.type,
-                "inappropriate content": A.type,
-                impersonation: P.type,
-                spam: x.type,
-                rude: I,
-                "dont like": I,
-                violence: j.violence,
-                harassment: j.harassment,
-                "intellectual property": U
+            H = T,
+            G = I,
+            q = M,
+            z = {
+                video: L.video,
+                whisper: L.messaging,
+                profile: L.profile,
+                chat: L.messaging,
+                other: L.profile,
+                general_messaging: j.messaging,
+                general_profile: j.profile,
+                general_video: j.video,
+                abusive: P.type,
+                "ban evasion": B.type,
+                "inappropriate content": U.type,
+                impersonation: V.type,
+                spam: A.type,
+                rude: x,
+                "dont like": x,
+                violence: P.violence,
+                harassment: P.harassment,
+                "intellectual property": W,
+                selfharm: R
             },
-            G = {
-                impersonation: I,
-                selfharm: L.info,
-                spam: I,
-                harm: j.violence_end,
-                other: W
+            $ = {
+                impersonation: x,
+                selfharm: F.info,
+                spam: x,
+                harm: P.violence_end,
+                other: q
             },
-            q = {
-                CHANNEL_FEED_POST_REPORT: R.profile,
-                COMMUNITY_REPORT: R.profile,
-                CHAT_REPORT: R.messaging,
-                CLIP_REPORT: R.video,
-                EVENT_REPORT: R.profile,
-                EXTENSION_REPORT: R.profile,
-                LIVE_UP_REPORT: R.profile,
-                VOD_COMMENT_REPORT: R.messaging
+            Q = {
+                CHANNEL_FEED_POST_REPORT: L.profile,
+                COMMUNITY_REPORT: L.profile,
+                CHAT_REPORT: L.messaging,
+                CLIP_REPORT: L.video,
+                EVENT_REPORT: L.profile,
+                EXTENSION_REPORT: L.profile,
+                LIVE_UP_REPORT: L.profile,
+                VOD_COMMENT_REPORT: L.messaging
             },
-            z = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onChange = function(e) {
-                        t.props.onChangeText(e.target.value)
-                    }, t.onSelect = function(e) {
-                        if (t.props.currentCard.items && e.currentTarget.parentElement) {
-                            var n = Number(e.currentTarget.parentElement.getAttribute("data-a-index")),
-                                i = t.props.currentCard.items[n];
-                            t.props.onChangeRadio(i)
-                        }
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(f._6, {
-                        className: "reporting-wizard-card"
-                    }, r.createElement(f.U, {
-                        label: this.props.currentCard.getLabel ? this.props.currentCard.getLabel() : ""
-                    }, this.renderCardItems()))
-                }, t.prototype.renderCardItems = function() {
-                    var e = this,
-                        t = this.props.currentCard,
-                        n = [];
-                    return t.items && t.type !== y.Confirm && (n = t.items.map(function(t, n) {
-                        switch (t.type) {
-                            case i.Text:
-                                return r.createElement(f._6, {
-                                    key: n,
-                                    padding: {
-                                        y: 1
-                                    }
-                                }, t.getTitle());
-                            case i.Link:
-                                return r.createElement(f.M, {
-                                    key: n,
-                                    to: t.value,
-                                    targetBlank: !0
-                                }, t.getTitle());
-                            case i.MultipleChoice:
-                            default:
-                                return r.createElement(f._6, {
-                                    key: n,
-                                    padding: {
-                                        y: .5
-                                    }
-                                }, r.createElement(f._18, {
-                                    checked: !!e.props.currentSelection && e.props.currentSelection.value === t.value,
-                                    onChange: e.onSelect,
-                                    label: t.getTitle(),
-                                    "data-a-index": n,
-                                    name: "card",
-                                    value: t.value
-                                }))
-                        }
-                    })), t.type === y.Confirm && n.push(r.createElement(f._6, {
-                        key: "tellusmore_prompt"
-                    }, r.createElement(f._6, {
-                        padding: {
-                            bottom: 1
-                        }
-                    }, Object(l.d)("Could you tell us more? You may include links to videos, clips, screenshots, or content outside Twitch", "ReportModalWizard")), r.createElement(f._40, {
-                        key: "tellusmore_textarea",
-                        onChange: this.onChange,
-                        rows: 6,
-                        autoFocus: !0,
-                        "data-test-selector": "report-wizard-textarea",
-                        error: this.props.error
-                    }))), n
-                }, t
-            }(r.Component),
-            $ = n("LjAQ"),
-            Q = "report-wizard-back",
-            K = "report-wizard-close",
-            J = "report-wizard-next",
-            Y = "report-wizard-submit",
-            X = function(e) {
+            K = "report-wizard-back",
+            J = "report-wizard-close",
+            Y = "report-wizard-next",
+            X = "report-wizard-submit",
+            Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        currentCard: t.props.currentCard || q[t.props.reportContentType] || B,
+                        currentCard: t.props.currentCard || Q[t.props.reportContentType] || H,
                         prevCards: [],
                         currentSelection: null,
                         prevSelections: [],
                         displacedSelections: [],
-                        reportDescription: "",
+                        userTextInput: {},
                         error: "",
                         reportReason: t.props.reportReason || "",
                         modalCloseTracked: !1
                     }, t.renderButtons = function() {
                         var e = Object(l.d)("Close", "ReportModalWizard"),
                             n = t.handleClose,
-                            i = K,
+                            i = J,
                             a = !1,
                             o = t.state.prevCards.length ? t.renderBack() : null;
                         switch (t.state.currentCard.type) {
                             case y.MultipleChoice:
-                                e = Object(l.d)("Next", "ReportModalWizard"), n = t.handleNext, i = J, a = !t.state.currentSelection;
+                                e = Object(l.d)("Next", "ReportModalWizard"), n = t.handleNext, i = Y, a = !t.state.currentSelection;
                                 break;
                             case y.Confirm:
-                                e = Object(l.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, a = !t.state.reportDescription, i = Y
+                                e = Object(l.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, a = !t.state.userTextInput, i = X
                         }
                         return r.createElement(f._6, null, o, r.createElement(f.u, {
                             onClick: n,
@@ -15599,7 +15635,7 @@ webpackJsonp([34], {
                         }, r.createElement(f.u, {
                             type: f.A.Hollow,
                             onClick: t.handleBack,
-                            "data-test-selector": Q
+                            "data-test-selector": K
                         }, r.createElement(f._6, {
                             padding: {
                                 x: 2
@@ -15609,7 +15645,7 @@ webpackJsonp([34], {
                         t.setState({
                             modalCloseTracked: !0
                         }, function() {
-                            return t.props.trackClose(N.Finish, t.state.currentCard.value)
+                            return t.props.trackClose(w.Finish, t.state.currentCard.value)
                         }), t.props.onClose()
                     }, t.handleNext = function() {
                         if (t.state.currentSelection && t.state.currentSelection.value) {
@@ -15617,8 +15653,8 @@ webpackJsonp([34], {
                                 n = t.state.prevCards.concat(e),
                                 i = t.state.prevSelections.concat(t.state.currentSelection),
                                 a = t.state.displacedSelections[t.state.displacedSelections.length - 1],
-                                r = V;
-                            H[t.state.currentSelection.value] && (r = H[t.state.currentSelection.value]);
+                                r = G;
+                            z[t.state.currentSelection.value] && (r = z[t.state.currentSelection.value]);
                             var o = t.state.currentSelection.reportReason || t.state.reportReason,
                                 s = r.type === y.Info;
                             t.setState({
@@ -15629,7 +15665,7 @@ webpackJsonp([34], {
                                 currentSelection: a || null,
                                 displacedSelections: t.state.displacedSelections.slice(0, -1)
                             }, function() {
-                                return t.trackNavigation(E.Next, e.value)
+                                return t.trackNavigation(O.Next, e.value)
                             })
                         }
                     }, t.createReportDescription = function() {
@@ -15637,35 +15673,44 @@ webpackJsonp([34], {
                             if (!e.omitFromDescription) return t.state.prevCards[n].value + ": " + e.value
                         }).filter(function(e) {
                             return !!e
-                        }).join("\n") + "\n\n" + t.state.reportDescription
+                        }).join("\n") + "\n\n" + Object.keys(t.state.userTextInput).map(function(e) {
+                            return e + ": " + t.state.userTextInput[e]
+                        }).join("\n")
+                    }, t.requiredInputsNonEmpty = function() {
+                        if (t.state.currentCard.items) return 0 === t.state.currentCard.items.filter(function(e) {
+                            if (e.type !== i.Textarea || !e.required) return !1;
+                            var n = t.state.userTextInput[e.value],
+                                a = n && 0 === n.trim().length;
+                            return !n || a
+                        }).length
                     }, t.handleSubmit = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, i = this;
+                            var e, t, n, i, r = this;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return this.state.reportDescription.trim().length > 0 ? (e = this.state.reportReason || "other", t = this.createReportDescription(), [4, this.props.onSubmit(e, t, null, null)]) : [3, 2];
+                                        return e = Object(l.d)("Please fill out required fields.", "ReportModalWizard"), this.requiredInputsNonEmpty() ? (t = this.state.reportReason || "other", n = this.createReportDescription(), [4, this.props.onSubmit(t, n, null, null)]) : [3, 2];
                                     case 1:
                                         switch (a.sent(), this.props.submitStatus) {
-                                            case $.b.FormError:
+                                            case E.b.FormError:
                                                 this.setState({
-                                                    error: Object(l.d)("Description is required.", "ReportModalWizard")
+                                                    error: e
                                                 });
                                                 break;
-                                            case $.b.Success:
-                                                n = W, G[e] && (n = G[e]), this.setState({
-                                                    currentCard: n,
+                                            case E.b.Success:
+                                                i = q, $[t] && (i = $[t]), this.setState({
+                                                    currentCard: i,
                                                     prevCards: [],
                                                     prevSelections: [],
                                                     currentSelection: null,
                                                     displacedSelections: [],
-                                                    reportDescription: "",
+                                                    userTextInput: {},
                                                     error: ""
                                                 }, function() {
-                                                    return i.trackNavigation(E.Submit)
+                                                    return r.trackNavigation(O.Submit)
                                                 });
                                                 break;
-                                            case $.b.MutationError:
+                                            case E.b.MutationError:
                                             default:
                                                 this.setState({
                                                     error: Object(l.d)("Sorry, a network error occurred when submitting your report. Please try again later.", "ReportModalWizard")
@@ -15673,8 +15718,8 @@ webpackJsonp([34], {
                                         }
                                         return [3, 3];
                                     case 2:
-                                        this.props.onError($.b.FormError), this.setState({
-                                            error: Object(l.d)("Description cannot be empty.", "ReportModalWizard")
+                                        this.props.onError(E.b.FormError), this.setState({
+                                            error: e
                                         }), a.label = 3;
                                     case 3:
                                         return [2]
@@ -15693,26 +15738,27 @@ webpackJsonp([34], {
                                     prevSelections: this.state.prevSelections.slice(0, -1),
                                     error: ""
                                 }, function() {
-                                    return r.trackNavigation(E.Back, e.value)
+                                    return r.trackNavigation(O.Back, e.value)
                                 }), [2]
                             })
                         })
-                    }, t.handleTextInput = function(e) {
-                        t.setState({
-                            reportDescription: e
+                    }, t.handleTextInput = function(e, n) {
+                        var i = t.state.userTextInput;
+                        i[e] = n, t.setState({
+                            userTextInput: i
                         })
                     }, t.handleSelection = function(e) {
                         t.state.currentCard.items && e !== t.state.currentSelection && t.setState({
                             currentSelection: e,
                             displacedSelections: [],
-                            reportDescription: ""
+                            userTextInput: {}
                         })
                     }, t.trackNavigation = function(e, n) {
                         t.props.trackAction(e, n, t.state.currentCard.value)
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                    this.state.modalCloseTracked || this.props.trackClose(N.Close, this.state.currentCard.value)
+                    this.state.modalCloseTracked || this.props.trackClose(w.Close, this.state.currentCard.value)
                 }, t.prototype.render = function() {
                     var e = this.state.currentCard.type === y.Info && this.state.currentCard.blockPrompt ? r.createElement(k, {
                             targetUserID: this.props.targetUserID,
@@ -15741,44 +15787,44 @@ webpackJsonp([34], {
                         type: f._43.H4
                     }, this.state.currentCard.getTitle ? this.state.currentCard.getTitle() : this.props.title), r.createElement(f._6, {
                         margin: {
-                            top: 1,
-                            bottom: 2
+                            y: 1
                         }
-                    }, r.createElement(z, {
+                    }, r.createElement(S, {
                         currentCard: this.state.currentCard,
                         currentSelection: this.state.currentSelection,
                         targetUserID: this.props.targetUserID,
                         onChangeRadio: this.handleSelection,
                         onChangeText: this.handleTextInput,
-                        error: this.props.submitStatus === $.b.FormError
+                        userTextInputs: this.state.userTextInput,
+                        error: this.props.submitStatus === E.b.FormError && !!this.state.error
                     }), e), this.renderButtons())
                 }, t
             }(r.Component),
-            Z = n("mw/a"),
-            ee = n("xwpJ"),
-            te = n("mmQh"),
-            ne = n("mRH2");
+            ee = n("mw/a"),
+            te = n("xwpJ"),
+            ne = n("mmQh"),
+            ie = n("mRH2");
         n.d(t, "c", function() {
-                return E
+                return O
             }), n.d(t, "a", function() {
-                return N
+                return w
             }), n.d(t, "b", function() {
-                return ae
+                return re
             }),
             function(e) {
                 e.Close = "close", e.Open = "open", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-            }(S || (S = {})),
+            }(N || (N = {})),
             function(e) {
                 e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-            }(E || (E = {})),
+            }(O || (O = {})),
             function(e) {
                 e.Close = "close", e.Finish = "finish"
-            }(N || (N = {}));
-        var ie = function(e) {
+            }(w || (w = {}));
+        var ae = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
-                    submitStatus: $.b.Unsubmitted,
+                    submitStatus: E.b.Unsubmitted,
                     showWizard: !1,
                     openEventSent: !1,
                     closeEventSent: !1
@@ -15788,7 +15834,7 @@ webpackJsonp([34], {
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    if (e !== $.a) return [3, 5];
+                                    if (e !== E.a) return [3, 5];
                                     o = {
                                         userID: this.props.reportContext.targetUserID,
                                         communityID: i || "",
@@ -15806,13 +15852,13 @@ webpackJsonp([34], {
                                         action: "report",
                                         reason: e
                                     }), this.setState({
-                                        submitStatus: $.b.Success
+                                        submitStatus: E.b.Success
                                     }, function() {
-                                        d.state.showWizard || d.trackAction(S.Submit)
+                                        d.state.showWizard || d.trackAction(N.Submit)
                                     }), [3, 4];
                                 case 3:
                                     return t = a.sent(), l.j.error(t, "ReportUserInCommunity Mutation failed."), this.setState({
-                                        submitStatus: $.b.MutationError
+                                        submitStatus: E.b.MutationError
                                     }), [3, 4];
                                 case 4:
                                     return [3, 9];
@@ -15824,24 +15870,24 @@ webpackJsonp([34], {
                                         contentID: this.props.reportContext.contentID,
                                         extra: this.props.reportContext.extra,
                                         targetID: this.props.reportContext.targetUserID
-                                    }, this.props.reportContext.contentType === Z.a.Community && this.props.reportContext.extra && (o.description = Object(ee.a)(this.props.reportContext.extra, n)), a.label = 6;
+                                    }, this.props.reportContext.contentType === ee.a.Community && this.props.reportContext.extra && (o.description = Object(te.a)(this.props.reportContext.extra, n)), a.label = 6;
                                 case 6:
                                     return a.trys.push([6, 8, , 9]), [4, this.props.reportUser(Object(m.a)(o))];
                                 case 7:
-                                    return a.sent(), this.props.reportContext.contentType === Z.a.Community && l.o.tracking.track(h.SpadeEventType.CommunityReport, {
+                                    return a.sent(), this.props.reportContext.contentType === ee.a.Community && l.o.tracking.track(h.SpadeEventType.CommunityReport, {
                                         community_id: this.props.reportContext.contentID,
                                         name: this.props.reportContext.extra,
                                         is_official: !1,
                                         user_id: this.props.sessionUser && this.props.sessionUser.id,
                                         reason: e
                                     }), this.setState({
-                                        submitStatus: $.b.Success
+                                        submitStatus: E.b.Success
                                     }, function() {
-                                        d.state.showWizard || d.trackAction(S.Submit)
+                                        d.state.showWizard || d.trackAction(N.Submit)
                                     }), [3, 9];
                                 case 8:
                                     return s = a.sent(), l.j.error(s, "ReportUser Mutation failed."), this.setState({
-                                        submitStatus: $.b.MutationError
+                                        submitStatus: E.b.MutationError
                                     }), [3, 9];
                                 case 9:
                                     return [2]
@@ -15863,18 +15909,18 @@ webpackJsonp([34], {
                         __typename: "User"
                     }))
                 }, t.trackOpen = function(e) {
-                    t.state.openEventSent || (t.state.showWizard ? t.trackWizardAction(E.Open, void 0, e) : t.trackAction(S.Open), t.setState({
+                    t.state.openEventSent || (t.state.showWizard ? t.trackWizardAction(O.Open, void 0, e) : t.trackAction(N.Open), t.setState({
                         openEventSent: !0
                     }))
                 }, t.trackClose = function(e, n) {
-                    t.state.closeEventSent || (t.state.showWizard ? t.trackWizardAction(E.Close, n, void 0, e) : t.trackAction(S.Close), t.setState({
+                    t.state.closeEventSent || (t.state.showWizard ? t.trackWizardAction(O.Close, n, void 0, e) : t.trackAction(N.Close), t.setState({
                         closeEventSent: !0
                     }))
                 }, t.trackWizardAction = function(e, n, i, a) {
                     l.o.tracking.track(h.SpadeEventType.ReportWizardFlowAction, {
                         ui_context: t.props.reportContext.contentType,
                         target_user_id: t.props.reportContext.targetUserID,
-                        report_sent: t.state.submitStatus === $.b.Success,
+                        report_sent: t.state.submitStatus === E.b.Success,
                         modal_type: "wizard_v1",
                         extra_user_id: t.props.reportContext.additionalTrackingID,
                         action: e,
@@ -15887,7 +15933,7 @@ webpackJsonp([34], {
                     l.o.tracking.track(h.SpadeEventType.ReportFlowAction, {
                         ui_context: t.props.reportContext.contentType,
                         target_user_id: t.props.reportContext.targetUserID,
-                        report_sent: t.state.submitStatus === $.b.Success,
+                        report_sent: t.state.submitStatus === E.b.Success,
                         extra_user_id: t.props.reportContext.additionalTrackingID,
                         action: e,
                         report_session_id: t.reportID
@@ -15927,7 +15973,7 @@ webpackJsonp([34], {
                 };
                 switch (this.state.showWizard) {
                     case !0:
-                        return r.createElement(X, a.__assign({}, e, {
+                        return r.createElement(Z, a.__assign({}, e, {
                             user: this.props.sessionUser,
                             onBlock: this.onBlock,
                             onUnblock: this.onUnblock,
@@ -15936,19 +15982,19 @@ webpackJsonp([34], {
                         }));
                     case !1:
                     default:
-                        return r.createElement($.c, a.__assign({}, e))
+                        return r.createElement(E.c, a.__assign({}, e))
                 }
             }, t
         }(r.Component);
-        var ae = Object(s.d)(Object(d.a)(te, {
+        var re = Object(s.d)(Object(d.a)(ne, {
             name: "reportUserInCommunity"
-        }), Object(d.a)(ne, {
+        }), Object(d.a)(ie, {
             name: "reportUser"
         }), Object(g.d)("ReportUser"), Object(c.a)(), Object(u.a)(), Object(o.b)(function(e) {
             return {
                 sessionUser: e.session.user
             }
-        }, null))(ie)
+        }, null))(ae)
     },
     ACWz: function(e, t) {
         var n = {
@@ -17332,7 +17378,7 @@ webpackJsonp([34], {
                     }))
                 }, t.prototype.subscribe = function(e) {
                     this.unsubscribe = l.o.pubsub.subscribe({
-                        topic: Object(c.n)(e),
+                        topic: Object(c.o)(e),
                         onMessage: this.handlePubsubMessage
                     })
                 }, t.prototype.renderCTAButton = function() {
@@ -19739,55 +19785,57 @@ webpackJsonp([34], {
     },
     HZww: function(e, t, n) {
         "use strict";
-        t.d = function(e) {
-            return a.PubsubTopic.ChatRoom + "." + e
+        t.c = function(e) {
+            return a.PubsubTopic.BroadcastSettingsUpdate + "." + e
         }, t.e = function(e) {
-            return a.PubsubTopic.ChatRoomsChannel + "." + e
+            return a.PubsubTopic.ChatRoom + "." + e
         }, t.f = function(e) {
-            return a.PubsubTopic.ChatRoomsUser + "." + e
-        }, t.y = function(e) {
-            return a.PubsubTopic.VideoThumbnailProcessing + "." + e
-        }, t.i = function(e) {
-            return a.PubsubTopic.ImageUpload + "." + e
-        }, t.r = function(e) {
-            return a.PubsubTopic.UploadService + "." + e
-        }, t.x = function(e) {
-            return a.PubsubTopic.VideoPlaybackById + "." + e
-        }, t.l = function(e) {
-            return a.PubsubTopic.PayoutOnboardingEvents + "." + e
-        }, t.m = function(e) {
-            return a.PubsubTopic.Presence + "." + e
-        }, t.j = function(e, t) {
-            return a.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
-        }, t.n = function(e) {
-            return a.PubsubTopic.Raid + "." + e
+            return a.PubsubTopic.ChatRoomsChannel + "." + e
         }, t.g = function(e) {
+            return a.PubsubTopic.ChatRoomsUser + "." + e
+        }, t.z = function(e) {
+            return a.PubsubTopic.VideoThumbnailProcessing + "." + e
+        }, t.j = function(e) {
+            return a.PubsubTopic.ImageUpload + "." + e
+        }, t.s = function(e) {
+            return a.PubsubTopic.UploadService + "." + e
+        }, t.y = function(e) {
+            return a.PubsubTopic.VideoPlaybackById + "." + e
+        }, t.m = function(e) {
+            return a.PubsubTopic.PayoutOnboardingEvents + "." + e
+        }, t.n = function(e) {
+            return a.PubsubTopic.Presence + "." + e
+        }, t.k = function(e, t) {
+            return a.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
+        }, t.o = function(e) {
+            return a.PubsubTopic.Raid + "." + e
+        }, t.h = function(e) {
             return a.PubsubTopic.Friendship + "." + e
         }, t.b = function(e) {
             return a.PubsubTopic.ChannelBitsPinEvents + "." + e
         }, t.a = function(e) {
             return a.PubsubTopic.BitsLeaderboardEvents + "." + e.id
-        }, t.s = function(e) {
-            return a.PubsubTopic.UserBitsUpdates + "." + e
-        }, t.w = function(e) {
-            return a.PubsubTopic.UserSubscribeEvents + "." + e
-        }, t.v = function(e) {
-            return a.PubsubTopic.UserCrateEvents + "." + e
-        }, t.h = function(e) {
-            return a.PubsubTopic.CampaignGlobalEvents + "." + e
         }, t.t = function(e) {
-            return a.PubsubTopic.CampaignUserEvents + "." + e
+            return a.PubsubTopic.UserBitsUpdates + "." + e
+        }, t.x = function(e) {
+            return a.PubsubTopic.UserSubscribeEvents + "." + e
+        }, t.w = function(e) {
+            return a.PubsubTopic.UserCrateEvents + "." + e
+        }, t.i = function(e) {
+            return a.PubsubTopic.CampaignGlobalEvents + "." + e
         }, t.u = function(e) {
+            return a.PubsubTopic.CampaignUserEvents + "." + e
+        }, t.v = function(e) {
             return a.PubsubTopic.UserCommerceEvents + "." + e
-        }, t.z = function(e) {
+        }, t.A = function(e) {
             return a.PubsubTopic.Whispers + "." + e
-        }, t.k = function(e) {
+        }, t.l = function(e) {
             return a.PubsubTopic.OnsiteNotifications + "." + e
-        }, t.o = function(e) {
+        }, t.p = function(e) {
             return a.PubsubTopic.StreamChatRoom + "." + e
-        }, t.c = function(e) {
+        }, t.d = function(e) {
             return a.PubsubTopic.ChannelEventUpdates + "." + e
-        }, t.q = function(e) {
+        }, t.r = function(e) {
             return i.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -19798,7 +19846,7 @@ webpackJsonp([34], {
                     })
                 }
             })
-        }, t.p = function(e) {
+        }, t.q = function(e) {
             return i.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -28029,7 +28077,7 @@ webpackJsonp([34], {
                     }, o.prototype.render = function() {
                         return a.createElement(t, i.__assign({}, this.props))
                     }, o.prototype.subscribe = function(e) {
-                        this.unsubscriber = Object(r.q)({
+                        this.unsubscriber = Object(r.r)({
                             query: e.query,
                             variables: e.variables,
                             topic: e.topic,
@@ -33646,7 +33694,7 @@ webpackJsonp([34], {
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(m.s)(e.userID),
+                    topic: Object(m.t)(e.userID),
                     type: c.PubsubMessageType.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
@@ -40584,7 +40632,7 @@ webpackJsonp([34], {
                 return !e.channelID
             },
             topic: function(e) {
-                return e.channelID ? Object(c.o)(e.channelID) : ""
+                return e.channelID ? Object(c.p)(e.channelID) : ""
             },
             mapMessageTypesToProps: (C = {}, C[d.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", C)
         }]))(_);
@@ -44224,7 +44272,7 @@ webpackJsonp([34], {
                     variables: {
                         id: t.channelID
                     },
-                    topic: Object(p.o)(t.channelID),
+                    topic: Object(p.p)(t.channelID),
                     type: u.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(n, i) {
                         return n.data.is_rituals_enabled ? e(function() {
@@ -44235,7 +44283,7 @@ webpackJsonp([34], {
                 }
             }), Object(d.a)([{
                 topic: function(e) {
-                    return Object(p.x)(e.channelID)
+                    return Object(p.y)(e.channelID)
                 },
                 mapMessageTypesToProps: (T = {}, T[u.PubsubMessageType.ChannelStreamUp] = "streamUp", T[u.PubsubMessageType.ChannelStreamDown] = "streamDown", T),
                 skip: D
@@ -46687,4 +46735,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-2eb2bf7325737a1d50e7bf1fd14d0d8b.js.map
+//# sourceMappingURL=pages.popout-chat-0223bdbe65d004d990e9681b55090310.js.map

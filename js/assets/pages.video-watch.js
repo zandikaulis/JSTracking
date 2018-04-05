@@ -1,4 +1,4 @@
-webpackJsonp([37, 84], {
+webpackJsonp([38, 83], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -368,18 +368,20 @@ webpackJsonp([37, 84], {
             return i.j
         }), n.d(t, "VIDEO_STATUS_RECORDED", function() {
             return i.k
-        }), n.d(t, "VIDEO_STATUS_TRANSCODING", function() {
+        }), n.d(t, "VIDEO_STATUS_RECORDING", function() {
             return i.l
-        }), n.d(t, "VIDEO_STATUS_UPLOADING", function() {
+        }), n.d(t, "VIDEO_STATUS_TRANSCODING", function() {
             return i.m
-        }), n.d(t, "VideoPremiereStatus", function() {
+        }), n.d(t, "VIDEO_STATUS_UPLOADING", function() {
             return i.n
-        }), n.d(t, "VideoScope", function() {
+        }), n.d(t, "VideoPremiereStatus", function() {
             return i.o
-        }), n.d(t, "availableVideoStatuses", function() {
+        }), n.d(t, "VideoScope", function() {
             return i.p
-        }), n.d(t, "pendingVideoStatuses", function() {
+        }), n.d(t, "availableVideoStatuses", function() {
             return i.q
+        }), n.d(t, "pendingVideoStatuses", function() {
+            return i.r
         });
         n("NfL5");
         var r = n("Rv0e");
@@ -1208,30 +1210,32 @@ webpackJsonp([37, 84], {
             return a
         }), n.d(t, "d", function() {
             return o
-        }), n.d(t, "o", function() {
+        }), n.d(t, "p", function() {
             return r
-        }), n.d(t, "m", function() {
+        }), n.d(t, "n", function() {
             return c
         }), n.d(t, "j", function() {
             return d
-        }), n.d(t, "l", function() {
+        }), n.d(t, "m", function() {
             return u
         }), n.d(t, "i", function() {
             return m
         }), n.d(t, "k", function() {
             return p
-        }), n.d(t, "p", function() {
+        }), n.d(t, "l", function() {
             return h
         }), n.d(t, "q", function() {
             return f
-        }), n.d(t, "g", function() {
+        }), n.d(t, "r", function() {
             return g
-        }), n.d(t, "f", function() {
+        }), n.d(t, "g", function() {
             return v
-        }), n.d(t, "h", function() {
+        }), n.d(t, "f", function() {
             return b
-        }), n.d(t, "n", function() {
+        }), n.d(t, "h", function() {
             return k
+        }), n.d(t, "o", function() {
+            return y
         }), n.d(t, "b", function() {
             return s
         }), n.d(t, "c", function() {
@@ -1251,12 +1255,13 @@ webpackJsonp([37, 84], {
             u = "transcoding",
             m = "failed",
             p = "recorded",
-            h = [p, "recording"],
-            f = [u, d, m],
-            g = "FORMAT_NOT_SUPPORTED",
-            v = "BAD_ASSET",
-            b = "INTERNAL_ERROR",
-            k = {
+            h = "recording",
+            f = [p, h],
+            g = [u, d, m],
+            v = "FORMAT_NOT_SUPPORTED",
+            b = "BAD_ASSET",
+            k = "INTERNAL_ERROR",
+            y = {
                 VIDEO_PREMIERE_STATUS_UNSCHEDULED: "unscheduled",
                 VIDEO_PREMIERE_STATUS_SCHEDULED: "scheduled",
                 VIDEO_PREMIERE_STATUS_STARTED: "started",
@@ -10304,7 +10309,7 @@ webpackJsonp([37, 84], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = c.k.subscribe({
-                                                    topic: Object(p.i)(this.props.userID),
+                                                    topic: Object(p.j)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(g.c)(n, o.currentImage)
@@ -19635,7 +19640,7 @@ webpackJsonp([37, 84], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = d.k.subscribe({
-                                            topic: Object(f.i)(this.props.userID),
+                                            topic: Object(f.j)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(y.c)(n, a.currentImage)
@@ -20418,4 +20423,4 @@ webpackJsonp([37, 84], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-84f929fdd3c2e45d315b78e8f5703993.js.map
+//# sourceMappingURL=pages.video-watch-e81e3f2e55aa2b16471652e1f5e0ccff.js.map
