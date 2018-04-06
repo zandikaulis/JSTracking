@@ -407,16 +407,16 @@ window.SiteOptions = {
         },
         "1233e3a4-d72f-48e5-b4b4-67856afdd7d5": {
             "name": "ios_end_of_clips",
-            "v": 3457,
+            "v": 3467,
             "t": 1,
             "groups": [{
-                "weight": 33,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 33,
+                "weight": 0,
                 "value": "no_autoplay"
             }, {
-                "weight": 34,
+                "weight": 0,
                 "value": "autoplay"
             }]
         },
@@ -3217,6 +3217,21 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "control"
+            }]
+        },
+        "8e15c9aa-bddc-4791-9a90-3df842c82f05": {
+            "name": "ios_end_of_clips_v6.1",
+            "v": 3468,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "autoplay"
+            }, {
+                "weight": 0,
+                "value": "no_autoplay"
             }]
         },
         "8f5277f3-7583-4fd9-ab09-e5a5c432b12b": {
