@@ -2542,11 +2542,11 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 3471,
+            "v": 3475,
             "t": 1,
             "s": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 40,
                 "value": "control"
             }, {
                 "weight": 10,
@@ -2560,6 +2560,9 @@ window.SiteOptions = {
             }, {
                 "weight": 10,
                 "value": "open_asia"
+            }, {
+                "weight": 10,
+                "value": "cf_or_metro"
             }]
         },
         "6a587617-eb7c-475e-8bc3-991d4f38fc87": {
