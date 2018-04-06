@@ -1470,7 +1470,7 @@ webpackJsonp([47], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: a._54.Above
+                        zIndex: a._55.Above
                     }, r.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
@@ -5378,7 +5378,9 @@ webpackJsonp([47], {
                         inputColor: e.data.currentUser.chatColor
                     })
                 }, t.prototype.render = function() {
-                    return !this.props.data.currentUser || this.props.data.networkStatus < 3 ? null : l.createElement(N._6, {
+                    if (!this.props.data.currentUser || this.props.data.networkStatus < 3) return null;
+                    var e = Object(d.d)("Hex Color Code", "ChatColorPicker");
+                    return l.createElement(N._6, {
                         margin: {
                             bottom: 1
                         }
@@ -5394,24 +5396,28 @@ webpackJsonp([47], {
                     }, l.createElement(Yt, {
                         color: this.state.selectedColor,
                         onChange: this.onChangeColor
-                    }), this.renderPreview(Object(d.d)("Light Mode", "ChatColorPicker"), "light-mode-preview", N.J.Base, this.props.data.currentUser), this.renderPreview(Object(d.d)("Dark Mode", "ChatColorPicker"), "dark-mode-preview", N.J.OverlayAlt, this.props.data.currentUser)), l.createElement(N._6, {
+                    }), this.renderPreview(Object(d.d)("Light Mode", "ChatColorPicker"), "light-mode-preview", N.J.Base, this.props.data.currentUser), this.renderPreview(Object(d.d)("Dark Mode", "ChatColorPicker"), "dark-mode-preview", N.J.OverlayAlt, this.props.data.currentUser)), l.createElement(N.U, {
+                        id: "chat-color-picker__color-code-input",
+                        label: e
+                    }, l.createElement(N._6, {
                         padding: {
-                            bottom: 2
+                            bottom: 1
                         },
                         className: "color-picker-input",
                         display: N.P.Flex,
-                        alignItems: N.c.Baseline
+                        alignItems: N.c.Center
                     }, l.createElement(N._2, {
+                        id: "chat-color-picker__color-code-input",
                         type: N._3.Text,
                         value: this.state.inputColor,
                         onChange: this.onChangeInput,
                         onBlur: this.onBlurInput,
                         maxLength: 7
                     }), l.createElement(N._6, {
-                        margin: {
-                            left: 2
+                        padding: {
+                            left: 1
                         }
-                    }, this.renderStatus())), this.renderSaveButton())
+                    }, this.renderSaveButton())), this.renderStatus()))
                 }, t.prototype.renderStatus = function() {
                     return this.state.status === sn.SaveError ? l.createElement(N.O, {
                         color: N.J.Error,
@@ -11310,4 +11316,4 @@ webpackJsonp([47], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-4ec0579a60ff1b8f6799aa408c031b94.js.map
+//# sourceMappingURL=pages.settings-1fe867ea4b415cbf84825447a4b487a4.js.map

@@ -573,10 +573,6 @@ MediaPlayer.prototype.getNetworkProfile = function () {
     return this._stats.networkProfile;
 }
 
-MediaPlayer.prototype.getABSStats = function () {
-    return this._state.absStats;
-}
-
 // private helpers
 
 MediaPlayer.prototype._attemptPlay = function () {

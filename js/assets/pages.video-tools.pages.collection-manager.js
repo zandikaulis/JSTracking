@@ -1349,4 +1349,4 @@ webpackJsonp([80], {
         })(k)
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-973070957ab08cb20e8aafe1b3c2c137.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-6c448b172b20344a8496f38d16e26e7e.js.map

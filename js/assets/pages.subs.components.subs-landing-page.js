@@ -610,7 +610,7 @@ webpackJsonp([81], {
                         fullWidth: !0
                     }, a.createElement(w._0, {
                         fullWidth: !0,
-                        zIndex: w._54.Above,
+                        zIndex: w._55.Above,
                         position: w._13.Relative
                     }, a.createElement("div", {
                         className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
@@ -984,4 +984,4 @@ webpackJsonp([81], {
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-6ff7ee56577fb9920563b8d8d034d1b8.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-1f1300fb58819e0059252beb765d9800.js.map

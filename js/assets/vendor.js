@@ -13202,9 +13202,6 @@ webpackJsonp([69], {
             })
         };
         t.getExtensionsForChannel = function(e) {
-            if (function(e) {
-                    return ["124420521", "124421740", "124422593", "124424929", "59980349", "21681549"].indexOf(e) >= 0
-                }(e)) return Promise.reject("Channel id is in the large event blacklist.");
             var t = o.api.newRequest("/v5/channels/" + e + "/extensions", {
                 method: "GET"
             });
@@ -35270,4 +35267,4 @@ webpackJsonp([69], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-bec79be9c725fdc19ccaf46dbd30d2f0.js.map
+//# sourceMappingURL=vendor-97267aba3fd4c42e0b7ed5c97ce2df38.js.map

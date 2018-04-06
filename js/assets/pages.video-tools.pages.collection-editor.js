@@ -2988,4 +2988,4 @@ webpackJsonp([79], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-b346fdb96a0f681c074635dd609990e8.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-3ca413bfa720730294af19b2cd5db8a5.js.map

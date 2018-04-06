@@ -1,4 +1,4 @@
-webpackJsonp([36], {
+webpackJsonp([37], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -1623,7 +1623,7 @@ webpackJsonp([36], {
                             display: c.P.InlineFlex,
                             justifyContent: c._5.Center,
                             position: c._13.Absolute,
-                            zIndex: c._54.Above
+                            zIndex: c._55.Above
                         }, a.createElement(c._19, {
                             asset: c._20.Lock,
                             height: 10,
@@ -2738,7 +2738,7 @@ webpackJsonp([36], {
                         className: "blue-bar",
                         position: m._13.Relative,
                         fullWidth: !0,
-                        zIndex: m._54.Above
+                        zIndex: m._55.Above
                     }, s.createElement(m._6, {
                         className: "blue-bar__bar",
                         display: m.P.Flex,
@@ -6357,7 +6357,10 @@ webpackJsonp([36], {
                             top: 1
                         },
                         display: y.P.Flex,
-                        justifyContent: y._5.Center
+                        justifyContent: y._5.Center,
+                        breakpointLarge: {
+                            justifyContent: y._5.Start
+                        }
                     }, u.createElement(y.u, {
                         onClick: this.handleSubmit,
                         state: this.state.awaitingResponse ? y.z.Loading : y.z.Default,
@@ -6498,7 +6501,7 @@ webpackJsonp([36], {
                         onClick: this.handleClick,
                         state: this.state.awaitingResponse ? y.z.Loading : y.z.Default,
                         disabled: this.state.awaitingResponse
-                    }, this.props.submitButtonCopy))) : u.createElement(y._6, {
+                    }, "Checkout With PayPal"))) : u.createElement(y._6, {
                         margin: {
                             y: 2
                         }
@@ -6722,7 +6725,10 @@ webpackJsonp([36], {
                         bottom: 1
                     },
                     display: y.P.Flex,
-                    justifyContent: y._5.Center
+                    justifyContent: y._5.Center,
+                    breakpointLarge: {
+                        justifyContent: y._5.Start
+                    }
                 }, u.createElement(y.u, {
                     onClick: this.handleSubmit,
                     state: this.state.awaitingResponse ? y.z.Loading : y.z.Default,
@@ -6789,13 +6795,13 @@ webpackJsonp([36], {
             },
             oe = function(e) {
                 function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
+                    var t, n = null !== e && e.apply(this, arguments) || this;
+                    return n.state = {
                         selectedProvider: N.ZuoraCreditCard,
-                        subsCheckoutVariantAssignment: "zuora"
-                    }, t.submitButtonCopy = Object(d.d)("Complete Purchase", "PaymentMethods"), t.paymentProviders = [{
+                        subsCheckoutVariantAssignment: "zuora",
+                        enabledProviders: (t = {}, t[N.ZuoraCreditCard] = !1, t[N.RecurlyCreditCard] = !1, t[N.RecurlyPaypal] = !1, t[N.RecurlyPayWithAmazon] = !1, t[N.Xsolla] = !1, t)
+                    }, n.submitButtonCopy = Object(d.d)("Complete Purchase", "PaymentMethods"), n.paymentProviders = [{
                         name: N.ZuoraCreditCard,
-                        enabled: "zuora" === t.state.subsCheckoutVariantAssignment || "owlallaccess2018" === t.props.productShortName,
                         button: {
                             label: se.CreditCard(),
                             src: F.a,
@@ -6806,13 +6812,12 @@ webpackJsonp([36], {
                             }
                         },
                         component: u.createElement(ae, c.__assign({
-                            submitButtonCopy: t.submitButtonCopy,
-                            onSuccess: t.props.onSuccess,
-                            isProductionConfig: t.props.configs.recurly.payWithAmazonConfigs.isProduction
-                        }, t.props.configs.zuora))
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess,
+                            isProductionConfig: n.props.configs.recurly.payWithAmazonConfigs.isProduction
+                        }, n.props.configs.zuora))
                     }, {
                         name: N.RecurlyCreditCard,
-                        enabled: "recurly" === t.state.subsCheckoutVariantAssignment && !("owlallaccess2018" === t.props.productShortName),
                         button: {
                             label: se.CreditCard(),
                             src: F.a,
@@ -6823,13 +6828,12 @@ webpackJsonp([36], {
                             }
                         },
                         component: u.createElement(X, {
-                            publicKey: t.props.configs.recurly.publicKey,
-                            submitButtonCopy: t.submitButtonCopy,
-                            onSuccess: t.props.onSuccess
+                            publicKey: n.props.configs.recurly.publicKey,
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess
                         })
                     }, {
                         name: N.RecurlyPaypal,
-                        enabled: !("owlallaccess2018" === t.props.productShortName),
                         button: {
                             label: se.Paypal(),
                             src: B.a,
@@ -6840,14 +6844,13 @@ webpackJsonp([36], {
                             }
                         },
                         component: u.createElement(ee, {
-                            publicKey: t.props.configs.recurly.publicKey,
-                            braintreeClientAuthorization: t.props.configs.recurly.braintreeClientAuthorization,
-                            submitButtonCopy: t.submitButtonCopy,
-                            onSuccess: t.props.onSuccess
+                            publicKey: n.props.configs.recurly.publicKey,
+                            braintreeClientAuthorization: n.props.configs.recurly.braintreeClientAuthorization,
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess
                         })
                     }, {
                         name: N.RecurlyPayWithAmazon,
-                        enabled: !("owlallaccess2018" === t.props.productShortName),
                         button: {
                             label: se.AmazonPay(),
                             src: x.a,
@@ -6858,12 +6861,11 @@ webpackJsonp([36], {
                             }
                         },
                         component: u.createElement(z, c.__assign({
-                            submitButtonCopy: t.submitButtonCopy,
-                            onSuccess: t.props.onSuccess
-                        }, t.props.configs.recurly.payWithAmazonConfigs))
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess
+                        }, n.props.configs.recurly.payWithAmazonConfigs))
                     }, {
                         name: N.Xsolla,
-                        enabled: !0,
                         button: {
                             label: se.MoreMethods(),
                             src: U.a,
@@ -6874,10 +6876,10 @@ webpackJsonp([36], {
                             }
                         },
                         component: u.createElement(te, c.__assign({
-                            trackPaymentFormInteraction: t.props.trackPaymentFormInteraction
-                        }, t.props.configs.xsolla))
-                    }], t.renderSelector = function(e) {
-                        return e.enabled ? u.createElement(y.K, {
+                            trackPaymentFormInteraction: n.props.trackPaymentFormInteraction
+                        }, n.props.configs.xsolla))
+                    }], n.renderSelector = function(e) {
+                        return n.state.enabledProviders[e.name] ? u.createElement(y.K, {
                             key: e.name,
                             cols: {
                                 default: 6,
@@ -6894,40 +6896,43 @@ webpackJsonp([36], {
                             alt: e.button.alt,
                             srcSet: e.button.srcSet,
                             value: e.name,
-                            onChange: t.setProviderFactory(e.name),
-                            checked: t.state.selectedProvider === e.name
+                            onChange: n.setProviderFactory(e.name),
+                            checked: n.state.selectedProvider === e.name
                         }))) : u.createElement(u.Fragment, {
                             key: e.name
                         })
-                    }, t.renderProvider = function(e) {
-                        return u.createElement(y._6, {
+                    }, n.renderProvider = function(e) {
+                        return n.state.enabledProviders[e.name] ? u.createElement(y._6, {
                             key: e.name,
-                            display: t.state.selectedProvider === e.name ? y.P.Inline : y.P.Hide
-                        }, e.component)
-                    }, t.setProviderFactory = function(e) {
+                            display: n.state.selectedProvider === e.name ? y.P.Inline : y.P.Hide
+                        }, e.component) : u.createElement(u.Fragment, {
+                            key: e.name
+                        })
+                    }, n.setProviderFactory = function(e) {
                         return function() {
-                            t.props.trackPaymentFormInteraction({
+                            n.props.trackPaymentFormInteraction({
                                 paymentFlow: e,
                                 action: w.RadioButtonClick,
                                 actionDetail: e
-                            }), t.setState({
+                            }), n.setState({
                                 selectedProvider: e
                             })
                         }
-                    }, t
+                    }, n
                 }
                 return c.__extends(t, e), t.prototype.componentWillMount = function() {
                     return c.__awaiter(this, void 0, void 0, function() {
-                        var e, t;
-                        return c.__generator(this, function(n) {
-                            switch (n.label) {
+                        var e, t, n, i;
+                        return c.__generator(this, function(r) {
+                            switch (r.label) {
                                 case 0:
                                     return [4, d.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_VARIANT")];
                                 case 1:
-                                    return e = n.sent() || this.state.subsCheckoutVariantAssignment, "owlallaccess2018" !== this.props.productShortName && this.setState({
+                                    return e = r.sent() || this.state.subsCheckoutVariantAssignment, "owlallaccess2018" === this.props.productShortName && (e = "zuora"), (i = {})[N.ZuoraCreditCard] = "zuora" === e, i[N.RecurlyCreditCard] = "recurly" === e, i[N.RecurlyPaypal] = !("owlallaccess2018" === this.props.productShortName), i[N.RecurlyPayWithAmazon] = !("owlallaccess2018" === this.props.productShortName), i[N.Xsolla] = !0, t = i, this.setState({
                                         selectedProvider: "recurly" === e ? N.RecurlyCreditCard : N.ZuoraCreditCard,
-                                        subsCheckoutVariantAssignment: e
-                                    }), document.querySelector("#recurly-script") ? [2] : ((t = document.createElement("script")).src = "https://js.recurly.com/v4/recurly.js", t.async = !0, t.id = "recurly-script", document.body.appendChild(t), [2])
+                                        subsCheckoutVariantAssignment: e,
+                                        enabledProviders: t
+                                    }), document.querySelector("#recurly-script") ? [2] : ((n = document.createElement("script")).src = "https://js.recurly.com/v4/recurly.js", n.async = !0, n.id = "recurly-script", document.body.appendChild(n), [2])
                             }
                         })
                     })
@@ -10252,7 +10257,7 @@ webpackJsonp([36], {
                     onClick: e.onHeaderClick,
                     tabIndex: -1,
                     alpha: !0
-                }, Object(B._55)(e), {
+                }, Object(B._56)(e), {
                     "data-ts_selectable": !0
                 }), u.createElement(B._6, {
                     display: B.P.Flex,
@@ -10298,7 +10303,7 @@ webpackJsonp([36], {
                         display: B.P.Flex,
                         alignItems: B.c.Center,
                         position: B._13.Relative,
-                        zIndex: B._54.Above,
+                        zIndex: B._55.Above,
                         borderBottom: !0,
                         "data-a-target": "nav-search-title-bar"
                     }, u.createElement(B._6, {
@@ -10718,7 +10723,7 @@ webpackJsonp([36], {
                         alignItems: B.c.Center,
                         flexGrow: 1,
                         fullHeight: !0,
-                        zIndex: B._54.Above,
+                        zIndex: B._55.Above,
                         className: "search-results-panel__notice-wrap"
                     }, u.createElement(B._29, {
                         color: B.J.Alt2,
@@ -10747,7 +10752,7 @@ webpackJsonp([36], {
                         alignItems: B.c.Center,
                         flexGrow: 1,
                         fullHeight: !0,
-                        zIndex: B._54.Above,
+                        zIndex: B._55.Above,
                         className: "search-results-panel__notice-wrap"
                     }, u.createElement(B._29, {
                         color: B.J.Alt2,
@@ -11344,7 +11349,7 @@ webpackJsonp([36], {
                         "data-a-target": t,
                         "data-test-selector": n,
                         attachRight: !0,
-                        zIndex: B._54.Below
+                        zIndex: B._55.Below
                     }, u.createElement(R.b, {
                         className: "top-nav-user-menu-dropdown__scrollable",
                         suppressScrollX: !0
@@ -16442,7 +16447,7 @@ webpackJsonp([36], {
                     }, t.onMouseEnter = function() {
                         t.state.hasInteracted || t.setState({
                             hasInteracted: !0
-                        })
+                        }), t.props.onHover && t.props.onHover()
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -19080,4 +19085,4 @@ webpackJsonp([36], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-11bddd38026773f395bf92fd0d7c3993.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-85ac9df27e53acd6634c3f30f7eafde1.js.map

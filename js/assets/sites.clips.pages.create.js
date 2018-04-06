@@ -1,4 +1,4 @@
-webpackJsonp([56], {
+webpackJsonp([55], {
     "2TZ0": function(e, t) {
         var n = {
             kind: "Document",
@@ -422,8 +422,7 @@ webpackJsonp([56], {
                 return i.__extends(t, e), t.prototype.render = function() {
                     return this.props.isClipResolved ? r.createElement(f._6, null, r.createElement(f._29, {
                         padding: {
-                            y: 2,
-                            x: 1
+                            y: 4
                         }
                     }, r.createElement(u.a, {
                         startOffset: this.state.startOffset,
@@ -464,9 +463,49 @@ webpackJsonp([56], {
         ! function(e) {
             e.creating = "CREATING", e.created = "CREATED", e.failed = "FAILED"
         }(O || (O = {}));
-        var S = n("vwd7"),
-            C = n("f8OD"),
-            b = function(e) {
+        var S = n("6sO2"),
+            C = n("CSlQ"),
+            _ = (n("Jbgd"), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(f._29, {
+                        background: f.m.Base,
+                        className: "clips-edit-top-nav",
+                        position: f._13.Fixed,
+                        fullWidth: !0,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        display: f.P.Flex,
+                        justifyContent: f._5.Center,
+                        alignItems: f.c.Center,
+                        "data-test-selector": "clips-edit-top-nav-wrapper"
+                    }, this.props.showMessage && r.createElement(f._6, {
+                        display: f.P.Flex,
+                        justifyContent: f._5.Center,
+                        alignItems: f.c.Center
+                    }, r.createElement(f.O, {
+                        color: f.J.Alt,
+                        fontSize: f.T.Size5
+                    }, Object(S.d)("Title this clip to publish", "ClipsEditTopNav")), r.createElement(f._6, {
+                        margin: {
+                            left: .5
+                        },
+                        display: f.P.Flex,
+                        alignItems: f.c.Center
+                    }, r.createElement(f._19, {
+                        asset: f._20.Lock,
+                        type: f._21.Warn
+                    }))))
+                }, t
+            }(r.Component)),
+            b = Object(C.d)("ClipsEditTopNav", {
+                autoReportInteractive: !0
+            })(_),
+            k = n("vwd7"),
+            T = n("f8OD"),
+            w = (n("D9gI"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -518,29 +557,38 @@ webpackJsonp([56], {
                         to: "/500"
                     });
                     var e = this.props.data.clip;
-                    return e && e.rawMedia && this.getIsClipResolved(this.props) ? r.createElement(f._6, null, r.createElement(f.j, {
+                    return e && e.rawMedia && this.getIsClipResolved(this.props) ? r.createElement(f._6, null, r.createElement(b, {
+                        showMessage: !0
+                    }), r.createElement(f._6, {
+                        className: "clips-edit-clip-wrapper",
+                        margin: {
+                            top: 1
+                        }
+                    }, r.createElement(f.j, {
                         ratio: f.k.Aspect16x9
                     }, r.createElement(f._6, {
                         position: f._13.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, r.createElement(S.b, {
+                    }, r.createElement(k.b, {
                         slug: this.props.slug,
                         onLoaded: this.onLoaded,
-                        playerType: S.a.Editing
+                        playerType: k.a.Editing
                     }))), r.createElement(y, {
                         isClipResolved: this.getIsClipResolved(this.props),
                         slug: this.props.slug,
                         broadcasterName: e.broadcaster && e.broadcaster.displayName || "",
                         rawMedia: e.rawMedia
-                    })) : r.createElement(f._6, null)
+                    }))) : r.createElement(b, {
+                        showMessage: !1
+                    })
                 }, t
-            }(r.Component),
-            _ = Object(s.compose)(Object(l.t)({
+            }(r.Component)),
+            P = Object(s.compose)(Object(l.t)({
                 playerId: function(e) {
                     return e.slug
                 }
-            }), Object(o.a)(C, {
+            }), Object(o.a)(T, {
                 options: function(e) {
                     return {
                         pollInterval: 1e3,
@@ -550,8 +598,8 @@ webpackJsonp([56], {
                         }
                     }
                 }
-            }))(b),
-            k = function(e) {
+            }))(w),
+            R = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -564,7 +612,7 @@ webpackJsonp([56], {
                                 slug: e
                             }
                         }
-                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, r.createElement(f._6, null, r.createElement(_, {
+                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, r.createElement(f._6, null, r.createElement(P, {
                         slug: e
                     }))) : r.createElement(a.b, {
                         to: "/"
@@ -572,9 +620,11 @@ webpackJsonp([56], {
                 }, t
             }(r.Component);
         n.d(t, "ClipsCreate", function() {
-            return k
+            return R
         })
     },
+    D9gI: function(e, t) {},
+    Jbgd: function(e, t) {},
     QIXk: function(e, t, n) {
         "use strict";
         var i, r, a, s = n("TToO"),
@@ -677,8 +727,8 @@ webpackJsonp([56], {
                 })], t)
             }(o.Component),
             C = Object(m.f)(S),
-            b = n("2TZ0"),
-            _ = {
+            _ = n("2TZ0"),
+            b = {
                 TITLE_INPUT: "cmgr-title-input",
                 TITLE_SAVE: "cmgr-title-save",
                 TITLE_SAVE_TOOLTIP: "cmgr-title-save-tooltip"
@@ -692,8 +742,8 @@ webpackJsonp([56], {
                     var n = e.call(this, t) || this;
                     return n.renderForClipsViewing = function() {
                         return o.createElement("div", null, o.createElement(O._40, {
-                            id: _.TITLE_INPUT,
-                            "data-test-selector": _.TITLE_INPUT,
+                            id: b.TITLE_INPUT,
+                            "data-test-selector": b.TITLE_INPUT,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
                             onKeyDown: n.handleKeyDown
@@ -711,7 +761,7 @@ webpackJsonp([56], {
                         }, n.getRemainingCharacterText()), o.createElement(O._6, {
                             display: O.P.Flex
                         }, o.createElement(O.u, {
-                            "data-test-selector": _.TITLE_SAVE,
+                            "data-test-selector": b.TITLE_SAVE,
                             onClick: n.props.onCancel,
                             type: O.A.Hollow
                         }, Object(l.d)("Cancel", "ClipsTitleEdit")), o.createElement(O._6, {
@@ -721,7 +771,7 @@ webpackJsonp([56], {
                         }, n.renderSave()))))
                     }, n.renderForManager = function() {
                         return o.createElement(O.U, {
-                            id: _.TITLE_INPUT,
+                            id: b.TITLE_INPUT,
                             label: Object(l.d)("Title", "ClipsTitleEdit"),
                             hint: n.getRemainingCharacterText()
                         }, o.createElement(O._6, {
@@ -733,8 +783,8 @@ webpackJsonp([56], {
                                 right: 1
                             }
                         }, o.createElement(O._2, {
-                            id: _.TITLE_INPUT,
-                            "data-test-selector": _.TITLE_INPUT,
+                            id: b.TITLE_INPUT,
+                            "data-test-selector": b.TITLE_INPUT,
                             type: O._3.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
@@ -746,7 +796,7 @@ webpackJsonp([56], {
                             position: O._13.Relative
                         }, n.renderSave(), o.createElement(O._4, {
                             onClick: n.dismissMessage,
-                            "data-test-selector": _.TITLE_SAVE_TOOLTIP
+                            "data-test-selector": b.TITLE_SAVE_TOOLTIP
                         }, o.createElement(O.p, {
                             direction: O.q.TopRight,
                             show: n.state.showError || n.state.showSuccess
@@ -767,21 +817,17 @@ webpackJsonp([56], {
                             broadcasterName: n.props.broadcasterName
                         }, "ClipsTitleEdit")) : o.createElement(O.O, {
                             color: O.J.Alt2
-                        }, n.getRemainingCharacterText()), o.createElement(O._6, {
-                            display: O.P.Flex,
-                            flexWrap: O.S.NoWrap
-                        }, o.createElement(O._6, {
-                            flexGrow: 1,
-                            margin: {
-                                right: 1
-                            }
+                        }, n.getRemainingCharacterText()), o.createElement(O._6, null, o.createElement(O._6, {
+                            fullWidth: !0
                         }, o.createElement(O._2, {
-                            id: _.TITLE_INPUT,
-                            "data-test-selector": _.TITLE_INPUT,
+                            id: b.TITLE_INPUT,
+                            "data-test-selector": b.TITLE_INPUT,
                             type: O._3.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
-                            onKeyDown: n.handleKeyDown
+                            onKeyDown: n.handleKeyDown,
+                            placeholder: Object(l.d)("Add a title (required)", "ClipsTitleEdit"),
+                            autoFocus: !0
                         })), o.createElement(O._6, {
                             display: O.P.Flex,
                             justifyContent: O._5.Between,
@@ -805,7 +851,7 @@ webpackJsonp([56], {
                         })))))
                     }, n.renderSave = function() {
                         return o.createElement(O.u, {
-                            "data-test-selector": _.TITLE_SAVE,
+                            "data-test-selector": b.TITLE_SAVE,
                             disabled: !n.canSaveEditedTitle(),
                             onClick: n.editClipTitle
                         }, Object(l.d)("Save", "ClipsTitleEdit"))
@@ -901,11 +947,11 @@ webpackJsonp([56], {
                     return e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === r.InvalidTitle.toLowerCase() ? h.channelViolation : h.unknown
                 }, t
             }(o.Component),
-            w = Object(d.a)(b, {
+            w = Object(d.a)(_, {
                 name: "editTitle"
             })(T);
         n.d(t, !1, function() {
-            return _
+            return b
         }), n.d(t, !1, function() {
             return h
         }), n.d(t, !1, function() {
@@ -1335,7 +1381,7 @@ webpackJsonp([56], {
 
         function O() {
             return m({
-                method: b
+                method: _
             })
         }
 
@@ -1348,7 +1394,7 @@ webpackJsonp([56], {
 
         function y(e) {
             return m({
-                method: _,
+                method: b,
                 arg: e
             })
         }
@@ -1366,8 +1412,8 @@ webpackJsonp([56], {
                 arg: e
             })
         }
-        var b = "subscribe",
-            _ = "setclip",
+        var _ = "subscribe",
+            b = "setclip",
             k = "setAutoplay",
             T = "bridgestateupdate",
             w = "bridgestorestateupdate",
@@ -1406,9 +1452,9 @@ webpackJsonp([56], {
         }), n.d(t, "r", function() {
             return C
         }), n.d(t, "g", function() {
-            return b
-        }), n.d(t, "f", function() {
             return _
+        }), n.d(t, "f", function() {
+            return b
         }), n.d(t, "e", function() {
             return k
         }), n.d(t, "c", function() {
@@ -1513,4 +1559,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-56e597271a366edd37dade9ec72efff1.js.map
+//# sourceMappingURL=sites.clips.pages.create-ff356dfdcc5ec59131c5f94a84b6dfdc.js.map

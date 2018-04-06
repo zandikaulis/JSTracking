@@ -482,21 +482,17 @@ webpackJsonp([73], {
                             broadcasterName: n.props.broadcasterName
                         }, "ClipsTitleEdit")) : s.createElement(v.O, {
                             color: v.J.Alt2
-                        }, n.getRemainingCharacterText()), s.createElement(v._6, {
-                            display: v.P.Flex,
-                            flexWrap: v.S.NoWrap
-                        }, s.createElement(v._6, {
-                            flexGrow: 1,
-                            margin: {
-                                right: 1
-                            }
+                        }, n.getRemainingCharacterText()), s.createElement(v._6, null, s.createElement(v._6, {
+                            fullWidth: !0
                         }, s.createElement(v._2, {
                             id: _.TITLE_INPUT,
                             "data-test-selector": _.TITLE_INPUT,
                             type: v._3.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
-                            onKeyDown: n.handleKeyDown
+                            onKeyDown: n.handleKeyDown,
+                            placeholder: Object(o.d)("Add a title (required)", "ClipsTitleEdit"),
+                            autoFocus: !0
                         })), s.createElement(v._6, {
                             display: v.P.Flex,
                             justifyContent: v._5.Between,
@@ -3799,4 +3795,4 @@ webpackJsonp([73], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-74f0f2bfb8b594d95344348220b097a2.js.map
+//# sourceMappingURL=pages.clips-manager-e8eb18ce46e6b9e1dec29e80ca1f5063.js.map

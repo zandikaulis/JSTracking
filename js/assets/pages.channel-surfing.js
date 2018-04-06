@@ -1462,14 +1462,14 @@ webpackJsonp([74], {
                     overflow: x._9.Hidden,
                     className: "rare-emote"
                 }, o.createElement(x._0, {
-                    zIndex: x._54.Above,
+                    zIndex: x._55.Above,
                     position: x._13.Relative
                 }, o.createElement("img", {
                     className: t,
                     src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
                 })), o.createElement(x._6, {
                     position: x._13.Relative,
-                    zIndex: x._54.Default,
+                    zIndex: x._55.Default,
                     className: n
                 }, o.createElement(x._19, {
                     width: 28,
@@ -6330,7 +6330,7 @@ webpackJsonp([74], {
                         background: E.m.AccentAlt2,
                         color: E.J.Overlay,
                         position: E._13.Absolute,
-                        zIndex: E._54.Above,
+                        zIndex: E._55.Above,
                         fullWidth: !0
                     }, i.createElement(E._6, {
                         className: "raid-notification__content",
@@ -8438,7 +8438,7 @@ webpackJsonp([74], {
                     }, Object(_.d)("Ban", "RecentRaid")), i.createElement(D._6, {
                         key: "recent-raids-layout-" + this.props.raiderUserID,
                         className: "recent-raids-item__hover-content",
-                        zIndex: D._54.Above,
+                        zIndex: D._55.Above,
                         "data-a-target": "recent-raids-item-hover"
                     }, this.props.slideInContent, e)
                 }, t = a.__decorate([Object(S.a)(G, {
@@ -13638,7 +13638,7 @@ webpackJsonp([74], {
                         className: "pinned-cheer",
                         flexGrow: 0,
                         flexShrink: 0,
-                        zIndex: v._54.Default
+                        zIndex: v._55.Default
                     }, i.createElement("div", {
                         className: S(m),
                         ref: this.saveRootRef
@@ -13721,7 +13721,7 @@ webpackJsonp([74], {
                     var e = null,
                         t = this.renderRecentCheer();
                     return null === t && (e = this.renderLeaderboard()), i.createElement(v._6, {
-                        zIndex: v._54.Default
+                        zIndex: v._55.Default
                     }, e, t)
                 }, t.prototype.renderLeaderboard = function() {
                     if (this.props.data.error || !(this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.leaderboard)) return null;
@@ -13748,7 +13748,7 @@ webpackJsonp([74], {
                         bitsConfig: this.props.bitsConfig
                     })), i.createElement(v._6, {
                         className: "pinned-cheer-v2",
-                        zIndex: v._54.Default
+                        zIndex: v._55.Default
                     }, i.createElement(v._29, {
                         borderBottom: !0
                     }, r, a))
@@ -15300,7 +15300,7 @@ webpackJsonp([74], {
                     }
                 }, i.createElement(v._0, {
                     position: v._13.Relative,
-                    zIndex: v._54.Default
+                    zIndex: v._55.Default
                 }, i.createElement("div", {
                     onMouseEnter: this.onMouseEnterInput
                 }, t, n, i.createElement(ue.b, {
@@ -15615,7 +15615,7 @@ webpackJsonp([74], {
                             display: v.P.Flex,
                             alignItems: v.c.Center,
                             justifyContent: v._5.Center,
-                            zIndex: v._54.Above,
+                            zIndex: v._55.Above,
                             position: v._13.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
@@ -15627,7 +15627,7 @@ webpackJsonp([74], {
                         fullWidth: !0,
                         fullHeight: !0,
                         flexShrink: 0,
-                        zIndex: v._54.Default
+                        zIndex: v._55.Default
                     }, i.createElement("section", {
                         "aria-labelledby": "chat-viewers__header"
                     }, i.createElement(v._6, {
@@ -15911,7 +15911,7 @@ webpackJsonp([74], {
                     }), i.createElement(v._6, {
                         className: "chat-room__notifications",
                         position: v._13.Absolute,
-                        zIndex: v._54.Default,
+                        zIndex: v._55.Default,
                         fullWidth: !0
                     }, this.props.children), a, this.props.isOwnChannel && !this.props.isEmbedded && i.createElement(y, {
                         hostedChannelLogin: this.props.hostedChannelLogin
@@ -16814,7 +16814,7 @@ webpackJsonp([74], {
                         fullHeight: !0,
                         fullWidth: !0,
                         position: y._13.Relative,
-                        zIndex: y._54.Default
+                        zIndex: y._55.Default
                     }, h.createElement("div", {
                         onMouseUp: this.onDragEnd,
                         ref: function(t) {
@@ -20877,7 +20877,7 @@ webpackJsonp([74], {
                 }, e.stream.broadcaster.displayName)), s.createElement(O._29, {
                     color: O.J.Live,
                     display: O.P.InlineFlex,
-                    zIndex: O._54.Above
+                    zIndex: O._55.Above
                 }, s.createElement(N.a, {
                     login: e.stream.broadcaster.login
                 }))))
@@ -21093,7 +21093,7 @@ webpackJsonp([74], {
                     return s.createElement(O._29, {
                         className: y(e),
                         position: O._13.Absolute,
-                        zIndex: O._54.Above,
+                        zIndex: O._55.Above,
                         alignItems: O.c.Center,
                         attachLeft: this.props.position === I.Left,
                         attachRight: this.props.position === I.Right,
@@ -23432,4 +23432,4 @@ webpackJsonp([74], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-b232cb4cb83e1914667ba91727e620f2.js.map
+//# sourceMappingURL=pages.channel-surfing-975bb3b76df217f42aa28c9d4d215542.js.map

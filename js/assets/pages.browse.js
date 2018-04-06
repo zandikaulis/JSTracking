@@ -247,7 +247,7 @@ webpackJsonp([53], {
                     }, "Live Channel Card");
                     return i.createElement("div", r.__assign({
                         className: "live-channel-card"
-                    }, Object(_._55)(this.props)), i.createElement(_.B, {
+                    }, Object(_._56)(this.props)), i.createElement(_.B, {
                         key: this.props.title
                     }, i.createElement(_._6, {
                         fullWidth: !0
@@ -1185,7 +1185,7 @@ webpackJsonp([53], {
                     return r.createElement("div", a.__assign({
                         className: e,
                         "data-test-selector": "live-channel-preview-card"
-                    }, Object(p._55)(this.props)), r.createElement(s.a, a.__assign({}, this.props), r.createElement(p.j, {
+                    }, Object(p._56)(this.props)), r.createElement(s.a, a.__assign({}, this.props), r.createElement(p.j, {
                         ratio: p.k.Aspect16x9
                     }, this.props.videoPlayer)))
                 }, t
@@ -1777,7 +1777,7 @@ webpackJsonp([53], {
                         margin: .5,
                         padding: .5,
                         position: p._13.Absolute,
-                        zIndex: p._54.Above
+                        zIndex: p._55.Above
                     }, r.createElement(p._8, {
                         fillContent: !0,
                         inheritColor: !0,
@@ -2032,7 +2032,7 @@ webpackJsonp([53], {
                     position: R._13.Absolute,
                     attachTop: !0,
                     attachRight: !0
-                }, Object(R._55)(e)), y.createElement(R._46, {
+                }, Object(R._56)(e)), y.createElement(R._46, {
                     direction: R._48.Top,
                     align: R._47.Right,
                     label: Object(i.d)("Offers in-game Drops", "DropsBadge")
@@ -2047,7 +2047,7 @@ webpackJsonp([53], {
                     },
                     overflow: R._9.Hidden,
                     color: R.J.Overlay,
-                    zIndex: R._54.Default
+                    zIndex: R._55.Default
                 }, y.createElement(R.M, {
                     type: R.N.Inherit,
                     to: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops"
@@ -4993,4 +4993,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-4dcadb4d53dce5649673e3ba03333ff0.js.map
+//# sourceMappingURL=pages.browse-7efc676d6d31bec49510ca733d0cb42d.js.map

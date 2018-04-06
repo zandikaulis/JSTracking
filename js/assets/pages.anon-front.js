@@ -247,7 +247,7 @@ webpackJsonp([54], {
                     }, "Live Channel Card");
                     return i.createElement("div", r.__assign({
                         className: "live-channel-card"
-                    }, Object(b._55)(this.props)), i.createElement(b.B, {
+                    }, Object(b._56)(this.props)), i.createElement(b.B, {
                         key: this.props.title
                     }, i.createElement(b._6, {
                         fullWidth: !0
@@ -2997,7 +2997,7 @@ webpackJsonp([54], {
                         display: h.P.Block
                     }, d.createElement(h._4, r.__assign({
                         onClick: this.itemClick
-                    }, Object(h._55)(this.props)), d.createElement(h.j, {
+                    }, Object(h._56)(this.props)), d.createElement(h.j, {
                         ratio: h.k.Aspect16x9
                     }, d.createElement(h._6, {
                         className: "carousel-nav__meta",
@@ -3006,7 +3006,7 @@ webpackJsonp([54], {
                         margin: {
                             left: .5
                         },
-                        zIndex: h._54.Above
+                        zIndex: h._55.Above
                     }, this.renderIndicator(), d.createElement(h._6, {
                         display: h.P.InlineFlex,
                         margin: {
@@ -3897,4 +3897,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-c5df01c6107ad9b8287e5c6a6c1e970b.js.map
+//# sourceMappingURL=pages.anon-front-4d27a68873ff164266b2c41554e22c02.js.map

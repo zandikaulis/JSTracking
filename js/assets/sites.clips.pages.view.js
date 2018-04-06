@@ -695,7 +695,7 @@ webpackJsonp([46], {
                         background: k.m.Overlay,
                         color: k.J.Overlay,
                         elevation: 2,
-                        zIndex: k._54.Default,
+                        zIndex: k._55.Default,
                         display: k.P.Flex,
                         justifyContent: k._5.Around,
                         alignItems: k.c.Center
@@ -1658,7 +1658,7 @@ webpackJsonp([46], {
                         justifyContent: k._5.Start,
                         background: k.m.Base,
                         borderBottom: !0,
-                        zIndex: k._54.Default,
+                        zIndex: k._55.Default,
                         padding: 1
                     }, o.createElement(V, {
                         fontSize: k.T.Size5,
@@ -1954,7 +1954,7 @@ webpackJsonp([46], {
                             bottom: .5,
                             left: 0
                         },
-                        zIndex: k._54.Above,
+                        zIndex: k._55.Above,
                         className: "clips-emote-picker"
                     }, o.createElement(M.b, {
                         suppressScrollX: !0
@@ -2149,7 +2149,7 @@ webpackJsonp([46], {
                         display: k.P.Flex,
                         flexGrow: 1
                     }, o.createElement(k._6, {
-                        zIndex: k._54.Default,
+                        zIndex: k._55.Default,
                         padding: {
                             y: 1
                         }
@@ -2603,7 +2603,7 @@ webpackJsonp([46], {
                     }, t), this.state.isModalOpen && o.createElement(k._29, {
                         position: k._13.Fixed,
                         background: k.m.Overlay,
-                        zIndex: k._54.Above,
+                        zIndex: k._55.Above,
                         attachLeft: !0,
                         attachTop: !0,
                         fullHeight: !0,
@@ -2618,7 +2618,7 @@ webpackJsonp([46], {
                         className: "clips-mobile-share-sheet",
                         display: k.P.Flex,
                         flexDirection: k.R.Column,
-                        zIndex: k._54.Above,
+                        zIndex: k._55.Above,
                         "data-test-selector": "social-share-mobile-menu-root"
                     }, o.createElement(k.e, {
                         type: k.i.SlideInBottom,
@@ -2673,7 +2673,7 @@ webpackJsonp([46], {
                         attachBottom: !0,
                         className: "clips-mobile-share-sheet",
                         position: k._13.Fixed,
-                        zIndex: k._54.Above
+                        zIndex: k._55.Above
                     }, o.createElement(k.e, {
                         type: k.i.SlideInBottom,
                         duration: k.g.Short,
@@ -2972,7 +2972,7 @@ webpackJsonp([46], {
                     display: k.P.Flex,
                     alignItems: k.c.Center,
                     justifyContent: k._5.Center,
-                    zIndex: k._54.Above,
+                    zIndex: k._55.Above,
                     padding: {
                         x: 1
                     }
@@ -3018,7 +3018,7 @@ webpackJsonp([46], {
                     attachLeft: !0,
                     fullHeight: !0,
                     fullWidth: !0,
-                    zIndex: k._54.Above,
+                    zIndex: k._55.Above,
                     breakpointExtraSmall: {
                         display: k.P.Hide
                     }
@@ -3026,7 +3026,7 @@ webpackJsonp([46], {
                     position: k._13.Absolute,
                     attachBottom: !0,
                     attachLeft: !0,
-                    zIndex: k._54.Above,
+                    zIndex: k._55.Above,
                     padding: 1,
                     fullWidth: !0,
                     breakpointExtraSmall: {
@@ -3241,7 +3241,7 @@ webpackJsonp([46], {
                     return o.createElement(k._6, {
                         className: "watch-live-prompt",
                         position: k._13.Absolute,
-                        zIndex: k._54.Above,
+                        zIndex: k._55.Above,
                         attachRight: !0
                     }, o.createElement(k.M, {
                         to: i,
@@ -3263,7 +3263,7 @@ webpackJsonp([46], {
                         position: k._13.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: k._54.Above
+                        zIndex: k._55.Above
                     }, o.createElement(k._10, {
                         label: Object(l.d)("LIVE", "WatchLivePrompt"),
                         type: k._11.Live
@@ -4665,7 +4665,7 @@ webpackJsonp([46], {
                     onClick: e,
                     size: this.props.size,
                     tabIndex: this.props.tabIndex
-                }, Object(g._55)(this.props)), this.props.followUIType === b.IconOnly ? null : t)
+                }, Object(g._56)(this.props)), this.props.followUIType === b.IconOnly ? null : t)
             }, t.prototype.renderUnfollowButton = function() {
                 var e = Object(r.d)("Unfollow", "FollowButton");
                 return a.createElement(g.u, i.__assign({
@@ -4679,7 +4679,7 @@ webpackJsonp([46], {
                     tabIndex: this.props.tabIndex,
                     size: this.props.size,
                     onClick: this.toggleFollowing
-                }, Object(g._55)(this.props)), this.props.unfollowUIType === b.IconOnly ? null : Object(r.d)("Followed", "FollowButton"))
+                }, Object(g._56)(this.props)), this.props.unfollowUIType === b.IconOnly ? null : Object(r.d)("Followed", "FollowButton"))
             }, t.prototype.renderUnfollowButtonWithDropdown = function() {
                 var e = this.props.balloonDirection ? this.props.balloonDirection : g.q.BottomRight,
                     t = this.getFollowData(),
@@ -4991,11 +4991,11 @@ webpackJsonp([46], {
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(d._55)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
+                    }, Object(d._56)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(d._55)(n.props)), n.renderIcon())
+                    }, Object(d._56)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -7805,21 +7805,17 @@ webpackJsonp([46], {
                             broadcasterName: n.props.broadcasterName
                         }, "ClipsTitleEdit")) : l.createElement(k.O, {
                             color: k.J.Alt2
-                        }, n.getRemainingCharacterText()), l.createElement(k._6, {
-                            display: k.P.Flex,
-                            flexWrap: k.S.NoWrap
-                        }, l.createElement(k._6, {
-                            flexGrow: 1,
-                            margin: {
-                                right: 1
-                            }
+                        }, n.getRemainingCharacterText()), l.createElement(k._6, null, l.createElement(k._6, {
+                            fullWidth: !0
                         }, l.createElement(k._2, {
                             id: N.TITLE_INPUT,
                             "data-test-selector": N.TITLE_INPUT,
                             type: k._3.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
-                            onKeyDown: n.handleKeyDown
+                            onKeyDown: n.handleKeyDown,
+                            placeholder: Object(s.d)("Add a title (required)", "ClipsTitleEdit"),
+                            autoFocus: !0
                         })), l.createElement(k._6, {
                             display: k.P.Flex,
                             justifyContent: k._5.Between,
@@ -10637,7 +10633,7 @@ webpackJsonp([46], {
                     }, t.onMouseEnter = function() {
                         t.state.hasInteracted || t.setState({
                             hasInteracted: !0
-                        })
+                        }), t.props.onHover && t.props.onHover()
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -13615,4 +13611,4 @@ webpackJsonp([46], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-ab86fc27d3b273193f2f2f181fca7c89.js.map
+//# sourceMappingURL=sites.clips.pages.view-addfa72fb6c7893d9165a83beb8b435b.js.map
