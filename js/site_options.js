@@ -2918,14 +2918,14 @@ window.SiteOptions = {
         },
         "7ea85693-a4db-423d-ace9-65c9787a0eea": {
             "name": "ios_stream_titles_in_notifications_v6.2",
-            "v": 3466,
+            "v": 3474,
             "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
             }, {
                 "weight": 0,
-                "value": "enabled"
+                "value": "channel_surfing"
             }]
         },
         "7ecd2720-5df0-4111-8060-58335f050866": {
