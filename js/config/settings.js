@@ -32,7 +32,7 @@ window.__twilightSettings = {
     "extensions_mobile_banner_enabled": true,
     "first_page_loaded_timeout": 30000,
     "google_analytics_url": "https://ssl.google-analytics.com/ga.js",
-    "impact_experiment_key": true,
+    "impact_experiment_key": false,
     "ivw_countries": ["DE"],
     "ivw_languages": ["de"],
     "ivw_url": "https://script.ioam.de/iam.js",
