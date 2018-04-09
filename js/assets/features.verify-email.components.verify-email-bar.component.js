@@ -219,10 +219,10 @@ webpackJsonp([60], {
             l = i("CSlQ"),
             d = i("R0Kh"),
             h = i("9u8h"),
-            m = this,
-            f = u.o.logger.withCategory("verify-email"),
+            f = this,
+            m = u.o.logger.withCategory("verify-email"),
             p = function(e, t) {
-                return n.__awaiter(m, void 0, void 0, function() {
+                return n.__awaiter(f, void 0, void 0, function() {
                     var i, r;
                     return n.__generator(this, function(n) {
                         switch (n.label) {
@@ -237,7 +237,7 @@ webpackJsonp([60], {
                             case 2:
                                 return n.sent(), [2, !0];
                             case 3:
-                                return r = n.sent(), f.error(r, "Verify Email Service"), [2, !1];
+                                return r = n.sent(), m.error(r, "Verify Email Service"), [2, !1];
                             case 4:
                                 return [2]
                         }
@@ -360,26 +360,26 @@ webpackJsonp([60], {
                 }, t.prototype.isVisible = function() {
                     return this.state.verifyEmailBarState !== E.INITIAL && this.state.verifyEmailBarState !== E.DISMISSED
                 }, t.prototype.renderClickToVerify = function() {
-                    return s.createElement(v._6, {
+                    return s.createElement(v._7, {
                         fullWidth: !0,
-                        position: v._13.Relative
-                    }, s.createElement(v._29, {
+                        position: v._14.Relative
+                    }, s.createElement(v._30, {
                         className: "verify-email-banner",
-                        display: v.P.Flex,
-                        justifyContent: v._5.Center,
+                        display: v.Q.Flex,
+                        justifyContent: v._6.Center,
                         alignItems: v.c.Center
-                    }, s.createElement(v._0, {
+                    }, s.createElement(v._1, {
                         fullHeight: !0,
                         fullWidth: !0
                     }, s.createElement("button", {
                         onClick: this.onClickToVerify,
                         "data-test-selector": b
-                    }, s.createElement(v.O, {
+                    }, s.createElement(v.P, {
                         color: v.J.Alt,
-                        fontSize: v.T.Size5
-                    }, Object(u.d)("Click here to verify your email", "VerifyEmail")))), s.createElement(v._29, {
+                        fontSize: v.U.Size5
+                    }, Object(u.d)("Click here to verify your email", "VerifyEmail")))), s.createElement(v._30, {
                         className: "verify-email-banner__dismiss",
-                        position: v._13.Absolute,
+                        position: v._14.Absolute,
                         attachRight: !0,
                         margin: {
                             right: 2
@@ -390,28 +390,28 @@ webpackJsonp([60], {
                         "data-test-selector": D
                     }, Object(u.d)("Not Now", "VerifyEmail")))))
                 }, t.prototype.renderEmailSent = function() {
-                    return s.createElement(v._29, {
+                    return s.createElement(v._30, {
                         className: "verify-email-banner verify-email-banner--success",
-                        display: v.P.Flex,
-                        justifyContent: v._5.Center,
+                        display: v.Q.Flex,
+                        justifyContent: v._6.Center,
                         alignItems: v.c.Center
-                    }, s.createElement(v._6, {
+                    }, s.createElement(v._7, {
                         className: "verify-email-banner__body"
-                    }, s.createElement(v.O, {
-                        fontSize: v.T.Size5
+                    }, s.createElement(v.P, {
+                        fontSize: v.U.Size5
                     }, Object(u.d)("Verification email sent to {email}", {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail"))))
                 }, t.prototype.renderErrorSending = function() {
-                    return s.createElement(v._29, {
+                    return s.createElement(v._30, {
                         className: "verify-email-banner verify-email-banner--error",
-                        display: v.P.Flex,
-                        justifyContent: v._5.Center,
+                        display: v.Q.Flex,
+                        justifyContent: v._6.Center,
                         alignItems: v.c.Center
-                    }, s.createElement(v._6, {
+                    }, s.createElement(v._7, {
                         className: "verify-email-banner__body"
-                    }, s.createElement(v.O, {
-                        fontSize: v.T.Size5
+                    }, s.createElement(v.P, {
+                        fontSize: v.U.Size5
                     }, Object(u.d)("Unable to send an email to {email}. Please try again later.", {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail"))))
@@ -421,7 +421,7 @@ webpackJsonp([60], {
                     if (I.has(this.props.location.pathname)) {
                         var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                             t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                        return Object(d.i)(e, t)
+                        return Object(d.f)(e, t)
                     }
                     return !1
                 }, t.prototype.shouldRespectDismissal = function() {
@@ -539,4 +539,4 @@ webpackJsonp([60], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-f3ed99c432977d6a1e2927c393b2a7cd.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-203cea28e4ef0ff5ec79c197638bdd33.js.map

@@ -111,43 +111,43 @@ webpackJsonp([63], {
                         isLoading: !1,
                         isSuccess: !1
                     }, t.renderStatus = function() {
-                        return t.state.isError ? a.createElement(E._6, {
+                        return t.state.isError ? a.createElement(E._7, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": v
-                        }, a.createElement(E.O, {
-                            type: E._43.H5,
+                        }, a.createElement(E.P, {
+                            type: E._44.H5,
                             color: E.J.Error
-                        }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? a.createElement(E._6, {
+                        }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? a.createElement(E._7, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": f
-                        }, a.createElement(E.O, {
-                            type: E._43.H5,
+                        }, a.createElement(E.P, {
+                            type: E._44.H5,
                             color: E.J.Alt2
-                        }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? a.createElement(E._6, {
+                        }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? a.createElement(E._7, {
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(E.O, {
-                            type: E._43.H5,
+                        }, a.createElement(E.P, {
+                            type: E._44.H5,
                             bold: !0
-                        }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : a.createElement(E._29, {
-                            display: E.P.Flex,
-                            flexDirection: E.R.Column,
+                        }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : a.createElement(E._30, {
+                            display: E.Q.Flex,
+                            flexDirection: E.S.Column,
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(E._6, {
+                        }, a.createElement(E._7, {
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(E.O, {
-                            type: E._43.H5,
+                        }, a.createElement(E.P, {
+                            type: E._44.H5,
                             color: E.J.Alt2
-                        }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), a.createElement(E._6, {
+                        }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), a.createElement(E._7, {
                             flexGrow: 0
                         }, a.createElement(E.u, {
                             type: E.A.Default,
@@ -190,17 +190,17 @@ webpackJsonp([63], {
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(E._29, {
+                    return a.createElement(E._30, {
                         padding: {
                             x: 3,
                             top: 3,
                             bottom: 1
                         },
-                        display: E.P.Flex,
-                        flexDirection: E.R.Column
-                    }, a.createElement(E.O, {
+                        display: E.Q.Flex,
+                        flexDirection: E.S.Column
+                    }, a.createElement(E.P, {
                         className: "title",
-                        type: E._43.H2
+                        type: E._44.H2
                     }, Object(c.d)("Email Unsubscribe", "EmailUnsubscribe")), this.renderStatus())
                 }, t
             }(a.Component),
@@ -216,4 +216,4 @@ webpackJsonp([63], {
         })
     }
 });
-//# sourceMappingURL=pages.email-unsubscribe-428de3a73eb797ccf49b73543204f0d0.js.map
+//# sourceMappingURL=pages.email-unsubscribe-c79fcdfaa7b66e9b45dc415e9f20aa43.js.map

@@ -232,6 +232,14 @@ webpackJsonp([65], {
                                                                 kind: "Field",
                                                                 name: {
                                                                     kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
                                                                     value: "title"
                                                                 },
                                                                 arguments: [],
@@ -315,11 +323,11 @@ webpackJsonp([65], {
             }],
             loc: {
                 start: 0,
-                end: 341
+                end: 344
             }
         };
         t.loc.source = {
-            body: "query SideNav_SubscribedChannels($limit: Int $cursor: Cursor $isLive: Boolean) {\ncurrentUser {\nid\nsubscribedChannels(first: $limit after: $cursor live: $isLive){\npageInfo{\nhasNextPage\n}\nedges {\ncursor\nnode{\nid\ndisplayName\nlogin\nprofileImageURL(width: 70)\nbroadcastSettings {\ntitle\n}\nstream {\nid\nviewersCount\ngame {\nid\nname\n}\ntype\n}\n}\n}\n}\n}\n}",
+            body: "query SideNav_SubscribedChannels($limit: Int $cursor: Cursor $isLive: Boolean) {\ncurrentUser {\nid\nsubscribedChannels(first: $limit after: $cursor live: $isLive){\npageInfo{\nhasNextPage\n}\nedges {\ncursor\nnode{\nid\ndisplayName\nlogin\nprofileImageURL(width: 70)\nbroadcastSettings {\nid\ntitle\n}\nstream {\nid\nviewersCount\ngame {\nid\nname\n}\ntype\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -339,28 +347,32 @@ webpackJsonp([65], {
             r = t("6sO2"),
             l = t("yWCw"),
             d = t("7vx8"),
-            o = t("CSlQ"),
-            c = t("+3pi"),
-            u = t("abYt"),
-            p = t("SZoP"),
-            m = t("vH/s"),
-            h = t("4t/L"),
-            v = t("Odds"),
-            k = function(e) {
+            o = t("2o2f"),
+            c = t("CSlQ"),
+            u = t("+3pi"),
+            p = t("abYt"),
+            m = t("SZoP"),
+            h = t("vH/s"),
+            v = t("4t/L"),
+            k = t("Odds"),
+            b = function(e) {
                 function n() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var n = null !== e && e.apply(this, arguments) || this;
+                    return n.onChannelClick = function() {
+                        n.props.onChannelClick(n.props.index, n.props.channel)
+                    }, n
                 }
                 return i.__extends(n, e), n.prototype.render = function() {
-                    var e = Object(p.a)(this.props.channel.login, this.props.channel.displayName, !0);
-                    return a.createElement(h.a, {
+                    var e = Object(m.a)(this.props.channel.login, this.props.channel.displayName, !0);
+                    return a.createElement(v.a, {
                         avatarAlt: e,
                         avatarSrc: this.props.channel.profileImageURL,
                         collapsed: this.props.collapsed,
                         linkTo: {
                             pathname: "/" + this.props.channel.login,
                             state: {
-                                content: m.PageviewContent.FollowedChannels,
-                                medium: m.PageviewMedium.SideNav
+                                content: h.PageviewContent.SubscribedChannels,
+                                medium: h.PageviewMedium.SideNav
                             }
                         },
                         metadataLeft: this.renderMetadataLeft(),
@@ -368,55 +380,53 @@ webpackJsonp([65], {
                         onClick: this.onChannelClick,
                         offline: !1,
                         title: e,
-                        titleElement: Object(p.a)(this.props.channel.login, this.props.channel.displayName),
+                        titleElement: Object(m.a)(this.props.channel.login, this.props.channel.displayName),
                         tooltipContent: this.renderTooltipContent()
                     })
                 }, n.prototype.renderMetadataLeft = function() {
                     return this.props.channel.stream && this.props.channel.stream.game ? this.props.channel.stream.game.name : null
                 }, n.prototype.renderMetadataRight = function() {
-                    return this.props.channel.stream && this.props.channel.stream.id ? a.createElement(v._6, {
-                        display: v.P.Flex,
-                        alignItems: v.c.Center
-                    }, a.createElement(v.F, {
-                        status: v.H.Live,
-                        size: v.G.Small
-                    }), a.createElement(v._6, {
+                    return this.props.channel.stream && this.props.channel.stream.id ? a.createElement(k._7, {
+                        display: k.Q.Flex,
+                        alignItems: k.c.Center
+                    }, a.createElement(k.F, {
+                        status: k.H.Live,
+                        size: k.G.Small
+                    }), a.createElement(k._7, {
                         margin: {
                             left: .5
                         }
                     }, Object(r.e)(this.props.channel.stream.viewersCount || 0))) : null
                 }, n.prototype.renderTooltipContent = function() {
-                    if (this.props.channel.stream && this.props.channel.broadcastSettings && this.props.channel.broadcastSettings.title) return a.createElement(v.O, {
-                        color: v.J.Base
+                    if (this.props.channel.stream && this.props.channel.broadcastSettings && this.props.channel.broadcastSettings.title) return a.createElement(k.P, {
+                        color: k.J.Base
                     }, this.props.channel.broadcastSettings.title)
-                }, n.prototype.onChannelClick = function() {
-                    this.props.onChannelClick(this.props.index, this.props.channel)
-                }, n = i.__decorate([Object(o.d)("SubscribedChannel", {
+                }, n = i.__decorate([Object(c.d)("SubscribedChannel", {
                     autoReportInteractive: !0
                 })], n)
             }(a.Component),
-            b = t("yDaU"),
-            g = t("BBWW");
+            g = t("yDaU"),
+            C = t("BBWW");
         t.d(n, "SubscribedChannelsComponent", function() {
-            return S
-        }), t.d(n, "SubscribedChannels", function() {
             return f
+        }), t.d(n, "SubscribedChannels", function() {
+            return N
         });
-        var C = 3,
-            S = function(e) {
+        var S = 3,
+            f = function(e) {
                 function n() {
                     var n = null !== e && e.apply(this, arguments) || this;
                     return n.state = {
-                        displayAmount: C
+                        displayAmount: S
                     }, n.onClickShowMore = function() {
                         var e = n.props.data.currentUser && n.props.data.currentUser.subscribedChannels && n.props.data.currentUser.subscribedChannels.edges ? n.props.data.currentUser.subscribedChannels.edges.length : 0,
-                            t = Math.min(n.state.displayAmount + C, e);
+                            t = Math.min(n.state.displayAmount + S, e);
                         n.setState({
                             displayAmount: t
                         })
                     }, n.onClickShowLess = function() {
                         var e = n.state.displayAmount;
-                        n.state.displayAmount % C != 0 ? e -= e % C : e -= C, n.setState({
+                        n.state.displayAmount % S != 0 ? e -= e % S : e -= S, n.setState({
                             displayAmount: e
                         })
                     }, n
@@ -428,29 +438,25 @@ webpackJsonp([65], {
                     if (this.props.data.error) e = a.createElement(l.a, {
                         key: "subscribed-channels-error"
                     });
-                    else if (this.props.data.loading) e = a.createElement(v._8, {
-                        key: "subscribed-channels-loading",
-                        fillContent: !0
-                    });
                     else {
-                        if (!this.hasLiveSubscriptions()) return null;
+                        if (this.props.data.loading || !this.hasLiveSubscriptions()) return null;
                         e = this.renderSubscribedChannels();
                         var n = this.renderShowMore();
                         n && e.push(n)
                     }
-                    return a.createElement(v._6, {
+                    return a.createElement(k._7, {
                         className: "subscribed-channels"
-                    }, a.createElement(u.a, {
+                    }, a.createElement(p.a, {
                         title: Object(r.d)("Subscribed Channels", "SubscribedChannels"),
                         collapsed: this.props.collapsed,
-                        collapsedIcon: v._20.Star
+                        collapsedIcon: k._21.Star
                     }), e)
                 }, n.prototype.renderSubscribedChannels = function() {
                     var e = [];
                     if (!(this.props.data && this.props.data.currentUser && this.props.data.currentUser.subscribedChannels && this.props.data.currentUser.subscribedChannels.edges)) return e;
                     for (var n = 0; n < this.props.data.currentUser.subscribedChannels.edges.length && n < this.state.displayAmount; n++) {
                         var t = this.props.data.currentUser.subscribedChannels.edges[n].node;
-                        t && e.push(a.createElement(k, {
+                        t && t.stream && t.stream.type === o.a.Live && e.push(a.createElement(b, {
                             collapsed: this.props.collapsed,
                             key: "subscribed-channels-" + t.id,
                             channel: t,
@@ -461,20 +467,20 @@ webpackJsonp([65], {
                     }
                     return e
                 }, n.prototype.renderShowMore = function() {
-                    return this.props.collapsed || !this.props.data || !this.props.data.currentUser || !this.props.data.currentUser.subscribedChannels || !this.props.data.currentUser.subscribedChannels.edges || this.props.data.currentUser.subscribedChannels.edges.length <= C ? null : a.createElement(c.a, {
+                    return this.props.collapsed || !this.props.data || !this.props.data.currentUser || !this.props.data.currentUser.subscribedChannels || !this.props.data.currentUser.subscribedChannels.edges || this.props.data.currentUser.subscribedChannels.edges.length <= S ? null : a.createElement(u.a, {
                         key: "subscribed-channels-show-more",
                         onClickMore: this.onClickShowMore,
                         onClickLess: this.onClickShowLess,
-                        lessDisabled: this.state.displayAmount <= C,
+                        lessDisabled: this.state.displayAmount <= S,
                         moreDisabled: this.state.displayAmount >= this.props.data.currentUser.subscribedChannels.edges.length
                     })
                 }, n.prototype.onChannelClick = function(e, n) {
-                    Object(b.d)(e, n.stream ? n.stream.type : null)
+                    Object(g.d)(e, n.stream ? n.stream.type : null)
                 }, n.prototype.hasLiveSubscriptions = function() {
                     return !!this.props.data.currentUser && !!this.props.data.currentUser.subscribedChannels && !!this.props.data.currentUser.subscribedChannels.edges && this.props.data.currentUser.subscribedChannels.edges.length > 0
                 }, n
             }(a.Component),
-            f = Object(s.compose)(Object(d.a)(g, {
+            N = Object(s.compose)(Object(d.a)(C, {
                 options: {
                     pollInterval: 6e5,
                     variables: {
@@ -483,7 +489,7 @@ webpackJsonp([65], {
                         isLive: !0
                     }
                 }
-            }), Object(o.d)("SubscribedChannels"))(S)
+            }), Object(c.d)("SubscribedChannels"))(f)
     }
 });
-//# sourceMappingURL=features.side-nav.components.subscribed-channels.component-cedd0f4afb47bb3e01a9243eaf634d5a.js.map
+//# sourceMappingURL=features.side-nav.components.subscribed-channels.component-8edfb1d2f665ddfe8137ced816311a97.js.map

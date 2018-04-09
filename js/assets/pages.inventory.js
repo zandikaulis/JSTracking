@@ -24,62 +24,62 @@ webpackJsonp([58], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderBadge = function(e) {
-                        return c.createElement(h._6, {
+                        return c.createElement(h._7, {
                             key: e.id,
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(h.j, {
                             ratio: h.k.Aspect1x1
-                        }, c.createElement(h._29, {
+                        }, c.createElement(h._30, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: h.P.Flex,
+                            display: h.Q.Flex,
                             padding: 2,
                             border: !0
-                        }, c.createElement(h._0, {
+                        }, c.createElement(h._1, {
                             fullHeight: !0,
                             fullWidth: !0
                         }, c.createElement("img", {
                             src: e.imageURL,
                             title: e.title,
                             alt: e.title
-                        })))), c.createElement(h.O, {
-                            type: h._43.Strong
+                        })))), c.createElement(h.P, {
+                            type: h._44.Strong
                         }, e.title))
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.loading) return c.createElement(h._8, {
+                    if (this.props.loading) return c.createElement(h._9, {
                         fillContent: !0
                     });
                     if (!this.props.badges) return null;
                     var e = this.props.badges,
                         t = e.map(this.renderBadge);
-                    return c.createElement(h._6, {
+                    return c.createElement(h._7, {
                         margin: {
                             y: 1
                         }
-                    }, c.createElement(h._6, {
-                        display: h.P.Flex,
+                    }, c.createElement(h._7, {
+                        display: h.Q.Flex,
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h._6, {
+                    }, c.createElement(h._7, {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(h.O, {
-                        type: h._43.H3
-                    }, Object(d.d)("Badges from Crates", "BadgesList"))), c.createElement(h.O, {
-                        type: h._43.H3,
+                    }, c.createElement(h.P, {
+                        type: h._44.H3
+                    }, Object(d.d)("Badges from Crates", "BadgesList"))), c.createElement(h.P, {
+                        type: h._44.H3,
                         color: h.J.Alt2
-                    }, Object(d.e)(e.length))), c.createElement(h._6, {
+                    }, Object(d.e)(e.length))), c.createElement(h._7, {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h.O, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), c.createElement(h._49, {
-                        childWidth: h._50.Small,
+                    }, c.createElement(h.P, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), c.createElement(h._50, {
+                        childWidth: h._51.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
@@ -93,26 +93,26 @@ webpackJsonp([58], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCrate = function(e) {
-                        return c.createElement(h._6, {
+                        return c.createElement(h._7, {
                             key: e.id
-                        }, c.createElement(h._4, {
+                        }, c.createElement(h._5, {
                             onClick: t.handleOpenClick,
                             "data-open-url": e.openURL
                         }, c.createElement(h.j, {
                             ratio: h.k.Aspect1x1
-                        }, c.createElement(h._29, {
+                        }, c.createElement(h._30, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: h.P.Flex,
+                            display: h.Q.Flex,
                             padding: 2,
                             border: !0
-                        }, c.createElement(h._0, {
+                        }, c.createElement(h._1, {
                             fullHeight: !0,
                             fullWidth: !0
                         }, c.createElement("img", {
                             alt: Object(d.d)("Crate", "CratesList"),
                             src: e.iconURL
-                        })))), c.createElement(h.O, null, "Open Now")))
+                        })))), c.createElement(h.P, null, "Open Now")))
                     }, t.handleOpenClick = function(e) {
                         ! function(e, t) {
                             var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
@@ -125,41 +125,41 @@ webpackJsonp([58], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.loading) return c.createElement(h._8, {
+                    if (this.props.loading) return c.createElement(h._9, {
                         fillContent: !0
                     });
                     if (!this.props.crates) return null;
                     var e = this.props.crates,
                         t = e.map(this.renderCrate);
-                    return c.createElement(h._6, {
+                    return c.createElement(h._7, {
                         "data-test-selector": "crates-list__wrapper",
                         margin: {
                             y: 1
                         }
-                    }, c.createElement(h._6, {
-                        display: h.P.Flex,
+                    }, c.createElement(h._7, {
+                        display: h.Q.Flex,
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h._6, {
+                    }, c.createElement(h._7, {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(h.O, {
-                        type: h._43.H3
-                    }, Object(d.d)("Twitch Crates", "CratesList"))), c.createElement(h.O, {
-                        type: h._43.H3,
+                    }, c.createElement(h.P, {
+                        type: h._44.H3
+                    }, Object(d.d)("Twitch Crates", "CratesList"))), c.createElement(h.P, {
+                        type: h._44.H3,
                         color: h.J.Alt2
-                    }, Object(d.e)(e.length))), c.createElement(h._49, {
-                        childWidth: h._50.Small,
+                    }, Object(d.e)(e.length))), c.createElement(h._50, {
+                        childWidth: h._51.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
             }(c.Component),
-            O = Object(a.d)(Object(f.d)("CratesList", {
+            S = Object(a.d)(Object(f.d)("CratesList", {
                 autoReportInteractive: !0
             }))(_),
-            S = n("bdhb"),
+            O = n("bdhb"),
             N = (n("Jc4Y"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -175,38 +175,38 @@ webpackJsonp([58], {
                     }, t.renderDrop = function(e) {
                         var t = e.drop.node,
                             n = t.game.name;
-                        return c.createElement(h._6, {
+                        return c.createElement(h._7, {
                             key: n,
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(h._29, {
-                            display: h.P.Flex,
+                        }, c.createElement(h._30, {
+                            display: h.Q.Flex,
                             alignItems: h.c.Center,
-                            justifyContent: h._5.Center,
+                            justifyContent: h._6.Center,
                             padding: 1,
                             border: !0,
-                            position: h._13.Relative
+                            position: h._14.Relative
                         }, c.createElement("img", {
                             src: t.imageURL,
                             alt: Object(d.d)("Drop image for {gameName}", {
                                 gameName: n
                             }, "DropsListPresentation")
-                        }), c.createElement(h._29, {
-                            position: h._13.Absolute,
+                        }), c.createElement(h._30, {
+                            position: h._14.Absolute,
                             attachBottom: !0,
                             attachRight: !0,
                             className: "drops-list__count",
                             color: h.J.Overlay,
                             borderRadius: h.s.Small,
                             padding: .5
-                        }, c.createElement(h.O, {
-                            fontSize: h.T.Size4,
+                        }, c.createElement(h.P, {
+                            fontSize: h.U.Size4,
                             "aria-label": Object(d.d)("Count of Drops awarded for {gameName}", {
                                 gameName: n
                             }, "DropsListPresentation")
-                        }, e.count))), c.createElement(h.O, {
-                            type: h._43.Strong
+                        }, e.count))), c.createElement(h.P, {
+                            type: h._44.Strong
                         }, n))
                     }, t
                 }
@@ -216,7 +216,7 @@ webpackJsonp([58], {
                     this.postRender()
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading) return c.createElement(h._8, {
+                    if (this.props.data.loading) return c.createElement(h._9, {
                         fillContent: !0
                     });
                     if (!this.props.data || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.inventory.drops.nodes) return null;
@@ -231,33 +231,33 @@ webpackJsonp([58], {
                         i = Object.keys(n).map(function(t) {
                             return e.renderDrop(n[t])
                         });
-                    return c.createElement(h._6, {
+                    return c.createElement(h._7, {
                         "data-test-selector": "drops-list_wrapper",
                         margin: {
                             y: 1
                         }
-                    }, c.createElement(h._6, {
-                        display: h.P.Flex
-                    }, c.createElement(h._6, {
+                    }, c.createElement(h._7, {
+                        display: h.Q.Flex
+                    }, c.createElement(h._7, {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(h.O, {
-                        type: h._43.H3
-                    }, Object(d.d)("Drops", "DropsList"))), c.createElement(h.O, {
-                        type: h._43.H3,
+                    }, c.createElement(h.P, {
+                        type: h._44.H3
+                    }, Object(d.d)("Drops", "DropsList"))), c.createElement(h.P, {
+                        type: h._44.H3,
                         color: h.J.Alt2
-                    }, Object(d.e)(t.length))), c.createElement(h._6, {
+                    }, Object(d.e)(t.length))), c.createElement(h._7, {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h.O, null, this.getDropsDescription(t))), c.createElement(h._49, {
-                        childWidth: h._50.Small,
+                    }, c.createElement(h.P, null, this.getDropsDescription(t))), c.createElement(h._50, {
+                        childWidth: h._51.Small,
                         noGrow: !0
                     }, i))
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = s.__decorate([Object(u.a)(S)], t)
+                }, t = s.__decorate([Object(u.a)(O)], t)
             }(c.Component)),
             j = Object(a.d)(Object(f.d)("DropsList"))(N),
             C = n("Tzcg"),
@@ -267,33 +267,33 @@ webpackJsonp([58], {
                     return t.renderEmote = function(e) {
                         var t = Object(C.b)([e])[0],
                             n = t.srcSet.split(", ").pop().split(" ").shift();
-                        return c.createElement(h._6, {
+                        return c.createElement(h._7, {
                             key: t.id,
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(h.j, {
                             ratio: h.k.Aspect1x1
-                        }, c.createElement(h._29, {
+                        }, c.createElement(h._30, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: h.P.Flex,
+                            display: h.Q.Flex,
                             padding: 2,
                             border: !0
-                        }, c.createElement(h._0, {
+                        }, c.createElement(h._1, {
                             fullHeight: !0,
                             fullWidth: !0
                         }, c.createElement("img", {
                             src: n,
                             title: t.displayName,
                             alt: t.displayName
-                        })))), c.createElement(h.O, {
-                            type: h._43.Strong
+                        })))), c.createElement(h.P, {
+                            type: h._44.Strong
                         }, t.displayName))
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.loading) return c.createElement(h._8, {
+                    if (this.props.loading) return c.createElement(h._9, {
                         fillContent: !0
                     });
                     if (!this.props.emoteSets) return null;
@@ -311,30 +311,30 @@ webpackJsonp([58], {
                         e[0];
                         return e[1]
                     }).map(this.renderEmote);
-                    return c.createElement(h._6, {
+                    return c.createElement(h._7, {
                         margin: {
                             y: 1
                         }
-                    }, c.createElement(h._6, {
-                        display: h.P.Flex,
+                    }, c.createElement(h._7, {
+                        display: h.Q.Flex,
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h._6, {
+                    }, c.createElement(h._7, {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(h.O, {
-                        type: h._43.H3
-                    }, Object(d.d)("Emotes from Crates", "EmoticonsList"))), c.createElement(h.O, {
-                        type: h._43.H3,
+                    }, c.createElement(h.P, {
+                        type: h._44.H3
+                    }, Object(d.d)("Emotes from Crates", "EmoticonsList"))), c.createElement(h.P, {
+                        type: h._44.H3,
                         color: h.J.Alt2
-                    }, Object(d.e)(t.length))), c.createElement(h._6, {
+                    }, Object(d.e)(t.length))), c.createElement(h._7, {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h.O, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), c.createElement(h._49, {
-                        childWidth: h._50.Small,
+                    }, c.createElement(h.P, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), c.createElement(h._50, {
+                        childWidth: h._51.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
@@ -345,41 +345,41 @@ webpackJsonp([58], {
             x = n("+Znq"),
             w = n("iMOk"),
             D = n("CFVp"),
-            R = function(e) {
+            U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.bitsConfig = Object(D.a)(), t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
                     var e = Object(d.d)("Inventory", "InventoryTitleBar");
-                    if (this.props.loading) return c.createElement(h._29, {
+                    if (this.props.loading) return c.createElement(h._30, {
                         className: "title-bar",
-                        display: h.P.Flex,
+                        display: h.Q.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, c.createElement(h._6, {
+                    }, c.createElement(h._7, {
                         flexGrow: 1
-                    }, c.createElement(h.O, {
-                        type: h._43.H2
-                    }, e)), c.createElement(h._6, {
-                        display: h.P.Flex,
+                    }, c.createElement(h.P, {
+                        type: h._44.H2
+                    }, e)), c.createElement(h._7, {
+                        display: h.Q.Flex,
                         margin: {
                             right: 3
                         },
                         alignItems: h.c.Center
-                    }, c.createElement(h._12, {
+                    }, c.createElement(h._13, {
                         width: 135,
                         height: 30
-                    })), c.createElement(h._6, {
+                    })), c.createElement(h._7, {
                         alignSelf: h.d.Baseline
-                    }, c.createElement(h._12, {
+                    }, c.createElement(h._13, {
                         width: 180,
                         height: 30
                     })));
                     var t = this.props.amazonMarketplaces.map(function(e) {
-                            return c.createElement(h._4, {
+                            return c.createElement(h._5, {
                                 key: e.id,
                                 linkTo: "https://" + e.orderHistoryRedirectURL,
                                 targetBlank: !0
@@ -393,37 +393,37 @@ webpackJsonp([58], {
                                 withText: !0
                             })
                         }, "InventoryTitleBar");
-                    return c.createElement(h._29, {
+                    return c.createElement(h._30, {
                         className: "title-bar",
-                        display: h.P.Flex,
+                        display: h.Q.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, c.createElement(h._6, {
+                    }, c.createElement(h._7, {
                         flexGrow: 1
-                    }, c.createElement(h.O, {
-                        type: h._43.H2
-                    }, e)), c.createElement(h._6, {
-                        display: h.P.Flex,
+                    }, c.createElement(h.P, {
+                        type: h._44.H2
+                    }, e)), c.createElement(h._7, {
+                        display: h.Q.Flex,
                         margin: {
                             right: 3
                         },
                         alignItems: h.c.Center
-                    }, c.createElement(h.O, null, n)), c.createElement(h._6, {
+                    }, c.createElement(h.P, null, n)), c.createElement(h._7, {
                         alignSelf: h.d.Baseline
                     }, c.createElement(x.a, null, c.createElement(h.u, {
                         type: h.A.Hollow
-                    }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), c.createElement(h.p, null, c.createElement(h._6, {
+                    }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), c.createElement(h.p, null, c.createElement(h._7, {
                         padding: 1
                     }, t)))))
                 }, t
             }(c.Component),
-            U = Object(a.d)(Object(f.d)("TitleBar", {
+            R = Object(a.d)(Object(f.d)("TitleBar", {
                 autoReportInteractive: !0
-            }))(R),
-            I = n("xpYL"),
-            A = function(e) {
+            }))(U),
+            P = n("xpYL"),
+            I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refetchData = function() {
@@ -442,14 +442,14 @@ webpackJsonp([58], {
                         i = [],
                         a = [],
                         r = [];
-                    return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.availableBadges, a = this.props.data.currentUser.crates, r = this.props.data.currentUser.emoteSets), c.createElement(h._6, {
+                    return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.availableBadges, a = this.props.data.currentUser.crates, r = this.props.data.currentUser.emoteSets), c.createElement(h._7, {
                         className: "inventory",
                         padding: 3
-                    }, c.createElement(U, {
+                    }, c.createElement(R, {
                         bitsBalance: n,
                         loading: e,
                         amazonMarketplaces: t
-                    }), c.createElement(O, {
+                    }), c.createElement(S, {
                         refetchData: this.refetchData,
                         crates: a,
                         loading: e
@@ -460,15 +460,15 @@ webpackJsonp([58], {
                         badges: i,
                         loading: e
                     }), c.createElement(j, null))
-                }, t = s.__decorate([Object(u.a)(I)], t)
+                }, t = s.__decorate([Object(u.a)(P)], t)
             }(c.Component),
-            T = Object(a.d)(Object(f.d)("InventoryPage", {
+            A = Object(a.d)(Object(f.d)("InventoryPage", {
                 autoReportInteractive: !0,
                 destination: g.a.Inventory
             }), Object(p.a)({
                 location: v.PageviewLocation.Inventory
-            }))(A);
-        var P = Object(i.b)(function(e) {
+            }))(I);
+        var T = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(l.d)(e)
             }
@@ -478,9 +478,9 @@ webpackJsonp([58], {
                     return Object(o.f)(r.a.InventoryPage)
                 }
             }, e)
-        })(T);
+        })(A);
         n.d(t, "InventoryPage", function() {
-            return P
+            return T
         })
     },
     Jc4Y: function(e, t) {},
@@ -1042,4 +1042,4 @@ webpackJsonp([58], {
         i.definitions = i.definitions.concat(r(n("UP6l").definitions)), i.definitions = i.definitions.concat(r(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-92e3ba5b7769412a4cb3dff3d38fd21f.js.map
+//# sourceMappingURL=pages.inventory-7a8c464a97c123d124bc64b29f66f024.js.map

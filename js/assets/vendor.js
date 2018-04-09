@@ -13709,16 +13709,6 @@ webpackJsonp([69], {
             return u.a
         })
     },
-    Cn8s: function(e, t, n) {
-        "use strict";
-        var r;
-        n.d(t, "a", function() {
-                return r
-            }),
-            function(e) {
-                e[e.Badge = 0] = "Badge", e[e.Bits = 1] = "Bits", e[e.Emote = 2] = "Emote", e[e.InGameContent = 3] = "InGameContent"
-            }(r || (r = {}))
-    },
     Cz2G: function(e, t) {
         e.exports = function(e, t) {
             var n = !1;
@@ -15307,7 +15297,7 @@ webpackJsonp([69], {
         ! function(e) {
             e[e.Connected = 0] = "Connected", e[e.Reconnecting = 1] = "Reconnecting", e[e.Disconnected = 2] = "Disconnected"
         }(r || (r = {}));
-        var u, c = function() {
+        var u, c, l = function() {
                 function e(e) {
                     this.moderators = [], this.badgesRaw = "", this.userState = e
                 }
@@ -15323,7 +15313,7 @@ webpackJsonp([69], {
                     return t !== this.badgesRaw && (this.userState.badges = e, this.badgesRaw = t, !0)
                 }, e
             }(),
-            l = function() {
+            f = function() {
                 function e(e) {
                     this.emoteSets = [], this.globaluserstate = {}, this.lastChannelJoined = "", this.username = "", this.channelstate = {}, this.logger = e
                 }
@@ -15336,7 +15326,7 @@ webpackJsonp([69], {
                     return e = a.channel(e), void 0 !== this.channelstate[e]
                 }, e.prototype.onJoinedChannel = function(e, t) {
                     e = a.channel(e);
-                    var n = new c(t);
+                    var n = new l(t);
                     this.lastChannelJoined = e, this.channelstate[e] = n, this.logger.debug("[Session] Joined channel", {
                         channel: e,
                         newChannelState: this.channelstate
@@ -15380,7 +15370,7 @@ webpackJsonp([69], {
                     } else this.logger.warn("Unable to get channel. Channel name is empty or undefined.")
                 }, e
             }(),
-            f = function() {
+            p = function() {
                 function e(e, t, n) {
                     this.emitter = e, this.logger = n, this.isSuppressed = t
                 }
@@ -15467,11 +15457,13 @@ webpackJsonp([69], {
                 }, e.prototype.raise = function(e, t) {
                     this.isSuppressed || this.emitter.emit(e, t)
                 }, e
-            }(),
-            p = n("Cn8s");
+            }();
         ! function(e) {
+            e[e.Badge = 0] = "Badge", e[e.Bits = 1] = "Bits", e[e.Emote = 2] = "Emote", e[e.InGameContent = 3] = "InGameContent"
+        }(u || (u = {})),
+        function(e) {
             e[e.Message = 0] = "Message", e[e.Notice = 1] = "Notice", e[e.Action = 2] = "Action", e[e.Purchase = 3] = "Purchase", e[e.UserNotice = 4] = "UserNotice", e[e.Crate = 5] = "Crate"
-        }(u || (u = {}));
+        }(c || (c = {}));
         var d = function() {
                 function e(e, t, n, r) {
                     this.connection = r, this.session = n, this.parser = e, this.commands = r.commands, this.events = t, this.logger = this.connection.logger
@@ -15486,7 +15478,7 @@ webpackJsonp([69], {
                     })
                 }, e.prototype.raiseNotice = function(e, t, n) {
                     this.events.notice({
-                        type: u.Notice,
+                        type: c.Notice,
                         timestamp: Date.now(),
                         channel: e,
                         msgid: t,
@@ -15645,10 +15637,10 @@ webpackJsonp([69], {
                                             });
                                             break;
                                         case "room_mods":
-                                            for (var c = i.split(":")[1].replace(/,/g, "").split(":").toString().toLowerCase().split(" "), l = c.length - 1; l >= 0; l--) "" === c[l] && c.splice(l, 1);
+                                            for (var l = i.split(":")[1].replace(/,/g, "").split(":").toString().toLowerCase().split(" "), f = l.length - 1; f >= 0; f--) "" === l[f] && l.splice(f, 1);
                                             this.events.mods({
                                                 channel: o,
-                                                usernames: c
+                                                usernames: l
                                             });
                                             break;
                                         case "no_mods":
@@ -15726,12 +15718,12 @@ webpackJsonp([69], {
                                             }), this.raiseNotice(o, s, i);
                                             break;
                                         case "hosts_remaining":
-                                            var f = a.isInteger(i.charAt(0)) ? i.charAt(0) : 0;
+                                            var p = a.isInteger(i.charAt(0)) ? i.charAt(0) : 0;
                                             this.commands.host.signal({
                                                 channel: o,
                                                 msgid: s,
                                                 succeeded: !0,
-                                                remainingHost: +f
+                                                remainingHost: +p
                                             }), this.raiseNotice(o, s, i);
                                             break;
                                         case "bad_host_hosting":
@@ -15970,7 +15962,7 @@ webpackJsonp([69], {
                                             selectedCount: A,
                                             message: j,
                                             timestamp: Date.now(),
-                                            type: u.Crate
+                                            type: c.Crate
                                         })
                                     } else if ("purchase" === s) {
                                         var R = e.tags,
@@ -15987,26 +15979,26 @@ webpackJsonp([69], {
                                         M && (t = I.crateLoot).push.apply(t, M.split(",").map(function(e) {
                                             return {
                                                 id: e,
-                                                type: p.a.Emote
+                                                type: u.Emote
                                             }
                                         }));
                                         var D = R["msg-param-badges"];
                                         D && (n = I.crateLoot).push.apply(n, D.split(",").map(function(e) {
                                             return {
                                                 img: e,
-                                                type: p.a.Badge
+                                                type: u.Badge
                                             }
                                         }));
                                         var L = +R["msg-param-bits"];
                                         L && I.crateLoot.push({
                                             quantity: L,
-                                            type: p.a.Bits
+                                            type: u.Bits
                                         });
                                         var N = R["msg-param-inGameContent"];
                                         N && (r = I.crateLoot).push.apply(r, N.split(",").map(function(e) {
                                             return {
                                                 img: e,
-                                                type: p.a.InGameContent
+                                                type: u.InGameContent
                                             }
                                         }));
                                         j = {
@@ -16018,7 +16010,7 @@ webpackJsonp([69], {
                                             message: j,
                                             purchase: I,
                                             timestamp: Date.now(),
-                                            type: u.Purchase
+                                            type: c.Purchase
                                         })
                                     } else if ("ritual" === s) {
                                         var F = e.tags["msg-param-ritual-name"];
@@ -16033,7 +16025,7 @@ webpackJsonp([69], {
                                         })
                                     } else {
                                         j = this.createChatMessage(e, i);
-                                        this.events.usernotice(this.createChatMessageEvent(u.UserNotice, s, o, j, !1))
+                                        this.events.usernotice(this.createChatMessageEvent(c.UserNotice, s, o, j, !1))
                                     }
                                     break;
                                 case "HOSTTARGET":
@@ -16216,14 +16208,14 @@ webpackJsonp([69], {
                                             e.tags["message-type"] = "action";
                                             var $ = X[1];
                                             this.events.action({
-                                                type: u.Action,
+                                                type: c.Action,
                                                 timestamp: Date.now(),
                                                 action: $,
                                                 channel: o,
                                                 message: j,
                                                 sentByCurrentUser: !1
                                             })
-                                        } else this.events.chat(this.createChatMessageEvent(u.Message, s, o, j, !1))
+                                        } else this.events.chat(this.createChatMessageEvent(c.Message, s, o, j, !1))
                                     }
                                     break;
                                 default:
@@ -16471,14 +16463,14 @@ webpackJsonp([69], {
                     return [e.message]
                 }, t.prototype.beforeSendCommand = function(e) {
                     return o.__awaiter(this, void 0, void 0, function() {
-                        var t, n, r, i, s, c, l, f, p, d, h, y, m;
+                        var t, n, r, i, s, u, l, f, p, d, h, y, m;
                         return o.__generator(this, function(v) {
                             if (this.logger.debug("beforeSendCommand", {
                                     data: e
                                 }), t = this.isCommand(e.message), n = this.isAction(e.message), r = e.message, t && !n) return [2];
                             if (n && (e.message = "ACTION " + r.substr(4) + ""), i = {}, this.session.emoteSets)
-                                for (s = 0, c = this.session.emoteSets; s < c.length; s++)
-                                    for (l = c[s], f = 0, p = l.emotes; f < p.length; f++) d = p[f], a.isRegex(d.token) ? this.emoteRegex(e.message, d.token, d.id, i) : this.emoteString(e.message, d.token, d.id, i);
+                                for (s = 0, u = this.session.emoteSets; s < u.length; s++)
+                                    for (l = u[s], f = 0, p = l.emotes; f < p.length; f++) d = p[f], a.isRegex(d.token) ? this.emoteRegex(e.message, d.token, d.id, i) : this.emoteString(e.message, d.token, d.id, i);
                             return (h = this.session.getUserState(e.channel)) ? (y = o.__assign({}, h, {
                                 emotes: i,
                                 id: Date.now().toString()
@@ -16492,13 +16484,13 @@ webpackJsonp([69], {
                                 message: m,
                                 sentByCurrentUser: !0,
                                 timestamp: Date.now(),
-                                type: u.Action
+                                type: c.Action
                             }) : this.events.chat({
                                 channel: e.channel,
                                 message: m,
                                 sentByCurrentUser: !0,
                                 timestamp: Date.now(),
-                                type: u.Message
+                                type: c.Message
                             }), [2]) : (this.logger.warn("Unable to send message. No channel user state.", {
                                 data: e
                             }), [2])
@@ -16754,7 +16746,7 @@ webpackJsonp([69], {
                                 }
                             })
                         })
-                    }, this.client = e, this.timestampCreated = Date.now(), this.logger = s, this.session = i, this.configuration = t, this.eventProcessors = new f(r, n, s), this.commands = new U(this, i, this.eventProcessors), this.messageProcessor = new d(a, this.eventProcessors, i, this)
+                    }, this.client = e, this.timestampCreated = Date.now(), this.logger = s, this.session = i, this.configuration = t, this.eventProcessors = new p(r, n, s), this.commands = new U(this, i, this.eventProcessors), this.messageProcessor = new d(a, this.eventProcessors, i, this)
                 }
                 return e.prototype.tryConnect = function() {
                     return o.__awaiter(this, void 0, void 0, function() {
@@ -17007,7 +16999,7 @@ webpackJsonp([69], {
         });
         var V = function() {
             function e(e) {
-                this.reconnectAttempts = 0, this.timestampCreated = Date.now(), this.logger = e.logger || console, this.eventEmitter = new i.EventEmitter, this.session = new l(this.logger), this.events = new H(this.eventEmitter, this.logger), this.parser = new Q(this.logger), this.configuration = new s(e), this.connection = new B(this, this.configuration, !1, this.eventEmitter, this.session, this.parser, this.logger), this.commands = this.connection.commands, this.logger.debug("Created", {
+                this.reconnectAttempts = 0, this.timestampCreated = Date.now(), this.logger = e.logger || console, this.eventEmitter = new i.EventEmitter, this.session = new f(this.logger), this.events = new H(this.eventEmitter, this.logger), this.parser = new Q(this.logger), this.configuration = new s(e), this.connection = new B(this, this.configuration, !1, this.eventEmitter, this.session, this.parser, this.logger), this.commands = this.connection.commands, this.logger.debug("Created", {
                     pingInterval: this.configuration.pingInterval,
                     reconnectJitter: this.configuration.reconnectJitter,
                     server: this.configuration.server,
@@ -35267,4 +35259,4 @@ webpackJsonp([69], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-97267aba3fd4c42e0b7ed5c97ce2df38.js.map
+//# sourceMappingURL=vendor-7771be4dfa39ef6421ed4f915ba0c84c.js.map

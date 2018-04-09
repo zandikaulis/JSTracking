@@ -617,8 +617,8 @@ webpackJsonp([46], {
             o = n("GiK3"),
             l = n("6sO2"),
             s = n("j7/Y"),
-            d = n("w9tK"),
-            c = n("zcHb"),
+            c = n("w9tK"),
+            d = n("zcHb"),
             u = n("vH/s"),
             p = n("CSlQ"),
             m = n("7vx8");
@@ -657,37 +657,37 @@ webpackJsonp([46], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.recommendedClip,
-                        t = e.broadcaster && e.game && o.createElement(k.O, {
+                        t = e.broadcaster && e.game && o.createElement(k.P, {
                             color: k.J.Alt2,
                             ellipsis: !0
                         }, Object(l.d)("{broadcasterDisplayName} playing {gameDisplayName}", {
-                            broadcasterDisplayName: o.createElement(k.M, {
-                                type: k.N.Inherit,
-                                to: Object(f.d)(e.broadcaster.login, {
+                            broadcasterDisplayName: o.createElement(k.N, {
+                                type: k.O.Inherit,
+                                to: Object(f.c)(e.broadcaster.login, {
                                     tt_medium: "clips",
                                     tt_content: "player_channel_name"
                                 })
                             }, e.broadcaster.displayName),
-                            gameDisplayName: o.createElement(k.M, {
-                                type: k.N.Inherit,
-                                to: Object(f.e)(e.game.name, {
+                            gameDisplayName: o.createElement(k.N, {
+                                type: k.O.Inherit,
+                                to: Object(f.d)(e.game.name, {
                                     tt_medium: "clips",
                                     tt_content: "player_game"
                                 })
                             }, e.game.displayName)
                         }, "ClipsRecommendations")),
                         n = "/" + e.slug + "?tt_medium=clips&tt_content=recommendation";
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         key: e.slug,
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(k.B, null, o.createElement(k.M, {
+                    }, o.createElement(k.B, null, o.createElement(k.N, {
                         to: n,
                         onClick: this.props.trackSelectionClickHandler,
                         "data-test-selector": "clips-recommendation-view-rec-link"
-                    }, o.createElement(k._29, {
-                        position: k._13.Absolute,
+                    }, o.createElement(k._30, {
+                        position: k._14.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         padding: .5,
@@ -695,26 +695,26 @@ webpackJsonp([46], {
                         background: k.m.Overlay,
                         color: k.J.Overlay,
                         elevation: 2,
-                        zIndex: k._55.Default,
-                        display: k.P.Flex,
-                        justifyContent: k._5.Around,
+                        zIndex: k._56.Default,
+                        display: k.Q.Flex,
+                        justifyContent: k._6.Around,
                         alignItems: k.c.Center
-                    }, o.createElement(k._6, {
-                        display: k.P.Flex,
+                    }, o.createElement(k._7, {
+                        display: k.Q.Flex,
                         margin: {
                             right: .5
                         }
-                    }, o.createElement(k._19, {
-                        asset: k._20.GlyphViews
+                    }, o.createElement(k._20, {
+                        asset: k._21.GlyphViews
                     })), Object(l.d)("{views} views", {
                         views: Object(l.e)(e.viewCount)
-                    }, "ClipsRecommendations"))), o.createElement(k._29, {
+                    }, "ClipsRecommendations"))), o.createElement(k._30, {
                         background: k.m.Alt2
                     }, o.createElement(k.e, {
                         type: k.i.FadeIn,
                         duration: k.g.ExtraLong,
                         enabled: !0
-                    }, o.createElement(k.M, {
+                    }, o.createElement(k.N, {
                         to: n,
                         onClick: this.props.trackSelectionClickHandler,
                         "data-test-selector": "clips-recommendation-view-rec-link"
@@ -722,18 +722,18 @@ webpackJsonp([46], {
                         src: this.getImageForClip(),
                         alt: Object(l.d)("Clip Thumbnail", "ClipsRecommendations"),
                         onError: this.onImageError
-                    })))), o.createElement(k.C, null, o.createElement(k._6, {
+                    })))), o.createElement(k.C, null, o.createElement(k._7, {
                         padding: {
                             top: .5
                         }
-                    }, o.createElement(k.M, {
+                    }, o.createElement(k.N, {
                         to: n,
                         onClick: this.props.trackSelectionClickHandler,
                         "data-test-selector": "clips-recommendation-view-rec-link"
-                    }, o.createElement(k.O, {
+                    }, o.createElement(k.P, {
                         ellipsis: !0,
-                        type: k._43.H3,
-                        fontSize: k.T.Size5
+                        type: k._44.H3,
+                        fontSize: k.U.Size5
                     }, e.title)), t))))
                 }, t.prototype.getImageForClip = function() {
                     return this.state.imageFailed ? v : this.props.recommendedClip.thumbnailURL
@@ -743,11 +743,11 @@ webpackJsonp([46], {
 
         function _(e, t, n) {
             return a.__awaiter(this, void 0, void 0, function() {
-                var i, r, o, s, d, c, u, p, m, h, g, v, f, k, b, _, S, C;
+                var i, r, o, s, c, d, u, p, m, h, g, v, f, k, b, _, S, C;
                 return a.__generator(this, function(N) {
                     switch (N.label) {
                         case 0:
-                            i = null, r = null, o = null, s = null, d = null, c = null, t || l.j.error(new Error, "Missing `slug` in trackClipsEvent", {
+                            i = null, r = null, o = null, s = null, c = null, d = null, t || l.j.error(new Error, "Missing `slug` in trackClipsEvent", {
                                 slug: t
                             }), N.label = 1;
                         case 1:
@@ -758,7 +758,7 @@ webpackJsonp([46], {
                                 }
                             })];
                         case 2:
-                            return u = N.sent(), i = !!(u.data.clip.broadcaster && u.data.clip.broadcaster.stream && u.data.clip.broadcaster.stream.id), r = u.data.clip.broadcaster ? u.data.clip.broadcaster.login : null, o = u.data.clip.broadcaster ? u.data.clip.broadcaster.login : null, s = u.data.clip.game ? u.data.clip.game.name : null, d = u.data.clip.broadcaster ? u.data.clip.broadcaster.isPartner : null, c = u.data.clip.id, [3, 4];
+                            return u = N.sent(), i = !!(u.data.clip.broadcaster && u.data.clip.broadcaster.stream && u.data.clip.broadcaster.stream.id), r = u.data.clip.broadcaster ? u.data.clip.broadcaster.login : null, o = u.data.clip.broadcaster ? u.data.clip.broadcaster.login : null, s = u.data.clip.game ? u.data.clip.game.name : null, c = u.data.clip.broadcaster ? u.data.clip.broadcaster.isPartner : null, d = u.data.clip.id, [3, 4];
                         case 3:
                             return p = N.sent(), l.j.error(p, "Failed to make query for Clip info for tracking event.", {
                                 slug: t
@@ -774,8 +774,8 @@ webpackJsonp([46], {
                                 user_id: h,
                                 tt_content: k,
                                 tt_medium: f,
-                                partner: d,
-                                vod_id: c,
+                                partner: c,
+                                vod_id: d,
                                 vod_type: "clip",
                                 tab_session_id: b,
                                 location: _,
@@ -819,46 +819,46 @@ webpackJsonp([46], {
         var N = n("tGx1");
 
         function E(e) {
-            return o.createElement(k._6, {
+            return o.createElement(k._7, {
                 key: e
-            }, o.createElement(k._6, {
-                position: k._13.Relative
+            }, o.createElement(k._7, {
+                position: k._14.Relative
             }, o.createElement(k.j, {
                 ratio: k.k.Aspect16x9
-            }, o.createElement(k._12, null)), o.createElement(k._6, {
-                position: k._13.Absolute,
+            }, o.createElement(k._13, null)), o.createElement(k._7, {
+                position: k._14.Absolute,
                 attachTop: !0,
                 attachRight: !0,
                 margin: .5
-            }, o.createElement(k._12, {
+            }, o.createElement(k._13, {
                 height: 28,
                 width: 100
-            }))), o.createElement(k._29, {
+            }))), o.createElement(k._30, {
                 margin: {
                     top: .5
                 },
-                fontSize: k.T.Size8
-            }, o.createElement(k._12, {
+                fontSize: k.U.Size8
+            }, o.createElement(k._13, {
                 lineCount: 1,
                 width: 180
-            }), o.createElement(k._12, {
+            }), o.createElement(k._13, {
                 lineCount: 1,
                 width: 120
             })))
         }
 
-        function T(e) {
-            return o.createElement(k._6, {
+        function w(e) {
+            return o.createElement(k._7, {
                 margin: {
                     bottom: 3
                 },
                 key: e
-            }, o.createElement(k.O, {
-                fontSize: k.T.Size5
-            }, o.createElement(k._12, {
+            }, o.createElement(k.P, {
+                fontSize: k.U.Size5
+            }, o.createElement(k._13, {
                 lineCount: 1,
                 width: 100
-            })), o.createElement(k._6, {
+            })), o.createElement(k._7, {
                 margin: {
                     top: 2
                 }
@@ -866,12 +866,12 @@ webpackJsonp([46], {
                 type: k.i.FadeIn,
                 duration: k.g.Medium,
                 enabled: !0
-            }, o.createElement(k._49, {
-                childWidth: k._50.Medium,
-                gutterSize: k._51.Small
+            }, o.createElement(k._50, {
+                childWidth: k._51.Medium,
+                gutterSize: k._52.Small
             }, [1, 2, 3, 4].map(E)))))
         }
-        var O = function(e) {
+        var T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.trackedLoad = !1, t.renderRow = function(e, n) {
@@ -879,12 +879,12 @@ webpackJsonp([46], {
                             var r = t.props.data.clip.relatedClips[e];
                             return o.createElement("div", {
                                 key: e
-                            }, o.createElement(k._6, {
+                            }, o.createElement(k._7, {
                                 padding: {
                                     y: 2
                                 }
-                            }, o.createElement(k.O, {
-                                fontSize: k.T.Size4
+                            }, o.createElement(k.P, {
+                                fontSize: k.U.Size4
                             }, function(e, t) {
                                 if (t.data.clip) switch (e) {
                                     case i.top:
@@ -902,9 +902,9 @@ webpackJsonp([46], {
                                     default:
                                         return null
                                 }
-                            }(e, t.props))), o.createElement(k._49, {
-                                childWidth: k._50.Medium,
-                                gutterSize: k._51.Small
+                            }(e, t.props))), o.createElement(k._50, {
+                                childWidth: k._51.Medium,
+                                gutterSize: k._52.Small
                             }, r.map(function(i, r) {
                                 return o.createElement(b, {
                                     key: i.id,
@@ -938,25 +938,25 @@ webpackJsonp([46], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.trackSelectionLoad(e)
                 }, t.prototype.render = function() {
-                    return this.props.data.clip ? o.createElement(k._6, {
+                    return this.props.data.clip ? o.createElement(k._7, {
                         padding: {
                             top: 1
                         }
-                    }, this.getValidCategories(this.props).map(this.renderRow)) : o.createElement(k._6, null, this.renderPlaceholders())
+                    }, this.getValidCategories(this.props).map(this.renderRow)) : o.createElement(k._7, null, this.renderPlaceholders())
                 }, t.prototype.getValidCategories = function(e) {
                     var t = e.data.clip && e.data.clip.relatedClips;
                     return t ? h.filter(function(e) {
                         return 4 === t[e].length
                     }) : []
                 }, t.prototype.renderPlaceholders = function() {
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         margin: {
                             top: 3
                         }
-                    }, [1, 2, 3].map(T))
+                    }, [1, 2, 3].map(w))
                 }, t
             }(o.Component),
-            w = Object(p.d)("ClipsRecommendations")(Object(m.a)(N)(O)),
+            O = Object(p.d)("ClipsRecommendations")(Object(m.a)(N)(T)),
             F = n("hdYS"),
             R = n("CMkR"),
             I = n("U5tC"),
@@ -972,47 +972,47 @@ webpackJsonp([46], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.data.clip && this.props.data.clip.broadcaster ? o.createElement(k._6, {
+                    return this.props.data.clip && this.props.data.clip.broadcaster ? o.createElement(k._7, {
                         className: "clips-broadcaster-info",
                         padding: 1,
-                        display: k.P.Flex,
+                        display: k.Q.Flex,
                         alignItems: k.c.Center
                     }, o.createElement("a", {
                         target: "_blank",
-                        href: Object(f.d)(this.props.data.clip.broadcaster.login, x)
+                        href: Object(f.c)(this.props.data.clip.broadcaster.login, x)
                     }, o.createElement(k.l, {
                         src: this.props.data.clip.broadcaster.profileImageURL,
                         alt: Object(l.d)("Broadcaster Avatar", "ClipsBroadcasterInfo"),
                         size: 30
-                    })), o.createElement(k._6, {
-                        display: k.P.Flex,
-                        flexDirection: k.R.Column,
+                    })), o.createElement(k._7, {
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Column,
                         flexGrow: 1,
                         margin: {
                             left: 1
                         },
                         ellipsis: !0
                     }, o.createElement("a", {
-                        href: Object(f.d)(this.props.data.clip.broadcaster.login, x)
-                    }, o.createElement(k.O, {
-                        fontSize: k.T.Size4,
-                        type: k._43.Span
-                    }, this.props.data.clip.broadcaster.displayName), !(!this.props.data.clip.broadcaster.stream || !this.props.data.clip.broadcaster.stream.id) && o.createElement(k._6, {
+                        href: Object(f.c)(this.props.data.clip.broadcaster.login, x)
+                    }, o.createElement(k.P, {
+                        fontSize: k.U.Size4,
+                        type: k._44.Span
+                    }, this.props.data.clip.broadcaster.displayName), !(!this.props.data.clip.broadcaster.stream || !this.props.data.clip.broadcaster.stream.id) && o.createElement(k._7, {
                         margin: {
                             left: .5
                         },
-                        display: k.P.InlineBlock
-                    }, o.createElement(k._10, {
+                        display: k.Q.InlineBlock
+                    }, o.createElement(k._11, {
                         label: Object(l.d)("LIVE", "ClipsBroadcasterInfo"),
-                        type: k._11.Live
-                    }))), o.createElement(k._6, null, o.createElement(k.O, {
+                        type: k._12.Live
+                    }))), o.createElement(k._7, null, o.createElement(k.P, {
                         color: k.J.Alt2,
-                        fontSize: k.T.Size5,
+                        fontSize: k.U.Size5,
                         ellipsis: !0
                     }, this.props.data.clip.game && Object(l.d)("playing {gameName}", {
                         gameName: o.createElement("a", {
                             target: "_blank",
-                            href: Object(f.e)(this.props.data.clip.game.name, {
+                            href: Object(f.d)(this.props.data.clip.game.name, {
                                 tt_medium: "clips_web"
                             })
                         }, this.props.data.clip.game.displayName)
@@ -1025,25 +1025,25 @@ webpackJsonp([46], {
                         followUIType: F.b.IconAndText,
                         unfollowUIType: F.b.IconOnly,
                         showLoadingPlaceholder: !0
-                    }))) : o.createElement(k._6, null, this.renderPlaceholders())
+                    }))) : o.createElement(k._7, null, this.renderPlaceholders())
                 }, t.prototype.pauseAutoplayTimer = function() {
                     Object(R.e)(R.b.followButton)
                 }, t.prototype.restartAutoplayTimer = function() {
                     Object(R.g)(R.b.followButton)
                 }, t.prototype.renderPlaceholders = function() {
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         padding: 1,
-                        display: k.P.Flex,
+                        display: k.Q.Flex,
                         alignItems: k.c.Center
-                    }, o.createElement(k._6, null, o.createElement(k.e, {
+                    }, o.createElement(k._7, null, o.createElement(k.e, {
                         type: k.i.FadeIn,
                         duration: k.g.Long,
                         enabled: !0
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         height: 30,
                         width: 30
-                    }))), o.createElement(k._29, {
-                        fontSize: k.T.Size5,
+                    }))), o.createElement(k._30, {
+                        fontSize: k.U.Size5,
                         flexGrow: 1,
                         margin: {
                             x: 1
@@ -1052,7 +1052,7 @@ webpackJsonp([46], {
                         type: k.i.FadeIn,
                         duration: k.g.Long,
                         enabled: !0
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         lineCount: 1,
                         width: 80
                     })), o.createElement(k.e, {
@@ -1060,14 +1060,14 @@ webpackJsonp([46], {
                         duration: k.g.Long,
                         delay: k.f.Short,
                         enabled: !0
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         lineCount: 1,
                         width: 120
-                    }))), o.createElement(k._6, null, o.createElement(k.e, {
+                    }))), o.createElement(k._7, null, o.createElement(k.e, {
                         type: k.i.FadeIn,
                         duration: k.g.Long,
                         enabled: !0
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         height: 30,
                         width: 70
                     }))))
@@ -1075,8 +1075,8 @@ webpackJsonp([46], {
             }(o.Component),
             j = n("RH2O"),
             A = n("Aj/L"),
-            M = n("zCIC"),
-            L = n("XOun"),
+            L = n("zCIC"),
+            M = n("XOun"),
             U = n("0QL4"),
             P = function(e) {
                 function t() {
@@ -1088,24 +1088,24 @@ webpackJsonp([46], {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.data.clip;
-                    if (!e || !e.curator) return o.createElement(k._6, null, this.renderPlaceholders());
-                    var t = Object(f.c)(e.curator.login, {
+                    if (!e || !e.curator) return o.createElement(k._7, null, this.renderPlaceholders());
+                    var t = Object(f.b)(e.curator.login, {
                         tt_medium: "clips_web",
                         tt_content: "curator_name"
                     });
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         ellipsis: this.props.ellipsis
-                    }, e.champBadge && e.champBadge.id && o.createElement(k._6, {
+                    }, e.champBadge && e.champBadge.id && o.createElement(k._7, {
                         margin: {
                             right: .5
                         },
-                        display: k.P.InlineBlock
-                    }, o.createElement(L.a, {
+                        display: k.Q.InlineBlock
+                    }, o.createElement(M.a, {
                         pageType: u.PageviewLocation.ClipsViewing
-                    })), o.createElement(k._0, {
-                        display: k.P.Inline
-                    }, o.createElement(k.O, {
-                        fontSize: this.props.fontSize ? this.props.fontSize : k.T.Size5
+                    })), o.createElement(k._1, {
+                        display: k.Q.Inline
+                    }, o.createElement(k.P, {
+                        fontSize: this.props.fontSize ? this.props.fontSize : k.U.Size5
                     }, Object(l.d)("Clipped by {curatorName}", {
                         curatorName: o.createElement("a", {
                             href: t,
@@ -1120,9 +1120,9 @@ webpackJsonp([46], {
                         duration: k.g.Long,
                         delay: k.f.Medium,
                         enabled: !0
-                    }, o.createElement(k.O, {
-                        fontSize: this.props.fontSize ? this.props.fontSize : k.T.Size5
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k.P, {
+                        fontSize: this.props.fontSize ? this.props.fontSize : k.U.Size5
+                    }, o.createElement(k._13, {
                         lineCount: 1,
                         width: 80
                     })))
@@ -1138,12 +1138,12 @@ webpackJsonp([46], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.data.clip ? o.createElement(k.O, {
-                        fontSize: this.props.fontSize ? this.props.fontSize : k.T.Size3,
-                        type: k._43.Span,
-                        lineHeight: k._7.Heading,
+                    return this.props.data.clip ? o.createElement(k.P, {
+                        fontSize: this.props.fontSize ? this.props.fontSize : k.U.Size3,
+                        type: k._44.Span,
+                        lineHeight: k._8.Heading,
                         ellipsis: this.props.ellipsis
-                    }, this.props.data.clip.title) : o.createElement(k._6, null, this.renderPlaceholders())
+                    }, this.props.data.clip.title) : o.createElement(k._7, null, this.renderPlaceholders())
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.clip && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.renderPlaceholders = function() {
@@ -1152,9 +1152,9 @@ webpackJsonp([46], {
                         duration: k.g.Long,
                         delay: k.f.Short,
                         enabled: !0
-                    }, o.createElement(k.O, {
-                        fontSize: this.props.fontSize ? this.props.fontSize : k.T.Size3
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k.P, {
+                        fontSize: this.props.fontSize ? this.props.fontSize : k.U.Size3
+                    }, o.createElement(k._13, {
                         lineCount: 1,
                         width: 100
                     })))
@@ -1170,28 +1170,28 @@ webpackJsonp([46], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (!this.props.data.clip) return o.createElement(k._6, null, this.renderPlaceholders());
+                    if (!this.props.data.clip) return o.createElement(k._7, null, this.renderPlaceholders());
                     var e = this.props.padding && this.props.padding.bottom,
                         t = void 0 === e ? .5 : e;
-                    return o.createElement(k._6, {
-                        display: k.P.Flex,
+                    return o.createElement(k._7, {
+                        display: k.Q.Flex,
                         alignItems: k.c.Center,
                         padding: {
                             bottom: t
                         }
-                    }, !this.props.hideSymbol && o.createElement(k._6, {
+                    }, !this.props.hideSymbol && o.createElement(k._7, {
                         margin: {
                             right: .5
                         },
-                        display: k.P.Flex,
+                        display: k.Q.Flex,
                         alignItems: k.c.Center
-                    }, o.createElement(k._19, {
-                        asset: k._20.GlyphViews,
-                        type: k._21.Brand
-                    })), o.createElement(k.O, {
+                    }, o.createElement(k._20, {
+                        asset: k._21.GlyphViews,
+                        type: k._22.Brand
+                    })), o.createElement(k.P, {
                         bold: !0,
-                        type: k._43.Span,
-                        fontSize: this.props.fontSize ? this.props.fontSize : k.T.Size5
+                        type: k._44.Span,
+                        fontSize: this.props.fontSize ? this.props.fontSize : k.U.Size5
                     }, Object(l.d)("{views} views", {
                         views: Object(l.e)(this.props.data.clip.viewCount)
                     }, "ClipsViewCount")))
@@ -1202,17 +1202,17 @@ webpackJsonp([46], {
                         type: k.i.FadeIn,
                         duration: k.g.Long,
                         enabled: !0
-                    }, o.createElement(k.O, {
-                        fontSize: this.props.fontSize ? this.props.fontSize : k.T.Size5
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k.P, {
+                        fontSize: this.props.fontSize ? this.props.fontSize : k.U.Size5
+                    }, o.createElement(k._13, {
                         lineCount: 1,
                         width: 80
                     })))
                 }, t = a.__decorate([Object(p.d)("ClipsViewCount"), Object(m.a)(z)], t)
             }(o.Component),
             q = n("QIXk"),
-            H = n("E5Ip"),
-            G = function(e) {
+            Q = n("E5Ip"),
+            H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onFinishedEditing = function() {
@@ -1220,7 +1220,7 @@ webpackJsonp([46], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.data.clip ? o.createElement(k._6, {
+                    return this.props.data.clip ? o.createElement(k._7, {
                         fullWidth: !0,
                         className: "clips-view-title-edit"
                     }, o.createElement(q.a, {
@@ -1231,31 +1231,31 @@ webpackJsonp([46], {
                         location: u.PageviewLocation.ClipsViewing,
                         onCancel: this.onFinishedEditing,
                         onSuccess: this.onFinishedEditing
-                    })) : o.createElement(k._6, null)
-                }, t = a.__decorate([Object(m.a)(H)], t)
+                    })) : o.createElement(k._7, null)
+                }, t = a.__decorate([Object(m.a)(Q)], t)
             }(o.Component),
-            $ = n("mmqR"),
-            K = (n("NjaO"), {
+            G = n("mmqR"),
+            $ = (n("NjaO"), {
                 isChatAutoScrolling: !0,
                 isChatContentCollapsed: !1,
                 isEditingTitle: !1
             }),
-            Q = function(e) {
+            K = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = K, t.scrollPosition = 0, t.renderClipTitle = function() {
+                    return t.state = $, t.scrollPosition = 0, t.renderClipTitle = function() {
                         var e = t.props.data.clip,
                             n = e && e.curator && e.curator.login,
                             i = t.props.slug;
-                        if (t.state.isEditingTitle) return o.createElement(G, {
+                        if (t.state.isEditingTitle) return o.createElement(H, {
                             slug: i,
                             editTitleToggle: t.editTitleToggle
                         });
-                        var a = o.createElement(k._6, {
+                        var a = o.createElement(k._7, {
                             alignItems: k.c.Center,
-                            display: k.P.Flex,
-                            flexDirection: k.R.Row,
-                            justifyContent: k._5.Start,
+                            display: k.Q.Flex,
+                            flexDirection: k.S.Row,
+                            justifyContent: k._6.Start,
                             margin: {
                                 y: 1
                             },
@@ -1264,16 +1264,16 @@ webpackJsonp([46], {
                             slug: i,
                             ellipsis: !0
                         }));
-                        return t.props.userLogin !== n ? o.createElement(k._6, null, o.createElement(V, {
+                        return t.props.userLogin !== n ? o.createElement(k._7, null, o.createElement(V, {
                             slug: i
-                        }), a) : o.createElement(k._6, null, o.createElement("div", {
+                        }), a) : o.createElement(k._7, null, o.createElement("div", {
                             className: "clips-chat__edit",
                             onClick: t.editTitleToggle,
                             "data-test-selector": "clips-chat-card-edit"
                         }, o.createElement(V, {
                             slug: i
-                        }), o.createElement(k._19, {
-                            asset: k._20.Edit
+                        }), o.createElement(k._20, {
+                            asset: k._21.Edit
                         })), a)
                     }, t.setChatContentRef = function(e) {
                         t.chatContentRef = e
@@ -1292,44 +1292,44 @@ webpackJsonp([46], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    this.scrollableAreaEl && e.slug !== this.props.slug && (this.scrollPosition = 0, this.scrollableAreaEl.scrollTop = 0, this.setState(K))
+                    this.scrollableAreaEl && e.slug !== this.props.slug && (this.scrollPosition = 0, this.scrollableAreaEl.scrollTop = 0, this.setState($))
                 }, t.prototype.componentDidMount = function() {
                     this.addScrollableAreaEventListener()
                 }, t.prototype.render = function() {
                     var e = this.props.slug;
-                    return o.createElement(k._6, {
-                        display: k.P.Flex,
-                        flexDirection: k.R.Column,
-                        position: k._13.Relative,
+                    return o.createElement(k._7, {
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Column,
+                        position: k._14.Relative,
                         flexGrow: 1
-                    }, o.createElement(k._6, {
-                        position: k._13.Absolute,
+                    }, o.createElement(k._7, {
+                        position: k._14.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0
-                    }, this.state.isChatContentCollapsed && o.createElement(ce, {
+                    }, this.state.isChatContentCollapsed && o.createElement(de, {
                         slug: e
-                    }), o.createElement(M.b, {
+                    }), o.createElement(L.b, {
                         className: "clips-chat",
                         contentClassName: "clips-chat__content",
                         contentRef: this.setScrollableAreaEl,
                         suppressScrollX: !0
-                    }, o.createElement(k._6, {
+                    }, o.createElement(k._7, {
                         padding: {
                             x: 1
                         },
-                        display: k.P.Flex,
-                        flexDirection: k.R.Column,
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Column,
                         fullWidth: !0
-                    }, o.createElement(k._6, {
+                    }, o.createElement(k._7, {
                         className: "clips-chat-info",
                         flexShrink: 1,
                         flexGrow: 1,
-                        display: k.P.Flex,
+                        display: k.Q.Flex,
                         alignItems: k.c.Start,
-                        justifyContent: k._5.Center,
-                        flexDirection: k.R.Column,
+                        justifyContent: k._6.Center,
+                        flexDirection: k.S.Column,
                         margin: {
                             top: 1
                         },
@@ -1341,19 +1341,19 @@ webpackJsonp([46], {
                         refDelegate: this.setChatContentRef
                     }, o.createElement(W, {
                         slug: e
-                    }), this.renderClipTitle()), o.createElement(de, {
+                    }), this.renderClipTitle()), o.createElement(ce, {
                         autoScrollChatToBottom: this.autoScrollChatToBottom,
                         videoOffsetSeconds: this.props.data.clip ? this.props.data.clip.videoOffsetSeconds : null,
                         slug: e
                     }), this.renderMoreChatButton()))))
                 }, t.prototype.renderMoreChatButton = function() {
-                    return !this.props.data.clip || this.props.data.clip && !this.props.data.clip.video || this.state.isChatAutoScrolling ? null : o.createElement(k._6, {
+                    return !this.props.data.clip || this.props.data.clip && !this.props.data.clip.video || this.state.isChatAutoScrolling ? null : o.createElement(k._7, {
                         alignItems: k.c.Center,
                         attachBottom: !0,
                         attachLeft: !0,
-                        display: k.P.Flex,
-                        flexDirection: k.R.Column,
-                        position: k._13.Absolute,
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Column,
+                        position: k._14.Absolute,
                         fullWidth: !0
                     }, o.createElement(k.u, {
                         size: k.y.Small,
@@ -1381,12 +1381,12 @@ webpackJsonp([46], {
                     } catch (e) {
                         t = Object(l.d)("N/A", "ClipsInfoCard")
                     }
-                    return o.createElement(k._29, {
-                        display: k.P.Flex,
-                        fontSize: k.T.Size5
-                    }, o.createElement(k.O, {
-                        type: k._43.Span
-                    }, t), o.createElement(k._6, {
+                    return o.createElement(k._30, {
+                        display: k.Q.Flex,
+                        fontSize: k.U.Size5
+                    }, o.createElement(k.P, {
+                        type: k._44.Span
+                    }, t), o.createElement(k._7, {
                         margin: {
                             x: .5
                         }
@@ -1404,7 +1404,7 @@ webpackJsonp([46], {
                     configurable: !0
                 }), t.prototype.percentScrolled = function(e) {
                     return e.scrollTop / (e.scrollHeight - e.clientHeight)
-                }, t = a.__decorate([Object(m.a)($), Object(p.d)("ClipsChatCard", {
+                }, t = a.__decorate([Object(m.a)(G), Object(p.d)("ClipsChatCard", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component);
@@ -1413,7 +1413,7 @@ webpackJsonp([46], {
                 return {
                     userLogin: t && t.login
                 }
-            })(Q),
+            })(K),
             Y = n("3T7g"),
             X = n("+V/3"),
             Z = n("8RKZ"),
@@ -1428,7 +1428,7 @@ webpackJsonp([46], {
                         i = n.chatColor,
                         a = n.displayName,
                         r = n.login;
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         margin: {
                             bottom: 1
                         }
@@ -1442,8 +1442,8 @@ webpackJsonp([46], {
                         chatColor: i,
                         displayName: a,
                         login: r
-                    }), o.createElement(k._6, {
-                        display: k.P.InlineBlock,
+                    }), o.createElement(k._7, {
+                        display: k.Q.InlineBlock,
                         margin: {
                             right: .5
                         }
@@ -1486,13 +1486,13 @@ webpackJsonp([46], {
                         n = e.displayName,
                         i = e.login;
                     return o.createElement("a", {
-                        href: Object(f.d)(i),
+                        href: Object(f.c)(i),
                         style: {
                             color: t
                         }
-                    }, o.createElement(k.O, {
-                        type: k._43.Span,
-                        fontSize: k.T.Size5,
+                    }, o.createElement(k.P, {
+                        type: k._44.Span,
+                        fontSize: k.U.Size5,
                         bold: !0
                     }, n))
                 }, t.prototype.renderFragments = function(e) {
@@ -1500,8 +1500,8 @@ webpackJsonp([46], {
                     return e.map(function(e, n) {
                         var i = e.emote,
                             a = e.text;
-                        return o.createElement(k._6, {
-                            display: k.P.Inline,
+                        return o.createElement(k._7, {
+                            display: k.Q.Inline,
                             key: n
                         }, i ? t.renderFragmentEmote(i, a) : t.renderFragmentText(a))
                     })
@@ -1519,9 +1519,9 @@ webpackJsonp([46], {
                         }
                     })
                 }, t.prototype.renderFragmentText = function(e) {
-                    return o.createElement(k.O, {
-                        type: k._43.Span,
-                        fontSize: k.T.Size5,
+                    return o.createElement(k.P, {
+                        type: k._44.Span,
+                        fontSize: k.U.Size5,
                         color: k.J.Alt
                     }, e)
                 }, t
@@ -1571,14 +1571,14 @@ webpackJsonp([46], {
                         t = e && e.video;
                     if (!e || !t || !t.comments || this.props.data.error || !this.props.videoOffsetSeconds) return null;
                     var n = t.comments.edges.filter(this.filterChatLines);
-                    return 0 === n.length ? null : o.createElement(k._6, {
+                    return 0 === n.length ? null : o.createElement(k._7, {
                         className: "clips-chat-replay",
                         flexGrow: 1,
                         flexShrink: 0,
-                        display: k.P.Flex,
-                        flexDirection: k.R.Column,
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Column,
                         alignItems: k.c.Start,
-                        justifyContent: k._5.End,
+                        justifyContent: k._6.End,
                         margin: {
                             top: 1
                         }
@@ -1636,59 +1636,59 @@ webpackJsonp([46], {
                     })
                 }
             })(le),
-            de = Object(ne.t)({
+            ce = Object(ne.t)({
                 playerId: function(e) {
                     return e.slug
                 },
                 requestedPlayerProps: ["currentTime"]
             })(se),
-            ce = function(e) {
+            de = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(k._29, {
+                    return o.createElement(k._30, {
                         alignItems: k.c.Center,
                         attachTop: !0,
                         className: "clips-chat-title",
-                        display: k.P.Flex,
-                        flexDirection: k.R.Row,
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Row,
                         fullWidth: !0,
-                        position: k._13.Absolute,
-                        justifyContent: k._5.Start,
+                        position: k._14.Absolute,
+                        justifyContent: k._6.Start,
                         background: k.m.Base,
                         borderBottom: !0,
-                        zIndex: k._55.Default,
+                        zIndex: k._56.Default,
                         padding: 1
                     }, o.createElement(V, {
-                        fontSize: k.T.Size5,
+                        fontSize: k.U.Size5,
                         slug: this.props.slug,
                         ellipsis: !0
-                    }), o.createElement(k._6, {
+                    }), o.createElement(k._7, {
                         flexShrink: 0,
                         margin: {
                             x: .5
                         }
-                    }, o.createElement(k.O, {
-                        type: k._43.Span
-                    }, "•")), o.createElement(k._6, {
+                    }, o.createElement(k.P, {
+                        type: k._44.Span
+                    }, "•")), o.createElement(k._7, {
                         flexShrink: 0
                     }, o.createElement(W, {
                         padding: {
                             bottom: 0
                         },
                         slug: this.props.slug,
-                        fontSize: k.T.Size6,
+                        fontSize: k.U.Size6,
                         hideSymbol: !0
-                    })), o.createElement(k._6, {
+                    })), o.createElement(k._7, {
                         margin: {
                             x: .5
                         }
-                    }, o.createElement(k.O, {
-                        type: k._43.Span
+                    }, o.createElement(k.P, {
+                        type: k._44.Span
                     }, "•")), o.createElement(P, {
                         slug: this.props.slug,
-                        fontSize: k.T.Size6,
+                        fontSize: k.U.Size6,
                         ellipsis: !0
                     }))
                 }, t
@@ -1710,16 +1710,16 @@ webpackJsonp([46], {
                         onMouseLeave: this.restartAutoplayTimer
                     }, o.createElement(k.u, {
                         targetBlank: !0,
-                        linkTo: Object(f.g)(this.props.data.clip.video.id, {
+                        linkTo: Object(f.f)(this.props.data.clip.video.id, {
                             t: Object(ue.a)(this.props.data.clip.video.offsetSeconds),
                             tt_medium: "clips_web",
                             tt_content: "full_vod_button"
                         })
                     }, Object(pe.d)("Watch Full Video", "ClipsFullVideoButton"))) : o.createElement(k.u, {
                         disabled: !0
-                    }, Object(pe.d)("Full Video Unavailable", "ClipsFullVideoButton")), o.createElement(k._6, {
-                        display: k.P.InlineBlock
-                    }, e)) : o.createElement(k._6, null, this.renderPlaceholders());
+                    }, Object(pe.d)("Full Video Unavailable", "ClipsFullVideoButton")), o.createElement(k._7, {
+                        display: k.Q.InlineBlock
+                    }, e)) : o.createElement(k._7, null, this.renderPlaceholders());
                     var e
                 }, t.prototype.pauseAutoplayTimer = function() {
                     Object(R.e)(R.b.fullVideoButton)
@@ -1732,7 +1732,7 @@ webpackJsonp([46], {
                         type: k.i.FadeIn,
                         duration: k.g.Long,
                         enabled: !0
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         width: 108,
                         height: 28
                     }))
@@ -1778,16 +1778,16 @@ webpackJsonp([46], {
                                 "clips-emote-button--selected": n.props.hasReacted
                             }),
                             t = null;
-                        return n.props.count && (t = o.createElement(k._6, {
+                        return n.props.count && (t = o.createElement(k._7, {
                             className: "clips-emote-button__count",
                             margin: {
                                 left: .5
                             }
-                        }, o.createElement(k.O, {
-                            align: k._53.Middle,
+                        }, o.createElement(k.P, {
+                            align: k._54.Middle,
                             bold: n.props.hasReacted
-                        }, n.props.count))), o.createElement(k._1, {
-                            display: k.P.Flex,
+                        }, n.props.count))), o.createElement(k._2, {
+                            display: k.Q.Flex,
                             alignItems: k.c.Center,
                             padding: {
                                 x: 1
@@ -1800,7 +1800,7 @@ webpackJsonp([46], {
                             className: e,
                             onClick: n.props.hasReacted ? n.removeReaction : n.addReaction,
                             "data-test-selector": "clips-emote-button"
-                        }, o.createElement(k._6, {
+                        }, o.createElement(k._7, {
                             alignContent: k.b.Center,
                             className: "clips-emote-button__emote"
                         }, o.createElement(k.e, {
@@ -1808,7 +1808,7 @@ webpackJsonp([46], {
                             duration: k.g.Long,
                             enabled: n.state.isAnimating,
                             onAnimationEnd: n.handleAnimationEnd
-                        }, o.createElement(k._1, {
+                        }, o.createElement(k._2, {
                             fullWidth: !0
                         }, o.createElement("img", {
                             src: Object(Se.e)(n.props.emote.id, 1)
@@ -1818,7 +1818,7 @@ webpackJsonp([46], {
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.hideTooltip ? this.renderEmote() : o.createElement(k._46, {
+                    return this.props.hideTooltip ? this.renderEmote() : o.createElement(k._47, {
                         label: this.getToken(this.props.emote.token)
                     }, this.renderEmote())
                 }, t.prototype.handleAnimationEnd = function() {
@@ -1832,7 +1832,7 @@ webpackJsonp([46], {
             }(o.Component)),
             Ee = n("Ldv2");
         n("axV2");
-        var Te = function(e) {
+        var we = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -1841,10 +1841,10 @@ webpackJsonp([46], {
                     var i = _e({
                         "clips-emote-picker__emote-set": n < t.getEmoteSets().length - 1
                     });
-                    return o.createElement(k._6, {
-                        display: k.P.Flex,
-                        flexDirection: k.R.Row,
-                        flexWrap: k.S.Wrap,
+                    return o.createElement(k._7, {
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Row,
+                        flexWrap: k.T.Wrap,
                         key: "emote-set-" + e.id,
                         margin: {
                             left: 1
@@ -1856,7 +1856,7 @@ webpackJsonp([46], {
                             return t.emote.id === e.id
                         }),
                         i = !(!n || !n.self.hasReacted);
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         className: "clips-emote-picker__emote",
                         key: "emote-" + e.id
                     }, o.createElement(Ne, {
@@ -1892,34 +1892,34 @@ webpackJsonp([46], {
             }, t.prototype.componentWillReceiveProps = function(e) {
                 this.attemptReportInteractive(e)
             }, t.prototype.render = function() {
-                return o.createElement(k._6, {
+                return o.createElement(k._7, {
                     className: "clips-user-emotes"
-                }, o.createElement(k._6, {
+                }, o.createElement(k._7, {
                     margin: {
                         left: 1,
                         right: 1,
                         bottom: 1
                     }
-                }, o.createElement(k._2, {
-                    type: k._3.Search,
+                }, o.createElement(k._3, {
+                    type: k._4.Search,
                     onChange: this.onEmoteSearchTextChange,
                     placeholder: Object(l.d)("Search for Emotes", "ClipsReactionCarousel"),
                     spellCheck: !1
-                })), o.createElement(k._6, {
-                    display: k.P.Flex,
-                    flexDirection: k.R.Column,
-                    flexWrap: k.S.Wrap
+                })), o.createElement(k._7, {
+                    display: k.Q.Flex,
+                    flexDirection: k.S.Column,
+                    flexWrap: k.T.Wrap
                 }, this.getEmoteSets().slice().reverse().map(this.renderEmoteSet)))
             }, t.prototype.attemptReportInteractive = function(e) {
                 !this.getEmoteSets(e).length && e.isLoggedIn || this.props.latencyTracking.reportInteractive()
             }, t = a.__decorate([Object(Ee.a)(), Object(p.d)("ClipsUserEmotes")], t)
         }(o.Component);
-        var Oe = Object(j.b)(function(e) {
+        var Te = Object(j.b)(function(e) {
                 return {
                     isLoggedIn: Object(A.d)(e)
                 }
-            })(Te),
-            we = (n("dRtS"), function(e) {
+            })(we),
+            Oe = (n("dRtS"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1927,7 +1927,7 @@ webpackJsonp([46], {
                     }, t.filterReaction = function(e) {
                         return e.count > 0
                     }, t.renderReaction = function(e) {
-                        return o.createElement(k._6, {
+                        return o.createElement(k._7, {
                             margin: {
                                 right: .5,
                                 bottom: .5
@@ -1949,50 +1949,50 @@ webpackJsonp([46], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.sortedReactions.length >= 7,
                         t = this.state.showHiddenReactions || !e ? this.props.sortedReactions : this.props.sortedReactions.slice(0, 5);
-                    return o.createElement(k._29, {
+                    return o.createElement(k._30, {
                         margin: {
                             bottom: .5,
                             left: 0
                         },
-                        zIndex: k._55.Above,
+                        zIndex: k._56.Above,
                         className: "clips-emote-picker"
-                    }, o.createElement(M.b, {
+                    }, o.createElement(L.b, {
                         suppressScrollX: !0
-                    }, o.createElement(k._6, {
+                    }, o.createElement(k._7, {
                         className: "clips-emote-picker__content"
-                    }, o.createElement(k._6, {
+                    }, o.createElement(k._7, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(k._6, {
+                    }, o.createElement(k._7, {
                         margin: {
                             left: 1
                         },
                         padding: {
                             y: .5
                         }
-                    }, o.createElement(k.O, null, Object(l.d)("Reactions", "ClipsReactionCarousel"))), o.createElement(k._6, {
-                        display: k.P.Flex,
-                        flexDirection: k.R.Row,
-                        flexWrap: k.S.Wrap,
+                    }, o.createElement(k.P, null, Object(l.d)("Reactions", "ClipsReactionCarousel"))), o.createElement(k._7, {
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Row,
+                        flexWrap: k.T.Wrap,
                         padding: {
                             y: .5
                         },
                         margin: {
                             left: 1
                         }
-                    }, t.filter(this.filterReaction).map(this.renderReaction), e && o.createElement(k._6, {
+                    }, t.filter(this.filterReaction).map(this.renderReaction), e && o.createElement(k._7, {
                         margin: {
                             bottom: .5
                         },
-                        display: k.P.Flex,
+                        display: k.Q.Flex,
                         alignItems: k.c.Center
                     }, o.createElement(k.v, {
                         ariaLabel: this.state.showHiddenReactions ? Object(l.d)("Show less reactions", "ClipsReactionCarousel") : Object(l.d)("Show more reactions", "ClipsReactionCarousel"),
                         onClick: this.toggleShowHiddenReactions,
                         "data-test-selector": "clips-emote-picker-toggler",
-                        icon: this.state.showHiddenReactions ? k._20.AngleLeft : k._20.AngleRight
-                    })))), o.createElement(Oe, {
+                        icon: this.state.showHiddenReactions ? k._21.AngleLeft : k._21.AngleRight
+                    })))), o.createElement(Te, {
                         addClipReaction: this.props.addClipReaction,
                         removeClipReaction: this.props.removeClipReaction,
                         sortedReactions: this.props.sortedReactions
@@ -2026,7 +2026,7 @@ webpackJsonp([46], {
                             onClick: e
                         };
                         return o.createElement(k.v, a.__assign({
-                            icon: k._20.Plus,
+                            icon: k._21.Plus,
                             type: k.x.Hollow,
                             ariaLabel: Object(l.d)("Open Emote Picker", "ClipsReactionCarousel"),
                             "data-test-selector": "social-share-button",
@@ -2035,28 +2035,28 @@ webpackJsonp([46], {
                         }, t))
                     }, n.renderEmotePickerBalloon = function() {
                         return o.createElement(ke.a, {
-                            display: k.P.InlineBlock,
+                            display: k.Q.InlineBlock,
                             onToggle: n.handleAutoplayTimer,
                             ref: n.saveBalloonWrapperRef
                         }, n.renderPlusButton(), o.createElement(k.p, {
                             direction: k.q.Top,
                             noTail: !0
-                        }, o.createElement(we, {
+                        }, o.createElement(Oe, {
                             addClipReaction: n.addClipReaction,
                             removeClipReaction: n.removeClipReaction,
                             sortedReactions: n.state.sortedReactions
                         })))
                     }, n.renderLoginPromptBalloon = function() {
-                        return o.createElement(k._46, {
-                            direction: k._48.Top,
+                        return o.createElement(k._47, {
+                            direction: k._49.Top,
                             label: Object(l.d)("To react to this clip, log in or create a Twitch account.", "ClipsReactionCarousel"),
                             width: 200
                         }, n.renderPlusButton(n.props.login))
                     }, n.renderReaction = function(e, t) {
                         var i = t === n.state.activeReactionIndex;
-                        return o.createElement(k._0, {
-                            display: k.P.InlineBlock,
-                            position: k._13.Absolute,
+                        return o.createElement(k._1, {
+                            display: k.Q.InlineBlock,
+                            position: k._14.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             key: e.emote.id
@@ -2145,23 +2145,23 @@ webpackJsonp([46], {
                         sortedReactions: []
                     }), e.slug !== this.props.slug && this.balloonWrapperRef && this.balloonWrapperRef.state.showBalloon && this.balloonWrapperRef.toggleBalloon(!1)
                 }, t.prototype.render = function() {
-                    return this.props.data.clip ? o.createElement(k._6, {
-                        display: k.P.Flex,
+                    return this.props.data.clip ? o.createElement(k._7, {
+                        display: k.Q.Flex,
                         flexGrow: 1
-                    }, o.createElement(k._6, {
-                        zIndex: k._55.Default,
+                    }, o.createElement(k._7, {
+                        zIndex: k._56.Default,
                         padding: {
                             y: 1
                         }
-                    }, this.props.isLoggedIn ? this.renderEmotePickerBalloon() : this.renderLoginPromptBalloon()), o.createElement(k._6, {
+                    }, this.props.isLoggedIn ? this.renderEmotePickerBalloon() : this.renderLoginPromptBalloon()), o.createElement(k._7, {
                         padding: {
                             y: 1
                         },
-                        overflow: k._9.Hidden,
+                        overflow: k._10.Hidden,
                         flexGrow: 1
-                    }, o.createElement(k._6, {
-                        position: k._13.Relative
-                    }, this.state.sortedReactions.map(this.renderReaction)))) : o.createElement(k._6, null, this.renderPlaceholders())
+                    }, o.createElement(k._7, {
+                        position: k._14.Relative
+                    }, this.state.sortedReactions.map(this.renderReaction)))) : o.createElement(k._7, null, this.renderPlaceholders())
                 }, t.prototype.initializeSortedReactions = function(e) {
                     if (void 0 === e && (e = this.props), e.data.clip && e.data.clip.reactions && e.slug === e.data.clip.slug) {
                         this.hasInitializedSortedReactions = !0;
@@ -2203,16 +2203,16 @@ webpackJsonp([46], {
                 }, t.prototype.handleAutoplayTimer = function(e) {
                     e ? Object(R.g)(R.b.emotePicker) : Object(R.e)(R.b.emotePicker)
                 }, t.prototype.renderPlaceholders = function() {
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         padding: {
                             y: 1
                         },
-                        display: k.P.Flex
+                        display: k.Q.Flex
                     }, o.createElement(k.e, {
                         type: k.i.FadeIn,
                         duration: k.g.Long,
                         enabled: !0
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         height: 36,
                         width: 36
                     })))
@@ -2235,32 +2235,32 @@ webpackJsonp([46], {
                     }
                 }, e)
             })(je),
-            Me = (n("mK8J"), function(e) {
+            Le = (n("mK8J"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.slug;
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         className: "clips-sidebar",
-                        display: k.P.Flex,
-                        flexDirection: k.R.Column
-                    }, o.createElement(k._29, {
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Column
+                    }, o.createElement(k._30, {
                         borderBottom: !0
                     }, o.createElement(D, {
                         slug: e
-                    })), o.createElement(k._6, {
+                    })), o.createElement(k._7, {
                         className: "clips-sidebar-info",
-                        display: k.P.Flex,
-                        flexDirection: k.R.Column,
-                        justifyContent: k._5.Around
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Column,
+                        justifyContent: k._6.Around
                     }, o.createElement(J, {
                         slug: e
-                    })), o.createElement(k._29, {
+                    })), o.createElement(k._30, {
                         borderTop: !0
-                    }, o.createElement(k._6, {
-                        display: k.P.Flex,
-                        justifyContent: k._5.Between,
+                    }, o.createElement(k._7, {
+                        display: k.Q.Flex,
+                        justifyContent: k._6.Between,
                         alignItems: k.c.Center,
                         padding: {
                             x: 1
@@ -2272,9 +2272,9 @@ webpackJsonp([46], {
                     }))))
                 }, t
             }(o.Component)),
-            Le = Object(p.d)("ClipsSidebar", {
+            Me = Object(p.d)("ClipsSidebar", {
                 autoReportInteractive: !0
-            })(Me),
+            })(Le),
             Ue = n("V5M+"),
             Pe = n("xX9u"),
             Be = n("8Wuk"),
@@ -2282,9 +2282,9 @@ webpackJsonp([46], {
             ze = n("sEID"),
             We = n("46tX"),
             qe = n("+8VM"),
-            He = n("C5rq"),
-            Ge = n("QX2Z"),
-            $e = (n("u0B+"), function(e) {
+            Qe = n("C5rq"),
+            He = n("QX2Z"),
+            Ge = (n("u0B+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2292,36 +2292,36 @@ webpackJsonp([46], {
                         shareMessage: ""
                     }, t.renderHasNotShared = function() {
                         var e = t.props.data.clip,
-                            n = e && e.broadcaster && e.curator && e.game && o.createElement(k._29, {
+                            n = e && e.broadcaster && e.curator && e.game && o.createElement(k._30, {
                                 padding: 1,
                                 borderTop: !0,
                                 borderBottom: !0,
-                                display: k.P.Flex,
-                                flexDirection: k.R.Row
+                                display: k.Q.Flex,
+                                flexDirection: k.S.Row
                             }, o.createElement(k.D, {
                                 aspect: k.k.Aspect16x9,
                                 alt: Object(l.d)("Clip thumbnail image", "ClipsFeedShare"),
                                 src: e.thumbnailURL,
                                 size: k.E.Size8
-                            }), o.createElement(k._6, {
-                                display: k.P.Flex,
-                                flexDirection: k.R.Column,
+                            }), o.createElement(k._7, {
+                                display: k.Q.Flex,
+                                flexDirection: k.S.Column,
                                 padding: {
                                     left: 1
                                 }
-                            }, o.createElement(k.O, {
+                            }, o.createElement(k.P, {
                                 color: k.J.Alt2,
-                                fontSize: k.T.Size4
+                                fontSize: k.U.Size4
                             }, Object(l.d)("{broadcasterDisplayName} playing {gameDisplayName}", {
                                 broadcasterDisplayName: e.broadcaster.displayName,
                                 gameDisplayName: e.game.displayName
-                            }, "ClipsFeedShare")), o.createElement(k.O, {
+                            }, "ClipsFeedShare")), o.createElement(k.P, {
                                 color: k.J.Alt2
                             }, Object(l.d)("clipped by {curatorName}", {
                                 curatorName: e.curator.displayName
                             }, "ClipsFeedShare"))));
-                        return o.createElement("div", null, o.createElement(k._29, {
-                            display: k.P.Flex,
+                        return o.createElement("div", null, o.createElement(k._30, {
+                            display: k.Q.Flex,
                             padding: 1
                         }, o.createElement(k.l, {
                             alt: Object(l.d)("User Avatar", "ClipsFeedShare"),
@@ -2331,39 +2331,39 @@ webpackJsonp([46], {
                             value: t.state.shareMessage,
                             onChange: t.handleMessageEdit,
                             placeholder: Object(l.d)("Add a description...", "ClipsFeedShare")
-                        })), n, o.createElement(k._29, {
+                        })), n, o.createElement(k._30, {
                             padding: 1,
-                            display: k.P.Flex,
-                            justifyContent: k._5.End
-                        }, t.getCloseButton(), o.createElement(k._6, {
+                            display: k.Q.Flex,
+                            justifyContent: k._6.End
+                        }, t.getCloseButton(), o.createElement(k._7, {
                             padding: {
                                 left: 1
                             },
-                            display: k.P.InlineBlock
+                            display: k.Q.InlineBlock
                         }, o.createElement(k.u, {
                             "data-test-selector": "clips-feed-share-submit",
                             type: k.A.Default,
                             onClick: t.createFeedPost
                         }, Object(l.d)("Share", "ClipsFeedShare")))))
                     }, t.renderHasShared = function() {
-                        return o.createElement(k._6, null, o.createElement(k._29, {
+                        return o.createElement(k._7, null, o.createElement(k._30, {
                             padding: {
                                 x: 1,
                                 y: 2
                             },
                             color: k.J.Link
-                        }, o.createElement(k.O, {
-                            fontSize: k.T.Size4
-                        }, Object(l.d)("Clip Shared", "ClipsFeedShare"))), o.createElement(k._29, {
+                        }, o.createElement(k.P, {
+                            fontSize: k.U.Size4
+                        }, Object(l.d)("Clip Shared", "ClipsFeedShare"))), o.createElement(k._30, {
                             padding: 1
-                        }, o.createElement(k.O, {
-                            fontSize: k.T.Size5
+                        }, o.createElement(k.P, {
+                            fontSize: k.U.Size5
                         }, Object(l.d)("Your clip was successfully shared to your Channel Feed.", "ClipsFeedShare"), " ", o.createElement("a", {
-                            href: Object(f.c)(t.props.login)
-                        }, Object(l.d)("View it now", "ClipsFeedShare")))), o.createElement(k._29, {
+                            href: Object(f.b)(t.props.login)
+                        }, Object(l.d)("View it now", "ClipsFeedShare")))), o.createElement(k._30, {
                             padding: 1,
-                            display: k.P.Flex,
-                            justifyContent: k._5.End,
+                            display: k.Q.Flex,
+                            justifyContent: k._6.End,
                             borderTop: !0
                         }, t.getCloseButton()))
                     }, t.createFeedPost = function() {
@@ -2380,11 +2380,11 @@ webpackJsonp([46], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e;
-                    return e = this.props.data.clip ? this.state.hasShared ? this.renderHasShared() : this.renderHasNotShared() : o.createElement(k._6, null), o.createElement(k._6, {
+                    return e = this.props.data.clip ? this.state.hasShared ? this.renderHasShared() : this.renderHasNotShared() : o.createElement(k._7, null), o.createElement(k._7, {
                         className: "clips-feed-share"
                     }, o.createElement(qe.a, {
                         closeOnBackdropClick: !0
-                    }), o.createElement(k._29, {
+                    }), o.createElement(k._30, {
                         background: k.m.Alt
                     }, e))
                 }, t.prototype.getCloseButton = function() {
@@ -2395,21 +2395,21 @@ webpackJsonp([46], {
                     }, Object(l.d)("Close", "ClipsFeedShare"))
                 }, t
             }(o.Component)),
-            Ke = Object(m.a)(He)(Object(m.a)(Ge, {
+            $e = Object(m.a)(Qe)(Object(m.a)(He, {
                 props: function(e) {
                     return {
                         createPost: function(t) {
                             if (e.mutate) return e.mutate(a.__assign({}, Object(te.a)({
                                 channelID: e.ownProps.userId,
                                 body: t,
-                                embedURLs: [Object(f.b)(e.ownProps.slug)],
+                                embedURLs: [Object(f.a)(e.ownProps.slug)],
                                 postToTwitter: !1
                             })))
                         }
                     }
                 }
-            })(Object(p.d)("ClipsFeedShare")($e)));
-        var Qe, Je = Object(j.b)(function(e) {
+            })(Object(p.d)("ClipsFeedShare")(Ge)));
+        var Ke, Je = Object(j.b)(function(e) {
                 var t = Object(A.c)(e);
                 return {
                     userId: t ? t.id : "",
@@ -2419,14 +2419,14 @@ webpackJsonp([46], {
                 return Object(ge.b)({
                     closeModal: Ue.c
                 }, e)
-            })(Ke),
+            })($e),
             Ye = n("rCmJ"),
             Xe = n("2hJ3"),
             Ze = n("f6Cj");
         n("Jjeq");
         ! function(e) {
             e.ChannelFeed = "channel_feed"
-        }(Qe || (Qe = {}));
+        }(Ke || (Ke = {}));
         var et = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -2438,30 +2438,30 @@ webpackJsonp([46], {
                         t.onShareClick(), Object(Xe.a)(t.getUrl())
                     }, t.renderIcon = function() {
                         var e = t.getAssetFromType();
-                        return o.createElement(k._6, {
+                        return o.createElement(k._7, {
                             className: "clips-mobile-share-sheet__share-icon clips-social-button__icon " + t.addSocialClassModifier("clips-social-button__icon")
-                        }, o.createElement(k._19, {
+                        }, o.createElement(k._20, {
                             asset: e,
                             fill: !0
                         }))
                     }, t.isLink = function() {
-                        return t.props.type !== Be.b.Copy && t.props.type !== Qe.ChannelFeed
+                        return t.props.type !== Be.b.Copy && t.props.type !== Ke.ChannelFeed
                     }, t.getAssetFromType = function() {
                         switch (t.props.type) {
                             case Be.b.Twitter:
-                                return k._20.Twitter;
+                                return k._21.Twitter;
                             case Be.b.Facebook:
-                                return k._20.Facebook;
+                                return k._21.Facebook;
                             case Be.b.VKontakte:
-                                return k._20.VKontakte;
+                                return k._21.VKontakte;
                             case Be.b.Reddit:
-                                return k._20.Reddit;
+                                return k._21.Reddit;
                             case Be.b.Copy:
-                                return k._20.Copy;
-                            case Qe.ChannelFeed:
-                                return k._20.LogoGlitch;
+                                return k._21.Copy;
+                            case Ke.ChannelFeed:
+                                return k._21.LogoGlitch;
                             default:
-                                return k._20.Copy
+                                return k._21.Copy
                         }
                     }, t.getLabelFromType = function() {
                         switch (t.props.type) {
@@ -2475,7 +2475,7 @@ webpackJsonp([46], {
                                 return Object(l.d)("Reddit", "ClipsSocialShare");
                             case Be.b.Copy:
                                 return Object(l.d)("Copy", "ClipsSocialShare");
-                            case Qe.ChannelFeed:
+                            case Ke.ChannelFeed:
                                 return Object(l.d)("Pulse", "ClipsSocialShare");
                             default:
                                 return ""
@@ -2492,7 +2492,7 @@ webpackJsonp([46], {
                                 return e + "--vkontakte";
                             case Be.b.Copy:
                                 return e + "--copy";
-                            case Qe.ChannelFeed:
+                            case Ke.ChannelFeed:
                                 return e + "--pulse";
                             default:
                                 return ""
@@ -2518,21 +2518,21 @@ webpackJsonp([46], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    var e = o.createElement(k._6, {
+                    var e = o.createElement(k._7, {
                         className: "clips-mobile-share-sheet__row",
-                        display: k.P.Flex,
+                        display: k.Q.Flex,
                         alignItems: k.c.Center,
                         key: this.props.type,
                         margin: {
                             bottom: 1,
                             x: 2
                         }
-                    }, this.renderIcon(), o.createElement(k._29, {
+                    }, this.renderIcon(), o.createElement(k._30, {
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k.O, {
-                        type: k._43.Span
+                    }, o.createElement(k.P, {
+                        type: k._44.Span
                     }, this.getLabelFromType())));
                     return this.renderLink(e)
                 }, t.prototype.renderLink = function(e) {
@@ -2588,9 +2588,9 @@ webpackJsonp([46], {
                     var e = this,
                         t = Object(l.d)("Share Clip", "ClipsSocialShare"),
                         n = Object(l.d)("Copied!", "ClipsSocialShare");
-                    return o.createElement(k._6, {
-                        display: k.P.Flex,
-                        justifyContent: k._5.End,
+                    return o.createElement(k._7, {
+                        display: k.Q.Flex,
+                        justifyContent: k._6.End,
                         alignItems: k.c.Center,
                         margin: {
                             top: 1,
@@ -2600,40 +2600,40 @@ webpackJsonp([46], {
                         type: k.A.Hollow,
                         onClick: this.onToggleShareButton,
                         "data-test-selector": "social-share-mobile-button"
-                    }, t), this.state.isModalOpen && o.createElement(k._29, {
-                        position: k._13.Fixed,
+                    }, t), this.state.isModalOpen && o.createElement(k._30, {
+                        position: k._14.Fixed,
                         background: k.m.Overlay,
-                        zIndex: k._55.Above,
+                        zIndex: k._56.Above,
                         attachLeft: !0,
                         attachTop: !0,
                         fullHeight: !0,
                         fullWidth: !0
                     }, o.createElement(Ye.a, {
                         onClickOut: this.onClickOut
-                    }, o.createElement(k._6, {
-                        position: k._13.Absolute,
+                    }, o.createElement(k._7, {
+                        position: k._14.Absolute,
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         className: "clips-mobile-share-sheet",
-                        display: k.P.Flex,
-                        flexDirection: k.R.Column,
-                        zIndex: k._55.Above,
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Column,
+                        zIndex: k._56.Above,
                         "data-test-selector": "social-share-mobile-menu-root"
                     }, o.createElement(k.e, {
                         type: k.i.SlideInBottom,
                         enabled: this.state.isModalOpen
-                    }, o.createElement(k._29, {
+                    }, o.createElement(k._30, {
                         background: k.m.Base,
                         elevation: 3,
                         padding: {
                             bottom: 2
                         }
-                    }, o.createElement(k._29, {
+                    }, o.createElement(k._30, {
                         className: "clips-mobile-share-sheet__title",
-                        display: k.P.Flex,
-                        flexDirection: k.R.Row,
-                        justifyContent: k._5.Between,
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Row,
+                        justifyContent: k._6.Between,
                         alignItems: k.c.Center,
                         margin: {
                             bottom: 2
@@ -2643,21 +2643,21 @@ webpackJsonp([46], {
                             left: 2
                         },
                         borderBottom: !0
-                    }, o.createElement(k.O, {
+                    }, o.createElement(k.P, {
                         bold: !0,
                         color: k.J.Alt,
-                        type: k._43.Span,
-                        fontSize: k.T.Size6,
+                        type: k._44.Span,
+                        fontSize: k.U.Size6,
                         "data-test-selector": "social-share-mobile-menu-title"
                     }, t), o.createElement(k.v, {
                         "data-test-selector": "social-share-mobile-menu-close",
-                        icon: k._20.Close,
+                        icon: k._21.Close,
                         ariaLabel: "Close Share",
                         size: k.w.Large,
                         onClick: this.onToggleShareButton
-                    })), o.createElement(k._6, null, o.createElement(et, {
-                        key: Qe.ChannelFeed,
-                        type: Qe.ChannelFeed,
+                    })), o.createElement(k._7, null, o.createElement(et, {
+                        key: Ke.ChannelFeed,
+                        type: Ke.ChannelFeed,
                         onShareClick: this.onOpenFeedShare
                     }), ze.b.map(function(t) {
                         return o.createElement(et, {
@@ -2667,18 +2667,18 @@ webpackJsonp([46], {
                             url: Object(Ve.a)(e.props.clip.url, t.params),
                             onShareClick: e.onShareClick
                         })
-                    }))))))), this.state.isCopiedModalOpen && o.createElement(k._6, {
+                    }))))))), this.state.isCopiedModalOpen && o.createElement(k._7, {
                         fullWidth: !0,
                         attachLeft: !0,
                         attachBottom: !0,
                         className: "clips-mobile-share-sheet",
-                        position: k._13.Fixed,
-                        zIndex: k._55.Above
+                        position: k._14.Fixed,
+                        zIndex: k._56.Above
                     }, o.createElement(k.e, {
                         type: k.i.SlideInBottom,
                         duration: k.g.Short,
                         enabled: this.state.isCopiedModalOpen
-                    }, o.createElement(k._29, {
+                    }, o.createElement(k._30, {
                         padding: {
                             x: 1,
                             y: 1
@@ -2686,9 +2686,9 @@ webpackJsonp([46], {
                         background: k.m.Base,
                         elevation: 3,
                         borderTop: !0,
-                        display: k.P.Flex,
+                        display: k.Q.Flex,
                         alignItems: k.c.Center
-                    }, o.createElement(k._6, {
+                    }, o.createElement(k._7, {
                         margin: {
                             right: .5
                         }
@@ -2697,12 +2697,12 @@ webpackJsonp([46], {
                         duration: k.g.Medium,
                         delay: k.f.Short,
                         enabled: this.state.isCopiedModalOpen
-                    }, o.createElement(k._19, {
-                        type: k._21.Success,
-                        asset: k._20.Check
-                    }))), o.createElement(k.O, {
-                        type: k._43.Span,
-                        fontSize: k.T.Size4,
+                    }, o.createElement(k._20, {
+                        type: k._22.Success,
+                        asset: k._21.Check
+                    }))), o.createElement(k.P, {
+                        type: k._44.Span,
+                        fontSize: k.U.Size4,
                         bold: !0
                     }, n)))))
                 }, t
@@ -2723,16 +2723,16 @@ webpackJsonp([46], {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (!this.props.data.clip && !Object(We.d)(window.navigator.userAgent)) return o.createElement(k._6, null, this.renderPlaceholders());
-                    if (!this.props.data.clip && Object(We.d)(window.navigator.userAgent)) return o.createElement(k._6, null, this.renderMobilePlaceholders());
+                    if (!this.props.data.clip && !Object(We.d)(window.navigator.userAgent)) return o.createElement(k._7, null, this.renderPlaceholders());
+                    if (!this.props.data.clip && Object(We.d)(window.navigator.userAgent)) return o.createElement(k._7, null, this.renderMobilePlaceholders());
                     if (Object(We.d)(window.navigator.userAgent)) return o.createElement(tt, {
                         clip: this.props.data.clip,
                         openFeedShare: this.openFeedShare
                     });
                     var t = Object(l.d)("More", "ClipsSocialShare");
-                    return o.createElement(k._0, {
-                        display: k.P.Flex,
-                        justifyContent: k._5.End,
+                    return o.createElement(k._1, {
+                        display: k.Q.Flex,
+                        justifyContent: k._6.End,
                         alignItems: k.c.Center,
                         margin: {
                             y: 1
@@ -2740,8 +2740,8 @@ webpackJsonp([46], {
                     }, o.createElement("div", {
                         onClick: this.cancelAutoplayTimer
                     }, ze.b.map(function(t) {
-                        return o.createElement(k._6, {
-                            display: k.P.InlineBlock,
+                        return o.createElement(k._7, {
+                            display: k.Q.InlineBlock,
                             key: t.type,
                             margin: {
                                 right: 1
@@ -2752,31 +2752,31 @@ webpackJsonp([46], {
                             text: e.props.data.clip.title,
                             url: Object(Ve.a)(e.props.data.clip.url, t.params)
                         }))
-                    }), o.createElement(k._29, {
+                    }), o.createElement(k._30, {
                         margin: {
                             right: 1
                         }
                     }, o.createElement("div", {
                         className: "social-button"
-                    }, o.createElement(k._46, {
+                    }, o.createElement(k._47, {
                         label: "Twitch",
-                        direction: k._48.Top
+                        direction: k._49.Top
                     }, o.createElement("button", {
                         onClick: this.openFeedShare,
                         className: "social-button__link social-button__link--twitch",
                         "data-test-selector": "social-share-button-twitch"
-                    }, o.createElement(k._6, {
+                    }, o.createElement(k._7, {
                         className: "social-button__icon social-button__icon--twitch",
-                        display: k.P.Flex,
+                        display: k.Q.Flex,
                         alignItems: k.c.Center,
-                        justifyContent: k._5.Center
-                    }, o.createElement(k._19, {
-                        asset: k._20.LogoGlitch,
+                        justifyContent: k._6.Center
+                    }, o.createElement(k._20, {
+                        asset: k._21.LogoGlitch,
                         width: 22,
                         height: 22
-                    })))))), o.createElement(k._6, {
-                        display: k.P.InlineBlock,
-                        position: k._13.Relative
+                    })))))), o.createElement(k._7, {
+                        display: k.Q.InlineBlock,
+                        position: k._14.Relative
                     }, o.createElement(ke.a, null, o.createElement(k.u, {
                         type: k.A.Hollow,
                         ariaLabel: t,
@@ -2784,22 +2784,22 @@ webpackJsonp([46], {
                     }, t), o.createElement(k.p, {
                         direction: k.q.BottomRight,
                         noTail: !0
-                    }, o.createElement(k._6, {
+                    }, o.createElement(k._7, {
                         padding: 1
-                    }, o.createElement(k.U, {
+                    }, o.createElement(k.V, {
                         id: "social-share-link",
-                        orientation: k.V.Vertical,
+                        orientation: k.W.Vertical,
                         label: Object(l.d)("Link", "ClipsSocialShare"),
                         "data-test-selector": "social-share-link"
                     }, o.createElement(Pe.a, {
                         value: this.props.data.clip.url
-                    })), o.createElement(k._6, {
+                    })), o.createElement(k._7, {
                         padding: {
                             top: 1
                         }
-                    }, o.createElement(k.U, {
+                    }, o.createElement(k.V, {
                         id: "social-share-embed-link",
-                        orientation: k.V.Vertical,
+                        orientation: k.W.Vertical,
                         label: Object(l.d)("Embed Code", "ClipsSocialShare")
                     }, o.createElement(Pe.a, {
                         value: this.props.data.clip.embedURL
@@ -2813,64 +2813,64 @@ webpackJsonp([46], {
                         type: k.i.FadeIn,
                         duration: k.g.Medium,
                         enabled: !0
-                    }, o.createElement(k._6, {
+                    }, o.createElement(k._7, {
                         margin: {
                             top: 1,
                             bottom: 1
                         },
-                        display: k.P.Flex,
-                        justifyContent: k._5.End
-                    }, o.createElement(k._6, {
+                        display: k.Q.Flex,
+                        justifyContent: k._6.End
+                    }, o.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         width: 30,
                         height: 30
-                    })), o.createElement(k._6, {
+                    })), o.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         width: 30,
                         height: 30
-                    })), o.createElement(k._6, {
+                    })), o.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         width: 30,
                         height: 30
-                    })), o.createElement(k._6, {
+                    })), o.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         width: 30,
                         height: 30
-                    })), o.createElement(k._6, {
+                    })), o.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         width: 30,
                         height: 30
-                    })), o.createElement(k._6, {
+                    })), o.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k._12, {
+                    }, o.createElement(k._13, {
                         width: 46,
                         height: 30
                     }))))
                 }, t.prototype.renderMobilePlaceholders = function() {
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         margin: {
                             y: 1
                         },
-                        display: k.P.Flex,
-                        justifyContent: k._5.End
-                    }, o.createElement(k._6, null, o.createElement(k._12, {
+                        display: k.Q.Flex,
+                        justifyContent: k._6.End
+                    }, o.createElement(k._7, null, o.createElement(k._13, {
                         width: 72,
                         height: 30
                     })))
@@ -2892,7 +2892,7 @@ webpackJsonp([46], {
             ot = n("vwd7"),
             lt = n("CIox"),
             st = n("icZh"),
-            dt = function(e) {
+            ct = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.setImage = function(e) {
@@ -2926,37 +2926,37 @@ webpackJsonp([46], {
                     })
                 }, t
             }(o.Component),
-            ct = 9,
+            dt = 9,
             ut = (n("r+Hw"), function(e) {
                 var t, n = e.autoplayClip && e.autoplayClip.broadcaster && e.autoplayClip.game && Object(l.d)("{broadcasterDisplayName} playing {gameDisplayName}", {
                     broadcasterDisplayName: e.autoplayClip.broadcaster.displayName,
                     gameDisplayName: e.autoplayClip.game.displayName
                 }, "ClipsAutoplayView");
-                return t = "canceled" === e.timerState ? o.createElement(k._29, {
+                return t = "canceled" === e.timerState ? o.createElement(k._30, {
                     margin: {
                         bottom: .5
                     }
-                }, o.createElement(k.O, {
+                }, o.createElement(k.P, {
                     ellipsis: !0,
                     color: k.J.Overlay,
-                    fontSize: k.T.Size6,
+                    fontSize: k.U.Size6,
                     breakpointExtraSmall: {
-                        fontSize: k.T.Size5
+                        fontSize: k.U.Size5
                     }
-                }, Object(l.d)("Next Clip", "ClipsAutoplayView"))) : o.createElement(k._29, {
-                    display: k.P.Flex,
-                    justifyContent: k._5.Between,
-                    flexDirection: k.R.Row,
+                }, Object(l.d)("Next Clip", "ClipsAutoplayView"))) : o.createElement(k._30, {
+                    display: k.Q.Flex,
+                    justifyContent: k._6.Between,
+                    flexDirection: k.S.Row,
                     alignItems: k.c.Center,
                     margin: {
                         bottom: .5
                     }
-                }, o.createElement(k.O, {
+                }, o.createElement(k.P, {
                     ellipsis: !0,
                     color: k.J.Overlay,
-                    fontSize: k.T.Size6,
+                    fontSize: k.U.Size6,
                     breakpointExtraSmall: {
-                        fontSize: k.T.Size5
+                        fontSize: k.U.Size5
                     }
                 }, "running" === e.timerState ? Object(l.d)("{seconds, plural, one {Next Clip in {seconds} second} other {Next Clip in {seconds} seconds}}", {
                     seconds: e.countdownValue.toString()
@@ -2964,19 +2964,19 @@ webpackJsonp([46], {
                     type: k.A.Hollow,
                     onClick: e.cancelTimer,
                     overlay: !0
-                }, Object(l.d)("Cancel", "ClipsAutoplayView"))), o.createElement(k._6, {
+                }, Object(l.d)("Cancel", "ClipsAutoplayView"))), o.createElement(k._7, {
                     className: "clips-autoplay",
-                    position: k._13.Absolute,
+                    position: k._14.Absolute,
                     fullWidth: !0,
                     fullHeight: !0,
-                    display: k.P.Flex,
+                    display: k.Q.Flex,
                     alignItems: k.c.Center,
-                    justifyContent: k._5.Center,
-                    zIndex: k._55.Above,
+                    justifyContent: k._6.Center,
+                    zIndex: k._56.Above,
                     padding: {
                         x: 1
                     }
-                }, o.createElement(k._6, {
+                }, o.createElement(k._7, {
                     className: "clips-autoplay__container",
                     fullWidth: !0,
                     padding: {
@@ -2986,70 +2986,70 @@ webpackJsonp([46], {
                     type: k.i.FadeIn,
                     delay: k.f.Medium,
                     enabled: !0
-                }, t, o.createElement(k._6, {
+                }, t, o.createElement(k._7, {
                     className: "clips-autoplay__preview",
-                    position: k._13.Relative
+                    position: k._14.Relative
                 }, o.createElement("div", {
                     onClick: function() {
                         e.transitionToNextClip(!1)
                     },
                     "data-test-selector": "clips-autoplay-view-transition",
                     ref: e.setAutoplayRef
-                }, o.createElement(k._6, {
-                    position: k._13.Relative
+                }, o.createElement(k._7, {
+                    position: k._14.Relative
                 }, o.createElement(k.j, {
                     ratio: k.k.Aspect16x9,
                     overflow: !1
-                }, o.createElement(dt, {
+                }, o.createElement(ct, {
                     className: "clips-autoplay__image",
                     src: e.autoplayClip.thumbnailURL,
                     altText: Object(l.d)("clip image preview", "ClipsAutoplayView"),
                     altSrc: v
-                })), "running" === e.timerState && o.createElement(k._6, {
-                    position: k._13.Absolute,
+                })), "running" === e.timerState && o.createElement(k._7, {
+                    position: k._14.Absolute,
                     attachBottom: !0,
                     fullWidth: !0
-                }, o.createElement(k._16, {
-                    countdown: ct,
-                    size: k._17.Small
-                }))), o.createElement(k._29, {
-                    position: k._13.Absolute,
+                }, o.createElement(k._17, {
+                    countdown: dt,
+                    size: k._18.Small
+                }))), o.createElement(k._30, {
+                    position: k._14.Absolute,
                     attachTop: !0,
                     attachLeft: !0,
                     fullHeight: !0,
                     fullWidth: !0,
-                    zIndex: k._55.Above,
+                    zIndex: k._56.Above,
                     breakpointExtraSmall: {
-                        display: k.P.Hide
+                        display: k.Q.Hide
                     }
-                }), o.createElement(k._29, {
-                    position: k._13.Absolute,
+                }), o.createElement(k._30, {
+                    position: k._14.Absolute,
                     attachBottom: !0,
                     attachLeft: !0,
-                    zIndex: k._55.Above,
+                    zIndex: k._56.Above,
                     padding: 1,
                     fullWidth: !0,
                     breakpointExtraSmall: {
-                        position: k._13.Relative,
+                        position: k._14.Relative,
                         padding: 0,
                         margin: {
                             top: 1
                         }
                     }
-                }, o.createElement(k.O, {
+                }, o.createElement(k.P, {
                     color: k.J.Overlay,
                     bold: !0,
                     ellipsis: !0,
-                    fontSize: k.T.Size6,
+                    fontSize: k.U.Size6,
                     breakpointExtraSmall: {
-                        fontSize: k.T.Size5
+                        fontSize: k.U.Size5
                     }
-                }, e.autoplayClip.title), o.createElement(k.O, {
+                }, e.autoplayClip.title), o.createElement(k.P, {
                     color: k.J.OverlayAlt,
                     ellipsis: !0,
-                    fontSize: k.T.Size6,
+                    fontSize: k.U.Size6,
                     breakpointExtraSmall: {
-                        fontSize: k.T.Size5
+                        fontSize: k.U.Size5
                     }
                 }, n)))))))
             });
@@ -3082,13 +3082,13 @@ webpackJsonp([46], {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
-                        countdownValue: ct,
+                        countdownValue: dt,
                         timerState: "running",
                         autoplayClip: null,
                         autoplayClipCategory: null
                     }, n.autoplayTimerInfluencerState = R.c, n.hasSetAutoplayClip = !1, n.autoplayCount = 1, n.removeAutoplay = function() {
                         n.setState({
-                            countdownValue: ct,
+                            countdownValue: dt,
                             autoplayClip: null,
                             autoplayClipCategory: null
                         }), n.hasSetAutoplayClip = !1, n.countdownTimer.stop()
@@ -3168,7 +3168,7 @@ webpackJsonp([46], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return null === this.state.autoplayClip ? o.createElement(k._6, null) : o.createElement(ut, {
+                    return null === this.state.autoplayClip ? o.createElement(k._7, null) : o.createElement(ut, {
                         countdownValue: this.state.countdownValue,
                         timerState: this.state.timerState,
                         autoplayClip: this.state.autoplayClip,
@@ -3179,7 +3179,7 @@ webpackJsonp([46], {
                 }, t.prototype.showAutoplay = function() {
                     this.setAutoplayClip(this.props);
                     var e = {
-                        countdownValue: ct,
+                        countdownValue: dt,
                         timerState: this.state.timerState
                     };
                     this.autoplayTimerIsBlocked() || (e.timerState = "running", this.countdownTimer.start()), this.setState(e)
@@ -3237,36 +3237,36 @@ webpackJsonp([46], {
                     if (this.state.isDismissed || !this.state.isShowingLiveCTA || this.props.playerConnection.playerProps.ui && this.props.playerConnection.playerProps.ui.isSettingsShown || "ended" === this.props.playerConnection.playerProps.playback || !(e && e.game && e.broadcaster && e.broadcaster.stream && e.broadcaster.stream.id)) return null;
                     var t = e.broadcaster,
                         n = e.game,
-                        i = Object(f.c)(t.login);
-                    return o.createElement(k._6, {
+                        i = Object(f.b)(t.login);
+                    return o.createElement(k._7, {
                         className: "watch-live-prompt",
-                        position: k._13.Absolute,
-                        zIndex: k._55.Above,
+                        position: k._14.Absolute,
+                        zIndex: k._56.Above,
                         attachRight: !0
-                    }, o.createElement(k.M, {
+                    }, o.createElement(k.N, {
                         to: i,
                         targetBlank: !0
                     }, o.createElement(k.e, {
                         type: k.i.SlideInRight,
                         duration: k.g.Short,
                         enabled: !0
-                    }, o.createElement(k._29, {
+                    }, o.createElement(k._30, {
                         padding: 1,
                         elevation: 2,
                         background: k.m.Overlay
-                    }, o.createElement(k._6, {
-                        position: k._13.Relative,
-                        display: k.P.Flex,
-                        flexDirection: k.R.Row,
+                    }, o.createElement(k._7, {
+                        position: k._14.Relative,
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Row,
                         alignItems: k.c.Center
-                    }, o.createElement(k._6, {
-                        position: k._13.Absolute,
+                    }, o.createElement(k._7, {
+                        position: k._14.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: k._55.Above
-                    }, o.createElement(k._10, {
+                        zIndex: k._56.Above
+                    }, o.createElement(k._11, {
                         label: Object(l.d)("LIVE", "WatchLivePrompt"),
-                        type: k._11.Live
+                        type: k._12.Live
                     })), o.createElement(k.B, {
                         row: !0
                     }, o.createElement(k.D, {
@@ -3274,28 +3274,28 @@ webpackJsonp([46], {
                         alt: Object(l.d)("Clip Thumbnail", "ClipWatchLivePrompt"),
                         aspect: k.k.Aspect16x9,
                         size: k.E.Size6
-                    }), o.createElement(k.C, null, o.createElement(k._6, {
+                    }), o.createElement(k.C, null, o.createElement(k._7, {
                         className: "watch-live-prompt__copy",
                         padding: {
                             x: 1
                         }
-                    }, o.createElement(k.O, {
-                        type: k._43.H5,
+                    }, o.createElement(k.P, {
+                        type: k._44.H5,
                         color: k.J.Overlay,
-                        lineHeight: k._7.Heading,
+                        lineHeight: k._8.Heading,
                         ellipsis: !0
                     }, Object(l.d)("Watch {displayName} Live", {
                         displayName: t.displayName
-                    }, "WatchLivePrompt")), o.createElement(k.O, {
-                        type: k._43.H6,
+                    }, "WatchLivePrompt")), o.createElement(k.P, {
+                        type: k._44.H6,
                         color: k.J.OverlayAlt,
-                        lineHeight: k._7.Heading,
+                        lineHeight: k._8.Heading,
                         ellipsis: !0
                     }, Object(l.d)("playing {gameName}", {
                         gameName: n.displayName
                     }, "WatchLivePrompt"))))), o.createElement(k.v, {
                         ariaLabel: Object(l.d)("Dismiss watch live prompt", "WatchLivePrompt"),
-                        icon: k._20.Close,
+                        icon: k._21.Close,
                         onClick: this.dismissWatchLivePrompt,
                         type: k.x.Default,
                         overlay: !0,
@@ -3325,33 +3325,33 @@ webpackJsonp([46], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(k._0, {
-                        position: k._13.Absolute,
+                    return o.createElement(k._1, {
+                        position: k._14.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
                     }, o.createElement("div", {
                         ref: this.props.setPlayerWrapperRef
-                    }, o.createElement(k._29, {
+                    }, o.createElement(k._30, {
                         className: "clips-video-overlay",
                         fullHeight: !0,
                         fullWidth: !0,
-                        position: k._13.Absolute,
-                        overflow: k._9.Hidden
+                        position: k._14.Absolute,
+                        overflow: k._10.Hidden
                     }, o.createElement(yt, {
                         slug: this.props.slug
                     }), !Object(We.d)(window.navigator.userAgent) && o.createElement(Ct, {
                         slug: this.props.slug
-                    })), o.createElement(k._6, {
-                        position: k._13.Absolute,
+                    })), o.createElement(k._7, {
+                        position: k._14.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
                     }, this.props.children)))
                 }, t
             }(o.Component)),
             Et = n("sikP"),
-            Tt = n("oSFp"),
-            Ot = n("mw/a"),
-            wt = n("Ev5K"),
+            wt = n("oSFp"),
+            Tt = n("mw/a"),
+            Ot = n("Ev5K"),
             Ft = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3366,10 +3366,10 @@ webpackJsonp([46], {
                     if (!t.isClipsReportModalOpen && n.isClipsReportModalOpen) {
                         var i = this.props.data.clip && this.props.data.clip.broadcaster ? this.props.data.clip.broadcaster.id : "",
                             a = this.props.data.clip && this.props.data.clip.curator ? this.props.data.clip.curator.id : "";
-                        this.props.showModal(Tt.a, {
+                        this.props.showModal(wt.a, {
                             title: Object(l.d)("Report this Clip", "ClipsViewModerationModals"),
                             reportContext: {
-                                contentType: Ot.a.Clip,
+                                contentType: Tt.a.Clip,
                                 contentID: this.props.slug,
                                 targetUserID: i,
                                 additionalTrackingID: a
@@ -3392,7 +3392,7 @@ webpackJsonp([46], {
                     return e.slug
                 },
                 requestedPlayerProps: ["clipsModeration"]
-            })(Object(m.a)(wt)(Object(p.d)("ClipsViewModerationModals", {
+            })(Object(m.a)(Ot)(Object(p.d)("ClipsViewModerationModals", {
                 autoReportInteractive: !0
             })(Ft)));
         var It = Object(j.b)(null, function(e) {
@@ -3427,7 +3427,7 @@ webpackJsonp([46], {
                     })
                 }, t.prototype.render = function() {
                     var e = this.props.slug;
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         flexGrow: 1
                     }, o.createElement(It, {
                         slug: this.props.slug
@@ -3456,7 +3456,7 @@ webpackJsonp([46], {
                         assignment: "variant1",
                         id: "0e636d13-56a8-44f4-bd51-7e65cd5a5225",
                         name: "twilight_clips_howdy_partner",
-                        type: c.a.Device,
+                        type: d.a.Device,
                         version: 1
                     }), this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentDidUpdate = function() {
@@ -3465,7 +3465,7 @@ webpackJsonp([46], {
                     this.props.match.params.slug !== e.match.params.slug && this.context.scrollToTop()
                 }, t.prototype.render = function() {
                     var e = this.props.match.params.slug;
-                    return o.createElement(k._6, {
+                    return o.createElement(k._7, {
                         className: "clips-watch",
                         padding: {
                             x: 2,
@@ -3485,25 +3485,25 @@ webpackJsonp([46], {
                         }
                     }, o.createElement(at, {
                         slug: e
-                    }), o.createElement(k._29, {
+                    }), o.createElement(k._30, {
                         background: k.m.Base,
-                        display: k.P.Flex,
+                        display: k.Q.Flex,
                         elevation: 3,
-                        flexDirection: k.R.Column,
+                        flexDirection: k.S.Column,
                         breakpointLarge: {
-                            flexDirection: k.R.Row
+                            flexDirection: k.S.Row
                         }
                     }, o.createElement(xt, {
                         slug: e
-                    }), o.createElement(Le, {
+                    }), o.createElement(Me, {
                         slug: e
-                    })), o.createElement(w, {
+                    })), o.createElement(O, {
                         slug: e
                     }))
                 }, t.contextTypes = {
                     scrollToTop: r.func
                 }, t = a.__decorate([Object(p.d)("ClipsViewPage", {
-                    destination: d.a.ClipsViewing
+                    destination: c.a.ClipsViewing
                 }), Object(s.a)({
                     location: u.PageviewLocation.ClipsViewing
                 })], t)
@@ -3660,17 +3660,17 @@ webpackJsonp([46], {
             o = 60 * r,
             l = 24 * o,
             s = 7 * l,
-            d = 4 * s;
-        var c, u = n("MApH");
+            c = 4 * s;
+        var d, u = n("MApH");
         n.d(t, "a", function() {
-                return c
+                return d
             }), t.b = function(e) {
                 var t = this;
                 return Object(a.a)(u, {
                     props: function(n) {
                         return {
-                            banUserMutation: function(a, c) {
-                                return void 0 === c && (c = null), i.__awaiter(t, void 0, void 0, function() {
+                            banUserMutation: function(a, d) {
+                                return void 0 === d && (d = null), i.__awaiter(t, void 0, void 0, function() {
                                     var t;
                                     return i.__generator(this, function(i) {
                                         switch (i.label) {
@@ -3683,21 +3683,21 @@ webpackJsonp([46], {
                                                         input: {
                                                             channelID: t,
                                                             bannedUserLogin: a,
-                                                            expiresIn: c && function(e) {
+                                                            expiresIn: d && function(e) {
                                                                 if (!e) return "0s";
                                                                 var t = e,
                                                                     n = "";
-                                                                if (t > d) {
-                                                                    var i = Math.floor(t / d);
-                                                                    t -= i * d, n += i + "mo"
+                                                                if (t > c) {
+                                                                    var i = Math.floor(t / c);
+                                                                    t -= i * c, n += i + "mo"
                                                                 }
                                                                 if (t > s) {
                                                                     var a = Math.floor(t / s);
                                                                     t -= a * s, n += a + "w"
                                                                 }
                                                                 if (t > l) {
-                                                                    var c = Math.floor(t / l);
-                                                                    t -= c * l, n += c + "d"
+                                                                    var d = Math.floor(t / l);
+                                                                    t -= d * l, n += d + "d"
                                                                 }
                                                                 if (t > o) {
                                                                     var u = Math.floor(t / o);
@@ -3708,7 +3708,7 @@ webpackJsonp([46], {
                                                                     t -= p * r, n += p + "m"
                                                                 }
                                                                 return t > 0 && (n += t + "s"), n
-                                                            }(c)
+                                                            }(d)
                                                         }
                                                     }
                                                 })];
@@ -3732,7 +3732,7 @@ webpackJsonp([46], {
             },
             function(e) {
                 e.Forbidden = "FORBIDDEN", e.TargetNotFound = "TARGET_NOT_FOUND", e.TargetIsSelf = "TARGET_IS_SELF", e.TargetIsAnonymous = "TARGET_IS_ANONYMOUS", e.TargetIsMod = "TARGET_IS_MOD", e.TargetIsBroadcaster = "TARGET_IS_BROADCASTER", e.TargetIsStaff = "TARGET_IS_STAFF", e.TargetIsAdmin = "TARGET_IS_ADMIN", e.TargetIsGlobalMod = "TARGET_IS_GLOBAL_MOD", e.TargetIsAlreadyBanned = "TARGET_ALREADY_BANNED", e.DurationInvalid = "DURATION_INVALID"
-            }(c || (c = {}))
+            }(d || (d = {}))
     },
     "287o": function(e, t, n) {
         "use strict";
@@ -4049,9 +4049,9 @@ webpackJsonp([46], {
         }), n.d(t, "a", function() {
             return s
         }), n.d(t, "i", function() {
-            return d
-        }), n.d(t, "k", function() {
             return c
+        }), n.d(t, "k", function() {
+            return d
         }), n.d(t, "j", function() {
             return u
         }), n.d(t, "l", function() {
@@ -4076,8 +4076,8 @@ webpackJsonp([46], {
             o = "https://d3aqoihi2n8ty8.cloudfront.net",
             l = o + "/cheer",
             s = o + "/actions",
-            d = 8e5,
-            c = 1e4,
+            c = 8e5,
+            d = 1e4,
             u = 500,
             p = 1e3,
             m = "cheer",
@@ -4409,8 +4409,8 @@ webpackJsonp([46], {
             o = n("+Znq"),
             l = n("7vx8"),
             s = n("oIkB"),
-            d = n("2BvQ"),
-            c = n("xrVp"),
+            c = n("2BvQ"),
+            d = n("xrVp"),
             u = n("YugT"),
             p = {
                 Channel: "channel"
@@ -4473,7 +4473,7 @@ webpackJsonp([46], {
                                         i.label = 6;
                                     case 6:
                                         return i.trys.push([6, 8, , 9]), [4, r.o.apollo.client.query({
-                                            query: d,
+                                            query: c,
                                             variables: {
                                                 id: h
                                             }
@@ -4485,7 +4485,7 @@ webpackJsonp([46], {
                                             currentVODID: h
                                         }), [3, 9];
                                     case 9:
-                                        (a = n && n.data && n.data.video) ? p = Object(c.a)(a.broadcastType): (p = null, r.j.error(new Error("GraphQL empty response"), "Query for video info in FollowEvent reporting return no data.", {
+                                        (a = n && n.data && n.data.video) ? p = Object(d.a)(a.broadcastType): (p = null, r.j.error(new Error("GraphQL empty response"), "Query for video info in FollowEvent reporting return no data.", {
                                             currentVODID: h
                                         })), i.label = 10;
                                     case 10:
@@ -4637,17 +4637,17 @@ webpackJsonp([46], {
             }, t.prototype.renderPlaceholder = function() {
                 switch (this.props.size) {
                     case g.y.Large:
-                        return a.createElement(g._12, {
+                        return a.createElement(g._13, {
                             width: 93,
                             height: 36
                         });
                     case g.y.Small:
-                        return a.createElement(g._12, {
+                        return a.createElement(g._13, {
                             width: 66,
                             height: 24
                         });
                     default:
-                        return a.createElement(g._12, {
+                        return a.createElement(g._13, {
                             width: 70,
                             height: 30
                         })
@@ -4661,11 +4661,11 @@ webpackJsonp([46], {
                     blurAfterClick: this.props.blurAfterClick,
                     "data-a-target": "follow-button",
                     "data-test-selector": "follow-button",
-                    icon: this.props.followUIType === b.TextOnly ? void 0 : g._20.Heart,
+                    icon: this.props.followUIType === b.TextOnly ? void 0 : g._21.Heart,
                     onClick: e,
                     size: this.props.size,
                     tabIndex: this.props.tabIndex
-                }, Object(g._56)(this.props)), this.props.followUIType === b.IconOnly ? null : t)
+                }, Object(g._57)(this.props)), this.props.followUIType === b.IconOnly ? null : t)
             }, t.prototype.renderUnfollowButton = function() {
                 var e = Object(r.d)("Unfollow", "FollowButton");
                 return a.createElement(g.u, i.__assign({
@@ -4673,82 +4673,82 @@ webpackJsonp([46], {
                     blurAfterClick: this.props.blurAfterClick,
                     "data-a-target": "unfollow-button",
                     "data-test-selector": "unfollow-button",
-                    icon: this.props.unfollowUIType === b.TextOnly ? void 0 : g._20.Heart,
-                    statusAlertIcon: this.props.unfollowUIType === b.TextOnly ? void 0 : g._20.Unheart,
+                    icon: this.props.unfollowUIType === b.TextOnly ? void 0 : g._21.Heart,
+                    statusAlertIcon: this.props.unfollowUIType === b.TextOnly ? void 0 : g._21.Unheart,
                     statusAlertText: this.props.unfollowUIType === b.IconOnly ? "" : e,
                     tabIndex: this.props.tabIndex,
                     size: this.props.size,
                     onClick: this.toggleFollowing
-                }, Object(g._56)(this.props)), this.props.unfollowUIType === b.IconOnly ? null : Object(r.d)("Followed", "FollowButton"))
+                }, Object(g._57)(this.props)), this.props.unfollowUIType === b.IconOnly ? null : Object(r.d)("Followed", "FollowButton"))
             }, t.prototype.renderUnfollowButtonWithDropdown = function() {
                 var e = this.props.balloonDirection ? this.props.balloonDirection : g.q.BottomRight,
                     t = this.getFollowData(),
                     n = t && t.user ? t.user.displayName : "",
                     i = this.state.disableNotifications ? Object(r.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "FollowButton") : Object(r.d)("You will be notified on this channel's activity, including when they go live.", "FollowButton");
-                return a.createElement(g._6, {
-                    display: g.P.Flex,
+                return a.createElement(g._7, {
+                    display: g.Q.Flex,
                     className: "follow-btn",
                     "data-test-selector": "unfollow-button__dropdown"
-                }, a.createElement(g._6, null, this.renderUnfollowButton()), a.createElement(o.a, {
-                    display: g.P.InlineFlex,
+                }, a.createElement(g._7, null, this.renderUnfollowButton()), a.createElement(o.a, {
+                    display: g.Q.InlineFlex,
                     openByDefault: this.state.showDropdown
                 }, a.createElement("button", {
                     tabIndex: this.props.tabIndex,
                     "aria-label": Object(r.d)("Dropdown", "FollowButton"),
                     className: "follow-btn__dropdown-toggle",
                     "data-a-target": "follow-dropdown-toggle"
-                }, a.createElement(g._6, {
-                    justifyContent: g._5.Center,
-                    display: g.P.Flex,
+                }, a.createElement(g._7, {
+                    justifyContent: g._6.Center,
+                    display: g.Q.Flex,
                     alignItems: g.c.Stretch,
                     fullHeight: !0
-                }, a.createElement(g._19, {
-                    asset: g._20.GlyphArrDown
+                }, a.createElement(g._20, {
+                    asset: g._21.GlyphArrDown
                 }))), a.createElement(g.p, {
                     size: g.r.Small,
                     direction: e,
                     "data-a-target": "follow-notifications-balloon"
-                }, a.createElement(g._29, {
+                }, a.createElement(g._30, {
                     color: g.J.Base,
-                    display: g.P.Flex,
-                    flexWrap: g.S.Wrap,
+                    display: g.Q.Flex,
+                    flexWrap: g.T.Wrap,
                     padding: 1
-                }, a.createElement(g._6, {
-                    display: g.P.Flex,
+                }, a.createElement(g._7, {
+                    display: g.Q.Flex,
                     margin: {
                         bottom: 1
                     }
-                }, a.createElement(g.O, {
-                    type: g._43.H6
+                }, a.createElement(g.P, {
+                    type: g._44.H6
                 }, Object(r.d)("You are following {followingName}", {
                     followingName: n
-                }, "FollowButton"))), a.createElement(g._6, {
-                    display: g.P.Flex,
-                    flexWrap: g.S.NoWrap,
+                }, "FollowButton"))), a.createElement(g._7, {
+                    display: g.Q.Flex,
+                    flexWrap: g.T.NoWrap,
                     padding: {
                         bottom: 1
                     }
-                }, a.createElement(g._6, {
-                    display: g.P.Flex,
+                }, a.createElement(g._7, {
+                    display: g.Q.Flex,
                     padding: {
                         right: 2
                     }
-                }, a.createElement("span", null, a.createElement(g.O, {
-                    type: g._43.H6
-                }, Object(r.d)("Notifications", "FollowButton")))), a.createElement(g._6, {
-                    display: g.P.Flex,
+                }, a.createElement("span", null, a.createElement(g.P, {
+                    type: g._44.H6
+                }, Object(r.d)("Notifications", "FollowButton")))), a.createElement(g._7, {
+                    display: g.Q.Flex,
                     flexShrink: 0
-                }, a.createElement(g._45, {
+                }, a.createElement(g._46, {
                     onChange: this.toggleNotificationsEnabled,
                     checked: !this.state.disableNotifications,
                     "data-a-target": "notifications-toggle"
-                }))), a.createElement(g._6, {
-                    display: g.P.InlineFlex,
+                }))), a.createElement(g._7, {
+                    display: g.Q.InlineFlex,
                     padding: {
                         bottom: 1
                     }
-                }, a.createElement(g.O, {
-                    type: g._43.Span,
+                }, a.createElement(g.P, {
+                    type: g._44.Span,
                     color: g.J.Alt2
                 }, i))))))
             }, t.prototype.reportInteractive = function() {
@@ -4898,8 +4898,8 @@ webpackJsonp([46], {
                             t = a("chat-image", {
                                 "chat-image__animated": !!n.props.cheerText && n.state.imageLoaded
                             }, n.props.className);
-                        if (n.props.srcSet.themed) e = r.createElement(l._0, {
-                            display: n.state.imageLoaded ? l.P.InlineBlock : l.P.Hide
+                        if (n.props.srcSet.themed) e = r.createElement(l._1, {
+                            display: n.state.imageLoaded ? l.Q.InlineBlock : l.Q.Hide
                         }, r.createElement(o.a, {
                             alt: n.props.alt,
                             className: t,
@@ -4910,12 +4910,12 @@ webpackJsonp([46], {
                             sources: n.props.srcSet
                         }));
                         else {
-                            for (var i = [], s = 0, d = Object.keys(n.props.srcSet.sources); s < d.length; s++) {
-                                var c = d[s];
-                                i.push(n.props.srcSet.sources[c] + " " + c)
+                            for (var i = [], s = 0, c = Object.keys(n.props.srcSet.sources); s < c.length; s++) {
+                                var d = c[s];
+                                i.push(n.props.srcSet.sources[d] + " " + d)
                             }
-                            e = r.createElement(l._0, {
-                                display: n.state.imageLoaded ? l.P.InlineBlock : l.P.Hide
+                            e = r.createElement(l._1, {
+                                display: n.state.imageLoaded ? l.Q.InlineBlock : l.Q.Hide
                             }, r.createElement("img", {
                                 className: t,
                                 onLoad: n.onImageLoad,
@@ -4928,13 +4928,13 @@ webpackJsonp([46], {
                         }
                         return e
                     }, n.renderPlaceholder = function() {
-                        return n.state.imageLoaded ? null : r.createElement(l._0, {
-                            display: l.P.InlineBlock
-                        }, r.createElement(l.O, {
-                            type: l._43.Span,
+                        return n.state.imageLoaded ? null : r.createElement(l._1, {
+                            display: l.Q.InlineBlock
+                        }, r.createElement(l.P, {
+                            type: l._44.Span,
                             className: "chat-image__placeholder",
-                            align: l._53.Top
-                        }, r.createElement(l._12, {
+                            align: l._54.Top
+                        }, r.createElement(l._13, {
                             height: 28,
                             width: 28
                         })))
@@ -4945,16 +4945,16 @@ webpackJsonp([46], {
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e;
-                    return e = this.state.isHovering && this.state.imageLoaded ? r.createElement(l._46, {
-                        direction: this.props.tooltipDirection || l._48.Top,
+                    return e = this.state.isHovering && this.state.imageLoaded ? r.createElement(l._47, {
+                        direction: this.props.tooltipDirection || l._49.Top,
                         label: this.props.alt,
-                        display: l.P.Inline,
+                        display: l.Q.Inline,
                         offsetY: "0.9rem",
                         "data-a-target": "emote-name"
                     }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText) : r.createElement("span", {
                         "data-a-target": "emote-name"
-                    }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText), this.props.cheerText ? r.createElement(l.O, {
-                        type: l._43.Span,
+                    }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText), this.props.cheerText ? r.createElement(l.P, {
+                        type: l._44.Span,
                         noWrap: !0
                     }, e) : e
                 }, t
@@ -4975,9 +4975,9 @@ webpackJsonp([46], {
             o = (n.n(r), n("6sO2")),
             l = n("2hJ3"),
             s = n("f6Cj"),
-            d = n("Odds"),
-            c = n("bdk8");
-        n.n(c);
+            c = n("Odds"),
+            d = n("bdk8");
+        n.n(d);
         ! function(e) {
             e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
         }(i || (i = {}));
@@ -4991,11 +4991,11 @@ webpackJsonp([46], {
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(d._56)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
+                    }, Object(c._57)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(d._56)(n.props)), n.renderIcon())
+                    }, Object(c._57)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -5010,9 +5010,9 @@ webpackJsonp([46], {
                     })
                 }, n.renderIcon = function() {
                     var e = n.getAssetFromType();
-                    return r.createElement(d._6, {
+                    return r.createElement(c._7, {
                         className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
-                    }, r.createElement(d._19, {
+                    }, r.createElement(c._20, {
                         asset: e,
                         width: 30,
                         height: 30
@@ -5037,16 +5037,16 @@ webpackJsonp([46], {
                 }, n.getAssetFromType = function() {
                     switch (n.props.type) {
                         case i.Twitter:
-                            return d._20.Twitter;
+                            return c._21.Twitter;
                         case i.Facebook:
-                            return d._20.Facebook;
+                            return c._21.Facebook;
                         case i.VKontakte:
-                            return d._20.VKontakte;
+                            return c._21.VKontakte;
                         case i.Reddit:
-                            return d._20.Reddit;
+                            return c._21.Reddit;
                         case i.Copy:
                         default:
-                            return d._20.Copy
+                            return c._21.Copy
                     }
                 }, n.addSocialClassModifier = function(e) {
                     switch (n.props.type) {
@@ -5086,11 +5086,11 @@ webpackJsonp([46], {
                 }, n
             }
             return a.__extends(t, e), t.prototype.render = function() {
-                return r.createElement(d._6, {
+                return r.createElement(c._7, {
                     className: "social-button"
-                }, r.createElement(d._46, {
+                }, r.createElement(c._47, {
                     label: this.getTooltipFromType(),
-                    direction: d._48.Top
+                    direction: c._49.Top
                 }, this.renderLink()))
             }, t
         }(r.Component)
@@ -5102,8 +5102,8 @@ webpackJsonp([46], {
             o = n("RH2O"),
             l = n("2KeS"),
             s = n("6sO2"),
-            d = n("7vx8"),
-            c = n("u8SD"),
+            c = n("7vx8"),
+            d = n("u8SD"),
             u = n("Kxgf"),
             p = n("oIkB"),
             m = n("HM6l"),
@@ -5117,16 +5117,16 @@ webpackJsonp([46], {
                     return t.state = {
                         userBlocked: t.props.userBlocked || !1
                     }, t.renderBlock = function() {
-                        return r.createElement(v.M, {
+                        return r.createElement(v.N, {
                             hoverUnderlineNone: !0,
                             onClick: t.handleBlock
-                        }, r.createElement(v._6, {
-                            display: v.P.Flex,
+                        }, r.createElement(v._7, {
+                            display: v.Q.Flex,
                             alignItems: v.c.Center
-                        }, r.createElement(v._19, {
-                            type: v._21.Brand,
-                            asset: v._20.Ban
-                        }), r.createElement(v._6, {
+                        }, r.createElement(v._20, {
+                            type: v._22.Brand,
+                            asset: v._21.Ban
+                        }), r.createElement(v._7, {
                             margin: {
                                 left: .5
                             }
@@ -5134,26 +5134,26 @@ webpackJsonp([46], {
                             user: t.props.data.user.displayName
                         }, "ReportWizardBlockActions"))))
                     }, t.renderUnblock = function() {
-                        return r.createElement(v._6, {
+                        return r.createElement(v._7, {
                             className: "reporting-wizard__block-actions",
-                            display: v.P.Flex,
+                            display: v.Q.Flex,
                             alignItems: v.c.Center
-                        }, r.createElement(v._19, {
-                            type: v._21.Success,
-                            asset: v._20.FollowCheck
-                        }), r.createElement(v._6, {
+                        }, r.createElement(v._20, {
+                            type: v._22.Success,
+                            asset: v._21.FollowCheck
+                        }), r.createElement(v._7, {
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(v.O, {
+                        }, r.createElement(v.P, {
                             className: "block-user__success",
-                            type: v._43.Span
+                            type: v._44.Span
                         }, Object(s.d)("{user} blocked", {
                             user: t.props.data.user.displayName
-                        }, "ReportWizardBlockActions"))), r.createElement(v.M, {
+                        }, "ReportWizardBlockActions"))), r.createElement(v.N, {
                             hoverUnderlineNone: !0,
                             onClick: t.handleUnblock
-                        }, r.createElement(v._6, {
+                        }, r.createElement(v._7, {
                             margin: {
                                 left: .5
                             }
@@ -5174,7 +5174,7 @@ webpackJsonp([46], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock();
-                    return r.createElement(v._29, {
+                    return r.createElement(v._30, {
                         borderTop: !0,
                         padding: {
                             y: 1
@@ -5182,20 +5182,20 @@ webpackJsonp([46], {
                         margin: {
                             top: 1
                         }
-                    }, r.createElement(v._6, null, Object(s.d)("Would you like to block {user}?", {
+                    }, r.createElement(v._7, null, Object(s.d)("Would you like to block {user}?", {
                         user: this.props.data.user.displayName
-                    }, "ReportWizardBlockActions")), r.createElement(v._6, {
+                    }, "ReportWizardBlockActions")), r.createElement(v._7, {
                         margin: {
                             y: 2
                         }
-                    }, Object(s.d)("By blocking this user, you will no longer see their messages in chat or whispers.", "ReportWizardBlockActions")), r.createElement(v._6, {
+                    }, Object(s.d)("By blocking this user, you will no longer see their messages in chat or whispers.", "ReportWizardBlockActions")), r.createElement(v._7, {
                         margin: {
                             top: 1
                         }
                     }, e))
                 }, t
             }(r.Component),
-            b = Object(d.a)(f, {
+            b = Object(c.a)(f, {
                 options: function(e) {
                     return {
                         variables: {
@@ -5556,9 +5556,9 @@ webpackJsonp([46], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(v._6, {
+                    return r.createElement(v._7, {
                         className: "reporting-wizard-card"
-                    }, r.createElement(v.U, {
+                    }, r.createElement(v.V, {
                         label: this.props.currentCard.getLabel ? this.props.currentCard.getLabel() : ""
                     }, this.renderCardItems()))
                 }, t.prototype.renderCardItems = function() {
@@ -5568,14 +5568,14 @@ webpackJsonp([46], {
                     return t.items && (n = t.items.map(function(t, n) {
                         switch (t.type) {
                             case i.Text:
-                                return r.createElement(v._6, {
+                                return r.createElement(v._7, {
                                     key: n,
                                     padding: {
                                         y: 1
                                     }
                                 }, t.getTitle());
                             case i.Link:
-                                return r.createElement(v.M, {
+                                return r.createElement(v.N, {
                                     key: n,
                                     to: t.value,
                                     targetBlank: !0
@@ -5583,15 +5583,15 @@ webpackJsonp([46], {
                             case i.Textarea:
                                 var a = t.value ? e.props.userTextInputs[t.value] : void 0,
                                     o = t.required && (!a || !!a && 0 === a.trim().length);
-                                return r.createElement(v._6, {
+                                return r.createElement(v._7, {
                                     key: n,
                                     padding: {
                                         bottom: 1
                                     }
-                                }, r.createElement(v.U, {
+                                }, r.createElement(v.V, {
                                     label: t.getTitle(),
                                     labelOptional: t.required ? "" : Object(s.d)("Optional", "ReportModalWizardCard")
-                                }, r.createElement(v._40, {
+                                }, r.createElement(v._41, {
                                     onChange: e.onChange,
                                     rows: t.rows || 6,
                                     name: t.value,
@@ -5601,12 +5601,12 @@ webpackJsonp([46], {
                                 })));
                             case i.MultipleChoice:
                             default:
-                                return r.createElement(v._6, {
+                                return r.createElement(v._7, {
                                     key: n,
                                     padding: {
                                         y: .5
                                     }
-                                }, r.createElement(v._18, {
+                                }, r.createElement(v._19, {
                                     checked: !!e.props.currentSelection && e.props.currentSelection.value === t.value,
                                     onChange: e.onSelect,
                                     label: t.getTitle(),
@@ -5622,7 +5622,7 @@ webpackJsonp([46], {
         ! function(e) {
             e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
         }(y || (y = {}));
-        var E, T, O, w = {
+        var E, w, T, O = {
                 contentFilter: function() {
                     return Object(s.d)("Tell us more about this account:", "ReportModalWizard")
                 },
@@ -5652,31 +5652,31 @@ webpackJsonp([46], {
                 items: [S.reportDescription, S.reportLink]
             },
             x = {
-                getTitle: w.thanks,
+                getTitle: O.thanks,
                 type: y.Info,
                 value: "default end"
             },
             D = {
-                getTitle: w.thanks,
+                getTitle: O.thanks,
                 type: y.Info,
                 blockPrompt: !0,
                 value: "thanks and block end"
             },
             j = {
                 messaging: {
-                    getLabel: w.contentFilter,
+                    getLabel: O.contentFilter,
                     type: y.MultipleChoice,
                     items: [S.reportFilter_general_messaging, S.reportFilter_selfHarm, S.reportFilter_spam],
                     value: "report reason"
                 },
                 profile: {
-                    getLabel: w.contentFilter,
+                    getLabel: O.contentFilter,
                     type: y.MultipleChoice,
                     items: [S.reportFilter_general_profile, S.reportFilter_selfHarm, S.reportFilter_spam],
                     value: "report reason"
                 },
                 video: {
-                    getLabel: w.contentFilter,
+                    getLabel: O.contentFilter,
                     type: y.MultipleChoice,
                     items: [S.reportFilter_labeling, S.reportFilter_general_video, S.reportFilter_selfHarm],
                     value: "report reason"
@@ -5684,25 +5684,25 @@ webpackJsonp([46], {
             },
             A = {
                 video: {
-                    getLabel: w.contentGeneral,
+                    getLabel: O.contentGeneral,
                     type: y.MultipleChoice,
                     items: [S.report_rude, S.report_violence, S.report_abusive, S.report_inappropriate_stream, S.report_emptyStream, S.report_banEvasion, S.report_impersonation, S.report_underage, S.report_ip],
                     value: "report reason"
                 },
                 profile: {
-                    getLabel: w.contentGeneral,
+                    getLabel: O.contentGeneral,
                     type: y.MultipleChoice,
                     items: [S.report_username, S.report_violence, S.report_abusive, S.report_inappropriate_content, S.report_banEvasion, S.report_impersonation, S.report_underage, S.report_ip],
                     value: "report reason"
                 },
                 messaging: {
-                    getLabel: w.contentGeneral,
+                    getLabel: O.contentGeneral,
                     type: y.MultipleChoice,
                     items: [S.report_rude, S.report_username, S.report_violence, S.report_abusive, S.report_inappropriate_messages, S.report_banEvasion, S.report_impersonation, S.report_underage, S.report_ip],
                     value: "report reason"
                 }
             },
-            M = {
+            L = {
                 type: {
                     getLabel: function() {
                         return Object(s.d)("Tell us more about the account sending spam.", "ReportModalWizard")
@@ -5712,7 +5712,7 @@ webpackJsonp([46], {
                     value: "spam type"
                 }
             },
-            L = {
+            M = {
                 info: {
                     getLabel: function() {
                         return Object(s.d)("Thank you for your report and your concern. We will reach out to the person you reported with resources they can use to seek help.", "ReportModalWizard")
@@ -5797,8 +5797,8 @@ webpackJsonp([46], {
             },
             W = F,
             q = R,
-            H = x,
-            G = {
+            Q = x,
+            H = {
                 video: j.video,
                 whisper: j.messaging,
                 profile: j.profile,
@@ -5811,7 +5811,7 @@ webpackJsonp([46], {
                 "ban evasion": B.type,
                 "inappropriate content": P.type,
                 impersonation: V.type,
-                spam: M.type,
+                spam: L.type,
                 rude: D,
                 "dont like": D,
                 violence: U.violence,
@@ -5819,14 +5819,14 @@ webpackJsonp([46], {
                 "intellectual property": z,
                 selfharm: I
             },
-            $ = {
+            G = {
                 impersonation: D,
-                selfharm: L.info,
+                selfharm: M.info,
                 spam: D,
                 harm: U.violence_end,
-                other: H
+                other: Q
             },
-            K = {
+            $ = {
                 CHANNEL_FEED_POST_REPORT: j.profile,
                 COMMUNITY_REPORT: j.profile,
                 CHAT_REPORT: j.messaging,
@@ -5836,7 +5836,7 @@ webpackJsonp([46], {
                 LIVE_UP_REPORT: j.profile,
                 VOD_COMMENT_REPORT: j.messaging
             },
-            Q = "report-wizard-back",
+            K = "report-wizard-back",
             J = "report-wizard-close",
             Y = "report-wizard-next",
             X = "report-wizard-submit",
@@ -5844,7 +5844,7 @@ webpackJsonp([46], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        currentCard: t.props.currentCard || K[t.props.reportContentType] || W,
+                        currentCard: t.props.currentCard || $[t.props.reportContentType] || W,
                         prevCards: [],
                         currentSelection: null,
                         prevSelections: [],
@@ -5866,26 +5866,26 @@ webpackJsonp([46], {
                             case y.Confirm:
                                 e = Object(s.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, a = !t.state.userTextInput, i = X
                         }
-                        return r.createElement(v._6, null, o, r.createElement(v.u, {
+                        return r.createElement(v._7, null, o, r.createElement(v.u, {
                             onClick: n,
                             disabled: a,
                             "data-test-selector": i
-                        }, r.createElement(v._6, {
+                        }, r.createElement(v._7, {
                             padding: {
                                 x: 2
                             }
                         }, e)))
                     }, t.renderBack = function() {
-                        return r.createElement(v._6, {
+                        return r.createElement(v._7, {
                             margin: {
                                 right: 1
                             },
-                            display: v.P.InlineBlock
+                            display: v.Q.InlineBlock
                         }, r.createElement(v.u, {
                             type: v.A.Hollow,
                             onClick: t.handleBack,
-                            "data-test-selector": Q
-                        }, r.createElement(v._6, {
+                            "data-test-selector": K
+                        }, r.createElement(v._7, {
                             padding: {
                                 x: 2
                             }
@@ -5894,7 +5894,7 @@ webpackJsonp([46], {
                         t.setState({
                             modalCloseTracked: !0
                         }, function() {
-                            return t.props.trackClose(O.Finish, t.state.currentCard.value)
+                            return t.props.trackClose(T.Finish, t.state.currentCard.value)
                         }), t.props.onClose()
                     }, t.handleNext = function() {
                         if (t.state.currentSelection && t.state.currentSelection.value) {
@@ -5903,7 +5903,7 @@ webpackJsonp([46], {
                                 i = t.state.prevSelections.concat(t.state.currentSelection),
                                 a = t.state.displacedSelections[t.state.displacedSelections.length - 1],
                                 r = q;
-                            G[t.state.currentSelection.value] && (r = G[t.state.currentSelection.value]);
+                            H[t.state.currentSelection.value] && (r = H[t.state.currentSelection.value]);
                             var o = t.state.currentSelection.reportReason || t.state.reportReason,
                                 l = r.type === y.Info;
                             t.setState({
@@ -5914,7 +5914,7 @@ webpackJsonp([46], {
                                 currentSelection: a || null,
                                 displacedSelections: t.state.displacedSelections.slice(0, -1)
                             }, function() {
-                                return t.trackNavigation(T.Next, e.value)
+                                return t.trackNavigation(w.Next, e.value)
                             })
                         }
                     }, t.createReportDescription = function() {
@@ -5947,7 +5947,7 @@ webpackJsonp([46], {
                                                 });
                                                 break;
                                             case N.b.Success:
-                                                i = H, $[t] && (i = $[t]), this.setState({
+                                                i = Q, G[t] && (i = G[t]), this.setState({
                                                     currentCard: i,
                                                     prevCards: [],
                                                     prevSelections: [],
@@ -5956,7 +5956,7 @@ webpackJsonp([46], {
                                                     userTextInput: {},
                                                     error: ""
                                                 }, function() {
-                                                    return r.trackNavigation(T.Submit)
+                                                    return r.trackNavigation(w.Submit)
                                                 });
                                                 break;
                                             case N.b.MutationError:
@@ -5987,7 +5987,7 @@ webpackJsonp([46], {
                                     prevSelections: this.state.prevSelections.slice(0, -1),
                                     error: ""
                                 }, function() {
-                                    return r.trackNavigation(T.Back, e.value)
+                                    return r.trackNavigation(w.Back, e.value)
                                 }), [2]
                             })
                         })
@@ -6007,14 +6007,14 @@ webpackJsonp([46], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                    this.state.modalCloseTracked || this.props.trackClose(O.Close, this.state.currentCard.value)
+                    this.state.modalCloseTracked || this.props.trackClose(T.Close, this.state.currentCard.value)
                 }, t.prototype.render = function() {
                     var e = this.state.currentCard.type === y.Info && this.state.currentCard.blockPrompt ? r.createElement(b, {
                             targetUserID: this.props.targetUserID,
                             onBlock: this.props.onBlock,
                             onUnblock: this.props.onUnblock
                         }) : null,
-                        t = this.state.error ? r.createElement(v._29, {
+                        t = this.state.error ? r.createElement(v._30, {
                             fullWidth: !0,
                             margin: {
                                 bottom: 1
@@ -6022,19 +6022,19 @@ webpackJsonp([46], {
                             padding: 1,
                             className: "reporting__error-container"
                         }, this.state.error) : null;
-                    return r.createElement(v._29, {
+                    return r.createElement(v._30, {
                         className: "reporting-wizard",
-                        display: v.P.Flex,
+                        display: v.Q.Flex,
                         margin: {
                             x: 1
                         },
-                        flexDirection: v.R.Column,
+                        flexDirection: v.S.Column,
                         fullHeight: !0,
                         "data-test-card-value": this.state.currentCard.value
-                    }, t, r.createElement(v.O, {
+                    }, t, r.createElement(v.P, {
                         bold: !0,
-                        type: v._43.H4
-                    }, this.state.currentCard.getTitle ? this.state.currentCard.getTitle() : this.props.title), r.createElement(v._6, {
+                        type: v._44.H4
+                    }, this.state.currentCard.getTitle ? this.state.currentCard.getTitle() : this.props.title), r.createElement(v._7, {
                         margin: {
                             y: 1
                         }
@@ -6054,9 +6054,9 @@ webpackJsonp([46], {
             ne = n("mmQh"),
             ie = n("mRH2");
         n.d(t, "c", function() {
-                return T
+                return w
             }), n.d(t, "a", function() {
-                return O
+                return T
             }), n.d(t, "b", function() {
                 return re
             }),
@@ -6065,10 +6065,10 @@ webpackJsonp([46], {
             }(E || (E = {})),
             function(e) {
                 e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-            }(T || (T = {})),
+            }(w || (w = {})),
             function(e) {
                 e.Close = "close", e.Finish = "finish"
-            }(O || (O = {}));
+            }(T || (T = {}));
         var ae = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
@@ -6079,7 +6079,7 @@ webpackJsonp([46], {
                     closeEventSent: !1
                 }, t.handleSubmit = function(e, n, i, r) {
                     return a.__awaiter(t, void 0, void 0, function() {
-                        var t, o, l, d = this;
+                        var t, o, l, c = this;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -6103,7 +6103,7 @@ webpackJsonp([46], {
                                     }), this.setState({
                                         submitStatus: N.b.Success
                                     }, function() {
-                                        d.state.showWizard || d.trackAction(E.Submit)
+                                        c.state.showWizard || c.trackAction(E.Submit)
                                     }), [3, 4];
                                 case 3:
                                     return t = a.sent(), s.j.error(t, "ReportUserInCommunity Mutation failed."), this.setState({
@@ -6132,7 +6132,7 @@ webpackJsonp([46], {
                                     }), this.setState({
                                         submitStatus: N.b.Success
                                     }, function() {
-                                        d.state.showWizard || d.trackAction(E.Submit)
+                                        c.state.showWizard || c.trackAction(E.Submit)
                                     }), [3, 9];
                                 case 8:
                                     return l = a.sent(), s.j.error(l, "ReportUser Mutation failed."), this.setState({
@@ -6158,11 +6158,11 @@ webpackJsonp([46], {
                         __typename: "User"
                     }))
                 }, t.trackOpen = function(e) {
-                    t.state.openEventSent || (t.state.showWizard ? t.trackWizardAction(T.Open, void 0, e) : t.trackAction(E.Open), t.setState({
+                    t.state.openEventSent || (t.state.showWizard ? t.trackWizardAction(w.Open, void 0, e) : t.trackAction(E.Open), t.setState({
                         openEventSent: !0
                     }))
                 }, t.trackClose = function(e, n) {
-                    t.state.closeEventSent || (t.state.showWizard ? t.trackWizardAction(T.Close, n, void 0, e) : t.trackAction(E.Close), t.setState({
+                    t.state.closeEventSent || (t.state.showWizard ? t.trackWizardAction(w.Close, n, void 0, e) : t.trackAction(E.Close), t.setState({
                         closeEventSent: !0
                     }))
                 }, t.trackWizardAction = function(e, n, i, a) {
@@ -6235,11 +6235,11 @@ webpackJsonp([46], {
                 }
             }, t
         }(r.Component);
-        var re = Object(l.d)(Object(d.a)(ne, {
+        var re = Object(l.d)(Object(c.a)(ne, {
             name: "reportUserInCommunity"
-        }), Object(d.a)(ie, {
+        }), Object(c.a)(ie, {
             name: "reportUser"
-        }), Object(g.d)("ReportUser"), Object(c.a)(), Object(u.a)(), Object(o.b)(function(e) {
+        }), Object(g.d)("ReportUser"), Object(d.a)(), Object(u.a)(), Object(o.b)(function(e) {
             return {
                 sessionUser: e.session.user
             }
@@ -6276,12 +6276,12 @@ webpackJsonp([46], {
                 return y(void 0 === p.request ? "not_supported" : "not_enabled", e)
             }
 
-            function d() {
-                _.element || (b(), c())
+            function c() {
+                _.element || (b(), d())
             }
 
-            function c() {
-                o && "webkitfullscreenchange" === p.change && window.removeEventListener("resize", d, !1)
+            function d() {
+                o && "webkitfullscreenchange" === p.change && window.removeEventListener("resize", c, !1)
             }
             var u = /i(Pad|Phone|Pod)/.test(navigator.userAgent) && parseInt(navigator.userAgent.replace(/^.*OS (\d+)_(\d+).*$/, "$1.$2"), 10) >= 7,
                 p = function() {
@@ -6350,7 +6350,7 @@ webpackJsonp([46], {
                         } else s(e)
                     },
                     exit: function() {
-                        c(), r[p.exit]()
+                        d(), r[p.exit]()
                     },
                     toggle: function(e, t, n, i) {
                         _.element ? _.exit() : _.request(e, t, n, i)
@@ -6382,7 +6382,7 @@ webpackJsonp([46], {
                 }), p.change && r.addEventListener(p.change, function(e) {
                     if (_.onchange(_.element), _.element) {
                         var t = v[v.length - 2];
-                        t && t.element === _.element ? b() : (k(_.element), o && "webkitfullscreenchange" === p.change && window.addEventListener("resize", d, !1))
+                        t && t.element === _.element ? b() : (k(_.element), o && "webkitfullscreenchange" === p.change && window.addEventListener("resize", c, !1))
                     } else b()
                 }, !1), r.addEventListener("webkitbeginfullscreen", function(e) {
                     var t = !0;
@@ -6595,7 +6595,7 @@ webpackJsonp([46], {
                 var e = [],
                     t = {};
                 Object.keys(r).forEach(function(n) {
-                    var i = c(n, r[n]);
+                    var i = d(n, r[n]);
                     e.push(i), t[n.toLowerCase()] = i
                 }), s = {
                     orderedActions: e,
@@ -6604,11 +6604,11 @@ webpackJsonp([46], {
             }
             return s
         }, t.b = function() {
-            d || (d = function(e) {
+            c || (c = function(e) {
                 if (s) return s.indexedActions[e.toLowerCase()];
-                return c(e, r[e])
+                return d(e, r[e])
             }("Cheer"));
-            return d
+            return c
         };
         var i = n("I89S"),
             a = n("3iBR"),
@@ -6624,9 +6624,9 @@ webpackJsonp([46], {
             o = ["LIGHT", "DARK"],
             l = [1, 1.5, 2, 3, 4],
             s = null;
-        var d = null;
+        var c = null;
 
-        function c(e, t) {
+        function d(e, t) {
             var n = [i.a.Red, i.a.Blue, i.a.Green, i.a.Purple, i.a.Gray],
                 a = new Map,
                 r = [];
@@ -6648,16 +6648,16 @@ webpackJsonp([46], {
 
         function u(e, t) {
             for (var n = [], i = {}, r = 0, s = o; r < s.length; r++)
-                for (var d = s[r], c = 0, u = l; c < u.length; c++) {
-                    var m = u[c];
-                    i[d] || (i[d] = {
+                for (var c = s[r], d = 0, u = l; d < u.length; d++) {
+                    var m = u[d];
+                    i[c] || (i[c] = {
                         animated: new Map,
                         static: new Map
                     });
-                    var h = p(e, d, !0, t, m);
-                    n.push(h), i[d].animated.set(m, h.url);
-                    var g = p(e, d, !1, t, m);
-                    n.push(g), i[d].static.set(m, g.url)
+                    var h = p(e, c, !0, t, m);
+                    n.push(h), i[c].animated.set(m, h.url);
+                    var g = p(e, c, !1, t, m);
+                    n.push(g), i[c].static.set(m, g.url)
                 }
             return {
                 id: e + ";" + t,
@@ -7123,8 +7123,8 @@ webpackJsonp([46], {
             o = n("2KeS"),
             l = n("6sO2"),
             s = n("7vx8"),
-            d = n("CSlQ"),
-            c = n("xwpJ"),
+            c = n("CSlQ"),
+            d = n("xwpJ"),
             u = n("Odds"),
             p = n("x6ny"),
             m = function(e) {
@@ -7141,20 +7141,20 @@ webpackJsonp([46], {
                         t = Object(l.d)("Select One...", "ReportUserModal");
                     this.props.data.loading ? e = [r.createElement("option", {
                         key: "Loading"
-                    }, Object(l.d)("Loading...", "ReportReasonsSelect"))] : e = (this.props.data.reportReasons || Object(c.b)()).map(function(e) {
+                    }, Object(l.d)("Loading...", "ReportReasonsSelect"))] : e = (this.props.data.reportReasons || Object(d.b)()).map(function(e) {
                         return r.createElement("option", {
                             key: e.id,
                             value: e.id
                         }, e.text)
                     });
-                    return r.createElement(u._6, {
+                    return r.createElement(u._7, {
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(u.U, {
+                    }, r.createElement(u.V, {
                         id: "reporting-modal__select",
                         label: Object(l.d)("Select Reason (required)", "ReportUserModal")
-                    }, r.createElement(u._25, {
+                    }, r.createElement(u._26, {
                         id: "reporting-modal__select",
                         "data-test-selector": "reporting-modal.select",
                         disabled: this.props.data.loading || !!this.props.data.error,
@@ -7164,7 +7164,7 @@ webpackJsonp([46], {
                         disabled: !0,
                         key: "default"
                     }, t), e)))
-                }, t = i.__decorate([Object(d.d)("ReportReasonSelect")], t)
+                }, t = i.__decorate([Object(c.d)("ReportReasonSelect")], t)
             }(r.Component),
             h = Object(s.a)(p, {
                 options: function(e) {
@@ -7231,33 +7231,33 @@ webpackJsonp([46], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(u._6, {
-                        display: u.P.Flex,
-                        flexDirection: u.R.Column,
+                    return r.createElement(u._7, {
+                        display: u.Q.Flex,
+                        flexDirection: u.S.Column,
                         alignItems: u.c.Center,
-                        justifyContent: u._5.Center
+                        justifyContent: u._6.Center
                     }, this.renderStatusMessage(), this.renderBody())
                 }, t.prototype.renderBody = function() {
                     return this.props.submitStatus === v.Success ? r.createElement("div", null, r.createElement(u.u, {
                         onClick: this.props.onClose
-                    }, r.createElement(u._6, {
+                    }, r.createElement(u._7, {
                         padding: {
                             x: 2
                         }
-                    }, Object(l.d)("Close", "ReportUser")))) : r.createElement("div", null, r.createElement(u._6, {
+                    }, Object(l.d)("Close", "ReportUser")))) : r.createElement("div", null, r.createElement(u._7, {
                         "data-test-selector": "reporting.title",
                         margin: {
                             bottom: 1
                         },
                         "data-a-target": "reporting-channel-name"
-                    }, r.createElement(u.O, {
-                        type: u._43.H4
-                    }, this.props.title), r.createElement(u._29, {
+                    }, r.createElement(u.P, {
+                        type: u._44.H4
+                    }, this.props.title), r.createElement(u._30, {
                         color: u.J.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), r.createElement("form", null, r.createElement(u._29, {
+                    }, this.headerMessage)), r.createElement("form", null, r.createElement(u._30, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -7269,18 +7269,18 @@ webpackJsonp([46], {
                     }, r.createElement(h, {
                         reportContentType: this.props.reportContentType,
                         onChange: this.handleReasonChange
-                    }), this.renderCommunitiesSelector(), r.createElement(u.U, {
+                    }), this.renderCommunitiesSelector(), r.createElement(u.V, {
                         id: "reporting__text-area",
                         label: Object(l.d)("Description (required)", "ReportUser")
-                    }, r.createElement(u._40, {
+                    }, r.createElement(u._41, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), r.createElement(u._29, {
-                        display: u.P.Flex,
-                        justifyContent: u._5.Center
+                    }))), r.createElement(u._30, {
+                        display: u.Q.Flex,
+                        justifyContent: u._6.Center
                     }, r.createElement(u.u, {
                         onClick: this.handleSubmit
-                    }, r.createElement(u._6, {
+                    }, r.createElement(u._7, {
                         padding: {
                             x: 2
                         }
@@ -7297,14 +7297,14 @@ webpackJsonp([46], {
                                 "data-community-name": e.name
                             }, e.displayName)
                         });
-                        return r.createElement(u._6, {
+                        return r.createElement(u._7, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(u.U, {
+                        }, r.createElement(u.V, {
                             id: "reporting__select-community",
                             label: Object(l.d)("Community", "ReportUser")
-                        }, r.createElement(u._25, {
+                        }, r.createElement(u._26, {
                             id: "reporting__select-community",
                             "data-test-selector": "reporting.select-community",
                             disabled: this.props.data.loading || !!this.props.data.error,
@@ -7330,7 +7330,7 @@ webpackJsonp([46], {
                         "reporting__error-container": this.props.submitStatus !== v.Success,
                         "reporting__success-container": this.props.submitStatus === v.Success
                     });
-                    return r.createElement(u._29, {
+                    return r.createElement(u._30, {
                         className: t,
                         fullWidth: this.props.submitStatus !== v.Success,
                         "data-test-selector": "reporting.error",
@@ -7618,8 +7618,8 @@ webpackJsonp([46], {
         var i, a, r, o = n("TToO"),
             l = n("GiK3"),
             s = n("6sO2"),
-            d = n("7vx8"),
-            c = n("6BvN"),
+            c = n("7vx8"),
+            d = n("6BvN"),
             u = n("oIkB"),
             p = n("vH/s"),
             m = function(e, t, n, i, a) {
@@ -7703,14 +7703,14 @@ webpackJsonp([46], {
                 }, t.prototype.render = function() {
                     var e = this.props.title.length < 1 || this.state.publishState === r.Error,
                         t = this.state.publishState === r.Sending;
-                    return l.createElement(k._6, null, l.createElement(k.u, {
+                    return l.createElement(k._7, null, l.createElement(k.u, {
                         onClick: this.onPublish,
                         disabled: e,
                         state: t ? k.z.Loading : k.z.Default,
                         size: k.y.Large,
                         blurAfterClick: !0
                     }, Object(s.d)("Publish", "ClipsPublishButton")))
-                }, t = o.__decorate([Object(d.a)(b, {
+                }, t = o.__decorate([Object(c.a)(b, {
                     name: "publishClip"
                 })], t)
             }(l.Component),
@@ -7725,107 +7725,107 @@ webpackJsonp([46], {
             e.emptySubmission = "emptySubmission", e.characterLimitReached = "characterLimitReached", e.channelViolation = "channelViolation", e.notCurator = "notCurator", e.unknown = "unknown"
         }(g || (g = {}));
         var E = 100,
-            T = function(e) {
+            w = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderForClipsViewing = function() {
-                        return l.createElement("div", null, l.createElement(k._40, {
+                        return l.createElement("div", null, l.createElement(k._41, {
                             id: N.TITLE_INPUT,
                             "data-test-selector": N.TITLE_INPUT,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
                             onKeyDown: n.handleKeyDown
-                        }), l.createElement(k._6, {
-                            display: k.P.Flex,
-                            justifyContent: k._5.Between,
+                        }), l.createElement(k._7, {
+                            display: k.Q.Flex,
+                            justifyContent: k._6.Between,
                             alignItems: k.c.Center,
                             padding: {
                                 top: 1
                             }
-                        }, n.state.showError ? l.createElement(k.O, {
+                        }, n.state.showError ? l.createElement(k.P, {
                             color: k.J.Error
-                        }, n.getErrorMessage()) : l.createElement(k.O, {
+                        }, n.getErrorMessage()) : l.createElement(k.P, {
                             color: k.J.Alt2
-                        }, n.getRemainingCharacterText()), l.createElement(k._6, {
-                            display: k.P.Flex
+                        }, n.getRemainingCharacterText()), l.createElement(k._7, {
+                            display: k.Q.Flex
                         }, l.createElement(k.u, {
                             "data-test-selector": N.TITLE_SAVE,
                             onClick: n.props.onCancel,
                             type: k.A.Hollow
-                        }, Object(s.d)("Cancel", "ClipsTitleEdit")), l.createElement(k._6, {
+                        }, Object(s.d)("Cancel", "ClipsTitleEdit")), l.createElement(k._7, {
                             padding: {
                                 left: 1
                             }
                         }, n.renderSave()))))
                     }, n.renderForManager = function() {
-                        return l.createElement(k.U, {
+                        return l.createElement(k.V, {
                             id: N.TITLE_INPUT,
                             label: Object(s.d)("Title", "ClipsTitleEdit"),
                             hint: n.getRemainingCharacterText()
-                        }, l.createElement(k._6, {
-                            display: k.P.Flex,
-                            flexWrap: k.S.NoWrap
-                        }, l.createElement(k._6, {
+                        }, l.createElement(k._7, {
+                            display: k.Q.Flex,
+                            flexWrap: k.T.NoWrap
+                        }, l.createElement(k._7, {
                             flexGrow: 1,
                             margin: {
                                 right: 1
                             }
-                        }, l.createElement(k._2, {
+                        }, l.createElement(k._3, {
                             id: N.TITLE_INPUT,
                             "data-test-selector": N.TITLE_INPUT,
-                            type: k._3.Text,
+                            type: k._4.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
                             onKeyDown: n.handleKeyDown
-                        })), l.createElement(k._6, {
+                        })), l.createElement(k._7, {
                             flexShrink: 0,
                             flexGrow: 0
-                        }, l.createElement(k._6, {
-                            position: k._13.Relative
-                        }, n.renderSave(), l.createElement(k._4, {
+                        }, l.createElement(k._7, {
+                            position: k._14.Relative
+                        }, n.renderSave(), l.createElement(k._5, {
                             onClick: n.dismissMessage,
                             "data-test-selector": N.TITLE_SAVE_TOOLTIP
                         }, l.createElement(k.p, {
                             direction: k.q.TopRight,
                             show: n.state.showError || n.state.showSuccess
-                        }, l.createElement(k._6, {
+                        }, l.createElement(k._7, {
                             padding: 1
-                        }, n.state.showSuccess ? l.createElement(k.O, {
+                        }, n.state.showSuccess ? l.createElement(k.P, {
                             color: k.J.Link
-                        }, Object(s.d)("Title Saved!", "ClipsTitleEdit")) : l.createElement(k.O, {
+                        }, Object(s.d)("Title Saved!", "ClipsTitleEdit")) : l.createElement(k.P, {
                             color: k.J.Error
                         }, n.getErrorMessage()))))))))
                     }, n.renderForEdit = function() {
                         var e;
-                        if ((n.props.startOffset || 0 === n.props.startOffset) && n.props.endOffset) return e = n.state.showError ? l.createElement(k.O, {
+                        if ((n.props.startOffset || 0 === n.props.startOffset) && n.props.endOffset) return e = n.state.showError ? l.createElement(k.P, {
                             color: k.J.Alt2
-                        }, n.getErrorMessage()) : 0 === n.state.title.length && n.props.broadcasterName ? l.createElement(k.O, {
+                        }, n.getErrorMessage()) : 0 === n.state.title.length && n.props.broadcasterName ? l.createElement(k.P, {
                             color: k.J.Alt2
                         }, Object(s.d)("Clips with titles get more views. Help {broadcasterName} get discovered by adding a title.", {
                             broadcasterName: n.props.broadcasterName
-                        }, "ClipsTitleEdit")) : l.createElement(k.O, {
+                        }, "ClipsTitleEdit")) : l.createElement(k.P, {
                             color: k.J.Alt2
-                        }, n.getRemainingCharacterText()), l.createElement(k._6, null, l.createElement(k._6, {
+                        }, n.getRemainingCharacterText()), l.createElement(k._7, null, l.createElement(k._7, {
                             fullWidth: !0
-                        }, l.createElement(k._2, {
+                        }, l.createElement(k._3, {
                             id: N.TITLE_INPUT,
                             "data-test-selector": N.TITLE_INPUT,
-                            type: k._3.Text,
+                            type: k._4.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
                             onKeyDown: n.handleKeyDown,
                             placeholder: Object(s.d)("Add a title (required)", "ClipsTitleEdit"),
                             autoFocus: !0
-                        })), l.createElement(k._6, {
-                            display: k.P.Flex,
-                            justifyContent: k._5.Between,
+                        })), l.createElement(k._7, {
+                            display: k.Q.Flex,
+                            justifyContent: k._6.Between,
                             alignItems: k.c.Center,
                             padding: {
                                 top: 1
                             }
-                        }, e, l.createElement(k._6, {
-                            display: k.P.Flex
-                        }, l.createElement(k._6, {
+                        }, e, l.createElement(k._7, {
+                            display: k.Q.Flex
+                        }, l.createElement(k._7, {
                             padding: {
                                 left: 1
                             }
@@ -7906,7 +7906,7 @@ webpackJsonp([46], {
                         return n.props.clipTitle !== n.state.title.trim()
                     }, n.handleKeyDown = function(e) {
                         switch (e.keyCode) {
-                            case c.a.Enter:
+                            case d.a.Enter:
                                 return void(n.props.location === p.PageviewLocation.ClipsEditing ? n.setState({
                                     showSuccess: !0
                                 }) : n.canSaveEditedTitle() && n.editClipTitle());
@@ -7935,17 +7935,17 @@ webpackJsonp([46], {
                     return e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === a.InvalidTitle.toLowerCase() ? g.channelViolation : g.unknown
                 }, t
             }(l.Component),
-            O = Object(d.a)(C, {
+            T = Object(c.a)(C, {
                 name: "editTitle"
-            })(T);
+            })(w);
         n.d(t, !1, function() {
             return N
         }), n.d(t, !1, function() {
             return g
         }), n.d(t, !1, function() {
-            return T
+            return w
         }), n.d(t, "a", function() {
-            return O
+            return T
         })
     },
     QX2Z: function(e, t) {
@@ -8666,7 +8666,7 @@ webpackJsonp([46], {
         n.d(t, "a", function() {
             return s
         }), n.d(t, "b", function() {
-            return d
+            return c
         }), n.d(t, "c", function() {
             return u
         });
@@ -8678,11 +8678,11 @@ webpackJsonp([46], {
                 MyClips: "MyClips",
                 ClipsOfMyChannel: "ClipsOfMyChannel"
             },
-            d = {
+            c = {
                 Game: "TopClipsGame",
                 Channel: "TopClipsChannel"
             },
-            c = {
+            d = {
                 MyClips: o.PageviewLocation.MyClipsManager,
                 ClipsOfMyChannel: o.PageviewLocation.ChannelClipsManager,
                 TopClipsGame: o.PageviewLocation.ClipsGame,
@@ -8694,7 +8694,7 @@ webpackJsonp([46], {
                         vod_id: e.id,
                         vod_type: "clip",
                         share_platform: l[n],
-                        location: c[t],
+                        location: d[t],
                         game: e.game ? e.game.name : null,
                         channel_id: e.broadcaster ? Number(e.broadcaster.id) : 0,
                         channel: e.broadcaster ? e.broadcaster.login : "",
@@ -8720,9 +8720,9 @@ webpackJsonp([46], {
             };
         n("RsvU");
         n.d(t, "a", function() {
-            return d
+            return c
         });
-        var d = function(e) {
+        var c = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.onClick = function() {
@@ -9420,10 +9420,10 @@ webpackJsonp([46], {
                     l = t[o];
                 if (l && "function" != typeof l) {
                     var s = Object(i.d)(e.slice(0, r.index)),
-                        d = s ? s.length : r.index;
-                    n[d] = {
-                        startIndex: d,
-                        endIndex: d + o.length,
+                        c = s ? s.length : r.index;
+                    n[c] = {
+                        startIndex: c,
+                        endIndex: c + o.length,
                         data: {
                             alt: o,
                             images: {
@@ -9445,10 +9445,10 @@ webpackJsonp([46], {
         }), t.b = function(e) {
             for (var t = {}, n = 0, i = e; n < i.length; n++)
                 for (var o = i[n], l = 0, s = o.emotes; l < s.length; l++)
-                    for (var d = s[l], c = a[d.token] || [d.token], u = 0, p = c; u < p.length; u++) {
+                    for (var c = s[l], d = a[c.token] || [c.token], u = 0, p = d; u < p.length; u++) {
                         var m = p[u];
                         t[m] && o.id === r || (t[m] = {
-                            id: d.id,
+                            id: c.id,
                             token: m
                         })
                     }
@@ -10139,7 +10139,7 @@ webpackJsonp([46], {
             o = n("f2i/"),
             l = n("Aj/L"),
             s = n("4bQk");
-        var d = Object(i.b)(function(e) {
+        var c = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(l.d)(e)
             }
@@ -10151,7 +10151,7 @@ webpackJsonp([46], {
             }, e)
         })(s.a);
         n.d(t, "a", function() {
-            return d
+            return c
         }), n.d(t, !1, function() {}), n.d(t, "b", function() {
             return s.b
         })
@@ -10303,12 +10303,12 @@ webpackJsonp([46], {
             var n = [],
                 o = t.indexedActions,
                 s = new RegExp("^(" + Object.keys(o).join("|") + ")(\\d+)$", "i"),
-                d = e.split(/\s+/);
-            return d.forEach(function(e, t) {
-                var c = s.exec(e);
-                if (c) {
-                    var u = c[1].toLowerCase(),
-                        p = +c[2],
+                c = e.split(/\s+/);
+            return c.forEach(function(e, t) {
+                var d = s.exec(e);
+                if (d) {
+                    var u = d[1].toLowerCase(),
+                        p = +d[2],
                         m = o[u];
                     if (m || u !== i.g || (m = Object(a.b)()), m) {
                         var h = m.orderedTiers.find(function(e) {
@@ -10327,7 +10327,7 @@ webpackJsonp([46], {
                 } else {
                     var g = n.length && n[n.length - 1],
                         v = "";
-                    if (t < d.length - 1 && (v = " "), g && g.type === r.a.Text) g.content += e + v;
+                    if (t < c.length - 1 && (v = " "), g && g.type === r.a.Text) g.content += e + v;
                     else {
                         var f = "";
                         t && (f = " "), n.push({
@@ -10395,11 +10395,11 @@ webpackJsonp([46], {
                                 var r = a.referenceTracking,
                                     o = r.content,
                                     s = r.medium,
-                                    d = r.content_index;
+                                    c = r.content_index;
                                 l.o.tracking.trackPageview(i.__assign({
                                     content: o,
                                     medium: s,
-                                    content_index: d,
+                                    content_index: c,
                                     location: e.location
                                 }, t))
                             }
@@ -10656,10 +10656,10 @@ webpackJsonp([46], {
                         show: this.state.showBalloon
                     }));
                     var s = r;
-                    return this.props.tooltipProps && (s = a.createElement(o._46, i.__assign({}, this.props.tooltipProps), r)), a.createElement(o._6, {
+                    return this.props.tooltipProps && (s = a.createElement(o._47, i.__assign({}, this.props.tooltipProps), r)), a.createElement(o._7, {
                         "data-toggle-balloon-id": this.toggleBalloonId,
                         display: this.props.display,
-                        position: o._13.Relative
+                        position: o._14.Relative
                     }, a.createElement("div", {
                         style: {
                             display: "inherit"
@@ -10683,8 +10683,8 @@ webpackJsonp([46], {
             o = n("mwvJ"),
             l = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?");
         var s = n("YhVV"),
-            d = n("3KVC"),
-            c = n("e1CU");
+            c = n("3KVC"),
+            d = n("e1CU");
         t.a = function(e, t, n, a, r, o) {
             void 0 === o && (o = !1);
             var l;
@@ -10711,17 +10711,17 @@ webpackJsonp([46], {
                 });
                 return t
             }(t.emotes);
-            var d = Object(c.a)(t.displayName, t.username);
+            var c = Object(d.a)(t.displayName, t.username);
             return {
                 badges: t.badges || {},
                 bits: t.bits,
-                user: i.__assign({}, d, {
+                user: i.__assign({}, c, {
                     userLogin: t.username,
                     userID: t.userID,
                     userType: t.userType,
                     color: t.color || m(t.userID)
                 }),
-                messageParts: e ? h(e, l, t.bits, n, a, d.userDisplayName) : [],
+                messageParts: e ? h(e, l, t.bits, n, a, c.userDisplayName) : [],
                 deleted: o,
                 timestamp: Date.now()
             }
@@ -10736,18 +10736,18 @@ webpackJsonp([46], {
         function h(e, t, n, a, r, l) {
             void 0 === t && (t = []);
             var s = [],
-                d = 0,
-                c = g(e);
+                c = 0,
+                d = g(e);
             t.forEach(function(t) {
-                var u = c ? c.slice(d, t.startIndex).join("") : e.slice(d, t.startIndex);
+                var u = d ? d.slice(c, t.startIndex).join("") : e.slice(c, t.startIndex);
                 u && (s = n ? s.concat(v(u, l, r, a)) : s.concat(f(u, l, r))), s.push({
                     type: o.a.Emote,
                     content: i.__assign({
-                        alt: c ? c.slice(t.startIndex, t.endIndex).join("") : e.slice(t.startIndex, t.endIndex)
+                        alt: d ? d.slice(t.startIndex, t.endIndex).join("") : e.slice(t.startIndex, t.endIndex)
                     }, t.data)
-                }), d = t.endIndex
+                }), c = t.endIndex
             });
-            var u = c ? c.slice(d).join("") : e.slice(d);
+            var u = d ? d.slice(c).join("") : e.slice(c);
             return u && (s = n ? s.concat(v(u, l, r, a)) : s.concat(f(u, l, r))), s
         }
 
@@ -10767,8 +10767,8 @@ webpackJsonp([46], {
             var i = /^(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,6}(?:\/[\w./@#%&()\-+=:?~]*)?)$/g,
                 r = /([^\w@#%\-+=:~])?(@)([^\u0000-\u007F]+|\w+)+([^\w./@#%&()\-+=:?~]|\s|$)/g,
                 s = [],
-                c = e.split(/\s+/);
-            return c.forEach(function(e, u) {
+                d = e.split(/\s+/);
+            return d.forEach(function(e, u) {
                 i.lastIndex = 0;
                 var p = i.exec(e);
                 r.lastIndex = 0;
@@ -10802,8 +10802,8 @@ webpackJsonp([46], {
                                     displayText: e.slice(h, g)
                                 }
                             })
-                        } else if (Object(d.a)(v)) {
-                            var k = Object(d.b)(v);
+                        } else if (Object(c.a)(v)) {
+                            var k = Object(c.b)(v);
                             s.push({
                                 type: o.a.VideoLink,
                                 content: {
@@ -10822,7 +10822,7 @@ webpackJsonp([46], {
                     }
                     var b = e.slice(g),
                         y = "";
-                    u < c.length - 1 && (y = " "), b && s.push({
+                    u < d.length - 1 && (y = " "), b && s.push({
                         type: o.a.Text,
                         content: "" + b + y
                     })
@@ -10830,7 +10830,7 @@ webpackJsonp([46], {
                     if (!m) {
                         var _ = s.length && s[s.length - 1];
                         y = "";
-                        if (u < c.length - 1 && (y = " "), _ && _.type === o.a.Text) _.content += e + y;
+                        if (u < d.length - 1 && (y = " "), _ && _.type === o.a.Text) _.content += e + y;
                         else {
                             var S = "";
                             u && (S = " "), s.push({
@@ -10950,16 +10950,16 @@ webpackJsonp([46], {
             o = n("Odds"),
             l = (n("2IkU"), n("6sO2")),
             s = n("vH/s"),
-            d = function(e) {
+            c = function(e) {
                 var t = Date.now() / 1e3;
                 e.badge_type = e.badge_type.toLowerCase().replace(/( |\s)/g, "_"), l.o.tracking.track(s.SpadeEventType.ChatBadgeClick, Object.assign({
                     client_time: t
                 }, e))
             };
         n.d(t, "a", function() {
-            return c
+            return d
         });
-        var c = function(e) {
+        var d = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -10973,7 +10973,7 @@ webpackJsonp([46], {
                         isHovering: !1
                     })
                 }, t.onBadgeClickHandler = function() {
-                    d({
+                    c({
                         badge_type: t.props.badge.title,
                         badge_url_target: t.targetURL
                     })
@@ -11001,10 +11001,10 @@ webpackJsonp([46], {
                     onClick: this.onBadgeClickHandler,
                     target: "_blank",
                     "data-a-target": "chat-badge"
-                }, s)), this.state.isHovering ? a.createElement(o._46, {
-                    align: o._47.Left,
+                }, s)), this.state.isHovering ? a.createElement(o._47, {
+                    align: o._48.Left,
                     "data-a-target": "chat-badge",
-                    display: o.P.Inline,
+                    display: o.Q.Inline,
                     key: n,
                     label: t,
                     offsetY: "0.9rem"
@@ -11364,8 +11364,8 @@ webpackJsonp([46], {
             o = n("RH2O"),
             l = n("2KeS"),
             s = n("+8VM"),
-            d = n("V5M+"),
-            c = n("CSlQ"),
+            c = n("V5M+"),
+            d = n("CSlQ"),
             u = n("Odds"),
             p = (n("oFw4"), function(e) {
                 function t() {
@@ -11375,7 +11375,7 @@ webpackJsonp([46], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(u._29, {
+                    return r.createElement(u._30, {
                         className: "reporting-modal__container",
                         background: u.m.Base,
                         padding: {
@@ -11390,9 +11390,9 @@ webpackJsonp([46], {
                     }), r.createElement(s.a, null))
                 }, t
             }(r.Component));
-        var m = Object(l.d)(Object(c.d)("ReportUserModal"), Object(o.b)(null, function(e) {
+        var m = Object(l.d)(Object(d.d)("ReportUserModal"), Object(o.b)(null, function(e) {
             return Object(l.b)({
-                closeModal: d.c
+                closeModal: c.c
             }, e)
         }))(p);
         n.d(t, !1, function() {}), n.d(t, !1, function() {
@@ -11436,13 +11436,13 @@ webpackJsonp([46], {
                     }))
                 }, t
             }(a.Component);
-        var d = Object(r.b)(function(e) {
+        var c = Object(r.b)(function(e) {
             return {
                 darkModeEnabled: Object(l.a)(e) === o.a.Dark
             }
         })(s);
         n.d(t, "a", function() {
-            return d
+            return c
         })
     },
     "r+Hw": function(e, t) {},
@@ -11546,7 +11546,7 @@ webpackJsonp([46], {
         "use strict";
         var i = n("TToO"),
             a = n("GiK3"),
-            r = n("kJau");
+            r = n("6sO2");
 
         function o(e) {
             return function(t) {
@@ -11554,18 +11554,18 @@ webpackJsonp([46], {
                     function l(t) {
                         var a = n.call(this, t) || this;
                         return a.messageHandlers = [], a.handlePlayerAdded = function() {
-                            a.getPlayer() && !a.isConnected && (a.isConnected = !0, u.off(d, a.handlePlayerAdded), u.on(c, a.handlePlayerRemoved), window.addEventListener("message", a.onIncomingPlayerMessage))
+                            a.getPlayer() && !a.isConnected && (a.isConnected = !0, u.off(c, a.handlePlayerAdded), u.on(d, a.handlePlayerRemoved), window.addEventListener("message", a.onIncomingPlayerMessage))
                         }, a.handlePlayerRemoved = function() {
-                            !a.getPlayer() && a.isConnected && (a.isConnected = !1, u.off(c, a.handlePlayerRemoved), u.on(d, a.handlePlayerAdded), window.removeEventListener("message", a.onIncomingPlayerMessage))
+                            !a.getPlayer() && a.isConnected && (a.isConnected = !1, u.off(d, a.handlePlayerRemoved), u.on(c, a.handlePlayerAdded), window.removeEventListener("message", a.onIncomingPlayerMessage))
                         }, a.sendMessage = function(e) {
                             var t = a.getPlayer();
-                            t && t.postMessage(e, r.a)
+                            t && t.postMessage(e, r.o.config.playerBaseURL)
                         }, a.onIncomingPlayerMessage = function(e) {
-                            e.origin === r.a && e.data.namespace === F && a.messageHandlers.forEach(function(t) {
+                            e.origin === r.o.config.playerBaseURL && e.data.namespace === F && a.messageHandlers.forEach(function(t) {
                                 t(e.data)
                             })
                         }, a.updatePlayerProps = function(t) {
-                            if (e.requestedPlayerProps && (t.method === T || t.method === O)) {
+                            if (e.requestedPlayerProps && (t.method === w || t.method === T)) {
                                 var n = t.args[0],
                                     r = e.requestedPlayerProps.reduce(function(e, t) {
                                         var i = n[t];
@@ -11580,9 +11580,9 @@ webpackJsonp([46], {
                         }, a
                     }
                     return i.__extends(l, n), l.prototype.componentWillMount = function() {
-                        u.on(d, this.handlePlayerAdded)
+                        u.on(c, this.handlePlayerAdded)
                     }, l.prototype.componentWillUnmount = function() {
-                        u.off(d, this.handlePlayerAdded), u.off(c, this.handlePlayerRemoved)
+                        u.off(c, this.handlePlayerAdded), u.off(d, this.handlePlayerRemoved)
                     }, l.prototype.render = function() {
                         var e = {
                             playerConnection: {
@@ -11602,23 +11602,23 @@ webpackJsonp([46], {
         }
         var l = n("BzvE"),
             s = {},
-            d = "player-storage-added",
-            c = "player-storage-removed",
+            c = "player-storage-added",
+            d = "player-storage-removed",
             u = new l.EventEmitter;
 
         function p(e, t) {
-            s[e] = t, u.emit(d)
+            s[e] = t, u.emit(c)
         }
 
         function m(e) {
-            delete s[e], u.emit(c)
+            delete s[e], u.emit(d)
         }
 
         function h(e) {
             return {
                 args: [void 0 === e.arg ? {} : e.arg],
                 method: e.method,
-                namespace: void 0 === e.namespace ? w : e.namespace
+                namespace: void 0 === e.namespace ? O : e.namespace
             }
         }
 
@@ -11677,18 +11677,18 @@ webpackJsonp([46], {
         var C = "subscribe",
             N = "setclip",
             E = "setAutoplay",
-            T = "bridgestateupdate",
-            O = "bridgestorestateupdate",
-            w = "player.embed.host",
+            w = "bridgestateupdate",
+            T = "bridgestorestateupdate",
+            O = "player.embed.host",
             F = "player.embed.client";
         n.d(t, "t", function() {
             return o
         }), n.d(t, "p", function() {
             return s
         }), n.d(t, "n", function() {
-            return d
-        }), n.d(t, "o", function() {
             return c
+        }), n.d(t, "o", function() {
+            return d
         }), n.d(t, "i", function() {
             return u
         }), n.d(t, "s", function() {
@@ -11720,11 +11720,11 @@ webpackJsonp([46], {
         }), n.d(t, "e", function() {
             return E
         }), n.d(t, "c", function() {
-            return T
-        }), n.d(t, "d", function() {
-            return O
-        }), n.d(t, "b", function() {
             return w
+        }), n.d(t, "d", function() {
+            return T
+        }), n.d(t, "b", function() {
+            return O
         }), n.d(t, "a", function() {
             return F
         }), n.d(t, !1, function() {
@@ -11740,7 +11740,7 @@ webpackJsonp([46], {
         n.d(t, "b", function() {
             return s
         }), n.d(t, "a", function() {
-            return d
+            return c
         });
         var i = n("GiK3"),
             a = (n.n(i), n("8Wuk")),
@@ -11765,13 +11765,13 @@ webpackJsonp([46], {
             }, {
                 type: a.b.Copy
             }],
-            d = function(e) {
-                return i.createElement(l._6, {
+            c = function(e) {
+                return i.createElement(l._7, {
                     className: "clips-social-share",
-                    display: l.P.Flex,
-                    flexWrap: l.S.NoWrap
+                    display: l.Q.Flex,
+                    flexWrap: l.T.NoWrap
                 }, s.map(function(t) {
-                    return i.createElement(l._6, {
+                    return i.createElement(l._7, {
                         key: t.type,
                         margin: {
                             right: 1
@@ -11801,11 +11801,11 @@ webpackJsonp([46], {
                 SUBMIT_BUTTON: "clips-modal-submit-button",
                 CANCEL_BUTTON: "clips-modal-cancel-button"
             }),
-            d = function(e) {
+            c = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderSuccess = function() {
-                        return t.props.successContent ? a.createElement(l._29, {
+                        return t.props.successContent ? a.createElement(l._30, {
                             "data-test-selector": s.SUCCESS_BODY,
                             padding: {
                                 x: 2,
@@ -11817,11 +11817,11 @@ webpackJsonp([46], {
                             borderMarked: !0,
                             background: l.m.Alt,
                             fullWidth: !0
-                        }, a.createElement(l.O, {
-                            type: l._43.Strong
+                        }, a.createElement(l.P, {
+                            type: l._44.Strong
                         }, t.props.successContent)) : null
                     }, t.renderError = function() {
-                        return t.props.errorContent ? a.createElement(l._29, {
+                        return t.props.errorContent ? a.createElement(l._30, {
                             "data-test-selector": s.ERROR_BODY,
                             padding: {
                                 x: 1,
@@ -11833,8 +11833,8 @@ webpackJsonp([46], {
                             borderMarked: !0,
                             background: l.m.Alt,
                             fullWidth: !0
-                        }, a.createElement(l.O, {
-                            type: l._43.Strong,
+                        }, a.createElement(l.P, {
+                            type: l._44.Strong,
                             color: l.J.Error
                         }, t.props.errorContent)) : null
                     }, t.onSubmit = function() {
@@ -11844,14 +11844,14 @@ webpackJsonp([46], {
                 return i.__extends(t, e), t.prototype.render = function() {
                     return this.props.successContent ? a.createElement(o.a, {
                         onClickOut: this.props.onClose
-                    }, a.createElement(l._29, {
+                    }, a.createElement(l._30, {
                         padding: 2,
                         background: l.m.Base,
                         className: "clip-modal"
-                    }, this.renderSuccess(), a.createElement(l._6, {
-                        display: l.P.Flex,
-                        justifyContent: l._5.Center
-                    }, a.createElement(l._6, {
+                    }, this.renderSuccess(), a.createElement(l._7, {
+                        display: l.Q.Flex,
+                        justifyContent: l._6.Center
+                    }, a.createElement(l._7, {
                         margin: {
                             x: 1
                         }
@@ -11860,11 +11860,11 @@ webpackJsonp([46], {
                         onClick: this.props.onClose
                     }, Object(r.d)("Close", "ClipsModal")))))) : a.createElement(o.a, {
                         onClickOut: this.props.onClose
-                    }, a.createElement(l._29, {
+                    }, a.createElement(l._30, {
                         padding: 2,
                         background: l.m.Base,
                         className: "clip-modal"
-                    }, a.createElement(l._29, {
+                    }, a.createElement(l._30, {
                         "data-test-selector": s.TITLE,
                         borderBottom: !0,
                         margin: {
@@ -11873,7 +11873,7 @@ webpackJsonp([46], {
                         padding: {
                             bottom: 1
                         }
-                    }, this.props.title), a.createElement(l._29, {
+                    }, this.props.title), a.createElement(l._30, {
                         "data-test-selector": s.MAIN_BODY,
                         borderBottom: !0,
                         margin: {
@@ -11882,10 +11882,10 @@ webpackJsonp([46], {
                         padding: {
                             bottom: 2
                         }
-                    }, this.renderError(), this.props.body), a.createElement(l._6, {
-                        display: l.P.Flex,
-                        justifyContent: l._5.Center
-                    }, a.createElement(l._6, {
+                    }, this.renderError(), this.props.body), a.createElement(l._7, {
+                        display: l.Q.Flex,
+                        justifyContent: l._6.Center
+                    }, a.createElement(l._7, {
                         margin: {
                             x: 1
                         }
@@ -11893,7 +11893,7 @@ webpackJsonp([46], {
                         "data-test-selector": s.CANCEL_BUTTON,
                         type: l.A.Text,
                         onClick: this.props.onClose
-                    }, Object(r.d)("Cancel", "ClipsModal"))), a.createElement(l._6, {
+                    }, Object(r.d)("Cancel", "ClipsModal"))), a.createElement(l._7, {
                         margin: {
                             x: 1
                         }
@@ -11902,12 +11902,12 @@ webpackJsonp([46], {
                         type: this.props.buttonType ? this.props.buttonType : l.A.Default,
                         onClick: this.onSubmit,
                         disabled: this.props.submitDisabled
-                    }, this.props.buttonContent), this.props.isLoading && a.createElement(l._8, {
+                    }, this.props.buttonContent), this.props.isLoading && a.createElement(l._9, {
                         delay: 0
                     })))))
                 }, t
             }(a.Component),
-            c = n("1OO3"),
+            d = n("1OO3"),
             u = n("CSlQ"),
             p = 86400,
             m = function(e) {
@@ -11918,17 +11918,17 @@ webpackJsonp([46], {
                         hasErrored: !1,
                         hasSucceeded: !1
                     }, t.renderTitle = function() {
-                        return t.props.isTemporary ? a.createElement(l.O, {
-                            type: l._43.H5,
+                        return t.props.isTemporary ? a.createElement(l.P, {
+                            type: l._44.H5,
                             ellipsis: !0
-                        }, Object(r.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : a.createElement(l.O, {
-                            type: l._43.H5,
+                        }, Object(r.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : a.createElement(l.P, {
+                            type: l._44.H5,
                             ellipsis: !0
                         }, Object(r.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                     }, t.renderBodyText = function() {
-                        return t.props.isTemporary ? a.createElement(l.O, null, Object(r.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
+                        return t.props.isTemporary ? a.createElement(l.P, null, Object(r.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
                             clipCreator: t.props.targetUser.displayName
-                        }, "ClipsModalBanUser")) : a.createElement(l.O, null, Object(r.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
+                        }, "ClipsModalBanUser")) : a.createElement(l.P, null, Object(r.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
                             clipCreator: t.props.targetUser.displayName
                         }, "ClipsModalBanUser"))
                     }, t.renderButtonText = function() {
@@ -11973,7 +11973,7 @@ webpackJsonp([46], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(d, {
+                    return a.createElement(c, {
                         onSubmit: this.banUser,
                         onClose: this.props.onClose,
                         title: this.renderTitle(),
@@ -11987,7 +11987,7 @@ webpackJsonp([46], {
                     })
                 }, t
             }(a.Component),
-            h = Object(u.d)("ClipsModalBanUser")(Object(c.b)(function(e) {
+            h = Object(u.d)("ClipsModalBanUser")(Object(d.b)(function(e) {
                 return {
                     channelID: e.broadcasterID
                 }
@@ -12038,16 +12038,16 @@ webpackJsonp([46], {
                     }, n.state = y, n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = [a.createElement(l.O, {
+                    var e = [a.createElement(l.P, {
                         key: "title",
-                        type: l._43.H4
-                    }, Object(r.d)("Delete This Clip", "ClipsModalDelete")), a.createElement(l._6, {
+                        type: l._44.H4
+                    }, Object(r.d)("Delete This Clip", "ClipsModalDelete")), a.createElement(l._7, {
                         key: "message",
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(l.O, {
-                        type: l._43.P,
+                    }, a.createElement(l.P, {
+                        type: l._44.P,
                         color: l.J.Alt2
                     }, Object(r.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                     if (!this.props.data.clip) return null;
@@ -12055,10 +12055,10 @@ webpackJsonp([46], {
                     this.props.data.clip.curator && (t = a.createElement("span", null, " • ", Object(r.d)("Clipped by {curator}", {
                         curator: this.props.data.clip.curator.login
                     }, "ClipsModalDelete")));
-                    var n = a.createElement(l._29, {
-                        display: l.P.Flex,
-                        flexWrap: l.S.NoWrap
-                    }, a.createElement(l._6, {
+                    var n = a.createElement(l._30, {
+                        display: l.Q.Flex,
+                        flexWrap: l.T.NoWrap
+                    }, a.createElement(l._7, {
                         className: "clips-modal-delete__thumb",
                         margin: {
                             right: 1
@@ -12067,18 +12067,18 @@ webpackJsonp([46], {
                         ratio: l.k.Aspect16x9
                     }, a.createElement("img", {
                         src: this.props.data.clip.thumbnailURL
-                    }))), a.createElement(l._6, null, a.createElement(l.O, {
-                        type: l._43.H5
-                    }, this.props.data.clip.title), a.createElement(l.O, {
+                    }))), a.createElement(l._7, null, a.createElement(l.P, {
+                        type: l._44.H5
+                    }, this.props.data.clip.title), a.createElement(l.P, {
                         color: l.J.Alt2
                     }, Object(r.d)("{created, date, medium}", {
                         created: new Date(this.props.data.clip.createdAt)
-                    }, "ClipsModalDelete"), t), a.createElement(l.O, {
+                    }, "ClipsModalDelete"), t), a.createElement(l.P, {
                         color: l.J.Alt2
                     }, Object(r.d)("{viewCount, number} views", {
                         viewCount: this.props.data.clip.viewCount
                     }, "ClipsModalDelete"))));
-                    return a.createElement(d, {
+                    return a.createElement(c, {
                         onSubmit: this.onDeleteClick,
                         onClose: this.props.onClose,
                         title: e,
@@ -12124,12 +12124,12 @@ webpackJsonp([46], {
             C = n("3zLD"),
             N = n("wqRA"),
             E = this,
-            T = {
+            w = {
                 isLoading: !1,
                 hasErrored: !1,
                 hasSucceeded: !1
             },
-            O = function(e) {
+            T = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.deleteAll = function() {
@@ -12163,19 +12163,19 @@ webpackJsonp([46], {
                         return n.state.hasSucceeded ? Object(r.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
                     }, n.renderFailure = function() {
                         return n.state.hasErrored ? Object(r.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
-                    }, n.state = T, n
+                    }, n.state = w, n
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = a.createElement(l.O, {
-                        type: l._43.P
+                    var e = a.createElement(l.P, {
+                        type: l._44.P
                     }, Object(r.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
-                    return a.createElement(d, {
+                    return a.createElement(c, {
                         onSubmit: this.deleteAll,
                         onClose: this.props.onClose,
-                        title: a.createElement(l.O, {
-                            type: l._43.H4
+                        title: a.createElement(l.P, {
+                            type: l._44.H4
                         }, Object(r.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                         body: e,
                         buttonContent: Object(r.d)("Delete", "ClipsModalDeleteAll"),
@@ -12187,7 +12187,7 @@ webpackJsonp([46], {
                     })
                 }, t
             }(a.Component),
-            w = Object(C.compose)(Object(u.d)("ClipsModalDeleteAll"), f({
+            O = Object(C.compose)(Object(u.d)("ClipsModalDeleteAll"), f({
                 props: function(e) {
                     return {
                         deleteAllClips: function(t, n) {
@@ -12247,7 +12247,7 @@ webpackJsonp([46], {
                         }
                     }
                 }
-            }))(O),
+            }))(T),
             F = this,
             R = {
                 isLoading: !1,
@@ -12291,13 +12291,13 @@ webpackJsonp([46], {
                     }, n.state = R, n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = a.createElement(l.O, {
-                            type: l._43.H4
+                    var e = a.createElement(l.P, {
+                            type: l._44.H4
                         }, Object(r.d)("Delete these clips?", "ClipsModalBatchDelete")),
-                        t = a.createElement(l.O, {
-                            type: l._43.P
+                        t = a.createElement(l.P, {
+                            type: l._44.P
                         }, Object(r.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
-                    return a.createElement(d, {
+                    return a.createElement(c, {
                         onSubmit: this.onDeleteClick,
                         onClose: this.props.onClose,
                         title: e,
@@ -12341,13 +12341,13 @@ webpackJsonp([46], {
                 }
             })(I);
         n.d(t, "a", function() {
-            return d
+            return c
         }), n.d(t, "b", function() {
             return h
         }), n.d(t, "d", function() {
             return S
         }), n.d(t, "e", function() {
-            return w
+            return O
         }), n.d(t, "c", function() {
             return x
         })
@@ -12827,11 +12827,11 @@ webpackJsonp([46], {
         "use strict";
         var i, a = n("TToO"),
             r = n("GiK3"),
-            o = n("CSlQ"),
-            l = n("rqhk"),
-            s = n("kJau"),
-            d = n("icZh"),
-            c = n("46tX"),
+            o = n("6sO2"),
+            l = n("CSlQ"),
+            s = n("rqhk"),
+            c = n("icZh"),
+            d = n("46tX"),
             u = n("Odds");
         n("vtXo");
         ! function(e) {
@@ -12843,7 +12843,7 @@ webpackJsonp([46], {
                 n.hasSetPlayerRef = !1, n.setInitialSlug = function(e) {
                     n.state.initialSlug || (n.setState({
                         initialSlug: e
-                    }), Object(d.b)(e))
+                    }), Object(c.b)(e))
                 }, n.setPlayerRef = function(e) {
                     n.playerRef = e
                 }, n.setIsLoaded = function() {
@@ -12855,40 +12855,40 @@ webpackJsonp([46], {
                 return n.state = {
                     initialSlug: i,
                     isLoaded: !1
-                }, i && Object(d.b)(i), n
+                }, i && Object(c.b)(i), n
             }
             return a.__extends(t, e), t.prototype.componentDidMount = function() {
                 this.setInitialSlug(this.props.slug)
             }, t.prototype.componentWillReceiveProps = function(e) {
                 this.state.initialSlug || this.setInitialSlug(e.slug), this.props.slug !== e.slug && e.slug && this.setClip(e.slug)
             }, t.prototype.componentWillUnmount = function() {
-                Object(l.q)(this.props.slug)
+                Object(s.q)(this.props.slug)
             }, t.prototype.componentDidUpdate = function() {
-                !this.hasSetPlayerRef && this.playerRef && (this.hasSetPlayerRef = !0, Object(l.s)(this.props.slug, this.playerRef.contentWindow), this.playerRef.contentWindow.postMessage(Object(l.m)(), s.a))
+                !this.hasSetPlayerRef && this.playerRef && (this.hasSetPlayerRef = !0, Object(s.s)(this.props.slug, this.playerRef.contentWindow), this.playerRef.contentWindow.postMessage(Object(s.m)(), o.o.config.playerBaseURL))
             }, t.prototype.render = function() {
-                return this.state.initialSlug ? r.createElement(u._29, {
+                return this.state.initialSlug ? r.createElement(u._30, {
                     className: "clips-video-iframe",
-                    position: u._13.Relative,
+                    position: u._14.Relative,
                     fullWidth: !0,
                     fullHeight: !0
-                }, r.createElement(u._29, {
-                    display: this.state.isLoaded ? u.P.Hide : u.P.Flex,
+                }, r.createElement(u._30, {
+                    display: this.state.isLoaded ? u.Q.Hide : u.Q.Flex,
                     color: u.J.Overlay,
                     alignItems: u.c.Center,
-                    justifyContent: u._5.Center,
-                    position: u._13.Absolute,
+                    justifyContent: u._6.Center,
+                    position: u._14.Absolute,
                     fullHeight: !0,
                     fullWidth: !0
-                }, r.createElement(u._8, {
-                    size: u._27.Large,
+                }, r.createElement(u._9, {
+                    size: u._28.Large,
                     inheritColor: !0
-                })), r.createElement(u._0, {
-                    display: this.state.isLoaded ? u.P.Block : u.P.HideAccessible,
-                    position: u._13.Absolute,
+                })), r.createElement(u._1, {
+                    display: this.state.isLoaded ? u.Q.Block : u.Q.HideAccessible,
+                    position: u._14.Absolute,
                     fullHeight: !0,
                     fullWidth: !0
                 }, r.createElement("iframe", {
-                    src: s.a + "/?player=" + this.props.playerType + "&clip=" + this.state.initialSlug + "&origin=" + window.location.origin + "&branding=false&externalfullscreen=" + !Object(c.c)(navigator.userAgent),
+                    src: o.o.config.playerBaseURL + "/?player=" + this.props.playerType + "&clip=" + this.state.initialSlug + "&origin=" + window.location.origin + "&branding=false&externalfullscreen=" + !Object(d.c)(navigator.userAgent),
                     frameBorder: "0",
                     scrolling: "no",
                     allowFullScreen: !0,
@@ -12896,8 +12896,8 @@ webpackJsonp([46], {
                     onLoad: this.setIsLoaded
                 }))) : null
             }, t.prototype.setClip = function(e) {
-                this.playerRef && (this.playerRef.contentWindow.postMessage(Object(l.l)(e), s.a), Object(d.b)(e))
-            }, t = a.__decorate([Object(o.d)("ClipsVideoIframe", {
+                this.playerRef && (this.playerRef.contentWindow.postMessage(Object(s.l)(e), o.o.config.playerBaseURL), Object(c.b)(e))
+            }, t = a.__decorate([Object(l.d)("ClipsVideoIframe", {
                 autoReportInteractive: !0
             })], t)
         }(r.Component);
@@ -13392,9 +13392,9 @@ webpackJsonp([46], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(r._2, {
+                    return a.createElement(r._3, {
                         readOnly: !0,
-                        type: r._3.Text,
+                        type: r._4.Text,
                         value: this.props.value,
                         onClick: this.handleClickHandler
                     })
@@ -13611,4 +13611,4 @@ webpackJsonp([46], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-addfa72fb6c7893d9165a83beb8b435b.js.map
+//# sourceMappingURL=sites.clips.pages.view-7a667cc53b056af8f151da73139ab1bb.js.map

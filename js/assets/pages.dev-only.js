@@ -252,36 +252,36 @@ webpackJsonp([61], {
                     }, n
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(r.createElement(d._6, {
+                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(r.createElement(d._7, {
                         key: t,
-                        display: d.P.Flex,
-                        flexWrap: d.S.NoWrap,
+                        display: d.Q.Flex,
+                        flexWrap: d.T.NoWrap,
                         margin: 1
-                    }, r.createElement(d._6, {
+                    }, r.createElement(d._7, {
                         margin: {
                             right: 1
                         }
-                    }, r.createElement(d._12, {
+                    }, r.createElement(d._13, {
                         height: 90,
                         width: 90
-                    })), r.createElement(d._6, null, r.createElement(d._12, {
+                    })), r.createElement(d._7, null, r.createElement(d._13, {
                         width: 300,
                         lineCount: 3
                     }))));
                     var n = [];
-                    for (t = 0; t < this.state.colB; t++) n.push(r.createElement(d._6, {
+                    for (t = 0; t < this.state.colB; t++) n.push(r.createElement(d._7, {
                         key: t,
-                        display: d.P.Flex,
-                        flexWrap: d.S.NoWrap,
+                        display: d.Q.Flex,
+                        flexWrap: d.T.NoWrap,
                         margin: 1
-                    }, r.createElement(d._6, {
+                    }, r.createElement(d._7, {
                         margin: {
                             right: 1
                         }
-                    }, r.createElement(d._12, {
+                    }, r.createElement(d._13, {
                         height: 90,
                         width: 90
-                    })), r.createElement(d._6, null, r.createElement(d._12, {
+                    })), r.createElement(d._7, null, r.createElement(d._13, {
                         width: 300,
                         lineCount: 3
                     }))));
@@ -292,20 +292,20 @@ webpackJsonp([61], {
                     };
                     return r.createElement("div", {
                         style: i
-                    }, r.createElement(l.b, null, r.createElement(d._6, {
-                        display: d.P.Flex,
-                        flexWrap: d.S.NoWrap
-                    }, r.createElement(d._6, {
+                    }, r.createElement(l.b, null, r.createElement(d._7, {
+                        display: d.Q.Flex,
+                        flexWrap: d.T.NoWrap
+                    }, r.createElement(d._7, {
                         margin: {
                             right: 1
                         }
-                    }, e, this.state.loadingA && r.createElement(d._6, null, r.createElement(d._8, {
+                    }, e, this.state.loadingA && r.createElement(d._7, null, r.createElement(d._9, {
                         fillContent: !0
                     })), r.createElement(l.a, {
                         enabled: !0,
                         loadMore: this.loadMoreA,
                         pixelThreshold: 0
-                    })), r.createElement(d._6, null, n, this.state.loadingB && r.createElement(d._6, null, r.createElement(d._8, {
+                    })), r.createElement(d._7, null, n, this.state.loadingB && r.createElement(d._7, null, r.createElement(d._9, {
                         fillContent: !0
                     })), r.createElement(l.a, {
                         contentLength: n.length,
@@ -403,12 +403,12 @@ webpackJsonp([61], {
                     }
                 }, "Internal Link with location state, including tt_codes")), r.createElement("li", null, r.createElement(a.a, {
                     to: "/adamar/dashboard"
-                }, "Legacy Link (dashbaord)"))), r.createElement(d._6, {
+                }, "Legacy Link (dashbaord)"))), r.createElement(d._7, {
                     margin: {
                         top: 2
                     }
-                }, r.createElement(d.O, {
-                    type: d._43.H2
+                }, r.createElement(d.P, {
+                    type: d._44.H2
                 }, " Infinite Scroll Test"), r.createElement(h, null))))
             });
 
@@ -451,7 +451,7 @@ webpackJsonp([61], {
         var k = n("3zLD"),
             w = n("7vx8"),
             b = n("z7vJ"),
-            S = function(e) {
+            T = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -463,7 +463,7 @@ webpackJsonp([61], {
                     }, r.createElement("p", null, "Testing GraphQL"))
                 }, t
             }(r.Component),
-            T = Object(k.compose)(Object(w.a)(b, {
+            S = Object(k.compose)(Object(w.a)(b, {
                 options: function(e) {
                     return {
                         variables: {
@@ -471,7 +471,7 @@ webpackJsonp([61], {
                         }
                     }
                 }
-            }), a.f)(S),
+            }), a.f)(T),
             O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -493,7 +493,7 @@ webpackJsonp([61], {
                         })
                     }, 1e3)
                 }, t.prototype.render = function() {
-                    return r.createElement(T, {
+                    return r.createElement(S, {
                         shouldSkip: this.state.shouldSkip
                     })
                 }, t
@@ -708,4 +708,4 @@ webpackJsonp([61], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-0a72ace626bbb061b13f761629ac2a79.js.map
+//# sourceMappingURL=pages.dev-only-d459c90d001e04435cd41b83ad793350.js.map
