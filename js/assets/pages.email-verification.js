@@ -287,7 +287,7 @@ webpackJsonp([66], {
                                                     case 0:
                                                         return t = !1, r = "", e ? [4, h.a.post("/v5/emailvalidator/" + e)] : [3, 2];
                                                     case 1:
-                                                        n = i.sent(), t = n && (200 === n.status || 204 === n.status), r = n.error && n.error.error || "", i.label = 2;
+                                                        n = i.sent(), t = n && (200 === n.status || 204 === n.status), r = n.error ? n.error.error : "", i.label = 2;
                                                     case 2:
                                                         return [2, Promise.resolve({
                                                             isEmailVerified: t,
@@ -325,4 +325,4 @@ webpackJsonp([66], {
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-06df3fe161f61f3dcf29577189769919.js.map
+//# sourceMappingURL=pages.email-verification-f72a12aabc61fc0c413538435d360b07.js.map

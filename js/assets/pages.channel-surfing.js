@@ -3000,22 +3000,21 @@ webpackJsonp([74], {
                         n = !1,
                         a = !1;
                     if (t && e && e.self) {
-                        var i = t.login === e.login,
-                            r = t.roles.isGlobalMod || t.roles.isSiteAdmin || t.roles.isStaff;
-                        n = e.self.isModerator || r || i, a = t.roles.isStaff
+                        var i = t.login === e.login;
+                        n = e.self.isModerator || i || t.roles.isGlobalMod || t.roles.isSiteAdmin, a = t.roles.isStaff
                     }
-                    var s = e && e.chatSettings && e.chatSettings.rules,
-                        l = e && e.chatSettings && e.chatSettings.chatDelayMs,
-                        c = !(!e || !e.chatSettings) && e.chatSettings.blockLinks;
+                    var r = e && e.chatSettings && e.chatSettings.rules,
+                        s = e && e.chatSettings && e.chatSettings.chatDelayMs,
+                        l = !(!e || !e.chatSettings) && e.chatSettings.blockLinks;
                     return o.createElement(Ye, {
                         key: this.props.channelLogin,
                         authToken: this.props.user && this.props.user.authToken,
-                        blockLinks: c,
+                        blockLinks: l,
                         channelDisplayName: e && e.displayName,
                         channelID: e && e.id,
                         channelLogin: this.props.channelLogin,
-                        chatRules: s,
-                        chatDelayMS: l,
+                        chatRules: r,
+                        chatDelayMS: s,
                         clientID: this.props.clientID,
                         isBackground: this.props.isBackground,
                         isCurrentUserModerator: n,
@@ -23167,4 +23166,4 @@ webpackJsonp([74], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-3a582b3262c00b76dc23765660d52f08.js.map
+//# sourceMappingURL=pages.channel-surfing-a10067b909adec4a5feab8a215d4ec6e.js.map

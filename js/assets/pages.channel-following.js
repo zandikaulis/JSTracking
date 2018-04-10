@@ -2910,22 +2910,21 @@ webpackJsonp([43], {
                         n = !1,
                         i = !1;
                     if (t && e && e.self) {
-                        var a = t.login === e.login,
-                            r = t.roles.isGlobalMod || t.roles.isSiteAdmin || t.roles.isStaff;
-                        n = e.self.isModerator || r || a, i = t.roles.isStaff
+                        var a = t.login === e.login;
+                        n = e.self.isModerator || a || t.roles.isGlobalMod || t.roles.isSiteAdmin, i = t.roles.isStaff
                     }
-                    var o = e && e.chatSettings && e.chatSettings.rules,
-                        l = e && e.chatSettings && e.chatSettings.chatDelayMs,
-                        d = !(!e || !e.chatSettings) && e.chatSettings.blockLinks;
+                    var r = e && e.chatSettings && e.chatSettings.rules,
+                        o = e && e.chatSettings && e.chatSettings.chatDelayMs,
+                        l = !(!e || !e.chatSettings) && e.chatSettings.blockLinks;
                     return s.createElement(Ke, {
                         key: this.props.channelLogin,
                         authToken: this.props.user && this.props.user.authToken,
-                        blockLinks: d,
+                        blockLinks: l,
                         channelDisplayName: e && e.displayName,
                         channelID: e && e.id,
                         channelLogin: this.props.channelLogin,
-                        chatRules: o,
-                        chatDelayMS: l,
+                        chatRules: r,
+                        chatDelayMS: o,
                         clientID: this.props.clientID,
                         isBackground: this.props.isBackground,
                         isCurrentUserModerator: n,
@@ -35369,4 +35368,4 @@ webpackJsonp([43], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-following-09721f897eadf9d3db8297f949e9ffcc.js.map
+//# sourceMappingURL=pages.channel-following-1cc05f53d278d14a9cc90396d4ce14fb.js.map

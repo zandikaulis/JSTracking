@@ -2910,22 +2910,21 @@ webpackJsonp([42], {
                         n = !1,
                         i = !1;
                     if (t && e && e.self) {
-                        var a = t.login === e.login,
-                            r = t.roles.isGlobalMod || t.roles.isSiteAdmin || t.roles.isStaff;
-                        n = e.self.isModerator || r || a, i = t.roles.isStaff
+                        var a = t.login === e.login;
+                        n = e.self.isModerator || a || t.roles.isGlobalMod || t.roles.isSiteAdmin, i = t.roles.isStaff
                     }
-                    var o = e && e.chatSettings && e.chatSettings.rules,
-                        l = e && e.chatSettings && e.chatSettings.chatDelayMs,
-                        d = !(!e || !e.chatSettings) && e.chatSettings.blockLinks;
+                    var r = e && e.chatSettings && e.chatSettings.rules,
+                        o = e && e.chatSettings && e.chatSettings.chatDelayMs,
+                        l = !(!e || !e.chatSettings) && e.chatSettings.blockLinks;
                     return s.createElement(Ke, {
                         key: this.props.channelLogin,
                         authToken: this.props.user && this.props.user.authToken,
-                        blockLinks: d,
+                        blockLinks: l,
                         channelDisplayName: e && e.displayName,
                         channelID: e && e.id,
                         channelLogin: this.props.channelLogin,
-                        chatRules: o,
-                        chatDelayMS: l,
+                        chatRules: r,
+                        chatDelayMS: o,
                         clientID: this.props.clientID,
                         isBackground: this.props.isBackground,
                         isCurrentUserModerator: n,
@@ -36271,4 +36270,4 @@ webpackJsonp([42], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-events-cae467c5c4d99ab56d9fa05ac5503a7a.js.map
+//# sourceMappingURL=pages.channel-events-80c7251a2bfe624782fdac1f02695459.js.map

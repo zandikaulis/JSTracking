@@ -17477,9 +17477,9 @@ webpackJsonp([36], {
         function(e) {
             e.Ads = "Ads", e.Audience = "Audience", e.Chat = "Chat"
         }(ht || (ht = {}));
-        var ft, pt, gt = ((ft = {})[mt.AdBreakDuration] = "commercials", ft[mt.AverageChatters] = "chat_activities", ft[mt.AverageViewers] = "concurrent_viewers", ft[mt.ChatMessages] = "chat_activities", ft[mt.MinutesWatched] = "concurrent_viewers", ft[mt.NewFollowers] = "follows", ft[mt.StreamDuration] = "stream_sessions", ft),
-            yt = ((pt = {})[mt.AdBreakDuration] = "bar", pt[mt.AverageChatters] = "bar", pt[mt.AverageViewers] = "bar", pt[mt.ChatMessages] = "bar", pt[mt.MinutesWatched] = "bar", pt[mt.NewFollowers] = "line", pt[mt.StreamDuration] = "bar", pt),
-            Mt = function(e) {
+        var ft, pt, gt, yt = ((ft = {})[mt.AdBreakDuration] = "commercials", ft[mt.AverageChatters] = "chat_activities", ft[mt.AverageViewers] = "concurrent_viewers", ft[mt.ChatMessages] = "chat_activities", ft[mt.MinutesWatched] = "concurrent_viewers", ft[mt.NewFollowers] = "follows", ft[mt.StreamDuration] = "stream_sessions", ft),
+            Mt = ((pt = {})[mt.AdBreakDuration] = "bar", pt[mt.AverageChatters] = "bar", pt[mt.AverageViewers] = "bar", pt[mt.ChatMessages] = "bar", pt[mt.MinutesWatched] = "bar", pt[mt.NewFollowers] = "line", pt[mt.StreamDuration] = "bar", pt),
+            vt = function(e) {
                 switch (e) {
                     case ht.Ads:
                         return Object(h.d)("Ads", "TeamsDashboard");
@@ -17491,7 +17491,7 @@ webpackJsonp([36], {
                         return ""
                 }
             },
-            vt = function(e) {
+            bt = function(e) {
                 switch (e) {
                     case mt.AdBreakDuration:
                         return Object(h.d)("Ad Break Duration", "TeamsDashboard");
@@ -17513,7 +17513,7 @@ webpackJsonp([36], {
                         return ""
                 }
             },
-            bt = function(e) {
+            Lt = function(e) {
                 return c.createElement(M._7, {
                     className: "metric-select-menu"
                 }, c.createElement(M._26, {
@@ -17524,27 +17524,74 @@ webpackJsonp([36], {
                     }
                 }, c.createElement("option", {
                     value: mt.StreamDuration
-                }, vt(mt.StreamDuration)), c.createElement("optgroup", {
-                    label: Mt(ht.Ads)
+                }, bt(mt.StreamDuration)), c.createElement("optgroup", {
+                    label: vt(ht.Ads)
                 }, c.createElement("option", {
                     value: mt.AdBreakDuration
-                }, vt(mt.AdBreakDuration))), c.createElement("optgroup", {
-                    label: Mt(ht.Audience)
+                }, bt(mt.AdBreakDuration))), c.createElement("optgroup", {
+                    label: vt(ht.Audience)
                 }, c.createElement("option", {
                     value: mt.AverageViewers
-                }, vt(mt.AverageViewers)), c.createElement("option", {
+                }, bt(mt.AverageViewers)), c.createElement("option", {
                     value: mt.MinutesWatched
-                }, vt(mt.MinutesWatched)), c.createElement("option", {
+                }, bt(mt.MinutesWatched)), c.createElement("option", {
                     value: mt.NewFollowers
-                }, vt(mt.NewFollowers))), c.createElement("optgroup", {
-                    label: Mt(ht.Chat)
+                }, bt(mt.NewFollowers))), c.createElement("optgroup", {
+                    label: vt(ht.Chat)
                 }, c.createElement("option", {
                     value: mt.AverageChatters
-                }, vt(mt.AverageChatters)), c.createElement("option", {
+                }, bt(mt.AverageChatters)), c.createElement("option", {
                     value: mt.ChatMessages
-                }, vt(mt.ChatMessages)))))
+                }, bt(mt.ChatMessages)))))
             },
-            Lt = function(e) {
+            Dt = ((gt = {})[mt.AdBreakDuration] = oe, gt[mt.AverageChatters] = Yt, gt[mt.AverageViewers] = Yt, gt[mt.ChatMessages] = Yt, gt[mt.MinutesWatched] = Yt, gt[mt.NewFollowers] = Yt, gt[mt.StreamDuration] = oe, gt),
+            kt = function(e) {
+                var t, a = e.data,
+                    n = e.metric,
+                    r = Dt[n],
+                    i = function(e, t) {
+                        var a = Object.keys(t),
+                            n = a.reduce(function(e, a) {
+                                return e += t[a].count
+                            }, 0);
+                        if (e === mt.AverageViewers) return n / a.length;
+                        return n
+                    }(n, a);
+                switch (n) {
+                    case mt.AverageViewers:
+                        t = Object(h.d)("Average = {number}", {
+                            number: c.createElement(M.P, {
+                                type: M._44.Strong
+                            }, r(i))
+                        }, "TeamsDashboardMetricSummary");
+                        break;
+                    case mt.AdBreakDuration:
+                    case mt.AverageChatters:
+                    case mt.ChatMessages:
+                    case mt.MinutesWatched:
+                    case mt.NewFollowers:
+                    case mt.StreamDuration:
+                        t = Object(h.d)("Total = {numberOrDuration}", {
+                            numberOrDuration: c.createElement(M.P, {
+                                type: M._44.Strong
+                            }, r(i))
+                        }, "TeamsDashboardMetricSummary");
+                        break;
+                    default:
+                        throw new Error("Unrecognized metric: " + n)
+                }
+                return c.createElement(M.P, {
+                    color: M.J.Alt2,
+                    fontSize: M.U.Size4
+                }, t)
+            };
+
+        function Yt(e) {
+            return Object(h.e)(e, {
+                maximumFractionDigits: 0
+            })
+        }
+        var wt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -17673,16 +17720,16 @@ webpackJsonp([36], {
                     this.myChart.data.datasets && (this.myChart.data.labels = e.timeLabels, this.myChart.data.datasets[0].label = e.chartLabel, this.myChart.data.datasets[0].data = e.data, this.myChart.update())
                 }, t.prototype.setCanvasResolution = function() {
                     if (this.canvas) {
-                        var e = Dt(this.canvas.getContext("2d"));
+                        var e = xt(this.canvas.getContext("2d"));
                         this.canvas.height = 36 * e, this.canvas.style.height = "36rem", this.canvas.getContext("2d").setTransform(e, 0, 0, e, 0, 0)
                     }
                 }, t = l.__decorate([Object(y.d)("StatsCanvas")], t)
             }(c.Component),
-            Dt = function(e) {
+            xt = function(e) {
                 return 1 / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            kt = Lt,
-            Yt = function(e) {
+            Tt = wt,
+            St = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -17733,19 +17780,19 @@ webpackJsonp([36], {
                             throw new Error("Data type: " + i + " is unrecognized")
                     }
                     var s = {
-                        chartType: yt[i],
-                        chartLabel: vt(i),
+                        chartType: Mt[i],
+                        chartLabel: bt(i),
                         timeLabels: o,
                         data: e,
                         dataFormatter: t,
                         dataFooters: a
                     };
-                    return c.createElement(kt, {
+                    return c.createElement(Tt, {
                         chartData: s
                     })
                 }, t
             }(c.PureComponent),
-            wt = function(e) {
+            Ot = function(e) {
                 var t = e.columnName;
                 return c.createElement(M.X, null, c.createElement(M.K, {
                     cols: {
@@ -17775,7 +17822,7 @@ webpackJsonp([36], {
                     bold: !0
                 }, Object(h.d)("Percent", "TeamsDashboard")))))
             },
-            xt = function(e) {
+            jt = function(e) {
                 var t = e.rowContent;
                 return c.createElement(M.X, null, c.createElement(M.K, {
                     cols: {
@@ -17808,10 +17855,10 @@ webpackJsonp([36], {
                     textAlign: M._40.Right
                 }, c.createElement(M.P, null, Object(h.e)(t.percent), "%"))))
             },
-            Tt = function(e, t, a, n) {
-                return 0 === e.length ? Ot() : n && 1 === e.length ? jt(e[0].name) : Ht(e, a, t)
+            Ht = function(e, t, a, n) {
+                return 0 === e.length ? Pt() : n && 1 === e.length ? At(e[0].name) : Et(e, a, t)
             },
-            St = function(e, t) {
+            Ct = function(e, t) {
                 return t > 10 ? Object(h.d)("{tableName} (Top 10)", {
                     tableName: e
                 }, "TeamsDashboard") : t > 1 ? Object(h.d)("{tableName} (All)", {
@@ -17820,22 +17867,22 @@ webpackJsonp([36], {
                     tableName: e
                 }, "TeamsDashboard")
             },
-            Ot = function() {
+            Pt = function() {
                 return c.createElement(M.P, {
                     color: M.J.Alt2
                 }, Object(h.d)("Not enough data for us to display", "TeamsDashboard"))
             },
-            jt = function(e) {
+            At = function(e) {
                 return c.createElement(M.P, null, Object(h.d)("The top viewer location was {name}", {
                     name: e
                 }, "TeamsDashboard"))
             },
-            Ht = function(e, t, a) {
+            Et = function(e, t, a) {
                 var n = e.slice(0, 10).map(function(e, t) {
                     var n = e.name,
                         r = e.views,
                         i = Math.round(r / a * 100);
-                    return c.createElement(xt, {
+                    return c.createElement(jt, {
                         key: t,
                         rowContent: {
                             name: n,
@@ -17844,11 +17891,11 @@ webpackJsonp([36], {
                         }
                     })
                 });
-                return c.createElement(M._7, null, c.createElement(wt, {
+                return c.createElement(M._7, null, c.createElement(Ot, {
                     columnName: t
                 }), n)
             },
-            Ct = function(e) {
+            Ft = function(e) {
                 var t, a, n = e.rowData.reduce(function(e, t) {
                         return e + t.views
                     }, 0),
@@ -17857,7 +17904,7 @@ webpackJsonp([36], {
                     });
                 return t = e.isLoading ? c.createElement(M._13, {
                     width: 180
-                }) : St(e.tableName, r.length), a = e.isLoading ? c.createElement(M._7, null, c.createElement(M.P, null, c.createElement(M._13, null)), c.createElement(M.P, null, c.createElement(M._13, null))) : Tt(r, n, e.columnName, e.isGeo), c.createElement(M._7, {
+                }) : Ct(e.tableName, r.length), a = e.isLoading ? c.createElement(M._7, null, c.createElement(M.P, null, c.createElement(M._13, null)), c.createElement(M.P, null, c.createElement(M._13, null))) : Ht(r, n, e.columnName, e.isGeo), c.createElement(M._7, {
                     display: M.Q.Flex,
                     flexDirection: M.S.Column,
                     padding: 2,
@@ -17872,8 +17919,8 @@ webpackJsonp([36], {
                     type: M._44.H4
                 }, t)), a)
             },
-            Pt = Object(h.d)("Referrer", "TeamsDashboard"),
-            At = function(e) {
+            Wt = Object(h.d)("Referrer", "TeamsDashboard"),
+            It = function(e) {
                 var t = Object(h.d)("Views by Referrer", "TeamsDashboard"),
                     a = "";
                 return e.internalReferral && e.internalReferral.length && (t = Object(h.d)("Views from Outside Twitch", "TeamsDashboard"), a = c.createElement(M._30, {
@@ -17881,10 +17928,10 @@ webpackJsonp([36], {
                     flexGrow: 1,
                     borderBottom: !0,
                     borderLeft: !0
-                }, c.createElement(Ct, {
+                }, c.createElement(Ft, {
                     isLoading: e.isLoading,
                     tableName: Object(h.d)("Views from Twitch", "TeamsDashboard"),
-                    columnName: Pt,
+                    columnName: Wt,
                     rowData: e.internalReferral
                 }))), c.createElement(M._30, {
                     className: "all-tables-wrapper",
@@ -17900,7 +17947,7 @@ webpackJsonp([36], {
                     display: M.Q.Flex,
                     flexGrow: 1,
                     borderBottom: !0
-                }, c.createElement(Ct, {
+                }, c.createElement(Ft, {
                     isLoading: e.isLoading,
                     tableName: Object(h.d)("Views by Location", "TeamsDashboard"),
                     columnName: Object(h.d)("Location", "TeamsDashboard"),
@@ -17909,7 +17956,7 @@ webpackJsonp([36], {
                 })), c.createElement(M._30, {
                     display: M.Q.Flex,
                     flexGrow: 1
-                }, c.createElement(Ct, {
+                }, c.createElement(Ft, {
                     isLoading: e.isLoading,
                     tableName: Object(h.d)("Views by Platform", "TeamsDashboard"),
                     columnName: Object(h.d)("Platform", "TeamsDashboard"),
@@ -17923,38 +17970,38 @@ webpackJsonp([36], {
                     display: M.Q.Flex,
                     flexGrow: 1,
                     borderLeft: !0
-                }, c.createElement(Ct, {
+                }, c.createElement(Ft, {
                     isLoading: e.isLoading,
                     tableName: t,
-                    columnName: Pt,
+                    columnName: Wt,
                     rowData: e.externalReferral
                 }))))
             },
-            Et = a("yLtb"),
-            Ft = a("BoWu"),
-            Wt = this,
-            It = {
+            Nt = a("yLtb"),
+            Rt = a("BoWu"),
+            zt = this,
+            Bt = {
                 geographical: [],
                 platform: [],
                 internalReferral: [],
                 externalReferral: []
             },
-            Nt = function(e, t, a, n) {
-                return l.__awaiter(Wt, void 0, void 0, function() {
+            Jt = function(e, t, a, n) {
+                return l.__awaiter(zt, void 0, void 0, function() {
                     var r, i, o, s;
                     return l.__generator(this, function(d) {
                         switch (d.label) {
                             case 0:
-                                return r = It, t.length < 1 ? [2, r] : (i = t.join(","), o = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + a + "&end_time=" + n, [4, Object(Q.c)({
+                                return r = Bt, t.length < 1 ? [2, r] : (i = t.join(","), o = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + a + "&end_time=" + n, [4, Object(Q.c)({
                                     path: o
                                 })]);
                             case 1:
-                                return [2, (s = d.sent()).body ? Rt(s.body) : r]
+                                return [2, (s = d.sent()).body ? Vt(s.body) : r]
                         }
                     })
                 })
             },
-            Rt = function(e) {
+            Vt = function(e) {
                 for (var t = e.video_play_demographics, a = {
                         geographical: [],
                         platform: [],
@@ -17963,43 +18010,43 @@ webpackJsonp([36], {
                     }, n = 0, r = Object.keys(t.geo); n < r.length; n++) {
                     var i = r[n];
                     a.geographical.push({
-                        name: Object(Et.b)(i),
+                        name: Object(Nt.b)(i),
                         views: t.geo[i]
                     })
                 }
                 for (var o = 0, s = Object.keys(t.platform); o < s.length; o++) {
                     i = s[o];
                     a.platform.push({
-                        name: Object(Ft.c)(i),
+                        name: Object(Rt.c)(i),
                         views: t.platform[i]
                     })
                 }
                 for (var d = 0, u = Object.keys(t.referrer.internal); d < u.length; d++) {
                     i = u[d];
                     a.internalReferral.push({
-                        name: Object(Ft.b)(i),
+                        name: Object(Rt.b)(i),
                         views: t.referrer.internal[i]
                     })
                 }
                 for (var l = 0, c = Object.keys(t.referrer.external); l < c.length; l++) {
                     i = c[l];
                     a.externalReferral.push({
-                        name: Object(Ft.a)(i),
+                        name: Object(Rt.a)(i),
                         views: t.referrer.external[i]
                     })
                 }
                 return a
             },
-            zt = a("wuJz"),
-            Bt = this,
-            Jt = function(e, t, a, n, r) {
-                return l.__awaiter(Bt, void 0, void 0, function() {
+            Ut = a("wuJz"),
+            Gt = this,
+            qt = function(e, t, a, n, r) {
+                return l.__awaiter(Gt, void 0, void 0, function() {
                     var i, o, s, d, u, c, m, h, _, f;
                     return l.__generator(this, function(l) {
                         switch (l.label) {
                             case 0:
                                 if (0 === a.length) return [2, Promise.resolve({})];
-                                switch (i = "/v5/teams/" + t + "/stats/" + gt[e] + "?channel_ids=" + a + "&start_time=" + n + "&end_time=" + r, e) {
+                                switch (i = "/v5/teams/" + t + "/stats/" + yt[e] + "?channel_ids=" + a + "&start_time=" + n + "&end_time=" + r, e) {
                                     case mt.AdBreakDuration:
                                         return [3, 1];
                                     case mt.AverageChatters:
@@ -18017,43 +18064,43 @@ webpackJsonp([36], {
                                 }
                                 return [3, 15];
                             case 1:
-                                return s = $t, [4, qt(i)];
+                                return s = na, [4, Xt(i)];
                             case 2:
-                                return o = s.apply(void 0, [l.sent(), n, r, oa]), [3, 16];
+                                return o = s.apply(void 0, [l.sent(), n, r, la]), [3, 16];
                             case 3:
-                                return d = Xt, [4, Ut(i)];
+                                return d = aa, [4, Zt(i)];
                             case 4:
-                                return o = d.apply(void 0, [l.sent(), n, r, ra]), [3, 16];
+                                return o = d.apply(void 0, [l.sent(), n, r, da]), [3, 16];
                             case 5:
-                                return u = Xt, [4, Vt(i)];
+                                return u = aa, [4, Kt(i)];
                             case 6:
-                                return o = u.apply(void 0, [l.sent(), n, r, ea]), [3, 16];
+                                return o = u.apply(void 0, [l.sent(), n, r, ra]), [3, 16];
                             case 7:
-                                return c = Xt, [4, Ut(i)];
+                                return c = aa, [4, Zt(i)];
                             case 8:
-                                return o = c.apply(void 0, [l.sent(), n, r, ia]), [3, 16];
+                                return o = c.apply(void 0, [l.sent(), n, r, ua]), [3, 16];
                             case 9:
-                                return [4, Vt(i)];
+                                return [4, Kt(i)];
                             case 10:
-                                return m = l.sent(), h = Qt(m), o = Xt(h, n, r, ta), [3, 16];
+                                return m = l.sent(), h = ta(m), o = aa(h, n, r, ia), [3, 16];
                             case 11:
-                                return _ = Xt, [4, Gt(i)];
+                                return _ = aa, [4, Qt(i)];
                             case 12:
-                                return o = _.apply(void 0, [l.sent(), n, r, na]), [3, 16];
+                                return o = _.apply(void 0, [l.sent(), n, r, sa]), [3, 16];
                             case 13:
-                                return f = Xt, [4, Kt(i)];
+                                return f = aa, [4, $t(i)];
                             case 14:
-                                return o = f.apply(void 0, [l.sent(), n, r, sa]), [3, 16];
+                                return o = f.apply(void 0, [l.sent(), n, r, ca]), [3, 16];
                             case 15:
                                 throw new Error("fetch type is not in StatsMetric enum");
                             case 16:
-                                return [2, Zt(o)]
+                                return [2, ea(o)]
                         }
                     })
                 })
             },
-            Vt = function(e) {
-                return l.__awaiter(Bt, void 0, void 0, function() {
+            Kt = function(e) {
+                return l.__awaiter(Gt, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(a) {
                         switch (a.label) {
@@ -18067,8 +18114,8 @@ webpackJsonp([36], {
                     })
                 })
             },
-            Ut = function(e) {
-                return l.__awaiter(Bt, void 0, void 0, function() {
+            Zt = function(e) {
+                return l.__awaiter(Gt, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(a) {
                         switch (a.label) {
@@ -18082,8 +18129,8 @@ webpackJsonp([36], {
                     })
                 })
             },
-            Gt = function(e) {
-                return l.__awaiter(Bt, void 0, void 0, function() {
+            Qt = function(e) {
+                return l.__awaiter(Gt, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(a) {
                         switch (a.label) {
@@ -18097,8 +18144,8 @@ webpackJsonp([36], {
                     })
                 })
             },
-            qt = function(e) {
-                return l.__awaiter(Bt, void 0, void 0, function() {
+            Xt = function(e) {
+                return l.__awaiter(Gt, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(a) {
                         switch (a.label) {
@@ -18112,8 +18159,8 @@ webpackJsonp([36], {
                     })
                 })
             },
-            Kt = function(e) {
-                return l.__awaiter(Bt, void 0, void 0, function() {
+            $t = function(e) {
+                return l.__awaiter(Gt, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(a) {
                         switch (a.label) {
@@ -18127,7 +18174,7 @@ webpackJsonp([36], {
                     })
                 })
             },
-            Zt = function(e) {
+            ea = function(e) {
                 for (var t = {}, a = 0, n = Object.keys(e); a < n.length; a++)
                     for (var r = 0, i = e[n[a]]; r < i.length; r++) {
                         var o = i[r],
@@ -18141,7 +18188,7 @@ webpackJsonp([36], {
                     }
                 return t
             },
-            Qt = function(e) {
+            ta = function(e) {
                 for (var t = {}, a = 0, n = Object.keys(e); a < n.length; a++) {
                     var r = n[a],
                         i = e[r];
@@ -18154,22 +18201,22 @@ webpackJsonp([36], {
                 }
                 return t
             },
-            Xt = function(e, t, a, n) {
+            aa = function(e, t, a, n) {
                 for (var r = {}, i = 0, o = Object.keys(e); i < o.length; i++) {
                     var s = o[i];
                     r[s] = n(t, a, e[s])
                 }
                 return r
             },
-            $t = function(e, t, a, n) {
+            na = function(e, t, a, n) {
                 for (var r = {}, i = 0, o = Object.keys(e); i < o.length; i++) {
                     var s = o[i];
                     r[s] = n(t, a, e[s])
                 }
                 return r
             },
-            ea = function(e, t, a) {
-                return aa(e, t, a).map(function(e) {
+            ra = function(e, t, a) {
+                return oa(e, t, a).map(function(e) {
                     var t = e.count / 48;
                     return {
                         timestamp: e.timestamp,
@@ -18178,8 +18225,8 @@ webpackJsonp([36], {
                     }
                 })
             },
-            ta = function(e, t, a) {
-                return aa(e, t, a).map(function(e) {
+            ia = function(e, t, a) {
+                return oa(e, t, a).map(function(e) {
                     return {
                         timestamp: e.timestamp,
                         count: e.count,
@@ -18187,10 +18234,10 @@ webpackJsonp([36], {
                     }
                 })
             },
-            aa = function(e, t, a) {
-                for (var n = da(e, t), r = function(e, t) {
+            oa = function(e, t, a) {
+                for (var n = ma(e, t), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ua(e)
+                            return t.timestamp === ha(e)
                         });
                         a && (a.count += t)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -18199,10 +18246,10 @@ webpackJsonp([36], {
                 }
                 return n
             },
-            na = function(e, t, a) {
-                for (var n = da(e, t), r = function(e, t) {
+            sa = function(e, t, a) {
+                for (var n = ma(e, t), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ua(e)
+                            return t.timestamp === ha(e)
                         });
                         a && (a.count += t)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -18211,14 +18258,14 @@ webpackJsonp([36], {
                 }
                 return n
             },
-            ra = function(e, t, a) {
-                for (var n = da(e, t).map(function(e) {
+            da = function(e, t, a) {
+                for (var n = ma(e, t).map(function(e) {
                         return l.__assign({}, e, {
                             sampleSize: 0
                         })
                     }), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ua(e)
+                            return t.timestamp === ha(e)
                         });
                         a && 0 !== t && (a.count += t, a.sampleSize += 1)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -18233,10 +18280,10 @@ webpackJsonp([36], {
                     }
                 })
             },
-            ia = function(e, t, a) {
-                for (var n = da(e, t), r = function(e, t) {
+            ua = function(e, t, a) {
+                for (var n = ma(e, t), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ua(e)
+                            return t.timestamp === ha(e)
                         });
                         a && (a.count += t)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -18245,10 +18292,10 @@ webpackJsonp([36], {
                 }
                 return n
             },
-            oa = function(e, t, a) {
-                for (var n = da(e, t), r = function(e, t) {
+            la = function(e, t, a) {
+                for (var n = ma(e, t), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ua(e)
+                            return t.timestamp === ha(e)
                         });
                         a && (a.count += t, a.numberOfDatapoints += 1)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -18257,49 +18304,49 @@ webpackJsonp([36], {
                 }
                 return n
             },
-            sa = function(e, t, a) {
-                for (var n = da(e, t), r = 0, i = a; r < i.length; r++)
+            ca = function(e, t, a) {
+                for (var n = ma(e, t), r = 0, i = a; r < i.length; r++)
                     for (var o = i[r], s = o.start_time, d = o.end_time, u = new Date(d), l = new Date(s), c = 0, m = n; c < m.length; c++) {
                         var h = m[c],
                             _ = new Date(h.timestamp),
                             f = new Date(Date.UTC(_.getUTCFullYear(), _.getUTCMonth(), _.getUTCDate(), _.getUTCHours() + 4));
-                        if (Object(zt.isBefore)(u, _)) break;
-                        if (!Object(zt.isAfter)(l, f)) {
-                            if (Object(zt.isBefore)(u, f)) {
-                                h.count += Object(zt.differenceInSeconds)(u, l);
+                        if (Object(Ut.isBefore)(u, _)) break;
+                        if (!Object(Ut.isAfter)(l, f)) {
+                            if (Object(Ut.isBefore)(u, f)) {
+                                h.count += Object(Ut.differenceInSeconds)(u, l);
                                 break
                             }
-                            h.count += Object(zt.differenceInSeconds)(f, l), l = f
+                            h.count += Object(Ut.differenceInSeconds)(f, l), l = f
                         }
                     }
                 return n
             },
-            da = function(e, t) {
-                for (var a = [], n = new Date(ua(e)), r = new Date(t); n < r;) a.push({
+            ma = function(e, t) {
+                for (var a = [], n = new Date(ha(e)), r = new Date(t); n < r;) a.push({
                     timestamp: n.toISOString(),
                     count: 0,
                     numberOfDatapoints: 0
                 }), n = le(n);
                 return a
             },
-            ua = function(e) {
+            ha = function(e) {
                 var t = new Date(e),
                     a = t.getUTCHours() - t.getUTCHours() % 4;
                 return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate(), a)).toISOString()
             },
-            la = this,
-            ca = [mt.StreamDuration, mt.AverageViewers, mt.MinutesWatched, mt.NewFollowers, mt.AverageChatters, mt.ChatMessages, mt.AdBreaks, mt.AdBreakDuration],
-            ma = Object.keys(gt),
-            ha = function(e, t, a, n) {
-                return l.__awaiter(la, void 0, void 0, function() {
+            _a = this,
+            fa = [mt.StreamDuration, mt.AverageViewers, mt.MinutesWatched, mt.NewFollowers, mt.AverageChatters, mt.ChatMessages, mt.AdBreaks, mt.AdBreakDuration],
+            pa = Object.keys(yt),
+            ga = function(e, t, a, n) {
+                return l.__awaiter(_a, void 0, void 0, function() {
                     var r, i, o, s, d, u, c, m, h, _, f, p;
                     return l.__generator(this, function(l) {
                         switch (l.label) {
                             case 0:
-                                for (r = {}, i = [], o = 0, s = ma; o < s.length; o++) m = s[o], i.push(Jt(m, e, t, a, n));
+                                for (r = {}, i = [], o = 0, s = pa; o < s.length; o++) m = s[o], i.push(qt(m, e, t, a, n));
                                 return [4, Promise.all(i)];
                             case 1:
-                                for (d = l.sent(), u = 0, c = ma; u < c.length; u++) {
+                                for (d = l.sent(), u = 0, c = pa; u < c.length; u++) {
                                     if (m = c[u], h = d.shift() || {}, 0 === Object.keys(h).length) return [2, {}];
                                     for (_ = 0, f = Object.keys(h); _ < f.length; _++) p = f[_], r[p] || (r[p] = {}), r[p][m] = h[p].count, m === mt.AdBreakDuration && (r[p][mt.AdBreaks] = h[p].numberOfDatapoints)
                                 }
@@ -18308,21 +18355,21 @@ webpackJsonp([36], {
                     })
                 })
             },
-            _a = function() {
+            ya = function() {
                 var e = Object(h.d)("Start Time", "TeamsDashboard") + "," + Object(h.d)("End Time", "TeamsDashboard") + "," + je();
-                return ca.reduce(function(e, t) {
-                    return e + "," + vt(t)
+                return fa.reduce(function(e, t) {
+                    return e + "," + bt(t)
                 }, e) + "\n"
             },
-            fa = function(e, t) {
+            Ma = function(e, t) {
                 var a = le(e),
                     n = Ce(e) + "," + Ce(a) + ",UTC";
-                return ca.reduce(function(e, a) {
+                return fa.reduce(function(e, a) {
                     var n = "" + t[a];
                     return a !== mt.StreamDuration && a !== mt.AdBreakDuration || (n = oe(t[a])), e + "," + n
                 }, n) + "\n"
             },
-            pa = function(e) {
+            va = function(e) {
                 function t(t) {
                     var a = e.call(this, t) || this;
                     return a.toggleMemberChecked = function(e) {
@@ -18361,18 +18408,18 @@ webpackJsonp([36], {
                                     case 0:
                                         return a = P(this.state.members), r = e.toISOString(), i = t.toISOString(), o = {
                                             isLoadingDemographics: !1,
-                                            demographics: It,
+                                            demographics: Bt,
                                             isLoadingStats: !1,
                                             data: {}
                                         }, n !== mt.AverageViewers ? [3, 2] : (this.setState({
                                             isLoadingDemographics: !0
-                                        }), s = o, [4, Nt(this.props.teamName, a, r, i)]);
+                                        }), s = o, [4, Jt(this.props.teamName, a, r, i)]);
                                     case 1:
                                         s.demographics = u.sent(), u.label = 2;
                                     case 2:
                                         return this.setState({
                                             isLoadingStats: !0
-                                        }), d = o, [4, Jt(n, this.props.teamName, a, r, i)];
+                                        }), d = o, [4, qt(n, this.props.teamName, a, r, i)];
                                     case 3:
                                         return d.data = u.sent(), [2, o]
                                 }
@@ -18384,9 +18431,9 @@ webpackJsonp([36], {
                             return l.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return [4, ha(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                        return [4, ga(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                     case 1:
-                                        return e = a.sent(), 0 === Object.keys(e).length ? [2] : (t = Se(e, fa, _a()), Oe(t, E(L.Stats) + " - " + ie(this.state.startTime) + ".csv"), [2])
+                                        return e = a.sent(), 0 === Object.keys(e).length ? [2] : (t = Se(e, Ma, ya()), Oe(t, E(L.Stats) + " - " + ie(this.state.startTime) + ".csv"), [2])
                                 }
                             })
                         })
@@ -18433,7 +18480,7 @@ webpackJsonp([36], {
                             size: M._28.Large
                         }))
                     }, a.renderViewershipTables = function() {
-                        return c.createElement(At, l.__assign({
+                        return c.createElement(It, l.__assign({
                             isLoading: a.state.isLoadingDemographics
                         }, a.state.demographics))
                     }, a.state = {
@@ -18442,7 +18489,7 @@ webpackJsonp([36], {
                         isLoadingStats: !0,
                         data: {},
                         isLoadingDemographics: !0,
-                        demographics: It,
+                        demographics: Bt,
                         startTime: se(a.props.currentDate),
                         endTime: a.props.currentDate,
                         groupChecked: !0,
@@ -18513,7 +18560,7 @@ webpackJsonp([36], {
                         earliestDate: this.props.earliestDataDate,
                         currentDate: this.props.currentDate,
                         onMonthSelection: this.handleTimeRangeChange
-                    })), c.createElement(bt, {
+                    })), c.createElement(Lt, {
                         isDisabled: e,
                         metric: this.state.metric,
                         onChange: this.onMetricChange
@@ -18524,20 +18571,29 @@ webpackJsonp([36], {
                         onClick: this.handleCSVClick,
                         type: M.A.Hollow
                     }, He()))), c.createElement(M._7, {
-                        className: "chart-container",
                         margin: 2,
                         position: M._14.Relative
-                    }, c.createElement(Yt, {
+                    }, c.createElement(M._7, {
+                        className: "metric-summary-container"
+                    }, c.createElement(kt, {
+                        data: this.state.data,
+                        metric: this.state.metric
+                    })), c.createElement(M._7, {
+                        className: "chart-container",
+                        margin: {
+                            top: 2
+                        }
+                    }, c.createElement(St, {
                         data: this.state.data,
                         dataType: this.state.metric
-                    }), e ? this.renderChartLoadingSpinner() : null), this.state.metric === mt.AverageViewers ? this.renderViewershipTables() : ""))
+                    })), e ? this.renderChartLoadingSpinner() : null), this.state.metric === mt.AverageViewers ? this.renderViewershipTables() : ""))
                 }, t = l.__decorate([Object(y.d)("StatsPage", {
                     autoReportInteractive: !0,
                     destination: g.a.TeamsDashboardStats
                 })], t)
             }(c.Component),
-            ga = new Date(Date.UTC(2017, 0)),
-            ya = function(e) {
+            ba = new Date(Date.UTC(2017, 0)),
+            La = function(e) {
                 function t(t) {
                     var a = e.call(this, t) || this;
                     return a.state = {
@@ -18555,7 +18611,7 @@ webpackJsonp([36], {
                             currentDate: a.currentDate
                         })
                     }, a.renderStatsPage = function() {
-                        return c.createElement(pa, {
+                        return c.createElement(va, {
                             teamName: a.props.match.params.teamName,
                             earliestDataDate: a.earliestDataDate,
                             currentDate: a.currentDate
@@ -18577,7 +18633,7 @@ webpackJsonp([36], {
                         a.setState({
                             team: e
                         })
-                    }, a.earliestDataDate = ga, a.currentDate = t.currentDate || new Date, a.currentDate < a.earliestDataDate && (a.currentDate = a.earliestDataDate), a
+                    }, a.earliestDataDate = ba, a.currentDate = t.currentDate || new Date, a.currentDate < a.earliestDataDate && (a.currentDate = a.earliestDataDate), a
                 }
                 return l.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
                     var a = this;
@@ -18671,7 +18727,7 @@ webpackJsonp([36], {
                     var e
                 }, t
             }(c.Component);
-        var Ma = Object(i.b)(function(e) {
+        var Da = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(u.d)(e)
             }
@@ -18681,9 +18737,9 @@ webpackJsonp([36], {
                     return Object(d.f)(s.a.DashboardPage)
                 }
             }, e)
-        })(ya);
+        })(La);
         a.d(t, "TeamsDashboardRoot", function() {
-            return Ma
+            return Da
         })
     },
     rBmI: function(e, t, a) {
@@ -22020,4 +22076,4 @@ webpackJsonp([36], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-b7c5603d874fb356f11391378d85fb70.js.map
+//# sourceMappingURL=pages.teams-dashboard-579255ae9426031540dc5f4eb39b7f5b.js.map

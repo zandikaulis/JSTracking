@@ -240,13 +240,12 @@ webpackJsonp([83], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregisterScrollHandler && this.unregisterScrollHandler()
                 }, t.prototype.render = function() {
-                    return s.createElement(p._1, r.__assign({}, this.props, {
+                    return s.createElement(p._1, {
                         margin: {
-                            bottom: 2,
-                            top: 1
+                            y: 1
                         },
                         position: p._14.Relative
-                    }), s.createElement("div", {
+                    }, s.createElement("div", {
                         className: "video-carousel",
                         ref: this.refHandler
                     }, s.createElement(p._7, {
@@ -257,7 +256,7 @@ webpackJsonp([83], {
                         "data-test-selector": "child-container"
                     }, s.createElement(p._1, {
                         margin: {
-                            bottom: 3
+                            bottom: 1
                         }
                     }, s.createElement("div", {
                         className: "video-carousel__body",
@@ -396,7 +395,7 @@ webpackJsonp([83], {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.data && !this.props.data.loading && this.props.data.currentUser && Object(u.a)(this.props.data.currentUser.followedVideos) || null;
-                    return !this.props.data || this.props.data.loading || e && 0 !== e.length ? r.createElement(p._7, null, r.createElement(p._7, {
+                    return !this.props.data || this.props.data.loading || e && 0 !== e.length ? r.createElement("div", null, r.createElement(p._7, {
                         padding: {
                             bottom: 1
                         }
@@ -434,4 +433,4 @@ webpackJsonp([83], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-462d7ba6d830330cdb5b0f584df2ce7e.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-34edab1bfe237cd8e9dca2b32a060a32.js.map

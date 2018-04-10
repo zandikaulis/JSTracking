@@ -384,7 +384,7 @@ webpackJsonp([55], {
         function m(e, t) {
             return {
                 startOffset: e,
-                endOffset: e + t
+                endOffset: t
             }
         }
         var g = n("Odds"),
@@ -398,11 +398,9 @@ webpackJsonp([55], {
         var _, S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.initialOffsets = m(t.props.rawMedia.defaultClipInitialOffset, t.props.rawMedia.duration - t.props.rawMedia.defaultClipInitialOffset), t.state = {
-                        startOffset: t.initialOffsets.startOffset,
-                        endOffset: t.initialOffsets.endOffset,
-                        minOffset: 0,
-                        maxOffset: t.props.rawMedia.duration
+                    return t.state = {
+                        startOffset: -1,
+                        endOffset: -1
                     }, t.onDrag = function(e) {
                         var n = e.endOffset - e.startOffset;
                         n > O || n < v || (t.setState({
@@ -426,20 +424,30 @@ webpackJsonp([55], {
                             align: g._54.Middle,
                             ellipsis: !0
                         }, t.state.startOffset + " - " + t.state.endOffset))
+                    }, t.isReady = function() {
+                        return t.props.isClipResolved && t.isValidOffset(t.state.startOffset) && t.isValidOffset(t.state.endOffset)
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                    this.props.isClipResolved && this.props.latencyTracking.reportInteractive()
+                return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    var t = this.isValidOffset(this.state.startOffset),
+                        n = this.isValidOffset(this.state.endOffset);
+                    if ((!t || !n) && e.initialOffsetStart && e.duration) {
+                        var i = {},
+                            r = m(e.initialOffsetStart, e.duration);
+                        !t && this.isValidOffset(r.startOffset) && (i.startOffset = r.startOffset), !n && this.isValidOffset(r.endOffset) && (i.endOffset = r.endOffset), this.setState(i)
+                    }
+                }, t.prototype.componentDidUpdate = function() {
+                    this.isReady() && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.isClipResolved ? r.createElement(g._7, null, r.createElement(g._30, {
+                    return this.isReady() && this.props.duration ? r.createElement(g._7, null, r.createElement(g._30, {
                         padding: {
                             y: 4
                         }
                     }, r.createElement(f.a, {
                         startOffset: this.state.startOffset,
                         endOffset: this.state.endOffset,
-                        minOffset: this.state.minOffset,
-                        maxOffset: this.state.maxOffset,
+                        minOffset: 0,
+                        maxOffset: this.props.duration,
                         onLeftDrag: this.onDrag,
                         onRightDrag: this.onDrag,
                         popover: this.renderDurationPopover()
@@ -461,9 +469,21 @@ webpackJsonp([55], {
                         broadcasterName: this.props.broadcasterName,
                         startOffset: this.state.startOffset,
                         endOffset: this.state.endOffset
-                    })) : r.createElement(g._7, null, r.createElement(g.u, {
-                        disabled: !0
-                    }))
+                    })) : this.renderPlaceholder()
+                }, t.prototype.renderPlaceholder = function() {
+                    return r.createElement(g._7, null, r.createElement(g._30, {
+                        fullWidth: !0,
+                        background: g.m.Alt2,
+                        margin: {
+                            y: 4
+                        },
+                        padding: {
+                            y: 2
+                        },
+                        textAlign: g._40.Center
+                    }, "Would you give it a second?"))
+                }, t.prototype.isValidOffset = function(e) {
+                    return !isNaN(e) && e >= 0
                 }, t
             }(r.Component),
             C = Object(c.compose)(Object(p.t)({
@@ -554,7 +574,7 @@ webpackJsonp([55], {
                             n = t.defaultClipInitialOffset,
                             i = t.duration,
                             r = t.videoURL,
-                            a = m(n, i - n);
+                            a = m(n, i);
                         this.props.playerConnection.sendMessage(Object(p.r)({
                             startOffset: a.startOffset,
                             endOffset: a.endOffset,
@@ -566,9 +586,11 @@ webpackJsonp([55], {
                     if (this.state.isPollingTimedOut || this.getIsCreationFailed(this.props)) return r.createElement(a.b, {
                         to: "/500"
                     });
-                    var e = this.props.data.clip;
-                    return e && e.rawMedia && this.getIsClipResolved(this.props) ? r.createElement(g._7, null, r.createElement(T, {
-                        showMessage: !0
+                    var e = this.props.data.clip,
+                        t = e && e.rawMedia,
+                        n = this.getIsClipResolved(this.props);
+                    return r.createElement(g._7, null, r.createElement(T, {
+                        showMessage: n
                     }), r.createElement(g._7, {
                         className: "clips-edit-clip-wrapper",
                         margin: {
@@ -585,13 +607,12 @@ webpackJsonp([55], {
                         onLoaded: this.onLoaded,
                         playerType: w.a.Editing
                     }))), r.createElement(C, {
-                        isClipResolved: this.getIsClipResolved(this.props),
+                        isClipResolved: n,
                         slug: this.props.slug,
-                        broadcasterName: e.broadcaster && e.broadcaster.displayName || "",
-                        rawMedia: e.rawMedia
-                    }))) : r.createElement(T, {
-                        showMessage: !1
-                    })
+                        broadcasterName: e && e.broadcaster && e.broadcaster.displayName || "",
+                        initialOffsetStart: t && t.defaultClipInitialOffset,
+                        duration: t && t.duration
+                    })))
                 }, t
             }(r.Component)),
             L = Object(c.compose)(Object(p.t)({
@@ -1643,4 +1664,4 @@ webpackJsonp([55], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-747e71e1dd11bfab9a0470a513e5109a.js.map
+//# sourceMappingURL=sites.clips.pages.create-ca7120afbb565a76ef6ad89056985a35.js.map
