@@ -1992,7 +1992,7 @@ window.SiteOptions = {
         },
         "50e947d4-24b7-4000-a046-f48f4072b7cf": {
             "name": "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV",
-            "v": 3243,
+            "v": 3485,
             "t": 2,
             "groups": [{
                 "weight": 100,
@@ -2000,6 +2000,9 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "variant_a"
+            }, {
+                "weight": 0,
+                "value": "left_nav_order_exp"
             }]
         },
         "5192d294-a807-4eb6-aeef-141023684b88": {
@@ -5196,17 +5199,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3465,
+            "v": 3484,
             "t": 1,
             "groups": [{
-                "weight": 98,
+                "weight": 95,
                 "value": "2.4.2"
             }, {
-                "weight": 1,
-                "value": "2.4.201"
-            }, {
-                "weight": 1,
-                "value": "2.4.202"
+                "weight": 5,
+                "value": "2.4.3"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {

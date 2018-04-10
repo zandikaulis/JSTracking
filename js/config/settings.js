@@ -396,7 +396,7 @@ window.__twilightSettings = {
         },
         "50e947d4-24b7-4000-a046-f48f4072b7cf": {
             "name": "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV",
-            "v": 3243,
+            "v": 3485,
             "t": 2,
             "groups": [{
                 "weight": 100,
@@ -404,6 +404,9 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "variant_a"
+            }, {
+                "weight": 0,
+                "value": "left_nav_order_exp"
             }]
         },
         "54b18ea6-2b6a-4ed7-9128-2497572d31e2": {

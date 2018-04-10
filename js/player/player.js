@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c0ea996f6e0afcd1a29a.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b21ce522db4f11d5f68c.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -31333,7 +31333,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.10-211005+a95623292bec187c5a79178ab3d4f77f0509ba1f",
+                    app_version: "2018.04.10-222955+4469e31d3f4600bc23647e16e0116d0c5e379f36",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -36953,7 +36953,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Ga = Object.freeze((ga = {}, u(ga, Va.a.MINUTE_WATCHED, ["time", "device_id", "play_session_id", "customer_id", "content_id"]), u(ga, Va.a.VIDEO_PLAY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "time_since_load_start"]), u(ga, Va.a.BUFFER_EMPTY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "buffer_empty_count"]), u(ga, Va.b, ["time", "device_id", "play_session_id", "customer_id", "content_id", "reason", "code"]), ga)),
+            Ga = Object.freeze((ga = {}, u(ga, Va.a.MINUTE_WATCHED, ["time", "device_id", "play_session_id", "customer_id", "content_id", "seconds_offset"]), u(ga, Va.a.VIDEO_PLAY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "time_since_load_start"]), u(ga, Va.a.BUFFER_EMPTY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "buffer_empty_count"]), u(ga, Va.b, ["time", "device_id", "play_session_id", "customer_id", "content_id", "reason", "code"]), ga)),
             Ya = Object.freeze(Object.keys(Ga)),
             Qa = function() {
                 function e(t) {
