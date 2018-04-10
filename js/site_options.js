@@ -1776,11 +1776,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 3477,
+            "v": 3481,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-e70b5a.sjc01.hls.ttvnw.net/v1/segment/Csj4Mh7ooZs7o_peN59fqAuhV-M4XIyJG81OTPtu2NWPeAd92grvw98ioNRH0_gXm6hpxM8QdODsy_IJahvIq6MVmuUj3-X0UOODaxY4Ekrmv8Z7OQUR8VUGB5pAWhUhwGMTDMWyrcwoo7GTo6AFzRvGqbTb0AYtoZneEUkiG6kCt7cBYiMqHP4HudikJtwhjVbmRQTqEExADAtxS1Ex0QoJI0l1nupclcxYQonWdg8tc3cW-18qUzfIXU0erW0klMfntiXtXj3h1zAqJ_qB-d9EBldQdB1q7jsao-FE5xoEY9jJHbf95cE1v_2SSpVceDPVmagISaiLEQme_rfHGdpjfbKrnqzTu4gsO8Bh0bpSLQtbIVLaO0sTRUDj4G79p-9XtCZsqTAvzTfUuQJREyCNky7WY9W9TM1Nu2ON3vjF9M7LiU8oV7QC1wZtyDRX9b0VtWM2xslSpZZzCsUMTKX2mIdCgxtD7I67eU03ZSFJKGy0Fk8WXlC72YsZnRxu_0-H0FSkviaUTjc7zBKXCAtj7nNCG4b7s4WGVsQnYR.ts"
+                "value": "//video-edge-7a6bbf.sjc01.hls.ttvnw.net/v1/segment/Cooqjjelwnn3BFYEVOJPh4A-ZugSwwVRxv_Ajm3WlrNV0IED0Nw-KhwTjOqAzARbt-hzKar1NxcRnA5pTYIqRu7GMsMO6cdaWYcMrqrZ-qOyjYXqL4FXK4pLSKnuSK-SUaPW-aPd3-wGP68n27ONMGF5Uh1jah8kJNfSx47Oe7seXSNaiktAMUPOZpQQwUkexefeAPUgrfJYnke39rbEl1aIkqiUALaxwrZmyv_lktP5cdUlgZA2yjq5BMi0fdsQBkE4cRjfFS6lr-wjZy-wvPQ9kSG999k5NJofpyr8MHOEsM3DRYX8cb99IWupgMuVBMnZtrC2NUfkVM_J-D3GXmoHQek9q9d-6_ypOQRSpvycqterT_ZqKRwCo8BeFNsHq0doUuYVvNBXUbiiowHYsIXhn6SOAFJ8ySOe_6TnK4y-yOEpv75zoTUbokvuTjb3PnO4drPyFrIIBC_JAEytCcvA1nw4gGteesULEK3QKDHbEY0Arv9Rv8mZ3eJD9Qra39rQKCgyHIu4BYDa4hvvVw6CkA3m_4AM.ts"
             }]
         },
         "4bc4a7c7-21b7-44f5-a0fb-79f430ee8ac4": {
@@ -2542,18 +2542,15 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 3475,
+            "v": 3480,
             "t": 1,
             "s": 2,
             "groups": [{
-                "weight": 40,
+                "weight": 50,
                 "value": "control"
             }, {
                 "weight": 10,
                 "value": "control10"
-            }, {
-                "weight": 20,
-                "value": "control20"
             }, {
                 "weight": 10,
                 "value": "business_logic_reverse"
@@ -2563,6 +2560,9 @@ window.SiteOptions = {
             }, {
                 "weight": 10,
                 "value": "cf_or_metro"
+            }, {
+                "weight": 10,
+                "value": "model_v2"
             }]
         },
         "6a587617-eb7c-475e-8bc3-991d4f38fc87": {
