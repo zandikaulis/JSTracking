@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2a41b7c179aa10433de4.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e0b5cc54012bcd8dea1a.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -31177,18 +31177,20 @@
         function u(e) {
             var t = e.enabled,
                 n = e.captionsData,
-                i = e.captionsStyle;
-            if (!t || !n) return null;
-            var o = c(n);
+                i = e.captionsStyle,
+                o = e.isMiniPlayer,
+                a = e.isShowingAd;
+            if (!t || !n || o || a) return null;
+            var s = c(n);
             return d.a.createElement(r, {
-                captionsText: o,
+                captionsText: s,
                 captionsStyle: i
             })
         }
 
         function c(e) {
             var t = e.text;
-            return (t && t.length > 0 ? t.trim() : "") ? String(t).split(P) : []
+            return (t && t.length > 0 ? t.trim() : "") ? String(t).split(C) : []
         }
         var l = n(0),
             d = n.n(l),
@@ -31222,10 +31224,14 @@
             },
             E = "player-captions-row",
             S = Object.freeze(["top", "bottom", "textAlign", "fontSize"]);
-        r.propTypes = k, n.d(t, "a", function() {
-            return T
+        r.propTypes = k;
+        var O = n(12);
+        n.d(t, "a", function() {
+            return x
         });
-        var O = {
+        var P = {
+                isShowingAd: p.a.bool,
+                isMiniPlayer: p.a.bool,
                 enabled: p.a.bool.isRequired,
                 captionsData: p.a.object,
                 captionsStyle: p.a.shape({
@@ -31244,18 +31250,21 @@
                     fontItalic: p.a.string
                 }).isRequired
             },
-            P = /\r?\n|\r/g,
-            C = function(e) {
+            C = /\r?\n|\r/g,
+            T = function(e) {
                 var t = e.captions,
-                    n = e.ui;
+                    n = e.ui,
+                    r = e.screen;
                 return {
-                    enabled: t.enabled && !n.isMini,
+                    enabled: t.enabled,
                     captionsData: t.data,
-                    captionsStyle: t.style
+                    captionsStyle: t.style,
+                    isMiniPlayer: n.isMini,
+                    isShowingAd: r[0] === O.c || r[0] === O.l
                 }
             };
-        u.propTypes = O;
-        var T = Object(h.b)(C)(u)
+        u.propTypes = P;
+        var x = Object(h.b)(T)(u)
     }, function(e, t, n) {
         "use strict";
 
@@ -31366,7 +31375,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.11-224645+31b31cd370981901ef85e6225227ecc029ba09f5",
+                    app_version: "2018.04.11-232053+6c85333271934dd837a0b71f2b1cce07a21984d8",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
