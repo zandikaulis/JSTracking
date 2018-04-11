@@ -7630,6 +7630,7 @@ webpackJsonp([39], {
                             top: 1
                         }
                     }, o.createElement(h.u, {
+                        "data-a-target": "prime-claim-description-button",
                         fullWidth: !0,
                         type: h.A.Hollow,
                         onClick: this.toggleShowDescription
@@ -7643,6 +7644,7 @@ webpackJsonp([39], {
                         background: h.m.Alt2,
                         border: !0
                     }, o.createElement(h._7, {
+                        "data-a-target": "prime-claim-description-body",
                         margin: {
                             bottom: 2
                         },
@@ -19493,11 +19495,15 @@ webpackJsonp([39], {
             v = n("CwIZ"),
             b = n("HW6M"),
             k = n("zCIC"),
-            y = n("6BvN"),
-            _ = n("7LIQ"),
-            S = n("J4ib"),
-            E = n("Odds"),
-            N = (n("9uSE"), function(e) {
+            y = n("6BvN");
+
+        function _(e) {
+            return e.charCode === y.a.Enter || e.charCode === y.a.Space
+        }
+        var S = n("7LIQ"),
+            E = n("J4ib"),
+            N = n("Odds"),
+            C = (n("9uSE"), function(e) {
                 var t = {
                         "emote-picker__tab": !0
                     },
@@ -19508,7 +19514,7 @@ webpackJsonp([39], {
                         "emote-picker__tab--active": e.channelTabEnabled && e.channelTabSelected,
                         "emote-picker__tab--disabled": !e.channelTabEnabled
                     }));
-                    n = r.createElement(E._1, {
+                    n = r.createElement(N._1, {
                         padding: {
                             x: 1
                         }
@@ -19517,14 +19523,16 @@ webpackJsonp([39], {
                         id: "emote-picker__channel",
                         className: s,
                         onClick: e.channelTabEnabled ? e.selectChannelTab : void 0,
-                        "data-a-target": "emote-channel-tab"
-                    }, r.createElement("span", null, Object(S.d)("Channel", "EmotePicker"))))
+                        onKeyPress: e.channelTabEnabled ? e.selectChannelTabKeypress : void 0,
+                        "data-a-target": "emote-channel-tab",
+                        tabIndex: 0
+                    }, r.createElement("span", null, Object(E.d)("Channel", "EmotePicker"))))
                 }
                 if (e.allTabVisible) {
                     var o = b(i.__assign({}, t, {
                         "emote-picker__tab--active": !(e.channelTabSelected && e.channelTabEnabled)
                     }));
-                    a = r.createElement(E._1, {
+                    a = r.createElement(N._1, {
                         padding: {
                             x: 1
                         }
@@ -19533,17 +19541,19 @@ webpackJsonp([39], {
                         id: "emote-picker__all",
                         className: o,
                         onClick: e.selectAllTab,
-                        "data-a-target": "emote-all-tab"
-                    }, r.createElement("span", null, Object(S.d)("All", "EmotePicker"))))
+                        onKeyPress: e.selectAllTabKeypress,
+                        "data-a-target": "emote-all-tab",
+                        tabIndex: 0
+                    }, r.createElement("span", null, Object(E.d)("All", "EmotePicker"))))
                 }
-                return r.createElement(E._30, {
-                    background: E.m.Base,
+                return r.createElement(N._30, {
+                    background: N.m.Base,
                     borderTop: !0,
                     className: "emote-picker__tabs-container"
                 }, n, a)
             }),
-            C = n("YEG/"),
-            T = function(e) {
+            T = n("YEG/"),
+            w = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -19568,21 +19578,21 @@ webpackJsonp([39], {
                             emotes: this.props.plan.emotes || []
                         },
                         a = {};
-                    return this.props.plan.price && (a.purchase = this.props.plan.price), r.createElement(E._7, {
+                    return this.props.plan.price && (a.purchase = this.props.plan.price), r.createElement(N._7, {
                         className: "emote-picker-plan-upsell",
-                        display: E.Q.Flex,
-                        flexDirection: E.S.Column,
-                        alignItems: E.c.Center,
+                        display: N.Q.Flex,
+                        flexDirection: N.S.Column,
+                        alignItems: N.c.Center,
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(_.a, {
+                    }, r.createElement(S.a, {
                         emoteSet: i,
                         locked: !0
-                    }), r.createElement(E._7, {
+                    }), r.createElement(N._7, {
                         margin: 1,
-                        alignItems: E.c.Center
-                    }, e), r.createElement(C.a, {
+                        alignItems: N.c.Center
+                    }, e), r.createElement(T.a, {
                         isSubbedToTier: !1,
                         tierPrice: a.purchase || "",
                         reportSubAction: this.props.reportSubAction,
@@ -19591,10 +19601,14 @@ webpackJsonp([39], {
                     }))
                 }, t
             }(r.Component),
-            w = (n("Xo53"), function(e) {
+            O = (n("Xo53"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.closeOnEsc = function(e) {
+                    return n.channelTabSelectionKeypress = function(e) {
+                        _(e) && n.selectChannelTab(e)
+                    }, n.allTabSelectionKeypress = function(e) {
+                        _(e) && n.selectAllTab(e)
+                    }, n.closeOnEsc = function(e) {
                         e.keyCode === y.a.Esc && n.props.toggleVisibility()
                     }, n.handleFilterChange = function(e) {
                         var t = e.target.value,
@@ -19641,89 +19655,91 @@ webpackJsonp([39], {
                             channelTabEnabled: e.ownedChannelEmoteSets.length > 0 || e.availableUpsells.length > 0
                         })
                 }, t.prototype.render = function() {
-                    return r.createElement(E.p, {
+                    return r.createElement(N.p, {
                         "data-a-target": "emote-picker",
-                        direction: this.props.direction ? this.props.direction : E.q.TopRight,
-                        size: this.props.size ? this.props.size : E.r.Medium,
+                        direction: this.props.direction ? this.props.direction : N.q.TopRight,
+                        size: this.props.size ? this.props.size : N.r.Medium,
                         noTail: !0,
                         show: !0
-                    }, r.createElement(E._7, {
+                    }, r.createElement(N._7, {
                         className: b("emote-picker")
-                    }, this.renderTabContent(), r.createElement(E._7, {
+                    }, this.renderTabContent(), r.createElement(N._7, {
                         className: "emote-picker__controls-container",
-                        position: E._14.Relative
-                    }, r.createElement(E._30, {
+                        position: N._14.Relative
+                    }, r.createElement(N._30, {
                         padding: 1,
                         borderTop: !0
-                    }, r.createElement(E._3, {
+                    }, r.createElement(N._3, {
                         autoFocus: !0,
                         onChange: this.handleFilterChange,
                         onKeyDown: this.closeOnEsc,
                         placeholder: Object(m.d)("Search for Emotes", "EmotePicker"),
-                        type: E._4.Text,
+                        type: N._4.Text,
                         value: this.state.inputValue
-                    })), r.createElement(N, {
+                    })), r.createElement(C, {
                         allTabVisible: this.props.allEmoteSets.length > 0,
                         channelTabEnabled: this.state.channelTabEnabled,
                         channelTabSelected: this.state.channelTabSelected,
                         channelTabVisible: !!this.props.channelTabVisible,
                         selectAllTab: this.selectAllTab,
-                        selectChannelTab: this.selectChannelTab
+                        selectAllTabKeypress: this.allTabSelectionKeypress,
+                        selectChannelTab: this.selectChannelTab,
+                        selectChannelTabKeypress: this.channelTabSelectionKeypress
                     }))))
                 }, t.prototype.renderTabContent = function() {
                     var e = this,
                         t = [];
-                    return this.props.gqlError ? t.push(r.createElement(E._7, {
+                    return this.props.gqlError ? t.push(r.createElement(N._7, {
                         key: "emotePicker-error"
-                    }, r.createElement(E.P, {
-                        color: E.J.Error
-                    }, Object(m.d)("Unable to load available emotes.", "EmotePicker")))) : this.props.loading ? t.push(r.createElement(E._7, {
-                        alignItems: E.c.Center,
-                        display: E.Q.Flex,
+                    }, r.createElement(N.P, {
+                        color: N.J.Error
+                    }, Object(m.d)("Unable to load available emotes.", "EmotePicker")))) : this.props.loading ? t.push(r.createElement(N._7, {
+                        alignItems: N.c.Center,
+                        display: N.Q.Flex,
                         key: "loading",
                         fullHeight: !0,
                         fullWidth: !0,
-                        justifyContent: E._6.Center
-                    }, r.createElement(E._9, {
+                        justifyContent: N._6.Center
+                    }, r.createElement(N._9, {
                         key: "LoadingSpinner"
-                    }))) : this.state.channelTabEnabled && this.state.channelTabSelected ? (this.state.filteredOwnedChannelEmoteSets.length > 0 && t.push(r.createElement(E._7, {
+                    }))) : this.state.channelTabEnabled && this.state.channelTabSelected ? (this.state.filteredOwnedChannelEmoteSets.length > 0 && t.push(r.createElement(N._7, {
                         className: "emote-picker__content-block",
                         key: "ownedChannelEmoteSets",
                         padding: 1,
-                        position: E._14.Relative
-                    }, r.createElement(_.a, {
+                        position: N._14.Relative
+                    }, r.createElement(S.a, {
                         emoteSet: this.state.filteredOwnedChannelEmoteSets[0],
                         onClickEmote: this.props.onClickEmote,
                         locked: !1
                     }))), t = t.concat(this.state.filteredAvailableUpsells.map(function(t) {
-                        return r.createElement(E._7, {
+                        return r.createElement(N._7, {
                             className: "emote-picker__content-block",
                             key: "planUpsell:" + t.level,
                             padding: 1,
-                            position: E._14.Relative
-                        }, r.createElement(T, {
+                            position: N._14.Relative
+                        }, r.createElement(w, {
                             plan: t,
                             isEsportChannel: e.props.isEsportChannel,
                             subscribeTexts: e.props.subscribeTexts,
                             reportSubAction: e.props.reportSubAction
                         }))
                     }))) : t = this.state.filteredAllEmoteSets.map(function(t) {
-                        return r.createElement(E._7, {
+                        return r.createElement(N._7, {
                             key: "emoteGrid" + t.id,
-                            position: E._14.Relative,
+                            position: N._14.Relative,
                             padding: {
                                 top: 1,
                                 bottom: 2
                             },
                             className: "emote-picker__content-block"
-                        }, r.createElement(_.a, {
+                        }, r.createElement(S.a, {
                             emoteSet: t,
                             onClickEmote: e.props.onClickEmote,
                             locked: !1
                         }))
                     }), t.length > 0 ? r.createElement(k.b, {
                         className: "emote-picker__tab-content"
-                    }, r.createElement(E._7, {
+                    }, r.createElement(N._7, {
                         padding: 1
                     }, t)) : null
                 }, t.prototype.filterEmoteSet = function(e, t) {
@@ -19759,8 +19775,8 @@ webpackJsonp([39], {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component)),
-            O = n("LYwx"),
-            P = function(e) {
+            P = n("LYwx"),
+            x = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.trackSubEvent = function(e) {
@@ -19803,7 +19819,7 @@ webpackJsonp([39], {
                 }, t.prototype.render = function() {
                     var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.id || "",
                         t = Object(d.a)(e, this.props.isStaff);
-                    return this.props.visible ? r.createElement(w, {
+                    return this.props.visible ? r.createElement(O, {
                         allEmoteSets: this.state.allEmoteSets,
                         availableUpsells: this.state.availableUpsells,
                         channelTabVisible: this.state.channelTabVisible,
@@ -19868,13 +19884,13 @@ webpackJsonp([39], {
                     return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
                 }, t
             }(r.Component);
-        var x = Object(a.compose)(Object(s.b)(function(e) {
+        var D = Object(a.compose)(Object(s.b)(function(e) {
             return {
                 currentUserID: e.session.user && e.session.user.id,
                 isStaff: e.session.user && e.session.user.roles && e.session.user.roles.isStaff || !1,
                 isLoggedIn: Object(u.d)(e)
             }
-        }), Object(o.a)(O, {
+        }), Object(o.a)(P, {
             name: "channelData",
             skip: function(e) {
                 return !e.channelOwnerID
@@ -19896,9 +19912,9 @@ webpackJsonp([39], {
             skip: function(e) {
                 return !e.currentUserID
             }
-        }]), Object(f.d)("EmotePicker"), Object(c.a)())(P);
+        }]), Object(f.d)("EmotePicker"), Object(c.a)())(x);
         n.d(t, "a", function() {
-            return x
+            return D
         })
     },
     P0T5: function(e, t, n) {
@@ -37737,4 +37753,4 @@ webpackJsonp([39], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-87c6cb84364aca41869868a775997513.js.map
+//# sourceMappingURL=pages.subs-a7d01794957da8e23bc1d65562e6297b.js.map

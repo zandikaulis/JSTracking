@@ -1925,6 +1925,7 @@ webpackJsonp([38], {
                             top: 1
                         }
                     }, o.createElement(f.u, {
+                        "data-a-target": "prime-claim-description-button",
                         fullWidth: !0,
                         type: f.A.Hollow,
                         onClick: this.toggleShowDescription
@@ -1938,6 +1939,7 @@ webpackJsonp([38], {
                         background: f.m.Alt2,
                         border: !0
                     }, o.createElement(f._7, {
+                        "data-a-target": "prime-claim-description-body",
                         margin: {
                             bottom: 2
                         },
@@ -19094,4 +19096,4 @@ webpackJsonp([38], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-10ee2c0a5aaa72eee114b22995aced95.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-cec7419eb687d103ead8267737f0fe85.js.map

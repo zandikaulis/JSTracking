@@ -365,7 +365,10 @@ webpackJsonp([73], {
                                     case 2:
                                         return (t = i.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (this.setState({
                                             publishState: r.Successful
-                                        }), this.props.history.push("/" + this.props.slug)), [3, 4];
+                                        }), this.props.history.push("/create", {
+                                            isPostEdit: !0,
+                                            slug: this.props.slug
+                                        })), [3, 4];
                                     case 3:
                                         return i.sent(), n = a.Unknown, this.onError(n), [3, 4];
                                     case 4:
@@ -3813,4 +3816,4 @@ webpackJsonp([73], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-78f096d2c301e59f1e5bea33dc5d4e36.js.map
+//# sourceMappingURL=pages.clips-manager-2cd86defd275ba864770d6c3784228f3.js.map

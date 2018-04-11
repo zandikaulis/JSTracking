@@ -13359,104 +13359,110 @@ webpackJsonp([37, 83], {
             d = "vodChat.comments.DELETED_SUCCESS",
             u = "vodChat.comments.CREATED_SUCCESS",
             m = "vodChat.comments.CREATE_FAILED",
-            p = "vodChat.comments.DISPLAY_ERROR",
-            h = function(e) {
+            p = function(e) {
                 return {
-                    type: p,
+                    type: m,
+                    createError: e
+                }
+            },
+            h = "vodChat.comments.DISPLAY_ERROR",
+            f = function(e) {
+                return {
+                    type: h,
                     errorMessage: e
                 }
             },
-            f = "vodChat.comments.UPDATED_SUCCESS",
-            g = "vodChat.comments.CURSOR_RECEIVED",
-            v = "vodChat.comments.OFFSET_RECEIVED",
-            b = "vodChat.comments.QUERY_FAILED",
-            k = "vodChat.comments.CLEARED",
-            y = function() {
+            g = "vodChat.comments.UPDATED_SUCCESS",
+            v = "vodChat.comments.CURSOR_RECEIVED",
+            b = "vodChat.comments.OFFSET_RECEIVED",
+            k = "vodChat.comments.QUERY_FAILED",
+            y = "vodChat.comments.CLEARED",
+            _ = function() {
                 return {
-                    type: k
+                    type: y
                 }
             },
-            _ = "vodChat.comments.COOLDOWN_ENDED",
-            C = "vodChat.comments.SYNC_ENABLED",
-            S = function() {
+            C = "vodChat.comments.COOLDOWN_ENDED",
+            S = "vodChat.comments.SYNC_ENABLED",
+            w = function() {
                 return {
-                    type: C
+                    type: S
                 }
             },
-            w = "vodChat.comments.SYNC_DISABLED",
-            E = function() {
+            E = "vodChat.comments.SYNC_DISABLED",
+            O = function() {
                 return {
-                    type: w
+                    type: E
                 }
             },
-            O = "vodChat.comments.REPLAY_FILTER_CHANGED",
-            T = function(e) {
+            T = "vodChat.comments.REPLAY_FILTER_CHANGED",
+            D = function(e) {
                 return r.l.set("videoChat.is_replay_mode", e), {
-                    type: O,
+                    type: T,
                     isReplayFilterOn: e
                 }
             },
-            D = "vodChat.comments.CHAT_REPLAY_ERROR_HIDE",
-            N = function() {
+            N = "vodChat.comments.CHAT_REPLAY_ERROR_HIDE",
+            I = function() {
                 return {
-                    type: D
+                    type: N
                 }
             },
-            I = "vodChat.comments.TIMESTAMP_MODE_CHANGED",
-            x = function(e) {
+            x = "vodChat.comments.TIMESTAMP_MODE_CHANGED",
+            A = function(e) {
                 return r.l.set("videoChat.hide_timestamps", e), {
-                    type: I,
+                    type: x,
                     hideTimestamps: e
                 }
             },
-            A = "vodChat.comments.REQUEST_CHAT_SETTINGS",
-            M = function() {
+            M = "vodChat.comments.REQUEST_CHAT_SETTINGS",
+            L = function() {
                 return {
-                    type: A,
+                    type: M,
                     isReplayFilterOn: r.l.get("videoChat.is_replay_mode", !1),
                     hideTimestamps: r.l.get("videoChat.hide_timestamps", !1)
                 }
             },
-            L = function(e) {
+            F = function(e) {
                 return a.__assign({
                     searchHits: [],
                     videos: {}
                 }, e)
             };
-        var F = "vodChat.video.CURRENT_VIDEO_CHANGED",
-            R = "vodChat.video.CURRENT_VIDEO_TIME_CHANGED",
-            j = function(e) {
-                return {
-                    type: F,
-                    id: e
-                }
-            },
+        var R = "vodChat.video.CURRENT_VIDEO_CHANGED",
+            j = "vodChat.video.CURRENT_VIDEO_TIME_CHANGED",
             U = function(e) {
                 return {
                     type: R,
+                    id: e
+                }
+            },
+            P = function(e) {
+                return {
+                    type: j,
                     updatedTime: e
                 }
             },
-            P = "video",
-            V = "current",
-            B = "",
-            H = function(e) {
+            V = "video",
+            B = "current",
+            H = "",
+            W = function(e) {
                 return "" !== e.parentId
             },
-            W = Number.MAX_VALUE,
-            z = Number.MIN_VALUE,
-            q = function(e) {
+            z = Number.MAX_VALUE,
+            q = Number.MIN_VALUE,
+            G = function(e) {
                 return a.__assign({
                     commentCount: 0,
-                    maxOffset: z,
-                    minOffset: W,
+                    maxOffset: q,
+                    minOffset: z,
                     parentComments: {},
                     offsets: {},
                     replies: {}
                 }, e)
             },
-            G = function(e, t) {
-                var n = Z(e);
+            Q = function(e, t) {
+                var n = X(e);
                 return t.forEach(function(e) {
                     var t, i = e.id,
                         r = e.contentOffset,
@@ -13475,48 +13481,48 @@ webpackJsonp([37, 83], {
                     }
                 }), n
             },
-            Q = function(e, t) {
+            Y = function(e, t) {
                 if (t in e.parentComments) return e.parentComments[t]
             },
-            Y = function(e, t) {
-                var n = Z(e);
-                return H(t) ? te(n, t.parentId, t.id) : ee(n, t.id)
-            },
             K = function(e, t) {
-                if (e.commentCount < t || $(e)) return e;
-                for (var n = e; n.commentCount > t && !$(e);) n = ne(n, n.minOffset);
-                return n
+                var n = X(e);
+                return W(t) ? ne(n, t.parentId, t.id) : te(n, t.id)
             },
             J = function(e, t) {
-                var n = Z(e);
+                if (e.commentCount < t || Z(e)) return e;
+                for (var n = e; n.commentCount > t && !Z(e);) n = ie(n, n.minOffset);
+                return n
+            },
+            $ = function(e, t) {
+                var n = X(e);
                 return Object.keys(e.parentComments).forEach(function(i) {
                     var r = e.parentComments[i];
-                    t(r) || (n = ee(n, r.id))
+                    t(r) || (n = te(n, r.id))
                 }), Object.keys(e.replies).forEach(function(i) {
                     e.replies[i].forEach(function(e) {
-                        t(e) || (n = te(n, e.id, e.parentId))
+                        t(e) || (n = ne(n, e.id, e.parentId))
                     })
                 }), n
             },
-            $ = function(e) {
+            Z = function(e) {
                 return e.minOffset === e.maxOffset
             },
-            Z = function(e) {
+            X = function(e) {
                 return {
                     commentCount: e.commentCount,
                     maxOffset: e.maxOffset,
                     minOffset: e.minOffset,
-                    offsets: X(e.offsets),
+                    offsets: ee(e.offsets),
                     parentComments: a.__assign({}, e.parentComments),
                     replies: a.__assign({}, e.replies)
                 }
             },
-            X = function(e) {
+            ee = function(e) {
                 return Object.keys(e).reduce(function(t, n) {
                     return t[Number(n)] = e[Number(n)].slice(), t
                 }, {})
             },
-            ee = function(e, t) {
+            te = function(e, t) {
                 if (!(t in e.parentComments)) return e;
                 var n = e.parentComments[t].contentOffset,
                     i = e.offsets[n],
@@ -13529,7 +13535,7 @@ webpackJsonp([37, 83], {
                 }
                 return e
             },
-            te = function(e, t, n) {
+            ne = function(e, t, n) {
                 if (!(t in e.replies)) return e;
                 var i = e.replies[t].length,
                     r = e.replies[t].filter(function(e) {
@@ -13539,12 +13545,12 @@ webpackJsonp([37, 83], {
                 var a = i - r.length;
                 return e.commentCount -= a, e
             },
-            ne = function(e, t) {
-                return t >= e.minOffset && t <= e.maxOffset && !$(e) ? (t in e.offsets && e.offsets[t].forEach(function(t) {
-                    e = ee(e, t)
+            ie = function(e, t) {
+                return t >= e.minOffset && t <= e.maxOffset && !Z(e) ? (t in e.offsets && e.offsets[t].forEach(function(t) {
+                    e = te(e, t)
                 }), delete e.offsets[t], e.maxOffset === t ? e.maxOffset-- : e.minOffset === t && e.minOffset++, e) : e
             },
-            ie = function() {
+            re = function() {
                 function e(e) {
                     this.videoComments = e, this.currentOffset = e.minOffset
                 }
@@ -13565,21 +13571,21 @@ webpackJsonp([37, 83], {
                     }
                 }, e
             }(),
-            re = n("J4ib");
+            ae = n("J4ib");
 
-        function ae() {
+        function oe() {
             return {
-                messageCreatedTooQuickError: Object(re.d)("Your message was not sent because you are sending messages too quickly.", "format-error-messages"),
-                chatReplayFilterError: Object(re.d)("Your message has been posted. However, other messages posted after the live stream are hidden.", "format-error-messages")
+                messageCreatedTooQuickError: Object(ae.d)("Your message was not sent because you are sending messages too quickly.", "format-error-messages"),
+                chatReplayFilterError: Object(ae.d)("Your message has been posted. However, other messages posted after the live stream are hidden.", "format-error-messages")
             }
         }
-        var oe = function(e) {
+        var se = function(e) {
                 return a.__assign({
-                    comments: q(),
+                    comments: G(),
                     currentVideoTime: 0,
                     cursor: {
-                        future: B,
-                        past: B
+                        future: H,
+                        past: H
                     },
                     errorMessage: "",
                     hasDismissedChatReplayError: !1,
@@ -13592,140 +13598,140 @@ webpackJsonp([37, 83], {
                     hideTimestamps: !1
                 }, e)
             },
-            se = 150;
-        var le = {
+            le = 150;
+        var ce = {
             apiToken: "",
             deviceId: ""
         };
-        var ce = {
+        var de = {
                 users: {}
             },
-            de = function(e) {
+            ue = function(e) {
                 return a.__assign({
                     users: {}
                 }, e)
             };
 
-        function ue(e, t) {
+        function me(e, t) {
             var n = t.reduce(function(e, t) {
                 return e[t.id] = t, e
             }, {});
             return a.__assign({}, e, n)
         }
-        var me = Object(i.c)({
+        var pe = Object(i.c)({
             comments: function(e, t) {
-                switch (void 0 === e && (e = oe()), t.type) {
+                switch (void 0 === e && (e = se()), t.type) {
                     case u:
                         var n = a.__assign({}, t.comments[0], {
                             highlight: !0,
-                            source: V
+                            source: B
                         });
                         return a.__assign({}, e, {
-                            comments: G(e.comments, [n]),
+                            comments: Q(e.comments, [n]),
                             isPostCooldownActive: !0
                         });
                     case m:
                         return a.__assign({}, e, {
                             errorMessage: t.createError
                         });
-                    case p:
+                    case h:
                         return a.__assign({}, e, {
                             errorMessage: t.errorMessage
                         });
-                    case g:
+                    case v:
                         var i = t.comments[0].parentId,
                             r = e.cursor,
                             c = e.replyCursorMap,
-                            h = t.comments.slice();
+                            p = t.comments.slice();
                         if ("" === i) r = t.cursor;
-                        else if (c = a.__assign({}, e.replyCursorMap, ((N = {})[i] = t.cursor.future, N)), t.cursor.future === B) {
-                            var y = Q(e.comments, i);
-                            if (y) {
-                                var S = a.__assign({}, y, {
+                        else if (c = a.__assign({}, e.replyCursorMap, ((D = {})[i] = t.cursor.future, D)), t.cursor.future === H) {
+                            var f = Y(e.comments, i);
+                            if (f) {
+                                var _ = a.__assign({}, f, {
                                     moreReplies: !1
                                 });
-                                h.push(S)
+                                p.push(_)
                             }
                         }
-                        var E = G(e.comments, h);
-                        return e.isScrollingSynced && (E = K(E, se)), a.__assign({}, e, {
-                            comments: E,
+                        var w = Q(e.comments, p);
+                        return e.isScrollingSynced && (w = J(w, le)), a.__assign({}, e, {
+                            comments: w,
                             cursor: r,
                             hasLoadedData: !0,
                             replyCursorMap: c
                         });
-                    case v:
+                    case b:
                         return a.__assign({}, e, {
-                            comments: G(q(), t.comments),
+                            comments: Q(G(), t.comments),
                             hasLoadedData: !0,
                             cursor: t.cursor,
                             replyCursorMap: {}
                         });
-                    case b:
+                    case k:
                         return a.__assign({}, e, {
                             hasLoadedData: !0
                         });
                     case o:
                         return a.__assign({}, e, {
-                            comments: G(q(), t.comments),
+                            comments: Q(G(), t.comments),
                             cursor: t.cursor,
                             hasLoadedData: !0,
                             errorMessage: ""
                         });
                     case s:
-                        return a.__assign({}, oe(), {
+                        return a.__assign({}, se(), {
                             hasLoadedData: !0,
                             errorMessage: t.error
                         });
-                    case R:
+                    case j:
                         return a.__assign({}, e, {
                             currentVideoTime: Math.floor(t.updatedTime)
                         });
-                    case F:
-                    case k:
-                        return a.__assign({}, oe());
+                    case R:
+                    case y:
+                        return a.__assign({}, se());
                     case d:
                         return a.__assign({}, e, {
-                            comments: Y(e.comments, t.comment)
+                            comments: K(e.comments, t.comment)
                         });
-                    case _:
-                        var T = e.errorMessage;
-                        return T === ae().messageCreatedTooQuickError && (T = ""), a.__assign({}, e, {
+                    case C:
+                        var O = e.errorMessage;
+                        return O === oe().messageCreatedTooQuickError && (O = ""), a.__assign({}, e, {
                             isPostCooldownActive: !1,
-                            errorMessage: T
+                            errorMessage: O
                         });
-                    case w:
+                    case E:
                         return a.__assign({}, e, {
                             isScrollingSynced: !1
                         });
-                    case C:
+                    case S:
                         return a.__assign({}, e, {
-                            comments: K(e.comments, se),
+                            comments: J(e.comments, le),
                             isScrollingSynced: !0
                         });
                     case l:
                         return a.__assign({}, e, {
-                            comments: J(e.comments, function(e) {
+                            comments: $(e.comments, function(e) {
                                 return e.commenter !== t.user
                             })
                         });
-                    case f:
+                    case g:
                         return a.__assign({}, e, {
-                            comments: G(e.comments, t.comments)
+                            comments: Q(e.comments, t.comments)
                         });
-                    case O:
+                    case T:
                         return a.__assign({}, e, {
                             isReplayFilterOn: t.isReplayFilterOn
                         });
-                    case D:
+                    case N:
                         return a.__assign({}, e, {
                             hasDismissedChatReplayError: !0
                         });
-                    case I:
+                    case x:
                         return a.__assign({}, e, {
                             hideTimestamps: t.hideTimestamps
                         });
-                    case A:
+                    case M:
                         return a.__assign({}, e, {
                             isReplayFilterOn: t.isReplayFilterOn,
                             hideTimestamps: t.hideTimestamps
@@ -13733,28 +13739,28 @@ webpackJsonp([37, 83], {
                     default:
                         return e
                 }
-                var N
+                var D
             },
             config: function(e) {
-                return void 0 === e && (e = le), e
+                return void 0 === e && (e = ce), e
             },
             users: function(e, t) {
-                switch (void 0 === e && (e = ce), t.type) {
-                    case g:
+                switch (void 0 === e && (e = de), t.type) {
                     case v:
+                    case b:
                     case o:
                     case u:
                         return {
-                            users: ue(e.users, t.users)
+                            users: me(e.users, t.users)
                         };
-                    case k:
-                        return a.__assign({}, de());
+                    case y:
+                        return a.__assign({}, ue());
                     default:
                         return e
                 }
             },
             moderation: function(e, t) {
-                switch (void 0 === e && (e = L()), t.type) {
+                switch (void 0 === e && (e = F()), t.type) {
                     case o:
                         return a.__assign({}, e, {
                             videos: (n = e.videos, i = t.videos, r = i.reduce(function(e, t) {
@@ -13767,25 +13773,25 @@ webpackJsonp([37, 83], {
                         }) : a.__assign({}, e, {
                             searchHits: []
                         });
-                    case k:
-                        return a.__assign({}, L());
+                    case y:
+                        return a.__assign({}, F());
                     default:
                         return e
                 }
                 var n, i, r
             }
         });
-        r.o.store.registerReducer("vodChat", me);
-        var pe = n("OAwv"),
-            he = n("9u8h");
-        var fe = n("iydZ"),
-            ge = n("mwvJ"),
-            ve = n("l21v"),
-            be = function(e, t, n) {
+        r.o.store.registerReducer("vodChat", pe);
+        var he = n("OAwv"),
+            fe = n("9u8h");
+        var ge = n("iydZ"),
+            ve = n("mwvJ"),
+            be = n("l21v"),
+            ke = function(e, t, n) {
                 var i = e.body,
                     r = e.emoticons || [],
                     a = [];
-                return a = 0 === r.length ? e.bits_spent ? a.concat(Object(fe.c)(i, n)) : a.concat(Object(ve.c)(i, t, !1)) : function(e, t, n, i) {
+                return a = 0 === r.length ? e.bits_spent ? a.concat(Object(ge.c)(i, n)) : a.concat(Object(be.c)(i, t, !1)) : function(e, t, n, i) {
                     var r, a = 0,
                         o = Array.from(t);
                     r = e.reduce(function(e, t) {
@@ -13793,39 +13799,39 @@ webpackJsonp([37, 83], {
                             i = t.end,
                             r = o.slice(a, n),
                             s = o.slice(n, i + 1);
-                        return 0 !== r.length && (e = e.concat(Object(ve.c)(r.join(""), "", !1))), e.push({
-                            type: ge.a.Emote,
+                        return 0 !== r.length && (e = e.concat(Object(be.c)(r.join(""), "", !1))), e.push({
+                            type: ve.a.Emote,
                             content: {
                                 images: {
                                     themed: !1,
                                     sources: {
-                                        "1x": Object(ve.e)(t._id, 1),
-                                        "2x": Object(ve.e)(t._id, 2),
-                                        "4x": Object(ve.e)(t._id, 4)
+                                        "1x": Object(be.e)(t._id, 1),
+                                        "2x": Object(be.e)(t._id, 2),
+                                        "4x": Object(be.e)(t._id, 4)
                                     }
                                 },
                                 alt: s.join("")
                             }
                         }), a = i + 1, e
-                    }, []), a < t.length && (r = r.concat(Object(ve.c)(o.slice(a).join(""), "", !1)));
+                    }, []), a < t.length && (r = r.concat(Object(be.c)(o.slice(a).join(""), "", !1)));
                     if (!i) return r;
                     return r.reduce(function(e, t) {
-                        return t.type === ge.a.Text ? e.concat(Object(fe.c)(t.content, n)) : (e.push(t), e)
+                        return t.type === ve.a.Text ? e.concat(Object(ge.c)(t.content, n)) : (e.push(t), e)
                     }, [])
                 }(r, i, n, void 0 !== e.bits_spent), {
                     id: "1",
                     isAction: e.is_action,
                     tokens: a,
-                    userColor: e.user_color ? e.user_color : Object(ve.b)(t)
+                    userColor: e.user_color ? e.user_color : Object(be.b)(t)
                 }
             };
-        var ke = function() {
+        var ye = function() {
                 return function(e) {
                     this.bio = e.bio, this.createdAt = e.createdAt, this.displayName = e.displayName, this.id = e.id, this.logo = e.logo, this.name = e.name, this.type = e.type, this.updatedAt = e.updatedAt
                 }
             }(),
-            ye = function(e) {
-                return new ke({
+            _e = function(e) {
+                return new ye({
                     id: e._id,
                     name: e.name,
                     logo: new URL(e.logo || "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png"),
@@ -13836,33 +13842,27 @@ webpackJsonp([37, 83], {
                     updatedAt: new Date(e.updated_at)
                 })
             };
-        var _e = function(e) {
-                return {
-                    comments: [Oe.normalizeRecord(e, fe.a)],
-                    users: [ye(e.commenter)]
-                }
-            },
-            Ce = function(e, t) {
+        var Ce = function(e, t) {
                 var n = a.__assign({}, e, {
                     more_replies: t.moreReplies
                 });
                 return {
-                    comments: [Oe.normalizeRecord(n, fe.a)],
-                    users: [ye(e.commenter)]
+                    comments: [Oe.normalizeRecord(n, ge.a)],
+                    users: [_e(e.commenter)]
                 }
             },
             Se = function(e, t) {
                 var n = e.comments.map(function(e) {
-                        return ye(e.commenter)
+                        return _e(e.commenter)
                     }),
                     i = {
-                        past: B,
-                        future: B
+                        past: H,
+                        future: H
                     };
                 return void 0 !== e._next && (i.future = e._next), void 0 !== e._prev && (i.past = e._prev), {
                     comments: e.comments.reduce(function(e, i) {
                         return i.replies && i.replies.map(function(e) {
-                            n.push(ye(e.commenter))
+                            n.push(_e(e.commenter))
                         }), e.concat(Oe.normalizeRecords(i, t))
                     }, []),
                     cursor: i,
@@ -13871,14 +13871,14 @@ webpackJsonp([37, 83], {
             },
             we = function(e) {
                 var t = e.comments.map(function(e) {
-                    return ye(e.commenter)
+                    return _e(e.commenter)
                 });
                 return {
                     comments: e.comments.map(function(e) {
-                        return Oe.normalizeRecord(e, fe.a)
+                        return Oe.normalizeRecord(e, ge.a)
                     }),
                     cursor: {
-                        future: e._next || B
+                        future: e._next || H
                     },
                     users: t
                 }
@@ -13905,7 +13905,7 @@ webpackJsonp([37, 83], {
                         contentType: e.content_type,
                         createdAt: new Date(e.created_at),
                         id: e._id,
-                        message: be(e.message, e.commenter._id, t),
+                        message: ke(e.message, e.commenter._id, t),
                         moreReplies: e.more_replies || !1,
                         parentId: void 0 !== e.parent_id ? e.parent_id : "",
                         state: e.state,
@@ -13924,7 +13924,7 @@ webpackJsonp([37, 83], {
                         contentType: e.content_type,
                         createdAt: new Date(e.created_at),
                         id: e._id,
-                        message: be(e.message, e.commenter._id, t),
+                        message: ke(e.message, e.commenter._id, t),
                         moreReplies: !1,
                         parentId: void 0 !== e.parent_id ? e.parent_id : "",
                         state: e.state,
@@ -13963,9 +13963,7 @@ webpackJsonp([37, 83], {
                     message: n.message
                 }
             };
-            return he.a.postOrThrow(t, i).then(function(e) {
-                return _e(e.body)
-            })
+            return fe.a.post(t, i)
         }
 
         function Fe(e) {
@@ -13975,15 +13973,15 @@ webpackJsonp([37, 83], {
                     }(e)) return function(e) {
                     var t = {};
                     void 0 !== e.cursor && (t[Ne] = e.cursor);
-                    var n = Ae(e.commentID) + "?" + pe.stringify(t);
-                    return he.a.getOrThrow(n).then(function(e) {
+                    var n = Ae(e.commentID) + "?" + he.stringify(t);
+                    return fe.a.getOrThrow(n).then(function(e) {
                         return we(e.body)
                     })
                 }(e);
                 var t = {};
                 je(e) ? t[Ne] = e.cursor : Ue(e) && (t[De] = "" + e.offset, void 0 !== e.highlightedMessageID && (t[Ie] = e.highlightedMessageID));
-                var n = xe(e.videoID) + "?" + pe.stringify(t);
-                return he.a.getOrThrow(n).then(function(t) {
+                var n = xe(e.videoID) + "?" + he.stringify(t);
+                return fe.a.getOrThrow(n).then(function(t) {
                     return Se(t.body, e.bitsConfig)
                 })
             } catch (e) {
@@ -14008,7 +14006,7 @@ webpackJsonp([37, 83], {
                         return void 0 === t.video ? e : e.concat([Ve(t.video)])
                     }, []);
                 return Array.isArray(e.parents) && e.parents.forEach(function(e) {
-                    n.comments.push(Oe.normalizeRecord(e, t)), n.users.push(ye(e.commenter))
+                    n.comments.push(Oe.normalizeRecord(e, t)), n.users.push(_e(e.commenter))
                 }), a.__assign({}, n, {
                     videos: i
                 })
@@ -14031,11 +14029,11 @@ webpackJsonp([37, 83], {
                 return "userId" in e
             }(e) ? function(e) {
                 var t = {};
-                return t[He] = ze.toString(), t[Be] = e.userId, void 0 !== e.cursor && (t[Ne] = e.cursor), "/v5/videos/comments?" + pe.stringify(t)
+                return t[He] = ze.toString(), t[Be] = e.userId, void 0 !== e.cursor && (t[Ne] = e.cursor), "/v5/videos/comments?" + he.stringify(t)
             }(e) : function(e) {
                 var t = {};
-                return t[He] = ze.toString(), t[We] = e.videoId, void 0 !== e.cursor && (t[Ne] = e.cursor), "/v5/videos/comments?" + pe.stringify(t)
-            }(e), he.a.getOrThrow(t).then(function(t) {
+                return t[He] = ze.toString(), t[We] = e.videoId, void 0 !== e.cursor && (t[Ne] = e.cursor), "/v5/videos/comments?" + he.stringify(t)
+            }(e), fe.a.getOrThrow(t).then(function(t) {
                 return Pe(t.body, e.bitsConfig)
             })
         }
@@ -14054,9 +14052,9 @@ webpackJsonp([37, 83], {
                 var r = e.vodChat.comments,
                     a = r.currentVideoTime,
                     o = r.comments;
-                return 0 === o.commentCount ? [] : Array.from(new ie(o)).reduce(function(r, s) {
+                return 0 === o.commentCount ? [] : Array.from(new re(o)).reduce(function(r, s) {
                     return s.offset > a ? r : (s.comments.forEach(function(a) {
-                        var s = Q(o, a);
+                        var s = Y(o, a);
                         if (void 0 !== s && (n || !Ke(i, s))) return "comment" === s.source && rt(e.vodChat.comments.isReplayFilterOn, t) ? r : r.push(et(s, e, n, i, t))
                     }), r)
                 }, []).sort(Ze)
@@ -14083,7 +14081,7 @@ webpackJsonp([37, 83], {
                     s = t.vodChat.comments.comments.replies[e.id],
                     l = e.createdAt;
                 return Array.isArray(s) && s.forEach(function(e) {
-                    !n && Ke(i, e) || (e.source === V && rt(t.vodChat.comments.isReplayFilterOn, r) ? (o.push(et(e, t, n, i)), l = at(l, e.createdAt)) : (a.push(et(e, t, n, i)), l = at(l, e.createdAt)))
+                    !n && Ke(i, e) || (e.source === B && rt(t.vodChat.comments.isReplayFilterOn, r) ? (o.push(et(e, t, n, i)), l = at(l, e.createdAt)) : (a.push(et(e, t, n, i)), l = at(l, e.createdAt)))
                 }), rt(t.vodChat.comments.isReplayFilterOn, r) ? {
                     author: t.vodChat.users.users[e.commenter],
                     comment: e,
@@ -14141,11 +14139,11 @@ webpackJsonp([37, 83], {
         }
 
         function st(e) {
-            return e.future !== B
+            return e.future !== H
         }
 
         function lt(e) {
-            return e.past !== B
+            return e.past !== H
         }
         var ct = n("HM6l"),
             dt = n("9m97"),
@@ -14162,7 +14160,7 @@ webpackJsonp([37, 83], {
                     })))
                 }, function() {
                     var t;
-                    e.dispatch((t = Object(re.d)("Unable to retrieve messages, please try again.", "routines-moderation"), {
+                    e.dispatch((t = Object(ae.d)("Unable to retrieve messages, please try again.", "routines-moderation"), {
                         type: s,
                         error: t
                     }))
@@ -14175,7 +14173,7 @@ webpackJsonp([37, 83], {
                     body: {
                         commenter_id: n.bannedUser
                     }
-                }, he.a.postOrThrow(i, r)).then(function() {
+                }, fe.a.postOrThrow(i, r)).then(function() {
                     var n;
                     e.dispatch((n = t.bannedUser, {
                         type: l,
@@ -14222,7 +14220,7 @@ webpackJsonp([37, 83], {
                 e({
                     dispatch: n,
                     getState: i
-                }, t, re.p.apollo.client)
+                }, t, ae.p.apollo.client)
             }
         }
 
@@ -14231,7 +14229,7 @@ webpackJsonp([37, 83], {
                 e({
                     dispatch: n,
                     getState: i
-                }, t, re.p.apollo.client, re.o)
+                }, t, ae.p.apollo.client, ae.o)
             }
         }
         var kt = n("GiK3"),
@@ -14364,15 +14362,15 @@ webpackJsonp([37, 83], {
                         return Wt = !0, [2, Fe(t).then(function(n) {
                             var i;
                             Wt = !1, Ue(t) && t.offset === Ht ? e.dispatch((i = n, a.__assign({
-                                type: v
+                                type: b
                             }, i))) : e.dispatch(function(e) {
                                 return a.__assign({
-                                    type: g
+                                    type: v
                                 }, e)
                             }(n))
                         }, function(t) {
-                            Wt = !1, r.o.logger.error(t, "VideoChat: unable to fetch messages"), e.dispatch({
-                                type: b
+                            Wt = !1, r.j.error(t, "VideoChat: unable to fetch messages"), e.dispatch({
+                                type: k
                             })
                         })]
                     })
@@ -14380,25 +14378,28 @@ webpackJsonp([37, 83], {
             },
             qt = function(e, t) {
                 return a.__awaiter(Pt, void 0, void 0, function() {
-                    return a.__generator(this, function(n) {
-                        return [2, Le(t).then(function(t) {
-                            var n;
-                            e.dispatch((n = t, a.__assign({
-                                type: u
-                            }, n))), e.dispatch(bt(Yt, t)), setTimeout(function() {
-                                e.dispatch({
-                                    type: _
-                                })
-                            }, 5e3)
-                        }, function(t) {
-                            return t.json().then(function(t) {
-                                var n;
-                                e.dispatch((n = Vt(t.message), {
-                                    type: m,
-                                    createError: n
-                                }))
-                            })
-                        })]
+                    var n, i, o;
+                    return a.__generator(this, function(s) {
+                        switch (s.label) {
+                            case 0:
+                                return s.trys.push([0, 2, , 3]), [4, Le(t)];
+                            case 1:
+                                return void 0 === (n = s.sent()).body ? (e.dispatch(p(Vt(""))), [2]) : n.requestError ? (r.j.error(n.requestError, qt.name), e.dispatch(p(Vt(""))), [2]) : n.error ? (r.j.error(new Error(n.error.error), qt.name), e.dispatch(p(Vt(n.error.message))), [2]) : (c = n.body, i = {
+                                    comments: [Oe.normalizeRecord(c, ge.a)],
+                                    users: [_e(c.commenter)]
+                                }, e.dispatch((l = i, a.__assign({
+                                    type: u
+                                }, l))), e.dispatch(bt(Yt, i)), setTimeout(function() {
+                                    e.dispatch({
+                                        type: C
+                                    })
+                                }, 5e3), [3, 3]);
+                            case 2:
+                                return o = s.sent(), r.j.error(o, qt.name), e.dispatch(p(Vt(""))), [3, 3];
+                            case 3:
+                                return [2]
+                        }
+                        var l, c
                     })
                 })
             },
@@ -14410,7 +14411,7 @@ webpackJsonp([37, 83], {
                             case 0:
                                 return i.trys.push([0, 2, , 3]), [4, function(e) {
                                     var t = Me(e.id);
-                                    return he.a.delete(t)
+                                    return fe.a.delete(t)
                                 }(t)];
                             case 1:
                                 return i.sent(), e.dispatch(function(e) {
@@ -14423,7 +14424,7 @@ webpackJsonp([37, 83], {
                                     comment: t
                                 })), [3, 3];
                             case 2:
-                                return n = i.sent(), r.j.error(n.toString(), Gt.name), [3, 3];
+                                return n = i.sent(), r.j.error(n, Gt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -14443,16 +14444,16 @@ webpackJsonp([37, 83], {
                                                 state: e.state
                                             }
                                         };
-                                    return he.a.putOrThrow(t, n).then(function(t) {
+                                    return fe.a.putOrThrow(t, n).then(function(t) {
                                         return Ce(t.body, e.comment)
                                     })
                                 }(t)];
                             case 1:
                                 return n = o.sent(), e.dispatch((s = n, a.__assign({
-                                    type: f
+                                    type: g
                                 }, s))), [3, 3];
                             case 2:
-                                return i = o.sent(), r.j.error(i.toString(), Qt.name), [3, 3];
+                                return i = o.sent(), r.j.error(i, Qt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -14486,7 +14487,7 @@ webpackJsonp([37, 83], {
                                         game: t.video.game ? t.video.game.name : null,
                                         login: n.name,
                                         play_session_id: r.n.getVideoPlayerTrackingData().playSessionID,
-                                        reply_to_comment_id: H(i) ? i.parentId : null,
+                                        reply_to_comment_id: W(i) ? i.parentId : null,
                                         user_id: Number(n.id),
                                         vod_id: Number(i.contentId),
                                         vod_title: t.video.title,
@@ -14495,7 +14496,7 @@ webpackJsonp([37, 83], {
                                     }
                                 }(t, e)), [3, 3];
                             case 2:
-                                return o = a.sent(), r.j.error(o.toString(), Yt.name), [3, 3];
+                                return o = a.sent(), r.j.error(o, Yt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -14535,7 +14536,7 @@ webpackJsonp([37, 83], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = a.sent(), r.j.error(s.toString(), Kt.name), [3, 3];
+                                return s = a.sent(), r.j.error(s, Kt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -14572,7 +14573,7 @@ webpackJsonp([37, 83], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = a.sent(), r.j.error(s.toString(), Jt.name), [3, 3];
+                                return s = a.sent(), r.j.error(s, Jt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -14614,7 +14615,7 @@ webpackJsonp([37, 83], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = a.sent(), r.j.error(s.toString(), $t.name), [3, 3];
+                                return s = a.sent(), r.j.error(s, $t.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -14657,7 +14658,7 @@ webpackJsonp([37, 83], {
                                     }
                                 }(t, e.getState(), l)), [3, 3];
                             case 2:
-                                return c = a.sent(), r.j.error(c.toString(), Zt.name), [3, 3];
+                                return c = a.sent(), r.j.error(c, Zt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -14695,7 +14696,7 @@ webpackJsonp([37, 83], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = a.sent(), r.j.error(s.toString(), Xt.name), [3, 3];
+                                return s = a.sent(), r.j.error(s, Xt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -14734,7 +14735,7 @@ webpackJsonp([37, 83], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = a.sent(), r.j.error(s.toString(), en.name), [3, 3];
+                                return s = a.sent(), r.j.error(s, en.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -14788,20 +14789,20 @@ webpackJsonp([37, 83], {
                     n = null,
                     i = t.tokens.map(function(e, t) {
                         switch (e.type) {
-                            case ge.a.Text:
+                            case ve.a.Text:
                                 return [kt.createElement("span", {
                                     key: t
                                 }, e.content)];
-                            case ge.a.Emote:
+                            case ve.a.Emote:
                                 return [kt.createElement(on.a, {
                                     key: t,
                                     emote: e.content
                                 }), " "];
-                            case ge.a.Link:
+                            case ve.a.Link:
                                 return [kt.createElement("span", {
                                     key: t
                                 }, e.content.displayText)];
-                            case ge.a.VideoLink:
+                            case ve.a.VideoLink:
                                 return n ? [kt.createElement("span", {
                                     key: t
                                 }, e.content.displayText)] : void(n = kt.createElement(ln.a, {
@@ -14809,7 +14810,7 @@ webpackJsonp([37, 83], {
                                     id: e.content.id,
                                     url: e.content.url
                                 }));
-                            case ge.a.ClipLink:
+                            case ve.a.ClipLink:
                                 return n ? [kt.createElement("span", {
                                     key: t
                                 }, e.content.displayText)] : void(n = kt.createElement(sn.a, {
@@ -14817,7 +14818,7 @@ webpackJsonp([37, 83], {
                                     slug: e.content.slug,
                                     forceNetworkRequest: !0
                                 }));
-                            case ge.a.Mention:
+                            case ve.a.Mention:
                                 return [kt.createElement("span", {
                                     key: t
                                 }, "@", e.content.recipient)];
@@ -14874,14 +14875,14 @@ webpackJsonp([37, 83], {
                     this.clearDismissTimeout()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.message === ae().chatReplayFilterError && (e = kt.createElement(yt.P, {
+                    return this.props.message === oe().chatReplayFilterError && (e = kt.createElement(yt.P, {
                         type: yt._44.Span
                     }, " ", kt.createElement(yt.P, {
                         type: yt._44.Span,
                         decoration: yt._42.Underline
                     }, kt.createElement("a", {
                         onClick: this.props.onMessageClick
-                    }, Object(re.d)("Click here to show all messages.", "CommentError"))))), kt.createElement(yt._30, {
+                    }, Object(ae.d)("Click here to show all messages.", "CommentError"))))), kt.createElement(yt._30, {
                         alignItems: yt.c.Center,
                         background: yt.m.Base,
                         className: "anim-swoop",
@@ -14901,7 +14902,7 @@ webpackJsonp([37, 83], {
                     }, this.props.message, e), kt.createElement(yt._7, {
                         alignSelf: yt.d.Start
                     }, kt.createElement(yt.v, {
-                        ariaLabel: Object(re.d)("Close", "CommentErrorComponent"),
+                        ariaLabel: Object(ae.d)("Close", "CommentErrorComponent"),
                         icon: yt._21.Close,
                         onClick: this.onManualErrorDismissClickHandler
                     })))
@@ -14997,13 +14998,13 @@ webpackJsonp([37, 83], {
                         Mt({
                             setting: Nt,
                             value: t ? xt : At
-                        }), e(T(t))
+                        }), e(D(t))
                     },
                     onTimestampModeChange: function(t) {
                         Mt({
                             setting: It,
                             value: t ? xt : At
-                        }), e(x(t))
+                        }), e(A(t))
                     }
                 }
             })(Mn),
@@ -15031,7 +15032,7 @@ webpackJsonp([37, 83], {
                         if ("" !== n.state.newMessageText) {
                             if (n.props.isPostCooldownActive) return n.setState({
                                 showCoolDownState: !0
-                            }), void n.props.onError(ae().messageCreatedTooQuickError);
+                            }), void n.props.onError(oe().messageCreatedTooQuickError);
                             n.props.onCreateComment(n.state.newMessageText), n.setState({
                                 newMessageText: ""
                             }), n.autocompleteInputRef.setValue(""), n.maybeUnpauseScrolling()
@@ -15161,7 +15162,7 @@ webpackJsonp([37, 83], {
             Gn = function(e, t) {
                 var n = new URL("https://www.twitch.tv/videos/" + e);
                 if (t) {
-                    var i = pe.stringify(t);
+                    var i = he.stringify(t);
                     n.search = i
                 }
                 return n
@@ -15531,7 +15532,7 @@ webpackJsonp([37, 83], {
                         if ("" !== n.state.newReplyText) {
                             if (n.props.isCreationCoolDownActive) return n.setState({
                                 showCoolDownState: !0
-                            }), void(n.props.onError && n.props.onError(ae().messageCreatedTooQuickError));
+                            }), void(n.props.onError && n.props.onError(oe().messageCreatedTooQuickError));
                             n.props.onReplySubmit(n.state.newReplyText), n.setState({
                                 newReplyText: ""
                             })
@@ -15800,9 +15801,9 @@ webpackJsonp([37, 83], {
                         onReplyClick: this.onReplyClickHandler
                     }), e)))
                 }, t.prototype.shouldComponentUpdate = function(e, t) {
-                    return e.highlight !== this.props.highlight || e.isReplayFilterOn !== this.props.isReplayFilterOn || e.hideTimestamp !== this.props.hideTimestamp || t.showReplyForm !== this.state.showReplyForm || e.messageContext.replies.length !== this.props.messageContext.replies.length || t.replyToUserDisplayName !== this.state.replyToUserDisplayName
+                    return e.focus !== this.props.focus || e.isReplayFilterOn !== this.props.isReplayFilterOn || e.hideTimestamp !== this.props.hideTimestamp || t.showReplyForm !== this.state.showReplyForm || e.messageContext.replies.length !== this.props.messageContext.replies.length || t.replyToUserDisplayName !== this.state.replyToUserDisplayName
                 }, t.prototype.shouldFocusMessage = function() {
-                    return this.props.highlight
+                    return this.props.focus
                 }, t
             }(kt.Component)),
             di = (n("cPfx"), function(e) {
@@ -15844,7 +15845,7 @@ webpackJsonp([37, 83], {
                         attachBottom: !0
                     }, kt.createElement("button", {
                         onClick: this.syncButtonClick
-                    }, Object(re.d)("Resume auto scroll", "MessageScrollArea")))), kt.createElement(yt._30, {
+                    }, Object(ae.d)("Resume auto scroll", "MessageScrollArea")))), kt.createElement(yt._30, {
                         fullHeight: !0,
                         overflow: yt._10.Hidden,
                         position: yt._14.Relative
@@ -15876,7 +15877,7 @@ webpackJsonp([37, 83], {
                         var n = {
                             contentId: t.props.videoID,
                             contentOffsetSeconds: t.props.currentVideoTime,
-                            contentType: P,
+                            contentType: V,
                             message: e
                         };
                         t.onCreate(n)
@@ -15888,7 +15889,7 @@ webpackJsonp([37, 83], {
                         t.onCreate(i)
                     }, t.onErrorDismissedHandler = function(e) {
                         t.props.onError("");
-                        var n = t.props.errorMessage === ae().chatReplayFilterError;
+                        var n = t.props.errorMessage === oe().chatReplayFilterError;
                         e && t.props.shouldSendReplayFilterError && n && t.props.onErrorDismissClick()
                     }, t.onErrorMessageClickHandler = function() {
                         t.props.onError(""), t.props.onTurnOffReplayFilter()
@@ -15942,7 +15943,7 @@ webpackJsonp([37, 83], {
                         justifyContent: yt._6.Center
                     }, kt.createElement(yt.P, {
                         italic: !0
-                    }, Object(re.d)("Video Chat is currently unavailable.", "VideoChat")));
+                    }, Object(ae.d)("Video Chat is currently unavailable.", "VideoChat")));
                     else {
                         var s = void 0;
                         s = this.props.hasFetchedComments && this.props.offsetRange === Ye ? kt.createElement(yt._1, {
@@ -15964,7 +15965,7 @@ webpackJsonp([37, 83], {
                             srcSet: function(e) {
                                 return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/2.0 2x"
                             }(65)
-                        })), Object(re.d)("Join the chat while watching the video!", "VideoChatComponent"))) : r.map(function(e, t) {
+                        })), Object(ae.d)("Join the chat while watching the video!", "VideoChatComponent"))) : r.map(function(e, t) {
                             var i = !n.state.commentAlreadyFocused && e.comment.id === a,
                                 r = t + 1 === n.props.comments.length,
                                 s = !n.props.isScrollingSynced && r;
@@ -15977,7 +15978,7 @@ webpackJsonp([37, 83], {
                             }, kt.createElement("li", null, kt.createElement(ci, {
                                 badgeSets: n.badgeSets,
                                 currentUser: o.currentUser,
-                                highlight: i,
+                                focus: i,
                                 isCreationCoolDownActive: n.props.isCreationCoolDownActive,
                                 isCurrentUserModerator: n.props.isCurrentUserModerator,
                                 isExpandedLayout: o.video.broadcastType === Ge.a.Upload,
@@ -16043,7 +16044,7 @@ webpackJsonp([37, 83], {
                         justifyContent: yt._6.Center
                     }, kt.createElement(yt.P, {
                         type: yt._44.Span
-                    }, Object(re.d)("Chat on Videos", "VideoChatPresentation"))), d, kt.createElement(di, {
+                    }, Object(ae.d)("Chat on Videos", "VideoChatPresentation"))), d, kt.createElement(di, {
                         startSynced: c,
                         isScrollingSynced: this.props.isScrollingSynced,
                         onScrollOffBottom: this.props.onDisableSync,
@@ -16145,31 +16146,31 @@ webpackJsonp([37, 83], {
                                 }))
                             }
                             var a, o, s, l
-                        } else e(j(n.videoID))
+                        } else e(U(n.videoID))
                     },
                     onCreate: function(t) {
                         if (Object(bn.m)(t.message)) {
-                            var n = Object(re.d)("Sorry, commands are not supported in Chat on Videos yet.", "VideoChatPresentation");
-                            e(h(n))
+                            var n = Object(ae.d)("Sorry, commands are not supported in Chat on Videos yet.", "VideoChatPresentation");
+                            e(f(n))
                         } else e(vt(qt, t)), e(bt(Zt, t))
                     },
                     onError: function(t) {
-                        e(h(t))
+                        e(f(t))
                     },
                     onErrorDismissClick: function() {
-                        e(N())
+                        e(I())
                     },
                     onUnmount: function() {
-                        e(y())
+                        e(_())
                     },
                     onLoadMoreReplies: function(t, n, i, r) {
                         e(vt(zt, ot(t, n, i, r)))
                     },
                     onDisableSync: function() {
-                        e(E())
+                        e(O())
                     },
                     onEnableSync: function() {
-                        e(S())
+                        e(w())
                     },
                     onShowLogin: t.onShowLogin,
                     onBanUser: function(t) {
@@ -16182,10 +16183,10 @@ webpackJsonp([37, 83], {
                         t.onPlayerSeekRequest(n), void 0 !== i && e(bt(en, i))
                     },
                     onTurnOffReplayFilter: function() {
-                        e(T(!1))
+                        e(D(!1))
                     },
                     onWillMount: function() {
-                        e(M())
+                        e(L())
                     }
                 }
             }, function(e, t, n) {
@@ -16193,7 +16194,7 @@ webpackJsonp([37, 83], {
                 e.isScrollingSynced || (i = function() {});
                 var r = t.onCreate;
                 return e.shouldSendReplayFilterError && (r = function(e) {
-                    t.onError(ae().chatReplayFilterError), t.onCreate(e)
+                    t.onError(oe().chatReplayFilterError), t.onCreate(e)
                 }), a.__assign({}, e, t, {
                     onDisableSync: i,
                     onCreate: r,
@@ -16223,13 +16224,13 @@ webpackJsonp([37, 83], {
                 }
             })(gi);
         n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return ke
+            return ye
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "A", function() {
             return $e
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "o", function() {
-            return y
+            return _
         }), n.d(t, "q", function() {
-            return U
+            return P
         }), n.d(t, "u", function() {
             return st
         }), n.d(t, "v", function() {
@@ -16273,7 +16274,7 @@ webpackJsonp([37, 83], {
         }), n.d(t, "c", function() {
             return "published"
         }), n.d(t, !1, function() {}), n.d(t, "w", function() {
-            return H
+            return W
         }), n.d(t, "e", function() {
             return an
         }), n.d(t, !1, function() {}), n.d(t, "h", function() {
@@ -21476,4 +21477,4 @@ webpackJsonp([37, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-02e198f81f63e1460b55f3cd5d342cc3.js.map
+//# sourceMappingURL=pages.video-watch-7737221a6f78c42c6bc27cedb4fd4383.js.map
