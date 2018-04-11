@@ -628,6 +628,18 @@ window.__twilightSettings = {
                 "value": "variant1"
             }]
         },
+        "ba473bec-1ad3-4b55-9b3e-fdc002ba695c": {
+            "name": "twilight_prime_sub_credit_api_wexit",
+            "v": 3497,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "d54399a7-7956-4a20-b46b-47af282d7f66": {
             "name": "twilight_theatre_fullscreen",
             "v": 3316,
