@@ -1968,16 +1968,16 @@ window.SiteOptions = {
         },
         "50e947d4-24b7-4000-a046-f48f4072b7cf": {
             "name": "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV",
-            "v": 3485,
+            "v": 3504,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
                 "weight": 0,
                 "value": "variant_a"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "left_nav_order_exp"
             }]
         },
