@@ -641,6 +641,18 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
+        "d1fe9a0a-e9f2-4450-ac57-4ff2eefa0dcf": {
+            "name": "twilight_get_bits_top_nav",
+            "v": 3506,
+            "t": 1,
+            "groups": [{
+                "weight": 5,
+                "value": "treatment"
+            }, {
+                "weight": 95,
+                "value": "control"
+            }]
+        },
         "d54399a7-7956-4a20-b46b-47af282d7f66": {
             "name": "twilight_theatre_fullscreen",
             "v": 3316,
