@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e0b5cc54012bcd8dea1a.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cddbf8a24b9bd4f83da0.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -31375,7 +31375,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.11-232053+6c85333271934dd837a0b71f2b1cce07a21984d8",
+                    app_version: "2018.04.12-163838+c53a7d3622a629f3d7af915521904efb3646a3b5",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -37042,7 +37042,7 @@
                 }]), e
             }(),
             Ja = n(103),
-            Xa = "//video-edge-7fcb2b.sjc01.hls.ttvnw.net/v1/segment/Cn1M6T3KHex36mQnSftttZ2DAc0y66ixQ2E9kW9hHrZV8fbOiJUhwF72Sz8rNy5s9ktC7yu8uxgUaxX8s4r2v8euIFc6mEgh5KbXfFVHsNn5qq0QBX39S0xoVG675GTi-UB8Ry2Jnmi2zKn4H7oJlv106DWKWr9s9kwdpIrUUa0GX8p-5cSflaz13W0SGlOWcjIxjldSExU--64nfX9dD39If5pWtVRAplSuOQXl7nj0OLAVg95RjiLAb5ShSLL7WPcz0ouCarBxEC1A8Et7Xf_SVav9EaxXaAkNL_p7knfxPIcrlaWjSCUVAa1pqvE1h49SJhNEGH1MzGwaxfBFjp354vX5dstNNPYL68SQsfkDA8oMBeiw2pEP-lPHBwotdqn7_CAlOWQcPtyIt_-xnpEwdhV1AxDx2dGPn5jwY-q7pS8YdemXAxwtIva5SkBl1PQ08Iv9KfhCDE8_smcPIY2WOuHgO73YgWBNwiQ3hZqjtuC5qZFklBm1gaVzPFBDCrejzJOAuxrKvo69zDkrask.ts",
+            Xa = "//video-edge-b474fa.sjc01.hls.ttvnw.net/v1/segment/Cr3cuImijgm7vmaOTtlA3nWlyC5mzOUYRN9qsfefjRNK_Rn-f8gmPCmVgjbJkAGCBUe9VAecm4hA6AtoTBWakfKt_MSwsZbBI-Vi61C0HnkkIkZ1AGcsiFHe0h79lRRGv1mqdyN6kzDzIAwf4R_y6ojzE4OhHUS1yBfgDQdUVjNtOK51dLxFZkorgqeIRo_QgJNVTfH-JxyRa4Q3CW_15czM0bbT_nOm-9Wi-Rx3QOMMt0iZRt1fHYawn28l6uFrSYnqWrRyFlBcSlrEvYe6sFXgkbTsMqSQw7_y3LcQW2gjCvvhH4GVWD7pyZCox6mz8Gi07-7os3vzTFOYu9acSYMwMyT2Gr76isjTy7CSso3nUKiHZX8U-cnk4QfHsSCSaqM7k12MuGfFhEQTc4d5zWCOIzePzpvVDN7qSyZOcH-_BM5q0jmfDYMGDX5EqhQdQRGHymk24SjIMI_0KzjsXKmeGCJog3wBP7NcHofI6M96VZKu3lZztIvuRVTsdnh8Lee4bMwxjZF4nbIPV-_lKTIegua5_DGH.ts",
             Za = n(48),
             es = n(254),
             ts = n(134),
@@ -55982,8 +55982,15 @@
             "Tap to unmute": "Tap to unmute",
             "{{time}} sec.": "{{time}} sec.",
             "{{time}} sec._plural": "{{time}} sec.",
+            "Success!": "Success!",
             "Bits Balance {{bitsCount}}": "Bits Balance {{bitsCount}}",
-            "{{bitsCount}} Bits": "{{bitsCount}} Bits"
+            "{{bitsCount}} Bits": "{{bitsCount}} Bits",
+            "After confirming, your Bits balance will be {{bitsBalance}}": "After confirming, your Bits balance will be {{bitsBalance}}",
+            Confirm: "Confirm",
+            "Buy Bits": "Buy Bits",
+            "By clicking ": "By clicking ",
+            "You need {{bitsRequired}} more Bits to proceed.": "You need {{bitsRequired}} more Bits to proceed.",
+            "Sorry, something went wrong. Please try again.": "Sorry, something went wrong. Please try again."
         }
     }, function(e, t, n) {
         /**
