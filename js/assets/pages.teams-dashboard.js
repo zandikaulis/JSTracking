@@ -17089,12 +17089,12 @@ webpackJsonp([36], {
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = Boolean(this.props.imageSrc),
                         t = this.state.isHoveringOver || this.props.isUploading;
-                    return c.createElement(M._30, {
+                    return c.createElement(M._2, {
                         background: M.m.Alt2,
+                        "data-test-selector": Ze.HoverWrapper,
                         fullHeight: !0,
                         fullWidth: !0
                     }, c.createElement("div", {
-                        "data-test-selector": Ze.HoverWrapper,
                         onMouseOut: this.handleMouseHover,
                         onMouseOver: this.handleMouseHover
                     }, c.createElement(tt.a, {
@@ -22076,4 +22076,4 @@ webpackJsonp([36], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-579255ae9426031540dc5f4eb39b7f5b.js.map
+//# sourceMappingURL=pages.teams-dashboard-2b63caeca68c814220be7b68c9085cd2.js.map

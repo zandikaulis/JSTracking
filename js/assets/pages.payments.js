@@ -10510,7 +10510,7 @@ webpackJsonp([41], {
                         y: 2
                     }
                 }, _.createElement(g.M, {
-                    src: Object(Le.e)(Ye, 2),
+                    src: Object(Le.f)(Ye, 2),
                     alt: ge
                 })), _.createElement(g._7, {
                     display: g.Q.Flex,
@@ -15195,4 +15195,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.payments-3abf88f3e2f8fea860519fb421f186b6.js.map
+//# sourceMappingURL=pages.payments-291fda80a1fbd65e2940424d54fe19bb.js.map

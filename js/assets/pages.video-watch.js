@@ -1,4 +1,4 @@
-webpackJsonp([37, 83], {
+webpackJsonp([37, 84], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -4089,7 +4089,7 @@ webpackJsonp([37, 83], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(90).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4101,7 +4101,7 @@ webpackJsonp([37, 83], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(89).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4113,7 +4113,7 @@ webpackJsonp([37, 83], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(88).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4125,7 +4125,7 @@ webpackJsonp([37, 83], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(87).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -8271,25 +8271,35 @@ webpackJsonp([37, 83], {
                     }
                     var t = null;
                     Object(F.c)(this.props.offer) ? t = c.createElement(v._7, {
-                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
+                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
+                        "data-test-selector": "first-time-promo-form"
                     }, c.createElement(v.P, {
                         type: v._44.Strong,
                         fontSize: v.U.Size6
-                    }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(F.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === A.c && (t = c.createElement(v._7, {
-                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
+                    }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(F.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === A.c ? t = c.createElement(v._7, {
+                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
+                        "data-test-selector": "black-friday-promo-form"
                     }, c.createElement(v.P, {
                         type: v._44.Strong,
                         fontSize: v.U.Size6
-                    }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))));
+                    }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(F.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === A.d && (t = c.createElement(v._7, {
+                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
+                        "data-test-selector": "prime-promo-promo-form"
+                    }, c.createElement(v.P, {
+                        type: v._44.Strong,
+                        fontSize: v.U.Size6
+                    }, Object(u.d)("Twitch Prime Member Bits Discount", "Bits--BuyCard"))));
                     var n = null;
                     this.props.offer.discount && (n = c.createElement("div", {
-                        className: "bits-buy-card-offer-row__sub-text"
+                        className: "bits-buy-card-offer-row__sub-text",
+                        "data-test-selector": "discount-subtext-form"
                     }, Object(u.d)("{percentOff,number,percent} discount", {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var i = null;
                     (Object(F.c)(this.props.offer) || Object(F.e)(this.props.offer)) && (i = c.createElement("div", {
-                        className: "bits-buy-card-offer-row__sub-text"
+                        className: "bits-buy-card-offer-row__sub-text",
+                        "data-test-selector": "one-per-account-form"
                     }, Object(u.d)("one per account", "Bits--BuyCard")));
                     var r = this.props.isLastRow ? v._30 : v._7;
                     return c.createElement(r, {
@@ -9246,10 +9256,10 @@ webpackJsonp([37, 83], {
         "use strict";
         t.c = function(e) {
             if (e.type === a.a) return !1;
-            return l(e) && null !== e.promotion && e.promotion.type === a.d
+            return l(e) && null !== e.promotion && e.promotion.type === a.e
         }, t.e = function(e) {
             if (e.type === a.a) return !1;
-            return l(e) && null !== e.promotion && e.promotion.type === a.e
+            return l(e) && null !== e.promotion && (e.promotion.type === a.g || e.promotion.type === a.f)
         }, t.d = l, t.a = function(e) {
             var t = 0,
                 n = 0,
@@ -12923,18 +12933,24 @@ webpackJsonp([37, 83], {
             return i
         }), n.d(t, "b", function() {
             return r
-        }), n.d(t, "d", function() {
-            return a
         }), n.d(t, "e", function() {
+            return a
+        }), n.d(t, "g", function() {
             return o
-        }), n.d(t, "c", function() {
+        }), n.d(t, "f", function() {
             return s
+        }), n.d(t, "c", function() {
+            return l
+        }), n.d(t, "d", function() {
+            return c
         });
         var i = "AD",
             r = "BUNDLE",
             a = "first_time_purchase",
             o = "single_purchase",
-            s = "black_friday_2017"
+            s = "prime_single_purchase",
+            l = "black_friday_2017",
+            c = "twitch_prime_2018"
     },
     jy2q: function(e, t, n) {
         var i = n("xA5w"),
@@ -13805,9 +13821,9 @@ webpackJsonp([37, 83], {
                                 images: {
                                     themed: !1,
                                     sources: {
-                                        "1x": Object(be.e)(t._id, 1),
-                                        "2x": Object(be.e)(t._id, 2),
-                                        "4x": Object(be.e)(t._id, 4)
+                                        "1x": Object(be.f)(t._id, 1),
+                                        "2x": Object(be.f)(t._id, 2),
+                                        "4x": Object(be.f)(t._id, 4)
                                     }
                                 },
                                 alt: s.join("")
@@ -15054,7 +15070,7 @@ webpackJsonp([37, 83], {
                             newMessageText: n.state.newMessageText + " " + e
                         }), n.maybeUnpauseScrolling()
                     }, n.getSessionSpecificEmotes = function() {
-                        var e = Object(Dn.b)(n.props.currentUser.emoteSets);
+                        var e = Object(Dn.a)(n.props.currentUser.emoteSets);
                         return Object.keys(e).map(function(t) {
                             return {
                                 id: t,
@@ -21477,4 +21493,4 @@ webpackJsonp([37, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-7737221a6f78c42c6bc27cedb4fd4383.js.map
+//# sourceMappingURL=pages.video-watch-a2fb201ef766d04876518dbf026a1d92.js.map

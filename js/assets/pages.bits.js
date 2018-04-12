@@ -1,4 +1,4 @@
-webpackJsonp([57], {
+webpackJsonp([58], {
     "2b/B": function(e, t, n) {
         "use strict";
         var a = n("RH2O"),
@@ -226,22 +226,21 @@ webpackJsonp([57], {
             o = n("TToO"),
             l = n("GiK3"),
             s = n("bZTi"),
-            c = n("ZyA2"),
-            d = n("VAT8"),
-            p = n("tnNl"),
-            u = n("Odds"),
-            m = s.a.wrap(function() {
-                return n.e(75).then(n.bind(null, "HQb3"))
+            c = n("VAT8"),
+            d = n("tnNl"),
+            p = n("Odds"),
+            u = s.a.wrap(function() {
+                return n.e(76).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
-            h = function(e) {
+            m = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(u._7, {
-                        className: "bits-root " + Object(d.c)(this.props.theme),
-                        position: u._14.Absolute,
-                        overflow: u._10.Hidden,
+                    return l.createElement(p._7, {
+                        className: "bits-root " + Object(c.c)(this.props.theme),
+                        position: p._14.Absolute,
+                        overflow: p._10.Hidden,
                         attachRight: !0,
                         attachTop: !0,
                         attachBottom: !0,
@@ -249,16 +248,16 @@ webpackJsonp([57], {
                         margin: {
                             top: 5
                         }
-                    }, l.createElement(p.a, {
+                    }, l.createElement(d.a, {
                         darkModeEnabled: !0
-                    }), l.createElement(u._7, {
-                        display: u.Q.Flex,
-                        flexWrap: u.T.NoWrap,
+                    }), l.createElement(p._7, {
+                        display: p.Q.Flex,
+                        flexWrap: p.T.NoWrap,
                         fullHeight: !0,
-                        position: u._14.Relative
-                    }, l.createElement(u._1, {
-                        display: u.Q.Flex,
-                        position: u._14.Relative,
+                        position: p._14.Relative
+                    }, l.createElement(p._1, {
+                        display: p.Q.Flex,
+                        position: p._14.Relative,
                         flexGrow: 1,
                         fullHeight: !0,
                         fullWidth: !0
@@ -266,20 +265,20 @@ webpackJsonp([57], {
                         className: "bits-root__main"
                     }, l.createElement(r.d, {
                         path: "/bits",
-                        component: m
-                    }))), l.createElement(c.a, null)))
+                        component: u
+                    })))))
                 }, t
             }(l.Component);
-        var f = Object(a.b)(function(e) {
+        var h = Object(a.b)(function(e) {
                 return {
                     firstPageLoaded: !!e.session.firstPageLoaded,
                     isLoggedIn: Object(i.d)(e),
                     theme: e.ui.theme
                 }
-            })(h),
-            g = Object(r.f)(f);
+            })(m),
+            f = Object(r.f)(h);
         n.d(t, "BitsRoot", function() {
-            return g
+            return f
         })
     },
     Kkxm: function(e, t) {
@@ -532,4 +531,4 @@ webpackJsonp([57], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.bits-afe623058dc25b2818c3dc41e6ffc185.js.map
+//# sourceMappingURL=pages.bits-7f77a811297935c38fee778f05e5da45.js.map

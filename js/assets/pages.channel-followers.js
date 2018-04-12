@@ -2532,7 +2532,7 @@ webpackJsonp([44], {
                         u.j.warn("Failed to send message, or message timeout", e)
                     }), n.result
                 }, e.prototype.updateEmotes = function(e) {
-                    this.selfEmotes = Object(Be.b)(e), this.client.updateEmoteSets(e)
+                    this.selfEmotes = Object(Be.a)(e), this.client.updateEmoteSets(e)
                 }, e.prototype.updateChannelBadges = function(e) {
                     this.client.updateChannelBadges(this.channelLogin, e)
                 }, e.prototype.updateBitsConfig = function(e) {
@@ -3845,7 +3845,7 @@ webpackJsonp([44], {
                     }, t.renderMessageBody = function() {
                         if (t.props.isDeleted && !t.state.alwaysShowMessage) {
                             var e = Object(r.d)("message deleted", "ChatLine");
-                            return t.props.isCurrentUserModerator ? a.createElement("span", {
+                            return t.props.isCurrentUserModerator || t.props.isCurrentUserStaff ? a.createElement("span", {
                                 key: "deleted",
                                 className: "chat-line__message--deleted",
                                 "data-a-target": M
@@ -4260,6 +4260,7 @@ webpackJsonp([44], {
                                 badgeSets: this.props.badgeSets,
                                 currentUserDisplayName: this.props.currentUserDisplayName,
                                 isCurrentUserModerator: this.props.isCurrentUserModerator,
+                                isCurrentUserStaff: this.props.isCurrentUserStaff,
                                 showModerationIcons: this.props.showModerationIcons,
                                 currentUserLogin: this.props.currentUserLogin
                             }) : null;
@@ -4324,6 +4325,7 @@ webpackJsonp([44], {
                                 showModerationIcons: this.props.showModerationIcons,
                                 showTimestamps: this.props.showTimestamps,
                                 isCurrentUserModerator: this.props.isCurrentUserModerator,
+                                isCurrentUserStaff: this.props.isCurrentUserStaff,
                                 currentUserDisplayName: this.props.currentUserDisplayName,
                                 currentUserLogin: this.props.currentUserLogin,
                                 onPushMessage: this.props.onPushMessage
@@ -4361,6 +4363,7 @@ webpackJsonp([44], {
                                 currentUserDisplayName: this.props.currentUserDisplayName,
                                 currentUserLogin: this.props.currentUserLogin,
                                 isCurrentUserModerator: this.props.isCurrentUserModerator,
+                                isCurrentUserStaff: this.props.isCurrentUserStaff,
                                 isDeleted: e.message.deleted,
                                 message: e.message,
                                 onPushMessage: this.props.onPushMessage,
@@ -4435,6 +4438,7 @@ webpackJsonp([44], {
                                 currentUserDisplayName: this.props.currentUserDisplayName,
                                 currentUserLogin: this.props.currentUserLogin,
                                 isCurrentUserModerator: this.props.isCurrentUserModerator,
+                                isCurrentUserStaff: this.props.isCurrentUserStaff,
                                 isDeleted: e.message.deleted,
                                 message: e.message,
                                 onPushMessage: this.props.onPushMessage,
@@ -7381,9 +7385,9 @@ webpackJsonp([44], {
                                     images: {
                                         themed: !1,
                                         sources: {
-                                            "1x": Object(b.e)(s.emoteID, 1),
-                                            "2x": Object(b.e)(s.emoteID, 2),
-                                            "4x": Object(b.e)(s.emoteID, 4)
+                                            "1x": Object(b.f)(s.emoteID, 1),
+                                            "2x": Object(b.f)(s.emoteID, 2),
+                                            "4x": Object(b.f)(s.emoteID, 4)
                                         }
                                     }
                                 }
@@ -9051,7 +9055,7 @@ webpackJsonp([44], {
                             padding: 3,
                             textAlign: w._40.Center
                         }, l.createElement("img", {
-                            src: Object(b.e)("508650", 3),
+                            src: Object(b.f)("508650", 3),
                             width: "28"
                         }), l.createElement(w._7, {
                             margin: {
@@ -19938,25 +19942,35 @@ webpackJsonp([44], {
                     }
                     var t = null;
                     Object(x.c)(this.props.offer) ? t = d.createElement(v._7, {
-                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
+                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
+                        "data-test-selector": "first-time-promo-form"
                     }, d.createElement(v.P, {
                         type: v._44.Strong,
                         fontSize: v.U.Size6
-                    }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(x.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === M.c && (t = d.createElement(v._7, {
-                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
+                    }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(x.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === M.c ? t = d.createElement(v._7, {
+                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
+                        "data-test-selector": "black-friday-promo-form"
                     }, d.createElement(v.P, {
                         type: v._44.Strong,
                         fontSize: v.U.Size6
-                    }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))));
+                    }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(x.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === M.d && (t = d.createElement(v._7, {
+                        className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
+                        "data-test-selector": "prime-promo-promo-form"
+                    }, d.createElement(v.P, {
+                        type: v._44.Strong,
+                        fontSize: v.U.Size6
+                    }, Object(u.d)("Twitch Prime Member Bits Discount", "Bits--BuyCard"))));
                     var n = null;
                     this.props.offer.discount && (n = d.createElement("div", {
-                        className: "bits-buy-card-offer-row__sub-text"
+                        className: "bits-buy-card-offer-row__sub-text",
+                        "data-test-selector": "discount-subtext-form"
                     }, Object(u.d)("{percentOff,number,percent} discount", {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var i = null;
                     (Object(x.c)(this.props.offer) || Object(x.e)(this.props.offer)) && (i = d.createElement("div", {
-                        className: "bits-buy-card-offer-row__sub-text"
+                        className: "bits-buy-card-offer-row__sub-text",
+                        "data-test-selector": "one-per-account-form"
                     }, Object(u.d)("one per account", "Bits--BuyCard")));
                     var a = this.props.isLastRow ? v._30 : v._7;
                     return d.createElement(a, {
@@ -22447,6 +22461,7 @@ webpackJsonp([44], {
                             currentUserDisplayName: this.props.currentUserDisplayName,
                             currentUserLogin: this.props.currentUserLogin,
                             isCurrentUserModerator: !1,
+                            isCurrentUserStaff: !1,
                             message: this.props.recentCheer,
                             showModerationIcons: !1,
                             showTimestamps: !1
@@ -24745,6 +24760,7 @@ webpackJsonp([44], {
                         currentUserLogin: this.props.currentUserLogin,
                         isEmbedded: this.props.isEmbedded,
                         isCurrentUserModerator: this.props.isCurrentUserModerator,
+                        isCurrentUserStaff: this.props.isStaff,
                         onPushMessage: this.props.onPushMessage,
                         containerRef: this.setChatListElement
                     }), a.createElement(b._7, {
@@ -24845,10 +24861,10 @@ webpackJsonp([44], {
         "use strict";
         t.c = function(e) {
             if (e.type === r.a) return !1;
-            return l(e) && null !== e.promotion && e.promotion.type === r.d
+            return l(e) && null !== e.promotion && e.promotion.type === r.e
         }, t.e = function(e) {
             if (e.type === r.a) return !1;
-            return l(e) && null !== e.promotion && e.promotion.type === r.e
+            return l(e) && null !== e.promotion && (e.promotion.type === r.g || e.promotion.type === r.f)
         }, t.d = l, t.a = function(e) {
             var t = 0,
                 n = 0,
@@ -27108,7 +27124,7 @@ webpackJsonp([44], {
                     userType: a.a.User,
                     color: e.authorColor
                 }, Object(s.a)(e.authorName, e.author.login)),
-                messageParts: Object(o.f)(e.body.content, d, e.bitsUsed, t, n, e.authorName)
+                messageParts: Object(o.g)(e.body.content, d, e.bitsUsed, t, n, e.authorName)
             }
         }, t.c = function(e) {
             if (null === e.tags || null === e.message || null === e.bits_used) return null;
@@ -27167,9 +27183,9 @@ webpackJsonp([44], {
                         images: {
                             themed: !1,
                             sources: {
-                                "1x": Object(o.e)(e.emoteID, 1),
-                                "2x": Object(o.e)(e.emoteID, 2),
-                                "4x": Object(o.e)(e.emoteID, 4)
+                                "1x": Object(o.f)(e.emoteID, 1),
+                                "2x": Object(o.f)(e.emoteID, 2),
+                                "4x": Object(o.f)(e.emoteID, 4)
                             }
                         }
                     }
@@ -30410,18 +30426,24 @@ webpackJsonp([44], {
             return i
         }), n.d(t, "b", function() {
             return a
-        }), n.d(t, "d", function() {
-            return r
         }), n.d(t, "e", function() {
+            return r
+        }), n.d(t, "g", function() {
             return o
-        }), n.d(t, "c", function() {
+        }), n.d(t, "f", function() {
             return s
+        }), n.d(t, "c", function() {
+            return l
+        }), n.d(t, "d", function() {
+            return d
         });
         var i = "AD",
             a = "BUNDLE",
             r = "first_time_purchase",
             o = "single_purchase",
-            s = "black_friday_2017"
+            s = "prime_single_purchase",
+            l = "black_friday_2017",
+            d = "twitch_prime_2018"
     },
     "kBA+": function(e, t, n) {
         "use strict";
@@ -30837,6 +30859,7 @@ webpackJsonp([44], {
                                 badgeSets: e.props.badgeSets,
                                 channelID: e.props.channelID,
                                 isCurrentUserModerator: e.props.isCurrentUserModerator,
+                                isCurrentUserStaff: e.props.isCurrentUserStaff,
                                 message: t,
                                 key: t.id,
                                 showAutoModActions: e.props.showAutoModActions,
@@ -30938,6 +30961,7 @@ webpackJsonp([44], {
                         channelLogin: this.props.channelLogin,
                         onPushMessage: this.props.onPushMessage,
                         isCurrentUserModerator: this.props.isCurrentUserModerator,
+                        isCurrentUserStaff: this.props.isCurrentUserStaff,
                         isEmbedded: this.props.isEmbedded,
                         messages: this.props.messages,
                         showAutoModActions: this.props.showAutoModActions,
@@ -34991,7 +35015,7 @@ webpackJsonp([44], {
                             padding: .5
                         }, a.createElement("img", {
                             className: "new-chatter-ritual__emote",
-                            src: Object(o.e)(t.id, 3)
+                            src: Object(o.f)(t.id, 3)
                         })))))
                     });
                     return a.createElement(s._30, {
@@ -35506,4 +35530,4 @@ webpackJsonp([44], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-followers-e1ba69b2aaf7c7d8e272058372e29676.js.map
+//# sourceMappingURL=pages.channel-followers-140aa117f4876f3c2f54de6bb9ffe676.js.map

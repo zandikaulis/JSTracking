@@ -11053,7 +11053,7 @@ webpackJsonp([39], {
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(f.P, null, Object(l.d)("We are going to ask you a few questions to help us investigate your report quickly and accurately.", "ReportModalWizard")))
+                        }, a.createElement(f.P, null, Object(l.d)("We are going to ask you a few questions to help us investigate your report quickly and accurately.", "ReportModalWizard"), " This reporting flow is in staff beta, but the reports it sends are real, so please don't abuse it! Feedback is welcome in #reporting-wizard"))
                     }, t.renderButtons = function() {
                         var e = Object(l.d)("Close", "ReportModalWizard"),
                             n = t.handleClose,
@@ -14351,11 +14351,9 @@ webpackJsonp([39], {
             return r
         }), n.d(t, "b", function() {
             return a
-        }), n.d(t, "d", function() {
-            return s
-        }), t.h = function(e) {
+        }), t.g = function(e) {
             return !(!e.vendorCode || !e.SKU)
-        }, t.f = function(e) {
+        }, t.e = function(e) {
             return Object.keys(e.views).reduce(function(t, n) {
                 if (!e.views[n]) return t;
                 switch (n) {
@@ -14373,17 +14371,23 @@ webpackJsonp([39], {
                 }
                 return t
             }, [])
-        }, t.g = function(e) {
+        }, t.f = function(e) {
             var t = [o.ExtensionPlatform.Web];
             e.views.mobile && e.views.mobile.viewerURL && t.push(o.ExtensionPlatform.Mobile);
             return t
-        }, t.e = function(e) {
+        }, t.d = function(e) {
             return e.extension.id + ":" + e.extension.version
+        }, t.h = function(e) {
+            if (e.requiredActions) return e.requiredActions.some(function(e) {
+                var t = e.type;
+                return t === s.RequiresConfiguration
+            });
+            return !1
         };
         var i, r, a, s, o = n("BwgW");
         n.n(o);
         ! function(e) {
-            e.Active = "ACTIVE", e.Inactive = "INACTIVE", e.RejectedPermissions = "REJECTED_PERMISSIONS"
+            e.Active = "ACTIVE", e.Inactive = "INACTIVE"
         }(i || (i = {})),
         function(e) {
             e.InTest = "IN_TEST", e.ReadyForReview = "READY_FOR_REVIEW", e.InReview = "IN_REVIEW", e.Rejected = "REJECTED", e.Approved = "APPROVED", e.Released = "RELEASED", e.Deprecated = "DEPRECATED", e.PendingAction = "PENDING_ACTION", e.Uploading = "UPLOADING", e.AssetsUploaded = "ASSETS_UPLOADED", e.Deleted = "DELETED"
@@ -14392,7 +14396,7 @@ webpackJsonp([39], {
             e.Component = "COMPONENT", e.Hidden = "HIDDEN", e.Panel = "PANEL", e.VideoOverlay = "VIDEO_OVERLAY"
         }(a || (a = {})),
         function(e) {
-            e.None = "NONE", e.PromptForPermissions = "PROMPT_FOR_PERMISSIONS"
+            e.RequiresConfiguration = "REQUIRES_CONFIGURATION"
         }(s || (s = {}))
     },
     GHQc: function(e, t) {},
@@ -14768,7 +14772,7 @@ webpackJsonp([39], {
                     }
                 }, e[i.ENABLED] = function() {
                     return l.a.wrap(function() {
-                        return n.e(60).then(n.bind(null, "CNsG"))
+                        return n.e(61).then(n.bind(null, "CNsG"))
                     }, "VerifyEmailBar", {
                         failSilently: !0,
                         placeholder: null
@@ -16721,7 +16725,7 @@ webpackJsonp([39], {
                 props: function(e) {
                     if (e.data) {
                         var t = e.data.currentUser && e.data.currentUser.emoteSets,
-                            n = t && Object(a.b)(t);
+                            n = t && Object(a.a)(t);
                         return {
                             emoteSetsData: i.__assign({}, e.data, {
                                 emoteMap: n,
@@ -18128,7 +18132,7 @@ webpackJsonp([39], {
                         }
                     }, t[Te.VARIANT_A] = function() {
                         return De.a.wrap(function() {
-                            return n.e(65).then(n.bind(null, "Rxng"))
+                            return n.e(66).then(n.bind(null, "Rxng"))
                         }, "SubscribedChannels", {
                             placeholder: null,
                             failSilently: !0
@@ -18679,7 +18683,10 @@ webpackJsonp([39], {
                     indexName: o.a.Videos,
                     hitsPerPage: 6,
                     get topNumericFilters() {
-                        return ["created_at>" + (e = new Date, e.setMonth(e.getMonth() - 1), Math.floor(e.getTime() / 1e3))];
+                        return ["created_at>" + function(e) {
+                            if (e <= 100) return e;
+                            return 100 * Math.round(e / 100)
+                        }((e = new Date, e.setMonth(e.getMonth() - 1), Math.floor(e.getTime() / 1e3)))];
                         var e
                     },
                     singleTypeNumericFilters: [],
@@ -20453,62 +20460,61 @@ webpackJsonp([39], {
             s = n("TToO"),
             o = n("GiK3"),
             l = n("bZTi"),
-            c = n("ZyA2"),
-            d = n("CSlQ"),
-            u = n("tnNl"),
-            p = n("T8ns"),
-            m = n("Odds"),
-            h = (n("w+Qa"), l.a.wrap(function() {
-                return n.e(81).then(n.bind(null, "kd/b"))
+            c = n("CSlQ"),
+            d = n("tnNl"),
+            u = n("T8ns"),
+            p = n("Odds"),
+            m = (n("w+Qa"), l.a.wrap(function() {
+                return n.e(82).then(n.bind(null, "kd/b"))
             }, "SubsLandingPage")),
-            g = l.a.wrap(function() {
-                return n.e(82).then(n.bind(null, "uy5s"))
+            h = l.a.wrap(function() {
+                return n.e(83).then(n.bind(null, "uy5s"))
             }, "SubsBroadcasterPage"),
-            f = function(e) {
+            g = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(m._7, {
+                    return o.createElement(p._7, {
                         className: "twilight-root",
-                        position: m._14.Absolute,
-                        overflow: m._10.Hidden,
+                        position: p._14.Absolute,
+                        overflow: p._10.Hidden,
                         attachRight: !0,
                         attachBottom: !0,
                         attachLeft: !0
-                    }, o.createElement(u.a, null), o.createElement(m._7, {
-                        display: m.Q.Flex,
-                        flexWrap: m.T.NoWrap,
+                    }, o.createElement(d.a, null), o.createElement(p._7, {
+                        display: p.Q.Flex,
+                        flexWrap: p.T.NoWrap,
                         fullHeight: !0,
-                        position: m._14.Relative
-                    }, o.createElement(m._1, {
-                        position: m._14.Relative,
+                        position: p._14.Relative
+                    }, o.createElement(p._1, {
+                        position: p._14.Relative,
                         flexGrow: 1,
                         fullHeight: !0,
                         fullWidth: !0
                     }, o.createElement("main", {
-                        className: p.b
+                        className: u.b
                     }, o.createElement(r.e, null, o.createElement(r.d, {
                         path: "/subs/:channelName",
-                        component: g
+                        component: h
                     }), o.createElement(r.d, {
                         path: "/subs",
-                        component: h
-                    })))), o.createElement(c.a, null)))
-                }, t = s.__decorate([Object(d.d)("SubsRoot", {
+                        component: m
+                    }))))))
+                }, t = s.__decorate([Object(c.d)("SubsRoot", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component);
-        var v = Object(i.b)(function(e) {
+        var f = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: !!e.session.firstPageLoaded,
                     isLoggedIn: Object(a.d)(e),
                     theme: e.ui.theme
                 }
-            })(f),
-            b = Object(r.f)(v);
+            })(g),
+            v = Object(r.f)(f);
         n.d(t, "SubsRoot", function() {
-            return b
+            return v
         })
     },
     RZjb: function(e, t, n) {
@@ -20753,14 +20759,6 @@ webpackJsonp([39], {
                                 name: {
                                     kind: "Name",
                                     value: "privacyPolicyURL"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "requiredBroadcasterAbilities"
                                 },
                                 arguments: [],
                                 directives: []
@@ -21067,11 +21065,11 @@ webpackJsonp([39], {
             }],
             loc: {
                 start: 0,
-                end: 593
+                end: 564
             }
         };
         n.loc.source = {
-            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nauthorName\nclientID\ndescription\niconURL\nisBitsEnabled\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nself {\ncanInstall\n}\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ncheer {\nid\n}\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
+            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nauthorName\nclientID\ndescription\niconURL\nisBitsEnabled\nname\nprivacyPolicyURL\nscreenshotURLs\nself {\ncanInstall\n}\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ncheer {\nid\n}\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -22445,9 +22443,9 @@ webpackJsonp([39], {
             De = n("VHHT"),
             Ie = function(e) {
                 var t = e.extension,
-                    n = Object(Ee.f)(t).map(function(e) {
+                    n = Object(Ee.e)(t).map(function(e) {
                         return Object(xe.a)(e, !1)
-                    }).concat(Object(Ee.g)(t).filter(function(e) {
+                    }).concat(Object(Ee.f)(t).filter(function(e) {
                         return e !== Pe.ExtensionPlatform.Web
                     }).map(function(e) {
                         return Object(De.a)(e, !1)
@@ -22514,7 +22512,7 @@ webpackJsonp([39], {
                         rel: "noopener",
                         href: t.termsURL
                     }, t.termsURL)
-                }, "ExtensionDetails"))), Object(Ee.h)(t) && r.createElement(f._30, {
+                }, "ExtensionDetails"))), Object(Ee.g)(t) && r.createElement(f._30, {
                     borderTop: !0,
                     padding: {
                         top: 1
@@ -22686,7 +22684,7 @@ webpackJsonp([39], {
                                             channelID: t.currentUser.id
                                         })))];
                                     case 2:
-                                        return (l = u.sent()).data && (c = l.data.installExtension.installedExtension, d = function(e) {
+                                        return (l = u.sent()).data.installExtension && l.data.installExtension.installedExtension && (c = l.data.installExtension.installedExtension, d = function(e) {
                                             return e.currentUser && e.currentUser.installedExtensions.push({
                                                 id: c.id,
                                                 extension: {
@@ -22714,7 +22712,7 @@ webpackJsonp([39], {
                             if (i) {
                                 t.props.showUninstallModal({
                                     extensionName: n.name,
-                                    isExtensionMonetized: Object(Ee.h)(n),
+                                    isExtensionMonetized: Object(Ee.g)(n),
                                     onConfirm: function() {
                                         return t.uninstallExtension(i.id)
                                     }
@@ -22733,7 +22731,7 @@ webpackJsonp([39], {
                                             extensionInstallationID: e
                                         })))];
                                     case 2:
-                                        return (n = s.sent()).data && (r = n.data.uninstallExtension.id, a = function(e) {
+                                        return (n = s.sent().data).uninstallExtension && n.uninstallExtension.id && (r = n.uninstallExtension.id, a = function(e) {
                                             return e.currentUser && (e.currentUser.installedExtensions = e.currentUser.installedExtensions.filter(function(e) {
                                                 return e.id !== r
                                             })), e
@@ -22895,10 +22893,10 @@ webpackJsonp([39], {
                 }, e)
             })(je),
             Me = oe.a.wrap(function() {
-                return n.e(54).then(n.bind(null, "8U1+"))
+                return n.e(55).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             Ae = oe.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "Dd84"))
+                return n.e(52).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
             We = oe.a.wrap(function() {
                 return n.e(40).then(n.bind(null, "gZGZ"))
@@ -22922,43 +22920,43 @@ webpackJsonp([39], {
                 return n.e(33).then(n.bind(null, "g8mI"))
             }, "ChannelVideosPage"),
             Qe = oe.a.wrap(function() {
-                return n.e(61).then(n.bind(null, "yMnN"))
+                return n.e(62).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
             Ke = oe.a.wrap(function() {
                 return n.e(45).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
             $e = oe.a.wrap(function() {
-                return n.e(64).then(n.bind(null, "IzAE"))
+                return n.e(65).then(n.bind(null, "IzAE"))
             }, "DevOnlyTestingCarouselPage"),
             Je = oe.a.wrap(function() {
-                return n.e(63).then(n.bind(null, "mqYJ"))
+                return n.e(64).then(n.bind(null, "mqYJ"))
             }, "EmailUnsubscribePage"),
             Ye = oe.a.wrap(function() {
-                return n.e(66).then(n.bind(null, "Tj44"))
+                return n.e(67).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             Ze = oe.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "NTi8"))
+                return n.e(47).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             Xe = oe.a.wrap(function() {
                 return n.e(49).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             et = oe.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "IOEW"))
+                return n.e(54).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             tt = oe.a.wrap(function() {
-                return n.e(58).then(n.bind(null, "DZCb"))
+                return n.e(59).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
             nt = oe.a.wrap(function() {
-                return n.e(67).then(n.bind(null, "o8EG"))
+                return n.e(68).then(n.bind(null, "o8EG"))
             }, "ManagerRedirectPage"),
             it = oe.a.wrap(function() {
                 return n.e(41).then(n.bind(null, "gZLf"))
             }, "PaymentsLandingPage"),
             rt = oe.a.wrap(function() {
-                return n.e(62).then(n.bind(null, "DkuH"))
+                return n.e(63).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             at = oe.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "K4jf"))
+                return n.e(46).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             st = oe.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "uiPj"))
@@ -28793,14 +28791,6 @@ webpackJsonp([39], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
-                                                    value: "requiredBroadcasterAbilities"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
                                                     value: "screenshotURLs"
                                                 },
                                                 arguments: [],
@@ -29004,11 +28994,11 @@ webpackJsonp([39], {
             }],
             loc: {
                 start: 0,
-                end: 520
+                end: 491
             }
         };
         n.loc.source = {
-            body: "mutation ExtensionManager_InstallExtension ($input: InstallExtensionInput!) {\ninstallExtension(input: $input) {\ninstalledExtension {\nid\nactivationConfig {\nslot\nstate\nanchor\n}\nextension {\nid\nauthorName\nclientID\ndescription\niconURL\nisBitsEnabled\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\nself {\ncanActivate\n}\n}\n}\n}",
+            body: "mutation ExtensionManager_InstallExtension ($input: InstallExtensionInput!) {\ninstallExtension(input: $input) {\ninstalledExtension {\nid\nactivationConfig {\nslot\nstate\nanchor\n}\nextension {\nid\nauthorName\nclientID\ndescription\niconURL\nisBitsEnabled\nname\nprivacyPolicyURL\nscreenshotURLs\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\nself {\ncanActivate\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -29388,7 +29378,7 @@ webpackJsonp([39], {
     },
     YhVV: function(e, t, n) {
         "use strict";
-        t.c = function(e, t) {
+        t.b = function(e, t) {
             var n = [];
             if (!e || !t) return n;
             var r = /\S+/g,
@@ -29407,9 +29397,9 @@ webpackJsonp([39], {
                             images: {
                                 themed: !1,
                                 sources: {
-                                    "1x": Object(i.e)(o.id, 1),
-                                    "2x": Object(i.e)(o.id, 2),
-                                    "4x": Object(i.e)(o.id, 4)
+                                    "1x": Object(i.f)(o.id, 1),
+                                    "2x": Object(i.f)(o.id, 2),
+                                    "4x": Object(i.f)(o.id, 4)
                                 }
                             }
                         }
@@ -29418,9 +29408,7 @@ webpackJsonp([39], {
                 a = r.exec(e)
             }
             return n
-        }, n.d(t, "a", function() {
-            return r
-        }), t.b = function(e) {
+        }, t.a = function(e) {
             for (var t = {}, n = 0, i = e; n < i.length; n++)
                 for (var s = i[n], o = 0, l = s.emotes; o < l.length; o++)
                     for (var c = l[o], d = r[c.token] || [c.token], u = 0, p = d; u < p.length; u++) {
@@ -32602,9 +32590,9 @@ webpackJsonp([39], {
                         m = {
                             themed: !1,
                             sources: {
-                                "1x": Object(l.e)("" + t.emoteID, 1),
-                                "2x": Object(l.e)("" + t.emoteID, 2),
-                                "4x": Object(l.e)("" + t.emoteID, 4)
+                                "1x": Object(l.f)("" + t.emoteID, 1),
+                                "2x": Object(l.f)("" + t.emoteID, 2),
+                                "4x": Object(l.f)("" + t.emoteID, 4)
                             }
                         };
                     if (n > r) {
@@ -34005,7 +33993,7 @@ webpackJsonp([39], {
         t.a = function(e, t, n, r, a, s) {
             void 0 === s && (s = !1);
             var o;
-            o = a ? Object(l.c)(e, a) : function(e) {
+            o = a ? Object(l.b)(e, a) : function(e) {
                 var t = [];
                 e && Object.keys(e).forEach(function(n) {
                     var i = e[n];
@@ -34042,7 +34030,12 @@ webpackJsonp([39], {
                 deleted: s,
                 timestamp: Date.now()
             }
-        }, t.b = m, t.f = h, t.d = g, t.c = v, t.e = b;
+        }, t.b = m, t.g = h, t.d = g, t.c = v, t.f = b, t.e = function(e) {
+            return {
+                src: b(e, 1),
+                srcSet: b(e, 1) + " 1x, " + b(e, 2) + " 2x, " + b(e, 3) + " 4x"
+            }
+        };
         var u = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
             p = {};
 
@@ -37753,4 +37746,4 @@ webpackJsonp([39], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-a7d01794957da8e23bc1d65562e6297b.js.map
+//# sourceMappingURL=pages.subs-287afdc4c77604726c007bd0fed5c4b8.js.map

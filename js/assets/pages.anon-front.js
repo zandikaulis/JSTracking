@@ -1,4 +1,4 @@
-webpackJsonp([54], {
+webpackJsonp([55], {
     "+GT7": function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -1396,10 +1396,10 @@ webpackJsonp([54], {
                 }), Object(d.d)("TopChannels")], t)
             }(i.Component)),
             I = (n("9zTP"), m.a.wrap(function() {
-                return n.e(77).then(n.bind(null, "yEZg"))
+                return n.e(78).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
             R = m.a.wrap(function() {
-                return n.e(76).then(n.bind(null, "2hMh"))
+                return n.e(77).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
             A = function(e) {
                 function t() {
@@ -2430,7 +2430,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(90).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2442,7 +2442,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(89).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2454,7 +2454,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(88).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2466,7 +2466,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(87).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3861,23 +3861,25 @@ webpackJsonp([54], {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             })(P),
-            T = n("vH/s");
+            T = n("vH/s"),
+            x = "google_calendar",
+            N = "backfill";
 
-        function x(e) {
+        function F(e) {
             i.n.track(T.SpadeEventType.FrontPageCarouselNavButtonClick, {
                 direction: e
             })
         }
         n("0OPT");
-        var N = 6,
-            F = function(e) {
+        var I = 6,
+            R = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         activeItem: t.props.items[0],
                         startingIndex: 0
                     }, t.displayEventFired = !1, t.renderLeftButton = function() {
-                        if (t.props.items.length > N) {
+                        if (t.props.items.length > I) {
                             var e = t.state.startingIndex > 0;
                             return d.createElement(h._7, {
                                 display: h.Q.Flex,
@@ -3892,8 +3894,8 @@ webpackJsonp([54], {
                         }
                         return null
                     }, t.renderRightButton = function() {
-                        if (t.props.items.length > N) {
-                            var e = t.props.items.length > t.state.startingIndex + N;
+                        if (t.props.items.length > I) {
+                            var e = t.props.items.length > t.state.startingIndex + I;
                             return d.createElement(h._7, {
                                 display: h.Q.Flex,
                                 alignItems: h.c.Stretch
@@ -3909,8 +3911,8 @@ webpackJsonp([54], {
                     }, t.getCardsRender = function() {
                         var e, n;
                         if (t.state.activeItem) return t.displayEventFired || (e = t.props.items, n = {}, e.forEach(function(e, t) {
-                            n["carousel_slot_" + t + "_channel"] = e.broadcaster.login, n["carousel_slot_" + t + "_priority"] = e.priorityLevel, n["carousel_slot_" + t + "_game"] = e.content.gameName, n["carousel_slot_" + t + "_ccu"] = e.content.viewersCount, n["carousel_slot_" + t + "_type"] = e.content.subType
-                        }), i.n.track(T.SpadeEventType.FrontPageCarouselDisplay, n), t.displayEventFired = !0), t.props.items.slice(t.state.startingIndex, t.state.startingIndex + N).map(function(e, n) {
+                            n["carousel_slot_" + t + "_channel"] = e.broadcaster.login, n["carousel_slot_" + t + "_priority"] = e.priorityLevel, n["carousel_slot_" + t + "_game"] = e.content.gameName, n["carousel_slot_" + t + "_ccu"] = e.content.viewersCount, n["carousel_slot_" + t + "_type"] = e.content.subType, e.isScheduled ? n["carousel_slot_" + t + "_source"] = x : n["carousel_slot_" + t + "_source"] = N
+                        }), i.n.track(T.SpadeEventType.FrontPageCarouselDisplay, n), t.displayEventFired = !0), t.props.items.slice(t.state.startingIndex, t.state.startingIndex + I).map(function(e, n) {
                             return d.createElement(_, {
                                 key: e.content.id,
                                 item: e,
@@ -3919,7 +3921,7 @@ webpackJsonp([54], {
                                 "data-a-target": "carousel-card-" + n
                             })
                         });
-                        for (var a = [], r = 0; r < N; r++) a.push(d.createElement(h._7, {
+                        for (var a = [], r = 0; r < I; r++) a.push(d.createElement(h._7, {
                             key: r,
                             margin: {
                                 x: .5
@@ -3995,12 +3997,12 @@ webpackJsonp([54], {
                         };
                         n = a, i.n.track(T.SpadeEventType.FrontPageCarouselPromotionCardView, n)
                     }, t.handlePageRight = function() {
-                        var e = t.props.items.length - N;
-                        e !== t.state.startingIndex && (x("next"), t.setState({
+                        var e = t.props.items.length - I;
+                        e !== t.state.startingIndex && (F("next"), t.setState({
                             startingIndex: e
                         }))
                     }, t.handlePageLeft = function() {
-                        t.state.startingIndex > 0 && (x("prev"), t.setState({
+                        t.state.startingIndex > 0 && (F("prev"), t.setState({
                             startingIndex: 0
                         }))
                     }, t
@@ -4027,14 +4029,14 @@ webpackJsonp([54], {
                     }, this.renderLeftButton(), this.getCardsRender(), this.renderRightButton())))
                 }, t = r.__decorate([Object(g.d)("CarouselPlayer")], t)
             }(d.Component);
-        var I = Object(s.b)(null, function(e) {
+        var A = Object(s.b)(null, function(e) {
             return Object(l.b)({
                 registerCarousel: o.e,
                 unregisterCarousel: o.f
             }, e)
-        })(F);
+        })(R);
         n.d(t, "a", function() {
-            return I
+            return A
         })
     },
     i6UE: function(e, t) {},
@@ -5083,4 +5085,4 @@ webpackJsonp([54], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-2f70f95c8616b705d413cc5720f9cf8b.js.map
+//# sourceMappingURL=pages.anon-front-88f5bd2443ccc83e1983c21e0f68ec57.js.map

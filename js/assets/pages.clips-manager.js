@@ -1,4 +1,4 @@
-webpackJsonp([73], {
+webpackJsonp([74], {
     "1f48": function(e, t) {},
     "2TZ0": function(e, t) {
         var n = {
@@ -478,7 +478,7 @@ webpackJsonp([73], {
                     }, n.renderForEdit = function() {
                         var e;
                         if ((n.props.startOffset || 0 === n.props.startOffset) && n.props.endOffset) return e = n.state.showError ? s.createElement(v.P, {
-                            color: v.J.Alt2
+                            color: v.J.Error
                         }, n.getErrorMessage()) : 0 === n.state.title.length && n.props.broadcasterName ? s.createElement(v.P, {
                             color: v.J.Alt2
                         }, Object(o.d)("Clips with titles get more views. Help {broadcasterName} get discovered by adding a title.", {
@@ -524,7 +524,11 @@ webpackJsonp([73], {
                             onClick: n.editClipTitle
                         }, Object(o.d)("Save", "ClipsTitleEdit"))
                     }, n.onPublishClipError = function(e) {
-                        n.errorMessageToError(e)
+                        n.setState({
+                            showSuccess: !1,
+                            showError: !0,
+                            error: n.errorMessageToError(e)
+                        })
                     }, n.getRemainingCharacterText = function() {
                         return Object(o.d)("{characterCount, number} remaining", {
                             characterCount: T - n.state.title.length
@@ -898,14 +902,16 @@ webpackJsonp([73], {
                             onDelete: n.props.onDelete
                         })
                     }, n.openTimeoutUserModal = function() {
-                        n.openModal(R.b, {
-                            clip: n.props.clip,
+                        n.props.clip.broadcaster && n.openModal(R.b, {
+                            targetUser: n.props.clip.curator,
+                            broadcasterID: n.props.clip.broadcaster.id,
                             isTemporary: !0,
                             onClose: n.closeModal
                         })
                     }, n.openBanUserModal = function() {
-                        n.openModal(R.b, {
-                            clip: n.props.clip,
+                        n.props.clip.broadcaster && n.openModal(R.b, {
+                            targetUser: n.props.clip.curator,
+                            broadcasterID: n.props.clip.broadcaster.id,
                             isTemporary: !1,
                             onClose: n.closeModal
                         })
@@ -3816,4 +3822,4 @@ webpackJsonp([73], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-2cd86defd275ba864770d6c3784228f3.js.map
+//# sourceMappingURL=pages.clips-manager-a7952d12ed1716b93a9e526004fa9e59.js.map
