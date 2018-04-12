@@ -3,7 +3,7 @@ window.__twilightSettings = {
     "amazon_ads_url": "https://s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=twitch.tv&ex-hargs=v%3D1.0%3Bc%3D8858214122683%3Bp%3De75425fb-5407-7bd5-fd20-f462e98a8777",
     "benchmark_component_threshold": 0.1,
     "benchmark_networking_threshold": 0.15,
-    "better_together": "staff",
+    "better_together": "on",
     "bits_special_promo_base_payout": 1000,
     "bits_special_promo_bonus_payout": 0,
     "bits_special_promo_offer_id": "B073RTRHTZ",
