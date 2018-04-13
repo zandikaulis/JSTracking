@@ -3926,13 +3926,13 @@ window.SiteOptions = {
         },
         "adaef0a3-ffca-4124-b3b8-0ae13c9dd562": {
             "name": "ios_swifty_chromecast",
-            "v": 3358,
+            "v": 3512,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 80,
                 "value": "disabled"
             }, {
-                "weight": 5,
+                "weight": 20,
                 "value": "enabled"
             }]
         },
@@ -4456,6 +4456,18 @@ window.SiteOptions = {
             }, {
                 "weight": 5,
                 "value": "yes_100"
+            }]
+        },
+        "c54a638b-0db6-49ca-b513-345df41ca971": {
+            "name": "ios_avplayer_proxy",
+            "v": 3513,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "disabled"
+            }, {
+                "weight": 100,
+                "value": "enabled"
             }]
         },
         "c5b39c2e-17e2-4226-b59e-ba48d940a855": {
