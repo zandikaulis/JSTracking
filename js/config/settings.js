@@ -104,6 +104,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "03f25f55-ded6-417a-b241-d656571c4a1f": {
+            "name": "twilight_watch_symmetra",
+            "v": 3510,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
+            }]
+        },
         "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": {
             "name": "twilight_animated_directory_thumbnails",
             "v": 3227,
@@ -262,6 +274,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "recs"
+            }]
+        },
+        "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
+            "name": "twilight_watch_winston",
+            "v": 3511,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
             }]
         },
         "3fa31c3d-1477-40a5-9433-0b64b398c86a": {
@@ -490,6 +514,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "variation"
+            }]
+        },
+        "67e5d32b-fe51-4b13-9cee-6d3e1cc1ceb3": {
+            "name": "twilight_watch_bastion",
+            "v": 3509,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
             }]
         },
         "6f822381-f41d-445e-bf88-36fb9095a7b5": {
