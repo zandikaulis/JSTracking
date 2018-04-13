@@ -24,6 +24,7 @@ window.__twilightSettings = {
     "crate_snowman_launch": "off",
     "crate_trickster_launch": "off",
     "dashboard_settings_launch": "off",
+    "deprecated_messages_download_enabled": false,
     "env_test": "This is a test in Production",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445"],
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
