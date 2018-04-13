@@ -1902,11 +1902,11 @@ webpackJsonp([41], {
                     m(r), a.firstDay > 0 && (i -= a.firstDay) < 0 && (i += 7);
                     for (var h = 0 === t ? 11 : t - 1, f = 11 === t ? 0 : t + 1, M = 0 === t ? e - 1 : e, p = 11 === t ? e + 1 : e, y = l(M, h), g = s + i, k = g; k > 7;) k -= 7;
                     g += 7 - k;
-                    for (var v, w, T, b, S = !1, x = 0, H = 0; x < g; x++) {
+                    for (var v, T, w, b, S = !1, x = 0, H = 0; x < g; x++) {
                         var P = new Date(e, t, x - i + 1),
                             j = !!u(this._d) && c(P, this._d),
-                            O = c(P, r),
-                            E = -1 !== a.events.indexOf(P.toDateString()),
+                            E = c(P, r),
+                            O = -1 !== a.events.indexOf(P.toDateString()),
                             A = x < i || x >= s + i,
                             F = x - i + 1,
                             W = t,
@@ -1920,9 +1920,9 @@ webpackJsonp([41], {
                             day: F,
                             month: W,
                             year: C,
-                            hasEvent: E,
+                            hasEvent: O,
                             isSelected: j,
-                            isToday: O,
+                            isToday: E,
                             isDisabled: J,
                             isEmpty: A,
                             isStartRange: N,
@@ -1931,7 +1931,7 @@ webpackJsonp([41], {
                             showDaysInNextAndPreviousMonths: a.showDaysInNextAndPreviousMonths,
                             enableSelectionDaysInNextAndPreviousMonths: a.enableSelectionDaysInNextAndPreviousMonths
                         };
-                        a.pickWholeWeek && j && (S = !0), d.push(L(R)), 7 == ++H && (a.showWeekNumber && d.unshift((v = x - i, w = t, T = e, b = void 0, b = new Date(T, 0, 1), '<td class="pika-week">' + Math.ceil(((new Date(T, w, v) - b) / 864e5 + b.getDay() + 1) / 7) + "</td>")), o.push(Y(d, a.isRTL, a.pickWholeWeek, S)), d = [], H = 0, S = !1)
+                        a.pickWholeWeek && j && (S = !0), d.push(L(R)), 7 == ++H && (a.showWeekNumber && d.unshift((v = x - i, T = t, w = e, b = void 0, b = new Date(w, 0, 1), '<td class="pika-week">' + Math.ceil(((new Date(w, T, v) - b) / 864e5 + b.getDay() + 1) / 7) + "</td>")), o.push(Y(d, a.isRTL, a.pickWholeWeek, S)), d = [], H = 0, S = !1)
                     }
                     return D(a, o, n)
                 },
@@ -5132,11 +5132,11 @@ webpackJsonp([41], {
                     return i + s
                 }
 
-                function w(e) {
+                function T(e) {
                     !1 === a.suppressDeprecationWarnings && "undefined" != typeof console && console.warn && console.warn("Deprecation warning: " + e)
                 }
 
-                function T(e, t) {
+                function w(e, t) {
                     var n = !0;
                     return l(function() {
                         if (null != a.deprecationHandler && a.deprecationHandler(null, e), n) {
@@ -5147,7 +5147,7 @@ webpackJsonp([41], {
                                 } else r = arguments[i];
                                 s.push(r)
                             }
-                            w(e + "\nArguments: " + Array.prototype.slice.call(s).join("") + "\n" + (new Error).stack), n = !1
+                            T(e + "\nArguments: " + Array.prototype.slice.call(s).join("") + "\n" + (new Error).stack), n = !1
                         }
                         return t.apply(this, arguments)
                     }, t)
@@ -5155,7 +5155,7 @@ webpackJsonp([41], {
                 var b = {};
 
                 function S(e, t) {
-                    null != a.deprecationHandler && a.deprecationHandler(e, t), b[e] || (w(t), b[e] = !0)
+                    null != a.deprecationHandler && a.deprecationHandler(e, t), b[e] || (T(t), b[e] = !0)
                 }
 
                 function x(e) {
@@ -5178,15 +5178,15 @@ webpackJsonp([41], {
                     for (t in e) _(e, t) && n.push(t);
                     return n
                 };
-                var O = {};
+                var E = {};
 
-                function E(e, t) {
+                function O(e, t) {
                     var n = e.toLowerCase();
-                    O[n] = O[n + "s"] = O[t] = e
+                    E[n] = E[n + "s"] = E[t] = e
                 }
 
                 function A(e) {
-                    return "string" == typeof e ? O[e] || O[e.toLowerCase()] : void 0
+                    return "string" == typeof e ? E[e] || E[e.toLowerCase()] : void 0
                 }
 
                 function F(e) {
@@ -5312,8 +5312,8 @@ webpackJsonp([41], {
                     De = 2,
                     ke = 3,
                     ve = 4,
-                    we = 5,
-                    Te = 6,
+                    Te = 5,
+                    we = 6,
                     be = 7,
                     Se = 8,
                     xe = Array.prototype.indexOf ? Array.prototype.indexOf : function(e) {
@@ -5332,7 +5332,7 @@ webpackJsonp([41], {
                     return this.localeData().monthsShort(this, e)
                 }), V("MMMM", 0, 0, function(e) {
                     return this.localeData().months(this, e)
-                }), E("month", "M"), C("month", 8), ce("M", te), ce("MM", te, K), ce("MMM", function(e, t) {
+                }), O("month", "M"), C("month", 8), ce("M", te), ce("MM", te, K), ce("MMM", function(e, t) {
                     return t.monthsShortRegex(e)
                 }), ce("MMMM", function(e, t) {
                     return t.monthsRegex(e)
@@ -5344,9 +5344,9 @@ webpackJsonp([41], {
                 });
                 var Pe = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
                     je = "January_February_March_April_May_June_July_August_September_October_November_December".split("_");
-                var Oe = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_");
+                var Ee = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_");
 
-                function Ee(e, t) {
+                function Oe(e, t) {
                     var n;
                     if (!e.isValid()) return e;
                     if ("string" == typeof t)
@@ -5356,7 +5356,7 @@ webpackJsonp([41], {
                 }
 
                 function Ae(e) {
-                    return null != e ? (Ee(this, e), a.updateOffset(this, !0), this) : z(this, "Month")
+                    return null != e ? (Oe(this, e), a.updateOffset(this, !0), this) : z(this, "Month")
                 }
                 var Fe = le;
                 var We = le;
@@ -5386,7 +5386,7 @@ webpackJsonp([41], {
                     return e <= 9999 ? "" + e : "+" + e
                 }), V(0, ["YY", 2], 0, function() {
                     return this.year() % 100
-                }), V(0, ["YYYY", 4], 0, "year"), V(0, ["YYYYY", 5], 0, "year"), V(0, ["YYYYYY", 6, !0], 0, "year"), E("year", "y"), C("year", 1), ce("Y", de), ce("YY", te, K), ce("YYYY", se, $), ce("YYYYY", ie, ee), ce("YYYYYY", ie, ee), pe(["YYYYY", "YYYYYY"], Ye), pe("YYYY", function(e, t) {
+                }), V(0, ["YYYY", 4], 0, "year"), V(0, ["YYYYY", 5], 0, "year"), V(0, ["YYYYYY", 6, !0], 0, "year"), O("year", "y"), C("year", 1), ce("Y", de), ce("YY", te, K), ce("YYYY", se, $), ce("YYYYY", ie, ee), ce("YYYYYY", ie, ee), pe(["YYYYY", "YYYYYY"], Ye), pe("YYYY", function(e, t) {
                     t[Ye] = 2 === e.length ? a.parseTwoDigitYear(e) : k(e)
                 }), pe("YY", function(e, t) {
                     t[Ye] = a.parseTwoDigitYear(e)
@@ -5429,7 +5429,7 @@ webpackJsonp([41], {
                         r = Re(e + 1, t, n);
                     return (Ne(e) - a + r) / 7
                 }
-                V("w", ["ww", 2], "wo", "week"), V("W", ["WW", 2], "Wo", "isoWeek"), E("week", "w"), E("isoWeek", "W"), C("week", 5), C("isoWeek", 5), ce("w", te), ce("ww", te, K), ce("W", te), ce("WW", te, K), ye(["w", "ww", "W", "WW"], function(e, t, n, a) {
+                V("w", ["ww", 2], "wo", "week"), V("W", ["WW", 2], "Wo", "isoWeek"), O("week", "w"), O("isoWeek", "W"), C("week", 5), C("isoWeek", 5), ce("w", te), ce("ww", te, K), ce("W", te), ce("WW", te, K), ye(["w", "ww", "W", "WW"], function(e, t, n, a) {
                     t[a.substr(0, 1)] = k(e)
                 });
                 V("d", 0, "do", "day"), V("dd", 0, 0, function(e) {
@@ -5438,7 +5438,7 @@ webpackJsonp([41], {
                     return this.localeData().weekdaysShort(this, e)
                 }), V("dddd", 0, 0, function(e) {
                     return this.localeData().weekdays(this, e)
-                }), V("e", 0, 0, "weekday"), V("E", 0, 0, "isoWeekday"), E("day", "d"), E("weekday", "e"), E("isoWeekday", "E"), C("day", 11), C("weekday", 11), C("isoWeekday", 11), ce("d", te), ce("e", te), ce("E", te), ce("dd", function(e, t) {
+                }), V("e", 0, 0, "weekday"), V("E", 0, 0, "isoWeekday"), O("day", "d"), O("weekday", "e"), O("isoWeekday", "E"), C("day", 11), C("weekday", 11), C("isoWeekday", 11), ce("d", te), ce("e", te), ce("E", te), ce("dd", function(e, t) {
                     return t.weekdaysMinRegex(e)
                 }), ce("ddd", function(e, t) {
                     return t.weekdaysShortRegex(e)
@@ -5493,7 +5493,7 @@ webpackJsonp([41], {
                     return "" + this.hours() + J(this.minutes(), 2)
                 }), V("Hmmss", 0, 0, function() {
                     return "" + this.hours() + J(this.minutes(), 2) + J(this.seconds(), 2)
-                }), tt("a", !0), tt("A", !1), E("hour", "h"), C("hour", 13), ce("a", nt), ce("A", nt), ce("H", te), ce("h", te), ce("k", te), ce("HH", te, K), ce("hh", te, K), ce("kk", te, K), ce("hmm", ne), ce("hmmss", ae), ce("Hmm", ne), ce("Hmmss", ae), pe(["H", "HH"], ke), pe(["k", "kk"], function(e, t, n) {
+                }), tt("a", !0), tt("A", !1), O("hour", "h"), C("hour", 13), ce("a", nt), ce("A", nt), ce("H", te), ce("h", te), ce("k", te), ce("HH", te, K), ce("hh", te, K), ce("kk", te, K), ce("hmm", ne), ce("hmmss", ae), ce("Hmm", ne), ce("Hmmss", ae), pe(["H", "HH"], ke), pe(["k", "kk"], function(e, t, n) {
                     var a = k(e);
                     t[ke] = 24 === a ? 0 : a
                 }), pe(["a", "A"], function(e, t, n) {
@@ -5506,14 +5506,14 @@ webpackJsonp([41], {
                 }), pe("hmmss", function(e, t, n) {
                     var a = e.length - 4,
                         r = e.length - 2;
-                    t[ke] = k(e.substr(0, a)), t[ve] = k(e.substr(a, 2)), t[we] = k(e.substr(r)), c(n).bigHour = !0
+                    t[ke] = k(e.substr(0, a)), t[ve] = k(e.substr(a, 2)), t[Te] = k(e.substr(r)), c(n).bigHour = !0
                 }), pe("Hmm", function(e, t, n) {
                     var a = e.length - 2;
                     t[ke] = k(e.substr(0, a)), t[ve] = k(e.substr(a))
                 }), pe("Hmmss", function(e, t, n) {
                     var a = e.length - 4,
                         r = e.length - 2;
-                    t[ke] = k(e.substr(0, a)), t[ve] = k(e.substr(a, 2)), t[we] = k(e.substr(r))
+                    t[ke] = k(e.substr(0, a)), t[ve] = k(e.substr(a, 2)), t[Te] = k(e.substr(r))
                 });
                 var at, rt = N("Hours", !0),
                     st = {
@@ -5553,7 +5553,7 @@ webpackJsonp([41], {
                             yy: "%d years"
                         },
                         months: je,
-                        monthsShort: Oe,
+                        monthsShort: Ee,
                         week: {
                             dow: 0,
                             doy: 6
@@ -5623,7 +5623,7 @@ webpackJsonp([41], {
 
                 function ct(e) {
                     var t, n = e._a;
-                    return n && -2 === c(e).overflow && (t = n[ge] < 0 || n[ge] > 11 ? ge : n[De] < 1 || n[De] > He(n[Ye], n[ge]) ? De : n[ke] < 0 || n[ke] > 24 || 24 === n[ke] && (0 !== n[ve] || 0 !== n[we] || 0 !== n[Te]) ? ke : n[ve] < 0 || n[ve] > 59 ? ve : n[we] < 0 || n[we] > 59 ? we : n[Te] < 0 || n[Te] > 999 ? Te : -1, c(e)._overflowDayOfYear && (t < Ye || t > De) && (t = De), c(e)._overflowWeeks && -1 === t && (t = be), c(e)._overflowWeekday && -1 === t && (t = Se), c(e).overflow = t), e
+                    return n && -2 === c(e).overflow && (t = n[ge] < 0 || n[ge] > 11 ? ge : n[De] < 1 || n[De] > He(n[Ye], n[ge]) ? De : n[ke] < 0 || n[ke] > 24 || 24 === n[ke] && (0 !== n[ve] || 0 !== n[Te] || 0 !== n[we]) ? ke : n[ve] < 0 || n[ve] > 59 ? ve : n[Te] < 0 || n[Te] > 59 ? Te : n[we] < 0 || n[we] > 999 ? we : -1, c(e)._overflowDayOfYear && (t < Ye || t > De) && (t = De), c(e)._overflowWeeks && -1 === t && (t = be), c(e)._overflowWeekday && -1 === t && (t = Se), c(e).overflow = t), e
                 }
                 var ht = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
                     ft = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
@@ -5677,7 +5677,7 @@ webpackJsonp([41], {
                             if (!Mt.exec(d[4])) return void(e._isValid = !1);
                             i = "Z"
                         }
-                        e._f = r + (s || "") + (i || ""), wt(e)
+                        e._f = r + (s || "") + (i || ""), Tt(e)
                     } else e._isValid = !1
                 }
                 var gt = /^((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d?\d\s(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(?:\d\d)?\d\d\s)(\d\d:\d\d)(\:\d\d)?(\s(?:UT|GMT|[ECMP][SD]T|[A-IK-Za-ik-z]|[+-]\d{4}))$/;
@@ -5709,7 +5709,7 @@ webpackJsonp([41], {
                             default:
                                 o = u[" GMT"]
                         }
-                        n[5] = o, e._i = n.splice(1).join(""), i = " ZZ", e._f = a + r + s + i, wt(e), c(e).rfc2822 = !0
+                        n[5] = o, e._i = n.splice(1).join(""), i = " ZZ", e._f = a + r + s + i, Tt(e), c(e).rfc2822 = !0
                     } else e._isValid = !1
                 }
 
@@ -5734,14 +5734,14 @@ webpackJsonp([41], {
                                 a < 1 || a > Be(n, s, i) ? c(e)._overflowWeeks = !0 : null != d ? c(e)._overflowWeekday = !0 : (o = Ue(n, a, r, s, i), e._a[Ye] = o.year, e._dayOfYear = o.dayOfYear)
                             }(e), null != e._dayOfYear && (s = kt(e._a[Ye], r[Ye]), (e._dayOfYear > Ne(s) || 0 === e._dayOfYear) && (c(e)._overflowDayOfYear = !0), n = Je(s, 0, e._dayOfYear), e._a[ge] = n.getUTCMonth(), e._a[De] = n.getUTCDate()), t = 0; t < 3 && null == e._a[t]; ++t) e._a[t] = i[t] = r[t];
                         for (; t < 7; t++) e._a[t] = i[t] = null == e._a[t] ? 2 === t ? 1 : 0 : e._a[t];
-                        24 === e._a[ke] && 0 === e._a[ve] && 0 === e._a[we] && 0 === e._a[Te] && (e._nextDay = !0, e._a[ke] = 0), e._d = (e._useUTC ? Je : function(e, t, n, a, r, s, i) {
+                        24 === e._a[ke] && 0 === e._a[ve] && 0 === e._a[Te] && 0 === e._a[we] && (e._nextDay = !0, e._a[ke] = 0), e._d = (e._useUTC ? Je : function(e, t, n, a, r, s, i) {
                             var o = new Date(e, t, n, a, r, s, i);
                             return e < 100 && e >= 0 && isFinite(o.getFullYear()) && o.setFullYear(e), o
                         }).apply(null, i), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[ke] = 24)
                     }
                 }
 
-                function wt(e) {
+                function Tt(e) {
                     if (e._f !== a.ISO_8601)
                         if (e._f !== a.RFC_2822) {
                             e._a = [], c(e).empty = !0;
@@ -5758,7 +5758,7 @@ webpackJsonp([41], {
                     else Yt(e)
                 }
 
-                function Tt(e) {
+                function wt(e) {
                     var t = e._i,
                         n = e._f;
                     return e._locale = e._locale || mt(e._l), null === t || void 0 === n && "" === t ? M({
@@ -5766,9 +5766,9 @@ webpackJsonp([41], {
                     }) : ("string" == typeof t && (e._i = t = e._locale.preparse(t)), g(t) ? new Y(ct(t)) : (d(t) ? e._d = t : r(n) ? function(e) {
                         var t, n, a, r, s;
                         if (0 === e._f.length) return c(e).invalidFormat = !0, void(e._d = new Date(NaN));
-                        for (r = 0; r < e._f.length; r++) s = 0, t = y({}, e), null != e._useUTC && (t._useUTC = e._useUTC), t._f = e._f[r], wt(t), f(t) && (s += c(t).charsLeftOver, s += 10 * c(t).unusedTokens.length, c(t).score = s, (null == a || s < a) && (a = s, n = t));
+                        for (r = 0; r < e._f.length; r++) s = 0, t = y({}, e), null != e._useUTC && (t._useUTC = e._useUTC), t._f = e._f[r], Tt(t), f(t) && (s += c(t).charsLeftOver, s += 10 * c(t).unusedTokens.length, c(t).score = s, (null == a || s < a) && (a = s, n = t));
                         l(e, n || t)
-                    }(e) : n ? wt(e) : function(e) {
+                    }(e) : n ? Tt(e) : function(e) {
                         var t = e._i;
                         i(t) ? e._d = new Date(a.now()) : d(t) ? e._d = new Date(t.valueOf()) : "string" == typeof t ? function(e) {
                             var t = Lt.exec(e._i);
@@ -5792,20 +5792,20 @@ webpackJsonp([41], {
                         var t;
                         for (t in e) return !1;
                         return !0
-                    }(e) || r(e) && 0 === e.length) && (e = void 0), d._isAMomentObject = !0, d._useUTC = d._isUTC = i, d._l = n, d._i = e, d._f = t, d._strict = a, (o = new Y(ct(Tt(d))))._nextDay && (o.add(1, "d"), o._nextDay = void 0), o
+                    }(e) || r(e) && 0 === e.length) && (e = void 0), d._isAMomentObject = !0, d._useUTC = d._isUTC = i, d._l = n, d._i = e, d._f = t, d._strict = a, (o = new Y(ct(wt(d))))._nextDay && (o.add(1, "d"), o._nextDay = void 0), o
                 }
 
                 function St(e, t, n, a) {
                     return bt(e, t, n, a, !1)
                 }
-                a.createFromInputFallback = T("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.", function(e) {
+                a.createFromInputFallback = w("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.", function(e) {
                     e._d = new Date(e._i + (e._useUTC ? " UTC" : ""))
                 }), a.ISO_8601 = function() {}, a.RFC_2822 = function() {};
-                var xt = T("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
+                var xt = w("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
                         var e = St.apply(null, arguments);
                         return this.isValid() && e.isValid() ? e < this ? this : e : M()
                     }),
-                    Ht = T("moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
+                    Ht = w("moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
                         var e = St.apply(null, arguments);
                         return this.isValid() && e.isValid() ? e > this ? this : e : M()
                     });
@@ -5818,7 +5818,7 @@ webpackJsonp([41], {
                 }
                 var jt = ["year", "quarter", "month", "week", "day", "hour", "minute", "second", "millisecond"];
 
-                function Ot(e) {
+                function Et(e) {
                     var t = F(e),
                         n = t.year || 0,
                         a = t.quarter || 0,
@@ -5841,8 +5841,8 @@ webpackJsonp([41], {
                     }(t), this._milliseconds = +_ + 1e3 * u + 6e4 * d + 1e3 * o * 60 * 60, this._days = +i + 7 * s, this._months = +r + 3 * a + 12 * n, this._data = {}, this._locale = mt(), this._bubble()
                 }
 
-                function Et(e) {
-                    return e instanceof Ot
+                function Ot(e) {
+                    return e instanceof Et
                 }
 
                 function At(e) {
@@ -5888,7 +5888,7 @@ webpackJsonp([41], {
                 function Ut(e, t) {
                     var n, a, r, s = e,
                         i = null;
-                    return Et(e) ? s = {
+                    return Ot(e) ? s = {
                         ms: e._milliseconds,
                         d: e._days,
                         M: e._months
@@ -5897,8 +5897,8 @@ webpackJsonp([41], {
                         d: k(i[De]) * n,
                         h: k(i[ke]) * n,
                         m: k(i[ve]) * n,
-                        s: k(i[we]) * n,
-                        ms: k(At(1e3 * i[Te])) * n
+                        s: k(i[Te]) * n,
+                        ms: k(At(1e3 * i[we])) * n
                     }) : (i = Rt.exec(e)) ? (n = "-" === i[1] ? -1 : 1, s = {
                         y: Gt(i[2], n),
                         M: Gt(i[3], n),
@@ -5915,7 +5915,7 @@ webpackJsonp([41], {
                         };
                         t = Nt(t, e), e.isBefore(t) ? n = Bt(e, t) : ((n = Bt(t, e)).milliseconds = -n.milliseconds, n.months = -n.months);
                         return n
-                    }(St(s.from), St(s.to)), (s = {}).ms = r.milliseconds, s.M = r.months), a = new Ot(s), Et(e) && _(e, "_locale") && (a._locale = e._locale), a
+                    }(St(s.from), St(s.to)), (s = {}).ms = r.milliseconds, s.M = r.months), a = new Et(s), Ot(e) && _(e, "_locale") && (a._locale = e._locale), a
                 }
 
                 function Gt(e, t) {
@@ -5942,9 +5942,9 @@ webpackJsonp([41], {
                     var s = t._milliseconds,
                         i = At(t._days),
                         o = At(t._months);
-                    e.isValid() && (r = null == r || r, s && e._d.setTime(e._d.valueOf() + s * n), i && I(e, "Date", z(e, "Date") + i * n), o && Ee(e, z(e, "Month") + o * n), r && a.updateOffset(e, i || o))
+                    e.isValid() && (r = null == r || r, s && e._d.setTime(e._d.valueOf() + s * n), i && I(e, "Date", z(e, "Date") + i * n), o && Oe(e, z(e, "Month") + o * n), r && a.updateOffset(e, i || o))
                 }
-                Ut.fn = Ot.prototype, Ut.invalid = function() {
+                Ut.fn = Et.prototype, Ut.invalid = function() {
                     return Ut(NaN)
                 };
                 var Zt = Vt(1, "add"),
@@ -5955,7 +5955,7 @@ webpackJsonp([41], {
                     return void 0 === e ? this._locale._abbr : (null != (t = mt(e)) && (this._locale = t), this)
                 }
                 a.defaultFormat = "YYYY-MM-DDTHH:mm:ssZ", a.defaultFormatUtc = "YYYY-MM-DDTHH:mm:ss[Z]";
-                var Xt = T("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", function(e) {
+                var Xt = w("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", function(e) {
                     return void 0 === e ? this.localeData() : this.locale(e)
                 });
 
@@ -5979,23 +5979,23 @@ webpackJsonp([41], {
                     return this.weekYear() % 100
                 }), V(0, ["GG", 2], 0, function() {
                     return this.isoWeekYear() % 100
-                }), en("gggg", "weekYear"), en("ggggg", "weekYear"), en("GGGG", "isoWeekYear"), en("GGGGG", "isoWeekYear"), E("weekYear", "gg"), E("isoWeekYear", "GG"), C("weekYear", 1), C("isoWeekYear", 1), ce("G", de), ce("g", de), ce("GG", te, K), ce("gg", te, K), ce("GGGG", se, $), ce("gggg", se, $), ce("GGGGG", ie, ee), ce("ggggg", ie, ee), ye(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, a) {
+                }), en("gggg", "weekYear"), en("ggggg", "weekYear"), en("GGGG", "isoWeekYear"), en("GGGGG", "isoWeekYear"), O("weekYear", "gg"), O("isoWeekYear", "GG"), C("weekYear", 1), C("isoWeekYear", 1), ce("G", de), ce("g", de), ce("GG", te, K), ce("gg", te, K), ce("GGGG", se, $), ce("gggg", se, $), ce("GGGGG", ie, ee), ce("ggggg", ie, ee), ye(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, a) {
                     t[a.substr(0, 2)] = k(e)
                 }), ye(["gg", "GG"], function(e, t, n, r) {
                     t[r] = a.parseTwoDigitYear(e)
-                }), V("Q", 0, "Qo", "quarter"), E("quarter", "Q"), C("quarter", 7), ce("Q", q), pe("Q", function(e, t) {
+                }), V("Q", 0, "Qo", "quarter"), O("quarter", "Q"), C("quarter", 7), ce("Q", q), pe("Q", function(e, t) {
                     t[ge] = 3 * (k(e) - 1)
-                }), V("D", ["DD", 2], "Do", "date"), E("date", "D"), C("date", 9), ce("D", te), ce("DD", te, K), ce("Do", function(e, t) {
+                }), V("D", ["DD", 2], "Do", "date"), O("date", "D"), C("date", 9), ce("D", te), ce("DD", te, K), ce("Do", function(e, t) {
                     return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient
                 }), pe(["D", "DD"], De), pe("Do", function(e, t) {
                     t[De] = k(e.match(te)[0])
                 });
                 var nn = N("Date", !0);
-                V("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), E("dayOfYear", "DDD"), C("dayOfYear", 4), ce("DDD", re), ce("DDDD", X), pe(["DDD", "DDDD"], function(e, t, n) {
+                V("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), O("dayOfYear", "DDD"), C("dayOfYear", 4), ce("DDD", re), ce("DDDD", X), pe(["DDD", "DDDD"], function(e, t, n) {
                     n._dayOfYear = k(e)
-                }), V("m", ["mm", 2], 0, "minute"), E("minute", "m"), C("minute", 14), ce("m", te), ce("mm", te, K), pe(["m", "mm"], ve);
+                }), V("m", ["mm", 2], 0, "minute"), O("minute", "m"), C("minute", 14), ce("m", te), ce("mm", te, K), pe(["m", "mm"], ve);
                 var an = N("Minutes", !1);
-                V("s", ["ss", 2], 0, "second"), E("second", "s"), C("second", 15), ce("s", te), ce("ss", te, K), pe(["s", "ss"], we);
+                V("s", ["ss", 2], 0, "second"), O("second", "s"), C("second", 15), ce("s", te), ce("ss", te, K), pe(["s", "ss"], Te);
                 var rn, sn = N("Seconds", !1);
                 for (V("S", 0, 0, function() {
                         return ~~(this.millisecond() / 100)
@@ -6013,10 +6013,10 @@ webpackJsonp([41], {
                         return 1e5 * this.millisecond()
                     }), V(0, ["SSSSSSSSS", 9], 0, function() {
                         return 1e6 * this.millisecond()
-                    }), E("millisecond", "ms"), C("millisecond", 16), ce("S", re, q), ce("SS", re, K), ce("SSS", re, X), rn = "SSSS"; rn.length <= 9; rn += "S") ce(rn, oe);
+                    }), O("millisecond", "ms"), C("millisecond", 16), ce("S", re, q), ce("SS", re, K), ce("SSS", re, X), rn = "SSSS"; rn.length <= 9; rn += "S") ce(rn, oe);
 
                 function on(e, t) {
-                    t[Te] = k(1e3 * ("0." + e))
+                    t[we] = k(1e3 * ("0." + e))
                 }
                 for (rn = "S"; rn.length <= 9; rn += "S") pe(rn, on);
                 var dn = N("Milliseconds", !1);
@@ -6236,12 +6236,12 @@ webpackJsonp([41], {
                     return this._isUTC ? "UTC" : ""
                 }, un.zoneName = function() {
                     return this._isUTC ? "Coordinated Universal Time" : ""
-                }, un.dates = T("dates accessor is deprecated. Use date instead.", nn), un.months = T("months accessor is deprecated. Use month instead", Ae), un.years = T("years accessor is deprecated. Use year instead", Ie), un.zone = T("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
+                }, un.dates = w("dates accessor is deprecated. Use date instead.", nn), un.months = w("months accessor is deprecated. Use month instead", Ae), un.years = w("years accessor is deprecated. Use year instead", Ie), un.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
                     return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
-                }), un.isDSTShifted = T("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
+                }), un.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
                     if (!i(this._isDSTShifted)) return this._isDSTShifted;
                     var e = {};
-                    if (y(e, this), (e = Tt(e))._a) {
+                    if (y(e, this), (e = wt(e))._a) {
                         var t = e._isUTC ? m(e._a) : St(e._a);
                         this._isDSTShifted = this.isValid() && v(e._a, t.toArray()) > 0
                     } else this._isDSTShifted = !1;
@@ -6357,7 +6357,7 @@ webpackJsonp([41], {
                         var t = e % 10;
                         return e + (1 === k(e % 100 / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th")
                     }
-                }), a.lang = T("moment.lang is deprecated. Use moment.locale instead.", _t), a.langData = T("moment.langData is deprecated. Use moment.localeData instead.", mt);
+                }), a.lang = w("moment.lang is deprecated. Use moment.locale instead.", _t), a.langData = w("moment.langData is deprecated. Use moment.localeData instead.", mt);
                 var fn = Math.abs;
 
                 function Mn(e, t, n, a) {
@@ -6386,8 +6386,8 @@ webpackJsonp([41], {
                     Dn = Yn("s"),
                     kn = Yn("m"),
                     vn = Yn("h"),
-                    wn = Yn("d"),
-                    Tn = Yn("w"),
+                    Tn = Yn("d"),
+                    wn = Yn("w"),
                     bn = Yn("M"),
                     Sn = Yn("y");
 
@@ -6399,8 +6399,8 @@ webpackJsonp([41], {
                 var Hn = xn("milliseconds"),
                     Pn = xn("seconds"),
                     jn = xn("minutes"),
-                    On = xn("hours"),
-                    En = xn("days"),
+                    En = xn("hours"),
+                    On = xn("days"),
                     An = xn("months"),
                     Fn = xn("years");
                 var Wn = Math.round,
@@ -6429,7 +6429,7 @@ webpackJsonp([41], {
                         l = this.asSeconds();
                     return l ? (l < 0 ? "-" : "") + "P" + (s ? s + "Y" : "") + (i ? i + "M" : "") + (o ? o + "D" : "") + (d || u || _ ? "T" : "") + (d ? d + "H" : "") + (u ? u + "M" : "") + (_ ? _ + "S" : "") : "P0D"
                 }
-                var In = Ot.prototype;
+                var In = Et.prototype;
                 return In.isValid = function() {
                     return this._isValid
                 }, In.abs = function() {
@@ -6459,7 +6459,7 @@ webpackJsonp([41], {
                         default:
                             throw new Error("Unknown unit " + e)
                     }
-                }, In.asMilliseconds = gn, In.asSeconds = Dn, In.asMinutes = kn, In.asHours = vn, In.asDays = wn, In.asWeeks = Tn, In.asMonths = bn, In.asYears = Sn, In.valueOf = function() {
+                }, In.asMilliseconds = gn, In.asSeconds = Dn, In.asMinutes = kn, In.asHours = vn, In.asDays = Tn, In.asWeeks = wn, In.asMonths = bn, In.asYears = Sn, In.valueOf = function() {
                     return this.isValid() ? this._milliseconds + 864e5 * this._days + this._months % 12 * 2592e6 + 31536e6 * k(this._months / 12) : NaN
                 }, In._bubble = function() {
                     var e, t, n, a, r, s = this._milliseconds,
@@ -6469,7 +6469,7 @@ webpackJsonp([41], {
                     return s >= 0 && i >= 0 && o >= 0 || s <= 0 && i <= 0 && o <= 0 || (s += 864e5 * pn(Ln(o) + i), i = 0, o = 0), d.milliseconds = s % 1e3, e = D(s / 1e3), d.seconds = e % 60, t = D(e / 60), d.minutes = t % 60, n = D(t / 60), d.hours = n % 24, o += r = D(yn(i += D(n / 24))), i -= pn(Ln(r)), a = D(o / 12), o %= 12, d.days = i, d.months = o, d.years = a, this
                 }, In.get = function(e) {
                     return e = A(e), this.isValid() ? this[e + "s"]() : NaN
-                }, In.milliseconds = Hn, In.seconds = Pn, In.minutes = jn, In.hours = On, In.days = En, In.weeks = function() {
+                }, In.milliseconds = Hn, In.seconds = Pn, In.minutes = jn, In.hours = En, In.days = On, In.weeks = function() {
                     return D(this.days() / 7)
                 }, In.months = An, In.years = Fn, In.humanize = function(e) {
                     if (!this.isValid()) return this.localeData().invalidDate();
@@ -6489,7 +6489,7 @@ webpackJsonp([41], {
                                 }.apply(null, _)
                         }(this, !e, t);
                     return e && (n = t.pastFuture(+this, n)), t.postformat(n)
-                }, In.toISOString = zn, In.toString = zn, In.toJSON = zn, In.locale = Kt, In.localeData = $t, In.toIsoString = T("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", zn), In.lang = Xt, V("X", 0, 0, "unix"), V("x", 0, 0, "valueOf"), ce("x", de), ce("X", /[+-]?\d+(\.\d{1,3})?/), pe("X", function(e, t, n) {
+                }, In.toISOString = zn, In.toString = zn, In.toJSON = zn, In.locale = Kt, In.localeData = $t, In.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", zn), In.lang = Xt, V("X", 0, 0, "unix"), V("x", 0, 0, "valueOf"), ce("x", de), ce("X", /[+-]?\d+(\.\d{1,3})?/), pe("X", function(e, t, n) {
                     n._d = new Date(1e3 * parseFloat(e, 10))
                 }), pe("x", function(e, t, n) {
                     n._d = new Date(k(e))
@@ -6507,7 +6507,7 @@ webpackJsonp([41], {
                     return hn(e, t, n, "weekdays")
                 }, a.parseZone = function() {
                     return St.apply(null, arguments).parseZone()
-                }, a.localeData = mt, a.isDuration = Et, a.monthsShort = function(e, t) {
+                }, a.localeData = mt, a.isDuration = Ot, a.monthsShort = function(e, t) {
                     return cn(e, t, "monthsShort")
                 }, a.weekdaysMin = function(e, t, n) {
                     return hn(e, t, n, "weekdaysMin")
@@ -9716,17 +9716,17 @@ webpackJsonp([41], {
             D = n("2nfn"),
             k = n.n(D),
             v = n("ywmo"),
-            w = n.n(v),
-            T = n("yBkN"),
-            b = n.n(T),
+            T = n.n(v),
+            w = n("yBkN"),
+            b = n.n(w),
             S = n("Ob63"),
             x = n.n(S),
             H = n("tWfJ"),
             P = n.n(H),
             j = n("WE8T"),
-            O = n.n(j),
-            E = n("6hIG"),
-            A = n.n(E),
+            E = n.n(j),
+            O = n("6hIG"),
+            A = n.n(O),
             F = n("siAa"),
             W = n.n(F),
             C = n("pNNA"),
@@ -10301,7 +10301,7 @@ webpackJsonp([41], {
                             themed: !0,
                             light: {
                                 "1x": k.a,
-                                "2x": w.a
+                                "2x": T.a
                             },
                             dark: {
                                 "1x": b.a,
@@ -10368,27 +10368,38 @@ webpackJsonp([41], {
             e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
         }(_e || (_e = {}));
         var fe, Me, pe = ((fe = {})[_e.Tier1] = function() {
-                return Object(m.d)("Tier 1", "SubscriptionTier")
-            }, fe[_e.Tier2] = function() {
-                return Object(m.d)("Tier 2", "SubscriptionTier")
-            }, fe[_e.Tier3] = function() {
-                return Object(m.d)("Tier 3", "SubscriptionTier")
-            }, fe),
-            ye = function(e) {
+            return Object(m.d)("Tier 1", "SubscriptionTier")
+        }, fe[_e.Tier2] = function() {
+            return Object(m.d)("Tier 2", "SubscriptionTier")
+        }, fe[_e.Tier3] = function() {
+            return Object(m.d)("Tier 3", "SubscriptionTier")
+        }, fe);
+        ! function(e) {
+            e.TOTAL_SUB_PRICE_TEXT = "payment-method-card__total-sub-price-text", e.DISPLAY_NAME_TEXT = "subscription-rows__display-name-text", e.TIER_TEXT = "subscription-rows__tier-text", e.COST_TEXT = "subscription-rows__cost-text", e.RENEWAL_DATE_TEXT = "subscription-rows__renewal-date-text"
+        }(Me || (Me = {}));
+        var ye, Le = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         showingMore: !1
-                    }, t.renderNoActiveSubscriptionsMessage = function() {
-                        return _.createElement(g._7, {
+                    }, t.renderNoRenewingSubscriptionsMessage = function() {
+                        return _.createElement(g._30, {
+                            alignItems: g.c.Center,
+                            background: g.m.Base,
+                            borderBottom: !0,
+                            borderLeft: !0,
+                            borderRight: !0,
                             display: g.Q.Flex,
                             justifyContent: g._6.Center,
-                            padding: 1
+                            padding: {
+                                x: 2,
+                                y: 3
+                            }
                         }, _.createElement(g.P, {
                             color: g.J.Alt2
-                        }, Object(m.d)("You have no active subscriptions right now.", "SubscriptionRows")))
+                        }, Object(m.d)("You have no renewing subscriptions.", "SubscriptionRows")))
                     }, t.toggleShowMore = function() {
-                        t.setState(function(e, t) {
+                        t.setState(function(e) {
                             return {
                                 showingMore: !e.showingMore
                             }
@@ -10396,14 +10407,27 @@ webpackJsonp([41], {
                     }, t
                 }
                 return u.__extends(t, e), t.prototype.render = function() {
+                    if (0 === this.numOfSubscriptions) return this.renderNoRenewingSubscriptionsMessage();
                     var e = this.props.subscriptions.slice(0, 5),
                         t = this.state.showingMore ? this.props.subscriptions : e,
                         n = this.state.showingMore ? Object(m.d)("Show Less", "SubscriptionRows") : Object(m.d)("Show More", "SubscriptionRows");
-                    return _.createElement(g._30, {
-                        background: g.m.Base,
+                    return _.createElement(_.Fragment, null, _.createElement(g._30, {
                         borderLeft: !0,
-                        borderBottom: !0,
                         borderRight: !0,
+                        display: g.Q.Flex,
+                        flexDirection: g.S.Column,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, _.createElement(g.P, {
+                        bold: !0,
+                        color: g.J.Alt2,
+                        type: g._44.P,
+                        "data-test-selector": Me.TOTAL_SUB_PRICE_TEXT
+                    }, this.numOfSubscriptionsCopy, " (", this.pricePerMonth, ")")), _.createElement(g._30, {
+                        background: g.m.Base,
+                        border: !0,
                         padding: {
                             x: 2,
                             y: 1
@@ -10437,7 +10461,7 @@ webpackJsonp([41], {
                                 left: 1
                             }
                         }, _.createElement(g.P, {
-                            "data-test-selector": "subscription-rows__display-name-text",
+                            "data-test-selector": Me.DISPLAY_NAME_TEXT,
                             bold: !0
                         }, _.createElement(g.N, {
                             type: g.O.Inherit,
@@ -10454,7 +10478,7 @@ webpackJsonp([41], {
                             },
                             fullHeight: !0
                         }, _.createElement(g.P, {
-                            "data-test-selector": "subscription-rows__tier-text",
+                            "data-test-selector": Me.TIER_TEXT,
                             bold: !0
                         }, e.subscriptionBenefit ? pe[e.subscriptionBenefit.tier]() : Object(m.d)("Turbo", "SubscriptionRows")))), _.createElement(g.K, {
                             cols: 1
@@ -10467,7 +10491,7 @@ webpackJsonp([41], {
                             },
                             fullHeight: !0
                         }, _.createElement(g.P, {
-                            "data-test-selector": "subscription-rows__cost-text"
+                            "data-test-selector": Me.COST_TEXT
                         }, Object(m.e)(e.renewalPrice / 100, {
                             style: "currency",
                             currency: e.renewalCurrency
@@ -10482,9 +10506,9 @@ webpackJsonp([41], {
                             },
                             fullHeight: !0
                         }, _.createElement(g.P, {
-                            "data-test-selector": "subscription-rows__renewal-date-text"
+                            "data-test-selector": Me.RENEWAL_DATE_TEXT
                         }, a)))))
-                    }), !t.length && this.renderNoActiveSubscriptionsMessage(), this.props.subscriptions.length > 5 && _.createElement(g._7, {
+                    }), this.props.subscriptions.length > 5 && _.createElement(g._7, {
                         margin: {
                             y: 1
                         }
@@ -10492,13 +10516,47 @@ webpackJsonp([41], {
                         type: g.A.Text,
                         fullWidth: !0,
                         onClick: this.toggleShowMore
-                    }, n)))
-                }, t
+                    }, n))))
+                }, Object.defineProperty(t.prototype, "numOfSubscriptions", {
+                    get: function() {
+                        return (this.props.subscriptions || []).length
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "numOfSubscriptionsCopy", {
+                    get: function() {
+                        return Object(m.d)("{subscriptionsCount, plural, one {# subscription} other {# subscriptions}}", {
+                            subscriptionsCount: this.numOfSubscriptions
+                        }, "SubscriptionRows")
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "totalPrice", {
+                    get: function() {
+                        return this.props.subscriptions.reduce(function(e, t) {
+                            return e + t.renewalPrice
+                        }, 0) / 100
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "pricePerMonth", {
+                    get: function() {
+                        var e = Object(m.e)(this.totalPrice, {
+                            style: "currency",
+                            currency: this.props.subscriptions[0].renewalCurrency
+                        });
+                        return Object(m.d)("{totalPriceI18n} / month", {
+                            totalPriceI18n: e
+                        }, "SubscriptionRows")
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t
             }(_.Component),
-            Le = n("l21v"),
-            Ye = "64138",
-            ge = "SeemsGood",
-            De = function(e) {
+            Ye = n("l21v"),
+            ge = "64138",
+            De = "SeemsGood",
+            ke = function(e) {
                 return _.createElement(g._7, {
                     padding: {
                         y: 5
@@ -10510,8 +10568,8 @@ webpackJsonp([41], {
                         y: 2
                     }
                 }, _.createElement(g.M, {
-                    src: Object(Le.f)(Ye, 2),
-                    alt: ge
+                    src: Object(Ye.f)(ge, 2),
+                    alt: De
                 })), _.createElement(g._7, {
                     display: g.Q.Flex,
                     justifyContent: g._6.Center,
@@ -10543,7 +10601,7 @@ webpackJsonp([41], {
                     onClick: e.onStartOverClick
                 }, Object(m.d)("Start Over", "UpdatePaymentSuccess"))))
             },
-            ke = function(e) {
+            ve = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10579,13 +10637,13 @@ webpackJsonp([41], {
                     })))
                 }, t
             }(_.Component),
-            ve = n("HM6l"),
+            Te = n("HM6l"),
             we = n("5k8C");
         n("AUiJ");
         ! function(e) {
             e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
-        }(Me || (Me = {}));
-        var Te = function(e) {
+        }(ye || (ye = {}));
+        var be = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -10593,7 +10651,7 @@ webpackJsonp([41], {
                     updatingPaymentMethod: !1,
                     errorMessage: "",
                     nullValueErrors: [],
-                    sessionId: Object(ve.b)()
+                    sessionId: Object(Te.b)()
                 }, t.handleSubmit = function() {
                     t.setState({
                         updatingPaymentMethod: !0,
@@ -10698,7 +10756,7 @@ webpackJsonp([41], {
                     fillContent: !0
                 })), _.createElement(g._7, {
                     display: this.state.zuoraConfigured ? g.Q.Block : g.Q.Hide,
-                    "data-test-selector": Me.ZUORA_PARENT_LAYOUT
+                    "data-test-selector": ye.ZUORA_PARENT_LAYOUT
                 }, this.renderErrorMessage(), _.createElement("div", {
                     id: "zuora_payment",
                     className: this.state.updatingPaymentMethod ? "zuora-disabled" : ""
@@ -10712,7 +10770,7 @@ webpackJsonp([41], {
                     onClick: this.handleSubmit,
                     state: this.state.updatingPaymentMethod ? g.z.Loading : g.z.Default,
                     disabled: this.state.updatingPaymentMethod,
-                    "data-test-selector": Me.UPDATE_PAYMENT_BUTTON
+                    "data-test-selector": ye.UPDATE_PAYMENT_BUTTON
                 }, Object(m.d)("Update Card", "ZuoraCardComponent"))), _.createElement(we.a, {
                     isProduction: this.props.config.isProductionConfig,
                     sessionId: this.state.sessionId
@@ -10754,32 +10812,32 @@ webpackJsonp([41], {
                 configurable: !0
             }), t
         }(_.Component);
-        var be, Se, xe = Object(r.b)(function(e) {
+        var Se, xe, He = Object(r.b)(function(e) {
             return {
                 languageCode: e.session.languageCode
             }
-        })(Te);
+        })(be);
         ! function(e) {
             e[e.SubRows = 0] = "SubRows", e[e.UpdatePayment = 1] = "UpdatePayment", e[e.UpdateSuccess = 2] = "UpdateSuccess"
-        }(be || (be = {})),
+        }(Se || (Se = {})),
         function(e) {
-            e.TOTAL_SUB_PRICE_TEXT = "payment-method-card__total-sub-price-text", e.UPDATE_BUTTON = "payment-method-card__update-button", e.CLOSE_BUTTON = "payment-method-card__close-button"
-        }(Se || (Se = {}));
-        var He, Pe = function(e) {
+            e.NUM_SUBS_TEXT = "payment-method-card__num-subs-text", e.UPDATE_BUTTON = "payment-method-card__update-button", e.CLOSE_BUTTON = "payment-method-card__close-button"
+        }(xe || (xe = {}));
+        var Pe, je = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        viewType: be.SubRows,
+                        viewType: Se.SubRows,
                         updatePaymentError: !1
                     }, t.renderPaymentProvider = function() {
                         var e = t.props.paymentProviderConfig;
                         return e.provider === a.Recurly ? _.createElement(le, {
                             config: e,
                             updatePaymentMethod: t.updatePaymentMethod
-                        }) : e.provider === a.Zuora ? _.createElement(xe, {
+                        }) : e.provider === a.Zuora ? _.createElement(He, {
                             config: e,
                             updatePaymentMethod: t.updatePaymentMethod
-                        }) : e.provider === a.Xsolla ? _.createElement(ke, {
+                        }) : e.provider === a.Xsolla ? _.createElement(ve, {
                             config: e
                         }) : _.createElement(g.P, null, Object(m.d)("Oops! Payment provider is unavailable. Please try again later.", "PaymentMethodCard"))
                     }, t.renderPaymentTypeImage = function() {
@@ -10799,7 +10857,7 @@ webpackJsonp([41], {
                                         themed: !0,
                                         light: {
                                             "1x": k.a,
-                                            "2x": w.a
+                                            "2x": T.a
                                         },
                                         dark: {
                                             "1x": b.a,
@@ -10828,26 +10886,26 @@ webpackJsonp([41], {
                                     alt: Object(m.d)("credit card icon", "PaymentMethodCard"),
                                     srcSet: {
                                         "1x": P.a,
-                                        "2x": O.a
+                                        "2x": E.a
                                     }
                                 })
                         }
                     }, t.toggleButton = function() {
-                        return t.state.viewType === be.SubRows ? t.setState({
-                            viewType: be.UpdatePayment,
+                        return t.state.viewType === Se.SubRows ? t.setState({
+                            viewType: Se.UpdatePayment,
                             updatePaymentError: !1
                         }) : t.setState({
-                            viewType: be.SubRows,
+                            viewType: Se.SubRows,
                             updatePaymentError: !1
                         })
                     }, t.onDoneClick = function() {
                         t.setState({
-                            viewType: be.SubRows,
+                            viewType: Se.SubRows,
                             updatePaymentError: !1
                         })
                     }, t.onStartOverClick = function() {
                         return t.setState({
-                            viewType: be.UpdatePayment,
+                            viewType: Se.UpdatePayment,
                             updatePaymentError: !1
                         })
                     }, t.updatePaymentMethod = function(e, n, a) {
@@ -10869,12 +10927,12 @@ webpackJsonp([41], {
                                         })];
                                     case 1:
                                         return (s = i.sent()).error || s.requestError ? (this.setState({
-                                            viewType: be.UpdatePayment,
+                                            viewType: Se.UpdatePayment,
                                             updatePaymentError: !0
                                         }), [2, Promise.reject(null)]) : [4, this.props.refetchPaymentMethodsData()];
                                     case 2:
                                         return i.sent(), [2, this.setState({
-                                            viewType: be.UpdateSuccess,
+                                            viewType: Se.UpdateSuccess,
                                             updatePaymentError: !1
                                         })]
                                 }
@@ -10919,26 +10977,21 @@ webpackJsonp([41], {
                         justifyContent: g._6.Center
                     }, _.createElement(Q, {
                         lastFourDigits: this.props.lastFour
-                    })))), _.createElement(g.P, {
-                        bold: !0,
-                        color: g.J.Alt2,
-                        type: g._44.P,
-                        "data-test-selector": Se.TOTAL_SUB_PRICE_TEXT
-                    }, this.numOfSubscriptions, " (", this.pricePerMonth, ")")), _.createElement(g._7, {
+                    }))))), _.createElement(g._7, {
                         alignItems: g.c.Center,
                         flexShrink: 1,
                         display: g.Q.Flex
-                    }, this.state.viewType === be.SubRows ? _.createElement(g.u, {
+                    }, this.state.viewType === Se.SubRows ? _.createElement(g.u, {
                         onClick: this.toggleButton,
-                        "data-test-selector": Se.UPDATE_BUTTON
+                        "data-test-selector": xe.UPDATE_BUTTON
                     }, Object(m.d)("Update", "PaymentMethodCard")) : _.createElement(g.u, {
                         onClick: this.toggleButton,
                         type: g.A.Text,
-                        "data-test-selector": Se.CLOSE_BUTTON
-                    }, Object(m.d)("Cancel", "PaymentMethodCard")))), this.state.viewType === be.UpdateSuccess && _.createElement(De, {
+                        "data-test-selector": xe.CLOSE_BUTTON
+                    }, Object(m.d)("Cancel", "PaymentMethodCard")))), this.state.viewType === Se.UpdateSuccess && _.createElement(ke, {
                         onDoneClick: this.onDoneClick,
                         onStartOverClick: this.onStartOverClick
-                    }), this.state.viewType === be.UpdatePayment && _.createElement("div", null, _.createElement(g._7, {
+                    }), this.state.viewType === Se.UpdatePayment && _.createElement("div", null, _.createElement(g._7, {
                         margin: {
                             y: 1
                         }
@@ -10948,50 +11001,23 @@ webpackJsonp([41], {
                         }
                     }, _.createElement(g.P, {
                         color: g.J.Error
-                    }, Object(m.d)("Your request could not be processed. Please try again later.", "PaymentMethodCard"))), _.createElement(g.P, {
-                        color: g.J.Alt2
-                    }, this.numOfSubscriptionsWillRenew)))), this.state.viewType === be.SubRows && _.createElement(ye, {
+                    }, Object(m.d)("Your request could not be processed. Please try again later.", "PaymentMethodCard"))), this.props.subscriptions && this.props.subscriptions.length && _.createElement(g.P, {
+                        color: g.J.Alt2,
+                        "data-test-selector": xe.NUM_SUBS_TEXT
+                    }, this.numOfSubscriptionsWillRenew)))), this.state.viewType === Se.SubRows && _.createElement(Le, {
                         subscriptions: this.props.subscriptions
                     }))
-                }, Object.defineProperty(t.prototype, "numOfSubscriptions", {
-                    get: function() {
-                        return Object(m.d)("{subscriptionsCount, plural, one {# subscription} other {# subscriptions}}", {
-                            subscriptionsCount: this.props.subscriptions.length
-                        }, "PaymentMethodCard")
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "numOfSubscriptionsWillRenew", {
+                }, Object.defineProperty(t.prototype, "numOfSubscriptionsWillRenew", {
                     get: function() {
                         return Object(m.d)("{subscriptionsCount, plural, one {# subscription will renew with this payment method} other {# subscriptions will renew with this payment method}}", {
-                            subscriptionsCount: this.props.subscriptions.length
-                        }, "PaymentMethodCard")
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "totalPrice", {
-                    get: function() {
-                        return this.props.subscriptions.reduce(function(e, t) {
-                            return e + t.renewalPrice
-                        }, 0) / 100
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "pricePerMonth", {
-                    get: function() {
-                        var e = Object(m.e)(this.totalPrice, {
-                            style: "currency",
-                            currency: this.props.subscriptions[0].renewalCurrency
-                        });
-                        return Object(m.d)("{totalPriceI18n} / month", {
-                            totalPriceI18n: e
+                            subscriptionsCount: (this.props.subscriptions || []).length
                         }, "PaymentMethodCard")
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(_.Component),
-            je = (n("2bN8"), n("e9RI")),
+            Ee = (n("2bN8"), n("e9RI")),
             Oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -11046,7 +11072,7 @@ webpackJsonp([41], {
                         });
                         return function(e) {
                             return e.provider === a.Zuora
-                        }(i) && (i.isProductionConfig = t.recurly.payWithAmazonConfigs.isProduction), _.createElement(Pe, {
+                        }(i) && (i.isProductionConfig = t.recurly.payWithAmazonConfigs.isProduction), _.createElement(je, {
                             lastFour: n.lastFour,
                             subscriptions: n.purchaseProfiles,
                             paymentProviderConfig: i,
@@ -11058,13 +11084,13 @@ webpackJsonp([41], {
                     })
                 }, t
             }(_.Component),
-            Ee = Object(l.compose)(Object(y.a)(je), Object(p.d)("PaymentMethodsTab"))(Oe),
-            Ae = n("pSMk"),
-            Fe = function(e, t) {
+            Ae = Object(l.compose)(Object(y.a)(Ee), Object(p.d)("PaymentMethodsTab"))(Oe),
+            Fe = n("pSMk"),
+            We = function(e, t) {
                 if (void 0 === e && (e = 1), void 0 === t && (t = 10), t < e) throw new Error("Invalid range");
                 return Array.from(Array(t + 1).keys()).slice(e)
             },
-            We = function(e) {
+            Ce = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.handlePageJump = function(e) {
@@ -11086,25 +11112,25 @@ webpackJsonp([41], {
                         n = this.state.currentPage,
                         a = t - 3;
                     if (t <= 10) {
-                        var r = Fe(1, Math.max(t, 1)).map(function(t) {
+                        var r = We(1, Math.max(t, 1)).map(function(t) {
                             return e.renderButton(t)
                         });
                         return this.renderWrapper(r)
                     }
-                    var s = Fe(1, 2).map(function(t) {
+                    var s = We(1, 2).map(function(t) {
                             return e.renderButton(t)
                         }),
-                        i = Fe(t - 1, t).map(function(t) {
+                        i = We(t - 1, t).map(function(t) {
                             return e.renderButton(t)
                         }),
-                        o = Fe(n - 1, n + 1).map(function(t) {
+                        o = We(n - 1, n + 1).map(function(t) {
                             return e.renderButton(t)
                         }),
                         d = this.renderEllipsis("start"),
                         u = this.renderEllipsis("end");
-                    return n <= 4 ? (s = Fe(1, Math.max(n + 1, 2)).map(function(t) {
+                    return n <= 4 ? (s = We(1, Math.max(n + 1, 2)).map(function(t) {
                         return e.renderButton(t)
-                    }), this.renderWrapper(s.concat([d], i))) : n >= a ? (i = Fe(n - 1, t).map(function(t) {
+                    }), this.renderWrapper(s.concat([d], i))) : n >= a ? (i = We(n - 1, t).map(function(t) {
                         return e.renderButton(t)
                     }), this.renderWrapper(s.concat([d], i))) : this.renderWrapper(s.concat([d], o, [u], i))
                 }, t.prototype.renderWrapper = function(e) {
@@ -11155,11 +11181,11 @@ webpackJsonp([41], {
         n("r7/5");
         ! function(e) {
             e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
-        }(He || (He = {}));
-        var Ce, Ne, ze = function() {
+        }(Pe || (Pe = {}));
+        var Ne, ze, Ie = function() {
                 return Object(m.d)("Twitch Turbo", "TransactionHistoryTab")
             },
-            Ie = function(e) {
+            Je = function(e) {
                 return _.createElement(g._38, null, _.createElement(g._35, {
                     verticalAlign: g._54.Middle
                 }, _.createElement(g.P, null, e.purchasedAt ? Object(m.c)(Object(he.c)(e.purchasedAt), "medium") : "-")), _.createElement(g._35, {
@@ -11169,7 +11195,7 @@ webpackJsonp([41], {
                 }, _.createElement(g.N, {
                     to: e.product.owner ? "/" + e.product.owner.login : void 0
                 }, _.createElement(g.l, {
-                    alt: "Turbo" === e.product.name ? ze() : e.product.name,
+                    alt: "Turbo" === e.product.name ? Ie() : e.product.name,
                     src: "Turbo" === e.product.name ? ce.a : e.product.owner ? e.product.owner.profileImageURL : void 0,
                     size: 40
                 })), _.createElement(g._7, {
@@ -11184,28 +11210,28 @@ webpackJsonp([41], {
                     type: g.O.Inherit,
                     to: e.product.owner ? "/" + e.product.owner.login : void 0,
                     hoverUnderlineNone: !0
-                }, "Turbo" === e.product.name ? ze() : e.product.name))))), _.createElement(g._35, {
+                }, "Turbo" === e.product.name ? Ie() : e.product.name))))), _.createElement(g._35, {
                     verticalAlign: g._54.Middle
                 }, _.createElement(g.P, null, function(e, t) {
                     if ("SUBSCRIPTION" === e.type) {
                         if ("Turbo" === e.name) return Object(m.d)("Turbo - Subscription", "TransactionHistoryTab");
                         if (e.tier) {
                             if (t.gift) switch (e.tier) {
-                                case He.Tier1:
+                                case Pe.Tier1:
                                     return Object(m.d)("Gift Subscription - Tier 1", "TransactionHistoryTab");
-                                case He.Tier2:
+                                case Pe.Tier2:
                                     return Object(m.d)("Gift Subscription - Tier 2", "TransactionHistoryTab");
-                                case He.Tier3:
+                                case Pe.Tier3:
                                     return Object(m.d)("Gift Subscription - Tier 3", "TransactionHistoryTab");
                                 default:
                                     return "-"
                             }
                             switch (e.tier) {
-                                case He.Tier1:
+                                case Pe.Tier1:
                                     return Object(m.d)("Channel Subscription - Tier 1", "TransactionHistoryTab");
-                                case He.Tier2:
+                                case Pe.Tier2:
                                     return Object(m.d)("Channel Subscription - Tier 2", "TransactionHistoryTab");
-                                case He.Tier3:
+                                case Pe.Tier3:
                                     return Object(m.d)("Channel Subscription - Tier 3", "TransactionHistoryTab");
                                 default:
                                     return Object(m.d)("Channel Subscription - One Time", "TransactionHistoryTab")
@@ -11278,7 +11304,7 @@ webpackJsonp([41], {
                                     themed: !0,
                                     light: {
                                         "1x": k.a,
-                                        "2x": w.a
+                                        "2x": T.a
                                     },
                                     dark: {
                                         "1x": b.a,
@@ -11307,23 +11333,23 @@ webpackJsonp([41], {
                                 alt: Object(m.d)("Credit Card", "TransactionHistoryTab"),
                                 srcSet: {
                                     "1x": P.a,
-                                    "2x": O.a
+                                    "2x": E.a
                                 }
                             })
                     }
                 }(e.paymentMethod.provider, e.paymentMethod.paymentType))))
             },
-            Je = n("b9g4"),
-            Re = n("T2Gu");
+            Re = n("b9g4"),
+            Ue = n("T2Gu");
         ! function(e) {
             e.PurchaseDateDesc = "PURCHASE_DATE_DESC", e.PurchaseDateAsc = "PURCHASE_DATE_ASC", e.PriceDesc = "PRICE_DESC", e.PriceAsc = "PRICE_ASC"
-        }(Ce || (Ce = {})),
+        }(Ne || (Ne = {})),
         function(e) {
             e.All = "ALL", e.Subscriptions = "SUBSCRIPTIONS"
-        }(Ne || (Ne = {}));
-        var Ue = 15,
-            Ge = "no-transactions-text-selector",
-            Be = function(e) {
+        }(ze || (ze = {}));
+        var Ge = 15,
+            Be = "no-transactions-text-selector",
+            Ve = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11344,7 +11370,7 @@ webpackJsonp([41], {
                             padding: 2
                         }, _.createElement(g.P, {
                             bold: !0,
-                            "data-test-selector": Ge
+                            "data-test-selector": Be
                         }, Object(m.d)("No Transactions", "TransactionHistoryTab")), _.createElement(g._7, {
                             margin: .5
                         }, _.createElement(g.P, null, Object(m.d)("A subscription would sure look good here. <x:link>Go find one you like</x:link>.", {
@@ -11356,16 +11382,16 @@ webpackJsonp([41], {
                             }
                         }, "TransactionHistoryTab"))))
                     }, t.getCurrentPage = function() {
-                        return Math.floor(t.state.currentIndex / Ue) + 1
+                        return Math.floor(t.state.currentIndex / Ge) + 1
                     }, t.getTotalPages = function() {
-                        return Math.ceil(t.props.data.currentUser.paymentTransactions.totalCount / Ue) || 1
+                        return Math.ceil(t.props.data.currentUser.paymentTransactions.totalCount / Ge) || 1
                     }, t.handlePageJump = function(e) {
                         return u.__awaiter(t, void 0, void 0, function() {
                             var t;
                             return u.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return this.state.refetching ? [2] : (t = (e - 1) * Ue, [4, this.queryPageJump(t)]);
+                                        return this.state.refetching ? [2] : (t = (e - 1) * Ge, [4, this.queryPageJump(t)]);
                                     case 1:
                                         return n.sent(), this.setState({
                                             currentIndex: t
@@ -11393,11 +11419,11 @@ webpackJsonp([41], {
                             return u.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return this.state.refetching ? [2] : [4, this.queryPageJump(this.state.currentIndex + Ue)];
+                                        return this.state.refetching ? [2] : [4, this.queryPageJump(this.state.currentIndex + Ge)];
                                     case 1:
                                         return e.sent(), this.setState(function(e) {
                                             return {
-                                                currentIndex: e.currentIndex + Ue
+                                                currentIndex: e.currentIndex + Ge
                                             }
                                         }), [2]
                                 }
@@ -11408,11 +11434,11 @@ webpackJsonp([41], {
                             return u.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return this.state.refetching ? [2] : [4, this.queryPageJump(this.state.currentIndex - Ue)];
+                                        return this.state.refetching ? [2] : [4, this.queryPageJump(this.state.currentIndex - Ge)];
                                     case 1:
                                         return e.sent(), this.setState(function(e) {
                                             return {
-                                                currentIndex: e.currentIndex - Ue
+                                                currentIndex: e.currentIndex - Ge
                                             }
                                         }), [2]
                                 }
@@ -11425,7 +11451,7 @@ webpackJsonp([41], {
                                 switch (a.label) {
                                     case 0:
                                         return e = this.state.dateSortType, t = e === g._27.Default || e === g._27.Ascending ? g._27.Descending : g._27.Ascending, n = u.__assign({}, this.state.currentFilters, {
-                                            sortBy: t === g._27.Descending ? Ce.PurchaseDateDesc : Ce.PurchaseDateAsc
+                                            sortBy: t === g._27.Descending ? Ne.PurchaseDateDesc : Ne.PurchaseDateAsc
                                         }), [4, this.props.getFilteredQuery(n)];
                                     case 1:
                                         return a.sent(), this.setState({
@@ -11444,7 +11470,7 @@ webpackJsonp([41], {
                                 switch (a.label) {
                                     case 0:
                                         return e = this.state.costSortType, t = e === g._27.Default || e === g._27.Ascending ? g._27.Descending : g._27.Ascending, n = u.__assign({}, this.state.currentFilters, {
-                                            sortBy: t === g._27.Descending ? Ce.PriceDesc : Ce.PriceAsc
+                                            sortBy: t === g._27.Descending ? Ne.PriceDesc : Ne.PriceAsc
                                         }), [4, this.props.getFilteredQuery(n)];
                                     case 1:
                                         return a.sent(), this.setState({
@@ -11502,7 +11528,7 @@ webpackJsonp([41], {
                     });
                     var e = this.props.data.currentUser.paymentTransactions.edges.map(function(e) {
                         var t = e.node;
-                        return _.createElement(Ie, u.__assign({
+                        return _.createElement(Je, u.__assign({
                             key: t.id
                         }, t))
                     });
@@ -11523,7 +11549,7 @@ webpackJsonp([41], {
                         flexDirection: g.S.Column
                     }, _.createElement(g.P, {
                         bold: !0
-                    }, Object(m.d)("Start", "TransactionHistoryTab")), _.createElement(Ae.a, {
+                    }, Object(m.d)("Start", "TransactionHistoryTab")), _.createElement(Fe.a, {
                         defaultDate: this.state.currentFilters.purchasedAfter,
                         maxDate: this.state.currentFilters.purchasedBefore,
                         onChange: this.handleMinDate,
@@ -11535,7 +11561,7 @@ webpackJsonp([41], {
                         flexDirection: g.S.Column
                     }, _.createElement(g.P, {
                         bold: !0
-                    }, Object(m.d)("End", "TransactionHistoryTab")), _.createElement(Ae.a, {
+                    }, Object(m.d)("End", "TransactionHistoryTab")), _.createElement(Fe.a, {
                         defaultDate: this.state.currentFilters.purchasedBefore,
                         minDate: this.state.currentFilters.purchasedAfter,
                         onChange: this.handleMaxDate,
@@ -11587,7 +11613,7 @@ webpackJsonp([41], {
                         "data-test-selector": "price-table-heading-selector"
                     }), _.createElement(g._37, {
                         label: Object(m.d)("Payment Method", "TransactionHistoryTab")
-                    })), _.createElement(g._34, null, e)), !e.length && this.renderNoTransactionsMessage()), _.createElement(We, {
+                    })), _.createElement(g._34, null, e)), !e.length && this.renderNoTransactionsMessage()), _.createElement(Ce, {
                         currentPage: this.getCurrentPage(),
                         totalNumberPages: this.getTotalPages(),
                         onNext: this.handleNextPage,
@@ -11607,16 +11633,16 @@ webpackJsonp([41], {
                     })
                 }, t
             }(_.Component),
-            Ve = Object(s.d)(Object(y.a)(Re), Object(y.a)(Je, {
+            Qe = Object(s.d)(Object(y.a)(Ue), Object(y.a)(Re, {
                 options: function(e) {
                     return {
                         variables: {
-                            first: Ue,
+                            first: Ge,
                             after: "0",
                             filters: {
                                 userID: e.data.currentUser.id,
-                                sortBy: Ce.PurchaseDateDesc,
-                                type: Ne.All
+                                sortBy: Ne.PurchaseDateDesc,
+                                type: ze.All
                             }
                         }
                     }
@@ -11625,7 +11651,7 @@ webpackJsonp([41], {
                     return u.__assign({}, e, {
                         getOffsetQuery: function(t, n) {
                             return e.data.fetchMore({
-                                query: Je,
+                                query: Re,
                                 variables: {
                                     first: e.data.variables.first,
                                     after: "" + t,
@@ -11638,7 +11664,7 @@ webpackJsonp([41], {
                         },
                         getFilteredQuery: function(t) {
                             return e.data.fetchMore({
-                                query: Je,
+                                query: Re,
                                 variables: {
                                     first: e.data.variables.first,
                                     after: "0",
@@ -11651,8 +11677,8 @@ webpackJsonp([41], {
                         }
                     })
                 }
-            }))(Be),
-            Qe = function(e) {
+            }))(Ve),
+            Ze = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11695,18 +11721,18 @@ webpackJsonp([41], {
                         margin: {
                             y: 2
                         }
-                    }, this.state.txnHistoryTabActive ? _.createElement(Ve, null) : _.createElement(Ee, null))))) : (this.props.onAnonymousVisit(), _.createElement(c.a, {
+                    }, this.state.txnHistoryTabActive ? _.createElement(Qe, null) : _.createElement(Ae, null))))) : (this.props.onAnonymousVisit(), _.createElement(c.a, {
                         message: Object(m.d)("You must be logged in to view this page", "PaymentsLandingPagePresentationComponent")
                     }))
                 }, t
             }(_.Component),
-            Ze = Object(l.compose)(Object(p.d)("PaymentsLandingPage", {
+            qe = Object(l.compose)(Object(p.d)("PaymentsLandingPage", {
                 autoReportInteractive: !0,
                 destination: f.a.PaymentsLandingPage
             }), Object(h.a)({
                 location: M.PageviewLocation.PaymentsLandingPage
-            }))(Qe);
-        var qe = Object(r.b)(function(e) {
+            }))(Ze);
+        var Ke = Object(r.b)(function(e) {
             return {
                 isLoggedIn: Object(d.d)(e)
             }
@@ -11716,9 +11742,9 @@ webpackJsonp([41], {
                     return Object(o.f)(i.a.PaymentsLandingPage)
                 }
             }, e)
-        })(Ze);
+        })(qe);
         n.d(t, "PaymentsLandingPage", function() {
-            return qe
+            return Ke
         })
     },
     hPuz: function(e, t, n) {
@@ -14805,7 +14831,7 @@ webpackJsonp([41], {
             k = /^([+-])(\d{2})$/,
             v = /^([+-])(\d{2}):?(\d{2})$/;
 
-        function w(e, t, n) {
+        function T(e, t, n) {
             t = t || 0, n = n || 0;
             var a = new Date(0);
             a.setUTCFullYear(e, 0, 4);
@@ -14817,7 +14843,7 @@ webpackJsonp([41], {
             if ("string" != typeof e) return new Date(e);
             var n = (t || {}).additionalDigits;
             n = null == n ? i : Number(n);
-            var T = function(e) {
+            var w = function(e) {
                     var t, n = {},
                         a = e.split(o);
                     if (d.test(a[0]) ? (n.date = null, t = a[0]) : (n.date = a[0], t = a[1]), t) {
@@ -14846,7 +14872,7 @@ webpackJsonp([41], {
                     return {
                         year: null
                     }
-                }(T.date, n),
+                }(w.date, n),
                 S = b.year,
                 x = function(e, t) {
                     if (null === t) return null;
@@ -14863,18 +14889,18 @@ webpackJsonp([41], {
                         var o = parseInt(n[2], 10);
                         return a.setUTCFullYear(t, r, o), a
                     }
-                    if (n = M.exec(e)) return s = parseInt(n[1], 10) - 1, w(t, s);
+                    if (n = M.exec(e)) return s = parseInt(n[1], 10) - 1, T(t, s);
                     if (n = p.exec(e)) {
                         s = parseInt(n[1], 10) - 1;
                         var d = parseInt(n[2], 10) - 1;
-                        return w(t, s, d)
+                        return T(t, s, d)
                     }
                     return null
                 }(b.restDateString, S);
             if (x) {
                 var H, P = x.getTime(),
                     j = 0;
-                return T.time && (j = function(e) {
+                return w.time && (j = function(e) {
                     var t, n, a;
                     if (t = y.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * r;
                     if (t = L.exec(e)) return n = parseInt(t[1], 10), a = parseFloat(t[2].replace(",", ".")), n % 24 * r + a * s;
@@ -14884,9 +14910,9 @@ webpackJsonp([41], {
                         return n % 24 * r + a * s + 1e3 * i
                     }
                     return null
-                }(T.time)), T.timezone ? (O = T.timezone, H = (E = D.exec(O)) ? 0 : (E = k.exec(O)) ? (A = 60 * parseInt(E[2], 10), "+" === E[1] ? -A : A) : (E = v.exec(O)) ? (A = 60 * parseInt(E[2], 10) + parseInt(E[3], 10), "+" === E[1] ? -A : A) : 0) : (H = new Date(P + j).getTimezoneOffset(), H = new Date(P + j + H * s).getTimezoneOffset()), new Date(P + j + H * s)
+                }(w.time)), w.timezone ? (E = w.timezone, H = (O = D.exec(E)) ? 0 : (O = k.exec(E)) ? (A = 60 * parseInt(O[2], 10), "+" === O[1] ? -A : A) : (O = v.exec(E)) ? (A = 60 * parseInt(O[2], 10) + parseInt(O[3], 10), "+" === O[1] ? -A : A) : 0) : (H = new Date(P + j).getTimezoneOffset(), H = new Date(P + j + H * s).getTimezoneOffset()), new Date(P + j + H * s)
             }
-            var O, E, A;
+            var E, O, A;
             return new Date(e)
         }
     },
@@ -15195,4 +15221,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.payments-291fda80a1fbd65e2940424d54fe19bb.js.map
+//# sourceMappingURL=pages.payments-609d4568c3be20f3d6997feec88ec60d.js.map

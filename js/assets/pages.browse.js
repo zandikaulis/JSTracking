@@ -216,7 +216,7 @@ webpackJsonp([52], {
                     return n.renderVariation = function() {
                         return r.createElement("div", a.__assign({
                             className: "live-channel-card"
-                        }, Object(C._57)(n.props)), r.createElement(l.a, {
+                        }, Object(C._58)(n.props)), r.createElement(l.a, {
                             context: l.b.MixedGameAndChannelList,
                             title: n.props.title,
                             linkTo: n.props.linkTo,
@@ -263,7 +263,7 @@ webpackJsonp([52], {
                         }, "Live Channel Card");
                         return r.createElement("div", a.__assign({
                             className: "live-channel-card"
-                        }, Object(C._57)(n.props)), r.createElement(C.B, {
+                        }, Object(C._58)(n.props)), r.createElement(C.B, {
                             key: n.props.title
                         }, r.createElement(C._7, {
                             fullWidth: !0
@@ -1262,7 +1262,7 @@ webpackJsonp([52], {
                     return r.createElement("div", a.__assign({
                         className: e,
                         "data-test-selector": "live-channel-preview-card"
-                    }, Object(h._57)(this.props)), r.createElement(l.a, a.__assign({}, this.props), r.createElement(h.j, {
+                    }, Object(h._58)(this.props)), r.createElement(l.a, a.__assign({}, this.props), r.createElement(h.j, {
                         ratio: h.k.Aspect16x9
                     }, this.props.videoPlayer)))
                 }, t
@@ -1730,7 +1730,7 @@ webpackJsonp([52], {
                             margin: .5,
                             padding: .5,
                             position: h._14.Absolute,
-                            zIndex: h._56.Above
+                            zIndex: h._57.Above
                         }, r.createElement(h._9, {
                             fillContent: !0,
                             inheritColor: !0,
@@ -2094,7 +2094,7 @@ webpackJsonp([52], {
                     position: R._14.Absolute,
                     attachTop: !0,
                     attachRight: !0
-                }, Object(R._57)(e)), f.createElement(R._47, {
+                }, Object(R._58)(e)), f.createElement(R._47, {
                     direction: R._49.Top,
                     align: R._48.Right,
                     label: Object(i.d)("Offers in-game Drops", "DropsBadge")
@@ -2109,7 +2109,7 @@ webpackJsonp([52], {
                     },
                     overflow: R._10.Hidden,
                     color: R.J.Overlay,
-                    zIndex: R._56.Default
+                    zIndex: R._57.Default
                 }, f.createElement(R.N, {
                     type: R.O.Inherit,
                     to: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops"
@@ -4247,7 +4247,7 @@ webpackJsonp([52], {
                             onClick: t.onClickHandler,
                             onMouseEnter: t.onMouseEnterHandler,
                             onMouseLeave: t.onMouseLeaveHandler
-                        }, Object(h._57)(t.props)), o.createElement(h.B, null, o.createElement(h._7, {
+                        }, Object(h._58)(t.props)), o.createElement(h.B, null, o.createElement(h._7, {
                             fullWidth: !0
                         }, o.createElement(h.j, {
                             overflow: !0
@@ -4257,7 +4257,7 @@ webpackJsonp([52], {
                             attachTop: !0,
                             attachLeft: !0,
                             margin: .5,
-                            zIndex: h._56.Default,
+                            zIndex: h._57.Default,
                             fontSize: h.U.Size6,
                             background: h.m.Overlay,
                             color: h.J.Overlay,
@@ -4273,7 +4273,7 @@ webpackJsonp([52], {
                             attachTop: !0,
                             attachRight: !0,
                             margin: .5,
-                            zIndex: h._56.Default,
+                            zIndex: h._57.Default,
                             fontSize: h.U.Size6,
                             background: h.m.Overlay,
                             color: h.J.Overlay,
@@ -5576,7 +5576,7 @@ webpackJsonp([52], {
                         margin: .5,
                         padding: .5,
                         position: d._14.Absolute,
-                        zIndex: d._56.Above
+                        zIndex: d._57.Above
                     }, r.createElement(d._9, {
                         fillContent: !0,
                         inheritColor: !0,
@@ -6201,4 +6201,4 @@ webpackJsonp([52], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-028f4798f0870347820126eadc584fff.js.map
+//# sourceMappingURL=pages.browse-5220b7721b7a305942a3d6e2ea565ce5.js.map

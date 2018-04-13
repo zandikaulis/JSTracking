@@ -1462,14 +1462,14 @@ webpackJsonp([75], {
                     overflow: A._10.Hidden,
                     className: "rare-emote"
                 }, o.createElement(A._1, {
-                    zIndex: A._56.Above,
+                    zIndex: A._57.Above,
                     position: A._14.Relative
                 }, o.createElement("img", {
                     className: t,
                     src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
                 })), o.createElement(A._7, {
                     position: A._14.Relative,
-                    zIndex: A._56.Default,
+                    zIndex: A._57.Default,
                     className: n
                 }, o.createElement(A._20, {
                     width: 28,
@@ -6207,7 +6207,7 @@ webpackJsonp([75], {
                         background: S.m.AccentAlt2,
                         color: S.J.Overlay,
                         position: S._14.Absolute,
-                        zIndex: S._56.Above,
+                        zIndex: S._57.Above,
                         fullWidth: !0
                     }, i.createElement(S._7, {
                         className: "raid-notification__content",
@@ -8315,7 +8315,7 @@ webpackJsonp([75], {
                     }, Object(_.d)("Ban", "RecentRaid")), i.createElement(D._7, {
                         key: "recent-raids-layout-" + this.props.raiderUserID,
                         className: "recent-raids-item__hover-content",
-                        zIndex: D._56.Above,
+                        zIndex: D._57.Above,
                         "data-a-target": "recent-raids-item-hover"
                     }, this.props.slideInContent, e)
                 }, t = a.__decorate([Object(E.a)(G, {
@@ -11478,7 +11478,7 @@ webpackJsonp([75], {
                     }, d.createElement(b.P, {
                         type: b._44.Strong,
                         fontSize: b.U.Size6
-                    }, Object(u.d)("Twitch Prime Member Bits Discount", "Bits--BuyCard"))));
+                    }, Object(u.d)("Twitch Prime Bits Discount", "Bits--BuyCard"))));
                     var n = null;
                     this.props.offer.discount && (n = d.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text",
@@ -13570,7 +13570,7 @@ webpackJsonp([75], {
                         className: "pinned-cheer",
                         flexGrow: 0,
                         flexShrink: 0,
-                        zIndex: v._56.Default
+                        zIndex: v._57.Default
                     }, i.createElement("div", {
                         className: E(m),
                         ref: this.saveRootRef
@@ -13653,7 +13653,7 @@ webpackJsonp([75], {
                     var e = null,
                         t = this.renderRecentCheer();
                     return null === t && (e = this.renderLeaderboard()), i.createElement(v._7, {
-                        zIndex: v._56.Default
+                        zIndex: v._57.Default
                     }, e, t)
                 }, t.prototype.renderLeaderboard = function() {
                     if (this.props.data.error || !(this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.leaderboard)) return null;
@@ -13680,7 +13680,7 @@ webpackJsonp([75], {
                         bitsConfig: this.props.bitsConfig
                     })), i.createElement(v._7, {
                         className: "pinned-cheer-v2",
-                        zIndex: v._56.Default
+                        zIndex: v._57.Default
                     }, i.createElement(v._30, {
                         borderBottom: !0
                     }, r, a))
@@ -15232,7 +15232,7 @@ webpackJsonp([75], {
                     }
                 }, i.createElement(v._1, {
                     position: v._14.Relative,
-                    zIndex: v._56.Default
+                    zIndex: v._57.Default
                 }, i.createElement("div", {
                     onMouseEnter: this.onMouseEnterInput
                 }, t, n, i.createElement(ue.b, {
@@ -15547,7 +15547,7 @@ webpackJsonp([75], {
                             display: v.Q.Flex,
                             alignItems: v.c.Center,
                             justifyContent: v._6.Center,
-                            zIndex: v._56.Above,
+                            zIndex: v._57.Above,
                             position: v._14.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
@@ -15559,7 +15559,7 @@ webpackJsonp([75], {
                         fullWidth: !0,
                         fullHeight: !0,
                         flexShrink: 0,
-                        zIndex: v._56.Default
+                        zIndex: v._57.Default
                     }, i.createElement("section", {
                         "aria-labelledby": "chat-viewers__header"
                     }, i.createElement(v._7, {
@@ -15844,7 +15844,7 @@ webpackJsonp([75], {
                     }), i.createElement(v._7, {
                         className: "chat-room__notifications",
                         position: v._14.Absolute,
-                        zIndex: v._56.Default,
+                        zIndex: v._57.Default,
                         fullWidth: !0
                     }, this.props.children), a, this.props.isOwnChannel && !this.props.isEmbedded && i.createElement(y, {
                         hostedChannelLogin: this.props.hostedChannelLogin
@@ -16747,7 +16747,7 @@ webpackJsonp([75], {
                         fullHeight: !0,
                         fullWidth: !0,
                         position: y._14.Relative,
-                        zIndex: y._56.Default
+                        zIndex: y._57.Default
                     }, h.createElement("div", {
                         onMouseUp: this.onDragEnd,
                         ref: function(t) {
@@ -20773,7 +20773,7 @@ webpackJsonp([75], {
                 }, e.stream.broadcaster.displayName)), s.createElement(O._30, {
                     color: O.J.Live,
                     display: O.Q.InlineFlex,
-                    zIndex: O._56.Above
+                    zIndex: O._57.Above
                 }, s.createElement(N.a, {
                     login: e.stream.broadcaster.login
                 }))))
@@ -20990,7 +20990,7 @@ webpackJsonp([75], {
                     return s.createElement(O._30, {
                         className: y(e),
                         position: O._14.Absolute,
-                        zIndex: O._56.Above,
+                        zIndex: O._57.Above,
                         alignItems: O.c.Center,
                         attachLeft: this.props.position === I.Left,
                         attachRight: this.props.position === I.Right,
@@ -23329,4 +23329,4 @@ webpackJsonp([75], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-163fd92088d3a1bdc7f858ad3da3fde5.js.map
+//# sourceMappingURL=pages.channel-surfing-7be1c47ac69ce916d2b0c3cd2bafd78b.js.map

@@ -216,7 +216,7 @@ webpackJsonp([55], {
                     return n.renderVariation = function() {
                         return r.createElement("div", a.__assign({
                             className: "live-channel-card"
-                        }, Object(C._57)(n.props)), r.createElement(l.a, {
+                        }, Object(C._58)(n.props)), r.createElement(l.a, {
                             context: l.b.MixedGameAndChannelList,
                             title: n.props.title,
                             linkTo: n.props.linkTo,
@@ -263,7 +263,7 @@ webpackJsonp([55], {
                         }, "Live Channel Card");
                         return r.createElement("div", a.__assign({
                             className: "live-channel-card"
-                        }, Object(C._57)(n.props)), r.createElement(C.B, {
+                        }, Object(C._58)(n.props)), r.createElement(C.B, {
                             key: n.props.title
                         }, r.createElement(C._7, {
                             fullWidth: !0
@@ -2947,7 +2947,7 @@ webpackJsonp([55], {
                             onClick: t.onClickHandler,
                             onMouseEnter: t.onMouseEnterHandler,
                             onMouseLeave: t.onMouseLeaveHandler
-                        }, Object(h._57)(t.props)), o.createElement(h.B, null, o.createElement(h._7, {
+                        }, Object(h._58)(t.props)), o.createElement(h.B, null, o.createElement(h._7, {
                             fullWidth: !0
                         }, o.createElement(h.j, {
                             overflow: !0
@@ -2957,7 +2957,7 @@ webpackJsonp([55], {
                             attachTop: !0,
                             attachLeft: !0,
                             margin: .5,
-                            zIndex: h._56.Default,
+                            zIndex: h._57.Default,
                             fontSize: h.U.Size6,
                             background: h.m.Overlay,
                             color: h.J.Overlay,
@@ -2973,7 +2973,7 @@ webpackJsonp([55], {
                             attachTop: !0,
                             attachRight: !0,
                             margin: .5,
-                            zIndex: h._56.Default,
+                            zIndex: h._57.Default,
                             fontSize: h.U.Size6,
                             background: h.m.Overlay,
                             color: h.J.Overlay,
@@ -3454,7 +3454,7 @@ webpackJsonp([55], {
                         display: h.Q.Block
                     }, d.createElement(h._5, r.__assign({
                         onClick: this.itemClick
-                    }, Object(h._57)(this.props)), d.createElement(h.j, {
+                    }, Object(h._58)(this.props)), d.createElement(h.j, {
                         ratio: h.k.Aspect16x9
                     }, d.createElement(h._7, {
                         className: "carousel-nav__meta",
@@ -3463,7 +3463,7 @@ webpackJsonp([55], {
                         margin: {
                             left: .5
                         },
-                        zIndex: h._56.Above
+                        zIndex: h._57.Above
                     }, this.renderIndicator(), d.createElement(h._7, {
                         display: h.Q.InlineFlex,
                         margin: {
@@ -4820,7 +4820,7 @@ webpackJsonp([55], {
                         margin: .5,
                         padding: .5,
                         position: c._14.Absolute,
-                        zIndex: c._56.Above
+                        zIndex: c._57.Above
                     }, r.createElement(c._9, {
                         fillContent: !0,
                         inheritColor: !0,
@@ -5085,4 +5085,4 @@ webpackJsonp([55], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-88f5bd2443ccc83e1983c21e0f68ec57.js.map
+//# sourceMappingURL=pages.anon-front-4883f745b9ee401650df0e2b1fade950.js.map

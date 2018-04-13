@@ -1907,7 +1907,7 @@ webpackJsonp([54], {
                             display: N.Q.Block
                         }, a.createElement(S.a, i.__assign({
                             to: e.viewAllLinkTo
-                        }, Object(N._57)(e)), Object(r.d)("View All", "GameListComponent")))),
+                        }, Object(N._58)(e)), Object(r.d)("View All", "GameListComponent")))),
                         o = [];
                     if (e.loading)
                         for (var d = 0; d < e.limit; d++) o.push(a.createElement(N._7, {
@@ -2166,9 +2166,13 @@ webpackJsonp([54], {
                 }, t.prototype.render = function() {
                     return this.props.data.loading ? a.createElement(Q, {
                         cardCount: 5
-                    }) : this.props.data.error ? a.createElement(y.a, {
+                    }) : this.props.data.error ? (this.props.onDataError && this.props.onDataError(), a.createElement(N._7, {
+                        margin: {
+                            top: 3
+                        }
+                    }, a.createElement(y.a, {
                         message: Object(r.d)("Error loading data.", "PulseComponent")
-                    }) : a.createElement(N._7, null, a.createElement(M.a, {
+                    }), ";")) : a.createElement(N._7, null, a.createElement(M.a, {
                         placeholder: Object(r.d)("Share a clip or video with your followers by adding links from Twitch, Vimeo, and YouTube.", "PulseComposer"),
                         onCreate: this.onCreatePost,
                         isConnectedToTwitter: this.props.data.currentUser.isConnectedToTwitter,
@@ -2326,13 +2330,18 @@ webpackJsonp([54], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        numSlotsAdded: 0
+                        numSlotsAdded: 0,
+                        pulseDataError: !1
                     }, t.onSlotAdded = function() {
                         t.setState(function(e) {
                             var t = e.numSlotsAdded + 1;
                             return t === Object.keys(p.b.front).length && c.a.display(p.b.front.leaderboard), {
                                 numSlotsAdded: t
                             }
+                        })
+                    }, t.onPulseDataError = function() {
+                        t.setState({
+                            pulseDataError: !0
                         })
                     }, t
                 }
@@ -2378,7 +2387,9 @@ webpackJsonp([54], {
                         className: "front-page__main-col",
                         flexGrow: 0,
                         flexShrink: 0
-                    }, a.createElement(L, null), a.createElement(J, null)), a.createElement(N._7, {
+                    }, a.createElement(L, null), a.createElement(J, {
+                        onDataError: this.onPulseDataError
+                    })), a.createElement(N._7, {
                         flexGrow: 1,
                         breakpointMedium: {
                             padding: {
@@ -2387,7 +2398,8 @@ webpackJsonp([54], {
                         }
                     }, a.createElement(d.c, {
                         bottomPixelThreshold: 20,
-                        disableStickinessBelowWidth: 1127
+                        disableStickinessBelowWidth: 1127,
+                        disableStickiness: this.state.pulseDataError
                     }, a.createElement(N._7, {
                         margin: {
                             bottom: 1
@@ -3952,7 +3964,7 @@ webpackJsonp([54], {
                     }, r.createElement(g._7, {
                         className: "embed-preview-close",
                         position: g._14.Absolute,
-                        zIndex: g._56.Default,
+                        zIndex: g._57.Default,
                         attachTop: !0,
                         attachRight: !0
                     }, r.createElement(g.v, {
@@ -4641,7 +4653,7 @@ webpackJsonp([54], {
                         r = n.token;
                     return parseInt(n.id, 10) < 15 && (r = Object(f.c)(n.token)), a.createElement("div", m.__assign({
                         onClick: this.toggleReaction
-                    }, Object(b._57)(this.props)), a.createElement(b._47, {
+                    }, Object(b._58)(this.props)), a.createElement(b._47, {
                         label: 0 === t ? r : t + " " + r,
                         direction: b._49.Top,
                         align: b._48.Center
@@ -5569,7 +5581,7 @@ webpackJsonp([54], {
                         },
                         background: l.m.Base,
                         position: l._14.Relative
-                    }, Object(l._57)(this.props), {
+                    }, Object(l._58)(this.props), {
                         className: "feed-item"
                     }), i.createElement(l._7, {
                         position: l._14.Absolute,
@@ -6037,7 +6049,7 @@ webpackJsonp([54], {
                         display: v.Q.Block
                     }, c.createElement(v._5, a.__assign({
                         onClick: this.itemClick
-                    }, Object(v._57)(this.props)), c.createElement(v.j, {
+                    }, Object(v._58)(this.props)), c.createElement(v.j, {
                         ratio: v.k.Aspect16x9
                     }, c.createElement(v._7, {
                         className: "carousel-nav__meta",
@@ -6046,7 +6058,7 @@ webpackJsonp([54], {
                         margin: {
                             left: .5
                         },
-                        zIndex: v._56.Above
+                        zIndex: v._57.Above
                     }, this.renderIndicator(), c.createElement(v._7, {
                         display: v.Q.InlineFlex,
                         margin: {
@@ -7628,4 +7640,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-91279a7a05271d77bc65d40aad6483cd.js.map
+//# sourceMappingURL=pages.front-d17b99d8de84b097a8e580e90dfca2a2.js.map

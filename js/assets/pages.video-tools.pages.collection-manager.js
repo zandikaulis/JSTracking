@@ -390,7 +390,7 @@ webpackJsonp([81], {
                         }
                     })
                 }
-            }), Object(g.d)("CollectionManager", {
+            }), Object(g.d)("CollectionManagerPage", {
                 destination: p.a.VideoManagerCollectionsManager
             }), Object(d.a)({
                 location: h.PageviewLocation.VideoManagerCollectionManager,
@@ -1349,4 +1349,4 @@ webpackJsonp([81], {
         })(k)
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-a474b18a2a90edcb420fb538425d1040.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-945c81b8cb4e3841780daff16882502a.js.map

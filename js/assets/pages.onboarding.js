@@ -216,7 +216,7 @@ webpackJsonp([50, 78], {
                     return n.renderVariation = function() {
                         return r.createElement("div", a.__assign({
                             className: "live-channel-card"
-                        }, Object(C._57)(n.props)), r.createElement(l.a, {
+                        }, Object(C._58)(n.props)), r.createElement(l.a, {
                             context: l.b.MixedGameAndChannelList,
                             title: n.props.title,
                             linkTo: n.props.linkTo,
@@ -263,7 +263,7 @@ webpackJsonp([50, 78], {
                         }, "Live Channel Card");
                         return r.createElement("div", a.__assign({
                             className: "live-channel-card"
-                        }, Object(C._57)(n.props)), r.createElement(C.B, {
+                        }, Object(C._58)(n.props)), r.createElement(C.B, {
                             key: n.props.title
                         }, r.createElement(C._7, {
                             fullWidth: !0
@@ -982,7 +982,7 @@ webpackJsonp([50, 78], {
                         }, r.createElement(f._7, {
                             padding: .5,
                             position: f._14.Absolute,
-                            zIndex: f._56.Above
+                            zIndex: f._57.Above
                         }, r.createElement(m.a, {
                             type: u.a.Live
                         })), r.createElement(y, {
@@ -1400,7 +1400,7 @@ webpackJsonp([50, 78], {
                     onMouseEnter: this.onMouseEnter,
                     onMouseLeave: this.onMouseLeave,
                     onClick: this.onClick
-                }, Object(c._57)(this.props)), r.createElement(c.B, {
+                }, Object(c._58)(this.props)), r.createElement(c.B, {
                     key: this.props.title
                 }, r.createElement(c._7, {
                     position: c._14.Relative
@@ -1441,7 +1441,7 @@ webpackJsonp([50, 78], {
                     alignItems: c.c.Center,
                     justifyContent: c._6.Center,
                     position: c._14.Absolute,
-                    zIndex: c._56.Above,
+                    zIndex: c._57.Above,
                     attachBottom: !0,
                     attachTop: !0,
                     attachLeft: !0,
@@ -1860,7 +1860,7 @@ webpackJsonp([50, 78], {
                     return r.createElement("div", a.__assign({
                         className: e,
                         "data-test-selector": "live-channel-preview-card"
-                    }, Object(g._57)(this.props)), r.createElement(l.a, a.__assign({}, this.props), r.createElement(g.j, {
+                    }, Object(g._58)(this.props)), r.createElement(l.a, a.__assign({}, this.props), r.createElement(g.j, {
                         ratio: g.k.Aspect16x9
                     }, this.props.videoPlayer)))
                 }, t
@@ -2328,7 +2328,7 @@ webpackJsonp([50, 78], {
                             margin: .5,
                             padding: .5,
                             position: g._14.Absolute,
-                            zIndex: g._56.Above
+                            zIndex: g._57.Above
                         }, r.createElement(g._9, {
                             fillContent: !0,
                             inheritColor: !0,
@@ -3596,7 +3596,7 @@ webpackJsonp([50, 78], {
                             onClick: t.onClickHandler,
                             onMouseEnter: t.onMouseEnterHandler,
                             onMouseLeave: t.onMouseLeaveHandler
-                        }, Object(g._57)(t.props)), o.createElement(g.B, null, o.createElement(g._7, {
+                        }, Object(g._58)(t.props)), o.createElement(g.B, null, o.createElement(g._7, {
                             fullWidth: !0
                         }, o.createElement(g.j, {
                             overflow: !0
@@ -3606,7 +3606,7 @@ webpackJsonp([50, 78], {
                             attachTop: !0,
                             attachLeft: !0,
                             margin: .5,
-                            zIndex: g._56.Default,
+                            zIndex: g._57.Default,
                             fontSize: g.U.Size6,
                             background: g.m.Overlay,
                             color: g.J.Overlay,
@@ -3622,7 +3622,7 @@ webpackJsonp([50, 78], {
                             attachTop: !0,
                             attachRight: !0,
                             margin: .5,
-                            zIndex: g._56.Default,
+                            zIndex: g._57.Default,
                             fontSize: g.U.Size6,
                             background: g.m.Overlay,
                             color: g.J.Overlay,
@@ -5657,7 +5657,7 @@ webpackJsonp([50, 78], {
                         margin: .5,
                         padding: .5,
                         position: c._14.Absolute,
-                        zIndex: c._56.Above
+                        zIndex: c._57.Above
                     }, r.createElement(c._9, {
                         fillContent: !0,
                         inheritColor: !0,
@@ -6294,4 +6294,4 @@ webpackJsonp([50, 78], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-8e1b12e6c262fe096e57be14fd09e83e.js.map
+//# sourceMappingURL=pages.onboarding-9e0993f3e481916cbfc7a1c2e9651a99.js.map

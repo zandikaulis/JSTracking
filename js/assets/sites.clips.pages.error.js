@@ -4,80 +4,78 @@ webpackJsonp([57], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r, i = n("TToO"),
-            a = n("GiK3"),
-            o = n("6sO2"),
-            s = n("j7/Y"),
-            c = n("w9tK"),
-            l = n("vH/s"),
+        var r = n("TToO"),
+            i = n("GiK3"),
+            a = n("6sO2"),
+            o = n("j7/Y"),
+            s = n("w9tK"),
+            c = n("vH/s"),
             u = n("l21v"),
-            d = n("CSlQ"),
+            l = n("CSlQ"),
+            d = n("YV3U"),
             p = n("Odds"),
-            h = (n("Ua7p"), "https://help.twitch.tv/customer/portal/emails/new");
-        ! function(e) {
-            e.ChannelNotLive = "channel_not_live", e.UserBanned = "user_banned", e.UserTimedOut = "user_timed_out", e.ChannelBanned = "channel_banned", e.ChannelNotClippable = "channel_not_clippable", e.NotLoggedIn = "not_logged_in", e.VideoNotAvailable = "video_not_available", e.SubOnlyVod = "video_subonly", e.ClipMissing = "clip_missing"
-        }(r || (r = {}));
-        var f = function(e) {
+            f = (n("Ua7p"), "https://help.twitch.tv/customer/portal/emails/new");
+        var h = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
-            return i.__extends(t, e), t.prototype.render = function() {
+            return r.__extends(t, e), t.prototype.render = function() {
                 var e = function(e) {
                     switch (e) {
-                        case r.ChannelNotLive:
+                        case d.a.ChannelNotLive:
                             return {
-                                title: Object(o.d)("Darn. Clipping is currently unavailable for this channel.", "ClipsError"),
-                                subtitle: Object(o.d)("This channel is offline. Try again when the channel goes live!", "ClipsError")
+                                title: Object(a.d)("Darn. Clipping is currently unavailable for this channel.", "ClipsError"),
+                                subtitle: Object(a.d)("This channel is offline. Try again when the channel goes live!", "ClipsError")
                             };
-                        case r.UserBanned:
+                        case d.a.UserBanned:
                             return {
-                                title: Object(o.d)("Darn. We can’t let you clip this channel because you’re banned from its chat.", "ClipsError"),
-                                subtitle: Object(o.d)("Please contact the channel owner or a moderator if you think there’s been a mistake.", "ClipsError")
+                                title: Object(a.d)("Darn. We can’t let you clip this channel because you’re banned from its chat.", "ClipsError"),
+                                subtitle: Object(a.d)("Please contact the channel owner or a moderator if you think there’s been a mistake.", "ClipsError")
                             };
-                        case r.UserTimedOut:
+                        case d.a.UserTimedOut:
                             return {
-                                title: Object(o.d)("Darn. We can’t let you clip this channel because you’re timed out from its chat.", "ClipsError"),
-                                subtitle: Object(o.d)("Please try again later or contact the channel owner or a moderator if you think there’s been a mistake.", "ClipsError")
+                                title: Object(a.d)("Darn. We can’t let you clip this channel because you’re timed out from its chat.", "ClipsError"),
+                                subtitle: Object(a.d)("Please try again later or contact the channel owner or a moderator if you think there’s been a mistake.", "ClipsError")
                             };
-                        case r.ChannelBanned:
+                        case d.a.ChannelBanned:
                             return {
-                                title: Object(o.d)("Uh-oh, this clip isn’t available right now.", "ClipsError"),
-                                subtitle: Object(o.d)("That channel has been closed due to terms of service violations.", "ClipsError")
+                                title: Object(a.d)("Uh-oh, this clip isn’t available right now.", "ClipsError"),
+                                subtitle: Object(a.d)("That channel has been closed due to terms of service violations.", "ClipsError")
                             };
-                        case r.ChannelNotClippable:
+                        case d.a.ChannelNotClippable:
                             return {
-                                title: Object(o.d)("Darn. Clipping is currently disabled on this channel.", "ClipsError"),
-                                subtitle: Object(o.d)("Try again on another channel.", "ClipsError")
+                                title: Object(a.d)("Darn. Clipping is currently disabled on this channel.", "ClipsError"),
+                                subtitle: Object(a.d)("Try again on another channel.", "ClipsError")
                             };
-                        case r.NotLoggedIn:
+                        case d.a.NotLoggedIn:
                             return {
-                                title: Object(o.d)("Hm. Looks like you’re not logged in.", "ClipsError"),
-                                subtitle: Object(o.d)("Log in and try again.", "ClipsError")
+                                title: Object(a.d)("Hm. Looks like you’re not logged in.", "ClipsError"),
+                                subtitle: Object(a.d)("Log in and try again.", "ClipsError")
                             };
-                        case r.VideoNotAvailable:
+                        case d.a.VideoNotAvailable:
                             return {
-                                title: Object(o.d)("Darn. We can’t create a clip for that video.", "ClipsError"),
-                                subtitle: Object(o.d)("That video is no longer available. Try clipping another video!", "ClipsError")
+                                title: Object(a.d)("Darn. We can’t create a clip for that video.", "ClipsError"),
+                                subtitle: Object(a.d)("That video is no longer available. Try clipping another video!", "ClipsError")
                             };
-                        case r.SubOnlyVod:
+                        case d.a.SubOnlyVod:
                             return {
-                                title: Object(o.d)("Darn. Subscriber-only videos are not clippable.", "ClipsError"),
-                                subtitle: Object(o.d)("Try clipping another video!", "ClipsError")
+                                title: Object(a.d)("Darn. Subscriber-only videos are not clippable.", "ClipsError"),
+                                subtitle: Object(a.d)("Try clipping another video!", "ClipsError")
                             };
-                        case r.ClipMissing:
+                        case d.a.ClipMissing:
                             return {
-                                title: Object(o.d)("Whoops. Something went wrong.", "ClipsError"),
-                                subtitle: Object(o.d)("We could not find that clip", "ClipsError")
+                                title: Object(a.d)("Whoops. Something went wrong.", "ClipsError"),
+                                subtitle: Object(a.d)("We could not find that clip", "ClipsError")
                             };
                         default:
                             return {
-                                title: Object(o.d)("Well this is awkward… Something went wrong.", "ClipsError"),
-                                subtitle: Object(o.d)("Refresh the stream and try again, or tell us what happened.", "ClipsError"),
-                                link: h
+                                title: Object(a.d)("Well this is awkward… Something went wrong.", "ClipsError"),
+                                subtitle: Object(a.d)("Refresh the stream and try again, or tell us what happened.", "ClipsError"),
+                                link: f
                             }
                     }
                 }(this.props.match.params.error);
-                return a.createElement(p._30, {
+                return i.createElement(p._30, {
                     className: "clips-error-page",
                     background: p.m.Base,
                     margin: {
@@ -86,35 +84,35 @@ webpackJsonp([57], {
                     elevation: 3,
                     color: p.J.Base,
                     textAlign: p._40.Center
-                }, a.createElement(p.j, {
+                }, i.createElement(p.j, {
                     ratio: p.k.Aspect16x9
-                }, a.createElement(p._7, {
+                }, i.createElement(p._7, {
                     display: p.Q.Flex,
                     justifyContent: p._6.Center,
                     alignItems: p.c.Center,
                     flexDirection: p.S.Column,
                     padding: 1
-                }, a.createElement(p.M, {
+                }, i.createElement(p.M, {
                     src: Object(u.f)("58765", 2),
-                    alt: Object(o.d)("Not like this... not like this", "ClipsError")
-                }), a.createElement(p.P, {
+                    alt: Object(a.d)("Not like this... not like this", "ClipsError")
+                }), i.createElement(p.P, {
                     fontSize: p.U.Size4
-                }, e.title), a.createElement(p.P, {
+                }, e.title), i.createElement(p.P, {
                     fontSize: p.U.Size5
-                }, e.subtitle), e.link && a.createElement(p.P, {
+                }, e.subtitle), e.link && i.createElement(p.P, {
                     fontSize: p.U.Size5
-                }, a.createElement("a", {
+                }, i.createElement("a", {
                     href: e.link
-                }, Object(o.d)("Report Issue", "ClipsError"))))))
-            }, t = i.__decorate([Object(d.d)("ClipsErrorPage", {
-                destination: c.a.ClipsError,
+                }, Object(a.d)("Report Issue", "ClipsError"))))))
+            }, t = r.__decorate([Object(l.d)("ClipsErrorPage", {
+                destination: s.a.ClipsError,
                 autoReportInteractive: !0
-            }), Object(s.a)({
-                location: l.PageviewLocation.ClipsError
+            }), Object(o.a)({
+                location: c.PageviewLocation.ClipsError
             })], t)
-        }(a.Component);
+        }(i.Component);
         n.d(t, "ClipsError", function() {
-            return f
+            return h
         })
     },
     "3KVC": function(e, t, n) {
@@ -145,17 +143,17 @@ webpackJsonp([57], {
         }), n.d(t, "a", function() {
             return c
         }), n.d(t, "i", function() {
-            return l
-        }), n.d(t, "k", function() {
             return u
+        }), n.d(t, "k", function() {
+            return l
         }), n.d(t, "j", function() {
             return d
         }), n.d(t, "l", function() {
             return p
         }), n.d(t, "g", function() {
-            return h
-        }), n.d(t, "h", function() {
             return f
+        }), n.d(t, "h", function() {
+            return h
         }), n.d(t, "d", function() {
             return g
         }), n.d(t, "e", function() {
@@ -172,12 +170,12 @@ webpackJsonp([57], {
             o = "https://d3aqoihi2n8ty8.cloudfront.net",
             s = o + "/cheer",
             c = o + "/actions",
-            l = 8e5,
-            u = 1e4,
+            u = 8e5,
+            l = 1e4,
             d = 500,
             p = 1e3,
-            h = "cheer",
-            f = i.a.Purple,
+            f = "cheer",
+            h = i.a.Purple,
             g = "FIRST_PARTY",
             v = "THIRD_PARTY",
             m = ((r = {})[i.a.Gray] = "#979797", r[i.a.Purple] = "#9c3ee8", r[i.a.Green] = "#1db2a5", r[i.a.Blue] = "#0099fe", r[i.a.Red] = "#f43021", r[i.a.Yellow] = "#f3a71a", r)
@@ -189,7 +187,7 @@ webpackJsonp([57], {
                 var e = [],
                     t = {};
                 Object.keys(a).forEach(function(n) {
-                    var r = u(n, a[n]);
+                    var r = l(n, a[n]);
                     e.push(r), t[n.toLowerCase()] = r
                 }), c = {
                     orderedActions: e,
@@ -198,11 +196,11 @@ webpackJsonp([57], {
             }
             return c
         }, t.b = function() {
-            l || (l = function(e) {
+            u || (u = function(e) {
                 if (c) return c.indexedActions[e.toLowerCase()];
-                return u(e, a[e])
+                return l(e, a[e])
             }("Cheer"));
-            return l
+            return u
         };
         var r = n("I89S"),
             i = n("3iBR"),
@@ -218,9 +216,9 @@ webpackJsonp([57], {
             o = ["LIGHT", "DARK"],
             s = [1, 1.5, 2, 3, 4],
             c = null;
-        var l = null;
+        var u = null;
 
-        function u(e, t) {
+        function l(e, t) {
             var n = [r.a.Red, r.a.Blue, r.a.Green, r.a.Purple, r.a.Gray],
                 i = new Map,
                 a = [];
@@ -242,16 +240,16 @@ webpackJsonp([57], {
 
         function d(e, t) {
             for (var n = [], r = {}, a = 0, c = o; a < c.length; a++)
-                for (var l = c[a], u = 0, d = s; u < d.length; u++) {
-                    var h = d[u];
-                    r[l] || (r[l] = {
+                for (var u = c[a], l = 0, d = s; l < d.length; l++) {
+                    var f = d[l];
+                    r[u] || (r[u] = {
                         animated: new Map,
                         static: new Map
                     });
-                    var f = p(e, l, !0, t, h);
-                    n.push(f), r[l].animated.set(h, f.url);
-                    var g = p(e, l, !1, t, h);
-                    n.push(g), r[l].static.set(h, g.url)
+                    var h = p(e, u, !0, t, f);
+                    n.push(h), r[u].animated.set(f, h.url);
+                    var g = p(e, u, !1, t, f);
+                    n.push(g), r[u].static.set(f, g.url)
                 }
             return {
                 id: e + ";" + t,
@@ -295,10 +293,10 @@ webpackJsonp([57], {
                     s = t[o];
                 if (s && "function" != typeof s) {
                     var c = Object(r.d)(e.slice(0, a.index)),
-                        l = c ? c.length : a.index;
-                    n[l] = {
-                        startIndex: l,
-                        endIndex: l + o.length,
+                        u = c ? c.length : a.index;
+                    n[u] = {
+                        startIndex: u,
+                        endIndex: u + o.length,
                         data: {
                             alt: o,
                             images: {
@@ -318,11 +316,11 @@ webpackJsonp([57], {
         }, t.a = function(e) {
             for (var t = {}, n = 0, r = e; n < r.length; n++)
                 for (var o = r[n], s = 0, c = o.emotes; s < c.length; s++)
-                    for (var l = c[s], u = i[l.token] || [l.token], d = 0, p = u; d < p.length; d++) {
-                        var h = p[d];
-                        t[h] && o.id === a || (t[h] = {
-                            id: l.id,
-                            token: h
+                    for (var u = c[s], l = i[u.token] || [u.token], d = 0, p = l; d < p.length; d++) {
+                        var f = p[d];
+                        t[f] && o.id === a || (t[f] = {
+                            id: u.id,
+                            token: f
                         })
                     }
             return t
@@ -375,31 +373,31 @@ webpackJsonp([57], {
             var n = [],
                 o = t.indexedActions,
                 c = new RegExp("^(" + Object.keys(o).join("|") + ")(\\d+)$", "i"),
-                l = e.split(/\s+/);
-            return l.forEach(function(e, t) {
-                var u = c.exec(e);
-                if (u) {
-                    var d = u[1].toLowerCase(),
-                        p = +u[2],
-                        h = o[d];
-                    if (h || d !== r.g || (h = Object(i.b)()), h) {
-                        var f = h.orderedTiers.find(function(e) {
+                u = e.split(/\s+/);
+            return u.forEach(function(e, t) {
+                var l = c.exec(e);
+                if (l) {
+                    var d = l[1].toLowerCase(),
+                        p = +l[2],
+                        f = o[d];
+                    if (f || d !== r.g || (f = Object(i.b)()), f) {
+                        var h = f.orderedTiers.find(function(e) {
                             return e.bits <= p
                         });
-                        !f && p && (f = h.orderedTiers[0]), f && n.push({
+                        !h && p && (h = f.orderedTiers[0]), h && n.push({
                             type: a.a.Emote,
                             content: {
-                                images: s(f),
-                                alt: h.prefix,
+                                images: s(h),
+                                alt: f.prefix,
                                 cheerAmount: p,
-                                cheerColor: f.color
+                                cheerColor: h.color
                             }
                         })
                     }
                 } else {
                     var g = n.length && n[n.length - 1],
                         v = "";
-                    if (t < l.length - 1 && (v = " "), g && g.type === a.a.Text) g.content += e + v;
+                    if (t < u.length - 1 && (v = " "), g && g.type === a.a.Text) g.content += e + v;
                     else {
                         var m = "";
                         t && (m = " "), n.push({
@@ -467,11 +465,11 @@ webpackJsonp([57], {
                                 var a = i.referenceTracking,
                                     o = a.content,
                                     c = a.medium,
-                                    l = a.content_index;
+                                    u = a.content_index;
                                 s.o.tracking.trackPageview(r.__assign({
                                     content: o,
                                     medium: c,
-                                    content_index: l,
+                                    content_index: u,
                                     location: e.location
                                 }, t))
                             }
@@ -520,8 +518,8 @@ webpackJsonp([57], {
             o = n("mwvJ"),
             s = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?");
         var c = n("YhVV"),
-            l = n("3KVC"),
-            u = n("e1CU");
+            u = n("3KVC"),
+            l = n("e1CU");
         t.a = function(e, t, n, i, a, o) {
             void 0 === o && (o = !1);
             var s;
@@ -537,9 +535,9 @@ webpackJsonp([57], {
                                 images: {
                                     themed: !1,
                                     sources: {
-                                        "1x": b(n, 1),
-                                        "2x": b(n, 2),
-                                        "4x": b(n, 4)
+                                        "1x": x(n, 1),
+                                        "2x": x(n, 2),
+                                        "4x": x(n, 4)
                                     }
                                 }
                             }
@@ -548,48 +546,48 @@ webpackJsonp([57], {
                 });
                 return t
             }(t.emotes);
-            var l = Object(u.a)(t.displayName, t.username);
+            var u = Object(l.a)(t.displayName, t.username);
             return {
                 badges: t.badges || {},
                 bits: t.bits,
-                user: r.__assign({}, l, {
+                user: r.__assign({}, u, {
                     userLogin: t.username,
                     userID: t.userID,
                     userType: t.userType,
-                    color: t.color || h(t.userID)
+                    color: t.color || f(t.userID)
                 }),
-                messageParts: e ? f(e, s, t.bits, n, i, l.userDisplayName) : [],
+                messageParts: e ? h(e, s, t.bits, n, i, u.userDisplayName) : [],
                 deleted: o,
                 timestamp: Date.now()
             }
-        }, t.b = h, t.g = f, t.d = g, t.c = m, t.f = b, t.e = function(e) {
+        }, t.b = f, t.g = h, t.d = g, t.c = m, t.f = x, t.e = function(e) {
             return {
-                src: b(e, 1),
-                srcSet: b(e, 1) + " 1x, " + b(e, 2) + " 2x, " + b(e, 3) + " 4x"
+                src: x(e, 1),
+                srcSet: x(e, 1) + " 1x, " + x(e, 2) + " 2x, " + x(e, 3) + " 4x"
             }
         };
         var d = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
             p = {};
 
-        function h(e, t) {
+        function f(e, t) {
             return void 0 === t && (t = 15), "number" != typeof p[e] && (p[e] = Math.floor(Math.random() * t)), d[p[e]]
         }
 
-        function f(e, t, n, i, a, s) {
+        function h(e, t, n, i, a, s) {
             void 0 === t && (t = []);
             var c = [],
-                l = 0,
-                u = g(e);
+                u = 0,
+                l = g(e);
             t.forEach(function(t) {
-                var d = u ? u.slice(l, t.startIndex).join("") : e.slice(l, t.startIndex);
+                var d = l ? l.slice(u, t.startIndex).join("") : e.slice(u, t.startIndex);
                 d && (c = n ? c.concat(v(d, s, a, i)) : c.concat(m(d, s, a))), c.push({
                     type: o.a.Emote,
                     content: r.__assign({
-                        alt: u ? u.slice(t.startIndex, t.endIndex).join("") : e.slice(t.startIndex, t.endIndex)
+                        alt: l ? l.slice(t.startIndex, t.endIndex).join("") : e.slice(t.startIndex, t.endIndex)
                     }, t.data)
-                }), l = t.endIndex
+                }), u = t.endIndex
             });
-            var d = u ? u.slice(l).join("") : e.slice(l);
+            var d = l ? l.slice(u).join("") : e.slice(u);
             return d && (c = n ? c.concat(v(d, s, a, i)) : c.concat(m(d, s, a))), c
         }
 
@@ -609,17 +607,17 @@ webpackJsonp([57], {
             var r = /^(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,6}(?:\/[\w./@#%&()\-+=:?~]*)?)$/g,
                 a = /([^\w@#%\-+=:~])?(@)([^\u0000-\u007F]+|\w+)+([^\w./@#%&()\-+=:?~]|\s|$)/g,
                 c = [],
-                u = e.split(/\s+/);
-            return u.forEach(function(e, d) {
+                l = e.split(/\s+/);
+            return l.forEach(function(e, d) {
                 r.lastIndex = 0;
                 var p = r.exec(e);
                 a.lastIndex = 0;
-                var h = a.exec(e);
+                var f = a.exec(e);
                 if (p) {
-                    var f = p.index;
-                    0 !== f && c.push({
+                    var h = p.index;
+                    0 !== h && c.push({
                         type: o.a.Text,
-                        content: "" + e.slice(0, f)
+                        content: "" + e.slice(0, h)
                     });
                     var g = r.lastIndex;
                     if (n) c.push({
@@ -627,7 +625,7 @@ webpackJsonp([57], {
                         content: " <" + Object(i.d)("deleted link", "CreateMessageData") + "> "
                     });
                     else {
-                        var v = (p[1] ? "" : "https://") + e.slice(f, g);
+                        var v = (p[1] ? "" : "https://") + e.slice(h, g);
                         if (function(e) {
                                 return void 0 === e && (e = ""), s.test(e) && !e.includes("clips.twitch.tv/2017/")
                             }(v)) {
@@ -641,38 +639,38 @@ webpackJsonp([57], {
                                 content: {
                                     slug: m,
                                     url: v,
-                                    displayText: e.slice(f, g)
+                                    displayText: e.slice(h, g)
                                 }
                             })
-                        } else if (Object(l.a)(v)) {
-                            var b = Object(l.b)(v);
+                        } else if (Object(u.a)(v)) {
+                            var x = Object(u.b)(v);
                             c.push({
                                 type: o.a.VideoLink,
                                 content: {
-                                    id: b,
+                                    id: x,
                                     url: v,
-                                    displayText: e.slice(f, g)
+                                    displayText: e.slice(h, g)
                                 }
                             })
                         } else c.push({
                             type: o.a.Link,
                             content: {
-                                displayText: e.slice(f, g),
+                                displayText: e.slice(h, g),
                                 url: v
                             }
                         })
                     }
-                    var x = e.slice(g),
+                    var b = e.slice(g),
                         y = "";
-                    d < u.length - 1 && (y = " "), x && c.push({
+                    d < l.length - 1 && (y = " "), b && c.push({
                         type: o.a.Text,
-                        content: "" + x + y
+                        content: "" + b + y
                     })
                 } else {
-                    if (!h) {
+                    if (!f) {
                         var O = c.length && c[c.length - 1];
                         y = "";
-                        if (d < u.length - 1 && (y = " "), O && O.type === o.a.Text) O.content += e + y;
+                        if (d < l.length - 1 && (y = " "), O && O.type === o.a.Text) O.content += e + y;
                         else {
                             var C = "";
                             d && (C = " "), c.push({
@@ -682,19 +680,19 @@ webpackJsonp([57], {
                         }
                         return
                     }
-                    var _ = h[3];
+                    var T = f[3];
                     c.push({
                         type: o.a.Mention,
                         content: {
                             sender: t,
-                            recipient: _
+                            recipient: T
                         }
                     })
                 }
             }), c
         }
 
-        function b(e, t) {
+        function x(e, t) {
             return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
         }
     },
@@ -709,4 +707,4 @@ webpackJsonp([57], {
             }(r || (r = {}))
     }
 });
-//# sourceMappingURL=sites.clips.pages.error-52da6f2ee65d97243311d7a701c614da.js.map
+//# sourceMappingURL=sites.clips.pages.error-090cf7111b0326cb82809cc69690a489.js.map

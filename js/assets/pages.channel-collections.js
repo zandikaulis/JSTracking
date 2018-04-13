@@ -1231,7 +1231,7 @@ webpackJsonp([53], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: r._56.Above
+                        zIndex: r._57.Above
                     }, a.createElement("input", {
                         "data-a-target": "file-picker-input",
                         "data-test-selector": "file-picker-input",
@@ -2764,7 +2764,7 @@ webpackJsonp([53], {
                     }, c.createElement(v.P, {
                         type: v._44.Strong,
                         fontSize: v.U.Size6
-                    }, Object(u.d)("Twitch Prime Member Bits Discount", "Bits--BuyCard"))));
+                    }, Object(u.d)("Twitch Prime Bits Discount", "Bits--BuyCard"))));
                     var n = null;
                     this.props.offer.discount && (n = c.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text",
@@ -5607,7 +5607,7 @@ webpackJsonp([53], {
                     }, "ChannelCollections");
                     return a.createElement(v.B, i.__assign({
                         key: this.props.title
-                    }, Object(v._57)(this.props)), a.createElement(v._1, {
+                    }, Object(v._58)(this.props)), a.createElement(v._1, {
                         position: v._14.Relative
                     }, a.createElement(g.a, {
                         to: {
@@ -5923,4 +5923,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-fef40185ba56668269ae1a8b6ffe89d0.js.map
+//# sourceMappingURL=pages.channel-collections-6d69f53c3e48f53556e9b9ac773bd28a.js.map

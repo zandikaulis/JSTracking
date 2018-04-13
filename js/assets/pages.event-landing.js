@@ -1284,11 +1284,11 @@ webpackJsonp([47], {
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(d._57)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
+                    }, Object(d._58)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(d._57)(n.props)), n.renderIcon())
+                    }, Object(d._58)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -2998,7 +2998,7 @@ webpackJsonp([47], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: r._56.Above
+                        zIndex: r._57.Above
                     }, a.createElement("input", {
                         "data-a-target": "file-picker-input",
                         "data-test-selector": "file-picker-input",
@@ -3602,7 +3602,7 @@ webpackJsonp([47], {
                     return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += Object(A.a)(this.props.offsetSeconds)), l.createElement("div", s.__assign({
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(w._57)(this.props)), l.createElement(w.B, null, l.createElement(C.a, {
+                    }, Object(w._58)(this.props)), l.createElement(w.B, null, l.createElement(C.a, {
                         to: {
                             pathname: "/videos/" + this.props.video.id,
                             search: e,
@@ -3620,7 +3620,7 @@ webpackJsonp([47], {
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: w._56.Default,
+                        zIndex: w._57.Default,
                         fontSize: w.U.Size6,
                         background: w.m.Overlay,
                         color: w.J.Overlay,
@@ -3636,7 +3636,7 @@ webpackJsonp([47], {
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: w._56.Default,
+                        zIndex: w._57.Default,
                         fontSize: w.U.Size6,
                         background: w.m.Overlay,
                         color: w.J.Overlay,
@@ -6941,7 +6941,7 @@ webpackJsonp([47], {
                     }, d.createElement(f.P, {
                         type: f._44.Strong,
                         fontSize: f.U.Size6
-                    }, Object(u.d)("Twitch Prime Member Bits Discount", "Bits--BuyCard"))));
+                    }, Object(u.d)("Twitch Prime Bits Discount", "Bits--BuyCard"))));
                     var n = null;
                     this.props.offer.discount && (n = d.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text",
@@ -7720,7 +7720,7 @@ webpackJsonp([47], {
                             onClick: t.onClickHandler,
                             onMouseEnter: t.onMouseEnterHandler,
                             onMouseLeave: t.onMouseLeaveHandler
-                        }, Object(v._57)(t.props)), o.createElement(v.B, null, o.createElement(v._7, {
+                        }, Object(v._58)(t.props)), o.createElement(v.B, null, o.createElement(v._7, {
                             fullWidth: !0
                         }, o.createElement(v.j, {
                             overflow: !0
@@ -7730,7 +7730,7 @@ webpackJsonp([47], {
                             attachTop: !0,
                             attachLeft: !0,
                             margin: .5,
-                            zIndex: v._56.Default,
+                            zIndex: v._57.Default,
                             fontSize: v.U.Size6,
                             background: v.m.Overlay,
                             color: v.J.Overlay,
@@ -7746,7 +7746,7 @@ webpackJsonp([47], {
                             attachTop: !0,
                             attachRight: !0,
                             margin: .5,
-                            zIndex: v._56.Default,
+                            zIndex: v._57.Default,
                             fontSize: v.U.Size6,
                             background: v.m.Overlay,
                             color: v.J.Overlay,
@@ -10321,7 +10321,7 @@ webpackJsonp([47], {
                         margin: .5,
                         padding: .5,
                         position: d._14.Absolute,
-                        zIndex: d._56.Above
+                        zIndex: d._57.Above
                     }, a.createElement(d._9, {
                         fillContent: !0,
                         inheritColor: !0,
@@ -11137,4 +11137,4 @@ webpackJsonp([47], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-87f13b0399dae08dc1b778e621199729.js.map
+//# sourceMappingURL=pages.event-landing-313d0f4bb4d25b9edcc58ad5ca2fa6d4.js.map
