@@ -507,6 +507,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "60936fd6-ef0a-49f1-9421-712f2ba02513": {
+            "name": "TWILIGHT_DASHBOARD_SETTINGS_LAUNCH",
+            "v": 3519,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "6699df7d-9f23-494c-87a1-06fdf80f1e68": {
             "name": "twilight_video_card_updates",
             "v": 3460,
