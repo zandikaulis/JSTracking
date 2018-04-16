@@ -23,6 +23,7 @@ window.__twilightSettings = {
     "comscore_url": "https://sb.scorecardresearch.com/beacon.js",
     "crate_snowman_launch": "off",
     "crate_trickster_launch": "off",
+    "dashboard_nav_reorg": true,
     "dashboard_settings_launch": "off",
     "deprecated_messages_download_enabled": false,
     "detector_urls": ["https://pubads.g.doubleclick.net/|", "https://adservice.google.com/|"],
