@@ -315,7 +315,7 @@ webpackJsonp([67], {
                     })
                 }, t
             }(n.Component),
-            _ = Object(o.d)(Object(d.d)("EmailVerification", {
+            _ = Object(o.d)(Object(d.d)("EmailVerificationPage", {
                 destination: c.a.EmailVerification
             }), Object(a.a)({
                 location: u.PageviewLocation.EmailVerification
@@ -325,4 +325,4 @@ webpackJsonp([67], {
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-ef3a85bd66eb47c10879cc258cb7b37a.js.map
+//# sourceMappingURL=pages.email-verification-ecea776e7661549f7c486e8978cacbf9.js.map

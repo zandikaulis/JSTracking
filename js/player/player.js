@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".caf3bea9d66ddf91865a.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6f48190784423dfc371e.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -7724,7 +7724,8 @@
                                 manifest_broadcast_id: o.broadcast_id,
                                 broadcast_id: u.broadcastID,
                                 autoplayed: this.options.autoplay,
-                                tab_session_id: Object(T.b)()
+                                tab_session_id: Object(T.b)(),
+                                seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3
                             };
                             if (this.hasFiredVideoPlay || (a.milestones.forEach(function(e) {
                                     var t = "time_to_" + e.name;
@@ -31490,7 +31491,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.16-180506+eabe563a895e5ce5892c1eefe90ee2ff77d7d4b6",
+                    app_version: "2018.04.16-194938+133e5742aa8da794820d620f23de2eeec7193782",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -37144,7 +37145,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Ya = Object.freeze((ba = {}, u(ba, Ha.a.MINUTE_WATCHED, ["time", "device_id", "play_session_id", "customer_id", "content_id", "seconds_offset"]), u(ba, Ha.a.VIDEO_PLAY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "time_since_load_start"]), u(ba, Ha.a.BUFFER_EMPTY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "buffer_empty_count"]), u(ba, Ha.b, ["time", "device_id", "play_session_id", "customer_id", "content_id", "reason", "code"]), ba)),
+            Ya = Object.freeze((ba = {}, u(ba, Ha.a.MINUTE_WATCHED, ["time", "device_id", "play_session_id", "customer_id", "content_id", "seconds_offset"]), u(ba, Ha.a.VIDEO_PLAY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "time_since_load_start", "seconds_offset"]), u(ba, Ha.a.BUFFER_EMPTY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "buffer_empty_count"]), u(ba, Ha.b, ["time", "device_id", "play_session_id", "customer_id", "content_id", "reason", "code"]), ba)),
             Qa = Object.freeze(Object.keys(Ya)),
             $a = function() {
                 function e(t) {

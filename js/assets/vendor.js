@@ -13237,14 +13237,23 @@ webpackJsonp([70], {
                     return i[e]
                 }
             })
+        });
+        var a = n("OBX+");
+        Object.keys(a).forEach(function(e) {
+            "default" !== e && "__esModule" !== e && Object.defineProperty(t, e, {
+                enumerable: !0,
+                get: function() {
+                    return a[e]
+                }
+            })
         }), n("30OU"), n("ju79"), n("rplX");
-        var a = n("MSsg");
-        t.extensionService = a.extensionService;
-        var s = function() {
+        var s = n("MSsg");
+        t.extensionService = s.extensionService;
+        var u = function() {
             function e() {}
-            return e.ExtensionFrame = r.ExtensionFrame, e.ExtensionService = a.extensionService, e
+            return e.ExtensionFrame = r.ExtensionFrame, e.ExtensionService = s.extensionService, e
         }();
-        t.ExtensionCoordinator = s
+        t.ExtensionCoordinator = u
     },
     BzvE: function(e, t, n) {
         "use strict";
@@ -16071,7 +16080,9 @@ webpackJsonp([70], {
                                         })
                                     } else if ("subgift" === s) {
                                         var v = e.tags["msg-param-recipient-display-name"],
-                                            g = (d = e.tags["msg-param-sub-plan"], h = a.decodeTag(e.tags["msg-param-sub-plan-name"]), a.getInteger(e.tags["msg-param-sender-count"], 0));
+                                            g = e.tags["msg-param-recipient-user-name"],
+                                            b = e.tags["msg-param-recipient-id"],
+                                            w = (d = e.tags["msg-param-sub-plan"], h = a.decodeTag(e.tags["msg-param-sub-plan-name"]), a.getInteger(e.tags["msg-param-sender-count"], 0));
                                         m = d.includes("Prime");
                                         i && (e.tags["message-type"] = "subgift"), this.events.subgift({
                                             channel: o,
@@ -16081,158 +16092,160 @@ webpackJsonp([70], {
                                                 plan: d,
                                                 planName: h
                                             },
+                                            recipientID: b,
+                                            recipientLogin: g,
                                             recipientName: v,
-                                            senderCount: g
+                                            senderCount: w
                                         })
                                     } else if ("charity" === s) {
-                                        var b = e.tags["msg-param-charity-name"],
-                                            w = Number(e.tags["msg-param-total"]),
-                                            _ = Number(e.tags["msg-param-charity-days-remaining"]),
-                                            x = Number(e.tags["msg-param-charity-hours-remaining"]),
-                                            E = e.tags["msg-param-charity-hashtag"],
-                                            k = e.tags["msg-param-charity-learn-more"];
-                                        if (isNaN(w) || isNaN(_) || isNaN(x) || !b || !E || !k) break;
+                                        var _ = e.tags["msg-param-charity-name"],
+                                            x = Number(e.tags["msg-param-total"]),
+                                            E = Number(e.tags["msg-param-charity-days-remaining"]),
+                                            k = Number(e.tags["msg-param-charity-hours-remaining"]),
+                                            O = e.tags["msg-param-charity-hashtag"],
+                                            C = e.tags["msg-param-charity-learn-more"];
+                                        if (isNaN(x) || isNaN(E) || isNaN(k) || !_ || !O || !C) break;
                                         this.events.charity({
-                                            total: w,
-                                            charityName: a.decodeTag(b),
-                                            daysLeft: _,
-                                            hoursLeft: x,
-                                            hashtag: E,
-                                            learnMore: k
+                                            total: x,
+                                            charityName: a.decodeTag(_),
+                                            daysLeft: E,
+                                            hoursLeft: k,
+                                            hashtag: O,
+                                            learnMore: C
                                         })
                                     } else if ("unraid" === s) {
-                                        var O = e.tags["display-name"] || e.tags.login,
-                                            C = a.decodeTag(e.tags["system-msg"]);
+                                        var T = e.tags["display-name"] || e.tags.login,
+                                            S = a.decodeTag(e.tags["system-msg"]);
                                         this.events.unraid({
                                             channel: o,
-                                            userLogin: O,
-                                            message: C
+                                            userLogin: T,
+                                            message: S
                                         })
                                     } else if ("raid" === s) {
-                                        O = e.tags["display-name"] || e.tags.login;
-                                        var T = e.tags["msg-param-displayName"],
-                                            S = e.tags["msg-param-viewerCount"],
-                                            P = e.tags["msg-param-login"];
+                                        T = e.tags["display-name"] || e.tags.login;
+                                        var P = e.tags["msg-param-displayName"],
+                                            A = e.tags["msg-param-viewerCount"],
+                                            R = e.tags["msg-param-login"];
                                         this.events.raid({
                                             channel: o,
-                                            userLogin: O,
+                                            userLogin: T,
                                             params: {
-                                                displayName: T,
-                                                viewerCount: S,
+                                                displayName: P,
+                                                viewerCount: A,
                                                 msgId: s,
-                                                login: P
+                                                login: R
                                             }
                                         })
                                     } else if ("crate" === s) {
-                                        var A = a.getInteger(e.tags["msg-param-selectedCount"]),
-                                            R = this.createChatMessage(e, i);
+                                        var j = a.getInteger(e.tags["msg-param-selectedCount"]),
+                                            I = this.createChatMessage(e, i);
                                         this.events.crate({
-                                            selectedCount: A,
-                                            message: R,
+                                            selectedCount: j,
+                                            message: I,
                                             timestamp: Date.now(),
                                             type: c.Crate
                                         })
                                     } else if ("purchase" === s) {
-                                        var j = e.tags,
-                                            I = {
+                                        var M = e.tags,
+                                            L = {
                                                 purchased: {
                                                     type: "game",
-                                                    title: j["msg-param-title"].split("\\s").join(" "),
-                                                    boxart: j["msg-param-imageURL"]
+                                                    title: M["msg-param-title"].split("\\s").join(" "),
+                                                    boxart: M["msg-param-imageURL"]
                                                 },
-                                                numCrates: parseInt(j["msg-param-crateCount"], 10) || 0,
+                                                numCrates: parseInt(M["msg-param-crateCount"], 10) || 0,
                                                 crateLoot: []
                                             },
-                                            M = j["msg-param-emoticons"];
-                                        M && (t = I.crateLoot).push.apply(t, M.split(",").map(function(e) {
+                                            D = M["msg-param-emoticons"];
+                                        D && (t = L.crateLoot).push.apply(t, D.split(",").map(function(e) {
                                             return {
                                                 id: e,
                                                 type: u.Emote
                                             }
                                         }));
-                                        var L = j["msg-param-badges"];
-                                        L && (n = I.crateLoot).push.apply(n, L.split(",").map(function(e) {
+                                        var N = M["msg-param-badges"];
+                                        N && (n = L.crateLoot).push.apply(n, N.split(",").map(function(e) {
                                             return {
                                                 img: e,
                                                 type: u.Badge
                                             }
                                         }));
-                                        var D = +j["msg-param-bits"];
-                                        D && I.crateLoot.push({
-                                            quantity: D,
+                                        var F = +M["msg-param-bits"];
+                                        F && L.crateLoot.push({
+                                            quantity: F,
                                             type: u.Bits
                                         });
-                                        var N = j["msg-param-inGameContent"];
-                                        N && (r = I.crateLoot).push.apply(r, N.split(",").map(function(e) {
+                                        var q = M["msg-param-inGameContent"];
+                                        q && (r = L.crateLoot).push.apply(r, q.split(",").map(function(e) {
                                             return {
                                                 img: e,
                                                 type: u.InGameContent
                                             }
                                         }));
-                                        R = {
+                                        I = {
                                             user: this.createUser(e),
-                                            timestamp: +j["tmi-sent-ts"],
+                                            timestamp: +M["tmi-sent-ts"],
                                             body: i
                                         };
                                         this.events.purchase({
-                                            message: R,
-                                            purchase: I,
+                                            message: I,
+                                            purchase: L,
                                             timestamp: Date.now(),
                                             type: c.Purchase
                                         })
                                     } else if ("ritual" === s) {
-                                        var F = e.tags["msg-param-ritual-name"];
-                                        R = {
+                                        var U = e.tags["msg-param-ritual-name"];
+                                        I = {
                                             user: this.createUser(e),
                                             timestamp: +e.tags["tmi-sent-ts"],
                                             body: i
                                         };
                                         this.events.ritual({
-                                            type: F,
-                                            message: R
+                                            type: U,
+                                            message: I
                                         })
                                     } else {
-                                        R = this.createChatMessage(e, i);
-                                        this.events.usernotice(this.createChatMessageEvent(c.UserNotice, s, o, R, !1))
+                                        I = this.createChatMessage(e, i);
+                                        this.events.usernotice(this.createChatMessageEvent(c.UserNotice, s, o, I, !1))
                                     }
                                     break;
                                 case "HOSTTARGET":
-                                    var q = +i.split(" ")[1] || 0;
+                                    var B = +i.split(" ")[1] || 0;
                                     if ("-" === i.split(" ")[0]) this.commands.unhost.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
                                     }), this.events.unhost({
                                         channel: o,
-                                        viewers: q
+                                        viewers: B
                                     });
                                     else {
-                                        var U = i.split(" ")[0];
+                                        var H = i.split(" ")[0];
                                         this.commands.host.signal({
                                             channel: o,
                                             msgid: s,
                                             succeeded: !0
                                         }), this.events.hosting({
                                             channel: o,
-                                            target: U,
-                                            viewers: q
+                                            target: H,
+                                            viewers: B
                                         })
                                     }
                                     break;
                                 case "CLEARCHAT":
                                     if (e.params.length > 1) {
-                                        var B = +e.tags["ban-duration"] || null,
-                                            H = a.decodeTag(e.tags["ban-reason"]);
-                                        null === B ? this.events.ban({
+                                        var Q = +e.tags["ban-duration"] || null,
+                                            V = a.decodeTag(e.tags["ban-reason"]);
+                                        null === Q ? this.events.ban({
                                             channel: o,
-                                            reason: H,
+                                            reason: V,
                                             userLogin: i,
                                             duration: null
                                         }) : this.events.timeout({
                                             channel: o,
-                                            reason: H,
+                                            reason: V,
                                             userLogin: i,
-                                            duration: B
+                                            duration: Q
                                         })
                                     } else this.events.clearchat({
                                         channel: o
@@ -16249,19 +16262,19 @@ webpackJsonp([70], {
                                     break;
                                 case "USERSTATE":
                                     e.tags.username = this.session.username;
-                                    var Q = this.createUser(e);
+                                    var z = this.createUser(e);
                                     this.commands.sendMessage.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
-                                    }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(o, this.session.username), a.isJustinfan(this.session.username) || this.session.hasJoinedChannel(o) || (this.session.onJoinedChannel(o, Q), this.events.joined({
+                                    }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(o, this.session.username), a.isJustinfan(this.session.username) || this.session.hasJoinedChannel(o) || (this.session.onJoinedChannel(o, z), this.events.joined({
                                         channel: o,
                                         username: this.session.username,
                                         gotUsername: !0
                                     })), this.session.updateBadges(o, e.badges) && this.events.badgesupdated({
                                         badges: e.badges,
                                         username: a.username(this.session.username)
-                                    }), this.session.updateUserState(o, Q);
+                                    }), this.session.updateUserState(o, z);
                                     break;
                                 case "GLOBALUSERSTATE":
                                     this.logger.debug("Updated global user state", {
@@ -16269,27 +16282,27 @@ webpackJsonp([70], {
                                     }), this.session.globaluserstate = e.tags;
                                     break;
                                 case "ROOMSTATE":
-                                    var V = a.channel(e.params[0]),
-                                        z = this.createRoomState(e);
-                                    this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === V && this.commands.join.signal({
+                                    var W = a.channel(e.params[0]),
+                                        K = this.createRoomState(e);
+                                    this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === W && this.commands.join.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
                                     }), this.events.roomstate({
                                         channel: o,
-                                        state: z
-                                    }), e.tags.hasOwnProperty("slow") && !e.tags.hasOwnProperty("subs-only") && (z.slowMode ? this.events.slowmode({
+                                        state: K
+                                    }), e.tags.hasOwnProperty("slow") && !e.tags.hasOwnProperty("subs-only") && (K.slowMode ? this.events.slowmode({
                                         channel: o,
                                         enabled: !0,
-                                        length: z.slowModeDuration
+                                        length: K.slowModeDuration
                                     }) : this.events.slowmode({
                                         channel: o,
                                         enabled: !1,
                                         length: 0
-                                    })), e.tags.hasOwnProperty("followers-only") && !e.tags.hasOwnProperty("subs-only") && (z.followersOnly ? this.events.followersonly({
+                                    })), e.tags.hasOwnProperty("followers-only") && !e.tags.hasOwnProperty("subs-only") && (K.followersOnly ? this.events.followersonly({
                                         channel: o,
                                         enabled: !0,
-                                        length: z.followersOnlyRequirement
+                                        length: K.followersOnlyRequirement
                                     }) : this.events.followersonly({
                                         channel: o,
                                         enabled: !1,
@@ -16300,12 +16313,12 @@ webpackJsonp([70], {
                                     this.logger.warn("Could not parse message from tmi.twitch.tv:\n" + JSON.stringify(e, null, 4))
                             } else if ("jtv" === e.prefix) switch (e.command) {
                                 case "MODE":
-                                    var W = e.params[2];
-                                    "+o" === i ? (this.session.addChannelModerator(o, W), this.events.mod({
-                                        username: W,
+                                    var G = e.params[2];
+                                    "+o" === i ? (this.session.addChannelModerator(o, G), this.events.mod({
+                                        username: G,
                                         channel: o
-                                    })) : "-o" === i && (this.session.removeChannelModerator(o, W), this.events.unmod({
-                                        username: W,
+                                    })) : "-o" === i && (this.session.removeChannelModerator(o, G), this.events.unmod({
+                                        username: G,
                                         channel: o
                                     }));
                                     break;
@@ -16321,28 +16334,28 @@ webpackJsonp([70], {
                                 case "366":
                                     break;
                                 case "JOIN":
-                                    var K = e.prefix.split("!")[0];
-                                    a.isJustinfan(this.session.username) && this.session.username === K && (this.session.onJoinedChannel(o, this.createUser(e)), this.events.joined({
+                                    var J = e.prefix.split("!")[0];
+                                    a.isJustinfan(this.session.username) && this.session.username === J && (this.session.onJoinedChannel(o, this.createUser(e)), this.events.joined({
                                         channel: o,
-                                        username: K,
+                                        username: J,
                                         gotUsername: !0
-                                    })), this.session.username !== K && this.events.joined({
+                                    })), this.session.username !== J && this.events.joined({
                                         channel: o,
-                                        username: K,
+                                        username: J,
                                         gotUsername: !1
                                     });
                                     break;
                                 case "PART":
-                                    var G = e.prefix.split("!")[0],
-                                        J = this.session.username === G;
-                                    J && (this.session.onPartedChannel(o), this.commands.part.signal({
+                                    var Y = e.prefix.split("!")[0],
+                                        X = this.session.username === Y;
+                                    X && (this.session.onPartedChannel(o), this.commands.part.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
                                     })), this.events.parted({
                                         channel: o,
-                                        username: G,
-                                        isSelf: J
+                                        username: Y,
+                                        isSelf: X
                                     });
                                     break;
                                 case "WHISPER":
@@ -16354,36 +16367,36 @@ webpackJsonp([70], {
                                     break;
                                 case "PRIVMSG":
                                     if (e.tags.username = e.prefix.split("!")[0], "jtv" === e.tags.username) {
-                                        var Y = a.username(i.split(" ")[0]);
+                                        var $ = a.username(i.split(" ")[0]);
                                         if (i.includes("hosting you for")) {
-                                            q = a.extractNumber(i);
+                                            B = a.extractNumber(i);
                                             this.events.hosted({
                                                 channel: o,
-                                                from: Y,
+                                                from: $,
                                                 isAuto: i.includes("auto"),
-                                                viewers: q
+                                                viewers: B
                                             })
                                         } else i.includes("hosting you") && this.events.hosted({
                                             channel: o,
-                                            from: Y,
+                                            from: $,
                                             isAuto: i.includes("auto"),
                                             viewers: 0
                                         })
                                     } else {
-                                        var X = i.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
-                                        R = this.createChatMessage(e, i);
-                                        if (X && X.length >= 2) {
+                                        var Z = i.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
+                                        I = this.createChatMessage(e, i);
+                                        if (Z && Z.length >= 2) {
                                             e.tags["message-type"] = "action";
-                                            var $ = X[1];
+                                            var ee = Z[1];
                                             this.events.action({
                                                 type: c.Action,
                                                 timestamp: Date.now(),
-                                                action: $,
+                                                action: ee,
                                                 channel: o,
-                                                message: R,
+                                                message: I,
                                                 sentByCurrentUser: !1
                                             })
-                                        } else this.events.chat(this.createChatMessageEvent(c.Message, s, o, R, !1))
+                                        } else this.events.chat(this.createChatMessageEvent(c.Message, s, o, I, !1))
                                     }
                                     break;
                                 default:
@@ -17476,11 +17489,13 @@ webpackJsonp([70], {
         ! function(e) {
             e.Testing = "testing", e.HostedTest = "hosted_test", e.Approved = "approved", e.Released = "released", e.ReadyForReview = "ready_for_review", e.InReview = "in_review", e.PendingAction = "pending_action", e.Uploading = "uploading"
         }(u || (t.ExternalExtensionState = u = {}));
-        t.ExtensionStateMap = ((c = {})[s.Testing] = u.Testing, c[s.HostedTest] = u.HostedTest, c[s.Approved] = u.Approved, c[s.Released] = u.Released, c[s.ReadyForReview] = u.ReadyForReview, c[s.InReview] = u.InReview, c[s.PendingAction] = u.PendingAction, c[s.Uploading] = u.Uploading, c);
-        var c, l = t.ExtensionAction = void 0;
+        t.ExtensionStateMap = ((l = {})[s.Testing] = u.Testing, l[s.HostedTest] = u.HostedTest, l[s.Approved] = u.Approved, l[s.Released] = u.Released, l[s.ReadyForReview] = u.ReadyForReview, l[s.InReview] = u.InReview, l[s.PendingAction] = u.PendingAction, l[s.Uploading] = u.Uploading, l);
+        var c = t.ExtensionAction = void 0;
         ! function(e) {
             e.TwitchExtAuth = "twitch-ext-auth", e.TwitchExtBootstrap = "twitch-ext-bootstrap", e.TwitchExtContext = "twitch-ext-context", e.TwitchExtError = "twitch-ext-error", e.TwitchExtLoaded = "twitch-ext-loaded", e.TwitchExtNetworkTiming = "twitch-ext-network-timing", e.TwitchExtReload = "twitch-ext-reload", e.TwitchExtUserAction = "twitch-ext-user-action", e.TwitchExtConfirmationRequest = "twitch-ext-confirmation-request", e.TwitchExtBeginPurchase = "twitch-ext-begin-purchase", e.TwitchExtReloadEntitlements = "twitch-ext-reload-entitlements", e.TwitchExtProductPrices = "twitch-ext-product-prices", e.TwitchExtVisibilityChanged = "twitch-ext-visibility-changed", e.TwitchExtBitsProducts = "twitch-ext-bits-products", e.TwitchExtUseBits = "twitch-ext-use-bits", e.TwitchExtBitsTransactionComplete = "twitch-ext-bits-transaction-complete", e.TwitchExtBitsOnHover = "twitch-ext-bits-on-hover", e.TwitchExtPubSubReceived = "twitch-ext-pubsub-received", e.TwitchExtPositionChanged = "twitch-ext-position-changed"
-        }(l || (t.ExtensionAction = l = {}))
+        }(c || (t.ExtensionAction = c = {}));
+        var l;
+        t.DefaultZoomPixelWidth = 1024
     },
     J7Qi: function(e, t, n) {
         "use strict";
@@ -18883,6 +18898,13 @@ webpackJsonp([70], {
                             case "mass_deactivate":
                                 n.currentControlHandlers.onDestroyExtension(e.extensionId)
                         }
+                    }, n.onBroadcastSettingsUpdateMessage = function(e) {
+                        var t = e.channel_id,
+                            r = e.game,
+                            o = e.old_game;
+                        n.currentChannelId && t === n.currentChannelId || !n.broadcastSettingsUnsubscribe ? r !== o && n.emit(h, {
+                            game: r
+                        }) : n.broadcastSettingsUnsubscribe()
                     }, n.pubsub = t || new s.Pubsub, n
                 }
                 return p(t, e), t.prototype.getInstalledExtensions = function(e) {
@@ -18907,15 +18929,20 @@ webpackJsonp([70], {
                         authToken: e.authToken
                     })
                 }, t.prototype.subscribeToExtensionControl = function(e, t) {
-                    e !== this.currentChannelId && this.unsubscribeFromExtensionControl(this.currentChannelId), this.currentChannelId = e, this.currentControlHandlers = t, this.currentChannelUnsubscribe = this.pubsub.subscribe({
+                    this.currentChannelId && e !== this.currentChannelId && this.unsubscribeFromExtensionControl(this.currentChannelId), this.currentChannelId = e, this.currentControlHandlers = t, this.currentChannelUnsubscribe = this.pubsub.subscribe({
                         topic: "extension-control." + e,
                         success: this.onSubscribeSuccess,
                         failure: this.onSubscribeFailure,
                         message: this.onExtensionControlMessage
+                    }), this.broadcastSettingsUnsubscribe = this.pubsub.subscribe({
+                        topic: "broadcast-settings-update." + e,
+                        success: this.onSubscribeSuccess,
+                        failure: this.onSubscribeFailure,
+                        message: this.onBroadcastSettingsUpdateMessage
                     })
                 }, t.prototype.unsubscribeFromExtensionControl = function(e) {
                     if (this.currentChannelId && e === this.currentChannelId) {
-                        this.currentChannelUnsubscribe && this.currentChannelUnsubscribe();
+                        this.currentChannelUnsubscribe && this.currentChannelUnsubscribe(), this.broadcastSettingsUnsubscribe && this.broadcastSettingsUnsubscribe();
                         for (var t = 0, n = Object.keys(this.currentExtensionUnsubscribes); t < n.length; t++) {
                             var r = n[t];
                             this.currentExtensionUnsubscribes[r]()
@@ -19198,6 +19225,29 @@ webpackJsonp([70], {
                 return e.length > 0
             }).join("&") : ""
         }
+    },
+    "OBX+": function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.getComponentPositionFromView = function(e, t, n) {
+            return {
+                x: n.x * e / 1e4,
+                y: n.y * t / 1e4
+            }
+        }, t.getComponentSizeFromView = function(e, t, n) {
+            var o = n.aspectWidth / 1e4,
+                i = n.aspectHeight / 1e4,
+                a = n.zoomPixels || r.DefaultZoomPixelWidth,
+                s = e * o,
+                u = t * i;
+            return {
+                width: Math.floor(s),
+                height: Math.floor(u),
+                zoomScale: s / a
+            }
+        };
+        var r = n("J/Pl")
     },
     OtmA: function(e, t) {
         var n = "/service-worker.js";
@@ -31341,13 +31391,56 @@ webpackJsonp([70], {
     },
     rX23: function(e, t, n) {
         "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.convertViews = o, t.extensionInstallationsFromRest = function(e) {
+            return e.installed_extensions.map(function(t) {
+                var n = t.extension,
+                    i = t.installation_status,
+                    a = e.tokens.reduce(function(e, t) {
+                        var r = t.extension_id,
+                            o = t.token;
+                        return n.id === r ? o : e
+                    }, ""),
+                    s = i.activation_config.anchor === r.ExtensionAnchor.Component;
+                return {
+                    id: n.id,
+                    extension: {
+                        authorName: n.author_name,
+                        clientId: n.id,
+                        bitsEnabled: n.bits_enabled,
+                        description: n.description,
+                        name: n.name,
+                        iconUrl: n.icon_url,
+                        id: n.id,
+                        requestIdentityLink: n.request_identity_link,
+                        sku: n.sku,
+                        summary: n.summary,
+                        token: a,
+                        vendorCode: n.vendor_code,
+                        state: n.state,
+                        version: n.version,
+                        views: o(n.views),
+                        whitelistedConfigUrls: n.whitelisted_config_urls,
+                        whitelistedPanelUrls: n.whitelisted_panel_urls
+                    },
+                    activationConfig: {
+                        anchor: i.activation_config.anchor,
+                        slot: i.activation_config.slot,
+                        x: s ? i.activation_config.x : void 0,
+                        y: s ? i.activation_config.y : void 0,
+                        state: i.activation_state
+                    }
+                }
+            })
+        };
+        var r = n("r5oj");
 
-        function r(e) {
+        function o(e) {
             var t = {};
             return e.component && (t.component = {
                 aspectHeight: e.component.aspect_height,
                 aspectWidth: e.component.aspect_width,
-                size: e.component.size,
                 viewerUrl: e.component.viewer_url,
                 zoom: e.component.zoom,
                 zoomPixels: e.component.zoom_pixels
@@ -31365,46 +31458,6 @@ webpackJsonp([70], {
             }), e.video_overlay && (t.videoOverlay = {
                 viewerUrl: e.video_overlay.viewer_url
             }), t
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.convertViews = r, t.extensionInstallationsFromRest = function(e) {
-            return e.installed_extensions.map(function(t) {
-                var n = t.extension,
-                    o = t.installation_status,
-                    i = e.tokens.reduce(function(e, t) {
-                        var r = t.extension_id,
-                            o = t.token;
-                        return n.id === r ? o : e
-                    }, "");
-                return {
-                    id: n.id,
-                    extension: {
-                        authorName: n.author_name,
-                        clientId: n.id,
-                        bitsEnabled: n.bits_enabled,
-                        description: n.description,
-                        name: n.name,
-                        iconUrl: n.icon_url,
-                        id: n.id,
-                        requestIdentityLink: n.request_identity_link,
-                        sku: n.sku,
-                        summary: n.summary,
-                        token: i,
-                        vendorCode: n.vendor_code,
-                        state: n.state,
-                        version: n.version,
-                        views: r(n.views),
-                        whitelistedConfigUrls: n.whitelisted_config_urls,
-                        whitelistedPanelUrls: n.whitelisted_panel_urls
-                    },
-                    activationConfig: {
-                        anchor: o.activation_config.anchor,
-                        slot: o.activation_config.slot,
-                        state: o.activation_state
-                    }
-                }
-            })
         }
     },
     rnx4: function(e, t, n) {
@@ -35437,4 +35490,4 @@ webpackJsonp([70], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-2381361a7d6554bd856d5c46b2338371.js.map
+//# sourceMappingURL=vendor-bc8629150cb370d2f247264312f4237a.js.map

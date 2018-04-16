@@ -2058,56 +2058,48 @@ webpackJsonp([54], {
                         "data-test-selector": "onboarding-prompt",
                         background: N.m.Base,
                         display: N.Q.Flex,
-                        elevation: 3,
+                        flexDirection: N.S.Row,
                         margin: {
                             bottom: 1
                         },
-                        padding: 1,
+                        elevation: 3,
                         borderMarked: !0
-                    }, a.createElement(N._30, {
+                    }, a.createElement(N._7, {
                         display: N.Q.Flex,
+                        flexDirection: N.S.Column,
                         flexWrap: N.T.NoWrap,
                         textAlign: N._40.Left,
-                        alignItems: N.c.Center,
-                        fullWidth: !0,
-                        padding: {
-                            bottom: 1
-                        }
-                    }, a.createElement(N._7, {
-                        margin: {
-                            right: 1
-                        },
-                        flexGrow: 1
+                        padding: 1,
+                        fullWidth: !0
                     }, a.createElement(N.P, {
                         type: N._44.H5,
                         color: N.J.Base,
                         bold: !0
                     }, Object(r.d)("Welcome to your homepage, {displayName}!", {
                         displayName: this.props.data.currentUser.displayName
-                    }, "OnboardingPrompt"))), a.createElement(N._7, {
-                        flexShrink: 0
-                    }, a.createElement(N.v, {
-                        "data-test-selector": "onboarding-prompt__dismiss",
-                        ariaLabel: Object(r.d)("dismiss onboarding", "OnboardingPrompt"),
-                        type: N.x.Default,
-                        onClick: this.dismissOnboardingPrompt,
-                        icon: N._21.Close
-                    }))), a.createElement(N._7, {
-                        padding: {
-                            bottom: 1
+                    }, "OnboardingPrompt")), a.createElement(N._7, {
+                        margin: {
+                            y: 1
                         }
                     }, a.createElement(N.P, null, Object(r.d)("Here you can find your Pulse Feed and popular content on Twitch. Take a moment to personalize this page to your interests.", "OnboardingPrompt"))), a.createElement(N._7, {
-                        margin: {
-                            y: .5
+                        padding: {
+                            bottom: .5
                         }
                     }, a.createElement(N.u, {
                         "data-test-selector": "onboarding-prompt__start",
                         onClick: this.startOnboarding
-                    }, a.createElement(N._7, {
-                        padding: {
-                            x: 1
+                    }, Object(r.d)("Start", "OnboardingPrompt")))), a.createElement(N._7, {
+                        flexShrink: 0,
+                        margin: {
+                            top: .5
                         }
-                    }, Object(r.d)("Start", "OnboardingPrompt"))))) : null
+                    }, a.createElement(N.v, {
+                        "data-test-selector": "onboarding-prompt__dismiss",
+                        ariaLabel: Object(r.d)("dismiss onboarding", "OnboardingPrompt"),
+                        type: N.x.Default,
+                        icon: N._21.Close,
+                        onClick: this.dismissOnboardingPrompt
+                    }))) : null
                 }, t = i.__decorate([Object(v.d)("OnboardingPrompt", {
                     autoReportInteractive: !0
                 }), Object(h.a)(O, {
@@ -7640,4 +7632,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-d17b99d8de84b097a8e580e90dfca2a2.js.map
+//# sourceMappingURL=pages.front-7ed58159b7b83dccee524622e899f79e.js.map
