@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2401b99c146ca8805cd9.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".caf3bea9d66ddf91865a.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -1775,7 +1775,11 @@
         }
 
         function p(e, t) {
-            return d("users/" + e + "/subscriptions/" + t)
+            return d("users/" + e + "/subscriptions/" + t, {
+                xhrFields: {
+                    withCredentials: !0
+                }
+            })
         }
 
         function h(e) {
@@ -1993,7 +1997,10 @@
                 if (null === e || void 0 === e) return Promise.reject(new Error("No video info available on null video ID"));
                 var t = l("videos/" + a(e)),
                     n = c({
-                        url: W.f + "/api/videos/" + a(e)
+                        url: W.f + "/api/videos/" + a(e),
+                        xhrFields: {
+                            withCredentials: !0
+                        }
                     }).then(function(e) {
                         return U()(e, ["muted_segments", "increment_view_count_url", "restrictions", "seek_previews_url"])
                     });
@@ -2020,7 +2027,10 @@
             }),
             oe = M()(function(e) {
                 return c({
-                    url: W.f + "/api/channels/" + e
+                    url: W.f + "/api/channels/" + e,
+                    xhrFields: {
+                        withCredentials: !0
+                    }
                 })
             }),
             ae = M()(function() {
@@ -31480,7 +31490,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.13-190634+8c2fa0cde669de29ea620d9ef7f5363694c40e5e",
+                    app_version: "2018.04.16-180506+eabe563a895e5ce5892c1eefe90ee2ff77d7d4b6",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -37158,7 +37168,7 @@
                 }]), e
             }(),
             Ja = n(103),
-            Xa = "//video-edge-d3c1f3.sjc01.hls.ttvnw.net/v1/segment/CnDKUh8n0JkLEnGZsbm_MHOdf9psh9MVprZXaNYvGOLbqdyk2pWzsdUIyBum25hGcnmGggIL9uee4AdeSQ_uP24xSTD8H_0OH2UMngAVCdYqN0ZQ8TCGzPOYH0ZS-HjSStMAgdhONNRK2FcL0svEbLgikGCU6PdaNS3K7qIr0NVAzOlgAasUK8YOv1e8t-cn9wPAwNUa9E-rXamGQveFtD_SlBJr8N0krYFfrFdieDOZp-lAgIaQ1xBX4DJwTw7nqTZABnKAQTAWhYF5uE7lQFuwFGxt_84GLPUETmWDwr60NEncsWM-WKdN06tszAm1VBLTJF7h59kBovLUeSExA9eHpXQqhPQ4WX4vvMoBQPvsk0iL1gLlaNqEszkYLFwX25IbOzJpAH9L2ourMgt4wgsYb6nFfjXNrpNh7x4twDTrKXhQE8I9tyeQ4qcyIuMt5CU7cJPnPZddDirj-gQD0UtXUKliPf7q8z8Zgyp0qMSVlU1NjvwHMvf-pcpsYEsJwrZRkdJqG_K7U3AqASAZ6mC6qkr31qLUglklvHL.ts",
+            Xa = "//video-edge-999df0.sjc01.hls.ttvnw.net/v1/segment/Cp0F0o4rVvH8mmEIUBVGLsl0cAQAvRN8_q4NGqW5k1IkS1sREZfo8EjWTvyzYs25k5OM1A7k_OPoGqKM4hP4pQDjje-wmszrSu32dmcdPvZpiLdgX_I96zNYFSEFcqpD12K9665qpSQ5KcoJw6SA-gvpuaFUsGJZyjXItDTyHZR2g4OCvfakZ-ZbC3x7DSpZk3Y8ci3hA62hsE1rYot74JvgddOtiibdf3--oloxz0Kl9klNSxo9RbeyXbUgMfOEmz6ilgcjBH7JWQyK_IArx-uzBNIjHGSH366uzqioe2Ua4yuC7MeH2aHNXRWgZA2Yg0QMUOfhlxHGwg2JFvMQBtUNHooZiS-RPcITqWNinXef_dVNED20tfd5FbYsmOZISE0RDXtlhA23pLS6aDjXxjwuwXCwNkmCbLAa2Bp9yz0ki3cViaFQEF6vi9GF_4rcvpcMDnvV_-6RKu8SJe-s9d26FIuZBaKQPcQbZbgeYe3NwHpGLrVNzv2eepZwrGx7YMm8xA8sMvR-jTiYzy_HzDp3qyeoWVPbcLMXqRiWkX.ts",
             Za = n(48),
             es = n(262),
             ts = n(136),
