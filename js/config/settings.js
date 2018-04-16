@@ -25,7 +25,7 @@ window.__twilightSettings = {
     "crate_trickster_launch": "off",
     "dashboard_settings_launch": "off",
     "deprecated_messages_download_enabled": false,
-    "detector_urls": ["https://pubads.g.doubleclick.net/|", "https://s.amazon-adsystem.com/|"],
+    "detector_urls": ["https://pubads.g.doubleclick.net/|", "https://adservice.google.com/|"],
     "env_test": "This is a test in Production",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445"],
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
