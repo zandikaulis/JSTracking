@@ -1,4 +1,4 @@
-webpackJsonp([90], {
+webpackJsonp([91], {
     tk3B: function(e, i) {
         e.exports = [{
             "Skill Group": [{
@@ -149,4 +149,4 @@ webpackJsonp([90], {
         }]
     }
 });
-//# sourceMappingURL=assets.data.directory-game.counterstrike-skill-groups.json-7ef88cd1654ba6e78d86daa1fb96570c.js.map
+//# sourceMappingURL=assets.data.directory-game.counterstrike-skill-groups.json-eee68e92798d2287d5762f9a7da986c5.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([79], {
+webpackJsonp([80], {
     "+ear": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -728,7 +728,7 @@ webpackJsonp([79], {
         function P(e) {
             l.n.track(m.SpadeEventType.ChannelAnalyticsInteraction, e)
         }! function(e) {
-            e.OpenDatePicker = "open_date_picker", e.VisitPreviousDateRange = "visit_previous_date_range", e.VisitNextDateRange = "visit_next_date_range", e.ExportDataRevenue = "export_data_revenue", e.ExportDataStream = "export_data_stream", e.ViewDetailsReferrers = "view_details_referrers", e.ViewDetailsClips = "view_details_clips", e.TopStreamsSelectAvgViewers = "topstreams_select_avg_viewers", e.TopStreamsSelectNewFollowers = "topstreams_select_new_followers", e.TopStreamsStream = "topstreams_stream", e.TopClipsClip = "topclips_clip", e.EmailMeMySubs = "email_me_my_subs", e.EmailToSubs = "email_to_subs"
+            e.OpenDatePicker = "open_date_picker", e.VisitPreviousDateRange = "visit_previous_date_range", e.VisitNextDateRange = "visit_next_date_range", e.ExportDataRevenue = "export_data_revenue", e.ExportDataStream = "export_data_stream", e.ViewDetailsReferrers = "view_details_referrers", e.ViewDetailsClips = "view_details_clips", e.TopStreamsSelectAvgViewers = "topstreams_select_avg_viewers", e.TopStreamsSelectNewFollowers = "topstreams_select_new_followers", e.TopStreamsSelectNewSubscribers = "topstreams_select_new_subscribers", e.TopStreamsStream = "topstreams_stream", e.TopClipsClip = "topclips_clip", e.EmailMeMySubs = "email_me_my_subs", e.EmailToSubs = "email_to_subs"
         }(D || (D = {}));
         var F = n("ylrR"),
             V = n("9uzc"),
@@ -2492,7 +2492,7 @@ webpackJsonp([79], {
         }
         var Ze, $e = 5;
         ! function(e) {
-            e.AvgViewers = "avg_viewers", e.NewFollowers = "new_followers"
+            e.AvgViewers = "avg_viewers", e.NewFollowers = "new_followers", e.NewSubscribers = "new_subscribers"
         }(Ze || (Ze = {}));
         var et, tt = function(e) {
             function t(t) {
@@ -2505,7 +2505,9 @@ webpackJsonp([79], {
                         value: Ze.AvgViewers
                     }, Object(l.d)("Average Viewers", "ChannelAnalyticsTopStreamsPanel")), s.createElement("option", {
                         value: Ze.NewFollowers
-                    }, Object(l.d)("New Followers", "ChannelAnalyticsTopStreamsPanel")))
+                    }, Object(l.d)("New Followers", "ChannelAnalyticsTopStreamsPanel")), s.createElement("option", {
+                        value: Ze.NewSubscribers
+                    }, Object(l.d)("New Subscribers", "ChannelAnalyticsTopStreamsPanel")))
                 }, n.streamsList = function() {
                     return s.createElement(y._7, null, n.sortedStreamSummaries().slice(0, $e).map(function(e, t) {
                         return s.createElement(Ye, {
@@ -2525,6 +2527,11 @@ webpackJsonp([79], {
                         case Ze.AvgViewers:
                             P({
                                 action: D.TopStreamsSelectAvgViewers
+                            });
+                            break;
+                        case Ze.NewSubscribers:
+                            P({
+                                action: D.TopStreamsSelectNewSubscribers
                             })
                     }
                     n.setState({
@@ -2534,6 +2541,8 @@ webpackJsonp([79], {
                     switch (n.state.sortType) {
                         case Ze.NewFollowers:
                             return e.followersChange;
+                        case Ze.NewSubscribers:
+                            return e.subscriptionsNew;
                         case Ze.AvgViewers:
                         default:
                             return e.avgViewerCount
@@ -2544,6 +2553,10 @@ webpackJsonp([79], {
                         case Ze.NewFollowers:
                             return Object(E.d)(e, [function(e) {
                                 return e.followersChange
+                            }], [E.a.Descending]);
+                        case Ze.NewSubscribers:
+                            return Object(E.d)(e, [function(e) {
+                                return e.subscriptionsNew
                             }], [E.a.Descending]);
                         case Ze.AvgViewers:
                         default:
@@ -4921,4 +4934,4 @@ webpackJsonp([79], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-root-91e5a22549968ec0406c0aa454fe30fe.js.map
+//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-root-9630cb0755a35d143f6a0f2c508aeb02.js.map

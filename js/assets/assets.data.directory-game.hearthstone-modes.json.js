@@ -1,4 +1,4 @@
-webpackJsonp([88], {
+webpackJsonp([89], {
     Dan5: function(e, i) {
         e.exports = [{
             Rank: [{
@@ -425,4 +425,4 @@ webpackJsonp([88], {
         }]
     }
 });
-//# sourceMappingURL=assets.data.directory-game.hearthstone-modes.json-838cd21bc85d99da9a2e5c8fd194cfc3.js.map
+//# sourceMappingURL=assets.data.directory-game.hearthstone-modes.json-23ab5396d4c72d46cf59a02145cdbeff.js.map

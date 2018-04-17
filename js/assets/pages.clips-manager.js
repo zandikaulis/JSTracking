@@ -1,4 +1,4 @@
-webpackJsonp([74], {
+webpackJsonp([75], {
     "1f48": function(e, t) {},
     "2TZ0": function(e, t) {
         var n = {
@@ -645,40 +645,40 @@ webpackJsonp([74], {
     WNmM: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return o
-        }), n.d(t, "b", function() {
             return c
+        }), n.d(t, "b", function() {
+            return d
         }), n.d(t, "c", function() {
-            return u
+            return p
         });
-        var a, i = n("6sO2"),
-            r = n("8Wuk"),
-            l = n("vH/s"),
-            s = ((a = {})[r.b.Twitter] = "twitter", a[r.b.Reddit] = "reddit", a[r.b.VKontakte] = "vkontakte", a[r.b.Facebook] = "facebook", a[r.b.Copy] = "link", a[r.b.CopyInput] = "option_link", a),
-            o = {
+        var a, i, r = n("6sO2"),
+            l = n("8Wuk"),
+            s = n("vH/s"),
+            o = ((a = {})[l.b.Twitter] = "twitter", a[l.b.Reddit] = "reddit", a[l.b.VKontakte] = "vkontakte", a[l.b.Facebook] = "facebook", a[l.b.Copy] = "link", a[l.b.CopyInput] = "option_link", a),
+            c = {
                 MyClips: "MyClips",
                 ClipsOfMyChannel: "ClipsOfMyChannel"
             },
-            c = {
+            d = {
                 Game: "TopClipsGame",
                 Channel: "TopClipsChannel"
             },
-            d = {
-                MyClips: l.PageviewLocation.MyClipsManager,
-                ClipsOfMyChannel: l.PageviewLocation.ChannelClipsManager,
-                TopClipsGame: l.PageviewLocation.ClipsGame,
-                TopClipsChannel: l.PageviewLocation.ChannelClips
-            },
-            u = function(e, t) {
-                return function(n) {
-                    i.o.tracking.track(l.SpadeEventType.VideoShare, {
-                        vod_id: e.id,
+            u = ((i = {
+                MyClips: s.PageviewLocation.MyClipsManager,
+                ClipsOfMyChannel: s.PageviewLocation.ChannelClipsManager,
+                TopClipsGame: s.PageviewLocation.ClipsGame,
+                TopClipsChannel: s.PageviewLocation.ChannelClips
+            })[s.PageviewLocation.ClipsEditing] = s.PageviewLocation.ClipsEditing, i[s.PageviewLocation.ClipsViewing] = s.PageviewLocation.ClipsViewing, i),
+            p = function(e, t, n, a, i) {
+                return function(l) {
+                    r.o.tracking.track(s.SpadeEventType.VideoShare, {
+                        vod_id: e,
                         vod_type: "clip",
-                        share_platform: s[n],
-                        location: d[t],
-                        game: e.game ? e.game.name : null,
-                        channel_id: e.broadcaster ? Number(e.broadcaster.id) : 0,
-                        channel: e.broadcaster ? e.broadcaster.login : "",
+                        share_platform: o[l],
+                        location: u[i],
+                        game: t,
+                        channel_id: Number(n || 0),
+                        channel: a,
                         live: null
                     })
                 }
@@ -776,7 +776,7 @@ webpackJsonp([74], {
                         type: t.type,
                         text: e.clip.title,
                         url: Object(j.a)(e.clip.url, t.params),
-                        onShareClick: Object(x.c)(e.clip, e.pageType)
+                        onShareClick: Object(x.c)(e.clip.id, e.clip.game && e.clip.game.name, e.clip.broadcaster && e.clip.broadcaster.id, e.clip.broadcaster && e.clip.broadcaster.login, e.pageType)
                     })
                 })), r.createElement(P._7, {
                     padding: {
@@ -3822,4 +3822,4 @@ webpackJsonp([74], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-b34006748f87d06ef37fadc52c6297f3.js.map
+//# sourceMappingURL=pages.clips-manager-ade49d5bb9bbf9b78403c126e1110e53.js.map

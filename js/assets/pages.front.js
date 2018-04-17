@@ -2171,7 +2171,7 @@ webpackJsonp([54], {
                         userID: this.props.data.currentUser.id,
                         composerLocation: M.b.HomePage
                     }), a.createElement(H, {
-                        items: this.props.data.currentUser.pulseFeed.items
+                        items: this.props.data.currentUser.pulseFeed.items || []
                     }), a.createElement(d.a, {
                         enabled: !this.props.data.loading && !this.props.data.error,
                         loadMore: this.props.loadMore,
@@ -2635,9 +2635,9 @@ webpackJsonp([54], {
                 }, a.createElement("img", {
                     src: d && d.url || y.o.config.defaultStreamPreviewURL
                 })))), a.createElement(v, {
-                    externalAuthorName: o,
-                    title: n,
-                    description: r
+                    externalAuthorName: o || "",
+                    title: n || "",
+                    description: r || ""
                 }))
             }),
             E = function(e, t) {
@@ -2682,8 +2682,8 @@ webpackJsonp([54], {
                     g = n.videoViewCount,
                     h = l ? l.name : "";
                 return a.createElement(s._7, null, a.createElement(p.a, {
-                    createdAt: c,
-                    lengthSeconds: d,
+                    createdAt: c || "",
+                    lengthSeconds: d || 0,
                     onClick: function() {
                         e.pauseCarousel && e.pauseCarousel(), Object(o.c)(e, t.feedTrackingProps)
                     },
@@ -2695,8 +2695,8 @@ webpackJsonp([54], {
                     playerTypeOverride: f.b.Feed
                 })), a.createElement(v, {
                     author: r,
-                    title: u,
-                    description: h
+                    title: u || "",
+                    description: h || ""
                 }))
             };
         C.contextTypes = {
@@ -2730,9 +2730,9 @@ webpackJsonp([54], {
                         __html: m
                     }
                 })), a.createElement(v, {
-                    externalAuthorName: d,
-                    title: i,
-                    description: r
+                    externalAuthorName: d || "",
+                    title: i || "",
+                    description: r || ""
                 }))
             });
         O.contextTypes = {
@@ -6869,7 +6869,7 @@ webpackJsonp([54], {
                                     return t = i.sent(), n = t.data.feedItemContent, this.setState({
                                         loadingPermissions: !1,
                                         permissionQueryData: t,
-                                        userCanDelete: n && n.self.permissions.canDelete
+                                        userCanDelete: n && n.self && n.self.permissions && n.self.permissions.canDelete || !1
                                     }), [2]
                             }
                         })
@@ -6934,7 +6934,7 @@ webpackJsonp([54], {
                         var t = e;
                         return {
                             contentType: h.a.Clip,
-                            targetUserID: t.broadcaster.id,
+                            targetUserID: t.broadcaster && t.broadcaster.id || "",
                             contentID: t.id,
                             additionalTrackingID: t.curator ? t.curator.id : ""
                         };
@@ -6955,7 +6955,7 @@ webpackJsonp([54], {
                         var a = e;
                         return {
                             contentType: h.a.Vod,
-                            targetUserID: a.owner.id,
+                            targetUserID: a.owner && a.owner.id || "",
                             contentID: a.id
                         };
                     default:
@@ -7177,8 +7177,9 @@ webpackJsonp([54], {
                 var t = e.item.reasons[0] ? Object(a.b)(e.item.reasons[0].reason) : "";
                 switch (e.item.content.__typename) {
                     case "Clip":
+                        var n = e.item.content;
                         return {
-                            card_author_id: e.item.content.broadcaster.id,
+                            card_author_id: n.broadcaster && n.broadcaster.id || "",
                             display_reason: t,
                             feed_presentation: e.feedPresentation
                         };
@@ -7195,8 +7196,9 @@ webpackJsonp([54], {
                             feed_presentation: e.feedPresentation
                         };
                     case "Video":
+                        var i = e.item.content;
                         return {
-                            card_author_id: e.item.content.owner.id,
+                            card_author_id: i.owner && i.owner.id || "",
                             display_reason: t,
                             feed_presentation: e.feedPresentation
                         };
@@ -7632,4 +7634,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-7ed58159b7b83dccee524622e899f79e.js.map
+//# sourceMappingURL=pages.front-32a432c80762a43cbb6b5e2726060e25.js.map
