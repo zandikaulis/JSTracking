@@ -2470,7 +2470,7 @@ window.SiteOptions = {
         },
         "6699df7d-9f23-494c-87a1-06fdf80f1e68": {
             "name": "twilight_video_card_updates",
-            "v": 3460,
+            "v": 3522,
             "t": 1,
             "groups": [{
                 "weight": 100,
