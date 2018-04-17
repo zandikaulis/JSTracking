@@ -356,316 +356,6 @@ webpackJsonp([38], {
             return i(e).getMilliseconds()
         }
     },
-    "07Tc": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "PaymentMethods_PaymentProviderConfigs"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "productName"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "subscriptionProduct"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "productName"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "productName"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "checkoutConfigs"
-                                        },
-                                        arguments: [{
-                                            kind: "Argument",
-                                            name: {
-                                                kind: "Name",
-                                                value: "isGift"
-                                            },
-                                            value: {
-                                                kind: "BooleanValue",
-                                                value: !1
-                                            }
-                                        }],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "paymentProviderConfigs"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "xsolla"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "iframeURL"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "recurly"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "payWithAmazonConfigs"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: {
-                                                                    kind: "SelectionSet",
-                                                                    selections: [{
-                                                                        kind: "Field",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "clientID"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: []
-                                                                    }, {
-                                                                        kind: "Field",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "isProduction"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: []
-                                                                    }, {
-                                                                        kind: "Field",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "sellerID"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: []
-                                                                    }]
-                                                                }
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "publicKey"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "braintreeClientAuthorization"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "zuora"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "externalAccountID"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "token"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "tenantID"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "publicKey"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "signature"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "hostedPageID"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "hostedPageURL"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "externalAccountID"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }]
-                                                        }
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "requestInfo"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "countryCode"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 458
-            }
-        };
-        n.loc.source = {
-            body: "query PaymentMethods_PaymentProviderConfigs($productName: String!) {\nsubscriptionProduct(productName: $productName) {\nid\nself {\ncheckoutConfigs(isGift:false) {\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     "0LAu": function(e, t, n) {
         var i = n("MIQa");
         e.exports = function() {
@@ -2866,13 +2556,13 @@ webpackJsonp([38], {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component);
-        var V = Object(r.b)(function(e) {
+        var Q = Object(r.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             })(z),
-            Q = n("tTbW"),
-            q = (n("9856"), n("wjhu")),
+            q = n("tTbW"),
+            V = (n("9856"), n("wjhu")),
             Y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -2933,7 +2623,7 @@ webpackJsonp([38], {
                             className: "prime-offers__list"
                         }, o.createElement(g, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), o.createElement(V, null)) : null
+                        }), o.createElement(Q, null)) : null
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -2983,7 +2673,7 @@ webpackJsonp([38], {
                         label: e.toString(),
                         type: f._12.Notification
                     })))
-                }, t = a.__decorate([Object(u.a)(Q, {
+                }, t = a.__decorate([Object(u.a)(q, {
                     name: "offersData",
                     skip: function(e) {
                         return !e.firstPageLoaded
@@ -2995,7 +2685,7 @@ webpackJsonp([38], {
                             }
                         }
                     }
-                }), Object(u.a)(q, {
+                }), Object(u.a)(V, {
                     name: "userData"
                 }), Object(m.d)("PrimeOffers", {
                     autoReportInteractive: !0
@@ -5332,6 +5022,26 @@ webpackJsonp([38], {
                         kind: "Field",
                         name: {
                             kind: "Name",
+                            value: "requestInfo"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "countryCode"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
                             value: "subscriptionProduct"
                         },
                         arguments: [{
@@ -5465,6 +5175,178 @@ webpackJsonp([38], {
                                                 },
                                                 arguments: [],
                                                 directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "paymentProviderConfigs"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "xsolla"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "iframeURL"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "recurly"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "payWithAmazonConfigs"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: {
+                                                                    kind: "SelectionSet",
+                                                                    selections: [{
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "clientID"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "isProduction"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "sellerID"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }]
+                                                                }
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "publicKey"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "braintreeClientAuthorization"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "zuora"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "externalAccountID"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "token"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "tenantID"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "publicKey"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "signature"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "hostedPageID"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "hostedPageURL"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "externalAccountID"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
                                             }]
                                         }
                                     }, {
@@ -5752,11 +5634,11 @@ webpackJsonp([38], {
             }],
             loc: {
                 start: 0,
-                end: 686
+                end: 977
             }
         };
         n.loc.source = {
-            body: "query CheckoutPayments($productName: String! $includePromotion: Boolean! $isGift: Boolean! $recipientID: ID) {\ncurrentUser {\nid\ndisplayName\n}\nsubscriptionProduct(productName: $productName) {\nid\nprice\nowner {\nid\ndisplayName\nlogin\n}\nself {\ncheckoutConfigs (isGift: $isGift recipientID: $recipientID) {\ncanGift\nisOneMonthFreeEligible\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\nstate\ncancelledAt\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\ncancelledAt\nproductType\nproductTier\n}\n}\nbenefit {\nid\ntier\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\n}\n}\n}",
+            body: "query CheckoutPayments($productName: String! $includePromotion: Boolean! $isGift: Boolean! $recipientID: ID) {\ncurrentUser {\nid\ndisplayName\n}\nrequestInfo {\ncountryCode\n}\nsubscriptionProduct(productName: $productName) {\nid\nprice\nowner {\nid\ndisplayName\nlogin\n}\nself {\ncheckoutConfigs (isGift: $isGift recipientID: $recipientID) {\ncanGift\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\nstate\ncancelledAt\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\ncancelledAt\nproductType\nproductTier\n}\n}\nbenefit {\nid\ntier\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -5835,47 +5717,22 @@ webpackJsonp([38], {
                     sessionUser: Object(o.c)(e)
                 }
             })(_),
-            O = (n("jJiV"), function() {
-                return u.createElement(y._30, {
-                    className: "checkout-error-brick",
-                    background: y.m.Base,
-                    borderTop: !0,
-                    borderRight: !0,
-                    borderBottom: !0,
-                    borderRadius: y.s.Small,
-                    display: y.Q.Flex,
-                    flexDirection: y.S.Column,
-                    justifyContent: y._6.Center,
-                    padding: {
-                        x: 1,
-                        y: 2
-                    }
-                }, u.createElement(y.P, {
-                    bold: !0
-                }, Object(d.d)("Payment not processed", "PaymentsErrorBrick")), u.createElement(y._7, {
-                    margin: {
-                        top: 1
-                    }
-                }, u.createElement(y.P, null, Object(d.d)("Something went wrong, and your payment could not be processed at this time. Please try again later.", "PaymentsErrorBrick"))))
-            }),
-            x = n("3zLD"),
-            T = n("ryON"),
+            O = n("ryON"),
+            x = n.n(O),
+            T = n("hmTn"),
             P = n.n(T),
-            D = n("hmTn"),
+            D = n("W59S"),
             F = n.n(D),
-            I = n("W59S"),
+            I = n("MQyO"),
             R = n.n(I),
-            A = n("MQyO"),
+            A = n("ekbR"),
             U = n.n(A),
-            j = n("ekbR"),
+            j = n("p2Aq"),
             M = n.n(j),
-            L = n("p2Aq"),
+            L = n("SgWI"),
             B = n.n(L),
-            H = n("SgWI"),
-            W = n.n(H),
-            G = n("YkGD"),
-            z = n.n(G),
-            V = n("yWCw");
+            H = n("YkGD"),
+            W = n.n(H);
         ! function(e) {
             e.Failed = "failed", e.Pending = "pending", e.Success = "success"
         }(S || (S = {})),
@@ -5888,8 +5745,8 @@ webpackJsonp([38], {
         function(e) {
             e.VendorLoginClick = "vendor_login_click", e.CompletePurchaseClick = "complete_purchase_click", e.PaypalTokenError = "paypal_token_error", e.RadioButtonClick = "radio_button_click", e.TokenError = "token_error"
         }(w || (w = {}));
-        var Q = n("CSlQ"),
-            q = (n("aMOL"), function() {
+        var G = n("CSlQ"),
+            z = (n("aMOL"), function() {
                 function e(e) {}
                 e.prototype.bind = function(e) {}
             }(), function(e) {
@@ -6010,20 +5867,20 @@ webpackJsonp([38], {
                         state: this.state.awaitingResponse ? y.z.Loading : y.z.Default,
                         disabled: this.state.awaitingResponse
                     }, this.props.submitButtonCopy)))) : u.createElement(y._9, null)
-                }, t = c.__decorate([Object(Q.d)("RecurlyAmazonPay")], t)
+                }, t = c.__decorate([Object(G.d)("RecurlyAmazonPay")], t)
             }(u.Component)),
-            Y = n("NXs7"),
-            K = n("0nzt"),
-            J = n("l7ua"),
-            Z = (n("pDuT"), {
+            Q = n("NXs7"),
+            q = n("0nzt"),
+            V = n("l7ua"),
+            Y = (n("pDuT"), {
                 light: "#000",
                 dark: "#fff"
             }),
-            $ = {
+            K = {
                 light: "#a49fad",
                 dark: "#898395"
             },
-            X = function() {
+            J = function() {
                 return {
                     cvv: !1,
                     first_name: !1,
@@ -6033,7 +5890,7 @@ webpackJsonp([38], {
                     year: !1
                 }
             },
-            ee = function(e) {
+            Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -6042,7 +5899,7 @@ webpackJsonp([38], {
                         recurlyReady: !1,
                         awaitingResponse: !1,
                         errorMessage: "",
-                        errorState: X()
+                        errorState: J()
                     }, t.handleSubmit = function() {
                         return c.__awaiter(t, void 0, void 0, function() {
                             var e = this;
@@ -6091,8 +5948,8 @@ webpackJsonp([38], {
                             })
                         })
                     }, t.handleValidationError = function(e) {
-                        if (e.code === J.a.Validation || e.code === J.a.InvalidParameter) {
-                            var n = X();
+                        if (e.code === V.a.Validation || e.code === V.a.InvalidParameter) {
+                            var n = J();
                             e.fields && e.fields.forEach(function(e) {
                                 n[e] = !0
                             }), t.setState({
@@ -6101,7 +5958,7 @@ webpackJsonp([38], {
                             })
                         } else e.code && t.setState({
                             errorMessage: Object(d.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"),
-                            errorState: X()
+                            errorState: J()
                         })
                     }, t.handleFirstName = function(e) {
                         t.setState({
@@ -6260,9 +6117,9 @@ webpackJsonp([38], {
                                 style: {
                                     height: "auto",
                                     fontSize: "12px",
-                                    fontColor: Z.light,
+                                    fontColor: Y.light,
                                     placeholder: {
-                                        color: $.light
+                                        color: K.light
                                     }
                                 }
                             },
@@ -6300,14 +6157,14 @@ webpackJsonp([38], {
                             }
                         }
                     })
-                }, t = c.__decorate([Object(Q.d)("RecurlyCreditCard")], t)
+                }, t = c.__decorate([Object(G.d)("RecurlyCreditCard")], t)
             }(u.Component);
-        var te, ne = Object(i.b)(function(e) {
+        var $, X = Object(i.b)(function(e) {
                 return {
-                    darkModeEnabled: Object(K.a)(e) === Y.a.Dark
+                    darkModeEnabled: Object(q.a)(e) === Q.a.Dark
                 }
-            })(ee),
-            ie = (n("t2Wb"), function(e) {
+            })(Z),
+            ee = (n("t2Wb"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -6398,9 +6255,9 @@ webpackJsonp([38], {
                             awaitingResponse: !1
                         })
                     }), this.paypalInstance = t
-                }, t = c.__decorate([Object(Q.d)("RecurlyPaypal")], t)
+                }, t = c.__decorate([Object(G.d)("RecurlyPaypal")], t)
             }(u.Component)),
-            re = function(e) {
+            te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -6460,15 +6317,15 @@ webpackJsonp([38], {
                         width: "100%",
                         height: "650px"
                     })))
-                }, t = c.__decorate([Object(Q.d)("XsollaMoreMethods")], t)
+                }, t = c.__decorate([Object(G.d)("XsollaMoreMethods")], t)
             }(u.Component),
-            ae = n("HM6l"),
-            se = n("5k8C");
+            ne = n("HM6l"),
+            ie = n("5k8C");
         n("7gLH");
         ! function(e) {
             e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
-        }(te || (te = {}));
-        var oe = function(e) {
+        }($ || ($ = {}));
+        var re = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -6476,7 +6333,7 @@ webpackJsonp([38], {
                     awaitingResponse: !1,
                     errorMessage: "",
                     nullValueErrors: [],
-                    sessionId: Object(ae.b)()
+                    sessionId: Object(ne.b)()
                 }, t.handleSubmit = function() {
                     t.setState({
                         awaitingResponse: !0,
@@ -6588,7 +6445,7 @@ webpackJsonp([38], {
                     fillContent: !0
                 })), u.createElement(y._7, {
                     display: this.state.zuoraConfigured ? y.Q.Block : y.Q.Hide,
-                    "data-test-selector": te.ZUORA_PARENT_LAYOUT
+                    "data-test-selector": $.ZUORA_PARENT_LAYOUT
                 }, this.renderErrorMessage(), u.createElement("div", {
                     id: "zuora_payment",
                     className: this.state.awaitingResponse ? "zuora-disabled" : ""
@@ -6606,8 +6463,8 @@ webpackJsonp([38], {
                     onClick: this.handleSubmit,
                     state: this.state.awaitingResponse ? y.z.Loading : y.z.Default,
                     disabled: this.state.awaitingResponse,
-                    "data-test-selector": te.UPDATE_PAYMENT_BUTTON
-                }, this.props.submitButtonCopy)), u.createElement(se.a, {
+                    "data-test-selector": $.UPDATE_PAYMENT_BUTTON
+                }, this.props.submitButtonCopy)), u.createElement(ie.a, {
                     isProduction: this.props.isProductionConfig,
                     sessionId: this.state.sessionId
                 })))
@@ -6645,34 +6502,113 @@ webpackJsonp([38], {
                 },
                 enumerable: !0,
                 configurable: !0
-            }), t = c.__decorate([Object(Q.d)("ZuoraCreditCard")], t)
+            }), t = c.__decorate([Object(G.d)("ZuoraCreditCard")], t)
         }(u.Component);
-        var ce = Object(i.b)(function(e) {
+        var ae = Object(i.b)(function(e) {
                 return {
                     languageCode: e.session.languageCode
                 }
-            })(oe),
-            le = n("07Tc"),
-            ue = function() {
-                return Object(d.d)("Credit Card", "TicketDescription")
+            })(re),
+            se = {
+                CreditCard: function() {
+                    return Object(d.d)("Credit Card", "TicketDescription")
+                },
+                Paypal: function() {
+                    return Object(d.d)("Paypal", "TicketDescription")
+                },
+                AmazonPay: function() {
+                    return Object(d.d)("Amazon Pay", "TicketDescription")
+                },
+                MoreMethods: function() {
+                    return Object(d.d)("More Methods", "TicketDescription")
+                }
             },
-            de = function() {
-                return Object(d.d)("Paypal", "TicketDescription")
-            },
-            pe = function() {
-                return Object(d.d)("Amazon Pay", "TicketDescription")
-            },
-            me = function() {
-                return Object(d.d)("More Methods", "TicketDescription")
-            },
-            fe = function(e) {
+            oe = function(e) {
                 function t() {
                     var t, n = null !== e && e.apply(this, arguments) || this;
                     return n.state = {
                         selectedProvider: N.ZuoraCreditCard,
                         subsCheckoutVariantAssignment: "zuora",
                         enabledProviders: (t = {}, t[N.ZuoraCreditCard] = !1, t[N.RecurlyCreditCard] = !1, t[N.RecurlyPaypal] = !1, t[N.RecurlyPayWithAmazon] = !1, t[N.Xsolla] = !1, t)
-                    }, n.submitButtonCopy = Object(d.d)("Complete Purchase", "PaymentMethods"), n.renderSelector = function(e) {
+                    }, n.submitButtonCopy = Object(d.d)("Complete Purchase", "PaymentMethods"), n.paymentProviders = [{
+                        name: N.ZuoraCreditCard,
+                        button: {
+                            label: se.CreditCard(),
+                            src: F.a,
+                            alt: se.CreditCard(),
+                            srcSet: {
+                                "1x": F.a,
+                                "2x": R.a
+                            }
+                        },
+                        component: u.createElement(ae, c.__assign({
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess,
+                            isProductionConfig: n.props.configs.recurly.payWithAmazonConfigs.isProduction
+                        }, n.props.configs.zuora))
+                    }, {
+                        name: N.RecurlyCreditCard,
+                        button: {
+                            label: se.CreditCard(),
+                            src: F.a,
+                            alt: se.CreditCard(),
+                            srcSet: {
+                                "1x": F.a,
+                                "2x": R.a
+                            }
+                        },
+                        component: u.createElement(X, {
+                            publicKey: n.props.configs.recurly.publicKey,
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess
+                        })
+                    }, {
+                        name: N.RecurlyPaypal,
+                        button: {
+                            label: se.Paypal(),
+                            src: B.a,
+                            alt: se.Paypal(),
+                            srcSet: {
+                                "1x": B.a,
+                                "2x": W.a
+                            }
+                        },
+                        component: u.createElement(ee, {
+                            publicKey: n.props.configs.recurly.publicKey,
+                            braintreeClientAuthorization: n.props.configs.recurly.braintreeClientAuthorization,
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess
+                        })
+                    }, {
+                        name: N.RecurlyPayWithAmazon,
+                        button: {
+                            label: se.AmazonPay(),
+                            src: x.a,
+                            alt: se.AmazonPay(),
+                            srcSet: {
+                                "1x": x.a,
+                                "2x": P.a
+                            }
+                        },
+                        component: u.createElement(z, c.__assign({
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess
+                        }, n.props.configs.recurly.payWithAmazonConfigs))
+                    }, {
+                        name: N.Xsolla,
+                        button: {
+                            label: se.MoreMethods(),
+                            src: U.a,
+                            alt: se.MoreMethods(),
+                            srcSet: {
+                                "1x": U.a,
+                                "2x": M.a
+                            }
+                        },
+                        component: u.createElement(te, c.__assign({
+                            trackPaymentFormInteraction: n.props.trackPaymentFormInteraction
+                        }, n.props.configs.xsolla))
+                    }], n.renderSelector = function(e) {
                         return n.state.enabledProviders[e.name] ? u.createElement(y.K, {
                             key: e.name,
                             cols: {
@@ -6726,22 +6662,21 @@ webpackJsonp([38], {
                                         selectedProvider: "recurly" === e ? N.RecurlyCreditCard : N.ZuoraCreditCard,
                                         subsCheckoutVariantAssignment: e,
                                         enabledProviders: t
-                                    }), document.querySelector("#recurly-script") ? [2] : ((n = document.createElement("script")).src = "https://js.recurly.com/v4/recurly.js", n.async = !0, n.id = "recurly-script", document.body.appendChild(n), this.props.latencyTracking.reportInteractive(), [2])
+                                    }), document.querySelector("#recurly-script") ? [2] : ((n = document.createElement("script")).src = "https://js.recurly.com/v4/recurly.js", n.async = !0, n.id = "recurly-script", document.body.appendChild(n), [2])
                             }
                         })
                     })
+                }, t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading) return u.createElement(y._9, null);
-                    if (this.props.data.error || null === this.configs) return u.createElement(V.a, null);
-                    var e = this.paymentProviders;
-                    if ("US" !== this.props.data.requestInfo.countryCode) {
+                    if ("US" !== this.props.countryCode) {
                         this.state.selectedProvider !== N.Xsolla && this.setState({
                             selectedProvider: N.Xsolla
                         });
-                        var t = e.find(function(e) {
+                        var e = this.paymentProviders.find(function(e) {
                             return e.name === N.Xsolla
                         });
-                        return t && this.renderProvider(t)
+                        return e && this.renderProvider(e)
                     }
                     return u.createElement(y._7, null, u.createElement(y._7, {
                         margin: {
@@ -6756,113 +6691,12 @@ webpackJsonp([38], {
                         bold: !0
                     }, Object(d.d)("Choose Your Payment Method", "PaymentMethods"))), u.createElement(y.X, {
                         gutterSize: y.Y.Small
-                    }, e.map(this.renderSelector)), u.createElement(y._7, null, e.map(this.renderProvider)))
-                }, Object.defineProperty(t.prototype, "paymentProviders", {
-                    get: function() {
-                        if (null === this.configs) return [];
-                        var e = [];
-                        return this.configs.recurly && (e = e.concat([{
-                            name: N.RecurlyCreditCard,
-                            button: {
-                                label: ue(),
-                                src: R.a,
-                                alt: ue(),
-                                srcSet: {
-                                    "1x": R.a,
-                                    "2x": U.a
-                                }
-                            },
-                            component: u.createElement(ne, {
-                                publicKey: this.configs.recurly.publicKey,
-                                submitButtonCopy: this.submitButtonCopy,
-                                onSuccess: this.props.onSuccess
-                            })
-                        }, {
-                            name: N.RecurlyPaypal,
-                            button: {
-                                label: de(),
-                                src: W.a,
-                                alt: de(),
-                                srcSet: {
-                                    "1x": W.a,
-                                    "2x": z.a
-                                }
-                            },
-                            component: u.createElement(ie, {
-                                publicKey: this.configs.recurly.publicKey,
-                                braintreeClientAuthorization: this.configs.recurly.braintreeClientAuthorization,
-                                submitButtonCopy: this.submitButtonCopy,
-                                onSuccess: this.props.onSuccess
-                            })
-                        }, {
-                            name: N.RecurlyPayWithAmazon,
-                            button: {
-                                label: pe(),
-                                src: P.a,
-                                alt: pe(),
-                                srcSet: {
-                                    "1x": P.a,
-                                    "2x": F.a
-                                }
-                            },
-                            component: u.createElement(q, c.__assign({
-                                submitButtonCopy: this.submitButtonCopy,
-                                onSuccess: this.props.onSuccess
-                            }, this.configs.recurly.payWithAmazonConfigs))
-                        }])), this.configs.zuora && this.configs.recurly && e.push({
-                            name: N.ZuoraCreditCard,
-                            button: {
-                                label: ue(),
-                                src: R.a,
-                                alt: ue(),
-                                srcSet: {
-                                    "1x": R.a,
-                                    "2x": U.a
-                                }
-                            },
-                            component: u.createElement(ce, c.__assign({
-                                submitButtonCopy: this.submitButtonCopy,
-                                onSuccess: this.props.onSuccess,
-                                isProductionConfig: this.configs.recurly.payWithAmazonConfigs.isProduction
-                            }, this.configs.zuora))
-                        }), this.configs.xsolla && this.configs.xsolla.iframeURL && e.push({
-                            name: N.Xsolla,
-                            button: {
-                                label: me(),
-                                src: M.a,
-                                alt: me(),
-                                srcSet: {
-                                    "1x": M.a,
-                                    "2x": B.a
-                                }
-                            },
-                            component: u.createElement(re, {
-                                trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
-                                iframeURL: this.configs.xsolla.iframeURL
-                            })
-                        }), e
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "configs", {
-                    get: function() {
-                        return this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.props.data.subscriptionProduct.self.checkoutConfigs.paymentProviderConfigs ? this.props.data.subscriptionProduct.self.checkoutConfigs.paymentProviderConfigs : null
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), t
+                    }, this.paymentProviders.map(this.renderSelector)), u.createElement(y._7, null, this.paymentProviders.map(this.renderProvider)))
+                }, t = c.__decorate([Object(G.d)("PaymentMethods")], t)
             }(u.Component),
-            ge = Object(x.compose)(Object(Q.d)("PaymentMethods"), Object(m.a)(le, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            productName: e.productShortName
-                        }
-                    }
-                }
-            }))(fe),
-            he = n("3T7g"),
-            ve = (n("VH0v"), function(e) {
+            ce = n("3zLD"),
+            le = n("3T7g"),
+            ue = (n("VH0v"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6941,20 +6775,21 @@ webpackJsonp([38], {
                     }, u.createElement(y.P, {
                         className: "ticket-description__description__line-item",
                         bold: !0
-                    }, Me["Subscription benefits"]())), u.createElement(y.P, {
+                    }, Fe["Subscription benefits"]())), u.createElement(y.P, {
                         className: "ticket-description__description__line-item"
-                    }, Me["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(y.P, {
+                    }, Fe["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(y.P, {
                         className: "ticket-description__description__line-item"
-                    }, Me["Ad-free (with limited exceptions)"]()), u.createElement(y.P, {
+                    }, Fe["Ad-free (with limited exceptions)"]()), u.createElement(y.P, {
                         className: "ticket-description__description__line-item"
-                    }, Me["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(y.P, {
+                    }, Fe["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(y.P, {
                         className: "ticket-description__description__line-item"
-                    }, Me["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(y.P, {
+                    }, Fe["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(y.P, {
                         className: "ticket-description__description__line-item"
-                    }, Me["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()))))
-                }, t = c.__decorate([Object(Q.d)("TicketDescription")], t)
+                    }, Fe["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()))))
+                }, t = c.__decorate([Object(G.d)("TicketDescription")], t)
             }(u.Component)),
-            ye = function(e) {
+            de = n("yWCw"),
+            pe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7009,7 +6844,7 @@ webpackJsonp([38], {
                     }, this.props.showButtonLabel)))))) : u.createElement(y.C, null, this.props.children)
                 }, t
             }(u.Component),
-            be = (n("eVow"), function(e) {
+            me = (n("eVow"), function(e) {
                 return u.createElement(y._7, {
                     className: "ticket-wrapper__container",
                     margin: {
@@ -7022,14 +6857,14 @@ webpackJsonp([38], {
                     elevation: 1
                 }, e.children))
             }),
-            ke = (n("+OOL"), function() {
-                return u.createElement(be, null, u.createElement(y._7, {
+            fe = (n("+OOL"), function() {
+                return u.createElement(me, null, u.createElement(y._7, {
                     className: "error-description__header",
                     padding: 2
                 }, u.createElement(y._30, {
                     fullHeight: !0,
                     background: y.m.Alt2
-                }, u.createElement(V.a, null))), u.createElement(ye, {
+                }, u.createElement(de.a, null))), u.createElement(pe, {
                     collapsable: !0
                 }, u.createElement(y._30, {
                     className: "error-description__body",
@@ -7038,9 +6873,9 @@ webpackJsonp([38], {
                 }, u.createElement(y._30, {
                     fullHeight: !0,
                     background: y.m.Alt2
-                }, u.createElement(V.a, null)))))
+                }, u.createElement(de.a, null)))))
             }),
-            _e = (n("kgE+"), function(e) {
+            ge = (n("kgE+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7137,17 +6972,17 @@ webpackJsonp([38], {
                     }, u.createElement(y.P, {
                         className: "mobile-ticket-description__description__line-item",
                         bold: !0
-                    }, Me["Subscription benefits"]())), u.createElement(y.P, {
+                    }, Fe["Subscription benefits"]())), u.createElement(y.P, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, Me["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(y.P, {
+                    }, Fe["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(y.P, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, Me["Ad-free (with limited exceptions)"]()), u.createElement(y.P, {
+                    }, Fe["Ad-free (with limited exceptions)"]()), u.createElement(y.P, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, Me["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(y.P, {
+                    }, Fe["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(y.P, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, Me["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(y.P, {
+                    }, Fe["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(y.P, {
                         className: "mobile-ticket-description__description__line-item"
-                    }, Me["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()), u.createElement(y._5, {
+                    }, Fe["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()), u.createElement(y._5, {
                         onClick: this.toggleCollapsed,
                         hover: !1,
                         alpha: !0
@@ -7162,16 +6997,16 @@ webpackJsonp([38], {
                         type: y._44.Span,
                         color: y.J.Link
                     }, Object(d.d)("Hide Subcription Benefits", "MobileTicketDescription"))))))))
-                }, t = c.__decorate([Object(Q.d)("TicketDescription")], t)
+                }, t = c.__decorate([Object(G.d)("TicketDescription")], t)
             }(u.Component)),
-            Se = (n("JbfA"), function() {
-                return u.createElement(be, null, u.createElement(y._7, {
+            he = (n("JbfA"), function() {
+                return u.createElement(me, null, u.createElement(y._7, {
                     className: "placeholder-description__header",
                     padding: 2
                 }, u.createElement(y._30, {
                     fullHeight: !0,
                     background: y.m.Alt2
-                })), u.createElement(ye, {
+                })), u.createElement(pe, {
                     collapsable: !0
                 }, u.createElement(y._30, {
                     padding: 2,
@@ -7180,29 +7015,29 @@ webpackJsonp([38], {
                     lineCount: 30
                 }))))
             }),
-            Ee = (n("40wk"), function(e) {
+            ve = (n("40wk"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.turboBenefitsList = [{
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_ad-free.png",
-                        benefitHeader: Le["Ad-Free*"](),
-                        benefitDescription: Le["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
+                        benefitHeader: Ie["Ad-Free*"](),
+                        benefitDescription: Ie["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_custom-emotes.png",
-                        benefitHeader: Le["Custom Emoticon Set"](),
-                        benefitDescription: Le["Express your emotions with an exclusive set of faces."]()
+                        benefitHeader: Ie["Custom Emoticon Set"](),
+                        benefitDescription: Ie["Express your emotions with an exclusive set of faces."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png",
-                        benefitHeader: Le.Badge(),
-                        benefitDescription: Le["Show everyone how Turbo you are with a shiny new chat badge."]()
+                        benefitHeader: Ie.Badge(),
+                        benefitDescription: Ie["Show everyone how Turbo you are with a shiny new chat badge."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_chat-color.png",
-                        benefitHeader: Le["Extended Chat Colors"](),
-                        benefitDescription: Le["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
+                        benefitHeader: Ie["Extended Chat Colors"](),
+                        benefitDescription: Ie["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_storage.png",
-                        benefitHeader: Le["Increased Video Storage"](),
-                        benefitDescription: Le["Save your past broadcasts on Twitch for 60 days."]()
+                        benefitHeader: Ie["Increased Video Storage"](),
+                        benefitDescription: Ie["Save your past broadcasts on Twitch for 60 days."]()
                     }], t.renderTurboBenefit = function(e) {
                         return u.createElement(y.K, {
                             cols: 12,
@@ -7227,7 +7062,7 @@ webpackJsonp([38], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    var e = Le.Features();
+                    var e = Ie.Features();
                     return u.createElement(y._30, {
                         className: "turbo-mobile-ticket-description",
                         background: y.m.Alt2,
@@ -7244,7 +7079,7 @@ webpackJsonp([38], {
                         cols: 12
                     }, u.createElement(y.P, {
                         type: y._44.H4
-                    }, Le["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(y.K, {
+                    }, Ie["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(y.K, {
                         cols: 12
                     }, u.createElement(y._30, {
                         borderBottom: !0,
@@ -7255,33 +7090,33 @@ webpackJsonp([38], {
                         },
                         padding: 2
                     }, this.props.renderPrice()))))
-                }, t = c.__decorate([Object(Q.d)("TicketDescription", {
+                }, t = c.__decorate([Object(G.d)("TicketDescription", {
                     autoReportInteractive: !0
                 })], t)
             }(u.PureComponent)),
-            Ne = (n("Mn81"), function(e) {
+            ye = (n("Mn81"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.turboBenefitsList = [{
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_ad-free.png",
-                        benefitHeader: Le["Ad-Free*"](),
-                        benefitDescription: Le["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
+                        benefitHeader: Ie["Ad-Free*"](),
+                        benefitDescription: Ie["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_custom-emotes.png",
-                        benefitHeader: Le["Custom Emoticon Set"](),
-                        benefitDescription: Le["Express your emotions with an exclusive set of faces."]()
+                        benefitHeader: Ie["Custom Emoticon Set"](),
+                        benefitDescription: Ie["Express your emotions with an exclusive set of faces."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png",
-                        benefitHeader: Le.Badge(),
-                        benefitDescription: Le["Show everyone how Turbo you are with a shiny new chat badge."]()
+                        benefitHeader: Ie.Badge(),
+                        benefitDescription: Ie["Show everyone how Turbo you are with a shiny new chat badge."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_chat-color.png",
-                        benefitHeader: Le["Extended Chat Colors"](),
-                        benefitDescription: Le["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
+                        benefitHeader: Ie["Extended Chat Colors"](),
+                        benefitDescription: Ie["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
                     }, {
                         imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_storage.png",
-                        benefitHeader: Le["Increased Video Storage"](),
-                        benefitDescription: Le["Save your past broadcasts on Twitch for 60 days."]()
+                        benefitHeader: Ie["Increased Video Storage"](),
+                        benefitDescription: Ie["Save your past broadcasts on Twitch for 60 days."]()
                     }], t.renderTurboBenefit = function(e) {
                         return u.createElement(y.K, {
                             cols: 12,
@@ -7306,7 +7141,7 @@ webpackJsonp([38], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    var e = Le.Features();
+                    var e = Ie.Features();
                     return u.createElement(y._30, {
                         className: "turbo-ticket-description",
                         background: y.m.Alt2,
@@ -7322,7 +7157,7 @@ webpackJsonp([38], {
                         cols: 12
                     }, u.createElement(y.P, {
                         type: y._44.H4
-                    }, Le["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(y.K, {
+                    }, Ie["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(y.K, {
                         cols: 12
                     }, u.createElement(y._30, {
                         borderBottom: !0,
@@ -7333,21 +7168,21 @@ webpackJsonp([38], {
                         },
                         padding: 2
                     }, this.props.renderPrice()))))
-                }, t = c.__decorate([Object(Q.d)("TicketDescription", {
+                }, t = c.__decorate([Object(G.d)("TicketDescription", {
                     autoReportInteractive: !0
                 })], t)
             }(u.PureComponent)),
-            we = n("7LIQ"),
-            Ce = n("Tzcg"),
-            Oe = n("3iBR"),
-            xe = n("D0Fd"),
-            Te = n("c84M"),
-            Pe = n("FDYX"),
-            De = n("PGoF"),
-            Fe = (n("iLMR"), "skin-selector"),
-            Ie = "igc-selector",
-            Re = "badge-selector",
-            Ae = function(e) {
+            be = n("7LIQ"),
+            ke = n("Tzcg"),
+            _e = n("3iBR"),
+            Se = n("D0Fd"),
+            Ee = n("c84M"),
+            Ne = n("FDYX"),
+            we = n("PGoF"),
+            Ce = (n("iLMR"), "skin-selector"),
+            Oe = "igc-selector",
+            xe = "badge-selector",
+            Te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderHeroSkins = function() {
@@ -7361,10 +7196,10 @@ webpackJsonp([38], {
                                     display: y.Q.Flex,
                                     flexDirection: y.S.Row,
                                     alignItems: y.c.Center,
-                                    "data-test-selector": Fe
-                                }, u.createElement("li", null, u.createElement(xe.a, {
+                                    "data-test-selector": Ce
+                                }, u.createElement("li", null, u.createElement(Se.a, {
                                     imageURL: e.imageURL,
-                                    size: xe.b.Small
+                                    size: Se.b.Small
                                 })))
                             }) : null;
                             return u.createElement(y._1, {
@@ -7383,7 +7218,7 @@ webpackJsonp([38], {
                                     src: e.imageURL,
                                     alt: e.name,
                                     size: 64,
-                                    "data-test-selector": Ie
+                                    "data-test-selector": Oe
                                 })
                             }) : null;
                             return u.createElement(y._7, {
@@ -7419,7 +7254,7 @@ webpackJsonp([38], {
                                     src: e.imageURL,
                                     alt: e.name,
                                     size: 36,
-                                    "data-test-selector": Re
+                                    "data-test-selector": xe
                                 })))
                             });
                             return u.createElement(y._7, null, u.createElement(y.P, {
@@ -7442,10 +7277,10 @@ webpackJsonp([38], {
                                 className: "ticket-description__description__line-item"
                             }, Object(d.d)("{numEmotes, number} All-Access Pass Twitch Emotes:", {
                                 numEmotes: e.length
-                            }, "EsportsTicketDescription")), u.createElement(we.a, {
+                            }, "EsportsTicketDescription")), u.createElement(be.a, {
                                 emoteSet: {
                                     id: "",
-                                    emotes: Object(Ce.b)(e)
+                                    emotes: Object(ke.b)(e)
                                 },
                                 onClickEmote: void 0,
                                 locked: !1
@@ -7456,7 +7291,7 @@ webpackJsonp([38], {
                 return c.__extends(t, e), t.prototype.render = function() {
                     if (this.props.owner) {
                         var e = this.props.product.price;
-                        return this.props.owner && Object(Pe.d)(this.props.owner.subscriptionProducts) && (e = Object(Pe.a)(this.props.owner.subscriptionProducts[0])), u.createElement(y._30, {
+                        return this.props.owner && Object(Ne.d)(this.props.owner.subscriptionProducts) && (e = Object(Ne.a)(this.props.owner.subscriptionProducts[0])), u.createElement(y._30, {
                             className: "ticket-description"
                         }, u.createElement(y.B, {
                             border: !0,
@@ -7465,7 +7300,7 @@ webpackJsonp([38], {
                             className: "ticket-description__banner-image",
                             padding: 3
                         }, u.createElement("img", {
-                            src: Oe.c + "/owl-2017/all-access-logo.svg",
+                            src: _e.c + "/owl-2017/all-access-logo.svg",
                             alt: Object(d.d)("Overwatch League All-Access Pass on Twitch", "EsportsTicketDescription"),
                             height: "80px"
                         })), u.createElement(y.C, null, u.createElement(y._30, {
@@ -7490,7 +7325,7 @@ webpackJsonp([38], {
                             },
                             textAlign: y._40.Left,
                             background: y.m.Alt
-                        }, Object(Pe.d)(this.props.owner.subscriptionProducts) && u.createElement(y._7, {
+                        }, Object(Ne.d)(this.props.owner.subscriptionProducts) && u.createElement(y._7, {
                             margin: {
                                 bottom: 2
                             }
@@ -7508,7 +7343,7 @@ webpackJsonp([38], {
                             className: "ticket-description__description__line-item",
                             "data-test-selector": "prime-language"
                         }, u.createElement(y.N, {
-                            to: Te.b
+                            to: Ee.b
                         }, Object(d.d)("Offer available for a limited time. Terms and conditions apply", "EsportsTicketDescription")))), u.createElement(y.P, {
                             className: "ticket-description__description__line-item",
                             bold: !0,
@@ -7538,7 +7373,7 @@ webpackJsonp([38], {
                     }
                 }, t
             }(u.PureComponent),
-            Ue = Object(x.compose)(Object(m.a)(De, {
+            Pe = Object(ce.compose)(Object(m.a)(we, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7546,9 +7381,9 @@ webpackJsonp([38], {
                         }
                     }
                 }
-            }))(Ae),
-            je = n("O6CN"),
-            Me = {
+            }))(Te),
+            De = n("O6CN"),
+            Fe = {
                 "Subscription benefits": function() {
                     return Object(d.d)("Subscription benefits", "TicketDescription")
                 },
@@ -7574,7 +7409,7 @@ webpackJsonp([38], {
                     return Object(d.d)("Subscriber Emotes:", "TicketDescription")
                 }
             },
-            Le = {
+            Ie = {
                 "Ad-Free*": function() {
                     return Object(d.d)("Ad-Free*", "TicketDescription")
                 },
@@ -7612,7 +7447,7 @@ webpackJsonp([38], {
                     return Object(d.d)("This list doesn’t even include how much of a baller you’ll become after upgrading.", "TicketDescription")
                 }
             },
-            Be = {
+            Re = {
                 "One Time": function() {
                     return Object(d.d)("One Time", "TicketDescription")
                 },
@@ -7623,7 +7458,7 @@ webpackJsonp([38], {
                     return Object(d.d)("Month", "TicketDescription")
                 }
             },
-            He = function(e, t) {
+            Ae = function(e, t) {
                 return Object(d.d)("{price} / {interval}", {
                     price: u.createElement(y.P, {
                         type: y._44.Span,
@@ -7632,25 +7467,25 @@ webpackJsonp([38], {
                     interval: t
                 }, "TicketDescription")
             },
-            We = function(e) {
+            Ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderPrice = function() {
                         var e;
                         switch (t.props.data.product.interval.unit) {
-                            case ze.OneTime:
-                                e = Be["One Time"]();
+                            case Me.OneTime:
+                                e = Re["One Time"]();
                                 break;
-                            case ze.Year:
-                                e = Be.Year();
+                            case Me.Year:
+                                e = Re.Year();
                                 break;
-                            case ze.Month:
+                            case Me.Month:
                             default:
-                                e = Be.Month()
+                                e = Re.Month()
                         }
                         return u.createElement(y.P, {
                             type: y._44.H4
-                        }, He(t.props.data.product.price, e))
+                        }, Ae(t.props.data.product.price, e))
                     }, t.renderSubBadges = function() {
                         var e = t.props.data.product;
                         if (!e || !e.owner) return null;
@@ -7664,13 +7499,13 @@ webpackJsonp([38], {
                             return u.createElement(y._7, {
                                 key: e.setID + "/" + e.version,
                                 margin: .5
-                            }, u.createElement(he.a, {
+                            }, u.createElement(le.a, {
                                 badge: e
                             }))
                         });
                         return u.createElement(u.Fragment, null, u.createElement(y.P, {
                             className: "ticket-description__description__line-item"
-                        }, Me["Subscriber Badges:"]()), u.createElement(y._7, {
+                        }, Fe["Subscriber Badges:"]()), u.createElement(y._7, {
                             display: y.Q.Flex,
                             flexWrap: y.T.Wrap,
                             justifyContent: y._6.Center
@@ -7686,10 +7521,10 @@ webpackJsonp([38], {
                         }, []);
                         return 0 === e.length ? null : u.createElement(u.Fragment, null, u.createElement(y.P, {
                             className: "ticket-description__description__line-item"
-                        }, e.length, " ", Me["Subscriber Emotes:"]()), u.createElement(we.a, {
+                        }, e.length, " ", Fe["Subscriber Emotes:"]()), u.createElement(be.a, {
                             emoteSet: {
                                 id: "",
-                                emotes: Object(Ce.b)(e)
+                                emotes: Object(ke.b)(e)
                             },
                             onClickEmote: void 0,
                             locked: !1
@@ -7701,29 +7536,29 @@ webpackJsonp([38], {
                 }, t.prototype.render = function() {
                     var e = this.props.data.product,
                         t = e && !e.owner && "turbo" === e.type;
-                    return e && e.owner && Object(k.a)(e.owner.id, this.props.sessionUser) ? u.createElement(Ue, {
+                    return e && e.owner && Object(k.a)(e.owner.id, this.props.sessionUser) ? u.createElement(Pe, {
                         owner: e.owner,
                         product: e
-                    }) : this.props.mobile && t ? u.createElement(Ee, {
+                    }) : this.props.mobile && t ? u.createElement(ve, {
                         renderPrice: this.renderPrice
-                    }) : t ? u.createElement(Ne, {
+                    }) : t ? u.createElement(ye, {
                         renderPrice: this.renderPrice
-                    }) : e && e.owner && this.props.mobile ? u.createElement(_e, {
+                    }) : e && e.owner && this.props.mobile ? u.createElement(ge, {
                         owner: e.owner,
                         product: e,
                         renderPrice: this.renderPrice,
                         renderSubBadges: this.renderSubBadges,
                         renderSubEmotes: this.renderSubEmotes
-                    }) : e && e.owner ? u.createElement(ve, {
+                    }) : e && e.owner ? u.createElement(ue, {
                         owner: e.owner,
                         product: e,
                         renderPrice: this.renderPrice,
                         renderSubBadges: this.renderSubBadges,
                         renderSubEmotes: this.renderSubEmotes
-                    }) : this.props.data.loading ? u.createElement(Se, null) : u.createElement(ke, null)
+                    }) : this.props.data.loading ? u.createElement(he, null) : u.createElement(fe, null)
                 }, t
             }(u.Component),
-            Ge = Object(x.compose)(Object(Q.d)("TicketDescription"), Object(m.a)(je, {
+            je = Object(ce.compose)(Object(G.d)("TicketDescription"), Object(m.a)(De, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7731,14 +7566,14 @@ webpackJsonp([38], {
                         }
                     }
                 }
-            }))(We);
-        var ze, Ve = Object(i.b)(function(e) {
+            }))(Ue);
+        var Me, Le = Object(i.b)(function(e) {
                 return {
                     sessionUser: Object(o.c)(e)
                 }
-            })(Ge),
-            Qe = n("Heyg"),
-            qe = function(e) {
+            })(je),
+            Be = n("Heyg"),
+            He = function(e) {
                 var t;
                 return t = e.canGift ? u.createElement(y.P, null, Object(d.d)("You are buying a single month {price} Gift Subscription for {recipientName}.", {
                     price: e.price,
@@ -7761,8 +7596,8 @@ webpackJsonp([38], {
                     }
                 }, t)
             },
-            Ye = n("CIox"),
-            Ke = (n("pOYM"), function(e) {
+            We = n("CIox"),
+            Ge = (n("pOYM"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goBackToChannel = function() {
@@ -7837,9 +7672,9 @@ webpackJsonp([38], {
                     }, "GiftSubReceipt"))))
                 }, t
             }(u.Component)),
-            Je = Object(Ye.f)(Ke),
-            Ze = n("j6Ui"),
-            $e = function(e) {
+            ze = Object(We.f)(Ge),
+            Qe = n("j6Ui"),
+            qe = function(e) {
                 return u.createElement(y._30, {
                     background: y.m.Base,
                     borderMarked: !0,
@@ -7862,7 +7697,7 @@ webpackJsonp([38], {
                     }
                 }, u.createElement(y.P, null, Object(d.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30-days after you last used your free subscription.", "UpgradePrimeWarning"))), u.createElement(y.P, null, Object(d.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
             },
-            Xe = function(e) {
+            Ve = function(e) {
                 return u.createElement(y._30, {
                     background: y.m.Base,
                     borderMarked: !0,
@@ -7894,12 +7729,12 @@ webpackJsonp([38], {
                     })
                 }, "UpgradeTierWarning"))), u.createElement(y.P, null, Object(d.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
             },
-            et = function(e) {
+            Ye = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderOneMonthFree = function() {
                         var e = new Date;
-                        null !== t.props.endsAt && (e = Object(Ze.c)(t.props.endsAt));
+                        null !== t.props.endsAt && (e = Object(Qe.c)(t.props.endsAt));
                         var n = new Date(e);
                         return n.setMonth(e.getMonth() + 1), u.createElement(y._30, {
                             background: y.m.Base,
@@ -7920,12 +7755,12 @@ webpackJsonp([38], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return u.createElement(y._7, null, this.props.isOneMonthFreeEligible && this.renderOneMonthFree(), this.tierUpgrade && u.createElement(Xe, {
+                    return u.createElement(y._7, null, this.props.isOneMonthFreeEligible && this.renderOneMonthFree(), this.tierUpgrade && u.createElement(Ve, {
                         originalPrice: this.originalPrice,
                         originalCurrency: "USD",
                         newPrice: this.newPrice,
                         newCurrency: "USD"
-                    }), this.primeUpgrade && u.createElement($e, {
+                    }), this.primeUpgrade && u.createElement(qe, {
                         newPrice: this.newPrice,
                         newCurrency: "USD"
                     }), this.props.hasGift && this.props.endsAt && u.createElement(y._30, {
@@ -7936,7 +7771,7 @@ webpackJsonp([38], {
                             y: 1
                         }
                     }, u.createElement(y.P, null, Object(d.d)("You will be charged when your Gift Subscription ends on <x:strong>{date}</x:strong>.", {
-                        date: Object(d.c)(Object(Ze.c)(this.props.endsAt), "short"),
+                        date: Object(d.c)(Object(Qe.c)(this.props.endsAt), "short"),
                         "x:strong": function(e) {
                             return u.createElement(y.P, {
                                 type: y._44.Span,
@@ -7974,7 +7809,7 @@ webpackJsonp([38], {
                     configurable: !0
                 }), t
             }(u.Component),
-            tt = (n("McJK"), function(e) {
+            Ke = (n("McJK"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goBackToChannel = function() {
@@ -8057,17 +7892,16 @@ webpackJsonp([38], {
                     }, "PersonalSubReceipt"))))
                 }, t
             }(u.Component)),
-            nt = Object(Ye.f)(tt);
+            Je = Object(We.f)(Ke);
         n("gKy9");
         ! function(e) {
             e.Week = "WEEK", e.Month = "MONTH", e.Year = "YEAR", e.OneTime = "ONE_TIME"
-        }(ze || (ze = {}));
-        var it = function(e) {
+        }(Me || (Me = {}));
+        var Ze = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
-                    giftSubPurchased: !1,
-                    showErrors: !1
+                    giftSubPurchased: !1
                 }, t.trackPaymentFormInteraction = function(e) {
                     var n, i, r = {
                         channelLogin: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.login,
@@ -8095,9 +7929,7 @@ webpackJsonp([38], {
                         return c.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    e.recipient_id = this.props.recipientID, e.is_gift = this.props.isGift, this.setState({
-                                        showErrors: !1
-                                    }), t = "/kraken/checkout/users/" + this.props.data.currentUser.id + "/products/" + this.props.productShortName + "/purchase/complete", i.label = 1;
+                                    e.recipient_id = this.props.recipientID, e.is_gift = this.props.isGift, t = "/kraken/checkout/users/" + this.props.data.currentUser.id + "/products/" + this.props.productShortName + "/purchase/complete", i.label = 1;
                                 case 1:
                                     return i.trys.push([1, 3, , 4]), [4, v.a.post(t, {
                                         body: e
@@ -8109,8 +7941,6 @@ webpackJsonp([38], {
                                         paymentFlow: e.payment_flow,
                                         action: w.CompletePurchaseClick,
                                         actionDetail: S.Failed
-                                    }), this.setState({
-                                        showErrors: !0
                                     }), [2]) : (this.trackPaymentFormInteraction({
                                         paymentFlow: e.payment_flow,
                                         action: w.CompletePurchaseClick,
@@ -8120,9 +7950,7 @@ webpackJsonp([38], {
                                         giftPurchaseInfo: n.body
                                     }) : this.props.data.refetch(), [3, 4]);
                                 case 3:
-                                    return i.sent(), this.setState({
-                                        showErrors: !0
-                                    }), this.trackPaymentFormInteraction({
+                                    return i.sent(), this.trackPaymentFormInteraction({
                                         paymentFlow: e.payment_flow,
                                         action: w.CompletePurchaseClick,
                                         actionDetail: S.Failed
@@ -8134,13 +7962,13 @@ webpackJsonp([38], {
                     })
                 }, t.renderPurchaseInfo = function() {
                     if (!t.purchased) {
-                        if (t.props.isGift) return u.createElement(qe, {
+                        if (t.props.isGift) return u.createElement(He, {
                             canGift: t.props.data.subscriptionProduct.self.checkoutConfigs.canGift,
                             recipientDisplayName: t.props.recipientDisplayName,
                             price: t.props.data.subscriptionProduct.price
                         });
                         var e = t.props.data.subscriptionProduct.self.benefit;
-                        return u.createElement(et, {
+                        return u.createElement(Ye, {
                             price: t.props.data.subscriptionProduct.price,
                             hasGift: e && e.gift.isGift,
                             purchase: t.props.data.subscriptionProduct.self.purchase,
@@ -8151,13 +7979,13 @@ webpackJsonp([38], {
                 }, t.renderReceipt = function() {
                     var e = t.props.data.subscriptionProduct.self.benefit,
                         n = t.props.data.subscriptionProduct.self.purchase.details;
-                    return t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo ? u.createElement(Je, {
+                    return t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo ? u.createElement(ze, {
                         recipientDisplayName: t.props.recipientDisplayName,
                         productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
                         productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
                         invoicePrice: t.state.giftPurchaseInfo.invoice_total.price,
                         invoiceCurrency: "USD"
-                    }) : t.props.data.subscriptionProduct.owner && n && t.purchased ? u.createElement(nt, {
+                    }) : t.props.data.subscriptionProduct.owner && n && t.purchased ? u.createElement(Je, {
                         purchaserDisplayName: t.props.data.currentUser.displayName,
                         productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
                         productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
@@ -8172,7 +8000,8 @@ webpackJsonp([38], {
             }, t.prototype.render = function() {
                 if (this.props.data.loading || this.props.data.error) return u.createElement(y._7, null);
                 var e = this.props.data.subscriptionProduct,
-                    t = Object(d.d)("Buying a Channel Subscription is fast, easy and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                    t = this.props.data.subscriptionProduct.self.checkoutConfigs.paymentProviderConfigs,
+                    n = Object(d.d)("Buying a Channel Subscription is fast, easy and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
                         "x:link": function(e) {
                             return u.createElement("span", {
                                 key: "helplink"
@@ -8182,7 +8011,7 @@ webpackJsonp([38], {
                             }, e))
                         }
                     }, "SubsCheckoutPage"),
-                    n = Object(d.d)('You may cancel at any time by selecting "Do Not Renew" on your <x:link>subscriptions page</x:link>.', {
+                    i = Object(d.d)('You may cancel at any time by selecting "Do Not Renew" on your <x:link>subscriptions page</x:link>.', {
                         "x:link": function(e) {
                             return u.createElement("span", {
                                 key: "sublink"
@@ -8210,7 +8039,7 @@ webpackJsonp([38], {
                     breakpointLarge: {
                         display: y.Q.Flex
                     }
-                }, u.createElement(Ve, {
+                }, u.createElement(Le, {
                     productName: this.props.productShortName
                 })), u.createElement(y._7, {
                     className: "checkout-payments__content",
@@ -8238,22 +8067,20 @@ webpackJsonp([38], {
                     breakpointLarge: {
                         display: y.Q.Hide
                     }
-                }, u.createElement(Ve, {
+                }, u.createElement(Le, {
                     productName: this.props.productShortName,
                     mobile: !0
-                })), this.purchased && this.renderReceipt(), !this.purchased && u.createElement(u.Fragment, null, this.renderPurchaseInfo(), this.showPaymenOptions && u.createElement(u.Fragment, null, this.state.showErrors && u.createElement(y._7, {
-                    margin: {
-                        y: 2
-                    }
-                }, u.createElement(O, null)), u.createElement(ge, {
+                })), this.purchased && this.renderReceipt(), !this.purchased && u.createElement(u.Fragment, null, this.renderPurchaseInfo(), this.showPaymenOptions && u.createElement(oe, {
+                    configs: t,
+                    countryCode: this.props.data.requestInfo.countryCode,
                     onSuccess: this.completePurchase,
                     productShortName: this.props.productShortName,
                     trackPaymentFormInteraction: this.trackPaymentFormInteraction
-                })), "689376" !== e.id && u.createElement(y._7, {
+                }), "689376" !== e.id && u.createElement(y._7, {
                     margin: {
                         top: 3
                     }
-                }, u.createElement(y.P, null, t), u.createElement(y.P, null, n))))))
+                }, u.createElement(y.P, null, n), u.createElement(y.P, null, i))))))
             }, Object.defineProperty(t.prototype, "personalSubPurchased", {
                 get: function() {
                     return !!this.props.data.subscriptionProduct.self.purchase.details
@@ -8272,7 +8099,7 @@ webpackJsonp([38], {
                 },
                 enumerable: !0,
                 configurable: !0
-            }), t = c.__decorate([Object(Q.d)("CheckoutPayments"), Object(m.a)(Qe, {
+            }), t = c.__decorate([Object(G.d)("CheckoutPayments"), Object(m.a)(Be, {
                 options: function(e) {
                     return {
                         fetchPolicy: "network-only",
@@ -8286,7 +8113,7 @@ webpackJsonp([38], {
                 }
             })], t)
         }(u.Component);
-        var rt = Object(i.b)(function(e) {
+        var $e = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(o.d)(e)
                 }
@@ -8296,11 +8123,11 @@ webpackJsonp([38], {
                         return Object(s.f)(a.a.DashboardPage)
                     }
                 }, e)
-            })(it),
-            at = n("tnNl"),
-            st = n("TP6L"),
-            ot = n("EaWz"),
-            ct = function(e) {
+            })(Ze),
+            Xe = n("tnNl"),
+            et = n("TP6L"),
+            tt = n("EaWz"),
+            nt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t
@@ -8330,26 +8157,26 @@ webpackJsonp([38], {
                         position: y._14.Relative,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, u.createElement(st.a, null), u.createElement(y._7, {
+                    }, u.createElement(et.a, null), u.createElement(y._7, {
                         breakpointLarge: {
                             display: y.Q.Hide
                         }
-                    }, u.createElement(at.a, null)), u.createElement(y._7, {
+                    }, u.createElement(Xe.a, null)), u.createElement(y._7, {
                         display: y.Q.Flex,
                         flexWrap: y.T.NoWrap,
                         position: y._14.Relative,
                         fullHeight: !0
-                    }, u.createElement(rt, {
+                    }, u.createElement($e, {
                         productShortName: e,
                         isGift: !(!t || !t.id),
                         recipientID: t && t.id,
                         recipientDisplayName: t && t.displayName
                     })))
-                }, t = c.__decorate([Object(Q.d)("SubsCheckoutPage", {
+                }, t = c.__decorate([Object(G.d)("SubsCheckoutPage", {
                     destination: g.a.SubsCheckoutPage
                 }), Object(f.a)({
                     location: h.PageviewLocation.SubsCheckoutPage
-                }), Object(m.a)(ot, {
+                }), Object(m.a)(tt, {
                     options: function(e) {
                         return {
                             fetchPolicy: "cache-first",
@@ -8363,7 +8190,7 @@ webpackJsonp([38], {
                     }
                 })], t)
             }(u.Component);
-        var lt = Object(i.b)(function(e) {
+        var it = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(o.d)(e)
             }
@@ -8373,9 +8200,9 @@ webpackJsonp([38], {
                     return Object(s.f)(a.a.SubsCheckoutPage)
                 }
             }, e)
-        })(ct);
+        })(nt);
         n.d(t, "SubsCheckoutPage", function() {
-            return lt
+            return it
         })
     },
     I7cV: function(e, t, n) {
@@ -10760,8 +10587,8 @@ webpackJsonp([38], {
                     }, this.props.title)))
                 }, t
             }(u.Component)),
-            V = n("PHcJ"),
-            Q = function(e) {
+            Q = n("PHcJ"),
+            q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleOptionChange = function(e) {
@@ -10799,13 +10626,13 @@ webpackJsonp([38], {
                     }, u.createElement(B._26, {
                         name: "type"
                     }, u.createElement("option", {
-                        value: V.c.AllVideos
+                        value: Q.c.AllVideos
                     }, Object(d.d)("All Videos", "search__video-filters")), u.createElement("option", {
-                        value: V.c.PastBroadcasts
+                        value: Q.c.PastBroadcasts
                     }, Object(d.d)("Past Broadcasts", "search__video-filters")), u.createElement("option", {
-                        value: V.c.Uploads
+                        value: Q.c.Uploads
                     }, Object(d.d)("Uploads", "search__video-filters")), u.createElement("option", {
-                        value: V.c.Highlights
+                        value: Q.c.Highlights
                     }, Object(d.d)("Highlights", "search__video-filters")))), u.createElement(B._7, {
                         display: B.Q.InlineFlex,
                         margin: {
@@ -10815,11 +10642,11 @@ webpackJsonp([38], {
                     }, u.createElement(B._26, {
                         name: "video_length"
                     }, u.createElement("option", {
-                        value: V.a.AnyLength
+                        value: Q.a.AnyLength
                     }, Object(d.d)("Any Length", "search__video-filters")), u.createElement("option", {
-                        value: V.a.Short
+                        value: Q.a.Short
                     }, Object(d.d)("Short", "search__video-filters")), u.createElement("option", {
-                        value: V.a.Long
+                        value: Q.a.Long
                     }, Object(d.d)("Long", "search__video-filters"))))), u.createElement(B._7, {
                         margin: {
                             bottom: .5
@@ -10829,13 +10656,13 @@ webpackJsonp([38], {
                     }, u.createElement(B._26, {
                         name: "sort"
                     }, u.createElement("option", {
-                        value: V.b.Popular
+                        value: Q.b.Popular
                     }, Object(d.d)("Popular", "search__video-filters")), u.createElement("option", {
-                        value: V.b.Newest
+                        value: Q.b.Newest
                     }, Object(d.d)("Newest", "search__video-filters")))))))
                 }, t
             }(u.Component),
-            q = (n("FroJ"), function(e) {
+            V = (n("FroJ"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onBackClick = function() {
@@ -10881,7 +10708,7 @@ webpackJsonp([38], {
                         showBack: !1
                     }), t = this.props.isWaiting ? u.createElement(B._9, {
                         fillContent: !0
-                    }) : this.props.isErrored ? this.getErrorMessage() : this.props.currentCategory && null !== this.props.currentCategory ? this.getCategoryDrillDown(this.props.currentCategory) : this.props.gameResults && this.props.gameResults.totalHits > 0 || this.props.userResults && this.props.userResults.totalHits > 0 || this.props.communityResults && this.props.communityResults.totalHits > 0 || this.props.videoResults && this.props.videoResults.totalHits > 0 || this.props.liveResults && this.props.liveResults.totalHits > 0 ? this.getResultSections() : this.getNoResultsMessage(), this.props.currentCategory === O.a.Videos && (n = u.createElement(Q, {
+                    }) : this.props.isErrored ? this.getErrorMessage() : this.props.currentCategory && null !== this.props.currentCategory ? this.getCategoryDrillDown(this.props.currentCategory) : this.props.gameResults && this.props.gameResults.totalHits > 0 || this.props.userResults && this.props.userResults.totalHits > 0 || this.props.communityResults && this.props.communityResults.totalHits > 0 || this.props.videoResults && this.props.videoResults.totalHits > 0 || this.props.liveResults && this.props.liveResults.totalHits > 0 ? this.getResultSections() : this.getNoResultsMessage(), this.props.currentCategory === O.a.Videos && (n = u.createElement(q, {
                         key: "video-filters",
                         onOptionsChange: this.props.onVideoOptionsChange
                     })), u.createElement("div", {
@@ -11302,7 +11129,7 @@ webpackJsonp([38], {
                         show: this.props.isOpen,
                         offsetY: "5px",
                         "data-a-target": "nav-search-balloon"
-                    }, u.createElement(q, {
+                    }, u.createElement(V, {
                         isOpen: this.props.isOpen,
                         gameResults: this.props.gameResults,
                         userResults: this.props.userResults,
@@ -13617,9 +13444,9 @@ webpackJsonp([38], {
                     }))), this.renderUnreadNotificationsFooterElement())
                 }, t = i.__decorate([Object(g.d)("OnsiteNotificationsCenterWindow")], t)
             }(a.Component),
-            V = n("RH2O"),
-            Q = n("Aj/L"),
-            q = n("RweG"),
+            Q = n("RH2O"),
+            q = n("Aj/L"),
+            V = n("RweG"),
             Y = (n("MnLQ"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -13864,7 +13691,7 @@ webpackJsonp([38], {
                     n > -1 && t.splice(n, 1), t.unshift(e), t.length > 3 && t.pop(), this.setState({
                         notifications: t
                     })
-                }, t = i.__decorate([Object(g.d)("OnsiteNotificationToastManager"), Object(q.a)([{
+                }, t = i.__decorate([Object(g.d)("OnsiteNotificationToastManager"), Object(V.a)([{
                     topic: function(e) {
                         return Object(m.l)("" + (e.currentUser && e.currentUser.id))
                     },
@@ -13874,9 +13701,9 @@ webpackJsonp([38], {
                     }
                 }])], t)
             }(a.Component);
-        var ee = Object(V.b)(function(e) {
+        var ee = Object(Q.b)(function(e) {
             return {
-                currentUser: Object(Q.c)(e)
+                currentUser: Object(q.c)(e)
             }
         })(X);
         var te = s.j.withCategory("onsite-pubsub-mutators");
@@ -16757,7 +16584,6 @@ webpackJsonp([38], {
         };
         e.exports = n
     },
-    jJiV: function(e, t) {},
     jQas: function(e, t, n) {
         var i = n("SJLv");
         e.exports = function() {
@@ -19487,4 +19313,4 @@ webpackJsonp([38], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-6773dc11d25513ed78c56b772a7c1399.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-41e42457749671bd6fce7382ecdabca8.js.map
