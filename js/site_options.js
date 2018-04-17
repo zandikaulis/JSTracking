@@ -761,13 +761,13 @@ window.SiteOptions = {
         },
         "1f57c754-ceb2-40e4-8d49-c51cfc007f14": {
             "name": "TWILIGHT_SUB_CHECKOUT",
-            "v": 3521,
+            "v": 3535,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 50,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -1947,13 +1947,13 @@ window.SiteOptions = {
         },
         "4f952587-515d-44ac-b0cc-86769f543c72": {
             "name": "TWILIGHT_ALL_THE_STATS",
-            "v": 2841,
+            "v": 3536,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
