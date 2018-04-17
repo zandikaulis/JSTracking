@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3b055a6d3ded2b415e3c.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".7d1e81ded795fcffc3b9.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -2614,14 +2614,15 @@
                 u = s.playback;
             t(Object(P.d)(w.g, {
                 autoplay: u.autoplay
-            })), t(Object(C.n)([{
+            }));
+            t(Object(C.n)([{
                 quality: C.e,
                 source: i,
                 frame_rate: 30
             }])), t({
                 type: j,
                 stream: new g.b(r, i)
-            }), t(Object(C.l)(C.e)), t(Object(S.g)({
+            }), t(Object(C.l)(C.e + "p30")), t(Object(S.g)({
                 contentId: r,
                 duration: o,
                 slug: a
@@ -31439,7 +31440,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.17-190956+cff4c154c46183d299914df5d585f6865ab9242d",
+                    app_version: "2018.04.17-224950+383c791bbc9692be2b747ff170098b2cadb89107",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
