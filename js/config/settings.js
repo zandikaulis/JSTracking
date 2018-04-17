@@ -511,13 +511,13 @@ window.__twilightSettings = {
         },
         "60936fd6-ef0a-49f1-9421-712f2ba02513": {
             "name": "TWILIGHT_DASHBOARD_SETTINGS_LAUNCH",
-            "v": 3519,
+            "v": 3529,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }]
         },
