@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4d53f0f4e961ebcb937f.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8adee825f4be2391e837.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -9251,8 +9251,9 @@
                     }, this.resultCallback = function(e) {
                         e.didConfirm ? (r.track(ie.UseBitsConfirmation), r.useBitsInExtension(r.transactionId, e.didConfirm)) : (r.failReason = ee.Cancelled, r.close())
                     }, this.unsubscribeCallback = function() {}, this.useBitsInExtension = function(e, t) {
-                        R(r.extensionId, r.token, !0).then(function() {
-                            return be(e).then(function(e) {
+                        R(r.extensionId, r.token, !0).then(function(n) {
+                            var i = n.token;
+                            return A.registerToken(r.extensionId, i), be(e).then(function(e) {
                                 var n = (e.transaction_id, {
                                     action: he.a.UseBitsComplete,
                                     didConfirm: t,
@@ -9583,7 +9584,10 @@
                     }, n.onMouseEnter = function(e) {
                         n.tracker.trackEvent("extension_mouseenter", {})
                     }, n.handleToken = function(e, t) {
-                        n.hasLoaded && !e.isNearExpiration && (n.hasBootstrapped ? e.isLinked !== t.isLinked ? n.reloadExtension() : n.sendAuthUpdate(e) : n.sendBootstrap(e))
+                        n.hasLoaded && !e.isNearExpiration && (n.hasBootstrapped ? n.shouldReloadExtension(e, t) ? n.reloadExtension() : n.sendAuthUpdate(e) : n.sendBootstrap(e))
+                    }, n.shouldReloadExtension = function(e, t) {
+                        var r = e.isLinked !== t.isLinked;
+                        return r && !e.isLinked || r && !n.extension.bitsEnabled
                     }, n.onExtensionLoaded = function(e) {
                         n.hasLoaded = !0, n.contextManager.initializeContext(), n.tracker.trackEvent("extension_helper_load_success", {}), n.iframe.style.removeProperty("display");
                         var t = A.getToken(n.extension.clientId);
@@ -31440,7 +31444,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.18-172022+9d592680373fc73616628d1a700dc283dab9a8d6",
+                    app_version: "2018.04.18-174230+90e4890bf137fb06c31eb61375699855fdbb8cd2",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
