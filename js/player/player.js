@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8adee825f4be2391e837.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3e521d4babc47e1e4a3b.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -3132,9 +3132,11 @@
         }
 
         function u(e) {
+            var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             return {
                 type: H,
-                muted: e
+                muted: e,
+                automated: t
             }
         }
 
@@ -7571,17 +7573,18 @@
                             u = t.performance,
                             c = t.stream,
                             l = t.streamMetadata,
-                            d = this.player.getNetworkProfile().filter(function(e) {
+                            d = t.playback,
+                            f = this.player.getNetworkProfile().filter(function(e) {
                                 return e.startTime > this.lastNetworkProfile
                             }.bind(this));
-                        this.lastNetworkProfile = d.reduce(function(e, t) {
+                        this.lastNetworkProfile = f.reduce(function(e, t) {
                             return Math.max(e, t.startTime)
                         }, this.lastNetworkProfile);
-                        var f = this.getNetworkProfileStats(d);
-                        this.player.video && b()(f, {
+                        var p = this.getNetworkProfileStats(f);
+                        this.player.video && b()(p, {
                             vod_timestamp: this.player.getCurrentTime()
                         });
-                        var p = {
+                        var h = {
                             autoplayed: this.options.autoplay,
                             broadcast_id: l.broadcastID,
                             captions_enabled: r.enabled,
@@ -7595,18 +7598,19 @@
                             streamType: l.streamType,
                             tab_session_id: Object(T.b)(),
                             time_spent_hidden: u.timeHidden,
-                            transcoder_type: s.transcodestack
+                            transcoder_type: s.transcodestack,
+                            auto_muted: d.automatedMute
                         };
                         if (c.contentType === Y.a && i.id) {
                             this.store.dispatch(Object(he.s)());
-                            var h = j.b.get(he.j),
-                                m = h ? h[he.i] : "";
-                            p.collection_item_position = O()(i.items, {
+                            var m = j.b.get(he.j),
+                                y = m ? m[he.i] : "";
+                            h.collection_item_position = O()(i.items, {
                                 itemId: c.videoId.substr(1)
-                            }), p.collection_id = i.id, p.collection_session_id = m
+                            }), h.collection_id = i.id, h.collection_session_id = y
                         }
-                        this.trackEvent(le.a.MINUTE_WATCHED, b()({}, f, p)), this.store.dispatch(Object(ue.g)()), this.trackNetworkProfile.then(function(t) {
-                            "yes" === t && d.length > 0 && e.tracker.trackEvents(d.map(function(e) {
+                        this.trackEvent(le.a.MINUTE_WATCHED, b()({}, p, h)), this.store.dispatch(Object(ue.g)()), this.trackNetworkProfile.then(function(t) {
+                            "yes" === t && f.length > 0 && e.tracker.trackEvents(f.map(function(e) {
                                 return {
                                     event: "network_profile",
                                     properties: {
@@ -12011,7 +12015,8 @@
                     });
                 case c.h:
                     return a()({}, e, {
-                        muted: t.muted
+                        muted: t.muted,
+                        automatedMute: t.automated
                     });
                 case c.i:
                     return a()({}, e, {
@@ -12100,6 +12105,7 @@
                 isLoading: !1,
                 isSeeking: !1,
                 muted: !1,
+                automatedMute: !1,
                 paused: !1,
                 playing: !1,
                 playbackRate: 1,
@@ -31444,7 +31450,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.18-174230+90e4890bf137fb06c31eb61375699855fdbb8cd2",
+                    app_version: "2018.04.18-202037+47ae2e6ee6bc7b554b96fdfde7c4d71abe6b75b6",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -32067,7 +32073,7 @@
             }
 
             function i() {
-                t.dispatch(Object(Ga.i)())
+                t.getState().playback.muted ? t.dispatch(Object(Ga.i)()) : (J.setMuted(!0), t.dispatch(Object(Ku.y)(!0, !0)), J.play())
             }
 
             function o(e) {
