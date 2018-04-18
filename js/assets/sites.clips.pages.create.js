@@ -930,6 +930,7 @@ webpackJsonp([51], {
                     "data-test-selector": c.Slider
                 }, this.props.children));
                 var t = l("draggable-slider__overlay", {
+                    "draggable-slider__overlay--sliding-enabled": this.props.isSliderEnabled,
                     "draggable-slider__overlay--blue": this.props.color === f.Blue,
                     "draggable-slider__overlay--orange": this.props.color === f.Orange
                 });
@@ -1144,15 +1145,15 @@ webpackJsonp([51], {
             v = (n("3ydF"), n("SUA7")),
             y = n("x4k6");
         n.d(t, "b", function() {
-            return k
-        }), n.d(t, "a", function() {
             return b
+        }), n.d(t, "a", function() {
+            return k
         });
-        var k;
+        var b;
         ! function(e) {
             e[e.IconOnly = 0] = "IconOnly", e[e.TextOnly = 1] = "TextOnly", e[e.IconAndText = 2] = "IconAndText"
-        }(k || (k = {}));
-        var b = function(e) {
+        }(b || (b = {}));
+        var k = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -1383,11 +1384,11 @@ webpackJsonp([51], {
                     blurAfterClick: this.props.blurAfterClick,
                     "data-a-target": "follow-button",
                     "data-test-selector": "follow-button",
-                    icon: this.props.followUIType === k.TextOnly ? void 0 : h._21.Heart,
+                    icon: this.props.followUIType === b.TextOnly ? void 0 : h._21.Heart,
                     onClick: e,
                     size: this.props.size,
                     tabIndex: this.props.tabIndex
-                }, Object(h._58)(this.props)), this.props.followUIType === k.IconOnly ? null : t)
+                }, Object(h._58)(this.props)), this.props.followUIType === b.IconOnly ? null : t)
             }, t.prototype.renderUnfollowButton = function() {
                 var e = Object(r.d)("Unfollow", "FollowButton");
                 return a.createElement(h.u, i.__assign({
@@ -1395,13 +1396,13 @@ webpackJsonp([51], {
                     blurAfterClick: this.props.blurAfterClick,
                     "data-a-target": "unfollow-button",
                     "data-test-selector": "unfollow-button",
-                    icon: this.props.unfollowUIType === k.TextOnly ? void 0 : h._21.Heart,
-                    statusAlertIcon: this.props.unfollowUIType === k.TextOnly ? void 0 : h._21.Unheart,
-                    statusAlertText: this.props.unfollowUIType === k.IconOnly ? "" : e,
+                    icon: this.props.unfollowUIType === b.TextOnly ? void 0 : h._21.Heart,
+                    statusAlertIcon: this.props.unfollowUIType === b.TextOnly ? void 0 : h._21.Unheart,
+                    statusAlertText: this.props.unfollowUIType === b.IconOnly ? "" : e,
                     tabIndex: this.props.tabIndex,
                     size: this.props.size,
                     onClick: this.toggleFollowing
-                }, Object(h._58)(this.props)), this.props.unfollowUIType === k.IconOnly ? null : Object(r.d)("Followed", "FollowButton"))
+                }, Object(h._58)(this.props)), this.props.unfollowUIType === b.IconOnly ? null : Object(r.d)("Followed", "FollowButton"))
             }, t.prototype.renderUnfollowButtonWithDropdown = function() {
                 var e = this.props.balloonDirection ? this.props.balloonDirection : h.q.BottomRight,
                     t = this.getFollowData(),
@@ -1514,8 +1515,8 @@ webpackJsonp([51], {
             g = n("6sO2"),
             v = n("7vx8"),
             y = n("rqhk"),
-            k = n("3HXW"),
-            b = n("QIXk"),
+            b = n("3HXW"),
+            k = n("QIXk"),
             _ = n("0B06");
 
         function S(e, t) {
@@ -1587,7 +1588,7 @@ webpackJsonp([51], {
                             y: 4
                         },
                         className: "clips-editor-slider-background"
-                    }, o.createElement(k.a, {
+                    }, o.createElement(b.a, {
                         startOffset: this.state.startOffset,
                         endOffset: this.state.endOffset,
                         minOffset: 0,
@@ -1596,7 +1597,7 @@ webpackJsonp([51], {
                         onRightDrag: this.onDrag,
                         onSliderDrag: this.onDrag,
                         popover: this.renderDurationPopover(),
-                        color: k.b.Blue,
+                        color: b.b.Blue,
                         isSliderEnabled: !0
                     }, o.createElement(w._30, {
                         background: w.m.Overlay,
@@ -1607,7 +1608,7 @@ webpackJsonp([51], {
                         fullWidth: !0,
                         textAlign: w._40.Center,
                         overflow: w._10.Hidden
-                    }))), o.createElement(b.a, {
+                    }))), o.createElement(k.a, {
                         clipSlug: this.props.slug,
                         location: c.PageviewLocation.ClipsEditing,
                         broadcasterName: this.props.broadcasterName,
@@ -2701,15 +2702,15 @@ webpackJsonp([51], {
         var h, g = 5,
             v = 60,
             y = n("Odds"),
-            k = n("isxN"),
-            b = {
+            b = n("isxN"),
+            k = {
                 publishState: r.Unsent,
                 errorMessage: null
             },
             _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = b, t.onError = function(e) {
+                    return t.state = k, t.onError = function(e) {
                         t.setState({
                             publishState: r.Error,
                             errorMessage: e
@@ -2754,7 +2755,7 @@ webpackJsonp([51], {
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.publishState === r.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(b), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
+                    this.state.publishState === r.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(k), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
                 }, t.prototype.render = function() {
                     var e = this.props.title.length < 1 || this.state.publishState === r.Error,
                         t = this.state.publishState === r.Sending;
@@ -2765,7 +2766,7 @@ webpackJsonp([51], {
                         size: y.y.Large,
                         blurAfterClick: !0
                     }, Object(l.d)("Publish", "ClipsPublishButton")))
-                }, t = o.__decorate([Object(d.a)(k, {
+                }, t = o.__decorate([Object(d.a)(b, {
                     name: "publishClip"
                 })], t)
             }(s.Component),
@@ -3772,8 +3773,8 @@ webpackJsonp([51], {
             g = n("46tX"),
             v = n("rCmJ"),
             y = n("2hJ3"),
-            k = n("f6Cj"),
-            b = n("Odds"),
+            b = n("f6Cj"),
+            k = n("Odds"),
             _ = (n("Jjeq"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3785,9 +3786,9 @@ webpackJsonp([51], {
                         t.onShareClick(), Object(y.a)(t.getUrl())
                     }, t.renderIcon = function() {
                         var e = t.getAssetFromType();
-                        return a.createElement(b._7, {
+                        return a.createElement(k._7, {
                             className: "clips-mobile-share-sheet__share-icon clips-social-button__icon " + t.addSocialClassModifier("clips-social-button__icon")
-                        }, a.createElement(b._20, {
+                        }, a.createElement(k._20, {
                             asset: e,
                             fill: !0
                         }))
@@ -3796,16 +3797,16 @@ webpackJsonp([51], {
                     }, t.getAssetFromType = function() {
                         switch (t.props.type) {
                             case l.b.Twitter:
-                                return b._21.Twitter;
+                                return k._21.Twitter;
                             case l.b.Facebook:
-                                return b._21.Facebook;
+                                return k._21.Facebook;
                             case l.b.VKontakte:
-                                return b._21.VKontakte;
+                                return k._21.VKontakte;
                             case l.b.Reddit:
-                                return b._21.Reddit;
+                                return k._21.Reddit;
                             case l.b.Copy:
                             default:
-                                return b._21.Copy
+                                return k._21.Copy
                         }
                     }, t.getLabelFromType = function() {
                         switch (t.props.type) {
@@ -3845,34 +3846,34 @@ webpackJsonp([51], {
                             r = n || "";
                         switch (i) {
                             case l.b.Reddit:
-                                return Object(k.b)(a, r);
+                                return Object(b.b)(a, r);
                             case l.b.VKontakte:
-                                return Object(k.d)(a);
+                                return Object(b.d)(a);
                             case l.b.Facebook:
-                                return Object(k.a)(a);
+                                return Object(b.a)(a);
                             case l.b.Twitter:
-                                return Object(k.c)(a, r);
+                                return Object(b.c)(a, r);
                             default:
                                 return ""
                         }
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = a.createElement(b._7, {
+                    var e = a.createElement(k._7, {
                         className: "clips-mobile-share-sheet__row",
-                        display: b.Q.Flex,
-                        alignItems: b.c.Center,
+                        display: k.Q.Flex,
+                        alignItems: k.c.Center,
                         key: this.props.type,
                         margin: {
                             bottom: 1,
                             x: 2
                         }
-                    }, this.renderIcon(), a.createElement(b._30, {
+                    }, this.renderIcon(), a.createElement(k._30, {
                         margin: {
                             left: 1
                         }
-                    }, a.createElement(b.P, {
-                        type: b._44.Span
+                    }, a.createElement(k.P, {
+                        type: k._44.Span
                     }, this.getLabelFromType())));
                     return this.renderLink(e)
                 }, t.prototype.renderLink = function(e) {
@@ -3924,53 +3925,53 @@ webpackJsonp([51], {
                     var e = this,
                         t = Object(r.d)("Share Clip", "ClipsSocialShare"),
                         n = Object(r.d)("Copied!", "ClipsSocialShare");
-                    return a.createElement(b._7, {
-                        display: b.Q.Flex,
-                        justifyContent: b._6.End,
-                        alignItems: b.c.Center,
+                    return a.createElement(k._7, {
+                        display: k.Q.Flex,
+                        justifyContent: k._6.End,
+                        alignItems: k.c.Center,
                         margin: {
                             top: 1,
                             bottom: 1
                         }
-                    }, a.createElement(b.u, {
-                        type: b.A.Hollow,
+                    }, a.createElement(k.u, {
+                        type: k.A.Hollow,
                         onClick: this.onToggleShareButton,
                         "data-test-selector": "social-share-mobile-button"
-                    }, t), this.state.isModalOpen && a.createElement(b._30, {
-                        position: b._14.Fixed,
-                        background: b.m.Overlay,
-                        zIndex: b._57.Above,
+                    }, t), this.state.isModalOpen && a.createElement(k._30, {
+                        position: k._14.Fixed,
+                        background: k.m.Overlay,
+                        zIndex: k._57.Above,
                         attachLeft: !0,
                         attachTop: !0,
                         fullHeight: !0,
                         fullWidth: !0
                     }, a.createElement(v.a, {
                         onClickOut: this.onClickOut
-                    }, a.createElement(b._7, {
-                        position: b._14.Absolute,
+                    }, a.createElement(k._7, {
+                        position: k._14.Absolute,
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         className: "clips-mobile-share-sheet",
-                        display: b.Q.Flex,
-                        flexDirection: b.S.Column,
-                        zIndex: b._57.Above,
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Column,
+                        zIndex: k._57.Above,
                         "data-test-selector": "social-share-mobile-menu-root"
-                    }, a.createElement(b.e, {
-                        type: b.i.SlideInBottom,
+                    }, a.createElement(k.e, {
+                        type: k.i.SlideInBottom,
                         enabled: this.state.isModalOpen
-                    }, a.createElement(b._30, {
-                        background: b.m.Base,
+                    }, a.createElement(k._30, {
+                        background: k.m.Base,
                         elevation: 3,
                         padding: {
                             bottom: 2
                         }
-                    }, a.createElement(b._30, {
+                    }, a.createElement(k._30, {
                         className: "clips-mobile-share-sheet__title",
-                        display: b.Q.Flex,
-                        flexDirection: b.S.Row,
-                        justifyContent: b._6.Between,
-                        alignItems: b.c.Center,
+                        display: k.Q.Flex,
+                        flexDirection: k.S.Row,
+                        justifyContent: k._6.Between,
+                        alignItems: k.c.Center,
                         margin: {
                             bottom: 2
                         },
@@ -3979,19 +3980,19 @@ webpackJsonp([51], {
                             left: 2
                         },
                         borderBottom: !0
-                    }, a.createElement(b.P, {
+                    }, a.createElement(k.P, {
                         bold: !0,
-                        color: b.J.Alt,
-                        type: b._44.Span,
-                        fontSize: b.U.Size6,
+                        color: k.J.Alt,
+                        type: k._44.Span,
+                        fontSize: k.U.Size6,
                         "data-test-selector": "social-share-mobile-menu-title"
-                    }, t), a.createElement(b.v, {
+                    }, t), a.createElement(k.v, {
                         "data-test-selector": "social-share-mobile-menu-close",
-                        icon: b._21.Close,
+                        icon: k._21.Close,
                         ariaLabel: "Close Share",
-                        size: b.w.Large,
+                        size: k.w.Large,
                         onClick: this.onToggleShareButton
-                    })), a.createElement(b._7, null, m.b.map(function(t) {
+                    })), a.createElement(k._7, null, m.b.map(function(t) {
                         return a.createElement(_, {
                             key: t.type,
                             type: t.type,
@@ -3999,42 +4000,42 @@ webpackJsonp([51], {
                             url: Object(p.a)(e.props.clip.url, t.params),
                             onShareClick: e.onShareClick
                         })
-                    }))))))), this.state.isCopiedModalOpen && a.createElement(b._7, {
+                    }))))))), this.state.isCopiedModalOpen && a.createElement(k._7, {
                         fullWidth: !0,
                         attachLeft: !0,
                         attachBottom: !0,
                         className: "clips-mobile-share-sheet",
-                        position: b._14.Fixed,
-                        zIndex: b._57.Above
-                    }, a.createElement(b.e, {
-                        type: b.i.SlideInBottom,
-                        duration: b.g.Short,
+                        position: k._14.Fixed,
+                        zIndex: k._57.Above
+                    }, a.createElement(k.e, {
+                        type: k.i.SlideInBottom,
+                        duration: k.g.Short,
                         enabled: this.state.isCopiedModalOpen
-                    }, a.createElement(b._30, {
+                    }, a.createElement(k._30, {
                         padding: {
                             x: 1,
                             y: 1
                         },
-                        background: b.m.Base,
+                        background: k.m.Base,
                         elevation: 3,
                         borderTop: !0,
-                        display: b.Q.Flex,
-                        alignItems: b.c.Center
-                    }, a.createElement(b._7, {
+                        display: k.Q.Flex,
+                        alignItems: k.c.Center
+                    }, a.createElement(k._7, {
                         margin: {
                             right: .5
                         }
-                    }, a.createElement(b.e, {
-                        type: b.i.BounceIn,
-                        duration: b.g.Medium,
-                        delay: b.f.Short,
+                    }, a.createElement(k.e, {
+                        type: k.i.BounceIn,
+                        duration: k.g.Medium,
+                        delay: k.f.Short,
                         enabled: this.state.isCopiedModalOpen
-                    }, a.createElement(b._20, {
-                        type: b._22.Success,
-                        asset: b._21.Check
-                    }))), a.createElement(b.P, {
-                        type: b._44.Span,
-                        fontSize: b.U.Size4,
+                    }, a.createElement(k._20, {
+                        type: k._22.Success,
+                        asset: k._21.Check
+                    }))), a.createElement(k.P, {
+                        type: k._44.Span,
+                        fontSize: k.U.Size4,
                         bold: !0
                     }, n)))))
                 }, t
@@ -4055,22 +4056,22 @@ webpackJsonp([51], {
                 }, t.prototype.render = function() {
                     var e = this,
                         t = this.props.data.clip;
-                    if (!t && !Object(g.d)(window.navigator.userAgent)) return a.createElement(b._7, null, this.renderPlaceholders());
-                    if (!t && Object(g.d)(window.navigator.userAgent)) return a.createElement(b._7, null, this.renderMobilePlaceholders());
+                    if (!t && !Object(g.d)(window.navigator.userAgent)) return a.createElement(k._7, null, this.renderPlaceholders());
+                    if (!t && Object(g.d)(window.navigator.userAgent)) return a.createElement(k._7, null, this.renderMobilePlaceholders());
                     if (Object(g.d)(window.navigator.userAgent)) return a.createElement(S, {
                         clip: t
                     });
                     var n = Object(r.d)("More", "ClipsSocialShare");
-                    return a.createElement(b._7, {
-                        display: b.Q.Flex,
-                        justifyContent: b._6.End,
-                        alignItems: b.c.Center,
+                    return a.createElement(k._7, {
+                        display: k.Q.Flex,
+                        justifyContent: k._6.End,
+                        alignItems: k.c.Center,
                         margin: {
                             y: 1
                         }
                     }, m.b.map(function(n) {
-                        return a.createElement(b._7, {
-                            display: b.Q.InlineBlock,
+                        return a.createElement(k._7, {
+                            display: k.Q.InlineBlock,
                             key: n.type,
                             margin: {
                                 right: 1
@@ -4082,33 +4083,33 @@ webpackJsonp([51], {
                             url: Object(p.a)(t.url, n.params),
                             onShareClick: Object(h.c)(t.id, t.game && t.game.name, t.broadcaster && t.broadcaster.id, t.broadcaster && t.broadcaster.login, e.props.pageType)
                         }))
-                    }), a.createElement(b._7, {
-                        display: b.Q.InlineBlock,
-                        position: b._14.Relative
-                    }, a.createElement(d.a, null, a.createElement(b.u, {
-                        type: b.A.Hollow,
+                    }), a.createElement(k._7, {
+                        display: k.Q.InlineBlock,
+                        position: k._14.Relative
+                    }, a.createElement(d.a, null, a.createElement(k.u, {
+                        type: k.A.Hollow,
                         ariaLabel: n,
                         "data-test-selector": "social-share-button"
-                    }, n), a.createElement(b.p, {
-                        direction: b.q.BottomRight,
+                    }, n), a.createElement(k.p, {
+                        direction: k.q.BottomRight,
                         noTail: !0
-                    }, a.createElement(b._7, {
+                    }, a.createElement(k._7, {
                         padding: 1
-                    }, a.createElement(b.V, {
+                    }, a.createElement(k.V, {
                         id: "social-share-link",
-                        orientation: b.W.Vertical,
+                        orientation: k.W.Vertical,
                         label: Object(r.d)("Link", "ClipsSocialShare"),
                         "data-test-selector": "social-share-link"
                     }, a.createElement(o.a, {
                         value: t.url,
                         onClick: this.trackLinkShare
-                    })), a.createElement(b._7, {
+                    })), a.createElement(k._7, {
                         padding: {
                             top: 1
                         }
-                    }, a.createElement(b.V, {
+                    }, a.createElement(k.V, {
                         id: "social-share-link",
-                        orientation: b.W.Vertical,
+                        orientation: k.W.Vertical,
                         label: Object(r.d)("Embed Link", "ClipsSocialShare"),
                         "data-test-selector": "social-share-embed-link"
                     }, a.createElement(o.a, {
@@ -4118,61 +4119,61 @@ webpackJsonp([51], {
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.clip && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.renderPlaceholders = function() {
-                    return a.createElement(b.e, {
-                        type: b.i.FadeIn,
-                        duration: b.g.Medium,
+                    return a.createElement(k.e, {
+                        type: k.i.FadeIn,
+                        duration: k.g.Medium,
                         enabled: !0
-                    }, a.createElement(b._7, {
+                    }, a.createElement(k._7, {
                         margin: {
                             top: 1,
                             bottom: 1
                         },
-                        display: b.Q.Flex,
-                        justifyContent: b._6.End
-                    }, a.createElement(b._7, {
+                        display: k.Q.Flex,
+                        justifyContent: k._6.End
+                    }, a.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, a.createElement(b._13, {
+                    }, a.createElement(k._13, {
                         width: 30,
                         height: 30
-                    })), a.createElement(b._7, {
+                    })), a.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, a.createElement(b._13, {
+                    }, a.createElement(k._13, {
                         width: 30,
                         height: 30
-                    })), a.createElement(b._7, {
+                    })), a.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, a.createElement(b._13, {
+                    }, a.createElement(k._13, {
                         width: 30,
                         height: 30
-                    })), a.createElement(b._7, {
+                    })), a.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, a.createElement(b._13, {
+                    }, a.createElement(k._13, {
                         width: 30,
                         height: 30
-                    })), a.createElement(b._7, {
+                    })), a.createElement(k._7, {
                         margin: {
                             left: 1
                         }
-                    }, a.createElement(b._13, {
+                    }, a.createElement(k._13, {
                         width: 46,
                         height: 30
                     }))))
                 }, t.prototype.renderMobilePlaceholders = function() {
-                    return a.createElement(b._7, {
+                    return a.createElement(k._7, {
                         margin: {
                             y: 1
                         },
-                        display: b.Q.Flex,
-                        justifyContent: b._6.End
-                    }, a.createElement(b._7, null, a.createElement(b._13, {
+                        display: k.Q.Flex,
+                        justifyContent: k._6.End
+                    }, a.createElement(k._7, null, a.createElement(k._13, {
                         width: 72,
                         height: 30
                     })))
@@ -5193,22 +5194,22 @@ webpackJsonp([51], {
                             }
                         })
                     }
-                    var k = e.slice(h),
-                        b = "";
-                    u < c.length - 1 && (b = " "), k && l.push({
+                    var b = e.slice(h),
+                        k = "";
+                    u < c.length - 1 && (k = " "), b && l.push({
                         type: o.a.Text,
-                        content: "" + k + b
+                        content: "" + b + k
                     })
                 } else {
                     if (!f) {
                         var _ = l.length && l[l.length - 1];
-                        b = "";
-                        if (u < c.length - 1 && (b = " "), _ && _.type === o.a.Text) _.content += e + b;
+                        k = "";
+                        if (u < c.length - 1 && (k = " "), _ && _.type === o.a.Text) _.content += e + k;
                         else {
                             var S = "";
                             u && (S = " "), l.push({
                                 type: o.a.Text,
-                                content: S + e + b
+                                content: S + e + k
                             })
                         }
                         return
@@ -5397,14 +5398,14 @@ webpackJsonp([51], {
             })
         }
 
-        function k(e) {
+        function b(e) {
             return m({
                 method: E,
                 arg: e
             })
         }
 
-        function b(e) {
+        function k(e) {
             return m({
                 method: O,
                 arg: e
@@ -5456,9 +5457,9 @@ webpackJsonp([51], {
         }), n.d(t, "m", function() {
             return y
         }), n.d(t, "k", function() {
-            return k
-        }), n.d(t, "l", function() {
             return b
+        }), n.d(t, "l", function() {
+            return k
         }), n.d(t, "j", function() {
             return _
         }), n.d(t, "r", function() {
@@ -5929,4 +5930,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-cbdb05f3d3488abf297c81323cb7d2e1.js.map
+//# sourceMappingURL=sites.clips.pages.create-7df0e52f29e72a2ba85a23b634adeab6.js.map

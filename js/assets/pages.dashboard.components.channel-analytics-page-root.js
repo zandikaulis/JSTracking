@@ -1,4 +1,4 @@
-webpackJsonp([80], {
+webpackJsonp([81], {
     "+ear": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -2507,7 +2507,7 @@ webpackJsonp([80], {
                         value: Ze.NewFollowers
                     }, Object(l.d)("New Followers", "ChannelAnalyticsTopStreamsPanel")), s.createElement("option", {
                         value: Ze.NewSubscribers
-                    }, Object(l.d)("New Subscribers", "ChannelAnalyticsTopStreamsPanel")))
+                    }, Object(l.d)("New Subscriptions", "ChannelAnalyticsTopStreamsPanel")))
                 }, n.streamsList = function() {
                     return s.createElement(y._7, null, n.sortedStreamSummaries().slice(0, $e).map(function(e, t) {
                         return s.createElement(Ye, {
@@ -4934,4 +4934,4 @@ webpackJsonp([80], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-root-9630cb0755a35d143f6a0f2c508aeb02.js.map
+//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-root-df39848b869c1e1d63c0f679343f2c3e.js.map

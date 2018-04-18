@@ -2234,7 +2234,8 @@ webpackJsonp([53], {
                     }
                 }, r.createElement(z.a, {
                     updateContainerWidth: this.onUpdateDebounce,
-                    channelLogin: this.props.channelLogin
+                    channelLogin: this.props.channelLogin,
+                    hideEsportsSubscription: this.props.hideEsportsSubscription
                 })), f)), r.createElement(c.a, {
                     onResize: this.onUpdateDebounce
                 }))
@@ -5090,10 +5091,10 @@ webpackJsonp([53], {
                 display: e.display
             }, r.createElement("span", null, f, m))
         };
-        n.d(t, "a", function() {
-            return u
-        }), n.d(t, "b", function() {
+        n.d(t, "b", function() {
             return i
+        }), n.d(t, "a", function() {
+            return u
         })
     },
     q8Cw: function(e, t) {},
@@ -5924,4 +5925,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-985e81f94ff347b456021bad4a58f4fc.js.map
+//# sourceMappingURL=pages.channel-collections-a60d72d11d0c035afe4e39f8d69417ac.js.map

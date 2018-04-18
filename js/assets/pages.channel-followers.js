@@ -9307,8 +9307,8 @@ webpackJsonp([45], {
                     var t = l.createElement(w._30, {
                         className: "room-selector__header",
                         background: this.state.showRoomPicker ? w.m.Alt : w.m.Alt2,
-                        borderLeft: !0,
-                        borderRight: !0,
+                        borderLeft: !this.props.isEmbedded,
+                        borderRight: !this.props.isEmbedded,
                         borderBottom: !0,
                         display: w.Q.Flex,
                         fullWidth: !0,
@@ -18726,7 +18726,8 @@ webpackJsonp([45], {
                     }
                 }, r.createElement(W.a, {
                     updateContainerWidth: this.onUpdateDebounce,
-                    channelLogin: this.props.channelLogin
+                    channelLogin: this.props.channelLogin,
+                    hideEsportsSubscription: this.props.hideEsportsSubscription
                 })), f)), r.createElement(d.a, {
                     onResize: this.onUpdateDebounce
                 }))
@@ -23064,6 +23065,7 @@ webpackJsonp([45], {
             _e = (n("DVR9"), function(e) {
                 var t = null;
                 e.minToCheer > 1 && (t = a.createElement(b.P, {
+                    "data-test-selector": "min-to-cheer-selector",
                     color: b.J.Alt2,
                     italic: !0
                 }, Object(s.d)("This channel has a Cheer minimum of {minToCheer} Bits", {
@@ -23071,6 +23073,7 @@ webpackJsonp([45], {
                 }, "Bits--CheermoteTierIntro")));
                 var n = null;
                 return e.minToPin > 0 && (n = a.createElement(b.P, {
+                    "data-test-selector": "min-to-pin-selector",
                     color: b.J.Alt2,
                     italic: !0
                 }, Object(s.d)("Pinning your Cheer is a minimum of {minToPin} Bits", {
@@ -23371,6 +23374,7 @@ webpackJsonp([45], {
                         channelName: e.channelDisplayName
                     }, "Bits--PendingCheer");
                     t = a.createElement(b._7, {
+                        "data-test-selector": "default-pending-cheer-message-selector",
                         padding: {
                             top: 2,
                             x: 5
@@ -23382,6 +23386,7 @@ webpackJsonp([45], {
                 }
                 var r = null;
                 e.purchaseMore && e.purchaseMore > 0 && (r = a.createElement(b.P, {
+                    "data-test-selector": "purchase-more-selector",
                     "data-a-target": "need-more-bits-error"
                 }, Object(s.d)("Please purchase {neededBits} more Bits to Cheer", {
                     neededBits: e.purchaseMore
@@ -23392,6 +23397,7 @@ webpackJsonp([45], {
                         maximumCheerSize: he.k
                     }, "Bits--PendingCheer");
                     r = a.createElement(b.P, {
+                        "data-test-selector": "largest-cheermote-selector",
                         "data-a-target": "max-cheer-bits-error"
                     }, l)
                 }
@@ -23400,6 +23406,7 @@ webpackJsonp([45], {
                         moreBitsAmount: e.minToCheer - e.amount
                     }, "Bits--PendingCheer");
                     r = a.createElement(b.P, {
+                        "data-test-selector": "minimum-cheer-selector",
                         "data-a-target": "min-cheer-bits-error"
                     }, d)
                 }
@@ -23408,6 +23415,7 @@ webpackJsonp([45], {
                         minPerEmote: e.minPerEmote
                     }, "Bits--PendingCheer");
                     o = a.createElement(b.P, {
+                        "data-test-selector": "minimum-cheermote-selector",
                         color: b.J.Alt2,
                         italic: !0,
                         "data-a-target": "min-emote-bits-error"
@@ -24977,7 +24985,7 @@ webpackJsonp([45], {
                         "aria-labelledby": jt
                     }, a.createElement(b._30, {
                         background: b.m.Alt2,
-                        borderLeft: !0,
+                        borderLeft: !this.props.isEmbedded,
                         display: b.Q.Flex,
                         flexDirection: b.S.Column,
                         flexWrap: b.T.NoWrap,
@@ -31786,10 +31794,10 @@ webpackJsonp([45], {
                 display: e.display
             }, r.createElement("span", null, f, m))
         };
-        n.d(t, "a", function() {
-            return u
-        }), n.d(t, "b", function() {
+        n.d(t, "b", function() {
             return i
+        }), n.d(t, "a", function() {
+            return u
         })
     },
     "pV+t": function(e, t) {
@@ -35664,4 +35672,4 @@ webpackJsonp([45], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-followers-ba5ef74bca6bc8857efb1d9a81056ade.js.map
+//# sourceMappingURL=pages.channel-followers-f5fae1b91e4a800dec0a8ad09bd3b7c8.js.map

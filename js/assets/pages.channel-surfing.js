@@ -1,4 +1,4 @@
-webpackJsonp([76], {
+webpackJsonp([77], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -14142,6 +14142,7 @@ webpackJsonp([76], {
             Ce = (n("DVR9"), function(e) {
                 var t = null;
                 e.minToCheer > 1 && (t = i.createElement(v.P, {
+                    "data-test-selector": "min-to-cheer-selector",
                     color: v.J.Alt2,
                     italic: !0
                 }, Object(o.d)("This channel has a Cheer minimum of {minToCheer} Bits", {
@@ -14149,6 +14150,7 @@ webpackJsonp([76], {
                 }, "Bits--CheermoteTierIntro")));
                 var n = null;
                 return e.minToPin > 0 && (n = i.createElement(v.P, {
+                    "data-test-selector": "min-to-pin-selector",
                     color: v.J.Alt2,
                     italic: !0
                 }, Object(o.d)("Pinning your Cheer is a minimum of {minToPin} Bits", {
@@ -14449,6 +14451,7 @@ webpackJsonp([76], {
                         channelName: e.channelDisplayName
                     }, "Bits--PendingCheer");
                     t = i.createElement(v._7, {
+                        "data-test-selector": "default-pending-cheer-message-selector",
                         padding: {
                             top: 2,
                             x: 5
@@ -14460,6 +14463,7 @@ webpackJsonp([76], {
                 }
                 var r = null;
                 e.purchaseMore && e.purchaseMore > 0 && (r = i.createElement(v.P, {
+                    "data-test-selector": "purchase-more-selector",
                     "data-a-target": "need-more-bits-error"
                 }, Object(o.d)("Please purchase {neededBits} more Bits to Cheer", {
                     neededBits: e.purchaseMore
@@ -14470,6 +14474,7 @@ webpackJsonp([76], {
                         maximumCheerSize: he.k
                     }, "Bits--PendingCheer");
                     r = i.createElement(v.P, {
+                        "data-test-selector": "largest-cheermote-selector",
                         "data-a-target": "max-cheer-bits-error"
                     }, l)
                 }
@@ -14478,6 +14483,7 @@ webpackJsonp([76], {
                         moreBitsAmount: e.minToCheer - e.amount
                     }, "Bits--PendingCheer");
                     r = i.createElement(v.P, {
+                        "data-test-selector": "minimum-cheer-selector",
                         "data-a-target": "min-cheer-bits-error"
                     }, d)
                 }
@@ -14486,6 +14492,7 @@ webpackJsonp([76], {
                         minPerEmote: e.minPerEmote
                     }, "Bits--PendingCheer");
                     s = i.createElement(v.P, {
+                        "data-test-selector": "minimum-cheermote-selector",
                         color: v.J.Alt2,
                         italic: !0,
                         "data-a-target": "min-emote-bits-error"
@@ -16055,7 +16062,7 @@ webpackJsonp([76], {
                         "aria-labelledby": jt
                     }, i.createElement(v._30, {
                         background: v.m.Alt2,
-                        borderLeft: !0,
+                        borderLeft: !this.props.isEmbedded,
                         display: v.Q.Flex,
                         flexDirection: v.S.Column,
                         flexWrap: v.T.NoWrap,
@@ -20077,10 +20084,10 @@ webpackJsonp([76], {
                 display: e.display
             }, r.createElement("span", null, f, m))
         };
-        n.d(t, "a", function() {
-            return u
-        }), n.d(t, "b", function() {
+        n.d(t, "b", function() {
             return a
+        }), n.d(t, "a", function() {
+            return u
         })
     },
     "pV+t": function(e, t) {
@@ -21792,13 +21799,7 @@ webpackJsonp([76], {
                     }, t.goBackToCommunitySelectionPage = function() {
                         o.o.history.push("/hi" + location.search)
                     }, t.trackAndComplete = function() {
-                        if (Object(b.d)(), t.followedChannelsCount > 0) {
-                            var e = "" === location.search ? "?tt_medium=onboarding_surf" : location.search + "&tt_medium=onboarding_surf";
-                            window.location.assign("/directory/following/live" + e)
-                        } else {
-                            e = "" === location.search ? "?tt_medium=onboarding_surf" : location.search + "&tt_medium=onboarding_surf";
-                            window.location.assign("/directory/following/foryou" + e)
-                        }
+                        Object(b.d)(), t.followedChannelsCount > 0 ? t.redirectWithQueryParams("/directory/following/live") : t.redirectWithQueryParams("/directory/following/foryou")
                     }, t.trackAndSkip = function() {
                         H({
                             action: x.Skip,
@@ -21876,7 +21877,7 @@ webpackJsonp([76], {
                         })
                     })
                 }, t.prototype.componentDidUpdate = function() {
-                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive(), null !== this.state.channelSurfingExperimentAssignment && (!this.props.data.currentUser || Object(f.o)(new Date(this.props.data.currentUser.createdAt))) || r.parse(window.location.search).onboarding_override || window.location.assign("/" + location.search)
+                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive(), (null !== this.state.channelSurfingExperimentAssignment && (!this.props.data.currentUser || Object(f.o)(new Date(this.props.data.currentUser.createdAt))) || r.parse(window.location.search).onboarding_override) && (this.state.channelSurfingData.length || !this.dataMappedToState) || this.redirectWithQueryParams("/")
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this,
                         n = this.followedGamesDataLoaded(e) && !this.dataMappedToState,
@@ -21996,6 +21997,9 @@ webpackJsonp([76], {
                         if (!this.lastLanguagePreferencesUsedToUpdateData.has(a)) return !0
                     }
                     return !1
+                }, t.prototype.redirectWithQueryParams = function(e) {
+                    var t = location.search ? location.search + "&tt_medium=onboarding_surf" : "?tt_medium=onboarding_surf";
+                    window.location.assign("" + e + t)
                 }, t = a.__decorate([Object(g.d)("ChannelSurfingPage", {
                     destination: u.a.OnboardingSurf
                 }), Object(d.a)({
@@ -23635,4 +23639,4 @@ webpackJsonp([76], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-904a773a556edc77d8e8d3e27c65c48a.js.map
+//# sourceMappingURL=pages.channel-surfing-ff2e33edd229582e71287e50d145e4eb.js.map

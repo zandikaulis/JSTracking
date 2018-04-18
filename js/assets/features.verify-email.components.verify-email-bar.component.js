@@ -1,4 +1,4 @@
-webpackJsonp([62], {
+webpackJsonp([63], {
     "9u8h": function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
@@ -219,10 +219,10 @@ webpackJsonp([62], {
             l = i("CSlQ"),
             d = i("R0Kh"),
             h = i("9u8h"),
-            f = this,
-            m = u.o.logger.withCategory("verify-email"),
+            m = this,
+            f = u.o.logger.withCategory("verify-email"),
             p = function(e, t) {
-                return n.__awaiter(f, void 0, void 0, function() {
+                return n.__awaiter(m, void 0, void 0, function() {
                     var i, r;
                     return n.__generator(this, function(n) {
                         switch (n.label) {
@@ -237,7 +237,7 @@ webpackJsonp([62], {
                             case 2:
                                 return n.sent(), [2, !0];
                             case 3:
-                                return r = n.sent(), m.error(r, "Verify Email Service"), [2, !1];
+                                return r = n.sent(), f.error(r, "Verify Email Service"), [2, !1];
                             case 4:
                                 return [2]
                         }
@@ -421,7 +421,7 @@ webpackJsonp([62], {
                     if (I.has(this.props.location.pathname)) {
                         var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                             t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                        return Object(d.f)(e, t)
+                        return Object(d.j)(e, t)
                     }
                     return !1
                 }, t.prototype.shouldRespectDismissal = function() {
@@ -539,4 +539,4 @@ webpackJsonp([62], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-8b5d3876618e6544729e85c51e7312e9.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-17eec50c0bc5a466d9a88e8eac07cc6f.js.map

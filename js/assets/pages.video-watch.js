@@ -1,4 +1,4 @@
-webpackJsonp([37, 85], {
+webpackJsonp([38, 86], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -4090,7 +4090,7 @@ webpackJsonp([37, 85], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(91).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(92).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4102,7 +4102,7 @@ webpackJsonp([37, 85], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(90).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(91).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4114,7 +4114,7 @@ webpackJsonp([37, 85], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(90).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4126,7 +4126,7 @@ webpackJsonp([37, 85], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(89).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -7347,7 +7347,8 @@ webpackJsonp([37, 85], {
                     }
                 }, a.createElement(W.a, {
                     updateContainerWidth: this.onUpdateDebounce,
-                    channelLogin: this.props.channelLogin
+                    channelLogin: this.props.channelLogin,
+                    hideEsportsSubscription: this.props.hideEsportsSubscription
                 })), g)), a.createElement(c.a, {
                     onResize: this.onUpdateDebounce
                 }))
@@ -16785,10 +16786,10 @@ webpackJsonp([37, 85], {
                 display: e.display
             }, a.createElement("span", null, g, m))
         };
-        n.d(t, "a", function() {
-            return u
-        }), n.d(t, "b", function() {
+        n.d(t, "b", function() {
             return i
+        }), n.d(t, "a", function() {
+            return u
         })
     },
     nyge: function(e, t, n) {
@@ -21517,4 +21518,4 @@ webpackJsonp([37, 85], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-9cd3a39aae53faee9f296d0f52351245.js.map
+//# sourceMappingURL=pages.video-watch-ecca9757065e3fd8e31c6b6c6896894f.js.map

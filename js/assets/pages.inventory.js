@@ -1,4 +1,4 @@
-webpackJsonp([60], {
+webpackJsonp([61], {
     "1pvm": function(e, t) {},
     DZCb: function(e, t, n) {
         "use strict";
@@ -1042,4 +1042,4 @@ webpackJsonp([60], {
         i.definitions = i.definitions.concat(r(n("UP6l").definitions)), i.definitions = i.definitions.concat(r(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-1aeecc8be48bc58335e5d32fa767f386.js.map
+//# sourceMappingURL=pages.inventory-f022348a9fc4dcd261076cb8156cdde4.js.map

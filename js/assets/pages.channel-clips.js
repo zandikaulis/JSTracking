@@ -9813,8 +9813,8 @@ webpackJsonp([40], {
                     var t = l.createElement(w._30, {
                         className: "room-selector__header",
                         background: this.state.showRoomPicker ? w.m.Alt : w.m.Alt2,
-                        borderLeft: !0,
-                        borderRight: !0,
+                        borderLeft: !this.props.isEmbedded,
+                        borderRight: !this.props.isEmbedded,
                         borderBottom: !0,
                         display: w.Q.Flex,
                         fullWidth: !0,
@@ -15889,7 +15889,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(91).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(92).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -15901,7 +15901,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(90).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(91).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -15913,7 +15913,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(90).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -15925,7 +15925,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(89).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -20849,7 +20849,8 @@ webpackJsonp([40], {
                     }
                 }, r.createElement(W.a, {
                     updateContainerWidth: this.onUpdateDebounce,
-                    channelLogin: this.props.channelLogin
+                    channelLogin: this.props.channelLogin,
+                    hideEsportsSubscription: this.props.hideEsportsSubscription
                 })), f)), r.createElement(d.a, {
                     onResize: this.onUpdateDebounce
                 }))
@@ -25327,6 +25328,7 @@ webpackJsonp([40], {
             _e = (n("DVR9"), function(e) {
                 var t = null;
                 e.minToCheer > 1 && (t = a.createElement(b.P, {
+                    "data-test-selector": "min-to-cheer-selector",
                     color: b.J.Alt2,
                     italic: !0
                 }, Object(s.d)("This channel has a Cheer minimum of {minToCheer} Bits", {
@@ -25334,6 +25336,7 @@ webpackJsonp([40], {
                 }, "Bits--CheermoteTierIntro")));
                 var n = null;
                 return e.minToPin > 0 && (n = a.createElement(b.P, {
+                    "data-test-selector": "min-to-pin-selector",
                     color: b.J.Alt2,
                     italic: !0
                 }, Object(s.d)("Pinning your Cheer is a minimum of {minToPin} Bits", {
@@ -25634,6 +25637,7 @@ webpackJsonp([40], {
                         channelName: e.channelDisplayName
                     }, "Bits--PendingCheer");
                     t = a.createElement(b._7, {
+                        "data-test-selector": "default-pending-cheer-message-selector",
                         padding: {
                             top: 2,
                             x: 5
@@ -25645,6 +25649,7 @@ webpackJsonp([40], {
                 }
                 var r = null;
                 e.purchaseMore && e.purchaseMore > 0 && (r = a.createElement(b.P, {
+                    "data-test-selector": "purchase-more-selector",
                     "data-a-target": "need-more-bits-error"
                 }, Object(s.d)("Please purchase {neededBits} more Bits to Cheer", {
                     neededBits: e.purchaseMore
@@ -25655,6 +25660,7 @@ webpackJsonp([40], {
                         maximumCheerSize: he.k
                     }, "Bits--PendingCheer");
                     r = a.createElement(b.P, {
+                        "data-test-selector": "largest-cheermote-selector",
                         "data-a-target": "max-cheer-bits-error"
                     }, l)
                 }
@@ -25663,6 +25669,7 @@ webpackJsonp([40], {
                         moreBitsAmount: e.minToCheer - e.amount
                     }, "Bits--PendingCheer");
                     r = a.createElement(b.P, {
+                        "data-test-selector": "minimum-cheer-selector",
                         "data-a-target": "min-cheer-bits-error"
                     }, d)
                 }
@@ -25671,6 +25678,7 @@ webpackJsonp([40], {
                         minPerEmote: e.minPerEmote
                     }, "Bits--PendingCheer");
                     o = a.createElement(b.P, {
+                        "data-test-selector": "minimum-cheermote-selector",
                         color: b.J.Alt2,
                         italic: !0,
                         "data-a-target": "min-emote-bits-error"
@@ -27240,7 +27248,7 @@ webpackJsonp([40], {
                         "aria-labelledby": Ft
                     }, a.createElement(b._30, {
                         background: b.m.Alt2,
-                        borderLeft: !0,
+                        borderLeft: !this.props.isEmbedded,
                         display: b.Q.Flex,
                         flexDirection: b.S.Column,
                         flexWrap: b.T.NoWrap,
@@ -33916,10 +33924,10 @@ webpackJsonp([40], {
                 display: e.display
             }, r.createElement("span", null, f, m))
         };
-        n.d(t, "a", function() {
-            return u
-        }), n.d(t, "b", function() {
+        n.d(t, "b", function() {
             return i
+        }), n.d(t, "a", function() {
+            return u
         })
     },
     nyge: function(e, t, n) {
@@ -39400,4 +39408,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-3f07a5ebb893076d7ba4a2338e6e9a51.js.map
+//# sourceMappingURL=pages.channel-clips-243df9e9dfce2861c0b1436a45604e02.js.map

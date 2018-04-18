@@ -11001,7 +11001,7 @@ webpackJsonp([41], {
                         }
                     }, _.createElement(g.P, {
                         color: g.J.Error
-                    }, Object(m.d)("Your request could not be processed. Please try again later.", "PaymentMethodCard"))), this.props.subscriptions && this.props.subscriptions.length && _.createElement(g.P, {
+                    }, Object(m.d)("Your request could not be processed. Please try again later.", "PaymentMethodCard"))), this.props.subscriptions && !!this.props.subscriptions.length && _.createElement(g.P, {
                         color: g.J.Alt2,
                         "data-test-selector": xe.NUM_SUBS_TEXT
                     }, this.numOfSubscriptionsWillRenew)))), this.state.viewType === Se.SubRows && _.createElement(Le, {
@@ -15221,4 +15221,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.payments-609d4568c3be20f3d6997feec88ec60d.js.map
+//# sourceMappingURL=pages.payments-8b6021aba547ce7ec4c5e61417aeaedd.js.map

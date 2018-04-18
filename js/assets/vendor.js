@@ -1,4 +1,4 @@
-webpackJsonp([71], {
+webpackJsonp([72], {
     "+I6p": function(e, t, n) {
         "use strict";
         var r = n("Y7BN"),
@@ -7104,7 +7104,10 @@ webpackJsonp([71], {
                     }, n.onMouseEnter = function(e) {
                         n.tracker.trackEvent("extension_mouseenter", {})
                     }, n.handleToken = function(e, t) {
-                        n.hasLoaded && !e.isNearExpiration && (n.hasBootstrapped ? e.isLinked !== t.isLinked ? n.reloadExtension() : n.sendAuthUpdate(e) : n.sendBootstrap(e))
+                        n.hasLoaded && !e.isNearExpiration && (n.hasBootstrapped ? n.shouldReloadExtension(e, t) ? n.reloadExtension() : n.sendAuthUpdate(e) : n.sendBootstrap(e))
+                    }, n.shouldReloadExtension = function(e, t) {
+                        var r = e.isLinked !== t.isLinked;
+                        return r && !e.isLinked || r && !n.extension.bitsEnabled
                     }, n.onExtensionLoaded = function(e) {
                         n.hasLoaded = !0, n.contextManager.initializeContext(), n.tracker.trackEvent("extension_helper_load_success", {}), n.iframe.style.removeProperty("display");
                         var t = u.tokenManager.getToken(n.extension.clientId);
@@ -11856,7 +11859,8 @@ webpackJsonp([71], {
             a = n("3YBt"),
             s = n("3Fjc"),
             u = n("C6W/"),
-            c = function() {
+            c = n("tB18"),
+            l = function() {
                 function e(e, t, n) {
                     var o = this;
                     this.loginId = e, this.tracker = t, this.pubsub = n, this.close = function(e) {
@@ -11876,8 +11880,9 @@ webpackJsonp([71], {
                     }, this.resultCallback = function(e) {
                         e.didConfirm ? (o.track(s.BitsModalDataScience.UseBitsConfirmation), o.useBitsInExtension(o.transactionId, e.didConfirm)) : (o.failReason = a.ExtensionUseBitsFailReason.Cancelled, o.close())
                     }, this.unsubscribeCallback = function() {}, this.useBitsInExtension = function(e, t) {
-                        (0, u.linkUser)(o.extensionId, o.token, !0).then(function() {
-                            return (0, r.useBits)(e).then(function(e) {
+                        (0, u.linkUser)(o.extensionId, o.token, !0).then(function(n) {
+                            var u = n.token;
+                            return c.tokenManager.registerToken(o.extensionId, u), (0, r.useBits)(e).then(function(e) {
                                 e.transaction_id;
                                 var n = {
                                     action: i.FunctionAction.UseBitsComplete,
@@ -11986,7 +11991,7 @@ webpackJsonp([71], {
                     this.unsubscribeCallback && this.unsubscribeCallback()
                 }, e
             }();
-        t.BitsConfirmationModal = c
+        t.BitsConfirmationModal = l
     },
     "67fU": function(e, t, n) {
         "use strict";
@@ -35490,4 +35495,4 @@ webpackJsonp([71], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-bd6fd33c5f7bb2a86bca9dae17002535.js.map
+//# sourceMappingURL=vendor-3050ab8fec3c8e846b442fbbbfd72e7b.js.map

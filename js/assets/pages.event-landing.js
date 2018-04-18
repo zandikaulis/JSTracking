@@ -3335,7 +3335,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(91).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(92).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3347,7 +3347,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(90).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(91).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3359,7 +3359,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(90).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3371,7 +3371,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(89).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -6408,7 +6408,8 @@ webpackJsonp([47], {
                     }
                 }, r.createElement(V.a, {
                     updateContainerWidth: this.onUpdateDebounce,
-                    channelLogin: this.props.channelLogin
+                    channelLogin: this.props.channelLogin,
+                    hideEsportsSubscription: this.props.hideEsportsSubscription
                 })), g)), r.createElement(d.a, {
                     onResize: this.onUpdateDebounce
                 }))
@@ -9526,10 +9527,10 @@ webpackJsonp([47], {
                 display: e.display
             }, r.createElement("span", null, g, m))
         };
-        n.d(t, "a", function() {
-            return u
-        }), n.d(t, "b", function() {
+        n.d(t, "b", function() {
             return i
+        }), n.d(t, "a", function() {
+            return u
         })
     },
     nyge: function(e, t, n) {
@@ -11138,4 +11139,4 @@ webpackJsonp([47], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-1392e07ac0ed2705110d686f4413c82f.js.map
+//# sourceMappingURL=pages.event-landing-59596a350dc5af2f95c3e00be94d2200.js.map
