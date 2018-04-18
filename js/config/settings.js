@@ -26,7 +26,7 @@ window.__twilightSettings = {
     "dashboard_nav_reorg": true,
     "dashboard_settings_launch": "off",
     "deprecated_messages_download_enabled": false,
-    "detector_urls": ["https://pubads.g.doubleclick.net/|", "https://adservice.google.com/|", "https://s0.2mdn.net/", "https://adservice.google.com"],
+    "detector_urls": ["https://pubads.g.doubleclick.net/|", "https://s0.2mdn.net/", "https://adservice.google.com"],
     "env_test": "This is a test in Production",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445"],
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
