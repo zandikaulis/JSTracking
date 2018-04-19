@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".5cc278d82cef847b6dfa.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9bb19384c12e27c7716b.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -6933,16 +6933,21 @@
                 }, {
                     key: "_attachProfilingListeners",
                     value: function(e) {
-                        var t = this,
-                            n = e.Profile;
-                        this._mediaPlayer.addEventListener(n.MANIFEST_REQUEST, function() {
-                            t.sendPerformanceEvent(P.e)
-                        }), this._mediaPlayer.addEventListener(n.MANIFEST_READY, function() {
-                            t.sendPerformanceEvent(P.d)
-                        }), this._mediaPlayer.addEventListener(n.VARIANT_REQUEST, function() {
-                            t.sendPerformanceEvent(P.g)
-                        }), this._mediaPlayer.addEventListener(n.VARIANT_READY, function() {
-                            t.sendPerformanceEvent(P.f)
+                        var t = this;
+                        this._mediaPlayer.addEventListener(e.PlayerEvent.PROFILE, function(n) {
+                            switch (n) {
+                                case e.Profile.HLS_MASTER_PLAYLIST_REQUEST:
+                                    t.sendPerformanceEvent(P.e);
+                                    break;
+                                case e.Profile.HLS_MASTER_PLAYLIST_READY:
+                                    t.sendPerformanceEvent(P.d);
+                                    break;
+                                case e.Profile.HLS_MEDIA_PLAYLIST_REQUEST:
+                                    t.sendPerformanceEvent(P.g);
+                                    break;
+                                case e.Profile.HLS_MEDIA_PLAYLIST_READY:
+                                    t.sendPerformanceEvent(P.f)
+                            }
                         })
                     }
                 }, {
@@ -31450,7 +31455,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.18-210007+3dadd919ace76fbc3cad6d68e11b2af02426ee80",
+                    app_version: "2018.04.19-175805+d9d58cebd887be226871b347fbff6544cdd52726",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -37156,7 +37161,7 @@
                 }]), e
             }(),
             es = n(102),
-            ts = "//video-edge-3214c3.sjc01.hls.ttvnw.net/v1/segment/CtlJgM7ozzFqq1wfb3wsf5mVzmJ7NusMJqbKp6RzhH-HOMQ1irYVWFei2gKmfXs8GvimMgVo12kbc5Wp311gcwzWvUzv7X_B2mdzi96vfUD1yOrV5keTCxK1uf6Bm3LbsQKShSD7poxijgAEvSANgFVMf5ugQUn96aVFvvnsM6ibACZ3WLF_uGaGt27CORKFjFX27YpGihb4Qu0uK6YDVxHR68NDYVzPaQlJxG9njUzSgcw8wjaL7yx575EWEoKJghc_UdW0sW_FW46r4tMjy34EEUshD72HlmsqKNSHHu9wHQao2SwxjoLLSfLJxUJ0WUS41iRv1tDiaZsply_24kY5x3kTepiSfAv_6R9EADUVCiaxMkw6v8dHsHNLCG3NkCyOk5w78dvK1b3abJh3FuEppjJnKcFgFpzm1b0mun8QBV5RwqlnoH8h6pH5u8Wg3OtWqJ4kPwbDBVkz2vPOg2dxXd8g7ThzIes9JFOmNiHn0dCJCWL1EqF_YkA5QbaJ1WVAG2EgVA4hzUKFWdbwzstVF5KoWZrAKhqM.ts",
+            ts = "//video-edge-815447.sjc01.hls.ttvnw.net/v1/segment/CkKR14swoZQJFj6Mv4Bu_Myg_6vBpt45t38ZUQHHldtMuQ5nIg8tJId18e2k7IncGQ5NTnWsy72pqlQQ8u-woiY3IrV8AGDVsbVmP2xiQmBq-rzkXAkcczcbcQ6f8dEWkWVZXktTIaJRrD6TRvqcV5lhuHzTBHS3sFeme8ffbdli5yNBrkMQNSlAXHC3r5_ZKsohV-SBfJUjibUOEDd3BRHwv5Vg6_I7Sm7f-8giE_X4BoN9pwJ7HdA_KTbuIzc2fkXlK-20-pY7mXqTQcsyRcHp-wkbZYmTSR2aqFPZvBCdzQoXk1i-KoPa1YEu5xE2tLSNY7k3jvrHGiOJ1SEuzd4-YkRBpBfovjzvRo7iGZIYCA8KTPEAi8GauwnGTGscTUpwm5T42Y9QmzA7w2_H5Y0nMUUvPtOD4l_PoSy0J26WxfB9b6C1yRGoFUKSwR50NleP5uzN2my6uXDS4RgvFCL8JW_22SyqKkB7HtqVuxErBQg5HZLfqe-EYX7GxcrYUcwj5k9nk--NAebraqSBVbutBpA4_DG22rYZtN.ts",
             ns = n(49),
             rs = n(261),
             is = n(135),
