@@ -584,7 +584,7 @@ webpackJsonp([82], {
             p = n("zCIC"),
             v = n("oIkB"),
             h = n("O8Ns"),
-            g = n("rH6M"),
+            g = (n("gpuH"), n("h5eQ")),
             f = n("8wGL"),
             k = n("gDYr"),
             C = function(e, t) {
@@ -913,8 +913,8 @@ webpackJsonp([82], {
             M = n("8/8b"),
             R = n("M0wY"),
             L = n("mi6k"),
-            B = n("kk4f"),
-            H = n("jcM9"),
+            H = n("kk4f"),
+            B = n("jcM9"),
             Q = n("F0UT"),
             U = n("btUQ");
         ! function(e) {
@@ -977,7 +977,7 @@ webpackJsonp([82], {
                         color: S.J.Alt,
                         type: S._44.H6,
                         bold: !0
-                    }, Object(a.d)("Collection Thumbnail", "CollectionEditorInfoCard"))), l.createElement(B.a, {
+                    }, Object(a.d)("Collection Thumbnail", "CollectionEditorInfoCard"))), l.createElement(H.a, {
                         "data-test-selector": w.Thumbnail,
                         alt: this.props.collection.title,
                         sizes: [{
@@ -1058,7 +1058,7 @@ webpackJsonp([82], {
                         icon: S._21.Plus,
                         onClick: this.onAddVideosClickHandler,
                         type: S.A.Text
-                    }, Object(a.d)("Add videos", "CollectionEditorInfoCard")), l.createElement(H.a, {
+                    }, Object(a.d)("Add videos", "CollectionEditorInfoCard")), l.createElement(B.a, {
                         balloonDirection: S.q.BottomCenter,
                         buttonType: S.A.Text,
                         content: {
@@ -2369,6 +2369,7 @@ webpackJsonp([82], {
         }
         i.definitions = i.definitions.concat(l(n("OEl7").definitions)), i.definitions = i.definitions.concat(l(n("9Gwb").definitions)), e.exports = i
     },
+    gpuH: function(e, t) {},
     j5vp: function(e, t, n) {
         var i = {
             kind: "Document",
@@ -2988,4 +2989,4 @@ webpackJsonp([82], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-d644dc2979099d23daf283bab38cb590.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-c9439b71b09c822c50063cd3711dee06.js.map

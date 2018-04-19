@@ -3261,10 +3261,10 @@ webpackJsonp([49], {
                 })], t)
             }(d.Component),
             H = n("+GT7"),
-            z = n("SZoP");
+            B = n("SZoP");
         n("tkib");
 
-        function B() {
+        function z() {
             return d.createElement(_._7, {
                 className: "following__empty",
                 margin: {
@@ -3368,7 +3368,7 @@ webpackJsonp([49], {
                 fontSize: _.U.Size4,
                 "data-a-target": "no-hosts-live-text",
                 italic: !0
-            }, Object(m.d)("No Hosts Live", "LiveHosts")))) : d.createElement("div", null, n, !e.showSample && d.createElement(B, null));
+            }, Object(m.d)("No Hosts Live", "LiveHosts")))) : d.createElement("div", null, n, !e.showSample && d.createElement(z, null));
             var i, a = [];
             if (e.hosts.forEach(function(e) {
                     e && e.hosting && e.hosting.stream && e.hosting.id && a.push(e)
@@ -3391,8 +3391,8 @@ webpackJsonp([49], {
             }
             var o = a.map(function(e, t) {
                 if (e.hosting && e.hosting.stream && e.hosting.id) {
-                    var n = Object(z.a)(e.hosting.login, e.hosting.displayName, !0),
-                        i = Object(z.a)(e.login, e.displayName, !0),
+                    var n = Object(B.a)(e.hosting.login, e.hosting.displayName, !0),
+                        i = Object(B.a)(e.login, e.displayName, !0),
                         a = Object(m.d)("{hostDisplayName} hosting {hostedDisplayName}", {
                             hostDisplayName: i,
                             hostedDisplayName: n
@@ -3558,7 +3558,7 @@ webpackJsonp([49], {
                 fontSize: _.U.Size4,
                 "data-a-target": "no-channels-live-text",
                 italic: !0
-            }, Object(m.d)("No Channels Live", "LiveChannels")))) : d.createElement("div", null, n, d.createElement(B, null));
+            }, Object(m.d)("No Channels Live", "LiveChannels")))) : d.createElement("div", null, n, d.createElement(z, null));
             var i, a = e.users || [];
             if (e.maxDisplayCount && e.maxDisplayCount < a.length) a = a.slice(0, e.maxDisplayCount - 1), i = d.createElement(j.a, {
                 subHeader: "Live Channels",
@@ -3573,7 +3573,7 @@ webpackJsonp([49], {
             }
             var o = a.map(function(e, t) {
                 if (!e.stream || !e.id) return null;
-                var n = Object(z.a)(e.login, e.displayName),
+                var n = Object(B.a)(e.login, e.displayName),
                     i = {
                         medium: k.PageviewMedium.Following,
                         content: k.PageviewContent.Live,
@@ -5807,110 +5807,6 @@ webpackJsonp([49], {
         };
         var c = 0,
             m = 350
-    },
-    QG7y: function(e, t, n) {
-        "use strict";
-        n.d(t, "b", function() {
-            return r
-        }), n.d(t, "c", function() {
-            return o
-        }), n.d(t, "d", function() {
-            return s
-        }), n.d(t, "a", function() {
-            return l
-        }), n.d(t, "f", function() {
-            return d
-        }), n.d(t, "e", function() {
-            return c
-        }), n.d(t, "g", function() {
-            return m
-        }), t.i = function(e) {
-            m.emit(d, e)
-        }, t.h = function(e) {
-            m.emit(c, e)
-        };
-        var i = n("BzvE"),
-            a = (n.n(i), n("6sO2")),
-            r = {
-                directory: {
-                    banner: "dfp-directory-banner",
-                    rectangle: "dfp-directory-rectangle"
-                },
-                channel250: "google_companion_300x250",
-                anonFront: {
-                    rect: "Twitch_FPMedRect_holder",
-                    banner: "Twitch_FPopaBanner_holder",
-                    takeover: "Twitch_FPTakeoverSkinv2_holder",
-                    bottom: "Twitch_FP970Bottom_holder",
-                    sizzle: "sizzle_strip"
-                },
-                front: {
-                    leaderboard: "hpto_logged_in_leaderboard",
-                    rightTop: "hpto_logged_in_rcol_top",
-                    rightBottom: "hpto_logged_in_rcol_bottom"
-                }
-            },
-            o = {
-                directory: {
-                    banner: [
-                        [970, 66],
-                        [970, 250],
-                        [728, 90]
-                    ],
-                    rectangle: [
-                        [300, 250]
-                    ]
-                },
-                channel250: [300, 250],
-                anonFront: {
-                    rect: [
-                        [300, 250]
-                    ],
-                    banner: [
-                        [970, 418],
-                        [970, 67],
-                        [970, 250],
-                        [970, 150],
-                        [980, 250]
-                    ],
-                    takeover: [
-                        [1, 1]
-                    ],
-                    bottom: [
-                        [970, 66],
-                        [728, 90]
-                    ],
-                    sizzle: [
-                        [980, 250]
-                    ]
-                },
-                front: {
-                    leaderboard: [
-                        [970, 66],
-                        [728, 90]
-                    ],
-                    rightTop: [
-                        [300, 250]
-                    ],
-                    rightBottom: [
-                        [300, 600]
-                    ]
-                }
-            },
-            s = {
-                directory: "/" + a.a.dfpNetworkCode + "/twitch/directory",
-                channel: "/" + a.a.dfpNetworkCode + "/twitch/channels",
-                frontpage: "/" + a.a.dfpNetworkCode + "/twitch/homepage",
-                sizzle: "/" + a.a.dfpNetworkCode + "/twitch/sizzle_strip"
-            },
-            l = {
-                games: "games",
-                channel: "channel",
-                frontpage: "homepage"
-            },
-            d = "ads.slot-render-end",
-            c = "ads.slot-ready",
-            m = new i.EventEmitter
     },
     QjjF: function(e, t) {
         var n = {
@@ -9345,12 +9241,12 @@ webpackJsonp([49], {
             return void 0 !== e.watchedProgressPercent
         }
 
-        function z(e) {
+        function B(e) {
             return void 0 !== e.clipCreatedByChannelLogin
         }! function(e) {
             e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
         }(L || (L = {}));
-        var B = function(e) {
+        var z = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -9410,7 +9306,7 @@ webpackJsonp([49], {
                         value: Object(r.c)(new Date(this.props.datePublished), "medium")
                     }),
                     progressBarPercent: this.props.watchedProgressPercent
-                }) : z(this.props) ? a.createElement(P, {
+                }) : B(this.props) ? a.createElement(P, {
                     topLeft: a.createElement(I, {
                         value: Object(V.a)(this.props.durationInSeconds),
                         icon: d._21.Clip,
@@ -9425,7 +9321,7 @@ webpackJsonp([49], {
                     })
                 }) : void 0
             }, t.prototype.getViewCountLabel = function() {
-                return H(this.props) || z(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                return H(this.props) || B(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                     viewerCount: this.props.viewCount
                 }, "VideoPreviewCard") : ""
             }, t.prototype.renderIconicImage = function() {
@@ -9443,7 +9339,7 @@ webpackJsonp([49], {
                     text: this.props.channelLogin,
                     linkTo: this.props.channelLoginLinkTo
                 }];
-                return z(this.props) ? e.push({
+                return B(this.props) ? e.push({
                     text: Object(r.d)("Clipped by {userName}", {
                         userName: this.props.clipCreatedByChannelLogin
                     }, "VideoPreviewCard"),
@@ -9466,7 +9362,7 @@ webpackJsonp([49], {
         n.d(t, "b", function() {
             return L
         }), n.d(t, "a", function() {
-            return B
+            return z
         })
     },
     vKYI: function(e, t, n) {
@@ -10315,4 +10211,4 @@ webpackJsonp([49], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-45faa504039a48c2942b3735ef078a5d.js.map
+//# sourceMappingURL=pages.following-ed190fed5796216acf76be1af6967dbd.js.map

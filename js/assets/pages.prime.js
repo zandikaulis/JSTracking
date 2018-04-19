@@ -27,7 +27,8 @@ webpackJsonp([56], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     return i.createElement(m._7, {
-                        className: "prime-footer"
+                        className: "prime-footer",
+                        position: m._14.Relative
                     }, i.createElement(m._30, {
                         position: m._14.Absolute,
                         justifyContent: m._6.Center,
@@ -61,10 +62,9 @@ webpackJsonp([56], {
                         fullWidth: !0,
                         fullHeight: !0,
                         padding: {
-                            top: 3,
-                            bottom: 5
+                            top: 2
                         },
-                        className: "prime-footer"
+                        className: "prime-footer-links"
                     }, i.createElement(m._30, {
                         padding: 2
                     }, i.createElement(m.N, {
@@ -345,9 +345,9 @@ webpackJsonp([56], {
                 })], t)
             }(i.Component)),
             w = n("LXDe"),
-            T = n("R0Kh"),
-            I = n("Hs3O"),
-            x = (n("cTXP"), function(e) {
+            x = n("R0Kh"),
+            T = n("Hs3O"),
+            I = (n("cTXP"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onTryPrimeClick = function() {
@@ -357,7 +357,7 @@ webpackJsonp([56], {
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.getLink = function() {
-                    return this.props.externalURI ? this.props.externalURI : Object(I.d)(I.c, window.location.pathname.substring(1))
+                    return this.props.externalURI ? this.props.externalURI : Object(T.d)(T.c, window.location.pathname.substring(1))
                 }, t.prototype.render = function() {
                     return i.createElement(m._7, {
                         className: "prime-upsell-button__subsite",
@@ -434,7 +434,7 @@ webpackJsonp([56], {
                         type: m._44.P,
                         fontSize: m.U.Size4,
                         bold: !0
-                    }, Object(s.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")), i.createElement(x, {
+                    }, Object(s.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")), i.createElement(I, {
                         tracking: {
                             position: N.a.CenterBanner
                         }
@@ -466,7 +466,7 @@ webpackJsonp([56], {
                             className: "prime-offers__list"
                         }, i.createElement(f.a, {
                             ignoreFirstPageLoad: !0,
-                            listDirection: T.c.Horizontal,
+                            listDirection: x.c.Horizontal,
                             offerFilterType: e,
                             hideUpsell: !0
                         }))
@@ -543,7 +543,7 @@ webpackJsonp([56], {
                     if (!e || !this.currentUserHasPrime(e)) return i.createElement(L, null)
                 }, t.prototype.renderFooterUpsellButton = function() {
                     var e = this.props.userData;
-                    if (!e || !this.currentUserHasPrime(e)) return i.createElement(x, {
+                    if (!e || !this.currentUserHasPrime(e)) return i.createElement(I, {
                         tracking: {
                             position: N.a.CenterFooter
                         }
@@ -1123,13 +1123,13 @@ webpackJsonp([56], {
                     }
                 }), Object(f.d)("BlueBarComponent")], t)
             }(s.Component),
-            T = n("dnng");
+            x = n("dnng");
         n.d(t, "c", function() {
             return C
         }), n.d(t, "a", function() {
             return w
         }), n.d(t, "b", function() {
-            return T.a
+            return x.a
         }), n.d(t, "d", function() {
             return y.e
         }), n.d(t, !1, function() {
@@ -1603,12 +1603,14 @@ webpackJsonp([56], {
                     return t.onClick = function(e) {
                         Object(h.d)({
                             offerID: t.props.offerID,
-                            externalURL: t.props.externalURL
+                            externalURL: t.props.externalURL,
+                            index: t.props.index
                         }, t.props.offerType), t.props.claimCallback && t.props.offerType !== g.d.EXTERNAL_OFFER && t.props.claimCallback(e)
                     }, t.onHover = function() {
                         Object(h.e)({
                             offerID: t.props.offerID,
-                            externalURL: t.props.externalURL
+                            externalURL: t.props.externalURL,
+                            index: t.props.index
                         }, t.props.offerType)
                     }, t
                 }
@@ -1664,17 +1666,20 @@ webpackJsonp([56], {
                         var e = !n.state.showDescription;
                         Object(h.g)(e, {
                             offerID: n.props.offerID,
-                            externalURL: n.props.externalURL
+                            externalURL: n.props.externalURL,
+                            index: n.props.index
                         }), n.setState({
                             showDescription: e
                         })
                     }, n.onHover = function() {
                         n.state.showDescription ? Object(h.f)({
                             offerID: n.props.offerID,
-                            externalURL: n.props.externalURL
+                            externalURL: n.props.externalURL,
+                            index: n.props.index
                         }) : Object(h.h)({
                             offerID: n.props.offerID,
-                            externalURL: n.props.externalURL
+                            externalURL: n.props.externalURL,
+                            index: n.props.index
                         })
                     }, n.state = {
                         showDescription: !1
@@ -1727,12 +1732,14 @@ webpackJsonp([56], {
                     return t.onClick = function() {
                         Object(h.k)({
                             offerID: t.props.offerID,
-                            externalURL: t.getLink()
+                            externalURL: t.getLink(),
+                            index: t.props.index
                         })
                     }, t.onHover = function() {
                         Object(h.l)({
                             offerID: t.props.offerID,
-                            externalURL: t.getLink()
+                            externalURL: t.getLink(),
+                            index: t.props.index
                         })
                     }, t
                 }
@@ -1781,16 +1788,19 @@ webpackJsonp([56], {
                         claimCallback: this.props.claimCallback,
                         claiming: this.props.claiming,
                         orientation: this.props.orientation,
-                        externalURL: this.props.externalURL
+                        externalURL: this.props.externalURL,
+                        index: this.props.index
                     }) : a.createElement(O, {
                         externalURL: this.props.externalURL,
-                        offerID: this.props.offerID
+                        offerID: this.props.offerID,
+                        index: this.props.index
                     })
                 }, t.prototype.getClaimDescriptionSection = function() {
                     return this.props.offerType === g.d.EXTERNAL_OFFER ? null : a.createElement(k, {
                         description: this.props.offerDescription,
                         offerID: this.props.offerID,
                         externalURL: this.props.externalURL,
+                        index: this.props.index,
                         orientation: this.props.orientation
                     })
                 }, t = i.__decorate([Object(l.a)(b), Object(c.d)("PrimeInstructions")], t)
@@ -2007,8 +2017,8 @@ webpackJsonp([56], {
                 }, t = i.__decorate([Object(c.d)("PrimeRedeem")], t)
             }(a.Component)),
             w = n("el3o"),
-            T = (n("v+rJ"), n("rM0q")),
-            I = function(e) {
+            x = (n("v+rJ"), n("rM0q")),
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2136,6 +2146,7 @@ webpackJsonp([56], {
                             externalURL: n.externalURL,
                             claimCallback: t.claimOffer,
                             claiming: t.state.claiming,
+                            index: t.props.index,
                             orientation: t.props.orientation
                         })
                     }, t.getErrorType = function() {
@@ -2190,13 +2201,13 @@ webpackJsonp([56], {
                     return (e.self || {
                         hasEntitlement: !1
                     }).hasEntitlement
-                }, t = i.__decorate([Object(l.a)(T, {
+                }, t = i.__decorate([Object(l.a)(x, {
                     name: "data"
                 }), Object(l.a)(w, {
                     name: "claimPrimeOffer"
                 }), Object(c.d)("PrimeOffer")], t)
             }(a.Component),
-            x = (n("WC9X"), function(e) {
+            I = (n("WC9X"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2300,7 +2311,7 @@ webpackJsonp([56], {
                         return e.loading || !e.error && r
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], n = 0; n < 3; ++n) {
-                            var r = a.createElement(x, {
+                            var r = a.createElement(I, {
                                 key: n,
                                 orientation: t.getOfferListOrientation()
                             });
@@ -2339,11 +2350,12 @@ webpackJsonp([56], {
                     if (!t.error && t.primeOffers && t.primeOffers.length) {
                         var n = this.getSortedOffers(),
                             r = n[n.length - 1];
-                        return n.map(function(t) {
-                            return a.createElement(I, {
+                        return n.map(function(t, n) {
+                            return a.createElement(T, {
                                 key: t.id,
                                 offer: t,
                                 isLast: r.id === t.id,
+                                index: n,
                                 orientation: e.getOfferListOrientation()
                             })
                         })
@@ -2556,6 +2568,7 @@ webpackJsonp([56], {
                 client_time: Date.now(),
                 offer_id: e.offerID,
                 external_url: e.externalURL,
+                index: e.index,
                 element: n,
                 action: t,
                 user_agent: navigator.userAgent
@@ -2567,7 +2580,7 @@ webpackJsonp([56], {
             e.Hover = "hover", e.Click = "click"
         }(i || (i = {})),
         function(e) {
-            e.StartYourFreeTrial = "start_your_free_trail", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code"
+            e.StartYourFreeTrial = "start_your_free_trial", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code"
         }(a || (a = {})),
         function(e) {
             e.TopNav = "top-nav", e.CenterBanner = "center-banner", e.CenterFooter = "center-footer"
@@ -3506,4 +3519,4 @@ webpackJsonp([56], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.prime-e973a4c32e37c5b054b45088e1ab479b.js.map
+//# sourceMappingURL=pages.prime-4190988cacfece9fb270fdfdff6cbcc5.js.map

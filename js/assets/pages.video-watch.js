@@ -1,4 +1,4 @@
-webpackJsonp([38, 86], {
+webpackJsonp([37, 86], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -306,6 +306,15 @@ webpackJsonp([38, 86], {
                     request_method: e.requestMethod
                 };
             i.n.track(r.SpadeEventType.BitsAdsRequest, n)
+        }, t.i = function(e) {
+            var t = {
+                leaderboard_size: e.leaderboardSize,
+                leaderboard_mode: e.leaderboardMode,
+                user_present_in_leaderboard: e.userPresentInLeaderboard,
+                user_id: e.userID,
+                channel_id: e.channelID
+            };
+            i.n.track(r.SpadeEventType.LeaderboardExpandClick, t)
         };
         var i = n("6sO2"),
             r = n("vH/s");
@@ -12436,422 +12445,13 @@ webpackJsonp([38, 86], {
         var i = n("TToO"),
             r = n("3zLD"),
             a = n("6sO2"),
-            o = n("GiK3"),
-            s = n("+Znq"),
-            l = n("xX9u"),
-            c = n("OAwv"),
-            d = n("Ryxq");
+            o = n("zAjo"),
+            s = n("sJBK"),
+            l = n("jOt7");
 
-        function u(e, t) {
-            var n = new URL("https://www.twitch.tv/collections/" + e);
-            return t && (n.search = c.stringify(t)), n.toString()
-        }
-
-        function m(e, t) {
-            var n = new URL("https://www.twitch.tv/videos/" + e);
-            return t && (n.search = c.stringify(i.__assign({}, t, {
-                t: "number" == typeof t.t ? Object(d.a)(t.t) : void 0
-            }))), n.toString()
-        }
-        var p, h = n("Odds"),
-            f = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = u(this.props.collection.id);
-                    return o.createElement("div", null, o.createElement(h.P, null, Object(a.d)("Collection Link", "VideoShareBox")), o.createElement(l.a, {
-                        onClick: function() {
-                            e.props.onClick(t)
-                        },
-                        value: t
-                    }))
-                }, t
-            }(o.Component),
-            g = n("cAee"),
-            v = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onClickHandler = function(e) {
-                        var n = {
-                            location: t.props.tracking.location,
-                            platform: g.a.Link,
-                            shareURL: e
-                        };
-                        Object(g.b)(t.props.collection, n, a.o.apollo.client)
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(f, i.__assign({}, this.props, {
-                        onClick: this.onClickHandler
-                    }))
-                }, t
-            }(o.Component),
-            b = n("AoO8"),
-            k = n("vH/s");
-
-        function y(e) {
-            switch (e.type) {
-                case p.Collection:
-                    return e.currentVideo || null;
-                case p.Video:
-                    return e;
-                default:
-                    return e
-            }
-        }! function(e) {
-            e[e.Collection = 0] = "Collection", e[e.Video = 1] = "Video"
-        }(p || (p = {}));
-        var _ = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = this.props.content,
-                        n = this.getEmbedPlayerContentURL(t);
-                    return o.createElement("div", null, o.createElement(h.P, null, Object(a.d)("Embed Video", "VideoShareBox")), o.createElement(l.a, {
-                        onClick: function() {
-                            e.props.onClick(n)
-                        },
-                        value: this.getEmbedPlayerCode(t)
-                    }))
-                }, t.prototype.getEmbedPlayerCode = function(e) {
-                    var t = function(e, t) {
-                            var n = {
-                                autoplay: !1
-                            };
-                            switch (e.type) {
-                                case p.Collection:
-                                    e.currentVideo ? (n.video = e.currentVideo.id, n.t = t ? Object(d.a)(t) : void 0) : n.collection = e.id;
-                                    break;
-                                case p.Video:
-                                    n.video = e.id, n.t = t ? Object(d.a)(t) : void 0
-                            }
-                            return n
-                        }(e, null !== this.props.selectedVideoStartTime ? this.props.selectedVideoStartTime : void 0),
-                        n = e.owner.displayName,
-                        i = e.title,
-                        r = Object(a.d)("Watch {title} from {displayName} on www.twitch.tv", {
-                            displayName: n,
-                            title: i
-                        }, "VideoShareBox");
-                    return Object(b.b)(t, {
-                        textLink: {
-                            url: this.getEmbedPlayerContentURL(e),
-                            text: r
-                        },
-                        allowScrolling: !1,
-                        allowFullscreen: !0
-                    })
-                }, t.prototype.getEmbedPlayerContentURL = function(e) {
-                    switch (e.type) {
-                        case p.Collection:
-                            return e.currentVideo ? m(e.currentVideo.id, {
-                                tt_medium: k.PageviewMedium.VideoEmbed,
-                                tt_content: k.PageviewContent.TextLink,
-                                t: this.props.selectedVideoStartTime
-                            }) : u(e.id, {
-                                tt_medium: k.PageviewMedium.VideoEmbed,
-                                tt_content: k.PageviewContent.TextLink
-                            });
-                        case p.Video:
-                            return m(e.id, {
-                                tt_medium: k.PageviewMedium.VideoEmbed,
-                                tt_content: k.PageviewContent.TextLink,
-                                t: this.props.selectedVideoStartTime
-                            });
-                        default:
-                            return e
-                    }
-                }, t
-            }(o.Component),
-            C = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onClickHandler = function(e) {
-                        var n = t.props.content;
-                        switch (n.type) {
-                            case p.Collection:
-                                n.currentVideo ? t.trackVideoShare(e, n.currentVideo) : t.trackCollectionShare(e, n);
-                                break;
-                            case p.Video:
-                                t.trackVideoShare(e, n);
-                                break;
-                            default:
-                                return n
-                        }
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(_, i.__assign({}, this.props, {
-                        onClick: this.onClickHandler
-                    }))
-                }, t.prototype.trackCollectionShare = function(e, t) {
-                    var n = {
-                        location: this.props.tracking.location,
-                        platform: g.a.Embed,
-                        shareURL: e
-                    };
-                    Object(g.b)(t, n, a.o.apollo.client)
-                }, t.prototype.trackVideoShare = function(e, t) {
-                    var n = {
-                        location: this.props.tracking.location,
-                        platform: g.a.Embed,
-                        shareURL: e
-                    };
-                    Object(g.c)(t, n, a.o.apollo.client)
-                }, t
-            }(o.Component),
-            S = n("bhVC"),
-            w = [{
-                type: S.b.Twitter,
-                selector: "twitter-button"
-            }, {
-                type: S.b.Facebook,
-                selector: "fb-button"
-            }, {
-                type: S.b.VKontakte,
-                selector: "vk-button"
-            }, {
-                type: S.b.Reddit,
-                selector: "reddit-button"
-            }, {
-                type: S.b.Copy,
-                selector: "copy-link-button"
-            }],
-            E = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = this.props.content,
-                        n = this.getContentURL(t),
-                        i = this.getSocialShareContextTitle(t),
-                        r = w.map(function(t) {
-                            return o.createElement(S.a, {
-                                "data-test-selector": t.selector,
-                                key: t.type,
-                                onShareClick: function(t) {
-                                    e.props.onClick(n, t)
-                                },
-                                text: i,
-                                type: t.type,
-                                url: n
-                            })
-                        });
-                    return o.createElement(h._7, {
-                        display: h.Q.Flex,
-                        justifyContent: h._6.Between
-                    }, r)
-                }, t.prototype.getSocialShareContextTitle = function(e) {
-                    return Object(a.d)("Check out {title} from {displayName} on www.twitch.tv", {
-                        displayName: e.owner.displayName,
-                        title: e.title
-                    }, "VideoShareBox")
-                }, t.prototype.getContentURL = function(e) {
-                    switch (e.type) {
-                        case p.Collection:
-                            return e.currentVideo ? m(e.currentVideo.id, {
-                                collection: e.id,
-                                t: this.props.selectedVideoStartTime
-                            }) : u(e.id);
-                        case p.Video:
-                            return m(e.id, {
-                                t: this.props.selectedVideoStartTime
-                            });
-                        default:
-                            return e
-                    }
-                }, t
-            }(o.Component),
-            O = function(e) {
-                switch (e) {
-                    case S.b.Twitter:
-                        return g.a.Twitter;
-                    case S.b.Reddit:
-                        return g.a.Reddit;
-                    case S.b.VKontakte:
-                        return g.a.VKontakte;
-                    case S.b.Facebook:
-                        return g.a.Facebook;
-                    case S.b.Copy:
-                        return g.a.Copy;
-                    case S.b.CopyInput:
-                        return g.a.Link;
-                    default:
-                        return e
-                }
-            },
-            T = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onClickHandler = function(e, n) {
-                        var i = t.props.content;
-                        switch (i.type) {
-                            case p.Collection:
-                                i.currentVideo ? t.trackVideoShare(e, i.currentVideo, n, i.id) : t.trackCollectionShare(e, i, n);
-                                break;
-                            case p.Video:
-                                t.trackVideoShare(e, i, n);
-                                break;
-                            default:
-                                return i
-                        }
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(E, i.__assign({}, this.props, {
-                        onClick: this.onClickHandler
-                    }))
-                }, t.prototype.trackCollectionShare = function(e, t, n) {
-                    var i = {
-                        location: this.props.tracking.location,
-                        platform: O(n),
-                        shareURL: e
-                    };
-                    Object(g.b)(t, i, a.o.apollo.client)
-                }, t.prototype.trackVideoShare = function(e, t, n, i) {
-                    var r = {
-                        collectionID: i,
-                        location: this.props.tracking.location,
-                        platform: O(n),
-                        shareURL: e
-                    };
-                    Object(g.c)(t, r, a.o.apollo.client)
-                }, t
-            }(o.Component),
-            D = n("mi6k"),
-            N = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onShareTimestampClick = function(e) {
-                        void 0 !== t.props.currentVideoTime && t.props.onVideoStartTimeChange(e.currentTarget.checked ? t.props.currentVideoTime : void 0)
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = {};
-                    this.props.collectionID && (t.collection = this.props.collectionID), this.props.selectedVideoStartTime && (t.t = this.props.selectedVideoStartTime);
-                    var n = m(this.props.video.id, t);
-                    return o.createElement("div", null, o.createElement(h.P, null, Object(a.d)("Video Link", "VideoShareBox")), o.createElement(l.a, {
-                        onClick: function() {
-                            e.props.onInputClick(n)
-                        },
-                        value: n
-                    }), this.renderCurrentVideoOffsetLinkOption())
-                }, t.prototype.renderCurrentVideoOffsetLinkOption = function() {
-                    if (void 0 === this.props.currentVideoTime) return null;
-                    var e = this.props.selectedVideoStartTime || this.props.currentVideoTime,
-                        t = Object(D.a)(e);
-                    return o.createElement(h._7, {
-                        padding: {
-                            top: .5
-                        }
-                    }, o.createElement(h.I, {
-                        id: "video-share-timestamp-toggle",
-                        label: Object(a.d)("Skip to {deeplinkTimestamp}", {
-                            deeplinkTimestamp: t
-                        }, "VideoShareBox"),
-                        "data-a-target": "video-share-timestamp-toggle",
-                        "data-a-value": void 0 !== this.props.selectedVideoStartTime,
-                        checked: !!this.props.selectedVideoStartTime,
-                        onChange: this.onShareTimestampClick
-                    }))
-                }, t
-            }(o.Component),
-            I = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onClickHandler = function(e, n) {
-                        var i = {
-                            collectionID: n,
-                            location: t.props.tracking.location,
-                            platform: g.a.Link,
-                            shareURL: e
-                        };
-                        Object(g.c)(t.props.video, i, a.o.apollo.client)
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(N, i.__assign({}, this.props, {
-                        onInputClick: this.onClickHandler
-                    }))
-                }, t
-            }(o.Component),
-            x = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {}, t.onVideoStartTimeChangeHandler = function(e) {
-                        t.setState({
-                            selectedVideoStartTime: e
-                        })
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = null;
-                    return this.props.content && (e = this.shareBalloonContent(this.props.content)), o.createElement(s.a, null, o.createElement(h.u, {
-                        disabled: !this.props.content,
-                        icon: h._21.Share,
-                        type: this.props.buttonType
-                    }, Object(a.d)("Share", "VideoShareBox")), o.createElement(h.p, {
-                        direction: this.props.balloonDirection,
-                        size: h.r.Small
-                    }, e))
-                }, t.prototype.shareBalloonContent = function(e) {
-                    return o.createElement(h._7, {
-                        padding: 1
-                    }, o.createElement(T, {
-                        content: e,
-                        selectedVideoStartTime: this.state.selectedVideoStartTime,
-                        tracking: this.props.tracking
-                    }), this.renderCollectionShareInput(e), this.renderVideoShareInput(e), this.renderEmbedPlayerInput(e))
-                }, t.prototype.renderCollectionShareInput = function(e) {
-                    return e.type !== p.Collection ? null : o.createElement(h._7, {
-                        padding: {
-                            top: 1
-                        }
-                    }, o.createElement(v, {
-                        collection: e,
-                        tracking: this.props.tracking
-                    }))
-                }, t.prototype.renderVideoShareInput = function(e) {
-                    var t, n;
-                    if (e.type === p.Collection) {
-                        if (!e.currentVideo) return null;
-                        n = e.id, t = e.currentVideo
-                    } else t = e;
-                    return o.createElement(h._7, {
-                        padding: {
-                            top: 1
-                        }
-                    }, o.createElement(I, {
-                        collectionID: n,
-                        currentVideoTime: this.props.currentVideoTime,
-                        onVideoStartTimeChange: this.onVideoStartTimeChangeHandler,
-                        selectedVideoStartTime: this.state.selectedVideoStartTime,
-                        tracking: this.props.tracking,
-                        video: t
-                    }))
-                }, t.prototype.renderEmbedPlayerInput = function(e) {
-                    return o.createElement(h._7, {
-                        padding: {
-                            top: 1
-                        }
-                    }, o.createElement(C, {
-                        content: e,
-                        selectedVideoStartTime: this.state.selectedVideoStartTime,
-                        tracking: this.props.tracking
-                    }))
-                }, t
-            }(o.Component),
-            A = n("jOt7");
-
-        function M(e) {
+        function c(e) {
             return e.owner && e.title ? {
-                type: p.Video,
+                type: s.a.Video,
                 id: e.id,
                 owner: {
                     id: e.owner.id,
@@ -12860,7 +12460,7 @@ webpackJsonp([38, 86], {
                 title: e.title
             } : null
         }
-        var L = Object(r.compose)(Object(r.graphql)(A, {
+        var d = Object(r.compose)(Object(r.graphql)(l, {
             options: function(e) {
                 var t = e.content;
                 return t ? {
@@ -12887,12 +12487,12 @@ webpackJsonp([38, 86], {
                 return n.loading ? t : n.error ? (a.j.error(n.error, "VideoShareBoxContainer"), t) : (n.collection ? t.content = function(e, t) {
                     var n;
                     if (t) {
-                        var i = M(t);
+                        var i = c(t);
                         if (!i) return null;
                         n = i
                     }
                     return e.owner && e.title ? {
-                        type: p.Collection,
+                        type: s.a.Collection,
                         id: e.id,
                         owner: {
                             id: e.owner.id,
@@ -12901,16 +12501,14 @@ webpackJsonp([38, 86], {
                         title: e.title,
                         currentVideo: n
                     } : null
-                }(n.collection, n.video) || void 0 : n.video && (t.content = M(n.video) || void 0), t)
+                }(n.collection, n.video) || void 0 : n.video && (t.content = c(n.video) || void 0), t)
             }
-        }))(x);
+        }))(o.a);
         n.d(t, "a", function() {
-            return L
+            return d
         }), n.d(t, !1, function() {
-            return p
-        }), n.d(t, !1, function() {
-            return y
-        })
+            return s.a
+        }), n.d(t, !1, function() {})
     },
     jpZi: function(e, t) {},
     jvcJ: function(e, t) {},
@@ -17980,6 +17578,16 @@ webpackJsonp([38, 86], {
         };
         e.exports = n
     },
+    sJBK: function(e, t, n) {
+        "use strict";
+        var i;
+        n.d(t, "a", function() {
+                return i
+            }),
+            function(e) {
+                e[e.Collection = 0] = "Collection", e[e.Video = 1] = "Video"
+            }(i || (i = {}))
+    },
     sZED: function(e, t) {},
     sdTe: function(e, t, n) {
         var i = n("xA5w");
@@ -19177,8 +18785,7 @@ webpackJsonp([38, 86], {
                     }, n.state = {
                         requestedVideoOffset: n.getInitialVideoOffsetTime(),
                         lastVideoOffset: _e,
-                        miniPlayerRouteLink: n.getMiniPlayerURL(t.match.params.videoID, t.match.params.collectionID),
-                        theatreFullscreenGroup: ""
+                        miniPlayerRouteLink: n.getMiniPlayerURL(t.match.params.videoID, t.match.params.collectionID)
                     }, n
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -19280,17 +18887,15 @@ webpackJsonp([38, 86], {
                     }
                 }, t.prototype.setExperimentsState = function() {
                     return l.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n;
-                        return l.__generator(this, function(i) {
-                            switch (i.label) {
+                        var e;
+                        return l.__generator(this, function(t) {
+                            switch (t.label) {
                                 case 0:
-                                    return i.trys.push([0, 2, , 3]), e = this.setState, t = {}, [4, Object(v.a)()];
+                                    return [4, Object(v.a)()];
                                 case 1:
-                                    return e.apply(this, [(t.theatreFullscreenGroup = i.sent(), t)]), [3, 3];
-                                case 2:
-                                    return n = i.sent(), this.logger.error(n, "Failed to update experiments state"), [3, 3];
-                                case 3:
-                                    return [2]
+                                    return e = t.sent(), this.setState({
+                                        theatreFullscreenGroup: e
+                                    }), [2]
                             }
                         })
                     })
@@ -21331,7 +20936,8 @@ webpackJsonp([38, 86], {
                 return i.createElement(s._7, {
                     display: s.Q.Flex,
                     padding: {
-                        top: 5
+                        top: 5,
+                        bottom: 3
                     },
                     flexGrow: 1,
                     flexDirection: s.S.Column,
@@ -21343,9 +20949,11 @@ webpackJsonp([38, 86], {
                 }, i.createElement(o.a, {
                     className: "cheermote-help__tutorial-image",
                     sources: l
-                }), Object(r.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement("p", {
-                    className: "t-bits-card__contents-body t-bits-card__contents-body--narrow"
-                }, Object(r.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp")))
+                }), Object(r.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(s._7, {
+                    padding: {
+                        x: 3
+                    }
+                }, i.createElement(s.P, null, Object(r.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
             };
         n.d(t, "a", function() {
             return c
@@ -21393,6 +21001,413 @@ webpackJsonp([38, 86], {
         }
     },
     z4Db: function(e, t) {},
+    zAjo: function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = n("6sO2"),
+            o = n("+Znq"),
+            s = n("xX9u"),
+            l = n("OAwv"),
+            c = n("Ryxq");
+
+        function d(e, t) {
+            var n = new URL("https://www.twitch.tv/collections/" + e);
+            return t && (n.search = l.stringify(t)), n.toString()
+        }
+
+        function u(e, t) {
+            var n = new URL("https://www.twitch.tv/videos/" + e);
+            return t && (n.search = l.stringify(i.__assign({}, t, {
+                t: "number" == typeof t.t ? Object(c.a)(t.t) : void 0
+            }))), n.toString()
+        }
+        var m = n("Odds"),
+            p = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = d(this.props.collection.id);
+                    return r.createElement("div", null, r.createElement(m.P, null, Object(a.d)("Collection Link", "VideoShareBox")), r.createElement(s.a, {
+                        onClick: function() {
+                            e.props.onClick(t)
+                        },
+                        value: t
+                    }))
+                }, t
+            }(r.Component),
+            h = n("cAee"),
+            f = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onClickHandler = function(e) {
+                        var n = {
+                            location: t.props.tracking.location,
+                            platform: h.a.Link,
+                            shareURL: e
+                        };
+                        Object(h.b)(t.props.collection, n, a.o.apollo.client)
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(p, i.__assign({}, this.props, {
+                        onClick: this.onClickHandler
+                    }))
+                }, t
+            }(r.Component),
+            g = n("AoO8"),
+            v = n("vH/s"),
+            b = n("sJBK");
+        var k = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.content,
+                        n = this.getEmbedPlayerContentURL(t);
+                    return r.createElement("div", null, r.createElement(m.P, null, Object(a.d)("Embed Video", "VideoShareBox")), r.createElement(s.a, {
+                        onClick: function() {
+                            e.props.onClick(n)
+                        },
+                        value: this.getEmbedPlayerCode(t)
+                    }))
+                }, t.prototype.getEmbedPlayerCode = function(e) {
+                    var t = function(e, t) {
+                            var n = {
+                                autoplay: !1
+                            };
+                            switch (e.type) {
+                                case b.a.Collection:
+                                    e.currentVideo ? (n.video = e.currentVideo.id, n.t = t ? Object(c.a)(t) : void 0) : n.collection = e.id;
+                                    break;
+                                case b.a.Video:
+                                    n.video = e.id, n.t = t ? Object(c.a)(t) : void 0
+                            }
+                            return n
+                        }(e, null !== this.props.selectedVideoStartTime ? this.props.selectedVideoStartTime : void 0),
+                        n = e.owner.displayName,
+                        i = e.title,
+                        r = Object(a.d)("Watch {title} from {displayName} on www.twitch.tv", {
+                            displayName: n,
+                            title: i
+                        }, "VideoShareBox");
+                    return Object(g.b)(t, {
+                        textLink: {
+                            url: this.getEmbedPlayerContentURL(e),
+                            text: r
+                        },
+                        allowScrolling: !1,
+                        allowFullscreen: !0
+                    })
+                }, t.prototype.getEmbedPlayerContentURL = function(e) {
+                    switch (e.type) {
+                        case b.a.Collection:
+                            return e.currentVideo ? u(e.currentVideo.id, {
+                                tt_medium: v.PageviewMedium.VideoEmbed,
+                                tt_content: v.PageviewContent.TextLink,
+                                t: this.props.selectedVideoStartTime
+                            }) : d(e.id, {
+                                tt_medium: v.PageviewMedium.VideoEmbed,
+                                tt_content: v.PageviewContent.TextLink
+                            });
+                        case b.a.Video:
+                            return u(e.id, {
+                                tt_medium: v.PageviewMedium.VideoEmbed,
+                                tt_content: v.PageviewContent.TextLink,
+                                t: this.props.selectedVideoStartTime
+                            });
+                        default:
+                            return e
+                    }
+                }, t
+            }(r.Component),
+            y = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onClickHandler = function(e) {
+                        var n = t.props.content;
+                        switch (n.type) {
+                            case b.a.Collection:
+                                n.currentVideo ? t.trackVideoShare(e, n.currentVideo) : t.trackCollectionShare(e, n);
+                                break;
+                            case b.a.Video:
+                                t.trackVideoShare(e, n);
+                                break;
+                            default:
+                                return n
+                        }
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(k, i.__assign({}, this.props, {
+                        onClick: this.onClickHandler
+                    }))
+                }, t.prototype.trackCollectionShare = function(e, t) {
+                    var n = {
+                        location: this.props.tracking.location,
+                        platform: h.a.Embed,
+                        shareURL: e
+                    };
+                    Object(h.b)(t, n, a.o.apollo.client)
+                }, t.prototype.trackVideoShare = function(e, t) {
+                    var n = {
+                        location: this.props.tracking.location,
+                        platform: h.a.Embed,
+                        shareURL: e
+                    };
+                    Object(h.c)(t, n, a.o.apollo.client)
+                }, t
+            }(r.Component),
+            _ = n("bhVC"),
+            C = [{
+                type: _.b.Twitter,
+                selector: "twitter-button"
+            }, {
+                type: _.b.Facebook,
+                selector: "fb-button"
+            }, {
+                type: _.b.VKontakte,
+                selector: "vk-button"
+            }, {
+                type: _.b.Reddit,
+                selector: "reddit-button"
+            }, {
+                type: _.b.Copy,
+                selector: "copy-link-button"
+            }],
+            S = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.content,
+                        n = this.getContentURL(t),
+                        i = this.getSocialShareContextTitle(t),
+                        a = C.map(function(t) {
+                            return r.createElement(_.a, {
+                                "data-test-selector": t.selector,
+                                key: t.type,
+                                onShareClick: function(t) {
+                                    e.props.onClick(n, t)
+                                },
+                                text: i,
+                                type: t.type,
+                                url: n
+                            })
+                        });
+                    return r.createElement(m._7, {
+                        display: m.Q.Flex,
+                        justifyContent: m._6.Between
+                    }, a)
+                }, t.prototype.getSocialShareContextTitle = function(e) {
+                    return Object(a.d)("Check out {title} from {displayName} on www.twitch.tv", {
+                        displayName: e.owner.displayName,
+                        title: e.title
+                    }, "VideoShareBox")
+                }, t.prototype.getContentURL = function(e) {
+                    switch (e.type) {
+                        case b.a.Collection:
+                            return e.currentVideo ? u(e.currentVideo.id, {
+                                collection: e.id,
+                                t: this.props.selectedVideoStartTime
+                            }) : d(e.id);
+                        case b.a.Video:
+                            return u(e.id, {
+                                t: this.props.selectedVideoStartTime
+                            });
+                        default:
+                            return e
+                    }
+                }, t
+            }(r.Component),
+            w = function(e) {
+                switch (e) {
+                    case _.b.Twitter:
+                        return h.a.Twitter;
+                    case _.b.Reddit:
+                        return h.a.Reddit;
+                    case _.b.VKontakte:
+                        return h.a.VKontakte;
+                    case _.b.Facebook:
+                        return h.a.Facebook;
+                    case _.b.Copy:
+                        return h.a.Copy;
+                    case _.b.CopyInput:
+                        return h.a.Link;
+                    default:
+                        return e
+                }
+            },
+            E = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onClickHandler = function(e, n) {
+                        var i = t.props.content;
+                        switch (i.type) {
+                            case b.a.Collection:
+                                i.currentVideo ? t.trackVideoShare(e, i.currentVideo, n, i.id) : t.trackCollectionShare(e, i, n);
+                                break;
+                            case b.a.Video:
+                                t.trackVideoShare(e, i, n);
+                                break;
+                            default:
+                                return i
+                        }
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(S, i.__assign({}, this.props, {
+                        onClick: this.onClickHandler
+                    }))
+                }, t.prototype.trackCollectionShare = function(e, t, n) {
+                    var i = {
+                        location: this.props.tracking.location,
+                        platform: w(n),
+                        shareURL: e
+                    };
+                    Object(h.b)(t, i, a.o.apollo.client)
+                }, t.prototype.trackVideoShare = function(e, t, n, i) {
+                    var r = {
+                        collectionID: i,
+                        location: this.props.tracking.location,
+                        platform: w(n),
+                        shareURL: e
+                    };
+                    Object(h.c)(t, r, a.o.apollo.client)
+                }, t
+            }(r.Component),
+            O = n("mi6k"),
+            T = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onShareTimestampClick = function(e) {
+                        void 0 !== t.props.currentVideoTime && t.props.onVideoStartTimeChange(e.currentTarget.checked ? t.props.currentVideoTime : void 0)
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = {};
+                    this.props.collectionID && (t.collection = this.props.collectionID), this.props.selectedVideoStartTime && (t.t = this.props.selectedVideoStartTime);
+                    var n = u(this.props.video.id, t);
+                    return r.createElement("div", null, r.createElement(m.P, null, Object(a.d)("Video Link", "VideoShareBox")), r.createElement(s.a, {
+                        onClick: function() {
+                            e.props.onInputClick(n)
+                        },
+                        value: n
+                    }), this.renderCurrentVideoOffsetLinkOption())
+                }, t.prototype.renderCurrentVideoOffsetLinkOption = function() {
+                    if (void 0 === this.props.currentVideoTime) return null;
+                    var e = this.props.selectedVideoStartTime || this.props.currentVideoTime,
+                        t = Object(O.a)(e);
+                    return r.createElement(m._7, {
+                        padding: {
+                            top: .5
+                        }
+                    }, r.createElement(m.I, {
+                        id: "video-share-timestamp-toggle",
+                        label: Object(a.d)("Skip to {deeplinkTimestamp}", {
+                            deeplinkTimestamp: t
+                        }, "VideoShareBox"),
+                        "data-a-target": "video-share-timestamp-toggle",
+                        "data-a-value": void 0 !== this.props.selectedVideoStartTime,
+                        checked: !!this.props.selectedVideoStartTime,
+                        onChange: this.onShareTimestampClick
+                    }))
+                }, t
+            }(r.Component),
+            D = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onClickHandler = function(e, n) {
+                        var i = {
+                            collectionID: n,
+                            location: t.props.tracking.location,
+                            platform: h.a.Link,
+                            shareURL: e
+                        };
+                        Object(h.c)(t.props.video, i, a.o.apollo.client)
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(T, i.__assign({}, this.props, {
+                        onInputClick: this.onClickHandler
+                    }))
+                }, t
+            }(r.Component);
+        n.d(t, "a", function() {
+            return N
+        });
+        var N = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.state = {}, t.onVideoStartTimeChangeHandler = function(e) {
+                    t.setState({
+                        selectedVideoStartTime: e
+                    })
+                }, t
+            }
+            return i.__extends(t, e), t.prototype.render = function() {
+                var e = null;
+                return this.props.content && (e = this.shareBalloonContent(this.props.content)), r.createElement(o.a, null, r.createElement(m.u, {
+                    disabled: !this.props.content,
+                    icon: m._21.Share,
+                    type: this.props.buttonType
+                }, Object(a.d)("Share", "VideoShareBox")), r.createElement(m.p, {
+                    direction: this.props.balloonDirection,
+                    size: m.r.Small
+                }, e))
+            }, t.prototype.shareBalloonContent = function(e) {
+                return r.createElement(m._7, {
+                    padding: 1
+                }, r.createElement(E, {
+                    content: e,
+                    selectedVideoStartTime: this.state.selectedVideoStartTime,
+                    tracking: this.props.tracking
+                }), this.renderCollectionShareInput(e), this.renderVideoShareInput(e), this.renderEmbedPlayerInput(e))
+            }, t.prototype.renderCollectionShareInput = function(e) {
+                return e.type !== b.a.Collection ? null : r.createElement(m._7, {
+                    padding: {
+                        top: 1
+                    }
+                }, r.createElement(f, {
+                    collection: e,
+                    tracking: this.props.tracking
+                }))
+            }, t.prototype.renderVideoShareInput = function(e) {
+                var t, n;
+                if (e.type === b.a.Collection) {
+                    if (!e.currentVideo) return null;
+                    n = e.id, t = e.currentVideo
+                } else t = e;
+                return r.createElement(m._7, {
+                    padding: {
+                        top: 1
+                    }
+                }, r.createElement(D, {
+                    collectionID: n,
+                    currentVideoTime: this.props.currentVideoTime,
+                    onVideoStartTimeChange: this.onVideoStartTimeChangeHandler,
+                    selectedVideoStartTime: this.state.selectedVideoStartTime,
+                    tracking: this.props.tracking,
+                    video: t
+                }))
+            }, t.prototype.renderEmbedPlayerInput = function(e) {
+                return r.createElement(m._7, {
+                    padding: {
+                        top: 1
+                    }
+                }, r.createElement(y, {
+                    content: e,
+                    selectedVideoStartTime: this.state.selectedVideoStartTime,
+                    tracking: this.props.tracking
+                }))
+            }, t
+        }(r.Component)
+    },
     zGmo: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -21518,4 +21533,4 @@ webpackJsonp([38, 86], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-ecca9757065e3fd8e31c6b6c6896894f.js.map
+//# sourceMappingURL=pages.video-watch-230c074359aefba2e43cca35fddf5f10.js.map

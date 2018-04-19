@@ -292,14 +292,14 @@ webpackJsonp([76], {
     },
     QIXk: function(e, t, n) {
         "use strict";
-        var a, i, r, l = n("TToO"),
+        var i, a, r, l = n("TToO"),
             s = n("GiK3"),
             o = n("6sO2"),
             c = n("7vx8"),
             d = n("6BvN"),
             u = n("oIkB"),
             p = n("vH/s"),
-            m = function(e, t, n, a, i) {
+            m = function(e, t, n, i, a) {
                 var r = Date.now() / 1e3;
                 o.o.tracking.track(p.SpadeEventType.ClipEdit, {
                     channel_id: e,
@@ -308,18 +308,18 @@ webpackJsonp([76], {
                     clip_id: t,
                     clip_slug: n,
                     effect_name: "title",
-                    effect_setting: a,
+                    effect_setting: i,
                     front_end: !0,
-                    location: i
+                    location: a
                 })
             },
             h = n("CIox");
         ! function(e) {
             e.AlreadyPublished = "already_published", e.EditingWindowExpired = "editing_window_expired", e.InvalidSpeedDuration = "invalid_speed_duration", e.InvalidDuration = "invalid_duration", e.InvalidTitle = "invalid_title", e.Unknown = "unknown"
-        }(a || (a = {})),
+        }(i || (i = {})),
         function(e) {
             e.InvalidTitle = "invalid_title"
-        }(i || (i = {})),
+        }(a || (a = {})),
         function(e) {
             e.Unsent = "unsent", e.Sending = "sending", e.Error = "error", e.Successful = "successful"
         }(r || (r = {}));
@@ -342,18 +342,16 @@ webpackJsonp([76], {
                     }, t.onPublish = function() {
                         return l.__awaiter(t, void 0, void 0, function() {
                             var e, t, n;
-                            return l.__generator(this, function(i) {
-                                switch (i.label) {
+                            return l.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         if (this.setState({
                                                 publishState: r.Sending
-                                            }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < f || e > C) return this.setState({
-                                            publishState: r.Error,
-                                            errorMessage: a.InvalidDuration
-                                        }), [2];
-                                        i.label = 1;
+                                            }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < f || e > C) return this.onError(i.InvalidDuration), [2];
+                                        if ("" === this.props.title.trim()) return this.onError(g.emptySubmission), [2];
+                                        a.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.props.publishClip(Object(u.a)({
+                                        return a.trys.push([1, 3, , 4]), [4, this.props.publishClip(Object(u.a)({
                                             segments: [{
                                                 offsetSeconds: this.props.startOffset,
                                                 durationSeconds: this.props.endOffset - this.props.startOffset,
@@ -363,14 +361,14 @@ webpackJsonp([76], {
                                             title: this.props.title
                                         }))];
                                     case 2:
-                                        return (t = i.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (this.setState({
+                                        return (t = a.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (this.setState({
                                             publishState: r.Successful
                                         }), this.props.history.push("/create", {
                                             isPostEdit: !0,
                                             slug: this.props.slug
                                         })), [3, 4];
                                     case 3:
-                                        return i.sent(), n = a.Unknown, this.onError(n), [3, 4];
+                                        return a.sent(), n = i.Unknown, this.onError(n), [3, 4];
                                     case 4:
                                         return [2]
                                 }
@@ -381,7 +379,7 @@ webpackJsonp([76], {
                 return l.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     this.state.publishState === r.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(E), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
                 }, t.prototype.render = function() {
-                    var e = this.props.title.length < 1 || this.state.publishState === r.Error,
+                    var e = this.state.publishState === r.Error,
                         t = this.state.publishState === r.Sending;
                     return s.createElement(v._7, null, s.createElement(v.u, {
                         onClick: this.onPublish,
@@ -616,7 +614,7 @@ webpackJsonp([76], {
                             return Object(o.d)("Whoops. Something went wrong.", "ClipsTitleEdit")
                     }
                 }, t.prototype.errorMessageToError = function(e) {
-                    return e.includes("403:") || e.toLowerCase() === a.InvalidTitle.toLowerCase() || e.toLowerCase() === i.InvalidTitle.toLowerCase() ? g.channelViolation : g.unknown
+                    return e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === a.InvalidTitle.toLowerCase() ? g.channelViolation : e === g.emptySubmission ? g.emptySubmission : g.unknown
                 }, t
             }(s.Component),
             N = Object(c.a)(y, {
@@ -624,7 +622,7 @@ webpackJsonp([76], {
             })(w);
         n.d(t, !1, function() {
             return _
-        }), n.d(t, !1, function() {
+        }), n.d(t, "b", function() {
             return g
         }), n.d(t, !1, function() {
             return w
@@ -635,12 +633,12 @@ webpackJsonp([76], {
     Qfvd: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return a
-        }), n.d(t, "b", function() {
             return i
+        }), n.d(t, "b", function() {
+            return a
         });
-        var a = "//static-cdn.jtvnw.net/ttv-boxart",
-            i = "52x72"
+        var i = "//static-cdn.jtvnw.net/ttv-boxart",
+            a = "52x72"
     },
     WNmM: function(e, t, n) {
         "use strict";
@@ -651,10 +649,10 @@ webpackJsonp([76], {
         }), n.d(t, "c", function() {
             return p
         });
-        var a, i, r = n("6sO2"),
+        var i, a, r = n("6sO2"),
             l = n("8Wuk"),
             s = n("vH/s"),
-            o = ((a = {})[l.b.Twitter] = "twitter", a[l.b.Reddit] = "reddit", a[l.b.VKontakte] = "vkontakte", a[l.b.Facebook] = "facebook", a[l.b.Copy] = "link", a[l.b.CopyInput] = "option_link", a),
+            o = ((i = {})[l.b.Twitter] = "twitter", i[l.b.Reddit] = "reddit", i[l.b.VKontakte] = "vkontakte", i[l.b.Facebook] = "facebook", i[l.b.Copy] = "link", i[l.b.CopyInput] = "option_link", i),
             c = {
                 MyClips: "MyClips",
                 ClipsOfMyChannel: "ClipsOfMyChannel"
@@ -663,22 +661,22 @@ webpackJsonp([76], {
                 Game: "TopClipsGame",
                 Channel: "TopClipsChannel"
             },
-            u = ((i = {
+            u = ((a = {
                 MyClips: s.PageviewLocation.MyClipsManager,
                 ClipsOfMyChannel: s.PageviewLocation.ChannelClipsManager,
                 TopClipsGame: s.PageviewLocation.ClipsGame,
                 TopClipsChannel: s.PageviewLocation.ChannelClips
-            })[s.PageviewLocation.ClipsEditing] = s.PageviewLocation.ClipsEditing, i[s.PageviewLocation.ClipsViewing] = s.PageviewLocation.ClipsViewing, i),
-            p = function(e, t, n, a, i) {
+            })[s.PageviewLocation.ClipsEditing] = s.PageviewLocation.ClipsEditing, a[s.PageviewLocation.ClipsViewing] = s.PageviewLocation.ClipsViewing, a),
+            p = function(e, t, n, i, a) {
                 return function(l) {
                     r.o.tracking.track(s.SpadeEventType.VideoShare, {
                         vod_id: e,
                         vod_type: "clip",
                         share_platform: o[l],
-                        location: u[i],
+                        location: u[a],
                         game: t,
                         channel_id: Number(n || 0),
-                        channel: a,
+                        channel: i,
                         live: null
                     })
                 }
@@ -690,7 +688,7 @@ webpackJsonp([76], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var a, i = n("TToO"),
+        var i, a = n("TToO"),
             r = n("GiK3"),
             l = n("3zLD"),
             s = n("CIox"),
@@ -699,8 +697,8 @@ webpackJsonp([76], {
             d = n("vH/s");
         ! function(e) {
             e[e.ViewsAscending = 0] = "ViewsAscending", e[e.ViewsDescending = 1] = "ViewsDescending", e[e.CreatedAtAscending = 2] = "CreatedAtAscending", e[e.CreatedAtDescending = 3] = "CreatedAtDescending"
-        }(a || (a = {}));
-        var u, p = ((h = {})[a.CreatedAtAscending] = "CREATED_AT_ASC", h[a.CreatedAtDescending] = "CREATED_AT_DESC", h[a.ViewsAscending] = "VIEWS_ASC", h[a.ViewsDescending] = "VIEWS_DESC", h);
+        }(i || (i = {}));
+        var u, p = ((h = {})[i.CreatedAtAscending] = "CREATED_AT_ASC", h[i.CreatedAtDescending] = "CREATED_AT_DESC", h[i.ViewsAscending] = "VIEWS_ASC", h[i.ViewsDescending] = "VIEWS_DESC", h);
         ! function(e) {
             e[e.Day = 0] = "Day", e[e.Week = 1] = "Week", e[e.Month = 2] = "Month", e[e.All = 3] = "All"
         }(u || (u = {}));
@@ -929,7 +927,7 @@ webpackJsonp([76], {
                         isModalOpen: !1
                     }, n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.reportInteractive()
                 }, t.prototype.componentDidUpdate = function() {
                     this.reportInteractive()
@@ -937,7 +935,7 @@ webpackJsonp([76], {
                     var e = this.props.clip,
                         t = Object(_.c)(new Date(e.createdAt), "medium"),
                         n = Object(_.d)("Close", "ClipsManagerExpandedRow"),
-                        a = Object(_.d)("Delete", "ClipsManagerExpandedRow");
+                        i = Object(_.d)("Delete", "ClipsManagerExpandedRow");
                     return r.createElement(I.a, {
                         onClickOut: this.onClickOutside
                     }, r.createElement(P._30, {
@@ -972,13 +970,13 @@ webpackJsonp([76], {
                     }))), r.createElement(P._7, {
                         display: P.Q.Flex
                     }, this.renderModerationIcon(), r.createElement(P._47, {
-                        label: a
+                        label: i
                     }, r.createElement(P._7, {
                         margin: {
                             right: .5
                         }
                     }, r.createElement(P.v, {
-                        ariaLabel: a,
+                        ariaLabel: i,
                         type: P.x.Hollow,
                         icon: P._21.Trash,
                         onClick: this.openDeleteModal
@@ -1195,7 +1193,7 @@ webpackJsonp([76], {
                         t.props.onResultSelect(t.props.index)
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(P._5, {
                         onClick: this.onClick
                     }, r.createElement(P._1, {
@@ -1230,7 +1228,7 @@ webpackJsonp([76], {
                 searchTerm: "",
                 focusedIndex: null
             },
-            ae = function(e) {
+            ie = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderSearchOptions = function() {
@@ -1264,8 +1262,8 @@ webpackJsonp([76], {
                             })
                         }
                         if (e === w.a.Games) {
-                            var a = n.state.gameResults;
-                            return 0 === a.length ? n.renderNoResults() : a.map(function(e, t) {
+                            var i = n.state.gameResults;
+                            return 0 === i.length ? n.renderNoResults() : i.map(function(e, t) {
                                 return r.createElement(Z, {
                                     key: e.id + "_" + t,
                                     searchResult: e,
@@ -1302,16 +1300,16 @@ webpackJsonp([76], {
                         if (null !== e) {
                             var t = e.dataset.refIndex;
                             if (t) {
-                                var a = parseInt(t, 0);
-                                n.searchResultRefs[a] = e
+                                var i = parseInt(t, 0);
+                                n.searchResultRefs[i] = e
                             }
                         }
                     }, n.setSearchTypeGame = function() {
-                        n.setState(i.__assign({}, ne, {
+                        n.setState(a.__assign({}, ne, {
                             currentCategory: w.a.Games
                         })), n.context.setSearchType(w.a.Games)
                     }, n.setSearchTypeChannel = function() {
-                        n.setState(i.__assign({}, ne, {
+                        n.setState(a.__assign({}, ne, {
                             currentCategory: w.a.Users
                         })), n.context.setSearchType(w.a.Users)
                     }, n.onChange = function(e) {
@@ -1355,9 +1353,9 @@ webpackJsonp([76], {
                         void 0 === e && (e = !0);
                         var t = n.getResultsLength();
                         0 !== t && n.setState(function(n) {
-                            var a = n.focusedIndex;
+                            var i = n.focusedIndex;
                             return {
-                                focusedIndex: null === a ? e ? 0 : t - 1 : e ? a + 1 >= t ? 0 : a + 1 : a - 1 < 0 ? t - 1 : a - 1,
+                                focusedIndex: null === i ? e ? 0 : t - 1 : e ? i + 1 >= t ? 0 : i + 1 : i - 1 < 0 ? t - 1 : i - 1,
                                 isShowingResults: !0
                             }
                         })
@@ -1374,11 +1372,11 @@ webpackJsonp([76], {
                     }, n.focusSearchInput = function() {
                         n.searchInputRef && n.searchInputRef.focus()
                     }, n.selectResult = function(e) {
-                        var t, a = n.state,
-                            i = a.currentCategory,
-                            r = a.gameResults,
-                            l = a.userResults;
-                        if (i === w.a.Games) t = r[e].title, n.context.setSearchTerm(t);
+                        var t, i = n.state,
+                            a = i.currentCategory,
+                            r = i.gameResults,
+                            l = i.userResults;
+                        if (a === w.a.Games) t = r[e].title, n.context.setSearchTerm(t);
                         else {
                             var s = l[e];
                             t = s.name, n.context.setSearchTerm(s.id)
@@ -1397,12 +1395,12 @@ webpackJsonp([76], {
                     }, n.performQuery = function() {
                         var e = n.state,
                             t = e.isLoading,
-                            a = e.searchTerm,
-                            i = e.currentCategory;
+                            i = e.searchTerm,
+                            a = e.currentCategory;
                         t && n.setState({
                             isLoading: !0,
                             isShowingResults: !0
-                        }), n.searchClient.queryForType(i, a, "", {
+                        }), n.searchClient.queryForType(a, i, "", {
                             hitsPerPage: te
                         }).then(function(e) {
                             if (e) {
@@ -1430,7 +1428,7 @@ webpackJsonp([76], {
                         config: _.a
                     }), n.state = ne, n.searchResultRefs = [], n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     e.userRole !== this.props.userRole && this.setState({
@@ -1439,8 +1437,8 @@ webpackJsonp([76], {
                     })
                 }, t.prototype.componentDidUpdate = function(e, t) {
                     var n = this.state.focusedIndex,
-                        a = t.focusedIndex;
-                    null !== a && null === n ? this.blurResultRef(a) : null !== n && a !== n && this.focusResultRef(n)
+                        i = t.focusedIndex;
+                    null !== i && null === n ? this.blurResultRef(i) : null !== n && i !== n && this.focusResultRef(n)
                 }, t.prototype.render = function() {
                     return r.createElement(P._7, {
                         position: P._14.Relative
@@ -1471,7 +1469,7 @@ webpackJsonp([76], {
                     clearSearch: y.func
                 }, t
             }(r.Component),
-            ie = Object(C.d)("ClipsManagerSearch")(ae),
+            ae = Object(C.d)("ClipsManagerSearch")(ie),
             re = (n("3NJ6"), "cmgr-my-clips-radio"),
             le = "cmgr-clips-of-me-radio",
             se = function(e) {
@@ -1483,7 +1481,7 @@ webpackJsonp([76], {
                         t.props.updateUserRole(m.Broadcaster)
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     return r.createElement(P._7, {
@@ -1538,7 +1536,7 @@ webpackJsonp([76], {
                             md: 12,
                             lg: 12
                         }
-                    }, r.createElement(ie, {
+                    }, r.createElement(ae, {
                         userRole: this.props.currentUserRole
                     }))))
                 }, t
@@ -1555,7 +1553,7 @@ webpackJsonp([76], {
                         imageURL: t.imageURL
                     }, n
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     return r.createElement("img", {
                         src: this.state.imageURL,
                         alt: this.state.imageURL,
@@ -1578,7 +1576,7 @@ webpackJsonp([76], {
                         t.checkboxRef = e
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.clip,
                         t = Object(_.h)(new Date(e.createdAt));
                     return r.createElement(P._7, {
@@ -1707,29 +1705,29 @@ webpackJsonp([76], {
                             expandedSlug: null
                         })
                     }, n.loadMore = function() {
-                        return i.__awaiter(n, void 0, void 0, function() {
-                            return i.__generator(this, function(e) {
+                        return a.__awaiter(n, void 0, void 0, function() {
+                            return a.__generator(this, function(e) {
                                 return this.props.loading || this.props.error || !this.props.clips ? [2] : [2, this.props.loadMore().then(function() {})]
                             })
                         })
                     }, n.selectClip = function(e, t) {
                         void 0 === t && (t = !0), n.setState(function(n) {
-                            var a = n.selectedClipSlugs;
-                            if (t) a = a.concat([e]);
+                            var i = n.selectedClipSlugs;
+                            if (t) i = i.concat([e]);
                             else {
-                                var i = a.indexOf(e);
-                                a = a.filter(function(e, t) {
-                                    return t !== i
+                                var a = i.indexOf(e);
+                                i = i.filter(function(e, t) {
+                                    return t !== a
                                 })
                             }
                             return {
-                                selectedClipSlugs: a
+                                selectedClipSlugs: i
                             }
                         })
                     }, n.toggleViewsSort = function() {
-                        n.props.sort === a.ViewsDescending ? n.props.updateSort(a.ViewsAscending) : n.props.updateSort(a.ViewsDescending)
+                        n.props.sort === i.ViewsDescending ? n.props.updateSort(i.ViewsAscending) : n.props.updateSort(i.ViewsDescending)
                     }, n.toggleCreatedAtSort = function() {
-                        n.props.sort === a.CreatedAtDescending ? n.props.updateSort(a.CreatedAtAscending) : n.props.updateSort(a.CreatedAtDescending)
+                        n.props.sort === i.CreatedAtDescending ? n.props.updateSort(i.CreatedAtAscending) : n.props.updateSort(i.CreatedAtDescending)
                     }, n.deleteSelectedClips = function() {
                         n.props.onBatchDeleteClips(n.state.selectedClipSlugs), n.setState({
                             selectedClipSlugs: []
@@ -1769,7 +1767,7 @@ webpackJsonp([76], {
                         isNewQueryLoading: !1
                     }, n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     e.loading && ((e.sort !== this.props.sort || e.userRole !== this.props.userRole || e.searchFilterType !== this.props.searchFilterType || e.searchFilterTerm !== this.props.searchFilterTerm) && (this.clearClipsSelection(), this.setState({
@@ -1902,9 +1900,9 @@ webpackJsonp([76], {
                         onClick: this.renderBatchDeleteModal,
                         "data-test-selector": me
                     })))));
-                    var i = this.props.sort,
-                        l = i === a.ViewsAscending || i === a.ViewsDescending,
-                        s = i === a.CreatedAtAscending || i === a.CreatedAtDescending,
+                    var a = this.props.sort,
+                        l = a === i.ViewsAscending || a === i.ViewsDescending,
+                        s = a === i.CreatedAtAscending || a === i.CreatedAtDescending,
                         o = Object(_.d)("Created", "ClipsManagerTable"),
                         c = Object(_.d)("Views", "ClipsManagerTable");
                     return r.createElement(P.X, null, r.createElement(P.K, {
@@ -1956,7 +1954,7 @@ webpackJsonp([76], {
                         bold: !0,
                         ellipsis: !0
                     }, o), s && r.createElement(P._20, {
-                        asset: i === a.CreatedAtDescending ? P._21.GlyphArrDown : P._21.GlyphArrUp,
+                        asset: a === i.CreatedAtDescending ? P._21.GlyphArrDown : P._21.GlyphArrUp,
                         type: P._22.Brand
                     }))))), r.createElement(P.K, {
                         cols: 2
@@ -1986,7 +1984,7 @@ webpackJsonp([76], {
                         bold: !0,
                         ellipsis: !0
                     }, c), l && r.createElement(P._20, {
-                        asset: i === a.ViewsDescending ? P._21.GlyphArrDown : P._21.GlyphArrUp,
+                        asset: a === i.ViewsDescending ? P._21.GlyphArrDown : P._21.GlyphArrUp,
                         type: P._22.Brand
                     }))))))
                 }, t.prototype.renderClipRow = function(e) {
@@ -2032,30 +2030,30 @@ webpackJsonp([76], {
                 props: function(e) {
                     var t = [],
                         n = "",
-                        a = !1;
+                        i = !1;
                     return e.data.user && e.data.user.clips && (n = e.data.user.id, t = e.data.user.clips.edges.map(function(e) {
                         return e.node
-                    }), a = e.data.user.clips.pageInfo.hasNextPage), {
+                    }), i = e.data.user.clips.pageInfo.hasNextPage), {
                         userID: n,
                         clips: t,
                         loading: e.data.loading,
-                        hasNextPage: a,
+                        hasNextPage: i,
                         error: e.data.error,
                         loadMore: function() {
                             var t = e.data.user.clips.edges,
                                 n = t[t.length - 1].cursor;
                             return e.data.fetchMore({
-                                variables: i.__assign({}, e.data.variables, {
+                                variables: a.__assign({}, e.data.variables, {
                                     cursor: n
                                 }),
                                 updateQuery: function(e, t) {
                                     var n = t.fetchMoreResult,
-                                        a = e.user.clips.edges,
+                                        i = e.user.clips.edges,
                                         r = n.user.clips.edges;
                                     return {
-                                        user: i.__assign({}, n.user, {
-                                            clips: i.__assign({}, n.user.clips, {
-                                                edges: Object(N.b)(a, r)
+                                        user: a.__assign({}, n.user, {
+                                            clips: a.__assign({}, n.user.clips, {
+                                                edges: Object(N.b)(i, r)
                                             })
                                         })
                                     }
@@ -2135,12 +2133,12 @@ webpackJsonp([76], {
                         e && !e.loading && e.currentUser && n.props.latencyTracking.reportInteractive()
                     }, n.state = {
                         userRole: t.role,
-                        sortOption: a.CreatedAtDescending,
+                        sortOption: i.CreatedAtDescending,
                         searchType: w.a.Games,
                         searchTerm: null
                     }, n
                 }
-                return i.__extends(t, e), t.prototype.componentWillMount = function() {
+                return a.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.props.isLoggedIn || this.props.login()
                 }, t.prototype.componentDidMount = function() {
                     this.reportInteractive()
@@ -2202,7 +2200,7 @@ webpackJsonp([76], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(ye, {
                         channelName: this.props.match.params.channelName,
                         role: m.Broadcaster,
@@ -2227,7 +2225,7 @@ webpackJsonp([76], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(ye, {
                         channelName: this.props.match.params.channelName,
                         role: m.Curator,
@@ -2713,8 +2711,8 @@ webpackJsonp([76], {
     qCag: function(e, t) {},
     sikP: function(e, t, n) {
         "use strict";
-        var a = n("TToO"),
-            i = n("GiK3"),
+        var i = n("TToO"),
+            a = n("GiK3"),
             r = n("6sO2"),
             l = n("rCmJ"),
             s = n("Odds"),
@@ -2730,7 +2728,7 @@ webpackJsonp([76], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderSuccess = function() {
-                        return t.props.successContent ? i.createElement(s._30, {
+                        return t.props.successContent ? a.createElement(s._30, {
                             "data-test-selector": o.SUCCESS_BODY,
                             padding: {
                                 x: 2,
@@ -2742,11 +2740,11 @@ webpackJsonp([76], {
                             borderMarked: !0,
                             background: s.m.Alt,
                             fullWidth: !0
-                        }, i.createElement(s.P, {
+                        }, a.createElement(s.P, {
                             type: s._44.Strong
                         }, t.props.successContent)) : null
                     }, t.renderError = function() {
-                        return t.props.errorContent ? i.createElement(s._30, {
+                        return t.props.errorContent ? a.createElement(s._30, {
                             "data-test-selector": o.ERROR_BODY,
                             padding: {
                                 x: 1,
@@ -2758,7 +2756,7 @@ webpackJsonp([76], {
                             borderMarked: !0,
                             background: s.m.Alt,
                             fullWidth: !0
-                        }, i.createElement(s.P, {
+                        }, a.createElement(s.P, {
                             type: s._44.Strong,
                             color: s.J.Error
                         }, t.props.errorContent)) : null
@@ -2766,30 +2764,30 @@ webpackJsonp([76], {
                         t.props.onSubmit()
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.successContent ? i.createElement(l.a, {
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return this.props.successContent ? a.createElement(l.a, {
                         onClickOut: this.props.onClose
-                    }, i.createElement(s._30, {
+                    }, a.createElement(s._30, {
                         padding: 2,
                         background: s.m.Base,
                         className: "clip-modal"
-                    }, this.renderSuccess(), i.createElement(s._7, {
+                    }, this.renderSuccess(), a.createElement(s._7, {
                         display: s.Q.Flex,
                         justifyContent: s._6.Center
-                    }, i.createElement(s._7, {
+                    }, a.createElement(s._7, {
                         margin: {
                             x: 1
                         }
-                    }, i.createElement(s.u, {
+                    }, a.createElement(s.u, {
                         "data-test-selector": o.CANCEL_BUTTON,
                         onClick: this.props.onClose
-                    }, Object(r.d)("Close", "ClipsModal")))))) : i.createElement(l.a, {
+                    }, Object(r.d)("Close", "ClipsModal")))))) : a.createElement(l.a, {
                         onClickOut: this.props.onClose
-                    }, i.createElement(s._30, {
+                    }, a.createElement(s._30, {
                         padding: 2,
                         background: s.m.Base,
                         className: "clip-modal"
-                    }, i.createElement(s._30, {
+                    }, a.createElement(s._30, {
                         "data-test-selector": o.TITLE,
                         borderBottom: !0,
                         margin: {
@@ -2798,7 +2796,7 @@ webpackJsonp([76], {
                         padding: {
                             bottom: 1
                         }
-                    }, this.props.title), i.createElement(s._30, {
+                    }, this.props.title), a.createElement(s._30, {
                         "data-test-selector": o.MAIN_BODY,
                         borderBottom: !0,
                         margin: {
@@ -2807,31 +2805,31 @@ webpackJsonp([76], {
                         padding: {
                             bottom: 2
                         }
-                    }, this.renderError(), this.props.body), i.createElement(s._7, {
+                    }, this.renderError(), this.props.body), a.createElement(s._7, {
                         display: s.Q.Flex,
                         justifyContent: s._6.Center
-                    }, i.createElement(s._7, {
+                    }, a.createElement(s._7, {
                         margin: {
                             x: 1
                         }
-                    }, i.createElement(s.u, {
+                    }, a.createElement(s.u, {
                         "data-test-selector": o.CANCEL_BUTTON,
                         type: s.A.Text,
                         onClick: this.props.onClose
-                    }, Object(r.d)("Cancel", "ClipsModal"))), i.createElement(s._7, {
+                    }, Object(r.d)("Cancel", "ClipsModal"))), a.createElement(s._7, {
                         margin: {
                             x: 1
                         }
-                    }, i.createElement(s.u, {
+                    }, a.createElement(s.u, {
                         "data-test-selector": o.SUBMIT_BUTTON,
                         type: this.props.buttonType ? this.props.buttonType : s.A.Default,
                         onClick: this.onSubmit,
                         disabled: this.props.submitDisabled
-                    }, this.props.buttonContent), this.props.isLoading && i.createElement(s._9, {
+                    }, this.props.buttonContent), this.props.isLoading && a.createElement(s._9, {
                         delay: 0
                     })))))
                 }, t
-            }(i.Component),
+            }(a.Component),
             d = n("1OO3"),
             u = n("CSlQ"),
             p = 86400,
@@ -2843,17 +2841,17 @@ webpackJsonp([76], {
                         hasErrored: !1,
                         hasSucceeded: !1
                     }, t.renderTitle = function() {
-                        return t.props.isTemporary ? i.createElement(s.P, {
+                        return t.props.isTemporary ? a.createElement(s.P, {
                             type: s._44.H5,
                             ellipsis: !0
-                        }, Object(r.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : i.createElement(s.P, {
+                        }, Object(r.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : a.createElement(s.P, {
                             type: s._44.H5,
                             ellipsis: !0
                         }, Object(r.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                     }, t.renderBodyText = function() {
-                        return t.props.isTemporary ? i.createElement(s.P, null, Object(r.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
+                        return t.props.isTemporary ? a.createElement(s.P, null, Object(r.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
                             clipCreator: t.props.targetUser.displayName
-                        }, "ClipsModalBanUser")) : i.createElement(s.P, null, Object(r.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
+                        }, "ClipsModalBanUser")) : a.createElement(s.P, null, Object(r.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
                             clipCreator: t.props.targetUser.displayName
                         }, "ClipsModalBanUser"))
                     }, t.renderButtonText = function() {
@@ -2863,9 +2861,9 @@ webpackJsonp([76], {
                     }, t.renderFailure = function() {
                         return t.state.hasErrored ? t.props.isTemporary ? Object(r.d)("There was a problem timing out this clip creator", "ClipsModalBanUser") : Object(r.d)("There was a problem banning this clip creator", "ClipsModalBanUser") : null
                     }, t.banUser = function() {
-                        return a.__awaiter(t, void 0, void 0, function() {
+                        return i.__awaiter(t, void 0, void 0, function() {
                             var e, t;
-                            return a.__generator(this, function(n) {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         this.setState({
@@ -2895,10 +2893,10 @@ webpackJsonp([76], {
                         })
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return i.createElement(c, {
+                    return a.createElement(c, {
                         onSubmit: this.banUser,
                         onClose: this.props.onClose,
                         title: this.renderTitle(),
@@ -2911,7 +2909,7 @@ webpackJsonp([76], {
                         isLoading: this.state.isLoading
                     })
                 }, t
-            }(i.Component),
+            }(a.Component),
             h = Object(u.d)("ClipsModalBanUser")(Object(d.b)(function(e) {
                 return {
                     channelID: e.broadcasterID
@@ -2934,8 +2932,8 @@ webpackJsonp([76], {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onDeleteClick = function() {
-                        return a.__awaiter(n, void 0, void 0, function() {
-                            return a.__generator(this, function(e) {
+                        return i.__awaiter(n, void 0, void 0, function() {
+                            return i.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         this.setState({
@@ -2962,48 +2960,48 @@ webpackJsonp([76], {
                         })
                     }, n.state = E, n
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = [i.createElement(s.P, {
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = [a.createElement(s.P, {
                         key: "title",
                         type: s._44.H4
-                    }, Object(r.d)("Delete This Clip", "ClipsModalDelete")), i.createElement(s._7, {
+                    }, Object(r.d)("Delete This Clip", "ClipsModalDelete")), a.createElement(s._7, {
                         key: "message",
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(s.P, {
+                    }, a.createElement(s.P, {
                         type: s._44.P,
                         color: s.J.Alt2
                     }, Object(r.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                     if (!this.props.data.clip) return null;
                     var t = null;
-                    this.props.data.clip.curator && (t = i.createElement("span", null, " • ", Object(r.d)("Clipped by {curator}", {
+                    this.props.data.clip.curator && (t = a.createElement("span", null, " • ", Object(r.d)("Clipped by {curator}", {
                         curator: this.props.data.clip.curator.login
                     }, "ClipsModalDelete")));
-                    var n = i.createElement(s._30, {
+                    var n = a.createElement(s._30, {
                         display: s.Q.Flex,
                         flexWrap: s.T.NoWrap
-                    }, i.createElement(s._7, {
+                    }, a.createElement(s._7, {
                         className: "clips-modal-delete__thumb",
                         margin: {
                             right: 1
                         }
-                    }, i.createElement(s.j, {
+                    }, a.createElement(s.j, {
                         ratio: s.k.Aspect16x9
-                    }, i.createElement("img", {
+                    }, a.createElement("img", {
                         src: this.props.data.clip.thumbnailURL
-                    }))), i.createElement(s._7, null, i.createElement(s.P, {
+                    }))), a.createElement(s._7, null, a.createElement(s.P, {
                         type: s._44.H5
-                    }, this.props.data.clip.title), i.createElement(s.P, {
+                    }, this.props.data.clip.title), a.createElement(s.P, {
                         color: s.J.Alt2
                     }, Object(r.d)("{created, date, medium}", {
                         created: new Date(this.props.data.clip.createdAt)
-                    }, "ClipsModalDelete"), t), i.createElement(s.P, {
+                    }, "ClipsModalDelete"), t), a.createElement(s.P, {
                         color: s.J.Alt2
                     }, Object(r.d)("{viewCount, number} views", {
                         viewCount: this.props.data.clip.viewCount
                     }, "ClipsModalDelete"))));
-                    return i.createElement(c, {
+                    return a.createElement(c, {
                         onSubmit: this.onDeleteClick,
                         onClose: this.props.onClose,
                         title: e,
@@ -3016,17 +3014,17 @@ webpackJsonp([76], {
                         isLoading: this.state.isLoading
                     })
                 }, t
-            }(i.Component),
+            }(a.Component),
             S = Object(g.a)(v)(C({
                 props: function(e) {
                     return {
                         deleteClip: function(t) {
-                            return a.__awaiter(b, void 0, void 0, function() {
+                            return i.__awaiter(b, void 0, void 0, function() {
                                 var n;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
+                                return i.__generator(this, function(i) {
+                                    switch (i.label) {
                                         case 0:
-                                            return a.trys.push([0, 2, , 3]), [4, e.mutate({
+                                            return i.trys.push([0, 2, , 3]), [4, e.mutate({
                                                 variables: {
                                                     input: {
                                                         slugs: [t]
@@ -3034,9 +3032,9 @@ webpackJsonp([76], {
                                                 }
                                             })];
                                         case 1:
-                                            return a.sent(), e.ownProps.onDelete && e.ownProps.onDelete(t), [3, 3];
+                                            return i.sent(), e.ownProps.onDelete && e.ownProps.onDelete(t), [3, 3];
                                         case 2:
-                                            throw n = a.sent(), r.j.error(n, "Failed to delete clip"), n;
+                                            throw n = i.sent(), r.j.error(n, "Failed to delete clip"), n;
                                         case 3:
                                             return [2]
                                     }
@@ -3058,8 +3056,8 @@ webpackJsonp([76], {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.deleteAll = function() {
-                        return a.__awaiter(n, void 0, void 0, function() {
-                            return a.__generator(this, function(e) {
+                        return i.__awaiter(n, void 0, void 0, function() {
+                            return i.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         this.setState({
@@ -3090,16 +3088,16 @@ webpackJsonp([76], {
                         return n.state.hasErrored ? Object(r.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
                     }, n.state = w, n
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = i.createElement(s.P, {
+                    var e = a.createElement(s.P, {
                         type: s._44.P
                     }, Object(r.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
-                    return i.createElement(c, {
+                    return a.createElement(c, {
                         onSubmit: this.deleteAll,
                         onClose: this.props.onClose,
-                        title: i.createElement(s.P, {
+                        title: a.createElement(s.P, {
                             type: s._44.H4
                         }, Object(r.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                         body: e,
@@ -3111,17 +3109,17 @@ webpackJsonp([76], {
                         errorContent: this.renderFailure()
                     })
                 }, t
-            }(i.Component),
+            }(a.Component),
             O = Object(y.compose)(Object(u.d)("ClipsModalDeleteAll"), C({
                 props: function(e) {
                     return {
                         deleteAllClips: function(t, n) {
-                            return a.__awaiter(T, void 0, void 0, function() {
-                                var i, l, s;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
+                            return i.__awaiter(T, void 0, void 0, function() {
+                                var a, l, s;
+                                return i.__generator(this, function(i) {
+                                    switch (i.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), i = void 0, n ? [4, e.mutate({
+                                            return i.trys.push([0, 6, , 7]), a = void 0, n ? [4, e.mutate({
                                                 variables: {
                                                     input: {
                                                         videoID: n
@@ -3129,7 +3127,7 @@ webpackJsonp([76], {
                                                 }
                                             })] : [3, 2];
                                         case 1:
-                                            return l = a.sent(), i = l.data, [3, 5];
+                                            return l = i.sent(), a = l.data, [3, 5];
                                         case 2:
                                             return t ? [4, e.mutate({
                                                 variables: {
@@ -3139,13 +3137,13 @@ webpackJsonp([76], {
                                                 }
                                             })] : [3, 4];
                                         case 3:
-                                            return l = a.sent(), i = l.data, [3, 5];
+                                            return l = i.sent(), a = l.data, [3, 5];
                                         case 4:
                                             throw new Error("Invalid broadcastID specified for deleteAllClips");
                                         case 5:
-                                            return e.ownProps.onDeleteAll && e.ownProps.onDeleteAll(i.deleteClips.clips), [3, 7];
+                                            return e.ownProps.onDeleteAll && e.ownProps.onDeleteAll(a.deleteClips.clips), [3, 7];
                                         case 6:
-                                            throw s = a.sent(), r.j.error(s, "Failed to delete clips from VOD"), s;
+                                            throw s = i.sent(), r.j.error(s, "Failed to delete clips from VOD"), s;
                                         case 7:
                                             return [2]
                                     }
@@ -3187,8 +3185,8 @@ webpackJsonp([76], {
                     }, n.renderError = function() {
                         return n.state.hasErrored ? Object(r.d)("There was a problem deleting this clip.", "ClipsModalBatchDelete") : null
                     }, n.onDeleteClick = function() {
-                        return a.__awaiter(n, void 0, void 0, function() {
-                            return a.__generator(this, function(e) {
+                        return i.__awaiter(n, void 0, void 0, function() {
+                            return i.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         this.setState({
@@ -3215,14 +3213,14 @@ webpackJsonp([76], {
                         })
                     }, n.state = R, n
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = i.createElement(s.P, {
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = a.createElement(s.P, {
                             type: s._44.H4
                         }, Object(r.d)("Delete these clips?", "ClipsModalBatchDelete")),
-                        t = i.createElement(s.P, {
+                        t = a.createElement(s.P, {
                             type: s._44.P
                         }, Object(r.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
-                    return i.createElement(c, {
+                    return a.createElement(c, {
                         onSubmit: this.onDeleteClick,
                         onClose: this.props.onClose,
                         title: e,
@@ -3235,14 +3233,14 @@ webpackJsonp([76], {
                         errorContent: this.renderError()
                     })
                 }, t
-            }(i.Component),
+            }(a.Component),
             M = C({
                 props: function(e) {
                     return {
                         deleteClips: function() {
-                            return a.__awaiter(D, void 0, void 0, function() {
+                            return i.__awaiter(D, void 0, void 0, function() {
                                 var t;
-                                return a.__generator(this, function(n) {
+                                return i.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
                                             return n.trys.push([0, 2, , 3]), [4, e.mutate({
@@ -3567,7 +3565,7 @@ webpackJsonp([76], {
         e.exports = n
     },
     zlRb: function(e, t, n) {
-        var a = {
+        var i = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -3806,7 +3804,7 @@ webpackJsonp([76], {
                 end: 323
             }
         };
-        a.loc.source = {
+        i.loc.source = {
             body: '#import "twilight/features/top-clips/models/clip-fragment.gql"\nquery ClipsManagerTable_User($login: String! $limit: Int $cursor: Cursor $criteria: UserClipsInput){\nuser(login: $login) {\nid\ndisplayName\nclips(first: $limit after: $cursor criteria: $criteria) {\npageInfo {\nhasNextPage\n}\nedges {\ncursor\nnode {\n...clip\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -3814,12 +3812,12 @@ webpackJsonp([76], {
                 column: 1
             }
         };
-        var i = {};
-        a.definitions = a.definitions.concat(n("kUjr").definitions.filter(function(e) {
+        var a = {};
+        i.definitions = i.definitions.concat(n("kUjr").definitions.filter(function(e) {
             if ("FragmentDefinition" !== e.kind) return !0;
             var t = e.name.value;
-            return !i[t] && (i[t] = !0, !0)
-        })), e.exports = a
+            return !a[t] && (a[t] = !0, !0)
+        })), e.exports = i
     }
 });
-//# sourceMappingURL=pages.clips-manager-a5d3f1d788d738ca2f0148b1b0190e0b.js.map
+//# sourceMappingURL=pages.clips-manager-30707b4f57b0fd4b5f1c1d6111b14ce1.js.map

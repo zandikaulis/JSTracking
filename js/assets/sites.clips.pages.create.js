@@ -653,79 +653,36 @@ webpackJsonp([51], {
     },
     "3HXW": function(e, t, n) {
         "use strict";
-        var i, a, r, o = n("TToO"),
-            s = n("GiK3"),
-            l = n("HW6M"),
+        var i, a, r = n("TToO"),
+            o = n("GiK3"),
+            s = n("HW6M"),
+            l = n("kLf9"),
             d = n("Odds");
-        n("CBaN");
-        ! function(e) {
-            e[e.Left = 0] = "Left", e[e.Right = 1] = "Right"
-        }(i || (i = {})),
-        function(e) {
-            e[e.Right = 0] = "Right", e[e.Left = 1] = "Left"
-        }(a || (a = {})),
-        function(e) {
-            e[e.HandleLabel = 0] = "HandleLabel", e[e.Handle = 1] = "Handle"
-        }(r || (r = {}));
-        var c, u, p = function(e) {
-            var t = null;
-            e.label && (t = s.createElement(d._7, {
-                "data-test-selector": r.HandleLabel,
-                className: "draggable-slider-handle__label",
-                position: d._14.Absolute,
-                attachRight: e.label.attach === a.Right,
-                attachLeft: e.label.attach === a.Left
-            }, e.label.content));
-            var n = l("draggable-slider-handle", {
-                "draggable-slider-handle--left": e.handlePosition === i.Left,
-                "draggable-slider-handle--right": e.handlePosition === i.Right,
-                "draggable-slider-handle--blue": e.color === f.Blue,
-                "draggable-slider-handle--orange": e.color === f.Orange
-            });
-            return s.createElement(d._7, {
-                display: d.Q.Flex,
-                flexDirection: d.S.Column,
-                position: d._14.Relative
-            }, s.createElement(d._1, {
-                flexGrow: 0,
-                flexShrink: 0,
-                className: n,
-                display: d.Q.Flex,
-                fullHeight: !0
-            }, s.createElement("div", {
-                "data-test-selector": r.Handle,
-                onMouseDown: e.onMouseDown,
-                ref: e.onRef
-            }, s.createElement(d._20, {
-                asset: d._21.DragHandle,
-                width: 15
-            }))), t)
-        };
         n("cJZy");
         ! function(e) {
             e.LeftHandle = "left-handle", e.Overlay = "overlay", e.Slider = "slider", e.RightHandle = "right-handle"
-        }(c || (c = {})),
+        }(i || (i = {})),
         function(e) {
             e.LeftHandle = "leftHandle", e.Slider = "slider", e.RightHandle = "rightHandle"
-        }(u || (u = {}));
-        var f, m = function(e) {
+        }(a || (a = {}));
+        var c, u = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.leftHandleRef = null, n.rightHandleRef = null, n.sliderHandleRef = null, n.getHandleHandlers = function(e) {
                     switch (e) {
-                        case u.LeftHandle:
+                        case a.LeftHandle:
                             return {
                                 handleRef: n.leftHandleRef,
                                 mouseMoveHandler: n.onLeftMouseMove,
                                 mouseUpHandler: n.onLeftMouseUp
                             };
-                        case u.RightHandle:
+                        case a.RightHandle:
                             return {
                                 handleRef: n.rightHandleRef,
                                 mouseMoveHandler: n.onRightMouseMove,
                                 mouseUpHandler: n.onRightMouseUp
                             };
-                        case u.Slider:
+                        case a.Slider:
                             return {
                                 handleRef: n.sliderHandleRef,
                                 mouseMoveHandler: n.onSliderMouseMove,
@@ -759,7 +716,7 @@ webpackJsonp([51], {
                         n.props.onLeftDragStart && n.props.onLeftDragStart({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.addHandleListeners(u.LeftHandle)
+                        }), n.addHandleListeners(a.LeftHandle)
                     })
                 }, n.onLeftMouseUp = function() {
                     n.setState({
@@ -769,7 +726,7 @@ webpackJsonp([51], {
                         n.props.onLeftDragEnd && n.props.onLeftDragEnd({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.removeHandleListeners(u.LeftHandle)
+                        }), n.removeHandleListeners(a.LeftHandle)
                     })
                 }, n.onLeftMouseMove = function(e) {
                     var t = e.clientX;
@@ -801,7 +758,7 @@ webpackJsonp([51], {
                         n.props.onRightDragStart && n.props.onRightDragStart({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.addHandleListeners(u.RightHandle)
+                        }), n.addHandleListeners(a.RightHandle)
                     })
                 }, n.onRightMouseUp = function() {
                     n.setState({
@@ -811,7 +768,7 @@ webpackJsonp([51], {
                         n.props.onRightDragEnd && n.props.onRightDragEnd({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.removeHandleListeners(u.RightHandle)
+                        }), n.removeHandleListeners(a.RightHandle)
                     })
                 }, n.onRightMouseMove = function(e) {
                     var t = e.clientX;
@@ -843,7 +800,7 @@ webpackJsonp([51], {
                         n.props.onSliderDragStart && n.props.onSliderDragStart({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.addHandleListeners(u.Slider)
+                        }), n.addHandleListeners(a.Slider)
                     })
                 }, n.onSliderMouseUp = function() {
                     n.setState({
@@ -853,7 +810,7 @@ webpackJsonp([51], {
                         n.props.onSliderDragEnd && n.props.onSliderDragEnd({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.removeHandleListeners(u.Slider)
+                        }), n.removeHandleListeners(a.Slider)
                     })
                 }, n.onSliderMouseMove = function(e) {
                     var t = e.clientX;
@@ -881,76 +838,95 @@ webpackJsonp([51], {
                     return a < t.startBoundary ? t.startBoundary : a > t.endBoundary ? t.endBoundary : a
                 }, n.convertPixelsToOffsetUnits = function(e) {
                     return n.props.parentContainerRef ? 0 === n.props.parentContainerRef.clientWidth ? 0 : e * ((n.props.maxOffset - n.props.minOffset) / n.props.parentContainerRef.clientWidth) : 0
+                }, n.addFocus = function() {
+                    n.setState({
+                        showFocus: !0
+                    })
+                }, n.removeFocus = function() {
+                    n.setState({
+                        showFocus: !1
+                    })
                 }, n.state = {
                     startOffset: t.startOffset,
                     endOffset: t.endOffset,
                     previousPosition: null,
-                    previousBaseValue: null
+                    previousBaseValue: null,
+                    showFocus: !1
                 }, n
             }
-            return o.__extends(t, e), t.prototype.render = function() {
-                return s.createElement(d._7, {
+            return r.__extends(t, e), t.prototype.render = function() {
+                var e = s("draggable-slider__content", {
+                    "draggable-slider__content--blue": this.props.color === c.Blue,
+                    "draggable-slider__content--orange": this.props.color === c.Orange,
+                    "draggable-slider__content--focus": this.props.isSliderEnabled && this.state.showFocus
+                });
+                return o.createElement(d._7, {
                     className: "draggable-slider__container",
                     position: d._14.Relative,
                     display: d.Q.Flex,
                     justifyContent: d._6.Center
-                }, s.createElement(d._7, {
+                }, o.createElement(d._7, {
                     className: "draggable-slider__popover",
                     position: d._14.Absolute
-                }, this.props.popover), s.createElement(d._30, {
+                }, this.props.popover), o.createElement(d._30, {
+                    className: e,
                     fullWidth: !0,
                     display: d.Q.Flex,
                     justifyContent: d._6.Between
-                }, s.createElement(p, {
-                    "data-test-selector": c.LeftHandle,
+                }, o.createElement(l.b, {
+                    "data-test-selector": i.LeftHandle,
                     color: this.props.color,
-                    handlePosition: i.Left,
+                    handlePosition: l.c.Left,
                     onRef: this.leftHandleRefHandler,
                     onMouseDown: this.onLeftMouseDown,
                     label: this.props.handleLabels && this.props.handleLabels.length > 0 ? {
-                        attach: a.Left,
+                        attach: l.a.Left,
                         content: this.props.handleLabels[0]
-                    } : null
-                }), this.renderSliderContent(), s.createElement(p, {
-                    "data-test-selector": c.RightHandle,
+                    } : null,
+                    size: this.props.handleSize
+                }), this.renderSliderContent(), o.createElement(l.b, {
+                    "data-test-selector": i.RightHandle,
                     color: this.props.color,
-                    handlePosition: i.Right,
+                    handlePosition: l.c.Right,
                     onRef: this.rightHandleRefHandler,
                     onMouseDown: this.onRightMouseDown,
                     label: this.props.handleLabels && this.props.handleLabels.length > 0 ? {
-                        attach: a.Right,
+                        attach: l.a.Right,
                         content: this.props.handleLabels[1]
-                    } : null
+                    } : null,
+                    size: this.props.handleSize
                 })))
             }, t.prototype.renderSliderContent = function() {
                 var e = this.props.children;
-                this.props.isSliderEnabled && (e = s.createElement("div", {
+                this.props.isSliderEnabled && (e = o.createElement("div", {
                     onMouseDown: this.onSliderMouseDown,
+                    onMouseEnter: this.addFocus,
+                    onMouseLeave: this.removeFocus,
                     ref: this.sliderHandleRefHandler,
-                    "data-test-selector": c.Slider
+                    "data-test-selector": i.Slider
                 }, this.props.children));
-                var t = l("draggable-slider__overlay", {
+                var t = s("draggable-slider__overlay", {
                     "draggable-slider__overlay--sliding-enabled": this.props.isSliderEnabled,
-                    "draggable-slider__overlay--blue": this.props.color === f.Blue,
-                    "draggable-slider__overlay--orange": this.props.color === f.Orange
+                    "draggable-slider__overlay--blue": this.props.color === c.Blue,
+                    "draggable-slider__overlay--orange": this.props.color === c.Orange
                 });
-                return s.createElement(d._7, {
+                return o.createElement(d._7, {
                     className: t,
                     display: d.Q.InlineBlock,
                     overflow: d._10.Hidden,
-                    "data-test-selector": c.Overlay,
+                    "data-test-selector": i.Overlay,
                     fullWidth: !0
                 }, e)
             }, t
-        }(s.Component);
+        }(o.Component);
         ! function(e) {
             e.Orange = "orange", e.Blue = "blue"
-        }(f || (f = {}));
-        var h, g = f.Orange;
+        }(c || (c = {}));
+        var p, f = c.Orange;
         ! function(e) {
             e[e.SelectedSection = 0] = "SelectedSection"
-        }(h || (h = {}));
-        var v = function(e) {
+        }(p || (p = {}));
+        var m = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -960,21 +936,22 @@ webpackJsonp([51], {
                     t.parentContainerRef = e
                 }, t
             }
-            return o.__extends(t, e), t.prototype.render = function() {
-                var e = {
-                    width: "calc(" + this.calculateWidthPercentage() + "% + 30px)",
-                    marginLeft: "calc(" + this.calculateOffsetPercentage() + "% - 15px)"
-                };
-                return s.createElement("div", {
+            return r.__extends(t, e), t.prototype.render = function() {
+                var e = this.props.handleSize ? this.props.handleSize : l.d.Small,
+                    t = {
+                        width: "calc(" + this.calculateWidthPercentage() + "% + " + 2 * e + "px)",
+                        marginLeft: "calc(" + this.calculateOffsetPercentage() + "% - " + e + "px)"
+                    };
+                return o.createElement("div", {
                     ref: this.handleParentContainerRef
-                }, s.createElement(d._1, {
+                }, o.createElement(d._1, {
                     flexGrow: 0,
                     flexShrink: 0
-                }, s.createElement("div", {
-                    "data-test-selector": h.SelectedSection,
-                    style: e
-                }, s.createElement(m, {
-                    color: this.props.color || g,
+                }, o.createElement("div", {
+                    "data-test-selector": p.SelectedSection,
+                    style: t
+                }, o.createElement(u, {
+                    color: this.props.color || f,
                     minOffset: this.props.minOffset,
                     maxOffset: this.props.maxOffset,
                     startOffset: this.props.startOffset,
@@ -991,7 +968,8 @@ webpackJsonp([51], {
                     onSliderDragEnd: this.props.onSliderDragEnd,
                     popover: this.props.popover,
                     handleLabels: this.props.handleLabels,
-                    isSliderEnabled: this.props.isSliderEnabled
+                    isSliderEnabled: this.props.isSliderEnabled,
+                    handleSize: e
                 }, this.props.children))))
             }, t.prototype.calculateOffsetPercentage = function() {
                 return this.props.startOffset / this.getTotalLength() * 100
@@ -1000,15 +978,15 @@ webpackJsonp([51], {
             }, t.prototype.getTotalLength = function() {
                 return this.props.maxOffset - this.props.minOffset
             }, t
-        }(s.Component);
+        }(o.Component);
         n.d(t, "b", function() {
+            return c
+        }), n.d(t, !1, function() {
             return f
         }), n.d(t, !1, function() {
-            return g
-        }), n.d(t, !1, function() {
-            return h
+            return p
         }), n.d(t, "a", function() {
-            return v
+            return m
         })
     },
     "3KVC": function(e, t, n) {
@@ -1516,24 +1494,25 @@ webpackJsonp([51], {
             v = n("7vx8"),
             y = n("rqhk"),
             b = n("3HXW"),
-            k = n("QIXk"),
-            _ = n("0B06");
+            k = n("kLf9"),
+            _ = n("QIXk"),
+            S = n("0B06");
 
-        function S(e, t) {
+        function w(e, t) {
             return {
                 startOffset: e,
                 endOffset: t
             }
         }
-        var w = n("Odds"),
-            O = (n("Wc1Y"), 5),
-            E = 60,
-            C = 1;
+        var O = n("Odds"),
+            E = (n("Wc1Y"), 5),
+            C = 60,
+            N = 1;
 
-        function N(e) {
-            return parseFloat(e.toFixed(C))
+        function T(e) {
+            return parseFloat(e.toFixed(N))
         }
-        var T = function(e) {
+        var I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1541,33 +1520,33 @@ webpackJsonp([51], {
                         endOffset: -1
                     }, t.onDrag = function(e) {
                         var n = e.endOffset - e.startOffset;
-                        n > E || n < O || (t.setState({
-                            startOffset: N(e.startOffset),
-                            endOffset: N(e.endOffset)
+                        n > C || n < E || (t.setState({
+                            startOffset: T(e.startOffset),
+                            endOffset: T(e.endOffset)
                         }), t.props.playerConnection.sendMessage(Object(y.r)({
                             startOffset: t.state.startOffset,
                             endOffset: t.state.endOffset
                         })))
                     }, t.renderDurationPopover = function() {
-                        var e = o.createElement(w.P, {
-                            type: w._44.Strong
+                        var e = o.createElement(O.P, {
+                            type: O._44.Strong
                         }, t.roundedPopoverDuration() + "s");
-                        return o.createElement(w._30, {
-                            background: w.m.AccentAlt2,
+                        return o.createElement(O._30, {
+                            background: O.m.AccentAlt2,
                             padding: {
                                 y: 1,
                                 x: 2
                             },
                             fullWidth: !0,
-                            textAlign: w._40.Center,
-                            overflow: w._10.Hidden
-                        }, o.createElement(w.P, {
-                            align: w._54.Middle,
-                            fontSize: w.U.Size5
-                        }, e, " / 60s"), o.createElement(w.P, {
-                            align: w._54.Middle,
-                            color: w.J.Alt2
-                        }, Object(_.a)(t.state.startOffset) + " - " + Object(_.a)(t.state.endOffset)))
+                            textAlign: O._40.Center,
+                            overflow: O._10.Hidden
+                        }, o.createElement(O.P, {
+                            align: O._54.Middle,
+                            fontSize: O.U.Size5
+                        }, e, " / 60s"), o.createElement(O.P, {
+                            align: O._54.Middle,
+                            color: O.J.Alt2
+                        }, Object(S.a)(t.state.startOffset) + " - " + Object(S.a)(t.state.endOffset)))
                     }, t.isReady = function() {
                         return t.props.isClipResolved && t.isValidOffset(t.state.startOffset) && t.isValidOffset(t.state.endOffset)
                     }, t
@@ -1577,13 +1556,13 @@ webpackJsonp([51], {
                         n = this.isValidOffset(this.state.endOffset);
                     if ((!t || !n) && e.initialOffsetStart && e.duration) {
                         var i = {},
-                            a = S(e.initialOffsetStart, e.duration);
+                            a = w(e.initialOffsetStart, e.duration);
                         !t && this.isValidOffset(a.startOffset) && (i.startOffset = a.startOffset), !n && this.isValidOffset(a.endOffset) && (i.endOffset = a.endOffset), this.setState(i)
                     }
                 }, t.prototype.componentDidUpdate = function() {
                     this.isReady() && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.isReady() && this.props.duration ? o.createElement(w._7, null, o.createElement(w._30, {
+                    return this.isReady() && this.props.duration ? o.createElement(O._7, null, o.createElement(O._30, {
                         margin: {
                             y: 4
                         },
@@ -1598,17 +1577,18 @@ webpackJsonp([51], {
                         onSliderDrag: this.onDrag,
                         popover: this.renderDurationPopover(),
                         color: b.b.Blue,
-                        isSliderEnabled: !0
-                    }, o.createElement(w._30, {
-                        background: w.m.Overlay,
+                        isSliderEnabled: !0,
+                        handleSize: k.d.Medium
+                    }, o.createElement(O._30, {
+                        background: O.m.Overlay,
                         padding: {
                             top: 3,
                             bottom: 2
                         },
                         fullWidth: !0,
-                        textAlign: w._40.Center,
-                        overflow: w._10.Hidden
-                    }))), o.createElement(k.a, {
+                        textAlign: O._40.Center,
+                        overflow: O._10.Hidden
+                    }))), o.createElement(_.a, {
                         clipSlug: this.props.slug,
                         location: c.PageviewLocation.ClipsEditing,
                         broadcasterName: this.props.broadcasterName,
@@ -1616,32 +1596,32 @@ webpackJsonp([51], {
                         endOffset: this.state.endOffset
                     })) : this.renderPlaceholder()
                 }, t.prototype.renderPlaceholder = function() {
-                    return o.createElement(w._7, null, o.createElement(w.e, {
-                        type: w.i.Bounce,
+                    return o.createElement(O._7, null, o.createElement(O.e, {
+                        type: O.i.Bounce,
                         loop: !0,
                         enabled: !0,
-                        duration: w.g.ExtraLong,
-                        timing: w.h.EaseInOut
-                    }, o.createElement(w._30, {
+                        duration: O.g.ExtraLong,
+                        timing: O.h.EaseInOut
+                    }, o.createElement(O._30, {
                         fullWidth: !0,
-                        background: w.m.Alt2,
+                        background: O.m.Alt2,
                         margin: {
                             y: 4
                         },
                         padding: {
                             y: 3
                         },
-                        textAlign: w._40.Center
-                    })), o.createElement(w.e, {
-                        type: w.i.Bounce,
+                        textAlign: O._40.Center
+                    })), o.createElement(O.e, {
+                        type: O.i.Bounce,
                         loop: !0,
                         enabled: !0,
-                        duration: w.g.ExtraLong,
-                        timing: w.h.EaseInOut,
-                        delay: w.f.Medium
-                    }, o.createElement(w._30, {
+                        duration: O.g.ExtraLong,
+                        timing: O.h.EaseInOut,
+                        delay: O.f.Medium
+                    }, o.createElement(O._30, {
                         fullWidth: !0,
-                        background: w.m.Alt2,
+                        background: O.m.Alt2,
                         margin: {
                             y: 4
                         },
@@ -1649,61 +1629,61 @@ webpackJsonp([51], {
                             top: 2,
                             bottom: 1
                         },
-                        textAlign: w._40.Center
+                        textAlign: O._40.Center
                     })))
                 }, t.prototype.roundedPopoverDuration = function() {
                     var e = this.state.endOffset - this.state.startOffset;
-                    return e >= E - .3 && (e = 60), e <= O + .3 && (e = 5), e.toFixed(1)
+                    return e >= C - .3 && (e = 60), e <= E + .3 && (e = 5), e.toFixed(1)
                 }, t.prototype.isValidOffset = function(e) {
                     return !isNaN(e) && e >= 0
                 }, t
             }(o.Component),
-            I = Object(h.compose)(Object(y.t)({
+            F = Object(h.compose)(Object(y.t)({
                 playerId: function(e) {
                     return e.slug
                 }
-            }), Object(u.d)("ClipsEditor"))(T),
+            }), Object(u.d)("ClipsEditor"))(I),
             x = n("oMs9"),
-            F = (n("Jbgd"), function(e) {
+            L = (n("Jbgd"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(w._30, {
-                        background: w.m.Base,
+                    return o.createElement(O._30, {
+                        background: O.m.Base,
                         className: "clips-edit-top-nav",
-                        position: w._14.Fixed,
+                        position: O._14.Fixed,
                         fullWidth: !0,
                         attachTop: !0,
                         attachLeft: !0,
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center,
-                        alignItems: w.c.Center,
+                        display: O.Q.Flex,
+                        justifyContent: O._6.Center,
+                        alignItems: O.c.Center,
                         "data-test-selector": "clips-edit-top-nav-wrapper"
-                    }, this.props.showMessage && o.createElement(w._7, {
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center,
-                        alignItems: w.c.Center
-                    }, o.createElement(w.P, {
-                        color: w.J.Alt,
-                        fontSize: w.U.Size5
-                    }, Object(g.d)("Title this clip to publish", "ClipsEditTopNav")), o.createElement(w._7, {
+                    }, this.props.showMessage && o.createElement(O._7, {
+                        display: O.Q.Flex,
+                        justifyContent: O._6.Center,
+                        alignItems: O.c.Center
+                    }, o.createElement(O.P, {
+                        color: O.J.Alt,
+                        fontSize: O.U.Size5
+                    }, Object(g.d)("Title this clip to publish", "ClipsEditTopNav")), o.createElement(O._7, {
                         margin: {
                             left: .5
                         },
-                        display: w.Q.Flex,
-                        alignItems: w.c.Center
-                    }, o.createElement(w._20, {
-                        asset: w._21.Lock,
-                        type: w._22.Warn
+                        display: O.Q.Flex,
+                        alignItems: O.c.Center
+                    }, o.createElement(O._20, {
+                        asset: O._21.Lock,
+                        type: O._22.Warn
                     }))))
                 }, t
             }(o.Component)),
             D = Object(u.d)("ClipsEditTopNav", {
                 autoReportInteractive: !0
-            })(F),
-            L = n("l21v"),
-            P = function() {
+            })(L),
+            P = n("l21v"),
+            j = function() {
                 return function(e) {
                     var t = this;
                     this.timerId = null, this.start = function() {
@@ -1717,214 +1697,214 @@ webpackJsonp([51], {
                     }, this.onInterval = e.onInterval, this.intervalMillis = e.intervalMillis
                 }
             }(),
-            j = (n("ZYcd"), {
-                clappy: Object(L.f)("192361", 3),
-                clappyDerp: Object(L.f)("192362", 3),
-                clappyHype: Object(L.f)("192363", 3)
+            R = (n("ZYcd"), {
+                clappy: Object(P.f)("192361", 3),
+                clappyDerp: Object(P.f)("192362", 3),
+                clappyHype: Object(P.f)("192363", 3)
             });
 
-        function R() {
+        function M() {
             switch (Math.floor(17 * Math.random())) {
                 case 0:
                     return {
-                        icon: j.clappyHype,
+                        icon: R.clappyHype,
                         text: Object(g.d)("Generating your clip...", "ClipsPostEditLoading")
                     };
                 case 1:
                     return {
-                        icon: j.clappyDerp,
+                        icon: R.clappyDerp,
                         text: Object(g.d)("Almost there...", "ClipsPostEditLoading")
                     };
                 case 2:
                     return {
-                        icon: j.clappyHype,
+                        icon: R.clappyHype,
                         text: Object(g.d)("Just a few more seconds...", "ClipsPostEditLoading")
                     };
                 case 3:
                     return {
-                        icon: j.clappy,
+                        icon: R.clappy,
                         text: Object(g.d)("Grabbing popcorn...", "ClipsPostEditLoading")
                     };
                 case 4:
                     return {
-                        icon: j.clappyHype,
+                        icon: R.clappyHype,
                         text: Object(g.d)("Summoning your clip...", "ClipsPostEditLoading")
                     };
                 case 5:
                     return {
-                        icon: j.clappyHype,
+                        icon: R.clappyHype,
                         text: Object(g.d)("The bits are breeding...", "ClipsPostEditLoading")
                     };
                 case 6:
                     return {
-                        icon: j.clappy,
+                        icon: R.clappy,
                         text: Object(g.d)("Building the thing...", "ClipsPostEditLoading")
                     };
                 case 7:
                     return {
-                        icon: j.clappyDerp,
+                        icon: R.clappyDerp,
                         text: Object(g.d)("Spinning up hamsters...", "ClipsPostEditLoading")
                     };
                 case 8:
                     return {
-                        icon: j.clappy,
+                        icon: R.clappy,
                         text: Object(g.d)("Fetching your stick...", "ClipsPostEditLoading")
                     };
                 case 9:
                     return {
-                        icon: j.clappyDerp,
+                        icon: R.clappyDerp,
                         text: Object(g.d)("Applying middle out compression...", "ClipsPostEditLoading")
                     };
                 case 10:
                     return {
-                        icon: j.clappy,
+                        icon: R.clappy,
                         text: Object(g.d)("Searching for llamas...", "ClipsPostEditLoading")
                     };
                 case 11:
                     return {
-                        icon: j.clappyHype,
+                        icon: R.clappyHype,
                         text: Object(g.d)("Turning on printer...", "ClipsPostEditLoading")
                     };
                 case 12:
                     return {
-                        icon: j.clappy,
+                        icon: R.clappy,
                         text: Object(g.d)("Learning calculus...", "ClipsPostEditLoading")
                     };
                 case 13:
                     return {
-                        icon: j.clappyDerp,
+                        icon: R.clappyDerp,
                         text: Object(g.d)("Training patience...", "ClipsPostEditLoading")
                     };
                 case 14:
                     return {
-                        icon: j.clappy,
+                        icon: R.clappy,
                         text: Object(g.d)("Looking for keys...", "ClipsPostEditLoading")
                     };
                 case 15:
                     return {
-                        icon: j.clappyDerp,
+                        icon: R.clappyDerp,
                         text: Object(g.d)("Baking cake...", "ClipsPostEditLoading")
                     };
                 default:
                     return {
-                        icon: j.clappyHype,
+                        icon: R.clappyHype,
                         text: Object(g.d)("Searching for hold music...", "ClipsPostEditLoading")
                     }
             }
         }
-        var M = function(e) {
+        var U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         percent: 0,
-                        messageData: R()
+                        messageData: M()
                     }, t.onTimerUpdate = function() {
                         t.state.percent >= 100 ? t.countdownTimer.stop() : t.setState({
                             percent: t.state.percent + 1,
-                            messageData: t.state.percent % 4 == 0 ? R() : t.state.messageData
+                            messageData: t.state.percent % 4 == 0 ? M() : t.state.messageData
                         })
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.countdownTimer = new P({
+                    this.countdownTimer = new j({
                         onInterval: this.onTimerUpdate,
                         intervalMillis: 500
                     }), this.countdownTimer.start()
                 }, t.prototype.componentWillUnmount = function() {
                     this.countdownTimer.stop()
                 }, t.prototype.render = function() {
-                    return o.createElement(w._30, {
+                    return o.createElement(O._30, {
                         className: "clips-post-edit-loading",
                         padding: 4,
-                        background: w.m.Base
-                    }, o.createElement(w._7, {
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Between,
+                        background: O.m.Base
+                    }, o.createElement(O._7, {
+                        display: O.Q.Flex,
+                        justifyContent: O._6.Between,
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(w.P, {
-                        type: w._44.Span,
-                        fontSize: w.U.Size6
-                    }, Object(g.d)("Publishing Clip!", "ClipsPostEditLoading")), o.createElement(w._7, {
-                        display: w.Q.InlineBlock
-                    }, this.state.percent, "%")), o.createElement(w._17, {
+                    }, o.createElement(O.P, {
+                        type: O._44.Span,
+                        fontSize: O.U.Size6
+                    }, Object(g.d)("Publishing Clip!", "ClipsPostEditLoading")), o.createElement(O._7, {
+                        display: O.Q.InlineBlock
+                    }, this.state.percent, "%")), o.createElement(O._17, {
                         countdown: 50,
                         mask: !0
-                    }), o.createElement(w._7, {
+                    }), o.createElement(O._7, {
                         margin: {
                             top: 2
                         }
-                    }, o.createElement(w._7, {
+                    }, o.createElement(O._7, {
                         className: "clips-post-edit-loading-clappy",
-                        display: w.Q.InlineBlock
-                    }, o.createElement(w.e, {
-                        duration: w.g.ExtraLong,
+                        display: O.Q.InlineBlock
+                    }, o.createElement(O.e, {
+                        duration: O.g.ExtraLong,
                         enabled: !0,
-                        type: w.i.Bounce,
+                        type: O.i.Bounce,
                         loop: !0,
-                        timing: w.h.EaseOut
-                    }, o.createElement(w.M, {
+                        timing: O.h.EaseOut
+                    }, o.createElement(O.M, {
                         src: this.state.messageData.icon,
                         alt: Object(g.d)("Clappy looking good", "ClipsPostEditLoading")
-                    })), o.createElement(w._7, {
-                        position: w._14.Relative
-                    }, o.createElement(w.p, {
-                        direction: w.q.Right,
+                    })), o.createElement(O._7, {
+                        position: O._14.Relative
+                    }, o.createElement(O.p, {
+                        direction: O.q.Right,
                         elevation: 2,
                         show: !0,
-                        tailBackground: w.m.AccentAlt,
+                        tailBackground: O.m.AccentAlt,
                         offsetY: "-3.8rem",
                         offsetX: "1.5rem"
-                    }, o.createElement(w._30, {
+                    }, o.createElement(O._30, {
                         padding: 1,
-                        background: w.m.AccentAlt
+                        background: O.m.AccentAlt
                     }, this.state.messageData.text))))))
                 }, t
             }(o.Component),
-            U = n("4Gcm"),
-            B = n("bhVC"),
-            A = n("2hJ3"),
-            H = n("WNmM"),
-            V = n("ZxOd"),
-            Q = (n("Ks2M"), function(e) {
+            B = n("4Gcm"),
+            A = n("bhVC"),
+            H = n("2hJ3"),
+            V = n("WNmM"),
+            Q = n("ZxOd"),
+            W = (n("Ks2M"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.copyClipURL = function() {
-                        Object(A.a)(Object(f.a)(t.props.slug));
+                        Object(H.a)(Object(f.a)(t.props.slug));
                         var e = t.props,
                             n = e.clipId,
                             i = e.gameName,
                             a = e.broadcasterId,
                             r = e.broadcasterLogin;
-                        Object(H.c)(n, i, a, r, c.PageviewLocation.ClipsEditing)(B.b.CopyInput)
+                        Object(V.c)(n, i, a, r, c.PageviewLocation.ClipsEditing)(A.b.CopyInput)
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(w._30, {
+                    return o.createElement(O._30, {
                         className: "clips-post-edit-share",
                         padding: 3,
-                        background: w.m.Base
-                    }, o.createElement(w._7, {
+                        background: O.m.Base
+                    }, o.createElement(O._7, {
                         margin: {
                             bottom: 2
                         }
-                    }, o.createElement(U.a, {
+                    }, o.createElement(B.a, {
                         text: Object(f.a)(this.props.slug),
                         icon: !0,
-                        iconAsset: w._21.Link,
+                        iconAsset: O._21.Link,
                         onSelection: this.copyClipURL,
                         "data-a-target": "clip-share-input"
-                    })), o.createElement(w._7, {
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center
-                    }, o.createElement(V.a, {
+                    })), o.createElement(O._7, {
+                        display: O.Q.Flex,
+                        justifyContent: O._6.Center
+                    }, o.createElement(Q.a, {
                         slug: this.props.slug,
                         pageType: c.PageviewLocation.ClipsEditing
                     })))
                 }, t
             }(o.Component)),
-            W = n("8cOU"),
+            z = n("8cOU"),
             G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1935,15 +1915,15 @@ webpackJsonp([51], {
                 }, t.prototype.render = function() {
                     var e = this.props.data.clip,
                         t = null;
-                    return t = this.isDonePolling() && e ? o.createElement(Q, {
+                    return t = this.isDonePolling() && e ? o.createElement(W, {
                         slug: this.props.slug,
                         clipId: e.id,
                         broadcasterId: e.broadcaster && e.broadcaster.id,
                         broadcasterLogin: e.broadcaster && e.broadcaster.login,
                         gameName: e.game && e.game.name
-                    }) : o.createElement(M, null), o.createElement(w._7, {
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center,
+                    }) : o.createElement(U, null), o.createElement(O._7, {
+                        display: O.Q.Flex,
+                        justifyContent: O._6.Center,
                         padding: {
                             top: 4
                         }
@@ -1956,7 +1936,7 @@ webpackJsonp([51], {
                     return !n && i && i.creationState !== x.a.creating
                 }, t
             }(o.Component),
-            z = Object(v.a)(W, {
+            q = Object(v.a)(z, {
                 options: function(e) {
                     return {
                         pollInterval: 1e3,
@@ -1967,67 +1947,67 @@ webpackJsonp([51], {
                     }
                 }
             })(G),
-            q = n("ynxC"),
-            K = n("0Ssf"),
-            J = n("nU46"),
-            $ = n("dPTw"),
-            Y = (n("DkK3"), function(e) {
+            K = n("ynxC"),
+            J = n("0Ssf"),
+            $ = n("nU46"),
+            Y = n("dPTw"),
+            X = (n("DkK3"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.slug,
-                        t = o.createElement(w._7, {
-                            alignItems: w.c.Center,
-                            display: w.Q.Flex,
-                            flexDirection: w.S.Row,
-                            justifyContent: w._6.Start,
+                        t = o.createElement(O._7, {
+                            alignItems: O.c.Center,
+                            display: O.Q.Flex,
+                            flexDirection: O.S.Row,
+                            justifyContent: O._6.Start,
                             margin: {
                                 y: 1
                             },
                             ellipsis: !0
-                        }, o.createElement(w._30, {
-                            display: w.Q.Flex,
-                            fontSize: w.U.Size5
-                        }, o.createElement(w.P, {
-                            type: w._44.Span
-                        }, Object(_.b)(this.props.createdAt)), o.createElement(w._7, {
+                        }, o.createElement(O._30, {
+                            display: O.Q.Flex,
+                            fontSize: O.U.Size5
+                        }, o.createElement(O.P, {
+                            type: O._44.Span
+                        }, Object(S.b)(this.props.createdAt)), o.createElement(O._7, {
                             margin: {
                                 x: .5
                             }
-                        }, "•")), o.createElement(K.a, {
+                        }, "•")), o.createElement(J.a, {
                             slug: e,
                             ellipsis: !0
                         }));
-                    return o.createElement(w._30, {
+                    return o.createElement(O._30, {
                         className: "clips-post-edit-sidebar",
-                        display: w.Q.Flex,
-                        flexDirection: w.S.Column,
-                        background: w.m.Base
-                    }, o.createElement(w._30, {
+                        display: O.Q.Flex,
+                        flexDirection: O.S.Column,
+                        background: O.m.Base
+                    }, o.createElement(O._30, {
                         borderBottom: !0
-                    }, o.createElement(q.a, {
+                    }, o.createElement(K.a, {
                         slug: e
-                    })), o.createElement(w._7, {
+                    })), o.createElement(O._7, {
                         fullHeight: !0,
-                        display: w.Q.Flex,
-                        alignItems: w.c.Center
-                    }, o.createElement(w._7, {
+                        display: O.Q.Flex,
+                        alignItems: O.c.Center
+                    }, o.createElement(O._7, {
                         className: "clips-sidebar-info",
-                        display: w.Q.Flex,
-                        flexDirection: w.S.Column,
-                        justifyContent: w._6.Around,
+                        display: O.Q.Flex,
+                        flexDirection: O.S.Column,
+                        justifyContent: O._6.Around,
                         padding: 1
-                    }, o.createElement($.a, {
+                    }, o.createElement(Y.a, {
                         slug: e
-                    }), o.createElement(J.a, {
+                    }), o.createElement($.a, {
                         slug: e
                     }), t)))
                 }, t
             }(o.Component)),
-            X = n("vwd7"),
-            Z = n("f8OD"),
-            ee = (n("D9gI"), function(e) {
+            Z = n("vwd7"),
+            ee = n("f8OD"),
+            te = (n("D9gI"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2066,7 +2046,7 @@ webpackJsonp([51], {
                             n = t.defaultClipInitialOffset,
                             i = t.duration,
                             a = t.videoURL,
-                            r = S(n, i);
+                            r = w(n, i);
                         this.props.playerConnection.sendMessage(Object(y.r)({
                             startOffset: r.startOffset,
                             endOffset: r.endOffset,
@@ -2082,9 +2062,9 @@ webpackJsonp([51], {
                         t = e && e.rawMedia,
                         n = this.getIsClipResolved(this.props),
                         i = null;
-                    i = this.props.isPostEdit ? o.createElement(z, {
+                    i = this.props.isPostEdit ? o.createElement(q, {
                         slug: this.props.slug
-                    }) : o.createElement(I, {
+                    }) : o.createElement(F, {
                         isClipResolved: n,
                         slug: this.props.slug,
                         broadcasterName: e && e.broadcaster && e.broadcaster.displayName || "",
@@ -2094,26 +2074,26 @@ webpackJsonp([51], {
                     var a = m("clips-edit-clip-wrapper", {
                         "clips-post-edit-clip-wrapper": this.props.isPostEdit
                     });
-                    return o.createElement(w._7, null, !this.props.isPostEdit && o.createElement(D, {
+                    return o.createElement(O._7, null, !this.props.isPostEdit && o.createElement(D, {
                         showMessage: n
-                    }), o.createElement(w._7, {
+                    }), o.createElement(O._7, {
                         className: a,
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(w._7, {
-                        display: w.Q.Flex
-                    }, o.createElement(w.j, {
-                        ratio: w.k.Aspect16x9
-                    }, o.createElement(w._7, {
-                        position: w._14.Absolute,
+                    }, o.createElement(O._7, {
+                        display: O.Q.Flex
+                    }, o.createElement(O.j, {
+                        ratio: O.k.Aspect16x9
+                    }, o.createElement(O._7, {
+                        position: O._14.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, o.createElement(X.b, {
+                    }, o.createElement(Z.b, {
                         slug: this.props.slug,
                         onLoaded: this.onLoaded,
-                        playerType: X.a.Editing
-                    }))), this.props.isPostEdit && o.createElement(Y, {
+                        playerType: Z.a.Editing
+                    }))), this.props.isPostEdit && o.createElement(X, {
                         slug: this.props.slug,
                         createdAt: e && e.createdAt
                     })), i))
@@ -2121,11 +2101,11 @@ webpackJsonp([51], {
                     e.data.clip && e.data.clip.isPublished && g.o.history.push("/" + e.slug)
                 }, t
             }(o.Component)),
-            te = Object(h.compose)(Object(y.t)({
+            ne = Object(h.compose)(Object(y.t)({
                 playerId: function(e) {
                     return e.slug
                 }
-            }), Object(v.a)(Z, {
+            }), Object(v.a)(ee, {
                 options: function(e) {
                     return {
                         pollInterval: 1e3,
@@ -2135,8 +2115,8 @@ webpackJsonp([51], {
                         }
                     }
                 }
-            }), Object(u.d)("EditClip"))(ee),
-            ne = function(e) {
+            }), Object(u.d)("EditClip"))(te),
+            ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.redirectToLoggedOutError = function(e) {
@@ -2156,7 +2136,7 @@ webpackJsonp([51], {
                                 slug: e
                             })
                         }
-                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, o.createElement(w._7, null, o.createElement(te, {
+                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, o.createElement(O._7, null, o.createElement(ne, {
                         slug: e,
                         isPostEdit: !!this.props.location.state.isPostEdit
                     }))) : o.createElement(s.b, {
@@ -2169,13 +2149,13 @@ webpackJsonp([51], {
                     location: c.PageviewLocation.ClipsEditing
                 })], t)
             }(o.Component);
-        var ie = Object(i.b)(function(e) {
+        var ae = Object(i.b)(function(e) {
             return {
                 shouldRedirectToError: Object(a.e)(e) && !Object(a.d)(e)
             }
-        })(ne);
+        })(ie);
         n.d(t, "ClipsCreate", function() {
-            return ie
+            return ae
         })
     },
     "8Wuk": function(e, t, n) {
@@ -2723,10 +2703,8 @@ webpackJsonp([51], {
                                     case 0:
                                         if (this.setState({
                                                 publishState: r.Sending
-                                            }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < g || e > v) return this.setState({
-                                            publishState: r.Error,
-                                            errorMessage: i.InvalidDuration
-                                        }), [2];
+                                            }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < g || e > v) return this.onError(i.InvalidDuration), [2];
+                                        if ("" === this.props.title.trim()) return this.onError(h.emptySubmission), [2];
                                         a.label = 1;
                                     case 1:
                                         return a.trys.push([1, 3, , 4]), [4, this.props.publishClip(Object(u.a)({
@@ -2757,7 +2735,7 @@ webpackJsonp([51], {
                 return o.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     this.state.publishState === r.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(k), e.isSubmitted && !this.props.isSubmitted && this.onPublish()
                 }, t.prototype.render = function() {
-                    var e = this.props.title.length < 1 || this.state.publishState === r.Error,
+                    var e = this.state.publishState === r.Error,
                         t = this.state.publishState === r.Sending;
                     return s.createElement(y._7, null, s.createElement(y.u, {
                         onClick: this.onPublish,
@@ -2992,7 +2970,7 @@ webpackJsonp([51], {
                             return Object(l.d)("Whoops. Something went wrong.", "ClipsTitleEdit")
                     }
                 }, t.prototype.errorMessageToError = function(e) {
-                    return e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === a.InvalidTitle.toLowerCase() ? h.channelViolation : h.unknown
+                    return e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === a.InvalidTitle.toLowerCase() ? h.channelViolation : e === h.emptySubmission ? h.emptySubmission : h.unknown
                 }, t
             }(s.Component),
             N = Object(d.a)(w, {
@@ -3000,7 +2978,7 @@ webpackJsonp([51], {
             })(C);
         n.d(t, !1, function() {
             return O
-        }), n.d(t, !1, function() {
+        }), n.d(t, "b", function() {
             return h
         }), n.d(t, !1, function() {
             return C
@@ -5044,6 +5022,70 @@ webpackJsonp([51], {
                 }, t
             }(a.Component)
     },
+    kLf9: function(e, t, n) {
+        "use strict";
+        n.d(t, "c", function() {
+            return i
+        }), n.d(t, "a", function() {
+            return a
+        }), n.d(t, "d", function() {
+            return o
+        }), n.d(t, "b", function() {
+            return p
+        });
+        var i, a, r, o, s = n("HW6M"),
+            l = (n.n(s), n("GiK3")),
+            d = (n.n(l), n("3HXW")),
+            c = n("Odds"),
+            u = n("CBaN");
+        n.n(u);
+        ! function(e) {
+            e[e.Left = 0] = "Left", e[e.Right = 1] = "Right"
+        }(i || (i = {})),
+        function(e) {
+            e[e.Right = 0] = "Right", e[e.Left = 1] = "Left"
+        }(a || (a = {})),
+        function(e) {
+            e[e.HandleLabel = 0] = "HandleLabel", e[e.Handle = 1] = "Handle"
+        }(r || (r = {})),
+        function(e) {
+            e[e.Small = 15] = "Small", e[e.Medium = 25] = "Medium"
+        }(o || (o = {}));
+        var p = function(e) {
+            var t = null;
+            e.label && (t = l.createElement(c._7, {
+                "data-test-selector": r.HandleLabel,
+                className: "draggable-slider-handle__label",
+                position: c._14.Absolute,
+                attachRight: e.label.attach === a.Right,
+                attachLeft: e.label.attach === a.Left
+            }, e.label.content));
+            var n = s("draggable-slider-handle", {
+                "draggable-slider-handle--left": e.handlePosition === i.Left,
+                "draggable-slider-handle--right": e.handlePosition === i.Right,
+                "draggable-slider-handle--blue": e.color === d.b.Blue,
+                "draggable-slider-handle--orange": e.color === d.b.Orange
+            });
+            return l.createElement(c._7, {
+                display: c.Q.Flex,
+                flexDirection: c.S.Column,
+                position: c._14.Relative
+            }, l.createElement(c._1, {
+                flexGrow: 0,
+                flexShrink: 0,
+                className: n,
+                display: c.Q.Flex,
+                fullHeight: !0
+            }, l.createElement("div", {
+                "data-test-selector": r.Handle,
+                onMouseDown: e.onMouseDown,
+                ref: e.onRef
+            }, l.createElement(c._20, {
+                asset: c._21.DragHandle,
+                width: e.size
+            }))), t)
+        }
+    },
     l21v: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -5930,4 +5972,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-7df0e52f29e72a2ba85a23b634adeab6.js.map
+//# sourceMappingURL=sites.clips.pages.create-97b706ea8146c2468996cfc11ee542dc.js.map

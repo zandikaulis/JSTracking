@@ -51,6 +51,15 @@ webpackJsonp([47], {
                     request_method: e.requestMethod
                 };
             i.n.track(a.SpadeEventType.BitsAdsRequest, n)
+        }, t.i = function(e) {
+            var t = {
+                leaderboard_size: e.leaderboardSize,
+                leaderboard_mode: e.leaderboardMode,
+                user_present_in_leaderboard: e.userPresentInLeaderboard,
+                user_id: e.userID,
+                channel_id: e.channelID
+            };
+            i.n.track(a.SpadeEventType.LeaderboardExpandClick, t)
         };
         var i = n("6sO2"),
             a = n("vH/s");
@@ -11032,7 +11041,8 @@ webpackJsonp([47], {
                 return i.createElement(s._7, {
                     display: s.Q.Flex,
                     padding: {
-                        top: 5
+                        top: 5,
+                        bottom: 3
                     },
                     flexGrow: 1,
                     flexDirection: s.S.Column,
@@ -11044,9 +11054,11 @@ webpackJsonp([47], {
                 }, i.createElement(o.a, {
                     className: "cheermote-help__tutorial-image",
                     sources: l
-                }), Object(a.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement("p", {
-                    className: "t-bits-card__contents-body t-bits-card__contents-body--narrow"
-                }, Object(a.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp")))
+                }), Object(a.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(s._7, {
+                    padding: {
+                        x: 3
+                    }
+                }, i.createElement(s.P, null, Object(a.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
             };
         n.d(t, "a", function() {
             return d
@@ -11139,4 +11151,4 @@ webpackJsonp([47], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-59596a350dc5af2f95c3e00be94d2200.js.map
+//# sourceMappingURL=pages.event-landing-baca10f3350338166b0398dd06dd6f67.js.map

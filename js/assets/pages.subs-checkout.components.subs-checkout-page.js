@@ -1,4 +1,4 @@
-webpackJsonp([37], {
+webpackJsonp([38], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -7916,12 +7916,14 @@ webpackJsonp([37], {
                     return t.onClick = function(e) {
                         Object(g.d)({
                             offerID: t.props.offerID,
-                            externalURL: t.props.externalURL
+                            externalURL: t.props.externalURL,
+                            index: t.props.index
                         }, t.props.offerType), t.props.claimCallback && t.props.offerType !== h.d.EXTERNAL_OFFER && t.props.claimCallback(e)
                     }, t.onHover = function() {
                         Object(g.e)({
                             offerID: t.props.offerID,
-                            externalURL: t.props.externalURL
+                            externalURL: t.props.externalURL,
+                            index: t.props.index
                         }, t.props.offerType)
                     }, t
                 }
@@ -7977,17 +7979,20 @@ webpackJsonp([37], {
                         var e = !n.state.showDescription;
                         Object(g.g)(e, {
                             offerID: n.props.offerID,
-                            externalURL: n.props.externalURL
+                            externalURL: n.props.externalURL,
+                            index: n.props.index
                         }), n.setState({
                             showDescription: e
                         })
                     }, n.onHover = function() {
                         n.state.showDescription ? Object(g.f)({
                             offerID: n.props.offerID,
-                            externalURL: n.props.externalURL
+                            externalURL: n.props.externalURL,
+                            index: n.props.index
                         }) : Object(g.h)({
                             offerID: n.props.offerID,
-                            externalURL: n.props.externalURL
+                            externalURL: n.props.externalURL,
+                            index: n.props.index
                         })
                     }, n.state = {
                         showDescription: !1
@@ -8040,12 +8045,14 @@ webpackJsonp([37], {
                     return t.onClick = function() {
                         Object(g.k)({
                             offerID: t.props.offerID,
-                            externalURL: t.getLink()
+                            externalURL: t.getLink(),
+                            index: t.props.index
                         })
                     }, t.onHover = function() {
                         Object(g.l)({
                             offerID: t.props.offerID,
-                            externalURL: t.getLink()
+                            externalURL: t.getLink(),
+                            index: t.props.index
                         })
                     }, t
                 }
@@ -8094,16 +8101,19 @@ webpackJsonp([37], {
                         claimCallback: this.props.claimCallback,
                         claiming: this.props.claiming,
                         orientation: this.props.orientation,
-                        externalURL: this.props.externalURL
+                        externalURL: this.props.externalURL,
+                        index: this.props.index
                     }) : a.createElement(_, {
                         externalURL: this.props.externalURL,
-                        offerID: this.props.offerID
+                        offerID: this.props.offerID,
+                        index: this.props.index
                     })
                 }, t.prototype.getClaimDescriptionSection = function() {
                     return this.props.offerType === h.d.EXTERNAL_OFFER ? null : a.createElement(b, {
                         description: this.props.offerDescription,
                         offerID: this.props.offerID,
                         externalURL: this.props.externalURL,
+                        index: this.props.index,
                         orientation: this.props.orientation
                     })
                 }, t = r.__decorate([Object(c.a)(S), Object(l.d)("PrimeInstructions")], t)
@@ -8449,6 +8459,7 @@ webpackJsonp([37], {
                             externalURL: n.externalURL,
                             claimCallback: t.claimOffer,
                             claiming: t.state.claiming,
+                            index: t.props.index,
                             orientation: t.props.orientation
                         })
                     }, t.getErrorType = function() {
@@ -8652,11 +8663,12 @@ webpackJsonp([37], {
                     if (!t.error && t.primeOffers && t.primeOffers.length) {
                         var n = this.getSortedOffers(),
                             i = n[n.length - 1];
-                        return n.map(function(t) {
+                        return n.map(function(t, n) {
                             return a.createElement(D, {
                                 key: t.id,
                                 offer: t,
                                 isLast: i.id === t.id,
+                                index: n,
                                 orientation: e.getOfferListOrientation()
                             })
                         })
@@ -13326,6 +13338,7 @@ webpackJsonp([37], {
                 client_time: Date.now(),
                 offer_id: e.offerID,
                 external_url: e.externalURL,
+                index: e.index,
                 element: n,
                 action: t,
                 user_agent: navigator.userAgent
@@ -13337,7 +13350,7 @@ webpackJsonp([37], {
             e.Hover = "hover", e.Click = "click"
         }(r || (r = {})),
         function(e) {
-            e.StartYourFreeTrial = "start_your_free_trail", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code"
+            e.StartYourFreeTrial = "start_your_free_trial", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code"
         }(a || (a = {})),
         function(e) {
             e.TopNav = "top-nav", e.CenterBanner = "center-banner", e.CenterFooter = "center-footer"
@@ -19870,4 +19883,4 @@ webpackJsonp([37], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-bca31096bec570ab4bee1602b4aef77f.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-749f5fd2e82489423f8a84ed828bec16.js.map

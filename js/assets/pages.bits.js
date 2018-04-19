@@ -668,7 +668,7 @@ webpackJsonp([57], {
             S = n("lfvs"),
             D = n("Hs3O"),
             T = (n("ukY1"), n("F1v6")),
-            P = function(e) {
+            x = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -788,13 +788,13 @@ webpackJsonp([57], {
                     }
                 }), Object(f.d)("BlueBarComponent")], t)
             }(s.Component),
-            I = n("dnng");
+            P = n("dnng");
         n.d(t, "c", function() {
             return C
         }), n.d(t, "a", function() {
-            return P
+            return x
         }), n.d(t, "b", function() {
-            return I.a
+            return P.a
         }), n.d(t, "d", function() {
             return y.e
         }), n.d(t, !1, function() {
@@ -1266,12 +1266,14 @@ webpackJsonp([57], {
                     return t.onClick = function(e) {
                         Object(h.d)({
                             offerID: t.props.offerID,
-                            externalURL: t.props.externalURL
+                            externalURL: t.props.externalURL,
+                            index: t.props.index
                         }, t.props.offerType), t.props.claimCallback && t.props.offerType !== v.d.EXTERNAL_OFFER && t.props.claimCallback(e)
                     }, t.onHover = function() {
                         Object(h.e)({
                             offerID: t.props.offerID,
-                            externalURL: t.props.externalURL
+                            externalURL: t.props.externalURL,
+                            index: t.props.index
                         }, t.props.offerType)
                     }, t
                 }
@@ -1327,17 +1329,20 @@ webpackJsonp([57], {
                         var e = !n.state.showDescription;
                         Object(h.g)(e, {
                             offerID: n.props.offerID,
-                            externalURL: n.props.externalURL
+                            externalURL: n.props.externalURL,
+                            index: n.props.index
                         }), n.setState({
                             showDescription: e
                         })
                     }, n.onHover = function() {
                         n.state.showDescription ? Object(h.f)({
                             offerID: n.props.offerID,
-                            externalURL: n.props.externalURL
+                            externalURL: n.props.externalURL,
+                            index: n.props.index
                         }) : Object(h.h)({
                             offerID: n.props.offerID,
-                            externalURL: n.props.externalURL
+                            externalURL: n.props.externalURL,
+                            index: n.props.index
                         })
                     }, n.state = {
                         showDescription: !1
@@ -1390,12 +1395,14 @@ webpackJsonp([57], {
                     return t.onClick = function() {
                         Object(h.k)({
                             offerID: t.props.offerID,
-                            externalURL: t.getLink()
+                            externalURL: t.getLink(),
+                            index: t.props.index
                         })
                     }, t.onHover = function() {
                         Object(h.l)({
                             offerID: t.props.offerID,
-                            externalURL: t.getLink()
+                            externalURL: t.getLink(),
+                            index: t.props.index
                         })
                     }, t
                 }
@@ -1444,16 +1451,19 @@ webpackJsonp([57], {
                         claimCallback: this.props.claimCallback,
                         claiming: this.props.claiming,
                         orientation: this.props.orientation,
-                        externalURL: this.props.externalURL
+                        externalURL: this.props.externalURL,
+                        index: this.props.index
                     }) : a.createElement(O, {
                         externalURL: this.props.externalURL,
-                        offerID: this.props.offerID
+                        offerID: this.props.offerID,
+                        index: this.props.index
                     })
                 }, t.prototype.getClaimDescriptionSection = function() {
                     return this.props.offerType === v.d.EXTERNAL_OFFER ? null : a.createElement(k, {
                         description: this.props.offerDescription,
                         offerID: this.props.offerID,
                         externalURL: this.props.externalURL,
+                        index: this.props.index,
                         orientation: this.props.orientation
                     })
                 }, t = i.__decorate([Object(l.a)(b), Object(c.d)("PrimeInstructions")], t)
@@ -1669,9 +1679,9 @@ webpackJsonp([57], {
                     })), Object(o.d)("Added To Your Twitch Account", "PrimeRedeem"))))
                 }, t = i.__decorate([Object(c.d)("PrimeRedeem")], t)
             }(a.Component)),
-            P = n("el3o"),
-            I = (n("v+rJ"), n("rM0q")),
-            x = function(e) {
+            x = n("el3o"),
+            P = (n("v+rJ"), n("rM0q")),
+            I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1799,6 +1809,7 @@ webpackJsonp([57], {
                             externalURL: n.externalURL,
                             claimCallback: t.claimOffer,
                             claiming: t.state.claiming,
+                            index: t.props.index,
                             orientation: t.props.orientation
                         })
                     }, t.getErrorType = function() {
@@ -1853,9 +1864,9 @@ webpackJsonp([57], {
                     return (e.self || {
                         hasEntitlement: !1
                     }).hasEntitlement
-                }, t = i.__decorate([Object(l.a)(I, {
+                }, t = i.__decorate([Object(l.a)(P, {
                     name: "data"
-                }), Object(l.a)(P, {
+                }), Object(l.a)(x, {
                     name: "claimPrimeOffer"
                 }), Object(c.d)("PrimeOffer")], t)
             }(a.Component),
@@ -2002,11 +2013,12 @@ webpackJsonp([57], {
                     if (!t.error && t.primeOffers && t.primeOffers.length) {
                         var n = this.getSortedOffers(),
                             r = n[n.length - 1];
-                        return n.map(function(t) {
-                            return a.createElement(x, {
+                        return n.map(function(t, n) {
+                            return a.createElement(I, {
                                 key: t.id,
                                 offer: t,
                                 isLast: r.id === t.id,
+                                index: n,
                                 orientation: e.getOfferListOrientation()
                             })
                         })
@@ -2236,6 +2248,7 @@ webpackJsonp([57], {
                 client_time: Date.now(),
                 offer_id: e.offerID,
                 external_url: e.externalURL,
+                index: e.index,
                 element: n,
                 action: t,
                 user_agent: navigator.userAgent
@@ -2247,7 +2260,7 @@ webpackJsonp([57], {
             e.Hover = "hover", e.Click = "click"
         }(i || (i = {})),
         function(e) {
-            e.StartYourFreeTrial = "start_your_free_trail", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code"
+            e.StartYourFreeTrial = "start_your_free_trial", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code"
         }(a || (a = {})),
         function(e) {
             e.TopNav = "top-nav", e.CenterBanner = "center-banner", e.CenterFooter = "center-footer"
@@ -3292,4 +3305,4 @@ webpackJsonp([57], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.bits-b10f703c8660867c6adabaec4164ec1b.js.map
+//# sourceMappingURL=pages.bits-347e284bc02137dc1fc923b80bfca7f8.js.map

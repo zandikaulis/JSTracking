@@ -11406,110 +11406,6 @@ webpackJsonp([46], {
             }(r.Component),
             g = Object(l.d)("TopClipsTimeFilter")(h)
     },
-    QG7y: function(e, t, n) {
-        "use strict";
-        n.d(t, "b", function() {
-            return r
-        }), n.d(t, "c", function() {
-            return o
-        }), n.d(t, "d", function() {
-            return s
-        }), n.d(t, "a", function() {
-            return l
-        }), n.d(t, "f", function() {
-            return d
-        }), n.d(t, "e", function() {
-            return c
-        }), n.d(t, "g", function() {
-            return u
-        }), t.i = function(e) {
-            u.emit(d, e)
-        }, t.h = function(e) {
-            u.emit(c, e)
-        };
-        var i = n("BzvE"),
-            a = (n.n(i), n("6sO2")),
-            r = {
-                directory: {
-                    banner: "dfp-directory-banner",
-                    rectangle: "dfp-directory-rectangle"
-                },
-                channel250: "google_companion_300x250",
-                anonFront: {
-                    rect: "Twitch_FPMedRect_holder",
-                    banner: "Twitch_FPopaBanner_holder",
-                    takeover: "Twitch_FPTakeoverSkinv2_holder",
-                    bottom: "Twitch_FP970Bottom_holder",
-                    sizzle: "sizzle_strip"
-                },
-                front: {
-                    leaderboard: "hpto_logged_in_leaderboard",
-                    rightTop: "hpto_logged_in_rcol_top",
-                    rightBottom: "hpto_logged_in_rcol_bottom"
-                }
-            },
-            o = {
-                directory: {
-                    banner: [
-                        [970, 66],
-                        [970, 250],
-                        [728, 90]
-                    ],
-                    rectangle: [
-                        [300, 250]
-                    ]
-                },
-                channel250: [300, 250],
-                anonFront: {
-                    rect: [
-                        [300, 250]
-                    ],
-                    banner: [
-                        [970, 418],
-                        [970, 67],
-                        [970, 250],
-                        [970, 150],
-                        [980, 250]
-                    ],
-                    takeover: [
-                        [1, 1]
-                    ],
-                    bottom: [
-                        [970, 66],
-                        [728, 90]
-                    ],
-                    sizzle: [
-                        [980, 250]
-                    ]
-                },
-                front: {
-                    leaderboard: [
-                        [970, 66],
-                        [728, 90]
-                    ],
-                    rightTop: [
-                        [300, 250]
-                    ],
-                    rightBottom: [
-                        [300, 600]
-                    ]
-                }
-            },
-            s = {
-                directory: "/" + a.a.dfpNetworkCode + "/twitch/directory",
-                channel: "/" + a.a.dfpNetworkCode + "/twitch/channels",
-                frontpage: "/" + a.a.dfpNetworkCode + "/twitch/homepage",
-                sizzle: "/" + a.a.dfpNetworkCode + "/twitch/sizzle_strip"
-            },
-            l = {
-                games: "games",
-                channel: "channel",
-                frontpage: "homepage"
-            },
-            d = "ads.slot-render-end",
-            c = "ads.slot-ready",
-            u = new i.EventEmitter
-    },
     QYm2: function(e, t) {
         var n = {
             kind: "Document",
@@ -18975,4 +18871,4 @@ webpackJsonp([46], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-c8627be07163829df736313cfc75f5a5.js.map
+//# sourceMappingURL=pages.directory-game-1837180421bb88e0648c35b6d314b99f.js.map

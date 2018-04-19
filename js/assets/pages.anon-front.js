@@ -29,8 +29,8 @@ webpackJsonp([55], {
                     return null
                 }
             },
-            C = n("Odds"),
-            L = (n("AHWf"), function(e) {
+            L = n("Odds"),
+            C = (n("AHWf"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -73,19 +73,19 @@ webpackJsonp([55], {
                                 "metadata-icon--csgo-skill": t.state.game === w.a.CounterStrike
                             }),
                             c = t.state.game === w.a.CounterStrike ? 50 : 30;
-                        return r.createElement(C._7, {
-                            display: C.Q.Flex,
-                            flexDirection: C.S.Column,
-                            alignItems: C.c.Center,
-                            justifyContent: C._6.Center,
+                        return r.createElement(L._7, {
+                            display: L.Q.Flex,
+                            flexDirection: L.S.Column,
+                            alignItems: L.c.Center,
+                            justifyContent: L._6.Center,
                             fullHeight: !0,
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(C._47, {
-                            direction: C._49.Left,
+                        }, r.createElement(L._47, {
+                            direction: L._49.Left,
                             label: e
-                        }, r.createElement(C._7, {
+                        }, r.createElement(L._7, {
                             className: l
                         }, r.createElement("div", {
                             style: {
@@ -194,7 +194,7 @@ webpackJsonp([55], {
                     return n ? this.renderIcon(n.display_name, this.state.gameSprite || "", n.image_width, n.image_height, n.sprite_x_offset, n.sprite_y_offset) : null
                 }, t
             }(r.Component)),
-            P = Object(i.f)(L);
+            P = Object(i.f)(C);
         var O = Object(p.b)(function(e) {
                 return {
                     leagueOfLegends: {
@@ -216,7 +216,7 @@ webpackJsonp([55], {
                     return n.renderVariation = function() {
                         return r.createElement("div", a.__assign({
                             className: "live-channel-card"
-                        }, Object(C._58)(n.props)), r.createElement(l.a, {
+                        }, Object(L._58)(n.props)), r.createElement(l.a, {
                             context: l.b.MixedGameAndChannelList,
                             title: n.props.title,
                             linkTo: n.props.linkTo,
@@ -245,12 +245,12 @@ webpackJsonp([55], {
                         }))
                     }, n.renderFallback = function() {
                         var e = null;
-                        !0 !== n.state.isPremiereExperimentActive && n.props.vodcast && (e = r.createElement(C._7, {
-                            display: C.Q.InlineBlock,
+                        !0 !== n.state.isPremiereExperimentActive && n.props.vodcast && (e = r.createElement(L._7, {
+                            display: L.Q.InlineBlock,
                             padding: {
                                 right: .5
                             }
-                        }, r.createElement(C._11, {
+                        }, r.createElement(L._11, {
                             label: Object(o.d)("Vodcast", "LiveChannelCard")
                         })));
                         var t = Object(o.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
@@ -263,49 +263,49 @@ webpackJsonp([55], {
                         }, "Live Channel Card");
                         return r.createElement("div", a.__assign({
                             className: "live-channel-card"
-                        }, Object(C._58)(n.props)), r.createElement(C.B, {
+                        }, Object(L._58)(n.props)), r.createElement(L.B, {
                             key: n.props.title
-                        }, r.createElement(C._7, {
+                        }, r.createElement(L._7, {
                             fullWidth: !0
-                        }, r.createElement(C.j, {
+                        }, r.createElement(L.j, {
                             overflow: !0
                         }, r.createElement("div", null, r.createElement(i.a, {
                             to: n.props.linkTo,
                             title: n.props.hideTooltip ? void 0 : n.props.title,
                             "data-a-target": "live-channel-card-thumbnail-link",
                             "data-test-selector": T
-                        }, n.props.children ? n.props.children : r.createElement(C.D, {
+                        }, n.props.children ? n.props.children : r.createElement(L.D, {
                             alt: n.props.imageAlt,
                             src: n.props.imageSrc,
-                            aspect: C.k.Aspect16x9
-                        }), n.renderContentType()), n.renderGameBoxArt()))), r.createElement(C.C, null, r.createElement(C._7, {
-                            display: C.Q.Flex,
-                            flexWrap: C.T.NoWrap
-                        }, r.createElement(C._7, {
+                            aspect: L.k.Aspect16x9
+                        }), n.renderContentType()), n.renderGameBoxArt()))), r.createElement(L.C, null, r.createElement(L._7, {
+                            display: L.Q.Flex,
+                            flexWrap: L.T.NoWrap
+                        }, r.createElement(L._7, {
                             flexGrow: 1,
                             ellipsis: !0
                         }, r.createElement(i.a, {
                             to: n.props.linkTo,
                             className: "live-channel-card__channel",
                             "data-a-target": "live-channel-card-title-link"
-                        }, r.createElement(C._1, {
+                        }, r.createElement(L._1, {
                             margin: {
                                 top: .5
                             }
-                        }, r.createElement(C.P, {
-                            type: C._44.H3,
-                            fontSize: C.U.Size5,
-                            lineHeight: C._8.Body,
+                        }, r.createElement(L.P, {
+                            type: L._44.H3,
+                            fontSize: L.U.Size5,
+                            lineHeight: L._8.Body,
                             ellipsis: !0,
                             className: "live-channel-card__title"
-                        }, n.props.title))), r.createElement(C._7, {
+                        }, n.props.title))), r.createElement(L._7, {
                             className: "live-channel-card__meta",
-                            display: C.Q.Flex,
-                            flexWrap: C.T.NoWrap
-                        }, e, r.createElement(C.P, {
-                            type: C._44.Span,
+                            display: L.Q.Flex,
+                            flexWrap: L.T.NoWrap
+                        }, e, r.createElement(L.P, {
+                            type: L._44.Span,
                             ellipsis: !0
-                        }, t))), r.createElement(C._7, {
+                        }, t))), r.createElement(L._7, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, n.renderStreamMetadata())))))
@@ -346,23 +346,23 @@ webpackJsonp([55], {
                         to: e,
                         title: t,
                         "data-a-target": "live-channel-card-game-link"
-                    }, r.createElement(C._30, {
+                    }, r.createElement(L._30, {
                         className: "live-channel-card__boxart",
-                        position: C._14.Absolute,
+                        position: L._14.Absolute,
                         attachRight: !0,
                         attachBottom: !0
-                    }, r.createElement(C._47, {
-                        display: C.Q.Block,
-                        direction: C._49.Bottom,
+                    }, r.createElement(L._47, {
+                        display: L.Q.Block,
+                        direction: L._49.Bottom,
                         label: t
-                    }, r.createElement(C.D, {
+                    }, r.createElement(L.D, {
                         src: n,
                         alt: t,
-                        aspect: C.k.BoxArt
+                        aspect: L.k.BoxArt
                     })))) : null
                 }, t.prototype.renderContentType = function() {
-                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? r.createElement(C._7, {
-                        position: C._14.Absolute,
+                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? r.createElement(L._7, {
+                        position: L._14.Absolute,
                         attachLeft: !0,
                         attachTop: !0,
                         padding: .5
@@ -1056,8 +1056,8 @@ webpackJsonp([55], {
             w = n("2aoH"),
             E = n("8PKe"),
             S = n("F8kA"),
-            C = n("7vx8"),
-            L = n("NY9D"),
+            L = n("7vx8"),
+            C = n("NY9D"),
             P = n("dXGo"),
             O = (n("APTF"), function(e) {
                 function t() {
@@ -1099,7 +1099,7 @@ webpackJsonp([55], {
                                         bottom: t < 6 ? 4 : 0
                                     }
                                 }, i.createElement(u.t, {
-                                    linkTo: Object(L.c)(n.name),
+                                    linkTo: Object(C.c)(n.name),
                                     title: n.name,
                                     alt: n.name + " cover image",
                                     src: n.boxArtURL,
@@ -1189,7 +1189,7 @@ webpackJsonp([55], {
                     }, e, i.createElement(u.X, null, this.getItems()), t)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = r.__decorate([Object(C.a)(P), Object(d.d)("FeaturedGames")], t)
+                }, t = r.__decorate([Object(L.a)(P), Object(d.d)("FeaturedGames")], t)
             }(i.Component)),
             T = n("+GT7"),
             x = n("SZoP");
@@ -1231,7 +1231,7 @@ webpackJsonp([55], {
                                     content: f.PageviewContent.Live,
                                     content_index: n
                                 },
-                                l = a && a.game ? Object(L.c)(a.game.name) : "";
+                                l = a && a.game ? Object(C.c)(a.game.name) : "";
                             return i.createElement(u._7, {
                                 className: "anon-top-channels",
                                 key: a.broadcaster.id,
@@ -1374,7 +1374,7 @@ webpackJsonp([55], {
                         default:
                             return ""
                     }
-                }, t = r.__decorate([Object(C.a)(N, {
+                }, t = r.__decorate([Object(L.a)(N, {
                     options: function(e) {
                         var t = "";
                         switch (e.type) {
@@ -2538,110 +2538,6 @@ webpackJsonp([55], {
         var d = 0,
             u = 350
     },
-    QG7y: function(e, t, n) {
-        "use strict";
-        n.d(t, "b", function() {
-            return i
-        }), n.d(t, "c", function() {
-            return o
-        }), n.d(t, "d", function() {
-            return s
-        }), n.d(t, "a", function() {
-            return l
-        }), n.d(t, "f", function() {
-            return c
-        }), n.d(t, "e", function() {
-            return d
-        }), n.d(t, "g", function() {
-            return u
-        }), t.i = function(e) {
-            u.emit(c, e)
-        }, t.h = function(e) {
-            u.emit(d, e)
-        };
-        var a = n("BzvE"),
-            r = (n.n(a), n("6sO2")),
-            i = {
-                directory: {
-                    banner: "dfp-directory-banner",
-                    rectangle: "dfp-directory-rectangle"
-                },
-                channel250: "google_companion_300x250",
-                anonFront: {
-                    rect: "Twitch_FPMedRect_holder",
-                    banner: "Twitch_FPopaBanner_holder",
-                    takeover: "Twitch_FPTakeoverSkinv2_holder",
-                    bottom: "Twitch_FP970Bottom_holder",
-                    sizzle: "sizzle_strip"
-                },
-                front: {
-                    leaderboard: "hpto_logged_in_leaderboard",
-                    rightTop: "hpto_logged_in_rcol_top",
-                    rightBottom: "hpto_logged_in_rcol_bottom"
-                }
-            },
-            o = {
-                directory: {
-                    banner: [
-                        [970, 66],
-                        [970, 250],
-                        [728, 90]
-                    ],
-                    rectangle: [
-                        [300, 250]
-                    ]
-                },
-                channel250: [300, 250],
-                anonFront: {
-                    rect: [
-                        [300, 250]
-                    ],
-                    banner: [
-                        [970, 418],
-                        [970, 67],
-                        [970, 250],
-                        [970, 150],
-                        [980, 250]
-                    ],
-                    takeover: [
-                        [1, 1]
-                    ],
-                    bottom: [
-                        [970, 66],
-                        [728, 90]
-                    ],
-                    sizzle: [
-                        [980, 250]
-                    ]
-                },
-                front: {
-                    leaderboard: [
-                        [970, 66],
-                        [728, 90]
-                    ],
-                    rightTop: [
-                        [300, 250]
-                    ],
-                    rightBottom: [
-                        [300, 600]
-                    ]
-                }
-            },
-            s = {
-                directory: "/" + r.a.dfpNetworkCode + "/twitch/directory",
-                channel: "/" + r.a.dfpNetworkCode + "/twitch/channels",
-                frontpage: "/" + r.a.dfpNetworkCode + "/twitch/homepage",
-                sizzle: "/" + r.a.dfpNetworkCode + "/twitch/sizzle_strip"
-            },
-            l = {
-                games: "games",
-                channel: "channel",
-                frontpage: "homepage"
-            },
-            c = "ads.slot-render-end",
-            d = "ads.slot-ready",
-            u = new a.EventEmitter
-    },
     TUg1: function(e, t) {},
     Vr3l: function(e, t, n) {
         e.exports = n.p + "assets/overwatch-chars-062a1df5ff2aaa76eb8e129940ef964a.png"
@@ -3527,7 +3423,7 @@ webpackJsonp([55], {
                 content: "carousel",
                 medium: "twitch_home"
             },
-            C = function(e) {
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -3706,7 +3602,7 @@ webpackJsonp([55], {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t
             }(d.Component),
-            L = n("hdYS"),
+            C = n("hdYS"),
             P = (n("0v28"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3844,11 +3740,11 @@ webpackJsonp([55], {
                 return r.__extends(t, e), t.prototype.render = function() {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t.prototype.renderFollowButton = function() {
-                    return this.props.firstPageLoaded ? d.createElement(L.a, {
+                    return this.props.firstPageLoaded ? d.createElement(C.a, {
                         "data-a-target": "carousel-follow-button",
                         channelLogin: this.props.item.broadcaster.login,
-                        followUIType: L.b.IconAndText,
-                        unfollowUIType: L.b.IconOnly,
+                        followUIType: C.b.IconAndText,
+                        unfollowUIType: C.b.IconOnly,
                         showLoadingPlaceholder: !0
                     }) : d.createElement(h._13, {
                         width: 70,
@@ -3950,7 +3846,7 @@ webpackJsonp([55], {
                             case m.c.Vertical:
                                 return d.createElement(O, r.__assign({}, e));
                             default:
-                                return d.createElement(C, r.__assign({}, e))
+                                return d.createElement(L, r.__assign({}, e))
                         }
                     }, t.registerCarousel = function(e) {
                         t.props.registerCarousel && t.props.registerCarousel(e)
@@ -4420,13 +4316,13 @@ webpackJsonp([55], {
                             case 3:
                                 return [2, a.sent()];
                             case 4:
-                                return c && n === l.a.Overwatch ? [4, C(c)] : [3, 6];
+                                return c && n === l.a.Overwatch ? [4, L(c)] : [3, 6];
                             case 5:
                                 return [2, a.sent()];
                             case 6:
                                 if (s && n === l.a.LeagueOfLegends && (d = i.o.store.getState()).directory)
                                     if (d.directory.leagueOfLegends.championsMap) {
-                                        if (d.directory.leagueOfLegends.championsMap) return [2, L(s, d.directory.leagueOfLegends.championsMap, d.directory.leagueOfLegends.version)]
+                                        if (d.directory.leagueOfLegends.championsMap) return [2, C(s, d.directory.leagueOfLegends.championsMap, d.directory.leagueOfLegends.version)]
                                     } else i.o.store.dispatch(Object(f.a)());
                                 a.label = 7;
                             case 7:
@@ -4491,7 +4387,7 @@ webpackJsonp([55], {
                     })
                 })
             },
-            C = function(e) {
+            L = function(e) {
                 return a.__awaiter(k, void 0, void 0, function() {
                     var t, n, r, i, o, s, l, c, d, u, p, m;
                     return a.__generator(this, function(a) {
@@ -4523,7 +4419,7 @@ webpackJsonp([55], {
                     })
                 })
             },
-            L = function(e, t, n) {
+            C = function(e, t, n) {
                 if (!t || !e) return null;
                 var a = t[e],
                     r = "https://ddragon.leagueoflegends.com/cdn/" + n + "/img/sprite/" + a.image.sprite;
@@ -4856,8 +4752,8 @@ webpackJsonp([55], {
                     className: "preview-card-titles__subtitle-wrapper"
                 }, t))
             }),
-            z = n("IOwa"),
-            V = n("mi6k");
+            V = n("IOwa"),
+            z = n("mi6k");
 
         function G(e) {
             return void 0 !== e.streamType
@@ -4867,12 +4763,12 @@ webpackJsonp([55], {
             return void 0 !== e.watchedProgressPercent
         }
 
-        function B(e) {
+        function H(e) {
             return void 0 !== e.clipCreatedByChannelLogin
         }! function(e) {
             e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
         }(O || (O = {}));
-        var H = function(e) {
+        var B = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -4907,7 +4803,7 @@ webpackJsonp([55], {
                 }, this.renderTitles())), this.renderAppendages())
             }, t.prototype.renderOverlay = function() {
                 return G(this.props) ? r.createElement(N, {
-                    topLeft: r.createElement(z.a, {
+                    topLeft: r.createElement(V.a, {
                         type: this.props.streamType,
                         hosting: !!this.props.hostedByChannelLogin
                     }),
@@ -4920,7 +4816,7 @@ webpackJsonp([55], {
                     bottomRight: void 0
                 }) : M(this.props) ? r.createElement(N, {
                     topLeft: r.createElement(F, {
-                        value: Object(V.a)(this.props.durationInSeconds),
+                        value: Object(z.a)(this.props.durationInSeconds),
                         icon: c._21.GlyphArrRight,
                         withBackground: !0
                     }),
@@ -4932,9 +4828,9 @@ webpackJsonp([55], {
                         value: Object(i.c)(new Date(this.props.datePublished), "medium")
                     }),
                     progressBarPercent: this.props.watchedProgressPercent
-                }) : B(this.props) ? r.createElement(N, {
+                }) : H(this.props) ? r.createElement(N, {
                     topLeft: r.createElement(F, {
-                        value: Object(V.a)(this.props.durationInSeconds),
+                        value: Object(z.a)(this.props.durationInSeconds),
                         icon: c._21.Clip,
                         withBackground: !0
                     }),
@@ -4947,7 +4843,7 @@ webpackJsonp([55], {
                     })
                 }) : void 0
             }, t.prototype.getViewCountLabel = function() {
-                return M(this.props) || B(this.props) ? Object(i.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                return M(this.props) || H(this.props) ? Object(i.d)("{viewerCount, plural, one {# view} other {# views}}", {
                     viewerCount: this.props.viewCount
                 }, "VideoPreviewCard") : ""
             }, t.prototype.renderIconicImage = function() {
@@ -4965,7 +4861,7 @@ webpackJsonp([55], {
                     text: this.props.channelLogin,
                     linkTo: this.props.channelLoginLinkTo
                 }];
-                return B(this.props) ? e.push({
+                return H(this.props) ? e.push({
                     text: Object(i.d)("Clipped by {userName}", {
                         userName: this.props.clipCreatedByChannelLogin
                     }, "VideoPreviewCard"),
@@ -4988,7 +4884,7 @@ webpackJsonp([55], {
         n.d(t, "b", function() {
             return O
         }), n.d(t, "a", function() {
-            return H
+            return B
         })
     },
     vKYI: function(e, t, n) {
@@ -5085,4 +4981,4 @@ webpackJsonp([55], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-967607208728fe138939fd9872060bb2.js.map
+//# sourceMappingURL=pages.anon-front-626411bd6110c5eceb0c904618d3af76.js.map
