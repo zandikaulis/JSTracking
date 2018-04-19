@@ -699,13 +699,13 @@ window.__twilightSettings = {
         },
         "d1fe9a0a-e9f2-4450-ac57-4ff2eefa0dcf": {
             "name": "twilight_get_bits_top_nav",
-            "v": 3506,
+            "v": 3550,
             "t": 1,
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "treatment"
             }, {
-                "weight": 95,
+                "weight": 100,
                 "value": "control"
             }]
         },
