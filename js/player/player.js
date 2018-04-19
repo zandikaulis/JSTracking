@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b9bf69ed7f014d1d7541.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e996a535d22196435928.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -5245,7 +5245,7 @@
 
         function r(e) {
             return {
-                type: _,
+                type: w,
                 absAvailable: e
             }
         }
@@ -5255,29 +5255,33 @@
                 var n = t(),
                     r = n.quality;
                 e({
-                    type: v,
-                    quality: h.a.get("quality", r.selected),
-                    bitrate: h.a.get("quality-bitrate", r.bitrate)
+                    type: g,
+                    quality: m.a.get("quality", r.selected),
+                    bitrate: m.a.get("quality-bitrate", r.bitrate)
                 })
             }
         }
 
         function o(e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P;
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : C;
             return function(n, r) {
                 var i = r(),
                     o = i.analyticsTracker,
                     a = i.manifestInfo,
-                    s = i.quality;
-                if (-1 !== i.stream.restrictedBitrates.indexOf(e)) return void n({
+                    s = i.quality,
+                    u = i.stream,
+                    c = i.env;
+                if (-1 !== u.restrictedBitrates.indexOf(e)) return void n({
                     type: p.l
                 });
                 o.trackEvent("quality_change_request", {
                     prev_quality: s.current,
                     new_quality: e,
                     serving_id: a.serving_id
-                }), e !== E && s.current !== e && n(Object(p.E)(!0)), n({
-                    type: v,
+                });
+                var l = f()(h.c, c.playerType) ? s.selected : s.current;
+                e !== S && l !== e && n(Object(p.E)(!0)), n({
+                    type: g,
                     quality: e,
                     bitrate: t
                 })
@@ -5286,21 +5290,21 @@
 
         function a(e) {
             return function() {
-                h.a.set("quality", e.group), h.a.set("quality-bitrate", e.bandwidth)
+                m.a.set("quality", e.group), m.a.set("quality-bitrate", e.bandwidth)
             }
         }
 
         function s(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             return {
-                type: g,
+                type: b,
                 quality: e,
                 isAuto: t
             }
         }
 
         function u(e, t) {
-            return y()(t, function(t) {
+            return v()(t, function(t) {
                 return t.group + "2" === e || e + "2" === t.group
             })
         }
@@ -5315,25 +5319,25 @@
                     });
                 if (a.length > 0 && !a.some(function(e) {
                         return e.group === i.selected
-                    }) && i.selected !== E) {
+                    }) && i.selected !== S) {
                     var s = a.sort(function(e, t) {
                             return t.bandwidth - e.bandwidth
                         }),
                         c = u(i.selected, s),
-                        l = y()(s, function(e) {
+                        l = v()(s, function(e) {
                             return e.bandwidth <= i.bitrate
                         }),
                         d = c || l || s[s.length - 1],
                         p = d.group,
                         h = d.bandwidth;
                     t({
-                        type: v,
+                        type: g,
                         quality: p,
                         bitrate: h
                     })
                 }
                 t({
-                    type: b,
+                    type: _,
                     qualities: e
                 })
             }
@@ -5345,58 +5349,59 @@
                     name: e.quality + "p",
                     group: e.quality + "p" + e.frame_rate,
                     bitrate: "",
-                    resolution: C[e.quality],
+                    resolution: T[e.quality],
                     source: e.source
                 }
             });
             return {
-                type: b,
+                type: _,
                 qualities: t
             }
         }
         n.d(t, "a", function() {
-            return v
-        }), n.d(t, "c", function() {
             return g
-        }), n.d(t, "d", function() {
+        }), n.d(t, "c", function() {
             return b
-        }), n.d(t, "b", function() {
+        }), n.d(t, "d", function() {
             return _
-        }), n.d(t, "e", function() {
+        }), n.d(t, "b", function() {
             return w
-        }), n.d(t, "h", function() {
+        }), n.d(t, "e", function() {
             return k
-        }), n.d(t, "i", function() {
+        }), n.d(t, "h", function() {
             return E
-        }), n.d(t, "j", function() {
+        }), n.d(t, "i", function() {
             return S
-        }), n.d(t, "g", function() {
+        }), n.d(t, "j", function() {
             return O
-        }), n.d(t, "f", function() {
+        }), n.d(t, "g", function() {
             return P
+        }), n.d(t, "f", function() {
+            return C
         }), t.m = r, t.k = i, t.l = o, t.p = a, t.o = s, t.q = c, t.n = l;
         var d = n(7),
             f = n.n(d),
             p = n(19),
-            h = n(31),
-            m = n(48),
-            y = n.n(m),
-            v = "select quality",
-            g = "set current quality",
-            b = "set qualities",
-            _ = "abs is availabile",
-            w = "source",
-            k = "auto-quality-forced-v2",
-            E = "auto",
-            S = Object.freeze({
+            h = n(6),
+            m = n(31),
+            y = n(48),
+            v = n.n(y),
+            g = "select quality",
+            b = "set current quality",
+            _ = "set qualities",
+            w = "abs is availabile",
+            k = "source",
+            E = "auto-quality-forced-v2",
+            S = "auto",
+            O = Object.freeze({
                 bitrate: 0,
                 resolution: "0x0",
                 group: "auto",
                 name: "Auto"
             }),
-            O = "medium",
-            P = 992e3,
-            C = Object.freeze({
+            P = "medium",
+            C = 992e3,
+            T = Object.freeze({
                 1080: "1920x1080",
                 720: "1280x720",
                 480: "854x480",
@@ -25230,7 +25235,9 @@
                     }
                 }, {
                     key: "getQualities",
-                    value: function() {}
+                    value: function() {
+                        return this._store.getState().quality.available
+                    }
                 }, {
                     key: "absAvailable",
                     value: function() {
@@ -31455,7 +31462,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.19-191149+c64d6145a5820090ea68801b45b284141859b144",
+                    app_version: "2018.04.19-222250+57e7a00dc4c3da21789ee466fc7f2cd40af70741",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
