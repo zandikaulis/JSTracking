@@ -536,18 +536,6 @@ window.__twilightSettings = {
                 "value": "variation"
             }]
         },
-        "67e5d32b-fe51-4b13-9cee-6d3e1cc1ceb3": {
-            "name": "twilight_watch_bastion",
-            "v": 3509,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "off"
-            }, {
-                "weight": 0,
-                "value": "on"
-            }]
-        },
         "6f822381-f41d-445e-bf88-36fb9095a7b5": {
             "name": "twilight_v_ember",
             "v": 3139,
