@@ -89,7 +89,7 @@ window.__twilightSettings = {
     "twilight_video_manager_public": false,
     "twilight_video_manager_staff": true,
     "twitch_prime_fortnite": false,
-    "twitch_prime_fortnite_link_url": "https://www.epicgames.com",
+    "twitch_prime_fortnite_link_url": "https://www.epicgames.com/fortnite/twitch-prime-pack2",
     "twitch_prime_fortnite_signup_url": "https://twitch.amazon.com/prime/country",
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
     "update_manager_enabled": false,
