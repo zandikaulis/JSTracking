@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9bb19384c12e27c7716b.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b9bf69ed7f014d1d7541.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -25082,7 +25082,7 @@
                 }, {
                     key: "_initVideoTag",
                     value: function() {
-                        this._video = document.createElement("video"), this._video.autoplay = this._options.autoplay, this._video.preload = "auto", this._video.type = u.mp4
+                        this._video = document.createElement("video"), this._video.autoplay = this._options.autoplay, this._video.preload = "auto", this._video.type = u.mp4, this._options.playsinline && (this._video.setAttribute("webkit-playsinline", ""), this._video.setAttribute("playsinline", ""))
                     }
                 }, {
                     key: "attach",
@@ -31455,7 +31455,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.19-175805+d9d58cebd887be226871b347fbff6544cdd52726",
+                    app_version: "2018.04.19-191149+c64d6145a5820090ea68801b45b284141859b144",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,

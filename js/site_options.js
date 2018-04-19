@@ -2350,13 +2350,14 @@ window.SiteOptions = {
         },
         "5fd568be-2073-4f99-84d5-565e8b2a3343": {
             "name": "TWILIGHT_AAX_DISPLAY",
-            "v": 3416,
+            "v": 3552,
             "t": 1,
+            "s": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "yes"
             }, {
-                "weight": 1,
+                "weight": 9,
                 "value": "no"
             }]
         },
@@ -2581,11 +2582,11 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 3501,
+            "v": 3551,
             "t": 1,
             "s": 2,
             "groups": [{
-                "weight": 40,
+                "weight": 30,
                 "value": "control"
             }, {
                 "weight": 10,
@@ -2605,6 +2606,9 @@ window.SiteOptions = {
             }, {
                 "weight": 10,
                 "value": "lantern_model"
+            }, {
+                "weight": 10,
+                "value": "model_v3"
             }]
         },
         "6a587617-eb7c-475e-8bc3-991d4f38fc87": {

@@ -501,13 +501,14 @@ window.__twilightSettings = {
         },
         "5fd568be-2073-4f99-84d5-565e8b2a3343": {
             "name": "TWILIGHT_AAX_DISPLAY",
-            "v": 3416,
+            "v": 3552,
             "t": 1,
+            "s": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "yes"
             }, {
-                "weight": 1,
+                "weight": 9,
                 "value": "no"
             }]
         },
