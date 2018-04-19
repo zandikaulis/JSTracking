@@ -15221,7 +15221,6 @@ googletag.cmd = googletag.cmd || [],
                 CUSTOM_LIVE_UP: "adac3887-6bd4-4fea-bfda-8e019f894dbe",
                 BROADCAST_SOFTWARE: "4994d68b-77d3-41f3-bebb-64b96c753b43",
                 EXTENSIONS_MAINTENANCE: "e51aab46-7708-49cb-a7a3-57e2c95c7570",
-                TWILIGHT_ALL_THE_STATS: "4f952587-515d-44ac-b0cc-86769f543c72",
                 TWILIGHT_DASHBOARD_SETTINGS_LAUNCH: "60936fd6-ef0a-49f1-9421-712f2ba02513"
             },
             r = {
@@ -15293,7 +15292,6 @@ googletag.cmd = googletag.cmd || [],
                 "adac3887-6bd4-4fea-bfda-8e019f894dbe": "no",
                 "4994d68b-77d3-41f3-bebb-64b96c753b43": "control",
                 "e51aab46-7708-49cb-a7a3-57e2c95c7570": "no",
-                "4f952587-515d-44ac-b0cc-86769f543c72": "no",
                 "60936fd6-ef0a-49f1-9421-712f2ba02513": "no"
             },
             o = {},
@@ -15318,8 +15316,7 @@ googletag.cmd = googletag.cmd || [],
                 TWILIGHT_MERCH_STORE_LAUNCH: "on",
                 JANEWAY: "yes",
                 CUSTOM_LIVE_UP: "yes",
-                PREMIERE_FLOW: "yes",
-                TWILIGHT_ALL_THE_STATS: "yes"
+                PREMIERE_FLOW: "yes"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
