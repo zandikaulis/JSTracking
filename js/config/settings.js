@@ -652,6 +652,18 @@ window.__twilightSettings = {
                 "value": "last"
             }]
         },
+        "afcda2ba-dd12-4d9a-9428-df6a71104db8": {
+            "name": "twilight_new_homepage",
+            "v": 3563,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "experiment"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "b24e5cd6-c649-4cab-b768-03ad6cf488be": {
             "name": "TWILIGHT_EXTENDED_PRESENCE",
             "v": 3361,
