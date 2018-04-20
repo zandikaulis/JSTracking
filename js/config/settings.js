@@ -60,7 +60,7 @@ window.__twilightSettings = {
     "prime_free_game_offerids": ["24b121ff-c28c-3ec7-1aa7-6bf48a1369ce", "eeb0140c-4e6e-c4f7-b996-2514b73bad16", "16b0a758-b6f5-5b28-9fd2-d783bb56d479", "16ae8ce0-a549-1636-392b-de7974041046", "e4b0b372-e2df-1d53-c62a-9973e88a5283"],
     "prime_landing_page_base_url": "https://twitch.amazon.com/prime",
     "prime_promo_content_base_url": "https://twitch.amazon.com/prime",
-    "prime_subsite_up": false,
+    "prime_subsite_up": true,
     "quantcast_account": "p-16uNVwiyGoWyg",
     "quantcast_labels": "gaming",
     "quantcast_url": "https://edge.quantserve.com/quant.js",
