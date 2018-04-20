@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4e3d69a9ec550ae592dd.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".77b2d926ad2a5eaa6677.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -1569,7 +1569,7 @@
             o = n(49),
             a = n(84),
             s = n(37),
-            u = n(28),
+            u = n(26),
             c = n(170),
             l = n(172),
             d = n(7),
@@ -2730,7 +2730,7 @@
             E = n(89),
             S = n(66),
             O = n(103),
-            P = n(26),
+            P = n(27),
             C = n(51),
             T = n(67),
             x = n(9),
@@ -3318,7 +3318,7 @@
             return Z
         }), t.w = r, t.u = i, t.I = o, t.J = a, t.D = s, t.y = u, t.K = c, t.E = l, t.H = d, t.G = f, t.v = p, t.x = h, t.F = m, t.A = y, t.z = v, t.C = g, t.B = b;
         var S = n(31),
-            O = n(28),
+            O = n(26),
             P = n(38),
             C = n(6),
             T = n(90),
@@ -3655,6 +3655,69 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
+        n.d(t, "i", function() {
+            return r
+        }), n.d(t, "f", function() {
+            return i
+        }), n.d(t, "h", function() {
+            return o
+        }), n.d(t, "b", function() {
+            return a
+        }), n.d(t, "c", function() {
+            return s
+        }), n.d(t, "m", function() {
+            return u
+        }), n.d(t, "t", function() {
+            return c
+        }), n.d(t, "p", function() {
+            return l
+        }), n.d(t, "o", function() {
+            return d
+        }), n.d(t, "e", function() {
+            return f
+        }), n.d(t, "d", function() {
+            return p
+        }), n.d(t, "r", function() {
+            return h
+        }), n.d(t, "k", function() {
+            return m
+        }), n.d(t, "j", function() {
+            return y
+        }), n.d(t, "s", function() {
+            return v
+        }), n.d(t, "n", function() {
+            return g
+        }), n.d(t, "g", function() {
+            return b
+        }), n.d(t, "q", function() {
+            return _
+        }), n.d(t, "a", function() {
+            return w
+        }), n.d(t, "l", function() {
+            return k
+        });
+        var r = "loadstart",
+            i = "error",
+            o = "loadedmetadata",
+            a = "canplay",
+            s = "canplaythrough",
+            u = "playing",
+            c = "waiting",
+            l = "seeking",
+            d = "seeked",
+            f = "ended",
+            p = "durationchange",
+            h = "timeupdate",
+            m = "play",
+            y = "pause",
+            v = "volumechange",
+            g = "ratechange",
+            b = "loadeddata",
+            _ = "stalled",
+            w = "abort",
+            k = "playbackblocked"
+    }, function(e, t, n) {
+        "use strict";
 
         function r(e) {
             return {
@@ -3722,69 +3785,6 @@
             c = "toggle fullscreen",
             l = "set theatre mode",
             d = "toggle theatre mode"
-    }, function(e, t, n) {
-        "use strict";
-        n.d(t, "i", function() {
-            return r
-        }), n.d(t, "f", function() {
-            return i
-        }), n.d(t, "h", function() {
-            return o
-        }), n.d(t, "b", function() {
-            return a
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "m", function() {
-            return u
-        }), n.d(t, "t", function() {
-            return c
-        }), n.d(t, "p", function() {
-            return l
-        }), n.d(t, "o", function() {
-            return d
-        }), n.d(t, "e", function() {
-            return f
-        }), n.d(t, "d", function() {
-            return p
-        }), n.d(t, "r", function() {
-            return h
-        }), n.d(t, "k", function() {
-            return m
-        }), n.d(t, "j", function() {
-            return y
-        }), n.d(t, "s", function() {
-            return v
-        }), n.d(t, "n", function() {
-            return g
-        }), n.d(t, "g", function() {
-            return b
-        }), n.d(t, "q", function() {
-            return _
-        }), n.d(t, "a", function() {
-            return w
-        }), n.d(t, "l", function() {
-            return k
-        });
-        var r = "loadstart",
-            i = "error",
-            o = "loadedmetadata",
-            a = "canplay",
-            s = "canplaythrough",
-            u = "playing",
-            c = "waiting",
-            l = "seeking",
-            d = "seeked",
-            f = "ended",
-            p = "durationchange",
-            h = "timeupdate",
-            m = "play",
-            y = "pause",
-            v = "volumechange",
-            g = "ratechange",
-            b = "loadeddata",
-            _ = "stalled",
-            w = "abort",
-            k = "playbackblocked"
     }, function(e, t, n) {
         "use strict";
 
@@ -6271,7 +6271,7 @@
         var o = n(37),
             a = n(74),
             s = n(73),
-            u = n(28),
+            u = n(26),
             c = n(486),
             l = n.n(c),
             d = n(48),
@@ -6285,7 +6285,7 @@
             b = n(45),
             _ = n(138),
             w = n(185),
-            k = n(26),
+            k = n(27),
             E = n(57),
             S = n(70),
             O = n(24),
@@ -7246,7 +7246,7 @@
             B = n.n(q),
             U = n(82),
             F = n.n(U),
-            V = n(28),
+            V = n(26),
             H = n(84),
             z = n(52),
             W = n(269),
@@ -11166,7 +11166,7 @@
         };
         var y = n(10),
             v = n(273),
-            g = n(28),
+            g = n(26),
             b = n(37),
             _ = n(185),
             w = n(138),
@@ -12797,7 +12797,7 @@
             a = n.n(o),
             s = n(42),
             u = n.n(s),
-            c = n(28),
+            c = n(26),
             l = n(37),
             d = n(57),
             f = n(70),
@@ -13710,7 +13710,7 @@
         });
         var i = n(171),
             o = n.n(i),
-            a = n(27),
+            a = n(28),
             s = n(17),
             u = n(43),
             c = function() {
@@ -13960,7 +13960,7 @@
         });
         var o = n(171),
             a = n.n(o),
-            s = n(27),
+            s = n(28),
             u = n(17),
             c = n(43),
             l = function() {
@@ -15617,7 +15617,7 @@
         Ke.propTypes = Ve, Ke.defaultProps = He;
         var Ge = Object(Q.c)()(Ke),
             Ye = n(51),
-            Qe = n(26),
+            Qe = n(27),
             $e = {
                 availableQualities: W.a.array.isRequired,
                 selectedQuality: W.a.string.isRequired,
@@ -25050,12 +25050,13 @@
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         n.d(t, "a", function() {
-            return a
+            return s
         }), n.d(t, "b", function() {
-            return c
+            return l
         });
         var i = n(6),
-            o = function() {
+            o = n(26),
+            a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -25066,28 +25067,31 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = "clip backend",
-            s = Object.freeze({
+            s = "clip backend",
+            u = Object.freeze({
                 autoplay: !0
             }),
-            u = Object.freeze({
+            c = Object.freeze({
                 mp4: "video/mp4"
             }),
-            c = function() {
+            l = function() {
                 function e() {
-                    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s,
-                        n = arguments[1];
-                    r(this, e), this._store = n, this._options = t, this._src = "", this._initVideoTag()
+                    var t = this,
+                        n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
+                        i = arguments[1];
+                    r(this, e), this._store = i, this._options = n, this._srcHasBeenSet = null, this._srcReady = new Promise(function(e) {
+                        t._srcHasBeenSet = e
+                    }), this._initVideoTag()
                 }
-                return o(e, [{
+                return a(e, [{
                     key: "getBackend",
                     value: function() {
-                        return a
+                        return s
                     }
                 }, {
                     key: "_initVideoTag",
                     value: function() {
-                        this._video = document.createElement("video"), this._video.autoplay = this._options.autoplay, this._video.preload = "auto", this._video.type = u.mp4, this._options.playsinline && (this._video.setAttribute("webkit-playsinline", ""), this._video.setAttribute("playsinline", ""))
+                        this._video = document.createElement("video"), this._video.autoplay = this._options.autoplay, this._video.preload = "auto", this._video.type = c.mp4, this._options.playsinline && (this._video.setAttribute("webkit-playsinline", ""), this._video.setAttribute("playsinline", ""))
                     }
                 }, {
                     key: "attach",
@@ -25097,7 +25101,7 @@
                 }, {
                     key: "destroy",
                     value: function() {
-                        this._video = null, this._events = null, this._src = ""
+                        this._video = null, this._events = null, this._src = "", this._srcHasBeenSet = null, this._srcReady = null
                     }
                 }, {
                     key: "setAutoplay",
@@ -25117,17 +25121,30 @@
                 }, {
                     key: "setSrc",
                     value: function(e) {
-                        this._src = e, this._video.src = e, this.load()
+                        this._video.src = e, this.load(), null !== this._srcHasBeenSet && this._srcHasBeenSet()
                     }
                 }, {
                     key: "load",
                     value: function() {
-                        "" !== this._src && this._video.load()
+                        this._video.load(), this.getAutoplay() && this.play()
                     }
                 }, {
                     key: "play",
                     value: function() {
-                        this._video.play()
+                        var e = this;
+                        return this._srcReady.then(function() {
+                            return new Promise(function(t) {
+                                if (e._video.readyState >= 3) t(e._video.play());
+                                else {
+                                    var n = function n() {
+                                        e._video.removeEventListener(o.b, n), t(e._video.play())
+                                    };
+                                    e._video.addEventListener(o.b, n)
+                                }
+                            })
+                        }).catch(function(t) {
+                            "NotAllowedError" === t.name && (e._video.dispatchEvent(new CustomEvent(o.l)), e._video.dispatchEvent(new CustomEvent(o.j)))
+                        })
                     }
                 }, {
                     key: "pause",
@@ -25192,7 +25209,7 @@
                 }, {
                     key: "getAutoplay",
                     value: function() {
-                        return this.options.autoplay
+                        return this._video.autoplay
                     }
                 }, {
                     key: "setLoop",
@@ -29375,7 +29392,7 @@
             }(f.Component);
         I.propTypes = R;
         var A = n(15),
-            N = n(26),
+            N = n(27),
             L = n(6),
             M = function() {
                 function e(e, t) {
@@ -30465,7 +30482,7 @@
         var ze = H()(He),
             We = Object(A.b)(Fe, Ve)(ze),
             Ke = n(33),
-            Ge = n(26),
+            Ge = n(27),
             Ye = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
@@ -30784,7 +30801,7 @@
                 })))
             };
         Lt.propTypes = At;
-        var Mt = n(27),
+        var Mt = n(28),
             Dt = {
                 canTheatreMode: I.a.bool.isRequired,
                 disableTheatreMode: I.a.func.isRequired,
@@ -31462,7 +31479,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.19-230213+a42b10179dfa8d8aac050c3c38434f818420b334",
+                    app_version: "2018.04.20-201746+7ae0551cbf97ed6bac969b04a18bc6d32f057f7b",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -36760,7 +36777,7 @@
             });
             var i = t.getState().env.platform === ru.a,
                 o = cs.a.name === zE;
-            return (i || o) && n.autoplay && (ka()(Qa.c, n.player) ? n.autoplay = !1 : n.muted = !0), n.tracking = ic()({}, n.tracking, n.trackingProperties, {
+            return (i || o) && n.autoplay && !ka()(Qa.c, n.player) && (n.muted = !0), n.tracking = ic()({}, n.tracking, n.trackingProperties, {
                 player: n.player
             }), n
         }
@@ -37168,7 +37185,7 @@
                 }]), e
             }(),
             es = n(102),
-            ts = "//video-edge-815447.sjc01.hls.ttvnw.net/v1/segment/CkKR14swoZQJFj6Mv4Bu_Myg_6vBpt45t38ZUQHHldtMuQ5nIg8tJId18e2k7IncGQ5NTnWsy72pqlQQ8u-woiY3IrV8AGDVsbVmP2xiQmBq-rzkXAkcczcbcQ6f8dEWkWVZXktTIaJRrD6TRvqcV5lhuHzTBHS3sFeme8ffbdli5yNBrkMQNSlAXHC3r5_ZKsohV-SBfJUjibUOEDd3BRHwv5Vg6_I7Sm7f-8giE_X4BoN9pwJ7HdA_KTbuIzc2fkXlK-20-pY7mXqTQcsyRcHp-wkbZYmTSR2aqFPZvBCdzQoXk1i-KoPa1YEu5xE2tLSNY7k3jvrHGiOJ1SEuzd4-YkRBpBfovjzvRo7iGZIYCA8KTPEAi8GauwnGTGscTUpwm5T42Y9QmzA7w2_H5Y0nMUUvPtOD4l_PoSy0J26WxfB9b6C1yRGoFUKSwR50NleP5uzN2my6uXDS4RgvFCL8JW_22SyqKkB7HtqVuxErBQg5HZLfqe-EYX7GxcrYUcwj5k9nk--NAebraqSBVbutBpA4_DG22rYZtN.ts",
+            ts = "//video-edge-af348a.sjc01.hls.ttvnw.net/v1/segment/CsyGNkLQ-yzLO3EPV-I7QNFUVNk2aqoQ-SWE6gURvJroVfbVdu128AQhMGfW3kknDMTAIv7uVE3fcbU1GGFxkNcjcjniW9kE-aT2Yxm4-Px7COha0QTD4BOjlFCUlNxCCbAQEjyRHXa4feWpWel3P6K8sbWD5MbjyAxbHTEbfCNI3MUsWiG3R8EnmvJnBZu_05mquZ8RqWLz3OEX34WDLRIQ0jH1c6LPuZb3jXZVyHV0fHRWY1q8ajveT1ltOlf-3HV7C0RVry8c5b3pBd7zmWTcm6mgpg-Y9lU3acfF83hRpT_CpXkrYvOjfaDE3Dw8ghectAQwlXXKiAbeRoWZMuealV8N5HzJgKPROoLl3mAnP7tLA6y_W1Py79j8tIVR6N-aoagkx2nCAA-8Ay5KV-GLRHESCFE1vM7jLAUCTBbP7lhhAAhcuT-L0zA05u2tCgtklTSilbwV8h9b5InXQpzhbVu2nZaurx4dv3y_BGbdpLHiGvf0x7qoPdD9Fs4ntDAvYzH-Q1sbF-z-fzGA-oVL.ts",
             ns = n(49),
             rs = n(261),
             is = n(135),
@@ -37218,7 +37235,7 @@
             Ss = n(85),
             Os = n(69),
             Ps = n(10),
-            Cs = n(28),
+            Cs = n(26),
             Ts = n(185),
             xs = n(138),
             Rs = n(37),
@@ -38483,7 +38500,7 @@
                 }]), e
             }(),
             qu = "create ads manager",
-            Bu = n(26),
+            Bu = n(27),
             Uu = n(495),
             Fu = n.n(Uu),
             Vu = "set manifest info",
@@ -38495,7 +38512,7 @@
             Yu = n(51),
             Qu = n(66),
             $u = n(12),
-            Ju = n(27),
+            Ju = n(28),
             Xu = n(509),
             Zu = n.n(Xu),
             ec = "set usher params",
