@@ -536,10 +536,6 @@ MediaPlayer.prototype.getDroppedFrames = function () {
     return this._mediaSink.droppedFrames();
 }
 
-MediaPlayer.prototype.getRenderedFrames = function () {
-    return this._mediaSink.renderedFrames();
-}
-
 MediaPlayer.prototype.getDecodedFrames = function () {
     return this._mediaSink.decodedFrames();
 }
