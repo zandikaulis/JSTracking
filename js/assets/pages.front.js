@@ -2013,45 +2013,34 @@ webpackJsonp([54], {
             T = i.__assign({}, P, {
                 expires: 365
             }),
-            D = 3,
-            x = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        isOnboardingDismissedCookieSet: void 0 !== k.get(R)
-                    }, t.handleAutoOnboardingRedirect = function() {
-                        void 0 === k.get(I) && Object(b.o)(new Date(t.props.data.currentUser.createdAt)) && (k.set(I, "true", T), t.redirectToOnboarding(y.b.NewSignup))
-                    }, t.startOnboarding = function() {
-                        t.redirectToOnboarding(y.b.HomepageCTA)
-                    }, t.redirectToOnboarding = function(e) {
+            x = 3,
+            D = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    n.handleAutoOnboardingRedirect = function() {
+                        void 0 === k.get(I) && Object(b.o)(new Date(n.props.data.currentUser.createdAt)) && (k.set(I, "true", T), n.redirectToOnboarding(y.b.NewSignup))
+                    }, n.startOnboarding = function() {
+                        n.redirectToOnboarding(y.b.HomepageCTA)
+                    }, n.redirectToOnboarding = function(e) {
                         Object(y.g)({
                             source: e
                         }), window.location.assign("/hi" + location.search)
-                    }, t.dismissOnboardingPrompt = function() {
-                        Object(y.f)(), k.set(R, "true", T), t.setState({
+                    }, n.dismissOnboardingPrompt = function() {
+                        Object(y.f)(), k.set(R, "true", T), n.setState({
                             isOnboardingDismissedCookieSet: !0
                         })
-                    }, t.followedGamesForUserHasLoaded = function() {
-                        return t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.currentUser && t.props.data.currentUser.followedGames
-                    }, t.shouldSeeOnboarding = function() {
-                        return !t.state.isOnboardingDismissedCookieSet && t.followedGamesForUserHasLoaded() && t.state.inOnboardingExperiment && t.props.data.currentUser.followedGames.nodes.length < D && Object(b.o)(new Date(t.props.data.currentUser.createdAt))
-                    }, t
+                    }, n.followedGamesForUserHasLoaded = function() {
+                        return n.props.data && !n.props.data.loading && !n.props.data.error && n.props.data.currentUser && n.props.data.currentUser.followedGames
+                    }, n.shouldSeeOnboarding = function() {
+                        return !n.state.isOnboardingDismissedCookieSet && n.followedGamesForUserHasLoaded() && n.state.inOnboardingExperiment && n.props.data.currentUser.followedGames.nodes.length < x && Object(b.o)(new Date(n.props.data.currentUser.createdAt))
+                    };
+                    var i = r.o.experiments.getAssignment(b.i);
+                    return n.state = {
+                        inOnboardingExperiment: Object(b.n)(i),
+                        isOnboardingDismissedCookieSet: void 0 !== k.get(R)
+                    }, n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return i.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, r.o.experiments.getAssignment(b.i)];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        inOnboardingExperiment: Object(b.n)(e)
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.componentDidUpdate = function() {
+                return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.shouldSeeOnboarding() && this.handleAutoOnboardingRedirect()
                 }, t.prototype.render = function() {
                     return this.shouldSeeOnboarding() ? a.createElement(N._30, {
@@ -2117,7 +2106,7 @@ webpackJsonp([54], {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(x),
+            })(D),
             A = n("eXld"),
             U = n("2aoH"),
             j = n("8PKe"),
@@ -4730,8 +4719,8 @@ webpackJsonp([54], {
                 },
                 __typename: "Reaction"
             },
-            D = 4,
-            x = function(e) {
+            x = 4,
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4745,7 +4734,7 @@ webpackJsonp([54], {
                     }, t.removeReaction = function(e, n) {
                         return t.toggleReaction(i.Remove, e, n)
                     }, t.toggleAdditional = function(e, n) {
-                        n.preventDefault(), e.length <= D || t.setState(function(e) {
+                        n.preventDefault(), e.length <= x || t.setState(function(e) {
                             return {
                                 additionalReactionsVisible: !e.additionalReactionsVisible
                             }
@@ -4773,7 +4762,7 @@ webpackJsonp([54], {
                     var n = this.props.emoteSelectorAndOverflowPos && this.props.emoteSelectorAndOverflowPos === b.q.Bottom ? b.q.BottomCenter : b.q.TopCenter,
                         i = null;
                     this.state.additionalReactionsVisible && (i = a.createElement(_, {
-                        reactions: t.slice(D),
+                        reactions: t.slice(x),
                         addReaction: this.addReaction,
                         removeReaction: this.removeReaction,
                         position: n
@@ -4782,7 +4771,7 @@ webpackJsonp([54], {
                             return e + t.count
                         }, 0) : 0,
                         o = null;
-                    this.props.reactions && r > 0 && (o = this.props.reactions.length >= D ? a.createElement("a", {
+                    this.props.reactions && r > 0 && (o = this.props.reactions.length >= x ? a.createElement("a", {
                         href: "#",
                         onClick: function(n) {
                             return e.toggleAdditional(t, n)
@@ -4814,7 +4803,7 @@ webpackJsonp([54], {
                         alignItems: b.c.Center,
                         padding: 1
                     }, a.createElement(S, {
-                        reactions: t.slice(0, D),
+                        reactions: t.slice(0, x),
                         addReaction: this.addReaction,
                         removeReaction: this.removeReaction
                     }), a.createElement(b._7, {
@@ -4852,7 +4841,7 @@ webpackJsonp([54], {
                         return Object(l.f)(s.a.FeedReactionToggle)
                     }
                 }, e)
-            })(x),
+            })(D),
             A = Object(h.d)("ClipContent", {
                 autoReportInteractive: !0
             })(function(e) {
@@ -6354,15 +6343,15 @@ webpackJsonp([54], {
             })
         }
         n("0OPT");
-        var D = 6,
-            x = function(e) {
+        var x = 6,
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         activeItem: t.props.items[0],
                         startingIndex: 0
                     }, t.displayEventFired = !1, t.renderLeftButton = function() {
-                        if (t.props.items.length > D) {
+                        if (t.props.items.length > x) {
                             var e = t.state.startingIndex > 0;
                             return c.createElement(v._7, {
                                 display: v.Q.Flex,
@@ -6377,8 +6366,8 @@ webpackJsonp([54], {
                         }
                         return null
                     }, t.renderRightButton = function() {
-                        if (t.props.items.length > D) {
-                            var e = t.props.items.length > t.state.startingIndex + D;
+                        if (t.props.items.length > x) {
+                            var e = t.props.items.length > t.state.startingIndex + x;
                             return c.createElement(v._7, {
                                 display: v.Q.Flex,
                                 alignItems: v.c.Stretch
@@ -6395,7 +6384,7 @@ webpackJsonp([54], {
                         var e, n;
                         if (t.state.activeItem) return t.displayEventFired || (e = t.props.items, n = {}, e.forEach(function(e, t) {
                             n["carousel_slot_" + t + "_channel"] = e.broadcaster.login, n["carousel_slot_" + t + "_priority"] = e.priorityLevel, n["carousel_slot_" + t + "_game"] = e.content.gameName, n["carousel_slot_" + t + "_ccu"] = e.content.viewersCount, n["carousel_slot_" + t + "_type"] = e.content.subType, e.isScheduled ? n["carousel_slot_" + t + "_source"] = R : n["carousel_slot_" + t + "_source"] = P
-                        }), r.n.track(I.SpadeEventType.FrontPageCarouselDisplay, n), t.displayEventFired = !0), t.props.items.slice(t.state.startingIndex, t.state.startingIndex + D).map(function(e, n) {
+                        }), r.n.track(I.SpadeEventType.FrontPageCarouselDisplay, n), t.displayEventFired = !0), t.props.items.slice(t.state.startingIndex, t.state.startingIndex + x).map(function(e, n) {
                             return c.createElement(h, {
                                 key: e.content.id,
                                 item: e,
@@ -6404,7 +6393,7 @@ webpackJsonp([54], {
                                 "data-a-target": "carousel-card-" + n
                             })
                         });
-                        for (var i = [], a = 0; a < D; a++) i.push(c.createElement(v._7, {
+                        for (var i = [], a = 0; a < x; a++) i.push(c.createElement(v._7, {
                             key: a,
                             margin: {
                                 x: .5
@@ -6480,7 +6469,7 @@ webpackJsonp([54], {
                         };
                         n = i, r.n.track(I.SpadeEventType.FrontPageCarouselPromotionCardView, n)
                     }, t.handlePageRight = function() {
-                        var e = t.props.items.length - D;
+                        var e = t.props.items.length - x;
                         e !== t.state.startingIndex && (T("next"), t.setState({
                             startingIndex: e
                         }))
@@ -6517,7 +6506,7 @@ webpackJsonp([54], {
                 registerCarousel: o.e,
                 unregisterCarousel: o.f
             }, e)
-        })(x);
+        })(D);
         n.d(t, "a", function() {
             return L
         })
@@ -7530,4 +7519,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-63ec9034ad44c6067a67df81882db6ec.js.map
+//# sourceMappingURL=pages.front-d3b2fd094496c2a770e7369bdf3319f5.js.map

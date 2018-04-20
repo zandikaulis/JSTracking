@@ -9440,7 +9440,8 @@ webpackJsonp([40], {
                         border: !0,
                         position: w._14.Absolute,
                         elevation: 2,
-                        zIndex: w._57.Above
+                        zIndex: w._57.Above,
+                        fullWidth: !0
                     }, l.createElement(w._7, {
                         margin: {
                             y: .5
@@ -10942,8 +10943,7 @@ webpackJsonp([40], {
                 }, e)
             })(H),
             G = n("QAcM"),
-            Q = n("81qH"),
-            q = function(e) {
+            Q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderVariation = function() {
@@ -11018,9 +11018,6 @@ webpackJsonp([40], {
                             fallback: this.renderFallback,
                             variation: this.renderVariation
                         },
-                        loader: function() {
-                            return a.createElement(Q.VideoPreviewCardPlaceholder, null)
-                        },
                         name: "TWILIGHT_VIDEO_CARD_UPDATES"
                     };
                     return a.createElement(U.a, u.__assign({}, e))
@@ -11078,7 +11075,7 @@ webpackJsonp([40], {
                     })
                 }, t = u.__decorate([Object(s.d)("ClipCards")], t)
             }(a.Component);
-        var z = Object(l.b)(null, function(e, t) {
+        var q = Object(l.b)(null, function(e, t) {
                 return Object.assign(Object(d.b)({
                     showClipsViewModal: function(e, n, i) {
                         return Object(c.d)(B, {
@@ -11090,8 +11087,8 @@ webpackJsonp([40], {
                         })
                     }
                 }, e), t)
-            })(q),
-            J = function(e) {
+            })(Q),
+            z = function(e) {
                 return a.createElement(O._7, null, a.createElement(O._7, {
                     display: O.Q.Flex,
                     flexWrap: O.T.NoWrap,
@@ -11117,7 +11114,7 @@ webpackJsonp([40], {
                     "data-a-target": "manage-clips-button"
                 }, Object(r.d)("Manage my clips", "TopClips"))), a.createElement(O._7, null, e.isLoading ? a.createElement(O._9, {
                     fillContent: !0
-                }) : a.createElement(z, {
+                }) : a.createElement(q, {
                     clips: e.clips,
                     pageType: e.pageType,
                     loadMoreClips: e.loadMoreClips,
@@ -11125,13 +11122,13 @@ webpackJsonp([40], {
                     timeFilterValue: e.timeFilterValue
                 })))
             },
-            $ = Object(s.d)("TopClips", {
+            J = Object(s.d)("TopClips", {
                 autoReportInteractive: !0
-            })(J);
+            })(z);
         n.d(t, !1, function() {
-            return J
+            return z
         }), n.d(t, "a", function() {
-            return $
+            return J
         })
     },
     "5vPJ": function(e, t, n) {
@@ -11536,18 +11533,6 @@ webpackJsonp([40], {
     "7X7f": function(e, t) {},
     "7t3k": function(e, t) {},
     "7vYp": function(e, t) {},
-    "81qH": function(e, t, n) {
-        "use strict";
-        var i = n("aBed");
-        n.d(t, "VideoPreviewCard", function() {
-            return i.a
-        });
-        var a = n("a4C9"),
-            r = (n.n(a), n("XYqD"));
-        n.d(t, "VideoPreviewCardPlaceholder", function() {
-            return r.a
-        })
-    },
     "8Wuk": function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
@@ -13467,17 +13452,8 @@ webpackJsonp([40], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(e) {
-                            switch (e.label) {
-                                case 0:
-                                    return this.subscribe(this.props.channelID), [4, l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN")];
-                                case 1:
-                                    return "yes" === e.sent() && this.setState({
-                                        raidStorage: new f
-                                    }), [2]
-                            }
-                        })
+                    this.subscribe(this.props.channelID), "yes" === l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN") && this.setState({
+                        raidStorage: new f
                     })
                 }, t.prototype.render = function() {
                     return this.shouldRenderRaidNotification ? a.createElement(A, {
@@ -15910,7 +15886,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(92).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(96).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -15922,7 +15898,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(91).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(95).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -15934,7 +15910,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(90).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(94).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -15946,7 +15922,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(93).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -23418,44 +23394,6 @@ webpackJsonp([40], {
             a = n("HZww"),
             r = n("bkpq")
     },
-    XYqD: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return r
-        });
-        var i = n("GiK3"),
-            a = (n.n(i), n("Odds")),
-            r = function() {
-                return i.createElement(a.B, null, i.createElement(a.j, {
-                    ratio: a.k.Aspect16x9
-                }, i.createElement(a._13, null)), i.createElement(a.C, null, i.createElement(a._7, {
-                    display: a.Q.Flex,
-                    margin: {
-                        bottom: 1
-                    }
-                }, i.createElement(a._7, {
-                    display: a.Q.InlineBlock,
-                    margin: {
-                        top: 1,
-                        right: 1
-                    }
-                }, i.createElement(a._13, {
-                    width: 40,
-                    height: 56
-                })), i.createElement(a._7, {
-                    display: a.Q.InlineBlock,
-                    margin: {
-                        top: 1
-                    }
-                }, i.createElement(a.P, null, i.createElement(a._13, {
-                    width: 150
-                })), i.createElement(a.P, {
-                    fontSize: a.U.Size7
-                }, i.createElement(a._13, {
-                    width: 100
-                }))))))
-            }
-    },
     XdSf: function(e, t, n) {
         "use strict";
         t.a = function() {
@@ -27401,7 +27339,8 @@ webpackJsonp([40], {
                         flexGrow: 1,
                         fullHeight: !0,
                         overflow: b._10.Hidden,
-                        color: b.J.Base
+                        color: b.J.Base,
+                        className: "chat-room__content"
                     }, this.props.chatRoomHeader, e, a.createElement(Mt.a, {
                         badgeSets: this.state.badgeSets,
                         channelID: this.props.channelID,
@@ -28353,314 +28292,6 @@ webpackJsonp([40], {
         })
     },
     ZoRy: function(e, t) {},
-    a0ve: function(e, t) {},
-    a4C9: function(e, t) {},
-    aBed: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return y
-        });
-        var i = n("TToO"),
-            a = n("HW6M"),
-            r = (n.n(a), n("OAwv")),
-            o = (n.n(r), n("GiK3")),
-            s = (n.n(o), n("F8kA")),
-            l = n("6sO2"),
-            d = n("iOr9"),
-            c = n("vKFS"),
-            u = n("SZoP"),
-            m = n("mi6k"),
-            p = n("CSlQ"),
-            h = n("81qH"),
-            g = n("Odds"),
-            f = n("a0ve"),
-            v = (n.n(f), "video-view-count"),
-            b = "video-length",
-            k = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        hovered: !1,
-                        didAnimatedPreviewLoad: !1,
-                        didAnimatedPreviewFailToLoad: !1
-                    }, t.renderVariation = function() {
-                        return o.createElement(c.a, {
-                            context: t.props.context,
-                            title: t.props.video.title,
-                            linkTo: {
-                                pathname: "/videos/" + t.props.video.id,
-                                state: t.getLinkState(),
-                                search: t.generateSearchString()
-                            },
-                            thumbnailImageProps: {
-                                src: t.props.video.previewThumbnailURL,
-                                alt: t.props.video.title
-                            },
-                            channelLogin: t.props.video.owner && t.props.video.owner.login || "",
-                            channelLoginLinkTo: {
-                                pathname: "/" + (t.props.video.owner ? t.props.video.owner.login : ""),
-                                state: t.getLinkState()
-                            },
-                            channelImageProps: {
-                                src: t.props.video.owner && t.props.video.owner.profileImageURL || "",
-                                alt: t.props.video.owner ? t.props.video.owner.displayName : ""
-                            },
-                            gameTitle: t.props.video.game && t.props.video.game.name || "",
-                            gameTitleLinkTo: {
-                                pathname: "/directory/game/" + encodeURI(t.props.video.game && t.props.video.game.name || ""),
-                                state: t.getLinkState()
-                            },
-                            gameBoxArtImageProps: {
-                                src: t.props.video.game && t.props.video.game.boxArtURL || "",
-                                alt: t.props.video.game ? t.props.video.game.displayName : ""
-                            },
-                            datePublished: t.props.video.publishedAt,
-                            viewCount: t.props.video.viewCount,
-                            durationInSeconds: t.props.video.lengthSeconds,
-                            animatedImageProps: t.props.video.animatedPreviewURL ? {
-                                src: t.props.video.animatedPreviewURL,
-                                alt: ""
-                            } : void 0,
-                            watchedProgressPercent: t.getVideoPreviousWatchPercentage() || 0
-                        })
-                    }, t.renderFallback = function() {
-                        var e = null,
-                            n = t.getVideoPreviousWatchPercentage();
-                        return null !== n && (e = o.createElement(g._7, {
-                            position: g._14.Absolute,
-                            attachBottom: !0,
-                            fullWidth: !0
-                        }, o.createElement(g._17, {
-                            size: g._18.Small,
-                            value: n,
-                            mask: !0
-                        }))), o.createElement("div", i.__assign({
-                            onClick: t.onClickHandler,
-                            onMouseEnter: t.onMouseEnterHandler,
-                            onMouseLeave: t.onMouseLeaveHandler
-                        }, Object(g._58)(t.props)), o.createElement(g.B, null, o.createElement(g._7, {
-                            fullWidth: !0
-                        }, o.createElement(g.j, {
-                            overflow: !0
-                        }, o.createElement("div", null, o.createElement(g._30, {
-                            display: g.Q.InlineFlex,
-                            position: g._14.Absolute,
-                            attachTop: !0,
-                            attachLeft: !0,
-                            margin: .5,
-                            zIndex: g._57.Default,
-                            fontSize: g.U.Size6,
-                            background: g.m.Overlay,
-                            color: g.J.Overlay,
-                            className: "video-preview-card__preview-overlay-stat"
-                        }, o.createElement(g._29, {
-                            "data-test-selector": v,
-                            icon: g._21.GlyphViews,
-                            label: Object(l.d)("views", "VideoPreviewCard"),
-                            value: Object(l.f)(t.props.video.viewCount)
-                        })), o.createElement(g._30, {
-                            display: g.Q.InlineFlex,
-                            position: g._14.Absolute,
-                            attachTop: !0,
-                            attachRight: !0,
-                            margin: .5,
-                            zIndex: g._57.Default,
-                            fontSize: g.U.Size6,
-                            background: g.m.Overlay,
-                            color: g.J.Overlay,
-                            className: "video-preview-card__preview-overlay-stat"
-                        }, o.createElement(g._29, {
-                            "data-test-selector": b,
-                            icon: g._21.GlyphLength,
-                            label: Object(l.d)("length", "VideoPreviewCard"),
-                            value: Object(m.a)(t.props.video.lengthSeconds)
-                        })), t.videoPreviewImage(), e))), o.createElement(g.C, null, o.createElement(g._7, {
-                            display: g.Q.Flex,
-                            flexDirection: g.S.Row,
-                            flexWrap: g.T.NoWrap,
-                            padding: {
-                                top: .5
-                            }
-                        }, t.props.hideGameArt ? null : t.gameBoxArt(), t.videoMetaData()))))
-                    }, t.onClickHandler = function() {
-                        t.props.onClick && t.props.onClick(t.props.tracking.content_index)
-                    }, t.onMouseEnterHandler = function() {
-                        t.setState({
-                            hovered: !0
-                        })
-                    }, t.onMouseLeaveHandler = function() {
-                        t.setState({
-                            hovered: !1
-                        })
-                    }, t.onPreviewImageLoad = function(e) {
-                        t.props.latencyTracking.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
-                            didAnimatedPreviewLoad: !0
-                        })
-                    }, t.onPreviewImageLoadError = function(e) {
-                        e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
-                            didAnimatedPreviewFailToLoad: !0
-                        })
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.overrideImageInteractivity && this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = {
-                        assignments: {
-                            fallback: this.renderFallback,
-                            variation: this.renderVariation
-                        },
-                        loader: function() {
-                            return o.createElement(h.VideoPreviewCardPlaceholder, null)
-                        },
-                        name: "TWILIGHT_VIDEO_CARD_UPDATES"
-                    };
-                    return o.createElement(d.a, i.__assign({}, e))
-                }, t.prototype.generateSearchString = function() {
-                    var e = {};
-                    this.props.collectionID && (e.collection = this.props.collectionID);
-                    var t = r.stringify(e);
-                    return t ? "?" + t : ""
-                }, t.prototype.videoPreviewImage = function() {
-                    var e = this.state.hovered && !this.state.didAnimatedPreviewFailToLoad ? this.props.video.animatedPreviewURL : this.props.video.previewThumbnailURL,
-                        t = a("video-preview-card__image-wrapper", {
-                            "video-preview-card__image-wrapper--watched": null !== this.getVideoPreviousWatchPercentage() && !this.state.hovered
-                        }),
-                        n = a("video-preview-card__preview-image", {
-                            "video-preview-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
-                        });
-                    return o.createElement(g.j, {
-                        overflow: !0
-                    }, o.createElement(s.a, {
-                        to: {
-                            pathname: "/videos/" + this.props.video.id,
-                            state: this.getLinkState(),
-                            search: this.generateSearchString()
-                        },
-                        title: this.props.video.title,
-                        "data-a-target": "video-preview-card-image-link",
-                        "data-test-selector": "preview-image-link"
-                    }, o.createElement("div", {
-                        className: t,
-                        "data-test-selector": "preview-image-wrapper"
-                    }, o.createElement(g._1, {
-                        flexShrink: 0
-                    }, o.createElement("figure", null, o.createElement(g.j, {
-                        ratio: g.k.Aspect16x9
-                    }, o.createElement("img", {
-                        alt: this.props.video.title,
-                        className: n,
-                        "data-test-selector": "preview-image",
-                        onLoad: this.onPreviewImageLoad,
-                        onError: this.onPreviewImageLoadError,
-                        src: e || ""
-                    })))))))
-                }, t.prototype.gameBoxArt = function() {
-                    if (!this.showGameArt() || !this.props.video.game) return null;
-                    var e = this.props.video.game,
-                        t = {
-                            pathname: "/directory/game/" + encodeURI(e.name),
-                            state: this.getLinkState()
-                        },
-                        n = a("video-preview-card__image-wrapper", {
-                            "video-preview-card__image-wrapper--watched": null !== this.getVideoPreviousWatchPercentage() && !this.state.hovered
-                        });
-                    return o.createElement(g._7, {
-                        "data-test-selector": "game-box-art",
-                        display: g.Q.InlineFlex,
-                        flexShrink: 0,
-                        padding: {
-                            bottom: .5
-                        }
-                    }, o.createElement(s.a, {
-                        to: t,
-                        title: e.name,
-                        "data-a-target": "video-preview-card-boxart-link"
-                    }, o.createElement(g._1, {
-                        margin: {
-                            right: 1
-                        }
-                    }, o.createElement("figure", {
-                        className: "video-preview-card__game-art"
-                    }, o.createElement(g._47, {
-                        display: g.Q.Block,
-                        direction: g._49.Bottom,
-                        label: e.name
-                    }, o.createElement("div", {
-                        className: n,
-                        "data-test-selector": "game-box-art-wrapper"
-                    }, o.createElement(g.D, {
-                        aspect: g.k.BoxArt,
-                        alt: e.name,
-                        src: e.boxArtURL || l.a.defaultBoxArtURL
-                    })))))))
-                }, t.prototype.videoMetaData = function() {
-                    var e = Object(l.c)(new Date(this.props.video.publishedAt), "medium"),
-                        t = null;
-                    if (this.props.video.owner) {
-                        var n = {
-                            pathname: "/" + this.props.video.owner.login,
-                            state: this.getLinkState()
-                        };
-                        t = o.createElement(s.a, {
-                            to: n,
-                            className: "video-preview-card__owner-display-name",
-                            "data-a-target": "video-preview-card-channel-link",
-                            "data-test-selector": "video-owner",
-                            title: Object(u.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
-                        }, Object(u.a)(this.props.video.owner.login, this.props.video.owner.displayName))
-                    }
-                    return o.createElement(g._7, {
-                        display: g.Q.Flex,
-                        flexDirection: g.S.Column,
-                        overflow: g._10.Hidden
-                    }, o.createElement(g._7, {
-                        "data-test-selector": "video-title",
-                        overflow: g._10.Hidden,
-                        position: g._14.Relative
-                    }, o.createElement(g.P, {
-                        color: g.J.Base,
-                        fontSize: g.U.Size5,
-                        lineHeight: g._8.Heading
-                    }, o.createElement(s.a, {
-                        className: "video-preview-card__video-title",
-                        to: {
-                            pathname: "/videos/" + this.props.video.id,
-                            state: this.getLinkState(),
-                            search: this.generateSearchString()
-                        },
-                        title: this.props.video.title,
-                        "data-a-target": "video-preview-card-title-link"
-                    }, this.props.video.title))), o.createElement(g._7, {
-                        flexShrink: 0,
-                        flexGrow: 0,
-                        ellipsis: !0
-                    }, o.createElement(g.P, {
-                        type: g._44.Span,
-                        color: g.J.Alt2,
-                        ellipsis: !0,
-                        title: this.formatTitle(e)
-                    }, e, o.createElement(g._1, {
-                        padding: {
-                            x: .5
-                        }
-                    }, o.createElement("span", null, "·")), t)))
-                }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                    return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
-                }, t.prototype.showGameArt = function() {
-                    return !this.props.hideGameArt && this.props.video.game && "" !== this.props.video.game.name
-                }, t.prototype.formatTitle = function(e) {
-                    if (this.props.video.owner) return e + " · " + Object(u.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
-                }, t.prototype.getLinkState = function() {
-                    return {
-                        content: this.props.tracking.content,
-                        content_index: this.props.tracking.content_index,
-                        medium: this.props.tracking.medium
-                    }
-                }, t
-            }(o.Component),
-            y = Object(p.d)("VideoPreviewCard")(k)
-    },
     aSvS: function(e, t, n) {
         "use strict";
         var i, a;
@@ -39560,4 +39191,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-b157f670413a2fffd844ec2fa2861a09.js.map
+//# sourceMappingURL=pages.channel-clips-1cc7bfbeacbae460298fcf9a17e7ba47.js.map

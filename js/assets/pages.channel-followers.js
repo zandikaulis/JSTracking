@@ -8934,7 +8934,8 @@ webpackJsonp([45], {
                         border: !0,
                         position: w._14.Absolute,
                         elevation: 2,
-                        zIndex: w._57.Above
+                        zIndex: w._57.Above,
+                        fullWidth: !0
                     }, l.createElement(w._7, {
                         margin: {
                             y: .5
@@ -11947,17 +11948,8 @@ webpackJsonp([45], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(e) {
-                            switch (e.label) {
-                                case 0:
-                                    return this.subscribe(this.props.channelID), [4, l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN")];
-                                case 1:
-                                    return "yes" === e.sent() && this.setState({
-                                        raidStorage: new f
-                                    }), [2]
-                            }
-                        })
+                    this.subscribe(this.props.channelID), "yes" === l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN") && this.setState({
+                        raidStorage: new f
                     })
                 }, t.prototype.render = function() {
                     return this.shouldRenderRaidNotification ? a.createElement(A, {
@@ -25138,7 +25130,8 @@ webpackJsonp([45], {
                         flexGrow: 1,
                         fullHeight: !0,
                         overflow: b._10.Hidden,
-                        color: b.J.Base
+                        color: b.J.Base,
+                        className: "chat-room__content"
                     }, this.props.chatRoomHeader, e, a.createElement(Mt.a, {
                         badgeSets: this.state.badgeSets,
                         channelID: this.props.channelID,
@@ -35789,4 +35782,4 @@ webpackJsonp([45], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-followers-b7f01c0becd5ec7ceb1388657f2e0535.js.map
+//# sourceMappingURL=pages.channel-followers-48dc1935f0a900a8e3ac88aa7d611248.js.map

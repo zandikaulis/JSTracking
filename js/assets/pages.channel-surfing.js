@@ -6526,17 +6526,8 @@ webpackJsonp([77], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(e) {
-                            switch (e.label) {
-                                case 0:
-                                    return this.subscribe(this.props.channelID), [4, l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN")];
-                                case 1:
-                                    return "yes" === e.sent() && this.setState({
-                                        raidStorage: new f
-                                    }), [2]
-                            }
-                        })
+                    this.subscribe(this.props.channelID), "yes" === l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN") && this.setState({
+                        raidStorage: new f
                     })
                 }, t.prototype.render = function() {
                     return this.shouldRenderRaidNotification ? i.createElement(A, {
@@ -16215,7 +16206,8 @@ webpackJsonp([77], {
                         flexGrow: 1,
                         fullHeight: !0,
                         overflow: v._10.Hidden,
-                        color: v.J.Base
+                        color: v.J.Base,
+                        className: "chat-room__content"
                     }, this.props.chatRoomHeader, e, i.createElement(Mt.a, {
                         badgeSets: this.state.badgeSets,
                         channelID: this.props.channelID,
@@ -21873,16 +21865,11 @@ webpackJsonp([77], {
             e.Left = "left", e.Right = "right"
         }(V || (V = {}));
         var G = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        channelIndex: 0,
-                        previouslyViewedCount: 0,
-                        channelSurfingData: [],
-                        transitionDirection: null
-                    }, t.dataMappedToState = !1, t.followedChannelsCount = 0, t.lastLanguagePreferencesUsedToUpdateData = new Set(t.props.languagePreferences), t.calculateProgress = function() {
-                        return t.state.channelSurfingData.length ? Math.min(100, (t.state.channelIndex + 1) / t.state.channelSurfingData.length * 100) : 0
-                    }, t.mapAndShuffleData = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    n.dataMappedToState = !1, n.followedChannelsCount = 0, n.lastLanguagePreferencesUsedToUpdateData = new Set(n.props.languagePreferences), n.calculateProgress = function() {
+                        return n.state.channelSurfingData.length ? Math.min(100, (n.state.channelIndex + 1) / n.state.channelSurfingData.length * 100) : 0
+                    }, n.mapAndShuffleData = function(e) {
                         if (!e.currentUser || !e.currentUser.followedGames || !e.currentUser.followedGames.nodes) return [];
                         var t, n = new Set((t = e.currentUser.id, o.l.get(P + "-" + t, []))),
                             a = e.currentUser.followedGames.nodes.filter(function(e) {
@@ -21927,8 +21914,8 @@ webpackJsonp([77], {
                                 return e.concat(t.slice(0, i))
                             }, []);
                         return Object(h.a)(r)
-                    }, t.refreshDataAndRestart = function() {
-                        return a.__awaiter(t, void 0, void 0, function() {
+                    }, n.refreshDataAndRestart = function() {
+                        return a.__awaiter(n, void 0, void 0, function() {
                             var e = this;
                             return a.__generator(this, function(t) {
                                 switch (t.label) {
@@ -21945,86 +21932,81 @@ webpackJsonp([77], {
                                 }
                             })
                         })
-                    }, t.goBackToCommunitySelectionPage = function() {
+                    }, n.goBackToCommunitySelectionPage = function() {
                         o.o.history.push("/hi" + location.search)
-                    }, t.trackAndComplete = function() {
-                        Object(b.d)(), t.followedChannelsCount > 0 ? t.redirectWithQueryParams("/directory/following/live") : t.redirectWithQueryParams("/directory/following/foryou")
-                    }, t.trackAndSkip = function() {
+                    }, n.trackAndComplete = function() {
+                        Object(b.d)(), n.followedChannelsCount > 0 ? n.redirectWithQueryParams("/directory/following/live") : n.redirectWithQueryParams("/directory/following/foryou")
+                    }, n.trackAndSkip = function() {
                         H({
                             action: x.Skip,
-                            view_number: t.state.previouslyViewedCount + t.state.channelIndex
-                        }), t.setState(function(e) {
-                            var n, a, i, r, s = e.channelSurfingData[e.channelIndex],
+                            view_number: n.state.previouslyViewedCount + n.state.channelIndex
+                        }), n.setState(function(e) {
+                            var t, a, i, r, s = e.channelSurfingData[e.channelIndex],
                                 l = e.channelSurfingData.slice();
-                            return s && (l.splice(e.channelIndex, 1), n = t.props.data.currentUser.id, a = s.broadcaster.login, i = P + "-" + n, (r = o.l.get(i, [])).push(a), o.l.set(i, r)), {
+                            return s && (l.splice(e.channelIndex, 1), t = n.props.data.currentUser.id, a = s.broadcaster.login, i = P + "-" + t, (r = o.l.get(i, [])).push(a), o.l.set(i, r)), {
                                 channelSurfingData: l
                             }
                         }, function() {
-                            return t.setTransition(V.Right)
+                            return n.setTransition(V.Right)
                         })
-                    }, t.trackAndFollow = function() {
+                    }, n.trackAndFollow = function() {
                         H({
                             action: x.Follow,
-                            view_number: t.state.previouslyViewedCount + t.state.channelIndex
-                        }), t.followedChannelsCount += 1, t.state.channelIndex < t.state.channelSurfingData.length && t.setState(function(e) {
+                            view_number: n.state.previouslyViewedCount + n.state.channelIndex
+                        }), n.followedChannelsCount += 1, n.state.channelIndex < n.state.channelSurfingData.length && n.setState(function(e) {
                             return {
                                 channelIndex: e.channelIndex + 1
                             }
                         }, function() {
-                            return t.setTransition(V.Right)
+                            return n.setTransition(V.Right)
                         })
-                    }, t.trackUnfollowedChannel = function() {
-                        t.followedChannelsCount -= 1
-                    }, t.trackAndMoveToPreviousChannel = function() {
-                        t.state.channelIndex > 0 && (H({
+                    }, n.trackUnfollowedChannel = function() {
+                        n.followedChannelsCount -= 1
+                    }, n.trackAndMoveToPreviousChannel = function() {
+                        n.state.channelIndex > 0 && (H({
                             action: x.MoveLeft,
-                            view_number: t.state.previouslyViewedCount + t.state.channelIndex
-                        }), t.setState(function(e) {
+                            view_number: n.state.previouslyViewedCount + n.state.channelIndex
+                        }), n.setState(function(e) {
                             return {
                                 channelIndex: e.channelIndex - 1
                             }
                         }, function() {
-                            return t.setTransition(V.Left)
+                            return n.setTransition(V.Left)
                         }))
-                    }, t.trackAndMoveToNextChannel = function() {
-                        t.state.channelIndex < t.state.channelSurfingData.length && (H({
+                    }, n.trackAndMoveToNextChannel = function() {
+                        n.state.channelIndex < n.state.channelSurfingData.length && (H({
                             action: x.MoveRight,
-                            view_number: t.state.previouslyViewedCount + t.state.channelIndex
-                        }), t.setState(function(e) {
+                            view_number: n.state.previouslyViewedCount + n.state.channelIndex
+                        }), n.setState(function(e) {
                             return {
                                 channelIndex: e.channelIndex + 1
                             }
                         }, function() {
-                            return t.setTransition(V.Right)
+                            return n.setTransition(V.Right)
                         }))
-                    }, t.setTransition = function(e) {
-                        t.setState({
+                    }, n.setTransition = function(e) {
+                        n.setState({
                             transitionDirection: e
                         }, function() {
                             return setTimeout(function() {
-                                return t.setState({
+                                return n.setState({
                                     transitionDirection: null
                                 })
                             }, 1e3)
                         })
-                    }, t
+                    };
+                    var i = o.o.experiments.getAssignment(f.i),
+                        r = o.o.experiments.getAssignment(f.h);
+                    return n.state = {
+                        channelSurfingExperimentAssignment: Object(f.m)(i, r) ? r : null,
+                        channelIndex: 0,
+                        previouslyViewedCount: 0,
+                        channelSurfingData: [],
+                        transitionDirection: null
+                    }, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var e, t;
-                        return a.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return o.o.setPageTitle(Object(p.d)("Welcome", "ChannelSurfingPage")), [4, o.o.experiments.getAssignment(f.i)];
-                                case 1:
-                                    return e = n.sent(), [4, o.o.experiments.getAssignment(f.h)];
-                                case 2:
-                                    return t = n.sent(), this.setState({
-                                        channelSurfingExperimentAssignment: Object(f.m)(e, t) ? t : null
-                                    }), i.bind("left", this.trackAndMoveToPreviousChannel), i.bind("right", this.trackAndMoveToNextChannel), [2]
-                            }
-                        })
-                    })
+                    o.o.setPageTitle(Object(p.d)("Welcome", "ChannelSurfingPage")), i.bind("left", this.trackAndMoveToPreviousChannel), i.bind("right", this.trackAndMoveToNextChannel)
                 }, t.prototype.componentDidUpdate = function() {
                     this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive(), (null !== this.state.channelSurfingExperimentAssignment && (!this.props.data.currentUser || Object(f.o)(new Date(this.props.data.currentUser.createdAt))) || r.parse(window.location.search).onboarding_override) && (this.state.channelSurfingData.length || !this.dataMappedToState) || this.redirectWithQueryParams("/")
                 }, t.prototype.componentWillReceiveProps = function(e) {
@@ -23791,4 +23773,4 @@ webpackJsonp([77], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-3fa1e78935654b750f2c9464f95c32de.js.map
+//# sourceMappingURL=pages.channel-surfing-07ed35594bee456395bfecd38f856b95.js.map

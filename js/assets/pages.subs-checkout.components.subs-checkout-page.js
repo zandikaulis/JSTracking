@@ -526,25 +526,14 @@ webpackJsonp([38], {
             }
         }
         var d = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {}, t
+                function t(t) {
+                    var n = e.call(this, t) || this,
+                        i = a.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE");
+                    return n.state = {
+                        hasExtendedRichPresence: "variant_a" === i
+                    }, n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return i.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, a.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE")];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        hasExtendedRichPresence: "variant_a" === e
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.props,
                         t = e.activity,
                         n = e.availability,
@@ -3339,9 +3328,9 @@ webpackJsonp([38], {
                 this.props.isUnavailable ? (e = "url(#" + n, t = "esports-hexagon__mask--unavailable") : this.props.needsToCheerMore && (e = "url(#" + r, t = "esports-hexagon__mask--cheer-more");
                 var d = /Edge/.test(window.navigator.userAgent) ? 5 : Object(c.b)(window.navigator.userAgent) ? -25 : 0,
                     p = /Edge/.test(window.navigator.userAgent) ? -5 : Object(c.b)(window.navigator.userAgent) ? 8 : 5,
-                    m = /Edge/.test(window.navigator.userAgent) ? 155 : 132,
+                    m = /Edge/.test(window.navigator.userAgent) ? 155 : 131,
                     f = /Edge/.test(window.navigator.userAgent) ? 90 : Object(c.b)(window.navigator.userAgent) ? 150 : 100,
-                    g = Object(c.b)(window.navigator.userAgent) ? 150 : 132,
+                    g = Object(c.b)(window.navigator.userAgent) ? 150 : 131,
                     h = Object(c.b)(window.navigator.userAgent) ? 0 : 10,
                     v = a("esports-hexagon__svg", {
                         "esports-hexagon__svg--large": this.props.size === i.Large
@@ -3364,7 +3353,7 @@ webpackJsonp([38], {
                     flexDirection: l.S.Column
                 }, o.createElement("svg", {
                     className: v,
-                    viewBox: "5 0 90 132"
+                    viewBox: "5 0 90 131"
                 }, o.createElement("defs", null, o.createElement("pattern", {
                     id: u,
                     patternUnits: "userSpaceOnUse",
@@ -3393,29 +3382,6 @@ webpackJsonp([38], {
                     stroke: "none",
                     strokeWidth: "1px",
                     transform: "translate(0, 31)"
-                }), o.createElement("polygon", {
-                    points: "0,0 48,0 0,28",
-                    strokeWidth: "1px",
-                    fill: "none",
-                    transform: ""
-                }), o.createElement("polygon", {
-                    points: "52,100 100.062347,99.750626 100,70",
-                    stroke: "none",
-                    strokeWidth: "1px",
-                    fill: "none",
-                    transform: ""
-                }), o.createElement("polygon", {
-                    points: "100,29.052368 100,0 52,0",
-                    stroke: "none",
-                    strokeWidth: "1px",
-                    fill: "none",
-                    transform: ""
-                }), o.createElement("polygon", {
-                    points: "0,68.578552 49.438904,100 0,100",
-                    stroke: "none",
-                    strokeWidth: "1px",
-                    fill: "none",
-                    transform: ""
                 }), o.createElement("path", {
                     transform: "translate(0, 31)",
                     className: b,
@@ -3424,7 +3390,7 @@ webpackJsonp([38], {
                     className: "esports-hexagon__svg--filtered-image",
                     "data-test-selector": t,
                     filter: e,
-                    points: 0 + h + ",0 " + (100 - h) + ",0 " + (100 - h) + ",132 " + (0 + h) + ",132",
+                    points: 0 + h + ",0 " + (100 - h) + ",0 " + (100 - h) + ",131 " + (0 + h) + ",131",
                     stroke: "none",
                     strokeWidth: "1px",
                     fill: "url(#" + u + ")"
@@ -6134,21 +6100,17 @@ webpackJsonp([38], {
                     }, n
                 }
                 return c.__extends(t, e), t.prototype.componentWillMount = function() {
-                    return c.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n, i;
-                        return c.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, d.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_VARIANT")];
-                                case 1:
-                                    return e = r.sent() || this.state.subsCheckoutVariantAssignment, "owlallaccess2018" === this.props.productShortName && (e = "zuora"), (i = {})[N.ZuoraCreditCard] = "zuora" === e, i[N.RecurlyCreditCard] = "recurly" === e, i[N.RecurlyPaypal] = !("owlallaccess2018" === this.props.productShortName), i[N.RecurlyPayWithAmazon] = !("owlallaccess2018" === this.props.productShortName), i[N.Xsolla] = !0, t = i, this.setState({
-                                        selectedProvider: "recurly" === e ? N.RecurlyCreditCard : N.ZuoraCreditCard,
-                                        subsCheckoutVariantAssignment: e,
-                                        enabledProviders: t
-                                    }), document.querySelector("#recurly-script") ? [2] : ((n = document.createElement("script")).src = "https://js.recurly.com/v4/recurly.js", n.async = !0, n.id = "recurly-script", document.body.appendChild(n), [2])
-                            }
-                        })
-                    })
+                    var e = d.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_VARIANT") || this.state.subsCheckoutVariantAssignment;
+                    "owlallaccess2018" === this.props.productShortName && (e = "zuora");
+                    var t = ((n = {})[N.ZuoraCreditCard] = "zuora" === e, n[N.RecurlyCreditCard] = "recurly" === e, n[N.RecurlyPaypal] = !("owlallaccess2018" === this.props.productShortName), n[N.RecurlyPayWithAmazon] = !("owlallaccess2018" === this.props.productShortName), n[N.Xsolla] = !0, n);
+                    if (this.setState({
+                            selectedProvider: "recurly" === e ? N.RecurlyCreditCard : N.ZuoraCreditCard,
+                            subsCheckoutVariantAssignment: e,
+                            enabledProviders: t
+                        }), !document.querySelector("#recurly-script")) {
+                        var n, i = document.createElement("script");
+                        i.src = "https://js.recurly.com/v4/recurly.js", i.async = !0, i.id = "recurly-script", document.body.appendChild(i)
+                    }
                 }, t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
@@ -7616,16 +7578,9 @@ webpackJsonp([38], {
                     return t.state = {}, t
                 }
                 return c.__extends(t, e), t.prototype.componentWillMount = function() {
-                    return c.__awaiter(this, void 0, void 0, function() {
-                        return c.__generator(this, function(e) {
-                            switch (e.label) {
-                                case 0:
-                                    return this.props.match.params.productShortName ? [4, d.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT")] : [2];
-                                case 1:
-                                    return "no" !== e.sent() || ["testingteamsub", "owlallaccess2018"].includes(this.props.match.params.productShortName) || window.location.assign("/products/" + this.props.match.params.productShortName + this.props.location.search), [2]
-                            }
-                        })
-                    })
+                    if (this.props.match.params.productShortName) {
+                        "no" !== d.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT") || ["testingteamsub", "owlallaccess2018"].includes(this.props.match.params.productShortName) || window.location.assign("/products/" + this.props.match.params.productShortName + this.props.location.search)
+                    }
                 }, t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
@@ -12702,12 +12657,12 @@ webpackJsonp([38], {
             Ae = n("8PKe"),
             Ue = n("p+06"),
             je = (n("HTB+"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    n.state = {
                         isError: !1
-                    }, t.logger = d.o.logger.withCategory("top-nav"), t.renderOnsiteNotifications = function() {
-                        return t.props.isLoggedIn ? u.createElement(B._7, {
+                    }, n.logger = d.o.logger.withCategory("top-nav"), n.renderOnsiteNotifications = function() {
+                        return n.props.isLoggedIn ? u.createElement(B._7, {
                             flexGrow: 0,
                             alignSelf: B.d.Center,
                             flexWrap: B.T.NoWrap,
@@ -12717,7 +12672,7 @@ webpackJsonp([38], {
                             },
                             flexShrink: 0
                         }, u.createElement(k, null)) : null
-                    }, t.renderTwitchPrimeCrown = function(e) {
+                    }, n.renderTwitchPrimeCrown = function(e) {
                         return u.createElement(B._7, {
                             className: "top-nav__prime",
                             flexGrow: 0,
@@ -12728,13 +12683,13 @@ webpackJsonp([38], {
                             alignSelf: B.d.Center,
                             flexWrap: B.T.NoWrap
                         }, !e && u.createElement(Ae.c, null))
-                    }, t.renderStoreLink = function() {
+                    }, n.renderStoreLink = function() {
                         var e = !1;
-                        if (t.props.data) {
-                            if (t.props.data.loading || t.props.data.error) return null;
-                            e = !!t.props.data.currentUser && t.props.data.currentUser.hasPrime
+                        if (n.props.data) {
+                            if (n.props.data.loading || n.props.data.error) return null;
+                            e = !!n.props.data.currentUser && n.props.data.currentUser.hasPrime
                         }
-                        return !t.props.isLoggedIn || e ? null : u.createElement(B._5, {
+                        return !n.props.isLoggedIn || e ? null : u.createElement(B._5, {
                             targetBlank: !0,
                             linkTo: h.a,
                             "data-a-target": "store-link-dropdown",
@@ -12745,11 +12700,11 @@ webpackJsonp([38], {
                                 x: 1
                             }
                         }, Object(d.d)("Store", "TopNav")))
-                    }, t.saveEllipsisRef = function(e) {
-                        return t.ellipsisMenu = e
-                    }, t.onNavigationClicked = function() {
-                        t.ellipsisMenu.toggleBalloon(!1)
-                    }, t.renderBrowseLink = function(e) {
+                    }, n.saveEllipsisRef = function(e) {
+                        return n.ellipsisMenu = e
+                    }, n.onNavigationClicked = function() {
+                        n.ellipsisMenu.toggleBalloon(!1)
+                    }, n.renderBrowseLink = function(e) {
                         var t = e.match,
                             n = t && "following" !== t.params.subpage,
                             i = Object(d.d)("Browse", "TopNav");
@@ -12765,7 +12720,12 @@ webpackJsonp([38], {
                                 }
                             }
                         }, i)
-                    }, t
+                    };
+                    var i = d.o.experiments.getAssignment(y.i);
+                    return n.state = {
+                        inOnboarding: Object(y.n)(i),
+                        isError: !1
+                    }, n
                 }
                 return l.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
                     var n = this;
@@ -12774,20 +12734,6 @@ webpackJsonp([38], {
                     }, function() {
                         n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                             info: t
-                        })
-                    })
-                }, t.prototype.componentDidMount = function() {
-                    return l.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return l.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return this.props.latencyTracking.reportInteractive(), [4, d.o.experiments.getAssignment(y.i)];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        inOnboarding: Object(y.n)(e)
-                                    }), [2]
-                            }
                         })
                     })
                 }, t.prototype.render = function() {
@@ -13037,7 +12983,9 @@ webpackJsonp([38], {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
-                }), Object(v.d)("TopNav")], t)
+                }), Object(v.d)("TopNav", {
+                    autoReportInteractive: !0
+                })], t)
             }(u.Component));
         var Le = Object(r.f)(Object(i.b)(function(e) {
             return {
@@ -13689,7 +13637,7 @@ webpackJsonp([38], {
                     }, a.createElement(F.P, {
                         type: F._44.Span,
                         color: F.J.Alt2
-                    }, Object(o.h)(new Date(this.props.data.updatedAt)))))))), this.renderDeleteNotification()));
+                    }, Object(o.g)(new Date(this.props.data.updatedAt)))))))), this.renderDeleteNotification()));
                     var e, t
                 }, t.prototype.checkVisible = function(e) {
                     return i.__awaiter(this, void 0, void 0, function() {
@@ -14006,7 +13954,7 @@ webpackJsonp([38], {
                         flexShrink: 0
                     }, a.createElement(F._30, {
                         color: F.J.Alt2
-                    }, Object(o.h)(new Date(this.props.item.updatedAt))))))), this.renderActions())))
+                    }, Object(o.g)(new Date(this.props.item.updatedAt))))))), this.renderActions())))
                 }, t.prototype.renderActions = function() {
                     return a.createElement(F._30, {
                         className: "onsite-notification-toast__action-wrapper",
@@ -19883,4 +19831,4 @@ webpackJsonp([38], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-749f5fd2e82489423f8a84ed828bec16.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-708995c5d0539c1734f79848e40bbef1.js.map

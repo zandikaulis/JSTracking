@@ -1,4 +1,4 @@
-webpackJsonp([57], {
+webpackJsonp([56], {
     "+Znq": function(e, t, n) {
         "use strict";
         var r = n("jetF");
@@ -1072,7 +1072,7 @@ webpackJsonp([57], {
             u = n("8PKe"),
             m = n("Odds"),
             p = l.a.wrap(function() {
-                return n.e(79).then(n.bind(null, "HQb3"))
+                return n.e(80).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             f = function(e) {
                 function t() {
@@ -3305,4 +3305,4 @@ webpackJsonp([57], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.bits-347e284bc02137dc1fc923b80bfca7f8.js.map
+//# sourceMappingURL=pages.bits-073c45b3620ddc1e27d4c5344eeb34ef.js.map

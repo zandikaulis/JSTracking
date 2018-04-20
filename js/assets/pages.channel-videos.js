@@ -1,4 +1,4 @@
-webpackJsonp([33, 86], {
+webpackJsonp([33, 90], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -9249,7 +9249,8 @@ webpackJsonp([33, 86], {
                         border: !0,
                         position: N._14.Absolute,
                         elevation: 2,
-                        zIndex: N._57.Above
+                        zIndex: N._57.Above,
+                        fullWidth: !0
                     }, l.createElement(N._7, {
                         margin: {
                             y: .5
@@ -12672,17 +12673,8 @@ webpackJsonp([33, 86], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(e) {
-                            switch (e.label) {
-                                case 0:
-                                    return this.subscribe(this.props.channelID), [4, l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN")];
-                                case 1:
-                                    return "yes" === e.sent() && this.setState({
-                                        raidStorage: new f
-                                    }), [2]
-                            }
-                        })
+                    this.subscribe(this.props.channelID), "yes" === l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN") && this.setState({
+                        raidStorage: new f
                     })
                 }, t.prototype.render = function() {
                     return this.shouldRenderRaidNotification ? a.createElement(L, {
@@ -16306,7 +16298,7 @@ webpackJsonp([33, 86], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(92).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(96).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16318,7 +16310,7 @@ webpackJsonp([33, 86], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(91).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(95).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16330,7 +16322,7 @@ webpackJsonp([33, 86], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(90).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(94).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16342,7 +16334,7 @@ webpackJsonp([33, 86], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(93).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -22337,7 +22329,7 @@ webpackJsonp([33, 86], {
             p = (n("C2pI"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.sortChangeHandler = function(e) {
+                    n.sortChangeHandler = function(e) {
                         n.props.onVideoSortChange(e.target.value)
                     }, n.renderLanguageSelector = function() {
                         return n.props.hideLanguageSelector ? null : r.createElement(m._7, {
@@ -22353,25 +22345,13 @@ webpackJsonp([33, 86], {
                         }
                     }, n.saveBalloonWrapperRef = function(e) {
                         n.balloonWrapperRef = e
-                    }, n.state = {
-                        isPremiereExperimentActive: !1
+                    };
+                    var i = o.o.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW");
+                    return n.state = {
+                        isPremiereExperimentActive: "yes" === i
                     }, n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return i.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, o.o.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        isPremiereExperimentActive: "yes" === e
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e, t = Object(o.d)("All Videos", "VideoFilter"),
                         n = Object(o.d)("Past Premieres", "VideoFilter"),
                         i = Object(o.d)("Past Broadcasts", "VideoFilter"),
@@ -28343,7 +28323,8 @@ webpackJsonp([33, 86], {
                         flexGrow: 1,
                         fullHeight: !0,
                         overflow: b._10.Hidden,
-                        color: b.J.Base
+                        color: b.J.Base,
+                        className: "chat-room__content"
                     }, this.props.chatRoomHeader, e, a.createElement(Mt.a, {
                         badgeSets: this.state.badgeSets,
                         channelID: this.props.channelID,
@@ -41259,4 +41240,4 @@ webpackJsonp([33, 86], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-9cfb1b0465d4cde7d3965d893a8aa4e6.js.map
+//# sourceMappingURL=pages.channel-videos-7ec2117856b0e10c1c10a5f385920185.js.map

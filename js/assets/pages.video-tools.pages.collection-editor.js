@@ -1,4 +1,4 @@
-webpackJsonp([82], {
+webpackJsonp([83], {
     "/brc": function(e, t) {},
     "4o7v": function(e, t, n) {
         "use strict";
@@ -2989,4 +2989,4 @@ webpackJsonp([82], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-c9439b71b09c822c50063cd3711dee06.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-7aa515a63917c278e57a4e7478f45072.js.map

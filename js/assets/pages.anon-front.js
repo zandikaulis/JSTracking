@@ -314,17 +314,8 @@ webpackJsonp([55], {
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(e) {
-                            switch (e.label) {
-                                case 0:
-                                    return [4, o.o.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
-                                case 1:
-                                    return "yes" === e.sent() && o.b.get("premiere_video_manager_staff", !1) && this.setState({
-                                        isPremiereExperimentActive: !0
-                                    }), [2]
-                            }
-                        })
+                    "yes" === o.o.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW") && o.b.get("premiere_video_manager_staff", !1) && this.setState({
+                        isPremiereExperimentActive: !0
                     })
                 }, t.prototype.render = function() {
                     var e = {
@@ -1396,25 +1387,22 @@ webpackJsonp([55], {
                 }), Object(d.d)("TopChannels")], t)
             }(i.Component)),
             I = (n("9zTP"), m.a.wrap(function() {
-                return n.e(80).then(n.bind(null, "yEZg"))
+                return n.e(81).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
             R = m.a.wrap(function() {
-                return n.e(78).then(n.bind(null, "2hMh"))
+                return n.e(79).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
             A = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        takeoverRendered: !1,
-                        numSlotsAdded: 0
-                    }, t.onTakeoverRendered = function() {
-                        t.setState({
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    n.onTakeoverRendered = function() {
+                        n.setState({
                             takeoverRendered: !0
                         })
-                    }, t.renderFeaturedGamesOrGenres = function() {
-                        if (void 0 !== t.state.categoriesExperimentAssignment) {
-                            if (t.state.categoriesExperimentAssignment) {
-                                var e = t.state.categoriesExperimentAssignment === b.a.Streams;
+                    }, n.renderFeaturedGamesOrGenres = function() {
+                        if (void 0 !== n.state.categoriesExperimentAssignment) {
+                            if (n.state.categoriesExperimentAssignment) {
+                                var e = n.state.categoriesExperimentAssignment === b.a.Streams;
                                 return i.createElement(I, {
                                     trackingMedium: f.PageviewMedium.AnonFrontPage,
                                     withStreams: e
@@ -1422,9 +1410,9 @@ webpackJsonp([55], {
                             }
                             return i.createElement(O, null)
                         }
-                    }, t.renderTopCreative = function() {
-                        if (t.state.categoriesExperimentAssignment) {
-                            var e = t.state.categoriesExperimentAssignment === b.a.Streams;
+                    }, n.renderTopCreative = function() {
+                        if (n.state.categoriesExperimentAssignment) {
+                            var e = n.state.categoriesExperimentAssignment === b.a.Streams;
                             return i.createElement(u._30, {
                                 className: "anon-front__content-section",
                                 background: u.m.Base,
@@ -1441,7 +1429,7 @@ webpackJsonp([55], {
                                 withStreams: e
                             }))
                         }
-                    }, t.renderSocialBar = function() {
+                    }, n.renderSocialBar = function() {
                         return i.createElement(u._30, {
                             className: "anon-front__social-container",
                             alignItems: u.c.Center,
@@ -1482,7 +1470,7 @@ webpackJsonp([55], {
                             size: u.y.Large,
                             "data-a-target": "frontpage-blog-link"
                         }, Object(o.d)("Official Blog", "AnonFrontPage"))))
-                    }, t.renderPlatformTopChannels = function() {
+                    }, n.renderPlatformTopChannels = function() {
                         return i.createElement(u._7, null, i.createElement(u._30, {
                             background: u.m.Base,
                             padding: {
@@ -1510,31 +1498,25 @@ webpackJsonp([55], {
                             type: a.Xbox,
                             key: "channels.xbox"
                         })))
-                    }, t.onSlotAdded = function() {
-                        t.setState(function(e) {
+                    }, n.onSlotAdded = function() {
+                        n.setState(function(e) {
                             var t = e.numSlotsAdded + 1;
                             return t === Object.keys(y.b.anonFront).length && v.a.display(y.b.anonFront.takeover), {
                                 numSlotsAdded: t
                             }
                         })
-                    }, t
+                    };
+                    var r = o.o.experiments.getAssignment(b.e);
+                    return n.state = {
+                        categoriesExperimentAssignment: Object(b.k)(r) ? r : null,
+                        takeoverRendered: !1,
+                        numSlotsAdded: 0
+                    }, n
                 }
                 return r.__extends(t, e), t.prototype.componentWillMount = function() {
                     y.g.addListener(y.e, this.onSlotAdded)
                 }, t.prototype.componentDidMount = function() {
-                    return r.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return r.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, o.o.experiments.getAssignment(b.e)];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        categoriesExperimentAssignment: Object(b.k)(e) ? e : null
-                                    }), this.props.latencyTracking.reportInteractive(), o.o.setPageTitle(), [2]
-                            }
-                        })
-                    })
+                    o.o.setPageTitle()
                 }, t.prototype.render = function() {
                     var e = void 0 !== this.state.categoriesExperimentAssignment && !this.state.categoriesExperimentAssignment;
                     return i.createElement(u._7, {
@@ -1639,7 +1621,8 @@ webpackJsonp([55], {
                 }, t.prototype.componentWillUnmount = function() {
                     y.g.removeListener(y.e, this.onSlotAdded)
                 }, t = r.__decorate([Object(d.d)("AnonFrontPage", {
-                    destination: h.a.Index
+                    destination: h.a.Index,
+                    autoReportInteractive: !0
                 }), Object(g.a)({
                     location: f.PageviewLocation.FrontPage
                 })], t)
@@ -2430,7 +2413,7 @@ webpackJsonp([55], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(92).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(96).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2442,7 +2425,7 @@ webpackJsonp([55], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(91).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(95).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2454,7 +2437,7 @@ webpackJsonp([55], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(90).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(94).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2466,7 +2449,7 @@ webpackJsonp([55], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(93).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4981,4 +4964,4 @@ webpackJsonp([55], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-626411bd6110c5eceb0c904618d3af76.js.map
+//# sourceMappingURL=pages.anon-front-2648ca377bbb52b955bc771310fede16.js.map

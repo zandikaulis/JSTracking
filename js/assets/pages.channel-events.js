@@ -8859,7 +8859,8 @@ webpackJsonp([42], {
                         border: !0,
                         position: w._14.Absolute,
                         elevation: 2,
-                        zIndex: w._57.Above
+                        zIndex: w._57.Above,
+                        fullWidth: !0
                     }, l.createElement(w._7, {
                         margin: {
                             y: .5
@@ -12241,17 +12242,8 @@ webpackJsonp([42], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(e) {
-                            switch (e.label) {
-                                case 0:
-                                    return this.subscribe(this.props.channelID), [4, l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN")];
-                                case 1:
-                                    return "yes" === e.sent() && this.setState({
-                                        raidStorage: new f
-                                    }), [2]
-                            }
-                        })
+                    this.subscribe(this.props.channelID), "yes" === l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN") && this.setState({
+                        raidStorage: new f
                     })
                 }, t.prototype.render = function() {
                     return this.shouldRenderRaidNotification ? a.createElement(A, {
@@ -26399,7 +26391,8 @@ webpackJsonp([42], {
                         flexGrow: 1,
                         fullHeight: !0,
                         overflow: b._10.Hidden,
-                        color: b.J.Base
+                        color: b.J.Base,
+                        className: "chat-room__content"
                     }, this.props.chatRoomHeader, e, a.createElement(Rt.a, {
                         badgeSets: this.state.badgeSets,
                         channelID: this.props.channelID,
@@ -32273,19 +32266,19 @@ webpackJsonp([42], {
             value: !0
         });
         var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("GiK3"),
-            o = n("3zLD"),
-            s = n("6sO2"),
-            l = n("zCIC"),
-            d = n("j7/Y"),
-            c = n("w9tK"),
-            u = n("vH/s"),
-            m = n("J4ib"),
-            p = n("SI0h"),
-            h = n("CSlQ"),
-            g = n("RxMT"),
-            f = n("4d+L"),
+            a = n("GiK3"),
+            r = n("3zLD"),
+            o = n("6sO2"),
+            s = n("j7/Y"),
+            l = n("w9tK"),
+            d = n("vH/s"),
+            c = n("J4ib"),
+            u = n("SI0h"),
+            m = n("CSlQ"),
+            p = n("RxMT"),
+            h = n("4d+L"),
+            g = n("OAwv"),
+            f = n("zCIC"),
             v = n("RH2O"),
             b = n("Aj/L"),
             k = n("F8kA"),
@@ -32296,13 +32289,13 @@ webpackJsonp([42], {
             E = n("QdVH");
         var N = n("MQiv"),
             w = n("Odds"),
-            D = Object(h.d)("EventListCard", {
+            D = Object(m.d)("EventListCard", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = new Date(e.event.startAt),
                     n = new Date(e.event.endAt),
-                    a = t > new Date,
-                    o = Object(y.b)(e.event.id),
+                    r = t > new Date,
+                    s = Object(y.b)(e.event.id),
                     l = !(!e.event.self || !e.event.self.isFollowing),
                     d = e.upwardBalloons ? w.q.Top : w.q.Bottom,
                     c = e.upwardBalloons ? w._49.Top : w._49.Bottom,
@@ -32311,11 +32304,11 @@ webpackJsonp([42], {
                     p = null,
                     h = null,
                     g = null;
-                return e.channel && e.channel.id && e.channel.login && (a && (p = r.createElement(w._7, {
+                return e.channel && e.channel.id && e.channel.login && (r && (p = a.createElement(w._7, {
                     margin: {
                         right: 1
                     }
-                }, r.createElement(C.a, {
+                }, a.createElement(C.a, {
                     eventID: e.event.id,
                     eventTypename: e.event.__typename,
                     areNotificationsEnabled: l,
@@ -32323,56 +32316,56 @@ webpackJsonp([42], {
                     channelID: e.channel.id,
                     eventLocation: N.a.ChannelEvents,
                     tooltipDirection: c
-                }))), h = r.createElement(w._7, {
+                }))), h = a.createElement(w._7, {
                     margin: {
                         right: 1
                     }
-                }, r.createElement(E.a, {
+                }, a.createElement(E.a, {
                     id: e.event.id,
                     title: e.event.title,
                     channelLogin: e.channel.login,
                     channelID: e.channel.id,
                     eventLocation: N.a.ChannelEvents,
                     balloonDirection: d
-                })), g = r.createElement(S.a, {
+                })), g = a.createElement(S.a, {
                     targetUser: {
                         id: e.channel.id,
                         displayName: m
                     },
                     eventID: e.event.id,
                     balloonDirection: d
-                })), r.createElement(w._30, {
+                })), a.createElement(w._30, {
                     margin: {
                         y: 1
                     },
                     background: w.m.Base,
                     elevation: 1
-                }, r.createElement(w.B, {
+                }, a.createElement(w.B, {
                     row: !0
-                }, r.createElement(w._1, {
+                }, a.createElement(w._1, {
                     flexShrink: 0
-                }, r.createElement(k.a, {
-                    to: o
-                }, r.createElement(w.D, {
+                }, a.createElement(k.a, {
+                    to: s
+                }, a.createElement(w.D, {
                     size: w.E.Size32,
                     aspect: w.k.Aspect16x9,
                     src: e.event.imageURL,
                     alt: e.event.title
-                }, r.createElement(_.a, {
+                }, a.createElement(_.a, {
                     date: t
-                })))), r.createElement(w.C, null, r.createElement(w._7, {
+                })))), a.createElement(w.C, null, a.createElement(w._7, {
                     margin: {
                         x: 2
                     }
-                }, r.createElement(w._1, {
+                }, a.createElement(w._1, {
                     margin: {
                         bottom: 1
                     }
-                }, r.createElement(k.a, {
-                    to: o
-                }, r.createElement(w.P, {
+                }, a.createElement(k.a, {
+                    to: s
+                }, a.createElement(w.P, {
                     type: w._44.H4
-                }, e.event.title))), r.createElement(w.P, {
+                }, e.event.title))), a.createElement(w.P, {
                     color: w.J.Alt2
                 }, function(e, t) {
                     var n = new Date,
@@ -32393,30 +32386,30 @@ webpackJsonp([42], {
                     }), n.getFullYear() !== t.getFullYear() && (r = i.__assign({}, r, {
                         year: "numeric"
                     })));
-                    var o = Object(s.i)(e, a),
-                        l = Object(s.i)(t, r);
-                    return Object(s.d)("{startTime} - {endTime}", {
-                        startTime: o,
+                    var s = Object(o.i)(e, a),
+                        l = Object(o.i)(t, r);
+                    return Object(o.d)("{startTime} - {endTime}", {
+                        startTime: s,
                         endTime: l
                     }, "EventListCard")
-                }(t, n)), r.createElement(w.P, {
+                }(t, n)), a.createElement(w.P, {
                     color: w.J.Alt2
-                }, Object(s.d)("{channelName} streaming {gameName}", {
+                }, Object(o.d)("{channelName} streaming {gameName}", {
                     channelName: m,
                     gameName: u
-                }, "EventListCard")), r.createElement(w._7, {
+                }, "EventListCard")), a.createElement(w._7, {
                     display: w.Q.Flex,
                     margin: {
                         top: 2
                     }
-                }, p, h, r.createElement(w._7, {
+                }, p, h, a.createElement(w._7, {
                     margin: {
                         right: 1
                     }
-                }, r.createElement(w.u, {
+                }, a.createElement(w.u, {
                     type: w.A.Hollow,
-                    linkTo: o
-                }, Object(s.d)("View Details", "EventListCard"))), g)))))
+                    linkTo: s
+                }, Object(o.d)("View Details", "EventListCard"))), g)))))
             }),
             I = n("4gPk"),
             O = n("Wvoq"),
@@ -32461,48 +32454,48 @@ webpackJsonp([42], {
                     })
                 }
             },
-            R = Object(o.compose)(Object(o.graphql)(O, T), Object(h.d)("ChannelEventsSchedule", {
+            R = Object(r.compose)(Object(r.graphql)(O, T), Object(m.d)("ChannelEventsSchedule", {
                 autoReportInteractive: !0
             }))(function(e) {
                 var t = null,
                     n = null,
                     i = null,
-                    a = !1;
+                    r = !1;
                 return !e.data.loading && !e.data.error && e.data.user && e.data.user.eventLeaves ? (e.data.user.eventLeaves.edges && 0 !== e.data.user.eventLeaves.edges.length ? i = e.data.user.eventLeaves.edges.map(function(e, t, n) {
                     if (!e || !e.node) return null;
                     var i = t === n.length - 1,
-                        a = null;
-                    switch (e.node.channel && e.node.channel.id && e.node.channel.login && (a = {
+                        r = null;
+                    switch (e.node.channel && e.node.channel.id && e.node.channel.login && (r = {
                         id: e.node.channel.id,
                         login: e.node.channel.login,
                         displayName: e.node.channel.displayName
                     }), e.node.__typename) {
                         case "EventLeaf":
-                            return r.createElement(D, {
+                            return a.createElement(D, {
                                 key: e.node.id,
                                 event: e.node,
-                                channel: a,
+                                channel: r,
                                 upwardBalloons: i
                             });
                         default:
                             return null
                     }
-                }) : t = Object(s.d)("Nothing here yet", "ChannelEventsSchedule"), a = e.data.user.eventLeaves.pageInfo.hasNextPage) : e.data.error && (t = Object(s.d)("Error loading events", "ChannelEventsSchedule")), null !== t && (n = r.createElement(w._7, {
+                }) : t = Object(o.d)("Nothing here yet", "ChannelEventsSchedule"), r = e.data.user.eventLeaves.pageInfo.hasNextPage) : e.data.error && (t = Object(o.d)("Error loading events", "ChannelEventsSchedule")), null !== t && (n = a.createElement(w._7, {
                     margin: {
                         top: 5
                     },
                     display: w.Q.Flex,
                     flexDirection: w.S.Row,
                     justifyContent: w._6.Center
-                }, r.createElement(w.P, {
+                }, a.createElement(w.P, {
                     type: w._44.H4,
                     color: w.J.Alt2,
                     italic: !0
-                }, t))), r.createElement(w._7, null, i, n, e.data.loading && r.createElement(w._9, {
+                }, t))), a.createElement(w._7, null, i, n, e.data.loading && a.createElement(w._9, {
                     fillContent: !0
-                }), r.createElement(l.a, {
+                }), a.createElement(f.a, {
                     loadMore: e.loadMore,
-                    enabled: a
+                    enabled: r
                 }))
             });
         var M = Object(v.b)(function(e) {
@@ -32510,14 +32503,58 @@ webpackJsonp([42], {
                     isLoggedIn: Object(b.d)(e)
                 }
             })(R),
-            L = (n("u5xq"), function(e) {
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleToggleChange = function(e) {
                         var n = Object(I.b)(e.currentTarget.value),
-                            r = a.parse(t.props.location.search);
-                        n !== I.a.Future ? r.filter = n : delete r.filter, t.props.history.replace(i.__assign({}, t.props.location, {
-                            search: a.stringify(r)
+                            i = g.parse(t.props.searchQuery);
+                        n !== I.a.Future ? i.filter = n : delete i.filter, t.props.onEventToggle(g.stringify(i))
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = this.props.channelLogin,
+                        t = g.parse(this.props.searchQuery),
+                        n = Object(I.b)(t.filter);
+                    return a.createElement(w._7, {
+                        display: w.Q.Flex,
+                        flexGrow: 1,
+                        fullHeight: !0
+                    }, a.createElement(w._1, {
+                        fullWidth: !0
+                    }, a.createElement(f.b, null, a.createElement(w._7, {
+                        fullWidth: !0,
+                        padding: {
+                            y: 2,
+                            x: 3
+                        }
+                    }, a.createElement(w._24, null, a.createElement(w._25, {
+                        name: "events-toggle",
+                        label: Object(o.d)("Future Events", "ChannelEventsPage"),
+                        defaultChecked: n === I.a.Future,
+                        onChange: this.handleToggleChange,
+                        value: I.a.Future
+                    }), a.createElement(w._25, {
+                        name: "events-toggle",
+                        label: Object(o.d)("Past Events", "ChannelEventsPage"),
+                        defaultChecked: n === I.a.Past,
+                        onChange: this.handleToggleChange,
+                        value: I.a.Past
+                    })), a.createElement(M, {
+                        filter: n,
+                        channelLogin: e
+                    })))))
+                }, t
+            }(a.Component),
+            A = Object(m.d)("ChannelEventsContent", {
+                autoReportInteractive: !0
+            })(L),
+            x = (n("u5xq"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onEventToggle = function(e) {
+                        t.props.history.replace(i.__assign({}, t.props.location, {
+                            search: e
                         }))
                     }, t
                 }
@@ -32526,46 +32563,21 @@ webpackJsonp([42], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.setPageTitle()
                 }, t.prototype.render = function() {
-                    var e = this.props.match.params.channelLogin,
-                        t = a.parse(this.props.location.search),
-                        n = Object(I.b)(t.filter);
-                    return r.createElement(w._7, {
+                    var e = this.props.match.params.channelLogin;
+                    return a.createElement(w._7, {
                         display: w.Q.Flex,
                         flexDirection: w.S.Column,
                         flexWrap: w.T.NoWrap,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, r.createElement(p.a, {
-                        currentPage: p.b.Events,
+                    }, a.createElement(u.a, {
+                        currentPage: u.b.Events,
                         channelLogin: e
-                    }), r.createElement(w._7, {
-                        display: w.Q.Flex,
-                        flexGrow: 1,
-                        fullHeight: !0
-                    }, r.createElement(w._1, {
-                        fullWidth: !0
-                    }, r.createElement(l.b, null, r.createElement(w._7, {
-                        fullWidth: !0,
-                        padding: {
-                            y: 2,
-                            x: 3
-                        }
-                    }, r.createElement(w._24, null, r.createElement(w._25, {
-                        name: "events-toggle",
-                        label: Object(s.d)("Future Events", "ChannelEventsPage"),
-                        defaultChecked: n === I.a.Future,
-                        onChange: this.handleToggleChange,
-                        value: I.a.Future
-                    }), r.createElement(w._25, {
-                        name: "events-toggle",
-                        label: Object(s.d)("Past Events", "ChannelEventsPage"),
-                        defaultChecked: n === I.a.Past,
-                        onChange: this.handleToggleChange,
-                        value: I.a.Past
-                    })), r.createElement(M, {
-                        filter: n,
-                        channelLogin: e
-                    })))), r.createElement(g.b, null, r.createElement(w._30, {
+                    }), a.createElement(A, {
+                        channelLogin: e,
+                        searchQuery: this.props.location.search,
+                        onEventToggle: this.onEventToggle
+                    }), a.createElement(p.b, null, a.createElement(w._30, {
                         className: "channel-events__sidebar",
                         background: w.m.Alt2,
                         display: w.Q.Flex,
@@ -32575,23 +32587,23 @@ webpackJsonp([42], {
                         flexDirection: w.S.Column,
                         flexWrap: w.T.NoWrap,
                         fullHeight: !0
-                    }, r.createElement(f.a, {
+                    }, a.createElement(h.a, {
                         channelLogin: e
-                    })))))
+                    }))))
                 }, t.prototype.setPageTitle = function() {
-                    m.p.setPageTitle(Object(s.d)("{channelName}'s Events", {
+                    c.p.setPageTitle(Object(o.d)("{channelName}'s Events", {
                         channelName: this.props.match.params.channelLogin
                     }, "ChannelEventsPage"))
                 }, t
-            }(r.Component)),
-            A = Object(o.compose)(Object(h.d)("EventCollectionsPage", {
-                destination: c.a.ChannelEvents,
+            }(a.Component)),
+            F = Object(r.compose)(Object(m.d)("EventCollectionsPage", {
+                destination: l.a.ChannelEvents,
                 autoReportInteractive: !0
-            }), Object(d.a)({
-                location: u.PageviewLocation.ChannelEvents
-            }))(L);
+            }), Object(s.a)({
+                location: d.PageviewLocation.ChannelEvents
+            }))(x);
         n.d(t, "ChannelEventsPage", function() {
-            return A
+            return F
         })
     },
     "mR/9": function(e, t) {},
@@ -36737,4 +36749,4 @@ webpackJsonp([42], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-events-70ca5751f9e4222da2b05a65a8bd59b2.js.map
+//# sourceMappingURL=pages.channel-events-e908d28ad9e570a9409b64166798cebe.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([37, 86], {
+webpackJsonp([37, 90], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -4099,7 +4099,7 @@ webpackJsonp([37, 86], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(92).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(96).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4111,7 +4111,7 @@ webpackJsonp([37, 86], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(91).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(95).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4123,7 +4123,7 @@ webpackJsonp([37, 86], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(90).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(94).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4135,7 +4135,7 @@ webpackJsonp([37, 86], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(93).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -18979,21 +18979,11 @@ webpackJsonp([37, 86], {
     vKBL: function(e, t, n) {
         "use strict";
         t.a = function() {
-            return i.__awaiter(this, void 0, void 0, function() {
-                return i.__generator(this, function(e) {
-                    switch (e.label) {
-                        case 0:
-                            return [4, r.o.experiments.getAssignment("TWILIGHT_THEATRE_FULLSCREEN")];
-                        case 1:
-                            return [2, e.sent() || "control"]
-                    }
-                })
-            })
+            return i.o.experiments.getAssignment("TWILIGHT_THEATRE_FULLSCREEN") || "control"
         }, t.b = function(e) {
             return "theatre" === e
         };
-        var i = n("TToO"),
-            r = n("6sO2")
+        var i = n("6sO2")
     },
     vKFS: function(e, t, n) {
         "use strict";
@@ -21533,4 +21523,4 @@ webpackJsonp([37, 86], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-230c074359aefba2e43cca35fddf5f10.js.map
+//# sourceMappingURL=pages.video-watch-d4e687f3ad3df4c643b04681a087b9a2.js.map

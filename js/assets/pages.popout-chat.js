@@ -4021,13 +4021,11 @@ webpackJsonp([34], {
                 id: ""
             },
             ie = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        potentialSpamResolution: "pending"
-                    }, t.renderPotentialSpamPrompt = function() {
-                        if (t.props.spamInfo && "low" !== t.props.spamInfo.likelihood && null === t.props.spamInfo.lastMarkedNotSpamAt) {
-                            if ("pending" === t.state.potentialSpamResolution) return a.createElement(V._7, {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    n.renderPotentialSpamPrompt = function() {
+                        if (n.props.spamInfo && "low" !== n.props.spamInfo.likelihood && null === n.props.spamInfo.lastMarkedNotSpamAt) {
+                            if ("pending" === n.state.potentialSpamResolution) return a.createElement(V._7, {
                                 "data-a-target": ee,
                                 className: "thread-header__potential-spam-prompt",
                                 attachRight: !0,
@@ -4050,17 +4048,17 @@ webpackJsonp([34], {
                             }, a.createElement(V.u, {
                                 "data-a-target": Y,
                                 type: V.A.Alert,
-                                onClick: t.reportSpam,
+                                onClick: n.reportSpam,
                                 size: V.y.Small
                             }, Object(h.d)("Report spam", "ThreadHeader"))), a.createElement(V._7, {
                                 display: V.Q.InlineBlock,
                                 margin: .5
                             }, a.createElement(V.u, {
                                 "data-a-target": X,
-                                onClick: t.markNotSpam,
+                                onClick: n.markNotSpam,
                                 size: V.y.Small
                             }, Object(h.d)("This is not spam", "ThreadHeader")))));
-                            if ("reported" === t.state.potentialSpamResolution && t.interlocutor.displayName) return a.createElement(V._7, {
+                            if ("reported" === n.state.potentialSpamResolution && n.interlocutor.displayName) return a.createElement(V._7, {
                                 "data-a-target": te,
                                 className: "thread-header__potential-spam-prompt",
                                 attachRight: !0,
@@ -4078,61 +4076,52 @@ webpackJsonp([34], {
                                 fontSize: V.U.Size6,
                                 color: V.J.Alt2
                             }, Object(h.d)("Thank you for helping us fight spam. We've blocked {user} from sending you further whispers. You can undo this from the Whisper Settings Menu.", {
-                                user: t.interlocutor.displayName
+                                user: n.interlocutor.displayName
                             }, "ThreadHeader"))), a.createElement(V._7, {
                                 display: V.Q.InlineBlock,
                                 margin: .5
                             }, a.createElement(V.u, {
                                 "data-a-target": Z,
                                 type: V.A.Text,
-                                onClick: t.dismissSpamPrompt,
+                                onClick: n.dismissSpamPrompt,
                                 size: V.y.Small
                             }, Object(h.d)("Dismiss", "ThreadHeader")))))
                         }
                         return null
-                    }, t.reportSpam = function() {
-                        t.props.reportUserMutation(t.interlocutor.id, x.c.Spam, t.props.threadID), t.props.blockUserMutation(t.interlocutor.id, x.b.Other, x.a.Whisper, t.props.participants.currentUser), t.props.setThreadSpamStatusMutation(t.props.threadID, !0), Object(J.l)(t.interlocutor.login, J.a.SpamPropmt), t.setState({
+                    }, n.reportSpam = function() {
+                        n.props.reportUserMutation(n.interlocutor.id, x.c.Spam, n.props.threadID), n.props.blockUserMutation(n.interlocutor.id, x.b.Other, x.a.Whisper, n.props.participants.currentUser), n.props.setThreadSpamStatusMutation(n.props.threadID, !0), Object(J.l)(n.interlocutor.login, J.a.SpamPropmt), n.setState({
                             potentialSpamResolution: "reported"
                         })
-                    }, t.markNotSpam = function() {
-                        t.props.setThreadSpamStatusMutation(t.props.threadID, !1), Object(J.o)(t.props.threadID), t.setState({
+                    }, n.markNotSpam = function() {
+                        n.props.setThreadSpamStatusMutation(n.props.threadID, !1), Object(J.o)(n.props.threadID), n.setState({
                             potentialSpamResolution: "dismissed"
                         })
-                    }, t.dismissSpamPrompt = function() {
-                        t.props.onBlock && t.props.onBlock(t.props.threadID), Object(J.n)(t.props.threadID), t.setState({
+                    }, n.dismissSpamPrompt = function() {
+                        n.props.onBlock && n.props.onBlock(n.props.threadID), Object(J.n)(n.props.threadID), n.setState({
                             potentialSpamResolution: "dismissed"
                         })
-                    }, t.onSettingsClick = function(e) {
+                    }, n.onSettingsClick = function(e) {
                         e.stopPropagation()
-                    }, t.onHeaderActivate = function(e) {
-                        e.target === e.currentTarget && (e.charCode !== k.a.Enter && e.charCode !== k.a.Space || (t.props.onHeaderInteract(), e.stopPropagation()))
-                    }, t.onPresenceClick = function(e, n) {
-                        n.stopPropagation();
-                        var i = t.props.participants.currentUser && t.props.participants.currentUser.friends.edges.find(function(e) {
-                            return !(!e.node || e.node.id !== t.interlocutor.id)
+                    }, n.onHeaderActivate = function(e) {
+                        e.target === e.currentTarget && (e.charCode !== k.a.Enter && e.charCode !== k.a.Space || (n.props.onHeaderInteract(), e.stopPropagation()))
+                    }, n.onPresenceClick = function(e, t) {
+                        t.stopPropagation();
+                        var i = n.props.participants.currentUser && n.props.participants.currentUser.friends.edges.find(function(e) {
+                            return !(!e.node || e.node.id !== n.interlocutor.id)
                         });
-                        t.props.participants.user && i && i.activity ? Object(M.b)({
+                        n.props.participants.user && i && i.activity ? Object(M.b)({
                             context: e,
                             friendActivity: i.activity,
-                            friendLogin: t.props.participants.user.login
+                            friendLogin: n.props.participants.user.login
                         }) : h.j.warn("[ThreadHeader] Attempted to track presence click without required data.")
-                    }, t
+                    };
+                    var i = h.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE");
+                    return n.state = {
+                        potentialSpamResolution: "pending",
+                        hasExtendedRichPresence: "variant_a" === i
+                    }, n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return i.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, h.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE")];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        hasExtendedRichPresence: "variant_a" === e
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = m({
                             "thread-header__title-bar-container": !0,
@@ -5169,25 +5158,14 @@ webpackJsonp([34], {
             }
         }
         var u = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {}, t
+                function t(t) {
+                    var n = e.call(this, t) || this,
+                        i = r.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE");
+                    return n.state = {
+                        hasExtendedRichPresence: "variant_a" === i
+                    }, n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return i.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, r.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE")];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        hasExtendedRichPresence: "variant_a" === e
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.props,
                         t = e.activity,
                         n = e.availability,
@@ -11375,7 +11353,8 @@ webpackJsonp([34], {
                         border: !0,
                         position: T._14.Absolute,
                         elevation: 2,
-                        zIndex: T._57.Above
+                        zIndex: T._57.Above,
+                        fullWidth: !0
                     }, l.createElement(T._7, {
                         margin: {
                             y: .5
@@ -15738,17 +15717,11 @@ webpackJsonp([34], {
                 e.Close = "close", e.Finish = "finish"
             }(D || (D = {}));
         var de = function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.state = {
-                    submitStatus: N.b.Unsubmitted,
-                    showWizard: !1,
-                    openEventSent: !1,
-                    closeEventSent: !1,
-                    userBlocked: !1
-                }, t.handleSubmit = function(e, n, i, r, o) {
-                    return a.__awaiter(t, void 0, void 0, function() {
-                        var t, s, d, c, u = this;
+            function t(t) {
+                var n = e.call(this, t) || this;
+                n.handleSubmit = function(e, t, i, r, o) {
+                    return a.__awaiter(n, void 0, void 0, function() {
+                        var n, s, d, c, u = this;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -15756,7 +15729,7 @@ webpackJsonp([34], {
                                     d = {
                                         userID: this.props.reportContext.targetUserID,
                                         communityID: i || "",
-                                        reason: n
+                                        reason: t
                                     }, a.label = 1;
                                 case 1:
                                     return a.trys.push([1, 3, , 4]), [4, this.props.reportUserInCommunity(Object(m.a)(d))];
@@ -15775,20 +15748,20 @@ webpackJsonp([34], {
                                         u.state.showWizard || u.trackAction(T.Submit)
                                     }), [3, 4];
                                 case 3:
-                                    return t = a.sent(), l.j.error(t, "ReportUserInCommunity Mutation failed."), this.setState({
+                                    return n = a.sent(), l.j.error(n, "ReportUserInCommunity Mutation failed."), this.setState({
                                         submitStatus: N.b.MutationError
                                     }), [3, 4];
                                 case 4:
                                     return [3, 9];
                                 case 5:
                                     s = o === y.a.Whisper ? o : this.props.reportContext.contentType, d = {
-                                        description: n,
+                                        description: t,
                                         reason: e,
                                         content: s,
                                         contentID: this.props.reportContext.contentID,
                                         extra: this.props.reportContext.extra,
                                         targetID: this.props.reportContext.targetUserID
-                                    }, this.props.reportContext.contentType === y.a.Community && this.props.reportContext.extra && (d.description = Object(re.a)(this.props.reportContext.extra, n)), a.label = 6;
+                                    }, this.props.reportContext.contentType === y.a.Community && this.props.reportContext.extra && (d.description = Object(re.a)(this.props.reportContext.extra, t)), a.label = 6;
                                 case 6:
                                     return a.trys.push([6, 8, , 9]), [4, this.props.reportUser(Object(m.a)(d))];
                                 case 7:
@@ -15812,74 +15785,68 @@ webpackJsonp([34], {
                             }
                         })
                     })
-                }, t.handleChildError = function(e) {
-                    return t.setState({
+                }, n.handleChildError = function(e) {
+                    return n.setState({
                         submitStatus: e
                     })
-                }, t.handleClose = function() {
-                    t.props.onClose && t.props.onClose(t.state.submitStatus, t.state.userBlocked)
-                }, t.onBlock = function() {
-                    t.props.blockUserMutation(t.props.reportContext.targetUserID, void 0, void 0, a.__assign({}, t.props.sessionUser, {
+                }, n.handleClose = function() {
+                    n.props.onClose && n.props.onClose(n.state.submitStatus, n.state.userBlocked)
+                }, n.onBlock = function() {
+                    n.props.blockUserMutation(n.props.reportContext.targetUserID, void 0, void 0, a.__assign({}, n.props.sessionUser, {
                         __typename: "User"
-                    })), t.setState({
+                    })), n.setState({
                         userBlocked: !0
                     })
-                }, t.onUnblock = function() {
-                    t.props.unblockUserMutation(t.props.reportContext.targetUserID, a.__assign({}, t.props.sessionUser, {
+                }, n.onUnblock = function() {
+                    n.props.unblockUserMutation(n.props.reportContext.targetUserID, a.__assign({}, n.props.sessionUser, {
                         __typename: "User"
-                    })), t.setState({
+                    })), n.setState({
                         userBlocked: !1
                     })
-                }, t.trackOpen = function(e) {
-                    t.state.openEventSent || (t.state.showWizard ? t.trackWizardAction(w.Open, void 0, e) : t.trackAction(T.Open), t.setState({
+                }, n.trackOpen = function(e) {
+                    n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(w.Open, void 0, e) : n.trackAction(T.Open), n.setState({
                         openEventSent: !0
                     }))
-                }, t.trackClose = function(e, n) {
-                    t.state.closeEventSent || (t.state.showWizard ? t.trackWizardAction(w.Close, n, void 0, e) : t.trackAction(T.Close), t.setState({
+                }, n.trackClose = function(e, t) {
+                    n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(w.Close, t, void 0, e) : n.trackAction(T.Close), n.setState({
                         closeEventSent: !0
                     }))
-                }, t.trackWizardAction = function(e, n, i, a) {
+                }, n.trackWizardAction = function(e, t, i, a) {
                     l.o.tracking.track(h.SpadeEventType.ReportWizardFlowAction, {
-                        ui_context: t.props.reportContext.contentType,
-                        target_user_id: t.props.reportContext.targetUserID,
-                        report_sent: t.state.submitStatus === N.b.Success,
+                        ui_context: n.props.reportContext.contentType,
+                        target_user_id: n.props.reportContext.targetUserID,
+                        report_sent: n.state.submitStatus === N.b.Success,
                         modal_type: "wizard_v1",
-                        extra_user_id: t.props.reportContext.additionalTrackingID,
+                        extra_user_id: n.props.reportContext.additionalTrackingID,
                         action: e,
                         close_type: a,
-                        report_session_id: t.reportID,
-                        current_step: n,
+                        report_session_id: n.reportID,
+                        current_step: t,
                         navigated_to: i
                     })
-                }, t.trackAction = function(e) {
+                }, n.trackAction = function(e) {
                     l.o.tracking.track(h.SpadeEventType.ReportFlowAction, {
-                        ui_context: t.props.reportContext.contentType,
-                        target_user_id: t.props.reportContext.targetUserID,
-                        report_sent: t.state.submitStatus === N.b.Success,
-                        extra_user_id: t.props.reportContext.additionalTrackingID,
+                        ui_context: n.props.reportContext.contentType,
+                        target_user_id: n.props.reportContext.targetUserID,
+                        report_sent: n.state.submitStatus === N.b.Success,
+                        extra_user_id: n.props.reportContext.additionalTrackingID,
                         action: e,
-                        report_session_id: t.reportID
+                        report_session_id: n.reportID
                     })
-                }, t
+                }, n.reportID = Object(p.a)();
+                var i = l.o.experiments.getAssignment("TWILIGHT_NEW_REPORTING_WIZARD");
+                return n.state = {
+                    submitStatus: N.b.Unsubmitted,
+                    showWizard: "yes" === i,
+                    openEventSent: !1,
+                    closeEventSent: !1,
+                    userBlocked: !1
+                }, n
             }
-            return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
+            return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                this.trackOpen()
+            }, t.prototype.componentWillUnmount = function() {
                 this.handleClose(), this.state.showWizard || this.trackClose()
-            }, t.prototype.componentDidMount = function() {
-                return a.__awaiter(this, void 0, void 0, function() {
-                    var e, t = this;
-                    return a.__generator(this, function(n) {
-                        switch (n.label) {
-                            case 0:
-                                return this.reportID = Object(p.a)(), [4, l.o.experiments.getAssignment("TWILIGHT_NEW_REPORTING_WIZARD")];
-                            case 1:
-                                return e = n.sent(), this.setState({
-                                    showWizard: "yes" === e
-                                }, function() {
-                                    t.trackOpen()
-                                }), this.props.latencyTracking.reportInteractive(), [2]
-                        }
-                    })
-                })
             }, t.prototype.render = function() {
                 var e = {
                     onClose: this.handleClose,
@@ -15923,7 +15890,9 @@ webpackJsonp([34], {
                     }
                 }
             }
-        }), Object(g.d)("ReportUser"), Object(c.a)(), Object(u.a)(), Object(o.b)(function(e) {
+        }), Object(g.d)("ReportUser", {
+            autoReportInteractive: !0
+        }), Object(c.a)(), Object(u.a)(), Object(o.b)(function(e) {
             return {
                 sessionUser: e.session.user
             }
@@ -17335,17 +17304,8 @@ webpackJsonp([34], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(e) {
-                            switch (e.label) {
-                                case 0:
-                                    return this.subscribe(this.props.channelID), [4, l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN")];
-                                case 1:
-                                    return "yes" === e.sent() && this.setState({
-                                        raidStorage: new f
-                                    }), [2]
-                            }
-                        })
+                    this.subscribe(this.props.channelID), "yes" === l.o.experiments.getAssignment("TWILIGHT_RAID_AUTO_JOIN") && this.setState({
+                        raidStorage: new f
                     })
                 }, t.prototype.render = function() {
                     return this.shouldRenderRaidNotification ? a.createElement(L, {
@@ -31000,18 +30960,9 @@ webpackJsonp([34], {
                             checkoutButtonTier: t.props.tierPrice
                         })
                     }, t.setPopupExperiment = function() {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            var e;
-                            return i.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        return [4, r.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_POPUP")];
-                                    case 1:
-                                        return e = t.sent(), this.setState({
-                                            hasPopupExperiment: "yes" === e
-                                        }), [2]
-                                }
-                            })
+                        var e = r.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_POPUP");
+                        t.setState({
+                            hasPopupExperiment: "yes" === e
                         })
                     }, t.openCheckout = function() {
                         t.state.hasPopupExperiment && window.open(Object(o.a)(t.props.url, {
@@ -31168,6 +31119,11 @@ webpackJsonp([34], {
                     })
                 }, n.onGiftSelect = function() {
                     n.props.onGiftSelect && n.props.onGiftSelect()
+                }, n.getTierExperimentAssignment = function() {
+                    var e = o.o.experiments.getAssignment("TWILIGHT_MOBILE_SUBS_TIER_NAMES");
+                    n.setState({
+                        tierNameEnabled: "name" === e
+                    })
                 }, n.mapSubbedTierToTabs = function(e) {
                     e.subbedTier === s.a.Prime ? (n.setState({
                         activeTab: i.Prime,
@@ -31319,21 +31275,6 @@ webpackJsonp([34], {
                 }
             }, t.prototype.getPrice = function(e) {
                 return Object(h.d)(this.props.subscriptionProducts) || Object(h.c)(this.props.subscriptionProducts) ? Object(h.a)(e, this.props.isGift) : e.price
-            }, t.prototype.getTierExperimentAssignment = function() {
-                return a.__awaiter(this, void 0, void 0, function() {
-                    return a.__generator(this, function(e) {
-                        switch (e.label) {
-                            case 0:
-                                return [4, o.o.experiments.getAssignment("TWILIGHT_MOBILE_SUBS_TIER_NAMES")];
-                            case 1:
-                                return "name" === e.sent() ? this.setState({
-                                    tierNameEnabled: !0
-                                }) : this.setState({
-                                    tierNameEnabled: !1
-                                }), [2]
-                        }
-                    })
-                })
             }, t = a.__decorate([Object(d.d)("SubTierTabs")], t)
         }(r.Component);
         n.d(t, !1, function() {
@@ -35216,7 +35157,8 @@ webpackJsonp([34], {
                         flexGrow: 1,
                         fullHeight: !0,
                         overflow: b._10.Hidden,
-                        color: b.J.Base
+                        color: b.J.Base,
+                        className: "chat-room__content"
                     }, this.props.chatRoomHeader, e, a.createElement(Rt.a, {
                         badgeSets: this.state.badgeSets,
                         channelID: this.props.channelID,
@@ -37854,36 +37796,22 @@ webpackJsonp([34], {
             d = n("Odds"),
             c = n("lK86"),
             u = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        hasPopupExperiment: !1
-                    }, t.setPopupExperiment = function() {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            var e;
-                            return i.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        return [4, r.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_POPUP")];
-                                    case 1:
-                                        return e = t.sent(), this.setState({
-                                            hasPopupExperiment: "yes" === e
-                                        }), [2]
-                                }
-                            })
-                        })
-                    }, t.handleClick = function() {
-                        return t.openCheckout(), t.props.onClick && t.props.onClick()
-                    }, t.openCheckout = function() {
-                        t.state.hasPopupExperiment && t.props.checkoutURL && t.props.giftRecipient && window.open(Object(s.a)(t.props.checkoutURL, {
-                            recipient: t.props.giftRecipient,
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    n.handleClick = function() {
+                        return n.openCheckout(), n.props.onClick && n.props.onClick()
+                    }, n.openCheckout = function() {
+                        n.state.hasPopupExperiment && n.props.checkoutURL && n.props.giftRecipient && window.open(Object(s.a)(n.props.checkoutURL, {
+                            recipient: n.props.giftRecipient,
                             ref: "gift-subscribe-button"
                         }), "Twitch", "width=1000, height=1100, menubar, toolbar, location, personalbar, scrollbars")
-                    }, t
+                    };
+                    var i = r.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_POPUP");
+                    return n.state = {
+                        hasPopupExperiment: "yes" === i
+                    }, n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.setPopupExperiment()
-                }, t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.checkoutURL ? Object(r.d)("Buy Gift Subscription", "GiftSubscribeButton") : Object(r.d)("Gift Subscription", "GiftSubscribeButton"),
                         t = !!(this.props.data && this.props.data.user && this.props.data.user.self) && this.props.data.user.self.canGift,
                         n = this.props.checkoutURL && this.props.giftRecipient ? Object(s.a)(this.props.checkoutURL, {
@@ -38756,30 +38684,21 @@ webpackJsonp([34], {
             l = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.onHistoryChange = function(e) {
+                    n.onHistoryChange = function(e) {
                         n.setState({
                             currentPathname: e.pathname
                         })
                     }, n.shouldShow = function() {
                         return n.props.link && n.state.currentPathname !== n.props.link.pathname
-                    }, n.state = {
-                        currentPathname: location.pathname
+                    };
+                    var i = r.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE");
+                    return n.state = {
+                        currentPathname: location.pathname,
+                        hasExtendedRichPresence: "variant_a" === i
                     }, n
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return i.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return this.historyUnlisten = r.o.history.listen(this.onHistoryChange), [4, r.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE")];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        hasExtendedRichPresence: "variant_a" === e
-                                    }), [2]
-                            }
-                        })
-                    })
+                    this.historyUnlisten = r.o.history.listen(this.onHistoryChange)
                 }, t.prototype.componentWillUnmount = function() {
                     this.historyUnlisten()
                 }, t.prototype.render = function() {
@@ -48549,4 +48468,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-9b4555da873a5e7a64987943aaca1f6c.js.map
+//# sourceMappingURL=pages.popout-chat-a838a1027329dcb7215208f750057f9d.js.map

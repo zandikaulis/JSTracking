@@ -2078,9 +2078,7 @@ webpackJsonp([51], {
                         showMessage: n
                     }), o.createElement(O._7, {
                         className: a,
-                        margin: {
-                            top: 1
-                        }
+                        padding: 2
                     }, o.createElement(O._7, {
                         display: O.Q.Flex
                     }, o.createElement(O.j, {
@@ -3855,15 +3853,14 @@ webpackJsonp([51], {
                     }, this.getLabelFromType())));
                     return this.renderLink(e)
                 }, t.prototype.renderLink = function(e) {
-                    var t = "clips-social-button__link " + this.addSocialClassModifier("clips-social-button__link");
                     return this.isLink() ? a.createElement("a", {
                         href: this.getLinkTarget(),
                         target: "_blank",
                         onClick: this.onShareClick,
-                        className: t
+                        "data-test-selector": "clips-social-button__link"
                     }, e) : a.createElement("div", {
                         onClick: this.copyPageUrl,
-                        className: t
+                        "data-test-selector": "clips-social-button__link"
                     }, e)
                 }, t
             }(a.Component)),
@@ -5654,7 +5651,7 @@ webpackJsonp([51], {
                     fullHeight: !0,
                     fullWidth: !0
                 }, a.createElement("iframe", {
-                    src: r.o.config.playerBaseURL + "/?player=" + this.props.playerType + "&clip=" + this.state.initialSlug + "&origin=" + window.location.origin + "&branding=false&externalfullscreen=" + e,
+                    src: r.o.config.playerBaseURL + "/?player=" + this.props.playerType + "&clip=" + this.state.initialSlug + "&origin=" + window.location.origin + "&branding=false&playsinline=true&externalfullscreen=" + e,
                     frameBorder: "0",
                     scrolling: "no",
                     allowFullScreen: !0,
@@ -5972,4 +5969,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-97b706ea8146c2468996cfc11ee542dc.js.map
+//# sourceMappingURL=sites.clips.pages.create-eaa4f2d9cd472c649ee3d2ed6d88b854.js.map
