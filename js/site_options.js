@@ -1191,14 +1191,14 @@ window.SiteOptions = {
         },
         "326523fd-48bf-4043-9635-7bef334069e0": {
             "name": "TWILIGHT_AUTOMOD_LAUNCH",
-            "v": 3570,
+            "v": 3572,
             "t": 1,
             "groups": [{
                 "weight": 0,
-                "value": "true"
+                "value": "yes"
             }, {
                 "weight": 100,
-                "value": "false"
+                "value": "no"
             }]
         },
         "33a4ec99-5100-4831-b04a-f6a725c334f5": {

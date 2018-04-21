@@ -60,7 +60,7 @@ window.__twilightSettings = {
     "prime_free_game_offerids": ["24b121ff-c28c-3ec7-1aa7-6bf48a1369ce", "eeb0140c-4e6e-c4f7-b996-2514b73bad16", "16b0a758-b6f5-5b28-9fd2-d783bb56d479", "16ae8ce0-a549-1636-392b-de7974041046", "e4b0b372-e2df-1d53-c62a-9973e88a5283"],
     "prime_landing_page_base_url": "https://twitch.amazon.com/prime",
     "prime_promo_content_base_url": "https://twitch.amazon.com/prime",
-    "prime_subsite_up": true,
+    "prime_subsite_up": false,
     "quantcast_account": "p-16uNVwiyGoWyg",
     "quantcast_labels": "gaming",
     "quantcast_url": "https://edge.quantserve.com/quant.js",
@@ -276,14 +276,14 @@ window.__twilightSettings = {
         },
         "326523fd-48bf-4043-9635-7bef334069e0": {
             "name": "TWILIGHT_AUTOMOD_LAUNCH",
-            "v": 3570,
+            "v": 3572,
             "t": 1,
             "groups": [{
                 "weight": 0,
-                "value": "true"
+                "value": "yes"
             }, {
                 "weight": 100,
-                "value": "false"
+                "value": "no"
             }]
         },
         "3763f4e7-c786-4000-a6c3-b91b9c774302": {
