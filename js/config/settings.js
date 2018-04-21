@@ -93,7 +93,7 @@ window.__twilightSettings = {
     "twitch_prime_fortnite_offer_id": "d2b1726e-ebd9-05a2-95ee-9d37fcfd0a8a",
     "twitch_prime_fortnite_signup_url": "https://twitch.amazon.com/prime/country",
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
-    "update_manager_enabled": true,
+    "update_manager_enabled": false,
     "viewer_milestones_enabled": true,
     "withgraphql_retry_delay_backoff_multiplier": 3,
     "withgraphql_retry_enabled": true,
