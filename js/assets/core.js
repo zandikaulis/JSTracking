@@ -16794,7 +16794,7 @@ webpackJsonp([71], {
             d = "detector_urls",
             u = function() {
                 function e(e) {
-                    this.detect = !1, this.detected = !1, this.blockDetectorURLS = [], this.logger = e.logger.withCategory("ad-block-detector"), this.blockDetectorURLS = e.dynamicSettings.get(d, ["https://pubads.g.doubleclick.net/|"]), this.logger.debug("Created.")
+                    this.detected = !1, this.blockDetectorURLS = [], this.storage = e.storage, this.detected = this.detected || this.storage.get("blockDetector.detected", !1), this.logger = e.logger.withCategory("ad-block-detector"), this.blockDetectorURLS = e.dynamicSettings.get(d, ["https://pubads.g.doubleclick.net/|"]), this.logger.debug("Created.")
                 }
                 return e.prototype.detectAdBlock = function() {
                     this.logger.debug("Start ad block tests."), this.blockDetectorURLS.forEach(this.testAccessToURL.bind(this)), this.detectEasyListPrivacy()
@@ -16808,7 +16808,7 @@ webpackJsonp([71], {
                     }).catch(function(n) {
                         t.logger.debug(e, "is unreachable.", {
                             err: n
-                        }), t.detect = !0, t.detected = !0
+                        }), t.setBlockDetectedToTrue()
                     })
                 }, e.prototype.detectEasyListPrivacy = function() {
                     var e = this,
@@ -16835,14 +16835,14 @@ webpackJsonp([71], {
                     }).catch(function(t) {
                         e.logger.debug("Spade unreachable: ", {
                             err: t
-                        }), e.detect = !0, e.detected = !0
+                        }), e.setBlockDetectedToTrue()
                     })
                 }, e.prototype.addTwitchGlobal = function() {
-                    window.Twitch || (window.Twitch = {}), window.Twitch.sentinel ? this.logger.debug("Sentinel global already exists.", {
-                        sentinel: window.Twitch.sentinel
-                    }) : (window.Twitch.sentinel = this, window.Twitch.blockDetector ? this.logger.debug("Block Detecter global already exists.", {
+                    window.Twitch || (window.Twitch = {}), window.Twitch.blockDetector ? this.logger.debug("Block Detecter global already exists.", {
                         blockDetector: window.Twitch.blockDetector
-                    }) : (window.Twitch.blockDetector = this, this.logger.debug("Setting global sentinel.")))
+                    }) : (window.Twitch.blockDetector = this, this.logger.debug("Setting global sentinel."))
+                }, e.prototype.setBlockDetectedToTrue = function() {
+                    this.storage.set("blockDetector.detected", !0), this.detected = !0
                 }, e
             }(),
             p = n("TToO"),
@@ -18555,6 +18555,7 @@ webpackJsonp([71], {
                     a.sentinel.report(e.flush())
                 }), this.adBlockDetector = new u({
                     dynamicSettings: this.dynamicSettings,
+                    storage: this.storage,
                     logger: this.logger
                 }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new U({
                     config: this.config,
@@ -46188,11 +46189,13 @@ webpackJsonp([71], {
                                 bidTimeout: 2e3
                             }, e)
                         }, r.onerror = function() {
-                            return n()
+                            a.o.adBlockDetector.setBlockDetectedToTrue(), n()
                         }, t.containerRef && t.containerRef.appendChild(r), i
                     }, t.injectGoogleTag = function(e) {
                         var n = document.createElement("script");
-                        n.async = !0, n.src = E, t.containerRef && t.containerRef.appendChild(n), f.a.initialize(S.i);
+                        n.async = !0, n.src = E, t.containerRef && t.containerRef.appendChild(n), n.onerror = function() {
+                            return a.o.adBlockDetector.setBlockDetectedToTrue()
+                        }, f.a.initialize(S.i);
                         var i = y.parse(window.location.search).campaign || "";
                         return i && t.logger.debug("Setting campaign", i), f.a.setAppWideTracking("campaign", i), f.a.setAppWideTracking("server", a.a.buildType === _.a.Production ? "production" : "dev"), f.a.setAppWideTracking("salt", "true"), f.a.setAppWideTracking("kuid", window.Krux && window.Krux.user || ""), f.a.setAppWideTracking("loggedin", e.data.currentUser ? "true" : "false"), e.trackingSet(), t.logger.debug("Tracking is set"), Promise.resolve()
                     }, t.setContainerRef = function(e) {
@@ -49411,4 +49414,4 @@ webpackJsonp([71], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-739f8c4f05ac5c8ff07abc4e1319e46c.js.map
+//# sourceMappingURL=core-f079f24354a8cc7abcd4f24f70bdc891.js.map
