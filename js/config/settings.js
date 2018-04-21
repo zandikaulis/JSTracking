@@ -274,6 +274,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "326523fd-48bf-4043-9635-7bef334069e0": {
+            "name": "TWILIGHT_AUTOMOD_LAUNCH",
+            "v": 3570,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "true"
+            }, {
+                "weight": 100,
+                "value": "false"
+            }]
+        },
         "3763f4e7-c786-4000-a6c3-b91b9c774302": {
             "name": "twilight_fenix_down",
             "v": 2839,
