@@ -702,7 +702,7 @@ window.__twilightSettings = {
         },
         "ba473bec-1ad3-4b55-9b3e-fdc002ba695c": {
             "name": "twilight_prime_sub_credit_api_wexit",
-            "v": 3578,
+            "v": 3580,
             "t": 1,
             "groups": [{
                 "weight": 100,
