@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".77b2d926ad2a5eaa6677.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".75552a4ca7107310f051.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -2677,7 +2677,7 @@
             }), t({
                 type: j,
                 stream: O
-            }), t(Object(S.c)(O)), t(Object(E.p)(O.channel)), t(Object(E.w)(O.channel))
+            }), t(Object(S.c)(O)), t(Object(E.q)(O.channel)), t(Object(E.x)(O.channel))
         }
 
         function c() {
@@ -3508,7 +3508,7 @@
                         menuState: t.menuState
                     });
                 case i.j:
-                    return s()({}, e, {
+                    return !t.notification && e.notification && e.notification.timer && clearTimeout(e.notification.timer), s()({}, e, {
                         notification: t.notification
                     });
                 case i.e:
@@ -10374,7 +10374,7 @@
             return L
         }), n.d(t, "n", function() {
             return M
-        }), t.t = a, t.u = s, t.o = u, t.v = c, t.s = d, t.x = f, t.p = p, t.w = h, t.r = m, t.q = y;
+        }), t.u = a, t.v = s, t.p = u, t.w = c, t.o = l, t.t = d, t.y = f, t.q = p, t.x = h, t.s = m, t.r = y;
         var v = n(7),
             g = n.n(v),
             b = n(85),
@@ -28245,17 +28245,17 @@
             K = function(e) {
                 return {
                     onHover: function(t) {
-                        e(Object(q.q)(t))
+                        e(Object(q.r)(t))
                     },
                     onIdentityToggle: function(t) {
-                        e(Object(q.s)(t.id))
+                        e(Object(q.t)(t.id))
                     },
                     onMenuTransition: function(t) {
                         var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F.d;
-                        e(Object(q.t)(t, n))
+                        e(Object(q.u)(t, n))
                     },
                     closeExtensionMenu: function() {
-                        e(Object(q.o)())
+                        e(Object(q.p)())
                     }
                 }
             },
@@ -30389,7 +30389,7 @@
                         e(Object(L.t)(t))
                     },
                     onIdentityToggle: function(t) {
-                        e(Object(Me.s)(t.id))
+                        e(Object(Me.t)(t.id))
                     },
                     onMenuTransition: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Le.d;
@@ -31479,7 +31479,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.20-201746+7ae0551cbf97ed6bac969b04a18bc6d32f057f7b",
+                    app_version: "2018.04.23-193246+17d0cef40319a5be68f313ac6425e4a09b912587",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -34267,20 +34267,13 @@
                 n = e.isLive,
                 r = e.onClose,
                 i = e.t,
-                o = null,
-                a = null;
+                o = null;
             if (n) {
-                var s = t.hlsLatencyBroadcaster,
-                    u = t.hlsLatencyEncoder;
+                var a = t.hlsLatencyBroadcaster;
                 o = nl.a.createElement(Jy, {
                     statName: "Latency To Broadcaster",
                     value: i("{{time}} sec.", {
-                        time: s.toFixed(2)
-                    })
-                }), a = nl.a.createElement(Jy, {
-                    statName: "Latency To Encoder",
-                    value: i("{{time}} sec.", {
-                        time: u.toFixed(2)
+                        time: a.toFixed(2)
                     })
                 })
             }
@@ -34308,7 +34301,7 @@
                 value: i("{{time}} sec.", {
                     time: t.bufferSize
                 })
-            }), o, a, nl.a.createElement(Jy, {
+            }), o, nl.a.createElement(Jy, {
                 statName: "Playback Rate",
                 value: t.playbackRate + " Kbps"
             }), nl.a.createElement(Jy, {
@@ -37185,7 +37178,7 @@
                 }]), e
             }(),
             es = n(102),
-            ts = "//video-edge-af348a.sjc01.hls.ttvnw.net/v1/segment/CsyGNkLQ-yzLO3EPV-I7QNFUVNk2aqoQ-SWE6gURvJroVfbVdu128AQhMGfW3kknDMTAIv7uVE3fcbU1GGFxkNcjcjniW9kE-aT2Yxm4-Px7COha0QTD4BOjlFCUlNxCCbAQEjyRHXa4feWpWel3P6K8sbWD5MbjyAxbHTEbfCNI3MUsWiG3R8EnmvJnBZu_05mquZ8RqWLz3OEX34WDLRIQ0jH1c6LPuZb3jXZVyHV0fHRWY1q8ajveT1ltOlf-3HV7C0RVry8c5b3pBd7zmWTcm6mgpg-Y9lU3acfF83hRpT_CpXkrYvOjfaDE3Dw8ghectAQwlXXKiAbeRoWZMuealV8N5HzJgKPROoLl3mAnP7tLA6y_W1Py79j8tIVR6N-aoagkx2nCAA-8Ay5KV-GLRHESCFE1vM7jLAUCTBbP7lhhAAhcuT-L0zA05u2tCgtklTSilbwV8h9b5InXQpzhbVu2nZaurx4dv3y_BGbdpLHiGvf0x7qoPdD9Fs4ntDAvYzH-Q1sbF-z-fzGA-oVL.ts",
+            ts = "//video-edge-ad5e17.sjc01.hls.ttvnw.net/v1/segment/CrDBDop-7Ma0fglV7yTU9xgUnqld6J4ipGeVeCORFu9fyjGpgHB0OMApjph8eyiGD8logJOQVMdSdlB7ArqlVi7XbTQUFOG68vKyK3GQcztKwZzBvTvYRI2sH_LikpvQsaMK1htcTqALNvHUdvf6WTrPhnXR-Y62Ijn_zkzwWphbhKdGFKsSvwKp7mhjfSP1MHL9X50jEDksBF_90ZZQw2YZupyQYbcNvCk2OT9lZWqLmFMZbX_6D5xeTj-HhMjy2EmbHhH3_Hu04TEwjpbM5-0k8LTwfEjUm2sqP2ypw2huCzDYjXXayrg5mnCJ5K03T5n4Yf9I0GLKRWvxosBdLnwkza3YG-NEbskg7fktnSLuJ3RnDhWU8qdI7WeiVQc9R06h1zYQvZ3gK17yfF2Kdbn581vvcwZUZybpl7idF-QZPw211EUp1j6H3d5ItpFDHuwt3FqrLwNWL4VUS0u9tmVa2RRMM2zP-s3lueiE6GnkQX87xILD1zQevQJnZQTNYmc6I98x9kWspG3z7Eeu4aFWusSnkb7.ts",
             ns = n(49),
             rs = n(261),
             is = n(135),
@@ -41933,6 +41926,7 @@
                 onIdShareRequested: Jl.a.func.isRequired,
                 onModalRequested: Jl.a.func.isRequired,
                 onModalNotification: Jl.a.func.isRequired,
+                clearExtensionNotification: Jl.a.func.isRequired,
                 onModalClose: Jl.a.func.isRequired,
                 onPurchaseIntent: Jl.a.func.isRequired,
                 openIdSharePuzzleMenu: Jl.a.func.isRequired,
@@ -41991,26 +41985,29 @@
                         e(Object(Ju.i)())
                     },
                     onIdentityLinked: function(t, n) {
-                        e(Object(yp.x)(t, n))
+                        e(Object(yp.y)(t, n))
                     },
                     onModalRequested: function(t, n) {
-                        e(Object(yp.u)(t, n))
-                    },
-                    onModalNotification: function(t, n) {
                         e(Object(yp.v)(t, n))
                     },
-                    onModalClose: function() {
+                    onModalNotification: function(t, n) {
+                        e(Object(yp.w)(t, n))
+                    },
+                    clearExtensionNotification: function() {
                         e(Object(yp.o)())
+                    },
+                    onModalClose: function() {
+                        e(Object(yp.p)())
                     },
                     onPurchaseIntent: function(t, n) {
                         var r = {
                             payload: t,
                             makePurchase: n
                         };
-                        e(Object(yp.r)(r))
+                        e(Object(yp.s)(r))
                     },
                     onIdShareRequested: function(t) {
-                        e(Object(yp.t)(t, Gf.e))
+                        e(Object(yp.u)(t, Gf.e))
                     },
                     openIdSharePuzzleMenu: function() {
                         e(Object(_c.s)(Gf.e))
@@ -42190,7 +42187,7 @@
                 }, {
                     key: "_onModalRequested",
                     value: function(e, t) {
-                        if (t.action === Ss.f.IdShareRequest) return void(this.hasOneOverlayExtension ? this.props.openIdSharePuzzleMenu() : this.props.onIdShareRequested(e));
+                        if (this.props.clearExtensionNotification(), t.action === Ss.f.IdShareRequest) return void(this.hasOneOverlayExtension ? this.props.openIdSharePuzzleMenu() : this.props.onIdShareRequested(e));
                         t.action === Ss.f.UseBitsPromptRequired && t.options.payload && this.props.setBitsBalance(t.options.payload.bitsBalance), this.props.onModalRequested(e, t)
                     }
                 }, {
@@ -42264,7 +42261,7 @@
             Fp = function(e) {
                 return {
                     clearPurchaseIntent: function() {
-                        e(Object(yp.r)(null))
+                        e(Object(yp.s)(null))
                     }
                 }
             };
@@ -44090,7 +44087,6 @@
                     skippedFrames: Jl.a.number,
                     fps: Jl.a.number,
                     hlsLatencyBroadcaster: Jl.a.number,
-                    hlsLatencyEncoder: Jl.a.number,
                     memoryUsage: Jl.a.string,
                     playbackRate: Jl.a.number,
                     videoResolution: Jl.a.string,
@@ -44121,7 +44117,6 @@
                     skippedFrames: Jl.a.number,
                     fps: Jl.a.number,
                     hlsLatencyBroadcaster: Jl.a.number,
-                    hlsLatencyEncoder: Jl.a.number,
                     memoryUsage: Jl.a.string,
                     playbackRate: Jl.a.number,
                     videoResolution: Jl.a.string,
