@@ -386,20 +386,20 @@ webpackJsonp([68], {
                 }, n.prototype.renderMetadataLeft = function() {
                     return this.props.channel.stream && this.props.channel.stream.game ? this.props.channel.stream.game.name : null
                 }, n.prototype.renderMetadataRight = function() {
-                    return this.props.channel.stream && this.props.channel.stream.id ? a.createElement(k._7, {
-                        display: k.Q.Flex,
+                    return this.props.channel.stream && this.props.channel.stream.id ? a.createElement(k._8, {
+                        display: k.R.Flex,
                         alignItems: k.c.Center
-                    }, a.createElement(k.F, {
-                        status: k.H.Live,
-                        size: k.G.Small
-                    }), a.createElement(k._7, {
+                    }, a.createElement(k.G, {
+                        status: k.I.Live,
+                        size: k.H.Small
+                    }), a.createElement(k._8, {
                         margin: {
                             left: .5
                         }
                     }, Object(r.e)(this.props.channel.stream.viewersCount || 0))) : null
                 }, n.prototype.renderTooltipContent = function() {
-                    if (this.props.channel.stream && this.props.channel.broadcastSettings && this.props.channel.broadcastSettings.title) return a.createElement(k.P, {
-                        color: k.J.Base
+                    if (this.props.channel.stream && this.props.channel.broadcastSettings && this.props.channel.broadcastSettings.title) return a.createElement(k.Q, {
+                        color: k.K.Base
                     }, this.props.channel.broadcastSettings.title)
                 }, n = i.__decorate([Object(c.d)("SubscribedChannel", {
                     autoReportInteractive: !0
@@ -444,12 +444,12 @@ webpackJsonp([68], {
                         var n = this.renderShowMore();
                         n && e.push(n)
                     }
-                    return a.createElement(k._7, {
+                    return a.createElement(k._8, {
                         className: "subscribed-channels"
                     }, a.createElement(p.a, {
                         title: Object(r.d)("Subscribed Channels", "SubscribedChannels"),
                         collapsed: this.props.collapsed,
-                        collapsedIcon: k._21.Star
+                        collapsedIcon: k._23.Star
                     }), e)
                 }, n.prototype.renderSubscribedChannels = function() {
                     var e = [];
@@ -492,4 +492,4 @@ webpackJsonp([68], {
             }), Object(c.d)("SubscribedChannels"))(f)
     }
 });
-//# sourceMappingURL=features.side-nav.components.subscribed-channels.component-85f826c1f70a4959f2024228da6ccba2.js.map
+//# sourceMappingURL=features.side-nav.components.subscribed-channels.component-fa159f2efb08b797a64bb14248555edd.js.map

@@ -12391,18 +12391,18 @@ webpackJsonp([72], {
                             o.track(s.BitsModalDataScience.UseBitsInitialization), e(t)
                         }
                     }, this.resultCallback = function(e) {
-                        e.didConfirm ? (o.track(s.BitsModalDataScience.UseBitsConfirmation), o.useBitsInExtension(o.transactionId, e.didConfirm)) : (o.failReason = a.ExtensionUseBitsFailReason.Cancelled, o.close())
+                        return e.didConfirm ? (o.track(s.BitsModalDataScience.UseBitsConfirmation), o.useBitsInExtension(o.transactionId, e.didConfirm)) : (o.failReason = a.ExtensionUseBitsFailReason.Cancelled, Promise.resolve(o.close()))
                     }, this.unsubscribeCallback = function() {}, this.useBitsInExtension = function(e, t) {
-                        (0, u.linkUser)(o.extensionId, o.token, !0).then(function(n) {
+                        return (0, u.linkUser)(o.extensionId, o.token, !0).then(function(n) {
                             var u = n.token;
                             return c.tokenManager.registerToken(o.extensionId, u), (0, r.useBits)(e).then(function(e) {
-                                e.transaction_id;
-                                var n = {
-                                    action: i.FunctionAction.UseBitsComplete,
-                                    didConfirm: t,
-                                    didUseBits: !0
-                                };
-                                o.track(s.BitsModalDataScience.UseBitsSuccess), o.replyCallback(n)
+                                var n = e.bits_balance,
+                                    r = {
+                                        action: i.FunctionAction.UseBitsComplete,
+                                        didConfirm: t,
+                                        didUseBits: !0
+                                    };
+                                return o.track(s.BitsModalDataScience.UseBitsSuccess), o.replyCallback(r), n
                             }).catch(function(e) {
                                 o.handleUseBitsError(e, a.ExtensionUseBitsFailReason.UseBitsFailure, s.BitsModalDataScience.UseBitsFailure)
                             })
@@ -36008,4 +36008,4 @@ webpackJsonp([72], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-145575d7234993d29790ed97675f5ca3.js.map
+//# sourceMappingURL=vendor-8b4f1474c53b0a53446b4d7e8a12b7bd.js.map

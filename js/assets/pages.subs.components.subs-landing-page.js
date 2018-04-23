@@ -337,12 +337,12 @@ webpackJsonp([85], {
                         className: "followed-channel-link",
                         to: "/subs/" + this.props.followedChannel.login,
                         onClick: this.handleClick
-                    }, a.createElement(w._7, {
-                        textAlign: w._40.Center,
+                    }, a.createElement(w._8, {
+                        textAlign: w._42.Center,
                         padding: {
                             bottom: 1
                         }
-                    }, a.createElement(w._1, {
+                    }, a.createElement(w._2, {
                         margin: {
                             bottom: 1
                         }
@@ -350,14 +350,14 @@ webpackJsonp([85], {
                         className: "followed-channel-link__avatar",
                         src: e,
                         alt: this.props.followedChannel.displayName
-                    })), a.createElement(w._1, {
+                    })), a.createElement(w._2, {
                         margin: {
                             top: 0,
                             bottom: 1
                         }
-                    }, a.createElement(w.P, {
+                    }, a.createElement(w.Q, {
                         className: "followed-channel-link__name",
-                        color: w.J.Link,
+                        color: w.K.Link,
                         ellipsis: !0,
                         noWrap: !0
                     }, this.props.followedChannel.displayName))))
@@ -379,7 +379,7 @@ webpackJsonp([85], {
                     }, t.onLoginClick = function(e) {
                         e.preventDefault(), t.props.login()
                     }, t.getFollowedChannels = function() {
-                        if (t.props.data.loading || t.props.data.error) return [a.createElement(w._13, {
+                        if (t.props.data.loading || t.props.data.error) return [a.createElement(w._14, {
                             key: "followed-channels-placeholder-1",
                             height: 96
                         })];
@@ -390,7 +390,7 @@ webpackJsonp([85], {
                                 onClick: t.onFollowClick
                             })
                         });
-                        return e.length < 1 ? [a.createElement(w.P, {
+                        return e.length < 1 ? [a.createElement(w.Q, {
                             key: "followed-channels_empty"
                         }, t.messages.emptyFollows)] : e
                     }, t.onFollowClick = function(e, n) {
@@ -402,12 +402,12 @@ webpackJsonp([85], {
                             clickthroughLocation: "followed"
                         })
                     }, t.getShowMore = function() {
-                        return !t.props.data.loading && !t.props.data.error && t.props.data.currentUser.follows && t.props.data.currentUser.follows.pageInfo && t.props.data.currentUser.follows.pageInfo.hasNextPage ? a.createElement(w._7, {
+                        return !t.props.data.loading && !t.props.data.error && t.props.data.currentUser.follows && t.props.data.currentUser.follows.pageInfo && t.props.data.currentUser.follows.pageInfo.hasNextPage ? a.createElement(w._8, {
                             className: "subs-landing-followed-channels__show-more",
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(w.u, {
+                        }, a.createElement(w.v, {
                             fullWidth: !0,
                             onClick: t.onShowMore
                         }, t.messages.showMore)) : null
@@ -425,34 +425,34 @@ webpackJsonp([85], {
                         })
                     }
                 }, t.prototype.render = function() {
-                    return this.props.isLoggedIn ? a.createElement(w._7, {
+                    return this.props.isLoggedIn ? a.createElement(w._8, {
                         className: "subs-landing-followed-channels",
-                        display: w.Q.Flex,
+                        display: w.R.Flex,
                         alignItems: w.c.Center,
-                        flexDirection: w.S.Column,
+                        flexDirection: w.T.Column,
                         fullWidth: !0
-                    }, a.createElement(w._1, {
+                    }, a.createElement(w._2, {
                         margin: {
                             top: 3,
                             bottom: 2
                         }
-                    }, a.createElement(w.P, {
-                        type: w._44.H3,
-                        color: w.J.Link,
+                    }, a.createElement(w.Q, {
+                        type: w._46.H3,
+                        color: w.K.Link,
                         bold: !0,
                         className: "subs-landing-followed-channels__title"
-                    }, this.messages.title)), a.createElement(w._50, {
+                    }, this.messages.title)), a.createElement(w._52, {
                         center: !0,
-                        gutterSize: w._52.Small
-                    }, this.getFollowedChannels()), this.getShowMore()) : a.createElement(w._7, {
-                        textAlign: w._40.Center,
+                        gutterSize: w._54.Small
+                    }, this.getFollowedChannels()), this.getShowMore()) : a.createElement(w._8, {
+                        textAlign: w._42.Center,
                         margin: {
                             top: 3
                         }
-                    }, a.createElement(w.u, {
+                    }, a.createElement(w.v, {
                         onClick: this.onLoginClick,
                         "data-a-target": "login-button"
-                    }, this.messages.login), a.createElement(w.P, null, this.messages.loginTitle))
+                    }, this.messages.login), a.createElement(w.Q, null, this.messages.loginTitle))
                 }, t = r.__decorate([Object(k.a)(N, {
                     options: function() {
                         return {
@@ -473,7 +473,7 @@ webpackJsonp([85], {
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
                                             s = [];
-                                        return e.currentUser.follows && n.currentUser.follows ? s = Object(v.b)(e.currentUser.follows.edges, n.currentUser.follows.edges) : !e.currentUser.follows && n.currentUser.follows ? s = n.currentUser.follows.edges : e.currentUser.follows && !n.currentUser.follows && (s = e.currentUser.follows.edges), {
+                                        return e.currentUser.follows && n.currentUser.follows ? s = Object(v.c)(e.currentUser.follows.edges, n.currentUser.follows.edges) : !e.currentUser.follows && n.currentUser.follows ? s = n.currentUser.follows.edges : e.currentUser.follows && !n.currentUser.follows && (s = e.currentUser.follows.edges), {
                                             currentUser: r.__assign({}, n.currentUser, {
                                                 follows: r.__assign({}, n.currentUser.follows, {
                                                     edges: s
@@ -500,12 +500,12 @@ webpackJsonp([85], {
             })(O),
             F = n("6BvN"),
             I = n("HM6l"),
-            P = n("5LoI"),
-            U = n("MAZT"),
-            L = n("uTyw"),
-            j = n("rCmJ"),
+            R = n("5LoI"),
+            L = n("MAZT"),
+            j = n("uTyw"),
+            U = n("rCmJ"),
             T = n("SZoP"),
-            R = (n("np4D"), function(e) {
+            P = (n("np4D"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamerClick = function(e) {
@@ -518,40 +518,40 @@ webpackJsonp([85], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e;
-                    return e = this.props.isWaiting ? a.createElement(w._9, {
+                    return e = this.props.isWaiting ? a.createElement(w._10, {
                         fillContent: !0
-                    }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), a.createElement(w._30, {
+                    }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), a.createElement(w._32, {
                         elevation: 4
                     }, a.createElement("div", {
                         className: "streamer-search-panel " + (this.props.isOpen ? "" : "streamer-search-panel--closed"),
                         tabIndex: 0,
                         onKeyDown: this.props.onKeyDown
-                    }, a.createElement(w._30, {
+                    }, a.createElement(w._32, {
                         className: "streamer-search-panel__results",
-                        background: w.m.Base,
-                        position: w._14.Relative,
-                        overflow: w._10.Hidden,
-                        display: w.Q.Block,
+                        background: w.n.Base,
+                        position: w._15.Relative,
+                        overflow: w._11.Hidden,
+                        display: w.R.Block,
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         fullHeight: !0
-                    }, a.createElement(w._1, {
-                        overflow: w._10.Hidden,
-                        position: w._14.Relative,
+                    }, a.createElement(w._2, {
+                        overflow: w._11.Hidden,
+                        position: w._15.Relative,
                         fullHeight: !0
                     }, a.createElement(d.b, {
                         suppressScrollX: !0
-                    }, a.createElement(w._7, null, e, a.createElement(d.a, {
+                    }, a.createElement(w._8, null, e, a.createElement(d.a, {
                         enabled: !this.props.isWaiting && this.props.isOpen,
                         loadMore: this.props.loadMore
                     })))))))
                 }, t.prototype.getStreamerResultContent = function() {
                     var e = this;
-                    if (!this.props.streamerResults) return a.createElement(w._7, null);
+                    if (!this.props.streamerResults) return a.createElement(w._8, null);
                     var t = this.props.streamerResults.results.map(function(t) {
                         var n = Object(T.a)(t.login || "", t.name || "");
-                        return a.createElement(w._5, {
+                        return a.createElement(w._6, {
                             linkTo: "/subs/" + t.login,
                             tabIndex: -1,
                             "data-ts_selectable": !0,
@@ -560,34 +560,34 @@ webpackJsonp([85], {
                             "data-streamer_id": t.id,
                             "data-streamer_login": t.login,
                             onClick: e.onStreamerClick
-                        }, a.createElement(w._7, {
+                        }, a.createElement(w._8, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, a.createElement(w.B, {
+                        }, a.createElement(w.C, {
                             row: !0
-                        }, a.createElement(w.D, {
+                        }, a.createElement(w.E, {
                             alt: t.thumbnailAltText,
                             src: t.thumbnail ? t.thumbnail : "",
-                            size: w.E.Size4,
-                            aspect: w.k.Aspect1x1
-                        }), a.createElement(w.C, {
-                            overflow: w._10.Hidden
-                        }, a.createElement(w._1, {
+                            size: w.F.Size4,
+                            aspect: w.l.Aspect1x1
+                        }), a.createElement(w.D, {
+                            overflow: w._11.Hidden
+                        }, a.createElement(w._2, {
                             padding: {
                                 x: 1
                             }
-                        }, a.createElement(w.P, {
-                            type: w._44.H5,
+                        }, a.createElement(w.Q, {
+                            type: w._46.H5,
                             ellipsis: !0
                         }, n))))))
                     });
-                    return a.createElement(w._7, null, t)
+                    return a.createElement(w._8, null, t)
                 }, t.prototype.getErrorMessage = function() {
-                    return a.createElement(w.P, null, "Error")
+                    return a.createElement(w.Q, null, "Error")
                 }, t.prototype.getNoResultsMessage = function() {
-                    return a.createElement(w.P, null, "No Results")
+                    return a.createElement(w.Q, null, "No Results")
                 }, t
             }(a.Component)),
             D = (n("yoqf"), {
@@ -601,33 +601,33 @@ webpackJsonp([85], {
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(w._7, {
+                    return a.createElement(w._8, {
                         margin: {
                             top: 2
                         },
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center,
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center,
                         fullWidth: !0
-                    }, a.createElement(w._1, {
+                    }, a.createElement(w._2, {
                         fullWidth: !0,
-                        zIndex: w._57.Above,
-                        position: w._14.Relative
+                        zIndex: w._59.Above,
+                        position: w._15.Relative
                     }, a.createElement("div", {
                         className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
-                    }, a.createElement(j.a, {
+                    }, a.createElement(U.a, {
                         onClickOut: this.props.onClickOut
-                    }, a.createElement(w._23, {
+                    }, a.createElement(w._25, {
                         onChange: this.handleChange,
                         onFocus: this.props.onFocus,
                         onKeyDown: this.props.onKeyDown,
                         placeholder: D.searchPlaceholder,
                         id: "streamer-search-input"
-                    }), a.createElement(w.p, {
-                        direction: w.q.BottomCenter,
+                    }), a.createElement(w.q, {
+                        direction: w.r.BottomCenter,
                         noTail: !0,
-                        size: w.r.ExtraLarge,
+                        size: w.s.ExtraLarge,
                         show: this.props.isOpen
-                    }, a.createElement(R, {
+                    }, a.createElement(P, {
                         isOpen: this.props.isOpen,
                         streamerResults: this.props.userResults,
                         isErrored: this.props.isErrored,
@@ -638,8 +638,8 @@ webpackJsonp([85], {
                     }))))))
                 }, t
             }(a.Component),
-            W = 50;
-        var H = function(e) {
+            K = 50;
+        var W = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onChange = function(e) {
@@ -647,7 +647,7 @@ webpackJsonp([85], {
                             isWaiting: !0
                         }), n.inputTimer = setTimeout(function() {
                             return n.doSearch(e)
-                        }, W)) : n.setState(n.getEmptyState())
+                        }, K)) : n.setState(n.getEmptyState())
                     }, n.onClickOut = function() {
                         n.state.isOpen && n.setState({
                             isOpen: !1
@@ -681,7 +681,7 @@ webpackJsonp([85], {
                                         if (this.state.queryID || !0 === this.state.exhaustedHits) return [2];
                                         e = this.state.currentPage + 1, a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(P.a.Users, this.state.term, "", {
+                                        return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(R.a.Users, this.state.term, "", {
                                             page: e,
                                             facetFilters: "has_subscription_products:true"
                                         })];
@@ -693,7 +693,7 @@ webpackJsonp([85], {
                                             isOpen: !0
                                         })), [2];
                                     case 4:
-                                        return t ? (s = Object(L.b)({
+                                        return t ? (s = Object(j.b)({
                                             searchResults: t,
                                             append: e > 0,
                                             currentUserResults: this.state.currentUserResults
@@ -711,7 +711,7 @@ webpackJsonp([85], {
                                 }
                             })
                         })
-                    }, n.state = n.getEmptyState(), n.searchClient = new U.a({
+                    }, n.state = n.getEmptyState(), n.searchClient = new L.a({
                         appId: i.a.algoliaApplicationID,
                         apiKey: i.a.algoliaAPIKey,
                         apolloClient: i.o.apollo.client,
@@ -770,7 +770,7 @@ webpackJsonp([85], {
                                         focusSelectable: !s && !!this.state.currentFocus
                                     }), c.label = 1;
                                 case 1:
-                                    return c.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(P.a.Users, e, n, {
+                                    return c.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(R.a.Users, e, n, {
                                         facetFilters: "has_subscription_products:true"
                                     })];
                                 case 2:
@@ -782,7 +782,7 @@ webpackJsonp([85], {
                                         term: e
                                     })), [2];
                                 case 4:
-                                    return a ? this.state.queryID !== a.id ? [2] : (l = Object(L.b)({
+                                    return a ? this.state.queryID !== a.id ? [2] : (l = Object(j.b)({
                                         searchResults: a,
                                         append: !1
                                     }), this.setState(function(n) {
@@ -803,12 +803,12 @@ webpackJsonp([85], {
                     })
                 }, t = r.__decorate([Object(h.d)("StreamerSearch")], t)
             }(a.Component),
-            z = Object(s.b)(function(e) {
+            H = Object(s.b)(function(e) {
                 return {
                     user: Object(S.c)(e)
                 }
-            })(H),
-            A = (n("rbRz"), function(e) {
+            })(W),
+            z = (n("rbRz"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.messages = {
@@ -825,146 +825,146 @@ webpackJsonp([85], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), i.o.setPageTitle("Subscriptions")
                 }, t.prototype.render = function() {
-                    return a.createElement(w._7, {
+                    return a.createElement(w._8, {
                         className: "subs-landing-page",
                         fullHeight: !0,
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center
-                    }, a.createElement(w._1, {
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center
+                    }, a.createElement(w._2, {
                         fullWidth: !0
                     }, a.createElement(d.b, {
                         suppressScrollX: !0
-                    }, a.createElement(w._7, {
+                    }, a.createElement(w._8, {
                         fullWidth: !0,
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center
-                    }, a.createElement(w._7, {
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center
+                    }, a.createElement(w._8, {
                         className: "subs-landing-page-contents",
-                        textAlign: w._40.Center,
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center,
+                        textAlign: w._42.Center,
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center,
                         alignItems: w.c.Center,
-                        flexWrap: w.T.NoWrap,
-                        flexDirection: w.S.Column,
+                        flexWrap: w.U.NoWrap,
+                        flexDirection: w.T.Column,
                         padding: {
                             x: 2
                         },
                         fullHeight: !0
-                    }, a.createElement(w._1, {
+                    }, a.createElement(w._2, {
                         margin: {
                             top: 4
                         }
-                    }, a.createElement(w.P, {
-                        type: w._44.H2,
-                        color: w.J.Link,
+                    }, a.createElement(w.Q, {
+                        type: w._46.H2,
+                        color: w.K.Link,
                         bold: !0
-                    }, this.messages.title)), a.createElement(w._1, {
+                    }, this.messages.title)), a.createElement(w._2, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__paragraph"
-                    }, a.createElement(w.P, {
-                        type: w._44.P,
-                        fontSize: w.U.Size5
-                    }, this.messages.info)), a.createElement(w._1, {
+                    }, a.createElement(w.Q, {
+                        type: w._46.P,
+                        fontSize: w.V.Size5
+                    }, this.messages.info)), a.createElement(w._2, {
                         margin: {
                             top: 3
                         },
                         className: "subs-landing-page-contents__heading"
-                    }, a.createElement(w.P, {
-                        type: w._44.H3,
-                        color: w.J.Link,
+                    }, a.createElement(w.Q, {
+                        type: w._46.H3,
+                        color: w.K.Link,
                         bold: !0,
-                        fontSize: w.U.Size4
-                    }, this.messages.searchTitle)), a.createElement(w._1, {
+                        fontSize: w.V.Size4
+                    }, this.messages.searchTitle)), a.createElement(w._2, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__paragraph"
-                    }, a.createElement(w.P, {
-                        type: w._44.P,
-                        fontSize: w.U.Size5
-                    }, this.messages.searchInfo)), a.createElement(z, null), a.createElement(x, null), a.createElement(w._7, {
+                    }, a.createElement(w.Q, {
+                        type: w._46.P,
+                        fontSize: w.V.Size5
+                    }, this.messages.searchInfo)), a.createElement(H, null), a.createElement(x, null), a.createElement(w._8, {
                         className: "subs-landing-page-contents__section",
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center,
-                        flexWrap: w.T.Wrap
-                    }, a.createElement(w._7, {
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center,
+                        flexWrap: w.U.Wrap
+                    }, a.createElement(w._8, {
                         className: "subs-landing-page-contents__section-info",
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center,
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center,
                         alignItems: w.c.Center,
-                        flexDirection: w.S.Column,
+                        flexDirection: w.T.Column,
                         margin: {
                             x: 3
                         }
-                    }, a.createElement(w._1, {
+                    }, a.createElement(w._2, {
                         margin: {
                             top: 3
                         },
                         className: "subs-landing-page-contents__heading"
-                    }, a.createElement(w.P, {
-                        type: w._44.H3,
-                        color: w.J.Link,
+                    }, a.createElement(w.Q, {
+                        type: w._46.H3,
+                        color: w.K.Link,
                         bold: !0,
-                        fontSize: w.U.Size4
-                    }, this.messages.perksTitle)), a.createElement(w._1, {
+                        fontSize: w.V.Size4
+                    }, this.messages.perksTitle)), a.createElement(w._2, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__paragraph"
-                    }, a.createElement(w.P, {
-                        type: w._44.P,
-                        fontSize: w.U.Size5
-                    }, this.messages.perksInfo))), a.createElement(w._7, {
+                    }, a.createElement(w.Q, {
+                        type: w._46.P,
+                        fontSize: w.V.Size5
+                    }, this.messages.perksInfo))), a.createElement(w._8, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__image"
                     }, a.createElement("img", {
                         src: l.a
-                    }))), a.createElement(w._7, {
+                    }))), a.createElement(w._8, {
                         className: "subs-landing-page-contents__section",
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center,
-                        flexWrap: w.T.Wrap,
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center,
+                        flexWrap: w.U.Wrap,
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(w._7, {
+                    }, a.createElement(w._8, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__image"
                     }, a.createElement("img", {
                         src: u.a
-                    })), a.createElement(w._7, {
+                    })), a.createElement(w._8, {
                         className: "subs-landing-page__section-info",
-                        display: w.Q.Flex,
-                        justifyContent: w._6.Center,
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center,
                         alignItems: w.c.Center,
-                        flexDirection: w.S.Column,
+                        flexDirection: w.T.Column,
                         margin: {
                             x: 3
                         }
-                    }, a.createElement(w._1, {
+                    }, a.createElement(w._2, {
                         margin: {
                             top: 3
                         },
                         className: "subs-landing-page-contents__heading"
-                    }, a.createElement(w.P, {
-                        type: w._44.H3,
-                        color: w.J.Link,
+                    }, a.createElement(w.Q, {
+                        type: w._46.H3,
+                        color: w.K.Link,
                         bold: !0,
-                        fontSize: w.U.Size4
-                    }, this.messages.emotesTitle)), a.createElement(w._1, {
+                        fontSize: w.V.Size4
+                    }, this.messages.emotesTitle)), a.createElement(w._2, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__paragraph"
-                    }, a.createElement(w.P, {
-                        type: w._44.P,
-                        fontSize: w.U.Size5
+                    }, a.createElement(w.Q, {
+                        type: w._46.P,
+                        fontSize: w.V.Size5
                     }, this.messages.emotesInfo)))))))))
                 }, t = r.__decorate([Object(h.d)("SubsLandingPage", {
                     destination: m.a.SubsLandingPage
@@ -972,9 +972,9 @@ webpackJsonp([85], {
                     location: g.PageviewLocation.SubsLandingPage
                 })], t)
             }(a.Component)),
-            K = Object(s.b)()(A);
+            A = Object(s.b)()(z);
         n.d(t, "SubsLandingPage", function() {
-            return K
+            return A
         })
     },
     np4D: function(e, t) {},
@@ -984,4 +984,4 @@ webpackJsonp([85], {
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-dbacd377eccb9d2f130a8f336e63b8f7.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-93ca2f5df9547cdd96cea6175dacb15e.js.map

@@ -15,69 +15,69 @@ webpackJsonp([67], {
                     return t.state = {}, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return n.createElement(i.b, null, n.createElement(d._7, {
+                    return n.createElement(i.b, null, n.createElement(d._8, {
                         className: "testing-carousel",
                         padding: 3
-                    }, n.createElement(d.P, {
-                        type: d._44.H2
-                    }, "Media Carousel - Standard"), n.createElement(d._7, {
+                    }, n.createElement(d.Q, {
+                        type: d._46.H2
+                    }, "Media Carousel - Standard"), n.createElement(d._8, {
                         "data-a-target": "carousel-standard"
-                    }, n.createElement(d._1, {
+                    }, n.createElement(d._2, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, n.createElement(l.a, {
                         items: this.renderStandardItems()
-                    }))), n.createElement(d.P, {
-                        type: d._44.H2
-                    }, "Media Carousel - Tiny"), n.createElement(d._7, {
+                    }))), n.createElement(d.Q, {
+                        type: d._46.H2
+                    }, "Media Carousel - Tiny"), n.createElement(d._8, {
                         "data-a-target": "carousel-standard-tiny"
-                    }, n.createElement(d._1, {
+                    }, n.createElement(d._2, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, n.createElement(l.a, {
                         items: this.renderStandardTinyItems()
-                    }))), n.createElement(d.P, {
-                        type: d._44.H2
-                    }, "Media Carousel - HUGE"), n.createElement(d._7, {
+                    }))), n.createElement(d.Q, {
+                        type: d._46.H2
+                    }, "Media Carousel - HUGE"), n.createElement(d._8, {
                         "data-a-target": "carousel-standard-huge"
-                    }, n.createElement(d._1, {
+                    }, n.createElement(d._2, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, n.createElement(l.a, {
                         items: this.renderStandardHugeItems()
-                    }))), n.createElement(d.P, {
-                        type: d._44.H2
-                    }, "Media Carousel - Single"), n.createElement(d._7, {
+                    }))), n.createElement(d.Q, {
+                        type: d._46.H2
+                    }, "Media Carousel - Single"), n.createElement(d._8, {
                         "data-a-target": "carousel-single"
-                    }, n.createElement(d._1, {
+                    }, n.createElement(d._2, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, n.createElement(l.a, {
                         items: this.renderSingleItem()
-                    }))), n.createElement(d.P, {
-                        type: d._44.H2
-                    }, "Media Carousel - Single and HUGE"), n.createElement(d._7, {
+                    }))), n.createElement(d.Q, {
+                        type: d._46.H2
+                    }, "Media Carousel - Single and HUGE"), n.createElement(d._8, {
                         "data-a-target": "carousel-single-huge"
-                    }, n.createElement(d._1, {
+                    }, n.createElement(d._2, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, n.createElement(l.a, {
                         items: this.renderSingleHugeItem()
-                    }))), n.createElement(d.P, {
-                        type: d._44.H2
-                    }, "Media Carousel - Various Widths"), n.createElement(d._7, {
+                    }))), n.createElement(d.Q, {
+                        type: d._46.H2
+                    }, "Media Carousel - Various Widths"), n.createElement(d._8, {
                         "data-a-target": "carousel-various-widths"
-                    }, n.createElement(d._1, {
+                    }, n.createElement(d._2, {
                         margin: {
                             bottom: 3,
                             top: 1
@@ -87,7 +87,7 @@ webpackJsonp([67], {
                     })))))
                 }, t.prototype.renderStandardItems = function() {
                     return [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function(e) {
-                        return n.createElement(d._7, {
+                        return n.createElement(d._8, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -99,14 +99,14 @@ webpackJsonp([67], {
                                 width: 200,
                                 height: 100
                             }
-                        }, n.createElement(d.P, {
-                            type: d._44.H1,
-                            color: d.J.Overlay
+                        }, n.createElement(d.Q, {
+                            type: d._46.H1,
+                            color: d.K.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderStandardTinyItems = function() {
                     return [0, 1, 2].map(function(e) {
-                        return n.createElement(d._7, {
+                        return n.createElement(d._8, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -118,14 +118,14 @@ webpackJsonp([67], {
                                 width: 20,
                                 height: 100
                             }
-                        }, n.createElement(d.P, {
-                            type: d._44.H1,
-                            color: d.J.Overlay
+                        }, n.createElement(d.Q, {
+                            type: d._46.H1,
+                            color: d.K.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderStandardHugeItems = function() {
                     return [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function(e) {
-                        return n.createElement(d._7, {
+                        return n.createElement(d._8, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -137,14 +137,14 @@ webpackJsonp([67], {
                                 width: 2e3,
                                 height: 100
                             }
-                        }, n.createElement(d.P, {
-                            type: d._44.H1,
-                            color: d.J.Overlay
+                        }, n.createElement(d.Q, {
+                            type: d._46.H1,
+                            color: d.K.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderSingleItem = function() {
                     return [0].map(function(e) {
-                        return n.createElement(d._7, {
+                        return n.createElement(d._8, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -156,14 +156,14 @@ webpackJsonp([67], {
                                 width: 200,
                                 height: 100
                             }
-                        }, n.createElement(d.P, {
-                            type: d._44.H1,
-                            color: d.J.Overlay
+                        }, n.createElement(d.Q, {
+                            type: d._46.H1,
+                            color: d.K.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderSingleHugeItem = function() {
                     return [0].map(function(e) {
-                        return n.createElement(d._7, {
+                        return n.createElement(d._8, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -175,14 +175,14 @@ webpackJsonp([67], {
                                 width: 2e3,
                                 height: 100
                             }
-                        }, n.createElement(d.P, {
-                            type: d._44.H1,
-                            color: d.J.Overlay
+                        }, n.createElement(d.Q, {
+                            type: d._46.H1,
+                            color: d.K.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderVariousWidthItems = function() {
                     return [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function(e) {
-                        return n.createElement(d._7, {
+                        return n.createElement(d._8, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -194,9 +194,9 @@ webpackJsonp([67], {
                                 width: 30 * (e + 1),
                                 height: 100
                             }
-                        }, n.createElement(d.P, {
-                            type: d._44.H1,
-                            color: d.J.Overlay
+                        }, n.createElement(d.Q, {
+                            type: d._46.H1,
+                            color: d.K.Overlay
                         }, e)))
                     })
                 }, t
@@ -207,4 +207,4 @@ webpackJsonp([67], {
     },
     WWVW: function(e, t) {}
 });
-//# sourceMappingURL=pages.dev-only-testing-carousel-806ad758e874efd2c57b264c0e260266.js.map
+//# sourceMappingURL=pages.dev-only-testing-carousel-7e681854928b9e0d30b8f93628400dd8.js.map

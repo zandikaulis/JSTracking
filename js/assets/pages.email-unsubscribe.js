@@ -111,46 +111,46 @@ webpackJsonp([66], {
                         isLoading: !1,
                         isSuccess: !1
                     }, t.renderStatus = function() {
-                        return t.state.isError ? a.createElement(E._7, {
+                        return t.state.isError ? a.createElement(E._8, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": v
-                        }, a.createElement(E.P, {
-                            type: E._44.H5,
-                            color: E.J.Error
-                        }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? a.createElement(E._7, {
+                        }, a.createElement(E.Q, {
+                            type: E._46.H5,
+                            color: E.K.Error
+                        }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? a.createElement(E._8, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": f
-                        }, a.createElement(E.P, {
-                            type: E._44.H5,
-                            color: E.J.Alt2
-                        }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? a.createElement(E._7, {
+                        }, a.createElement(E.Q, {
+                            type: E._46.H5,
+                            color: E.K.Alt2
+                        }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? a.createElement(E._8, {
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(E.P, {
-                            type: E._44.H5,
+                        }, a.createElement(E.Q, {
+                            type: E._46.H5,
                             bold: !0
-                        }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : a.createElement(E._30, {
-                            display: E.Q.Flex,
-                            flexDirection: E.S.Column,
+                        }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : a.createElement(E._32, {
+                            display: E.R.Flex,
+                            flexDirection: E.T.Column,
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(E._7, {
+                        }, a.createElement(E._8, {
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(E.P, {
-                            type: E._44.H5,
-                            color: E.J.Alt2
-                        }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), a.createElement(E._7, {
+                        }, a.createElement(E.Q, {
+                            type: E._46.H5,
+                            color: E.K.Alt2
+                        }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), a.createElement(E._8, {
                             flexGrow: 0
-                        }, a.createElement(E.u, {
-                            type: E.A.Default,
+                        }, a.createElement(E.v, {
+                            type: E.B.Default,
                             onClick: t.confirmHandler
                         }, Object(c.d)("Confirm", "EmailUnsubscribe"))))
                     }, t.confirmHandler = function() {
@@ -190,17 +190,17 @@ webpackJsonp([66], {
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(E._30, {
+                    return a.createElement(E._32, {
                         padding: {
                             x: 3,
                             top: 3,
                             bottom: 1
                         },
-                        display: E.Q.Flex,
-                        flexDirection: E.S.Column
-                    }, a.createElement(E.P, {
+                        display: E.R.Flex,
+                        flexDirection: E.T.Column
+                    }, a.createElement(E.Q, {
                         className: "title",
-                        type: E._44.H2
+                        type: E._46.H2
                     }, Object(c.d)("Email Unsubscribe", "EmailUnsubscribe")), this.renderStatus())
                 }, t
             }(a.Component),
@@ -216,4 +216,4 @@ webpackJsonp([66], {
         })
     }
 });
-//# sourceMappingURL=pages.email-unsubscribe-0844c5a3545a5711fded7eaee39847d3.js.map
+//# sourceMappingURL=pages.email-unsubscribe-c45e1bbb872f77680e7df850403ccbdc.js.map

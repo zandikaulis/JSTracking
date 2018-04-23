@@ -75,32 +75,32 @@ webpackJsonp([60], {
                             }
                     }
                 }(this.props.match.params.error);
-                return i.createElement(p._30, {
+                return i.createElement(p._32, {
                     className: "clips-error-page",
-                    background: p.m.Base,
+                    background: p.n.Base,
                     margin: {
                         y: 2
                     },
                     elevation: 3,
-                    color: p.J.Base,
-                    textAlign: p._40.Center
-                }, i.createElement(p.j, {
-                    ratio: p.k.Aspect16x9
-                }, i.createElement(p._7, {
-                    display: p.Q.Flex,
-                    justifyContent: p._6.Center,
+                    color: p.K.Base,
+                    textAlign: p._42.Center
+                }, i.createElement(p.k, {
+                    ratio: p.l.Aspect16x9
+                }, i.createElement(p._8, {
+                    display: p.R.Flex,
+                    justifyContent: p._7.Center,
                     alignItems: p.c.Center,
-                    flexDirection: p.S.Column,
+                    flexDirection: p.T.Column,
                     padding: 1
-                }, i.createElement(p.M, {
+                }, i.createElement(p.N, {
                     src: Object(u.f)("58765", 2),
                     alt: Object(a.d)("Not like this... not like this", "ClipsError")
-                }), i.createElement(p.P, {
-                    fontSize: p.U.Size4
-                }, e.title), i.createElement(p.P, {
-                    fontSize: p.U.Size5
-                }, e.subtitle), e.link && i.createElement(p.P, {
-                    fontSize: p.U.Size5
+                }), i.createElement(p.Q, {
+                    fontSize: p.V.Size4
+                }, e.title), i.createElement(p.Q, {
+                    fontSize: p.V.Size5
+                }, e.subtitle), e.link && i.createElement(p.Q, {
+                    fontSize: p.V.Size5
                 }, i.createElement("a", {
                     href: e.link
                 }, Object(a.d)("Report Issue", "ClipsError"))))))
@@ -286,7 +286,7 @@ webpackJsonp([60], {
         t.b = function(e, t) {
             var n = [];
             if (!e || !t) return n;
-            var i = /\S+/g,
+            var i = /[^\s\.,\!]+/g,
                 a = i.exec(e);
             for (; a;) {
                 var o = a[0],
@@ -604,7 +604,7 @@ webpackJsonp([60], {
         }
 
         function m(e, t, n) {
-            var r = /^(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,6}(?:\/[\w./@#%&()\-+=:?~]*)?)$/g,
+            var r = /^(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,8}(?:\/[\w./@#%&()\-+=:?~]*)?)$/g,
                 a = /([^\w@#%\-+=:~])?(@)([^\u0000-\u007F]+|\w+)+([^\w./@#%&()\-+=:?~]|\s|$)/g,
                 c = [],
                 l = e.split(/\s+/);
@@ -707,4 +707,4 @@ webpackJsonp([60], {
             }(r || (r = {}))
     }
 });
-//# sourceMappingURL=sites.clips.pages.error-993c3c134e89541df8f6dde4528d4659.js.map
+//# sourceMappingURL=sites.clips.pages.error-5f2eec24655928845f8b3ba56dc0df6c.js.map
