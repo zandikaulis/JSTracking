@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".75552a4ca7107310f051.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".bfb053d9a4d91937e261.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -12004,21 +12004,21 @@
                         transitionScheme: p
                     });
                 case l.a:
-                    return t.stream === f.b ? a()({}, e, w, {
+                    return t.stream === f.b ? a()({}, e, k, {
                         paused: !1
-                    }) : a()({}, e, w);
+                    }) : a()({}, e, k);
                 case c.a:
                     return a()({}, e, {
                         restrictedQualityError: !1
                     });
                 case c.b:
-                    return a()({}, e, _);
+                    return a()({}, e, w);
                 case c.c:
-                    return a()({}, e, b);
+                    return a()({}, e, _);
                 case c.d:
-                    return a()({}, e, u()(t.playback, k));
+                    return a()({}, e, u()(t.playback, E));
                 case c.e:
-                    return a()({}, e, g);
+                    return a()({}, e, b);
                 case c.g:
                     return a()({}, e, {
                         playbackRate: t.playbackRate
@@ -12037,8 +12037,9 @@
                         isSeeking: !0
                     });
                 case c.k:
+                    return a()({}, e, y, w);
                 case c.f:
-                    return a()({}, e, y, _);
+                    return a()({}, e, v, w);
                 case c.l:
                     return a()({}, e, {
                         restrictedQualityError: !0
@@ -12069,13 +12070,13 @@
                         currentTime: t.currentTime
                     });
                 case c.r:
-                    return a()({}, e, u()(t.playback, k));
+                    return a()({}, e, u()(t.playback, E));
                 case c.s:
                     return a()({}, e, {
                         volume: t.volume
                     });
                 case c.t:
-                    return a()({}, e, v);
+                    return a()({}, e, g);
                 default:
                     return e
             }
@@ -12132,22 +12133,28 @@
                 isSeeking: !1
             },
             v = {
-                ended: !1
+                playing: !0,
+                paused: !1,
+                ended: !1,
+                isSeeking: !1
             },
             g = {
-                playing: !1,
-                paused: !0,
                 ended: !1
             },
             b = {
                 playing: !1,
                 paused: !0,
-                ended: !0
+                ended: !1
             },
             _ = {
-                contentShowing: !0
+                playing: !1,
+                paused: !0,
+                ended: !0
             },
             w = {
+                contentShowing: !0
+            },
+            k = {
                 playing: !1,
                 hasPlayed: !1,
                 contentShowing: !1,
@@ -12156,7 +12163,7 @@
                 isSeeking: !1,
                 restrictedQualityError: !1
             },
-            k = Object.keys(m)
+            E = Object.keys(m)
     }, function(e, t, n) {
         "use strict";
 
@@ -31479,7 +31486,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.23-193246+17d0cef40319a5be68f313ac6425e4a09b912587",
+                    app_version: "2018.04.24-200427+df97637bf6e2d2a4c0d94b93c8eea6ce6cd27e37",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -37178,7 +37185,7 @@
                 }]), e
             }(),
             es = n(102),
-            ts = "//video-edge-ad5e17.sjc01.hls.ttvnw.net/v1/segment/CrDBDop-7Ma0fglV7yTU9xgUnqld6J4ipGeVeCORFu9fyjGpgHB0OMApjph8eyiGD8logJOQVMdSdlB7ArqlVi7XbTQUFOG68vKyK3GQcztKwZzBvTvYRI2sH_LikpvQsaMK1htcTqALNvHUdvf6WTrPhnXR-Y62Ijn_zkzwWphbhKdGFKsSvwKp7mhjfSP1MHL9X50jEDksBF_90ZZQw2YZupyQYbcNvCk2OT9lZWqLmFMZbX_6D5xeTj-HhMjy2EmbHhH3_Hu04TEwjpbM5-0k8LTwfEjUm2sqP2ypw2huCzDYjXXayrg5mnCJ5K03T5n4Yf9I0GLKRWvxosBdLnwkza3YG-NEbskg7fktnSLuJ3RnDhWU8qdI7WeiVQc9R06h1zYQvZ3gK17yfF2Kdbn581vvcwZUZybpl7idF-QZPw211EUp1j6H3d5ItpFDHuwt3FqrLwNWL4VUS0u9tmVa2RRMM2zP-s3lueiE6GnkQX87xILD1zQevQJnZQTNYmc6I98x9kWspG3z7Eeu4aFWusSnkb7.ts",
+            ts = "//video-edge-7cf6a2.sjc01.hls.ttvnw.net/v1/segment/CmgMuuBG6pnM6L4cmefM_KQaylzxRdnV9GtqR7ElmVo2b5YCs4EDqokST6iBRkRo0QWBWs-biQxYc3ZqcyR5bl19953eL9jTLggTBHWDSR4Bb844BVL1YRB4GNYXJ2csfGDMSZYeTMovTkuiXPZ4BwjeTOGbrNOPoaeFPkMU43MuTFjchmaY7yRAOFXQ1bjlktuuoZZT-wGGoV3-pnrqI3qqt4Rp5zQHYrQfqbf7oYL2G5gk9mv1XVfUFYGUChccCa_YxQKV_p8DfYEXAqQ5dsZiHS0FVvfpQUlJRFA2yAlECxhlhmPTsQ-FrQ2cIB2YTYf3NDPlp5ghouk3WLDohMC3oChTeCJ3TyeEr2RKqH2Me2RYfZ2XHHI7f72iQ4O3BXSzFTjFeIRhQptmeSRAVCJdeCrcyFETD8KQVGjaxVPheTIVAcfHBjYsOdZpHTR0vSTc5qrHV7fgcLy7qbUE5QCSupf0JBAGYQe6pc1pBDgDLdVJ1jLbvkYLUzBYWWYRe1I4xi5-PEImjNFZb6I1ZApP1ZrCe.ts",
             ns = n(49),
             rs = n(261),
             is = n(135),
