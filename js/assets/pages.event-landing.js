@@ -195,7 +195,7 @@ webpackJsonp([49], {
         "use strict";
         t.a = function(e) {
             var t = document.createElement("textarea");
-            t.style.position = "fixed", t.style.top = "0", t.style.left = "0", t.style.width = "2em", t.style.height = "2em", t.style.padding = "0", t.style.border = "none", t.style.outline = "none", t.style.boxShadow = "none", t.style.background = "transparent", t.value = e, document.body.appendChild(t), t.select();
+            t.style.position = "fixed", t.style.top = "0", t.style.left = "0", t.style.fontSize = "12pt", t.style.width = "2em", t.style.height = "2em", t.style.padding = "0", t.style.border = "none", t.style.outline = "none", t.style.boxShadow = "none", t.style.background = "transparent", t.value = e, document.body.appendChild(t), t.select();
             var n = !0;
             try {
                 n = document.execCommand("copy")
@@ -5897,7 +5897,7 @@ webpackJsonp([49], {
         }
     },
     Vr3l: function(e, t, n) {
-        e.exports = n.p + "assets/overwatch-chars-062a1df5ff2aaa76eb8e129940ef964a.png"
+        e.exports = n.p + "assets/overwatch-chars-9fc82f039194a365a8d6d2bf2797e041.png"
     },
     W6ca: function(e, t, n) {
         "use strict";
@@ -8550,4 +8550,4 @@ webpackJsonp([49], {
     yU6t: function(e, t) {},
     z4Db: function(e, t) {}
 });
-//# sourceMappingURL=pages.event-landing-659cd90829f92a673af45491af54f69b.js.map
+//# sourceMappingURL=pages.event-landing-172989119c8b4ca421bf39eee4987f32.js.map

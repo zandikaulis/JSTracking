@@ -1,4 +1,4 @@
-webpackJsonp([50, 81], {
+webpackJsonp([51, 81], {
     "+GT7": function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -3293,7 +3293,7 @@ webpackJsonp([50, 81], {
             }
     },
     Vr3l: function(e, t, n) {
-        e.exports = n.p + "assets/overwatch-chars-062a1df5ff2aaa76eb8e129940ef964a.png"
+        e.exports = n.p + "assets/overwatch-chars-9fc82f039194a365a8d6d2bf2797e041.png"
     },
     XYqD: function(e, t, n) {
         "use strict";
@@ -6274,4 +6274,4 @@ webpackJsonp([50, 81], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-bf3d191ded9ac4449b4f9ae1ccfb8445.js.map
+//# sourceMappingURL=pages.onboarding-984bce437da8be75c1d09678ccef37fa.js.map

@@ -9,8 +9,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Offense",
-                sprite_location: 24,
-                sprite_x_offset: 2688
+                sprite_location: 25,
+                sprite_x_offset: 2800
             }, {
                 sprite_y_offset: 0,
                 display_name: "Genji",
@@ -19,8 +19,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Offense",
-                sprite_location: 4,
-                sprite_x_offset: 448
+                sprite_location: 5,
+                sprite_x_offset: 560
             }, {
                 sprite_y_offset: 0,
                 display_name: "McCree",
@@ -29,8 +29,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Offense",
-                sprite_location: 21,
-                sprite_x_offset: 2352
+                sprite_location: 22,
+                sprite_x_offset: 2464
             }, {
                 sprite_y_offset: 0,
                 display_name: "Pharah",
@@ -39,8 +39,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Offense",
-                sprite_location: 7,
-                sprite_x_offset: 784
+                sprite_location: 8,
+                sprite_x_offset: 896
             }, {
                 sprite_y_offset: 0,
                 display_name: "Reaper",
@@ -49,8 +49,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Offense",
-                sprite_location: 12,
-                sprite_x_offset: 1344
+                sprite_location: 13,
+                sprite_x_offset: 1456
             }, {
                 sprite_y_offset: 0,
                 display_name: "Soldier: 76",
@@ -59,8 +59,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Offense",
-                sprite_location: 19,
-                sprite_x_offset: 2128
+                sprite_location: 20,
+                sprite_x_offset: 2240
             }, {
                 sprite_y_offset: 0,
                 display_name: "Sombra",
@@ -69,8 +69,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Offense",
-                sprite_location: 22,
-                sprite_x_offset: 2464
+                sprite_location: 23,
+                sprite_x_offset: 2576
             }, {
                 sprite_y_offset: 0,
                 display_name: "Tracer",
@@ -79,8 +79,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Offense",
-                sprite_location: 15,
-                sprite_x_offset: 1680
+                sprite_location: 16,
+                sprite_x_offset: 1792
             }]
         }, {
             Defense: [{
@@ -91,8 +91,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Defense",
-                sprite_location: 13,
-                sprite_x_offset: 1456
+                sprite_location: 14,
+                sprite_x_offset: 1568
             }, {
                 sprite_y_offset: 0,
                 display_name: "Hanzo",
@@ -101,8 +101,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Defense",
-                sprite_location: 16,
-                sprite_x_offset: 1792
+                sprite_location: 17,
+                sprite_x_offset: 1904
             }, {
                 sprite_y_offset: 0,
                 display_name: "Junkrat",
@@ -111,8 +111,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Defense",
-                sprite_location: 23,
-                sprite_x_offset: 2576
+                sprite_location: 24,
+                sprite_x_offset: 2688
             }, {
                 sprite_y_offset: 0,
                 display_name: "Mei",
@@ -121,8 +121,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Defense",
-                sprite_location: 6,
-                sprite_x_offset: 672
+                sprite_location: 7,
+                sprite_x_offset: 784
             }, {
                 sprite_y_offset: 0,
                 display_name: "Torbjörn",
@@ -131,8 +131,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Defense",
-                sprite_location: 20,
-                sprite_x_offset: 2240
+                sprite_location: 21,
+                sprite_x_offset: 2352
             }, {
                 sprite_y_offset: 0,
                 display_name: "Widowmaker",
@@ -141,8 +141,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Defense",
-                sprite_location: 5,
-                sprite_x_offset: 560
+                sprite_location: 6,
+                sprite_x_offset: 672
             }]
         }, {
             Tank: [{
@@ -153,8 +153,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Tank",
-                sprite_location: 8,
-                sprite_x_offset: 896
+                sprite_location: 9,
+                sprite_x_offset: 1008
             }, {
                 sprite_y_offset: 0,
                 display_name: "Orisa",
@@ -163,8 +163,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Tank",
-                sprite_location: 18,
-                sprite_x_offset: 2016
+                sprite_location: 19,
+                sprite_x_offset: 2128
             }, {
                 sprite_y_offset: 0,
                 display_name: "Reinhardt",
@@ -173,8 +173,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Tank",
-                sprite_location: 0,
-                sprite_x_offset: 0
+                sprite_location: 1,
+                sprite_x_offset: 112
             }, {
                 sprite_y_offset: 0,
                 display_name: "Roadhog",
@@ -183,8 +183,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Tank",
-                sprite_location: 3,
-                sprite_x_offset: 336
+                sprite_location: 4,
+                sprite_x_offset: 448
             }, {
                 sprite_y_offset: 0,
                 display_name: "Winston",
@@ -193,8 +193,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Tank",
-                sprite_location: 11,
-                sprite_x_offset: 1232
+                sprite_location: 12,
+                sprite_x_offset: 1344
             }, {
                 sprite_y_offset: 0,
                 display_name: "Zarya",
@@ -203,8 +203,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Tank",
-                sprite_location: 2,
-                sprite_x_offset: 224
+                sprite_location: 3,
+                sprite_x_offset: 336
             }]
         }, {
             Support: [{
@@ -215,8 +215,18 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Support",
-                sprite_location: 1,
-                sprite_x_offset: 112
+                sprite_location: 2,
+                sprite_x_offset: 224
+            }, {
+                sprite_y_offset: 0,
+                display_name: "Brigitte",
+                ability: "Rocket Flail",
+                character: "Brigitte",
+                image_width: 112,
+                image_height: 100,
+                role: "Support",
+                sprite_location: 0,
+                sprite_x_offset: 0
             }, {
                 sprite_y_offset: 0,
                 display_name: "Lúcio",
@@ -225,8 +235,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Support",
-                sprite_location: 9,
-                sprite_x_offset: 1008
+                sprite_location: 10,
+                sprite_x_offset: 1120
             }, {
                 sprite_y_offset: 0,
                 display_name: "Mercy",
@@ -235,8 +245,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Support",
-                sprite_location: 17,
-                sprite_x_offset: 1904
+                sprite_location: 18,
+                sprite_x_offset: 2016
             }, {
                 sprite_y_offset: 0,
                 display_name: "Moira",
@@ -245,8 +255,8 @@ webpackJsonp([93], {
                 image_width: 109,
                 image_height: 100,
                 role: "Support",
-                sprite_location: 25,
-                sprite_x_offset: 2800
+                sprite_location: 26,
+                sprite_x_offset: 2912
             }, {
                 sprite_y_offset: 0,
                 display_name: "Symmetra",
@@ -255,8 +265,8 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Support",
-                sprite_location: 10,
-                sprite_x_offset: 1120
+                sprite_location: 11,
+                sprite_x_offset: 1232
             }, {
                 sprite_y_offset: 0,
                 display_name: "Zenyatta",
@@ -265,10 +275,10 @@ webpackJsonp([93], {
                 image_width: 112,
                 image_height: 100,
                 role: "Support",
-                sprite_location: 14,
-                sprite_x_offset: 1568
+                sprite_location: 15,
+                sprite_x_offset: 1680
             }]
         }]
     }
 });
-//# sourceMappingURL=assets.data.directory-game.overwatch-chars.json-8d33afd87edd8d655be652143711b206.js.map
+//# sourceMappingURL=assets.data.directory-game.overwatch-chars.json-a0698ef18eed1fe33d409520dc91d31e.js.map

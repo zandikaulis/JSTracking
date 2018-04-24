@@ -1052,7 +1052,7 @@ webpackJsonp([39, 90], {
         "use strict";
         t.a = function(e) {
             var t = document.createElement("textarea");
-            t.style.position = "fixed", t.style.top = "0", t.style.left = "0", t.style.width = "2em", t.style.height = "2em", t.style.padding = "0", t.style.border = "none", t.style.outline = "none", t.style.boxShadow = "none", t.style.background = "transparent", t.value = e, document.body.appendChild(t), t.select();
+            t.style.position = "fixed", t.style.top = "0", t.style.left = "0", t.style.fontSize = "12pt", t.style.width = "2em", t.style.height = "2em", t.style.padding = "0", t.style.border = "none", t.style.outline = "none", t.style.boxShadow = "none", t.style.background = "transparent", t.value = e, document.body.appendChild(t), t.select();
             var n = !0;
             try {
                 n = document.execCommand("copy")
@@ -7101,7 +7101,7 @@ webpackJsonp([39, 90], {
     Vaxm: function(e, t) {},
     VnsS: function(e, t) {},
     Vr3l: function(e, t, n) {
-        e.exports = n.p + "assets/overwatch-chars-062a1df5ff2aaa76eb8e129940ef964a.png"
+        e.exports = n.p + "assets/overwatch-chars-9fc82f039194a365a8d6d2bf2797e041.png"
     },
     VsL1: function(e, t, n) {
         "use strict";
@@ -18924,4 +18924,4 @@ webpackJsonp([39, 90], {
         }
     }
 });
-//# sourceMappingURL=pages.video-watch-cf97476ee567f8d1c5b61dbbb3ec4d31.js.map
+//# sourceMappingURL=pages.video-watch-588c4e27ed6ae966800d3d138f2eea6e.js.map

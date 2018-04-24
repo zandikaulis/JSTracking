@@ -1,30 +1,11 @@
 webpackJsonp([42], {
     "+0KR": function(e, t, n) {
         "use strict";
-        var r, i = n("TToO"),
-            a = n("GiK3"),
-            o = n("6sO2"),
-            s = n("Odds");
-        ! function(e) {
-            e[e.NoChanges = 0] = "NoChanges", e[e.DirtyChanges = 1] = "DirtyChanges", e[e.Working = 2] = "Working", e[e.Success = 3] = "Success", e[e.Error = 4] = "Error"
-        }(r || (r = {}));
-        var c = function(e) {
-            var t = e.status,
-                n = e.children,
-                c = i.__rest(e, ["status", "children"]),
-                l = s.A.Default,
-                u = s.B.Default,
-                d = !1;
-            return t === r.Working ? l = s.A.Loading : t === r.Success ? l = s.A.Success : t === r.Error ? u = s.B.Alert : t === r.NoChanges && (d = !0), n || (n = t === r.Error ? Object(o.d)("Error", "Save Button") : Object(o.d)("Save", "Save Button")), a.createElement(s.v, i.__assign({
-                disabled: d,
-                state: l,
-                type: u
-            }, c), n)
-        };
-        n.d(t, "b", function() {
-            return r
-        }), n.d(t, "a", function() {
-            return c
+        var r = n("oR9V");
+        n.d(t, "a", function() {
+            return r.a
+        }), n.d(t, "b", function() {
+            return r.b
         })
     },
     "+Aaf": function(e, t) {},
@@ -7404,6 +7385,7 @@ webpackJsonp([42], {
                         padding: {
                             bottom: 1
                         },
+                        "data-a-target": "color-picker-input",
                         className: "color-picker-input",
                         display: F.R.Flex,
                         alignItems: F.c.Center
@@ -7548,6 +7530,7 @@ webpackJsonp([42], {
                         });
                     return l.createElement(F._32, {
                         className: t,
+                        "data-a-target": this.props.selected ? "emote-set-button" : "emote-set-button-unselected",
                         display: F.R.InlineFlex
                     }, l.createElement(F.v, {
                         onClick: this.selectEmoteSet,
@@ -8664,6 +8647,104 @@ webpackJsonp([42], {
                         updating: !1
                     }, t.onToggle = function(e) {
                         return c.__awaiter(t, void 0, void 0, function() {
+                            var t, n;
+                            return c.__generator(this, function(r) {
+                                switch (r.label) {
+                                    case 0:
+                                        this.setState({
+                                            updating: !0,
+                                            error: !1
+                                        }), t = {
+                                            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+                                        }, r.label = 1;
+                                    case 1:
+                                        return r.trys.push([1, 3, , 4]), [4, O.a.put(this.hideLiveVideoEndpoint, {
+                                            body: ft.stringify({
+                                                "channel[private_video]": e
+                                            }, {
+                                                arrayFormat: "bracket"
+                                            }),
+                                            headers: t
+                                        })];
+                                    case 2:
+                                        return n = r.sent(), this.setState(function(t) {
+                                            return {
+                                                enabled: 200 === n.status ? e : t.enabled,
+                                                error: 200 !== n.status,
+                                                updating: !1
+                                            }
+                                        }), [3, 4];
+                                    case 3:
+                                        return r.sent(), this.setState({
+                                            updating: !1,
+                                            error: !0
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return c.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return c.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return t.trys.push([0, 2, , 3]), [4, O.a.get(this.hideLiveVideoEndpoint)];
+                                case 1:
+                                    return e = t.sent(), this.setState({
+                                        enabled: e.body && e.body.private_video || !1,
+                                        error: 200 !== e.status,
+                                        show: !!e.body && e.body.privacy_options_enabled,
+                                        loading: !1
+                                    }), [3, 3];
+                                case 2:
+                                    return t.sent(), this.setState({
+                                        enabled: !1,
+                                        error: !0,
+                                        loading: !1
+                                    }), [3, 3];
+                                case 3:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, t.prototype.render = function() {
+                    return this.state.show ? l.createElement(me.a, {
+                        id: "settings-security-page-hide-live-video",
+                        label: Object(d.d)("Hide Live Video", "HideLiveVideoSetting"),
+                        description: Object(d.d)("Only allow your editors to view your live video", "HideLiveVideoSetting"),
+                        checked: this.state.enabled,
+                        disabled: this.state.updating,
+                        error: this.state.error,
+                        onChange: this.onToggle
+                    }) : null
+                }, Object.defineProperty(t.prototype, "hideLiveVideoEndpoint", {
+                    get: function() {
+                        return "/v5/channels/" + this.props.sessionUserID
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t
+            }(l.Component);
+        var ti = Object(r.b)(function(e) {
+                var t = Object(s.c)(e);
+                return {
+                    sessionUserID: t && t.id
+                }
+            })(ei),
+            ni = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        error: !1,
+                        loading: !0,
+                        show: !1,
+                        updating: !1
+                    }, t.onToggle = function(e) {
+                        return c.__awaiter(t, void 0, void 0, function() {
                             var t;
                             return c.__generator(this, function(n) {
                                 switch (n.label) {
@@ -8737,14 +8818,14 @@ webpackJsonp([42], {
                     configurable: !0
                 }), t
             }(l.Component);
-        var ti, ni = Object(r.b)(function(e) {
+        var ri, ii = Object(r.b)(function(e) {
                 var t = Object(s.c)(e);
                 return {
                     sessionUserID: t && t.id
                 }
-            })(ei),
-            ri = n("NoSW"),
-            ii = function(e) {
+            })(ni),
+            ai = n("NoSW"),
+            oi = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8752,22 +8833,22 @@ webpackJsonp([42], {
                     return l.createElement(_.a, {
                         label: Object(d.d)("Two-Factor Authentication", "TwoFactorAuthenticationSetting"),
                         orientation: F.X.Horizontal,
-                        error: this.props.status === ti.Error,
+                        error: this.props.status === ri.Error,
                         errorMessage: Object(d.d)("Sorry, something went wrong. Please try again later.", "TwoFactorAuthenticationSetting")
                     }, this.renderBody())
                 }, t.prototype.renderBody = function() {
                     switch (this.props.status) {
-                        case ti.Loading:
+                        case ri.Loading:
                             return this.renderLoading();
-                        case ti.Error:
+                        case ri.Error:
                             return this.renderError();
-                        case ti.UnverifiedEmail:
+                        case ri.UnverifiedEmail:
                             return this.renderVerifyEmail();
-                        case ti.CanEnable:
+                        case ri.CanEnable:
                             return this.renderEnableButton();
-                        case ti.Enabled:
+                        case ri.Enabled:
                             return this.renderDisableButton();
-                        case ti.EnabledAndRequired:
+                        case ri.EnabledAndRequired:
                             return this.renderEnabledAndRequired();
                         default:
                             return null
@@ -8821,15 +8902,15 @@ webpackJsonp([42], {
                     })
                 }, t
             }(l.Component),
-            ai = n("Q6se");
+            si = n("Q6se");
         ! function(e) {
             e[e.Loading = 0] = "Loading", e[e.Error = 1] = "Error", e[e.UnverifiedEmail = 2] = "UnverifiedEmail", e[e.CanEnable = 3] = "CanEnable", e[e.Enabled = 4] = "Enabled", e[e.EnabledAndRequired = 5] = "EnabledAndRequired"
-        }(ti || (ti = {}));
-        var oi, si = function(e) {
+        }(ri || (ri = {}));
+        var ci, li = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        status: ti.Loading,
+                        status: ri.Loading,
                         restLoading: !0,
                         restError: !1
                     }, t
@@ -8837,11 +8918,11 @@ webpackJsonp([42], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.fetchTwoFactorEnabled()
                 }, t.prototype.componentDidUpdate = function(e, t) {
-                    t.status === ti.Loading && this.state.status !== ti.Loading && this.props.latencyTracking.reportInteractive()
+                    t.status === ri.Loading && this.state.status !== ri.Loading && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.status !== ti.Loading || e.data.loading || this.reconcileStatus(e)
+                    this.state.status !== ri.Loading || e.data.loading || this.reconcileStatus(e)
                 }, t.prototype.render = function() {
-                    return l.createElement(ii, {
+                    return l.createElement(oi, {
                         status: this.state.status
                     })
                 }, t.prototype.fetchTwoFactorEnabled = function() {
@@ -8879,7 +8960,7 @@ webpackJsonp([42], {
                     })
                 }, t.prototype.reconcileStatus = function(e) {
                     var t;
-                    e.data.loading || this.state.restLoading ? t = ti.Loading : !e.data.currentUser || this.state.restError ? t = ti.Error : this.state.twoFactorEnabled || e.data.currentUser.isEmailVerified ? !this.state.twoFactorEnabled && e.data.currentUser.isEmailVerified ? t = ti.CanEnable : this.state.twoFactorEnabled && !this.userRoleRequiresTwoFactor(e) ? t = ti.Enabled : this.state.twoFactorEnabled && this.userRoleRequiresTwoFactor(e) && (t = ti.EnabledAndRequired) : t = ti.UnverifiedEmail, t && this.setState({
+                    e.data.loading || this.state.restLoading ? t = ri.Loading : !e.data.currentUser || this.state.restError ? t = ri.Error : this.state.twoFactorEnabled || e.data.currentUser.isEmailVerified ? !this.state.twoFactorEnabled && e.data.currentUser.isEmailVerified ? t = ri.CanEnable : this.state.twoFactorEnabled && !this.userRoleRequiresTwoFactor(e) ? t = ri.Enabled : this.state.twoFactorEnabled && this.userRoleRequiresTwoFactor(e) && (t = ri.EnabledAndRequired) : t = ri.UnverifiedEmail, t && this.setState({
                         status: t
                     })
                 }, t.prototype.userRoleRequiresTwoFactor = function(e) {
@@ -8887,8 +8968,8 @@ webpackJsonp([42], {
                     return !(!t || !(t.isGlobalMod || t.isSiteAdmin || t.isStaff))
                 }, t
             }(l.Component),
-            ci = Object(le.compose)(Object(ri.a)("TwoFactorAuthenticationSetting"), Object(K.a)(ai))(si),
-            li = function(e) {
+            ui = Object(le.compose)(Object(ai.a)("TwoFactorAuthenticationSetting"), Object(K.a)(si))(li),
+            di = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8896,22 +8977,22 @@ webpackJsonp([42], {
                     return l.createElement("div", null, l.createElement(k.a, {
                         title: Object(d.d)("Security", "SettingsSecurityPage"),
                         description: Object(d.d)("Keep your account safe and sound", "SettingsSecurityPage")
-                    }), l.createElement(Kr, null), l.createElement(ci, null), l.createElement(k.a, {
+                    }), l.createElement(Kr, null), l.createElement(ui, null), l.createElement(k.a, {
                         title: Object(d.d)("Privacy", "SettingsSecurityPage")
-                    }), l.createElement(Qr, null), l.createElement(Gr, null), l.createElement(Zr, null), l.createElement(ni, null))
+                    }), l.createElement(Qr, null), l.createElement(Gr, null), l.createElement(Zr, null), l.createElement(ii, null), l.createElement(ti, null))
                 }, t
             }(l.Component),
-            ui = Object(le.compose)(Object(h.d)("SettingsSecurityPage", {
+            pi = Object(le.compose)(Object(h.d)("SettingsSecurityPage", {
                 autoReportInteractive: !0,
                 destination: b.a.SettingsSecurity
             }), Object(v.a)({
                 location: y.PageviewLocation.SettingsPage
-            }))(li),
-            di = n("CkX/");
+            }))(di),
+            hi = n("CkX/");
         ! function(e) {
             e.Channel = "channel", e.Notifications = "notifications", e.Profile = "profile", e.Security = "security", e.Connections = "connections", e.Prime = "prime", e.Turbo = "turbo"
-        }(oi || (oi = {}));
-        var pi = function(e) {
+        }(ci || (ci = {}));
+        var mi = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8921,8 +9002,8 @@ webpackJsonp([42], {
                     return this.props.data.loading ? null : l.createElement(F._8, {
                         className: "settings-tabs",
                         padding: {
-                            x: bi,
-                            top: bi
+                            x: Si,
+                            top: Si
                         }
                     }, l.createElement(F._8, {
                         margin: {
@@ -8932,23 +9013,23 @@ webpackJsonp([42], {
                         type: F._46.H2
                     }, Object(d.d)("Settings", "SettingsTabs"))), l.createElement(F._8, null, l.createElement(F._34, null, l.createElement(F._33, {
                         linkTo: "/settings/profile",
-                        active: this.props.tabName === oi.Profile,
+                        active: this.props.tabName === ci.Profile,
                         "data-a-target": "profile-tab"
                     }, Object(d.d)("Profile", "SettingsTabs")), this.renderPremiumTab(), l.createElement(F._33, {
                         linkTo: "/settings/channel",
-                        active: this.props.tabName === oi.Channel,
+                        active: this.props.tabName === ci.Channel,
                         "data-a-target": "channel-tab"
                     }, Object(d.d)("Channel and Videos", "SettingsTabs")), l.createElement(F._33, {
                         linkTo: "/settings/security",
-                        active: this.props.tabName === oi.Security,
+                        active: this.props.tabName === ci.Security,
                         "data-a-target": "security-tab"
                     }, Object(d.d)("Security and Privacy", "SettingsTabs")), l.createElement(F._33, {
                         linkTo: "/settings/notifications",
-                        active: this.props.tabName === oi.Notifications,
+                        active: this.props.tabName === ci.Notifications,
                         "data-a-target": "notifications-tab"
                     }, Object(d.d)("Notifications", "SettingsTab")), l.createElement(F._33, {
                         linkTo: "/settings/connections",
-                        active: this.props.tabName === oi.Connections,
+                        active: this.props.tabName === ci.Connections,
                         "data-a-target": "connections-tab"
                     }, Object(d.d)("Connections", "SettingsTabs")), l.createElement(F._33, {
                         linkTo: "/subscriptions",
@@ -8961,20 +9042,20 @@ webpackJsonp([42], {
                             t = e.hasPrime;
                         return !e.hasTurbo && Object(Dn.a)(this.props.data.requestInfo.countryCode) || t ? l.createElement(F._33, {
                             linkTo: "/settings/prime",
-                            active: this.props.tabName === oi.Prime,
+                            active: this.props.tabName === ci.Prime,
                             "data-test-selector": "test-settings-prime-tab",
                             "data-a-target": "prime-tab"
                         }, Object(d.d)("Twitch Prime", "SettingsTabs")) : l.createElement(F._33, {
                             linkTo: "/settings/turbo",
-                            active: this.props.tabName === oi.Turbo,
+                            active: this.props.tabName === ci.Turbo,
                             "data-test-selector": "test-settings-turbo-tab",
                             "data-a-target": "turbo-tab"
                         }, Object(d.d)("Twitch Turbo", "SettingsTabs"))
                     }
                 }, t
             }(l.Component),
-            hi = Object(le.compose)(Object(h.d)("SettingsTabs"), Object(K.a)(di))(pi),
-            mi = function() {
+            gi = Object(le.compose)(Object(h.d)("SettingsTabs"), Object(K.a)(hi))(mi),
+            fi = function() {
                 return l.createElement(F._8, {
                     fullWidth: !0,
                     display: F.R.Flex,
@@ -8986,8 +9067,8 @@ webpackJsonp([42], {
                     to: "/products/turbo/ticket/edit"
                 }, Object(d.d)("Cancel Turbo", "CancelTurboLink")))
             },
-            gi = n("hRPz"),
-            fi = function(e) {
+            vi = n("hRPz"),
+            bi = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8998,21 +9079,21 @@ webpackJsonp([42], {
                 }, t.prototype.renderPageContent = function() {
                     return this.props.data.currentUser ? this.props.data.currentUser.hasPrime ? l.createElement(u.b, {
                         to: "/settings/prime"
-                    }) : this.props.data.currentUser.hasTurbo ? l.createElement(l.Fragment, null, l.createElement(S.a, null, l.createElement(lt.a, null, l.createElement(mi, null))), l.createElement(er, null), l.createElement(lr, null)) : Object(Dn.a)(this.props.data.requestInfo.countryCode) ? l.createElement(u.b, {
+                    }) : this.props.data.currentUser.hasTurbo ? l.createElement(l.Fragment, null, l.createElement(S.a, null, l.createElement(lt.a, null, l.createElement(fi, null))), l.createElement(er, null), l.createElement(lr, null)) : Object(Dn.a)(this.props.data.requestInfo.countryCode) ? l.createElement(u.b, {
                         to: "/settings/prime"
                     }) : (window.location.replace("https://www.twitch.tv/products/turbo/ticket"), null) : this.props.data.loading ? l.createElement(F._10, {
                         fillContent: !0
                     }) : l.createElement(gr, null)
                 }, t
             }(l.Component),
-            vi = Object(i.d)(Object(h.d)("SettingsTurboPage", {
+            yi = Object(i.d)(Object(h.d)("SettingsTurboPage", {
                 autoReportInteractive: !0,
                 destination: b.a.SettingsTurbo
             }), Object(v.a)({
                 location: y.PageviewLocation.SettingsPage
-            }), Object(K.a)(gi))(fi),
-            bi = 3,
-            yi = function(e) {
+            }), Object(K.a)(vi))(bi),
+            Si = 3,
+            ki = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.redirectToProfilePage = function() {
@@ -9026,7 +9107,7 @@ webpackJsonp([42], {
                 }, t.prototype.render = function() {
                     return this.props.isLoggedIn ? l.createElement(F._8, {
                         padding: {
-                            x: bi
+                            x: Si
                         },
                         fullHeight: !0,
                         fullWidth: !0,
@@ -9035,7 +9116,7 @@ webpackJsonp([42], {
                         flexWrap: F.U.NoWrap
                     }, l.createElement(m.b, {
                         addPaddingWhenPlayerIsPersisting: !0
-                    }), l.createElement(g.a, null, l.createElement(hi, {
+                    }), l.createElement(g.a, null, l.createElement(gi, {
                         tabName: this.props.match.params.tab
                     })), l.createElement(F._8, {
                         padding: {
@@ -9049,13 +9130,13 @@ webpackJsonp([42], {
                         component: pr
                     }), l.createElement(u.c, {
                         path: "/settings/turbo",
-                        component: vi
+                        component: yi
                     }), l.createElement(u.c, {
                         path: "/settings/channel",
                         component: gt
                     }), l.createElement(u.c, {
                         path: "/settings/security",
-                        component: ui
+                        component: pi
                     }), l.createElement(u.c, {
                         path: "/settings/notifications",
                         component: Un
@@ -9072,8 +9153,8 @@ webpackJsonp([42], {
                     autoReportInteractive: !0
                 })], t)
             }(l.Component),
-            Si = Object(u.f)(yi);
-        var ki = Object(r.b)(function(e) {
+            _i = Object(u.f)(ki);
+        var Ei = Object(r.b)(function(e) {
             return {
                 isLoggedIn: Object(s.d)(e)
             }
@@ -9083,9 +9164,9 @@ webpackJsonp([42], {
                     return Object(o.f)(a.a.SettingsPage)
                 }
             }, e)
-        })(Si);
+        })(_i);
         n.d(t, "SettingsRoot", function() {
-            return ki
+            return Ei
         })
     },
     KYFq: function(e, t, n) {
@@ -13690,6 +13771,34 @@ webpackJsonp([42], {
         }
         c.prototype.clear = r, c.prototype.delete = i, c.prototype.get = a, c.prototype.has = o, c.prototype.set = s, e.exports = c
     },
+    oR9V: function(e, t, n) {
+        "use strict";
+        n.d(t, "b", function() {
+            return r
+        }), n.d(t, "a", function() {
+            return c
+        });
+        var r, i = n("TToO"),
+            a = n("GiK3"),
+            o = (n.n(a), n("6sO2")),
+            s = n("Odds");
+        ! function(e) {
+            e[e.NoChanges = 0] = "NoChanges", e[e.DirtyChanges = 1] = "DirtyChanges", e[e.Working = 2] = "Working", e[e.Success = 3] = "Success", e[e.Error = 4] = "Error"
+        }(r || (r = {}));
+        var c = function(e) {
+            var t = e.status,
+                n = e.children,
+                c = i.__rest(e, ["status", "children"]),
+                l = s.A.Default,
+                u = s.B.Default,
+                d = !1;
+            return t === r.Working ? l = s.A.Loading : t === r.Success ? l = s.A.Success : t === r.Error ? u = s.B.Alert : t === r.NoChanges && (d = !0), n || (n = t === r.Error ? Object(o.d)("Error", "Save Button") : Object(o.d)("Save", "Save Button")), a.createElement(s.v, i.__assign({
+                disabled: d,
+                state: l,
+                type: u
+            }, c), n)
+        }
+    },
     oYVU: function(e, t) {
         var n = {
             kind: "Document",
@@ -15930,4 +16039,4 @@ webpackJsonp([42], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-76dde1f2f3ddc4f464f88722a3643a33.js.map
+//# sourceMappingURL=pages.settings-cb64771282cb01314b2db8656fcbaec6.js.map

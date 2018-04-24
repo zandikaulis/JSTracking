@@ -140,8 +140,8 @@ webpackJsonp([78], {
             f = n.n(b),
             v = n("/SNv"),
             y = n.n(v),
-            _ = n("Vr3l"),
-            k = n.n(_),
+            k = n("Vr3l"),
+            _ = n.n(k),
             S = n("nyge"),
             T = n("LgcN"),
             w = function(e) {
@@ -183,7 +183,7 @@ webpackJsonp([78], {
                                     item: String(a)
                                 }), t.getLeagueData()) : o && n === S.a.Overwatch && (t.setState({
                                     game: n,
-                                    gameSprite: k.a,
+                                    gameSprite: _.a,
                                     item: o,
                                     isLoading: !0
                                 }), t.getOverwatchData())
@@ -1246,13 +1246,13 @@ webpackJsonp([78], {
             y = Object(l.compose)(Object(d.a)(b, {
                 name: "banUserFromCommunity"
             }))(v);
-        var _ = Object(i.b)(null, function(e) {
+        var k = Object(i.b)(null, function(e) {
             return Object(r.b)({
                 onCloseModal: a.c
             }, e)
         })(y);
         n.d(t, "a", function() {
-            return _
+            return k
         })
     },
     "0w5y": function(e, t, n) {
@@ -1417,13 +1417,13 @@ webpackJsonp([78], {
             y = Object(l.compose)(Object(d.a)(b, {
                 name: "timeoutUserFromCommunity"
             }))(v);
-        var _ = Object(i.b)(null, function(e) {
+        var k = Object(i.b)(null, function(e) {
             return Object(r.b)({
                 onCloseModal: a.c
             }, e)
         })(y);
         n.d(t, "a", function() {
-            return _
+            return k
         })
     },
     "1EXI": function(e, t) {
@@ -2276,13 +2276,13 @@ webpackJsonp([78], {
         n.d(t, "b", function() {
             return y
         }), n.d(t, "a", function() {
-            return _
+            return k
         });
         var y;
         ! function(e) {
             e[e.IconOnly = 0] = "IconOnly", e[e.TextOnly = 1] = "TextOnly", e[e.IconAndText = 2] = "IconAndText"
         }(y || (y = {}));
-        var _ = function(e) {
+        var k = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -2395,6 +2395,7 @@ webpackJsonp([78], {
                             }, function(t) {
                                 var n = t.user;
                                 return n && n.self && (n.self.follower ? n.self.follower.disableNotifications = e.data.followUser.follow.disableNotifications : n.self.follower = {
+                                    __typename: "FollowerEdge",
                                     disableNotifications: e.data.followUser.follow.disableNotifications
                                 }), t
                             }), t.props.onFollow && t.props.onFollow(t.props.channelLogin)
@@ -2422,6 +2423,7 @@ webpackJsonp([78], {
                             }, function(e) {
                                 var t = e.user;
                                 return t && t.self && (t.self.follower ? t.self.follower.disableNotifications = null : t.self.follower = {
+                                    __typename: "FollowerEdge",
                                     disableNotifications: null
                                 }), e
                             }), t.props.onUnfollow && t.props.onUnfollow(t.props.channelLogin)
@@ -2450,6 +2452,7 @@ webpackJsonp([78], {
                             }, function(t) {
                                 var n = t.user;
                                 return n && n.self && (n.self.follower ? n.self.follower.disableNotifications = e.data.followUser.follow.disableNotifications : n.self.follower = {
+                                    __typename: "FollowerEdge",
                                     disableNotifications: e.data.followUser.follow.disableNotifications
                                 }), t
                             })
@@ -2485,7 +2488,7 @@ webpackJsonp([78], {
                     })
                 }
             }, t.prototype.render = function() {
-                return this.props.isLoggedIn ? !this.props.showLoadingPlaceholder || this.props.data && !this.props.data.loading ? this.props.followUser && this.props.unfollowUser && (this.props.followData || this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.user && this.props.data.user.id !== this.props.data.currentUser.id) ? this.state.isFollowing ? this.props.hideWhenFollowing ? null : this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown() : this.renderFollowButton(this.toggleFollowing) : null : this.renderPlaceholder() : this.renderFollowButton(this.props.login)
+                return this.props.isLoggedIn ? !this.props.showLoadingPlaceholder || this.props.data && !this.props.data.loading ? this.props.currentUserLogin !== this.props.channelLogin && this.props.followUser && this.props.unfollowUser && (this.props.followData || this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.user) ? this.state.isFollowing ? this.props.hideWhenFollowing ? null : this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown() : this.renderFollowButton(this.toggleFollowing) : null : this.renderPlaceholder() : this.renderFollowButton(this.props.login)
             }, t.prototype.renderPlaceholder = function() {
                 switch (this.props.size) {
                     case g.z.Large:
@@ -2535,7 +2538,7 @@ webpackJsonp([78], {
             }, t.prototype.renderUnfollowButtonWithDropdown = function() {
                 var e = this.props.balloonDirection ? this.props.balloonDirection : g.r.BottomRight,
                     t = this.getFollowData(),
-                    n = t && t.user ? t.user.displayName : "",
+                    n = t && t.user && t.user.displayName || "",
                     i = this.state.disableNotifications ? Object(a.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "FollowButton") : Object(a.d)("You will be notified on this channel's activity, including when they go live.", "FollowButton");
                 return r.createElement(g._8, {
                     display: g.R.Flex,
@@ -2614,7 +2617,7 @@ webpackJsonp([78], {
                     }
                 },
                 skip: function(e) {
-                    return !e.isLoggedIn || !e.channelLogin || !!e.followData
+                    return !e.isLoggedIn || !e.channelLogin || !!e.followData || e.channelLogin === e.currentUserLogin
                 }
             }), Object(s.a)(b, {
                 name: "followUser"
@@ -2734,16 +2737,16 @@ webpackJsonp([78], {
             f = n("oIkB"),
             v = n("HM6l"),
             y = n("c84M"),
-            _ = n("3iBR"),
-            k = n("Odds"),
+            k = n("3iBR"),
+            _ = n("Odds"),
             S = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(k._8, {
+                    return a.createElement(_._8, {
                         className: "esports-top-page-details"
-                    }, a.createElement(k._8, {
+                    }, a.createElement(_._8, {
                         margin: {
                             bottom: 1
                         },
@@ -2751,44 +2754,44 @@ webpackJsonp([78], {
                             x: 2,
                             y: 1
                         },
-                        display: k.R.Flex,
-                        justifyContent: k._7.Center,
+                        display: _.R.Flex,
+                        justifyContent: _._7.Center,
                         className: "insider-pass-pre-purchase__header"
                     }, a.createElement("img", {
-                        src: _.c + "/owl-2017/all-access-logo.svg",
+                        src: k.c + "/owl-2017/all-access-logo.svg",
                         alt: Object(c.d)("Overwatch League All-Access Pass on Twitch", "EsportsTopPageDetails"),
                         height: "80px",
                         "data-test-selector": "balloon-detail-logo"
-                    })), a.createElement(k._2, {
+                    })), a.createElement(_._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(k.Q, {
-                        type: k._46.H4,
+                    }, a.createElement(_.Q, {
+                        type: _._46.H4,
                         bold: !0,
                         "data-test-selector": "balloon-detail-subheader"
-                    }, Object(c.d)("Your VIP pass to the best of the Overwatch League", "EsportsTopPageDetails"))), a.createElement(k._8, {
+                    }, Object(c.d)("Your VIP pass to the best of the Overwatch League", "EsportsTopPageDetails"))), a.createElement(_._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(k.Q, {
-                        type: k._46.H6,
+                    }, a.createElement(_.Q, {
+                        type: _._46.H6,
                         bold: !0,
                         "data-test-selector": "balloon-detail-igc-subheader"
-                    }, Object(c.d)("Overwatch In-Game Content (requires Blizzard account link)", "EsportsTopPageDetails")), a.createElement(k.Q, {
+                    }, Object(c.d)("Overwatch In-Game Content (requires Blizzard account link)", "EsportsTopPageDetails")), a.createElement(_.Q, {
                         "data-test-selector": "balloon-detail-igc-copy"
-                    }, Object(c.d)("3 Hero Skins • Overwatch League Player Icon • Overwatch League Spray •", "EsportsTopPageDetails"), " ", a.createElement(k.Q, {
-                        type: k._46.Span,
+                    }, Object(c.d)("3 Hero Skins • Overwatch League Player Icon • Overwatch League Spray •", "EsportsTopPageDetails"), " ", a.createElement(_.Q, {
+                        type: _._46.Span,
                         italic: !0
-                    }, Object(c.d)("Plus more content coming soon", "EsportsTopPageDetails")))), a.createElement(k._8, {
+                    }, Object(c.d)("Plus more content coming soon", "EsportsTopPageDetails")))), a.createElement(_._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(k.Q, {
-                        type: k._46.H6,
+                    }, a.createElement(_.Q, {
+                        type: _._46.H6,
                         bold: !0,
                         "data-test-selector": "balloon-detail-experience-subheader"
-                    }, Object(c.d)("The Overwatch League All-Access Experience", "EsportsTopPageDetails")), a.createElement(k.Q, {
+                    }, Object(c.d)("The Overwatch League All-Access Experience", "EsportsTopPageDetails")), a.createElement(_.Q, {
                         "data-test-selector": "balloon-detail-experience-copy"
                     }, Object(c.d)("Exclusive Command Center stream • Match analysis videos by players • Ask questions in post-match Q&A with players • Passholder-only chat • 23 Twitch emotes • Overwatch League chat badges • Ad-free viewing on Overwatch League", "EsportsTopPageDetails"))))
                 }, t
@@ -2799,14 +2802,14 @@ webpackJsonp([78], {
                 var t = Object(w.d)(e.subscriptionProducts),
                     n = t ? Object(w.a)(e.subscriptionProducts[0]) : e.subscriptionProducts[0].price,
                     i = Object(c.d)("Offer available for a limited time. Terms and conditions apply", "EsportsNonSubbedTopPage");
-                return a.createElement(k._8, {
+                return a.createElement(_._8, {
                     padding: 2
-                }, a.createElement(S, null), a.createElement(k.Q, {
-                    type: k._46.H6,
+                }, a.createElement(S, null), a.createElement(_.Q, {
+                    type: _._46.H6,
                     bold: !0
-                }, Object(c.d)("One-Time Purchase for the 2018 Season", "EsportsNonSubbedTopPage")), a.createElement(k.Q, null, Object(c.d)("All-Access benefits last up to the start of the 2019 Overwatch League Season. Twitch emotes, badges, and in-game content are yours to keep forever.", "EsportsNonSubbedTopPage")), a.createElement(k._8, {
-                    display: k.R.Flex
-                }, a.createElement(k._8, {
+                }, Object(c.d)("One-Time Purchase for the 2018 Season", "EsportsNonSubbedTopPage")), a.createElement(_.Q, null, Object(c.d)("All-Access benefits last up to the start of the 2019 Overwatch League Season. Twitch emotes, badges, and in-game content are yours to keep forever.", "EsportsNonSubbedTopPage")), a.createElement(_._8, {
+                    display: _.R.Flex
+                }, a.createElement(_._8, {
                     margin: {
                         right: 1,
                         top: 1
@@ -2818,52 +2821,52 @@ webpackJsonp([78], {
                     reportSubAction: e.handleTopPageSubButtonClick,
                     url: e.subscriptionProducts[0].url,
                     isEsportChannel: !0
-                }))), e.userHasPrime && t && a.createElement(k._8, {
-                    display: k.R.Flex,
+                }))), e.userHasPrime && t && a.createElement(_._8, {
+                    display: _.R.Flex,
                     margin: {
                         top: 1
                     },
-                    flexDirection: k.T.Column
-                }, a.createElement(k._8, {
-                    display: k.R.Flex
-                }, a.createElement(k._8, {
+                    flexDirection: _.T.Column
+                }, a.createElement(_._8, {
+                    display: _.R.Flex
+                }, a.createElement(_._8, {
                     margin: {
                         right: .5
                     }
-                }, a.createElement(k._22, {
-                    asset: k._23.Crown,
-                    type: k._24.Prime
-                })), a.createElement(k.Q, null, Object(c.d)("You’re saving $10 off the $29.99 price with Twitch Prime", "EsportsNonSubbedTopPage"))), a.createElement(k._8, null, a.createElement(k.Q, {
-                    fontSize: k.V.Size7
-                }, a.createElement(k.O, {
+                }, a.createElement(_._22, {
+                    asset: _._23.Crown,
+                    type: _._24.Prime
+                })), a.createElement(_.Q, null, Object(c.d)("You’re saving $10 off the $29.99 price with Twitch Prime", "EsportsNonSubbedTopPage"))), a.createElement(_._8, null, a.createElement(_.Q, {
+                    fontSize: _.V.Size7
+                }, a.createElement(_.O, {
                     to: y.b
-                }, i)))), !e.userHasPrime && a.createElement(k._8, {
-                    display: k.R.Flex,
+                }, i)))), !e.userHasPrime && a.createElement(_._8, {
+                    display: _.R.Flex,
                     margin: {
                         top: 1
                     },
-                    flexDirection: k.T.Column
-                }, a.createElement(k._8, {
-                    display: k.R.Flex
-                }, a.createElement(k._8, {
+                    flexDirection: _.T.Column
+                }, a.createElement(_._8, {
+                    display: _.R.Flex
+                }, a.createElement(_._8, {
                     margin: {
                         right: .5
                     }
-                }, a.createElement(k._22, {
-                    asset: k._23.Crown,
-                    type: k._24.Prime
-                })), a.createElement(k.Q, null, Object(c.d)("Get $10 off with Twitch Prime <x:link>Sign up now</x:link>", {
+                }, a.createElement(_._22, {
+                    asset: _._23.Crown,
+                    type: _._24.Prime
+                })), a.createElement(_.Q, null, Object(c.d)("Get $10 off with Twitch Prime <x:link>Sign up now</x:link>", {
                     "x:link": function(e) {
-                        return a.createElement(k.O, {
+                        return a.createElement(_.O, {
                             key: "insider-prime-link",
                             to: "https://twitch.amazon.com/prime/",
-                            type: k.P.Overlay,
+                            type: _.P.Overlay,
                             targetBlank: !0
                         }, e)
                     }
-                }, "EsportsNonSubbedTopPage"))), a.createElement(k._8, null, a.createElement(k.Q, {
-                    fontSize: k.V.Size7
-                }, a.createElement(k.O, {
+                }, "EsportsNonSubbedTopPage"))), a.createElement(_._8, null, a.createElement(_.Q, {
+                    fontSize: _.V.Size7
+                }, a.createElement(_.O, {
                     to: y.b
                 }, i)))))
             }),
@@ -2872,13 +2875,13 @@ webpackJsonp([78], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(k._8, {
+                    return a.createElement(_._8, {
                         padding: 2
-                    }, a.createElement(S, null), a.createElement(k.Q, {
+                    }, a.createElement(S, null), a.createElement(_.Q, {
                         "test-selector": "subbed-subheader",
-                        type: k._46.H4,
+                        type: _._46.H4,
                         bold: !0
-                    }, Object(c.d)("You have the All-Access Pass", "EsportsSubbedTopPage")), a.createElement(k.Q, {
+                    }, Object(c.d)("You have the All-Access Pass", "EsportsSubbedTopPage")), a.createElement(_.Q, {
                         "test-selector": "subbed-copy"
                     }, Object(c.d)("All-Access benefits last up to the start of the 2019 Overwatch League Season. Twitch emotes, badges, and in-game content are yours to keep.", "EsportsSubbedTopPage")))
                 }, t
@@ -2901,8 +2904,8 @@ webpackJsonp([78], {
             N = n("5LoI"),
             R = n("MAZT"),
             I = n("uTyw"),
-            x = n("zCIC"),
-            L = n("SZoP"),
+            L = n("zCIC"),
+            x = n("SZoP"),
             F = n("2KeS"),
             D = n("lK86"),
             j = function(e) {
@@ -2910,13 +2913,13 @@ webpackJsonp([78], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return !this.props.data || this.props.data.loading || !this.props.recipientLogin || this.props.data.user.self.canGift ? null : a.createElement(k._8, {
+                    return !this.props.data || this.props.data.loading || !this.props.recipientLogin || this.props.data.user.self.canGift ? null : a.createElement(_._8, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(k.Q, {
+                    }, a.createElement(_.Q, {
                         italic: !0,
-                        color: k.K.Alt2,
+                        color: _.K.Alt2,
                         "data-test-selector": "gift-eligibility-message-selector"
                     }, Object(c.d)("Sorry, a gift subscription to this channel is not available for this user.", "GiftRecipientIneligibleMessage")))
                 }, t
@@ -2968,50 +2971,50 @@ webpackJsonp([78], {
                     })
                 }, t.prototype.render = function() {
                     var e;
-                    return e = this.props.isWaiting ? a.createElement(k._8, {
+                    return e = this.props.isWaiting ? a.createElement(_._8, {
                         fullHeight: !0
-                    }, a.createElement(k._10, {
+                    }, a.createElement(_._10, {
                         fillContent: !0
-                    })) : this.props.hasInput ? this.props.isErrored ? this.getErrorMessage() : this.props.userResults && this.props.userResults.totalHits > 0 ? this.getUserResultContent() : this.getNoResultsMessage() : a.createElement(k._8, {
+                    })) : this.props.hasInput ? this.props.isErrored ? this.getErrorMessage() : this.props.userResults && this.props.userResults.totalHits > 0 ? this.getUserResultContent() : this.getNoResultsMessage() : a.createElement(_._8, {
                         margin: 1
-                    }, a.createElement(k.Q, {
-                        color: k.K.Alt2
+                    }, a.createElement(_.Q, {
+                        color: _.K.Alt2
                     }, Object(c.d)("Start typing to see a list of suggestions here.", "GiftRecipientSearchResult"))), a.createElement("div", {
                         onKeyDown: this.props.onKeyDown
-                    }, a.createElement(k._32, {
+                    }, a.createElement(_._32, {
                         className: "gift-recipient-search-result-view",
-                        background: k.n.Alt,
-                        position: k._15.Relative,
-                        overflow: k._11.Hidden,
-                        display: k.R.Block,
+                        background: _.n.Alt,
+                        position: _._15.Relative,
+                        overflow: _._11.Hidden,
+                        display: _.R.Block,
                         margin: {
                             bottom: 2
                         },
                         borderLeft: !0,
                         borderBottom: !0,
                         borderRight: !0
-                    }, a.createElement(k._2, {
-                        overflow: k._11.Hidden,
-                        position: k._15.Relative
-                    }, a.createElement(x.b, {
+                    }, a.createElement(_._2, {
+                        overflow: _._11.Hidden,
+                        position: _._15.Relative
+                    }, a.createElement(L.b, {
                         suppressScrollX: !0
-                    }, a.createElement(k._8, null, e, a.createElement(x.a, {
+                    }, a.createElement(_._8, null, e, a.createElement(L.a, {
                         enabled: !this.props.isWaiting && this.props.hasInput,
                         loadMore: this.props.loadMore
-                    }))))), a.createElement(k._8, null, a.createElement(k._8, {
-                        display: k.R.Flex,
-                        alignItems: k.c.Center,
+                    }))))), a.createElement(_._8, null, a.createElement(_._8, {
+                        display: _.R.Flex,
+                        alignItems: _.c.Center,
                         fullWidth: !0
-                    }, this.getBuyGiftButton(), a.createElement(k._2, {
+                    }, this.getBuyGiftButton(), a.createElement(_._2, {
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(k.Q, {
+                    }, a.createElement(_.Q, {
                         "data-test-selector": "gift-recipient-display-name-selector"
                     }, Object(c.d)("for {displayName}", {
-                        displayName: a.createElement(k.Q, {
+                        displayName: a.createElement(_.Q, {
                             bold: !0,
-                            type: k._46.Span
+                            type: _._46.Span
                         }, this.getFormattedDisplayName())
                     }, "GiftRecipientCheckoutButton")))), a.createElement(M, {
                         subProductId: this.props.selectedProductId,
@@ -3025,18 +3028,18 @@ webpackJsonp([78], {
                         onClick: this.reportGiftCheckoutAction
                     })
                 }, t.prototype.getFormattedDisplayName = function() {
-                    return this.state.selectedUser ? Object(L.a)(this.state.selectedUser.login, this.state.selectedUser.name) : ""
+                    return this.state.selectedUser ? Object(x.a)(this.state.selectedUser.login, this.state.selectedUser.name) : ""
                 }, t.prototype.getErrorMessage = function() {
-                    return a.createElement(k._8, {
+                    return a.createElement(_._8, {
                         fullWidth: !0,
-                        textAlign: k._42.Center,
-                        justifyContent: k._7.Center
-                    }, a.createElement(k.Q, null, Object(c.d)("Something went wrong", "GiftRecipientSearchResult")))
+                        textAlign: _._42.Center,
+                        justifyContent: _._7.Center
+                    }, a.createElement(_.Q, null, Object(c.d)("Something went wrong", "GiftRecipientSearchResult")))
                 }, t.prototype.getUserResultContent = function() {
                     var e = this;
                     return this.props.userResults ? this.props.userResults.results.map(function(t) {
-                        var n = Object(L.a)(t.login || "", t.name || "");
-                        return a.createElement(k._6, {
+                        var n = Object(x.a)(t.login || "", t.name || "");
+                        return a.createElement(_._6, {
                             tabIndex: -1,
                             "data-ts_selectable": !0,
                             "data-tt_content": !0,
@@ -3046,31 +3049,31 @@ webpackJsonp([78], {
                             "data-user_name": t.name,
                             onClick: e.onUserClick,
                             "data-test-selector": "subscribe-button__gift_search_result"
-                        }, a.createElement(k._8, {
+                        }, a.createElement(_._8, {
                             padding: .5
-                        }, a.createElement(k.C, {
+                        }, a.createElement(_.C, {
                             row: !0
-                        }, a.createElement(k.E, {
+                        }, a.createElement(_.E, {
                             alt: t.thumbnailAltText,
                             src: t.thumbnail ? t.thumbnail : "",
-                            size: k.F.Size4,
-                            aspect: k.l.Aspect1x1
-                        }), a.createElement(k.D, {
-                            overflow: k._11.Hidden
-                        }, a.createElement(k._2, {
+                            size: _.F.Size4,
+                            aspect: _.l.Aspect1x1
+                        }), a.createElement(_.D, {
+                            overflow: _._11.Hidden
+                        }, a.createElement(_._2, {
                             padding: {
                                 x: 1
                             }
-                        }, a.createElement(k.Q, {
-                            type: k._46.H5,
+                        }, a.createElement(_.Q, {
+                            type: _._46.H5,
                             ellipsis: !0
                         }, n))))))
-                    }) : a.createElement(k._14, null)
+                    }) : a.createElement(_._14, null)
                 }, t.prototype.getNoResultsMessage = function() {
-                    return a.createElement(k._8, {
+                    return a.createElement(_._8, {
                         margin: 1
-                    }, a.createElement(k.Q, {
-                        color: k.K.Alt2
+                    }, a.createElement(_.Q, {
+                        color: _.K.Alt2
                     }, Object(c.d)("No Results", "GiftRecipientSearchResult")))
                 }, t = r.__decorate([Object(l.d)("GiftRecipientSearchResultPanel")], t)
             }(a.Component)),
@@ -3086,7 +3089,7 @@ webpackJsonp([78], {
                         var e = null;
                         if (this.props.selectedSubProduct && this.props.selectedSubProduct.giftPromotion) {
                             var t = this.props.selectedSubProduct && this.props.selectedSubProduct.giftPromotion ? this.props.selectedSubProduct.giftPromotion : null;
-                            e = a.createElement(k.Q, {
+                            e = a.createElement(_.Q, {
                                 bold: !0,
                                 className: "subscription-gift-recipient-search__discount-message"
                             }, Object(c.d)("{price} (Save {percent})", {
@@ -3094,41 +3097,41 @@ webpackJsonp([78], {
                                 percent: Object(c.e)(t ? t.discountValue / 100 : 0, "percent")
                             }, "GiftRecipientSearch"))
                         }
-                        return a.createElement(k._8, {
+                        return a.createElement(_._8, {
                             padding: 2,
                             className: "subscription-gift-recipient-search"
-                        }, a.createElement(k._8, null, a.createElement(k._8, {
-                            display: k.R.Flex,
-                            justifyContent: k._7.Between,
-                            alignItems: k.c.Center,
+                        }, a.createElement(_._8, null, a.createElement(_._8, {
+                            display: _.R.Flex,
+                            justifyContent: _._7.Between,
+                            alignItems: _.c.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(k.Q, {
-                            type: k._46.H4,
+                        }, a.createElement(_.Q, {
+                            type: _._46.H4,
                             bold: !0
-                        }, Object(c.d)("Choose a Gift Recipient", "GiftRecipientSearch")), a.createElement(k.v, {
-                            type: k.B.Text,
+                        }, Object(c.d)("Choose a Gift Recipient", "GiftRecipientSearch")), a.createElement(_.v, {
+                            type: _.B.Text,
                             "data-a-target": "subscribe-back-button",
-                            icon: k._23.AngleLeft,
+                            icon: _._23.AngleLeft,
                             onClick: this.props.onBack,
                             "data-test-selector": "gift-recipient-search-back-button"
-                        }, a.createElement(k._8, {
-                            alignItems: k.c.Center,
-                            display: k.R.InlineFlex
-                        }, a.createElement(k.Q, null, Object(c.d)("Back", "GiftRecipientSearch"))))), a.createElement(k._8, null, a.createElement(k.Q, null, Object(c.d)("{subDisplayName}: {giftPrice} Gift Subscription (Single Month)", {
+                        }, a.createElement(_._8, {
+                            alignItems: _.c.Center,
+                            display: _.R.InlineFlex
+                        }, a.createElement(_.Q, null, Object(c.d)("Back", "GiftRecipientSearch"))))), a.createElement(_._8, null, a.createElement(_.Q, null, Object(c.d)("{subDisplayName}: {giftPrice} Gift Subscription (Single Month)", {
                             subDisplayName: this.props.selectedSubProduct ? this.props.selectedSubProduct.displayName : "",
                             giftPrice: this.props.selectedSubProduct ? this.props.selectedSubProduct.price : ""
-                        }, "GiftRecipientSearch")), e, a.createElement(k._8, {
-                            display: k.R.Flex,
-                            justifyContent: k._7.Center,
+                        }, "GiftRecipientSearch")), e, a.createElement(_._8, {
+                            display: _.R.Flex,
+                            justifyContent: _._7.Center,
                             padding: {
                                 top: 1
                             },
                             fullWidth: !0
-                        }, a.createElement(k._2, {
+                        }, a.createElement(_._2, {
                             fullWidth: !0
-                        }, a.createElement("div", null, a.createElement(k._25, {
+                        }, a.createElement("div", null, a.createElement(_._25, {
                             onChange: this.handleChange,
                             onKeyDown: this.props.onKeyDown,
                             id: "gift-recipient-search",
@@ -3147,11 +3150,11 @@ webpackJsonp([78], {
                             reportSubMenuAction: this.props.reportSubMenuAction
                         })))))))
                     }
-                    return a.createElement(k._14, null)
+                    return a.createElement(_._14, null)
                 }, t
             }(a.Component)),
             W = 50,
-            H = function(e) {
+            z = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onChange = function(e) {
@@ -3290,7 +3293,7 @@ webpackJsonp([78], {
                     }
                 }, t = r.__decorate([Object(l.d)("GiftRecipientSearch")], t)
             }(a.Component),
-            z = n("37Pp"),
+            H = n("37Pp"),
             G = n("jYA1"),
             q = function(e) {
                 var t = null,
@@ -3306,22 +3309,22 @@ webpackJsonp([78], {
                     }, "NonSubbedTopPage") : Object(c.d)("{upsellTextBold}, plus get free game loot every month, ad-free viewing, and loads more with Twitch Prime.", {
                         upsellTextBold: a.createElement("strong", null, Object(c.d)("Support your favorite streamer", "NonSubbedTopPage"))
                     }, "NonSubbedTopPage");
-                    i = a.createElement(k._8, {
+                    i = a.createElement(_._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(k._8, {
+                    }, a.createElement(_._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(k.Q, {
-                        type: k._46.H4,
+                    }, a.createElement(_.Q, {
+                        type: _._46.H4,
                         bold: !0
-                    }, Object(c.d)("Free Channel Sub with Twitch Prime", "NonSubbedTopPage"))), a.createElement(k._8, null, a.createElement(k._8, {
+                    }, Object(c.d)("Free Channel Sub with Twitch Prime", "NonSubbedTopPage"))), a.createElement(_._8, null, a.createElement(_._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(k.Q, null, o)), a.createElement(G.a, {
+                    }, a.createElement(_.Q, null, o)), a.createElement(G.a, {
                         authToken: e.authToken,
                         "data-a-target": "subscribe-with-prime-button",
                         isSubscribed: !1,
@@ -3335,38 +3338,38 @@ webpackJsonp([78], {
                 }
                 if (!e.isNonStandardSub) {
                     var s = Object(c.d)("More Paid Subscription Options", "NonSubbedTopPage");
-                    t = a.createElement(k._8, {
+                    t = a.createElement(_._8, {
                         margin: {
                             right: 1
                         },
-                        display: k.R.Inline
-                    }, a.createElement(k.v, {
+                        display: _.R.Inline
+                    }, a.createElement(_.v, {
                         ariaLabel: s,
                         onClick: e.showSubOptions,
-                        type: k.B.Hollow,
+                        type: _.B.Hollow,
                         "data-test-selector": "subscribe-button__more-sub-options-button",
                         "data-a-target": "see-more-sub-options-button"
                     }, s));
                     var l = Object(c.d)("Gift a Subscription", "NonSubbedTopPage");
-                    n = a.createElement(k._8, {
-                        display: k.R.Inline
-                    }, a.createElement(k.v, {
+                    n = a.createElement(_._8, {
+                        display: _.R.Inline
+                    }, a.createElement(_.v, {
                         ariaLabel: l,
                         onClick: e.showGiftOptions,
-                        type: k.B.Hollow,
+                        type: _.B.Hollow,
                         "data-test-selector": "subscribe-button__gift"
                     }, l))
                 }
-                return a.createElement(k._8, {
+                return a.createElement(_._8, {
                     padding: 2
-                }, i, a.createElement(k._8, null, a.createElement(k.Q, {
-                    type: k._46.H4,
+                }, i, a.createElement(_._8, null, a.createElement(_.Q, {
+                    type: _._46.H4,
                     bold: !0
-                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(z.a, {
+                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(H.a, {
                     subscriptionProduct: e.subscriptionProducts[0]
-                }), a.createElement(k._8, {
-                    display: k.R.Flex
-                }, a.createElement(k._8, {
+                }), a.createElement(_._8, {
+                    display: _.R.Flex
+                }, a.createElement(_._8, {
                     margin: {
                         right: 1,
                         top: 1
@@ -3377,7 +3380,7 @@ webpackJsonp([78], {
                     "data-a-target": "tier1-subscribe-button",
                     reportSubAction: e.handleTopPageSubButtonClick,
                     url: e.subscriptionProducts[0].url
-                })))), a.createElement(k._8, {
+                })))), a.createElement(_._8, {
                     margin: {
                         right: 1,
                         top: 2
@@ -3386,26 +3389,26 @@ webpackJsonp([78], {
             },
             Q = n("YH6m"),
             K = function(e) {
-                return a.createElement(k._8, {
+                return a.createElement(_._8, {
                     padding: 2
-                }, a.createElement(k._8, null, a.createElement(k._8, {
-                    display: k.R.Flex,
-                    justifyContent: k._7.Between,
-                    alignItems: k.c.Center,
+                }, a.createElement(_._8, null, a.createElement(_._8, {
+                    display: _.R.Flex,
+                    justifyContent: _._7.Between,
+                    alignItems: _.c.Center,
                     fullWidth: !0
-                }, a.createElement(k.Q, {
-                    type: k._46.H4,
+                }, a.createElement(_.Q, {
+                    type: _._46.H4,
                     bold: !0
-                }, e.header), a.createElement(k.v, {
-                    type: k.B.Text,
+                }, e.header), a.createElement(_.v, {
+                    type: _.B.Text,
                     "data-a-target": "subscribe-back-button",
                     "data-test-selector": "subscribe-button__back-button",
-                    icon: k._23.AngleLeft,
+                    icon: _._23.AngleLeft,
                     onClick: e.onBack
-                }, a.createElement(k._8, {
-                    alignItems: k.c.Center,
-                    display: k.R.InlineFlex
-                }, a.createElement(k.Q, null, Object(c.d)("Back", "PaidSubOptions"))))), a.createElement(Q.a, {
+                }, a.createElement(_._8, {
+                    alignItems: _.c.Center,
+                    display: _.R.InlineFlex
+                }, a.createElement(_.Q, null, Object(c.d)("Back", "PaidSubOptions"))))), a.createElement(Q.a, {
                     canPrimeSubscribe: !1,
                     channelDisplayName: e.channelDisplayName,
                     isSubscribed: e.isSubscribed,
@@ -3428,14 +3431,14 @@ webpackJsonp([78], {
                         t = e || this.props.isGift ? null : this.getTopPageUpgradeSection(),
                         n = e ? this.getMobileSubbedSection() : null,
                         i = this.getGiftSection();
-                    return a.createElement(k._8, {
+                    return a.createElement(_._8, {
                         className: "channel-header__subscription-modal-main",
                         padding: 2
                     }, i, n, t)
                 }, t.prototype.getTopPageUpgradeSection = function() {
                     var e = this.props.subbedTier !== m.a.Tier3 ? Object(c.d)("Change Your Subscription", "SubbedTopPage") : this.getSubbedHeader();
-                    return a.createElement(k._8, null, a.createElement(k.Q, {
-                        type: k._46.H4,
+                    return a.createElement(_._8, null, a.createElement(_.Q, {
+                        type: _._46.H4,
                         bold: !0
                     }, e), a.createElement(Q.a, {
                         authToken: this.props.authToken,
@@ -3463,32 +3466,32 @@ webpackJsonp([78], {
                             platform: "IOS" === this.props.subbedPlatform ? "Apple" : "Google"
                         }, "SubbedTopPage"),
                         r = "IOS" === this.props.subbedPlatform ? "https://help.twitch.tv/customer/portal/articles/2921095#ManageiOS" : "https://help.twitch.tv/customer/portal/articles/2921095#ManageGoogle";
-                    return a.createElement(k._8, {
+                    return a.createElement(_._8, {
                         "data-test-selector": "subscribed-view-mobile"
-                    }, a.createElement(k._8, {
+                    }, a.createElement(_._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(k.Q, {
-                        type: k._46.H4,
+                    }, a.createElement(_.Q, {
+                        type: _._46.H4,
                         bold: !0
-                    }, this.getSubbedHeader())), a.createElement(k._8, {
+                    }, this.getSubbedHeader())), a.createElement(_._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(k._8, null, n), a.createElement(k._8, null, i), a.createElement(k._8, null, a.createElement(k.O, {
+                    }, a.createElement(_._8, null, n), a.createElement(_._8, null, i), a.createElement(_._8, null, a.createElement(_.O, {
                         to: r
                     }, Object(c.d)("How do I manage this subscription?", "SubbedTopPage")))))
                 }, t.prototype.getGiftSection = function() {
-                    return this.props.giftSender ? this.props.giftSender && !this.props.giftPaidUpgrade ? a.createElement(k._8, null, a.createElement(k._8, {
+                    return this.props.giftSender ? this.props.giftSender && !this.props.giftPaidUpgrade ? a.createElement(_._8, null, a.createElement(_._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, this.getGiftInfoSection()), this.getGiftExtendSection()) : a.createElement(k._8, null, a.createElement(k._8, {
+                    }, this.getGiftInfoSection()), this.getGiftExtendSection()) : a.createElement(_._8, null, a.createElement(_._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, this.getGiftInfoSection()), this.getTopPageGiftSection()) : a.createElement(k._8, {
+                    }, this.getGiftInfoSection()), this.getTopPageGiftSection()) : a.createElement(_._8, {
                         margin: {
                             bottom: 2
                         }
@@ -3497,28 +3500,28 @@ webpackJsonp([78], {
                     var e, t, n = null;
                     return this.props.giftPaidUpgrade ? (e = this.getSubbedHeader(), t = Object(c.d)("{giftPrice} Gift Subscription from {giftSender}", {
                         giftPrice: this.getCurrentSubPrice(),
-                        giftSender: a.createElement(k.Q, {
+                        giftSender: a.createElement(_.Q, {
                             bold: !0,
-                            type: k._46.Span
+                            type: _._46.Span
                         }, this.props.giftSender || "")
                     }, "SubbedTopPage"), n = Object(c.d)("Your new {upgradePrice} Paid Subscription will begin on {subStartDate}", {
                         upgradePrice: this.props.giftPaidUpgrade ? this.props.giftPaidUpgrade.price : "",
                         subStartDate: this.getFormattedGiftUpgradeStartDate()
                     }, "SubbedTopPage")) : (e = Object(c.d)("Your Gift Subscription", "SubbedTopPage"), t = Object(c.d)("{giftPrice} Subscription from {giftSender} - Benefits expire on {giftEndDate}", {
                         giftPrice: this.getCurrentSubPrice(),
-                        giftSender: a.createElement(k.Q, {
+                        giftSender: a.createElement(_.Q, {
                             bold: !0,
-                            type: k._46.Span
+                            type: _._46.Span
                         }, this.props.giftSender || ""),
                         giftEndDate: this.getFormattedGiftEndDate()
-                    }, "SubbedTopPage")), a.createElement(k._8, null, a.createElement(k.Q, {
+                    }, "SubbedTopPage")), a.createElement(_._8, null, a.createElement(_.Q, {
                         bold: !0,
-                        type: k._46.H4
-                    }, e), a.createElement(k._2, {
+                        type: _._46.H4
+                    }, e), a.createElement(_._2, {
                         margin: {
                             y: 1
                         }
-                    }, a.createElement(k.Q, null, t)), a.createElement(k.Q, {
+                    }, a.createElement(_.Q, null, t)), a.createElement(_.Q, {
                         className: "balloon-subscribed-user__gift-upgrade-info",
                         bold: !0
                     }, n))
@@ -3526,52 +3529,52 @@ webpackJsonp([78], {
                     var e, t = null;
                     if (!this.props.isNonStandardSub) {
                         var n = Object(c.d)("More Paid Subscription Options", "SubbedTopPage");
-                        t = a.createElement(k._8, {
+                        t = a.createElement(_._8, {
                             margin: {
                                 right: 1
                             },
-                            display: k.R.Inline
-                        }, a.createElement(k.v, {
+                            display: _.R.Inline
+                        }, a.createElement(_.v, {
                             ariaLabel: n,
                             onClick: this.props.showSubOptions,
-                            type: k.B.Hollow,
+                            type: _.B.Hollow,
                             "data-a-target": "see-more-sub-options-button"
                         }, n))
                     }
                     var i = this.getGiftMessage();
-                    return e = a.createElement(k._8, {
-                        display: k.R.Inline
-                    }, a.createElement(k.v, {
+                    return e = a.createElement(_._8, {
+                        display: _.R.Inline
+                    }, a.createElement(_.v, {
                         "data-test-selector": "subscribe-button__gift",
                         ariaLabel: i,
                         onClick: this.props.showGiftOptions,
-                        type: k.B.Hollow
-                    }, i)), a.createElement(k._8, null, a.createElement(k._8, {
+                        type: _.B.Hollow
+                    }, i)), a.createElement(_._8, null, a.createElement(_._8, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(k.Q, {
-                        type: k._46.H4,
+                    }, a.createElement(_.Q, {
+                        type: _._46.H4,
                         bold: !0
-                    }, Object(c.d)("Extend Your Subscription", "SubbedTopPage")), a.createElement(k._2, {
+                    }, Object(c.d)("Extend Your Subscription", "SubbedTopPage")), a.createElement(_._2, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(k.Q, null, Object(c.d)("{price} / Month", {
+                    }, a.createElement(_.Q, null, Object(c.d)("{price} / Month", {
                         price: this.props.subscriptionProducts[0].price
-                    }, "SubbedTopPage"))), a.createElement(k._8, {
+                    }, "SubbedTopPage"))), a.createElement(_._8, {
                         margin: {
                             right: 1,
                             top: 1
                         }
-                    }, a.createElement(k.v, {
+                    }, a.createElement(_.v, {
                         ariaLabel: this.props.subscriptionProducts[0].price,
                         "data-a-target": "tier1-subscribe-button",
                         linkTo: this.props.subscriptionProducts[0].url,
                         onClick: this.props.handleTopPageSubButtonClick,
                         purchase: this.props.subscriptionProducts[0].price,
                         targetBlank: !0
-                    }, Object(c.d)("Subscribe Now", "SubbedTopPage")))), a.createElement(k._8, {
+                    }, Object(c.d)("Subscribe Now", "SubbedTopPage")))), a.createElement(_._8, {
                         margin: {
                             right: 1,
                             top: 2
@@ -3582,29 +3585,29 @@ webpackJsonp([78], {
                     Object(w.c)(this.props.subscriptionProducts) && (e = Object(w.a)(this.props.subscriptionProducts[0], !0));
                     var t = this.getGiftMessage(),
                         n = Object(c.d)("More Gift Options", "SubbedTopPage");
-                    return a.createElement(k._8, null, a.createElement(k.Q, {
-                        type: k._46.H4,
+                    return a.createElement(_._8, null, a.createElement(_.Q, {
+                        type: _._46.H4,
                         bold: !0
                     }, Object(c.d)("Help Grow {streamer}'s Community", {
                         streamer: this.props.channelDisplayName
-                    }, "SubbedTopPage")), a.createElement(k._8, {
+                    }, "SubbedTopPage")), a.createElement(_._8, {
                         margin: {
                             top: 1,
                             bottom: 1
                         },
-                        display: k.R.Flex
-                    }, a.createElement(k.v, {
+                        display: _.R.Flex
+                    }, a.createElement(_.v, {
                         ariaLabel: t + " " + e,
                         onClick: this.props.onGiftSelect,
                         purchase: e
-                    }, t), a.createElement(k._8, {
+                    }, t), a.createElement(_._8, {
                         margin: {
                             left: 1
                         }
-                    }, a.createElement(k.v, {
+                    }, a.createElement(_.v, {
                         ariaLabel: n,
                         onClick: this.props.showGiftOptions,
-                        type: k.B.Hollow
+                        type: _.B.Hollow
                     }, n))))
                 }, t.prototype.getFormattedGiftUpgradeStartDate = function() {
                     var e = "";
@@ -3771,12 +3774,12 @@ webpackJsonp([78], {
                 }, t.prototype.render = function() {
                     if (this.props.data.loading) return c.j.debug("NOT rendering sub balloon; sub data not yet ready", {
                         state: this.state
-                    }), a.createElement(k._8, {
-                        display: k.R.Flex,
-                        alignItems: k.c.Center,
-                        justifyContent: k._7.Center,
+                    }), a.createElement(_._8, {
+                        display: _.R.Flex,
+                        alignItems: _.c.Center,
+                        justifyContent: _._7.Center,
                         className: "channel-header__subscription-modal"
-                    }, a.createElement(k._10, {
+                    }, a.createElement(_._10, {
                         fillContent: !0
                     }));
                     if (!this.props.data.user || !this.props.data.user.subscriptionProducts) return c.j.debug("NOT rendering sub balloon; sub data not yet ready", {
@@ -3785,7 +3788,7 @@ webpackJsonp([78], {
                     c.j.debug("rendering balloon", {
                         state: this.state
                     });
-                    var e, t = a.createElement(k._14, null),
+                    var e, t = a.createElement(_._14, null),
                         n = !1,
                         r = this.props.data.user.subscriptionProducts,
                         o = !0;
@@ -3821,11 +3824,11 @@ webpackJsonp([78], {
                     return o && (t = a.createElement($.a, {
                         subscriptionProducts: r,
                         isGift: n
-                    })), a.createElement(k._8, {
+                    })), a.createElement(_._8, {
                         key: "subscribe-balloon"
                     }, t, e)
                 }, t.prototype.getGiftRecipientSearchPage = function() {
-                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(H, {
+                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(z, {
                         key: "gift-recipient-search-page",
                         onBack: this.goToPreviousPage,
                         selectedSubProduct: this.props.data.user.subscriptionProducts[this.state.selectedSubProductIndex],
@@ -3898,7 +3901,7 @@ webpackJsonp([78], {
                         userHasPrime: !!this.props.data.currentUser && this.props.data.currentUser.hasPrime
                     }) : null
                 }, t.prototype.getEsportPage = function() {
-                    return this.props.data.user ? a.createElement(k._8, {
+                    return this.props.data.user ? a.createElement(_._8, {
                         key: "subscribe-balloon"
                     }, a.createElement(C, {
                         channelLogin: this.props.channelLogin,
@@ -3985,30 +3988,30 @@ webpackJsonp([78], {
                         var l = i ? Object(c.d)("Subscribed", "SubscribeButton") : Object(c.d)("Gift A Sub", "SubscribeButton");
                         if (o = this.props.hostChannelID ? Object(c.d)("Subscribed to {username}", {
                                 username: this.props.data.user.displayName
-                            }, "SubscribeButton") : l, i && !n) return a.createElement(k.v, {
+                            }, "SubscribeButton") : l, i && !n) return a.createElement(_.v, {
                             disabled: !0,
                             ariaLabel: o,
-                            icon: k._23.Star
+                            icon: _._23.Star
                         }, o);
                         n && (o = s)
                     } else o = n ? s : this.props.hostChannelID ? Object(c.d)("Subscribe to {username}", {
                         username: this.props.data.user.displayName
                     }, "SubscribeButton") : Object(c.d)("Subscribe", "SubscribeButton");
-                    var d = r === m.a.Prime ? k._23.Crown : k._23.Star,
+                    var d = r === m.a.Prime ? _._23.Crown : _._23.Star,
                         p = t ? "subscribed-button" : "subscribe-button",
-                        g = a.createElement(k.v, {
+                        g = a.createElement(_.v, {
                             "data-a-target": p,
                             "data-test-selector": "subscribe-button__dropdown",
                             ariaLabel: o,
-                            type: t ? k.B.Success : k.B.Default,
+                            type: t ? _.B.Success : _.B.Default,
                             dropdown: !0,
                             icon: t ? d : void 0
                         }, o),
-                        f = this.props.hostChannelID ? k.r.TopLeft : k.r.BottomRight;
+                        f = this.props.hostChannelID ? _.r.TopLeft : _.r.BottomRight;
                     return a.createElement(u.a, {
                         onToggle: this.handleMenuToggle
-                    }, g, a.createElement(k.q, {
-                        size: k.s.Large,
+                    }, g, a.createElement(_.q, {
+                        size: _.s.Large,
                         direction: f,
                         "data-a-target": "sub-balloon"
                     }, a.createElement(X, {
@@ -4559,20 +4562,20 @@ webpackJsonp([78], {
                         margin: {
                             y: 1
                         }
-                    }, Object(l.d)("By blocking them, you will no longer see their messages in chat or whispers, and they will not be able to host you or add you as a friend.", "ReportWizardBlockActions")), a.createElement(b._8, {
+                    }, Object(l.d)("By blocking them, you will no longer see their messages, and they will not be able to host you or add you as a friend.", "ReportWizardBlockActions")), a.createElement(b._8, {
                         margin: {
                             top: 1
                         }
                     }, e))
                 }, t
             }(a.Component),
-            _ = n("mw/a");
+            k = n("mw/a");
         ! function(e) {
             e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
         }(i || (i = {}));
-        var k, S = {
+        var _, S = {
                 generalFilter: function() {
-                    return Object(l.d)("I think their content or behavior shouldn't be allowed on Twitch", "ReportModalWizard")
+                    return Object(l.d)("I don't think their content or behavior is allowed on Twitch", "ReportModalWizard")
                 },
                 me: function() {
                     return Object(l.d)("Me", "ReportModalWizard")
@@ -4660,13 +4663,7 @@ webpackJsonp([78], {
                 },
                 endBlurb_socialmedia: {
                     getTitle: function() {
-                        return Object(l.d)("Please submit a report on the site or service where the incident occurred as well if you have not already done so.", "ReportModalWizard")
-                    },
-                    type: i.Text
-                },
-                endBlurb_event: {
-                    getTitle: function() {
-                        return Object(l.d)("Please report this incident to the event staff or security as well.", "ReportModalWizard")
+                        return Object(l.d)("Please submit a report to the site or service where the incident occurred as well if you have not already done so.", "ReportModalWizard")
                     },
                     type: i.Text
                 },
@@ -4703,11 +4700,18 @@ webpackJsonp([78], {
                     value: "https://www.twitch.tv/p/legal/trademark-policy/",
                     type: i.Link
                 },
-                endLink_brandGuidelines: {
+                endLink_devAgreement: {
                     getTitle: function() {
-                        return Object(l.d)("View our Brand Guidelines", "ReportModalWizard")
+                        return Object(l.d)("View our Developer Agreement", "ReportModalWizard")
                     },
-                    value: "https://www.twitch.tv/p/legal/trademark",
+                    value: "https://www.twitch.tv/p/legal/developer-agreement/",
+                    type: i.Link
+                },
+                endLink_eventCoC: {
+                    getTitle: function() {
+                        return Object(l.d)("View our Events Code of Conduct", "ReportModalWizard")
+                    },
+                    value: "https://www.twitchcon.com/code-of-conduct/",
                     type: i.Link
                 },
                 messaging_general: {
@@ -4725,21 +4729,28 @@ webpackJsonp([78], {
                         return Object(l.d)("They're participating in a malicious raid", "ReportModalWizard")
                     },
                     value: "malicious raid",
-                    reportReason: _.b.Harassment
+                    reportReason: k.b.Harassment
                 },
                 violence: {
                     getTitle: function() {
                         return Object(l.d)("It contains threats, harm, or endangerment of someone", "ReportModalWizard")
                     },
-                    value: "violence",
-                    reportReason: _.b.Harm
+                    value: "violence/threats",
+                    reportReason: k.b.Harm
                 },
                 report_username: {
                     getTitle: function() {
                         return Object(l.d)("They're using an inappropriate or offensive username", "ReportModalWizard")
                     },
                     value: "inappropriate username",
-                    reportReason: _.b.OffensiveUsername
+                    reportReason: k.b.OffensiveUsername
+                },
+                report_emotes: {
+                    getTitle: function() {
+                        return Object(l.d)("The emotes are inappropriate or offensive", "ReportModalWizard")
+                    },
+                    value: "inappropriate emotes",
+                    reportReason: k.b.Other
                 },
                 abusive: {
                     getTitle: function() {
@@ -4752,7 +4763,7 @@ webpackJsonp([78], {
                         return Object(l.d)("It contains attempts to scam other community members", "ReportModalWizard")
                     },
                     value: "scam",
-                    reportReason: _.b.Spam
+                    reportReason: k.b.Spam
                 },
                 emptyStream: {
                     getTitle: function() {
@@ -4765,40 +4776,88 @@ webpackJsonp([78], {
                         return Object(l.d)("They're impersonating someone", "ReportModalWizard")
                     },
                     value: "impersonation",
-                    reportReason: _.b.Impersonation
+                    reportReason: k.b.Impersonation
                 },
                 underage: {
                     getTitle: function() {
                         return Object(l.d)("They're underage (12 or younger)", "ReportModalWizard")
                     },
                     value: "underage",
-                    reportReason: _.b.Underaged
+                    reportReason: k.b.Underaged
                 },
                 report_ip: {
                     getTitle: function() {
-                        return Object(l.d)("They're using a trademark, brand, or intellectual property that's not theirs", "ReportModalWizard")
+                        return Object(l.d)("I think they're using copyrighted content, trademarks, or other intellectual property that's not theirs", "ReportModalWizard")
                     },
                     value: "intellectual property"
                 },
                 inappropriateContent: {
                     getTitle: function() {
-                        return Object(l.d)("It's inappropriate or illegal", "ReportModalWizard")
+                        return Object(l.d)("It's inappropriate or obscene", "ReportModalWizard")
                     },
                     value: "inappropriate content"
+                },
+                violateDevAgreement: {
+                    getTitle: function() {
+                        return Object(l.d)("I think they're violating Twitch's Developer Agreement", "ReportModalWizard")
+                    },
+                    value: "violating developer agreement"
+                },
+                revealPersonalInfo: {
+                    getTitle: function() {
+                        return Object(l.d)("They might have revealed someone's personal information", "ReportModalWizard")
+                    },
+                    value: "revealing personal info",
+                    reportReason: k.b.Other
+                },
+                inappropriateBadge: {
+                    getTitle: function() {
+                        return Object(l.d)("Their emote or subscriber badge violates Twitch's Guidelines", "ReportModalWizard")
+                    },
+                    value: "emote/subscriber badge",
+                    reportReason: k.b.Other
+                },
+                noModeration: {
+                    getTitle: function() {
+                        return Object(l.d)("They're not moderating their chat appropriately", "ReportModalWizard")
+                    },
+                    value: "not moderating chat",
+                    reportReason: k.b.Other
+                },
+                inappropriateExtension: {
+                    getTitle: function() {
+                        return Object(l.d)("Their extension contains malicious or inappropriate content", "ReportModalWizard")
+                    },
+                    value: "inappropriate extension",
+                    reportReason: k.b.Other
+                },
+                cheating: {
+                    getTitle: function() {
+                        return Object(l.d)("They're cheating in an online game", "ReportModalWizard")
+                    },
+                    value: "cheating",
+                    reportReason: k.b.Cheating
+                },
+                bitsViolation: {
+                    getTitle: function() {
+                        return Object(l.d)("Their use of Bits goes against Twitch's Policy", "ReportModalWizard")
+                    },
+                    value: "bits violation",
+                    reportReason: k.b.BitsViolation
                 },
                 video_labeling: {
                     getTitle: function() {
                         return Object(l.d)("Their content is labeled incorrectly", "ReportModalWizard")
                     },
                     value: "incorrect label",
-                    reportReason: _.b.Miscategorized
+                    reportReason: k.b.Miscategorized
                 },
                 video_inactive: {
                     getTitle: function() {
                         return Object(l.d)("The stream is inactive (sleeping/AFK)", "ReportModalWizard")
                     },
                     value: "inactive stream",
-                    reportReason: _.b.Miscategorized
+                    reportReason: k.b.Miscategorized
                 },
                 video_general: {
                     getTitle: S.generalFilter,
@@ -4807,62 +4866,62 @@ webpackJsonp([78], {
                 },
                 hateSpeech: {
                     getTitle: function() {
-                        return Object(l.d)("They're using hate speech or being hateful", "ReportModalWizard")
+                        return Object(l.d)("They're using hate speech, hateful symbols, or hateful media", "ReportModalWizard")
                     },
                     value: "hate speech",
-                    reportReason: _.b.HatefulConduct
+                    reportReason: k.b.HatefulConduct
                 },
                 harassment: {
                     getTitle: function() {
                         return Object(l.d)("They're harassing or bullying someone", "ReportModalWizard")
                     },
                     value: "harassment",
-                    reportReason: _.b.Harassment
+                    reportReason: k.b.Harassment
                 },
                 abusiveViolence: {
                     getTitle: S.abusiveViolence,
                     value: "threatening violence",
-                    reportReason: _.b.Harm
+                    reportReason: k.b.Harm
                 },
                 commitingViolence: {
                     getTitle: S.commitingViolence,
                     value: "committing violence",
-                    reportReason: _.b.Harm
+                    reportReason: k.b.Harm
                 },
                 swatting: {
                     getTitle: function() {
                         return Object(l.d)("They're inciting or committing swatting or a DDOS attack", "ReportModalWizard")
                     },
-                    value: "swatting",
-                    reportReason: _.b.Harassment
+                    value: "swatting/ddosing",
+                    reportReason: k.b.Harassment
                 },
                 personalInfo: {
                     getTitle: function() {
-                        return Object(l.d)("They're purposely revealing personal information to cause harm", "ReportModalWizard")
+                        return Object(l.d)("They're purposely revealing personal information", "ReportModalWizard")
                     },
                     value: "revealing personal info",
-                    reportReason: _.b.Harassment
+                    reportReason: k.b.Harassment
                 },
                 threat_me: {
                     getTitle: function() {
                         return Object(l.d)("At me", "ReportModalWizard")
                     },
                     value: "against me",
-                    reportReason: _.b.Harm
+                    reportReason: k.b.Harm
                 },
                 threat_person: {
                     getTitle: function() {
                         return Object(l.d)("At someone else", "ReportModalWizard")
                     },
                     value: "against another person",
-                    reportReason: _.b.Harm
+                    reportReason: k.b.Harm
                 },
                 threat_group: {
                     getTitle: function() {
                         return Object(l.d)("At a group of people", "ReportModalWizard")
                     },
                     value: "against group of people",
-                    reportReason: _.b.Harm
+                    reportReason: k.b.Harm
                 },
                 threat_selfharm: {
                     getTitle: function() {
@@ -4875,56 +4934,56 @@ webpackJsonp([78], {
                         return Object(l.d)("The game isn't allowed on Twitch", "ReportModalWizard")
                     },
                     value: "prohibited game",
-                    reportReason: _.b.Prohibited
+                    reportReason: k.b.Prohibited
                 },
                 sexuallyViolent: {
                     getTitle: function() {
                         return Object(l.d)("Violent sexual conduct", "ReportModalWizard")
                     },
                     value: "sexually violent",
-                    reportReason: _.b.SexualViolence
+                    reportReason: k.b.SexualViolence
                 },
                 childAnimal: {
                     getTitle: function() {
                         return Object(l.d)("Sexual conduct involving a child or animal", "ReportModalWizard")
                     },
                     value: "sexual conduct; child or animal",
-                    reportReason: _.b.SexualViolence
+                    reportReason: k.b.SexualViolence
                 },
                 pornographic: {
                     getTitle: function() {
                         return Object(l.d)("Sexually explicit or pornographic content", "ReportModalWizard")
                     },
                     value: "pornographic",
-                    reportReason: _.b.SexualContent
+                    reportReason: k.b.SexualContent
                 },
                 gory: {
                     getTitle: function() {
                         return Object(l.d)("Extreme violence or gore", "ReportModalWizard")
                     },
                     value: "gory",
-                    reportReason: _.b.Gore
+                    reportReason: k.b.Gore
                 },
                 suggestive: {
                     getTitle: function() {
                         return Object(l.d)("Sexually suggestive content", "ReportModalWizard")
                     },
                     value: "sexually suggestive",
-                    reportReason: _.b.SexualContent
+                    reportReason: k.b.SexualContent
                 },
                 nudity: {
                     getTitle: function() {
                         return Object(l.d)("Full or partial nudity", "ReportModalWizard")
                     },
                     value: "nudity",
-                    reportReason: _.b.SexualContent
+                    reportReason: k.b.SexualContent
                 },
-                illegal_advert: {
+                other: {
                     getTitle: function() {
-                        return Object(l.d)("Advertisements for something illegal", "ReportModalWizard")
+                        return Object(l.d)("There's something else wrong with it...", "ReportModalWizard")
                     },
-                    value: "advertisement for something illegal",
-                    reportReason: _.b.Other
+                    value: "other",
+                    reportReason: k.b.Other
                 },
                 evasion: {
                     getTitle: function() {
@@ -4937,49 +4996,49 @@ webpackJsonp([78], {
                         return Object(l.d)("A sitewide ban from Twitch", "ReportModalWizard")
                     },
                     value: "sitewide ban",
-                    reportReason: _.b.TosBanEvasion
+                    reportReason: k.b.TosBanEvasion
                 },
                 evasion_chat: {
                     getTitle: function() {
                         return Object(l.d)("A chat ban from one or more channels", "ReportModalWizard")
                     },
                     value: "chat ban",
-                    reportReason: _.b.ChatBanEvasion
+                    reportReason: k.b.ChatBanEvasion
                 },
                 evasion_messaging: {
                     getTitle: function() {
                         return Object(l.d)("A block from messaging me", "ReportModalWizard")
                     },
                     value: "messaging block",
-                    reportReason: _.b.ChatBanEvasion
+                    reportReason: k.b.ChatBanEvasion
                 },
                 impersonation_me: {
                     getTitle: S.me,
                     value: "impersonating me",
-                    reportReason: _.b.Impersonation
+                    reportReason: k.b.Impersonation
                 },
                 impersonation_brand: {
                     getTitle: function() {
                         return Object(l.d)("Someone I represent, or a brand/company I work for", "ReportModalWizard")
                     },
                     value: "impersonating brand",
-                    reportReason: _.b.Impersonation
+                    reportReason: k.b.Impersonation
                 },
                 impersonation_other: {
                     getTitle: S.someoneElse,
                     value: "impersonating someone else",
-                    reportReason: _.b.Impersonation
+                    reportReason: k.b.Impersonation
                 },
                 selfharm: {
                     getTitle: function() {
                         return Object(l.d)("I'm concerned for their wellbeing", "ReportModalWizard")
                     },
                     value: "selfharm",
-                    reportReason: _.b.SelfHarm
+                    reportReason: k.b.SelfHarm
                 },
                 chat: {
                     getTitle: function() {
-                        return Object(l.d)("In a chat message", "ReportModalWizard")
+                        return Object(l.d)("In a stream chat message", "ReportModalWizard")
                     },
                     value: "chat"
                 },
@@ -5008,20 +5067,20 @@ webpackJsonp([78], {
                         return Object(l.d)("In a whisper (private message)", "ReportModalWizard")
                     },
                     value: "whisper",
-                    reportContext: _.a.Whisper
+                    reportContext: k.a.Whisper
                 },
                 username: {
                     getTitle: function() {
                         return Object(l.d)("In the username", "ReportModalWizard")
                     },
                     value: "username",
-                    reportReason: _.b.OffensiveUsername
+                    reportReason: k.b.OffensiveUsername
                 },
                 report_other: {
                     getTitle: function() {
                         return Object(l.d)("Somewhere else...", "ReportModalWizard")
                     },
-                    value: "other",
+                    value: "somewhere else",
                     omitFromDescription: !0
                 },
                 video_streamer: {
@@ -5034,8 +5093,7 @@ webpackJsonp([78], {
                     getTitle: function() {
                         return Object(l.d)("Someone else in the video", "ReportModalWizard")
                     },
-                    value: "someone else in video",
-                    differentTarget: !0
+                    value: "someone else in video"
                 },
                 video_chatSomeone: {
                     getTitle: function() {
@@ -5049,13 +5107,6 @@ webpackJsonp([78], {
                         return Object(l.d)("The channel owner", "ReportModalWizard")
                     },
                     value: "channel owner"
-                },
-                report_moderator: {
-                    getTitle: function() {
-                        return Object(l.d)("A channel moderator", "ReportModalWizard")
-                    },
-                    value: "channel moderator",
-                    differentTarget: !0
                 },
                 report_member: {
                     getTitle: function() {
@@ -5090,129 +5141,50 @@ webpackJsonp([78], {
                 },
                 external_incitingRaids: {
                     getTitle: function() {
-                        return Object(l.d)("inciting brigading or malicious raids of a Twitch community member", "ReportModalWizard")
+                        return Object(l.d)("inciting brigading or malicious raids", "ReportModalWizard")
                     },
-                    reportReason: _.b.Harassment,
+                    reportReason: k.b.Harassment,
                     value: "brigading/raids"
                 },
                 external_threatening: {
-                    getTitle: function() {
-                        return Object(l.d)("threatening, harming, or endangering a Twitch community member", "ReportModalWizard")
-                    },
-                    value: "external site; threatening"
+                    getTitle: S.threatening,
+                    value: "threatening"
                 },
                 external_harassment: {
-                    getTitle: function() {
-                        return Object(l.d)("being hateful, harassing, or abusive toward a Twitch community member", "ReportModalWizard")
-                    },
-                    value: "external site; hateful/harassing"
-                },
-                external_scam: {
-                    getTitle: S.scam,
-                    value: "external site; scam",
-                    reportReason: _.b.Spam
+                    getTitle: S.abusive,
+                    value: "hateful/harassing"
                 },
                 external_abusiveViolence: {
                     getTitle: S.abusiveViolence,
                     value: "external site; threatening violence",
-                    reportReason: _.b.Harm
+                    reportReason: k.b.Harm
                 },
                 external_commitingViolence: {
                     getTitle: S.commitingViolence,
                     value: "external site; committing violence",
-                    reportReason: _.b.Harm
-                },
-                event_banned: {
-                    getTitle: function() {
-                        return Object(l.d)("attending an event they are banned from", "ReportModalWizard")
-                    },
-                    value: "event; ban evasion",
-                    reportReason: _.b.TosBanEvasion
-                },
-                event_inappropriate: {
-                    getTitle: S.sexuallyCoercive,
-                    value: "event; sexually coercive",
-                    reportReason: _.b.SexualViolence
-                },
-                event_stalking: {
-                    getTitle: S.stalking,
-                    value: "event; stalking",
-                    reportReason: _.b.Harassment
-                },
-                event_recording: {
-                    getTitle: S.recording,
-                    value: "event; recording",
-                    reportReason: _.b.Harassment
-                },
-                event_scam: {
-                    getTitle: S.scam,
-                    value: "event; scam",
-                    reportReason: _.b.Spam
-                },
-                event_underage: {
-                    getTitle: S.underage,
-                    value: "event; underage",
-                    reportReason: _.b.Underaged
-                },
-                event_selfharm: {
-                    getTitle: S.selfharm,
-                    value: "event; selfharm",
-                    reportReason: _.b.SelfHarm
-                },
-                event_threatening: {
-                    getTitle: S.threatening,
-                    value: "event; threatening"
-                },
-                event_abusive: {
-                    getTitle: S.abusive,
-                    value: "event; hateful"
-                },
-                event_abusiveViolence: {
-                    getTitle: S.abusiveViolence,
-                    value: "event; threatening violence",
-                    reportReason: _.b.Harm
-                },
-                event_commitingViolence: {
-                    getTitle: S.commitingViolence,
-                    value: "event; committing violence",
-                    reportReason: _.b.Harm
+                    reportReason: k.b.Harm
                 },
                 conduct_impersonation: {
                     getTitle: function() {
                         return Object(l.d)("impersonating someone", "ReportModalWizard")
                     },
                     value: "impersonation",
-                    reportReason: _.b.Impersonation
+                    reportReason: k.b.Impersonation
                 },
                 inPerson_sexual: {
                     getTitle: S.sexuallyCoercive,
-                    value: "in-person; sexually coercive",
-                    reportReason: _.b.SexualViolence
+                    value: "sexually coercive",
+                    reportReason: k.b.SexualViolence
                 },
                 inPerson_stalking: {
                     getTitle: S.stalking,
-                    value: "in-person; stalking",
-                    reportReason: _.b.Harassment
+                    value: "stalking",
+                    reportReason: k.b.Harassment
                 },
                 inPerson_recording: {
                     getTitle: S.recording,
-                    value: "in-person; recording",
-                    reportReason: _.b.Harassment
-                },
-                inPerson_scam: {
-                    getTitle: S.scam,
-                    value: "in-person; scam",
-                    reportReason: _.b.Spam
-                },
-                inPerson_underage: {
-                    getTitle: S.underage,
-                    value: "in-person; underage",
-                    reportReason: _.b.Underaged
-                },
-                inPerson_selfharm: {
-                    getTitle: S.selfharm,
-                    value: "in-person; selfharm",
-                    reportReason: _.b.SelfHarm
+                    value: "recording",
+                    reportReason: k.b.Harassment
                 },
                 inPerson_threatening: {
                     getTitle: S.threatening,
@@ -5220,24 +5192,24 @@ webpackJsonp([78], {
                 },
                 inPerson_abusive: {
                     getTitle: S.abusive,
-                    value: "in-person; hateful"
+                    value: "in-person; hateful/harassing"
                 },
                 inPerson_abusiveViolence: {
                     getTitle: S.abusiveViolence,
                     value: "in-person; threatening violence",
-                    reportReason: _.b.Harm
+                    reportReason: k.b.Harm
                 },
                 inPerson_commitingViolence: {
                     getTitle: S.commitingViolence,
                     value: "in-person; committing violence",
-                    reportReason: _.b.Harm
+                    reportReason: k.b.Harm
                 },
                 spam: {
                     getTitle: function() {
                         return Object(l.d)("They're spamming or spreading malicious links", "ReportModalWizard")
                     },
                     value: "spam",
-                    reportReason: _.b.Spam
+                    reportReason: k.b.Spam
                 },
                 spam_bot: {
                     getTitle: function() {
@@ -5360,7 +5332,7 @@ webpackJsonp([78], {
             E = n("LjAQ");
         ! function(e) {
             e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
-        }(k || (k = {}));
+        }(_ || (_ = {}));
         var P, C, O, N = {
                 contentGeneral: function() {
                     return Object(l.d)("What would you like to report?", "ReportModalWizard")
@@ -5416,19 +5388,16 @@ webpackJsonp([78], {
             },
             I = {
                 getDescription: function() {
-                    return Object(l.d)("Reports are reviewed by Twitch Staff 24 hours a day to assess for violations of Twitch’s policies. We will issue penalties, such as account suspension and/or content removal, once we verify a violation has occurred.", "ReportModalWizard")
+                    return Object(l.d)("Reports are reviewed by Twitch Staff 24 hours. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                 },
                 blockPrompt: !0,
                 getTitle: R.thanks,
-                type: k.Info,
-                value: "default end"
+                type: _.Info,
+                value: "end card"
             },
-            x = {
+            L = {
                 socialMedia: r.__assign({}, I, {
                     items: [T.endBlurb_socialmedia]
-                }),
-                twitchEvent: r.__assign({}, I, {
-                    items: [T.endBlurb_event]
                 }),
                 inPerson: r.__assign({}, I, {
                     items: [T.endBlurb_inPerson]
@@ -5436,34 +5405,41 @@ webpackJsonp([78], {
                 violence: r.__assign({}, I, {
                     items: [T.endBlurb_threat]
                 }),
-                ip: {
-                    getTitle: function() {
-                        return Object(l.d)("Thank you for your concern.", "ReportModalWizard")
-                    },
+                legal: {
+                    getTitle: R.thanksConcern,
                     getDescription: function() {
                         return Object(l.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                     },
-                    items: [T.endLink_DMCA, T.endLink_trademark, T.endLink_brandGuidelines],
-                    type: k.Info,
+                    items: [T.endLink_DMCA, T.endLink_trademark, T.endLink_devAgreement],
+                    type: _.Info,
                     value: "ip end"
                 },
                 selfharm: {
                     getTitle: R.thanksConcern,
                     getDescription: function() {
-                        return Object(l.d)("We will attempt to contact the owner of this account to provide resources for further assistance. The link below contains some general information that may also be of use.", "ReportModalWizard")
+                        return Object(l.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                     },
                     items: [T.endLink_selfharm],
-                    type: k.Info,
+                    type: _.Info,
                     value: "selfharm end"
+                },
+                twitchEvent: {
+                    getTitle: R.thanksConcern,
+                    getDescription: function() {
+                        return Object(l.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
+                    },
+                    items: [T.endLink_eventCoC],
+                    value: "twitch event end",
+                    type: _.Info
                 }
             },
-            L = {
+            x = {
                 getTitle: R.report,
                 getLabel: function() {
                     return Object(l.d)("Where is the problem?", "ReportModalWizard")
                 },
                 items: [T.video, T.whisper, T.chat, T.room, T.profile, T.username, T.report_other],
-                type: k.MultipleChoice,
+                type: _.MultipleChoice,
                 value: "content type"
             },
             F = {
@@ -5471,21 +5447,21 @@ webpackJsonp([78], {
                     getTitle: R.reportVideo,
                     getLabel: N.identifyUser,
                     items: [T.video_streamer, T.video_someoneElse, T.video_chatSomeone],
-                    type: k.MultipleChoice,
+                    type: _.MultipleChoice,
                     value: "video report user"
                 },
                 content: {
                     getTitle: R.reportVideo,
                     getLabel: N.contentGeneral,
-                    items: [T.video_labeling, T.video_inactive, T.video_general, T.report_ip, T.selfharm],
-                    type: k.MultipleChoice,
+                    items: [T.revealPersonalInfo, T.video_labeling, T.video_inactive, T.video_general, T.report_ip, T.violateDevAgreement, T.selfharm],
+                    type: _.MultipleChoice,
                     value: "report reason"
                 },
                 general: {
                     getTitle: R.reportVideo,
                     getLabel: N.content,
-                    items: [T.report_username, T.violence, T.abusive, T.scam, T.inappropriateContent, T.evasion, T.impersonation, T.underage],
-                    type: k.MultipleChoice,
+                    items: [T.report_username, T.violence, T.abusive, T.cheating, T.scam, T.inappropriateContent, T.evasion, T.impersonation, T.underage, T.bitsViolation],
+                    type: _.MultipleChoice,
                     value: "report reason"
                 }
             },
@@ -5493,36 +5469,36 @@ webpackJsonp([78], {
                 content: {
                     getTitle: R.reportMessage,
                     getLabel: N.contentGeneral,
-                    items: [T.evasion, T.spam, T.maliciousRaid, T.messaging_general, T.selfharm],
-                    type: k.MultipleChoice,
+                    items: [T.revealPersonalInfo, T.evasion, T.spam, T.maliciousRaid, T.report_username, T.messaging_general, T.selfharm],
+                    type: _.MultipleChoice,
                     value: "report reason"
                 },
                 general: {
                     getTitle: R.reportMessage,
                     getLabel: N.content,
-                    items: [T.report_username, T.violence, T.abusive, T.inappropriateContent, T.impersonation, T.underage],
-                    type: k.MultipleChoice,
+                    items: [T.report_emotes, T.violence, T.abusive, T.inappropriateContent, T.impersonation, T.underage, T.bitsViolation],
+                    type: _.MultipleChoice,
                     value: "report reason"
                 }
             },
             j = r.__assign({}, D.content, {
                 getDescription: function() {
-                    return Object(l.d)("Please note that by submitting a report regarding a whisper (private message) you authorize Twitch to review the contents of that conversation.", "ReportModalWizard")
+                    return Object(l.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
                 }
             }),
             M = {
                 content: {
                     getTitle: R.reportProfile,
                     getLabel: N.contentGeneral,
-                    items: [T.evasion, T.profile_general, T.report_ip, T.selfharm],
-                    type: k.MultipleChoice,
+                    items: [T.revealPersonalInfo, T.inappropriateBadge, T.inappropriateExtension, T.noModeration, T.profile_general, T.report_ip, T.violateDevAgreement, T.selfharm],
+                    type: _.MultipleChoice,
                     value: "report reason"
                 },
                 general: {
                     getTitle: R.reportProfile,
                     getLabel: N.content,
-                    items: [T.report_username, T.violence, T.abusive, T.scam, T.inappropriateContent, T.impersonation, T.underage],
-                    type: k.MultipleChoice,
+                    items: [T.report_username, T.violence, T.abusive, T.scam, T.inappropriateContent, T.impersonation, T.underage, T.bitsViolation],
+                    type: _.MultipleChoice,
                     value: "report reason"
                 }
             },
@@ -5533,13 +5509,13 @@ webpackJsonp([78], {
                     }, "ReportModalWizard")
                 },
                 getLabel: N.identifyUser,
-                items: [T.report_channelOwner, T.report_moderator, T.report_member],
+                items: [T.report_channelOwner, T.report_member],
                 value: "room report user",
-                type: k.MultipleChoice
+                type: _.MultipleChoice
             },
             A = {
                 getTitle: R.tellUsMore,
-                type: k.Confirm,
+                type: _.Confirm,
                 value: "tell us more"
             },
             B = {
@@ -5551,37 +5527,19 @@ webpackJsonp([78], {
                 }),
                 socialMedia: r.__assign({}, A, {
                     items: [T.input_link, T.input_connection, T.input_description],
-                    nextCard: x.socialMedia
+                    nextCard: L.socialMedia
                 }),
                 inPerson: r.__assign({}, A, {
                     items: [T.input_identifyOwner, T.input_description],
-                    nextCard: x.inPerson
-                }),
-                twitchEvent: r.__assign({}, A, {
-                    items: [T.input_identifyOwner, T.input_description],
-                    nextCard: x.twitchEvent
+                    nextCard: L.inPerson
                 })
             },
             V = {
-                twitchEvent: r.__assign({}, B.general, {
-                    nextCard: x.selfharm,
-                    getDescription: function() {
-                        return Object(l.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so.", "ReportModalWizard")
-                    }
-                }),
-                inPerson: r.__assign({}, B.general, {
-                    nextCard: x.selfharm,
-                    getDescription: function() {
-                        return Object(l.d)("Please bring this concern to the attention of local law enforcement if you have not already done so. ", "ReportModalWizard")
-                    }
-                })
-            },
-            W = {
                 content: {
                     getTitle: R.reportAbusive,
                     getLabel: N.relevantStatements,
                     items: [T.hateSpeech, T.harassment, T.abusiveViolence, T.commitingViolence, T.swatting, T.personalInfo],
-                    type: k.MultipleChoice,
+                    type: _.MultipleChoice,
                     value: "abuse type"
                 },
                 violence: {
@@ -5594,11 +5552,11 @@ webpackJsonp([78], {
                         return Object(l.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
                     },
                     items: [T.threat_me, T.threat_person, T.threat_group, T.threat_selfharm],
-                    type: k.MultipleChoice,
+                    type: _.MultipleChoice,
                     value: "violence type"
                 }
             },
-            H = {
+            W = {
                 identifyLocation: {
                     getTitle: function(e) {
                         return Object(l.d)("Report {username} for something else...", {
@@ -5609,7 +5567,7 @@ webpackJsonp([78], {
                         return Object(l.d)("Where did the problem happen?", "ReportModalWizard")
                     },
                     items: [T.location_onTwitch, T.location_anotherSite, T.location_TwitchEvent, T.location_inPerson],
-                    type: k.MultipleChoice,
+                    type: _.MultipleChoice,
                     value: "location"
                 },
                 externalSite: {
@@ -5619,22 +5577,13 @@ webpackJsonp([78], {
                         }, "ReportModalWizard")
                     },
                     getLabel: N.thisPersonIs,
-                    items: [T.external_incitingRaids, T.external_threatening, T.external_harassment, T.external_scam],
-                    type: k.MultipleChoice,
+                    getDescription: function() {
+                        return Object(l.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
+                    },
+                    items: [T.external_incitingRaids, T.external_threatening, T.external_harassment],
+                    type: _.MultipleChoice,
                     nextCard: B.socialMedia,
                     value: "external site conduct"
-                },
-                event: {
-                    getTitle: function(e) {
-                        return Object(l.d)("Report {username}'s Conduct at a Twitch Event", {
-                            username: e
-                        }, "ReportModalWizard")
-                    },
-                    getLabel: N.thisPersonIs,
-                    items: [T.event_banned, T.event_inappropriate, T.event_stalking, T.event_recording, T.event_threatening, T.event_abusive, T.conduct_impersonation, T.event_scam, T.event_underage, T.event_selfharm],
-                    type: k.MultipleChoice,
-                    value: "twitch event conduct",
-                    nextCard: B.twitchEvent
                 },
                 inPerson: {
                     getTitle: function(e) {
@@ -5643,33 +5592,24 @@ webpackJsonp([78], {
                         }, "ReportModalWizard")
                     },
                     getLabel: N.thisPersonIs,
-                    items: [T.inPerson_sexual, T.inPerson_stalking, T.inPerson_recording, T.inPerson_threatening, T.inPerson_abusive, T.conduct_impersonation, T.inPerson_scam, T.inPerson_underage, T.inPerson_selfharm],
-                    type: k.MultipleChoice,
+                    items: [T.inPerson_sexual, T.inPerson_stalking, T.inPerson_recording, T.inPerson_threatening, T.inPerson_abusive],
+                    type: _.MultipleChoice,
                     value: "in person conduct",
                     nextCard: B.inPerson
                 },
-                external_violence: r.__assign({}, W.violence, {
+                external_violence: r.__assign({}, V.violence, {
+                    items: [T.threat_me, T.threat_person, T.threat_group],
                     nextCard: B.socialMedia
                 }),
-                event_violence: r.__assign({}, W.violence, {
-                    nextCard: B.twitchEvent
-                }),
-                inPerson_violence: r.__assign({}, W.violence, {
+                inPerson_violence: r.__assign({}, V.violence, {
+                    items: [T.threat_me, T.threat_person, T.threat_group],
                     nextCard: B.inPerson
                 }),
                 external_abusive: {
                     getTitle: R.reportAbusive,
                     getLabel: N.relevantStatements,
                     items: [T.hateSpeech, T.harassment, T.external_abusiveViolence, T.external_commitingViolence, T.swatting, T.personalInfo],
-                    type: k.MultipleChoice,
-                    nextCard: B.inPerson,
-                    value: "abuse type"
-                },
-                event_abusive: {
-                    getTitle: R.reportAbusive,
-                    getLabel: N.relevantStatements,
-                    items: [T.hateSpeech, T.harassment, T.event_abusiveViolence, T.event_commitingViolence, T.swatting, T.personalInfo],
-                    type: k.MultipleChoice,
+                    type: _.MultipleChoice,
                     nextCard: B.inPerson,
                     value: "abuse type"
                 },
@@ -5677,7 +5617,7 @@ webpackJsonp([78], {
                     getTitle: R.reportAbusive,
                     getLabel: N.relevantStatements,
                     items: [T.hateSpeech, T.harassment, T.inPerson_abusiveViolence, T.inPerson_commitingViolence, T.swatting, T.personalInfo],
-                    type: k.MultipleChoice,
+                    type: _.MultipleChoice,
                     nextCard: B.inPerson,
                     value: "abuse type"
                 }
@@ -5690,21 +5630,21 @@ webpackJsonp([78], {
                 },
                 getLabel: N.contentGeneral,
                 items: [T.spam_bot, T.spam_scam, T.spam_repeated],
-                type: k.MultipleChoice,
+                type: _.MultipleChoice,
                 value: "spam type"
             },
-            G = {
+            H = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username} for Inappropriate Content", {
                         username: e
                     }, "ReportModalWizard")
                 },
                 getLabel: N.relevantStatements,
-                items: [T.inappropriate_game, T.gory, T.sexuallyViolent, T.childAnimal, T.pornographic, T.suggestive, T.nudity, T.illegal_advert],
-                type: k.MultipleChoice,
+                items: [T.inappropriate_game, T.gory, T.sexuallyViolent, T.childAnimal, T.pornographic, T.suggestive, T.nudity, T.other],
+                type: _.MultipleChoice,
                 value: "inappropriate content type"
             },
-            q = {
+            G = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username} for Evading a Ban", {
                         username: e
@@ -5715,10 +5655,10 @@ webpackJsonp([78], {
                 },
                 value: "ban type",
                 items: [T.evasion_chat, T.evasion_sitewide, T.evasion_messaging],
-                type: k.MultipleChoice,
+                type: _.MultipleChoice,
                 nextCard: B.banEvasion
             },
-            Q = {
+            q = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username} for Impersonation", {
                         username: e
@@ -5728,22 +5668,22 @@ webpackJsonp([78], {
                     return Object(l.d)("Who is being impersonated?", "ReportModalWizard")
                 },
                 getDescription: function() {
-                    return Object(l.d)("Please note that parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
+                    return Object(l.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                 },
                 items: [T.impersonation_me, T.impersonation_brand, T.impersonation_other],
-                type: k.MultipleChoice,
+                type: _.MultipleChoice,
                 value: "impersonation type"
             },
-            K = L,
-            $ = B.general,
-            Y = I,
-            Z = {
+            Q = x,
+            K = B.general,
+            $ = I,
+            Y = {
                 video: F.identifyUser,
                 whisper: j,
                 chat: D.content,
                 profile: M.content,
                 room: U,
-                other: H.identifyLocation,
+                "somewhere else": W.identifyLocation,
                 streamer: F.content,
                 "someone else in video": F.content,
                 "someone in chat": D.content,
@@ -5754,45 +5694,39 @@ webpackJsonp([78], {
                 "channel moderator": D.content,
                 "community member": D.content,
                 "on twitch": M.content,
-                "another site": H.externalSite,
-                "twitch event": H.event,
-                "in person": H.inPerson,
+                "another site": W.externalSite,
+                "twitch event": L.twitchEvent,
+                "in person": W.inPerson,
                 "brigading/raids": B.socialMedia,
-                "external site; threatening": H.external_violence,
-                "external site; hateful/harassing": H.external_abusive,
-                "external site; threatening violence": H.external_violence,
-                "external site; committing violence": H.external_violence,
+                threatening: W.external_violence,
+                "hateful/harassing": W.external_abusive,
+                "external site; threatening violence": W.external_violence,
+                "external site; committing violence": W.external_violence,
                 "external site; scam": B.socialMedia,
-                "event; threatening": H.event_violence,
-                "event; hateful": H.event_abusive,
-                "event; threatening violence": H.event_violence,
-                "event; committing violence": H.event_violence,
-                "event; selfharm": V.twitchEvent,
-                "in-person; threatening": H.inPerson_violence,
-                "in-person; hateful": H.inPerson_abusive,
-                "in-person; threatening violence": H.inPerson_violence,
-                "in-person; committing violence": H.inPerson_violence,
-                "in-person; selfharm": V.inPerson,
-                "ban evasion": q,
+                "in-person; threatening": W.inPerson_violence,
+                "in-person; hateful": W.inPerson_abusive,
+                "in-person; threatening violence": W.inPerson_violence,
+                "in-person; committing violence": W.inPerson_violence,
+                "ban evasion": G,
                 spam: z,
-                threatening: W.violence,
-                hateful: W.content,
-                impersonation: Q,
-                violence: W.violence,
-                "threatening violence": W.violence,
-                "committing violence": W.violence,
-                abusive: W.content,
-                "inappropriate content": G,
+                hateful: V.content,
+                impersonation: q,
+                "violence/threats": V.violence,
+                "threatening violence": V.violence,
+                "committing violence": V.violence,
+                abusive: V.content,
+                "inappropriate content": H,
                 "sitewide ban": B.banEvasion,
                 "chat ban": B.banEvasion,
-                "intellectual property": x.ip
+                "intellectual property": L.legal,
+                "violating developer agreement": L.legal
+            },
+            Z = {
+                selfharm: L.selfharm,
+                harm: L.violence,
+                other: $
             },
             X = {
-                selfharm: x.selfharm,
-                harm: x.violence,
-                other: Y
-            },
-            J = {
                 CHANNEL_FEED_POST_REPORT: M.content,
                 COMMUNITY_REPORT: M.content,
                 CHAT_REPORT: D.content,
@@ -5804,15 +5738,15 @@ webpackJsonp([78], {
                 WHISPER_REPORT: j,
                 VOD_COMMENT_REPORT: D.content
             },
-            ee = "report-wizard-back",
-            te = "report-wizard-close",
-            ne = "report-wizard-next",
-            ie = "report-wizard-submit",
-            re = function(e) {
+            J = "report-wizard-back",
+            ee = "report-wizard-close",
+            te = "report-wizard-next",
+            ne = "report-wizard-submit",
+            ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        currentCard: t.props.currentCard || J[t.props.reportContentType] || K,
+                        currentCard: t.props.currentCard || X[t.props.reportContentType] || Q,
                         prevCards: [],
                         currentSelection: null,
                         prevSelections: [],
@@ -5832,15 +5766,15 @@ webpackJsonp([78], {
                     }, t.renderButtons = function() {
                         var e = Object(l.d)("Close", "ReportModalWizard"),
                             n = t.handleClose,
-                            i = te,
+                            i = ee,
                             r = !1,
                             o = t.state.prevCards.length ? t.renderBack() : null;
                         switch (t.state.currentCard.type) {
-                            case k.MultipleChoice:
-                                e = Object(l.d)("Next", "ReportModalWizard"), n = t.handleNext, i = ne, r = !t.state.currentSelection;
+                            case _.MultipleChoice:
+                                e = Object(l.d)("Next", "ReportModalWizard"), n = t.handleNext, i = te, r = !t.state.currentSelection;
                                 break;
-                            case k.Confirm:
-                                e = Object(l.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, r = !t.state.userTextInput, i = ie
+                            case _.Confirm:
+                                e = Object(l.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, r = !t.state.userTextInput, i = ne
                         }
                         return a.createElement(b._8, null, o, a.createElement(b.v, {
                             onClick: n,
@@ -5860,7 +5794,7 @@ webpackJsonp([78], {
                         }, a.createElement(b.v, {
                             type: b.B.Hollow,
                             onClick: t.handleBack,
-                            "data-test-selector": ee
+                            "data-test-selector": J
                         }, a.createElement(b._8, {
                             padding: {
                                 x: 1
@@ -5882,10 +5816,10 @@ webpackJsonp([78], {
                                 r = t.state.displacedSelections[t.state.displacedSelections.length - 1],
                                 a = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                 o = t.state.currentSelection.reportContext || t.state.reportContext,
-                                s = e.nextCard || $;
-                            Z[t.state.currentSelection.value] && (s = Z[t.state.currentSelection.value]);
+                                s = e.nextCard || K;
+                            Y[t.state.currentSelection.value] && (s = Y[t.state.currentSelection.value]);
                             var l = t.state.currentSelection.reportReason || t.state.reportReason,
-                                c = s.type === k.Info;
+                                c = s.type === _.Info;
                             t.setState({
                                 currentCard: s,
                                 reportReason: l,
@@ -5929,7 +5863,7 @@ webpackJsonp([78], {
                                                 });
                                                 break;
                                             case E.b.Success:
-                                                i = Y, X[t] && (i = X[t]), this.state.currentCard.nextCard && (i = this.state.currentCard.nextCard), this.setState({
+                                                i = $, Z[t] && (i = Z[t]), this.state.currentCard.nextCard && (i = this.state.currentCard.nextCard), this.setState({
                                                     currentCard: i,
                                                     prevCards: [],
                                                     prevSelections: [],
@@ -6003,7 +5937,7 @@ webpackJsonp([78], {
                 return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
                     this.state.modalCloseTracked || this.props.trackClose(O.Close, this.state.currentCard.value)
                 }, t.prototype.render = function() {
-                    var e = this.state.currentCard.type === k.Info && this.state.currentCard.blockPrompt ? a.createElement(y, {
+                    var e = this.state.currentCard.type === _.Info && this.state.currentCard.blockPrompt ? a.createElement(y, {
                             targetUser: this.props.targetUser,
                             onBlock: this.props.onBlock,
                             onUnblock: this.props.onUnblock,
@@ -6017,7 +5951,7 @@ webpackJsonp([78], {
                             padding: 1,
                             className: "reporting__error-container"
                         }, this.state.error) : null,
-                        n = this.state.prevCards.length || this.state.currentCard.type === k.Info ? null : this.renderPrimer();
+                        n = this.state.prevCards.length || this.state.currentCard.type === _.Info ? null : this.renderPrimer();
                     return a.createElement(b._32, {
                         className: "reporting-wizard",
                         display: b.R.Flex,
@@ -6046,16 +5980,16 @@ webpackJsonp([78], {
                     }), e), this.renderButtons())
                 }, t
             }(a.Component),
-            ae = n("xwpJ"),
-            oe = n("mmQh"),
-            se = n("mRH2"),
-            le = n("IRHd");
+            re = n("xwpJ"),
+            ae = n("mmQh"),
+            oe = n("mRH2"),
+            se = n("IRHd");
         n.d(t, "c", function() {
                 return C
             }), n.d(t, "a", function() {
                 return O
             }), n.d(t, "b", function() {
-                return ue
+                return ce
             }),
             function(e) {
                 e.Close = "close", e.Open = "open", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
@@ -6066,7 +6000,7 @@ webpackJsonp([78], {
             function(e) {
                 e.Close = "close", e.Finish = "finish"
             }(O || (O = {}));
-        var ce = function(e) {
+        var le = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 n.handleSubmit = function(e, t, i, a, o) {
@@ -6104,18 +6038,18 @@ webpackJsonp([78], {
                                 case 4:
                                     return [3, 9];
                                 case 5:
-                                    s = o === _.a.Whisper ? o : this.props.reportContext.contentType, c = {
+                                    s = o === k.a.Whisper ? o : this.props.reportContext.contentType, c = {
                                         description: t,
                                         reason: e,
                                         content: s,
                                         contentID: this.props.reportContext.contentID,
                                         extra: this.props.reportContext.extra,
                                         targetID: this.props.reportContext.targetUserID
-                                    }, this.props.reportContext.contentType === _.a.Community && this.props.reportContext.extra && (c.description = Object(ae.a)(this.props.reportContext.extra, t)), r.label = 6;
+                                    }, this.props.reportContext.contentType === k.a.Community && this.props.reportContext.extra && (c.description = Object(re.a)(this.props.reportContext.extra, t)), r.label = 6;
                                 case 6:
                                     return r.trys.push([6, 8, , 9]), [4, this.props.reportUser(Object(p.a)(c))];
                                 case 7:
-                                    return r.sent(), this.props.reportContext.contentType === _.a.Community && l.o.tracking.track(h.SpadeEventType.CommunityReport, {
+                                    return r.sent(), this.props.reportContext.contentType === k.a.Community && l.o.tracking.track(h.SpadeEventType.CommunityReport, {
                                         community_id: this.props.reportContext.contentID,
                                         name: this.props.reportContext.extra,
                                         is_official: !1,
@@ -6208,7 +6142,7 @@ webpackJsonp([78], {
                     title: this.props.title,
                     defaultDescription: this.props.defaultDescription
                 };
-                return this.state.showWizard ? this.props.data.loading ? a.createElement(b._10, null) : a.createElement(re, r.__assign({}, e, {
+                return this.state.showWizard ? this.props.data.loading ? a.createElement(b._10, null) : a.createElement(ie, r.__assign({}, e, {
                     user: this.props.sessionUser,
                     targetUser: this.props.data.user,
                     onBlock: this.onBlock,
@@ -6228,11 +6162,11 @@ webpackJsonp([78], {
                 configurable: !0
             }), t
         }(a.Component);
-        var ue = Object(s.d)(Object(c.a)(oe, {
+        var ce = Object(s.d)(Object(c.a)(ae, {
             name: "reportUserInCommunity"
-        }), Object(c.a)(se, {
+        }), Object(c.a)(oe, {
             name: "reportUser"
-        }), Object(c.a)(le, {
+        }), Object(c.a)(se, {
             options: function(e) {
                 return {
                     variables: {
@@ -6246,7 +6180,7 @@ webpackJsonp([78], {
             return {
                 sessionUser: e.session.user
             }
-        }, null))(ce)
+        }, null))(le)
     },
     AHWf: function(e, t) {},
     AadB: function(e, t, n) {
@@ -6283,8 +6217,8 @@ webpackJsonp([78], {
             f = n("v5ho"),
             v = n("RH2O"),
             y = n("2KeS"),
-            _ = n("V5M+"),
-            k = n("jetF"),
+            k = n("V5M+"),
+            _ = n("jetF"),
             S = n("7vx8"),
             T = n("CSlQ"),
             w = n("/gww"),
@@ -6314,7 +6248,7 @@ webpackJsonp([78], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.community && this.props.data.community.self && (this.props.data.community.self.permissions.banning || this.props.data.community.self.permissions.timingOut) ? r.createElement(k.a, null, r.createElement(g.w, {
+                    return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.community && this.props.data.community.self && (this.props.data.community.self.permissions.banning || this.props.data.community.self.permissions.timingOut) ? r.createElement(_.a, null, r.createElement(g.w, {
                         ariaLabel: Object(o.d)("Moderation", "DirectoryGamePage"),
                         icon: g._23.ChatRiskFlag
                     }), r.createElement(g.q, {
@@ -6357,14 +6291,14 @@ webpackJsonp([78], {
             }(r.Component);
         var O = Object(v.b)(null, function(e) {
                 return Object(y.b)({
-                    onShowModal: _.d
+                    onShowModal: k.d
                 }, e)
             })(C),
             N = n("vKYI"),
             R = n("PLRK"),
             I = (n("GiGb"), "directory-first-item"),
-            x = "directory-game__card_container",
-            L = 5e3,
+            L = "directory-game__card_container",
+            x = 5e3,
             F = 300,
             D = function(e) {
                 function t(t) {
@@ -6412,7 +6346,7 @@ webpackJsonp([78], {
                             margin: {
                                 bottom: 2
                             },
-                            "data-target": x
+                            "data-target": L
                         }, r.createElement(c.a, i.__assign({}, a, {
                             "data-a-target": "card-" + t,
                             "data-a-id": "card-" + (e.broadcaster.login || "").replace(/ /g, "")
@@ -6438,7 +6372,7 @@ webpackJsonp([78], {
                             margin: {
                                 bottom: 2
                             },
-                            "data-target": x
+                            "data-target": L
                         }, i && r.createElement(g._32, {
                             attachRight: !0,
                             attachTop: !0,
@@ -6551,7 +6485,7 @@ webpackJsonp([78], {
                                 streamLoaded: !1,
                                 loadingPreview: !1
                             })
-                        }, L)
+                        }, x)
                     }, n.setRef = function(e) {
                         e && (n.thumbnailNode = a.findDOMNode(e), n.addThumbnailListener())
                     }, n.getVideoPlayer = function() {
@@ -6595,7 +6529,7 @@ webpackJsonp([78], {
         n.d(t, "a", function() {
             return I
         }), n.d(t, !1, function() {
-            return x
+            return L
         }), n.d(t, "b", function() {
             return D
         })
@@ -10160,7 +10094,7 @@ webpackJsonp([78], {
     VOrx: function(e, t) {},
     Vr0l: function(e, t) {},
     Vr3l: function(e, t, n) {
-        e.exports = n.p + "assets/overwatch-chars-062a1df5ff2aaa76eb8e129940ef964a.png"
+        e.exports = n.p + "assets/overwatch-chars-9fc82f039194a365a8d6d2bf2797e041.png"
     },
     WKaT: function(e, t, n) {
         "use strict";
@@ -10413,7 +10347,7 @@ webpackJsonp([78], {
         }! function(e) {
             e[e.Prime = 0] = "Prime", e[e.Tier1 = 1] = "Tier1", e[e.Tier2 = 2] = "Tier2", e[e.Tier3 = 3] = "Tier3"
         }(i || (i = {}));
-        var _ = function(e) {
+        var k = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.toggleActiveTab = function(e) {
@@ -10674,7 +10608,7 @@ webpackJsonp([78], {
         }), n.d(t, !1, function() {
             return y
         }), n.d(t, "a", function() {
-            return _
+            return k
         })
     },
     YUUt: function(e, t, n) {
@@ -10897,7 +10831,7 @@ webpackJsonp([78], {
     aBed: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return _
+            return k
         });
         var i = n("TToO"),
             r = n("HW6M"),
@@ -11198,7 +11132,7 @@ webpackJsonp([78], {
                     }
                 }, t
             }(o.Component),
-            _ = Object(m.d)("VideoPreviewCard")(y)
+            k = Object(m.d)("VideoPreviewCard")(y)
     },
     aMxy: function(e, t, n) {
         "use strict";
@@ -11827,11 +11761,11 @@ webpackJsonp([78], {
             f = n("+xm8"),
             v = n("V5M+"),
             y = n("f2i/"),
-            _ = n("Aj/L"),
-            k = n("oSFp");
+            k = n("Aj/L"),
+            _ = n("oSFp");
         var S = Object(g.b)(function(e) {
                 return {
-                    isLoggedIn: Object(_.d)(e)
+                    isLoggedIn: Object(k.d)(e)
                 }
             }, function(e) {
                 return Object(b.b)({
@@ -11840,7 +11774,7 @@ webpackJsonp([78], {
                     },
                     showReportUserModal: function(e) {
                         var t = i.__rest(e, []);
-                        return Object(v.d)(k.a, t)
+                        return Object(v.d)(_.a, t)
                     }
                 }, e)
             })(Object(a.f)(h)),
@@ -11857,8 +11791,8 @@ webpackJsonp([78], {
             N = n("HW6M"),
             R = n("BwgW"),
             I = n("knr3"),
-            x = n("OAwv"),
-            L = n("eBiB"),
+            L = n("OAwv"),
+            x = n("eBiB"),
             F = n("JpYe"),
             D = n("ZVME"),
             j = n("CSlQ"),
@@ -11891,7 +11825,7 @@ webpackJsonp([78], {
         function W() {
             return !!window.Twitch && !!window.Twitch.Player
         }
-        var H = function(e) {
+        var z = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = o.j.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
@@ -11948,12 +11882,12 @@ webpackJsonp([78], {
                     }, n.onTransitionToCollectionVod = function(e) {
                         if (n.props.onNavigationRequest) {
                             var t = {};
-                            e.vodId && (t.videoID = Object(L.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
+                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
                         }
                     }, n.onTransitionToRecommendedVod = function(e) {
                         if (n.props.onNavigationRequest) {
                             var t = {};
-                            e.vodId && (t.videoID = Object(L.a)(e.vodId)), n.props.onNavigationRequest(t)
+                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), n.props.onNavigationRequest(t)
                         }
                     }, n.onPersistentPlayerToggled = function() {
                         n.props.togglePersistentPlayer && n.props.togglePersistentPlayer()
@@ -12086,7 +12020,7 @@ webpackJsonp([78], {
                         isFullScreen: !1
                     }), this.props.fullscreen.disable())
                 }, t.prototype.maybeAttachToWindow = function(e) {
-                    x.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
+                    L.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
                 }, t.prototype.maybeDetachFromWindow = function() {
                     window.player = void 0
                 }, t.prototype.bindHotKeys = function() {
@@ -12095,15 +12029,15 @@ webpackJsonp([78], {
                     I.unbind("alt+x")
                 }, t.tagInjected = !1, t
             }(r.Component),
-            z = Object(j.d)("VideoPlayer")(H);
+            H = Object(j.d)("VideoPlayer")(z);
         var G = Object(b.d)(Object(g.b)(function(e) {
             return {
                 isWhispersBottomBarVisible: Object(O.b)(e),
                 theatreModeEnabled: e.ui.theatreModeEnabled,
                 rightColumnExpanded: e.ui.rightColumnExpanded,
                 sideNavExpanded: e.ui.sideNavExpanded,
-                isLoggedIn: Object(_.d)(e),
-                authToken: Object(_.a)(e)
+                isLoggedIn: Object(k.d)(e),
+                authToken: Object(k.a)(e)
             }
         }, function(e) {
             return Object(b.b)({
@@ -12147,7 +12081,7 @@ webpackJsonp([78], {
                     w.exit()
                 }, n
             }(r.Component)
-        }, T.f)(z);
+        }, T.f)(H);
 
         function q(e, t, n) {
             if (e.collectionID || !e.videoID)
@@ -12190,7 +12124,9 @@ webpackJsonp([78], {
             s = n("Aj/L"),
             l = n("4bQk");
         var c = Object(i.b)(function(e) {
+            var t = Object(s.c)(e);
             return {
+                currentUserLogin: t && t.login,
                 isLoggedIn: Object(s.d)(e)
             }
         }, function(e) {
@@ -12202,7 +12138,7 @@ webpackJsonp([78], {
         })(l.a);
         n.d(t, "a", function() {
             return c
-        }), n.d(t, !1, function() {}), n.d(t, "b", function() {
+        }), n.d(t, "b", function() {
             return l.b
         })
     },
@@ -12764,7 +12700,7 @@ webpackJsonp([78], {
                 e.ChannelFeedComment = "CHANNEL_FEED_COMMENT_REPORT", e.ChannelFeedPost = "CHANNEL_FEED_POST_REPORT", e.Chat = "CHAT_REPORT", e.Clip = "CLIP_REPORT", e.Collection = "COLLECTION_REPORT", e.Community = "COMMUNITY_REPORT", e.Event = "EVENT_REPORT", e.Extension = "EXTENSION_REPORT", e.LiveUp = "LIVE_UP_REPORT", e.Raid = "RAID_REPORT", e.Room = "ROOM_REPORT", e.StreamUp = "STREAM_UP_REPORT", e.User = "USER_REPORT", e.VideoChatMessage = "VOD_COMMENT_REPORT", e.Vod = "VOD_REPORT", e.Whisper = "WHISPER_REPORT"
             }(i || (i = {})),
             function(e) {
-                e.ChatBanEvasion = "chat_ban_evasion", e.Gore = "gore", e.Harassment = "harassment", e.Harm = "harm", e.HatefulConduct = "hateful_conduct", e.Impersonation = "impersonation", e.Miscategorized = "miscategorized", e.OffensiveUsername = "offensive_username", e.Other = "other", e.Porn = "porn", e.Prohibited = "prohibited", e.SelfHarm = "selfharm", e.SexualContent = "sexual_content", e.SexualViolence = "sexual_violence", e.Spam = "spam", e.TosBanEvasion = "tos_ban_evasion", e.Underaged = "underaged"
+                e.BitsViolation = "bits_violation", e.ChatBanEvasion = "chat_ban_evasion", e.Cheating = "cheating", e.Gore = "gore", e.Harassment = "harassment", e.Harm = "harm", e.HatefulConduct = "hateful_conduct", e.Impersonation = "impersonation", e.Miscategorized = "miscategorized", e.OffensiveUsername = "offensive_username", e.Other = "other", e.Porn = "porn", e.Prohibited = "prohibited", e.SelfHarm = "selfharm", e.SexualContent = "sexual_content", e.SexualViolence = "sexual_violence", e.Spam = "spam", e.TosBanEvasion = "tos_ban_evasion", e.Underaged = "underaged"
             }(r || (r = {}))
     },
     n7Mz: function(e, t, n) {
@@ -13559,6 +13495,99 @@ webpackJsonp([78], {
             return m
         })
     },
+    onRC: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "followButtonFragment"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "User"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "displayName"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "login"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "self"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "follower"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "disableNotifications"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 172
+            }
+        };
+        n.loc.source = {
+            body: "# Queries the data necessary to render the FollowButton component.\nfragment followButtonFragment on User {\nid\ndisplayName\nlogin\nself {\nfollower {\ndisableNotifications\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     pQNb: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -13996,13 +14025,13 @@ webpackJsonp([78], {
             })));
             if (m.videos) {
                 var y = p && f ? f.results : [],
-                    _ = m.videos.totalHits;
-                p && m.exhaustedHits && f && !m.videos.totalHits && (_ = f.totalHits), c = function(e, t, n) {
+                    k = m.videos.totalHits;
+                p && m.exhaustedHits && f && !m.videos.totalHits && (k = f.totalHits), c = function(e, t, n) {
                     return {
                         results: e.concat(t.hits.map(s)),
                         totalHits: t.totalHits || n
                     }
-                }(y, m.videos, _)
+                }(y, m.videos, k)
             }
             m.users && (n = {
                 totalHits: p && g ? g.totalHits : m.users.totalHits,
@@ -14164,10 +14193,10 @@ webpackJsonp([78], {
             f = n("PPNL"),
             v = n("EOpv"),
             y = n("LgcN"),
-            _ = this,
-            k = a.o.logger.withCategory("metadata-info"),
+            k = this,
+            _ = a.o.logger.withCategory("metadata-info"),
             S = function(e, t) {
-                return i.__awaiter(_, void 0, void 0, function() {
+                return i.__awaiter(k, void 0, void 0, function() {
                     var n, r, o, s, c, u;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
@@ -14196,7 +14225,7 @@ webpackJsonp([78], {
                 })
             },
             T = function(e) {
-                return i.__awaiter(_, void 0, void 0, function() {
+                return i.__awaiter(k, void 0, void 0, function() {
                     var t, n, r;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
@@ -14215,7 +14244,7 @@ webpackJsonp([78], {
                                     }
                                 }];
                             case 2:
-                                return r = i.sent(), k.error(r, "Failed to load Counter-Strike skill group data"), [2, null];
+                                return r = i.sent(), _.error(r, "Failed to load Counter-Strike skill group data"), [2, null];
                             case 3:
                                 return [2]
                         }
@@ -14223,7 +14252,7 @@ webpackJsonp([78], {
                 })
             },
             w = function(e) {
-                return i.__awaiter(_, void 0, void 0, function() {
+                return i.__awaiter(k, void 0, void 0, function() {
                     var t, n, r;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
@@ -14244,7 +14273,7 @@ webpackJsonp([78], {
                                     }
                                 }];
                             case 2:
-                                return r = i.sent(), k.error(r, "Failed to load Hearthstone class data"), [2, null];
+                                return r = i.sent(), _.error(r, "Failed to load Hearthstone class data"), [2, null];
                             case 3:
                                 return [2]
                         }
@@ -14252,7 +14281,7 @@ webpackJsonp([78], {
                 })
             },
             E = function(e) {
-                return i.__awaiter(_, void 0, void 0, function() {
+                return i.__awaiter(k, void 0, void 0, function() {
                     var t, n, r, a, o, s, l, c, u, d, p, m;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
@@ -14276,7 +14305,7 @@ webpackJsonp([78], {
                                                 }];
                                 return [2, null];
                             case 2:
-                                return p = i.sent(), k.error(p, "Failed to load Overwatch character data"), [2, null];
+                                return p = i.sent(), _.error(p, "Failed to load Overwatch character data"), [2, null];
                             case 3:
                                 return [2]
                         }
@@ -14445,7 +14474,7 @@ webpackJsonp([78], {
                     "data-test-selector": "bottom-right-selector"
                 }, e.bottomRight))
             }),
-            x = (n("BJwU"), function(e) {
+            L = (n("BJwU"), function(e) {
                 var t = e.icon && r.createElement(c._8, {
                     display: c.R.Flex
                 }, r.createElement(c._22, {
@@ -14471,7 +14500,7 @@ webpackJsonp([78], {
                     }
                 }, t, r.createElement(c.Q, null, e.value))
             }),
-            L = n("vKYI"),
+            x = n("vKYI"),
             F = (n("jpZi"), 300),
             D = 5e3,
             j = "preview-card-thumbnail__image-selector",
@@ -14551,7 +14580,7 @@ webpackJsonp([78], {
                     return this.shouldShowLiveVideoPreview() ? [r.createElement("div", {
                         key: "player-key",
                         className: s((t = {}, t["preview-card-thumbnail__image--hidden"] = !this.state.isLiveVideoPreviewLoaded, t))
-                    }, r.createElement(L.a, {
+                    }, r.createElement(x.a, {
                         channelLogin: this.props.liveChannelLogin,
                         onPlayerPlaying: this.onLivePreviewLoaded
                     })), r.createElement("div", {
@@ -14627,12 +14656,12 @@ webpackJsonp([78], {
             return void 0 !== e.watchedProgressPercent
         }
 
-        function H(e) {
+        function z(e) {
             return void 0 !== e.clipCreatedByChannelLogin
         }! function(e) {
             e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
         }(O || (O = {}));
-        var z = function(e) {
+        var H = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -14672,42 +14701,42 @@ webpackJsonp([78], {
                         hosting: !!this.props.hostedByChannelLogin
                     }),
                     topRight: void 0,
-                    bottomLeft: r.createElement(x, {
+                    bottomLeft: r.createElement(L, {
                         value: Object(a.d)("{viewerCount, plural, one {# viewer} other {# viewers}}", {
                             viewerCount: this.props.currentViewerCount
                         }, "VideoPreviewCard")
                     }),
                     bottomRight: void 0
                 }) : W(this.props) ? r.createElement(I, {
-                    topLeft: r.createElement(x, {
+                    topLeft: r.createElement(L, {
                         value: Object(B.a)(this.props.durationInSeconds),
                         icon: c._23.GlyphArrRight,
                         withBackground: !0
                     }),
                     topRight: void 0,
-                    bottomLeft: r.createElement(x, {
+                    bottomLeft: r.createElement(L, {
                         value: this.getViewCountLabel()
                     }),
-                    bottomRight: r.createElement(x, {
+                    bottomRight: r.createElement(L, {
                         value: Object(a.c)(new Date(this.props.datePublished), "medium")
                     }),
                     progressBarPercent: this.props.watchedProgressPercent
-                }) : H(this.props) ? r.createElement(I, {
-                    topLeft: r.createElement(x, {
+                }) : z(this.props) ? r.createElement(I, {
+                    topLeft: r.createElement(L, {
                         value: Object(B.a)(this.props.durationInSeconds),
                         icon: c._23.Clip,
                         withBackground: !0
                     }),
                     topRight: void 0,
-                    bottomLeft: r.createElement(x, {
+                    bottomLeft: r.createElement(L, {
                         value: this.getViewCountLabel()
                     }),
-                    bottomRight: r.createElement(x, {
+                    bottomRight: r.createElement(L, {
                         value: Object(a.c)(new Date(this.props.datePublished), "medium")
                     })
                 }) : void 0
             }, t.prototype.getViewCountLabel = function() {
-                return W(this.props) || H(this.props) ? Object(a.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                return W(this.props) || z(this.props) ? Object(a.d)("{viewerCount, plural, one {# view} other {# views}}", {
                     viewerCount: this.props.viewCount
                 }, "VideoPreviewCard") : ""
             }, t.prototype.renderIconicImage = function() {
@@ -14725,7 +14754,7 @@ webpackJsonp([78], {
                     text: this.props.channelLogin,
                     linkTo: this.props.channelLoginLinkTo
                 }];
-                return H(this.props) ? e.push({
+                return z(this.props) ? e.push({
                     text: Object(a.d)("Clipped by {userName}", {
                         userName: this.props.clipCreatedByChannelLogin
                     }, "VideoPreviewCard"),
@@ -14748,7 +14777,7 @@ webpackJsonp([78], {
         n.d(t, "b", function() {
             return O
         }), n.d(t, "a", function() {
-            return z
+            return H
         })
     },
     vKYI: function(e, t, n) {
@@ -14846,8 +14875,8 @@ webpackJsonp([78], {
     },
     vbMw: function(e, t) {},
     w0LG: function(e, t) {},
-    x4k6: function(e, t) {
-        var n = {
+    x4k6: function(e, t, n) {
+        var i = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -14911,72 +14940,11 @@ webpackJsonp([78], {
                                 arguments: [],
                                 directives: []
                             }, {
-                                kind: "Field",
+                                kind: "FragmentSpread",
                                 name: {
                                     kind: "Name",
-                                    value: "displayName"
+                                    value: "followButtonFragment"
                                 },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "follower"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "disableNotifications"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
                                 directives: []
                             }]
                         }
@@ -14985,18 +14953,23 @@ webpackJsonp([78], {
             }],
             loc: {
                 start: 0,
-                end: 151
+                end: 156
             }
         };
-        n.loc.source = {
-            body: "query FollowButton_User($login: String!) {\nuser(login: $login) {\nid\ndisplayName\nlogin\nself {\nfollower {\ndisableNotifications\n}\n}\n}\ncurrentUser {\nid\n}\n}",
+        i.loc.source = {
+            body: '#import "twilight/common/queries/follow-button-fragment.gql"\nquery FollowButton_User($login: String!) {\nuser(login: $login) {\nid\n...followButtonFragment\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
                 column: 1
             }
         };
-        e.exports = n
+        var r = {};
+        i.definitions = i.definitions.concat(n("onRC").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var t = e.name.value;
+            return !r[t] && (r[t] = !0, !0)
+        })), e.exports = i
     },
     x6ny: function(e, t) {
         var n = {
@@ -15172,4 +15145,4 @@ webpackJsonp([78], {
         var i = n("+dIz")
     }
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-258f5f4bf0cef15b944d3b6cf5bf4ee4.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-e8fd0032f23199878e1db327d8db6122.js.map

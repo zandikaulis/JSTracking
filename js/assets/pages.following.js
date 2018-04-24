@@ -6401,7 +6401,7 @@ webpackJsonp([48], {
         }), n.d(t, !1, function() {})
     },
     Vr3l: function(e, t, n) {
-        e.exports = n.p + "assets/overwatch-chars-062a1df5ff2aaa76eb8e129940ef964a.png"
+        e.exports = n.p + "assets/overwatch-chars-9fc82f039194a365a8d6d2bf2797e041.png"
     },
     WxKK: function(e, t, n) {
         "use strict";
@@ -10164,4 +10164,4 @@ webpackJsonp([48], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-7419c1a621b42b3560acbfe6835b165e.js.map
+//# sourceMappingURL=pages.following-1f8290528524139f24bbcda3874a60cb.js.map
