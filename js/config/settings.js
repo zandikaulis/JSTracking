@@ -29,6 +29,7 @@ window.__twilightSettings = {
     "detector_urls": ["https://s0.2mdn.net/", "https://adservice.google.com", "https://pagead2.googlesyndication.com/", "https://r.nexac.com/e/getdata.xgi?foo=bar"],
     "env_test": "This is a test in Production",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445"],
+    "esport_insider_pass_gifting_launch": "off",
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
     "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff"],
     "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on", "wrestling"],
