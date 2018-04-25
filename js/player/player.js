@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".a8981d846d85440fda05.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cb354dfa3bad7799122b.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -31532,7 +31532,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.24-213141+7cfacf35ca619cfb67a3759e4a35793a66ac0e3f",
+                    app_version: "2018.04.25-172948+a1facc92fc13c4f06a7292eb44f77e2ad94771ee",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -37231,7 +37231,7 @@
                 }]), e
             }(),
             es = n(102),
-            ts = "//video-edge-7cf6a2.sjc01.hls.ttvnw.net/v1/segment/CmgMuuBG6pnM6L4cmefM_KQaylzxRdnV9GtqR7ElmVo2b5YCs4EDqokST6iBRkRo0QWBWs-biQxYc3ZqcyR5bl19953eL9jTLggTBHWDSR4Bb844BVL1YRB4GNYXJ2csfGDMSZYeTMovTkuiXPZ4BwjeTOGbrNOPoaeFPkMU43MuTFjchmaY7yRAOFXQ1bjlktuuoZZT-wGGoV3-pnrqI3qqt4Rp5zQHYrQfqbf7oYL2G5gk9mv1XVfUFYGUChccCa_YxQKV_p8DfYEXAqQ5dsZiHS0FVvfpQUlJRFA2yAlECxhlhmPTsQ-FrQ2cIB2YTYf3NDPlp5ghouk3WLDohMC3oChTeCJ3TyeEr2RKqH2Me2RYfZ2XHHI7f72iQ4O3BXSzFTjFeIRhQptmeSRAVCJdeCrcyFETD8KQVGjaxVPheTIVAcfHBjYsOdZpHTR0vSTc5qrHV7fgcLy7qbUE5QCSupf0JBAGYQe6pc1pBDgDLdVJ1jLbvkYLUzBYWWYRe1I4xi5-PEImjNFZb6I1ZApP1ZrCe.ts",
+            ts = "//video-edge-7ec657.sjc02.hls.ttvnw.net/v1/segment/ClCCMPnFe0Vllqm1o7Sci6l2VgofSyYfUiph5w7YtErTkJq1kt1BEwwt7WLXV5VH0tPDV-tCtN1u1O6PlMsotT-gD3m3CX897wG9FBSjQh0kph4vtUB6mHTc1aMR6j2wp_E11EbOCeU2l-rzZRDSfS3i_q_OfT6GYeYn1_ku1kifETGhDtxOgbG4xOHa7jE_YhsXzdr_dXCcvpWoBgOcsZ4RAyxxNKRvY7Uhj9EUY6a7Vuu25z5Ow4gsKQdaJFVwIbcyJlLDVxppIUudpH0JdyJk0NzOJIFVfGlICrg7Cv4NCw9kTuqvKRbiOl00sz4-S-rSvmjn2fxEyYP0efbVK8p9NdZI--8o89hZGkAyCpnIr-l23Y3jSM6AOJl7MShzDcKxt4-mevOdIQZGhh94lzNfME0rg_GMSxa4Sk8YelTRON9cxtRi_WT-E4GVhxaebltJQ7DsfN0ehnvONtmNxkZKKaWyrrxtvwBDOO3_46vYC0MNnJJgWIZcFeyTKDHqAI_-GuMiSIiEzE40qzQpZDX4.ts",
             ns = n(49),
             rs = n(262),
             is = n(135),
@@ -38205,8 +38205,10 @@
                     value: function() {
                         var e = this._store.getState().window.google,
                             t = this._videoContainer.offsetParent,
-                            n = new e.ima.AdsRequest;
-                        return n.linearAdSlotWidth = t.offsetWidth, n.linearAdSlotHeight = t.offsetHeight, n.nonLinearAdSlotWidth = t.offsetWidth, n.nonLinearAdSlotHeight = t.offsetHeight, n
+                            n = new e.ima.AdsRequest,
+                            r = this._store.getState(),
+                            i = r.playback;
+                        return n.setAdWillAutoPlay(i.autoplay), n.setAdWillPlayMuted(i.muted), n.linearAdSlotWidth = t.offsetWidth, n.linearAdSlotHeight = t.offsetHeight, n.nonLinearAdSlotWidth = t.offsetWidth, n.nonLinearAdSlotHeight = t.offsetHeight, n
                     }
                 }, {
                     key: "_requestAdsInternal",
