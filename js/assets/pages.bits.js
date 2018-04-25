@@ -1,4 +1,4 @@
-webpackJsonp([55], {
+webpackJsonp([56], {
     "+Znq": function(e, t, n) {
         "use strict";
         var r = n("jetF");
@@ -336,7 +336,7 @@ webpackJsonp([55], {
             return y
         })
     },
-    "65au": function(e, t) {
+    "4VmI": function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -344,7 +344,7 @@ webpackJsonp([55], {
                 operation: "query",
                 name: {
                     kind: "Name",
-                    value: "Current_User"
+                    value: "Prime_Current_User"
                 },
                 variableDefinitions: [],
                 directives: [],
@@ -383,11 +383,11 @@ webpackJsonp([55], {
             }],
             loc: {
                 start: 0,
-                end: 50
+                end: 56
             }
         };
         n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
+            body: "query Prime_Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -655,7 +655,7 @@ webpackJsonp([55], {
                                 i = Object(O.g)();
                             t.setState({
                                 numOfUnseenOffers: r.filter(function(e) {
-                                    return !(i.includes(e.id) || t.offerIsSeen(e) || t.offerIsClaimed(e))
+                                    return !(i.includes(e.id) || t.offerIsSeen(e))
                                 }).length
                             })
                         }
@@ -665,7 +665,7 @@ webpackJsonp([55], {
                             var n = (e.primeOffers || []).map(function(e) {
                                 return "" + e.id
                             });
-                            t.updateOfferStatus(), Object(O.i)(n)
+                            t.updateOfferStatus(), Object(O.k)(n)
                         }
                     }, t.updateOfferStatus = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
@@ -752,8 +752,6 @@ webpackJsonp([55], {
                         size: v.s.Large,
                         offsetX: "9px"
                     }, this.renderOfferList())), this.renderUnseenOffersDisplay())
-                }, t.prototype.offerIsClaimed = function(e) {
-                    return e.self && e.self.hasEntitlement
                 }, t.prototype.offerIsSeen = function(e) {
                     return e.self && e.self.status === O.a.Seen
                 }, t.prototype.renderUnseenOffersDisplay = function() {
@@ -807,7 +805,7 @@ webpackJsonp([55], {
                 }, t.prototype.render = function() {
                     var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                         t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                    if (!Object(O.j)(e, t)) return null;
+                    if (!Object(O.l)(e, t)) return null;
                     if (this.props.data.loading) return null;
                     var n = Object(D.d)(D.a, ""),
                         r = Object(l.d)("Twitch Prime", "BlueBar"),
@@ -1202,7 +1200,7 @@ webpackJsonp([55], {
             u = n("8PKe"),
             p = n("Odds"),
             m = l.a.wrap(function() {
-                return n.e(80).then(n.bind(null, "HQb3"))
+                return n.e(87).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             f = function(e) {
                 function t() {
@@ -1568,7 +1566,7 @@ webpackJsonp([55], {
                     return Object(O.d)(e, window.location.pathname.substring(1))
                 }, t = i.__decorate([Object(c.d)("PrimeUpsellButton")], t)
             }(a.Component),
-            b = n("e2wA"),
+            b = n("4VmI"),
             E = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -1586,7 +1584,7 @@ webpackJsonp([55], {
                     }, this.getCallToAction(), this.getClaimDescriptionSection())
                 }, t.prototype.getCallToAction = function() {
                     var e = this.props.data;
-                    return !e.loading && !e.error && e.currentUser && e.currentUser.hasPrime ? a.createElement(_, {
+                    return Object(v.j)(e) ? a.createElement(_, {
                         offerType: this.props.offerType,
                         offerID: this.props.offerID,
                         claimCallback: this.props.claimCallback,
@@ -1601,13 +1599,15 @@ webpackJsonp([55], {
                         index: this.props.index
                     })
                 }, t.prototype.getClaimDescriptionSection = function() {
-                    return this.props.offerType === v.d.EXTERNAL_OFFER ? null : a.createElement(k, {
+                    if (this.props.offerType === v.d.EXTERNAL_OFFER) return null;
+                    var e = this.props.data;
+                    return a.createElement(k, {
                         description: this.props.offerDescription,
                         offerID: this.props.offerID,
                         externalURL: this.props.externalURL,
                         index: this.props.index,
                         orientation: this.props.orientation,
-                        hasPrime: this.props.data.currentUser && this.props.data.currentUser.hasPrime
+                        hasPrime: Object(v.j)(e)
                     })
                 }, t = i.__decorate([Object(l.a)(b), Object(c.d)("PrimeInstructions")], t)
             }(a.Component),
@@ -1823,8 +1823,7 @@ webpackJsonp([55], {
                 }, t = i.__decorate([Object(c.d)("PrimeRedeem")], t)
             }(a.Component)),
             T = n("/3Cb"),
-            P = (n("v+rJ"), n("rM0q")),
-            I = function(e) {
+            P = (n("v+rJ"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1927,7 +1926,7 @@ webpackJsonp([55], {
                             r = e.self || {
                                 claimData: ""
                             },
-                            i = (t.props.data || {}).currentUser || {};
+                            i = t.props.data || {};
                         if (t.state.error) {
                             var o = t.getErrorType();
                             return a.createElement(N.a, {
@@ -1936,7 +1935,7 @@ webpackJsonp([55], {
                                 errorType: o
                             })
                         }
-                        if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && i && i.hasPrime) {
+                        if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && Object(v.j)(i)) {
                             var s = t.state.claimData || r.claimData;
                             return a.createElement(x, {
                                 claimInstructions: e.claimInstructions,
@@ -1963,7 +1962,7 @@ webpackJsonp([55], {
                             claiming: !0
                         });
                         var n = t.props.data;
-                        if (!n.loading && !n.error && n.currentUser.id) {
+                        if (!n.loading && !n.error && n.currentUser && n.currentUser.id) {
                             var r = t.props.offer,
                                 i = Object(m.a)({
                                     offerID: r.id
@@ -2008,13 +2007,13 @@ webpackJsonp([55], {
                     return (e.self || {
                         hasEntitlement: !1
                     }).hasEntitlement
-                }, t = i.__decorate([Object(l.a)(P, {
+                }, t = i.__decorate([Object(l.a)(b, {
                     name: "data"
                 }), Object(l.a)(T, {
                     name: "claimPrimeOffer"
                 }), Object(c.d)("PrimeOffer")], t)
-            }(a.Component),
-            L = (n("WC9X"), function(e) {
+            }(a.Component)),
+            I = (n("WC9X"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2066,7 +2065,7 @@ webpackJsonp([55], {
                     })))
                 }, t = i.__decorate([Object(c.d)("PrimeOfferPlaceholder")], t)
             }(a.Component)),
-            U = (n("7L7x"), function(e) {
+            L = (n("7L7x"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2103,9 +2102,8 @@ webpackJsonp([55], {
                 }, t = i.__decorate([Object(c.d)("PrimeUpsell")], t)
             }(a.Component)),
             R = n("LXDe"),
-            w = n("eY4D"),
-            F = (n("DgR+"), n("65au")),
-            j = function(e) {
+            U = n("eY4D"),
+            w = (n("DgR+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getOfferListOrientation = function() {
@@ -2118,7 +2116,7 @@ webpackJsonp([55], {
                         return e.loading || !e.error && r
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], n = 0; n < 3; ++n) {
-                            var r = a.createElement(L, {
+                            var r = a.createElement(I, {
                                 key: n,
                                 orientation: t.getOfferListOrientation()
                             });
@@ -2149,7 +2147,7 @@ webpackJsonp([55], {
                     }, this.renderUpsell(), this.renderOfferExperience()))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
-                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e) && !this.props.hideUpsell) return a.createElement(U, null)
+                    if (!Object(v.i)(e) && !Object(v.j)(e) && !this.props.hideUpsell) return a.createElement(L, null)
                 }, t.prototype.renderOfferExperience = function() {
                     var e = this,
                         t = this.props.offersData;
@@ -2158,7 +2156,7 @@ webpackJsonp([55], {
                         var n = this.getSortedOffers(),
                             r = n[n.length - 1];
                         return n.map(function(t, n) {
-                            return a.createElement(I, {
+                            return a.createElement(P, {
                                 externalReftag: e.props.externalReftag,
                                 key: t.id,
                                 offer: t,
@@ -2178,28 +2176,25 @@ webpackJsonp([55], {
                     if (e) {
                         var n = t.filter(function(e) {
                                 return e.self && e.self.hasEntitlement
-                            }).sort(v.k),
+                            }).sort(v.m),
                             r = this.filterOffersByOfferType(n),
                             i = t.filter(function(e) {
                                 return !e.self || !e.self.hasEntitlement
-                            }).sort(v.k);
+                            }).sort(v.m);
                         return this.filterOffersByOfferType(i).concat(r)
                     }
-                    return this.filterOffersByOfferType(t).slice().sort(v.k)
+                    return this.filterOffersByOfferType(t).slice().sort(v.m)
                 }, t.prototype.filterOffersByOfferType = function(e) {
                     var t = this.getFreeGamesWithPrimeOfferIds();
                     return this.props.offerFilterType === R.a.Game ? e.filter(function(e) {
                         return t.includes(e.id)
-                    }).sort(v.k) : this.props.offerFilterType === R.a.InGameLoot ? e.filter(function(e) {
+                    }).sort(v.m) : this.props.offerFilterType === R.a.InGameLoot ? e.filter(function(e) {
                         return !t.includes(e.id)
-                    }).sort(v.k) : e
+                    }).sort(v.m) : e
                 }, t.prototype.getUserId = function() {
                     var e = this.props.userData;
                     return e && !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
-                }, t.prototype.currentUserHasPrime = function(e) {
-                    var t = e.currentUser;
-                    return t && t.hasPrime
-                }, t = i.__decorate([Object(l.a)(w, {
+                }, t = i.__decorate([Object(l.a)(U, {
                     name: "offersData",
                     options: function() {
                         return {
@@ -2211,7 +2206,7 @@ webpackJsonp([55], {
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
                     }
-                }), Object(l.a)(F, {
+                }), Object(l.a)(b, {
                     name: "userData",
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
@@ -2219,14 +2214,14 @@ webpackJsonp([55], {
                 }), Object(c.d)("PrimeOfferList", {
                     autoReportInteractive: !0
                 })], t)
-            }(a.Component);
-        var B = Object(r.b)(function(e) {
+            }(a.Component));
+        var F = Object(r.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded
             }
-        })(j);
+        })(w);
         n.d(t, "a", function() {
-            return B
+            return F
         })
     },
     NikC: function(e, t, n) {
@@ -2262,14 +2257,18 @@ webpackJsonp([55], {
             return p
         }), n.d(t, "g", function() {
             return m
-        }), n.d(t, "i", function() {
-            return f
         }), n.d(t, "k", function() {
+            return f
+        }), n.d(t, "m", function() {
             return h
-        }), n.d(t, "j", function() {
+        }), n.d(t, "l", function() {
             return g
         }), n.d(t, "e", function() {
             return _
+        }), n.d(t, "j", function() {
+            return k
+        }), n.d(t, "i", function() {
+            return O
         });
         var r, i = n("HW6M"),
             a = (n.n(i), n("OAwv")),
@@ -2318,6 +2317,12 @@ webpackJsonp([55], {
                 var e = location.search,
                     t = a.parse(e);
                 return t && t.dateOverride || void 0
+            },
+            k = function(e) {
+                return e && !e.loading && !e.error && null !== e.currentUser && e.currentUser.hasPrime
+            },
+            O = function(e) {
+                return e && e.loading
             }
     },
     S1vB: function(e, t, n) {
@@ -2498,66 +2503,6 @@ webpackJsonp([55], {
         n.d(t, "a", function() {
             return d
         })
-    },
-    e2wA: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Current_User"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 50
-            }
-        };
-        n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     },
     e6tx: function(e, t) {},
     eY4D: function(e, t) {
@@ -2873,66 +2818,6 @@ webpackJsonp([55], {
             return r.a
         })
     },
-    rM0q: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Current_User"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 50
-            }
-        };
-        n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     sq7i: function(e, t) {
         var n = {
             kind: "Document",
@@ -3060,22 +2945,6 @@ webpackJsonp([55], {
                                         kind: "Field",
                                         name: {
                                             kind: "Name",
-                                            value: "hasEntitlement"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "claimData"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
                                             value: "status"
                                         },
                                         arguments: [],
@@ -3089,11 +2958,11 @@ webpackJsonp([55], {
             }],
             loc: {
                 start: 0,
-                end: 151
+                end: 126
             }
         };
         n.loc.source = {
-            body: "query Prime_PrimeOffers_PrimeOfferIds($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\nself {\nhasEntitlement\nclaimData\nstatus\n}\n}\n}",
+            body: "query Prime_PrimeOffers_PrimeOfferIds($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\nself {\nstatus\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -3333,4 +3202,4 @@ webpackJsonp([55], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.bits-96920ba149195bc4f5b5b8b70db44666.js.map
+//# sourceMappingURL=pages.bits-445a4cb3f8143fe75420c9c87b01d47c.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([47], {
+webpackJsonp([48], {
     "+ChX": function(e, t) {
         var n = {
             kind: "Document",
@@ -729,23 +729,23 @@ webpackJsonp([47], {
         function _(e, t, n) {
             return r.__awaiter(this, void 0, void 0, function() {
                 var i, a, o, l, d, c, u, p, m, h, g, v, f, k, b, _, S, C;
-                return r.__generator(this, function(T) {
-                    switch (T.label) {
+                return r.__generator(this, function(E) {
+                    switch (E.label) {
                         case 0:
                             i = null, a = null, o = null, l = null, d = null, c = null, t || s.j.error(new Error, "Missing `slug` in trackClipsEvent", {
                                 slug: t
-                            }), T.label = 1;
+                            }), E.label = 1;
                         case 1:
-                            return T.trys.push([1, 3, , 4]), [4, s.o.apollo.client.query({
+                            return E.trys.push([1, 3, , 4]), [4, s.o.apollo.client.query({
                                 query: y,
                                 variables: {
                                     slug: t
                                 }
                             })];
                         case 2:
-                            return u = T.sent(), i = !!(u.data.clip.broadcaster && u.data.clip.broadcaster.stream && u.data.clip.broadcaster.stream.id), a = u.data.clip.broadcaster ? u.data.clip.broadcaster.login : null, o = u.data.clip.broadcaster ? u.data.clip.broadcaster.login : null, l = u.data.clip.game ? u.data.clip.game.name : null, d = u.data.clip.broadcaster ? u.data.clip.broadcaster.isPartner : null, c = u.data.clip.id, [3, 4];
+                            return u = E.sent(), i = !!(u.data.clip.broadcaster && u.data.clip.broadcaster.stream && u.data.clip.broadcaster.stream.id), a = u.data.clip.broadcaster ? u.data.clip.broadcaster.login : null, o = u.data.clip.broadcaster ? u.data.clip.broadcaster.login : null, l = u.data.clip.game ? u.data.clip.game.name : null, d = u.data.clip.broadcaster ? u.data.clip.broadcaster.isPartner : null, c = u.data.clip.id, [3, 4];
                         case 3:
-                            return p = T.sent(), s.j.error(p, "Failed to make query for Clip info for tracking event.", {
+                            return p = E.sent(), s.j.error(p, "Failed to make query for Clip info for tracking event.", {
                                 slug: t
                             }), [3, 4];
                         case 4:
@@ -814,9 +814,9 @@ webpackJsonp([47], {
                 section_index: t
             }))
         }
-        var T = n("tGx1");
+        var E = n("tGx1");
 
-        function N(e) {
+        function T(e) {
             return o.createElement(k._8, {
                 key: e
             }, o.createElement(k._8, {
@@ -845,7 +845,7 @@ webpackJsonp([47], {
             })))
         }
 
-        function E(e) {
+        function N(e) {
             return o.createElement(k._8, {
                 margin: {
                     bottom: 3
@@ -867,7 +867,7 @@ webpackJsonp([47], {
             }, o.createElement(k._52, {
                 childWidth: k._53.Medium,
                 gutterSize: k._54.Small
-            }, [1, 2, 3, 4].map(N)))))
+            }, [1, 2, 3, 4].map(T)))))
         }
         var w = function(e) {
                 function t() {
@@ -951,10 +951,10 @@ webpackJsonp([47], {
                         margin: {
                             top: 3
                         }
-                    }, [1, 2, 3].map(E))
+                    }, [1, 2, 3].map(N))
                 }, t
             }(o.Component),
-            O = Object(m.d)("ClipsRecommendations")(Object(l.a)(T)(w)),
+            O = Object(m.d)("ClipsRecommendations")(Object(l.a)(E)(w)),
             R = n("ynxC"),
             I = n("RH2O"),
             F = n("Aj/L"),
@@ -1664,7 +1664,7 @@ webpackJsonp([47], {
             _e = n("oSFp"),
             Se = n("mw/a"),
             Ce = n("Ev5K"),
-            Te = function(e) {
+            Ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleModalOpened = function(e) {
@@ -1699,20 +1699,20 @@ webpackJsonp([47], {
                     return null
                 }, t
             }(o.Component),
-            Ne = Object(D.t)({
+            Te = Object(D.t)({
                 playerId: function(e) {
                     return e.slug
                 },
                 requestedPlayerProps: ["clipsModeration"]
             })(Object(l.a)(Ce)(Object(m.d)("ClipsViewModerationModals", {
                 autoReportInteractive: !0
-            })(Te)));
-        var Ee = Object(I.b)(null, function(e) {
+            })(Ee)));
+        var Ne = Object(I.b)(null, function(e) {
                 return Object(ke.b)({
                     showModal: be.d,
                     closeModal: be.c
                 }, e)
-            })(Ne),
+            })(Te),
             we = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1738,7 +1738,7 @@ webpackJsonp([47], {
                     var e = this.props.slug;
                     return o.createElement(k._8, {
                         flexGrow: 1
-                    }, o.createElement(Ee, {
+                    }, o.createElement(Ne, {
                         slug: this.props.slug
                     }), o.createElement(k.k, {
                         ratio: k.l.Aspect16x9
@@ -3712,7 +3712,7 @@ webpackJsonp([47], {
                     value: "repeat messages"
                 }
             },
-            T = function(e) {
+            E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -3811,11 +3811,11 @@ webpackJsonp([47], {
                     })), n
                 }, t
             }(a.Component),
-            N = n("LjAQ");
+            T = n("LjAQ");
         ! function(e) {
             e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
         }(_ || (_ = {}));
-        var E, w, O, R = {
+        var N, w, O, R = {
                 contentGeneral: function() {
                     return Object(l.d)("What would you like to report?", "ReportModalWizard")
                 },
@@ -4283,7 +4283,7 @@ webpackJsonp([47], {
                             }
                         }, Object(l.d)("Back", "ReportModalWizard"))))
                     }, t.getTitle = function() {
-                        return t.state.currentCard.getTitle ? t.state.targetUnknown ? t.state.currentCard.getTitle(Object(l.d)("Another User", "ReportModalWizard")) : t.state.currentCard.getTitle(t.props.targetUser.displayName) : t.state.targetUnknown ? Object(l.d)("Report User", "ReportModalWizard") : t.props.title
+                        return t.state.currentCard.getTitle && t.props.targetUser.displayName && t.props.targetUserID ? t.state.targetUnknown ? t.state.currentCard.getTitle(Object(l.d)("Another User", "ReportModalWizard")) : t.state.currentCard.getTitle(t.props.targetUser.displayName) : t.state.targetUnknown ? Object(l.d)("Report User", "ReportModalWizard") : t.props.title
                     }, t.handleClose = function() {
                         t.setState({
                             modalCloseTracked: !0
@@ -4339,12 +4339,12 @@ webpackJsonp([47], {
                                         return e = Object(l.d)("Additional information is required.", "ReportModalWizard"), this.requiredInputsNonEmpty() ? (t = this.state.reportReason || "other", n = this.createReportDescription(), [4, this.props.onSubmit(t, n, null, null, this.state.reportContext)]) : [3, 2];
                                     case 1:
                                         switch (r.sent(), this.props.submitStatus) {
-                                            case N.b.FormError:
+                                            case T.b.FormError:
                                                 this.setState({
                                                     error: e
                                                 });
                                                 break;
-                                            case N.b.Success:
+                                            case T.b.Success:
                                                 i = $, J[t] && (i = J[t]), this.state.currentCard.nextCard && (i = this.state.currentCard.nextCard), this.setState({
                                                     currentCard: i,
                                                     prevCards: [],
@@ -4357,7 +4357,12 @@ webpackJsonp([47], {
                                                     return a.trackNavigation(w.Submit)
                                                 });
                                                 break;
-                                            case N.b.MutationError:
+                                            case T.b.UserError:
+                                                this.setState({
+                                                    error: Object(l.d)("This account could not be reported. It may have already been suspended, or the owner may have deleted it.", "ReportModalWizard")
+                                                });
+                                                break;
+                                            case T.b.MutationError:
                                             default:
                                                 this.setState({
                                                     error: Object(l.d)("Sorry, a network error occurred when submitting your report. Please try again later.", "ReportModalWizard")
@@ -4365,7 +4370,7 @@ webpackJsonp([47], {
                                         }
                                         return [3, 3];
                                     case 2:
-                                        this.props.onError(N.b.FormError), this.setState({
+                                        this.props.onError(T.b.FormError), this.setState({
                                             error: e
                                         }), r.label = 3;
                                     case 3:
@@ -4450,7 +4455,7 @@ webpackJsonp([47], {
                         margin: {
                             y: 1
                         }
-                    }, a.createElement(T, {
+                    }, a.createElement(E, {
                         currentCard: this.state.currentCard,
                         currentSelection: this.state.currentSelection,
                         targetUser: this.props.targetUser,
@@ -4458,7 +4463,7 @@ webpackJsonp([47], {
                         onChangeRadio: this.handleSelection,
                         onChangeText: this.handleTextInput,
                         userTextInputs: this.state.userTextInput,
-                        error: this.props.submitStatus === N.b.FormError && !!this.state.error
+                        error: this.props.submitStatus === T.b.FormError && !!this.state.error
                     }), e), this.renderButtons())
                 }, t
             }(a.Component),
@@ -4475,7 +4480,7 @@ webpackJsonp([47], {
             }),
             function(e) {
                 e.Close = "close", e.Open = "open", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-            }(E || (E = {})),
+            }(N || (N = {})),
             function(e) {
                 e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
             }(w || (w = {})),
@@ -4491,7 +4496,7 @@ webpackJsonp([47], {
                         return r.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    if (e !== N.a) return [3, 5];
+                                    if (e !== T.a) return [3, 5];
                                     d = {
                                         userID: this.props.reportContext.targetUserID,
                                         communityID: i || "",
@@ -4509,25 +4514,28 @@ webpackJsonp([47], {
                                         action: "report",
                                         reason: e
                                     }), this.setState({
-                                        submitStatus: N.b.Success
+                                        submitStatus: T.b.Success
                                     }, function() {
-                                        u.state.showWizard || u.trackAction(E.Submit)
+                                        u.state.showWizard || u.trackAction(N.Submit)
                                     }), [3, 4];
                                 case 3:
                                     return n = r.sent(), l.j.error(n, "ReportUserInCommunity Mutation failed."), this.setState({
-                                        submitStatus: N.b.MutationError
+                                        submitStatus: T.b.MutationError
                                     }), [3, 4];
                                 case 4:
                                     return [3, 9];
                                 case 5:
-                                    s = o === y.a.Whisper ? o : this.props.reportContext.contentType, d = {
-                                        description: t,
-                                        reason: e,
-                                        content: s,
-                                        contentID: this.props.reportContext.contentID,
-                                        extra: this.props.reportContext.extra,
-                                        targetID: this.props.reportContext.targetUserID
-                                    }, this.props.reportContext.contentType === y.a.Community && this.props.reportContext.extra && (d.description = Object(re.a)(this.props.reportContext.extra, t)), r.label = 6;
+                                    if (s = o === y.a.Whisper ? o : this.props.reportContext.contentType, d = {
+                                            description: t,
+                                            reason: e,
+                                            content: s,
+                                            contentID: this.props.reportContext.contentID,
+                                            extra: this.props.reportContext.extra,
+                                            targetID: this.props.reportContext.targetUserID
+                                        }, this.props.reportContext.contentType === y.a.Community && this.props.reportContext.extra && (d.description = Object(re.a)(this.props.reportContext.extra, t)), null === d.targetID) return this.setState({
+                                        submitStatus: T.b.UserError
+                                    }), [2];
+                                    r.label = 6;
                                 case 6:
                                     return r.trys.push([6, 8, , 9]), [4, this.props.reportUser(Object(p.a)(d))];
                                 case 7:
@@ -4538,13 +4546,13 @@ webpackJsonp([47], {
                                         user_id: this.props.sessionUser && this.props.sessionUser.id,
                                         reason: e
                                     }), this.setState({
-                                        submitStatus: N.b.Success
+                                        submitStatus: T.b.Success
                                     }, function() {
-                                        u.state.showWizard || u.trackAction(E.Submit)
+                                        u.state.showWizard || u.trackAction(N.Submit)
                                     }), [3, 9];
                                 case 8:
                                     return c = r.sent(), l.j.error(c, "ReportUser Mutation failed."), this.setState({
-                                        submitStatus: N.b.MutationError
+                                        submitStatus: T.b.MutationError
                                     }), [3, 9];
                                 case 9:
                                     return [2]
@@ -4570,18 +4578,18 @@ webpackJsonp([47], {
                         userBlocked: !1
                     })
                 }, n.trackOpen = function(e) {
-                    n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(w.Open, void 0, e) : n.trackAction(E.Open), n.setState({
+                    n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(w.Open, void 0, e) : n.trackAction(N.Open), n.setState({
                         openEventSent: !0
                     }))
                 }, n.trackClose = function(e, t) {
-                    n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(w.Close, t, void 0, e) : n.trackAction(E.Close), n.setState({
+                    n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(w.Close, t, void 0, e) : n.trackAction(N.Close), n.setState({
                         closeEventSent: !0
                     }))
                 }, n.trackWizardAction = function(e, t, i, r) {
                     l.o.tracking.track(h.SpadeEventType.ReportWizardFlowAction, {
                         ui_context: n.props.reportContext.contentType,
                         target_user_id: n.props.reportContext.targetUserID,
-                        report_sent: n.state.submitStatus === N.b.Success,
+                        report_sent: n.state.submitStatus === T.b.Success,
                         modal_type: "wizard_v1",
                         extra_user_id: n.props.reportContext.additionalTrackingID,
                         action: e,
@@ -4594,7 +4602,7 @@ webpackJsonp([47], {
                     l.o.tracking.track(h.SpadeEventType.ReportFlowAction, {
                         ui_context: n.props.reportContext.contentType,
                         target_user_id: n.props.reportContext.targetUserID,
-                        report_sent: n.state.submitStatus === N.b.Success,
+                        report_sent: n.state.submitStatus === T.b.Success,
                         extra_user_id: n.props.reportContext.additionalTrackingID,
                         action: e,
                         report_session_id: n.reportID
@@ -4602,7 +4610,7 @@ webpackJsonp([47], {
                 }, n.reportID = Object(m.a)();
                 var i = l.o.experiments.getAssignment("TWILIGHT_NEW_REPORTING_WIZARD");
                 return n.state = {
-                    submitStatus: N.b.Unsubmitted,
+                    submitStatus: T.b.Unsubmitted,
                     showWizard: "yes" === i,
                     openEventSent: !1,
                     closeEventSent: !1,
@@ -4632,7 +4640,7 @@ webpackJsonp([47], {
                     trackAction: this.trackWizardAction,
                     trackClose: this.trackClose,
                     userBlocked: this.userBlocked
-                })) : a.createElement(N.c, r.__assign({}, e))
+                })) : a.createElement(T.c, r.__assign({}, e))
             }, Object.defineProperty(t.prototype, "userBlocked", {
                 get: function() {
                     var e = this;
@@ -5359,7 +5367,7 @@ webpackJsonp([47], {
         });
         var v, f = "community_rules_violation";
         ! function(e) {
-            e[e.Unsubmitted = 0] = "Unsubmitted", e[e.Success = 1] = "Success", e[e.FormError = 2] = "FormError", e[e.MutationError = 3] = "MutationError"
+            e[e.Unsubmitted = 0] = "Unsubmitted", e[e.Success = 1] = "Success", e[e.FormError = 2] = "FormError", e[e.MutationError = 3] = "MutationError", e[e.UserError = 4] = "UserError", e[e.CommunityError = 5] = "CommunityError"
         }(v || (v = {}));
         var k = function(e) {
                 function t() {
@@ -5383,16 +5391,22 @@ webpackJsonp([47], {
                             selectedCommunityName: e.target.getAttribute("data-community-name")
                         })
                     }, t.handleSubmit = function(e) {
-                        e.preventDefault(), t.state.reason && t.state.description.length > 0 ? t.props.onSubmit(t.state.reason || "", t.state.description, t.state.selectedCommunityID, t.state.selectedCommunityName) : t.props.onError(v.FormError)
+                        if (e.preventDefault(), t.state.reason && t.state.description.length > 0) {
+                            if (t.state.reason === f && !t.state.selectedCommunityID) {
+                                if (t.props.data.user && !t.props.data.user.directories.nodes.length) return void t.props.onError(v.CommunityError);
+                                t.props.onError(v.FormError)
+                            }
+                            t.props.onSubmit(t.state.reason || "", t.state.description, t.state.selectedCommunityID, t.state.selectedCommunityName)
+                        } else t.props.onError(v.FormError)
                     }, t.handleTextAreaChange = function(e) {
                         t.setState({
                             description: e.target.value
                         })
                     }, t.handleReasonChange = function(e) {
                         if (!t.props.data || t.props.data.loading || t.props.data.error || !t.props.data.user) return null;
-                        var n = t.props.data.user.directories.nodes.filter(function(e) {
+                        var n = t.props.data.user.directories ? t.props.data.user.directories.nodes.filter(function(e) {
                             return "COMMUNITY" === e.directoryType
-                        });
+                        }) : [];
                         n.length && e === f ? t.setState({
                             reason: e,
                             selectedCommunityID: n[0].id,
@@ -5496,6 +5510,12 @@ webpackJsonp([47], {
                             break;
                         case v.Success:
                             e = Object(s.d)("Thank you for your report.", "ReportUser");
+                            break;
+                        case v.UserError:
+                            e = Object(s.d)("This account could not be reported. It may have already been suspended, or the owner may have deleted it.", "ReportUser");
+                            break;
+                        case v.CommunityError:
+                            e = Object(s.d)("A report of this type could not be sent because this user has not selected a Community.", "ReportUser");
                             break;
                         default:
                             return null
@@ -5891,7 +5911,7 @@ webpackJsonp([47], {
             }(s.Component),
             S = Object(h.f)(_),
             C = n("2TZ0"),
-            T = {
+            E = {
                 TITLE_INPUT: "cmgr-title-input",
                 TITLE_SAVE: "cmgr-title-save",
                 TITLE_SAVE_TOOLTIP: "cmgr-title-save-tooltip"
@@ -5899,14 +5919,14 @@ webpackJsonp([47], {
         ! function(e) {
             e.emptySubmission = "emptySubmission", e.characterLimitReached = "characterLimitReached", e.channelViolation = "channelViolation", e.notCurator = "notCurator", e.unknown = "unknown"
         }(g || (g = {}));
-        var N = 100,
-            E = function(e) {
+        var T = 100,
+            N = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderForClipsViewing = function() {
                         return s.createElement("div", null, s.createElement(k._43, {
-                            id: T.TITLE_INPUT,
-                            "data-test-selector": T.TITLE_INPUT,
+                            id: E.TITLE_INPUT,
+                            "data-test-selector": E.TITLE_INPUT,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
                             onKeyDown: n.handleKeyDown
@@ -5924,7 +5944,7 @@ webpackJsonp([47], {
                         }, n.getRemainingCharacterText()), s.createElement(k._8, {
                             display: k.R.Flex
                         }, s.createElement(k.v, {
-                            "data-test-selector": T.TITLE_SAVE,
+                            "data-test-selector": E.TITLE_SAVE,
                             onClick: n.props.onCancel,
                             type: k.B.Hollow
                         }, Object(l.d)("Cancel", "ClipsTitleEdit")), s.createElement(k._8, {
@@ -5934,7 +5954,7 @@ webpackJsonp([47], {
                         }, n.renderSave()))))
                     }, n.renderForManager = function() {
                         return s.createElement(k.W, {
-                            id: T.TITLE_INPUT,
+                            id: E.TITLE_INPUT,
                             label: Object(l.d)("Title", "ClipsTitleEdit"),
                             hint: n.getRemainingCharacterText()
                         }, s.createElement(k._8, {
@@ -5946,8 +5966,8 @@ webpackJsonp([47], {
                                 right: 1
                             }
                         }, s.createElement(k._4, {
-                            id: T.TITLE_INPUT,
-                            "data-test-selector": T.TITLE_INPUT,
+                            id: E.TITLE_INPUT,
+                            "data-test-selector": E.TITLE_INPUT,
                             type: k._5.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
@@ -5959,7 +5979,7 @@ webpackJsonp([47], {
                             position: k._15.Relative
                         }, n.renderSave(), s.createElement(k._6, {
                             onClick: n.dismissMessage,
-                            "data-test-selector": T.TITLE_SAVE_TOOLTIP
+                            "data-test-selector": E.TITLE_SAVE_TOOLTIP
                         }, s.createElement(k.q, {
                             direction: k.r.TopRight,
                             show: n.state.showError || n.state.showSuccess
@@ -5983,8 +6003,8 @@ webpackJsonp([47], {
                         }, n.getRemainingCharacterText()), s.createElement(k._8, null, s.createElement(k._8, {
                             fullWidth: !0
                         }, s.createElement(k._4, {
-                            id: T.TITLE_INPUT,
-                            "data-test-selector": T.TITLE_INPUT,
+                            id: E.TITLE_INPUT,
+                            "data-test-selector": E.TITLE_INPUT,
                             type: k._5.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
@@ -6014,7 +6034,7 @@ webpackJsonp([47], {
                         })))))
                     }, n.renderSave = function() {
                         return s.createElement(k.v, {
-                            "data-test-selector": T.TITLE_SAVE,
+                            "data-test-selector": E.TITLE_SAVE,
                             disabled: !n.canSaveEditedTitle(),
                             onClick: n.editClipTitle
                         }, Object(l.d)("Save", "ClipsTitleEdit"))
@@ -6026,7 +6046,7 @@ webpackJsonp([47], {
                         })
                     }, n.getRemainingCharacterText = function() {
                         return Object(l.d)("{characterCount, number} remaining", {
-                            characterCount: N - n.state.title.length
+                            characterCount: T - n.state.title.length
                         }, "ClipsTitleEdit")
                     }, n.onSuccess = function() {
                         n.props.onSuccess && n.props.onSuccess(), n.setState({
@@ -6044,7 +6064,7 @@ webpackJsonp([47], {
                             showSuccess: !1
                         })
                     }, n.handleTitleEdit = function(e) {
-                        var t = e.currentTarget.value.slice(0, N);
+                        var t = e.currentTarget.value.slice(0, T);
                         n.setState({
                             title: t,
                             showError: !1,
@@ -6116,13 +6136,13 @@ webpackJsonp([47], {
             }(s.Component),
             w = Object(d.a)(C, {
                 name: "editTitle"
-            })(E);
+            })(N);
         n.d(t, !1, function() {
-            return T
+            return E
         }), n.d(t, "b", function() {
             return g
         }), n.d(t, !1, function() {
-            return E
+            return N
         }), n.d(t, "a", function() {
             return w
         })
@@ -7984,7 +8004,7 @@ webpackJsonp([47], {
                 }, t
             }(r.Component),
             C = n("bnNq"),
-            T = (n("twHn"), function(e) {
+            E = (n("twHn"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.trackLinkShare = function() {
@@ -8123,7 +8143,7 @@ webpackJsonp([47], {
                 }, t = i.__decorate([Object(m.d)("ClipsSocialShare"), Object(c.a)(C)], t)
             }(r.Component));
         n.d(t, "a", function() {
-            return T
+            return E
         })
     },
     bW4X: function(e, t) {
@@ -9737,7 +9757,7 @@ webpackJsonp([47], {
                                 t(e.data)
                             })
                         }, r.updatePlayerProps = function(t) {
-                            if (e.requestedPlayerProps && (t.method === E || t.method === w)) {
+                            if (e.requestedPlayerProps && (t.method === N || t.method === w)) {
                                 var n = t.args[0],
                                     a = e.requestedPlayerProps.reduce(function(e, t) {
                                         var i = n[t];
@@ -9821,14 +9841,14 @@ webpackJsonp([47], {
 
         function b(e) {
             return h({
-                method: N,
+                method: T,
                 arg: e
             })
         }
 
         function y(e) {
             return h({
-                method: T,
+                method: E,
                 arg: e
             })
         }
@@ -9847,9 +9867,9 @@ webpackJsonp([47], {
             })
         }
         var C = "subscribe",
-            T = "setclip",
-            N = "setAutoplay",
-            E = "bridgestateupdate",
+            E = "setclip",
+            T = "setAutoplay",
+            N = "bridgestateupdate",
             w = "bridgestorestateupdate",
             O = "player.embed.host",
             R = "player.embed.client";
@@ -9888,11 +9908,11 @@ webpackJsonp([47], {
         }), n.d(t, "g", function() {
             return C
         }), n.d(t, "f", function() {
-            return T
-        }), n.d(t, "e", function() {
-            return N
-        }), n.d(t, "c", function() {
             return E
+        }), n.d(t, "e", function() {
+            return T
+        }), n.d(t, "c", function() {
+            return N
         }), n.d(t, "d", function() {
             return w
         }), n.d(t, "b", function() {
@@ -10294,9 +10314,9 @@ webpackJsonp([47], {
                 }
             })(_)),
             C = n("3zLD"),
-            T = n("wqRA"),
-            N = this,
-            E = {
+            E = n("wqRA"),
+            T = this,
+            N = {
                 isLoading: !1,
                 hasErrored: !1,
                 hasSucceeded: !1
@@ -10335,7 +10355,7 @@ webpackJsonp([47], {
                         return n.state.hasSucceeded ? Object(a.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
                     }, n.renderFailure = function() {
                         return n.state.hasErrored ? Object(a.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
-                    }, n.state = E, n
+                    }, n.state = N, n
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -10363,7 +10383,7 @@ webpackJsonp([47], {
                 props: function(e) {
                     return {
                         deleteAllClips: function(t, n) {
-                            return i.__awaiter(N, void 0, void 0, function() {
+                            return i.__awaiter(T, void 0, void 0, function() {
                                 var r, o, s;
                                 return i.__generator(this, function(i) {
                                     switch (i.label) {
@@ -10401,7 +10421,7 @@ webpackJsonp([47], {
                         }
                     }
                 }
-            }), Object(g.a)(T, {
+            }), Object(g.a)(E, {
                 props: function(e) {
                     var t = e.data.clip;
                     return t ? {
@@ -11632,13 +11652,15 @@ webpackJsonp([47], {
                                 tt_medium: "clips_web"
                             })
                         }, this.props.data.clip.game.displayName)
-                    }, "ClipsBroadcasterInfo")))), r.createElement(o.a, {
+                    }, "ClipsBroadcasterInfo")))), r.createElement(c._8, {
+                        flexShrink: 1
+                    }, r.createElement(o.a, {
                         isHostedFollow: !1,
                         channelLogin: this.props.data.clip.broadcaster.login,
                         followUIType: o.b.IconAndText,
                         unfollowUIType: o.b.IconOnly,
                         showLoadingPlaceholder: !0
-                    })) : r.createElement(c._8, null, this.renderPlaceholders())
+                    }))) : r.createElement(c._8, null, this.renderPlaceholders())
                 }, t.prototype.renderPlaceholders = function() {
                     return r.createElement(c._8, {
                         padding: 1,
@@ -11688,4 +11710,4 @@ webpackJsonp([47], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-e873fb53a325173cbc019fda24900dc1.js.map
+//# sourceMappingURL=sites.clips.pages.view-2cf1e92709fa14187f136affc57408c4.js.map

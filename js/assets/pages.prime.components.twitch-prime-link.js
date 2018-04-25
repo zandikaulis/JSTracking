@@ -1,27 +1,5 @@
-webpackJsonp([87], {
+webpackJsonp([94], {
     "0blB": function(e, t) {},
-    "68hr": function(e, t, n) {
-        "use strict";
-        var i = n("GiK3"),
-            r = n("6sO2"),
-            a = n("yWCw"),
-            c = n("Odds"),
-            o = function() {
-                return i.createElement(a.a, {
-                    message: Object(r.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "PageNotFound")
-                }, i.createElement(c._8, {
-                    margin: {
-                        top: 2
-                    }
-                }, i.createElement(c.v, {
-                    linkTo: "/directory",
-                    "data-a-target": "browse-channels-button"
-                }, Object(r.d)("Browse channels", "PageNotFound"))))
-            };
-        n.d(t, "a", function() {
-            return o
-        })
-    },
     PqVi: function(e, t) {
         var n = {
             kind: "Document",
@@ -140,8 +118,8 @@ webpackJsonp([87], {
             c = n("CIox"),
             o = n("6sO2"),
             l = n("68hr"),
-            s = n("7vx8"),
-            m = n("oIkB"),
+            m = n("7vx8"),
+            s = n("oIkB"),
             d = n("CSlQ"),
             u = n("/3Cb"),
             p = n("R0Kh"),
@@ -178,7 +156,7 @@ webpackJsonp([87], {
                         var n = t.props.data;
                         if (!n.loading && !n.error && n.currentUser.id) {
                             var i = o.b.get("twitch_prime_fortnite_offer_id", "d2b1726e-ebd9-05a2-95ee-9d37fcfd0a8a"),
-                                r = Object(m.a)({
+                                r = Object(s.a)({
                                     offerID: i
                                 });
                             t.props.claimPrimeOffer(r).then(function(e) {
@@ -248,15 +226,15 @@ webpackJsonp([87], {
                     })
                 }, t
             }(r.Component),
-            b = Object(a.compose)(Object(d.d)("TwitchPrimeLink", {
+            k = Object(a.compose)(Object(d.d)("TwitchPrimeLink", {
                 autoReportInteractive: !0
-            }), Object(s.a)(g), Object(s.a)(u, {
+            }), Object(m.a)(g), Object(m.a)(u, {
                 name: "claimPrimeOffer"
             }))(y);
         n.d(t, "CALL_TO_ACTION_SELECTOR", function() {
             return w
         }), n.d(t, "TwitchPrimeLink", function() {
-            return b
+            return k
         })
     },
     c6bv: function(e, t, n) {
@@ -307,16 +285,16 @@ webpackJsonp([87], {
                     }))), this.props.children)))
                 }, t
             }(a.Component)),
-            s = Object(c.d)("TwitchPrimeBrandedHeader")(l);
+            m = Object(c.d)("TwitchPrimeBrandedHeader")(l);
         n.d(t, !1, function() {
             return "twitch-prime-fortnite-header"
         }), n.d(t, !1, function() {
             return l
         }), n.d(t, "a", function() {
-            return s
+            return m
         })
     },
     gjwU: function(e, t) {},
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-link-031fd3df1ee19b7a2ed199ba2a79524e.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-link-983e26eea86797c5ccbe8369b7a8dc9d.js.map

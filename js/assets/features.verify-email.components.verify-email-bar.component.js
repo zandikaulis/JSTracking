@@ -1,4 +1,4 @@
-webpackJsonp([63], {
+webpackJsonp([66], {
     "9u8h": function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
@@ -421,7 +421,7 @@ webpackJsonp([63], {
                     if (I.has(this.props.location.pathname)) {
                         var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                             t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                        return Object(d.j)(e, t)
+                        return Object(d.l)(e, t)
                     }
                     return !1
                 }, t.prototype.shouldRespectDismissal = function() {
@@ -539,4 +539,4 @@ webpackJsonp([63], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-52dfd1e9a1cbee1c0af679345822b17c.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-b9c8179c8124d79a202a1aa6ea07d416.js.map

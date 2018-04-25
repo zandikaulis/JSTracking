@@ -1254,6 +1254,66 @@ webpackJsonp([36], {
             return 0 === t || 6 === t
         }
     },
+    "4VmI": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Prime_Current_User"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "hasPrime"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 56
+            }
+        };
+        n.loc.source = {
+            body: "query Prime_Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     "4Z4o": function(e, t, n) {
         var i = n("3EIC");
         e.exports = function(e, t) {
@@ -1511,88 +1571,6 @@ webpackJsonp([36], {
         e.exports = function(e) {
             return e instanceof Date
         }
-    },
-    "65au": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Current_User"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 50
-            }
-        };
-        n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    "68hr": function(e, t, n) {
-        "use strict";
-        var i = n("GiK3"),
-            r = n("6sO2"),
-            a = n("yWCw"),
-            s = n("Odds"),
-            o = function() {
-                return i.createElement(a.a, {
-                    message: Object(r.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "PageNotFound")
-                }, i.createElement(s._8, {
-                    margin: {
-                        top: 2
-                    }
-                }, i.createElement(s.v, {
-                    linkTo: "/directory",
-                    "data-a-target": "browse-channels-button"
-                }, Object(r.d)("Browse channels", "PageNotFound"))))
-            };
-        n.d(t, "a", function() {
-            return o
-        })
     },
     "6CZb": function(e, t, n) {
         var i = n("xA5w");
@@ -2404,7 +2382,7 @@ webpackJsonp([36], {
                                 r = Object(k.g)();
                             t.setState({
                                 numOfUnseenOffers: i.filter(function(e) {
-                                    return !(r.includes(e.id) || t.offerIsSeen(e) || t.offerIsClaimed(e))
+                                    return !(r.includes(e.id) || t.offerIsSeen(e))
                                 }).length
                             })
                         }
@@ -2414,7 +2392,7 @@ webpackJsonp([36], {
                             var n = (e.primeOffers || []).map(function(e) {
                                 return "" + e.id
                             });
-                            t.updateOfferStatus(), Object(k.i)(n)
+                            t.updateOfferStatus(), Object(k.k)(n)
                         }
                     }, t.updateOfferStatus = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
@@ -2501,8 +2479,6 @@ webpackJsonp([36], {
                         size: h.s.Large,
                         offsetX: "9px"
                     }, this.renderOfferList())), this.renderUnseenOffersDisplay())
-                }, t.prototype.offerIsClaimed = function(e) {
-                    return e.self && e.self.hasEntitlement
                 }, t.prototype.offerIsSeen = function(e) {
                     return e.self && e.self.status === k.a.Seen
                 }, t.prototype.renderUnseenOffersDisplay = function() {
@@ -2556,7 +2532,7 @@ webpackJsonp([36], {
                 }, t.prototype.render = function() {
                     var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                         t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                    if (!Object(k.j)(e, t)) return null;
+                    if (!Object(k.l)(e, t)) return null;
                     if (this.props.data.loading) return null;
                     var n = Object(O.d)(O.a, ""),
                         i = Object(c.d)("Twitch Prime", "BlueBar"),
@@ -2694,6 +2670,910 @@ webpackJsonp([36], {
             return Math.ceil(u / r)
         }
     },
+    "8m9s": function(e, t, n) {
+        "use strict";
+        var i = n("RH2O"),
+            r = n("Aj/L"),
+            a = n("TToO"),
+            s = n("GiK3"),
+            o = n("3zLD"),
+            c = n("6sO2"),
+            l = n("7vx8"),
+            u = n("TeXj"),
+            d = n("3T7g"),
+            m = n("969Z"),
+            p = n("CSlQ"),
+            f = n("Odds"),
+            g = (n("VH0v"), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.product,
+                        t = this.props.owner;
+                    if (t) return s.createElement(f._32, {
+                        className: "ticket-description"
+                    }, s.createElement(f.C, {
+                        border: !0,
+                        elevation: 1
+                    }, s.createElement("div", {
+                        className: "ticket-description__banner-image",
+                        style: {
+                            backgroundImage: "url(" + t.bannerImageURL
+                        }
+                    }, s.createElement(f._8, {
+                        className: "ticket-description__broadcaster-info",
+                        textAlign: f._42.Center,
+                        display: f.R.Flex,
+                        flexDirection: f.T.Column,
+                        alignItems: f.c.Center,
+                        flexWrap: f.U.NoWrap,
+                        padding: {
+                            x: 1,
+                            y: 3
+                        },
+                        breakpointLarge: {
+                            padding: 5
+                        }
+                    }, s.createElement(f._2, {
+                        margin: 1,
+                        breakpointLarge: {
+                            margin: 2
+                        }
+                    }, s.createElement(f.m, {
+                        alt: t.displayName,
+                        size: 96,
+                        src: t.profileImageURL
+                    })), s.createElement(f._2, {
+                        margin: 1,
+                        breakpointLarge: {
+                            margin: 1
+                        }
+                    }, s.createElement(f.Q, {
+                        type: f._46.H4,
+                        bold: !0,
+                        color: f.K.Overlay
+                    }, t.displayName)), s.createElement(f._8, {
+                        margin: 1,
+                        breakpointLarge: {
+                            margin: 2
+                        }
+                    }, s.createElement(f.Q, {
+                        type: f._46.H5,
+                        color: f.K.Overlay
+                    }, e.displayName)))), s.createElement(f.D, null, s.createElement(f._32, {
+                        borderBottom: !0,
+                        textAlign: f._42.Center,
+                        background: f.n.Alt,
+                        padding: 2
+                    }, this.props.renderPrice()), s.createElement(f._32, {
+                        className: "ticket-description__description",
+                        padding: {
+                            x: 1,
+                            bottom: 2
+                        },
+                        textAlign: f._42.Left,
+                        background: f.n.Alt
+                    }, s.createElement(f._3, {
+                        padding: {
+                            y: 1
+                        }
+                    }, s.createElement(f.Q, {
+                        className: "ticket-description__description__line-item",
+                        bold: !0
+                    }, U["Subscription benefits"]())), s.createElement(f.Q, {
+                        className: "ticket-description__description__line-item"
+                    }, U["Directly support the broadcaster"]()), e.hasAdFree && s.createElement(f.Q, {
+                        className: "ticket-description__description__line-item"
+                    }, U["Ad-free (with limited exceptions)"]()), s.createElement(f.Q, {
+                        className: "ticket-description__description__line-item"
+                    }, U["Chat during subscriber-only mode"]()), e.hasFastChat && s.createElement(f.Q, {
+                        className: "ticket-description__description__line-item"
+                    }, U["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && s.createElement(f.Q, {
+                        className: "ticket-description__description__line-item"
+                    }, U["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()))))
+                }, t = a.__decorate([Object(p.d)("TicketDescription")], t)
+            }(s.Component)),
+            h = n("yWCw"),
+            v = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        collapsed: !0
+                    }, t.toggleCollapsed = function() {
+                        t.setState(function(e) {
+                            return {
+                                collapsed: !e.collapsed
+                            }
+                        })
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return this.props.collapsable ? s.createElement(s.Fragment, null, s.createElement(f._8, {
+                        display: f.R.Hide,
+                        breakpointLarge: {
+                            display: f.R.Block
+                        }
+                    }, s.createElement(f.D, null, this.props.children)), s.createElement(f._8, {
+                        display: f.R.Block,
+                        breakpointLarge: {
+                            display: f.R.Hide
+                        }
+                    }, this.state.collapsed && s.createElement(f._6, {
+                        onClick: this.toggleCollapsed,
+                        hover: !1,
+                        alpha: !0
+                    }, s.createElement(f._8, {
+                        fullWidth: !0,
+                        textAlign: f._42.Center,
+                        alignItems: f.c.Center,
+                        padding: {
+                            y: 1
+                        }
+                    }, s.createElement(f.Q, {
+                        type: f._46.Span,
+                        color: f.K.Link
+                    }, this.props.showButtonLabel))), !this.state.collapsed && s.createElement(f.D, null, this.props.children, s.createElement(f._6, {
+                        onClick: this.toggleCollapsed,
+                        hover: !1,
+                        alpha: !0
+                    }, s.createElement(f._8, {
+                        fullWidth: !0,
+                        textAlign: f._42.Center,
+                        alignItems: f.c.Center,
+                        padding: {
+                            y: 1
+                        }
+                    }, s.createElement(f.Q, {
+                        type: f._46.Span,
+                        color: f.K.Link
+                    }, this.props.showButtonLabel)))))) : s.createElement(f.D, null, this.props.children)
+                }, t
+            }(s.Component),
+            b = (n("eVow"), function(e) {
+                return s.createElement(f._8, {
+                    className: "ticket-wrapper__container",
+                    margin: {
+                        bottom: 2
+                    },
+                    breakpointLarge: {
+                        margin: 0
+                    }
+                }, s.createElement(f.C, {
+                    elevation: 1
+                }, e.children))
+            }),
+            y = (n("+OOL"), function() {
+                return s.createElement(b, null, s.createElement(f._8, {
+                    className: "error-description__header",
+                    padding: 2
+                }, s.createElement(f._32, {
+                    fullHeight: !0,
+                    background: f.n.Alt2
+                }, s.createElement(h.a, null))), s.createElement(v, {
+                    collapsable: !0
+                }, s.createElement(f._32, {
+                    className: "error-description__body",
+                    padding: 2,
+                    borderTop: !0
+                }, s.createElement(f._32, {
+                    fullHeight: !0,
+                    background: f.n.Alt2
+                }, s.createElement(h.a, null)))))
+            }),
+            k = (n("kgE+"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        collapsed: !0
+                    }, t.toggleCollapsed = function() {
+                        t.setState(function(e) {
+                            return {
+                                collapsed: !e.collapsed
+                            }
+                        })
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.product,
+                        t = this.props.owner;
+                    if (t) return s.createElement(f._32, {
+                        className: "mobile-ticket-description",
+                        fullWidth: !0,
+                        margin: {
+                            bottom: 2
+                        }
+                    }, s.createElement(f.C, {
+                        border: !0,
+                        elevation: 1
+                    }, s.createElement("div", {
+                        className: "mobile-ticket-description__banner-image",
+                        style: {
+                            backgroundImage: "url(" + t.bannerImageURL
+                        }
+                    }, s.createElement(f._32, {
+                        margin: {
+                            top: 2
+                        },
+                        display: f.R.Flex,
+                        flexDirection: f.T.Column,
+                        alignItems: f.c.Center
+                    }, s.createElement(f.m, {
+                        alt: t.displayName,
+                        size: 96,
+                        src: t.profileImageURL
+                    }))), s.createElement(f._32, {
+                        className: "mobile-ticket-description__broadcaster-info",
+                        textAlign: f._42.Center,
+                        display: f.R.Flex,
+                        flexDirection: f.T.Column,
+                        alignItems: f.c.Center,
+                        flexWrap: f.U.NoWrap,
+                        margin: {
+                            top: 2
+                        }
+                    }, s.createElement(f._32, {
+                        background: f.n.Alt,
+                        fullWidth: !0
+                    }, s.createElement(f._8, {
+                        margin: 1
+                    }, s.createElement(f.Q, {
+                        type: f._46.H4,
+                        bold: !0
+                    }, t.displayName)), s.createElement(f._8, {
+                        margin: 1
+                    }, s.createElement(f.Q, {
+                        type: f._46.H5
+                    }, e.displayName)), s.createElement(f._8, {
+                        margin: 1
+                    }, this.props.renderPrice())), this.state.collapsed && s.createElement(f._6, {
+                        onClick: this.toggleCollapsed,
+                        hover: !1,
+                        alpha: !0
+                    }, s.createElement(f._32, {
+                        fullWidth: !0,
+                        textAlign: f._42.Center,
+                        alignItems: f.c.Center,
+                        padding: {
+                            y: 1
+                        }
+                    }, s.createElement(f.Q, {
+                        type: f._46.Span,
+                        color: f.K.Link
+                    }, Object(c.d)("Show Subcription Benefits", "MobileTicketDescription"))))), s.createElement(f.D, null, !this.state.collapsed && s.createElement(s.Fragment, null, s.createElement(f._32, {
+                        className: "mobile-ticket-description__description",
+                        padding: {
+                            x: 1,
+                            bottom: 1
+                        },
+                        textAlign: f._42.Left,
+                        background: f.n.Alt,
+                        borderTop: !0
+                    }, s.createElement(f._3, {
+                        padding: {
+                            y: 1
+                        }
+                    }, s.createElement(f.Q, {
+                        className: "mobile-ticket-description__description__line-item",
+                        bold: !0
+                    }, U["Subscription benefits"]())), s.createElement(f.Q, {
+                        className: "mobile-ticket-description__description__line-item"
+                    }, U["Directly support the broadcaster"]()), e.hasAdFree && s.createElement(f.Q, {
+                        className: "mobile-ticket-description__description__line-item"
+                    }, U["Ad-free (with limited exceptions)"]()), s.createElement(f.Q, {
+                        className: "mobile-ticket-description__description__line-item"
+                    }, U["Chat during subscriber-only mode"]()), e.hasFastChat && s.createElement(f.Q, {
+                        className: "mobile-ticket-description__description__line-item"
+                    }, U["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && s.createElement(f.Q, {
+                        className: "mobile-ticket-description__description__line-item"
+                    }, U["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()), s.createElement(f._6, {
+                        onClick: this.toggleCollapsed,
+                        hover: !1,
+                        alpha: !0
+                    }, s.createElement(f._32, {
+                        fullWidth: !0,
+                        textAlign: f._42.Center,
+                        alignItems: f.c.Center,
+                        padding: {
+                            y: 1
+                        }
+                    }, s.createElement(f.Q, {
+                        type: f._46.Span,
+                        color: f.K.Link
+                    }, Object(c.d)("Hide Subcription Benefits", "MobileTicketDescription"))))))))
+                }, t = a.__decorate([Object(p.d)("TicketDescription")], t)
+            }(s.Component)),
+            _ = (n("JbfA"), function() {
+                return s.createElement(b, null, s.createElement(f._8, {
+                    className: "placeholder-description__header",
+                    padding: 2
+                }, s.createElement(f._32, {
+                    fullHeight: !0,
+                    background: f.n.Alt2
+                })), s.createElement(v, {
+                    collapsable: !0
+                }, s.createElement(f._32, {
+                    padding: 2,
+                    borderTop: !0
+                }, s.createElement(f._14, {
+                    lineCount: 30
+                }))))
+            }),
+            E = (n("40wk"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.turboBenefitsList = [{
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_ad-free.png",
+                        benefitHeader: L["Ad-Free*"](),
+                        benefitDescription: L["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
+                    }, {
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_custom-emotes.png",
+                        benefitHeader: L["Custom Emoticon Set"](),
+                        benefitDescription: L["Express your emotions with an exclusive set of faces."]()
+                    }, {
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png",
+                        benefitHeader: L.Badge(),
+                        benefitDescription: L["Show everyone how Turbo you are with a shiny new chat badge."]()
+                    }, {
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_chat-color.png",
+                        benefitHeader: L["Extended Chat Colors"](),
+                        benefitDescription: L["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
+                    }, {
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_storage.png",
+                        benefitHeader: L["Increased Video Storage"](),
+                        benefitDescription: L["Save your past broadcasts on Twitch for 60 days."]()
+                    }], t.renderTurboBenefit = function(e) {
+                        return s.createElement(f.L, {
+                            cols: 12,
+                            key: e.benefitHeader
+                        }, s.createElement(f._32, {
+                            margin: {
+                                top: 2
+                            }
+                        }, s.createElement(f.Y, null, s.createElement(f.L, {
+                            cols: 4
+                        }, s.createElement(f.N, {
+                            src: e.imgSrc,
+                            alt: e.benefitHeader
+                        })), s.createElement(f.L, {
+                            cols: 8
+                        }, s.createElement(f.Q, {
+                            type: f._46.H4,
+                            bold: !0
+                        }, e.benefitHeader), s.createElement(f.Q, {
+                            type: f._46.P
+                        }, e.benefitDescription)))))
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    var e = L.Features();
+                    return s.createElement(f._32, {
+                        className: "turbo-mobile-ticket-description",
+                        background: f.n.Alt2,
+                        border: !0,
+                        padding: 2,
+                        elevation: 1,
+                        fullWidth: !0
+                    }, s.createElement(f.Y, null, s.createElement(f.L, {
+                        cols: 12
+                    }, s.createElement(f.Q, {
+                        type: f._46.H2,
+                        bold: !0
+                    }, e)), s.createElement(f.L, {
+                        cols: 12
+                    }, s.createElement(f.Q, {
+                        type: f._46.H4
+                    }, L["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), s.createElement(f.L, {
+                        cols: 12
+                    }, s.createElement(f._32, {
+                        borderBottom: !0,
+                        textAlign: f._42.Center,
+                        background: f.n.Alt,
+                        margin: {
+                            top: 2
+                        },
+                        padding: 2
+                    }, this.props.renderPrice()))))
+                }, t = a.__decorate([Object(p.d)("TicketDescription", {
+                    autoReportInteractive: !0
+                })], t)
+            }(s.PureComponent)),
+            S = (n("Mn81"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.turboBenefitsList = [{
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_ad-free.png",
+                        benefitHeader: L["Ad-Free*"](),
+                        benefitDescription: L["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
+                    }, {
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_custom-emotes.png",
+                        benefitHeader: L["Custom Emoticon Set"](),
+                        benefitDescription: L["Express your emotions with an exclusive set of faces."]()
+                    }, {
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png",
+                        benefitHeader: L.Badge(),
+                        benefitDescription: L["Show everyone how Turbo you are with a shiny new chat badge."]()
+                    }, {
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_chat-color.png",
+                        benefitHeader: L["Extended Chat Colors"](),
+                        benefitDescription: L["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
+                    }, {
+                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_storage.png",
+                        benefitHeader: L["Increased Video Storage"](),
+                        benefitDescription: L["Save your past broadcasts on Twitch for 60 days."]()
+                    }], t.renderTurboBenefit = function(e) {
+                        return s.createElement(f.L, {
+                            cols: 12,
+                            key: e.benefitHeader
+                        }, s.createElement(f._32, {
+                            margin: {
+                                top: 2
+                            }
+                        }, s.createElement(f.Y, null, s.createElement(f.L, {
+                            cols: 4
+                        }, s.createElement(f.N, {
+                            src: e.imgSrc,
+                            alt: e.benefitHeader
+                        })), s.createElement(f.L, {
+                            cols: 8
+                        }, s.createElement(f.Q, {
+                            type: f._46.H4,
+                            bold: !0
+                        }, e.benefitHeader), s.createElement(f.Q, {
+                            type: f._46.P
+                        }, e.benefitDescription)))))
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    var e = L.Features();
+                    return s.createElement(f._32, {
+                        className: "turbo-ticket-description",
+                        background: f.n.Alt2,
+                        border: !0,
+                        padding: 2,
+                        elevation: 1
+                    }, s.createElement(f.Y, null, s.createElement(f.L, {
+                        cols: 12
+                    }, s.createElement(f.Q, {
+                        type: f._46.H2,
+                        bold: !0
+                    }, e)), s.createElement(f.L, {
+                        cols: 12
+                    }, s.createElement(f.Q, {
+                        type: f._46.H4
+                    }, L["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), s.createElement(f.L, {
+                        cols: 12
+                    }, s.createElement(f._32, {
+                        borderBottom: !0,
+                        textAlign: f._42.Center,
+                        background: f.n.Alt,
+                        margin: {
+                            top: 2
+                        },
+                        padding: 2
+                    }, this.props.renderPrice()))))
+                }, t = a.__decorate([Object(p.d)("TicketDescription", {
+                    autoReportInteractive: !0
+                })], t)
+            }(s.PureComponent)),
+            N = n("7LIQ"),
+            w = n("Tzcg"),
+            C = n("3iBR"),
+            O = n("D0Fd"),
+            x = n("c84M"),
+            T = n("FDYX"),
+            D = n("PGoF"),
+            R = (n("iLMR"), "skin-selector"),
+            A = "igc-selector",
+            I = "badge-selector",
+            F = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderHeroSkins = function() {
+                        if (t.props.owner && !t.props.data.loading && !t.props.data.error) {
+                            var e = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.heroSkins.map(function(e) {
+                                return s.createElement(f._2, {
+                                    margin: {
+                                        x: .5
+                                    },
+                                    key: "skin-" + e.id,
+                                    display: f.R.Flex,
+                                    flexDirection: f.T.Row,
+                                    alignItems: f.c.Center,
+                                    "data-test-selector": R
+                                }, s.createElement("li", null, s.createElement(O.a, {
+                                    imageURL: e.imageURL,
+                                    size: O.b.Small
+                                })))
+                            }) : null;
+                            return s.createElement(f._2, {
+                                display: f.R.Flex,
+                                flexDirection: f.T.Row,
+                                flexWrap: f.U.Wrap,
+                                justifyContent: f._7.Center,
+                                alignItems: f.c.Center
+                            }, s.createElement("ul", null, e))
+                        }
+                    }, t.renderInGameContent = function() {
+                        if (t.props.owner && !t.props.data.loading && !t.props.data.error) {
+                            var e = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.inGameContent.map(function(e) {
+                                return s.createElement(f.m, {
+                                    key: "igc-" + e.id,
+                                    src: e.imageURL,
+                                    alt: e.name,
+                                    size: 64,
+                                    "data-test-selector": A
+                                })
+                            }) : null;
+                            return s.createElement(f._8, {
+                                display: f.R.Flex,
+                                flexDirection: f.T.Row,
+                                flexWrap: f.U.Wrap,
+                                justifyContent: f._7.Center,
+                                alignItems: f.c.Center
+                            }, e)
+                        }
+                    }, t.renderSubBadges = function() {
+                        if (t.props.owner && !t.props.data.loading && !t.props.data.error) {
+                            var e = t.props.owner.broadcastBadges.map(function(e) {
+                                    return {
+                                        name: e.title,
+                                        imageURL: e.image4x
+                                    }
+                                }),
+                                n = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.badges.map(function(e) {
+                                    return {
+                                        name: e.name,
+                                        imageURL: e.imageURL
+                                    }
+                                }) : null;
+                            n && (e = e.concat(n));
+                            var i = e.map(function(e) {
+                                return s.createElement(f._2, {
+                                    margin: {
+                                        x: 1
+                                    },
+                                    key: "access-badge-" + e.name
+                                }, s.createElement("li", null, s.createElement(f.m, {
+                                    src: e.imageURL,
+                                    alt: e.name,
+                                    size: 36,
+                                    "data-test-selector": I
+                                })))
+                            });
+                            return s.createElement(f._8, null, s.createElement(f.Q, {
+                                className: "ticket-description__description__line-item"
+                            }, Object(c.d)("{numBadges, number} All-Access Pass Twitch Badges:", {
+                                numBadges: 2
+                            }, "EsportsTicketDescription")), s.createElement(f._2, {
+                                display: f.R.Flex,
+                                flexWrap: f.U.Wrap
+                            }, s.createElement("ul", null, i)))
+                        }
+                    }, t.renderSubEmotes = function() {
+                        if (t.props.owner) {
+                            var e = t.props.owner.subscriptionProducts.map(function(e) {
+                                return e.emotes
+                            }).reduce(function(e, t) {
+                                return e.concat(t)
+                            }, []);
+                            if (0 !== e.length) return s.createElement(f._8, null, s.createElement(f.Q, {
+                                className: "ticket-description__description__line-item"
+                            }, Object(c.d)("{numEmotes, number} All-Access Pass Twitch Emotes:", {
+                                numEmotes: e.length
+                            }, "EsportsTicketDescription")), s.createElement(N.a, {
+                                emoteSet: {
+                                    id: "",
+                                    emotes: Object(w.b)(e)
+                                },
+                                onClickEmote: void 0,
+                                locked: !1
+                            }))
+                        }
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    if (this.props.owner) {
+                        var e = this.props.product.price;
+                        return this.props.owner && Object(T.d)(this.props.owner.subscriptionProducts) && (e = Object(T.a)(this.props.owner.subscriptionProducts[0])), s.createElement(f._32, {
+                            className: "ticket-description"
+                        }, s.createElement(f.C, {
+                            border: !0,
+                            elevation: 1
+                        }, s.createElement(f._8, {
+                            className: "ticket-description__banner-image",
+                            padding: 3
+                        }, s.createElement("img", {
+                            src: C.c + "/owl-2017/all-access-logo.svg",
+                            alt: Object(c.d)("Overwatch League All-Access Pass on Twitch", "EsportsTicketDescription"),
+                            height: "80px"
+                        })), s.createElement(f.D, null, s.createElement(f._32, {
+                            borderBottom: !0,
+                            textAlign: f._42.Center,
+                            background: f.n.Alt,
+                            padding: 2
+                        }, s.createElement(f.Q, {
+                            type: f._46.H4,
+                            "data-test-selector": "esport-ticket-description-price"
+                        }, Object(c.d)("{price} {interval}", {
+                            price: s.createElement(f.Q, {
+                                type: f._46.Span,
+                                bold: !0
+                            }, e),
+                            interval: "One-Time Purchase"
+                        }, "EsportsTicketDescription"))), s.createElement(f._32, {
+                            className: "ticket-description__description",
+                            padding: {
+                                x: 1,
+                                y: 2
+                            },
+                            textAlign: f._42.Left,
+                            background: f.n.Alt
+                        }, Object(T.d)(this.props.owner.subscriptionProducts) && s.createElement(f._8, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            bold: !0,
+                            "data-test-selector": "prime-language"
+                        }, Object(c.d)("Twitch Prime", "EsportsTicketDescription")), s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "prime-language"
+                        }, Object(c.d)("You're saving $10 off of the {price} price", {
+                            price: this.props.product.price
+                        }, "EsportsTicketDescription")), s.createElement(f.Q, {
+                            fontSize: f.V.Size7,
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "prime-language"
+                        }, s.createElement(f.O, {
+                            to: x.b
+                        }, Object(c.d)("Offer available for a limited time. Terms and conditions apply", "EsportsTicketDescription")))), s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            bold: !0,
+                            "data-test-selector": "ticket-feature"
+                        }, Object(c.d)("Overwatch League All-Access Pass Benefits", "EsportsTicketDescription")), s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(c.d)("Exclusive Command Center Stream", "EsportsTicketDescription")), s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(c.d)("Match Analysis Videos by Players", "EsportsTicketDescription")), s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(c.d)("Participate in Post-Match Q&A", "EsportsTicketDescription")), s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(c.d)("Passholder-Only Chat Access", "EsportsTicketDescription")), s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(c.d)("Ad-Free Viewing on Overwatch League", "EsportsTicketDescription")), s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "ticket-feature"
+                        }, Object(c.d)("Overwatch In-Game Content:", "EsportsTicketDescription")), this.renderHeroSkins(), this.renderInGameContent(), this.renderSubBadges(), this.renderSubEmotes(), s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item",
+                            "data-test-selector": "disclaimer"
+                        }, Object(c.d)("All-Access benefits last up to the start of the 2019 Overwatch League Season. Twitch emotes, badges, and in-game content are yours to keep forever!", "EsportsTicketDescription"))))))
+                    }
+                }, t
+            }(s.PureComponent),
+            P = Object(o.compose)(Object(l.a)(D, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            channelID: e.owner.id
+                        }
+                    }
+                }
+            }))(F),
+            j = n("O6CN"),
+            U = {
+                "Subscription benefits": function() {
+                    return Object(c.d)("Subscription benefits", "TicketDescription")
+                },
+                "Directly support the broadcaster": function() {
+                    return Object(c.d)("Directly support the broadcaster", "TicketDescription")
+                },
+                "Ad-free (with limited exceptions)": function() {
+                    return Object(c.d)("Ad-free (with limited exceptions)", "TicketDescription")
+                },
+                "Chat during subscriber-only mode": function() {
+                    return Object(c.d)("Chat during subscriber-only mode", "TicketDescription")
+                },
+                "Not affected by chat slow mode": function() {
+                    return Object(c.d)("Not affected by chat slow mode", "TicketDescription")
+                },
+                "Access to VODs": function() {
+                    return Object(c.d)("Access to VODs", "TicketDescription")
+                },
+                "Subscriber Badges:": function() {
+                    return Object(c.d)("Subscriber Badges:", "TicketDescription")
+                },
+                "Subscriber Emotes:": function() {
+                    return Object(c.d)("Subscriber Emotes:", "TicketDescription")
+                }
+            },
+            L = {
+                "Ad-Free*": function() {
+                    return Object(c.d)("Ad-Free*", "TicketDescription")
+                },
+                "Custom Emoticon Set": function() {
+                    return Object(c.d)("Custom Emoticon Set", "TicketDescription")
+                },
+                Badge: function() {
+                    return Object(c.d)("Badge", "TicketDescription")
+                },
+                "Extended Chat Colors": function() {
+                    return Object(c.d)("Extended Chat Colors", "TicketDescription")
+                },
+                "Increased Video Storage": function() {
+                    return Object(c.d)("Increased Video Storage", "TicketDescription")
+                },
+                "No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers.": function() {
+                    return Object(c.d)("No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers.", "TicketDescription")
+                },
+                "Express your emotions with an exclusive set of faces.": function() {
+                    return Object(c.d)("Express your emotions with an exclusive set of faces.", "TicketDescription")
+                },
+                "Show everyone how Turbo you are with a shiny new chat badge.": function() {
+                    return Object(c.d)("Show everyone how Turbo you are with a shiny new chat badge.", "TicketDescription")
+                },
+                "Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up.": function() {
+                    return Object(c.d)("Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up.", "TicketDescription")
+                },
+                "Save your past broadcasts on Twitch for 60 days.": function() {
+                    return Object(c.d)("Save your past broadcasts on Twitch for 60 days.", "TicketDescription")
+                },
+                Features: function() {
+                    return Object(c.d)("Features", "TicketDescription")
+                },
+                "This list doesn’t even include how much of a baller you’ll become after upgrading.": function() {
+                    return Object(c.d)("This list doesn’t even include how much of a baller you’ll become after upgrading.", "TicketDescription")
+                }
+            },
+            B = {
+                "One Time": function() {
+                    return Object(c.d)("One Time", "TicketDescription")
+                },
+                Year: function() {
+                    return Object(c.d)("Year", "TicketDescription")
+                },
+                Month: function() {
+                    return Object(c.d)("Month", "TicketDescription")
+                }
+            },
+            M = function(e, t) {
+                return Object(c.d)("{price} / {interval}", {
+                    price: s.createElement(f.Q, {
+                        type: f._46.Span,
+                        bold: !0
+                    }, e),
+                    interval: t
+                }, "TicketDescription")
+            },
+            H = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderPrice = function() {
+                        var e;
+                        switch (t.props.data.product.interval.unit) {
+                            case m.b.OneTime:
+                                e = B["One Time"]();
+                                break;
+                            case m.b.Year:
+                                e = B.Year();
+                                break;
+                            case m.b.Month:
+                            default:
+                                e = B.Month()
+                        }
+                        return s.createElement(f.Q, {
+                            type: f._46.H4
+                        }, M(t.props.data.product.price, e))
+                    }, t.renderSubBadges = function() {
+                        var e = t.props.data.product;
+                        if (!e || !e.owner) return null;
+                        var n = e.owner.broadcastBadges.filter(function(e) {
+                            return "subscriber" === e.setID
+                        }).sort(function(e, t) {
+                            return parseInt(e.version, 10) < parseInt(t.version, 10) ? -1 : 1
+                        });
+                        if (!n.length) return null;
+                        var i = n.map(function(e) {
+                            return s.createElement(f._8, {
+                                key: e.setID + "/" + e.version,
+                                margin: .5
+                            }, s.createElement(d.a, {
+                                badge: e
+                            }))
+                        });
+                        return s.createElement(s.Fragment, null, s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item"
+                        }, U["Subscriber Badges:"]()), s.createElement(f._8, {
+                            display: f.R.Flex,
+                            flexWrap: f.U.Wrap,
+                            justifyContent: f._7.Center
+                        }, i))
+                    }, t.renderSubEmotes = function() {
+                        if (!t.props.data.product || !t.props.data.product.owner) return null;
+                        var e = t.props.data.product.owner.subscriptionProducts.filter(function(e) {
+                            return (e.tier || "") <= (e.tier || "")
+                        }).map(function(e) {
+                            return e.emotes
+                        }).reduce(function(e, t) {
+                            return e.concat(t)
+                        }, []);
+                        return 0 === e.length ? null : s.createElement(s.Fragment, null, s.createElement(f.Q, {
+                            className: "ticket-description__description__line-item"
+                        }, e.length, " ", U["Subscriber Emotes:"]()), s.createElement(N.a, {
+                            emoteSet: {
+                                id: "",
+                                emotes: Object(w.b)(e)
+                            },
+                            onClickEmote: void 0,
+                            locked: !1
+                        }))
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.data.product,
+                        t = e && !e.owner && "turbo" === e.type;
+                    return e && e.owner && Object(u.a)(e.owner.id, this.props.sessionUser) ? s.createElement(P, {
+                        owner: e.owner,
+                        product: e
+                    }) : this.props.mobile && t ? s.createElement(E, {
+                        renderPrice: this.renderPrice
+                    }) : t ? s.createElement(S, {
+                        renderPrice: this.renderPrice
+                    }) : e && e.owner && this.props.mobile ? s.createElement(k, {
+                        owner: e.owner,
+                        product: e,
+                        renderPrice: this.renderPrice,
+                        renderSubBadges: this.renderSubBadges,
+                        renderSubEmotes: this.renderSubEmotes
+                    }) : e && e.owner ? s.createElement(g, {
+                        owner: e.owner,
+                        product: e,
+                        renderPrice: this.renderPrice,
+                        renderSubBadges: this.renderSubBadges,
+                        renderSubEmotes: this.renderSubEmotes
+                    }) : this.props.data.loading ? s.createElement(_, null) : s.createElement(y, null)
+                }, t
+            }(s.Component),
+            W = Object(o.compose)(Object(p.d)("TicketDescription"), Object(l.a)(j, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            productName: e.productName
+                        }
+                    }
+                }
+            }))(H);
+        var G = Object(i.b)(function(e) {
+            return {
+                sessionUser: Object(r.c)(e)
+            }
+        })(W);
+        n.d(t, "a", function() {
+            return G
+        }), n.d(t, "b", function() {
+            return U
+        }), n.d(t, "c", function() {
+            return L
+        }), n.d(t, !1, function() {
+            return B
+        }), n.d(t, !1, function() {
+            return M
+        }), n.d(t, !1, function() {
+            return W
+        })
+    },
     "94wQ": function(e, t) {
         var n = {
             kind: "Document",
@@ -2809,6 +3689,1564 @@ webpackJsonp([36], {
             }
         };
         e.exports = n
+    },
+    "969Z": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = n("6sO2"),
+            s = n("7vx8"),
+            o = n("9u8h"),
+            c = n("RH2O"),
+            l = n("Aj/L"),
+            u = n("TeXj"),
+            d = n("Odds"),
+            m = function() {
+                return r.createElement(d._8, null, r.createElement(d.Q, {
+                    type: d._46.H2,
+                    bold: !0
+                }, Object(a.d)("Get Your All-Access Pass", "EsportsTicketPurchaseInfo")), r.createElement(d.Q, null, Object(a.d)("Buying a Pass is fast, easy, and secure. Don't hesitate to contact Purchase Support if you need help", "EsportsTicketPurchaseInfo")))
+            },
+            p = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return this.props.channel && Object(u.a)(this.props.channel, this.props.sessionUser) ? r.createElement(m, null) : r.createElement(d.Q, {
+                        type: d._46.H2,
+                        bold: !0,
+                        "data-test-selector": "sub-info-selector"
+                    }, this.props.isGift ? Object(a.d)("Gift A Subscription", "PurchaseSubInfo") : Object(a.d)("Start Your Subscription", "PersonalSubPurchaseInfo"))
+                }, t
+            }(r.Component);
+        var f, g, h, v, b = Object(c.b)(function(e) {
+                return {
+                    sessionUser: Object(l.c)(e)
+                }
+            })(p),
+            y = n("ryON"),
+            k = n.n(y),
+            _ = n("hmTn"),
+            E = n.n(_),
+            S = n("W59S"),
+            N = n.n(S),
+            w = n("MQyO"),
+            C = n.n(w),
+            O = n("ekbR"),
+            x = n.n(O),
+            T = n("p2Aq"),
+            D = n.n(T),
+            R = n("SgWI"),
+            A = n.n(R),
+            I = n("YkGD"),
+            F = n.n(I),
+            P = n("vH/s");
+        ! function(e) {
+            e.Failed = "failed", e.Pending = "pending", e.Success = "success"
+        }(f || (f = {})),
+        function(e) {
+            e.Gifting = "gifting", e.Personal = "personal"
+        }(g || (g = {})),
+        function(e) {
+            e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlyPayWithAmazon = "recurly_pay_with_amazon", e.ZuoraCreditCard = "zuora_credit_card", e.Xsolla = "xsolla"
+        }(h || (h = {})),
+        function(e) {
+            e.VendorLoginClick = "vendor_login_click", e.CompletePurchaseClick = "complete_purchase_click", e.PaypalTokenError = "paypal_token_error", e.RadioButtonClick = "radio_button_click", e.TokenError = "token_error"
+        }(v || (v = {}));
+        var j = n("CSlQ"),
+            U = (n("aMOL"), function() {
+                function e(e) {}
+                e.prototype.bind = function(e) {}
+            }(), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        amazonScriptLoaded: null,
+                        walletLoaded: null,
+                        billingAgreementId: null,
+                        awaitingResponse: !1
+                    }, t.handleSubmit = function() {
+                        return i.__awaiter(t, void 0, void 0, function() {
+                            return i.__generator(this, function(e) {
+                                switch (e.label) {
+                                    case 0:
+                                        this.setState({
+                                            awaitingResponse: !0
+                                        }), e.label = 1;
+                                    case 1:
+                                        return e.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
+                                            payment_flow: h.RecurlyPayWithAmazon,
+                                            payment_provider: "recurly",
+                                            payment_info: {
+                                                token: this.state.billingAgreementId,
+                                                gateway: "amazon"
+                                            }
+                                        })];
+                                    case 2:
+                                        return e.sent(), this.forceUpdate(), [3, 4];
+                                    case 3:
+                                        return e.sent(), this.setState({
+                                            awaitingResponse: !1
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = this;
+                    window.onAmazonLoginReady = function() {
+                        window.amazon.Login.setClientId(e.props.clientID)
+                    }, window.onAmazonPaymentsReady = function() {
+                        e.props.latencyTracking.reportInteractive(), e.setState({
+                            amazonScriptLoaded: !0
+                        }), window.OffAmazonPayments.Button("recurly-amazon-pay__button", e.props.sellerID, {
+                            type: "PwA",
+                            color: "DarkGray",
+                            useAmazonAddressBook: !1,
+                            agreementType: "BillingAgreement",
+                            authorization: function() {
+                                window.amazon.Login.authorize({
+                                    scope: "profile payments:widget payments:autopay_consent",
+                                    popup: !0
+                                }, function(e) {
+                                    if (e.error) return "err"
+                                })
+                            },
+                            onSignIn: function(t) {
+                                e.setState({
+                                    walletLoaded: !0,
+                                    billingAgreementId: t.getAmazonBillingAgreementId()
+                                }), e.initWidget()
+                            }
+                        })
+                    };
+                    var t = document.querySelector("#pwa-script");
+                    t && document.body.removeChild(t);
+                    var n = document.createElement("script");
+                    n.type = "text/javascript", n.id = "pwa-script", n.src = "https://static-na.payments-amazon.com/OffAmazonPayments/us" + (this.props.isProduction ? "" : "/sandbox") + "/js/Widgets.js?sellerId=" + this.props.sellerID, n.async = !0, document.body.appendChild(n)
+                }, t.prototype.initWidget = function() {
+                    var e = {
+                        agreementType: "BillingAgreement",
+                        amazonBillingAgreementId: this.state.billingAgreementId,
+                        sellerId: this.props.sellerID,
+                        design: {
+                            designMode: "responsive"
+                        },
+                        onPaymentSelect: function() {
+                            return !0
+                        },
+                        onError: function() {
+                            return !1
+                        }
+                    };
+                    new window.OffAmazonPayments.Widgets.Wallet(e).bind("recurly-amazon-pay__wallet")
+                }, t.prototype.render = function() {
+                    return this.state.amazonScriptLoaded ? r.createElement(d._32, {
+                        background: d.n.Base,
+                        border: !0,
+                        className: "recurly-amazon-pay"
+                    }, r.createElement(d._8, {
+                        display: this.state.walletLoaded ? d.R.Hide : d.R.Flex,
+                        justifyContent: d._7.Center,
+                        margin: 5
+                    }, r.createElement("div", {
+                        id: "recurly-amazon-pay__button"
+                    })), r.createElement(d._8, {
+                        display: this.state.walletLoaded ? d.R.Flex : d.R.Hide,
+                        flexDirection: d.T.Column,
+                        alignItems: d.c.Center,
+                        margin: {
+                            top: 2
+                        }
+                    }, r.createElement("div", {
+                        id: "recurly-amazon-pay__wallet",
+                        className: "recurly-amazon-pay__wallet"
+                    }), r.createElement(d._8, {
+                        padding: {
+                            top: 1
+                        },
+                        display: d.R.Flex,
+                        justifyContent: d._7.Center
+                    }, r.createElement(d.v, {
+                        onClick: this.handleSubmit,
+                        state: this.state.awaitingResponse ? d.A.Loading : d.A.Default,
+                        disabled: this.state.awaitingResponse
+                    }, this.props.submitButtonCopy)))) : r.createElement(d._10, null)
+                }, t = i.__decorate([Object(j.d)("RecurlyAmazonPay")], t)
+            }(r.Component)),
+            L = n("NXs7"),
+            B = n("0nzt"),
+            M = n("l7ua"),
+            H = (n("pDuT"), {
+                light: "#000",
+                dark: "#fff"
+            }),
+            W = {
+                light: "#a49fad",
+                dark: "#898395"
+            },
+            G = function() {
+                return {
+                    cvv: !1,
+                    first_name: !1,
+                    last_name: !1,
+                    month: !1,
+                    number: !1,
+                    year: !1
+                }
+            },
+            V = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        firstName: "",
+                        lastName: "",
+                        recurlyReady: !1,
+                        awaitingResponse: !1,
+                        errorMessage: "",
+                        errorState: G()
+                    }, t.handleSubmit = function() {
+                        return i.__awaiter(t, void 0, void 0, function() {
+                            var e = this;
+                            return i.__generator(this, function(t) {
+                                return this.setState(function(e) {
+                                    return {
+                                        awaitingResponse: !0,
+                                        errorState: i.__assign({}, e.errorState)
+                                    }
+                                }), window.recurly.token(this.form, function(t, n) {
+                                    return i.__awaiter(e, void 0, void 0, function() {
+                                        return i.__generator(this, function(e) {
+                                            return t ? (this.handleValidationError(t), this.setState({
+                                                awaitingResponse: !1
+                                            })) : this.handleValidationSuccess(n), [2]
+                                        })
+                                    })
+                                }), [2]
+                            })
+                        })
+                    }, t.handleValidationSuccess = function(e) {
+                        return i.__awaiter(t, void 0, void 0, function() {
+                            return i.__generator(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        return t.trys.push([0, 2, , 3]), [4, this.props.onSuccess({
+                                            payment_flow: h.RecurlyCreditCard,
+                                            payment_provider: "recurly",
+                                            payment_info: {
+                                                token: e.id,
+                                                gateway: "cc"
+                                            }
+                                        })];
+                                    case 1:
+                                        return t.sent(), [3, 3];
+                                    case 2:
+                                        return t.sent(), this.setState(function(e) {
+                                            return {
+                                                awaitingResponse: !1,
+                                                errorState: i.__assign({}, e.errorState)
+                                            }
+                                        }), [3, 3];
+                                    case 3:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.handleValidationError = function(e) {
+                        if (e.code === M.a.Validation || e.code === M.a.InvalidParameter) {
+                            var n = G();
+                            e.fields && e.fields.forEach(function(e) {
+                                n[e] = !0
+                            }), t.setState({
+                                errorMessage: Object(a.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"),
+                                errorState: n
+                            })
+                        } else e.code && t.setState({
+                            errorMessage: Object(a.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"),
+                            errorState: G()
+                        })
+                    }, t.handleFirstName = function(e) {
+                        t.setState({
+                            firstName: e.currentTarget.value
+                        })
+                    }, t.handleLastName = function(e) {
+                        t.setState({
+                            lastName: e.currentTarget.value
+                        })
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentWillMount = function() {
+                    var e = this;
+                    this.recurlyPollId = setInterval(function() {
+                        window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.recurlyPollId), e.setupConfigs(), e.pollForHostedField())
+                    }, 500)
+                }, t.prototype.componentWillUnmount = function() {
+                    clearInterval(this.recurlyPollId), clearInterval(this.hostedFieldPollId)
+                }, t.prototype.componentDidUpdate = function(e) {
+                    window.recurly && this.props.darkModeEnabled !== e.darkModeEnabled && this.setupConfigs()
+                }, t.prototype.render = function() {
+                    var e = this;
+                    return r.createElement(d._8, {
+                        className: "recurly-credit-card",
+                        fullWidth: !0
+                    }, r.createElement(d._8, {
+                        display: this.state.recurlyReady ? d.R.Hide : d.R.Block
+                    }, r.createElement(d._10, {
+                        fillContent: !0
+                    })), r.createElement(d._8, {
+                        display: this.state.recurlyReady ? d.R.Block : d.R.Hide
+                    }, r.createElement("form", {
+                        className: "recurly-form",
+                        ref: function(t) {
+                            return e.form = t
+                        }
+                    }, r.createElement(d._8, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, r.createElement(d.W, {
+                        id: "recurly-name",
+                        label: Object(a.d)("Name", "RecurlyCreditCard")
+                    }, r.createElement("div", {
+                        id: "recurly-name"
+                    }, r.createElement(d.Y, {
+                        gutterSize: d.Z.Medium
+                    }, r.createElement(d.L, {
+                        cols: 6
+                    }, r.createElement(d._4, {
+                        id: "recurly-first-name",
+                        type: d._5.Text,
+                        placeholder: Object(a.d)("First Name", "RecurlyCreditCard"),
+                        value: this.state.firstName,
+                        onChange: this.handleFirstName,
+                        error: this.state.errorState.first_name
+                    }), r.createElement("input", {
+                        type: "hidden",
+                        "data-recurly": "first_name",
+                        value: this.state.firstName
+                    })), r.createElement(d.L, {
+                        cols: 6
+                    }, r.createElement(d._4, {
+                        id: "recurly-last-name",
+                        type: d._5.Text,
+                        placeholder: Object(a.d)("Last Name", "RecurlyCreditCard"),
+                        value: this.state.lastName,
+                        onChange: this.handleLastName,
+                        error: this.state.errorState.last_name
+                    }), r.createElement("input", {
+                        type: "hidden",
+                        "data-recurly": "last_name",
+                        value: this.state.lastName
+                    })))))), r.createElement(d._8, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, r.createElement(d.W, {
+                        id: "recurly-credit-card",
+                        label: Object(a.d)("Credit Card", "RecurlyCreditCard")
+                    }, r.createElement("div", {
+                        id: "recurly-credit-card"
+                    }, r.createElement(d.Y, {
+                        gutterSize: d.Z.Medium
+                    }, r.createElement(d.L, {
+                        cols: 8
+                    }, r.createElement("div", {
+                        id: "recurly-number",
+                        "data-recurly": "number",
+                        className: this.state.errorState.number ? "recurly-error" : ""
+                    })), r.createElement(d.L, {
+                        cols: 4
+                    }, r.createElement("div", {
+                        id: "recurly-cvv",
+                        "data-recurly": "cvv",
+                        className: this.state.errorState.cvv ? "recurly-error" : ""
+                    })))))), r.createElement(d._8, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, r.createElement(d.W, {
+                        id: "recurly-credit-card",
+                        label: Object(a.d)("Expiration Date", "RecurlyCreditCard")
+                    }, r.createElement("div", {
+                        id: "recurly-credit-card"
+                    }, r.createElement(d.Y, {
+                        gutterSize: d.Z.Medium
+                    }, r.createElement(d.L, {
+                        cols: 6
+                    }, r.createElement("div", {
+                        id: "recurly-month",
+                        "data-recurly": "month",
+                        className: this.state.errorState.month ? "recurly-error" : ""
+                    })), r.createElement(d.L, {
+                        cols: 6
+                    }, r.createElement("div", {
+                        id: "recurly-year",
+                        "data-recurly": "year",
+                        className: this.state.errorState.year ? "recurly-error" : ""
+                    })))))), r.createElement("input", {
+                        type: "hidden",
+                        name: "recurly-token",
+                        "data-recurly": "token"
+                    }), r.createElement(d._8, {
+                        margin: {
+                            top: 1
+                        },
+                        display: d.R.Flex,
+                        justifyContent: d._7.Center,
+                        breakpointLarge: {
+                            justifyContent: d._7.Start
+                        }
+                    }, r.createElement(d.v, {
+                        onClick: this.handleSubmit,
+                        state: this.state.awaitingResponse ? d.A.Loading : d.A.Default,
+                        disabled: this.state.awaitingResponse
+                    }, this.props.submitButtonCopy)))))
+                }, t.prototype.pollForHostedField = function() {
+                    var e = this;
+                    this.hostedFieldPollId = setInterval(function() {
+                        document.querySelector(".recurly-hosted-field > iframe") && (e.setState({
+                            recurlyReady: !0
+                        }), clearInterval(e.hostedFieldPollId))
+                    }, 500)
+                }, t.prototype.setupConfigs = function() {
+                    window.recurly.configure({
+                        publicKey: this.props.publicKey,
+                        fraud: {
+                            kount: {
+                                dataCollector: !0
+                            }
+                        },
+                        required: ["cvv"],
+                        fields: {
+                            all: {
+                                style: {
+                                    height: "auto",
+                                    fontSize: "12px",
+                                    fontColor: H.light,
+                                    placeholder: {
+                                        color: W.light
+                                    }
+                                }
+                            },
+                            number: {
+                                selector: "#recurly-number",
+                                style: {
+                                    placeholder: {
+                                        content: Object(a.d)("Card Number", "RecurlyCreditCard")
+                                    }
+                                }
+                            },
+                            month: {
+                                selector: "#recurly-month",
+                                style: {
+                                    placeholder: {
+                                        content: Object(a.d)("Month", "RecurlyCreditCard")
+                                    }
+                                }
+                            },
+                            year: {
+                                selector: "#recurly-year",
+                                style: {
+                                    placeholder: {
+                                        content: Object(a.d)("Year", "RecurlyCreditCard")
+                                    }
+                                }
+                            },
+                            cvv: {
+                                selector: "#recurly-cvv",
+                                style: {
+                                    placeholder: {
+                                        content: Object(a.d)("CVV", "RecurlyCreditCard")
+                                    }
+                                }
+                            }
+                        }
+                    })
+                }, t = i.__decorate([Object(j.d)("RecurlyCreditCard")], t)
+            }(r.Component);
+        var z, q = Object(c.b)(function(e) {
+                return {
+                    darkModeEnabled: Object(B.a)(e) === L.a.Dark
+                }
+            })(V),
+            Q = (n("t2Wb"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        paypalConfigured: !1,
+                        awaitingResponse: !1,
+                        hasError: !1
+                    }, t.handleValidationSuccess = function(e) {
+                        return i.__awaiter(t, void 0, void 0, function() {
+                            return i.__generator(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        return t.trys.push([0, 2, , 3]), [4, this.props.onSuccess({
+                                            payment_flow: h.RecurlyPaypal,
+                                            payment_provider: "recurly",
+                                            payment_info: {
+                                                token: e.id,
+                                                gateway: "paypal"
+                                            }
+                                        })];
+                                    case 1:
+                                        return t.sent(), [3, 3];
+                                    case 2:
+                                        return t.sent(), this.setState({
+                                            awaitingResponse: !1
+                                        }), [3, 3];
+                                    case 3:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.handleValidationError = function() {
+                        t.setState({
+                            hasError: !0
+                        })
+                    }, t.handleClick = function() {
+                        t.setState({
+                            awaitingResponse: !0,
+                            hasError: !1
+                        }), t.paypalInstance.start()
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = this;
+                    this.pollForRecurly = setInterval(function() {
+                        window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.pollForRecurly), e.setupConfigs(), e.setState({
+                            paypalConfigured: !0
+                        }))
+                    }, 500)
+                }, t.prototype.componentWillUnmount = function() {
+                    clearInterval(this.pollForRecurly)
+                }, t.prototype.render = function() {
+                    return this.state.paypalConfigured ? r.createElement(d._32, {
+                        className: "recurly-paypal",
+                        background: d.n.Base,
+                        border: !0,
+                        display: d.R.Flex,
+                        justifyContent: d._7.Center
+                    }, r.createElement(d._8, {
+                        margin: {
+                            top: 5
+                        }
+                    }, r.createElement(d.v, {
+                        "data-a-target": "recurly-paypal__button",
+                        onClick: this.handleClick,
+                        state: this.state.awaitingResponse ? d.A.Loading : d.A.Default,
+                        disabled: this.state.awaitingResponse
+                    }, "Checkout With PayPal"))) : r.createElement(d._8, {
+                        margin: {
+                            y: 2
+                        }
+                    }, r.createElement(d._10, null))
+                }, t.prototype.setupConfigs = function() {
+                    var e = this;
+                    window.recurly.configure(this.props.publicKey);
+                    var t = window.recurly.PayPal({
+                        braintree: {
+                            clientAuthorization: this.props.braintreeClientAuthorization
+                        }
+                    });
+                    t.on("token", function(t) {
+                        e.handleValidationSuccess(t)
+                    }), t.on("error", function() {
+                        e.handleValidationError(), e.setState({
+                            awaitingResponse: !1
+                        })
+                    }), t.on("cancel", function() {
+                        e.setState({
+                            awaitingResponse: !1
+                        })
+                    }), this.paypalInstance = t
+                }, t = i.__decorate([Object(j.d)("RecurlyPaypal")], t)
+            }(r.Component)),
+            Y = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        xsollaLoaded: !1
+                    }, t.handleXsollaEvent = function(e) {
+                        if ((!e.origin || e.origin.includes("xsolla")) && e.data) try {
+                            var n = JSON.parse(e.data);
+                            if (n.command && "status" === n.command)
+                                if (n.data && n.data.paymentInfo) switch (n.data.paymentInfo.status) {
+                                    case "done":
+                                        t.props.trackPaymentFormInteraction({
+                                            paymentFlow: h.Xsolla,
+                                            action: v.CompletePurchaseClick,
+                                            actionDetail: f.Pending
+                                        }), t.props.trackPaymentFormInteraction({
+                                            paymentFlow: h.Xsolla,
+                                            action: v.CompletePurchaseClick,
+                                            actionDetail: f.Success
+                                        });
+                                        break;
+                                    case "troubled":
+                                        t.props.trackPaymentFormInteraction({
+                                            paymentFlow: h.Xsolla,
+                                            action: v.CompletePurchaseClick,
+                                            actionDetail: f.Pending
+                                        }), t.props.trackPaymentFormInteraction({
+                                            paymentFlow: h.Xsolla,
+                                            action: v.CompletePurchaseClick,
+                                            actionDetail: f.Failed
+                                        })
+                                }
+                        } catch (e) {}
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = this.iframe,
+                        t = this;
+                    e && (e.addEventListener("load", function() {
+                        t.props.latencyTracking.reportInteractive(), t.setState({
+                            xsollaLoaded: !0
+                        })
+                    }), window.addEventListener("message", t.handleXsollaEvent))
+                }, t.prototype.render = function() {
+                    var e = this;
+                    return r.createElement(d._8, {
+                        fullWidth: !0
+                    }, !this.state.xsollaLoaded && r.createElement(d._10, {
+                        fillContent: !0
+                    }), r.createElement(d._8, {
+                        fullWidth: !0,
+                        display: this.state.xsollaLoaded ? d.R.Inline : d.R.Hide
+                    }, r.createElement("iframe", {
+                        ref: function(t) {
+                            return e.iframe = t
+                        },
+                        id: "xsolla",
+                        src: this.props.iframeURL,
+                        width: "100%",
+                        height: "650px"
+                    })))
+                }, t = i.__decorate([Object(j.d)("XsollaMoreMethods")], t)
+            }(r.Component),
+            K = n("HM6l"),
+            Z = n("5k8C");
+        n("7gLH");
+        ! function(e) {
+            e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
+        }(z || (z = {}));
+        var $ = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.state = {
+                    zuoraConfigured: !1,
+                    awaitingResponse: !1,
+                    errorMessage: "",
+                    nullValueErrors: [],
+                    sessionId: Object(K.b)()
+                }, t.handleSubmit = function() {
+                    t.setState({
+                        awaitingResponse: !0,
+                        errorMessage: "",
+                        nullValueErrors: []
+                    }), window.Z.submit()
+                }, t.renderErrorMessage = function() {
+                    if (t.state.nullValueErrors.length) {
+                        var e = t.state.nullValueErrors.map(function(e, t) {
+                            return r.createElement(d._8, {
+                                key: t,
+                                margin: {
+                                    left: 2
+                                }
+                            }, r.createElement(d.Q, {
+                                color: d.K.Error
+                            }, "• ", e))
+                        });
+                        return r.createElement("div", null, r.createElement(d._8, {
+                            margin: {
+                                top: 1,
+                                left: 1,
+                                bottom: .5
+                            }
+                        }, r.createElement(d.Q, {
+                            color: d.K.Error
+                        }, Object(a.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "ZuoraCreditCard"))), e)
+                    }
+                    if (t.state.errorMessage) return r.createElement(d._8, {
+                        margin: {
+                            top: 1,
+                            left: 1
+                        }
+                    }, r.createElement(d.Q, {
+                        color: d.K.Error
+                    }, t.state.errorMessage))
+                }, t.successCallback = function(e) {
+                    return i.__awaiter(t, void 0, void 0, function() {
+                        return i.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    if (!e.success) return [2];
+                                    t.label = 1;
+                                case 1:
+                                    return t.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
+                                        payment_flow: h.ZuoraCreditCard,
+                                        payment_provider: "zuora",
+                                        payment_info: {
+                                            token: e.refId,
+                                            gateway: "cc"
+                                        }
+                                    })];
+                                case 2:
+                                    return t.sent(), [3, 4];
+                                case 3:
+                                    return t.sent(), this.setState({
+                                        awaitingResponse: !1
+                                    }), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, t.errorCallback = function(e, n, i) {
+                    if (t.setState({
+                            awaitingResponse: !1
+                        }), "unknown" === n) return t.parseGatewayErrorMessage(i);
+                    window.Z.sendErrorMessageToHpm(e, i)
+                }, t.parseGatewayErrorMessage = function(e) {
+                    return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? t.setState({
+                        errorMessage: Object(a.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCreditCard")
+                    }) : t.setState({
+                        errorMessage: Object(a.d)("We couldn't process your payment. Please try again.", "ZuoraCreditCard")
+                    })
+                }, t.parseNullValueErrorMessage = function(e) {
+                    var n = e.replace("[HostedPageFieldValidationError]&nbsp; ", "").replace(/\s/g, "").split(":NullValue,"),
+                        i = {
+                            creditCardHolderName: Object(a.d)("Name on Card", "ZuoraCreditCard"),
+                            creditCardAddress1: Object(a.d)("Billing Address", "ZuoraCreditCard"),
+                            creditCardCity: Object(a.d)("City", "ZuoraCreditCard"),
+                            creditCardPostalCode: Object(a.d)("Zip Code", "ZuoraCreditCard")
+                        },
+                        r = n.map(function(e) {
+                            var t = i[e];
+                            return t || ""
+                        }).filter(function(e) {
+                            return "" !== e
+                        });
+                    t.setState({
+                        nullValueErrors: r
+                    })
+                }, t
+            }
+            return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                var e = this;
+                if (document.querySelector("#zuora-script")) this.initZuoraIFrame();
+                else {
+                    var t = document.createElement("script");
+                    t.src = "https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js", t.async = !0, t.id = "zuora-script", document.body.appendChild(t), t.onload = function() {
+                        e.props.latencyTracking.reportInteractive(), e.initZuoraIFrame()
+                    }
+                }
+            }, t.prototype.render = function() {
+                return r.createElement("div", null, !this.state.zuoraConfigured && r.createElement(d._8, {
+                    padding: {
+                        y: 5
+                    }
+                }, r.createElement(d._10, {
+                    fillContent: !0
+                })), r.createElement(d._8, {
+                    display: this.state.zuoraConfigured ? d.R.Block : d.R.Hide,
+                    "data-test-selector": z.ZUORA_PARENT_LAYOUT
+                }, this.renderErrorMessage(), r.createElement("div", {
+                    id: "zuora_payment",
+                    className: this.state.awaitingResponse ? "zuora-disabled" : ""
+                }), r.createElement(d._8, {
+                    margin: {
+                        top: 2,
+                        bottom: 1
+                    },
+                    display: d.R.Flex,
+                    justifyContent: d._7.Center,
+                    breakpointLarge: {
+                        justifyContent: d._7.Start
+                    }
+                }, r.createElement(d.v, {
+                    onClick: this.handleSubmit,
+                    state: this.state.awaitingResponse ? d.A.Loading : d.A.Default,
+                    disabled: this.state.awaitingResponse,
+                    "data-test-selector": z.UPDATE_PAYMENT_BUTTON
+                }, this.props.submitButtonCopy)), r.createElement(Z.a, {
+                    isProduction: this.props.isProductionConfig,
+                    sessionId: this.state.sessionId
+                })))
+            }, t.prototype.initZuoraIFrame = function() {
+                var e = this,
+                    t = {
+                        id: this.props.hostedPageID,
+                        url: this.props.hostedPageURL,
+                        style: "inline",
+                        submitEnabled: "true",
+                        field_accountId: this.props.externalAccountID,
+                        tenantId: this.props.tenantID,
+                        token: this.props.token,
+                        key: this.props.publicKey,
+                        signature: this.props.signature,
+                        locale: this.formattedLocale
+                    };
+                window.Z.renderWithErrorHandler(t, {
+                    creditCardCountry: "USA"
+                }, this.successCallback, this.errorCallback);
+                var n = document.getElementById("z_hppm_iframe");
+                n && n.addEventListener("load", function() {
+                    e.setState({
+                        zuoraConfigured: !0
+                    })
+                })
+            }, Object.defineProperty(t.prototype, "formattedLocale", {
+                get: function() {
+                    var e = this.props.languageCode || "en";
+                    if (e.includes("-")) {
+                        var t = e.split("-");
+                        e = t[0] + "_" + t[1].toUpperCase()
+                    }
+                    return e
+                },
+                enumerable: !0,
+                configurable: !0
+            }), t = i.__decorate([Object(j.d)("ZuoraCreditCard")], t)
+        }(r.Component);
+        var X = Object(c.b)(function(e) {
+                return {
+                    languageCode: e.session.languageCode
+                }
+            })($),
+            J = {
+                CreditCard: function() {
+                    return Object(a.d)("Credit Card", "TicketDescription")
+                },
+                Paypal: function() {
+                    return Object(a.d)("Paypal", "TicketDescription")
+                },
+                AmazonPay: function() {
+                    return Object(a.d)("Amazon Pay", "TicketDescription")
+                },
+                MoreMethods: function() {
+                    return Object(a.d)("More Methods", "TicketDescription")
+                }
+            },
+            ee = function(e) {
+                function t() {
+                    var t, n = null !== e && e.apply(this, arguments) || this;
+                    return n.state = {
+                        selectedProvider: h.ZuoraCreditCard,
+                        subsCheckoutVariantAssignment: "zuora",
+                        enabledProviders: (t = {}, t[h.ZuoraCreditCard] = !1, t[h.RecurlyCreditCard] = !1, t[h.RecurlyPaypal] = !1, t[h.RecurlyPayWithAmazon] = !1, t[h.Xsolla] = !1, t)
+                    }, n.submitButtonCopy = Object(a.d)("Complete Purchase", "PaymentMethods"), n.paymentProviders = [{
+                        name: h.ZuoraCreditCard,
+                        button: {
+                            label: J.CreditCard(),
+                            src: N.a,
+                            alt: J.CreditCard(),
+                            srcSet: {
+                                "1x": N.a,
+                                "2x": C.a
+                            }
+                        },
+                        component: r.createElement(X, i.__assign({
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess,
+                            isProductionConfig: n.props.configs.recurly.payWithAmazonConfigs.isProduction
+                        }, n.props.configs.zuora))
+                    }, {
+                        name: h.RecurlyCreditCard,
+                        button: {
+                            label: J.CreditCard(),
+                            src: N.a,
+                            alt: J.CreditCard(),
+                            srcSet: {
+                                "1x": N.a,
+                                "2x": C.a
+                            }
+                        },
+                        component: r.createElement(q, {
+                            publicKey: n.props.configs.recurly.publicKey,
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess
+                        })
+                    }, {
+                        name: h.RecurlyPaypal,
+                        button: {
+                            label: J.Paypal(),
+                            src: A.a,
+                            alt: J.Paypal(),
+                            srcSet: {
+                                "1x": A.a,
+                                "2x": F.a
+                            }
+                        },
+                        component: r.createElement(Q, {
+                            publicKey: n.props.configs.recurly.publicKey,
+                            braintreeClientAuthorization: n.props.configs.recurly.braintreeClientAuthorization,
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess
+                        })
+                    }, {
+                        name: h.RecurlyPayWithAmazon,
+                        button: {
+                            label: J.AmazonPay(),
+                            src: k.a,
+                            alt: J.AmazonPay(),
+                            srcSet: {
+                                "1x": k.a,
+                                "2x": E.a
+                            }
+                        },
+                        component: r.createElement(U, i.__assign({
+                            submitButtonCopy: n.submitButtonCopy,
+                            onSuccess: n.props.onSuccess
+                        }, n.props.configs.recurly.payWithAmazonConfigs))
+                    }, {
+                        name: h.Xsolla,
+                        button: {
+                            label: J.MoreMethods(),
+                            src: x.a,
+                            alt: J.MoreMethods(),
+                            srcSet: {
+                                "1x": x.a,
+                                "2x": D.a
+                            }
+                        },
+                        component: r.createElement(Y, i.__assign({
+                            trackPaymentFormInteraction: n.props.trackPaymentFormInteraction
+                        }, n.props.configs.xsolla))
+                    }], n.renderSelector = function(e) {
+                        return n.state.enabledProviders[e.name] ? r.createElement(d.L, {
+                            key: e.name,
+                            cols: {
+                                default: 6,
+                                sm: 3
+                            }
+                        }, r.createElement(d._8, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, r.createElement(d._0, {
+                            label: e.button.label,
+                            type: d._1.Radio,
+                            src: e.button.src,
+                            alt: e.button.alt,
+                            srcSet: e.button.srcSet,
+                            value: e.name,
+                            onChange: n.setProviderFactory(e.name),
+                            checked: n.state.selectedProvider === e.name
+                        }))) : r.createElement(r.Fragment, {
+                            key: e.name
+                        })
+                    }, n.renderProvider = function(e) {
+                        return n.state.enabledProviders[e.name] ? r.createElement(d._8, {
+                            key: e.name,
+                            display: n.state.selectedProvider === e.name ? d.R.Inline : d.R.Hide
+                        }, e.component) : r.createElement(r.Fragment, {
+                            key: e.name
+                        })
+                    }, n.setProviderFactory = function(e) {
+                        return function() {
+                            n.props.trackPaymentFormInteraction({
+                                paymentFlow: e,
+                                action: v.RadioButtonClick,
+                                actionDetail: e
+                            }), n.setState({
+                                selectedProvider: e
+                            })
+                        }
+                    }, n
+                }
+                return i.__extends(t, e), t.prototype.componentWillMount = function() {
+                    var e = a.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_VARIANT") || this.state.subsCheckoutVariantAssignment;
+                    "owlallaccess2018" === this.props.productShortName && (e = "zuora");
+                    var t = ((n = {})[h.ZuoraCreditCard] = "zuora" === e, n[h.RecurlyCreditCard] = "recurly" === e, n[h.RecurlyPaypal] = !("owlallaccess2018" === this.props.productShortName), n[h.RecurlyPayWithAmazon] = !("owlallaccess2018" === this.props.productShortName), n[h.Xsolla] = !0, n);
+                    if (this.setState({
+                            selectedProvider: "recurly" === e ? h.RecurlyCreditCard : h.ZuoraCreditCard,
+                            subsCheckoutVariantAssignment: e,
+                            enabledProviders: t
+                        }), !document.querySelector("#recurly-script")) {
+                        var n, i = document.createElement("script");
+                        i.src = "https://js.recurly.com/v4/recurly.js", i.async = !0, i.id = "recurly-script", document.body.appendChild(i)
+                    }
+                }, t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    if ("US" !== this.props.countryCode) {
+                        this.state.selectedProvider !== h.Xsolla && this.setState({
+                            selectedProvider: h.Xsolla
+                        });
+                        var e = this.paymentProviders.find(function(e) {
+                            return e.name === h.Xsolla
+                        });
+                        return e && this.renderProvider(e)
+                    }
+                    return r.createElement(d._8, null, r.createElement(d._8, {
+                        margin: {
+                            bottom: 1
+                        },
+                        textAlign: d._42.Center,
+                        breakpointLarge: {
+                            textAlign: d._42.Left
+                        }
+                    }, r.createElement(d.Q, {
+                        type: d._46.H4,
+                        bold: !0
+                    }, Object(a.d)("Choose Your Payment Method", "PaymentMethods"))), r.createElement(d.Y, {
+                        gutterSize: d.Z.Small
+                    }, this.paymentProviders.map(this.renderSelector)), r.createElement(d._8, null, this.paymentProviders.map(this.renderProvider)))
+                }, t = i.__decorate([Object(j.d)("PaymentMethods")], t)
+            }(r.Component),
+            te = n("8m9s"),
+            ne = n("Heyg"),
+            ie = function(e) {
+                var t;
+                return t = e.canGift ? r.createElement(d.Q, null, Object(a.d)("You are buying a single month {price} Gift Subscription for {recipientName}.", {
+                    price: e.price,
+                    recipientName: r.createElement(d.Q, {
+                        type: d._46.Span,
+                        bold: !0
+                    }, e.recipientDisplayName || "")
+                }, "PurchaseSubInfo")) : r.createElement(d.Q, {
+                    color: d.K.Error
+                }, Object(a.d)("Sorry, a Gift Subscription to this channel is not available for {recipientName}", {
+                    recipientName: r.createElement(d.Q, {
+                        bold: !0
+                    }, e.recipientDisplayName || "")
+                }, "PurchaseSubInfo")), r.createElement(d._32, {
+                    background: d.n.Base,
+                    borderMarked: !0,
+                    padding: 1,
+                    margin: {
+                        y: 1
+                    }
+                }, t)
+            },
+            re = n("CIox"),
+            ae = (n("pOYM"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.goBackToChannel = function() {
+                        (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(d._8, {
+                        className: "gift-sub-receipt__container",
+                        padding: {
+                            y: 2
+                        },
+                        margin: {
+                            x: 2
+                        }
+                    }, r.createElement(d._8, null, r.createElement(d.Q, {
+                        type: d._46.H2,
+                        bold: !0
+                    }, Object(a.d)("Purchase Successful", "GiftSubReceipt"))), r.createElement(d._8, {
+                        padding: {
+                            y: 3
+                        }
+                    }, r.createElement(d.Q, null, Object(a.d)("You have purchased a {price} Gift Subscription for <x:strong>{recipientDisplayName}</x:strong>", {
+                        price: Object(a.e)(this.props.invoicePrice / 100, {
+                            style: "currency",
+                            currency: this.props.invoiceCurrency
+                        }),
+                        recipientDisplayName: this.props.recipientDisplayName || "",
+                        "x:strong": function(e) {
+                            return r.createElement(d.Q, {
+                                key: "recipient-display-name",
+                                type: d._46.Span,
+                                bold: !0
+                            }, e)
+                        }
+                    }, "GiftSubReceipt"))), r.createElement(d._32, {
+                        borderTop: !0,
+                        borderBottom: !0,
+                        padding: {
+                            y: 3
+                        }
+                    }, r.createElement(d._8, {
+                        className: "gift-sub-receipt__label",
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, {
+                        bold: !0
+                    }, Object(a.d)("Gift Status", "GiftSubReceipt"))), r.createElement(d._8, {
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, null, Object(a.d)("Active", "GiftSubReceipt")))), r.createElement(d._32, {
+                        borderBottom: !0,
+                        padding: {
+                            y: 3
+                        }
+                    }, r.createElement(d._8, {
+                        className: "gift-sub-receipt__label",
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, {
+                        bold: !0
+                    }, Object(a.d)("Your Invoice Total", "GiftSubReceipt"))), r.createElement(d._8, {
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, null, Object(a.e)(this.props.invoicePrice / 100, {
+                        style: "currency",
+                        currency: this.props.invoiceCurrency
+                    })))), r.createElement(d._8, {
+                        margin: {
+                            y: 3
+                        }
+                    }, r.createElement(d.v, {
+                        onClick: this.goBackToChannel
+                    }, Object(a.d)("Go back to {displayName}", {
+                        displayName: this.props.productOwnerDisplayName
+                    }, "GiftSubReceipt"))))
+                }, t
+            }(r.Component)),
+            se = Object(re.f)(ae),
+            oe = n("j6Ui"),
+            ce = function(e) {
+                return r.createElement(d._32, {
+                    background: d.n.Base,
+                    borderMarked: !0,
+                    padding: 1,
+                    margin: {
+                        y: 1
+                    }
+                }, r.createElement(d._8, {
+                    margin: {
+                        bottom: .5
+                    }
+                }, r.createElement(d.Q, null, Object(a.d)("You are currently subscribed for free with Twitch Prime. If you choose to upgrade to the {newPrice} subscription, you will be immediately billed for {newPrice} and your new subscription will auto-renew every month.", {
+                    newPrice: Object(a.e)(e.newPrice / 100, {
+                        style: "currency",
+                        currency: e.newCurrency
+                    })
+                }, "UpgradePrimeWarning"))), r.createElement(d._8, {
+                    margin: {
+                        bottom: .5
+                    }
+                }, r.createElement(d.Q, null, Object(a.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30-days after you last used your free subscription.", "UpgradePrimeWarning"))), r.createElement(d.Q, null, Object(a.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
+            },
+            le = function(e) {
+                return r.createElement(d._32, {
+                    background: d.n.Base,
+                    borderMarked: !0,
+                    padding: 1,
+                    margin: {
+                        y: 1
+                    }
+                }, r.createElement(d._8, {
+                    margin: {
+                        bottom: .5
+                    }
+                }, r.createElement(d.Q, null, Object(a.d)("You are currently subscribed to the {originalPrice} subscription plan. If you choose to upgrade to the {newPrice} subscription plan, you will be immediately billed for {newPrice} and your currently active subscription plan for {originalPrice} will not renew any further.", {
+                    originalPrice: Object(a.e)(e.originalPrice / 100, {
+                        style: "currency",
+                        currency: e.originalCurrency
+                    }),
+                    newPrice: Object(a.e)(e.newPrice / 100, {
+                        style: "currency",
+                        currency: e.newCurrency
+                    })
+                }, "UpgradeTierWarning"))), r.createElement(d._8, {
+                    margin: {
+                        bottom: .5
+                    }
+                }, r.createElement(d.Q, null, Object(a.d)("Please note that pro-rated refunds cannot be offered for the remaining time on your {originalPrice} subscription plan", {
+                    originalPrice: Object(a.e)(e.originalPrice / 100, {
+                        style: "currency",
+                        currency: e.originalCurrency
+                    })
+                }, "UpgradeTierWarning"))), r.createElement(d.Q, null, Object(a.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
+            },
+            ue = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderOneMonthFree = function() {
+                        var e = new Date;
+                        null !== t.props.endsAt && (e = Object(oe.c)(t.props.endsAt));
+                        var n = new Date(e);
+                        return n.setMonth(e.getMonth() + 1), r.createElement(d._32, {
+                            background: d.n.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, r.createElement(d.Q, null, Object(a.d)("Your next month is on us. You will be charged when your free month ends on <x:strong>{date}</x:strong>.", {
+                            date: Object(a.c)(n, "short"),
+                            "x:strong": function(e) {
+                                return r.createElement(d.Q, {
+                                    type: d._46.Span,
+                                    bold: !0
+                                }, e)
+                            }
+                        }, "PersonalSubPurchaseInfo")))
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(d._8, null, this.props.isOneMonthFreeEligible && this.renderOneMonthFree(), this.tierUpgrade && r.createElement(le, {
+                        originalPrice: this.originalPrice,
+                        originalCurrency: "USD",
+                        newPrice: this.newPrice,
+                        newCurrency: "USD"
+                    }), this.primeUpgrade && r.createElement(ce, {
+                        newPrice: this.newPrice,
+                        newCurrency: "USD"
+                    }), this.props.hasGift && this.props.endsAt && r.createElement(d._32, {
+                        background: d.n.Base,
+                        borderMarked: !0,
+                        padding: 1,
+                        margin: {
+                            y: 1
+                        }
+                    }, r.createElement(d.Q, null, Object(a.d)("You will be charged when your Gift Subscription ends on <x:strong>{date}</x:strong>.", {
+                        date: Object(a.c)(Object(oe.c)(this.props.endsAt), "short"),
+                        "x:strong": function(e) {
+                            return r.createElement(d.Q, {
+                                type: d._46.Span,
+                                bold: !0
+                            }, e)
+                        }
+                    }, "PersonalSubPurchaseInfo"))))
+                }, Object.defineProperty(t.prototype, "tierUpgrade", {
+                    get: function() {
+                        return !(!this.props.purchase || this.props.purchase.details && (!this.props.purchase.details || "inactive" !== this.props.purchase.details.state) || !this.props.purchase.compatiblePurchases) && !!this.props.purchase.compatiblePurchases.find(function(e) {
+                            return "prime" !== e.paymentProvider
+                        })
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "primeUpgrade", {
+                    get: function() {
+                        return !(!this.props.purchase || this.props.purchase.details && (!this.props.purchase.details || "inactive" !== this.props.purchase.details.state) || !this.props.purchase.compatiblePurchases) && !!this.props.purchase.compatiblePurchases.find(function(e) {
+                            return "prime" === e.paymentProvider
+                        })
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "originalPrice", {
+                    get: function() {
+                        return this.props.purchase.compatiblePurchases ? this.props.purchase.compatiblePurchases[0].price : 0
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "newPrice", {
+                    get: function() {
+                        return this.props.price && this.props.price.includes("$") ? 100 * +this.props.price.replace("$", "") : 0
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t
+            }(r.Component),
+            de = (n("McJK"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.goBackToChannel = function() {
+                        (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e;
+                    return e = this.props.giftSubEndsAt ? Object(a.d)("Your paid subscription will begin on <x:strong>{endsAt}</x:strong> after your Gift Subscription ends", {
+                        "x:strong": function(e) {
+                            return r.createElement(d.Q, {
+                                type: d._46.Span,
+                                bold: !0
+                            }, e)
+                        },
+                        endsAt: Object(a.c)(new Date(this.props.giftSubEndsAt), "long")
+                    }, "PersonalSubReceipt") : Object(a.d)("Active", "PersonalSubReceipt"), r.createElement(d._8, {
+                        className: "personal-sub-receipt",
+                        padding: {
+                            y: 2
+                        },
+                        margin: {
+                            x: 2
+                        }
+                    }, r.createElement(d._32, {
+                        borderBottom: !0,
+                        padding: {
+                            bottom: 3
+                        }
+                    }, r.createElement(d.Q, {
+                        type: d._46.H2,
+                        bold: !0
+                    }, Object(a.d)("Your Subscription", "PersonalSubReceipt"))), r.createElement(d._32, {
+                        borderBottom: !0,
+                        padding: {
+                            y: 3
+                        }
+                    }, r.createElement(d._8, {
+                        className: "personal-sub-receipt__label",
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, {
+                        bold: !0
+                    }, Object(a.d)("Subscription for", "PersonalSubReceipt"))), r.createElement(d._8, {
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, null, this.props.purchaserDisplayName))), r.createElement(d._32, {
+                        borderBottom: !0,
+                        padding: {
+                            y: 3
+                        }
+                    }, r.createElement(d._8, {
+                        className: "personal-sub-receipt__label",
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, {
+                        bold: !0
+                    }, Object(a.d)("Status", "PersonalSubReceipt"))), r.createElement(d._8, {
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, null, e))), r.createElement(d._32, {
+                        borderBottom: !0,
+                        padding: {
+                            y: 3
+                        }
+                    }, r.createElement(d._8, {
+                        className: "personal-sub-receipt__label",
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, {
+                        bold: !0
+                    }, Object(a.d)("Invoice Total", "PersonalSubReceipt"))), r.createElement(d._8, {
+                        display: d.R.InlineBlock
+                    }, r.createElement(d.Q, null, Object(a.e)(this.props.invoicePrice / 100, {
+                        style: "currency",
+                        currency: this.props.invoiceCurrency
+                    })))), r.createElement(d._8, {
+                        margin: {
+                            y: 3
+                        }
+                    }, r.createElement(d.v, {
+                        onClick: this.goBackToChannel
+                    }, Object(a.d)("Go back to {displayName}", {
+                        displayName: this.props.productOwnerDisplayName
+                    }, "PersonalSubReceipt"))))
+                }, t
+            }(r.Component)),
+            me = Object(re.f)(de);
+        n("gKy9");
+        n.d(t, "b", function() {
+            return pe
+        }), n.d(t, "a", function() {
+            return fe
+        });
+        var pe;
+        ! function(e) {
+            e.Week = "WEEK", e.Month = "MONTH", e.Year = "YEAR", e.OneTime = "ONE_TIME"
+        }(pe || (pe = {}));
+        var fe = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.state = {
+                    giftSubPurchased: !1
+                }, t.trackPaymentFormInteraction = function(e) {
+                    var n, i, r = {
+                        channelLogin: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.login,
+                        channelId: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.id,
+                        paymentType: t.props.isGift ? g.Gifting : g.Personal,
+                        productId: t.props.data.subscriptionProduct.id,
+                        ticketPrice: t.props.data.subscriptionProduct.price,
+                        paymentFlow: e.paymentFlow,
+                        action: e.action,
+                        actionDetail: e.actionDetail || ""
+                    };
+                    i = {
+                        channel: (n = r).channelLogin,
+                        channel_id: n.channelId,
+                        payment_type: n.paymentType,
+                        payment_flow: n.paymentFlow,
+                        action: n.action,
+                        action_detail: n.actionDetail,
+                        product_id: n.productId,
+                        ticket_price: n.ticketPrice.replace(/[\$\.]/g, "")
+                    }, a.n.track(P.SpadeEventType.PaymentFormInteraction, i)
+                }, t.completePurchase = function(e) {
+                    return i.__awaiter(t, void 0, void 0, function() {
+                        var t, n;
+                        return i.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    e.recipient_id = this.props.recipientID, e.is_gift = this.props.isGift, t = "/kraken/checkout/users/" + this.props.data.currentUser.id + "/products/" + this.props.productShortName + "/purchase/complete", i.label = 1;
+                                case 1:
+                                    return i.trys.push([1, 3, , 4]), [4, o.a.post(t, {
+                                        body: e
+                                    }, {
+                                        version: 5
+                                    })];
+                                case 2:
+                                    return (n = i.sent()).error ? (this.trackPaymentFormInteraction({
+                                        paymentFlow: e.payment_flow,
+                                        action: v.CompletePurchaseClick,
+                                        actionDetail: f.Failed
+                                    }), [2]) : (this.trackPaymentFormInteraction({
+                                        paymentFlow: e.payment_flow,
+                                        action: v.CompletePurchaseClick,
+                                        actionDetail: f.Success
+                                    }), this.props.isGift ? this.setState({
+                                        giftSubPurchased: !0,
+                                        giftPurchaseInfo: n.body
+                                    }) : this.props.data.refetch(), [3, 4]);
+                                case 3:
+                                    return i.sent(), this.trackPaymentFormInteraction({
+                                        paymentFlow: e.payment_flow,
+                                        action: v.CompletePurchaseClick,
+                                        actionDetail: f.Failed
+                                    }), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, t.renderPurchaseInfo = function() {
+                    if (!t.purchased) {
+                        if (t.props.isGift) return r.createElement(ie, {
+                            canGift: t.props.data.subscriptionProduct.self.checkoutConfigs.canGift,
+                            recipientDisplayName: t.props.recipientDisplayName,
+                            price: t.props.data.subscriptionProduct.price
+                        });
+                        var e = t.props.data.subscriptionProduct.self.benefit;
+                        return r.createElement(ue, {
+                            price: t.props.data.subscriptionProduct.price,
+                            hasGift: e && e.gift.isGift,
+                            purchase: t.props.data.subscriptionProduct.self.purchase,
+                            isOneMonthFreeEligible: t.props.data.subscriptionProduct.self.checkoutConfigs.isOneMonthFreeEligible,
+                            endsAt: e && e.endsAt
+                        })
+                    }
+                }, t.renderReceipt = function() {
+                    var e = t.props.data.subscriptionProduct.self.benefit,
+                        n = t.props.data.subscriptionProduct.self.purchase.details;
+                    return t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo ? r.createElement(se, {
+                        recipientDisplayName: t.props.recipientDisplayName,
+                        productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
+                        productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
+                        invoicePrice: t.state.giftPurchaseInfo.invoice_total.price,
+                        invoiceCurrency: "USD"
+                    }) : t.props.data.subscriptionProduct.owner && n && t.purchased ? r.createElement(me, {
+                        purchaserDisplayName: t.props.data.currentUser.displayName,
+                        productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
+                        productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
+                        giftSubEndsAt: e && (e.gift.isGift || null) && e.endsAt,
+                        invoicePrice: n.price,
+                        invoiceCurrency: "USD"
+                    }) : void 0
+                }, t
+            }
+            return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                this.props.latencyTracking.reportInteractive()
+            }, t.prototype.render = function() {
+                if (this.props.data.loading || this.props.data.error) return r.createElement(d._8, null);
+                var e = this.props.data.subscriptionProduct,
+                    t = this.props.data.subscriptionProduct.self.checkoutConfigs.paymentProviderConfigs,
+                    n = Object(a.d)("Buying a Channel Subscription is fast, easy and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                        "x:link": function(e) {
+                            return r.createElement("span", {
+                                key: "helplink"
+                            }, r.createElement(d.O, {
+                                targetBlank: !0,
+                                to: "https://help.twitch.tv/"
+                            }, e))
+                        }
+                    }, "SubsCheckoutPage"),
+                    i = Object(a.d)('You may cancel at any time by selecting "Do Not Renew" on your <x:link>subscriptions page</x:link>.', {
+                        "x:link": function(e) {
+                            return r.createElement("span", {
+                                key: "sublink"
+                            }, r.createElement(d.O, {
+                                targetBlank: !0,
+                                to: "https://www.twitch.tv/subscriptions"
+                            }, e))
+                        }
+                    }, "SubsCheckoutPage");
+                return r.createElement(d._8, {
+                    className: "checkout-payments",
+                    fullWidth: !0,
+                    padding: 3,
+                    overflow: d._11.Auto
+                }, r.createElement(d._8, {
+                    display: d.R.Flex,
+                    justifyContent: d._7.Center,
+                    flexWrap: d.U.Wrap
+                }, r.createElement(d._8, {
+                    display: d.R.Hide,
+                    alignItems: d.c.Start,
+                    margin: {
+                        bottom: 4
+                    },
+                    breakpointLarge: {
+                        display: d.R.Flex
+                    }
+                }, r.createElement(te.a, {
+                    productName: this.props.productShortName
+                })), r.createElement(d._8, {
+                    className: "checkout-payments__content",
+                    breakpointLarge: {
+                        margin: {
+                            left: 4
+                        }
+                    }
+                }, !this.purchased && r.createElement(d._8, {
+                    margin: {
+                        bottom: 1
+                    },
+                    textAlign: d._42.Center,
+                    breakpointLarge: {
+                        margin: {
+                            bottom: 2
+                        },
+                        textAlign: d._42.Left
+                    }
+                }, r.createElement(b, {
+                    channel: this.props.data.subscriptionProduct.owner && this.props.data.subscriptionProduct.owner.id,
+                    isGift: this.props.isGift
+                })), r.createElement(d._8, {
+                    display: d.R.Flex,
+                    breakpointLarge: {
+                        display: d.R.Hide
+                    }
+                }, r.createElement(te.a, {
+                    productName: this.props.productShortName,
+                    mobile: !0
+                })), this.purchased && this.renderReceipt(), !this.purchased && r.createElement(r.Fragment, null, this.renderPurchaseInfo(), this.showPaymenOptions && r.createElement(ee, {
+                    configs: t,
+                    countryCode: this.props.data.requestInfo.countryCode,
+                    onSuccess: this.completePurchase,
+                    productShortName: this.props.productShortName,
+                    trackPaymentFormInteraction: this.trackPaymentFormInteraction
+                }), "689376" !== e.id && r.createElement(d._8, {
+                    margin: {
+                        top: 3
+                    }
+                }, r.createElement(d.Q, null, n), r.createElement(d.Q, null, i))))))
+            }, Object.defineProperty(t.prototype, "personalSubPurchased", {
+                get: function() {
+                    return !!this.props.data.subscriptionProduct.self.purchase.details
+                },
+                enumerable: !0,
+                configurable: !0
+            }), Object.defineProperty(t.prototype, "purchased", {
+                get: function() {
+                    return !this.props.isGift && this.personalSubPurchased || this.state.giftSubPurchased
+                },
+                enumerable: !0,
+                configurable: !0
+            }), Object.defineProperty(t.prototype, "showPaymenOptions", {
+                get: function() {
+                    return !this.purchased && (!this.props.isGift || this.props.data.subscriptionProduct.self.checkoutConfigs.canGift)
+                },
+                enumerable: !0,
+                configurable: !0
+            }), t = i.__decorate([Object(j.d)("CheckoutPayments"), Object(s.a)(ne, {
+                options: function(e) {
+                    return {
+                        fetchPolicy: "network-only",
+                        variables: {
+                            productName: e.productShortName,
+                            isGift: e.isGift,
+                            recipientID: e.recipientID,
+                            includePromotion: "turbo" !== e.productShortName
+                        }
+                    }
+                }
+            })], t)
+        }(r.Component)
     },
     9856: function(e, t) {},
     "9Jn5": function(e, t, n) {
@@ -5652,2425 +8090,8 @@ webpackJsonp([36], {
             f = n("j7/Y"),
             g = n("w9tK"),
             h = n("vH/s"),
-            v = n("9u8h"),
-            b = n("Odds"),
-            y = function() {
-                return u.createElement(b._8, null, u.createElement(b.Q, {
-                    type: b._46.H2,
-                    bold: !0
-                }, Object(d.d)("Get Your All-Access Pass", "EsportsTicketPurchaseInfo")), u.createElement(b.Q, null, Object(d.d)("Buying a Pass is fast, easy, and secure. Don't hesitate to contact Purchase Support if you need help", "EsportsTicketPurchaseInfo")))
-            },
-            k = n("QCL8"),
-            _ = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    return this.props.channel && Object(k.a)(this.props.channel, this.props.sessionUser) ? u.createElement(y, null) : u.createElement(b.Q, {
-                        type: b._46.H2,
-                        bold: !0,
-                        "data-test-selector": "sub-info-selector"
-                    }, this.props.isGift ? Object(d.d)("Gift A Subscription", "PurchaseSubInfo") : Object(d.d)("Start Your Subscription", "PersonalSubPurchaseInfo"))
-                }, t
-            }(u.Component);
-        var E, S, N, w, C = Object(i.b)(function(e) {
-                return {
-                    sessionUser: Object(o.c)(e)
-                }
-            })(_),
-            O = n("ryON"),
-            x = n.n(O),
-            T = n("hmTn"),
-            D = n.n(T),
-            R = n("W59S"),
-            F = n.n(R),
-            A = n("MQyO"),
-            I = n.n(A),
-            P = n("ekbR"),
-            U = n.n(P),
-            L = n("p2Aq"),
-            j = n.n(L),
-            B = n("SgWI"),
-            M = n.n(B),
-            H = n("YkGD"),
-            W = n.n(H);
-        ! function(e) {
-            e.Failed = "failed", e.Pending = "pending", e.Success = "success"
-        }(E || (E = {})),
-        function(e) {
-            e.Gifting = "gifting", e.Personal = "personal"
-        }(S || (S = {})),
-        function(e) {
-            e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlyPayWithAmazon = "recurly_pay_with_amazon", e.ZuoraCreditCard = "zuora_credit_card", e.Xsolla = "xsolla"
-        }(N || (N = {})),
-        function(e) {
-            e.VendorLoginClick = "vendor_login_click", e.CompletePurchaseClick = "complete_purchase_click", e.PaypalTokenError = "paypal_token_error", e.RadioButtonClick = "radio_button_click", e.TokenError = "token_error"
-        }(w || (w = {}));
-        var G = n("CSlQ"),
-            V = (n("aMOL"), function() {
-                function e(e) {}
-                e.prototype.bind = function(e) {}
-            }(), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        amazonScriptLoaded: null,
-                        walletLoaded: null,
-                        billingAgreementId: null,
-                        awaitingResponse: !1
-                    }, t.handleSubmit = function() {
-                        return c.__awaiter(t, void 0, void 0, function() {
-                            return c.__generator(this, function(e) {
-                                switch (e.label) {
-                                    case 0:
-                                        this.setState({
-                                            awaitingResponse: !0
-                                        }), e.label = 1;
-                                    case 1:
-                                        return e.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
-                                            payment_flow: N.RecurlyPayWithAmazon,
-                                            payment_provider: "recurly",
-                                            payment_info: {
-                                                token: this.state.billingAgreementId,
-                                                gateway: "amazon"
-                                            }
-                                        })];
-                                    case 2:
-                                        return e.sent(), this.forceUpdate(), [3, 4];
-                                    case 3:
-                                        return e.sent(), this.setState({
-                                            awaitingResponse: !1
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this;
-                    window.onAmazonLoginReady = function() {
-                        window.amazon.Login.setClientId(e.props.clientID)
-                    }, window.onAmazonPaymentsReady = function() {
-                        e.props.latencyTracking.reportInteractive(), e.setState({
-                            amazonScriptLoaded: !0
-                        }), window.OffAmazonPayments.Button("recurly-amazon-pay__button", e.props.sellerID, {
-                            type: "PwA",
-                            color: "DarkGray",
-                            useAmazonAddressBook: !1,
-                            agreementType: "BillingAgreement",
-                            authorization: function() {
-                                window.amazon.Login.authorize({
-                                    scope: "profile payments:widget payments:autopay_consent",
-                                    popup: !0
-                                }, function(e) {
-                                    if (e.error) return "err"
-                                })
-                            },
-                            onSignIn: function(t) {
-                                e.setState({
-                                    walletLoaded: !0,
-                                    billingAgreementId: t.getAmazonBillingAgreementId()
-                                }), e.initWidget()
-                            }
-                        })
-                    };
-                    var t = document.querySelector("#pwa-script");
-                    t && document.body.removeChild(t);
-                    var n = document.createElement("script");
-                    n.type = "text/javascript", n.id = "pwa-script", n.src = "https://static-na.payments-amazon.com/OffAmazonPayments/us" + (this.props.isProduction ? "" : "/sandbox") + "/js/Widgets.js?sellerId=" + this.props.sellerID, n.async = !0, document.body.appendChild(n)
-                }, t.prototype.initWidget = function() {
-                    var e = {
-                        agreementType: "BillingAgreement",
-                        amazonBillingAgreementId: this.state.billingAgreementId,
-                        sellerId: this.props.sellerID,
-                        design: {
-                            designMode: "responsive"
-                        },
-                        onPaymentSelect: function() {
-                            return !0
-                        },
-                        onError: function() {
-                            return !1
-                        }
-                    };
-                    new window.OffAmazonPayments.Widgets.Wallet(e).bind("recurly-amazon-pay__wallet")
-                }, t.prototype.render = function() {
-                    return this.state.amazonScriptLoaded ? u.createElement(b._32, {
-                        background: b.n.Base,
-                        border: !0,
-                        className: "recurly-amazon-pay"
-                    }, u.createElement(b._8, {
-                        display: this.state.walletLoaded ? b.R.Hide : b.R.Flex,
-                        justifyContent: b._7.Center,
-                        margin: 5
-                    }, u.createElement("div", {
-                        id: "recurly-amazon-pay__button"
-                    })), u.createElement(b._8, {
-                        display: this.state.walletLoaded ? b.R.Flex : b.R.Hide,
-                        flexDirection: b.T.Column,
-                        alignItems: b.c.Center,
-                        margin: {
-                            top: 2
-                        }
-                    }, u.createElement("div", {
-                        id: "recurly-amazon-pay__wallet",
-                        className: "recurly-amazon-pay__wallet"
-                    }), u.createElement(b._8, {
-                        padding: {
-                            top: 1
-                        },
-                        display: b.R.Flex,
-                        justifyContent: b._7.Center
-                    }, u.createElement(b.v, {
-                        onClick: this.handleSubmit,
-                        state: this.state.awaitingResponse ? b.A.Loading : b.A.Default,
-                        disabled: this.state.awaitingResponse
-                    }, this.props.submitButtonCopy)))) : u.createElement(b._10, null)
-                }, t = c.__decorate([Object(G.d)("RecurlyAmazonPay")], t)
-            }(u.Component)),
-            z = n("NXs7"),
-            q = n("0nzt"),
-            Q = n("l7ua"),
-            Y = (n("pDuT"), {
-                light: "#000",
-                dark: "#fff"
-            }),
-            K = {
-                light: "#a49fad",
-                dark: "#898395"
-            },
-            Z = function() {
-                return {
-                    cvv: !1,
-                    first_name: !1,
-                    last_name: !1,
-                    month: !1,
-                    number: !1,
-                    year: !1
-                }
-            },
-            $ = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        firstName: "",
-                        lastName: "",
-                        recurlyReady: !1,
-                        awaitingResponse: !1,
-                        errorMessage: "",
-                        errorState: Z()
-                    }, t.handleSubmit = function() {
-                        return c.__awaiter(t, void 0, void 0, function() {
-                            var e = this;
-                            return c.__generator(this, function(t) {
-                                return this.setState(function(e) {
-                                    return {
-                                        awaitingResponse: !0,
-                                        errorState: c.__assign({}, e.errorState)
-                                    }
-                                }), window.recurly.token(this.form, function(t, n) {
-                                    return c.__awaiter(e, void 0, void 0, function() {
-                                        return c.__generator(this, function(e) {
-                                            return t ? (this.handleValidationError(t), this.setState({
-                                                awaitingResponse: !1
-                                            })) : this.handleValidationSuccess(n), [2]
-                                        })
-                                    })
-                                }), [2]
-                            })
-                        })
-                    }, t.handleValidationSuccess = function(e) {
-                        return c.__awaiter(t, void 0, void 0, function() {
-                            return c.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        return t.trys.push([0, 2, , 3]), [4, this.props.onSuccess({
-                                            payment_flow: N.RecurlyCreditCard,
-                                            payment_provider: "recurly",
-                                            payment_info: {
-                                                token: e.id,
-                                                gateway: "cc"
-                                            }
-                                        })];
-                                    case 1:
-                                        return t.sent(), [3, 3];
-                                    case 2:
-                                        return t.sent(), this.setState(function(e) {
-                                            return {
-                                                awaitingResponse: !1,
-                                                errorState: c.__assign({}, e.errorState)
-                                            }
-                                        }), [3, 3];
-                                    case 3:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, t.handleValidationError = function(e) {
-                        if (e.code === Q.a.Validation || e.code === Q.a.InvalidParameter) {
-                            var n = Z();
-                            e.fields && e.fields.forEach(function(e) {
-                                n[e] = !0
-                            }), t.setState({
-                                errorMessage: Object(d.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"),
-                                errorState: n
-                            })
-                        } else e.code && t.setState({
-                            errorMessage: Object(d.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"),
-                            errorState: Z()
-                        })
-                    }, t.handleFirstName = function(e) {
-                        t.setState({
-                            firstName: e.currentTarget.value
-                        })
-                    }, t.handleLastName = function(e) {
-                        t.setState({
-                            lastName: e.currentTarget.value
-                        })
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.componentWillMount = function() {
-                    var e = this;
-                    this.recurlyPollId = setInterval(function() {
-                        window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.recurlyPollId), e.setupConfigs(), e.pollForHostedField())
-                    }, 500)
-                }, t.prototype.componentWillUnmount = function() {
-                    clearInterval(this.recurlyPollId), clearInterval(this.hostedFieldPollId)
-                }, t.prototype.componentDidUpdate = function(e) {
-                    window.recurly && this.props.darkModeEnabled !== e.darkModeEnabled && this.setupConfigs()
-                }, t.prototype.render = function() {
-                    var e = this;
-                    return u.createElement(b._8, {
-                        className: "recurly-credit-card",
-                        fullWidth: !0
-                    }, u.createElement(b._8, {
-                        display: this.state.recurlyReady ? b.R.Hide : b.R.Block
-                    }, u.createElement(b._10, {
-                        fillContent: !0
-                    })), u.createElement(b._8, {
-                        display: this.state.recurlyReady ? b.R.Block : b.R.Hide
-                    }, u.createElement("form", {
-                        className: "recurly-form",
-                        ref: function(t) {
-                            return e.form = t
-                        }
-                    }, u.createElement(b._8, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, u.createElement(b.W, {
-                        id: "recurly-name",
-                        label: Object(d.d)("Name", "RecurlyCreditCard")
-                    }, u.createElement("div", {
-                        id: "recurly-name"
-                    }, u.createElement(b.Y, {
-                        gutterSize: b.Z.Medium
-                    }, u.createElement(b.L, {
-                        cols: 6
-                    }, u.createElement(b._4, {
-                        id: "recurly-first-name",
-                        type: b._5.Text,
-                        placeholder: Object(d.d)("First Name", "RecurlyCreditCard"),
-                        value: this.state.firstName,
-                        onChange: this.handleFirstName,
-                        error: this.state.errorState.first_name
-                    }), u.createElement("input", {
-                        type: "hidden",
-                        "data-recurly": "first_name",
-                        value: this.state.firstName
-                    })), u.createElement(b.L, {
-                        cols: 6
-                    }, u.createElement(b._4, {
-                        id: "recurly-last-name",
-                        type: b._5.Text,
-                        placeholder: Object(d.d)("Last Name", "RecurlyCreditCard"),
-                        value: this.state.lastName,
-                        onChange: this.handleLastName,
-                        error: this.state.errorState.last_name
-                    }), u.createElement("input", {
-                        type: "hidden",
-                        "data-recurly": "last_name",
-                        value: this.state.lastName
-                    })))))), u.createElement(b._8, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, u.createElement(b.W, {
-                        id: "recurly-credit-card",
-                        label: Object(d.d)("Credit Card", "RecurlyCreditCard")
-                    }, u.createElement("div", {
-                        id: "recurly-credit-card"
-                    }, u.createElement(b.Y, {
-                        gutterSize: b.Z.Medium
-                    }, u.createElement(b.L, {
-                        cols: 8
-                    }, u.createElement("div", {
-                        id: "recurly-number",
-                        "data-recurly": "number",
-                        className: this.state.errorState.number ? "recurly-error" : ""
-                    })), u.createElement(b.L, {
-                        cols: 4
-                    }, u.createElement("div", {
-                        id: "recurly-cvv",
-                        "data-recurly": "cvv",
-                        className: this.state.errorState.cvv ? "recurly-error" : ""
-                    })))))), u.createElement(b._8, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, u.createElement(b.W, {
-                        id: "recurly-credit-card",
-                        label: Object(d.d)("Expiration Date", "RecurlyCreditCard")
-                    }, u.createElement("div", {
-                        id: "recurly-credit-card"
-                    }, u.createElement(b.Y, {
-                        gutterSize: b.Z.Medium
-                    }, u.createElement(b.L, {
-                        cols: 6
-                    }, u.createElement("div", {
-                        id: "recurly-month",
-                        "data-recurly": "month",
-                        className: this.state.errorState.month ? "recurly-error" : ""
-                    })), u.createElement(b.L, {
-                        cols: 6
-                    }, u.createElement("div", {
-                        id: "recurly-year",
-                        "data-recurly": "year",
-                        className: this.state.errorState.year ? "recurly-error" : ""
-                    })))))), u.createElement("input", {
-                        type: "hidden",
-                        name: "recurly-token",
-                        "data-recurly": "token"
-                    }), u.createElement(b._8, {
-                        margin: {
-                            top: 1
-                        },
-                        display: b.R.Flex,
-                        justifyContent: b._7.Center,
-                        breakpointLarge: {
-                            justifyContent: b._7.Start
-                        }
-                    }, u.createElement(b.v, {
-                        onClick: this.handleSubmit,
-                        state: this.state.awaitingResponse ? b.A.Loading : b.A.Default,
-                        disabled: this.state.awaitingResponse
-                    }, this.props.submitButtonCopy)))))
-                }, t.prototype.pollForHostedField = function() {
-                    var e = this;
-                    this.hostedFieldPollId = setInterval(function() {
-                        document.querySelector(".recurly-hosted-field > iframe") && (e.setState({
-                            recurlyReady: !0
-                        }), clearInterval(e.hostedFieldPollId))
-                    }, 500)
-                }, t.prototype.setupConfigs = function() {
-                    window.recurly.configure({
-                        publicKey: this.props.publicKey,
-                        fraud: {
-                            kount: {
-                                dataCollector: !0
-                            }
-                        },
-                        required: ["cvv"],
-                        fields: {
-                            all: {
-                                style: {
-                                    height: "auto",
-                                    fontSize: "12px",
-                                    fontColor: Y.light,
-                                    placeholder: {
-                                        color: K.light
-                                    }
-                                }
-                            },
-                            number: {
-                                selector: "#recurly-number",
-                                style: {
-                                    placeholder: {
-                                        content: Object(d.d)("Card Number", "RecurlyCreditCard")
-                                    }
-                                }
-                            },
-                            month: {
-                                selector: "#recurly-month",
-                                style: {
-                                    placeholder: {
-                                        content: Object(d.d)("Month", "RecurlyCreditCard")
-                                    }
-                                }
-                            },
-                            year: {
-                                selector: "#recurly-year",
-                                style: {
-                                    placeholder: {
-                                        content: Object(d.d)("Year", "RecurlyCreditCard")
-                                    }
-                                }
-                            },
-                            cvv: {
-                                selector: "#recurly-cvv",
-                                style: {
-                                    placeholder: {
-                                        content: Object(d.d)("CVV", "RecurlyCreditCard")
-                                    }
-                                }
-                            }
-                        }
-                    })
-                }, t = c.__decorate([Object(G.d)("RecurlyCreditCard")], t)
-            }(u.Component);
-        var X, J = Object(i.b)(function(e) {
-                return {
-                    darkModeEnabled: Object(q.a)(e) === z.a.Dark
-                }
-            })($),
-            ee = (n("t2Wb"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        paypalConfigured: !1,
-                        awaitingResponse: !1,
-                        hasError: !1
-                    }, t.handleValidationSuccess = function(e) {
-                        return c.__awaiter(t, void 0, void 0, function() {
-                            return c.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        return t.trys.push([0, 2, , 3]), [4, this.props.onSuccess({
-                                            payment_flow: N.RecurlyPaypal,
-                                            payment_provider: "recurly",
-                                            payment_info: {
-                                                token: e.id,
-                                                gateway: "paypal"
-                                            }
-                                        })];
-                                    case 1:
-                                        return t.sent(), [3, 3];
-                                    case 2:
-                                        return t.sent(), this.setState({
-                                            awaitingResponse: !1
-                                        }), [3, 3];
-                                    case 3:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, t.handleValidationError = function() {
-                        t.setState({
-                            hasError: !0
-                        })
-                    }, t.handleClick = function() {
-                        t.setState({
-                            awaitingResponse: !0,
-                            hasError: !1
-                        }), t.paypalInstance.start()
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this;
-                    this.pollForRecurly = setInterval(function() {
-                        window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.pollForRecurly), e.setupConfigs(), e.setState({
-                            paypalConfigured: !0
-                        }))
-                    }, 500)
-                }, t.prototype.componentWillUnmount = function() {
-                    clearInterval(this.pollForRecurly)
-                }, t.prototype.render = function() {
-                    return this.state.paypalConfigured ? u.createElement(b._32, {
-                        className: "recurly-paypal",
-                        background: b.n.Base,
-                        border: !0,
-                        display: b.R.Flex,
-                        justifyContent: b._7.Center
-                    }, u.createElement(b._8, {
-                        margin: {
-                            top: 5
-                        }
-                    }, u.createElement(b.v, {
-                        "data-a-target": "recurly-paypal__button",
-                        onClick: this.handleClick,
-                        state: this.state.awaitingResponse ? b.A.Loading : b.A.Default,
-                        disabled: this.state.awaitingResponse
-                    }, "Checkout With PayPal"))) : u.createElement(b._8, {
-                        margin: {
-                            y: 2
-                        }
-                    }, u.createElement(b._10, null))
-                }, t.prototype.setupConfigs = function() {
-                    var e = this;
-                    window.recurly.configure(this.props.publicKey);
-                    var t = window.recurly.PayPal({
-                        braintree: {
-                            clientAuthorization: this.props.braintreeClientAuthorization
-                        }
-                    });
-                    t.on("token", function(t) {
-                        e.handleValidationSuccess(t)
-                    }), t.on("error", function() {
-                        e.handleValidationError(), e.setState({
-                            awaitingResponse: !1
-                        })
-                    }), t.on("cancel", function() {
-                        e.setState({
-                            awaitingResponse: !1
-                        })
-                    }), this.paypalInstance = t
-                }, t = c.__decorate([Object(G.d)("RecurlyPaypal")], t)
-            }(u.Component)),
-            te = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        xsollaLoaded: !1
-                    }, t.handleXsollaEvent = function(e) {
-                        if ((!e.origin || e.origin.includes("xsolla")) && e.data) {
-                            var n = JSON.parse(e.data);
-                            if (n.command && "status" === n.command)
-                                if (n.data && n.data.paymentInfo) switch (n.data.paymentInfo.status) {
-                                    case "done":
-                                        return t.props.trackPaymentFormInteraction({
-                                            paymentFlow: N.Xsolla,
-                                            action: w.CompletePurchaseClick,
-                                            actionDetail: E.Pending
-                                        }), t.props.trackPaymentFormInteraction({
-                                            paymentFlow: N.Xsolla,
-                                            action: w.CompletePurchaseClick,
-                                            actionDetail: E.Success
-                                        });
-                                    case "troubled":
-                                        return t.props.trackPaymentFormInteraction({
-                                            paymentFlow: N.Xsolla,
-                                            action: w.CompletePurchaseClick,
-                                            actionDetail: E.Pending
-                                        }), t.props.trackPaymentFormInteraction({
-                                            paymentFlow: N.Xsolla,
-                                            action: w.CompletePurchaseClick,
-                                            actionDetail: E.Failed
-                                        })
-                                }
-                        }
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this.iframe,
-                        t = this;
-                    e && (e.addEventListener("load", function() {
-                        t.props.latencyTracking.reportInteractive(), t.setState({
-                            xsollaLoaded: !0
-                        })
-                    }), window.addEventListener("message", t.handleXsollaEvent))
-                }, t.prototype.render = function() {
-                    var e = this;
-                    return u.createElement(b._8, {
-                        fullWidth: !0
-                    }, !this.state.xsollaLoaded && u.createElement(b._10, {
-                        fillContent: !0
-                    }), u.createElement(b._8, {
-                        fullWidth: !0,
-                        display: this.state.xsollaLoaded ? b.R.Inline : b.R.Hide
-                    }, u.createElement("iframe", {
-                        ref: function(t) {
-                            return e.iframe = t
-                        },
-                        id: "xsolla",
-                        src: this.props.iframeURL,
-                        width: "100%",
-                        height: "650px"
-                    })))
-                }, t = c.__decorate([Object(G.d)("XsollaMoreMethods")], t)
-            }(u.Component),
-            ne = n("HM6l"),
-            ie = n("5k8C");
-        n("7gLH");
-        ! function(e) {
-            e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
-        }(X || (X = {}));
-        var re = function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.state = {
-                    zuoraConfigured: !1,
-                    awaitingResponse: !1,
-                    errorMessage: "",
-                    nullValueErrors: [],
-                    sessionId: Object(ne.b)()
-                }, t.handleSubmit = function() {
-                    t.setState({
-                        awaitingResponse: !0,
-                        errorMessage: "",
-                        nullValueErrors: []
-                    }), window.Z.submit()
-                }, t.renderErrorMessage = function() {
-                    if (t.state.nullValueErrors.length) {
-                        var e = t.state.nullValueErrors.map(function(e, t) {
-                            return u.createElement(b._8, {
-                                key: t,
-                                margin: {
-                                    left: 2
-                                }
-                            }, u.createElement(b.Q, {
-                                color: b.K.Error
-                            }, "• ", e))
-                        });
-                        return u.createElement("div", null, u.createElement(b._8, {
-                            margin: {
-                                top: 1,
-                                left: 1,
-                                bottom: .5
-                            }
-                        }, u.createElement(b.Q, {
-                            color: b.K.Error
-                        }, Object(d.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "ZuoraCreditCard"))), e)
-                    }
-                    if (t.state.errorMessage) return u.createElement(b._8, {
-                        margin: {
-                            top: 1,
-                            left: 1
-                        }
-                    }, u.createElement(b.Q, {
-                        color: b.K.Error
-                    }, t.state.errorMessage))
-                }, t.successCallback = function(e) {
-                    return c.__awaiter(t, void 0, void 0, function() {
-                        return c.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    if (!e.success) return [2];
-                                    t.label = 1;
-                                case 1:
-                                    return t.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
-                                        payment_flow: N.ZuoraCreditCard,
-                                        payment_provider: "zuora",
-                                        payment_info: {
-                                            token: e.refId,
-                                            gateway: "cc"
-                                        }
-                                    })];
-                                case 2:
-                                    return t.sent(), [3, 4];
-                                case 3:
-                                    return t.sent(), this.setState({
-                                        awaitingResponse: !1
-                                    }), [3, 4];
-                                case 4:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, t.errorCallback = function(e, n, i) {
-                    if (t.setState({
-                            awaitingResponse: !1
-                        }), "unknown" === n) return t.parseGatewayErrorMessage(i);
-                    window.Z.sendErrorMessageToHpm(e, i)
-                }, t.parseGatewayErrorMessage = function(e) {
-                    return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? t.setState({
-                        errorMessage: Object(d.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCreditCard")
-                    }) : t.setState({
-                        errorMessage: Object(d.d)("We couldn't process your payment. Please try again.", "ZuoraCreditCard")
-                    })
-                }, t.parseNullValueErrorMessage = function(e) {
-                    var n = e.replace("[HostedPageFieldValidationError]&nbsp; ", "").replace(/\s/g, "").split(":NullValue,"),
-                        i = {
-                            creditCardHolderName: Object(d.d)("Name on Card", "ZuoraCreditCard"),
-                            creditCardAddress1: Object(d.d)("Billing Address", "ZuoraCreditCard"),
-                            creditCardCity: Object(d.d)("City", "ZuoraCreditCard"),
-                            creditCardPostalCode: Object(d.d)("Zip Code", "ZuoraCreditCard")
-                        },
-                        r = n.map(function(e) {
-                            var t = i[e];
-                            return t || ""
-                        }).filter(function(e) {
-                            return "" !== e
-                        });
-                    t.setState({
-                        nullValueErrors: r
-                    })
-                }, t
-            }
-            return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                var e = this;
-                if (document.querySelector("#zuora-script")) this.initZuoraIFrame();
-                else {
-                    var t = document.createElement("script");
-                    t.src = "https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js", t.async = !0, t.id = "zuora-script", document.body.appendChild(t), t.onload = function() {
-                        e.props.latencyTracking.reportInteractive(), e.initZuoraIFrame()
-                    }
-                }
-            }, t.prototype.render = function() {
-                return u.createElement("div", null, !this.state.zuoraConfigured && u.createElement(b._8, {
-                    padding: {
-                        y: 5
-                    }
-                }, u.createElement(b._10, {
-                    fillContent: !0
-                })), u.createElement(b._8, {
-                    display: this.state.zuoraConfigured ? b.R.Block : b.R.Hide,
-                    "data-test-selector": X.ZUORA_PARENT_LAYOUT
-                }, this.renderErrorMessage(), u.createElement("div", {
-                    id: "zuora_payment",
-                    className: this.state.awaitingResponse ? "zuora-disabled" : ""
-                }), u.createElement(b._8, {
-                    margin: {
-                        top: 2,
-                        bottom: 1
-                    },
-                    display: b.R.Flex,
-                    justifyContent: b._7.Center,
-                    breakpointLarge: {
-                        justifyContent: b._7.Start
-                    }
-                }, u.createElement(b.v, {
-                    onClick: this.handleSubmit,
-                    state: this.state.awaitingResponse ? b.A.Loading : b.A.Default,
-                    disabled: this.state.awaitingResponse,
-                    "data-test-selector": X.UPDATE_PAYMENT_BUTTON
-                }, this.props.submitButtonCopy)), u.createElement(ie.a, {
-                    isProduction: this.props.isProductionConfig,
-                    sessionId: this.state.sessionId
-                })))
-            }, t.prototype.initZuoraIFrame = function() {
-                var e = this,
-                    t = {
-                        id: this.props.hostedPageID,
-                        url: this.props.hostedPageURL,
-                        style: "inline",
-                        submitEnabled: "true",
-                        field_accountId: this.props.externalAccountID,
-                        tenantId: this.props.tenantID,
-                        token: this.props.token,
-                        key: this.props.publicKey,
-                        signature: this.props.signature,
-                        locale: this.formattedLocale
-                    };
-                window.Z.renderWithErrorHandler(t, {
-                    creditCardCountry: "USA"
-                }, this.successCallback, this.errorCallback);
-                var n = document.getElementById("z_hppm_iframe");
-                n && n.addEventListener("load", function() {
-                    e.setState({
-                        zuoraConfigured: !0
-                    })
-                })
-            }, Object.defineProperty(t.prototype, "formattedLocale", {
-                get: function() {
-                    var e = this.props.languageCode || "en";
-                    if (e.includes("-")) {
-                        var t = e.split("-");
-                        e = t[0] + "_" + t[1].toUpperCase()
-                    }
-                    return e
-                },
-                enumerable: !0,
-                configurable: !0
-            }), t = c.__decorate([Object(G.d)("ZuoraCreditCard")], t)
-        }(u.Component);
-        var ae = Object(i.b)(function(e) {
-                return {
-                    languageCode: e.session.languageCode
-                }
-            })(re),
-            se = {
-                CreditCard: function() {
-                    return Object(d.d)("Credit Card", "TicketDescription")
-                },
-                Paypal: function() {
-                    return Object(d.d)("Paypal", "TicketDescription")
-                },
-                AmazonPay: function() {
-                    return Object(d.d)("Amazon Pay", "TicketDescription")
-                },
-                MoreMethods: function() {
-                    return Object(d.d)("More Methods", "TicketDescription")
-                }
-            },
-            oe = function(e) {
-                function t() {
-                    var t, n = null !== e && e.apply(this, arguments) || this;
-                    return n.state = {
-                        selectedProvider: N.ZuoraCreditCard,
-                        subsCheckoutVariantAssignment: "zuora",
-                        enabledProviders: (t = {}, t[N.ZuoraCreditCard] = !1, t[N.RecurlyCreditCard] = !1, t[N.RecurlyPaypal] = !1, t[N.RecurlyPayWithAmazon] = !1, t[N.Xsolla] = !1, t)
-                    }, n.submitButtonCopy = Object(d.d)("Complete Purchase", "PaymentMethods"), n.paymentProviders = [{
-                        name: N.ZuoraCreditCard,
-                        button: {
-                            label: se.CreditCard(),
-                            src: F.a,
-                            alt: se.CreditCard(),
-                            srcSet: {
-                                "1x": F.a,
-                                "2x": I.a
-                            }
-                        },
-                        component: u.createElement(ae, c.__assign({
-                            submitButtonCopy: n.submitButtonCopy,
-                            onSuccess: n.props.onSuccess,
-                            isProductionConfig: n.props.configs.recurly.payWithAmazonConfigs.isProduction
-                        }, n.props.configs.zuora))
-                    }, {
-                        name: N.RecurlyCreditCard,
-                        button: {
-                            label: se.CreditCard(),
-                            src: F.a,
-                            alt: se.CreditCard(),
-                            srcSet: {
-                                "1x": F.a,
-                                "2x": I.a
-                            }
-                        },
-                        component: u.createElement(J, {
-                            publicKey: n.props.configs.recurly.publicKey,
-                            submitButtonCopy: n.submitButtonCopy,
-                            onSuccess: n.props.onSuccess
-                        })
-                    }, {
-                        name: N.RecurlyPaypal,
-                        button: {
-                            label: se.Paypal(),
-                            src: M.a,
-                            alt: se.Paypal(),
-                            srcSet: {
-                                "1x": M.a,
-                                "2x": W.a
-                            }
-                        },
-                        component: u.createElement(ee, {
-                            publicKey: n.props.configs.recurly.publicKey,
-                            braintreeClientAuthorization: n.props.configs.recurly.braintreeClientAuthorization,
-                            submitButtonCopy: n.submitButtonCopy,
-                            onSuccess: n.props.onSuccess
-                        })
-                    }, {
-                        name: N.RecurlyPayWithAmazon,
-                        button: {
-                            label: se.AmazonPay(),
-                            src: x.a,
-                            alt: se.AmazonPay(),
-                            srcSet: {
-                                "1x": x.a,
-                                "2x": D.a
-                            }
-                        },
-                        component: u.createElement(V, c.__assign({
-                            submitButtonCopy: n.submitButtonCopy,
-                            onSuccess: n.props.onSuccess
-                        }, n.props.configs.recurly.payWithAmazonConfigs))
-                    }, {
-                        name: N.Xsolla,
-                        button: {
-                            label: se.MoreMethods(),
-                            src: U.a,
-                            alt: se.MoreMethods(),
-                            srcSet: {
-                                "1x": U.a,
-                                "2x": j.a
-                            }
-                        },
-                        component: u.createElement(te, c.__assign({
-                            trackPaymentFormInteraction: n.props.trackPaymentFormInteraction
-                        }, n.props.configs.xsolla))
-                    }], n.renderSelector = function(e) {
-                        return n.state.enabledProviders[e.name] ? u.createElement(b.L, {
-                            key: e.name,
-                            cols: {
-                                default: 6,
-                                sm: 3
-                            }
-                        }, u.createElement(b._8, {
-                            margin: {
-                                bottom: 1
-                            }
-                        }, u.createElement(b._0, {
-                            label: e.button.label,
-                            type: b._1.Radio,
-                            src: e.button.src,
-                            alt: e.button.alt,
-                            srcSet: e.button.srcSet,
-                            value: e.name,
-                            onChange: n.setProviderFactory(e.name),
-                            checked: n.state.selectedProvider === e.name
-                        }))) : u.createElement(u.Fragment, {
-                            key: e.name
-                        })
-                    }, n.renderProvider = function(e) {
-                        return n.state.enabledProviders[e.name] ? u.createElement(b._8, {
-                            key: e.name,
-                            display: n.state.selectedProvider === e.name ? b.R.Inline : b.R.Hide
-                        }, e.component) : u.createElement(u.Fragment, {
-                            key: e.name
-                        })
-                    }, n.setProviderFactory = function(e) {
-                        return function() {
-                            n.props.trackPaymentFormInteraction({
-                                paymentFlow: e,
-                                action: w.RadioButtonClick,
-                                actionDetail: e
-                            }), n.setState({
-                                selectedProvider: e
-                            })
-                        }
-                    }, n
-                }
-                return c.__extends(t, e), t.prototype.componentWillMount = function() {
-                    var e = d.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT_VARIANT") || this.state.subsCheckoutVariantAssignment;
-                    "owlallaccess2018" === this.props.productShortName && (e = "zuora");
-                    var t = ((n = {})[N.ZuoraCreditCard] = "zuora" === e, n[N.RecurlyCreditCard] = "recurly" === e, n[N.RecurlyPaypal] = !("owlallaccess2018" === this.props.productShortName), n[N.RecurlyPayWithAmazon] = !("owlallaccess2018" === this.props.productShortName), n[N.Xsolla] = !0, n);
-                    if (this.setState({
-                            selectedProvider: "recurly" === e ? N.RecurlyCreditCard : N.ZuoraCreditCard,
-                            subsCheckoutVariantAssignment: e,
-                            enabledProviders: t
-                        }), !document.querySelector("#recurly-script")) {
-                        var n, i = document.createElement("script");
-                        i.src = "https://js.recurly.com/v4/recurly.js", i.async = !0, i.id = "recurly-script", document.body.appendChild(i)
-                    }
-                }, t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    if ("US" !== this.props.countryCode) {
-                        this.state.selectedProvider !== N.Xsolla && this.setState({
-                            selectedProvider: N.Xsolla
-                        });
-                        var e = this.paymentProviders.find(function(e) {
-                            return e.name === N.Xsolla
-                        });
-                        return e && this.renderProvider(e)
-                    }
-                    return u.createElement(b._8, null, u.createElement(b._8, {
-                        margin: {
-                            bottom: 1
-                        },
-                        textAlign: b._42.Center,
-                        breakpointLarge: {
-                            textAlign: b._42.Left
-                        }
-                    }, u.createElement(b.Q, {
-                        type: b._46.H4,
-                        bold: !0
-                    }, Object(d.d)("Choose Your Payment Method", "PaymentMethods"))), u.createElement(b.Y, {
-                        gutterSize: b.Z.Small
-                    }, this.paymentProviders.map(this.renderSelector)), u.createElement(b._8, null, this.paymentProviders.map(this.renderProvider)))
-                }, t = c.__decorate([Object(G.d)("PaymentMethods")], t)
-            }(u.Component),
-            ce = n("3zLD"),
-            le = n("3T7g"),
-            ue = (n("VH0v"), function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.product,
-                        t = this.props.owner;
-                    if (t) return u.createElement(b._32, {
-                        className: "ticket-description"
-                    }, u.createElement(b.C, {
-                        border: !0,
-                        elevation: 1
-                    }, u.createElement("div", {
-                        className: "ticket-description__banner-image",
-                        style: {
-                            backgroundImage: "url(" + t.bannerImageURL
-                        }
-                    }, u.createElement(b._8, {
-                        className: "ticket-description__broadcaster-info",
-                        textAlign: b._42.Center,
-                        display: b.R.Flex,
-                        flexDirection: b.T.Column,
-                        alignItems: b.c.Center,
-                        flexWrap: b.U.NoWrap,
-                        padding: {
-                            x: 1,
-                            y: 3
-                        },
-                        breakpointLarge: {
-                            padding: 5
-                        }
-                    }, u.createElement(b._2, {
-                        margin: 1,
-                        breakpointLarge: {
-                            margin: 2
-                        }
-                    }, u.createElement(b.m, {
-                        alt: t.displayName,
-                        size: 96,
-                        src: t.profileImageURL
-                    })), u.createElement(b._2, {
-                        margin: 1,
-                        breakpointLarge: {
-                            margin: 1
-                        }
-                    }, u.createElement(b.Q, {
-                        type: b._46.H4,
-                        bold: !0,
-                        color: b.K.Overlay
-                    }, t.displayName)), u.createElement(b._8, {
-                        margin: 1,
-                        breakpointLarge: {
-                            margin: 2
-                        }
-                    }, u.createElement(b.Q, {
-                        type: b._46.H5,
-                        color: b.K.Overlay
-                    }, e.displayName)))), u.createElement(b.D, null, u.createElement(b._32, {
-                        borderBottom: !0,
-                        textAlign: b._42.Center,
-                        background: b.n.Alt,
-                        padding: 2
-                    }, this.props.renderPrice()), u.createElement(b._32, {
-                        className: "ticket-description__description",
-                        padding: {
-                            x: 1,
-                            bottom: 2
-                        },
-                        textAlign: b._42.Left,
-                        background: b.n.Alt
-                    }, u.createElement(b._3, {
-                        padding: {
-                            y: 1
-                        }
-                    }, u.createElement(b.Q, {
-                        className: "ticket-description__description__line-item",
-                        bold: !0
-                    }, Fe["Subscription benefits"]())), u.createElement(b.Q, {
-                        className: "ticket-description__description__line-item"
-                    }, Fe["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(b.Q, {
-                        className: "ticket-description__description__line-item"
-                    }, Fe["Ad-free (with limited exceptions)"]()), u.createElement(b.Q, {
-                        className: "ticket-description__description__line-item"
-                    }, Fe["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(b.Q, {
-                        className: "ticket-description__description__line-item"
-                    }, Fe["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(b.Q, {
-                        className: "ticket-description__description__line-item"
-                    }, Fe["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()))))
-                }, t = c.__decorate([Object(G.d)("TicketDescription")], t)
-            }(u.Component)),
-            de = n("yWCw"),
-            me = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        collapsed: !0
-                    }, t.toggleCollapsed = function() {
-                        t.setState(function(e) {
-                            return {
-                                collapsed: !e.collapsed
-                            }
-                        })
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    return this.props.collapsable ? u.createElement(u.Fragment, null, u.createElement(b._8, {
-                        display: b.R.Hide,
-                        breakpointLarge: {
-                            display: b.R.Block
-                        }
-                    }, u.createElement(b.D, null, this.props.children)), u.createElement(b._8, {
-                        display: b.R.Block,
-                        breakpointLarge: {
-                            display: b.R.Hide
-                        }
-                    }, this.state.collapsed && u.createElement(b._6, {
-                        onClick: this.toggleCollapsed,
-                        hover: !1,
-                        alpha: !0
-                    }, u.createElement(b._8, {
-                        fullWidth: !0,
-                        textAlign: b._42.Center,
-                        alignItems: b.c.Center,
-                        padding: {
-                            y: 1
-                        }
-                    }, u.createElement(b.Q, {
-                        type: b._46.Span,
-                        color: b.K.Link
-                    }, this.props.showButtonLabel))), !this.state.collapsed && u.createElement(b.D, null, this.props.children, u.createElement(b._6, {
-                        onClick: this.toggleCollapsed,
-                        hover: !1,
-                        alpha: !0
-                    }, u.createElement(b._8, {
-                        fullWidth: !0,
-                        textAlign: b._42.Center,
-                        alignItems: b.c.Center,
-                        padding: {
-                            y: 1
-                        }
-                    }, u.createElement(b.Q, {
-                        type: b._46.Span,
-                        color: b.K.Link
-                    }, this.props.showButtonLabel)))))) : u.createElement(b.D, null, this.props.children)
-                }, t
-            }(u.Component),
-            pe = (n("eVow"), function(e) {
-                return u.createElement(b._8, {
-                    className: "ticket-wrapper__container",
-                    margin: {
-                        bottom: 2
-                    },
-                    breakpointLarge: {
-                        margin: 0
-                    }
-                }, u.createElement(b.C, {
-                    elevation: 1
-                }, e.children))
-            }),
-            fe = (n("+OOL"), function() {
-                return u.createElement(pe, null, u.createElement(b._8, {
-                    className: "error-description__header",
-                    padding: 2
-                }, u.createElement(b._32, {
-                    fullHeight: !0,
-                    background: b.n.Alt2
-                }, u.createElement(de.a, null))), u.createElement(me, {
-                    collapsable: !0
-                }, u.createElement(b._32, {
-                    className: "error-description__body",
-                    padding: 2,
-                    borderTop: !0
-                }, u.createElement(b._32, {
-                    fullHeight: !0,
-                    background: b.n.Alt2
-                }, u.createElement(de.a, null)))))
-            }),
-            ge = (n("kgE+"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        collapsed: !0
-                    }, t.toggleCollapsed = function() {
-                        t.setState(function(e) {
-                            return {
-                                collapsed: !e.collapsed
-                            }
-                        })
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.product,
-                        t = this.props.owner;
-                    if (t) return u.createElement(b._32, {
-                        className: "mobile-ticket-description",
-                        fullWidth: !0,
-                        margin: {
-                            bottom: 2
-                        }
-                    }, u.createElement(b.C, {
-                        border: !0,
-                        elevation: 1
-                    }, u.createElement("div", {
-                        className: "mobile-ticket-description__banner-image",
-                        style: {
-                            backgroundImage: "url(" + t.bannerImageURL
-                        }
-                    }, u.createElement(b._32, {
-                        margin: {
-                            top: 2
-                        },
-                        display: b.R.Flex,
-                        flexDirection: b.T.Column,
-                        alignItems: b.c.Center
-                    }, u.createElement(b.m, {
-                        alt: t.displayName,
-                        size: 96,
-                        src: t.profileImageURL
-                    }))), u.createElement(b._32, {
-                        className: "mobile-ticket-description__broadcaster-info",
-                        textAlign: b._42.Center,
-                        display: b.R.Flex,
-                        flexDirection: b.T.Column,
-                        alignItems: b.c.Center,
-                        flexWrap: b.U.NoWrap,
-                        margin: {
-                            top: 2
-                        }
-                    }, u.createElement(b._32, {
-                        background: b.n.Alt,
-                        fullWidth: !0
-                    }, u.createElement(b._8, {
-                        margin: 1
-                    }, u.createElement(b.Q, {
-                        type: b._46.H4,
-                        bold: !0
-                    }, t.displayName)), u.createElement(b._8, {
-                        margin: 1
-                    }, u.createElement(b.Q, {
-                        type: b._46.H5
-                    }, e.displayName)), u.createElement(b._8, {
-                        margin: 1
-                    }, this.props.renderPrice())), this.state.collapsed && u.createElement(b._6, {
-                        onClick: this.toggleCollapsed,
-                        hover: !1,
-                        alpha: !0
-                    }, u.createElement(b._32, {
-                        fullWidth: !0,
-                        textAlign: b._42.Center,
-                        alignItems: b.c.Center,
-                        padding: {
-                            y: 1
-                        }
-                    }, u.createElement(b.Q, {
-                        type: b._46.Span,
-                        color: b.K.Link
-                    }, Object(d.d)("Show Subcription Benefits", "MobileTicketDescription"))))), u.createElement(b.D, null, !this.state.collapsed && u.createElement(u.Fragment, null, u.createElement(b._32, {
-                        className: "mobile-ticket-description__description",
-                        padding: {
-                            x: 1,
-                            bottom: 1
-                        },
-                        textAlign: b._42.Left,
-                        background: b.n.Alt,
-                        borderTop: !0
-                    }, u.createElement(b._3, {
-                        padding: {
-                            y: 1
-                        }
-                    }, u.createElement(b.Q, {
-                        className: "mobile-ticket-description__description__line-item",
-                        bold: !0
-                    }, Fe["Subscription benefits"]())), u.createElement(b.Q, {
-                        className: "mobile-ticket-description__description__line-item"
-                    }, Fe["Directly support the broadcaster"]()), e.hasAdFree && u.createElement(b.Q, {
-                        className: "mobile-ticket-description__description__line-item"
-                    }, Fe["Ad-free (with limited exceptions)"]()), u.createElement(b.Q, {
-                        className: "mobile-ticket-description__description__line-item"
-                    }, Fe["Chat during subscriber-only mode"]()), e.hasFastChat && u.createElement(b.Q, {
-                        className: "mobile-ticket-description__description__line-item"
-                    }, Fe["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && u.createElement(b.Q, {
-                        className: "mobile-ticket-description__description__line-item"
-                    }, Fe["Access to VODs"]()), this.props.renderSubBadges(), this.props.renderSubEmotes()), u.createElement(b._6, {
-                        onClick: this.toggleCollapsed,
-                        hover: !1,
-                        alpha: !0
-                    }, u.createElement(b._32, {
-                        fullWidth: !0,
-                        textAlign: b._42.Center,
-                        alignItems: b.c.Center,
-                        padding: {
-                            y: 1
-                        }
-                    }, u.createElement(b.Q, {
-                        type: b._46.Span,
-                        color: b.K.Link
-                    }, Object(d.d)("Hide Subcription Benefits", "MobileTicketDescription"))))))))
-                }, t = c.__decorate([Object(G.d)("TicketDescription")], t)
-            }(u.Component)),
-            he = (n("JbfA"), function() {
-                return u.createElement(pe, null, u.createElement(b._8, {
-                    className: "placeholder-description__header",
-                    padding: 2
-                }, u.createElement(b._32, {
-                    fullHeight: !0,
-                    background: b.n.Alt2
-                })), u.createElement(me, {
-                    collapsable: !0
-                }, u.createElement(b._32, {
-                    padding: 2,
-                    borderTop: !0
-                }, u.createElement(b._14, {
-                    lineCount: 30
-                }))))
-            }),
-            ve = (n("40wk"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.turboBenefitsList = [{
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_ad-free.png",
-                        benefitHeader: Ae["Ad-Free*"](),
-                        benefitDescription: Ae["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
-                    }, {
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_custom-emotes.png",
-                        benefitHeader: Ae["Custom Emoticon Set"](),
-                        benefitDescription: Ae["Express your emotions with an exclusive set of faces."]()
-                    }, {
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png",
-                        benefitHeader: Ae.Badge(),
-                        benefitDescription: Ae["Show everyone how Turbo you are with a shiny new chat badge."]()
-                    }, {
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_chat-color.png",
-                        benefitHeader: Ae["Extended Chat Colors"](),
-                        benefitDescription: Ae["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
-                    }, {
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_storage.png",
-                        benefitHeader: Ae["Increased Video Storage"](),
-                        benefitDescription: Ae["Save your past broadcasts on Twitch for 60 days."]()
-                    }], t.renderTurboBenefit = function(e) {
-                        return u.createElement(b.L, {
-                            cols: 12,
-                            key: e.benefitHeader
-                        }, u.createElement(b._32, {
-                            margin: {
-                                top: 2
-                            }
-                        }, u.createElement(b.Y, null, u.createElement(b.L, {
-                            cols: 4
-                        }, u.createElement(b.N, {
-                            src: e.imgSrc,
-                            alt: e.benefitHeader
-                        })), u.createElement(b.L, {
-                            cols: 8
-                        }, u.createElement(b.Q, {
-                            type: b._46.H4,
-                            bold: !0
-                        }, e.benefitHeader), u.createElement(b.Q, {
-                            type: b._46.P
-                        }, e.benefitDescription)))))
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    var e = Ae.Features();
-                    return u.createElement(b._32, {
-                        className: "turbo-mobile-ticket-description",
-                        background: b.n.Alt2,
-                        border: !0,
-                        padding: 2,
-                        elevation: 1,
-                        fullWidth: !0
-                    }, u.createElement(b.Y, null, u.createElement(b.L, {
-                        cols: 12
-                    }, u.createElement(b.Q, {
-                        type: b._46.H2,
-                        bold: !0
-                    }, e)), u.createElement(b.L, {
-                        cols: 12
-                    }, u.createElement(b.Q, {
-                        type: b._46.H4
-                    }, Ae["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(b.L, {
-                        cols: 12
-                    }, u.createElement(b._32, {
-                        borderBottom: !0,
-                        textAlign: b._42.Center,
-                        background: b.n.Alt,
-                        margin: {
-                            top: 2
-                        },
-                        padding: 2
-                    }, this.props.renderPrice()))))
-                }, t = c.__decorate([Object(G.d)("TicketDescription", {
-                    autoReportInteractive: !0
-                })], t)
-            }(u.PureComponent)),
-            be = (n("Mn81"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.turboBenefitsList = [{
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_ad-free.png",
-                        benefitHeader: Ae["Ad-Free*"](),
-                        benefitDescription: Ae["No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers."]()
-                    }, {
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_custom-emotes.png",
-                        benefitHeader: Ae["Custom Emoticon Set"](),
-                        benefitDescription: Ae["Express your emotions with an exclusive set of faces."]()
-                    }, {
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png",
-                        benefitHeader: Ae.Badge(),
-                        benefitDescription: Ae["Show everyone how Turbo you are with a shiny new chat badge."]()
-                    }, {
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_chat-color.png",
-                        benefitHeader: Ae["Extended Chat Colors"](),
-                        benefitDescription: Ae["Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up."]()
-                    }, {
-                        imgSrc: "https://www.twitch.tv/images/xarth/pages/turbo/features_storage.png",
-                        benefitHeader: Ae["Increased Video Storage"](),
-                        benefitDescription: Ae["Save your past broadcasts on Twitch for 60 days."]()
-                    }], t.renderTurboBenefit = function(e) {
-                        return u.createElement(b.L, {
-                            cols: 12,
-                            key: e.benefitHeader
-                        }, u.createElement(b._32, {
-                            margin: {
-                                top: 2
-                            }
-                        }, u.createElement(b.Y, null, u.createElement(b.L, {
-                            cols: 4
-                        }, u.createElement(b.N, {
-                            src: e.imgSrc,
-                            alt: e.benefitHeader
-                        })), u.createElement(b.L, {
-                            cols: 8
-                        }, u.createElement(b.Q, {
-                            type: b._46.H4,
-                            bold: !0
-                        }, e.benefitHeader), u.createElement(b.Q, {
-                            type: b._46.P
-                        }, e.benefitDescription)))))
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    var e = Ae.Features();
-                    return u.createElement(b._32, {
-                        className: "turbo-ticket-description",
-                        background: b.n.Alt2,
-                        border: !0,
-                        padding: 2,
-                        elevation: 1
-                    }, u.createElement(b.Y, null, u.createElement(b.L, {
-                        cols: 12
-                    }, u.createElement(b.Q, {
-                        type: b._46.H2,
-                        bold: !0
-                    }, e)), u.createElement(b.L, {
-                        cols: 12
-                    }, u.createElement(b.Q, {
-                        type: b._46.H4
-                    }, Ae["This list doesn’t even include how much of a baller you’ll become after upgrading."]())), this.turboBenefitsList.map(this.renderTurboBenefit), u.createElement(b.L, {
-                        cols: 12
-                    }, u.createElement(b._32, {
-                        borderBottom: !0,
-                        textAlign: b._42.Center,
-                        background: b.n.Alt,
-                        margin: {
-                            top: 2
-                        },
-                        padding: 2
-                    }, this.props.renderPrice()))))
-                }, t = c.__decorate([Object(G.d)("TicketDescription", {
-                    autoReportInteractive: !0
-                })], t)
-            }(u.PureComponent)),
-            ye = n("7LIQ"),
-            ke = n("Tzcg"),
-            _e = n("3iBR"),
-            Ee = n("D0Fd"),
-            Se = n("c84M"),
-            Ne = n("FDYX"),
-            we = n("PGoF"),
-            Ce = (n("iLMR"), "skin-selector"),
-            Oe = "igc-selector",
-            xe = "badge-selector",
-            Te = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.renderHeroSkins = function() {
-                        if (t.props.owner && !t.props.data.loading && !t.props.data.error) {
-                            var e = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.heroSkins.map(function(e) {
-                                return u.createElement(b._2, {
-                                    margin: {
-                                        x: .5
-                                    },
-                                    key: "skin-" + e.id,
-                                    display: b.R.Flex,
-                                    flexDirection: b.T.Row,
-                                    alignItems: b.c.Center,
-                                    "data-test-selector": Ce
-                                }, u.createElement("li", null, u.createElement(Ee.a, {
-                                    imageURL: e.imageURL,
-                                    size: Ee.b.Small
-                                })))
-                            }) : null;
-                            return u.createElement(b._2, {
-                                display: b.R.Flex,
-                                flexDirection: b.T.Row,
-                                flexWrap: b.U.Wrap,
-                                justifyContent: b._7.Center,
-                                alignItems: b.c.Center
-                            }, u.createElement("ul", null, e))
-                        }
-                    }, t.renderInGameContent = function() {
-                        if (t.props.owner && !t.props.data.loading && !t.props.data.error) {
-                            var e = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.inGameContent.map(function(e) {
-                                return u.createElement(b.m, {
-                                    key: "igc-" + e.id,
-                                    src: e.imageURL,
-                                    alt: e.name,
-                                    size: 64,
-                                    "data-test-selector": Oe
-                                })
-                            }) : null;
-                            return u.createElement(b._8, {
-                                display: b.R.Flex,
-                                flexDirection: b.T.Row,
-                                flexWrap: b.U.Wrap,
-                                justifyContent: b._7.Center,
-                                alignItems: b.c.Center
-                            }, e)
-                        }
-                    }, t.renderSubBadges = function() {
-                        if (t.props.owner && !t.props.data.loading && !t.props.data.error) {
-                            var e = t.props.owner.broadcastBadges.map(function(e) {
-                                    return {
-                                        name: e.title,
-                                        imageURL: e.image4x
-                                    }
-                                }),
-                                n = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.badges.map(function(e) {
-                                    return {
-                                        name: e.name,
-                                        imageURL: e.imageURL
-                                    }
-                                }) : null;
-                            n && (e = e.concat(n));
-                            var i = e.map(function(e) {
-                                return u.createElement(b._2, {
-                                    margin: {
-                                        x: 1
-                                    },
-                                    key: "access-badge-" + e.name
-                                }, u.createElement("li", null, u.createElement(b.m, {
-                                    src: e.imageURL,
-                                    alt: e.name,
-                                    size: 36,
-                                    "data-test-selector": xe
-                                })))
-                            });
-                            return u.createElement(b._8, null, u.createElement(b.Q, {
-                                className: "ticket-description__description__line-item"
-                            }, Object(d.d)("{numBadges, number} All-Access Pass Twitch Badges:", {
-                                numBadges: 2
-                            }, "EsportsTicketDescription")), u.createElement(b._2, {
-                                display: b.R.Flex,
-                                flexWrap: b.U.Wrap
-                            }, u.createElement("ul", null, i)))
-                        }
-                    }, t.renderSubEmotes = function() {
-                        if (t.props.owner) {
-                            var e = t.props.owner.subscriptionProducts.map(function(e) {
-                                return e.emotes
-                            }).reduce(function(e, t) {
-                                return e.concat(t)
-                            }, []);
-                            if (0 !== e.length) return u.createElement(b._8, null, u.createElement(b.Q, {
-                                className: "ticket-description__description__line-item"
-                            }, Object(d.d)("{numEmotes, number} All-Access Pass Twitch Emotes:", {
-                                numEmotes: e.length
-                            }, "EsportsTicketDescription")), u.createElement(ye.a, {
-                                emoteSet: {
-                                    id: "",
-                                    emotes: Object(ke.b)(e)
-                                },
-                                onClickEmote: void 0,
-                                locked: !1
-                            }))
-                        }
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.owner) {
-                        var e = this.props.product.price;
-                        return this.props.owner && Object(Ne.d)(this.props.owner.subscriptionProducts) && (e = Object(Ne.a)(this.props.owner.subscriptionProducts[0])), u.createElement(b._32, {
-                            className: "ticket-description"
-                        }, u.createElement(b.C, {
-                            border: !0,
-                            elevation: 1
-                        }, u.createElement(b._8, {
-                            className: "ticket-description__banner-image",
-                            padding: 3
-                        }, u.createElement("img", {
-                            src: _e.c + "/owl-2017/all-access-logo.svg",
-                            alt: Object(d.d)("Overwatch League All-Access Pass on Twitch", "EsportsTicketDescription"),
-                            height: "80px"
-                        })), u.createElement(b.D, null, u.createElement(b._32, {
-                            borderBottom: !0,
-                            textAlign: b._42.Center,
-                            background: b.n.Alt,
-                            padding: 2
-                        }, u.createElement(b.Q, {
-                            type: b._46.H4,
-                            "data-test-selector": "esport-ticket-description-price"
-                        }, Object(d.d)("{price} {interval}", {
-                            price: u.createElement(b.Q, {
-                                type: b._46.Span,
-                                bold: !0
-                            }, e),
-                            interval: "One-Time Purchase"
-                        }, "EsportsTicketDescription"))), u.createElement(b._32, {
-                            className: "ticket-description__description",
-                            padding: {
-                                x: 1,
-                                y: 2
-                            },
-                            textAlign: b._42.Left,
-                            background: b.n.Alt
-                        }, Object(Ne.d)(this.props.owner.subscriptionProducts) && u.createElement(b._8, {
-                            margin: {
-                                bottom: 2
-                            }
-                        }, u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            bold: !0,
-                            "data-test-selector": "prime-language"
-                        }, Object(d.d)("Twitch Prime", "EsportsTicketDescription")), u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            "data-test-selector": "prime-language"
-                        }, Object(d.d)("You're saving $10 off of the {price} price", {
-                            price: this.props.product.price
-                        }, "EsportsTicketDescription")), u.createElement(b.Q, {
-                            fontSize: b.V.Size7,
-                            className: "ticket-description__description__line-item",
-                            "data-test-selector": "prime-language"
-                        }, u.createElement(b.O, {
-                            to: Se.b
-                        }, Object(d.d)("Offer available for a limited time. Terms and conditions apply", "EsportsTicketDescription")))), u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            bold: !0,
-                            "data-test-selector": "ticket-feature"
-                        }, Object(d.d)("Overwatch League All-Access Pass Benefits", "EsportsTicketDescription")), u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            "data-test-selector": "ticket-feature"
-                        }, Object(d.d)("Exclusive Command Center Stream", "EsportsTicketDescription")), u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            "data-test-selector": "ticket-feature"
-                        }, Object(d.d)("Match Analysis Videos by Players", "EsportsTicketDescription")), u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            "data-test-selector": "ticket-feature"
-                        }, Object(d.d)("Participate in Post-Match Q&A", "EsportsTicketDescription")), u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            "data-test-selector": "ticket-feature"
-                        }, Object(d.d)("Passholder-Only Chat Access", "EsportsTicketDescription")), u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            "data-test-selector": "ticket-feature"
-                        }, Object(d.d)("Ad-Free Viewing on Overwatch League", "EsportsTicketDescription")), u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            "data-test-selector": "ticket-feature"
-                        }, Object(d.d)("Overwatch In-Game Content:", "EsportsTicketDescription")), this.renderHeroSkins(), this.renderInGameContent(), this.renderSubBadges(), this.renderSubEmotes(), u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item",
-                            "data-test-selector": "disclaimer"
-                        }, Object(d.d)("All-Access benefits last up to the start of the 2019 Overwatch League Season. Twitch emotes, badges, and in-game content are yours to keep forever!", "EsportsTicketDescription"))))))
-                    }
-                }, t
-            }(u.PureComponent),
-            De = Object(ce.compose)(Object(p.a)(we, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            channelID: e.owner.id
-                        }
-                    }
-                }
-            }))(Te),
-            Re = n("O6CN"),
-            Fe = {
-                "Subscription benefits": function() {
-                    return Object(d.d)("Subscription benefits", "TicketDescription")
-                },
-                "Directly support the broadcaster": function() {
-                    return Object(d.d)("Directly support the broadcaster", "TicketDescription")
-                },
-                "Ad-free (with limited exceptions)": function() {
-                    return Object(d.d)("Ad-free (with limited exceptions)", "TicketDescription")
-                },
-                "Chat during subscriber-only mode": function() {
-                    return Object(d.d)("Chat during subscriber-only mode", "TicketDescription")
-                },
-                "Not affected by chat slow mode": function() {
-                    return Object(d.d)("Not affected by chat slow mode", "TicketDescription")
-                },
-                "Access to VODs": function() {
-                    return Object(d.d)("Access to VODs", "TicketDescription")
-                },
-                "Subscriber Badges:": function() {
-                    return Object(d.d)("Subscriber Badges:", "TicketDescription")
-                },
-                "Subscriber Emotes:": function() {
-                    return Object(d.d)("Subscriber Emotes:", "TicketDescription")
-                }
-            },
-            Ae = {
-                "Ad-Free*": function() {
-                    return Object(d.d)("Ad-Free*", "TicketDescription")
-                },
-                "Custom Emoticon Set": function() {
-                    return Object(d.d)("Custom Emoticon Set", "TicketDescription")
-                },
-                Badge: function() {
-                    return Object(d.d)("Badge", "TicketDescription")
-                },
-                "Extended Chat Colors": function() {
-                    return Object(d.d)("Extended Chat Colors", "TicketDescription")
-                },
-                "Increased Video Storage": function() {
-                    return Object(d.d)("Increased Video Storage", "TicketDescription")
-                },
-                "No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers.": function() {
-                    return Object(d.d)("No pre-rolls, no mid-rolls, no companions, no display ads. All you see is front-page takeovers.", "TicketDescription")
-                },
-                "Express your emotions with an exclusive set of faces.": function() {
-                    return Object(d.d)("Express your emotions with an exclusive set of faces.", "TicketDescription")
-                },
-                "Show everyone how Turbo you are with a shiny new chat badge.": function() {
-                    return Object(d.d)("Show everyone how Turbo you are with a shiny new chat badge.", "TicketDescription")
-                },
-                "Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up.": function() {
-                    return Object(d.d)("Sick and tired of getting suspended because you’re chatting in SpringGreen? Change it up.", "TicketDescription")
-                },
-                "Save your past broadcasts on Twitch for 60 days.": function() {
-                    return Object(d.d)("Save your past broadcasts on Twitch for 60 days.", "TicketDescription")
-                },
-                Features: function() {
-                    return Object(d.d)("Features", "TicketDescription")
-                },
-                "This list doesn’t even include how much of a baller you’ll become after upgrading.": function() {
-                    return Object(d.d)("This list doesn’t even include how much of a baller you’ll become after upgrading.", "TicketDescription")
-                }
-            },
-            Ie = {
-                "One Time": function() {
-                    return Object(d.d)("One Time", "TicketDescription")
-                },
-                Year: function() {
-                    return Object(d.d)("Year", "TicketDescription")
-                },
-                Month: function() {
-                    return Object(d.d)("Month", "TicketDescription")
-                }
-            },
-            Pe = function(e, t) {
-                return Object(d.d)("{price} / {interval}", {
-                    price: u.createElement(b.Q, {
-                        type: b._46.Span,
-                        bold: !0
-                    }, e),
-                    interval: t
-                }, "TicketDescription")
-            },
-            Ue = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.renderPrice = function() {
-                        var e;
-                        switch (t.props.data.product.interval.unit) {
-                            case je.OneTime:
-                                e = Ie["One Time"]();
-                                break;
-                            case je.Year:
-                                e = Ie.Year();
-                                break;
-                            case je.Month:
-                            default:
-                                e = Ie.Month()
-                        }
-                        return u.createElement(b.Q, {
-                            type: b._46.H4
-                        }, Pe(t.props.data.product.price, e))
-                    }, t.renderSubBadges = function() {
-                        var e = t.props.data.product;
-                        if (!e || !e.owner) return null;
-                        var n = e.owner.broadcastBadges.filter(function(e) {
-                            return "subscriber" === e.setID
-                        }).sort(function(e, t) {
-                            return parseInt(e.version, 10) < parseInt(t.version, 10) ? -1 : 1
-                        });
-                        if (!n.length) return null;
-                        var i = n.map(function(e) {
-                            return u.createElement(b._8, {
-                                key: e.setID + "/" + e.version,
-                                margin: .5
-                            }, u.createElement(le.a, {
-                                badge: e
-                            }))
-                        });
-                        return u.createElement(u.Fragment, null, u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item"
-                        }, Fe["Subscriber Badges:"]()), u.createElement(b._8, {
-                            display: b.R.Flex,
-                            flexWrap: b.U.Wrap,
-                            justifyContent: b._7.Center
-                        }, i))
-                    }, t.renderSubEmotes = function() {
-                        if (!t.props.data.product || !t.props.data.product.owner) return null;
-                        var e = t.props.data.product.owner.subscriptionProducts.filter(function(e) {
-                            return (e.tier || "") <= (e.tier || "")
-                        }).map(function(e) {
-                            return e.emotes
-                        }).reduce(function(e, t) {
-                            return e.concat(t)
-                        }, []);
-                        return 0 === e.length ? null : u.createElement(u.Fragment, null, u.createElement(b.Q, {
-                            className: "ticket-description__description__line-item"
-                        }, e.length, " ", Fe["Subscriber Emotes:"]()), u.createElement(ye.a, {
-                            emoteSet: {
-                                id: "",
-                                emotes: Object(ke.b)(e)
-                            },
-                            onClickEmote: void 0,
-                            locked: !1
-                        }))
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.data.product,
-                        t = e && !e.owner && "turbo" === e.type;
-                    return e && e.owner && Object(k.a)(e.owner.id, this.props.sessionUser) ? u.createElement(De, {
-                        owner: e.owner,
-                        product: e
-                    }) : this.props.mobile && t ? u.createElement(ve, {
-                        renderPrice: this.renderPrice
-                    }) : t ? u.createElement(be, {
-                        renderPrice: this.renderPrice
-                    }) : e && e.owner && this.props.mobile ? u.createElement(ge, {
-                        owner: e.owner,
-                        product: e,
-                        renderPrice: this.renderPrice,
-                        renderSubBadges: this.renderSubBadges,
-                        renderSubEmotes: this.renderSubEmotes
-                    }) : e && e.owner ? u.createElement(ue, {
-                        owner: e.owner,
-                        product: e,
-                        renderPrice: this.renderPrice,
-                        renderSubBadges: this.renderSubBadges,
-                        renderSubEmotes: this.renderSubEmotes
-                    }) : this.props.data.loading ? u.createElement(he, null) : u.createElement(fe, null)
-                }, t
-            }(u.Component),
-            Le = Object(ce.compose)(Object(G.d)("TicketDescription"), Object(p.a)(Re, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            productName: e.productName
-                        }
-                    }
-                }
-            }))(Ue);
-        var je, Be = Object(i.b)(function(e) {
-                return {
-                    sessionUser: Object(o.c)(e)
-                }
-            })(Le),
-            Me = n("Heyg"),
-            He = function(e) {
-                var t;
-                return t = e.canGift ? u.createElement(b.Q, null, Object(d.d)("You are buying a single month {price} Gift Subscription for {recipientName}.", {
-                    price: e.price,
-                    recipientName: u.createElement(b.Q, {
-                        type: b._46.Span,
-                        bold: !0
-                    }, e.recipientDisplayName || "")
-                }, "PurchaseSubInfo")) : u.createElement(b.Q, {
-                    color: b.K.Error
-                }, Object(d.d)("Sorry, a Gift Subscription to this channel is not available for {recipientName}", {
-                    recipientName: u.createElement(b.Q, {
-                        bold: !0
-                    }, e.recipientDisplayName || "")
-                }, "PurchaseSubInfo")), u.createElement(b._32, {
-                    background: b.n.Base,
-                    borderMarked: !0,
-                    padding: 1,
-                    margin: {
-                        y: 1
-                    }
-                }, t)
-            },
-            We = n("CIox"),
-            Ge = (n("pOYM"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.goBackToChannel = function() {
-                        (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    return u.createElement(b._8, {
-                        className: "gift-sub-receipt__container",
-                        padding: {
-                            y: 2
-                        },
-                        margin: {
-                            x: 2
-                        }
-                    }, u.createElement(b._8, null, u.createElement(b.Q, {
-                        type: b._46.H2,
-                        bold: !0
-                    }, Object(d.d)("Purchase Successful", "GiftSubReceipt"))), u.createElement(b._8, {
-                        padding: {
-                            y: 3
-                        }
-                    }, u.createElement(b.Q, null, Object(d.d)("You have purchased a {price} Gift Subscription for <x:strong>{recipientDisplayName}</x:strong>", {
-                        price: Object(d.e)(this.props.invoicePrice / 100, {
-                            style: "currency",
-                            currency: this.props.invoiceCurrency
-                        }),
-                        recipientDisplayName: this.props.recipientDisplayName || "",
-                        "x:strong": function(e) {
-                            return u.createElement(b.Q, {
-                                key: "recipient-display-name",
-                                type: b._46.Span,
-                                bold: !0
-                            }, e)
-                        }
-                    }, "GiftSubReceipt"))), u.createElement(b._32, {
-                        borderTop: !0,
-                        borderBottom: !0,
-                        padding: {
-                            y: 3
-                        }
-                    }, u.createElement(b._8, {
-                        className: "gift-sub-receipt__label",
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, {
-                        bold: !0
-                    }, Object(d.d)("Gift Status", "GiftSubReceipt"))), u.createElement(b._8, {
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, null, Object(d.d)("Active", "GiftSubReceipt")))), u.createElement(b._32, {
-                        borderBottom: !0,
-                        padding: {
-                            y: 3
-                        }
-                    }, u.createElement(b._8, {
-                        className: "gift-sub-receipt__label",
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, {
-                        bold: !0
-                    }, Object(d.d)("Your Invoice Total", "GiftSubReceipt"))), u.createElement(b._8, {
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, null, Object(d.e)(this.props.invoicePrice / 100, {
-                        style: "currency",
-                        currency: this.props.invoiceCurrency
-                    })))), u.createElement(b._8, {
-                        margin: {
-                            y: 3
-                        }
-                    }, u.createElement(b.v, {
-                        onClick: this.goBackToChannel
-                    }, Object(d.d)("Go back to {displayName}", {
-                        displayName: this.props.productOwnerDisplayName
-                    }, "GiftSubReceipt"))))
-                }, t
-            }(u.Component)),
-            Ve = Object(We.f)(Ge),
-            ze = n("j6Ui"),
-            qe = function(e) {
-                return u.createElement(b._32, {
-                    background: b.n.Base,
-                    borderMarked: !0,
-                    padding: 1,
-                    margin: {
-                        y: 1
-                    }
-                }, u.createElement(b._8, {
-                    margin: {
-                        bottom: .5
-                    }
-                }, u.createElement(b.Q, null, Object(d.d)("You are currently subscribed for free with Twitch Prime. If you choose to upgrade to the {newPrice} subscription, you will be immediately billed for {newPrice} and your new subscription will auto-renew every month.", {
-                    newPrice: Object(d.e)(e.newPrice / 100, {
-                        style: "currency",
-                        currency: e.newCurrency
-                    })
-                }, "UpgradePrimeWarning"))), u.createElement(b._8, {
-                    margin: {
-                        bottom: .5
-                    }
-                }, u.createElement(b.Q, null, Object(d.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30-days after you last used your free subscription.", "UpgradePrimeWarning"))), u.createElement(b.Q, null, Object(d.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
-            },
-            Qe = function(e) {
-                return u.createElement(b._32, {
-                    background: b.n.Base,
-                    borderMarked: !0,
-                    padding: 1,
-                    margin: {
-                        y: 1
-                    }
-                }, u.createElement(b._8, {
-                    margin: {
-                        bottom: .5
-                    }
-                }, u.createElement(b.Q, null, Object(d.d)("You are currently subscribed to the {originalPrice} subscription plan. If you choose to upgrade to the {newPrice} subscription plan, you will be immediately billed for {newPrice} and your currently active subscription plan for {originalPrice} will not renew any further.", {
-                    originalPrice: Object(d.e)(e.originalPrice / 100, {
-                        style: "currency",
-                        currency: e.originalCurrency
-                    }),
-                    newPrice: Object(d.e)(e.newPrice / 100, {
-                        style: "currency",
-                        currency: e.newCurrency
-                    })
-                }, "UpgradeTierWarning"))), u.createElement(b._8, {
-                    margin: {
-                        bottom: .5
-                    }
-                }, u.createElement(b.Q, null, Object(d.d)("Please note that pro-rated refunds cannot be offered for the remaining time on your {originalPrice} subscription plan", {
-                    originalPrice: Object(d.e)(e.originalPrice / 100, {
-                        style: "currency",
-                        currency: e.originalCurrency
-                    })
-                }, "UpgradeTierWarning"))), u.createElement(b.Q, null, Object(d.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
-            },
-            Ye = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.renderOneMonthFree = function() {
-                        var e = new Date;
-                        null !== t.props.endsAt && (e = Object(ze.c)(t.props.endsAt));
-                        var n = new Date(e);
-                        return n.setMonth(e.getMonth() + 1), u.createElement(b._32, {
-                            background: b.n.Base,
-                            borderMarked: !0,
-                            padding: 1,
-                            margin: {
-                                y: 1
-                            }
-                        }, u.createElement(b.Q, null, Object(d.d)("Your next month is on us. You will be charged when your free month ends on <x:strong>{date}</x:strong>.", {
-                            date: Object(d.c)(n, "short"),
-                            "x:strong": function(e) {
-                                return u.createElement(b.Q, {
-                                    type: b._46.Span,
-                                    bold: !0
-                                }, e)
-                            }
-                        }, "PersonalSubPurchaseInfo")))
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    return u.createElement(b._8, null, this.props.isOneMonthFreeEligible && this.renderOneMonthFree(), this.tierUpgrade && u.createElement(Qe, {
-                        originalPrice: this.originalPrice,
-                        originalCurrency: "USD",
-                        newPrice: this.newPrice,
-                        newCurrency: "USD"
-                    }), this.primeUpgrade && u.createElement(qe, {
-                        newPrice: this.newPrice,
-                        newCurrency: "USD"
-                    }), this.props.hasGift && this.props.endsAt && u.createElement(b._32, {
-                        background: b.n.Base,
-                        borderMarked: !0,
-                        padding: 1,
-                        margin: {
-                            y: 1
-                        }
-                    }, u.createElement(b.Q, null, Object(d.d)("You will be charged when your Gift Subscription ends on <x:strong>{date}</x:strong>.", {
-                        date: Object(d.c)(Object(ze.c)(this.props.endsAt), "short"),
-                        "x:strong": function(e) {
-                            return u.createElement(b.Q, {
-                                type: b._46.Span,
-                                bold: !0
-                            }, e)
-                        }
-                    }, "PersonalSubPurchaseInfo"))))
-                }, Object.defineProperty(t.prototype, "tierUpgrade", {
-                    get: function() {
-                        return !(!this.props.purchase || this.props.purchase.details && (!this.props.purchase.details || "inactive" !== this.props.purchase.details.state) || !this.props.purchase.compatiblePurchases) && !!this.props.purchase.compatiblePurchases.find(function(e) {
-                            return "prime" !== e.paymentProvider
-                        })
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "primeUpgrade", {
-                    get: function() {
-                        return !(!this.props.purchase || this.props.purchase.details && (!this.props.purchase.details || "inactive" !== this.props.purchase.details.state) || !this.props.purchase.compatiblePurchases) && !!this.props.purchase.compatiblePurchases.find(function(e) {
-                            return "prime" === e.paymentProvider
-                        })
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "originalPrice", {
-                    get: function() {
-                        return this.props.purchase.compatiblePurchases ? this.props.purchase.compatiblePurchases[0].price : 0
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "newPrice", {
-                    get: function() {
-                        return this.props.price && this.props.price.includes("$") ? 100 * +this.props.price.replace("$", "") : 0
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), t
-            }(u.Component),
-            Ke = (n("McJK"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.goBackToChannel = function() {
-                        (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    var e;
-                    return e = this.props.giftSubEndsAt ? Object(d.d)("Your paid subscription will begin on <x:strong>{endsAt}</x:strong> after your Gift Subscription ends", {
-                        "x:strong": function(e) {
-                            return u.createElement(b.Q, {
-                                type: b._46.Span,
-                                bold: !0
-                            }, e)
-                        },
-                        endsAt: Object(d.c)(new Date(this.props.giftSubEndsAt), "long")
-                    }, "PersonalSubReceipt") : Object(d.d)("Active", "PersonalSubReceipt"), u.createElement(b._8, {
-                        className: "personal-sub-receipt",
-                        padding: {
-                            y: 2
-                        },
-                        margin: {
-                            x: 2
-                        }
-                    }, u.createElement(b._32, {
-                        borderBottom: !0,
-                        padding: {
-                            bottom: 3
-                        }
-                    }, u.createElement(b.Q, {
-                        type: b._46.H2,
-                        bold: !0
-                    }, Object(d.d)("Your Subscription", "PersonalSubReceipt"))), u.createElement(b._32, {
-                        borderBottom: !0,
-                        padding: {
-                            y: 3
-                        }
-                    }, u.createElement(b._8, {
-                        className: "personal-sub-receipt__label",
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, {
-                        bold: !0
-                    }, Object(d.d)("Subscription for", "PersonalSubReceipt"))), u.createElement(b._8, {
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, null, this.props.purchaserDisplayName))), u.createElement(b._32, {
-                        borderBottom: !0,
-                        padding: {
-                            y: 3
-                        }
-                    }, u.createElement(b._8, {
-                        className: "personal-sub-receipt__label",
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, {
-                        bold: !0
-                    }, Object(d.d)("Status", "PersonalSubReceipt"))), u.createElement(b._8, {
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, null, e))), u.createElement(b._32, {
-                        borderBottom: !0,
-                        padding: {
-                            y: 3
-                        }
-                    }, u.createElement(b._8, {
-                        className: "personal-sub-receipt__label",
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, {
-                        bold: !0
-                    }, Object(d.d)("Invoice Total", "PersonalSubReceipt"))), u.createElement(b._8, {
-                        display: b.R.InlineBlock
-                    }, u.createElement(b.Q, null, Object(d.e)(this.props.invoicePrice / 100, {
-                        style: "currency",
-                        currency: this.props.invoiceCurrency
-                    })))), u.createElement(b._8, {
-                        margin: {
-                            y: 3
-                        }
-                    }, u.createElement(b.v, {
-                        onClick: this.goBackToChannel
-                    }, Object(d.d)("Go back to {displayName}", {
-                        displayName: this.props.productOwnerDisplayName
-                    }, "PersonalSubReceipt"))))
-                }, t
-            }(u.Component)),
-            Ze = Object(We.f)(Ke);
-        n("gKy9");
-        ! function(e) {
-            e.Week = "WEEK", e.Month = "MONTH", e.Year = "YEAR", e.OneTime = "ONE_TIME"
-        }(je || (je = {}));
-        var $e = function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.state = {
-                    giftSubPurchased: !1
-                }, t.trackPaymentFormInteraction = function(e) {
-                    var n, i, r = {
-                        channelLogin: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.login,
-                        channelId: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.id,
-                        paymentType: t.props.isGift ? S.Gifting : S.Personal,
-                        productId: t.props.data.subscriptionProduct.id,
-                        ticketPrice: t.props.data.subscriptionProduct.price,
-                        paymentFlow: e.paymentFlow,
-                        action: e.action,
-                        actionDetail: e.actionDetail || ""
-                    };
-                    i = {
-                        channel: (n = r).channelLogin,
-                        channel_id: n.channelId,
-                        payment_type: n.paymentType,
-                        payment_flow: n.paymentFlow,
-                        action: n.action,
-                        action_detail: n.actionDetail,
-                        product_id: n.productId,
-                        ticket_price: n.ticketPrice.replace(/[\$\.]/g, "")
-                    }, d.n.track(h.SpadeEventType.PaymentFormInteraction, i)
-                }, t.completePurchase = function(e) {
-                    return c.__awaiter(t, void 0, void 0, function() {
-                        var t, n;
-                        return c.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    e.recipient_id = this.props.recipientID, e.is_gift = this.props.isGift, t = "/kraken/checkout/users/" + this.props.data.currentUser.id + "/products/" + this.props.productShortName + "/purchase/complete", i.label = 1;
-                                case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, v.a.post(t, {
-                                        body: e
-                                    }, {
-                                        version: 5
-                                    })];
-                                case 2:
-                                    return (n = i.sent()).error ? (this.trackPaymentFormInteraction({
-                                        paymentFlow: e.payment_flow,
-                                        action: w.CompletePurchaseClick,
-                                        actionDetail: E.Failed
-                                    }), [2]) : (this.trackPaymentFormInteraction({
-                                        paymentFlow: e.payment_flow,
-                                        action: w.CompletePurchaseClick,
-                                        actionDetail: E.Success
-                                    }), this.props.isGift ? this.setState({
-                                        giftSubPurchased: !0,
-                                        giftPurchaseInfo: n.body
-                                    }) : this.props.data.refetch(), [3, 4]);
-                                case 3:
-                                    return i.sent(), this.trackPaymentFormInteraction({
-                                        paymentFlow: e.payment_flow,
-                                        action: w.CompletePurchaseClick,
-                                        actionDetail: E.Failed
-                                    }), [3, 4];
-                                case 4:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, t.renderPurchaseInfo = function() {
-                    if (!t.purchased) {
-                        if (t.props.isGift) return u.createElement(He, {
-                            canGift: t.props.data.subscriptionProduct.self.checkoutConfigs.canGift,
-                            recipientDisplayName: t.props.recipientDisplayName,
-                            price: t.props.data.subscriptionProduct.price
-                        });
-                        var e = t.props.data.subscriptionProduct.self.benefit;
-                        return u.createElement(Ye, {
-                            price: t.props.data.subscriptionProduct.price,
-                            hasGift: e && e.gift.isGift,
-                            purchase: t.props.data.subscriptionProduct.self.purchase,
-                            isOneMonthFreeEligible: t.props.data.subscriptionProduct.self.checkoutConfigs.isOneMonthFreeEligible,
-                            endsAt: e && e.endsAt
-                        })
-                    }
-                }, t.renderReceipt = function() {
-                    var e = t.props.data.subscriptionProduct.self.benefit,
-                        n = t.props.data.subscriptionProduct.self.purchase.details;
-                    return t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo ? u.createElement(Ve, {
-                        recipientDisplayName: t.props.recipientDisplayName,
-                        productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
-                        productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
-                        invoicePrice: t.state.giftPurchaseInfo.invoice_total.price,
-                        invoiceCurrency: "USD"
-                    }) : t.props.data.subscriptionProduct.owner && n && t.purchased ? u.createElement(Ze, {
-                        purchaserDisplayName: t.props.data.currentUser.displayName,
-                        productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
-                        productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
-                        giftSubEndsAt: e && (e.gift.isGift || null) && e.endsAt,
-                        invoicePrice: n.price,
-                        invoiceCurrency: "USD"
-                    }) : void 0
-                }, t
-            }
-            return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                this.props.latencyTracking.reportInteractive()
-            }, t.prototype.render = function() {
-                if (this.props.data.loading || this.props.data.error) return u.createElement(b._8, null);
-                var e = this.props.data.subscriptionProduct,
-                    t = this.props.data.subscriptionProduct.self.checkoutConfigs.paymentProviderConfigs,
-                    n = Object(d.d)("Buying a Channel Subscription is fast, easy and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
-                        "x:link": function(e) {
-                            return u.createElement("span", {
-                                key: "helplink"
-                            }, u.createElement(b.O, {
-                                targetBlank: !0,
-                                to: "https://help.twitch.tv/"
-                            }, e))
-                        }
-                    }, "SubsCheckoutPage"),
-                    i = Object(d.d)('You may cancel at any time by selecting "Do Not Renew" on your <x:link>subscriptions page</x:link>.', {
-                        "x:link": function(e) {
-                            return u.createElement("span", {
-                                key: "sublink"
-                            }, u.createElement(b.O, {
-                                targetBlank: !0,
-                                to: "https://www.twitch.tv/subscriptions"
-                            }, e))
-                        }
-                    }, "SubsCheckoutPage");
-                return u.createElement(b._8, {
-                    className: "checkout-payments",
-                    fullWidth: !0,
-                    padding: 3,
-                    overflow: b._11.Auto
-                }, u.createElement(b._8, {
-                    display: b.R.Flex,
-                    justifyContent: b._7.Center,
-                    flexWrap: b.U.Wrap
-                }, u.createElement(b._8, {
-                    display: b.R.Hide,
-                    alignItems: b.c.Start,
-                    margin: {
-                        bottom: 4
-                    },
-                    breakpointLarge: {
-                        display: b.R.Flex
-                    }
-                }, u.createElement(Be, {
-                    productName: this.props.productShortName
-                })), u.createElement(b._8, {
-                    className: "checkout-payments__content",
-                    breakpointLarge: {
-                        margin: {
-                            left: 4
-                        }
-                    }
-                }, !this.purchased && u.createElement(b._8, {
-                    margin: {
-                        bottom: 1
-                    },
-                    textAlign: b._42.Center,
-                    breakpointLarge: {
-                        margin: {
-                            bottom: 2
-                        },
-                        textAlign: b._42.Left
-                    }
-                }, u.createElement(C, {
-                    channel: this.props.data.subscriptionProduct.owner && this.props.data.subscriptionProduct.owner.id,
-                    isGift: this.props.isGift
-                })), u.createElement(b._8, {
-                    display: b.R.Flex,
-                    breakpointLarge: {
-                        display: b.R.Hide
-                    }
-                }, u.createElement(Be, {
-                    productName: this.props.productShortName,
-                    mobile: !0
-                })), this.purchased && this.renderReceipt(), !this.purchased && u.createElement(u.Fragment, null, this.renderPurchaseInfo(), this.showPaymenOptions && u.createElement(oe, {
-                    configs: t,
-                    countryCode: this.props.data.requestInfo.countryCode,
-                    onSuccess: this.completePurchase,
-                    productShortName: this.props.productShortName,
-                    trackPaymentFormInteraction: this.trackPaymentFormInteraction
-                }), "689376" !== e.id && u.createElement(b._8, {
-                    margin: {
-                        top: 3
-                    }
-                }, u.createElement(b.Q, null, n), u.createElement(b.Q, null, i))))))
-            }, Object.defineProperty(t.prototype, "personalSubPurchased", {
-                get: function() {
-                    return !!this.props.data.subscriptionProduct.self.purchase.details
-                },
-                enumerable: !0,
-                configurable: !0
-            }), Object.defineProperty(t.prototype, "purchased", {
-                get: function() {
-                    return !this.props.isGift && this.personalSubPurchased || this.state.giftSubPurchased
-                },
-                enumerable: !0,
-                configurable: !0
-            }), Object.defineProperty(t.prototype, "showPaymenOptions", {
-                get: function() {
-                    return !this.purchased && (!this.props.isGift || this.props.data.subscriptionProduct.self.checkoutConfigs.canGift)
-                },
-                enumerable: !0,
-                configurable: !0
-            }), t = c.__decorate([Object(G.d)("CheckoutPayments"), Object(p.a)(Me, {
-                options: function(e) {
-                    return {
-                        fetchPolicy: "network-only",
-                        variables: {
-                            productName: e.productShortName,
-                            isGift: e.isGift,
-                            recipientID: e.recipientID,
-                            includePromotion: "turbo" !== e.productShortName
-                        }
-                    }
-                }
-            })], t)
-        }(u.Component);
-        var Xe = Object(i.b)(function(e) {
+            v = n("969Z");
+        var b = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(o.d)(e)
                 }
@@ -8080,11 +8101,13 @@ webpackJsonp([36], {
                         return Object(s.f)(a.a.DashboardPage)
                     }
                 }, e)
-            })($e),
-            Je = n("tnNl"),
-            et = n("TP6L"),
-            tt = n("EaWz"),
-            nt = function(e) {
+            })(v.a),
+            y = n("CSlQ"),
+            k = n("tnNl"),
+            _ = n("TP6L"),
+            E = n("Odds"),
+            S = n("EaWz"),
+            N = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t
@@ -8100,33 +8123,33 @@ webpackJsonp([36], {
                     if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), u.createElement(u.Fragment, null);
                     var e = this.props.match.params.productShortName,
                         t = this.props.data && this.props.data.recipient || null;
-                    return u.createElement(b._8, {
-                        display: b.R.Flex,
-                        flexDirection: b.T.Column,
-                        flexWrap: b.U.NoWrap,
-                        position: b._15.Relative,
+                    return u.createElement(E._8, {
+                        display: E.R.Flex,
+                        flexDirection: E.T.Column,
+                        flexWrap: E.U.NoWrap,
+                        position: E._15.Relative,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, u.createElement(et.a, null), u.createElement(b._8, {
+                    }, u.createElement(_.a, null), u.createElement(E._8, {
                         breakpointLarge: {
-                            display: b.R.Hide
+                            display: E.R.Hide
                         }
-                    }, u.createElement(Je.a, null)), u.createElement(b._8, {
-                        display: b.R.Flex,
-                        flexWrap: b.U.NoWrap,
-                        position: b._15.Relative,
+                    }, u.createElement(k.a, null)), u.createElement(E._8, {
+                        display: E.R.Flex,
+                        flexWrap: E.U.NoWrap,
+                        position: E._15.Relative,
                         fullHeight: !0
-                    }, u.createElement(Xe, {
+                    }, u.createElement(b, {
                         productShortName: e,
                         isGift: !(!t || !t.id),
                         recipientID: t && t.id,
                         recipientDisplayName: t && t.displayName
                     })))
-                }, t = c.__decorate([Object(G.d)("SubsCheckoutPage", {
+                }, t = c.__decorate([Object(y.d)("SubsCheckoutPage", {
                     destination: g.a.SubsCheckoutPage
                 }), Object(f.a)({
                     location: h.PageviewLocation.SubsCheckoutPage
-                }), Object(p.a)(tt, {
+                }), Object(p.a)(S, {
                     options: function(e) {
                         return {
                             fetchPolicy: "cache-first",
@@ -8140,7 +8163,7 @@ webpackJsonp([36], {
                     }
                 })], t)
             }(u.Component);
-        var it = Object(i.b)(function(e) {
+        var w = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(o.d)(e)
             }
@@ -8150,9 +8173,9 @@ webpackJsonp([36], {
                     return Object(s.f)(a.a.SubsCheckoutPage)
                 }
             }, e)
-        })(nt);
+        })(N);
         n.d(t, "SubsCheckoutPage", function() {
-            return it
+            return w
         })
     },
     I7cV: function(e, t, n) {
@@ -8555,7 +8578,7 @@ webpackJsonp([36], {
                     return Object(k.d)(e, window.location.pathname.substring(1))
                 }, t = r.__decorate([Object(l.d)("PrimeUpsellButton")], t)
             }(a.Component),
-            E = n("e2wA"),
+            E = n("4VmI"),
             S = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -8573,7 +8596,7 @@ webpackJsonp([36], {
                     }, this.getCallToAction(), this.getClaimDescriptionSection())
                 }, t.prototype.getCallToAction = function() {
                     var e = this.props.data;
-                    return !e.loading && !e.error && e.currentUser && e.currentUser.hasPrime ? a.createElement(b, {
+                    return Object(h.j)(e) ? a.createElement(b, {
                         offerType: this.props.offerType,
                         offerID: this.props.offerID,
                         claimCallback: this.props.claimCallback,
@@ -8588,13 +8611,15 @@ webpackJsonp([36], {
                         index: this.props.index
                     })
                 }, t.prototype.getClaimDescriptionSection = function() {
-                    return this.props.offerType === h.d.EXTERNAL_OFFER ? null : a.createElement(y, {
+                    if (this.props.offerType === h.d.EXTERNAL_OFFER) return null;
+                    var e = this.props.data;
+                    return a.createElement(y, {
                         description: this.props.offerDescription,
                         offerID: this.props.offerID,
                         externalURL: this.props.externalURL,
                         index: this.props.index,
                         orientation: this.props.orientation,
-                        hasPrime: this.props.data.currentUser && this.props.data.currentUser.hasPrime
+                        hasPrime: Object(h.j)(e)
                     })
                 }, t = r.__decorate([Object(c.a)(E), Object(l.d)("PrimeInstructions")], t)
             }(a.Component),
@@ -8810,8 +8835,7 @@ webpackJsonp([36], {
                 }, t = r.__decorate([Object(l.d)("PrimeRedeem")], t)
             }(a.Component)),
             T = n("/3Cb"),
-            D = (n("v+rJ"), n("rM0q")),
-            R = function(e) {
+            D = (n("v+rJ"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8914,7 +8938,7 @@ webpackJsonp([36], {
                             i = e.self || {
                                 claimData: ""
                             },
-                            r = (t.props.data || {}).currentUser || {};
+                            r = t.props.data || {};
                         if (t.state.error) {
                             var s = t.getErrorType();
                             return a.createElement(N.a, {
@@ -8923,7 +8947,7 @@ webpackJsonp([36], {
                                 errorType: s
                             })
                         }
-                        if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
+                        if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && Object(h.j)(r)) {
                             var o = t.state.claimData || i.claimData;
                             return a.createElement(x, {
                                 claimInstructions: e.claimInstructions,
@@ -8950,7 +8974,7 @@ webpackJsonp([36], {
                             claiming: !0
                         });
                         var n = t.props.data;
-                        if (!n.loading && !n.error && n.currentUser.id) {
+                        if (!n.loading && !n.error && n.currentUser && n.currentUser.id) {
                             var i = t.props.offer,
                                 r = Object(p.a)({
                                     offerID: i.id
@@ -8995,13 +9019,13 @@ webpackJsonp([36], {
                     return (e.self || {
                         hasEntitlement: !1
                     }).hasEntitlement
-                }, t = r.__decorate([Object(c.a)(D, {
+                }, t = r.__decorate([Object(c.a)(E, {
                     name: "data"
                 }), Object(c.a)(T, {
                     name: "claimPrimeOffer"
                 }), Object(l.d)("PrimeOffer")], t)
-            }(a.Component),
-            F = (n("WC9X"), function(e) {
+            }(a.Component)),
+            R = (n("WC9X"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -9090,9 +9114,8 @@ webpackJsonp([36], {
                 }, t = r.__decorate([Object(l.d)("PrimeUpsell")], t)
             }(a.Component)),
             I = n("LXDe"),
-            P = n("eY4D"),
-            U = (n("DgR+"), n("65au")),
-            L = function(e) {
+            F = n("eY4D"),
+            P = (n("DgR+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getOfferListOrientation = function() {
@@ -9105,7 +9128,7 @@ webpackJsonp([36], {
                         return e.loading || !e.error && i
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], n = 0; n < 3; ++n) {
-                            var i = a.createElement(F, {
+                            var i = a.createElement(R, {
                                 key: n,
                                 orientation: t.getOfferListOrientation()
                             });
@@ -9136,7 +9159,7 @@ webpackJsonp([36], {
                     }, this.renderUpsell(), this.renderOfferExperience()))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
-                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e) && !this.props.hideUpsell) return a.createElement(A, null)
+                    if (!Object(h.i)(e) && !Object(h.j)(e) && !this.props.hideUpsell) return a.createElement(A, null)
                 }, t.prototype.renderOfferExperience = function() {
                     var e = this,
                         t = this.props.offersData;
@@ -9145,7 +9168,7 @@ webpackJsonp([36], {
                         var n = this.getSortedOffers(),
                             i = n[n.length - 1];
                         return n.map(function(t, n) {
-                            return a.createElement(R, {
+                            return a.createElement(D, {
                                 externalReftag: e.props.externalReftag,
                                 key: t.id,
                                 offer: t,
@@ -9165,28 +9188,25 @@ webpackJsonp([36], {
                     if (e) {
                         var n = t.filter(function(e) {
                                 return e.self && e.self.hasEntitlement
-                            }).sort(h.k),
+                            }).sort(h.m),
                             i = this.filterOffersByOfferType(n),
                             r = t.filter(function(e) {
                                 return !e.self || !e.self.hasEntitlement
-                            }).sort(h.k);
+                            }).sort(h.m);
                         return this.filterOffersByOfferType(r).concat(i)
                     }
-                    return this.filterOffersByOfferType(t).slice().sort(h.k)
+                    return this.filterOffersByOfferType(t).slice().sort(h.m)
                 }, t.prototype.filterOffersByOfferType = function(e) {
                     var t = this.getFreeGamesWithPrimeOfferIds();
                     return this.props.offerFilterType === I.a.Game ? e.filter(function(e) {
                         return t.includes(e.id)
-                    }).sort(h.k) : this.props.offerFilterType === I.a.InGameLoot ? e.filter(function(e) {
+                    }).sort(h.m) : this.props.offerFilterType === I.a.InGameLoot ? e.filter(function(e) {
                         return !t.includes(e.id)
-                    }).sort(h.k) : e
+                    }).sort(h.m) : e
                 }, t.prototype.getUserId = function() {
                     var e = this.props.userData;
                     return e && !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
-                }, t.prototype.currentUserHasPrime = function(e) {
-                    var t = e.currentUser;
-                    return t && t.hasPrime
-                }, t = r.__decorate([Object(c.a)(P, {
+                }, t = r.__decorate([Object(c.a)(F, {
                     name: "offersData",
                     options: function() {
                         return {
@@ -9198,7 +9218,7 @@ webpackJsonp([36], {
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
                     }
-                }), Object(c.a)(U, {
+                }), Object(c.a)(E, {
                     name: "userData",
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
@@ -9206,12 +9226,12 @@ webpackJsonp([36], {
                 }), Object(l.d)("PrimeOfferList", {
                     autoReportInteractive: !0
                 })], t)
-            }(a.Component);
+            }(a.Component));
         var j = Object(i.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded
             }
-        })(L);
+        })(P);
         n.d(t, "a", function() {
             return j
         })
@@ -10201,7 +10221,7 @@ webpackJsonp([36], {
             }(r.Component),
             D = Object(m.compose)(Object(w.d)("GetBitsButton"))(T),
             R = n("R5UN"),
-            F = function(e) {
+            A = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -10235,16 +10255,16 @@ webpackJsonp([36], {
                     }
                 })], t)
             }(r.Component);
-        var A = Object(a.b)(function(e) {
+        var I = Object(a.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded,
                 isLoggedIn: Object(u.d)(e)
             }
-        })(F);
+        })(A);
         n.d(t, !1, function() {
-            return F
-        }), n.d(t, "a", function() {
             return A
+        }), n.d(t, "a", function() {
+            return I
         })
     },
     NKE6: function(e, t, n) {
@@ -11155,17 +11175,6 @@ webpackJsonp([36], {
         }
     },
     Q8Dy: function(e, t) {},
-    QCL8: function(e, t, n) {
-        "use strict";
-        t.a = function(e, t, n) {
-            void 0 === n && (n = !1);
-            var a = i.b.get(r, []),
-                s = void 0 !== t && t.roles && t.roles.isStaff || !1;
-            return a.includes(e) || a.includes(e + "-staff") && (s || n)
-        };
-        var i = n("6sO2"),
-            r = "esport_insider_pass_whitelist"
-    },
     "QU+n": function(e, t) {
         var n = {
             kind: "Document",
@@ -11427,14 +11436,18 @@ webpackJsonp([36], {
             return m
         }), n.d(t, "g", function() {
             return p
-        }), n.d(t, "i", function() {
-            return f
         }), n.d(t, "k", function() {
+            return f
+        }), n.d(t, "m", function() {
             return g
-        }), n.d(t, "j", function() {
+        }), n.d(t, "l", function() {
             return v
         }), n.d(t, "e", function() {
             return b
+        }), n.d(t, "j", function() {
+            return y
+        }), n.d(t, "i", function() {
+            return k
         });
         var i, r = n("HW6M"),
             a = (n.n(r), n("OAwv")),
@@ -11483,6 +11496,12 @@ webpackJsonp([36], {
                 var e = location.search,
                     t = a.parse(e);
                 return t && t.dateOverride || void 0
+            },
+            y = function(e) {
+                return e && !e.loading && !e.error && null !== e.currentUser && e.currentUser.hasPrime
+            },
+            k = function(e) {
+                return e && e.loading
             }
     },
     R5UN: function(e, t) {
@@ -11877,18 +11896,18 @@ webpackJsonp([36], {
             return d.o.dynamicSettings.get(T, !1)
         }
 
-        function F(e, t) {
+        function A(e, t) {
             R() && d.o.tracking.track(g.SpadeEventType.SearchQuery, l.__assign({}, D(), {
                 query: e,
                 count: t
             }))
         }
-        var A = n("rCmJ"),
-            I = n("HW6M"),
+        var I = n("rCmJ"),
+            F = n("HW6M"),
             P = n("zCIC"),
-            U = n("czpb"),
-            L = n("SZoP"),
-            j = n("mi6k"),
+            j = n("czpb"),
+            U = n("SZoP"),
+            L = n("mi6k"),
             B = n("7Nlu"),
             M = n("5kgt"),
             H = n("Odds"),
@@ -11903,7 +11922,7 @@ webpackJsonp([36], {
                         "search-live-result-card--hover": this.props.borderHover
                     };
                     return this.props.data && !this.props.data.loading && this.props.data.user && this.props.data.user.stream && (e = this.props.data.user.stream.previewImageURL), u.createElement(H._8, {
-                        className: I(t),
+                        className: F(t),
                         key: this.props.id,
                         fullWidth: !0
                     }, u.createElement(H._6, l.__assign({
@@ -12184,7 +12203,7 @@ webpackJsonp([36], {
                         tabIndex: 0,
                         onKeyDown: this.props.onKeyDown
                     }, u.createElement(H._32, {
-                        className: I(i),
+                        className: F(i),
                         background: H.n.Base,
                         overflow: H._11.Hidden,
                         elevation: 5,
@@ -12247,7 +12266,7 @@ webpackJsonp([36], {
                 }, t.prototype.getLiveCards = function() {
                     var e = this;
                     return this.props.liveResults ? this.props.liveResults.results.map(function(t) {
-                        var n = Object(L.a)(t.login || "", t.name || "");
+                        var n = Object(U.a)(t.login || "", t.name || "");
                         return u.createElement(H.L, {
                             key: "live_" + t.id,
                             cols: 6
@@ -12271,7 +12290,7 @@ webpackJsonp([36], {
                 }, t.prototype.getUserCards = function() {
                     var e = this;
                     return this.props.userResults ? this.props.userResults.results.map(function(t) {
-                        var n = Object(L.a)(t.login || "", t.name || "");
+                        var n = Object(U.a)(t.login || "", t.name || "");
                         return u.createElement(H._6, {
                             linkTo: t.linkTo,
                             onClick: e.onClick,
@@ -12305,8 +12324,8 @@ webpackJsonp([36], {
                 }, t.prototype.getVideoCards = function() {
                     var e = this;
                     return this.props.videoResults ? this.props.videoResults.results.map(function(t) {
-                        var n = Object(L.a)(t.login || "", t.name || ""),
-                            i = Object(j.a)(t.length || 0);
+                        var n = Object(U.a)(t.login || "", t.name || ""),
+                            i = Object(L.a)(t.length || 0);
                         return u.createElement(H._6, {
                             key: "video_" + t.id,
                             linkTo: t.linkTo,
@@ -12354,8 +12373,8 @@ webpackJsonp([36], {
                     return this.props.communityResults ? this.props.communityResults.results.map(function(t) {
                         return u.createElement(H._6, {
                             key: "community_" + t.id,
-                            targetBlank: Object(U.b)(),
-                            linkTo: Object(U.a)(t.linkTo),
+                            targetBlank: Object(j.b)(),
+                            linkTo: Object(j.a)(t.linkTo),
                             onClick: e.onClick,
                             tabIndex: -1,
                             "data-ts_selectable": !0,
@@ -12580,7 +12599,7 @@ webpackJsonp([36], {
                     return u.createElement("div", null, u.createElement("div", {
                         className: "top-nav__search-container",
                         "data-click-out-id": "nav-search-balloon"
-                    }, u.createElement(A.a, {
+                    }, u.createElement(I.a, {
                         onClickOut: this.props.onClickOut
                     }, u.createElement(H._25, {
                         onChange: this.handleChange,
@@ -12740,7 +12759,7 @@ webpackJsonp([36], {
                                     case 1:
                                         return s.trys.push([1, 3, , 4]), [4, this.searchClient.queryVideos(e, n, t)];
                                     case 2:
-                                        return i = s.sent(), F(e, i.totalHits), i.hits && this.setState({
+                                        return i = s.sent(), A(e, i.totalHits), i.hits && this.setState({
                                             topGameResults: null,
                                             topUserResults: null,
                                             topLiveResults: null,
@@ -12881,7 +12900,7 @@ webpackJsonp([36], {
                                         term: e
                                     })), [2];
                                 case 7:
-                                    return r ? (F(e, (r.channels ? r.channels.totalHits : 0) + (r.communities ? r.communities.totalHits : 0) + (r.games ? r.games.totalHits : 0) + (r.users ? r.users.totalHits : 0) + (r.videos ? r.videos.totalHits : 0)), this.state.queryID !== r.id ? [2] : (s = Object(O.b)({
+                                    return r ? (A(e, (r.channels ? r.channels.totalHits : 0) + (r.communities ? r.communities.totalHits : 0) + (r.games ? r.games.totalHits : 0) + (r.users ? r.users.totalHits : 0) + (r.videos ? r.videos.totalHits : 0)), this.state.queryID !== r.id ? [2] : (s = Object(O.b)({
                                         searchResults: r,
                                         append: !1,
                                         currentGameResults: this.state.currentGameResults,
@@ -12982,7 +13001,7 @@ webpackJsonp([36], {
             oe = n("S1vB"),
             ce = n("Hs3O"),
             le = n("iGr2"),
-            ue = Object(U.a)("/products/turbo?ref=top_nav"),
+            ue = Object(j.a)("/products/turbo?ref=top_nav"),
             de = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -13046,7 +13065,7 @@ webpackJsonp([36], {
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = I("top-nav-user-menu-dropdown", {
+                    var e = F("top-nav-user-menu-dropdown", {
                             "top-nav-user-menu-dropdown--toggled": this.props.dropdownOpen
                         }),
                         t = this.props.dropdownOpen ? "dropdown-down" : "dropdown-up",
@@ -13067,7 +13086,7 @@ webpackJsonp([36], {
                             content: g.PageviewContent.SelfChannel,
                             medium: g.PageviewMedium.TopNav
                         }
-                    }, p = Object(U.a)("/" + this.props.data.currentUser.login + "/manager"), f = Object(U.a)("/" + this.props.data.currentUser.login + "/dashboard")), u.createElement(H._32, {
+                    }, p = Object(j.a)("/" + this.props.data.currentUser.login + "/manager"), f = Object(j.a)("/" + this.props.data.currentUser.login + "/dashboard")), u.createElement(H._32, {
                         overflow: H._11.Hidden,
                         position: H._15.Absolute,
                         className: e,
@@ -13245,8 +13264,8 @@ webpackJsonp([36], {
                             y: 1
                         }
                     }), u.createElement(H._6, {
-                        targetBlank: Object(U.b)(),
-                        linkTo: Object(U.a)("/friends"),
+                        targetBlank: Object(j.b)(),
+                        linkTo: Object(j.a)("/friends"),
                         "data-a-target": "friends-dropdown-link"
                     }, u.createElement(H._32, {
                         color: H.K.Alt,
@@ -13267,8 +13286,8 @@ webpackJsonp([36], {
                         height: 18,
                         width: 18
                     })), u.createElement(H.Q, null, Object(d.d)("Friends", "UserMenuDropdown")))), u.createElement(H._6, {
-                        targetBlank: Object(U.b)(),
-                        linkTo: Object(U.a)("/messages/inbox"),
+                        targetBlank: Object(j.b)(),
+                        linkTo: Object(j.a)("/messages/inbox"),
                         "data-a-target": "inbox-dropdown-link"
                     }, u.createElement(H._32, {
                         color: H.K.Alt,
@@ -13289,8 +13308,8 @@ webpackJsonp([36], {
                         height: 18,
                         width: 18
                     })), u.createElement(H.Q, null, Object(d.d)("Messages", "UserMenuDropdown")))), u.createElement(H._6, {
-                        targetBlank: Object(U.b)(),
-                        linkTo: Object(U.a)("/subscriptions"),
+                        targetBlank: Object(j.b)(),
+                        linkTo: Object(j.a)("/subscriptions"),
                         "data-a-target": "subscriptions-dropdown-link"
                     }, u.createElement(H._32, {
                         color: H.K.Alt,
@@ -13359,8 +13378,8 @@ webpackJsonp([36], {
                             y: 1
                         }
                     }), u.createElement(H._6, {
-                        targetBlank: Object(U.b)(),
-                        linkTo: Object(U.a)("/settings/profile"),
+                        targetBlank: Object(j.b)(),
+                        linkTo: Object(j.a)("/settings/profile"),
                         "data-a-target": "settings-dropdown-link"
                     }, u.createElement(H._32, {
                         color: H.K.Alt,
@@ -13666,8 +13685,8 @@ webpackJsonp([36], {
                     }))))))
                 }, t
             }(u.Component)),
-            Fe = n("9q8M"),
-            Ae = function(e) {
+            Ae = n("9q8M"),
+            Ie = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.isSettingNewSession = !1, n.onMenuCardClick = function() {
@@ -13723,7 +13742,7 @@ webpackJsonp([36], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.unsubscribeFromHistory(), this.setUserToOffline()
                 }, t.prototype.render = function() {
-                    var e = I(Object(ye.c)(he.a.Dark), {
+                    var e = F(Object(ye.c)(he.a.Dark), {
                             "top-nav-user-menu--dropdown-open": this.state.dropdownOpen
                         }),
                         t = null;
@@ -13739,7 +13758,7 @@ webpackJsonp([36], {
                         flexGrow: 1,
                         alignItems: H.c.Stretch,
                         fullHeight: !0
-                    }, u.createElement(A.a, {
+                    }, u.createElement(I.a, {
                         onClickOut: this.onClickOut,
                         className: e
                     }, t, u.createElement(xe, {
@@ -13747,9 +13766,9 @@ webpackJsonp([36], {
                     })))
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = l.__decorate([Object(f.a)(Fe), Object(pe.a)(function(e) {
+                }, t = l.__decorate([Object(f.a)(Ae), Object(pe.a)(function(e) {
                     return {
-                        query: Fe,
+                        query: Ae,
                         topic: e.data.currentUser ? Object(ve.n)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                         type: ge.PubsubMessageType.PresenceSettings,
@@ -13761,13 +13780,13 @@ webpackJsonp([36], {
                     topic: function(e) {
                         return e.data.currentUser ? Object(ve.n)(e.data.currentUser.id) : ""
                     },
-                    mapMessageTypesToProps: (Ie = {}, Ie[ge.PubsubMessageType.Presence] = "presence", Ie),
+                    mapMessageTypesToProps: (Fe = {}, Fe[ge.PubsubMessageType.Presence] = "presence", Fe),
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
                 }]), Object(b.d)("User")], t)
             }(u.Component);
-        var Ie, Pe = Object(i.b)(function(e) {
+        var Fe, Pe = Object(i.b)(function(e) {
                 return {
                     theme: Object(Ee.a)(e),
                     firstPageLoaded: e.session.firstPageLoaded,
@@ -13778,10 +13797,10 @@ webpackJsonp([36], {
                     changeTheme: _e.b,
                     initialUserAvailabilitySet: ke.g
                 }, e)
-            })(Object(r.f)(Ae)),
-            Ue = n("8PKe"),
-            Le = n("p+06"),
-            je = (n("HTB+"), function(e) {
+            })(Object(r.f)(Ie)),
+            je = n("8PKe"),
+            Ue = n("p+06"),
+            Le = (n("HTB+"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.state = {
@@ -13821,7 +13840,7 @@ webpackJsonp([36], {
                             },
                             alignSelf: H.d.Center,
                             flexWrap: H.U.NoWrap
-                        }, !e && u.createElement(Ue.c, null))
+                        }, !e && u.createElement(je.c, null))
                     }, n.renderStoreLink = function() {
                         var e = !1;
                         if (n.props.data) {
@@ -14120,7 +14139,7 @@ webpackJsonp([36], {
                         login: this.props.login,
                         signup: this.props.signup
                     })))))
-                }, t = l.__decorate([Object(f.a)(Le, {
+                }, t = l.__decorate([Object(f.a)(Ue, {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
@@ -14142,7 +14161,7 @@ webpackJsonp([36], {
                     return Object(o.h)(s.a.TopNavSignupButton)
                 }
             }, e)
-        })(je));
+        })(Le));
         n.d(t, !1, function() {
             return "5rem"
         }), n.d(t, !1, function() {
@@ -14353,6 +14372,26 @@ webpackJsonp([36], {
             }
         };
         e.exports = n
+    },
+    TeXj: function(e, t, n) {
+        "use strict";
+        t.b = function(e, t, n) {
+            void 0 === n && (n = !1);
+            return s(r, e, t, n)
+        }, t.a = function(e, t, n) {
+            void 0 === n && (n = !1);
+            return s(a, e, t, n)
+        };
+        var i = n("6sO2"),
+            r = "esport_channel_page_whitelist",
+            a = "esport_insider_pass_whitelist";
+
+        function s(e, t, n, r) {
+            void 0 === r && (r = !1);
+            var a = i.b.get(e, []),
+                s = n && n.roles && n.roles.isStaff || r;
+            return a.includes(t) || a.includes(t + "-staff") && s
+        }
     },
     ToRI: function(e, t, n) {
         var i = n("xA5w");
@@ -14662,9 +14701,9 @@ webpackJsonp([36], {
                 };
                 s.n.track(E.SpadeEventType.NotificationInteraction, t)
             },
-            F = n("Odds"),
-            A = (n("UW/+"), "persistent-notification__delete"),
-            I = function(e) {
+            A = n("Odds"),
+            I = (n("UW/+"), "persistent-notification__delete"),
+            F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.impressionEventFired = !1, t.isVisible = function(e) {
@@ -14688,23 +14727,23 @@ webpackJsonp([36], {
                             action: x.PrimaryCta
                         }), t.props.onViewNotification(t.props.data.id)
                     }, t.renderDeleteNotification = function() {
-                        return a.createElement(F._8, {
+                        return a.createElement(A._8, {
                             className: "persistent-notification__delete",
                             padding: {
                                 top: 1,
                                 left: 1,
                                 right: .5
                             },
-                            position: F._15.Absolute
-                        }, a.createElement(F._8, {
-                            display: F.R.Flex,
-                            flexWrap: F.U.NoWrap,
-                            alignItems: F.c.Start
-                        }, a.createElement(F.w, {
+                            position: A._15.Absolute
+                        }, a.createElement(A._8, {
+                            display: A.R.Flex,
+                            flexWrap: A.U.NoWrap,
+                            alignItems: A.c.Start
+                        }, a.createElement(A.w, {
                             ariaLabel: "delete-notification",
-                            "data-test-selector": A,
-                            icon: F._23.Close,
-                            size: F.x.Small,
+                            "data-test-selector": I,
+                            icon: A._23.Close,
+                            size: A.x.Small,
                             onClick: t.deleteNotification
                         })))
                     }, t
@@ -14716,71 +14755,71 @@ webpackJsonp([36], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregister && this.unregister()
                 }, t.prototype.render = function() {
-                    return a.createElement(F._8, {
+                    return a.createElement(A._8, {
                         className: "persistent-notification",
-                        position: F._15.Relative,
+                        position: A._15.Relative,
                         refDelegate: this.setRef,
                         "data-test-selector": "persistent-notification"
-                    }, a.createElement(F._32, {
-                        display: F.R.Flex,
+                    }, a.createElement(A._32, {
+                        display: A.R.Flex,
                         className: this.props.data.isRead ? "persistent-notification__read" : "persistent-notification__unread",
                         borderBottom: !0,
-                        flexWrap: F.U.NoWrap
-                    }, a.createElement(F._6, i.__assign({
+                        flexWrap: A.U.NoWrap
+                    }, a.createElement(A._6, i.__assign({
                         "data-test-selector": "persistent-notification__click",
                         onClick: this.clickNotification
                     }, N(this.props.data, E.PageviewMedium.NotificationCenter), {
                         alpha: !0
-                    }), a.createElement(F._8, {
+                    }), a.createElement(A._8, {
                         className: "persistent-notification__area",
-                        display: F.R.Flex,
-                        flexWrap: F.U.NoWrap,
+                        display: A.R.Flex,
+                        flexWrap: A.U.NoWrap,
                         padding: {
                             top: 1,
                             bottom: 1,
                             left: 1,
                             right: 3
                         }
-                    }, a.createElement(F.E, {
-                        aspect: F.l.Aspect1x1,
+                    }, a.createElement(A.E, {
+                        aspect: A.l.Aspect1x1,
                         src: this.props.data.thumbnailURL,
                         alt: Object(s.d)("Notification center item thumbnail", "OnsiteNotifications"),
-                        size: F.F.Size4
-                    }), a.createElement(F._8, {
-                        display: F.R.Flex,
-                        flexDirection: F.T.Column,
-                        flexWrap: F.U.NoWrap,
+                        size: A.F.Size4
+                    }), a.createElement(A._8, {
+                        display: A.R.Flex,
+                        flexDirection: A.T.Column,
+                        flexWrap: A.U.NoWrap,
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(F._8, {
+                    }, a.createElement(A._8, {
                         className: "persistent-notification__body",
-                        overflow: F._11.Hidden,
+                        overflow: A._11.Hidden,
                         "data-test-selector": "persistent-notification__body"
-                    }, a.createElement(F.Q, {
-                        type: F._46.Span,
-                        color: F.K.Alt
+                    }, a.createElement(A.Q, {
+                        type: A._46.Span,
+                        color: A.K.Alt
                     }, a.createElement(_, {
                         source: this.props.data.body || ""
-                    }))), a.createElement(F._8, {
-                        display: F.R.Flex,
-                        alignItems: F.c.Center,
+                    }))), a.createElement(A._8, {
+                        display: A.R.Flex,
+                        alignItems: A.c.Center,
                         flexShrink: 0,
                         margin: {
                             top: .5
                         }
-                    }, a.createElement(F._22, {
-                        asset: (e = this.props.data.type, t = F._23.MessagesSC, e in w ? w[e] : t),
+                    }, a.createElement(A._22, {
+                        asset: (e = this.props.data.type, t = A._23.MessagesSC, e in w ? w[e] : t),
                         height: 12,
                         width: 12,
-                        type: F._24.Alt2
-                    }), a.createElement(F._8, {
+                        type: A._24.Alt2
+                    }), a.createElement(A._8, {
                         margin: {
                             left: .5
                         }
-                    }, a.createElement(F.Q, {
-                        type: F._46.Span,
-                        color: F.K.Alt2
+                    }, a.createElement(A.Q, {
+                        type: A._46.Span,
+                        color: A.K.Alt2
                     }, Object(s.g)(new Date(this.props.data.updatedAt)))))))), this.renderDeleteNotification()));
                     var e, t
                 }, t.prototype.checkVisible = function(e) {
@@ -14797,8 +14836,8 @@ webpackJsonp([36], {
                 }, t = i.__decorate([Object(g.d)("PersistentNotification")], t)
             }(a.Component),
             P = n("+e5i"),
-            U = n("UUPo"),
-            L = function(e) {
+            j = n("UUPo"),
+            U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -14821,7 +14860,7 @@ webpackJsonp([36], {
                             }]
                         }
                     }, t.clearUnseenCount = function() {
-                        Object(m.e)(U, {}, function(e) {
+                        Object(m.e)(j, {}, function(e) {
                             return e.currentUser.incomingFriendRequests.totalUnreadCount = 0, e
                         }), t.props.clearUnreadFriendRequests().then(function() {}).catch(function(e) {
                             return s.j.error(e, "[FriendRequestsNotification] Failed to clear unread requests.")
@@ -14833,7 +14872,7 @@ webpackJsonp([36], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(I, {
+                    return a.createElement(F, {
                         key: "friendRequestsNotification",
                         data: this.createNotificationData(),
                         onDeleteNotification: this.clearUnseenCount,
@@ -14841,9 +14880,9 @@ webpackJsonp([36], {
                     })
                 }, t
             }(a.Component),
-            j = Object(v.compose)(Object(c.a)(P, {
+            L = Object(v.compose)(Object(c.a)(P, {
                 name: "clearUnreadFriendRequests"
-            }))(L),
+            }))(U),
             B = (n("cLQP"), "center-window__empty"),
             M = "center-window__content-footer",
             H = "center-window__footer__text",
@@ -14857,103 +14896,103 @@ webpackJsonp([36], {
                     }, t.renderContent = function() {
                         return !t.props.hasInitiallyLoaded || t.props.data.length || t.props.friendRequestsData ? [t.mapPersistentNotificationElements(), t.renderContentFooter()] : t.renderEmptyCenterWindowElement()
                     }, t.renderContentFooter = function() {
-                        var e = !t.props.hasInitiallyLoaded || t.state.isLoadingMore ? a.createElement(F._10, {
+                        var e = !t.props.hasInitiallyLoaded || t.state.isLoadingMore ? a.createElement(A._10, {
                             delay: 0,
                             fillContent: !0
-                        }) : a.createElement(F._22, {
-                            asset: F._23.LogoGlitch,
+                        }) : a.createElement(A._22, {
+                            asset: A._23.LogoGlitch,
                             width: 24,
                             height: 24,
-                            type: F._24.Alt2
+                            type: A._24.Alt2
                         });
-                        return a.createElement(F._8, {
+                        return a.createElement(A._8, {
                             className: "center-window__content-footer",
                             key: "center-window__content-footer",
                             "data-test-selector": M,
-                            display: F.R.Flex,
-                            flexDirection: F.T.Column,
-                            justifyContent: F._7.Center,
-                            alignItems: F.c.Center,
-                            textAlign: F._42.Center,
+                            display: A.R.Flex,
+                            flexDirection: A.T.Column,
+                            justifyContent: A._7.Center,
+                            alignItems: A.c.Center,
+                            textAlign: A._42.Center,
                             padding: 1,
                             flexGrow: 1
                         }, e)
                     }, t.mapPersistentNotificationElements = function() {
                         var e = t.props.data.map(function(e) {
-                            return a.createElement(I, {
+                            return a.createElement(F, {
                                 key: "onsite-notification-" + e.node.id,
                                 data: e.node,
                                 onDeleteNotification: t.props.onDeleteNotification,
                                 onViewNotification: t.props.onViewNotification
                             })
                         });
-                        return t.props.friendRequestsData && e.unshift(a.createElement(j, i.__assign({
+                        return t.props.friendRequestsData && e.unshift(a.createElement(L, i.__assign({
                             key: "friend-requests"
                         }, t.props.friendRequestsData))), e
                     }, t.renderEmptyCenterWindowElement = function() {
-                        return a.createElement(F._32, {
+                        return a.createElement(A._32, {
                             "data-test-selector": B,
                             className: "center-window__empty-state",
-                            background: F.n.Alt,
-                            display: F.R.Flex,
-                            justifyContent: F._7.Center,
-                            alignItems: F.c.Center,
-                            textAlign: F._42.Center,
-                            flexDirection: F.T.Column,
+                            background: A.n.Alt,
+                            display: A.R.Flex,
+                            justifyContent: A._7.Center,
+                            alignItems: A.c.Center,
+                            textAlign: A._42.Center,
+                            flexDirection: A.T.Column,
                             padding: 2,
                             fullWidth: !0
-                        }, a.createElement(F._22, {
-                            asset: F._23.LogoGlitch,
+                        }, a.createElement(A._22, {
+                            asset: A._23.LogoGlitch,
                             width: 100,
                             height: 100,
-                            type: F._24.Placeholder
-                        }), a.createElement(F._8, {
+                            type: A._24.Placeholder
+                        }), a.createElement(A._8, {
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(F.Q, {
-                            type: F._46.H5,
-                            color: F.K.Alt2
+                        }, a.createElement(A.Q, {
+                            type: A._46.H5,
+                            color: A.K.Alt2
                         }, Object(s.d)("Hooray! You're in the clear!", "OnsiteNotifications"))))
                     }, t.renderMarkAsRead = function() {
-                        return 0 !== t.props.data.length || t.props.friendRequestsData ? a.createElement(F.v, {
+                        return 0 !== t.props.data.length || t.props.friendRequestsData ? a.createElement(A.v, {
                             "data-test-selector": W,
-                            type: F.B.Text,
-                            size: F.z.Small,
+                            type: A.B.Text,
+                            size: A.z.Small,
                             disabled: 0 === t.props.data.length && !t.props.friendRequestsData,
                             onClick: t.props.onReadAllNotifications
                         }, Object(s.d)("Mark All as Read", "OnsiteNotifications")) : null
                     }, t.renderNotificationsHeaderElement = function() {
-                        return a.createElement(F._32, {
+                        return a.createElement(A._32, {
                             className: "center-window__header",
-                            background: F.n.Alt,
+                            background: A.n.Alt,
                             padding: {
                                 x: 1,
                                 y: .5
                             },
-                            display: F.R.Flex,
-                            alignItems: F.c.Center,
-                            justifyContent: F._7.Between,
+                            display: A.R.Flex,
+                            alignItems: A.c.Center,
+                            justifyContent: A._7.Between,
                             borderBottom: !0
-                        }, a.createElement(F.Q, {
-                            type: F._46.H6,
-                            color: F.K.Alt2,
+                        }, a.createElement(A.Q, {
+                            type: A._46.H6,
+                            color: A.K.Alt2,
                             bold: !0
                         }, Object(s.d)("Notifications", "OnsiteNotifications")), t.renderMarkAsRead())
                     }, t.renderUnreadNotificationsFooterElement = function() {
-                        var e = 0 === t.props.newNotificationsCount ? null : a.createElement(F.Q, {
+                        var e = 0 === t.props.newNotificationsCount ? null : a.createElement(A.Q, {
                             "data-test-selector": H,
-                            type: F._46.H6,
-                            color: F.K.Alt2
+                            type: A._46.H6,
+                            color: A.K.Alt2
                         }, Object(s.d)("{num, plural, one {1 New Notification} other {{num, number} New Notifications} }", {
                             num: t.props.newNotificationsCount
                         }, "OnsiteNotifications"));
-                        return a.createElement(F._32, {
+                        return a.createElement(A._32, {
                             className: "center-window__footer",
-                            background: F.n.Alt,
+                            background: A.n.Alt,
                             padding: .5,
-                            alignItems: F.c.Center,
-                            textAlign: F._42.Center,
+                            alignItems: A.c.Center,
+                            textAlign: A._42.Center,
                             borderTop: !0
                         }, e)
                     }, t.loadMore = function() {
@@ -14986,20 +15025,20 @@ webpackJsonp([36], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(F._32, {
+                    return a.createElement(A._32, {
                         className: "center-window",
                         "data-test-selector": "center-window",
-                        background: F.n.Alt
+                        background: A.n.Alt
                     }, this.renderNotificationsHeaderElement(), a.createElement(h.b, {
                         className: "center-window__scroll",
                         contentClassName: "center-window__scroll-container",
                         suppressScrollX: !0
-                    }, a.createElement(F._8, {
-                        display: F.R.Flex,
-                        alignItems: F.c.Center,
-                        flexDirection: F.T.Column,
+                    }, a.createElement(A._8, {
+                        display: A.R.Flex,
+                        alignItems: A.c.Center,
+                        flexDirection: A.T.Column,
                         flexGrow: 1,
-                        flexWrap: F.U.NoWrap
+                        flexWrap: A.U.NoWrap
                     }, this.renderContent(), a.createElement(h.a, {
                         enabled: this.props.data.length > 0 && !!this.props.data[this.props.data.length - 1].cursor,
                         contentLength: this.props.data.length,
@@ -15042,109 +15081,109 @@ webpackJsonp([36], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.cancelCloseTimer()
                 }, t.prototype.render = function() {
-                    return a.createElement(F.e, {
-                        type: F.j.BounceIn,
-                        duration: F.g.Medium,
+                    return a.createElement(A.e, {
+                        type: A.j.BounceIn,
+                        duration: A.g.Medium,
                         enabled: !0
                     }, a.createElement("div", {
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave,
                         "data-test-selector": "onsite-notification-toast__mouse-enter-detector"
-                    }, a.createElement(F._32, {
+                    }, a.createElement(A._32, {
                         className: "onsite-notification-toast",
-                        background: F.n.Base,
-                        display: F.R.Flex,
-                        flexWrap: F.U.NoWrap,
+                        background: A.n.Base,
+                        display: A.R.Flex,
+                        flexWrap: A.U.NoWrap,
                         margin: {
                             bottom: 1
                         },
                         border: !0
-                    }, a.createElement(F._6, i.__assign({
+                    }, a.createElement(A._6, i.__assign({
                         onClick: this.view,
                         alpha: !0
-                    }, N(this.props.item, E.PageviewMedium.NotificationToast)), a.createElement(F._8, {
+                    }, N(this.props.item, E.PageviewMedium.NotificationToast)), a.createElement(A._8, {
                         className: "onsite-notification-toast__container",
-                        display: F.R.Flex,
-                        flexWrap: F.U.NoWrap
-                    }, a.createElement(F._8, {
+                        display: A.R.Flex,
+                        flexWrap: A.U.NoWrap
+                    }, a.createElement(A._8, {
                         padding: {
                             y: 1,
                             left: 1
                         },
-                        display: F.R.Flex,
+                        display: A.R.Flex,
                         flexShrink: 0
-                    }, a.createElement(F.E, {
-                        aspect: F.l.Aspect1x1,
+                    }, a.createElement(A.E, {
+                        aspect: A.l.Aspect1x1,
                         src: this.props.item.thumbnailURL,
                         alt: Object(s.d)("Notification toast thumbnail", "OnsiteNotifications"),
-                        size: F.F.Size4
-                    })), a.createElement(F._8, {
-                        display: F.R.Flex,
-                        flexDirection: F.T.Column,
-                        flexWrap: F.U.NoWrap,
+                        size: A.F.Size4
+                    })), a.createElement(A._8, {
+                        display: A.R.Flex,
+                        flexDirection: A.T.Column,
+                        flexWrap: A.U.NoWrap,
                         flexGrow: 1,
                         padding: 1
-                    }, a.createElement(F._8, {
+                    }, a.createElement(A._8, {
                         className: "onsite-notification-toast__body",
-                        overflow: F._11.Hidden
-                    }, a.createElement(F._32, {
-                        color: F.K.Alt
+                        overflow: A._11.Hidden
+                    }, a.createElement(A._32, {
+                        color: A.K.Alt
                     }, a.createElement(_, {
                         source: this.props.item.body
-                    }))), a.createElement(F._8, {
+                    }))), a.createElement(A._8, {
                         margin: {
                             top: .5
                         },
                         flexShrink: 0
-                    }, a.createElement(F._32, {
-                        color: F.K.Alt2
+                    }, a.createElement(A._32, {
+                        color: A.K.Alt2
                     }, Object(s.g)(new Date(this.props.item.updatedAt))))))), this.renderActions())))
                 }, t.prototype.renderActions = function() {
-                    return a.createElement(F._32, {
+                    return a.createElement(A._32, {
                         className: "onsite-notification-toast__action-wrapper",
-                        display: F.R.Flex,
-                        alignContent: F.b.Stretch,
+                        display: A.R.Flex,
+                        alignContent: A.b.Stretch,
                         flexGrow: 0,
                         flexShrink: 0,
-                        flexDirection: F.T.Column,
+                        flexDirection: A.T.Column,
                         borderLeft: !0
-                    }, a.createElement(F._32, {
+                    }, a.createElement(A._32, {
                         className: "onsite-notification-toast__action",
-                        display: F.R.Flex,
-                        alignContent: F.b.Stretch,
+                        display: A.R.Flex,
+                        alignContent: A.b.Stretch,
                         flexGrow: 1,
                         borderBottom: !0
-                    }, a.createElement(F._6, i.__assign({
+                    }, a.createElement(A._6, i.__assign({
                         onClick: this.view,
                         "data-test-selector": "onsite-notification-toast__view",
                         alpha: !0
-                    }, N(this.props.item, E.PageviewMedium.NotificationToast)), a.createElement(F._32, {
-                        display: F.R.Flex,
-                        alignItems: F.c.Center,
-                        justifyContent: F._7.Center,
+                    }, N(this.props.item, E.PageviewMedium.NotificationToast)), a.createElement(A._32, {
+                        display: A.R.Flex,
+                        alignItems: A.c.Center,
+                        justifyContent: A._7.Center,
                         fullHeight: !0,
                         flexGrow: 1,
                         padding: .5
-                    }, a.createElement(F.Q, {
-                        color: F.K.Link
-                    }, this.primaryCTAText())))), a.createElement(F._32, {
+                    }, a.createElement(A.Q, {
+                        color: A.K.Link
+                    }, this.primaryCTAText())))), a.createElement(A._32, {
                         className: "onsite-notification-toast__action",
-                        display: F.R.Flex,
-                        alignContent: F.b.Stretch,
+                        display: A.R.Flex,
+                        alignContent: A.b.Stretch,
                         flexGrow: 1
-                    }, a.createElement(F._6, {
+                    }, a.createElement(A._6, {
                         onClick: this.close,
                         "data-test-selector": "onsite-notification-toast__close",
                         alpha: !0
-                    }, a.createElement(F._32, {
-                        display: F.R.Flex,
-                        alignItems: F.c.Center,
-                        justifyContent: F._7.Center,
+                    }, a.createElement(A._32, {
+                        display: A.R.Flex,
+                        alignItems: A.c.Center,
+                        justifyContent: A._7.Center,
                         fullHeight: !0,
                         flexGrow: 1,
                         padding: .5
-                    }, a.createElement(F.Q, {
-                        color: F.K.Alt2
+                    }, a.createElement(A.Q, {
+                        color: A.K.Alt2
                     }, Object(s.d)("Close", "OnsiteNotifications"))))))
                 }, t.prototype.primaryCTAText = function() {
                     var e = this.props.item.actions.find(function(e) {
@@ -15211,9 +15250,9 @@ webpackJsonp([36], {
                         this.onNewNotification(i)
                     }
                 }, t.prototype.render = function() {
-                    return a.createElement(F._8, {
+                    return a.createElement(A._8, {
                         className: "onsite-notifications-toast-manager",
-                        position: F._15.Absolute,
+                        position: A._15.Absolute,
                         margin: {
                             top: 5
                         },
@@ -15330,8 +15369,8 @@ webpackJsonp([36], {
             fe = 10,
             ge = 100,
             he = {
-                align: F._50.Center,
-                direction: F._51.Bottom,
+                align: A._50.Center,
+                direction: A._51.Bottom,
                 label: ""
             },
             ve = {
@@ -15452,13 +15491,13 @@ webpackJsonp([36], {
                         var e = t.getUnseenNotificationsCount(t.props);
                         if (e > 0) {
                             var n = e >= 100 ? me : e.toString();
-                            return a.createElement(F._8, {
+                            return a.createElement(A._8, {
                                 className: "onsite-notifications__badge",
                                 "data-test-selector": de,
-                                position: F._15.Absolute
-                            }, a.createElement(F._12, {
+                                position: A._15.Absolute
+                            }, a.createElement(A._12, {
                                 label: n,
-                                type: F._13.Notification
+                                type: A._13.Notification
                             }))
                         }
                     }, t.deleteNotification = function(e) {
@@ -15637,25 +15676,25 @@ webpackJsonp([36], {
                     e.shouldDefer || this.listNotificationsLoaded || (this.listNotificationsLoaded = this.registerListNotificationsLoadedEvent())
                 }, t.prototype.render = function() {
                     var e = this.props.shouldDefer || !this.listDataLoaded() ? [] : this.props.listData.currentUser.notifications.edges;
-                    return he.label = Object(s.d)("Notifications", "OnsiteNotificationsToolTip"), a.createElement(F._8, {
+                    return he.label = Object(s.d)("Notifications", "OnsiteNotificationsToolTip"), a.createElement(A._8, {
                         className: "onsite-notifications"
                     }, a.createElement(ee, {
                         onViewNotification: this.viewNotification
-                    }), a.createElement(F._8, {
-                        position: F._15.Relative
+                    }), a.createElement(A._8, {
+                        position: A._15.Relative
                     }, a.createElement(o.a, {
                         onToggle: this.toggleCenter,
                         ref: this.saveCenterWindowToggleBalloonRef,
                         tooltipProps: he
-                    }, a.createElement(F.w, {
+                    }, a.createElement(A.w, {
                         ariaLabel: Object(s.d)("Open Notifications", "OnsiteNotifications"),
-                        size: F.x.Large,
-                        icon: F._23.NotificationBell,
+                        size: A.x.Large,
+                        icon: A._23.NotificationBell,
                         overlay: !0
-                    }), a.createElement(F.q, {
+                    }), a.createElement(A.q, {
                         "data-test-selector": "center-window__balloon",
-                        direction: F.r.BottomRight,
-                        size: F.s.Large,
+                        direction: A.r.BottomRight,
+                        size: A.s.Large,
                         offsetX: "10px"
                     }, a.createElement(V, {
                         newNotificationsCount: this.state.newNotificationsCount,
@@ -16637,17 +16676,17 @@ webpackJsonp([36], {
                 }, t
             }(l.Component),
             R = n("jxGs"),
-            F = n("3iBR"),
-            A = n("iydZ"),
-            I = n("ZJYd"),
+            A = n("3iBR"),
+            I = n("iydZ"),
+            F = n("ZJYd"),
             P = n("CFVp"),
-            U = n("qe65"),
-            L = (n("OLKT"), function(e) {
+            j = n("qe65"),
+            U = (n("OLKT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            i = Object(I.b)({
+                            i = Object(F.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -16672,19 +16711,19 @@ webpackJsonp([36], {
                         })
                     }
                     var t = null;
-                    Object(I.c)(this.props.offer) ? t = l.createElement(v._8, {
+                    Object(F.c)(this.props.offer) ? t = l.createElement(v._8, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                         "data-test-selector": "first-time-promo-form"
                     }, l.createElement(v.Q, {
                         type: v._46.Strong,
                         fontSize: v.V.Size6
-                    }, Object(d.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(I.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === R.c ? t = l.createElement(v._8, {
+                    }, Object(d.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(F.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === R.c ? t = l.createElement(v._8, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                         "data-test-selector": "black-friday-promo-form"
                     }, l.createElement(v.Q, {
                         type: v._46.Strong,
                         fontSize: v.V.Size6
-                    }, Object(d.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(I.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === R.d && (t = l.createElement(v._8, {
+                    }, Object(d.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(F.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === R.d && (t = l.createElement(v._8, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                         "data-test-selector": "prime-promo-promo-form"
                     }, l.createElement(v.Q, {
@@ -16699,7 +16738,7 @@ webpackJsonp([36], {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var i = null;
-                    (Object(I.c)(this.props.offer) || Object(I.e)(this.props.offer)) && (i = l.createElement("div", {
+                    (Object(F.c)(this.props.offer) || Object(F.e)(this.props.offer)) && (i = l.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text",
                         "data-test-selector": "one-per-account-form"
                     }, Object(d.d)("one per account", "Bits--BuyCard")));
@@ -16743,7 +16782,7 @@ webpackJsonp([36], {
                         }
                     }, n, i))))
                 }, t.prototype.getAvailableTiers = function(e) {
-                    var t = this.props.bitsConfig && this.props.bitsConfig.indexedActions[F.g];
+                    var t = this.props.bitsConfig && this.props.bitsConfig.indexedActions[A.g];
                     t || (t = Object(P.b)());
                     var n = t.orderedTiers.filter(function(t) {
                         return t.bits <= e
@@ -16754,19 +16793,19 @@ webpackJsonp([36], {
                         },
                         className: "bits-buy-card-offer-row__tier-bits-images"
                     }, n.map(function(e) {
-                        return l.createElement(U.a, {
+                        return l.createElement(j.a, {
                             key: e.bits,
-                            sources: Object(A.b)(e, 2, !1)
+                            sources: Object(I.b)(e, 2, !1)
                         })
                     }))
                 }, t
             }(l.Component)),
-            j = (n("sgUC"), function(e) {
+            L = (n("sgUC"), function(e) {
                 var t = [],
                     n = [],
                     i = null;
                 return e.offers.forEach(function(r, a) {
-                    var s = l.createElement(L, {
+                    var s = l.createElement(U, {
                             key: r.id,
                             offer: r,
                             isLastRow: a + 1 < e.offers.length,
@@ -16781,8 +16820,8 @@ webpackJsonp([36], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        o = Object(I.d)(r),
-                        c = Object(I.c)(r),
+                        o = Object(F.d)(r),
+                        c = Object(F.c)(r),
                         u = r.type === R.a;
                     c && !e.hidePromos ? t.push(s) : o && !c ? t.push(s) : u && !e.hideWateb ? i = s : u || o || n.push(s)
                 }), e.fullsize ? l.createElement(v._8, {
@@ -16977,7 +17016,7 @@ webpackJsonp([36], {
                     }
                 }, l.createElement("img", {
                     className: "watch-ad-error__error-image",
-                    src: F.b + "/light/static/1/" + r + ".png"
+                    src: A.b + "/light/static/1/" + r + ".png"
                 })), l.createElement(v._8, {
                     padding: {
                         bottom: 1
@@ -17173,7 +17212,7 @@ webpackJsonp([36], {
                             return e.includesVAT
                         }),
                         s = this.props.data.user ? this.props.data.user.id : "",
-                        o = l.createElement(j, {
+                        o = l.createElement(L, {
                             offers: r,
                             fullsize: this.props.fullsize,
                             hidePromos: this.props.hidePromos,
@@ -18941,66 +18980,6 @@ webpackJsonp([36], {
         e.exports = function(e) {
             return 3 === i(e).getDay()
         }
-    },
-    e2wA: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Current_User"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 50
-            }
-        };
-        n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     },
     e6tx: function(e, t) {},
     eCZG: function(e, t, n) {
@@ -21298,66 +21277,6 @@ webpackJsonp([36], {
             return i.a
         })
     },
-    rM0q: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Current_User"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 50
-            }
-        };
-        n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     rO5X: function(e, t, n) {
         var i = n("xA5w"),
             r = n("Bb5e"),
@@ -21681,22 +21600,6 @@ webpackJsonp([36], {
                                         kind: "Field",
                                         name: {
                                             kind: "Name",
-                                            value: "hasEntitlement"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "claimData"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
                                             value: "status"
                                         },
                                         arguments: [],
@@ -21710,11 +21613,11 @@ webpackJsonp([36], {
             }],
             loc: {
                 start: 0,
-                end: 151
+                end: 126
             }
         };
         n.loc.source = {
-            body: "query Prime_PrimeOffers_PrimeOfferIds($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\nself {\nhasEntitlement\nclaimData\nstatus\n}\n}\n}",
+            body: "query Prime_PrimeOffers_PrimeOfferIds($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\nself {\nstatus\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -22429,8 +22332,8 @@ webpackJsonp([36], {
                 }(O.restDateString, x);
             if (T) {
                 var D, R = T.getTime(),
-                    F = 0;
-                return C.time && (F = function(e) {
+                    A = 0;
+                return C.time && (A = function(e) {
                     var t, n, i;
                     if (t = b.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * r;
                     if (t = y.exec(e)) return n = parseInt(t[1], 10), i = parseFloat(t[2].replace(",", ".")), n % 24 * r + i * a;
@@ -22440,9 +22343,9 @@ webpackJsonp([36], {
                         return n % 24 * r + i * a + 1e3 * s
                     }
                     return null
-                }(C.time)), C.timezone ? (A = C.timezone, D = (I = E.exec(A)) ? 0 : (I = S.exec(A)) ? (P = 60 * parseInt(I[2], 10), "+" === I[1] ? -P : P) : (I = N.exec(A)) ? (P = 60 * parseInt(I[2], 10) + parseInt(I[3], 10), "+" === I[1] ? -P : P) : 0) : (D = new Date(R + F).getTimezoneOffset(), D = new Date(R + F + D * a).getTimezoneOffset()), new Date(R + F + D * a)
+                }(C.time)), C.timezone ? (I = C.timezone, D = (F = E.exec(I)) ? 0 : (F = S.exec(I)) ? (P = 60 * parseInt(F[2], 10), "+" === F[1] ? -P : P) : (F = N.exec(I)) ? (P = 60 * parseInt(F[2], 10) + parseInt(F[3], 10), "+" === F[1] ? -P : P) : 0) : (D = new Date(R + A).getTimezoneOffset(), D = new Date(R + A + D * a).getTimezoneOffset()), new Date(R + A + D * a)
             }
-            var A, I, P;
+            var I, F, P;
             return new Date(e)
         }
     },
@@ -22859,4 +22762,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-b3afbc337998f6a8b885d4d31691e9fc.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-e47de041d7a5a471444c25adbe9a4b48.js.map

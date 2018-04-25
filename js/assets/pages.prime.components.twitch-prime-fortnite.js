@@ -1,27 +1,5 @@
-webpackJsonp([88], {
+webpackJsonp([95], {
     "0blB": function(e, t) {},
-    "68hr": function(e, t, r) {
-        "use strict";
-        var n = r("GiK3"),
-            i = r("6sO2"),
-            a = r("yWCw"),
-            c = r("Odds"),
-            o = function() {
-                return n.createElement(a.a, {
-                    message: Object(i.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "PageNotFound")
-                }, n.createElement(c._8, {
-                    margin: {
-                        top: 2
-                    }
-                }, n.createElement(c.v, {
-                    linkTo: "/directory",
-                    "data-a-target": "browse-channels-button"
-                }, Object(i.d)("Browse channels", "PageNotFound"))))
-            };
-        r.d(t, "a", function() {
-            return o
-        })
-    },
     F35x: function(e, t) {},
     HnrI: function(e, t, r) {
         "use strict";
@@ -44,9 +22,9 @@ webpackJsonp([88], {
             _ = r("Odds"),
             g = r("kQ9X"),
             w = (r("F35x"), "twitch-prime-signup-call-to-action"),
-            y = "twitch-prime-claim-call-to-action",
-            b = "twitch-prime-login-call-to-action",
-            C = function(e) {
+            C = "twitch-prime-claim-call-to-action",
+            y = "twitch-prime-login-call-to-action",
+            b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCTAs = function() {
@@ -72,7 +50,7 @@ webpackJsonp([88], {
                             title: Object(s.d)("Have Twitch Prime?", "TwitchPrimeFortnite"),
                             body: n,
                             onClick: t.onLoginClick,
-                            dataTestSelector: b,
+                            dataTestSelector: y,
                             href: "#"
                         })
                     }, t.renderSignupCTA = function() {
@@ -90,7 +68,7 @@ webpackJsonp([88], {
                             title: Object(s.d)("Click here to claim", "TwitchPrimeFortnite"),
                             body: Object(s.d)("Link your Epic account to your Twitch Prime account", "TwitchPrimeFortnite"),
                             href: "/prime/fortnite/link",
-                            dataTestSelector: y
+                            dataTestSelector: C
                         })
                     }, t.getCurrentUser = function() {
                         var e = t.props.data;
@@ -134,7 +112,7 @@ webpackJsonp([88], {
                     }, Object(s.d)("Get exclusive Fortnite loot by linking your Epic games account or start your Twitch Prime free trial below to get started.", "TwitchPrimeFortnite"))))), this.renderCTAs())
                 }, t
             }(l.Component),
-            T = Object(m.compose)(Object(p.d)("TwitchPrimeFortnite", {}), Object(d.a)(g))(C);
+            T = Object(m.compose)(Object(p.d)("TwitchPrimeFortnite", {}), Object(d.a)(g))(b);
         var v = Object(n.b)(null, function(e) {
             return Object(i.b)({
                 login: function() {
@@ -312,4 +290,4 @@ webpackJsonp([88], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-fortnite-c86f6f8fd439fc7855af15ccfbe393fc.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-fortnite-ac05747f4b6a230739bb5a1b05ed0234.js.map
