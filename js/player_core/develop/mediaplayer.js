@@ -629,19 +629,15 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(PlayerEvent.VOLUME_CHANGED, this._onVolumeChanged.bind(this));
     em.on(PlayerEvent.MUTED_CHANGED, this._onMutedChanged.bind(this));
     em.on(PlayerEvent.SEEK_COMPLETED, this._onSeekCompleted.bind(this));
-    em.on(PlayerState.IDLE, updateState);
-    em.on(PlayerState.READY, this._onReady.bind(this));
-    em.on(PlayerState.BUFFERING, updateState);
-    em.on(PlayerState.PLAYING, updateState);
-    em.on(PlayerState.ENDED, this._onEnded.bind(this));
     em.on(ClientMessage.STATS, function (stats) {
         objectAssign(this._stats, stats);
     }.bind(this));
+    em.on(ClientMessage.STATE_CHANGED, this._onStateChanged.bind(this));
     em.on(ClientMessage.SAVE_ITEM, this._saveItem.bind(this));
     em.on(ClientMessage.CONFIGURE, sink.configure.bind(sink));
     em.on(ClientMessage.ENQUEUE, sink.enqueue.bind(sink));
     em.on(ClientMessage.SET_TIMESTAMP_OFFSET, sink.setTimestampOffset.bind(sink));
-    em.on(ClientMessage.PLAY, sink.play.bind(sink));
+    em.on(ClientMessage.PLAY, this._startPlayback.bind(this));
     em.on(ClientMessage.PAUSE, sink.pause.bind(sink));
     em.on(ClientMessage.REMOVE, sink.remove.bind(sink));
     em.on(ClientMessage.RESET, sink.reset.bind(sink));
@@ -673,38 +669,57 @@ MediaPlayer.prototype._onSeekCompleted = function () {
     }
 };
 
-MediaPlayer.prototype._onReady = function (state) {
-    // Filter unsupported qualities
-    var supported = [];
-
-    state.qualities.forEach(function (quality) {
-        if (this._isQualitySupported(quality)) {
-            supported.push(quality);
-        } else {
-            this._postMessage(WorkerMessage.REMOVE_QUALITY, quality);
-        }
-    }, this);
-
-    // Only expose supported qualities to consumers
-    state.qualities = supported;
-    objectAssign(this._state, state);
-
-    // We cant now send 'PLAY' since we've removed any unplayable qualities
-    this._isLoaded = true;
-
-    // Start playback if we've already tried
-    if (!this._isPaused) {
-        this._attemptPlay();
-    }
-};
-
-MediaPlayer.prototype._onEnded = function (state) {
-    objectAssign(this._state, state);
+MediaPlayer.prototype._onError = function () {
     this._isPaused = true;
 }
 
-MediaPlayer.prototype._onError = function () {
-    this._isPaused = true;
+MediaPlayer.prototype._onStateChanged = function (state) {
+    // Perform state specific updates
+    switch (state.playerState) {
+        case PlayerState.READY:
+            // Only expose supported qualities to consumers
+            var qualities = this._filterQualities(state.qualities);
+            state.qualities = qualities.supported;
+            this._postMessage(WorkerMessage.REMOVE_QUALITIES, qualities.unsupported);
+
+            // We can now send 'PLAY' since we've removed any unplayable qualities
+            this._isLoaded = true;
+
+            // Start playback if we've already tried
+            if (!this._isPaused) {
+                this._attemptPlay();
+            }
+            break;
+        case PlayerState.ENDED:
+            this._isPaused = true;
+            break;
+    }
+
+    // Updated cached state
+    objectAssign(this._state, state);
+
+    // Emit state update event. Don't emit 'PLAYING', since
+    // we'll emit that once playback actually begins.
+    if (state.playerState !== PlayerState.PLAYING) {
+        this._emitter.emit(state.playerState);
+    }
+}
+
+MediaPlayer.prototype._filterQualities = function (qualities) {
+    var supported = []
+    var unsupported = [];
+    qualities.forEach(function (quality) {
+        if (this._isQualitySupported(quality)) {
+            supported.push(quality);
+        } else {
+            unsupported.push(quality);
+        }
+    }, this);
+
+    return {
+        supported: supported,
+        unsupported: unsupported,
+    }
 }
 
 MediaPlayer.prototype._saveItem = function (item) {
@@ -712,6 +727,14 @@ MediaPlayer.prototype._saveItem = function (item) {
     try {
         localStorage.setItem(LOCAL_STORAGE_PREFIX + item.key, item.value);
     } catch (e) {}
+}
+
+MediaPlayer.prototype._startPlayback = function () {
+    this._mediaSink.play().then(function () {
+        // Emit PLAYING state change once playback actaully begins.
+        // This allows us to detect playback-blocked first
+        this._emitter.emit(PlayerState.PLAYING);
+    }.bind(this)).catch(noop); // catch to prevent logged warning
 }
 
 MediaPlayer.prototype._addCue = function (time) {
@@ -772,13 +795,19 @@ MediaPlayer.prototype._onSinkIdle = function () {
 }
 
 MediaPlayer.prototype._onSinkStop = function () {
-    // If playback stopped without user input,
-    // the browser is forcing use to temporarily stop.
-    // We'll attempt to resume when we become visible again.
-    this._postMessage(WorkerMessage.PAUSE);
-
-    // If this happens when we're not hidden, autoplay was blocked
-    if (!document.hidden) {
+    if (document.hidden) {
+        // If we're stopped while hidden, internally pause.
+        // We'll attempt to resume when we become visible again.
+        this._emitter.emit(WorkerMessage.PAUSE);
+    } else if (!this.isMuted()) {
+        // "autoplay" can be blocked for video with sound.
+        // Retry playback while muted
+        this.setMuted(true);
+        this._startPlayback();
+        this._emitter.emit(PlayerEvent.AUDIO_BLOCKED);
+    } else {
+        // "autoplay" completely blocked. Nothing we can do other than pause
+        this.pause();
         this._emitter.emit(PlayerEvent.PLAYBACK_BLOCKED);
     }
 };
@@ -798,6 +827,8 @@ MediaPlayer.prototype._onWorkerMessage = function (evt) {
 };
 
 // utilities
+
+function noop() {}
 
 var genUniqueID = (function () {
     var id = 0;
@@ -1320,12 +1351,10 @@ MediaSink.prototype.setTimestampOffset = function (update) {
  * Start/resume playback
  */
 MediaSink.prototype.play = function () {
-    // Need to catch rejected promise or it will be logged to console
     this._paused = false;
-    var promise = this._video.play();
-    if (promise) {
-        promise.catch(this._checkStopped.bind(this));
-    }
+    var started = Promise.resolve(this._video.play());
+    started.catch(this._checkStopped.bind(this));
+    return started;
 };
 
 /**
@@ -3366,9 +3395,9 @@ module.exports = {
     SET_QUALITY: 'WorkerSetQuality',
     /**
      * Remove quality from current session (not supported, for example)
-     * @param {object} quality - quality to remove
+     * @param {[Quality]} qualities - array of qualities to remove
      */
-    REMOVE_QUALITY: 'WorkerRemoveQuality',
+    REMOVE_QUALITIES: 'WorkerRemoveQualities',
     /**
      * Toggle abs
      * @param {bool} enable - use abs?
@@ -3424,6 +3453,11 @@ module.exports = {
  * have at most a single argument.
  */
 module.exports = {
+    /**
+     * The player state has changed
+     * @param {Object} Player properties that have changes with this state transition
+     */
+    STATE_CHANGED: 'ClientStateChanged',
     /**
      * Append an mp4 audio buffer to MSE
      * @param {Number} stats.videoFrameRate - fps in Hz
@@ -3550,6 +3584,11 @@ module.exports = {
      */
     REBUFFERING: 'PlayerRebuffering',
     /**
+     * The browser blocked non-muted playback without a user gesture.
+     * Mute and play to start playback or wait for user gesutre.
+     */
+    AUDIO_BLOCKED: 'PlayerAudioBlocked',
+    /**
      * The browser blocked playback without a user gesture.
      * Mute and play to start playback or wait for user gesutre.
      */
@@ -3584,7 +3623,6 @@ module.exports = {
      * @param {number} time The position seek completed ended
      */
     SEEK_COMPLETED: 'PlayerSeekCompleted',
-
     /**
      * Profiler event with profiler data
      * @param {string} event The profiler event name
