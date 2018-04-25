@@ -763,13 +763,13 @@ window.__twilightSettings = {
         },
         "e0fdfc17-389d-4ba5-8596-065352ddc01e": {
             "name": "twilight_browser_notifications_upsell",
-            "v": 3014,
+            "v": 3590,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "yes"
             }]
         },
