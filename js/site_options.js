@@ -2582,11 +2582,11 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 3551,
+            "v": 3596,
             "t": 1,
             "s": 2,
             "groups": [{
-                "weight": 30,
+                "weight": 40,
                 "value": "control"
             }, {
                 "weight": 10,
@@ -2603,9 +2603,6 @@ window.SiteOptions = {
             }, {
                 "weight": 10,
                 "value": "model_v2"
-            }, {
-                "weight": 10,
-                "value": "lantern_model"
             }, {
                 "weight": 10,
                 "value": "model_v3"
