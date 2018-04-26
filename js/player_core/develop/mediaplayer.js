@@ -45,6 +45,11 @@ var MediaPlayer =
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -60,12 +65,1438 @@ var MediaPlayer =
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./platforms/web/js/mediaplayer.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ "./node_modules/detect-browser/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/detect-browser/index.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {/**
+  # detect-browser
+
+  This is a package that attempts to detect a browser vendor and version (in
+  a semver compatible format) using a navigator useragent in a browser or
+  `process.version` in node.
+
+  ## NOTE: Version 2.x release
+
+  Release 2.0 introduces a breaking API change (hence the major release)
+  which requires invocation of a `detect` function rather than just inclusion of
+  the module.  PR [#46](https://github.com/DamonOehlman/detect-browser/pull/46)
+  provides more context as to why this change has been made.
+
+  ## Example Usage
+
+  <<< examples/simple.js
+
+  Or you can use a switch statement:
+
+  <<< examples/switch.js
+
+  ## Adding additional browser support
+
+  The current list of browsers that can be detected by `detect-browser` is
+  not exhaustive. If you have a browser that you would like to add support for
+  then please submit a pull request with the implementation.
+
+  Creating an acceptable implementation requires two things:
+
+  1. A test demonstrating that the regular expression you have defined identifies
+     your new browser correctly.  Examples of this can be found in the 
+     `test/logic.js` file.
+
+  2. Write the actual regex to the `lib/detectBrowser.js` file. In most cases adding
+     the regex to the list of existing regexes will be suitable (if usage of `detect-brower`
+     returns `undefined` for instance), but in some cases you might have to add it before
+     an existing regex.  This would be true for a case where you have a browser that
+     is a specialised variant of an existing browser but is identified as the
+     non-specialised case.
+
+  When writing the regular expression remember that you would write it containing a
+  single [capturing group](https://regexone.com/lesson/capturing_groups) which
+  captures the version number of the browser.
+
+**/
+
+function detect() {
+  var nodeVersion = getNodeVersion();
+  if (nodeVersion) {
+    return nodeVersion;
+  } else if (typeof navigator !== 'undefined') {
+    return parseUserAgent(navigator.userAgent);
+  }
+
+  return null;
+}
+
+function detectOS(userAgentString) {
+  var rules = getOperatingSystemRules();
+  var detected = rules.filter(function (os) {
+    return os.rule && os.rule.test(userAgentString);
+  })[0];
+
+  return detected ? detected.name : null;
+}
+
+function getNodeVersion() {
+  var isNode = typeof navigator === 'undefined' && typeof process !== 'undefined';
+  return isNode ? {
+    name: 'node',
+    version: process.version.slice(1),
+    os: __webpack_require__(/*! os */ "./node_modules/os-browserify/browser.js").type().toLowerCase()
+  } : null;
+}
+
+function parseUserAgent(userAgentString) {
+  var browsers = getBrowserRules();
+  if (!userAgentString) {
+    return null;
+  }
+
+  var detected = browsers.map(function(browser) {
+    var match = browser.rule.exec(userAgentString);
+    var version = match && match[1].split(/[._]/).slice(0,3);
+
+    if (version && version.length < 3) {
+      version = version.concat(version.length == 1 ? [0, 0] : [0]);
+    }
+
+    return match && {
+      name: browser.name,
+      version: version.join('.')
+    };
+  }).filter(Boolean)[0] || null;
+
+  if (detected) {
+    detected.os = detectOS(userAgentString);
+  }
+
+  return detected;
+}
+
+function getBrowserRules() {
+  return buildRules([
+    [ 'edge', /Edge\/([0-9\._]+)/ ],
+    [ 'yandexbrowser', /YaBrowser\/([0-9\._]+)/ ],
+    [ 'vivaldi', /Vivaldi\/([0-9\.]+)/ ],
+    [ 'kakaotalk', /KAKAOTALK\s([0-9\.]+)/ ],
+    [ 'chrome', /(?!Chrom.*OPR)Chrom(?:e|ium)\/([0-9\.]+)(:?\s|$)/ ],
+    [ 'phantomjs', /PhantomJS\/([0-9\.]+)(:?\s|$)/ ],
+    [ 'crios', /CriOS\/([0-9\.]+)(:?\s|$)/ ],
+    [ 'firefox', /Firefox\/([0-9\.]+)(?:\s|$)/ ],
+    [ 'fxios', /FxiOS\/([0-9\.]+)/ ],
+    [ 'opera', /Opera\/([0-9\.]+)(?:\s|$)/ ],
+    [ 'opera', /OPR\/([0-9\.]+)(:?\s|$)$/ ],
+    [ 'ie', /Trident\/7\.0.*rv\:([0-9\.]+).*\).*Gecko$/ ],
+    [ 'ie', /MSIE\s([0-9\.]+);.*Trident\/[4-7].0/ ],
+    [ 'ie', /MSIE\s(7\.0)/ ],
+    [ 'bb10', /BB10;\sTouch.*Version\/([0-9\.]+)/ ],
+    [ 'android', /Android\s([0-9\.]+)/ ],
+    [ 'ios', /Version\/([0-9\._]+).*Mobile.*Safari.*/ ],
+    [ 'safari', /Version\/([0-9\._]+).*Safari/ ]
+  ]);
+}
+
+function getOperatingSystemRules() {
+  return buildRules([
+    [ 'iOS', /iP(hone|od|ad)/ ],
+    [ 'Android OS', /Android/ ],
+    [ 'BlackBerry OS', /BlackBerry|BB10/ ],
+    [ 'Windows Mobile', /IEMobile/ ],
+    [ 'Amazon OS', /Kindle/ ],
+    [ 'Windows 3.11', /Win16/ ],
+    [ 'Windows 95', /(Windows 95)|(Win95)|(Windows_95)/ ],
+    [ 'Windows 98', /(Windows 98)|(Win98)/ ],
+    [ 'Windows 2000', /(Windows NT 5.0)|(Windows 2000)/ ],
+    [ 'Windows XP', /(Windows NT 5.1)|(Windows XP)/ ],
+    [ 'Windows Server 2003', /(Windows NT 5.2)/ ],
+    [ 'Windows Vista', /(Windows NT 6.0)/ ],
+    [ 'Windows 7', /(Windows NT 6.1)/ ],
+    [ 'Windows 8', /(Windows NT 6.2)/ ],
+    [ 'Windows 8.1', /(Windows NT 6.3)/ ],
+    [ 'Windows 10', /(Windows NT 10.0)/ ],
+    [ 'Windows ME', /Windows ME/ ],
+    [ 'Open BSD', /OpenBSD/ ],
+    [ 'Sun OS', /SunOS/ ],
+    [ 'Linux', /(Linux)|(X11)/ ],
+    [ 'Mac OS', /(Mac_PowerPC)|(Macintosh)/ ],
+    [ 'QNX', /QNX/ ],
+    [ 'BeOS', /BeOS/ ],
+    [ 'OS/2', /OS\/2/ ],
+    [ 'Search Bot', /(nuhk)|(Googlebot)|(Yammybot)|(Openbot)|(Slurp)|(MSNBot)|(Ask Jeeves\/Teoma)|(ia_archiver)/ ]
+  ]);
+}
+
+function buildRules(ruleTuples) {
+  return ruleTuples.map(function(tuple) {
+    return {
+      name: tuple[0],
+      rule: tuple[1]
+    };
+  });
+}
+
+module.exports = {
+  detect: detect,
+  detectOS: detectOS,
+  getNodeVersion: getNodeVersion,
+  parseUserAgent: parseUserAgent
+};
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/node_modules/process/browser.js */ "./node_modules/node-libs-browser/node_modules/process/browser.js")))
+
+/***/ }),
+
+/***/ "./node_modules/events/events.js":
+/*!***************************************!*\
+  !*** ./node_modules/events/events.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+function EventEmitter() {
+  this._events = this._events || {};
+  this._maxListeners = this._maxListeners || undefined;
+}
+module.exports = EventEmitter;
+
+// Backwards-compat with node 0.10.x
+EventEmitter.EventEmitter = EventEmitter;
+
+EventEmitter.prototype._events = undefined;
+EventEmitter.prototype._maxListeners = undefined;
+
+// By default EventEmitters will print a warning if more than 10 listeners are
+// added to it. This is a useful default which helps finding memory leaks.
+EventEmitter.defaultMaxListeners = 10;
+
+// Obviously not all Emitters should be limited to 10. This function allows
+// that to be increased. Set to zero for unlimited.
+EventEmitter.prototype.setMaxListeners = function(n) {
+  if (!isNumber(n) || n < 0 || isNaN(n))
+    throw TypeError('n must be a positive number');
+  this._maxListeners = n;
+  return this;
+};
+
+EventEmitter.prototype.emit = function(type) {
+  var er, handler, len, args, i, listeners;
+
+  if (!this._events)
+    this._events = {};
+
+  // If there is no 'error' event listener then throw.
+  if (type === 'error') {
+    if (!this._events.error ||
+        (isObject(this._events.error) && !this._events.error.length)) {
+      er = arguments[1];
+      if (er instanceof Error) {
+        throw er; // Unhandled 'error' event
+      } else {
+        // At least give some kind of context to the user
+        var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
+        err.context = er;
+        throw err;
+      }
+    }
+  }
+
+  handler = this._events[type];
+
+  if (isUndefined(handler))
+    return false;
+
+  if (isFunction(handler)) {
+    switch (arguments.length) {
+      // fast cases
+      case 1:
+        handler.call(this);
+        break;
+      case 2:
+        handler.call(this, arguments[1]);
+        break;
+      case 3:
+        handler.call(this, arguments[1], arguments[2]);
+        break;
+      // slower
+      default:
+        args = Array.prototype.slice.call(arguments, 1);
+        handler.apply(this, args);
+    }
+  } else if (isObject(handler)) {
+    args = Array.prototype.slice.call(arguments, 1);
+    listeners = handler.slice();
+    len = listeners.length;
+    for (i = 0; i < len; i++)
+      listeners[i].apply(this, args);
+  }
+
+  return true;
+};
+
+EventEmitter.prototype.addListener = function(type, listener) {
+  var m;
+
+  if (!isFunction(listener))
+    throw TypeError('listener must be a function');
+
+  if (!this._events)
+    this._events = {};
+
+  // To avoid recursion in the case that type === "newListener"! Before
+  // adding it to the listeners, first emit "newListener".
+  if (this._events.newListener)
+    this.emit('newListener', type,
+              isFunction(listener.listener) ?
+              listener.listener : listener);
+
+  if (!this._events[type])
+    // Optimize the case of one listener. Don't need the extra array object.
+    this._events[type] = listener;
+  else if (isObject(this._events[type]))
+    // If we've already got an array, just append.
+    this._events[type].push(listener);
+  else
+    // Adding the second element, need to change to array.
+    this._events[type] = [this._events[type], listener];
+
+  // Check for listener leak
+  if (isObject(this._events[type]) && !this._events[type].warned) {
+    if (!isUndefined(this._maxListeners)) {
+      m = this._maxListeners;
+    } else {
+      m = EventEmitter.defaultMaxListeners;
+    }
+
+    if (m && m > 0 && this._events[type].length > m) {
+      this._events[type].warned = true;
+      console.error('(node) warning: possible EventEmitter memory ' +
+                    'leak detected. %d listeners added. ' +
+                    'Use emitter.setMaxListeners() to increase limit.',
+                    this._events[type].length);
+      if (typeof console.trace === 'function') {
+        // not supported in IE 10
+        console.trace();
+      }
+    }
+  }
+
+  return this;
+};
+
+EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+EventEmitter.prototype.once = function(type, listener) {
+  if (!isFunction(listener))
+    throw TypeError('listener must be a function');
+
+  var fired = false;
+
+  function g() {
+    this.removeListener(type, g);
+
+    if (!fired) {
+      fired = true;
+      listener.apply(this, arguments);
+    }
+  }
+
+  g.listener = listener;
+  this.on(type, g);
+
+  return this;
+};
+
+// emits a 'removeListener' event iff the listener was removed
+EventEmitter.prototype.removeListener = function(type, listener) {
+  var list, position, length, i;
+
+  if (!isFunction(listener))
+    throw TypeError('listener must be a function');
+
+  if (!this._events || !this._events[type])
+    return this;
+
+  list = this._events[type];
+  length = list.length;
+  position = -1;
+
+  if (list === listener ||
+      (isFunction(list.listener) && list.listener === listener)) {
+    delete this._events[type];
+    if (this._events.removeListener)
+      this.emit('removeListener', type, listener);
+
+  } else if (isObject(list)) {
+    for (i = length; i-- > 0;) {
+      if (list[i] === listener ||
+          (list[i].listener && list[i].listener === listener)) {
+        position = i;
+        break;
+      }
+    }
+
+    if (position < 0)
+      return this;
+
+    if (list.length === 1) {
+      list.length = 0;
+      delete this._events[type];
+    } else {
+      list.splice(position, 1);
+    }
+
+    if (this._events.removeListener)
+      this.emit('removeListener', type, listener);
+  }
+
+  return this;
+};
+
+EventEmitter.prototype.removeAllListeners = function(type) {
+  var key, listeners;
+
+  if (!this._events)
+    return this;
+
+  // not listening for removeListener, no need to emit
+  if (!this._events.removeListener) {
+    if (arguments.length === 0)
+      this._events = {};
+    else if (this._events[type])
+      delete this._events[type];
+    return this;
+  }
+
+  // emit removeListener for all listeners on all events
+  if (arguments.length === 0) {
+    for (key in this._events) {
+      if (key === 'removeListener') continue;
+      this.removeAllListeners(key);
+    }
+    this.removeAllListeners('removeListener');
+    this._events = {};
+    return this;
+  }
+
+  listeners = this._events[type];
+
+  if (isFunction(listeners)) {
+    this.removeListener(type, listeners);
+  } else if (listeners) {
+    // LIFO order
+    while (listeners.length)
+      this.removeListener(type, listeners[listeners.length - 1]);
+  }
+  delete this._events[type];
+
+  return this;
+};
+
+EventEmitter.prototype.listeners = function(type) {
+  var ret;
+  if (!this._events || !this._events[type])
+    ret = [];
+  else if (isFunction(this._events[type]))
+    ret = [this._events[type]];
+  else
+    ret = this._events[type].slice();
+  return ret;
+};
+
+EventEmitter.prototype.listenerCount = function(type) {
+  if (this._events) {
+    var evlistener = this._events[type];
+
+    if (isFunction(evlistener))
+      return 1;
+    else if (evlistener)
+      return evlistener.length;
+  }
+  return 0;
+};
+
+EventEmitter.listenerCount = function(emitter, type) {
+  return emitter.listenerCount(type);
+};
+
+function isFunction(arg) {
+  return typeof arg === 'function';
+}
+
+function isNumber(arg) {
+  return typeof arg === 'number';
+}
+
+function isObject(arg) {
+  return typeof arg === 'object' && arg !== null;
+}
+
+function isUndefined(arg) {
+  return arg === void 0;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/node-libs-browser/node_modules/process/browser.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/node-libs-browser/node_modules/process/browser.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+
+/***/ "./node_modules/os-browserify/browser.js":
+/*!***********************************************!*\
+  !*** ./node_modules/os-browserify/browser.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+exports.endianness = function () { return 'LE' };
+
+exports.hostname = function () {
+    if (typeof location !== 'undefined') {
+        return location.hostname
+    }
+    else return '';
+};
+
+exports.loadavg = function () { return [] };
+
+exports.uptime = function () { return 0 };
+
+exports.freemem = function () {
+    return Number.MAX_VALUE;
+};
+
+exports.totalmem = function () {
+    return Number.MAX_VALUE;
+};
+
+exports.cpus = function () { return [] };
+
+exports.type = function () { return 'Browser' };
+
+exports.release = function () {
+    if (typeof navigator !== 'undefined') {
+        return navigator.appVersion;
+    }
+    return '';
+};
+
+exports.networkInterfaces
+= exports.getNetworkInterfaces
+= function () { return {} };
+
+exports.arch = function () { return 'javascript' };
+
+exports.platform = function () { return 'browser' };
+
+exports.tmpdir = exports.tmpDir = function () {
+    return '/tmp';
+};
+
+exports.EOL = '\n';
+
+exports.homedir = function () {
+	return '/'
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/promise-polyfill/promise.js":
+/*!**************************************************!*\
+  !*** ./node_modules/promise-polyfill/promise.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(setImmediate) {(function (root) {
+
+  // Store setTimeout reference so promise-polyfill will be unaffected by
+  // other code modifying setTimeout (like sinon.useFakeTimers())
+  var setTimeoutFunc = setTimeout;
+
+  function noop() {}
+  
+  // Polyfill for Function.prototype.bind
+  function bind(fn, thisArg) {
+    return function () {
+      fn.apply(thisArg, arguments);
+    };
+  }
+
+  function Promise(fn) {
+    if (typeof this !== 'object') throw new TypeError('Promises must be constructed via new');
+    if (typeof fn !== 'function') throw new TypeError('not a function');
+    this._state = 0;
+    this._handled = false;
+    this._value = undefined;
+    this._deferreds = [];
+
+    doResolve(fn, this);
+  }
+
+  function handle(self, deferred) {
+    while (self._state === 3) {
+      self = self._value;
+    }
+    if (self._state === 0) {
+      self._deferreds.push(deferred);
+      return;
+    }
+    self._handled = true;
+    Promise._immediateFn(function () {
+      var cb = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
+      if (cb === null) {
+        (self._state === 1 ? resolve : reject)(deferred.promise, self._value);
+        return;
+      }
+      var ret;
+      try {
+        ret = cb(self._value);
+      } catch (e) {
+        reject(deferred.promise, e);
+        return;
+      }
+      resolve(deferred.promise, ret);
+    });
+  }
+
+  function resolve(self, newValue) {
+    try {
+      // Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
+      if (newValue === self) throw new TypeError('A promise cannot be resolved with itself.');
+      if (newValue && (typeof newValue === 'object' || typeof newValue === 'function')) {
+        var then = newValue.then;
+        if (newValue instanceof Promise) {
+          self._state = 3;
+          self._value = newValue;
+          finale(self);
+          return;
+        } else if (typeof then === 'function') {
+          doResolve(bind(then, newValue), self);
+          return;
+        }
+      }
+      self._state = 1;
+      self._value = newValue;
+      finale(self);
+    } catch (e) {
+      reject(self, e);
+    }
+  }
+
+  function reject(self, newValue) {
+    self._state = 2;
+    self._value = newValue;
+    finale(self);
+  }
+
+  function finale(self) {
+    if (self._state === 2 && self._deferreds.length === 0) {
+      Promise._immediateFn(function() {
+        if (!self._handled) {
+          Promise._unhandledRejectionFn(self._value);
+        }
+      });
+    }
+
+    for (var i = 0, len = self._deferreds.length; i < len; i++) {
+      handle(self, self._deferreds[i]);
+    }
+    self._deferreds = null;
+  }
+
+  function Handler(onFulfilled, onRejected, promise) {
+    this.onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : null;
+    this.onRejected = typeof onRejected === 'function' ? onRejected : null;
+    this.promise = promise;
+  }
+
+  /**
+   * Take a potentially misbehaving resolver function and make sure
+   * onFulfilled and onRejected are only called once.
+   *
+   * Makes no guarantees about asynchrony.
+   */
+  function doResolve(fn, self) {
+    var done = false;
+    try {
+      fn(function (value) {
+        if (done) return;
+        done = true;
+        resolve(self, value);
+      }, function (reason) {
+        if (done) return;
+        done = true;
+        reject(self, reason);
+      });
+    } catch (ex) {
+      if (done) return;
+      done = true;
+      reject(self, ex);
+    }
+  }
+
+  Promise.prototype['catch'] = function (onRejected) {
+    return this.then(null, onRejected);
+  };
+
+  Promise.prototype.then = function (onFulfilled, onRejected) {
+    var prom = new (this.constructor)(noop);
+
+    handle(this, new Handler(onFulfilled, onRejected, prom));
+    return prom;
+  };
+
+  Promise.all = function (arr) {
+    var args = Array.prototype.slice.call(arr);
+
+    return new Promise(function (resolve, reject) {
+      if (args.length === 0) return resolve([]);
+      var remaining = args.length;
+
+      function res(i, val) {
+        try {
+          if (val && (typeof val === 'object' || typeof val === 'function')) {
+            var then = val.then;
+            if (typeof then === 'function') {
+              then.call(val, function (val) {
+                res(i, val);
+              }, reject);
+              return;
+            }
+          }
+          args[i] = val;
+          if (--remaining === 0) {
+            resolve(args);
+          }
+        } catch (ex) {
+          reject(ex);
+        }
+      }
+
+      for (var i = 0; i < args.length; i++) {
+        res(i, args[i]);
+      }
+    });
+  };
+
+  Promise.resolve = function (value) {
+    if (value && typeof value === 'object' && value.constructor === Promise) {
+      return value;
+    }
+
+    return new Promise(function (resolve) {
+      resolve(value);
+    });
+  };
+
+  Promise.reject = function (value) {
+    return new Promise(function (resolve, reject) {
+      reject(value);
+    });
+  };
+
+  Promise.race = function (values) {
+    return new Promise(function (resolve, reject) {
+      for (var i = 0, len = values.length; i < len; i++) {
+        values[i].then(resolve, reject);
+      }
+    });
+  };
+
+  // Use polyfill for setImmediate for performance gains
+  Promise._immediateFn = (typeof setImmediate === 'function' && function (fn) { setImmediate(fn); }) ||
+    function (fn) {
+      setTimeoutFunc(fn, 0);
+    };
+
+  Promise._unhandledRejectionFn = function _unhandledRejectionFn(err) {
+    if (typeof console !== 'undefined' && console) {
+      console.warn('Possible Unhandled Promise Rejection:', err); // eslint-disable-line no-console
+    }
+  };
+
+  /**
+   * Set the immediate function to execute callbacks
+   * @param fn {function} Function to execute
+   * @deprecated
+   */
+  Promise._setImmediateFn = function _setImmediateFn(fn) {
+    Promise._immediateFn = fn;
+  };
+
+  /**
+   * Change the function to execute on unhandled rejection
+   * @param {function} fn Function to execute on unhandled rejection
+   * @deprecated
+   */
+  Promise._setUnhandledRejectionFn = function _setUnhandledRejectionFn(fn) {
+    Promise._unhandledRejectionFn = fn;
+  };
+  
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Promise;
+  } else if (!root.Promise) {
+    root.Promise = Promise;
+  }
+
+})(this);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate))
+
+/***/ }),
+
+/***/ "./node_modules/setimmediate/setImmediate.js":
+/*!***************************************************!*\
+  !*** ./node_modules/setimmediate/setImmediate.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
+    "use strict";
+
+    if (global.setImmediate) {
+        return;
+    }
+
+    var nextHandle = 1; // Spec says greater than zero
+    var tasksByHandle = {};
+    var currentlyRunningATask = false;
+    var doc = global.document;
+    var registerImmediate;
+
+    function setImmediate(callback) {
+      // Callback can either be a function or a string
+      if (typeof callback !== "function") {
+        callback = new Function("" + callback);
+      }
+      // Copy function arguments
+      var args = new Array(arguments.length - 1);
+      for (var i = 0; i < args.length; i++) {
+          args[i] = arguments[i + 1];
+      }
+      // Store and register the task
+      var task = { callback: callback, args: args };
+      tasksByHandle[nextHandle] = task;
+      registerImmediate(nextHandle);
+      return nextHandle++;
+    }
+
+    function clearImmediate(handle) {
+        delete tasksByHandle[handle];
+    }
+
+    function run(task) {
+        var callback = task.callback;
+        var args = task.args;
+        switch (args.length) {
+        case 0:
+            callback();
+            break;
+        case 1:
+            callback(args[0]);
+            break;
+        case 2:
+            callback(args[0], args[1]);
+            break;
+        case 3:
+            callback(args[0], args[1], args[2]);
+            break;
+        default:
+            callback.apply(undefined, args);
+            break;
+        }
+    }
+
+    function runIfPresent(handle) {
+        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
+        // So if we're currently running a task, we'll need to delay this invocation.
+        if (currentlyRunningATask) {
+            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+            // "too much recursion" error.
+            setTimeout(runIfPresent, 0, handle);
+        } else {
+            var task = tasksByHandle[handle];
+            if (task) {
+                currentlyRunningATask = true;
+                try {
+                    run(task);
+                } finally {
+                    clearImmediate(handle);
+                    currentlyRunningATask = false;
+                }
+            }
+        }
+    }
+
+    function installNextTickImplementation() {
+        registerImmediate = function(handle) {
+            process.nextTick(function () { runIfPresent(handle); });
+        };
+    }
+
+    function canUsePostMessage() {
+        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
+        // where `global.postMessage` means something completely different and can't be used for this purpose.
+        if (global.postMessage && !global.importScripts) {
+            var postMessageIsAsynchronous = true;
+            var oldOnMessage = global.onmessage;
+            global.onmessage = function() {
+                postMessageIsAsynchronous = false;
+            };
+            global.postMessage("", "*");
+            global.onmessage = oldOnMessage;
+            return postMessageIsAsynchronous;
+        }
+    }
+
+    function installPostMessageImplementation() {
+        // Installs an event handler on `global` for the `message` event: see
+        // * https://developer.mozilla.org/en/DOM/window.postMessage
+        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
+
+        var messagePrefix = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage = function(event) {
+            if (event.source === global &&
+                typeof event.data === "string" &&
+                event.data.indexOf(messagePrefix) === 0) {
+                runIfPresent(+event.data.slice(messagePrefix.length));
+            }
+        };
+
+        if (global.addEventListener) {
+            global.addEventListener("message", onGlobalMessage, false);
+        } else {
+            global.attachEvent("onmessage", onGlobalMessage);
+        }
+
+        registerImmediate = function(handle) {
+            global.postMessage(messagePrefix + handle, "*");
+        };
+    }
+
+    function installMessageChannelImplementation() {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = function(event) {
+            var handle = event.data;
+            runIfPresent(handle);
+        };
+
+        registerImmediate = function(handle) {
+            channel.port2.postMessage(handle);
+        };
+    }
+
+    function installReadyStateChangeImplementation() {
+        var html = doc.documentElement;
+        registerImmediate = function(handle) {
+            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+            var script = doc.createElement("script");
+            script.onreadystatechange = function () {
+                runIfPresent(handle);
+                script.onreadystatechange = null;
+                html.removeChild(script);
+                script = null;
+            };
+            html.appendChild(script);
+        };
+    }
+
+    function installSetTimeoutImplementation() {
+        registerImmediate = function(handle) {
+            setTimeout(runIfPresent, 0, handle);
+        };
+    }
+
+    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
+    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
+
+    // Don't get fooled by e.g. browserify environments.
+    if ({}.toString.call(global.process) === "[object process]") {
+        // For Node.js before 0.9
+        installNextTickImplementation();
+
+    } else if (canUsePostMessage()) {
+        // For non-IE10 modern browsers
+        installPostMessageImplementation();
+
+    } else if (global.MessageChannel) {
+        // For web workers, where supported
+        installMessageChannelImplementation();
+
+    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
+        // For IE 6–8
+        installReadyStateChangeImplementation();
+
+    } else {
+        // For older browsers
+        installSetTimeoutImplementation();
+    }
+
+    attachTo.setImmediate = setImmediate;
+    attachTo.clearImmediate = clearImmediate;
+}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../node-libs-browser/node_modules/process/browser.js */ "./node_modules/node-libs-browser/node_modules/process/browser.js")))
+
+/***/ }),
+
+/***/ "./node_modules/timers-browserify/main.js":
+/*!************************************************!*\
+  !*** ./node_modules/timers-browserify/main.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
+            (typeof self !== "undefined" && self) ||
+            window;
+var apply = Function.prototype.apply;
+
+// DOM APIs, for completeness
+
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, scope, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, scope, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) {
+  if (timeout) {
+    timeout.close();
+  }
+};
+
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(scope, this._id);
+};
+
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
+
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
+
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
+
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
+  }
+};
+
+// setimmediate attaches itself to the global object
+__webpack_require__(/*! setimmediate */ "./node_modules/setimmediate/setImmediate.js");
+// On some exotic environments, it's not clear which object `setimmediate` was
+// able to install onto.  Search each possibility in the same order as the
+// `setimmediate` library.
+exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
+                       (typeof global !== "undefined" && global.setImmediate) ||
+                       (this && this.setImmediate);
+exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
+                         (typeof global !== "undefined" && global.clearImmediate) ||
+                         (this && this.clearImmediate);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/capability.js":
+/*!****************************************!*\
+  !*** ./platforms/web/js/capability.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var detect = __webpack_require__(/*! detect-browser */ "./node_modules/detect-browser/index.js").detect;
+
+var BROWSER = (function(){
+    var browser = detect() || {name:'', version:'', os:''};
+    // Parse semver from version string.
+    // NaN if semver value doesn't exist
+    var split = browser.version.split('.');
+    browser.major = parseInt(split[0], 10);
+    browser.minor = parseInt(split[1], 10);
+    browser.patch = parseInt(split[2], 10);
+    return browser;
+}());
+
+function supportsSingleFrameFragments(browser) {
+    if (navigator.userAgent.toLowerCase().indexOf('crkey') > -1) {
+        // Don't allow frame by frame for chromecast
+        return false;
+    }
+
+    var name = browser.name,
+        major = browser.major;
+    return (
+        (name == 'chrome' && major >= 50) ||
+        (name == 'firefox' && major >= 45)
+    );
+}
+
+// Hardcoded results from DRMManager.DRMBrowserSupportMapping
+function supportedCDMs(browser) {
+    var DRM_CAPABILITIES_BY_BROWSER_BITMASK = {
+        chrome: 5,
+        firefox: 5,
+        edge: 16,
+        safari: 128
+    };
+
+    return DRM_CAPABILITIES_BY_BROWSER_BITMASK[browser.name]
+        ? DRM_CAPABILITIES_BY_BROWSER_BITMASK[browser.name]
+        : 0;
+}
+
+// Only chrome exposes sufficient network information
+function supportsLowLatencyABR(browser) {
+    return browser.name === 'chrome';
+}
+
+module.exports = {
+    browser: BROWSER,
+    supportsSingleFrameFragments: supportsSingleFrameFragments(BROWSER),
+    supportedCDMs: supportedCDMs(BROWSER),
+    supportsLowLatencyABR: supportsLowLatencyABR(BROWSER),
+};
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/drm/PlayReady.js":
+/*!*******************************************!*\
+  !*** ./platforms/web/js/drm/PlayReady.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var getBody = function(xmlDoc) {
+    var licenseRequest = null;
+    if (xmlDoc.getElementsByTagName('Challenge').length > 0 && xmlDoc.getElementsByTagName('Challenge')[0]) {
+        var Challenge = xmlDoc.getElementsByTagName('Challenge')[0].childNodes[0].nodeValue;
+        if (Challenge) {
+            licenseRequest = atob(Challenge);
+        }
+    }
+    return licenseRequest;
+};
+
+var getHeaders = function(xmlDoc) {
+    var headers = {};
+    var headerNameList = xmlDoc.getElementsByTagName('name');
+    var headerValueList = xmlDoc.getElementsByTagName('value');
+    for (var i = 0; i < headerNameList.length; i++) {
+        headers[headerNameList[i].childNodes[0].nodeValue] = headerValueList[i].childNodes[0].nodeValue;
+    }
+    return headers;
+};
+
+/**
+ * PlayReady License Request requires transforming the ArrayBuffer into XML format
+ * and adding headers included inside the message created by CDM
+ * Based on Window's Docs/Dash implementation: https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn457474(v%3dieb.10)
+ * @param {ArrayBuffer} message - https://www.w3.org/TR/2014/WD-encrypted-media-20140828/encrypted-media.html#dom-mediakeymessageevent
+ */
+var licenseRequestData = function(message) {
+    var messageFormat = 'utf16';
+    var msg;
+    var xmlDoc;
+    var parser = new DOMParser();
+    var dataview = (messageFormat === 'utf16') ? new Uint16Array(message) : new Uint8Array(message);
+
+    msg = String.fromCharCode.apply(null, dataview);
+    xmlDoc = parser.parseFromString(msg, 'application/xml');
+
+    return {
+        headers: getHeaders(xmlDoc),
+        body: getBody(xmlDoc),
+    };
+};
+
+module.exports = {
+  licenseRequestData: licenseRequestData,
+};
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/drm/constants.js":
+/*!*******************************************!*\
+  !*** ./platforms/web/js/drm/constants.js ***!
+  \*******************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 // This is a temporary variable between using ClearKey, or Production.
@@ -261,22 +1692,1221 @@ module.exports = {
 
 
 /***/ }),
-/* 1 */
+
+/***/ "./platforms/web/js/drm/utils.js":
+/*!***************************************!*\
+  !*** ./platforms/web/js/drm/utils.js ***!
+  \***************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var EventEmiter = __webpack_require__(2);
-var MediaSink = __webpack_require__(3).MediaSink;
-var Browser = __webpack_require__(10).browser;
-var WorkerMessage = __webpack_require__(13);
-var ClientMessage = __webpack_require__(14);
+var Constants = __webpack_require__(/*! ./constants */ "./platforms/web/js/drm/constants.js");
+
+var ALL_KEY_SYSTEMS = Constants.ALL_KEY_SYSTEMS;
+
+// some utils from https://github.com/videojs/videojs-contrib-eme/
+// should probably revise these if our needs differ
+var arrayBuffersEqual = function(arrayBuffer1, arrayBuffer2) {
+    if (arrayBuffer1 === arrayBuffer2) {
+        return true;
+    }
+
+    if (arrayBuffer1.byteLength !== arrayBuffer2.byteLength) {
+        return false;
+    }
+
+    var dataView1 = new DataView(arrayBuffer1);
+    var dataView2 = new DataView(arrayBuffer2);
+
+    for (var i = 0; i < dataView1.byteLength; i++) {
+        if (dataView1.getUint8(i) !== dataView2.getUint8(i)) {
+            return false;
+        }
+    }
+    return true;
+};
+
+var arrayBufferFrom = function (bufferOrTypedArray) {
+    if (bufferOrTypedArray instanceof Uint8Array ||
+        bufferOrTypedArray instanceof Uint16Array) {
+        return bufferOrTypedArray.buffer;
+    }
+    return bufferOrTypedArray;
+};
+
+var uintArrayToString = function (array) {
+    return array instanceof Uint8Array
+        ? String.fromCharCode.apply(null, new Uint8Array(array))
+        : String.fromCharCode.apply(null, new Uint16Array(array));
+};
+
+var getHostnameFromUri = function (uri) {
+    var link = document.createElement('a');
+    link.href = uri;
+    return link.hostname;
+};
+
+/**
+ * Takes in array of PSSH data and returns KEY_SYSTEM objects
+ * that are supported.
+ *
+ * @param {Array} psshArrayBuffer
+ */
+var parsePSSHSupportFromInitData = function(initData) {
+    var uuids = parseAllPSSHData(initData);
+    return mapPSSHSystemIds(uuids);
+};
+
+/**
+ * Takes in array of PSSH data and returns KEY_SYSTEM objects
+ * that are supported.
+ *
+ * @param {Array} psshArrayBuffer
+ */
+var parsePSSHSupport = function(psshArrayBuffer) {
+    var uuids = psshArrayBuffer.map(parsePSSHList);
+    return mapPSSHSystemIds(uuids);
+}
+
+var mapPSSHSystemIds = function(uuids){
+    var supportedKeySystems = [];
+    uuids.forEach(function(uuid) {
+        ALL_KEY_SYSTEMS.forEach(function(ks) {
+            if (ks.uuid === uuid) {
+                supportedKeySystems.push(ks);
+            }
+        });
+    });
+    return supportedKeySystems;
+};
+
+/**
+ * Takes in PSSH box data and returns key system uuid
+ * This is from the Dash.js implementation to dynamically read
+ * media's CDM support
+ *
+ * @param {ArrayBuffer} data - event.initData
+ */
+var parsePSSHList = function(data) {
+    var uint8a = new Uint8Array(data);
+    var dv = new DataView(uint8a.buffer);
+    // first 4 bytes for size
+    var byteCursor = 4;
+
+    // verify PSSH
+    if (dv.getUint32(byteCursor) !== 0x70737368) {
+        byteCursor = nextBox;
+        console.warn('pssh was not verified')
+        return null;
+    }
+    byteCursor += 4;
+
+    /* Version must be 0 or 1 */
+    version = dv.getUint8(byteCursor);
+    if (version !== 0 && version !== 1) {
+        byteCursor = nextBox;
+        console.warn('pssh version must be 0 or 1')
+        return null;
+    }
+    byteCursor++;
+    byteCursor += 3; /* skip flags */
+
+    // 16-byte UUID/SystemID
+    systemID = '';
+    var i, val;
+    for (i = 0; i < 4; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 4;
+    systemID += '-';
+    for (i = 0; i < 2; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 2;
+    systemID += '-';
+    for (i = 0; i < 2; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 2;
+    systemID += '-';
+    for (i = 0; i < 2; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 2;
+    systemID += '-';
+    for (i = 0; i < 6; i++) {
+        val = dv.getUint8(byteCursor + i).toString(16);
+        systemID += (val.length === 1) ? '0' + val : val;
+    }
+    byteCursor += 6;
+
+    return systemID.toLowerCase();
+};
+
+/**
+ * This is currently unused, but it allows you to pass in `encrypted`
+ * event.initData and it will return PSSH data by key system uuid
+ * This is from the Dash.js implementation to dynamically read
+ * media's CDM support
+ *
+ * @param {ArrayBuffer} data - event.initData
+ */
+var parseAllPSSHData = function(data) {
+    if (data === null)
+        return [];
+
+    var dv = new DataView(data.buffer || data); // data.buffer first for Uint8Array support
+    var done = false;
+    var uuids = [];
+
+    // TODO: Need to check every data read for end of buffer
+    var byteCursor = 0;
+    while (!done) {
+
+        var size,
+            nextBox,
+            version,
+            systemID,
+            psshDataSize;
+        var boxStart = byteCursor;
+
+        if (byteCursor >= dv.buffer.byteLength)
+            break;
+
+        /* Box size */
+        size = dv.getUint32(byteCursor);
+        nextBox = byteCursor + size;
+        byteCursor += 4;
+
+        /* Verify PSSH */
+        if (dv.getUint32(byteCursor) !== 0x70737368) {
+            byteCursor = nextBox;
+            continue;
+        }
+        byteCursor += 4;
+
+        /* Version must be 0 or 1 */
+        version = dv.getUint8(byteCursor);
+        if (version !== 0 && version !== 1) {
+            byteCursor = nextBox;
+            continue;
+        }
+        byteCursor++;
+
+        byteCursor += 3; /* skip flags */
+
+        // 16-byte UUID/SystemID
+        systemID = '';
+        var i, val;
+        for (i = 0; i < 4; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 4;
+        systemID += '-';
+        for (i = 0; i < 2; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 2;
+        systemID += '-';
+        for (i = 0; i < 2; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 2;
+        systemID += '-';
+        for (i = 0; i < 2; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 2;
+        systemID += '-';
+        for (i = 0; i < 6; i++) {
+            val = dv.getUint8(byteCursor + i).toString(16);
+            systemID += (val.length === 1) ? '0' + val : val;
+        }
+        byteCursor += 6;
+
+        systemID = systemID.toLowerCase();
+
+        /* PSSH Data Size */
+        psshDataSize = dv.getUint32(byteCursor);
+        byteCursor += 4;
+
+        /* PSSH Data */
+        uuids.push(systemID);
+        byteCursor = nextBox;
+    }
+
+    return uuids;
+};
+
+var fetchArrayBuffer = function (url, options) {
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(options.method, url, true);
+
+        for (var h in options.headers) {
+            if (options.headers.hasOwnProperty(h)) {
+                xhr.setRequestHeader(h, options.headers[h]);
+            }
+        }
+        xhr.responseType = "arraybuffer";
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200){
+                    resolve(xhr.response);
+                } else {
+                    var simpleErrorResponse = 'Request Error: Status ' + xhr.status;
+                    console.warn(simpleErrorResponse)
+                    reject(simpleErrorResponse);
+                }
+            }
+        }
+        xhr.send(options.body);
+    });
+};
+
+/**
+ * Ensuring that uncaught errors are sent in the correct format.
+ * Most issues should be a constant error found in ERRORS, but
+ * in case we have an issue we weren't expecting, we should handle
+ * the error in the same format.
+ */
+var checkErrorFormat = function(err) {
+    if (err.code && err.message) {
+        return err;
+    } else {
+        // you can use this to debug uncaught errors
+        //console.warn('uncaught error contents:', err);
+        return Constants.ERRORS.UNCAUGHT_ERROR;
+    }
+};
+
+module.exports = {
+    arrayBuffersEqual: arrayBuffersEqual,
+    arrayBufferFrom: arrayBufferFrom,
+    uintArrayToString: uintArrayToString,
+    getHostnameFromUri: getHostnameFromUri,
+    fetchArrayBuffer: fetchArrayBuffer,
+    parsePSSHSupport: parsePSSHSupport,
+    parsePSSHSupportFromInitData: parsePSSHSupportFromInitData,
+    checkErrorFormat: checkErrorFormat,
+};
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/drmmanager.js":
+/*!****************************************!*\
+  !*** ./platforms/web/js/drmmanager.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Constants = __webpack_require__(/*! ./drm/constants */ "./platforms/web/js/drm/constants.js");
+var Utils = __webpack_require__(/*! ./drm/utils */ "./platforms/web/js/drm/utils.js");
+var PlayReady = __webpack_require__(/*! ./drm/PlayReady */ "./platforms/web/js/drm/PlayReady.js");
+
+//setup constants/utils
+var MODES = Constants.MODES;
+var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
+var ALL_KEY_SYSTEMS = ALL_KEY_SYSTEMS;
+var KEY_SYSTEMS_BY_STRING = Constants.KEY_SYSTEMS_BY_STRING;
+var TEST_AUTH_XML = Constants.TEST_AUTH_XML;
+var ENCRYPTION_TYPES = Constants.ENCRYPTION_TYPES;
+var SUPPORTED_DRM_MAP = Constants.SUPPORTED_DRM_MAP;
+var DRM_SUPPORT_BY_BROWSER = Constants.DRM_SUPPORT_BY_BROWSER;
+var DRM_SUPPORT_VALUES = Constants.DRM_SUPPORT_VALUES;
+var SUPPORTED_BROWSERS = Constants.SUPPORTED_BROWSERS;
+var DEFAULT_AUDIO_CAPABILITIES = Constants.DEFAULT_AUDIO_CAPABILITIES;
+var DEFAULT_VIDEO_CAPABILITIES = Constants.DEFAULT_VIDEO_CAPABILITIES;
+var arrayBuffersEqual = Utils.arrayBuffersEqual;
+var getHostnameFromUri = Utils.getHostnameFromUri;
+var arrayBufferFrom = Utils.arrayBufferFrom;
+var uintArrayToString = Utils.uintArrayToString;
+var fetchArrayBuffer = Utils.fetchArrayBuffer;
+var parsePSSHSupport = Utils.parsePSSHSupport;
+var parsePSSHSupportFromInitData = Utils.parsePSSHSupportFromInitData;
+var checkErrorFormat = Utils.checkErrorFormat;
+
+var ERRORS = Constants.ERRORS;
+
+// When using this fetch shim, FF loses support for response.arrayBuffer();
+// not sure if I should use a different shim like `github/fetch` for this instead
+// current browser support: https://caniuse.com/#feat=fetch
+// var fetch = require('./fetch'); // get fetch or fetchShim
+
+/* TODO Robustness levels for Chrome best practices
+    Spec notes that:
+        robustness of type DOMString, defaulting to ""
+        The robustness level associated with the content type.
+        The empty string indicates that any ability to decrypt
+        and decode the content type is acceptable.
+
+    If we get requirements, we can set it to one of the settings below:
+    https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf
+    Definition           EME Level     Widevine Device Security Level
+    SW_SECURE_CRYPTO     1             3
+    SW_SECURE_DECODE     2             3
+    HW_SECURE_CRYPTO     3             2
+    HW_SECURE_DECODE     4             1
+    HW_SECURE_ALL        5             1
+*/
+
+// this is only used for W3C spec following EME feature check
+var supportedConfig = [{
+  "initDataTypes": [ENCRYPTION_TYPES.CENC],
+  "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
+  "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
+}];
+
+/**
+ * This is a temporary setting that makes sure development player
+ * doesn't break when trying to use clearkey implementation.
+ * This can be set to false and/or cleaned up once `configureCDMSupport`
+ * call always accurately describes the PSSH on the media.
+ * When this is set to true, it manually parses the entire `event.initData`
+ * passed to `encrypted` event instead of listening to mediaSink's configure
+ * track data `track.protectionData`.
+ */
+var PARSE_PSSH_DURING_ENCRYPTED_EVENT = true;
+
+/**
+ * DRMManager sets up and handles media that contains DRM encryption
+ * @param {Object} config
+ * @param {HTMLElement} config.video - video element
+ * @param {function(MediaError)} config.onerror - video error with error code
+ */
+var DRMManager = function(config) {
+    this.video = config.video;
+    this.cdmSupport = null;
+    this.selectedCDM = null;
+    this.mediaKeys = undefined; // we will reserve null
+    this.initialized = false;
+    this._handleError = config.onerror;
+    this._certificate = null;
+    this._currentSrc = null;
+    this._pendingSessions = [];
+    this._sessions = [];
+
+    this._init();
+};
+
+/**
+ * Check Browser CDM Capabilities
+ * Based on the recommendations of MDN, a feature check could result in
+ * 'user-visible effects such as asking for permission to access one or more
+ * system resources.' It also would need to be an async check.
+ * @param {string} browserName - browser name
+ */
+DRMManager.CDMCapabilitiesByBrowser = function(browserName) {
+    if (DRM_SUPPORT_BY_BROWSER[browserName]) {
+        return DRM_SUPPORT_BY_BROWSER[browserName].reduce(function(total, drm) {
+            var value = drm ? drm.value : 0;
+            return total + value;
+        }, 0);
+    } else {
+        // TODO: may want to warn/error here, since browser settings was not found
+        return 0;
+    }
+};
+
+/**
+ * Used to create the hardcoded bitmask map in 'capability.js'
+ * This helper saves workers from importing this entire file to
+ * use constants relevant to only DRM.
+ * @param {Array} browsers
+ */
+DRMManager.DRMBrowserSupportMapping = function(browsers) {
+    var browserMapping = {};
+    SUPPORTED_BROWSERS.forEach(function(browserName) {
+        browserMapping[browserName] = DRMManager.CDMCapabilitiesByBrowser(browserName);
+    });
+    return browserMapping;
+};
+
+/*  Feature check of browsers capabilities
+    Notes: This is more accurate than checking by browser, but currently not used because:
+        1. It has to be async, navigator.requestMediaKeySystemAccess returns a promise, which makes it hard to make a constant.
+        2. MDN web docs don't seem to be very keen on using except when necessary:
+            From: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess
+            "This method may have user-visible effects such as asking for permission to access one or more system resources. Consider that when deciding when to call requestMediaKeySystemAccess(); you don't want those requests to happen at inconvenient times. As a general rule, this function should be called only when it's about time to create and use a MediaKeys object by calling the returned MediaKeySystemAccess object's createMediaKeys() method."
+*/
+DRMManager.CDMCapabilitiesFeatureCheck = function() {
+    var checkSupported = function(settings) {
+        var config = [{
+            "initDataTypes": [settings.type],
+            "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
+            "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
+        }]
+        return navigator.requestMediaKeySystemAccess(settings.cdm.keySystem, config)
+            .then(function() {
+                return settings;
+            })
+            .catch(function() {
+                // not a supported type
+            });
+    };
+
+    var checkSupportedSafari = function(settings) {
+        // Apple devices only support 'cbcs'
+        // fMP4 sample encryption which is specified in ISO/IEC 23001:7 2016, Common Encryption in ISO BMFF [CENC]. Apple devices only support 'cbcs', which is specified in CENC Section 10.4. [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
+        if (settings.type !== ENCRYPTION_TYPES.CBCS){
+            return Promise.resolve(undefined);
+        } else {
+            try {
+                return WebKitMediaKeys.isTypeSupported(settings.cdm.keySystem)
+                    ? Promise.resolve(settings)
+                    : Promise.resolve(undefined);
+            } catch(err) {
+                return Promise.resolve(undefined);
+            }
+        }
+    };
+
+    var promiseRequests;
+    if (navigator.requestMediaKeySystemAccess) {
+        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
+            return checkSupported(settings);
+        });
+    } else if (window.WebKitMediaKeys) {
+        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
+            return checkSupportedSafari(settings);
+        });
+    } else {
+        // if the browser supports no DRM
+        return Promise.resolve(0);
+    }
+    return Promise.all(promiseRequests)
+        .then(function(results){
+            // results is an array of SUPPORTED_DRM_MAP values or undefined if not supported
+            return results.reduce(function(memo, result){
+                var value = result ? result.value : 0;
+                return memo + value;
+            }, 0);
+        });
+}
+/**
+ * Initializes instance, and adds 'encrypted' handlers
+ * to support DRM functionality
+ */
+DRMManager.prototype._init = function() {
+    this._checkSrcSessions();
+    this.video.addEventListener('encrypted', this._handleEncrypted.bind(this), false);
+    this.video.addEventListener('webkitneedkey', this._handleSafariEncrypted.bind(this), false);
+};
+
+DRMManager.prototype.configureCDMSupport = function(protectionData) {
+    // if we want to directly parse the encrypted event
+    if (PARSE_PSSH_DURING_ENCRYPTED_EVENT) return;
+    if (this.cdmSupport === null && protectionData.length > 0) {
+        this.cdmSupport = parsePSSHSupport(protectionData);
+    }
+};
+
+/**
+ * Checks to see if system is already handling
+ * a session that matches initData
+ * @param {ArrayBuffer} initData
+ */
+DRMManager.prototype._hasSession = function(initData) {
+    for (var i = 0; i < this._sessions.length; i++) {
+        var session = this._sessions[i];
+        if (!session.initData) continue;
+        if (arrayBuffersEqual(arrayBufferFrom(session.initData), arrayBufferFrom(initData))) {
+            return true;
+        }
+    }
+    return false;
+};
+
+/**
+ * Clears out sessions when video source changes.
+ * TODO: Our system currently doesn't not change the src, but may need
+ * to clear out sessions at some point?
+ */
+DRMManager.prototype._checkSrcSessions = function() {
+    var src = this.video.src;
+    if (src !== this._currentSrc) {
+        this._currentSrc = src;
+        this._sessions = [];
+    }
+};
+
+/**
+ * Builds a promise catch chain to feature detect a keysystem that works.
+ * This will get refactored once we have real systems working and we know
+ * which format is requested/returned
+ */
+DRMManager.prototype._createKeySystemSupportChain = function() {
+    if (this.cdmSupport === null || this.cdmSupport.length === 0){
+        return Promise.reject(ERRORS.NO_PSSH_FOUND);
+    }
+    var promise;
+    this.cdmSupport.forEach(function(cdm){
+        if (!promise) {
+            promise = navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
+        } else {
+            promise = promise.catch(function(e) {
+                return navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
+            });
+        }
+    });
+
+    promise = promise.catch(function() {
+        return Promise.reject(ERRORS.NO_CDM_SUPPORT);
+    });
+
+    return promise;
+}
+
+/**
+ * Handles embeded DRM in initial video file
+ * @param {Object} event - EncryptedMediaEvent [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent]
+ */
+DRMManager.prototype._handleEncrypted = function(event){
+    this._checkSrcSessions();
+    // if we already have this same session setup, ignore this event;
+    if (this._hasSession(event.initData)) {
+        return;
+    }
+    this._sessions.push({ initData: event.initData });
+
+    // this can be removed once `configureCDMSupport` gets all DRM implementations
+    if (PARSE_PSSH_DURING_ENCRYPTED_EVENT && this.cdmSupport === null) {
+        this.cdmSupport = parsePSSHSupportFromInitData(event.initData);
+    }
+
+    var keySystemPromise;
+    // if mediakeys have not started
+    if (typeof this.mediaKeys === 'undefined') {
+        // TODO there is a better way to check/manage state instead of using undefined -> null as loading
+        // this will make sure things will not fire twice, since there is async that could be happening.
+        this.mediaKeys = null;
+        this._pendingSessions = [];
+
+        // create a promise chain of keySystem support
+        keySystemPromise = this._createKeySystemSupportChain()
+            .then(this._getCertificate.bind(this))
+            .then(function(keySystemAccess){
+                return keySystemAccess.createMediaKeys();
+            })
+            .then(this._setMediaKeys.bind(this))
+            .catch(function(err) {
+                this._handleError(checkErrorFormat(err));
+            }.bind(this));
+    }
+
+    this._addSession(event.initDataType, event.initData);
+    return keySystemPromise;
+};
+
+/**
+ * Stores and sets mediaKeys/certificate
+ * It will also create sessions for any sessions that are pending to be created
+ * @param {Object} createdMediaKeys - MediaKeys [https://www.w3.org/TR/encrypted-media/#dom-mediakeys]
+ */
+DRMManager.prototype._setMediaKeys = function(createdMediaKeys){
+    this.mediaKeys = createdMediaKeys;
+
+    if (this._certificate) {
+        this.setServerCertificate(certificate);
+    }
+    this._pendingSessions.forEach(function(pending){
+        this._createSessionRequest(pending.initDataType, pending.initData);
+    }.bind(this));
+    this._pendingSessions = [];
+    return this.video.setMediaKeys(this.mediaKeys);
+};
+
+/**
+ * Creates Sessions if MediaKeys is ready, otherwise it stores data
+ * to create session once the MediaKeys is ready.
+ * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
+ * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
+ */
+DRMManager.prototype._addSession = function(initDataType, initData){
+    if (this.mediaKeys) {
+        this._createSessionRequest(initDataType, initData)
+            .catch(function(err){
+                this._handleError(ERRORS.KEY_SESSION_CREATION);
+            }.bind(this));
+    } else {
+        this._pendingSessions.push({
+            initDataType: initDataType,
+            initData: initData
+        });
+    }
+};
+
+/**
+ * Creates key session, prepares event handling of sessions messages,
+ * and then generates a key session request.
+ * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
+ * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
+ */
+DRMManager.prototype._createSessionRequest = function(initDataType, initData){
+    var keySession = this.mediaKeys.createSession();
+    keySession.addEventListener('message', this._handleMessage.bind(this), false);
+    keySession.addEventListener('keystatuseschange', function(event) {
+        this._handleKeyStatusesChange(keySession, event, initData);
+    }.bind(this), false);
+    return keySession.generateRequest(initDataType, initData);
+};
+
+/**
+ * Handles the event of a key changing, will be used for expiring and removing
+ * key sessions.
+ * @param {Object} keySession - MediaKeySession [https://www.w3.org/TR/encrypted-media/#dom-mediakeysession]
+ * @param {Object} event - Event
+ * @param {ArrayBuffer} initData - ArrayBuffer [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
+ */
+DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, initData) {
+    var expired = false;
+
+    // based on https://www.w3.org/TR/encrypted-media/#example-using-all-events
+    keySession.keyStatuses.forEach(function(status, keyId){
+        switch (status) {
+            case 'expired':
+                // "All other keys in the session must have this status."
+                // https://www.w3.org/TR/encrypted-media/#dom-mediakeystatus-expired
+                expired = true;
+                break;
+            case 'internal-error':
+                // https://www.w3.org/TR/encrypted-media/#dom-mediakeystatus-internal-error
+                console.warn("Key status reported 'internal-error'. Leaving it open since we aren't sure it is fatal", event);
+                break;
+        }
+    });
+
+    if (expired) {
+        keySession.close().then(function(){
+            this._removeSession(initData);
+        }.bind(this));
+    }
+}
+
+/**
+ * Removes a session that matches initData
+ * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
+ */
+DRMManager.prototype._removeSession = function(initData) {
+    for (var i = 0; i < this._sessions.length; i++) {
+        var session = this._sessions[i];
+        if (session.initData === initData) {
+            this._sessions.splice(i, 1);
+            return;
+        }
+    }
+}
+
+/**
+ * Requests a certificate
+ * TODO: Still needs implementation for FairPlay Cert
+ * @param {Object} keySystemAccess - [https://www.w3.org/TR/encrypted-media/#dom-mediakeysystemaccess]
+ */
+DRMManager.prototype._getCertificate = function(keySystemAccess) {
+    this.selectedCDM = KEY_SYSTEMS_BY_STRING[keySystemAccess.keySystem];
+    return Promise.resolve(keySystemAccess);
+}
+
+/**
+ * Handles key session 'message' event and generates/updates
+ * license
+ * @param {Object} event - [https://www.w3.org/TR/encrypted-media/#dom-mediakeymessageevent]
+ */
+DRMManager.prototype._handleMessage = function(event) {
+    // grabs relevant session
+    var keySession = event.target;
+    this._generateLicense(event.message)
+        .then(function(license){
+            return keySession.update(license)
+                .catch(function(error) {
+                    return Promise.reject(ERRORS.SESSION_UPDATE);
+                });
+        })
+        .catch(function(error) {
+            this._handleError(checkErrorFormat(error));
+        }.bind(this));
+};
+
+/**
+ * Currently a ClearKey license generation
+ * @param {Object} message - Message returned from CDM message event
+ */
+DRMManager.prototype._generateLicense = function(message) {
+    if (this.selectedCDM === KEY_SYSTEMS.CLEAR_KEY) {
+        // clearkey implementation where KID is key
+        var request = JSON.parse(new TextDecoder().decode(message));
+        var keyObj = {
+            kty: 'oct',
+            alg: 'A128KW',
+            kid: request.kids[0],
+            k: request.kids[0]
+        };
+        var result = new TextEncoder().encode(JSON.stringify({
+            keys: [keyObj]
+        }));
+        return Promise.resolve(result);
+    } else {
+        var requestData = this._prepareLicenseRequest(message);
+        return fetchArrayBuffer(requestData.url, requestData.options)
+            .catch(function(error) {
+                return Promise.reject(ERRORS.LICENSE_REQUEST);
+            });
+    }
+};
+
+DRMManager.prototype._prepareLicenseRequest = function(message) {
+    var body = message;
+    var headers = {
+        customdata: TEST_AUTH_XML
+    };
+
+    // get additional data for specifics CDM license request calls
+    var additionalData = {};
+    if (this.selectedCDM === KEY_SYSTEMS.PLAYREADY) {
+        additionalData = PlayReady.licenseRequestData(message);
+    }
+
+    if (additionalData.body) {
+        body = additionalData.body;
+    }
+    if (additionalData.headers) {
+        headers = Object.assign(headers, additionalData.headers);
+    }
+
+    return {
+        url: this.selectedCDM.licenseUrl,
+        options: {
+            method: 'POST',
+            body: body,
+            headers: headers,
+        }
+    };
+}
+
+
+// SAFARI FAIRPLAY SUPPORT
+// untested since it does not allow for clearkey testing
+DRMManager.prototype._handleSafariEncrypted = function(event){
+    this._getSafariCertificate()
+        .then(this._setupSafariMediaKeys.bind(this, event))
+        .catch(function(err){
+            console.error('there was an error creating safari key', err);
+        })
+};
+
+// TODO: Fairplay Cert, once we have test video/BuyDRM
+DRMManager.prototype._getSafariCertificate = function(){
+    return Promise.resolve();
+};
+
+DRMManager.prototype._getSafariContentId = function(initData){
+    return getHostnameFromUri(uintArrayToString(initData));
+};
+
+/*
+    Safari Events for Fairplay [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
+
+    Notes:
+    - Depending on the Fairplay key version we plan on targetting,
+    'com.apple.fps.1_0' will need to concat initData and Certificate, where may not be necessary with 'com.apple.fps.2_0'
+
+    3 year old clearkey test, doesn't seem to work:
+    ClearKey (AES128-encrypted HLS)
+    https://github.com/WebKit/webkit/blob/master/LayoutTests/http/tests/media/clearkey/clear-key-hls-aes128.html
+
+    WORK IN PROGRESS
+*/
+
+/**
+ * Safari's 'encrypted' initialization event. This works to
+ * start initialization
+ * TODO: needs some work to be split up a bit more
+ * @param {Object} needKeyEvent - Similar to 'encrypted' event
+ */
+DRMManager.prototype._setupSafariMediaKeys = function(needKeyEvent){
+    return new Promise(function(resolve, reject) {
+        if (!this.video.webkitKeys){
+            // this.video.webkitSetMediaKeys(new window.WebkitMediaKeys(KEY_SYSTEMS.FAIRPLAY.keySystem));
+            this.video.webkitSetMediaKeys(new WebkitMediaKeys(KEY_SYSTEMS.CLEAR_KEY.keySystem));
+        }
+
+        if (!this.video.webkitKeys){
+            reject('Issue setting fairplay media keys');
+        }
+
+        // this may be needed for 1_0 it appears
+        // var keySession = this.video.webkitKeys.createSession(
+        //     'video/mp4',
+        //     concatInitDataIdAndCertificate(contentId, initData, cert));
+        var keySession = this.video.webkitKeys.createSession(
+            'video/mp4',
+            needKeyEvent.initData);
+
+        if (!keySession) {
+            return reject('Could not create key session');
+        }
+
+        keySession.contentId = contentId;
+        keySession.addEventListener('webkitkeymessage', function(keyMessageEvent){
+            // get license, and keySession.update()
+            this._getWebkitLicense(keyMessageEvent)
+                .then(function(license) {
+                    keySession.update(new Uint8Array(license));
+                })
+                .catch(function(err){
+                    reject(err);
+                });
+        });
+
+        keySession.addEventListener('webkitkeyadded', function(event){
+            resolve(event);
+        });
+
+        keySession.addEventListener('webkitkeyerror', function(event){
+            reject(event);
+        });
+    }.bind(this));
+};
+
+/**
+ * Get the webkit license
+ * @param {Object} keyMessageEvent - Message event from current session
+ */
+DRMManager.prototype._getWebkitLicense = function(keyMessageEvent) {
+    return Promise.reject('Non-development License is not implemented');
+};
+
+module.exports = DRMManager;
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/error/source.js":
+/*!******************************************!*\
+  !*** ./platforms/web/js/error/source.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * The error source match the source names in result.hpp
+ * These are not emitted as their own events, but instead
+ * populate the 'source' property in the player.js 'ERROR' event.
+ */
+module.exports = {
+    UNKNOWN: "Unspecified",
+    FILE: "File",
+    PLAYLIST: "Playlist",
+    SEGMENT: "Segment",
+    SOURCE: "Source",
+    DECODER: "Decode",
+    RENDERER: "Render"
+};
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/error/type.js":
+/*!****************************************!*\
+  !*** ./platforms/web/js/error/type.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * The error names match the result names in result.hpp
+ * These are not emitted as their own events, but instead
+ * populate the 'type' property in the player.js 'ERROR' event.
+ */
+module.exports = {
+    /** Generic error occurred */
+    GENERIC: 'Error',
+
+    /** Method or feature not supported */
+    NOT_SUPPORTED: 'ErrorNotSupported',
+
+    /** No source present for the operation */
+    NO_SOURCE: 'ErrorNoSource',
+
+    /** Data or input is invalid for the operation */
+    INVALID_DATA: 'ErrorInvalidData',
+
+    /** Class or object is an invalid state */
+    INVALID_STATE: 'ErrorInvalidState',
+
+    /** Method parameter is invalid */
+    INVALID_PARAMETER: 'ErrorInvalidParameter',
+
+    /** Method or operation timed out */
+    TIMEOUT: 'ErrorTimeout',
+
+    /** Output is invalid for the operation */
+    INVALID_OUTPUT: 'ErrorInvalidOutput',
+
+    /** An unexpected internal error has occurred. */
+    INTERNAL: 'ErrorInternal',
+
+    /** Unspecified Network error */
+    NETWORK: 'ErrorNetwork',
+
+    /** Error indicating a network I/O failure */
+    NETWORK_IO: 'ErrorNetworkIO',
+
+    /** Error indicating a network resource is not authorized */
+    AUTHORIZATION: 'ErrorAuthorization',
+
+    /** Error indicating a network resource is not available */
+    NOT_AVAILABLE: 'ErrorNotAvailable',
+
+    /** Error indicating a network resource is not available */
+    EXCEPTION: 'ErrorException',
+};
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/event/metadata.js":
+/*!********************************************!*\
+  !*** ./platforms/web/js/event/metadata.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Publicly exposed timed-metadata events (listen with `addEventListener()`).
+ * Fired based on the current position of the playhead.
+ */
+module.exports = {
+    /**
+     * ID3 encountered. A direct json encoding of the id3 is provided
+     * They follow this form: [{id: 'TRCK', info:[val1, val2, ...]}...]
+     * @param {Object[]} id3 - List of ID3 keys and values
+     */
+    ID3: 'MetaID3',
+    /**
+     * Caption update
+     * @param {Object}{ caption info }
+     */
+    CAPTION: 'MetaCaption',
+    /**
+     * Stitched ad has started
+     * @param Object containing key/values from segment attributes
+     */
+    SPLICE_OUT: 'MetaSpliceOut',
+    /**
+     * Stitched ad has ended
+     */
+    SPLICE_IN: 'MetaSpliceIn',
+};
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/event/player.js":
+/*!******************************************!*\
+  !*** ./platforms/web/js/event/player.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Public events sent from the MediaPlayer. These are listened to interanlly,
+ * but can also be publically consummed with `addEventListener` All events are
+ * currently emitted from the WebMediaPlayer in the worker. The getters that
+ * are updated with each event are listed below. The payloads are currently not
+ * publically exposed, but contain the internal state change information.
+ */
+module.exports = {
+    /**
+     * Emitted when the MediaPlayer instances has been created
+     * Updated functions:
+     *     getVersion()
+     */
+    INITIALIZED: 'PlayerInitialized',
+    /**
+     * Rendered quality has changed
+     * Updated functions:
+     *     getQuality()
+     */
+    QUALITY_CHANGED: 'PlayerQualityChanged',
+    /**
+     * Auto turned on or off
+     * Updated functions:
+     *     getAutoSwitchQuality()
+     */
+    AUTO_SWITCH_QUALITY_CHANGED: 'PlayerAutoSwitchQualityChanged',
+    /**
+     * Duration value has changed
+     * Updated functions:
+     *     getDuration()
+     *     getStartOffset()
+     */
+    DURATION_CHANGED: 'PlayerDurationChanged',
+    /**
+     * Volume changed in range 0-1
+     */
+    VOLUME_CHANGED: 'PlayerVolumeChanged',
+    /**
+     * Muted state toggled
+     */
+    MUTED_CHANGED: 'PlayerMutedChanged',
+    /**
+     * The playback rate has changed
+     */
+    PLAYBACK_RATE_CHANGED: 'PlayerPlaybackRateChanged',
+    /**
+     * An errant BUFFERING occurred
+     */
+    REBUFFERING: 'PlayerRebuffering',
+    /**
+     * The browser blocked non-muted playback without a user gesture.
+     * Mute and play to start playback or wait for user gesutre.
+     */
+    AUDIO_BLOCKED: 'PlayerAudioBlocked',
+    /**
+     * The browser blocked playback without a user gesture.
+     * Mute and play to start playback or wait for user gesutre.
+     */
+    PLAYBACK_BLOCKED: 'PlayerPlaybackBlocked',
+    /**
+     * A fatal error occured
+     * @param {string} error.type - Error type from 'error.js'
+     * @param {string} error.message - human readable description
+     */
+    ERROR: 'PlayerError',
+    /**
+     * A tracking event as been emited. Should be sent to Spade
+     * @param {string} event.name - Name of tracking event
+     * @param {object} event.properties - key-value pairs to store
+     */
+    TRACKING: 'PlayerTracking',
+    /**
+     * The playback timeupdate event - web only
+     * Updated functions:
+     *     getPosition()
+     */
+    TIME_UPDATE: 'PlayerTimeUpdate',
+    /**
+     * More data has been added to the end of the buffer
+     * Updated value:
+     *     getPosition() + getBufferDuration()
+     *     getBuffered()
+     */
+    BUFFER_UPDATE: 'PlayerBufferUpdate',
+    /**
+     * A Seek request was completed
+     * @param {number} time The position seek completed ended
+     */
+    SEEK_COMPLETED: 'PlayerSeekCompleted',
+    /**
+     * Profiler event with profiler data
+     * @param {string} event The profiler event name
+     */
+    PROFILE: 'PlayerProfile'
+};
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/event/profile.js":
+/*!*******************************************!*\
+  !*** ./platforms/web/js/event/profile.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+    HLS_MASTER_PLAYLIST_REQUEST: 'master_manifest_request',
+    HLS_MASTER_PLAYLIST_READY: 'master_manifest_ready',
+    HLS_MEDIA_PLAYLIST_REQUEST: 'variant_request',
+    HLS_MEDIA_PLAYLIST_READY: 'variant_ready'
+}
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/event/state.js":
+/*!*****************************************!*\
+  !*** ./platforms/web/js/event/state.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Publicly exposed state change events (listen with `addEventListener()`).
+ * One of these is fired whenever `getPlayerState` changes. The getters that
+ * are updated with each state change are listed below. The string values of
+ * each state MUST match the string representation of the 'State' enum in player.hpp.
+ */
+module.exports = {
+    /**
+     * Player is idle (paused). This is the initial state
+     * Updated functions:
+     *     getPlayerState()
+     */
+    IDLE: 'Idle',
+    /**
+     * Player is ready for playback, meaning load was successfully called.
+     * Updated functions:
+     *     getPlayerState()
+     *     getQualities()
+     *     getManifestInfo()
+     */
+    READY: 'Ready',
+    /**
+     * Player is buffering for data from network or file. This happens on
+     * load, when seeking, or when the buffer empties ('bad' buffering)
+     * Updated functions:
+     *     getPlayerState()
+     */
+    BUFFERING: 'Buffering',
+    /**
+     * Playback has resumed
+     * Updated functions:
+     *     getPlayerState()
+     */
+    PLAYING: 'Playing',
+    /**
+     * Player has reached the end of the stream.
+     * Updated functions:
+     *     getPlayerState()
+     */
+    ENDED: 'Ended',
+};
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/mediaplayer.js":
+/*!*****************************************!*\
+  !*** ./platforms/web/js/mediaplayer.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var EventEmiter = __webpack_require__(/*! events */ "./node_modules/events/events.js");
+var MediaSink = __webpack_require__(/*! ./mediasink */ "./platforms/web/js/mediasink.js").MediaSink;
+var Browser = __webpack_require__(/*! ./capability */ "./platforms/web/js/capability.js").browser;
+var WorkerMessage = __webpack_require__(/*! ./message/worker */ "./platforms/web/js/message/worker.js");
+var ClientMessage = __webpack_require__(/*! ./message/client */ "./platforms/web/js/message/client.js");
 
 // Export events and states to public consumers
-var PlayerEvent = exports.PlayerEvent = __webpack_require__(15);
-var PlayerState = exports.PlayerState = __webpack_require__(16);
-var MetadataEvent = exports.MetadataEvent = __webpack_require__(17);
-var ErrorType = exports.ErrorType = __webpack_require__(18);
-var ErrorSource = exports.ErrorSource = __webpack_require__(19);
-var ProfileEvent = exports.Profile = exports.ProfileEvent = __webpack_require__(20);
+var PlayerEvent = exports.PlayerEvent = __webpack_require__(/*! ./event/player */ "./platforms/web/js/event/player.js");
+var PlayerState = exports.PlayerState = __webpack_require__(/*! ./event/state */ "./platforms/web/js/event/state.js");
+var MetadataEvent = exports.MetadataEvent = __webpack_require__(/*! ./event/metadata */ "./platforms/web/js/event/metadata.js");
+var ErrorType = exports.ErrorType = __webpack_require__(/*! ./error/type */ "./platforms/web/js/error/type.js");
+var ErrorSource = exports.ErrorSource = __webpack_require__(/*! ./error/source */ "./platforms/web/js/error/source.js");
+var ProfileEvent = exports.Profile = exports.ProfileEvent = __webpack_require__(/*! ./event/profile */ "./platforms/web/js/event/profile.js");
 
 // Chrome 63 and Opera have an issue (crbug.com/779962) that heavily throttle video in a
 // background tab while silent. So, we need to stop playback in that circumstance.
@@ -885,7 +3515,7 @@ function getLocalStorage(prefix) {
 // If the setting doesn't exits, we return empty (default) settings
 function loadSettings(settings) {
     try {
-        return !(function webpackMissingModule() { var e = new Error("Cannot find module \"settings\""); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+        return __webpack_require__("./settings sync recursive ^\\.\\/.*\\.json$")("./" + settings + '.json');
     } catch(e) {
         return {};
     }
@@ -912,320 +3542,17 @@ function getClientTrackingInfo() {
 
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports) {
 
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-function EventEmitter() {
-  this._events = this._events || {};
-  this._maxListeners = this._maxListeners || undefined;
-}
-module.exports = EventEmitter;
-
-// Backwards-compat with node 0.10.x
-EventEmitter.EventEmitter = EventEmitter;
-
-EventEmitter.prototype._events = undefined;
-EventEmitter.prototype._maxListeners = undefined;
-
-// By default EventEmitters will print a warning if more than 10 listeners are
-// added to it. This is a useful default which helps finding memory leaks.
-EventEmitter.defaultMaxListeners = 10;
-
-// Obviously not all Emitters should be limited to 10. This function allows
-// that to be increased. Set to zero for unlimited.
-EventEmitter.prototype.setMaxListeners = function(n) {
-  if (!isNumber(n) || n < 0 || isNaN(n))
-    throw TypeError('n must be a positive number');
-  this._maxListeners = n;
-  return this;
-};
-
-EventEmitter.prototype.emit = function(type) {
-  var er, handler, len, args, i, listeners;
-
-  if (!this._events)
-    this._events = {};
-
-  // If there is no 'error' event listener then throw.
-  if (type === 'error') {
-    if (!this._events.error ||
-        (isObject(this._events.error) && !this._events.error.length)) {
-      er = arguments[1];
-      if (er instanceof Error) {
-        throw er; // Unhandled 'error' event
-      } else {
-        // At least give some kind of context to the user
-        var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
-        err.context = er;
-        throw err;
-      }
-    }
-  }
-
-  handler = this._events[type];
-
-  if (isUndefined(handler))
-    return false;
-
-  if (isFunction(handler)) {
-    switch (arguments.length) {
-      // fast cases
-      case 1:
-        handler.call(this);
-        break;
-      case 2:
-        handler.call(this, arguments[1]);
-        break;
-      case 3:
-        handler.call(this, arguments[1], arguments[2]);
-        break;
-      // slower
-      default:
-        args = Array.prototype.slice.call(arguments, 1);
-        handler.apply(this, args);
-    }
-  } else if (isObject(handler)) {
-    args = Array.prototype.slice.call(arguments, 1);
-    listeners = handler.slice();
-    len = listeners.length;
-    for (i = 0; i < len; i++)
-      listeners[i].apply(this, args);
-  }
-
-  return true;
-};
-
-EventEmitter.prototype.addListener = function(type, listener) {
-  var m;
-
-  if (!isFunction(listener))
-    throw TypeError('listener must be a function');
-
-  if (!this._events)
-    this._events = {};
-
-  // To avoid recursion in the case that type === "newListener"! Before
-  // adding it to the listeners, first emit "newListener".
-  if (this._events.newListener)
-    this.emit('newListener', type,
-              isFunction(listener.listener) ?
-              listener.listener : listener);
-
-  if (!this._events[type])
-    // Optimize the case of one listener. Don't need the extra array object.
-    this._events[type] = listener;
-  else if (isObject(this._events[type]))
-    // If we've already got an array, just append.
-    this._events[type].push(listener);
-  else
-    // Adding the second element, need to change to array.
-    this._events[type] = [this._events[type], listener];
-
-  // Check for listener leak
-  if (isObject(this._events[type]) && !this._events[type].warned) {
-    if (!isUndefined(this._maxListeners)) {
-      m = this._maxListeners;
-    } else {
-      m = EventEmitter.defaultMaxListeners;
-    }
-
-    if (m && m > 0 && this._events[type].length > m) {
-      this._events[type].warned = true;
-      console.error('(node) warning: possible EventEmitter memory ' +
-                    'leak detected. %d listeners added. ' +
-                    'Use emitter.setMaxListeners() to increase limit.',
-                    this._events[type].length);
-      if (typeof console.trace === 'function') {
-        // not supported in IE 10
-        console.trace();
-      }
-    }
-  }
-
-  return this;
-};
-
-EventEmitter.prototype.on = EventEmitter.prototype.addListener;
-
-EventEmitter.prototype.once = function(type, listener) {
-  if (!isFunction(listener))
-    throw TypeError('listener must be a function');
-
-  var fired = false;
-
-  function g() {
-    this.removeListener(type, g);
-
-    if (!fired) {
-      fired = true;
-      listener.apply(this, arguments);
-    }
-  }
-
-  g.listener = listener;
-  this.on(type, g);
-
-  return this;
-};
-
-// emits a 'removeListener' event iff the listener was removed
-EventEmitter.prototype.removeListener = function(type, listener) {
-  var list, position, length, i;
-
-  if (!isFunction(listener))
-    throw TypeError('listener must be a function');
-
-  if (!this._events || !this._events[type])
-    return this;
-
-  list = this._events[type];
-  length = list.length;
-  position = -1;
-
-  if (list === listener ||
-      (isFunction(list.listener) && list.listener === listener)) {
-    delete this._events[type];
-    if (this._events.removeListener)
-      this.emit('removeListener', type, listener);
-
-  } else if (isObject(list)) {
-    for (i = length; i-- > 0;) {
-      if (list[i] === listener ||
-          (list[i].listener && list[i].listener === listener)) {
-        position = i;
-        break;
-      }
-    }
-
-    if (position < 0)
-      return this;
-
-    if (list.length === 1) {
-      list.length = 0;
-      delete this._events[type];
-    } else {
-      list.splice(position, 1);
-    }
-
-    if (this._events.removeListener)
-      this.emit('removeListener', type, listener);
-  }
-
-  return this;
-};
-
-EventEmitter.prototype.removeAllListeners = function(type) {
-  var key, listeners;
-
-  if (!this._events)
-    return this;
-
-  // not listening for removeListener, no need to emit
-  if (!this._events.removeListener) {
-    if (arguments.length === 0)
-      this._events = {};
-    else if (this._events[type])
-      delete this._events[type];
-    return this;
-  }
-
-  // emit removeListener for all listeners on all events
-  if (arguments.length === 0) {
-    for (key in this._events) {
-      if (key === 'removeListener') continue;
-      this.removeAllListeners(key);
-    }
-    this.removeAllListeners('removeListener');
-    this._events = {};
-    return this;
-  }
-
-  listeners = this._events[type];
-
-  if (isFunction(listeners)) {
-    this.removeListener(type, listeners);
-  } else if (listeners) {
-    // LIFO order
-    while (listeners.length)
-      this.removeListener(type, listeners[listeners.length - 1]);
-  }
-  delete this._events[type];
-
-  return this;
-};
-
-EventEmitter.prototype.listeners = function(type) {
-  var ret;
-  if (!this._events || !this._events[type])
-    ret = [];
-  else if (isFunction(this._events[type]))
-    ret = [this._events[type]];
-  else
-    ret = this._events[type].slice();
-  return ret;
-};
-
-EventEmitter.prototype.listenerCount = function(type) {
-  if (this._events) {
-    var evlistener = this._events[type];
-
-    if (isFunction(evlistener))
-      return 1;
-    else if (evlistener)
-      return evlistener.length;
-  }
-  return 0;
-};
-
-EventEmitter.listenerCount = function(emitter, type) {
-  return emitter.listenerCount(type);
-};
-
-function isFunction(arg) {
-  return typeof arg === 'function';
-}
-
-function isNumber(arg) {
-  return typeof arg === 'number';
-}
-
-function isObject(arg) {
-  return typeof arg === 'object' && arg !== null;
-}
-
-function isUndefined(arg) {
-  return arg === void 0;
-}
-
-
-/***/ }),
-/* 3 */
+/***/ "./platforms/web/js/mediasink.js":
+/*!***************************************!*\
+  !*** ./platforms/web/js/mediasink.js ***!
+  \***************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var DRMManager = __webpack_require__(5);
-var Queue = __webpack_require__(8);
-var Promise = global.Promise ? global.Promise : __webpack_require__(9);
+/* WEBPACK VAR INJECTION */(function(global) {var DRMManager = __webpack_require__(/*! ./drmmanager */ "./platforms/web/js/drmmanager.js");
+var Queue = __webpack_require__(/*! ./queue */ "./platforms/web/js/queue.js");
+var Promise = global.Promise ? global.Promise : __webpack_require__(/*! promise-polyfill */ "./node_modules/promise-polyfill/promise.js");
 var VTTCue = global.VTTCue ? global.VTTCue : global.TextTrackCue;
 
 // constants
@@ -1779,1552 +4106,109 @@ SafeSourceBuffer.prototype._updating = function () {
     return (!this._srcBuf || this._srcBuf.updating || this._video.error !== null);
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
-/* 4 */
+
+/***/ "./platforms/web/js/message/client.js":
+/*!********************************************!*\
+  !*** ./platforms/web/js/message/client.js ***!
+  \********************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Constants = __webpack_require__(0);
-var Utils = __webpack_require__(6);
-var PlayReady = __webpack_require__(7);
-
-//setup constants/utils
-var MODES = Constants.MODES;
-var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
-var ALL_KEY_SYSTEMS = ALL_KEY_SYSTEMS;
-var KEY_SYSTEMS_BY_STRING = Constants.KEY_SYSTEMS_BY_STRING;
-var TEST_AUTH_XML = Constants.TEST_AUTH_XML;
-var ENCRYPTION_TYPES = Constants.ENCRYPTION_TYPES;
-var SUPPORTED_DRM_MAP = Constants.SUPPORTED_DRM_MAP;
-var DRM_SUPPORT_BY_BROWSER = Constants.DRM_SUPPORT_BY_BROWSER;
-var DRM_SUPPORT_VALUES = Constants.DRM_SUPPORT_VALUES;
-var SUPPORTED_BROWSERS = Constants.SUPPORTED_BROWSERS;
-var DEFAULT_AUDIO_CAPABILITIES = Constants.DEFAULT_AUDIO_CAPABILITIES;
-var DEFAULT_VIDEO_CAPABILITIES = Constants.DEFAULT_VIDEO_CAPABILITIES;
-var arrayBuffersEqual = Utils.arrayBuffersEqual;
-var getHostnameFromUri = Utils.getHostnameFromUri;
-var arrayBufferFrom = Utils.arrayBufferFrom;
-var uintArrayToString = Utils.uintArrayToString;
-var fetchArrayBuffer = Utils.fetchArrayBuffer;
-var parsePSSHSupport = Utils.parsePSSHSupport;
-var parsePSSHSupportFromInitData = Utils.parsePSSHSupportFromInitData;
-var checkErrorFormat = Utils.checkErrorFormat;
-
-var ERRORS = Constants.ERRORS;
-
-// When using this fetch shim, FF loses support for response.arrayBuffer();
-// not sure if I should use a different shim like `github/fetch` for this instead
-// current browser support: https://caniuse.com/#feat=fetch
-// var fetch = require('./fetch'); // get fetch or fetchShim
-
-/* TODO Robustness levels for Chrome best practices
-    Spec notes that:
-        robustness of type DOMString, defaulting to ""
-        The robustness level associated with the content type.
-        The empty string indicates that any ability to decrypt
-        and decode the content type is acceptable.
-
-    If we get requirements, we can set it to one of the settings below:
-    https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf
-    Definition           EME Level     Widevine Device Security Level
-    SW_SECURE_CRYPTO     1             3
-    SW_SECURE_DECODE     2             3
-    HW_SECURE_CRYPTO     3             2
-    HW_SECURE_DECODE     4             1
-    HW_SECURE_ALL        5             1
-*/
-
-// this is only used for W3C spec following EME feature check
-var supportedConfig = [{
-  "initDataTypes": [ENCRYPTION_TYPES.CENC],
-  "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
-  "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
-}];
-
 /**
- * This is a temporary setting that makes sure development player
- * doesn't break when trying to use clearkey implementation.
- * This can be set to false and/or cleaned up once `configureCDMSupport`
- * call always accurately describes the PSSH on the media.
- * When this is set to true, it manually parses the entire `event.initData`
- * passed to `encrypted` event instead of listening to mediaSink's configure
- * track data `track.protectionData`.
+ * Sent from the worker to perform operations on the main thread.
+ * Since access to web apis is limited in a worker, we must proxy
+ * all media rendering and local storage operations to the main thread.
+ * These are all internal and should no be exposed publicly. All messages
+ * have at most a single argument.
  */
-var PARSE_PSSH_DURING_ENCRYPTED_EVENT = true;
-
-/**
- * DRMManager sets up and handles media that contains DRM encryption
- * @param {Object} config
- * @param {HTMLElement} config.video - video element
- * @param {function(MediaError)} config.onerror - video error with error code
- */
-var DRMManager = function(config) {
-    this.video = config.video;
-    this.cdmSupport = null;
-    this.selectedCDM = null;
-    this.mediaKeys = undefined; // we will reserve null
-    this.initialized = false;
-    this._handleError = config.onerror;
-    this._certificate = null;
-    this._currentSrc = null;
-    this._pendingSessions = [];
-    this._sessions = [];
-
-    this._init();
-};
-
-/**
- * Check Browser CDM Capabilities
- * Based on the recommendations of MDN, a feature check could result in
- * 'user-visible effects such as asking for permission to access one or more
- * system resources.' It also would need to be an async check.
- * @param {string} browserName - browser name
- */
-DRMManager.CDMCapabilitiesByBrowser = function(browserName) {
-    if (DRM_SUPPORT_BY_BROWSER[browserName]) {
-        return DRM_SUPPORT_BY_BROWSER[browserName].reduce(function(total, drm) {
-            var value = drm ? drm.value : 0;
-            return total + value;
-        }, 0);
-    } else {
-        // TODO: may want to warn/error here, since browser settings was not found
-        return 0;
-    }
-};
-
-/**
- * Used to create the hardcoded bitmask map in 'capability.js'
- * This helper saves workers from importing this entire file to
- * use constants relevant to only DRM.
- * @param {Array} browsers
- */
-DRMManager.DRMBrowserSupportMapping = function(browsers) {
-    var browserMapping = {};
-    SUPPORTED_BROWSERS.forEach(function(browserName) {
-        browserMapping[browserName] = DRMManager.CDMCapabilitiesByBrowser(browserName);
-    });
-    return browserMapping;
-};
-
-/*  Feature check of browsers capabilities
-    Notes: This is more accurate than checking by browser, but currently not used because:
-        1. It has to be async, navigator.requestMediaKeySystemAccess returns a promise, which makes it hard to make a constant.
-        2. MDN web docs don't seem to be very keen on using except when necessary:
-            From: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess
-            "This method may have user-visible effects such as asking for permission to access one or more system resources. Consider that when deciding when to call requestMediaKeySystemAccess(); you don't want those requests to happen at inconvenient times. As a general rule, this function should be called only when it's about time to create and use a MediaKeys object by calling the returned MediaKeySystemAccess object's createMediaKeys() method."
-*/
-DRMManager.CDMCapabilitiesFeatureCheck = function() {
-    var checkSupported = function(settings) {
-        var config = [{
-            "initDataTypes": [settings.type],
-            "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
-            "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
-        }]
-        return navigator.requestMediaKeySystemAccess(settings.cdm.keySystem, config)
-            .then(function() {
-                return settings;
-            })
-            .catch(function() {
-                // not a supported type
-            });
-    };
-
-    var checkSupportedSafari = function(settings) {
-        // Apple devices only support 'cbcs'
-        // fMP4 sample encryption which is specified in ISO/IEC 23001:7 2016, Common Encryption in ISO BMFF [CENC]. Apple devices only support 'cbcs', which is specified in CENC Section 10.4. [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
-        if (settings.type !== ENCRYPTION_TYPES.CBCS){
-            return Promise.resolve(undefined);
-        } else {
-            try {
-                return WebKitMediaKeys.isTypeSupported(settings.cdm.keySystem)
-                    ? Promise.resolve(settings)
-                    : Promise.resolve(undefined);
-            } catch(err) {
-                return Promise.resolve(undefined);
-            }
-        }
-    };
-
-    var promiseRequests;
-    if (navigator.requestMediaKeySystemAccess) {
-        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
-            return checkSupported(settings);
-        });
-    } else if (window.WebKitMediaKeys) {
-        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
-            return checkSupportedSafari(settings);
-        });
-    } else {
-        // if the browser supports no DRM
-        return Promise.resolve(0);
-    }
-    return Promise.all(promiseRequests)
-        .then(function(results){
-            // results is an array of SUPPORTED_DRM_MAP values or undefined if not supported
-            return results.reduce(function(memo, result){
-                var value = result ? result.value : 0;
-                return memo + value;
-            }, 0);
-        });
-}
-/**
- * Initializes instance, and adds 'encrypted' handlers
- * to support DRM functionality
- */
-DRMManager.prototype._init = function() {
-    this._checkSrcSessions();
-    this.video.addEventListener('encrypted', this._handleEncrypted.bind(this), false);
-    this.video.addEventListener('webkitneedkey', this._handleSafariEncrypted.bind(this), false);
-};
-
-DRMManager.prototype.configureCDMSupport = function(protectionData) {
-    // if we want to directly parse the encrypted event
-    if (PARSE_PSSH_DURING_ENCRYPTED_EVENT) return;
-    if (this.cdmSupport === null && protectionData.length > 0) {
-        this.cdmSupport = parsePSSHSupport(protectionData);
-    }
-};
-
-/**
- * Checks to see if system is already handling
- * a session that matches initData
- * @param {ArrayBuffer} initData
- */
-DRMManager.prototype._hasSession = function(initData) {
-    for (var i = 0; i < this._sessions.length; i++) {
-        var session = this._sessions[i];
-        if (!session.initData) continue;
-        if (arrayBuffersEqual(arrayBufferFrom(session.initData), arrayBufferFrom(initData))) {
-            return true;
-        }
-    }
-    return false;
-};
-
-/**
- * Clears out sessions when video source changes.
- * TODO: Our system currently doesn't not change the src, but may need
- * to clear out sessions at some point?
- */
-DRMManager.prototype._checkSrcSessions = function() {
-    var src = this.video.src;
-    if (src !== this._currentSrc) {
-        this._currentSrc = src;
-        this._sessions = [];
-    }
-};
-
-/**
- * Builds a promise catch chain to feature detect a keysystem that works.
- * This will get refactored once we have real systems working and we know
- * which format is requested/returned
- */
-DRMManager.prototype._createKeySystemSupportChain = function() {
-    if (this.cdmSupport === null || this.cdmSupport.length === 0){
-        return Promise.reject(ERRORS.NO_PSSH_FOUND);
-    }
-    var promise;
-    this.cdmSupport.forEach(function(cdm){
-        if (!promise) {
-            promise = navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
-        } else {
-            promise = promise.catch(function(e) {
-                return navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
-            });
-        }
-    });
-
-    promise = promise.catch(function() {
-        return Promise.reject(ERRORS.NO_CDM_SUPPORT);
-    });
-
-    return promise;
-}
-
-/**
- * Handles embeded DRM in initial video file
- * @param {Object} event - EncryptedMediaEvent [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent]
- */
-DRMManager.prototype._handleEncrypted = function(event){
-    this._checkSrcSessions();
-    // if we already have this same session setup, ignore this event;
-    if (this._hasSession(event.initData)) {
-        return;
-    }
-    this._sessions.push({ initData: event.initData });
-
-    // this can be removed once `configureCDMSupport` gets all DRM implementations
-    if (PARSE_PSSH_DURING_ENCRYPTED_EVENT && this.cdmSupport === null) {
-        this.cdmSupport = parsePSSHSupportFromInitData(event.initData);
-    }
-
-    var keySystemPromise;
-    // if mediakeys have not started
-    if (typeof this.mediaKeys === 'undefined') {
-        // TODO there is a better way to check/manage state instead of using undefined -> null as loading
-        // this will make sure things will not fire twice, since there is async that could be happening.
-        this.mediaKeys = null;
-        this._pendingSessions = [];
-
-        // create a promise chain of keySystem support
-        keySystemPromise = this._createKeySystemSupportChain()
-            .then(this._getCertificate.bind(this))
-            .then(function(keySystemAccess){
-                return keySystemAccess.createMediaKeys();
-            })
-            .then(this._setMediaKeys.bind(this))
-            .catch(function(err) {
-                this._handleError(checkErrorFormat(err));
-            }.bind(this));
-    }
-
-    this._addSession(event.initDataType, event.initData);
-    return keySystemPromise;
-};
-
-/**
- * Stores and sets mediaKeys/certificate
- * It will also create sessions for any sessions that are pending to be created
- * @param {Object} createdMediaKeys - MediaKeys [https://www.w3.org/TR/encrypted-media/#dom-mediakeys]
- */
-DRMManager.prototype._setMediaKeys = function(createdMediaKeys){
-    this.mediaKeys = createdMediaKeys;
-
-    if (this._certificate) {
-        this.setServerCertificate(certificate);
-    }
-    this._pendingSessions.forEach(function(pending){
-        this._createSessionRequest(pending.initDataType, pending.initData);
-    }.bind(this));
-    this._pendingSessions = [];
-    return this.video.setMediaKeys(this.mediaKeys);
-};
-
-/**
- * Creates Sessions if MediaKeys is ready, otherwise it stores data
- * to create session once the MediaKeys is ready.
- * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
- * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
- */
-DRMManager.prototype._addSession = function(initDataType, initData){
-    if (this.mediaKeys) {
-        this._createSessionRequest(initDataType, initData)
-            .catch(function(err){
-                this._handleError(ERRORS.KEY_SESSION_CREATION);
-            }.bind(this));
-    } else {
-        this._pendingSessions.push({
-            initDataType: initDataType,
-            initData: initData
-        });
-    }
-};
-
-/**
- * Creates key session, prepares event handling of sessions messages,
- * and then generates a key session request.
- * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
- * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
- */
-DRMManager.prototype._createSessionRequest = function(initDataType, initData){
-    var keySession = this.mediaKeys.createSession();
-    keySession.addEventListener('message', this._handleMessage.bind(this), false);
-    keySession.addEventListener('keystatuseschange', function(event) {
-        this._handleKeyStatusesChange(keySession, event, initData);
-    }.bind(this), false);
-    return keySession.generateRequest(initDataType, initData);
-};
-
-/**
- * Handles the event of a key changing, will be used for expiring and removing
- * key sessions.
- * @param {Object} keySession - MediaKeySession [https://www.w3.org/TR/encrypted-media/#dom-mediakeysession]
- * @param {Object} event - Event
- * @param {ArrayBuffer} initData - ArrayBuffer [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
- */
-DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, initData) {
-    var expired = false;
-
-    // based on https://www.w3.org/TR/encrypted-media/#example-using-all-events
-    keySession.keyStatuses.forEach(function(status, keyId){
-        switch (status) {
-            case 'expired':
-                // "All other keys in the session must have this status."
-                // https://www.w3.org/TR/encrypted-media/#dom-mediakeystatus-expired
-                expired = true;
-                break;
-            case 'internal-error':
-                // https://www.w3.org/TR/encrypted-media/#dom-mediakeystatus-internal-error
-                console.warn("Key status reported 'internal-error'. Leaving it open since we aren't sure it is fatal", event);
-                break;
-        }
-    });
-
-    if (expired) {
-        keySession.close().then(function(){
-            this._removeSession(initData);
-        }.bind(this));
-    }
-}
-
-/**
- * Removes a session that matches initData
- * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
- */
-DRMManager.prototype._removeSession = function(initData) {
-    for (var i = 0; i < this._sessions.length; i++) {
-        var session = this._sessions[i];
-        if (session.initData === initData) {
-            this._sessions.splice(i, 1);
-            return;
-        }
-    }
-}
-
-/**
- * Requests a certificate
- * TODO: Still needs implementation for FairPlay Cert
- * @param {Object} keySystemAccess - [https://www.w3.org/TR/encrypted-media/#dom-mediakeysystemaccess]
- */
-DRMManager.prototype._getCertificate = function(keySystemAccess) {
-    this.selectedCDM = KEY_SYSTEMS_BY_STRING[keySystemAccess.keySystem];
-    return Promise.resolve(keySystemAccess);
-}
-
-/**
- * Handles key session 'message' event and generates/updates
- * license
- * @param {Object} event - [https://www.w3.org/TR/encrypted-media/#dom-mediakeymessageevent]
- */
-DRMManager.prototype._handleMessage = function(event) {
-    // grabs relevant session
-    var keySession = event.target;
-    this._generateLicense(event.message)
-        .then(function(license){
-            return keySession.update(license)
-                .catch(function(error) {
-                    return Promise.reject(ERRORS.SESSION_UPDATE);
-                });
-        })
-        .catch(function(error) {
-            this._handleError(checkErrorFormat(error));
-        }.bind(this));
-};
-
-/**
- * Currently a ClearKey license generation
- * @param {Object} message - Message returned from CDM message event
- */
-DRMManager.prototype._generateLicense = function(message) {
-    if (this.selectedCDM === KEY_SYSTEMS.CLEAR_KEY) {
-        // clearkey implementation where KID is key
-        var request = JSON.parse(new TextDecoder().decode(message));
-        var keyObj = {
-            kty: 'oct',
-            alg: 'A128KW',
-            kid: request.kids[0],
-            k: request.kids[0]
-        };
-        var result = new TextEncoder().encode(JSON.stringify({
-            keys: [keyObj]
-        }));
-        return Promise.resolve(result);
-    } else {
-        var requestData = this._prepareLicenseRequest(message);
-        return fetchArrayBuffer(requestData.url, requestData.options)
-            .catch(function(error) {
-                return Promise.reject(ERRORS.LICENSE_REQUEST);
-            });
-    }
-};
-
-DRMManager.prototype._prepareLicenseRequest = function(message) {
-    var body = message;
-    var headers = {
-        customdata: TEST_AUTH_XML
-    };
-
-    // get additional data for specifics CDM license request calls
-    var additionalData = {};
-    if (this.selectedCDM === KEY_SYSTEMS.PLAYREADY) {
-        additionalData = PlayReady.licenseRequestData(message);
-    }
-
-    if (additionalData.body) {
-        body = additionalData.body;
-    }
-    if (additionalData.headers) {
-        headers = Object.assign(headers, additionalData.headers);
-    }
-
-    return {
-        url: this.selectedCDM.licenseUrl,
-        options: {
-            method: 'POST',
-            body: body,
-            headers: headers,
-        }
-    };
-}
-
-
-// SAFARI FAIRPLAY SUPPORT
-// untested since it does not allow for clearkey testing
-DRMManager.prototype._handleSafariEncrypted = function(event){
-    this._getSafariCertificate()
-        .then(this._setupSafariMediaKeys.bind(this, event))
-        .catch(function(err){
-            console.error('there was an error creating safari key', err);
-        })
-};
-
-// TODO: Fairplay Cert, once we have test video/BuyDRM
-DRMManager.prototype._getSafariCertificate = function(){
-    return Promise.resolve();
-};
-
-DRMManager.prototype._getSafariContentId = function(initData){
-    return getHostnameFromUri(uintArrayToString(initData));
-};
-
-/*
-    Safari Events for Fairplay [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
-
-    Notes:
-    - Depending on the Fairplay key version we plan on targetting,
-    'com.apple.fps.1_0' will need to concat initData and Certificate, where may not be necessary with 'com.apple.fps.2_0'
-
-    3 year old clearkey test, doesn't seem to work:
-    ClearKey (AES128-encrypted HLS)
-    https://github.com/WebKit/webkit/blob/master/LayoutTests/http/tests/media/clearkey/clear-key-hls-aes128.html
-
-    WORK IN PROGRESS
-*/
-
-/**
- * Safari's 'encrypted' initialization event. This works to
- * start initialization
- * TODO: needs some work to be split up a bit more
- * @param {Object} needKeyEvent - Similar to 'encrypted' event
- */
-DRMManager.prototype._setupSafariMediaKeys = function(needKeyEvent){
-    return new Promise(function(resolve, reject) {
-        if (!this.video.webkitKeys){
-            // this.video.webkitSetMediaKeys(new window.WebkitMediaKeys(KEY_SYSTEMS.FAIRPLAY.keySystem));
-            this.video.webkitSetMediaKeys(new WebkitMediaKeys(KEY_SYSTEMS.CLEAR_KEY.keySystem));
-        }
-
-        if (!this.video.webkitKeys){
-            reject('Issue setting fairplay media keys');
-        }
-
-        // this may be needed for 1_0 it appears
-        // var keySession = this.video.webkitKeys.createSession(
-        //     'video/mp4',
-        //     concatInitDataIdAndCertificate(contentId, initData, cert));
-        var keySession = this.video.webkitKeys.createSession(
-            'video/mp4',
-            needKeyEvent.initData);
-
-        if (!keySession) {
-            return reject('Could not create key session');
-        }
-
-        keySession.contentId = contentId;
-        keySession.addEventListener('webkitkeymessage', function(keyMessageEvent){
-            // get license, and keySession.update()
-            this._getWebkitLicense(keyMessageEvent)
-                .then(function(license) {
-                    keySession.update(new Uint8Array(license));
-                })
-                .catch(function(err){
-                    reject(err);
-                });
-        });
-
-        keySession.addEventListener('webkitkeyadded', function(event){
-            resolve(event);
-        });
-
-        keySession.addEventListener('webkitkeyerror', function(event){
-            reject(event);
-        });
-    }.bind(this));
-};
-
-/**
- * Get the webkit license
- * @param {Object} keyMessageEvent - Message event from current session
- */
-DRMManager.prototype._getWebkitLicense = function(keyMessageEvent) {
-    return Promise.reject('Non-development License is not implemented');
-};
-
-module.exports = DRMManager;
-
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Constants = __webpack_require__(0);
-
-var ALL_KEY_SYSTEMS = Constants.ALL_KEY_SYSTEMS;
-
-// some utils from https://github.com/videojs/videojs-contrib-eme/
-// should probably revise these if our needs differ
-var arrayBuffersEqual = function(arrayBuffer1, arrayBuffer2) {
-    if (arrayBuffer1 === arrayBuffer2) {
-        return true;
-    }
-
-    if (arrayBuffer1.byteLength !== arrayBuffer2.byteLength) {
-        return false;
-    }
-
-    var dataView1 = new DataView(arrayBuffer1);
-    var dataView2 = new DataView(arrayBuffer2);
-
-    for (var i = 0; i < dataView1.byteLength; i++) {
-        if (dataView1.getUint8(i) !== dataView2.getUint8(i)) {
-            return false;
-        }
-    }
-    return true;
-};
-
-var arrayBufferFrom = function (bufferOrTypedArray) {
-    if (bufferOrTypedArray instanceof Uint8Array ||
-        bufferOrTypedArray instanceof Uint16Array) {
-        return bufferOrTypedArray.buffer;
-    }
-    return bufferOrTypedArray;
-};
-
-var uintArrayToString = function (array) {
-    return array instanceof Uint8Array
-        ? String.fromCharCode.apply(null, new Uint8Array(array))
-        : String.fromCharCode.apply(null, new Uint16Array(array));
-};
-
-var getHostnameFromUri = function (uri) {
-    var link = document.createElement('a');
-    link.href = uri;
-    return link.hostname;
-};
-
-/**
- * Takes in array of PSSH data and returns KEY_SYSTEM objects
- * that are supported.
- *
- * @param {Array} psshArrayBuffer
- */
-var parsePSSHSupportFromInitData = function(initData) {
-    var uuids = parseAllPSSHData(initData);
-    return mapPSSHSystemIds(uuids);
-};
-
-/**
- * Takes in array of PSSH data and returns KEY_SYSTEM objects
- * that are supported.
- *
- * @param {Array} psshArrayBuffer
- */
-var parsePSSHSupport = function(psshArrayBuffer) {
-    var uuids = psshArrayBuffer.map(parsePSSHList);
-    return mapPSSHSystemIds(uuids);
-}
-
-var mapPSSHSystemIds = function(uuids){
-    var supportedKeySystems = [];
-    uuids.forEach(function(uuid) {
-        ALL_KEY_SYSTEMS.forEach(function(ks) {
-            if (ks.uuid === uuid) {
-                supportedKeySystems.push(ks);
-            }
-        });
-    });
-    return supportedKeySystems;
-};
-
-/**
- * Takes in PSSH box data and returns key system uuid
- * This is from the Dash.js implementation to dynamically read
- * media's CDM support
- *
- * @param {ArrayBuffer} data - event.initData
- */
-var parsePSSHList = function(data) {
-    var uint8a = new Uint8Array(data);
-    var dv = new DataView(uint8a.buffer);
-    // first 4 bytes for size
-    var byteCursor = 4;
-
-    // verify PSSH
-    if (dv.getUint32(byteCursor) !== 0x70737368) {
-        byteCursor = nextBox;
-        console.warn('pssh was not verified')
-        return null;
-    }
-    byteCursor += 4;
-
-    /* Version must be 0 or 1 */
-    version = dv.getUint8(byteCursor);
-    if (version !== 0 && version !== 1) {
-        byteCursor = nextBox;
-        console.warn('pssh version must be 0 or 1')
-        return null;
-    }
-    byteCursor++;
-    byteCursor += 3; /* skip flags */
-
-    // 16-byte UUID/SystemID
-    systemID = '';
-    var i, val;
-    for (i = 0; i < 4; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 4;
-    systemID += '-';
-    for (i = 0; i < 2; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 2;
-    systemID += '-';
-    for (i = 0; i < 2; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 2;
-    systemID += '-';
-    for (i = 0; i < 2; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 2;
-    systemID += '-';
-    for (i = 0; i < 6; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 6;
-
-    return systemID.toLowerCase();
-};
-
-/**
- * This is currently unused, but it allows you to pass in `encrypted`
- * event.initData and it will return PSSH data by key system uuid
- * This is from the Dash.js implementation to dynamically read
- * media's CDM support
- *
- * @param {ArrayBuffer} data - event.initData
- */
-var parseAllPSSHData = function(data) {
-    if (data === null)
-        return [];
-
-    var dv = new DataView(data.buffer || data); // data.buffer first for Uint8Array support
-    var done = false;
-    var uuids = [];
-
-    // TODO: Need to check every data read for end of buffer
-    var byteCursor = 0;
-    while (!done) {
-
-        var size,
-            nextBox,
-            version,
-            systemID,
-            psshDataSize;
-        var boxStart = byteCursor;
-
-        if (byteCursor >= dv.buffer.byteLength)
-            break;
-
-        /* Box size */
-        size = dv.getUint32(byteCursor);
-        nextBox = byteCursor + size;
-        byteCursor += 4;
-
-        /* Verify PSSH */
-        if (dv.getUint32(byteCursor) !== 0x70737368) {
-            byteCursor = nextBox;
-            continue;
-        }
-        byteCursor += 4;
-
-        /* Version must be 0 or 1 */
-        version = dv.getUint8(byteCursor);
-        if (version !== 0 && version !== 1) {
-            byteCursor = nextBox;
-            continue;
-        }
-        byteCursor++;
-
-        byteCursor += 3; /* skip flags */
-
-        // 16-byte UUID/SystemID
-        systemID = '';
-        var i, val;
-        for (i = 0; i < 4; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
-        }
-        byteCursor += 4;
-        systemID += '-';
-        for (i = 0; i < 2; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
-        }
-        byteCursor += 2;
-        systemID += '-';
-        for (i = 0; i < 2; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
-        }
-        byteCursor += 2;
-        systemID += '-';
-        for (i = 0; i < 2; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
-        }
-        byteCursor += 2;
-        systemID += '-';
-        for (i = 0; i < 6; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
-        }
-        byteCursor += 6;
-
-        systemID = systemID.toLowerCase();
-
-        /* PSSH Data Size */
-        psshDataSize = dv.getUint32(byteCursor);
-        byteCursor += 4;
-
-        /* PSSH Data */
-        uuids.push(systemID);
-        byteCursor = nextBox;
-    }
-
-    return uuids;
-};
-
-var fetchArrayBuffer = function (url, options) {
-    return new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open(options.method, url, true);
-
-        for (var h in options.headers) {
-            if (options.headers.hasOwnProperty(h)) {
-                xhr.setRequestHeader(h, options.headers[h]);
-            }
-        }
-        xhr.responseType = "arraybuffer";
-
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200){
-                    resolve(xhr.response);
-                } else {
-                    var simpleErrorResponse = 'Request Error: Status ' + xhr.status;
-                    console.warn(simpleErrorResponse)
-                    reject(simpleErrorResponse);
-                }
-            }
-        }
-        xhr.send(options.body);
-    });
-};
-
-/**
- * Ensuring that uncaught errors are sent in the correct format.
- * Most issues should be a constant error found in ERRORS, but
- * in case we have an issue we weren't expecting, we should handle
- * the error in the same format.
- */
-var checkErrorFormat = function(err) {
-    if (err.code && err.message) {
-        return err;
-    } else {
-        // you can use this to debug uncaught errors
-        //console.warn('uncaught error contents:', err);
-        return Constants.ERRORS.UNCAUGHT_ERROR;
-    }
-};
-
 module.exports = {
-    arrayBuffersEqual: arrayBuffersEqual,
-    arrayBufferFrom: arrayBufferFrom,
-    uintArrayToString: uintArrayToString,
-    getHostnameFromUri: getHostnameFromUri,
-    fetchArrayBuffer: fetchArrayBuffer,
-    parsePSSHSupport: parsePSSHSupport,
-    parsePSSHSupportFromInitData: parsePSSHSupportFromInitData,
-    checkErrorFormat: checkErrorFormat,
+    /**
+     * The player state has changed
+     * @param {Object} Player properties that have changes with this state transition
+     */
+    STATE_CHANGED: 'ClientStateChanged',
+    /**
+     * Append an mp4 audio buffer to MSE
+     * @param {Number} stats.videoFrameRate - fps in Hz
+     * @param {Number} stats.broadcasterLatency - latency from broadcaster in ms
+     * @param {Number} stats.transcoderLatency - latency from transcoder in ms
+     * @param {[NetworkProfile]} stats.networkProfile - list of stats for segment downloads
+     */
+    STATS: 'ClientStats',
+    /**
+     * Save an item to localStorage. Key's are internally
+     * prefixed with 'cvp.' to avoid namespace collisions.
+     * @param {string} item.key - unique identifier
+     * @param {string} item.value - must be serialzized to string
+     */
+    SAVE_ITEM: 'ClientSaveItem',
+    /**
+     * Add a track to the sink
+     * @param {Number} track.trackID - used to identify track in 'enqueue'
+     * @param {String} track.mimeType - mimeType for the track
+     * @param {String} track.src - use this source directly (passthrough)
+     */
+    CONFIGURE: 'ClientConfigure',
+    /**
+     * Append an mp4 buffer to MSE
+     * @param {Number} sample.trackID - which track to add the sample to.
+     * @param {ArrayBuffer} sample.buffer - track buffer
+     */
+    ENQUEUE: 'ClientEnqueue',
+    /**
+     * Set the timestamp offset for a track
+     * @param {Number} update.trackID - which track to update timestamp offset.
+     * @param {ArrayBuffer} update.offset - offset in seconds
+     */
+    SET_TIMESTAMP_OFFSET: 'ClientSetTimestampOffset',
+    /**
+     * Start media playback. Playback wont begin until data in from
+     * of the playhead has been added to the MSE sourc buffer
+     */
+    PLAY: 'ClientPlay',
+    /**
+     * Pause playback
+     */
+    PAUSE: 'ClientPause',
+    /**
+     * Remove a range from the audio/video SourceBuffers
+     * @param {number} range.start - seconds
+     * @param {number} range.end - seconds
+     */
+    REMOVE: 'ClientRemove',
+    /**
+     * Clear media and reset to initial state
+     */
+    RESET: 'ClientReset',
+    /**
+     * Set the playhead to a new position
+     * @param {number} playhead - position of new playhead in seconds
+     */
+    SEEK_TO: 'ClientSeekTo',
+    /**
+     * Set the playback rate
+     * @param {number} rate - new playback rate
+     */
+    SET_PLAYBACK_RATE: 'ClientSetPlaybackRate',
+    /**
+     * Add a timed metadata cue to the text track
+     * @param {number} cue.time - time to fire the metadata event
+     * @param {string} cue.metadata - opaque metadata payload
+     */
+    ADD_CUE: 'ClientAddCue',
 };
 
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports) {
 
-var getBody = function(xmlDoc) {
-    var licenseRequest = null;
-    if (xmlDoc.getElementsByTagName('Challenge').length > 0 && xmlDoc.getElementsByTagName('Challenge')[0]) {
-        var Challenge = xmlDoc.getElementsByTagName('Challenge')[0].childNodes[0].nodeValue;
-        if (Challenge) {
-            licenseRequest = atob(Challenge);
-        }
-    }
-    return licenseRequest;
-};
-
-var getHeaders = function(xmlDoc) {
-    var headers = {};
-    var headerNameList = xmlDoc.getElementsByTagName('name');
-    var headerValueList = xmlDoc.getElementsByTagName('value');
-    for (var i = 0; i < headerNameList.length; i++) {
-        headers[headerNameList[i].childNodes[0].nodeValue] = headerValueList[i].childNodes[0].nodeValue;
-    }
-    return headers;
-};
-
-/**
- * PlayReady License Request requires transforming the ArrayBuffer into XML format
- * and adding headers included inside the message created by CDM
- * Based on Window's Docs/Dash implementation: https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn457474(v%3dieb.10)
- * @param {ArrayBuffer} message - https://www.w3.org/TR/2014/WD-encrypted-media-20140828/encrypted-media.html#dom-mediakeymessageevent
- */
-var licenseRequestData = function(message) {
-    var messageFormat = 'utf16';
-    var msg;
-    var xmlDoc;
-    var parser = new DOMParser();
-    var dataview = (messageFormat === 'utf16') ? new Uint16Array(message) : new Uint8Array(message);
-
-    msg = String.fromCharCode.apply(null, dataview);
-    xmlDoc = parser.parseFromString(msg, 'application/xml');
-
-    return {
-        headers: getHeaders(xmlDoc),
-        body: getBody(xmlDoc),
-    };
-};
-
-module.exports = {
-  licenseRequestData: licenseRequestData,
-};
-
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-// This queue will only "garbage collect"
-// when it becomes empty.
-var Queue = module.exports = function Queue() {
-    this._buffer = [];
-    this._head = 0;
-    this._tail = 0;
-}
-
-Queue.prototype.push = function (item) {
-    if (this._tail === this._buffer.length) {
-        this._buffer.push(item);
-    } else {
-        this._buffer[this._tail] = item;
-    }
-    this._tail++;
-};
-
-Queue.prototype.pop = function () {
-    var item = this._buffer[this._head];
-    this._buffer[this._head] = null;
-    this._head++;
-
-    // If we're empty, we can reset our
-    // offsets to the begining
-    if (this.empty()) {
-        this._head = 0;
-        this._tail = 0;
-    }
-
-    return item;
-};
-
-Queue.prototype.size = function () {
-    return this._tail - this._head;
-};
-
-Queue.prototype.empty = function () {
-    // head can be greater if we've "popped" too many
-    return this._head >= this._tail;
-};
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports) {
-
-(function (root) {
-
-  // Store setTimeout reference so promise-polyfill will be unaffected by
-  // other code modifying setTimeout (like sinon.useFakeTimers())
-  var setTimeoutFunc = setTimeout;
-
-  function noop() {}
-  
-  // Polyfill for Function.prototype.bind
-  function bind(fn, thisArg) {
-    return function () {
-      fn.apply(thisArg, arguments);
-    };
-  }
-
-  function Promise(fn) {
-    if (typeof this !== 'object') throw new TypeError('Promises must be constructed via new');
-    if (typeof fn !== 'function') throw new TypeError('not a function');
-    this._state = 0;
-    this._handled = false;
-    this._value = undefined;
-    this._deferreds = [];
-
-    doResolve(fn, this);
-  }
-
-  function handle(self, deferred) {
-    while (self._state === 3) {
-      self = self._value;
-    }
-    if (self._state === 0) {
-      self._deferreds.push(deferred);
-      return;
-    }
-    self._handled = true;
-    Promise._immediateFn(function () {
-      var cb = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
-      if (cb === null) {
-        (self._state === 1 ? resolve : reject)(deferred.promise, self._value);
-        return;
-      }
-      var ret;
-      try {
-        ret = cb(self._value);
-      } catch (e) {
-        reject(deferred.promise, e);
-        return;
-      }
-      resolve(deferred.promise, ret);
-    });
-  }
-
-  function resolve(self, newValue) {
-    try {
-      // Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
-      if (newValue === self) throw new TypeError('A promise cannot be resolved with itself.');
-      if (newValue && (typeof newValue === 'object' || typeof newValue === 'function')) {
-        var then = newValue.then;
-        if (newValue instanceof Promise) {
-          self._state = 3;
-          self._value = newValue;
-          finale(self);
-          return;
-        } else if (typeof then === 'function') {
-          doResolve(bind(then, newValue), self);
-          return;
-        }
-      }
-      self._state = 1;
-      self._value = newValue;
-      finale(self);
-    } catch (e) {
-      reject(self, e);
-    }
-  }
-
-  function reject(self, newValue) {
-    self._state = 2;
-    self._value = newValue;
-    finale(self);
-  }
-
-  function finale(self) {
-    if (self._state === 2 && self._deferreds.length === 0) {
-      Promise._immediateFn(function() {
-        if (!self._handled) {
-          Promise._unhandledRejectionFn(self._value);
-        }
-      });
-    }
-
-    for (var i = 0, len = self._deferreds.length; i < len; i++) {
-      handle(self, self._deferreds[i]);
-    }
-    self._deferreds = null;
-  }
-
-  function Handler(onFulfilled, onRejected, promise) {
-    this.onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : null;
-    this.onRejected = typeof onRejected === 'function' ? onRejected : null;
-    this.promise = promise;
-  }
-
-  /**
-   * Take a potentially misbehaving resolver function and make sure
-   * onFulfilled and onRejected are only called once.
-   *
-   * Makes no guarantees about asynchrony.
-   */
-  function doResolve(fn, self) {
-    var done = false;
-    try {
-      fn(function (value) {
-        if (done) return;
-        done = true;
-        resolve(self, value);
-      }, function (reason) {
-        if (done) return;
-        done = true;
-        reject(self, reason);
-      });
-    } catch (ex) {
-      if (done) return;
-      done = true;
-      reject(self, ex);
-    }
-  }
-
-  Promise.prototype['catch'] = function (onRejected) {
-    return this.then(null, onRejected);
-  };
-
-  Promise.prototype.then = function (onFulfilled, onRejected) {
-    var prom = new (this.constructor)(noop);
-
-    handle(this, new Handler(onFulfilled, onRejected, prom));
-    return prom;
-  };
-
-  Promise.all = function (arr) {
-    var args = Array.prototype.slice.call(arr);
-
-    return new Promise(function (resolve, reject) {
-      if (args.length === 0) return resolve([]);
-      var remaining = args.length;
-
-      function res(i, val) {
-        try {
-          if (val && (typeof val === 'object' || typeof val === 'function')) {
-            var then = val.then;
-            if (typeof then === 'function') {
-              then.call(val, function (val) {
-                res(i, val);
-              }, reject);
-              return;
-            }
-          }
-          args[i] = val;
-          if (--remaining === 0) {
-            resolve(args);
-          }
-        } catch (ex) {
-          reject(ex);
-        }
-      }
-
-      for (var i = 0; i < args.length; i++) {
-        res(i, args[i]);
-      }
-    });
-  };
-
-  Promise.resolve = function (value) {
-    if (value && typeof value === 'object' && value.constructor === Promise) {
-      return value;
-    }
-
-    return new Promise(function (resolve) {
-      resolve(value);
-    });
-  };
-
-  Promise.reject = function (value) {
-    return new Promise(function (resolve, reject) {
-      reject(value);
-    });
-  };
-
-  Promise.race = function (values) {
-    return new Promise(function (resolve, reject) {
-      for (var i = 0, len = values.length; i < len; i++) {
-        values[i].then(resolve, reject);
-      }
-    });
-  };
-
-  // Use polyfill for setImmediate for performance gains
-  Promise._immediateFn = (typeof setImmediate === 'function' && function (fn) { setImmediate(fn); }) ||
-    function (fn) {
-      setTimeoutFunc(fn, 0);
-    };
-
-  Promise._unhandledRejectionFn = function _unhandledRejectionFn(err) {
-    if (typeof console !== 'undefined' && console) {
-      console.warn('Possible Unhandled Promise Rejection:', err); // eslint-disable-line no-console
-    }
-  };
-
-  /**
-   * Set the immediate function to execute callbacks
-   * @param fn {function} Function to execute
-   * @deprecated
-   */
-  Promise._setImmediateFn = function _setImmediateFn(fn) {
-    Promise._immediateFn = fn;
-  };
-
-  /**
-   * Change the function to execute on unhandled rejection
-   * @param {function} fn Function to execute on unhandled rejection
-   * @deprecated
-   */
-  Promise._setUnhandledRejectionFn = function _setUnhandledRejectionFn(fn) {
-    Promise._unhandledRejectionFn = fn;
-  };
-  
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Promise;
-  } else if (!root.Promise) {
-    root.Promise = Promise;
-  }
-
-})(this);
-
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var detect = __webpack_require__(11).detect;
-
-var BROWSER = (function(){
-    var browser = detect() || {name:'', version:'', os:''};
-    // Parse semver from version string.
-    // NaN if semver value doesn't exist
-    var split = browser.version.split('.');
-    browser.major = parseInt(split[0], 10);
-    browser.minor = parseInt(split[1], 10);
-    browser.patch = parseInt(split[2], 10);
-    return browser;
-}());
-
-function supportsSingleFrameFragments(browser) {
-    if (navigator.userAgent.toLowerCase().indexOf('crkey') > -1) {
-        // Don't allow frame by frame for chromecast
-        return false;
-    }
-
-    var name = browser.name,
-        major = browser.major;
-    return (
-        (name == 'chrome' && major >= 50) ||
-        (name == 'firefox' && major >= 45)
-    );
-}
-
-// Hardcoded results from DRMManager.DRMBrowserSupportMapping
-function supportedCDMs(browser) {
-    var DRM_CAPABILITIES_BY_BROWSER_BITMASK = {
-        chrome: 5,
-        firefox: 5,
-        edge: 16,
-        safari: 128
-    };
-
-    return DRM_CAPABILITIES_BY_BROWSER_BITMASK[browser.name]
-        ? DRM_CAPABILITIES_BY_BROWSER_BITMASK[browser.name]
-        : 0;
-}
-
-// Only chrome exposes sufficient network information
-function supportsLowLatencyABR(browser) {
-    return browser.name === 'chrome';
-}
-
-module.exports = {
-    browser: BROWSER,
-    supportsSingleFrameFragments: supportsSingleFrameFragments(BROWSER),
-    supportedCDMs: supportedCDMs(BROWSER),
-    supportsLowLatencyABR: supportsLowLatencyABR(BROWSER),
-};
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
-  # detect-browser
-
-  This is a package that attempts to detect a browser vendor and version (in
-  a semver compatible format) using a navigator useragent in a browser or
-  `process.version` in node.
-
-  ## NOTE: Version 2.x release
-
-  Release 2.0 introduces a breaking API change (hence the major release)
-  which requires invocation of a `detect` function rather than just inclusion of
-  the module.  PR [#46](https://github.com/DamonOehlman/detect-browser/pull/46)
-  provides more context as to why this change has been made.
-
-  ## Example Usage
-
-  <<< examples/simple.js
-
-  Or you can use a switch statement:
-
-  <<< examples/switch.js
-
-  ## Adding additional browser support
-
-  The current list of browsers that can be detected by `detect-browser` is
-  not exhaustive. If you have a browser that you would like to add support for
-  then please submit a pull request with the implementation.
-
-  Creating an acceptable implementation requires two things:
-
-  1. A test demonstrating that the regular expression you have defined identifies
-     your new browser correctly.  Examples of this can be found in the 
-     `test/logic.js` file.
-
-  2. Write the actual regex to the `lib/detectBrowser.js` file. In most cases adding
-     the regex to the list of existing regexes will be suitable (if usage of `detect-brower`
-     returns `undefined` for instance), but in some cases you might have to add it before
-     an existing regex.  This would be true for a case where you have a browser that
-     is a specialised variant of an existing browser but is identified as the
-     non-specialised case.
-
-  When writing the regular expression remember that you would write it containing a
-  single [capturing group](https://regexone.com/lesson/capturing_groups) which
-  captures the version number of the browser.
-
-**/
-
-function detect() {
-  var nodeVersion = getNodeVersion();
-  if (nodeVersion) {
-    return nodeVersion;
-  } else if (typeof navigator !== 'undefined') {
-    return parseUserAgent(navigator.userAgent);
-  }
-
-  return null;
-}
-
-function detectOS(userAgentString) {
-  var rules = getOperatingSystemRules();
-  var detected = rules.filter(function (os) {
-    return os.rule && os.rule.test(userAgentString);
-  })[0];
-
-  return detected ? detected.name : null;
-}
-
-function getNodeVersion() {
-  var isNode = typeof navigator === 'undefined' && typeof process !== 'undefined';
-  return isNode ? {
-    name: 'node',
-    version: process.version.slice(1),
-    os: __webpack_require__(12).type().toLowerCase()
-  } : null;
-}
-
-function parseUserAgent(userAgentString) {
-  var browsers = getBrowserRules();
-  if (!userAgentString) {
-    return null;
-  }
-
-  var detected = browsers.map(function(browser) {
-    var match = browser.rule.exec(userAgentString);
-    var version = match && match[1].split(/[._]/).slice(0,3);
-
-    if (version && version.length < 3) {
-      version = version.concat(version.length == 1 ? [0, 0] : [0]);
-    }
-
-    return match && {
-      name: browser.name,
-      version: version.join('.')
-    };
-  }).filter(Boolean)[0] || null;
-
-  if (detected) {
-    detected.os = detectOS(userAgentString);
-  }
-
-  return detected;
-}
-
-function getBrowserRules() {
-  return buildRules([
-    [ 'edge', /Edge\/([0-9\._]+)/ ],
-    [ 'yandexbrowser', /YaBrowser\/([0-9\._]+)/ ],
-    [ 'vivaldi', /Vivaldi\/([0-9\.]+)/ ],
-    [ 'kakaotalk', /KAKAOTALK\s([0-9\.]+)/ ],
-    [ 'chrome', /(?!Chrom.*OPR)Chrom(?:e|ium)\/([0-9\.]+)(:?\s|$)/ ],
-    [ 'phantomjs', /PhantomJS\/([0-9\.]+)(:?\s|$)/ ],
-    [ 'crios', /CriOS\/([0-9\.]+)(:?\s|$)/ ],
-    [ 'firefox', /Firefox\/([0-9\.]+)(?:\s|$)/ ],
-    [ 'fxios', /FxiOS\/([0-9\.]+)/ ],
-    [ 'opera', /Opera\/([0-9\.]+)(?:\s|$)/ ],
-    [ 'opera', /OPR\/([0-9\.]+)(:?\s|$)$/ ],
-    [ 'ie', /Trident\/7\.0.*rv\:([0-9\.]+).*\).*Gecko$/ ],
-    [ 'ie', /MSIE\s([0-9\.]+);.*Trident\/[4-7].0/ ],
-    [ 'ie', /MSIE\s(7\.0)/ ],
-    [ 'bb10', /BB10;\sTouch.*Version\/([0-9\.]+)/ ],
-    [ 'android', /Android\s([0-9\.]+)/ ],
-    [ 'ios', /Version\/([0-9\._]+).*Mobile.*Safari.*/ ],
-    [ 'safari', /Version\/([0-9\._]+).*Safari/ ]
-  ]);
-}
-
-function getOperatingSystemRules() {
-  return buildRules([
-    [ 'iOS', /iP(hone|od|ad)/ ],
-    [ 'Android OS', /Android/ ],
-    [ 'BlackBerry OS', /BlackBerry|BB10/ ],
-    [ 'Windows Mobile', /IEMobile/ ],
-    [ 'Amazon OS', /Kindle/ ],
-    [ 'Windows 3.11', /Win16/ ],
-    [ 'Windows 95', /(Windows 95)|(Win95)|(Windows_95)/ ],
-    [ 'Windows 98', /(Windows 98)|(Win98)/ ],
-    [ 'Windows 2000', /(Windows NT 5.0)|(Windows 2000)/ ],
-    [ 'Windows XP', /(Windows NT 5.1)|(Windows XP)/ ],
-    [ 'Windows Server 2003', /(Windows NT 5.2)/ ],
-    [ 'Windows Vista', /(Windows NT 6.0)/ ],
-    [ 'Windows 7', /(Windows NT 6.1)/ ],
-    [ 'Windows 8', /(Windows NT 6.2)/ ],
-    [ 'Windows 8.1', /(Windows NT 6.3)/ ],
-    [ 'Windows 10', /(Windows NT 10.0)/ ],
-    [ 'Windows ME', /Windows ME/ ],
-    [ 'Open BSD', /OpenBSD/ ],
-    [ 'Sun OS', /SunOS/ ],
-    [ 'Linux', /(Linux)|(X11)/ ],
-    [ 'Mac OS', /(Mac_PowerPC)|(Macintosh)/ ],
-    [ 'QNX', /QNX/ ],
-    [ 'BeOS', /BeOS/ ],
-    [ 'OS/2', /OS\/2/ ],
-    [ 'Search Bot', /(nuhk)|(Googlebot)|(Yammybot)|(Openbot)|(Slurp)|(MSNBot)|(Ask Jeeves\/Teoma)|(ia_archiver)/ ]
-  ]);
-}
-
-function buildRules(ruleTuples) {
-  return ruleTuples.map(function(tuple) {
-    return {
-      name: tuple[0],
-      rule: tuple[1]
-    };
-  });
-}
-
-module.exports = {
-  detect: detect,
-  detectOS: detectOS,
-  getNodeVersion: getNodeVersion,
-  parseUserAgent: parseUserAgent
-};
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports) {
-
-exports.endianness = function () { return 'LE' };
-
-exports.hostname = function () {
-    if (typeof location !== 'undefined') {
-        return location.hostname
-    }
-    else return '';
-};
-
-exports.loadavg = function () { return [] };
-
-exports.uptime = function () { return 0 };
-
-exports.freemem = function () {
-    return Number.MAX_VALUE;
-};
-
-exports.totalmem = function () {
-    return Number.MAX_VALUE;
-};
-
-exports.cpus = function () { return [] };
-
-exports.type = function () { return 'Browser' };
-
-exports.release = function () {
-    if (typeof navigator !== 'undefined') {
-        return navigator.appVersion;
-    }
-    return '';
-};
-
-exports.networkInterfaces
-= exports.getNetworkInterfaces
-= function () { return {} };
-
-exports.arch = function () { return 'javascript' };
-
-exports.platform = function () { return 'browser' };
-
-exports.tmpdir = exports.tmpDir = function () {
-    return '/tmp';
-};
-
-exports.EOL = '\n';
-
-exports.homedir = function () {
-	return '/'
-};
-
-
-/***/ }),
-/* 13 */
+/***/ "./platforms/web/js/message/worker.js":
+/*!********************************************!*\
+  !*** ./platforms/web/js/message/worker.js ***!
+  \********************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 /**
@@ -3442,371 +4326,75 @@ module.exports = {
 
 
 /***/ }),
-/* 14 */
+
+/***/ "./platforms/web/js/queue.js":
+/*!***********************************!*\
+  !*** ./platforms/web/js/queue.js ***!
+  \***********************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-/**
- * Sent from the worker to perform operations on the main thread.
- * Since access to web apis is limited in a worker, we must proxy
- * all media rendering and local storage operations to the main thread.
- * These are all internal and should no be exposed publicly. All messages
- * have at most a single argument.
- */
-module.exports = {
-    /**
-     * The player state has changed
-     * @param {Object} Player properties that have changes with this state transition
-     */
-    STATE_CHANGED: 'ClientStateChanged',
-    /**
-     * Append an mp4 audio buffer to MSE
-     * @param {Number} stats.videoFrameRate - fps in Hz
-     * @param {Number} stats.broadcasterLatency - latency from broadcaster in ms
-     * @param {Number} stats.transcoderLatency - latency from transcoder in ms
-     * @param {[NetworkProfile]} stats.networkProfile - list of stats for segment downloads
-     */
-    STATS: 'ClientStats',
-    /**
-     * Save an item to localStorage. Key's are internally
-     * prefixed with 'cvp.' to avoid namespace collisions.
-     * @param {string} item.key - unique identifier
-     * @param {string} item.value - must be serialzized to string
-     */
-    SAVE_ITEM: 'ClientSaveItem',
-    /**
-     * Add a track to the sink
-     * @param {Number} track.trackID - used to identify track in 'enqueue'
-     * @param {String} track.mimeType - mimeType for the track
-     * @param {String} track.src - use this source directly (passthrough)
-     */
-    CONFIGURE: 'ClientConfigure',
-    /**
-     * Append an mp4 buffer to MSE
-     * @param {Number} sample.trackID - which track to add the sample to.
-     * @param {ArrayBuffer} sample.buffer - track buffer
-     */
-    ENQUEUE: 'ClientEnqueue',
-    /**
-     * Set the timestamp offset for a track
-     * @param {Number} update.trackID - which track to update timestamp offset.
-     * @param {ArrayBuffer} update.offset - offset in seconds
-     */
-    SET_TIMESTAMP_OFFSET: 'ClientSetTimestampOffset',
-    /**
-     * Start media playback. Playback wont begin until data in from
-     * of the playhead has been added to the MSE sourc buffer
-     */
-    PLAY: 'ClientPlay',
-    /**
-     * Pause playback
-     */
-    PAUSE: 'ClientPause',
-    /**
-     * Remove a range from the audio/video SourceBuffers
-     * @param {number} range.start - seconds
-     * @param {number} range.end - seconds
-     */
-    REMOVE: 'ClientRemove',
-    /**
-     * Clear media and reset to initial state
-     */
-    RESET: 'ClientReset',
-    /**
-     * Set the playhead to a new position
-     * @param {number} playhead - position of new playhead in seconds
-     */
-    SEEK_TO: 'ClientSeekTo',
-    /**
-     * Set the playback rate
-     * @param {number} rate - new playback rate
-     */
-    SET_PLAYBACK_RATE: 'ClientSetPlaybackRate',
-    /**
-     * Add a timed metadata cue to the text track
-     * @param {number} cue.time - time to fire the metadata event
-     * @param {string} cue.metadata - opaque metadata payload
-     */
-    ADD_CUE: 'ClientAddCue',
-};
-
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-/**
- * Public events sent from the MediaPlayer. These are listened to interanlly,
- * but can also be publically consummed with `addEventListener` All events are
- * currently emitted from the WebMediaPlayer in the worker. The getters that
- * are updated with each event are listed below. The payloads are currently not
- * publically exposed, but contain the internal state change information.
- */
-module.exports = {
-    /**
-     * Emitted when the MediaPlayer instances has been created
-     * Updated functions:
-     *     getVersion()
-     */
-    INITIALIZED: 'PlayerInitialized',
-    /**
-     * Rendered quality has changed
-     * Updated functions:
-     *     getQuality()
-     */
-    QUALITY_CHANGED: 'PlayerQualityChanged',
-    /**
-     * Auto turned on or off
-     * Updated functions:
-     *     getAutoSwitchQuality()
-     */
-    AUTO_SWITCH_QUALITY_CHANGED: 'PlayerAutoSwitchQualityChanged',
-    /**
-     * Duration value has changed
-     * Updated functions:
-     *     getDuration()
-     *     getStartOffset()
-     */
-    DURATION_CHANGED: 'PlayerDurationChanged',
-    /**
-     * Volume changed in range 0-1
-     */
-    VOLUME_CHANGED: 'PlayerVolumeChanged',
-    /**
-     * Muted state toggled
-     */
-    MUTED_CHANGED: 'PlayerMutedChanged',
-    /**
-     * The playback rate has changed
-     */
-    PLAYBACK_RATE_CHANGED: 'PlayerPlaybackRateChanged',
-    /**
-     * An errant BUFFERING occurred
-     */
-    REBUFFERING: 'PlayerRebuffering',
-    /**
-     * The browser blocked non-muted playback without a user gesture.
-     * Mute and play to start playback or wait for user gesutre.
-     */
-    AUDIO_BLOCKED: 'PlayerAudioBlocked',
-    /**
-     * The browser blocked playback without a user gesture.
-     * Mute and play to start playback or wait for user gesutre.
-     */
-    PLAYBACK_BLOCKED: 'PlayerPlaybackBlocked',
-    /**
-     * A fatal error occured
-     * @param {string} error.type - Error type from 'error.js'
-     * @param {string} error.message - human readable description
-     */
-    ERROR: 'PlayerError',
-    /**
-     * A tracking event as been emited. Should be sent to Spade
-     * @param {string} event.name - Name of tracking event
-     * @param {object} event.properties - key-value pairs to store
-     */
-    TRACKING: 'PlayerTracking',
-    /**
-     * The playback timeupdate event - web only
-     * Updated functions:
-     *     getPosition()
-     */
-    TIME_UPDATE: 'PlayerTimeUpdate',
-    /**
-     * More data has been added to the end of the buffer
-     * Updated value:
-     *     getPosition() + getBufferDuration()
-     *     getBuffered()
-     */
-    BUFFER_UPDATE: 'PlayerBufferUpdate',
-    /**
-     * A Seek request was completed
-     * @param {number} time The position seek completed ended
-     */
-    SEEK_COMPLETED: 'PlayerSeekCompleted',
-    /**
-     * Profiler event with profiler data
-     * @param {string} event The profiler event name
-     */
-    PROFILE: 'PlayerProfile'
-};
-
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports) {
-
-/**
- * Publicly exposed state change events (listen with `addEventListener()`).
- * One of these is fired whenever `getPlayerState` changes. The getters that
- * are updated with each state change are listed below. The string values of
- * each state MUST match the string representation of the 'State' enum in player.hpp.
- */
-module.exports = {
-    /**
-     * Player is idle (paused). This is the initial state
-     * Updated functions:
-     *     getPlayerState()
-     */
-    IDLE: 'Idle',
-    /**
-     * Player is ready for playback, meaning load was successfully called.
-     * Updated functions:
-     *     getPlayerState()
-     *     getQualities()
-     *     getManifestInfo()
-     */
-    READY: 'Ready',
-    /**
-     * Player is buffering for data from network or file. This happens on
-     * load, when seeking, or when the buffer empties ('bad' buffering)
-     * Updated functions:
-     *     getPlayerState()
-     */
-    BUFFERING: 'Buffering',
-    /**
-     * Playback has resumed
-     * Updated functions:
-     *     getPlayerState()
-     */
-    PLAYING: 'Playing',
-    /**
-     * Player has reached the end of the stream.
-     * Updated functions:
-     *     getPlayerState()
-     */
-    ENDED: 'Ended',
-};
-
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports) {
-
-/**
- * Publicly exposed timed-metadata events (listen with `addEventListener()`).
- * Fired based on the current position of the playhead.
- */
-module.exports = {
-    /**
-     * ID3 encountered. A direct json encoding of the id3 is provided
-     * They follow this form: [{id: 'TRCK', info:[val1, val2, ...]}...]
-     * @param {Object[]} id3 - List of ID3 keys and values
-     */
-    ID3: 'MetaID3',
-    /**
-     * Caption update
-     * @param {Object}{ caption info }
-     */
-    CAPTION: 'MetaCaption',
-    /**
-     * Stitched ad has started
-     * @param Object containing key/values from segment attributes
-     */
-    SPLICE_OUT: 'MetaSpliceOut',
-    /**
-     * Stitched ad has ended
-     */
-    SPLICE_IN: 'MetaSpliceIn',
-};
-
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-/**
- * The error names match the result names in result.hpp
- * These are not emitted as their own events, but instead
- * populate the 'type' property in the player.js 'ERROR' event.
- */
-module.exports = {
-    /** Generic error occurred */
-    GENERIC: 'Error',
-
-    /** Method or feature not supported */
-    NOT_SUPPORTED: 'ErrorNotSupported',
-
-    /** No source present for the operation */
-    NO_SOURCE: 'ErrorNoSource',
-
-    /** Data or input is invalid for the operation */
-    INVALID_DATA: 'ErrorInvalidData',
-
-    /** Class or object is an invalid state */
-    INVALID_STATE: 'ErrorInvalidState',
-
-    /** Method parameter is invalid */
-    INVALID_PARAMETER: 'ErrorInvalidParameter',
-
-    /** Method or operation timed out */
-    TIMEOUT: 'ErrorTimeout',
-
-    /** Output is invalid for the operation */
-    INVALID_OUTPUT: 'ErrorInvalidOutput',
-
-    /** An unexpected internal error has occurred. */
-    INTERNAL: 'ErrorInternal',
-
-    /** Unspecified Network error */
-    NETWORK: 'ErrorNetwork',
-
-    /** Error indicating a network I/O failure */
-    NETWORK_IO: 'ErrorNetworkIO',
-
-    /** Error indicating a network resource is not authorized */
-    AUTHORIZATION: 'ErrorAuthorization',
-
-    /** Error indicating a network resource is not available */
-    NOT_AVAILABLE: 'ErrorNotAvailable',
-
-    /** Error indicating a network resource is not available */
-    EXCEPTION: 'ErrorException',
-};
-
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-/**
- * The error source match the source names in result.hpp
- * These are not emitted as their own events, but instead
- * populate the 'source' property in the player.js 'ERROR' event.
- */
-module.exports = {
-    UNKNOWN: "Unspecified",
-    FILE: "File",
-    PLAYLIST: "Playlist",
-    SEGMENT: "Segment",
-    SOURCE: "Source",
-    DECODER: "Decode",
-    RENDERER: "Render"
-};
-
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports) {
-
-module.exports = {
-    HLS_MASTER_PLAYLIST_REQUEST: 'master_manifest_request',
-    HLS_MASTER_PLAYLIST_READY: 'master_manifest_ready',
-    HLS_MEDIA_PLAYLIST_REQUEST: 'variant_request',
-    HLS_MEDIA_PLAYLIST_READY: 'variant_ready'
+// This queue will only "garbage collect"
+// when it becomes empty.
+var Queue = module.exports = function Queue() {
+    this._buffer = [];
+    this._head = 0;
+    this._tail = 0;
 }
 
+Queue.prototype.push = function (item) {
+    if (this._tail === this._buffer.length) {
+        this._buffer.push(item);
+    } else {
+        this._buffer[this._tail] = item;
+    }
+    this._tail++;
+};
+
+Queue.prototype.pop = function () {
+    var item = this._buffer[this._head];
+    this._buffer[this._head] = null;
+    this._head++;
+
+    // If we're empty, we can reset our
+    // offsets to the begining
+    if (this.empty()) {
+        this._head = 0;
+        this._tail = 0;
+    }
+
+    return item;
+};
+
+Queue.prototype.size = function () {
+    return this._tail - this._head;
+};
+
+Queue.prototype.empty = function () {
+    // head can be greater if we've "popped" too many
+    return this._head >= this._tail;
+};
+
 
 /***/ }),
-/* 21 */
+
+/***/ "./settings sync recursive ^\\.\\/.*\\.json$":
+/*!**************************************!*\
+  !*** ./settings sync ^\.\/.*\.json$ ***!
+  \**************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
+	var e = new Error('Cannot find module "' + req + '".');
+	e.code = 'MODULE_NOT_FOUND';
+	throw e;
 }
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 21;
+webpackEmptyContext.id = "./settings sync recursive ^\\.\\/.*\\.json$";
 
 /***/ })
-/******/ ]);
+
+/******/ });
