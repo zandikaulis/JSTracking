@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3115d719cd566e9936b7.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".af5f4a72f2e8da2ca5f1.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -28328,7 +28328,7 @@
                 function t() {
                     r(this, t);
                     var e = i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e._boundCreateExtensionHoverHandler = e._createHoverHandler.bind(e), e._boundOnClick = e._onClick.bind(e), e._boundHandleMenuTransition = e._handleMenuTransition.bind(e), e._boundHandleWindowBlur = e.handleWindowBlur.bind(e), e
+                    return e._boundCreateExtensionHoverHandler = e._createHoverHandler.bind(e), e._boundOnClick = e._onClick.bind(e), e._boundHandleMenuTransition = e._handleMenuTransition.bind(e), e._boundHandleWindowBlur = e.handleWindowBlur.bind(e), e._boundHandleMenuClose = e._handleMenuClose.bind(e), e
                 }
                 return o(t, e), V(t, [{
                     key: "componentDidMount",
@@ -28368,35 +28368,34 @@
                     value: function() {
                         var e = this.props,
                             t = e.installation,
-                            n = e.hoveredExtension,
-                            r = e.menuState,
-                            i = e.isLoggedIn,
-                            o = e.playerHeight,
-                            a = e.windowObj,
-                            s = e.onIdentityToggle,
-                            u = e.onVisibilityToggle,
-                            c = t.activationConfig.anchor[0].toUpperCase(),
-                            l = "" + c + Object(F.n)(t),
-                            d = x()({
+                            n = e.menuState,
+                            r = e.isLoggedIn,
+                            i = e.playerHeight,
+                            o = e.windowObj,
+                            a = e.onIdentityToggle,
+                            s = e.onVisibilityToggle,
+                            u = t.activationConfig.anchor[0].toUpperCase(),
+                            c = "" + u + Object(F.n)(t),
+                            l = x()({
                                 "extension-taskbar-card": !0,
-                                "extension-taskbar-card__hovered": !!n && n.id === t.id
+                                "extension-taskbar-card__hovered": this._isHovered()
                             }),
-                            f = t.activationConfig.slot,
-                            p = r.extensionSlot && r.extensionSlot === f ? w.createElement(D.a, {
+                            d = t.activationConfig.slot,
+                            f = n.extensionSlot && n.extensionSlot === d ? w.createElement(D.a, {
                                 installation: t,
-                                submenu: r.menuName,
-                                modalOptions: r.modalOptions,
-                                isLoggedIn: i,
-                                onIdentityToggle: s,
-                                onVisibilityToggle: u,
-                                playerHeight: o,
+                                submenu: n.menuName,
+                                modalOptions: n.modalOptions,
+                                isLoggedIn: r,
+                                onIdentityToggle: a,
+                                onVisibilityToggle: s,
+                                playerHeight: i,
                                 trackEvent: this.trackEvent,
-                                windowObj: a,
+                                windowObj: o,
                                 handleMenuTransition: this._boundHandleMenuTransition,
-                                closeExtensionMenu: this.props.closeExtensionMenu
+                                closeExtensionMenu: this._boundHandleMenuClose
                             }) : null;
                         return w.createElement("div", {
-                            className: d,
+                            className: l,
                             onFocus: this._boundCreateExtensionHoverHandler(t),
                             onMouseOver: this._boundCreateExtensionHoverHandler(t),
                             onBlur: this._boundCreateExtensionHoverHandler(null),
@@ -28406,7 +28405,7 @@
                             onClick: this._boundOnClick
                         }, w.createElement("span", {
                             className: "extension-taskbar-card__text"
-                        }, l)), p)
+                        }, c)), f)
                     }
                 }, {
                     key: "_createHoverHandler",
@@ -28425,9 +28424,25 @@
                         t.extensionSlot === r ? this.props.closeExtensionMenu() : this.props.onMenuTransition(r, F.b)
                     }
                 }, {
+                    key: "_handleMenuClose",
+                    value: function() {
+                        var e = this.props,
+                            t = e.closeExtensionMenu,
+                            n = e.onHover;
+                        this._isHovered() && n(null), t()
+                    }
+                }, {
                     key: "_handleMenuTransition",
                     value: function(e) {
                         A()(H, e) && this.props.onMenuTransition(this.props.installation.activationConfig.slot, e)
+                    }
+                }, {
+                    key: "_isHovered",
+                    value: function() {
+                        var e = this.props,
+                            t = e.hoveredExtension,
+                            n = e.installation;
+                        return !!t && n.id === t.id
                     }
                 }]), t
             }(w.Component);
@@ -31546,7 +31561,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.26-175006+2bb75421d19b4ea8304d7d95b306f7510bcb4d4b",
+                    app_version: "2018.04.26-183755+64a0922afa8aa4b298028d54ff429f95a3712e2a",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
