@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".1446947e14b15fac70b7.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b51f62ae84deb164a8d7.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -3517,7 +3517,19 @@
                     });
                 case i.c:
                     return s()({}, e, {
-                        hoveredExtension: t.extension
+                        hoveredExtension: t.extension,
+                        activeInstallations: e.activeInstallations.map(function(e) {
+                            var n = e.id;
+                            return t.extension && n === t.extension.id && t.highlightFrame ? c()({}, e, {
+                                playerState: {
+                                    isHighlighted: !0
+                                }
+                            }) : c()({}, e, {
+                                playerState: {
+                                    isHighlighted: !1
+                                }
+                            })
+                        })
                     });
                 case i.k:
                     return s()({}, e, {
@@ -3607,7 +3619,8 @@
                         role: d.a.string.isRequired,
                         token: d.a.string.isRequired
                     }),
-                    isHidden: d.a.bool.isRequired
+                    isHidden: d.a.bool.isRequired,
+                    isHighlighted: d.a.bool.isRequired
                 })
             }).isRequired,
             h = d.a.shape({
@@ -10364,10 +10377,11 @@
             }
         }
 
-        function y(e) {
+        function y(e, t) {
             return {
                 type: j,
-                extension: e
+                extension: e,
+                highlightFrame: t
             }
         }
 
@@ -28307,7 +28321,7 @@
             K = function(e) {
                 return {
                     onHover: function(t) {
-                        e(Object(q.s)(t))
+                        e(Object(q.s)(t, !0))
                     },
                     onIdentityToggle: function(t) {
                         e(Object(q.u)(t.id))
@@ -31561,7 +31575,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.26-220846+aef626db52952cf94ef278b61cbdef3d57789e54",
+                    app_version: "2018.04.26-223213+adf6e8fbc4838b38a6ac2450087526f75a9f15b6",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -41717,10 +41731,10 @@
                 loginId: Jl.a.number.isRequired,
                 onBeginPurchase: Jl.a.func,
                 onDoubleClick: Jl.a.func.isRequired,
-                isHighlighted: Jl.a.bool.isRequired,
                 onIdentityLinked: Jl.a.func.isRequired,
                 onModalRequested: Jl.a.func.isRequired,
                 onModalNotification: Jl.a.func.isRequired,
+                onHover: Jl.a.func.isRequired,
                 playerHeight: Jl.a.number.isRequired,
                 playerWidth: Jl.a.number.isRequired,
                 trackingProperties: Jl.a.shape({
@@ -41734,7 +41748,9 @@
             },
             fp = function(e) {
                 function t() {
-                    return xt(this, t), Rt(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
+                    xt(this, t);
+                    var e = Rt(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
+                    return e._boundOnHover = e._onHover.bind(e), e._boundOnHoverEnd = e._onHoverEnd.bind(e), e
                 }
                 return jt(t, e), lp(t, [{
                     key: "render",
@@ -41743,15 +41759,16 @@
                             t = e.installation,
                             n = e.trackingProperties,
                             r = t.extension.views.component.zoom,
-                            i = yd()(Tt({}, "extension-component", !0)),
-                            o = {
+                            i = t.playerState.isHighlighted,
+                            o = yd()(Tt({}, "extension-component", !0)),
+                            a = {
                                 width: this.size.width + "px",
                                 height: this.size.height + "px",
                                 top: this.position.y + "px",
                                 left: this.position.x + "px"
                             },
-                            a = void 0;
-                        return a = r ? {
+                            s = void 0;
+                        return s = r ? {
                             width: this.size.width / this.size.zoomScale + "px",
                             height: this.size.height / this.size.zoomScale + "px",
                             transformOrigin: "0 0",
@@ -41760,10 +41777,14 @@
                             width: "100%",
                             height: "100%"
                         }, nl.a.createElement("div", {
-                            className: i,
-                            style: o
+                            className: o,
+                            style: a,
+                            onMouseOver: this._boundOnHover,
+                            onFocus: this._boundOnHover,
+                            onMouseOut: this._boundOnHoverEnd,
+                            onBlur: this._boundOnHoverEnd
                         }, nl.a.createElement("div", {
-                            style: a
+                            style: s
                         }, nl.a.createElement(cp, {
                             iframeClass: "extension-component__iframe",
                             installation: t,
@@ -41774,12 +41795,22 @@
                             loginId: this.props.loginId,
                             onBeginPurchase: this.props.onBeginPurchase,
                             onDoubleClick: this.props.onDoubleClick,
-                            isHighlighted: this.props.isHighlighted,
+                            isHighlighted: i,
                             onIdentityLinked: this.props.onIdentityLinked,
                             onModalRequested: this.props.onModalRequested,
                             onModalNotification: this.props.onModalNotification,
                             trackingProperties: n
                         })))
+                    }
+                }, {
+                    key: "_onHover",
+                    value: function() {
+                        this.props.onHover(this.props.installation)
+                    }
+                }, {
+                    key: "_onHoverEnd",
+                    value: function() {
+                        this.props.onHover(null)
                     }
                 }, {
                     key: "size",
@@ -41827,7 +41858,6 @@
                 language: Jl.a.string.isRequired,
                 locale: Jl.a.string.isRequired,
                 loginId: Jl.a.number.isRequired,
-                isHighlighted: Jl.a.bool.isRequired,
                 onIdentityLinked: Jl.a.func.isRequired,
                 onModalRequested: Jl.a.func.isRequired,
                 onModalNotification: Jl.a.func.isRequired,
@@ -41851,14 +41881,15 @@
                         var e = this.props,
                             t = e.installation,
                             n = e.trackingProperties,
-                            r = {
+                            r = t.playerState.isHighlighted,
+                            i = {
                                 width: this.props.width + "px",
                                 height: this.props.height + "px"
                             };
                         return nl.a.createElement("div", {
                             className: "extension-overlay",
                             ref: this._boundIframeHostRefHandler,
-                            style: r
+                            style: i
                         }, nl.a.createElement(cp, {
                             iframeClass: "extension-overlay__iframe",
                             key: t.id,
@@ -41867,7 +41898,7 @@
                             language: this.props.language,
                             locale: this.props.locale,
                             loginId: this.props.loginId,
-                            isHighlighted: this.props.isHighlighted,
+                            isHighlighted: r,
                             onIdentityLinked: this.props.onIdentityLinked,
                             onModalRequested: this.props.onModalRequested,
                             onModalNotification: this.props.onModalNotification,
@@ -42000,7 +42031,6 @@
             Rp = {
                 game: Jl.a.string.isRequired,
                 height: Jl.a.number.isRequired,
-                hoveredExtension: Yf.a,
                 installations: Jl.a.arrayOf(Yf.a).isRequired,
                 modalRequest: Yf.b,
                 extensionNotification: Yf.c,
@@ -42011,6 +42041,7 @@
                 onIdShareRequested: Jl.a.func.isRequired,
                 onModalRequested: Jl.a.func.isRequired,
                 onModalNotification: Jl.a.func.isRequired,
+                onComponentHover: Jl.a.func.isRequired,
                 clearExtensionNotification: Jl.a.func.isRequired,
                 onModalClose: Jl.a.func.isRequired,
                 onPurchaseIntent: Jl.a.func.isRequired,
@@ -42037,7 +42068,6 @@
                     installations: e.extensions.activeInstallations,
                     extensionNotification: e.extensions.notification,
                     modalRequest: e.extensions.menuState.modalOptions,
-                    hoveredExtension: e.extensions.hoveredExtension,
                     game: e.streamMetadata.game,
                     width: e.playerDimensions.width,
                     height: e.playerDimensions.height,
@@ -42096,6 +42126,9 @@
                     },
                     openIdSharePuzzleMenu: function() {
                         e(Object(_c.s)(Gf.e))
+                    },
+                    onComponentHover: function(t) {
+                        e(Object(yp.s)(t, !1))
                     }
                 }
             },
@@ -42161,21 +42194,19 @@
                             s = t.onIdentityLinked,
                             u = t.onExtensionDoubleClick,
                             c = t.onPurchaseIntent,
-                            l = t.hoveredExtension,
-                            d = n.find(function(e) {
+                            l = n.find(function(e) {
                                 return e.activationConfig.anchor === Ss.b.Overlay
                             });
-                        return d ? nl.a.createElement(mp, {
+                        return l ? nl.a.createElement(mp, {
                             height: e.height,
-                            installation: d,
+                            installation: l,
                             isLoggedIn: r,
-                            key: d.id,
+                            key: l.id,
                             language: i,
                             locale: o,
                             loginId: a,
                             onBeginPurchase: c,
                             onDoubleClick: u,
-                            isHighlighted: !!l && l.id === d.id,
                             onIdentityLinked: s,
                             onModalRequested: this._boundOnModalRequested,
                             onModalNotification: this._boundOnModalNotification,
@@ -42197,7 +42228,7 @@
                             u = n.onIdentityLinked,
                             c = n.onExtensionDoubleClick,
                             l = n.onPurchaseIntent,
-                            d = n.hoveredExtension;
+                            d = n.onComponentHover;
                         return r.filter(function(e) {
                             var t = e.activationConfig;
                             return t.anchor === Ss.b.Component && "number" == typeof t.x && "number" == typeof t.y
@@ -42211,10 +42242,10 @@
                                 loginId: s,
                                 onBeginPurchase: l,
                                 onDoubleClick: c,
-                                isHighlighted: !!d && d.id === n.id,
                                 onIdentityLinked: u,
                                 onModalRequested: t._boundOnModalRequested,
                                 onModalNotification: t._boundOnModalNotification,
+                                onHover: d,
                                 playerHeight: e.height,
                                 playerWidth: e.width,
                                 trackingProperties: t._getTrackingProperties()
