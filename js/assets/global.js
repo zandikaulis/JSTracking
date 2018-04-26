@@ -15221,7 +15221,8 @@ googletag.cmd = googletag.cmd || [],
                 CUSTOM_LIVE_UP: "adac3887-6bd4-4fea-bfda-8e019f894dbe",
                 BROADCAST_SOFTWARE: "4994d68b-77d3-41f3-bebb-64b96c753b43",
                 EXTENSIONS_MAINTENANCE: "e51aab46-7708-49cb-a7a3-57e2c95c7570",
-                TWILIGHT_DASHBOARD_SETTINGS_LAUNCH: "60936fd6-ef0a-49f1-9421-712f2ba02513"
+                TWILIGHT_DASHBOARD_SETTINGS_LAUNCH: "60936fd6-ef0a-49f1-9421-712f2ba02513",
+                TWILIGHT_AUTOMOD_LAUNCH: "326523fd-48bf-4043-9635-7bef334069e0"
             },
             r = {
                 "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": "no",
@@ -15292,7 +15293,8 @@ googletag.cmd = googletag.cmd || [],
                 "adac3887-6bd4-4fea-bfda-8e019f894dbe": "no",
                 "4994d68b-77d3-41f3-bebb-64b96c753b43": "control",
                 "e51aab46-7708-49cb-a7a3-57e2c95c7570": "no",
-                "60936fd6-ef0a-49f1-9421-712f2ba02513": "no"
+                "60936fd6-ef0a-49f1-9421-712f2ba02513": "no",
+                "326523fd-48bf-4043-9635-7bef334069e0": "no"
             },
             o = {},
             s = {
