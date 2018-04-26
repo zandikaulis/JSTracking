@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cb354dfa3bad7799122b.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3115d719cd566e9936b7.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -5575,24 +5575,26 @@
             return i.e
         }), n.d(t, "g", function() {
             return i.f
-        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "h", function() {
+        }), n.d(t, "h", function() {
             return i.g
+        }), n.d(t, !1, function() {}), n.d(t, "i", function() {
+            return i.h
         }), n.d(t, "a", function() {
             return i.b
         }), n.d(t, !1, function() {
             return i.a
-        }), n.d(t, "k", function() {
+        }), n.d(t, "l", function() {
             return r
-        }), n.d(t, "i", function() {
+        }), n.d(t, "j", function() {
             return a.a
         }), n.d(t, !1, function() {
             return 300
         }), n.d(t, "e", function() {
             return o
-        }), n.d(t, "j", function() {
+        }), n.d(t, "k", function() {
             return s
         });
-        var u = [r.SupervisorReady, i.b.TwitchExtLoaded, i.b.TwitchExtUserAction, i.b.TwitchExtNetworkTiming, i.b.TwitchExtBeginPurchase, i.b.TwitchExtBitsOnHover, i.b.TwitchExtUseBits, i.b.TwitchExtPubSubReceived, a.a.FollowAction, a.a.FollowStatusRequest, a.a.IdShareRequest]
+        var u = [r.SupervisorReady, i.b.TwitchExtLoaded, i.b.TwitchExtLongtask, i.b.TwitchExtUserAction, i.b.TwitchExtNetworkTiming, i.b.TwitchExtBeginPurchase, i.b.TwitchExtBitsOnHover, i.b.TwitchExtUseBits, i.b.TwitchExtPubSubReceived, a.a.FollowAction, a.a.FollowStatusRequest, a.a.IdShareRequest]
     }, function(e, t, n) {
         "use strict";
 
@@ -8894,7 +8896,7 @@
                         }
                     }, r.translateTheme = function(e) {
                         return "number" == typeof e ? G[e] || L.Light : e
-                    }, W.on(V, r.updateLocalContext), W.on(H, r.updateLocalContext), r.context = r.getBaseContext(), r.context.theme = s(), t === N.f.Viewer && (r.context.game = "", r.context.playbackMode = N.j.Video), r
+                    }, W.on(V, r.updateLocalContext), W.on(H, r.updateLocalContext), r.context = r.getBaseContext(), r.context.theme = s(), t === N.f.Viewer && (r.context.game = "", r.context.playbackMode = N.k.Video), r
                 }
                 return Q(t, e), t
             }(d.EventEmitter2),
@@ -8976,7 +8978,7 @@
                         })
                     }, n.sendSupervisorInit = function(e) {
                         n.sendMessage({
-                            action: N.k.SupervisorInit,
+                            action: N.l.SupervisorInit,
                             options: e
                         })
                     }, n.sendFunctionReply = function(e) {
@@ -9040,7 +9042,7 @@
                     var r = this;
                     this.coordinator = e, this.loginId = t, this.emitConfirmationRequest = n, this.functionActionMap = i(), this.functionModalMap = i(), this.registerFunctionModal = function(e, t) {
                         t.onOpen(function(n) {
-                            var i = r.loginId ? e : N.i.LoginRequest,
+                            var i = r.loginId ? e : N.j.LoginRequest,
                                 o = {
                                     action: i,
                                     resultCallback: t.resultCallback,
@@ -9275,17 +9277,18 @@
                             r.track(ie.UseBitsInitialization), e(t)
                         }
                     }, this.resultCallback = function(e) {
-                        e.didConfirm ? (r.track(ie.UseBitsConfirmation), r.useBitsInExtension(r.transactionId, e.didConfirm)) : (r.failReason = ee.Cancelled, r.close())
+                        return e.didConfirm ? (r.track(ie.UseBitsConfirmation), r.useBitsInExtension(r.transactionId, e.didConfirm)) : (r.failReason = ee.Cancelled, Promise.resolve(r.close()))
                     }, this.unsubscribeCallback = function() {}, this.useBitsInExtension = function(e, t) {
-                        R(r.extensionId, r.token, !0).then(function(n) {
+                        return R(r.extensionId, r.token, !0).then(function(n) {
                             var i = n.token;
                             return A.registerToken(r.extensionId, i), be(e).then(function(e) {
-                                var n = (e.transaction_id, {
-                                    action: he.a.UseBitsComplete,
-                                    didConfirm: t,
-                                    didUseBits: !0
-                                });
-                                r.track(ie.UseBitsSuccess), r.replyCallback(n)
+                                var n = e.bits_balance,
+                                    i = {
+                                        action: he.a.UseBitsComplete,
+                                        didConfirm: t,
+                                        didUseBits: !0
+                                    };
+                                return r.track(ie.UseBitsSuccess), r.replyCallback(i), n
                             }).catch(function(e) {
                                 r.handleUseBitsError(e, ee.UseBitsFailure, ie.UseBitsFailure)
                             })
@@ -9607,6 +9610,10 @@
                             token: e.token,
                             userId: e.payload.opaque_user_id
                         }
+                    }, n.onLongtask = function(e) {
+                        n.tracker.trackEvent("extension_longtask", {
+                            longtask_duration: e.payload.longtask_duration
+                        })
                     }, n.onMouseEnter = function(e) {
                         n.tracker.trackEvent("extension_mouseenter", {})
                     }, n.handleToken = function(e, t) {
@@ -9679,7 +9686,7 @@
                                 r = ge(e.sku, t.payload.channel_id, n.extension.clientId),
                                 i = n.extensionBitsProducts,
                                 o = {
-                                    action: N.i.UseBitsPromptRequired
+                                    action: N.j.UseBitsPromptRequired
                                 };
                             Promise.all([r, i]).then(function(r) {
                                 var i = r[0],
@@ -9712,7 +9719,7 @@
                             })
                         }
                     }, n.openBitsConfirmationModal = function(e) {
-                        n.coordinator.emit(N.i.UseBitsPromptRequired, e)
+                        n.coordinator.emit(N.j.UseBitsPromptRequired, e)
                     }, n.useBitsPromptRequired = function(e, t, n) {
                         return void 0 === e && (e = !1), e || t < n
                     }, n.onUseBitsPromptCompleted = function(e) {
@@ -9726,7 +9733,7 @@
                             callback: n.onMouseEnter.bind(n)
                         }], n.eventListeners.forEach(function(e) {
                             e.target.addEventListener(e.event, e.callback)
-                        }), n.contextManager.on("context", n.onContextUpdate), n.coordinator.on(N.k.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(N.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(N.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(N.a.TwitchExtUserAction, n.onExtensionUserAction), n.onBeginPurchase && n.coordinator.on(N.a.TwitchExtBeginPurchase, n.beginPurchase), n.coordinator.on(N.a.TwitchExtBitsOnHover, n.showBitsBalance), n.coordinator.on(N.a.TwitchExtUseBits, n.useBits), n.coordinator.on(N.a.TwitchExtPubSubReceived, n.onExtensionPubSubRecived), A.subscribe(n.extension.clientId, n.handleToken);
+                        }), n.contextManager.on("context", n.onContextUpdate), n.coordinator.on(N.l.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(N.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(N.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(N.a.TwitchExtUserAction, n.onExtensionUserAction), n.onBeginPurchase && n.coordinator.on(N.a.TwitchExtBeginPurchase, n.beginPurchase), n.coordinator.on(N.a.TwitchExtBitsOnHover, n.showBitsBalance), n.coordinator.on(N.a.TwitchExtUseBits, n.useBits), n.coordinator.on(N.a.TwitchExtPubSubReceived, n.onExtensionPubSubRecived), n.coordinator.on(N.a.TwitchExtLongtask, n.onLongtask), A.subscribe(n.extension.clientId, n.handleToken);
                         var e = A.getToken(n.extension.clientId);
                         e && !e.isNearExpiration && n.handleToken(e, e)
                     }, n.reloadExtension = function() {
@@ -9734,11 +9741,11 @@
                     }, n.unsetupListeners = function() {
                         n.eventListeners.forEach(function(e) {
                             e.target.removeEventListener(e.event, e.callback)
-                        }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(N.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(N.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(N.a.TwitchExtUserAction, n.onExtensionUserAction), n.unregisterFunctionModals(), A.unsubscribe(n.extension.clientId, n.handleToken)
+                        }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(N.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(N.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(N.a.TwitchExtUserAction, n.onExtensionUserAction), n.coordinator.off(N.a.TwitchExtLongtask, n.onLongtask), n.unregisterFunctionModals(), A.unsubscribe(n.extension.clientId, n.handleToken)
                     }, n.registerFunctionModals = function() {
-                        n.functionManager.registerFunctionModal(N.i.FollowAction, new me(n.params.loginId, n.tracker)), n.canRequestIdLink && n.functionManager.registerFunctionModal(N.i.IdShareRequest, new ye), n.extension.bitsEnabled && n.functionManager.registerFunctionModal(N.i.UseBitsPromptRequired, new _e(String(n.params.loginId), n.tracker, new U))
+                        n.functionManager.registerFunctionModal(N.j.FollowAction, new me(n.params.loginId, n.tracker)), n.canRequestIdLink && n.functionManager.registerFunctionModal(N.j.IdShareRequest, new ye), n.extension.bitsEnabled && n.functionManager.registerFunctionModal(N.j.UseBitsPromptRequired, new _e(String(n.params.loginId), n.tracker, new U))
                     }, n.unregisterFunctionModals = function() {
-                        n.functionManager.unregisterFunctionModal(N.i.FollowAction), n.extension.bitsEnabled && n.functionManager.unregisterFunctionModal(N.i.UseBitsPromptRequired)
+                        n.functionManager.unregisterFunctionModal(N.j.FollowAction), n.extension.bitsEnabled && n.functionManager.unregisterFunctionModal(N.j.UseBitsPromptRequired)
                     }, n.handlePurchaseCompleted = function(e) {
                         var t = e.msg.sku;
                         n.extensionProducts.then(function(e) {
@@ -9815,7 +9822,7 @@
                             anchor: this.params.anchor,
                             language: this.language,
                             mode: this.params.mode,
-                            state: N.h[this.extension.state],
+                            state: N.i[this.extension.state],
                             platform: this.params.platform
                         }
                     },
@@ -9911,12 +9918,15 @@
                     var e = this;
                     if (!this.extension.bitsEnabled) return void this.coordinator.sendBitsProductsMessage([]);
                     this.extensionBitsProducts.then(function(t) {
-                        var n = t.products.map(function(e) {
-                            return {
-                                cost: e.cost,
-                                displayName: e.displayName,
-                                sku: e.sku
-                            }
+                        var n = t.products.filter(function(t) {
+                            return e.extension.state !== N.h.Released || !0 !== t.inDevelopment
+                        }).map(function(t) {
+                            var n = {
+                                cost: t.cost,
+                                displayName: t.displayName,
+                                sku: t.sku
+                            };
+                            return e.extension.state !== N.h.Released && (n.inDevelopment = t.inDevelopment), n
                         });
                         e.coordinator.sendBitsProductsMessage(n)
                     })
@@ -9941,18 +9951,20 @@
             return N.f
         }), n.d(t, "e", function() {
             return N.g
-        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
+        }), n.d(t, !1, function() {
             return N.h
+        }), n.d(t, !1, function() {}), n.d(t, !1, function() {
+            return N.i
         }), n.d(t, !1, function() {
             return N.a
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return N.k
+            return N.l
         }), n.d(t, "f", function() {
-            return N.i
+            return N.j
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {
             return N.e
         }), n.d(t, !1, function() {
-            return N.j
+            return N.k
         }), n.d(t, !1, function() {
             return Te.a
         }), n.d(t, !1, function() {
@@ -14034,6 +14046,8 @@
         }), n.d(t, "f", function() {
             return a
         }), n.d(t, "g", function() {
+            return s
+        }), n.d(t, "h", function() {
             return l
         }), n.d(t, "b", function() {
             return c
@@ -14066,7 +14080,7 @@
         }(u || (u = {}));
         var c, l = (d = {}, d[s.Testing] = u.Testing, d[s.HostedTest] = u.HostedTest, d[s.Approved] = u.Approved, d[s.Released] = u.Released, d[s.ReadyForReview] = u.ReadyForReview, d[s.InReview] = u.InReview, d[s.PendingAction] = u.PendingAction, d[s.Uploading] = u.Uploading, d);
         ! function(e) {
-            e.TwitchExtAuth = "twitch-ext-auth", e.TwitchExtBootstrap = "twitch-ext-bootstrap", e.TwitchExtContext = "twitch-ext-context", e.TwitchExtError = "twitch-ext-error", e.TwitchExtLoaded = "twitch-ext-loaded", e.TwitchExtNetworkTiming = "twitch-ext-network-timing", e.TwitchExtReload = "twitch-ext-reload", e.TwitchExtUserAction = "twitch-ext-user-action", e.TwitchExtConfirmationRequest = "twitch-ext-confirmation-request", e.TwitchExtBeginPurchase = "twitch-ext-begin-purchase", e.TwitchExtReloadEntitlements = "twitch-ext-reload-entitlements", e.TwitchExtProductPrices = "twitch-ext-product-prices", e.TwitchExtVisibilityChanged = "twitch-ext-visibility-changed", e.TwitchExtBitsProducts = "twitch-ext-bits-products", e.TwitchExtUseBits = "twitch-ext-use-bits", e.TwitchExtBitsTransactionComplete = "twitch-ext-bits-transaction-complete", e.TwitchExtBitsOnHover = "twitch-ext-bits-on-hover", e.TwitchExtPubSubReceived = "twitch-ext-pubsub-received", e.TwitchExtPositionChanged = "twitch-ext-position-changed"
+            e.TwitchExtAuth = "twitch-ext-auth", e.TwitchExtBootstrap = "twitch-ext-bootstrap", e.TwitchExtContext = "twitch-ext-context", e.TwitchExtError = "twitch-ext-error", e.TwitchExtLoaded = "twitch-ext-loaded", e.TwitchExtLongtask = "twitch-ext-longtask", e.TwitchExtNetworkTiming = "twitch-ext-network-timing", e.TwitchExtReload = "twitch-ext-reload", e.TwitchExtUserAction = "twitch-ext-user-action", e.TwitchExtConfirmationRequest = "twitch-ext-confirmation-request", e.TwitchExtBeginPurchase = "twitch-ext-begin-purchase", e.TwitchExtReloadEntitlements = "twitch-ext-reload-entitlements", e.TwitchExtProductPrices = "twitch-ext-product-prices", e.TwitchExtVisibilityChanged = "twitch-ext-visibility-changed", e.TwitchExtBitsProducts = "twitch-ext-bits-products", e.TwitchExtUseBits = "twitch-ext-use-bits", e.TwitchExtBitsTransactionComplete = "twitch-ext-bits-transaction-complete", e.TwitchExtBitsOnHover = "twitch-ext-bits-on-hover", e.TwitchExtPubSubReceived = "twitch-ext-pubsub-received", e.TwitchExtPositionChanged = "twitch-ext-position-changed"
         }(c || (c = {}));
         var d, f = 1024
     }, function(e, t, n) {
@@ -31532,7 +31546,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.25-172948+a1facc92fc13c4f06a7292eb44f77e2ad94771ee",
+                    app_version: "2018.04.26-175006+2bb75421d19b4ea8304d7d95b306f7510bcb4d4b",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -37231,7 +37245,7 @@
                 }]), e
             }(),
             es = n(102),
-            ts = "//video-edge-7ec657.sjc02.hls.ttvnw.net/v1/segment/ClCCMPnFe0Vllqm1o7Sci6l2VgofSyYfUiph5w7YtErTkJq1kt1BEwwt7WLXV5VH0tPDV-tCtN1u1O6PlMsotT-gD3m3CX897wG9FBSjQh0kph4vtUB6mHTc1aMR6j2wp_E11EbOCeU2l-rzZRDSfS3i_q_OfT6GYeYn1_ku1kifETGhDtxOgbG4xOHa7jE_YhsXzdr_dXCcvpWoBgOcsZ4RAyxxNKRvY7Uhj9EUY6a7Vuu25z5Ow4gsKQdaJFVwIbcyJlLDVxppIUudpH0JdyJk0NzOJIFVfGlICrg7Cv4NCw9kTuqvKRbiOl00sz4-S-rSvmjn2fxEyYP0efbVK8p9NdZI--8o89hZGkAyCpnIr-l23Y3jSM6AOJl7MShzDcKxt4-mevOdIQZGhh94lzNfME0rg_GMSxa4Sk8YelTRON9cxtRi_WT-E4GVhxaebltJQ7DsfN0ehnvONtmNxkZKKaWyrrxtvwBDOO3_46vYC0MNnJJgWIZcFeyTKDHqAI_-GuMiSIiEzE40qzQpZDX4.ts",
+            ts = "//video-edge-ed3c0f.sjc02.hls.ttvnw.net/v1/segment/ChJ87xxU5zioh1DmBgNVXqyJNALbVXINjtF3oR3CTv72sx2XH-gNuZyrpC4P7HqCjr7NUgBri0gbx2BDtEDqfxmbLjsWhYjfD9BNT7CUjfP20FKMcTo58yCVz7UsN6ghvRxAHe3s6gZymNDCukLJ0MDDgvfPYCPO9GGx6OumgkGPXaRkRJFssPsIzyXRvqTfwMx9QDQNPWV2JvQ0BDKL9qBSDrv1rpFx3ethFkw3e0jZYr9LfYHLxgQdsDPB6vRhBxS8gJi1nxHrRDDhOm1mAuL1vkaXdUwQvmtKsmA8tD1XXKb_0g_Xzke8DEdTvOOwa-ODAAhhOJVXUykZ-TImnoPFjb1JxhHrt-bHCJVr8l5jjO5K6snRcAK0PjmH73ozC1Ex46DD_eo7TODlPXPaahF0L8Rk20Q-Vv80_440BKYCrUJ25s1bFODRlGqwJk7tqfmOXV0axwgvXSIsJWZwo5Im-7U90bNxIGZIILoGsITx9UtTTWRmslkG4AiCc-Cb0P-AEIseDENGXmQehdEwumR.ts",
             ns = n(49),
             rs = n(262),
             is = n(135),
