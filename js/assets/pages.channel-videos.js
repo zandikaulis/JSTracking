@@ -1,4 +1,4 @@
-webpackJsonp([33, 97], {
+webpackJsonp([32, 110], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -1341,7 +1341,7 @@ webpackJsonp([33, 97], {
             P = n("QNxL"),
             V = (n("BTUa"), "chat_dismiss"),
             H = "chat_share",
-            W = function(e) {
+            G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1566,21 +1566,21 @@ webpackJsonp([33, 97], {
                     }
                 }), Object(O.a)([{
                     topic: function(e) {
-                        return Object(T.v)(e.currentUserID)
+                        return Object(T.w)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (_ = {}, _[I.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", _)
                 }])], t)
             }(s.Component),
-            G = Object(l.a)(U, {
+            W = Object(l.a)(U, {
                 name: "dismissPurchaseToken"
             })(Object(l.a)(P, {
                 name: "sharePurchaseTokenInChat"
-            })(W));
+            })(G));
         var z = Object(a.b)(function(e) {
                 return {
                     currentUserID: e.session.user && "" + e.session.user.id || ""
                 }
-            })(G),
+            })(W),
             q = (n("e9ZN"), function(e) {
                 var t = D("rare-emote__face", {
                         "rare-emote__face--animate": !!e.animate
@@ -2239,7 +2239,7 @@ webpackJsonp([33, 97], {
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(T.p)(e.channelID),
+                    topic: Object(T.q)(e.channelID),
                     type: I.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -2827,8 +2827,8 @@ webpackJsonp([33, 97], {
                 }
             }(),
             He = n("QFW6"),
-            We = n("CSlQ"),
-            Ge = n("9fnI"),
+            Ge = n("CSlQ"),
+            We = n("9fnI"),
             ze = n("Z3Cb"),
             qe = "(?:\\W|^)",
             Qe = "(?:$|\\W)",
@@ -3089,7 +3089,7 @@ webpackJsonp([33, 97], {
                         return Object(g.b)(e, g.a.TypedCommand)
                     }
                 }, e)
-            }), Object(We.d)("ChatRoom"), Object(l.a)(Ge, {
+            }), Object(Ge.d)("ChatRoom"), Object(l.a)(We, {
                 props: function(e) {
                     var t;
                     return e.data && e.data.user && e.data.user.cheer && e.data.user.cheer.emotes && (t = Object(E.a)(e.data.user.cheer.emotes)), {
@@ -3163,7 +3163,7 @@ webpackJsonp([33, 97], {
                     skip: function(e) {
                         return !e.user
                     }
-                }), Object(We.d)("Chat")], t)
+                }), Object(Ge.d)("Chat")], t)
             }(s.Component);
         var tt = Object(a.b)(function(e) {
             return {
@@ -4259,7 +4259,7 @@ webpackJsonp([33, 97], {
                 name: "denyRejectedChatMessage",
                 options: {}
             }))(V),
-            W = (n("vadT"), function(e) {
+            G = (n("vadT"), function(e) {
                 return a.createElement(E._8, {
                     className: "user-notice-line",
                     margin: {
@@ -4271,7 +4271,7 @@ webpackJsonp([33, 97], {
                     }
                 }, e.children)
             }),
-            G = n("91zu"),
+            W = n("91zu"),
             z = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -4287,7 +4287,7 @@ webpackJsonp([33, 97], {
                         displayName: a.createElement("strong", null, n.displayName),
                         viewerCount: a.createElement("strong", null, e.viewerCount)
                     }, "RaidIncomingMessage");
-                    return a.createElement(W, {
+                    return a.createElement(G, {
                         "data-test-selector": "incoming-raid"
                     }, a.createElement(E._8, {
                         display: E.R.Flex,
@@ -4304,7 +4304,7 @@ webpackJsonp([33, 97], {
                     }, s)))
                 }, t
             }(a.Component),
-            q = Object(l.a)(G, {
+            q = Object(l.a)(W, {
                 options: function(e) {
                     return {
                         variables: {
@@ -4662,7 +4662,7 @@ webpackJsonp([33, 97], {
                                 className: "chat-line__moderation"
                             }, Object(R.f)(e)) : null;
                         case k.b.Subscription:
-                            return a.createElement(W, null, this.props.isCurrentUserModerator && this.props.showModerationIcons && a.createElement(I, {
+                            return a.createElement(G, null, this.props.isCurrentUserModerator && this.props.showModerationIcons && a.createElement(I, {
                                 channelID: this.props.channelID,
                                 onPushMessage: this.props.onPushMessage,
                                 senderLogin: e.user.username
@@ -4670,7 +4670,7 @@ webpackJsonp([33, 97], {
                                 event: e
                             }));
                         case k.b.SubGift:
-                            return a.createElement(W, null, this.props.isCurrentUserModerator && this.props.showModerationIcons && a.createElement(I, {
+                            return a.createElement(G, null, this.props.isCurrentUserModerator && this.props.showModerationIcons && a.createElement(I, {
                                 channelID: this.props.channelID,
                                 onPushMessage: this.props.onPushMessage,
                                 senderLogin: e.user.username
@@ -4700,7 +4700,7 @@ webpackJsonp([33, 97], {
                                 onPushMessage: this.props.onPushMessage,
                                 showModerationIcons: this.props.showModerationIcons,
                                 showTimestamps: this.props.showTimestamps
-                            })), a.createElement(W, null, !n && this.props.isCurrentUserModerator && this.props.showModerationIcons && a.createElement(I, {
+                            })), a.createElement(G, null, !n && this.props.isCurrentUserModerator && this.props.showModerationIcons && a.createElement(I, {
                                 channelID: this.props.channelID,
                                 onPushMessage: this.props.onPushMessage,
                                 senderLogin: e.user.username
@@ -4756,11 +4756,11 @@ webpackJsonp([33, 97], {
                                 message: e
                             });
                         case k.b.Unraid:
-                            return a.createElement(W, null, a.createElement(E.Q, {
+                            return a.createElement(G, null, a.createElement(E.Q, {
                                 color: E.K.Alt2
                             }, Object(r.d)("The raid has been cancelled.", "RaidCancelMessage")));
                         case k.b.Ritual:
-                            return a.createElement(W, null, a.createElement(ie, {
+                            return a.createElement(G, null, a.createElement(ie, {
                                 event: e
                             }), a.createElement(L, {
                                 badgeSets: this.props.badgeSets,
@@ -5232,7 +5232,7 @@ webpackJsonp([33, 97], {
                     }, t)), t
                 }, t
             }(l.Component)),
-            W = {
+            G = {
                 NAME_LENGTH_INVALID: function(e) {
                     var t = e.maxChars,
                         n = e.minChars;
@@ -5260,7 +5260,7 @@ webpackJsonp([33, 97], {
                     }, "RoomErrorCodes")
                 }
             },
-            G = {
+            W = {
                 AUTO_MOD_ENFORCEMENT_FAILED: function() {
                     return Object(c.d)("Your message contains inappropriate content.", "RoomErrorCodes")
                 },
@@ -5294,7 +5294,7 @@ webpackJsonp([33, 97], {
             };
 
         function z(e, t) {
-            return e in G ? G[e]() : e in W && t ? W[e](t) : Object(c.d)("Error", "RoomErrorCodes")
+            return e in W ? W[e]() : e in G && t ? G[e](t) : Object(c.d)("Error", "RoomErrorCodes")
         }
         var q = /^([^\u0000-\u007F]|[a-z0-9_]|-)*$/,
             Q = 25,
@@ -6394,8 +6394,8 @@ webpackJsonp([33, 97], {
                     }))
                 }, t
             }(l.Component),
-            We = Object(Ve.a)()(He),
-            Ge = n("TCxx"),
+            Ge = Object(Ve.a)()(He),
+            We = n("TCxx"),
             ze = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6459,7 +6459,7 @@ webpackJsonp([33, 97], {
                     }))
                 }, t
             }(l.Component),
-            qe = Object(m.a)(Ge, {
+            qe = Object(m.a)(We, {
                 name: "updateRoomModes"
             })(ze),
             Qe = n("R9op"),
@@ -6797,7 +6797,7 @@ webpackJsonp([33, 97], {
                     }))
                 }, t
             }(l.Component),
-            pt = Object(m.a)(Ge, {
+            pt = Object(m.a)(We, {
                 name: "updateRoomModes"
             })(mt),
             ht = 120,
@@ -6868,7 +6868,7 @@ webpackJsonp([33, 97], {
                     }))
                 }, t
             }(l.Component),
-            ft = Object(m.a)(Ge, {
+            ft = Object(m.a)(We, {
                 name: "updateRoomModes"
             })(gt),
             vt = n("+WrY"),
@@ -7108,7 +7108,7 @@ webpackJsonp([33, 97], {
             Pt = n("2emZ"),
             Vt = n("e1CU"),
             Ht = 5,
-            Wt = function(e) {
+            Gt = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.autocompleteType = Pt.a.Mention, n.canBeTriggeredByTab = !0, n.getMatches = function(e, t) {
@@ -7158,7 +7158,7 @@ webpackJsonp([33, 97], {
                     registerAutocompleteProvider: jt.func
                 }, t
             }(l.Component),
-            Gt = (n("KnZO"), function() {
+            Wt = (n("KnZO"), function() {
                 return l.createElement(N._8, {
                     fullWidth: !0,
                     position: N._15.Absolute,
@@ -7439,7 +7439,7 @@ webpackJsonp([33, 97], {
                     }, l.createElement(N._8, {
                         position: N._15.Relative,
                         zIndex: N._59.Default
-                    }, this.state.showCard === Xt.Bits && l.createElement(Gt, null), l.createElement(Ft.c, {
+                    }, this.state.showCard === Xt.Bits && l.createElement(Wt, null), l.createElement(Ft.c, {
                         channelOwnerID: this.props.channelID,
                         onClickEmote: this.onClickEmote,
                         toggleVisibility: this.onEmotePickerToggle,
@@ -7457,7 +7457,7 @@ webpackJsonp([33, 97], {
                         "data-test-selector": "room-input-textarea"
                     }, l.createElement(xt.d, {
                         emotes: this.props.emotes
-                    }), l.createElement(Wt, {
+                    }), l.createElement(Gt, {
                         channelDisplayName: this.props.channelDisplayName,
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
@@ -8194,7 +8194,7 @@ webpackJsonp([33, 97], {
                         borderLeft: !0
                     }, l.createElement(Pe, {
                         channelID: this.props.channelID
-                    }), l.createElement(We, null), l.createElement(qe, {
+                    }), l.createElement(Ge, null), l.createElement(qe, {
                         roomID: this.props.roomID
                     }), l.createElement($e, null), l.createElement(Je.a, {
                         currentUserLogin: this.props.sessionUser && this.props.sessionUser.login
@@ -8541,8 +8541,8 @@ webpackJsonp([33, 97], {
                 var t;
                 c.l.set("roomUpsellHistory", s.__assign({}, c.l.get("roomUpsellHistory", {}), ((t = {})[e] = !0, t)))
             },
-            Wn = n("q+qZ"),
-            Gn = function(e) {
+            Gn = n("q+qZ"),
+            Wn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.createRoom = function() {
@@ -8592,9 +8592,9 @@ webpackJsonp([33, 97], {
                     return Object(c.d)("Create", "CreateRoomButton")
                 }, t
             }(l.Component),
-            zn = Object(d.compose)(Object(m.a)(Wn, {
+            zn = Object(d.compose)(Object(m.a)(Gn, {
                 name: "createRoom"
-            }))(Gn),
+            }))(Wn),
             qn = (n("E9JN"), {
                 align: N._50.Right,
                 direction: N._51.Top,
@@ -12308,7 +12308,7 @@ webpackJsonp([33, 97], {
             }(a.Component),
             V = n("jML9"),
             H = n("OAwv");
-        var W = function(e) {
+        var G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -12435,11 +12435,11 @@ webpackJsonp([33, 97], {
                     configurable: !0
                 }), t
             }(a.Component),
-            G = Object(d.a)(V, {
+            W = Object(d.a)(V, {
                 skip: function(e) {
                     return !e.authToken
                 }
-            })(W);
+            })(G);
         var z = Object(r.b)(function(e) {
                 return {
                     authToken: Object(p.a)(e)
@@ -12450,7 +12450,7 @@ webpackJsonp([33, 97], {
                         return Object(m.f)(u.a.RaidJoin)
                     }
                 }, e)
-            })(G),
+            })(W),
             q = Object(o.f)(z);
         n.d(t, "a", function() {
             return q
@@ -13139,6 +13139,290 @@ webpackJsonp([33, 97], {
         var o = new Set(a.concat(r()).map(function(e) {
             return e.code
         }))
+    },
+    DNPE: function(e, t, n) {
+        var i = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "ChannelVideosContent_User"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "channelOwnerLogin"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "limit"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Int"
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "cursor"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Cursor"
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "broadcastType"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "BroadcastType"
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "videoSort"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "VideoSort"
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "channelOwnerLogin"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "videos"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "after"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "cursor"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "type"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "broadcastType"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "sort"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "videoSort"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "edges"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "cursor"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "node"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "FragmentSpread",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "PreviewCardVideo"
+                                                        },
+                                                        directives: []
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "pageInfo"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "hasNextPage"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 431
+            }
+        };
+        i.loc.source = {
+            body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery ChannelVideosContent_User($channelOwnerLogin: String! $limit: Int $cursor: Cursor $broadcastType: BroadcastType $videoSort: VideoSort) {\nuser(login: $channelOwnerLogin) {\nid\ndisplayName\nvideos(first: $limit after: $cursor type: $broadcastType sort: $videoSort) {\nedges {\ncursor\nnode {\n...PreviewCardVideo\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var a = {};
+        i.definitions = i.definitions.concat(n("qjMx").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var t = e.name.value;
+            return !a[t] && (a[t] = !0, !0)
+        })), e.exports = i
     },
     DS3o: function(e, t) {},
     DVR9: function(e, t) {},
@@ -15188,8 +15472,8 @@ webpackJsonp([33, 97], {
             return n.setFullYear(t.getFullYear(), 0, 1), n.setHours(0, 0, 0, 0), n
         }
     },
-    JWRd: function(e, t, n) {
-        var i = {
+    JWRd: function(e, t) {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -15215,70 +15499,6 @@ webpackJsonp([33, 97], {
                                 kind: "Name",
                                 value: "String"
                             }
-                        }
-                    }
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "limit"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Int"
-                        }
-                    }
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "cursor"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Cursor"
-                        }
-                    }
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "broadcastType"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "BroadcastType"
-                        }
-                    }
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "videoSort"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "VideoSort"
                         }
                     }
                 }],
@@ -15313,22 +15533,6 @@ webpackJsonp([33, 97], {
                                 name: {
                                     kind: "Name",
                                     value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "displayName"
                                 },
                                 arguments: [],
                                 directives: []
@@ -15386,129 +15590,6 @@ webpackJsonp([33, 97], {
                                         directives: []
                                     }]
                                 }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "videos"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }, {
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "after"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "cursor"
-                                        }
-                                    }
-                                }, {
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "type"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "broadcastType"
-                                        }
-                                    }
-                                }, {
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "sort"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "videoSort"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "edges"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "cursor"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "node"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "FragmentSpread",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "PreviewCardVideo"
-                                                        },
-                                                        directives: []
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "pageInfo"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "hasNextPage"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }]
-                                        }
-                                    }]
-                                }
                             }]
                         }
                     }]
@@ -15516,23 +15597,18 @@ webpackJsonp([33, 97], {
             }],
             loc: {
                 start: 0,
-                end: 494
+                end: 160
             }
         };
-        i.loc.source = {
-            body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery ChannelVideosPage_User($channelOwnerLogin: String! $limit: Int $cursor: Cursor $broadcastType: BroadcastType $videoSort: VideoSort) {\nuser(login: $channelOwnerLogin) {\nid\nlogin\ndisplayName\nhosting {\nid\nlogin\ndisplayName\nprofileImageURL(width: 70)\n}\nvideos(first: $limit after: $cursor type: $broadcastType sort: $videoSort) {\nedges {\ncursor\nnode {\n...PreviewCardVideo\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
+        n.loc.source = {
+            body: "query ChannelVideosPage_User($channelOwnerLogin: String!) {\nuser(login: $channelOwnerLogin) {\nid\nhosting {\nid\nlogin\ndisplayName\nprofileImageURL(width: 70)\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(n("qjMx").definitions.filter(function(e) {
-            if ("FragmentDefinition" !== e.kind) return !0;
-            var t = e.name.value;
-            return !a[t] && (a[t] = !0, !0)
-        })), e.exports = i
+        e.exports = n
     },
     Javx: function(e, t, n) {
         var i = n("b7g8");
@@ -16036,7 +16112,7 @@ webpackJsonp([33, 97], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(106).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(120).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16048,7 +16124,7 @@ webpackJsonp([33, 97], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(105).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(119).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16060,7 +16136,7 @@ webpackJsonp([33, 97], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(104).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(118).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16072,7 +16148,7 @@ webpackJsonp([33, 97], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(103).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(117).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16572,8 +16648,8 @@ webpackJsonp([33, 97], {
             P = n("oIkB"),
             V = n("g7wA"),
             H = n("O9wU"),
-            W = n("jPU6"),
-            G = n("y1/w"),
+            G = n("jPU6"),
+            W = n("y1/w"),
             z = (n("MSFW"), n("L0RX")),
             q = function(e) {
                 function t() {
@@ -16652,7 +16728,7 @@ webpackJsonp([33, 97], {
                         zIndex: O._59.Above,
                         "data-a-target": "recent-raids-item-hover"
                     }, this.props.slideInContent, e)
-                }, t = i.__decorate([Object(E.a)(G, {
+                }, t = i.__decorate([Object(E.a)(W, {
                     options: function(e) {
                         return {
                             variables: {
@@ -16662,14 +16738,14 @@ webpackJsonp([33, 97], {
                             fetchPolicy: "cache-and-network"
                         }
                     }
-                }), Object(E.a)(W, {
+                }), Object(E.a)(G, {
                     name: "banUser",
                     options: function(e) {
                         return {
                             update: function(t, n) {
                                 ! function(e, t, n) {
                                     var i = e.readQuery({
-                                        query: G,
+                                        query: W,
                                         variables: {
                                             targetUserID: n.raiderUserID,
                                             channelID: n.channelID
@@ -16679,7 +16755,7 @@ webpackJsonp([33, 97], {
                                         isPermanent: !0,
                                         __typename: "ChatRoomBanStatus"
                                     }), e.writeQuery({
-                                        query: G,
+                                        query: W,
                                         variables: {
                                             targetUserID: n.raiderUserID,
                                             channelID: n.channelID
@@ -16697,7 +16773,7 @@ webpackJsonp([33, 97], {
                             update: function(t) {
                                 ! function(e, t) {
                                     var n = e.readQuery({
-                                        query: G,
+                                        query: W,
                                         variables: {
                                             targetUserID: t.raiderUserID,
                                             channelID: t.channelID
@@ -16708,7 +16784,7 @@ webpackJsonp([33, 97], {
                                             chatRoomBanStatus: null
                                         });
                                         e.writeQuery({
-                                            query: G,
+                                            query: W,
                                             variables: {
                                                 targetUserID: t.raiderUserID,
                                                 channelID: t.channelID
@@ -23139,6 +23215,7 @@ webpackJsonp([33, 97], {
             return n > 0 ? Math.floor(n) : Math.ceil(n)
         }
     },
+    XS5K: function(e, t) {},
     XViT: function(e, t) {},
     XYVN: function(e, t, n) {
         "use strict";
@@ -24675,8 +24752,8 @@ webpackJsonp([33, 97], {
                 }, t
             }(a.Component)),
             H = n("4Q5V"),
-            W = n("mwvJ"),
-            G = (n("1vwK"), "pinned-cheer--collapse"),
+            G = n("mwvJ"),
+            W = (n("1vwK"), "pinned-cheer--collapse"),
             z = /(\d+)$/,
             q = function(e) {
                 function t() {
@@ -24688,7 +24765,7 @@ webpackJsonp([33, 97], {
                     }, t.saveRootRef = function(e) {
                         t.root = e
                     }, t.handleHeadlineClick = function() {
-                        t.collapseCheer = !t.collapseCheer, t.root && t.root.classList.toggle(G, t.collapseCheer)
+                        t.collapseCheer = !t.collapseCheer, t.root && t.root.classList.toggle(W, t.collapseCheer)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
@@ -24705,7 +24782,7 @@ webpackJsonp([33, 97], {
                     if (!this.props.recentCheer) return null;
                     for (var e = "", t = 0, n = this.props.recentCheer.messageParts; t < n.length; t++) {
                         var i = n[t];
-                        if (i.type === W.a.Emote && i.content.cheerAmount && i.content.alt) {
+                        if (i.type === G.a.Emote && i.content.cheerAmount && i.content.alt) {
                             var r = i.content.alt.replace(z, "").toLowerCase();
                             e ? e !== r && (e = "cheer") : e = r
                         }
@@ -24745,7 +24822,7 @@ webpackJsonp([33, 97], {
                         }, Object(s.d)("Recent Cheer", "Bits--PinnedCheers")),
                         m = ((l = {
                             "pinned-cheer__bounding-box": !0
-                        })[G] = this.collapseCheer, l),
+                        })[W] = this.collapseCheer, l),
                         p = {
                             "pinned-cheer__headline": !0,
                             "pinned-cheer__headline--clickable": d
@@ -25683,7 +25760,7 @@ webpackJsonp([33, 97], {
                     className: "bits-undo-prompt"
                 }, n, a.createElement(b.Q, null, t))
             }),
-            We = function(e) {
+            Ge = function(e) {
                 var t = s.b.get("crate_snowman_launch", _e.a.Off),
                     n = t === _e.a.On || t === _e.a.StaffOnly && e.isStaff ? ne.CratesChristmas : null,
                     i = e.event || n;
@@ -25729,7 +25806,7 @@ webpackJsonp([33, 97], {
                     onClickHelp: e.showHelp
                 })
             },
-            Ge = n("0nzt"),
+            We = n("0nzt"),
             ze = (n("nQZu"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -25801,7 +25878,7 @@ webpackJsonp([33, 97], {
             }(a.PureComponent));
         var qe = Object(ee.b)(function(e) {
                 return {
-                    darkModeEnabled: Object(Ge.a)(e) === u.a.Dark
+                    darkModeEnabled: Object(We.a)(e) === u.a.Dark
                 }
             })(ze),
             Qe = (n("9Xbf"), function(e) {
@@ -25890,7 +25967,7 @@ webpackJsonp([33, 97], {
             }(a.PureComponent));
         var Ke = Object(ee.b)(function(e) {
                 return {
-                    darkModeEnabled: Object(Ge.a)(e) === u.a.Dark
+                    darkModeEnabled: Object(We.a)(e) === u.a.Dark
                 }
             })(Qe),
             Ye = function(e) {
@@ -26122,7 +26199,7 @@ webpackJsonp([33, 97], {
                         alignContent: b.b.Stretch,
                         textAlign: b._42.Center,
                         borderBottom: !this.props.isSending
-                    }, a.createElement(We, {
+                    }, a.createElement(Ge, {
                         bitsBalance: this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
                         bitsConfig: this.props.bitsConfig,
                         cheerMinimumBits: this.props.data.user.cheer.settings.cheerMinimumBits,
@@ -26508,7 +26585,7 @@ webpackJsonp([33, 97], {
                 if (t.value !== this.state.value && this.props.bitsConfig) {
                     var n = [];
                     Object(st.c)(t.value, this.props.bitsConfig).forEach(function(e) {
-                        e.type === W.a.Emote && n.push(e.content)
+                        e.type === G.a.Emote && n.push(e.content)
                     }), n.length && t.showCard === nt.Emotes && this.setState({
                         showCard: nt.None
                     }), this.setState({
@@ -26685,7 +26762,7 @@ webpackJsonp([33, 97], {
                 if (this.state.value && this.props.sessionUser)
                     for (var e = 0, t = Object(bt.c)(this.state.value, this.props.sessionUser.displayName, !1); e < t.length; e++) {
                         var n = t[e];
-                        n.type === W.a.Mention && n.content.recipient !== n.content.sender && Object(yt.a)({
+                        n.type === G.a.Mention && n.content.recipient !== n.content.sender && Object(yt.a)({
                             channelLogin: this.props.channelLogin,
                             isHostMode: this.props.isHostMode,
                             mentionedUserDisplayName: n.content.recipient,
@@ -27094,12 +27171,12 @@ webpackJsonp([33, 97], {
             Ht = (n("jIAO"), n("vLl9"));
         n("dVd7");
         n.d(t, "a", function() {
-            return Wt
+            return Gt
         }), n.d(t, "b", function() {
             return qt
         });
-        var Wt = "chat-room-header-label",
-            Gt = s.j.withCategory("chat-room"),
+        var Gt = "chat-room-header-label",
+            Wt = s.j.withCategory("chat-room"),
             zt = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -27186,7 +27263,7 @@ webpackJsonp([33, 97], {
                         fullHeight: !0
                     }, a.createElement("section", {
                         role: "complementary",
-                        "aria-labelledby": Wt
+                        "aria-labelledby": Gt
                     }, a.createElement(b._32, {
                         background: b.n.Alt2,
                         borderLeft: !this.props.isEmbedded,
@@ -27286,11 +27363,11 @@ webpackJsonp([33, 97], {
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(m.t)(e.userID),
+                    topic: Object(m.u)(e.userID),
                     type: c.PubsubMessageType.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
-                        if (Gt.debug("Received bits-user-update-v1 pubsub update", {
+                        if (Wt.debug("Received bits-user-update-v1 pubsub update", {
                                 data: n,
                                 event: t
                             }), !n.badges || t.message_type === ae.b.Balance || null === t.data.newest_version || t.data.channel_id !== e.channelID) return n;
@@ -27692,11 +27769,11 @@ webpackJsonp([33, 97], {
             P = n("pQNb"),
             V = n("CwIZ"),
             H = n("m4HT"),
-            W = (n("VSa1"), n("BBNG"));
+            G = (n("VSa1"), n("BBNG"));
         ! function(e) {
             e[e.ActionsPage = 0] = "ActionsPage", e[e.SubGiftSelectPage = 1] = "SubGiftSelectPage"
         }(C || (C = {}));
-        var G = function(e) {
+        var W = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -27974,7 +28051,7 @@ webpackJsonp([33, 97], {
                         default:
                             return F.a.User
                     }
-                }, t = a.__decorate([Object(w.d)("ViewerCard"), Object(k.a)(W, {
+                }, t = a.__decorate([Object(w.d)("ViewerCard"), Object(k.a)(G, {
                     options: function(e) {
                         return {
                             variables: {
@@ -28041,7 +28118,7 @@ webpackJsonp([33, 97], {
                             },
                             style: a,
                             "data-a-target": "viewer-card-positioner"
-                        }, h.createElement(G, {
+                        }, h.createElement(W, {
                             channelID: this.props.channelID,
                             hideViewerCard: this.props.hideViewerCard,
                             isPopout: this.props.isPopout,
@@ -28140,7 +28217,9 @@ webpackJsonp([33, 97], {
                             },
                             thumbnailImageProps: {
                                 src: t.props.video.previewThumbnailURL,
-                                alt: t.props.video.title
+                                alt: t.props.video.title,
+                                onLoad: t.reportInteractive,
+                                onError: t.reportInteractive
                             },
                             channelLogin: t.props.video.owner && t.props.video.owner.login || "",
                             channelLoginLinkTo: {
@@ -28219,7 +28298,7 @@ webpackJsonp([33, 97], {
                             "data-test-selector": b,
                             icon: g._23.GlyphLength,
                             label: Object(l.d)("length", "VideoPreviewCard"),
-                            value: Object(m.a)(t.props.video.lengthSeconds)
+                            value: Object(m.b)(t.props.video.lengthSeconds)
                         })), t.videoPreviewImage(), e))), o.createElement(g.D, null, o.createElement(g._8, {
                             display: g.R.Flex,
                             flexDirection: g.T.Row,
@@ -28239,17 +28318,19 @@ webpackJsonp([33, 97], {
                             hovered: !1
                         })
                     }, t.onPreviewImageLoad = function(e) {
-                        t.props.latencyTracking.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewLoad: !0
                         })
                     }, t.onPreviewImageLoadError = function(e) {
-                        e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewFailToLoad: !0
                         })
+                    }, t.reportInteractive = function() {
+                        t.props.latencyTracking.reportInteractive()
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.overrideImageInteractivity && this.props.latencyTracking.reportInteractive()
+                    this.props.overrideImageInteractivity && this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = {
                         assignments: {
@@ -30176,35 +30257,141 @@ webpackJsonp([33, 97], {
             a = n("GiK3"),
             r = n("3zLD"),
             o = n("6sO2"),
-            s = n("yWCw"),
-            l = n("vKFS"),
-            d = n("zCIC"),
-            c = n("j7/Y"),
-            u = n("oIkB"),
-            m = n("JpYe"),
-            p = n("w9tK"),
-            h = n("vH/s"),
-            g = n("n2E0"),
-            f = n("TPVZ"),
-            v = n("CSlQ"),
-            b = n("RxMT"),
-            k = n("4d+L"),
-            y = n("WzS7"),
-            _ = n("VDV3"),
-            C = n("3yQz"),
-            S = n("Ic9h"),
-            E = n("Odds"),
-            w = (n("5Kla"), n("JWRd")),
-            N = C.a,
-            D = function(e) {
+            s = n("j7/Y"),
+            l = n("JpYe"),
+            d = n("w9tK"),
+            c = n("vH/s"),
+            u = n("TPVZ"),
+            m = n("CSlQ"),
+            p = n("RxMT"),
+            h = n("4d+L"),
+            g = n("3yQz"),
+            f = n("yWCw"),
+            v = n("vKFS"),
+            b = n("zCIC"),
+            k = n("oIkB"),
+            y = n("n2E0"),
+            _ = n("WzS7"),
+            C = n("VDV3"),
+            S = n("Odds"),
+            E = (n("XS5K"), n("DNPE")),
+            w = g.a,
+            N = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.onRender()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.onRender()
+                }, t.prototype.render = function() {
+                    var e;
+                    if (this.props.data.error) e = a.createElement(f.a, {
+                        "data-test-selector": "video-error",
+                        message: Object(o.d)("These videos are temporarily unavailable.", "ChannelVideosPage")
+                    });
+                    else {
+                        var t = !this.props.data.loading && this.props.data.user && this.props.data.user.videos ? this.props.data.user.videos.edges.map(function(e) {
+                            return e.node
+                        }) : null;
+                        if (t && 0 === t.length) e = a.createElement(S._32, {
+                            color: S.K.Alt2,
+                            textAlign: S._42.Center,
+                            key: "no-videos"
+                        }, a.createElement(S.Q, {
+                            type: S._46.H4,
+                            italic: !0,
+                            "data-test-selector": "no-videos"
+                        }, Object(o.d)("No videos found.", "ChannelVideosPage")));
+                        else {
+                            var n = !(this.props.data.loading || this.props.data.error || !this.props.data.user || !this.props.data.user.videos || !this.props.data.user.videos.pageInfo.hasNextPage);
+                            e = a.createElement(S._8, null, a.createElement(C.b, {
+                                videos: t,
+                                listContext: v.b.SingleChannelList,
+                                trackingContent: Object(y.a)(this.props.selectedSort),
+                                trackingMedium: c.PageviewMedium.ChannelVideos
+                            }), a.createElement(b.a, {
+                                enabled: n,
+                                key: "channel-videos-page-" + this.props.selectedFilter + "-" + this.props.selectedSort,
+                                loadMore: this.props.loadMore
+                            }))
+                        }
+                    }
+                    return a.createElement(S._8, {
+                        "data-test-selector": "qa-videos-content"
+                    }, a.createElement(S._8, {
+                        padding: {
+                            top: 3
+                        }
+                    }, a.createElement(_.a, {
+                        userLogin: this.props.channelLogin,
+                        tracking: {
+                            location: c.PageviewLocation.ChannelVideos,
+                            medium: c.PageviewMedium.ChannelVideos
+                        }
+                    })), a.createElement(C.a, {
+                        hideLanguageSelector: !0,
+                        onVideoSortChange: this.props.onVideoSortChange,
+                        onVideoFilterChange: this.props.onVideoFilterChange,
+                        selectedSort: this.props.selectedSort,
+                        broadcastType: this.props.selectedFilter
+                    }), e)
+                }, t.prototype.onRender = function() {
+                    this.props.data.loading || (this.props.data.user && o.o.setPageTitle(Object(o.d)("{channelDisplayName} - Videos", {
+                        channelDisplayName: this.props.data.user.displayName
+                    }, "ChannelVideosPage")), this.props.latencyTracking.reportInteractive())
+                }, t
+            }(a.Component),
+            D = {
+                options: function(e) {
+                    return {
+                        variables: {
+                            limit: 30,
+                            channelOwnerLogin: e.channelLogin,
+                            broadcastType: e.selectedFilter ? e.selectedFilter : null,
+                            videoSort: e.selectedSort || w
+                        }
+                    }
+                },
+                props: function(e) {
+                    return i.__assign({}, e, {
+                        loadMore: function() {
+                            var t = e.data.user && e.data.user.videos ? e.data.user.videos.edges : [],
+                                n = t.length > 0 ? t[t.length - 1].cursor : void 0;
+                            return e.data.fetchMore({
+                                query: E,
+                                variables: i.__assign({}, e.data.variables, {
+                                    cursor: n
+                                }),
+                                updateQuery: function(e, t) {
+                                    var n = t.fetchMoreResult;
+                                    if (!n.user || !n.user.videos) return e;
+                                    var a = e.user && e.user.videos ? e.user.videos.edges : [];
+                                    return {
+                                        user: i.__assign({}, n.user, {
+                                            videos: i.__assign({}, n.user.videos, {
+                                                edges: Object(k.c)(a, n.user.videos.edges)
+                                            })
+                                        })
+                                    }
+                                }
+                            })
+                        }
+                    })
+                }
+            },
+            O = Object(r.compose)(Object(r.graphql)(E, D), Object(m.d)("ChannelVideosContent"))(N),
+            I = n("Ic9h"),
+            R = (n("5Kla"), n("JWRd")),
+            T = (g.a, function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         hostedChannelDisplayName: null
                     }, t.onVideoSortChange = function(e) {
-                        Object(m.e)("/" + t.props.match.params.channelLogin + "/videos", t.props, void 0, e)
+                        Object(l.e)("/" + t.props.match.params.channelLogin + "/videos", t.props, void 0, e)
                     }, t.onVideoFilterChange = function(e) {
-                        Object(m.e)("/" + t.props.match.params.channelLogin + "/videos", t.props, e)
+                        Object(l.e)("/" + t.props.match.params.channelLogin + "/videos", t.props, e)
                     }, t.handleHostingChange = function(e) {
                         null === e ? t.setState({
                             hostedChannelDisplayName: null
@@ -30224,127 +30411,54 @@ webpackJsonp([33, 97], {
                 }, t.prototype.componentWillUnmount = function() {
                     clearTimeout(this.refetchTimer)
                 }, t.prototype.render = function() {
-                    var e, t = Object(m.d)(this.props) || C.a,
-                        n = Object(m.c)(this.props);
-                    if (this.props.data.error) e = a.createElement(s.a, {
-                        "data-test-selector": "video-error",
-                        message: Object(o.d)("These videos are temporarily unavailable.", "ChannelVideosPage")
-                    });
-                    else {
-                        var i = !this.props.data.loading && this.props.data.user && this.props.data.user.videos ? this.props.data.user.videos.edges.map(function(e) {
-                            return e.node
-                        }) : null;
-                        if (i && 0 === i.length) e = a.createElement(E._32, {
-                            color: E.K.Alt2,
-                            textAlign: E._42.Center,
-                            key: "no-videos"
-                        }, a.createElement(E.Q, {
-                            type: E._46.H4,
-                            italic: !0,
-                            "data-test-selector": "no-videos"
-                        }, Object(o.d)("No videos found.", "ChannelVideosPage")));
-                        else {
-                            var r = !(this.props.data.loading || this.props.data.error || !this.props.data.user || !this.props.data.user.videos || !this.props.data.user.videos.pageInfo.hasNextPage);
-                            e = a.createElement("div", null, a.createElement(_.b, {
-                                videos: i,
-                                listContext: l.b.SingleChannelList,
-                                trackingContent: Object(g.a)(t),
-                                trackingMedium: h.PageviewMedium.ChannelVideos
-                            }), a.createElement(d.a, {
-                                enabled: r,
-                                key: "channel-videos-page-" + n + "-" + t,
-                                loadMore: this.props.loadMore
-                            }))
-                        }
-                    }
-                    return a.createElement(E._8, {
+                    var e = Object(l.d)(this.props) || g.a,
+                        t = Object(l.c)(this.props);
+                    return a.createElement(S._8, {
                         className: "videos-page",
-                        overflow: E._11.Hidden,
-                        display: E.R.Flex,
-                        flexDirection: E.T.Column,
-                        flexWrap: E.U.NoWrap,
+                        overflow: S._11.Hidden,
+                        display: S.R.Flex,
+                        flexDirection: S.T.Column,
+                        flexWrap: S.U.NoWrap,
                         fullHeight: !0,
                         "data-test-selector": "qa-videos-page"
-                    }, a.createElement(S.a, {
-                        currentPage: f.b.Videos,
+                    }, a.createElement(I.a, {
+                        currentPage: u.b.Videos,
                         ownerLogin: this.props.match.params.channelLogin
-                    }, a.createElement(E._8, {
-                        padding: {
-                            top: 3
-                        }
-                    }, a.createElement(y.a, {
-                        userLogin: this.props.match.params.channelLogin,
-                        tracking: {
-                            location: h.PageviewLocation.ChannelVideos,
-                            medium: h.PageviewMedium.ChannelVideos
-                        }
-                    })), a.createElement(_.a, {
-                        hideLanguageSelector: !0,
+                    }, a.createElement(O, {
+                        channelLogin: this.props.match.params.channelLogin,
+                        selectedFilter: t,
+                        selectedSort: e,
                         onVideoSortChange: this.onVideoSortChange,
-                        onVideoFilterChange: this.onVideoFilterChange,
-                        selectedSort: t,
-                        broadcastType: n
-                    }), e), a.createElement(b.b, null, a.createElement(E._32, {
+                        onVideoFilterChange: this.onVideoFilterChange
+                    })), a.createElement(p.b, null, a.createElement(S._32, {
                         className: "channel-videos__right-column",
-                        background: E.n.Alt2,
-                        display: E.R.Flex,
+                        background: S.n.Alt2,
+                        display: S.R.Flex,
                         flexGrow: 0,
                         flexShrink: 0,
-                        overflow: E._11.Hidden,
+                        overflow: S._11.Hidden,
                         fullHeight: !0
-                    }, a.createElement(k.a, {
+                    }, a.createElement(h.a, {
                         channelLogin: this.props.match.params.channelLogin,
                         onHostingChange: this.handleHostingChange,
                         hostedChannelDisplayName: this.state.hostedChannelDisplayName || void 0
                     }))))
                 }, t.prototype.onRender = function() {
-                    this.props.data.loading || (this.props.data.user && o.o.setPageTitle(Object(o.d)("{channelDisplayName} - Videos", {
-                        channelDisplayName: this.props.data.user.displayName
-                    }, "ChannelVideosPage")), this.props.latencyTracking.reportInteractive())
+                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t
-            }(a.Component),
-            O = {
+            }(a.Component)),
+            M = Object(r.compose)(Object(r.graphql)(R, {
                 options: function(e) {
                     return {
                         variables: {
-                            limit: 30,
-                            channelOwnerLogin: e.match.params.channelLogin,
-                            broadcastType: e.match.params.filter && "all" !== e.match.params.filter ? e.match.params.filter : null,
-                            videoSort: Object(m.d)(e) || N
+                            channelOwnerLogin: e.match.params.channelLogin
                         }
                     }
-                },
-                props: function(e) {
-                    return i.__assign({}, e, {
-                        loadMore: function() {
-                            var t = e.data.user && e.data.user.videos ? e.data.user.videos.edges : [],
-                                n = t.length > 0 ? t[t.length - 1].cursor : void 0;
-                            return e.data.fetchMore({
-                                query: w,
-                                variables: i.__assign({}, e.data.variables, {
-                                    cursor: n
-                                }),
-                                updateQuery: function(e, t) {
-                                    var n = t.fetchMoreResult;
-                                    if (!n.user || !n.user.videos) return e;
-                                    var a = e.user && e.user.videos ? e.user.videos.edges : [];
-                                    return {
-                                        user: i.__assign({}, n.user, {
-                                            videos: i.__assign({}, n.user.videos, {
-                                                edges: Object(u.c)(a, n.user.videos.edges)
-                                            })
-                                        })
-                                    }
-                                }
-                            })
-                        }
-                    })
                 }
-            },
-            I = Object(r.compose)(Object(r.graphql)(w, O), Object(v.d)("ChannelVideosPage", {
-                destination: p.a.VideosPage
-            }), Object(c.a)({
-                location: h.PageviewLocation.ChannelVideos,
+            }), Object(m.d)("ChannelVideosPage", {
+                destination: d.a.VideosPage
+            }), Object(s.a)({
+                location: c.PageviewLocation.ChannelVideos,
                 properties: function(e) {
                     var t = null;
                     return e.data.user && e.data.user.id && (t = Number(e.data.user.id)), {
@@ -30355,9 +30469,9 @@ webpackJsonp([33, 97], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(D);
+            }))(T);
         n.d(t, "ChannelVideosPage", function() {
-            return I
+            return M
         })
     },
     gAt4: function(e, t, n) {
@@ -32701,7 +32815,7 @@ webpackJsonp([33, 97], {
                 return !e.channelID
             },
             topic: function(e) {
-                return e.channelID ? Object(c.p)(e.channelID) : ""
+                return e.channelID ? Object(c.q)(e.channelID) : ""
             },
             mapMessageTypesToProps: (C = {}, C[d.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", C)
         }]))(_);
@@ -35919,7 +36033,7 @@ webpackJsonp([33, 97], {
                     variables: {
                         id: t.channelID
                     },
-                    topic: Object(p.p)(t.channelID),
+                    topic: Object(p.q)(t.channelID),
                     type: u.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(n, i) {
                         return n.data.is_rituals_enabled ? e(function() {
@@ -35930,7 +36044,7 @@ webpackJsonp([33, 97], {
                 }
             }), Object(d.a)([{
                 topic: function(e) {
-                    return Object(p.y)(e.channelID)
+                    return Object(p.z)(e.channelID)
                 },
                 mapMessageTypesToProps: (I = {}, I[u.PubsubMessageType.ChannelStreamUp] = "streamUp", I[u.PubsubMessageType.ChannelStreamDown] = "streamDown", I),
                 skip: O
@@ -36958,12 +37072,12 @@ webpackJsonp([33, 97], {
             return void 0 !== e.watchedProgressPercent
         }
 
-        function W(e) {
+        function G(e) {
             return void 0 !== e.clipCreatedByChannelLogin
         }! function(e) {
             e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
         }(O || (O = {}));
-        var G = function(e) {
+        var W = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -37011,7 +37125,7 @@ webpackJsonp([33, 97], {
                     bottomRight: void 0
                 }) : H(this.props) ? a.createElement(T, {
                     topLeft: a.createElement(M, {
-                        value: Object(P.a)(this.props.durationInSeconds),
+                        value: Object(P.b)(this.props.durationInSeconds),
                         icon: d._23.GlyphArrRight,
                         withBackground: !0
                     }),
@@ -37023,9 +37137,9 @@ webpackJsonp([33, 97], {
                         value: Object(r.c)(new Date(this.props.datePublished), "medium")
                     }),
                     progressBarPercent: this.props.watchedProgressPercent
-                }) : W(this.props) ? a.createElement(T, {
+                }) : G(this.props) ? a.createElement(T, {
                     topLeft: a.createElement(M, {
-                        value: Object(P.a)(this.props.durationInSeconds),
+                        value: Object(P.b)(this.props.durationInSeconds),
                         icon: d._23.Clip,
                         withBackground: !0
                     }),
@@ -37038,7 +37152,7 @@ webpackJsonp([33, 97], {
                     })
                 }) : void 0
             }, t.prototype.getViewCountLabel = function() {
-                return H(this.props) || W(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                return H(this.props) || G(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                     viewerCount: this.props.viewCount
                 }, "VideoPreviewCard") : ""
             }, t.prototype.renderIconicImage = function() {
@@ -37056,7 +37170,7 @@ webpackJsonp([33, 97], {
                     text: this.props.channelLogin,
                     linkTo: this.props.channelLoginLinkTo
                 }];
-                return W(this.props) ? e.push({
+                return G(this.props) ? e.push({
                     text: Object(r.d)("Clipped by {userName}", {
                         userName: this.props.clipCreatedByChannelLogin
                     }, "VideoPreviewCard"),
@@ -37079,7 +37193,7 @@ webpackJsonp([33, 97], {
         n.d(t, "b", function() {
             return O
         }), n.d(t, "a", function() {
-            return G
+            return W
         })
     },
     vKYI: function(e, t, n) {
@@ -39106,4 +39220,4 @@ webpackJsonp([33, 97], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-videos-2509450e0bfc38b38c70f59fb9961606.js.map
+//# sourceMappingURL=pages.channel-videos-157e34b519afca5f68c4a190fa4130cf.js.map

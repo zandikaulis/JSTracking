@@ -816,7 +816,7 @@ webpackJsonp([48], {
         }
         var E = n("tGx1");
 
-        function T(e) {
+        function N(e) {
             return o.createElement(k._8, {
                 key: e
             }, o.createElement(k._8, {
@@ -845,7 +845,7 @@ webpackJsonp([48], {
             })))
         }
 
-        function N(e) {
+        function T(e) {
             return o.createElement(k._8, {
                 margin: {
                     bottom: 3
@@ -867,7 +867,7 @@ webpackJsonp([48], {
             }, o.createElement(k._52, {
                 childWidth: k._53.Medium,
                 gutterSize: k._54.Small
-            }, [1, 2, 3, 4].map(T)))))
+            }, [1, 2, 3, 4].map(N)))))
         }
         var w = function(e) {
                 function t() {
@@ -951,7 +951,7 @@ webpackJsonp([48], {
                         margin: {
                             top: 3
                         }
-                    }, [1, 2, 3].map(N))
+                    }, [1, 2, 3].map(T))
                 }, t
             }(o.Component),
             O = Object(m.d)("ClipsRecommendations")(Object(l.a)(E)(w)),
@@ -1699,7 +1699,7 @@ webpackJsonp([48], {
                     return null
                 }, t
             }(o.Component),
-            Te = Object(D.t)({
+            Ne = Object(D.t)({
                 playerId: function(e) {
                     return e.slug
                 },
@@ -1707,12 +1707,12 @@ webpackJsonp([48], {
             })(Object(l.a)(Ce)(Object(m.d)("ClipsViewModerationModals", {
                 autoReportInteractive: !0
             })(Ee)));
-        var Ne = Object(I.b)(null, function(e) {
+        var Te = Object(I.b)(null, function(e) {
                 return Object(ke.b)({
                     showModal: be.d,
                     closeModal: be.c
                 }, e)
-            })(Te),
+            })(Ne),
             we = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1738,7 +1738,7 @@ webpackJsonp([48], {
                     var e = this.props.slug;
                     return o.createElement(k._8, {
                         flexGrow: 1
-                    }, o.createElement(Ne, {
+                    }, o.createElement(Te, {
                         slug: this.props.slug
                     }), o.createElement(k.k, {
                         ratio: k.l.Aspect16x9
@@ -2705,7 +2705,7 @@ webpackJsonp([48], {
                     color: g.K.Alt2
                 }, i))))))
             }, t.prototype.reportInteractive = function() {
-                this.props.isLoggedIn ? (!this.props.channelLogin || this.userDataLoaded() || this.props.followData) && this.props.latencyTracking.reportInteractive() : this.props.latencyTracking.reportInteractive()
+                _(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
             }, t = i.__decorate([Object(s.a)(k, {
                 options: function(e) {
                     return {
@@ -2715,14 +2715,18 @@ webpackJsonp([48], {
                     }
                 },
                 skip: function(e) {
-                    return !e.isLoggedIn || !e.channelLogin || !!e.followData || e.channelLogin === e.currentUserLogin
+                    return _(e)
                 }
             }), Object(s.a)(v, {
                 name: "followUser"
             }), Object(s.a)(f, {
                 name: "unfollowUser"
             }), Object(h.d)("FollowButton")], t)
-        }(r.Component)
+        }(r.Component);
+
+        function _(e) {
+            return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
+        }
     },
     "8RKZ": function(e, t, n) {
         "use strict";
@@ -3073,15 +3077,6 @@ webpackJsonp([48], {
                 },
                 recording: function() {
                     return Object(l.d)("recording me without my consent", "ReportModalWizard")
-                },
-                scam: function() {
-                    return Object(l.d)("trying to scam Twitch community members", "ReportModalWizard")
-                },
-                underage: function() {
-                    return Object(l.d)("underage for Twitch (12 or under)", "ReportModalWizard")
-                },
-                selfharm: function() {
-                    return Object(l.d)("contemplating or attempting self-harm or suicide", "ReportModalWizard")
                 },
                 abusiveViolence: function() {
                     return Object(l.d)("They're threatening violence or physical harm", "ReportModalWizard")
@@ -3811,11 +3806,11 @@ webpackJsonp([48], {
                     })), n
                 }, t
             }(a.Component),
-            T = n("LjAQ");
+            N = n("LjAQ");
         ! function(e) {
             e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
         }(_ || (_ = {}));
-        var N, w, O, R = {
+        var T, w, O, R = {
                 contentGeneral: function() {
                     return Object(l.d)("What would you like to report?", "ReportModalWizard")
                 },
@@ -3930,21 +3925,21 @@ webpackJsonp([48], {
                     getLabel: R.identifyUser,
                     items: [C.video_streamer, C.video_someoneElse, C.video_chatSomeone],
                     type: _.MultipleChoice,
-                    value: "video report user"
+                    value: "video identify user"
                 },
                 content: {
                     getTitle: I.reportVideo,
                     getLabel: R.contentGeneral,
                     items: [C.revealPersonalInfo, C.video_labeling, C.video_inactive, C.video_general, C.report_ip, C.violateDevAgreement, C.selfharm],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "video report reason"
                 },
                 general: {
                     getTitle: I.reportVideo,
                     getLabel: R.content,
                     items: [C.report_username, C.violence, C.abusive, C.cheating, C.scam, C.inappropriateContent, C.evasion, C.impersonation, C.underage, C.bitsViolation],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "video general report reason"
                 }
             },
             j = {
@@ -3953,14 +3948,14 @@ webpackJsonp([48], {
                     getLabel: R.contentGeneral,
                     items: [C.revealPersonalInfo, C.evasion, C.spam, C.maliciousRaid, C.report_username, C.messaging_general, C.selfharm],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "message report reason"
                 },
                 general: {
                     getTitle: I.reportMessage,
                     getLabel: R.content,
                     items: [C.report_emotes, C.violence, C.abusive, C.inappropriateContent, C.impersonation, C.underage, C.bitsViolation],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "message general report reason"
                 }
             },
             U = r.__assign({}, j.content, {
@@ -3974,14 +3969,14 @@ webpackJsonp([48], {
                     getLabel: R.contentGeneral,
                     items: [C.revealPersonalInfo, C.inappropriateBadge, C.inappropriateExtension, C.noModeration, C.profile_general, C.report_ip, C.violateDevAgreement, C.selfharm],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "profile report reason"
                 },
                 general: {
                     getTitle: I.reportProfile,
                     getLabel: R.content,
-                    items: [C.report_username, C.violence, C.abusive, C.scam, C.inappropriateContent, C.impersonation, C.underage, C.bitsViolation],
+                    items: [C.report_username, C.violence, C.abusive, C.scam, C.inappropriateContent, C.evasion, C.impersonation, C.underage, C.bitsViolation],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "profile general report reason"
                 }
             },
             A = {
@@ -3997,23 +3992,24 @@ webpackJsonp([48], {
             },
             P = {
                 getTitle: I.tellUsMore,
+                items: [C.input_description],
                 type: _.Confirm,
                 value: "tell us more"
             },
             B = {
-                general: r.__assign({}, P, {
-                    items: [C.input_description]
-                }),
                 banEvasion: r.__assign({}, P, {
-                    items: [C.input_usernames, C.input_description]
+                    items: [C.input_usernames, C.input_description],
+                    value: "ban evasion tell us more"
                 }),
                 socialMedia: r.__assign({}, P, {
                     items: [C.input_link, C.input_connection, C.input_description],
-                    nextCard: x.socialMedia
+                    nextCard: x.socialMedia,
+                    value: "social media tell us more"
                 }),
                 inPerson: r.__assign({}, P, {
                     items: [C.input_identifyOwner, C.input_description],
-                    nextCard: x.inPerson
+                    nextCard: x.inPerson,
+                    value: "in-person tell us more"
                 })
             },
             V = {
@@ -4050,7 +4046,7 @@ webpackJsonp([48], {
                     },
                     items: [C.location_onTwitch, C.location_anotherSite, C.location_TwitchEvent, C.location_inPerson],
                     type: _.MultipleChoice,
-                    value: "location"
+                    value: "off-site conduct location"
                 },
                 externalSite: {
                     getTitle: function(e) {
@@ -4087,22 +4083,14 @@ webpackJsonp([48], {
                     items: [C.threat_me, C.threat_person, C.threat_group],
                     nextCard: B.inPerson
                 }),
-                external_abusive: {
-                    getTitle: I.reportAbusive,
-                    getLabel: R.relevantStatements,
+                external_abusive: r.__assign({}, V.content, {
                     items: [C.hateSpeech, C.harassment, C.external_abusiveViolence, C.external_commitingViolence, C.swatting, C.personalInfo],
-                    type: _.MultipleChoice,
-                    nextCard: B.inPerson,
-                    value: "abuse type"
-                },
-                inPerson_abusive: {
-                    getTitle: I.reportAbusive,
-                    getLabel: R.relevantStatements,
+                    nextCard: B.inPerson
+                }),
+                inPerson_abusive: r.__assign({}, V.content, {
                     items: [C.hateSpeech, C.harassment, C.inPerson_abusiveViolence, C.inPerson_commitingViolence, C.swatting, C.personalInfo],
-                    type: _.MultipleChoice,
-                    nextCard: B.inPerson,
-                    value: "abuse type"
-                }
+                    nextCard: B.inPerson
+                })
             },
             W = {
                 getTitle: function(e) {
@@ -4157,7 +4145,7 @@ webpackJsonp([48], {
                 value: "impersonation type"
             },
             G = D,
-            K = B.general,
+            K = P,
             $ = F,
             Y = {
                 video: M.identifyUser,
@@ -4173,7 +4161,6 @@ webpackJsonp([48], {
                 general_messaging: j.general,
                 general_profile: L.general,
                 "channel owner": L.content,
-                "channel moderator": j.content,
                 "community member": j.content,
                 "on twitch": L.content,
                 "another site": z.externalSite,
@@ -4186,7 +4173,7 @@ webpackJsonp([48], {
                 "external site; committing violence": z.external_violence,
                 "external site; scam": B.socialMedia,
                 "in-person; threatening": z.inPerson_violence,
-                "in-person; hateful": z.inPerson_abusive,
+                "in-person; hateful/harassing": z.inPerson_abusive,
                 "in-person; threatening violence": z.inPerson_violence,
                 "in-person; committing violence": z.inPerson_violence,
                 "ban evasion": H,
@@ -4198,8 +4185,6 @@ webpackJsonp([48], {
                 "committing violence": V.violence,
                 abusive: V.content,
                 "inappropriate content": q,
-                "sitewide ban": B.banEvasion,
-                "chat ban": B.banEvasion,
                 "intellectual property": x.legal,
                 "violating developer agreement": x.legal
             },
@@ -4339,12 +4324,12 @@ webpackJsonp([48], {
                                         return e = Object(l.d)("Additional information is required.", "ReportModalWizard"), this.requiredInputsNonEmpty() ? (t = this.state.reportReason || "other", n = this.createReportDescription(), [4, this.props.onSubmit(t, n, null, null, this.state.reportContext)]) : [3, 2];
                                     case 1:
                                         switch (r.sent(), this.props.submitStatus) {
-                                            case T.b.FormError:
+                                            case N.b.FormError:
                                                 this.setState({
                                                     error: e
                                                 });
                                                 break;
-                                            case T.b.Success:
+                                            case N.b.Success:
                                                 i = $, J[t] && (i = J[t]), this.state.currentCard.nextCard && (i = this.state.currentCard.nextCard), this.setState({
                                                     currentCard: i,
                                                     prevCards: [],
@@ -4357,12 +4342,12 @@ webpackJsonp([48], {
                                                     return a.trackNavigation(w.Submit)
                                                 });
                                                 break;
-                                            case T.b.UserError:
+                                            case N.b.UserError:
                                                 this.setState({
                                                     error: Object(l.d)("This account could not be reported. It may have already been suspended, or the owner may have deleted it.", "ReportModalWizard")
                                                 });
                                                 break;
-                                            case T.b.MutationError:
+                                            case N.b.MutationError:
                                             default:
                                                 this.setState({
                                                     error: Object(l.d)("Sorry, a network error occurred when submitting your report. Please try again later.", "ReportModalWizard")
@@ -4370,7 +4355,7 @@ webpackJsonp([48], {
                                         }
                                         return [3, 3];
                                     case 2:
-                                        this.props.onError(T.b.FormError), this.setState({
+                                        this.props.onError(N.b.FormError), this.setState({
                                             error: e
                                         }), r.label = 3;
                                     case 3:
@@ -4463,7 +4448,7 @@ webpackJsonp([48], {
                         onChangeRadio: this.handleSelection,
                         onChangeText: this.handleTextInput,
                         userTextInputs: this.state.userTextInput,
-                        error: this.props.submitStatus === T.b.FormError && !!this.state.error
+                        error: this.props.submitStatus === N.b.FormError && !!this.state.error
                     }), e), this.renderButtons())
                 }, t
             }(a.Component),
@@ -4480,7 +4465,7 @@ webpackJsonp([48], {
             }),
             function(e) {
                 e.Close = "close", e.Open = "open", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-            }(N || (N = {})),
+            }(T || (T = {})),
             function(e) {
                 e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
             }(w || (w = {})),
@@ -4496,7 +4481,7 @@ webpackJsonp([48], {
                         return r.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    if (e !== T.a) return [3, 5];
+                                    if (e !== N.a) return [3, 5];
                                     d = {
                                         userID: this.props.reportContext.targetUserID,
                                         communityID: i || "",
@@ -4514,13 +4499,13 @@ webpackJsonp([48], {
                                         action: "report",
                                         reason: e
                                     }), this.setState({
-                                        submitStatus: T.b.Success
+                                        submitStatus: N.b.Success
                                     }, function() {
-                                        u.state.showWizard || u.trackAction(N.Submit)
+                                        u.state.showWizard || u.trackAction(T.Submit)
                                     }), [3, 4];
                                 case 3:
                                     return n = r.sent(), l.j.error(n, "ReportUserInCommunity Mutation failed."), this.setState({
-                                        submitStatus: T.b.MutationError
+                                        submitStatus: N.b.MutationError
                                     }), [3, 4];
                                 case 4:
                                     return [3, 9];
@@ -4533,7 +4518,7 @@ webpackJsonp([48], {
                                             extra: this.props.reportContext.extra,
                                             targetID: this.props.reportContext.targetUserID
                                         }, this.props.reportContext.contentType === y.a.Community && this.props.reportContext.extra && (d.description = Object(re.a)(this.props.reportContext.extra, t)), null === d.targetID) return this.setState({
-                                        submitStatus: T.b.UserError
+                                        submitStatus: N.b.UserError
                                     }), [2];
                                     r.label = 6;
                                 case 6:
@@ -4546,13 +4531,13 @@ webpackJsonp([48], {
                                         user_id: this.props.sessionUser && this.props.sessionUser.id,
                                         reason: e
                                     }), this.setState({
-                                        submitStatus: T.b.Success
+                                        submitStatus: N.b.Success
                                     }, function() {
-                                        u.state.showWizard || u.trackAction(N.Submit)
+                                        u.state.showWizard || u.trackAction(T.Submit)
                                     }), [3, 9];
                                 case 8:
                                     return c = r.sent(), l.j.error(c, "ReportUser Mutation failed."), this.setState({
-                                        submitStatus: T.b.MutationError
+                                        submitStatus: N.b.MutationError
                                     }), [3, 9];
                                 case 9:
                                     return [2]
@@ -4578,18 +4563,18 @@ webpackJsonp([48], {
                         userBlocked: !1
                     })
                 }, n.trackOpen = function(e) {
-                    n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(w.Open, void 0, e) : n.trackAction(N.Open), n.setState({
+                    n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(w.Open, void 0, e) : n.trackAction(T.Open), n.setState({
                         openEventSent: !0
                     }))
                 }, n.trackClose = function(e, t) {
-                    n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(w.Close, t, void 0, e) : n.trackAction(N.Close), n.setState({
+                    n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(w.Close, t, void 0, e) : n.trackAction(T.Close), n.setState({
                         closeEventSent: !0
                     }))
                 }, n.trackWizardAction = function(e, t, i, r) {
                     l.o.tracking.track(h.SpadeEventType.ReportWizardFlowAction, {
                         ui_context: n.props.reportContext.contentType,
                         target_user_id: n.props.reportContext.targetUserID,
-                        report_sent: n.state.submitStatus === T.b.Success,
+                        report_sent: n.state.submitStatus === N.b.Success,
                         modal_type: "wizard_v1",
                         extra_user_id: n.props.reportContext.additionalTrackingID,
                         action: e,
@@ -4602,7 +4587,7 @@ webpackJsonp([48], {
                     l.o.tracking.track(h.SpadeEventType.ReportFlowAction, {
                         ui_context: n.props.reportContext.contentType,
                         target_user_id: n.props.reportContext.targetUserID,
-                        report_sent: n.state.submitStatus === T.b.Success,
+                        report_sent: n.state.submitStatus === N.b.Success,
                         extra_user_id: n.props.reportContext.additionalTrackingID,
                         action: e,
                         report_session_id: n.reportID
@@ -4610,7 +4595,7 @@ webpackJsonp([48], {
                 }, n.reportID = Object(m.a)();
                 var i = l.o.experiments.getAssignment("TWILIGHT_NEW_REPORTING_WIZARD");
                 return n.state = {
-                    submitStatus: T.b.Unsubmitted,
+                    submitStatus: N.b.Unsubmitted,
                     showWizard: "yes" === i,
                     openEventSent: !1,
                     closeEventSent: !1,
@@ -4640,7 +4625,7 @@ webpackJsonp([48], {
                     trackAction: this.trackWizardAction,
                     trackClose: this.trackClose,
                     userBlocked: this.userBlocked
-                })) : a.createElement(T.c, r.__assign({}, e))
+                })) : a.createElement(N.c, r.__assign({}, e))
             }, Object.defineProperty(t.prototype, "userBlocked", {
                 get: function() {
                     var e = this;
@@ -5919,8 +5904,8 @@ webpackJsonp([48], {
         ! function(e) {
             e.emptySubmission = "emptySubmission", e.characterLimitReached = "characterLimitReached", e.channelViolation = "channelViolation", e.notCurator = "notCurator", e.unknown = "unknown"
         }(g || (g = {}));
-        var T = 100,
-            N = function(e) {
+        var N = 100,
+            T = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderForClipsViewing = function() {
@@ -6046,7 +6031,7 @@ webpackJsonp([48], {
                         })
                     }, n.getRemainingCharacterText = function() {
                         return Object(l.d)("{characterCount, number} remaining", {
-                            characterCount: T - n.state.title.length
+                            characterCount: N - n.state.title.length
                         }, "ClipsTitleEdit")
                     }, n.onSuccess = function() {
                         n.props.onSuccess && n.props.onSuccess(), n.setState({
@@ -6064,7 +6049,7 @@ webpackJsonp([48], {
                             showSuccess: !1
                         })
                     }, n.handleTitleEdit = function(e) {
-                        var t = e.currentTarget.value.slice(0, T);
+                        var t = e.currentTarget.value.slice(0, N);
                         n.setState({
                             title: t,
                             showError: !1,
@@ -6136,13 +6121,13 @@ webpackJsonp([48], {
             }(s.Component),
             w = Object(d.a)(C, {
                 name: "editTitle"
-            })(N);
+            })(T);
         n.d(t, !1, function() {
             return E
         }), n.d(t, "b", function() {
             return g
         }), n.d(t, !1, function() {
-            return N
+            return T
         }), n.d(t, "a", function() {
             return w
         })
@@ -9757,7 +9742,7 @@ webpackJsonp([48], {
                                 t(e.data)
                             })
                         }, r.updatePlayerProps = function(t) {
-                            if (e.requestedPlayerProps && (t.method === N || t.method === w)) {
+                            if (e.requestedPlayerProps && (t.method === T || t.method === w)) {
                                 var n = t.args[0],
                                     a = e.requestedPlayerProps.reduce(function(e, t) {
                                         var i = n[t];
@@ -9841,7 +9826,7 @@ webpackJsonp([48], {
 
         function b(e) {
             return h({
-                method: T,
+                method: N,
                 arg: e
             })
         }
@@ -9868,8 +9853,8 @@ webpackJsonp([48], {
         }
         var C = "subscribe",
             E = "setclip",
-            T = "setAutoplay",
-            N = "bridgestateupdate",
+            N = "setAutoplay",
+            T = "bridgestateupdate",
             w = "bridgestorestateupdate",
             O = "player.embed.host",
             R = "player.embed.client";
@@ -9910,9 +9895,9 @@ webpackJsonp([48], {
         }), n.d(t, "f", function() {
             return E
         }), n.d(t, "e", function() {
-            return T
-        }), n.d(t, "c", function() {
             return N
+        }), n.d(t, "c", function() {
+            return T
         }), n.d(t, "d", function() {
             return w
         }), n.d(t, "b", function() {
@@ -10315,8 +10300,8 @@ webpackJsonp([48], {
             })(_)),
             C = n("3zLD"),
             E = n("wqRA"),
-            T = this,
-            N = {
+            N = this,
+            T = {
                 isLoading: !1,
                 hasErrored: !1,
                 hasSucceeded: !1
@@ -10355,7 +10340,7 @@ webpackJsonp([48], {
                         return n.state.hasSucceeded ? Object(a.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
                     }, n.renderFailure = function() {
                         return n.state.hasErrored ? Object(a.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
-                    }, n.state = N, n
+                    }, n.state = T, n
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -10383,7 +10368,7 @@ webpackJsonp([48], {
                 props: function(e) {
                     return {
                         deleteAllClips: function(t, n) {
-                            return i.__awaiter(T, void 0, void 0, function() {
+                            return i.__awaiter(N, void 0, void 0, function() {
                                 var r, o, s;
                                 return i.__generator(this, function(i) {
                                     switch (i.label) {
@@ -11710,4 +11695,4 @@ webpackJsonp([48], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-2cf1e92709fa14187f136affc57408c4.js.map
+//# sourceMappingURL=sites.clips.pages.view-e06552429677d0256d945065d9c18f1b.js.map

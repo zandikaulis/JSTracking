@@ -2853,7 +2853,7 @@ webpackJsonp([57], {
                         padding: {
                             left: 1
                         }
-                    }, l.createElement(p.Q, null, Object(d.a)(this.props.collection.totalDuration))))))
+                    }, l.createElement(p.Q, null, Object(d.b)(this.props.collection.totalDuration))))))
                 }, t
             }(l.Component),
             h = Object(u.d)("CollectionRow")(m),
@@ -2882,33 +2882,39 @@ webpackJsonp([57], {
             }(l.Component),
             f = Object(u.d)("CollectionsListPresentation")(g);
         var v, b = Object(i.b)(function(e) {
-            return {
-                isLoggedIn: Object(r.d)(e),
-                collections: e.collections.collections,
-                containingCollections: e.collections.containingCollections
-            }
-        }, function(e) {
-            return Object(a.b)({
-                fetchCollectionsForVideo: o.e,
-                updateItemInCollection: o.f
-            }, e)
-        })(f);
+                return {
+                    isLoggedIn: Object(r.d)(e),
+                    collections: e.collections.collections,
+                    containingCollections: e.collections.containingCollections
+                }
+            }, function(e) {
+                return Object(a.b)({
+                    fetchCollectionsForVideo: o.e,
+                    updateItemInCollection: o.f
+                }, e)
+            })(f),
+            _ = n("zDSl"),
+            k = n.n(_);
         n("PelN");
         ! function(e) {
             e[e.VideoCountOverlayText = 0] = "VideoCountOverlayText"
         }(v || (v = {}));
-        var _ = function(e) {
+        var y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onErrorHandler = function() {
-                        t.props.latencyTracking.reportInteractive()
+                    return t.state = {
+                        imageLoadError: !1
+                    }, t.onErrorHandler = function() {
+                        t.props.latencyTracking.reportInteractive(), t.setState({
+                            imageLoadError: !0
+                        })
                     }, t.onLoadHandler = function() {
                         t.props.latencyTracking.reportInteractive()
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    var e = null;
-                    return "number" == typeof this.props.videoCount && (e = l.createElement(p._8, {
+                    var e, t, n = null;
+                    return "number" == typeof this.props.videoCount && (n = l.createElement(p._8, {
                         position: p._15.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
@@ -2934,25 +2940,25 @@ webpackJsonp([57], {
                         "data-test-selector": v.VideoCountOverlayText
                     }, Object(c.d)("{videoCount, plural, one {# video} other {# videos}}", {
                         videoCount: this.props.videoCount.toString()
-                    }, "CollectionCard"))))), l.createElement(p._8, {
+                    }, "CollectionCard"))))), !this.props.src || this.state.imageLoadError ? (e = k.a, t = {
+                        "320w": k.a
+                    }) : (e = this.props.src, t = this.props.srcSet), l.createElement(p._8, {
                         position: p._15.Relative
                     }, l.createElement(p.N, {
                         alt: this.props.alt,
                         onError: this.onErrorHandler,
                         onLoad: this.onLoadHandler,
-                        src: this.props.src ? this.props.src : c.a.defaultCollectionPreviewURL,
-                        srcSet: this.props.src ? this.props.srcSet : {
-                            "320w": c.a.defaultCollectionPreviewURL
-                        },
+                        src: e,
+                        srcSet: t,
                         sizes: this.props.sizes
-                    }), e)
+                    }), n)
                 }, t
             }(l.Component),
-            k = Object(u.d)("CollectionPreviewImage")(_);
+            S = Object(u.d)("CollectionPreviewImage")(y);
         n.d(t, "b", function() {
             return b
         }), n.d(t, "a", function() {
-            return k
+            return S
         })
     },
     nmDn: function(e, t) {
@@ -3494,6 +3500,9 @@ webpackJsonp([57], {
     },
     yU6t: function(e, t) {},
     z4Db: function(e, t) {},
+    zDSl: function(e, t, n) {
+        e.exports = n.p + "assets/missing-video-thumb-320x180-101fcbc1ff84459331417137edd6cfdb.png"
+    },
     zfLI: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -3769,4 +3778,4 @@ webpackJsonp([57], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-collections-4e7e1a99389cef0453ecee7b6d2affba.js.map
+//# sourceMappingURL=pages.channel-collections-5d792a46500b2a4b478c4eff45179775.js.map

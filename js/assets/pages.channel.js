@@ -1,4 +1,4 @@
-webpackJsonp([32], {
+webpackJsonp([31], {
     "+1cx": function(e, t, n) {
         "use strict";
         var i = "_erd";
@@ -2226,7 +2226,7 @@ webpackJsonp([32], {
                     }
                 }), Object(I.a)([{
                     topic: function(e) {
-                        return Object(T.v)(e.currentUserID)
+                        return Object(T.w)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (_ = {}, _[O.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", _)
                 }])], t)
@@ -2899,7 +2899,7 @@ webpackJsonp([32], {
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(T.p)(e.channelID),
+                    topic: Object(T.q)(e.channelID),
                     type: O.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -11836,7 +11836,7 @@ webpackJsonp([32], {
                             l = e.thumbnailURL,
                             u = e.type,
                             m = e.viewCount,
-                            p = a && a > 0 ? Object(s.a)(a) : "";
+                            p = a && a > 0 ? Object(s.b)(a) : "";
                         return r.createElement("a", {
                             href: "#",
                             onClick: t.handleClick,
@@ -37775,7 +37775,7 @@ webpackJsonp([32], {
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(m.t)(e.userID),
+                    topic: Object(m.u)(e.userID),
                     type: c.PubsubMessageType.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
@@ -44024,7 +44024,7 @@ webpackJsonp([32], {
                         variables: {
                             login: e.login
                         },
-                        topic: e.data.user ? Object(d.y)(e.data.user.id) : "",
+                        topic: e.data.user ? Object(d.z)(e.data.user.id) : "",
                         type: l.PubsubMessageType.ViewCount,
                         mutator: function(e, t) {
                             return t.user && t.user.stream ? (t.user.stream.viewersCount = e.viewers, t) : t
@@ -45426,7 +45426,7 @@ webpackJsonp([32], {
                 return !e.channelID
             },
             topic: function(e) {
-                return e.channelID ? Object(c.p)(e.channelID) : ""
+                return e.channelID ? Object(c.q)(e.channelID) : ""
             },
             mapMessageTypesToProps: (E = {}, E[d.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", E)
         }]))(_);
@@ -47318,7 +47318,7 @@ webpackJsonp([32], {
                     name: "openCrate"
                 }), Object(S.a)([{
                     topic: function(e) {
-                        return Object(w.w)(e.sessionUserID && e.sessionUserID || "")
+                        return Object(w.x)(e.sessionUserID && e.sessionUserID || "")
                     },
                     mapMessageTypesToProps: (V = {}, V[N.PubsubMessageType.UserCrateEvent] = "userCrateEvent", V),
                     skip: function(e) {
@@ -47326,7 +47326,7 @@ webpackJsonp([32], {
                     }
                 }, {
                     topic: function(e) {
-                        return Object(w.u)(e.sessionUserID && e.sessionUserID || "")
+                        return Object(w.v)(e.sessionUserID && e.sessionUserID || "")
                     },
                     mapMessageTypesToProps: (z = {}, z[N.PubsubMessageType.UserCampaignRewardEvent] = "userCampaignEvent", z),
                     skip: function(e) {
@@ -47424,7 +47424,7 @@ webpackJsonp([32], {
                     }, e)
                 }, t = l.__decorate([Object(S.a)([{
                     topic: function(e) {
-                        return Object(w.w)(e.sessionUserID || "")
+                        return Object(w.x)(e.sessionUserID || "")
                     },
                     mapMessageTypesToProps: (K = {}, K[N.PubsubMessageType.UserGiftEvent] = "userGiftEvent", K),
                     skip: function(e) {
@@ -47937,78 +47937,8 @@ webpackJsonp([32], {
                 panel_target: t.panelTarget || null
             })
         }
-
-        function Ve(e, t) {
-            return function(n) {
-                return function(i) {
-                    function a() {
-                        var e = null !== i && i.apply(this, arguments) || this;
-                        return e.state = {
-                            hadImpression: !1,
-                            didScroll: !1
-                        }, e.logger = p.j.withCategory("with-impression-listener"), e.setRef = function(t) {
-                            return e.element = t
-                        }, e.registerImpressionCallback = function(t) {
-                            e.reportImpression = t
-                        }, e
-                    }
-                    return l.__extends(a, i), a.prototype.componentDidMount = function() {
-                        this.scrollContext = this.context;
-                        var n = this.scrollContext.registerReceiver;
-                        n ? t && void 0 !== t.percentage && void 0 !== t.pixels ? this.logger.warn("<" + e + " /> should only be initialized with percentage or pixel thresholds, not both") : this.unregister = n(this) : this.logger.warn("<" + e + " /> initialized missing a <ScrollableArea /> provider")
-                    }, a.prototype.componentWillUnmount = function() {
-                        this.unregister && this.unregister()
-                    }, a.prototype.render = function() {
-                        var e = {
-                            impressionListener: {
-                                hadImpression: this.state.hadImpression,
-                                didScroll: this.state.didScroll,
-                                registerImpressionCallback: this.registerImpressionCallback
-                            }
-                        };
-                        return u.createElement("div", {
-                            ref: this.setRef
-                        }, u.createElement(n, l.__assign({}, this.props, e)))
-                    }, a.prototype.checkVisible = function(e) {
-                        return l.__awaiter(this, void 0, void 0, function() {
-                            var t, n;
-                            return l.__generator(this, function(i) {
-                                return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
-                                    hadImpression: t,
-                                    didScroll: n
-                                }), this.reportImpression && this.reportImpression(n)), [2]
-                            })
-                        })
-                    }, a.prototype.isVisible = function(e) {
-                        if (!this.element) return !1;
-                        var n = this.element.getBoundingClientRect();
-                        if (n.left < e.right && n.right > e.left && n.top < e.bottom && n.bottom > e.top) {
-                            if (!t || 0 === t.percentage || 0 === t.pixels) return !0;
-                            var i = t.percentage,
-                                a = t.pixels,
-                                r = n.bottom - n.top,
-                                o = e.bottom - e.top,
-                                s = Math.min(e.bottom - n.top, r, o);
-                            if (a) {
-                                if (r >= a) return s >= a;
-                                i = 100
-                            }
-                            return !i || 100 * (s / r) >= i
-                        }
-                        return !1
-                    }, a.prototype.isScrolled = function() {
-                        if (!this.scrollContext) return !1;
-                        var e = this.scrollContext.getScrollContent();
-                        return !(!e || 0 === e.scrollTop)
-                    }, a.contextTypes = {
-                        registerReceiver: c.func,
-                        getScrollContent: c.func
-                    }, a
-                }(u.Component)
-            }
-        }
-        n("1fMN");
-        var ze = /^https?:\/\//,
+        var Ve = n("9Fb+"),
+            ze = (n("1fMN"), /^https?:\/\//),
             He = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -48067,7 +47997,7 @@ webpackJsonp([32], {
                     }, this.props.panel.title), e, t)
                 }, t
             }(u.Component),
-            Ge = Object(m.compose)(Ve("DefaultPanel", {
+            Ge = Object(m.compose)(Object(Ve.a)("DefaultPanel", {
                 pixels: 100
             }))(He),
             We = n("V5M+"),
@@ -48354,7 +48284,7 @@ webpackJsonp([32], {
             }(u.Component)),
             ht = Object(m.compose)(Object(ut.a)(function(e) {
                 return t = Je, n = e.channelID, {
-                    topic: (i = e.userID) ? Object(w.t)(i) : "",
+                    topic: (i = e.userID) ? Object(w.u)(i) : "",
                     type: N.PubsubMessageType.UserBitsBalanceUpdate,
                     mutator: function(e, t) {
                         return t && e.message_type === Ke.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
@@ -49029,7 +48959,7 @@ webpackJsonp([32], {
                     }
                 }, t
             }(u.Component),
-            Nt = Object(m.compose)(Ve("ExtensionPanel", {
+            Nt = Object(m.compose)(Object(Ve.a)("ExtensionPanel", {
                 pixels: 100
             }))(St);
         var wt = Object(i.b)(function(e) {
@@ -49452,7 +49382,7 @@ webpackJsonp([32], {
                                     return o.sent(), [2, this.handleErrorMessage(Bt.Unexpected)];
                                 case 4:
                                     return this.unsubscribe = p.k.subscribe({
-                                        topic: Object(w.s)(i),
+                                        topic: Object(w.t)(i),
                                         success: function() {
                                             var e, i;
                                             (e = n, i = t, fetch(e, {
@@ -51967,7 +51897,7 @@ webpackJsonp([32], {
                 }
             }), Object(ut.a)(function(e) {
                 return {
-                    topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(w.u)(e.user.id) : "",
+                    topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(w.v)(e.user.id) : "",
                     query: gi,
                     variables: {
                         channelID: e.channelID
@@ -52728,7 +52658,7 @@ webpackJsonp([32], {
                 }
             }), Object(ut.a)(function(e) {
                 return {
-                    topic: e.user ? Object(w.u)(e.user.id) : "",
+                    topic: e.user ? Object(w.v)(e.user.id) : "",
                     query: Fi,
                     variables: {
                         channelID: e.channelID
@@ -53199,7 +53129,7 @@ webpackJsonp([32], {
                     autoReportInteractive: !0
                 }), Object(S.a)([{
                     topic: function(e) {
-                        return Object(w.u)(e.sessionUserID && e.sessionUserID || "")
+                        return Object(w.v)(e.sessionUserID && e.sessionUserID || "")
                     },
                     mapMessageTypesToProps: (Hi = {}, Hi[N.PubsubMessageType.UserGiftEvent] = "userNotificationEvent", Hi[N.PubsubMessageType.UserCampaignRewardEvent] = "userNotificationEvent", Hi),
                     skip: function(e) {
@@ -54987,7 +54917,7 @@ webpackJsonp([32], {
                         return e.data.loading || !e.data.user || !e.data.user.id
                     },
                     topic: function(e) {
-                        return e.data.user ? Object(w.y)(e.data.user.id) : ""
+                        return e.data.user ? Object(w.z)(e.data.user.id) : ""
                     },
                     mapMessageTypesToProps: (gr = {}, gr[N.PubsubMessageType.Vodcast] = "vodcast", gr)
                 }]), Object(L.d)("ChannelVodcastTopbar")], t)
@@ -58248,7 +58178,7 @@ webpackJsonp([32], {
                     variables: {
                         id: t.channelID
                     },
-                    topic: Object(p.p)(t.channelID),
+                    topic: Object(p.q)(t.channelID),
                     type: u.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(n, i) {
                         return n.data.is_rituals_enabled ? e(function() {
@@ -58259,7 +58189,7 @@ webpackJsonp([32], {
                 }
             }), Object(d.a)([{
                 topic: function(e) {
-                    return Object(p.y)(e.channelID)
+                    return Object(p.z)(e.channelID)
                 },
                 mapMessageTypesToProps: (O = {}, O[u.PubsubMessageType.ChannelStreamUp] = "streamUp", O[u.PubsubMessageType.ChannelStreamDown] = "streamDown", O),
                 skip: I
@@ -62660,4 +62590,4 @@ webpackJsonp([32], {
         }
     }
 });
-//# sourceMappingURL=pages.channel-4083328a35eb94b5e89ffde08306c7dd.js.map
+//# sourceMappingURL=pages.channel-476d8672c77d0f632bd23036c61b1174.js.map

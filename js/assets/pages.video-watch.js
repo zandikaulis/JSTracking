@@ -1,4 +1,4 @@
-webpackJsonp([39, 97], {
+webpackJsonp([38, 110], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -3824,7 +3824,7 @@ webpackJsonp([39, 97], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(106).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(120).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3836,7 +3836,7 @@ webpackJsonp([39, 97], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(105).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(119).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3848,7 +3848,7 @@ webpackJsonp([39, 97], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(104).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(118).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3860,7 +3860,7 @@ webpackJsonp([39, 97], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(103).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(117).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -8247,7 +8247,9 @@ webpackJsonp([39, 97], {
                             },
                             thumbnailImageProps: {
                                 src: t.props.video.previewThumbnailURL,
-                                alt: t.props.video.title
+                                alt: t.props.video.title,
+                                onLoad: t.reportInteractive,
+                                onError: t.reportInteractive
                             },
                             channelLogin: t.props.video.owner && t.props.video.owner.login || "",
                             channelLoginLinkTo: {
@@ -8326,7 +8328,7 @@ webpackJsonp([39, 97], {
                             "data-test-selector": b,
                             icon: g._23.GlyphLength,
                             label: Object(l.d)("length", "VideoPreviewCard"),
-                            value: Object(m.a)(t.props.video.lengthSeconds)
+                            value: Object(m.b)(t.props.video.lengthSeconds)
                         })), t.videoPreviewImage(), e))), o.createElement(g.D, null, o.createElement(g._8, {
                             display: g.R.Flex,
                             flexDirection: g.T.Row,
@@ -8346,17 +8348,19 @@ webpackJsonp([39, 97], {
                             hovered: !1
                         })
                     }, t.onPreviewImageLoad = function(e) {
-                        t.props.latencyTracking.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewLoad: !0
                         })
                     }, t.onPreviewImageLoadError = function(e) {
-                        e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewFailToLoad: !0
                         })
+                    }, t.reportInteractive = function() {
+                        t.props.latencyTracking.reportInteractive()
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.overrideImageInteractivity && this.props.latencyTracking.reportInteractive()
+                    this.props.overrideImageInteractivity && this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = {
                         assignments: {
@@ -12762,7 +12766,7 @@ webpackJsonp([39, 97], {
                         display: yt.R.Flex
                     }, kt.createElement(yt._22, {
                         asset: yt._23.GlyphLength
-                    })), kt.createElement("span", null, Object(En.a)(this.props.currentVideoTime))))))
+                    })), kt.createElement("span", null, Object(En.b)(this.props.currentVideoTime))))))
                 }, t
             }(kt.Component);
         var Pn = Object(Sn.d)("MessageInput", {
@@ -12788,7 +12792,7 @@ webpackJsonp([39, 97], {
                     }
                 }, kt.createElement(yt.Q, {
                     fontSize: yt.V.Size7
-                }, Object(En.a)(t))))))
+                }, Object(En.b)(t))))))
             },
             Bn = n("+V/3"),
             Wn = n("Nay6"),
@@ -16391,7 +16395,7 @@ webpackJsonp([39, 97], {
                         color: R.K.Alt2
                     }, Object(B.d)("{created, date, medium}", {
                         created: new Date(this.props.video.publishedAt)
-                    }, "VideoDeleteModal"), " · ", Object(oe.a)(this.props.video.lengthSeconds)), u.createElement(R._32, {
+                    }, "VideoDeleteModal"), " · ", Object(oe.b)(this.props.video.lengthSeconds)), u.createElement(R._32, {
                         ellipsis: !0,
                         color: R.K.Alt2
                     }, Object(B.d)("{viewCount, plural, one {# View} other {# Views}}", {
@@ -16545,7 +16549,7 @@ webpackJsonp([39, 97], {
                 }, t.prototype.getVideoReportExtraField = function() {
                     var e = Object(k.a)(this.props),
                         t = {
-                            timestamp: Object(oe.a)(this.props.lastVideoOffset, {
+                            timestamp: Object(oe.b)(this.props.lastVideoOffset, {
                                 zeroPadAll: !0
                             })
                         };
@@ -17500,7 +17504,7 @@ webpackJsonp([39, 97], {
                     bottomRight: void 0
                 }) : B(this.props) ? r.createElement(x, {
                     topLeft: r.createElement(M, {
-                        value: Object(P.a)(this.props.durationInSeconds),
+                        value: Object(P.b)(this.props.durationInSeconds),
                         icon: c._23.GlyphArrRight,
                         withBackground: !0
                     }),
@@ -17514,7 +17518,7 @@ webpackJsonp([39, 97], {
                     progressBarPercent: this.props.watchedProgressPercent
                 }) : W(this.props) ? r.createElement(x, {
                     topLeft: r.createElement(M, {
-                        value: Object(P.a)(this.props.durationInSeconds),
+                        value: Object(P.b)(this.props.durationInSeconds),
                         icon: c._23.Clip,
                         withBackground: !0
                     }),
@@ -19213,7 +19217,7 @@ webpackJsonp([39, 97], {
                 }, t.prototype.renderCurrentVideoOffsetLinkOption = function() {
                     if (void 0 === this.props.currentVideoTime) return null;
                     var e = this.props.selectedVideoStartTime || this.props.currentVideoTime,
-                        t = Object(O.a)(e);
+                        t = Object(O.b)(e);
                     return r.createElement(m._8, {
                         padding: {
                             top: .5
@@ -19360,4 +19364,4 @@ webpackJsonp([39, 97], {
         }
     }
 });
-//# sourceMappingURL=pages.video-watch-cb7c938aaa59dd1a4f22376b47828876.js.map
+//# sourceMappingURL=pages.video-watch-7c61388df91f159ed96351dc4360d127.js.map

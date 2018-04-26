@@ -1,4 +1,4 @@
-webpackJsonp([85], {
+webpackJsonp([92], {
     "+6x9": function(e, t, n) {
         "use strict";
         var i, r, a = n("TToO"),
@@ -2607,7 +2607,7 @@ webpackJsonp([85], {
                     color: g.K.Alt2
                 }, i))))))
             }, t.prototype.reportInteractive = function() {
-                this.props.isLoggedIn ? (!this.props.channelLogin || this.userDataLoaded() || this.props.followData) && this.props.latencyTracking.reportInteractive() : this.props.latencyTracking.reportInteractive()
+                _(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
             }, t = i.__decorate([Object(s.a)(v, {
                 options: function(e) {
                     return {
@@ -2617,14 +2617,18 @@ webpackJsonp([85], {
                     }
                 },
                 skip: function(e) {
-                    return !e.isLoggedIn || !e.channelLogin || !!e.followData || e.channelLogin === e.currentUserLogin
+                    return _(e)
                 }
             }), Object(s.a)(b, {
                 name: "followUser"
             }), Object(s.a)(f, {
                 name: "unfollowUser"
             }), Object(h.d)("FollowButton")], t)
-        }(r.Component)
+        }(r.Component);
+
+        function _(e) {
+            return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
+        }
     },
     "5LoI": function(e, t, n) {
         "use strict";
@@ -4049,7 +4053,7 @@ webpackJsonp([85], {
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return Object(b.x)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(b.y)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -4594,15 +4598,6 @@ webpackJsonp([85], {
                 },
                 recording: function() {
                     return Object(l.d)("recording me without my consent", "ReportModalWizard")
-                },
-                scam: function() {
-                    return Object(l.d)("trying to scam Twitch community members", "ReportModalWizard")
-                },
-                underage: function() {
-                    return Object(l.d)("underage for Twitch (12 or under)", "ReportModalWizard")
-                },
-                selfharm: function() {
-                    return Object(l.d)("contemplating or attempting self-harm or suicide", "ReportModalWizard")
                 },
                 abusiveViolence: function() {
                     return Object(l.d)("They're threatening violence or physical harm", "ReportModalWizard")
@@ -5451,21 +5446,21 @@ webpackJsonp([85], {
                     getLabel: N.identifyUser,
                     items: [T.video_streamer, T.video_someoneElse, T.video_chatSomeone],
                     type: _.MultipleChoice,
-                    value: "video report user"
+                    value: "video identify user"
                 },
                 content: {
                     getTitle: R.reportVideo,
                     getLabel: N.contentGeneral,
                     items: [T.revealPersonalInfo, T.video_labeling, T.video_inactive, T.video_general, T.report_ip, T.violateDevAgreement, T.selfharm],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "video report reason"
                 },
                 general: {
                     getTitle: R.reportVideo,
                     getLabel: N.content,
                     items: [T.report_username, T.violence, T.abusive, T.cheating, T.scam, T.inappropriateContent, T.evasion, T.impersonation, T.underage, T.bitsViolation],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "video general report reason"
                 }
             },
             D = {
@@ -5474,14 +5469,14 @@ webpackJsonp([85], {
                     getLabel: N.contentGeneral,
                     items: [T.revealPersonalInfo, T.evasion, T.spam, T.maliciousRaid, T.report_username, T.messaging_general, T.selfharm],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "message report reason"
                 },
                 general: {
                     getTitle: R.reportMessage,
                     getLabel: N.content,
                     items: [T.report_emotes, T.violence, T.abusive, T.inappropriateContent, T.impersonation, T.underage, T.bitsViolation],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "message general report reason"
                 }
             },
             M = r.__assign({}, D.content, {
@@ -5495,14 +5490,14 @@ webpackJsonp([85], {
                     getLabel: N.contentGeneral,
                     items: [T.revealPersonalInfo, T.inappropriateBadge, T.inappropriateExtension, T.noModeration, T.profile_general, T.report_ip, T.violateDevAgreement, T.selfharm],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "profile report reason"
                 },
                 general: {
                     getTitle: R.reportProfile,
                     getLabel: N.content,
-                    items: [T.report_username, T.violence, T.abusive, T.scam, T.inappropriateContent, T.impersonation, T.underage, T.bitsViolation],
+                    items: [T.report_username, T.violence, T.abusive, T.scam, T.inappropriateContent, T.evasion, T.impersonation, T.underage, T.bitsViolation],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "profile general report reason"
                 }
             },
             U = {
@@ -5518,23 +5513,24 @@ webpackJsonp([85], {
             },
             A = {
                 getTitle: R.tellUsMore,
+                items: [T.input_description],
                 type: _.Confirm,
                 value: "tell us more"
             },
             B = {
-                general: r.__assign({}, A, {
-                    items: [T.input_description]
-                }),
                 banEvasion: r.__assign({}, A, {
-                    items: [T.input_usernames, T.input_description]
+                    items: [T.input_usernames, T.input_description],
+                    value: "ban evasion tell us more"
                 }),
                 socialMedia: r.__assign({}, A, {
                     items: [T.input_link, T.input_connection, T.input_description],
-                    nextCard: x.socialMedia
+                    nextCard: x.socialMedia,
+                    value: "social media tell us more"
                 }),
                 inPerson: r.__assign({}, A, {
                     items: [T.input_identifyOwner, T.input_description],
-                    nextCard: x.inPerson
+                    nextCard: x.inPerson,
+                    value: "in-person tell us more"
                 })
             },
             V = {
@@ -5571,7 +5567,7 @@ webpackJsonp([85], {
                     },
                     items: [T.location_onTwitch, T.location_anotherSite, T.location_TwitchEvent, T.location_inPerson],
                     type: _.MultipleChoice,
-                    value: "location"
+                    value: "off-site conduct location"
                 },
                 externalSite: {
                     getTitle: function(e) {
@@ -5608,22 +5604,14 @@ webpackJsonp([85], {
                     items: [T.threat_me, T.threat_person, T.threat_group],
                     nextCard: B.inPerson
                 }),
-                external_abusive: {
-                    getTitle: R.reportAbusive,
-                    getLabel: N.relevantStatements,
+                external_abusive: r.__assign({}, V.content, {
                     items: [T.hateSpeech, T.harassment, T.external_abusiveViolence, T.external_commitingViolence, T.swatting, T.personalInfo],
-                    type: _.MultipleChoice,
-                    nextCard: B.inPerson,
-                    value: "abuse type"
-                },
-                inPerson_abusive: {
-                    getTitle: R.reportAbusive,
-                    getLabel: N.relevantStatements,
+                    nextCard: B.inPerson
+                }),
+                inPerson_abusive: r.__assign({}, V.content, {
                     items: [T.hateSpeech, T.harassment, T.inPerson_abusiveViolence, T.inPerson_commitingViolence, T.swatting, T.personalInfo],
-                    type: _.MultipleChoice,
-                    nextCard: B.inPerson,
-                    value: "abuse type"
-                }
+                    nextCard: B.inPerson
+                })
             },
             H = {
                 getTitle: function(e) {
@@ -5678,7 +5666,7 @@ webpackJsonp([85], {
                 value: "impersonation type"
             },
             Q = L,
-            K = B.general,
+            K = A,
             $ = I,
             Y = {
                 video: F.identifyUser,
@@ -5694,7 +5682,6 @@ webpackJsonp([85], {
                 general_messaging: D.general,
                 general_profile: j.general,
                 "channel owner": j.content,
-                "channel moderator": D.content,
                 "community member": D.content,
                 "on twitch": j.content,
                 "another site": W.externalSite,
@@ -5707,7 +5694,7 @@ webpackJsonp([85], {
                 "external site; committing violence": W.external_violence,
                 "external site; scam": B.socialMedia,
                 "in-person; threatening": W.inPerson_violence,
-                "in-person; hateful": W.inPerson_abusive,
+                "in-person; hateful/harassing": W.inPerson_abusive,
                 "in-person; threatening violence": W.inPerson_violence,
                 "in-person; committing violence": W.inPerson_violence,
                 "ban evasion": G,
@@ -5719,8 +5706,6 @@ webpackJsonp([85], {
                 "committing violence": V.violence,
                 abusive: V.content,
                 "inappropriate content": z,
-                "sitewide ban": B.banEvasion,
-                "chat ban": B.banEvasion,
                 "intellectual property": x.legal,
                 "violating developer agreement": x.legal
             },
@@ -7345,13 +7330,13 @@ webpackJsonp([85], {
             return r.PubsubTopic.ChatRoomsChannel + "." + e
         }, t.g = function(e) {
             return r.PubsubTopic.ChatRoomsUser + "." + e
-        }, t.z = function(e) {
+        }, t.A = function(e) {
             return r.PubsubTopic.VideoThumbnailProcessing + "." + e
         }, t.j = function(e) {
             return r.PubsubTopic.ImageUpload + "." + e
-        }, t.s = function(e) {
+        }, t.t = function(e) {
             return r.PubsubTopic.UploadService + "." + e
-        }, t.y = function(e) {
+        }, t.z = function(e) {
             return r.PubsubTopic.VideoPlaybackById + "." + e
         }, t.m = function(e) {
             return r.PubsubTopic.PayoutOnboardingEvents + "." + e
@@ -7361,33 +7346,35 @@ webpackJsonp([85], {
             return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
         }, t.o = function(e) {
             return r.PubsubTopic.Raid + "." + e
+        }, t.p = function(e) {
+            return r.PubsubTopic.StreamChange + "." + e
         }, t.h = function(e) {
             return r.PubsubTopic.Friendship + "." + e
         }, t.b = function(e) {
             return r.PubsubTopic.ChannelBitsPinEvents + "." + e
         }, t.a = function(e) {
             return r.PubsubTopic.BitsLeaderboardEvents + "." + e.id
-        }, t.t = function(e) {
+        }, t.u = function(e) {
             return r.PubsubTopic.UserBitsUpdates + "." + e
-        }, t.x = function(e) {
+        }, t.y = function(e) {
             return r.PubsubTopic.UserSubscribeEvents + "." + e
-        }, t.w = function(e) {
+        }, t.x = function(e) {
             return r.PubsubTopic.UserCrateEvents + "." + e
         }, t.i = function(e) {
             return r.PubsubTopic.CampaignGlobalEvents + "." + e
-        }, t.u = function(e) {
-            return r.PubsubTopic.CampaignUserEvents + "." + e
         }, t.v = function(e) {
+            return r.PubsubTopic.CampaignUserEvents + "." + e
+        }, t.w = function(e) {
             return r.PubsubTopic.UserCommerceEvents + "." + e
-        }, t.A = function(e) {
+        }, t.B = function(e) {
             return r.PubsubTopic.Whispers + "." + e
         }, t.l = function(e) {
             return r.PubsubTopic.OnsiteNotifications + "." + e
-        }, t.p = function(e) {
+        }, t.q = function(e) {
             return r.PubsubTopic.StreamChatRoom + "." + e
         }, t.d = function(e) {
             return r.PubsubTopic.ChannelEventUpdates + "." + e
-        }, t.r = function(e) {
+        }, t.s = function(e) {
             return i.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -7398,7 +7385,7 @@ webpackJsonp([85], {
                     })
                 }
             })
-        }, t.q = function(e) {
+        }, t.r = function(e) {
             return i.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -7889,7 +7876,7 @@ webpackJsonp([85], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(106).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(120).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -7901,7 +7888,7 @@ webpackJsonp([85], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(105).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(119).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -7913,7 +7900,7 @@ webpackJsonp([85], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(104).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(118).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -7925,7 +7912,7 @@ webpackJsonp([85], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(103).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(117).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -10900,7 +10887,9 @@ webpackJsonp([85], {
                             },
                             thumbnailImageProps: {
                                 src: t.props.video.previewThumbnailURL,
-                                alt: t.props.video.title
+                                alt: t.props.video.title,
+                                onLoad: t.reportInteractive,
+                                onError: t.reportInteractive
                             },
                             channelLogin: t.props.video.owner && t.props.video.owner.login || "",
                             channelLoginLinkTo: {
@@ -10979,7 +10968,7 @@ webpackJsonp([85], {
                             "data-test-selector": v,
                             icon: g._23.GlyphLength,
                             label: Object(l.d)("length", "VideoPreviewCard"),
-                            value: Object(p.a)(t.props.video.lengthSeconds)
+                            value: Object(p.b)(t.props.video.lengthSeconds)
                         })), t.videoPreviewImage(), e))), o.createElement(g.D, null, o.createElement(g._8, {
                             display: g.R.Flex,
                             flexDirection: g.T.Row,
@@ -10999,17 +10988,19 @@ webpackJsonp([85], {
                             hovered: !1
                         })
                     }, t.onPreviewImageLoad = function(e) {
-                        t.props.latencyTracking.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewLoad: !0
                         })
                     }, t.onPreviewImageLoadError = function(e) {
-                        e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewFailToLoad: !0
                         })
+                    }, t.reportInteractive = function() {
+                        t.props.latencyTracking.reportInteractive()
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.overrideImageInteractivity && this.props.latencyTracking.reportInteractive()
+                    this.props.overrideImageInteractivity && this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = {
                         assignments: {
@@ -12468,11 +12459,19 @@ webpackJsonp([85], {
         function i(e, t) {
             return (t -= e.toString().length) > 0 ? new Array(t + (/\./.test(e.toString()) ? 2 : 1)).join("0") + e : e.toString()
         }
-        t.a = function(e, t) {
+        t.b = function(e, t) {
             var n = Math.floor(e % 60),
                 r = Math.floor(e % 3600 / 60),
                 a = Math.floor(e / 3600);
             return t && t.zeroPadAll ? i(a, 2) + ":" + i(r, 2) + ":" + i(n, 2) : a ? a + ":" + i(r, 2) + ":" + i(n, 2) : r + ":" + i(n, 2)
+        }, t.a = function(e) {
+            if ("" === e) return 0;
+            var t = e.split(":");
+            if (t.length > 3) return NaN;
+            return t.reduce(function(e, t) {
+                var n;
+                return n = "-" === t[0] ? NaN : Math.round(parseInt(t, 10)), 60 * e + n
+            }, 0)
         }
     },
     mmQh: function(e, t) {
@@ -14636,7 +14635,7 @@ webpackJsonp([85], {
                     bottomRight: void 0
                 }) : W(this.props) ? r.createElement(I, {
                     topLeft: r.createElement(x, {
-                        value: Object(B.a)(this.props.durationInSeconds),
+                        value: Object(B.b)(this.props.durationInSeconds),
                         icon: c._23.GlyphArrRight,
                         withBackground: !0
                     }),
@@ -14650,7 +14649,7 @@ webpackJsonp([85], {
                     progressBarPercent: this.props.watchedProgressPercent
                 }) : H(this.props) ? r.createElement(I, {
                     topLeft: r.createElement(x, {
-                        value: Object(B.a)(this.props.durationInSeconds),
+                        value: Object(B.b)(this.props.durationInSeconds),
                         icon: c._23.Clip,
                         withBackground: !0
                     }),
@@ -15072,4 +15071,4 @@ webpackJsonp([85], {
         var i = n("+dIz")
     }
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-f656c0b81c79dac7c4b0e701c12cda97.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-9ce4776cfd6087c07c7cd1dd6875ff23.js.map

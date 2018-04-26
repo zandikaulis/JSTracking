@@ -1,4 +1,4 @@
-webpackJsonp([94], {
+webpackJsonp([107], {
     "0blB": function(e, t) {},
     PqVi: function(e, t) {
         var n = {
@@ -297,4 +297,4 @@ webpackJsonp([94], {
     gjwU: function(e, t) {},
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-link-983e26eea86797c5ccbe8369b7a8dc9d.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-link-73da244dfe9a6bbd00374d05a152f67a.js.map

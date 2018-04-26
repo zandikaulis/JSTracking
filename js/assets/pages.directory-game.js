@@ -1458,7 +1458,7 @@ webpackJsonp([47], {
                             l = e.thumbnailURL,
                             u = e.type,
                             m = e.viewCount,
-                            p = a && a > 0 ? Object(s.a)(a) : "";
+                            p = a && a > 0 ? Object(s.b)(a) : "";
                         return r.createElement("a", {
                             href: "#",
                             onClick: t.handleClick,
@@ -3516,7 +3516,7 @@ webpackJsonp([47], {
                                 context_index: e.orderIndex
                             }
                         },
-                        o = Object(Ee.a)(t.lengthSeconds || 0);
+                        o = Object(Ee.b)(t.lengthSeconds || 0);
                     return M.createElement(re._6, {
                         key: t.id,
                         linkTo: r,
@@ -4830,7 +4830,7 @@ webpackJsonp([47], {
                                             })];
                                         case 2:
                                             return (l = i.sent()).status > 300 && r(new Error(Object(Qt.e)(l.status))), this.unsubscribe = a.k.subscribe({
-                                                topic: Object(qt.s)(s),
+                                                topic: Object(qt.t)(s),
                                                 success: function() {
                                                     c.timeoutID = setTimeout(function() {
                                                         c.unsubscribe(), r(new Error(Object(Qt.d)()))
@@ -10534,7 +10534,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(106).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(120).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -10546,7 +10546,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(105).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(119).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -10558,7 +10558,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(104).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(118).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -10570,7 +10570,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(103).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(117).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -13100,7 +13100,9 @@ webpackJsonp([47], {
                             },
                             thumbnailImageProps: {
                                 src: t.props.video.previewThumbnailURL,
-                                alt: t.props.video.title
+                                alt: t.props.video.title,
+                                onLoad: t.reportInteractive,
+                                onError: t.reportInteractive
                             },
                             channelLogin: t.props.video.owner && t.props.video.owner.login || "",
                             channelLoginLinkTo: {
@@ -13179,7 +13181,7 @@ webpackJsonp([47], {
                             "data-test-selector": k,
                             icon: g._23.GlyphLength,
                             label: Object(l.d)("length", "VideoPreviewCard"),
-                            value: Object(m.a)(t.props.video.lengthSeconds)
+                            value: Object(m.b)(t.props.video.lengthSeconds)
                         })), t.videoPreviewImage(), e))), o.createElement(g.D, null, o.createElement(g._8, {
                             display: g.R.Flex,
                             flexDirection: g.T.Row,
@@ -13199,17 +13201,19 @@ webpackJsonp([47], {
                             hovered: !1
                         })
                     }, t.onPreviewImageLoad = function(e) {
-                        t.props.latencyTracking.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewLoad: !0
                         })
                     }, t.onPreviewImageLoadError = function(e) {
-                        e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewFailToLoad: !0
                         })
+                    }, t.reportInteractive = function() {
+                        t.props.latencyTracking.reportInteractive()
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.overrideImageInteractivity && this.props.latencyTracking.reportInteractive()
+                    this.props.overrideImageInteractivity && this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = {
                         assignments: {
@@ -17805,7 +17809,7 @@ webpackJsonp([47], {
                     bottomRight: void 0
                 }) : B(this.props) ? a.createElement(F, {
                     topLeft: a.createElement(I, {
-                        value: Object(V.a)(this.props.durationInSeconds),
+                        value: Object(V.b)(this.props.durationInSeconds),
                         icon: d._23.GlyphArrRight,
                         withBackground: !0
                     }),
@@ -17819,7 +17823,7 @@ webpackJsonp([47], {
                     progressBarPercent: this.props.watchedProgressPercent
                 }) : H(this.props) ? a.createElement(F, {
                     topLeft: a.createElement(I, {
-                        value: Object(V.a)(this.props.durationInSeconds),
+                        value: Object(V.b)(this.props.durationInSeconds),
                         icon: d._23.Clip,
                         withBackground: !0
                     }),
@@ -18798,4 +18802,4 @@ webpackJsonp([47], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-3397ba67eba913110fdbcb99d6d9d755.js.map
+//# sourceMappingURL=pages.directory-game-e52e37cff47e965e7d94a4844024a2e7.js.map

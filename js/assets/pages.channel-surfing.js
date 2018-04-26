@@ -1,4 +1,4 @@
-webpackJsonp([83], {
+webpackJsonp([89], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -1348,7 +1348,7 @@ webpackJsonp([83], {
                     }
                 }), Object(D.a)([{
                     topic: function(e) {
-                        return Object(M.v)(e.currentUserID)
+                        return Object(M.w)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (C = {}, C[O.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", C)
                 }])], t)
@@ -2021,7 +2021,7 @@ webpackJsonp([83], {
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(M.p)(e.channelID),
+                    topic: Object(M.q)(e.channelID),
                     type: O.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -15013,7 +15013,7 @@ webpackJsonp([83], {
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(p.t)(e.userID),
+                    topic: Object(p.u)(e.userID),
                     type: c.PubsubMessageType.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
@@ -17568,7 +17568,7 @@ webpackJsonp([83], {
                         variables: {
                             login: e.login
                         },
-                        topic: e.data.user ? Object(d.y)(e.data.user.id) : "",
+                        topic: e.data.user ? Object(d.z)(e.data.user.id) : "",
                         type: l.PubsubMessageType.ViewCount,
                         mutator: function(e, t) {
                             return t.user && t.user.stream ? (t.user.stream.viewersCount = e.viewers, t) : t
@@ -18008,7 +18008,7 @@ webpackJsonp([83], {
                 return !e.channelID
             },
             topic: function(e) {
-                return e.channelID ? Object(c.p)(e.channelID) : ""
+                return e.channelID ? Object(c.q)(e.channelID) : ""
             },
             mapMessageTypesToProps: (_ = {}, _[d.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", _)
         }]))(C);
@@ -20673,7 +20673,7 @@ webpackJsonp([83], {
                     variables: {
                         id: t.channelID
                     },
-                    topic: Object(m.p)(t.channelID),
+                    topic: Object(m.q)(t.channelID),
                     type: u.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(n, a) {
                         return n.data.is_rituals_enabled ? e(function() {
@@ -20684,7 +20684,7 @@ webpackJsonp([83], {
                 }
             }), Object(d.a)([{
                 topic: function(e) {
-                    return Object(m.y)(e.channelID)
+                    return Object(m.z)(e.channelID)
                 },
                 mapMessageTypesToProps: (O = {}, O[u.PubsubMessageType.ChannelStreamUp] = "streamUp", O[u.PubsubMessageType.ChannelStreamDown] = "streamDown", O),
                 skip: D
@@ -21753,4 +21753,4 @@ webpackJsonp([83], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-surfing-f4e4325b4732a1ccc8f4baf812c2c4d1.js.map
+//# sourceMappingURL=pages.channel-surfing-0df77bb4532d6715d6b70c43319f5602.js.map

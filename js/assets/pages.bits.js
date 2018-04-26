@@ -145,8 +145,8 @@ webpackJsonp([56], {
             m = n("rCmJ"),
             f = n("7vx8"),
             h = n("NXs7"),
-            v = n("VAT8"),
-            g = n("CSlQ"),
+            g = n("VAT8"),
+            v = n("CSlQ"),
             _ = n("Odds"),
             k = n("Kkxm"),
             O = (n("e6tx"), function(e) {
@@ -228,7 +228,7 @@ webpackJsonp([56], {
                             checked: this.props.theme === h.a.Dark,
                             onChange: this.onDarkModeCheckboxClick
                         }))));
-                        var t = d(Object(v.c)(h.a.Dark), {
+                        var t = d(Object(g.c)(h.a.Dark), {
                                 "minimal-top-nav__dropdown-open": this.state.dropdownOpen
                             }),
                             n = d({
@@ -316,7 +316,7 @@ webpackJsonp([56], {
                     }, Object(p.d)("Log in", "MinimalUser")))
                 }, t.prototype.reportInteractive = function() {
                     !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
-                }, t = c.__decorate([Object(g.d)("MinimalUser"), Object(f.a)(k)], t)
+                }, t = c.__decorate([Object(v.d)("MinimalUser"), Object(f.a)(k)], t)
             }(u.Component));
         var y = Object(r.b)(function(e) {
             return {
@@ -553,56 +553,56 @@ webpackJsonp([56], {
             m = n("ZVME"),
             f = n("CSlQ"),
             h = n("AGQo"),
-            v = n("Odds"),
-            g = (n("f8UT"), function(e) {
+            g = n("Odds"),
+            v = (n("f8UT"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return s.createElement(v._8, null, s.createElement(v._32, {
+                    return s.createElement(g._8, null, s.createElement(g._32, {
                         className: "prime-offer-header",
                         borderBottom: !0,
-                        background: v.n.Alt2,
+                        background: g.n.Alt2,
                         padding: {
                             x: 1,
                             y: .5
                         }
-                    }, s.createElement(v.Q, {
+                    }, s.createElement(g.Q, {
                         bold: !0,
-                        type: v._46.H6
+                        type: g._46.H6
                     }, Object(l.d)("Free with Prime", "PrimeOfferHeader"))), this.getNumOfUnseenOffersDisplay())
                 }, t.prototype.getNumOfUnseenOffersDisplay = function() {
                     var e = this.props.numOfUnseenOffers;
-                    if (e) return s.createElement(v._32, {
+                    if (e) return s.createElement(g._32, {
                         className: "prime-offer__new-offer-header",
                         borderBottom: !0,
-                        background: v.n.Alt2,
+                        background: g.n.Alt2,
                         padding: {
                             x: 1,
                             y: .5
                         }
-                    }, s.createElement(v._8, {
+                    }, s.createElement(g._8, {
                         fullWidth: !0,
-                        display: v.R.Flex,
-                        alignItems: v.c.Center
-                    }, s.createElement(v._8, {
+                        display: g.R.Flex,
+                        alignItems: g.c.Center
+                    }, s.createElement(g._8, {
                         flexGrow: 1
-                    }, s.createElement(v.Q, {
+                    }, s.createElement(g.Q, {
                         bold: !0,
-                        type: v._46.H6
-                    }, Object(l.d)("New Prime Loot", "PrimeOfferHeader"))), s.createElement(v._8, {
+                        type: g._46.H6
+                    }, Object(l.d)("New Prime Loot", "PrimeOfferHeader"))), s.createElement(g._8, {
                         className: "prime-offer__new-offer-header-count",
-                        textAlign: v._42.Center
-                    }, s.createElement(v._32, {
+                        textAlign: g._42.Center
+                    }, s.createElement(g._32, {
                         className: "prime-offer__new-offer-header-count__text",
-                        background: v.n.Base,
-                        color: v.K.Base,
-                        display: v.R.Flex,
-                        alignItems: v.c.Center,
-                        justifyContent: v._7.Center
-                    }, s.createElement(v.Q, null, e.toString())))))
+                        background: g.n.Base,
+                        color: g.K.Base,
+                        display: g.R.Flex,
+                        alignItems: g.c.Center,
+                        justifyContent: g._7.Center
+                    }, s.createElement(g.Q, null, e.toString())))))
                 }, t = a.__decorate([Object(f.d)("PrimeOfferHeader")], t)
             }(s.Component)),
             _ = n("Lpko"),
@@ -614,7 +614,7 @@ webpackJsonp([56], {
         var y = n("8OKC"),
             b = n("tTbW"),
             E = (n("9856"), n("wjhu")),
-            N = function(e) {
+            C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -710,10 +710,10 @@ webpackJsonp([56], {
                         var e = t.props.offersData,
                             n = t.showOffersByDefault() || !1,
                             r = e && !e.loading && !e.error;
-                        return t.offersLoadedEvent && r && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), r || n ? s.createElement(v._8, {
+                        return t.offersLoadedEvent && r && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), r || n ? s.createElement(g._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
-                        }, s.createElement(g, {
+                        }, s.createElement(v, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
                         }), s.createElement(_.a, null)) : null
                     }, t
@@ -727,46 +727,46 @@ webpackJsonp([56], {
                         t = this.props.userData && this.props.userData.currentUser && this.props.userData.currentUser.hasPrime;
                     if (!e && !t) return null;
                     var n = {
-                        align: v._50.Center,
-                        direction: v._51.Bottom,
+                        align: g._50.Center,
+                        direction: g._51.Bottom,
                         label: ""
                     };
-                    return this.state.numOfUnseenOffers > 0 ? n.label = Object(l.d)("New Prime Loot", "PrimeOffers") : n.label = Object(l.d)("Prime Loot", "PrimeOffers"), s.createElement(v._8, {
+                    return this.state.numOfUnseenOffers > 0 ? n.label = Object(l.d)("New Prime Loot", "PrimeOffers") : n.label = Object(l.d)("Prime Loot", "PrimeOffers"), s.createElement(g._8, {
                         className: "prime-offers",
-                        position: v._15.Relative
+                        position: g._15.Relative
                     }, s.createElement(c.a, {
                         onToggle: this.onToggleMenu,
                         openByDefault: this.showOffersByDefault(),
                         tooltipProps: n
                     }, s.createElement(h.a, {
                         onHover: this.onHover
-                    }, s.createElement(v.w, {
+                    }, s.createElement(g.w, {
                         ariaLabel: Object(l.d)("Prime offers", "PrimeOffers"),
                         overlay: !0,
-                        size: v.x.Large,
-                        icon: v._23.Crown,
+                        size: g.x.Large,
+                        icon: g._23.Crown,
                         "data-a-target": "prime-offers-icon",
                         "data-target": "prime-offers-icon"
-                    })), s.createElement(v.q, {
-                        direction: v.r.BottomRight,
-                        size: v.s.Large,
+                    })), s.createElement(g.q, {
+                        direction: g.r.BottomRight,
+                        size: g.s.Large,
                         offsetX: "9px"
                     }, this.renderOfferList())), this.renderUnseenOffersDisplay())
                 }, t.prototype.offerIsSeen = function(e) {
                     return e.self && e.self.status === O.a.Seen
                 }, t.prototype.renderUnseenOffersDisplay = function() {
                     var e = this.state.numOfUnseenOffers;
-                    if (e && !this.state.error) return s.createElement(v._8, {
+                    if (e && !this.state.error) return s.createElement(g._8, {
                         className: "prime-offers__pill",
-                        position: v._15.Absolute
-                    }, s.createElement(v.e, {
-                        type: v.j.BounceIn,
-                        duration: v.g.Medium,
-                        timing: v.i.EaseIn,
+                        position: g._15.Absolute
+                    }, s.createElement(g.e, {
+                        type: g.j.BounceIn,
+                        duration: g.g.Medium,
+                        timing: g.i.EaseIn,
                         enabled: e > 0
-                    }, s.createElement(v._12, {
+                    }, s.createElement(g._12, {
                         label: e.toString(),
-                        type: v._13.Notification
+                        type: g._13.Notification
                     })))
                 }, t = a.__decorate([Object(d.a)(b, {
                     name: "offersData",
@@ -788,14 +788,14 @@ webpackJsonp([56], {
                     autoReportInteractive: !0
                 })], t)
             }(s.Component);
-        var C = Object(i.b)(function(e) {
+        var N = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: !!e.session.firstPageLoaded
                 }
-            })(N),
+            })(C),
             S = n("lfvs"),
-            D = n("Hs3O"),
-            x = (n("ukY1"), n("F1v6")),
+            x = n("Hs3O"),
+            D = (n("ukY1"), n("F1v6")),
             T = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -807,10 +807,10 @@ webpackJsonp([56], {
                         t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
                     if (!Object(O.l)(e, t)) return null;
                     if (this.props.data.loading) return null;
-                    var n = Object(D.d)(D.a, ""),
+                    var n = Object(x.d)(x.a, ""),
                         r = Object(l.d)("Twitch Prime", "BlueBar"),
                         i = s.createElement("span", null, Object(l.d)("Free loot every month, plus exclusives and surprises, ad-free viewing, and loads more.", "BlueBar")),
-                        a = Object(D.d)(D.a, ""),
+                        a = Object(x.d)(x.a, ""),
                         o = Object(l.d)("Start Your Free Trial", "BlueBar");
                     if (!this.props.data.loading && !this.props.data.error) {
                         var c = this.props.data;
@@ -838,46 +838,46 @@ webpackJsonp([56], {
                             }
                         })
                     }
-                    return s.createElement(v._32, {
-                        color: v.K.Base,
+                    return s.createElement(g._32, {
+                        color: g.K.Base,
                         className: "blue-bar",
-                        position: v._15.Relative,
+                        position: g._15.Relative,
                         fullWidth: !0,
-                        zIndex: v._59.Above
-                    }, s.createElement(v._8, {
+                        zIndex: g._59.Above
+                    }, s.createElement(g._8, {
                         className: "blue-bar__bar",
-                        display: v.R.Flex,
-                        alignItems: v.c.Center,
-                        justifyContent: v._7.Between,
-                        flexWrap: v.U.NoWrap,
+                        display: g.R.Flex,
+                        alignItems: g.c.Center,
+                        justifyContent: g._7.Between,
+                        flexWrap: g.U.NoWrap,
                         margin: "auto",
                         padding: {
                             x: 2,
                             y: .5
                         }
-                    }, s.createElement(v._8, {
-                        display: v.R.InlineFlex,
-                        alignItems: v.c.Center,
+                    }, s.createElement(g._8, {
+                        display: g.R.InlineFlex,
+                        alignItems: g.c.Center,
                         padding: {
                             right: .5
                         }
-                    }, s.createElement(v._8, {
+                    }, s.createElement(g._8, {
                         className: "blue-bar__logo",
-                        display: v.R.InlineFlex,
+                        display: g.R.InlineFlex,
                         margin: {
                             right: .5
                         },
                         flexShrink: 0
-                    }, s.createElement(v._22, {
-                        asset: v._23.Crown,
+                    }, s.createElement(g._22, {
+                        asset: g._23.Crown,
                         width: 20,
                         height: 13
-                    })), s.createElement(v.Q, {
+                    })), s.createElement(g.Q, {
                         bold: !0,
-                        type: v._46.Span,
+                        type: g._46.Span,
                         noWrap: !0,
-                        fontSize: v.V.Size6
-                    }, s.createElement(v._2, {
+                        fontSize: g.V.Size6
+                    }, s.createElement(g._2, {
                         padding: {
                             x: 1
                         }
@@ -886,26 +886,26 @@ webpackJsonp([56], {
                         href: n,
                         target: "_blank",
                         rel: "noopener noreferrer"
-                    }, r))), s.createElement(v.Q, {
+                    }, r))), s.createElement(g.Q, {
                         className: "blue-bar__headline",
-                        type: v._46.Span,
-                        fontSize: v.V.Size6
-                    }, i)), s.createElement(v._8, {
-                        display: v.R.InlineFlex,
+                        type: g._46.Span,
+                        fontSize: g.V.Size6
+                    }, i)), s.createElement(g._8, {
+                        display: g.R.InlineFlex,
                         flexShrink: 0
-                    }, s.createElement(v.Q, {
+                    }, s.createElement(g.Q, {
                         bold: !0,
-                        type: v._46.Span,
+                        type: g._46.Span,
                         noWrap: !0,
-                        fontSize: v.V.Size6,
-                        color: v.K.Base
+                        fontSize: g.V.Size6,
+                        color: g.K.Base
                     }, s.createElement("a", {
                         className: "blue-bar__link",
                         href: a,
                         target: "_blank",
                         rel: "noopener noreferrer"
                     }, o)))))
-                }, t = a.__decorate([Object(d.a)(x, {
+                }, t = a.__decorate([Object(d.a)(D, {
                     options: function() {
                         return {
                             variables: {
@@ -916,13 +916,13 @@ webpackJsonp([56], {
                     }
                 }), Object(f.d)("BlueBarComponent")], t)
             }(s.Component),
-            P = n("dnng");
+            I = n("dnng");
         n.d(t, "c", function() {
-            return C
+            return N
         }), n.d(t, "a", function() {
             return T
         }), n.d(t, "b", function() {
-            return P.a
+            return I.a
         }), n.d(t, "d", function() {
             return O.e
         }), n.d(t, !1, function() {
@@ -930,6 +930,86 @@ webpackJsonp([56], {
         })
     },
     9856: function(e, t) {},
+    "9Fb+": function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            i = n("KSGD"),
+            a = n("GiK3"),
+            o = n("6sO2");
+
+        function s(e, t) {
+            return function(n) {
+                return function(s) {
+                    function l() {
+                        var e = null !== s && s.apply(this, arguments) || this;
+                        return e.state = {
+                            hadImpression: !1,
+                            didScroll: !1
+                        }, e.logger = o.j.withCategory("with-impression-listener"), e.setRef = function(t) {
+                            return e.element = t
+                        }, e.registerImpressionCallback = function(t) {
+                            e.reportImpression = t
+                        }, e
+                    }
+                    return r.__extends(l, s), l.prototype.componentDidMount = function() {
+                        this.scrollContext = this.context;
+                        var n = this.scrollContext.registerReceiver;
+                        n ? t && void 0 !== t.percentage && void 0 !== t.pixels ? this.logger.warn("<" + e + " /> should only be initialized with percentage or pixel thresholds, not both") : this.unregister = n(this) : this.logger.warn("<" + e + " /> initialized missing a <ScrollableArea /> provider")
+                    }, l.prototype.componentWillUnmount = function() {
+                        this.unregister && this.unregister()
+                    }, l.prototype.render = function() {
+                        var e = {
+                            impressionListener: {
+                                hadImpression: this.state.hadImpression,
+                                didScroll: this.state.didScroll,
+                                registerImpressionCallback: this.registerImpressionCallback
+                            }
+                        };
+                        return a.createElement("div", {
+                            ref: this.setRef
+                        }, a.createElement(n, r.__assign({}, this.props, e)))
+                    }, l.prototype.checkVisible = function(e) {
+                        return r.__awaiter(this, void 0, void 0, function() {
+                            var t, n;
+                            return r.__generator(this, function(r) {
+                                return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
+                                    hadImpression: t,
+                                    didScroll: n
+                                }), this.reportImpression && this.reportImpression(n)), [2]
+                            })
+                        })
+                    }, l.prototype.isVisible = function(e) {
+                        if (!this.element) return !1;
+                        var n = this.element.getBoundingClientRect();
+                        if (n.left < e.right && n.right > e.left && n.top < e.bottom && n.bottom > e.top) {
+                            if (!t || 0 === t.percentage || 0 === t.pixels) return !0;
+                            var r = t.percentage,
+                                i = t.pixels,
+                                a = n.bottom - n.top,
+                                o = e.bottom - e.top,
+                                s = Math.min(e.bottom - n.top, a, o);
+                            if (i) {
+                                if (a >= i) return s >= i;
+                                r = 100
+                            }
+                            return !r || 100 * (s / a) >= r
+                        }
+                        return !1
+                    }, l.prototype.isScrolled = function() {
+                        if (!this.scrollContext) return !1;
+                        var e = this.scrollContext.getScrollContent();
+                        return !(!e || 0 === e.scrollTop)
+                    }, l.contextTypes = {
+                        registerReceiver: i.func,
+                        getScrollContent: i.func
+                    }, l
+                }(a.Component)
+            }
+        }
+        n.d(t, "a", function() {
+            return s
+        })
+    },
     AGQo: function(e, t, n) {
         "use strict";
         var r, i = n("TToO"),
@@ -1200,7 +1280,7 @@ webpackJsonp([56], {
             u = n("8PKe"),
             p = n("Odds"),
             m = l.a.wrap(function() {
-                return n.e(87).then(n.bind(null, "HQb3"))
+                return n.e(98).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             f = function(e) {
                 function t() {
@@ -1246,9 +1326,9 @@ webpackJsonp([56], {
                     theme: e.ui.theme
                 }
             })(f),
-            v = Object(i.f)(h);
+            g = Object(i.f)(h);
         n.d(t, "BitsRoot", function() {
-            return v
+            return g
         })
     },
     Kkxm: function(e, t) {
@@ -1384,22 +1464,23 @@ webpackJsonp([56], {
             }(a.Component),
             p = n("lfvs"),
             m = n("oIkB"),
-            f = n("AGQo"),
-            h = n("Tr7p"),
+            f = n("9Fb+"),
+            h = n("AGQo"),
+            g = n("Tr7p"),
             v = n("R0Kh"),
-            g = (n("w/8h"), n("sq7i")),
-            _ = function(e) {
+            _ = (n("w/8h"), n("sq7i")),
+            k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClick = function(e) {
-                        Object(h.d)({
+                        Object(g.d)({
                             offerID: t.props.offerID,
                             externalURL: t.props.externalURL,
                             hasPrime: !0,
                             index: t.props.index
                         }, t.props.offerType), t.props.claimCallback && t.props.offerType !== v.d.EXTERNAL_OFFER && t.props.claimCallback(e)
                     }, t.onHover = function() {
-                        Object(h.e)({
+                        Object(g.e)({
                             offerID: t.props.offerID,
                             externalURL: t.props.externalURL,
                             hasPrime: !0,
@@ -1421,7 +1502,7 @@ webpackJsonp([56], {
                 }, t.prototype.getClaimButton = function() {
                     var e = this.props,
                         t = this.getButtonText(),
-                        n = a.createElement(f.a, {
+                        n = a.createElement(h.a, {
                             onHover: this.onHover
                         }, a.createElement(d.v, {
                             fullWidth: !0,
@@ -1430,7 +1511,7 @@ webpackJsonp([56], {
                             onClick: this.onClick,
                             "data-a-target": "prime-claim-button"
                         }, t));
-                    return e.offerType === v.d.EXTERNAL_OFFER ? a.createElement(f.a, {
+                    return e.offerType === v.d.EXTERNAL_OFFER ? a.createElement(h.a, {
                         onHover: this.onHover
                     }, a.createElement(d.v, {
                         fullWidth: !0,
@@ -1452,14 +1533,14 @@ webpackJsonp([56], {
                         default:
                             return Object(o.d)("Claim Offer", "PrimeClaimButton")
                     }
-                }, t = i.__decorate([Object(l.a)(g), Object(c.d)("PrimeClaimButton")], t)
+                }, t = i.__decorate([Object(l.a)(_), Object(c.d)("PrimeClaimButton")], t)
             }(a.Component),
-            k = (n("zAvr"), function(e) {
+            O = (n("zAvr"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.toggleShowDescription = function() {
                         var e = !n.state.showDescription;
-                        Object(h.g)(e, {
+                        Object(g.g)(e, {
                             offerID: n.props.offerID,
                             externalURL: n.props.externalURL,
                             hasPrime: n.props.hasPrime,
@@ -1468,12 +1549,12 @@ webpackJsonp([56], {
                             showDescription: e
                         })
                     }, n.onHover = function() {
-                        n.state.showDescription ? Object(h.f)({
+                        n.state.showDescription ? Object(g.f)({
                             offerID: n.props.offerID,
                             externalURL: n.props.externalURL,
                             hasPrime: n.props.hasPrime,
                             index: n.props.index
-                        }) : Object(h.h)({
+                        }) : Object(g.h)({
                             offerID: n.props.offerID,
                             externalURL: n.props.externalURL,
                             hasPrime: n.props.hasPrime,
@@ -1494,7 +1575,7 @@ webpackJsonp([56], {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(f.a, {
+                    }, a.createElement(h.a, {
                         onHover: this.onHover
                     }, a.createElement(d.v, {
                         "data-a-target": "prime-claim-description-button",
@@ -1523,19 +1604,19 @@ webpackJsonp([56], {
                     })))), t
                 }, t = i.__decorate([Object(c.d)("PrimeClaimDescription")], t)
             }(a.Component)),
-            O = n("Hs3O"),
-            y = function(e) {
+            y = n("Hs3O"),
+            b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClick = function() {
-                        Object(h.k)({
+                        Object(g.l)({
                             offerID: t.props.offerID,
                             externalURL: t.getLink(),
                             hasPrime: !1,
                             index: t.props.index
                         })
                     }, t.onHover = function() {
-                        Object(h.l)({
+                        Object(g.m)({
                             offerID: t.props.offerID,
                             externalURL: t.getLink(),
                             hasPrime: !1,
@@ -1552,7 +1633,7 @@ webpackJsonp([56], {
                             top: 2,
                             bottom: 1
                         }
-                    }, a.createElement(f.a, {
+                    }, a.createElement(h.a, {
                         onHover: this.onHover
                     }, a.createElement(d.v, {
                         fullWidth: !0,
@@ -1562,12 +1643,12 @@ webpackJsonp([56], {
                     }, Object(o.d)("Start Your Free Trial", "PrimeUpsellButton"))))
                 }, t.prototype.getLink = function() {
                     if (this.props.externalURL) return this.props.externalURL;
-                    var e = this.props.externalReftag || O.c;
-                    return Object(O.d)(e, window.location.pathname.substring(1))
+                    var e = this.props.externalReftag || y.c;
+                    return Object(y.d)(e, window.location.pathname.substring(1))
                 }, t = i.__decorate([Object(c.d)("PrimeUpsellButton")], t)
             }(a.Component),
-            b = n("4VmI"),
-            E = function(e) {
+            E = n("4VmI"),
+            C = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1584,7 +1665,7 @@ webpackJsonp([56], {
                     }, this.getCallToAction(), this.getClaimDescriptionSection())
                 }, t.prototype.getCallToAction = function() {
                     var e = this.props.data;
-                    return Object(v.j)(e) ? a.createElement(_, {
+                    return Object(v.j)(e) ? a.createElement(k, {
                         offerType: this.props.offerType,
                         offerID: this.props.offerID,
                         claimCallback: this.props.claimCallback,
@@ -1592,7 +1673,7 @@ webpackJsonp([56], {
                         orientation: this.props.orientation,
                         externalURL: this.props.externalURL,
                         index: this.props.index
-                    }) : a.createElement(y, {
+                    }) : a.createElement(b, {
                         externalReftag: this.props.externalReftag,
                         externalURL: this.props.externalURL,
                         offerID: this.props.offerID,
@@ -1601,7 +1682,7 @@ webpackJsonp([56], {
                 }, t.prototype.getClaimDescriptionSection = function() {
                     if (this.props.offerType === v.d.EXTERNAL_OFFER) return null;
                     var e = this.props.data;
-                    return a.createElement(k, {
+                    return a.createElement(O, {
                         description: this.props.offerDescription,
                         offerID: this.props.offerID,
                         externalURL: this.props.externalURL,
@@ -1609,10 +1690,10 @@ webpackJsonp([56], {
                         orientation: this.props.orientation,
                         hasPrime: Object(v.j)(e)
                     })
-                }, t = i.__decorate([Object(l.a)(b), Object(c.d)("PrimeInstructions")], t)
+                }, t = i.__decorate([Object(l.a)(E), Object(c.d)("PrimeInstructions")], t)
             }(a.Component),
             N = n("dnng"),
-            C = (n("nFc2"), function(e) {
+            S = (n("nFc2"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.setRef = function(e) {
@@ -1655,7 +1736,7 @@ webpackJsonp([56], {
                     }))
                 }, t = i.__decorate([Object(c.d)("CopyButton")], t)
             }(a.Component)),
-            S = function(e) {
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -1685,7 +1766,7 @@ webpackJsonp([56], {
                         value: this.state.value,
                         disabled: this.props.disabled,
                         readOnly: this.props.readOnly
-                    })), a.createElement(d._8, null, a.createElement(C, {
+                    })), a.createElement(d._8, null, a.createElement(S, {
                         clipboardText: this.state.value
                     }))) : null
                 }, t = i.__decorate([Object(c.d)("CopyableItem")], t)
@@ -1753,7 +1834,7 @@ webpackJsonp([56], {
                     autoReportInteractive: !0
                 })], t)
             }(a.Component)),
-            x = (n("S5wX"), function(e) {
+            T = (n("S5wX"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getPrimeClaimInstructions = function() {
@@ -1773,7 +1854,7 @@ webpackJsonp([56], {
                     }, this.getCodeOrConfirmation(e), this.getPrimeClaimInstructions())
                 }, t.prototype.getCodeOrConfirmation = function(e) {
                     var t = Object(v.h)(e);
-                    if (this.props.code && this.props.deliveryMethod === v.d.CLAIM_CODE) return a.createElement(d._8, null, a.createElement(S, {
+                    if (this.props.code && this.props.deliveryMethod === v.d.CLAIM_CODE) return a.createElement(d._8, null, a.createElement(x, {
                         initialText: this.props.code,
                         readOnly: !0,
                         textCenter: !0
@@ -1822,7 +1903,7 @@ webpackJsonp([56], {
                     })), Object(o.d)("Added To Your Twitch Account", "PrimeRedeem"))))
                 }, t = i.__decorate([Object(c.d)("PrimeRedeem")], t)
             }(a.Component)),
-            T = n("/3Cb"),
+            I = n("/3Cb"),
             P = (n("v+rJ"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1937,14 +2018,14 @@ webpackJsonp([56], {
                         }
                         if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && Object(v.j)(i)) {
                             var s = t.state.claimData || r.claimData;
-                            return a.createElement(x, {
+                            return a.createElement(T, {
                                 claimInstructions: e.claimInstructions,
                                 code: s,
                                 deliveryMethod: e.deliveryMethod,
                                 orientation: t.props.orientation
                             })
                         }
-                        return a.createElement(E, {
+                        return a.createElement(C, {
                             offerID: e.id,
                             offerDescription: e.description,
                             offerType: e.deliveryMethod,
@@ -1992,10 +2073,19 @@ webpackJsonp([56], {
                                 })
                             })
                         }
+                    }, t.trackImpression = function() {
+                        var e = t.props.offer.content && t.props.offer.content.externalURL,
+                            n = t.props.data.currentUser && t.props.data.currentUser.hasPrime || !1;
+                        Object(g.k)({
+                            offerID: t.props.offer.id,
+                            externalURL: e || "",
+                            index: t.props.index,
+                            hasPrime: n
+                        })
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
+                    this.props.latencyTracking.reportInteractive(), this.props.impressionListener.registerImpressionCallback(this.trackImpression)
                 }, t.prototype.render = function() {
                     var e = this.props.offer;
                     if (e) {
@@ -2007,13 +2097,16 @@ webpackJsonp([56], {
                     return (e.self || {
                         hasEntitlement: !1
                     }).hasEntitlement
-                }, t = i.__decorate([Object(l.a)(b, {
+                }, t = i.__decorate([Object(l.a)(E, {
                     name: "data"
-                }), Object(l.a)(T, {
+                }), Object(l.a)(I, {
                     name: "claimPrimeOffer"
                 }), Object(c.d)("PrimeOffer")], t)
             }(a.Component)),
-            I = (n("WC9X"), function(e) {
+            L = Object(f.a)("PrimeOffer", {
+                pixels: 100
+            })(P),
+            R = (n("WC9X"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2065,7 +2158,7 @@ webpackJsonp([56], {
                     })))
                 }, t = i.__decorate([Object(c.d)("PrimeOfferPlaceholder")], t)
             }(a.Component)),
-            L = (n("7L7x"), function(e) {
+            U = (n("7L7x"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2098,12 +2191,12 @@ webpackJsonp([56], {
                         type: d._24.Brand
                     })), a.createElement(d.Q, {
                         type: d._46.P
-                    }, Object(o.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), a.createElement(y, null))
+                    }, Object(o.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), a.createElement(b, null))
                 }, t = i.__decorate([Object(c.d)("PrimeUpsell")], t)
             }(a.Component)),
-            R = n("LXDe"),
-            U = n("eY4D"),
-            w = (n("DgR+"), function(e) {
+            w = n("LXDe"),
+            F = n("eY4D"),
+            j = (n("DgR+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getOfferListOrientation = function() {
@@ -2116,7 +2209,7 @@ webpackJsonp([56], {
                         return e.loading || !e.error && r
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], n = 0; n < 3; ++n) {
-                            var r = a.createElement(I, {
+                            var r = a.createElement(R, {
                                 key: n,
                                 orientation: t.getOfferListOrientation()
                             });
@@ -2147,7 +2240,7 @@ webpackJsonp([56], {
                     }, this.renderUpsell(), this.renderOfferExperience()))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
-                    if (!Object(v.i)(e) && !Object(v.j)(e) && !this.props.hideUpsell) return a.createElement(L, null)
+                    if (!Object(v.i)(e) && !Object(v.j)(e) && !this.props.hideUpsell) return a.createElement(U, null)
                 }, t.prototype.renderOfferExperience = function() {
                     var e = this,
                         t = this.props.offersData;
@@ -2156,7 +2249,7 @@ webpackJsonp([56], {
                         var n = this.getSortedOffers(),
                             r = n[n.length - 1];
                         return n.map(function(t, n) {
-                            return a.createElement(P, {
+                            return a.createElement(L, {
                                 externalReftag: e.props.externalReftag,
                                 key: t.id,
                                 offer: t,
@@ -2186,15 +2279,15 @@ webpackJsonp([56], {
                     return this.filterOffersByOfferType(t).slice().sort(v.m)
                 }, t.prototype.filterOffersByOfferType = function(e) {
                     var t = this.getFreeGamesWithPrimeOfferIds();
-                    return this.props.offerFilterType === R.a.Game ? e.filter(function(e) {
+                    return this.props.offerFilterType === w.a.Game ? e.filter(function(e) {
                         return t.includes(e.id)
-                    }).sort(v.m) : this.props.offerFilterType === R.a.InGameLoot ? e.filter(function(e) {
+                    }).sort(v.m) : this.props.offerFilterType === w.a.InGameLoot ? e.filter(function(e) {
                         return !t.includes(e.id)
                     }).sort(v.m) : e
                 }, t.prototype.getUserId = function() {
                     var e = this.props.userData;
                     return e && !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
-                }, t = i.__decorate([Object(l.a)(U, {
+                }, t = i.__decorate([Object(l.a)(F, {
                     name: "offersData",
                     options: function() {
                         return {
@@ -2206,7 +2299,7 @@ webpackJsonp([56], {
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
                     }
-                }), Object(l.a)(b, {
+                }), Object(l.a)(E, {
                     name: "userData",
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
@@ -2215,13 +2308,13 @@ webpackJsonp([56], {
                     autoReportInteractive: !0
                 })], t)
             }(a.Component));
-        var F = Object(r.b)(function(e) {
+        var B = Object(r.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded
             }
-        })(w);
+        })(j);
         n.d(t, "a", function() {
-            return F
+            return B
         })
     },
     NikC: function(e, t, n) {
@@ -2262,7 +2355,7 @@ webpackJsonp([56], {
         }), n.d(t, "m", function() {
             return h
         }), n.d(t, "l", function() {
-            return g
+            return v
         }), n.d(t, "e", function() {
             return _
         }), n.d(t, "j", function() {
@@ -2299,7 +2392,7 @@ webpackJsonp([56], {
                 return i(e, e + "--" + n)
             },
             m = function() {
-                return v("seenOffers")
+                return g("seenOffers")
             },
             f = function(e) {
                 o.l.set("seenOffers", e)
@@ -2307,10 +2400,10 @@ webpackJsonp([56], {
             h = function(e, t) {
                 return (e && (e.priority || 0 === e.priority) ? e.priority : 99999) - (t && (t.priority || 0 === t.priority) ? t.priority : 99999)
             },
-            v = function(e) {
+            g = function(e) {
                 return o.l.get(e, [])
             },
-            g = function(e, t) {
+            v = function(e, t) {
                 return void 0 !== e && void 0 !== t && (!e && Object(s.a)(t))
             },
             _ = function() {
@@ -2343,18 +2436,22 @@ webpackJsonp([56], {
             s.n.track(l.SpadeEventType.CrownInteraction, {
                 has_prime: e.hasPrime,
                 client_time: Date.now(),
-                action: r.Hover
+                action: r.Hover,
+                user_agent: navigator.userAgent
             })
         }, t.c = function(e, t) {
             s.n.track(l.SpadeEventType.CrownInteraction, {
                 has_prime: t.hasPrime,
                 client_time: Date.now(),
-                action: e ? r.Open : r.Close
+                action: e ? r.Open : r.Close,
+                user_agent: navigator.userAgent
             })
-        }, t.k = function(e) {
-            u(e, i.Click, a.StartYourFreeTrial)
         }, t.l = function(e) {
+            u(e, i.Click, a.StartYourFreeTrial)
+        }, t.m = function(e) {
             u(e, i.Hover, a.StartYourFreeTrial)
+        }, t.k = function(e) {
+            u(e, i.Impression, a.Offer)
         }, t.g = function(e, t) {
             u(t, i.Click, e ? a.MoreInfo : a.CloseInfo)
         }, t.d = function(e, t) {
@@ -2412,10 +2509,10 @@ webpackJsonp([56], {
             e.Open = "click_open", e.Close = "click_close", e.Hover = "hover"
         }(r || (r = {})),
         function(e) {
-            e.Hover = "hover", e.Click = "click"
+            e.Hover = "hover", e.Click = "click", e.Impression = "impression"
         }(i || (i = {})),
         function(e) {
-            e.StartYourFreeTrial = "start_your_free_trial", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code"
+            e.StartYourFreeTrial = "start_your_free_trial", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code", e.Offer = "offer"
         }(a || (a = {})),
         function(e) {
             e.TopNav = "top-nav", e.CenterBanner = "center-banner", e.CenterFooter = "center-footer"
@@ -3202,4 +3299,4 @@ webpackJsonp([56], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.bits-445a4cb3f8143fe75420c9c87b01d47c.js.map
+//# sourceMappingURL=pages.bits-a8552874d99a6b3c50c5d8f91dd4ca52.js.map

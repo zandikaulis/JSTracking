@@ -1,4 +1,4 @@
-webpackJsonp([34], {
+webpackJsonp([33], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -1962,7 +1962,7 @@ webpackJsonp([34], {
                     }
                 }), Object(D.a)([{
                     topic: function(e) {
-                        return Object(I.v)(e.currentUserID)
+                        return Object(I.w)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (_ = {}, _[R.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", _)
                 }])], t)
@@ -2635,7 +2635,7 @@ webpackJsonp([34], {
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(I.p)(e.channelID),
+                    topic: Object(I.q)(e.channelID),
                     type: R.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -4908,7 +4908,7 @@ webpackJsonp([34], {
                 }
             }), Object(b.a)([{
                 topic: function(e) {
-                    return Object(S.A)(e.currentUserID)
+                    return Object(S.B)(e.currentUserID)
                 },
                 mapMessageTypesToProps: (me = {}, me[y.PubsubMessageType.WhisperReceived] = "whisperReceived", me[y.PubsubMessageType.WhisperSent] = "whisperSent", me),
                 skipMessage: function(e, t) {
@@ -5232,7 +5232,7 @@ webpackJsonp([34], {
                             }, r.prototype.render = function() {
                                 return a.createElement(t, i.__assign({}, this.props))
                             }, r.prototype.subscribe = function(e) {
-                                this.unsubscriber = Object(h.q)({
+                                this.unsubscriber = Object(h.r)({
                                     fragment: e.fragment,
                                     id: e.id,
                                     topic: e.topic,
@@ -13659,15 +13659,6 @@ webpackJsonp([34], {
                 recording: function() {
                     return Object(l.d)("recording me without my consent", "ReportModalWizard")
                 },
-                scam: function() {
-                    return Object(l.d)("trying to scam Twitch community members", "ReportModalWizard")
-                },
-                underage: function() {
-                    return Object(l.d)("underage for Twitch (12 or under)", "ReportModalWizard")
-                },
-                selfharm: function() {
-                    return Object(l.d)("contemplating or attempting self-harm or suicide", "ReportModalWizard")
-                },
                 abusiveViolence: function() {
                     return Object(l.d)("They're threatening violence or physical harm", "ReportModalWizard")
                 },
@@ -14515,21 +14506,21 @@ webpackJsonp([34], {
                     getLabel: R.identifyUser,
                     items: [S.video_streamer, S.video_someoneElse, S.video_chatSomeone],
                     type: _.MultipleChoice,
-                    value: "video report user"
+                    value: "video identify user"
                 },
                 content: {
                     getTitle: O.reportVideo,
                     getLabel: R.contentGeneral,
                     items: [S.revealPersonalInfo, S.video_labeling, S.video_inactive, S.video_general, S.report_ip, S.violateDevAgreement, S.selfharm],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "video report reason"
                 },
                 general: {
                     getTitle: O.reportVideo,
                     getLabel: R.content,
                     items: [S.report_username, S.violence, S.abusive, S.cheating, S.scam, S.inappropriateContent, S.evasion, S.impersonation, S.underage, S.bitsViolation],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "video general report reason"
                 }
             },
             L = {
@@ -14538,14 +14529,14 @@ webpackJsonp([34], {
                     getLabel: R.contentGeneral,
                     items: [S.revealPersonalInfo, S.evasion, S.spam, S.maliciousRaid, S.report_username, S.messaging_general, S.selfharm],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "message report reason"
                 },
                 general: {
                     getTitle: O.reportMessage,
                     getLabel: R.content,
                     items: [S.report_emotes, S.violence, S.abusive, S.inappropriateContent, S.impersonation, S.underage, S.bitsViolation],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "message general report reason"
                 }
             },
             A = a.__assign({}, L.content, {
@@ -14559,14 +14550,14 @@ webpackJsonp([34], {
                     getLabel: R.contentGeneral,
                     items: [S.revealPersonalInfo, S.inappropriateBadge, S.inappropriateExtension, S.noModeration, S.profile_general, S.report_ip, S.violateDevAgreement, S.selfharm],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "profile report reason"
                 },
                 general: {
                     getTitle: O.reportProfile,
                     getLabel: R.content,
-                    items: [S.report_username, S.violence, S.abusive, S.scam, S.inappropriateContent, S.impersonation, S.underage, S.bitsViolation],
+                    items: [S.report_username, S.violence, S.abusive, S.scam, S.inappropriateContent, S.evasion, S.impersonation, S.underage, S.bitsViolation],
                     type: _.MultipleChoice,
-                    value: "report reason"
+                    value: "profile general report reason"
                 }
             },
             U = {
@@ -14582,23 +14573,24 @@ webpackJsonp([34], {
             },
             B = {
                 getTitle: O.tellUsMore,
+                items: [S.input_description],
                 type: _.Confirm,
                 value: "tell us more"
             },
             P = {
-                general: a.__assign({}, B, {
-                    items: [S.input_description]
-                }),
                 banEvasion: a.__assign({}, B, {
-                    items: [S.input_usernames, S.input_description]
+                    items: [S.input_usernames, S.input_description],
+                    value: "ban evasion tell us more"
                 }),
                 socialMedia: a.__assign({}, B, {
                     items: [S.input_link, S.input_connection, S.input_description],
-                    nextCard: M.socialMedia
+                    nextCard: M.socialMedia,
+                    value: "social media tell us more"
                 }),
                 inPerson: a.__assign({}, B, {
                     items: [S.input_identifyOwner, S.input_description],
-                    nextCard: M.inPerson
+                    nextCard: M.inPerson,
+                    value: "in-person tell us more"
                 })
             },
             V = {
@@ -14635,7 +14627,7 @@ webpackJsonp([34], {
                     },
                     items: [S.location_onTwitch, S.location_anotherSite, S.location_TwitchEvent, S.location_inPerson],
                     type: _.MultipleChoice,
-                    value: "location"
+                    value: "off-site conduct location"
                 },
                 externalSite: {
                     getTitle: function(e) {
@@ -14672,22 +14664,14 @@ webpackJsonp([34], {
                     items: [S.threat_me, S.threat_person, S.threat_group],
                     nextCard: P.inPerson
                 }),
-                external_abusive: {
-                    getTitle: O.reportAbusive,
-                    getLabel: R.relevantStatements,
+                external_abusive: a.__assign({}, V.content, {
                     items: [S.hateSpeech, S.harassment, S.external_abusiveViolence, S.external_commitingViolence, S.swatting, S.personalInfo],
-                    type: _.MultipleChoice,
-                    nextCard: P.inPerson,
-                    value: "abuse type"
-                },
-                inPerson_abusive: {
-                    getTitle: O.reportAbusive,
-                    getLabel: R.relevantStatements,
+                    nextCard: P.inPerson
+                }),
+                inPerson_abusive: a.__assign({}, V.content, {
                     items: [S.hateSpeech, S.harassment, S.inPerson_abusiveViolence, S.inPerson_commitingViolence, S.swatting, S.personalInfo],
-                    type: _.MultipleChoice,
-                    nextCard: P.inPerson,
-                    value: "abuse type"
-                }
+                    nextCard: P.inPerson
+                })
             },
             H = {
                 getTitle: function(e) {
@@ -14742,7 +14726,7 @@ webpackJsonp([34], {
                 value: "impersonation type"
             },
             Q = x,
-            K = P.general,
+            K = B,
             $ = I,
             Y = {
                 video: j.identifyUser,
@@ -14758,7 +14742,6 @@ webpackJsonp([34], {
                 general_messaging: L.general,
                 general_profile: F.general,
                 "channel owner": F.content,
-                "channel moderator": L.content,
                 "community member": L.content,
                 "on twitch": F.content,
                 "another site": W.externalSite,
@@ -14771,7 +14754,7 @@ webpackJsonp([34], {
                 "external site; committing violence": W.external_violence,
                 "external site; scam": P.socialMedia,
                 "in-person; threatening": W.inPerson_violence,
-                "in-person; hateful": W.inPerson_abusive,
+                "in-person; hateful/harassing": W.inPerson_abusive,
                 "in-person; threatening violence": W.inPerson_violence,
                 "in-person; committing violence": W.inPerson_violence,
                 "ban evasion": q,
@@ -14783,8 +14766,6 @@ webpackJsonp([34], {
                 "committing violence": V.violence,
                 abusive: V.content,
                 "inappropriate content": G,
-                "sitewide ban": P.banEvasion,
-                "chat ban": P.banEvasion,
                 "intellectual property": M.legal,
                 "violating developer agreement": M.legal
             },
@@ -18961,13 +18942,13 @@ webpackJsonp([34], {
             return a.PubsubTopic.ChatRoomsChannel + "." + e
         }, t.g = function(e) {
             return a.PubsubTopic.ChatRoomsUser + "." + e
-        }, t.z = function(e) {
+        }, t.A = function(e) {
             return a.PubsubTopic.VideoThumbnailProcessing + "." + e
         }, t.j = function(e) {
             return a.PubsubTopic.ImageUpload + "." + e
-        }, t.s = function(e) {
+        }, t.t = function(e) {
             return a.PubsubTopic.UploadService + "." + e
-        }, t.y = function(e) {
+        }, t.z = function(e) {
             return a.PubsubTopic.VideoPlaybackById + "." + e
         }, t.m = function(e) {
             return a.PubsubTopic.PayoutOnboardingEvents + "." + e
@@ -18977,33 +18958,35 @@ webpackJsonp([34], {
             return a.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
         }, t.o = function(e) {
             return a.PubsubTopic.Raid + "." + e
+        }, t.p = function(e) {
+            return a.PubsubTopic.StreamChange + "." + e
         }, t.h = function(e) {
             return a.PubsubTopic.Friendship + "." + e
         }, t.b = function(e) {
             return a.PubsubTopic.ChannelBitsPinEvents + "." + e
         }, t.a = function(e) {
             return a.PubsubTopic.BitsLeaderboardEvents + "." + e.id
-        }, t.t = function(e) {
+        }, t.u = function(e) {
             return a.PubsubTopic.UserBitsUpdates + "." + e
-        }, t.x = function(e) {
+        }, t.y = function(e) {
             return a.PubsubTopic.UserSubscribeEvents + "." + e
-        }, t.w = function(e) {
+        }, t.x = function(e) {
             return a.PubsubTopic.UserCrateEvents + "." + e
         }, t.i = function(e) {
             return a.PubsubTopic.CampaignGlobalEvents + "." + e
-        }, t.u = function(e) {
-            return a.PubsubTopic.CampaignUserEvents + "." + e
         }, t.v = function(e) {
+            return a.PubsubTopic.CampaignUserEvents + "." + e
+        }, t.w = function(e) {
             return a.PubsubTopic.UserCommerceEvents + "." + e
-        }, t.A = function(e) {
+        }, t.B = function(e) {
             return a.PubsubTopic.Whispers + "." + e
         }, t.l = function(e) {
             return a.PubsubTopic.OnsiteNotifications + "." + e
-        }, t.p = function(e) {
+        }, t.q = function(e) {
             return a.PubsubTopic.StreamChatRoom + "." + e
         }, t.d = function(e) {
             return a.PubsubTopic.ChannelEventUpdates + "." + e
-        }, t.r = function(e) {
+        }, t.s = function(e) {
             return i.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -19014,7 +18997,7 @@ webpackJsonp([34], {
                     })
                 }
             })
-        }, t.q = function(e) {
+        }, t.r = function(e) {
             return i.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -27560,7 +27543,7 @@ webpackJsonp([34], {
                     }, o.prototype.render = function() {
                         return a.createElement(t, i.__assign({}, this.props))
                     }, o.prototype.subscribe = function(e) {
-                        this.unsubscriber = Object(r.r)({
+                        this.unsubscriber = Object(r.s)({
                             query: e.query,
                             variables: e.variables,
                             topic: e.topic,
@@ -33353,7 +33336,7 @@ webpackJsonp([34], {
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(m.t)(e.userID),
+                    topic: Object(m.u)(e.userID),
                     type: c.PubsubMessageType.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
@@ -39638,7 +39621,7 @@ webpackJsonp([34], {
                 return !e.channelID
             },
             topic: function(e) {
-                return e.channelID ? Object(c.p)(e.channelID) : ""
+                return e.channelID ? Object(c.q)(e.channelID) : ""
             },
             mapMessageTypesToProps: (C = {}, C[d.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", C)
         }]))(_);
@@ -43297,7 +43280,7 @@ webpackJsonp([34], {
                     variables: {
                         id: t.channelID
                     },
-                    topic: Object(p.p)(t.channelID),
+                    topic: Object(p.q)(t.channelID),
                     type: u.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(n, i) {
                         return n.data.is_rituals_enabled ? e(function() {
@@ -43308,7 +43291,7 @@ webpackJsonp([34], {
                 }
             }), Object(d.a)([{
                 topic: function(e) {
-                    return Object(p.y)(e.channelID)
+                    return Object(p.z)(e.channelID)
                 },
                 mapMessageTypesToProps: (R = {}, R[u.PubsubMessageType.ChannelStreamUp] = "streamUp", R[u.PubsubMessageType.ChannelStreamDown] = "streamDown", R),
                 skip: D
@@ -45700,4 +45683,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-7002ffdae29c50b44ea862f124ec3f0d.js.map
+//# sourceMappingURL=pages.popout-chat-2ecde8c18f2a6310b97e487487bd6cf6.js.map

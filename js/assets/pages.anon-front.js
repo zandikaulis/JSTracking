@@ -1387,10 +1387,10 @@ webpackJsonp([55], {
                 }), Object(d.d)("TopChannels")], t)
             }(i.Component)),
             I = (n("9zTP"), m.a.wrap(function() {
-                return n.e(88).then(n.bind(null, "yEZg"))
+                return n.e(99).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
             R = m.a.wrap(function() {
-                return n.e(86).then(n.bind(null, "2hMh"))
+                return n.e(96).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
             A = function(e) {
                 function t(t) {
@@ -2413,7 +2413,7 @@ webpackJsonp([55], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(106).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(120).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2425,7 +2425,7 @@ webpackJsonp([55], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(105).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(119).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2437,7 +2437,7 @@ webpackJsonp([55], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(104).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(118).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2449,7 +2449,7 @@ webpackJsonp([55], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(103).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(117).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2782,7 +2782,9 @@ webpackJsonp([55], {
                             },
                             thumbnailImageProps: {
                                 src: t.props.video.previewThumbnailURL,
-                                alt: t.props.video.title
+                                alt: t.props.video.title,
+                                onLoad: t.reportInteractive,
+                                onError: t.reportInteractive
                             },
                             channelLogin: t.props.video.owner && t.props.video.owner.login || "",
                             channelLoginLinkTo: {
@@ -2861,7 +2863,7 @@ webpackJsonp([55], {
                             "data-test-selector": _,
                             icon: h._23.GlyphLength,
                             label: Object(l.d)("length", "VideoPreviewCard"),
-                            value: Object(p.a)(t.props.video.lengthSeconds)
+                            value: Object(p.b)(t.props.video.lengthSeconds)
                         })), t.videoPreviewImage(), e))), o.createElement(h.D, null, o.createElement(h._8, {
                             display: h.R.Flex,
                             flexDirection: h.T.Row,
@@ -2881,17 +2883,19 @@ webpackJsonp([55], {
                             hovered: !1
                         })
                     }, t.onPreviewImageLoad = function(e) {
-                        t.props.latencyTracking.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewLoad: !0
                         })
                     }, t.onPreviewImageLoadError = function(e) {
-                        e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                        t.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
                             didAnimatedPreviewFailToLoad: !0
                         })
+                    }, t.reportInteractive = function() {
+                        t.props.latencyTracking.reportInteractive()
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.overrideImageInteractivity && this.props.latencyTracking.reportInteractive()
+                    this.props.overrideImageInteractivity && this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = {
                         assignments: {
@@ -4799,7 +4803,7 @@ webpackJsonp([55], {
                     bottomRight: void 0
                 }) : M(this.props) ? r.createElement(N, {
                     topLeft: r.createElement(F, {
-                        value: Object(z.a)(this.props.durationInSeconds),
+                        value: Object(z.b)(this.props.durationInSeconds),
                         icon: c._23.GlyphArrRight,
                         withBackground: !0
                     }),
@@ -4813,7 +4817,7 @@ webpackJsonp([55], {
                     progressBarPercent: this.props.watchedProgressPercent
                 }) : H(this.props) ? r.createElement(N, {
                     topLeft: r.createElement(F, {
-                        value: Object(z.a)(this.props.durationInSeconds),
+                        value: Object(z.b)(this.props.durationInSeconds),
                         icon: c._23.Clip,
                         withBackground: !0
                     }),
@@ -4964,4 +4968,4 @@ webpackJsonp([55], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-bb0b1b412da296a40cc4af4c48d74526.js.map
+//# sourceMappingURL=pages.anon-front-cfb2d6f72b1993cea6f71dea443e3316.js.map

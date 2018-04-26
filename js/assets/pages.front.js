@@ -469,7 +469,7 @@ webpackJsonp([53], {
                             s = e.thumbnailURL,
                             m = e.type,
                             u = e.viewCount,
-                            p = a && a > 0 ? Object(d.a)(a) : "";
+                            p = a && a > 0 ? Object(d.b)(a) : "";
                         return r.createElement("a", {
                             href: "#",
                             onClick: t.handleClick,
@@ -8671,4 +8671,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-9e1505989f322d9b3385bb6860cc177f.js.map
+//# sourceMappingURL=pages.front-a72f857fda4ffbdda49ed4451a8186a6.js.map
