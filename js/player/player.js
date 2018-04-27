@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".fa394d4b7d09ec98b23b.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ff945420a206cb2af429.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -31583,7 +31583,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.27-172332+875523847682dac52cb237456125a0886a19a930",
+                    app_version: "2018.04.27-181302+a07868d0cddeec921c10fe2cb9806a673d9466c1",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -31705,6 +31705,7 @@
                 },
                 t = {
                     method: "POST",
+                    mode: "no-cors",
                     body: new Blob([y([e])], {
                         type: "application/x-www-form-urlencoded; charset=UTF-8"
                     })
