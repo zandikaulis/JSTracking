@@ -2712,19 +2712,19 @@ window.SiteOptions = {
         },
         "728b6ff4-10f7-414e-abd7-acae0384ba20": {
             "name": "android_videoplayer_r6_1_2",
-            "v": 3576,
+            "v": 3602,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 10,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 10,
                 "value": "playercore"
             }, {
-                "weight": 0,
+                "weight": 79,
                 "value": "exoplayer"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "exoplayer_2"
             }, {
                 "weight": 0,
