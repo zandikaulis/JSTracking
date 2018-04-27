@@ -1,4 +1,4 @@
-webpackJsonp([74], {
+webpackJsonp([75], {
     "9u8h": function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
@@ -237,7 +237,7 @@ webpackJsonp([74], {
                         padding: 3
                     }, n.createElement(l.Q, {
                         className: "title",
-                        type: l._46.H2
+                        type: l._47.H2
                     }, Object(s.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
                 }, t.prototype.renderVerificationStatus = function() {
                     if (this.state.isLoading) return n.createElement(l._8, {
@@ -246,7 +246,7 @@ webpackJsonp([74], {
                         },
                         "data-test-selector": "verify-loading"
                     }, n.createElement(l.Q, {
-                        type: l._46.Strong
+                        type: l._47.Strong
                     }, Object(s.d)("Verifying Email...", "EmailVerification")));
                     if (this.state.isEmailVerified) return n.createElement(l._8, {
                         margin: {
@@ -264,7 +264,7 @@ webpackJsonp([74], {
                         "data-test-selector": "verify-error"
                     }, n.createElement(l.Q, {
                         color: l.K.Error,
-                        type: l._46.Strong
+                        type: l._47.Strong
                     }, e))
                 }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
                     return e ? "Not Found" === e ? Object(s.d)("Not Found", "EmailVerification") : e : Object(s.d)("Unknown Error", "EmailVerification")
@@ -325,4 +325,4 @@ webpackJsonp([74], {
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-e9503b45564da2b5e6cb74f2d6d4a0b7.js.map
+//# sourceMappingURL=pages.email-verification-bc546281774c4fd03386f45e87d8bd4a.js.map

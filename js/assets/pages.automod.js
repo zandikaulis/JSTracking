@@ -1,4 +1,4 @@
-webpackJsonp([104], {
+webpackJsonp([105], {
     "2BIs": function(e, t) {},
     KpHk: function(e, t) {},
     RdZX: function(e, t, n) {
@@ -60,11 +60,11 @@ webpackJsonp([104], {
                         onClick: this.toggleCategoryMenu
                     }, this.menuOption(this.props.categoryLevel)), this.menuItems())))
                 }, t.prototype.menuItems = function() {
-                    return this.state.menuItemsVisible ? o.createElement(y._32, {
+                    return this.state.menuItemsVisible ? o.createElement(y._33, {
                         border: !0,
                         background: y.n.Alt,
                         position: y._15.Absolute,
-                        zIndex: y._59.Above
+                        zIndex: y._60.Above
                     }, this.renderMenuItem(0), this.renderMenuItem(6), this.renderMenuItem(5), this.renderMenuItem(4), this.renderMenuItem(3)) : ""
                 }, t.prototype.renderMenuItem = function(e) {
                     return o.createElement(y._6, {
@@ -99,18 +99,18 @@ webpackJsonp([104], {
                         padding: {
                             right: .5
                         }
-                    }, o.createElement(y._22, {
-                        asset: y._23.Automod,
+                    }, o.createElement(y._23, {
+                        asset: y._24.Automod,
                         height: 13,
                         width: 13,
-                        type: y._24.Alt2
+                        type: y._25.Alt2
                     })));
                     var r = t[n];
                     return o.createElement(y._8, {
                         display: y.R.Flex,
                         padding: .5
                     }, a, o.createElement(y.Q, {
-                        align: y._56.Middle,
+                        align: y._57.Middle,
                         color: y.K.Alt2
                     }, r))
                 }, t = r.__decorate([Object(h.d)("AutomodCategoryDisplay")], t)
@@ -130,7 +130,7 @@ webpackJsonp([104], {
                         a = Object(s.d)("Level {lvl,number}", {
                             lvl: t
                         }, "AutoModSettings");
-                    return o.createElement(y._32, {
+                    return o.createElement(y._33, {
                         borderLeft: !0,
                         borderRight: !0,
                         padding: {
@@ -143,8 +143,8 @@ webpackJsonp([104], {
                         }
                     }, o.createElement(y.Q, {
                         color: y.K.Alt2,
-                        type: y._46.P
-                    }, Object(s.d)("Your AutoMod setting:", "AutoModSettingsSlider"))), o.createElement(y._21, {
+                        type: y._47.P
+                    }, Object(s.d)("Your AutoMod setting:", "AutoModSettingsSlider"))), o.createElement(y._22, {
                         min: 0,
                         max: 4,
                         step: 1,
@@ -159,8 +159,8 @@ webpackJsonp([104], {
                         }
                     }, a), o.createElement(y.Q, {
                         color: y.K.Alt2,
-                        type: y._46.Strong
-                    }, n)), o.createElement(y._32, {
+                        type: y._47.Strong
+                    }, n)), o.createElement(y._33, {
                         background: y.n.Alt2,
                         padding: 1,
                         className: "auto-mod-wrapper__carat",
@@ -330,15 +330,8 @@ webpackJsonp([104], {
                         "data-a-target": "add-term",
                         "data-test-selector": a.AddTermButton
                     }, Object(s.d)("Add", "ChatTermsControl")))), o.createElement(y._8, {
-                        className: "chat-terms-list-wrapper"
-                    }, o.createElement(y._8, {
-                        className: "chat-terms-list",
-                        margin: {
-                            top: 1
-                        }
-                    }, o.createElement(y._8, {
                         className: "chat-terms"
-                    }, e)))))
+                    }, e)))
                 }, t.prototype.renderTerm = function(e, t) {
                     if (t === this.state.editingIndex) return this.renderEditTermRow(e, t);
                     var n = null;
@@ -417,22 +410,22 @@ webpackJsonp([104], {
                         fullHeight: !0
                     }, n)), o.createElement(y.L, {
                         cols: 1
-                    }, o.createElement(y._49, {
+                    }, o.createElement(y._50, {
                         label: l
                     }, o.createElement(y.w, {
                         "data-a-target": "edit-term",
                         "data-test-selector": a.EditTermButton,
-                        icon: y._23.Edit,
+                        icon: y._24.Edit,
                         ariaLabel: l,
                         onClick: this.handleEdit
                     }))), o.createElement(y.L, {
                         cols: 1
-                    }, o.createElement(y._49, {
+                    }, o.createElement(y._50, {
                         label: c
                     }, o.createElement(y.w, {
                         "data-a-target": "delete-term",
                         "data-test-selector": a.DelTermButton,
-                        icon: y._23.Trash,
+                        icon: y._24.Trash,
                         ariaLabel: c,
                         onClick: this.handleDelete
                     })), d))))
@@ -466,20 +459,20 @@ webpackJsonp([104], {
                         onKeyDown: this.handleEditKeyDown
                     })), o.createElement(y._8, {
                         flexShrink: 0
-                    }, o.createElement(y._49, {
+                    }, o.createElement(y._50, {
                         label: n
                     }, o.createElement(y.w, {
                         "data-a-target": "save-term-edit",
                         "data-test-selector": a.EditConfirmButton,
-                        icon: y._23.Check,
+                        icon: y._24.Check,
                         ariaLabel: n,
                         onClick: this.confirmEdit
-                    })), o.createElement(y._49, {
+                    })), o.createElement(y._50, {
                         label: i
                     }, o.createElement(y.w, {
                         "data-a-target": "cancel-term-edit",
                         "data-test-selector": a.EditCancelButton,
-                        icon: y._23.Close,
+                        icon: y._24.Close,
                         ariaLabel: i,
                         onClick: this.cancelEdit
                     })))), r))
@@ -501,7 +494,7 @@ webpackJsonp([104], {
                         show: !0
                     }, o.createElement(y._8, {
                         margin: 1
-                    }, o.createElement(y._32, {
+                    }, o.createElement(y._33, {
                         borderBottom: !0,
                         margin: {
                             bottom: .5
@@ -741,19 +734,19 @@ webpackJsonp([104], {
                             onboardingVisible: !1
                         })
                     }, t.renderSlider = function(e) {
-                        return e ? o.createElement(y._32, {
+                        return e ? o.createElement(y._33, {
                             borderLeft: !0,
                             borderRight: !0,
                             padding: 2,
                             "data-test-selector": j
                         }, o.createElement("img", {
                             src: "https://s.jtvnw.net/jtv_user_pictures/hosted_images/automod_setup_en.gif"
-                        }), o.createElement(y._32, null, o.createElement(y._32, {
+                        }), o.createElement(y._33, null, o.createElement(y._33, {
                             padding: {
                                 top: 2
                             },
-                            textAlign: y._42.Center
-                        }, Object(s.d)("Your current AutoMod level: 0", "AutoModSettings")), o.createElement(y._32, {
+                            textAlign: y._43.Center
+                        }, Object(s.d)("Your current AutoMod level: 0", "AutoModSettings")), o.createElement(y._33, {
                             margin: {
                                 x: 2
                             },
@@ -761,12 +754,12 @@ webpackJsonp([104], {
                                 y: 1,
                                 x: 5
                             },
-                            textAlign: y._42.Center
+                            textAlign: y._43.Center
                         }, o.createElement(y.v, {
                             fullWidth: !0,
                             onClick: t.showAutoModCategories,
                             state: y.A.Default
-                        }, Object(s.d)("Choose level", "AutoModSettings"))))) : t.state.isCustom || void 0 === t.state.level ? o.createElement(y._32, {
+                        }, Object(s.d)("Choose level", "AutoModSettings"))))) : t.state.isCustom || void 0 === t.state.level ? o.createElement(y._33, {
                             borderLeft: !0,
                             borderRight: !0,
                             padding: {
@@ -783,7 +776,7 @@ webpackJsonp([104], {
                             alignItems: y.c.Center
                         }, o.createElement(y.Q, {
                             color: y.K.Alt2,
-                            type: y._46.Span
+                            type: y._47.Span
                         }, Object(s.d)("Your AutoMod setting:", "AutoModSettings")), o.createElement(y._8, {
                             padding: {
                                 left: .5
@@ -791,7 +784,7 @@ webpackJsonp([104], {
                             display: y.R.InlineFlex
                         }, o.createElement(y.Q, {
                             color: y.K.Alt2,
-                            type: y._46.Strong
+                            type: y._47.Strong
                         }, Object(s.d)("Custom", "AutoModSettingsValue"))))), o.createElement(y.L, {
                             cols: 5
                         }, o.createElement(y.v, {
@@ -821,27 +814,27 @@ webpackJsonp([104], {
                     })))
                 }, t.prototype.render = function() {
                     var e = Object(s.d)("AutoMod Rulesets", "AutoModSettings");
-                    if (!this.props.data || this.props.data.loading || this.props.data.error || null === this.props.data.user) return o.createElement(y._32, {
+                    if (!this.props.data || this.props.data.loading || this.props.data.error || null === this.props.data.user) return o.createElement(y._33, {
                         "data-test-selector": "automod-placeholder-container"
                     });
-                    if (!Object(f.a)() || !this.hasAutoModDashboardAccess()) return o.createElement(y._32, {
+                    if (!Object(f.a)() || !this.hasAutoModDashboardAccess()) return o.createElement(y._33, {
                         margin: {
                             top: 2
                         },
                         color: y.K.Alt2,
-                        textAlign: y._42.Center,
+                        textAlign: y._43.Center,
                         "data-test-selector": "automod-placeholder-container"
                     }, o.createElement(y.Q, {
-                        type: y._46.H3,
+                        type: y._47.H3,
                         italic: !0
                     }, Object(s.d)("You do not have permission to access this dashboard.", "AutoModSettings")));
                     var t = this.isBlankState();
-                    return o.createElement(y._32, {
+                    return o.createElement(y._33, {
                         className: "auto-mod-wrapper",
                         padding: {
                             y: 3
                         }
-                    }, o.createElement(y._32, {
+                    }, o.createElement(y._33, {
                         margin: {
                             bottom: 2
                         }
@@ -849,10 +842,10 @@ webpackJsonp([104], {
                         cols: 2
                     }, o.createElement(y.Q, {
                         color: y.K.Alt2,
-                        type: y._46.Strong
+                        type: y._47.Strong
                     }, e)), o.createElement(y.L, {
                         cols: 5
-                    }, this.AutomodTableHeader(), this.renderSlider(t), this.AutomodCategories(t), this.AutomodTableFooter(t))), o.createElement(y._32, {
+                    }, this.AutomodTableHeader(), this.renderSlider(t), this.AutomodCategories(t), this.AutomodTableFooter(t))), o.createElement(y._33, {
                         borderTop: !0,
                         padding: {
                             top: .5
@@ -860,7 +853,7 @@ webpackJsonp([104], {
                         margin: {
                             y: 1
                         }
-                    }), o.createElement(y._32, {
+                    }), o.createElement(y._33, {
                         padding: {
                             top: 2
                         }
@@ -868,12 +861,12 @@ webpackJsonp([104], {
                         cols: 2
                     }, o.createElement(y.Q, {
                         color: y.K.Alt2,
-                        type: y._46.Strong
+                        type: y._47.Strong
                     }, Object(s.d)("Blocked and Permitted Terms", "AutoModTermsTitle"))), o.createElement(y.L, {
                         cols: 5
                     }, o.createElement(y.Q, {
                         color: y.K.Alt2,
-                        type: y._46.Strong
+                        type: y._47.Strong
                     }, Object(s.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), o.createElement(y.Q, {
                         color: y.K.Alt2
                     }, Object(s.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), o.createElement(I, {
@@ -884,7 +877,7 @@ webpackJsonp([104], {
                         terms: this.props.data.user.blockedTerms
                     }), o.createElement(y.Q, {
                         color: y.K.Alt2,
-                        type: y._46.Strong
+                        type: y._47.Strong
                     }, Object(s.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), o.createElement(y.Q, {
                         color: y.K.Alt2
                     }, Object(s.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), o.createElement(I, {
@@ -904,7 +897,7 @@ webpackJsonp([104], {
                 }, t.prototype.isBlankState = function() {
                     return !this.state.categories && !this.state.level
                 }, t.prototype.AutomodTableFooter = function(e) {
-                    return e ? o.createElement(y._32, {
+                    return e ? o.createElement(y._33, {
                         border: !0,
                         padding: 2,
                         background: y.n.Alt2
@@ -921,7 +914,7 @@ webpackJsonp([104], {
                     }, o.createElement(y.v, {
                         onClick: this.showAutoModCategories,
                         type: y.B.Hollow
-                    }, Object(s.d)("See how rulesets work", "AutoModSettings")))))) : o.createElement(y._8, null, o.createElement(y._32, {
+                    }, Object(s.d)("See how rulesets work", "AutoModSettings")))))) : o.createElement(y._8, null, o.createElement(y._33, {
                         border: !0,
                         padding: {
                             y: 1,
@@ -961,7 +954,7 @@ webpackJsonp([104], {
                             d = Object(s.d)("Hostility towards other people, often associated with bullying", "AutoModSettings"),
                             l = Object(s.d)("Profanity", "AutoModSettings"),
                             c = Object(s.d)("Expletives, curse words, things you wouldn’t say to grandma", "AutoModSettings");
-                        return o.createElement(y._32, {
+                        return o.createElement(y._33, {
                             borderLeft: !0,
                             borderRight: !0,
                             padding: 2,
@@ -990,13 +983,13 @@ webpackJsonp([104], {
                 }, t.prototype.AutomodOnboarding = function() {
                     if (this.state.onboardingVisible) return o.createElement(y.Y, null, o.createElement(y.L, {
                         cols: 8
-                    }, o.createElement(y._32, {
+                    }, o.createElement(y._33, {
                         position: y._15.Relative,
                         border: !0,
                         color: y.K.Alt2,
                         padding: 2
                     }, o.createElement(y.Q, {
-                        type: y._46.H4,
+                        type: y._47.H4,
                         color: y.K.Link,
                         bold: !0
                     }, Object(s.d)("AutoMod Tip", "AutoModSettings")), o.createElement(y._8, {
@@ -1006,11 +999,11 @@ webpackJsonp([104], {
                         attachRight: !0
                     }, o.createElement(y.v, {
                         type: y.B.Text,
-                        icon: y._23.Close,
+                        icon: y._24.Close,
                         onClick: this.onCloseOnboarding
                     })), o.createElement(y.Q, {
                         color: y.K.Alt2,
-                        type: y._46.Span
+                        type: y._47.Span
                     }, Object(s.d)("Did you know AutoMod catches misspelled words and evasion? N!ce try, pe0ple wh0 t@lk lik3 th!s.", "AutoModSettings")))))
                 }, t.prototype.AutomodTableHeader = function() {
                     var e = Object(s.d)("AutoMod", "AutoModSettings"),
@@ -1023,7 +1016,7 @@ webpackJsonp([104], {
                             y: 1,
                             x: 2
                         }
-                    }, o.createElement(y._32, {
+                    }, o.createElement(y._33, {
                         className: "auto-mod-wrapper__shield",
                         padding: {
                             y: .5,
@@ -1031,9 +1024,9 @@ webpackJsonp([104], {
                         },
                         display: y.R.Flex,
                         color: y.K.Overlay
-                    }, o.createElement(y._22, {
-                        asset: y._23.Automod,
-                        type: y._24.Inherit
+                    }, o.createElement(y._23, {
+                        asset: y._24.Automod,
+                        type: y._25.Inherit
                     }))), o.createElement(y._8, {
                         padding: {
                             y: 1,
@@ -1051,10 +1044,10 @@ webpackJsonp([104], {
                         }
                     }, o.createElement(y.Q, {
                         color: y.K.Alt2,
-                        type: y._46.Strong
+                        type: y._47.Strong
                     }, e), o.createElement(y.Q, {
                         color: y.K.Alt2,
-                        type: y._46.P
+                        type: y._47.P
                     }, t)))
                 }, t.prototype.determineLevel = function(e) {
                     for (var t in [0, 1, 2, 3, 4])
@@ -1113,7 +1106,7 @@ webpackJsonp([104], {
                         padding: 2,
                         position: y._15.Relative
                     }, o.createElement(y.Q, {
-                        type: y._46.H3
+                        type: y._47.H3
                     }, Object(s.d)("Moderation Settings", "AutoModPage")), o.createElement(F, {
                         channelLogin: this.props.match.params.channelName
                     })))
@@ -2037,4 +2030,4 @@ webpackJsonp([104], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.automod-a6bbe406502aed6dd244157881004c98.js.map
+//# sourceMappingURL=pages.automod-cd3b36c209800f919308b4d934314c5a.js.map

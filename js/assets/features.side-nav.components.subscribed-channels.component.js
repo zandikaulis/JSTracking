@@ -1,4 +1,4 @@
-webpackJsonp([73], {
+webpackJsonp([74], {
     BBWW: function(e, n) {
         var t = {
             kind: "Document",
@@ -449,7 +449,7 @@ webpackJsonp([73], {
                     }, a.createElement(p.a, {
                         title: Object(r.d)("Subscribed Channels", "SubscribedChannels"),
                         collapsed: this.props.collapsed,
-                        collapsedIcon: k._23.Star
+                        collapsedIcon: k._24.Star
                     }), e)
                 }, n.prototype.renderSubscribedChannels = function() {
                     var e = [];
@@ -492,4 +492,4 @@ webpackJsonp([73], {
             }), Object(c.d)("SubscribedChannels"))(f)
     }
 });
-//# sourceMappingURL=features.side-nav.components.subscribed-channels.component-a54a79f6c4e3da6d6a4b9203aa7cf69c.js.map
+//# sourceMappingURL=features.side-nav.components.subscribed-channels.component-ed6409089719d85da1f8b2fce89f00d7.js.map

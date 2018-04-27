@@ -1,13 +1,13 @@
-webpackJsonp([66], {
+webpackJsonp([67], {
     "9u8h": function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
-            return a
+            return s
         });
         var r = i("TToO"),
             n = i("6sO2"),
-            s = i("Aj/L"),
-            a = function() {
+            a = i("Aj/L"),
+            s = function() {
                 function e() {}
                 return e.get = function(e, t, i) {
                     return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
@@ -115,34 +115,34 @@ webpackJsonp([66], {
                     })
                 }, e.request = function(e, t, i) {
                     return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
-                        var n, s, a, o;
-                        return r.__generator(this, function(u) {
-                            switch (u.label) {
+                        var n, a, s, o;
+                        return r.__generator(this, function(c) {
+                            switch (c.label) {
                                 case 0:
-                                    return t = this.constructOptions(t, i), n = t.headers ? t.headers["Content-Type"] : void 0, s = this.serialize(t.body, n), a = r.__assign({}, t, {
-                                        body: s
-                                    }), [4, this._fetch(e, a)];
+                                    return t = this.constructOptions(t, i), n = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, n), s = r.__assign({}, t, {
+                                        body: a
+                                    }), [4, this._fetch(e, s)];
                                 case 1:
-                                    return o = u.sent(), [4, this.constructLegacyAPIResponse(o)];
+                                    return o = c.sent(), [4, this.constructLegacyAPIResponse(o)];
                                 case 2:
-                                    return [2, u.sent()]
+                                    return [2, c.sent()]
                             }
                         })
                     })
                 }, e.requestOrThrow = function(e, t, i) {
                     return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
-                        var n, s;
-                        return r.__generator(this, function(a) {
-                            switch (a.label) {
+                        var n, a;
+                        return r.__generator(this, function(s) {
+                            switch (s.label) {
                                 case 0:
-                                    return a.trys.push([0, 2, , 3]), [4, this.request(e, t, i)];
+                                    return s.trys.push([0, 2, , 3]), [4, this.request(e, t, i)];
                                 case 1:
-                                    if ((n = a.sent()).error || n.requestError) throw new Error("Error while making request");
-                                    return s = r.__assign({}, n, {
+                                    if ((n = s.sent()).error || n.requestError) throw new Error("Error while making request");
+                                    return a = r.__assign({}, n, {
                                         body: n.body
-                                    }), [2, Promise.resolve(s)];
+                                    }), [2, Promise.resolve(a)];
                                 case 2:
-                                    throw a.sent();
+                                    throw s.sent();
                                 case 3:
                                     return [2]
                             }
@@ -152,7 +152,7 @@ webpackJsonp([66], {
                     return new URL(e, n.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return r.__awaiter(this, void 0, void 0, function() {
-                        var t, i, n, s;
+                        var t, i, n, a;
                         return r.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
@@ -164,7 +164,7 @@ webpackJsonp([66], {
                                 case 2:
                                     return i = r.sent(), e.ok ? t.body = i : t.error = i, [3, 4];
                                 case 3:
-                                    return n = r.sent(), e.headers && e.headers.get && (s = e.headers.get("Content-Type")) && -1 !== s.indexOf("application/json") && (t.requestError = n), [3, 4];
+                                    return n = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = n), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -198,8 +198,8 @@ webpackJsonp([66], {
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                    var a = Object(s.c)(i);
-                    return a && (r.Authorization = "OAuth " + a.authToken, a.legacyCSRFToken && (r["Twitch-Api-Token"] = a.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                    var s = Object(a.c)(i);
+                    return s && (r.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (r["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                         r[e] && delete r[e]
                     }), r
                 }, e.logger = n.o.logger.withCategory("legacy-api"), e
@@ -211,16 +211,16 @@ webpackJsonp([66], {
             value: !0
         });
         var r, n = i("TToO"),
-            s = i("GiK3"),
-            a = i("CIox"),
+            a = i("GiK3"),
+            s = i("CIox"),
             o = i("2KeS"),
-            u = i("6sO2"),
-            c = i("7vx8"),
-            l = i("CSlQ"),
-            d = i("R0Kh"),
+            c = i("6sO2"),
+            l = i("7vx8"),
+            u = i("CSlQ"),
+            d = i("Kckk"),
             h = i("9u8h"),
             m = this,
-            f = u.o.logger.withCategory("verify-email"),
+            f = c.o.logger.withCategory("verify-email"),
             p = function(e, t) {
                 return n.__awaiter(m, void 0, void 0, function() {
                     var i, r;
@@ -248,42 +248,42 @@ webpackJsonp([66], {
         ! function(e) {
             e.Click = "click", e.Dismiss = "dismiss"
         }(r || (r = {}));
-        var v = i("Odds"),
-            y = (i("yY1M"), i("RDCx"));
+        var y = i("Odds"),
+            v = (i("yY1M"), i("RDCx"));
         i.d(t, "DISMISSAL_DATA_STORAGE_KEY", function() {
-            return g
+            return E
         }), i.d(t, "DISMISS_BTN_SELECTOR", function() {
             return D
         }), i.d(t, "VERIFY_BTN_SELECTOR", function() {
-            return b
-        }), i.d(t, "VerifyEmailBarPresentation", function() {
-            return w
-        }), i.d(t, "VerifyEmailBar", function() {
             return C
+        }), i.d(t, "VerifyEmailBarPresentation", function() {
+            return b
+        }), i.d(t, "VerifyEmailBar", function() {
+            return w
         });
-        var E, g = "verifyemailbar_dismissal",
+        var g, E = "verifyemailbar_dismissal",
             S = 18e5,
-            T = 5e3,
-            I = new Set(["/"]),
+            I = 5e3,
+            T = new Set(["/"]),
             D = "dimiss-btn",
-            b = "verify-email-btn";
+            C = "verify-email-btn";
         ! function(e) {
             e[e.INITIAL = 0] = "INITIAL", e[e.CLICK_TO_VERIFY = 1] = "CLICK_TO_VERIFY", e[e.EMAIL_SENT = 2] = "EMAIL_SENT", e[e.ERROR_SENDING = 3] = "ERROR_SENDING", e[e.DISMISSED = 4] = "DISMISSED"
-        }(E || (E = {}));
-        var w = function(e) {
+        }(g || (g = {}));
+        var b = function(e) {
                 function t(t) {
                     var i = e.call(this, t) || this;
                     return i.state = {
                         isError: !1,
-                        verifyEmailBarState: E.INITIAL
-                    }, i.resetAfterDismissalTimeoutID = null, i.afterVerifyDismissTimeoutID = null, i.dismissalData = null, i.logger = u.o.logger.withCategory("verify-email-bar"), i.dismissBarClickHandler = function(e) {
+                        verifyEmailBarState: g.INITIAL
+                    }, i.resetAfterDismissalTimeoutID = null, i.afterVerifyDismissTimeoutID = null, i.dismissalData = null, i.logger = c.o.logger.withCategory("verify-email-bar"), i.dismissBarClickHandler = function(e) {
                         e && e.stopPropagation();
                         var t = i.dismissalData ? i.dismissalData.dismissalCount : 0;
                         i.dismissalData = {
                             dismissalCount: t + 1,
                             dismissalDateTimeMs: Date.now()
-                        }, u.l.set(g, i.dismissalData), i.setState({
-                            verifyEmailBarState: E.DISMISSED
+                        }, c.l.set(E, i.dismissalData), i.setState({
+                            verifyEmailBarState: g.DISMISSED
                         }), i.resetAfterDismissalTimeoutID = setTimeout(function() {
                             return n.__awaiter(i, void 0, void 0, function() {
                                 return n.__generator(this, function(e) {
@@ -292,12 +292,12 @@ webpackJsonp([66], {
                                             return [4, this.props.data.refetch()];
                                         case 1:
                                             return e.sent(), this.setState({
-                                                verifyEmailBarState: E.INITIAL
+                                                verifyEmailBarState: g.INITIAL
                                             }), this.resetAfterDismissalTimeoutID = null, [2]
                                     }
                                 })
                             })
-                        }, 1.01 * S), u.o.tracking.track(_.SpadeEventType.VerifyEmailBar, {
+                        }, 1.01 * S), c.o.tracking.track(_.SpadeEventType.VerifyEmailBar, {
                             action: r.Dismiss
                         })
                     }, i.onClickToVerify = function(e) {
@@ -309,20 +309,20 @@ webpackJsonp([66], {
                                         return e && e.currentTarget && (t = e.currentTarget) && t.blur(), [4, p(this.props.data.currentUser.id, this.props.data.currentUser.email)];
                                     case 1:
                                         return n.sent() ? this.setState({
-                                            verifyEmailBarState: E.EMAIL_SENT
+                                            verifyEmailBarState: g.EMAIL_SENT
                                         }) : this.setState({
-                                            verifyEmailBarState: E.ERROR_SENDING
+                                            verifyEmailBarState: g.ERROR_SENDING
                                         }), this.afterVerifyDismissTimeoutID = setTimeout(function() {
                                             i.setState({
-                                                verifyEmailBarState: E.DISMISSED
+                                                verifyEmailBarState: g.DISMISSED
                                             }), i.afterVerifyDismissTimeoutID = null
-                                        }, T), u.o.tracking.track(_.SpadeEventType.VerifyEmailBar, {
+                                        }, I), c.o.tracking.track(_.SpadeEventType.VerifyEmailBar, {
                                             action: r.Click
                                         }), [2]
                                 }
                             })
                         })
-                    }, i.dismissalData = u.l.getOptional(g), i
+                    }, i.dismissalData = c.l.getOptional(E), i
                 }
                 return n.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
                     var i = this;
@@ -340,88 +340,158 @@ webpackJsonp([66], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.maybeChangeBarState(), this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.maybeChangeBarState = function() {
-                    this.state.verifyEmailBarState !== E.EMAIL_SENT && this.state.verifyEmailBarState !== E.ERROR_SENDING && (this.isVisible() && this.shouldHide() ? this.setState({
-                        verifyEmailBarState: E.INITIAL
-                    }) : this.state.verifyEmailBarState !== E.INITIAL || this.shouldHide() || this.setState({
-                        verifyEmailBarState: E.CLICK_TO_VERIFY
+                    this.state.verifyEmailBarState !== g.EMAIL_SENT && this.state.verifyEmailBarState !== g.ERROR_SENDING && (this.isVisible() && this.shouldHide() ? this.setState({
+                        verifyEmailBarState: g.INITIAL
+                    }) : this.state.verifyEmailBarState !== g.INITIAL || this.shouldHide() || this.setState({
+                        verifyEmailBarState: g.CLICK_TO_VERIFY
                     }))
                 }, t.prototype.render = function() {
                     if (this.state.isError) return null;
                     switch (this.state.verifyEmailBarState) {
-                        case E.CLICK_TO_VERIFY:
+                        case g.CLICK_TO_VERIFY:
                             return this.renderClickToVerify();
-                        case E.EMAIL_SENT:
+                        case g.EMAIL_SENT:
                             return this.renderEmailSent();
-                        case E.ERROR_SENDING:
+                        case g.ERROR_SENDING:
                             return this.renderErrorSending();
                         default:
                             return null
                     }
                 }, t.prototype.isVisible = function() {
-                    return this.state.verifyEmailBarState !== E.INITIAL && this.state.verifyEmailBarState !== E.DISMISSED
+                    return this.state.verifyEmailBarState !== g.INITIAL && this.state.verifyEmailBarState !== g.DISMISSED
                 }, t.prototype.renderClickToVerify = function() {
-                    return s.createElement(v._8, {
+                    return a.createElement(y.e, {
+                        type: y.j.SlideInTop,
+                        duration: y.g.ExtraLong
+                    }, a.createElement(y._8, {
                         fullWidth: !0,
-                        position: v._15.Relative
-                    }, s.createElement(v._32, {
-                        className: "verify-email-banner",
-                        display: v.R.Flex,
-                        justifyContent: v._7.Center,
-                        alignItems: v.c.Center
-                    }, s.createElement(v._2, {
+                        position: y._15.Relative
+                    }, a.createElement(y._33, {
+                        className: "verify-email-bar",
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
+                        justifyContent: y._7.Center,
+                        elevation: 1
+                    }, a.createElement(y._2, {
                         fullHeight: !0,
-                        fullWidth: !0
-                    }, s.createElement("button", {
+                        fullWidth: !0,
+                        padding: 1
+                    }, a.createElement("button", {
                         onClick: this.onClickToVerify,
-                        "data-test-selector": b
-                    }, s.createElement(v.Q, {
-                        color: v.K.Alt,
-                        fontSize: v.V.Size5
-                    }, Object(u.d)("Click here to verify your email", "VerifyEmail")))), s.createElement(v._32, {
-                        className: "verify-email-banner__dismiss",
-                        position: v._15.Absolute,
+                        "data-test-selector": C
+                    }, a.createElement(y._8, {
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
+                        justifyContent: y._7.Center
+                    }, a.createElement(y._8, {
+                        className: "verify-email-bar__copy",
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
+                        margin: {
+                            right: 1
+                        },
+                        padding: {
+                            right: .5
+                        }
+                    }, a.createElement(y._23, {
+                        asset: y._24.NotificationWarning,
+                        type: y._25.Inherit
+                    })), a.createElement(y._8, {
+                        className: "verify-email-bar__copy"
+                    }, a.createElement(y.Q, {
+                        fontSize: y.V.Size5,
+                        color: y.K.Inherit
+                    }, Object(c.d)("Keep your account secure and verify {email}.", {
+                        email: this.props.data.currentUser.email
+                    }, "VerifyEmail")))))), a.createElement(y._33, {
+                        className: "verify-email-bar__dismiss",
+                        position: y._15.Absolute,
+                        attachRight: !0,
+                        margin: {
+                            right: 2
+                        },
+                        padding: {
+                            x: 1,
+                            y: .5
+                        }
+                    }, a.createElement(y.O, {
+                        type: y.P.Inherit,
+                        onClick: this.dismissBarClickHandler,
+                        "data-test-selector": D,
+                        hoverColorInherit: !0,
+                        hoverUnderlineNone: !0
+                    }, Object(c.d)("Not Now", "VerifyEmail"))))))
+                }, t.prototype.renderEmailSent = function() {
+                    return a.createElement(y._33, {
+                        className: "verify-email-bar verify-email-bar--success",
+                        display: y.R.Flex,
+                        justifyContent: y._7.Center,
+                        alignItems: y.c.Center,
+                        elevation: 1,
+                        padding: 1
+                    }, a.createElement(y._33, {
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
+                        margin: {
+                            right: 1
+                        },
+                        padding: {
+                            right: .5
+                        },
+                        color: y.K.Overlay
+                    }, a.createElement(y._23, {
+                        asset: y._24.NavMessages,
+                        type: y._25.Inherit
+                    })), a.createElement(y.Q, {
+                        fontSize: y.V.Size5,
+                        color: y.K.Overlay
+                    }, Object(c.d)("Check your inbox at {email} for your verification email.", {
+                        email: this.props.data.currentUser.email
+                    }, "VerifyEmail")))
+                }, t.prototype.renderErrorSending = function() {
+                    return a.createElement(y._33, {
+                        className: "verify-email-bar verify-email-bar--error",
+                        display: y.R.Flex,
+                        justifyContent: y._7.Center,
+                        alignItems: y.c.Center,
+                        elevation: 1,
+                        padding: 1
+                    }, a.createElement(y._33, {
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
+                        margin: {
+                            right: 1
+                        },
+                        padding: {
+                            right: .5
+                        },
+                        color: y.K.Overlay
+                    }, a.createElement(y._23, {
+                        asset: y._24.DeadGlitch,
+                        type: y._25.Inherit
+                    })), a.createElement(y.Q, {
+                        fontSize: y.V.Size5,
+                        color: y.K.Overlay
+                    }, Object(c.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
+                        email: this.props.data.currentUser.email
+                    }, "VerifyEmail")), a.createElement(y._33, {
+                        position: y._15.Absolute,
                         attachRight: !0,
                         margin: {
                             right: 2
                         }
-                    }, s.createElement(v.v, {
-                        type: v.B.Text,
-                        onClick: this.dismissBarClickHandler,
-                        "data-test-selector": D
-                    }, Object(u.d)("Not Now", "VerifyEmail")))))
-                }, t.prototype.renderEmailSent = function() {
-                    return s.createElement(v._32, {
-                        className: "verify-email-banner verify-email-banner--success",
-                        display: v.R.Flex,
-                        justifyContent: v._7.Center,
-                        alignItems: v.c.Center
-                    }, s.createElement(v._8, {
-                        className: "verify-email-banner__body"
-                    }, s.createElement(v.Q, {
-                        fontSize: v.V.Size5
-                    }, Object(u.d)("Verification email sent to {email}", {
-                        email: this.props.data.currentUser.email
-                    }, "VerifyEmail"))))
-                }, t.prototype.renderErrorSending = function() {
-                    return s.createElement(v._32, {
-                        className: "verify-email-banner verify-email-banner--error",
-                        display: v.R.Flex,
-                        justifyContent: v._7.Center,
-                        alignItems: v.c.Center
-                    }, s.createElement(v._8, {
-                        className: "verify-email-banner__body"
-                    }, s.createElement(v.Q, {
-                        fontSize: v.V.Size5
-                    }, Object(u.d)("Unable to send an email to {email}. Please try again later.", {
-                        email: this.props.data.currentUser.email
-                    }, "VerifyEmail"))))
+                    }, a.createElement(y.v, {
+                        type: y.B.Hollow,
+                        overlay: !0,
+                        linkTo: "/settings/profile"
+                    }, Object(c.d)("Update Email", "VerifyEmail"))))
                 }, t.prototype.shouldHide = function() {
                     return !(this.isDataLoaded() && !this.props.data.currentUser.isEmailVerified) || (this.shouldRespectDismissal() || this.isShowingPrimeUpsell())
                 }, t.prototype.isShowingPrimeUpsell = function() {
-                    if (I.has(this.props.location.pathname)) {
+                    if (T.has(this.props.location.pathname)) {
                         var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                             t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                        return Object(d.l)(e, t)
+                        return Object(d.m)(e, t)
                     }
                     return !1
                 }, t.prototype.shouldRespectDismissal = function() {
@@ -430,8 +500,8 @@ webpackJsonp([66], {
                 }, t.prototype.isDataLoaded = function() {
                     return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                 }, t
-            }(s.Component),
-            C = Object(o.d)(Object(l.d)("VerifyEmail"), Object(c.a)(y), a.f)(w)
+            }(a.Component),
+            w = Object(o.d)(Object(u.d)("VerifyEmail"), Object(l.a)(v), s.f)(b)
     },
     RDCx: function(e, t) {
         var i = {
@@ -539,4 +609,4 @@ webpackJsonp([66], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-b9c8179c8124d79a202a1aa6ea07d416.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-e4d914990309c8e513d85ce141219e1f.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([113], {
+webpackJsonp([114], {
     "4ci7": function(t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
@@ -19,7 +19,7 @@ webpackJsonp([113], {
                     return null !== t && t.apply(this, arguments) || this
                 }
                 return r.__extends(e, t), e.prototype.render = function() {
-                    return o.createElement(h._32, {
+                    return o.createElement(h._33, {
                         className: "tenant-panel",
                         display: h.R.Flex,
                         flexDirection: h.T.Column,
@@ -27,7 +27,7 @@ webpackJsonp([113], {
                     }, o.createElement(h._8, {
                         className: "tenant-panel__info",
                         display: h.R.Block,
-                        textAlign: h._42.Center,
+                        textAlign: h._43.Center,
                         margin: {
                             y: 1
                         },
@@ -39,15 +39,15 @@ webpackJsonp([113], {
                             bottom: 2
                         }
                     }, o.createElement(h.Q, {
-                        type: h._46.H2,
+                        type: h._47.H2,
                         className: "tenant-panel__count",
                         color: h.K.Alt2
                     }, this.props.tenant.count)), o.createElement(h.Q, {
-                        type: h._46.H3,
-                        transform: h._45.Uppercase,
+                        type: h._47.H3,
+                        transform: h._46.Uppercase,
                         className: "tenant-panel__name",
                         color: h.K.Alt2
-                    }, this.props.tenant.name)), o.createElement(h._32, {
+                    }, this.props.tenant.name)), o.createElement(h._33, {
                         className: "tenant-panel__action",
                         display: h.R.Flex,
                         padding: {
@@ -59,7 +59,7 @@ webpackJsonp([113], {
                         type: h.B.Hollow,
                         linkTo: this.props.tenant.entryUrl
                     }, o.createElement(h.Q, {
-                        transform: h._45.Uppercase
+                        transform: h._46.Uppercase
                     }, Object(p.d)("View", "DevTenantPanel"), " ", this.props.tenant.name))))
                 }, e = r.__decorate([Object(d.d)("DevTenantPanel", {
                     autoReportInteractive: !0
@@ -443,4 +443,4 @@ webpackJsonp([113], {
         })
     }
 });
-//# sourceMappingURL=sites.dev.pages.overview-page-e3f7f6c861cb5bf53361e3eaab9af49b.js.map
+//# sourceMappingURL=sites.dev.pages.overview-page-0b4e18d11fdedb94c07408bba688ee16.js.map

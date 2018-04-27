@@ -1,4 +1,4 @@
-webpackJsonp([68], {
+webpackJsonp([69], {
     "7e0v": function(e, t) {},
     "8L33": function(e, t, n) {
         "use strict";
@@ -41,7 +41,7 @@ webpackJsonp([68], {
                             flexDirection: d.T.Row
                         },
                         className: "dev-login-page"
-                    }, r.createElement(d._32, {
+                    }, r.createElement(d._33, {
                         flexGrow: 1,
                         flexShrink: 1,
                         display: d.R.Flex,
@@ -51,11 +51,11 @@ webpackJsonp([68], {
                         className: "dev-login-page__logo-panel"
                     }, r.createElement(d.O, {
                         to: "/"
-                    }, r.createElement(d._32, {
+                    }, r.createElement(d._33, {
                         color: d.K.Overlay
-                    }, r.createElement(d._22, {
-                        asset: d._23.LogoTwitchDevelopers,
-                        type: d._24.Inherit,
+                    }, r.createElement(d._23, {
+                        asset: d._24.LogoTwitchDevelopers,
+                        type: d._25.Inherit,
                         width: 220,
                         height: 142
                     })))), r.createElement(d._8, {
@@ -74,12 +74,12 @@ webpackJsonp([68], {
                             bottom: 2
                         }
                     }, r.createElement(d.Q, {
-                        type: d._46.P,
+                        type: d._47.P,
                         fontSize: d.V.Size3
                     }, Object(a.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), r.createElement(d.v, {
                         onClick: this.login,
                         size: d.z.Large,
-                        icon: d._23.LogoGlitch
+                        icon: d._24.LogoGlitch
                     }, Object(a.d)("Login with Twitch", "DevLogin")))))
                 }, t = l.__decorate([Object(p.d)("DevLogin")], t)
             }(r.Component));
@@ -93,4 +93,4 @@ webpackJsonp([68], {
         })
     }
 });
-//# sourceMappingURL=sites.dev.pages.login-baa1e0a363d7d7c06222f3e3085f2955.js.map
+//# sourceMappingURL=sites.dev.pages.login-2cd96df834f5e3ada04b20d9e75c95f7.js.map

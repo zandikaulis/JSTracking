@@ -1,8 +1,8 @@
-webpackJsonp([95], {
+webpackJsonp([96], {
     "/1dg": function(e, t, n) {
         "use strict";
-        var i, r = n("TToO"),
-            a = n("GiK3"),
+        var i, a = n("TToO"),
+            r = n("GiK3"),
             o = n("6sO2"),
             s = n("qLt5"),
             l = n("Odds"),
@@ -16,11 +16,11 @@ webpackJsonp([95], {
                         i && (n = i.split(d)), t.props.onChange(n)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(l.W, {
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(l.W, {
                         id: "video-tags",
                         label: Object(o.d)("Tags", "VideoManagerEdit")
-                    }, a.createElement(l._4, {
+                    }, r.createElement(l._4, {
                         disabled: this.props.disabled,
                         value: this.props.tags.join(d),
                         type: l._5.Text,
@@ -29,7 +29,7 @@ webpackJsonp([95], {
                         placeholder: Object(o.d)("speedrun", "VideoManagerEdit") + ", " + Object(o.d)("2016", "VideoManagerEdit") + ", " + Object(o.d)("kappa", "VideoManagerEdit") + "..."
                     }))
                 }, t
-            }(a.PureComponent);
+            }(r.PureComponent);
         ! function(e) {
             e[e.FormGroup = 0] = "FormGroup", e[e.Input = 1] = "Input"
         }(i || (i = {}));
@@ -40,19 +40,19 @@ webpackJsonp([95], {
                         t.props.onChange(e.currentTarget.value)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = Object(o.d)("{currentLength} of {maxLength} characters.", {
                             currentLength: this.props.title.length.toString(),
                             maxLength: 140..toString()
                         }, "TitleEditor"),
                         t = "";
-                    return this.props.error ? t = this.props.error : "" === this.props.title && (t = Object(o.d)("A title is required.", "TitleEditor")), a.createElement(l.W, {
+                    return this.props.error ? t = this.props.error : "" === this.props.title && (t = Object(o.d)("A title is required.", "TitleEditor")), r.createElement(l.W, {
                         "data-test-selector": i.FormGroup,
                         hint: e,
                         label: Object(o.d)("Title", "VideoManagerEdit"),
                         error: !!t,
                         errorMessage: t
-                    }, a.createElement(l._4, {
+                    }, r.createElement(l._4, {
                         "data-test-selector": i.Input,
                         disabled: this.props.disabled,
                         maxLength: 140,
@@ -62,7 +62,7 @@ webpackJsonp([95], {
                         value: this.props.title
                     }))
                 }, t
-            }(a.Component),
+            }(r.Component),
             f = n("uTyw"),
             m = n("HW6M"),
             h = n("rCmJ"),
@@ -70,7 +70,7 @@ webpackJsonp([95], {
             v = n("6BvN"),
             S = n("7Nlu"),
             k = (n("12gq"), function(e) {
-                return a.createElement(l._8, {
+                return r.createElement(l._8, {
                     attachTop: !0,
                     attachRight: !0,
                     attachLeft: !0,
@@ -82,26 +82,26 @@ webpackJsonp([95], {
                     justifyContent: l._7.Center,
                     alignItems: l.c.Center,
                     position: l._15.Absolute
-                }, a.createElement(l._8, {
-                    textAlign: l._42.Center,
+                }, r.createElement(l._8, {
+                    textAlign: l._43.Center,
                     flexShrink: 1
-                }, a.createElement(l._22, {
+                }, r.createElement(l._23, {
                     asset: e.icon,
                     width: 46,
                     height: 48,
-                    type: l._24.Alt2
-                })), a.createElement(l._8, {
+                    type: l._25.Alt2
+                })), r.createElement(l._8, {
                     margin: {
                         top: 1
                     },
-                    textAlign: l._42.Center
-                }, a.createElement(l.Q, {
-                    type: l._46.H4,
+                    textAlign: l._43.Center
+                }, r.createElement(l.Q, {
+                    type: l._47.H4,
                     color: l.K.Alt2
-                }, e.titleText)), a.createElement(l._8, {
-                    textAlign: l._42.Center
-                }, a.createElement(l.Q, {
-                    type: l._46.P,
+                }, e.titleText)), r.createElement(l._8, {
+                    textAlign: l._43.Center
+                }, r.createElement(l.Q, {
+                    type: l._47.P,
                     color: l.K.Alt2
                 }, e.subText)))
             });
@@ -164,23 +164,23 @@ webpackJsonp([95], {
                         highlightedGameIndex: 0
                     }, n
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement("div", {
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement("div", {
                         className: "game-selector__search-container",
                         "data-click-out-id": "game-selector-search-balloon",
                         onKeyDown: this.onKeyDown
-                    }, a.createElement(h.a, {
+                    }, r.createElement(h.a, {
                         onClickOut: this.onClickOut
-                    }, a.createElement(l._4, {
+                    }, r.createElement(l._4, {
                         key: this.props.initialGameTitle + "-" + this.props.redrawKey,
                         type: l._5.Text,
-                        icon: l._23.NavGames,
+                        icon: l._24.NavGames,
                         name: "game",
                         onChange: this.onChange,
                         onFocus: this.onFocus,
                         defaultValue: this.props.searchTerm,
                         placeholder: Object(o.d)("Type to search and add games", "VideoManagerEdit")
-                    }), a.createElement(l.q, {
+                    }), r.createElement(l.q, {
                         direction: l.r.Bottom,
                         noTail: !0,
                         size: l.s.Large,
@@ -193,20 +193,20 @@ webpackJsonp([95], {
                             "game-selector__search-panel--closed": !this.state.isOpen
                         }),
                         t = null;
-                    return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? a.createElement(l._10, {
+                    return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? r.createElement(l._10, {
                         fillContent: !0
-                    }) : a.createElement(k, {
-                        icon: l._23.SearchNoResults,
+                    }) : r.createElement(k, {
+                        icon: l._24.SearchNoResults,
                         titleText: Object(o.d)("No results found", "GameSelector"),
                         subText: Object(o.d)("They're probably in another castle", "GameSelector")
-                    }) : a.createElement(k, {
-                        icon: l._23.DeadGlitch,
+                    }) : r.createElement(k, {
+                        icon: l._24.DeadGlitch,
                         titleText: Object(o.d)("Search is not available at this time", "GameSelector"),
                         subText: Object(o.d)("Please try again later", "GameSelector")
-                    })), a.createElement("div", {
+                    })), r.createElement("div", {
                         className: e,
                         tabIndex: 0
-                    }, a.createElement(l._32, {
+                    }, r.createElement(l._33, {
                         attachTop: !0,
                         attachRight: !0,
                         attachLeft: !0,
@@ -215,24 +215,24 @@ webpackJsonp([95], {
                         position: l._15.Absolute,
                         overflow: l._11.Hidden,
                         display: l.R.Block
-                    }, a.createElement(g.b, {
+                    }, r.createElement(g.b, {
                         suppressScrollX: !0,
                         "data-a-target": "search-scroller"
-                    }, a.createElement(l._8, {
+                    }, r.createElement(l._8, {
                         margin: {
                             top: .5,
                             bottom: .5
                         }
-                    }, t, a.createElement(g.a, {
+                    }, t, r.createElement(g.a, {
                         enabled: this.state.isOpen,
                         loadMore: this.props.triggerLoadMore,
                         pixelThreshold: 50
                     })))))
                 }, t.prototype.renderGameResults = function(e, t) {
                     var n = this;
-                    return e.map(function(e, i, r) {
-                        var o = r[t] === r[i];
-                        return a.createElement(S.a, {
+                    return e.map(function(e, i, a) {
+                        var o = a[t] === a[i];
+                        return r.createElement(S.a, {
                             id: "game_" + e.title,
                             key: "game_" + e.title,
                             imageAlt: e.thumbnailAltText,
@@ -244,7 +244,7 @@ webpackJsonp([95], {
                         })
                     })
                 }, t
-            }(a.Component),
+            }(r.Component),
             _ = n("5LoI"),
             C = n("MAZT"),
             E = 10,
@@ -252,9 +252,9 @@ webpackJsonp([95], {
                 return function() {
                     var e = this;
                     this.searchCode = function(t, n) {
-                        return r.__awaiter(e, void 0, void 0, function() {
+                        return a.__awaiter(e, void 0, void 0, function() {
                             var e;
-                            return r.__generator(this, function(i) {
+                            return a.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
                                         return i.trys.push([0, 2, , 3]), [4, this.searchClient.queryForType(_.a.Games, t, t, {
@@ -312,12 +312,12 @@ webpackJsonp([95], {
                                     totalHits: n.state.gameResults.length,
                                     results: n.state.gameResults
                                 });
-                                var r = Object(f.b)({
+                                var a = Object(f.b)({
                                     searchResults: e,
                                     append: n.state.nextAlgoliaPage > 0,
                                     currentGameResults: i
                                 }).currentGameResults;
-                                t = r ? r.results : w
+                                t = a ? a.results : w
                             }
                             n.setState({
                                 gameResults: t,
@@ -357,17 +357,17 @@ webpackJsonp([95], {
                         redrawKey: Math.random()
                     }, n
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.startNewSearch(this.props.currentGameTitle)
                 }, t.prototype.render = function() {
-                    return this.props.disabled ? a.createElement("div", {
+                    return this.props.disabled ? r.createElement("div", {
                         className: "game-selector__search-container"
-                    }, a.createElement(l._4, {
+                    }, r.createElement(l._4, {
                         value: this.props.currentGameTitle,
                         type: l._5.Text,
-                        icon: l._23.NavGames,
+                        icon: l._24.NavGames,
                         disabled: !0
-                    })) : a.createElement(O, {
+                    })) : r.createElement(O, {
                         redrawKey: this.state.redrawKey,
                         searchTerm: this.state.searchTerm,
                         initialGameTitle: this.state.selectedGame.name,
@@ -380,7 +380,7 @@ webpackJsonp([95], {
                         triggerLoadMore: this.triggerLoadMore
                     })
                 }, t
-            }(a.Component),
+            }(r.Component),
             R = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -392,17 +392,17 @@ webpackJsonp([95], {
                         }), t.props.onChange(n)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(l.W, {
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(l.W, {
                         id: "video-game",
                         label: Object(o.d)("Category / Game", "VideoManagerEdit")
-                    }, a.createElement(D, {
+                    }, r.createElement(D, {
                         onChange: this.onGameSelect,
                         disabled: this.props.disabled,
                         currentGameTitle: this.props.game ? this.props.game.name : ""
                     }))
                 }, t
-            }(a.PureComponent);
+            }(r.PureComponent);
         n.d(t, "a", function() {
                 return H
             }),
@@ -413,95 +413,95 @@ webpackJsonp([95], {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.onDescriptionChangeHandler = function(e) {
-                    t.props.onChange(r.__assign({}, t.props.video, {
+                    t.props.onChange(a.__assign({}, t.props.video, {
                         description: e.currentTarget.value
                     }))
                 }, t.onGameChangeHandler = function(e) {
-                    t.props.onChange(r.__assign({}, t.props.video, {
+                    t.props.onChange(a.__assign({}, t.props.video, {
                         game: e
                     }))
                 }, t.onLanguageChangeHandler = function(e) {
-                    t.props.onChange(r.__assign({}, t.props.video, {
+                    t.props.onChange(a.__assign({}, t.props.video, {
                         language: e
                     }))
                 }, t.onTagsChangeHandler = function(e) {
-                    t.props.onChange(r.__assign({}, t.props.video, {
+                    t.props.onChange(a.__assign({}, t.props.video, {
                         tags: e
                     }))
                 }, t.onTitleChangeHandler = function(e) {
-                    t.props.onChange(r.__assign({}, t.props.video, {
+                    t.props.onChange(a.__assign({}, t.props.video, {
                         title: e
                     }))
                 }, t
             }
-            return r.__extends(t, e), t.prototype.render = function() {
+            return a.__extends(t, e), t.prototype.render = function() {
                 var e = this.props,
                     t = e.video,
                     n = e.disabled;
-                return a.createElement(l._8, {
+                return r.createElement(l._8, {
                     display: l.R.Flex,
                     flexDirection: l.T.Column
-                }, a.createElement(l._8, {
+                }, r.createElement(l._8, {
                     margin: {
                         bottom: 2
                     },
                     flexGrow: 1
-                }, a.createElement(p, {
+                }, r.createElement(p, {
                     disabled: n,
                     error: this.props.titleError,
                     onChange: this.onTitleChangeHandler,
                     title: t.title
-                })), a.createElement(l._8, {
+                })), r.createElement(l._8, {
                     margin: {
                         bottom: 2
                     },
                     flexGrow: 1,
                     position: l._15.Relative
-                }, a.createElement(l.W, {
+                }, r.createElement(l.W, {
                     label: Object(o.d)("Description", "VideoManagerEdit")
-                }, a.createElement(l._43, {
+                }, r.createElement(l._44, {
                     "data-test-selector": y.EditDescription,
                     disabled: n,
                     onChange: this.onDescriptionChangeHandler,
                     placeholder: Object(o.d)("Describe your video", "VideoManagerEdit"),
                     rows: 6,
                     value: t.description
-                })), a.createElement(l._8, {
+                })), r.createElement(l._8, {
                     position: l._15.Absolute,
                     attachTop: !0,
                     attachRight: !0
                 }, Object(o.d)("Supports <x:link>Markdown</x:link> (No HTML)", {
                     "x:link": function(e) {
-                        return a.createElement(l.O, {
+                        return r.createElement(l.O, {
                             key: "markdown-link",
                             to: "https://help.twitch.tv/customer/portal/articles/839490-markdown-basics",
                             targetBlank: !0
                         }, e)
                     }
-                }, "VideoManagerEdit"))), a.createElement(l._8, {
+                }, "VideoManagerEdit"))), r.createElement(l._8, {
                     margin: {
                         bottom: 2
                     }
-                }, a.createElement(s.a, {
+                }, r.createElement(s.a, {
                     defaultLanguage: t.language,
                     disabled: n,
                     label: Object(o.d)("Language", "VideoManagerEdit"),
                     onChange: this.onLanguageChangeHandler
-                })), a.createElement(l._8, {
+                })), r.createElement(l._8, {
                     margin: {
                         bottom: 2
                     }
-                }, a.createElement(R, {
+                }, r.createElement(R, {
                     disabled: n,
                     game: t.game,
                     onChange: this.onGameChangeHandler
-                })), a.createElement(c, {
+                })), r.createElement(c, {
                     disabled: n,
                     onChange: this.onTagsChangeHandler,
                     tags: t.tags
                 }))
             }, t
-        }(a.Component)
+        }(r.Component)
     },
     "/fDj": function(e, t, n) {
         "use strict";
@@ -513,9 +513,9 @@ webpackJsonp([95], {
             return m
         });
         var i = n("TToO"),
-            r = n("GiK3"),
-            a = (n.n(r), n("3zLD")),
-            o = (n.n(a), n("CIox")),
+            a = n("GiK3"),
+            r = (n.n(a), n("3zLD")),
+            o = (n.n(r), n("CIox")),
             s = n("6sO2"),
             l = n("yWCw"),
             d = n("7vx8"),
@@ -523,26 +523,26 @@ webpackJsonp([95], {
             u = n("PRb0"),
             p = n("hthX"),
             f = (n.n(p), function(e) {
-                if (!Object(u.a)()) return r.createElement(c.b, i.__assign({}, e));
+                if (!Object(u.a)()) return a.createElement(c.b, i.__assign({}, e));
                 if (e.data && e.data.loading) return null;
-                if (e.data && !e.data.loading && !e.data.user) return r.createElement(l.a, {
+                if (e.data && !e.data.loading && !e.data.user) return a.createElement(l.a, {
                     message: Object(s.d)("Error loading data.", "RedirectToLatestVideoHighlighter")
                 });
                 if (e.data && !e.data.loading && e.data.user && e.data.user.videos) {
                     var t = e.data.user.videos.edges;
-                    if (t.length < 1) return r.createElement(l.a, {
+                    if (t.length < 1) return a.createElement(l.a, {
                         message: Object(s.d)("Oops, you have no videos to highlight!", "RedirectToLatestVideoHighlighter")
                     });
                     var n = t[0].node.id;
-                    return r.createElement(o.b, {
+                    return a.createElement(o.b, {
                         to: "/" + e.match.params.channelName + "/manager/highlighter/" + n
                     })
                 }
-                return r.createElement(l.a, {
+                return a.createElement(l.a, {
                     message: Object(s.d)("Something has gone wrong. Please try again later.", "RedirectToLatestVideoHighlighter")
                 })
             }),
-            m = Object(a.compose)(Object(d.a)(p, {
+            m = Object(r.compose)(Object(d.a)(p, {
                 options: function(e) {
                     return {
                         variables: {
@@ -554,8 +554,8 @@ webpackJsonp([95], {
     },
     "09xK": function(e, t, n) {
         "use strict";
-        var i, r = n("TToO"),
-            a = n("GiK3"),
+        var i, a = n("TToO"),
+            r = n("GiK3"),
             o = n("CIox"),
             s = n("NY9D"),
             l = n("6sO2"),
@@ -572,7 +572,7 @@ webpackJsonp([95], {
             k = n("CSlQ"),
             b = n("fc0G"),
             y = function(e) {
-                return a.createElement(b.c, {
+                return r.createElement(b.c, {
                     vodID: e.videoID,
                     disableTheatreButton: !0,
                     playerTypeOverride: b.b.Highlighter,
@@ -592,33 +592,33 @@ webpackJsonp([95], {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e;
                     if (this.props.offsets) {
                         var t = this.props.offsets;
                         e = Object(g.b)(this.props.lengthSeconds) + " (" + Object(g.b)(t.startOffsetSeconds) + " - " + Object(g.b)(t.endOffsetSeconds) + ")"
                     } else e = Object(g.b)(this.props.lengthSeconds);
-                    return a.createElement(w._32, {
+                    return r.createElement(w._33, {
                         ellipsis: !0
-                    }, a.createElement(w.Q, {
+                    }, r.createElement(w.Q, {
                         ellipsis: !0,
                         "data-test-selector": i.Title,
                         fontSize: w.V.Size6,
                         title: this.props.title
-                    }, this.props.title || "<" + Object(l.d)("Untitled", "VideoSegment") + ">"), a.createElement(w._8, {
+                    }, this.props.title || "<" + Object(l.d)("Untitled", "VideoSegment") + ">"), r.createElement(w._8, {
                         display: w.R.Flex,
                         alignItems: w.c.Center
-                    }, a.createElement(w._22, {
-                        asset: w._23.GlyphLength,
+                    }, r.createElement(w._23, {
+                        asset: w._24.GlyphLength,
                         height: 12,
                         width: 12
-                    }), " ", a.createElement(w.Q, {
+                    }), " ", r.createElement(w.Q, {
                         "data-test-selector": i.Duration,
-                        type: w._46.Span,
+                        type: w._47.Span,
                         fontSize: w.V.Size7
                     }, e)))
                 }, t
-            }(a.Component);
+            }(r.Component);
         n("bJlE");
         ! function(e) {
             e[e.Duration = 0] = "Duration", e[e.ErrorIcon = 1] = "ErrorIcon", e[e.Index = 2] = "Index", e[e.Game = 3] = "Game", e[e.Title = 4] = "Title"
@@ -627,57 +627,57 @@ webpackJsonp([95], {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = null;
-                    return this.props.error && (e = a.createElement(w._22, {
-                        asset: w._23.Warning,
+                    return this.props.error && (e = r.createElement(w._23, {
+                        asset: w._24.Warning,
                         "data-test-selector": i.ErrorIcon,
                         height: 28,
-                        type: w._24.Live,
+                        type: w._25.Live,
                         width: 28
-                    })), a.createElement(w._8, {
+                    })), r.createElement(w._8, {
                         alignItems: w.c.Stretch,
                         display: w.R.Flex,
                         fullWidth: !0,
                         flexDirection: w.T.Row,
                         padding: 1
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         flexGrow: 0,
                         flexShrink: 0
-                    }, a.createElement(w._32, {
+                    }, r.createElement(w._33, {
                         alignItems: w.c.Center,
                         background: w.n.AccentAlt2,
                         className: "video-segment__item-index",
                         display: w.R.Flex,
                         fullHeight: !0,
                         justifyContent: w._7.Center
-                    }, a.createElement(w.Q, {
+                    }, r.createElement(w.Q, {
                         color: w.K.Overlay,
                         "data-test-selector": i.Index,
                         fontSize: w.V.Size4,
-                        type: w._46.H4
-                    }, "" + (this.props.listIndex + 1)))), a.createElement(w._8, {
+                        type: w._47.H4
+                    }, "" + (this.props.listIndex + 1)))), r.createElement(w._8, {
                         flexGrow: 1,
                         flexShrink: 1,
                         padding: {
                             left: 1
                         },
                         ellipsis: !0
-                    }, a.createElement(T, {
+                    }, r.createElement(T, {
                         lengthSeconds: this.props.lengthSeconds,
                         offsets: this.props.offsets,
                         title: this.props.title
                     })), e)
                 }, t
-            }(a.Component),
+            }(r.Component),
             R = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.props.segments.map(function(t, n) {
-                            return a.createElement(w._6, {
+                            return r.createElement(w._6, {
                                 alert: !!t.error,
                                 blurAfterClick: !0,
                                 disabled: e.props.disabled,
@@ -686,12 +686,12 @@ webpackJsonp([95], {
                                     e.props.onSegmentSelect(n)
                                 },
                                 selected: n === e.props.selectedSegmentIndex
-                            }, a.createElement(w._8, {
+                            }, r.createElement(w._8, {
                                 padding: {
                                     y: .5,
                                     x: 1
                                 }
-                            }, a.createElement(D, {
+                            }, r.createElement(D, {
                                 lengthSeconds: t.endOffsetSeconds - t.startOffsetSeconds,
                                 listIndex: n,
                                 offsets: {
@@ -701,11 +701,11 @@ webpackJsonp([95], {
                                 title: t.metadata.title
                             })))
                         });
-                    return a.createElement(p.b, {
+                    return r.createElement(p.b, {
                         suppressScrollX: !0
-                    }, a.createElement("div", null, t))
+                    }, r.createElement("div", null, t))
                 }, t
-            }(a.Component);
+            }(r.Component);
         ! function(e) {
             e[e.CreateButton = 0] = "CreateButton", e[e.SaveError = 1] = "SaveError"
         }(V || (V = {}));
@@ -719,14 +719,14 @@ webpackJsonp([95], {
                             selectedSegmentIndex: e
                         })
                     }, t.onSegmentVideoFieldChange = function(e) {
-                        var n = r.__assign({}, t.selectedSegment(), {
+                        var n = a.__assign({}, t.selectedSegment(), {
                             metadata: e
                         });
                         t.props.onSegmentUpdate(n, t.state.selectedSegmentIndex)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(w._8, {
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(w._8, {
                         alignItems: w.c.Stretch,
                         display: w.R.Flex,
                         flexDirection: w.T.Row,
@@ -738,11 +738,11 @@ webpackJsonp([95], {
                             return !!e.error
                         }),
                         t = null;
-                    return this.props.saveError && (t = a.createElement(w.e, {
+                    return this.props.saveError && (t = r.createElement(w.e, {
                         delay: w.f.Short,
                         type: w.j.BounceIn,
                         enabled: !0
-                    }, a.createElement(w._32, {
+                    }, r.createElement(w._33, {
                         background: w.n.Base,
                         border: !0,
                         color: w.K.Error,
@@ -750,66 +750,66 @@ webpackJsonp([95], {
                             bottom: 1
                         },
                         padding: 1
-                    }, a.createElement(w.Q, {
+                    }, r.createElement(w.Q, {
                         color: w.K.Error,
                         "data-test-selector": V.SaveError
-                    }, this.props.saveError)))), a.createElement(w._32, {
+                    }, this.props.saveError)))), r.createElement(w._33, {
                         border: !0,
                         className: "highlight-creator-modal__left-column",
                         display: w.R.Flex,
                         flexDirection: w.T.Column,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, a.createElement(w._32, {
+                    }, r.createElement(w._33, {
                         background: w.n.Alt2,
                         borderBottom: !0,
                         padding: 1,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, a.createElement(w.Q, {
+                    }, r.createElement(w.Q, {
                         color: w.K.Alt2,
                         fontSize: w.V.Size4
-                    }, Object(l.d)("Highlight Creator", "HighlightCreatorModal"))), a.createElement(w._8, {
+                    }, Object(l.d)("Highlight Creator", "HighlightCreatorModal"))), r.createElement(w._8, {
                         flexGrow: 1,
                         flexShrink: 1,
                         position: w._15.Relative
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         position: w._15.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0
-                    }, a.createElement(R, {
+                    }, r.createElement(R, {
                         onSegmentSelect: this.onSegmentSelect,
                         disabled: this.props.saving,
                         segments: this.props.segments,
                         selectedSegmentIndex: this.state.selectedSegmentIndex
-                    }))), a.createElement(w._32, {
+                    }))), r.createElement(w._33, {
                         alignItems: w.c.Center,
                         background: w.n.Alt2,
                         borderTop: !0,
                         display: w.R.Flex,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         margin: 1,
                         fullWidth: !0
-                    }, t, a.createElement(w.v, {
+                    }, t, r.createElement(w.v, {
                         "data-test-selector": V.CreateButton,
                         disabled: this.props.saving || e,
                         onClick: this.props.onCreateRequest,
                         fullWidth: !0,
                         state: this.props.saving ? w.A.Loading : w.A.Default
-                    }, Object(l.d)("Create Highlights", "HighlightCreatorModal")))))
+                    }, Object(l.d)("Save Highlights", "HighlightCreatorModal")))))
                 }, t.prototype.renderRightColumn = function() {
-                    return a.createElement(w._8, {
+                    return r.createElement(w._8, {
                         padding: {
                             x: 3,
                             y: 2
                         },
                         flexGrow: 1,
                         flexShrink: 1
-                    }, a.createElement(x.VideoFieldEditor, {
+                    }, r.createElement(x.VideoFieldEditor, {
                         onChange: this.onSegmentVideoFieldChange,
                         disabled: this.props.saving,
                         video: this.selectedSegment().metadata
@@ -817,7 +817,7 @@ webpackJsonp([95], {
                 }, t.prototype.selectedSegment = function() {
                     return this.props.segments[this.state.selectedSegmentIndex]
                 }, t
-            }(a.Component),
+            }(r.Component),
             N = n("zAjo"),
             I = n("sJBK");
         n("zECu");
@@ -828,10 +828,10 @@ webpackJsonp([95], {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.props.highlights.map(function(t, n) {
-                            return a.createElement(w._32, {
+                            return r.createElement(w._33, {
                                 alignItems: w.c.Center,
                                 background: w.n.Base,
                                 className: "save-success-highlight",
@@ -850,21 +850,21 @@ webpackJsonp([95], {
                                     x: 2,
                                     y: 1
                                 }
-                            }, a.createElement(w._8, {
+                            }, r.createElement(w._8, {
                                 flexGrow: 1,
                                 flexShrink: 1,
                                 ellipsis: !0
-                            }, a.createElement(D, {
+                            }, r.createElement(D, {
                                 lengthSeconds: t.lengthSeconds,
                                 listIndex: n,
                                 title: t.title
-                            })), a.createElement(w._8, {
+                            })), r.createElement(w._8, {
                                 flexGrow: 0,
                                 flexShrink: 0,
                                 padding: {
                                     left: 2
                                 }
-                            }, a.createElement(N.a, {
+                            }, r.createElement(N.a, {
                                 balloonDirection: w.r.RightCenter,
                                 buttonType: w.B.Hollow,
                                 content: {
@@ -881,7 +881,7 @@ webpackJsonp([95], {
                                 }
                             })))
                         });
-                    return a.createElement(w._32, {
+                    return r.createElement(w._33, {
                         alignItems: w.c.Center,
                         background: w.n.Alt,
                         display: w.R.Flex,
@@ -890,7 +890,7 @@ webpackJsonp([95], {
                         fullWidth: !0,
                         justifyContent: w._7.Center,
                         padding: 3
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         alignItems: w.c.Center,
                         display: w.R.Flex,
                         flexDirection: w.T.Column,
@@ -898,13 +898,13 @@ webpackJsonp([95], {
                         flexShrink: 0,
                         fullWidth: !0,
                         justifyContent: w._7.End
-                    }, a.createElement(w.Q, {
-                        type: w._46.H3
-                    }, Object(l.d)("Success!", "SaveSuccessOverview")), a.createElement(w._8, {
+                    }, r.createElement(w.Q, {
+                        type: w._47.H3
+                    }, Object(l.d)("Success!", "SaveSuccessOverview")), r.createElement(w._8, {
                         padding: {
                             top: 1
                         }
-                    }, this.renderVideoManagerLink())), a.createElement(w._8, {
+                    }, this.renderVideoManagerLink())), r.createElement(w._8, {
                         flexGrow: 1,
                         flexShrink: 1,
                         fullWidth: !0,
@@ -914,32 +914,32 @@ webpackJsonp([95], {
                         },
                         overflow: w._11.Hidden,
                         position: w._15.Relative
-                    }, a.createElement(w._2, {
+                    }, r.createElement(w._2, {
                         fullWidth: !0,
                         position: w._15.Absolute
-                    }, a.createElement(p.b, {
+                    }, r.createElement(p.b, {
                         autoHide: !1,
                         suppressScrollX: !0
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         alignItems: w.c.Center,
                         display: w.R.Flex,
                         flexDirection: w.T.Column,
                         justifyContent: w._7.Center,
                         padding: 5
-                    }, t)))), a.createElement(w._8, {
+                    }, t)))), r.createElement(w._8, {
                         flexGrow: 0,
                         flexShrink: 0,
                         padding: {
                             top: 1
                         }
-                    }, a.createElement(w.v, {
+                    }, r.createElement(w.v, {
                         onClick: this.props.onComplete
                     }, Object(l.d)("Continue editing", "SaveSuccessOverview"))))
                 }, t.prototype.renderVideoManagerLink = function() {
                     var e = this;
                     return Object(l.d)("Visit the <x:link>Video Producer</x:link> to view the created highlight(s).", {
                         "x:link": function(t) {
-                            return a.createElement(w.O, {
+                            return r.createElement(w.O, {
                                 "data-test-selector": H.VideoManagerLink,
                                 key: "video-manager-link",
                                 onClick: e.props.onComplete,
@@ -954,7 +954,7 @@ webpackJsonp([95], {
                         }
                     }, "SaveSuccessOverview")
                 }, t
-            }(a.Component),
+            }(r.Component),
             F = n("H6Wp"),
             P = (n("cJkA"), function(e) {
                 function t(t) {
@@ -969,9 +969,9 @@ webpackJsonp([95], {
                     }, n.onCancel = function() {
                         n.props.onCompletion(n.state.segmentsSnapshot)
                     }, n.onCreateHighlightsRequest = function() {
-                        return r.__awaiter(n, void 0, void 0, function() {
+                        return a.__awaiter(n, void 0, void 0, function() {
                             var e = this;
-                            return r.__generator(this, function(t) {
+                            return a.__generator(this, function(t) {
                                 return this.setState({
                                     saveError: null,
                                     saving: !0
@@ -982,8 +982,8 @@ webpackJsonp([95], {
                         })
                     };
                     var i = t.segments.map(function(e) {
-                        return r.__assign({}, e, {
-                            metadata: r.__assign({}, e.metadata, {
+                        return a.__assign({}, e, {
+                            metadata: a.__assign({}, e.metadata, {
                                 tags: e.metadata.tags.slice()
                             })
                         })
@@ -995,55 +995,55 @@ webpackJsonp([95], {
                         segmentsSnapshot: i
                     }, n
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e, t = this;
                     if (this.state.savedHighlights.length > 0 && 0 === this.state.segmentsSnapshot.length) {
-                        e = a.createElement(j, {
+                        e = r.createElement(j, {
                             onComplete: function() {
                                 t.props.onCompletion([])
                             },
                             owner: this.props.owner,
                             highlights: this.state.savedHighlights
                         })
-                    } else e = a.createElement(L, {
+                    } else e = r.createElement(L, {
                         onCreateRequest: this.onCreateHighlightsRequest,
                         onSegmentUpdate: this.onSegmentUpdate,
                         segments: this.state.segmentsSnapshot,
                         saving: this.state.saving,
                         saveError: this.state.saveError
                     });
-                    return a.createElement(w.e, {
+                    return r.createElement(w.e, {
                         type: w.j.FadeIn,
                         delay: w.f.Medium,
                         duration: w.g.Medium,
                         enabled: !0
-                    }, a.createElement(w._32, {
+                    }, r.createElement(w._33, {
                         background: w.n.Base,
                         className: "highlight-creator-modal"
-                    }, e), a.createElement(C.a, {
+                    }, e), r.createElement(C.a, {
                         onClose: this.onCancel
                     }))
                 }, t.prototype.createHighlights = function() {
-                    return r.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n, i, a, o, s, d = this;
-                        return r.__generator(this, function(r) {
-                            switch (r.label) {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var e, t, n, i, r, o, s, d = this;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
                                     e = this.state.segmentsSnapshot.map(function(e, t) {
                                         return d.createHighlight(e, t)
-                                    }), t = [], r.label = 1;
+                                    }), t = [], a.label = 1;
                                 case 1:
-                                    return r.trys.push([1, 3, , 4]), [4, Promise.all(e)];
+                                    return a.trys.push([1, 3, , 4]), [4, Promise.all(e)];
                                 case 2:
-                                    return t = r.sent(), [3, 4];
+                                    return t = a.sent(), [3, 4];
                                 case 3:
-                                    return n = r.sent(), l.j.error(n, "Unexpected error creating highlights"), [3, 4];
+                                    return n = a.sent(), l.j.error(n, "Unexpected error creating highlights"), [3, 4];
                                 case 4:
                                     return i = t.reduce(function(e, t) {
                                         return t.success && e.push(t.success), e
-                                    }, []), a = t.sort(function(e, t) {
+                                    }, []), r = t.sort(function(e, t) {
                                         return e.segmentsIndex - t.segmentsIndex
-                                    }), o = a.reduce(function(e, t) {
+                                    }), o = r.reduce(function(e, t) {
                                         return t.success || e.push(t.segment), e
                                     }, []), s = null, o.length > 0 && (s = Object(l.d)("Some or all of your highlights have failed to save. These have been returned to your creation queue. Please try again.", "HighlightCreatorModalContainer")), this.setState({
                                         segmentsSnapshot: o,
@@ -1055,10 +1055,10 @@ webpackJsonp([95], {
                         })
                     })
                 }, t.prototype.createHighlight = function(e, t) {
-                    return r.__awaiter(this, void 0, void 0, function() {
-                        var n, i, a, o;
-                        return r.__generator(this, function(r) {
-                            switch (r.label) {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var n, i, r, o;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
                                     n = {
                                         segmentsIndex: t,
@@ -1073,20 +1073,20 @@ webpackJsonp([95], {
                                             tags: e.metadata.tags,
                                             title: e.metadata.title
                                         }
-                                    }, r.label = 1;
+                                    }, a.label = 1;
                                 case 1:
-                                    return r.trys.push([1, 3, , 4]), [4, this.props.createHighlight(Object(E.a)(i))];
+                                    return a.trys.push([1, 3, , 4]), [4, this.props.createHighlight(Object(E.a)(i))];
                                 case 2:
-                                    return a = r.sent().data, n.success = a.createVideoHighlight.highlight, [3, 4];
+                                    return r = a.sent().data, n.success = r.createVideoHighlight.highlight, [3, 4];
                                 case 3:
-                                    return o = r.sent(), l.j.error(o, "HighlightCreatorModalContainer"), [3, 4];
+                                    return o = a.sent(), l.j.error(o, "HighlightCreatorModalContainer"), [3, 4];
                                 case 4:
                                     return [2, n]
                             }
                         })
                     })
                 }, t
-            }(a.Component)),
+            }(r.Component)),
             M = Object(f.a)(F, {
                 name: "createHighlight"
             })(P);
@@ -1108,8 +1108,8 @@ webpackJsonp([95], {
                     t.scrollableAreaRef = e
                 }, t
             }
-            return r.__extends(t, e), t.prototype.render = function() {
-                return a.createElement(w._32, {
+            return a.__extends(t, e), t.prototype.render = function() {
+                return r.createElement(w._33, {
                     alignItems: w.c.Stretch,
                     background: w.n.Base,
                     borderRadius: w.t.Small,
@@ -1118,35 +1118,35 @@ webpackJsonp([95], {
                     elevation: 2,
                     flexDirection: w.T.Column,
                     fullHeight: !0
-                }, a.createElement(w._32, {
+                }, r.createElement(w._33, {
                     background: w.n.Alt,
                     borderBottom: !0,
                     padding: 1
-                }, a.createElement(w.Q, {
+                }, r.createElement(w.Q, {
                     fontSize: w.V.Size5
-                }, Object(l.d)("Highlights", "VideoSegmentQueue"))), a.createElement(w._2, {
+                }, Object(l.d)("Highlights", "VideoSegmentQueue"))), r.createElement(w._2, {
                     flexGrow: 1,
                     flexShrink: 1
-                }, a.createElement(p.b, {
+                }, r.createElement(p.b, {
                     autoHide: !1,
                     suppressScrollX: !0,
                     scrollRef: this.scrollRefHandler
-                }, a.createElement("div", null, this.renderSegments()))), a.createElement(w._32, {
+                }, r.createElement("div", null, this.renderSegments()))), r.createElement(w._33, {
                     padding: {
                         x: 1,
                         y: .5
                     }
-                }, a.createElement(w.v, {
+                }, r.createElement(w.v, {
                     onClick: this.props.onSaveClick,
                     disabled: 0 === this.props.queue.length,
                     fullWidth: !0,
                     type: w.B.Hollow
-                }, Object(l.d)("Save Highlights", "VideoSegmentQueue"))))
+                }, Object(l.d)("Describe and Save", "VideoSegmentQueue"))))
             }, t.prototype.componentDidUpdate = function(e) {
                 this.props.queue.length > e.queue.length && this.scrollableAreaRef && this.scrollableAreaRef.scrollToBottom()
             }, t.prototype.renderSegments = function() {
                 var e = this;
-                return 0 === this.props.queue.length ? a.createElement(w._8, {
+                return 0 === this.props.queue.length ? r.createElement(w._8, {
                     alignItems: w.c.Center,
                     "data-test-selector": G.NoItems,
                     display: w.R.Flex,
@@ -1154,21 +1154,21 @@ webpackJsonp([95], {
                     fullWidth: !0,
                     justifyContent: w._7.Center,
                     padding: 1
-                }, a.createElement(w.Q, {
+                }, r.createElement(w.Q, {
                     color: w.K.Alt2
                 }, Object(l.d)("No highlights queued for export.", "VideoSegmentQueue"))) : this.props.queue.map(function(t, n) {
-                    return a.createElement(w._32, {
+                    return r.createElement(w._33, {
                         className: "video-segment-queue__video-card",
                         alignItems: w.c.Center,
                         borderBottom: !0,
                         display: w.R.Flex,
                         flexDirection: w.T.Row,
                         key: n
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         flexGrow: 1,
                         flexShrink: 1,
                         overflow: w._11.Hidden
-                    }, a.createElement(D, {
+                    }, r.createElement(D, {
                         listIndex: n,
                         lengthSeconds: t.endOffsetSeconds - t.startOffsetSeconds,
                         offsets: {
@@ -1176,16 +1176,16 @@ webpackJsonp([95], {
                             endOffsetSeconds: t.endOffsetSeconds
                         },
                         title: t.metadata.title
-                    })), a.createElement(w._8, {
+                    })), r.createElement(w._8, {
                         className: "video-segment-queue__delete-button",
                         flexGrow: 0,
                         flexShrink: 0,
                         margin: {
                             right: 1
                         }
-                    }, a.createElement(w.w, {
+                    }, r.createElement(w.w, {
                         ariaLabel: Object(l.d)("Remove highlight from queue", "VideoSegmentQueue"),
-                        icon: w._23.Trash,
+                        icon: w._24.Trash,
                         onClick: function() {
                             e.props.onSegmentDelete(n)
                         },
@@ -1194,7 +1194,7 @@ webpackJsonp([95], {
                     })))
                 })
             }, t
-        }(a.Component);
+        }(r.Component);
         var U, q = Object(O.b)(null, function(e, t) {
                 return {
                     onSaveClick: function() {
@@ -1207,11 +1207,11 @@ webpackJsonp([95], {
                 }
             })(A),
             K = n("+Znq"),
-            Q = n("6BvN");
+            W = n("6BvN");
         ! function(e) {
             e[e.EndFormGroup = 0] = "EndFormGroup", e[e.Offsets = 1] = "Offsets", e[e.StartFormGroup = 2] = "StartFormGroup", e[e.UpdateButton = 3] = "UpdateButton"
         }(U || (U = {}));
-        var W, z = function(e) {
+        var Q, z = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onStartChange = function(e) {
@@ -1223,7 +1223,7 @@ webpackJsonp([95], {
                             endOffset: e.currentTarget.value
                         })
                     }, n.onKeyDown = function(e) {
-                        e.keyCode === Q.a.Enter && n.update()
+                        e.keyCode === W.a.Enter && n.update()
                     }, n.onInputBlur = function() {
                         n.update()
                     }, n.onUpdateClick = function() {
@@ -1233,48 +1233,48 @@ webpackJsonp([95], {
                         endOffset: Object(g.b)(t.segment.endOffset)
                     }, n
                 }
-                return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     var t = this.props.segment,
                         n = e.segment,
                         i = !1,
-                        r = this.state.startOffset,
-                        a = this.state.endOffset;
-                    t.startOffset !== n.startOffset && (r = Object(g.b)(n.startOffset), i = !0), t.endOffset !== n.endOffset && (a = Object(g.b)(n.endOffset), i = !0), i && this.setState({
-                        startOffset: r,
-                        endOffset: a
+                        a = this.state.startOffset,
+                        r = this.state.endOffset;
+                    t.startOffset !== n.startOffset && (a = Object(g.b)(n.startOffset), i = !0), t.endOffset !== n.endOffset && (r = Object(g.b)(n.endOffset), i = !0), i && this.setState({
+                        startOffset: a,
+                        endOffset: r
                     })
                 }, t.prototype.render = function() {
                     var e = this.props.segment;
-                    return a.createElement(K.a, null, a.createElement(w.v, {
+                    return r.createElement(K.a, null, r.createElement(w.v, {
                         type: w.B.Text
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         display: w.R.Flex,
                         justifyContent: w._7.Center
-                    }, a.createElement(w._22, {
-                        asset: w._23.Edit
-                    }), a.createElement(w._8, {
+                    }, r.createElement(w._23, {
+                        asset: w._24.Edit
+                    }), r.createElement(w._8, {
                         padding: {
                             left: .5
                         }
-                    }, a.createElement(w.Q, {
-                        align: w._56.Middle,
+                    }, r.createElement(w.Q, {
+                        align: w._57.Middle,
                         "data-test-selector": U.Offsets,
-                        type: w._46.Span
-                    }, Object(g.b)(e.startOffset) + " - " + Object(g.b)(e.endOffset))))), a.createElement(w.q, {
+                        type: w._47.Span
+                    }, Object(g.b)(e.startOffset) + " - " + Object(g.b)(e.endOffset))))), r.createElement(w.q, {
                         direction: w.r.BottomCenter
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         display: w.R.Flex,
                         flexDirection: w.T.Column,
                         margin: .5
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         padding: {
                             bottom: .5
                         }
-                    }, this.renderStartInput()), a.createElement(w._8, {
+                    }, this.renderStartInput()), r.createElement(w._8, {
                         padding: {
                             bottom: .5
                         }
-                    }, this.renderEndInput()), a.createElement(w.v, {
+                    }, this.renderEndInput()), r.createElement(w.v, {
                         blurAfterClick: !0,
                         "data-test-selector": U.UpdateButton,
                         disabled: !this.canUpdate(),
@@ -1283,11 +1283,11 @@ webpackJsonp([95], {
                 }, t.prototype.renderStartInput = function() {
                     var e = this.state.startOffset,
                         t = !this.validClockValue(e);
-                    return a.createElement(w.W, {
+                    return r.createElement(w.W, {
                         "data-test-selector": U.StartFormGroup,
                         error: t,
                         label: Object(l.d)("Start time", "OffsetBalloonButton")
-                    }, a.createElement(w._4, {
+                    }, r.createElement(w._4, {
                         error: t,
                         onBlur: this.onInputBlur,
                         onChange: this.onStartChange,
@@ -1299,11 +1299,11 @@ webpackJsonp([95], {
                 }, t.prototype.renderEndInput = function() {
                     var e = this.state.endOffset,
                         t = !this.validClockValue(e);
-                    return a.createElement(w.W, {
+                    return r.createElement(w.W, {
                         "data-test-selector": U.EndFormGroup,
                         error: t,
                         label: Object(l.d)("End time", "OffsetBalloonButton")
-                    }, a.createElement(w._4, {
+                    }, r.createElement(w._4, {
                         error: t,
                         onBlur: this.onInputBlur,
                         onChange: this.onEndChange,
@@ -1327,20 +1327,12 @@ webpackJsonp([95], {
                         endOffset: Object(g.a)(this.state.endOffset)
                     })
                 }, t
-            }(a.Component),
-            X = n("3HXW");
-        ! function(e) {
-            e[e.SegmentLength = 0] = "SegmentLength"
-        }(W || (W = {}));
-        var J, $ = function(e) {
+            }(r.Component),
+            X = n("3HXW"),
+            J = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onSelectSegmentClick = function() {
-                        t.props.onSelectSegmentClick({
-                            startOffset: t.props.segment.startOffset,
-                            endOffset: t.props.segment.endOffset
-                        })
-                    }, t.onStartOffsetDragEndHandler = function() {
+                    return t.onStartOffsetDragEndHandler = function() {
                         t.props.onStartOffsetDragEnd({
                             startOffset: t.props.segment.startOffset,
                             endOffset: t.props.segment.endOffset
@@ -1350,17 +1342,11 @@ webpackJsonp([95], {
                             startOffset: t.props.segment.startOffset,
                             endOffset: t.props.segment.endOffset
                         })
-                    }, t.renderQueueSegmentButton = function() {
-                        return a.createElement(w.v, {
-                            onClick: t.onSelectSegmentClick,
-                            blurAfterClick: !0
-                        }, Object(l.d)("Select Highlight", "VideoSegmentSelector"))
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = this.props.segment,
-                        t = Object(g.b)(e.endOffset - e.startOffset);
-                    return a.createElement(X.a, {
+                return a.__extends(t, e), t.prototype.render = function() {
+                    var e = this.props.segment;
+                    return r.createElement(X.a, {
                         color: X.b.Orange,
                         onLeftDragStart: this.props.onDragStart,
                         onRightDragStart: this.props.onDragStart,
@@ -1371,68 +1357,93 @@ webpackJsonp([95], {
                         startOffset: e.startOffset,
                         endOffset: e.endOffset,
                         minOffset: e.minOffset,
-                        maxOffset: e.maxOffset,
-                        popover: this.renderQueueSegmentButton()
-                    }, a.createElement(w._32, {
+                        maxOffset: e.maxOffset
+                    }, r.createElement(w._33, {
                         alignItems: w.c.Center,
                         display: w.R.Flex,
                         fullWidth: !0,
                         justifyContent: w._7.Center,
                         padding: {
-                            y: 2
+                            y: 3
                         },
-                        textAlign: w._42.Center
-                    }, a.createElement(w._22, {
-                        asset: w._23.GlyphLength
-                    }), a.createElement(w._8, {
-                        margin: {
-                            left: .5
-                        }
-                    }, a.createElement(w.Q, {
-                        "data-test-selector": W.SegmentLength,
-                        align: w._56.Middle
-                    }, t))))
+                        textAlign: w._43.Center
+                    }))
                 }, t
-            }(a.Component),
-            Y = Object(u.compose)(Object(k.d)("VideoSegmentEditor", {
+            }(r.Component),
+            $ = Object(u.compose)(Object(k.d)("VideoSegmentEditor", {
                 autoReportInteractive: !0
-            }))($),
-            Z = n("Kj+b");
+            }))(J),
+            Y = n("Kj+b");
         ! function(e) {
             e[e.ErrorMessage = 0] = "ErrorMessage"
-        }(J || (J = {}));
-        var ee, te = function(e) {
+        }(Q || (Q = {}));
+        var Z, ee = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.renderTimelineSegments = function() {
-                        return n.props.data.loading ? a.createElement(w._8, {
+                    return n.renderSelectSegmentButton = function() {
+                        var e, t = !n.props.data.loading && n.props.data.video && n.props.data.video.id,
+                            i = n.state.timelineSegments[n.state.activeIndex];
+                        return e = t ? r.createElement(w.Q, {
+                            color: w.K.OverlayAlt,
+                            fontSize: w.V.Size7
+                        }, "(" + Object(g.b)(i.endOffset - i.startOffset) + ")") : r.createElement(w._14, {
+                            lineCount: 1
+                        }), r.createElement(w._8, {
+                            position: w._15.Relative,
+                            attachTop: !0,
+                            fullWidth: !0,
+                            display: w.R.Flex,
+                            justifyContent: w._7.Center
+                        }, r.createElement(w._33, {
+                            elevation: 3,
+                            position: w._15.Absolute,
+                            attachBottom: !0,
+                            margin: {
+                                bottom: 1
+                            }
+                        }, r.createElement(w.v, {
+                            onClick: n.onSelectSegmentClick,
+                            blurAfterClick: !0,
+                            disabled: !t
+                        }, r.createElement(w._8, {
+                            padding: {
+                                x: 2
+                            }
+                        }, r.createElement(w.Q, null, Object(l.d)("Select Highlight", "VideoSegmentSelector")), e))))
+                    }, n.renderTimelineSegments = function() {
+                        return n.props.data.loading ? r.createElement(w._8, {
                             padding: {
                                 y: 3
                             },
                             display: w.R.Flex,
                             flexDirection: w.T.Column,
                             alignItems: w.c.Center
-                        }, a.createElement(w._10, null)) : !n.props.data.error && (n.props.data.loading || n.props.data.video && n.props.data.video.id) ? n.state.timelineSegments.map(function(e) {
-                            return a.createElement(Y, {
+                        }, r.createElement(w._10, null)) : !n.props.data.error && (n.props.data.loading || n.props.data.video && n.props.data.video.id) ? n.state.timelineSegments.map(function(e) {
+                            return r.createElement($, {
                                 key: e.createdAt,
                                 onDragStart: n.props.onDragStart,
                                 onEndOffsetDragEnd: n.props.onEndOffsetDragEnd,
                                 onOffsetChange: n.onActiveSegmentOffsetChange,
-                                onSelectSegmentClick: n.props.onSelectSegmentClick,
                                 onStartOffsetDragEnd: n.props.onStartOffsetDragEnd,
                                 segment: e
                             })
-                        }) : a.createElement(w._8, {
-                            "data-test-selector": J.ErrorMessage,
+                        }) : r.createElement(w._8, {
+                            "data-test-selector": Q.ErrorMessage,
                             padding: {
                                 y: 3
                             },
-                            textAlign: w._42.Center
-                        }, a.createElement(w.Q, {
+                            textAlign: w._43.Center
+                        }, r.createElement(w.Q, {
                             fontSize: w.V.Size4
                         }, Object(l.d)("Video data failed to load. Please try again later.", "VideoTimeline")))
                     }, n.onActiveSegmentOffsetChange = function(e) {
                         n.updateActiveSegmentOffsets(e)
+                    }, n.onSelectSegmentClick = function() {
+                        var e = n.state.timelineSegments[n.state.activeIndex];
+                        n.props.onSelectSegmentClick({
+                            startOffset: e.startOffset,
+                            endOffset: e.endOffset
+                        })
                     }, n.props.data && !n.props.data.loading && n.props.data.video ? n.state = {
                         timelineSegments: [n.getInitialTimelineSegment(t)],
                         activeIndex: 0
@@ -1441,13 +1452,13 @@ webpackJsonp([95], {
                         activeIndex: 0
                     }, n
                 }
-                return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     this.props.data.loading && !e.data.loading && e.data.video && (this.state = {
                         timelineSegments: [this.getInitialTimelineSegment(e)],
                         activeIndex: 0
                     })
                 }, t.prototype.render = function() {
-                    return a.createElement(w._32, {
+                    return r.createElement(w._33, {
                         background: w.n.Base,
                         elevation: 2,
                         fullWidth: !0,
@@ -1457,30 +1468,30 @@ webpackJsonp([95], {
                         padding: {
                             top: 3
                         }
-                    }, a.createElement(w._32, {
+                    }, this.renderSelectSegmentButton(), r.createElement(w._33, {
                         background: w.n.Alt2,
                         elevation: 1
-                    }, this.renderTimelineSegments()), a.createElement(w._8, {
+                    }, this.renderTimelineSegments()), r.createElement(w._8, {
                         alignItems: w.c.Center,
                         display: w.R.Flex,
                         justifyContent: w._7.Center,
                         padding: {
                             y: 1
                         }
-                    }, a.createElement(z, {
+                    }, r.createElement(z, {
                         onUpdate: this.onActiveSegmentOffsetChange,
                         segment: this.state.timelineSegments[this.state.activeIndex]
                     })))
                 }, t.prototype.updateActiveSegmentOffsets = function(e) {
                     var t = this;
                     this.setState(function(n) {
-                        var i = r.__assign({}, t.state.timelineSegments[t.state.activeIndex], {
+                        var i = a.__assign({}, t.state.timelineSegments[t.state.activeIndex], {
                                 startOffset: Math.floor(e.startOffset),
                                 endOffset: Math.ceil(e.endOffset)
                             }),
-                            a = n.timelineSegments.slice();
-                        return a[t.state.activeIndex] = i, {
-                            timelineSegments: a
+                            r = n.timelineSegments.slice();
+                        return r[t.state.activeIndex] = i, {
+                            timelineSegments: r
                         }
                     })
                 }, t.prototype.getInitialTimelineSegment = function(e) {
@@ -1500,8 +1511,8 @@ webpackJsonp([95], {
                         createdAt: Date.now()
                     }
                 }, t
-            }(a.Component),
-            ne = Object(u.compose)(Object(f.a)(Z, {
+            }(r.Component),
+            te = Object(u.compose)(Object(f.a)(Y, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1511,71 +1522,71 @@ webpackJsonp([95], {
                 }
             }), Object(k.d)("VideoTimeline", {
                 autoReportInteractive: !0
-            }))(te),
-            ie = n("91s2"),
-            re = 0,
+            }))(ee),
+            ne = n("91s2"),
+            ie = 0,
             ae = -1,
-            oe = 2;
+            re = 2;
         ! function(e) {
             e[e.SourceVideoTitle = 0] = "SourceVideoTitle", e[e.SourceVideoDate = 1] = "SourceVideoDate", e[e.SourceVideoLength = 2] = "SourceVideoLength"
-        }(ee || (ee = {}));
-        var se = function(e) {
+        }(Z || (Z = {}));
+        var oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         endHighlightOffset: null,
                         lastVideoOffset: null,
-                        requestedVideoOffset: re,
+                        requestedVideoOffset: ie,
                         shouldPlayerPause: !1,
                         videoSegmentQueue: []
                     }, t.renderSourceVideoInfo = function() {
-                        return a.createElement(w._8, {
+                        return r.createElement(w._8, {
                             padding: {
                                 top: .5
                             }
-                        }, a.createElement(w.Q, {
-                            "data-test-selector": ee.SourceVideoTitle,
+                        }, r.createElement(w.Q, {
+                            "data-test-selector": Z.SourceVideoTitle,
                             fontSize: w.V.Size6,
                             italic: !t.props.data.video.title,
                             lines: 2,
                             ellipsis: !0
-                        }, t.props.data.video.title || Object(l.d)("Untitled Broadcast", "SourceVideoInfo")), a.createElement(w._8, {
+                        }, t.props.data.video.title || Object(l.d)("Untitled Broadcast", "SourceVideoInfo")), r.createElement(w._8, {
                             display: w.R.Flex
-                        }, t.props.data.video.publishedAt && a.createElement(w.Q, {
-                            "data-test-selector": ee.SourceVideoDate,
+                        }, t.props.data.video.publishedAt && r.createElement(w.Q, {
+                            "data-test-selector": Z.SourceVideoDate,
                             color: w.K.Alt2,
                             fontSize: w.V.Size7,
-                            type: w._46.Span
-                        }, Object(l.c)(new Date(t.props.data.video.publishedAt), "medium"), " "), a.createElement(w._22, {
-                            asset: w._23.GlyphLength,
-                            type: w._24.Alt2,
+                            type: w._47.Span
+                        }, Object(l.c)(new Date(t.props.data.video.publishedAt), "medium"), " "), r.createElement(w._23, {
+                            asset: w._24.GlyphLength,
+                            type: w._25.Alt2,
                             width: 12,
                             height: 12
-                        }), a.createElement(w.Q, {
-                            "data-test-selector": ee.SourceVideoLength,
+                        }), r.createElement(w.Q, {
+                            "data-test-selector": Z.SourceVideoLength,
                             color: w.K.Alt2,
                             fontSize: w.V.Size7,
-                            type: w._46.Span
+                            type: w._47.Span
                         }, " ", Object(g.b)(t.props.data.video.lengthSeconds))))
                     }, t.onSelectHighlightClick = function(e) {
                         t.setState(function(n) {
                             var i = n.videoSegmentQueue,
-                                a = t.props.data.video,
+                                r = t.props.data.video,
                                 o = {
-                                    sourceVideoID: a.id,
+                                    sourceVideoID: r.id,
                                     startOffsetSeconds: e.startOffset,
                                     endOffsetSeconds: e.endOffset,
                                     metadata: {
-                                        description: a.description || "",
-                                        game: a.game,
-                                        language: a.language,
-                                        tags: a.tags,
+                                        description: r.description || "",
+                                        game: r.game,
+                                        language: r.language,
+                                        tags: r.tags,
                                         title: Object(l.d)("Highlight: {videoTitle}", {
-                                            videoTitle: a.title
+                                            videoTitle: r.title
                                         }, "HighlighterPage")
                                     }
                                 };
-                            return r.__assign({}, n, {
+                            return a.__assign({}, n, {
                                 videoSegmentQueue: i.concat(o)
                             })
                         })
@@ -1610,7 +1621,7 @@ webpackJsonp([95], {
                         })
                     }, t.onEndOffsetDragEnd = function(e) {
                         t.setState({
-                            requestedVideoOffset: e.endOffset - oe,
+                            requestedVideoOffset: e.endOffset - re,
                             shouldPlayerPause: !1,
                             endHighlightOffset: e.endOffset
                         })
@@ -1630,7 +1641,7 @@ webpackJsonp([95], {
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     window.addEventListener("beforeunload", this.onBeforeunloadHandler), this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     e.data.loading !== this.props.data.loading && e.data.video && this.setState({
@@ -1641,13 +1652,13 @@ webpackJsonp([95], {
                 }, t.prototype.render = function() {
                     if (this.props.data.loading) return null;
                     var e = this.props.match.params.channelName;
-                    return this.props.data.video && "" === this.props.data.video.id ? a.createElement(o.b, {
+                    return this.props.data.video && "" === this.props.data.video.id ? r.createElement(o.b, {
                         to: Object(s.d)(e)
-                    }) : !this.props.data.error && this.props.data.video && this.props.data.video.owner ? this.props.data.video.broadcastType !== h.a.Archive ? a.createElement(d.a, {
+                    }) : !this.props.data.error && this.props.data.video && this.props.data.video.owner ? this.props.data.video.broadcastType !== h.a.Archive ? r.createElement(d.a, {
                         message: Object(l.d)("You can only highlight past broadcasts.", "HighlighterPage")
-                    }) : this.props.data.video.owner && this.props.data.video.owner.login !== e ? a.createElement(d.a, {
+                    }) : this.props.data.video.owner && this.props.data.video.owner.login !== e ? r.createElement(d.a, {
                         message: Object(l.d)("The selected video to highlight does not exist.", "HighlighterPage")
-                    }) : a.createElement(p.b, null, a.createElement(w._32, {
+                    }) : r.createElement(p.b, null, r.createElement(w._33, {
                         alignItems: w.c.Stretch,
                         background: w.n.Alt,
                         display: w.R.Flex,
@@ -1658,39 +1669,39 @@ webpackJsonp([95], {
                             x: 3,
                             y: 4
                         }
-                    }, a.createElement(w.Y, {
+                    }, r.createElement(w.Y, {
                         justifyContent: w._7.Center
-                    }, a.createElement(w.L, {
+                    }, r.createElement(w.L, {
                         cols: {
                             default: 1
                         }
-                    }), a.createElement(w.L, {
+                    }), r.createElement(w.L, {
                         cols: {
                             default: 6
                         }
-                    }, a.createElement(w.k, {
+                    }, r.createElement(w.k, {
                         ratio: w.l.Aspect16x9
-                    }, a.createElement(y, {
+                    }, r.createElement(y, {
                         videoID: this.props.data.video.id,
                         paused: this.state.shouldPlayerPause,
                         onVideoTimeChange: this.onVideoTimeChange,
                         nextVideoOffset: this.state.requestedVideoOffset,
                         onPauseToggled: this.onPauseToggled
-                    }))), a.createElement(w.L, {
+                    }))), r.createElement(w.L, {
                         cols: {
                             default: 4
                         }
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         fullHeight: !0,
                         fullWidth: !0,
                         position: w._15.Relative
-                    }, a.createElement(w._8, {
+                    }, r.createElement(w._8, {
                         position: w._15.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0
-                    }, a.createElement(q, {
+                    }, r.createElement(q, {
                         queue: this.state.videoSegmentQueue,
                         onSegmentDelete: this.onRemoveSegment,
                         onQueueChange: this.onQueueChangeHandler,
@@ -1700,45 +1711,45 @@ webpackJsonp([95], {
                             id: this.props.data.video.owner.id,
                             login: e
                         }
-                    }), a.createElement(o.a, {
+                    }), r.createElement(o.a, {
                         when: this.state.videoSegmentQueue.length > 0,
                         message: this.discardChangesMessage()
-                    })))), a.createElement(w.L, {
+                    })))), r.createElement(w.L, {
                         cols: {
                             default: 1
                         }
-                    }), a.createElement(w.L, {
+                    }), r.createElement(w.L, {
                         cols: {
                             default: 1
                         }
-                    }), a.createElement(w.L, {
+                    }), r.createElement(w.L, {
                         cols: {
                             default: 6
                         }
-                    }, this.renderSourceVideoInfo()), a.createElement(w.L, {
+                    }, this.renderSourceVideoInfo()), r.createElement(w.L, {
                         cols: {
                             default: 5
                         }
-                    })), a.createElement(w._8, {
+                    })), r.createElement(w._8, {
                         alignSelf: w.d.Center,
                         padding: {
-                            y: 1
+                            y: 3
                         },
                         fullWidth: !0
-                    }, a.createElement(ne, {
+                    }, r.createElement(te, {
                         onDragStart: this.onDragStart,
                         onStartOffsetDragEnd: this.onStartOffsetDragEnd,
                         onEndOffsetDragEnd: this.onEndOffsetDragEnd,
                         videoID: this.props.data.video.id,
                         onSelectSegmentClick: this.onSelectHighlightClick
-                    })))) : a.createElement(d.a, {
+                    })))) : r.createElement(d.a, {
                         message: Object(l.d)("Error loading video data. Please try again later.", "HighlighterPage")
                     })
                 }, t.prototype.discardChangesMessage = function() {
                     return Object(l.d)("Your highlights have not been created. Are you sure you want to leave?", "HighlighterPage")
                 }, t
-            }(a.Component),
-            le = Object(u.compose)(Object(f.a)(ie, {
+            }(r.Component),
+            se = Object(u.compose)(Object(f.a)(ne, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1750,9 +1761,9 @@ webpackJsonp([95], {
                 destination: v.a.VideoManagerHighlighter
             }), Object(m.a)({
                 location: S.PageviewLocation.VideoManagerHighlighter
-            }))(se),
-            de = function(e) {
-                return a.createElement(c.a, {
+            }))(oe),
+            le = function(e) {
+                return r.createElement(c.a, {
                     ownerLogin: e.match.params.channelName,
                     permittedRoles: {
                         editor: !0,
@@ -1761,24 +1772,24 @@ webpackJsonp([95], {
                 }, function(t) {
                     var n = t.loading,
                         i = t.permitted;
-                    return n || i ? a.createElement(le, r.__assign({}, e)) : a.createElement(d.a, {
+                    return n || i ? r.createElement(se, a.__assign({}, e)) : r.createElement(d.a, {
                         message: Object(l.d)("Something went wrong. Please try again.", "HighlighterPageContainer")
                     })
                 })
             },
-            ce = n("PRb0");
+            de = n("PRb0");
         n.d(t, "b", function() {
-            return ue
+            return ce
         }), n.d(t, "a", function() {
-            return pe
+            return ue
         });
-        var ue = function(e) {
-                return a.createElement(o.b, {
+        var ce = function(e) {
+                return r.createElement(o.b, {
                     to: Object(s.d)(e.match.params.channelName)
                 })
             },
-            pe = function(e) {
-                return Object(ce.a)() ? a.createElement(de, r.__assign({}, e)) : a.createElement(ue, r.__assign({}, e))
+            ue = function(e) {
+                return Object(de.a)() ? r.createElement(le, a.__assign({}, e)) : r.createElement(ce, a.__assign({}, e))
             }
     },
     "12gq": function(e, t) {},
@@ -1966,7 +1977,7 @@ webpackJsonp([95], {
     },
     "3HXW": function(e, t, n) {
         "use strict";
-        var i, r, a = n("TToO"),
+        var i, a, r = n("TToO"),
             o = n("GiK3"),
             s = n("HW6M"),
             l = n("kLf9"),
@@ -1977,25 +1988,25 @@ webpackJsonp([95], {
         }(i || (i = {})),
         function(e) {
             e.LeftHandle = "leftHandle", e.Slider = "slider", e.RightHandle = "rightHandle"
-        }(r || (r = {}));
+        }(a || (a = {}));
         var c, u = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.leftHandleRef = null, n.rightHandleRef = null, n.sliderHandleRef = null, n.getHandleHandlers = function(e) {
                     switch (e) {
-                        case r.LeftHandle:
+                        case a.LeftHandle:
                             return {
                                 handleRef: n.leftHandleRef,
                                 mouseMoveHandler: n.onLeftMouseMove,
                                 mouseUpHandler: n.onLeftMouseUp
                             };
-                        case r.RightHandle:
+                        case a.RightHandle:
                             return {
                                 handleRef: n.rightHandleRef,
                                 mouseMoveHandler: n.onRightMouseMove,
                                 mouseUpHandler: n.onRightMouseUp
                             };
-                        case r.Slider:
+                        case a.Slider:
                             return {
                                 handleRef: n.sliderHandleRef,
                                 mouseMoveHandler: n.onSliderMouseMove,
@@ -2007,15 +2018,15 @@ webpackJsonp([95], {
                 }, n.addHandleListeners = function(e) {
                     var t = n.getHandleHandlers(e),
                         i = t.handleRef,
-                        r = t.mouseMoveHandler,
-                        a = t.mouseUpHandler;
-                    i && (n.preventUserSelect(), i.ownerDocument.addEventListener("mousemove", r), i.ownerDocument.addEventListener("mouseup", a))
+                        a = t.mouseMoveHandler,
+                        r = t.mouseUpHandler;
+                    i && (n.preventUserSelect(), i.ownerDocument.addEventListener("mousemove", a), i.ownerDocument.addEventListener("mouseup", r))
                 }, n.removeHandleListeners = function(e) {
                     var t = n.getHandleHandlers(e),
                         i = t.handleRef,
-                        r = t.mouseMoveHandler,
-                        a = t.mouseUpHandler;
-                    i && (n.allowUserSelect(), i.ownerDocument.removeEventListener("mousemove", r), i.ownerDocument.removeEventListener("mouseup", a))
+                        a = t.mouseMoveHandler,
+                        r = t.mouseUpHandler;
+                    i && (n.allowUserSelect(), i.ownerDocument.removeEventListener("mousemove", a), i.ownerDocument.removeEventListener("mouseup", r))
                 }, n.leftHandleRefHandler = function(e) {
                     n.leftHandleRef = e
                 }, n.onLeftMouseDown = function(e) {
@@ -2029,7 +2040,7 @@ webpackJsonp([95], {
                         n.props.onLeftDragStart && n.props.onLeftDragStart({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.addHandleListeners(r.LeftHandle)
+                        }), n.addHandleListeners(a.LeftHandle)
                     })
                 }, n.onLeftMouseUp = function() {
                     n.setState({
@@ -2039,7 +2050,7 @@ webpackJsonp([95], {
                         n.props.onLeftDragEnd && n.props.onLeftDragEnd({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.removeHandleListeners(r.LeftHandle)
+                        }), n.removeHandleListeners(a.LeftHandle)
                     })
                 }, n.onLeftMouseMove = function(e) {
                     var t = e.clientX;
@@ -2071,7 +2082,7 @@ webpackJsonp([95], {
                         n.props.onRightDragStart && n.props.onRightDragStart({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.addHandleListeners(r.RightHandle)
+                        }), n.addHandleListeners(a.RightHandle)
                     })
                 }, n.onRightMouseUp = function() {
                     n.setState({
@@ -2081,7 +2092,7 @@ webpackJsonp([95], {
                         n.props.onRightDragEnd && n.props.onRightDragEnd({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.removeHandleListeners(r.RightHandle)
+                        }), n.removeHandleListeners(a.RightHandle)
                     })
                 }, n.onRightMouseMove = function(e) {
                     var t = e.clientX;
@@ -2113,7 +2124,7 @@ webpackJsonp([95], {
                         n.props.onSliderDragStart && n.props.onSliderDragStart({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.addHandleListeners(r.Slider)
+                        }), n.addHandleListeners(a.Slider)
                     })
                 }, n.onSliderMouseUp = function() {
                     n.setState({
@@ -2123,20 +2134,20 @@ webpackJsonp([95], {
                         n.props.onSliderDragEnd && n.props.onSliderDragEnd({
                             startOffset: n.state.startOffset,
                             endOffset: n.state.endOffset
-                        }), n.removeHandleListeners(r.Slider)
+                        }), n.removeHandleListeners(a.Slider)
                     })
                 }, n.onSliderMouseMove = function(e) {
                     var t = e.clientX;
                     n.setState(function(e, i) {
-                        var r = e.endOffset - e.startOffset,
-                            a = n.calculateOffset(t, {
+                        var a = e.endOffset - e.startOffset,
+                            r = n.calculateOffset(t, {
                                 startBoundary: i.minOffset,
-                                endBoundary: i.maxOffset - r,
+                                endBoundary: i.maxOffset - a,
                                 currentValue: e.startOffset
                             });
                         return {
-                            startOffset: a,
-                            endOffset: a + r
+                            startOffset: r,
+                            endOffset: r + a
                         }
                     }, function() {
                         n.props.onSliderDrag && n.props.onSliderDrag({
@@ -2147,8 +2158,8 @@ webpackJsonp([95], {
                 }, n.calculateOffset = function(e, t) {
                     if (null === n.state.previousPosition || null === n.state.previousBaseValue) return t.currentValue;
                     var i = n.convertPixelsToOffsetUnits(e - n.state.previousPosition),
-                        r = n.state.previousBaseValue + i;
-                    return r < t.startBoundary ? t.startBoundary : r > t.endBoundary ? t.endBoundary : r
+                        a = n.state.previousBaseValue + i;
+                    return a < t.startBoundary ? t.startBoundary : a > t.endBoundary ? t.endBoundary : a
                 }, n.convertPixelsToOffsetUnits = function(e) {
                     return n.props.parentContainerRef ? 0 === n.props.parentContainerRef.clientWidth ? 0 : e * ((n.props.maxOffset - n.props.minOffset) / n.props.parentContainerRef.clientWidth) : 0
                 }, n.addFocus = function() {
@@ -2171,7 +2182,7 @@ webpackJsonp([95], {
                     showFocus: !1
                 }, n
             }
-            return a.__extends(t, e), t.prototype.render = function() {
+            return r.__extends(t, e), t.prototype.render = function() {
                 var e = s("draggable-slider__content", {
                     "draggable-slider__content--blue": this.props.color === c.Blue,
                     "draggable-slider__content--orange": this.props.color === c.Orange,
@@ -2198,7 +2209,7 @@ webpackJsonp([95], {
                     margin: {
                         bottom: 1
                     }
-                }, this.props.popover))), o.createElement(d._32, {
+                }, this.props.popover))), o.createElement(d._33, {
                     className: e,
                     fullWidth: !0,
                     display: d.R.Flex,
@@ -2258,7 +2269,7 @@ webpackJsonp([95], {
                     t.parentContainerRef = e
                 }, t
             }
-            return a.__extends(t, e), t.prototype.render = function() {
+            return r.__extends(t, e), t.prototype.render = function() {
                 var e = this.props.handleSize ? this.props.handleSize : l.c.Small,
                     t = void 0 === this.props.minLength ? 0 : this.props.minLength,
                     n = void 0 === this.props.maxLength ? this.props.maxOffset - this.props.minOffset : this.props.maxLength,
@@ -2427,9 +2438,9 @@ webpackJsonp([95], {
         }), n.d(t, "a", function() {
             return u
         });
-        var i, r = n("TToO"),
-            a = n("GiK3"),
-            o = (n.n(a), n("6sO2")),
+        var i, a = n("TToO"),
+            r = n("GiK3"),
+            o = (n.n(r), n("6sO2")),
             s = n("2hJ3"),
             l = n("f6Cj"),
             d = n("Odds"),
@@ -2443,16 +2454,16 @@ webpackJsonp([95], {
                 var n = e.call(this, t) || this;
                 return n.renderLink = function() {
                     var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                    return n.isLink() ? a.createElement("a", r.__assign({
+                    return n.isLink() ? r.createElement("a", a.__assign({
                         href: n.getLinkTarget(),
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(d._60)(n.props)), n.renderIcon()) : a.createElement("button", r.__assign({
+                    }, Object(d._61)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(d._60)(n.props)), n.renderIcon())
+                    }, Object(d._61)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -2467,9 +2478,9 @@ webpackJsonp([95], {
                     })
                 }, n.renderIcon = function() {
                     var e = n.getAssetFromType();
-                    return a.createElement(d._8, {
+                    return r.createElement(d._8, {
                         className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
-                    }, a.createElement(d._22, {
+                    }, r.createElement(d._23, {
                         asset: e,
                         width: 30,
                         height: 30
@@ -2494,16 +2505,16 @@ webpackJsonp([95], {
                 }, n.getAssetFromType = function() {
                     switch (n.props.type) {
                         case i.Twitter:
-                            return d._23.Twitter;
+                            return d._24.Twitter;
                         case i.Facebook:
-                            return d._23.Facebook;
+                            return d._24.Facebook;
                         case i.VKontakte:
-                            return d._23.VKontakte;
+                            return d._24.VKontakte;
                         case i.Reddit:
-                            return d._23.Reddit;
+                            return d._24.Reddit;
                         case i.Copy:
                         default:
-                            return d._23.Copy
+                            return d._24.Copy
                     }
                 }, n.addSocialClassModifier = function(e) {
                     switch (n.props.type) {
@@ -2523,18 +2534,18 @@ webpackJsonp([95], {
                 }, n.getLinkTarget = function() {
                     var e = n.props,
                         t = e.text,
-                        r = e.type,
-                        a = n.getUrl(),
+                        a = e.type,
+                        r = n.getUrl(),
                         o = t || "";
-                    switch (r) {
+                    switch (a) {
                         case i.Reddit:
-                            return Object(l.b)(a, o);
+                            return Object(l.b)(r, o);
                         case i.VKontakte:
-                            return Object(l.d)(a);
+                            return Object(l.d)(r);
                         case i.Facebook:
-                            return Object(l.a)(a);
+                            return Object(l.a)(r);
                         case i.Twitter:
-                            return Object(l.c)(a, o);
+                            return Object(l.c)(r, o);
                         default:
                             return ""
                     }
@@ -2542,15 +2553,15 @@ webpackJsonp([95], {
                     isCopied: !1
                 }, n
             }
-            return r.__extends(t, e), t.prototype.render = function() {
-                return a.createElement(d._8, {
+            return a.__extends(t, e), t.prototype.render = function() {
+                return r.createElement(d._8, {
                     className: "social-button"
-                }, a.createElement(d._49, {
+                }, r.createElement(d._50, {
                     label: this.getTooltipFromType(),
-                    direction: d._51.Top
+                    direction: d._52.Top
                 }, this.renderLink()))
             }, t
-        }(a.Component)
+        }(r.Component)
     },
     "91s2": function(e, t, n) {
         var i = {
@@ -2721,11 +2732,11 @@ webpackJsonp([95], {
                 column: 1
             }
         };
-        var r = {};
+        var a = {};
         i.definitions = i.definitions.concat(n("73mz").definitions.filter(function(e) {
             if ("FragmentDefinition" !== e.kind) return !0;
             var t = e.name.value;
-            return !r[t] && (r[t] = !0, !0)
+            return !a[t] && (a[t] = !0, !0)
         })), e.exports = i
     },
     AoO8: function(e, t, n) {
@@ -2734,8 +2745,8 @@ webpackJsonp([95], {
             return d(l(e), t)
         }, t.a = d;
         var i = n("TToO"),
-            r = n("OAwv"),
-            a = (n.n(r), n("6sO2")),
+            a = n("OAwv"),
+            r = (n.n(a), n("6sO2")),
             o = n("JpYe"),
             s = {
                 height: 378,
@@ -2746,15 +2757,15 @@ webpackJsonp([95], {
 
         function l(e) {
             e.video && (e.video = Object(o.b)(e.video));
-            var t = r.stringify(e);
-            return a.o.config.playerBaseURL + "/?" + t
+            var t = a.stringify(e);
+            return r.o.config.playerBaseURL + "/?" + t
         }
 
         function d(e, t) {
             void 0 === t && (t = s);
-            var n, r, a = i.__assign({}, s, t),
-                o = '<iframe src="' + e + '" frameborder="0" ' + (a.allowFullscreen ? 'allowfullscreen="true" ' : "") + (a.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + a.height + '" width="' + a.width + '"></iframe>';
-            return a.textLink && (o += (n = a.textLink.url, r = a.textLink.text, '<a href="' + n + '" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">' + r + "</a>")), o
+            var n, a, r = i.__assign({}, s, t),
+                o = '<iframe src="' + e + '" frameborder="0" ' + (r.allowFullscreen ? 'allowfullscreen="true" ' : "") + (r.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + r.height + '" width="' + r.width + '"></iframe>';
+            return r.textLink && (o += (n = r.textLink.url, a = r.textLink.text, '<a href="' + n + '" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">' + a + "</a>")), o
         }
     },
     CBaN: function(e, t) {},
@@ -2767,14 +2778,14 @@ webpackJsonp([95], {
                 t = function(t) {
                     return "en" === t.code ? 0 : e && e.startsWith(t.code) ? 1 : 2
                 };
-            return r.slice().sort(function(e, n) {
+            return a.slice().sort(function(e, n) {
                 var i = t(e),
-                    r = t(n);
-                return i !== r ? i - r : i + ":" + e.label < r + ":" + n.label ? -1 : 1
-            }).concat(a(!0))
+                    a = t(n);
+                return i !== a ? i - a : i + ":" + e.label < a + ":" + n.label ? -1 : 1
+            }).concat(r(!0))
         };
         var i = n("6sO2"),
-            r = [{
+            a = [{
                 code: "ar",
                 label: "العربية"
             }, {
@@ -2854,7 +2865,7 @@ webpackJsonp([95], {
                 label: "中文"
             }];
 
-        function a(e) {
+        function r(e) {
             return void 0 === e && (e = !1), [{
                 code: "asl",
                 label: "American Sign Language"
@@ -2863,7 +2874,7 @@ webpackJsonp([95], {
                 label: e ? Object(i.d)("Other", "broadcaster-languages") : "Other"
             }]
         }
-        var o = new Set(r.concat(a()).map(function(e) {
+        var o = new Set(a.concat(r()).map(function(e) {
             return e.code
         }))
     },
@@ -3074,13 +3085,13 @@ webpackJsonp([95], {
     PRb0: function(e, t, n) {
         "use strict";
         t.a = function() {
-            if (r.a.buildType === a.a.Dev) return !0;
-            var e = r.b.get(s, i.Dev);
+            if (a.a.buildType === r.a.Dev) return !0;
+            var e = a.b.get(s, i.Dev);
             switch (e) {
                 case i.Dev:
                     return !1;
                 case i.Staff:
-                    var t = Object(o.c)(r.o.store.getState());
+                    var t = Object(o.c)(a.o.store.getState());
                     return !!(t && t.roles && t.roles.isStaff);
                 case i.Everyone:
                     return !0;
@@ -3089,8 +3100,8 @@ webpackJsonp([95], {
                     return n
             }
         };
-        var i, r = n("6sO2"),
-            a = n("Ejve"),
+        var i, a = n("6sO2"),
+            r = n("Ejve"),
             o = n("Aj/L"),
             s = "twilight_moonstone";
         ! function(e) {
@@ -3100,8 +3111,8 @@ webpackJsonp([95], {
     Snvs: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
-            r = n("GiK3"),
-            a = n("3zLD"),
+            a = n("GiK3"),
+            r = n("3zLD"),
             o = n("6sO2"),
             s = n("7vx8"),
             l = n("CSlQ"),
@@ -3138,7 +3149,7 @@ webpackJsonp([95], {
                 }, t.prototype.render = function() {
                     return this.props.children(this.state)
                 }, t
-            }(r.Component);
+            }(a.Component);
 
         function u(e, t) {
             return !!e.owner || (!(!e.staff || !t.staff) || !(!e.editor || !t.editor))
@@ -3153,7 +3164,7 @@ webpackJsonp([95], {
                 };
             return !t.error && !t.loading && t.user && t.currentUser && (n.staff = !(!t.currentUser.roles || !t.currentUser.roles.isStaff), n.editor = !(!t.user.self || !t.user.self.isEditor), n.owner = t.user.id === t.currentUser.id), n
         }
-        var f = Object(a.compose)(Object(s.a)(d, {
+        var f = Object(r.compose)(Object(s.a)(d, {
             options: function(e) {
                 return {
                     variables: {
@@ -3333,19 +3344,19 @@ webpackJsonp([95], {
         n.d(t, "a", function() {
             return i
         }), t.c = function e(t, n, i) {
-            return r.__awaiter(this, void 0, void 0, function() {
+            return a.__awaiter(this, void 0, void 0, function() {
                 var l, c, u, p;
-                return r.__generator(this, function(r) {
-                    switch (r.label) {
+                return a.__generator(this, function(a) {
+                    switch (a.label) {
                         case 0:
-                            return r.trys.push([0, 2, , 3]), [4, i.query({
+                            return a.trys.push([0, 2, , 3]), [4, i.query({
                                 query: d,
                                 variables: {
                                     videoID: t.id
                                 }
                             })];
                         case 1:
-                            return l = r.sent().data, c = function(e, t) {
+                            return l = a.sent().data, c = function(e, t) {
                                 return {
                                     id: e.id,
                                     owner: t.owner,
@@ -3365,28 +3376,28 @@ webpackJsonp([95], {
                                 shared_item_url: n.shareURL,
                                 source_item_id: c.id,
                                 source_item_type: Object(s.a)(c.broadcastType)
-                            }, a.o.tracking.track(o.SpadeEventType.ShareItem, u), [3, 3];
+                            }, r.o.tracking.track(o.SpadeEventType.ShareItem, u), [3, 3];
                         case 2:
-                            return p = r.sent(), a.j.error(p.toString(), e.name), [3, 3];
+                            return p = a.sent(), r.j.error(p.toString(), e.name), [3, 3];
                         case 3:
                             return [2]
                     }
                 })
             })
         }, t.b = function e(t, n, i) {
-            return r.__awaiter(this, void 0, void 0, function() {
+            return a.__awaiter(this, void 0, void 0, function() {
                 var s, d, c;
-                return r.__generator(this, function(r) {
-                    switch (r.label) {
+                return a.__generator(this, function(a) {
+                    switch (a.label) {
                         case 0:
-                            return r.trys.push([0, 2, , 3]), [4, i.query({
+                            return a.trys.push([0, 2, , 3]), [4, i.query({
                                 query: l,
                                 variables: {
                                     creatorID: t.owner.id
                                 }
                             })];
                         case 1:
-                            return s = r.sent().data, d = {
+                            return s = a.sent().data, d = {
                                 channel: s.user ? s.user.login : null,
                                 channel_id: Number(t.owner.id),
                                 game: null,
@@ -3399,17 +3410,17 @@ webpackJsonp([95], {
                                 shared_item_url: n.shareURL,
                                 source_item_id: t.id,
                                 source_item_type: o.SourceItemType.Collection
-                            }, a.o.tracking.track(o.SpadeEventType.ShareItem, d), [3, 3];
+                            }, r.o.tracking.track(o.SpadeEventType.ShareItem, d), [3, 3];
                         case 2:
-                            return c = r.sent(), a.j.error(c.toString(), e.name), [3, 3];
+                            return c = a.sent(), r.j.error(c.toString(), e.name), [3, 3];
                         case 3:
                             return [2]
                     }
                 })
             })
         };
-        var i, r = n("TToO"),
-            a = n("6sO2"),
+        var i, a = n("TToO"),
+            r = n("6sO2"),
             o = n("vH/s"),
             s = n("xrVp"),
             l = n("mvQ0"),
@@ -3424,19 +3435,19 @@ webpackJsonp([95], {
     d0Y8: function(e, t, n) {
         "use strict";
         var i = n("6rqt"),
-            r = (n.n(i), n("/1dg"));
+            a = (n.n(i), n("/1dg"));
         n.d(t, "VideoFieldEditor", function() {
-            return r.a
+            return a.a
         })
     },
     f6Cj: function(e, t, n) {
         "use strict";
         t.a = function(e) {
-            return Object(i.a)(r, {
+            return Object(i.a)(a, {
                 u: e
             })
         }, t.c = function(e, t) {
-            return Object(i.a)(a, {
+            return Object(i.a)(r, {
                 url: e,
                 text: t
             })
@@ -3451,8 +3462,8 @@ webpackJsonp([95], {
             })
         };
         var i = n("yDzg"),
-            r = "https://www.facebook.com/sharer/sharer.php",
-            a = "https://www.twitter.com/share",
+            a = "https://www.facebook.com/sharer/sharer.php",
+            r = "https://www.twitter.com/share",
             o = "https://www.reddit.com/submit",
             s = "https://vk.com/share.php"
     },
@@ -3619,11 +3630,11 @@ webpackJsonp([95], {
         n.d(t, "b", function() {
             return i
         }), n.d(t, "c", function() {
-            return a
+            return r
         }), n.d(t, "a", function() {
             return u
         });
-        var i, r, a, o = n("HW6M"),
+        var i, a, r, o = n("HW6M"),
             s = (n.n(o), n("GiK3")),
             l = (n.n(s), n("3HXW")),
             d = n("Odds"),
@@ -3634,10 +3645,10 @@ webpackJsonp([95], {
         }(i || (i = {})),
         function(e) {
             e[e.Handle = 0] = "Handle"
-        }(r || (r = {})),
+        }(a || (a = {})),
         function(e) {
             e[e.Small = 15] = "Small", e[e.Medium = 25] = "Medium"
-        }(a || (a = {}));
+        }(r || (r = {}));
         var u = function(e) {
             var t = o("draggable-slider-handle", {
                 "draggable-slider-handle--left": e.handlePosition === i.Left,
@@ -3652,11 +3663,11 @@ webpackJsonp([95], {
                 display: d.R.Flex,
                 fullHeight: !0
             }, s.createElement("div", {
-                "data-test-selector": r.Handle,
+                "data-test-selector": a.Handle,
                 onMouseDown: e.onMouseDown,
                 ref: e.onRef
-            }, s.createElement(d._22, {
-                asset: d._23.DragHandle,
+            }, s.createElement(d._23, {
+                asset: d._24.DragHandle,
                 width: e.size
             })))
         }
@@ -3776,8 +3787,8 @@ webpackJsonp([95], {
     qLt5: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
-            r = n("GiK3"),
-            a = n("D9fv"),
+            a = n("GiK3"),
+            r = n("D9fv"),
             o = n("Odds"),
             s = function(e) {
                 function t() {
@@ -3785,23 +3796,23 @@ webpackJsonp([95], {
                     return t.onChange = function(e) {
                         t.props.onChange(e.currentTarget.value)
                     }, t.renderLanguageOption = function(e) {
-                        return r.createElement("option", {
+                        return a.createElement("option", {
                             key: e.code,
                             value: e.code
                         }, e.label)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = r.createElement(o._28, {
+                    var e = a.createElement(o._29, {
                         onChange: this.onChange,
                         disabled: this.props.disabled,
                         defaultValue: this.props.defaultLanguage
-                    }, Object(a.b)().map(this.renderLanguageOption));
-                    return this.props.label && (e = r.createElement(o.W, {
+                    }, Object(r.b)().map(this.renderLanguageOption));
+                    return this.props.label && (e = a.createElement(o.W, {
                         label: this.props.label
                     }, e)), e
                 }, t
-            }(r.Component);
+            }(a.Component);
         n.d(t, "a", function() {
             return s
         })
@@ -3819,8 +3830,8 @@ webpackJsonp([95], {
     xX9u: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
-            r = n("GiK3"),
-            a = n("Odds"),
+            a = n("GiK3"),
+            r = n("Odds"),
             o = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3829,14 +3840,14 @@ webpackJsonp([95], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(a._4, {
+                    return a.createElement(r._4, {
                         readOnly: !0,
-                        type: a._5.Text,
+                        type: r._5.Text,
                         value: this.props.value,
                         onClick: this.handleClickHandler
                     })
                 }, t
-            }(r.Component);
+            }(a.Component);
         n.d(t, "a", function() {
             return o
         })
@@ -3844,8 +3855,8 @@ webpackJsonp([95], {
     zAjo: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
-            r = n("GiK3"),
-            a = n("6sO2"),
+            a = n("GiK3"),
+            r = n("6sO2"),
             o = n("+Znq"),
             s = n("xX9u"),
             l = n("OAwv"),
@@ -3870,14 +3881,14 @@ webpackJsonp([95], {
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = c(this.props.collection.id);
-                    return r.createElement("div", null, r.createElement(p.Q, null, Object(a.d)("Collection Link", "VideoShareBox")), r.createElement(s.a, {
+                    return a.createElement("div", null, a.createElement(p.Q, null, Object(r.d)("Collection Link", "VideoShareBox")), a.createElement(s.a, {
                         onClick: function() {
                             e.props.onClick(t)
                         },
                         value: t
                     }))
                 }, t
-            }(r.Component),
+            }(a.Component),
             m = n("cAee"),
             h = function(e) {
                 function t() {
@@ -3888,15 +3899,15 @@ webpackJsonp([95], {
                             platform: m.a.Link,
                             shareURL: e
                         };
-                        Object(m.b)(t.props.collection, n, a.o.apollo.client)
+                        Object(m.b)(t.props.collection, n, r.o.apollo.client)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(f, i.__assign({}, this.props, {
+                    return a.createElement(f, i.__assign({}, this.props, {
                         onClick: this.onClickHandler
                     }))
                 }, t
-            }(r.Component),
+            }(a.Component),
             g = n("AoO8"),
             v = n("vH/s"),
             S = n("sJBK");
@@ -3908,7 +3919,7 @@ webpackJsonp([95], {
                     var e = this,
                         t = this.props.content,
                         n = this.getEmbedPlayerContentURL(t);
-                    return r.createElement("div", null, r.createElement(p.Q, null, Object(a.d)("Embed Video", "VideoShareBox")), r.createElement(s.a, {
+                    return a.createElement("div", null, a.createElement(p.Q, null, Object(r.d)("Embed Video", "VideoShareBox")), a.createElement(s.a, {
                         onClick: function() {
                             e.props.onClick(n)
                         },
@@ -3930,14 +3941,14 @@ webpackJsonp([95], {
                         }(e, null !== this.props.selectedVideoStartTime ? this.props.selectedVideoStartTime : void 0),
                         n = e.owner.displayName,
                         i = e.title,
-                        r = Object(a.d)("Watch {title} from {displayName} on www.twitch.tv", {
+                        a = Object(r.d)("Watch {title} from {displayName} on www.twitch.tv", {
                             displayName: n,
                             title: i
                         }, "VideoShareBox");
                     return Object(g.b)(t, {
                         textLink: {
                             url: this.getEmbedPlayerContentURL(e),
-                            text: r
+                            text: a
                         },
                         allowScrolling: !1,
                         allowFullscreen: !0
@@ -3963,7 +3974,7 @@ webpackJsonp([95], {
                             return e
                     }
                 }, t
-            }(r.Component),
+            }(a.Component),
             b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3982,7 +3993,7 @@ webpackJsonp([95], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(k, i.__assign({}, this.props, {
+                    return a.createElement(k, i.__assign({}, this.props, {
                         onClick: this.onClickHandler
                     }))
                 }, t.prototype.trackCollectionShare = function(e, t) {
@@ -3991,16 +4002,16 @@ webpackJsonp([95], {
                         platform: m.a.Embed,
                         shareURL: e
                     };
-                    Object(m.b)(t, n, a.o.apollo.client)
+                    Object(m.b)(t, n, r.o.apollo.client)
                 }, t.prototype.trackVideoShare = function(e, t) {
                     var n = {
                         location: this.props.tracking.location,
                         platform: m.a.Embed,
                         shareURL: e
                     };
-                    Object(m.c)(t, n, a.o.apollo.client)
+                    Object(m.c)(t, n, r.o.apollo.client)
                 }, t
-            }(r.Component),
+            }(a.Component),
             y = n("bhVC"),
             O = [{
                 type: y.b.Twitter,
@@ -4027,8 +4038,8 @@ webpackJsonp([95], {
                         t = this.props.content,
                         n = this.getContentURL(t),
                         i = this.getSocialShareContextTitle(t),
-                        a = O.map(function(t) {
-                            return r.createElement(y.a, {
+                        r = O.map(function(t) {
+                            return a.createElement(y.a, {
                                 "data-test-selector": t.selector,
                                 key: t.type,
                                 onShareClick: function(t) {
@@ -4039,12 +4050,12 @@ webpackJsonp([95], {
                                 url: n
                             })
                         });
-                    return r.createElement(p._8, {
+                    return a.createElement(p._8, {
                         display: p.R.Flex,
                         justifyContent: p._7.Between
-                    }, a)
+                    }, r)
                 }, t.prototype.getSocialShareContextTitle = function(e) {
-                    return Object(a.d)("Check out {title} from {displayName} on www.twitch.tv", {
+                    return Object(r.d)("Check out {title} from {displayName} on www.twitch.tv", {
                         displayName: e.owner.displayName,
                         title: e.title
                     }, "VideoShareBox")
@@ -4063,7 +4074,7 @@ webpackJsonp([95], {
                             return e
                     }
                 }, t
-            }(r.Component),
+            }(a.Component),
             C = function(e) {
                 switch (e) {
                     case y.b.Twitter:
@@ -4100,7 +4111,7 @@ webpackJsonp([95], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(_, i.__assign({}, this.props, {
+                    return a.createElement(_, i.__assign({}, this.props, {
                         onClick: this.onClickHandler
                     }))
                 }, t.prototype.trackCollectionShare = function(e, t, n) {
@@ -4109,17 +4120,17 @@ webpackJsonp([95], {
                         platform: C(n),
                         shareURL: e
                     };
-                    Object(m.b)(t, i, a.o.apollo.client)
+                    Object(m.b)(t, i, r.o.apollo.client)
                 }, t.prototype.trackVideoShare = function(e, t, n, i) {
-                    var r = {
+                    var a = {
                         collectionID: i,
                         location: this.props.tracking.location,
                         platform: C(n),
                         shareURL: e
                     };
-                    Object(m.c)(t, r, a.o.apollo.client)
+                    Object(m.c)(t, a, r.o.apollo.client)
                 }, t
-            }(r.Component),
+            }(a.Component),
             x = n("mi6k"),
             w = function(e) {
                 function t() {
@@ -4133,7 +4144,7 @@ webpackJsonp([95], {
                         t = {};
                     this.props.collectionID && (t.collection = this.props.collectionID), this.props.selectedVideoStartTime && (t.t = this.props.selectedVideoStartTime);
                     var n = u(this.props.video.id, t);
-                    return r.createElement("div", null, r.createElement(p.Q, null, Object(a.d)("Video Link", "VideoShareBox")), r.createElement(s.a, {
+                    return a.createElement("div", null, a.createElement(p.Q, null, Object(r.d)("Video Link", "VideoShareBox")), a.createElement(s.a, {
                         onClick: function() {
                             e.props.onInputClick(n)
                         },
@@ -4143,13 +4154,13 @@ webpackJsonp([95], {
                     if (void 0 === this.props.currentVideoTime) return null;
                     var e = this.props.selectedVideoStartTime || this.props.currentVideoTime,
                         t = Object(x.b)(e);
-                    return r.createElement(p._8, {
+                    return a.createElement(p._8, {
                         padding: {
                             top: .5
                         }
-                    }, r.createElement(p.J, {
+                    }, a.createElement(p.J, {
                         id: "video-share-timestamp-toggle",
-                        label: Object(a.d)("Skip to {deeplinkTimestamp}", {
+                        label: Object(r.d)("Skip to {deeplinkTimestamp}", {
                             deeplinkTimestamp: t
                         }, "VideoShareBox"),
                         "data-a-target": "video-share-timestamp-toggle",
@@ -4158,7 +4169,7 @@ webpackJsonp([95], {
                         onChange: this.onShareTimestampClick
                     }))
                 }, t
-            }(r.Component),
+            }(a.Component),
             T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4169,15 +4180,15 @@ webpackJsonp([95], {
                             platform: m.a.Link,
                             shareURL: e
                         };
-                        Object(m.c)(t.props.video, i, a.o.apollo.client)
+                        Object(m.c)(t.props.video, i, r.o.apollo.client)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(w, i.__assign({}, this.props, {
+                    return a.createElement(w, i.__assign({}, this.props, {
                         onInputClick: this.onClickHandler
                     }))
                 }, t
-            }(r.Component);
+            }(a.Component);
         n.d(t, "a", function() {
             return V
         });
@@ -4192,28 +4203,28 @@ webpackJsonp([95], {
             }
             return i.__extends(t, e), t.prototype.render = function() {
                 var e = null;
-                return this.props.content && (e = this.shareBalloonContent(this.props.content)), r.createElement(o.a, null, r.createElement(p.v, {
+                return this.props.content && (e = this.shareBalloonContent(this.props.content)), a.createElement(o.a, null, a.createElement(p.v, {
                     disabled: !this.props.content,
-                    icon: p._23.Share,
+                    icon: p._24.Share,
                     type: this.props.buttonType
-                }, Object(a.d)("Share", "VideoShareBox")), r.createElement(p.q, {
+                }, Object(r.d)("Share", "VideoShareBox")), a.createElement(p.q, {
                     direction: this.props.balloonDirection,
                     size: p.s.Small
                 }, e))
             }, t.prototype.shareBalloonContent = function(e) {
-                return r.createElement(p._8, {
+                return a.createElement(p._8, {
                     padding: 1
-                }, r.createElement(E, {
+                }, a.createElement(E, {
                     content: e,
                     selectedVideoStartTime: this.state.selectedVideoStartTime,
                     tracking: this.props.tracking
                 }), this.renderCollectionShareInput(e), this.renderVideoShareInput(e), this.renderEmbedPlayerInput(e))
             }, t.prototype.renderCollectionShareInput = function(e) {
-                return e.type !== S.a.Collection ? null : r.createElement(p._8, {
+                return e.type !== S.a.Collection ? null : a.createElement(p._8, {
                     padding: {
                         top: 1
                     }
-                }, r.createElement(h, {
+                }, a.createElement(h, {
                     collection: e,
                     tracking: this.props.tracking
                 }))
@@ -4223,11 +4234,11 @@ webpackJsonp([95], {
                     if (!e.currentVideo) return null;
                     n = e.id, t = e.currentVideo
                 } else t = e;
-                return r.createElement(p._8, {
+                return a.createElement(p._8, {
                     padding: {
                         top: 1
                     }
-                }, r.createElement(T, {
+                }, a.createElement(T, {
                     collectionID: n,
                     currentVideoTime: this.props.currentVideoTime,
                     onVideoStartTimeChange: this.onVideoStartTimeChangeHandler,
@@ -4236,18 +4247,18 @@ webpackJsonp([95], {
                     video: t
                 }))
             }, t.prototype.renderEmbedPlayerInput = function(e) {
-                return r.createElement(p._8, {
+                return a.createElement(p._8, {
                     padding: {
                         top: 1
                     }
-                }, r.createElement(b, {
+                }, a.createElement(b, {
                     content: e,
                     selectedVideoStartTime: this.state.selectedVideoStartTime,
                     tracking: this.props.tracking
                 }))
             }, t
-        }(r.Component)
+        }(a.Component)
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.redirect-to-latest-archive-highlighter-51307b06103ee7c956091f167970466c.js.map
+//# sourceMappingURL=pages.video-tools.pages.redirect-to-latest-archive-highlighter-6fbc08612d9ec8ed7656f2304b273d4d.js.map

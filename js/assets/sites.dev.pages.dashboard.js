@@ -1,4 +1,4 @@
-webpackJsonp([69], {
+webpackJsonp([70], {
     "3Lxy": function(e, t) {},
     sxl2: function(e, t, n) {
         "use strict";
@@ -16,16 +16,16 @@ webpackJsonp([69], {
             l = n("CSlQ"),
             h = n("Odds"),
             v = (n("3Lxy"), p.a.wrap(function() {
-                return n.e(113).then(n.bind(null, "4ci7"))
+                return n.e(114).then(n.bind(null, "4ci7"))
             }, "DevOverviewPage")),
             m = p.a.wrap(function() {
-                return n.e(91).then(n.bind(null, "c6GF"))
+                return n.e(92).then(n.bind(null, "c6GF"))
             }, "DevAppsPage"),
             b = p.a.wrap(function() {
-                return n.e(112).then(n.bind(null, "lEOh"))
+                return n.e(113).then(n.bind(null, "lEOh"))
             }, "DevAppCreatePage"),
             u = p.a.wrap(function() {
-                return n.e(111).then(n.bind(null, "Az3k"))
+                return n.e(112).then(n.bind(null, "Az3k"))
             }, "DevAppEditPage"),
             D = function(e) {
                 function t() {
@@ -53,7 +53,7 @@ webpackJsonp([69], {
                         className: "dev-dashboard__container"
                     }, c.createElement("header", {
                         className: "dev-dashboard__header"
-                    }, c.createElement(h._32, {
+                    }, c.createElement(h._33, {
                         padding: {
                             bottom: 2
                         },
@@ -62,24 +62,24 @@ webpackJsonp([69], {
                         },
                         borderBottom: !0
                     }, c.createElement(h.Q, {
-                        type: h._46.H2
+                        type: h._47.H2
                     }, Object(d.d)("Dashboard", "DevDashboard"))), c.createElement(h._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, c.createElement(h._34, null, c.createElement(h._33, {
+                    }, c.createElement(h._35, null, c.createElement(h._34, {
                         linkTo: "https://dev.twitch.tv/dashboard",
                         active: this.isActive("", !0)
-                    }, Object(d.d)("Overview", "DevDashboard")), c.createElement(h._33, {
+                    }, Object(d.d)("Overview", "DevDashboard")), c.createElement(h._34, {
                         linkTo: "https://dev.twitch.tv/dashboard/extensions",
                         active: this.isActive("extensions")
-                    }, Object(d.d)("Extensions", "DevDashboard")), c.createElement(h._33, {
+                    }, Object(d.d)("Extensions", "DevDashboard")), c.createElement(h._34, {
                         linkTo: "/console/apps",
                         active: this.isActive("apps")
-                    }, Object(d.d)("Apps", "DevDashboard")), c.createElement(h._33, {
+                    }, Object(d.d)("Apps", "DevDashboard")), c.createElement(h._34, {
                         linkTo: "https://dev.twitch.tv/dashboard/games",
                         active: this.isActive("games")
-                    }, Object(d.d)("Games", "DevDashboard")), c.createElement(h._33, {
+                    }, Object(d.d)("Games", "DevDashboard")), c.createElement(h._34, {
                         linkTo: "https://dev.twitch.tv/dashboard/drops",
                         active: this.isActive("drops")
                     }, Object(d.d)("Drops", "DevDashboard"))))), c.createElement(h._8, {
@@ -116,4 +116,4 @@ webpackJsonp([69], {
         })
     }
 });
-//# sourceMappingURL=sites.dev.pages.dashboard-a7a4416f308032df84dab9c1c2e9114d.js.map
+//# sourceMappingURL=sites.dev.pages.dashboard-210850f493f7555c95a5c923041d319d.js.map

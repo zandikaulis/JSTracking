@@ -1,4 +1,4 @@
-webpackJsonp([111], {
+webpackJsonp([112], {
     "9u8h": function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
@@ -238,9 +238,9 @@ webpackJsonp([111], {
                             bottom: 1
                         }
                     }, o.createElement(d.Q, {
-                        type: d._46.H2
+                        type: d._47.H2
                     }, Object(h.d)("Manage Application: ", "DevAppEdit"), " ", this.props.app.name)), o.createElement(d.Q, {
-                        type: d._46.P
+                        type: d._47.P
                     }, Object(h.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevAppEdit")))), o.createElement(m.a, {
                         app: this.props.app,
                         onResetSecret: this.props.onResetSecret,
@@ -422,13 +422,13 @@ webpackJsonp([111], {
                             bottom: 1
                         }
                     }, o.createElement(c.Q, {
-                        type: c._46.H5
+                        type: c._47.H5
                     }, Object(s.d)("Client Secret", "DevAppSecret"))), o.createElement(c._2, {
                         margin: {
                             bottom: 1
                         }
                     }, o.createElement(c.Q, {
-                        type: c._46.P,
+                        type: c._47.P,
                         color: c.K.Alt2
                     }, Object(s.d)("Passed to the token exchange endpoints to obtain a token. You must keep this confidential.", "DevAppSecret"))), this.props.showSecret && o.createElement(c._8, {
                         margin: {
@@ -518,9 +518,9 @@ webpackJsonp([111], {
                                 bottom: .5
                             }
                         }, o.createElement(c.Q, {
-                            type: c._46.H4
+                            type: c._47.H4
                         }, "Error")), o.createElement(c.Q, {
-                            type: c._46.P
+                            type: c._47.P
                         }, t.props.errorMessage))
                     }, t.setName = function(e) {
                         t.setState({
@@ -608,7 +608,7 @@ webpackJsonp([111], {
                         }
                     }, o.createElement(c.W, {
                         label: Object(s.d)("Category", "DevAppForm")
-                    }, o.createElement(c._28, {
+                    }, o.createElement(c._29, {
                         defaultValue: this.state.category,
                         onChange: this.setCategory,
                         "data-test-selector": "app-form-category-select"
@@ -707,4 +707,4 @@ webpackJsonp([111], {
         })
     }
 });
-//# sourceMappingURL=sites.dev.pages.app-edit-page-fbaae4d0cb026e1fb71eb1859049d3ad.js.map
+//# sourceMappingURL=sites.dev.pages.app-edit-page-94f34e28d2f074561eac78176d008490.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([110], {
+webpackJsonp([111], {
     "97Ye": function(e, t, n) {
         var i = {
             kind: "Document",
@@ -264,11 +264,11 @@ webpackJsonp([110], {
                             transform: this.transformString()
                         },
                         "data-test-selector": "carousel-body"
-                    }, s.createElement(p._52, {
+                    }, s.createElement(p._53, {
                         noWrap: !0,
                         noGrow: !0,
-                        childWidth: this.props.videoCardSize || p._53.Large,
-                        gutterSize: p._54.Small,
+                        childWidth: this.props.videoCardSize || p._54.Large,
+                        gutterSize: p._55.Small,
                         "data-js-selector": h
                     }, this.getVideoCards())))), s.createElement(p._8, {
                         className: "video-carousel__nav",
@@ -334,7 +334,7 @@ webpackJsonp([110], {
                 DirectionNext: "next"
             },
             C = ((m = {})[k.DirectionPrevious] = "previous", m[k.DirectionNext] = "next", m),
-            _ = ((v = {})[k.DirectionPrevious] = p._23.AngleLeft, v[k.DirectionNext] = p._23.AngleRight, v),
+            _ = ((v = {})[k.DirectionPrevious] = p._24.AngleLeft, v[k.DirectionNext] = p._24.AngleRight, v),
             b = function(e) {
                 var t, n = C[e.direction],
                     i = ((t = {})[k.DirectionPrevious] = Object(d.d)("previous", "CarouselNavButton"), t[k.DirectionNext] = Object(d.d)("next", "CarouselNavButton"), t),
@@ -400,9 +400,9 @@ webpackJsonp([110], {
                             bottom: 1
                         }
                     }, r.createElement(p.Q, {
-                        type: p._46.H4,
+                        type: p._47.H4,
                         fontSize: p.V.Size5,
-                        transform: p._45.Uppercase,
+                        transform: p._46.Uppercase,
                         color: p.K.Alt2
                     }, Object(a.d)("Latest videos", "LatestVideosFromFollowedCarousel"))), r.createElement(l.a, {
                         currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
@@ -414,7 +414,7 @@ webpackJsonp([110], {
                             medium: this.props.tracking.medium,
                             source: {}
                         },
-                        videoCardSize: p._53.Medium,
+                        videoCardSize: p._54.Medium,
                         videos: e
                     })) : null
                 }, t
@@ -433,4 +433,4 @@ webpackJsonp([110], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-e96cdcd7369c4335f7d99f2e0d9ad820.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-b791dd13fcf6347de55c259c503e57b7.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([85], {
+webpackJsonp([86], {
     "+27R": function(e, t, a) {
         (function(e) {
             "use strict";
@@ -2364,7 +2364,7 @@ webpackJsonp([85], {
                         return e.videoPlayExternalReferrers
                     })),
                     g = n.createElement(d.a, null);
-                return (a.totals || l.totals || f.totals) && (g = n.createElement(n.Fragment, null, n.createElement(_._32, {
+                return (a.totals || l.totals || f.totals) && (g = n.createElement(n.Fragment, null, n.createElement(_._33, {
                     borderBottom: !0,
                     padding: {
                         bottom: 1
@@ -3406,7 +3406,7 @@ webpackJsonp([85], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(o._32, {
+                    return i.createElement(o._33, {
                         elevation: 1,
                         background: o.n.Base,
                         display: o.R.Flex,
@@ -3415,7 +3415,7 @@ webpackJsonp([85], {
                     }, i.createElement(c, n.__assign({}, d, {
                         to: this.props.previousPath,
                         onClick: this.props.onPrevious
-                    }), "◀"), i.createElement(o._32, {
+                    }), "◀"), i.createElement(o._33, {
                         display: o.R.Flex,
                         flexGrow: 1,
                         flexWrap: o.U.NoWrap,
@@ -3449,7 +3449,7 @@ webpackJsonp([85], {
                     onClick: function(t) {
                         e.to || t.preventDefault(), e.onClick && e.onClick()
                     }
-                }, Object(o._60)(e)), i.createElement(o.Q, {
+                }, Object(o._61)(e)), i.createElement(o.Q, {
                     fontSize: o.V.Size8
                 }, e.children)))
             };
@@ -4265,7 +4265,7 @@ webpackJsonp([85], {
                     alignItems: s.c.Center
                 }, n.createElement(i.a, {
                     date: e.achievement.completedAt
-                })) : n.createElement(s._32, {
+                })) : n.createElement(s._33, {
                     className: "ach-card__pill-wrapper",
                     fontSize: s.V.Size5
                 }, n.createElement(s._12, {
@@ -5380,7 +5380,7 @@ webpackJsonp([85], {
         a("J9dY");
 
         function i(e) {
-            return n.createElement(r._32, {
+            return n.createElement(r._33, {
                 className: "insight-panel-btn",
                 background: r.n.Alt,
                 display: r.R.Flex,
@@ -6452,7 +6452,7 @@ webpackJsonp([85], {
             o = function(e) {
                 return e.quest.completedAchievements.includes(e.achievement) ? n.createElement("span", {
                     title: Object(r.d)("Completed within the last 30 days", "AchievementsQuests")
-                }, n.createElement(i.a, null)) : e.achievement.completedAt ? null : e.achievement.progress ? n.createElement(s._32, {
+                }, n.createElement(i.a, null)) : e.achievement.completedAt ? null : e.achievement.progress ? n.createElement(s._33, {
                     className: "ach-card__pill-wrapper",
                     fontSize: s.V.Size5
                 }, n.createElement(s._12, {
@@ -8851,12 +8851,12 @@ webpackJsonp([85], {
                     attachLeft: !0,
                     attachRight: !0
                 }, i.createElement(l._18, {
-                    size: l._19.ExtraSmall,
+                    size: l._20.ExtraSmall,
                     value: 100 * e.achievement.progressRatio
-                }))), i.createElement(l._32, {
+                }))), i.createElement(l._33, {
                     className: a,
                     position: l._15.Relative
-                }, i.createElement(l._32, {
+                }, i.createElement(l._33, {
                     className: "ach-card__inner"
                 }, i.createElement(o.a, {
                     achievement: e.achievement
@@ -9849,7 +9849,7 @@ webpackJsonp([85], {
                         padding: {
                             top: 1
                         }
-                    }, i.createElement(m._43, {
+                    }, i.createElement(m._44, {
                         disabled: this.state.inFlight || this.state.successTimeout > 0,
                         onChange: this.handleChange,
                         placeholder: Object(s.d)("It would help me if this page...", "DashboardFeedbackForm"),
@@ -9919,7 +9919,7 @@ webpackJsonp([85], {
                         page: this.props.page,
                         onClose: this.unselectFeedbackForm,
                         key: 0
-                    }) : i.createElement(m._32, {
+                    }) : i.createElement(m._33, {
                         padding: {
                             top: .5,
                             bottom: .5
@@ -9941,14 +9941,14 @@ webpackJsonp([85], {
                             y: .5,
                             x: 1
                         }
-                    }, i.createElement(m.Q, null, Object(s.d)("Send Feedback", "DashboardHelpMenu"))))), i.createElement(m._32, {
+                    }, i.createElement(m.Q, null, Object(s.d)("Send Feedback", "DashboardHelpMenu"))))), i.createElement(m._33, {
                         className: "help-menu",
                         position: m._15.Absolute,
                         margin: {
                             bottom: 2,
                             right: 2
                         },
-                        zIndex: m._59.Above,
+                        zIndex: m._60.Above,
                         background: m.n.Overlay,
                         elevation: 3,
                         attachBottom: !0,
@@ -9956,15 +9956,15 @@ webpackJsonp([85], {
                     }, i.createElement(o.a, {
                         onToggle: this.handleToggle,
                         tooltipProps: {
-                            align: m._50.Right,
-                            direction: m._51.Top,
+                            align: m._51.Right,
+                            direction: m._52.Top,
                             label: Object(s.d)("Help & Feedback", "DashboardHelpMenu"),
                             offsetX: "6px",
                             offsetY: "10px"
                         }
                     }, i.createElement(m.w, {
                         ariaLabel: Object(s.d)("Feedback", "DashboardHelpMenu"),
-                        icon: m._23.QuestionMark,
+                        icon: m._24.QuestionMark,
                         "data-a-target": "help-button",
                         overlay: !0
                     }), i.createElement(m.q, {
@@ -10007,20 +10007,20 @@ webpackJsonp([85], {
                     return n.createElement("div", {
                         onMouseEnter: this.handleHover,
                         onMouseLeave: this.handleHover
-                    }, n.createElement(i._32, {
+                    }, n.createElement(i._33, {
                         display: i.R.Flex,
                         padding: {
                             x: 1
                         },
                         position: i._15.Relative
-                    }, n.createElement(i._32, {
+                    }, n.createElement(i._33, {
                         className: "hoverable-icon",
                         display: i.R.InlineFlex,
                         color: i.K.Alt2,
                         alignItems: i.c.Center,
                         justifyContent: i._7.Center
-                    }, n.createElement(i._22, {
-                        asset: i._23.NotificationInfo,
+                    }, n.createElement(i._23, {
+                        asset: i._24.NotificationInfo,
                         width: 16,
                         height: 16
                     })), n.createElement(i.q, {
@@ -10044,7 +10044,7 @@ webpackJsonp([85], {
                     }
                 }, n.createElement(d, {
                     tooltip: a
-                }, r), n.createElement(i._32, {
+                }, r), n.createElement(i._33, {
                     elevation: 1,
                     background: i.n.Base
                 }, t))
@@ -10059,7 +10059,7 @@ webpackJsonp([85], {
                         bottom: 1
                     }
                 }, n.createElement(i.Q, {
-                    type: i._46.H5,
+                    type: i._47.H5,
                     bold: !0
                 }, t), a && n.createElement(s, {
                     hoverText: a
@@ -11636,7 +11636,7 @@ webpackJsonp([85], {
                     targetBlank: !0,
                     linkTo: e.url + "?tt_content=" + i.PageviewContent.TopClips + "&tt_medium=" + i.PageviewMedium.ChannelAnalytics,
                     onClick: e.onClick
-                }, n.createElement(s._32, {
+                }, n.createElement(s._33, {
                     padding: {
                         x: 2,
                         y: 1
@@ -11665,14 +11665,14 @@ webpackJsonp([85], {
                     ellipsis: !0
                 }, n.createElement(s.Q, {
                     color: s.K.Base,
-                    type: s._46.H5,
+                    type: s._47.H5,
                     ellipsis: !0
                 }, e.title), n.createElement(s._8, {
                     display: s.R.Flex,
                     flexWrap: s.U.NoWrap
-                }, n.createElement(s._22, {
-                    asset: s._23.GlyphLive,
-                    type: s._24.Alt2
+                }, n.createElement(s._23, {
+                    asset: s._24.GlyphLive,
+                    type: s._25.Alt2
                 }), n.createElement(s._8, {
                     display: s.R.Inline,
                     padding: {
@@ -11680,7 +11680,7 @@ webpackJsonp([85], {
                     },
                     ellipsis: !0
                 }, n.createElement(s.Q, {
-                    type: s._46.Span
+                    type: s._47.Span
                 }, e.curatorName)))))), n.createElement(s._8, {
                     display: s.R.Flex,
                     flexGrow: 1,
@@ -11688,9 +11688,9 @@ webpackJsonp([85], {
                     padding: {
                         left: 2
                     }
-                }, n.createElement(s._22, {
-                    asset: s._23.GlyphViews,
-                    type: s._24.Alt2
+                }, n.createElement(s._23, {
+                    asset: s._24.GlyphViews,
+                    type: s._25.Alt2
                 }), n.createElement(s._8, {
                     display: s.R.Flex,
                     padding: {
@@ -11700,7 +11700,7 @@ webpackJsonp([85], {
                     bold: !0,
                     fontSize: s.V.Size5,
                     color: s.K.Alt,
-                    type: s._46.Span
+                    type: s._47.Span
                 }, Object(r.d)("{views, number}", {
                     views: e.views
                 }, "StreamSummaryClipViews"))))))))
@@ -13614,7 +13614,7 @@ webpackJsonp([85], {
                     className: "ach-card__badge-wrap",
                     position: i._15.Relative,
                     flexShrink: 0
-                }, n.createElement(i._32, {
+                }, n.createElement(i._33, {
                     className: "ach-card__badge",
                     background: i.n.Alt2
                 }, n.createElement("img", {
@@ -13622,7 +13622,7 @@ webpackJsonp([85], {
                     className: "ach-card__img",
                     src: e.achievement.image.scale1x,
                     srcSet: e.achievement.image.scale1x + " 1x, " + e.achievement.image.scale3x + " 3x"
-                })), Boolean(e.achievement.level) && n.createElement(i._32, {
+                })), Boolean(e.achievement.level) && n.createElement(i._33, {
                     className: "ach-card__lvl",
                     position: i._15.Absolute,
                     background: i.n.Alt
@@ -13631,7 +13631,7 @@ webpackJsonp([85], {
                     icon: Object(r.a)(e.achievement.level),
                     size: 20,
                     type: i.p.Dashboard
-                }))), n.createElement(i._32, {
+                }))), n.createElement(i._33, {
                     overflow: i._11.Hidden,
                     display: i.R.Flex,
                     justifyContent: i._7.Center,
@@ -13648,7 +13648,7 @@ webpackJsonp([85], {
                     fontSize: i.V.Size5,
                     color: i.K.Alt2,
                     ellipsis: !0
-                }, e.achievement.description)), n.createElement(i._32, {
+                }, e.achievement.description)), n.createElement(i._33, {
                     className: "ach-card__progress-meta",
                     display: i.R.Flex,
                     alignContent: i.b.Center,
@@ -15311,20 +15311,20 @@ webpackJsonp([85], {
         var n = a("GiK3"),
             r = a("Odds"),
             i = function() {
-                return n.createElement(r._32, {
+                return n.createElement(r._33, {
                     className: "ach-checkmark",
-                    textAlign: r._42.Center,
+                    textAlign: r._43.Center,
                     display: r.R.InlineFlex,
                     justifyContent: r._7.Center,
                     alignItems: r.c.Center,
                     color: r.K.Overlay
-                }, n.createElement(r._32, {
+                }, n.createElement(r._33, {
                     className: "ach-checkmark__inner",
                     display: r.R.Flex,
                     justifyContent: r._7.Center,
                     alignItems: r.c.Center
-                }, n.createElement(r._22, {
-                    asset: r._23.Check,
+                }, n.createElement(r._23, {
+                    asset: r._24.Check,
                     width: 8,
                     height: 8
                 })))
@@ -16109,11 +16109,11 @@ webpackJsonp([85], {
         "use strict";
         var n = a("Odds"),
             r = {
-                1: n._23.Roman1,
-                2: n._23.Roman2,
-                3: n._23.Roman3,
-                4: n._23.Roman4,
-                5: n._23.Roman5
+                1: n._24.Roman1,
+                2: n._24.Roman2,
+                3: n._24.Roman3,
+                4: n._24.Roman4,
+                5: n._24.Roman5
             };
 
         function i(e) {
@@ -16551,14 +16551,14 @@ webpackJsonp([85], {
                     "sm-graph-panel": !0,
                     "sm-graph-panel--no-data": e.viewerGraph.isEmpty
                 });
-                return r.createElement("div", null, r.createElement(f._32, {
+                return r.createElement("div", null, r.createElement(f._33, {
                     className: t,
                     margin: {
                         bottom: 2
                     },
                     elevation: 1,
                     padding: 2
-                }, r.createElement(f._32, {
+                }, r.createElement(f._33, {
                     margin: {
                         bottom: 2
                     }
@@ -16729,13 +16729,13 @@ webpackJsonp([85], {
                     var n = e.query.achievements.topNInProgress(3 - a.length);
                     a.push.apply(a, n)
                 }
-                return a.length ? r.createElement(f._32, {
+                return a.length ? r.createElement(f._33, {
                     margin: {
                         bottom: 2
                     },
                     elevation: 1,
                     background: f.n.Base
-                }, r.createElement(f._32, {
+                }, r.createElement(f._33, {
                     padding: 2,
                     borderBottom: !0
                 }, r.createElement(f._8, {
@@ -16743,7 +16743,7 @@ webpackJsonp([85], {
                         bottom: 2
                     }
                 }, r.createElement(f.Q, {
-                    type: f._46.H4,
+                    type: f._47.H4,
                     bold: !0
                 }, Object(s.d)("Achievements", "StreamSummaryAchievementsPanel"))), a.map(function(e) {
                     return r.createElement(A.a, {
@@ -16923,11 +16923,11 @@ webpackJsonp([85], {
                     padding: {
                         right: 1
                     }
-                }, r.createElement(f._22, {
-                    asset: f._23.Check,
+                }, r.createElement(f._23, {
+                    asset: f._24.Check,
                     width: 10,
                     height: 10,
-                    type: f._24.Alt2
+                    type: f._25.Alt2
                 })), r.createElement(f.Q, {
                     fontSize: f.V.Size6,
                     color: f.K.Alt2
@@ -17008,7 +17008,7 @@ webpackJsonp([85], {
             ae = function() {
                 return r.createElement(f.Q, {
                     className: "sm-nav__placeholder-text",
-                    type: f._46.H4,
+                    type: f._47.H4,
                     color: f.K.Alt2,
                     ellipsis: !0
                 }, Object(s.d)("Today would be a good day to start streaming!", "StreamSummaryNav"))
@@ -17070,9 +17070,9 @@ webpackJsonp([85], {
                 margin: {
                     top: 5
                 },
-                zIndex: f._59.Above
-            }, r.createElement(f._52, {
-                childWidth: f._53.Medium,
+                zIndex: f._60.Above
+            }, r.createElement(f._53, {
+                childWidth: f._54.Medium,
                 center: !0
             }, r.createElement("div", {
                 className: "sm-welcome-modal"
@@ -17081,7 +17081,7 @@ webpackJsonp([85], {
                 duration: f.g.Medium,
                 enabled: !0,
                 timing: f.i.EaseInOut
-            }, r.createElement(f._32, {
+            }, r.createElement(f._33, {
                 border: !0,
                 padding: 2,
                 background: f.n.Base,
@@ -17099,9 +17099,9 @@ webpackJsonp([85], {
                     left: .5
                 }
             }, r.createElement(f.Q, {
-                type: f._46.H4,
+                type: f._47.H4,
                 bold: !0
-            }, Object(s.d)("Welcome to Stream Summary", "StreamSummaryNoAvailableStreamSummariesNotice")))), r.createElement(f._55, null, r.createElement(f.Q, {
+            }, Object(s.d)("Welcome to Stream Summary", "StreamSummaryNoAvailableStreamSummariesNotice")))), r.createElement(f._56, null, r.createElement(f.Q, {
                 fontSize: f.V.Size5
             }, Object(s.d)("See a summary of your past streams with stats, clips, achievements, and more. Stream to get started!", "StreamSummaryNoAvailableStreamSummariesNotice"))), r.createElement(f._8, {
                 padding: {
@@ -17122,7 +17122,7 @@ webpackJsonp([85], {
         a("jQxI");
         var le, ue = a("KMD5"),
             ce = function(e) {
-                return e.quest && !e.quest.isFinished ? r.createElement(f._32, {
+                return e.quest && !e.quest.isFinished ? r.createElement(f._33, {
                     margin: {
                         bottom: 2
                     },
@@ -17134,7 +17134,7 @@ webpackJsonp([85], {
                         bottom: 2
                     }
                 }, r.createElement(f.Q, {
-                    type: f._46.H4,
+                    type: f._47.H4,
                     bold: !0
                 }, e.quest.title)), e.quest.achievements.map(function(t) {
                     return r.createElement(A.a, {
@@ -17201,7 +17201,7 @@ webpackJsonp([85], {
                 height: 375
             }));
             var a = t.videoPlayAllReferrers;
-            return r.createElement("div", null, r.createElement(f._32, {
+            return r.createElement("div", null, r.createElement(f._33, {
                 className: "referral-panel",
                 flexDirection: a.totals ? void 0 : f.T.Column,
                 margin: {
@@ -17209,7 +17209,7 @@ webpackJsonp([85], {
                 },
                 elevation: 1,
                 background: f.n.Base
-            }, r.createElement(f._32, {
+            }, r.createElement(f._33, {
                 borderBottom: !0,
                 padding: {
                     bottom: 1
@@ -17231,7 +17231,7 @@ webpackJsonp([85], {
         }
 
         function ye() {
-            return r.createElement(f._32, n.__assign({
+            return r.createElement(f._33, n.__assign({
                 className: "referral-panel--no-data",
                 display: f.R.Flex,
                 flexGrow: 1,
@@ -17351,7 +17351,7 @@ webpackJsonp([85], {
             Oe = function(e) {
                 var t = e.title;
                 return r.createElement(f.Q, {
-                    type: f._46.Span,
+                    type: f._47.Span,
                     color: f.K.OverlayAlt
                 }, t)
             },
@@ -17517,13 +17517,13 @@ webpackJsonp([85], {
                 }, r.createElement(Ge, n.__assign({}, e)), r.createElement(f._8, {
                     className: "sm-sb-flourish-emotes__dismiss",
                     position: f._15.Absolute,
-                    zIndex: f._59.Above,
+                    zIndex: f._60.Above,
                     attachTop: !0,
                     attachRight: !0
                 }, r.createElement(f.w, n.__assign({}, Be, {
                     ariaLabel: Object(Te.a)().spotlightDismiss,
                     size: f.x.Large,
-                    icon: f._23.Close,
+                    icon: f._24.Close,
                     onClick: e.onSpotlightDismiss,
                     overlay: !0
                 })))))
@@ -17534,18 +17534,18 @@ webpackJsonp([85], {
                     className: "sm-sb-flourish-emotes__link",
                     target: "_blank",
                     onClick: e.onSpotlightClick
-                }), r.createElement(f._32, {
+                }), r.createElement(f._33, {
                     className: "sm-sb-flourish-emotes__content",
                     position: f._15.Relative,
-                    zIndex: f._59.Default,
+                    zIndex: f._60.Default,
                     color: f.K.Overlay,
-                    textAlign: f._42.Center,
+                    textAlign: f._43.Center,
                     margin: {
                         bottom: 2
                     },
                     padding: 2,
                     borderRadius: f.t.Small
-                }, r.createElement(f._32, {
+                }, r.createElement(f._33, {
                     className: "sm-sb-flourish-emotes__emotes-layer",
                     position: f._15.Absolute,
                     overflow: f._11.Hidden,
@@ -17554,10 +17554,10 @@ webpackJsonp([85], {
                     attachBottom: !0,
                     attachLeft: !0,
                     borderRadius: f.t.Small
-                }, e.flourish), r.createElement(f._32, {
+                }, e.flourish), r.createElement(f._33, {
                     className: "sm-sb-flourish-emotes__text",
                     position: f._15.Relative,
-                    zIndex: f._59.Above,
+                    zIndex: f._60.Above,
                     padding: {
                         x: .5,
                         y: 0
@@ -17584,7 +17584,7 @@ webpackJsonp([85], {
                     duration: f.g.Medium,
                     enabled: !0,
                     timing: f.i.EaseInOut
-                }, r.createElement(f._32, {
+                }, r.createElement(f._33, {
                     className: "sm-sb-flourish-confetti__wrap",
                     position: f._15.Relative,
                     margin: {
@@ -17596,14 +17596,14 @@ webpackJsonp([85], {
                 }, r.createElement(Qe, n.__assign({}, e)), r.createElement(f._8, {
                     className: "sm-sb-flourish-confetti__dismiss",
                     position: f._15.Absolute,
-                    zIndex: f._59.Above,
+                    zIndex: f._60.Above,
                     attachTop: !0,
                     attachRight: !0
                 }, r.createElement(f.w, n.__assign({}, Be, {
                     ariaLabel: Object(Te.a)().spotlightDismiss,
                     type: f.y.Default,
                     size: f.x.Large,
-                    icon: f._23.Close,
+                    icon: f._24.Close,
                     onClick: e.onSpotlightDismiss,
                     overlay: e.purpleScale
                 }))), r.createElement(qe.a, {
@@ -17622,16 +17622,16 @@ webpackJsonp([85], {
                     href: e.url,
                     target: "_blank",
                     onClick: e.onSpotlightClick
-                }), r.createElement(f._32, {
+                }), r.createElement(f._33, {
                     className: t,
                     position: f._15.Relative,
-                    zIndex: f._59.Default,
-                    textAlign: f._42.Center,
+                    zIndex: f._60.Default,
+                    textAlign: f._43.Center,
                     padding: 2,
                     fullWidth: !0,
                     borderRadius: f.t.Small
                 }, r.createElement(f.Q, n.__assign({}, ze, {
-                    type: f._46.Span,
+                    type: f._47.Span,
                     fontSize: f.V.Size4,
                     color: e.purpleScale ? f.K.Overlay : f.K.Base,
                     bold: !0,
@@ -17656,7 +17656,7 @@ webpackJsonp([85], {
                 return r.createElement(f._8, n.__assign({
                     display: f.R.Flex,
                     flexDirection: f.T.Column
-                }, Object(Xe.a)(e)), r.createElement(f._32, {
+                }, Object(Xe.a)(e)), r.createElement(f._33, {
                     display: f.R.Flex,
                     flexGrow: 1,
                     flexDirection: f.T.Column,
@@ -17666,7 +17666,7 @@ webpackJsonp([85], {
                     elevation: 1,
                     padding: 2,
                     background: f.n.Base
-                }, r.createElement(f._32, {
+                }, r.createElement(f._33, {
                     display: f.R.Flex,
                     flexDirection: f.T.Column
                 }, r.createElement(f.Q, {
@@ -17675,7 +17675,7 @@ webpackJsonp([85], {
                 }, e.title), r.createElement(f.Q, n.__assign({
                     fontSize: f.V.Size5,
                     color: f.K.Alt2
-                }, Ze), e.subtitle || r.createElement("br", null))), r.createElement(f._32, {
+                }, Ze), e.subtitle || r.createElement("br", null))), r.createElement(f._33, {
                     display: f.R.Flex,
                     flexGrow: 1,
                     alignItems: f.c.End,
@@ -17683,7 +17683,7 @@ webpackJsonp([85], {
                         top: 2
                     }
                 }, r.createElement(f.Q, n.__assign({
-                    type: f._46.Span,
+                    type: f._47.Span,
                     fontSize: f.V.Size2,
                     bold: !0,
                     color: f.K.Link
@@ -17691,9 +17691,9 @@ webpackJsonp([85], {
             };
 
         function at() {
-            return r.createElement(f._22, n.__assign({
-                asset: f._23.GlyphArrUp,
-                type: f._24.Success
+            return r.createElement(f._23, n.__assign({
+                asset: f._24.GlyphArrUp,
+                type: f._25.Success
             }, et))
         }
 
@@ -17765,9 +17765,9 @@ webpackJsonp([85], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(f._52, {
-                        childWidth: f._53.Medium,
-                        gutterSize: f._54.Small,
+                    return r.createElement(f._53, {
+                        childWidth: f._54.Medium,
+                        gutterSize: f._55.Small,
                         placeholderItems: 3
                     }, this.cards())
                 }, t.prototype.cards = function() {
@@ -17962,7 +17962,7 @@ webpackJsonp([85], {
                 }, t.prototype.componentDidUpdate = function(e) {
                     e.streamSummary !== this.props.streamSummary && this.fetchCurrentStatData()
                 }, t.prototype.render = function() {
-                    return this.props.streamSummary ? r.createElement(f._32, {
+                    return this.props.streamSummary ? r.createElement(f._33, {
                         className: "timeseries-panel",
                         background: f.n.Accent,
                         borderRadius: f.t.Small,
@@ -17971,7 +17971,7 @@ webpackJsonp([85], {
                         },
                         elevation: 1,
                         padding: 2
-                    }, r.createElement(f._32, {
+                    }, r.createElement(f._33, {
                         margin: {
                             bottom: 2
                         },
@@ -17979,7 +17979,7 @@ webpackJsonp([85], {
                         color: f.K.Overlay,
                         justifyContent: f._7.Between,
                         alignItems: f.c.Center
-                    }, r.createElement("div", null, r.createElement(f._28, {
+                    }, r.createElement("div", null, r.createElement(f._29, {
                         onChange: this.handleStatChange
                     }, this.props.timeseriesStats.map(function(e, t) {
                         return r.createElement("option", {
@@ -18182,7 +18182,7 @@ webpackJsonp([85], {
                     }
                 }, r.createElement(f._14, {
                     height: 121
-                })) : r.createElement("div", null, r.createElement(f._32, {
+                })) : r.createElement("div", null, r.createElement(f._33, {
                     margin: {
                         bottom: 2
                     },
@@ -18207,7 +18207,7 @@ webpackJsonp([85], {
                     fontSize: f.V.Size4,
                     bold: !0
                 }, Object(s.d)("Tips", "StreamTipsTitle")))), r.createElement("div", null, r.createElement(f.Q, n.__assign({
-                    type: f._46.Span,
+                    type: f._47.Span,
                     fontSize: f.V.Size5
                 }, St), t.body), r.createElement(Ht, {
                     url: t.url
@@ -18216,7 +18216,7 @@ webpackJsonp([85], {
             Ht = function(e) {
                 var t = e.url;
                 return t ? r.createElement(f.Q, n.__assign({
-                    type: f._46.Span,
+                    type: f._47.Span,
                     fontSize: f.V.Size5
                 }, xt), " ", r.createElement("a", {
                     target: "_blank",
@@ -18275,7 +18275,7 @@ webpackJsonp([85], {
                         return e + t.views
                     }, 0),
                     i = Object(s.d)("View More Clips", "StreamSummaryTopClipsPanelCTA");
-                return r.createElement("div", null, r.createElement(f._32, {
+                return r.createElement("div", null, r.createElement(f._33, {
                     margin: {
                         bottom: 2
                     },
@@ -18290,7 +18290,7 @@ webpackJsonp([85], {
                         top: 2
                     }
                 }, r.createElement(f.Q, {
-                    type: f._46.H4,
+                    type: f._47.H4,
                     bold: !0
                 }, Object(s.d)("Top Clips", "StreamSummaryTopClipsTitle")), r.createElement(Ft, {
                     isLoading: a.isLoading,
@@ -18332,7 +18332,7 @@ webpackJsonp([85], {
             },
             Wt = function(e) {
                 if (e.clipsAttrs.isLoading)
-                    for (var t = [], a = 0; a < 5; a++) t.push(r.createElement(f._32, {
+                    for (var t = [], a = 0; a < 5; a++) t.push(r.createElement(f._33, {
                         padding: {
                             x: 2,
                             y: 1
@@ -18342,7 +18342,7 @@ webpackJsonp([85], {
                     }, r.createElement(f._14, {
                         height: 50
                     })));
-                return r.createElement(f._32, {
+                return r.createElement(f._33, {
                     borderBottom: !0
                 }, e.clipsAttrs.clips.slice(0, 5).map(function(e, t) {
                     return r.createElement(Ct.a, n.__assign({}, e, {
@@ -18411,7 +18411,7 @@ webpackJsonp([85], {
                 a = e.data,
                 n = s.b.get("stream_summary_new_referrals", !1),
                 i = a.user && a.user.roles && (a.user.roles.isAffiliate || a.user.roles.isPartner);
-            return r.createElement("div", null, r.createElement(f._32, {
+            return r.createElement("div", null, r.createElement(f._33, {
                 className: "sm-mw",
                 margin: {
                     bottom: 1
@@ -18639,7 +18639,7 @@ webpackJsonp([85], {
                         className: "confetti-layer",
                         position: o._15.Absolute,
                         overflow: o._11.Hidden,
-                        zIndex: o._59.Default,
+                        zIndex: o._60.Default,
                         attachTop: !0,
                         attachRight: !0,
                         attachBottom: !0,
@@ -19216,7 +19216,7 @@ webpackJsonp([85], {
                         x: 2
                     }
                 }, r.createElement(s.Q, {
-                    type: s._46.H3,
+                    type: s._47.H3,
                     fontSize: s.V.Size5,
                     bold: !0
                 }, e)), r.createElement(s._8, {
@@ -19238,7 +19238,7 @@ webpackJsonp([85], {
                     x: 2
                 }
             }, r.createElement(s.Q, {
-                type: s._46.H3,
+                type: s._47.H3,
                 fontSize: s.V.Size5,
                 bold: !0
             }, d), r.createElement(s.Q, n.__assign({}, l, {
@@ -19262,7 +19262,7 @@ webpackJsonp([85], {
                 l = e.translationFunc;
             return t = a.share > 0 ? Object(i.d)("{share, number, percent}", {
                 share: a.share / 100
-            }, "ReferralGroup") : Object(i.d)("< 1%", "ReferralGroup"), r.createElement(s._32, {
+            }, "ReferralGroup") : Object(i.d)("< 1%", "ReferralGroup"), r.createElement(s._33, {
                 className: "referral-group-row",
                 padding: {
                     y: 1,
@@ -19294,7 +19294,7 @@ webpackJsonp([85], {
                 padding: {
                     right: 1
                 },
-                textAlign: s._42.Right
+                textAlign: s._43.Right
             }, r.createElement(s.Q, n.__assign({
                 color: s.K.Alt2,
                 ellipsis: !0
@@ -19308,12 +19308,12 @@ webpackJsonp([85], {
                 padding: {
                     top: .5
                 }
-            }, r.createElement(s._49, {
+            }, r.createElement(s._50, {
                 label: u(a.count),
-                direction: s._51.Top,
-                align: s._50.Center,
+                direction: s._52.Top,
+                align: s._51.Center,
                 display: s.R.Block
-            }, r.createElement(s._32, {
+            }, r.createElement(s._33, {
                 background: s.n.Alt2
             }, r.createElement(s._18, {
                 value: Math.max(a.share, 1)
@@ -20036,4 +20036,4 @@ webpackJsonp([85], {
         })
     }
 });
-//# sourceMappingURL=pages.stream-summary-fb2e499c6ff0c0d3a1fd97a1416a6c32.js.map
+//# sourceMappingURL=pages.stream-summary-caeb7b76c51dca1921c02a086acb865b.js.map

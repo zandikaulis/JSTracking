@@ -1,4 +1,4 @@
-webpackJsonp([57], {
+webpackJsonp([56], {
     "+Aaf": function(e, t) {},
     "0H+u": function(e, t) {
         var n = {
@@ -942,7 +942,7 @@ webpackJsonp([57], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: r._59.Above
+                        zIndex: r._60.Above
                     }, a.createElement("input", {
                         "data-a-target": "file-picker-input",
                         "data-test-selector": "file-picker-input",
@@ -1374,7 +1374,7 @@ webpackJsonp([57], {
                         duration: p.g.Long,
                         timing: p.i.EaseInOut,
                         enabled: !0
-                    }, l.createElement(p._32, {
+                    }, l.createElement(p._33, {
                         className: "browser-push-notifications-upsell",
                         alignItems: p.c.Center,
                         justifyContent: p._7.Center,
@@ -1388,7 +1388,7 @@ webpackJsonp([57], {
                     }, l.createElement(p._8, {
                         className: "browser-push-notifications-upsell__container",
                         display: p.R.Flex,
-                        textAlign: p._42.Center,
+                        textAlign: p._43.Center,
                         padding: {
                             x: 1
                         },
@@ -1399,7 +1399,7 @@ webpackJsonp([57], {
                         timing: p.i.EaseInOut,
                         enabled: !0
                     }, l.createElement(p.Q, {
-                        type: p._46.H3,
+                        type: p._47.H3,
                         fontSize: p.V.Size3,
                         lineHeight: p._9.Body
                     }, Object(c.d)("Don't miss out when your favorite streamers go live!", "BrowserNotificationsUpsellModal")), l.createElement(p._8, {
@@ -1407,7 +1407,7 @@ webpackJsonp([57], {
                             top: 1
                         }
                     }, l.createElement(p.Q, {
-                        type: p._46.H4,
+                        type: p._47.H4,
                         fontSize: p.V.Size4,
                         color: p.K.OverlayAlt,
                         lineHeight: p._9.Body
@@ -1504,7 +1504,7 @@ webpackJsonp([57], {
                             backgroundImage: "url(" + y + ")"
                         });
                         var o = null;
-                        this.props.canEdit && (o = r.createElement(w._32, {
+                        this.props.canEdit && (o = r.createElement(w._33, {
                             className: "channel-banner__edit-overlay",
                             background: w.n.Overlay,
                             position: w._15.Absolute,
@@ -1520,8 +1520,8 @@ webpackJsonp([57], {
                             alignItems: w.c.Center,
                             flexDirection: w.T.Column,
                             justifyContent: w._7.Center
-                        }, r.createElement(w._8, null, r.createElement(w._22, {
-                            asset: w._23.Edit
+                        }, r.createElement(w._8, null, r.createElement(w._23, {
+                            asset: w._24.Edit
                         })), Object(s.d)("Update Profile Banner", "ChannelBanner"))))), e = r.createElement("div", {
                             className: "channel-banner__image",
                             "data-test-selector": "channel-banner",
@@ -1587,7 +1587,7 @@ webpackJsonp([57], {
                     }, r.createElement(w.w, {
                         overlay: !0,
                         ariaLabel: Object(s.d)("Edit Profile", "ChannelHeader"),
-                        icon: w._23.Edit,
+                        icon: w._24.Edit,
                         onClick: this.openModal
                     }))
                 }, t = i.__decorate([Object(x.d)("EditProfileOverlay")], t)
@@ -1616,9 +1616,9 @@ webpackJsonp([57], {
         var z = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
-                n.verifiedBadgeElement = r.createElement(w._49, {
+                n.verifiedBadgeElement = r.createElement(w._50, {
                     label: Object(s.d)("Verified", "ChannelHeader"),
-                    direction: w._51.Right
+                    direction: w._52.Right
                 }, r.createElement(w._8, {
                     className: "channel-header__verified",
                     "data-target": P,
@@ -1627,21 +1627,21 @@ webpackJsonp([57], {
                     margin: {
                         left: 1
                     }
-                }, r.createElement(w._22, {
-                    asset: w._23.Verified
+                }, r.createElement(w._23, {
+                    asset: w._24.Verified
                 }))), n.ChannelStatusIndicatorElement = r.createElement(w._8, {
                     margin: {
                         left: 1
                     },
                     "data-target": R
-                }, r.createElement(w._49, {
+                }, r.createElement(w._50, {
                     label: Object(s.d)("Live Now", "ChannelHeader"),
-                    direction: w._51.Right
+                    direction: w._52.Right
                 }, r.createElement(w.G, {
                     status: w.I.Live,
                     pulse: !0
                 }))), n.renderAvatarEditButton = function() {
-                    return n.props.data && n.props.data.user && n.isChannelEditor() ? r.createElement(w._32, {
+                    return n.props.data && n.props.data.user && n.isChannelEditor() ? r.createElement(w._33, {
                         className: A,
                         background: w.n.Overlay,
                         position: w._15.Absolute,
@@ -1760,7 +1760,7 @@ webpackJsonp([57], {
                     src: p,
                     alt: e || ""
                 }), this.renderAvatarEditButton())), e ? r.createElement(w.Q, {
-                    type: w._46.H5
+                    type: w._47.H5
                 }, e) : r.createElement(w._8, {
                     alignItems: w.c.Center
                 }, r.createElement(w._14, {
@@ -1825,7 +1825,7 @@ webpackJsonp([57], {
                 }, r.createElement(d.a, {
                     alwaysMountBalloonContent: !0
                 }, r.createElement(w.w, {
-                    icon: w._23.NavMore,
+                    icon: w._24.NavMore,
                     ariaLabel: Object(s.d)("More", "ChannelHeader")
                 }), r.createElement(w.q, {
                     direction: w.r.Bottom,
@@ -1886,7 +1886,7 @@ webpackJsonp([57], {
                                 left: .5
                             }
                         }, r.createElement(w.Q, {
-                            type: w._46.Span,
+                            type: w._47.Span,
                             fontSize: w.V.Size5
                         }, e.count)) : null,
                         a = t.generateUserLink(e.pathSuffix, e.isExternal),
@@ -1908,7 +1908,7 @@ webpackJsonp([57], {
                         },
                         display: w.R.Flex
                     }, r.createElement(w.Q, {
-                        type: w._46.Span,
+                        type: w._47.Span,
                         fontSize: w.V.Size5
                     }, e.label), n)))
                 })
@@ -1922,7 +1922,7 @@ webpackJsonp([57], {
                                 left: .5
                             }
                         }, r.createElement(w.Q, {
-                            type: w._46.Span
+                            type: w._47.Span
                         }, e.count)) : null,
                         a = t.generateUserLink(e.pathSuffix, e.isExternal),
                         o = {};
@@ -1940,7 +1940,7 @@ webpackJsonp([57], {
                         },
                         display: w.R.Flex
                     }, r.createElement(w.Q, {
-                        type: w._46.Span
+                        type: w._47.Span
                     }, e.label), n)))
                 })
             }, t.prototype.createChannelLinks = function(e, t, n) {
@@ -2362,9 +2362,9 @@ webpackJsonp([57], {
                         className: "user-image-uploader__upload-svg--anim-fill",
                         position: _._15.Relative,
                         "data-test-selector": "loading-status"
-                    }, l.createElement(_._22, {
-                        asset: _._23.Upload,
-                        type: _._24.Brand,
+                    }, l.createElement(_._23, {
+                        asset: _._24.Upload,
+                        type: _._25.Brand,
                         width: 99,
                         height: 76
                     }));
@@ -2372,19 +2372,19 @@ webpackJsonp([57], {
                         var i = Object(c.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
                         this.props.imageType === h.a.ChannelOfflineImage && (i = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = l.createElement(_._8, null, l.createElement(_._8, {
                             className: "user-image-uploader__upload-info"
-                        }, l.createElement(_._8, null, l.createElement(_._22, {
-                            asset: _._23.Plus,
-                            type: _._24.Alt2,
+                        }, l.createElement(_._8, null, l.createElement(_._23, {
+                            asset: _._24.Plus,
+                            type: _._25.Alt2,
                             height: 20,
                             width: 20
                         })), l.createElement(_.Q, {
-                            type: _._46.H3,
+                            type: _._47.H3,
                             color: _.K.Alt2,
                             fontSize: _.V.Size4
                         }, Object(c.d)("Upload a Photo", "User Image Uploader"))), l.createElement(_._8, {
                             className: "user-image-uploader__upload-recommendation",
                             position: _._15.Absolute,
-                            textAlign: _._42.Left,
+                            textAlign: _._43.Left,
                             attachLeft: !0,
                             attachBottom: !0,
                             margin: {
@@ -2392,10 +2392,10 @@ webpackJsonp([57], {
                                 bottom: 1
                             }
                         }, l.createElement(_.Q, {
-                            type: _._46.H6,
+                            type: _._47.H6,
                             color: _.K.Alt2,
                             fontSize: _.V.Size8,
-                            align: _._56.TextBottom
+                            align: _._57.TextBottom
                         }, i)))
                     }
                     var a = null;
@@ -2412,7 +2412,7 @@ webpackJsonp([57], {
                         className: "user-image-uploader",
                         position: _._15.Relative,
                         fullHeight: !0
-                    }, l.createElement(_._32, {
+                    }, l.createElement(_._33, {
                         className: "user-image-uploader__background-container",
                         background: _.n.Base,
                         fullWidth: !0
@@ -2420,21 +2420,21 @@ webpackJsonp([57], {
                         padding: 2,
                         display: _.R.InlineBlock,
                         position: _._15.Relative,
-                        textAlign: _._42.Center,
+                        textAlign: _._43.Center,
                         fullWidth: !0
-                    }, l.createElement(_._32, {
+                    }, l.createElement(_._33, {
                         borderBottom: !0,
                         margin: {
                             bottom: 2
                         }
                     }, l.createElement(_.Q, {
-                        type: _._46.H3,
+                        type: _._47.H3,
                         fontSize: _.V.Size4
                     }, t)), l.createElement(_._8, {
                         className: "user-image-uploader__upload-container",
                         display: _.R.InlineBlock,
                         position: _._15.Relative,
-                        textAlign: _._42.Center,
+                        textAlign: _._43.Center,
                         margin: {
                             bottom: 1
                         }
@@ -2442,15 +2442,15 @@ webpackJsonp([57], {
                         className: "user-image-uploader__upload",
                         display: _.R.InlineBlock,
                         position: _._15.Relative,
-                        textAlign: _._42.Center
+                        textAlign: _._43.Center
                     }, l.createElement(d.a, {
                         allowedFileTypes: y,
                         onFilesSubmitted: this.onImageInputChange
-                    }, n))), l.createElement(_._32, {
+                    }, n))), l.createElement(_._33, {
                         "data-test-selector": "status-message",
                         fontSize: _.V.Size4,
                         position: _._15.Relative,
-                        textAlign: _._42.Center,
+                        textAlign: _._43.Center,
                         className: "user-image-uploader__status-message"
                     }, r))), a)
                 }, t = s.__decorate([Object(p.a)(k, {
@@ -2920,7 +2920,7 @@ webpackJsonp([57], {
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0
-                    }, l.createElement(p._32, {
+                    }, l.createElement(p._33, {
                         alignItems: p.c.Center,
                         attachRight: !0,
                         className: "collection-preview-image__wrapper",
@@ -2931,9 +2931,9 @@ webpackJsonp([57], {
                         fullHeight: !0,
                         justifyContent: p._7.Center,
                         position: p._15.Absolute,
-                        textAlign: p._42.Center
-                    }, l.createElement(p._22, {
-                        asset: p._23.Collections,
+                        textAlign: p._43.Center
+                    }, l.createElement(p._23, {
+                        asset: p._24.Collections,
                         height: 19,
                         width: 19
                     }), l.createElement(p.Q, {
@@ -3107,7 +3107,7 @@ webpackJsonp([57], {
                     "aria-label": Object(d.d)("Click to select Default Avatar Number {index, number}", {
                         index: e.index
                     }, "Default Avatar")
-                }, c.createElement(f._32, {
+                }, c.createElement(f._33, {
                     fullHeight: !0,
                     fullWidth: !0,
                     position: f._15.Relative,
@@ -3282,13 +3282,13 @@ webpackJsonp([57], {
                     var a = null;
                     "" === this.state.imagePreviewURL && (a = c.createElement(f._8, {
                         className: "profile-edit__upload-info"
-                    }, c.createElement(f._8, null, c.createElement(f._22, {
-                        asset: f._23.Plus,
-                        type: f._24.Alt2,
+                    }, c.createElement(f._8, null, c.createElement(f._23, {
+                        asset: f._24.Plus,
+                        type: f._25.Alt2,
                         height: 20,
                         width: 20
                     })), c.createElement(f.Q, {
-                        type: f._46.H3,
+                        type: f._47.H3,
                         color: f.K.Alt2,
                         fontSize: f.V.Size4
                     }, Object(d.d)("Upload a Photo", "Profile Edit"))));
@@ -3309,7 +3309,7 @@ webpackJsonp([57], {
                         className: "profile-edit",
                         position: f._15.Relative,
                         fullHeight: !0
-                    }, c.createElement(f._32, {
+                    }, c.createElement(f._33, {
                         className: "profile-edit__background-container",
                         background: f.n.Base,
                         fullWidth: !0
@@ -3317,10 +3317,10 @@ webpackJsonp([57], {
                         padding: 2,
                         display: f.R.InlineBlock,
                         position: f._15.Relative,
-                        textAlign: f._42.Center,
+                        textAlign: f._43.Center,
                         fullWidth: !0
-                    }, c.createElement(f._32, {
-                        textAlign: f._42.Left,
+                    }, c.createElement(f._33, {
+                        textAlign: f._43.Left,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
@@ -3329,7 +3329,7 @@ webpackJsonp([57], {
                             bottom: 2
                         }
                     }, c.createElement(f.Q, {
-                        type: f._46.H3,
+                        type: f._47.H3,
                         color: f.K.Alt2,
                         fontSize: f.V.Size4
                     }, Object(d.d)("Edit Profile Picture for {userName}", {
@@ -3338,7 +3338,7 @@ webpackJsonp([57], {
                         className: "profile-edit__upload-container",
                         display: f.R.InlineBlock,
                         position: f._15.Relative,
-                        textAlign: f._42.Center,
+                        textAlign: f._43.Center,
                         margin: {
                             bottom: 1
                         }
@@ -3346,17 +3346,17 @@ webpackJsonp([57], {
                         className: "profile-edit__upload",
                         display: f.R.InlineBlock,
                         position: f._15.Relative,
-                        textAlign: f._42.Center
+                        textAlign: f._43.Center
                     }, c.createElement(u.a, {
                         allowedFileTypes: w,
                         onFilesSubmitted: this.onImageInputChange
-                    }, a), n)), c.createElement(f._32, {
+                    }, a), n)), c.createElement(f._33, {
                         "data-test-selector": "status-message",
                         fontSize: f.V.Size4,
                         position: f._15.Relative,
-                        textAlign: f._42.Center,
+                        textAlign: f._43.Center,
                         className: "profile-edit__status-message"
-                    }, o), c.createElement(f._32, {
+                    }, o), c.createElement(f._33, {
                         borderBottom: !0,
                         padding: {
                             bottom: .5
@@ -3365,17 +3365,17 @@ webpackJsonp([57], {
                             bottom: 2
                         }
                     }, c.createElement(f._8, {
-                        textAlign: f._42.Left,
+                        textAlign: f._43.Left,
                         margin: {
                             bottom: 1
                         }
                     }, c.createElement(f.Q, {
-                        type: f._46.H3,
+                        type: f._47.H3,
                         color: f.K.Alt2,
                         fontSize: f.V.Size5
-                    }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(f._52, {
-                        childWidth: f._53.ExtraSmall,
-                        gutterSize: f._54.ExtraSmall,
+                    }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(f._53, {
+                        childWidth: f._54.ExtraSmall,
+                        gutterSize: f._55.ExtraSmall,
                         placeholderItems: 3
                     }, t)), c.createElement(f._8, {
                         display: f.R.Flex,
@@ -3546,7 +3546,7 @@ webpackJsonp([57], {
                     }, "ChannelCollections");
                     return a.createElement(v.C, i.__assign({
                         key: this.props.title
-                    }, Object(v._60)(this.props)), a.createElement(v._2, {
+                    }, Object(v._61)(this.props)), a.createElement(v._2, {
                         position: v._15.Relative
                     }, a.createElement(g.a, {
                         to: {
@@ -3591,9 +3591,9 @@ webpackJsonp([57], {
                         color: v.K.Alt2,
                         ellipsis: !0
                     }, a.createElement(v.Q, {
-                        type: v._46.Span
+                        type: v._47.Span
                     }, e), a.createElement(v.Q, {
-                        type: v._46.Span
+                        type: v._47.Span
                     }, " · " + this.computeViewsMessage())))))
                 }, t
             }(a.Component),
@@ -3603,7 +3603,7 @@ webpackJsonp([57], {
             y = function(e) {
                 var t;
                 return t = e.showCollectionsManagerButton ? a.createElement("div", null, a.createElement(v.Q, {
-                    type: v._46.H4,
+                    type: v._47.H4,
                     "data-test-selector": "no-collections"
                 }, Object(o.d)("Create a collection of your videos from Video Producer.", "collection-page")), a.createElement(v._8, {
                     padding: {
@@ -3614,12 +3614,12 @@ webpackJsonp([57], {
                     linkTo: "/" + e.channelLogin + "/manager/collections",
                     "data-test-selector": "no-collections-button"
                 }, Object(o.d)("Go to Video Producer", "collection-page")))) : a.createElement(v.Q, {
-                    type: v._46.H4,
+                    type: v._47.H4,
                     italic: !0,
                     "data-test-selector": "no-collections"
-                }, Object(o.d)("No collections found.", "collection-page")), a.createElement(v._32, {
+                }, Object(o.d)("No collections found.", "collection-page")), a.createElement(v._33, {
                     color: v.K.Alt2,
-                    textAlign: v._42.Center,
+                    textAlign: v._43.Center,
                     padding: {
                         top: 5
                     }
@@ -3676,9 +3676,9 @@ webpackJsonp([57], {
                                 "data-a-target": "collection-card-" + n
                             }))
                         });
-                        e = a.createElement("div", null, c, r, a.createElement(v._52, {
-                            gutterSize: v._54.Small,
-                            childWidth: v._53.Large,
+                        e = a.createElement("div", null, c, r, a.createElement(v._53, {
+                            gutterSize: v._55.Small,
+                            childWidth: v._54.Large,
                             placeholderItems: 20
                         }, u), a.createElement(l.a, {
                             enabled: i,
@@ -3704,9 +3704,9 @@ webpackJsonp([57], {
                         }, a.createElement(v._14, {
                             width: 100
                         }))));
-                        e = a.createElement(v._52, {
-                            gutterSize: v._54.Small,
-                            childWidth: v._53.Medium,
+                        e = a.createElement(v._53, {
+                            gutterSize: v._55.Small,
+                            childWidth: v._54.Medium,
                             placeholderItems: 20
                         }, p)
                     } else e = a.createElement(v._8, {
@@ -3778,4 +3778,4 @@ webpackJsonp([57], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-collections-5d792a46500b2a4b478c4eff45179775.js.map
+//# sourceMappingURL=pages.channel-collections-be8400784a35c3d3aa7d0fb642d741bd.js.map

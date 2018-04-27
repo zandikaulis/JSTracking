@@ -1,4 +1,4 @@
-webpackJsonp([105], {
+webpackJsonp([106], {
     "1KsR": function(e, t) {},
     "2oK2": function(e, t) {
         var n = {
@@ -338,7 +338,7 @@ webpackJsonp([105], {
                         to: "/subs/" + this.props.followedChannel.login,
                         onClick: this.handleClick
                     }, a.createElement(w._8, {
-                        textAlign: w._42.Center,
+                        textAlign: w._43.Center,
                         padding: {
                             bottom: 1
                         }
@@ -437,15 +437,15 @@ webpackJsonp([105], {
                             bottom: 2
                         }
                     }, a.createElement(w.Q, {
-                        type: w._46.H3,
+                        type: w._47.H3,
                         color: w.K.Link,
                         bold: !0,
                         className: "subs-landing-followed-channels__title"
-                    }, this.messages.title)), a.createElement(w._52, {
+                    }, this.messages.title)), a.createElement(w._53, {
                         center: !0,
-                        gutterSize: w._54.Small
+                        gutterSize: w._55.Small
                     }, this.getFollowedChannels()), this.getShowMore()) : a.createElement(w._8, {
-                        textAlign: w._42.Center,
+                        textAlign: w._43.Center,
                         margin: {
                             top: 3
                         }
@@ -520,13 +520,13 @@ webpackJsonp([105], {
                     var e;
                     return e = this.props.isWaiting ? a.createElement(w._10, {
                         fillContent: !0
-                    }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), a.createElement(w._32, {
+                    }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), a.createElement(w._33, {
                         elevation: 4
                     }, a.createElement("div", {
                         className: "streamer-search-panel " + (this.props.isOpen ? "" : "streamer-search-panel--closed"),
                         tabIndex: 0,
                         onKeyDown: this.props.onKeyDown
-                    }, a.createElement(w._32, {
+                    }, a.createElement(w._33, {
                         className: "streamer-search-panel__results",
                         background: w.n.Base,
                         position: w._15.Relative,
@@ -579,7 +579,7 @@ webpackJsonp([105], {
                                 x: 1
                             }
                         }, a.createElement(w.Q, {
-                            type: w._46.H5,
+                            type: w._47.H5,
                             ellipsis: !0
                         }, n))))))
                     });
@@ -610,13 +610,13 @@ webpackJsonp([105], {
                         fullWidth: !0
                     }, a.createElement(w._2, {
                         fullWidth: !0,
-                        zIndex: w._59.Above,
+                        zIndex: w._60.Above,
                         position: w._15.Relative
                     }, a.createElement("div", {
                         className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
                     }, a.createElement(U.a, {
                         onClickOut: this.props.onClickOut
-                    }, a.createElement(w._25, {
+                    }, a.createElement(w._26, {
                         onChange: this.handleChange,
                         onFocus: this.props.onFocus,
                         onKeyDown: this.props.onKeyDown,
@@ -840,7 +840,7 @@ webpackJsonp([105], {
                         justifyContent: w._7.Center
                     }, a.createElement(w._8, {
                         className: "subs-landing-page-contents",
-                        textAlign: w._42.Center,
+                        textAlign: w._43.Center,
                         display: w.R.Flex,
                         justifyContent: w._7.Center,
                         alignItems: w.c.Center,
@@ -855,7 +855,7 @@ webpackJsonp([105], {
                             top: 4
                         }
                     }, a.createElement(w.Q, {
-                        type: w._46.H2,
+                        type: w._47.H2,
                         color: w.K.Link,
                         bold: !0
                     }, this.messages.title)), a.createElement(w._2, {
@@ -864,7 +864,7 @@ webpackJsonp([105], {
                         },
                         className: "subs-landing-page-contents__paragraph"
                     }, a.createElement(w.Q, {
-                        type: w._46.P,
+                        type: w._47.P,
                         fontSize: w.V.Size5
                     }, this.messages.info)), a.createElement(w._2, {
                         margin: {
@@ -872,7 +872,7 @@ webpackJsonp([105], {
                         },
                         className: "subs-landing-page-contents__heading"
                     }, a.createElement(w.Q, {
-                        type: w._46.H3,
+                        type: w._47.H3,
                         color: w.K.Link,
                         bold: !0,
                         fontSize: w.V.Size4
@@ -882,7 +882,7 @@ webpackJsonp([105], {
                         },
                         className: "subs-landing-page-contents__paragraph"
                     }, a.createElement(w.Q, {
-                        type: w._46.P,
+                        type: w._47.P,
                         fontSize: w.V.Size5
                     }, this.messages.searchInfo)), a.createElement(H, null), a.createElement(x, null), a.createElement(w._8, {
                         className: "subs-landing-page-contents__section",
@@ -904,7 +904,7 @@ webpackJsonp([105], {
                         },
                         className: "subs-landing-page-contents__heading"
                     }, a.createElement(w.Q, {
-                        type: w._46.H3,
+                        type: w._47.H3,
                         color: w.K.Link,
                         bold: !0,
                         fontSize: w.V.Size4
@@ -914,7 +914,7 @@ webpackJsonp([105], {
                         },
                         className: "subs-landing-page-contents__paragraph"
                     }, a.createElement(w.Q, {
-                        type: w._46.P,
+                        type: w._47.P,
                         fontSize: w.V.Size5
                     }, this.messages.perksInfo))), a.createElement(w._8, {
                         margin: {
@@ -953,7 +953,7 @@ webpackJsonp([105], {
                         },
                         className: "subs-landing-page-contents__heading"
                     }, a.createElement(w.Q, {
-                        type: w._46.H3,
+                        type: w._47.H3,
                         color: w.K.Link,
                         bold: !0,
                         fontSize: w.V.Size4
@@ -963,7 +963,7 @@ webpackJsonp([105], {
                         },
                         className: "subs-landing-page-contents__paragraph"
                     }, a.createElement(w.Q, {
-                        type: w._46.P,
+                        type: w._47.P,
                         fontSize: w.V.Size5
                     }, this.messages.emotesInfo)))))))))
                 }, t = r.__decorate([Object(h.d)("SubsLandingPage", {
@@ -984,4 +984,4 @@ webpackJsonp([105], {
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-fa4b839cdbbe1048401975c18a1c92a5.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-cf6b13010bc793db6410f3c3a411da73.js.map
