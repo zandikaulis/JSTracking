@@ -29,7 +29,7 @@ webpackJsonp([60], {
                             }
                         }, s.createElement(h.Q, {
                             color: h.K.Error,
-                            type: h._47.H4,
+                            type: h._49.H4,
                             "data-test-selector": v
                         }, Object(y.a)(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
@@ -75,7 +75,7 @@ webpackJsonp([60], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     return s.createElement(h._2, {
                         position: h._15.Relative
-                    }, s.createElement(h._33, {
+                    }, s.createElement(h._35, {
                         background: h.n.Base,
                         className: "stream-ban-modal"
                     }, s.createElement(h._8, {
@@ -85,10 +85,10 @@ webpackJsonp([60], {
                             bottom: 2
                         }
                     }, s.createElement(h.Q, {
-                        type: h._47.H4
+                        type: h._49.H4
                     }, Object(u.d)("Are you sure you want to ban {name}?", {
                         name: this.props.username
-                    }, "StreamBanModal"))), s.createElement(h._33, {
+                    }, "StreamBanModal"))), s.createElement(h._35, {
                         borderTop: !0
                     }, s.createElement(h._8, {
                         margin: {
@@ -101,13 +101,13 @@ webpackJsonp([60], {
                         placeholder: Object(u.d)("Please be as detailed as possible", "StreamBanModal"),
                         onChange: this.onReasonChange,
                         "data-test-selector": "reason-input"
-                    }))), s.createElement(h._33, {
+                    }))), s.createElement(h._35, {
                         borderTop: !0
                     }, s.createElement(h._8, {
                         padding: {
                             top: 2
                         },
-                        textAlign: h._43.Center
+                        textAlign: h._45.Center
                     }, s.createElement(h._8, {
                         display: h.R.Inline,
                         margin: {
@@ -174,7 +174,7 @@ webpackJsonp([60], {
                             }
                         }, s.createElement(h.Q, {
                             color: h.K.Error,
-                            type: h._47.H4,
+                            type: h._49.H4,
                             "data-test-selector": v
                         }, Object(y.a)(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
@@ -227,7 +227,7 @@ webpackJsonp([60], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     return s.createElement(h._2, {
                         position: h._15.Relative
-                    }, s.createElement(h._33, {
+                    }, s.createElement(h._35, {
                         background: h.n.Base,
                         className: "stream-timeout-modal"
                     }, s.createElement(h._8, {
@@ -237,10 +237,10 @@ webpackJsonp([60], {
                             bottom: 2
                         }
                     }, s.createElement(h.Q, {
-                        type: h._47.H4
+                        type: h._49.H4
                     }, Object(u.d)("Are you sure you want to timeout {name}?", {
                         name: this.props.username
-                    }, "StreamTimeoutModal"))), s.createElement(h._33, {
+                    }, "StreamTimeoutModal"))), s.createElement(h._35, {
                         borderTop: !0
                     }, s.createElement(h._8, {
                         margin: {
@@ -259,7 +259,7 @@ webpackJsonp([60], {
                         }
                     }, s.createElement(h.Q, {
                         bold: !0
-                    }, Object(u.d)("Duration", "StreamTimeoutModal")), s.createElement(h._29, {
+                    }, Object(u.d)("Duration", "StreamTimeoutModal")), s.createElement(h._30, {
                         defaultValue: "2",
                         onChange: this.onDurationHoursChange
                     }, s.createElement("option", {
@@ -272,13 +272,13 @@ webpackJsonp([60], {
                         value: "12"
                     }, Object(u.d)("12 hours", "StreamTimeoutModal")), s.createElement("option", {
                         value: "24"
-                    }, Object(u.d)("24 hours", "StreamTimeoutModal")))), s.createElement(h._33, {
+                    }, Object(u.d)("24 hours", "StreamTimeoutModal")))), s.createElement(h._35, {
                         borderTop: !0
                     }, s.createElement(h._8, {
                         padding: {
                             top: 2
                         },
-                        textAlign: h._43.Center
+                        textAlign: h._45.Center
                     }, s.createElement(h._8, {
                         display: h.R.Inline,
                         margin: {
@@ -1209,17 +1209,17 @@ webpackJsonp([60], {
                         onClick: this.toggleFollowing,
                         "data-a-target": "directory-unfollow-button",
                         "data-test-selector": "unfollow-button",
-                        icon: h._24.Heart,
-                        statusAlertIcon: h._24.Unheart
+                        icon: h._25.Heart,
+                        statusAlertIcon: h._25.Unheart
                     })) : u.createElement(h.v, m.__assign({
                         ariaLabel: e,
                         "data-a-target": "directory-follow-button",
                         "data-test-selector": "follow-button",
-                        icon: h._24.Heart,
+                        icon: h._25.Heart,
                         onClick: this.toggleFollowing
-                    }, Object(h._61)(this.props)), e) : null : u.createElement(h.v, {
+                    }, Object(h._63)(this.props)), e) : null : u.createElement(h.v, {
                         ariaLabel: e,
-                        icon: h._24.Heart,
+                        icon: h._25.Heart,
                         onClick: this.props.login,
                         "data-a-target": "directory-follow-button"
                     }, e)
@@ -2307,10 +2307,10 @@ webpackJsonp([60], {
                         backgroundImage: "url(" + this.props.data.community.coverURL + ")"
                     }, t = r.createElement(g.Q, {
                         color: g.K.Overlay,
-                        type: g._47.H3
+                        type: g._49.H3
                     }, this.props.data.community.displayName), n = r.createElement(g.Q, {
                         color: g.K.Overlay,
-                        type: g._47.P
+                        type: g._49.P
                     }, Object(c.d)("{followers, plural, one {# Follower} other {# Followers}}", {
                         followers: this.props.data.community.followersCount || 0
                     }, "CommunityModerationBanner")));
@@ -2344,8 +2344,8 @@ webpackJsonp([60], {
                         flexDirection: g.T.Column
                     }, r.createElement(g.O, {
                         to: "/directory/communities"
-                    }, r.createElement(g._23, {
-                        asset: g._24.GlyphArrLeft,
+                    }, r.createElement(g._24, {
+                        asset: g._25.GlyphArrLeft,
                         height: 10,
                         width: 10
                     }), Object(c.d)("Communities", "CommunityModerationBanner")), t, n)), r.createElement(g._8, {
@@ -2359,7 +2359,7 @@ webpackJsonp([60], {
                             left: 1
                         }
                     }, r.createElement(g.v, {
-                        icon: g._24.Check,
+                        icon: g._25.Check,
                         linkTo: "/communities/" + encodeURIComponent(this.props.communityName)
                     }, Object(c.d)("Done", "CommunityModerationBanner")))))))
                 }, t
@@ -2528,7 +2528,7 @@ webpackJsonp([60], {
                     });
                     return r.createElement(g._8, {
                         className: "user-search-form"
-                    }, r.createElement(g._33, {
+                    }, r.createElement(g._35, {
                         key: "user-search-form-input",
                         padding: 1,
                         border: !0
@@ -2551,7 +2551,7 @@ webpackJsonp([60], {
                         type: g._5.Search,
                         placeholder: this.props.placeholder,
                         onChange: this.onChange,
-                        icon: g._24.GlyphLive,
+                        icon: g._25.GlyphLive,
                         value: this.state.searchText
                     }), r.createElement(g.q, {
                         show: this.state.results.length > 0,
@@ -2559,7 +2559,7 @@ webpackJsonp([60], {
                         direction: g.r.TopCenter
                     }, r.createElement(F.b, {
                         className: "user-search-form__results"
-                    }, r.createElement(g._8, null, this.state.results.length > 0 && this.renderUsers(this.state.results)))))), this.props.displayUsers && this.props.displayUsers.length > 0 && r.createElement(g._33, {
+                    }, r.createElement(g._8, null, this.state.results.length > 0 && this.renderUsers(this.state.results)))))), this.props.displayUsers && this.props.displayUsers.length > 0 && r.createElement(g._35, {
                         key: "user-search-form-results",
                         className: e,
                         borderLeft: !0,
@@ -2760,15 +2760,15 @@ webpackJsonp([60], {
                                 bottom: 1
                             }
                         }, r.createElement(g.Q, {
-                            type: g._47.H2
+                            type: g._49.H2
                         }, Object(c.d)("Moderation", "CommunityModerationPage"))), r.createElement(g._8, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(g._35, null, r.createElement(g._34, {
+                        }, r.createElement(g._37, null, r.createElement(g._36, {
                             linkTo: "/communities/" + t.props.match.params.encodedCommunityName + "/moderation/log",
                             active: t.props.activeTab === i.Moderation
-                        }, Object(c.d)("Moderation", "CommunityModerationPageTab")), t.props.showSettingsTab && r.createElement(g._34, {
+                        }, Object(c.d)("Moderation", "CommunityModerationPageTab")), t.props.showSettingsTab && r.createElement(g._36, {
                             linkTo: "/communities/" + t.props.match.params.encodedCommunityName + "/moderation/settings",
                             active: t.props.activeTab === i.Settings
                         }, Object(c.d)("Settings", "CommunityModerationPageTab")))), t.props.children)
@@ -2951,7 +2951,7 @@ webpackJsonp([60], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(g._33, {
+                    return r.createElement(g._35, {
                         padding: 2,
                         background: g.n.Base,
                         className: "ban-user-modal"
@@ -2959,7 +2959,7 @@ webpackJsonp([60], {
                         fontSize: g.V.Size4
                     }, Object(c.d)("Are you sure you want to make {user} the new community leader?", {
                         user: this.props.user.displayName
-                    }, "CommunityLeaderModal")), r.createElement(g._33, {
+                    }, "CommunityLeaderModal")), r.createElement(g._35, {
                         margin: {
                             y: 2
                         },
@@ -3398,7 +3398,7 @@ webpackJsonp([60], {
                     }, r.createElement(te, {
                         communityID: o,
                         onChange: this.onChangeCommunityLeader
-                    }), r.createElement(g._33, {
+                    }), r.createElement(g._35, {
                         border: !0,
                         padding: 1,
                         margin: {
@@ -3468,4 +3468,4 @@ webpackJsonp([60], {
     sJt0: function(e, t) {},
     wyZy: function(e, t) {}
 });
-//# sourceMappingURL=pages.community-moderation-7809a82c8df31008e01297d42e166c93.js.map
+//# sourceMappingURL=pages.community-moderation-2f6fdf94975779246745c911081a436f.js.map

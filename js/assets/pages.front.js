@@ -478,8 +478,8 @@ webpackJsonp([53], {
                             attachTop: !0,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, l.createElement(v._23, {
-                            asset: v._24.Play,
+                        }, l.createElement(v._24, {
+                            asset: v._25.Play,
                             width: 50,
                             height: 50
                         })), l.createElement(v._8, {
@@ -499,7 +499,7 @@ webpackJsonp([53], {
                             padding: 1,
                             attachBottom: !0,
                             attachRight: !0
-                        }, s && l.createElement(v._8, null, l.createElement(v.Q, null, s)))), l.createElement(v._33, {
+                        }, s && l.createElement(v._8, null, l.createElement(v.Q, null, s)))), l.createElement(v._35, {
                             position: v._15.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
@@ -1579,13 +1579,13 @@ webpackJsonp([53], {
         var i = n("GiK3"),
             a = n("Odds"),
             r = function() {
-                return i.createElement(a._33, {
+                return i.createElement(a._35, {
                     elevation: 1,
                     margin: {
                         bottom: 2
                     },
                     background: a.n.Base
-                }, i.createElement(a._33, {
+                }, i.createElement(a._35, {
                     display: a.R.Flex,
                     flexWrap: a.U.NoWrap,
                     padding: 1,
@@ -1624,7 +1624,7 @@ webpackJsonp([53], {
                 }))))
             },
             o = function() {
-                return i.createElement(a._33, {
+                return i.createElement(a._35, {
                     elevation: 1,
                     margin: {
                         bottom: 2
@@ -1636,7 +1636,7 @@ webpackJsonp([53], {
                     }
                 }, i.createElement(a.k, {
                     ratio: a.l.Aspect16x9
-                }, i.createElement(a._14, null))), i.createElement(a._33, {
+                }, i.createElement(a._14, null))), i.createElement(a._35, {
                     display: a.R.Flex,
                     flexWrap: a.U.NoWrap,
                     padding: 1,
@@ -2261,7 +2261,7 @@ webpackJsonp([53], {
                         }, Object(o.d)("{title}", {
                             title: e.title
                         }, "GameListComponent"))),
-                        n = r.createElement(C._33, {
+                        n = r.createElement(C._35, {
                             background: C.n.Alt,
                             padding: 1
                         }, r.createElement(C._2, {
@@ -2270,7 +2270,7 @@ webpackJsonp([53], {
                             display: C.R.Block
                         }, r.createElement(N.a, a.__assign({
                             to: e.viewAllLinkTo
-                        }, Object(C._61)(e)), Object(o.d)("View All", "GameListComponent")))),
+                        }, Object(C._63)(e)), Object(o.d)("View All", "GameListComponent")))),
                         i = [];
                     if (e.loading)
                         for (var d = 0; d < e.limit; d++) i.push(r.createElement(C._8, {
@@ -2308,7 +2308,7 @@ webpackJsonp([53], {
                             "data-a-id": "card-" + i.replace(/ /g, "")
                         }))
                     }));
-                    return r.createElement(C._33, {
+                    return r.createElement(C._35, {
                         elevation: 1,
                         background: C.n.Base,
                         display: C.R.Hide,
@@ -2319,9 +2319,9 @@ webpackJsonp([53], {
                         padding: {
                             x: 1
                         }
-                    }, r.createElement(C._53, {
-                        gutterSize: C._55.ExtraSmall,
-                        childWidth: C._54.ExtraSmall,
+                    }, r.createElement(C._55, {
+                        gutterSize: C._57.ExtraSmall,
+                        childWidth: C._56.ExtraSmall,
                         placeholderItems: 18
                     }, i)), n)
                 }, t = a.__decorate([Object(k.d)("GameList", {
@@ -2406,7 +2406,7 @@ webpackJsonp([53], {
                 return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.shouldSeeOnboarding() && this.handleAutoOnboardingRedirect()
                 }, t.prototype.render = function() {
-                    return this.shouldSeeOnboarding() ? r.createElement(C._33, {
+                    return this.shouldSeeOnboarding() ? r.createElement(C._35, {
                         "data-test-selector": "onboarding-prompt",
                         background: C.n.Base,
                         display: C.R.Flex,
@@ -2420,11 +2420,11 @@ webpackJsonp([53], {
                         display: C.R.Flex,
                         flexDirection: C.T.Column,
                         flexWrap: C.U.NoWrap,
-                        textAlign: C._43.Left,
+                        textAlign: C._45.Left,
                         padding: 1,
                         fullWidth: !0
                     }, r.createElement(C.Q, {
-                        type: C._47.H5,
+                        type: C._49.H5,
                         color: C.K.Base,
                         bold: !0
                     }, Object(o.d)("Welcome to your homepage, {displayName}!", {
@@ -2449,7 +2449,7 @@ webpackJsonp([53], {
                         "data-test-selector": "onboarding-prompt__dismiss",
                         ariaLabel: Object(o.d)("dismiss onboarding", "OnboardingPrompt"),
                         type: C.y.Default,
-                        icon: C._24.Close,
+                        icon: C._25.Close,
                         onClick: this.dismissOnboardingPrompt
                     }))) : null
                 }, t = a.__decorate([Object(k.d)("OnboardingPrompt", {
@@ -2883,7 +2883,7 @@ webpackJsonp([53], {
                 }, n.displayName))) : i && "" !== i && (d = a.createElement(s.Q, {
                     fontSize: s.V.Size6,
                     color: s.K.Alt
-                }, i)), a.createElement(s._33, {
+                }, i)), a.createElement(s._35, {
                     display: s.R.Flex,
                     flexWrap: s.U.NoWrap,
                     padding: 1,
@@ -4223,13 +4223,13 @@ webpackJsonp([53], {
                     }, r.createElement(v._8, {
                         className: "embed-preview-close",
                         position: v._15.Absolute,
-                        zIndex: v._60.Default,
+                        zIndex: v._62.Default,
                         attachTop: !0,
                         attachRight: !0
                     }, r.createElement(v.w, {
                         onClick: this.removeEmbed,
                         overlay: !0,
-                        icon: v._24.Close,
+                        icon: v._25.Close,
                         ariaLabel: Object(o.d)("Close", "EmbedPreview")
                     })), r.createElement(g.a, {
                         embed: this.state.embed
@@ -4378,7 +4378,7 @@ webpackJsonp([53], {
                         checked: this.state.shareToTwitter
                     }) : r.createElement("a", {
                         href: S
-                    }, Object(o.d)("Connect Twitter", "ConnectTwitter")), r.createElement(v._33, {
+                    }, Object(o.d)("Connect Twitter", "ConnectTwitter")), r.createElement(v._35, {
                         elevation: 1,
                         padding: 1,
                         margin: {
@@ -4389,7 +4389,7 @@ webpackJsonp([53], {
                         "data-a-target": "pulse-post-container"
                     }, r.createElement("div", {
                         onMouseEnter: this.onMouseEnter
-                    }, r.createElement(v._44, {
+                    }, r.createElement(v._46, {
                         "data-test-selector": "composer",
                         "data-a-target": "pulse-input",
                         disabled: this.state.disabled,
@@ -4401,8 +4401,8 @@ webpackJsonp([53], {
                         refDelegate: this.setTextArea,
                         paddingRight: 30,
                         overflow: v._11.Hidden
-                    }), r.createElement(v._33, {
-                        textAlign: v._43.Right,
+                    }), r.createElement(v._35, {
+                        textAlign: v._45.Right,
                         position: v._15.Absolute,
                         attachTop: !0,
                         attachRight: !0,
@@ -4424,7 +4424,7 @@ webpackJsonp([53], {
                     }, r.createElement(d.a, {
                         onClickOut: this.closeTwitterBubble
                     }, r.createElement(s.a, null, r.createElement(v.w, {
-                        icon: v._24.Gear,
+                        icon: v._25.Gear,
                         ariaLabel: Object(o.d)("Composer Settings", "ComposerSettings"),
                         "data-test-selector": "composer-setting",
                         "data-a-target": "pulse-settings"
@@ -4741,7 +4741,7 @@ webpackJsonp([53], {
                         darkTheme: !0
                     });
                 default:
-                    return a.createElement(p._33, {
+                    return a.createElement(p._35, {
                         className: "featured-content",
                         background: p.n.Base,
                         elevation: 1
@@ -4912,10 +4912,10 @@ webpackJsonp([53], {
                         r = n.token;
                     return parseInt(n.id, 10) < 15 && (r = Object(f.c)(n.token)), a.createElement("div", m.__assign({
                         onClick: this.toggleReaction
-                    }, Object(b._61)(this.props)), a.createElement(b._50, {
+                    }, Object(b._63)(this.props)), a.createElement(b._52, {
                         label: 0 === t ? r : t + " " + r,
-                        direction: b._52.Top,
-                        align: b._51.Center
+                        direction: b._54.Top,
+                        align: b._53.Center
                     }, a.createElement(b._8, {
                         alignItems: b.c.Center,
                         className: i.hasReacted ? "activity-reaction activity-reaction--active" : "activity-reaction",
@@ -4950,7 +4950,7 @@ webpackJsonp([53], {
                     direction: e.position || b.r.TopCenter,
                     size: b.s.Small,
                     show: !0
-                }, a.createElement(b._33, {
+                }, a.createElement(b._35, {
                     display: b.R.Flex,
                     flexWrap: b.U.Wrap,
                     padding: {
@@ -4976,7 +4976,7 @@ webpackJsonp([53], {
                         "data-a-target": "top-reaction-" + n
                     }))
                 });
-                return a.createElement(b._33, {
+                return a.createElement(b._35, {
                     display: b.R.Flex
                 }, t)
             });
@@ -5069,10 +5069,10 @@ webpackJsonp([53], {
                         onClick: this.toggleEmoteSelector,
                         "data-a-target": "add-reaction-button"
                     }, this.props.children);
-                    return this.state.emoteSelectorVisible || (e = a.createElement(b._50, {
+                    return this.state.emoteSelectorVisible || (e = a.createElement(b._52, {
                         label: Object(p.d)("Add a Reaction", "ReactionSelector"),
-                        direction: b._52.Top,
-                        align: b._51.Center
+                        direction: b._54.Top,
+                        align: b._53.Center
                     }, e)), a.createElement(b._8, {
                         className: "reaction-selector",
                         position: b._15.Relative
@@ -5162,10 +5162,10 @@ webpackJsonp([53], {
                     }, r) : a.createElement("span", {
                         "data-test-selector": "additional-toggle-tracking",
                         "data-a-target": "pulse-reaction-count"
-                    }, r)), this.state.additionalReactionsVisible || (o = a.createElement(b._50, {
+                    }, r)), this.state.additionalReactionsVisible || (o = a.createElement(b._52, {
                         label: Object(p.d)("Total Reactions", "ReactionList"),
-                        direction: b._52.Top,
-                        align: b._51.Center
+                        direction: b._54.Top,
+                        align: b._53.Center
                     }, o)), n = this.props.emoteSelectorAndOverflowPos && this.props.emoteSelectorAndOverflowPos === b.r.Bottom ? b.r.BottomLeft : b.r.TopLeft;
                     var d = null;
                     return this.props.isLoggedIn && (d = a.createElement(b._8, {
@@ -5175,12 +5175,12 @@ webpackJsonp([53], {
                     }, a.createElement(D, {
                         onEmoteSelect: this.addReaction,
                         position: n
-                    }, a.createElement(b._23, {
-                        asset: b._24.AddReaction,
-                        type: b._25.Brand,
+                    }, a.createElement(b._24, {
+                        asset: b._25.AddReaction,
+                        type: b._26.Brand,
                         width: 24,
                         height: 24
-                    })))), a.createElement(b._33, {
+                    })))), a.createElement(b._35, {
                         display: b.R.Flex,
                         alignItems: b.c.Center,
                         padding: 1
@@ -5253,7 +5253,7 @@ webpackJsonp([53], {
                     s = n.embeds,
                     l = n.id,
                     c = n.reactions;
-                return a.createElement(b._8, null, a.createElement(b._33, {
+                return a.createElement(b._8, null, a.createElement(b._35, {
                     display: b.R.Flex,
                     alignItems: b.c.Center,
                     padding: 1,
@@ -5295,15 +5295,15 @@ webpackJsonp([53], {
                 }, i.displayName)), a.createElement(V.a, {
                     to: "/" + i.login + "/p/" + l,
                     "data-a-target": "pulse-post-link"
-                }, a.createElement(b._50, {
+                }, a.createElement(b._52, {
                     label: (t = new Date(d), Object(p.d)("{dateTime, date, medium} {dateTime, time, short}", {
                         dateTime: t
                     }, "PostDate")),
-                    direction: b._52.Bottom
+                    direction: b._54.Bottom
                 }, a.createElement(b.Q, {
                     fontSize: b.V.Size6,
                     color: b.K.Alt2
-                }, Object(p.h)(new Date(d)))))))), o && a.createElement(b._33, {
+                }, Object(p.h)(new Date(d)))))))), o && a.createElement(b._35, {
                     padding: 1,
                     className: "feed-item-text"
                 }, Object(U.a)(o.content.trim(), o.emotes, i.login)), a.createElement(b._8, null, s && s.slice(0, 1).map(function(e, t) {
@@ -5918,7 +5918,7 @@ webpackJsonp([53], {
                         darkTheme: !0
                     });
                 default:
-                    return r.createElement(u._33, {
+                    return r.createElement(u._35, {
                         className: "featured-broadcasters",
                         background: u.n.Base,
                         elevation: 1
@@ -6286,14 +6286,14 @@ webpackJsonp([53], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.props.impressionTracking.onImpression(this.onImpression)
                 }, t.prototype.render = function() {
-                    return Object(c.b)(this.props.item.content.__typename) ? i.createElement(l._33, r.__assign({
+                    return Object(c.b)(this.props.item.content.__typename) ? i.createElement(l._35, r.__assign({
                         elevation: 1,
                         margin: {
                             bottom: 1
                         },
                         background: l.n.Base,
                         position: l._15.Relative
-                    }, Object(l._61)(this.props), {
+                    }, Object(l._63)(this.props), {
                         className: "feed-item"
                     }), i.createElement(l._8, {
                         position: l._15.Absolute,
@@ -6343,7 +6343,7 @@ webpackJsonp([53], {
                 })
             });
             return e.latencyTracking.reportInteractive(r.length), r.length ? i.createElement(l._8, null, r) : i.createElement(l._8, {
-                textAlign: l._43.Center
+                textAlign: l._45.Center
             }, i.createElement(l.Q, {
                 color: l.K.Alt2
             }, Object(a.d)("There are no feed posts.", "ChannelFeedComponent")))
@@ -6912,8 +6912,8 @@ webpackJsonp([53], {
                             status: m.I.Live,
                             size: m.H.Small,
                             "data-test-selector": u
-                        }) : r.createElement(m._23, {
-                            asset: m._24.GlyphViews,
+                        }) : r.createElement(m._24, {
+                            asset: m._25.GlyphViews,
                             "data-test-selector": p
                         })
                     }, t.itemClick = function() {
@@ -6937,13 +6937,13 @@ webpackJsonp([53], {
                         },
                         flexGrow: 1,
                         position: m._15.Relative
-                    }, r.createElement(m._50, {
+                    }, r.createElement(m._52, {
                         label: (this.props.item.isSponsored ? Object(o.d)("Sponsored", "CarouselCardComponent") : "") + " " + this.props.item.broadcaster.displayName,
-                        direction: m._52.Top,
+                        direction: m._54.Top,
                         display: m.R.Block
                     }, r.createElement(m._6, i.__assign({
                         onClick: this.itemClick
-                    }, Object(m._61)(this.props)), r.createElement(m.k, {
+                    }, Object(m._63)(this.props)), r.createElement(m.k, {
                         ratio: m.l.Aspect16x9
                     }, r.createElement(m._8, {
                         className: "carousel-nav__meta",
@@ -6952,7 +6952,7 @@ webpackJsonp([53], {
                         margin: {
                             left: .5
                         },
-                        zIndex: m._60.Above
+                        zIndex: m._62.Above
                     }, this.renderIndicator(), r.createElement(m._8, {
                         display: m.R.InlineFlex,
                         margin: {
@@ -6960,7 +6960,7 @@ webpackJsonp([53], {
                         }
                     }, r.createElement(m.Q, {
                         color: m.K.Overlay,
-                        type: m._47.Span
+                        type: m._49.Span
                     }, Object(o.e)(this.props.item.content.viewersCount)))), r.createElement(m._8, {
                         className: "carousel-nav__img-container"
                     }, r.createElement("img", {
@@ -6973,9 +6973,9 @@ webpackJsonp([53], {
                         position: m._15.Absolute,
                         attachRight: !0,
                         attachTop: !0
-                    }, r.createElement(m._23, {
-                        asset: m._24.Featured,
-                        type: m._25.Brand,
+                    }, r.createElement(m._24, {
+                        asset: m._25.Featured,
+                        type: m._26.Brand,
                         width: 20,
                         height: 20
                     })) : "")))))
@@ -7038,7 +7038,7 @@ webpackJsonp([53], {
                                 onPlayerDestroy: t.props.onPlayerDestroy,
                                 onVideoTimeChange: t.onVideoTimeChange
                             };
-                        return r.createElement(m._33, {
+                        return r.createElement(m._35, {
                             className: "horizontal-carousel-player",
                             margin: {
                                 bottom: 2
@@ -7060,7 +7060,7 @@ webpackJsonp([53], {
                         }, r.createElement(m._8, {
                             display: m.R.Flex,
                             flexWrap: m.U.NoWrap,
-                            textAlign: m._43.Left,
+                            textAlign: m._45.Left,
                             alignItems: m.c.Center,
                             padding: {
                                 bottom: .5
@@ -7109,7 +7109,7 @@ webpackJsonp([53], {
                         }, r.createElement(f.a, {
                             to: t.getLinkForTitle()
                         }, r.createElement(m.Q, {
-                            type: m._47.Span,
+                            type: m._49.Span,
                             "data-a-target": l.a,
                             fontSize: m.V.Size3,
                             lineHeight: m._9.Heading
@@ -7153,7 +7153,7 @@ webpackJsonp([53], {
                         }, r.createElement(m._8, {
                             display: m.R.Flex,
                             flexWrap: m.U.NoWrap,
-                            textAlign: m._43.Left,
+                            textAlign: m._45.Left,
                             alignItems: m.c.Start
                         }, r.createElement(m._8, {
                             margin: {
@@ -7230,7 +7230,7 @@ webpackJsonp([53], {
                                 onPlayerInit: t.props.onPlayerInit,
                                 onPlayerDestroy: t.props.onPlayerDestroy
                             };
-                        return r.createElement(m._33, {
+                        return r.createElement(m._35, {
                             className: "vertical-carousel-player",
                             padding: {
                                 bottom: 1,
@@ -7245,7 +7245,7 @@ webpackJsonp([53], {
                             className: a(e),
                             display: m.R.Flex,
                             flexWrap: m.U.NoWrap,
-                            textAlign: m._43.Left,
+                            textAlign: m._45.Left,
                             alignItems: m.c.Center,
                             padding: {
                                 y: 1
@@ -7297,7 +7297,7 @@ webpackJsonp([53], {
                         })), r.createElement(m._8, {
                             display: m.R.Flex,
                             flexWrap: m.U.NoWrap,
-                            textAlign: m._43.Left,
+                            textAlign: m._45.Left,
                             alignItems: m.c.Center,
                             padding: {
                                 y: 1
@@ -7376,7 +7376,7 @@ webpackJsonp([53], {
                                 alignItems: m.c.Stretch
                             }, r.createElement(m.w, {
                                 ariaLabel: Object(o.d)("Page Left", "CarouselPlayerComponent"),
-                                icon: m._24.AngleLeft,
+                                icon: m._25.AngleLeft,
                                 onClick: t.handlePageLeft,
                                 "data-test-selector": l.d,
                                 disabled: !e
@@ -7391,7 +7391,7 @@ webpackJsonp([53], {
                                 alignItems: m.c.Stretch
                             }, r.createElement(m.w, {
                                 ariaLabel: Object(o.d)("Page Right", "CarouselPlayerComponent"),
-                                icon: m._24.AngleRight,
+                                icon: m._25.AngleRight,
                                 onClick: t.handlePageRight,
                                 "data-test-selector": l.e,
                                 disabled: !e
@@ -7501,7 +7501,7 @@ webpackJsonp([53], {
                     var e;
                     return this.props.darkTheme && (e = Object(s.c)(d.a.Dark)), r.createElement(m._8, {
                         className: a("carousel-player", e)
-                    }, this.getLayoutRender(), r.createElement(m._33, {
+                    }, this.getLayoutRender(), r.createElement(m._35, {
                         background: m.n.Alt
                     }, r.createElement(m._8, {
                         display: m.R.Flex,
@@ -7814,7 +7814,7 @@ webpackJsonp([53], {
                 }, e, u.createElement("div", {
                     className: this.state.showOptionView || this.state.showDeleteConfirmView ? "button-icon--show" : "button-icon"
                 }, u.createElement(b.w, {
-                    icon: b._24.Gear,
+                    icon: b._25.Gear,
                     ariaLabel: Object(p.d)("Post Options", "FeedPostOptions"),
                     onClick: this.toggleOptionView,
                     "data-a-target": "pulse-post-options"
@@ -8632,4 +8632,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-001d59fec506f28a2b87aaf056dd77e9.js.map
+//# sourceMappingURL=pages.front-0e7ba3d9e022cb66d4cc8dbc8796d63b.js.map

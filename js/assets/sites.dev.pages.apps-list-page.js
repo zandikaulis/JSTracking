@@ -1,4 +1,4 @@
-webpackJsonp([92], {
+webpackJsonp([96], {
     "+/J2": function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e, t) {
@@ -1174,9 +1174,9 @@ webpackJsonp([92], {
                 }, t.prototype.render = function() {
                     var e = l(new Date(this.props.app.created_at), "MM/DD/YYYY, hh:mm a"),
                         t = l(new Date(this.props.app.updated_at), "MM/DD/YYYY, hh:mm a");
-                    return o.createElement(v._41, {
+                    return o.createElement(v._43, {
                         key: this.props.app.id
-                    }, o.createElement(v._38, null, this.props.app.name), o.createElement(v._38, null, this.props.app.redirect_uri), o.createElement(v._38, null, e), o.createElement(v._38, null, t), o.createElement(v._38, null, o.createElement(v._8, {
+                    }, o.createElement(v._40, null, this.props.app.name), o.createElement(v._40, null, this.props.app.redirect_uri), o.createElement(v._40, null, e), o.createElement(v._40, null, t), o.createElement(v._40, null, o.createElement(v._8, {
                         display: v.R.Flex,
                         justifyContent: v._7.Center
                     }, o.createElement(v._8, {
@@ -1209,19 +1209,19 @@ webpackJsonp([92], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.renderAppRows();
-                    return o.createElement(v._36, {
+                    return o.createElement(v._38, {
                         alternateRows: !0
-                    }, o.createElement(v._39, null, o.createElement(v._40, {
+                    }, o.createElement(v._41, null, o.createElement(v._42, {
                         label: Object(f.d)("Name", "DevAppsList")
-                    }), o.createElement(v._40, {
+                    }), o.createElement(v._42, {
                         label: Object(f.d)("URL", "DevAppsList")
-                    }), o.createElement(v._40, {
+                    }), o.createElement(v._42, {
                         label: Object(f.d)("Date Created", "DevAppsList")
-                    }), o.createElement(v._40, {
+                    }), o.createElement(v._42, {
                         label: Object(f.d)("Last Updated", "DevAppsList")
-                    }), o.createElement(v._40, {
+                    }), o.createElement(v._42, {
                         label: ""
-                    })), o.createElement(v._37, null, e))
+                    })), o.createElement(v._39, null, e))
                 }, t = r.__decorate([Object(c.d)("DevAppsList", {
                     autoReportInteractive: !0
                 })], t)
@@ -1240,9 +1240,9 @@ webpackJsonp([92], {
                             bottom: 2
                         }
                     }, o.createElement("header", null, o.createElement(v.Q, {
-                        type: v._47.H3
+                        type: v._49.H3
                     }, Object(f.d)("Developer Applications", "DevApps")), o.createElement(v.Q, {
-                        type: v._47.P
+                        type: v._49.P
                     }, Object(f.d)("You have registered these apps to use the Twitch API", "DevApps")))), o.createElement(v._8, null, o.createElement(v._8, {
                         margin: {
                             bottom: 1
@@ -1250,7 +1250,7 @@ webpackJsonp([92], {
                         justifyContent: v._7.End,
                         display: v.R.Flex
                     }, o.createElement(v.v, {
-                        icon: v._24.Plus,
+                        icon: v._25.Plus,
                         linkTo: "/console/apps/create"
                     }, Object(f.d)("Register Your Application", "DevApps"))), o.createElement(g, {
                         apps: this.props.apps,
@@ -2293,4 +2293,4 @@ webpackJsonp([92], {
         }
     }
 });
-//# sourceMappingURL=sites.dev.pages.apps-list-page-55ebc61ed97d5132a74c48d29ca86719.js.map
+//# sourceMappingURL=sites.dev.pages.apps-list-page-64293ceb73f9d2c674e317e7150641bf.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([115], {
+webpackJsonp([118], {
     bcqU: function(e, n, t) {
         "use strict";
         Object.defineProperty(n, "__esModule", {
@@ -78,9 +78,9 @@ webpackJsonp([115], {
                         }), o.createElement(x.D, null, o.createElement(x._8, {
                             padding: 1
                         }, o.createElement(x.Q, {
-                            type: x._47.H4
+                            type: x._49.H4
                         }, u.name), o.createElement(x.Q, {
-                            type: x._47.Span,
+                            type: x._49.Span,
                             color: x.K.Alt2
                         }, Object(d.d)("Created by {extensionAuthor}", {
                             extensionAuthor: u.authorName
@@ -105,12 +105,12 @@ webpackJsonp([115], {
                     return o.createElement(c.b, null, o.createElement(x._8, {
                         padding: 2
                     }, o.createElement(x.Q, {
-                        type: x._47.H3
+                        type: x._49.H3
                     }, this.getFormattedPageTitle()), o.createElement(x._8, {
                         padding: {
                             top: 2
                         }
-                    }, p, o.createElement(x._33, {
+                    }, p, o.createElement(x._35, {
                         borderRight: !0,
                         borderLeft: !0,
                         borderBottom: !0,
@@ -306,4 +306,4 @@ webpackJsonp([115], {
         e.exports = t
     }
 });
-//# sourceMappingURL=pages.extension-configure-bdb7af5e6a01f8c8fd5934c9efd2f3e0.js.map
+//# sourceMappingURL=pages.extension-configure-10c7140d4038f00eb34da86db885b97e.js.map

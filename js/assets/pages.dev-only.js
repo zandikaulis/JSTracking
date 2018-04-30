@@ -1,4 +1,4 @@
-webpackJsonp([68], {
+webpackJsonp([71], {
     "9u8h": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -408,7 +408,7 @@ webpackJsonp([68], {
                         top: 2
                     }
                 }, r.createElement(d.Q, {
-                    type: d._47.H2
+                    type: d._49.H2
                 }, " Infinite Scroll Test"), r.createElement(h, null))))
             });
 
@@ -708,4 +708,4 @@ webpackJsonp([68], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-161fc1aa1fdcdda929044e9d85c7c799.js.map
+//# sourceMappingURL=pages.dev-only-389256f40e6eb8f2ad2e43c396e8923d.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([101], {
+webpackJsonp([104], {
     "1myv": function(e, t) {
         var n = {
             kind: "Document",
@@ -123,7 +123,7 @@ webpackJsonp([101], {
                             fullHeight: !0,
                             justifyContent: a._7.Center,
                             padding: 2
-                        }, o.createElement(a._32, {
+                        }, o.createElement(a._34, {
                             icon: this.props.icon,
                             label: this.props.label,
                             value: this.props.value
@@ -475,7 +475,7 @@ webpackJsonp([101], {
                             bottom: 2
                         }
                     }, r.createElement(k.Q, {
-                        type: k._47.H2
+                        type: k._49.H2
                     }, Object(a.d)("Collections", "CollectionManager"))), r.createElement(T, {
                         context: this.props.data.user && this.props.data.currentUser ? {
                             ownerID: this.props.data.user.id,
@@ -527,11 +527,11 @@ webpackJsonp([101], {
                             top: 5
                         }
                     }, r.createElement(k.Q, {
-                        type: k._47.H4
+                        type: k._49.H4
                     }, Object(a.d)("Put all your best videos in one spot.", "CollectionManager")), r.createElement(k.Q, {
-                        type: k._47.H4
+                        type: k._49.H4
                     }, Object(a.d)("Videos organized into collections help your viewers easily find related content.", "CollectionManager")), r.createElement(k.Q, {
-                        type: k._47.H4
+                        type: k._49.H4
                     }, Object(a.d)("Your most recently updated Collection will be featured at the top of channel’s video page.", "CollectionManager")))
                 }, t.prototype.contentUnavaibleError = function() {
                     return r.createElement(k._8, {
@@ -1039,7 +1039,7 @@ webpackJsonp([101], {
             r = n("rCmJ"),
             a = n("Odds"),
             l = function(e) {
-                var t = e.asset ? o.createElement(a._23, {
+                var t = e.asset ? o.createElement(a._24, {
                     asset: e.asset
                 }) : null;
                 return o.createElement(a._6, {
@@ -1095,7 +1095,7 @@ webpackJsonp([101], {
                     alignItems: a.c.Stretch
                 }, o.createElement(a.v, {
                     disabled: 0 === this.props.options.length,
-                    icon: a._24.More,
+                    icon: a._25.More,
                     onClick: this.menuButtonClickHandler,
                     type: a.B.Text
                 })), e)))
@@ -1141,7 +1141,7 @@ webpackJsonp([101], {
                         delay: h.f.Short,
                         type: h.j.BounceIn,
                         enabled: !0
-                    }, r.createElement(h._33, {
+                    }, r.createElement(h._35, {
                         border: !0,
                         margin: {
                             bottom: 1
@@ -1157,7 +1157,7 @@ webpackJsonp([101], {
                         delay: h.f.Medium,
                         duration: h.g.Medium,
                         enabled: !0
-                    }, r.createElement(h._33, {
+                    }, r.createElement(h._35, {
                         background: h.n.Base,
                         padding: {
                             x: 3,
@@ -1443,7 +1443,7 @@ webpackJsonp([101], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(r._33, {
+                    return o.createElement(r._35, {
                         background: r.n.Base,
                         elevation: 1,
                         display: r.R.Flex,
@@ -1889,7 +1889,7 @@ webpackJsonp([101], {
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0
-                    }, c.createElement(p._33, {
+                    }, c.createElement(p._35, {
                         alignItems: p.c.Center,
                         attachRight: !0,
                         className: "collection-preview-image__wrapper",
@@ -1900,9 +1900,9 @@ webpackJsonp([101], {
                         fullHeight: !0,
                         justifyContent: p._7.Center,
                         position: p._15.Absolute,
-                        textAlign: p._43.Center
-                    }, c.createElement(p._23, {
-                        asset: p._24.Collections,
+                        textAlign: p._45.Center
+                    }, c.createElement(p._24, {
+                        asset: p._25.Collections,
                         height: 19,
                         width: 19
                     }), c.createElement(p.Q, {
@@ -1970,10 +1970,10 @@ webpackJsonp([101], {
                         videoCount: t.items.totalCount
                     })), a.createElement(g.a, null, a.createElement(v.Q, {
                         bold: !0,
-                        type: v._47.H4,
+                        type: v._49.H4,
                         color: v.K.Alt
-                    }, t.title), a.createElement(v._50, {
-                        direction: v._52.Bottom,
+                    }, t.title), a.createElement(v._52, {
+                        direction: v._54.Bottom,
                         label: Object(l.d)("Last Updated", "CollectionManagerCard")
                     }, a.createElement(v.Q, {
                         color: v.K.Alt2
@@ -1981,7 +1981,7 @@ webpackJsonp([101], {
                 }, t.prototype.renderCardMenu = function() {
                     if (this.props.hideOptionsMenu || !this.props.collection.owner) return null;
                     var e = [{
-                        asset: v._24.Edit,
+                        asset: v._25.Edit,
                         linkTo: {
                             pathname: "/" + this.props.collection.owner.login + "/manager/collections/" + this.props.collection.id,
                             state: {
@@ -1991,7 +1991,7 @@ webpackJsonp([101], {
                         },
                         title: Object(l.d)("Edit", "CollectionManagerCard")
                     }, {
-                        asset: v._24.Trash,
+                        asset: v._25.Trash,
                         onClick: this.onDeleteOptionClickHandler,
                         title: Object(l.d)("Delete", "CollectionManagerCard")
                     }];
@@ -2001,11 +2001,11 @@ webpackJsonp([101], {
                 }, t.prototype.collectionStats = function(e) {
                     return [{
                         value: Object(c.b)(e.lengthSeconds),
-                        icon: v._24.GlyphLength,
+                        icon: v._25.GlyphLength,
                         label: Object(l.d)("Collection length", "CollectionManagerCard")
                     }, {
                         value: "" + e.viewCount,
-                        icon: v._24.GlyphViews,
+                        icon: v._25.GlyphViews,
                         label: Object(l.d)("Views", "CollectionManagerCard")
                     }].map(function(e, t) {
                         return a.createElement(h.a, r.__assign({
@@ -2036,4 +2036,4 @@ webpackJsonp([101], {
         e.exports = n.p + "assets/missing-video-thumb-320x180-101fcbc1ff84459331417137edd6cfdb.png"
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-61d94e369cff2fa45f4f3bc2e9202bfd.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-06081a0000a73432076b3af6ada24511.js.map

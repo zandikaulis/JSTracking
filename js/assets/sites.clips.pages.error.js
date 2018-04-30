@@ -75,7 +75,7 @@ webpackJsonp([63], {
                             }
                     }
                 }(this.props.match.params.error);
-                return i.createElement(p._33, {
+                return i.createElement(p._35, {
                     className: "clips-error-page",
                     background: p.n.Base,
                     margin: {
@@ -83,7 +83,7 @@ webpackJsonp([63], {
                     },
                     elevation: 3,
                     color: p.K.Base,
-                    textAlign: p._43.Center
+                    textAlign: p._45.Center
                 }, i.createElement(p.k, {
                     ratio: p.l.Aspect16x9
                 }, i.createElement(p._8, {
@@ -707,4 +707,4 @@ webpackJsonp([63], {
             }(r || (r = {}))
     }
 });
-//# sourceMappingURL=sites.clips.pages.error-7d8c4d67b5903a31c184a46e9225e9d4.js.map
+//# sourceMappingURL=sites.clips.pages.error-85e31514f79fb02fd1b339d442093c9f.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([85], {
+webpackJsonp([88], {
     "+27R": function(e, t, a) {
         (function(e) {
             "use strict";
@@ -2325,7 +2325,7 @@ webpackJsonp([85], {
                         return e.videoPlayExternalReferrers
                     })),
                     g = n.createElement(l.a, null);
-                return (a.totals || d.totals || p.totals) && (g = n.createElement(n.Fragment, null, n.createElement(_._33, {
+                return (a.totals || d.totals || p.totals) && (g = n.createElement(n.Fragment, null, n.createElement(_._35, {
                     borderBottom: !0,
                     padding: {
                         bottom: 1
@@ -3366,7 +3366,7 @@ webpackJsonp([85], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(o._33, {
+                    return i.createElement(o._35, {
                         elevation: 1,
                         background: o.n.Base,
                         display: o.R.Flex,
@@ -3375,7 +3375,7 @@ webpackJsonp([85], {
                     }, i.createElement(c, n.__assign({}, l, {
                         to: this.props.previousPath,
                         onClick: this.props.onPrevious
-                    }), "◀"), i.createElement(o._33, {
+                    }), "◀"), i.createElement(o._35, {
                         display: o.R.Flex,
                         flexGrow: 1,
                         flexWrap: o.U.NoWrap,
@@ -3409,7 +3409,7 @@ webpackJsonp([85], {
                     onClick: function(t) {
                         e.to || t.preventDefault(), e.onClick && e.onClick()
                     }
-                }, Object(o._61)(e)), i.createElement(o.Q, {
+                }, Object(o._63)(e)), i.createElement(o.Q, {
                     fontSize: o.V.Size8
                 }, e.children)))
             };
@@ -5317,7 +5317,7 @@ webpackJsonp([85], {
         a("J9dY");
 
         function i(e) {
-            return n.createElement(r._33, {
+            return n.createElement(r._35, {
                 className: "insight-panel-btn",
                 background: r.n.Alt,
                 display: r.R.Flex,
@@ -9977,7 +9977,7 @@ webpackJsonp([85], {
                         padding: {
                             top: 1
                         }
-                    }, i.createElement(m._44, {
+                    }, i.createElement(m._46, {
                         disabled: this.state.inFlight || this.state.successTimeout > 0,
                         onChange: this.handleChange,
                         placeholder: Object(s.d)("It would help me if this page...", "DashboardFeedbackForm"),
@@ -10047,7 +10047,7 @@ webpackJsonp([85], {
                         page: this.props.page,
                         onClose: this.unselectFeedbackForm,
                         key: 0
-                    }) : i.createElement(m._33, {
+                    }) : i.createElement(m._35, {
                         padding: {
                             top: .5,
                             bottom: .5
@@ -10069,14 +10069,14 @@ webpackJsonp([85], {
                             y: .5,
                             x: 1
                         }
-                    }, i.createElement(m.Q, null, Object(s.d)("Send Feedback", "DashboardHelpMenu"))))), i.createElement(m._33, {
+                    }, i.createElement(m.Q, null, Object(s.d)("Send Feedback", "DashboardHelpMenu"))))), i.createElement(m._35, {
                         className: "help-menu",
                         position: m._15.Absolute,
                         margin: {
                             bottom: 2,
                             right: 2
                         },
-                        zIndex: m._60.Above,
+                        zIndex: m._62.Above,
                         background: m.n.Overlay,
                         elevation: 3,
                         attachBottom: !0,
@@ -10084,15 +10084,15 @@ webpackJsonp([85], {
                     }, i.createElement(o.a, {
                         onToggle: this.handleToggle,
                         tooltipProps: {
-                            align: m._51.Right,
-                            direction: m._52.Top,
+                            align: m._53.Right,
+                            direction: m._54.Top,
                             label: Object(s.d)("Help & Feedback", "DashboardHelpMenu"),
                             offsetX: "6px",
                             offsetY: "10px"
                         }
                     }, i.createElement(m.w, {
                         ariaLabel: Object(s.d)("Feedback", "DashboardHelpMenu"),
-                        icon: m._24.QuestionMark,
+                        icon: m._25.QuestionMark,
                         "data-a-target": "help-button",
                         overlay: !0
                     }), i.createElement(m.q, {
@@ -10135,20 +10135,20 @@ webpackJsonp([85], {
                     return n.createElement("div", {
                         onMouseEnter: this.handleHover,
                         onMouseLeave: this.handleHover
-                    }, n.createElement(i._33, {
+                    }, n.createElement(i._35, {
                         display: i.R.Flex,
                         padding: {
                             x: 1
                         },
                         position: i._15.Relative
-                    }, n.createElement(i._33, {
+                    }, n.createElement(i._35, {
                         className: "hoverable-icon",
                         display: i.R.InlineFlex,
                         color: i.K.Alt2,
                         alignItems: i.c.Center,
                         justifyContent: i._7.Center
-                    }, n.createElement(i._23, {
-                        asset: i._24.NotificationInfo,
+                    }, n.createElement(i._24, {
+                        asset: i._25.NotificationInfo,
                         width: 16,
                         height: 16
                     })), n.createElement(i.q, {
@@ -10167,12 +10167,11 @@ webpackJsonp([85], {
                     r = e.title;
                 return n.createElement(i._8, {
                     margin: {
-                        top: 3,
-                        bottom: 1
+                        bottom: 4
                     }
                 }, n.createElement(l, {
                     tooltip: a
-                }, r), n.createElement(i._33, {
+                }, r), n.createElement(i._35, {
                     elevation: 1,
                     background: i.n.Base
                 }, t))
@@ -10187,7 +10186,7 @@ webpackJsonp([85], {
                         bottom: 1
                     }
                 }, n.createElement(i.Q, {
-                    type: i._47.H5,
+                    type: i._49.H5,
                     bold: !0
                 }, t), a && n.createElement(s, {
                     hoverText: a
@@ -11432,7 +11431,7 @@ webpackJsonp([85], {
                     targetBlank: !0,
                     linkTo: e.url + "?tt_content=" + i.PageviewContent.TopClips + "&tt_medium=" + i.PageviewMedium.ChannelAnalytics,
                     onClick: e.onClick
-                }, n.createElement(s._33, {
+                }, n.createElement(s._35, {
                     padding: {
                         x: 2,
                         y: 1
@@ -11461,14 +11460,14 @@ webpackJsonp([85], {
                     ellipsis: !0
                 }, n.createElement(s.Q, {
                     color: s.K.Base,
-                    type: s._47.H5,
+                    type: s._49.H5,
                     ellipsis: !0
                 }, e.title), n.createElement(s._8, {
                     display: s.R.Flex,
                     flexWrap: s.U.NoWrap
-                }, n.createElement(s._23, {
-                    asset: s._24.GlyphLive,
-                    type: s._25.Alt2
+                }, n.createElement(s._24, {
+                    asset: s._25.GlyphLive,
+                    type: s._26.Alt2
                 }), n.createElement(s._8, {
                     display: s.R.Inline,
                     padding: {
@@ -11476,7 +11475,7 @@ webpackJsonp([85], {
                     },
                     ellipsis: !0
                 }, n.createElement(s.Q, {
-                    type: s._47.Span
+                    type: s._49.Span
                 }, e.curatorName)))))), n.createElement(s._8, {
                     display: s.R.Flex,
                     flexGrow: 1,
@@ -11484,9 +11483,9 @@ webpackJsonp([85], {
                     padding: {
                         left: 2
                     }
-                }, n.createElement(s._23, {
-                    asset: s._24.GlyphViews,
-                    type: s._25.Alt2
+                }, n.createElement(s._24, {
+                    asset: s._25.GlyphViews,
+                    type: s._26.Alt2
                 }), n.createElement(s._8, {
                     display: s.R.Flex,
                     padding: {
@@ -11496,7 +11495,7 @@ webpackJsonp([85], {
                     bold: !0,
                     fontSize: s.V.Size5,
                     color: s.K.Alt,
-                    type: s._47.Span
+                    type: s._49.Span
                 }, Object(r.d)("{views, number}", {
                     views: e.views
                 }, "StreamSummaryClipViews"))))))))
@@ -12487,7 +12486,7 @@ webpackJsonp([85], {
             y = a("AJEV"),
             b = a("Odds");
         ! function(e) {
-            e.Last7Days = "last_7_days", e.Last30Days = "last_30_days", e.CurrentMonth = "current_month", e.oneMonthAgo = "t_minus_1_month", e.twoMonthsAgo = "t_minus_2_month"
+            e.Custom = "custom", e.Default = "default", e.Last7Days = "last_7_days", e.Last30Days = "last_30_days", e.CurrentMonth = "current_month", e.oneMonthAgo = "t_minus_1_month", e.twoMonthsAgo = "t_minus_2_month"
         }(n || (n = {}));
         var M = function(e) {
             function t(t) {
@@ -12548,15 +12547,15 @@ webpackJsonp([85], {
                     display: b.R.Flex,
                     flexDirection: b.T.Column
                 }, this.presets.map(function(t, a) {
-                    return i.createElement(b._33, {
+                    return i.createElement(b._35, {
                         color: b.K.Link,
                         key: a
                     }, i.createElement(b._6, {
                         selected: Object(y.f)(e.props.interval, t.interval),
                         onClick: e.handleClickFor(t.interval)
-                    }, i.createElement(b._33, {
+                    }, i.createElement(b._35, {
                         padding: 1,
-                        textAlign: b._43.Center
+                        textAlign: b._45.Center
                     }, i.createElement(b.Q, {
                         noWrap: !0,
                         fontSize: b.V.Size5
@@ -12666,13 +12665,15 @@ webpackJsonp([85], {
                         })
                     }, a.handleEndChange = function(e) {
                         var t = v(a.state.interval, {
-                            end: e
+                            end: Object(_.endOfDay)(e)
                         });
                         a.setState({
                             interval: t
                         })
                     }, a.handleUpdateClick = function() {
-                        a.props.onCommit(a.state.interval)
+                        a.props.onCommit(r.__assign({}, a.state.interval, {
+                            id: n.Custom
+                        }))
                     }, a.state = {
                         interval: a.props.interval
                     }, a
@@ -12689,7 +12690,7 @@ webpackJsonp([85], {
                         padding: {
                             right: 2
                         },
-                        textAlign: b._43.Center
+                        textAlign: b._45.Center
                     }, i.createElement(b.Q, {
                         color: b.K.Alt2,
                         fontSize: b.V.Size4
@@ -12703,7 +12704,7 @@ webpackJsonp([85], {
                         padding: {
                             right: 2
                         },
-                        textAlign: b._43.Center
+                        textAlign: b._45.Center
                     }, i.createElement(b.Q, {
                         color: b.K.Alt2,
                         fontSize: b.V.Size4
@@ -12714,7 +12715,7 @@ webpackJsonp([85], {
                         minDate: this.state.interval.start,
                         maxDate: e,
                         onChange: this.handleEndChange
-                    })), i.createElement(b._33, {
+                    })), i.createElement(b._35, {
                         padding: {
                             top: 1,
                             left: 2
@@ -12803,7 +12804,7 @@ webpackJsonp([85], {
                         }
                     }, function(a) {
                         var n = a.close;
-                        return i.createElement(b._33, {
+                        return i.createElement(b._35, {
                             margin: {
                                 top: 5
                             },
@@ -12811,11 +12812,11 @@ webpackJsonp([85], {
                             display: b.R.Flex,
                             alignItems: b.c.Center,
                             flexDirection: b.T.Column,
-                            zIndex: b._60.Above,
+                            zIndex: b._62.Above,
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, i.createElement(b._33, {
+                        }, i.createElement(b._35, {
                             margin: {
                                 top: .5
                             },
@@ -12823,7 +12824,7 @@ webpackJsonp([85], {
                             position: b._15.Relative,
                             display: b.R.Flex,
                             background: b.n.Base,
-                            zIndex: b._60.Above,
+                            zIndex: b._62.Above,
                             attachTop: !0
                         }, i.createElement(b._8, {
                             padding: {
@@ -12874,7 +12875,7 @@ webpackJsonp([85], {
                         className: "breakdown-card-row",
                         onMouseEnter: this.handleHover,
                         onMouseLeave: this.handleHover
-                    }, i.createElement(b._33, {
+                    }, i.createElement(b._35, {
                         padding: {
                             x: 2,
                             y: 1
@@ -12894,14 +12895,14 @@ webpackJsonp([85], {
                             left: 1
                         }
                     }, i.createElement(b.Q, {
-                        type: b._47.H5
+                        type: b._49.H5
                     }, this.props.title))), i.createElement(b._8, {
-                        textAlign: b._43.Right
+                        textAlign: b._45.Right
                     }, i.createElement(b.Q, {
-                        type: b._47.H5,
+                        type: b._49.H5,
                         bold: !0
                     }, this.props.revenue), i.createElement(b.Q, {
-                        type: b._47.H6,
+                        type: b._49.H6,
                         color: b.K.Alt2
                     }, Object(l.d)("{lastRevenue} last period", {
                         lastRevenue: this.props.lastRevenue
@@ -12987,12 +12988,12 @@ webpackJsonp([85], {
                         bottom: 1
                     }
                 }, i.createElement(b._8, {
-                    textAlign: b._43.Right,
+                    textAlign: b._45.Right,
                     padding: {
                         x: 2
                     }
                 }, i.createElement(b.Q, {
-                    type: b._47.H6,
+                    type: b._49.H6,
                     bold: !0,
                     color: b.K.Alt2
                 }, Object(l.d)("Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel"))), i.createElement(b._8, null, i.createElement(z, {
@@ -13035,7 +13036,7 @@ webpackJsonp([85], {
             },
             q = function(e) {
                 return i.createElement(b._8, r.__assign({
-                    textAlign: b._43.Center,
+                    textAlign: b._45.Center,
                     padding: {
                         y: 2
                     }
@@ -13043,7 +13044,7 @@ webpackJsonp([85], {
                     display: b.R.Flex,
                     justifyContent: b._7.Center
                 }, i.createElement(b.Q, {
-                    type: b._47.H2
+                    type: b._49.H2
                 }, Object(N.a)(e.totalAmount, function(e, t) {
                     switch (e.type) {
                         case "currency":
@@ -13054,42 +13055,42 @@ webpackJsonp([85], {
                                     top: .5,
                                     right: .5
                                 },
-                                verticalAlign: 0 === t ? b._57.TextTop : b._57.Baseline
+                                verticalAlign: 0 === t ? b._59.TextTop : b._59.Baseline
                             }, i.createElement(b.Q, {
                                 color: b.K.Alt2,
                                 fontSize: b.V.Size6,
-                                type: b._47.Span
+                                type: b._49.Span
                             }, e.value));
                         case "integer":
                         case "group":
                             return i.createElement(b.Q, {
                                 key: t,
-                                type: b._47.Span,
+                                type: b._49.Span,
                                 bold: !0
                             }, e.value);
                         case "decimal":
                         case "fraction":
                             return i.createElement(b.Q, {
                                 key: t,
-                                type: b._47.Span,
+                                type: b._49.Span,
                                 fontSize: b.V.Size6,
                                 bold: !0
                             }, e.value);
                         default:
                             return i.createElement(b.Q, {
                                 key: t,
-                                type: b._47.Span,
+                                type: b._49.Span,
                                 bold: !0
                             }, e.value)
                     }
                 }, function(e) {
                     return i.createElement(b.Q, {
                         key: "key",
-                        type: b._47.Span,
+                        type: b._49.Span,
                         bold: !0
                     }, e)
                 }))), i.createElement(b.Q, {
-                    type: b._47.H6
+                    type: b._49.H6
                 }, Object(l.d)("Total Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel")))
             },
             Q = function(e) {
@@ -13146,7 +13147,7 @@ webpackJsonp([85], {
                     var e = i.createElement(b.Q, {
                             color: b.K.Error
                         }, Object(l.d)("Oops, something went wrong. Please try again.", "ChannelAnalyticsEmailSubsList")),
-                        t = i.createElement(i.Fragment, null, i.createElement(b._33, {
+                        t = i.createElement(i.Fragment, null, i.createElement(b._35, {
                             borderBottom: !0
                         }, i.createElement(b._8, {
                             padding: {
@@ -13177,7 +13178,7 @@ webpackJsonp([85], {
                             disabled: this.state.requestState === J.InFlight,
                             onClick: this.handleSendEmail
                         }), this.state.requestState === J.InFlight ? Object(l.d)("Sending Email...", "ChannelAnalyticsEmailSubsList") : Object(l.d)("Send Me Email", "ChannelAnalyticsEmailSubsList"))))),
-                        a = i.createElement(i.Fragment, null, i.createElement(b._33, {
+                        a = i.createElement(i.Fragment, null, i.createElement(b._35, {
                             borderBottom: !0
                         }, i.createElement(b._8, {
                             padding: {
@@ -13198,7 +13199,7 @@ webpackJsonp([85], {
                         }, i.createElement(b.v, {
                             onClick: this.props.onClose
                         }, Object(l.d)("Close", "ChannelAnalyticsEmailSubsList"))));
-                    return i.createElement(i.Fragment, null, i.createElement(b._33, {
+                    return i.createElement(i.Fragment, null, i.createElement(b._35, {
                         background: b.n.Base,
                         elevation: 3,
                         padding: {
@@ -13206,13 +13207,13 @@ webpackJsonp([85], {
                             top: 3,
                             bottom: 2
                         }
-                    }, i.createElement(b._33, {
+                    }, i.createElement(b._35, {
                         borderBottom: !0,
                         padding: {
                             bottom: 2
                         }
                     }, i.createElement(b.Q, {
-                        type: b._47.H4,
+                        type: b._49.H4,
                         color: b.K.Alt
                     }, Object(l.d)("Receive Subscriber List", "ChannelAnalyticsEmailSubsList"))), this.state.requestState === J.Success ? a : t, i.createElement(b._8, {
                         attachRight: !0,
@@ -13226,8 +13227,8 @@ webpackJsonp([85], {
                         onClick: this.props.onClose,
                         type: b.B.Text,
                         overlay: !0
-                    }, i.createElement(b._23, {
-                        asset: b._24.RemoveTag,
+                    }, i.createElement(b._24, {
+                        asset: b._25.RemoveTag,
                         width: 16,
                         height: 16
                     })))))
@@ -13290,7 +13291,7 @@ webpackJsonp([85], {
                     var e = i.createElement(b.Q, {
                             color: b.K.Error
                         }, Object(l.d)("Oops, something went wrong. Please try again.", "ChannelAnalyticsEmailSubs")),
-                        t = i.createElement(i.Fragment, null, i.createElement(b._33, {
+                        t = i.createElement(i.Fragment, null, i.createElement(b._35, {
                             borderBottom: !0
                         }, i.createElement(b._8, {
                             padding: {
@@ -13316,7 +13317,7 @@ webpackJsonp([85], {
                             }
                         }, i.createElement(b.W, {
                             label: Object(l.d)("Message Body", "ChannelAnalyticsEmailSubs")
-                        }, i.createElement(b._44, {
+                        }, i.createElement(b._46, {
                             onChange: this.handleBodyChange,
                             rows: 6
                         }))), this.state.requestState === $.Failed && e)), i.createElement(b._8, {
@@ -13340,7 +13341,7 @@ webpackJsonp([85], {
                             disabled: "" === this.state.body || "" === this.state.title || this.state.requestState === $.InFlight,
                             onClick: this.handleSendEmail
                         }), this.state.requestState === $.InFlight ? Object(l.d)("Sending Email...", "ChannelAnalyticsEmailSubs") : Object(l.d)("Send Email", "ChannelAnalyticsEmailSubs"))))),
-                        a = i.createElement(i.Fragment, null, i.createElement(b._33, {
+                        a = i.createElement(i.Fragment, null, i.createElement(b._35, {
                             borderBottom: !0
                         }, i.createElement(b._8, {
                             padding: {
@@ -13357,7 +13358,7 @@ webpackJsonp([85], {
                         }, i.createElement(b.v, {
                             onClick: this.props.onClose
                         }, Object(l.d)("Close", "ChannelAnalyticsEmailSubs"))));
-                    return i.createElement(i.Fragment, null, i.createElement(b._33, {
+                    return i.createElement(i.Fragment, null, i.createElement(b._35, {
                         background: b.n.Base,
                         elevation: 3,
                         padding: {
@@ -13365,13 +13366,13 @@ webpackJsonp([85], {
                             top: 3,
                             bottom: 2
                         }
-                    }, i.createElement(b._33, {
+                    }, i.createElement(b._35, {
                         borderBottom: !0,
                         padding: {
                             bottom: 2
                         }
                     }, i.createElement(b.Q, {
-                        type: b._47.H4,
+                        type: b._49.H4,
                         color: b.K.Alt
                     }, Object(l.d)("Send Email to Subscribers", "ChannelAnalyticsEmailSubs"))), this.state.requestState === $.Success ? a : t, i.createElement(b._8, {
                         attachRight: !0,
@@ -13385,8 +13386,8 @@ webpackJsonp([85], {
                         type: b.B.Text,
                         onClick: this.props.onClose,
                         overlay: !0
-                    }, i.createElement(b._23, {
-                        asset: b._24.RemoveTag,
+                    }, i.createElement(b._24, {
+                        asset: b._25.RemoveTag,
                         width: 16,
                         height: 16
                     })))))
@@ -13448,7 +13449,7 @@ webpackJsonp([85], {
                 function t(t) {
                     var a = e.call(this, t) || this;
                     return a.emailButtons = function(e) {
-                        return i.createElement(b._33, {
+                        return i.createElement(b._35, {
                             display: b.R.Flex
                         }, i.createElement(le, {
                             triggerModal: function(e) {
@@ -13471,7 +13472,7 @@ webpackJsonp([85], {
                                 })
                             }
                         }, function(e) {
-                            return i.createElement(b._33, {
+                            return i.createElement(b._35, {
                                 borderLeft: !0,
                                 flexGrow: 1
                             }, i.createElement(ue.a, r.__assign({}, he, {
@@ -13513,7 +13514,7 @@ webpackJsonp([85], {
                         a = this.state.subscriptions.reduce(function(e, t) {
                             return e + t.count
                         }, 0);
-                    return this.state.subscriptions.length && (e = i.createElement(i.Fragment, null, i.createElement(b._33, {
+                    return this.state.subscriptions.length && (e = i.createElement(i.Fragment, null, i.createElement(b._35, {
                         borderBottom: !0,
                         padding: {
                             top: 1,
@@ -13551,7 +13552,7 @@ webpackJsonp([85], {
                 }, t
             }(i.Component),
             pe = function() {
-                return i.createElement(b._33, {
+                return i.createElement(b._35, {
                     padding: {
                         x: 2,
                         top: 2
@@ -13560,25 +13561,25 @@ webpackJsonp([85], {
                 }, i.createElement(b.Y, null, i.createElement(b.L, {
                     cols: 8
                 }, i.createElement(b._8, {
-                    textAlign: b._43.Right
+                    textAlign: b._45.Right
                 }, i.createElement(b.Q, {
-                    type: b._47.H6,
+                    type: b._49.H6,
                     bold: !0,
                     color: b.K.Alt2
                 }, Object(l.d)("Revenue Split", "ChannelAnalyticsSubscribersPanel")))), i.createElement(b.L, {
                     cols: 2
                 }, i.createElement(b._8, {
-                    textAlign: b._43.Right
+                    textAlign: b._45.Right
                 }, i.createElement(b.Q, {
-                    type: b._47.H6,
+                    type: b._49.H6,
                     bold: !0,
                     color: b.K.Alt2
                 }, Object(l.d)("Sub Points", "ChannelAnalyticsSubscribersPanel")))), i.createElement(b.L, {
                     cols: 2
                 }, i.createElement(b._8, {
-                    textAlign: b._43.Right
+                    textAlign: b._45.Right
                 }, i.createElement(b.Q, {
-                    type: b._47.H6,
+                    type: b._49.H6,
                     bold: !0,
                     color: b.K.Alt2
                 }, Object(l.d)("Subscribers", "ChannelAnalyticsSubscribersPanel"))))))
@@ -13596,7 +13597,7 @@ webpackJsonp([85], {
             })
         }
         var ye = function(e) {
-                return i.createElement(b._33, {
+                return i.createElement(b._35, {
                     className: "subscribers-panel-row",
                     padding: {
                         x: 2,
@@ -13606,29 +13607,29 @@ webpackJsonp([85], {
                 }, i.createElement(b.Y, null, i.createElement(b.L, {
                     cols: 6
                 }, i.createElement(b._8, {
-                    textAlign: b._43.Left
+                    textAlign: b._45.Left
                 }, i.createElement(b.Q, {
-                    type: b._47.H5,
+                    type: b._49.H5,
                     color: b.K.Alt
                 }, e.name))), i.createElement(b.L, {
                     cols: 2
                 }, i.createElement(b._8, {
-                    textAlign: b._43.Right
+                    textAlign: b._45.Right
                 }, i.createElement(b.Q, {
-                    type: b._47.H5
+                    type: b._49.H5
                 }, e.revSplit))), i.createElement(b.L, {
                     cols: 2
                 }, i.createElement(b._8, {
-                    textAlign: b._43.Right
+                    textAlign: b._45.Right
                 }, i.createElement(b.Q, {
-                    type: b._47.H5,
+                    type: b._49.H5,
                     bold: !0
                 }, e.score))), i.createElement(b.L, {
                     cols: 2
                 }, i.createElement(b._8, {
-                    textAlign: b._43.Right
+                    textAlign: b._45.Right
                 }, i.createElement(b.Q, {
-                    type: b._47.H5,
+                    type: b._49.H5,
                     bold: !0
                 }, e.count)))))
             },
@@ -13668,7 +13669,7 @@ webpackJsonp([85], {
             },
             ve = function(e) {
                 if (e.clipsAttrs.isLoading)
-                    for (var t = [], a = 0; a < 5; a++) t.push(i.createElement(b._33, {
+                    for (var t = [], a = 0; a < 5; a++) t.push(i.createElement(b._35, {
                         borderBottom: !0,
                         padding: {
                             x: 2,
@@ -13678,7 +13679,7 @@ webpackJsonp([85], {
                     }, i.createElement(b._14, {
                         height: 50
                     })));
-                return i.createElement(b._33, {
+                return i.createElement(b._35, {
                     borderBottom: !0
                 }, e.clipsAttrs.clips.slice(0, 5).map(function(e, t) {
                     return i.createElement(be.a, r.__assign({}, e, {
@@ -14139,7 +14140,7 @@ webpackJsonp([85], {
                                 fullHeight: !0
                             }, i.createElement(b.w, r.__assign({
                                 ariaLabel: Object(l.d)("Select top statistic", "ChannelAnalyticsDropdownAria"),
-                                icon: b._24.GlyphArrUpDown,
+                                icon: b._25.GlyphArrUpDown,
                                 onClick: t,
                                 size: b.x.Small
                             }, Ae)))
@@ -14193,10 +14194,13 @@ webpackJsonp([85], {
                     }, function(n) {
                         var r = n.stats,
                             s = n.onUpdateStat;
-                        return i.createElement(b._33, {
+                        return i.createElement(b._35, {
+                            margin: {
+                                bottom: 4
+                            },
                             background: b.n.Base,
                             elevation: 1
-                        }, i.createElement(b._35, null, r.map(function(t, n) {
+                        }, i.createElement(b._37, null, r.map(function(t, n) {
                             var r = t.Tab;
                             return i.createElement(r, {
                                 analyticsResponse: e.props.analyticsResponse,
@@ -14211,7 +14215,7 @@ webpackJsonp([85], {
                                 index: n,
                                 onUpdateStat: s
                             }))
-                        })), i.createElement(b._33, {
+                        })), i.createElement(b._35, {
                             padding: 2,
                             borderBottom: !0
                         }, i.createElement(b._8, {
@@ -14220,7 +14224,7 @@ webpackJsonp([85], {
                             padding: {
                                 bottom: 1
                             }
-                        }, i.createElement("div", null, i.createElement(b._29, {
+                        }, i.createElement("div", null, i.createElement(b._30, {
                             disabled: !e.isDataAvailable(r[a].dataGroup),
                             onChange: e.handleAggregationChange,
                             value: e.props.urlStore.params.topStatsAggregation
@@ -14265,7 +14269,7 @@ webpackJsonp([85], {
                         search: "?tt_content=" + m.PageviewContent.TopStreams + "&tt_medium=" + m.PageviewMedium.ChannelAnalytics
                     },
                     onClick: Ie
-                }, i.createElement(b._33, {
+                }, i.createElement(b._35, {
                     padding: {
                         x: 2,
                         y: 1
@@ -14294,7 +14298,7 @@ webpackJsonp([85], {
                     ellipsis: !0
                 }, i.createElement(b.Q, {
                     color: b.K.Base,
-                    type: b._47.H5,
+                    type: b._49.H5,
                     ellipsis: !0
                 }, Object(l.d)("{start} - {end, time, short}", {
                     start: Object(l.c)(t.interval.start, {
@@ -14307,7 +14311,7 @@ webpackJsonp([85], {
                     end: t.interval.end
                 }, "ChannelAnalyticsStreamCard")), i.createElement(b.Q, {
                     color: b.K.Alt2,
-                    type: b._47.Span,
+                    type: b._49.Span,
                     ellipsis: !0
                 }, t.startChannelStatus)))), i.createElement(b._8, {
                     display: b.R.Flex,
@@ -14320,7 +14324,7 @@ webpackJsonp([85], {
                     bold: !0,
                     fontSize: b.V.Size5,
                     color: b.K.Alt,
-                    type: b._47.Span
+                    type: b._49.Span
                 }, Object(l.d)("{statNum, number}", {
                     statNum: function(e) {
                         if (e < 10) return Math.floor(10 * e) / 10;
@@ -14342,7 +14346,7 @@ webpackJsonp([85], {
             function t(t) {
                 var a = e.call(this, t) || this;
                 return a.sortDropdown = function() {
-                    return i.createElement(b._29, {
+                    return i.createElement(b._30, {
                         value: a.state.sortType,
                         onChange: a.handleSortTypeChange
                     }, i.createElement("option", {
@@ -14434,7 +14438,7 @@ webpackJsonp([85], {
                 }, i.createElement(b._8, {
                     flexGrow: 1
                 }, i.createElement(b.Q, {
-                    type: b._47.H5,
+                    type: b._49.H5,
                     bold: !0
                 }, Object(l.d)("Top {limit}", {
                     limit: ze
@@ -14484,9 +14488,8 @@ webpackJsonp([85], {
                     var a = e.call(this, t) || this;
                     a.track = function(e) {
                         var t, n = a.props.urlStore,
-                            i = a.dateRangeSelection || "default",
-                            s = r.__assign({
-                                dateRangeSelection: i,
+                            i = r.__assign({
+                                dateRangeSelection: a.dateRangeSelection,
                                 selectedStats: a.statsStorage.getValidStoredStats()
                             }, n.params);
                         t = function(e, t) {
@@ -14503,7 +14506,7 @@ webpackJsonp([85], {
                                 date_end: Ue(t.end),
                                 date_aggregation: t.topStatsAggregation
                             }, Je, i)
-                        }(e, s), l.n.track(m.SpadeEventType.ChannelAnalyticsTopStatsView, t)
+                        }(e, i), l.n.track(m.SpadeEventType.ChannelAnalyticsTopStatsView, t)
                     }, a.handleSelectStat = function(e, t, n) {
                         a.props.urlStore.replace({
                             topStatsIndex: t
@@ -14523,8 +14526,8 @@ webpackJsonp([85], {
                     }, a.handleTabSelect = function(e) {
                         a.track(Ve.TabSelect)
                     };
-                    var n = a.props.channel;
-                    return a.statsStorage = new je(n), a
+                    var i = a.props.channel;
+                    return a.statsStorage = new je(i), a.dateRangeSelection = n.Default, a
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.track(Ve.Pageview), l.l.set(Ze.a, !0)
@@ -14543,7 +14546,7 @@ webpackJsonp([85], {
                         onStatsSelect: this.handleSelectStat,
                         onAggregationSelect: this.handleAggregationSelect,
                         onTabSelect: this.handleTabSelect
-                    }), i.createElement(b._33, {
+                    }), i.createElement(b._35, {
                         className: "channel-analytics-index-page",
                         margin: {
                             top: 1,
@@ -14702,7 +14705,7 @@ webpackJsonp([85], {
                 }
             }, i.createElement(b._14, {
                 height: 350
-            })) : i.createElement(b._33, {
+            })) : i.createElement(b._35, {
                 padding: {
                     bottom: 1
                 },
@@ -14741,7 +14744,7 @@ webpackJsonp([85], {
                         t = this.props.channelAnalyticsResponse.streamSessions,
                         a = t.isLoading,
                         n = t.sessions;
-                    return i.createElement(Ke.a, null, i.createElement(b._33, {
+                    return i.createElement(Ke.a, null, i.createElement(b._35, {
                         elevation: 1,
                         background: b.n.Base,
                         display: b.R.Flex,
@@ -14750,7 +14753,7 @@ webpackJsonp([85], {
                         flexWrap: b.U.NoWrap,
                         className: "referrals-page-nav-bar",
                         borderBottom: !0
-                    }, i.createElement(b._33, {
+                    }, i.createElement(b._35, {
                         position: b._15.Absolute,
                         display: b.R.Flex,
                         flexDirection: b.T.Row,
@@ -14775,14 +14778,14 @@ webpackJsonp([85], {
                                 right: 1
                             }
                         }, i.createElement(b.Q, null, Object(l.d)("Back", "ChannelAnalyticsReferralPage"))))
-                    })), i.createElement(b._33, {
+                    })), i.createElement(b._35, {
                         display: b.R.Flex,
                         flexGrow: 1,
                         flexWrap: b.U.NoWrap,
                         justifyContent: b._7.Center,
                         alignItems: b.c.Center
                     }, i.createElement(b.Q, {
-                        type: b._47.H2,
+                        type: b._49.H2,
                         fontSize: b.V.Size4,
                         bold: !0
                     }, Object(l.d)("Views by Source", "ChannelAnalyticsReferralPage")))), i.createElement(R, {
@@ -19749,7 +19752,7 @@ webpackJsonp([85], {
                     }, z), i.createElement(u._2, {
                         flexGrow: 1,
                         flexDirection: u.T.Column,
-                        textAlign: u._43.Center
+                        textAlign: u._45.Center
                     }, i.createElement(W.a, {
                         onClick: this.props.onClick,
                         to: this.props.linkTo,
@@ -19767,9 +19770,9 @@ webpackJsonp([85], {
                         ellipsis: !0
                     }, i.createElement(u.Q, {
                         className: "top-stats-tab__title",
-                        type: u._47.H3
+                        type: u._49.H3
                     }, this.props.title, this.renderTrendIndicator()), i.createElement(u.Q, {
-                        type: u._47.H6,
+                        type: u._49.H6,
                         color: u.K.Alt2,
                         title: this.props.subtitle,
                         ellipsis: !0
@@ -19780,17 +19783,17 @@ webpackJsonp([85], {
                         margin: {
                             left: .5
                         }
-                    }, i.createElement(u._23, r.__assign({
-                        asset: u._24.GlyphArrUp,
-                        type: u._25.Success
+                    }, i.createElement(u._24, r.__assign({
+                        asset: u._25.GlyphArrUp,
+                        type: u._26.Success
                     }, I))) : this.props.trend < 0 ? i.createElement(u._8, {
                         display: u.R.Inline,
                         margin: {
                             left: .5
                         }
-                    }, i.createElement(u._23, r.__assign({
-                        asset: u._24.GlyphArrDown,
-                        type: u._25.Warn
+                    }, i.createElement(u._24, r.__assign({
+                        asset: u._25.GlyphArrDown,
+                        type: u._26.Warn
                     }, N))) : null : null
                 }, t
             }(i.Component),
@@ -20188,7 +20191,7 @@ webpackJsonp([85], {
                                 return i.createElement(u.Q, {
                                     className: "top-stats-tab-revenue__currency",
                                     fontSize: u.V.Size5,
-                                    type: u._47.Span,
+                                    type: u._49.Span,
                                     key: t
                                 }, e.value);
                             case "fraction":
@@ -20196,7 +20199,7 @@ webpackJsonp([85], {
                                 return i.createElement(u.Q, {
                                     className: "top-stats-tab-revenue__fraction",
                                     fontSize: u.V.Size4,
-                                    type: u._47.Span,
+                                    type: u._49.Span,
                                     key: t
                                 }, e.value);
                             default:
@@ -21087,18 +21090,20 @@ webpackJsonp([85], {
                 o = e.translationFunc,
                 l = e.title,
                 c = e.subtitle;
-            return 0 === a ? function(e, t) {
+            return 0 === a ? function(e) {
+                var t = e.title,
+                    a = e.subtitle;
                 return r.createElement(r.Fragment, null, r.createElement(s._8, {
                     padding: {
                         top: 2,
                         bottom: 1,
                         x: 2
                     }
-                }, r.createElement(s.Q, {
-                    type: s._47.H3,
+                }, t && r.createElement(s.Q, {
+                    type: s._49.H3,
                     fontSize: s.V.Size5,
                     bold: !0
-                }, e)), r.createElement(s._8, {
+                }, t)), r.createElement(s._8, {
                     margin: {
                         x: 2,
                         bottom: 1
@@ -21106,8 +21111,11 @@ webpackJsonp([85], {
                 }, r.createElement(s.Q, n.__assign({}, d, {
                     fontSize: s.V.Size5,
                     color: s.K.Alt2
-                }), void 0 !== t ? t : Object(i.d)("Not enough data for us to display", "ReferralGroup"))))
-            }(l, c) : r.createElement(r.Fragment, null, r.createElement(s._8, {
+                }), void 0 !== a ? a : Object(i.d)("Not enough data for us to display", "ReferralGroup"))))
+            }({
+                subtitle: c,
+                title: l
+            }) : r.createElement(r.Fragment, null, r.createElement(s._8, {
                 margin: {
                     top: .5
                 },
@@ -21116,8 +21124,8 @@ webpackJsonp([85], {
                     bottom: 1,
                     x: 2
                 }
-            }, r.createElement(s.Q, {
-                type: s._47.H3,
+            }, l && r.createElement(s.Q, {
+                type: s._49.H3,
                 fontSize: s.V.Size5,
                 bold: !0
             }, l), r.createElement(s.Q, n.__assign({}, d, {
@@ -21141,7 +21149,7 @@ webpackJsonp([85], {
                 d = e.translationFunc;
             return t = a.share > 0 ? Object(i.d)("{share, number, percent}", {
                 share: a.share / 100
-            }, "ReferralGroup") : Object(i.d)("< 1%", "ReferralGroup"), r.createElement(s._33, {
+            }, "ReferralGroup") : Object(i.d)("< 1%", "ReferralGroup"), r.createElement(s._35, {
                 className: "referral-group-row",
                 padding: {
                     y: 1,
@@ -21173,7 +21181,7 @@ webpackJsonp([85], {
                 padding: {
                     right: 1
                 },
-                textAlign: s._43.Right
+                textAlign: s._45.Right
             }, r.createElement(s.Q, n.__assign({
                 color: s.K.Alt2,
                 ellipsis: !0
@@ -21187,12 +21195,12 @@ webpackJsonp([85], {
                 padding: {
                     top: .5
                 }
-            }, r.createElement(s._50, {
+            }, r.createElement(s._52, {
                 label: u(a.count),
-                direction: s._52.Top,
-                align: s._51.Center,
+                direction: s._54.Top,
+                align: s._53.Center,
                 display: s.R.Block
-            }, r.createElement(s._33, {
+            }, r.createElement(s._35, {
                 background: s.n.Alt2
             }, r.createElement(s._18, {
                 value: Math.max(a.share, 1)
@@ -22404,4 +22412,4 @@ webpackJsonp([85], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-analytics-6ff0420f29432716984279ccc4742b89.js.map
+//# sourceMappingURL=pages.channel-analytics-9fe6553e11d9e1bf47f0b09e5dd46e19.js.map

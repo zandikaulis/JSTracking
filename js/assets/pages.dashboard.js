@@ -1610,7 +1610,7 @@ webpackJsonp([46], {
                             y: 1
                         }
                     }, h.createElement(O.Q, {
-                        type: O._47.Span
+                        type: O._49.Span
                     }, h.createElement(T.a, null), Object(v.d)("Customize your stream with extensions! ", "DashboardNav"), h.createElement("a", {
                         target: "_blank",
                         rel: "noopener",
@@ -1714,7 +1714,7 @@ webpackJsonp([46], {
                             y: 1
                         }
                     }, h.createElement(O.Q, {
-                        type: O._47.Span
+                        type: O._49.Span
                     }, h.createElement(T.a, null), Object(v.d)("Streamers and mods can set custom AutoMod levels, and update Blocked and Permitted Terms.", "AutoModSettings"))))))), this.canAccessRevenueSettings && h.createElement("li", null, h.createElement(M.a, f.__assign({
                         linkTo: this.revenueSettingsLink,
                         external: !this.useNewRevenueSettings
@@ -1827,7 +1827,7 @@ webpackJsonp([46], {
                 }
                 return f.__extends(t, e), t.prototype.render = function() {
                     var e = this.getPermissions();
-                    return h.createElement(O._33, {
+                    return h.createElement(O._35, {
                         className: "dashboard-side-nav",
                         background: O.n.Alt2,
                         borderRight: !0,
@@ -1876,61 +1876,61 @@ webpackJsonp([46], {
             })(U),
             J = n("u4Vk"),
             X = g.a.wrap(function() {
-                return n.e(102).then(n.bind(null, "rE/F"))
+                return n.e(105).then(n.bind(null, "rE/F"))
             }, "AchievementsPage"),
             K = g.a.wrap(function() {
-                return n.e(105).then(n.bind(null, "RdZX"))
+                return n.e(108).then(n.bind(null, "RdZX"))
             }, "AutoModPage"),
             $ = g.a.wrap(function() {
-                return n.e(103).then(n.bind(null, "EOq4"))
+                return n.e(106).then(n.bind(null, "EOq4"))
             }, "BountiesPage"),
             ee = g.a.wrap(function() {
-                return n.e(85).then(n.bind(null, "ehuU"))
+                return n.e(88).then(n.bind(null, "ehuU"))
             }, "ChannelAnalyticsPageRoot"),
             te = g.a.wrap(function() {
-                return n.e(83).then(n.bind(null, "aeDV"))
+                return n.e(86).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
             ne = g.a.wrap(function() {
-                return n.e(88).then(n.bind(null, "KO2S"))
+                return n.e(91).then(n.bind(null, "KO2S"))
             }, "CollectionEditorPage"),
             re = g.a.wrap(function() {
-                return n.e(101).then(n.bind(null, "Dk8+"))
+                return n.e(104).then(n.bind(null, "Dk8+"))
             }, "CollectionManagerPage"),
             ae = g.a.wrap(function() {
-                return n.e(95).then(n.bind(null, "rFlM"))
+                return n.e(98).then(n.bind(null, "rFlM"))
             }, "CommentModeratorPage"),
             ie = g.a.wrap(function() {
-                return n.e(89).then(n.bind(null, "xM3a"))
+                return n.e(92).then(n.bind(null, "xM3a"))
             }, "DashboardEventsRoot"),
             oe = g.a.wrap(function() {
-                return n.e(94).then(n.bind(null, "yuX3"))
+                return n.e(97).then(n.bind(null, "yuX3"))
             }, "DashboardRevenueSettingsRoot"),
             se = g.a.wrap(function() {
-                return n.e(91).then(n.bind(null, "gIJZ"))
+                return n.e(94).then(n.bind(null, "gIJZ"))
             }, "DashboardSettingsRoot"),
             ue = g.a.wrap(function() {
-                return n.e(115).then(n.bind(null, "bcqU"))
+                return n.e(118).then(n.bind(null, "bcqU"))
             }, "ExtensionConfigurePage"),
             ce = g.a.wrap(function() {
-                return n.e(104).then(n.bind(null, "yJuJ"))
+                return n.e(107).then(n.bind(null, "yJuJ"))
             }, "ExtensionManagerPage"),
             le = g.a.wrap(function() {
-                return n.e(98).then(n.bind(null, "Il1C"))
+                return n.e(100).then(n.bind(null, "Il1C"))
             }, "HighlighterPage"),
             de = g.a.wrap(function() {
-                return n.e(84).then(n.bind(null, "c1gU"))
+                return n.e(87).then(n.bind(null, "c1gU"))
             }, "LivePage"),
             fe = g.a.wrap(function() {
-                return n.e(83).then(n.bind(null, "aeDV"))
+                return n.e(86).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
             he = g.a.wrap(function() {
-                return n.e(96).then(n.bind(null, "/fDj"))
+                return n.e(99).then(n.bind(null, "/fDj"))
             }, "RedirectToLatestArchiveHighlighter"),
             me = g.a.wrap(function() {
-                return n.e(86).then(n.bind(null, "tVPZ"))
+                return n.e(89).then(n.bind(null, "tVPZ"))
             }, "StreamSummaryPage"),
             pe = g.a.wrap(function() {
-                return n.e(87).then(n.bind(null, "a9Y8"))
+                return n.e(90).then(n.bind(null, "a9Y8"))
             }, "VideoManagerPage"),
             ve = function(e) {
                 var t = e.match.params.pageName,
@@ -3393,7 +3393,7 @@ webpackJsonp([46], {
                         }, o.createElement("a", r.__assign({
                             className: a("dashboard-side-nav__link", (i = {}, i["dashboard-side-nav__link--active"] = Boolean(s), i)),
                             href: t
-                        }, Object(c._61)(e)), e.children))
+                        }, Object(c._63)(e)), e.children))
                     })
                 }
                 return o.createElement(c._2, {
@@ -3407,7 +3407,7 @@ webpackJsonp([46], {
                     className: "dashboard-side-nav__link",
                     activeClassName: "dashboard-side-nav__link--active",
                     exact: e.exact
-                }, Object(c._61)(e)), e.children))
+                }, Object(c._63)(e)), e.children))
             });
         n.d(t, "a", function() {
             return l
@@ -4256,7 +4256,7 @@ webpackJsonp([46], {
                             bottom: .5
                         }
                     }, a.createElement(i.Q, {
-                        type: i._47.H4,
+                        type: i._49.H4,
                         fontSize: i.V.Size5
                     }, this.props.children))
                 }, t
@@ -4287,4 +4287,4 @@ webpackJsonp([46], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-c672f311d28dd608b2662ba4ba0add04.js.map
+//# sourceMappingURL=pages.dashboard-0949f4f9c2b236bd26729da4edbdbbc3.js.map

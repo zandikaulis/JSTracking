@@ -1,4 +1,4 @@
-webpackJsonp([72], {
+webpackJsonp([75], {
     "0zm4": function(e, t) {
         var i = {
             kind: "Document",
@@ -117,7 +117,7 @@ webpackJsonp([72], {
                             },
                             "data-test-selector": v
                         }, a.createElement(E.Q, {
-                            type: E._47.H5,
+                            type: E._49.H5,
                             color: E.K.Error
                         }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? a.createElement(E._8, {
                             margin: {
@@ -125,16 +125,16 @@ webpackJsonp([72], {
                             },
                             "data-test-selector": f
                         }, a.createElement(E.Q, {
-                            type: E._47.H5,
+                            type: E._49.H5,
                             color: E.K.Alt2
                         }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? a.createElement(E._8, {
                             margin: {
                                 top: 1
                             }
                         }, a.createElement(E.Q, {
-                            type: E._47.H5,
+                            type: E._49.H5,
                             bold: !0
-                        }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : a.createElement(E._33, {
+                        }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : a.createElement(E._35, {
                             display: E.R.Flex,
                             flexDirection: E.T.Column,
                             margin: {
@@ -145,7 +145,7 @@ webpackJsonp([72], {
                                 bottom: 1
                             }
                         }, a.createElement(E.Q, {
-                            type: E._47.H5,
+                            type: E._49.H5,
                             color: E.K.Alt2
                         }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), a.createElement(E._8, {
                             flexGrow: 0
@@ -190,7 +190,7 @@ webpackJsonp([72], {
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(E._33, {
+                    return a.createElement(E._35, {
                         padding: {
                             x: 3,
                             top: 3,
@@ -200,7 +200,7 @@ webpackJsonp([72], {
                         flexDirection: E.T.Column
                     }, a.createElement(E.Q, {
                         className: "title",
-                        type: E._47.H2
+                        type: E._49.H2
                     }, Object(c.d)("Email Unsubscribe", "EmailUnsubscribe")), this.renderStatus())
                 }, t
             }(a.Component),
@@ -216,4 +216,4 @@ webpackJsonp([72], {
         })
     }
 });
-//# sourceMappingURL=pages.email-unsubscribe-fe9eb50919766c5befd50bbc5427ac13.js.map
+//# sourceMappingURL=pages.email-unsubscribe-e3c8f7e5d8795b669522716999d86234.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([89], {
+webpackJsonp([92], {
     "+27R": function(e, t, n) {
         (function(e) {
             "use strict";
@@ -541,12 +541,12 @@ webpackJsonp([89], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(r._33, {
+                    return i.createElement(r._35, {
                         className: "vm-edit-cancel-modal",
                         background: r.n.Base,
                         padding: 2
                     }, i.createElement(r._8, null, i.createElement(r.Q, {
-                        type: r._47.H3
+                        type: r._49.H3
                     }, this.props.title), i.createElement(r._8, {
                         padding: {
                             y: 1
@@ -1302,14 +1302,14 @@ webpackJsonp([89], {
                         })));
                     return r.createElement(v._8, {
                         className: "event-modal"
-                    }, r.createElement(v._33, {
+                    }, r.createElement(v._35, {
                         className: "event-modal__content",
                         padding: 4,
                         margin: {
                             top: 5
                         },
                         background: v.n.Base
-                    }, r.createElement(v._33, {
+                    }, r.createElement(v._35, {
                         display: v.R.Flex,
                         padding: {
                             bottom: 2
@@ -1323,7 +1323,7 @@ webpackJsonp([89], {
                         flexGrow: 0,
                         flexShrink: 1
                     }, r.createElement(v.Q, {
-                        type: v._47.H3
+                        type: v._49.H3
                     }, Object(s.d)("Create an Event", "EventsModal"))), r.createElement(v._8, {
                         flexGrow: 0,
                         flexShrink: 0
@@ -1375,7 +1375,7 @@ webpackJsonp([89], {
                         label: Object(s.d)("Event Description", "EventsModal"),
                         error: !!this.state.fieldErrors.description,
                         errorMessage: g(this.state.fieldErrors.description)
-                    }, r.createElement(v._44, {
+                    }, r.createElement(v._46, {
                         placeholder: Object(s.d)("Tell viewers why they should watch your event", "EventsModal"),
                         onChange: this.onDescriptionChange,
                         value: this.state.edits.description || "",
@@ -2928,7 +2928,7 @@ webpackJsonp([89], {
                         error: !!this.props.errorMessage
                     }, i.createElement(o._8, {
                         className: "image-uploader",
-                        textAlign: o._43.Center,
+                        textAlign: o._45.Center,
                         display: o.R.Flex,
                         flexDirection: o.T.Column,
                         alignItems: o.c.Center,
@@ -2940,9 +2940,9 @@ webpackJsonp([89], {
                         position: o._15.Relative
                     }, i.createElement(o._8, {
                         className: "image-uploader__upload-svg--anim-backfill"
-                    }, i.createElement(o._23, {
-                        asset: o._24.Upload,
-                        type: o._25.Alt2,
+                    }, i.createElement(o._24, {
+                        asset: o._25.Upload,
+                        type: o._26.Alt2,
                         width: this.props.iconWidth || 99,
                         height: this.props.iconWidth || 76
                     })), i.createElement(o._8, {
@@ -2950,9 +2950,9 @@ webpackJsonp([89], {
                         position: o._15.Absolute,
                         display: this.props.isLoading ? o.R.Block : o.R.Hide,
                         attachTop: !0
-                    }, i.createElement(o._23, {
-                        asset: o._24.Upload,
-                        type: o._25.Brand,
+                    }, i.createElement(o._24, {
+                        asset: o._25.Upload,
+                        type: o._26.Brand,
                         width: this.props.iconWidth || 99,
                         height: this.props.iconHeight || 76
                     }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
@@ -2961,12 +2961,12 @@ webpackJsonp([89], {
                         margin: 1,
                         "data-test-selector": "image-uploader-loading"
                     }, i.createElement(o.Q, {
-                        type: o._47.H4
+                        type: o._49.H4
                     }, Object(r.d)("Uploading", "ImageUploader")))
                 }, t.prototype.renderNormalState = function() {
                     var e = Object(r.d)("Browse", "ImageUploader");
                     return i.createElement(o._8, null, i.createElement(o._8, null, i.createElement(o.Q, {
-                        type: o._47.H4
+                        type: o._49.H4
                     }, Object(r.d)("Drag and drop your image here", "ImageUploader"))), i.createElement(o._8, {
                         margin: {
                             bottom: 2
@@ -2978,7 +2978,7 @@ webpackJsonp([89], {
                         fullWidth: !0,
                         "data-test-selector": "image-uploader-hint"
                     }, i.createElement(o.Q, {
-                        type: o._47.P,
+                        type: o._49.P,
                         fontSize: o.V.Size7,
                         color: o.K.Alt2
                     }, this.props.hintMessage)), i.createElement(o._8, null, i.createElement(o.v, {
@@ -2992,7 +2992,7 @@ webpackJsonp([89], {
                         },
                         "data-test-selector": "image-uploader-error"
                     }, i.createElement(o.Q, {
-                        type: o._47.H5,
+                        type: o._49.H5,
                         color: o.K.Error,
                         bold: !0
                     }, this.props.errorMessage))
@@ -4259,11 +4259,11 @@ webpackJsonp([89], {
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(l._61)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
+                    }, Object(l._63)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(l._61)(n.props)), n.renderIcon())
+                    }, Object(l._63)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -4280,7 +4280,7 @@ webpackJsonp([89], {
                     var e = n.getAssetFromType();
                     return r.createElement(l._8, {
                         className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
-                    }, r.createElement(l._23, {
+                    }, r.createElement(l._24, {
                         asset: e,
                         width: 30,
                         height: 30
@@ -4305,16 +4305,16 @@ webpackJsonp([89], {
                 }, n.getAssetFromType = function() {
                     switch (n.props.type) {
                         case a.Twitter:
-                            return l._24.Twitter;
+                            return l._25.Twitter;
                         case a.Facebook:
-                            return l._24.Facebook;
+                            return l._25.Facebook;
                         case a.VKontakte:
-                            return l._24.VKontakte;
+                            return l._25.VKontakte;
                         case a.Reddit:
-                            return l._24.Reddit;
+                            return l._25.Reddit;
                         case a.Copy:
                         default:
-                            return l._24.Copy
+                            return l._25.Copy
                     }
                 }, n.addSocialClassModifier = function(e) {
                     switch (n.props.type) {
@@ -4356,9 +4356,9 @@ webpackJsonp([89], {
             return i.__extends(t, e), t.prototype.render = function() {
                 return r.createElement(l._8, {
                     className: "social-button"
-                }, r.createElement(l._50, {
+                }, r.createElement(l._52, {
                     label: this.getTooltipFromType(),
-                    direction: l._52.Top
+                    direction: l._54.Top
                 }, this.renderLink()))
             }, t
         }(r.Component)
@@ -7014,7 +7014,7 @@ webpackJsonp([89], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: r._60.Above
+                        zIndex: r._62.Above
                     }, i.createElement("input", {
                         "data-a-target": "file-picker-input",
                         "data-test-selector": "file-picker-input",
@@ -7835,7 +7835,7 @@ webpackJsonp([89], {
                     return i.createElement(s.W, {
                         id: "event-language",
                         label: Object(r.d)("Event Language", "EventModal")
-                    }, i.createElement(s._29, {
+                    }, i.createElement(s._30, {
                         name: "event-language",
                         onChange: this.onChange,
                         disabled: this.props.disabled,
@@ -10554,9 +10554,9 @@ webpackJsonp([89], {
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.optionElement();
-                    return this.props.disabled && this.props.disabledMessage ? s.createElement(_._50, {
-                        direction: _._52.Bottom,
-                        align: _._51.Left,
+                    return this.props.disabled && this.props.disabledMessage ? s.createElement(_._52, {
+                        direction: _._54.Bottom,
+                        align: _._53.Left,
                         width: 130,
                         display: _.R.Flex,
                         label: this.props.disabledMessage
@@ -10650,7 +10650,7 @@ webpackJsonp([89], {
                         noTail: !0,
                         show: this.state.isOpen,
                         "data-a-target": "time-selector-balloon"
-                    }, s.createElement(_._33, {
+                    }, s.createElement(_._35, {
                         className: "time-picker__dropdown"
                     }, t))))
                 }, t.prototype.getTime = function(e) {
@@ -11870,7 +11870,7 @@ webpackJsonp([89], {
                             "event-modal-image-uploader__preview-image": !0,
                             "event-modal-image-uploader__preview-image--preview-mode": !1 === this.state.isDraggingOver
                         });
-                        e = s.createElement(f._33, {
+                        e = s.createElement(f._35, {
                             display: f.R.Flex,
                             justifyContent: f._7.Center,
                             alignItems: f.c.Center,
@@ -11895,7 +11895,7 @@ webpackJsonp([89], {
                             "data-test-selector": _.RemoveButton,
                             type: f.B.Hollow,
                             onClick: this.removeImage,
-                            icon: f._24.RemoveTag
+                            icon: f._25.RemoveTag
                         }, Object(o.d)("Remove", "EventModalImageUploader")))
                     }
                     var i = r({
@@ -13267,25 +13267,25 @@ webpackJsonp([89], {
                     alignItems: o.c.Center,
                     position: o._15.Absolute
                 }, r.createElement(o._8, {
-                    textAlign: o._43.Center,
+                    textAlign: o._45.Center,
                     flexShrink: 1
-                }, r.createElement(o._23, {
+                }, r.createElement(o._24, {
                     asset: e.icon,
                     width: 46,
                     height: 48,
-                    type: o._25.Alt2
+                    type: o._26.Alt2
                 })), r.createElement(o._8, {
                     margin: {
                         top: 1
                     },
-                    textAlign: o._43.Center
+                    textAlign: o._45.Center
                 }, r.createElement(o.Q, {
-                    type: o._47.H4,
+                    type: o._49.H4,
                     color: o.K.Alt2
                 }, e.titleText)), r.createElement(o._8, {
-                    textAlign: o._43.Center
+                    textAlign: o._45.Center
                 }, r.createElement(o.Q, {
-                    type: o._47.P,
+                    type: o._49.P,
                     color: o.K.Alt2
                 }, e.subText)))
             });
@@ -13358,7 +13358,7 @@ webpackJsonp([89], {
                     }, r.createElement(o._4, {
                         key: this.props.initialGameTitle + "-" + this.props.redrawKey,
                         type: o._5.Text,
-                        icon: o._24.NavGames,
+                        icon: o._25.NavGames,
                         name: "game",
                         onChange: this.onChange,
                         onFocus: this.onFocus,
@@ -13379,17 +13379,17 @@ webpackJsonp([89], {
                     return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? r.createElement(o._10, {
                         fillContent: !0
                     }) : r.createElement(h, {
-                        icon: o._24.SearchNoResults,
+                        icon: o._25.SearchNoResults,
                         titleText: Object(l.d)("No results found", "EventGameSelector"),
                         subText: Object(l.d)("They're probably in another castle", "EventGameSelector")
                     }) : r.createElement(h, {
-                        icon: o._24.DeadGlitch,
+                        icon: o._25.DeadGlitch,
                         titleText: Object(l.d)("Search is not available at this time", "EventGameSelector"),
                         subText: Object(l.d)("Please try again later", "EventGameSelector")
                     })), r.createElement("div", {
                         className: e,
                         tabIndex: 0
-                    }, r.createElement(o._33, {
+                    }, r.createElement(o._35, {
                         attachTop: !0,
                         attachRight: !0,
                         attachLeft: !0,
@@ -13550,7 +13550,7 @@ webpackJsonp([89], {
                     }, r.createElement(o._4, {
                         value: this.props.currentGameTitle,
                         type: o._5.Text,
-                        icon: o._24.NavGames,
+                        icon: o._25.NavGames,
                         disabled: !0
                     })) : r.createElement(f, {
                         redrawKey: this.state.redrawKey,
@@ -17136,14 +17136,14 @@ webpackJsonp([89], {
                         color: S.K.Error
                     }, this.props.serviceError))), i.createElement(S._8, {
                         className: "event-modal"
-                    }, i.createElement(S._33, {
+                    }, i.createElement(S._35, {
                         className: "event-modal__content",
                         padding: 4,
                         margin: {
                             top: 5
                         },
                         background: S.n.Base
-                    }, i.createElement(S._33, {
+                    }, i.createElement(S._35, {
                         display: S.R.Flex,
                         padding: {
                             bottom: 2
@@ -17157,7 +17157,7 @@ webpackJsonp([89], {
                         flexGrow: 0,
                         flexShrink: 1
                     }, i.createElement(S.Q, {
-                        type: S._47.H3
+                        type: S._49.H3
                     }, Object(v.d)("Create a Series", "CollectionModal"))), i.createElement(S._8, {
                         flexGrow: 0,
                         flexShrink: 0
@@ -17209,7 +17209,7 @@ webpackJsonp([89], {
                         label: Object(v.d)("Event Description", "CollectionModal"),
                         error: !!this.state.fieldErrors.description,
                         errorMessage: C(this.state.fieldErrors.description)
-                    }, i.createElement(S._44, {
+                    }, i.createElement(S._46, {
                         placeholder: Object(v.d)("Tell viewers why they should watch your series", "CollectionModal"),
                         onChange: this.onDescriptionChange,
                         value: this.state.fieldValues.description,
@@ -17448,7 +17448,7 @@ webpackJsonp([89], {
                     return t.renderTitle = function() {
                         var e = Object(v.d)("Events", "DashboardEventsHeader"),
                             n = i.createElement(S.Q, {
-                                type: S._47.H4,
+                                type: S._49.H4,
                                 bold: !0
                             }, e),
                             a = null,
@@ -17461,7 +17461,7 @@ webpackJsonp([89], {
                                 left: .5
                             }
                         }, i.createElement(S.Q, {
-                            type: S._47.H4,
+                            type: S._49.H4,
                             bold: !0
                         }, "/ ", t.props.navigatedCollection.title))), r = i.createElement(S._8, {
                             margin: {
@@ -17475,7 +17475,7 @@ webpackJsonp([89], {
                         })), n = i.createElement(S.O, {
                             to: "/" + t.props.channelName + "/dashboard/events/"
                         }, i.createElement(S.Q, {
-                            type: S._47.H4,
+                            type: S._49.H4,
                             bold: !0
                         }, e)), t.props.navigatedCollection.stats && (s = i.createElement(S.Q, null, t.props.navigatedCollection.stats.followingCount, " ", Object(v.d)("Reminders Set", "DashboardEventsHeader")))), i.createElement(i.Fragment, null, i.createElement(S._8, {
                             display: S.R.Flex
@@ -17495,20 +17495,20 @@ webpackJsonp([89], {
                             eventLocation: Q.a.DashboardEvents
                         }, i.createElement(S.v, {
                             type: S.B.Hollow,
-                            icon: S._24.Share
+                            icon: S._25.Share
                         }, Object(v.d)("Share", "DashboardEventsHeader"))), i.createElement(S._8, {
                             margin: {
                                 x: 1
                             }
                         }, i.createElement(S.v, {
                             type: S.B.Hollow,
-                            icon: S._24.Edit,
+                            icon: S._25.Edit,
                             onClick: t.handleEditEvent
                         }, Object(v.d)("Edit", "DashboardEventsHeader"))), i.createElement(S.v, {
                             "data-a-target": Z,
                             type: S.B.Hollow,
                             onClick: t.deleteEventCollection,
-                            icon: S._24.Trash
+                            icon: S._25.Trash
                         }, Object(v.d)("Delete", "DashboardEventsHeader")));
                         return i.createElement(S._8, {
                             display: S.R.Flex,
@@ -17519,7 +17519,7 @@ webpackJsonp([89], {
                                 left: 1
                             }
                         }, i.createElement(S.v, {
-                            icon: S._24.Plus,
+                            icon: S._25.Plus,
                             onClick: t.props.openEventCreator
                         }, Object(v.d)("Add Event", "DashboardEventsHeader"))))
                     }, t.deleteEventCollection = function() {
@@ -17542,7 +17542,7 @@ webpackJsonp([89], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(S._33, {
+                    return i.createElement(S._35, {
                         className: "dashboard-events-header",
                         alignItems: S.c.Center,
                         borderBottom: !0,
@@ -17551,7 +17551,7 @@ webpackJsonp([89], {
                         flexDirection: S.T.Row,
                         justifyContent: S._7.Center,
                         position: S._15.Relative,
-                        zIndex: S._60.Default,
+                        zIndex: S._62.Default,
                         fullWidth: !0
                     }, i.createElement(S._8, {
                         margin: {
@@ -17612,7 +17612,7 @@ webpackJsonp([89], {
                     var e = Object(v.i)(new Date(this.props.startAt), {
                         timeZoneName: "short"
                     });
-                    return i.createElement(S._8, null, i.createElement(S._33, {
+                    return i.createElement(S._8, null, i.createElement(S._35, {
                         className: "dashboard-events-leaf-card__row",
                         margin: {
                             y: 1
@@ -17651,7 +17651,7 @@ webpackJsonp([89], {
                         to: "/events/" + this.props.id
                     }, i.createElement(S.Q, {
                         bold: !0,
-                        type: S._47.H5
+                        type: S._49.H5
                     }, this.props.title))), i.createElement(S._8, null, this.renderInfoBar(e)))), i.createElement(S._8, {
                         margin: {
                             left: 1,
@@ -17671,13 +17671,13 @@ webpackJsonp([89], {
                         balloonDirection: S.r.BottomRight
                     }, i.createElement(S.v, {
                         type: S.B.Hollow,
-                        icon: S._24.Share
+                        icon: S._25.Share
                     }, Object(v.d)("Share", "DashboardEventsLeafCard")))), i.createElement(S._8, {
                         margin: {
                             right: .5
                         }
                     }, i.createElement(ne.a, null, i.createElement(S.v, {
-                        icon: S._24.More,
+                        icon: S._25.More,
                         type: S.B.Text
                     }), i.createElement(S.q, {
                         direction: S.r.BottomRight,
@@ -17692,9 +17692,9 @@ webpackJsonp([89], {
                         },
                         display: S.R.Flex,
                         alignItems: S.c.Center
-                    }, i.createElement(S._23, {
-                        asset: S._24.Edit,
-                        type: S._25.Brand
+                    }, i.createElement(S._24, {
+                        asset: S._25.Edit,
+                        type: S._26.Brand
                     }), i.createElement(S._8, {
                         margin: {
                             left: 1
@@ -17710,9 +17710,9 @@ webpackJsonp([89], {
                         },
                         display: S.R.Flex,
                         alignItems: S.c.Center
-                    }, i.createElement(S._23, {
-                        asset: S._24.Trash,
-                        type: S._25.Brand
+                    }, i.createElement(S._24, {
+                        asset: S._25.Trash,
+                        type: S._26.Brand
                     }), i.createElement(S._8, {
                         margin: {
                             left: 1
@@ -17763,7 +17763,7 @@ webpackJsonp([89], {
                         margin: {
                             bottom: 3
                         }
-                    }, i.createElement(S._33, {
+                    }, i.createElement(S._35, {
                         display: S.R.Flex,
                         justifyContent: S._7.Between,
                         padding: {
@@ -17772,7 +17772,7 @@ webpackJsonp([89], {
                         borderBottom: !0
                     }, i.createElement(S.Q, {
                         color: S.K.Alt2,
-                        type: S._47.H5
+                        type: S._49.H5
                     }, this.props.dateString)), t)
                 }, t
             }(i.Component),
@@ -17868,7 +17868,7 @@ webpackJsonp([89], {
                         }, i.createElement(S.v, {
                             "data-a-target": "load-more",
                             type: S.B.Text,
-                            icon: S._24.GlyphArrDown,
+                            icon: S._25.GlyphArrDown,
                             onClick: this.props.loadNextSeriesPage
                         }, Object(v.d)("Load More", "DashboardEventsSidenav")));
                     return i.createElement(S._8, null, i.createElement(S._8, {
@@ -17876,15 +17876,15 @@ webpackJsonp([89], {
                             bottom: 1
                         }
                     }, i.createElement(S.Q, {
-                        transform: S._46.Uppercase,
+                        transform: S._48.Uppercase,
                         color: S.K.Alt2,
-                        type: S._47.H5
+                        type: S._49.H5
                     }, Object(v.d)("Series", "DashboardEventsSidenav"))), i.createElement(S._8, {
                         margin: {
                             bottom: 1
                         }
                     }, i.createElement(S.v, {
-                        icon: S._24.Plus,
+                        icon: S._25.Plus,
                         onClick: this.props.openEventCreator
                     }, Object(v.d)("Add Series", "DashboardEventsSidenav"))), t, n)
                 }, t
@@ -17894,13 +17894,13 @@ webpackJsonp([89], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(S._27, null, i.createElement(S._28, {
+                    return i.createElement(S._28, null, i.createElement(S._29, {
                         name: "events-toggle",
                         label: Object(v.d)("Future Events", "DashboardEventsToggle"),
                         defaultChecked: this.props.filter === p.a.Future,
                         onChange: this.props.handleToggleChange,
                         value: p.a.Future
-                    }), i.createElement(S._28, {
+                    }), i.createElement(S._29, {
                         name: "events-toggle",
                         label: Object(v.d)("Past Events", "DashboardEventsToggle"),
                         defaultChecked: this.props.filter === p.a.Past,
@@ -17983,9 +17983,14 @@ webpackJsonp([89], {
                     if (this.props.loading) t = this.renderLoadingSpinner();
                     else if (this.props.error || !this.props.user) t = this.renderPageError();
                     else {
-                        var n = null,
-                            a = Object(v.d)("Add Event", "DashboardEventsLayout");
-                        (!this.props.eventLeaves || this.props.eventLeaves && this.props.eventLeaves.edges && 0 === this.props.eventLeaves.edges.length && this.props.filter === p.a.Future) && (n = this.props.navigatedCollection ? i.createElement(S._8, {
+                        var n = [];
+                        if (this.props.eventLeaves && this.props.eventLeaves.edges)
+                            for (var a = 0, r = this.props.eventLeaves.edges; a < r.length; a++) {
+                                (_ = r[a]) && _.node && !_.node.isDeleted && n.push(_.node)
+                            }
+                        var s = null,
+                            o = Object(v.d)("Add Event", "DashboardEventsLayout");
+                        (!this.props.eventLeaves || 0 === n.length && this.props.filter === p.a.Future) && (s = this.props.navigatedCollection ? i.createElement(S._8, {
                             display: S.R.Flex,
                             justifyContent: S._7.Center
                         }, i.createElement(S._8, {
@@ -18006,7 +18011,7 @@ webpackJsonp([89], {
                             alt: Object(v.d)("No Events in this Series", "DashboardEventsLayout")
                         }), i.createElement(S._8, {
                             display: S.R.Flex,
-                            textAlign: S._43.Center,
+                            textAlign: S._45.Center,
                             flexDirection: S.T.Column,
                             justifyContent: S._7.Center,
                             margin: {
@@ -18021,9 +18026,9 @@ webpackJsonp([89], {
                                 top: 2
                             }
                         }, i.createElement(S.v, {
-                            icon: S._24.Plus,
+                            icon: S._25.Plus,
                             onClick: this.openSegmentEventCreation
-                        }, a)))) : i.createElement(S._8, {
+                        }, o)))) : i.createElement(S._8, {
                             display: S.R.Flex,
                             justifyContent: S._7.Center
                         }, i.createElement(S._8, {
@@ -18044,7 +18049,7 @@ webpackJsonp([89], {
                             alt: Object(v.d)("No Events Created", "DashboardEventsLayout")
                         }), i.createElement(S._8, {
                             display: S.R.Flex,
-                            textAlign: S._43.Center,
+                            textAlign: S._45.Center,
                             flexDirection: S.T.Column,
                             justifyContent: S._7.Center,
                             margin: {
@@ -18059,15 +18064,16 @@ webpackJsonp([89], {
                                 top: 2
                             }
                         }, i.createElement(S.v, {
-                            icon: S._24.Plus,
+                            icon: S._25.Plus,
                             onClick: this.openSingleEventCreation
-                        }, a)))));
-                        var r = null;
+                        }, o)))));
+                        var d = null;
                         if (this.props.eventCollections && this.props.eventCollections.edges && this.props.loadNextCollectionsPage) {
-                            for (var s = [], o = 0, d = this.props.eventCollections.edges; o < d.length; o++) {
-                                (_ = d[o]) && _.node && !_.node.isDeleted && s.push(_.node)
+                            for (var l = [], u = 0, m = this.props.eventCollections.edges; u < m.length; u++) {
+                                var _;
+                                (_ = m[u]) && _.node && !_.node.isDeleted && l.push(_.node)
                             }
-                            r = i.createElement(S._8, {
+                            d = i.createElement(S._8, {
                                 display: S.R.Flex,
                                 margin: {
                                     right: 3
@@ -18078,18 +18084,12 @@ webpackJsonp([89], {
                                 bottomPixelThreshold: 200
                             }, i.createElement(_e, {
                                 channelName: this.props.user && this.props.user.login || "",
-                                eventCollections: s,
+                                eventCollections: l,
                                 hasMoreSeries: this.props.hasNextCollectionsPage || !1,
                                 loadNextSeriesPage: this.props.loadNextCollectionsPage,
                                 openEventCreator: this.openTimetableEventCreation
                             })))
                         }
-                        var l = [];
-                        if (this.props.eventLeaves && this.props.eventLeaves.edges)
-                            for (var u = 0, m = this.props.eventLeaves.edges; u < m.length; u++) {
-                                var _;
-                                (_ = m[u]) && _.node && !_.node.isDeleted && l.push(_.node)
-                            }
                         t = i.createElement(S._8, {
                             margin: {
                                 x: 3
@@ -18097,7 +18097,7 @@ webpackJsonp([89], {
                             display: S.R.Flex,
                             flexDirection: S.T.Row,
                             flexGrow: 1
-                        }, r, i.createElement(S._8, {
+                        }, d, i.createElement(S._8, {
                             className: "dashboard-events-layout__right-col",
                             flexGrow: 1
                         }, i.createElement(S._8, {
@@ -18109,13 +18109,13 @@ webpackJsonp([89], {
                             filter: this.props.filter,
                             handleToggleChange: this.props.handleToggleChange
                         })), i.createElement(ue, {
-                            eventLeaves: l,
+                            eventLeaves: n,
                             hasNextPage: this.props.hasNextPage,
                             loadNextPage: this.props.loadNextPage,
                             editEventLeaf: this.openSingleEventEditor,
                             editSegmentEventLeaf: this.openSegmentEventEditor,
                             deleteEventLeaf: this.props.deleteEventLeaf
-                        }), n))
+                        }), s))
                     }
                     switch (this.state.modalType) {
                         case de.Timetable:
@@ -19135,4 +19135,4 @@ webpackJsonp([89], {
             }
     }
 });
-//# sourceMappingURL=pages.dashboard-events-55e7e72ce014833ccf0e6b5c4f2023a2.js.map
+//# sourceMappingURL=pages.dashboard-events-6cb1cb7cef32880c29d93b7d67e9b866.js.map

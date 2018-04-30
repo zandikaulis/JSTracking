@@ -78,40 +78,40 @@ webpackJsonp([66], {
                     return u.createElement(f._8, {
                         className: "activate-device-wrapper",
                         alignSelf: f.d.Center,
-                        textAlign: f._43.Center,
+                        textAlign: f._45.Center,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, u.createElement(f._33, {
+                    }, u.createElement(f._35, {
                         className: "activate-device-wrapper__background-container",
                         background: f.n.Base,
                         display: f.R.InlineBlock,
                         position: f._15.Relative,
-                        textAlign: f._43.Center
+                        textAlign: f._45.Center
                     }, u.createElement(f.Y, null, u.createElement(f.L, {
                         cols: 6
-                    }, u.createElement(f._33, {
+                    }, u.createElement(f._35, {
                         padding: 2
-                    }, u.createElement(f._23, {
-                        asset: f._24.LogoTwitch,
-                        type: f._25.Brand,
+                    }, u.createElement(f._24, {
+                        asset: f._25.LogoTwitch,
+                        type: f._26.Brand,
                         height: 50,
                         width: 129
                     }))), u.createElement(f.L, {
                         cols: 6
-                    }, u.createElement(f._33, {
+                    }, u.createElement(f._35, {
                         padding: 3
                     }, u.createElement(f.v, {
                         type: f.B.Default,
                         linkTo: "../"
                     }, Object(v.d)("Return To Twitch", "ActivateDevice"))))), this.renderInputForm(), this.renderSuccessPage(), u.createElement(f.Y, null, u.createElement(f.L, {
                         cols: 6
-                    }, u.createElement(f._33, {
+                    }, u.createElement(f._35, {
                         padding: 2
                     }, u.createElement(f.Q, {
                         color: f.K.Alt2
                     }, "© ", (new Date).getFullYear(), " Twitch Interactive, Inc."))), u.createElement(f.L, {
                         cols: 6
-                    }, u.createElement(f._33, {
+                    }, u.createElement(f._35, {
                         padding: 2
                     }, u.createElement(f.O, {
                         to: "https://www.twitch.tv/p/legal/terms-of-service/"
@@ -138,7 +138,7 @@ webpackJsonp([66], {
                             className: "activate-device-wrapper__success",
                             alignItems: f.c.Center,
                             position: f._15.Relative,
-                            textAlign: f._43.Center,
+                            textAlign: f._45.Center,
                             "data-test-selector": "activate-success"
                         }, u.createElement(f._8, {
                             className: "activate-device-wrapper__check_mark",
@@ -153,7 +153,7 @@ webpackJsonp([66], {
                                 bottom: 1
                             }
                         }, u.createElement(f.Q, {
-                            type: f._47.H2
+                            type: f._49.H2
                         }, Object(v.d)("You've Done It!", "ActivateDevice"))), u.createElement(f._8, {
                             margin: {
                                 x: 1
@@ -182,13 +182,13 @@ webpackJsonp([66], {
                         className: "activate-device-wrapper__form",
                         alignItems: f.c.Center,
                         position: f._15.Relative,
-                        textAlign: f._43.Center
+                        textAlign: f._45.Center
                     }, u.createElement(f._8, {
                         padding: {
                             top: 2
                         }
                     }, u.createElement(f.Q, {
-                        type: f._47.H2
+                        type: f._49.H2
                     }, Object(v.d)("Activate Your Device", "ActivateDevice"))), u.createElement(f._8, {
                         padding: 1
                     }, u.createElement(f.Q, {
@@ -199,7 +199,7 @@ webpackJsonp([66], {
                         className: "activate-device-wrapper__input",
                         alignItems: f.c.Center,
                         position: f._15.Relative,
-                        textAlign: f._43.Center
+                        textAlign: f._45.Center
                     }, u.createElement(f._4, {
                         type: f._5.Text,
                         onChange: this.onChange,
@@ -228,9 +228,9 @@ webpackJsonp([66], {
                         default:
                             e = Object(v.d)("Incorrect code!", "ActivateDevice")
                     }
-                    return u.createElement(f._33, {
+                    return u.createElement(f._35, {
                         className: "activate-device-form__error",
-                        textAlign: f._43.Center,
+                        textAlign: f._45.Center,
                         fontSize: f.V.Size4
                     }, u.createElement(f._12, {
                         label: e,
@@ -405,4 +405,4 @@ webpackJsonp([66], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.activate-device-3bf2219e784c0007a29d7d127d24375c.js.map
+//# sourceMappingURL=pages.activate-device-e34b8b86786f001c4ddcfaf3e74823ea.js.map

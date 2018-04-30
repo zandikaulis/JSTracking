@@ -1,4 +1,4 @@
-webpackJsonp([67], {
+webpackJsonp([70], {
     "9u8h": function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
@@ -366,7 +366,7 @@ webpackJsonp([67], {
                     }, a.createElement(y._8, {
                         fullWidth: !0,
                         position: y._15.Relative
-                    }, a.createElement(y._33, {
+                    }, a.createElement(y._35, {
                         className: "verify-email-bar",
                         display: y.R.Flex,
                         alignItems: y.c.Center,
@@ -393,9 +393,9 @@ webpackJsonp([67], {
                         padding: {
                             right: .5
                         }
-                    }, a.createElement(y._23, {
-                        asset: y._24.NotificationWarning,
-                        type: y._25.Inherit
+                    }, a.createElement(y._24, {
+                        asset: y._25.NotificationWarning,
+                        type: y._26.Inherit
                     })), a.createElement(y._8, {
                         className: "verify-email-bar__copy"
                     }, a.createElement(y.Q, {
@@ -403,7 +403,7 @@ webpackJsonp([67], {
                         color: y.K.Inherit
                     }, Object(c.d)("Keep your account secure and verify {email}.", {
                         email: this.props.data.currentUser.email
-                    }, "VerifyEmail")))))), a.createElement(y._33, {
+                    }, "VerifyEmail")))))), a.createElement(y._35, {
                         className: "verify-email-bar__dismiss",
                         position: y._15.Absolute,
                         attachRight: !0,
@@ -422,14 +422,14 @@ webpackJsonp([67], {
                         hoverUnderlineNone: !0
                     }, Object(c.d)("Not Now", "VerifyEmail"))))))
                 }, t.prototype.renderEmailSent = function() {
-                    return a.createElement(y._33, {
+                    return a.createElement(y._35, {
                         className: "verify-email-bar verify-email-bar--success",
                         display: y.R.Flex,
                         justifyContent: y._7.Center,
                         alignItems: y.c.Center,
                         elevation: 1,
                         padding: 1
-                    }, a.createElement(y._33, {
+                    }, a.createElement(y._35, {
                         display: y.R.Flex,
                         alignItems: y.c.Center,
                         margin: {
@@ -439,9 +439,9 @@ webpackJsonp([67], {
                             right: .5
                         },
                         color: y.K.Overlay
-                    }, a.createElement(y._23, {
-                        asset: y._24.NavMessages,
-                        type: y._25.Inherit
+                    }, a.createElement(y._24, {
+                        asset: y._25.NavMessages,
+                        type: y._26.Inherit
                     })), a.createElement(y.Q, {
                         fontSize: y.V.Size5,
                         color: y.K.Overlay
@@ -449,14 +449,14 @@ webpackJsonp([67], {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail")))
                 }, t.prototype.renderErrorSending = function() {
-                    return a.createElement(y._33, {
+                    return a.createElement(y._35, {
                         className: "verify-email-bar verify-email-bar--error",
                         display: y.R.Flex,
                         justifyContent: y._7.Center,
                         alignItems: y.c.Center,
                         elevation: 1,
                         padding: 1
-                    }, a.createElement(y._33, {
+                    }, a.createElement(y._35, {
                         display: y.R.Flex,
                         alignItems: y.c.Center,
                         margin: {
@@ -466,15 +466,15 @@ webpackJsonp([67], {
                             right: .5
                         },
                         color: y.K.Overlay
-                    }, a.createElement(y._23, {
-                        asset: y._24.DeadGlitch,
-                        type: y._25.Inherit
+                    }, a.createElement(y._24, {
+                        asset: y._25.DeadGlitch,
+                        type: y._26.Inherit
                     })), a.createElement(y.Q, {
                         fontSize: y.V.Size5,
                         color: y.K.Overlay
                     }, Object(c.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
                         email: this.props.data.currentUser.email
-                    }, "VerifyEmail")), a.createElement(y._33, {
+                    }, "VerifyEmail")), a.createElement(y._35, {
                         position: y._15.Absolute,
                         attachRight: !0,
                         margin: {
@@ -609,4 +609,4 @@ webpackJsonp([67], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-e4d914990309c8e513d85ce141219e1f.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-5535faffce890c54d5286903c374b19a.js.map

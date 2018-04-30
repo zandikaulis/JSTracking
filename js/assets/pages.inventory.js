@@ -30,7 +30,7 @@ webpackJsonp([65], {
                             }
                         }, d.createElement(k.k, {
                             ratio: k.l.Aspect1x1
-                        }, d.createElement(k._33, {
+                        }, d.createElement(k._35, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: k.R.Flex,
@@ -44,7 +44,7 @@ webpackJsonp([65], {
                             title: e.title,
                             alt: e.title
                         })))), d.createElement(k.Q, {
-                            type: k._47.Strong
+                            type: k._49.Strong
                         }, e.title))
                     }, t
                 }
@@ -69,16 +69,16 @@ webpackJsonp([65], {
                             right: 1
                         }
                     }, d.createElement(k.Q, {
-                        type: k._47.H3
+                        type: k._49.H3
                     }, Object(c.d)("Badges from Crates", "BadgesList"))), d.createElement(k.Q, {
-                        type: k._47.H3,
+                        type: k._49.H3,
                         color: k.K.Alt2
                     }, Object(c.e)(e.length))), d.createElement(k._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(k.Q, null, Object(c.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), d.createElement(k._53, {
-                        childWidth: k._54.Small,
+                    }, d.createElement(k.Q, null, Object(c.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), d.createElement(k._55, {
+                        childWidth: k._56.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
@@ -99,7 +99,7 @@ webpackJsonp([65], {
                             "data-open-url": e.openURL
                         }, d.createElement(k.k, {
                             ratio: k.l.Aspect1x1
-                        }, d.createElement(k._33, {
+                        }, d.createElement(k._35, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: k.R.Flex,
@@ -145,12 +145,12 @@ webpackJsonp([65], {
                             right: 1
                         }
                     }, d.createElement(k.Q, {
-                        type: k._47.H3
+                        type: k._49.H3
                     }, Object(c.d)("Twitch Crates", "CratesList"))), d.createElement(k.Q, {
-                        type: k._47.H3,
+                        type: k._49.H3,
                         color: k.K.Alt2
-                    }, Object(c.e)(e.length))), d.createElement(k._53, {
-                        childWidth: k._54.Small,
+                    }, Object(c.e)(e.length))), d.createElement(k._55, {
+                        childWidth: k._56.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
@@ -179,7 +179,7 @@ webpackJsonp([65], {
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(k._33, {
+                        }, d.createElement(k._35, {
                             display: k.R.Flex,
                             alignItems: k.c.Center,
                             justifyContent: k._7.Center,
@@ -191,7 +191,7 @@ webpackJsonp([65], {
                             alt: Object(c.d)("Drop image for {gameName}", {
                                 gameName: n
                             }, "DropsListPresentation")
-                        }), d.createElement(k._33, {
+                        }), d.createElement(k._35, {
                             position: k._15.Absolute,
                             attachBottom: !0,
                             attachRight: !0,
@@ -205,7 +205,7 @@ webpackJsonp([65], {
                                 gameName: n
                             }, "DropsListPresentation")
                         }, e.count))), d.createElement(k.Q, {
-                            type: k._47.Strong
+                            type: k._49.Strong
                         }, n))
                     }, t
                 }
@@ -242,16 +242,16 @@ webpackJsonp([65], {
                             right: 1
                         }
                     }, d.createElement(k.Q, {
-                        type: k._47.H3
+                        type: k._49.H3
                     }, Object(c.d)("Drops", "DropsList"))), d.createElement(k.Q, {
-                        type: k._47.H3,
+                        type: k._49.H3,
                         color: k.K.Alt2
                     }, Object(c.e)(t.length))), d.createElement(k._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(k.Q, null, this.getDropsDescription(t))), d.createElement(k._53, {
-                        childWidth: k._54.Small,
+                    }, d.createElement(k.Q, null, this.getDropsDescription(t))), d.createElement(k._55, {
+                        childWidth: k._56.Small,
                         noGrow: !0
                     }, i))
                 }, t.prototype.postRender = function() {
@@ -273,7 +273,7 @@ webpackJsonp([65], {
                             }
                         }, d.createElement(k.k, {
                             ratio: k.l.Aspect1x1
-                        }, d.createElement(k._33, {
+                        }, d.createElement(k._35, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: k.R.Flex,
@@ -287,7 +287,7 @@ webpackJsonp([65], {
                             title: t.displayName,
                             alt: t.displayName
                         })))), d.createElement(k.Q, {
-                            type: k._47.Strong
+                            type: k._49.Strong
                         }, t.displayName))
                     }, t
                 }
@@ -324,16 +324,16 @@ webpackJsonp([65], {
                             right: 1
                         }
                     }, d.createElement(k.Q, {
-                        type: k._47.H3
+                        type: k._49.H3
                     }, Object(c.d)("Emotes from Crates", "EmoticonsList"))), d.createElement(k.Q, {
-                        type: k._47.H3,
+                        type: k._49.H3,
                         color: k.K.Alt2
                     }, Object(c.e)(t.length))), d.createElement(k._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(k.Q, null, Object(c.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), d.createElement(k._53, {
-                        childWidth: k._54.Small,
+                    }, d.createElement(k.Q, null, Object(c.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), d.createElement(k._55, {
+                        childWidth: k._56.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
@@ -351,7 +351,7 @@ webpackJsonp([65], {
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
                     var e = Object(c.d)("Inventory", "InventoryTitleBar");
-                    if (this.props.loading) return d.createElement(k._33, {
+                    if (this.props.loading) return d.createElement(k._35, {
                         className: "title-bar",
                         display: k.R.Flex,
                         borderBottom: !0,
@@ -361,7 +361,7 @@ webpackJsonp([65], {
                     }, d.createElement(k._8, {
                         flexGrow: 1
                     }, d.createElement(k.Q, {
-                        type: k._47.H2
+                        type: k._49.H2
                     }, e)), d.createElement(k._8, {
                         display: k.R.Flex,
                         margin: {
@@ -392,7 +392,7 @@ webpackJsonp([65], {
                                 withText: !0
                             })
                         }, "InventoryTitleBar");
-                    return d.createElement(k._33, {
+                    return d.createElement(k._35, {
                         className: "title-bar",
                         display: k.R.Flex,
                         borderBottom: !0,
@@ -402,7 +402,7 @@ webpackJsonp([65], {
                     }, d.createElement(k._8, {
                         flexGrow: 1
                     }, d.createElement(k.Q, {
-                        type: k._47.H2
+                        type: k._49.H2
                     }, e)), d.createElement(k._8, {
                         display: k.R.Flex,
                         margin: {
@@ -971,4 +971,4 @@ webpackJsonp([65], {
         i.definitions = i.definitions.concat(r(n("UP6l").definitions)), i.definitions = i.definitions.concat(r(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-d39ec6af0b2d31b7bff2885ebdc69995.js.map
+//# sourceMappingURL=pages.inventory-0fe037963a4f21f1df11321ed0d7f323.js.map

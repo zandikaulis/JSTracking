@@ -1,4 +1,4 @@
-webpackJsonp([104], {
+webpackJsonp([107], {
     "448H": function(e, n) {
         var t = {
             kind: "Document",
@@ -1107,7 +1107,7 @@ webpackJsonp([104], {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(u._44, {
+                    }, r.createElement(u._46, {
                         disabled: this.state.inFlight || this.state.successTimeout > 0,
                         onChange: this.handleChange,
                         placeholder: Object(s.d)("It would help me if this page...", "DashboardFeedbackForm"),
@@ -1177,7 +1177,7 @@ webpackJsonp([104], {
                         page: this.props.page,
                         onClose: this.unselectFeedbackForm,
                         key: 0
-                    }) : r.createElement(u._33, {
+                    }) : r.createElement(u._35, {
                         padding: {
                             top: .5,
                             bottom: .5
@@ -1199,14 +1199,14 @@ webpackJsonp([104], {
                             y: .5,
                             x: 1
                         }
-                    }, r.createElement(u.Q, null, Object(s.d)("Send Feedback", "DashboardHelpMenu"))))), r.createElement(u._33, {
+                    }, r.createElement(u.Q, null, Object(s.d)("Send Feedback", "DashboardHelpMenu"))))), r.createElement(u._35, {
                         className: "help-menu",
                         position: u._15.Absolute,
                         margin: {
                             bottom: 2,
                             right: 2
                         },
-                        zIndex: u._60.Above,
+                        zIndex: u._62.Above,
                         background: u.n.Overlay,
                         elevation: 3,
                         attachBottom: !0,
@@ -1214,15 +1214,15 @@ webpackJsonp([104], {
                     }, r.createElement(o.a, {
                         onToggle: this.handleToggle,
                         tooltipProps: {
-                            align: u._51.Right,
-                            direction: u._52.Top,
+                            align: u._53.Right,
+                            direction: u._54.Top,
                             label: Object(s.d)("Help & Feedback", "DashboardHelpMenu"),
                             offsetX: "6px",
                             offsetY: "10px"
                         }
                     }, r.createElement(u.w, {
                         ariaLabel: Object(s.d)("Feedback", "DashboardHelpMenu"),
-                        icon: u._24.QuestionMark,
+                        icon: u._25.QuestionMark,
                         "data-a-target": "help-button",
                         overlay: !0
                     }), r.createElement(u.q, {
@@ -2690,10 +2690,10 @@ webpackJsonp([104], {
                 var n = e.activations,
                     t = e.onConfirm;
                 return l.createElement(u._8, null, l.createElement(u.Q, {
-                    type: u._47.H5
+                    type: u._49.H5
                 }, Object(m.d)("{count, plural, one {Extension is now Active!} other {Extensions are now Active!}}", {
                     count: n.length
-                }, "ExtensionActivatedModal")), l.createElement(u._33, {
+                }, "ExtensionActivatedModal")), l.createElement(u._35, {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: {
@@ -2710,12 +2710,12 @@ webpackJsonp([104], {
                     }, Object(m.d)("The extension {extensionName} is now active on slot {anchorSlot}", {
                         extensionName: l.createElement(u.Q, {
                             bold: !0,
-                            type: u._47.Span
+                            type: u._49.Span
                         }, n),
                         anchorSlot: l.createElement(u.Q, {
                             bold: !0,
-                            type: u._47.Span,
-                            transform: u._46.Uppercase
+                            type: u._49.Span,
+                            transform: u._48.Uppercase
                         }, t)
                     }, "ExtensionActivatedModal"))
                 })), l.createElement(u._8, {
@@ -2893,8 +2893,8 @@ webpackJsonp([104], {
                 return i.__extends(n, e), n.prototype.render = function() {
                     var e = this.props.onCancel;
                     return l.createElement(u._8, null, l.createElement(u.Q, {
-                        type: u._47.H5
-                    }, Object(m.d)("Activate a Component Extension", "ExtensionComponentActivateModal")), l.createElement(u._33, {
+                        type: u._49.H5
+                    }, Object(m.d)("Activate a Component Extension", "ExtensionComponentActivateModal")), l.createElement(u._35, {
                         borderTop: !0,
                         padding: {
                             y: 1
@@ -2902,7 +2902,7 @@ webpackJsonp([104], {
                         margin: {
                             y: 1
                         }
-                    }, this.renderPositionPreview()), l.createElement(u._33, {
+                    }, this.renderPositionPreview()), l.createElement(u._35, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -2963,8 +2963,8 @@ webpackJsonp([104], {
                     t = e.onCancel,
                     i = e.onConfirm;
                 return l.createElement(u._8, null, l.createElement(u.Q, {
-                    type: u._47.H5
-                }, Object(m.d)("Are you sure you want to deactivate?", "ExtensionDeactivateMonetizedModal")), l.createElement(u._33, {
+                    type: u._49.H5
+                }, Object(m.d)("Are you sure you want to deactivate?", "ExtensionDeactivateMonetizedModal")), l.createElement(u._35, {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: {
@@ -2976,14 +2976,14 @@ webpackJsonp([104], {
                 }, l.createElement(u.Q, null, Object(m.d)("You are deactivating {extensionName} ", {
                     extensionName: l.createElement(u.Q, {
                         bold: !0,
-                        type: u._47.P
+                        type: u._49.P
                     }, n)
                 }, "ExtensionDeactivateMonetizedModal")), l.createElement(u._8, {
                     padding: {
                         top: 1
                     }
                 }, l.createElement(u.Q, {
-                    type: u._47.P
+                    type: u._49.P
                 }, Object(m.d)("This extension enables in-extension purchases. If you deactivate this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reactivate it. Are you sure you want to deactivate?", "ExtensionDeactivateMonetizedModal")))), l.createElement(u._8, {
                     display: u.R.Flex,
                     justifyContent: u._7.Center
@@ -3039,8 +3039,8 @@ webpackJsonp([104], {
                     a = e.onCancel,
                     r = e.onConfirm;
                 return l.createElement(u._8, null, l.createElement(u.Q, {
-                    type: u._47.H5
-                }, Object(m.d)("You are replacing an active extension", "ExtensionReplacementModal")), l.createElement(u._33, {
+                    type: u._49.H5
+                }, Object(m.d)("You are replacing an active extension", "ExtensionReplacementModal")), l.createElement(u._35, {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: {
@@ -3056,15 +3056,15 @@ webpackJsonp([104], {
                 }, l.createElement(u.Q, null, Object(m.d)("{extensionName} on {anchorSlot}", {
                     extensionName: l.createElement(u.Q, {
                         bold: !0,
-                        type: u._47.Span
+                        type: u._49.Span
                     }, n),
                     anchorSlot: l.createElement(u.Q, {
                         bold: !0,
-                        type: u._47.Span,
-                        transform: u._46.Uppercase
+                        type: u._49.Span,
+                        transform: u._48.Uppercase
                     }, t)
                 }, "ExtensionReplacementModal"))), l.createElement(u.Q, {
-                    type: u._47.P
+                    type: u._49.P
                 }, i ? Object(m.d)("This extension enables in-extension purchases. If you replace this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reactivate it. Are you sure you want to proceed?", "ExtensionReplacementModal") : Object(m.d)("Are you sure you want to proceed?", "ExtensionReplacementModal"))), l.createElement(u._8, {
                     display: u.R.Flex,
                     justifyContent: u._7.Center
@@ -3203,21 +3203,21 @@ webpackJsonp([104], {
                     }, n.renderMonetizableMessage = function() {
                         var e = Object(m.d)("In-Extension Purchases", "AvailableExtensionCard");
                         return l.createElement(u._8, {
-                            textAlign: u._43.Center
+                            textAlign: u._45.Center
                         }, l.createElement(G.a, null, l.createElement("a", null, e), l.createElement(u.q, {
                             direction: u.r.LeftCenter,
                             size: u.s.Large
                         }, l.createElement(u._8, {
                             padding: 1,
-                            textAlign: u._43.Left
+                            textAlign: u._45.Left
                         }, l.createElement(u.Q, {
-                            type: u._47.H4
+                            type: u._49.H4
                         }, e), l.createElement(u._8, {
                             padding: {
                                 top: .5
                             }
                         }, l.createElement(u.Q, {
-                            type: u._47.P
+                            type: u._49.P
                         }, Object(m.d)("This extension enables the sale of digital goods. You may be eligible for a revenue share.", "AvailableExtensionCard"), l.createElement(u._2, {
                             padding: {
                                 x: .5
@@ -3230,31 +3230,31 @@ webpackJsonp([104], {
                     }, n.renderBitsMessage = function() {
                         var e = Object(m.d)("In-Extension Bits", "AvailableExtensionCard");
                         return l.createElement(u._8, {
-                            textAlign: u._43.Center
+                            textAlign: u._45.Center
                         }, l.createElement(G.a, null, l.createElement("a", null, e), l.createElement(u.q, {
                             direction: u.r.LeftCenter,
                             size: u.s.Large
                         }, l.createElement(u._8, {
                             padding: 1,
-                            textAlign: u._43.Left
+                            textAlign: u._45.Left
                         }, l.createElement(u._8, {
                             display: u.R.Flex,
                             alignItems: u.c.Center
-                        }, l.createElement(u._23, {
-                            asset: u._24.Bits
+                        }, l.createElement(u._24, {
+                            asset: u._25.Bits
                         }), l.createElement(u._8, {
                             display: u.R.InlineBlock,
                             padding: {
                                 left: .5
                             }
                         }, l.createElement(u.Q, {
-                            type: u._47.H4
+                            type: u._49.H4
                         }, e))), l.createElement(u._8, {
                             padding: {
                                 top: .5
                             }
                         }, l.createElement(u.Q, {
-                            type: u._47.P
+                            type: u._49.P
                         }, Object(m.d)("This extension enables the use of Bits. For each eligible use of Bits in this extension, subject to Twitch’s legal terms and policies, the extension developer and the streamer will receive 20% and 80%, respectively, of 1 U.S. cent per Bit. You as a streamer may be eligible for a revenue share if you are a partner or an affiliate.", "AvailableExtensionCard"), l.createElement(u._8, null, l.createElement("a", {
                             rel: "noopener",
                             target: "_blank",
@@ -3278,9 +3278,9 @@ webpackJsonp([104], {
                         r = Object(m.d)("Install", "AvailableExtensionCard");
                     if (a.state === T.c.Released && a.isBitsEnabled && !i) {
                         var s = Object(m.d)("This extension can only be used by Partner or Affiliate channels that have Bits enabled.", "AvailableExtensionCard");
-                        e = l.createElement(u._50, {
+                        e = l.createElement(u._52, {
                             label: s,
-                            direction: u._52.Left
+                            direction: u._54.Left
                         }, l.createElement(u.v, {
                             onClick: this.onInstall,
                             disabled: !0
@@ -3288,7 +3288,7 @@ webpackJsonp([104], {
                     } else e = l.createElement(u.v, {
                         onClick: this.onInstall
                     }, r);
-                    return l.createElement(u._33, {
+                    return l.createElement(u._35, {
                         display: u.R.Flex,
                         flexWrap: u.U.NoWrap,
                         justifyContent: u._7.Between,
@@ -3310,15 +3310,15 @@ webpackJsonp([104], {
                     }), l.createElement(u.D, null, l.createElement(u._8, {
                         padding: 1
                     }, l.createElement(u.Q, {
-                        type: u._47.H4
+                        type: u._49.H4
                     }, a.name), l.createElement(u.Q, {
-                        type: u._47.Span,
+                        type: u._49.Span,
                         color: u.K.Alt2
                     }, a.authorName), l.createElement(u.Q, {
-                        type: u._47.P
+                        type: u._49.P
                     }, a.summary), this.renderAnchorTypePills(), a.state !== T.c.Released && l.createElement(J, {
                         state: a.state
-                    })))), l.createElement(u._33, {
+                    })))), l.createElement(u._35, {
                         borderLeft: !0,
                         display: u.R.Flex,
                         alignItems: u.c.Center,
@@ -3374,7 +3374,7 @@ webpackJsonp([104], {
                         d = e.onInstall,
                         c = e.searchQuery,
                         v = e.showReleasedOnly;
-                    return l.createElement(u._33, {
+                    return l.createElement(u._35, {
                         border: !0,
                         background: u.n.Alt,
                         padding: 1,
@@ -3403,10 +3403,10 @@ webpackJsonp([104], {
                             right: 1
                         }
                     }, l.createElement(u.Q, {
-                        type: u._47.H4,
+                        type: u._49.H4,
                         noWrap: !0
                     }, Object(m.d)("Available Extensions", "AvailableExtensionList"))), l.createElement(u.Q, {
-                        type: u._47.Span,
+                        type: u._49.Span,
                         color: u.K.Alt2,
                         noWrap: !0
                     }, Object(m.d)("(Sorted by Popularity)", "AvailableExtensionList"))), t && l.createElement(u.J, {
@@ -3415,7 +3415,7 @@ webpackJsonp([104], {
                         checked: v
                     })), l.createElement(u._8, {
                         flexGrow: 1
-                    }, l.createElement(u._26, {
+                    }, l.createElement(u._27, {
                         placeholder: Object(m.d)("Filter extensions", "AvailableExtensionList"),
                         value: this.props.searchQuery,
                         onChange: this.onSearchInputChange
@@ -3445,7 +3445,7 @@ webpackJsonp([104], {
                         enabled: n(),
                         loadMore: o
                     }), !s && 0 === i.length && l.createElement(u.Q, {
-                        type: u._47.P
+                        type: u._49.P
                     }, Object(m.d)("No extensions are available to install.", "AvailableExtensionList"))))
                 }, n
             }(l.Component),
@@ -3466,7 +3466,7 @@ webpackJsonp([104], {
                     }, t
                 }
                 return i.__extends(n, e), n.prototype.render = function() {
-                    return this.state.enabled ? this.state.dismissed ? null : l.createElement(u._33, {
+                    return this.state.enabled ? this.state.dismissed ? null : l.createElement(u._35, {
                         alignItems: u.c.Center,
                         "data-test-selector": "announcement-banner",
                         display: u.R.Flex,
@@ -3486,7 +3486,7 @@ webpackJsonp([104], {
                     }, l.createElement(u.w, {
                         ariaLabel: "close",
                         "data-test-selector": "announcement-banner-dismiss",
-                        icon: u._24.Close,
+                        icon: u._25.Close,
                         onClick: this.onDismiss
                     })), this.props.children) : null
                 }, n
@@ -3497,7 +3497,7 @@ webpackJsonp([104], {
                     enabledDynamicKey: "extensions_bits_banner_enabled"
                 }, l.createElement(u.Q, {
                     fontSize: u.V.Size5,
-                    type: u._47.P
+                    type: u._49.P
                 }, Object(m.d)("Your viewers can now use Bits in Extensions to power amazing new experiences on Twitch. Use Bits-enabled Extensions to keep your audience engaged and grow your revenue.", "BitsAnnouncementBanner"), " ", l.createElement("a", {
                     target: "_blank",
                     rel: "noopener",
@@ -3528,7 +3528,7 @@ webpackJsonp([104], {
                             d.length && r.push(d)
                         }
                         return t.activationConfig.state === T.a.Active && r.push(n.renderDeactivate()), r.reduce(function(e, n, t) {
-                            var i = l.createElement(u._33, {
+                            var i = l.createElement(u._35, {
                                 key: t,
                                 borderTop: !0,
                                 margin: {
@@ -3638,7 +3638,7 @@ webpackJsonp([104], {
                         size: u.s.Medium,
                         offsetY: "-0.1rem",
                         noTail: !0
-                    }, l.createElement(u._33, {
+                    }, l.createElement(u._35, {
                         color: u.K.Link,
                         padding: 1
                     }, this.renderAnchorOptions())))
@@ -3689,10 +3689,10 @@ webpackJsonp([104], {
                         to: Object(z.a)(t, n.extension)
                     }, l.createElement(u.w, {
                         ariaLabel: Object(m.d)("Configure", "InstalledExtensionActions"),
-                        icon: u._24.Gear
+                        icon: u._25.Gear
                     })), l.createElement(u.w, {
                         ariaLabel: Object(m.d)("Uninstall", "InstalledExtensionActions"),
-                        icon: u._24.Trash,
+                        icon: u._25.Trash,
                         onClick: this.onUninstall
                     })))
                 }, n
@@ -3740,10 +3740,10 @@ webpackJsonp([104], {
                         s = e.onCreatePanelAndActivate,
                         o = e.onDeactivate,
                         d = n.extension;
-                    return l.createElement(u._33, {
+                    return l.createElement(u._35, {
                         background: u.n.Base,
                         border: !0
-                    }, l.createElement(u._33, {
+                    }, l.createElement(u._35, {
                         padding: 1,
                         borderBottom: !0
                     }, l.createElement(u.C, {
@@ -3760,7 +3760,7 @@ webpackJsonp([104], {
                     }, l.createElement(q.a, {
                         to: Object(z.c)(d)
                     }, l.createElement(u.Q, {
-                        type: u._47.H5
+                        type: u._49.H5
                     }, d.name)), this.renderAnchorTypePills(), d.state !== T.c.Released && l.createElement(J, {
                         state: d.state
                     }))))), l.createElement(re, {
@@ -3784,7 +3784,7 @@ webpackJsonp([104], {
                         bottom: 1
                     }
                 }, l.createElement(u.Q, {
-                    type: u._47.H4,
+                    type: u._49.H4,
                     noWrap: !0
                 }, Object(m.d)("Installed Extensions", "InstalledExtensionList"))), e.installedExtensions.map(function(n) {
                     return l.createElement(u._8, {
@@ -3803,7 +3803,7 @@ webpackJsonp([104], {
                         onUninstall: e.onUninstall
                     }))
                 }), !e.isLoading && 0 === e.installedExtensions.length && l.createElement(u.Q, {
-                    type: u._47.P
+                    type: u._49.P
                 }, Object(m.d)("No installed extensions.", "InstalledExtensionList")))
             };
         oe.displayName = "InstalledExtensionList";
@@ -3813,7 +3813,7 @@ webpackJsonp([104], {
                 enabledDynamicKey: "extensions_mobile_banner_enabled"
             }, l.createElement(u.Q, {
                 fontSize: u.V.Size5,
-                type: u._47.P
+                type: u._49.P
             }, Object(m.d)("Extensions are now available on mobile. See which Extensions are mobile-ready in the manager below.", "MobileExtensionsBanner"), " ", l.createElement("a", {
                 target: "_blank",
                 rel: "noopener",
@@ -4264,7 +4264,7 @@ webpackJsonp([104], {
                         c = function(e) {
                             return !(!e || e.loading || e.error || !e.currentUser.roles.isAffiliate && !e.currentUser.roles.isPartner)
                         }(i);
-                    return l.createElement(L.b, null, l.createElement(u._33, {
+                    return l.createElement(L.b, null, l.createElement(u._35, {
                         padding: 2,
                         background: u.n.Alt
                     }, l.createElement(u._8, {
@@ -4272,14 +4272,14 @@ webpackJsonp([104], {
                             bottom: 1
                         }
                     }, l.createElement(u.Q, {
-                        type: u._47.H3
+                        type: u._49.H3
                     }, Object(m.d)("Extensions", "DashboardExtensionsManagerPage"))), l.createElement(le, null), c && l.createElement(te, null), l.createElement(u._8, {
                         display: u.R.Flex,
                         flexWrap: u.U.NoWrap,
                         padding: {
                             top: 1
                         }
-                    }, l.createElement(u._33, {
+                    }, l.createElement(u._35, {
                         className: "installed-extension-list-container",
                         border: !0,
                         display: u.R.Flex,
@@ -4391,4 +4391,4 @@ webpackJsonp([104], {
         })
     }
 });
-//# sourceMappingURL=pages.extension-manager-567113b4f5a81878409d40268d47421d.js.map
+//# sourceMappingURL=pages.extension-manager-40d951597e0eef4e054d91ea91a2c47b.js.map
