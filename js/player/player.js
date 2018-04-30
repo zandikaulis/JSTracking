@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".beebd3bd699482ad1c1c.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".63b94260523d8114fee7.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -25849,8 +25849,10 @@
                 }, {
                     key: "handleToggleVisibilityClick",
                     value: function() {
-                        var e = this.props.installation.id;
-                        this.props.onVisibilityToggle(e)
+                        var e = this.props.installation;
+                        this.props.onVisibilityToggle(e.id), this.props.trackEvent("extension_viewer_settings_toggle", e, {
+                            visibility_state: e.playerState.isHidden ? "off" : "on"
+                        })
                     }
                 }, {
                     key: "handleManageAccessClick",
@@ -25861,7 +25863,7 @@
                     key: "handleReportExtensionClick",
                     value: function() {
                         var e = this.props.installation;
-                        this.props.onMenuTransition(A.g), this.props.trackEvent("extension_ui_interaction_client", e.extension, {
+                        this.props.onMenuTransition(A.g), this.props.trackEvent("extension_ui_interaction_client", e, {
                             extension_interaction: "report"
                         })
                     }
@@ -25993,7 +25995,7 @@
                         var e = this.props.installation;
                         this.props.onIdentityToggle(e);
                         var t = e.playerState.isUserIdentityLinked ? "revoke" : "grant";
-                        this.props.trackEvent("extension_ui_interaction_client", e.extension, {
+                        this.props.trackEvent("extension_ui_interaction_client", e, {
                             extension_interaction: t
                         })
                     }
@@ -26446,7 +26448,7 @@
                 }, {
                     key: "_handleExtensionClick",
                     value: function(e) {
-                        this.props.handleMenuTransition(A.b), this.props.trackEvent("extension_setting_click", e.extension)
+                        this.props.handleMenuTransition(A.b), this.props.trackEvent("extension_setting_click", e)
                     }
                 }, {
                     key: "_onActionComplete",
@@ -28352,7 +28354,7 @@
                 function t() {
                     r(this, t);
                     var e = i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e._boundCreateExtensionHoverHandler = e._createHoverHandler.bind(e), e._boundOnClick = e._onClick.bind(e), e._boundHandleMenuTransition = e._handleMenuTransition.bind(e), e._boundHandleWindowBlur = e.handleWindowBlur.bind(e), e._boundHandleMenuClose = e._handleMenuClose.bind(e), e
+                    return e._boundCreateExtensionHoverHandler = e._createHoverHandler.bind(e), e._boundOnClick = e._onClick.bind(e), e._boundHandleMenuTransition = e._handleMenuTransition.bind(e), e._boundHandleWindowBlur = e.handleWindowBlur.bind(e), e._boundHandleMenuDismiss = e._handleMenuDismiss.bind(e), e
                 }
                 return o(t, e), V(t, [{
                     key: "componentDidMount",
@@ -28377,10 +28379,12 @@
                 }, {
                     key: "trackEvent",
                     value: function(e, t, n) {
+                        var r = t.activationConfig,
+                            i = t.extension;
                         this.props.trackEvent(e, j()(n, {
-                            extension_id: t.id,
-                            extension_version: t.version,
-                            extension_anchor: t.anchor,
+                            extension_id: i.id,
+                            extension_version: i.version,
+                            extension_anchor: r.anchor,
                             extension_mode: "viewer",
                             locale: this.props.locale,
                             login_id: this.props.loginId,
@@ -28416,7 +28420,7 @@
                                 trackEvent: this.trackEvent,
                                 windowObj: o,
                                 handleMenuTransition: this._boundHandleMenuTransition,
-                                closeExtensionMenu: this._boundHandleMenuClose
+                                closeExtensionMenu: this._boundHandleMenuDismiss
                             }) : null;
                         return w.createElement("div", {
                             className: l,
@@ -28439,16 +28443,30 @@
                         }.bind(this)
                     }
                 }, {
+                    key: "_openMenu",
+                    value: function() {
+                        var e = this.props,
+                            t = e.installation;
+                        (0, e.onMenuTransition)(t.activationConfig.slot, F.b), this.trackEvent("extension_viewer_settings_open", t)
+                    }
+                }, {
+                    key: "_closeMenu",
+                    value: function() {
+                        var e = this.props,
+                            t = e.installation;
+                        (0, e.closeExtensionMenu)(), this.trackEvent("extension_viewer_settings_close", t)
+                    }
+                }, {
                     key: "_onClick",
                     value: function() {
                         var e = this.props,
                             t = e.menuState,
                             n = e.installation,
                             r = n.activationConfig.slot;
-                        t.extensionSlot === r ? this.props.closeExtensionMenu() : this.props.onMenuTransition(r, F.b)
+                        t.extensionSlot === r ? this._closeMenu() : this._openMenu()
                     }
                 }, {
-                    key: "_handleMenuClose",
+                    key: "_handleMenuDismiss",
                     value: function() {
                         var e = this.props,
                             t = e.closeExtensionMenu,
@@ -30522,10 +30540,12 @@
                 }, {
                     key: "trackEvent",
                     value: function(e, t, n) {
+                        var r = t.activationConfig,
+                            i = t.extension;
                         this.props.trackEvent(e, Oe()(n, {
-                            extension_id: t.id,
-                            extension_version: t.version,
-                            extension_anchor: t.anchor,
+                            extension_id: i.id,
+                            extension_version: i.version,
+                            extension_anchor: r.anchor,
                             extension_mode: "viewer",
                             locale: this.props.locale,
                             login_id: this.props.loginId,
@@ -31585,7 +31605,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.04.30-200045+8d85f5e1edd1b1e090d975822f8c0316a6b946b2",
+                    app_version: "2018.04.30-230009+bca54d6d378178cdda2e17eba32b69c665e87618",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
