@@ -93,7 +93,7 @@ window.__twilightSettings = {
     "twitch_prime_fortnite_offer_id": "d2b1726e-ebd9-05a2-95ee-9d37fcfd0a8a",
     "twitch_prime_fortnite_signup_url": "https://twitch.amazon.com/prime/country?ingress=epic-fortnite",
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
-    "update_manager_enabled": true,
+    "update_manager_enabled": false,
     "viewer_milestones_enabled": true,
     "withgraphql_retry_delay_backoff_multiplier": 3,
     "withgraphql_retry_enabled": true,
@@ -822,6 +822,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "off"
+            }]
+        },
+        "f3920cff-ef57-46c9-8dd9-b4f145acf6e5": {
+            "name": "twilight_discovery_frontpage_mvp",
+            "v": 3626,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant"
             }]
         },
         "f7249378-b153-4612-bd09-972fbb0b0b7e": {
