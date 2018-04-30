@@ -26082,8 +26082,8 @@ webpackJsonp([36], {
         ! function(e) {
             e.Disable = "disable", e.Enable = "enable"
         }(ae || (ae = {}));
-        n("/Urv");
-        var Ne = function(e) {
+        var Ne = n("TZqo"),
+            Ce = (n("/Urv"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onLogoutClick = function(e) {
@@ -26322,7 +26322,8 @@ webpackJsonp([36], {
                         height: 18,
                         width: 18
                     })), d.createElement(W.Q, null, Object(u.d)("Friends", "UserMenuDropdown")))), d.createElement(W._6, {
-                        linkTo: "/messages",
+                        targetBlank: !Object(Ne.a)(),
+                        linkTo: "/messages/inbox",
                         "data-a-target": "inbox-dropdown-link"
                     }, d.createElement(W._35, {
                         color: W.K.Alt,
@@ -26457,10 +26458,10 @@ webpackJsonp([36], {
                         width: 18
                     })), d.createElement(W.Q, null, Object(u.d)("Log Out", "UserMenuDropdown"))))))))
                 }, t = c.__decorate([Object(b.d)("UserMenuDropdown")], t)
-            }(d.Component),
-            Ce = n("jAYy"),
-            Te = n("94wQ"),
-            we = function(e) {
+            }(d.Component)),
+            Te = n("jAYy"),
+            we = n("94wQ"),
+            Oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.toggleShareActivity = function() {
@@ -26496,7 +26497,7 @@ webpackJsonp([36], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return d.createElement(Ne, {
+                    return d.createElement(Ce, {
                         data: this.props.data,
                         dropdownOpen: this.props.dropdownOpen,
                         toggleShareActivity: this.toggleShareActivity,
@@ -26505,15 +26506,15 @@ webpackJsonp([36], {
                         logout: this.props.logout,
                         theme: this.props.theme
                     })
-                }, t = c.__decorate([Object(h.a)(Ce, {
+                }, t = c.__decorate([Object(h.a)(Te, {
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
-                }), Object(h.a)(Te, {
+                }), Object(h.a)(we, {
                     name: "updateIsSharingActivity"
                 }), Object(me.a)(function(e) {
                     return {
-                        query: Ce,
+                        query: Te,
                         topic: e.data && e.data.currentUser ? Object(ve.n)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                         type: fe.PubsubMessageType.PresenceSettings,
@@ -26523,7 +26524,7 @@ webpackJsonp([36], {
                     }
                 })], t)
             }(d.Component);
-        var Oe = Object(i.b)(function(e) {
+        var Re = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
                     theme: Object(Se.a)(e)
@@ -26533,8 +26534,8 @@ webpackJsonp([36], {
                     changeTheme: _e.b,
                     logout: s.g
                 }, e)
-            })(we),
-            Re = (n("Q8Dy"), function(e) {
+            })(Oe),
+            xe = (n("Q8Dy"), function(e) {
                 return d.createElement(W._8, {
                     position: W._15.Relative,
                     display: W.R.Flex,
@@ -26620,8 +26621,8 @@ webpackJsonp([36], {
                     asset: W._25.GlyphArrDown
                 })))))))
             }),
-            xe = n("2Hj/"),
-            Ie = (n("nist"), function(e) {
+            Ie = n("2Hj/"),
+            De = (n("nist"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onCardClick = function() {
@@ -26696,7 +26697,7 @@ webpackJsonp([36], {
                         margin: {
                             right: .5
                         }
-                    }, d.createElement(xe.a, {
+                    }, d.createElement(Ie.a, {
                         availability: i
                     })), d.createElement(W._35, {
                         ellipsis: !0,
@@ -26706,7 +26707,7 @@ webpackJsonp([36], {
                         noWrap: !0,
                         "data-a-target": "online-status",
                         lineHeight: W._9.Heading
-                    }, this.props.data.currentUser && d.createElement(xe.b, {
+                    }, this.props.data.currentUser && d.createElement(Ie.b, {
                         activity: this.props.data.currentUser.activity,
                         availability: i === he.a.Offline ? he.a.Invisible : i
                     }))))), d.createElement(W._35, {
@@ -26720,8 +26721,8 @@ webpackJsonp([36], {
                     }))))))
                 }, t
             }(d.Component)),
-            De = n("9q8M"),
-            Fe = function(e) {
+            Fe = n("9q8M"),
+            Pe = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.isSettingNewSession = !1, n.onMenuCardClick = function() {
@@ -26781,9 +26782,9 @@ webpackJsonp([36], {
                             "top-nav-user-menu--dropdown-open": this.state.dropdownOpen
                         }),
                         t = null;
-                    return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(Re, {
+                    return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(xe, {
                         onMenuCardClick: this.onMenuCardClick
-                    }) : d.createElement(Ie, {
+                    }) : d.createElement(De, {
                         data: this.props.data,
                         onMenuCardClick: this.onMenuCardClick,
                         theme: this.props.theme
@@ -26796,14 +26797,14 @@ webpackJsonp([36], {
                     }, d.createElement(F.a, {
                         onClickOut: this.onClickOut,
                         className: e
-                    }, t, d.createElement(Oe, {
+                    }, t, d.createElement(Re, {
                         dropdownOpen: this.state.dropdownOpen
                     })))
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = c.__decorate([Object(h.a)(De), Object(me.a)(function(e) {
+                }, t = c.__decorate([Object(h.a)(Fe), Object(me.a)(function(e) {
                     return {
-                        query: De,
+                        query: Fe,
                         topic: e.data.currentUser ? Object(ve.n)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                         type: fe.PubsubMessageType.PresenceSettings,
@@ -26815,13 +26816,13 @@ webpackJsonp([36], {
                     topic: function(e) {
                         return e.data.currentUser ? Object(ve.n)(e.data.currentUser.id) : ""
                     },
-                    mapMessageTypesToProps: (Pe = {}, Pe[fe.PubsubMessageType.Presence] = "presence", Pe),
+                    mapMessageTypesToProps: (Ue = {}, Ue[fe.PubsubMessageType.Presence] = "presence", Ue),
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
                 }]), Object(b.d)("User")], t)
             }(d.Component);
-        var Pe, Ue = Object(i.b)(function(e) {
+        var Ue, je = Object(i.b)(function(e) {
                 return {
                     theme: Object(Se.a)(e),
                     firstPageLoaded: e.session.firstPageLoaded,
@@ -26832,10 +26833,10 @@ webpackJsonp([36], {
                     changeTheme: _e.b,
                     initialUserAvailabilitySet: ye.g
                 }, e)
-            })(Object(r.f)(Fe)),
-            je = n("8PKe"),
-            Le = n("p+06"),
-            Ae = (n("HTB+"), function(e) {
+            })(Object(r.f)(Pe)),
+            Le = n("8PKe"),
+            Ae = n("p+06"),
+            Me = (n("HTB+"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.state = {
@@ -26875,7 +26876,7 @@ webpackJsonp([36], {
                             },
                             alignSelf: W.d.Center,
                             flexWrap: W.U.NoWrap
-                        }, !e && d.createElement(je.c, null))
+                        }, !e && d.createElement(Le.c, null))
                     }, n.renderStoreLink = function() {
                         var e = !1;
                         if (n.props.data) {
@@ -27170,11 +27171,11 @@ webpackJsonp([36], {
                         flexWrap: W.U.NoWrap,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, this.props.isLoggedIn ? d.createElement(Ue, null) : d.createElement(ne.a, {
+                    }, this.props.isLoggedIn ? d.createElement(je, null) : d.createElement(ne.a, {
                         login: this.props.login,
                         signup: this.props.signup
                     })))))
-                }, t = c.__decorate([Object(h.a)(Le, {
+                }, t = c.__decorate([Object(h.a)(Ae, {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
@@ -27182,7 +27183,7 @@ webpackJsonp([36], {
                     autoReportInteractive: !0
                 })], t)
             }(d.Component));
-        var Me = Object(r.f)(Object(i.b)(function(e) {
+        var Be = Object(r.f)(Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(l.d)(e)
             }
@@ -27196,13 +27197,13 @@ webpackJsonp([36], {
                     return Object(s.h)(o.a.TopNavSignupButton)
                 }
             }, e)
-        })(Ae));
+        })(Me));
         n.d(t, !1, function() {
             return "5rem"
         }), n.d(t, !1, function() {
             return "9.5rem"
         }), n.d(t, "a", function() {
-            return Me
+            return Be
         })
     },
     TVUY: function(e, t) {
@@ -27409,6 +27410,14 @@ webpackJsonp([36], {
         e.exports = n
     },
     "TWH+": function(e, t) {},
+    TZqo: function(e, t, n) {
+        "use strict";
+        t.a = function() {
+            return i.b.get(r, !1)
+        };
+        var i = n("6sO2"),
+            r = "deprecated_messages_download_enabled"
+    },
     TeXj: function(e, t, n) {
         "use strict";
         t.b = function(e, t, n) {
@@ -41286,4 +41295,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.subs-fab098aef9d737c7ff6cd7508bd3388c.js.map
+//# sourceMappingURL=pages.subs-999edf919e7e4b86cc298e844245908c.js.map

@@ -221,10 +221,10 @@ webpackJsonp([69], {
             c = n("TToO"),
             u = n("GiK3"),
             d = n("6sO2"),
-            l = n("Y1tk"),
-            h = n.n(l),
+            h = n("Y1tk"),
+            l = n.n(h),
             g = n("Odds"),
-            _ = function(e) {
+            f = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.initiateDownload = function() {
@@ -242,146 +242,141 @@ webpackJsonp([69], {
                     }, Object(d.d)("Download", "FileDownload")))
                 }, t
             }(u.Component),
-            f = n("yWCw"),
+            _ = n("yWCw"),
             p = n("w9tK"),
-            m = n("9u8h"),
-            y = n("CSlQ"),
-            v = "deprecated_messages_download_enabled";
-
-        function w() {
-            return d.b.get(v, !1)
-        }
-        n("mdIJ");
-        var b = function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.state = {
-                    errorLoadingMessageHistory: !1,
-                    hasLoadedMessageHistory: !w()
-                }, t.fetchMessageHistory = function() {
-                    return c.__awaiter(t, void 0, void 0, function() {
-                        var e;
-                        return c.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return this.props.sessionUser ? [4, m.a.get("/kraken/users/" + this.props.sessionUser.id + "/messages")] : [2, null];
-                                case 1:
-                                    return 200 === (e = t.sent()).status ? this.setState({
-                                        errorLoadingMessageHistory: !1,
-                                        fileURL: e.body && e.body.url,
-                                        hasLoadedMessageHistory: !0
-                                    }) : this.setState({
-                                        errorLoadingMessageHistory: !0,
-                                        hasLoadedMessageHistory: !0
-                                    }), [2]
-                            }
+            y = n("9u8h"),
+            m = n("CSlQ"),
+            v = n("TZqo"),
+            w = (n("mdIJ"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        errorLoadingMessageHistory: !1,
+                        hasLoadedMessageHistory: !Object(v.a)()
+                    }, t.fetchMessageHistory = function() {
+                        return c.__awaiter(t, void 0, void 0, function() {
+                            var e;
+                            return c.__generator(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        return this.props.sessionUser ? [4, y.a.get("/kraken/users/" + this.props.sessionUser.id + "/messages")] : [2, null];
+                                    case 1:
+                                        return 200 === (e = t.sent()).status ? this.setState({
+                                            errorLoadingMessageHistory: !1,
+                                            fileURL: e.body && e.body.url,
+                                            hasLoadedMessageHistory: !0
+                                        }) : this.setState({
+                                            errorLoadingMessageHistory: !0,
+                                            hasLoadedMessageHistory: !0
+                                        }), [2]
+                                }
+                            })
                         })
-                    })
-                }, t
-            }
-            return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                this.props.sessionUser && w() ? this.fetchMessageHistory() : this.props.latencyTracking.reportInteractive()
-            }, t.prototype.componentDidUpdate = function(e, t) {
-                this.state.hasLoadedMessageHistory && !t.hasLoadedMessageHistory && this.props.latencyTracking.reportInteractive()
-            }, t.prototype.render = function() {
-                return void 0 === this.props.sessionUser ? (this.props.login(), u.createElement(f.a, {
-                    message: Object(d.d)("You must be logged in to view this page", "MessagesPage")
-                })) : this.state.errorLoadingMessageHistory ? u.createElement(f.a, {
-                    message: Object(d.d)("Oops, something went wrong.", "MessagesPage")
-                }) : u.createElement(g._8, {
-                    className: "messages-page",
-                    alignItems: g.c.Center,
-                    display: g.R.Flex,
-                    fullWidth: !0,
-                    fullHeight: !0,
-                    justifyContent: g._7.Center,
-                    position: g._15.Absolute
-                }, u.createElement(g._8, {
-                    alignItems: g.c.Center,
-                    className: "messages-page__body",
-                    display: g.R.Flex,
-                    flexDirection: g.T.Column
-                }, !this.state.hasLoadedMessageHistory && this.renderPlaceholder(), this.state.hasLoadedMessageHistory && this.renderLoadedBody()))
-            }, t.prototype.renderPlaceholder = function() {
-                return u.createElement(u.Fragment, null, u.createElement(g._8, {
-                    justifyContent: g._7.Center
-                }, u.createElement(g._14, {
-                    height: 130,
-                    width: 180
-                })), u.createElement(g._8, {
-                    margin: {
-                        bottom: 1,
-                        top: 4
-                    }
-                }, u.createElement(g._14, {
-                    height: 15,
-                    width: 390
-                }), u.createElement(g._8, {
-                    margin: {
-                        y: 1
-                    }
-                }), u.createElement(g._14, {
-                    height: 15,
-                    width: 290
-                }), u.createElement(g._8, {
-                    margin: {
-                        top: 1,
-                        bottom: .5
-                    }
-                }), u.createElement(g._14, {
-                    height: 15,
-                    width: 390
-                }), u.createElement(g._8, {
-                    margin: {
-                        y: 1
-                    }
-                }), u.createElement(g._14, {
-                    height: 15,
-                    width: 140
-                })), u.createElement(g._8, {
-                    justifyContent: g._7.Center
-                }, u.createElement(g._14, {
-                    height: 25,
-                    width: 100
-                })))
-            }, t.prototype.renderLoadedBody = function() {
-                return u.createElement(u.Fragment, null, u.createElement(g.N, {
-                    src: h.a,
-                    alt: Object(d.d)("Envelope fading into smoke", "MessagesPage")
-                }), u.createElement(g._8, {
-                    margin: {
-                        y: 1
-                    }
-                }, this.getPrimaryCopy(), u.createElement(g._8, {
-                    margin: {
-                        y: .5
-                    }
-                }), u.createElement(g.Q, {
-                    fontSize: g.V.Size5
-                }, Object(d.d)("Streamers: You can can still contact all your subscribers from your revenue dashboard!", "MessagesPage"))), this.getDownloadContent())
-            }, t.prototype.getPrimaryCopy = function() {
-                return w() ? u.createElement(g.Q, {
-                    fontSize: g.V.Size5
-                }, Object(d.d)("Due to low usage, messages have been deprecated. You can download your message history until May 30th.", "MessagesPage")) : u.createElement(u.Fragment, null, u.createElement(g.Q, {
-                    fontSize: g.V.Size5
-                }, Object(d.d)("Messages have been deprecated due to low usage and legacy technology. This allows us work on new ways for you to contact with others on Twitch!.", "MessagesPage")), u.createElement(g._8, {
-                    margin: {
-                        y: .5
-                    }
-                }), u.createElement(g.Q, {
-                    fontSize: g.V.Size5
-                }, Object(d.d)("Check back soon for the ability to download your old messages.", "MessagesPage")))
-            }, t.prototype.getDownloadContent = function() {
-                return w() ? this.state.fileURL ? u.createElement(_, {
-                    fileURL: this.state.fileURL
-                }) : u.createElement(g.Q, {
-                    bold: !0
-                }, Object(d.d)("You have no messages to download.", "MessagesPage")) : null
-            }, t = c.__decorate([Object(y.d)("MessagesPage", {
-                destination: p.a.MessagesPage
-            })], t)
-        }(u.Component);
-        var E = Object(r.b)(function(e) {
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.sessionUser && Object(v.a)() ? this.fetchMessageHistory() : this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentDidUpdate = function(e, t) {
+                    this.state.hasLoadedMessageHistory && !t.hasLoadedMessageHistory && this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return void 0 === this.props.sessionUser ? (this.props.login(), u.createElement(_.a, {
+                        message: Object(d.d)("You must be logged in to view this page", "MessagesPage")
+                    })) : this.state.errorLoadingMessageHistory ? u.createElement(_.a, {
+                        message: Object(d.d)("Oops, something went wrong.", "MessagesPage")
+                    }) : u.createElement(g._8, {
+                        className: "messages-page",
+                        alignItems: g.c.Center,
+                        display: g.R.Flex,
+                        fullWidth: !0,
+                        fullHeight: !0,
+                        justifyContent: g._7.Center,
+                        position: g._15.Absolute
+                    }, u.createElement(g._8, {
+                        alignItems: g.c.Center,
+                        className: "messages-page__body",
+                        display: g.R.Flex,
+                        flexDirection: g.T.Column
+                    }, !this.state.hasLoadedMessageHistory && this.renderPlaceholder(), this.state.hasLoadedMessageHistory && this.renderLoadedBody()))
+                }, t.prototype.renderPlaceholder = function() {
+                    return u.createElement(u.Fragment, null, u.createElement(g._8, {
+                        justifyContent: g._7.Center
+                    }, u.createElement(g._14, {
+                        height: 130,
+                        width: 180
+                    })), u.createElement(g._8, {
+                        margin: {
+                            bottom: 1,
+                            top: 4
+                        }
+                    }, u.createElement(g._14, {
+                        height: 15,
+                        width: 390
+                    }), u.createElement(g._8, {
+                        margin: {
+                            y: 1
+                        }
+                    }), u.createElement(g._14, {
+                        height: 15,
+                        width: 290
+                    }), u.createElement(g._8, {
+                        margin: {
+                            top: 1,
+                            bottom: .5
+                        }
+                    }), u.createElement(g._14, {
+                        height: 15,
+                        width: 390
+                    }), u.createElement(g._8, {
+                        margin: {
+                            y: 1
+                        }
+                    }), u.createElement(g._14, {
+                        height: 15,
+                        width: 140
+                    })), u.createElement(g._8, {
+                        justifyContent: g._7.Center
+                    }, u.createElement(g._14, {
+                        height: 25,
+                        width: 100
+                    })))
+                }, t.prototype.renderLoadedBody = function() {
+                    return u.createElement(u.Fragment, null, u.createElement(g.N, {
+                        src: l.a,
+                        alt: Object(d.d)("Envelope fading into smoke", "MessagesPage")
+                    }), u.createElement(g._8, {
+                        margin: {
+                            y: 1
+                        }
+                    }, this.getPrimaryCopy(), u.createElement(g._8, {
+                        margin: {
+                            y: .5
+                        }
+                    }), u.createElement(g.Q, {
+                        fontSize: g.V.Size5
+                    }, Object(d.d)("Streamers: You can can still contact all your subscribers from your revenue dashboard!", "MessagesPage"))), this.getDownloadContent())
+                }, t.prototype.getPrimaryCopy = function() {
+                    return Object(v.a)() ? u.createElement(g.Q, {
+                        fontSize: g.V.Size5
+                    }, Object(d.d)("Due to low usage, messages have been deprecated. You can download your message history until May 30th.", "MessagesPage")) : u.createElement(u.Fragment, null, u.createElement(g.Q, {
+                        fontSize: g.V.Size5
+                    }, Object(d.d)("Messages have been deprecated due to low usage and legacy technology. This allows us work on new ways for you to contact with others on Twitch!.", "MessagesPage")), u.createElement(g._8, {
+                        margin: {
+                            y: .5
+                        }
+                    }), u.createElement(g.Q, {
+                        fontSize: g.V.Size5
+                    }, Object(d.d)("Check back soon for the ability to download your old messages.", "MessagesPage")))
+                }, t.prototype.getDownloadContent = function() {
+                    return Object(v.a)() ? this.state.fileURL ? u.createElement(f, {
+                        fileURL: this.state.fileURL
+                    }) : u.createElement(g.Q, {
+                        bold: !0
+                    }, Object(d.d)("You have no messages to download.", "MessagesPage")) : null
+                }, t = c.__decorate([Object(m.d)("MessagesPage", {
+                    destination: p.a.MessagesPage
+                })], t)
+            }(u.Component));
+        var b = Object(r.b)(function(e) {
             return {
                 sessionUser: Object(a.c)(e)
             }
@@ -391,11 +386,11 @@ webpackJsonp([69], {
                     return Object(i.f)(o.a.MessagesPage)
                 }
             }, e)
-        })(b);
+        })(w);
         n.d(t, "MessagesPage", function() {
-            return E
+            return b
         })
     },
     mdIJ: function(e, t) {}
 });
-//# sourceMappingURL=pages.messages.components.messages-page-4dba273083a3470f71f968bb52a8371d.js.map
+//# sourceMappingURL=pages.messages.components.messages-page-7a5bcf9889c4d505f6ae83429dc4687f.js.map
