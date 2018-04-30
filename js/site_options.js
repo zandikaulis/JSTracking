@@ -2362,14 +2362,14 @@ window.SiteOptions = {
         },
         "5fd568be-2073-4f99-84d5-565e8b2a3343": {
             "name": "TWILIGHT_AAX_DISPLAY",
-            "v": 3595,
+            "v": 3614,
             "t": 1,
-            "s": 2,
+            "s": 3,
             "groups": [{
-                "weight": 3,
+                "weight": 5,
                 "value": "yes"
             }, {
-                "weight": 7,
+                "weight": 5,
                 "value": "no"
             }]
         },
@@ -2987,18 +2987,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "active"
-            }]
-        },
-        "7ea85693-a4db-423d-ace9-65c9787a0eea": {
-            "name": "ios_stream_titles_in_notifications_v6.2",
-            "v": 3474,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "channel_surfing"
             }]
         },
         "7ecd2720-5df0-4111-8060-58335f050866": {
