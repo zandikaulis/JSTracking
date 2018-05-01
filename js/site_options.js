@@ -772,8 +772,8 @@ window.SiteOptions = {
             }]
         },
         "2005226d-07fe-46cf-a229-d91dd03d8d3a": {
-            "name": "TWILIGHT_DASHBOARD_LIVE",
-            "v": 3630,
+            "name": "delete_XP",
+            "v": 3634,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -1235,6 +1235,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "3468778b-76fe-4cdf-add6-1be0dceea214": {
+            "name": "TWILIGHT_DASHBOARD_LIVE",
+            "v": 3635,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
             }]
         },
         "354aaebd-7643-434f-be37-98fe12c01220": {
