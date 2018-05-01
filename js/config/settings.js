@@ -681,13 +681,13 @@ window.__twilightSettings = {
         },
         "afcda2ba-dd12-4d9a-9428-df6a71104db8": {
             "name": "twilight_new_homepage",
-            "v": 3638,
+            "v": 3643,
             "t": 1,
             "groups": [{
-                "weight": 5,
+                "weight": 20,
                 "value": "experiment"
             }, {
-                "weight": 95,
+                "weight": 80,
                 "value": "control"
             }]
         },

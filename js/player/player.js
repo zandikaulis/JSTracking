@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2bf2d86bc479eca1cd30.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6b41bb991fd1c3ac76b9.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -521,7 +521,7 @@
             X = {},
             Z = Object.prototype.hasOwnProperty,
             ee = n(267),
-            te = (n(178), [w, k, E]),
+            te = (n(179), [w, k, E]),
             ne = [S, O],
             re = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -1429,7 +1429,7 @@
             var l = e.length;
             return n < 0 && (n = c(l + n, 0)), a(e) ? n <= l && e.indexOf(t, n) > -1 : !!l && i(e, t, n) > -1
         }
-        var i = n(146),
+        var i = n(147),
             o = n(46),
             a = n(109),
             s = n(72),
@@ -1570,8 +1570,8 @@
             a = n(84),
             s = n(37),
             u = n(26),
-            c = n(170),
-            l = n(172),
+            c = n(171),
+            l = n(173),
             d = n(7),
             f = n.n(d),
             p = n(129),
@@ -3838,7 +3838,7 @@
         }), t.c = r;
         var i = n(5),
             o = n.n(i),
-            a = n(183),
+            a = n(184),
             s = "unknown",
             u = "logged in",
             c = "not logged in",
@@ -4267,7 +4267,7 @@
             }) : e
         }
         var s = n(384),
-            u = n(163),
+            u = n(164),
             c = n(385);
         t.extract = function(e) {
             var t = e.indexOf("?");
@@ -5219,7 +5219,7 @@
             return null != e && o(e.length) && !i(e)
         }
         var i = n(95),
-            o = n(147);
+            o = n(148);
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
@@ -5548,7 +5548,7 @@
             p = n(9),
             h = n(6),
             m = n(50),
-            y = n(162),
+            y = n(163),
             v = n(11),
             g = n(7),
             b = n.n(g),
@@ -5570,7 +5570,7 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(173);
+        var r, i = n(174);
         ! function(e) {
             e.SupervisorReady = "supervisor-ready", e.SupervisorInit = "supervisor-init"
         }(r || (r = {}));
@@ -6156,7 +6156,7 @@
         var m = n(10),
             y = n(13),
             v = n(11),
-            g = n(177),
+            g = n(178),
             b = n(5),
             _ = n.n(b),
             w = "set streammetadata",
@@ -6320,7 +6320,7 @@
             g = n.n(v),
             b = n(45),
             _ = n(138),
-            w = n(185),
+            w = n(186),
             k = n(27),
             E = n(57),
             S = n(70),
@@ -7224,7 +7224,7 @@
             P = n(7),
             C = n.n(P),
             T = n(234),
-            x = n(162),
+            x = n(163),
             R = n(300),
             j = n(31),
             I = n(36);
@@ -7296,7 +7296,7 @@
             K = n.n(W),
             G = n(10),
             Y = n(11),
-            Q = n(181),
+            Q = n(182),
             $ = n(18),
             J = function() {
                 function e(e, t) {
@@ -7445,7 +7445,7 @@
             se = n(6),
             ue = n(102),
             ce = n(272),
-            le = n(182),
+            le = n(183),
             de = n(101),
             fe = n(88),
             pe = n(57),
@@ -7965,7 +7965,7 @@
             return i(e) ? e : o(e, t) ? [e] : a(s(e))
         }
         var i = n(20),
-            o = n(152),
+            o = n(153),
             a = n(341),
             s = n(98);
         e.exports = r
@@ -8024,7 +8024,7 @@
                 c = arguments.length < 3;
             return r(e, a(t, 4), n, c, o)
         }
-        var i = n(169),
+        var i = n(170),
             o = n(128),
             a = n(78),
             s = n(392),
@@ -11235,7 +11235,7 @@
             v = n(275),
             g = n(26),
             b = n(37),
-            _ = n(185),
+            _ = n(186),
             w = n(138),
             k = n(13),
             E = n(18),
@@ -11426,7 +11426,7 @@
         function r(e) {
             return null == e ? "" : i(e)
         }
-        var i = n(155);
+        var i = n(156);
         e.exports = r
     }, function(e, t, n) {
         (function(r) {
@@ -11729,10 +11729,10 @@
                     return c
                 }.call(t, n, t, e)) !== o && (e.exports = i)
             }()
-        }).call(t, n(145))
+        }).call(t, n(146))
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(175),
+        var r, i = n(176),
             o = n(249),
             a = n(417),
             s = n(250);
@@ -12280,7 +12280,7 @@
             }(),
             c = n(266),
             l = n(0),
-            d = n(143);
+            d = n(144);
         e.exports = function(e) {
             var t = e.displayName || e.name,
                 n = function(t) {
@@ -12414,7 +12414,7 @@
                 c = u ? u.isBuffer : void 0,
                 l = c || i;
             e.exports = l
-        }).call(t, n(148)(e))
+        }).call(t, n(149)(e))
     }, function(e, t) {
         function n(e, t) {
             return !!(t = null == t ? r : t) && ("number" == typeof e || i.test(e)) && e > -1 && e % 1 == 0 && e < t
@@ -12454,7 +12454,7 @@
             })
         }
         var i = n(97),
-            o = n(151);
+            o = n(152);
         e.exports = r
     }, function(e, t) {
         function n(e) {
@@ -12895,6 +12895,199 @@
             var e = document.createElement("video");
             return !!a()(e.canPlayType) && e.canPlayType("application/vnd.apple.mpegURL")
         }
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function i(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function o(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+
+        function a(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function s(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function u(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+        var c = n(0),
+            l = n.n(c),
+            d = n(1),
+            f = n.n(d),
+            p = n(2),
+            h = n.n(p),
+            m = n(4),
+            y = n(190),
+            v = n(8),
+            g = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            b = {
+                isActive: f.a.bool.isRequired,
+                label: f.a.string.isRequired,
+                onClick: f.a.func,
+                speedValue: f.a.number.isRequired
+            },
+            _ = {
+                onClick: function() {}
+            },
+            w = function(e) {
+                function t() {
+                    r(this, t);
+                    var e = i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
+                    return e.handleClick = e.handleClick.bind(e), e
+                }
+                return o(t, e), g(t, [{
+                    key: "handleClick",
+                    value: function() {
+                        this.props.onClick(this.props.speedValue)
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var e = this.props,
+                            t = e.isActive,
+                            n = e.label,
+                            r = h()({
+                                "pl-menu__item": !0,
+                                "pl-menu__item--block": !0,
+                                "pl-menu__item--active": t
+                            });
+                        return l.a.createElement("div", {
+                            className: r
+                        }, l.a.createElement(v.a, {
+                            className: "ellipsis",
+                            onClick: this.handleClick
+                        }, l.a.createElement("span", null, n)))
+                    }
+                }]), t
+            }(l.a.Component);
+        w.propTypes = b, w.defaultProps = _, n.d(t, "a", function() {
+            return O
+        }), n.d(t, "c", function() {
+            return P
+        }), n.d(t, "b", function() {
+            return R
+        });
+        var k = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            E = {
+                currentSpeed: f.a.number.isRequired,
+                onMenuTransition: f.a.func,
+                onSelectPlaybackSpeed: f.a.func,
+                t: f.a.func.isRequired
+            },
+            S = {
+                onMenuTransition: function() {},
+                onSelectPlaybackSpeed: function() {}
+            },
+            O = Object.freeze([.25, .5, .75, 1, 1.25, 1.5, 2]),
+            P = "Speed",
+            C = h()({
+                "pl-menu__item": !0,
+                "pl-menu__item--block": !0,
+                "pl-menu__item--with-caret-left": !0
+            }),
+            T = h()({
+                "pl-menu__section": !0,
+                "pl-menu__section--with-sep": !0
+            }),
+            x = function(e) {
+                function t() {
+                    a(this, t);
+                    var e = s(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
+                    return e.handleMenuTransition = e.handleMenuTransition.bind(e), e
+                }
+                return u(t, e), k(t, [{
+                    key: "handleMenuTransition",
+                    value: function() {
+                        this.props.onMenuTransition(y.c)
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var e = this.props.t,
+                            t = this._getSpeedSelectionButtons();
+                        return l.a.createElement("div", {
+                            className: "pl-menu__inner"
+                        }, l.a.createElement("div", {
+                            className: C
+                        }, l.a.createElement("button", {
+                            className: "qa-header-button",
+                            onClick: this.handleMenuTransition
+                        }, e(P))), l.a.createElement("div", {
+                            className: T
+                        }, t))
+                    }
+                }, {
+                    key: "_getSpeedSelectionButtons",
+                    value: function() {
+                        var e = this.props,
+                            t = e.currentSpeed,
+                            n = e.onSelectPlaybackSpeed,
+                            r = e.t;
+                        return O.map(function(e) {
+                            var i = t === e,
+                                o = 1 === e ? "1x (" + r("Normal") + ")" : e + "x";
+                            return l.a.createElement(w, {
+                                isActive: i,
+                                key: e,
+                                label: o,
+                                onClick: n,
+                                speedValue: e
+                            })
+                        })
+                    }
+                }]), t
+            }(l.a.Component);
+        x.propTypes = E, x.defaultProps = S;
+        var R = Object(m.c)()(x)
     }, function(e, t, n) {
         "use strict";
 
@@ -13416,7 +13609,7 @@
                     }();
                 return re.prototype.then = c, re.all = j, re.race = I, re.resolve = l, re.reject = A, re._setScheduler = i, re._setAsap = o, re._asap = V, re.polyfill = M, re.Promise = re, re
             })
-        }).call(t, n(145), n(39))
+        }).call(t, n(146), n(39))
     }, function(e, t) {
         function n() {
             throw new Error("setTimeout has not been defined")
@@ -13539,7 +13732,7 @@
         }
     }, function(e, t, n) {
         var r = n(325),
-            i = n(150),
+            i = n(151),
             o = n(326),
             a = o && o.isTypedArray,
             s = a ? i(a) : r;
@@ -13613,7 +13806,7 @@
         function r(e) {
             return (null == e ? 0 : e.length) ? i(e, 1) : []
         }
-        var i = n(157);
+        var i = n(158);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, a, s) {
@@ -13641,7 +13834,7 @@
                 n = null == e ? 0 : e.length;
             for (this.__data__ = new i; ++t < n;) this.add(e[t])
         }
-        var i = n(153),
+        var i = n(154),
             o = n(371),
             a = n(372);
         r.prototype.add = r.prototype.push = o, r.prototype.has = a, e.exports = r
@@ -13754,7 +13947,7 @@
             return "function" == typeof n && n instanceof n && l.call(n) == f
         }
         var i = n(54),
-            o = n(166),
+            o = n(167),
             a = n(41),
             s = "[object Object]",
             u = Function.prototype,
@@ -13782,7 +13975,7 @@
         }), n.d(t, "b", function() {
             return d
         });
-        var i = n(171),
+        var i = n(172),
             o = n.n(i),
             a = n(28),
             s = n(17),
@@ -14032,7 +14225,7 @@
         }), t.c = i, n.d(t, "b", function() {
             return f
         });
-        var o = n(171),
+        var o = n(172),
             a = n.n(o),
             s = n(28),
             u = n(17),
@@ -14539,199 +14732,6 @@
     }, function(e, t, n) {
         "use strict";
 
-        function r(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function i(e, t) {
-            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
-        }
-
-        function o(e, t) {
-            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-            e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-        }
-
-        function a(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function s(e, t) {
-            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
-        }
-
-        function u(e, t) {
-            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-            e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-        }
-        var c = n(0),
-            l = n.n(c),
-            d = n(1),
-            f = n.n(d),
-            p = n(2),
-            h = n.n(p),
-            m = n(4),
-            y = n(190),
-            v = n(8),
-            g = function() {
-                function e(e, t) {
-                    for (var n = 0; n < t.length; n++) {
-                        var r = t[n];
-                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-                    }
-                }
-                return function(t, n, r) {
-                    return n && e(t.prototype, n), r && e(t, r), t
-                }
-            }(),
-            b = {
-                isActive: f.a.bool.isRequired,
-                label: f.a.string.isRequired,
-                onClick: f.a.func,
-                speedValue: f.a.number.isRequired
-            },
-            _ = {
-                onClick: function() {}
-            },
-            w = function(e) {
-                function t() {
-                    r(this, t);
-                    var e = i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e.handleClick = e.handleClick.bind(e), e
-                }
-                return o(t, e), g(t, [{
-                    key: "handleClick",
-                    value: function() {
-                        this.props.onClick(this.props.speedValue)
-                    }
-                }, {
-                    key: "render",
-                    value: function() {
-                        var e = this.props,
-                            t = e.isActive,
-                            n = e.label,
-                            r = h()({
-                                "pl-menu__item": !0,
-                                "pl-menu__item--block": !0,
-                                "pl-menu__item--active": t
-                            });
-                        return l.a.createElement("div", {
-                            className: r
-                        }, l.a.createElement(v.a, {
-                            className: "ellipsis",
-                            onClick: this.handleClick
-                        }, l.a.createElement("span", null, n)))
-                    }
-                }]), t
-            }(l.a.Component);
-        w.propTypes = b, w.defaultProps = _, n.d(t, "a", function() {
-            return O
-        }), n.d(t, "c", function() {
-            return P
-        }), n.d(t, "b", function() {
-            return R
-        });
-        var k = function() {
-                function e(e, t) {
-                    for (var n = 0; n < t.length; n++) {
-                        var r = t[n];
-                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-                    }
-                }
-                return function(t, n, r) {
-                    return n && e(t.prototype, n), r && e(t, r), t
-                }
-            }(),
-            E = {
-                currentSpeed: f.a.number.isRequired,
-                onMenuTransition: f.a.func,
-                onSelectPlaybackSpeed: f.a.func,
-                t: f.a.func.isRequired
-            },
-            S = {
-                onMenuTransition: function() {},
-                onSelectPlaybackSpeed: function() {}
-            },
-            O = Object.freeze([.25, .5, .75, 1, 1.25, 1.5, 2]),
-            P = "Speed",
-            C = h()({
-                "pl-menu__item": !0,
-                "pl-menu__item--block": !0,
-                "pl-menu__item--with-caret-left": !0
-            }),
-            T = h()({
-                "pl-menu__section": !0,
-                "pl-menu__section--with-sep": !0
-            }),
-            x = function(e) {
-                function t() {
-                    a(this, t);
-                    var e = s(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e.handleMenuTransition = e.handleMenuTransition.bind(e), e
-                }
-                return u(t, e), k(t, [{
-                    key: "handleMenuTransition",
-                    value: function() {
-                        this.props.onMenuTransition(y.c)
-                    }
-                }, {
-                    key: "render",
-                    value: function() {
-                        var e = this.props.t,
-                            t = this._getSpeedSelectionButtons();
-                        return l.a.createElement("div", {
-                            className: "pl-menu__inner"
-                        }, l.a.createElement("div", {
-                            className: C
-                        }, l.a.createElement("button", {
-                            className: "qa-header-button",
-                            onClick: this.handleMenuTransition
-                        }, e(P))), l.a.createElement("div", {
-                            className: T
-                        }, t))
-                    }
-                }, {
-                    key: "_getSpeedSelectionButtons",
-                    value: function() {
-                        var e = this.props,
-                            t = e.currentSpeed,
-                            n = e.onSelectPlaybackSpeed,
-                            r = e.t;
-                        return O.map(function(e) {
-                            var i = t === e,
-                                o = 1 === e ? "1x (" + r("Normal") + ")" : e + "x";
-                            return l.a.createElement(w, {
-                                isActive: i,
-                                key: e,
-                                label: o,
-                                onClick: n,
-                                speedValue: e
-                            })
-                        })
-                    }
-                }]), t
-            }(l.a.Component);
-        x.propTypes = E, x.defaultProps = S;
-        var R = Object(m.c)()(x)
-    }, function(e, t, n) {
-        "use strict";
-
         function r(e, t, n) {
             return t in e ? Object.defineProperty(e, t, {
                 value: n,
@@ -15033,7 +15033,7 @@
             Z = n(2),
             ee = n.n(Z),
             te = n(8),
-            ne = n(189),
+            ne = n(141),
             re = n(6),
             ie = n(93),
             oe = function() {
@@ -15854,7 +15854,7 @@
         dt.propTypes = it, dt.defaultProps = ot;
         var ft = Object(Q.c)()(dt),
             pt = n(105),
-            ht = n(141),
+            ht = n(142),
             mt = n(92),
             yt = n(286),
             vt = n(45),
@@ -17042,7 +17042,7 @@
             }, a.createElement("span", null, t))
         }
         var a = n(0),
-            s = n(142),
+            s = n(143),
             u = n(4),
             c = n(1),
             l = n.n(c);
@@ -17464,7 +17464,7 @@
             return f
         });
         var i = n(201),
-            o = n(184),
+            o = n(185),
             a = n(5),
             s = n.n(a),
             u = {
@@ -17559,7 +17559,7 @@
         var i = n(5),
             o = n.n(i),
             a = n(203),
-            s = n(184),
+            s = n(185),
             u = Object.freeze({
                 byCategory: {},
                 allCategories: [],
@@ -18305,7 +18305,7 @@
             a = n(20),
             s = n(113),
             u = n(114),
-            c = n(149),
+            c = n(150),
             l = Object.prototype,
             d = l.hasOwnProperty;
         e.exports = r
@@ -18796,7 +18796,7 @@
             };
             return n.cache = new(r.Cache || i), n
         }
-        var i = n(153),
+        var i = n(154),
             o = "Expected a function";
         r.Cache = i, e.exports = r
     }, function(e, t, n) {
@@ -18841,14 +18841,14 @@
             o = n(112),
             a = n(20),
             s = n(114),
-            u = n(147),
+            u = n(148),
             c = n(77);
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
             return a(o(e, void 0, i), e + "")
         }
-        var i = n(156),
+        var i = n(157),
             o = n(214),
             a = n(216);
         e.exports = r
@@ -18886,9 +18886,9 @@
             }
             return l.delete(e), l.delete(t), y
         }
-        var i = n(159),
+        var i = n(160),
             o = n(373),
-            a = n(160),
+            a = n(161),
             s = 1,
             u = 2;
         e.exports = r
@@ -18910,7 +18910,7 @@
             return i(e, a, o)
         }
         var i = n(226),
-            o = n(161),
+            o = n(162),
             a = n(47);
         e.exports = r
     }, function(e, t, n) {
@@ -18928,7 +18928,7 @@
         e.exports = n
     }, function(e, t, n) {
         var r = n(377),
-            i = n(154),
+            i = n(155),
             o = n(378),
             a = n(229),
             s = n(379),
@@ -19074,34 +19074,34 @@
                 u = s ? i.Buffer : void 0,
                 c = u ? u.allocUnsafe : void 0;
             e.exports = r
-        }).call(t, n(148)(e))
+        }).call(t, n(149)(e))
     }, function(e, t, n) {
         function r(e, t) {
             var n = t ? i(e.buffer) : e.buffer;
             return new e.constructor(n, e.byteOffset, e.length)
         }
-        var i = n(165);
+        var i = n(166);
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
             return "function" != typeof e.constructor || a(e) ? {} : i(o(e))
         }
         var i = n(389),
-            o = n(166),
+            o = n(167),
             a = n(115);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
             return e && i(e, t, o)
         }
-        var i = n(164),
+        var i = n(165),
             o = n(47);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
             return !!(null == e ? 0 : e.length) && i(e, t, 0) > -1
         }
-        var i = n(146);
+        var i = n(147);
         e.exports = r
     }, function(e, t) {
         function n(e, t, n) {
@@ -20601,7 +20601,7 @@
     }, function(e, t, n) {
         "use strict";
         var r, i = n(425),
-            o = n(175),
+            o = n(176),
             a = n(65),
             s = n(51),
             u = n(100),
@@ -20686,7 +20686,7 @@
             }
         }
         t.a = r, t.b = i;
-        var o = n(173)
+        var o = n(174)
     }, function(e, t) {
         function n(e, t, n) {
             return e === e && (void 0 !== n && (e = e <= n ? e : n), void 0 !== t && (e = e >= t ? e : t)), e
@@ -21551,7 +21551,7 @@
                 }
             }
         }
-        var d = n(178),
+        var d = n(179),
             f = n(459),
             p = {
                 INIT: "@@redux/INIT"
@@ -22232,7 +22232,7 @@
             return o(e) ? a(e) : i(e)
         }
         var i = n(478),
-            o = n(180),
+            o = n(181),
             a = n(479);
         e.exports = r
     }, function(e, t, n) {
@@ -24814,7 +24814,7 @@
             a = n(91),
             s = n(33),
             u = n(16),
-            c = n(186),
+            c = n(187),
             l = {
                 enabled: !1,
                 available: !1,
@@ -24893,8 +24893,8 @@
         e.exports = n
     }, function(e, t, n) {
         var r = n(124),
-            i = n(166),
-            o = n(161),
+            i = n(167),
+            o = n(162),
             a = n(227),
             s = Object.getOwnPropertySymbols,
             u = s ? function(e) {
@@ -26851,7 +26851,7 @@
             P = n(4),
             C = n(8),
             T = n(195),
-            x = n(142),
+            x = n(143),
             R = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -27442,7 +27442,7 @@
             P = n(50),
             C = "low",
             T = "high",
-            x = n(156),
+            x = n(157),
             R = n.n(x),
             j = n(197),
             I = n.n(j),
@@ -27732,12 +27732,13 @@
             };
         i.propTypes = v, i.defaultProps = g;
         var b = n(12),
-            _ = n(58),
-            w = n(15);
+            _ = n(6),
+            w = n(58),
+            k = n(15);
         n.d(t, "a", function() {
-            return T
+            return x
         });
-        var k = function() {
+        var E = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -27748,38 +27749,42 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            E = {
+            S = {
                 isCasting: d.a.bool.isRequired,
                 isPaused: d.a.bool.isRequired,
                 isLoading: d.a.bool.isRequired,
                 isAdvertisementScreen: d.a.bool.isRequired,
+                hasPlayed: d.a.bool.isRequired,
                 playStream: d.a.func,
                 windowObj: d.a.object.isRequired
             },
-            S = {
+            O = {
                 playStream: function() {}
             },
-            O = function(e) {
+            P = function(e) {
                 var t = e.chromecast,
                     n = e.playback,
                     r = e.screen,
-                    i = e.window;
+                    i = e.env,
+                    o = e.window;
                 return {
-                    isCasting: t.castingState === _.b || t.castingState === _.c,
+                    isCasting: t.castingState === w.b || t.castingState === w.c,
                     isPaused: n.paused,
                     isLoading: n.isLoading,
+                    hasPlayed: n.hasPlayed,
+                    isClipsEditingPlayer: i.playerType === _.g,
                     isAdvertisementScreen: r[0] === b.c,
-                    windowObj: i
-                }
-            },
-            P = function(e) {
-                return {
-                    playStream: function() {
-                        e(Object(w.s)())
-                    }
+                    windowObj: o
                 }
             },
             C = function(e) {
+                return {
+                    playStream: function() {
+                        e(Object(k.s)())
+                    }
+                }
+            },
+            T = function(e) {
                 function t() {
                     o(this, t);
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -27789,7 +27794,7 @@
                         showLoadingIndicator: !1
                     }, e._onOfflineEvent = e._onOfflineEvent.bind(e), e._onOnlineEvent = e._onOnlineEvent.bind(e), e.showLoadingTimerId = null, e
                 }
-                return s(t, e), k(t, [{
+                return s(t, e), E(t, [{
                     key: "componentDidMount",
                     value: function() {
                         this.props.windowObj.addEventListener("offline", this._onOfflineEvent), this.props.windowObj.addEventListener("online", this._onOnlineEvent), this._updateShowLoading(this.props)
@@ -27828,14 +27833,16 @@
                             r = e.isLoading,
                             i = e.isPaused,
                             o = e.isCasting,
-                            a = e.isAdvertisementScreen;
-                        !r || i || o || a ? (this.showLoadingTimerId && (clearTimeout(this.showLoadingTimerId), this.showLoadingTimerId = null), this.state.showLoadingIndicator && this.setState({
-                            showLoadingIndicator: !1
-                        })) : this.showLoadingTimerId || (this.showLoadingTimerId = n.setTimeout(function() {
+                            a = e.isAdvertisementScreen,
+                            s = e.hasPlayed,
+                            u = e.isClipsEditingPlayer;
+                        r && !i && !o && !a || u && !s ? this.showLoadingTimerId || (this.showLoadingTimerId = n.setTimeout(function() {
                             t.showLoadingTimerId = null, t.setState({
                                 showLoadingIndicator: !0
                             })
-                        }, 150))
+                        }, 150)) : (this.showLoadingTimerId && (clearTimeout(this.showLoadingTimerId), this.showLoadingTimerId = null), this.state.showLoadingIndicator && this.setState({
+                            showLoadingIndicator: !1
+                        }))
                     }
                 }, {
                     key: "render",
@@ -27846,8 +27853,8 @@
                     }
                 }]), t
             }(c.a.Component);
-        C.propTypes = E, C.defaultProps = S;
-        var T = Object(f.b)(O, P)(C)
+        T.propTypes = S, T.defaultProps = O;
+        var x = Object(f.b)(P, C)(T)
     }, function(e, t, n) {
         "use strict";
 
@@ -28581,7 +28588,7 @@
         var ee = Object(C.b)(X)(Z),
             te = n(44),
             ne = n.n(te),
-            re = n(143),
+            re = n(144),
             ie = n.n(re),
             oe = n(60),
             ae = n.n(oe),
@@ -29875,22 +29882,22 @@
             var t = e.captionsEnabled,
                 n = e.onDisableCaptions,
                 r = e.onEnableCaptions;
-            return t ? R.a.createElement(ne.a, {
-                className: Xe,
+            return t ? R.a.createElement(oe.a, {
+                className: Ze,
                 onClick: n,
                 tabIndex: "-1"
-            }, R.a.createElement(re.a, {
+            }, R.a.createElement(ae.a, {
                 label: "Captions"
-            }, R.a.createElement($e, {
+            }, R.a.createElement(Je, {
                 id: "icon_cc_on",
                 enabled: !0
-            }))) : R.a.createElement(ne.a, {
-                className: Xe,
+            }))) : R.a.createElement(oe.a, {
+                className: Ze,
                 onClick: r,
                 tabIndex: "-1"
-            }, R.a.createElement(re.a, {
+            }, R.a.createElement(ae.a, {
                 label: "Captions"
-            }, R.a.createElement($e, {
+            }, R.a.createElement(Je, {
                 id: "icon_cc_off",
                 enabled: !1
             })))
@@ -29912,12 +29919,12 @@
             var t = e.hasAltShortcut,
                 n = e.onClip,
                 r = t ? "Clip (Alt+X)" : "Clip";
-            return R.a.createElement(ne.a, {
+            return R.a.createElement(oe.a, {
                 className: "player-button pl-clips-button",
                 onClick: n
-            }, R.a.createElement(re.a, {
+            }, R.a.createElement(ae.a, {
                 label: r
-            }, R.a.createElement(ot, {
+            }, R.a.createElement(at, {
                 id: "icon_clips"
             })))
         }
@@ -29946,12 +29953,12 @@
         function w(e) {
             var t = e.castingState,
                 n = e.onClick;
-            return t !== vt.d && me()(vt.e, t) ? R.a.createElement(ne.a, {
+            return t !== gt.d && W()(gt.e, t) ? R.a.createElement(oe.a, {
                 className: "player-button",
                 onClick: n
-            }, R.a.createElement(re.a, {
+            }, R.a.createElement(ae.a, {
                 label: "Chromecast"
-            }, R.a.createElement(_t, {
+            }, R.a.createElement(wt, {
                 castingState: t
             }))) : null
         }
@@ -29961,9 +29968,9 @@
                 n = e.playerType,
                 r = e.stopCast,
                 i = e.startCast;
-            if (n === pe.q) return null;
+            if (n === ye.q) return null;
             var o = void 0;
-            return o = t === vt.a ? i : t === vt.b ? r : function() {}, R.a.createElement(w, {
+            return o = t === gt.a ? i : t === gt.b ? r : function() {}, R.a.createElement(w, {
                 castingState: t,
                 onClick: o
             })
@@ -29975,9 +29982,9 @@
                 r = e.enableTheatreMode,
                 i = e.disableTheatreMode,
                 o = e.isFullScreen;
-            return !t || o ? null : n ? R.a.createElement(Lt, {
+            return !t || o ? null : n ? R.a.createElement(Mt, {
                 onClick: i
-            }) : R.a.createElement(It, {
+            }) : R.a.createElement(At, {
                 onClick: r
             })
         }
@@ -29988,31 +29995,31 @@
                 r = e.isFullScreen,
                 i = e.onFullScreen,
                 o = e.onUnFullScreen,
-                a = K()({
+                a = Y()({
                     "player-button": !0,
                     "qa-fullscreen-button": !0,
                     "pl-button__fullscreen--cannot-fullscreen": !t,
                     "pl-mg-r-1": !n,
                     "pl-button__fullscreen--tooltip-left": !n
                 });
-            return r ? R.a.createElement(ne.a, {
+            return r ? R.a.createElement(oe.a, {
                 className: a,
                 onClick: o,
                 disabled: !t,
                 tabIndex: "-1"
-            }, R.a.createElement(re.a, {
+            }, R.a.createElement(ae.a, {
                 label: "Exit Fullscreen"
-            }, R.a.createElement(Ht, {
+            }, R.a.createElement(zt, {
                 id: "icon_unfullscreen",
                 enabled: !0
-            }))) : R.a.createElement(ne.a, {
+            }))) : R.a.createElement(oe.a, {
                 className: a,
                 onClick: i,
                 disabled: !t,
                 tabIndex: "-1"
-            }, R.a.createElement(re.a, {
+            }, R.a.createElement(ae.a, {
                 label: "Fullscreen"
-            }, R.a.createElement(Ht, {
+            }, R.a.createElement(zt, {
                 id: "icon_fullscreen",
                 enabled: !1
             })))
@@ -30128,36 +30135,39 @@
         var F = Object(A.b)(q, B)(U),
             V = n(107),
             H = n.n(V),
-            z = n(4),
-            W = n(2),
-            K = n.n(W),
-            G = {
+            z = n(7),
+            W = n.n(z),
+            K = n(4),
+            G = n(2),
+            Y = n.n(G),
+            Q = {
                 bannerLabel: I.a.string.isRequired,
                 showBanner: I.a.bool.isRequired
             },
-            Y = K()({
+            $ = Y()({
                 "pl-settings-container": !0,
                 "pl-flex": !0,
                 "pl-flex--verticalCenter": !0
             }),
-            Q = function(e) {
+            J = function(e) {
                 var t = e.bannerLabel,
                     n = e.showBanner,
-                    r = K()({
+                    r = Y()({
                         "pl-pill": !0,
                         "pl-settings-banner--animateIn": n,
                         "pl-settings-banner--animateOut": !n,
                         "qa-settings-banner-span": !0
                     });
                 return R.a.createElement("div", {
-                    className: Y
+                    className: $
                 }, R.a.createElement("span", {
                     className: r
                 }, t))
             };
-        Q.propTypes = G;
-        var $ = n(191),
-            J = function() {
+        J.propTypes = Q;
+        var X = n(191),
+            Z = n(141),
+            ee = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -30168,14 +30178,14 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            X = {
+            te = {
                 availableQualities: I.a.array.isRequired,
                 currentQuality: I.a.string.isRequired,
                 playbackRate: I.a.number.isRequired,
                 t: I.a.func.isRequired,
                 windowObj: I.a.object.isRequired
             },
-            Z = function(e) {
+            ne = function(e) {
                 var t = e.playback,
                     n = e.quality,
                     r = e.window;
@@ -30186,7 +30196,7 @@
                     windowObj: r
                 }
             },
-            ee = function(e) {
+            re = function(e) {
                 function t() {
                     a(this, t);
                     var e = s(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -30196,11 +30206,13 @@
                         hasChangedQuality: !1
                     }, e.bannerHideTimeout = 0, e
                 }
-                return u(t, e), J(t, [{
+                return u(t, e), ee(t, [{
                     key: "componentWillReceiveProps",
                     value: function(e) {
-                        e.currentQuality !== this.state.lastQuality && this._onQualityPropChange(e), (this.state.hasChangedQuality || e.currentQuality !== this.state.lastQuality || 1 !== e.playbackRate) && this.setState({
+                        e.currentQuality !== this.state.lastQuality && this._onQualityPropChange(e), this.state.hasChangedQuality || e.currentQuality !== this.state.lastQuality || 1 !== e.playbackRate && W()(Z.a, e.playbackRate) ? this.setState({
                             canRenderBanner: !0
+                        }) : this.setState({
+                            canRenderBanner: !1
                         })
                     }
                 }, {
@@ -30245,7 +30257,7 @@
                             r = t.hasChangedQuality,
                             i = r || 1 !== e,
                             o = this._getBannerLabel();
-                        return n ? R.a.createElement(Q, {
+                        return n ? R.a.createElement(J, {
                             bannerLabel: o,
                             showBanner: i
                         }) : null
@@ -30258,71 +30270,69 @@
                             n = e.availableQualities,
                             r = e.currentQuality,
                             i = e.t;
-                        return this.state.hasChangedQuality ? Object($.a)(n, r, i) : 1 !== t ? t + "x" : ""
+                        return this.state.hasChangedQuality ? Object(X.a)(n, r, i) : 1 !== t ? t + "x" : ""
                     }
                 }]), t
             }(R.a.Component);
-        ee.propTypes = X;
-        var te = Object(z.c)()(Object(A.b)(Z)(ee)),
-            ne = n(8),
-            re = n(40),
-            ie = n(14),
-            oe = Object.assign || function(e) {
+        re.propTypes = te;
+        var ie = Object(K.c)()(Object(A.b)(ne)(re)),
+            oe = n(8),
+            ae = n(40),
+            se = n(14),
+            ue = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                 }
                 return e
             },
-            ae = {
+            ce = {
                 fill: I.a.string,
                 viewBox: I.a.string
             },
-            se = function(e) {
-                return R.a.createElement(ie.a, oe({
+            le = function(e) {
+                return R.a.createElement(se.a, ue({
                     viewBox: "0 0 30 30"
                 }, e), R.a.createElement("path", {
                     d: "M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z",
                     fill: e.fill
                 }))
             };
-        se.propTypes = ae;
-        var ue = {
+        le.propTypes = ce;
+        var de = {
                 onClick: I.a.func,
                 showSpinningAnimation: I.a.bool.isRequired
             },
-            ce = {
+            fe = {
                 onClick: function() {}
             },
-            le = function(e) {
+            pe = function(e) {
                 var t = e.onClick,
                     n = e.showSpinningAnimation,
-                    r = K()({
+                    r = Y()({
                         "qa-settings-button": !0,
                         "player-button--settings": !0,
                         "player-button": !0
                     }),
-                    i = K()({
+                    i = Y()({
                         "pl-settings-icon": !0,
                         "pl-settings-icon--spin": n
                     });
-                return R.a.createElement(ne.a, {
+                return R.a.createElement(oe.a, {
                     onClick: t,
                     className: r
-                }, R.a.createElement(re.a, {
+                }, R.a.createElement(ae.a, {
                     label: "Settings",
                     iconClass: i
-                }, R.a.createElement(se, {
+                }, R.a.createElement(le, {
                     id: "icon_settings"
                 })))
             };
-        le.propTypes = ue, le.defaultProps = ce;
-        var de = n(190),
-            fe = n(52),
-            pe = n(6),
-            he = n(7),
-            me = n.n(he),
-            ye = function() {
+        pe.propTypes = de, pe.defaultProps = fe;
+        var he = n(190),
+            me = n(52),
+            ye = n(6),
+            ve = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -30333,7 +30343,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            ve = {
+            ge = {
                 isAutoQuality: I.a.bool.isRequired,
                 isEnded: I.a.bool.isRequired,
                 isPaused: I.a.bool.isRequired,
@@ -30346,10 +30356,10 @@
                 trackEvent: I.a.func.isRequired,
                 windowObj: I.a.object.isRequired
             },
-            ge = {
+            be = {
                 showSettings: function() {}
             },
-            be = function(e) {
+            _e = function(e) {
                 var t = e.analyticsTracker,
                     n = e.quality,
                     r = e.playback,
@@ -30358,11 +30368,11 @@
                     a = e.window,
                     s = e.env;
                 return {
-                    isAutoQuality: n.selected === fe.i,
+                    isAutoQuality: n.selected === me.i,
                     isEnded: r.ended,
                     isPaused: r.paused,
                     isSettingsShown: o.showSettings === L.l,
-                    isClipsPlayerType: me()(pe.c, s.playerType),
+                    isClipsPlayerType: W()(ye.c, s.playerType),
                     playerHeight: i.height,
                     qualitiesAvailable: n.available.length > 0,
                     qualityIsChanging: n.selected !== n.current,
@@ -30370,7 +30380,7 @@
                     windowObj: a
                 }
             },
-            _e = function(e) {
+            we = function(e) {
                 return {
                     onShowSettings: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : L.k;
@@ -30378,13 +30388,13 @@
                     }
                 }
             },
-            we = function(e) {
+            ke = function(e) {
                 function t() {
                     c(this, t);
                     var e = l(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleSettingsButtonClick = e.handleSettingsButtonClick.bind(e), e.handleWindowBlur = e.handleWindowBlur.bind(e), e
                 }
-                return d(t, e), ye(t, [{
+                return d(t, e), ve(t, [{
                     key: "componentDidMount",
                     value: function() {
                         this.props.windowObj.addEventListener("blur", this.handleWindowBlur)
@@ -30422,7 +30432,7 @@
                             a = e.qualitiesAvailable,
                             s = e.qualityIsChanging,
                             u = e.isClipsPlayerType,
-                            c = i ? R.a.createElement(de.h, {
+                            c = i ? R.a.createElement(he.h, {
                                 playerHeight: o
                             }) : null,
                             l = !t && a && s && !u,
@@ -30430,66 +30440,66 @@
                             f = l && d;
                         return R.a.createElement("div", {
                             className: "pl-flex"
-                        }, R.a.createElement(te, null), R.a.createElement(le, {
+                        }, R.a.createElement(ie, null), R.a.createElement(pe, {
                             onClick: this.handleSettingsButtonClick,
                             showSpinningAnimation: f
                         }), c)
                     }
                 }]), t
             }(R.a.Component);
-        we.propTypes = ve, we.defaultProps = ge;
-        var ke = Object(A.b)(be, _e)(H()(we)),
-            Ee = n(85),
-            Se = n(5),
-            Oe = n.n(Se),
-            Pe = Object.assign || function(e) {
+        ke.propTypes = ge, ke.defaultProps = be;
+        var Ee = Object(A.b)(_e, we)(H()(ke)),
+            Se = n(85),
+            Oe = n(5),
+            Pe = n.n(Oe),
+            Ce = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                 }
                 return e
             },
-            Ce = {
+            Te = {
                 fill: I.a.string,
                 viewBox: I.a.string
             },
-            Te = function(e) {
-                return R.a.createElement(ie.a, Pe({
+            xe = function(e) {
+                return R.a.createElement(se.a, Ce({
                     viewBox: "0 0 30 30"
                 }, e), R.a.createElement("path", {
                     d: "M20 17.113V22a1 1 0 0 1-1 1h-4.887c.257-1.051.87-1.404.887-1.917C15.025 19.6 14.006 19 13 19c-1.004 0-2.055.6-1.998 2.083.037.483.642.854.894 1.917H8a1 1 0 0 1-1-1v-4.887c1.051.257 1.404.87 1.917.887C10.4 18.025 11 17.006 11 16c0-1.004-.6-2.055-2.083-1.998-.483.037-.854.642-1.917.894V11a1 1 0 0 1 1-1h3.896c-.252-1.063-.857-1.434-.894-1.917C10.945 6.6 11.996 6 13 6c1.006 0 2.025.599 2 2.083-.016.513-.63.866-.887 1.917H19a1 1 0 0 1 1 1v3.896c1.063-.252 1.434-.857 1.917-.894C23.4 13.945 24 14.996 24 16c0 1.006-.599 2.025-2.083 2-.513-.016-.866-.63-1.917-.887z",
                     fill: e.fill
                 }))
             };
-        Te.propTypes = Ce;
-        var xe = {
+        xe.propTypes = Te;
+        var Re = {
                 onClick: I.a.func,
                 tooltip: I.a.string.isRequired
             },
-            Re = {
+            je = {
                 onClick: function() {}
             },
-            je = function(e) {
+            Ie = function(e) {
                 var t = e.onClick,
                     n = e.tooltip;
-                return R.a.createElement(ne.a, {
+                return R.a.createElement(oe.a, {
                     onClick: t,
                     className: "player-button"
-                }, R.a.createElement(re.a, {
+                }, R.a.createElement(ae.a, {
                     label: n,
                     labelClass: "extension-settings-button__tooltip",
                     iconClass: "pl-settings-icon"
-                }, R.a.createElement(Te, {
+                }, R.a.createElement(xe, {
                     id: "icon_extensions"
                 })))
             };
-        je.propTypes = xe, je.defaultProps = Re;
-        var Ie = n(290),
-            Ae = n(23),
-            Ne = n(29),
-            Le = n(32),
-            Me = n(89),
-            De = function() {
+        Ie.propTypes = Re, Ie.defaultProps = je;
+        var Ae = n(290),
+            Ne = n(23),
+            Le = n(29),
+            Me = n(32),
+            De = n(89),
+            qe = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -30500,10 +30510,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            qe = Object.freeze([Le.d, Le.b, Le.e, Le.g]),
-            Be = {
+            Be = Object.freeze([Me.d, Me.b, Me.e, Me.g]),
+            Ue = {
                 extensionsSubmenu: I.a.string,
-                installations: I.a.arrayOf(Ae.a).isRequired,
+                installations: I.a.arrayOf(Ne.a).isRequired,
                 isLoggedIn: I.a.bool.isRequired,
                 isSettingsShown: I.a.bool.isRequired,
                 locale: I.a.string.isRequired,
@@ -30517,47 +30527,47 @@
                 trackEvent: I.a.func.isRequired,
                 windowObj: I.a.object.isRequired
             },
-            Ue = {
+            Fe = {
                 showSettings: function() {},
                 extensions: []
             },
-            Fe = function(e) {
+            Ve = function(e) {
                 return {
                     extensionsSubmenu: e.ui.showExtensionsSubmenu,
                     installations: e.extensions.activeInstallations,
-                    isLoggedIn: e.user.loggedInStatus === Ne.a,
+                    isLoggedIn: e.user.loggedInStatus === Le.a,
                     isSettingsShown: e.ui.showSettings === L.j,
                     locale: e.lang.langCode,
                     loginId: e.user.id,
                     playerHeight: e.playerDimensions.height,
                     playerType: e.env.playerType,
-                    shouldEnableExtensions: Object(Le.p)(e),
+                    shouldEnableExtensions: Object(Me.p)(e),
                     trackEvent: e.analyticsTracker.trackEvent,
                     windowObj: e.window
                 }
             },
-            Ve = function(e) {
+            He = function(e) {
                 return {
                     onShowSettings: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : L.k;
                         e(Object(L.t)(t))
                     },
                     onIdentityToggle: function(t) {
-                        e(Object(Me.u)(t.id))
+                        e(Object(De.u)(t.id))
                     },
                     onMenuTransition: function() {
-                        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Le.d;
+                        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Me.d;
                         e(Object(L.s)(t))
                     }
                 }
             },
-            He = function(e) {
+            ze = function(e) {
                 function t() {
                     f(this, t);
                     var e = p(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleSettingsButtonClick = e.handleSettingsButtonClick.bind(e), e.handleWindowBlur = e.handleWindowBlur.bind(e), e.handleIdentityToggleClick = e.handleIdentityToggleClick.bind(e), e.trackEvent = e.trackEvent.bind(e), e.handleMenuTransition = e.handleMenuTransition.bind(e), e
                 }
-                return h(t, e), De(t, [{
+                return h(t, e), qe(t, [{
                     key: "componentDidMount",
                     value: function() {
                         this.props.windowObj.addEventListener("blur", this.handleWindowBlur)
@@ -30572,7 +30582,7 @@
                     value: function(e, t, n) {
                         var r = t.activationConfig,
                             i = t.extension;
-                        this.props.trackEvent(e, Oe()(n, {
+                        this.props.trackEvent(e, Pe()(n, {
                             extension_id: i.id,
                             extension_version: i.version,
                             extension_anchor: r.anchor,
@@ -30606,16 +30616,16 @@
                 }, {
                     key: "handleMenuTransition",
                     value: function(e) {
-                        me()(qe, e) && this.props.onMenuTransition(e)
+                        W()(Be, e) && this.props.onMenuTransition(e)
                     }
                 }, {
                     key: "render",
                     value: function() {
                         var e = this.props.installations.filter(function(e) {
-                            return e.activationConfig.anchor !== Ee.b.Hidden
+                            return e.activationConfig.anchor !== Se.b.Hidden
                         });
                         if (!this.props.shouldEnableExtensions || 0 === e.length) return null;
-                        var t = this.props.isSettingsShown ? R.a.createElement(Ie.a, {
+                        var t = this.props.isSettingsShown ? R.a.createElement(Ae.a, {
                             installation: e[0],
                             submenu: this.props.extensionsSubmenu,
                             isLoggedIn: this.props.isLoggedIn,
@@ -30627,37 +30637,37 @@
                         }) : null;
                         return R.a.createElement("div", {
                             className: "pl-flex"
-                        }, R.a.createElement(je, {
+                        }, R.a.createElement(Ie, {
                             onClick: this.handleSettingsButtonClick,
                             tooltip: "Extensions"
                         }), t)
                     }
                 }]), t
             }(R.a.Component);
-        He.propTypes = Be, He.defaultProps = Ue;
-        var ze = H()(He),
-            We = Object(A.b)(Fe, Ve)(ze),
-            Ke = n(33),
-            Ge = n(27),
-            Ye = Object.assign || function(e) {
+        ze.propTypes = Ue, ze.defaultProps = Fe;
+        var We = H()(ze),
+            Ke = Object(A.b)(Ve, He)(We),
+            Ge = n(33),
+            Ye = n(27),
+            Qe = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                 }
                 return e
             },
-            Qe = {
+            $e = {
                 enabled: I.a.bool.isRequired,
                 fill: I.a.string,
                 viewBox: I.a.string
             },
-            $e = function(e) {
-                return e.enabled ? R.a.createElement(ie.a, Ye({
+            Je = function(e) {
+                return e.enabled ? R.a.createElement(se.a, Qe({
                     viewBox: "0 0 30 30"
                 }, e), R.a.createElement("path", {
                     d: "M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z",
                     fill: e.fill
-                })) : R.a.createElement(ie.a, Ye({
+                })) : R.a.createElement(se.a, Qe({
                     viewBox: "0 0 30 30"
                 }, e), R.a.createElement("path", {
                     d: "M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z",
@@ -30665,70 +30675,70 @@
                     fillRule: "evenodd"
                 }))
             };
-        $e.propTypes = Qe;
-        var Je = {
+        Je.propTypes = $e;
+        var Xe = {
                 captionsEnabled: I.a.bool.isRequired,
                 onDisableCaptions: I.a.func.isRequired,
                 onEnableCaptions: I.a.func.isRequired
             },
-            Xe = K()({
+            Ze = Y()({
                 "player-button": !0
             });
-        m.propTypes = Je;
-        var Ze = {
+        m.propTypes = Xe;
+        var et = {
                 captionsAvailable: I.a.bool.isRequired,
                 captionsEnabled: I.a.bool.isRequired,
                 onEnableCaptions: I.a.func.isRequired,
                 onDisableCaptions: I.a.func.isRequired
             },
-            et = function(e) {
+            tt = function(e) {
                 var t = e.captions;
                 return {
                     captionsAvailable: t.available,
                     captionsEnabled: t.enabled
                 }
             },
-            tt = function(e) {
+            nt = function(e) {
                 return {
                     onEnableCaptions: function() {
-                        e(Object(Ke.i)(!0)), e(Object(Ge.d)("player_click_cc"))
+                        e(Object(Ge.i)(!0)), e(Object(Ye.d)("player_click_cc"))
                     },
                     onDisableCaptions: function() {
-                        e(Object(Ke.i)(!1)), e(Object(Ge.d)("player_click_cc"))
+                        e(Object(Ge.i)(!1)), e(Object(Ye.d)("player_click_cc"))
                     }
                 }
             };
-        y.propTypes = Ze;
-        var nt = Object(A.b)(et, tt)(y),
-            rt = Object.assign || function(e) {
+        y.propTypes = et;
+        var rt = Object(A.b)(tt, nt)(y),
+            it = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                 }
                 return e
             },
-            it = {
+            ot = {
                 fill: I.a.string,
                 viewBox: I.a.string
             },
-            ot = function(e) {
-                return R.a.createElement(ie.a, rt({
+            at = function(e) {
+                return R.a.createElement(se.a, it({
                     viewBox: "0 0 30 30"
                 }, e), R.a.createElement("path", {
                     d: "M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z",
                     fill: e.fill
                 }))
             };
-        ot.propTypes = it;
-        var at = {
+        at.propTypes = ot;
+        var st = {
             hasAltShortcut: I.a.bool.isRequired,
             onClip: I.a.func.isRequired
         };
-        v.propTypes = at;
-        var st = n(196),
-            ut = n(286),
-            ct = n(45),
-            lt = function() {
+        v.propTypes = st;
+        var ut = n(196),
+            ct = n(286),
+            lt = n(45),
+            dt = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -30739,7 +30749,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            dt = {
+            ft = {
                 clipGenerator: I.a.shape({
                     recordClip: I.a.func.isRequired
                 }).isRequired,
@@ -30747,27 +30757,27 @@
                 isSitePlayer: I.a.bool.isRequired,
                 trackClipRecord: I.a.func.isRequired
             },
-            ft = function(e) {
-                return {
-                    clipGenerator: e.clips.generator,
-                    isSitePlayer: e.env.playerType === pe.v,
-                    userCanClip: Object(st.b)(e)
-                }
-            },
             pt = function(e) {
                 return {
-                    trackClipRecord: function() {
-                        e(Object(Ge.d)("player_click_clip"))
-                    }
+                    clipGenerator: e.clips.generator,
+                    isSitePlayer: e.env.playerType === ye.v,
+                    userCanClip: Object(ut.b)(e)
                 }
             },
             ht = function(e) {
+                return {
+                    trackClipRecord: function() {
+                        e(Object(Ye.d)("player_click_clip"))
+                    }
+                }
+            },
+            mt = function(e) {
                 function t() {
                     g(this, t);
                     var e = b(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.onClip = e.onClip.bind(e), e
                 }
-                return _(t, e), lt(t, [{
+                return _(t, e), dt(t, [{
                     key: "onClip",
                     value: function(e) {
                         this.props.clipGenerator.recordClip(e), this.props.trackClipRecord()
@@ -30788,45 +30798,45 @@
                 }, {
                     key: "render",
                     value: function() {
-                        return this.props.userCanClip ? R.a.createElement("div", null, R.a.createElement(ut.a, {
-                            uuid: ct.c,
+                        return this.props.userCanClip ? R.a.createElement("div", null, R.a.createElement(ct.a, {
+                            uuid: lt.c,
                             renderValue: "control"
-                        }, this.getClipsButtonComponent("control")), R.a.createElement(ut.a, {
-                            uuid: ct.c,
+                        }, this.getClipsButtonComponent("control")), R.a.createElement(ct.a, {
+                            uuid: lt.c,
                             renderValue: "variant1"
-                        }, this.getClipsButtonComponent("variant1")), R.a.createElement(ut.a, {
-                            uuid: ct.c,
+                        }, this.getClipsButtonComponent("variant1")), R.a.createElement(ct.a, {
+                            uuid: lt.c,
                             renderValue: "variant2"
                         }, this.getClipsButtonComponent("variant2"))) : null
                     }
                 }]), t
             }(R.a.Component);
-        ht.propTypes = dt;
-        var mt = Object(A.b)(ft, pt)(ht),
-            yt = n(104),
-            vt = n(58),
-            gt = Object.assign || function(e) {
+        mt.propTypes = ft;
+        var yt = Object(A.b)(pt, ht)(mt),
+            vt = n(104),
+            gt = n(58),
+            bt = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                 }
                 return e
             },
-            bt = {
+            _t = {
                 castingState: I.a.string,
                 fill: I.a.string,
                 viewBox: I.a.string
             },
-            _t = function(e) {
-                var t = Oe()({}, e, {
-                    className: K()({
+            wt = function(e) {
+                var t = Pe()({}, e, {
+                    className: Y()({
                         "chromecast-icon": !0,
-                        "chromecast--available": e.castingState === vt.a,
-                        "chromecast--connected": e.castingState === vt.b,
-                        "chromecast--connecting": e.castingState === vt.c
+                        "chromecast--available": e.castingState === gt.a,
+                        "chromecast--connected": e.castingState === gt.b,
+                        "chromecast--connecting": e.castingState === gt.c
                     })
                 });
-                return R.a.createElement(ie.a, gt({
+                return R.a.createElement(se.a, bt({
                     viewBox: "0 0 30 30"
                 }, t), R.a.createElement("path", {
                     d: "M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z",
@@ -30849,23 +30859,23 @@
                     fill: e.fill
                 }))
             };
-        _t.propTypes = bt;
-        var wt = {
+        wt.propTypes = _t;
+        var kt = {
             castingState: I.a.string.isRequired,
             onClick: I.a.func.isRequired
         };
-        w.propTypes = wt;
-        var kt = {
+        w.propTypes = kt;
+        var Et = {
                 castingState: I.a.string.isRequired,
                 playerType: I.a.string.isRequired,
                 startCast: I.a.func,
                 stopCast: I.a.func
             },
-            Et = {
+            St = {
                 startCast: function() {},
                 stopCast: function() {}
             },
-            St = function(e) {
+            Ot = function(e) {
                 var t = e.chromecast,
                     n = e.env;
                 return {
@@ -30873,38 +30883,38 @@
                     playerType: n.playerType
                 }
             },
-            Ot = function(e) {
+            Pt = function(e) {
                 return {
                     startCast: function() {
-                        e(Object(yt.g)())
+                        e(Object(vt.g)())
                     },
                     stopCast: function() {
-                        e(Object(yt.h)())
+                        e(Object(vt.h)())
                     }
                 }
             };
-        k.propTypes = kt, k.defaultProps = Et;
-        var Pt = Object(A.b)(St, Ot)(k),
-            Ct = Object.assign || function(e) {
+        k.propTypes = Et, k.defaultProps = St;
+        var Ct = Object(A.b)(Ot, Pt)(k),
+            Tt = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                 }
                 return e
             },
-            Tt = {
+            xt = {
                 enabled: I.a.bool.isRequired,
                 fill: I.a.string,
                 viewBox: I.a.string
             },
-            xt = function(e) {
-                return e.enabled ? R.a.createElement(ie.a, Ct({
+            Rt = function(e) {
+                return e.enabled ? R.a.createElement(se.a, Tt({
                     viewBox: "0 0 30 30"
                 }, e), R.a.createElement("path", {
                     d: "M6 21h11V9H6v12zM19 9v12h5V9h-5z",
                     fill: e.fill,
                     fillRule: "evenodd"
-                })) : R.a.createElement(ie.a, Ct({
+                })) : R.a.createElement(se.a, Tt({
                     viewBox: "0 0 30 30"
                 }, e), R.a.createElement("path", {
                     d: "M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z",
@@ -30912,60 +30922,60 @@
                     fillRule: "evenodd"
                 }))
             };
-        xt.propTypes = Tt;
-        var Rt = {
+        Rt.propTypes = xt;
+        var jt = {
                 onClick: I.a.func.isRequired
             },
-            jt = K()({
+            It = Y()({
                 "player-button": !0,
                 "qa-theatre-mode-button": !0
             }),
-            It = function(e) {
+            At = function(e) {
                 var t = e.onClick;
-                return R.a.createElement(ne.a, {
-                    className: jt,
+                return R.a.createElement(oe.a, {
+                    className: It,
                     onClick: t,
                     tabIndex: "-1"
-                }, R.a.createElement(re.a, {
+                }, R.a.createElement(ae.a, {
                     label: "Theatre Mode",
                     labelClass: "player-tip--theater-mode"
-                }, R.a.createElement(xt, {
+                }, R.a.createElement(Rt, {
                     id: "icon_theatre",
                     enabled: !0
                 })))
             };
-        It.propTypes = Rt;
-        var At = {
+        At.propTypes = jt;
+        var Nt = {
                 onClick: I.a.func.isRequired
             },
-            Nt = K()({
+            Lt = Y()({
                 "player-button": !0,
                 "qa-theatre-mode-button": !0
             }),
-            Lt = function(e) {
+            Mt = function(e) {
                 var t = e.onClick;
-                return R.a.createElement(ne.a, {
-                    className: Nt,
+                return R.a.createElement(oe.a, {
+                    className: Lt,
                     onClick: t,
                     tabIndex: "-1"
-                }, R.a.createElement(re.a, {
+                }, R.a.createElement(ae.a, {
                     label: "Exit Theatre Mode",
                     labelClass: "player-tip--theater-mode"
-                }, R.a.createElement(xt, {
+                }, R.a.createElement(Rt, {
                     id: "icon_theatre_deactivate",
                     enabled: !1
                 })))
             };
-        Lt.propTypes = At;
-        var Mt = n(28),
-            Dt = {
+        Mt.propTypes = Nt;
+        var Dt = n(28),
+            qt = {
                 canTheatreMode: I.a.bool.isRequired,
                 disableTheatreMode: I.a.func.isRequired,
                 enableTheatreMode: I.a.func.isRequired,
                 isFullScreen: I.a.bool.isRequired,
                 isTheatreMode: I.a.bool.isRequired
             },
-            qt = function(e) {
+            Bt = function(e) {
                 var t = e.screenMode;
                 return {
                     canTheatreMode: t.canTheatreMode,
@@ -30973,57 +30983,57 @@
                     isTheatreMode: t.isTheatreMode
                 }
             },
-            Bt = function(e) {
+            Ut = function(e) {
                 return {
                     enableTheatreMode: function() {
-                        e(Object(Mt.h)(!0)), e(Object(Ge.d)("player_click_theater"))
+                        e(Object(Dt.h)(!0)), e(Object(Ye.d)("player_click_theater"))
                     },
                     disableTheatreMode: function() {
-                        e(Object(Mt.h)(!1)), e(Object(Ge.d)("player_click_theater"))
+                        e(Object(Dt.h)(!1)), e(Object(Ye.d)("player_click_theater"))
                     }
                 }
             };
-        E.propTypes = Dt;
-        var Ut = Object(A.b)(qt, Bt)(E),
-            Ft = Object.assign || function(e) {
+        E.propTypes = qt;
+        var Ft = Object(A.b)(Bt, Ut)(E),
+            Vt = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                 }
                 return e
             },
-            Vt = {
+            Ht = {
                 enabled: I.a.bool.isRequired,
                 viewBox: I.a.string
             },
-            Ht = function(e) {
-                return e.enabled ? R.a.createElement(ie.a, Ft({
+            zt = function(e) {
+                return e.enabled ? R.a.createElement(se.a, Vt({
                     viewBox: "0 0 30 30"
                 }, e), R.a.createElement("path", {
                     d: "M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z"
-                })) : R.a.createElement(ie.a, Ft({
+                })) : R.a.createElement(se.a, Vt({
                     viewBox: "0 0 30 30"
                 }, e), R.a.createElement("path", {
                     d: "M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z"
                 }))
             };
-        Ht.propTypes = Vt;
-        var zt = {
+        zt.propTypes = Ht;
+        var Wt = {
             canFullScreen: I.a.bool.isRequired,
             hasBranding: I.a.bool.isRequired,
             isFullScreen: I.a.bool.isRequired,
             onFullScreen: I.a.func.isRequired,
             onUnFullScreen: I.a.func.isRequired
         };
-        S.propTypes = zt;
-        var Wt = {
+        S.propTypes = Wt;
+        var Kt = {
                 canFullScreen: I.a.bool.isRequired,
                 hasBranding: I.a.bool.isRequired,
                 isFullScreen: I.a.bool.isRequired,
                 onFullScreen: I.a.func.isRequired,
                 onUnFullScreen: I.a.func.isRequired
             },
-            Kt = function(e) {
+            Gt = function(e) {
                 var t = e.screenMode,
                     n = e.playerOptions;
                 return {
@@ -31032,72 +31042,72 @@
                     isFullScreen: t.isFullScreen
                 }
             },
-            Gt = function(e) {
+            Yt = function(e) {
                 return {
                     onFullScreen: function() {
-                        e(Object(Mt.g)(!0)), e(Object(Ge.d)("player_click_fullscreen"))
+                        e(Object(Dt.g)(!0)), e(Object(Ye.d)("player_click_fullscreen"))
                     },
                     onUnFullScreen: function() {
-                        e(Object(Mt.g)(!1)), e(Object(Ge.d)("player_click_fullscreen"))
+                        e(Object(Dt.g)(!1)), e(Object(Ye.d)("player_click_fullscreen"))
                     }
                 }
             };
-        O.propTypes = Wt;
-        var Yt = Object(A.b)(Kt, Gt)(O),
-            Qt = Object.assign || function(e) {
+        O.propTypes = Kt;
+        var Qt = Object(A.b)(Gt, Yt)(O),
+            $t = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                 }
                 return e
             },
-            $t = Object.freeze({
+            Jt = Object.freeze({
                 fill: I.a.string,
                 viewBox: I.a.string
             }),
-            Jt = function(e) {
-                return R.a.createElement(ie.a, Qt({
+            Xt = function(e) {
+                return R.a.createElement(se.a, $t({
                     viewBox: "0 0 63 30"
                 }, e), R.a.createElement("path", {
                     d: "M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z",
                     fill: e.fill
                 }))
             };
-        Jt.propTypes = $t;
-        var Xt = {
+        Xt.propTypes = Jt;
+        var Zt = {
                 onClick: I.a.func.isRequired,
                 buttonLabel: I.a.string.isRequired
             },
-            Zt = {
+            en = {
                 onClick: function() {},
                 buttonLabel: ""
             },
-            en = K()("player-button", "player-button--twitch", "qa-watch-twitch-button"),
-            tn = function(e) {
+            tn = Y()("player-button", "player-button--twitch", "qa-watch-twitch-button"),
+            nn = function(e) {
                 var t = e.onClick,
                     n = e.buttonLabel;
-                return R.a.createElement(ne.a, {
-                    className: en,
+                return R.a.createElement(oe.a, {
+                    className: tn,
                     onClick: t
-                }, R.a.createElement(re.a, {
+                }, R.a.createElement(ae.a, {
                     label: n,
                     labelClass: "player-tip--aright"
-                }, R.a.createElement(Jt, {
+                }, R.a.createElement(Xt, {
                     id: "icon_twitch"
                 })))
             };
-        tn.propTypes = Xt, tn.defaultProps = Zt;
-        var nn = n(15),
-            rn = n(10),
-            on = n(9),
-            an = n(34),
-            sn = n(13),
-            un = n(11),
-            cn = n(103),
-            ln = n(88),
-            dn = n(199),
-            fn = n(302),
-            pn = function() {
+        nn.propTypes = Zt, nn.defaultProps = en;
+        var rn = n(15),
+            on = n(10),
+            an = n(9),
+            sn = n(34),
+            un = n(13),
+            cn = n(11),
+            ln = n(103),
+            dn = n(88),
+            fn = n(199),
+            pn = n(302),
+            hn = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -31108,7 +31118,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            hn = {
+            mn = {
                 currentTime: I.a.number.isRequired,
                 streamType: I.a.string,
                 channelName: I.a.string.isRequired,
@@ -31119,11 +31129,11 @@
                 pausePlayer: I.a.func.isRequired,
                 t: I.a.func.isRequired
             },
-            mn = {
-                streamType: cn.a,
+            yn = {
+                streamType: ln.a,
                 videoId: ""
             },
-            yn = function(e) {
+            vn = function(e) {
                 var t = e.playback,
                     n = e.stream,
                     r = e.streamMetadata,
@@ -31139,20 +31149,20 @@
                     showBranding: o.branding
                 }
             },
-            vn = function(e) {
+            gn = function(e) {
                 return {
                     pausePlayer: function() {
-                        e(Object(nn.r)())
+                        e(Object(rn.r)())
                     }
                 }
             },
-            gn = function(e) {
+            bn = function(e) {
                 function t() {
                     P(this, t);
                     var e = C(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleClick = e.handleClick.bind(e), e.getButtonLabel = e.getButtonLabel.bind(e), e
                 }
-                return T(t, e), pn(t, [{
+                return T(t, e), hn(t, [{
                     key: "shouldComponentUpdate",
                     value: function(e) {
                         var t = this,
@@ -31164,7 +31174,7 @@
                 }, {
                     key: "render",
                     value: function() {
-                        return this.props.showBranding ? R.a.createElement(tn, {
+                        return this.props.showBranding ? R.a.createElement(nn, {
                             onClick: this.handleClick,
                             buttonLabel: this.getButtonLabel()
                         }) : null
@@ -31175,7 +31185,7 @@
                         var e = this.props,
                             t = e.streamType,
                             n = e.t;
-                        return n(t === ln.a ? "View clip page" : "Watch on Twitch")
+                        return n(t === dn.a ? "View clip page" : "Watch on Twitch")
                     }
                 }, {
                     key: "handleClick",
@@ -31186,17 +31196,17 @@
                             r = e.pausePlayer,
                             i = "";
                         switch (t) {
-                            case sn.a:
+                            case un.a:
                                 i = this._getLiveURL();
                                 break;
-                            case un.a:
+                            case cn.a:
                                 i = this._getVODURL();
                                 break;
-                            case ln.a:
+                            case dn.a:
                                 i = this._getClipURL();
                                 break;
-                            case cn.a:
-                                i = on.B
+                            case ln.a:
+                                i = an.B
                         }
                         n.open(i, "_blank"), r()
                     }
@@ -31204,7 +31214,7 @@
                     key: "_getClipURL",
                     value: function() {
                         var e = this.props.metadataUrl;
-                        return Object(fn.b)(e, dn.p, dn.v)
+                        return Object(pn.b)(e, fn.p, fn.v)
                     }
                 }, {
                     key: "_getVODURL",
@@ -31213,21 +31223,21 @@
                             t = e.channelName,
                             n = e.videoId,
                             r = e.currentTime,
-                            i = Object(an.d)(Math.round(r));
-                        return Object(rn.B)(t, n, {
+                            i = Object(sn.d)(Math.round(r));
+                        return Object(on.B)(t, n, {
                             t: i
                         })
                     }
                 }, {
                     key: "_getLiveURL",
                     value: function() {
-                        return Object(rn.c)(this.props.channelName)
+                        return Object(on.c)(this.props.channelName)
                     }
                 }]), t
             }(R.a.Component);
-        gn.propTypes = hn, gn.defaultProps = mn;
-        var bn = Object(z.c)()(Object(A.b)(yn, vn)(gn)),
-            _n = function() {
+        bn.propTypes = mn, bn.defaultProps = yn;
+        var _n = Object(K.c)()(Object(A.b)(vn, gn)(bn)),
+            wn = function() {
                 return R.a.createElement("svg", {
                     viewBox: "0 0 30 30"
                 }, R.a.createElement("path", {
@@ -31235,56 +31245,56 @@
                     fillRule: "evenodd"
                 }))
             },
-            wn = n(12),
-            kn = {
+            kn = n(12),
+            En = {
                 t: I.a.func.isRequired,
                 showSharing: I.a.func.isRequired
             },
-            En = function(e) {
+            Sn = function(e) {
                 return {
                     showSharing: function() {
-                        e(Object(wn.q)(wn.d))
+                        e(Object(kn.q)(kn.d))
                     }
                 }
             },
-            Sn = function(e) {
+            On = function(e) {
                 var t = e.showSharing,
                     n = e.t;
-                return R.a.createElement(ne.a, {
+                return R.a.createElement(oe.a, {
                     className: "player-button",
                     onClick: t
                 }, R.a.createElement("span", null, R.a.createElement("span", {
                     className: "player-tip player-tip--aright",
                     "data-tip": n("Share")
-                }), R.a.createElement(_n, null)))
+                }), R.a.createElement(wn, null)))
             };
-        Sn.propTypes = kn;
-        var On = Object(z.c)()(Object(A.b)(null, En)(Sn));
+        On.propTypes = En;
+        var Pn = Object(K.c)()(Object(A.b)(null, Sn)(On));
         n.d(t, "a", function() {
-            return xn
+            return Rn
         });
-        var Pn = {
+        var Cn = {
                 shouldShowShareButton: I.a.bool.isRequired,
                 shouldShowSettingsButton: I.a.bool.isRequired
             },
-            Cn = function(e) {
+            Tn = function(e) {
                 var t = e.env;
                 return {
-                    shouldShowShareButton: pe.h === t.playerType,
-                    shouldShowSettingsButton: pe.g !== t.playerType
+                    shouldShowShareButton: ye.h === t.playerType,
+                    shouldShowSettingsButton: ye.g !== t.playerType
                 }
             },
-            Tn = function(e) {
+            xn = function(e) {
                 var t = e.shouldShowSettingsButton,
                     n = e.shouldShowShareButton;
                 return R.a.createElement("div", {
                     className: "player-buttons-right"
-                }, R.a.createElement(F, null), t && R.a.createElement(ke, null), R.a.createElement(We, null), R.a.createElement(nt, null), R.a.createElement("div", {
+                }, R.a.createElement(F, null), t && R.a.createElement(Ee, null), R.a.createElement(Ke, null), R.a.createElement(rt, null), R.a.createElement("div", {
                     className: "player-menu"
-                }, R.a.createElement(mt, null)), n && R.a.createElement(On, null), R.a.createElement(Pt, null), R.a.createElement(Ut, null), R.a.createElement(Yt, null), R.a.createElement(bn, null))
+                }, R.a.createElement(yt, null)), n && R.a.createElement(Pn, null), R.a.createElement(Ct, null), R.a.createElement(Ft, null), R.a.createElement(Qt, null), R.a.createElement(_n, null))
             };
-        Tn.propTypes = Pn;
-        var xn = Object(A.b)(Cn)(Tn)
+        xn.propTypes = Cn;
+        var Rn = Object(A.b)(Tn)(xn)
     }, function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -31460,7 +31470,7 @@
             m = n(91),
             y = n(30),
             v = n.n(y),
-            g = n(188),
+            g = n(189),
             b = n.n(g),
             _ = n(21),
             w = n.n(_),
@@ -31635,7 +31645,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.05.01-215342+c932209d7fafecdccbfa082afe0dd5121322fb16",
+                    app_version: "2018.05.01-222438+cfa3936397d370512683089196cbab1340fa3b32",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -37178,7 +37188,7 @@
             Pa = n(30),
             Ca = n.n(Pa),
             Ta = n(9),
-            xa = n(162),
+            xa = n(163),
             Ra = n(273),
             ja = n.n(Ra),
             Ia = n(5),
@@ -37298,7 +37308,7 @@
                     }
                 }]), t
             }(Ba),
-            za = n(182),
+            za = n(183),
             Wa = n(21),
             Ka = n.n(Wa),
             Ga = n(68),
@@ -37391,7 +37401,7 @@
             Os = n(69),
             Ps = n(10),
             Cs = n(26),
-            Ts = n(185),
+            Ts = n(186),
             xs = n(138),
             Rs = n(37),
             js = n(58),
@@ -38675,7 +38685,7 @@
             ec = "set usher params",
             tc = "set usher host override",
             nc = "usher_",
-            rc = n(187),
+            rc = n(188),
             ic = n.n(rc),
             oc = n(109),
             ac = n.n(oc),
@@ -38696,10 +38706,10 @@
             wc = n(38),
             kc = n(60),
             Ec = n.n(kc),
-            Sc = n(188),
+            Sc = n(189),
             Oc = n.n(Sc),
             Pc = n(90),
-            Cc = n(144),
+            Cc = n(145),
             Tc = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -39387,7 +39397,7 @@
             Gc = n(79),
             Yc = n.n(Gc),
             Qc = n(59),
-            $c = n(189),
+            $c = n(141),
             Jc = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -39595,7 +39605,7 @@
             }(),
             tl = n(0),
             nl = n.n(tl),
-            rl = n(143),
+            rl = n(144),
             il = n.n(rl),
             ol = n(3),
             al = n(4),
@@ -40620,7 +40630,7 @@
             Ql = new Gl("en", "en-US", Vl.getFixedT("en-US")),
             $l = n(1),
             Jl = n.n($l),
-            Xl = n(141),
+            Xl = n(142),
             Zl = n(301),
             ed = n(305),
             td = n(40),
@@ -41562,7 +41572,7 @@
             Gf = n(32),
             Yf = n(23),
             Qf = n(195),
-            $f = n(142),
+            $f = n(143),
             Jf = {
                 t: Jl.a.func.isRequired,
                 bitsBalance: Jl.a.number,
@@ -45744,7 +45754,7 @@
             ow = n(550),
             aw = n.n(ow),
             sw = n(244),
-            uw = n(177),
+            uw = n(178),
             cw = "set watchpartyvod",
             lw = function() {
                 function e(e, t) {
@@ -45847,9 +45857,9 @@
                     }
                 }]), e
             }(),
-            pw = n(170),
-            hw = n(172),
-            mw = n(171),
+            pw = n(171),
+            hw = n(173),
+            mw = n(172),
             yw = n.n(mw),
             vw = function() {
                 function e(e, t) {
@@ -45921,7 +45931,7 @@
             jw = n(202),
             Iw = n(196),
             Aw = n(203),
-            Nw = n(184),
+            Nw = n(185),
             Lw = Object.freeze({
                 bySlug: {},
                 allSlugs: []
@@ -45948,7 +45958,7 @@
             },
             Vw = n(271),
             Hw = n.n(Vw),
-            zw = n(181),
+            zw = n(182),
             Ww = "6745306",
             Kw = {
                 streamingTag: new Hw.a.StreamingTag({
@@ -46003,7 +46013,7 @@
                 initTime: 0,
                 timeHidden: 0
             }),
-            sk = n(186),
+            sk = n(187),
             uk = {
                 left: 0,
                 top: 0,
@@ -46048,7 +46058,7 @@
             kk = "vodResumeTimes",
             Ek = "vodResumeWatcheds",
             Sk = "livestreamResumeTimes",
-            Ok = n(183),
+            Ok = n(184),
             Pk = 20,
             Ck = 600,
             Tk = 2e4,
@@ -47189,7 +47199,7 @@
                 return Array.from(e)
             }(Qa.c))),
             KE = "Safari";
-        t.Player = ba, n(144).polyfill(), Ea.Dobbin.configure({
+        t.Player = ba, n(145).polyfill(), Ea.Dobbin.configure({
             Promise: Promise
         }), n.p = Ta.y + "/", n(566);
         var GE = Promise.resolve();
@@ -47274,7 +47284,7 @@
             return a(e) && o(e.length) && !!s[i(e)]
         }
         var i = n(54),
-            o = n(147),
+            o = n(148),
             a = n(41),
             s = {};
         s["[object Float32Array]"] = s["[object Float64Array]"] = s["[object Int8Array]"] = s["[object Int16Array]"] = s["[object Int32Array]"] = s["[object Uint8Array]"] = s["[object Uint8ClampedArray]"] = s["[object Uint16Array]"] = s["[object Uint32Array]"] = !0, s["[object Arguments]"] = s["[object Array]"] = s["[object ArrayBuffer]"] = s["[object Boolean]"] = s["[object DataView]"] = s["[object Date]"] = s["[object Error]"] = s["[object Function]"] = s["[object Map]"] = s["[object Number]"] = s["[object Object]"] = s["[object RegExp]"] = s["[object Set]"] = s["[object String]"] = s["[object WeakMap]"] = !1, e.exports = r
@@ -47291,7 +47301,7 @@
                     } catch (e) {}
                 }();
             e.exports = u
-        }).call(t, n(148)(e))
+        }).call(t, n(149)(e))
     }, function(e, t, n) {
         function r(e) {
             if (!i(e)) return o(e);
@@ -47465,7 +47475,7 @@
         }
         var i = n(344),
             o = n(121),
-            a = n(154);
+            a = n(155);
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
@@ -47664,7 +47674,7 @@
             return !0
         }
         var i = n(125),
-            o = n(158),
+            o = n(159),
             a = 1,
             s = 2;
         e.exports = r
@@ -47702,8 +47712,8 @@
             return n.set(e, t), this.size = n.size, this
         }
         var i = n(121),
-            o = n(154),
-            a = n(153),
+            o = n(155),
+            a = n(154),
             s = 200;
         e.exports = r
     }, function(e, t, n) {
@@ -47739,7 +47749,7 @@
             u = n(228),
             c = n(20),
             l = n(113),
-            d = n(149),
+            d = n(150),
             f = 1,
             p = "[object Arguments]",
             h = "[object Array]",
@@ -47899,10 +47909,10 @@
                 return void 0 === r && r === t ? a(n, e) : i(t, r, d | f)
             }
         }
-        var i = n(158),
+        var i = n(159),
             o = n(232),
             a = n(219),
-            s = n(152),
+            s = n(153),
             u = n(230),
             c = n(231),
             l = n(77),
@@ -47915,7 +47925,7 @@
         }
         var i = n(233),
             o = n(383),
-            a = n(152),
+            a = n(153),
             s = n(77);
         e.exports = r
     }, function(e, t, n) {
@@ -47998,7 +48008,7 @@
         }
         var i = n(125),
             o = n(236),
-            a = n(164),
+            a = n(165),
             s = n(388),
             u = n(25),
             c = n(63);
@@ -48037,12 +48047,12 @@
             u = n(239),
             c = n(112),
             l = n(20),
-            d = n(167),
+            d = n(168),
             f = n(113),
             p = n(95),
             h = n(25),
-            m = n(168),
-            y = n(149),
+            m = n(169),
+            y = n(150),
             v = n(390);
         e.exports = r
     }, function(e, t, n) {
@@ -48086,10 +48096,10 @@
         }
         e.exports = n
     }, function(e, t, n) {
-        var r = n(157),
+        var r = n(158),
             i = n(97),
             o = n(394),
-            a = n(167),
+            a = n(168),
             s = i(function(e) {
                 return o(r(e, 1, a, !0))
             });
@@ -48119,10 +48129,10 @@
             }
             return h
         }
-        var i = n(159),
+        var i = n(160),
             o = n(241),
             a = n(242),
-            s = n(160),
+            s = n(161),
             u = n(395),
             c = n(126),
             l = 200;
@@ -48416,7 +48426,7 @@
                     }(), f.setImmediate = r, f.clearImmediate = i
                 }
             }("undefined" == typeof self ? void 0 === e ? this : e : self)
-        }).call(t, n(39), n(145))
+        }).call(t, n(39), n(146))
     }, function(e, t, n) {
         "use strict";
 
@@ -48571,7 +48581,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(174),
+        var r, i = n(175),
             o = n(410),
             a = n(51),
             s = n(411),
@@ -48721,7 +48731,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(174),
+        var r, i = n(175),
             o = n(250),
             a = n(100),
             s = n(64),
@@ -48866,7 +48876,7 @@
     }, function(e, t, n) {
         "use strict";
         var r = n(428),
-            i = n(175),
+            i = n(176),
             o = n(51);
         e.exports = function(e) {
             var t = Object(o(e)),
@@ -49002,7 +49012,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(174),
+        var r, i = n(175),
             o = n(100),
             a = n(64),
             s = n(252),
@@ -49083,7 +49093,7 @@
             return (n -= t.length) >= 0 && e.slice(n, u) == t
         }
         var i = n(254),
-            o = n(155),
+            o = n(156),
             a = n(72),
             s = n(98);
         e.exports = r
@@ -49125,7 +49135,7 @@
         }
     }, function(e, t, n) {
         ! function(r, i) {
-            e.exports = t = i(n(176))
+            e.exports = t = i(n(177))
         }(0, function(e) {
             return function() {
                 var t = e,
@@ -49186,7 +49196,7 @@
         }
     }, function(e, t, n) {
         ! function(r, i) {
-            e.exports = t = i(n(176))
+            e.exports = t = i(n(177))
         }(0, function(e) {
             return function() {
                 var t = e,
@@ -49228,7 +49238,7 @@
         })
     }, function(e, t, n) {
         ! function(r, i) {
-            e.exports = t = i(n(176))
+            e.exports = t = i(n(177))
         }(0, function(e) {
             return e.enc.Utf8
         })
@@ -49374,7 +49384,7 @@
          * This source code is licensed under the MIT license found in the
          * LICENSE file in the root directory of this source tree.
          */
-        var g = n(163),
+        var g = n(164),
             b = n(265),
             _ = n(137),
             w = "function" == typeof Symbol && Symbol.for,
@@ -49751,7 +49761,7 @@
             }
         }
         var i = n(470),
-            o = n(151),
+            o = n(152),
             a = n(208);
         e.exports = r
     }, function(e, t) {
@@ -50296,9 +50306,9 @@
             return s(t) ? a(c(r), 0, e).join("") : r.slice(0, e)
         }
         var i = n(476),
-            o = n(155),
+            o = n(156),
             a = n(477),
-            s = n(180),
+            s = n(181),
             u = n(270),
             c = n(480),
             l = Math.ceil;
@@ -50320,7 +50330,7 @@
             var r = e.length;
             return n = void 0 === n ? r : n, !t && n >= r ? e : i(e, t, n)
         }
-        var i = n(179);
+        var i = n(180);
         e.exports = r
     }, function(e, t, n) {
         var r = n(233),
@@ -50346,7 +50356,7 @@
             return o(e) ? a(e) : i(e)
         }
         var i = n(481),
-            o = n(180),
+            o = n(181),
             a = n(482);
         e.exports = r
     }, function(e, t) {
@@ -51037,7 +51047,7 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            m = n(144),
+            m = n(145),
             y = n(489),
             v = n(255),
             g = n(257),
@@ -51209,7 +51219,7 @@
             return i(e, o(e), t)
         }
         var i = n(48),
-            o = n(161);
+            o = n(162);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
@@ -51261,7 +51271,7 @@
                     return c(e)
             }
         }
-        var i = n(165),
+        var i = n(166),
             o = n(502),
             a = n(503),
             s = n(505),
@@ -51293,7 +51303,7 @@
             var n = t ? i(e.buffer) : e.buffer;
             return new e.constructor(n, e.byteOffset, e.byteLength)
         }
-        var i = n(165);
+        var i = n(166);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n) {
@@ -51301,7 +51311,7 @@
             return o(r, i, new e.constructor)
         }
         var i = n(504),
-            o = n(169),
+            o = n(170),
             a = n(224),
             s = 1;
         e.exports = r
@@ -51323,7 +51333,7 @@
             return o(r, i, new e.constructor)
         }
         var i = n(507),
-            o = n(169),
+            o = n(170),
             a = n(126),
             s = 1;
         e.exports = r
@@ -51344,7 +51354,7 @@
         function r(e, t) {
             return null == e ? e : i(e, o(t), a)
         }
-        var i = n(164),
+        var i = n(165),
             o = n(282),
             a = n(63);
         e.exports = r
@@ -51407,19 +51417,19 @@
             }
             return y
         }
-        var i = n(159),
+        var i = n(160),
             o = n(241),
             a = n(242),
             s = n(61),
-            u = n(150),
-            c = n(160),
+            u = n(151),
+            c = n(161),
             l = Math.min;
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
             return i(e) ? e : []
         }
-        var i = n(167);
+        var i = n(168);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
@@ -51441,13 +51451,13 @@
             return t.length < 2 ? e : i(e, o(t, 0, -1))
         }
         var i = n(119),
-            o = n(179);
+            o = n(180);
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
             return i(e) ? void 0 : e
         }
-        var i = n(168);
+        var i = n(169);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -54464,7 +54474,7 @@
          */
         var bn = n(0),
             _n = n(525),
-            wn = n(163),
+            wn = n(164),
             kn = n(137),
             En = n(526),
             Sn = n(527),
@@ -56585,7 +56595,7 @@
         function r(e, t) {
             return i(e, t)
         }
-        var i = n(158);
+        var i = n(159);
         e.exports = r
     }, function(e, t) {
         e.exports = '<div id="root-player"></div>\n\n<form class="js-create-clip-form" method="post" action="" target="">\n    <input class="js-create-clip-player-backend-type" type="hidden" name="player_backend_type" value="">\n    <input class="js-create-clip-channel" type="hidden" name="channel" value="">\n    <input class="js-create-clip-skip-spritesheet-generation" type="hidden" name="skip_spritesheet_generation" value="">\n    <input class="js-create-clip-offset" type="hidden" name="offset" value="">\n    <input class="js-create-clip-broadcast_id" type="hidden" name="broadcast_id" value="">\n    <input class="js-create-clip-vod_id" type="hidden" name="vod_id" value="">\n    <input class="js-create-clip-play_session_id" type="hidden" name="play_session_id" value="">\n</form>\n'
@@ -56630,9 +56640,9 @@
             return e
         }
         var i = n(61),
-            o = n(146),
+            o = n(147),
             a = n(553),
-            s = n(150),
+            s = n(151),
             u = n(127),
             c = Array.prototype,
             l = c.splice;
@@ -56669,7 +56679,7 @@
             return i(s(n) ? a(n) : [n], o(t, 1))
         }
         var i = n(124),
-            o = n(157),
+            o = n(158),
             a = n(127),
             s = n(20);
         e.exports = r
@@ -56678,8 +56688,8 @@
             var r = null == e ? 0 : e.length;
             return r ? (n && "number" != typeof n && o(e, t, n) ? (t = 0, n = r) : (t = null == t ? 0 : a(t), n = void 0 === n ? r : a(n)), i(e, t, n)) : []
         }
-        var i = n(179),
-            o = n(151),
+        var i = n(180),
+            o = n(152),
             a = n(72);
         e.exports = r
     }, function(e, t, n) {
@@ -56979,7 +56989,7 @@
             return i(e) && 1 === e.nodeType && !o(e)
         }
         var i = n(41),
-            o = n(168);
+            o = n(169);
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
