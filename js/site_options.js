@@ -4086,13 +4086,13 @@ window.SiteOptions = {
         },
         "afcda2ba-dd12-4d9a-9428-df6a71104db8": {
             "name": "twilight_new_homepage",
-            "v": 3637,
+            "v": 3638,
             "t": 1,
             "groups": [{
-                "weight": 1,
+                "weight": 5,
                 "value": "experiment"
             }, {
-                "weight": 99,
+                "weight": 95,
                 "value": "control"
             }]
         },
