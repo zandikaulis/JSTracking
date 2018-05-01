@@ -1,4 +1,4 @@
-webpackJsonp([80], {
+webpackJsonp([81], {
     "+3pi": function(e, t, n) {
         "use strict";
         var i, r = n("GiK3"),
@@ -1115,7 +1115,7 @@ webpackJsonp([80], {
             a = 30,
             o = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         ! function(e) {
-            e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.CommunityModeration = "community_moderation", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.DropsLoginButton = "drops-login-button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.ManagerRedirect = "manager_redirect", e.MessagesPage = "messages_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
+            e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.CommunityModeration = "community_moderation", e.CommunityCreate = "community_create", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.DropsLoginButton = "drops-login-button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.ManagerRedirect = "manager_redirect", e.MessagesPage = "messages_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
         }(i || (i = {}))
     },
     "+xsx": function(e, t) {},
@@ -5193,7 +5193,7 @@ webpackJsonp([80], {
         })
     },
     5: function(e, t, n) {
-        n("rhaD"), n("pP2G"), e.exports = n("rSq6")
+        n("JzlE"), n("rhaD"), n("pP2G"), e.exports = n("rSq6")
     },
     "576g": function(e, t) {
         var n = {
@@ -5304,6 +5304,14 @@ webpackJsonp([80], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
+                                                    value: "canCheer"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
                                                     value: "images"
                                                 },
                                                 arguments: [],
@@ -5363,11 +5371,11 @@ webpackJsonp([80], {
             }],
             loc: {
                 start: 0,
-                end: 133
+                end: 142
             }
         };
         n.loc.source = {
-            body: "fragment cheer on User {\ncheer {\nid\nemotes {\nid\nprefix\ntype\ntiers {\nid\nbits\ncolor\nimages {\nid\nurl\ntheme\nisAnimated\ndpiScale\n}\n}\n}\n}\n}",
+            body: "fragment cheer on User {\ncheer {\nid\nemotes {\nid\nprefix\ntype\ntiers {\nid\nbits\ncolor\ncanCheer\nimages {\nid\nurl\ntheme\nisAnimated\ndpiScale\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -5521,7 +5529,7 @@ webpackJsonp([80], {
                 return i
             }),
             function(e) {
-                e.Individual = "INDIVIDUAL", e.Team = "TEAM", e.Global = "GLOBAL", e.Insider = "INSIDER"
+                e.Individual = "INDIVIDUAL", e.Team = "TEAM", e.Global = "GLOBAL", e.Insider = "INSIDER", e.Bits = "BITS"
             }(i || (i = {}))
     },
     "6Rwu": function(e, t) {},
@@ -5619,7 +5627,6 @@ webpackJsonp([80], {
                 e.Archive = "ARCHIVE", e.Highlight = "HIGHLIGHT", e.Upload = "UPLOAD", e.WatchParty = "WATCH_PARTY", e.PastPremiere = "PAST_PREMIERE", e.PremiereUpload = "PREMIERE_UPLOAD"
             }(i || (i = {}))
     },
-    "6lb1": function(e, t) {},
     "6sO2": function(e, t, n) {
         "use strict";
         var i = n("J4ib");
@@ -12829,6 +12836,7 @@ webpackJsonp([80], {
                 }
             return {
                 id: e + ";" + t,
+                canCheer: t <= r.k,
                 bits: t,
                 color: r.f[t],
                 images: n,
@@ -13832,7 +13840,7 @@ webpackJsonp([80], {
                 return s
             }),
             function(e) {
-                e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensions = "dashboard/extensions", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardRevenueSettings = "dashboard/settings/revenue", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit"
+                e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensions = "dashboard/extensions", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardRevenueSettings = "dashboard/settings/revenue", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit"
             }(i || (i = {})),
             function(e) {
                 e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -13841,7 +13849,7 @@ webpackJsonp([80], {
                 e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.Games = "directory_games", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.Live = "live_channel", e.LiveHost = "live_host", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.LatestCollection = "latest_collection", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.Video = "video"
             }(a || (a = {})),
             function(e) {
-                e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.TopNav = "twitch_topnav", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
+                e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopNav = "twitch_topnav", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
             }(o || (o = {})),
             function(e) {
                 e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Overview = "overview", e.Videos = "videos"
@@ -15204,6 +15212,7 @@ webpackJsonp([80], {
     FTZM: function(e, t) {},
     FTbL: function(e, t) {},
     FVEF: function(e, t) {},
+    FZFL: function(e, t) {},
     FlHF: function(e, t) {},
     FroJ: function(e, t) {},
     FuaS: function(e, t, n) {
@@ -15660,7 +15669,7 @@ webpackJsonp([80], {
                     }
                 }, e[i.ENABLED] = function() {
                     return l.a.wrap(function() {
-                        return n.e(70).then(n.bind(null, "CNsG"))
+                        return n.e(71).then(n.bind(null, "CNsG"))
                     }, "VerifyEmailBar", {
                         failSilently: !0,
                         placeholder: null
@@ -18877,6 +18886,14 @@ webpackJsonp([80], {
             e.Popular = "views", e.Newest = "time"
         }(i || (i = {}))
     },
+    JzlE: function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var i = n("o/qv");
+        Object(i.b)() && (document.domain = "twitch.tv")
+    },
     K1Jg: function(e, t) {
         var n = {
             kind: "Document",
@@ -21230,7 +21247,7 @@ webpackJsonp([80], {
                         }
                     }, t[Oe.VARIANT_A] = function() {
                         return Le.a.wrap(function() {
-                            return n.e(77).then(n.bind(null, "Rxng"))
+                            return n.e(78).then(n.bind(null, "Rxng"))
                         }, "SubscribedChannels", {
                             placeholder: null,
                             failSilently: !0
@@ -22218,7 +22235,6 @@ webpackJsonp([80], {
                     }));
                     var n = t ? 1 : 0;
                     return a.createElement(d._35, {
-                        border: !t,
                         display: d.R.Flex,
                         justifyContent: d._7.Center,
                         margin: {
@@ -22544,7 +22560,31 @@ webpackJsonp([80], {
             F = (n("DgR+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getOfferListOrientation = function() {
+                    return t.renderDesktopOffers = function(e) {
+                        return a.createElement(d._8, {
+                            className: "prime-offer-list__content--desktop"
+                        }, t.renderSectionTitle(), a.createElement(d._55, {
+                            childWidth: d._56.Large,
+                            gutterSize: d._57.Small,
+                            center: !0,
+                            placeholderItems: 20
+                        }, e))
+                    }, t.renderSectionTitle = function() {
+                        return t.props.sectionTitle && a.createElement(d._8, {
+                            padding: {
+                                top: 1
+                            },
+                            className: "prime-offers__title"
+                        }, a.createElement(d.Q, {
+                            type: d._49.H3,
+                            color: d.K.Base,
+                            bold: !0
+                        }, t.props.sectionTitle))
+                    }, t.renderMobileOffers = function(e) {
+                        return a.createElement(d._8, {
+                            className: "prime-offer-list__content--mobile"
+                        }, t.renderSectionTitle(), e)
+                    }, t.getOfferListOrientation = function() {
                         return t.props.listDirection || f.c.Default
                     }, t.shouldShowPlaceholders = function() {
                         if (!t.props.offersData) return !0;
@@ -22569,7 +22609,8 @@ webpackJsonp([80], {
                         n = Object(f.g)("prime-offer-list", e),
                         i = "prime-offer-list__content prime-offer-list__content--" + t,
                         r = this.props.listDirection === f.c.Horizontal,
-                        o = this.props.listDirection === f.c.Vertical;
+                        o = this.props.listDirection === f.c.Vertical,
+                        l = this.renderOfferExperience();
                     return a.createElement(s.b, {
                         className: n,
                         suppressScrollX: o,
@@ -22582,7 +22623,7 @@ webpackJsonp([80], {
                             bottom: 2,
                             x: 1
                         }
-                    }, this.renderUpsell(), this.renderOfferExperience()))
+                    }, this.renderUpsell(), this.props.listDirection === f.c.Horizontal && this.renderDesktopOffers(l), this.renderMobileOffers(l)))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
                     if (!Object(f.j)(e) && !Object(f.k)(e) && !this.props.hideUpsell) return a.createElement(D, null)
@@ -23314,6 +23355,22 @@ webpackJsonp([80], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isPrimeOnly"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "quantity"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
@@ -23382,6 +23439,22 @@ webpackJsonp([80], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isPrimeOnly"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "quantity"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
                                                             }]
                                                         }
                                                     }]
@@ -23397,11 +23470,11 @@ webpackJsonp([80], {
             }],
             loc: {
                 start: 0,
-                end: 270
+                end: 312
             }
         };
         n.loc.source = {
-            body: "query InsiderPassTabRewards($channelID: ID!) {\nuser(id: $channelID) {\nid\ntournament {\nid\nrewards {\ninsider {\nheroSkins {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}\ninGameContent {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}\n}\n}\n}\n}\n}",
+            body: "query InsiderPassTabRewards($channelID: ID!) {\nuser(id: $channelID) {\nid\ntournament {\nid\nrewards {\ninsider {\nheroSkins {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\nquantity\n}\ninGameContent {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\nquantity\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -23429,7 +23502,7 @@ webpackJsonp([80], {
             f = n("jF7o"),
             v = n("iMOk"),
             b = n("WVx7"),
-            y = n("ySfT"),
+            y = n("jUhM"),
             k = n("ZJYd"),
             _ = n("/LBW"),
             w = (n("fHoP"), function(e) {
@@ -24477,10 +24550,15 @@ webpackJsonp([80], {
     Odds: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
-            r = n("HW6M"),
-            a = n("GiK3");
+            r = n("GiK3"),
+            a = n("HW6M");
 
-        function o(e) {
+        function o() {
+            for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
+            return a.apply(void 0, e).split(" ").sort().join(" ").trim()
+        }
+
+        function s(e) {
             for (var t = {}, n = 0, i = Object.keys(e).filter(function(e) {
                     return e.startsWith("data-")
                 }); n < i.length; n++) {
@@ -24489,68 +24567,68 @@ webpackJsonp([80], {
             }
             return t
         }
-        var s, l, c, d, u, p, m, h, g, f, v, b, y, k;
+        var l, c, d, u, p, m, h, g, f, v, b, y, k, _;
         n("HyyJ");
         ! function(e) {
             e.Start = "align-content-start", e.End = "align-content-end", e.Center = "align-content-center", e.Baseline = "align-content-baseline", e.Stretch = "align-content-stretch"
-        }(s || (s = {})),
-        function(e) {
-            e.Start = "align-items-start", e.End = "align-items-end", e.Center = "align-items-center", e.Baseline = "align-items-baseline", e.Stretch = "align-items-stretch"
         }(l || (l = {})),
         function(e) {
-            e.Start = "align-self-start", e.End = "align-self-end", e.Center = "align-self-center", e.Baseline = "align-self-baseline", e.Stretch = "align-self-stretch"
+            e.Start = "align-items-start", e.End = "align-items-end", e.Center = "align-items-center", e.Baseline = "align-items-baseline", e.Stretch = "align-items-stretch"
         }(c || (c = {})),
         function(e) {
-            e.Block = "block", e.Flex = "flex", e.Inline = "inline", e.InlineBlock = "inline-block", e.InlineFlex = "inline-flex", e.Hide = "hide", e.HideAccessible = "hide-accessible"
+            e.Start = "align-self-start", e.End = "align-self-end", e.Center = "align-self-center", e.Baseline = "align-self-baseline", e.Stretch = "align-self-stretch"
         }(d || (d = {})),
         function(e) {
-            e.Column = "flex-column", e.ColumnReverse = "flex-column-reverse", e.Row = "flex-row", e.RowReverse = "flex-row-reverse"
+            e.Block = "block", e.Flex = "flex", e.Inline = "inline", e.InlineBlock = "inline-block", e.InlineFlex = "inline-flex", e.Hide = "hide", e.HideAccessible = "hide-accessible"
         }(u || (u = {})),
         function(e) {
-            e.Wrap = "flex-wrap", e.NoWrap = "flex-nowrap", e.WrapReverse = "flex-wrap-reverse"
+            e.Column = "flex-column", e.ColumnReverse = "flex-column-reverse", e.Row = "flex-row", e.RowReverse = "flex-row-reverse"
         }(p || (p = {})),
         function(e) {
-            e.Start = "justify-content-start", e.End = "justify-content-end", e.Center = "justify-content-center", e.Between = "justify-content-between", e.Around = "justify-content-around"
+            e.Wrap = "flex-wrap", e.NoWrap = "flex-nowrap", e.WrapReverse = "flex-wrap-reverse"
         }(m || (m = {})),
         function(e) {
-            e.Auto = "tw-overflow-auto", e.Scroll = "tw-overflow-scroll", e.Visible = "tw-overflow-visible", e.Hidden = "tw-overflow-hidden"
+            e.Start = "justify-content-start", e.End = "justify-content-end", e.Center = "justify-content-center", e.Between = "justify-content-between", e.Around = "justify-content-around"
         }(h || (h = {})),
         function(e) {
-            e.Relative = "relative", e.Absolute = "absolute", e.Fixed = "fixed"
+            e.Auto = "tw-overflow-auto", e.Scroll = "tw-overflow-scroll", e.Visible = "tw-overflow-visible", e.Hidden = "tw-overflow-hidden"
         }(g || (g = {})),
         function(e) {
-            e.None = "tw-resize-none", e.X = "tw-resize-x", e.Y = "tw-resize-y"
+            e.Relative = "relative", e.Absolute = "absolute", e.Fixed = "fixed"
         }(f || (f = {})),
         function(e) {
-            e.Left = "align-left", e.Center = "align-center", e.Right = "align-right"
+            e.None = "tw-resize-none", e.X = "tw-resize-x", e.Y = "tw-resize-y"
         }(v || (v = {})),
         function(e) {
-            e.Top = "tw-align-top", e.Middle = "tw-align-middle", e.Baseline = "tw-align-baseline", e.Bottom = "tw-align-bottom", e.TextTop = "tw-align-text-top", e.TextBottom = "tw-align-text-bottom"
+            e.Left = "align-left", e.Center = "align-center", e.Right = "align-right"
         }(b || (b = {})),
         function(e) {
-            e.Visible = "visible", e.Hidden = "hidden"
+            e.Top = "tw-align-top", e.Middle = "tw-align-middle", e.Baseline = "tw-align-baseline", e.Bottom = "tw-align-bottom", e.TextTop = "tw-align-text-top", e.TextBottom = "tw-align-text-bottom"
         }(y || (y = {})),
         function(e) {
+            e.Visible = "visible", e.Hidden = "hidden"
+        }(k || (k = {})),
+        function(e) {
             e.Default = "tw-z-default", e.Above = "tw-z-above", e.Below = "tw-z-below"
-        }(k || (k = {}));
-        var _, w, S, E, C, T = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
-            N = function(e) {
+        }(_ || (_ = {}));
+        var w, S, E, C, T, N = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
+            O = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = ((t = {})["" + this.props.className] = !!this.props.className, t["tw-top-0"] = this.props.attachTop, t["tw-right-0"] = this.props.attachRight, t["tw-bottom-0"] = this.props.attachBottom, t["tw-left-0"] = this.props.attachLeft, t["tw-ellipsis"] = this.props.ellipsis, t["tw-full-width"] = this.props.fullWidth, t["tw-full-height"] = this.props.fullHeight, t);
-                    this.props.overflow && (e[this.props.overflow] = !0), this.props.resize && (e[f.X] = !0), this.props.verticalAlign && (e[this.props.verticalAlign] = !0), this.props.zIndex && (e[this.props.zIndex] = !0);
+                    this.props.overflow && (e[this.props.overflow] = !0), this.props.resize && (e[v.X] = !0), this.props.verticalAlign && (e[this.props.verticalAlign] = !0), this.props.zIndex && (e[this.props.zIndex] = !0);
                     var t, n = this.getBreakpointClasses(this.props),
-                        s = this.getBreakpointClasses(this.props.breakpointExtraSmall, "xs"),
+                        a = this.getBreakpointClasses(this.props.breakpointExtraSmall, "xs"),
                         l = this.getBreakpointClasses(this.props.breakpointSmall, "sm"),
                         c = this.getBreakpointClasses(this.props.breakpointMedium, "md"),
                         d = this.getBreakpointClasses(this.props.breakpointLarge, "lg"),
                         u = this.getBreakpointClasses(this.props.breakpointExtraLarge, "xl"),
                         p = this.getBreakpointClasses(this.props.breakpointExtraExtraLarge, "xxl"),
-                        m = a.Children.only(this.props.children);
-                    return a.cloneElement(m, i.__assign({}, m.props, o(this.props), {
-                        className: r(m.props.className, e, n, s, l, c, d, u, p)
+                        m = r.Children.only(this.props.children);
+                    return r.cloneElement(m, i.__assign({}, m.props, s(this.props), {
+                        className: o(m.props.className, e, n, a, l, c, d, u, p)
                     }))
                 }, t.prototype.getBreakpointClasses = function(e, t) {
                     if (!e) return "";
@@ -24570,45 +24648,45 @@ webpackJsonp([80], {
                         var n = [];
                         return void 0 !== t.top && (.5 === t.top ? n.push(e + "-t-05") : n.push(e + "-t-" + t.top)), void 0 !== t.right && (.5 === t.right ? n.push(e + "-r-05") : n.push(e + "-r-" + t.right)), void 0 !== t.bottom && (.5 === t.bottom ? n.push(e + "-b-05") : n.push(e + "-b-" + t.bottom)), void 0 !== t.left && (.5 === t.left ? n.push(e + "-l-05") : n.push(e + "-l-" + t.left)), void 0 !== t.x && (.5 === t.x ? n.push(e + "-x-05") : n.push(e + "-x-" + t.x)), void 0 !== t.y && (.5 === t.y ? n.push(e + "-y-05") : n.push(e + "-y-" + t.y)), n
                     }
-                    if (!T.has(t) || "tw-pd" === e && "auto" === t) throw new Error(t + " is not a valid property of either margin or padding");
+                    if (!N.has(t) || "tw-pd" === e && "auto" === t) throw new Error(t + " is not a valid property of either margin or padding");
                     return .5 === t ? e + "-05" : "auto" === t ? e + "-auto" : e + "-" + t
                 }, t
-            }(a.Component),
-            O = function(e) {
+            }(r.Component),
+            R = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(N, i.__assign({}, this.props), a.createElement("div", {
+                    return r.createElement(O, i.__assign({}, this.props), r.createElement("div", {
                         ref: this.props.refDelegate
                     }, this.props.children))
                 }, t
-            }(N);
+            }(O);
         n("oM0L");
         ! function(e) {
             e.Short = "tw-animation--delay-short", e.Medium = "tw-animation--delay-medium", e.Long = "tw-animation--delay-long", e.ExtraLong = "tw-animation--delay-extra-long"
-        }(_ || (_ = {})),
-        function(e) {
-            e.Short = "tw-animation--duration-short", e.Medium = "tw-animation--duration-medium", e.Long = "tw-animation--duration-long", e.ExtraLong = "tw-animation--duration-extra-long"
         }(w || (w = {})),
         function(e) {
-            e.Both = "tw-animation--fill-mode-both", e.None = "tw-animation--fill-mode-none", e.Forwards = "tw-animation--fill-mode-forwards", e.Backwards = "tw-animation--fill-mode-backwards"
+            e.Short = "tw-animation--duration-short", e.Medium = "tw-animation--duration-medium", e.Long = "tw-animation--duration-long", e.ExtraLong = "tw-animation--duration-extra-long"
         }(S || (S = {})),
         function(e) {
-            e.Ease = "tw-animation--timing-ease", e.Linear = "tw-animation--timing-linear", e.EaseIn = "tw-animation--timing-ease-in", e.EaseOut = "tw-animation--timing-ease-out", e.EaseInOut = "tw-animation--timing-ease-in-out"
+            e.Both = "tw-animation--fill-mode-both", e.None = "tw-animation--fill-mode-none", e.Forwards = "tw-animation--fill-mode-forwards", e.Backwards = "tw-animation--fill-mode-backwards"
         }(E || (E = {})),
         function(e) {
+            e.Ease = "tw-animation--timing-ease", e.Linear = "tw-animation--timing-linear", e.EaseIn = "tw-animation--timing-ease-in", e.EaseOut = "tw-animation--timing-ease-out", e.EaseInOut = "tw-animation--timing-ease-in-out"
+        }(C || (C = {})),
+        function(e) {
             e.Bounce = "tw-animation--bounce", e.BounceIn = "tw-animation--bounce-in", e.BounceOut = "tw-animation--bounce-out", e.FadeIn = "tw-animation--fade-in", e.FadeOut = "tw-animation--fade-out", e.SlideInTop = "tw-animation--slide-in-top", e.SlideInRight = "tw-animation--slide-in-right", e.SlideInBottom = "tw-animation--slide-in-bottom", e.SlideInLeft = "tw-animation--slide-in-left", e.SlideOutTop = "tw-animation--slide-out-top", e.SlideOutRight = "tw-animation--slide-out-right", e.SlideOutBottom = "tw-animation--slide-out-bottom", e.SlideOutLeft = "tw-animation--slide-out-left"
-        }(C || (C = {}));
-        var R, x, I = function(e) {
+        }(T || (T = {}));
+        var x, I, D = function(e) {
             var t = {
                 "tw-animation": !0,
                 "tw-animation--animate": e.enabled,
                 "tw-animation--loop": e.loop
             };
-            return e.delay && (t[e.delay] = !0), e.duration ? t[e.duration] = !0 : t[w.Short] = !0, e.fillMode ? t[e.fillMode] = !0 : t[S.Both] = !0, e.timing ? t[e.timing] = !0 : t[E.Ease] = !0, e.type && (t[e.type] = !0), a.createElement(N, i.__assign({
-                className: r(t)
-            }, o(e)), a.createElement("div", {
+            return e.delay && (t[e.delay] = !0), e.duration ? t[e.duration] = !0 : t[S.Short] = !0, e.fillMode ? t[e.fillMode] = !0 : t[E.Both] = !0, e.timing ? t[e.timing] = !0 : t[C.Ease] = !0, e.type && (t[e.type] = !0), r.createElement(O, i.__assign({
+                className: o(t)
+            }, s(e)), r.createElement("div", {
                 onAnimationStart: e.onAnimationStart,
                 onAnimationEnd: e.onAnimationEnd,
                 "data-a-target": "tw-animation-target"
@@ -24617,35 +24695,35 @@ webpackJsonp([80], {
         n("OXEC");
         ! function(e) {
             e.Aspect21x9 = "tw-aspect--21x9", e.Aspect16x9 = "tw-aspect--16x9", e.Aspect4x3 = "tw-aspect--4x3", e.Aspect1x1 = "tw-aspect--1x1", e.Aspect3x4 = "tw-aspect--3x4", e.BoxArt = "tw-aspect--3x4"
-        }(R || (R = {})),
+        }(x || (x = {})),
         function(e) {
             e.Top = "tw-aspect--align-top", e.Center = "tw-aspect--align-center", e.Bottom = "tw-aspect--align-bottom"
-        }(x || (x = {}));
-        var D, L = function(e) {
+        }(I || (I = {}));
+        var L, P = function(e) {
                 var t = {
                     "tw-aspect": !0,
                     "tw-aspect--overflow": e.overflow
                 };
-                return e.ratio ? t[e.ratio] = !0 : t[R.Aspect16x9] = !0, e.align ? t[e.align] = !0 : t[x.Top] = !0, a.createElement("figure", i.__assign({
-                    className: r(t)
-                }, o(e)), e.children)
-            },
-            P = function(e) {
-                return new RegExp(/^(\d+\.?\d*)(w|x)$/).test(e)
+                return e.ratio ? t[e.ratio] = !0 : t[x.Aspect16x9] = !0, e.align ? t[e.align] = !0 : t[I.Top] = !0, r.createElement("figure", i.__assign({
+                    className: o(t)
+                }, s(e)), e.children)
             },
             F = function(e) {
+                return new RegExp(/^(\d+\.?\d*)(w|x)$/).test(e)
+            },
+            M = function(e) {
                 var t;
                 e.sizes && (t = e.sizes.map(function(e) {
                     return e.mediaCondition ? e.mediaCondition + " " + e.size : "" + e.size
                 }).join(",") || void 0);
-                var n = Object.keys(e.srcSet || {}).filter(P).map(function(t) {
+                var n = Object.keys(e.srcSet || {}).filter(F).map(function(t) {
                     return e.srcSet ? e.srcSet[t] + " " + t : ""
                 }).join(",") || void 0;
-                return a.createElement("img", i.__assign({
-                    className: r(e.className, {
+                return r.createElement("img", i.__assign({
+                    className: o(e.className, {
                         "tw-image": !0
                     })
-                }, o(e), {
+                }, s(e), {
                     src: e.src,
                     alt: e.alt,
                     srcSet: n,
@@ -24658,46 +24736,46 @@ webpackJsonp([80], {
         n("WtTG");
         ! function(e) {
             e.Offline = "tw-presence__indicator--offline", e.Invisible = "tw-presence__indicator--invisible", e.Online = "tw-presence__indicator--online", e.Busy = "tw-presence__indicator--busy", e.Away = "tw-presence__indicator--away"
-        }(D || (D = {}));
-        var M, A, U, j, B, z, V, W = function(e) {
+        }(L || (L = {}));
+        var A, U, j, B, z, V, W, H = function(e) {
             var t = {
                     "tw-presence": !0,
                     "tw-presence--border": e.border
                 },
                 n = {};
-            return e.status ? n[e.status] = !0 : n[D.Offline] = !0, a.createElement(O, i.__assign({
-                className: r(t),
-                display: d.InlineFlex,
-                position: g.Relative
-            }, o(e)), a.createElement("div", {
+            return e.status ? n[e.status] = !0 : n[L.Offline] = !0, r.createElement(R, i.__assign({
+                className: o(t),
+                display: u.InlineFlex,
+                position: f.Relative
+            }, s(e)), r.createElement("div", {
                 className: "tw-presence__border"
-            }), a.createElement("div", {
-                className: "tw-presence__indicator " + r(n)
+            }), r.createElement("div", {
+                className: "tw-presence__indicator " + o(n)
             }))
         };
         n("QIj1");
         ! function(e) {
             e.Base = "tw-c-text", e.Alt = "tw-c-text-alt", e.Alt2 = "tw-c-text-alt-2", e.Link = "tw-c-text-link", e.Live = "tw-c-text-live", e.Error = "tw-c-text-error", e.Overlay = "tw-c-text-overlay", e.OverlayAlt = "tw-c-text-overlay-alt", e.Inherit = "tw-c-text-inherit"
-        }(M || (M = {})),
-        function(e) {
-            e.Size1 = "font-size-1", e.Size2 = "font-size-2", e.Size3 = "font-size-3", e.Size4 = "font-size-4", e.Size5 = "font-size-5", e.Size6 = "font-size-6", e.Size7 = "font-size-7", e.Size8 = "font-size-8"
         }(A || (A = {})),
         function(e) {
-            e.Body = "tw-line-height-body", e.Heading = "tw-line-height-heading"
+            e.Size1 = "font-size-1", e.Size2 = "font-size-2", e.Size3 = "font-size-3", e.Size4 = "font-size-4", e.Size5 = "font-size-5", e.Size6 = "font-size-6", e.Size7 = "font-size-7", e.Size8 = "font-size-8"
         }(U || (U = {})),
         function(e) {
-            e.Underline = "tw-underline", e.Strikethrough = "tw-strikethrough"
+            e.Body = "tw-line-height-body", e.Heading = "tw-line-height-heading"
         }(j || (j = {})),
         function(e) {
-            e.Capitalize = "tw-capcase", e.Uppercase = "tw-upcase"
+            e.Underline = "tw-underline", e.Strikethrough = "tw-strikethrough"
         }(B || (B = {})),
         function(e) {
-            e.P = "p", e.Span = "span", e.H1 = "h1", e.H2 = "h2", e.H3 = "h3", e.H4 = "h4", e.H5 = "h5", e.H6 = "h6", e.Strong = "strong", e.Em = "em"
+            e.Capitalize = "tw-capcase", e.Uppercase = "tw-upcase"
         }(z || (z = {})),
         function(e) {
+            e.P = "p", e.Span = "span", e.H1 = "h1", e.H2 = "h2", e.H3 = "h3", e.H4 = "h4", e.H5 = "h5", e.H6 = "h6", e.Strong = "strong", e.Em = "em"
+        }(V || (V = {})),
+        function(e) {
             e.Normal = "tw-word-break-normal", e.BreakAll = "tw-word-break-all", e.KeepAll = "tw-word-break-keep-all", e.BreakWord = "tw-word-break-word"
-        }(V || (V = {}));
-        var H, G, q = function(e) {
+        }(W || (W = {}));
+        var G, q, Q = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -24710,19 +24788,19 @@ webpackJsonp([80], {
                 })["tw-line-clamp-2"] = 2 === this.props.lines, m);
                 this.props.color && (e[this.props.color] = !0), this.props.lineHeight && (e[this.props.lineHeight] = !0), this.props.transform && (e[this.props.transform] = !0), this.props.decoration && (e[this.props.decoration] = !0), this.props.wordBreak && (e[this.props.wordBreak] = !0);
                 var t, n = this.getBreakpointClasses(this.props),
-                    s = this.getBreakpointClasses(this.props.breakpointExtraSmall, "xs"),
+                    a = this.getBreakpointClasses(this.props.breakpointExtraSmall, "xs"),
                     l = this.getBreakpointClasses(this.props.breakpointSmall, "sm"),
                     c = this.getBreakpointClasses(this.props.breakpointMedium, "md"),
                     d = this.getBreakpointClasses(this.props.breakpointLarge, "lg"),
                     u = this.getBreakpointClasses(this.props.breakpointExtraLarge, "xl"),
                     p = this.getBreakpointClasses(this.props.breakpointExtraExtraLarge, "xxl");
                 this.props.title ? t = this.props.title : this.props.ellipsis && "string" == typeof this.props.children && (t = this.props.children);
-                var m, h = a.createElement(this.props.type || "p", i.__assign({
-                    className: r(this.props.className, e, n, s, l, c, d, u, p).trim()
-                }, o(this.props), {
+                var m, h = r.createElement(this.props.type || "p", i.__assign({
+                    className: o(this.props.className, e, n, a, l, c, d, u, p)
+                }, s(this.props), {
                     title: t
                 }), this.props.children);
-                return a.createElement(N, {
+                return r.createElement(O, {
                     verticalAlign: this.props.align
                 }, h)
             }, t.prototype.getBreakpointClasses = function(e, t) {
@@ -24730,15 +24808,15 @@ webpackJsonp([80], {
                 var n = [];
                 return t = t ? "tw-" + t + "-" : "tw-", e.fontSize && n.push(t + e.fontSize), n
             }, t
-        }(a.Component);
+        }(r.Component);
         n("kIPx");
         ! function(e) {
             e.Base = "tw-c-background", e.Alt = "tw-c-background-alt", e.Alt2 = "tw-c-background-alt-2", e.Overlay = "tw-c-background-overlay", e.Accent = "tw-c-background-accent", e.AccentAlt = "tw-c-background-accent-alt", e.AccentAlt2 = "tw-c-background-accent-alt-2"
-        }(H || (H = {})),
+        }(G || (G = {})),
         function(e) {
             e.None = "tw-border-radius-none", e.Small = "tw-border-radius-small", e.Medium = "tw-border-radius-medium", e.Large = "tw-border-radius-large", e.Rounded = "tw-border-radius-rounded"
-        }(G || (G = {}));
-        var Q, K, $ = function(e) {
+        }(q || (q = {}));
+        var K, $, Y = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -24752,7 +24830,7 @@ webpackJsonp([80], {
                     })["tw-elevation-" + this.props.elevation] = !!this.props.elevation, t);
                     this.props.borderRadius && (e[this.props.borderRadius] = !0);
                     var t, n = this.getColorClass(),
-                        s = this.getBackgroundClass(),
+                        a = this.getBackgroundClass(),
                         l = this.getBreakpointClasses(this.props),
                         c = this.getBreakpointClasses(this.props.breakpointExtraSmall, "xs"),
                         d = this.getBreakpointClasses(this.props.breakpointSmall, "sm"),
@@ -24760,49 +24838,49 @@ webpackJsonp([80], {
                         p = this.getBreakpointClasses(this.props.breakpointLarge, "lg"),
                         m = this.getBreakpointClasses(this.props.breakpointExtraLarge, "xl"),
                         h = this.getBreakpointClasses(this.props.breakpointExtraExtraLarge, "xxl"),
-                        g = i.__assign({}, this.props, o(this.props), {
-                            className: r(this.props.className, e, s, n, l, c, d, u, p, m, h)
+                        g = i.__assign({}, this.props, s(this.props), {
+                            className: o(this.props.className, e, a, n, l, c, d, u, p, m, h)
                         });
-                    return a.createElement(N, i.__assign({}, g))
+                    return r.createElement(O, i.__assign({}, g))
                 }, t.prototype.getBreakpointClasses = function(e, t) {
                     if (!e) return "";
                     var n = [];
                     return t = t ? "tw-" + t + "-" : "tw-", e.fontSize && n.push(t + e.fontSize), n
                 }, t.prototype.getColorClass = function() {
-                    return this.props.background !== H.Overlay || this.props.color ? this.props.color ? this.props.color : "" : M.Overlay
+                    return this.props.background !== G.Overlay || this.props.color ? this.props.color ? this.props.color : "" : A.Overlay
                 }, t.prototype.getBackgroundClass = function() {
                     return this.props.background ? this.props.background : ""
                 }, t
-            }(a.Component),
-            Y = function(e) {
+            }(r.Component),
+            Z = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement($, i.__assign({}, this.props), a.createElement("div", {
+                    return r.createElement(Y, i.__assign({}, this.props), r.createElement("div", {
                         ref: this.props.refDelegate
                     }, this.props.children))
                 }, t
-            }($),
-            Z = (n("tcHh"), function(e) {
-                var t, n, s, c = ((s = {
+            }(Y),
+            X = (n("tcHh"), function(e) {
+                var t, n, a, l = ((a = {
                     "tw-avatar": !0
-                })["tw-avatar--size-" + e.size] = !!e.size, s);
-                return t = 300 === e.size ? "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_300x300.png" : 96 === e.size || 80 === e.size ? "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png" : "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", e.presenceIndicator && (n = a.createElement(O, {
+                })["tw-avatar--size-" + e.size] = !!e.size, a);
+                return t = 300 === e.size ? "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_300x300.png" : 96 === e.size || 80 === e.size ? "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png" : "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", e.presenceIndicator && (n = r.createElement(R, {
                     className: "tw-avatar__presence",
-                    display: d.Flex,
-                    justifyContent: m.Center,
-                    alignItems: l.Center,
-                    position: g.Absolute
-                }, a.createElement(W, {
+                    display: u.Flex,
+                    justifyContent: h.Center,
+                    alignItems: c.Center,
+                    position: f.Absolute
+                }, r.createElement(H, {
                     border: !0,
                     status: e.presenceStatus
-                }))), a.createElement("figure", i.__assign({
-                    className: r(c)
-                }, o(e)), a.createElement(Y, {
+                }))), r.createElement("figure", i.__assign({
+                    className: o(l)
+                }, s(e)), r.createElement(Z, {
                     borderRadius: e.borderRadius,
-                    overflow: h.Hidden
-                }, a.createElement(F, {
+                    overflow: g.Hidden
+                }, r.createElement(M, {
                     src: e.src || t,
                     alt: e.alt,
                     srcSet: e.srcSet,
@@ -24814,900 +24892,900 @@ webpackJsonp([80], {
         n("oWcd");
         ! function(e) {
             e.Inherit = "tw-svg__asset--inherit", e.Alt = "tw-svg__asset--alt", e.Alt2 = "tw-svg__asset--alt-2", e.Brand = "tw-svg__asset--brand", e.Live = "tw-svg__asset--live", e.Warn = "tw-svg__asset--warn", e.Alert = "tw-svg__asset--alert", e.Success = "tw-svg__asset--success", e.Prime = "tw-svg__asset--prime", e.Placeholder = "tw-svg__asset--placeholder", e.OverlayPlaceholder = "tw-svg__asset--overlay-placeholder"
-        }(Q || (Q = {})),
+        }(K || (K = {})),
         function(e) {
             e[e.AddFriend = 1] = "AddFriend", e[e.AddUser = 2] = "AddUser", e[e.AddReaction = 3] = "AddReaction", e[e.AngleDown = 4] = "AngleDown", e[e.AngleLeft = 5] = "AngleLeft", e[e.AngleRight = 6] = "AngleRight", e[e.AngleUp = 7] = "AngleUp", e[e.ArrowDown = 8] = "ArrowDown", e[e.ArrowLeft = 9] = "ArrowLeft", e[e.ArrowRight = 10] = "ArrowRight", e[e.ArrowUp = 11] = "ArrowUp", e[e.Automod = 12] = "Automod", e[e.Ban = 13] = "Ban", e[e.Bits = 14] = "Bits", e[e.CC = 15] = "CC", e[e.CCOff = 16] = "CCOff", e[e.Camera = 17] = "Camera", e[e.ChatRiskFlag = 18] = "ChatRiskFlag", e[e.ChatSettingsBack = 19] = "ChatSettingsBack", e[e.Check = 20] = "Check", e[e.Clip = 21] = "Clip", e[e.Close = 22] = "Close", e[e.Collections = 23] = "Collections", e[e.Communities = 24] = "Communities", e[e.Conversations = 25] = "Conversations", e[e.Copy = 26] = "Copy", e[e.Crate = 27] = "Crate", e[e.Crown = 28] = "Crown", e[e.DeadGlitch = 29] = "DeadGlitch", e[e.Document = 30] = "Document", e[e.Download = 31] = "Download", e[e.DragHandle = 32] = "DragHandle", e[e.Drops = 33] = "Drops", e[e.Edit = 34] = "Edit", e[e.Emoticons = 35] = "Emoticons", e[e.Events = 36] = "Events", e[e.EventsReminderAdd = 37] = "EventsReminderAdd", e[e.EventsReminderAdded = 38] = "EventsReminderAdded", e[e.EventsReminderRemove = 39] = "EventsReminderRemove", e[e.Extensions = 40] = "Extensions", e[e.Facebook = 41] = "Facebook", e[e.Featured = 42] = "Featured", e[e.Filter = 43] = "Filter", e[e.FollowCheck = 44] = "FollowCheck", e[e.FollowX = 45] = "FollowX", e[e.Friends = 46] = "Friends", e[e.FriendsSC = 47] = "FriendsSC", e[e.Gear = 48] = "Gear", e[e.Gift = 49] = "Gift", e[e.Github = 50] = "Github", e[e.Global = 51] = "Global", e[e.GlyphArrDown = 52] = "GlyphArrDown", e[e.GlyphArrLeft = 53] = "GlyphArrLeft", e[e.GlyphArrRight = 54] = "GlyphArrRight", e[e.GlyphArrUp = 55] = "GlyphArrUp", e[e.GlyphArrUpDown = 56] = "GlyphArrUpDown", e[e.GlyphFollowers = 57] = "GlyphFollowers", e[e.GlyphLength = 58] = "GlyphLength", e[e.GlyphLive = 59] = "GlyphLive", e[e.GlyphLiveSmall = 60] = "GlyphLiveSmall", e[e.GlyphViews = 61] = "GlyphViews", e[e.GridLayout = 62] = "GridLayout", e[e.Halt = 63] = "Halt", e[e.Hash = 64] = "Hash", e[e.Heart = 65] = "Heart", e[e.HGCNexus = 66] = "HGCNexus", e[e.Hide = 67] = "Hide", e[e.HourGlass = 68] = "HourGlass", e[e.Ignore = 69] = "Ignore", e[e.Link = 70] = "Link", e[e.Lock = 71] = "Lock", e[e.LogoGlitch = 72] = "LogoGlitch", e[e.LogoTwitch = 73] = "LogoTwitch", e[e.LogoTwitchDevelopers = 74] = "LogoTwitchDevelopers", e[e.LogoTwitchPrime = 75] = "LogoTwitchPrime", e[e.LogoTwitchPrimeHorizontal = 76] = "LogoTwitchPrimeHorizontal", e[e.Maximize = 77] = "Maximize", e[e.MessagesSC = 78] = "MessagesSC", e[e.Minimize = 79] = "Minimize", e[e.MiniPlayerExpand = 80] = "MiniPlayerExpand", e[e.MiniPlayerPause = 81] = "MiniPlayerPause", e[e.MiniPlayerPlay = 82] = "MiniPlayerPlay", e[e.More = 83] = "More", e[e.Muted = 84] = "Muted", e[e.NavBackpack = 85] = "NavBackpack", e[e.NavBug = 86] = "NavBug", e[e.NavChannels = 87] = "NavChannels", e[e.NavCreative = 88] = "NavCreative", e[e.NavDashboard = 89] = "NavDashboard", e[e.NavDiscover = 90] = "NavDiscover", e[e.NavFollowing = 91] = "NavFollowing", e[e.NavGames = 92] = "NavGames", e[e.NavLogout = 93] = "NavLogout", e[e.NavManager = 94] = "NavManager", e[e.NavMessages = 95] = "NavMessages", e[e.NavMore = 96] = "NavMore", e[e.NavMyChannel = 97] = "NavMyChannel", e[e.NavProfile = 98] = "NavProfile", e[e.NavSearch = 99] = "NavSearch", e[e.NavSettings = 100] = "NavSettings", e[e.NavVideos = 101] = "NavVideos", e[e.Neck = 102] = "Neck", e[e.NotificationBell = 103] = "NotificationBell", e[e.NotificationError = 104] = "NotificationError", e[e.NotificationInfo = 105] = "NotificationInfo", e[e.NotificationSuccess = 106] = "NotificationSuccess", e[e.NotificationWarning = 107] = "NotificationWarning", e[e.OP = 108] = "OP", e[e.PermissionsAdd = 109] = "PermissionsAdd", e[e.PermissionsAdded = 110] = "PermissionsAdded", e[e.PermissionsRemove = 111] = "PermissionsRemove", e[e.Pin = 112] = "Pin", e[e.Pinned = 113] = "Pinned", e[e.Play = 114] = "Play", e[e.Playlist = 115] = "Playlist", e[e.Plus = 116] = "Plus", e[e.Popout = 117] = "Popout", e[e.QuestionMark = 118] = "QuestionMark", e[e.Reddit = 119] = "Reddit", e[e.Refresh = 120] = "Refresh", e[e.RemoveTag = 121] = "RemoveTag", e[e.RequestsSC = 122] = "RequestsSC", e[e.Roman1 = 123] = "Roman1", e[e.Roman2 = 124] = "Roman2", e[e.Roman3 = 125] = "Roman3", e[e.Roman4 = 126] = "Roman4", e[e.Roman5 = 127] = "Roman5", e[e.RoomList = 128] = "RoomList", e[e.RoomListOpen = 129] = "RoomListOpen", e[e.SearchNoResults = 130] = "SearchNoResults", e[e.Share = 131] = "Share", e[e.Shirt = 132] = "Shirt", e[e.Star = 133] = "Star", e[e.Steam = 134] = "Steam", e[e.Sword = 135] = "Sword", e[e.Team = 136] = "Team", e[e.Theater = 137] = "Theater", e[e.Timeout = 138] = "Timeout", e[e.Timer = 139] = "Timer", e[e.ToBottom = 140] = "ToBottom", e[e.ToTop = 141] = "ToTop", e[e.Trash = 142] = "Trash", e[e.Trophy = 143] = "Trophy", e[e.Twitter = 144] = "Twitter", e[e.Unheart = 145] = "Unheart", e[e.Unignore = 146] = "Unignore", e[e.Unlock = 147] = "Unlock", e[e.Upload = 148] = "Upload", e[e.VKontakte = 149] = "VKontakte", e[e.Verified = 150] = "Verified", e[e.VideoPremiere = 151] = "VideoPremiere", e[e.VideoRerun = 152] = "VideoRerun", e[e.ViewerList = 153] = "ViewerList", e[e.VolumeMax = 154] = "VolumeMax", e[e.VolumeMuted = 155] = "VolumeMuted", e[e.Warning = 156] = "Warning", e[e.WhisperMuted = 157] = "WhisperMuted"
-        }(K || (K = {}));
-        var X, J, ee = ((X = {})[K.AddFriend] = {
-                path: a.createElement("path", {
+        }($ || ($ = {}));
+        var J, ee, te = ((J = {})[$.AddFriend] = {
+                path: r.createElement("path", {
                     d: "M3,6 L1,6 L1,7 L3,7 L3,9 L4,9 L4,7 L6,7 L6,6 L4,6 L4,4 L3,4 L3,6 Z M9.57142857,3 L12.4285714,3 L13.8571429,4.42857143 L13.8571429,8 L11.7142857,9.42857143 L11.7142857,10.1428571 L14.5714286,10.1428571 L16,11.5714286 L16,13 L6,13 L6,11.5714286 L7.42857143,10.1428571 L10.2857143,10.1428571 L10.2857143,9.42857143 L8.14285714,8 L8.14285714,4.42857143 L9.57142857,3 Z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.AddUser] = {
-                path: a.createElement("path", {
+            }, J[$.AddUser] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M15,9h-3v3h-2V9H7V7h3V4h2v3h3V9z M9,6H6v4h2h1v3h4l0,0l0,0v1h-3H4H1v-1l3-3h2L4,8V2h6v1H9V6z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.AddReaction] = {
-                path: a.createElement("path", {
+            }, J[$.AddReaction] = {
+                path: r.createElement("path", {
                     d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0 2C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm4-12c0-.776-.223-1-1-1h-2V9c0-.776-.223-1-1-1-.776 0-1 .224-1 1v2H9c-.776 0-1 .224-1 1 0 .777.224 1 1 1h2v2c0 .777.224 1 1 1 .777 0 1-.223 1-1v-2h2c.777 0 1-.223 1-1z"
                 }),
                 width: 24,
                 height: 24
-            }, X[K.AngleDown] = {
-                path: a.createElement("path", {
+            }, J[$.AngleDown] = {
+                path: r.createElement("path", {
                     d: "M8 8.89L2.556 3.444 1 5l7 7 7-7-1.556-1.556"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.AngleLeft] = {
-                path: a.createElement("path", {
+            }, J[$.AngleLeft] = {
+                path: r.createElement("path", {
                     d: "M7.11 8l5.446-5.444L11 1 4 8l7 7 1.556-1.556"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.AngleRight] = {
-                path: a.createElement("path", {
+            }, J[$.AngleRight] = {
+                path: r.createElement("path", {
                     d: "M9.444 8L4 2.556 5.556 1l7 7-7 7L4 13.444"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.AngleUp] = {
-                path: a.createElement("path", {
+            }, J[$.AngleUp] = {
+                path: r.createElement("path", {
                     d: "M8 6.11l5.444 5.446L15 10 8 3l-7 7 1.556 1.556"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.ArrowDown] = {
-                path: a.createElement("path", {
+            }, J[$.ArrowDown] = {
+                path: r.createElement("path", {
                     d: "M14.924 11.579a.994.994 0 0 0-.92-.616h-2.027V3.999A.997.997 0 0 0 10.983 3H8.998a.997.997 0 0 0-.995.999v6.964H5.995a.995.995 0 0 0-.92.616c-.153.373-.068.803.216 1.089l4.006 4.039a.992.992 0 0 0 1.406 0l4.006-4.039c.284-.286.369-.716.215-1.089",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.ArrowLeft] = {
-                path: a.createElement("path", {
+            }, J[$.ArrowLeft] = {
+                path: r.createElement("path", {
                     d: "M8.42 14.924a.994.994 0 0 0 .617-.919v-2.028H16a.997.997 0 0 0 .999-.994V8.998a.997.997 0 0 0-1-.995H9.038V5.995a.995.995 0 0 0-.616-.919 1.003 1.003 0 0 0-1.09.215L3.294 9.297a.992.992 0 0 0 0 1.406l4.039 4.006c.286.284.716.369 1.089.215",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.ArrowRight] = {
-                path: a.createElement("path", {
+            }, J[$.ArrowRight] = {
+                path: r.createElement("path", {
                     d: "M11.579 5.076a.994.994 0 0 0-.616.919v2.028H3.999a.997.997 0 0 0-1 .994v1.985c0 .55.448.995 1 .995h6.964v2.008c0 .402.243.765.616.919.373.154.803.069 1.089-.215l4.039-4.006a.992.992 0 0 0 0-1.406l-4.04-4.006a1.003 1.003 0 0 0-1.088-.215",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.ArrowUp] = {
-                path: a.createElement("path", {
+            }, J[$.ArrowUp] = {
+                path: r.createElement("path", {
                     d: "M5.076 8.42a.994.994 0 0 0 .92.617h2.027V16c0 .552.446.999.994.999h1.985c.55 0 .995-.447.995-1V9.038h2.008a.995.995 0 0 0 .92-.616 1.003 1.003 0 0 0-.216-1.09l-4.006-4.038a.992.992 0 0 0-1.406 0L5.291 7.332a1.003 1.003 0 0 0-.215 1.089"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Automod] = {
-                path: a.createElement("path", {
+            }, J[$.Automod] = {
+                path: r.createElement("path", {
                     d: "M10 0l9 5c0 10.8852-9 15-9 15S1 15.8852 1 5l9-5z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Ban] = {
-                path: a.createElement("path", {
+            }, J[$.Ban] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M8,15c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S11.866,15,8,15z M3,8c0,1.019,0.309,1.964,0.832,2.754l6.922-6.922C9.964,3.309,9.019,3,8,3C5.238,3,3,5.238,3,8z M12.169,5.246l-6.923,6.923C6.036,12.691,6.98,13,8,13c2.762,0,5-2.238,5-5C13,6.98,12.691,6.036,12.169,5.246z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Bits] = {
-                path: a.createElement("path", {
+            }, J[$.Bits] = {
+                path: r.createElement("path", {
                     d: "M16.6,13.2L9,17.4l-7.6-4.2L9,0.5L16.6,13.2z M9.1,9.4l-5,3l5,2.5l5-2.6L9.1,9.4z M6,8.9L9,7l3,1.9L9,4.4L6,8.9z"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.CC] = {
-                path: a.createElement("path", {
+            }, J[$.CC] = {
+                path: r.createElement("path", {
                     d: "M13.613 11.5c.645 0 .869-.276.981-.484a.691.691 0 0 1 .97-.282.772.772 0 0 1 .268 1.023c-.305.567-.939 1.243-2.219 1.243C12.172 13 11 11.654 11 10s1.172-3 2.613-3c1.024 0 1.891.573 2.319 1.533.166.375.015.821-.341.997a.698.698 0 0 1-.948-.359 1.072 1.072 0 0 0-1.03-.671c-.655 0-1.189.673-1.189 1.5s.534 1.5 1.189 1.5m-7 0c.645 0 .869-.276.981-.484a.691.691 0 0 1 .97-.282.772.772 0 0 1 .268 1.023C8.527 12.324 7.893 13 6.613 13 5.172 13 4 11.654 4 10s1.172-3 2.613-3c1.024 0 1.891.573 2.319 1.533.166.375.015.821-.341.997a.698.698 0 0 1-.948-.359 1.072 1.072 0 0 0-1.03-.671c-.656 0-1.189.673-1.189 1.5s.533 1.5 1.189 1.5M18 2H2C.897 2 0 2.897 0 4v12c0 1.103.897 2 2 2h16c1.102 0 2-.897 2-2V4c0-1.103-.898-2-2-2",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.CCOff] = {
-                path: a.createElement("path", {
+            }, J[$.CCOff] = {
+                path: r.createElement("path", {
                     d: "M2 16h16V4H2v12zM18 2c1.103 0 2 .897 2 2v12c0 1.103-.897 2-2 2H2c-1.103 0-2-.897-2-2V4c0-1.103.897-2 2-2h16zm-4.387 11c1.28 0 1.914-.676 2.218-1.243a.772.772 0 0 0-.266-1.023.692.692 0 0 0-.97.282c-.112.208-.337.484-.982.484-.655 0-1.189-.673-1.189-1.5 0-.828.534-1.5 1.19-1.5.471 0 .836.237 1.03.67.168.375.591.536.947.36.355-.176.508-.623.341-.998C15.504 7.572 14.637 7 13.613 7 12.171 7 11 8.345 11 10c0 1.654 1.171 3 2.613 3zm-7 0c1.28 0 1.914-.676 2.22-1.243a.772.772 0 0 0-.268-1.023.692.692 0 0 0-.97.282c-.113.208-.337.484-.982.484-.656 0-1.189-.673-1.189-1.5 0-.828.533-1.5 1.19-1.5.471 0 .837.237 1.03.67.168.375.591.536.947.36.355-.176.508-.623.341-.998C8.504 7.572 7.637 7 6.613 7 5.173 7 4 8.345 4 10c0 1.654 1.172 3 2.613 3z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Camera] = {
-                path: a.createElement("path", {
+            }, J[$.Camera] = {
+                path: r.createElement("path", {
                     d: "M14 11.005c0 2.21-1.789 4-4 4-2.211 0-4-1.79-4-4 0-2.212 1.789-4 4-4 2.211 0 4 1.788 4 4m3.92-5.997H14.5c-.18 0-.324-.107-.36-.178-.126-.236-.576-1.453-.9-2.1-.45-.865-1.08-.721-1.08-.721H7.84s-.63-.144-1.08.72c-.324.648-.774 1.865-.9 2.1-.036.072-.18.18-.36.18H2.08c-.594 0-1.08.486-1.08 1.08V17.1c0 .431.18.9.72.9h16.56c.54 0 .72-.468.72-.9V6.09c0-.594-.486-1.08-1.08-1.08",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.ChatRiskFlag] = {
-                path: a.createElement("path", {
+            }, J[$.ChatRiskFlag] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Check] = {
-                path: a.createElement("path", {
+            }, J[$.Check] = {
+                path: r.createElement("path", {
                     d: "M16,2.24074074 C16,2.24074074 6.56165287,14.0131532 6.46051168,14 C6.39491888,13.9966933 0,8.44444444 0,8.44444444 L2.13570634,5.74074074 L6.10456062,9.12962963 L13.4905451,0 L16,2.24074074 Z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.ChatSettingsBack] = {
-                path: a.createElement("path", {
+            }, J[$.ChatSettingsBack] = {
+                path: r.createElement("path", {
                     d: "M1 5l6-4v8z",
                     fillRule: "evenodd"
                 }),
                 width: 10,
                 height: 10
-            }, X[K.Clip] = {
-                path: a.createElement("path", {
+            }, J[$.Clip] = {
+                path: r.createElement("path", {
                     d: "M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z"
                 }),
                 width: 30,
                 height: 30
-            }, X[K.Close] = {
-                path: a.createElement("path", {
+            }, J[$.Close] = {
+                path: r.createElement("path", {
                     d: "M8 6.586L3.757 2.343 2.343 3.757 6.586 8l-4.243 4.243 1.414 1.414L8 9.414l4.243 4.243 1.414-1.414L9.414 8l4.243-4.243-1.414-1.414",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Collections] = {
-                path: a.createElement("path", {
+            }, J[$.Collections] = {
+                path: r.createElement("path", {
                     d: "M1 7h18v12H1V7zm12 6l-5-3v6l5-3zM3 4h14v2H3V4zm2-3h10v2H5V1z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Communities] = {
-                path: a.createElement("path", {
+            }, J[$.Communities] = {
+                path: r.createElement("path", {
                     d: "M3.25 17L4 14H2l.75 3h.5zm12 0l.75-3h-2l.75 3h.5zm-6.82-1l-1.144-4H6L5 6h8l-1 6h-1.286L9.57 16H8.43zM5 5H4l.5 3H1V4h4v1zm-.333 4l.606 3.636L5 14H1L0 9h4.667zM13.5 8H17V4h-4v1h1l-.5 3zm-.167 1H18l-1 5h-4l-.273-1.364L13.333 9zM7 1h4v4H7V1z"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.Conversations] = {
-                path: a.createElement("path", {
+            }, J[$.Conversations] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M2.57894737,12.1904762 L0,12.1904762 L0,0 L14,0 L14,12.1904762 L7,12.1904762 L2.57894737,16 L2.57894737,12.1904762 Z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Copy] = {
-                path: a.createElement("g", {
+            }, J[$.Copy] = {
+                path: r.createElement("g", {
                     fillRule: "evenodd"
-                }, a.createElement("path", {
+                }, r.createElement("path", {
                     d: "M9 19.607l4.755-4.755 3.535 3.535-4.754 4.755L9 19.607zm1.44-.025l4.022-4.023 2.12 2.12-4.022 4.024-2.12-2.122zm4.412-5.827L19.607 9l3.535 3.536-4.755 4.754-3.535-3.535zm.707.707l4.022-4.023 2.122 2.12-4.024 4.023-2.12-2.12z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M12.987 17.74l4.754-4.753 1.415 1.414-4.754 4.755z"
                 })),
                 width: 32,
                 height: 32
-            }, X[K.Crate] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.Crate] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M8 8h3v4.3l2-.7V8h3v3l-.4 1L8 15H7V7l1 1zM7 7v8H6L.4 12 0 11V8h1v3l4 2 1-1V8l1-1zM15 6h-2V3.4l-2-.6V6H8L7 7V1h1l7.6 2 .4 1v2h-1zM0 6V4l.4-1L6 1h1v6L6 6V2.1L1 3.9V6H0z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     opacity: ".5",
                     d: "M13 8h3l-1-1h-2"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     fillOpacity: ".25",
                     d: "M13 7h2l1-1h-3"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     opacity: ".5",
                     d: "M8 8h3V7H7"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     fillOpacity: ".25",
                     d: "M7 7h4V6H8"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     opacity: ".25",
                     d: "M3 8H0l1-1h2M6 8H4V7h3"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     opacity: ".75",
                     d: "M11 5h2V3.4l-2-.6M11 12.3l2-.6V9h-2"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M1.5 3.3L.3 1.9l.2-.8L3.8 0l.5.1 1.5 1.6-4.3 1.6zm.1-1.5l.4.6 2.3-.8-.5-.6-2.2.8z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     fillOpacity: ".5",
                     d: "M4 12.5l2 1V8H4M3 12l-2-1V8h2"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     opacity: ".3",
                     d: "M3 12.1l1 .4V9H3"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     fillOpacity: ".5",
                     d: "M4 2.7l2-.6V6H4M3 6H1V3.9l2-.7"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     opacity: ".3",
                     d: "M3 5h1V2.7l-1 .5"
                 })),
                 width: 16,
                 height: 15
-            }, X[K.Crown] = {
-                path: a.createElement("polygon", {
+            }, J[$.Crown] = {
+                path: r.createElement("polygon", {
                     points: "15.7,5.8 10,0.1 4.3,5.8 0,1.5 0,12.9 20,12.9 20,1.5"
                 }),
                 width: 20,
                 height: 13
-            }, X[K.DeadGlitch] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.DeadGlitch] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M26,17.4589613 L26,3 L4,3 L4,22.0601057 L10.0032868,22.0601057 L10.0032868,26 L14.0004537,22.0601057 L21.3322933,22.0601057 L26,17.4589613 L26,17.4589613 Z M21.0896458,26.0850335 L15.1583403,26.0850335 L11.2051771,30 L7.24798611,30 L7.24798611,26.0850335 L0,26.0850335 L0,5.21746493 L1.97773958,0 L29,0 L29,18.2620736 L21.0896458,26.0850335 L21.0896458,26.0850335 Z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M20.8587626,12.1710126 L22.4052753,13.7175252 L23.7175252,12.4052753 L22.1710126,10.8587626 L23.7175252,9.31224999 L22.4052753,8 L20.8587626,9.54651264 L19.31225,8 L18,9.31224999 L19.5465126,10.8587626 L18,12.4052753 L19.31225,13.7175252 L20.8587626,12.1710126 Z M11.8587626,12.1710126 L13.4052753,13.7175252 L14.7175252,12.4052753 L13.1710126,10.8587626 L14.7175252,9.31224999 L13.4052753,8 L11.8587626,9.54651264 L10.31225,8 L9,9.31224999 L10.5465126,10.8587626 L9,12.4052753 L10.31225,13.7175252 L11.8587626,12.1710126 Z"
                 })),
                 width: 30,
                 height: 30
-            }, X[K.Document] = {
-                path: a.createElement("path", {
+            }, J[$.Document] = {
+                path: r.createElement("path", {
                     d: "M11.333 12.097c-.736.707 1.286 3.83-1.343 3.903H5V4h10v4.997c0 .006.003.01.003.017v2.005c0 2.097-2.933.499-3.67 1.078zM17 3v5.997c0 .006-.003.01-.003.017v2.577c0 1.594-4.433 6.409-6.541 6.409H4a.987.987 0 0 1-.6-.22c-.034-.027-.076-.042-.107-.074-.011-.01-.016-.027-.026-.04A.985.985 0 0 1 3 17v-.001V3.003v-.001V3c0-.227.089-.425.217-.593.028-.037.044-.081.076-.114.008-.007.019-.01.027-.017A.99.99 0 0 1 4 2h12c.25 0 .472.1.647.253.019.016.042.024.06.04.023.024.034.057.056.083A.983.983 0 0 1 17 3zm-4.507 7H7.507a.5.5 0 0 0-.5.498.5.5 0 0 0 .5.499h4.986a.5.5 0 0 0 .5-.499.5.5 0 0 0-.5-.498zm0-1.998H7.507a.5.5 0 0 0-.5.498.5.5 0 0 0 .5.498h4.986a.5.5 0 0 0 .5-.498.5.5 0 0 0-.5-.498zm0-2H7.507a.5.5 0 0 0-.5.498.5.5 0 0 0 .5.498h4.986a.5.5 0 0 0 .5-.498.5.5 0 0 0-.5-.498z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Download] = {
-                path: a.createElement("path", {
+            }, J[$.Download] = {
+                path: r.createElement("path", {
                     d: "M30.7,12.6c0.4-0.7,0.6-1.5,0.6-2.4c0-3-2.4-5.4-5.4-5.4c-1,0-2,0.3-2.8,0.8C21.6,2.3,18.2,0,14.3,0   C8.9,0,4.6,4.4,4.6,9.8c0,0.3,0,0.7,0.1,1C1.9,12.2,0,15.1,0,18.4c0,4.8,3.9,8.7,8.7,8.7h19.4c4.1,0,7.5-3.4,7.5-7.5   C35.6,16.4,33.6,13.6,30.7,12.6z M16.5,22.3l-6.7-7.1h4.5V7.9h4.4v7.3h4.6L16.5,22.3z"
                 }),
                 width: 35.6,
                 height: 27.1
-            }, X[K.DragHandle] = {
-                path: a.createElement("path", {
+            }, J[$.DragHandle] = {
+                path: r.createElement("path", {
                     d: "M9 2.5a1.5 1.5 0 1 1-3.001-.001 1.5 1.5 0 0 1 3 0zm0 5a1.5 1.5 0 1 1-3.001-.001 1.5 1.5 0 0 1 3 0zm0 5a1.5 1.5 0 1 1-3.001-.001 1.5 1.5 0 0 1 3 0zm0 5a1.5 1.5 0 1 1-3.001-.001 1.5 1.5 0 0 1 3 0zm5-15a1.5 1.5 0 1 1-3.001-.001 1.5 1.5 0 0 1 3 0zm0 5a1.5 1.5 0 1 1-3.001-.001 1.5 1.5 0 0 1 3 0zm0 5a1.5 1.5 0 1 1-3.001-.001 1.5 1.5 0 0 1 3 0zm0 5a1.5 1.5 0 1 1-3.001-.001 1.5 1.5 0 0 1 3 0z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Drops] = {
-                path: a.createElement("path", {
+            }, J[$.Drops] = {
+                path: r.createElement("path", {
                     d: "M15.988 17.429c0 .579-.377.979-.973 1.043-1.166.128-2.42.26-3.587.389-.428.047-.857.087-1.28.129h-.18V19c-.234-.02-.455-.03-.675-.054-.818-.09-1.736-.184-2.553-.277-.64-.072-1.28-.14-1.91-.22a.987.987 0 0 1-.83-.958V13.006h2.947c.585.017 1.226-.307 1.485-.832.51-.943 1.003-1.824 1.504-2.771a2.58 2.58 0 0 1 .073-.126v.017l.068.116c.51.95 1.012 1.82 1.528 2.765a1.52 1.52 0 0 0 1.404.829c.932.008 1.901 0 2.833 0h.148v.153l-.002 4.272zM15.565 12h-2.09a.81.81 0 0 1-.76-.458c-.553-1.05-1.104-2.102-1.655-3.153l-.014-.026a.254.254 0 0 1-.019-.269.252.252 0 0 1 .27-.083l2.088.257 2.141.266c.326.033.618.213.786.486.54.852 1.072 1.709 1.607 2.564.021.032.04.067.054.104a.206.206 0 0 1-.094.282.217.217 0 0 1-.079.022.742.742 0 0 1-.149 0h-2.09l.004.008zm-11.13-.008H2.348a.752.752 0 0 1-.15 0 .212.212 0 0 1-.078-.022.207.207 0 0 1-.095-.283.64.64 0 0 1 .056-.103c.534-.856 1.066-1.712 1.606-2.565.168-.272.459-.452.786-.485l2.14-.267L8.7 8.011c.1-.03.206.003.27.083a.252.252 0 0 1-.02.27l-.014.024a945.796 945.796 0 0 1-1.655 3.154.81.81 0 0 1-.76.458h-2.09l.004-.008zm6.478-9.14a.165.165 0 0 1 .087.145.165.165 0 0 1-.087.146l-1.142.626-.622 1.144a.167.167 0 0 1-.293.001l-.627-1.142-1.142-.623A.165.165 0 0 1 7 3.003c0-.06.033-.117.087-.146l1.14-.628.624-1.142A.165.165 0 0 1 8.997 1c.062 0 .117.033.146.086l.626 1.141 1.144.624zm5.022 1.536a.125.125 0 0 1 .001.219l-.856.47-.467.857a.129.129 0 0 1-.11.066h-.001a.125.125 0 0 1-.109-.065l-.471-.857-.856-.466a.125.125 0 1 1-.001-.22l.856-.47.468-.857a.125.125 0 0 1 .219 0l.47.855.857.468zm-10.001 1a.125.125 0 0 1 0 .219l-.856.47-.467.857A.126.126 0 0 1 4.5 7a.123.123 0 0 1-.11-.065l-.47-.857-.857-.466a.125.125 0 0 1 0-.22l.856-.47.468-.857A.123.123 0 0 1 4.497 4c.046 0 .088.025.11.065l.469.855.858.468z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Edit] = {
-                path: a.createElement("path", {
+            }, J[$.Edit] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M6.414,12.414L3.586,9.586l8-8l2.828,2.828L6.414,12.414z M4.829,14H2l0,0v-2.828l0.586-0.586l2.828,2.828L4.829,14z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Emoticons] = {
-                path: a.createElement("path", {
+            }, J[$.Emoticons] = {
+                path: r.createElement("path", {
                     d: "M6.714 5.143H5v1.714h1.714V5.143zM12 0H4L0 4v8l4 4h8l4-4V4l-4-4zM5 2L2 5v6l3 3h6l3-3V5l-3-3H5zm4.286 4.857H11V5.143H9.286v1.714zM6 12h4l2-2V9H4v1l2 2z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Events] = {
-                path: a.createElement("path", {
+            }, J[$.Events] = {
+                path: r.createElement("path", {
                     d: "M17 7H3V5h2a1 1 0 1 0 2 0h6a1 1 0 1 0 2 0h2v2zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm-4-4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm-4-4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM17 3h-2V2a1 1 0 1 0-2 0v1H7V2a1 1 0 1 0-2 0v1H3c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.EventsReminderAdd] = {
-                path: a.createElement("path", {
+            }, J[$.EventsReminderAdd] = {
+                path: r.createElement("path", {
                     fillRule: "evenodd",
                     d: "M14 2h2c1.103 0 2 .897 2 2v12c0 1.103-.897 2-2 2H4c-1.103 0-2-.897-2-2V4c0-1.103.897-2 2-2h2a1 1 0 1 1 2 0h4a1 1 0 0 1 2 0zM4 16h12.001L16 8H4v8zM4 4v2h12V4H4zm7 7h1a1 1 0 0 1 0 2h-1v1a1 1 0 0 1-2 0v-1H8a1 1 0 0 1 0-2h1v-1a1 1 0 1 1 2 0v1z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.EventsReminderAdded] = {
-                path: a.createElement("path", {
+            }, J[$.EventsReminderAdded] = {
+                path: r.createElement("path", {
                     fillRule: "evenodd",
                     d: "M14 2h2c1.103 0 2 .897 2 2v12c0 1.103-.897 2-2 2H4c-1.103 0-2-.897-2-2V4c0-1.103.897-2 2-2h2a1 1 0 1 1 2 0h4a1 1 0 0 1 2 0zM4 4v2h12V4H4zm8.293 5.293L9 12.586l-1.293-1.293a1 1 0 1 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.EventsReminderRemove] = {
-                path: a.createElement("path", {
+            }, J[$.EventsReminderRemove] = {
+                path: r.createElement("path", {
                     fillRule: "evenodd",
                     d: "M14 2h2c1.103 0 2 .897 2 2v12c0 1.103-.897 2-2 2H4c-1.103 0-2-.897-2-2V4c0-1.103.897-2 2-2h2a1 1 0 1 1 2 0h4a1 1 0 0 1 2 0zm-4 8.586L8.707 9.293a1 1 0 1 0-1.414 1.414L8.586 12l-1.293 1.293a1 1 0 0 0 1.414 1.414L10 13.414l1.293 1.293a1 1 0 0 0 1.414-1.414L11.414 12l1.293-1.293a1 1 0 1 0-1.414-1.414L10 10.586zM4 4v2h12V4H4z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Extensions] = {
-                path: a.createElement("path", {
+            }, J[$.Extensions] = {
+                path: r.createElement("path", {
                     fillRule: "evenodd",
                     d: "M16 3v4h-2l-1 1v1l1 1h2v6h-5v-2l-1-1H9l-1 1v2H3v-6H1L0 9V8l1-1h2V3h5V1l1-1h1l1 1v2"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Facebook] = {
-                path: a.createElement("path", {
+            }, J[$.Facebook] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M16.842 24v-6.842h2.653l.398-2.667h-3.05v-1.7c0-.772.246-1.298 1.525-1.298L20 11.49V9.105A25.285 25.285 0 0 0 17.623 9c-2.353 0-3.963 1.243-3.963 3.525v1.967H11v2.666h2.66V24h3.182",
                     fillRule: "evenodd"
                 }),
                 width: 32,
                 height: 32
-            }, X[K.Featured] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.Featured] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M0 0h20v20"
-                }), " ", a.createElement("path", {
+                }), " ", r.createElement("path", {
                     fill: "#FFF",
                     d: "M15 5V2h-2v3h-3v2h3v3h2V7h3V5"
                 })),
                 width: 20,
                 height: 20
-            }, X[K.Filter] = {
-                path: a.createElement("path", {
+            }, J[$.Filter] = {
+                path: r.createElement("path", {
                     d: "M1 4h6v3H1V4zm0 5h10v3H1V9zm0 5h16v3H1v-3zm10.5-9.914l3 3 3-3L18.914 5.5 14.5 9.914 10.086 5.5 11.5 4.086z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.FollowCheck] = {
-                path: a.createElement("path", {
+            }, J[$.FollowCheck] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.FollowX] = {
-                path: a.createElement("path", {
+            }, J[$.FollowX] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M14,11.5L11.5,14L8,10.5L4.5,14L2,11.5L5.5,8L2,4.5L4.5,2L8,5.5L11.5,2L14,4.5L10.5,8L14,11.5z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Friends] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.Friends] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M12.64 0h5.2l1.04 2v4L16.8 8v1h3.12L22 10v2H11l1.64-1.563V9h1.04V8l-1.04-.984v-2.25l-1.038-1.954V2"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M4 3h6l1 2v5l-2 2v1h3l2 1v2H0v-2l2-1h3v-1l-2-2V5"
                 })),
                 width: 21,
                 height: 16
-            }, X[K.FriendsSC] = {
-                path: a.createElement("path", {
+            }, J[$.FriendsSC] = {
+                path: r.createElement("path", {
                     d: "M17.5 6L19 7.5V12l-2 1v1h3l1 1v1h-5.5v-2.5L13 11V7.5L14.5 6h3zM9 2l2 2v5l-3 2v1h4l2 2v2H0v-2l2-2h4v-1L3 9V4l2-2h4z",
                     fillRule: "evenodd"
                 }),
                 width: 21,
                 height: 16
-            }, X[K.Gear] = {
-                path: a.createElement("path", {
+            }, J[$.Gear] = {
+                path: r.createElement("path", {
                     d: "M6.359 0h3.282l1.436 2.8h3.282L16 5.2 14.359 8 16 10.8l-1.641 2.4h-3.282L9.64 16H6.359l-1.436-2.8H1.641L0 10.8 1.641 8 0 5.2l1.641-2.4h3.282L6.36 0zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Gift] = {
-                path: a.createElement("path", {
+            }, J[$.Gift] = {
+                path: r.createElement("path", {
                     d: "M13.438 5.419c-.413.238-1.578.584-2.466.584-.332 0-.513-.05-.588-.084.008-.496 1.185-1.941 1.963-2.39a1.094 1.094 0 0 1 1.491.399c.3.52.121 1.19-.4 1.49m-4.437.585c-.886 0-2.051-.346-2.464-.584a1.093 1.093 0 0 1 .548-2.037c.189 0 .377.05.543.147.777.449 1.956 1.894 1.963 2.39-.074.034-.256.084-.59.084m6.322-.385c.805 0 1.662.656 1.662 1.462v2.183c0 .268-.142.52-.335.738H3.335C3.14 9.784 3 9.53 3 9.263V7.08c0-.806.855-1.462 1.66-1.462h.329a2.54 2.54 0 0 1 .101-2.361c.676-1.171 2.101-1.617 3.288-.935.44.254 1.075.81 1.614 1.453.54-.642 1.175-1.2 1.612-1.452 1.188-.684 2.612-.238 3.288.935a2.531 2.531 0 0 1 .102 2.36h.329zM8.993 12v6H5.458a1.464 1.464 0 0 1-1.462-1.462V12h4.995zm2 0h4.994v4.538c0 .806-.656 1.462-1.462 1.462h-3.533v-6z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Github] = {
-                path: a.createElement("path", {
+            }, J[$.Github] = {
+                path: r.createElement("path", {
                     d: "M13 .321c-7.18 0-13 5.82-13 13.001 0 5.743 3.724 10.615 8.89 12.334.651.12.888-.282.888-.627 0-.308-.01-1.126-.017-2.21-3.616.785-4.379-1.743-4.379-1.743-.591-1.502-1.444-1.901-1.444-1.901-1.18-.807.09-.791.09-.791 1.304.093 1.99 1.34 1.99 1.34 1.16 1.986 3.043 1.412 3.784 1.08.118-.84.454-1.413.825-1.738-2.886-.328-5.921-1.443-5.921-6.425 0-1.419.507-2.579 1.338-3.488-.134-.329-.58-1.65.127-3.44 0 0 1.092-.35 3.575 1.333a12.451 12.451 0 0 1 3.255-.439 12.47 12.47 0 0 1 3.254.439c2.482-1.683 3.571-1.333 3.571-1.333.71 1.79.264 3.111.13 3.44.833.91 1.336 2.07 1.336 3.488 0 4.994-3.04 6.093-5.935 6.415.466.401.882 1.195.882 2.408 0 1.737-.016 3.14-.016 3.565 0 .348.234.753.894.626C22.278 23.932 26 19.063 26 13.322c0-7.18-5.82-13-13-13",
                     fillRule: "evenodd"
                 }),
                 width: 26,
                 height: 26
-            }, X[K.Global] = {
-                path: a.createElement("path", {
+            }, J[$.Global] = {
+                path: r.createElement("path", {
                     d: "M9 15A6 6 0 1 0 9 3a6 6 0 0 0 0 12zm1.619-1.8A4.5 4.5 0 0 1 6 5.646V7.5l2 2v1.081l2.619 2.619zm1.881-1.371c.625-.773 1-1.757 1-2.829a4.491 4.491 0 0 0-1.671-3.5H10.5L9.041 6.959 8.5 7.5v1H11l1.5 1.5v1.829z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphArrDown] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphArrDown] = {
+                path: r.createElement("path", {
                     d: "M3 5h10l-5 6"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphArrLeft] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphArrLeft] = {
+                path: r.createElement("path", {
                     d: "M11 3v10L5 8"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphArrRight] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphArrRight] = {
+                path: r.createElement("path", {
                     d: "M5 13V3l6 5"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphArrUp] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphArrUp] = {
+                path: r.createElement("path", {
                     d: "M3 11h10L8 5"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphArrUpDown] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphArrUpDown] = {
+                path: r.createElement("path", {
                     d: "M3 9h10l-5 6-5-6zm0-2l5-6 5 6H3z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphFollowers] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphFollowers] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M8,13.5L1.5,7V4l2-2h3L8,3.5L9.5,2h3l2,2v3L8,13.5z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphLength] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphLength] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M8,14c-3.313,0-6-2.687-6-6s2.687-6,6-6s6,2.687,6,6S11.313,14,8,14z M8,3C5.238,3,3,5.238,3,8s2.238,5,5,5s5-2.238,5-5S10.762,3,8,3z M9.646,10.354l-2-2L7.515,7.879l1-4l0.971,0.242L8.554,7.847l1.8,1.8L9.646,10.354z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphLive] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphLive] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M11,14H5H2v-1l3-3h2L5,8V2h6v6l-2,2h2l3,3v1H11z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphLiveSmall] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphLiveSmall] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M11,14H5H2v-1l3-3h2L5,8V2h6v6l-2,2h2l3,3v1H11z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GlyphViews] = {
-                path: a.createElement("path", {
+            }, J[$.GlyphViews] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M11,13H5L1,9V8V7l4-4h6l4,4v1v1L11,13z M8,5C6.344,5,5,6.343,5,8c0,1.656,1.344,3,3,3c1.657,0,3-1.344,3-3C11,6.343,9.657,5,8,5z M8,9C7.447,9,7,8.552,7,8s0.447-1,1-1s1,0.448,1,1S8.553,9,8,9z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.GridLayout] = {
-                path: a.createElement("path", {
+            }, J[$.GridLayout] = {
+                path: r.createElement("path", {
                     d: "M0.8,0h14.5v3.9H0.8V0z M0.8,5h8.9v3.4H0.8V5z M11.4,5h3.8v3.4h-3.8V5z M0.8,9.6h14.5V16H0.8V9.6z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Halt] = {
-                path: a.createElement("path", {
+            }, J[$.Halt] = {
+                path: r.createElement("path", {
                     fillRule: "nonzero",
                     d: "M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 2a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm-5-9c0 .556.446 1 .995 1h8.01c.54 0 .995-.448.995-1 0-.556-.446-1-.995-1h-8.01C5.455 9 5 9.448 5 10z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Hash] = {
-                path: a.createElement("path", {
+            }, J[$.Hash] = {
+                path: r.createElement("path", {
                     fillRule: "evenodd",
                     d: "M7.714 12l.572-4h4l-.572 4h-4zM17 12h-3.286l.572-4H17c.553 0 1-.447 1-1 0-.553-.447-1-1-1h-2.43L15 3c0-.552-.447-1-1-1-.553 0-1 .448-1 1l-.43 3h-4L9 3c0-.552-.447-1-1-1-.553 0-1 .448-1 1l-.43 3H3c-.552 0-1 .447-1 1 0 .553.448 1 1 1h3.286l-.572 4H3c-.552 0-1 .447-1 1 0 .553.448 1 1 1h2.43L5 17c0 .553.448 1 1 1 .553 0 1-.447 1-1l.43-3h4L11 17c0 .553.447 1 1 1 .553 0 1-.447 1-1l.43-3H17c.553 0 1-.447 1-1 0-.553-.447-1-1-1z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Heart] = {
-                path: a.createElement("path", {
+            }, J[$.Heart] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.HGCNexus] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.HGCNexus] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M11,0L9.7,4.4c0,0,7.7-1.4,9.7,8.9c0,0.1,0,0.1,0,0.2c0.4-1.1,0.6-2.3,0.6-3.5C20.1,4.8,16.1,0.5,11,0z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M2.5,16.5c-0.1,0-0.1,0-0.2-0.1C3.1,17.4,4,18.1,5,18.7c4.5,2.6,10.2,1.3,13.2-2.9l-3.1-3.3C15.1,12.6,12.5,19.9,2.5,16.5z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M8.2,0.2c0.1,0,0.1-0.1,0.2-0.1C7.2,0.3,6.1,0.7,5,1.3C0.5,3.9-1.2,9.5,0.9,14.2l4.4-1.1C5.3,13.1,0.3,7.1,8.2,0.2z"
                 })),
                 width: 20,
                 height: 20
-            }, X[K.Hide] = {
-                path: a.createElement("path", {
+            }, J[$.Hide] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M6,7.10240605 L2.65360907,10.448797 L2.10240605,11 L1,9.89759395 L1.55120302,9.34639093 L4.89759395,6 L1.55120302,2.65360907 L1,2.10240605 L2.10240605,1 L2.65360907,1.55120302 L6,4.89759395 L9.34639093,1.55120302 L9.89759395,1 L11,2.10240605 L10.448797,2.65360907 L7.10240605,6 L10.448797,9.34639093 L11,9.89759395 L9.89759395,11 L9.34639093,10.448797 L6,7.10240605 L6,7.10240605 Z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.HourGlass] = {
-                path: a.createElement("path", {
+            }, J[$.HourGlass] = {
+                path: r.createElement("path", {
                     d: "M4.79 8.37c-.058-.508-.43-.426-2.76-1.79C-.64 5.018.08 3.134.08 3.134H6v.002l4.98.007s.66 1.88-2.01 3.45c-2.383 1.4-2.76 1.26-2.814 1.806v.048c0 .97.095.574 2.668 2.398 2.572 1.825 2.158 4.023 2.158 4.023H-.03s-.586-2.204 1.987-4.035c2.572-1.83 2.83-1.406 2.83-2.378 0-.03 0-.06.002-.085zM0 15.933h11V17H0zM0 1h11v1.067H0z"
                 }),
                 width: 11,
                 height: 18
-            }, X[K.Ignore] = {
-                path: a.createElement("path", {
+            }, J[$.Ignore] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M13,11.341V16l-3.722-3.102C8.863,12.959,8.438,13,8,13c-3.866,0-7-2.462-7-5.5C1,4.462,4.134,2,8,2s7,2.462,7,5.5C15,8.996,14.234,10.35,13,11.341z M11,7H5v1h6V7z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Link] = {
-                path: a.createElement("path", {
+            }, J[$.Link] = {
+                path: r.createElement("path", {
                     fillRule: "evenodd",
                     d: "M9 4h4l2 2v4l-2 2H9v-2h4V6H9V4zm-2 8H3l-2-2V6l2-2h4v2H3v4h4v2zM6 7h4v2H6V7z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Lock] = {
-                path: a.createElement("path", {
+            }, J[$.Lock] = {
+                path: r.createElement("path", {
                     d: "M7.987 6.599C7.987 5.166 8.685 4 9.997 4c1.311 0 2.009 1.166 2.009 2.599v2.412H7.987V6.599zm7.256 2.412h-1.248V6.599C13.995 4.063 12.411 2 9.997 2S5.998 4.063 5.998 6.599v2.412H4.751c-.415 0-.751.359-.751.8v7.397c0 .442.336.8.751.8h10.492c.414 0 .751-.358.751-.8V9.811c0-.441-.337-.8-.751-.8z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.LogoGlitch] = {
-                path: a.createElement("path", {
+            }, J[$.LogoGlitch] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M21,9h-2v6h2V9z M5.568,3L4,7v17h5v3h3.886L16,24h5l6-6V3H5.568z M25,16l-4,4h-6l-3,3v-3H8V5h17V16z M16,9h-2v6h2V9z",
                     fillRule: "evenodd"
                 }),
                 width: 30,
                 height: 30
-            }, X[K.LogoTwitch] = {
-                path: a.createElement("path", {
+            }, J[$.LogoTwitch] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M88,5h-6V0h-9l-6,5h-5.5L59,7.5V5h-5V0H36v5H16l-5-5H0v22l5,5.25L14,32h6v-1.5l3,1.5h12l2-3l1,3h7v-3l3,3h8l0.5-3l2.5,3h10l3-3v3h4l3-3v3h7l7-6V10L88,5z M13,13H8v6h5v6H6l-4-4V2h6v5h5V13z M36,21.5L32.5,25H15V7h6v12h2V7h6v12h2V7h5V21.5z M44,25h-6V7h6V25z M44,5h-6V2h6V5z M57,13h-5v6h5v6h-7l-4-4V2h6v5h5V13z M72,13h-7v6h7v6h-9l-4-4V11l4-4h9V13z M91,25h-6V13h-5v12h-6V2h6v5h7l4,4V25z",
                     fillRule: "evenodd"
                 }),
                 width: 94,
                 height: 32
-            }, X[K.LogoTwitchDevelopers] = {
-                path: a.createElement("path", {
+            }, J[$.LogoTwitchDevelopers] = {
+                path: r.createElement("path", {
                     d: "M59.524 29.887c0 1.266-.872 1.99-2.521 1.99-1.636 0-2.63-.93-2.63-2.449H55.5c0 .965.594 1.484 1.503 1.484.788 0 1.382-.399 1.382-1.038 0-1.483-3.818-.627-3.818-3.148 0-1.207.884-1.918 2.388-1.918 1.649 0 2.497.808 2.497 2.364h-1.067c0-1.037-.497-1.4-1.43-1.4-.849 0-1.273.351-1.273.93 0 1.64 3.842.711 3.842 3.185zm-5.818-5.03h.207v1.122h-.134c-1.115 0-1.782.615-1.782 1.82v3.921H50.87v-6.78h1.067v1.231c.145-.578.775-1.315 1.769-1.315zm-6.727-.013c-1.624 0-2.57 1.038-2.57 2.69v1.64c0 1.63.946 2.666 2.57 2.666 1.613 0 2.557-1.025 2.557-2.266v-.05H48.41v.109c0 .748-.582 1.267-1.43 1.267-.812 0-1.443-.532-1.443-1.496v-.76h4v-1.17c0-1.665-.944-2.63-2.557-2.63zm-6.06.012c-1.032 0-1.661.603-1.855 1.05v-.965h-1.067V34h1.127v-3.174c.194.448.763.978 1.795.978 1.369 0 2.218-.94 2.218-2.642v-1.265c0-2.027-.764-3.04-2.218-3.04zm-6.873.013c-1.637 0-2.57 1.049-2.57 2.665v1.604c0 1.665.933 2.702 2.57 2.702 1.6 0 2.558-1.037 2.558-2.702v-1.604c0-1.616-.958-2.665-2.558-2.665zm-5.103 6.851h1.139V22.65h-1.14v9.071zm-3.891-6.876c-1.625 0-2.57 1.038-2.57 2.69v1.64c0 1.63.945 2.666 2.57 2.666 1.612 0 2.558-1.025 2.558-2.266v-.05h-1.128v.109c0 .748-.581 1.267-1.43 1.267-.812 0-1.443-.532-1.443-1.496v-.76h4v-1.17c0-1.665-.945-2.63-2.557-2.63zm-4.279.097h1.26l-2.291 6.78h-1.175l-2.303-6.78h1.26l1.636 5.258 1.613-5.258zm-7.576-.097c-1.624 0-2.57 1.038-2.57 2.69v1.64c0 1.63.946 2.666 2.57 2.666 1.612 0 2.558-1.025 2.558-2.266v-.05h-1.127v.109c0 .748-.582 1.267-1.43 1.267-.813 0-1.443-.532-1.443-1.496v-.76h4v-1.17c0-1.665-.946-2.63-2.558-2.63zm-6.704-1.627H3.754v8.503h2.74c1.685 0 2.86-1.098 2.86-3.16v-2.196c0-2.074-1.175-3.147-2.86-3.147zm1.673 3.413v1.652c0 1.773-.775 2.304-1.805 2.304H4.943v-6.224H6.36c1.042 0 1.805.519 1.805 2.268zm40.243.771v.422h-2.873v-.518c0-.99.57-1.508 1.443-1.508.885 0 1.43.483 1.43 1.604zm-21.927 0v.422H23.61v-.518c0-.99.57-1.508 1.443-1.508.885 0 1.43.483 1.43 1.604zm8.994 0v1.882c0 1-.594 1.532-1.43 1.532-.873 0-1.442-.531-1.442-1.532V27.4c0-.977.57-1.507 1.442-1.507.848 0 1.43.53 1.43 1.507zm6.52.266v1.351c0 1.207-.496 1.845-1.442 1.845-.92 0-1.43-.638-1.43-1.845v-1.4c0-1.194.534-1.82 1.43-1.82.946 0 1.443.662 1.443 1.869zM14.629 27.4v.422h-2.873v-.518c0-.99.569-1.508 1.442-1.508.885 0 1.43.483 1.43 1.604zm45.396-11.996H56.21v-7.21h-3.05v7.21h-3.813V1.366h3.812v3.111h4.47l2.394 2.342v8.586zm-12.05-7.21h-4.498v3.491h4.499v3.72h-5.877L39.663 13V6.819l2.435-2.342h5.877v3.718zm-9.683 0h-3.128v3.491h3.128v3.72h-4.475L31.351 13V1.366h3.812v3.111h3.128v3.718zm-12.05-5.16h3.737V1.366H26.24v1.669zm0 12.37h3.737V4.477H26.24v10.928zm-1.448-2.404l-2.366 2.404H10.685V4.477h3.812v7.209h1.373V4.477h3.813v7.209h1.373V4.477h3.737v8.524zM9.312 8.195H6.185v3.491h3.127v3.72H4.825L2.373 13V1.366h3.812v3.111h3.127v3.718zm49.008-5.16h-3.787V0h-6.567l-3.107 3.035h-3.451l-1.745 1.723V3.035h-3.127V0H24.793v3.035H10.692L7.587 0H1v13.688l3.121 3.096 5.19 3.098h4.5v-.7l1.713.7h8.363l1.483-1.718.194 1.718h5.476l.11-1.718 1.975 1.718h4.833l.344-1.718 1.726 1.718h5.521l1.74-1.73v1.73h3.093l2.397-1.73v1.73h3.47l5.148-3.447V6.131L58.32 3.035z",
                     fillRule: "evenodd"
                 }),
                 width: 62,
                 height: 34
-            }, X[K.LogoTwitchPrime] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.LogoTwitchPrime] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M289.2 110.3c.8-.5 1.2-1.5 1.2-2.4 0-2.1-1.3-3.2-3.8-3.2-3.3 0-5.2 2-5.7 6 1.5.3 3 .4 4.5.4 1.3.1 2.6-.2 3.8-.8z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M287.9 15H269V0h-33.1l-15.6 15H203l-8 9.3V15h-16V0h-59v15H48.5L32.9 0H0v69.4L15.6 85l26 15h22.5v-2.9l8.7 2.9h42l7.4-8.1 1 8.1h27.5l.6-8.1 6.7 5.4v48c-.1.9.6 1.7 1.5 1.7h15.2c.9-.1 1.7-.8 1.8-1.8l1.6-8.2h1.6c3.8 0 7.4-1.9 9.6-5 0 0-.8 2.699976-1.1 3.599976-.2.5 0 .700024.5.900024.133333.333333 5.266667.5 15.4.5 1 .2 1.9-.500024 2.1-1.400024L207.5 132s.7 2.699976.9 3.599976c.1.9.9 1.500024 1.8 1.400024H266c2.5 0 2.7-.799976 3.5-1.599976 2.7.8 5.2 1.399976 7.8 1.599976 16.9.9 23.7-6.6 24-9.9.1-.8 2.2-13.2.8-21.1-1-5.8-6.6-11.4-15.9-11.4L304 83.2v-52L287.9 15zM26 41v18h16v19H19.1L6.9 65.9v-59H26V22h16v19H26zm81.5 37H49V22h19v37h7V22h19v37h7V22h19v44l-12.5 12zm19.5 0V22h19v56h-19zm19-62h-19V6.9h19V16zm7 49.9v-59h19V22h16v19h-16v18h16v19h-23.2L153 65.9zm32.1 59.4c-1.6 1.1-3.6 1.7-5.6 1.7-1.4 0-2.7-.2-4-.7-1.2-.4-2.3-1-3.2-1.8v11.2c.1.6-.2 1.1-.8 1.3h-5.4c-.4 0-.7-.1-1-.3-.2-.3-.3-.6-.3-1v-34.1c0-.4.1-.7.3-1 .3-.2.6-.3 1-.3h3.7c.7-.1 1.3.4 1.4 1.1l.4 1.3c1.1-1 2.3-1.8 3.7-2.4 1.4-.6 2.9-.9 4.4-.9 3-.1 6 1.2 7.8 3.6 1.9 2.4 2.9 5.7 2.9 9.8 0 2.7-.4 5.2-1.4 7.6-.8 1.9-2.2 3.6-3.9 4.9zM206.3 22H236v19h-22v18h22v19h-29.7L195 65.9V34.7L206.3 22zm5.6 84.6c-.3.2-.6.4-1 .3h-2.3c-1 0-1.9.1-2.9.3-1 .2-1.9.5-2.9.8v17.1c0 .4-.1.7-.3 1-.3.2-.6.3-1 .3h-4.9c-.6.1-1.2-.3-1.3-.9v-24c0-.4.1-.7.3-1 .3-.2.6-.3 1-.3h3.7c.7-.1 1.3.4 1.4 1.1l.7 2.8c1.1-1.3 2.4-2.4 3.8-3.2 1.2-.6 2.5-.9 3.8-.9h.7c.4 0 .7.1 1 .3.2.3.4.6.3 1l.2 4.3c0 .4-.1.7-.3 1zm11 19.5c-.3.2-.6.4-1 .3H217c-.6.1-1.2-.3-1.3-.9v-24c0-.4.1-.7.3-1 .3-.2.6-.3 1-.3h4.9c.6-.1 1.1.2 1.3.8v24.1c0 .4-.1.7-.3 1zm-6.5-30.9c-1.6-1.6-1.6-4.2 0-5.8 1.8-1.4 4.4-1.4 6.2 0 1.6 1.6 1.6 4.1 0 5.8-1.8 1.4-4.4 1.4-6.2 0zm52.9 29.9c0 .4-.1.7-.3 1-.3.2-.6.3-1 .3h-4.9c-.6.1-1.2-.3-1.3-.9V108.7c0-2.3-1-3.5-3.1-3.5-1.9 0-3.8.5-5.6 1.3V125c0 .4-.1.7-.3 1-.3.2-.6.4-1 .3H247c-.6.1-1.2-.3-1.3-.9V108.6c0-2.3-1-3.5-3.1-3.5-2 0-3.9.5-5.6 1.4V125c0 .4-.1.7-.3 1-.3.2-.6.3-1 .3h-4.9c-.6.1-1.2-.3-1.3-.9v-24c0-.4.1-.7.3-1 .3-.2.6-.3 1-.3h3.7c.7-.1 1.3.4 1.4 1.1l.4 1.4c1.5-1 3.2-1.9 4.9-2.5 1.4-.5 2.9-.7 4.5-.7 3.1 0 5.2 1.1 6.5 3.3 1.5-1 3.2-1.9 4.9-2.5 1.5-.5 3.1-.8 4.8-.8 2-.1 4 .6 5.5 2 1.4 1.5 2.1 3.5 2 5.6v18l-.1.1zm17.8-25.6c3.2 0 5.6.8 7.4 2.3 1.8 1.5 2.8 3.8 2.7 6.1.1 2.3-1 4.5-2.9 5.8-1.9 1.3-4.8 2-8.5 2-1.7 0-3.4-.2-5.1-.6.2 2.3.9 3.9 2.1 4.9 1.6 1.1 3.4 1.6 5.3 1.5.9 0 1.9-.1 2.8-.2 1.3-.2 2.5-.5 3.8-.8l.3-.1h.3c.6 0 .9.4.9 1.2v2.4c0 .4 0 .8-.2 1.1-.2.3-.5.5-.9.6-2.5 1-5.2 1.4-7.9 1.4-4.2 0-7.5-1.2-9.7-3.5-2.3-2.3-3.4-5.6-3.4-10s1.2-7.9 3.5-10.4c2.2-2.4 5.4-3.7 9.5-3.7zM278 78V41h-16v37h-19V6.9h19V22h22.3L297 34.7V78h-19z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M177.3 105.1c-1.8 0-3.5.5-5 1.4v13.4c1.5.9 3.2 1.4 5 1.4 1.6.1 3.2-.6 4.2-1.9.9-1.3 1.3-3.3 1.3-6.1s-.4-4.9-1.3-6.2c-.9-1.4-2.5-2.1-4.2-2z"
                 })),
                 width: 304,
                 height: 147
-            }, X[K.LogoTwitchPrimeHorizontal] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.LogoTwitchPrimeHorizontal] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M537 38c-2.5-4-7.3-8.5-16.6-8.5-9.4 0-23 8.3-24 9a1 1 0 0 1-.8.3 1 1 0 0 1-.7-.6 12.4 12.4 0 0 0-2.6-3.5c-3-3-6.4-4.2-11.3-4.2-3.2 0-9.2 2.4-9.8 2.8a1.3 1.3 0 0 1-1.2 0c-2.5-1.8-9.8-2.8-13.8-2.8a25.3 25.3 0 0 0-9.8 2h-.2a1 1 0 0 1-1 0 6.5 6.5 0 0 0-4.3-1.7 17 17 0 0 0-5 .8 24.6 24.6 0 0 1-3.2.7l-4.4.4a1 1 0 0 1-1-.4 1 1 0 0 1 0-1 14.6 14.6 0 0 0 .6-2 11 11 0 0 0-2-11 12 12 0 0 0-9.3-4 17 17 0 0 0-9.5 3c-.8.4-2.3 1.4-4.2 2.8-5.4 3.8-13.5 9.4-17.5 11.3-1.3.6-1.7-.8-3.7-1s-5 1-7.4 1.4l-3.8.5a1 1 0 0 1-1.2-.8 17 17 0 0 0-2.8-6c-4.8-7-12.8-8.6-18.6-8.8l-12.8-.2c-8 0-19.2.5-19.2.5l-16 14-15.4-15.4h-18.8V0h-32.6l-15.4 15.4h-17L192 24v-8.6h-15.3V0h-58.2v15.4H48L32.6 0H0v68.5L15.4 84 41 99.2h22.4V96l8.6 3.3h41.5l7.4-8.6 1 8.6h27l.6-8.6 9.8 8.6h24l1.7-8.6 8.7 8.6H221l8.7-8.6v8.6H245l12-8.6v8.6h51.2c5-3 10.4-6.3 13.2-8.3a1 1 0 0 1 1.5.3 1 1 0 0 1 0 .8c-.5 3-2 7.3-2 7.3h25.7l5.8-4a1.2 1.2 0 0 1 1.5 0 .4.4 0 0 1 0 .4l1.5 3.6h89.2l6-4.2a2.5 2.5 0 0 1 .8-.3 2 2 0 0 1 .8.2 28.3 28.3 0 0 0 8.6 4.4h.2a27.3 27.3 0 0 0 7.5.8c4.5 0 30.4-9 39-12.4l6.7-2.6a107.5 107.5 0 0 0 16-8 4 4 0 0 0 2-4c0-1-.7-3-1.4-6.6v-.4a1 1 0 0 1 .6-1c2.2-1 5.2-3.2 7-8.3 2.3-7 1.8-13.5-1.6-19zM41.2 41H25.7v17.2H41V77H19L7 65V7h18.7v15.3H41l.2 18.8zm77 24l-12 12H48V22.4h18.8v36h7v-36h18.7v36h7v-36H118V65zM144 77h-19V22.4h18.8V77zm0-61.5h-19V7h18.8v8.5zm41 25.7h-15.4v17H185v19h-22.3l-12-12V6.8h18.8v15.3H185v19zm48 0h-22.3v17H233v19h-29l-12-12V34l12-12h29v19zm60 36h-19v-36h-15.3v36h-19V7h19v15.3H281l12 12v43zm113.5-49.5a9.7 9.7 0 0 1 4-5 10.8 10.8 0 0 1 6-1.8 5.8 5.8 0 0 1 4.6 1.6 4.3 4.3 0 0 1 .7 4.6c-1.5 4.6-4.8 6.8-10 6.8-2.2 0-3.7-.5-4.7-1.6s-1.2-2.7-.5-4.7zm-55.3 33a26.6 26.6 0 0 1-17.7 6.5c-1 0-2.8 0-5-.2s-4 0-5 0a3 3 0 0 0-3 2 53.3 53.3 0 0 0-1.6 5.7l-.7 2.6h-15.8l4-11c2-6.5 3.8-11 4.8-14 3-9 5.7-18.2 8.2-28l.2-.5a1 1 0 0 1 1-.4c2.2-.3 7-.4 14.5-.4 4 0 8 0 12.5.2 6.3.2 10.8 2.2 13.4 6s3 9 1 15.5a38.7 38.7 0 0 1-10.8 16zm36.5-8h-2.3A10.6 10.6 0 0 0 380 54q-2 1-3 4.7-.7 1.6-1.6 4.8l-.2.7-1.8 5.5a34.5 34.5 0 0 0-1 3.6l-1 3.5a1 1 0 0 1-.7.6h-13-.4V77l3.4-10 1.6-4.8L364 57c2.3-6.7 3.5-12.2 3.7-16.5a1 1 0 0 1 0-.5.8.8 0 0 1 .5-.4l7-1c4.2-.8 6.3-1 7-1.3a5.7 5.7 0 0 1-.3 1.8c-.5 1.8-.8 3.3.2 3.6a.8.8 0 0 0 .8-.2 35 35 0 0 1 4-2 19.2 19.2 0 0 1 8-2 3 3 0 0 1 1.4.2A35.4 35.4 0 0 1 395 42l-1.5 3.4-1 3.3-.4 1.4-.5 2a1.5 1.5 0 0 1-1.7 1 4 4 0 0 0-2-.2zm22.4 5.8l-2.8 9.2c-1.5 4.7-2.3 7.3-3 9a.6.6 0 0 1-.5.6h-13.4l.2-.8 3-8.8c1.4-3.6 2.6-6.8 3.2-8.8a188.2 188.2 0 0 0 5.5-19.2l.2-.8s0-.4.7-.4c1.2 0 2.4 0 3.5.2a21.7 21.7 0 0 0 3.6.2c1 0 2.2 0 4-.2l3.5-.2s0 .3-.3.6c-2.3 5.5-4.7 11.8-7 19.3zM489.8 47l-2.4 6.7c-1 3-2 5.2-2.4 6.7-.7 1.7-1.5 4.4-2.6 8l-2.5 8a1.6 1.6 0 0 1-1 1h-13a2 2 0 0 1 0-1 49.6 49.6 0 0 1 1.7-4.8l.4-1c1-2.6 1.8-4.6 2.2-6q2.5-7.4 3.3-10.4c.5-2 .5-3.5-.3-4.5a4.2 4.2 0 0 0-3.5-1.4A8.3 8.3 0 0 0 465 50a9 9 0 0 0-3.8 4l-3.6 10.5-1.8 6-1.8 6a1 1 0 0 1-1 1h-13a1.2 1.2 0 0 1 .2-1l2-5.8c1-2.2 1.8-4.5 2.3-6l1.3-4 .2-.8 1.5-4.8c1-2.6 1-4.4 0-5.6a3.4 3.4 0 0 0-3.2-1.3 10.4 10.4 0 0 0-4.8 1.5 8.3 8.3 0 0 0-3.8 3.6l-3.2 9.7-1.8 5.5c-1 3.3-2 5.8-2.5 7.7a3 3 0 0 1-.5 1 .8.8 0 0 1-.5 0H414a4 4 0 0 1 .3-.6l.3-.8 3.2-9.2.5-1.4 3-8.7a138 138 0 0 0 4.2-15.6v-.3a4.3 4.3 0 0 1 0-.5 1.2 1.2 0 0 1 .6-.5 19.7 19.7 0 0 1 3.6-.6c2.3 0 3.5-.2 4-.3l3.6-1a16 16 0 0 1 3-.5 11.8 11.8 0 0 1-.4 2c-1 2.7-.8 3-.6 3.5a.7.7 0 0 0 .6.3h.2a5.4 5.4 0 0 0 1.3-.7 63 63 0 0 1 7.2-4 18 18 0 0 1 7.2-1.5 10.3 10.3 0 0 1 6 1.6 5.2 5.2 0 0 1 2.2 4.8l-.2 1.8 1.3-1.2a25.7 25.7 0 0 1 7.7-5 20 20 0 0 1 8-2c3.5 0 6 .8 7.7 2.4 2 2 2.3 4.4 1.3 7.8zm42.7 8c-1 2.6-2 4-3.8 4.4l-9 1-15.2 1h-.6v.7a5 5 0 0 0 2.4 5 10.6 10.6 0 0 0 5.5 1.4 22 22 0 0 0 8.5-2l1-.5 2.4-1.3a14 14 0 0 1 1 3.5c.6 3 .6 4.2.5 4.5a4.6 4.6 0 0 1-.6.7C520 77 514 78.7 507 78.7c-6.4 0-11-2-13.6-5.5s-3-8.8-1-15.2a33 33 0 0 1 10.8-15.5 26.6 26.6 0 0 1 17-6.2c5.2 0 9 2 11.2 5.5s2.6 8 1 13.2z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     fill: "#FFF",
                     d: "M515 45.3a8 8 0 0 0-5.4 2.4 11.8 11.8 0 0 0-3.4 5 1.6 1.6 0 0 0 .6 2 1 1 0 0 0 .8 0c3.3 0 6.7-.3 10-.7 1 0 2-.4 2.2-1a6 6 0 0 0-.3-5.3 5 5 0 0 0-4.4-2.4zM339.2 34.8c-7 0-7.6.7-8 1s-.5.6-3.6 10l-1.2 4-1.2 3.7a1 1 0 0 0 0 .8c.5.5 1.3 1 8 1 6.4 0 10.8-3.3 13-9.7 1.2-3.6 1.2-6.4 0-8.2s-3.6-2.6-7-2.6z"
                 })),
                 width: 539.99,
                 height: 100.22
-            }, X[K.Maximize] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.Maximize] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M2,14 L14,14 L14,2 L2,2 L2,14 Z M0,0 L16,0 L16,16 L0,16 L0,0 L0,0 L0,0 Z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M3,3 L13,3 L13,5 L3,5 L3,3 Z"
                 })),
                 width: 16,
                 height: 16
-            }, X[K.MessagesSC] = {
-                path: a.createElement("path", {
+            }, J[$.MessagesSC] = {
+                path: r.createElement("path", {
                     d: "M4 12H1V0h14v12H8l-4 4z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Minimize] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.Minimize] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M2,14 L14,14 L14,2 L2,2 L2,14 Z M0,0 L16,0 L16,16 L0,16 L0,0 L0,0 L0,0 Z"
-                }), a.createElement("path", {
+                }), r.createElement("path", {
                     d: "M3,11 L13,11 L13,13 L3,13 L3,11 Z"
                 })),
                 width: 16,
                 height: 16
-            }, X[K.More] = {
-                path: a.createElement("path", {
+            }, J[$.More] = {
+                path: r.createElement("path", {
                     d: "M7,3 L9,3 L9,5 L7,5 L7,3 Z M7,7 L9,7 L9,9 L7,9 L7,7 Z M7,11 L9,11 L9,13 L7,13 L7,11 Z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Muted] = {
-                path: a.createElement("path", {
+            }, J[$.Muted] = {
+                path: r.createElement("path", {
                     d: "M12.08 7.835l-2.02-2.04.904-.912 2.02 2.04 2.113-2.136L16 5.7l-2.114 2.135 2.02 2.04-.904.91-2.02-2.04-1.923 1.945-.904-.912 1.924-1.943zm-8.072 2.812L7.57 13V3L4.367 5.115V5.06H0v5.587h4.008z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.NavBackpack] = {
-                path: a.createElement("path", {
+            }, J[$.NavBackpack] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M16,15H2l-1-1V8h16v6L16,15z M1,4l1-1h14l1,1v2H1V4z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavBug] = {
-                path: a.createElement("path", {
+            }, J[$.NavBug] = {
+                path: r.createElement("path", {
                     d: "M9.991 16.98c-1.903 0-3.446-2.463-3.446-5.5 0-.514.048-1.008.13-1.48h6.632c.083.472.13.966.13 1.48 0 3.037-1.543 5.5-3.446 5.5m0-10.998c1.076 0 2.036.787 2.668 2.019H7.324c.632-1.232 1.592-2.02 2.667-2.02M15.3 11.8h.99l1.25 1.71 1.44-1.08L17.19 10H15.3c-.09-.54-.18-.99-.27-1.53l2.61-2.61-1.26-1.26-2.07 2.07c-.54-.99-1.17-1.71-1.98-2.25l2.16-2.16L13.23 1l-2.7 2.7h-.99L6.84 1 5.49 2.26l2.16 2.16c-.81.54-1.44 1.26-1.98 2.25L3.6 4.6 2.34 5.86l2.61 2.61c-.09.54-.18.99-.27 1.53H2.79L1 12.43l1.44 1.08 1.25-1.71h.9c0 1.08.27 2.16.54 3.06l-2.88 2.88L3.6 19l2.43-2.43C7.02 18.1 8.37 19 9.99 19s2.97-.9 3.96-2.43L16.38 19l1.26-1.26-2.88-2.88c.36-.9.54-1.98.54-3.06"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.NavChannels] = {
-                path: a.createElement("path", {
+            }, J[$.NavChannels] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M15,14l-4-4v4H1V4h10v4l4-4h2v10H15z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavCreative] = {
-                path: a.createElement("path", {
+            }, J[$.NavCreative] = {
+                path: r.createElement("path", {
                     d: "M15.7 13.4l.8 1.5 1.5.8-1.5.8-.8 1.5-.8-1.5-1.5-.8 1.5-.8.8-1.5zM14.5 0l1.2 2.2 2.3 1.3-2.3 1.2-1.2 2.3-1.2-2.3-2.2-1.2 2.2-1.3 1.2-2.2zM8 2l3 5 5 3-5 3-3 5-3-5-5-3 5-3z"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavDashboard] = {
-                path: a.createElement("path", {
+            }, J[$.NavDashboard] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M1,16V2h16v14H1z M5,4H3v1h2V4z M5,7H3v1h2V7z M5,10H3v1h2V10zM5,13H3v1h2V13z M9,7H7v7h2V7z M12,10h-2v4h2V10z M15,4h-2v10h2V4z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavDiscover] = {
-                path: a.createElement("path", {
+            }, J[$.NavDiscover] = {
+                path: r.createElement("path", {
                     d: "M4.7 13.29l-1.49-.32-1.74 3.55 3.54-1.74-.31-1.49M12.9 10.55l4.36-4.36L18 0l-6.19.74L7.45 5.1 3.36 4 0 7.36l4.41 1.19v3.23l1.82 1.82h3.22l1.19 4.4L14 14.64zM12.47 7L11 5.53l1.48-1.48 1.48 1.48z"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavFollowing] = {
-                path: a.createElement("path", {
+            }, J[$.NavFollowing] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M1,8V4l2-2h4l2,2l2-2h4l2,2v4l-8,8L1,8z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavGames] = {
-                path: a.createElement("path", {
+            }, J[$.NavGames] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M9,8.293l-3-3V1h6v4.293L9,8.293z M5.293,12H1V6h4.293l3,3L5.293,12z M9,9.707l3,3V17H6v-4.293L9,9.707z M12.707,6H17v6h-4.293l-3-3L12.707,6z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavLogout] = {
-                path: a.createElement("path", {
+            }, J[$.NavLogout] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M16,9l-6,6v-4H6V7h4V3L16,9z M4,13h4v2H2v-2V5V3h6v2H4V13z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavManager] = {
-                path: a.createElement("path", {
+            }, J[$.NavManager] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M17,3v11h-2h-4H8.707l-0.5-0.5h-1L7.5,13.207v-1.809l5.583-2.401L7.027,6.399V8.5H2.5v4.707L2.793,13.5h-1l-0.5,0.5H1V3h10\n\th4H17z M7,14H6l1-1V9H6H4H3v4l1,1H3H2l-1,1v2h8v-2l-1-1H7z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavMessages] = {
-                path: a.createElement("path", {
+            }, J[$.NavMessages] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M1,15V3h16v12H1z M15.354,5.354l-0.707-0.707L9,10.293L3.354,4.646L2.646,5.354L6.293,9l-3.646,3.646l0.707,0.707L7,9.707l1.646,1.646h0.707L11,9.707l3.646,3.646l0.707-0.707L11.707,9L15.354,5.354z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavMore] = {
-                path: a.createElement("path", {
+            }, J[$.NavMore] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M13,11V7h4v4H13z M7,7h4v4H7V7z M1,7h4v4H1V7z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavMyChannel] = {
-                path: a.createElement("path", {
+            }, J[$.NavMyChannel] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M15,14l-4-4v4H8.707l-0.5-0.5h-1L7.5,13.207V8.5h-5v4.707L2.793,13.5h-1l-0.5,0.5H1V4h10v4l4-4h2v10H15z M3,14h1l-1-1V9h1h2h1v4l-1,1h1h1l1,1v2H1v-2l1-1H3z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavProfile] = {
-                path: a.createElement("path", {
+            }, J[$.NavProfile] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M2,16v-1l3-3h3L5,9V2h8v7l-3,3h3l3,3v1H2z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavSearch] = {
-                path: a.createElement("path", {
+            }, J[$.NavSearch] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M16.707,15.293l-1.414,1.414l-4.825-4.825C9.487,12.58,8.295,13,7,13c-3.313,0-6-2.687-6-6s2.687-6,6-6s6,2.687,6,6c0,1.295-0.42,2.487-1.118,3.468L16.707,15.293z M7,3C4.791,3,3,4.791,3,7s1.791,4,4,4s4-1.791,4-4S9.209,3,7,3z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavSettings] = {
-                path: a.createElement("path", {
+            }, J[$.NavSettings] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M15.03,5.091v4.878l-2,2H8.151l-3.061,3.061L2.97,12.908l3.061-3.06V4.97l2-2h4.879L8.97,6.909l2.121,2.121L15.03,5.091z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.NavVideos] = {
-                path: a.createElement("path", {
+            }, J[$.NavVideos] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M1,2v14h16V2H1z M6,12V6l7,3L6,12z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.Neck] = {
-                path: a.createElement("path", {
+            }, J[$.Neck] = {
+                path: r.createElement("path", {
                     d: "M9.305 1.877C9.689.84 10.887 0 12 0h6c1.105 0 2.31.838 2.695 1.877L30 27H0L9.305 1.877z",
                     fillRule: "evenodd"
                 }),
                 width: 35,
                 height: 25
-            }, X[K.NotificationBell] = {
-                path: a.createElement("path", {
+            }, J[$.NotificationBell] = {
+                path: r.createElement("path", {
                     d: "M10 18c1.104 0 2-.896 2-2H8c0 1.104.896 2 2 2m7-4.8v-.8c0-.213.01-.236-.228-.566L15.445 10V7.6C15.445 4.563 12.95 2 10 2S4.556 4.564 4.556 7.6V10l-1.328 1.834c-.24.33-.228.353-.228.566v1.2c0 .22.174.4.39.4h13.22c.214 0 .388-.18.388-.4v-.4z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.NotificationError] = {
-                path: a.createElement("path", {
+            }, J[$.NotificationError] = {
+                path: r.createElement("path", {
                     d: "M13.707 12.293a.999.999 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a.997.997 0 0 1-1.414 0 .999.999 0 0 1 0-1.414L8.586 10 6.293 7.707a.999.999 0 1 1 1.414-1.414L10 8.586l2.293-2.293a.999.999 0 1 1 1.414 1.414L11.414 10l2.293 2.293zM10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.NotificationInfo] = {
-                path: a.createElement("path", {
+            }, J[$.NotificationInfo] = {
+                path: r.createElement("path", {
                     d: "M9 9.951a1 1 0 1 1 2 0v4.098a1 1 0 1 1-2 0V9.951zm1-4.95c.549 0 1 .45 1 1 0 .548-.451 1-1 1-.548 0-1-.45-1-1s.451-1 1-1zm0 13c4.411 0 8-3.59 8-8 0-4.412-3.589-8-8-8s-8 3.588-8 8c0 4.41 3.589 8 8 8z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.NotificationSuccess] = {
-                path: a.createElement("path", {
+            }, J[$.NotificationSuccess] = {
+                path: r.createElement("path", {
                     d: "M13.74 8.464l-4.445 4.285a.906.906 0 0 1-.629.25.906.906 0 0 1-.629-.25L6.26 11.035a.837.837 0 0 1 0-1.213.914.914 0 0 1 1.257 0l1.15 1.109 3.815-3.68a.915.915 0 0 1 1.258 0 .837.837 0 0 1 0 1.213M10 2a8 8 0 0 0-8 8 8 8 0 1 0 16 0 8 8 0 0 0-8-8",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.NotificationWarning] = {
-                path: a.createElement("path", {
+            }, J[$.NotificationWarning] = {
+                path: r.createElement("path", {
                     d: "M10.87 2.504l8 14A1 1 0 0 1 18 18h-16a1 1 0 0 1-.868-1.496l8-14a1 1 0 0 1 1.737 0zM11 11.049V6.95a1 1 0 1 0-2 0v4.098a1 1 0 1 0 2 0zm-1 4.95c.55 0 1-.45 1-1s-.452-1-1-1c-.549 0-1 .452-1 1 0 .55.451 1 1 1z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.OP] = {
-                path: a.createElement("path", {
+            }, J[$.OP] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M15,7L1,16l4.666-7H1l14-9l-4.667,7H15z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.PermissionsAdd] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.PermissionsAdd] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M17 10h-3v1.9938965L12.9101562 13H17v3l6-4.5L17 7"
-                }), " ", a.createElement("path", {
+                }), " ", r.createElement("path", {
                     d: "M1 19v-1l3-3h3l-3-3V5h8v7l-3 3h3l3 3v1"
                 })),
                 width: 24,
                 height: 24
-            }, X[K.PermissionsAdded] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.PermissionsAdded] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M1 19v-1l3-3h3l-3-3V5h8v7l-3 3h3l3 3v1"
-                }), " ", a.createElement("path", {
+                }), " ", r.createElement("path", {
                     d: "M21.3558345 8L23 9.61769336 16.5132525 16 13 12.5433131l1.6441655-1.6176933 1.869087 1.8389935"
                 })),
                 width: 24,
                 height: 24
-            }, X[K.PermissionsRemove] = {
-                path: a.createElement("g", null, a.createElement("path", {
+            }, J[$.PermissionsRemove] = {
+                path: r.createElement("g", null, r.createElement("path", {
                     d: "M1 19v-1l3-3h3l-3-3V5h8v7l-3 3h3l3 3v1"
-                }), " ", a.createElement("path", {
+                }), " ", r.createElement("path", {
                     d: "M18.01339 10.3400907l-2.3700453-2.3700453-1.6238705 1.62387052 2.3700453 2.3700453-2.3700453 2.3700453 1.6238705 1.6238705 2.3700453-2.3700453 2.37004522 2.37004523 1.62387052-1.6238705-2.37004523-2.37004524 2.37004526-2.37004523-1.6238705-1.6238705"
                 })),
                 width: 24,
                 height: 24
-            }, X[K.Pin] = {
-                path: a.createElement("path", {
+            }, J[$.Pin] = {
+                path: r.createElement("path", {
                     d: "M4.154 15.926l3.68-4.313 1.56 1.556-4.314 3.68c-.12.093-.272.15-.428.142-.255 0-.486-.15-.593-.383-.11-.23-.07-.504.09-.7v.01zm9.508-.57l-1.28-1.282-6.723-6.73h4.06l2.37-3.902c.13-.214.33-.374.58-.423.16-.04.33-.03.48.03l.153.054 4.576 4.582.057.15c.15.403-.01.855-.368 1.063l-3.914 2.38v4.07zm-.288-11.14c0 .003-.002.004-.003.006l.01-.005zm3.436 3.4l-.023.015.023-.01zm-6.245 1.227H9.277l2.885 2.89v-1.286l.36-.22.36-.22 3.232-1.966-3.148-3.15-2.4 3.96z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Pinned] = {
-                path: a.createElement("path", {
+            }, J[$.Pinned] = {
+                path: r.createElement("path", {
                     d: "M4.154 15.926l3.68-4.313 1.56 1.556-4.314 3.68c-.12.098-.272.15-.428.147-.255 0-.486-.15-.593-.383-.11-.232-.07-.504.092-.7v.008zm9.508-.57l-1.28-1.282-6.723-6.73h4.06l2.37-3.902c.13-.214.33-.374.58-.423.16-.037.33-.025.482.032l.156.057 4.576 4.582.057.152c.15.402-.01.854-.367 1.062l-3.913 2.38v4.068z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Play] = {
-                path: a.createElement("path", {
+            }, J[$.Play] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M5,0l20,15L5,30V0z",
                     fillRule: "evenodd"
                 }),
                 width: 30,
                 height: 30
-            }, X[K.Playlist] = {
-                path: a.createElement("path", {
+            }, J[$.Playlist] = {
+                path: r.createElement("path", {
                     d: "M10 5L0 10V0",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.QuestionMark] = {
-                path: a.createElement("path", {
+            }, J[$.QuestionMark] = {
+                path: r.createElement("path", {
                     d: "M3 4l3-3h12l3 3v8l-3 3h-4v2H9v-4l3-3h4V6H8v4H3V4zm6 15h5v4H9v-4z",
                     fillRule: "evenodd"
                 }),
                 width: 24,
                 height: 24
-            }, X[K.MiniPlayerExpand] = {
-                path: a.createElement("path", {
+            }, J[$.MiniPlayerExpand] = {
+                path: r.createElement("path", {
                     d: "M4 10V2h14v11h-4v-2h2V4H6v4H4v2h8v8H2v-8h2zm11-1l-1.143-1.143L12.714 9 11 7.286l1.143-1.143L11 5h4v4z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.MiniPlayerPause] = {
-                path: a.createElement("path", {
+            }, J[$.MiniPlayerPause] = {
+                path: r.createElement("path", {
                     d: "M4 17h4V3H4v14zm8-14v14h4V3h-4z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.MiniPlayerPlay] = {
-                path: a.createElement("path", {
+            }, J[$.MiniPlayerPlay] = {
+                path: r.createElement("path", {
                     d: "M4 2l12 8-12 8"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Plus] = {
-                path: a.createElement("path", {
+            }, J[$.Plus] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M15,9H9v6H7V9H1V7h6V1h2v6h6V9z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Popout] = {
-                path: a.createElement("path", {
+            }, J[$.Popout] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M12.707,4.707l-4,4L7.293,7.293l4-4L9,1h6v6L12.707,4.707z M4,12h7V9h2v5H2V3h5v2H4V12z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Reddit] = {
-                path: a.createElement("path", {
+            }, J[$.Reddit] = {
+                path: r.createElement("path", {
                     d: "M21.998 8.692c.545 0 .988.447.988.994a.992.992 0 0 1-.987.995.99.99 0 0 1-.988-.994c0-.547.442-.994.987-.994h-.002zm-.5 5.16c-1.38-.896-3.162-1.42-5.07-1.495l1.047-3.335 2.85.675c.003.923.75 1.67 1.674 1.676a1.683 1.683 0 0 0 1.673-1.687A1.683 1.683 0 0 0 22 8c-.688 0-1.28.42-1.538 1.018l-3.14-.744a.342.342 0 0 0-.405.233L15.71 12.35c-2.006.037-3.888.566-5.33 1.5a2.014 2.014 0 0 0-1.346-.517A2.042 2.042 0 0 0 7 15.38c0 .72.376 1.386.992 1.757-.03.19-.045.386-.045.58 0 1.465.85 2.83 2.396 3.845a8.483 8.483 0 0 0 1.62.822c2.51.964 6.692.602 7.952 0 1.26-.6 1.128-.498 1.62-.822 1.545-1.015 2.396-2.38 2.396-3.844 0-.195-.014-.39-.044-.58a2.05 2.05 0 0 0-1.04-3.806c-.5 0-.98.185-1.348.52zm-5.56 7.326c1.333 0 2.284-.294 2.887-.9a.348.348 0 0 0 0-.49.342.342 0 0 0-.486 0c-.47.47-1.26.698-2.4.698-1.142 0-1.933-.23-2.4-.698a.342.342 0 0 0-.487 0 .347.347 0 0 0 0 .49c.603.606 1.553.9 2.886.9zm2.695-5.688a1.245 1.245 0 0 0-1.238 1.248c0 .686.555 1.246 1.238 1.246a1.245 1.245 0 0 0 1.24-1.247c0-.687-.557-1.246-1.24-1.246zm-5.39 0c-.682 0-1.237.56-1.237 1.248 0 .686.555 1.245 1.238 1.245.682 0 1.237-.56 1.237-1.245 0-.688-.554-1.247-1.236-1.247z",
                     fillRule: "evenodd"
                 }),
                 width: 32,
                 height: 32
-            }, X[K.Refresh] = {
-                path: a.createElement("path", {
+            }, J[$.Refresh] = {
+                path: r.createElement("path", {
                     d: "M4.016 10.119c-.248-3.33 2.317-6.238 5.718-6.483a6.202 6.202 0 0 1 2.229.26l.474.144.543-1.55a.746.746 0 0 1 .656-.49.747.747 0 0 1 .715.408l1.572 3.14a.713.713 0 0 1-.176.867.762.762 0 0 1-.165.109l-3.21 1.538a.748.748 0 0 1-.819-.108.718.718 0 0 1-.212-.782l.426-1.216-.517-.145a4.029 4.029 0 0 0-1.366-.143C7.63 5.83 5.928 7.758 6.091 9.97a.98.98 0 0 1-.24.727c-.2.217-.443.338-.722.359l-.078.003c-.54 0-.994-.413-1.035-.941zm1.162 7.384l-1.14-3.317a.72.72 0 0 1 .468-.92l3.39-1.116a.789.789 0 0 1 .239-.037.75.75 0 0 1 .562.248c.198.224.24.54.106.804l-.665 1.306.586.167c.455.131.927.177 1.386.147a4.126 4.126 0 0 0 2.81-1.385 3.93 3.93 0 0 0 .987-2.917c-.02-.27.069-.534.25-.74.183-.206.434-.33.712-.348.28-.022.539.067.753.247.213.18.34.425.362.694a5.934 5.934 0 0 1-1.491 4.396 6.197 6.197 0 0 1-4.231 2.084 6.097 6.097 0 0 1-2.604-.386l-.432-.163-.676 1.328a.724.724 0 0 1-.172.22.756.756 0 0 1-.545.182.739.739 0 0 1-.655-.494z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.RemoveTag] = {
-                path: a.createElement("path", {
+            }, J[$.RemoveTag] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M4.10271979,3.43815904 L1.66456075,1 L1,1.66456075 L3.43815904,4.10271979 L1,6.54087884 L1.66456075,7.20543958 L4.10271979,4.76728054 L6.54087884,7.20543958 L7.20543958,6.54087884 L4.76728054,4.10271979 L7.20543958,1.66456075 L6.54087884,1 L4.10271979,3.43815904 Z",
                     strokeWidth: "0.4",
@@ -25715,272 +25793,272 @@ webpackJsonp([80], {
                 }),
                 width: 8,
                 height: 8
-            }, X[K.RequestsSC] = {
-                path: a.createElement("path", {
+            }, J[$.RequestsSC] = {
+                path: r.createElement("path", {
                     d: "M11 3L9 1H5L3 3v5l3 2v1H2l-2 2v2h14v-2l-2-2H8v-1l3-2V6H8V3h3zm1 1H9v1h3v3h1V5h3V4h-3V1h-1v3z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Roman1] = {
-                path: a.createElement("path", {
+            }, J[$.Roman1] = {
+                path: r.createElement("path", {
                     d: "M8 17h4V3H8"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Roman2] = {
-                path: a.createElement("path", {
+            }, J[$.Roman2] = {
+                path: r.createElement("path", {
                     d: "M4 17V3h4v14H4zm8 0V3h4v14h-4z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Roman3] = {
-                path: a.createElement("path", {
+            }, J[$.Roman3] = {
+                path: r.createElement("path", {
                     d: "M2 17h4V3H2v14zm6 0h4V3H8v14zm6 0h4V3h-4v14z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Roman4] = {
-                path: a.createElement("path", {
+            }, J[$.Roman4] = {
+                path: r.createElement("path", {
                     d: "M1 17h4V3H1v14zm10 0h4l4-14h-4l-2 10-2-10H7l4 14z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Roman5] = {
-                path: a.createElement("path", {
+            }, J[$.Roman5] = {
+                path: r.createElement("path", {
                     d: "M8 17h4l6-14h-4l-4 10L6 3H2"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.RoomList] = {
-                path: a.createElement("path", {
+            }, J[$.RoomList] = {
+                path: r.createElement("path", {
                     fillRule: "evenodd",
                     d: "M9.2 2.527c-.13-.165-.2-.366-.2-.572C9 1.427 9.447 1 10 1h8c.217 0 .427.067.6.19.442.317.53.916.2 1.337l-4 5.09c-.057.074-.124.138-.2.192-.442.313-1.07.23-1.4-.194l-4-5.09zM2 17h11c.552 0 1 .448 1 1s-.448 1-1 1H2c-.552 0-1-.448-1-1s.448-1 1-1zm0-5h11c.552 0 1 .448 1 1s-.448 1-1 1H2c-.552 0-1-.448-1-1s.448-1 1-1zm0-5h7c.553 0 1 .448 1 1s-.447 1-1 1H2c-.552 0-1-.448-1-1s.448-1 1-1zm0-5h3c.552 0 1 .448 1 1s-.448 1-1 1H2c-.552 0-1-.448-1-1s.448-1 1-1z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.RoomListOpen] = {
-                path: a.createElement("path", {
+            }, J[$.RoomListOpen] = {
+                path: r.createElement("path", {
                     fillRule: "evenodd",
                     d: "M13.2 12.382c.33-.422.958-.507 1.4-.19.076.053.143.118.2.19l4 5.09c.33.423.242 1.02-.2 1.338-.173.123-.383.19-.6.19h-8c-.553 0-1-.428-1-.954 0-.207.07-.408.2-.573l4-5.09zM2 3c-.552 0-1-.448-1-1s.448-1 1-1h11c.552 0 1 .448 1 1s-.448 1-1 1H2zm0 5c-.552 0-1-.447-1-1 0-.553.448-1 1-1h11c.552 0 1 .447 1 1 0 .553-.448 1-1 1H2zm0 5c-.552 0-1-.447-1-1 0-.553.448-1 1-1h7c.553 0 1 .447 1 1 0 .553-.447 1-1 1H2zm0 5c-.552 0-1-.447-1-1 0-.553.448-1 1-1h3c.552 0 1 .447 1 1 0 .553-.448 1-1 1H2z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.SearchNoResults] = {
-                path: a.createElement("path", {
+            }, J[$.SearchNoResults] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M44.7314176,41.7572363 L37.4713285,48 L26.8572017,35.3514358 L19.8203892,37.5166089 L8.56540656,33.764948 L2,24.3857958 L2,13.1308131 L8.56540656,3.75166089 L19.8203892,0 L32.0132871,3.75166089 L38.2660553,12.8181747 L38.2660553,24.6984342 L34.7250756,29.8328548 L44.7314176,41.7572363 Z M25.8441673,26.223711 L20.1169645,28.1374567 L20.0888962,28.1374567 L14.3616933,26.223711 L11.0126384,21.4393468 L11.0126384,15.6981098 L14.3616933,10.9137457 L20.0888962,9 L20.1176024,9 L25.8448053,10.9137457 L29.5121799,15.6981098 L29.5121799,21.4393468 L25.8441673,26.223711 L25.8441673,26.223711 Z",
                     fillRule: "evenodd"
                 }),
                 width: 46,
                 height: 48
-            }, X[K.Share] = {
-                path: a.createElement("path", {
+            }, J[$.Share] = {
+                path: r.createElement("path", {
                     d: "M5 4v2H3v8h10V6h-2V4h4v12H1V4h4zm2-1H5l3-3 3 3H9v6H7V3z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Shirt] = {
-                path: a.createElement("polygon", {
+            }, J[$.Shirt] = {
+                path: r.createElement("polygon", {
                     points: "7.9,5 5.3,0.9 0.4,3.8 2.2,7.6 4.4,7 4.4,15.1 11.6,15.1 11.6,7 13.8,7.6 15.6,3.8 10.9,0.9 "
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Star] = {
-                path: a.createElement("path", {
+            }, J[$.Star] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M15,6l-4.041,2.694L13,14l-5-3.333L3,14l2.041-5.306L1,6h5.077L8,1l1.924,5H15z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Steam] = {
-                path: a.createElement("path", {
+            }, J[$.Steam] = {
+                path: r.createElement("path", {
                     d: "M10,0C4.7,0,0.4,4.1,0,9.2l5.4,2.2c0.5-0.3,1-0.5,1.6-0.5c0.1,0,0.1,0,0.2,0l2.4-3.5V7.4c0-2.1,1.7-3.8,3.8-3.8 s3.8,1.7,3.8,3.8s-1.7,3.8-3.8,3.8h-0.1l-3.4,2.4c0,0,0,0.1,0,0.1c0,1.6-1.3,2.8-2.8,2.8c-1.4,0-2.5-1-2.8-2.3l-3.8-1.6 C1.5,17,5.4,20,10,20c5.5,0,10-4.5,10-10C20,4.5,15.5,0,10,0z M15.8,7.4c0-1.4-1.1-2.5-2.5-2.5c-1.4,0-2.5,1.1-2.5,2.5 c0,1.4,1.1,2.5,2.5,2.5S15.8,8.8,15.8,7.4L15.8,7.4z M11.4,7.4c0-1,0.8-1.9,1.9-1.9c1,0,1.9,0.8,1.9,1.9c0,1-0.8,1.9-1.9,1.9 C12.2,9.3,11.4,8.5,11.4,7.4L11.4,7.4z M6.3,15.2l-1.2-0.5c0.2,0.5,0.6,0.8,1.1,1c1.1,0.5,2.3-0.1,2.8-1.1c0.2-0.5,0.2-1.1,0-1.6 c-0.2-0.5-0.6-0.9-1.2-1.2c-0.5-0.2-1.1-0.2-1.6,0l1.3,0.5c0.8,0.3,1.2,1.2,0.8,2.1C8,15.2,7.1,15.5,6.3,15.2L6.3,15.2z"
                 }),
                 width: 20,
                 height: 21
-            }, X[K.Sword] = {
-                path: a.createElement("path", {
+            }, J[$.Sword] = {
+                path: r.createElement("path", {
                     d: "M8.378 11.879L10 13.5l-2 .563L6.921 13h-.857l-.338.338.532.531L4 16l-1-1-1-1 2.131-2.258.531.531.338-.337v-.828L3.875 10 4.5 8l1.622 1.621L12.812 2H16v3.188z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.Team] = {
-                path: a.createElement("path", {
+            }, J[$.Team] = {
+                path: r.createElement("path", {
                     d: "M15.5,0 L14,0 L14,5 L15.65,7.2 L14,16 L2,16 L0.35,7.2 L2,5 L2,0 L0.5,0 L15.5,0 Z M4,0 L8,3 L12,0 L4,0 Z M6,6 L6,7 L10,7 L9,6 L6,6 Z M9,7 L9,8 L10,8 L10,7 L9,7 Z M7,8 L7,9 L10,9 L10,8 L7,8 Z M9,9 L9,10 L10,10 L10,9 L9,9 Z M6,10 L6,11 L9,11 L10,10 L6,10 Z"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Theater] = {
-                path: a.createElement("path", {
+            }, J[$.Theater] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M1,13h9V3H1V13z M11,3v10h4V3H11z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Timeout] = {
-                path: a.createElement("path", {
+            }, J[$.Timeout] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M8,15c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S11.866,15,8,15z M8,3C5.238,3,3,5.238,3,8s2.238,5,5,5s5-2.238,5-5S10.762,3,8,3z M7.293,8.707L7,8l1-4l0.902,3.607L11,11L7.293,8.707z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Timer] = {
-                path: a.createElement("path", {
+            }, J[$.Timer] = {
+                path: r.createElement("path", {
                     d: "M12.988 5.057C17.488 5.55 21 9.37 21 14c0 4.963-4.038 9-9 9s-9-4.037-9-9c0-4.63 3.513-8.45 8.012-8.943C11.01 5.037 11 5.02 11 5V3h-1c-.552 0-1-.447-1-1 0-.553.448-1 1-1h4c.552 0 1 .447 1 1 0 .553-.448 1-1 1h-1v2c0 .02-.01.037-.012.057zM12 21c3.86 0 7-3.14 7-7s-3.14-7-7-7-7 3.14-7 7 3.14 7 7 7zm0-12c.552 0 1 .447 1 1v4c0 .553-.448 1-1 1s-1-.447-1-1v-4c0-.553.448-1 1-1z"
                 }),
                 width: 24,
                 height: 24
-            }, X[K.ToBottom] = {
-                path: a.createElement("path", {
+            }, J[$.ToBottom] = {
+                path: r.createElement("path", {
                     d: "M16 18H4a1 1 0 1 1 0-2h12a1 1 0 1 1 0 2zm-1.04-8.41a1 1 0 0 1-.216 1.09l-4.025 4.046a1.003 1.003 0 0 1-1.414 0L5.279 10.68a1 1 0 0 1 .707-1.707h2.019V3a1 1 0 0 1 1-1h1.994a1 1 0 0 1 1 1v5.973h2.038a1 1 0 0 1 .924.617z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.ToTop] = {
-                path: a.createElement("path", {
+            }, J[$.ToTop] = {
+                path: r.createElement("path", {
                     d: "M16 4H4a1 1 0 1 1 0-2h12a1 1 0 1 1 0 2zm-1.04 6.429a1 1 0 0 1-.923.617h-2.038v5.973a1 1 0 0 1-1 1H9.005a1 1 0 0 1-1-1v-5.973h-2.02a1 1 0 0 1-.706-1.707l4.026-4.046a1 1 0 0 1 1.414 0l4.025 4.046a1 1 0 0 1 .217 1.09z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Trash] = {
-                path: a.createElement("path", {
+            }, J[$.Trash] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M10,14.999H6H3v-11h3h4h3v11H10z M6,5.999v7h1v-7H6z M10,5.999H9v7h1V5.999zM3,1.999h4v-1h2v1h4v1H3V1.999z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Trophy] = {
-                path: a.createElement("path", {
+            }, J[$.Trophy] = {
+                path: r.createElement("path", {
                     d: "M3.71 2.464C3.7 1.614 3.69 1 3.69 1h10.58l.012 1.464h3.688s.367 2.984-1.465 5.126c-.923 1.33-2.1 1.994-2.866 2.308-.708 1.486-1.918 2.596-3.36 3.008v2.007h1.832v2.196H5.888v-2.197h1.83V12.89c-1.404-.425-2.584-1.512-3.282-2.962-.763-.3-1.988-.965-2.94-2.338C-.338 5.448.03 2.464.03 2.464h3.68zm.014 1.1c.014 1.186.027 2.507.027 3.3 0 .487.05.96.14 1.417-.524-.29-1.174-.75-1.663-1.422-1.258-1.49-1.1-3.295-1.1-3.295h2.597zm10.567 0c.01 1.182.02 2.5.02 3.3 0 .473-.046.935-.132 1.38.51-.294 1.127-.744 1.595-1.386 1.258-1.49 1.1-3.295 1.1-3.295H14.29z",
                     fillRule: "evenodd"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.Twitter] = {
-                path: a.createElement("path", {
+            }, J[$.Twitter] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M23.966 11.533c-.55.26-1.142.436-1.763.515a3.252 3.252 0 0 0 1.35-1.81c-.6.38-1.26.65-1.95.794A2.983 2.983 0 0 0 19.363 10c-1.697 0-3.07 1.464-3.07 3.27 0 .256.025.505.078.745-2.55-.136-4.814-1.438-6.33-3.417a3.417 3.417 0 0 0-.414 1.644c0 1.134.543 2.135 1.366 2.722a2.918 2.918 0 0 1-1.39-.41v.042c0 1.584 1.057 2.906 2.463 3.206-.452.13-.928.15-1.388.056.392 1.3 1.526 2.245 2.87 2.27A5.917 5.917 0 0 1 9 21.483a8.31 8.31 0 0 0 4.707 1.47c5.648 0 8.736-4.982 8.736-9.304 0-.14-.003-.283-.008-.422a6.48 6.48 0 0 0 1.53-1.693",
                     fillRule: "evenodd"
                 }),
                 width: 32,
                 height: 32
-            }, X[K.Unheart] = {
-                path: a.createElement("path", {
+            }, J[$.Unheart] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Unignore] = {
-                path: a.createElement("path", {
+            }, J[$.Unignore] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M13,11.341V16l-3.722-3.102C8.863,12.959,8.438,13,8,13c-3.866,0-7-2.462-7-5.5C1,4.462,4.134,2,8,2s7,2.462,7,5.5C15,8.996,14.234,10.35,13,11.341z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.Unlock] = {
-                path: a.createElement("path", {
+            }, J[$.Unlock] = {
+                path: r.createElement("path", {
                     fillRule: "evenodd",
                     d: "M15.243 9.002h-6.46l-.6-1.8c-.452-1.36-.16-2.686 1.085-3.1 1.245-.416 2.275.47 2.728 1.83l.128.383-.008.003c.175.525.74.808 1.265.634.524-.175.805-.734.636-1.256v-.01.002l-.13-.385c-.8-2.405-2.957-3.862-5.247-3.1-2.29.764-3.143 3.222-2.34 5.627L6.687 9l-1.936.003c-.414 0-.75.357-.75.8V17.2c0 .44.336.8.75.8h10.493c.414 0 .75-.36.75-.8V9.8c0-.442-.336-.8-.75-.8"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Upload] = {
-                path: a.createElement("path", {
+            }, J[$.Upload] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M84.9630996 35.0930707c1.1070111-1.9372694 1.6605166-4.1512915 1.6605166-6.6420664 0-8.302583-6.6420664-14.9446495-14.9446494-14.9446495-2.7675277 0-5.5350554.8302583-7.7490775 2.2140222C59.7785978 6.58753565 50.3690037.222222 39.5756458.222222c-14.9446495 0-26.8450185 12.1771218-26.8450185 27.1217712 0 .8302583 0 1.9372694.2767528 2.7675277C5.25830258 33.9860596 0 42.0118899 0 51.1447312 0 64.4288641 10.7933579 75.222222 24.0774908 75.222222h53.6900369c11.3468634 0 20.7564575-9.4095941 20.7564575-20.7564576 0-8.8560885-5.5350553-16.605166-13.5608856-19.3726937zM45.9409594 22.0856906l18.5424354 19.6494465H52.0295203v20.2029521H39.8523985V41.7351371H27.1217712l18.8191882-19.6494465z",
                     fillRule: "evenodd"
                 }),
                 width: 99,
                 height: 76
-            }, X[K.VKontakte] = {
-                path: a.createElement("path", {
+            }, J[$.VKontakte] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M16.98 21.362s.362-.04.546-.238c.17-.183.165-.525.165-.525s-.023-1.605.722-1.842c.734-.233 1.676 1.55 2.675 2.236.755.52 1.33.405 1.33.405l2.67-.038s1.397-.086.735-1.185c-.055-.09-.386-.812-1.986-2.297-1.675-1.555-1.45-1.303.567-3.992 1.228-1.638 1.72-2.637 1.566-3.065-.147-.408-1.05-.3-1.05-.3l-3.008.018s-.223-.03-.388.07c-.162.096-.266.322-.266.322s-.476 1.267-1.11 2.345c-1.34 2.274-1.875 2.394-2.094 2.253-.51-.33-.382-1.322-.382-2.028 0-2.203.334-3.122-.65-3.36-.328-.08-.57-.13-1.405-.14-1.073-.01-1.98.004-2.495.256-.342.167-.606.54-.445.562.2.027.65.122.887.446.31.42.298 1.36.298 1.36s.177 2.595-.414 2.917c-.405.22-.96-.23-2.155-2.293-.612-1.057-1.074-2.225-1.074-2.225s-.09-.218-.248-.335c-.193-.14-.462-.186-.462-.186l-2.858.018s-.43.012-.587.2c-.14.165-.01.508-.01.508s2.236 5.234 4.77 7.872c2.323 2.42 4.96 2.26 4.96 2.26h1.196z"
                 }),
                 width: 32,
                 height: 32
-            }, X[K.Verified] = {
-                path: a.createElement("path", {
+            }, J[$.Verified] = {
+                path: r.createElement("path", {
                     d: "M2.636 2.636L9 0l6.365 2.636L18 9l-2.635 6.365L9 18l-6.364-2.635L0 9l2.636-6.364zM7.38 13.11l6.097-6.42-1.45-1.378-4.726 4.98-1.613-1.52-1.37 1.458 3.065 2.88z"
                 }),
                 width: 18,
                 height: 18
-            }, X[K.VideoPremiere] = {
-                path: a.createElement("path", {
+            }, J[$.VideoPremiere] = {
+                path: r.createElement("path", {
                     d: "M10 1c4.9 0 9 4.1 9 9s-4 9-9 9-9-4-9-9 4-9 9-9zm0 1.8c-3.9 0-7.2 3.3-7.2 7.2 0 3.9 3.3 7.2 7.2 7.2 3.9 0 7.2-3.3 7.2-7.2 0-3.9-3.3-7.2-7.2-7.2zm3.668 7.737l-4.8 3.4C8.784 13.98 8.69 14 8.6 14c-.11 0-.22-.03-.316-.09-.177-.107-.284-.3-.284-.51V6.6c0-.208.107-.4.284-.51C8.38 6.03 8.49 6 8.6 6c.09 0 .184.02.268.063l4.8 3.4c.204.102.332.31.332.537 0 .227-.128.435-.332.537z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.VideoRerun] = {
-                path: a.createElement("path", {
+            }, J[$.VideoRerun] = {
+                path: r.createElement("path", {
                     d: "M17.953 4.797c-.004-.404-.25-.766-.626-.917-.12-.05-.247-.073-.373-.073-.264 0-.522.104-.713.3l-1.49 1.526c-.725-.937-1.677-1.684-2.795-2.167-1.745-.754-3.68-.783-5.45-.084-1.766.702-3.154 2.048-3.91 3.795-.753 1.744-.783 3.68-.083 5.446.7 1.767 2.048 3.156 3.794 3.91 1.745.756 3.68.785 5.447.084.563-.222.838-.858.615-1.42-.22-.564-.856-.838-1.42-.615-1.224.485-2.563.464-3.77-.058-1.21-.522-2.143-1.484-2.63-2.707-.483-1.225-.462-2.562.06-3.772.523-1.21 1.484-2.14 2.707-2.626 1.225-.49 2.563-.47 3.773.05.867.375 1.585.983 2.104 1.745L11.3 9.142c-.283.288-.364.718-.206 1.09.155.37.517.608.92.608h.01l4.993-.046c.552-.006.995-.457.99-1.01L17.96 4.79z"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.ViewerList] = {
-                path: a.createElement("path", {
+            }, J[$.ViewerList] = {
+                path: r.createElement("path", {
                     clipRule: "evenodd",
                     d: "M6,12.999v-2h8v2H6z M6,6.999h8v2H6V6.999z M6,2.999h8v2H6V2.999z M2,10.999h2v2H2V10.999z M2,6.999h2v2H2V6.999z M2,2.999h2v2H2V2.999z",
                     fillRule: "evenodd"
                 }),
                 width: 16,
                 height: 16
-            }, X[K.VolumeMax] = {
-                path: a.createElement("path", {
+            }, J[$.VolumeMax] = {
+                path: r.createElement("path", {
                     d: "M13 15V5h1v10h-1zm4 2V3h1v14h-1zM5 7.01l5-4.003v13.987l-5-4.022H2V7.01h3z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.VolumeMuted] = {
-                path: a.createElement("path", {
+            }, J[$.VolumeMuted] = {
+                path: r.createElement("path", {
                     d: "M10 3v13.987l-5-4.022H2V7.002h3L10 3zm7.3 3.993h.699v.701L15.7 9.995l2.299 2.297v.701H17.3L15 10.694l-2.3 2.3H12v-.7l2.299-2.299L12 7.693v-.7h.7l2.3 2.3 2.3-2.3z",
                     fillRule: "evenodd"
                 }),
                 width: 20,
                 height: 20
-            }, X[K.Warning] = {
-                path: a.createElement("path", {
+            }, J[$.Warning] = {
+                path: r.createElement("path", {
                     d: "M6.4,9.5h1.2v1H6.4V9.5z M6.4,5h1.2v4H6.4V5z M0,12h14c0,0-6.7-10-7-10C6.6,2,0,12,0,12z"
                 }),
                 width: 14,
                 height: 14
-            }, X[K.WhisperMuted] = {
-                path: a.createElement("path", {
+            }, J[$.WhisperMuted] = {
+                path: r.createElement("path", {
                     d: "M14 4.308l-.08-.082-2.02.007.002-1.563-.665-.67h-2.23l-.66.67v1.556h-1.8L4.78 6.012v7.13L3 14.077V15L14 4.308zm1.336 4.226v4.685l1.664.89V16H8l7.336-7.466zM8 16h4v1.405l-1 .562L9.022 18 8 17.405V16zm8-12l1 1L4 18l-1-1"
                 }),
                 width: 20,
                 height: 20
-            }, X),
-            te = function(e) {
+            }, J),
+            ne = function(e) {
                 var t = {};
-                return e.type ? t[e.type] = !0 : t[Q.Inherit] = !0, a.createElement("figure", i.__assign({
+                return e.type ? t[e.type] = !0 : t[K.Inherit] = !0, r.createElement("figure", i.__assign({
                     className: "tw-svg"
-                }, o(e)), a.createElement("svg", {
-                    className: r("tw-svg__asset", "tw-svg__asset--" + K[e.asset].toLowerCase(), t),
+                }, s(e)), r.createElement("svg", {
+                    className: o("tw-svg__asset", "tw-svg__asset--" + $[e.asset].toLowerCase(), t),
                     width: e.fill ? "100%" : (e.width || 16) + "px",
                     height: e.fill ? "100%" : (e.height || 16) + "px",
                     version: "1.1",
-                    viewBox: "0 0 " + ee[e.asset].width + " " + ee[e.asset].height,
+                    viewBox: "0 0 " + te[e.asset].width + " " + te[e.asset].height,
                     x: "0px",
                     y: "0px"
-                }, ee[e.asset].path))
+                }, te[e.asset].path))
             };
         n("py4c");
         ! function(e) {
             e.Notification = "tw-badge--notification", e.Alt = "tw-badge--alt", e.Alt2 = "tw-badge--alt-2", e.Brand = "tw-badge--brand", e.Live = "tw-badge--live", e.Alert = "tw-badge--alert", e.Success = "tw-badge--success", e.Prime = "tw-badge--prime", e.Dashboard = "tw-badge--dashboard"
-        }(J || (J = {}));
-        var ne = function(e) {
+        }(ee || (ee = {}));
+        var ie = function(e) {
                 var t = {
                     "tw-badge": !0
                 };
@@ -25989,79 +26067,79 @@ webpackJsonp([80], {
                         width: e.size,
                         height: e.size
                     },
-                    s = a.createElement(N, i.__assign({
-                        display: d.InlineFlex,
-                        justifyContent: m.Center,
-                        alignItems: l.Center,
-                        className: r(t)
-                    }, o(e)), a.createElement("div", {
+                    a = r.createElement(O, i.__assign({
+                        display: u.InlineFlex,
+                        justifyContent: h.Center,
+                        alignItems: c.Center,
+                        className: o(t)
+                    }, s(e)), r.createElement("div", {
                         style: n
-                    }, a.createElement(O, {
+                    }, r.createElement(R, {
                         className: "tw-badge__icon",
-                        display: d.Flex,
-                        justifyContent: m.Center,
-                        alignItems: l.Center
-                    }, a.createElement(te, {
+                        display: u.Flex,
+                        justifyContent: h.Center,
+                        alignItems: c.Center
+                    }, r.createElement(ne, {
                         asset: e.icon,
                         fill: !0
                     }))));
-                return e.border ? a.createElement(O, {
+                return e.border ? r.createElement(R, {
                     className: "tw-badge__container",
-                    display: d.InlineFlex,
-                    position: g.Relative
-                }, s) : s
+                    display: u.InlineFlex,
+                    position: f.Relative
+                }, a) : a
             },
-            ie = n("F8kA"),
-            re = new Set(["alt", "src", "srcSet", "sizes", "onError", "onLoad", "refHandler"]);
+            re = n("F8kA"),
+            ae = new Set(["alt", "src", "srcSet", "sizes", "onError", "onLoad", "refHandler"]);
 
-        function ae(e) {
+        function oe(e) {
             for (var t = {}, n = 0, i = Object.keys(e); n < i.length; n++) {
                 var r = i[n];
-                re.has(r) && (t[r] = e[r])
+                ae.has(r) && (t[r] = e[r])
             }
             return t
         }
-        var oe, se = function(e) {
-                var t, n, r;
-                return e.row && (t = l.Center), e.elevation && (n = e.elevation), e.background === H.Overlay && (r = M.Overlay), a.createElement(O, i.__assign({
+        var se, le = function(e) {
+                var t, n, a;
+                return e.row && (t = c.Center), e.elevation && (n = e.elevation), e.background === G.Overlay && (a = A.Overlay), r.createElement(R, i.__assign({
                     className: "tw-card",
-                    position: g.Relative
-                }, o(e)), a.createElement(Y, {
-                    display: d.Flex,
-                    flexDirection: e.row ? u.Row : u.Column,
+                    position: f.Relative
+                }, s(e)), r.createElement(Z, {
+                    display: u.Flex,
+                    flexDirection: e.row ? p.Row : p.Column,
                     alignItems: t,
                     elevation: n,
                     background: e.background,
-                    color: r,
+                    color: a,
                     border: e.border,
-                    flexWrap: p.NoWrap
+                    flexWrap: m.NoWrap
                 }, e.children))
             },
-            le = function(e) {
-                return a.createElement(O, i.__assign({
+            ce = function(e) {
+                return r.createElement(R, i.__assign({
                     className: "tw-card-body",
                     overflow: e.overflow,
-                    position: g.Relative
-                }, o(e)), e.children)
+                    position: f.Relative
+                }, s(e)), e.children)
             };
         n("0+3B");
         ! function(e) {
             e.Default = "tw-card-img--size-default", e.Size2 = "tw-card-img--size-2", e.Size3 = "tw-card-img--size-3", e.Size4 = "tw-card-img--size-4", e.Size6 = "tw-card-img--size-6", e.Size8 = "tw-card-img--size-8", e.Size16 = "tw-card-img--size-16", e.Size24 = "tw-card-img--size-24", e.Size32 = "tw-card-img--size-32"
-        }(oe || (oe = {}));
-        var ce = function(e) {
+        }(se || (se = {}));
+        var de = function(e) {
                 var t = {
                     "tw-card-img": !0
                 };
-                return e.size && e.size !== oe.Default && (t[e.size] = !0), a.createElement(N, {
+                return e.size && e.size !== se.Default && (t[e.size] = !0), r.createElement(O, {
                     flexShrink: 0
-                }, a.createElement("div", i.__assign({
-                    className: r(t)
-                }, o(e)), a.createElement(L, {
-                    ratio: e.aspect ? e.aspect : R.Aspect16x9,
+                }, r.createElement("div", i.__assign({
+                    className: o(t)
+                }, s(e)), r.createElement(P, {
+                    ratio: e.aspect ? e.aspect : x.Aspect16x9,
                     overflow: e.overflow
-                }, a.createElement(F, i.__assign({}, ae(e)))), e.children))
+                }, r.createElement(M, i.__assign({}, oe(e)))), e.children))
             },
-            de = (n("pna9"), function(e) {
+            ue = (n("pna9"), function(e) {
                 for (var t = {
                         "tw-placeholder": !0,
                         "tw-placeholder--overlay": e.overlay,
@@ -26070,67 +26148,67 @@ webpackJsonp([80], {
                     }, n = {
                         width: e.width ? e.width / 10 + "rem" : "",
                         height: e.height ? e.height / 10 + "rem" : ""
-                    }, s = [], l = 0; l < (e.lineCount || 1); l++) s.push(a.createElement("span", {
-                    className: r(t),
+                    }, a = [], l = 0; l < (e.lineCount || 1); l++) a.push(r.createElement("span", {
+                    className: o(t),
                     key: l,
                     style: n
                 }));
-                return a.createElement("span", i.__assign({
+                return r.createElement("span", i.__assign({
                     className: "tw-placeholder-wrapper"
-                }, o(e)), s)
+                }, s(e)), a)
             }),
-            ue = (n("cx1p"), function(e) {
+            pe = (n("cx1p"), function(e) {
                 var t;
-                return t = a.createElement(se, {
+                return t = r.createElement(le, {
                     key: e.title
-                }, a.createElement(ce, i.__assign({
-                    aspect: R.BoxArt
-                }, ae(e))), a.createElement(le, null, a.createElement(O, {
+                }, r.createElement(de, i.__assign({
+                    aspect: x.BoxArt
+                }, oe(e))), r.createElement(ce, null, r.createElement(R, {
                     margin: {
                         top: .5
                     }
-                }, a.createElement(q, {
+                }, r.createElement(Q, {
                     className: "tw-box-art-card__title",
-                    type: z.H3,
-                    fontSize: A.Size5,
-                    lineHeight: U.Body,
+                    type: V.H3,
+                    fontSize: U.Size5,
+                    lineHeight: j.Body,
                     ellipsis: !0
-                }, e.title), a.createElement(q, {
-                    color: M.Alt2,
+                }, e.title), r.createElement(Q, {
+                    color: A.Alt2,
                     ellipsis: !0
-                }, e.info)))), e.placeholder ? a.createElement(O, null, a.createElement(O, {
+                }, e.info)))), e.placeholder ? r.createElement(R, null, r.createElement(R, {
                     margin: {
                         bottom: .5
                     }
-                }, a.createElement(L, {
-                    ratio: R.Aspect3x4
-                }, a.createElement(de, null))), a.createElement(q, null, a.createElement(de, {
+                }, r.createElement(P, {
+                    ratio: x.Aspect3x4
+                }, r.createElement(ue, null))), r.createElement(Q, null, r.createElement(ue, {
                     width: 150
-                })), a.createElement(q, {
-                    fontSize: A.Size7
-                }, a.createElement(de, {
+                })), r.createElement(Q, {
+                    fontSize: U.Size7
+                }, r.createElement(ue, {
                     width: 100
-                }))) : e.linkTo ? a.createElement("div", i.__assign({
+                }))) : e.linkTo ? r.createElement("div", i.__assign({
                     className: "tw-box-art-card"
-                }, o(e)), a.createElement(ie.a, {
+                }, s(e)), r.createElement(re.a, {
                     to: e.linkTo,
                     title: e.title,
                     "data-a-target": "tw-box-art-card-link"
-                }, t)) : a.createElement("div", i.__assign({
+                }, t)) : r.createElement("div", i.__assign({
                     className: "tw-box-art-card"
-                }, o(e)), t)
+                }, s(e)), t)
             });
 
-        function pe(e) {
+        function me(e) {
             var t;
             return "string" == typeof e ? t = e : e.pathname && (t = e.pathname), !(!t || !/^\w+:\/\//.test(t) && !t.startsWith("//"))
         }
-        var me;
+        var he;
         n("kSXB");
         ! function(e) {
             e.Default = "", e.Small = "tw-loading-spinner--small", e.Large = "tw-loading-spinner--large"
-        }(me || (me = {}));
-        var he, ge, fe, ve = function(e) {
+        }(he || (he = {}));
+        var ge, fe, ve, be = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -26153,35 +26231,35 @@ webpackJsonp([80], {
                     "tw-loading-spinner": !0,
                     "tw-loading-spinner--inherit-color": this.props.inheritColor
                 };
-                return this.props.size && (t[this.props.size] = !0), e = a.createElement("div", i.__assign({
-                    className: r(t)
-                }, o(this.props))), this.props.fillContent && (e = a.createElement(O, {
-                    display: d.Flex,
-                    justifyContent: m.Center,
-                    alignItems: l.Center,
+                return this.props.size && (t[this.props.size] = !0), e = r.createElement("div", i.__assign({
+                    className: o(t)
+                }, s(this.props))), this.props.fillContent && (e = r.createElement(R, {
+                    display: u.Flex,
+                    justifyContent: h.Center,
+                    alignItems: c.Center,
                     fullWidth: !0,
                     fullHeight: !0
                 }, e)), e
             }, t
-        }(a.Component);
+        }(r.Component);
         n("NKW1");
         ! function(e) {
             e.Default = "", e.Hollow = "tw-button--hollow", e.Text = "tw-button--text", e.Alert = "tw-button--alert", e.Success = "tw-button--success"
-        }(he || (he = {})),
-        function(e) {
-            e.Default = "", e.Small = "tw-button--small", e.Large = "tw-button--large"
         }(ge || (ge = {})),
         function(e) {
+            e.Default = "", e.Small = "tw-button--small", e.Large = "tw-button--large"
+        }(fe || (fe = {})),
+        function(e) {
             e.Default = "", e.Loading = "tw-button--state-loading", e.Success = "tw-button--state-success"
-        }(fe || (fe = {}));
-        var be, ye, ke, _e = ((be = {})[ge.Small] = {
+        }(ve || (ve = {}));
+        var ye, ke, _e, we = ((ye = {})[fe.Small] = {
                 width: 12,
                 height: 12
-            }, be[ge.Large] = {
+            }, ye[fe.Large] = {
                 width: 20,
                 height: 20
-            }, be),
-            we = function(e) {
+            }, ye),
+            Se = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refHandler = function(e) {
@@ -26191,9 +26269,9 @@ webpackJsonp([80], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e, t, n, s, c, u, p;
-                    (this.props.disabled || this.props.state === fe.Loading || this.props.state === fe.Success) && (p = !0);
-                    var h, f, v = {
+                    var e, t, n, a, l, d, p;
+                    (this.props.disabled || this.props.state === ve.Loading || this.props.state === ve.Success) && (p = !0);
+                    var m, g, v = {
                         "tw-button": !0,
                         "tw-button--dropmenu": this.props.dropdown,
                         "tw-button--overlay": this.props.overlay,
@@ -26202,32 +26280,32 @@ webpackJsonp([80], {
                         "tw-button--disabled": this.props.disabled,
                         "tw-button--full-width": this.props.fullWidth
                     };
-                    if (this.props.statusAlertText || this.props.statusAlertIcon || this.props.state === fe.Success ? v[he.Success] = !0 : this.props.type && (v[this.props.type] = !0), this.props.size && (v[this.props.size] = !0), this.props.state && (v[this.props.state] = !0), this.props.purchase && (t = a.createElement("span", {
+                    if (this.props.statusAlertText || this.props.statusAlertIcon || this.props.state === ve.Success ? v[ge.Success] = !0 : this.props.type && (v[this.props.type] = !0), this.props.size && (v[this.props.size] = !0), this.props.state && (v[this.props.state] = !0), this.props.purchase && (t = r.createElement("span", {
                             className: "tw-button__num-block",
                             key: "tw-button-purchase"
-                        }, this.props.purchase)), this.props.dropdown && (e = a.createElement("span", {
+                        }, this.props.purchase)), this.props.dropdown && (e = r.createElement("span", {
                             className: "tw-button__icon tw-button__icon--right",
                             key: "tw-button-dropdown"
-                        }, a.createElement(te, {
-                            asset: K.GlyphArrDown,
-                            type: Q.Inherit
-                        }))), this.props.state === fe.Loading && (c = a.createElement(O, {
+                        }, r.createElement(ne, {
+                            asset: $.GlyphArrDown,
+                            type: K.Inherit
+                        }))), this.props.state === ve.Loading && (l = r.createElement(R, {
                             className: "tw-button__loading-spinner",
-                            position: g.Absolute,
+                            position: f.Absolute,
                             key: "tw-button-loading-spinner"
-                        }, a.createElement(ve, {
+                        }, r.createElement(be, {
                             delay: 0,
                             size: this.getSpinnerSize(this.props.size),
                             inheritColor: !0
-                        }))), this.props.state === fe.Success && (u = a.createElement(O, {
+                        }))), this.props.state === ve.Success && (d = r.createElement(R, {
                             className: "tw-button__success-icon",
-                            position: g.Absolute,
-                            display: d.Flex,
-                            alignItems: l.Center,
-                            justifyContent: m.Center,
+                            position: f.Absolute,
+                            display: u.Flex,
+                            alignItems: c.Center,
+                            justifyContent: h.Center,
                             key: "tw-button-success-icon"
-                        }, a.createElement(te, {
-                            asset: K.Check,
+                        }, r.createElement(ne, {
+                            asset: $.Check,
                             width: this.successIconSize(this.props.size),
                             height: this.successIconSize(this.props.size)
                         }))), this.props.icon) {
@@ -26235,117 +26313,117 @@ webpackJsonp([80], {
                             width: 16,
                             height: 16
                         };
-                        this.props.size && (b = _e[this.props.size]), n = this.props.statusAlertIcon ? a.createElement(O, {
+                        this.props.size && (b = we[this.props.size]), n = this.props.statusAlertIcon ? r.createElement(R, {
                             className: "tw-button__icon tw-button__icon--status " + (this.props.children ? "tw-button__icon--left" : ""),
-                            display: d.Flex,
+                            display: u.Flex,
                             key: "tw-button-icon"
-                        }, a.createElement(O, {
+                        }, r.createElement(R, {
                             className: "tw-button__primary-icon",
-                            display: d.Flex,
-                            alignItems: l.Center,
-                            justifyContent: m.Center
-                        }, a.createElement(te, {
+                            display: u.Flex,
+                            alignItems: c.Center,
+                            justifyContent: h.Center
+                        }, r.createElement(ne, {
                             width: b.width,
                             height: b.height,
-                            type: Q.Inherit,
+                            type: K.Inherit,
                             asset: this.props.icon
-                        })), a.createElement(O, {
+                        })), r.createElement(R, {
                             className: "tw-button__alert-icon",
-                            display: d.Flex,
-                            alignItems: l.Center,
-                            justifyContent: m.Center
-                        }, a.createElement(te, {
+                            display: u.Flex,
+                            alignItems: c.Center,
+                            justifyContent: h.Center
+                        }, r.createElement(ne, {
                             width: b.width,
                             height: b.height,
-                            type: Q.Inherit,
+                            type: K.Inherit,
                             asset: this.props.statusAlertIcon
-                        }))) : a.createElement("span", {
+                        }))) : r.createElement("span", {
                             className: "tw-button__icon " + (this.props.children ? "tw-button__icon--left" : ""),
                             key: "tw-button-icon"
-                        }, a.createElement(te, {
+                        }, r.createElement(ne, {
                             width: b.width,
                             height: b.height,
-                            type: Q.Inherit,
+                            type: K.Inherit,
                             asset: this.props.icon
                         }))
                     }
-                    this.props.children && (s = this.props.statusAlertText ? a.createElement("span", {
+                    this.props.children && (a = this.props.statusAlertText ? r.createElement("span", {
                         className: "tw-button__text",
                         key: "tw-button-text"
-                    }, a.createElement("span", {
+                    }, r.createElement("span", {
                         className: "tw-button__primary-text",
                         "data-a-target": "tw-button-text"
-                    }, this.props.children), a.createElement("span", {
+                    }, this.props.children), r.createElement("span", {
                         className: "tw-button__alert-text"
-                    }, this.props.statusAlertText)) : a.createElement("span", {
+                    }, this.props.statusAlertText)) : r.createElement("span", {
                         className: "tw-button__text",
                         "data-a-target": "tw-button-text",
                         key: "tw-button-text"
-                    }, this.props.children)), this.props.tabIndex && (h = this.props.tabIndex), this.props.targetBlank && (f = "_blank");
-                    var y = [n, s, c, u, e, t],
+                    }, this.props.children)), this.props.tabIndex && (m = this.props.tabIndex), this.props.targetBlank && (g = "_blank");
+                    var y = [n, a, l, d, e, t],
                         k = i.__assign({
-                            tabIndex: h,
+                            tabIndex: m,
                             onClick: this.onClick,
                             "aria-label": this.props.ariaLabel,
-                            className: r(v)
-                        }, o(this.props));
+                            className: o(v)
+                        }, s(this.props));
                     if (this.props.linkTo && !p) {
-                        if (pe(this.props.linkTo)) {
-                            if ("string" == typeof this.props.linkTo) return a.createElement("a", i.__assign({
+                        if (me(this.props.linkTo)) {
+                            if ("string" == typeof this.props.linkTo) return r.createElement("a", i.__assign({
                                 href: this.props.linkTo,
-                                target: f,
+                                target: g,
                                 ref: this.refHandler,
                                 download: this.props.download
                             }, k), y);
                             throw new Error("External links with Location descriptors are not implemented in core-ui.button! Pass a string as linkTo instead.")
                         }
-                        return a.createElement(ie.a, i.__assign({
+                        return r.createElement(re.a, i.__assign({
                             to: this.props.linkTo,
-                            target: f,
+                            target: g,
                             download: this.props.download
                         }, k), y)
                     }
-                    return a.createElement("button", i.__assign({
+                    return r.createElement("button", i.__assign({
                         disabled: p,
                         ref: this.refHandler
                     }, k), y)
                 }, t.prototype.getSpinnerSize = function(e) {
                     switch (e) {
-                        case ge.Small:
-                            return me.Small;
-                        case ge.Large:
-                            return me.Large;
-                        case ge.Default:
+                        case fe.Small:
+                            return he.Small;
+                        case fe.Large:
+                            return he.Large;
+                        case fe.Default:
                         default:
-                            return me.Default
+                            return he.Default
                     }
                 }, t.prototype.successIconSize = function(e) {
                     switch (e) {
-                        case ge.Small:
+                        case fe.Small:
                             return 12;
-                        case ge.Large:
+                        case fe.Large:
                             return 20;
-                        case ge.Default:
+                        case fe.Default:
                         default:
                             return 16
                     }
                 }, t
-            }(a.Component);
+            }(r.Component);
         n("9Q3d");
         ! function(e) {
             e.Default = "", e.Hollow = "tw-button-icon--hollow", e.Primary = "tw-button-icon--primary", e.Alert = "tw-button-icon--alert", e.Secondary = "tw-button-icon--secondary", e.Success = "tw-button-icon--success"
-        }(ye || (ye = {})),
+        }(ke || (ke = {})),
         function(e) {
             e.Default = "", e.Small = "tw-button-icon--small", e.Large = "tw-button-icon--large"
-        }(ke || (ke = {}));
-        var Se, Ee, Ce, Te = ((Se = {})[ke.Small] = {
+        }(_e || (_e = {}));
+        var Ee, Ce, Te, Ne = ((Ee = {})[_e.Small] = {
                 width: 12,
                 height: 12
-            }, Se[ke.Large] = {
+            }, Ee[_e.Large] = {
                 width: 20,
                 height: 20
-            }, Se),
-            Ne = function(e) {
+            }, Ee),
+            Oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refHandler = function(e) {
@@ -26355,162 +26433,162 @@ webpackJsonp([80], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e, t, n, s, c = {
+                    var e, t, n, a, l = {
                         "tw-button-icon": !0,
                         "tw-button-icon--dropmenu": this.props.dropdown,
                         "tw-button-icon--disabled": this.props.disabled,
                         "tw-button-icon--overlay": this.props.overlay,
                         "tw-button-icon--status": !!this.props.statusAlertIcon
                     };
-                    if (this.props.statusAlertIcon ? c[ye.Success] = !0 : this.props.type && (c[this.props.type] = !0), this.props.size && (c[this.props.size] = !0), this.props.dropdown && (e = a.createElement("span", {
+                    if (this.props.statusAlertIcon ? l[ke.Success] = !0 : this.props.type && (l[this.props.type] = !0), this.props.size && (l[this.props.size] = !0), this.props.dropdown && (e = r.createElement("span", {
                             className: "tw-button-icon__icon tw-button-icon__icon--right",
                             key: "tw-button-dropdown"
-                        }, a.createElement(te, {
-                            asset: K.GlyphArrDown,
-                            type: Q.Inherit
+                        }, r.createElement(ne, {
+                            asset: $.GlyphArrDown,
+                            type: K.Inherit
                         }))), this.props.icon) {
-                        var u = {
+                        var d = {
                             width: 16,
                             height: 16
                         };
-                        this.props.size && (u = Te[this.props.size]), t = a.createElement("span", {
+                        this.props.size && (d = Ne[this.props.size]), t = r.createElement("span", {
                             className: "tw-button-icon__icon"
-                        }, a.createElement(te, {
-                            width: u.width,
-                            height: u.height,
-                            type: Q.Inherit,
+                        }, r.createElement(ne, {
+                            width: d.width,
+                            height: d.height,
+                            type: K.Inherit,
                             asset: this.props.icon
-                        })), t = this.props.statusAlertIcon ? a.createElement(O, {
+                        })), t = this.props.statusAlertIcon ? r.createElement(R, {
                             className: "tw-button-icon__icon tw-button-icon__icon--status",
-                            display: d.Flex,
+                            display: u.Flex,
                             key: "tw-button-icon"
-                        }, a.createElement(O, {
+                        }, r.createElement(R, {
                             className: "tw-button-icon__primary-icon",
-                            display: d.Flex,
-                            alignItems: l.Center,
-                            justifyContent: m.Center
-                        }, a.createElement(te, {
-                            width: u.width,
-                            height: u.height,
-                            type: Q.Inherit,
+                            display: u.Flex,
+                            alignItems: c.Center,
+                            justifyContent: h.Center
+                        }, r.createElement(ne, {
+                            width: d.width,
+                            height: d.height,
+                            type: K.Inherit,
                             asset: this.props.icon
-                        })), a.createElement(O, {
+                        })), r.createElement(R, {
                             className: "tw-button-icon__alert-icon",
-                            display: d.Flex,
-                            alignItems: l.Center,
-                            justifyContent: m.Center
-                        }, a.createElement(te, {
-                            width: u.width,
-                            height: u.height,
-                            type: Q.Inherit,
+                            display: u.Flex,
+                            alignItems: c.Center,
+                            justifyContent: h.Center
+                        }, r.createElement(ne, {
+                            width: d.width,
+                            height: d.height,
+                            type: K.Inherit,
                             asset: this.props.statusAlertIcon
-                        }))) : a.createElement("span", {
+                        }))) : r.createElement("span", {
                             className: "tw-button-icon__icon",
                             key: "tw-button-icon"
-                        }, a.createElement(te, {
-                            width: u.width,
-                            height: u.height,
-                            type: Q.Inherit,
+                        }, r.createElement(ne, {
+                            width: d.width,
+                            height: d.height,
+                            type: K.Inherit,
                             asset: this.props.icon
                         }))
                     }
-                    this.props.tabIndex && (n = this.props.tabIndex), this.props.targetBlank && (s = "_blank");
+                    this.props.tabIndex && (n = this.props.tabIndex), this.props.targetBlank && (a = "_blank");
                     var p = i.__assign({
                             tabIndex: n,
                             onClick: this.onClick,
                             "aria-label": this.props.ariaLabel,
-                            className: r(c)
-                        }, o(this.props)),
-                        h = [t, e];
+                            className: o(l)
+                        }, s(this.props)),
+                        m = [t, e];
                     if (this.props.linkTo && !this.props.disabled) {
-                        if (pe(this.props.linkTo)) {
-                            if ("string" == typeof this.props.linkTo) return a.createElement("a", i.__assign({
+                        if (me(this.props.linkTo)) {
+                            if ("string" == typeof this.props.linkTo) return r.createElement("a", i.__assign({
                                 href: this.props.linkTo,
-                                target: s,
+                                target: a,
                                 download: this.props.download,
                                 ref: this.refHandler
-                            }, p), h);
+                            }, p), m);
                             throw new Error("External links with Location descriptors are not implemented in core-ui.button! Pass a string as linkTo instead.")
                         }
-                        return a.createElement(ie.a, i.__assign({
+                        return r.createElement(re.a, i.__assign({
                             to: this.props.linkTo,
-                            target: s,
+                            target: a,
                             download: this.props.download
-                        }, p), h)
+                        }, p), m)
                     }
-                    return a.createElement("button", i.__assign({
+                    return r.createElement("button", i.__assign({
                         disabled: this.props.disabled,
                         tabIndex: n,
                         ref: this.refHandler
-                    }, p), h)
+                    }, p), m)
                 }, t
-            }(a.Component);
+            }(r.Component);
         n("/9PY");
         ! function(e) {
             e.ExtraSmall = "tw-balloon--xs", e.Small = "tw-balloon--sm", e.Medium = "tw-balloon--md", e.Large = "tw-balloon--lg", e.ExtraLarge = "tw-balloon--xl"
-        }(Ee || (Ee = {})),
+        }(Ce || (Ce = {})),
         function(e) {
             e.Top = "tw-balloon--up", e.Bottom = "tw-balloon--down", e.Left = "tw-balloon--left", e.Right = "tw-balloon--right", e.TopLeft = "tw-balloon--up tw-balloon--left", e.TopRight = "tw-balloon--up tw-balloon--right", e.BottomRight = "tw-balloon--down tw-balloon--right", e.BottomLeft = "tw-balloon--down", e.TopCenter = "tw-balloon--up tw-balloon--center", e.BottomCenter = "tw-balloon--down tw-balloon--center", e.LeftCenter = "tw-balloon--left tw-balloon--center", e.RightCenter = "tw-balloon--right tw-balloon--center"
-        }(Ce || (Ce = {}));
-        var Oe = function(e) {
-            var t, n, s, l, c = {
+        }(Te || (Te = {}));
+        var Re = function(e) {
+            var t, n, a, l, c = {
                 "tw-balloon": !0
             };
-            e.size && (c[e.size] = !0), e.direction ? c[e.direction] = !0 : c[Ce.Bottom] = !0, e.offsetX && (e.direction === Ce.Left || e.direction === Ce.TopLeft || e.direction === Ce.BottomLeft || e.direction === Ce.LeftCenter || e.direction === Ce.BottomRight || e.direction === Ce.TopRight ? n = e.offsetX : t = e.offsetX), e.offsetY && (e.direction === Ce.Top || e.direction === Ce.TopLeft || e.direction === Ce.TopRight || e.direction === Ce.TopCenter ? l = e.offsetY : s = e.offsetY);
-            var u, p, m, f = {
+            e.size && (c[e.size] = !0), e.direction ? c[e.direction] = !0 : c[Te.Bottom] = !0, e.offsetX && (e.direction === Te.Left || e.direction === Te.TopLeft || e.direction === Te.BottomLeft || e.direction === Te.LeftCenter || e.direction === Te.BottomRight || e.direction === Te.TopRight ? n = e.offsetX : t = e.offsetX), e.offsetY && (e.direction === Te.Top || e.direction === Te.TopLeft || e.direction === Te.TopRight || e.direction === Te.TopCenter ? l = e.offsetY : a = e.offsetY);
+            var d, p, m, h = {
                 marginLeft: t,
                 marginRight: n,
-                marginTop: s,
+                marginTop: a,
                 marginBottom: l
             };
-            e.tailOffset && (e.direction === Ce.Left || e.direction === Ce.Right || e.direction === Ce.LeftCenter || e.direction === Ce.RightCenter ? u = e.tailOffset + "px" : e.direction === Ce.TopRight || e.direction === Ce.BottomRight ? (p = e.tailOffset + "px", m = "auto") : (p = "auto", m = e.tailOffset + "px"));
+            e.tailOffset && (e.direction === Te.Left || e.direction === Te.Right || e.direction === Te.LeftCenter || e.direction === Te.RightCenter ? d = e.tailOffset + "px" : e.direction === Te.TopRight || e.direction === Te.BottomRight ? (p = e.tailOffset + "px", m = "auto") : (p = "auto", m = e.tailOffset + "px"));
             var v, b = {
-                top: u,
+                top: d,
                 left: m,
                 right: p
             };
-            return e.noTail || (v = a.createElement(N, {
+            return e.noTail || (v = r.createElement(O, {
                 className: "tw-balloon__tail",
-                position: g.Absolute,
-                overflow: h.Hidden
-            }, a.createElement("div", {
+                position: f.Absolute,
+                overflow: g.Hidden
+            }, r.createElement("div", {
                 style: b
-            }, a.createElement(Y, {
+            }, r.createElement(Z, {
                 className: "tw-balloon__tail-symbol",
-                position: g.Absolute,
-                background: e.tailBackground || H.Base,
-                borderRadius: G.Small,
+                position: f.Absolute,
+                background: e.tailBackground || G.Base,
+                borderRadius: q.Small,
                 border: !0
-            })))), a.createElement(N, {
-                display: e.show ? d.Block : d.Hide,
-                position: g.Absolute
-            }, a.createElement("div", i.__assign({
-                style: f,
-                className: r(c)
-            }, o(e)), v, a.createElement(Y, {
+            })))), r.createElement(O, {
+                display: e.show ? u.Block : u.Hide,
+                position: f.Absolute
+            }, r.createElement("div", i.__assign({
+                style: h,
+                className: o(c)
+            }, s(e)), v, r.createElement(Z, {
                 border: !0,
-                borderRadius: G.Small,
-                background: H.Base,
+                borderRadius: q.Small,
+                background: G.Base,
                 elevation: e.elevation ? e.elevation : 1
             }, e.children)))
         };
 
-        function Re() {
+        function xe() {
             return "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx".replace(/[xy]/g, function(e) {
                 var t = 16 * Math.random() | 0;
                 return ("x" === e ? t : 3 & t | 8).toString(16)
             })
         }
         n("I6b2");
-        var xe, Ie = function(e) {
-                var t, n = Re(),
-                    s = {
+        var Ie, De = function(e) {
+                var t, n = xe(),
+                    a = {
                         "tw-checkbox": !0,
                         "tw-checkbox--error": e.error
                     };
-                return e.tabIndex && (t = e.tabIndex), a.createElement("div", i.__assign({
-                    className: r(s)
-                }, o(e)), a.createElement("input", {
+                return e.tabIndex && (t = e.tabIndex), r.createElement("div", i.__assign({
+                    className: o(a)
+                }, s(e)), r.createElement("input", {
                     className: "tw-checkbox__input",
                     type: "checkbox",
                     "data-a-target": "tw-checkbox",
@@ -26526,42 +26604,42 @@ webpackJsonp([80], {
                     required: e.required,
                     tabIndex: t,
                     value: e.value
-                }), a.createElement("label", {
+                }), r.createElement("label", {
                     className: "tw-checkbox__label",
                     htmlFor: e.id ? e.id : n
                 }, e.label))
             },
-            De = (n("bB4F"), function(e) {
+            Le = (n("bB4F"), function(e) {
                 var t = {
                     "tw-drop-zone": !0,
                     "tw-drop-zone--over": e.dragOver,
                     "tw-drop-zone--error": e.error,
                     "tw-drop-zone--disabled": e.disabled
                 };
-                return a.createElement(O, i.__assign({
-                    className: r(t)
-                }, o(e), {
-                    alignItems: l.Center,
-                    display: d.Flex,
+                return r.createElement(R, i.__assign({
+                    className: o(t)
+                }, s(e), {
+                    alignItems: c.Center,
+                    display: u.Flex,
                     fullHeight: !0,
                     fullWidth: !0,
-                    justifyContent: m.Center,
-                    position: g.Absolute,
+                    justifyContent: h.Center,
+                    position: f.Absolute,
                     attachTop: !0,
                     attachLeft: !0
-                }), a.createElement("div", {
+                }), r.createElement("div", {
                     className: "tw-drop-zone__content"
                 }, e.children))
             });
         n("iYrx");
         ! function(e) {
             e.Default = "", e.Small = "tw-grid--gutter-sm", e.Medium = "tw-grid--gutter-md", e.Large = "tw-grid--gutter-lg", e.None = "tw-grid--gutter-none"
-        }(xe || (xe = {}));
-        var Le, Pe = function(e) {
+        }(Ie || (Ie = {}));
+        var Pe, Fe = function(e) {
                 var t = {
                     "tw-grid": !0
                 };
-                return e.gutterSize && (t[e.gutterSize] = !0), a.createElement(O, i.__assign({
+                return e.gutterSize && (t[e.gutterSize] = !0), r.createElement(R, i.__assign({
                     alignItems: e.alignItems,
                     justifyContent: e.justifyContent,
                     breakpointExtraSmall: e.breakpointExtraSmall,
@@ -26570,19 +26648,19 @@ webpackJsonp([80], {
                     breakpointLarge: e.breakpointLarge,
                     breakpointExtraLarge: e.breakpointExtraLarge,
                     breakpointExtraExtraLarge: e.breakpointExtraExtraLarge,
-                    className: r(t)
-                }, o(e)), e.children)
+                    className: o(t)
+                }, s(e)), e.children)
             },
-            Fe = (n("M1vR"), function(e) {
+            Me = (n("M1vR"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.getColumnSizeClasses(this.props.cols),
                         t = this.props.offset ? this.getColumnOffsetClasses(this.props.offset) : "";
-                    return a.createElement("div", i.__assign({
-                        className: r([e, t])
-                    }, o(this.props)), this.props.children)
+                    return r.createElement("div", i.__assign({
+                        className: o([e, t])
+                    }, s(this.props)), this.props.children)
                 }, t.prototype.getColumnSizeClasses = function(e) {
                     if ("number" == typeof e) return "tw-col-" + e;
                     var t = ["tw-col-" + e.default];
@@ -26592,44 +26670,44 @@ webpackJsonp([80], {
                     var t = ["tw-col-offset-" + e.default];
                     return "number" == typeof e.xs && t.push("tw-xs-col-offset-" + e.xs), "number" == typeof e.sm && t.push("tw-sm-col-offset-" + e.sm), "number" == typeof e.md && t.push("tw-md-col-offset-" + e.md), "number" == typeof e.lg && t.push("tw-lg-col-offset-" + e.lg), "number" == typeof e.xl && t.push("tw-xl-col-offset-" + e.xl), "number" == typeof e.xxl && t.push("tw-xxl-col-offset-" + e.xxl), t
                 }, t
-            }(a.Component));
+            }(r.Component));
         n("WjKA");
         ! function(e) {
             e[e.Text = 0] = "Text", e[e.Number = 1] = "Number", e[e.Email = 2] = "Email", e[e.Password = 3] = "Password", e[e.Search = 4] = "Search"
-        }(Le || (Le = {}));
-        var Me, Ae = function(e) {
+        }(Pe || (Pe = {}));
+        var Ae, Ue = function(e) {
                 var t, n;
                 e.tabIndex && (n = e.tabIndex);
-                var s = {
+                var a = {
                     "tw-input": !0,
                     "tw-input--error": e.error
                 };
-                return e.icon && (t = a.createElement(O, {
+                return e.icon && (t = r.createElement(R, {
                     className: "tw-input__icon-group",
-                    position: g.Absolute,
+                    position: f.Absolute,
                     attachLeft: e.icon && !e.iconRight,
                     attachRight: e.iconRight,
                     attachTop: !0,
-                    zIndex: k.Default
-                }, a.createElement(Y, {
+                    zIndex: _.Default
+                }, r.createElement(Z, {
                     className: "tw-input__icon",
-                    color: M.Alt2,
-                    display: d.Flex,
-                    alignItems: l.Center,
-                    justifyContent: m.Center
-                }, a.createElement(te, {
+                    color: A.Alt2,
+                    display: u.Flex,
+                    alignItems: c.Center,
+                    justifyContent: h.Center
+                }, r.createElement(ne, {
                     asset: e.icon,
-                    type: Q.Inherit
-                })))), a.createElement(O, i.__assign({
-                    position: g.Relative
-                }, o(e)), t, a.createElement(N, {
+                    type: K.Inherit
+                })))), r.createElement(R, i.__assign({
+                    position: f.Relative
+                }, s(e)), t, r.createElement(O, {
                     padding: {
                         left: e.icon && !e.iconRight ? 3 : void 0,
                         right: e.iconRight ? 3 : void 0
                     }
-                }, a.createElement("input", {
-                    type: Le[e.type].toLowerCase(),
-                    className: r(s),
+                }, r.createElement("input", {
+                    type: Pe[e.type].toLowerCase(),
+                    className: o(a),
                     placeholder: e.placeholder,
                     "aria-label": e.ariaLabel,
                     autoCapitalize: e.autoCapitalize ? "on" : "off",
@@ -26658,7 +26736,7 @@ webpackJsonp([80], {
                     value: e.value
                 })))
             },
-            Ue = (n("9NS1"), function(e) {
+            je = (n("9NS1"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refHandler = function(e) {
@@ -26677,38 +26755,38 @@ webpackJsonp([80], {
                         "tw-interactable--alert": this.props.alert
                     };
                     this.props.tabIndex && (e = this.props.tabIndex), this.props.targetBlank && (t = "_blank");
-                    var s, l = i.__assign({
+                    var a, l = i.__assign({
                         tabIndex: e,
                         onClick: this.onClick,
                         "aria-label": this.props.ariaLabel,
-                        className: r(n)
-                    }, o(this.props));
+                        className: o(n)
+                    }, s(this.props));
                     if (this.props.linkTo)
-                        if (pe(this.props.linkTo)) {
+                        if (me(this.props.linkTo)) {
                             if ("string" != typeof this.props.linkTo) throw new Error("External links with Location descriptors are not implemented in core-ui.interactable! Pass a string as linkTo instead.");
-                            s = a.createElement("a", i.__assign({
+                            a = r.createElement("a", i.__assign({
                                 href: this.props.linkTo,
                                 target: t,
                                 ref: this.refHandler
                             }, l), this.props.children)
-                        } else s = a.createElement(ie.a, i.__assign({
+                        } else a = r.createElement(re.a, i.__assign({
                             to: this.props.linkTo,
                             target: t
                         }, l), this.props.children);
-                    else s = a.createElement("button", i.__assign({
+                    else a = r.createElement("button", i.__assign({
                         disabled: this.props.disabled,
                         ref: this.refHandler
                     }, l), this.props.children);
-                    return a.createElement($, {
+                    return r.createElement(Y, {
                         borderRadius: this.props.borderRadius
-                    }, s)
+                    }, a)
                 }, t
-            }(a.Component));
+            }(r.Component));
         n("oPyM");
         ! function(e) {
             e.Default = "", e.Inherit = "tw-link--inherit", e.Overlay = "tw-link--overlay"
-        }(Me || (Me = {}));
-        var je, Be = function(e) {
+        }(Ae || (Ae = {}));
+        var Be, ze = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.refHandler = function(e) {
@@ -26725,36 +26803,36 @@ webpackJsonp([80], {
                     "tw-link--button": !this.props.to
                 };
                 if (this.props.type && (e[this.props.type] = !0), this.props.to) {
-                    if (pe(this.props.to)) {
-                        if ("string" == typeof this.props.to) return a.createElement("a", i.__assign({
+                    if (me(this.props.to)) {
+                        if ("string" == typeof this.props.to) return r.createElement("a", i.__assign({
                             href: this.props.to,
-                            className: r(this.props.className, e),
+                            className: o(this.props.className, e),
                             onClick: this.props.onClick,
                             target: this.props.targetBlank ? "_blank" : void 0
-                        }, o(this.props)), this.props.children);
+                        }, s(this.props)), this.props.children);
                         throw new Error('External links with Location descriptors are not implemented in core-ui.link! Pass a string as "to" instead.')
                     }
-                    return a.createElement(ie.a, i.__assign({
-                        className: r(this.props.className, e),
+                    return r.createElement(re.a, i.__assign({
+                        className: o(this.props.className, e),
                         onClick: this.props.onClick,
                         to: this.props.to,
                         target: this.props.targetBlank ? "_blank" : void 0
-                    }, o(this.props)), this.props.children)
+                    }, s(this.props)), this.props.children)
                 }
-                return a.createElement("button", i.__assign({
-                    className: r(this.props.className, e)
-                }, o(this.props), {
+                return r.createElement("button", i.__assign({
+                    className: o(this.props.className, e)
+                }, s(this.props), {
                     onClick: this.onClick,
                     ref: this.refHandler
                 }), this.props.children)
             }, t
-        }(a.Component);
+        }(r.Component);
         n("cFXH");
         ! function(e) {
             e[e.Vertical = 1] = "Vertical", e[e.Horizontal = 2] = "Horizontal"
-        }(je || (je = {}));
-        var ze, Ve, We = function(e) {
-            var t, n, s = {
+        }(Be || (Be = {}));
+        var Ve, We, He = function(e) {
+            var t, n, a = {
                     "tw-form-group": !0,
                     "tw-form-group--error": e.error
                 },
@@ -26762,62 +26840,62 @@ webpackJsonp([80], {
                     "tw-form-group__label": !0,
                     "tw-form-group__label--selectable": !!e.id
                 };
-            return e.labelOptional && (t = a.createElement("span", {
+            return e.labelOptional && (t = r.createElement("span", {
                 className: "tw-form-group__optional"
-            }, "(", e.labelOptional, ")")), e.hint && !e.error ? n = a.createElement("p", {
+            }, "(", e.labelOptional, ")")), e.hint && !e.error ? n = r.createElement("p", {
                 className: "tw-form-group__hint"
-            }, e.hint) : e.errorMessage && e.error && (n = a.createElement("p", {
+            }, e.hint) : e.errorMessage && e.error && (n = r.createElement("p", {
                 className: "tw-form-group__hint"
-            }, e.errorMessage)), e.orientation === je.Horizontal ? a.createElement(O, i.__assign({
-                className: r(s),
-                display: d.Flex,
-                flexWrap: p.NoWrap
-            }, o(e)), a.createElement(O, {
+            }, e.errorMessage)), e.orientation === Be.Horizontal ? r.createElement(R, i.__assign({
+                className: o(a),
+                display: u.Flex,
+                flexWrap: m.NoWrap
+            }, s(e)), r.createElement(R, {
                 className: "tw-form-group__label-container",
                 flexShrink: 0,
                 padding: {
                     right: 2
                 }
-            }, a.createElement("label", {
-                className: r(l),
+            }, r.createElement("label", {
+                className: o(l),
                 htmlFor: e.id
-            }, e.label, t)), a.createElement(O, {
+            }, e.label, t)), r.createElement(R, {
                 flexGrow: 1
-            }, e.children, n)) : a.createElement("div", i.__assign({
-                className: r(s)
-            }, o(e)), a.createElement("label", {
-                className: r(l),
+            }, e.children, n)) : r.createElement("div", i.__assign({
+                className: o(a)
+            }, s(e)), r.createElement("label", {
+                className: o(l),
                 htmlFor: e.id
             }, e.label, t), e.children, n)
         };
         n("4rQm");
         ! function(e) {
             e.Small = "tw-channel-status-indicator--small", e.Medium = "tw-channel-status-indicator--medium", e.Large = "tw-channel-status-indicator--large"
-        }(ze || (ze = {})),
+        }(Ve || (Ve = {})),
         function(e) {
             e.Offline = "tw-channel-status-indicator--offline", e.Hosting = "tw-channel-status-indicator--hosting", e.Live = "tw-channel-status-indicator--live"
-        }(Ve || (Ve = {}));
-        var He, Ge, qe = function(e) {
+        }(We || (We = {}));
+        var Ge, qe, Qe = function(e) {
             var t = {
                 "tw-channel-status-indicator": !0,
                 "tw-channel-status-indicator--pulse": e.pulse
             };
-            return e.size ? t[e.size] = !0 : t[ze.Small] = !0, e.status ? t[e.status] = !0 : t[Ve.Offline] = !0, a.createElement(O, i.__assign({
-                display: d.InlineBlock,
-                position: g.Relative,
-                className: r(t)
-            }, o(e)))
+            return e.size ? t[e.size] = !0 : t[Ve.Small] = !0, e.status ? t[e.status] = !0 : t[We.Offline] = !0, r.createElement(R, i.__assign({
+                display: u.InlineBlock,
+                position: f.Relative,
+                className: o(t)
+            }, s(e)))
         };
         n("u1ju");
         ! function(e) {
             e.Top = "tw-tooltip--up", e.Bottom = "tw-tooltip--down", e.Left = "tw-tooltip--left", e.Right = "tw-tooltip--right"
-        }(He || (He = {})),
+        }(Ge || (Ge = {})),
         function(e) {
             e.Left = "tw-tooltip--align-left", e.Center = "tw-tooltip--align-center", e.Right = "tw-tooltip--align-right"
-        }(Ge || (Ge = {}));
-        var Qe, Ke = function(e) {
-                var t, n, s, l, c = Re(),
-                    u = {
+        }(qe || (qe = {}));
+        var Ke, $e = function(e) {
+                var t, n, a, l, c = xe(),
+                    d = {
                         "tw-tooltip": !0,
                         "tw-tooltip--wrap": !!e.width
                     },
@@ -26825,115 +26903,115 @@ webpackJsonp([80], {
                         "tw-tooltip-wrapper": !0,
                         "tw-tooltip-wrapper--show": e.show
                     };
-                e.direction ? u[e.direction] = !0 : u[He.Top] = !0, e.align && e.align !== Ge.Center && e.direction !== He.Left && e.direction !== He.Right ? u[e.align] = !0 : u[Ge.Center] = !0, e.offsetX && (e.align === Ge.Right ? n = e.offsetX : t = e.offsetX), e.offsetY && (e.direction && e.direction !== He.Top ? s = e.offsetY : l = e.offsetY);
+                e.direction ? d[e.direction] = !0 : d[Ge.Top] = !0, e.align && e.align !== qe.Center && e.direction !== Ge.Left && e.direction !== Ge.Right ? d[e.align] = !0 : d[qe.Center] = !0, e.offsetX && (e.align === qe.Right ? n = e.offsetX : t = e.offsetX), e.offsetY && (e.direction && e.direction !== Ge.Top ? a = e.offsetY : l = e.offsetY);
                 var m = {
                     marginLeft: t,
                     marginRight: n,
-                    marginTop: s,
+                    marginTop: a,
                     marginBottom: l,
                     width: e.width
                 };
-                return a.createElement(N, i.__assign({
-                    display: e.display ? e.display : d.InlineFlex
-                }, o(e)), a.createElement("div", {
-                    className: r(p),
+                return r.createElement(O, i.__assign({
+                    display: e.display ? e.display : u.InlineFlex
+                }, s(e)), r.createElement("div", {
+                    className: o(p),
                     "aria-describedby": e.id || c,
                     title: e.title
-                }, e.children, a.createElement("div", {
-                    className: r(u),
+                }, e.children, r.createElement("div", {
+                    className: o(d),
                     style: m,
                     "data-a-target": "tw-tooltip-label",
                     role: "tooltip",
                     id: e.id || c
                 }, e.label)))
             },
-            $e = (n("tnvA"), function(e) {
+            Ye = (n("tnvA"), function(e) {
                 var t;
-                e.icon && (t = a.createElement(te, {
-                    type: Q.Inherit,
+                e.icon && (t = r.createElement(ne, {
+                    type: K.Inherit,
                     asset: e.icon
                 }));
-                var n = a.createElement("div", i.__assign({
-                    className: r({
+                var n = r.createElement("div", i.__assign({
+                    className: o({
                         "tw-stat": !0
                     })
-                }, o(e)), a.createElement("span", {
+                }, s(e)), r.createElement("span", {
                     className: "tw-stat__icon"
-                }, t), a.createElement("span", {
+                }, t), r.createElement("span", {
                     className: "tw-stat__value",
                     "data-a-target": "tw-stat-value"
                 }, e.value));
-                return e.label ? a.createElement(Ke, {
-                    direction: e.tooltipDirection ? e.tooltipDirection : He.Bottom,
-                    align: e.tooltipAlign ? e.tooltipAlign : Ge.Center,
+                return e.label ? r.createElement($e, {
+                    direction: e.tooltipDirection ? e.tooltipDirection : Ge.Bottom,
+                    align: e.tooltipAlign ? e.tooltipAlign : qe.Center,
                     label: e.label
                 }, n) : n
             }),
-            Ye = (n("xdZ7"), function(e) {
+            Ze = (n("xdZ7"), function(e) {
                 var t, n;
-                return e.tabIndex && (t = e.tabIndex), n = e.icon ? a.createElement("span", {
+                return e.tabIndex && (t = e.tabIndex), n = e.icon ? r.createElement("span", {
                     className: "tw-tag__icon"
-                }, a.createElement(te, {
+                }, r.createElement(ne, {
                     width: 12,
                     height: 12,
-                    type: Q.Inherit,
+                    type: K.Inherit,
                     asset: e.icon
-                })) : a.createElement("span", {
+                })) : r.createElement("span", {
                     className: "tw-tag__label"
-                }, e.label), a.createElement("button", i.__assign({
+                }, e.label), r.createElement("button", i.__assign({
                     onClick: e.onClose,
                     disabled: e.disabled,
                     tabIndex: t,
-                    className: r({
+                    className: o({
                         "tw-tag": !0
                     })
-                }, o(e)), n, a.createElement("span", {
+                }, s(e)), n, r.createElement("span", {
                     className: "tw-tag__close"
-                }, a.createElement(te, {
+                }, r.createElement(ne, {
                     width: 8,
                     height: 8,
-                    type: Q.Inherit,
-                    asset: K.Close
+                    type: K.Inherit,
+                    asset: $.Close
                 })))
             });
         n("pk+c");
         ! function(e) {
             e.Notification = "tw-pill--notification", e.Brand = "tw-pill--brand", e.Live = "tw-pill--live", e.Alert = "tw-pill--alert", e.Success = "tw-pill--success", e.Prime = "tw-pill--prime", e.Overlay = "tw-pill--overlay", e.Warn = "tw-pill--warn"
-        }(Qe || (Qe = {}));
-        var Ze, Xe, Je, et = function(e) {
+        }(Ke || (Ke = {}));
+        var Xe, Je, et, tt = function(e) {
             var t = {
                 "tw-pill": !0
             };
-            return e.type && (t[e.type] = !0), a.createElement("span", i.__assign({
-                className: r(t)
-            }, o(e)), e.label)
+            return e.type && (t[e.type] = !0), r.createElement("span", i.__assign({
+                className: o(t)
+            }, s(e)), e.label)
         };
         n("3+CI");
         ! function(e) {
             e.Default = "", e.Small = "tw-progress-bar--sm", e.ExtraSmall = "tw-progress-bar--xs"
-        }(Ze || (Ze = {})),
-        function(e) {
-            e.Default = "", e.Caution = "tw-progress-bar--caution", e.Error = "tw-progress-bar--error", e.Success = "tw-progress-bar--success"
         }(Xe || (Xe = {})),
         function(e) {
+            e.Default = "", e.Caution = "tw-progress-bar--caution", e.Error = "tw-progress-bar--error", e.Success = "tw-progress-bar--success"
+        }(Je || (Je = {})),
+        function(e) {
             e.Up = "up", e.Down = "down"
-        }(Je || (Je = {}));
-        var tt, nt = function(e) {
+        }(et || (et = {}));
+        var nt, it = function(e) {
                 var t = {
                     "tw-progress-bar": !0,
-                    "tw-progress-bar--countdown": e.animationDirection === Je.Down,
-                    "tw-progress-bar--countup": e.animationDirection === Je.Up,
+                    "tw-progress-bar--countdown": e.animationDirection === et.Down,
+                    "tw-progress-bar--countup": e.animationDirection === et.Up,
                     "tw-progress-bar--inherit": e.inherit,
                     "tw-progress-bar--mask": e.mask
                 };
-                return e.size && (t[e.size] = !0), e.status && (t[e.status] = !0), a.createElement("div", i.__assign({
-                    className: r(t)
-                }, o(e), {
+                return e.size && (t[e.size] = !0), e.status && (t[e.status] = !0), r.createElement("div", i.__assign({
+                    className: o(t)
+                }, s(e), {
                     role: "progressbar",
                     "aria-valuenow": e.value,
                     "aria-valuemin": 0,
                     "aria-valuemax": 100
-                }), a.createElement("div", {
+                }), r.createElement("div", {
                     onAnimationEnd: e.onAnimationEnd,
                     className: "tw-progress-bar__fill",
                     style: {
@@ -26943,15 +27021,15 @@ webpackJsonp([80], {
                     "data-a-target": "tw-progress-bar-animation"
                 }))
             },
-            it = (n("FTZM"), function(e) {
-                var t, n = "tw-" + Re(),
-                    s = {
+            rt = (n("FTZM"), function(e) {
+                var t, n = "tw-" + xe(),
+                    a = {
                         "tw-radio": !0,
                         "tw-radio--error": e.error
                     };
-                return e.tabIndex && (t = e.tabIndex), a.createElement("div", i.__assign({
-                    className: r(s)
-                }, o(e)), a.createElement("input", {
+                return e.tabIndex && (t = e.tabIndex), r.createElement("div", i.__assign({
+                    className: o(a)
+                }, s(e)), r.createElement("input", {
                     type: "radio",
                     className: "tw-radio__input",
                     "data-a-target": "tw-radio",
@@ -26968,7 +27046,7 @@ webpackJsonp([80], {
                     ref: e.refDelegate,
                     tabIndex: t,
                     value: e.value
-                }), a.createElement("label", {
+                }), r.createElement("label", {
                     className: "tw-radio__label",
                     htmlFor: e.id ? e.id : n
                 }, e.label))
@@ -26976,16 +27054,16 @@ webpackJsonp([80], {
         n("VInv");
         ! function(e) {
             e.Checkbox = "checkbox", e.Radio = "radio"
-        }(tt || (tt = {}));
-        var rt, at = function(e) {
-                var t, n = Re(),
-                    s = {
+        }(nt || (nt = {}));
+        var at, ot = function(e) {
+                var t, n = xe(),
+                    a = {
                         "tw-image-selector": !0,
                         "tw-image-selector--error": e.error
                     };
-                return e.tabIndex && (t = e.tabIndex), a.createElement("div", i.__assign({
-                    className: r(s)
-                }, o(e)), a.createElement("input", {
+                return e.tabIndex && (t = e.tabIndex), r.createElement("div", i.__assign({
+                    className: o(a)
+                }, s(e)), r.createElement("input", {
                     className: "tw-image-selector__input",
                     type: e.type,
                     "data-a-target": "tw-image-selector",
@@ -27001,23 +27079,23 @@ webpackJsonp([80], {
                     required: e.required,
                     tabIndex: t,
                     value: e.value
-                }), a.createElement(N, {
+                }), r.createElement(O, {
                     padding: .5,
-                    display: d.Block
-                }, a.createElement("label", {
+                    display: u.Block
+                }, r.createElement("label", {
                     className: "tw-image-selector__label",
                     htmlFor: e.id ? e.id : n
-                }, a.createElement(F, i.__assign({}, ae(e))))))
+                }, r.createElement(M, i.__assign({}, oe(e))))))
             },
-            ot = (n("WZjW"), function(e) {
-                var t, n = Re(),
-                    s = {
+            st = (n("WZjW"), function(e) {
+                var t, n = xe(),
+                    a = {
                         "tw-toggle": !0,
                         "tw-toggle--error": e.error
                     };
-                return e.tabIndex && (t = e.tabIndex), a.createElement("div", i.__assign({
-                    className: r(s)
-                }, o(e)), a.createElement("input", {
+                return e.tabIndex && (t = e.tabIndex), r.createElement("div", i.__assign({
+                    className: o(a)
+                }, s(e)), r.createElement("input", {
                     className: "tw-toggle__input",
                     autoFocus: e.autoFocus,
                     checked: e.checked,
@@ -27033,18 +27111,18 @@ webpackJsonp([80], {
                     ref: e.refDelegate,
                     value: e.value,
                     "data-a-target": "tw-toggle"
-                }), a.createElement("label", {
+                }), r.createElement("label", {
                     htmlFor: e.id ? e.id : n,
                     className: "tw-toggle__button"
                 }))
             }),
-            st = (n("ALci"), function(e) {
+            lt = (n("ALci"), function(e) {
                 var t, n = {
                     "tw-range": !0,
                     "tw-range--error": e.error
                 };
-                return e.tabIndex && (t = e.tabIndex), a.createElement("input", i.__assign({
-                    className: r(n),
+                return e.tabIndex && (t = e.tabIndex), r.createElement("input", i.__assign({
+                    className: o(n),
                     id: e.id,
                     onBlur: e.onBlur,
                     onChange: e.onChange,
@@ -27059,23 +27137,23 @@ webpackJsonp([80], {
                     ref: e.refDelegate,
                     step: e.step,
                     value: e.value
-                }, o(e)))
+                }, s(e)))
             }),
-            lt = (n("FTbL"), function(e) {
-                var t, n = "tw-" + Re();
-                return e.tabIndex && (t = e.tabIndex), a.createElement("div", i.__assign({
-                    className: r("tw-search-input")
-                }, o(e)), a.createElement(N, {
-                    display: d.HideAccessible
-                }, a.createElement("label", {
+            ct = (n("FTbL"), function(e) {
+                var t, n = "tw-" + xe();
+                return e.tabIndex && (t = e.tabIndex), r.createElement("div", i.__assign({
+                    className: o("tw-search-input")
+                }, s(e)), r.createElement(O, {
+                    display: u.HideAccessible
+                }, r.createElement("label", {
                     htmlFor: e.id ? e.id : n
-                }, "Search")), a.createElement(Ae, {
+                }, "Search")), r.createElement(Ue, {
                     autoCapitalize: e.autoCapitalize,
                     autoFocus: e.autoFocus,
                     autoComplete: "off",
                     disabled: e.disabled,
                     error: e.error,
-                    icon: K.NavSearch,
+                    icon: $.NavSearch,
                     id: e.id ? e.id : n,
                     maxLength: e.maxLength,
                     name: e.name,
@@ -27087,27 +27165,27 @@ webpackJsonp([80], {
                     refDelegate: e.refDelegate,
                     spellCheck: e.spellCheck,
                     tabIndex: t,
-                    type: Le.Search,
+                    type: Pe.Search,
                     value: e.value
                 }))
             }),
-            ct = (n("lpYt"), function(e) {
-                return a.createElement("div", i.__assign({
-                    className: r("tw-segmented-button")
-                }, o(e)), e.children)
+            dt = (n("lpYt"), function(e) {
+                return r.createElement("div", i.__assign({
+                    className: o("tw-segmented-button")
+                }, s(e)), e.children)
             });
         n("qPr7");
         ! function(e) {
             e.Radio = "radio", e.Checkbox = "checkbox"
-        }(rt || (rt = {}));
-        var dt, ut = function(e) {
+        }(at || (at = {}));
+        var ut, pt = function(e) {
             var t;
-            return e.tabIndex && (t = e.tabIndex), a.createElement("label", i.__assign({
-                className: r({
+            return e.tabIndex && (t = e.tabIndex), r.createElement("label", i.__assign({
+                className: o({
                     "tw-segmented-button-option": !0
                 }),
                 htmlFor: e.id
-            }, o(e)), a.createElement("input", {
+            }, s(e)), r.createElement("input", {
                 type: e.type || "radio",
                 className: "tw-segmented-button-option__input",
                 checked: e.checked,
@@ -27123,22 +27201,22 @@ webpackJsonp([80], {
                 ref: e.refDelegate,
                 value: e.value,
                 "data-a-target": "tw-segmented-button-option"
-            }), a.createElement("span", {
+            }), r.createElement("span", {
                 className: "tw-segmented-button-option__label"
             }, e.label))
         };
         n("uWno");
         ! function(e) {
             e.Default = "", e.Hollow = "tw-select--hollow"
-        }(dt || (dt = {}));
-        var pt, mt = function(e) {
+        }(ut || (ut = {}));
+        var mt, ht = function(e) {
                 var t, n = {
                     "tw-select": !0,
                     "tw-select--disabled": e.disabled,
                     "tw-select--error": e.error
                 };
-                return e.type && (n[e.type] = !0), e.tabIndex && (t = e.tabIndex), a.createElement("select", i.__assign({
-                    className: r(n),
+                return e.type && (n[e.type] = !0), e.tabIndex && (t = e.tabIndex), r.createElement("select", i.__assign({
+                    className: o(n),
                     defaultValue: e.defaultValue,
                     disabled: e.disabled,
                     id: e.id,
@@ -27150,67 +27228,67 @@ webpackJsonp([80], {
                     tabIndex: t,
                     value: e.value,
                     ref: e.refDelegate
-                }, o(e)), e.children)
+                }, s(e)), e.children)
             },
-            ht = (n("5fkB"), function(e) {
-                var t, n, s, l = {
+            gt = (n("5fkB"), function(e) {
+                var t, n, a, l = {
                     "tw-tab-nav__item": !0,
                     "mg-l-auto": e.pullRight,
                     "tw-tab-nav__item--disabled": e.disabled
                 };
-                if (e.targetBlank && (n = "_blank"), e.active && (s = "active"), e.linkTo && !e.disabled)
-                    if (pe(e.linkTo)) {
+                if (e.targetBlank && (n = "_blank"), e.active && (a = "active"), e.linkTo && !e.disabled)
+                    if (me(e.linkTo)) {
                         if ("string" != typeof e.linkTo) throw new Error("External links with Location descriptors are not implemented in core-ui.button! Pass a string as linkTo instead.");
-                        t = a.createElement("a", {
+                        t = r.createElement("a", {
                             target: n,
-                            className: s,
+                            className: a,
                             onClick: e.onClick,
                             href: e.linkTo,
                             role: "tab",
                             "data-a-target": "tw-tab-link"
                         }, e.children)
-                    } else t = a.createElement(ie.a, {
+                    } else t = r.createElement(re.a, {
                         target: n,
-                        className: s,
+                        className: a,
                         onClick: e.onClick,
                         to: e.linkTo,
                         role: "tab",
                         "data-a-target": "tw-tab-link"
                     }, e.children);
-                else t = a.createElement("button", {
+                else t = r.createElement("button", {
                     disabled: e.disabled,
-                    className: s,
+                    className: a,
                     onClick: e.onClick,
                     role: "tab",
                     "data-a-target": "tw-tab-link"
                 }, e.children);
-                return a.createElement("li", i.__assign({
-                    className: r(l),
+                return r.createElement("li", i.__assign({
+                    className: o(l),
                     role: "presentation"
-                }, o(e)), t)
+                }, s(e)), t)
             }),
-            gt = (n("3KEv"), function(e) {
-                return a.createElement("div", i.__assign({
+            ft = (n("3KEv"), function(e) {
+                return r.createElement("div", i.__assign({
                     className: e.alignRight ? "flex" : ""
-                }, o(e)), a.createElement("ul", {
+                }, s(e)), r.createElement("ul", {
                     className: "tw-tab-nav " + (e.alignRight ? "mg-l-auto" : ""),
                     role: "tablist"
                 }, e.children))
             }),
-            ft = (n("rxEr"), function(e) {
+            vt = (n("rxEr"), function(e) {
                 var t, n = {
                     "tw-textarea": !0,
                     "tw-textarea--no-resize": e.noResize,
                     "tw-textarea--error": e.error
                 };
                 e.tabIndex && (t = e.tabIndex);
-                var s = {
+                var a = {
                     paddingRight: e.paddingRight ? e.paddingRight / 10 + "rem" : void 0
                 };
-                return a.createElement(N, {
+                return r.createElement(O, {
                     overflow: e.overflow
-                }, a.createElement("textarea", i.__assign({
-                    className: r(n),
+                }, r.createElement("textarea", i.__assign({
+                    className: o(n),
                     autoFocus: e.autoFocus,
                     cols: e.cols,
                     disabled: e.disabled,
@@ -27221,182 +27299,182 @@ webpackJsonp([80], {
                     onChange: e.onChange,
                     onFocus: e.onFocus,
                     onKeyDown: e.onKeyDown,
-                    style: s,
+                    style: a,
                     placeholder: e.placeholder,
                     rows: e.rows,
                     tabIndex: t,
                     value: e.value,
                     defaultValue: e.defaultValue,
                     ref: e.refDelegate
-                }, o(e))))
+                }, s(e))))
             }),
-            vt = (n("MQjL"), function(e) {
+            bt = (n("MQjL"), function(e) {
                 var t;
-                return t = a.createElement(se, {
+                return t = r.createElement(le, {
                     key: e.title
-                }, a.createElement(ce, i.__assign({
-                    aspect: R.Aspect16x9
-                }, ae(e))), a.createElement(le, null, a.createElement(O, {
+                }, r.createElement(de, i.__assign({
+                    aspect: x.Aspect16x9
+                }, oe(e))), r.createElement(ce, null, r.createElement(R, {
                     margin: {
                         top: .5
                     }
-                }, a.createElement(q, {
+                }, r.createElement(Q, {
                     className: "tw-thumbnail-card__title",
-                    type: z.H3,
-                    fontSize: A.Size5,
-                    lineHeight: U.Body,
+                    type: V.H3,
+                    fontSize: U.Size5,
+                    lineHeight: j.Body,
                     ellipsis: !0
-                }, e.title)), a.createElement(q, {
-                    color: M.Alt2,
+                }, e.title)), r.createElement(Q, {
+                    color: A.Alt2,
                     ellipsis: !0
-                }, e.info))), e.placeholder ? a.createElement(O, null, a.createElement(O, {
+                }, e.info))), e.placeholder ? r.createElement(R, null, r.createElement(R, {
                     margin: {
                         bottom: .5
                     }
-                }, a.createElement(L, {
-                    ratio: R.Aspect16x9
-                }, a.createElement(de, null))), a.createElement(q, null, a.createElement(de, {
+                }, r.createElement(P, {
+                    ratio: x.Aspect16x9
+                }, r.createElement(ue, null))), r.createElement(Q, null, r.createElement(ue, {
                     width: 150
-                })), a.createElement(q, {
-                    fontSize: A.Size7
-                }, a.createElement(de, {
+                })), r.createElement(Q, {
+                    fontSize: U.Size7
+                }, r.createElement(ue, {
                     width: 100
-                }))) : e.linkTo ? a.createElement("div", i.__assign({
+                }))) : e.linkTo ? r.createElement("div", i.__assign({
                     className: "tw-thumbnail-card"
-                }, o(e)), a.createElement(ie.a, {
+                }, s(e)), r.createElement(re.a, {
                     to: e.linkTo,
                     title: e.title,
                     "data-a-target": "tw-thumbnail-card-link"
-                }, t)) : a.createElement("div", i.__assign({
+                }, t)) : r.createElement("div", i.__assign({
                     className: "tw-thumbnail-card"
-                }, o(e)), t)
+                }, s(e)), t)
             }),
-            bt = (n("FlHF"), function(e) {
-                return a.createElement(O, {
+            yt = (n("FlHF"), function(e) {
+                return r.createElement(R, {
                     fullWidth: !0
-                }, a.createElement(Y, {
-                    display: d.Flex,
-                    flexWrap: p.NoWrap,
-                    className: r({
+                }, r.createElement(Z, {
+                    display: u.Flex,
+                    flexWrap: m.NoWrap,
+                    className: o({
                         "tw-toast": !0
                     }),
                     elevation: 3,
-                    background: H.Base,
+                    background: G.Base,
                     border: !0
-                }, a.createElement(O, {
+                }, r.createElement(R, {
                     flexGrow: 1
-                }, e.children), a.createElement(Y, {
-                    display: d.Flex,
+                }, e.children), r.createElement(Z, {
+                    display: u.Flex,
                     flexShrink: 0,
                     borderLeft: !0
-                }, a.createElement(Ue, {
+                }, r.createElement(je, {
                     onClick: e.onClose,
                     ariaLabel: "Dismiss This",
                     tabIndex: e.tabIndex,
                     alpha: !0,
                     "data-a-target": "tw-toast-close"
-                }, a.createElement(O, {
+                }, r.createElement(R, {
                     padding: 1,
-                    display: d.Flex,
-                    alignItems: l.Center,
-                    justifyContent: m.Center,
+                    display: u.Flex,
+                    alignItems: c.Center,
+                    justifyContent: h.Center,
                     className: "tw-toast__dismiss-target"
-                }, a.createElement(te, {
-                    asset: K.Close
+                }, r.createElement(ne, {
+                    asset: $.Close
                 }))))))
             }),
-            yt = (n("CH+Z"), function(e) {
+            kt = (n("CH+Z"), function(e) {
                 var t = {};
-                return e.alternateRows && (t["tw-table--alternate-rows"] = !0), a.createElement("div", {
-                    className: r("tw-table", t)
+                return e.alternateRows && (t["tw-table--alternate-rows"] = !0), r.createElement("div", {
+                    className: o("tw-table", t)
                 }, e.children)
             }),
-            kt = (n("vXa3"), function(e) {
-                return a.createElement("div", {
-                    className: r("tw-table-body", {})
+            _t = (n("vXa3"), function(e) {
+                return r.createElement("div", {
+                    className: o("tw-table-body", {})
                 }, e.children)
             }),
-            _t = (n("kpCl"), function(e) {
-                return a.createElement(O, {
+            wt = (n("kpCl"), function(e) {
+                return r.createElement(R, {
                     padding: 1,
-                    className: r({
+                    className: o({
                         "tw-table-cell": !0
                     }),
                     textAlign: e.textAlign,
                     verticalAlign: e.verticalAlign
                 }, e.children)
             }),
-            wt = (n("a/ze"), function(e) {
-                return a.createElement(Y, {
-                    background: H.Alt,
-                    className: r("tw-table-header", {})
+            St = (n("a/ze"), function(e) {
+                return r.createElement(Z, {
+                    background: G.Alt,
+                    className: o("tw-table-header", {})
                 }, e.children)
             });
         n("HWUk");
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Ascending = 1] = "Ascending", e[e.Descending = 2] = "Descending"
-        }(pt || (pt = {}));
-        var St, Et, Ct = function(e) {
+        }(mt || (mt = {}));
+        var Et, Ct, Tt = function(e) {
                 var t, n;
                 if (void 0 !== e.sorting) {
-                    switch (pt[e.sorting]) {
+                    switch (mt[e.sorting]) {
                         case "Ascending":
-                            n = a.createElement(te, {
-                                asset: K.GlyphArrUp,
+                            n = r.createElement(ne, {
+                                asset: $.GlyphArrUp,
                                 width: 10
                             });
                             break;
                         case "Descending":
-                            n = a.createElement(te, {
-                                asset: K.GlyphArrDown,
+                            n = r.createElement(ne, {
+                                asset: $.GlyphArrDown,
                                 width: 10
                             });
                             break;
                         default:
-                            n = a.createElement(te, {
-                                asset: K.GlyphArrUpDown,
+                            n = r.createElement(ne, {
+                                asset: $.GlyphArrUpDown,
                                 width: 10
                             })
                     }
-                    t = a.createElement(Ue, {
+                    t = r.createElement(je, {
                         alpha: !0,
                         onClick: e.onClick
-                    }, a.createElement(Y, {
-                        color: M.Link,
-                        display: d.Flex,
-                        alignItems: l.Center,
+                    }, r.createElement(Z, {
+                        color: A.Link,
+                        display: u.Flex,
+                        alignItems: c.Center,
                         padding: 1
-                    }, a.createElement(O, {
+                    }, r.createElement(R, {
                         margin: {
                             right: .5
                         },
                         flexGrow: 1
-                    }, a.createElement(q, {
+                    }, r.createElement(Q, {
                         bold: !0
                     }, e.label)), n))
-                } else t = a.createElement(O, {
+                } else t = r.createElement(R, {
                     padding: 1
-                }, a.createElement(q, {
+                }, r.createElement(Q, {
                     bold: !0
                 }, e.label));
-                return a.createElement(O, {
+                return r.createElement(R, {
                     verticalAlign: e.verticalAlign,
-                    className: r("tw-table-heading", {})
+                    className: o("tw-table-heading", {})
                 }, t)
             },
-            Tt = (n("PS8b"), function(e) {
-                return a.createElement("div", {
-                    className: r("tw-table-row", {})
+            Nt = (n("PS8b"), function(e) {
+                return r.createElement("div", {
+                    className: o("tw-table-row", {})
                 }, e.children)
             });
         n("Tr88");
         ! function(e) {
             e.Default = "", e.ExtraSmall = "tw-tower--gutter-xs", e.Small = "tw-tower--gutter-sm", e.Large = "tw-tower--gutter-lg", e.None = "tw-tower--gutter-none"
-        }(St || (St = {})),
+        }(Et || (Et = {})),
         function(e) {
             e.ExtraSmall = "tw-tower--120", e.Small = "tw-tower--180", e.Medium = "tw-tower--240", e.Large = "tw-tower--300"
-        }(Et || (Et = {}));
-        var Nt, Ot = function(e) {
+        }(Ct || (Ct = {}));
+        var Ot, Rt = function(e) {
                 var t = {
                     "tw-tower": !0,
                     "tw-tower--nogrow": e.noGrow
@@ -27404,276 +27482,276 @@ webpackJsonp([80], {
                 e.gutterSize && (t[e.gutterSize] = !0), e.childWidth && (t[e.childWidth] = !0);
                 var n = new Array;
                 if (e.placeholderItems)
-                    for (var s = 0; s < e.placeholderItems; ++s) n.push(a.createElement("div", {
+                    for (var a = 0; a < e.placeholderItems; ++a) n.push(r.createElement("div", {
                         className: "tw-tower__placeholder",
-                        key: s
+                        key: a
                     }));
-                return a.createElement(O, i.__assign({
-                    justifyContent: e.center ? m.Center : void 0,
-                    flexWrap: e.noWrap ? p.NoWrap : p.Wrap,
-                    className: r(t)
-                }, o(e)), e.children, n)
+                return r.createElement(R, i.__assign({
+                    justifyContent: e.center ? h.Center : void 0,
+                    flexWrap: e.noWrap ? m.NoWrap : m.Wrap,
+                    className: o(t)
+                }, s(e)), e.children, n)
             },
-            Rt = (n("OeCe"), function(e) {
-                return a.createElement("div", i.__assign({
-                    className: r({
+            xt = (n("OeCe"), function(e) {
+                return r.createElement("div", i.__assign({
+                    className: o({
                         "tw-typeset": !0
                     })
-                }, o(e)), e.children)
+                }, s(e)), e.children)
             });
         ! function(e) {
             e.White = "#ffffff", e.Black = "#000000", e.Red = "#ec1313", e.Orange = "#ffb300", e.Yellow = "#ffea00", e.Green = "#14b866", e.Blue = "#0088cc", e.PrimeBlue = "#0e9bd8", e.TwitchPurple = "#6441a4", e.Twitter = "#1da1f2", e.Facebook = "#3b5998", e.Reddit = "#ff4500", e.Snapchat = "#fffc00", e.Instagram = "#405de6", e.Youtube = "#cd201f", e.Paypal = "#003087", e.Vk = "#45668e", e.Purple1 = "#0e0c13", e.Purple2 = "#17141f", e.Purple3 = "#201c2b", e.Purple4 = "#2c2541", e.Purple5 = "#392e5c", e.Purple6 = "#4b367c", e.Purple7 = "#6441a4", e.Purple8 = "#7d5bbe", e.Purple9 = "#9a7fcc", e.Purple10 = "#b19dd8", e.Purple11 = "#c5b6e2", e.Purple12 = "#d7cceb", e.Purple13 = "#e2dbf0", e.Purple14 = "#eee9f6", e.Purple15 = "#f9f8fc", e.HintedGrey1 = "#0f0e11", e.HintedGrey2 = "#19171c", e.HintedGrey3 = "#232127", e.HintedGrey4 = "#322f37", e.HintedGrey5 = "#433f4a", e.HintedGrey6 = "#575260", e.HintedGrey7 = "#6e6779", e.HintedGrey8 = "#898395", e.HintedGrey9 = "#a49fad", e.HintedGrey10 = "#b8b5c0", e.HintedGrey11 = "#cbc8d0", e.HintedGrey12 = "#dad8de", e.HintedGrey13 = "#e5e3e8", e.HintedGrey14 = "#efeef1", e.HintedGrey15 = "#faf9fa"
-        }(Nt || (Nt = {}));
+        }(Ot || (Ot = {}));
         n("Vl7O");
-        var xt = function(e) {
+        var It = function(e) {
             var t = {
                 "tw-responsive-wrapper": !0,
                 "tw-responsive-wrapper--centered": e.centered
             };
-            return a.createElement("div", {
-                className: r(t)
+            return r.createElement("div", {
+                className: o(t)
             }, e.children)
         };
         n.d(t, "e", function() {
-            return I
-        }), n.d(t, "f", function() {
-            return _
-        }), n.d(t, "g", function() {
-            return w
-        }), n.d(t, "h", function() {
-            return S
-        }), n.d(t, "i", function() {
-            return E
-        }), n.d(t, "j", function() {
-            return C
-        }), n.d(t, "k", function() {
-            return L
-        }), n.d(t, "l", function() {
-            return R
-        }), n.d(t, "a", function() {
-            return x
-        }), n.d(t, "m", function() {
-            return Z
-        }), n.d(t, !1, function() {}), n.d(t, "o", function() {
-            return ne
-        }), n.d(t, "p", function() {
-            return J
-        }), n.d(t, "u", function() {
-            return ue
-        }), n.d(t, "v", function() {
-            return we
-        }), n.d(t, "z", function() {
-            return ge
-        }), n.d(t, "B", function() {
-            return he
-        }), n.d(t, "A", function() {
-            return fe
-        }), n.d(t, "w", function() {
-            return Ne
-        }), n.d(t, "x", function() {
-            return ke
-        }), n.d(t, "y", function() {
-            return ye
-        }), n.d(t, "q", function() {
-            return Oe
-        }), n.d(t, "s", function() {
-            return Ee
-        }), n.d(t, "r", function() {
-            return Ce
-        }), n.d(t, "D", function() {
-            return le
-        }), n.d(t, "E", function() {
-            return ce
-        }), n.d(t, "F", function() {
-            return oe
-        }), n.d(t, "C", function() {
-            return se
-        }), n.d(t, "J", function() {
-            return Ie
-        }), n.d(t, "S", function() {
-            return De
-        }), n.d(t, "Y", function() {
-            return Pe
-        }), n.d(t, "Z", function() {
-            return xe
-        }), n.d(t, "L", function() {
-            return Fe
-        }), n.d(t, "_24", function() {
-            return te
-        }), n.d(t, "_25", function() {
-            return K
-        }), n.d(t, "_26", function() {
-            return Q
-        }), n.d(t, "N", function() {
-            return F
-        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "_4", function() {
-            return Ae
-        }), n.d(t, "_5", function() {
-            return Le
-        }), n.d(t, "_6", function() {
-            return Ue
-        }), n.d(t, "O", function() {
-            return Be
-        }), n.d(t, "P", function() {
-            return Me
-        }), n.d(t, !1, function() {}), n.d(t, "W", function() {
-            return We
-        }), n.d(t, "X", function() {
-            return je
-        }), n.d(t, "_35", function() {
-            return Y
-        }), n.d(t, "_3", function() {
-            return $
-        }), n.d(t, "n", function() {
-            return H
-        }), n.d(t, "t", function() {
-            return G
-        }), n.d(t, "b", function() {
-            return s
-        }), n.d(t, "c", function() {
-            return l
-        }), n.d(t, "d", function() {
-            return c
-        }), n.d(t, "_2", function() {
-            return N
-        }), n.d(t, "_8", function() {
-            return O
-        }), n.d(t, "R", function() {
-            return d
-        }), n.d(t, "T", function() {
-            return u
-        }), n.d(t, "U", function() {
-            return p
-        }), n.d(t, "_7", function() {
-            return m
-        }), n.d(t, !1, function() {
-            return f
-        }), n.d(t, "_11", function() {
-            return h
-        }), n.d(t, "_15", function() {
-            return g
-        }), n.d(t, "_45", function() {
-            return v
-        }), n.d(t, "_62", function() {
-            return k
-        }), n.d(t, "_59", function() {
-            return b
-        }), n.d(t, "_60", function() {
-            return y
-        }), n.d(t, "G", function() {
-            return qe
-        }), n.d(t, "H", function() {
-            return ze
-        }), n.d(t, "I", function() {
-            return Ve
-        }), n.d(t, "_10", function() {
-            return ve
-        }), n.d(t, "_33", function() {
-            return me
-        }), n.d(t, "_34", function() {
-            return $e
-        }), n.d(t, "_44", function() {
-            return Ye
-        }), n.d(t, "_12", function() {
-            return et
-        }), n.d(t, "_13", function() {
-            return Qe
-        }), n.d(t, "_14", function() {
-            return de
-        }), n.d(t, "_16", function() {
-            return W
-        }), n.d(t, "_17", function() {
             return D
-        }), n.d(t, "_18", function() {
-            return nt
-        }), n.d(t, "_20", function() {
-            return Ze
-        }), n.d(t, !1, function() {
-            return Xe
-        }), n.d(t, "_19", function() {
-            return Je
-        }), n.d(t, "_21", function() {
-            return it
-        }), n.d(t, "_0", function() {
-            return at
-        }), n.d(t, "_1", function() {
-            return tt
-        }), n.d(t, "Q", function() {
-            return q
-        }), n.d(t, "_61", function() {
-            return V
-        }), n.d(t, "K", function() {
+        }), n.d(t, "f", function() {
+            return w
+        }), n.d(t, "g", function() {
+            return S
+        }), n.d(t, "h", function() {
+            return E
+        }), n.d(t, "i", function() {
+            return C
+        }), n.d(t, "j", function() {
+            return T
+        }), n.d(t, "k", function() {
+            return P
+        }), n.d(t, "l", function() {
+            return x
+        }), n.d(t, "a", function() {
+            return I
+        }), n.d(t, "m", function() {
+            return X
+        }), n.d(t, !1, function() {}), n.d(t, "o", function() {
+            return ie
+        }), n.d(t, "p", function() {
+            return ee
+        }), n.d(t, "u", function() {
+            return pe
+        }), n.d(t, "v", function() {
+            return Se
+        }), n.d(t, "z", function() {
+            return fe
+        }), n.d(t, "B", function() {
+            return ge
+        }), n.d(t, "A", function() {
+            return ve
+        }), n.d(t, "w", function() {
+            return Oe
+        }), n.d(t, "x", function() {
+            return _e
+        }), n.d(t, "y", function() {
+            return ke
+        }), n.d(t, "q", function() {
+            return Re
+        }), n.d(t, "s", function() {
+            return Ce
+        }), n.d(t, "r", function() {
+            return Te
+        }), n.d(t, "D", function() {
+            return ce
+        }), n.d(t, "E", function() {
+            return de
+        }), n.d(t, "F", function() {
+            return se
+        }), n.d(t, "C", function() {
+            return le
+        }), n.d(t, "J", function() {
+            return De
+        }), n.d(t, "S", function() {
+            return Le
+        }), n.d(t, "Y", function() {
+            return Fe
+        }), n.d(t, "Z", function() {
+            return Ie
+        }), n.d(t, "L", function() {
+            return Me
+        }), n.d(t, "_24", function() {
+            return ne
+        }), n.d(t, "_25", function() {
+            return $
+        }), n.d(t, "_26", function() {
+            return K
+        }), n.d(t, "N", function() {
             return M
-        }), n.d(t, "V", function() {
-            return A
-        }), n.d(t, "_9", function() {
-            return U
-        }), n.d(t, "_47", function() {
-            return j
-        }), n.d(t, "_48", function() {
-            return B
-        }), n.d(t, "_49", function() {
-            return z
-        }), n.d(t, "_51", function() {
-            return ot
-        }), n.d(t, "_22", function() {
-            return st
-        }), n.d(t, "_27", function() {
-            return lt
-        }), n.d(t, "_28", function() {
-            return ct
-        }), n.d(t, "_29", function() {
-            return ut
-        }), n.d(t, !1, function() {
-            return rt
-        }), n.d(t, "_30", function() {
-            return mt
-        }), n.d(t, "_31", function() {
-            return dt
-        }), n.d(t, "_36", function() {
-            return ht
-        }), n.d(t, "_37", function() {
-            return gt
-        }), n.d(t, "_46", function() {
-            return ft
-        }), n.d(t, !1, function() {
-            return vt
-        }), n.d(t, "_50", function() {
-            return bt
-        }), n.d(t, "_38", function() {
-            return yt
-        }), n.d(t, "_39", function() {
-            return kt
-        }), n.d(t, "_40", function() {
-            return _t
-        }), n.d(t, "_41", function() {
-            return wt
-        }), n.d(t, "_42", function() {
-            return Ct
-        }), n.d(t, "_32", function() {
-            return pt
-        }), n.d(t, "_43", function() {
-            return Tt
-        }), n.d(t, "_52", function() {
-            return Ke
-        }), n.d(t, "_54", function() {
+        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "_4", function() {
+            return Ue
+        }), n.d(t, "_5", function() {
+            return Pe
+        }), n.d(t, "_6", function() {
+            return je
+        }), n.d(t, "O", function() {
+            return ze
+        }), n.d(t, "P", function() {
+            return Ae
+        }), n.d(t, !1, function() {}), n.d(t, "W", function() {
             return He
-        }), n.d(t, "_53", function() {
-            return Ge
-        }), n.d(t, "_55", function() {
-            return Ot
-        }), n.d(t, "_57", function() {
+        }), n.d(t, "X", function() {
+            return Be
+        }), n.d(t, "_35", function() {
+            return Z
+        }), n.d(t, "_3", function() {
+            return Y
+        }), n.d(t, "n", function() {
+            return G
+        }), n.d(t, "t", function() {
+            return q
+        }), n.d(t, "b", function() {
+            return l
+        }), n.d(t, "c", function() {
+            return c
+        }), n.d(t, "d", function() {
+            return d
+        }), n.d(t, "_2", function() {
+            return O
+        }), n.d(t, "_8", function() {
+            return R
+        }), n.d(t, "R", function() {
+            return u
+        }), n.d(t, "T", function() {
+            return p
+        }), n.d(t, "U", function() {
+            return m
+        }), n.d(t, "_7", function() {
+            return h
+        }), n.d(t, !1, function() {
+            return v
+        }), n.d(t, "_11", function() {
+            return g
+        }), n.d(t, "_15", function() {
+            return f
+        }), n.d(t, "_45", function() {
+            return b
+        }), n.d(t, "_62", function() {
+            return _
+        }), n.d(t, "_59", function() {
+            return y
+        }), n.d(t, "_60", function() {
+            return k
+        }), n.d(t, "G", function() {
+            return Qe
+        }), n.d(t, "H", function() {
+            return Ve
+        }), n.d(t, "I", function() {
+            return We
+        }), n.d(t, "_10", function() {
+            return be
+        }), n.d(t, "_33", function() {
+            return he
+        }), n.d(t, "_34", function() {
+            return Ye
+        }), n.d(t, "_44", function() {
+            return Ze
+        }), n.d(t, "_12", function() {
+            return tt
+        }), n.d(t, "_13", function() {
+            return Ke
+        }), n.d(t, "_14", function() {
+            return ue
+        }), n.d(t, "_16", function() {
+            return H
+        }), n.d(t, "_17", function() {
+            return L
+        }), n.d(t, "_18", function() {
+            return it
+        }), n.d(t, "_20", function() {
+            return Xe
+        }), n.d(t, !1, function() {
+            return Je
+        }), n.d(t, "_19", function() {
+            return et
+        }), n.d(t, "_21", function() {
+            return rt
+        }), n.d(t, "_0", function() {
+            return ot
+        }), n.d(t, "_1", function() {
+            return nt
+        }), n.d(t, "Q", function() {
+            return Q
+        }), n.d(t, "_61", function() {
+            return W
+        }), n.d(t, "K", function() {
+            return A
+        }), n.d(t, "V", function() {
+            return U
+        }), n.d(t, "_9", function() {
+            return j
+        }), n.d(t, "_47", function() {
+            return B
+        }), n.d(t, "_48", function() {
+            return z
+        }), n.d(t, "_49", function() {
+            return V
+        }), n.d(t, "_51", function() {
+            return st
+        }), n.d(t, "_22", function() {
+            return lt
+        }), n.d(t, "_27", function() {
+            return ct
+        }), n.d(t, "_28", function() {
+            return dt
+        }), n.d(t, "_29", function() {
+            return pt
+        }), n.d(t, !1, function() {
+            return at
+        }), n.d(t, "_30", function() {
+            return ht
+        }), n.d(t, "_31", function() {
+            return ut
+        }), n.d(t, "_36", function() {
+            return gt
+        }), n.d(t, "_37", function() {
+            return ft
+        }), n.d(t, "_46", function() {
+            return vt
+        }), n.d(t, !1, function() {
+            return bt
+        }), n.d(t, "_50", function() {
+            return yt
+        }), n.d(t, "_38", function() {
+            return kt
+        }), n.d(t, "_39", function() {
+            return _t
+        }), n.d(t, "_40", function() {
+            return wt
+        }), n.d(t, "_41", function() {
             return St
-        }), n.d(t, "_56", function() {
-            return Et
-        }), n.d(t, "_58", function() {
-            return Rt
-        }), n.d(t, "M", function() {
+        }), n.d(t, "_42", function() {
+            return Tt
+        }), n.d(t, "_32", function() {
+            return mt
+        }), n.d(t, "_43", function() {
             return Nt
-        }), n.d(t, "_63", function() {
-            return o
-        }), n.d(t, "_23", function() {
+        }), n.d(t, "_52", function() {
+            return $e
+        }), n.d(t, "_54", function() {
+            return Ge
+        }), n.d(t, "_53", function() {
+            return qe
+        }), n.d(t, "_55", function() {
+            return Rt
+        }), n.d(t, "_57", function() {
+            return Et
+        }), n.d(t, "_56", function() {
+            return Ct
+        }), n.d(t, "_58", function() {
             return xt
+        }), n.d(t, "M", function() {
+            return Ot
+        }), n.d(t, "_63", function() {
+            return s
+        }), n.d(t, "_23", function() {
+            return It
         })
     },
     OeCe: function(e, t) {},
@@ -31514,117 +31592,120 @@ webpackJsonp([80], {
                 return n.e(60).then(n.bind(null, "rujk"))
             }, "CommunityModerationRoot"),
             Ke = se.a.wrap(function() {
-                return n.e(71).then(n.bind(null, "yMnN"))
-            }, "DevOnlyRoot"),
+                return n.e(66).then(n.bind(null, "BAkg"))
+            }, "CreateCommunityPage"),
             $e = se.a.wrap(function() {
+                return n.e(72).then(n.bind(null, "yMnN"))
+            }, "DevOnlyRoot"),
+            Ye = se.a.wrap(function() {
                 return n.e(47).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
-            Ye = se.a.wrap(function() {
-                return n.e(76).then(n.bind(null, "IzAE"))
-            }, "DevOnlyTestingCarouselPage"),
             Ze = se.a.wrap(function() {
-                return n.e(75).then(n.bind(null, "mqYJ"))
-            }, "EmailUnsubscribePage"),
+                return n.e(77).then(n.bind(null, "IzAE"))
+            }, "DevOnlyTestingCarouselPage"),
             Xe = se.a.wrap(function() {
-                return n.e(78).then(n.bind(null, "Tj44"))
-            }, "EmailVerificationPage"),
+                return n.e(76).then(n.bind(null, "mqYJ"))
+            }, "EmailUnsubscribePage"),
             Je = se.a.wrap(function() {
+                return n.e(79).then(n.bind(null, "Tj44"))
+            }, "EmailVerificationPage"),
+            et = se.a.wrap(function() {
                 return n.e(50).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
-            et = se.a.wrap(function() {
+            tt = se.a.wrap(function() {
                 return n.e(49).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
-            tt = se.a.wrap(function() {
+            nt = se.a.wrap(function() {
                 return n.e(53).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
-            nt = se.a.wrap(function() {
-                return n.e(68).then(n.bind(null, "H+V/"))
-            }, "FriendRequestsPage"),
             it = se.a.wrap(function() {
-                return n.e(67).then(n.bind(null, "mlfa"))
-            }, "FriendsPage"),
+                return n.e(69).then(n.bind(null, "H+V/"))
+            }, "FriendRequestsPage"),
             rt = se.a.wrap(function() {
+                return n.e(68).then(n.bind(null, "mlfa"))
+            }, "FriendsPage"),
+            at = se.a.wrap(function() {
                 return n.e(65).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
-            at = se.a.wrap(function() {
-                return n.e(79).then(n.bind(null, "o8EG"))
-            }, "ManagerRedirectPage"),
             ot = se.a.wrap(function() {
-                return n.e(69).then(n.bind(null, "jWoj"))
-            }, "MessagesPage"),
+                return n.e(80).then(n.bind(null, "o8EG"))
+            }, "ManagerRedirectPage"),
             st = se.a.wrap(function() {
+                return n.e(70).then(n.bind(null, "jWoj"))
+            }, "MessagesPage"),
+            lt = se.a.wrap(function() {
                 return n.e(39).then(n.bind(null, "gZLf"))
             }, "PaymentsLandingPage"),
-            lt = se.a.wrap(function() {
-                return n.e(74).then(n.bind(null, "DkuH"))
-            }, "ReportUserPage"),
             ct = se.a.wrap(function() {
+                return n.e(75).then(n.bind(null, "DkuH"))
+            }, "ReportUserPage"),
+            dt = se.a.wrap(function() {
                 return n.e(41).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
-            dt = se.a.wrap(function() {
+            ut = se.a.wrap(function() {
                 return n.e(38).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            ut = se.a.wrap(function() {
+            pt = se.a.wrap(function() {
                 return n.e(62).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            pt = se.a.wrap(function() {
+            mt = se.a.wrap(function() {
                 return n.e(61).then(n.bind(null, "jQFB"))
             }, "SubscriptionsManagementPage"),
-            mt = se.a.wrap(function() {
+            ht = se.a.wrap(function() {
                 return n.e(45).then(n.bind(null, "GUP0"))
             }, "UnsubscribePage"),
-            ht = function() {
+            gt = function() {
                 return r.createElement(oe.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            gt = function() {
+            ft = function() {
                 return window.location.assign(window.location.href), null
             },
-            ft = function(e) {
+            vt = function(e) {
                 var t = Object(ue.a)(e.match.params.videoID);
                 return r.createElement(oe.c, {
                     to: "/videos/" + t
                 })
             },
-            vt = function(e) {
+            bt = function(e) {
                 return r.createElement(oe.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            bt = function(e) {
+            yt = function(e) {
                 return r.createElement(oe.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            yt = function(e) {
+            kt = function(e) {
                 return r.createElement(oe.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            kt = function(e) {
+            _t = function(e) {
                 return r.createElement(oe.c, {
                     to: "/teams/" + e.match.params.teamName + "/dashboard"
                 })
             },
-            _t = function(e) {
+            wt = function(e) {
                 return r.createElement(oe.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            wt = function() {
+            St = function() {
                 return r.createElement(oe.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            St = function() {
+            Et = function() {
                 return window.location.replace(pe.a), null
             },
-            Et = function(e) {
+            Ct = function(e) {
                 return window.location.replace(g.a.playerBaseURL + "/?channel=" + e.match.params.channelName), null
             },
-            Ct = function(e) {
+            Tt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -31645,53 +31726,56 @@ webpackJsonp([80], {
                         message: Object(g.d)("An error occurred on this page", "DefaultRootRouter")
                     }) : r.createElement(oe.e, null, g.a.buildType !== de.a.Production && r.createElement(oe.d, {
                         path: "/_dev/testing/carousel",
-                        component: Ye
+                        component: Ze
                     }), g.a.buildType !== de.a.Production && r.createElement(oe.d, {
                         path: "/_dev/testing/amazon-offers/:channelName",
-                        component: ut
+                        component: pt
                     }), g.a.buildType !== de.a.Production && r.createElement(oe.d, {
                         path: "/_dev",
-                        component: Ke
+                        component: $e
                     }), r.createElement(oe.d, {
                         exact: !0,
                         path: "/",
-                        component: this.props.isLoggedIn ? tt : Ue
+                        component: this.props.isLoggedIn ? nt : Ue
                     }), r.createElement(oe.d, {
                         path: "/activate",
-                        render: gt
+                        render: ft
                     }), r.createElement(oe.d, {
                         path: "/bits",
-                        render: gt
+                        render: ft
                     }), r.createElement(oe.d, {
                         path: "/checkout",
-                        render: gt
+                        render: ft
                     }), r.createElement(oe.d, {
                         path: "/embed",
-                        render: gt
+                        render: ft
                     }), r.createElement(oe.d, {
                         path: "/popout",
-                        render: gt
+                        render: ft
                     }), r.createElement(oe.d, {
                         path: "/prime",
-                        render: gt
+                        render: ft
                     }), r.createElement(oe.d, {
                         path: "/subs",
-                        render: gt
+                        render: ft
                     }), r.createElement(oe.d, {
                         path: "/collections/:collectionID",
-                        component: dt
+                        component: ut
+                    }), r.createElement(oe.d, {
+                        path: "/communities/create",
+                        component: Ke
                     }), r.createElement(oe.d, {
                         path: "/communities/:encodedCommunityName/details",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/communities/:encodedCommunityName/moderation/:page?",
                         component: Qe
                     }), r.createElement(oe.d, {
                         path: "/communities/:encodedCommunityName/:encodedLanguage",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/communities/:encodedCommunityName",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/communities",
                         component: je
@@ -31700,31 +31784,31 @@ webpackJsonp([80], {
                         component: je
                     }), r.createElement(oe.d, {
                         path: "/directory/following/:category?",
-                        component: et
+                        component: tt
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/clips",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/details",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/videos/:filter",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/videos",
-                        render: _t
+                        render: wt
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/all/ps4",
                         component: je
                     }), r.createElement(oe.d, {
                         path: "/directory/all/xb1",
-                        component: wt
+                        component: St
                     }), r.createElement(oe.d, {
                         path: "/directory/all/xbox",
                         component: je
@@ -31739,95 +31823,95 @@ webpackJsonp([80], {
                         component: je
                     }), r.createElement(oe.d, {
                         path: "/events/:eventName",
-                        render: Je
+                        render: et
                     }), r.createElement(oe.d, {
                         path: "/email-unsubscribe",
-                        component: Ze
+                        component: Xe
                     }), r.createElement(oe.d, {
                         path: "/email-verification/:emailOpaqueId",
-                        component: Xe
+                        component: Je
                     }), r.createElement(oe.d, {
                         path: "/ext/:extensionID",
                         component: Ae
                     }), r.createElement(oe.d, {
                         path: "/friends/requests",
-                        component: nt
-                    }), r.createElement(oe.d, {
-                        path: "/friends",
                         component: it
                     }), r.createElement(oe.d, {
-                        path: "/payments",
-                        component: st
-                    }), r.createElement(oe.d, {
-                        path: "/following",
-                        component: ht
-                    }), r.createElement(oe.d, {
-                        path: "/inbox",
-                        component: ot
-                    }), r.createElement(oe.d, {
-                        path: "/inventory",
+                        path: "/friends",
                         component: rt
                     }), r.createElement(oe.d, {
-                        path: "/outbox",
-                        component: ot
+                        path: "/payments",
+                        component: lt
                     }), r.createElement(oe.d, {
-                        path: "/videos/v:videoID",
-                        render: ft
+                        path: "/following",
+                        component: gt
                     }), r.createElement(oe.d, {
-                        path: "/videos/:videoID",
-                        component: dt
+                        path: "/inbox",
+                        component: st
                     }), r.createElement(oe.d, {
-                        path: "/store",
-                        render: St
-                    }), r.createElement(oe.d, {
-                        path: "/store/merch",
-                        render: St
-                    }), r.createElement(oe.d, {
-                        path: "/subscriptions_v2",
-                        render: pt
-                    }), " ", r.createElement(oe.d, {
-                        path: "/subscriptions",
-                        render: pt
-                    }), r.createElement(oe.d, {
-                        path: "/products/:productName/ticket/edit",
-                        component: mt
-                    }), r.createElement(oe.d, {
-                        path: "/settings/:tab?",
-                        component: ct
-                    }), r.createElement(oe.d, {
-                        path: "/team/:teamName/edit",
-                        render: kt
-                    }), r.createElement(oe.d, {
-                        path: "/manager/:pageName?",
+                        path: "/inventory",
                         component: at
                     }), r.createElement(oe.d, {
-                        path: "/messages/:pageName?",
+                        path: "/outbox",
+                        component: st
+                    }), r.createElement(oe.d, {
+                        path: "/videos/v:videoID",
+                        render: vt
+                    }), r.createElement(oe.d, {
+                        path: "/videos/:videoID",
+                        component: ut
+                    }), r.createElement(oe.d, {
+                        path: "/store",
+                        render: Et
+                    }), r.createElement(oe.d, {
+                        path: "/store/merch",
+                        render: Et
+                    }), r.createElement(oe.d, {
+                        path: "/subscriptions_v2",
+                        render: mt
+                    }), " ", r.createElement(oe.d, {
+                        path: "/subscriptions",
+                        render: mt
+                    }), r.createElement(oe.d, {
+                        path: "/products/:productName/ticket/edit",
+                        component: ht
+                    }), r.createElement(oe.d, {
+                        path: "/settings/:tab?",
+                        component: dt
+                    }), r.createElement(oe.d, {
+                        path: "/team/:teamName/edit",
+                        render: _t
+                    }), r.createElement(oe.d, {
+                        path: "/manager/:pageName?",
                         component: ot
+                    }), r.createElement(oe.d, {
+                        path: "/messages/:pageName?",
+                        component: st
                     }), r.createElement(oe.d, {
                         path: "/:channelName",
                         component: Ge,
                         exact: !0
                     }), r.createElement(oe.d, {
                         path: "/:channelName/report",
-                        component: lt
+                        component: ct
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/profile",
-                        render: bt
+                        render: yt
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/videos/(past_broadcasts?)",
-                        render: yt
+                        render: kt
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
                         component: qe
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/videos/:unknownFilter?",
-                        render: bt
+                        render: yt
                     }), r.createElement(oe.d, {
                         path: "/:channelName/clips",
                         component: Be
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/chat",
-                        render: vt
+                        render: bt
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/collections",
                         component: ze
@@ -31842,10 +31926,10 @@ webpackJsonp([80], {
                         component: He
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/inbox",
-                        component: ot
+                        component: st
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/outbox",
-                        component: ot
+                        component: st
                     }), r.createElement(oe.d, {
                         path: "/:channelName/p/:entityID",
                         component: Ge
@@ -31854,25 +31938,25 @@ webpackJsonp([80], {
                         component: Ge
                     }), r.createElement(oe.d, {
                         path: "/:channelName/embed",
-                        render: Et
+                        render: Ct
                     }), r.createElement(oe.d, {
                         path: "/:channelName/popout",
-                        render: Et
+                        render: Ct
                     }), r.createElement(oe.d, {
                         component: ce.a
                     }))
                 }, t
             }(r.Component),
-            Tt = Object(U.d)("DefaultRootRouter", {
+            Nt = Object(U.d)("DefaultRootRouter", {
                 autoReportInteractive: !0
-            })(Ct);
+            })(Tt);
         n.d(t, "b", function() {
-            return Nt
-        }), n.d(t, "a", function() {
             return Ot
+        }), n.d(t, "a", function() {
+            return Rt
         });
-        var Nt = "twilight-main",
-            Ot = function(e) {
+        var Ot = "twilight-main",
+            Rt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -31903,10 +31987,10 @@ webpackJsonp([80], {
                         flexDirection: f.T.Column,
                         zIndex: this.props.theatreModeEnabled ? void 0 : f._62.Default
                     }, r.createElement("main", {
-                        className: Nt
+                        className: Ot
                     }, r.createElement(y.b, null), r.createElement(s.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, r.createElement(Tt, {
+                    }, r.createElement(Nt, {
                         isLoggedIn: this.props.isLoggedIn
                     }), r.createElement(a.b, {
                         mainRef: this.state.rootScrollableContentRef
@@ -41217,6 +41301,7 @@ webpackJsonp([80], {
                 }), o({
                     id: "Cheer:100000",
                     bits: 1e5,
+                    canCheer: !1,
                     color: a.f[r.a.Yellow],
                     images: c
                 }))), d.sort(function(e, t) {
@@ -42611,7 +42696,9 @@ webpackJsonp([80], {
                     description: "",
                     imageURL: n,
                     isEntitled: t,
-                    canBeFulfilled: !1
+                    canBeFulfilled: !1,
+                    isPrimeOnly: !1,
+                    quantity: 1
                 }
             })
         }, t.a = function(e, t) {
@@ -42622,7 +42709,9 @@ webpackJsonp([80], {
                 description: e.title,
                 canBeFulfilled: !1,
                 isEntitled: t,
-                imageURL: e.image4x
+                imageURL: e.image4x,
+                isPrimeOnly: !1,
+                quantity: 1
             }
         };
         var i = n("Tzcg"),
@@ -46020,6 +46109,49 @@ webpackJsonp([80], {
         };
         var i = n("6sO2")
     },
+    jUhM: function(e, t, n) {
+        "use strict";
+        var i = n("GiK3"),
+            r = n("6sO2"),
+            a = n("3iBR"),
+            o = n("qe65"),
+            s = n("Odds"),
+            l = (n("FZFL"), {
+                themed: !0,
+                dark: {
+                    "1x": a.b + "/dark/animated/1/cheertutorial.gif"
+                },
+                light: {
+                    "1x": a.b + "/light/animated/1/cheertutorial.gif"
+                }
+            }),
+            c = function() {
+                return i.createElement(s._8, {
+                    display: s.R.Flex,
+                    padding: {
+                        top: 5,
+                        bottom: 3
+                    },
+                    flexGrow: 1,
+                    flexDirection: s.T.Column,
+                    justifyContent: s._7.Center,
+                    alignItems: s.c.Center
+                }, i.createElement(s.Q, {
+                    type: s._49.H4,
+                    bold: !0
+                }, i.createElement(o.a, {
+                    className: "cheermote-help__tutorial-image",
+                    sources: l
+                }), Object(r.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(s._8, {
+                    padding: {
+                        x: 3
+                    }
+                }, i.createElement(s.Q, null, Object(r.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
+            };
+        n.d(t, "a", function() {
+            return c
+        })
+    },
     jetF: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -46128,7 +46260,7 @@ webpackJsonp([80], {
                 return i
             }),
             function(e) {
-                e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
             }(i || (i = {}))
     },
     kIPx: function(e, t) {},
@@ -47855,6 +47987,14 @@ webpackJsonp([80], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isPrimeOnly"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
                                                             }]
                                                         }
                                                     }]
@@ -47870,11 +48010,11 @@ webpackJsonp([80], {
             }],
             loc: {
                 start: 0,
-                end: 504
+                end: 516
             }
         };
         i.loc.source = {
-            body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery InsiderPassTabEmotesAndBadges($channelID: ID!) {\nuser(id: $channelID) {\nid\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\nemotes {\nid\ntoken\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ntournament {\nid\nrewards {\ninsider {\nbadges {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}\n}\n}\n}\n}\n}',
+            body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery InsiderPassTabEmotesAndBadges($channelID: ID!) {\nuser(id: $channelID) {\nid\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\nemotes {\nid\ntoken\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ntournament {\nid\nrewards {\ninsider {\nbadges {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\n}\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -50550,7 +50690,7 @@ webpackJsonp([80], {
                 return i
             }),
             function(e) {
-                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.CommunityModeration = "community.moderation", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteOverview = "dev.overview", e.Unknown = "unknown"
+                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteOverview = "dev.overview", e.Unknown = "unknown"
             }(i || (i = {}))
     },
     wG4N: function(e, t) {
@@ -51450,49 +51590,6 @@ webpackJsonp([80], {
             r = n("OAwv");
         n.n(r)
     },
-    ySfT: function(e, t, n) {
-        "use strict";
-        var i = n("GiK3"),
-            r = n("6sO2"),
-            a = n("3iBR"),
-            o = n("qe65"),
-            s = n("Odds"),
-            l = (n("6lb1"), {
-                themed: !0,
-                dark: {
-                    "1x": a.b + "/dark/animated/1/cheertutorial.gif"
-                },
-                light: {
-                    "1x": a.b + "/light/animated/1/cheertutorial.gif"
-                }
-            }),
-            c = function() {
-                return i.createElement(s._8, {
-                    display: s.R.Flex,
-                    padding: {
-                        top: 5,
-                        bottom: 3
-                    },
-                    flexGrow: 1,
-                    flexDirection: s.T.Column,
-                    justifyContent: s._7.Center,
-                    alignItems: s.c.Center
-                }, i.createElement(s.Q, {
-                    type: s._49.H4,
-                    bold: !0
-                }, i.createElement(o.a, {
-                    className: "cheermote-help__tutorial-image",
-                    sources: l
-                }), Object(r.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(s._8, {
-                    padding: {
-                        x: 3
-                    }
-                }, i.createElement(s.Q, null, Object(r.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
-            };
-        n.d(t, "a", function() {
-            return c
-        })
-    },
     "yTC+": function(e, t) {
         var n = {
             kind: "Document",
@@ -52085,4 +52182,4 @@ webpackJsonp([80], {
         e.exports = n
     }
 }, [5]);
-//# sourceMappingURL=core-243ffb931076768cc51cc3d307fe6984.js.map
+//# sourceMappingURL=core-c12845ac2f9e93575a454f3a58bf963c.js.map

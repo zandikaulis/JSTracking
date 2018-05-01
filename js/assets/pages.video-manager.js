@@ -1,4 +1,4 @@
-webpackJsonp([90], {
+webpackJsonp([91], {
     "+27R": function(e, t, n) {
         (function(e) {
             "use strict";
@@ -1184,7 +1184,9 @@ webpackJsonp([90], {
                     }, n.state = {
                         edits: y(n.props.event),
                         fieldErrors: n.validator.getFieldErrors()
-                    }, n.validator.addValidatorForField(r.isValid, p.a.StartTime), n.validator.addValidatorForField(r.isValid, p.a.EndTime), n
+                    }, n.validator.addValidatorForField(r.isValid, p.a.StartTime), n.validator.addValidatorForField(function(e) {
+                        return Object(r.isValid)(e) && e > n.state.edits.startTime
+                    }, p.a.EndTime), n
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = null;
@@ -1213,7 +1215,10 @@ webpackJsonp([90], {
                             onChange: this.onLanguageChange,
                             disabled: !1,
                             defaultLanguage: this.state.edits.language
-                        })));
+                        }))),
+                        a = this.state.fieldErrors.endTime ? i.createElement(g.Q, {
+                            color: g.K.Error
+                        }, v(this.state.fieldErrors.endTime)) : null;
                     return i.createElement(g._8, {
                         className: "event-modal"
                     }, i.createElement(g._35, {
@@ -1305,7 +1310,7 @@ webpackJsonp([90], {
                         defaultDate: this.state.edits.startTime,
                         allowPast: !0,
                         removeNow: !0
-                    }), i.createElement(l.a, {
+                    }), a, i.createElement(l.a, {
                         onChange: this.onChangeEndDate,
                         dateLabel: Object(o.d)("End Date", "EventsModal"),
                         timeLabel: Object(o.d)("End Time ({localeName})", {
@@ -21593,14 +21598,7 @@ webpackJsonp([90], {
         var i, o = function() {
             function e(t) {
                 var n = this;
-                this.RequiredFields = [a.Title, a.Description, a.Language, a.StartTime, a.GameID, a.GameName], this.errorsForMissingFields = {}, this.validatorsForFields = {
-                    title: function(e) {
-                        return "" !== e.trim()
-                    },
-                    description: function(e) {
-                        return "" !== e.trim()
-                    }
-                }, this.editsAreValid = function(t) {
+                this.RequiredFields = [a.Title, a.Description, a.Language, a.StartTime, a.GameID, a.GameName], this.errorsForMissingFields = {}, this.validatorsForFields = {}, this.editsAreValid = function(t) {
                     t && n.updateEventEdits(t);
                     var a = n.RequiredFields.filter(n.findMissingFields);
                     a.forEach(function(t) {
@@ -21616,7 +21614,7 @@ webpackJsonp([90], {
                     var t = Object.keys(n.eventEdits).indexOf(e) < 0,
                         a = n.eventEdits[e],
                         r = Boolean(!a);
-                    return t || r
+                    return "string" == typeof a && (r = !a.trim().length), t || r
                 }, this.updateEventEdits(t)
             }
             return e.prototype.getFieldErrors = function() {
@@ -22228,4 +22226,4 @@ webpackJsonp([90], {
             r = "public"
     }
 });
-//# sourceMappingURL=pages.video-manager-f82157095099831ba242c41b7119ebe2.js.map
+//# sourceMappingURL=pages.video-manager-f1310efc7ad9ae2a84ecc1dd8b840bcd.js.map

@@ -6819,6 +6819,7 @@ webpackJsonp([31], {
             return !!("number" == s ? a(n) && r(t, n.length) : "string" == s && t in n) && i(n[t], e)
         }
     },
+    "4VHW": function(e, t) {},
     "4Xyl": function(e, t) {},
     "4d+L": function(e, t, n) {
         "use strict";
@@ -11456,7 +11457,9 @@ webpackJsonp([31], {
                 return s.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.state.showRoomPicker && this.dismissGeneralOnboarding()
                 }, t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
+                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this;
                     if (this.props.data && !e.isPopout && (this.props.data.loading || this.props.channelLogin !== e.channelLogin) && e.data.user && e.data.user.channelRooms) {
@@ -11560,7 +11563,7 @@ webpackJsonp([31], {
                         className: "room-selector__open-header-wrapper"
                     }, t)), t
                 }, t.prototype.renderRoomPicker = function() {
-                    if (this.state.showRoomPicker && this.props.data.user) return l.createElement(u.a, {
+                    if (this.state.showRoomPicker && this.props.data.user && this.props.firstPageLoaded) return l.createElement(u.a, {
                         onClickOut: this.closeRoomPicker
                     }, l.createElement(si, {
                         channelID: this.props.data.user.id,
@@ -11697,6 +11700,7 @@ webpackJsonp([31], {
             }), Object(k.d)("RoomSelector"))(pi);
         var fi = Object(i.b)(function(e) {
             return {
+                firstPageLoaded: e.session.firstPageLoaded,
                 isHidden: e.chat.isHidden,
                 sessionUser: Object(r.c)(e)
             }
@@ -18348,7 +18352,6 @@ webpackJsonp([31], {
         };
         e.exports = n
     },
-    DVR9: function(e, t) {},
     DY3c: function(e, t) {},
     Dc0G: function(e, t, n) {
         (function(e) {
@@ -20141,444 +20144,6 @@ webpackJsonp([31], {
             return a
         }
     },
-    I2FV: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "ChannelPage_User"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "currentChannelLogin"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "currentChannelLogin"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "broadcastSettings"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "language"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "displayName"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "stream"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "game"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "name"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "type"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "settings"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "channelFeedEnabled"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hosting"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "login"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "displayName"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "profileImageURL"
-                                        },
-                                        arguments: [{
-                                            kind: "Argument",
-                                            name: {
-                                                kind: "Name",
-                                                value: "width"
-                                            },
-                                            value: {
-                                                kind: "IntValue",
-                                                value: "70"
-                                            }
-                                        }],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "broadcastSettings"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "language"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "stream"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "game"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: []
-                                                    }, {
-                                                        kind: "Field",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "name"
-                                                        },
-                                                        arguments: [],
-                                                        directives: []
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "lastBroadcast"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "game"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "name"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "follower"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "node"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: []
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 428
-            }
-        };
-        n.loc.source = {
-            body: "query ChannelPage_User($currentChannelLogin: String!) {\ncurrentUser {\nid\n}\nuser(login: $currentChannelLogin) {\nid\nbroadcastSettings {\nid\nlanguage\n}\ndisplayName\nstream {\nid\ngame {\nid\nname\n}\ntype\n}\nsettings {\nchannelFeedEnabled\n}\nhosting {\nid\nlogin\ndisplayName\nprofileImageURL(width: 70)\nbroadcastSettings {\nid\nlanguage\n}\nstream {\nid\ngame {\nid\nname\n}\n}\n}\nlastBroadcast {\nid\ngame {\nid\nname\n}\n}\nself {\nfollower {\nnode {\nid\n}\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     I5q7: function(e, t, n) {
         var i = {
             kind: "Document",
@@ -21391,6 +20956,7 @@ webpackJsonp([31], {
             return r(e) ? i(o(e)) : a(e)
         }
     },
+    "Jc+w": function(e, t) {},
     JrbG: function(e, t) {
         var n = {
             kind: "Document",
@@ -22255,7 +21821,6 @@ webpackJsonp([31], {
             return N
         })
     },
-    KWLn: function(e, t) {},
     KYFq: function(e, t, n) {
         var i = n("kl/u"),
             a = n("SCwa"),
@@ -27938,6 +27503,7 @@ webpackJsonp([31], {
         }
     },
     RoPg: function(e, t) {},
+    RwqP: function(e, t) {},
     S0OZ: function(e, t, n) {
         var i = {
             kind: "Document",
@@ -32244,7 +31810,6 @@ webpackJsonp([31], {
             return "function" != typeof e.constructor || r(e) ? {} : i(a(e))
         }
     },
-    WT1Y: function(e, t) {},
     WlEI: function(e, t) {
         e.exports = function() {
             return !1
@@ -34036,6 +33601,7 @@ webpackJsonp([31], {
         }
         i.definitions = i.definitions.concat(r(n("I5q7").definitions)), i.definitions = i.definitions.concat(r(n("fWQn").definitions)), e.exports = i
     },
+    Z1Q9: function(e, t) {},
     Z2pD: function(e, t, n) {
         var i = n("dCZQ"),
             a = "__lodash_hash_undefined__";
@@ -35756,14 +35322,6 @@ webpackJsonp([31], {
                 }, Object(s.d)("Get Bits", "Bits--BalanceFooter"))))
             },
             ve = function(e) {
-                return e.event, a.createElement(ge, {
-                    bitsConfig: e.bitsConfig,
-                    onClickGetBits: e.onClickGetBits,
-                    balance: e.balance,
-                    selfBitsBadge: e.selfBitsBadge
-                })
-            },
-            be = function(e) {
                 return a.createElement(b._8, {
                     flexGrow: 1
                 }, a.createElement(b._8, {
@@ -35785,15 +35343,23 @@ webpackJsonp([31], {
                     animationDuration: fe.m.UNDO_PROMPT_DURATION / 1e3
                 }))
             },
+            be = function(e) {
+                return e.event, a.createElement(ge, {
+                    bitsConfig: e.bitsConfig,
+                    onClickGetBits: e.onClickGetBits,
+                    balance: e.balance,
+                    selfBitsBadge: e.selfBitsBadge
+                })
+            },
             ke = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isSending ? this.props.totalBits >= fe.l ? a.createElement(be, {
+                    return this.props.isSending ? this.props.totalBits >= fe.l ? a.createElement(ve, {
                         onCancel: this.props.onCancelSend,
                         onConfirm: this.props.onConfirmSend
-                    }) : null : this.props.event ? a.createElement(ve, {
+                    }) : null : this.props.event ? a.createElement(be, {
                         event: this.props.event,
                         selfBitsBadge: this.props.userSelfBitsBadge,
                         bitsConfig: this.props.bitsConfig,
@@ -35832,7 +35398,7 @@ webpackJsonp([31], {
                 }, Object(s.d)("Fetching Bits", "BitsCard"))))
             }),
             _e = n("QRuM"),
-            Ee = n("ySfT"),
+            Ee = n("jUhM"),
             Ce = function(e) {
                 return a.createElement(b._8, {
                     display: b.R.Flex,
@@ -35885,7 +35451,7 @@ webpackJsonp([31], {
                     showAmount: e.tier > 0
                 }))
             },
-            Ne = (n("DVR9"), function(e) {
+            Ne = (n("Z1Q9"), function(e) {
                 var t = null;
                 e.minToCheer > 1 && (t = a.createElement(b.Q, {
                     "data-test-selector": "min-to-cheer-selector",
@@ -35920,224 +35486,8 @@ webpackJsonp([31], {
                     color: b.K.Alt2
                 }, Object(s.d)("Cheermotes have multiple tiers, rollover below to see each one!", "Bits--CheermoteTierIntro"))), t, n)
             }),
-            we = n("1bR2"),
-            De = n.n(we),
-            Ie = n("vDGQ"),
-            Oe = (n("CGWe"), function(e) {
-                return Object(Ie.d)({
-                    action: Ie.a.View,
-                    type: Ie.c.BitsIntro,
-                    channelId: e.channelID
-                }), a.createElement(b._8, {
-                    "data-test-selector": "crate-intro"
-                }, a.createElement(b._8, {
-                    padding: {
-                        x: 1,
-                        top: 2,
-                        bottom: 1
-                    }
-                }, a.createElement(b.Q, {
-                    fontSize: b.V.Size4,
-                    bold: !0
-                }, Object(s.d)("Share the Holiday Cheer!", "Crates"))), a.createElement(b._35, {
-                    className: "crates-holiday-background",
-                    background: b.n.Alt,
-                    padding: 1,
-                    margin: {
-                        y: 1
-                    },
-                    display: b.R.Flex,
-                    justifyContent: b._7.Around,
-                    alignItems: b.c.End,
-                    borderTop: !0,
-                    borderBottom: !0
-                }, a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Long,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "XmasRaid"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633161/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/3.0 3.0x",
-                    alt: "XmasRaid"
-                }))), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Medium,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "MerryPurple"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633177/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/3.0 3.0x",
-                    alt: "MerryPurple"
-                }))), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Short,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "GiftRage"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/634141/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/3.0 3.0x",
-                    alt: "GiftRage"
-                }))), a.createElement("img", {
-                    src: De.a,
-                    height: "50",
-                    width: "50"
-                }), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Short,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "RudolphWhoa"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633166/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/3.0 3.0x",
-                    alt: "RudolphWhoa"
-                }))), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Medium,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "FeelsGingerMan"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633171/1.0 1x,https://static-cdn.jtvnw.net/emoticons/v1/633171/2.0 2x,https://static-cdn.jtvnw.net/emoticons/v1/633171/3.0 4x",
-                    alt: "FeelsGingerMan"
-                }))), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Long,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "OrnaMental"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633170/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/3.0 3.0x",
-                    alt: "OrnaMental"
-                })))), a.createElement(b._8, {
-                    padding: 1
-                }, a.createElement(b.Q, {
-                    type: b._49.P
-                }, Object(s.d)("Cheer any amount to support your streamer, and get a holiday gift! Cheer {minBits, number} Bits or more, and others in chat can get a gift too!", {
-                    minBits: 250
-                }, "Crates")), a.createElement(b.Q, {
-                    type: b._49.Strong
-                }, a.createElement("a", {
-                    href: "http://link.twitch.tv/holiday-emotes",
-                    target: "_blank",
-                    rel: "noreferrer noopener"
-                }, Object(s.d)("Details", "Crates")))))
-            }),
-            Re = (n("kjfG"), function() {
-                return a.createElement(b._8, {
-                    className: "owl-2018-introduction"
-                }, a.createElement(b._8, {
-                    padding: {
-                        top: 2,
-                        bottom: 1
-                    }
-                }, a.createElement(b.Q, {
-                    fontSize: b.V.Size5,
-                    bold: !0
-                }, Object(s.d)("Cheer with Bits and unlock loot!", "OWL2018Introduction"))), a.createElement(b._8, {
-                    className: "owl-2018-introduction__banner-background",
-                    padding: {
-                        top: 1
-                    }
-                }, a.createElement("img", {
-                    className: "owl-2018-introduction__banner-image",
-                    src: fe.c + "/owl-2017/overwatch-wide.png"
-                })), a.createElement(b._8, {
-                    padding: {
-                        x: 2,
-                        top: 1,
-                        bottom: .5
-                    }
-                }, a.createElement(b.Q, null, Object(s.d)("Cheer 150 Bits or more to hype your team and get a team emote! Cheer along with your fellow fans to unlock in-game skins based on everyone’s Cheers!", "OWL2018Introduction"))), a.createElement(b._8, {
-                    padding: {
-                        bottom: 1
-                    }
-                }, a.createElement(b.O, {
-                    to: "http://link.twitch.tv/owl-drops-onsite-bitscard-blogus",
-                    targetBlank: !0,
-                    hoverUnderlineNone: !1
-                }, Object(s.d)("Details", "OWL2018Introduction"))))
-            });
-        ! function(e) {
-            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "owl2018"
-        }(ne || (ne = {}));
-        var Te = function(e) {
-                switch (e.event) {
-                    case ne.OWL2018:
-                        return a.createElement(Re, null);
-                    case ne.CratesChristmas:
-                        return a.createElement(Oe, {
-                            onClickHelp: e.onClickHelp,
-                            channelID: e.channelID
-                        });
-                    default:
-                        return a.createElement(Ce, {
-                            onClickHelp: e.onClickHelp
-                        })
-                }
-            },
-            xe = n("N221"),
-            Fe = n("cv4W"),
-            Me = n.n(Fe),
-            Le = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = "";
-                    if (this.props.amount < 250) {
-                        var t = 250 - this.props.amount;
-                        e = Object(s.d)("{bitsToGo, plural, one {Cheer # more Bit to share gifts with chat!} other {Cheer # more Bits to share gifts with chat!}}", {
-                            bitsToGo: t
-                        }, "Crates")
-                    } else e = Object(s.d)("Your Cheer will share gifts with chat!", "Crates");
-                    return a.createElement(b._35, {
-                        className: "crate-christmas-2017-reminder",
-                        background: b.n.Alt,
-                        borderTop: !0,
-                        padding: 1
-                    }, a.createElement(b._8, {
-                        display: b.R.Inline,
-                        margin: {
-                            right: .5
-                        }
-                    }, a.createElement("img", {
-                        src: Me.a,
-                        height: "22",
-                        width: "22"
-                    })), a.createElement(b.Q, {
-                        type: b._49.Strong
-                    }, e))
-                }, t
-            }(a.Component),
-            je = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    switch (this.props.event) {
-                        case ne.CratesChristmas:
-                            return a.createElement(Le, {
-                                amount: this.props.amount
-                            });
-                        default:
-                            return null
-                    }
-                }, t
-            }(a.Component),
-            Ae = (n("WT1Y"), function(e) {
+            we = n("N221"),
+            De = (n("dtvS"), function(e) {
                 var t = e.prefixes.map(function(t, n) {
                     if (t.alt && t.cheerAmount) return a.createElement(b._2, {
                         className: "pending-cheer-list__list-item",
@@ -36166,7 +35516,58 @@ webpackJsonp([31], {
                     className: "pending-cheer-list"
                 }, t)
             }),
-            Pe = (n("KWLn"), function(e) {
+            Ie = n("cv4W"),
+            Oe = n.n(Ie),
+            Re = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = "";
+                    if (this.props.amount < 250) {
+                        var t = 250 - this.props.amount;
+                        e = Object(s.d)("{bitsToGo, plural, one {Cheer # more Bit to share gifts with chat!} other {Cheer # more Bits to share gifts with chat!}}", {
+                            bitsToGo: t
+                        }, "Crates")
+                    } else e = Object(s.d)("Your Cheer will share gifts with chat!", "Crates");
+                    return a.createElement(b._35, {
+                        className: "crate-christmas-2017-reminder",
+                        background: b.n.Alt,
+                        borderTop: !0,
+                        padding: 1
+                    }, a.createElement(b._8, {
+                        display: b.R.Inline,
+                        margin: {
+                            right: .5
+                        }
+                    }, a.createElement("img", {
+                        src: Oe.a,
+                        height: "22",
+                        width: "22"
+                    })), a.createElement(b.Q, {
+                        type: b._49.Strong
+                    }, e))
+                }, t
+            }(a.Component);
+        ! function(e) {
+            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "owl2018"
+        }(ne || (ne = {}));
+        var Te = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    switch (this.props.event) {
+                        case ne.CratesChristmas:
+                            return a.createElement(Re, {
+                                amount: this.props.amount
+                            });
+                        default:
+                            return null
+                    }
+                }, t
+            }(a.Component),
+            xe = (n("Jc+w"), function(e) {
                 var t;
                 if (e.prefixes && 1 === e.prefixes.length) {
                     var n = e.prefixes[0].alt;
@@ -36185,9 +35586,9 @@ webpackJsonp([31], {
                     margin: {
                         top: 1
                     }
-                }, a.createElement(xe.b, {
+                }, a.createElement(we.b, {
                     className: "pending-cheer__scroll-container"
-                }, a.createElement(Ae, {
+                }, a.createElement(De, {
                     prefixes: e.prefixes,
                     bitsConfig: e.bitsConfig
                 })));
@@ -36273,13 +35674,13 @@ webpackJsonp([31], {
                         top: 3,
                         x: 3
                     }
-                }, o)), !o && !r && a.createElement(je, {
+                }, o)), !o && !r && a.createElement(Te, {
                     event: e.event,
                     amount: e.amount
                 }))
             }),
-            Ue = n("qe65"),
-            Be = (n("f1ZS"), {
+            Fe = n("qe65"),
+            Me = (n("RwqP"), {
                 themed: !0,
                 dark: {
                     "1x": fe.b + "/dark/animated/promo/intro.gif"
@@ -36288,7 +35689,7 @@ webpackJsonp([31], {
                     "1x": fe.b + "/light/animated/promo/intro.gif"
                 }
             }),
-            Ve = function() {
+            Le = function() {
                 return a.createElement(b._8, {
                     display: b.R.Flex,
                     flexDirection: b.T.Column,
@@ -36300,25 +35701,25 @@ webpackJsonp([31], {
                     padding: {
                         bottom: 1
                     }
-                }, a.createElement(Ue.a, {
-                    sources: Be
+                }, a.createElement(Fe.a, {
+                    sources: Me
                 })), a.createElement(b.Q, {
                     italic: !0
                 }, Object(s.d)("Your Cheer is currently processing.", "Bits--SendingBits")))
             },
-            ze = (n("ZoRy"), function(e) {
+            je = (n("4VHW"), function(e) {
                 var t = Object(s.d)("You are using {totalBits} Bits to cheer in {channelName}'s chat.", {
                         totalBits: e.totalBits,
                         channelName: e.channelDisplayName
                     }, "Bits--UndoPrompt"),
                     n = null;
-                if (e.prefixes && e.prefixes.length > 1) n = a.createElement(xe.b, {
+                if (e.prefixes && e.prefixes.length > 1) n = a.createElement(we.b, {
                     className: "bits-undo-prompt__scroll-container"
                 }, a.createElement(b._8, {
                     margin: {
                         top: 1
                     }
-                }, a.createElement(Ae, {
+                }, a.createElement(De, {
                     prefixes: e.prefixes,
                     bitsConfig: e.bitsConfig
                 })));
@@ -36346,11 +35747,176 @@ webpackJsonp([31], {
                     className: "bits-undo-prompt"
                 }, n, a.createElement(b.Q, null, t))
             }),
+            Ae = n("1bR2"),
+            Pe = n.n(Ae),
+            Ue = n("vDGQ"),
+            Be = (n("CGWe"), function(e) {
+                return Object(Ue.d)({
+                    action: Ue.a.View,
+                    type: Ue.c.BitsIntro,
+                    channelId: e.channelID
+                }), a.createElement(b._8, {
+                    "data-test-selector": "crate-intro"
+                }, a.createElement(b._8, {
+                    padding: {
+                        x: 1,
+                        top: 2,
+                        bottom: 1
+                    }
+                }, a.createElement(b.Q, {
+                    fontSize: b.V.Size4,
+                    bold: !0
+                }, Object(s.d)("Share the Holiday Cheer!", "Crates"))), a.createElement(b._35, {
+                    className: "crates-holiday-background",
+                    background: b.n.Alt,
+                    padding: 1,
+                    margin: {
+                        y: 1
+                    },
+                    display: b.R.Flex,
+                    justifyContent: b._7.Around,
+                    alignItems: b.c.End,
+                    borderTop: !0,
+                    borderBottom: !0
+                }, a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Long,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "XmasRaid"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633161/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/3.0 3.0x",
+                    alt: "XmasRaid"
+                }))), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Medium,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "MerryPurple"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633177/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/3.0 3.0x",
+                    alt: "MerryPurple"
+                }))), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Short,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "GiftRage"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/634141/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/3.0 3.0x",
+                    alt: "GiftRage"
+                }))), a.createElement("img", {
+                    src: Pe.a,
+                    height: "50",
+                    width: "50"
+                }), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Short,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "RudolphWhoa"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633166/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/3.0 3.0x",
+                    alt: "RudolphWhoa"
+                }))), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Medium,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "FeelsGingerMan"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633171/1.0 1x,https://static-cdn.jtvnw.net/emoticons/v1/633171/2.0 2x,https://static-cdn.jtvnw.net/emoticons/v1/633171/3.0 4x",
+                    alt: "FeelsGingerMan"
+                }))), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Long,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "OrnaMental"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633170/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/3.0 3.0x",
+                    alt: "OrnaMental"
+                })))), a.createElement(b._8, {
+                    padding: 1
+                }, a.createElement(b.Q, {
+                    type: b._49.P
+                }, Object(s.d)("Cheer any amount to support your streamer, and get a holiday gift! Cheer {minBits, number} Bits or more, and others in chat can get a gift too!", {
+                    minBits: 250
+                }, "Crates")), a.createElement(b.Q, {
+                    type: b._49.Strong
+                }, a.createElement("a", {
+                    href: "http://link.twitch.tv/holiday-emotes",
+                    target: "_blank",
+                    rel: "noreferrer noopener"
+                }, Object(s.d)("Details", "Crates")))))
+            }),
+            Ve = (n("kjfG"), function() {
+                return a.createElement(b._8, {
+                    className: "owl-2018-introduction"
+                }, a.createElement(b._8, {
+                    padding: {
+                        top: 2,
+                        bottom: 1
+                    }
+                }, a.createElement(b.Q, {
+                    fontSize: b.V.Size5,
+                    bold: !0
+                }, Object(s.d)("Cheer with Bits and unlock loot!", "OWL2018Introduction"))), a.createElement(b._8, {
+                    className: "owl-2018-introduction__banner-background",
+                    padding: {
+                        top: 1
+                    }
+                }, a.createElement("img", {
+                    className: "owl-2018-introduction__banner-image",
+                    src: fe.c + "/owl-2017/overwatch-wide.png"
+                })), a.createElement(b._8, {
+                    padding: {
+                        x: 2,
+                        top: 1,
+                        bottom: .5
+                    }
+                }, a.createElement(b.Q, null, Object(s.d)("Cheer 150 Bits or more to hype your team and get a team emote! Cheer along with your fellow fans to unlock in-game skins based on everyone’s Cheers!", "OWL2018Introduction"))), a.createElement(b._8, {
+                    padding: {
+                        bottom: 1
+                    }
+                }, a.createElement(b.O, {
+                    to: "http://link.twitch.tv/owl-drops-onsite-bitscard-blogus",
+                    targetBlank: !0,
+                    hoverUnderlineNone: !1
+                }, Object(s.d)("Details", "OWL2018Introduction"))))
+            }),
+            ze = function(e) {
+                switch (e.event) {
+                    case ne.OWL2018:
+                        return a.createElement(Ve, null);
+                    case ne.CratesChristmas:
+                        return a.createElement(Be, {
+                            onClickHelp: e.onClickHelp,
+                            channelID: e.channelID
+                        });
+                    default:
+                        return a.createElement(Ce, {
+                            onClickHelp: e.onClickHelp
+                        })
+                }
+            },
             He = function(e) {
                 var t = s.b.get("crate_snowman_launch", _e.a.Off),
                     n = t === _e.a.On || t === _e.a.StaffOnly && e.isStaff ? ne.CratesChristmas : null,
                     i = e.event || n;
-                if (e.isSending) return e.totalBits < fe.l ? a.createElement(Ve, null) : a.createElement(ze, {
+                if (e.isSending) return e.totalBits < fe.l ? a.createElement(Le, null) : a.createElement(je, {
                     bitsConfig: e.bitsConfig,
                     channelDisplayName: e.displayName,
                     prefixes: e.currentCheers,
@@ -36363,7 +35929,7 @@ webpackJsonp([31], {
                     prefix: e.hoveredCheermote,
                     tier: e.hoveredTier
                 });
-                if (e.totalBits) return a.createElement(Pe, {
+                if (e.totalBits) return a.createElement(xe, {
                     bitsConfig: e.bitsConfig,
                     prefixes: e.currentCheers,
                     amount: e.totalBits,
@@ -36384,7 +35950,7 @@ webpackJsonp([31], {
                         minToCheer: o
                     })
                 }
-                return i ? a.createElement(Te, {
+                return i ? a.createElement(ze, {
                     event: i,
                     onClickHelp: e.showHelp,
                     channelID: e.channelID
@@ -36484,7 +36050,7 @@ webpackJsonp([31], {
                     var e = this,
                         t = this.props.bitsConfig.indexedActions[this.props.chosenCheermote.toLowerCase()],
                         n = t.orderedTiers.filter(function(e) {
-                            return e.bits <= fe.k
+                            return e.canCheer
                         }).map(function(e) {
                             return {
                                 imgSrc: e.indexedImages.LIGHT.static.get(2),
@@ -38809,7 +38375,6 @@ webpackJsonp([31], {
             }
         }
     },
-    ZoRy: function(e, t) {},
     ZumO: function(e, t) {},
     "a/6q": function(e, t, n) {
         var i = n("DRNv");
@@ -40108,6 +39673,7 @@ webpackJsonp([31], {
             return a < 0 ? (++this.size, n.push([e, t])) : n[a][1] = t, this
         }
     },
+    dtvS: function(e, t) {},
     duB3: function(e, t, n) {
         var i = n("WxI4"),
             a = n("dFpP"),
@@ -40760,7 +40326,6 @@ webpackJsonp([31], {
     eoJF: function(e, t, n) {
         e.exports = n("gvwl")
     },
-    f1ZS: function(e, t) {},
     f6Cj: function(e, t, n) {
         "use strict";
         t.a = function(e) {
@@ -45063,6 +44628,25 @@ webpackJsonp([31], {
                                                                 directives: []
                                                             }]
                                                         }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "bits"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "FragmentSpread",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "reward"
+                                                                },
+                                                                directives: []
+                                                            }]
+                                                        }
                                                     }]
                                                 }
                                             }]
@@ -45076,11 +44660,11 @@ webpackJsonp([31], {
             }],
             loc: {
                 start: 0,
-                end: 875
+                end: 894
             }
         };
         i.loc.source = {
-            body: '#import "twilight/features/badges/models/badge-fragment.gql"\n#import "twilight/features/esports-campaign-tabs/models/milestone.gql"\n#import "twilight/features/esports-campaign-tabs/models/reward.gql"\nquery EsportsGetRewards($channelID: ID!) {\nuser(id: $channelID) {\nid\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\nemotes {\nid\ntoken\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\nself {\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\n}\nisModerator\n}\ntournament {\nid\nprogress {\namount\nmilestones {\n...milestone\n}\n}\nself {\nprogress {\namount\nmilestones {\n...milestone\n}\n}\n}\nrewards {\nglobal {\n...reward\n}\nteam {\n...reward\n}\nindividual {\n...reward\n}\ninsider {\nheroSkins {\n...reward\n}\ninGameContent {\n...reward\n}\nbadges {\n...reward\n}\n}\n}\n}\n}\n}',
+            body: '#import "twilight/features/badges/models/badge-fragment.gql"\n#import "twilight/features/esports-campaign-tabs/models/milestone.gql"\n#import "twilight/features/esports-campaign-tabs/models/reward.gql"\nquery EsportsGetRewards($channelID: ID!) {\nuser(id: $channelID) {\nid\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\nemotes {\nid\ntoken\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\nself {\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\n}\nisModerator\n}\ntournament {\nid\nprogress {\namount\nmilestones {\n...milestone\n}\n}\nself {\nprogress {\namount\nmilestones {\n...milestone\n}\n}\n}\nrewards {\nglobal {\n...reward\n}\nteam {\n...reward\n}\nindividual {\n...reward\n}\ninsider {\nheroSkins {\n...reward\n}\ninGameContent {\n...reward\n}\nbadges {\n...reward\n}\nbits {\n...reward\n}\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -46134,16 +45718,32 @@ webpackJsonp([31], {
                         },
                         arguments: [],
                         directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "isPrimeOnly"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "quantity"
+                        },
+                        arguments: [],
+                        directives: []
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 99
+                end: 120
             }
         };
         n.loc.source = {
-            body: "fragment reward on TournamentReward {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}",
+            body: "fragment reward on TournamentReward {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\nquantity\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -46613,6 +46213,267 @@ webpackJsonp([31], {
         }
     },
     nQZu: function(e, t) {},
+    nZKH: function(e, t, n) {
+        var i = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "channel"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "User"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "broadcastSettings"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "language"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "displayName"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "stream"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "game"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "name"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "type"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "settings"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "channelFeedEnabled"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "lastBroadcast"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "game"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "name"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "self"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "follower"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "node"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "FragmentSpread",
+                        name: {
+                            kind: "Name",
+                            value: "hostingChannel"
+                        },
+                        directives: []
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 320
+            }
+        };
+        i.loc.source = {
+            body: '#import "twilight/pages/channel/components/channel-page/queries/hosting-channel.gql"\nfragment channel on User {\nid\nbroadcastSettings {\nid\nlanguage\n}\ndisplayName\nstream {\nid\ngame {\nid\nname\n}\ntype\n}\nsettings {\nchannelFeedEnabled\n}\nlastBroadcast {\nid\ngame {\nid\nname\n}\n}\nself {\nfollower {\nnode {\nid\n}\n}\n}\n...hostingChannel\n}',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var a = {};
+        i.definitions = i.definitions.concat(n("om/g").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var t = e.name.value;
+            return !a[t] && (a[t] = !0, !0)
+        })), e.exports = i
+    },
     ndFl: function(e, t, n) {
         var i = n("NSoo"),
             a = n("kjxi"),
@@ -55262,8 +55123,8 @@ webpackJsonp([31], {
             Dr = function(e) {
                 return "esport_insider_pass_toggle_state_" + e.toLowerCase()
             },
-            Ir = (n("pEC1"), n("I2FV")),
-            Or = "channel_page_channel_panels_test_selector",
+            Ir = n("wrMo"),
+            Or = (n("pEC1"), "channel_page_channel_panels_test_selector"),
             Rr = "esport_insider_pass_secondary_channel",
             Tr = function(e) {
                 function t(t) {
@@ -55274,7 +55135,7 @@ webpackJsonp([31], {
                         var e = n.props.data.currentUser ? n.props.data.currentUser.id : null,
                             t = n.props.match.params.channelName,
                             i = n.props.data.user && n.props.data.user.id ? n.props.data.user : null;
-                        if (!i) return null;
+                        if (!i || !i.id) return null;
                         if (Object(b.b)(i.id, n.props.sessionUser)) {
                             var a = n.state.videoPlayerSource === n.secondaryChannel;
                             return u.createElement(Gi, {
@@ -55430,7 +55291,7 @@ webpackJsonp([31], {
                         t = this.props.data.user && this.props.data.user.id ? this.props.data.user : null;
                     if (!this.props.data.loading && !t) return u.createElement(h.a, null);
                     var n = null;
-                    return !this.state.isHosting && this.props.firstPageLoaded && t && (n = u.createElement(na, {
+                    return !this.state.isHosting && this.props.firstPageLoaded && t && t.id && (n = u.createElement(na, {
                         channelName: this.props.match.params.channelName,
                         channelID: t.id,
                         triggerPlayerReposition: this.triggerPlayerReposition
@@ -55444,8 +55305,8 @@ webpackJsonp([31], {
                     }, n, !this.state.isHosting && u.createElement(Er, {
                         channelLogin: e
                     }), u.createElement(Ua.a, {
-                        hostChannelID: t ? t.id : "",
-                        hostChannelDisplayName: t ? t.displayName : "",
+                        hostChannelID: t && t.id ? t.id : "",
+                        hostChannelDisplayName: t && t.displayName ? t.displayName : "",
                         hostChannelLogin: this.props.match.params.channelName,
                         hostedChannelDisplayName: this.state.hostedChannelDisplayName,
                         hostedChannelLogin: this.getHostedChannelLogin(),
@@ -55489,7 +55350,7 @@ webpackJsonp([31], {
                         channelID: this.props.match.params.channelName
                     }), this.props.isLoggedIn && u.createElement(X, {
                         channelID: this.props.match.params.channelName
-                    }), this.props.isLoggedIn && t && Object(b.b)(t.id, this.props.sessionUser) && u.createElement(Zi, null)), this.props.firstPageLoaded && u.createElement(Pa.a, {
+                    }), this.props.isLoggedIn && t && t.id && Object(b.b)(t.id, this.props.sessionUser) && u.createElement(Zi, null)), this.props.firstPageLoaded && u.createElement(Pa.a, {
                         channelName: this.props.match.params.channelName
                     }))
                 }, t.prototype.updateWatchingActivity = function(e) {
@@ -55509,7 +55370,7 @@ webpackJsonp([31], {
                 }, t.prototype.channelIsLiveOrHosting = function(e) {
                     return !(e.data.loading || e.data.error || !e.data.user) && !!(e.data.user.stream && e.data.user.stream.id || e.data.user.hosting && e.data.user.hosting.id)
                 }, t.prototype.onRender = function() {
-                    this.props.data.loading || (this.props.latencyTracking.reportInteractive(), this.props.data.user && p.o.setPageTitle(this.props.data.user.displayName))
+                    this.props.data.loading || (this.props.latencyTracking.reportInteractive(), this.props.data.user && p.o.setPageTitle(this.props.data.user.displayName || ""))
                 }, t.prototype.setExperimentsState = function() {
                     return l.__awaiter(this, void 0, void 0, function() {
                         var e;
@@ -55554,7 +55415,7 @@ webpackJsonp([31], {
                         hosted_game: function(e) {
                             return e.data.user && e.data.user.hosting && e.data.user.hosting.stream && e.data.user.hosting.stream.game && e.data.user.hosting.stream.game.name
                         }(e),
-                        is_following: e.data.user && null !== e.data.user.self && null !== e.data.user.self.follower.node,
+                        is_following: e.data.user && null !== e.data.user.self && null !== e.data.user.self.follower && null !== e.data.user.self.follower.node,
                         is_live: e.data.user && !!(e.data.user.stream && e.data.user.stream.id && e.data.user.stream.id.length > 0),
                         language: function(e) {
                             return e.data.user && e.data.user.hosting && e.data.user.hosting.broadcastSettings && e.data.user.hosting.broadcastSettings.language
@@ -55701,6 +55562,173 @@ webpackJsonp([31], {
             var t = e.name.value;
             return !a[t] && (a[t] = !0, !0)
         })), e.exports = i
+    },
+    "om/g": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "hostingChannel"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "User"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "hosting"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "profileImageURL"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "width"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "70"
+                                    }
+                                }],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "broadcastSettings"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "language"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "stream"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "game"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "name"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 160
+            }
+        };
+        n.loc.source = {
+            body: "fragment hostingChannel on User {\nhosting {\nid\nlogin\ndisplayName\nprofileImageURL(width: 70)\nbroadcastSettings {\nid\nlanguage\n}\nstream {\nid\ngame {\nid\nname\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     oqL2: function(e, t) {
         e.exports = function(e) {
@@ -60278,6 +60306,114 @@ webpackJsonp([31], {
                 }
         }
     },
+    wrMo: function(e, t, n) {
+        var i = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "ChannelPage_User"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "currentChannelLogin"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "currentChannelLogin"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "channel"
+                                },
+                                directives: []
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 202
+            }
+        };
+        i.loc.source = {
+            body: '#import "twilight/pages/channel/components/channel-page/queries/channel.gql"\nquery ChannelPage_User($currentChannelLogin: String!) {\ncurrentUser {\nid\n}\nuser(login: $currentChannelLogin) {\n...channel\n}\n}',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var a = {};
+        i.definitions = i.definitions.concat(n("nZKH").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var t = e.name.value;
+            return !a[t] && (a[t] = !0, !0)
+        })), e.exports = i
+    },
     "x49/": function(e, t, n) {
         e.exports = n.p + "assets/notification_upsell_arrow-c9d4ff7c87444b45d8134f21635c5443.png"
     },
@@ -62844,4 +62980,4 @@ webpackJsonp([31], {
         }
     }
 });
-//# sourceMappingURL=pages.channel-6c4470b3e63a297587462dac292169d0.js.map
+//# sourceMappingURL=pages.channel-bb3ecb7a637061aa9ea701e7e73a3b81.js.map

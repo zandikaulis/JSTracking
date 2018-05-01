@@ -1,4 +1,4 @@
-webpackJsonp([106], {
+webpackJsonp([107], {
     "1zmE": function(e, t, n) {
         var a = {
             kind: "Document",
@@ -518,7 +518,7 @@ webpackJsonp([106], {
                     }))
                 }, t
             }(l.Component));
-        var I, S, O, A = Object(v.b)(null, function(e) {
+        var I, S, A, O = Object(v.b)(null, function(e) {
             return Object(s.b)({
                 closeModal: _.c
             }, e)
@@ -528,7 +528,7 @@ webpackJsonp([106], {
         }(I || (I = {})), (S || (S = {})).PAY_TO_STREAM = "PAY_TO_STREAM",
             function(e) {
                 e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
-            }(O || (O = {}));
+            }(A || (A = {}));
         var x = n("dwSm"),
             N = function(e) {
                 function t() {
@@ -538,28 +538,28 @@ webpackJsonp([106], {
                         errorCode: null
                     }, t.reasons = [{
                         key: "i-didnt-like",
-                        text: Object(c.d)("I didn't like the Game", "CancelBountyModal")
+                        text: Object(c.d)("I didn't like the game.", "CancelBountyModal")
                     }, {
                         key: "comm-didnt-like",
-                        text: Object(c.d)("My community didn't like the Game", "CancelBountyModal")
+                        text: Object(c.d)("My community didn't like the game.", "CancelBountyModal")
                     }, {
                         key: "i-comm-didnt-like",
-                        text: Object(c.d)("My community and I didn't like the Game", "CancelBountyModal")
+                        text: Object(c.d)("Both my community and I didn't like the game.", "CancelBountyModal")
                     }, {
                         key: "no-time",
-                        text: Object(c.d)("I don't have time to complete the offer", "CancelBountyModal")
+                        text: Object(c.d)("I don't have time to complete the bounty.", "CancelBountyModal")
                     }, {
                         key: "cant-start",
-                        text: Object(c.d)("I can't figure out how to start the offer", "CancelBountyModal")
+                        text: Object(c.d)("I can't figure out how to start the bounty.", "CancelBountyModal")
                     }, {
                         key: "accident",
-                        text: Object(c.d)("I accidentally picked the wrong offer", "CancelBountyModal")
+                        text: Object(c.d)("I accidentally activated the wrong bounty.", "CancelBountyModal")
                     }, {
                         key: "another-offer",
-                        text: Object(c.d)("I found an offer that I want more", "CancelBountyModal")
+                        text: Object(c.d)("I found another bounty I want to activate.", "CancelBountyModal")
                     }, {
                         key: "just-testing",
-                        text: Object(c.d)("I was just testing to see how it worked", "CancelBountyModal")
+                        text: Object(c.d)("I was just testing to see how things worked.", "CancelBountyModal")
                     }, {
                         key: "other",
                         text: Object(c.d)("Other", "CancelBountyModal")
@@ -697,7 +697,7 @@ webpackJsonp([106], {
             })(P),
             L = n("F8kA");
         ! function(e) {
-            e.ViewDetails = "view_details", e.ViewLegal = "view_legal", e.DeclineLegal = "decline_legal", e.AcceptLegal = "accept_legal", e.Terms = "terms", e.CancelBounty = "cancel_bounty"
+            e.ViewDetails = "view_details", e.ViewLegal = "view_legal", e.DeclineLegal = "decline_legal", e.AcceptLegal = "accept_legal", e.Terms = "terms", e.CancelBounty = "cancel_bounty", e.ViewTermsOfUse = "view_terms_of_use", e.DismissFTUE = "dismiss_first_time_user_experience"
         }(M || (M = {}));
         n("j2K2");
         var j = {
@@ -858,7 +858,7 @@ webpackJsonp([106], {
                             fontSize: k.V.Size7
                         }, "$"), l.createElement(k.Q, {
                             type: k._49.H2
-                        }, (e.payoutCents ? e.payoutCents : e.maximumPayoutCents) / 100)),
+                        }, (e.status === g.COMPLETED ? e.payoutCents || 0 : e.maximumPayoutCents) / 100)),
                         r = {
                             backgroundImage: "url(" + (e.campaign.game && e.campaign.game.coverURL || "") + ")"
                         },
@@ -917,7 +917,9 @@ webpackJsonp([106], {
                         position: k._15.Relative
                     }, l.createElement(k.Q, {
                         type: k._49.H4,
-                        color: k.K.Base
+                        color: k.K.Base,
+                        ellipsis: !0,
+                        title: e.campaign.title
                     }, e.campaign.title), l.createElement(k.Q, {
                         color: k.K.Alt2
                     }, this.renderTimeString(e))), l.createElement(k._35, {
@@ -963,7 +965,7 @@ webpackJsonp([106], {
                             return l.createElement(l.Fragment, null, l.createElement(k.Q, {
                                 type: k._49.P,
                                 key: "bounty_description_" + e.id
-                            }, Object(c.d)("Stream for 1 hour straight at <x:bold>your typical concurrent viewer count</x:bold>. If your peak does not hit typical numbers, you will get a <x:bold>proportional percentage</x:bold> of the payout.", {
+                            }, Object(c.d)("Stream for 1 hour straight at <x:bold>your typical concurrent viewer count</x:bold>. If your average does not hit typical numbers, you will get a <x:bold>proportional percentage</x:bold> of the payout.", {
                                 "x:bold": function(e) {
                                     return l.createElement(k.Q, {
                                         key: "x_bold_text_" + ++t,
@@ -1046,7 +1048,7 @@ webpackJsonp([106], {
                 return Object(s.b)({
                     showAcceptBountyModal: function(e) {
                         var t = i.__rest(e, []);
-                        return Object(_.d)(A, t)
+                        return Object(_.d)(O, t)
                     },
                     showCancelBountyModal: function(e) {
                         var t = i.__rest(e, []);
@@ -1167,7 +1169,7 @@ webpackJsonp([106], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.showModal = function(e) {
-                        e.preventDefault(), e.stopPropagation(), t.props.showTOUModal()
+                        e.preventDefault(), e.stopPropagation(), t.props.trackPageAction(M.ViewTermsOfUse), t.props.showTOUModal()
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
@@ -1176,6 +1178,7 @@ webpackJsonp([106], {
                         justifyContent: k._7.Around,
                         padding: 1
                     }, l.createElement(k.Q, null, l.createElement("a", {
+                        "data-test-selector": "bounties-page-terms-of-use-selector",
                         href: "#",
                         onClick: this.showModal
                     }, Object(c.d)("Terms of Use", "TermsOfUseBountyCard")))))
@@ -1217,7 +1220,9 @@ webpackJsonp([106], {
                 }, l.createElement(k.C, {
                     background: k.n.Base,
                     elevation: 1
-                }, l.createElement(q, null)))), l.createElement(k._35, {
+                }, l.createElement(q, {
+                    trackPageAction: e.trackPageAction
+                })))), l.createElement(k._35, {
                     className: "bb-col-wrapper bb-col-wrapper--r",
                     display: k.R.Flex,
                     flexGrow: 1,
@@ -1247,7 +1252,7 @@ webpackJsonp([106], {
                         var e, t = n.dismissedBanners[n.bannerKey],
                             a = "number" == typeof t ? t + 1 : 1,
                             r = i.__assign({}, n.dismissedBanners, ((e = {})[n.bannerKey] = a, e));
-                        c.l.set(K, r), n.setState({
+                        c.l.set(K, r), n.props.trackPageAction(M.DismissFTUE), n.setState({
                             didDismiss: !0
                         })
                     }, n.dismissedBanners = c.l.get(K, {}), n
@@ -1327,7 +1332,7 @@ webpackJsonp([106], {
                         }
                     }, "BountiesPageFTUEBanner")), l.createElement("li", {
                         key: "bb_ftue_rule_4"
-                    }, Object(c.d)("<x:bold>Payouts are based on your typical concurrent viewer numbers being met.</x:bold> This exact number has been outlined in your onboarding email. If your bounty stream peak is below this amount, you will get a <x:bold>partial amount</x:bold> of that payout.", {
+                    }, Object(c.d)("<x:bold>Payouts are based on your typical concurrent viewer numbers being met</x:bold>. This exact number has been outlined in your onboarding email. If your average during the bounty stream is below this amount, you will get a <x:bold>partial amount</x:bold> of that payout", {
                         "x:bold": function(t) {
                             return l.createElement(k.Q, {
                                 key: "x_bold_" + ++e,
@@ -1410,6 +1415,15 @@ webpackJsonp([106], {
                         })
                     }, t.refreshData = function() {
                         t.props.data.refetch && t.props.data.refetch()
+                    }, t.trackPageAction = function(e) {
+                        var n, a;
+                        n = {
+                            action: e,
+                            channelID: t.props.match.params.channelName
+                        }, a = {
+                            user_id: n.channelID,
+                            bounty_page_action_desc: n.action
+                        }, c.o.tracking.track(b.SpadeEventType.BountyBoardActions, a)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -1422,7 +1436,8 @@ webpackJsonp([106], {
                         fullHeight: !0
                     }, l.createElement(G, {
                         left: this.renderLeftColumnPlaceholders(),
-                        right: this.renderRightColumnPlaceholders()
+                        right: this.renderRightColumnPlaceholders(),
+                        trackPageAction: this.trackPageAction
                     }));
                     if (this.props.data.error) return l.createElement(u.a, {
                         message: Object(c.d)("Error loading data.", "BountiesPage")
@@ -1439,10 +1454,12 @@ webpackJsonp([106], {
                         display: k.R.Flex,
                         flexDirection: k.T.Column
                     }, l.createElement(z, {
-                        channelName: this.props.match.params.channelName
+                        channelName: this.props.match.params.channelName,
+                        trackPageAction: this.trackPageAction
                     }), l.createElement(G, {
                         left: this.renderLeftColumn(n, t, a),
-                        right: this.renderRightColumn(r)
+                        right: this.renderRightColumn(r),
+                        trackPageAction: this.trackPageAction
                     }), l.createElement($.a, {
                         learnMoreUrl: "https://help.twitch.tv/customer/portal/articles/2936067-bounty-board-program-information-and-faq",
                         page: "bounties"
@@ -2366,4 +2383,4 @@ webpackJsonp([106], {
     },
     y0HA: function(e, t) {}
 });
-//# sourceMappingURL=pages.bounties-27b43656ac015295d9851c7eb6ed48e6.js.map
+//# sourceMappingURL=pages.bounties-e5359c933565fc0a981b5158a29b23d0.js.map

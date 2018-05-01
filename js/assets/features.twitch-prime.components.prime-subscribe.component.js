@@ -511,7 +511,7 @@ webpackJsonp([58], {
             f = n("CSlQ"),
             v = n("AGQo"),
             h = n("Odds"),
-            g = (n("f8UT"), function(e) {
+            _ = (n("f8UT"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -562,8 +562,8 @@ webpackJsonp([58], {
                     }, s.createElement(h.Q, null, e.toString())))))
                 }, t = a.__decorate([Object(f.d)("PrimeOfferHeader")], t)
             }(s.Component)),
-            k = n("Lpko"),
-            _ = n("Tr7p"),
+            g = n("Lpko"),
+            k = n("Tr7p"),
             b = n("Kckk");
         ! function(e) {
             e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
@@ -588,11 +588,11 @@ webpackJsonp([58], {
                         var n = t.props.offersData;
                         !n || n.loading || n.error || t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), t.seeOffers(), e && t.setState({
                             numOfUnseenOffers: 0
-                        }), Object(_.c)(!e, {
+                        }), Object(k.c)(!e, {
                             hasPrime: t.hasPrime()
                         })
                     }, t.onHover = function() {
-                        Object(_.b)({
+                        Object(k.b)({
                             hasPrime: t.hasPrime()
                         })
                     }, t.hasPrime = function() {
@@ -670,9 +670,9 @@ webpackJsonp([58], {
                         return t.offersLoadedEvent && r && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), r || n ? s.createElement(h._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
-                        }, s.createElement(g, {
+                        }, s.createElement(_, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), s.createElement(k.a, null)) : null
+                        }), s.createElement(g.a, null)) : null
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -1148,7 +1148,7 @@ webpackJsonp([58], {
         }), n.d(t, "BUTTON_SELECTOR", function() {
             return h
         }), n.d(t, "PrimeSubscribeButton", function() {
-            return k
+            return g
         });
         var r = n("TToO"),
             i = n("GiK3"),
@@ -1164,11 +1164,12 @@ webpackJsonp([58], {
             f = n("iQti"),
             v = (n.n(f), n("81fF")),
             h = (n.n(v), "subscribe-button__prime-subscribe"),
-            g = function(e) {
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isSubscribing: !1,
+                        isSubscribed: !1,
                         primeSubFailure: !1,
                         error: void 0
                     }, t.handleStartPrimeTrialClick = function() {
@@ -1178,36 +1179,38 @@ webpackJsonp([58], {
                     }, t.getErrorType = function() {
                         return t.state.error || m.b.UNABLE_TO_SPEND
                     }, t.spendPrimeCredit = function() {
-                        if (t.isReadyForSubCreditSpend(t.props)) {
-                            var e = t.props.data.user ? t.props.data.user.id : "",
-                                n = t.props.data.currentUser ? t.props.data.currentUser.id : "";
-                            t.setState({
+                        if (t.setState({
                                 isSubscribing: !0
-                            });
-                            var r = Object(c.a)({
-                                broadcasterID: e,
-                                userID: n
-                            });
+                            }), t.isReadyForSubCreditSpend(t.props)) {
+                            var e = t.props.data.user ? t.props.data.user.id : "",
+                                n = t.props.data.currentUser ? t.props.data.currentUser.id : "",
+                                r = Object(c.a)({
+                                    broadcasterID: e,
+                                    userID: n
+                                });
                             t.props.spendPrimeSubscriptionCredit(r).then(function(e) {
-                                var n = e.data || {},
+                                var n = (e.data || {}).spendSubscriptionCredit || {},
                                     r = n.userID || {},
                                     i = n.error;
                                 if (i) {
                                     var a = m.b[i.code];
                                     t.setState({
                                         isSubscribing: !1,
+                                        isSubscribed: !1,
                                         primeSubFailure: !0,
                                         error: a || m.b.UNABLE_TO_SPEND
                                     })
                                 }
-                                r && !i && (t.props.onSubscribedWithPrime(), t.updateUserDataSuccessfulSpend(t.props, e), t.setState({
+                                r && !i && t.setState({
+                                    isSubscribed: !0,
                                     isSubscribing: !1,
                                     primeSubFailure: !1,
                                     error: void 0
-                                }))
+                                })
                             }).catch(function() {
                                 t.setState({
                                     isSubscribing: !1,
+                                    isSubscribed: !1,
                                     primeSubFailure: !0,
                                     error: m.b.UNABLE_TO_SPEND
                                 })
@@ -1220,10 +1223,9 @@ webpackJsonp([58], {
                         "data-test-selector": h,
                         disabled: this.state.isSubscribing,
                         icon: p._25.Crown,
-                        state: this.state.isSubscribing ? p.A.Loading : p.A.Default,
-                        onClick: this.spendPrimeCredit
+                        state: p.A.Loading
                     }, Object(p._63)(this.props)));
-                    if (this.state.primeSubFailure) {
+                    if (this.state.primeSubFailure && !this.state.isSubscribed) {
                         var e = this.getErrorType();
                         return i.createElement(u.b, {
                             fontSize: p.V.Size6,
@@ -1231,27 +1233,35 @@ webpackJsonp([58], {
                             errorType: e
                         })
                     }
-                    if (!this.isUserDataReady(this.props)) return i.createElement(p._14, {
+                    if (!this.isUserDataReady(this.props) && !this.state.isSubscribed) return i.createElement(p._14, {
                         width: 82,
                         height: 30
                     });
-                    var t = this.isSubscribed(this.props),
-                        n = this.canPrimeSubscribe(this.props),
-                        a = this.canResub(this.props);
-                    if (!this.props.data.currentUser || !this.props.data.currentUser.hasPrime) {
-                        var s = Object(o.d)("Start Your Free Trial", "PrimeSubscribe");
+                    var t = this.canPrimeSubscribe(this.props),
+                        n = this.canResub(this.props);
+                    if (!(this.props.data.currentUser && this.props.data.currentUser.hasPrime || this.state.isSubscribed)) {
+                        var a = Object(o.d)("Start Your Free Trial", "PrimeSubscribe");
                         return i.createElement(p.v, r.__assign({
-                            ariaLabel: s,
+                            ariaLabel: a,
                             "data-test-selector": h,
                             icon: p._25.Crown,
                             linkTo: o.a.tryPrimeURI,
                             onClick: this.handleStartPrimeTrialClick
                         }, Object(p._63)(this.props), {
                             targetBlank: !0
-                        }), s)
+                        }), a)
                     }
-                    if (t && !a) {
-                        var c = Object(o.d)("Subscribed", "PrimeSubscribe");
+                    if (this.isSubscribed(this.props) && !n) {
+                        var s = Object(o.d)("Subscribed", "PrimeSubscribe");
+                        return i.createElement(p.v, r.__assign({
+                            ariaLabel: s,
+                            "data-test-selector": h,
+                            disabled: !0,
+                            icon: p._25.Crown
+                        }, Object(p._63)(this.props)), s)
+                    }
+                    if (!t && !this.state.isSubscribed) {
+                        var c = Object(o.d)("Not yet!", "PrimeSubscribe");
                         return i.createElement(p.v, r.__assign({
                             ariaLabel: c,
                             "data-test-selector": h,
@@ -1259,40 +1269,29 @@ webpackJsonp([58], {
                             icon: p._25.Crown
                         }, Object(p._63)(this.props)), c)
                     }
-                    if (!n) {
-                        var l = Object(o.d)("Not yet!", "PrimeSubscribe");
-                        return i.createElement(p.v, r.__assign({
-                            ariaLabel: l,
-                            "data-test-selector": h,
-                            disabled: !0,
-                            icon: p._25.Crown
-                        }, Object(p._63)(this.props)), l)
-                    }
-                    var d = a ? Object(o.d)("Resubscribe Free", "PrimeSubscribe") : Object(o.d)("Subscribe Free", "PrimeSubscribe");
+                    var l = n ? Object(o.d)("Resubscribe Free", "PrimeSubscribe") : Object(o.d)("Subscribe Free", "PrimeSubscribe");
                     return i.createElement(p.v, r.__assign({
-                        ariaLabel: d,
+                        ariaLabel: l,
                         "data-test-selector": h,
                         disabled: this.state.isSubscribing,
                         icon: p._25.Crown,
                         state: this.state.isSubscribing ? p.A.Loading : p.A.Default,
                         onClick: this.spendPrimeCredit
-                    }, Object(p._63)(this.props)), d)
+                    }, Object(p._63)(this.props)), l)
                 }, t.prototype.isUserDataReady = function(e) {
                     return e.data && e.data.user && !e.data.loading && !e.data.error
                 }, t.prototype.canPrimeSubscribe = function(e) {
                     return e.data && e.data.user && e.data.user.self && e.data.user.self.canPrimeSubscribe
                 }, t.prototype.isSubscribed = function(e) {
-                    return e.data && e.data.user && e.data.user.self && e.data.user.self.subscriptionBenefit
+                    return this.state.isSubscribed || e.data && e.data.user && e.data.user.self && e.data.user.self.subscriptionBenefit
                 }, t.prototype.canResub = function(e) {
                     return e.data && e.data.user && e.data.user.self && e.data.user.self.subscriptionBenefit && e.data.user.self.subscriptionBenefit.purchasedWithPrime && this.canPrimeSubscribe(this.props)
                 }, t.prototype.isReadyForSubCreditSpend = function(e) {
                     var t = e.data || {};
                     return this.isUserDataReady(e) && t.currentUser && t.currentUser.id && t.user && t.user.id
-                }, t.prototype.updateUserDataSuccessfulSpend = function(e, t) {
-                    e.data && e.data.user && e.data.user.self && (t.data.subscriptionBenefit && (e.data.user.self.subscriptionBenefit = t.data.subscriptionBenefit), e.data.user.self.canPrimeSubscribe = !1)
                 }, t
             }(i.Component),
-            k = Object(a.compose)(Object(l.d)("PrimeSubscribe", {
+            g = Object(a.compose)(Object(l.d)("PrimeSubscribe", {
                 autoReportInteractive: !0
             }), Object(s.a)(v, {
                 options: function(e) {
@@ -1308,7 +1307,7 @@ webpackJsonp([58], {
                 }
             }), Object(s.a)(f, {
                 name: "spendPrimeSubscriptionCredit"
-            }))(g)
+            }))(_)
     },
     Kckk: function(e, t, n) {
         "use strict";
@@ -1329,9 +1328,9 @@ webpackJsonp([58], {
         }), n.d(t, "h", function() {
             return h
         }), n.d(t, "l", function() {
-            return g
+            return _
         }), n.d(t, "n", function() {
-            return k
+            return g
         }), n.d(t, "m", function() {
             return b
         }), n.d(t, "e", function() {
@@ -1389,15 +1388,15 @@ webpackJsonp([58], {
                 return i(e, e + "--" + n)
             },
             h = function() {
-                return _("seenOffers")
-            },
-            g = function(e) {
-                c.l.set("seenOffers", e)
-            },
-            k = function(e, t) {
-                return (e && (e.priority || 0 === e.priority) ? e.priority : 99999) - (t && (t.priority || 0 === t.priority) ? t.priority : 99999)
+                return k("seenOffers")
             },
             _ = function(e) {
+                c.l.set("seenOffers", e)
+            },
+            g = function(e, t) {
+                return (e && (e.priority || 0 === e.priority) ? e.priority : 99999) - (t && (t.priority || 0 === t.priority) ? t.priority : 99999)
+            },
+            k = function(e) {
                 return c.l.get(e, [])
             },
             b = function(e, t) {
@@ -1473,8 +1472,8 @@ webpackJsonp([58], {
             f = n("AGQo"),
             v = n("Tr7p"),
             h = n("Kckk"),
-            g = (n("w/8h"), n("sq7i")),
-            k = function(e) {
+            _ = (n("w/8h"), n("sq7i")),
+            g = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClick = function(e) {
@@ -1538,9 +1537,9 @@ webpackJsonp([58], {
                         default:
                             return Object(o.d)("Claim Offer", "PrimeClaimButton")
                     }
-                }, t = i.__decorate([Object(c.a)(g), Object(l.d)("PrimeClaimButton")], t)
+                }, t = i.__decorate([Object(c.a)(_), Object(l.d)("PrimeClaimButton")], t)
             }(a.Component),
-            _ = (n("zAvr"), function(e) {
+            k = (n("zAvr"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.toggleShowDescription = function() {
@@ -1670,7 +1669,7 @@ webpackJsonp([58], {
                     }, this.getCallToAction(), this.getClaimDescriptionSection())
                 }, t.prototype.getCallToAction = function() {
                     var e = this.props.data;
-                    return Object(h.k)(e) ? a.createElement(k, {
+                    return Object(h.k)(e) ? a.createElement(g, {
                         offerType: this.props.offerType,
                         offerID: this.props.offerID,
                         claimCallback: this.props.claimCallback,
@@ -1687,7 +1686,7 @@ webpackJsonp([58], {
                 }, t.prototype.getClaimDescriptionSection = function() {
                     if (this.props.offerType === h.d.EXTERNAL_OFFER) return null;
                     var e = this.props.data;
-                    return a.createElement(_, {
+                    return a.createElement(k, {
                         description: this.props.offerDescription,
                         offerID: this.props.offerID,
                         externalURL: this.props.externalURL,
@@ -1866,7 +1865,6 @@ webpackJsonp([58], {
                     }));
                     var n = t ? 1 : 0;
                     return a.createElement(d._35, {
-                        border: !t,
                         display: d.R.Flex,
                         justifyContent: d._7.Center,
                         margin: {
@@ -2188,11 +2186,35 @@ webpackJsonp([58], {
                 }, t = i.__decorate([Object(l.d)("PrimeUpsell")], t)
             }(a.Component)),
             F = n("LXDe"),
-            U = n("eY4D"),
-            R = (n("DgR+"), function(e) {
+            R = n("eY4D"),
+            U = (n("DgR+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getOfferListOrientation = function() {
+                    return t.renderDesktopOffers = function(e) {
+                        return a.createElement(d._8, {
+                            className: "prime-offer-list__content--desktop"
+                        }, t.renderSectionTitle(), a.createElement(d._55, {
+                            childWidth: d._56.Large,
+                            gutterSize: d._57.Small,
+                            center: !0,
+                            placeholderItems: 20
+                        }, e))
+                    }, t.renderSectionTitle = function() {
+                        return t.props.sectionTitle && a.createElement(d._8, {
+                            padding: {
+                                top: 1
+                            },
+                            className: "prime-offers__title"
+                        }, a.createElement(d.Q, {
+                            type: d._49.H3,
+                            color: d.K.Base,
+                            bold: !0
+                        }, t.props.sectionTitle))
+                    }, t.renderMobileOffers = function(e) {
+                        return a.createElement(d._8, {
+                            className: "prime-offer-list__content--mobile"
+                        }, t.renderSectionTitle(), e)
+                    }, t.getOfferListOrientation = function() {
                         return t.props.listDirection || h.c.Default
                     }, t.shouldShowPlaceholders = function() {
                         if (!t.props.offersData) return !0;
@@ -2217,7 +2239,8 @@ webpackJsonp([58], {
                         n = Object(h.g)("prime-offer-list", e),
                         r = "prime-offer-list__content prime-offer-list__content--" + t,
                         i = this.props.listDirection === h.c.Horizontal,
-                        o = this.props.listDirection === h.c.Vertical;
+                        o = this.props.listDirection === h.c.Vertical,
+                        c = this.renderOfferExperience();
                     return a.createElement(s.b, {
                         className: n,
                         suppressScrollX: o,
@@ -2230,7 +2253,7 @@ webpackJsonp([58], {
                             bottom: 2,
                             x: 1
                         }
-                    }, this.renderUpsell(), this.renderOfferExperience()))
+                    }, this.renderUpsell(), this.props.listDirection === h.c.Horizontal && this.renderDesktopOffers(c), this.renderMobileOffers(c)))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
                     if (!Object(h.j)(e) && !Object(h.k)(e) && !this.props.hideUpsell) return a.createElement(L, null)
@@ -2280,7 +2303,7 @@ webpackJsonp([58], {
                 }, t.prototype.getUserId = function() {
                     var e = this.props.userData;
                     return e && !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
-                }, t = i.__decorate([Object(c.a)(U, {
+                }, t = i.__decorate([Object(c.a)(R, {
                     name: "offersData",
                     options: function() {
                         return {
@@ -2305,7 +2328,7 @@ webpackJsonp([58], {
             return {
                 firstPageLoaded: e.session.firstPageLoaded
             }
-        })(R);
+        })(U);
         n.d(t, "a", function() {
             return j
         })
@@ -3097,4 +3120,4 @@ webpackJsonp([58], {
     yqdF: function(e, t) {},
     zAvr: function(e, t) {}
 });
-//# sourceMappingURL=features.twitch-prime.components.prime-subscribe.component-b9e7ad464327863344842012a7ea77d3.js.map
+//# sourceMappingURL=features.twitch-prime.components.prime-subscribe.component-fdbb7117dbfe0e039b66b4ab964f5d6e.js.map

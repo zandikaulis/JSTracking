@@ -11,12 +11,12 @@ webpackJsonp([46], {
         "use strict";
         t.b = function(e, t) {
             return r.__awaiter(this, void 0, void 0, function() {
-                var n, u, c, l;
+                var n, c, u, l;
                 return r.__generator(this, function(r) {
                     switch (r.label) {
                         case 0:
-                            return n = "/v5/channels/" + e.id + "/analytics/sessions_summary", u = a.stringify(Object(i.i)(t)), c = [n, u].join("?"), [4, Object(o.a)({
-                                path: c
+                            return n = "/v5/channels/" + e.id + "/analytics/sessions_summary", c = a.stringify(Object(o.i)(t)), u = [n, c].join("?"), [4, Object(i.a)({
+                                path: u
                             })];
                         case 1:
                             return (l = r.sent()).isError() ? [2, {
@@ -32,8 +32,8 @@ webpackJsonp([46], {
         };
         var r = n("TToO"),
             a = n("OAwv"),
-            i = (n.n(a), n("u4Vk")),
-            o = n("6w0d"),
+            o = (n.n(a), n("u4Vk")),
+            i = n("6w0d"),
             s = n("uYc/");
         n.d(t, "a", function() {
             return s.a
@@ -54,6 +54,7 @@ webpackJsonp([46], {
             return n.setDate(a), n
         }
     },
+    "/ute": function(e, t) {},
     "024F": function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e) {
@@ -64,18 +65,18 @@ webpackJsonp([46], {
         "use strict";
         var r = n("TToO"),
             a = n("GiK3"),
-            i = n("6sO2"),
-            o = n("vH/s"),
+            o = n("6sO2"),
+            i = n("vH/s"),
             s = n("zDNk"),
-            u = n("ytWG"),
-            c = n("pD3p"),
+            c = n("ytWG"),
+            u = n("pD3p"),
             l = n("CIox"),
             d = n("7qqA"),
-            f = n("wuJz"),
-            h = n("lbHh"),
-            m = {
+            m = n("wuJz"),
+            f = n("lbHh"),
+            h = {
                 get: function(e) {
-                    var t = h.get("streamSummary" + e),
+                    var t = f.get("streamSummary" + e),
                         n = 0;
                     if (t) try {
                         n = JSON.parse(t).endTime
@@ -83,11 +84,11 @@ webpackJsonp([46], {
                     return n
                 },
                 set: function(e, t) {
-                    h.set("streamSummary" + e, {
+                    f.set("streamSummary" + e, {
                         wasSeen: !0,
                         endTime: t
                     }, {
-                        expires: Object(f.addDays)(new Date, 30),
+                        expires: Object(m.addDays)(new Date, 30),
                         domain: "." + location.hostname.split(".").reverse().slice(0, 2).reverse().join(".")
                     })
                 }
@@ -99,61 +100,61 @@ webpackJsonp([46], {
                 return function(e, t) {
                     var n = t.streamSummaryQuery;
                     if (n.isLoading) return !1;
-                    var r = t.lastSeenStore || m,
+                    var r = t.lastSeenStore || h,
                         a = n.channel.id,
-                        i = n.streamSummaries[n.streamSummaries.length - 1],
-                        o = i && i.interval.end.getTime() || 0;
-                    if (e && !e.params.sessionID) return r.set(a, o), !1;
+                        o = n.streamSummaries[n.streamSummaries.length - 1],
+                        i = o && o.interval.end.getTime() || 0;
+                    if (e && !e.params.sessionID) return r.set(a, i), !1;
                     var s = e && e.params.sessionID && d.b.intervalFromID(e.params.sessionID),
-                        u = s && s.end.getTime();
-                    if (u && u === o) return r.set(a, o), !1;
-                    var c = r.get(a);
-                    if (o <= c) return !1;
+                        c = s && s.end.getTime();
+                    if (c && c === i) return r.set(a, i), !1;
+                    var u = r.get(a);
+                    if (i <= u) return !1;
                     return !0
                 }(t.match, e) && e.children
             })
         };
-        var v = {
+        var g = {
                 "data-test-selector": "stream-summary-hotspot-selector"
             },
-            g = {
+            b = {
                 "data-test-selector": "stats-link-selector"
             },
-            b = {
+            v = {
                 "data-test-selector": "revenue-link-selector"
             },
             y = {
                 "data-test-selector": "channel-analytics-hotspot-selector"
             },
-            w = {
+            O = {
                 "data-test-selector": "channel-analytics-link-selector"
             },
-            x = function(e) {
+            D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(a.Fragment, null, a.createElement(s.a, null, Object(i.d)("Analytics", "DashboardNav")), a.createElement("ul", null, a.createElement("li", null, a.createElement(c.a, r.__assign({}, w, {
+                    return a.createElement(a.Fragment, null, a.createElement(s.a, null, Object(o.d)("Analytics", "DashboardNav")), a.createElement("ul", null, a.createElement("li", null, a.createElement(u.a, r.__assign({}, O, {
                         linkTo: {
                             pathname: "/" + this.props.channelName + "/dashboard/channel-analytics",
                             state: {
-                                medium: o.PageviewMedium.DashboardLeftNav
+                                medium: i.PageviewMedium.DashboardLeftNav
                             }
                         }
-                    }), Object(i.d)("Channel", "DashboardNav"), this.isChannelAnalyticsNew && a.createElement(u.a, r.__assign({}, y)))), a.createElement("li", null, a.createElement(c.a, {
+                    }), Object(o.d)("Channel", "DashboardNav"), this.isChannelAnalyticsNew && a.createElement(c.a, r.__assign({}, y)))), a.createElement("li", null, a.createElement(u.a, {
                         linkTo: "/" + this.props.channelName + "/dashboard/stream-summary"
-                    }, Object(i.d)("Stream Summary", "DashboardNav"), a.createElement(p, {
+                    }, Object(o.d)("Stream Summary", "DashboardNav"), a.createElement(p, {
                         streamSummaryQuery: this.props.streamSummaryQuery
-                    }, a.createElement(u.a, r.__assign({}, v))))), this.canAccessStats && a.createElement("li", null, a.createElement(c.a, r.__assign({
+                    }, a.createElement(c.a, r.__assign({}, g))))), this.canAccessStats && a.createElement("li", null, a.createElement(u.a, r.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/stats",
                         external: !0
-                    }, g), Object(i.d)("Stats", "DashboardNav"))), this.canAccessRevenue && a.createElement("li", null, a.createElement(c.a, r.__assign({
+                    }, b), Object(o.d)("Stats", "DashboardNav"))), this.canAccessRevenue && a.createElement("li", null, a.createElement(u.a, r.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/revenue",
                         external: !0
-                    }, b), Object(i.d)("Revenue", "DashboardNav")))))
+                    }, v), Object(o.d)("Revenue", "DashboardNav")))))
                 }, Object.defineProperty(t.prototype, "isChannelAnalyticsNew", {
                     get: function() {
-                        return !i.l.get("seenChannelAnalytics", !1)
+                        return !o.l.get("seenChannelAnalytics", !1)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -179,17 +180,17 @@ webpackJsonp([46], {
         n.d(t, "a", function() {
             return "seenChannelAnalytics"
         }), n.d(t, !1, function() {
-            return v
-        }), n.d(t, !1, function() {
             return g
         }), n.d(t, !1, function() {
             return b
         }), n.d(t, !1, function() {
+            return v
+        }), n.d(t, !1, function() {
             return y
         }), n.d(t, !1, function() {
-            return w
+            return O
         }), n.d(t, "b", function() {
-            return x
+            return D
         })
     },
     "0LAu": function(e, t, n) {
@@ -218,13 +219,13 @@ webpackJsonp([46], {
     "0aH9": function(e, t, n) {
         var r = n("3znZ"),
             a = 6e4,
-            i = 6048e5;
+            o = 6048e5;
         e.exports = function(e, t) {
             var n = r(e),
-                o = r(t),
+                i = r(t),
                 s = n.getTime() - n.getTimezoneOffset() * a,
-                u = o.getTime() - o.getTimezoneOffset() * a;
-            return Math.round((s - u) / i)
+                c = i.getTime() - i.getTimezoneOffset() * a;
+            return Math.round((s - c) / o)
         }
     },
     "0oN5": function(e, t, n) {
@@ -274,12 +275,12 @@ webpackJsonp([46], {
     "2lB6": function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e, t, n, a) {
-            var i = r(e).getTime(),
-                o = r(t).getTime(),
+            var o = r(e).getTime(),
+                i = r(t).getTime(),
                 s = r(n).getTime(),
-                u = r(a).getTime();
-            if (i > o || s > u) throw new Error("The start of the range cannot be after the end of the range");
-            return i < u && s < o
+                c = r(a).getTime();
+            if (o > i || s > c) throw new Error("The start of the range cannot be after the end of the range");
+            return o < c && s < i
         }
     },
     "3EIC": function(e, t, n) {
@@ -287,12 +288,12 @@ webpackJsonp([46], {
             a = n("Mdww");
         e.exports = function(e, t) {
             var n = r(e),
-                i = Number(t),
-                o = n.getMonth() + i,
+                o = Number(t),
+                i = n.getMonth() + o,
                 s = new Date(0);
-            s.setFullYear(n.getFullYear(), o, 1), s.setHours(0, 0, 0, 0);
-            var u = a(s);
-            return n.setMonth(o, Math.min(u, n.getDate())), n
+            s.setFullYear(n.getFullYear(), i, 1), s.setHours(0, 0, 0, 0);
+            var c = a(s);
+            return n.setMonth(i, Math.min(c, n.getDate())), n
         }
     },
     "3g9B": function(e, t, n) {
@@ -343,10 +344,10 @@ webpackJsonp([46], {
         var r = n("xA5w");
         e.exports = function(e, t, n) {
             var a = r(e).getTime(),
-                i = r(t).getTime(),
-                o = r(n).getTime();
-            if (i > o) throw new Error("The start of the range cannot be after the end of the range");
-            return a >= i && a <= o
+                o = r(t).getTime(),
+                i = r(n).getTime();
+            if (o > i) throw new Error("The start of the range cannot be after the end of the range");
+            return a >= o && a <= i
         }
     },
     "5qwL": function(e, t, n) {
@@ -394,19 +395,19 @@ webpackJsonp([46], {
                 n = !!window.addEventListener,
                 r = window.document,
                 a = window.setTimeout,
-                i = function(e, t, r, a) {
+                o = function(e, t, r, a) {
                     n ? e.addEventListener(t, r, !!a) : e.attachEvent("on" + t, r)
                 },
-                o = function(e, t, r, a) {
+                i = function(e, t, r, a) {
                     n ? e.removeEventListener(t, r, !!a) : e.detachEvent("on" + t, r)
                 },
                 s = function(e, t) {
                     return -1 !== (" " + e.className + " ").indexOf(" " + t + " ")
                 },
-                u = function(e) {
+                c = function(e) {
                     return /Array/.test(Object.prototype.toString.call(e))
                 },
-                c = function(e) {
+                u = function(e) {
                     return /Date/.test(Object.prototype.toString.call(e)) && !isNaN(e.getTime())
                 },
                 l = function(e) {
@@ -418,25 +419,25 @@ webpackJsonp([46], {
                         return e % 4 == 0 && e % 100 != 0 || e % 400 == 0
                     }(e) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][t]
                 },
-                f = function(e) {
-                    c(e) && e.setHours(0, 0, 0, 0)
+                m = function(e) {
+                    u(e) && e.setHours(0, 0, 0, 0)
                 },
-                h = function(e, t) {
+                f = function(e, t) {
                     return e.getTime() === t.getTime()
                 },
-                m = function(e, t, n) {
+                h = function(e, t, n) {
                     var r, a;
-                    for (r in t)(a = void 0 !== e[r]) && "object" == typeof t[r] && null !== t[r] && void 0 === t[r].nodeName ? c(t[r]) ? n && (e[r] = new Date(t[r].getTime())) : u(t[r]) ? n && (e[r] = t[r].slice(0)) : e[r] = m({}, t[r], n) : !n && a || (e[r] = t[r]);
+                    for (r in t)(a = void 0 !== e[r]) && "object" == typeof t[r] && null !== t[r] && void 0 === t[r].nodeName ? u(t[r]) ? n && (e[r] = new Date(t[r].getTime())) : c(t[r]) ? n && (e[r] = t[r].slice(0)) : e[r] = h({}, t[r], n) : !n && a || (e[r] = t[r]);
                     return e
                 },
                 p = function(e, t, n) {
                     var a;
-                    r.createEvent ? ((a = r.createEvent("HTMLEvents")).initEvent(t, !0, !1), a = m(a, n), e.dispatchEvent(a)) : r.createEventObject && (a = r.createEventObject(), a = m(a, n), e.fireEvent("on" + t, a))
+                    r.createEvent ? ((a = r.createEvent("HTMLEvents")).initEvent(t, !0, !1), a = h(a, n), e.dispatchEvent(a)) : r.createEventObject && (a = r.createEventObject(), a = h(a, n), e.fireEvent("on" + t, a))
                 },
-                v = function(e) {
+                g = function(e) {
                     return e.month < 0 && (e.year -= Math.ceil(Math.abs(e.month) / 12), e.month += 12), e.month > 11 && (e.year += Math.floor(Math.abs(e.month) / 12), e.month -= 12), e
                 },
-                g = {
+                b = {
                     field: null,
                     bound: void 0,
                     position: "bottom left",
@@ -483,7 +484,7 @@ webpackJsonp([46], {
                     onDraw: null,
                     keyboardInput: !0
                 },
-                b = function(e, t, n) {
+                v = function(e, t, n) {
                     for (t += e.firstDay; t >= 7;) t -= 7;
                     return n ? e.i18n.weekdaysShort[t] : e.i18n.weekdays[t]
                 },
@@ -496,106 +497,106 @@ webpackJsonp([46], {
                     }
                     return e.isDisabled && t.push("is-disabled"), e.isToday && t.push("is-today"), e.isSelected && (t.push("is-selected"), n = "true"), e.hasEvent && t.push("has-event"), e.isInRange && t.push("is-inrange"), e.isStartRange && t.push("is-startrange"), e.isEndRange && t.push("is-endrange"), '<td data-day="' + e.day + '" class="' + t.join(" ") + '" aria-selected="' + n + '"><button class="pika-button pika-day" type="button" data-pika-year="' + e.year + '" data-pika-month="' + e.month + '" data-pika-day="' + e.day + '">' + e.day + "</button></td>"
                 },
-                w = function(e, t, n, r) {
+                O = function(e, t, n, r) {
                     return '<tr class="pika-row' + (n ? " pick-whole-week" : "") + (r ? " is-selected" : "") + '">' + (t ? e.reverse() : e).join("") + "</tr>"
                 },
-                x = function(e, t, n, r, a, i) {
-                    var o, s, c, l, d, f = e._o,
-                        h = n === f.minYear,
-                        m = n === f.maxYear,
-                        p = '<div id="' + i + '" class="pika-title" role="heading" aria-live="assertive">',
-                        v = !0,
-                        g = !0;
-                    for (c = [], o = 0; o < 12; o++) c.push('<option value="' + (n === a ? o - t : 12 + o - t) + '"' + (o === r ? ' selected="selected"' : "") + (h && o < f.minMonth || m && o > f.maxMonth ? 'disabled="disabled"' : "") + ">" + f.i18n.months[o] + "</option>");
-                    for (l = '<div class="pika-label">' + f.i18n.months[r] + '<select class="pika-select pika-select-month" tabindex="-1">' + c.join("") + "</select></div>", u(f.yearRange) ? (o = f.yearRange[0], s = f.yearRange[1] + 1) : (o = n - f.yearRange, s = 1 + n + f.yearRange), c = []; o < s && o <= f.maxYear; o++) o >= f.minYear && c.push('<option value="' + o + '"' + (o === n ? ' selected="selected"' : "") + ">" + o + "</option>");
-                    return d = '<div class="pika-label">' + n + f.yearSuffix + '<select class="pika-select pika-select-year" tabindex="-1">' + c.join("") + "</select></div>", f.showMonthAfterYear ? p += d + l : p += l + d, h && (0 === r || f.minMonth >= r) && (v = !1), m && (11 === r || f.maxMonth <= r) && (g = !1), 0 === t && (p += '<button class="pika-prev' + (v ? "" : " is-disabled") + '" type="button">' + f.i18n.previousMonth + "</button>"), t === e._o.numberOfMonths - 1 && (p += '<button class="pika-next' + (g ? "" : " is-disabled") + '" type="button">' + f.i18n.nextMonth + "</button>"), p + "</div>"
+                D = function(e, t, n, r, a, o) {
+                    var i, s, u, l, d, m = e._o,
+                        f = n === m.minYear,
+                        h = n === m.maxYear,
+                        p = '<div id="' + o + '" class="pika-title" role="heading" aria-live="assertive">',
+                        g = !0,
+                        b = !0;
+                    for (u = [], i = 0; i < 12; i++) u.push('<option value="' + (n === a ? i - t : 12 + i - t) + '"' + (i === r ? ' selected="selected"' : "") + (f && i < m.minMonth || h && i > m.maxMonth ? 'disabled="disabled"' : "") + ">" + m.i18n.months[i] + "</option>");
+                    for (l = '<div class="pika-label">' + m.i18n.months[r] + '<select class="pika-select pika-select-month" tabindex="-1">' + u.join("") + "</select></div>", c(m.yearRange) ? (i = m.yearRange[0], s = m.yearRange[1] + 1) : (i = n - m.yearRange, s = 1 + n + m.yearRange), u = []; i < s && i <= m.maxYear; i++) i >= m.minYear && u.push('<option value="' + i + '"' + (i === n ? ' selected="selected"' : "") + ">" + i + "</option>");
+                    return d = '<div class="pika-label">' + n + m.yearSuffix + '<select class="pika-select pika-select-year" tabindex="-1">' + u.join("") + "</select></div>", m.showMonthAfterYear ? p += d + l : p += l + d, f && (0 === r || m.minMonth >= r) && (g = !1), h && (11 === r || m.maxMonth <= r) && (b = !1), 0 === t && (p += '<button class="pika-prev' + (g ? "" : " is-disabled") + '" type="button">' + m.i18n.previousMonth + "</button>"), t === e._o.numberOfMonths - 1 && (p += '<button class="pika-next' + (b ? "" : " is-disabled") + '" type="button">' + m.i18n.nextMonth + "</button>"), p + "</div>"
                 },
-                D = function(e, t, n) {
+                S = function(e, t, n) {
                     return '<table cellpadding="0" cellspacing="0" class="pika-table" role="grid" aria-labelledby="' + n + '">' + function(e) {
                         var t, n = [];
-                        for (e.showWeekNumber && n.push("<th></th>"), t = 0; t < 7; t++) n.push('<th scope="col"><abbr title="' + b(e, t) + '">' + b(e, t, !0) + "</abbr></th>");
+                        for (e.showWeekNumber && n.push("<th></th>"), t = 0; t < 7; t++) n.push('<th scope="col"><abbr title="' + v(e, t) + '">' + v(e, t, !0) + "</abbr></th>");
                         return "<thead><tr>" + (e.isRTL ? n.reverse() : n).join("") + "</tr></thead>"
                     }(e) + ("<tbody>" + t.join("") + "</tbody>") + "</table>"
                 },
-                _ = function(o) {
-                    var u = this,
-                        l = u.config(o);
-                    u._onMouseDown = function(e) {
-                        if (u._v) {
+                w = function(i) {
+                    var c = this,
+                        l = c.config(i);
+                    c._onMouseDown = function(e) {
+                        if (c._v) {
                             var t = (e = e || window.event).target || e.srcElement;
                             if (t)
-                                if (s(t, "is-disabled") || (!s(t, "pika-button") || s(t, "is-empty") || s(t.parentNode, "is-disabled") ? s(t, "pika-prev") ? u.prevMonth() : s(t, "pika-next") && u.nextMonth() : (u.setDate(new Date(t.getAttribute("data-pika-year"), t.getAttribute("data-pika-month"), t.getAttribute("data-pika-day"))), l.bound && a(function() {
-                                        u.hide(), l.blurFieldOnSelect && l.field && l.field.blur()
-                                    }, 100))), s(t, "pika-select")) u._c = !0;
+                                if (s(t, "is-disabled") || (!s(t, "pika-button") || s(t, "is-empty") || s(t.parentNode, "is-disabled") ? s(t, "pika-prev") ? c.prevMonth() : s(t, "pika-next") && c.nextMonth() : (c.setDate(new Date(t.getAttribute("data-pika-year"), t.getAttribute("data-pika-month"), t.getAttribute("data-pika-day"))), l.bound && a(function() {
+                                        c.hide(), l.blurFieldOnSelect && l.field && l.field.blur()
+                                    }, 100))), s(t, "pika-select")) c._c = !0;
                                 else {
                                     if (!e.preventDefault) return e.returnValue = !1, !1;
                                     e.preventDefault()
                                 }
                         }
-                    }, u._onChange = function(e) {
+                    }, c._onChange = function(e) {
                         var t = (e = e || window.event).target || e.srcElement;
-                        t && (s(t, "pika-select-month") ? u.gotoMonth(t.value) : s(t, "pika-select-year") && u.gotoYear(t.value))
-                    }, u._onKeyChange = function(e) {
-                        if (e = e || window.event, u.isVisible()) switch (e.keyCode) {
+                        t && (s(t, "pika-select-month") ? c.gotoMonth(t.value) : s(t, "pika-select-year") && c.gotoYear(t.value))
+                    }, c._onKeyChange = function(e) {
+                        if (e = e || window.event, c.isVisible()) switch (e.keyCode) {
                             case 13:
                             case 27:
                                 l.field && l.field.blur();
                                 break;
                             case 37:
-                                e.preventDefault(), u.adjustDate("subtract", 1);
+                                e.preventDefault(), c.adjustDate("subtract", 1);
                                 break;
                             case 38:
-                                u.adjustDate("subtract", 7);
+                                c.adjustDate("subtract", 7);
                                 break;
                             case 39:
-                                u.adjustDate("add", 1);
+                                c.adjustDate("add", 1);
                                 break;
                             case 40:
-                                u.adjustDate("add", 7)
+                                c.adjustDate("add", 7)
                         }
-                    }, u._onInputChange = function(n) {
+                    }, c._onInputChange = function(n) {
                         var r;
-                        n.firedBy !== u && (r = l.parse ? l.parse(l.field.value, l.format) : t ? (r = e(l.field.value, l.format, l.formatStrict)) && r.isValid() ? r.toDate() : null : new Date(Date.parse(l.field.value)), c(r) && u.setDate(r), u._v || u.show())
-                    }, u._onInputFocus = function() {
-                        u.show()
-                    }, u._onInputClick = function() {
-                        u.show()
-                    }, u._onInputBlur = function() {
+                        n.firedBy !== c && (r = l.parse ? l.parse(l.field.value, l.format) : t ? (r = e(l.field.value, l.format, l.formatStrict)) && r.isValid() ? r.toDate() : null : new Date(Date.parse(l.field.value)), u(r) && c.setDate(r), c._v || c.show())
+                    }, c._onInputFocus = function() {
+                        c.show()
+                    }, c._onInputClick = function() {
+                        c.show()
+                    }, c._onInputBlur = function() {
                         var e = r.activeElement;
                         do {
                             if (s(e, "pika-single")) return
                         } while (e = e.parentNode);
-                        u._c || (u._b = a(function() {
-                            u.hide()
-                        }, 50)), u._c = !1
-                    }, u._onClick = function(e) {
+                        c._c || (c._b = a(function() {
+                            c.hide()
+                        }, 50)), c._c = !1
+                    }, c._onClick = function(e) {
                         var t = (e = e || window.event).target || e.srcElement,
                             r = t;
                         if (t) {
-                            !n && s(t, "pika-select") && (t.onchange || (t.setAttribute("onchange", "return;"), i(t, "change", u._onChange)));
+                            !n && s(t, "pika-select") && (t.onchange || (t.setAttribute("onchange", "return;"), o(t, "change", c._onChange)));
                             do {
                                 if (s(r, "pika-single") || r === l.trigger) return
                             } while (r = r.parentNode);
-                            u._v && t !== l.trigger && r !== l.trigger && u.hide()
+                            c._v && t !== l.trigger && r !== l.trigger && c.hide()
                         }
-                    }, u.el = r.createElement("div"), u.el.className = "pika-single" + (l.isRTL ? " is-rtl" : "") + (l.theme ? " " + l.theme : ""), i(u.el, "mousedown", u._onMouseDown, !0), i(u.el, "touchend", u._onMouseDown, !0), i(u.el, "change", u._onChange), l.keyboardInput && i(r, "keydown", u._onKeyChange), l.field && (l.container ? l.container.appendChild(u.el) : l.bound ? r.body.appendChild(u.el) : l.field.parentNode.insertBefore(u.el, l.field.nextSibling), i(l.field, "change", u._onInputChange), l.defaultDate || (t && l.field.value ? l.defaultDate = e(l.field.value, l.format).toDate() : l.defaultDate = new Date(Date.parse(l.field.value)), l.setDefaultDate = !0));
+                    }, c.el = r.createElement("div"), c.el.className = "pika-single" + (l.isRTL ? " is-rtl" : "") + (l.theme ? " " + l.theme : ""), o(c.el, "mousedown", c._onMouseDown, !0), o(c.el, "touchend", c._onMouseDown, !0), o(c.el, "change", c._onChange), l.keyboardInput && o(r, "keydown", c._onKeyChange), l.field && (l.container ? l.container.appendChild(c.el) : l.bound ? r.body.appendChild(c.el) : l.field.parentNode.insertBefore(c.el, l.field.nextSibling), o(l.field, "change", c._onInputChange), l.defaultDate || (t && l.field.value ? l.defaultDate = e(l.field.value, l.format).toDate() : l.defaultDate = new Date(Date.parse(l.field.value)), l.setDefaultDate = !0));
                     var d = l.defaultDate;
-                    c(d) ? l.setDefaultDate ? u.setDate(d, !0) : u.gotoDate(d) : u.gotoDate(new Date), l.bound ? (this.hide(), u.el.className += " is-bound", i(l.trigger, "click", u._onInputClick), i(l.trigger, "focus", u._onInputFocus), i(l.trigger, "blur", u._onInputBlur)) : this.show()
+                    u(d) ? l.setDefaultDate ? c.setDate(d, !0) : c.gotoDate(d) : c.gotoDate(new Date), l.bound ? (this.hide(), c.el.className += " is-bound", o(l.trigger, "click", c._onInputClick), o(l.trigger, "focus", c._onInputFocus), o(l.trigger, "blur", c._onInputBlur)) : this.show()
                 };
-            return _.prototype = {
+            return w.prototype = {
                 config: function(e) {
-                    this._o || (this._o = m({}, g, !0));
-                    var t = m(this._o, e, !0);
+                    this._o || (this._o = h({}, b, !0));
+                    var t = h(this._o, e, !0);
                     t.isRTL = !!t.isRTL, t.field = t.field && t.field.nodeName ? t.field : null, t.theme = "string" == typeof t.theme && t.theme ? t.theme : null, t.bound = !!(void 0 !== t.bound ? t.field && t.bound : t.field), t.trigger = t.trigger && t.trigger.nodeName ? t.trigger : t.field, t.disableWeekends = !!t.disableWeekends, t.disableDayFn = "function" == typeof t.disableDayFn ? t.disableDayFn : null;
                     var n = parseInt(t.numberOfMonths, 10) || 1;
-                    if (t.numberOfMonths = n > 4 ? 4 : n, c(t.minDate) || (t.minDate = !1), c(t.maxDate) || (t.maxDate = !1), t.minDate && t.maxDate && t.maxDate < t.minDate && (t.maxDate = t.minDate = !1), t.minDate && this.setMinDate(t.minDate), t.maxDate && this.setMaxDate(t.maxDate), u(t.yearRange)) {
+                    if (t.numberOfMonths = n > 4 ? 4 : n, u(t.minDate) || (t.minDate = !1), u(t.maxDate) || (t.maxDate = !1), t.minDate && t.maxDate && t.maxDate < t.minDate && (t.maxDate = t.minDate = !1), t.minDate && this.setMinDate(t.minDate), t.maxDate && this.setMaxDate(t.maxDate), c(t.yearRange)) {
                         var r = (new Date).getFullYear() - 10;
                         t.yearRange[0] = parseInt(t.yearRange[0], 10) || r, t.yearRange[1] = parseInt(t.yearRange[1], 10) || r
-                    } else t.yearRange = Math.abs(parseInt(t.yearRange, 10)) || g.yearRange, t.yearRange > 100 && (t.yearRange = 100);
+                    } else t.yearRange = Math.abs(parseInt(t.yearRange, 10)) || b.yearRange, t.yearRange > 100 && (t.yearRange = 100);
                     return t
                 },
                 toString: function(n) {
-                    return n = n || this._o.format, c(this._d) ? this._o.toString ? this._o.toString(this._d, n) : t ? e(this._d).format(n) : this._d.toDateString() : ""
+                    return n = n || this._o.format, u(this._d) ? this._o.toString ? this._o.toString(this._d, n) : t ? e(this._d).format(n) : this._d.toDateString() : ""
                 },
                 getMoment: function() {
                     return t ? e(this._d) : null
@@ -604,23 +605,23 @@ webpackJsonp([46], {
                     t && e.isMoment(n) && this.setDate(n.toDate(), r)
                 },
                 getDate: function() {
-                    return c(this._d) ? new Date(this._d.getTime()) : null
+                    return u(this._d) ? new Date(this._d.getTime()) : null
                 },
                 setDate: function(e, t) {
                     if (!e) return this._d = null, this._o.field && (this._o.field.value = "", p(this._o.field, "change", {
                         firedBy: this
                     })), this.draw();
-                    if ("string" == typeof e && (e = new Date(Date.parse(e))), c(e)) {
+                    if ("string" == typeof e && (e = new Date(Date.parse(e))), u(e)) {
                         var n = this._o.minDate,
                             r = this._o.maxDate;
-                        c(n) && e < n ? e = n : c(r) && e > r && (e = r), this._d = new Date(e.getTime()), f(this._d), this.gotoDate(this._d), this._o.field && (this._o.field.value = this.toString(), p(this._o.field, "change", {
+                        u(n) && e < n ? e = n : u(r) && e > r && (e = r), this._d = new Date(e.getTime()), m(this._d), this.gotoDate(this._d), this._o.field && (this._o.field.value = this.toString(), p(this._o.field, "change", {
                             firedBy: this
                         })), t || "function" != typeof this._o.onSelect || this._o.onSelect.call(this, this.getDate())
                     }
                 },
                 gotoDate: function(e) {
                     var t = !0;
-                    if (c(e)) {
+                    if (u(e)) {
                         if (this.calendars) {
                             var n = new Date(this.calendars[0].year, this.calendars[0].month, 1),
                                 r = new Date(this.calendars[this.calendars.length - 1].year, this.calendars[this.calendars.length - 1].month, 1),
@@ -639,8 +640,8 @@ webpackJsonp([46], {
                     "add" === e ? n = new Date(r.valueOf() + a) : "subtract" === e && (n = new Date(r.valueOf() - a)), this.setDate(n)
                 },
                 adjustCalendars: function() {
-                    this.calendars[0] = v(this.calendars[0]);
-                    for (var e = 1; e < this._o.numberOfMonths; e++) this.calendars[e] = v({
+                    this.calendars[0] = g(this.calendars[0]);
+                    for (var e = 1; e < this._o.numberOfMonths; e++) this.calendars[e] = g({
                         month: this.calendars[0].month + e,
                         year: this.calendars[0].year
                     });
@@ -662,10 +663,10 @@ webpackJsonp([46], {
                     isNaN(e) || (this.calendars[0].year = parseInt(e, 10), this.adjustCalendars())
                 },
                 setMinDate: function(e) {
-                    e instanceof Date ? (f(e), this._o.minDate = e, this._o.minYear = e.getFullYear(), this._o.minMonth = e.getMonth()) : (this._o.minDate = g.minDate, this._o.minYear = g.minYear, this._o.minMonth = g.minMonth, this._o.startRange = g.startRange), this.draw()
+                    e instanceof Date ? (m(e), this._o.minDate = e, this._o.minYear = e.getFullYear(), this._o.minMonth = e.getMonth()) : (this._o.minDate = b.minDate, this._o.minYear = b.minYear, this._o.minMonth = b.minMonth, this._o.startRange = b.startRange), this.draw()
                 },
                 setMaxDate: function(e) {
-                    e instanceof Date ? (f(e), this._o.maxDate = e, this._o.maxYear = e.getFullYear(), this._o.maxMonth = e.getMonth()) : (this._o.maxDate = g.maxDate, this._o.maxYear = g.maxYear, this._o.maxMonth = g.maxMonth, this._o.endRange = g.endRange), this.draw()
+                    e instanceof Date ? (m(e), this._o.maxDate = e, this._o.maxYear = e.getFullYear(), this._o.maxMonth = e.getMonth()) : (this._o.maxDate = b.maxDate, this._o.maxYear = b.maxYear, this._o.maxMonth = b.maxMonth, this._o.endRange = b.endRange), this.draw()
                 },
                 setStartRange: function(e) {
                     this._o.startRange = e
@@ -677,85 +678,85 @@ webpackJsonp([46], {
                     if (this._v || e) {
                         var t, n = this._o,
                             r = n.minYear,
-                            i = n.maxYear,
-                            o = n.minMonth,
+                            o = n.maxYear,
+                            i = n.minMonth,
                             s = n.maxMonth,
-                            u = "";
-                        this._y <= r && (this._y = r, !isNaN(o) && this._m < o && (this._m = o)), this._y >= i && (this._y = i, !isNaN(s) && this._m > s && (this._m = s)), t = "pika-title-" + Math.random().toString(36).replace(/[^a-z]+/g, "").substr(0, 2);
-                        for (var c = 0; c < n.numberOfMonths; c++) u += '<div class="pika-lendar">' + x(this, c, this.calendars[c].year, this.calendars[c].month, this.calendars[0].year, t) + this.render(this.calendars[c].year, this.calendars[c].month, t) + "</div>";
-                        this.el.innerHTML = u, n.bound && "hidden" !== n.field.type && a(function() {
+                            c = "";
+                        this._y <= r && (this._y = r, !isNaN(i) && this._m < i && (this._m = i)), this._y >= o && (this._y = o, !isNaN(s) && this._m > s && (this._m = s)), t = "pika-title-" + Math.random().toString(36).replace(/[^a-z]+/g, "").substr(0, 2);
+                        for (var u = 0; u < n.numberOfMonths; u++) c += '<div class="pika-lendar">' + D(this, u, this.calendars[u].year, this.calendars[u].month, this.calendars[0].year, t) + this.render(this.calendars[u].year, this.calendars[u].month, t) + "</div>";
+                        this.el.innerHTML = c, n.bound && "hidden" !== n.field.type && a(function() {
                             n.trigger.focus()
                         }, 1), "function" == typeof this._o.onDraw && this._o.onDraw(this), n.bound && n.field.setAttribute("aria-label", "Use the arrow keys to pick a date")
                     }
                 },
                 adjustPosition: function() {
-                    var e, t, n, a, i, o, s, u, c, l;
+                    var e, t, n, a, o, i, s, c, u, l;
                     if (!this._o.container) {
-                        if (this.el.style.position = "absolute", t = e = this._o.trigger, n = this.el.offsetWidth, a = this.el.offsetHeight, i = window.innerWidth || r.documentElement.clientWidth, o = window.innerHeight || r.documentElement.clientHeight, s = window.pageYOffset || r.body.scrollTop || r.documentElement.scrollTop, "function" == typeof e.getBoundingClientRect) u = (l = e.getBoundingClientRect()).left + window.pageXOffset, c = l.bottom + window.pageYOffset;
+                        if (this.el.style.position = "absolute", t = e = this._o.trigger, n = this.el.offsetWidth, a = this.el.offsetHeight, o = window.innerWidth || r.documentElement.clientWidth, i = window.innerHeight || r.documentElement.clientHeight, s = window.pageYOffset || r.body.scrollTop || r.documentElement.scrollTop, "function" == typeof e.getBoundingClientRect) c = (l = e.getBoundingClientRect()).left + window.pageXOffset, u = l.bottom + window.pageYOffset;
                         else
-                            for (u = t.offsetLeft, c = t.offsetTop + t.offsetHeight; t = t.offsetParent;) u += t.offsetLeft, c += t.offsetTop;
-                        (this._o.reposition && u + n > i || this._o.position.indexOf("right") > -1 && u - n + e.offsetWidth > 0) && (u = u - n + e.offsetWidth), (this._o.reposition && c + a > o + s || this._o.position.indexOf("top") > -1 && c - a - e.offsetHeight > 0) && (c = c - a - e.offsetHeight), this.el.style.left = u + "px", this.el.style.top = c + "px"
+                            for (c = t.offsetLeft, u = t.offsetTop + t.offsetHeight; t = t.offsetParent;) c += t.offsetLeft, u += t.offsetTop;
+                        (this._o.reposition && c + n > o || this._o.position.indexOf("right") > -1 && c - n + e.offsetWidth > 0) && (c = c - n + e.offsetWidth), (this._o.reposition && u + a > i + s || this._o.position.indexOf("top") > -1 && u - a - e.offsetHeight > 0) && (u = u - a - e.offsetHeight), this.el.style.left = c + "px", this.el.style.top = u + "px"
                     }
                 },
                 render: function(e, t, n) {
                     var r = this._o,
                         a = new Date,
-                        i = d(e, t),
-                        o = new Date(e, t, 1).getDay(),
+                        o = d(e, t),
+                        i = new Date(e, t, 1).getDay(),
                         s = [],
-                        u = [];
-                    f(a), r.firstDay > 0 && (o -= r.firstDay) < 0 && (o += 7);
-                    for (var m = 0 === t ? 11 : t - 1, p = 11 === t ? 0 : t + 1, v = 0 === t ? e - 1 : e, g = 11 === t ? e + 1 : e, b = d(v, m), x = i + o, _ = x; _ > 7;) _ -= 7;
-                    x += 7 - _;
-                    for (var N, S, k, T, M = !1, O = 0, A = 0; O < x; O++) {
-                        var E = new Date(e, t, O - o + 1),
-                            I = !!c(this._d) && h(E, this._d),
-                            C = h(E, a),
-                            R = -1 !== r.events.indexOf(E.toDateString()),
-                            Y = O < o || O >= i + o,
-                            j = O - o + 1,
-                            P = t,
-                            F = e,
-                            L = r.startRange && h(r.startRange, E),
-                            W = r.endRange && h(r.endRange, E),
-                            H = r.startRange && r.endRange && r.startRange < E && E < r.endRange,
-                            z = r.minDate && E < r.minDate || r.maxDate && E > r.maxDate || r.disableWeekends && l(E) || r.disableDayFn && r.disableDayFn(E);
-                        Y && (O < o ? (j = b + j, P = m, F = v) : (j -= i, P = p, F = g));
-                        var q = {
-                            day: j,
-                            month: P,
-                            year: F,
-                            hasEvent: R,
-                            isSelected: I,
+                        c = [];
+                    m(a), r.firstDay > 0 && (i -= r.firstDay) < 0 && (i += 7);
+                    for (var h = 0 === t ? 11 : t - 1, p = 11 === t ? 0 : t + 1, g = 0 === t ? e - 1 : e, b = 11 === t ? e + 1 : e, v = d(g, h), D = o + i, w = D; w > 7;) w -= 7;
+                    D += 7 - w;
+                    for (var x, _, j, N, M = !1, E = 0, T = 0; E < D; E++) {
+                        var A = new Date(e, t, E - i + 1),
+                            k = !!u(this._d) && f(A, this._d),
+                            C = f(A, a),
+                            I = -1 !== r.events.indexOf(A.toDateString()),
+                            R = E < i || E >= o + i,
+                            P = E - i + 1,
+                            F = t,
+                            L = e,
+                            Y = r.startRange && f(r.startRange, A),
+                            G = r.endRange && f(r.endRange, A),
+                            B = r.startRange && r.endRange && r.startRange < A && A < r.endRange,
+                            W = r.minDate && A < r.minDate || r.maxDate && A > r.maxDate || r.disableWeekends && l(A) || r.disableDayFn && r.disableDayFn(A);
+                        R && (E < i ? (P = v + P, F = h, L = g) : (P -= o, F = p, L = b));
+                        var H = {
+                            day: P,
+                            month: F,
+                            year: L,
+                            hasEvent: I,
+                            isSelected: k,
                             isToday: C,
-                            isDisabled: z,
-                            isEmpty: Y,
-                            isStartRange: L,
-                            isEndRange: W,
-                            isInRange: H,
+                            isDisabled: W,
+                            isEmpty: R,
+                            isStartRange: Y,
+                            isEndRange: G,
+                            isInRange: B,
                             showDaysInNextAndPreviousMonths: r.showDaysInNextAndPreviousMonths,
                             enableSelectionDaysInNextAndPreviousMonths: r.enableSelectionDaysInNextAndPreviousMonths
                         };
-                        r.pickWholeWeek && I && (M = !0), u.push(y(q)), 7 == ++A && (r.showWeekNumber && u.unshift((N = O - o, S = t, k = e, T = void 0, T = new Date(k, 0, 1), '<td class="pika-week">' + Math.ceil(((new Date(k, S, N) - T) / 864e5 + T.getDay() + 1) / 7) + "</td>")), s.push(w(u, r.isRTL, r.pickWholeWeek, M)), u = [], A = 0, M = !1)
+                        r.pickWholeWeek && k && (M = !0), c.push(y(H)), 7 == ++T && (r.showWeekNumber && c.unshift((x = E - i, _ = t, j = e, N = void 0, N = new Date(j, 0, 1), '<td class="pika-week">' + Math.ceil(((new Date(j, _, x) - N) / 864e5 + N.getDay() + 1) / 7) + "</td>")), s.push(O(c, r.isRTL, r.pickWholeWeek, M)), c = [], T = 0, M = !1)
                     }
-                    return D(r, s, n)
+                    return S(r, s, n)
                 },
                 isVisible: function() {
                     return this._v
                 },
                 show: function() {
                     var e, t, n;
-                    this.isVisible() || (this._v = !0, this.draw(), e = this.el, t = "is-hidden", e.className = (n = (" " + e.className + " ").replace(" " + t + " ", " ")).trim ? n.trim() : n.replace(/^\s+|\s+$/g, ""), this._o.bound && (i(r, "click", this._onClick), this.adjustPosition()), "function" == typeof this._o.onOpen && this._o.onOpen.call(this))
+                    this.isVisible() || (this._v = !0, this.draw(), e = this.el, t = "is-hidden", e.className = (n = (" " + e.className + " ").replace(" " + t + " ", " ")).trim ? n.trim() : n.replace(/^\s+|\s+$/g, ""), this._o.bound && (o(r, "click", this._onClick), this.adjustPosition()), "function" == typeof this._o.onOpen && this._o.onOpen.call(this))
                 },
                 hide: function() {
                     var e, t, n = this._v;
-                    !1 !== n && (this._o.bound && o(r, "click", this._onClick), this.el.style.position = "static", this.el.style.left = "auto", this.el.style.top = "auto", e = this.el, s(e, t = "is-hidden") || (e.className = "" === e.className ? t : e.className + " " + t), this._v = !1, void 0 !== n && "function" == typeof this._o.onClose && this._o.onClose.call(this))
+                    !1 !== n && (this._o.bound && i(r, "click", this._onClick), this.el.style.position = "static", this.el.style.left = "auto", this.el.style.top = "auto", e = this.el, s(e, t = "is-hidden") || (e.className = "" === e.className ? t : e.className + " " + t), this._v = !1, void 0 !== n && "function" == typeof this._o.onClose && this._o.onClose.call(this))
                 },
                 destroy: function() {
                     var e = this._o;
-                    this.hide(), o(this.el, "mousedown", this._onMouseDown, !0), o(this.el, "touchend", this._onMouseDown, !0), o(this.el, "change", this._onChange), e.keyboardInput && o(r, "keydown", this._onKeyChange), e.field && (o(e.field, "change", this._onInputChange), e.bound && (o(e.trigger, "click", this._onInputClick), o(e.trigger, "focus", this._onInputFocus), o(e.trigger, "blur", this._onInputBlur))), this.el.parentNode && this.el.parentNode.removeChild(this.el)
+                    this.hide(), i(this.el, "mousedown", this._onMouseDown, !0), i(this.el, "touchend", this._onMouseDown, !0), i(this.el, "change", this._onChange), e.keyboardInput && i(r, "keydown", this._onKeyChange), e.field && (i(e.field, "change", this._onInputChange), e.bound && (i(e.trigger, "click", this._onInputClick), i(e.trigger, "focus", this._onInputFocus), i(e.trigger, "blur", this._onInputBlur))), this.el.parentNode && this.el.parentNode.removeChild(this.el)
                 }
-            }, _
+            }, w
         })
     },
     "6Zhv": function(e, t, n) {
@@ -789,14 +790,14 @@ webpackJsonp([46], {
                         case 0:
                             return [4, a.a.request(e.path, e, t)];
                         case 1:
-                            return n = r.sent(), [2, new i(n, e)]
+                            return n = r.sent(), [2, new o(n, e)]
                     }
                 })
             })
         };
         var r = n("TToO"),
             a = n("9u8h");
-        var i = function() {
+        var o = function() {
             function e(e, t) {
                 this.status = e.status, this.body = e.body, this.error = e.error, this.requestError = e.requestError, this.request = t
             }
@@ -832,11 +833,11 @@ webpackJsonp([46], {
         "use strict";
         var r = n("TToO"),
             a = n("GiK3"),
-            i = n("7vx8"),
-            o = n("AJEV"),
+            o = n("7vx8"),
+            i = n("AJEV"),
             s = n("v5lG"),
-            u = n("+TF1"),
-            c = function(e) {
+            c = n("+TF1"),
+            u = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -849,7 +850,7 @@ webpackJsonp([46], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.query()
                 }, t.prototype.componentDidUpdate = function(e) {
-                    (e.data.channel && e.data.channel.id) === (this.props.data.channel && this.props.data.channel.id) && Object(o.f)(e.interval, this.props.interval) || this.query()
+                    (e.data.channel && e.data.channel.id) === (this.props.data.channel && this.props.data.channel.id) && Object(i.f)(e.interval, this.props.interval) || this.query()
                 }, t.prototype.render = function() {
                     return this.props.children(this.state)
                 }, t.prototype.query = function() {
@@ -858,10 +859,10 @@ webpackJsonp([46], {
                         return r.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return this.props.data.channel ? (e = o.c.fromChannelData(this.props.data.channel), this.setState({
+                                    return this.props.data.channel ? (e = i.c.fromChannelData(this.props.data.channel), this.setState({
                                         isLoading: !0,
                                         channel: e
-                                    }), [4, Object(u.b)(e, this.props.interval)]) : [2];
+                                    }), [4, Object(c.b)(e, this.props.interval)]) : [2];
                                 case 1:
                                     return t = n.sent(), this.setState({
                                         streamSummaries: t.streamSummaries,
@@ -872,7 +873,7 @@ webpackJsonp([46], {
                     })
                 }, t
             }(a.Component),
-            l = Object(i.a)(s, {
+            l = Object(o.a)(s, {
                 options: function(e) {
                     return {
                         variables: {
@@ -880,14 +881,14 @@ webpackJsonp([46], {
                         }
                     }
                 }
-            })(c);
+            })(u);
         n("uYc/");
         n.d(t, !1, function() {
-            return c
+            return u
         }), n.d(t, "a", function() {
             return l
         }), n.d(t, "b", function() {
-            return u.a
+            return c.a
         }), n.d(t, !1, function() {})
     },
     "7yyf": function(e, t, n) {
@@ -908,21 +909,21 @@ webpackJsonp([46], {
         var r = n("u/4p");
         e.exports = function(e, t, n) {
             var a = r(e, n),
-                i = r(t, n);
-            return a.getTime() === i.getTime()
+                o = r(t, n);
+            return a.getTime() === o.getTime()
         }
     },
     "8QR2": function(e, t, n) {
         var r = n("xA5w"),
             a = 864e5;
-        e.exports = function(e, t, n, i) {
-            var o = r(e).getTime(),
+        e.exports = function(e, t, n, o) {
+            var i = r(e).getTime(),
                 s = r(t).getTime(),
-                u = r(n).getTime(),
-                c = r(i).getTime();
-            if (o > s || u > c) throw new Error("The start of the range cannot be after the end of the range");
-            if (!(o < c && u < s)) return 0;
-            var l = (c > s ? s : c) - (u < o ? o : u);
+                c = r(n).getTime(),
+                u = r(o).getTime();
+            if (i > s || c > u) throw new Error("The start of the range cannot be after the end of the range");
+            if (!(i < u && c < s)) return 0;
+            var l = (u > s ? s : u) - (c < i ? i : c);
             return Math.ceil(l / a)
         }
     },
@@ -932,6 +933,264 @@ webpackJsonp([46], {
         e.exports = function(e, t) {
             return r(e) - r(t)
         }
+    },
+    "9Yaz": function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            a = n("GiK3"),
+            o = n("F8kA"),
+            i = n("7qqA"),
+            s = n("+TF1"),
+            c = n("u4Vk"),
+            u = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this,
+                        r = i.b.intervalFromID(n.props.summaryID);
+                    return r && Object(c.e)(r) && (n.summaryInterval = r), n.needsQuery = Boolean(n.summaryInterval && Object(c.c)(n.props.streamSummaryQuery.interval, n.summaryInterval)), n.state = {
+                        isLoading: n.needsQuery,
+                        streamSummaries: []
+                    }, n
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.query()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.query()
+                }, t.prototype.render = function() {
+                    return this.props.children(r.__assign({}, this.props.streamSummaryQuery, {
+                        isLoading: this.props.streamSummaryQuery.isLoading || this.state.isLoading,
+                        historicalStreamSummary: this.state.streamSummaries[0]
+                    }))
+                }, t.prototype.query = function() {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return r.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return this.needsQuery && this.props.streamSummaryQuery.channel ? (this.needsQuery = !1, [4, Object(s.b)(this.props.streamSummaryQuery.channel, this.summaryInterval)]) : [2];
+                                case 1:
+                                    return (e = t.sent()).isError && this.setState({
+                                        isLoading: !1
+                                    }), this.setState({
+                                        streamSummaries: e.streamSummaries,
+                                        isLoading: !1
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t
+            }(a.Component),
+            l = n("CIox"),
+            d = n("6sO2"),
+            m = n("9uzc"),
+            f = n("ylrR"),
+            h = n("Odds"),
+            p = {
+                "data-test-selector": "stream-summary-date-time"
+            },
+            g = function(e) {
+                var t = e.currentStreamSummary,
+                    n = e.streamSummaries,
+                    o = e.getURLForStreamSummary;
+                return a.createElement(h._8, {
+                    position: h._15.Relative,
+                    fullWidth: !0
+                }, a.createElement(f.a, {
+                    control: function(e) {
+                        var n, o = e.toggle;
+                        return a.createElement(h.v, r.__assign({
+                            type: h.B.Text
+                        }, p, {
+                            onClick: o,
+                            fullWidth: !0
+                        }), a.createElement(h.Q, {
+                            fontSize: h.V.Size4
+                        }, Object(d.c)(t.interval.start, {
+                            weekday: "long",
+                            month: "long",
+                            day: "numeric"
+                        })), a.createElement(h.Q, {
+                            fontSize: h.V.Size6,
+                            color: h.K.Alt2
+                        }, (n = t.interval, Object(d.d)("{start, time, short} – {end, time, short}", {
+                            start: n.start,
+                            end: n.end
+                        }, "StreamSummaryNav"))))
+                    }
+                }, function(e) {
+                    var r = e.close;
+                    return a.createElement(h.q, {
+                        direction: h.r.BottomCenter,
+                        noTail: !0,
+                        offsetY: "-2rem",
+                        size: h.s.Medium,
+                        show: !0
+                    }, a.createElement(h._8, {
+                        padding: {
+                            y: .5
+                        }
+                    }, n.slice().reverse().map(function(e) {
+                        return a.createElement(b, {
+                            href: o(e),
+                            isActive: t === e,
+                            key: e.id,
+                            onClick: r
+                        }, v(e.interval))
+                    }), !n.includes(t) && a.createElement(a.Fragment, null, a.createElement(h._14, {
+                        height: 5
+                    }), a.createElement(b, {
+                        href: o(t),
+                        isActive: !0,
+                        onClick: r
+                    }, v(t.interval)))))
+                }))
+            },
+            b = function(e) {
+                var t, n = e.href,
+                    r = e.isActive,
+                    o = e.children,
+                    i = e.onClick;
+                return t = r ? a.createElement(h._8, {
+                    display: h.R.Flex
+                }, a.createElement(h._8, {
+                    display: h.R.Flex,
+                    padding: {
+                        right: 1
+                    }
+                }, a.createElement(h._24, {
+                    asset: h._25.Check,
+                    width: 10,
+                    height: 10,
+                    type: h._26.Alt2
+                })), a.createElement(h.Q, {
+                    fontSize: h.V.Size6,
+                    color: h.K.Alt2
+                }, o)) : a.createElement(h._8, {
+                    display: h.R.Flex
+                }, a.createElement(h.Q, {
+                    fontSize: h.V.Size6
+                }, o)), a.createElement(h._6, {
+                    linkTo: n,
+                    onClick: i,
+                    disabled: r
+                }, a.createElement(h._8, {
+                    display: h.R.Flex,
+                    flexDirection: h.T.Row,
+                    alignItems: h.c.Center,
+                    justifyContent: h._7.Between,
+                    padding: {
+                        y: .5,
+                        x: 1
+                    }
+                }, t))
+            };
+
+        function v(e) {
+            var t = Object(d.c)(e.start, {
+                weekday: "short",
+                month: "short",
+                day: "numeric"
+            });
+            return Object(d.d)("{localizedStartDate} {start, time, short} – {end, time, short}", {
+                localizedStartDate: t,
+                start: e.start,
+                end: e.end
+            }, "StreamSummaryNav")
+        }
+        var y = function() {
+                return function(e, t) {
+                    if (this.isLast = !1, this.streamSummaries = e, this.last = this.streamSummaries[this.streamSummaries.length - 1], this.current = this.streamSummaries.find(function(e) {
+                            return e.id === t
+                        }), this.current && this.current) {
+                        var n = this.streamSummaries.indexOf(this.current);
+                        this.previous = this.streamSummaries[n - 1], this.next = this.streamSummaries[n + 1], this.isLast = this.last === this.current
+                    }
+                }
+            }(),
+            O = (n("vU5Q"), function(e) {
+                var t, n = new y(e.query.streamSummaries, e.summaryID);
+                if (!n.current && e.query.historicalStreamSummary) {
+                    var r = e.query.historicalStreamSummary;
+                    n = new y([r], e.summaryID)
+                }
+                if (e.query.isLoading) t = a.createElement("div", null, a.createElement(h._14, {
+                    width: 200,
+                    lineCount: 2
+                }));
+                else if (n.current) t = a.createElement(g, {
+                    currentStreamSummary: n.current,
+                    streamSummaries: e.query.streamSummaries,
+                    getURLForStreamSummary: e.getURLForStreamSummary
+                });
+                else if (e.query.streamSummaries.length) {
+                    var o = e.query.streamSummaries[e.query.streamSummaries.length - 1];
+                    t = a.createElement(l.b, {
+                        to: e.getURLForStreamSummary(o)
+                    })
+                } else t = a.createElement(D, null);
+                return a.createElement(h._8, {
+                    position: h._15.Relative
+                }, a.createElement(h._8, {
+                    margin: {
+                        bottom: 2
+                    }
+                }, a.createElement(m.a, {
+                    previousPath: n.previous ? e.getURLForStreamSummary(n.previous) : "",
+                    nextPath: n.next ? e.getURLForStreamSummary(n.next) : ""
+                }, t)), e.children(n))
+            }),
+            D = function() {
+                return a.createElement(h.Q, {
+                    className: "sm-nav__placeholder-text",
+                    type: h._49.H4,
+                    color: h.K.Alt2,
+                    ellipsis: !0
+                }, Object(d.d)("Today would be a good day to start streaming!", "StreamSummaryNav"))
+            },
+            S = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getURLForStreamSummary = function(e) {
+                        return e ? t.props.parentPath + "/" + e.id : ""
+                    }, t.handleRedirect = function(e) {
+                        t.props.replace(t.getURLForStreamSummary(e))
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = this;
+                    return a.createElement(u, {
+                        streamSummaryQuery: this.props.query,
+                        summaryID: this.props.summaryID,
+                        onRedirect: this.handleRedirect
+                    }, function(t) {
+                        return a.createElement(O, {
+                            summaryID: e.props.summaryID,
+                            query: t,
+                            getURLForStreamSummary: e.getURLForStreamSummary
+                        }, e.props.children)
+                    })
+                }, t
+            }(a.Component),
+            w = function(e) {
+                return a.createElement(o.d, null, function(t) {
+                    var n = t.match;
+                    return a.createElement(o.d, {
+                        path: n.url + "/:summaryID"
+                    }, function(t) {
+                        var o = t.match,
+                            i = t.history;
+                        return a.createElement(S, r.__assign({
+                            summaryID: o && o.params.summaryID || "",
+                            parentPath: n.url,
+                            replace: i.replace
+                        }, e))
+                    })
+                })
+            };
+        n.d(t, !1, function() {
+            return S
+        }), n.d(t, "a", function() {
+            return w
+        })
     },
     "9r5b": function(e, t, n) {
         var r = n("nfOx");
@@ -943,12 +1202,12 @@ webpackJsonp([46], {
     "9u8h": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return o
+            return i
         });
         var r = n("TToO"),
             a = n("6sO2"),
-            i = n("Aj/L"),
-            o = function() {
+            o = n("Aj/L"),
+            i = function() {
                 function e() {}
                 return e.get = function(e, t, n) {
                     return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
@@ -1056,34 +1315,34 @@ webpackJsonp([46], {
                     })
                 }, e.request = function(e, t, n) {
                     return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        var a, i, o, s;
-                        return r.__generator(this, function(u) {
-                            switch (u.label) {
+                        var a, o, i, s;
+                        return r.__generator(this, function(c) {
+                            switch (c.label) {
                                 case 0:
-                                    return t = this.constructOptions(t, n), a = t.headers ? t.headers["Content-Type"] : void 0, i = this.serialize(t.body, a), o = r.__assign({}, t, {
-                                        body: i
-                                    }), [4, this._fetch(e, o)];
+                                    return t = this.constructOptions(t, n), a = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, a), i = r.__assign({}, t, {
+                                        body: o
+                                    }), [4, this._fetch(e, i)];
                                 case 1:
-                                    return s = u.sent(), [4, this.constructLegacyAPIResponse(s)];
+                                    return s = c.sent(), [4, this.constructLegacyAPIResponse(s)];
                                 case 2:
-                                    return [2, u.sent()]
+                                    return [2, c.sent()]
                             }
                         })
                     })
                 }, e.requestOrThrow = function(e, t, n) {
                     return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        var a, i;
-                        return r.__generator(this, function(o) {
-                            switch (o.label) {
+                        var a, o;
+                        return r.__generator(this, function(i) {
+                            switch (i.label) {
                                 case 0:
-                                    return o.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
+                                    return i.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
                                 case 1:
-                                    if ((a = o.sent()).error || a.requestError) throw new Error("Error while making request");
-                                    return i = r.__assign({}, a, {
+                                    if ((a = i.sent()).error || a.requestError) throw new Error("Error while making request");
+                                    return o = r.__assign({}, a, {
                                         body: a.body
-                                    }), [2, Promise.resolve(i)];
+                                    }), [2, Promise.resolve(o)];
                                 case 2:
-                                    throw o.sent();
+                                    throw i.sent();
                                 case 3:
                                     return [2]
                             }
@@ -1093,7 +1352,7 @@ webpackJsonp([46], {
                     return new URL(e, a.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return r.__awaiter(this, void 0, void 0, function() {
-                        var t, n, a, i;
+                        var t, n, a, o;
                         return r.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
@@ -1105,7 +1364,7 @@ webpackJsonp([46], {
                                 case 2:
                                     return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return a = r.sent(), e.headers && e.headers.get && (i = e.headers.get("Content-Type")) && -1 !== i.indexOf("application/json") && (t.requestError = a), [3, 4];
+                                    return a = r.sent(), e.headers && e.headers.get && (o = e.headers.get("Content-Type")) && -1 !== o.indexOf("application/json") && (t.requestError = a), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -1139,12 +1398,85 @@ webpackJsonp([46], {
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                    var o = Object(i.c)(n);
-                    return o && (r.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (r["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                    var i = Object(o.c)(n);
+                    return i && (r.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (r["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                         r[e] && delete r[e]
                     }), r
                 }, e.logger = a.o.logger.withCategory("legacy-api"), e
             }()
+    },
+    "9uzc": function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            a = n("HW6M"),
+            o = n("GiK3"),
+            i = n("F8kA"),
+            s = n("Odds"),
+            c = (n("KVLd"), {
+                "data-test-selector": "nav-bar-navigate-back"
+            }),
+            u = {
+                "data-test-selector": "nav-bar-navigate-forward"
+            },
+            l = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return o.createElement(s._35, {
+                        elevation: 1,
+                        background: s.n.Base,
+                        display: s.R.Flex,
+                        flexWrap: s.U.NoWrap,
+                        className: "nav-bar-layout__height"
+                    }, o.createElement(d, r.__assign({}, c, {
+                        to: this.props.previousPath,
+                        onClick: this.props.onPrevious
+                    }), "◀"), o.createElement(s._35, {
+                        display: s.R.Flex,
+                        flexGrow: 1,
+                        flexWrap: s.U.NoWrap,
+                        justifyContent: s._7.Center,
+                        alignItems: s.c.Center,
+                        borderRight: !0,
+                        borderLeft: !0
+                    }, this.props.children), o.createElement(d, r.__assign({}, u, {
+                        to: this.props.nextPath,
+                        onClick: this.props.onNext
+                    }), "▶"))
+                }, t
+            }(o.Component),
+            d = function(e) {
+                var t = a("tw-button", "tw-button--text", {
+                    "tw-button--disabled": !e.to
+                });
+                return o.createElement(s._2, {
+                    display: s.R.Flex,
+                    flexGrow: 0,
+                    padding: {
+                        top: 1,
+                        right: 2,
+                        bottom: 1,
+                        left: 2
+                    },
+                    flexWrap: s.U.NoWrap
+                }, o.createElement(i.a, r.__assign({
+                    to: e.to,
+                    className: t,
+                    onClick: function(t) {
+                        e.to || t.preventDefault(), e.onClick && e.onClick()
+                    }
+                }, Object(s._63)(e)), o.createElement(s.Q, {
+                    fontSize: s.V.Size8
+                }, e.children)))
+            };
+        n.d(t, !1, function() {
+            return c
+        }), n.d(t, !1, function() {
+            return u
+        }), n.d(t, "a", function() {
+            return l
+        })
     },
     A2zO: function(e, t, n) {
         var r = n("Be26");
@@ -1155,8 +1487,8 @@ webpackJsonp([46], {
     AJEV: function(e, t, n) {
         "use strict";
         var r, a = n("wuJz"),
-            i = n("heIq"),
-            o = function() {
+            o = n("heIq"),
+            i = function() {
                 function e(e) {
                     Object.assign(this, e)
                 }
@@ -1182,9 +1514,9 @@ webpackJsonp([46], {
                         var n = e.wasCompletedWithinTimeWindow(t),
                             r = e.wasCompletedForTimedQuestButIsMissingLastCompletedAt(t);
                         return n || r
-                    }), this.completedAchievementsCount = this.completedAchievements.length, this.isCompleteByRole = this.getIsCompletedByRole(), this.isComplete = this.isCompleteByRole || Boolean(this.completedAt), this.isFinished = this.isCompleteByRole || Boolean(this.key === i.a && this.completedAt)
+                    }), this.completedAchievementsCount = this.completedAchievements.length, this.isCompleteByRole = this.getIsCompletedByRole(), this.isComplete = this.isCompleteByRole || Boolean(this.completedAt), this.isFinished = this.isCompleteByRole || Boolean(this.key === o.a && this.completedAt)
                 }, e.prototype.getIsCompletedByRole = function() {
-                    return this.role !== r.None && (this.role !== r.Affiliate || (this.key === i.a || this.key === i.b))
+                    return this.role !== r.None && (this.role !== r.Affiliate || (this.key === o.a || this.key === o.b))
                 }, e.prototype.wasCompletedWithinTimeWindow = function(e) {
                     var t = Object(a.subDays)(new Date, 1);
                     return Boolean(e.lastCompletedAt && Object(a.isBefore)(t, e.lastCompletedAt))
@@ -1200,8 +1532,8 @@ webpackJsonp([46], {
                     return void 0 === e && (e = new Date), !!this.completedAt && Object(a.isAfter)(this.completedAt, Object(a.subDays)(e, 14))
                 }, e
             }(),
-            u = n("PGY2"),
-            c = function() {
+            c = n("PGY2"),
+            u = function() {
                 function e(e) {
                     void 0 === e && (e = []), this.topRecentlyCompleted = [], this.notCompleted = [], this.pastCompleted = [], this.all = [], this.topRecentlyCompletedMap = new Map, this.all = e, this.buildExclusiveGroups(), this.sortExclusiveGroups()
                 }
@@ -1226,25 +1558,25 @@ webpackJsonp([46], {
                         } else t.isComplete ? e.pastCompleted.push(t) : e.notCompleted.push(t)
                     })
                 }, e.prototype.sortExclusiveGroups = function() {
-                    this.topRecentlyCompleted = Object(u.d)(Array.from(this.topRecentlyCompletedMap.values()), [function(e) {
+                    this.topRecentlyCompleted = Object(c.d)(Array.from(this.topRecentlyCompletedMap.values()), [function(e) {
                         return e.completedAt
                     }, function(e) {
                         return e.level
                     }, function(e) {
                         return e.title
-                    }], [u.a.Descending, u.a.Descending, u.a.Ascending]), this.notCompleted = Object(u.d)(this.notCompleted, [function(e) {
+                    }], [c.a.Descending, c.a.Descending, c.a.Ascending]), this.notCompleted = Object(c.d)(this.notCompleted, [function(e) {
                         return e.progressRatio
                     }, function(e) {
                         return e.level
                     }, function(e) {
                         return e.title
-                    }], [u.a.Descending, u.a.Ascending, u.a.Ascending]), this.pastCompleted = Object(u.d)(this.pastCompleted, [function(e) {
+                    }], [c.a.Descending, c.a.Ascending, c.a.Ascending]), this.pastCompleted = Object(c.d)(this.pastCompleted, [function(e) {
                         return e.completedAt
                     }, function(e) {
                         return e.level
                     }, function(e) {
                         return e.title
-                    }], [u.a.Descending, u.a.Descending, u.a.Ascending])
+                    }], [c.a.Descending, c.a.Descending, c.a.Ascending])
                 }, e
             }(),
             l = n("K/WB");
@@ -1254,11 +1586,11 @@ webpackJsonp([46], {
         n("LxVS");
         var d = n("u4Vk");
         n.d(t, "e", function() {
-            return o
+            return i
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "a", function() {
             return s
         }), n.d(t, !1, function() {}), n.d(t, "b", function() {
-            return c
+            return u
         }), n.d(t, "c", function() {
             return l.a
         }), n.d(t, !1, function() {}), n.d(t, "d", function() {
@@ -1297,6 +1629,62 @@ webpackJsonp([46], {
                 weekStartsOn: 1
             })
         }
+    },
+    BoWu: function(e, t, n) {
+        "use strict";
+        n.d(t, "c", function() {
+            return o
+        }), n.d(t, "b", function() {
+            return i
+        }), n.d(t, "a", function() {
+            return s
+        });
+        var r = n("6sO2"),
+            a = function() {
+                return Object(r.d)("Other", "DemographicsData")
+            },
+            o = function(e) {
+                return {
+                    unknown: Object(r.d)("Unknown", "DemographicsData"),
+                    tv: Object(r.d)("TV", "DemographicsData"),
+                    ios: Object(r.d)("iOS App", "DemographicsData"),
+                    web: Object(r.d)("Web", "DemographicsData"),
+                    android: Object(r.d)("Android App", "DemographicsData"),
+                    mobile_web: Object(r.d)("Mobile Web", "DemographicsData"),
+                    mobile_aggregated: Object(r.d)("Mobile", "DemographicsData"),
+                    console: Object(r.d)("Console", "DemographicsData"),
+                    other: a()
+                }[e] || e
+            },
+            i = function(e) {
+                return {
+                    other: a(),
+                    front_page_featured: Object(r.d)("Featured Section - Front Page", "DemographicsData"),
+                    creative_page_featured: Object(r.d)("Featured Section - Creative Page", "DemographicsData"),
+                    hosted: Object(r.d)("Hosts", "DemographicsData"),
+                    email_live_notification: Object(r.d)("Notifications - Email", "DemographicsData"),
+                    onsite_notification: Object(r.d)("Notifications - Onsite", "DemographicsData"),
+                    followed_channel: Object(r.d)("Followers", "DemographicsData"),
+                    directory_browse: Object(r.d)("Browse Page", "DemographicsData"),
+                    search: Object(r.d)("Searches", "DemographicsData"),
+                    clips_live: Object(r.d)("Clips", "DemographicsData"),
+                    friend_presence: Object(r.d)("Friends", "DemographicsData"),
+                    top_nav_bar: Object(r.d)("Your Channel Page", "DemographicsData"),
+                    recommended_channel: Object(r.d)("Recommendations", "DemographicsData"),
+                    other_channel_page: Object(r.d)("Other Channel Page", "DemographicsData")
+                }[e] || Object(r.d)("{name}'s Channel Page", {
+                    name: e
+                }, "DemographicsData")
+            },
+            s = function(e) {
+                var t;
+                return ((t = {
+                    facebook: Object(r.d)("Facebook", "DemographicsData"),
+                    google: Object(r.d)("Google", "DemographicsData"),
+                    reddit: Object(r.d)("Reddit", "DemographicsData"),
+                    youtube: Object(r.d)("Youtube", "DemographicsData")
+                })["t.co"] = Object(r.d)("Twitter", "DemographicsData"), t.unknown = Object(r.d)("Direct", "DemographicsData"), t.twitch_aggregate = Object(r.d)("Twitch", "DemographicsData"), t.external_aggregate = Object(r.d)("External", "DemographicsData"), t)[e] || e
+            }
     },
     "CC3/": function(e, t) {
         var n = {
@@ -1535,17 +1923,143 @@ webpackJsonp([46], {
             return n.setMonth(0), n.setDate(a), n
         }
     },
+    Cd7A: function(e, t, n) {
+        "use strict";
+        var r = n("GiK3"),
+            a = n("6sO2"),
+            o = n("yLtb"),
+            i = n("BoWu"),
+            s = n("xygp"),
+            c = n("vTHh"),
+            u = n("Odds"),
+            l = (n("/ute"), function(e) {
+                return e
+            }),
+            d = function(e) {
+                var t = e.streamSummaries,
+                    n = e.isLoading,
+                    c = Object(s.a)(t.map(function(e) {
+                        return e.videoPlayPlatforms
+                    })),
+                    d = Object(s.a)(t.map(function(e) {
+                        return e.videoPlayGeographics
+                    })),
+                    f = Object(s.a)(t.map(function(e) {
+                        return e.videoPlayInternalChannelsReferrers
+                    })),
+                    h = Object(s.a)(t.map(function(e) {
+                        return e.videoPlayInternalTwitchReferrers
+                    })),
+                    p = Object(s.a)(t.map(function(e) {
+                        return e.videoPlayExternalReferrers
+                    }));
+                return r.createElement(u._8, {
+                    className: "referral-detail-panels",
+                    display: u.R.Flex,
+                    flexDirection: u.T.Column,
+                    flexWrap: u.U.NoWrap,
+                    alignItems: u.c.Stretch,
+                    breakpointMedium: {
+                        flexDirection: u.T.Row
+                    },
+                    margin: {
+                        top: 3
+                    }
+                }, r.createElement(u._8, {
+                    className: "referral-detail-panels__col",
+                    display: u.R.Flex,
+                    flexWrap: u.U.NoWrap,
+                    flexDirection: u.T.Column,
+                    padding: {
+                        left: 1,
+                        right: 1
+                    }
+                }, r.createElement(m, {
+                    isLoading: n,
+                    referrals: d.items.slice(0, 15),
+                    totals: d.totals,
+                    translationFunc: o.b,
+                    title: Object(a.d)("Views by Location", "ChannelAnalyticsReferralPage")
+                }), r.createElement(m, {
+                    isLoading: n,
+                    referrals: c.items.slice(0, 15),
+                    totals: c.totals,
+                    translationFunc: i.c,
+                    title: Object(a.d)("Views by Platform", "ChannelAnalyticsReferralPage")
+                })), r.createElement(u._8, {
+                    className: "referral-detail-panels__col",
+                    display: u.R.Flex,
+                    flexWrap: u.U.NoWrap,
+                    flexDirection: u.T.Column,
+                    padding: {
+                        left: 1,
+                        right: 1
+                    }
+                }, r.createElement(m, {
+                    isLoading: n,
+                    referrals: h.items.slice(0, 15),
+                    totals: h.totals,
+                    translationFunc: i.b,
+                    title: Object(a.d)("Views from Twitch", "ChannelAnalyticsReferralPage")
+                }), r.createElement(m, {
+                    isLoading: n,
+                    referrals: f.items.slice(0, 15),
+                    totals: f.totals,
+                    translationFunc: l,
+                    title: Object(a.d)("Views from Channels", "ChannelAnalyticsReferralPage")
+                }), r.createElement(m, {
+                    isLoading: n,
+                    referrals: p.items.slice(0, 15),
+                    totals: p.totals,
+                    translationFunc: i.a,
+                    title: Object(a.d)("Views from Outside Twitch", "ChannelAnalyticsReferralPage")
+                })))
+            };
+
+        function m(e) {
+            var t = e.isLoading,
+                n = e.referrals,
+                a = e.totals,
+                o = e.translationFunc,
+                i = e.title;
+            return t ? r.createElement(u._8, {
+                margin: {
+                    bottom: 2
+                }
+            }, r.createElement(u._14, {
+                height: 350
+            })) : r.createElement(u._35, {
+                padding: {
+                    bottom: 1
+                },
+                margin: {
+                    bottom: 2
+                },
+                elevation: 1,
+                background: u.n.Base
+            }, r.createElement(c.a, {
+                referrals: n,
+                totals: a,
+                translationFunc: o,
+                title: i
+            }))
+        }
+        n.d(t, "a", function() {
+            return d
+        })
+    },
     D6ie: function(e, t, n) {
         var r = n("xA5w"),
             a = n("3znZ"),
-            i = n("iRXW"),
-            o = 6048e5;
+            o = n("iRXW"),
+            i = 6048e5;
         e.exports = function(e) {
             var t = r(e),
-                n = a(t).getTime() - i(t).getTime();
-            return Math.round(n / o) + 1
+                n = a(t).getTime() - o(t).getTime();
+            return Math.round(n / i) + 1
         }
     },
+    DOXR: function(e, t) {},
     EkQQ: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -1553,101 +2067,101 @@ webpackJsonp([46], {
         });
         var r = n("3zLD"),
             a = n("RH2O"),
-            i = n("2KeS"),
-            o = n("7vx8"),
+            o = n("2KeS"),
+            i = n("7vx8"),
             s = n("+xm8"),
-            u = n("f2i/"),
-            c = n("7enT"),
+            c = n("f2i/"),
+            u = n("7enT"),
             l = n("Aj/L"),
             d = n("QwuA"),
-            f = n("TToO"),
-            h = n("GiK3"),
-            m = n("CIox"),
+            m = n("TToO"),
+            f = n("GiK3"),
+            h = n("CIox"),
             p = n("F8kA"),
-            v = n("6sO2"),
-            g = n("bZTi"),
-            b = n("yWCw"),
+            g = n("6sO2"),
+            b = n("bZTi"),
+            v = n("yWCw"),
             y = n("68hr"),
-            w = n("Ejve"),
-            x = n("TP6L"),
-            D = n("H+d0"),
-            _ = n("7qqA"),
-            N = n("zCIC"),
-            S = n("06ME"),
-            k = n("q7Ag"),
-            T = n("ytWG"),
+            O = n("Ejve"),
+            D = n("TP6L"),
+            S = n("H+d0"),
+            w = n("7qqA"),
+            x = n("zCIC"),
+            _ = n("06ME"),
+            j = n("q7Ag"),
+            N = n("ytWG"),
             M = n("pD3p"),
-            O = n("Odds"),
-            A = "extensions_dashboard_notification_dismissed",
-            E = function(e) {
+            E = n("Odds"),
+            T = "extensions_dashboard_notification_dismissed",
+            A = function(e) {
                 var t = e.channelName,
-                    n = Object(v.d)("Extensions", "DashboardNav"),
-                    r = Object(k.b)(t);
-                return h.createElement(m.c, {
+                    n = Object(g.d)("Extensions", "DashboardNav"),
+                    r = Object(j.b)(t);
+                return f.createElement(h.c, {
                     path: "/:channelName/dashboard/extensions"
                 }, function(e) {
                     return function(e) {
-                        if (e) return v.l.set(A, !0), !1;
-                        return !v.l.get(A, !1)
-                    }(e.match) ? h.createElement(O._2, {
-                        position: O._15.Relative
-                    }, h.createElement("li", {
+                        if (e) return g.l.set(T, !0), !1;
+                        return !g.l.get(T, !1)
+                    }(e.match) ? f.createElement(E._2, {
+                        position: E._15.Relative
+                    }, f.createElement("li", {
                         className: "side-nav-dashboard-section__tooltip__wrapper"
-                    }, h.createElement(M.a, {
+                    }, f.createElement(M.a, {
                         linkTo: r
-                    }, n, h.createElement(T.a, {
+                    }, n, f.createElement(N.a, {
                         "data-test-selector": "extensions-nav-hotspot"
-                    })), h.createElement("div", {
+                    })), f.createElement("div", {
                         className: "side-nav-dashboard-section__tooltip",
                         "data-test-selector": "extensions-nav-tooltip"
-                    }, h.createElement(O.q, {
-                        direction: O.r.RightCenter,
-                        size: O.s.Large,
+                    }, f.createElement(E.q, {
+                        direction: E.r.RightCenter,
+                        size: E.s.Large,
                         show: !0
-                    }, h.createElement(O._8, {
+                    }, f.createElement(E._8, {
                         margin: {
                             x: 2,
                             y: 1
                         }
-                    }, h.createElement(O.Q, {
-                        type: O._49.Span
-                    }, h.createElement(T.a, null), Object(v.d)("Customize your stream with extensions! ", "DashboardNav"), h.createElement("a", {
+                    }, f.createElement(E.Q, {
+                        type: E._49.Span
+                    }, f.createElement(N.a, null), Object(g.d)("Customize your stream with extensions! ", "DashboardNav"), f.createElement("a", {
                         target: "_blank",
                         rel: "noopener",
                         href: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions"
-                    }, Object(v.d)("Learn more here.", "DashboardNav")))))))) : h.createElement("li", null, h.createElement(M.a, {
+                    }, Object(g.d)("Learn more here.", "DashboardNav")))))))) : f.createElement("li", null, f.createElement(M.a, {
                         linkTo: r
                     }, n))
                 })
             };
-        var I, C = n("zDNk"),
-            R = (n("uwYd"), {
+        var k, C = n("zDNk"),
+            I = (n("uwYd"), {
                 "data-test-selector": "activity-link-selector"
             }),
-            Y = {
+            R = {
                 "data-test-selector": "bounties-link-selector"
             },
-            j = function(e) {
+            P = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return f.__extends(t, e), t.prototype.render = function() {
-                    return h.createElement(h.Fragment, null, h.createElement(C.a, null, Object(v.d)("Dashboard", "DashboardNav")), h.createElement("ul", null, h.createElement("li", null, h.createElement(M.a, {
+                return m.__extends(t, e), t.prototype.render = function() {
+                    return f.createElement(f.Fragment, null, f.createElement(C.a, null, Object(g.d)("Dashboard", "DashboardNav")), f.createElement("ul", null, f.createElement("li", null, f.createElement(M.a, {
                         linkTo: "/" + this.props.channelName + "/dashboard",
                         external: !0,
                         exact: !0
-                    }, Object(v.d)("Live", "DashboardNav"))), h.createElement(E, {
+                    }, Object(g.d)("Live", "DashboardNav"))), f.createElement(A, {
                         channelName: this.props.channelName
-                    }), h.createElement("li", null, h.createElement(M.a, {
+                    }), f.createElement("li", null, f.createElement(M.a, {
                         linkTo: "/" + this.props.channelName + "/dashboard/achievements"
-                    }, Object(v.d)("Achievements", "DashboardNav"))), h.createElement("li", null, h.createElement(M.a, {
+                    }, Object(g.d)("Achievements", "DashboardNav"))), f.createElement("li", null, f.createElement(M.a, {
                         linkTo: "/" + this.props.channelName + "/dashboard/events"
-                    }, Object(v.d)("Events", "DashboardNav"))), this.canAccessActivity && h.createElement("li", null, h.createElement(M.a, f.__assign({
+                    }, Object(g.d)("Events", "DashboardNav"))), this.canAccessActivity && f.createElement("li", null, f.createElement(M.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/activity",
                         external: !0
-                    }, R), Object(v.d)("Activity", "DashboardNav"))), this.canAccessBounties && h.createElement("li", null, h.createElement(M.a, f.__assign({
+                    }, I), Object(g.d)("Activity", "DashboardNav"))), this.canAccessBounties && f.createElement("li", null, f.createElement(M.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/bounties"
-                    }, Y), Object(v.d)("Bounty Board", "DashboardNav")))))
+                    }, R), Object(g.d)("Bounty Board", "DashboardNav")))))
                 }, Object.defineProperty(t.prototype, "canAccessBounties", {
                     get: function() {
                         var e = this.props.permissions,
@@ -1669,56 +2183,56 @@ webpackJsonp([46], {
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(h.Component),
-            P = n("YDbY"),
-            F = {
+            }(f.Component),
+            F = n("YDbY"),
+            L = {
                 "data-test-selector": "revenue-settings-link-selector"
             },
-            L = {
+            Y = {
                 "data-test-selector": "settings-link-selector"
             },
-            W = {
+            G = {
                 "data-test-selector": "moderation-link-selector"
             },
-            H = {
+            B = {
                 "data-test-selector": "permissions-link-selector"
             },
-            z = function(e) {
+            W = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return f.__extends(t, e), t.prototype.render = function() {
-                    return this.canSeeSettingsSection ? h.createElement(h.Fragment, null, h.createElement(C.a, null, Object(v.d)("Settings", "SettingsDashboardNav")), h.createElement("ul", null, this.canAccessSettings && h.createElement("li", null, h.createElement(M.a, f.__assign({
+                return m.__extends(t, e), t.prototype.render = function() {
+                    return this.canSeeSettingsSection ? f.createElement(f.Fragment, null, f.createElement(C.a, null, Object(g.d)("Settings", "SettingsDashboardNav")), f.createElement("ul", null, this.canAccessSettings && f.createElement("li", null, f.createElement(M.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/settings",
                         exact: !0,
                         external: !this.useNewRevenueSettings
-                    }, L), Object(v.d)("Channel", "SettingsDashboardNav"))), this.props.permissions.isOwner && h.createElement("li", null, h.createElement(M.a, f.__assign({
+                    }, Y), Object(g.d)("Channel", "SettingsDashboardNav"))), this.props.permissions.isOwner && f.createElement("li", null, f.createElement(M.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/permissions",
                         external: !0
-                    }, H), Object(v.d)("Permissions", "DashboardNav"))), this.canSeeAutoModSettings && h.createElement(O._2, {
-                        position: O._15.Relative
-                    }, h.createElement("li", {
+                    }, B), Object(g.d)("Permissions", "DashboardNav"))), this.canSeeAutoModSettings && f.createElement(E._2, {
+                        position: E._15.Relative
+                    }, f.createElement("li", {
                         className: "side-nav-dashboard-section__tooltip__wrapper"
-                    }, h.createElement(M.a, f.__assign({
+                    }, f.createElement(M.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/automod",
-                        external: !Object(P.a)()
-                    }, W), Object(v.d)("Moderation", "SettingsDashboardNav"), h.createElement(T.a, null)), h.createElement("div", {
+                        external: !Object(F.a)()
+                    }, G), Object(g.d)("Moderation", "SettingsDashboardNav"), f.createElement(N.a, null)), f.createElement("div", {
                         className: "side-nav-dashboard-section__tooltip"
-                    }, h.createElement(O.q, {
-                        direction: O.r.RightCenter,
-                        size: O.s.Large,
+                    }, f.createElement(E.q, {
+                        direction: E.r.RightCenter,
+                        size: E.s.Large,
                         show: !0
-                    }, h.createElement(O._8, {
+                    }, f.createElement(E._8, {
                         margin: {
                             x: 2,
                             y: 1
                         }
-                    }, h.createElement(O.Q, {
-                        type: O._49.Span
-                    }, h.createElement(T.a, null), Object(v.d)("Streamers and mods can set custom AutoMod levels, and update Blocked and Permitted Terms.", "AutoModSettings"))))))), this.canAccessRevenueSettings && h.createElement("li", null, h.createElement(M.a, f.__assign({
+                    }, f.createElement(E.Q, {
+                        type: E._49.Span
+                    }, f.createElement(N.a, null), Object(g.d)("Streamers and mods can set custom AutoMod levels, and update Blocked and Permitted Terms.", "AutoModSettings"))))))), this.canAccessRevenueSettings && f.createElement("li", null, f.createElement(M.a, m.__assign({
                         linkTo: this.revenueSettingsLink,
                         external: !this.useNewRevenueSettings
-                    }, F), this.revenueSettingsLabel)))) : null
+                    }, L), this.revenueSettingsLabel)))) : null
                 }, Object.defineProperty(t.prototype, "canSeeSettingsSection", {
                     get: function() {
                         return this.canAccessSettings || this.canAccessRevenueSettings || this.canSeeAutoModSettings
@@ -1727,7 +2241,7 @@ webpackJsonp([46], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "canSeeAutoModSettings", {
                     get: function() {
-                        return Object(P.a)() && (this.props.permissions.isOwner || this.props.permissions.isModerator || this.props.permissions.isStaff || this.props.permissions.isSiteAdmin)
+                        return Object(F.a)() && (this.props.permissions.isOwner || this.props.permissions.isModerator || this.props.permissions.isStaff || this.props.permissions.isSiteAdmin)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -1739,7 +2253,7 @@ webpackJsonp([46], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "useNewRevenueSettings", {
                     get: function() {
-                        return "on" === v.b.get("dashboard_settings_launch", "off")
+                        return "on" === g.b.get("dashboard_settings_launch", "off")
                     },
                     enumerable: !0,
                     configurable: !0
@@ -1778,38 +2292,38 @@ webpackJsonp([46], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "revenueSettingsLabel", {
                     get: function() {
-                        return this.useNewRevenueSettings ? this.props.permissions.hasExtensionsDeveloperInvite ? Object(v.d)("Extensions Developer", "SettingsDashboardNav") : Object(v.d)("Affiliate / Partner", "SettingsDashboardNav") : Object(v.d)("Revenue", "SettingsDashboardNav")
+                        return this.useNewRevenueSettings ? this.props.permissions.hasExtensionsDeveloperInvite ? Object(g.d)("Extensions Developer", "SettingsDashboardNav") : Object(g.d)("Affiliate / Partner", "SettingsDashboardNav") : Object(g.d)("Revenue", "SettingsDashboardNav")
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(h.Component),
-            q = n("NY9D"),
-            G = n("L2R7");
+            }(f.Component),
+            H = n("NY9D"),
+            z = n("L2R7");
         ! function(e) {
             e[e.CollectionManagerLink = 0] = "CollectionManagerLink"
-        }(I || (I = {}));
-        var B = function(e) {
+        }(k || (k = {}));
+        var U = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return f.__extends(t, e), t.prototype.render = function() {
-                    return h.createElement(h.Fragment, null, h.createElement(C.a, null, Object(v.d)("Videos", "DashboardNav")), h.createElement("ul", null, h.createElement("li", null, h.createElement(M.a, {
-                        linkTo: Object(q.d)(this.props.creatorLogin),
+                return m.__extends(t, e), t.prototype.render = function() {
+                    return f.createElement(f.Fragment, null, f.createElement(C.a, null, Object(g.d)("Videos", "DashboardNav")), f.createElement("ul", null, f.createElement("li", null, f.createElement(M.a, {
+                        linkTo: Object(H.d)(this.props.creatorLogin),
                         exact: !0
-                    }, Object(v.d)("Video Producer", "DashboardNav"))), h.createElement("li", null, h.createElement(M.a, {
+                    }, Object(g.d)("Video Producer", "DashboardNav"))), f.createElement("li", null, f.createElement(M.a, {
                         linkTo: "/" + this.props.creatorLogin + "/dashboard/moderation"
-                    }, Object(v.d)("Video Moderation", "DashboardNav"))), h.createElement("li", null, h.createElement(M.a, {
-                        "data-test-selector": I.CollectionManagerLink,
-                        external: !Object(G.a)(),
+                    }, Object(g.d)("Video Moderation", "DashboardNav"))), f.createElement("li", null, f.createElement(M.a, {
+                        "data-test-selector": k.CollectionManagerLink,
+                        external: !Object(z.a)(),
                         linkTo: "/" + this.props.creatorLogin + "/manager/collections"
-                    }, Object(v.d)("Collections", "DashboardNav"))), h.createElement("li", null, h.createElement(M.a, {
+                    }, Object(g.d)("Collections", "DashboardNav"))), f.createElement("li", null, f.createElement(M.a, {
                         linkTo: "/" + this.props.creatorLogin + "/manager/clips"
-                    }, Object(v.d)("Clips", "DashboardNav")))))
+                    }, Object(g.d)("Clips", "DashboardNav")))))
                 }, t
-            }(h.Component),
+            }(f.Component),
             V = n("CC3/"),
-            Q = {
+            K = {
                 isOwner: !1,
                 isSiteAdmin: !1,
                 isStaff: !1,
@@ -1821,32 +2335,32 @@ webpackJsonp([46], {
                 isModerator: !1,
                 isInBountyProgram: !1
             },
-            U = (n("9DtG"), function(e) {
+            Q = (n("9DtG"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return f.__extends(t, e), t.prototype.render = function() {
+                return m.__extends(t, e), t.prototype.render = function() {
                     var e = this.getPermissions();
-                    return h.createElement(O._35, {
+                    return f.createElement(E._35, {
                         className: "dashboard-side-nav",
-                        background: O.n.Alt2,
+                        background: E.n.Alt2,
                         borderRight: !0,
                         flexShrink: 0,
                         flexGrow: 0,
                         fullHeight: !0,
-                        position: O._15.Relative
-                    }, h.createElement(N.b, null, h.createElement("nav", null, h.createElement(j, {
+                        position: E._15.Relative
+                    }, f.createElement(x.b, null, f.createElement("nav", null, f.createElement(P, {
                         channelName: this.props.channelName,
                         permissions: e,
                         streamSummaryQuery: this.props.streamSummaryQuery
-                    }), h.createElement(S.b, {
+                    }), f.createElement(_.b, {
                         channelName: this.props.channelName,
                         permissions: e,
                         streamSummaryQuery: this.props.streamSummaryQuery
-                    }), h.createElement(B, {
+                    }), f.createElement(U, {
                         creatorLogin: this.props.channelName,
                         permissions: e
-                    }), h.createElement(z, {
+                    }), f.createElement(W, {
                         channelName: this.props.channelName,
                         permissions: e
                     }))))
@@ -1862,10 +2376,10 @@ webpackJsonp([46], {
                         hasExtensionsDeveloperInvite: Boolean(this.props.data.user.payoutInvite && this.props.data.user.payoutInvite.isForExtensionsDeveloper),
                         isInBountyProgram: this.props.data.user.bountyBoardSettings.isEnabled,
                         isModerator: this.props.data.user.self.isModerator
-                    } : Q
+                    } : K
                 }, t
-            }(h.Component)),
-            Z = Object(o.a)(V, {
+            }(f.Component)),
+            q = Object(i.a)(V, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1873,92 +2387,160 @@ webpackJsonp([46], {
                         }
                     }
                 }
-            })(U),
-            J = n("u4Vk"),
-            X = g.a.wrap(function() {
-                return n.e(105).then(n.bind(null, "rE/F"))
+            })(Q),
+            Z = n("j7/Y"),
+            J = n("w9tK"),
+            X = n("vH/s"),
+            $ = n("CSlQ"),
+            ee = n("pK/l"),
+            te = n("Cd7A"),
+            ne = n("9Yaz"),
+            re = (n("e/z2"), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return m.__extends(t, e), t.prototype.render = function() {
+                    return f.createElement(ee.a, null, f.createElement(E._35, {
+                        elevation: 1,
+                        background: E.n.Base,
+                        display: E.R.Flex,
+                        position: E._15.Relative,
+                        flexDirection: E.T.Row,
+                        flexWrap: E.U.NoWrap,
+                        className: "referrals-page-nav-bar",
+                        borderBottom: !0
+                    }, f.createElement(E._35, {
+                        position: E._15.Absolute,
+                        display: E.R.Flex,
+                        flexDirection: E.T.Row,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        attachBottom: !0
+                    }, f.createElement(E.v, {
+                        type: E.B.Text,
+                        linkTo: {
+                            pathname: "/" + this.props.channelName + "/dashboard/stream-summary",
+                            state: {
+                                content: X.PageviewContent.ReferralsBack,
+                                medium: X.PageviewMedium.StreamSummary
+                            }
+                        }
+                    }, f.createElement(E._8, {
+                        padding: {
+                            left: 1,
+                            right: 1
+                        }
+                    }, f.createElement(E.Q, null, Object(g.d)("Back", "StreamSummaryReferralPage"))))), f.createElement(E._35, {
+                        display: E.R.Flex,
+                        flexGrow: 1,
+                        flexWrap: E.U.NoWrap,
+                        justifyContent: E._7.Center,
+                        alignItems: E.c.Center
+                    }, f.createElement(E.Q, {
+                        type: E._49.H2,
+                        fontSize: E.V.Size4,
+                        bold: !0
+                    }, Object(g.d)("Views by Source", "StreamSummaryReferralPage")))), f.createElement(ne.a, {
+                        query: this.props.streamSummaryQuery
+                    }, function(e) {
+                        return f.createElement(te.a, {
+                            isLoading: !e.current,
+                            streamSummaries: e.current ? [e.current] : []
+                        })
+                    }))
+                }, t
+            }(f.Component)),
+            ae = Object(o.d)(Object($.d)("StreamSummaryReferralsPage", {
+                destination: J.a.ChannelDashboardStreamSummaryReferrals,
+                autoReportInteractive: !0
+            }), Object(Z.a)({
+                location: X.PageviewLocation.DashboardStreamSummaryReferrals
+            }))(re),
+            oe = n("u4Vk"),
+            ie = b.a.wrap(function() {
+                return n.e(106).then(n.bind(null, "rE/F"))
             }, "AchievementsPage"),
-            K = g.a.wrap(function() {
-                return n.e(108).then(n.bind(null, "RdZX"))
+            se = b.a.wrap(function() {
+                return n.e(109).then(n.bind(null, "RdZX"))
             }, "AutoModPage"),
-            $ = g.a.wrap(function() {
-                return n.e(106).then(n.bind(null, "EOq4"))
+            ce = b.a.wrap(function() {
+                return n.e(107).then(n.bind(null, "EOq4"))
             }, "BountiesPage"),
-            ee = g.a.wrap(function() {
-                return n.e(88).then(n.bind(null, "ehuU"))
+            ue = b.a.wrap(function() {
+                return n.e(89).then(n.bind(null, "ehuU"))
             }, "ChannelAnalyticsPageRoot"),
-            te = g.a.wrap(function() {
-                return n.e(86).then(n.bind(null, "aeDV"))
+            le = b.a.wrap(function() {
+                return n.e(87).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
-            ne = g.a.wrap(function() {
-                return n.e(91).then(n.bind(null, "KO2S"))
+            de = b.a.wrap(function() {
+                return n.e(92).then(n.bind(null, "KO2S"))
             }, "CollectionEditorPage"),
-            re = g.a.wrap(function() {
-                return n.e(104).then(n.bind(null, "Dk8+"))
+            me = b.a.wrap(function() {
+                return n.e(105).then(n.bind(null, "Dk8+"))
             }, "CollectionManagerPage"),
-            ae = g.a.wrap(function() {
-                return n.e(98).then(n.bind(null, "rFlM"))
+            fe = b.a.wrap(function() {
+                return n.e(99).then(n.bind(null, "rFlM"))
             }, "CommentModeratorPage"),
-            ie = g.a.wrap(function() {
-                return n.e(92).then(n.bind(null, "xM3a"))
+            he = b.a.wrap(function() {
+                return n.e(93).then(n.bind(null, "xM3a"))
             }, "DashboardEventsRoot"),
-            oe = g.a.wrap(function() {
-                return n.e(97).then(n.bind(null, "yuX3"))
+            pe = b.a.wrap(function() {
+                return n.e(98).then(n.bind(null, "yuX3"))
             }, "DashboardRevenueSettingsRoot"),
-            se = g.a.wrap(function() {
-                return n.e(94).then(n.bind(null, "gIJZ"))
+            ge = b.a.wrap(function() {
+                return n.e(95).then(n.bind(null, "gIJZ"))
             }, "DashboardSettingsRoot"),
-            ue = g.a.wrap(function() {
-                return n.e(118).then(n.bind(null, "bcqU"))
+            be = b.a.wrap(function() {
+                return n.e(119).then(n.bind(null, "bcqU"))
             }, "ExtensionConfigurePage"),
-            ce = g.a.wrap(function() {
-                return n.e(107).then(n.bind(null, "yJuJ"))
+            ve = b.a.wrap(function() {
+                return n.e(108).then(n.bind(null, "yJuJ"))
             }, "ExtensionManagerPage"),
-            le = g.a.wrap(function() {
-                return n.e(100).then(n.bind(null, "Il1C"))
+            ye = b.a.wrap(function() {
+                return n.e(101).then(n.bind(null, "Il1C"))
             }, "HighlighterPage"),
-            de = g.a.wrap(function() {
-                return n.e(87).then(n.bind(null, "c1gU"))
+            Oe = b.a.wrap(function() {
+                return n.e(88).then(n.bind(null, "c1gU"))
             }, "LivePage"),
-            fe = g.a.wrap(function() {
-                return n.e(86).then(n.bind(null, "aeDV"))
+            De = b.a.wrap(function() {
+                return n.e(87).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
-            he = g.a.wrap(function() {
-                return n.e(99).then(n.bind(null, "/fDj"))
+            Se = b.a.wrap(function() {
+                return n.e(100).then(n.bind(null, "/fDj"))
             }, "RedirectToLatestArchiveHighlighter"),
-            me = g.a.wrap(function() {
-                return n.e(89).then(n.bind(null, "tVPZ"))
+            we = b.a.wrap(function() {
+                return n.e(90).then(n.bind(null, "tVPZ"))
             }, "StreamSummaryPage"),
-            pe = g.a.wrap(function() {
-                return n.e(90).then(n.bind(null, "a9Y8"))
+            xe = b.a.wrap(function() {
+                return n.e(91).then(n.bind(null, "a9Y8"))
             }, "VideoManagerPage"),
-            ve = function(e) {
+            _e = function(e) {
                 var t = e.match.params.pageName,
                     n = t ? "/" + encodeURIComponent(t) : "";
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.channelName) + "/dashboard" + n), null
             },
-            ge = function(e) {
+            je = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isError: !1
-                    }, t.logger = v.o.logger.withCategory("dashboard-root"), t.renderAchievementsPage = function() {
-                        return h.createElement(X, {
+                    }, t.logger = g.o.logger.withCategory("dashboard-root"), t.renderAchievementsPage = function() {
+                        return f.createElement(ie, {
                             channelName: t.props.match.params.channelName
                         })
                     }, t.renderExtensionsManagerPage = function() {
-                        return h.createElement(ce, {
+                        return f.createElement(ve, {
                             channelName: t.props.match.params.channelName
                         })
                     }, t.renderLivePage = function(e) {
-                        return t.props.data.channel && t.props.data.channel.id ? h.createElement(de, {
+                        return t.props.data.channel && t.props.data.channel.id ? f.createElement(Oe, {
                             channelID: t.props.data.channel.id,
                             channelName: t.props.match.params.channelName,
                             streamSummariesQuery: e
                         }) : null
                     }, t
                 }
-                return f.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
+                return m.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
                     var n = this;
                     this.setState({
                         isError: !0
@@ -1969,141 +2551,149 @@ webpackJsonp([46], {
                     })
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.state.isError || this.props.data.error) return h.createElement(b.a, {
-                        message: Object(v.d)("An error occurred on this page", "DashboardRoot")
+                    if (this.state.isError || this.props.data.error) return f.createElement(v.a, {
+                        message: Object(g.d)("An error occurred on this page", "DashboardRoot")
                     });
-                    if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), h.createElement(b.a, {
-                        message: Object(v.d)("You must be logged in to view this page", "DashboardRoot")
+                    if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), f.createElement(v.a, {
+                        message: Object(g.d)("You must be logged in to view this page", "DashboardRoot")
                     });
                     if ("broadcast" === this.props.match.params.channelName) {
                         var t = this.props.match.params.pageName,
                             n = this.props.userLogin;
-                        return h.createElement(m.b, {
+                        return f.createElement(h.b, {
                             to: "/" + n + "/dashboard/" + t
                         })
                     }
-                    return this.props.data.loading || this.props.data.channel.id ? h.createElement(_.a, {
-                        interval: Object(J.g)(30),
+                    return this.props.data.loading || this.props.data.channel.id ? f.createElement(w.a, {
+                        interval: Object(oe.g)(30),
                         channelName: this.props.match.params.channelName
                     }, function(t) {
-                        return h.createElement(O._8, {
-                            display: O.R.Flex,
-                            flexDirection: O.T.Column,
-                            flexWrap: O.U.NoWrap,
+                        return f.createElement(E._8, {
+                            display: E.R.Flex,
+                            flexDirection: E.T.Column,
+                            flexWrap: E.U.NoWrap,
                             fullHeight: !0
-                        }, h.createElement(x.a, null), e.props.firstPageLoaded && e.props.isLoggedIn && h.createElement(D.a, null), h.createElement(O._8, {
-                            display: O.R.Flex,
-                            flexWrap: O.U.NoWrap,
-                            position: O._15.Relative,
-                            overflow: O._11.Hidden,
+                        }, f.createElement(D.a, null), e.props.firstPageLoaded && e.props.isLoggedIn && f.createElement(S.a, null), f.createElement(E._8, {
+                            display: E.R.Flex,
+                            flexWrap: E.U.NoWrap,
+                            position: E._15.Relative,
+                            overflow: E._11.Hidden,
                             fullHeight: !0
-                        }, h.createElement(Z, {
+                        }, f.createElement(q, {
                             channelName: e.props.match.params.channelName,
                             streamSummaryQuery: t
-                        }), h.createElement(O._8, {
-                            position: O._15.Relative,
+                        }), f.createElement(E._8, {
+                            position: E._15.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, h.createElement(p.e, null, h.createElement(m.c, {
+                        }, f.createElement(p.e, null, f.createElement(h.c, {
                             path: "/:channelName/dashboard/achievements",
                             render: e.renderAchievementsPage
-                        }), h.createElement(m.c, {
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/channel-analytics",
-                            component: ee
-                        }), h.createElement(m.c, {
+                            component: ue
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/moderation",
-                            component: ae
-                        }), v.a.buildType !== w.a.Production && h.createElement(m.c, {
+                            component: fe
+                        }), g.a.buildType !== O.a.Production && f.createElement(h.c, {
                             path: "/:channelName/dashboard/live",
                             render: function() {
                                 return e.renderLivePage(t)
                             }
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/dashboard/stream-summary",
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/dashboard/stream-summary/referrals",
                             render: function() {
-                                return h.createElement(me, {
+                                return f.createElement(ae, {
                                     channelName: e.props.match.params.channelName,
                                     streamSummaryQuery: t
                                 })
                             }
-                        }), h.createElement(m.c, {
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/dashboard/stream-summary",
+                            render: function() {
+                                return f.createElement(we, {
+                                    channelName: e.props.match.params.channelName,
+                                    streamSummaryQuery: t
+                                })
+                            }
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/extensions/:extensionID/configure",
-                            component: ue
-                        }), h.createElement(m.c, {
+                            component: be
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/extensions",
                             render: e.renderExtensionsManagerPage
-                        }), e.props.isStaff && h.createElement(m.c, {
+                        }), e.props.isStaff && f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties/:selectedID",
-                            component: $
-                        }), e.props.isStaff && h.createElement(m.c, {
+                            component: ce
+                        }), e.props.isStaff && f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties",
-                            component: $
-                        }), h.createElement(m.c, {
+                            component: ce
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties/:selectedID",
                             component: y.a
-                        }), h.createElement(m.c, {
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties",
                             component: y.a
-                        }), h.createElement(m.c, {
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/events",
-                            component: ie
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/dashboard/settings/automod",
-                            component: K
-                        }), e.showNewDashboardSettings && h.createElement(m.c, {
-                            path: "/:channelName/dashboard/settings/revenue",
-                            component: oe
-                        }), e.showNewDashboardSettings && h.createElement(m.c, {
-                            path: "/:channelName/dashboard/settings",
-                            component: se
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/dashboard/:pageName?",
-                            render: ve
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/manager/schedule/:videoID",
-                            component: pe
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/manager/edit/:videoID",
-                            component: pe
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/manager/publish/:videoID",
-                            component: pe
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/manager/appeal/:videoID",
-                            component: pe
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/manager/clips/channel",
-                            component: te
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/manager/clips",
-                            component: fe
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/manager/highlighter/:videoID",
-                            component: le
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/manager/highlighter",
                             component: he
-                        }), h.createElement(m.c, {
-                            path: "/:creatorLogin/manager/collections/:collectionID",
-                            component: ne
-                        }), h.createElement(m.c, {
-                            path: "/:creatorLogin/manager/collections",
-                            component: re
-                        }), h.createElement(m.c, {
-                            path: "/:channelName/manager",
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/dashboard/settings/automod",
+                            component: se
+                        }), e.showNewDashboardSettings && f.createElement(h.c, {
+                            path: "/:channelName/dashboard/settings/revenue",
                             component: pe
+                        }), e.showNewDashboardSettings && f.createElement(h.c, {
+                            path: "/:channelName/dashboard/settings",
+                            component: ge
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/dashboard/:pageName?",
+                            render: _e
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/schedule/:videoID",
+                            component: xe
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/edit/:videoID",
+                            component: xe
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/publish/:videoID",
+                            component: xe
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/appeal/:videoID",
+                            component: xe
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/clips/channel",
+                            component: le
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/clips",
+                            component: De
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/highlighter/:videoID",
+                            component: ye
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/highlighter",
+                            component: Se
+                        }), f.createElement(h.c, {
+                            path: "/:creatorLogin/manager/collections/:collectionID",
+                            component: de
+                        }), f.createElement(h.c, {
+                            path: "/:creatorLogin/manager/collections",
+                            component: me
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager",
+                            component: xe
                         })))))
-                    }) : h.createElement(y.a, null)
+                    }) : f.createElement(y.a, null)
                 }, Object.defineProperty(t.prototype, "showNewDashboardSettings", {
                     get: function() {
-                        return "on" === v.b.get("dashboard_settings_launch", "off")
+                        return "on" === g.b.get("dashboard_settings_launch", "off")
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(h.Component);
-        var be = Object(r.compose)(Object(o.a)(d, {
+            }(f.Component);
+        var Ne = Object(r.compose)(Object(i.a)(d, {
             options: function(e) {
                 return {
                     variables: {
@@ -2120,26 +2710,26 @@ webpackJsonp([46], {
                 isStaff: !!(t && t.roles && t.roles.isStaff)
             }
         }, function(e) {
-            return Object(i.b)({
+            return Object(o.b)({
                 onAnonymousVisit: function() {
-                    return Object(u.f)(s.a.DashboardPage)
+                    return Object(c.f)(s.a.DashboardPage)
                 },
-                collapseSideNav: c.r,
-                expandSideNav: c.y
+                collapseSideNav: u.r,
+                expandSideNav: u.y
             }, e)
-        }))(ge);
+        }))(je);
         n.d(t, "DashboardRoot", function() {
-            return be
+            return Ne
         })
     },
     "Eoz/": function(e, t, n) {
         var r = n("ymQ7"),
             a = n("D6ie"),
-            i = n("zZbG"),
-            o = n("xA5w"),
+            o = n("zZbG"),
+            i = n("xA5w"),
             s = n("dH3X"),
-            u = n("uyaC");
-        var c = {
+            c = n("uyaC");
+        var u = {
             M: function(e) {
                 return e.getMonth() + 1
             },
@@ -2180,10 +2770,10 @@ webpackJsonp([46], {
                 return d(e.getFullYear(), 4)
             },
             GG: function(e) {
-                return String(i(e)).substr(2)
+                return String(o(e)).substr(2)
             },
             GGGG: function(e) {
-                return i(e)
+                return o(e)
             },
             H: function(e) {
                 return e.getHours()
@@ -2196,7 +2786,7 @@ webpackJsonp([46], {
                 return 0 === t ? 12 : t > 12 ? t % 12 : t
             },
             hh: function(e) {
-                return d(c.h(e), 2)
+                return d(u.h(e), 2)
             },
             m: function(e) {
                 return e.getMinutes()
@@ -2248,19 +2838,19 @@ webpackJsonp([46], {
         e.exports = function(e, t, n) {
             var r = t ? String(t) : "YYYY-MM-DDTHH:mm:ss.SSSZ",
                 a = (n || {}).locale,
-                i = u.format.formatters,
-                l = u.format.formattingTokensRegExp;
-            a && a.format && a.format.formatters && (i = a.format.formatters, a.format.formattingTokensRegExp && (l = a.format.formattingTokensRegExp));
-            var d = o(e);
+                o = c.format.formatters,
+                l = c.format.formattingTokensRegExp;
+            a && a.format && a.format.formatters && (o = a.format.formatters, a.format.formattingTokensRegExp && (l = a.format.formattingTokensRegExp));
+            var d = i(e);
             return s(d) ? function(e, t, n) {
-                var r, a, i, o = e.match(n),
-                    s = o.length;
-                for (r = 0; r < s; r++) a = t[o[r]] || c[o[r]], o[r] = a || ((i = o[r]).match(/\[[\s\S]/) ? i.replace(/^\[|]$/g, "") : i.replace(/\\/g, ""));
+                var r, a, o, i = e.match(n),
+                    s = i.length;
+                for (r = 0; r < s; r++) a = t[i[r]] || u[i[r]], i[r] = a || ((o = i[r]).match(/\[[\s\S]/) ? o.replace(/^\[|]$/g, "") : o.replace(/\\/g, ""));
                 return function(e) {
-                    for (var t = "", n = 0; n < s; n++) o[n] instanceof Function ? t += o[n](e, c) : t += o[n];
+                    for (var t = "", n = 0; n < s; n++) i[n] instanceof Function ? t += i[n](e, u) : t += i[n];
                     return t
                 }
-            }(r, i, l)(d) : "Invalid Date"
+            }(r, o, l)(d) : "Invalid Date"
         }
     },
     Epw6: function(e, t, n) {
@@ -2282,13 +2872,13 @@ webpackJsonp([46], {
     GI7G: function(e, t, n) {
         var r = n("xA5w"),
             a = n("orNa"),
-            i = n("NKE6");
+            o = n("NKE6");
         e.exports = function(e, t) {
             var n = r(e),
-                o = r(t),
-                s = i(n, o),
-                u = Math.abs(a(n, o));
-            return n.setMonth(n.getMonth() - s * u), s * (u - (i(n, o) === -s))
+                i = r(t),
+                s = o(n, i),
+                c = Math.abs(a(n, i));
+            return n.setMonth(n.getMonth() - s * c), s * (c - (o(n, i) === -s))
         }
     },
     GvNH: function(e, t, n) {
@@ -2312,9 +2902,9 @@ webpackJsonp([46], {
         e.exports = function(e, t) {
             var n = t && Number(t.weekStartsOn) || 0,
                 a = r(e),
-                i = a.getDay(),
-                o = 6 + (i < n ? -7 : 0) - (i - n);
-            return a.setDate(a.getDate() + o), a.setHours(23, 59, 59, 999), a
+                o = a.getDay(),
+                i = 6 + (o < n ? -7 : 0) - (o - n);
+            return a.setDate(a.getDate() + i), a.setHours(23, 59, 59, 999), a
         }
     },
     JNsx: function(e, t, n) {
@@ -2342,8 +2932,8 @@ webpackJsonp([46], {
             a = n("xA5w");
         e.exports = function(e, t) {
             var n = a(e),
-                i = a(t);
-            return 4 * (n.getFullYear() - i.getFullYear()) + (r(n) - r(i))
+                o = a(t);
+            return 4 * (n.getFullYear() - o.getFullYear()) + (r(n) - r(o))
         }
     },
     Jvcu: function(e, t, n) {
@@ -2384,20 +2974,21 @@ webpackJsonp([46], {
             var t = r(e),
                 n = new Date(0);
             n.setFullYear(t + 1, 0, 4), n.setHours(0, 0, 0, 0);
-            var i = a(n);
-            return i.setMilliseconds(i.getMilliseconds() - 1), i
+            var o = a(n);
+            return o.setMilliseconds(o.getMilliseconds() - 1), o
         }
     },
+    KVLd: function(e, t) {},
     L2R7: function(e, t, n) {
         "use strict";
         t.a = function() {
             var e = r.a.buildType === a.a.Dev,
-                t = r.b.get(i, !1);
+                t = r.b.get(o, !1);
             return e || t
         };
         var r = n("6sO2"),
             a = n("Ejve"),
-            i = "twilight_collections_manager_enabled"
+            o = "twilight_collections_manager_enabled"
     },
     LLTj: function(e, t, n) {
         var r = n("xA5w");
@@ -2425,14 +3016,14 @@ webpackJsonp([46], {
         var r = n("xA5w");
         e.exports = function(e, t, n) {
             var a = r(e),
-                i = r(t),
-                o = void 0 !== n ? n : 1,
-                s = i.getTime();
+                o = r(t),
+                i = void 0 !== n ? n : 1,
+                s = o.getTime();
             if (a.getTime() > s) throw new Error("The first date cannot be after the second date");
-            var u = [],
-                c = a;
-            for (c.setHours(0, 0, 0, 0); c.getTime() <= s;) u.push(r(c)), c.setDate(c.getDate() + o);
-            return u
+            var c = [],
+                u = a;
+            for (u.setHours(0, 0, 0, 0); u.getTime() <= s;) c.push(r(u)), u.setDate(u.getDate() + i);
+            return c
         }
     },
     MIQa: function(e, t, n) {
@@ -2461,8 +3052,8 @@ webpackJsonp([46], {
             var t = r(e),
                 n = t.getFullYear(),
                 a = t.getMonth(),
-                i = new Date(0);
-            return i.setFullYear(n, a + 1, 0), i.setHours(0, 0, 0, 0), i.getDate()
+                o = new Date(0);
+            return o.setFullYear(n, a + 1, 0), o.setHours(0, 0, 0, 0), o.getDate()
         }
     },
     Moxe: function(e, t, n) {
@@ -2497,25 +3088,25 @@ webpackJsonp([46], {
             return "/" + e + "/dashboard/achievements/"
         }
 
-        function i(e) {
+        function o(e) {
             return "/" + e.channelName + "/dashboard/achievements/" + e.id
         }
         n.d(r, "channelAchievements", function() {
             return a
         }), n.d(r, "achievement", function() {
-            return i
+            return o
         });
-        var o, s = n("6w0d"),
-            u = n("yiqh"),
-            c = n("b9IH");
+        var i, s = n("6w0d"),
+            c = n("yiqh"),
+            u = n("b9IH");
 
         function l(e, t, n) {
             return e.sort(function(e, r) {
                 for (var a = 0; a < t.length; a++) {
-                    var i = t[a],
-                        s = n[a] || o.Ascending,
-                        u = d(i(e), i(r)) * s;
-                    if (0 !== u) return u
+                    var o = t[a],
+                        s = n[a] || i.Ascending,
+                        c = d(o(e), o(r)) * s;
+                    if (0 !== c) return c
                 }
                 return 0
             })
@@ -2527,16 +3118,16 @@ webpackJsonp([46], {
             return n && r ? e > t ? 1 : e < t ? -1 : 0 : n ? -1 : r ? 1 : 0
         }! function(e) {
             e[e.Ascending = 1] = "Ascending", e[e.Descending = -1] = "Descending"
-        }(o || (o = {})), n.d(t, "b", function() {
+        }(i || (i = {})), n.d(t, "b", function() {
             return r
         }), n.d(t, "c", function() {
             return s.a
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return u.a
-        }), n.d(t, !1, function() {
             return c.a
+        }), n.d(t, !1, function() {
+            return u.a
         }), n.d(t, "a", function() {
-            return o
+            return i
         }), n.d(t, "d", function() {
             return l
         })
@@ -2609,13 +3200,13 @@ webpackJsonp([46], {
     Q2rx: function(e, t, n) {
         var r = n("u/4p"),
             a = 6e4,
-            i = 6048e5;
+            o = 6048e5;
         e.exports = function(e, t, n) {
-            var o = r(e, n),
+            var i = r(e, n),
                 s = r(t, n),
-                u = o.getTime() - o.getTimezoneOffset() * a,
-                c = s.getTime() - s.getTimezoneOffset() * a;
-            return Math.round((u - c) / i)
+                c = i.getTime() - i.getTimezoneOffset() * a,
+                u = s.getTime() - s.getTimezoneOffset() * a;
+            return Math.round((c - u) / o)
         }
     },
     Qbo9: function(e, t, n) {
@@ -2724,11 +3315,11 @@ webpackJsonp([46], {
         var r = n("xA5w"),
             a = n("Jvcu");
         e.exports = function(e, t, n) {
-            var i = n && Number(n.weekStartsOn) || 0,
-                o = r(e),
+            var o = n && Number(n.weekStartsOn) || 0,
+                i = r(e),
                 s = Number(t),
-                u = o.getDay();
-            return a(o, ((s % 7 + 7) % 7 < i ? 7 : 0) + s - u)
+                c = i.getDay();
+            return a(i, ((s % 7 + 7) % 7 < o ? 7 : 0) + s - c)
         }
     },
     SJLv: function(e, t) {
@@ -2769,24 +3360,24 @@ webpackJsonp([46], {
         var r = n("xA5w");
         e.exports = function(e, t) {
             if (!(t instanceof Array)) throw new TypeError(toString.call(t) + " is not an instance of Array");
-            var n, a, i = r(e).getTime();
+            var n, a, o = r(e).getTime();
             return t.forEach(function(e) {
                 var t = r(e),
-                    o = Math.abs(i - t.getTime());
-                (void 0 === n || o < a) && (n = t, a = o)
+                    i = Math.abs(o - t.getTime());
+                (void 0 === n || i < a) && (n = t, a = i)
             }), n
         }
     },
     "Uu+E": function(e, t, n) {
         var r = n("xA5w"),
             a = n("iRXW"),
-            i = n("nizW");
+            o = n("nizW");
         e.exports = function(e, t) {
             var n = r(e),
-                o = Number(t),
-                s = i(n, a(n)),
-                u = new Date(0);
-            return u.setFullYear(o, 0, 4), u.setHours(0, 0, 0, 0), (n = a(u)).setDate(n.getDate() + s), n
+                i = Number(t),
+                s = o(n, a(n)),
+                c = new Date(0);
+            return c.setFullYear(i, 0, 4), c.setHours(0, 0, 0, 0), (n = a(c)).setDate(n.getDate() + s), n
         }
     },
     VaeB: function(e, t, n) {
@@ -2830,12 +3421,12 @@ webpackJsonp([46], {
     YPjl: function(e, t, n) {
         var r = n("xA5w"),
             a = n("Jvcu"),
-            i = n("AZvW");
+            o = n("AZvW");
         e.exports = function(e, t) {
             var n = r(e),
-                o = Number(t),
-                s = i(n);
-            return a(n, o - s)
+                i = Number(t),
+                s = o(n);
+            return a(n, i - s)
         }
     },
     YRFD: function(e, t, n) {
@@ -2890,14 +3481,14 @@ webpackJsonp([46], {
             }(e);
             if (!t) return;
             var n = e.getBoundingClientRect(),
-                o = t.getBoundingClientRect();
-            n.bottom > o.bottom && i(e, a);
-            n.top < o.top && i(e, r)
+                i = t.getBoundingClientRect();
+            n.bottom > i.bottom && o(e, a);
+            n.top < i.top && o(e, r)
         };
         var r = !0,
             a = !1;
 
-        function i(e, t) {
+        function o(e, t) {
             requestAnimationFrame(function() {
                 e.scrollIntoView(t)
             })
@@ -2908,13 +3499,13 @@ webpackJsonp([46], {
             a = n("Mdww");
         e.exports = function(e, t) {
             var n = r(e),
-                i = Number(t),
-                o = n.getFullYear(),
+                o = Number(t),
+                i = n.getFullYear(),
                 s = n.getDate(),
-                u = new Date(0);
-            u.setFullYear(o, i, 15), u.setHours(0, 0, 0, 0);
-            var c = a(u);
-            return n.setMonth(i, Math.min(s, c)), n
+                c = new Date(0);
+            c.setFullYear(i, o, 15), c.setHours(0, 0, 0, 0);
+            var u = a(c);
+            return n.setMonth(o, Math.min(s, u)), n
         }
     },
     bbdo: function(e, t, n) {
@@ -2971,6 +3562,7 @@ webpackJsonp([46], {
             return 3 === r(e).getDay()
         }
     },
+    "e/z2": function(e, t) {},
     eCZG: function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e) {
@@ -3010,11 +3602,11 @@ webpackJsonp([46], {
     fUo1: function(e, t, n) {
         var r = n("iRXW"),
             a = n("7EGB"),
-            i = 6048e5;
+            o = 6048e5;
         e.exports = function(e) {
             var t = r(e),
                 n = r(a(t, 60)).valueOf() - t.valueOf();
-            return Math.round(n / i)
+            return Math.round(n / o)
         }
     },
     fo7E: function(e, t, n) {
@@ -3027,13 +3619,13 @@ webpackJsonp([46], {
     gAt4: function(e, t, n) {
         var r = n("xA5w"),
             a = n("nizW"),
-            i = n("NKE6");
+            o = n("NKE6");
         e.exports = function(e, t) {
             var n = r(e),
-                o = r(t),
-                s = i(n, o),
-                u = Math.abs(a(n, o));
-            return n.setDate(n.getDate() - s * u), s * (u - (i(n, o) === -s))
+                i = r(t),
+                s = o(n, i),
+                c = Math.abs(a(n, i));
+            return n.setDate(n.getDate() - s * c), s * (c - (o(n, i) === -s))
         }
     },
     gDPd: function(e, t, n) {
@@ -3054,6 +3646,7 @@ webpackJsonp([46], {
             return a.setFullYear(t, n, r + 1), a.setHours(0, 0, 0, 0), a
         }
     },
+    gWfK: function(e, t) {},
     hUHO: function(e, t, n) {
         var r = n("4LxA");
         e.exports = function(e) {
@@ -3063,9 +3656,9 @@ webpackJsonp([46], {
     heIq: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
-        }), n.d(t, "b", function() {
             return o
+        }), n.d(t, "b", function() {
+            return i
         }), n.d(t, "c", function() {
             return s
         }), t.d = function(e) {
@@ -3115,8 +3708,8 @@ webpackJsonp([46], {
             }
         };
         var r, a = n("6sO2"),
-            i = "it_begins",
-            o = "path_to_affiliate",
+            o = "it_begins",
+            i = "path_to_affiliate",
             s = "path_to_partner"
     },
     hico: function(e, t, n) {
@@ -3126,8 +3719,8 @@ webpackJsonp([46], {
             var t = r(e),
                 n = new Date(0);
             n.setFullYear(t + 1, 0, 4), n.setHours(0, 0, 0, 0);
-            var i = a(n);
-            return i.setDate(i.getDate() - 1), i
+            var o = a(n);
+            return o.setDate(o.getDate() - 1), o
         }
     },
     hj5Y: function(e, t, n) {
@@ -3152,11 +3745,11 @@ webpackJsonp([46], {
                 t = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                 n = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
                 a = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-                i = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                o = ["AM", "PM"],
+                o = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                i = ["AM", "PM"],
                 s = ["am", "pm"],
-                u = ["a.m.", "p.m."],
-                c = {
+                c = ["a.m.", "p.m."],
+                u = {
                     MMM: function(t) {
                         return e[t.getMonth()]
                     },
@@ -3170,20 +3763,20 @@ webpackJsonp([46], {
                         return a[e.getDay()]
                     },
                     dddd: function(e) {
-                        return i[e.getDay()]
+                        return o[e.getDay()]
                     },
                     A: function(e) {
-                        return e.getHours() / 12 >= 1 ? o[1] : o[0]
+                        return e.getHours() / 12 >= 1 ? i[1] : i[0]
                     },
                     a: function(e) {
                         return e.getHours() / 12 >= 1 ? s[1] : s[0]
                     },
                     aa: function(e) {
-                        return e.getHours() / 12 >= 1 ? u[1] : u[0]
+                        return e.getHours() / 12 >= 1 ? c[1] : c[0]
                     }
                 };
             return ["M", "D", "DDD", "d", "Q", "W"].forEach(function(e) {
-                c[e + "o"] = function(t, n) {
+                u[e + "o"] = function(t, n) {
                     return function(e) {
                         var t = e % 100;
                         if (t > 20 || t < 10) switch (t % 10) {
@@ -3198,8 +3791,8 @@ webpackJsonp([46], {
                     }(n[e](t))
                 }
             }), {
-                formatters: c,
-                formattingTokensRegExp: r(c)
+                formatters: u,
+                formattingTokensRegExp: r(u)
             }
         }
     },
@@ -3208,17 +3801,17 @@ webpackJsonp([46], {
             a = n("balU");
         e.exports = function(e, t) {
             var n = r(e),
-                i = Number(t) - (Math.floor(n.getMonth() / 3) + 1);
-            return a(n, n.getMonth() + 3 * i)
+                o = Number(t) - (Math.floor(n.getMonth() / 3) + 1);
+            return a(n, n.getMonth() + 3 * o)
         }
     },
     kDuD: function(e, t, n) {
         var r = n("xA5w"),
             a = n("MIQa"),
-            i = n("xKy+");
+            o = n("xKy+");
         e.exports = function(e) {
             var t = r(e);
-            return a(t).getTime() === i(t).getTime()
+            return a(t).getTime() === o(t).getTime()
         }
     },
     kIFi: function(e, t, n) {
@@ -3275,38 +3868,38 @@ webpackJsonp([46], {
     mXYp: function(e, t, n) {
         var r = n("YRFD"),
             a = n("xA5w"),
-            i = n("25hp"),
-            o = n("GI7G"),
+            o = n("25hp"),
+            i = n("GI7G"),
             s = n("uyaC"),
-            u = 1440,
-            c = 2520,
+            c = 1440,
+            u = 2520,
             l = 43200,
             d = 86400;
         e.exports = function(e, t, n) {
-            var f = n || {},
-                h = r(e, t),
-                m = f.locale,
+            var m = n || {},
+                f = r(e, t),
+                h = m.locale,
                 p = s.distanceInWords.localize;
-            m && m.distanceInWords && m.distanceInWords.localize && (p = m.distanceInWords.localize);
-            var v, g, b = {
-                addSuffix: Boolean(f.addSuffix),
-                comparison: h
+            h && h.distanceInWords && h.distanceInWords.localize && (p = h.distanceInWords.localize);
+            var g, b, v = {
+                addSuffix: Boolean(m.addSuffix),
+                comparison: f
             };
-            h > 0 ? (v = a(e), g = a(t)) : (v = a(t), g = a(e));
-            var y, w = i(g, v),
-                x = g.getTimezoneOffset() - v.getTimezoneOffset(),
-                D = Math.round(w / 60) - x;
-            if (D < 2) return f.includeSeconds ? w < 5 ? p("lessThanXSeconds", 5, b) : w < 10 ? p("lessThanXSeconds", 10, b) : w < 20 ? p("lessThanXSeconds", 20, b) : w < 40 ? p("halfAMinute", null, b) : p(w < 60 ? "lessThanXMinutes" : "xMinutes", 1, b) : 0 === D ? p("lessThanXMinutes", 1, b) : p("xMinutes", D, b);
-            if (D < 45) return p("xMinutes", D, b);
-            if (D < 90) return p("aboutXHours", 1, b);
-            if (D < u) return p("aboutXHours", Math.round(D / 60), b);
-            if (D < c) return p("xDays", 1, b);
-            if (D < l) return p("xDays", Math.round(D / u), b);
-            if (D < d) return p("aboutXMonths", y = Math.round(D / l), b);
-            if ((y = o(g, v)) < 12) return p("xMonths", Math.round(D / l), b);
-            var _ = y % 12,
-                N = Math.floor(y / 12);
-            return _ < 3 ? p("aboutXYears", N, b) : _ < 9 ? p("overXYears", N, b) : p("almostXYears", N + 1, b)
+            f > 0 ? (g = a(e), b = a(t)) : (g = a(t), b = a(e));
+            var y, O = o(b, g),
+                D = b.getTimezoneOffset() - g.getTimezoneOffset(),
+                S = Math.round(O / 60) - D;
+            if (S < 2) return m.includeSeconds ? O < 5 ? p("lessThanXSeconds", 5, v) : O < 10 ? p("lessThanXSeconds", 10, v) : O < 20 ? p("lessThanXSeconds", 20, v) : O < 40 ? p("halfAMinute", null, v) : p(O < 60 ? "lessThanXMinutes" : "xMinutes", 1, v) : 0 === S ? p("lessThanXMinutes", 1, v) : p("xMinutes", S, v);
+            if (S < 45) return p("xMinutes", S, v);
+            if (S < 90) return p("aboutXHours", 1, v);
+            if (S < c) return p("aboutXHours", Math.round(S / 60), v);
+            if (S < u) return p("xDays", 1, v);
+            if (S < l) return p("xDays", Math.round(S / c), v);
+            if (S < d) return p("aboutXMonths", y = Math.round(S / l), v);
+            if ((y = i(b, g)) < 12) return p("xMonths", Math.round(S / l), v);
+            var w = y % 12,
+                x = Math.floor(y / 12);
+            return w < 3 ? p("aboutXYears", x, v) : w < 9 ? p("overXYears", x, v) : p("almostXYears", x + 1, v)
         }
     },
     nZeo: function(e, t, n) {
@@ -3325,13 +3918,13 @@ webpackJsonp([46], {
     nizW: function(e, t, n) {
         var r = n("WNGz"),
             a = 6e4,
-            i = 864e5;
+            o = 864e5;
         e.exports = function(e, t) {
             var n = r(e),
-                o = r(t),
+                i = r(t),
                 s = n.getTime() - n.getTimezoneOffset() * a,
-                u = o.getTime() - o.getTimezoneOffset() * a;
-            return Math.round((s - u) / i)
+                c = i.getTime() - i.getTimezoneOffset() * a;
+            return Math.round((s - c) / o)
         }
     },
     nk30: function(e, t, n) {
@@ -3339,9 +3932,9 @@ webpackJsonp([46], {
         e.exports = function(e, t) {
             var n = t && Number(t.weekStartsOn) || 0,
                 a = r(e),
-                i = a.getDay(),
-                o = 6 + (i < n ? -7 : 0) - (i - n);
-            return a.setHours(0, 0, 0, 0), a.setDate(a.getDate() + o), a
+                o = a.getDay(),
+                i = 6 + (o < n ? -7 : 0) - (o - n);
+            return a.setHours(0, 0, 0, 0), a.setDate(a.getDate() + i), a
         }
     },
     oNnY: function(e, t, n) {
@@ -3371,46 +3964,67 @@ webpackJsonp([46], {
         "use strict";
         var r = n("TToO"),
             a = n("HW6M"),
-            i = n("+Hq5"),
-            o = n("GiK3"),
+            o = n("+Hq5"),
+            i = n("GiK3"),
             s = n("CIox"),
-            u = n("F8kA"),
-            c = n("Odds"),
+            c = n("F8kA"),
+            u = n("Odds"),
             l = (n("lqN2"), function(e) {
                 if (e.external) {
-                    var t = "string" == typeof e.linkTo ? e.linkTo : Object(i.b)(e.linkTo);
-                    return o.createElement(s.c, {
+                    var t = "string" == typeof e.linkTo ? e.linkTo : Object(o.b)(e.linkTo);
+                    return i.createElement(s.c, {
                         path: t,
                         exact: e.exact
                     }, function(n) {
-                        var i, s = n.match;
-                        return o.createElement(c._2, {
+                        var o, s = n.match;
+                        return i.createElement(u._2, {
                             padding: {
                                 x: 2,
                                 y: .5
                             },
-                            display: c.R.Block
-                        }, o.createElement("a", r.__assign({
-                            className: a("dashboard-side-nav__link", (i = {}, i["dashboard-side-nav__link--active"] = Boolean(s), i)),
+                            display: u.R.Block
+                        }, i.createElement("a", r.__assign({
+                            className: a("dashboard-side-nav__link", (o = {}, o["dashboard-side-nav__link--active"] = Boolean(s), o)),
                             href: t
-                        }, Object(c._63)(e)), e.children))
+                        }, Object(u._63)(e)), e.children))
                     })
                 }
-                return o.createElement(c._2, {
+                return i.createElement(u._2, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    display: c.R.Block
-                }, o.createElement(u.b, r.__assign({
+                    display: u.R.Block
+                }, i.createElement(c.b, r.__assign({
                     to: e.linkTo,
                     className: "dashboard-side-nav__link",
                     activeClassName: "dashboard-side-nav__link--active",
                     exact: e.exact
-                }, Object(c._63)(e)), e.children))
+                }, Object(u._63)(e)), e.children))
             });
         n.d(t, "a", function() {
             return l
+        })
+    },
+    "pK/l": function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            a = n("GiK3"),
+            o = n("zCIC"),
+            i = n("Odds"),
+            s = (n("DOXR"), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(o.b, null, a.createElement(i._8, {
+                        padding: 4,
+                        className: "dashboard-centered-page"
+                    }, this.props.children))
+                }, t
+            }(a.Component));
+        n.d(t, "a", function() {
+            return s
         })
     },
     pe7V: function(e, t, n) {
@@ -3422,14 +4036,14 @@ webpackJsonp([46], {
     qNYo: function(e, t, n) {
         var r = n("xA5w"),
             a = n("9Jn5"),
-            i = n("NKE6"),
-            o = n("MKc+");
+            o = n("NKE6"),
+            i = n("MKc+");
         e.exports = function(e, t) {
             var n = r(e),
                 s = r(t),
-                u = i(n, s),
-                c = Math.abs(a(n, s));
-            return n = o(n, u * c), u * (c - (i(n, s) === -u))
+                c = o(n, s),
+                u = Math.abs(a(n, s));
+            return n = i(n, c * u), c * (u - (o(n, s) === -c))
         }
     },
     qPxx: function(e, t, n) {
@@ -3452,13 +4066,13 @@ webpackJsonp([46], {
     rO5X: function(e, t, n) {
         var r = n("xA5w"),
             a = n("Bb5e"),
-            i = n("NKE6");
+            o = n("NKE6");
         e.exports = function(e, t) {
             var n = r(e),
-                o = r(t),
-                s = i(n, o),
-                u = Math.abs(a(n, o));
-            return n.setFullYear(n.getFullYear() - s * u), s * (u - (i(n, o) === -s))
+                i = r(t),
+                s = o(n, i),
+                c = Math.abs(a(n, i));
+            return n.setFullYear(n.getFullYear() - s * c), s * (c - (o(n, i) === -s))
         }
     },
     sdTe: function(e, t, n) {
@@ -3472,33 +4086,33 @@ webpackJsonp([46], {
     t6pj: function(e, t, n) {
         var r = n("YRFD"),
             a = n("xA5w"),
-            i = n("25hp"),
-            o = n("uyaC"),
+            o = n("25hp"),
+            i = n("uyaC"),
             s = 1440,
-            u = 43200,
-            c = 525600;
+            c = 43200,
+            u = 525600;
         e.exports = function(e, t, n) {
             var l = n || {},
                 d = r(e, t),
-                f = l.locale,
-                h = o.distanceInWords.localize;
-            f && f.distanceInWords && f.distanceInWords.localize && (h = f.distanceInWords.localize);
-            var m, p, v, g = {
+                m = l.locale,
+                f = i.distanceInWords.localize;
+            m && m.distanceInWords && m.distanceInWords.localize && (f = m.distanceInWords.localize);
+            var h, p, g, b = {
                 addSuffix: Boolean(l.addSuffix),
                 comparison: d
             };
-            d > 0 ? (m = a(e), p = a(t)) : (m = a(t), p = a(e));
-            var b = Math[l.partialMethod ? String(l.partialMethod) : "floor"],
-                y = i(p, m),
-                w = p.getTimezoneOffset() - m.getTimezoneOffset(),
-                x = b(y / 60) - w;
-            if ("s" === (v = l.unit ? String(l.unit) : x < 1 ? "s" : x < 60 ? "m" : x < s ? "h" : x < u ? "d" : x < c ? "M" : "Y")) return h("xSeconds", y, g);
-            if ("m" === v) return h("xMinutes", x, g);
-            if ("h" === v) return h("xHours", b(x / 60), g);
-            if ("d" === v) return h("xDays", b(x / s), g);
-            if ("M" === v) return h("xMonths", b(x / u), g);
-            if ("Y" === v) return h("xYears", b(x / c), g);
-            throw new Error("Unknown unit: " + v)
+            d > 0 ? (h = a(e), p = a(t)) : (h = a(t), p = a(e));
+            var v = Math[l.partialMethod ? String(l.partialMethod) : "floor"],
+                y = o(p, h),
+                O = p.getTimezoneOffset() - h.getTimezoneOffset(),
+                D = v(y / 60) - O;
+            if ("s" === (g = l.unit ? String(l.unit) : D < 1 ? "s" : D < 60 ? "m" : D < s ? "h" : D < c ? "d" : D < u ? "M" : "Y")) return f("xSeconds", y, b);
+            if ("m" === g) return f("xMinutes", D, b);
+            if ("h" === g) return f("xHours", v(D / 60), b);
+            if ("d" === g) return f("xDays", v(D / s), b);
+            if ("M" === g) return f("xMonths", v(D / c), b);
+            if ("Y" === g) return f("xYears", v(D / u), b);
+            throw new Error("Unknown unit: " + g)
         }
     },
     t8zS: function(e, t, n) {
@@ -3514,9 +4128,9 @@ webpackJsonp([46], {
         e.exports = function(e, t) {
             var n = t && Number(t.weekStartsOn) || 0,
                 a = r(e),
-                i = a.getDay(),
-                o = (i < n ? 7 : 0) + i - n;
-            return a.setDate(a.getDate() - o), a.setHours(0, 0, 0, 0), a
+                o = a.getDay(),
+                i = (o < n ? 7 : 0) + o - n;
+            return a.setDate(a.getDate() - i), a.setHours(0, 0, 0, 0), a
         }
     },
     u4Vk: function(e, t, n) {
@@ -3561,23 +4175,23 @@ webpackJsonp([46], {
         t.b = function(e, t) {
             var n = [];
             return e.sessions.forEach(function(e) {
-                var r = u.fromPayload(e, t);
+                var r = c.fromPayload(e, t);
                 r.isCompleted && n.push(r)
             }), n
         }, n.d(t, "a", function() {
-            return u
+            return c
         });
         var r = n("wuJz"),
             a = (n.n(r), n("u4Vk")),
-            i = n("xygp");
-        var o = ["google", "youtube", "facebook", "t.co", "reddit"];
+            o = n("xygp");
+        var i = ["google", "youtube", "facebook", "t.co", "reddit"];
 
         function s(e) {
-            return o.find(function(t) {
+            return i.find(function(t) {
                 return e.indexOf(t) >= 0
             }) || e
         }
-        var u = function() {
+        var c = function() {
             function e(e) {
                 this.interval = {
                     start: e.start,
@@ -3587,8 +4201,8 @@ webpackJsonp([46], {
             return e.fromPayload = function(t, n) {
                 var r = t.videos[0],
                     a = r && r.thumbnails && r.thumbnails.small && r.thumbnails.small.length && r.thumbnails.small[0].url || "",
-                    o = r && r.title || "",
-                    u = {
+                    i = r && r.title || "",
+                    c = {
                         twitch: 0,
                         reddit: 0,
                         facebook: 0,
@@ -3596,50 +4210,50 @@ webpackJsonp([46], {
                         other: 0
                     };
                 (t.stats.clip_plays_breakdown || []).forEach(function(e) {
-                    return u[e.key] = Number(e.value)
+                    return c[e.key] = Number(e.value)
                 });
-                var c = t.summary,
+                var u = t.summary,
                     l = t.stats,
-                    d = Object(i.b)((l.video_play_external_referrers || []).concat(l.video_play_internal_channels_referrers || [], l.video_play_internal_twitch_referrers || []));
+                    d = Object(o.b)((l.video_play_external_referrers || []).concat(l.video_play_internal_channels_referrers || [], l.video_play_internal_twitch_referrers || []));
                 return new e({
                     start: new Date(t.start_time),
                     end: new Date(t.end_time),
-                    avgViewerCount: Number(c.concurrents_average),
-                    maxViewerCount: Number(c.concurrents_max),
-                    followersChange: Number(c.followers_change),
-                    totalViewers: Number(c.video_play_total),
-                    uniqueViewers: Number(c.video_play_unique),
-                    totalMinutesWatched: Number(c.minutes_watched_total),
-                    clipCreatesTotal: Number(c.clip_creates_total),
-                    clipPlaysTotal: Number(c.clip_plays_total),
-                    clipPlaysBreakdown: u,
-                    commercialCount: Number(c.commercial_count),
-                    commercialDensity: Number(c.commercial_density),
-                    commercialLengthTotal: Number(c.commercial_length_total),
-                    subscriptionsNew: Number(c.subscriptions_new),
-                    uniqueChatters: Number(c.chatters_unique),
-                    peakViewershipTime: new Date(c.concurrents_peak_time),
-                    incomingRaids: Number(c.raids_incoming),
-                    startChannelStatus: o,
-                    messagesTotal: Number(c.messages_total),
+                    avgViewerCount: Number(u.concurrents_average),
+                    maxViewerCount: Number(u.concurrents_max),
+                    followersChange: Number(u.followers_change),
+                    totalViewers: Number(u.video_play_total),
+                    uniqueViewers: Number(u.video_play_unique),
+                    totalMinutesWatched: Number(u.minutes_watched_total),
+                    clipCreatesTotal: Number(u.clip_creates_total),
+                    clipPlaysTotal: Number(u.clip_plays_total),
+                    clipPlaysBreakdown: c,
+                    commercialCount: Number(u.commercial_count),
+                    commercialDensity: Number(u.commercial_density),
+                    commercialLengthTotal: Number(u.commercial_length_total),
+                    subscriptionsNew: Number(u.subscriptions_new),
+                    uniqueChatters: Number(u.chatters_unique),
+                    peakViewershipTime: new Date(u.concurrents_peak_time),
+                    incomingRaids: Number(u.raids_incoming),
+                    startChannelStatus: i,
+                    messagesTotal: Number(u.messages_total),
                     videoThumbnail: a,
                     channel: n,
-                    videoPlayExternalReferrers: Object(i.b)(l.video_play_external_referrers, s),
-                    videoPlayInternalChannelsReferrers: Object(i.b)(l.video_play_internal_channels_referrers),
-                    videoPlayInternalTwitchReferrers: Object(i.b)(l.video_play_internal_twitch_referrers),
+                    videoPlayExternalReferrers: Object(o.b)(l.video_play_external_referrers, s),
+                    videoPlayInternalChannelsReferrers: Object(o.b)(l.video_play_internal_channels_referrers),
+                    videoPlayInternalTwitchReferrers: Object(o.b)(l.video_play_internal_twitch_referrers),
                     videoPlayAllReferrers: d,
-                    videoPlayGeographics: Object(i.b)(l.video_play_geographics),
-                    videoPlayPlatforms: Object(i.b)(l.video_play_platforms)
+                    videoPlayGeographics: Object(o.b)(l.video_play_geographics),
+                    videoPlayPlatforms: Object(o.b)(l.video_play_platforms)
                 })
             }, e.intervalFromID = function(e) {
                 var t = e.split("-"),
                     n = t[0],
                     r = t[1],
-                    i = {
+                    o = {
                         start: new Date(Number(n)),
                         end: new Date(Number(r))
                     };
-                if (Object(a.e)(i)) return i
+                if (Object(a.e)(o)) return o
             }, e.prototype.getIsCompleted = function() {
                 return this.interval.end < Object(r.subMinutes)(this.now, 15)
             }, e
@@ -3790,6 +4404,160 @@ webpackJsonp([46], {
             return r(Date.now(), e, t)
         }
     },
+    vTHh: function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            a = n("GiK3"),
+            o = n("6sO2"),
+            i = n("Odds"),
+            s = (n("gWfK"), {
+                "data-test-selector": "referral-percentage"
+            }),
+            c = {
+                "data-test-selector": "report-item-name"
+            },
+            u = {
+                "data-test-selector": "referral-subtitle"
+            };
+
+        function l(e) {
+            return Object(o.d)("{totalViewCount, plural, one {# view} other {# views}}", {
+                totalViewCount: e
+            }, "ReferralGroup")
+        }
+        var d = function(e) {
+            var t = e.referrals,
+                n = e.totals,
+                s = e.translationFunc,
+                c = e.title,
+                d = e.subtitle;
+            return 0 === n ? function(e) {
+                var t = e.title,
+                    n = e.subtitle;
+                return a.createElement(a.Fragment, null, a.createElement(i._8, {
+                    padding: {
+                        top: 2,
+                        bottom: 1,
+                        x: 2
+                    }
+                }, t && a.createElement(i.Q, {
+                    type: i._49.H3,
+                    fontSize: i.V.Size5,
+                    bold: !0
+                }, t)), a.createElement(i._8, {
+                    margin: {
+                        x: 2,
+                        bottom: 1
+                    }
+                }, a.createElement(i.Q, r.__assign({}, u, {
+                    fontSize: i.V.Size5,
+                    color: i.K.Alt2
+                }), void 0 !== n ? n : Object(o.d)("Not enough data for us to display", "ReferralGroup"))))
+            }({
+                subtitle: d,
+                title: c
+            }) : a.createElement(a.Fragment, null, a.createElement(i._8, {
+                margin: {
+                    top: .5
+                },
+                padding: {
+                    top: 2,
+                    bottom: 1,
+                    x: 2
+                }
+            }, c && a.createElement(i.Q, {
+                type: i._49.H3,
+                fontSize: i.V.Size5,
+                bold: !0
+            }, c), a.createElement(i.Q, r.__assign({}, u, {
+                fontSize: i.V.Size5,
+                color: i.K.Alt2
+            }), void 0 !== d ? d : l(n))), a.createElement(i._8, {
+                margin: {
+                    bottom: 1
+                }
+            }, t.map(function(e, t) {
+                return a.createElement(m, {
+                    referral: e,
+                    translationFunc: s,
+                    key: t
+                })
+            })))
+        };
+
+        function m(e) {
+            var t, n = e.referral,
+                u = e.translationFunc;
+            return t = n.share > 0 ? Object(o.d)("{share, number, percent}", {
+                share: n.share / 100
+            }, "ReferralGroup") : Object(o.d)("< 1%", "ReferralGroup"), a.createElement(i._35, {
+                className: "referral-group-row",
+                padding: {
+                    y: 1,
+                    right: 2,
+                    left: 2
+                },
+                fontSize: i.V.Size5
+            }, a.createElement(i.Y, null, a.createElement(i.L, {
+                cols: {
+                    default: 5,
+                    xs: 5,
+                    sm: 5
+                }
+            }, a.createElement(i._8, {
+                padding: {
+                    left: 0,
+                    right: 1
+                }
+            }, a.createElement(i.Q, r.__assign({
+                fontSize: i.V.Size5,
+                ellipsis: !0
+            }, c), u(n.name)))), a.createElement(i.L, {
+                cols: {
+                    default: 2,
+                    xs: 3,
+                    sm: 2
+                }
+            }, a.createElement(i._8, {
+                padding: {
+                    right: 1
+                },
+                textAlign: i._45.Right
+            }, a.createElement(i.Q, r.__assign({
+                color: i.K.Alt2,
+                ellipsis: !0
+            }, s), t))), a.createElement(i.L, {
+                cols: {
+                    default: 5,
+                    xs: 4,
+                    sm: 5
+                }
+            }, a.createElement(i._8, {
+                padding: {
+                    top: .5
+                }
+            }, a.createElement(i._52, {
+                label: l(n.count),
+                direction: i._54.Top,
+                align: i._53.Center,
+                display: i.R.Block
+            }, a.createElement(i._35, {
+                background: i.n.Alt2
+            }, a.createElement(i._18, {
+                value: Math.max(n.share, 1)
+            })))))))
+        }
+        n.d(t, !1, function() {
+            return s
+        }), n.d(t, !1, function() {
+            return c
+        }), n.d(t, !1, function() {
+            return u
+        }), n.d(t, "a", function() {
+            return d
+        })
+    },
+    vU5Q: function(e, t) {},
     ve2D: function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e) {
@@ -3824,19 +4592,19 @@ webpackJsonp([46], {
             a = n("D6ie");
         e.exports = function(e, t) {
             var n = r(e),
-                i = Number(t),
-                o = a(n) - i;
-            return n.setDate(n.getDate() - 7 * o), n
+                o = Number(t),
+                i = a(n) - o;
+            return n.setDate(n.getDate() - 7 * i), n
         }
     },
     wiYS: function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e, t) {
             if (!(t instanceof Array)) throw new TypeError(toString.call(t) + " is not an instance of Array");
-            var n, a, i = r(e).getTime();
+            var n, a, o = r(e).getTime();
             return t.forEach(function(e, t) {
-                var o = r(e),
-                    s = Math.abs(i - o.getTime());
+                var i = r(e),
+                    s = Math.abs(o - i.getTime());
                 (void 0 === n || s < a) && (n = t, a = s)
             }), n
         }
@@ -4002,28 +4770,28 @@ webpackJsonp([46], {
     xA5w: function(e, t, n) {
         var r = n("607n"),
             a = 36e5,
-            i = 6e4,
-            o = 2,
+            o = 6e4,
+            i = 2,
             s = /[T ]/,
-            u = /:/,
-            c = /^(\d{2})$/,
+            c = /:/,
+            u = /^(\d{2})$/,
             l = [/^([+-]\d{2})$/, /^([+-]\d{3})$/, /^([+-]\d{4})$/],
             d = /^(\d{4})/,
-            f = [/^([+-]\d{4})/, /^([+-]\d{5})/, /^([+-]\d{6})/],
-            h = /^-(\d{2})$/,
-            m = /^-?(\d{3})$/,
+            m = [/^([+-]\d{4})/, /^([+-]\d{5})/, /^([+-]\d{6})/],
+            f = /^-(\d{2})$/,
+            h = /^-?(\d{3})$/,
             p = /^-?(\d{2})-?(\d{2})$/,
-            v = /^-?W(\d{2})$/,
-            g = /^-?W(\d{2})-?(\d{1})$/,
-            b = /^(\d{2}([.,]\d*)?)$/,
+            g = /^-?W(\d{2})$/,
+            b = /^-?W(\d{2})-?(\d{1})$/,
+            v = /^(\d{2}([.,]\d*)?)$/,
             y = /^(\d{2}):?(\d{2}([.,]\d*)?)$/,
-            w = /^(\d{2}):?(\d{2}):?(\d{2}([.,]\d*)?)$/,
-            x = /([Z+-].*)$/,
-            D = /^(Z)$/,
-            _ = /^([+-])(\d{2})$/,
-            N = /^([+-])(\d{2}):?(\d{2})$/;
+            O = /^(\d{2}):?(\d{2}):?(\d{2}([.,]\d*)?)$/,
+            D = /([Z+-].*)$/,
+            S = /^(Z)$/,
+            w = /^([+-])(\d{2})$/,
+            x = /^([+-])(\d{2}):?(\d{2})$/;
 
-        function S(e, t, n) {
+        function _(e, t, n) {
             t = t || 0, n = n || 0;
             var r = new Date(0);
             r.setUTCFullYear(e, 0, 4);
@@ -4034,77 +4802,77 @@ webpackJsonp([46], {
             if (r(e)) return new Date(e.getTime());
             if ("string" != typeof e) return new Date(e);
             var n = (t || {}).additionalDigits;
-            n = null == n ? o : Number(n);
-            var k = function(e) {
+            n = null == n ? i : Number(n);
+            var j = function(e) {
                     var t, n = {},
                         r = e.split(s);
-                    if (u.test(r[0]) ? (n.date = null, t = r[0]) : (n.date = r[0], t = r[1]), t) {
-                        var a = x.exec(t);
+                    if (c.test(r[0]) ? (n.date = null, t = r[0]) : (n.date = r[0], t = r[1]), t) {
+                        var a = D.exec(t);
                         a ? (n.time = t.replace(a[1], ""), n.timezone = a[1]) : n.time = t
                     }
                     return n
                 }(e),
-                T = function(e, t) {
+                N = function(e, t) {
                     var n, r = l[t],
-                        a = f[t];
+                        a = m[t];
                     if (n = d.exec(e) || a.exec(e)) {
-                        var i = n[1];
-                        return {
-                            year: parseInt(i, 10),
-                            restDateString: e.slice(i.length)
-                        }
-                    }
-                    if (n = c.exec(e) || r.exec(e)) {
                         var o = n[1];
                         return {
-                            year: 100 * parseInt(o, 10),
+                            year: parseInt(o, 10),
                             restDateString: e.slice(o.length)
+                        }
+                    }
+                    if (n = u.exec(e) || r.exec(e)) {
+                        var i = n[1];
+                        return {
+                            year: 100 * parseInt(i, 10),
+                            restDateString: e.slice(i.length)
                         }
                     }
                     return {
                         year: null
                     }
-                }(k.date, n),
-                M = T.year,
-                O = function(e, t) {
+                }(j.date, n),
+                M = N.year,
+                E = function(e, t) {
                     if (null === t) return null;
-                    var n, r, a, i;
+                    var n, r, a, o;
                     if (0 === e.length) return (r = new Date(0)).setUTCFullYear(t), r;
-                    if (n = h.exec(e)) return r = new Date(0), a = parseInt(n[1], 10) - 1, r.setUTCFullYear(t, a), r;
-                    if (n = m.exec(e)) {
+                    if (n = f.exec(e)) return r = new Date(0), a = parseInt(n[1], 10) - 1, r.setUTCFullYear(t, a), r;
+                    if (n = h.exec(e)) {
                         r = new Date(0);
-                        var o = parseInt(n[1], 10);
-                        return r.setUTCFullYear(t, 0, o), r
+                        var i = parseInt(n[1], 10);
+                        return r.setUTCFullYear(t, 0, i), r
                     }
                     if (n = p.exec(e)) {
                         r = new Date(0), a = parseInt(n[1], 10) - 1;
                         var s = parseInt(n[2], 10);
                         return r.setUTCFullYear(t, a, s), r
                     }
-                    if (n = v.exec(e)) return i = parseInt(n[1], 10) - 1, S(t, i);
-                    if (n = g.exec(e)) {
-                        i = parseInt(n[1], 10) - 1;
-                        var u = parseInt(n[2], 10) - 1;
-                        return S(t, i, u)
+                    if (n = g.exec(e)) return o = parseInt(n[1], 10) - 1, _(t, o);
+                    if (n = b.exec(e)) {
+                        o = parseInt(n[1], 10) - 1;
+                        var c = parseInt(n[2], 10) - 1;
+                        return _(t, o, c)
                     }
                     return null
-                }(T.restDateString, M);
-            if (O) {
-                var A, E = O.getTime(),
-                    I = 0;
-                return k.time && (I = function(e) {
+                }(N.restDateString, M);
+            if (E) {
+                var T, A = E.getTime(),
+                    k = 0;
+                return j.time && (k = function(e) {
                     var t, n, r;
-                    if (t = b.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * a;
-                    if (t = y.exec(e)) return n = parseInt(t[1], 10), r = parseFloat(t[2].replace(",", ".")), n % 24 * a + r * i;
-                    if (t = w.exec(e)) {
+                    if (t = v.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * a;
+                    if (t = y.exec(e)) return n = parseInt(t[1], 10), r = parseFloat(t[2].replace(",", ".")), n % 24 * a + r * o;
+                    if (t = O.exec(e)) {
                         n = parseInt(t[1], 10), r = parseInt(t[2], 10);
-                        var o = parseFloat(t[3].replace(",", "."));
-                        return n % 24 * a + r * i + 1e3 * o
+                        var i = parseFloat(t[3].replace(",", "."));
+                        return n % 24 * a + r * o + 1e3 * i
                     }
                     return null
-                }(k.time)), k.timezone ? (C = k.timezone, A = (R = D.exec(C)) ? 0 : (R = _.exec(C)) ? (Y = 60 * parseInt(R[2], 10), "+" === R[1] ? -Y : Y) : (R = N.exec(C)) ? (Y = 60 * parseInt(R[2], 10) + parseInt(R[3], 10), "+" === R[1] ? -Y : Y) : 0) : (A = new Date(E + I).getTimezoneOffset(), A = new Date(E + I + A * i).getTimezoneOffset()), new Date(E + I + A * i)
+                }(j.time)), j.timezone ? (C = j.timezone, T = (I = S.exec(C)) ? 0 : (I = w.exec(C)) ? (R = 60 * parseInt(I[2], 10), "+" === I[1] ? -R : R) : (I = x.exec(C)) ? (R = 60 * parseInt(I[2], 10) + parseInt(I[3], 10), "+" === I[1] ? -R : R) : 0) : (T = new Date(A + k).getTimezoneOffset(), T = new Date(A + k + T * o).getTimezoneOffset()), new Date(A + k + T * o)
             }
-            var C, R, Y;
+            var C, I, R;
             return new Date(e)
         }
     },
@@ -4140,7 +4908,7 @@ webpackJsonp([46], {
                     share: 0
                 }
             }), n.items.forEach(function(e) {
-                e.share = i(e.count / n.totals)
+                e.share = o(e.count / n.totals)
             }), n.items = n.items.sort(a), n
         }, t.a = function(e) {
             var t = {
@@ -4156,7 +4924,7 @@ webpackJsonp([46], {
                 t.items.push({
                     name: n,
                     count: e,
-                    share: i(e / t.totals)
+                    share: o(e / t.totals)
                 })
             }), t.items = t.items.sort(a), t
         };
@@ -4168,9 +4936,530 @@ webpackJsonp([46], {
             return e.count === t.count ? e.name.localeCompare(t.name) : e.count > t.count ? -1 : 1
         }
 
-        function i(e) {
+        function o(e) {
             return Math.round(100 * e)
         }
+    },
+    yLtb: function(e, t, n) {
+        "use strict";
+        t.b = function(e) {
+            switch (e.toUpperCase()) {
+                case "A1":
+                    return Object(r.d)("Anonymous Proxy", "format-country");
+                case "A2":
+                    return Object(r.d)("Satellite Provider", "format-country");
+                case "AD":
+                    return Object(r.d)("Andorra", "format-country");
+                case "AE":
+                    return Object(r.d)("United Arab Emirates", "format-country");
+                case "AF":
+                    return Object(r.d)("Afghanistan", "format-country");
+                case "AG":
+                    return Object(r.d)("Antigua and Barbuda", "format-country");
+                case "AI":
+                    return Object(r.d)("Anguilla", "format-country");
+                case "AL":
+                    return Object(r.d)("Albania", "format-country");
+                case "AM":
+                    return Object(r.d)("Armenia", "format-country");
+                case "AO":
+                    return Object(r.d)("Angola", "format-country");
+                case "AP":
+                    return Object(r.d)("Asia/Pacific Region", "format-country");
+                case "AQ":
+                    return Object(r.d)("Antarctica", "format-country");
+                case "AR":
+                    return Object(r.d)("Argentina", "format-country");
+                case "AS":
+                    return Object(r.d)("American Samoa", "format-country");
+                case "AT":
+                    return Object(r.d)("Austria", "format-country");
+                case "AU":
+                    return Object(r.d)("Australia", "format-country");
+                case "AW":
+                    return Object(r.d)("Aruba", "format-country");
+                case "AX":
+                    return Object(r.d)("Aland Islands", "format-country");
+                case "AZ":
+                    return Object(r.d)("Azerbaijan", "format-country");
+                case "BA":
+                    return Object(r.d)("Bosnia and Herzegovina", "format-country");
+                case "BB":
+                    return Object(r.d)("Barbados", "format-country");
+                case "BD":
+                    return Object(r.d)("Bangladesh", "format-country");
+                case "BE":
+                    return Object(r.d)("Belgium", "format-country");
+                case "BF":
+                    return Object(r.d)("Burkina Faso", "format-country");
+                case "BG":
+                    return Object(r.d)("Bulgaria", "format-country");
+                case "BH":
+                    return Object(r.d)("Bahrain", "format-country");
+                case "BI":
+                    return Object(r.d)("Burundi", "format-country");
+                case "BJ":
+                    return Object(r.d)("Benin", "format-country");
+                case "BL":
+                    return Object(r.d)("Saint Bartelemey", "format-country");
+                case "BM":
+                    return Object(r.d)("Bermuda", "format-country");
+                case "BN":
+                    return Object(r.d)("Brunei", "format-country");
+                case "BO":
+                    return Object(r.d)("Bolivia", "format-country");
+                case "BQ":
+                    return Object(r.d)("Bonaire, Saint Eustatius, and Saba", "format-country");
+                case "BR":
+                    return Object(r.d)("Brazil", "format-country");
+                case "BS":
+                    return Object(r.d)("Bahamas", "format-country");
+                case "BT":
+                    return Object(r.d)("Bhutan", "format-country");
+                case "BV":
+                    return Object(r.d)("Bouvet Island", "format-country");
+                case "BW":
+                    return Object(r.d)("Botswana", "format-country");
+                case "BY":
+                    return Object(r.d)("Belarus", "format-country");
+                case "BZ":
+                    return Object(r.d)("Belize", "format-country");
+                case "CA":
+                    return Object(r.d)("Canada", "format-country");
+                case "CC":
+                    return Object(r.d)("Cocos (Keeling) Islands", "format-country");
+                case "CD":
+                    return Object(r.d)("Congo, The Democratic Republic of the", "format-country");
+                case "CF":
+                    return Object(r.d)("Central African Republic", "format-country");
+                case "CG":
+                    return Object(r.d)("Congo", "format-country");
+                case "CH":
+                    return Object(r.d)("Switzerland", "format-country");
+                case "CI":
+                    return Object(r.d)("Ivory Coast", "format-country");
+                case "CK":
+                    return Object(r.d)("Cook Islands", "format-country");
+                case "CL":
+                    return Object(r.d)("Chile", "format-country");
+                case "CM":
+                    return Object(r.d)("Cameroon", "format-country");
+                case "CN":
+                    return Object(r.d)("China", "format-country");
+                case "CO":
+                    return Object(r.d)("Colombia", "format-country");
+                case "CR":
+                    return Object(r.d)("Costa Rica", "format-country");
+                case "CU":
+                    return Object(r.d)("Cuba", "format-country");
+                case "CV":
+                    return Object(r.d)("Cape Verde", "format-country");
+                case "CW":
+                    return Object(r.d)("Curacao", "format-country");
+                case "CX":
+                    return Object(r.d)("Christmas Island", "format-country");
+                case "CY":
+                    return Object(r.d)("Cyprus", "format-country");
+                case "CZ":
+                    return Object(r.d)("Czech Republic", "format-country");
+                case "DE":
+                    return Object(r.d)("Germany", "format-country");
+                case "DJ":
+                    return Object(r.d)("Djibouti", "format-country");
+                case "DK":
+                    return Object(r.d)("Denmark", "format-country");
+                case "DM":
+                    return Object(r.d)("Dominica", "format-country");
+                case "DO":
+                    return Object(r.d)("Dominican Republic", "format-country");
+                case "DZ":
+                    return Object(r.d)("Algeria", "format-country");
+                case "EC":
+                    return Object(r.d)("Ecuador", "format-country");
+                case "EE":
+                    return Object(r.d)("Estonia", "format-country");
+                case "EG":
+                    return Object(r.d)("Egypt", "format-country");
+                case "EH":
+                    return Object(r.d)("Western Sahara", "format-country");
+                case "ER":
+                    return Object(r.d)("Eritrea", "format-country");
+                case "ES":
+                    return Object(r.d)("Spain", "format-country");
+                case "ET":
+                    return Object(r.d)("Ethiopia", "format-country");
+                case "EU":
+                    return Object(r.d)("Europe", "format-country");
+                case "FI":
+                    return Object(r.d)("Finland", "format-country");
+                case "FJ":
+                    return Object(r.d)("Fiji", "format-country");
+                case "FK":
+                    return Object(r.d)("Falkland Islands (Malvinas)", "format-country");
+                case "FM":
+                    return Object(r.d)("Micronesia", "format-country");
+                case "FO":
+                    return Object(r.d)("Faroe Islands", "format-country");
+                case "FR":
+                    return Object(r.d)("France", "format-country");
+                case "GA":
+                    return Object(r.d)("Gabon", "format-country");
+                case "GB":
+                    return Object(r.d)("United Kingdom", "format-country");
+                case "GD":
+                    return Object(r.d)("Grenada", "format-country");
+                case "GE":
+                    return Object(r.d)("Georgia", "format-country");
+                case "GF":
+                    return Object(r.d)("French Guiana", "format-country");
+                case "GG":
+                    return Object(r.d)("Guernsey", "format-country");
+                case "GH":
+                    return Object(r.d)("Ghana", "format-country");
+                case "GI":
+                    return Object(r.d)("Gibraltar", "format-country");
+                case "GL":
+                    return Object(r.d)("Greenland", "format-country");
+                case "GM":
+                    return Object(r.d)("Gambia", "format-country");
+                case "GN":
+                    return Object(r.d)("Guinea", "format-country");
+                case "GP":
+                    return Object(r.d)("Guadeloupe", "format-country");
+                case "GQ":
+                    return Object(r.d)("Equatorial Guinea", "format-country");
+                case "GR":
+                    return Object(r.d)("Greece", "format-country");
+                case "GS":
+                    return Object(r.d)("South Georgia and the South Sandwich Islands", "format-country");
+                case "GT":
+                    return Object(r.d)("Guatemala", "format-country");
+                case "GU":
+                    return Object(r.d)("Guam", "format-country");
+                case "GW":
+                    return Object(r.d)("Guinea-Bissau", "format-country");
+                case "GY":
+                    return Object(r.d)("Guyana", "format-country");
+                case "HK":
+                    return Object(r.d)("Hong Kong", "format-country");
+                case "HM":
+                    return Object(r.d)("Heard Island and McDonald Islands", "format-country");
+                case "HN":
+                    return Object(r.d)("Honduras", "format-country");
+                case "HR":
+                    return Object(r.d)("Croatia", "format-country");
+                case "HT":
+                    return Object(r.d)("Haiti", "format-country");
+                case "HU":
+                    return Object(r.d)("Hungary", "format-country");
+                case "ID":
+                    return Object(r.d)("Indonesia", "format-country");
+                case "IE":
+                    return Object(r.d)("Ireland", "format-country");
+                case "IL":
+                    return Object(r.d)("Israel", "format-country");
+                case "IM":
+                    return Object(r.d)("Isle of Man", "format-country");
+                case "IN":
+                    return Object(r.d)("India", "format-country");
+                case "IO":
+                    return Object(r.d)("British Indian Ocean Territory", "format-country");
+                case "IQ":
+                    return Object(r.d)("Iraq", "format-country");
+                case "IR":
+                    return Object(r.d)("Iran", "format-country");
+                case "IS":
+                    return Object(r.d)("Iceland", "format-country");
+                case "IT":
+                    return Object(r.d)("Italy", "format-country");
+                case "JE":
+                    return Object(r.d)("Jersey", "format-country");
+                case "JM":
+                    return Object(r.d)("Jamaica", "format-country");
+                case "JO":
+                    return Object(r.d)("Jordan", "format-country");
+                case "JP":
+                    return Object(r.d)("Japan", "format-country");
+                case "KE":
+                    return Object(r.d)("Kenya", "format-country");
+                case "KG":
+                    return Object(r.d)("Kyrgyzstan", "format-country");
+                case "KH":
+                    return Object(r.d)("Cambodia", "format-country");
+                case "KI":
+                    return Object(r.d)("Kiribati", "format-country");
+                case "KM":
+                    return Object(r.d)("Comoros", "format-country");
+                case "KN":
+                    return Object(r.d)("Saint Kitts and Nevis", "format-country");
+                case "KP":
+                    return Object(r.d)("North Korea", "format-country");
+                case "KR":
+                    return Object(r.d)("South Korea", "format-country");
+                case "KW":
+                    return Object(r.d)("Kuwait", "format-country");
+                case "KY":
+                    return Object(r.d)("Cayman Islands", "format-country");
+                case "KZ":
+                    return Object(r.d)("Kazakhstan", "format-country");
+                case "LA":
+                    return Object(r.d)("Laos", "format-country");
+                case "LB":
+                    return Object(r.d)("Lebanon", "format-country");
+                case "LC":
+                    return Object(r.d)("Saint Lucia", "format-country");
+                case "LI":
+                    return Object(r.d)("Liechtenstein", "format-country");
+                case "LK":
+                    return Object(r.d)("Sri Lanka", "format-country");
+                case "LR":
+                    return Object(r.d)("Liberia", "format-country");
+                case "LS":
+                    return Object(r.d)("Lesotho", "format-country");
+                case "LT":
+                    return Object(r.d)("Lithuania", "format-country");
+                case "LU":
+                    return Object(r.d)("Luxembourg", "format-country");
+                case "LV":
+                    return Object(r.d)("Latvia", "format-country");
+                case "LY":
+                    return Object(r.d)("Libya", "format-country");
+                case "MA":
+                    return Object(r.d)("Morocco", "format-country");
+                case "MC":
+                    return Object(r.d)("Monaco", "format-country");
+                case "MD":
+                    return Object(r.d)("Moldova", "format-country");
+                case "ME":
+                    return Object(r.d)("Montenegro", "format-country");
+                case "MF":
+                    return Object(r.d)("Saint Martin", "format-country");
+                case "MG":
+                    return Object(r.d)("Madagascar", "format-country");
+                case "MH":
+                    return Object(r.d)("Marshall Islands", "format-country");
+                case "MK":
+                    return Object(r.d)("Macedonia", "format-country");
+                case "ML":
+                    return Object(r.d)("Mali", "format-country");
+                case "MM":
+                    return Object(r.d)("Myanmar", "format-country");
+                case "MN":
+                    return Object(r.d)("Mongolia", "format-country");
+                case "MO":
+                    return Object(r.d)("Macao", "format-country");
+                case "MP":
+                    return Object(r.d)("Northern Mariana Islands", "format-country");
+                case "MQ":
+                    return Object(r.d)("Martinique", "format-country");
+                case "MR":
+                    return Object(r.d)("Mauritania", "format-country");
+                case "MS":
+                    return Object(r.d)("Montserrat", "format-country");
+                case "MT":
+                    return Object(r.d)("Malta", "format-country");
+                case "MU":
+                    return Object(r.d)("Mauritius", "format-country");
+                case "MV":
+                    return Object(r.d)("Maldives", "format-country");
+                case "MW":
+                    return Object(r.d)("Malawi", "format-country");
+                case "MX":
+                    return Object(r.d)("Mexico", "format-country");
+                case "MY":
+                    return Object(r.d)("Malaysia", "format-country");
+                case "MZ":
+                    return Object(r.d)("Mozambique", "format-country");
+                case "NA":
+                    return Object(r.d)("Namibia", "format-country");
+                case "NC":
+                    return Object(r.d)("New Caledonia", "format-country");
+                case "NE":
+                    return Object(r.d)("Niger", "format-country");
+                case "NF":
+                    return Object(r.d)("Norfolk Island", "format-country");
+                case "NG":
+                    return Object(r.d)("Nigeria", "format-country");
+                case "NI":
+                    return Object(r.d)("Nicaragua", "format-country");
+                case "NL":
+                    return Object(r.d)("Netherlands", "format-country");
+                case "NO":
+                    return Object(r.d)("Norway", "format-country");
+                case "NP":
+                    return Object(r.d)("Nepal", "format-country");
+                case "NR":
+                    return Object(r.d)("Nauru", "format-country");
+                case "NU":
+                    return Object(r.d)("Niue", "format-country");
+                case "NZ":
+                    return Object(r.d)("New Zealand", "format-country");
+                case "O1":
+                    return Object(r.d)("Other Country", "format-country");
+                case "OM":
+                    return Object(r.d)("Oman", "format-country");
+                case "PA":
+                    return Object(r.d)("Panama", "format-country");
+                case "PE":
+                    return Object(r.d)("Peru", "format-country");
+                case "PF":
+                    return Object(r.d)("French Polynesia", "format-country");
+                case "PG":
+                    return Object(r.d)("Papua New Guinea", "format-country");
+                case "PH":
+                    return Object(r.d)("Philippines", "format-country");
+                case "PK":
+                    return Object(r.d)("Pakistan", "format-country");
+                case "PL":
+                    return Object(r.d)("Poland", "format-country");
+                case "PM":
+                    return Object(r.d)("Saint Pierre and Miquelon", "format-country");
+                case "PN":
+                    return Object(r.d)("Pitcairn", "format-country");
+                case "PR":
+                    return Object(r.d)("Puerto Rico", "format-country");
+                case "PS":
+                    return Object(r.d)("Palestine", "format-country");
+                case "PT":
+                    return Object(r.d)("Portugal", "format-country");
+                case "PW":
+                    return Object(r.d)("Palau", "format-country");
+                case "PY":
+                    return Object(r.d)("Paraguay", "format-country");
+                case "QA":
+                    return Object(r.d)("Qatar", "format-country");
+                case "RE":
+                    return Object(r.d)("Reunion", "format-country");
+                case "RO":
+                    return Object(r.d)("Romania", "format-country");
+                case "RS":
+                    return Object(r.d)("Serbia", "format-country");
+                case "RU":
+                    return Object(r.d)("Russia", "format-country");
+                case "RW":
+                    return Object(r.d)("Rwanda", "format-country");
+                case "SA":
+                    return Object(r.d)("Saudi Arabia", "format-country");
+                case "SB":
+                    return Object(r.d)("Solomon Islands", "format-country");
+                case "SC":
+                    return Object(r.d)("Seychelles", "format-country");
+                case "SD":
+                    return Object(r.d)("Sudan", "format-country");
+                case "SE":
+                    return Object(r.d)("Sweden", "format-country");
+                case "SG":
+                    return Object(r.d)("Singapore", "format-country");
+                case "SH":
+                    return Object(r.d)("Saint Helena", "format-country");
+                case "SI":
+                    return Object(r.d)("Slovenia", "format-country");
+                case "SJ":
+                    return Object(r.d)("Svalbard and Jan Mayen", "format-country");
+                case "SK":
+                    return Object(r.d)("Slovakia", "format-country");
+                case "SL":
+                    return Object(r.d)("Sierra Leone", "format-country");
+                case "SM":
+                    return Object(r.d)("San Marino", "format-country");
+                case "SN":
+                    return Object(r.d)("Senegal", "format-country");
+                case "SO":
+                    return Object(r.d)("Somalia", "format-country");
+                case "SR":
+                    return Object(r.d)("Suriname", "format-country");
+                case "SS":
+                    return Object(r.d)("South Sudan", "format-country");
+                case "ST":
+                    return Object(r.d)("Sao Tome and Principe", "format-country");
+                case "SV":
+                    return Object(r.d)("El Salvador", "format-country");
+                case "SX":
+                    return Object(r.d)("Sint Maarten", "format-country");
+                case "SY":
+                    return Object(r.d)("Syria", "format-country");
+                case "SZ":
+                    return Object(r.d)("Swaziland", "format-country");
+                case "TC":
+                    return Object(r.d)("Turks and Caicos Islands", "format-country");
+                case "TD":
+                    return Object(r.d)("Chad", "format-country");
+                case "TF":
+                    return Object(r.d)("French Southern Territories", "format-country");
+                case "TG":
+                    return Object(r.d)("Togo", "format-country");
+                case "TH":
+                    return Object(r.d)("Thailand", "format-country");
+                case "TJ":
+                    return Object(r.d)("Tajikistan", "format-country");
+                case "TK":
+                    return Object(r.d)("Tokelau", "format-country");
+                case "TL":
+                    return Object(r.d)("East Timor", "format-country");
+                case "TM":
+                    return Object(r.d)("Turkmenistan", "format-country");
+                case "TN":
+                    return Object(r.d)("Tunisia", "format-country");
+                case "TO":
+                    return Object(r.d)("Tonga", "format-country");
+                case "TR":
+                    return Object(r.d)("Turkey", "format-country");
+                case "TT":
+                    return Object(r.d)("Trinidad and Tobago", "format-country");
+                case "TV":
+                    return Object(r.d)("Tuvalu", "format-country");
+                case "TW":
+                    return Object(r.d)("Taiwan", "format-country");
+                case "TZ":
+                    return Object(r.d)("Tanzania", "format-country");
+                case "UA":
+                    return Object(r.d)("Ukraine", "format-country");
+                case "UG":
+                    return Object(r.d)("Uganda", "format-country");
+                case "UM":
+                    return Object(r.d)("United States Minor Outlying Islands", "format-country");
+                case "US":
+                    return Object(r.d)("United States", "format-country");
+                case "UY":
+                    return Object(r.d)("Uruguay", "format-country");
+                case "UZ":
+                    return Object(r.d)("Uzbekistan", "format-country");
+                case "VA":
+                    return Object(r.d)("Vatican City", "format-country");
+                case "VC":
+                    return Object(r.d)("Saint Vincent and the Grenadines", "format-country");
+                case "VE":
+                    return Object(r.d)("Venezuela", "format-country");
+                case "VG":
+                    return Object(r.d)("British Virgin Islands", "format-country");
+                case "VI":
+                    return Object(r.d)("U.S. Virgin Islands", "format-country");
+                case "VN":
+                    return Object(r.d)("Vietnam", "format-country");
+                case "VU":
+                    return Object(r.d)("Vanuatu", "format-country");
+                case "WF":
+                    return Object(r.d)("Wallis and Futuna", "format-country");
+                case "WS":
+                    return Object(r.d)("Samoa", "format-country");
+                case "YE":
+                    return Object(r.d)("Yemen", "format-country");
+                case "YT":
+                    return Object(r.d)("Mayotte", "format-country");
+                case "ZA":
+                    return Object(r.d)("South Africa", "format-country");
+                case "ZM":
+                    return Object(r.d)("Zambia", "format-country");
+                case "ZW":
+                    return Object(r.d)("Zimbabwe", "format-country");
+                default:
+                    return e
+            }
+        }, n.d(t, "a", function() {
+            return a
+        });
+        var r = n("6sO2");
+        var a = ["US", "CA", "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "A1", "AQ", "AG", "AR", "AM", "AW", "AP", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "DK", "DJ", "DM", "DO", "TL", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "EU", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "CI", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "KP", "MP", "NO", "OM", "O1", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "A2", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "KR", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "VI", "UG", "UA", "AE", "GB", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "WF", "EH", "YE", "ZM", "ZW"]
     },
     yiqh: function(e, t, n) {
         "use strict";
@@ -4189,33 +5478,74 @@ webpackJsonp([46], {
         };
         var r = n("6sO2")
     },
+    ylrR: function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            a = n("GiK3"),
+            o = n("rCmJ"),
+            i = n("Odds"),
+            s = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        isDisclosed: !1
+                    }, t.toggle = function() {
+                        t.setState(function(e) {
+                            return e.isDisclosed || t.handleOpen(), {
+                                isDisclosed: !e.isDisclosed
+                            }
+                        })
+                    }, t.close = function() {
+                        t.setState({
+                            isDisclosed: !1
+                        })
+                    }, t.handleOpen = function() {
+                        t.props.onOpen && t.props.onOpen()
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = {
+                        toggle: this.toggle,
+                        close: this.close
+                    };
+                    return a.createElement(i._2, {
+                        fullHeight: !0
+                    }, a.createElement(o.a, {
+                        onClickOut: this.close
+                    }, this.props.control(e), this.state.isDisclosed && this.props.children(e)))
+                }, t
+            }(a.Component);
+        n.d(t, "a", function() {
+            return s
+        })
+    },
     ymQ7: function(e, t, n) {
         var r = n("xA5w"),
             a = n("JURy"),
-            i = n("nizW");
+            o = n("nizW");
         e.exports = function(e) {
             var t = r(e);
-            return i(t, a(t)) + 1
+            return o(t, a(t)) + 1
         }
     },
     ytWG: function(e, t, n) {
         "use strict";
         var r = n("TToO"),
             a = n("GiK3"),
-            i = n("5kgt"),
-            o = n("Odds"),
+            o = n("5kgt"),
+            i = n("Odds"),
             s = (n("XeQJ"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(o._8, r.__assign({
-                        display: o.R.InlineBlock,
+                    return a.createElement(i._8, r.__assign({
+                        display: i.R.InlineBlock,
                         margin: {
                             left: .5
                         },
                         className: "side-nav-hotspot"
-                    }, Object(i.a)(this.props)))
+                    }, Object(o.a)(this.props)))
                 }, t
             }(a.Component));
         n.d(t, "a", function() {
@@ -4237,17 +5567,17 @@ webpackJsonp([46], {
     zDNk: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return o
+            return i
         });
         var r = n("TToO"),
             a = n("GiK3"),
-            i = (n.n(a), n("Odds")),
-            o = function(e) {
+            o = (n.n(a), n("Odds")),
+            i = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(i._8, {
+                    return a.createElement(o._8, {
                         padding: {
                             top: 2,
                             x: 2
@@ -4255,9 +5585,9 @@ webpackJsonp([46], {
                         margin: {
                             bottom: .5
                         }
-                    }, a.createElement(i.Q, {
-                        type: i._49.H4,
-                        fontSize: i.V.Size5
+                    }, a.createElement(o.Q, {
+                        type: o._49.H4,
+                        fontSize: o.V.Size5
                     }, this.props.children))
                 }, t
             }(a.Component)
@@ -4277,14 +5607,14 @@ webpackJsonp([46], {
         e.exports = function(e) {
             var t = r(e),
                 n = t.getFullYear(),
-                i = new Date(0);
-            i.setFullYear(n + 1, 0, 4), i.setHours(0, 0, 0, 0);
-            var o = a(i),
+                o = new Date(0);
+            o.setFullYear(n + 1, 0, 4), o.setHours(0, 0, 0, 0);
+            var i = a(o),
                 s = new Date(0);
             s.setFullYear(n, 0, 4), s.setHours(0, 0, 0, 0);
-            var u = a(s);
-            return t.getTime() >= o.getTime() ? n + 1 : t.getTime() >= u.getTime() ? n : n - 1
+            var c = a(s);
+            return t.getTime() >= i.getTime() ? n + 1 : t.getTime() >= c.getTime() ? n : n - 1
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-0949f4f9c2b236bd26729da4edbdbbc3.js.map
+//# sourceMappingURL=pages.dashboard-3e38e6b1d55126a90dc56ee444071a78.js.map

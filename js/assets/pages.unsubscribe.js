@@ -6600,16 +6600,32 @@ webpackJsonp([45], {
                         },
                         arguments: [],
                         directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "isPrimeOnly"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "quantity"
+                        },
+                        arguments: [],
+                        directives: []
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 99
+                end: 120
             }
         };
         n.loc.source = {
-            body: "fragment reward on TournamentReward {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}",
+            body: "fragment reward on TournamentReward {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\nquantity\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -7490,4 +7506,4 @@ webpackJsonp([45], {
             }(r || (r = {}))
     }
 });
-//# sourceMappingURL=pages.unsubscribe-26812e52fe1d988c8fa66991ced8c087.js.map
+//# sourceMappingURL=pages.unsubscribe-7f013ed9dc76b2b36ae4e949c68b51f8.js.map

@@ -2019,6 +2019,7 @@ webpackJsonp([51], {
                         flexDirection: O.T.Column,
                         background: O.n.Base
                     }, o.createElement(O._35, {
+                        className: "clips-post-edit-sidebar-top",
                         borderBottom: !0
                     }, o.createElement(K.a, {
                         slug: e
@@ -2079,7 +2080,9 @@ webpackJsonp([51], {
                         })
                     }, 7e4)
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.maybeRedirectToView(e), !this.props.isPostEdit && e.isPostEdit && this.hideTransitioningState(), this.getIsClipResolved(e) && (this.props.data.stopPolling(), clearTimeout(this.timeoutID), this.props.latencyTracking.reportInteractive())
+                    this.maybeRedirectToView(e), !this.props.isPostEdit && e.isPostEdit && (this.hideTransitioningState(), this.props.playerConnection.sendMessage(Object(y.r)({
+                        isPostEdit: !0
+                    }))), this.getIsClipResolved(e) && (this.props.data.stopPolling(), clearTimeout(this.timeoutID), this.props.latencyTracking.reportInteractive())
                 }, t.prototype.componentWillUnmount = function() {
                     this.timeoutID && clearTimeout(this.timeoutID), this.props.data.stopPolling()
                 }, t.prototype.componentDidUpdate = function() {
@@ -2606,6 +2609,7 @@ webpackJsonp([51], {
                 }
             return {
                 id: e + ";" + t,
+                canCheer: t <= a.k,
                 bits: t,
                 color: a.f[t],
                 images: n,
@@ -6103,4 +6107,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-5daa75d74555d9fee1c19a23726d1812.js.map
+//# sourceMappingURL=sites.clips.pages.create-ba0b47c7acf79904e0adce57fa90ee1e.js.map

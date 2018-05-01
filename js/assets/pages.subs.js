@@ -5179,6 +5179,14 @@ webpackJsonp([36], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
+                                                    value: "canCheer"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
                                                     value: "images"
                                                 },
                                                 arguments: [],
@@ -5238,11 +5246,11 @@ webpackJsonp([36], {
             }],
             loc: {
                 start: 0,
-                end: 133
+                end: 142
             }
         };
         n.loc.source = {
-            body: "fragment cheer on User {\ncheer {\nid\nemotes {\nid\nprefix\ntype\ntiers {\nid\nbits\ncolor\nimages {\nid\nurl\ntheme\nisAnimated\ndpiScale\n}\n}\n}\n}\n}",
+            body: "fragment cheer on User {\ncheer {\nid\nemotes {\nid\nprefix\ntype\ntiers {\nid\nbits\ncolor\ncanCheer\nimages {\nid\nurl\ntheme\nisAnimated\ndpiScale\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -5350,7 +5358,7 @@ webpackJsonp([36], {
                 return i
             }),
             function(e) {
-                e.Individual = "INDIVIDUAL", e.Team = "TEAM", e.Global = "GLOBAL", e.Insider = "INSIDER"
+                e.Individual = "INDIVIDUAL", e.Team = "TEAM", e.Global = "GLOBAL", e.Insider = "INSIDER", e.Bits = "BITS"
             }(i || (i = {}))
     },
     "6Rwu": function(e, t) {},
@@ -5448,7 +5456,6 @@ webpackJsonp([36], {
                 e.Archive = "ARCHIVE", e.Highlight = "HIGHLIGHT", e.Upload = "UPLOAD", e.WatchParty = "WATCH_PARTY", e.PastPremiere = "PAST_PREMIERE", e.PremiereUpload = "PREMIERE_UPLOAD"
             }(i || (i = {}))
     },
-    "6lb1": function(e, t) {},
     "6uxC": function(e, t) {
         var n = {
             kind: "Document",
@@ -12161,6 +12168,7 @@ webpackJsonp([36], {
                 }
             return {
                 id: e + ";" + t,
+                canCheer: t <= r.k,
                 bits: t,
                 color: r.f[t],
                 images: n,
@@ -13793,6 +13801,7 @@ webpackJsonp([36], {
         }
     },
     FVEF: function(e, t) {},
+    FZFL: function(e, t) {},
     FroJ: function(e, t) {},
     G8hb: function(e, t, n) {
         "use strict";
@@ -14223,7 +14232,7 @@ webpackJsonp([36], {
                     }
                 }, e[i.ENABLED] = function() {
                     return l.a.wrap(function() {
-                        return n.e(70).then(n.bind(null, "CNsG"))
+                        return n.e(71).then(n.bind(null, "CNsG"))
                     }, "VerifyEmailBar", {
                         failSilently: !0,
                         placeholder: null
@@ -17856,7 +17865,7 @@ webpackJsonp([36], {
                         }
                     }, t[Oe.VARIANT_A] = function() {
                         return Fe.a.wrap(function() {
-                            return n.e(77).then(n.bind(null, "Rxng"))
+                            return n.e(78).then(n.bind(null, "Rxng"))
                         }, "SubscribedChannels", {
                             placeholder: null,
                             failSilently: !0
@@ -18844,7 +18853,6 @@ webpackJsonp([36], {
                     }));
                     var n = t ? 1 : 0;
                     return a.createElement(d._35, {
-                        border: !t,
                         display: d.R.Flex,
                         justifyContent: d._7.Center,
                         margin: {
@@ -19170,7 +19178,31 @@ webpackJsonp([36], {
             U = (n("DgR+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getOfferListOrientation = function() {
+                    return t.renderDesktopOffers = function(e) {
+                        return a.createElement(d._8, {
+                            className: "prime-offer-list__content--desktop"
+                        }, t.renderSectionTitle(), a.createElement(d._55, {
+                            childWidth: d._56.Large,
+                            gutterSize: d._57.Small,
+                            center: !0,
+                            placeholderItems: 20
+                        }, e))
+                    }, t.renderSectionTitle = function() {
+                        return t.props.sectionTitle && a.createElement(d._8, {
+                            padding: {
+                                top: 1
+                            },
+                            className: "prime-offers__title"
+                        }, a.createElement(d.Q, {
+                            type: d._49.H3,
+                            color: d.K.Base,
+                            bold: !0
+                        }, t.props.sectionTitle))
+                    }, t.renderMobileOffers = function(e) {
+                        return a.createElement(d._8, {
+                            className: "prime-offer-list__content--mobile"
+                        }, t.renderSectionTitle(), e)
+                    }, t.getOfferListOrientation = function() {
                         return t.props.listDirection || g.c.Default
                     }, t.shouldShowPlaceholders = function() {
                         if (!t.props.offersData) return !0;
@@ -19195,7 +19227,8 @@ webpackJsonp([36], {
                         n = Object(g.g)("prime-offer-list", e),
                         i = "prime-offer-list__content prime-offer-list__content--" + t,
                         r = this.props.listDirection === g.c.Horizontal,
-                        o = this.props.listDirection === g.c.Vertical;
+                        o = this.props.listDirection === g.c.Vertical,
+                        l = this.renderOfferExperience();
                     return a.createElement(s.b, {
                         className: n,
                         suppressScrollX: o,
@@ -19208,7 +19241,7 @@ webpackJsonp([36], {
                             bottom: 2,
                             x: 1
                         }
-                    }, this.renderUpsell(), this.renderOfferExperience()))
+                    }, this.renderUpsell(), this.props.listDirection === g.c.Horizontal && this.renderDesktopOffers(l), this.renderMobileOffers(l)))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
                     if (!Object(g.j)(e) && !Object(g.k)(e) && !this.props.hideUpsell) return a.createElement(D, null)
@@ -19778,6 +19811,22 @@ webpackJsonp([36], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isPrimeOnly"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "quantity"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
@@ -19846,6 +19895,22 @@ webpackJsonp([36], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isPrimeOnly"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "quantity"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
                                                             }]
                                                         }
                                                     }]
@@ -19861,11 +19926,11 @@ webpackJsonp([36], {
             }],
             loc: {
                 start: 0,
-                end: 270
+                end: 312
             }
         };
         n.loc.source = {
-            body: "query InsiderPassTabRewards($channelID: ID!) {\nuser(id: $channelID) {\nid\ntournament {\nid\nrewards {\ninsider {\nheroSkins {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}\ninGameContent {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}\n}\n}\n}\n}\n}",
+            body: "query InsiderPassTabRewards($channelID: ID!) {\nuser(id: $channelID) {\nid\ntournament {\nid\nrewards {\ninsider {\nheroSkins {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\nquantity\n}\ninGameContent {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\nquantity\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -19893,7 +19958,7 @@ webpackJsonp([36], {
             g = n("jF7o"),
             v = n("iMOk"),
             b = n("WVx7"),
-            k = n("ySfT"),
+            k = n("jUhM"),
             y = n("ZJYd"),
             _ = n("/LBW"),
             S = (n("fHoP"), function(e) {
@@ -21653,10 +21718,10 @@ webpackJsonp([36], {
             u = n("T8ns"),
             p = n("Odds"),
             m = (n("w+Qa"), l.a.wrap(function() {
-                return n.e(109).then(n.bind(null, "kd/b"))
+                return n.e(111).then(n.bind(null, "kd/b"))
             }, "SubsLandingPage")),
             h = l.a.wrap(function() {
-                return n.e(111).then(n.bind(null, "uy5s"))
+                return n.e(112).then(n.bind(null, "uy5s"))
             }, "SubsBroadcasterPage"),
             f = function(e) {
                 function t() {
@@ -24116,117 +24181,120 @@ webpackJsonp([36], {
                 return n.e(60).then(n.bind(null, "rujk"))
             }, "CommunityModerationRoot"),
             Ke = se.a.wrap(function() {
-                return n.e(71).then(n.bind(null, "yMnN"))
-            }, "DevOnlyRoot"),
+                return n.e(66).then(n.bind(null, "BAkg"))
+            }, "CreateCommunityPage"),
             $e = se.a.wrap(function() {
+                return n.e(72).then(n.bind(null, "yMnN"))
+            }, "DevOnlyRoot"),
+            Ye = se.a.wrap(function() {
                 return n.e(47).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
-            Ye = se.a.wrap(function() {
-                return n.e(76).then(n.bind(null, "IzAE"))
-            }, "DevOnlyTestingCarouselPage"),
             Ze = se.a.wrap(function() {
-                return n.e(75).then(n.bind(null, "mqYJ"))
-            }, "EmailUnsubscribePage"),
+                return n.e(77).then(n.bind(null, "IzAE"))
+            }, "DevOnlyTestingCarouselPage"),
             Xe = se.a.wrap(function() {
-                return n.e(78).then(n.bind(null, "Tj44"))
-            }, "EmailVerificationPage"),
+                return n.e(76).then(n.bind(null, "mqYJ"))
+            }, "EmailUnsubscribePage"),
             Je = se.a.wrap(function() {
+                return n.e(79).then(n.bind(null, "Tj44"))
+            }, "EmailVerificationPage"),
+            et = se.a.wrap(function() {
                 return n.e(50).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
-            et = se.a.wrap(function() {
+            tt = se.a.wrap(function() {
                 return n.e(49).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
-            tt = se.a.wrap(function() {
+            nt = se.a.wrap(function() {
                 return n.e(53).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
-            nt = se.a.wrap(function() {
-                return n.e(68).then(n.bind(null, "H+V/"))
-            }, "FriendRequestsPage"),
             it = se.a.wrap(function() {
-                return n.e(67).then(n.bind(null, "mlfa"))
-            }, "FriendsPage"),
+                return n.e(69).then(n.bind(null, "H+V/"))
+            }, "FriendRequestsPage"),
             rt = se.a.wrap(function() {
+                return n.e(68).then(n.bind(null, "mlfa"))
+            }, "FriendsPage"),
+            at = se.a.wrap(function() {
                 return n.e(65).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
-            at = se.a.wrap(function() {
-                return n.e(79).then(n.bind(null, "o8EG"))
-            }, "ManagerRedirectPage"),
             ot = se.a.wrap(function() {
-                return n.e(69).then(n.bind(null, "jWoj"))
-            }, "MessagesPage"),
+                return n.e(80).then(n.bind(null, "o8EG"))
+            }, "ManagerRedirectPage"),
             st = se.a.wrap(function() {
+                return n.e(70).then(n.bind(null, "jWoj"))
+            }, "MessagesPage"),
+            lt = se.a.wrap(function() {
                 return n.e(39).then(n.bind(null, "gZLf"))
             }, "PaymentsLandingPage"),
-            lt = se.a.wrap(function() {
-                return n.e(74).then(n.bind(null, "DkuH"))
-            }, "ReportUserPage"),
             ct = se.a.wrap(function() {
+                return n.e(75).then(n.bind(null, "DkuH"))
+            }, "ReportUserPage"),
+            dt = se.a.wrap(function() {
                 return n.e(41).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
-            dt = se.a.wrap(function() {
+            ut = se.a.wrap(function() {
                 return n.e(38).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            ut = se.a.wrap(function() {
+            pt = se.a.wrap(function() {
                 return n.e(62).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            pt = se.a.wrap(function() {
+            mt = se.a.wrap(function() {
                 return n.e(61).then(n.bind(null, "jQFB"))
             }, "SubscriptionsManagementPage"),
-            mt = se.a.wrap(function() {
+            ht = se.a.wrap(function() {
                 return n.e(45).then(n.bind(null, "GUP0"))
             }, "UnsubscribePage"),
-            ht = function() {
+            ft = function() {
                 return r.createElement(oe.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            ft = function() {
+            gt = function() {
                 return window.location.assign(window.location.href), null
             },
-            gt = function(e) {
+            vt = function(e) {
                 var t = Object(ue.a)(e.match.params.videoID);
                 return r.createElement(oe.c, {
                     to: "/videos/" + t
                 })
             },
-            vt = function(e) {
+            bt = function(e) {
                 return r.createElement(oe.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            bt = function(e) {
+            kt = function(e) {
                 return r.createElement(oe.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            kt = function(e) {
+            yt = function(e) {
                 return r.createElement(oe.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            yt = function(e) {
+            _t = function(e) {
                 return r.createElement(oe.c, {
                     to: "/teams/" + e.match.params.teamName + "/dashboard"
                 })
             },
-            _t = function(e) {
+            St = function(e) {
                 return r.createElement(oe.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            St = function() {
+            Et = function() {
                 return r.createElement(oe.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            Et = function() {
+            Nt = function() {
                 return window.location.replace(pe.a), null
             },
-            Nt = function(e) {
+            Ct = function(e) {
                 return window.location.replace(f.a.playerBaseURL + "/?channel=" + e.match.params.channelName), null
             },
-            Ct = function(e) {
+            Tt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -24247,53 +24315,56 @@ webpackJsonp([36], {
                         message: Object(f.d)("An error occurred on this page", "DefaultRootRouter")
                     }) : r.createElement(oe.e, null, f.a.buildType !== de.a.Production && r.createElement(oe.d, {
                         path: "/_dev/testing/carousel",
-                        component: Ye
+                        component: Ze
                     }), f.a.buildType !== de.a.Production && r.createElement(oe.d, {
                         path: "/_dev/testing/amazon-offers/:channelName",
-                        component: ut
+                        component: pt
                     }), f.a.buildType !== de.a.Production && r.createElement(oe.d, {
                         path: "/_dev",
-                        component: Ke
+                        component: $e
                     }), r.createElement(oe.d, {
                         exact: !0,
                         path: "/",
-                        component: this.props.isLoggedIn ? tt : Ae
+                        component: this.props.isLoggedIn ? nt : Ae
                     }), r.createElement(oe.d, {
                         path: "/activate",
-                        render: ft
+                        render: gt
                     }), r.createElement(oe.d, {
                         path: "/bits",
-                        render: ft
+                        render: gt
                     }), r.createElement(oe.d, {
                         path: "/checkout",
-                        render: ft
+                        render: gt
                     }), r.createElement(oe.d, {
                         path: "/embed",
-                        render: ft
+                        render: gt
                     }), r.createElement(oe.d, {
                         path: "/popout",
-                        render: ft
+                        render: gt
                     }), r.createElement(oe.d, {
                         path: "/prime",
-                        render: ft
+                        render: gt
                     }), r.createElement(oe.d, {
                         path: "/subs",
-                        render: ft
+                        render: gt
                     }), r.createElement(oe.d, {
                         path: "/collections/:collectionID",
-                        component: dt
+                        component: ut
+                    }), r.createElement(oe.d, {
+                        path: "/communities/create",
+                        component: Ke
                     }), r.createElement(oe.d, {
                         path: "/communities/:encodedCommunityName/details",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/communities/:encodedCommunityName/moderation/:page?",
                         component: Qe
                     }), r.createElement(oe.d, {
                         path: "/communities/:encodedCommunityName/:encodedLanguage",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/communities/:encodedCommunityName",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/communities",
                         component: Me
@@ -24302,31 +24373,31 @@ webpackJsonp([36], {
                         component: Me
                     }), r.createElement(oe.d, {
                         path: "/directory/following/:category?",
-                        component: et
+                        component: tt
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/clips",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/details",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/videos/:filter",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/videos",
-                        render: _t
+                        render: St
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/game/:encodedCommunityName",
-                        component: $e
+                        component: Ye
                     }), r.createElement(oe.d, {
                         path: "/directory/all/ps4",
                         component: Me
                     }), r.createElement(oe.d, {
                         path: "/directory/all/xb1",
-                        component: St
+                        component: Et
                     }), r.createElement(oe.d, {
                         path: "/directory/all/xbox",
                         component: Me
@@ -24341,95 +24412,95 @@ webpackJsonp([36], {
                         component: Me
                     }), r.createElement(oe.d, {
                         path: "/events/:eventName",
-                        render: Je
+                        render: et
                     }), r.createElement(oe.d, {
                         path: "/email-unsubscribe",
-                        component: Ze
+                        component: Xe
                     }), r.createElement(oe.d, {
                         path: "/email-verification/:emailOpaqueId",
-                        component: Xe
+                        component: Je
                     }), r.createElement(oe.d, {
                         path: "/ext/:extensionID",
                         component: Le
                     }), r.createElement(oe.d, {
                         path: "/friends/requests",
-                        component: nt
-                    }), r.createElement(oe.d, {
-                        path: "/friends",
                         component: it
                     }), r.createElement(oe.d, {
-                        path: "/payments",
-                        component: st
-                    }), r.createElement(oe.d, {
-                        path: "/following",
-                        component: ht
-                    }), r.createElement(oe.d, {
-                        path: "/inbox",
-                        component: ot
-                    }), r.createElement(oe.d, {
-                        path: "/inventory",
+                        path: "/friends",
                         component: rt
                     }), r.createElement(oe.d, {
-                        path: "/outbox",
-                        component: ot
+                        path: "/payments",
+                        component: lt
                     }), r.createElement(oe.d, {
-                        path: "/videos/v:videoID",
-                        render: gt
+                        path: "/following",
+                        component: ft
                     }), r.createElement(oe.d, {
-                        path: "/videos/:videoID",
-                        component: dt
+                        path: "/inbox",
+                        component: st
                     }), r.createElement(oe.d, {
-                        path: "/store",
-                        render: Et
-                    }), r.createElement(oe.d, {
-                        path: "/store/merch",
-                        render: Et
-                    }), r.createElement(oe.d, {
-                        path: "/subscriptions_v2",
-                        render: pt
-                    }), " ", r.createElement(oe.d, {
-                        path: "/subscriptions",
-                        render: pt
-                    }), r.createElement(oe.d, {
-                        path: "/products/:productName/ticket/edit",
-                        component: mt
-                    }), r.createElement(oe.d, {
-                        path: "/settings/:tab?",
-                        component: ct
-                    }), r.createElement(oe.d, {
-                        path: "/team/:teamName/edit",
-                        render: yt
-                    }), r.createElement(oe.d, {
-                        path: "/manager/:pageName?",
+                        path: "/inventory",
                         component: at
                     }), r.createElement(oe.d, {
-                        path: "/messages/:pageName?",
+                        path: "/outbox",
+                        component: st
+                    }), r.createElement(oe.d, {
+                        path: "/videos/v:videoID",
+                        render: vt
+                    }), r.createElement(oe.d, {
+                        path: "/videos/:videoID",
+                        component: ut
+                    }), r.createElement(oe.d, {
+                        path: "/store",
+                        render: Nt
+                    }), r.createElement(oe.d, {
+                        path: "/store/merch",
+                        render: Nt
+                    }), r.createElement(oe.d, {
+                        path: "/subscriptions_v2",
+                        render: mt
+                    }), " ", r.createElement(oe.d, {
+                        path: "/subscriptions",
+                        render: mt
+                    }), r.createElement(oe.d, {
+                        path: "/products/:productName/ticket/edit",
+                        component: ht
+                    }), r.createElement(oe.d, {
+                        path: "/settings/:tab?",
+                        component: dt
+                    }), r.createElement(oe.d, {
+                        path: "/team/:teamName/edit",
+                        render: _t
+                    }), r.createElement(oe.d, {
+                        path: "/manager/:pageName?",
                         component: ot
+                    }), r.createElement(oe.d, {
+                        path: "/messages/:pageName?",
+                        component: st
                     }), r.createElement(oe.d, {
                         path: "/:channelName",
                         component: ze,
                         exact: !0
                     }), r.createElement(oe.d, {
                         path: "/:channelName/report",
-                        component: lt
+                        component: ct
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/profile",
-                        render: bt
+                        render: kt
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/videos/(past_broadcasts?)",
-                        render: kt
+                        render: yt
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
                         component: qe
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/videos/:unknownFilter?",
-                        render: bt
+                        render: kt
                     }), r.createElement(oe.d, {
                         path: "/:channelName/clips",
                         component: Be
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/chat",
-                        render: vt
+                        render: bt
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/collections",
                         component: We
@@ -24444,10 +24515,10 @@ webpackJsonp([36], {
                         component: Ge
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/inbox",
-                        component: ot
+                        component: st
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/outbox",
-                        component: ot
+                        component: st
                     }), r.createElement(oe.d, {
                         path: "/:channelName/p/:entityID",
                         component: ze
@@ -24456,25 +24527,25 @@ webpackJsonp([36], {
                         component: ze
                     }), r.createElement(oe.d, {
                         path: "/:channelName/embed",
-                        render: Nt
+                        render: Ct
                     }), r.createElement(oe.d, {
                         path: "/:channelName/popout",
-                        render: Nt
+                        render: Ct
                     }), r.createElement(oe.d, {
                         component: ce.a
                     }))
                 }, t
             }(r.Component),
-            Tt = Object(A.d)("DefaultRootRouter", {
+            wt = Object(A.d)("DefaultRootRouter", {
                 autoReportInteractive: !0
-            })(Ct);
+            })(Tt);
         n.d(t, "b", function() {
-            return wt
-        }), n.d(t, "a", function() {
             return Ot
+        }), n.d(t, "a", function() {
+            return Rt
         });
-        var wt = "twilight-main",
-            Ot = function(e) {
+        var Ot = "twilight-main",
+            Rt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -24505,10 +24576,10 @@ webpackJsonp([36], {
                         flexDirection: g.T.Column,
                         zIndex: this.props.theatreModeEnabled ? void 0 : g._62.Default
                     }, r.createElement("main", {
-                        className: wt
+                        className: Ot
                     }, r.createElement(k.b, null), r.createElement(s.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, r.createElement(Tt, {
+                    }, r.createElement(wt, {
                         isLoggedIn: this.props.isLoggedIn
                     }), r.createElement(a.b, {
                         mainRef: this.state.rootScrollableContentRef
@@ -32866,6 +32937,7 @@ webpackJsonp([36], {
                 }), o({
                     id: "Cheer:100000",
                     bits: 1e5,
+                    canCheer: !1,
                     color: a.f[r.a.Yellow],
                     images: c
                 }))), d.sort(function(e, t) {
@@ -33927,7 +33999,9 @@ webpackJsonp([36], {
                     description: "",
                     imageURL: n,
                     isEntitled: t,
-                    canBeFulfilled: !1
+                    canBeFulfilled: !1,
+                    isPrimeOnly: !1,
+                    quantity: 1
                 }
             })
         }, t.a = function(e, t) {
@@ -33938,7 +34012,9 @@ webpackJsonp([36], {
                 description: e.title,
                 canBeFulfilled: !1,
                 isEntitled: t,
-                imageURL: e.image4x
+                imageURL: e.image4x,
+                isPrimeOnly: !1,
+                quantity: 1
             }
         };
         var i = n("Tzcg"),
@@ -36893,6 +36969,49 @@ webpackJsonp([36], {
         };
         var i = n("6sO2")
     },
+    jUhM: function(e, t, n) {
+        "use strict";
+        var i = n("GiK3"),
+            r = n("6sO2"),
+            a = n("3iBR"),
+            o = n("qe65"),
+            s = n("Odds"),
+            l = (n("FZFL"), {
+                themed: !0,
+                dark: {
+                    "1x": a.b + "/dark/animated/1/cheertutorial.gif"
+                },
+                light: {
+                    "1x": a.b + "/light/animated/1/cheertutorial.gif"
+                }
+            }),
+            c = function() {
+                return i.createElement(s._8, {
+                    display: s.R.Flex,
+                    padding: {
+                        top: 5,
+                        bottom: 3
+                    },
+                    flexGrow: 1,
+                    flexDirection: s.T.Column,
+                    justifyContent: s._7.Center,
+                    alignItems: s.c.Center
+                }, i.createElement(s.Q, {
+                    type: s._49.H4,
+                    bold: !0
+                }, i.createElement(o.a, {
+                    className: "cheermote-help__tutorial-image",
+                    sources: l
+                }), Object(r.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(s._8, {
+                    padding: {
+                        x: 3
+                    }
+                }, i.createElement(s.Q, null, Object(r.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
+            };
+        n.d(t, "a", function() {
+            return c
+        })
+    },
     jetF: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -38420,6 +38539,14 @@ webpackJsonp([36], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isPrimeOnly"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
                                                             }]
                                                         }
                                                     }]
@@ -38435,11 +38562,11 @@ webpackJsonp([36], {
             }],
             loc: {
                 start: 0,
-                end: 504
+                end: 516
             }
         };
         i.loc.source = {
-            body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery InsiderPassTabEmotesAndBadges($channelID: ID!) {\nuser(id: $channelID) {\nid\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\nemotes {\nid\ntoken\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ntournament {\nid\nrewards {\ninsider {\nbadges {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}\n}\n}\n}\n}\n}',
+            body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery InsiderPassTabEmotesAndBadges($channelID: ID!) {\nuser(id: $channelID) {\nid\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\nemotes {\nid\ntoken\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ntournament {\nid\nrewards {\ninsider {\nbadges {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\n}\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -41010,49 +41137,6 @@ webpackJsonp([36], {
             return e ? "watch_party" === e ? o : a : s
         }
     },
-    ySfT: function(e, t, n) {
-        "use strict";
-        var i = n("GiK3"),
-            r = n("6sO2"),
-            a = n("3iBR"),
-            o = n("qe65"),
-            s = n("Odds"),
-            l = (n("6lb1"), {
-                themed: !0,
-                dark: {
-                    "1x": a.b + "/dark/animated/1/cheertutorial.gif"
-                },
-                light: {
-                    "1x": a.b + "/light/animated/1/cheertutorial.gif"
-                }
-            }),
-            c = function() {
-                return i.createElement(s._8, {
-                    display: s.R.Flex,
-                    padding: {
-                        top: 5,
-                        bottom: 3
-                    },
-                    flexGrow: 1,
-                    flexDirection: s.T.Column,
-                    justifyContent: s._7.Center,
-                    alignItems: s.c.Center
-                }, i.createElement(s.Q, {
-                    type: s._49.H4,
-                    bold: !0
-                }, i.createElement(o.a, {
-                    className: "cheermote-help__tutorial-image",
-                    sources: l
-                }), Object(r.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(s._8, {
-                    padding: {
-                        x: 3
-                    }
-                }, i.createElement(s.Q, null, Object(r.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
-            };
-        n.d(t, "a", function() {
-            return c
-        })
-    },
     "yTC+": function(e, t) {
         var n = {
             kind: "Document",
@@ -41295,4 +41379,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.subs-999edf919e7e4b86cc298e844245908c.js.map
+//# sourceMappingURL=pages.subs-6a1bac4f57767b87b06674a02cf8cf4c.js.map

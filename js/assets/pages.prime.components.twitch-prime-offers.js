@@ -1,5 +1,90 @@
-webpackJsonp([113], {
+webpackJsonp([114], {
     JVP6: function(e, t) {},
+    P3dd: function(e, t, r) {
+        "use strict";
+        var n = r("TToO"),
+            i = r("GiK3"),
+            a = r("6sO2"),
+            o = r("CSlQ"),
+            s = r("Odds"),
+            c = (r("JVP6"), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return n.__extends(t, e), t.prototype.render = function() {
+                    return i.createElement(s._8, {
+                        className: "prime-footer",
+                        position: s._15.Relative
+                    }, i.createElement(s._35, {
+                        position: s._15.Absolute,
+                        justifyContent: s._7.Center,
+                        alignItems: s.c.Center,
+                        className: "twitter-container"
+                    }, i.createElement(s._24, {
+                        asset: s._25.Twitter,
+                        width: 71,
+                        height: 71,
+                        type: s._26.Prime
+                    })), i.createElement(s._35, {
+                        display: s.R.Flex,
+                        justifyContent: s._7.Center,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        fullWidth: !0,
+                        fullHeight: !0,
+                        className: "social-twitch-prime",
+                        padding: 4
+                    }, i.createElement(s._8, {
+                        className: "prime-footer__twitter-links",
+                        display: s.R.Flex,
+                        justifyContent: s._7.Between
+                    }, i.createElement(s.O, {
+                        to: "https://twitter.com/TwitchPrime",
+                        targetBlank: !0
+                    }, i.createElement(s.Q, {
+                        bold: !0,
+                        fontSize: s.V.Size5
+                    }, Object(a.d)("Follow us @TwitchPrime", "PrimeSubsite"))), this.props.partnerSocialLink && this.props.partnerSocialText && i.createElement(s.O, {
+                        to: this.props.partnerSocialLink,
+                        targetBlank: !0
+                    }, i.createElement(s.Q, {
+                        bold: !0,
+                        fontSize: s.V.Size5
+                    }, this.props.partnerSocialText)))), i.createElement(s._35, {
+                        display: s.R.Flex,
+                        justifyContent: s._7.Center,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        fullWidth: !0,
+                        fullHeight: !0,
+                        padding: {
+                            top: 2
+                        },
+                        className: "prime-footer-links"
+                    }, i.createElement(s._35, {
+                        padding: 2
+                    }, i.createElement(s.O, {
+                        to: "https://www.twitch.tv/p/terms-of-sale#twitchprime",
+                        targetBlank: !0
+                    }, Object(a.d)("Terms", "PrimeSubsiteFooter"))), i.createElement(s._35, {
+                        padding: 2
+                    }, i.createElement(s.O, {
+                        to: "https://www.amazon.com/twitchprivacy",
+                        targetBlank: !0
+                    }, Object(a.d)("Privacy Policy", "PrimeSubsiteFooter"))), i.createElement(s._35, {
+                        padding: 2
+                    }, i.createElement(s.O, {
+                        to: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
+                        targetBlank: !0
+                    }, Object(a.d)("Twitch Prime Guide", "PrimeSubsiteFooter")))))
+                }, t = n.__decorate([Object(o.d)("PrimeFooter", {
+                    autoReportInteractive: !0
+                })], t)
+            }(i.Component));
+        r.d(t, "a", function() {
+            return c
+        })
+    },
     cTXP: function(e, t) {},
     iiIr: function(e, t) {},
     "j7/Y": function(e, t, r) {
@@ -8,9 +93,9 @@ webpackJsonp([113], {
             i = r("OAwv"),
             a = r("GiK3"),
             o = r("F8kA"),
-            c = r("6sO2");
+            s = r("6sO2");
 
-        function s(e) {
+        function c(e) {
             return function(t) {
                 var r = function(r) {
                     function o(t) {
@@ -24,16 +109,16 @@ webpackJsonp([113], {
                                 r.location && r.location.state && (t.medium = r.location.state.medium, t.content = r.location.state.content, t.content_index = r.location.state.content_index);
                                 var a = i.referenceTracking,
                                     o = a.content,
-                                    s = a.medium,
+                                    c = a.medium,
                                     l = a.content_index;
-                                c.o.tracking.trackPageview(n.__assign({
+                                s.o.tracking.trackPageview(n.__assign({
                                     content: o,
-                                    medium: s,
+                                    medium: c,
                                     content_index: l,
                                     location: e.location
                                 }, t))
                             }
-                        }, c.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                     }
                     return n.__extends(o, r), o.prototype.componentDidMount = function() {
                         var e = this;
@@ -67,7 +152,7 @@ webpackJsonp([113], {
             }
         }
         r.d(t, "a", function() {
-            return s
+            return c
         })
     },
     nVrf: function(e, t) {},
@@ -80,106 +165,43 @@ webpackJsonp([113], {
             i = r("GiK3"),
             a = r("3zLD"),
             o = r("6sO2"),
-            c = r("zCIC"),
-            s = r("7vx8"),
+            s = r("zCIC"),
+            c = r("7vx8"),
             l = r("j7/Y"),
             p = r("w9tK"),
             m = r("vH/s"),
             u = r("CSlQ"),
-            d = r("Odds"),
-            f = (r("JVP6"), function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return n.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(d._8, {
-                        className: "prime-footer",
-                        position: d._15.Relative
-                    }, i.createElement(d._35, {
-                        position: d._15.Absolute,
-                        justifyContent: d._7.Center,
-                        alignItems: d.c.Center,
-                        className: "twitter-container"
-                    }, i.createElement(d._24, {
-                        asset: d._25.Twitter,
-                        width: 71,
-                        height: 71,
-                        type: d._26.Prime
-                    })), i.createElement(d._35, {
-                        display: d.R.Flex,
-                        justifyContent: d._7.Center,
-                        attachTop: !0,
-                        attachLeft: !0,
-                        fullWidth: !0,
-                        fullHeight: !0,
-                        className: "social-twitch-prime",
-                        padding: 4
-                    }, i.createElement(d.O, {
-                        to: "https://twitter.com/TwitchPrime",
-                        targetBlank: !0
-                    }, i.createElement(d.Q, {
-                        bold: !0,
-                        fontSize: d.V.Size5
-                    }, Object(o.d)("Follow us @TwitchPrime", "PrimeSubsite")))), i.createElement(d._35, {
-                        display: d.R.Flex,
-                        justifyContent: d._7.Center,
-                        attachTop: !0,
-                        attachLeft: !0,
-                        fullWidth: !0,
-                        fullHeight: !0,
-                        padding: {
-                            top: 2
-                        },
-                        className: "prime-footer-links"
-                    }, i.createElement(d._35, {
-                        padding: 2
-                    }, i.createElement(d.O, {
-                        to: "https://www.twitch.tv/p/terms-of-sale#twitchprime",
-                        targetBlank: !0
-                    }, Object(o.d)("Terms", "PrimeSubsiteFooter"))), i.createElement(d._35, {
-                        padding: 2
-                    }, i.createElement(d.O, {
-                        to: "https://www.amazon.com/twitchprivacy",
-                        targetBlank: !0
-                    }, Object(o.d)("Privacy Policy", "PrimeSubsiteFooter"))), i.createElement(d._35, {
-                        padding: 2
-                    }, i.createElement(d.O, {
-                        to: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
-                        targetBlank: !0
-                    }, Object(o.d)("Twitch Prime Guide", "PrimeSubsiteFooter")))))
-                }, t = n.__decorate([Object(u.d)("PrimeFooter", {
-                    autoReportInteractive: !0
-                })], t)
-            }(i.Component)),
-            h = r("Lpko"),
-            g = r("LXDe"),
-            _ = r("Tr7p"),
-            P = r("4VmI"),
-            y = r("Kckk"),
-            b = r("Hs3O"),
-            w = (r("cTXP"), function(e) {
+            d = r("P3dd"),
+            f = r("Lpko"),
+            h = r("LXDe"),
+            g = r("Tr7p"),
+            _ = r("4VmI"),
+            P = r("Kckk"),
+            y = r("Hs3O"),
+            w = r("Odds"),
+            b = (r("cTXP"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onTryPrimeClick = function() {
-                        Object(_.j)({
+                        Object(g.j)({
                             buttonPosition: t.props.tracking.position
                         })
                     }, t
                 }
                 return n.__extends(t, e), t.prototype.getLink = function() {
                     if (this.props.externalURI) return this.props.externalURI;
-                    var e = this.props.externalReftag || b.c;
-                    return Object(b.d)(e, window.location.pathname.substring(1))
+                    var e = this.props.externalReftag || y.c;
+                    return Object(y.d)(e, window.location.pathname.substring(1))
                 }, t.prototype.render = function() {
-                    return i.createElement(d._8, {
+                    return i.createElement(w._8, {
                         className: "prime-upsell-button__subsite",
                         margin: {
                             top: 2,
                             bottom: 1
                         }
-                    }, i.createElement(d.v, {
+                    }, i.createElement(w.v, {
                         fullWidth: !0,
-                        size: d.z.Large,
+                        size: w.z.Large,
                         linkTo: this.getLink(),
                         targetBlank: !0,
                         onClick: this.onTryPrimeClick
@@ -193,7 +215,7 @@ webpackJsonp([113], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(d._35, {
+                    return i.createElement(w._35, {
                         "data-test-target": "prime-banner-upsell",
                         className: "prime-banner-upsell",
                         padding: {
@@ -201,63 +223,63 @@ webpackJsonp([113], {
                             y: 2
                         },
                         borderBottom: !0
-                    }, i.createElement(d.Y, null, i.createElement(d.L, {
+                    }, i.createElement(w.Y, null, i.createElement(w.L, {
                         cols: {
                             default: 12,
                             sm: 12,
                             md: 2,
                             lg: 2
                         }
-                    }), i.createElement(d.L, {
+                    }), i.createElement(w.L, {
                         cols: {
                             default: 12,
                             sm: 12,
                             md: 4,
                             lg: 4
                         }
-                    }, i.createElement(d._35, {
+                    }, i.createElement(w._35, {
                         className: "prime-upsell__logo-container",
-                        display: d.R.Flex,
+                        display: w.R.Flex,
                         padding: 2,
-                        justifyContent: d._7.Center,
-                        alignItems: d.c.Center,
-                        textAlign: d._45.Center
-                    }, i.createElement(d._24, {
-                        asset: d._25.LogoTwitchPrime,
+                        justifyContent: w._7.Center,
+                        alignItems: w.c.Center,
+                        textAlign: w._45.Center
+                    }, i.createElement(w._24, {
+                        asset: w._25.LogoTwitchPrime,
                         width: 330,
                         height: 150
-                    }))), i.createElement(d.L, {
+                    }))), i.createElement(w.L, {
                         cols: {
                             default: 12,
                             sm: 12,
                             md: 4,
                             lg: 4
                         }
-                    }, i.createElement(d._35, {
-                        display: d.R.Flex,
-                        justifyContent: d._7.Center,
-                        alignItems: d.c.Center,
-                        textAlign: d._45.Center,
+                    }, i.createElement(w._35, {
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center,
+                        alignItems: w.c.Center,
+                        textAlign: w._45.Center,
                         padding: 2
-                    }, i.createElement(d._8, {
-                        alignSelf: d.d.Center,
+                    }, i.createElement(w._8, {
+                        alignSelf: w.d.Center,
                         className: "prime-upsell__msg-container"
-                    }, i.createElement(d.Q, {
-                        type: d._49.P,
-                        fontSize: d.V.Size4,
+                    }, i.createElement(w.Q, {
+                        type: w._49.P,
+                        fontSize: w.V.Size4,
                         bold: !0
-                    }, Object(o.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")), i.createElement(w, {
+                    }, Object(o.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")), i.createElement(b, {
                         externalReftag: this.props.externalReftag,
                         tracking: {
-                            position: _.a.CenterBanner
+                            position: g.a.CenterBanner
                         }
-                    }), i.createElement(d.Q, {
-                        type: d._49.P,
-                        fontSize: d.V.Size5
-                    }, Object(o.d)("Powered by Amazon Prime", "PrimeUpsell")), i.createElement(d.N, {
+                    }), i.createElement(w.Q, {
+                        type: w._49.P,
+                        fontSize: w.V.Size5
+                    }, Object(o.d)("Powered by Amazon Prime", "PrimeUpsell")), i.createElement(w.N, {
                         src: "https://m.media-amazon.com/images/G/01/sm/twitchtv/assets/images/amazon_logo_SPOT_W_mono_2x.png",
                         alt: "Amazon Prime Logo"
-                    })))), i.createElement(d.L, {
+                    })))), i.createElement(w.L, {
                         cols: {
                             default: 12,
                             sm: 12,
@@ -269,75 +291,56 @@ webpackJsonp([113], {
                     autoReportInteractive: !0
                 })], t)
             }(i.Component)),
-            E = (r("iiIr"), function(e) {
+            T = (r("iiIr"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.renderOfferList = function(e) {
-                        return i.createElement(d._8, {
+                    return t.renderOfferList = function(e, r) {
+                        return i.createElement(w._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
-                        }, i.createElement(h.a, {
+                        }, i.createElement(f.a, {
                             ignoreFirstPageLoad: !0,
                             externalReftag: t.getReftagFromSearch(),
-                            listDirection: y.c.Horizontal,
+                            listDirection: P.c.Horizontal,
                             offerFilterType: e,
+                            sectionTitle: r,
                             hideUpsell: !0
                         }))
                     }, t
                 }
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
-                    o.o.setPageTitle(Object(o.d)("Free games and in-game loot every month with Twitch Prime membership", "PrimeSubsite")), Object(_.i)({
+                    o.o.setPageTitle(Object(o.d)("Free games and in-game loot every month with Twitch Prime membership", "PrimeSubsite")), Object(g.i)({
                         reftag: this.getReftagFromSearch()
                     }), this.props.userData.loading && !this.props.userData.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentDidUpdate = function() {
                     this.props.userData.loading && !this.props.userData.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return i.createElement(d._2, {
+                    return i.createElement(w._2, {
                         fullWidth: !0
-                    }, i.createElement(c.b, {
+                    }, i.createElement(s.b, {
                         suppressScrollX: !0
-                    }, i.createElement(d._8, {
+                    }, i.createElement(w._8, {
                         fullWidth: !0
-                    }, this.renderBanner(), i.createElement(d._35, {
-                        background: d.n.Base,
+                    }, this.renderBanner(), i.createElement(w._35, {
+                        background: w.n.Base,
                         className: "prime-offers"
-                    }, i.createElement(d._8, {
-                        padding: {
-                            x: 1,
-                            top: 1
-                        },
-                        className: "prime-offers__title"
-                    }, i.createElement(d.Q, {
-                        type: d._49.H3,
-                        color: d.K.Base,
-                        bold: !0
-                    }, Object(o.d)("Free Games with Prime", "PrimePageOffers"))), this.renderOfferList(g.a.Game), i.createElement(d._8, {
-                        padding: {
-                            x: 1,
-                            top: 1
-                        },
-                        className: "prime-offers__title"
-                    }, i.createElement(d.Q, {
-                        type: d._49.H3,
-                        color: d.K.Base,
-                        bold: !0
-                    }, Object(o.d)("Free In-Game Loot with Prime", "PrimePageOffers"))), this.renderOfferList(g.a.InGameLoot)), i.createElement(d._35, {
-                        justifyContent: d._7.Center,
-                        alignItems: d.c.Center,
-                        textAlign: d._45.Center,
+                    }, this.renderOfferList(h.a.Game, Object(o.d)("Free Games with Prime", "PrimePageOffers")), this.renderOfferList(h.a.InGameLoot, Object(o.d)("Free In-Game Loot with Prime", "PrimePageOffers"))), i.createElement(w._35, {
+                        justifyContent: w._7.Center,
+                        alignItems: w.c.Center,
+                        textAlign: w._45.Center,
                         padding: 2
-                    }, this.renderFooterUpsellButton()), i.createElement(f, null))))
+                    }, this.renderFooterUpsellButton()), i.createElement(d.a, null))))
                 }, t.prototype.renderBanner = function() {
                     var e = this.props.userData;
-                    if (!Object(y.j)(e) && !Object(y.k)(e)) return i.createElement(O, {
+                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(O, {
                         externalReftag: this.getReftagFromSearch()
                     })
                 }, t.prototype.renderFooterUpsellButton = function() {
                     var e = this.props.userData;
-                    if (!Object(y.j)(e) && !Object(y.k)(e)) return i.createElement(w, {
+                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(b, {
                         externalReftag: this.getReftagFromSearch(),
                         tracking: {
-                            position: _.a.CenterFooter
+                            position: g.a.CenterFooter
                         }
                     })
                 }, t.prototype.getReftagFromSearch = function() {
@@ -346,16 +349,16 @@ webpackJsonp([113], {
                     if (t) return t[1]
                 }, t
             }(i.Component)),
-            T = Object(a.compose)(Object(s.a)(P, {
+            k = Object(a.compose)(Object(c.a)(_, {
                 name: "userData"
             }), Object(u.d)("TwitchPrimeOffersPage", {
                 destination: p.a.TwitchPrimeOffersPage
             }), Object(l.a)({
                 location: m.PageviewLocation.TwitchPrimeOffersPage
-            }))(E);
+            }))(T);
         r.d(t, "TwitchPrimeOffersPage", function() {
-            return T
+            return k
         })
     }
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-offers-01095fa0626d5dd50babc0c7473c1c75.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-offers-04413564ffab6a6f5e57b3ac478e4fa2.js.map

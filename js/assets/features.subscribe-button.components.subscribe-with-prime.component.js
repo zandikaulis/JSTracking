@@ -1517,7 +1517,6 @@ webpackJsonp([59], {
                     }));
                     var r = t ? 1 : 0;
                     return a.createElement(u._35, {
-                        border: !t,
                         display: u.R.Flex,
                         justifyContent: u._7.Center,
                         margin: {
@@ -1843,7 +1842,31 @@ webpackJsonp([59], {
             U = (r("DgR+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getOfferListOrientation = function() {
+                    return t.renderDesktopOffers = function(e) {
+                        return a.createElement(u._8, {
+                            className: "prime-offer-list__content--desktop"
+                        }, t.renderSectionTitle(), a.createElement(u._55, {
+                            childWidth: u._56.Large,
+                            gutterSize: u._57.Small,
+                            center: !0,
+                            placeholderItems: 20
+                        }, e))
+                    }, t.renderSectionTitle = function() {
+                        return t.props.sectionTitle && a.createElement(u._8, {
+                            padding: {
+                                top: 1
+                            },
+                            className: "prime-offers__title"
+                        }, a.createElement(u.Q, {
+                            type: u._49.H3,
+                            color: u.K.Base,
+                            bold: !0
+                        }, t.props.sectionTitle))
+                    }, t.renderMobileOffers = function(e) {
+                        return a.createElement(u._8, {
+                            className: "prime-offer-list__content--mobile"
+                        }, t.renderSectionTitle(), e)
+                    }, t.getOfferListOrientation = function() {
                         return t.props.listDirection || v.c.Default
                     }, t.shouldShowPlaceholders = function() {
                         if (!t.props.offersData) return !0;
@@ -1868,7 +1891,8 @@ webpackJsonp([59], {
                         r = Object(v.g)("prime-offer-list", e),
                         n = "prime-offer-list__content prime-offer-list__content--" + t,
                         i = this.props.listDirection === v.c.Horizontal,
-                        o = this.props.listDirection === v.c.Vertical;
+                        o = this.props.listDirection === v.c.Vertical,
+                        c = this.renderOfferExperience();
                     return a.createElement(s.b, {
                         className: r,
                         suppressScrollX: o,
@@ -1881,7 +1905,7 @@ webpackJsonp([59], {
                             bottom: 2,
                             x: 1
                         }
-                    }, this.renderUpsell(), this.renderOfferExperience()))
+                    }, this.renderUpsell(), this.props.listDirection === v.c.Horizontal && this.renderDesktopOffers(c), this.renderMobileOffers(c)))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
                     if (!Object(v.j)(e) && !Object(v.k)(e) && !this.props.hideUpsell) return a.createElement(L, null)
@@ -2745,4 +2769,4 @@ webpackJsonp([59], {
     yqdF: function(e, t) {},
     zAvr: function(e, t) {}
 });
-//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-bc45af83733b87d6e90a5a083d63cc8c.js.map
+//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-10b37bcf3c81c28813a793fd270767d7.js.map

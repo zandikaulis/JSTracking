@@ -7055,6 +7055,7 @@ webpackJsonp([34], {
             return ce
         })
     },
+    "4VHW": function(e, t) {},
     "4Xyl": function(e, t) {},
     "4d+L": function(e, t, n) {
         "use strict";
@@ -11692,7 +11693,9 @@ webpackJsonp([34], {
                 return s.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.state.showRoomPicker && this.dismissGeneralOnboarding()
                 }, t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
+                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this;
                     if (this.props.data && !e.isPopout && (this.props.data.loading || this.props.channelLogin !== e.channelLogin) && e.data.user && e.data.user.channelRooms) {
@@ -11796,7 +11799,7 @@ webpackJsonp([34], {
                         className: "room-selector__open-header-wrapper"
                     }, t)), t
                 }, t.prototype.renderRoomPicker = function() {
-                    if (this.state.showRoomPicker && this.props.data.user) return l.createElement(u.a, {
+                    if (this.state.showRoomPicker && this.props.data.user && this.props.firstPageLoaded) return l.createElement(u.a, {
                         onClickOut: this.closeRoomPicker
                     }, l.createElement(si, {
                         channelID: this.props.data.user.id,
@@ -11933,6 +11936,7 @@ webpackJsonp([34], {
             }), Object(k.d)("RoomSelector"))(pi);
         var gi = Object(i.b)(function(e) {
             return {
+                firstPageLoaded: e.session.firstPageLoaded,
                 isHidden: e.chat.isHidden,
                 sessionUser: Object(r.c)(e)
             }
@@ -12166,6 +12170,14 @@ webpackJsonp([34], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
+                                                    value: "canCheer"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
                                                     value: "images"
                                                 },
                                                 arguments: [],
@@ -12225,11 +12237,11 @@ webpackJsonp([34], {
             }],
             loc: {
                 start: 0,
-                end: 133
+                end: 142
             }
         };
         n.loc.source = {
-            body: "fragment cheer on User {\ncheer {\nid\nemotes {\nid\nprefix\ntype\ntiers {\nid\nbits\ncolor\nimages {\nid\nurl\ntheme\nisAnimated\ndpiScale\n}\n}\n}\n}\n}",
+            body: "fragment cheer on User {\ncheer {\nid\nemotes {\nid\nprefix\ntype\ntiers {\nid\nbits\ncolor\ncanCheer\nimages {\nid\nurl\ntheme\nisAnimated\ndpiScale\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -12660,7 +12672,6 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    "6lb1": function(e, t) {},
     "6vcJ": function(e, t) {},
     "7B9K": function(e, t) {
         var n = {
@@ -17163,6 +17174,7 @@ webpackJsonp([34], {
                 }
             return {
                 id: e + ";" + t,
+                canCheer: t <= a.k,
                 bits: t,
                 color: a.f[t],
                 images: n,
@@ -17710,7 +17722,6 @@ webpackJsonp([34], {
             s = (n.n(o), {})
     },
     DS3o: function(e, t) {},
-    DVR9: function(e, t) {},
     DY3c: function(e, t) {},
     Dc1A: function(e, t) {
         var n = {
@@ -18252,6 +18263,7 @@ webpackJsonp([34], {
             return 0
         }
     },
+    FZFL: function(e, t) {},
     FsFC: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -19944,6 +19956,7 @@ webpackJsonp([34], {
             return !a[t] && (a[t] = !0, !0)
         })), e.exports = i
     },
+    "Jc+w": function(e, t) {},
     JtUK: function(e, t, n) {
         "use strict";
         t.a = function(e, t, n) {
@@ -20476,7 +20489,6 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    KWLn: function(e, t) {},
     KfLc: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -25851,6 +25863,7 @@ webpackJsonp([34], {
             return o
         })
     },
+    RwqP: function(e, t) {},
     S20p: function(e, t) {
         var n = {
             kind: "Document",
@@ -27657,7 +27670,6 @@ webpackJsonp([34], {
             return o
         })
     },
-    WT1Y: function(e, t) {},
     WVx7: function(e, t, n) {
         "use strict";
         var i, a = n("RH2O"),
@@ -29528,6 +29540,7 @@ webpackJsonp([34], {
             r = "0"
     },
     "Z+EN": function(e, t) {},
+    Z1Q9: function(e, t) {},
     Z3Cb: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -31240,14 +31253,6 @@ webpackJsonp([34], {
                 }, Object(s.d)("Get Bits", "Bits--BalanceFooter"))))
             },
             ve = function(e) {
-                return e.event, a.createElement(fe, {
-                    bitsConfig: e.bitsConfig,
-                    onClickGetBits: e.onClickGetBits,
-                    balance: e.balance,
-                    selfBitsBadge: e.selfBitsBadge
-                })
-            },
-            be = function(e) {
                 return a.createElement(b._8, {
                     flexGrow: 1
                 }, a.createElement(b._8, {
@@ -31269,15 +31274,23 @@ webpackJsonp([34], {
                     animationDuration: ge.m.UNDO_PROMPT_DURATION / 1e3
                 }))
             },
+            be = function(e) {
+                return e.event, a.createElement(fe, {
+                    bitsConfig: e.bitsConfig,
+                    onClickGetBits: e.onClickGetBits,
+                    balance: e.balance,
+                    selfBitsBadge: e.selfBitsBadge
+                })
+            },
             ke = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isSending ? this.props.totalBits >= ge.l ? a.createElement(be, {
+                    return this.props.isSending ? this.props.totalBits >= ge.l ? a.createElement(ve, {
                         onCancel: this.props.onCancelSend,
                         onConfirm: this.props.onConfirmSend
-                    }) : null : this.props.event ? a.createElement(ve, {
+                    }) : null : this.props.event ? a.createElement(be, {
                         event: this.props.event,
                         selfBitsBadge: this.props.userSelfBitsBadge,
                         bitsConfig: this.props.bitsConfig,
@@ -31316,7 +31329,7 @@ webpackJsonp([34], {
                 }, Object(s.d)("Fetching Bits", "BitsCard"))))
             }),
             _e = n("QRuM"),
-            Ce = n("ySfT"),
+            Ce = n("jUhM"),
             Se = function(e) {
                 return a.createElement(b._8, {
                     display: b.R.Flex,
@@ -31369,7 +31382,7 @@ webpackJsonp([34], {
                     showAmount: e.tier > 0
                 }))
             },
-            Ne = (n("DVR9"), function(e) {
+            Ne = (n("Z1Q9"), function(e) {
                 var t = null;
                 e.minToCheer > 1 && (t = a.createElement(b.Q, {
                     "data-test-selector": "min-to-cheer-selector",
@@ -31404,224 +31417,8 @@ webpackJsonp([34], {
                     color: b.K.Alt2
                 }, Object(s.d)("Cheermotes have multiple tiers, rollover below to see each one!", "Bits--CheermoteTierIntro"))), t, n)
             }),
-            Te = n("1bR2"),
-            we = n.n(Te),
-            De = n("vDGQ"),
-            Re = (n("CGWe"), function(e) {
-                return Object(De.d)({
-                    action: De.a.View,
-                    type: De.c.BitsIntro,
-                    channelId: e.channelID
-                }), a.createElement(b._8, {
-                    "data-test-selector": "crate-intro"
-                }, a.createElement(b._8, {
-                    padding: {
-                        x: 1,
-                        top: 2,
-                        bottom: 1
-                    }
-                }, a.createElement(b.Q, {
-                    fontSize: b.V.Size4,
-                    bold: !0
-                }, Object(s.d)("Share the Holiday Cheer!", "Crates"))), a.createElement(b._35, {
-                    className: "crates-holiday-background",
-                    background: b.n.Alt,
-                    padding: 1,
-                    margin: {
-                        y: 1
-                    },
-                    display: b.R.Flex,
-                    justifyContent: b._7.Around,
-                    alignItems: b.c.End,
-                    borderTop: !0,
-                    borderBottom: !0
-                }, a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Long,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "XmasRaid"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633161/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/3.0 3.0x",
-                    alt: "XmasRaid"
-                }))), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Medium,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "MerryPurple"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633177/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/3.0 3.0x",
-                    alt: "MerryPurple"
-                }))), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Short,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "GiftRage"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/634141/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/3.0 3.0x",
-                    alt: "GiftRage"
-                }))), a.createElement("img", {
-                    src: we.a,
-                    height: "50",
-                    width: "50"
-                }), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Short,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "RudolphWhoa"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633166/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/3.0 3.0x",
-                    alt: "RudolphWhoa"
-                }))), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Medium,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "FeelsGingerMan"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633171/1.0 1x,https://static-cdn.jtvnw.net/emoticons/v1/633171/2.0 2x,https://static-cdn.jtvnw.net/emoticons/v1/633171/3.0 4x",
-                    alt: "FeelsGingerMan"
-                }))), a.createElement(b.e, {
-                    type: b.j.BounceIn,
-                    delay: b.f.Long,
-                    enabled: !0
-                }, a.createElement(b._52, {
-                    label: "OrnaMental"
-                }, a.createElement("img", {
-                    height: "28",
-                    width: "28",
-                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633170/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/3.0 3.0x",
-                    alt: "OrnaMental"
-                })))), a.createElement(b._8, {
-                    padding: 1
-                }, a.createElement(b.Q, {
-                    type: b._49.P
-                }, Object(s.d)("Cheer any amount to support your streamer, and get a holiday gift! Cheer {minBits, number} Bits or more, and others in chat can get a gift too!", {
-                    minBits: 250
-                }, "Crates")), a.createElement(b.Q, {
-                    type: b._49.Strong
-                }, a.createElement("a", {
-                    href: "http://link.twitch.tv/holiday-emotes",
-                    target: "_blank",
-                    rel: "noreferrer noopener"
-                }, Object(s.d)("Details", "Crates")))))
-            }),
-            Oe = (n("kjfG"), function() {
-                return a.createElement(b._8, {
-                    className: "owl-2018-introduction"
-                }, a.createElement(b._8, {
-                    padding: {
-                        top: 2,
-                        bottom: 1
-                    }
-                }, a.createElement(b.Q, {
-                    fontSize: b.V.Size5,
-                    bold: !0
-                }, Object(s.d)("Cheer with Bits and unlock loot!", "OWL2018Introduction"))), a.createElement(b._8, {
-                    className: "owl-2018-introduction__banner-background",
-                    padding: {
-                        top: 1
-                    }
-                }, a.createElement("img", {
-                    className: "owl-2018-introduction__banner-image",
-                    src: ge.c + "/owl-2017/overwatch-wide.png"
-                })), a.createElement(b._8, {
-                    padding: {
-                        x: 2,
-                        top: 1,
-                        bottom: .5
-                    }
-                }, a.createElement(b.Q, null, Object(s.d)("Cheer 150 Bits or more to hype your team and get a team emote! Cheer along with your fellow fans to unlock in-game skins based on everyone’s Cheers!", "OWL2018Introduction"))), a.createElement(b._8, {
-                    padding: {
-                        bottom: 1
-                    }
-                }, a.createElement(b.O, {
-                    to: "http://link.twitch.tv/owl-drops-onsite-bitscard-blogus",
-                    targetBlank: !0,
-                    hoverUnderlineNone: !1
-                }, Object(s.d)("Details", "OWL2018Introduction"))))
-            });
-        ! function(e) {
-            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "owl2018"
-        }(ne || (ne = {}));
-        var Ie = function(e) {
-                switch (e.event) {
-                    case ne.OWL2018:
-                        return a.createElement(Oe, null);
-                    case ne.CratesChristmas:
-                        return a.createElement(Re, {
-                            onClickHelp: e.onClickHelp,
-                            channelID: e.channelID
-                        });
-                    default:
-                        return a.createElement(Se, {
-                            onClickHelp: e.onClickHelp
-                        })
-                }
-            },
-            Me = n("N221"),
-            xe = n("cv4W"),
-            je = n.n(xe),
-            Le = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = "";
-                    if (this.props.amount < 250) {
-                        var t = 250 - this.props.amount;
-                        e = Object(s.d)("{bitsToGo, plural, one {Cheer # more Bit to share gifts with chat!} other {Cheer # more Bits to share gifts with chat!}}", {
-                            bitsToGo: t
-                        }, "Crates")
-                    } else e = Object(s.d)("Your Cheer will share gifts with chat!", "Crates");
-                    return a.createElement(b._35, {
-                        className: "crate-christmas-2017-reminder",
-                        background: b.n.Alt,
-                        borderTop: !0,
-                        padding: 1
-                    }, a.createElement(b._8, {
-                        display: b.R.Inline,
-                        margin: {
-                            right: .5
-                        }
-                    }, a.createElement("img", {
-                        src: je.a,
-                        height: "22",
-                        width: "22"
-                    })), a.createElement(b.Q, {
-                        type: b._49.Strong
-                    }, e))
-                }, t
-            }(a.Component),
-            Ae = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    switch (this.props.event) {
-                        case ne.CratesChristmas:
-                            return a.createElement(Le, {
-                                amount: this.props.amount
-                            });
-                        default:
-                            return null
-                    }
-                }, t
-            }(a.Component),
-            Fe = (n("WT1Y"), function(e) {
+            Te = n("N221"),
+            we = (n("dtvS"), function(e) {
                 var t = e.prefixes.map(function(t, n) {
                     if (t.alt && t.cheerAmount) return a.createElement(b._2, {
                         className: "pending-cheer-list__list-item",
@@ -31650,7 +31447,58 @@ webpackJsonp([34], {
                     className: "pending-cheer-list"
                 }, t)
             }),
-            Ue = (n("KWLn"), function(e) {
+            De = n("cv4W"),
+            Re = n.n(De),
+            Oe = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = "";
+                    if (this.props.amount < 250) {
+                        var t = 250 - this.props.amount;
+                        e = Object(s.d)("{bitsToGo, plural, one {Cheer # more Bit to share gifts with chat!} other {Cheer # more Bits to share gifts with chat!}}", {
+                            bitsToGo: t
+                        }, "Crates")
+                    } else e = Object(s.d)("Your Cheer will share gifts with chat!", "Crates");
+                    return a.createElement(b._35, {
+                        className: "crate-christmas-2017-reminder",
+                        background: b.n.Alt,
+                        borderTop: !0,
+                        padding: 1
+                    }, a.createElement(b._8, {
+                        display: b.R.Inline,
+                        margin: {
+                            right: .5
+                        }
+                    }, a.createElement("img", {
+                        src: Re.a,
+                        height: "22",
+                        width: "22"
+                    })), a.createElement(b.Q, {
+                        type: b._49.Strong
+                    }, e))
+                }, t
+            }(a.Component);
+        ! function(e) {
+            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "owl2018"
+        }(ne || (ne = {}));
+        var Ie = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    switch (this.props.event) {
+                        case ne.CratesChristmas:
+                            return a.createElement(Oe, {
+                                amount: this.props.amount
+                            });
+                        default:
+                            return null
+                    }
+                }, t
+            }(a.Component),
+            Me = (n("Jc+w"), function(e) {
                 var t;
                 if (e.prefixes && 1 === e.prefixes.length) {
                     var n = e.prefixes[0].alt;
@@ -31669,9 +31517,9 @@ webpackJsonp([34], {
                     margin: {
                         top: 1
                     }
-                }, a.createElement(Me.b, {
+                }, a.createElement(Te.b, {
                     className: "pending-cheer__scroll-container"
-                }, a.createElement(Fe, {
+                }, a.createElement(we, {
                     prefixes: e.prefixes,
                     bitsConfig: e.bitsConfig
                 })));
@@ -31757,13 +31605,13 @@ webpackJsonp([34], {
                         top: 3,
                         x: 3
                     }
-                }, o)), !o && !r && a.createElement(Ae, {
+                }, o)), !o && !r && a.createElement(Ie, {
                     event: e.event,
                     amount: e.amount
                 }))
             }),
-            Be = n("qe65"),
-            Pe = (n("f1ZS"), {
+            xe = n("qe65"),
+            je = (n("RwqP"), {
                 themed: !0,
                 dark: {
                     "1x": ge.b + "/dark/animated/promo/intro.gif"
@@ -31772,7 +31620,7 @@ webpackJsonp([34], {
                     "1x": ge.b + "/light/animated/promo/intro.gif"
                 }
             }),
-            Ve = function() {
+            Le = function() {
                 return a.createElement(b._8, {
                     display: b.R.Flex,
                     flexDirection: b.T.Column,
@@ -31784,25 +31632,25 @@ webpackJsonp([34], {
                     padding: {
                         bottom: 1
                     }
-                }, a.createElement(Be.a, {
-                    sources: Pe
+                }, a.createElement(xe.a, {
+                    sources: je
                 })), a.createElement(b.Q, {
                     italic: !0
                 }, Object(s.d)("Your Cheer is currently processing.", "Bits--SendingBits")))
             },
-            We = (n("ZoRy"), function(e) {
+            Ae = (n("4VHW"), function(e) {
                 var t = Object(s.d)("You are using {totalBits} Bits to cheer in {channelName}'s chat.", {
                         totalBits: e.totalBits,
                         channelName: e.channelDisplayName
                     }, "Bits--UndoPrompt"),
                     n = null;
-                if (e.prefixes && e.prefixes.length > 1) n = a.createElement(Me.b, {
+                if (e.prefixes && e.prefixes.length > 1) n = a.createElement(Te.b, {
                     className: "bits-undo-prompt__scroll-container"
                 }, a.createElement(b._8, {
                     margin: {
                         top: 1
                     }
-                }, a.createElement(Fe, {
+                }, a.createElement(we, {
                     prefixes: e.prefixes,
                     bitsConfig: e.bitsConfig
                 })));
@@ -31830,11 +31678,176 @@ webpackJsonp([34], {
                     className: "bits-undo-prompt"
                 }, n, a.createElement(b.Q, null, t))
             }),
+            Fe = n("1bR2"),
+            Ue = n.n(Fe),
+            Be = n("vDGQ"),
+            Pe = (n("CGWe"), function(e) {
+                return Object(Be.d)({
+                    action: Be.a.View,
+                    type: Be.c.BitsIntro,
+                    channelId: e.channelID
+                }), a.createElement(b._8, {
+                    "data-test-selector": "crate-intro"
+                }, a.createElement(b._8, {
+                    padding: {
+                        x: 1,
+                        top: 2,
+                        bottom: 1
+                    }
+                }, a.createElement(b.Q, {
+                    fontSize: b.V.Size4,
+                    bold: !0
+                }, Object(s.d)("Share the Holiday Cheer!", "Crates"))), a.createElement(b._35, {
+                    className: "crates-holiday-background",
+                    background: b.n.Alt,
+                    padding: 1,
+                    margin: {
+                        y: 1
+                    },
+                    display: b.R.Flex,
+                    justifyContent: b._7.Around,
+                    alignItems: b.c.End,
+                    borderTop: !0,
+                    borderBottom: !0
+                }, a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Long,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "XmasRaid"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633161/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/3.0 3.0x",
+                    alt: "XmasRaid"
+                }))), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Medium,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "MerryPurple"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633177/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/3.0 3.0x",
+                    alt: "MerryPurple"
+                }))), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Short,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "GiftRage"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/634141/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/3.0 3.0x",
+                    alt: "GiftRage"
+                }))), a.createElement("img", {
+                    src: Ue.a,
+                    height: "50",
+                    width: "50"
+                }), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Short,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "RudolphWhoa"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633166/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/3.0 3.0x",
+                    alt: "RudolphWhoa"
+                }))), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Medium,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "FeelsGingerMan"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633171/1.0 1x,https://static-cdn.jtvnw.net/emoticons/v1/633171/2.0 2x,https://static-cdn.jtvnw.net/emoticons/v1/633171/3.0 4x",
+                    alt: "FeelsGingerMan"
+                }))), a.createElement(b.e, {
+                    type: b.j.BounceIn,
+                    delay: b.f.Long,
+                    enabled: !0
+                }, a.createElement(b._52, {
+                    label: "OrnaMental"
+                }, a.createElement("img", {
+                    height: "28",
+                    width: "28",
+                    srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633170/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/3.0 3.0x",
+                    alt: "OrnaMental"
+                })))), a.createElement(b._8, {
+                    padding: 1
+                }, a.createElement(b.Q, {
+                    type: b._49.P
+                }, Object(s.d)("Cheer any amount to support your streamer, and get a holiday gift! Cheer {minBits, number} Bits or more, and others in chat can get a gift too!", {
+                    minBits: 250
+                }, "Crates")), a.createElement(b.Q, {
+                    type: b._49.Strong
+                }, a.createElement("a", {
+                    href: "http://link.twitch.tv/holiday-emotes",
+                    target: "_blank",
+                    rel: "noreferrer noopener"
+                }, Object(s.d)("Details", "Crates")))))
+            }),
+            Ve = (n("kjfG"), function() {
+                return a.createElement(b._8, {
+                    className: "owl-2018-introduction"
+                }, a.createElement(b._8, {
+                    padding: {
+                        top: 2,
+                        bottom: 1
+                    }
+                }, a.createElement(b.Q, {
+                    fontSize: b.V.Size5,
+                    bold: !0
+                }, Object(s.d)("Cheer with Bits and unlock loot!", "OWL2018Introduction"))), a.createElement(b._8, {
+                    className: "owl-2018-introduction__banner-background",
+                    padding: {
+                        top: 1
+                    }
+                }, a.createElement("img", {
+                    className: "owl-2018-introduction__banner-image",
+                    src: ge.c + "/owl-2017/overwatch-wide.png"
+                })), a.createElement(b._8, {
+                    padding: {
+                        x: 2,
+                        top: 1,
+                        bottom: .5
+                    }
+                }, a.createElement(b.Q, null, Object(s.d)("Cheer 150 Bits or more to hype your team and get a team emote! Cheer along with your fellow fans to unlock in-game skins based on everyone’s Cheers!", "OWL2018Introduction"))), a.createElement(b._8, {
+                    padding: {
+                        bottom: 1
+                    }
+                }, a.createElement(b.O, {
+                    to: "http://link.twitch.tv/owl-drops-onsite-bitscard-blogus",
+                    targetBlank: !0,
+                    hoverUnderlineNone: !1
+                }, Object(s.d)("Details", "OWL2018Introduction"))))
+            }),
+            We = function(e) {
+                switch (e.event) {
+                    case ne.OWL2018:
+                        return a.createElement(Ve, null);
+                    case ne.CratesChristmas:
+                        return a.createElement(Pe, {
+                            onClickHelp: e.onClickHelp,
+                            channelID: e.channelID
+                        });
+                    default:
+                        return a.createElement(Se, {
+                            onClickHelp: e.onClickHelp
+                        })
+                }
+            },
             He = function(e) {
                 var t = s.b.get("crate_snowman_launch", _e.a.Off),
                     n = t === _e.a.On || t === _e.a.StaffOnly && e.isStaff ? ne.CratesChristmas : null,
                     i = e.event || n;
-                if (e.isSending) return e.totalBits < ge.l ? a.createElement(Ve, null) : a.createElement(We, {
+                if (e.isSending) return e.totalBits < ge.l ? a.createElement(Le, null) : a.createElement(Ae, {
                     bitsConfig: e.bitsConfig,
                     channelDisplayName: e.displayName,
                     prefixes: e.currentCheers,
@@ -31847,7 +31860,7 @@ webpackJsonp([34], {
                     prefix: e.hoveredCheermote,
                     tier: e.hoveredTier
                 });
-                if (e.totalBits) return a.createElement(Ue, {
+                if (e.totalBits) return a.createElement(Me, {
                     bitsConfig: e.bitsConfig,
                     prefixes: e.currentCheers,
                     amount: e.totalBits,
@@ -31868,7 +31881,7 @@ webpackJsonp([34], {
                         minToCheer: o
                     })
                 }
-                return i ? a.createElement(Ie, {
+                return i ? a.createElement(We, {
                     event: i,
                     onClickHelp: e.showHelp,
                     channelID: e.channelID
@@ -31968,7 +31981,7 @@ webpackJsonp([34], {
                     var e = this,
                         t = this.props.bitsConfig.indexedActions[this.props.chosenCheermote.toLowerCase()],
                         n = t.orderedTiers.filter(function(e) {
-                            return e.bits <= ge.k
+                            return e.canCheer
                         }).map(function(e) {
                             return {
                                 imgSrc: e.indexedImages.LIGHT.static.get(2),
@@ -34296,7 +34309,6 @@ webpackJsonp([34], {
             return z
         })
     },
-    ZoRy: function(e, t) {},
     aMxy: function(e, t, n) {
         "use strict";
         var i = n("arZ9");
@@ -34763,6 +34775,7 @@ webpackJsonp([34], {
                 }), o({
                     id: "Cheer:100000",
                     bits: 1e5,
+                    canCheer: !1,
                     color: r.f[a.a.Yellow],
                     images: d
                 }))), c.sort(function(e, t) {
@@ -36054,6 +36067,7 @@ webpackJsonp([34], {
                 e.Whisper = "WHISPER", e.Chat = "CHAT"
             }(r || (r = {}))
     },
+    dtvS: function(e, t) {},
     e1CU: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
@@ -36413,7 +36427,6 @@ webpackJsonp([34], {
             return l
         })
     },
-    f1ZS: function(e, t) {},
     fNhT: function(e, t) {},
     fbnZ: function(e, t) {},
     g7wA: function(e, t, n) {
@@ -39360,6 +39373,49 @@ webpackJsonp([34], {
             }
         };
         e.exports = n
+    },
+    jUhM: function(e, t, n) {
+        "use strict";
+        var i = n("GiK3"),
+            a = n("6sO2"),
+            r = n("3iBR"),
+            o = n("qe65"),
+            s = n("Odds"),
+            l = (n("FZFL"), {
+                themed: !0,
+                dark: {
+                    "1x": r.b + "/dark/animated/1/cheertutorial.gif"
+                },
+                light: {
+                    "1x": r.b + "/light/animated/1/cheertutorial.gif"
+                }
+            }),
+            d = function() {
+                return i.createElement(s._8, {
+                    display: s.R.Flex,
+                    padding: {
+                        top: 5,
+                        bottom: 3
+                    },
+                    flexGrow: 1,
+                    flexDirection: s.T.Column,
+                    justifyContent: s._7.Center,
+                    alignItems: s.c.Center
+                }, i.createElement(s.Q, {
+                    type: s._49.H4,
+                    bold: !0
+                }, i.createElement(o.a, {
+                    className: "cheermote-help__tutorial-image",
+                    sources: l
+                }), Object(a.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(s._8, {
+                    padding: {
+                        x: 3
+                    }
+                }, i.createElement(s.Q, null, Object(a.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
+            };
+        n.d(t, "a", function() {
+            return d
+        })
     },
     jetF: function(e, t, n) {
         "use strict";
@@ -45031,49 +45087,6 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    ySfT: function(e, t, n) {
-        "use strict";
-        var i = n("GiK3"),
-            a = n("6sO2"),
-            r = n("3iBR"),
-            o = n("qe65"),
-            s = n("Odds"),
-            l = (n("6lb1"), {
-                themed: !0,
-                dark: {
-                    "1x": r.b + "/dark/animated/1/cheertutorial.gif"
-                },
-                light: {
-                    "1x": r.b + "/light/animated/1/cheertutorial.gif"
-                }
-            }),
-            d = function() {
-                return i.createElement(s._8, {
-                    display: s.R.Flex,
-                    padding: {
-                        top: 5,
-                        bottom: 3
-                    },
-                    flexGrow: 1,
-                    flexDirection: s.T.Column,
-                    justifyContent: s._7.Center,
-                    alignItems: s.c.Center
-                }, i.createElement(s.Q, {
-                    type: s._49.H4,
-                    bold: !0
-                }, i.createElement(o.a, {
-                    className: "cheermote-help__tutorial-image",
-                    sources: l
-                }), Object(a.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(s._8, {
-                    padding: {
-                        x: 3
-                    }
-                }, i.createElement(s.Q, null, Object(a.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
-            };
-        n.d(t, "a", function() {
-            return d
-        })
-    },
     "yTC+": function(e, t) {
         var n = {
             kind: "Document",
@@ -45788,4 +45801,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-142e55fd2c11dceac6d9a93f15d75ab1.js.map
+//# sourceMappingURL=pages.popout-chat-62229ee47ed25d1d33c49438c1861fc1.js.map

@@ -253,6 +253,7 @@ webpackJsonp([63], {
                 }
             return {
                 id: e + ";" + t,
+                canCheer: t <= i.k,
                 bits: t,
                 color: i.f[t],
                 images: n,
@@ -707,4 +708,4 @@ webpackJsonp([63], {
             }(r || (r = {}))
     }
 });
-//# sourceMappingURL=sites.clips.pages.error-85e31514f79fb02fd1b339d442093c9f.js.map
+//# sourceMappingURL=sites.clips.pages.error-51f42de3e92b66ae47830200e5b78f50.js.map

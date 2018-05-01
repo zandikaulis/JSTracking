@@ -1576,6 +1576,14 @@ webpackJsonp([33], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
+                                                    value: "canCheer"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
                                                     value: "images"
                                                 },
                                                 arguments: [],
@@ -1635,11 +1643,11 @@ webpackJsonp([33], {
             }],
             loc: {
                 start: 0,
-                end: 133
+                end: 142
             }
         };
         n.loc.source = {
-            body: "fragment cheer on User {\ncheer {\nid\nemotes {\nid\nprefix\ntype\ntiers {\nid\nbits\ncolor\nimages {\nid\nurl\ntheme\nisAnimated\ndpiScale\n}\n}\n}\n}\n}",
+            body: "fragment cheer on User {\ncheer {\nid\nemotes {\nid\nprefix\ntype\ntiers {\nid\nbits\ncolor\ncanCheer\nimages {\nid\nurl\ntheme\nisAnimated\ndpiScale\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -1684,7 +1692,7 @@ webpackJsonp([33], {
                 return i
             }),
             function(e) {
-                e.Individual = "INDIVIDUAL", e.Team = "TEAM", e.Global = "GLOBAL", e.Insider = "INSIDER"
+                e.Individual = "INDIVIDUAL", e.Team = "TEAM", e.Global = "GLOBAL", e.Insider = "INSIDER", e.Bits = "BITS"
             }(i || (i = {}))
     },
     "6Rwu": function(e, t) {},
@@ -1806,7 +1814,6 @@ webpackJsonp([33], {
     "6hIG": function(e, t, n) {
         e.exports = n.p + "assets/paypal_1x-a2a2f7d96b4384f9f1d7639977bfdc73.png"
     },
-    "6lb1": function(e, t) {},
     "6udH": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e) {
@@ -6288,6 +6295,7 @@ webpackJsonp([33], {
                 }
             return {
                 id: e + ";" + t,
+                canCheer: t <= r.k,
                 bits: t,
                 color: r.f[t],
                 images: n,
@@ -7514,6 +7522,7 @@ webpackJsonp([33], {
         }
     },
     FVEF: function(e, t) {},
+    FZFL: function(e, t) {},
     FroJ: function(e, t) {},
     G7No: function(e, t, n) {
         var i = n("xA5w");
@@ -9232,7 +9241,6 @@ webpackJsonp([33], {
                     }));
                     var n = t ? 1 : 0;
                     return a.createElement(u._35, {
-                        border: !t,
                         display: u.R.Flex,
                         justifyContent: u._7.Center,
                         margin: {
@@ -9558,7 +9566,31 @@ webpackJsonp([33], {
             A = (n("DgR+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getOfferListOrientation = function() {
+                    return t.renderDesktopOffers = function(e) {
+                        return a.createElement(u._8, {
+                            className: "prime-offer-list__content--desktop"
+                        }, t.renderSectionTitle(), a.createElement(u._55, {
+                            childWidth: u._56.Large,
+                            gutterSize: u._57.Small,
+                            center: !0,
+                            placeholderItems: 20
+                        }, e))
+                    }, t.renderSectionTitle = function() {
+                        return t.props.sectionTitle && a.createElement(u._8, {
+                            padding: {
+                                top: 1
+                            },
+                            className: "prime-offers__title"
+                        }, a.createElement(u.Q, {
+                            type: u._49.H3,
+                            color: u.K.Base,
+                            bold: !0
+                        }, t.props.sectionTitle))
+                    }, t.renderMobileOffers = function(e) {
+                        return a.createElement(u._8, {
+                            className: "prime-offer-list__content--mobile"
+                        }, t.renderSectionTitle(), e)
+                    }, t.getOfferListOrientation = function() {
                         return t.props.listDirection || h.c.Default
                     }, t.shouldShowPlaceholders = function() {
                         if (!t.props.offersData) return !0;
@@ -9583,7 +9615,8 @@ webpackJsonp([33], {
                         n = Object(h.g)("prime-offer-list", e),
                         i = "prime-offer-list__content prime-offer-list__content--" + t,
                         r = this.props.listDirection === h.c.Horizontal,
-                        s = this.props.listDirection === h.c.Vertical;
+                        s = this.props.listDirection === h.c.Vertical,
+                        c = this.renderOfferExperience();
                     return a.createElement(o.b, {
                         className: n,
                         suppressScrollX: s,
@@ -9596,7 +9629,7 @@ webpackJsonp([33], {
                             bottom: 2,
                             x: 1
                         }
-                    }, this.renderUpsell(), this.renderOfferExperience()))
+                    }, this.renderUpsell(), this.props.listDirection === h.c.Horizontal && this.renderDesktopOffers(c), this.renderMobileOffers(c)))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
                     if (!Object(h.j)(e) && !Object(h.k)(e) && !this.props.hideUpsell) return a.createElement(F, null)
@@ -10202,6 +10235,22 @@ webpackJsonp([33], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isPrimeOnly"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "quantity"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
@@ -10270,6 +10319,22 @@ webpackJsonp([33], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isPrimeOnly"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "quantity"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
                                                             }]
                                                         }
                                                     }]
@@ -10285,11 +10350,11 @@ webpackJsonp([33], {
             }],
             loc: {
                 start: 0,
-                end: 270
+                end: 312
             }
         };
         n.loc.source = {
-            body: "query InsiderPassTabRewards($channelID: ID!) {\nuser(id: $channelID) {\nid\ntournament {\nid\nrewards {\ninsider {\nheroSkins {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}\ninGameContent {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}\n}\n}\n}\n}\n}",
+            body: "query InsiderPassTabRewards($channelID: ID!) {\nuser(id: $channelID) {\nid\ntournament {\nid\nrewards {\ninsider {\nheroSkins {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\nquantity\n}\ninGameContent {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\nquantity\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -10380,7 +10445,7 @@ webpackJsonp([33], {
             h = n("jF7o"),
             v = n("iMOk"),
             b = n("WVx7"),
-            y = n("ySfT"),
+            y = n("jUhM"),
             k = n("ZJYd"),
             _ = n("/LBW"),
             E = (n("fHoP"), function(e) {
@@ -18783,6 +18848,7 @@ webpackJsonp([33], {
                 }), s({
                     id: "Cheer:100000",
                     bits: 1e5,
+                    canCheer: !1,
                     color: a.f[r.a.Yellow],
                     images: l
                 }))), u.sort(function(e, t) {
@@ -19338,7 +19404,9 @@ webpackJsonp([33], {
                     description: "",
                     imageURL: n,
                     isEntitled: t,
-                    canBeFulfilled: !1
+                    canBeFulfilled: !1,
+                    isPrimeOnly: !1,
+                    quantity: 1
                 }
             })
         }, t.a = function(e, t) {
@@ -19349,7 +19417,9 @@ webpackJsonp([33], {
                 description: e.title,
                 canBeFulfilled: !1,
                 isEntitled: t,
-                imageURL: e.image4x
+                imageURL: e.image4x,
+                isPrimeOnly: !1,
+                quantity: 1
             }
         };
         var i = n("Tzcg"),
@@ -20335,6 +20405,49 @@ webpackJsonp([33], {
             }
         }
     },
+    jUhM: function(e, t, n) {
+        "use strict";
+        var i = n("GiK3"),
+            r = n("6sO2"),
+            a = n("3iBR"),
+            s = n("qe65"),
+            o = n("Odds"),
+            c = (n("FZFL"), {
+                themed: !0,
+                dark: {
+                    "1x": a.b + "/dark/animated/1/cheertutorial.gif"
+                },
+                light: {
+                    "1x": a.b + "/light/animated/1/cheertutorial.gif"
+                }
+            }),
+            l = function() {
+                return i.createElement(o._8, {
+                    display: o.R.Flex,
+                    padding: {
+                        top: 5,
+                        bottom: 3
+                    },
+                    flexGrow: 1,
+                    flexDirection: o.T.Column,
+                    justifyContent: o._7.Center,
+                    alignItems: o.c.Center
+                }, i.createElement(o.Q, {
+                    type: o._49.H4,
+                    bold: !0
+                }, i.createElement(s.a, {
+                    className: "cheermote-help__tutorial-image",
+                    sources: c
+                }), Object(r.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(o._8, {
+                    padding: {
+                        x: 3
+                    }
+                }, i.createElement(o.Q, null, Object(r.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
+            };
+        n.d(t, "a", function() {
+            return l
+        })
+    },
     jetF: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -20587,16 +20700,32 @@ webpackJsonp([33], {
                         },
                         arguments: [],
                         directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "isPrimeOnly"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "quantity"
+                        },
+                        arguments: [],
+                        directives: []
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 99
+                end: 120
             }
         };
         n.loc.source = {
-            body: "fragment reward on TournamentReward {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}",
+            body: "fragment reward on TournamentReward {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\nquantity\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -21500,6 +21629,14 @@ webpackJsonp([33], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isPrimeOnly"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
                                                             }]
                                                         }
                                                     }]
@@ -21515,11 +21652,11 @@ webpackJsonp([33], {
             }],
             loc: {
                 start: 0,
-                end: 504
+                end: 516
             }
         };
         i.loc.source = {
-            body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery InsiderPassTabEmotesAndBadges($channelID: ID!) {\nuser(id: $channelID) {\nid\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\nemotes {\nid\ntoken\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ntournament {\nid\nrewards {\ninsider {\nbadges {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\n}\n}\n}\n}\n}\n}',
+            body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery InsiderPassTabEmotesAndBadges($channelID: ID!) {\nuser(id: $channelID) {\nid\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\nemotes {\nid\ntoken\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ntournament {\nid\nrewards {\ninsider {\nbadges {\nid\nname\ntype\nimageURL\ndescription\ncanBeFulfilled\nisEntitled\nisPrimeOnly\n}\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -23022,49 +23159,6 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    ySfT: function(e, t, n) {
-        "use strict";
-        var i = n("GiK3"),
-            r = n("6sO2"),
-            a = n("3iBR"),
-            s = n("qe65"),
-            o = n("Odds"),
-            c = (n("6lb1"), {
-                themed: !0,
-                dark: {
-                    "1x": a.b + "/dark/animated/1/cheertutorial.gif"
-                },
-                light: {
-                    "1x": a.b + "/light/animated/1/cheertutorial.gif"
-                }
-            }),
-            l = function() {
-                return i.createElement(o._8, {
-                    display: o.R.Flex,
-                    padding: {
-                        top: 5,
-                        bottom: 3
-                    },
-                    flexGrow: 1,
-                    flexDirection: o.T.Column,
-                    justifyContent: o._7.Center,
-                    alignItems: o.c.Center
-                }, i.createElement(o.Q, {
-                    type: o._49.H4,
-                    bold: !0
-                }, i.createElement(s.a, {
-                    className: "cheermote-help__tutorial-image",
-                    sources: c
-                }), Object(r.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement(o._8, {
-                    padding: {
-                        x: 3
-                    }
-                }, i.createElement(o.Q, null, Object(r.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp"))))
-            };
-        n.d(t, "a", function() {
-            return l
-        })
-    },
     ymQ7: function(e, t, n) {
         var i = n("xA5w"),
             r = n("JURy"),
@@ -23383,4 +23477,4 @@ webpackJsonp([33], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-0a1815fccb754fd9c8b442b8b8e510aa.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-4bd28d4ed642b21f465c8be2dd225100.js.map
