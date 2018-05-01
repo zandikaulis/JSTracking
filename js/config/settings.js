@@ -23,6 +23,7 @@ window.__twilightSettings = {
     "comscore_url": "https://sb.scorecardresearch.com/beacon.js",
     "crate_snowman_launch": "off",
     "crate_trickster_launch": "off",
+    "dashboard_live_twilight": "off",
     "dashboard_nav_reorg": true,
     "dashboard_settings_launch": "off",
     "deprecated_messages_download_enabled": false,
@@ -211,6 +212,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "2005226d-07fe-46cf-a229-d91dd03d8d3a": {
+            "name": "TWILIGHT_DASHBOARD_LIVE",
+            "v": 3629,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
             }]
         },
         "298a5f39-228a-487a-ad06-422c18458403": {
