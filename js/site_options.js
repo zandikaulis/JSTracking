@@ -773,7 +773,7 @@ window.SiteOptions = {
         },
         "2005226d-07fe-46cf-a229-d91dd03d8d3a": {
             "name": "TWILIGHT_DASHBOARD_LIVE",
-            "v": 3629,
+            "v": 3630,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -1203,13 +1203,13 @@ window.SiteOptions = {
         },
         "326523fd-48bf-4043-9635-7bef334069e0": {
             "name": "TWILIGHT_AUTOMOD_LAUNCH",
-            "v": 3572,
+            "v": 3631,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
