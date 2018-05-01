@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e69e91ae1319580e1a10.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2bf2d86bc479eca1cd30.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -27785,18 +27785,24 @@
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.state = {
                         isUserOffline: !1,
-                        wasPausedOnOffline: !1
-                    }, e._onOfflineEvent = e._onOfflineEvent.bind(e), e._onOnlineEvent = e._onOnlineEvent.bind(e), e
+                        wasPausedOnOffline: !1,
+                        showLoadingIndicator: !1
+                    }, e._onOfflineEvent = e._onOfflineEvent.bind(e), e._onOnlineEvent = e._onOnlineEvent.bind(e), e.showLoadingTimerId = null, e
                 }
                 return s(t, e), k(t, [{
                     key: "componentDidMount",
                     value: function() {
-                        this.props.windowObj.addEventListener("offline", this._onOfflineEvent), this.props.windowObj.addEventListener("online", this._onOnlineEvent)
+                        this.props.windowObj.addEventListener("offline", this._onOfflineEvent), this.props.windowObj.addEventListener("online", this._onOnlineEvent), this._updateShowLoading(this.props)
                     }
                 }, {
                     key: "componentWillUnmount",
                     value: function() {
                         this.props.windowObj.removeEventListener("offline", this._onOfflineEvent), this.props.windowObj.removeEventListener("online", this._onOnlineEvent)
+                    }
+                }, {
+                    key: "componentWillReceiveProps",
+                    value: function(e) {
+                        this._updateShowLoading(e)
                     }
                 }, {
                     key: "_onOfflineEvent",
@@ -27815,16 +27821,28 @@
                         })
                     }
                 }, {
+                    key: "_updateShowLoading",
+                    value: function(e) {
+                        var t = this,
+                            n = e.windowObj,
+                            r = e.isLoading,
+                            i = e.isPaused,
+                            o = e.isCasting,
+                            a = e.isAdvertisementScreen;
+                        !r || i || o || a ? (this.showLoadingTimerId && (clearTimeout(this.showLoadingTimerId), this.showLoadingTimerId = null), this.state.showLoadingIndicator && this.setState({
+                            showLoadingIndicator: !1
+                        })) : this.showLoadingTimerId || (this.showLoadingTimerId = n.setTimeout(function() {
+                            t.showLoadingTimerId = null, t.setState({
+                                showLoadingIndicator: !0
+                            })
+                        }, 150))
+                    }
+                }, {
                     key: "render",
                     value: function() {
-                        var e = this.props,
-                            t = e.isLoading,
-                            n = e.isPaused,
-                            r = e.isCasting,
-                            o = e.isAdvertisementScreen;
-                        return !t || n || r || o ? null : c.a.createElement(i, {
+                        return this.state.showLoadingIndicator ? c.a.createElement(i, {
                             shouldShowOfflineOverlay: this.state.isUserOffline
-                        })
+                        }) : null
                     }
                 }]), t
             }(c.a.Component);
@@ -31617,7 +31635,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.05.01-202312+d53e8f6de89dc71582d8891499dca52ef232d1f3",
+                    app_version: "2018.05.01-215342+c932209d7fafecdccbfa082afe0dd5121322fb16",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
