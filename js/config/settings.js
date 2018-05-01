@@ -215,18 +215,6 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
-        "2005226d-07fe-46cf-a229-d91dd03d8d3a": {
-            "name": "TWILIGHT_DASHBOARD_LIVE",
-            "v": 3630,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "off"
-            }, {
-                "weight": 0,
-                "value": "on"
-            }]
-        },
         "298a5f39-228a-487a-ad06-422c18458403": {
             "name": "twilight_merch_store_launch",
             "v": 2159,
@@ -298,6 +286,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "3468778b-76fe-4cdf-add6-1be0dceea214": {
+            "name": "TWILIGHT_DASHBOARD_LIVE",
+            "v": 3635,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
             }]
         },
         "3763f4e7-c786-4000-a6c3-b91b9c774302": {
