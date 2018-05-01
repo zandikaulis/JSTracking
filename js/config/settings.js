@@ -92,7 +92,7 @@ window.__twilightSettings = {
     "twilight_video_manager_staff": true,
     "twitch_prime_fortnite": false,
     "twitch_prime_fortnite_link_url": "https://www.epicgames.com/fortnite/twitch-prime-pack2",
-    "twitch_prime_fortnite_offer_id": "d2b1726e-ebd9-05a2-95ee-9d37fcfd0a8a",
+    "twitch_prime_fortnite_offer_id": "c0b1816d-300b-d234-828e-59e76119bffe",
     "twitch_prime_fortnite_signup_url": "https://twitch.amazon.com/prime/country?ingress=epic-fortnite",
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
     "update_manager_enabled": false,
@@ -681,13 +681,13 @@ window.__twilightSettings = {
         },
         "afcda2ba-dd12-4d9a-9428-df6a71104db8": {
             "name": "twilight_new_homepage",
-            "v": 3637,
+            "v": 3638,
             "t": 1,
             "groups": [{
-                "weight": 1,
+                "weight": 5,
                 "value": "experiment"
             }, {
-                "weight": 99,
+                "weight": 95,
                 "value": "control"
             }]
         },
