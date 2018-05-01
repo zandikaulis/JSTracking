@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".583de931f68fa9b028af.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e69e91ae1319580e1a10.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -19025,6 +19025,7 @@
                 AT: "Austria",
                 AU: "Australia",
                 BE: "Belgium",
+                BR: "Brazil",
                 CA: "Canada",
                 CH: "Switzerland",
                 CZ: "Czech Republic",
@@ -19036,7 +19037,9 @@
                 GB: "United Kingdom",
                 HU: "Hungary",
                 IT: "Italy",
+                JP: "Japan",
                 KR: "Korea",
+                MX: "Mexico",
                 NL: "Netherlands",
                 NO: "Norway",
                 NZ: "New Zealand",
@@ -31614,7 +31617,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.05.01-171718+666611c497c55aa7237edee4eadb8075a87bafaf",
+                    app_version: "2018.05.01-202312+d53e8f6de89dc71582d8891499dca52ef232d1f3",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
