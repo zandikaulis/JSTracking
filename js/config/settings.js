@@ -290,10 +290,13 @@ window.__twilightSettings = {
         },
         "3468778b-76fe-4cdf-add6-1be0dceea214": {
             "name": "TWILIGHT_DASHBOARD_LIVE",
-            "v": 3646,
+            "v": 3648,
             "t": 2,
             "groups": [{
                 "weight": 100,
+                "value": "disabled"
+            }, {
+                "weight": 0,
                 "value": "off"
             }, {
                 "weight": 0,
