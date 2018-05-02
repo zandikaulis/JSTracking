@@ -45,7 +45,7 @@ window.__twilightSettings = {
     "ivw_url": "https://script.ioam.de/iam.js",
     "krux_countries": ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "FI", "FR", "GR", "GL", "HU", "IS", "IT", "LT", "LU", "NL", "NO", "PL", "PT", "RO", "RU", "SK", "SI", "ES", "SE", "CH", "TR", "LV", "MT", "RS", "AL", "AD", "AM", "AZ", "BY", "BA", "HR", "GE", "IL", "LI", "MK", "MD", "MC", "ME", "QA", "SM", "UA", "UK", "GB", "IE", "US"],
     "krux_url": "https://cdn.krxd.net/controltag?confid=JYk8LCsC",
-    "legacy_routes": ["^/broadcast$", "^/broadcast/dashboards(/.+)?$", "^/broadcast/stats(/get)?$", "^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/dashboard$", "^/[a-zA-Z0-9_\\-%]+/dashboard/action_log$", "^/[a-zA-Z0-9_\\-%]+/dashboard/activity$", "^/[a-zA-Z0-9_\\-%]+/dashboard/commercial$", "^/[a-zA-Z0-9_\\-%]+/dashboard/delay$", "^/[a-zA-Z0-9_\\-%]+/dashboard/permissions$", "^/[a-zA-Z0-9_\\-%]+/dashboard/revenue$", "^/[a-zA-Z0-9_\\-%]+/dashboard/settings(?!/automod)", "^/[a-zA-Z0-9_\\-%]+/dashboard/stats$", "^/[a-zA-Z0-9_\\-%]+/dashboard/streamkey$", "^/[a-zA-Z0-9_\\-%]+/dashboard/subscription(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/video-stats(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]*/inbox$", "^/[a-zA-Z0-9_\\-%]*/outbox$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/subscribe(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/communities/create$", "^/communities$", "^/dashboard/?$", "^/directory/random$", "^/health_check$", "^/inbox$", "^/messages?/.+$", "^/outbox$", "^/partner/.+$", "^/products(?!(/.+/ticket/edit))(/.*)?$", "^/profile$", "^/search$", "^/settings/connections$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/subscriptions$", "^/team/[a-zA-Z0-9_-]+(?!/edit)($|/.*)", "^/team_invitation/.+$", "^/team_permission/.+$", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/upload$", "^/user/.+$", "^/yt/.+$"],
+    "legacy_routes": ["^/broadcast$", "^/broadcast/dashboards(/.+)?$", "^/broadcast/stats(/get)?$", "^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/dashboard$", "^/[a-zA-Z0-9_\\-%]+/dashboard/action_log$", "^/[a-zA-Z0-9_\\-%]+/dashboard/activity$", "^/[a-zA-Z0-9_\\-%]+/dashboard/commercial$", "^/[a-zA-Z0-9_\\-%]+/dashboard/delay$", "^/[a-zA-Z0-9_\\-%]+/dashboard/permissions$", "^/[a-zA-Z0-9_\\-%]+/dashboard/revenue$", "^/[a-zA-Z0-9_\\-%]+/dashboard/settings(?!/automod)", "^/[a-zA-Z0-9_\\-%]+/dashboard/stats$", "^/[a-zA-Z0-9_\\-%]+/dashboard/streamkey$", "^/[a-zA-Z0-9_\\-%]+/dashboard/subscription(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/video-stats(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]*/inbox$", "^/[a-zA-Z0-9_\\-%]*/outbox$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/subscribe(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/communities/create$", "^/communities$", "^/dashboard/?$", "^/directory/random$", "^/health_check$", "^/inbox$", "^/messages?/.+$", "^/outbox$", "^/partner/.+$", "^/products(?!(/.+/ticket/edit))(/.*)?$", "^/profile$", "^/search$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/subscriptions$", "^/team/[a-zA-Z0-9_-]+(?!/edit)($|/.*)", "^/team_invitation/.+$", "^/team_permission/.+$", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/upload$", "^/user/.+$", "^/yt/.+$"],
     "legacy_routes_enabled": true,
     "longtask_tracking_sample_rate": 0.1,
     "native_broadcast_blacklist": ["germenchrestream"],
@@ -67,7 +67,7 @@ window.__twilightSettings = {
     "quantcast_url": "https://edge.quantserve.com/quant.js",
     "search_tracking_enabled": true,
     "settings_channel_feature_flag": "on",
-    "settings_connections_feature_flag": "off",
+    "settings_connections_feature_flag": "on",
     "settings_premium_feature_flag": "on",
     "sizmek_versatag_channels": ["riotgames", "tekken", "rocketleague"],
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
@@ -696,13 +696,13 @@ window.__twilightSettings = {
         },
         "afcda2ba-dd12-4d9a-9428-df6a71104db8": {
             "name": "twilight_new_homepage",
-            "v": 3643,
+            "v": 3651,
             "t": 1,
             "groups": [{
-                "weight": 20,
+                "weight": 60,
                 "value": "experiment"
             }, {
-                "weight": 80,
+                "weight": 40,
                 "value": "control"
             }]
         },
