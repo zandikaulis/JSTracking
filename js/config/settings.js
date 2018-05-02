@@ -128,6 +128,18 @@ window.__twilightSettings = {
                 "value": "on"
             }]
         },
+        "080c0331-3073-4539-992f-93274236a97d": {
+            "name": "TWILIGHT_PAY__SAVED_PAYMENT_METHODS",
+            "v": 3649,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": {
             "name": "twilight_animated_directory_thumbnails",
             "v": 3227,
