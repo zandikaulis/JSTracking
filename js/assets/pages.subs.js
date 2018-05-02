@@ -2012,7 +2012,7 @@ webpackJsonp([36], {
             W = n("Odds"),
             V = n("yTC+"),
             H = "whispers-report-user-button",
-            G = function(e) {
+            z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderReportButton = function() {
@@ -2132,9 +2132,9 @@ webpackJsonp([36], {
                     configurable: !0
                 }), t
             }(r.Component),
-            z = Object(m.compose)(Object(v.a)(V, {
+            G = Object(m.compose)(Object(v.a)(V, {
                 name: "setMuteThread"
-            }), Object(I.a)(), Object(L.a)())(G),
+            }), Object(I.a)(), Object(L.a)())(z),
             q = n("GxF8");
         var Q = n("N5sm");
         var K = n("l4QG");
@@ -2366,7 +2366,7 @@ webpackJsonp([36], {
                     }), r.createElement(W.q, {
                         direction: W.r.BottomRight,
                         offsetX: "0.5rem"
-                    }, r.createElement(z, {
+                    }, r.createElement(G, {
                         login: this.interlocutor.login,
                         displayName: this.interlocutor.displayName,
                         currentUser: this.props.participants.currentUser,
@@ -6082,8 +6082,8 @@ webpackJsonp([36], {
                     }
                 }, t = r.__decorate([Object(l.d)("GiftRecipientSearch")], t)
             }(a.Component),
-            G = n("37Pp"),
-            z = n("odx1"),
+            z = n("37Pp"),
+            G = n("odx1"),
             q = function(e) {
                 var t = null,
                     n = null,
@@ -6113,7 +6113,7 @@ webpackJsonp([36], {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(_.Q, null, o)), a.createElement(z.a, {
+                    }, a.createElement(_.Q, null, o)), a.createElement(G.a, {
                         authToken: e.authToken,
                         "data-a-target": "subscribe-with-prime-button",
                         isSubscribed: !1,
@@ -6155,7 +6155,7 @@ webpackJsonp([36], {
                 }, i, a.createElement(_._8, null, a.createElement(_.Q, {
                     type: _._49.H4,
                     bold: !0
-                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(G.a, {
+                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(z.a, {
                     subscriptionProduct: e.subscriptionProducts[0]
                 }), a.createElement(_._8, {
                     display: _.R.Flex
@@ -10173,7 +10173,7 @@ webpackJsonp([36], {
                 type: _.MultipleChoice,
                 value: "spam type"
             },
-            G = {
+            z = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username} for Inappropriate Content", {
                         username: e
@@ -10184,7 +10184,7 @@ webpackJsonp([36], {
                 type: _.MultipleChoice,
                 value: "inappropriate content type"
             },
-            z = {
+            G = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username} for Evading a Ban", {
                         username: e
@@ -10241,7 +10241,7 @@ webpackJsonp([36], {
                 "external site; threatening violence": V.external_violence,
                 "external site; committing violence": V.external_violence,
                 "external site; scam": B.socialMedia,
-                "ban evasion": z,
+                "ban evasion": G,
                 spam: H,
                 hateful: W.content,
                 impersonation: q,
@@ -10249,7 +10249,7 @@ webpackJsonp([36], {
                 "threatening violence": W.violence,
                 "committing violence": W.violence,
                 abusive: W.content,
-                "inappropriate content": G,
+                "inappropriate content": z,
                 "intellectual property": D.legal,
                 "violating developer agreement": D.legal
             },
@@ -16951,15 +16951,15 @@ webpackJsonp([36], {
                     if (e.activity.type !== B.a.Playing && t.activity.type === B.a.Playing) return 1;
                     if (e.activity.type === B.a.Playing && t.activity.type === B.a.Playing) return H(e, t)
                 }
-                return z(e, t)
+                return G(e, t)
             }) : []
         }
 
         function H(e, t) {
-            return e.availability || t.availability ? e.availability && !t.availability ? -1 : !e.availability && t.availability ? 1 : e.availability === W.a.Online && t.availability !== W.a.Online ? -1 : e.availability !== W.a.Online && t.availability === W.a.Online ? 1 : e.availability === W.a.Online && t.availability === W.a.Online ? z(e, t) : e.availability === W.a.Idle && t.availability !== W.a.Idle ? -1 : e.availability !== W.a.Idle && t.availability === W.a.Idle ? 1 : e.availability === W.a.Idle && t.availability === W.a.Idle ? z(e, t) : e.availability === W.a.Busy && t.availability !== W.a.Busy ? -1 : e.availability !== W.a.Busy && t.availability === W.a.Busy ? 1 : (e.availability === W.a.Busy && (t.availability, W.a.Busy), z(e, t)) : -1
+            return e.availability || t.availability ? e.availability && !t.availability ? -1 : !e.availability && t.availability ? 1 : e.availability === W.a.Online && t.availability !== W.a.Online ? -1 : e.availability !== W.a.Online && t.availability === W.a.Online ? 1 : e.availability === W.a.Online && t.availability === W.a.Online ? G(e, t) : e.availability === W.a.Idle && t.availability !== W.a.Idle ? -1 : e.availability !== W.a.Idle && t.availability === W.a.Idle ? 1 : e.availability === W.a.Idle && t.availability === W.a.Idle ? G(e, t) : e.availability === W.a.Busy && t.availability !== W.a.Busy ? -1 : e.availability !== W.a.Busy && t.availability === W.a.Busy ? 1 : (e.availability === W.a.Busy && (t.availability, W.a.Busy), G(e, t)) : -1
         }
 
-        function G(e, t, n, i) {
+        function z(e, t, n, i) {
             var r = e.slice(),
                 a = new Set,
                 o = r.filter(function(e) {
@@ -17016,7 +17016,7 @@ webpackJsonp([36], {
             return s.concat(c)
         }
 
-        function z(e, t) {
+        function G(e, t) {
             if (!e.node && !t.node) return 0;
             if (e.node && !t.node) return -1;
             if (t.node && !e.node) return 1;
@@ -17063,7 +17063,7 @@ webpackJsonp([36], {
                                     }
                             }), t
                         }(r);
-                        var a = G(n, i, t.followedVideoDict, e.sortByRelevance);
+                        var a = z(n, i, t.followedVideoDict, e.sortByRelevance);
                         if (t.setState({
                                 sortedFollows: a
                             }), t.props.showExtraChannels && -1 === t.initialDisplayAmount) {
@@ -19944,14 +19944,14 @@ webpackJsonp([36], {
         "use strict";
         var i = n("TToO"),
             r = n("GiK3"),
-            a = n("RH2O"),
-            o = n("7vx8"),
-            s = n("WIs4"),
-            l = n("aMxy"),
-            c = n("HZww"),
-            d = n("Aj/L"),
-            u = n("Odds"),
-            p = n("3zLD"),
+            a = n("3zLD"),
+            o = n("RH2O"),
+            s = n("7vx8"),
+            l = n("WIs4"),
+            c = n("aMxy"),
+            d = n("HZww"),
+            u = n("Aj/L"),
+            p = n("Odds"),
             m = n("6sO2"),
             h = n("+Znq"),
             f = n("N221"),
@@ -19961,7 +19961,7 @@ webpackJsonp([36], {
             k = n("jUhM"),
             y = n("ZJYd"),
             _ = n("/LBW"),
-            S = (n("fHoP"), function(e) {
+            S = (n("QAz8"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handlePromoBuy = function(e) {
@@ -19976,43 +19976,45 @@ webpackJsonp([36], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = r.createElement(u._8, null, r.createElement(u._8, {
+                    var e = r.createElement(p._8, {
+                        "data-test-selector": "first-time-user-intro"
+                    }, r.createElement(p._8, {
                         padding: {
                             x: 5,
                             y: 2
                         },
-                        textAlign: u._45.Center
-                    }, r.createElement(u.Q, {
-                        type: u._49.H4,
+                        textAlign: p._45.Center
+                    }, r.createElement(p.Q, {
+                        type: p._49.H4,
                         bold: !0
-                    }, Object(m.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), r.createElement(u._8, {
+                    }, Object(m.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), r.createElement(p._8, {
                         padding: {
                             x: 2,
                             bottom: 1
                         }
-                    }, r.createElement(u.Q, {
-                        type: u._49.Span,
-                        color: u.K.Alt
-                    }, Object(m.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), r.createElement(u._2, {
+                    }, r.createElement(p.Q, {
+                        type: p._49.Span,
+                        color: p.K.Alt
+                    }, Object(m.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), r.createElement(p._2, {
                         margin: {
                             left: .5
                         }
                     }, r.createElement("a", {
                         onClick: this.props.toggleShowTutorial
-                    }, Object(m.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), r.createElement(u._8, {
+                    }, Object(m.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), r.createElement(p._8, {
                         padding: {
                             bottom: 2
                         },
-                        textAlign: u._45.Center
-                    }, r.createElement(u._2, {
+                        textAlign: p._45.Center
+                    }, r.createElement(p._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(u.Q, {
-                        type: u._49.H6,
+                    }, r.createElement(p.Q, {
+                        type: p._49.H6,
                         bold: !0,
                         className: "bits-first-time-user-prompt__promo-header"
-                    }, Object(m.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), r.createElement(u.v, {
+                    }, Object(m.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), r.createElement(p.v, {
                         onClick: this.handlePromoBuy,
                         "data-purchase-url": this.props.promo.url,
                         "data-bits-amount": this.props.promo.bits,
@@ -20021,36 +20023,36 @@ webpackJsonp([36], {
                         price: this.props.promo.price,
                         amount: this.props.promo.bits
                     }, "Bits--FirstTimeUserPrompt"))));
-                    return this.props.isShowingTutorial ? r.createElement(u._8, {
+                    return this.props.isShowingTutorial ? r.createElement(p._8, {
                         className: "bits-first-time-user-prompt",
                         fullWidth: !0
-                    }, r.createElement(u._8, {
+                    }, r.createElement(p._8, {
                         className: "bits-first-time-user-prompt__tutorial-back-button"
-                    }, r.createElement(u.v, {
+                    }, r.createElement(p.v, {
                         onClick: this.props.toggleShowTutorial,
-                        type: u.B.Text
-                    }, r.createElement(u._24, {
-                        asset: u._25.Play,
+                        type: p.B.Text
+                    }, r.createElement(p._24, {
+                        asset: p._25.Play,
                         height: 8
-                    }), " ", Object(m.d)("Back", "Bits--FirstTimeUserPrompt"))), r.createElement(u._8, {
-                        textAlign: u._45.Center,
+                    }), " ", Object(m.d)("Back", "Bits--FirstTimeUserPrompt"))), r.createElement(p._8, {
+                        textAlign: p._45.Center,
                         padding: {
                             x: 2,
                             bottom: 2,
                             top: 5
                         },
                         fullHeight: !0
-                    }, r.createElement(u.e, {
-                        type: u.j.SlideInLeft,
-                        duration: u.g.Long,
+                    }, r.createElement(p.e, {
+                        type: p.j.SlideInLeft,
+                        duration: p.g.Long,
                         enabled: !0
-                    }, r.createElement(k.a, null)))) : this.props.animateFirstTimeUserIntro ? r.createElement(u._2, {
+                    }, r.createElement(k.a, null)))) : this.props.animateFirstTimeUserIntro ? r.createElement(p._2, {
                         className: "bits-first-time-user-prompt"
-                    }, r.createElement(u.e, {
-                        type: u.j.SlideInRight,
-                        duration: u.g.Long,
+                    }, r.createElement(p.e, {
+                        type: p.j.SlideInRight,
+                        duration: p.g.Long,
                         enabled: this.props.animateFirstTimeUserIntro
-                    }, e)) : r.createElement(u._8, {
+                    }, e)) : r.createElement(p._8, {
                         className: "bits-first-time-user-prompt"
                     }, e)
                 }, t
@@ -20058,8 +20060,8 @@ webpackJsonp([36], {
             E = n("jxGs"),
             N = n("bkpq"),
             C = n("CSlQ"),
-            T = n("annQ"),
-            w = (n("lGVF"), function(e) {
+            T = n("m5Kq"),
+            w = (n("a2ud"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -20082,23 +20084,23 @@ webpackJsonp([36], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.loading) return r.createElement(u._35, {
+                    if (this.props.loading) return r.createElement(p._35, {
                         "data-a-target": "get-bits-button-content-loading",
-                        display: u.R.Flex,
-                        flexDirection: u.T.Column,
-                        alignItems: u.c.Center,
-                        justifyContent: u._7.Center,
-                        textAlign: u._45.Center,
+                        display: p.R.Flex,
+                        flexDirection: p.T.Column,
+                        alignItems: p.c.Center,
+                        justifyContent: p._7.Center,
+                        textAlign: p._45.Center,
                         padding: {
                             y: 5
                         }
-                    }, r.createElement(u._10, {
+                    }, r.createElement(p._10, {
                         delay: 0
-                    }), r.createElement(u._8, {
+                    }), r.createElement(p._8, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(u.Q, {
+                    }, r.createElement(p.Q, {
                         italic: !0
                     }, Object(m.d)("Fetching bits", "Bits--GetBitsButtonContent"))));
                     var e = null;
@@ -20117,15 +20119,15 @@ webpackJsonp([36], {
                         }))
                     }
                     var n = null;
-                    void 0 !== this.props.bitsBalance ? n = r.createElement(u._35, {
+                    void 0 !== this.props.bitsBalance ? n = r.createElement(p._35, {
                         borderBottom: !0,
-                        textAlign: u._45.Center,
+                        textAlign: p._45.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, r.createElement(u.Q, {
-                        type: u._49.Span
+                    }, r.createElement(p.Q, {
+                        type: p._49.Span
                     }, Object(m.d)("You have {bitsBalance}", {
                         bitsBalance: r.createElement(v.a, {
                             withImage: !0,
@@ -20133,15 +20135,15 @@ webpackJsonp([36], {
                             count: this.props.bitsBalance,
                             bitsConfig: this.props.bitsConfig
                         })
-                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && (n = r.createElement(u._35, {
+                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && (n = r.createElement(p._35, {
                         borderBottom: !0,
-                        textAlign: u._45.Center,
+                        textAlign: p._45.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, r.createElement(u.Q, {
-                        type: u._49.Span
+                    }, r.createElement(p.Q, {
+                        type: p._49.Span
                     }, Object(m.d)("{bitsGem} Log in to see your Bits balance", {
                         bitsGem: r.createElement(v.a, {
                             count: 100,
@@ -20162,35 +20164,36 @@ webpackJsonp([36], {
                         fullsize: !0
                     })), r.createElement(f.b, {
                         className: "get-bits-button-content"
-                    }, r.createElement(u._8, null, n, e, i))
-                }, t = i.__decorate([Object(C.d)("GetBitsButtonContent"), Object(o.a)(T, {
-                    name: "data",
-                    props: function(e) {
-                        var t, n, i, r;
-                        return e.data && e.data.user && e.data.user.cheer && (t = Object(N.a)(e.data.user.cheer.emotes), n = e.data.user.id), e.data && e.data.currentUser ? (r = e.data.currentUser.bitsBalance, i = e.data.currentUser.bitsOffers) : e.data && e.data.bitsOffers && (i = e.data.bitsOffers), {
-                            loading: e.data && e.data.loading,
-                            bitsOffers: i,
-                            bitsBalance: r,
-                            bitsConfig: t,
-                            channelID: n
-                        }
-                    },
-                    skip: function(e) {
-                        return !e.channelLogin && !e.isInTopNav
-                    },
-                    options: function(e) {
-                        return {
-                            variables: {
-                                login: e.channelLogin,
-                                withChannel: !!e.channelLogin,
-                                isLoggedIn: e.isLoggedIn
-                            }
+                    }, r.createElement(p._8, null, n, e, i))
+                }, t
+            }(r.Component)),
+            O = Object(a.compose)(Object(C.d)("GetBitsButtonContent"), Object(s.a)(T, {
+                name: "data",
+                props: function(e) {
+                    var t, n, i, r;
+                    return e.data && e.data.user && e.data.user.cheer && (t = Object(N.a)(e.data.user.cheer.emotes), n = e.data.user.id), e.data && e.data.currentUser ? (r = e.data.currentUser.bitsBalance, i = e.data.currentUser.bitsOffers) : e.data && e.data.bitsOffers && (i = e.data.bitsOffers), {
+                        loading: e.data && e.data.loading,
+                        bitsOffers: i,
+                        bitsBalance: r,
+                        bitsConfig: t,
+                        channelID: n
+                    }
+                },
+                skip: function(e) {
+                    return !e.channelLogin && !e.isInTopNav
+                },
+                options: function(e) {
+                    return {
+                        variables: {
+                            login: e.channelLogin,
+                            withChannel: !!e.channelLogin,
+                            isLoggedIn: e.isLoggedIn
                         }
                     }
-                })], t)
-            }(r.Component)),
-            O = (n("FVEF"), "get-bits-button__top-nav-button"),
-            R = function(e) {
+                }
+            }))(w),
+            R = (n("FVEF"), "get-bits-button__top-nav-button"),
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -20200,16 +20203,16 @@ webpackJsonp([36], {
                         var e = Object(m.d)("Get Bits", "Bits--GetBitsButton");
                         if (t.props.isInTopNav) {
                             var n = void 0;
-                            return n = t.props.bitsBalance && t.props.bitsBalance > 0 ? r.createElement(u.Q, null, t.props.bitsBalance) : r.createElement(u.Q, null, e), r.createElement("button", {
+                            return n = t.props.bitsBalance && t.props.bitsBalance > 0 ? r.createElement(p.Q, null, t.props.bitsBalance) : r.createElement(p.Q, null, e), r.createElement("button", {
                                 className: "get-bits-button",
-                                "data-test-selector": O
-                            }, t.renderBitsGem(), r.createElement(u._8, {
+                                "data-test-selector": R
+                            }, t.renderBitsGem(), r.createElement(p._8, {
                                 margin: {
                                     x: .5
                                 }
                             }, n))
                         }
-                        return r.createElement(u.v, {
+                        return r.createElement(p.v, {
                             dropdown: !0
                         }, e)
                     }, t.renderBitsGem = function() {
@@ -20222,9 +20225,9 @@ webpackJsonp([36], {
                         }, r.createElement("g", {
                             id: "Page-1",
                             stroke: "none",
-                            "stroke-width": "1",
+                            strokeWidth: "1",
                             fill: "none",
-                            "fill-rule": "evenodd"
+                            fillRule: "evenodd"
                         }, r.createElement("g", {
                             id: "icons/Bits",
                             fill: "#000000"
@@ -20259,7 +20262,7 @@ webpackJsonp([36], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return (this.props.channelLogin || this.props.isInTopNav) && (e = r.createElement(w, {
+                    return (this.props.channelLogin || this.props.isInTopNav) && (e = r.createElement(O, {
                         isLoggedIn: this.props.isLoggedIn,
                         channelLogin: this.props.channelLogin,
                         toggleShowTutorial: this.toggleShowTutorial,
@@ -20268,58 +20271,61 @@ webpackJsonp([36], {
                         isInTopNav: this.props.isInTopNav
                     })), r.createElement(h.a, {
                         onToggle: this.toggleBalloon
-                    }, this.renderButton(), r.createElement(u.q, {
-                        direction: u.r.BottomRight,
-                        size: u.s.Large
+                    }, this.renderButton(), r.createElement(p.q, {
+                        direction: p.r.BottomRight,
+                        size: p.s.Large
                     }, e))
                 }, t
             }(r.Component),
-            x = Object(p.compose)(Object(C.d)("GetBitsButton"))(R),
-            I = n("R5UN"),
-            D = function(e) {
+            I = Object(a.compose)(Object(C.d)("GetBitsButton"))(x),
+            D = n("R5UN"),
+            F = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.data && this.props.data.loading && !this.props.data.error;
-                    if (this.props.isInTopNav && (!this.props.firstPageLoaded || e)) return r.createElement(u._14, {
+                    if (this.props.isInTopNav && (!this.props.firstPageLoaded || e)) return r.createElement(p._14, {
                         width: 100,
                         height: 32,
                         overlay: !0
                     });
                     var t = this.props.data && this.props.data.currentUser ? this.props.data.currentUser.bitsBalance : null;
-                    return r.createElement(x, {
+                    return r.createElement(I, {
                         isLoggedIn: this.props.isLoggedIn,
                         channelLogin: this.props.channelLogin,
                         isInTopNav: this.props.isInTopNav,
                         bitsBalance: t
                     })
-                }, t = i.__decorate([Object(o.a)(I, {
-                    skip: function(e) {
-                        return !e.isLoggedIn || !e.isInTopNav || !e.firstPageLoaded
+                }, t
+            }(r.Component),
+            P = Object(a.compose)(Object(s.a)(D, {
+                skip: function(e) {
+                    return !e.isLoggedIn || !e.isInTopNav || !e.firstPageLoaded
+                }
+            }), Object(l.a)(function(e) {
+                return {
+                    query: D,
+                    topic: e.data && e.data.currentUser ? Object(d.u)(e.data.currentUser.id) : "",
+                    skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser && e.isLoggedIn && e.isInTopNav && e.firstPageLoaded),
+                    type: c.PubsubMessageType.UserBitsBalanceUpdate,
+                    mutator: function(e, t) {
+                        return t.currentUser && (t.currentUser.bitsBalance = e.data.balance), t
                     }
-                }), Object(s.a)(function(e) {
-                    return {
-                        query: I,
-                        topic: e.data && e.data.currentUser ? Object(c.u)(e.data.currentUser.id) : "",
-                        skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser && e.isLoggedIn && e.isInTopNav && e.firstPageLoaded),
-                        type: l.PubsubMessageType.UserBitsBalanceUpdate,
-                        mutator: function(e, t) {
-                            return t.currentUser && (t.currentUser.bitsBalance = e.data.balance), t
-                        }
-                    }
-                })], t)
-            }(r.Component);
-        var F = Object(a.b)(function(e) {
+                }
+            }))(F);
+        var U = Object(o.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded,
-                isLoggedIn: Object(d.d)(e)
+                isLoggedIn: Object(u.d)(e)
             }
-        })(D);
+        })(P);
         n.d(t, !1, function() {
-            return D
-        }), n.d(t, "a", function() {
             return F
+        }), n.d(t, !1, function() {
+            return P
+        }), n.d(t, "a", function() {
+            return U
         })
     },
     N5sm: function(e, t) {
@@ -20475,7 +20481,6 @@ webpackJsonp([36], {
             e[e.UserMenu = 1] = "UserMenu", e[e.TypedCommand = 2] = "TypedCommand"
         }(i || (i = {}))
     },
-    OLKT: function(e, t) {},
     OcEY: function(e, t) {
         var n = {
             kind: "Document",
@@ -21292,6 +21297,7 @@ webpackJsonp([36], {
     },
     PPK2: function(e, t) {},
     Q8Dy: function(e, t) {},
+    QAz8: function(e, t) {},
     QPF3: function(e, t, n) {
         "use strict";
         t.a = function() {
@@ -22892,8 +22898,8 @@ webpackJsonp([36], {
                 }, t
             }(r.Component)),
             H = n("7miU"),
-            G = n("n9f8"),
-            z = function(e) {
+            z = n("n9f8"),
+            G = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.markAllWhispersAsRead = function() {
@@ -22936,7 +22942,7 @@ webpackJsonp([36], {
                             x: 1
                         }
                     }, t)))
-                }, t = i.__decorate([Object(w.a)(G, {
+                }, t = i.__decorate([Object(w.a)(z, {
                     name: "markAllWhispersAsRead"
                 })], t)
             }(r.Component),
@@ -23205,7 +23211,7 @@ webpackJsonp([36], {
                         size: g.s.Small,
                         direction: g.r.BottomRight,
                         offsetX: "0.5rem"
-                    }, r.createElement(z, {
+                    }, r.createElement(G, {
                         onMarkAllMessagesRead: this.onMarkAllMessagesRead
                     }))), r.createElement(g.w, {
                         ariaLabel: Object(f.d)("Minimize", "WhisperThreadsBox"),
@@ -24168,10 +24174,10 @@ webpackJsonp([36], {
             He = se.a.wrap(function() {
                 return n.e(44).then(n.bind(null, "35Zp"))
             }, "ChannelFollowersPage"),
-            Ge = se.a.wrap(function() {
+            ze = se.a.wrap(function() {
                 return n.e(43).then(n.bind(null, "ztSx"))
             }, "ChannelFollowingPage"),
-            ze = se.a.wrap(function() {
+            Ge = se.a.wrap(function() {
                 return n.e(31).then(n.bind(null, "oFVJ"))
             }, "ChannelPage"),
             qe = se.a.wrap(function() {
@@ -24478,7 +24484,7 @@ webpackJsonp([36], {
                         component: st
                     }), r.createElement(oe.d, {
                         path: "/:channelName",
-                        component: ze,
+                        component: Ge,
                         exact: !0
                     }), r.createElement(oe.d, {
                         path: "/:channelName/report",
@@ -24512,7 +24518,7 @@ webpackJsonp([36], {
                         component: He
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/following",
-                        component: Ge
+                        component: ze
                     }), r.createElement(oe.d, {
                         path: "/:channelLogin/inbox",
                         component: st
@@ -24521,10 +24527,10 @@ webpackJsonp([36], {
                         component: st
                     }), r.createElement(oe.d, {
                         path: "/:channelName/p/:entityID",
-                        component: ze
+                        component: Ge
                     }), r.createElement(oe.d, {
                         path: "/:channelName/rooms/:roomName",
-                        component: ze
+                        component: Ge
                     }), r.createElement(oe.d, {
                         path: "/:channelName/embed",
                         render: Ct
@@ -25100,7 +25106,7 @@ webpackJsonp([36], {
                     }
                 })], t)
             }(d.Component),
-            G = (n("H9qc"), function(e) {
+            z = (n("H9qc"), function(e) {
                 var t, n, i, r;
                 return e.title && (e.hitsCount && e.hitsCount > 0 ? t = Object(u.d)("more", "SearchResultSection") : e.totalHitsCount && e.totalHitsCount > 0 && (t = Object(u.d)("Show", "SearchResultSection")), void 0 !== e.totalHitsCount && (i = d.createElement(W._12, {
                     type: W._13.Brand,
@@ -25146,7 +25152,7 @@ webpackJsonp([36], {
                     className: "search-result-section__block"
                 }, n, r)
             }),
-            z = (n("oI0V"), function(e) {
+            G = (n("oI0V"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -25295,11 +25301,11 @@ webpackJsonp([36], {
                         "search-results-panel--closed": !this.props.isOpen,
                         "search-results-panel--filtered": this.props.currentCategory === O.a.Videos
                     };
-                    return e = this.props.currentCategory && null !== this.props.currentCategory ? d.createElement(z, {
+                    return e = this.props.currentCategory && null !== this.props.currentCategory ? d.createElement(G, {
                         title: this.getCategoryTitle(this.props.currentCategory),
                         showBack: !0,
                         onBackClick: this.onBackClick
-                    }) : d.createElement(z, {
+                    }) : d.createElement(G, {
                         title: Object(u.d)("Top Results", "SearchResultPanel__titlebar"),
                         showBack: !1
                     }), t = this.props.isWaiting ? d.createElement(W._10, {
@@ -25348,7 +25354,7 @@ webpackJsonp([36], {
                         }
                     }, d.createElement(W.Y, null, s))), this.getResultSection("games-section", O.a.Games, this.gameHeaderSelect, this.props.gameResults, i.length, i, n, t), this.getResultSection("live-section", O.a.Channels, this.liveHeaderSelect, this.props.liveResults, s.length, e, n, t), this.getResultSection("channels-section", O.a.Users, this.userHeaderSelect, this.props.userResults, r.length, r, n, t), this.getResultSection("videos-section", O.a.Videos, this.videoHeaderSelect, this.props.videoResults, o.length, o, n, t), this.getResultSection("communities-section", O.a.Communities, this.communityHeaderSelect, this.props.communityResults, a.length, a, n, t), t.concat(n)
                 }, t.prototype.getResultSection = function(e, t, n, i, r, a, o, s) {
-                    var l = d.createElement(G, {
+                    var l = d.createElement(z, {
                         key: e,
                         totalHitsCount: i ? i.totalHits : 0,
                         hitsCount: r,
@@ -25553,7 +25559,7 @@ webpackJsonp([36], {
                         default:
                             return this.getNoResultsMessage()
                     }
-                    return d.createElement(G, null, t)
+                    return d.createElement(z, null, t)
                 }, t.prototype.getCategoryTitle = function(e) {
                     switch (e) {
                         case O.a.Games:
@@ -27998,7 +28004,7 @@ webpackJsonp([36], {
             W = "center-window__footer__text",
             V = "center-window__read-all",
             H = o.j.withCategory("onsite-notifications-center-window"),
-            G = function(e) {
+            z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -28157,7 +28163,7 @@ webpackJsonp([36], {
                     }))), this.renderUnreadNotificationsFooterElement())
                 }, t = i.__decorate([Object(f.d)("OnsiteNotificationsCenterWindow")], t)
             }(a.Component),
-            z = n("RH2O"),
+            G = n("RH2O"),
             q = n("Aj/L"),
             Q = n("RweG"),
             K = (n("MnLQ"), function(e) {
@@ -28414,7 +28420,7 @@ webpackJsonp([36], {
                     }
                 }])], t)
             }(a.Component);
-        var ee = Object(z.b)(function(e) {
+        var ee = Object(G.b)(function(e) {
             return {
                 currentUser: Object(q.c)(e)
             }
@@ -28806,7 +28812,7 @@ webpackJsonp([36], {
                         direction: F.r.BottomRight,
                         size: F.s.Large,
                         offsetX: "10px"
-                    }, a.createElement(G, {
+                    }, a.createElement(z, {
                         newNotificationsCount: this.state.newNotificationsCount,
                         hasInitiallyLoaded: this.listDataLoaded(),
                         data: e,
@@ -30185,7 +30191,7 @@ webpackJsonp([36], {
             P = n("ZJYd"),
             U = n("CFVp"),
             j = n("qe65"),
-            L = (n("OLKT"), function(e) {
+            L = (n("aysN"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
@@ -30304,7 +30310,7 @@ webpackJsonp([36], {
                     }))
                 }, t
             }(c.Component)),
-            A = (n("sgUC"), function(e) {
+            A = (n("pzcm"), function(e) {
                 var t = [],
                     n = [],
                     i = null;
@@ -30532,8 +30538,8 @@ webpackJsonp([36], {
                     color: v.K.Alt2
                 }, n), a)
             }),
-            G = n("CSlQ"),
-            z = n("aqNN"),
+            z = n("CSlQ"),
+            G = n("aqNN"),
             q = (n("6Rwu"), "storage.wateb.agreedToWatebTerms.v1"),
             Q = "bits-show-wateb-terms",
             K = "bits-agree-wateb-terms";
@@ -30774,7 +30780,7 @@ webpackJsonp([36], {
                         requestRef: g.c.ShowAdButton,
                         channelID: this.props.data.user.id
                     })
-                }, t = l.__decorate([Object(m.a)(z, {
+                }, t = l.__decorate([Object(m.a)(G, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -30787,7 +30793,7 @@ webpackJsonp([36], {
                     }
                 })], t)
             }(c.Component),
-            Y = Object(E.compose)(Object(G.d)("BitsBuyCard", {
+            Y = Object(E.compose)(Object(z.d)("BitsBuyCard", {
                 autoReportInteractive: !0
             }))($);
 
@@ -32118,6 +32124,7 @@ webpackJsonp([36], {
         }
     },
     Zifq: function(e, t) {},
+    a2ud: function(e, t) {},
     aBcb: function(e, t) {
         var n = {
             kind: "Document",
@@ -32331,278 +32338,6 @@ webpackJsonp([36], {
     },
     adox: function(e, t) {},
     afun: function(e, t) {},
-    annQ: function(e, t, n) {
-        var i = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "GetBitsButton_Bits"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "isLoggedIn"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Boolean"
-                            }
-                        }
-                    }
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "withChannel"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Boolean"
-                            }
-                        }
-                    }
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "login"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "bitsOffers"
-                        },
-                        arguments: [],
-                        directives: [{
-                            kind: "Directive",
-                            name: {
-                                kind: "Name",
-                                value: "skip"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "if"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "isLoggedIn"
-                                    }
-                                }
-                            }]
-                        }],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "bitsOffersFragment"
-                                },
-                                directives: []
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [{
-                            kind: "Directive",
-                            name: {
-                                kind: "Name",
-                                value: "include"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "if"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "isLoggedIn"
-                                    }
-                                }
-                            }]
-                        }],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "idSHA1"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "bitsBalance"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "bitsOffers"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "FragmentSpread",
-                                        name: {
-                                            kind: "Name",
-                                            value: "bitsOffersFragment"
-                                        },
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                }
-                            }
-                        }],
-                        directives: [{
-                            kind: "Directive",
-                            name: {
-                                kind: "Name",
-                                value: "include"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "if"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "withChannel"
-                                    }
-                                }
-                            }]
-                        }],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "cheer"
-                                },
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 748
-            }
-        };
-        i.loc.source = {
-            body: '# Documentation about how to use GraphQL is located in the Data Access Guide:\n# https://git-aws.internal.justin.tv/pages/twilight/twilight-docs/docs/guides/data-access.html\n# Additionally use the GraphQL explorer (https://api.twitch.tv/gql/explore) to browse\n# available GraphQL data and construct your query.\n#import "twilight/features/bits/models/bits-offers-fragment.gql"\n#import "twilight/features/chat/models/cheer-fragment.gql"\nquery GetBitsButton_Bits($isLoggedIn: Boolean! $withChannel: Boolean! $login: String!) {\nbitsOffers @skip(if: $isLoggedIn) {\n...bitsOffersFragment\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\nidSHA1\nbitsBalance\nbitsOffers {\n...bitsOffersFragment\n}\n}\nuser(login: $login) @include(if: $withChannel) {\nid\n...cheer\n}\n}',
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        var r = {};
-
-        function a(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !r[t] && (r[t] = !0, !0)
-            })
-        }
-        i.definitions = i.definitions.concat(a(n("OcEY").definitions)), i.definitions = i.definitions.concat(a(n("576g").definitions)), e.exports = i
-    },
     aqNN: function(e, t, n) {
         var i = {
             kind: "Document",
@@ -32913,6 +32648,7 @@ webpackJsonp([36], {
         })), e.exports = i
     },
     arZ9: function(e, t) {},
+    aysN: function(e, t) {},
     bBGx: function(e, t) {},
     bkpq: function(e, t, n) {
         "use strict";
@@ -34617,7 +34353,6 @@ webpackJsonp([36], {
         })
     },
     f8UT: function(e, t) {},
-    fHoP: function(e, t) {},
     fS5P: function(e, t) {},
     fc0G: function(e, t, n) {
         "use strict";
@@ -34826,7 +34561,7 @@ webpackJsonp([36], {
         ! function(e) {
             e.AnimatedThumbnails = "animated_thumbnails", e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding"
         }(T || (T = {}));
-        var G = {
+        var z = {
             allowfullscreen: !0,
             externalfullscreen: !1,
             autoplay: !0,
@@ -34845,14 +34580,14 @@ webpackJsonp([36], {
             oauth_token: ""
         };
 
-        function z() {
+        function G() {
             return !!window.Twitch && !!window.Twitch.Player
         }
         var q = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = o.j.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
-                        z() ? (n.setState({
+                        G() ? (n.setState({
                             canInitializePlayer: !0
                         }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
                     }, n.attachRef = function(e) {
@@ -34937,17 +34672,17 @@ webpackJsonp([36], {
                     }, n.updatePlayerTrackingDataFromProps = function() {
                         n.updatePlayerTrackingData(n.props)
                     }, n.updatePlayerType = function(e) {
-                        var t = e || G.player;
+                        var t = e || z.player;
                         n.player && n.playerType !== t && (n.player.setPlayerType(t), n.playerType = t)
                     }, n.maybeRecordClip = function() {
                         n.player && n.state.playerInitialized && n.player.recordClip()
                     }, n.playerBuffering = n.registerBufferingEvent(), n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
-                        canInitializePlayer: z(),
+                        canInitializePlayer: G(),
                         playerInitialized: !1,
                         isFullScreen: !1,
                         playerPaused: !1,
                         playerRefID: Object(j.a)()
-                    }, n.playerType = t.playerTypeOverride || G.player, n.lastSetChannel = t.channelLogin, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
+                    }, n.playerType = t.playerTypeOverride || z.player, n.lastSetChannel = t.channelLogin, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), o.n.eventEmitter.addListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), window.__playerScriptChunk && !t.tagInjected) {
@@ -35004,7 +34739,7 @@ webpackJsonp([36], {
                 }, t.prototype.trackMiniPlayerAction = function(e, t) {
                     this.player && this.state.playerInitialized && this.player.trackMiniPlayerAction(e, t)
                 }, t.prototype.initializePlayer = function() {
-                    var e = i.__assign({}, G, {
+                    var e = i.__assign({}, z, {
                         showtheatre: !this.props.disableTheatreButton,
                         allowfullscreen: !this.props.disableFullscreen,
                         externalfullscreen: this.props.fullscreen.supported(),
@@ -37312,7 +37047,6 @@ webpackJsonp([36], {
             Online: "ONLINE"
         }
     },
-    lGVF: function(e, t) {},
     lK86: function(e, t) {
         var n = {
             kind: "Document",
@@ -37456,6 +37190,278 @@ webpackJsonp([36], {
                 return e !== t
             }) || null
         }
+    },
+    m5Kq: function(e, t, n) {
+        var i = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "GetBitsButton_Bits"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "isLoggedIn"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
+                            }
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "withChannel"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
+                            }
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "login"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "bitsOffers"
+                        },
+                        arguments: [],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "skip"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "isLoggedIn"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "bitsOffersFragment"
+                                },
+                                directives: []
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "include"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "isLoggedIn"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "idSHA1"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "bitsBalance"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "bitsOffers"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "FragmentSpread",
+                                        name: {
+                                            kind: "Name",
+                                            value: "bitsOffersFragment"
+                                        },
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                }
+                            }
+                        }],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "include"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "withChannel"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "cheer"
+                                },
+                                directives: []
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 748
+            }
+        };
+        i.loc.source = {
+            body: '# Documentation about how to use GraphQL is located in the Data Access Guide:\n# https://git-aws.internal.justin.tv/pages/twilight/twilight-docs/docs/guides/data-access.html\n# Additionally use the GraphQL explorer (https://api.twitch.tv/gql/explore) to browse\n# available GraphQL data and construct your query.\n#import "twilight/features/bits/models/bits-offers-fragment.gql"\n#import "twilight/features/chat/models/cheer-fragment.gql"\nquery GetBitsButton_Bits($isLoggedIn: Boolean! $withChannel: Boolean! $login: String!) {\nbitsOffers @skip(if: $isLoggedIn) {\n...bitsOffersFragment\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\nidSHA1\nbitsBalance\nbitsOffers {\n...bitsOffersFragment\n}\n}\nuser(login: $login) @include(if: $withChannel) {\nid\n...cheer\n}\n}',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var r = {};
+
+        function a(e) {
+            return e.filter(function(e) {
+                if ("FragmentDefinition" !== e.kind) return !0;
+                var t = e.name.value;
+                return !r[t] && (r[t] = !0, !0)
+            })
+        }
+        i.definitions = i.definitions.concat(a(n("OcEY").definitions)), i.definitions = i.definitions.concat(a(n("576g").definitions)), e.exports = i
     },
     mRH2: function(e, t) {
         var n = {
@@ -39114,6 +39120,7 @@ webpackJsonp([36], {
             return 300 === t ? n = 300 : 96 !== t && 80 !== t || (n = 150), "https://static-cdn.jtvnw.net/user-default-pictures/" + e.urlSlug + "-profile_image-" + n + "x" + n + ".jpg"
         }
     },
+    pzcm: function(e, t) {},
     q7Ag: function(e, t, n) {
         "use strict";
 
@@ -39655,7 +39662,6 @@ webpackJsonp([36], {
             return a
         })
     },
-    sgUC: function(e, t) {},
     sq7i: function(e, t) {
         var n = {
             kind: "Document",
@@ -41379,4 +41385,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.subs-6a1bac4f57767b87b06674a02cf8cf4c.js.map
+//# sourceMappingURL=pages.subs-e47cfcae3b99dab8a76935c18e9d4b12.js.map

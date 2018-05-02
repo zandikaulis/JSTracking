@@ -1827,7 +1827,7 @@ webpackJsonp([51], {
                     }, Object(g.d)("Publishing Clip!", "ClipsPostEditLoading")), o.createElement(O._8, {
                         display: O.R.InlineBlock
                     }, this.state.percent, "%")), o.createElement(O._18, {
-                        animationDirection: O._19.Down,
+                        animationDirection: O._19.Up,
                         animationDuration: 50,
                         mask: !0
                     }), o.createElement(O._8, {
@@ -6107,4 +6107,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-ba0b47c7acf79904e0adce57fa90ee1e.js.map
+//# sourceMappingURL=sites.clips.pages.create-d49c2bd8bb39620ac0a35905865e7020.js.map

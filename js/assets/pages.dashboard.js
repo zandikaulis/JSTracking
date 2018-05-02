@@ -2207,8 +2207,7 @@ webpackJsonp([46], {
                         exact: !0,
                         external: !this.useNewRevenueSettings
                     }, Y), Object(g.d)("Channel", "SettingsDashboardNav"))), this.props.permissions.isOwner && f.createElement("li", null, f.createElement(M.a, m.__assign({
-                        linkTo: "/" + this.props.channelName + "/dashboard/permissions",
-                        external: !0
+                        linkTo: "/" + this.props.channelName + "/dashboard/permissions"
                     }, B), Object(g.d)("Permissions", "DashboardNav"))), this.canSeeAutoModSettings && f.createElement(E._2, {
                         position: E._15.Relative
                     }, f.createElement("li", {
@@ -2506,20 +2505,23 @@ webpackJsonp([46], {
                 return n.e(87).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
             Se = b.a.wrap(function() {
+                return n.e(120).then(n.bind(null, "8uM1"))
+            }, "PermissionsPage"),
+            we = b.a.wrap(function() {
                 return n.e(100).then(n.bind(null, "/fDj"))
             }, "RedirectToLatestArchiveHighlighter"),
-            we = b.a.wrap(function() {
+            xe = b.a.wrap(function() {
                 return n.e(90).then(n.bind(null, "tVPZ"))
             }, "StreamSummaryPage"),
-            xe = b.a.wrap(function() {
+            _e = b.a.wrap(function() {
                 return n.e(91).then(n.bind(null, "a9Y8"))
             }, "VideoManagerPage"),
-            _e = function(e) {
+            je = function(e) {
                 var t = e.match.params.pageName,
                     n = t ? "/" + encodeURIComponent(t) : "";
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.channelName) + "/dashboard" + n), null
             },
-            je = function(e) {
+            Ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2612,7 +2614,7 @@ webpackJsonp([46], {
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/stream-summary",
                             render: function() {
-                                return f.createElement(we, {
+                                return f.createElement(xe, {
                                     channelName: e.props.match.params.channelName,
                                     streamSummaryQuery: t
                                 })
@@ -2623,10 +2625,10 @@ webpackJsonp([46], {
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/extensions",
                             render: e.renderExtensionsManagerPage
-                        }), e.props.isStaff && f.createElement(h.c, {
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties/:selectedID",
                             component: ce
-                        }), e.props.isStaff && f.createElement(h.c, {
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties",
                             component: ce
                         }), f.createElement(h.c, {
@@ -2648,20 +2650,23 @@ webpackJsonp([46], {
                             path: "/:channelName/dashboard/settings",
                             component: ge
                         }), f.createElement(h.c, {
+                            path: "/:channelName/dashboard/permissions",
+                            component: Se
+                        }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/:pageName?",
-                            render: _e
+                            render: je
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/schedule/:videoID",
-                            component: xe
+                            component: _e
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/edit/:videoID",
-                            component: xe
+                            component: _e
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/publish/:videoID",
-                            component: xe
+                            component: _e
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/appeal/:videoID",
-                            component: xe
+                            component: _e
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/clips/channel",
                             component: le
@@ -2673,7 +2678,7 @@ webpackJsonp([46], {
                             component: ye
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/highlighter",
-                            component: Se
+                            component: we
                         }), f.createElement(h.c, {
                             path: "/:creatorLogin/manager/collections/:collectionID",
                             component: de
@@ -2682,7 +2687,7 @@ webpackJsonp([46], {
                             component: me
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager",
-                            component: xe
+                            component: _e
                         })))))
                     }) : f.createElement(y.a, null)
                 }, Object.defineProperty(t.prototype, "showNewDashboardSettings", {
@@ -2693,7 +2698,7 @@ webpackJsonp([46], {
                     configurable: !0
                 }), t
             }(f.Component);
-        var Ne = Object(r.compose)(Object(i.a)(d, {
+        var Me = Object(r.compose)(Object(i.a)(d, {
             options: function(e) {
                 return {
                     variables: {
@@ -2717,9 +2722,9 @@ webpackJsonp([46], {
                 collapseSideNav: u.r,
                 expandSideNav: u.y
             }, e)
-        }))(je);
+        }))(Ne);
         n.d(t, "DashboardRoot", function() {
-            return Ne
+            return Me
         })
     },
     "Eoz/": function(e, t, n) {
@@ -5617,4 +5622,4 @@ webpackJsonp([46], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-3e38e6b1d55126a90dc56ee444071a78.js.map
+//# sourceMappingURL=pages.dashboard-22ad9afb9fcd4fccd6657146da553f39.js.map

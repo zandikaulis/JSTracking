@@ -636,16 +636,16 @@ webpackJsonp([103], {
                     login: e.login
                 })), l.createElement(S.a, {
                     bitsConfig: e.bitsConfig,
-                    closeAllBits: L,
-                    onClose: L,
-                    trackBitsCardInteraction: L,
+                    closeAllBits: j,
+                    onClose: j,
+                    trackBitsCardInteraction: j,
                     location: T.b.BitsLandingPage,
                     hideWateb: !0,
                     fullsize: !0
                 }))
             }),
-            L = function() {},
-            j = n("W/WQ"),
+            j = function() {},
+            L = n("W/WQ"),
             W = (n("5Rtq"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -707,7 +707,7 @@ webpackJsonp([103], {
                     })))))))
                 }, t = c.__decorate([Object(g.d)("Bits"), Object(p.a)({
                     location: h.PageviewLocation.BitsLandingPage
-                }), Object(m.a)(j, {
+                }), Object(m.a)(L, {
                     name: "data",
                     skip: function(e) {
                         return !e.isLoggedIn
@@ -740,7 +740,6 @@ webpackJsonp([103], {
             }(a || (a = {}))
     },
     Kk2y: function(e, t) {},
-    OLKT: function(e, t) {},
     OcEY: function(e, t) {
         var n = {
             kind: "Document",
@@ -1188,16 +1187,16 @@ webpackJsonp([103], {
             }(l.Component),
             I = n("jxGs"),
             N = n("3iBR"),
-            L = n("iydZ"),
-            j = n("ZJYd"),
+            j = n("iydZ"),
+            L = n("ZJYd"),
             W = n("CFVp"),
             P = n("qe65"),
-            R = (n("OLKT"), function(e) {
+            R = (n("aysN"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            a = Object(j.b)({
+                            a = Object(L.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -1222,19 +1221,19 @@ webpackJsonp([103], {
                         })
                     }
                     var t = null;
-                    Object(j.c)(this.props.offer) ? t = l.createElement(b._8, {
+                    Object(L.c)(this.props.offer) ? t = l.createElement(b._8, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                         "data-test-selector": "first-time-promo-form"
                     }, l.createElement(b.Q, {
                         type: b._49.Strong,
                         fontSize: b.V.Size6
-                    }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(j.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === I.c ? t = l.createElement(b._8, {
+                    }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(L.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === I.c ? t = l.createElement(b._8, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                         "data-test-selector": "black-friday-promo-form"
                     }, l.createElement(b.Q, {
                         type: b._49.Strong,
                         fontSize: b.V.Size6
-                    }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(j.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === I.d && (t = l.createElement(b._8, {
+                    }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(L.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === I.d && (t = l.createElement(b._8, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                         "data-test-selector": "prime-promo-promo-form"
                     }, l.createElement(b.Q, {
@@ -1249,7 +1248,7 @@ webpackJsonp([103], {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var a = null;
-                    (Object(j.c)(this.props.offer) || Object(j.e)(this.props.offer)) && (a = l.createElement("div", {
+                    (Object(L.c)(this.props.offer) || Object(L.e)(this.props.offer)) && (a = l.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text",
                         "data-test-selector": "one-per-account-form"
                     }, Object(u.d)("one per account", "Bits--BuyCard")));
@@ -1306,12 +1305,12 @@ webpackJsonp([103], {
                     }, n.map(function(e) {
                         return l.createElement(P.a, {
                             key: e.bits,
-                            sources: Object(L.b)(e, 2, !1)
+                            sources: Object(j.b)(e, 2, !1)
                         })
                     }))
                 }, t
             }(l.Component)),
-            D = (n("sgUC"), function(e) {
+            D = (n("pzcm"), function(e) {
                 var t = [],
                     n = [],
                     a = null;
@@ -1331,8 +1330,8 @@ webpackJsonp([103], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        s = Object(j.d)(i),
-                        c = Object(j.c)(i),
+                        s = Object(L.d)(i),
+                        c = Object(L.c)(i),
                         d = i.type === I.a;
                     c && !e.hidePromos ? t.push(o) : s && !c ? t.push(o) : d && !e.hideWateb ? a = o : d || s || n.push(o)
                 }), e.fullsize ? l.createElement(b._8, {
@@ -1540,10 +1539,10 @@ webpackJsonp([103], {
                 }, n), r)
             }),
             Q = n("CSlQ"),
-            K = n("aqNN"),
-            z = (n("6Rwu"), "storage.wateb.agreedToWatebTerms.v1"),
-            G = "bits-show-wateb-terms",
-            V = "bits-agree-wateb-terms";
+            z = n("aqNN"),
+            G = (n("6Rwu"), "storage.wateb.agreedToWatebTerms.v1"),
+            V = "bits-show-wateb-terms",
+            K = "bits-agree-wateb-terms";
         ! function(e) {
             e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
         }(x || (x = {}));
@@ -1555,7 +1554,7 @@ webpackJsonp([103], {
                         watebError: null,
                         bitsAwarded: 0,
                         showWatebTerms: !1,
-                        agreedToWatebTerms: u.l.get(z, !1)
+                        agreedToWatebTerms: u.l.get(G, !1)
                     }, t.onBuyPopupClose = function(e) {
                         Object(w.a)(e, function() {
                             t.props.data && t.props.data.refetch()
@@ -1576,7 +1575,7 @@ webpackJsonp([103], {
                                 x: 2
                             },
                             textAlign: b._45.Left,
-                            "data-a-target": G
+                            "data-a-target": V
                         }, n), l.createElement(b._35, {
                             margin: {
                                 top: 2,
@@ -1623,10 +1622,10 @@ webpackJsonp([103], {
                         }, l.createElement(b.v, {
                             size: b.z.Small,
                             onClick: t.onAgreeToWatebTerms,
-                            "data-a-target": V
+                            "data-a-target": K
                         }, Object(u.d)("Continue", "Bits--Watch-Ad-Terms"))))
                     }, t.onAgreeToWatebTerms = function() {
-                        u.l.set(z, !0), t.setState({
+                        u.l.set(G, !0), t.setState({
                             agreedToWatebTerms: !0,
                             showWatebTerms: !1
                         }), t.showWatchAdModal()
@@ -1781,7 +1780,7 @@ webpackJsonp([103], {
                         requestRef: g.c.ShowAdButton,
                         channelID: this.props.data.user.id
                     })
-                }, t = c.__decorate([Object(p.a)(K, {
+                }, t = c.__decorate([Object(p.a)(z, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -2197,6 +2196,7 @@ webpackJsonp([103], {
             return !i[t] && (i[t] = !0, !0)
         })), e.exports = a
     },
+    aysN: function(e, t) {},
     bPV6: function(e, t) {},
     iydZ: function(e, t, n) {
         "use strict";
@@ -2469,6 +2469,7 @@ webpackJsonp([103], {
             return u
         })
     },
+    pzcm: function(e, t) {},
     q8Cw: function(e, t) {},
     qe65: function(e, t, n) {
         "use strict";
@@ -2508,7 +2509,6 @@ webpackJsonp([103], {
             return l
         })
     },
-    sgUC: function(e, t) {},
     x583: function(e, t) {},
     zzpv: function(e, t) {
         var n = {
@@ -2595,4 +2595,4 @@ webpackJsonp([103], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-532a50bae6f809131f65ca91becc7392.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-332a772820bfb65367bfd1f15d9bf758.js.map

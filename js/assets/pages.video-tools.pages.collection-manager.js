@@ -353,7 +353,9 @@ webpackJsonp([105], {
                     return r.createElement(g.a, null, r.createElement(k._8, null, r.createElement(k._14, {
                         height: 75,
                         width: 133
-                    })), r.createElement(C.a, null, r.createElement(k.Q, null, r.createElement(k._14, {
+                    })), r.createElement(C.a, {
+                        onClick: this.noOp
+                    }, r.createElement(k.Q, null, r.createElement(k._14, {
                         width: 600,
                         lineCount: 1
                     }), r.createElement(k._14, {
@@ -375,13 +377,13 @@ webpackJsonp([105], {
                         width: 20,
                         lineCount: 1
                     })))))
-                }, t
+                }, t.prototype.noOp = function() {}, t
             }(r.PureComponent),
             _ = n("CIox"),
             y = n("7vx8"),
             E = n("jXn2"),
-            S = n("F0UT"),
-            O = n("1myv"),
+            O = n("F0UT"),
+            S = n("1myv"),
             D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -432,7 +434,7 @@ webpackJsonp([105], {
                 return o.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(k.Y, null, r.createElement(k.L, {
                         cols: 4
-                    }, r.createElement(S.a, {
+                    }, r.createElement(O.a, {
                         disabled: !this.props.context,
                         onSubmit: this.onCreateButtonClickHandler,
                         callToAction: Object(a.d)("Create Collection", "CollectionCreator"),
@@ -440,11 +442,11 @@ webpackJsonp([105], {
                     })))
                 }, t
             }(r.Component),
-            T = Object(s.compose)(Object(y.a)(O, {
+            T = Object(s.compose)(Object(y.a)(S, {
                 name: "createCollection"
             }))(Object(_.f)(D)),
-            I = n("rvrg"),
-            w = n("I9kX");
+            w = n("rvrg"),
+            I = n("I9kX");
         ! function(e) {
             e.CollectionsUnavailableError = "CollectionsUnavailableError", e.CreateCollection = "CreateCollection", e.noCollectionsCTA = "noCollectionsCTA"
         }(i || (i = {}));
@@ -503,7 +505,7 @@ webpackJsonp([105], {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(I.a, {
+                        }, r.createElement(w.a, {
                             collection: e.node,
                             onDelete: t.refetchCreatorCollection
                         }))
@@ -539,7 +541,7 @@ webpackJsonp([105], {
                     }, Object(a.d)("Something went wrong loading your collections. Please try again.", "CollectionEditorPagePresentation"))
                 }, t
             }(r.Component),
-            j = Object(s.compose)(Object(s.graphql)(w, {
+            j = Object(s.compose)(Object(s.graphql)(I, {
                 options: function(e) {
                     return {
                         variables: {
@@ -553,7 +555,7 @@ webpackJsonp([105], {
                             var t = e.data.user && e.data.user.collections ? e.data.user.collections.edges : [],
                                 n = t.length > 0 ? t[t.length - 1].cursor : void 0;
                             return e.data.fetchMore({
-                                query: w,
+                                query: I,
                                 variables: o.__assign({}, e.data.variables, {
                                     after: n
                                 }),
@@ -604,14 +606,14 @@ webpackJsonp([105], {
                 })
             },
             F = n("L2R7"),
-            M = function(e) {
+            L = function(e) {
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections"), null
             },
-            L = function(e) {
-                return Object(F.a)() ? r.createElement(x, o.__assign({}, e)) : r.createElement(M, o.__assign({}, e))
+            M = function(e) {
+                return Object(F.a)() ? r.createElement(x, o.__assign({}, e)) : r.createElement(L, o.__assign({}, e))
             };
         n.d(t, "CollectionManagerPage", function() {
-            return L
+            return M
         })
     },
     F0UT: function(e, t, n) {
@@ -646,7 +648,7 @@ webpackJsonp([105], {
                         return t.props.onSubmit(t.state.collectionTitle)
                     })
                 }, t.onKeyDown = function(e) {
-                    e.keyCode !== l.a.Enter || t.canSaveTitle() || t.onSubmit()
+                    e.keyCode === l.a.Enter && t.canSaveTitle() && t.onSubmit()
                 }, t
             }
             return o.__extends(t, e), t.prototype.render = function() {
@@ -1124,93 +1126,94 @@ webpackJsonp([105], {
             s = n("7vx8"),
             d = n("oIkB"),
             u = n("V5M+"),
-            p = n("+8VM"),
-            m = n("rvrg"),
-            h = n("Odds");
+            p = n("I9kX"),
+            m = n("+8VM"),
+            h = n("rvrg"),
+            f = n("Odds");
         ! function(e) {
             e[e.CancelButton = 0] = "CancelButton", e[e.ConfirmButton = 1] = "ConfirmButton", e[e.ErrorAlert = 2] = "ErrorAlert"
         }(i || (i = {}));
-        var f = function(e) {
+        var g = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.collection,
                         t = null;
-                    return this.props.error && (t = r.createElement(h.e, {
-                        delay: h.f.Short,
-                        type: h.j.BounceIn,
+                    return this.props.error && (t = r.createElement(f.e, {
+                        delay: f.f.Short,
+                        type: f.j.BounceIn,
                         enabled: !0
-                    }, r.createElement(h._35, {
+                    }, r.createElement(f._35, {
                         border: !0,
                         margin: {
                             bottom: 1
                         },
                         padding: 1,
                         fullWidth: !0
-                    }, r.createElement(h.Q, {
+                    }, r.createElement(f.Q, {
                         bold: !0,
-                        color: h.K.Error,
+                        color: f.K.Error,
                         "data-test-selector": i.ErrorAlert
-                    }, this.props.error)))), r.createElement(h.e, {
-                        type: h.j.FadeIn,
-                        delay: h.f.Medium,
-                        duration: h.g.Medium,
+                    }, this.props.error)))), r.createElement(f.e, {
+                        type: f.j.FadeIn,
+                        delay: f.f.Medium,
+                        duration: f.g.Medium,
                         enabled: !0
-                    }, r.createElement(h._35, {
-                        background: h.n.Base,
+                    }, r.createElement(f._35, {
+                        background: f.n.Base,
                         padding: {
                             x: 3,
                             top: 2,
                             bottom: 3
                         }
-                    }, r.createElement(h._2, {
+                    }, r.createElement(f._2, {
                         padding: {
                             bottom: 1
                         }
-                    }, r.createElement(h.Q, {
-                        fontSize: h.V.Size3
-                    }, Object(c.d)("Delete Collection", "DeleteCollectionModal"))), r.createElement(h.Q, {
-                        fontSize: h.V.Size6
-                    }, Object(c.d)("Are you sure you want to delete this collection?", "DeleteCollectionModal")), r.createElement(h.Q, {
-                        fontSize: h.V.Size6
-                    }, Object(c.d)("This action cannot be undone. ", "DeleteCollectionModal")), r.createElement(h._8, {
+                    }, r.createElement(f.Q, {
+                        fontSize: f.V.Size3
+                    }, Object(c.d)("Delete Collection", "DeleteCollectionModal"))), r.createElement(f.Q, {
+                        fontSize: f.V.Size6
+                    }, Object(c.d)("Are you sure you want to delete this collection?", "DeleteCollectionModal")), r.createElement(f.Q, {
+                        fontSize: f.V.Size6
+                    }, Object(c.d)("This action cannot be undone. ", "DeleteCollectionModal")), r.createElement(f._8, {
                         padding: {
                             y: 2
                         }
-                    }, r.createElement(m.a, {
+                    }, r.createElement(h.a, {
                         collection: e,
                         hideOptionsMenu: !0
-                    })), t, r.createElement(h._8, {
-                        display: h.R.Flex,
-                        flexDirection: h.T.Row,
-                        justifyContent: h._7.Center
-                    }, r.createElement(h._8, {
+                    })), t, r.createElement(f._8, {
+                        display: f.R.Flex,
+                        flexDirection: f.T.Row,
+                        justifyContent: f._7.Center
+                    }, r.createElement(f._8, {
                         margin: {
                             x: .5
                         }
-                    }, r.createElement(h.v, {
+                    }, r.createElement(f.v, {
                         "data-test-selector": i.CancelButton,
                         onClick: this.props.onCancel,
-                        type: h.B.Hollow
-                    }, Object(c.d)("Cancel", "DeleteCollectionModal"))), r.createElement(h._8, {
+                        type: f.B.Hollow
+                    }, Object(c.d)("Cancel", "DeleteCollectionModal"))), r.createElement(f._8, {
                         margin: {
                             x: .5
                         }
-                    }, r.createElement(h.v, {
+                    }, r.createElement(f.v, {
                         "data-test-selector": i.ConfirmButton,
                         onClick: this.props.onDeleteRequest,
-                        type: h.B.Alert
-                    }, Object(c.d)("Delete", "DeleteCollectionModal")))), r.createElement(p.a, {
+                        type: f.B.Alert
+                    }, Object(c.d)("Delete", "DeleteCollectionModal")))), r.createElement(m.a, {
                         closeOnBackdropClick: !0
                     })))
                 }, t
             }(r.Component),
-            g = n("e6eF");
+            v = n("e6eF");
         n.d(t, "a", function() {
-            return k
+            return b
         });
-        var v = function(e) {
+        var C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.defaultUserError = Object(c.d)("Unable to delete this collection, try again later.", "DeleteCollectionModal"), t.onCancelHandler = function() {
@@ -1229,8 +1232,15 @@ webpackJsonp([105], {
                                             }), [2];
                                             t.label = 1;
                                         case 1:
-                                            return t.trys.push([1, 3, , 4]), [4, this.props.onDeleteRequest(Object(d.a)({
+                                            return t.trys.push([1, 3, , 4]), [4, this.props.onDeleteRequest(o.__assign({}, Object(d.a)({
                                                 collectionID: this.props.collection.id
+                                            }), {
+                                                refetchQueries: [{
+                                                    query: p,
+                                                    variables: {
+                                                        creatorLogin: this.props.collection.owner.login
+                                                    }
+                                                }]
                                             }))];
                                         case 2:
                                             return t.sent(), [3, 4];
@@ -1247,7 +1257,7 @@ webpackJsonp([105], {
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(f, {
+                    return r.createElement(g, {
                         collection: this.props.collection,
                         error: this.state.deletionError,
                         onCancel: this.onCancelHandler,
@@ -1255,10 +1265,10 @@ webpackJsonp([105], {
                     })
                 }, t
             }(r.Component),
-            C = Object(a.compose)(Object(s.a)(g, {
+            k = Object(a.compose)(Object(s.a)(v, {
                 name: "onDeleteRequest"
-            }))(v);
-        var k = Object(l.b)(null, function(e, t) {
+            }))(C);
+        var b = Object(l.b)(null, function(e, t) {
             return {
                 onClose: function() {
                     e(Object(u.c)())
@@ -1267,7 +1277,7 @@ webpackJsonp([105], {
                     e(Object(u.c)()), t.onSuccess && t.onSuccess()
                 }
             }
-        })(C)
+        })(k)
     },
     N8CH: function(e, t, n) {
         "use strict";
@@ -1277,7 +1287,9 @@ webpackJsonp([105], {
         var i = n("GiK3"),
             o = (n.n(i), n("Odds")),
             r = function(e) {
-                return i.createElement(o._8, {
+                return i.createElement(o._6, {
+                    onClick: e.onClick
+                }, i.createElement(o._8, {
                     alignItems: o.c.Start,
                     display: o.R.Flex,
                     flexDirection: o.T.Column,
@@ -1287,7 +1299,7 @@ webpackJsonp([105], {
                     padding: {
                         x: 2
                     }
-                }, e.children)
+                }, e.children))
             }
     },
     O8Ns: function(e, t, n) {
@@ -1950,7 +1962,18 @@ webpackJsonp([105], {
             C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onDeleteOptionClickHandler = function() {
+                    return t.navigateToEdit = function() {
+                        var e = t.collectionEditLocationDescriptor();
+                        e && l.o.history.push(e)
+                    }, t.collectionEditLocationDescriptor = function() {
+                        if (t.props.collection.owner) return {
+                            pathname: "/" + t.props.collection.owner.login + "/manager/collections/" + t.props.collection.id,
+                            state: {
+                                content: s.PageviewContent.CollectionCard,
+                                medium: s.PageviewMedium.VideoManagerCollectionManager
+                            }
+                        }
+                    }, t.onDeleteOptionClickHandler = function() {
                         t.props.onDeleteOptionClick(t.props.collection)
                     }, t
                 }
@@ -1968,7 +1991,9 @@ webpackJsonp([105], {
                         src: t.thumbnailURL,
                         srcSet: e,
                         videoCount: t.items.totalCount
-                    })), a.createElement(g.a, null, a.createElement(v.Q, {
+                    })), a.createElement(g.a, {
+                        onClick: this.navigateToEdit
+                    }, a.createElement(v.Q, {
                         bold: !0,
                         type: v._49.H4,
                         color: v.K.Alt
@@ -1982,13 +2007,7 @@ webpackJsonp([105], {
                     if (this.props.hideOptionsMenu || !this.props.collection.owner) return null;
                     var e = [{
                         asset: v._25.Edit,
-                        linkTo: {
-                            pathname: "/" + this.props.collection.owner.login + "/manager/collections/" + this.props.collection.id,
-                            state: {
-                                content: s.PageviewContent.CollectionCard,
-                                medium: s.PageviewMedium.VideoManagerCollectionManager
-                            }
-                        },
+                        linkTo: this.collectionEditLocationDescriptor(),
                         title: Object(l.d)("Edit", "CollectionManagerCard")
                     }, {
                         asset: v._25.Trash,
@@ -2036,4 +2055,4 @@ webpackJsonp([105], {
         e.exports = n.p + "assets/missing-video-thumb-320x180-101fcbc1ff84459331417137edd6cfdb.png"
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-8913714ec87ce6f364e4ac28161dfe96.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-22d103de7f3730f442a97479713933a3.js.map

@@ -2278,8 +2278,8 @@ webpackJsonp([98], {
             u = n("Jo6h"),
             m = n("Odds"),
             p = n("tu8+"),
-            h = (n("pBoG"), "GAME_COMMERCE_V2"),
-            g = function(e) {
+            g = (n("pBoG"), "GAME_COMMERCE_V2"),
+            h = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2327,7 +2327,7 @@ webpackJsonp([98], {
                         return {
                             variables: {
                                 login: e.channelName,
-                                amendmentType: h
+                                amendmentType: g
                             }
                         }
                     }
@@ -2335,8 +2335,8 @@ webpackJsonp([98], {
             }(s.PureComponent),
             b = n("oIkB"),
             f = n("Wedf"),
-            v = "amendment-modal-accept-button",
-            E = function(e) {
+            E = "amendment-modal-accept-button",
+            v = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2352,7 +2352,7 @@ webpackJsonp([98], {
                                 right: .5
                             }
                         }, s.createElement(m.v, {
-                            "data-test-selector": v,
+                            "data-test-selector": E,
                             type: m.B.Text,
                             onClick: t.onAccept,
                             disabled: !t.state.hasUserScrolled
@@ -2367,7 +2367,7 @@ webpackJsonp([98], {
                                         if (!0 === this.props.amendmentAccepted || !this.props.setAmendmentAcceptance) return [3, 4];
                                         e.label = 1;
                                     case 1:
-                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(b.a)(h))];
+                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(b.a)(g))];
                                     case 2:
                                         return e.sent(), Object(c.d)(a.__assign({
                                             action: c.b.AcceptCommerceAddendum
@@ -2466,7 +2466,7 @@ webpackJsonp([98], {
             }(s.PureComponent),
             y = Object(d.a)(f, {
                 name: "setAmendmentAcceptance"
-            })(E),
+            })(v),
             S = (n("4mOb"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -2495,7 +2495,7 @@ webpackJsonp([98], {
                     return Object(o.d)(k, t)
                 }
             }, e)
-        })(g);
+        })(h);
         n.d(t, "a", function() {
             return _
         })
@@ -2955,6 +2955,194 @@ webpackJsonp([98], {
             }(a || (a = {}))
     },
     TJLs: function(e, t) {},
+    Tbnh: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "OnboardingSection_CurrentUser"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "roles"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isAffiliate"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isExtensionsDeveloper"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "payoutPlans"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "category"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isReceivingRevenue"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "tags"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "payoutInvite"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "category"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "workflow"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "currentStep"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isLegacy"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 223
+            }
+        };
+        n.loc.source = {
+            body: "query OnboardingSection_CurrentUser {\ncurrentUser {\nid\nlogin\nroles {\nisAffiliate\nisExtensionsDeveloper\n}\npayoutPlans {\ncategory\nisReceivingRevenue\ntags\n}\npayoutInvite {\nid\ncategory\nworkflow {\nid\ncurrentStep\n}\nisLegacy\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     U5GC: function(e, t) {
         var n = {
             kind: "Document",
@@ -3118,6 +3306,26 @@ webpackJsonp([98], {
                                         directives: []
                                     }]
                                 }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "payoutInvite"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isLegacy"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
                             }]
                         }
                     }]
@@ -3125,11 +3333,11 @@ webpackJsonp([98], {
             }],
             loc: {
                 start: 0,
-                end: 229
+                end: 255
             }
         };
         n.loc.source = {
-            body: "query PayoutOnboardingAgreement_CurrentUser($withAgreement: Boolean!) {\ncurrentUser {\nid\nroles {\nisPartner\n}\npayoutPlans {\ncategory\nisReceivingRevenue\ntags\n}\nprogramAgreement @include(if: $withAgreement) {\ntype\nversion\nbody\n}\n}\n}",
+            body: "query PayoutOnboardingAgreement_CurrentUser($withAgreement: Boolean!) {\ncurrentUser {\nid\nroles {\nisPartner\n}\npayoutPlans {\ncategory\nisReceivingRevenue\ntags\n}\nprogramAgreement @include(if: $withAgreement) {\ntype\nversion\nbody\n}\npayoutInvite {\nisLegacy\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -6606,194 +6814,6 @@ webpackJsonp([98], {
                 e.Affiliate = "AFFILIATE", e.ExtensionsDeveloper = "EXTENSIONS_DEVELOPER", e.StandardPartner = "STANDARD_PARTNER", e.PremiumPartner = "PREMIUM_PARTNER", e.CustomPartner = "CUSTOM_PARTNER"
             }(a || (a = {}))
     },
-    xHx8: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "OnboardingSection_CurrentUser"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "roles"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isAffiliate"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isPartner"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isExtensionsDeveloper"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "payoutPlans"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "category"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isReceivingRevenue"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "tags"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "payoutInvite"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "category"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "workflow"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "currentStep"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 224
-            }
-        };
-        n.loc.source = {
-            body: "query OnboardingSection_CurrentUser {\ncurrentUser {\nid\nlogin\nroles {\nisAffiliate\nisPartner\nisExtensionsDeveloper\n}\npayoutPlans {\ncategory\nisReceivingRevenue\ntags\n}\npayoutInvite {\nid\ncategory\nworkflow {\nid\ncurrentStep\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     xZ9c: function(e, t) {
         var n = {
             kind: "Document",
@@ -7191,12 +7211,12 @@ webpackJsonp([98], {
             u = n("7vx8"),
             m = n("CSlQ"),
             p = n("6sO2"),
-            h = n("5EkD"),
-            g = n("2KeS"),
+            g = n("5EkD"),
+            h = n("2KeS"),
             b = n("n63+"),
             f = n("d4P3"),
-            v = n("oIkB"),
-            E = n("+0KR"),
+            E = n("oIkB"),
+            v = n("+0KR"),
             y = n("Jo6h"),
             S = n("Odds"),
             k = function(e) {
@@ -7246,11 +7266,11 @@ webpackJsonp([98], {
                     flexGrow: 1
                 }, r.createElement(S._14, null)))
             },
-            O = function(e) {
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        saveStatus: E.b.NoChanges
+                        saveStatus: v.b.NoChanges
                     }, t.renderTierItems = function() {
                         return t.tiers.map(function(e, n) {
                             var a, i;
@@ -7294,9 +7314,9 @@ webpackJsonp([98], {
                                                     }
                                                 }
                                             }
-                                        }, [4, s(Object(v.b)(d, c))]) : [2];
+                                        }, [4, s(Object(E.b)(d, c))]) : [2];
                                     case 1:
-                                        return u = m.sent(), Object(v.e)(b, {
+                                        return u = m.sent(), Object(E.e)(b, {
                                             login: i
                                         }, function(t) {
                                             return t.user && t.user.settings && t.user.settings.cheer && t.user.settings.cheer.badges && u.data.updateCheerPartnerSettings && u.data.updateCheerPartnerSettings.cheer && u.data.updateCheerPartnerSettings.cheer.badges && (t.user.settings.cheer.badges.tiers[e].isEnabled = u.data.updateCheerPartnerSettings.cheer.badges.tiers[e].isEnabled), t
@@ -7337,7 +7357,7 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            T = Object(g.d)(Object(u.a)(b, {
+            N = Object(h.d)(Object(u.a)(b, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7347,10 +7367,10 @@ webpackJsonp([98], {
                 }
             }), Object(u.a)(f, {
                 name: "updateBadgeTiers"
-            }))(O),
-            N = n("IIxK"),
-            C = n("J8WN"),
-            P = (n("24ae"), function(e) {
+            }))(T),
+            O = n("IIxK"),
+            A = n("J8WN"),
+            C = (n("24ae"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onFilesSubmitted = function(e) {
@@ -7370,7 +7390,7 @@ webpackJsonp([98], {
                         position: S._15.Relative,
                         padding: 5,
                         background: S.n.Alt
-                    }, r.createElement(C.a, {
+                    }, r.createElement(A.a, {
                         allowedFileTypes: [".png"],
                         onFilesSubmitted: this.onFilesSubmitted,
                         error: t
@@ -7388,9 +7408,9 @@ webpackJsonp([98], {
                     }, n)))
                 }, t
             }(r.Component));
-        var A, w = this,
-            I = function(e, t) {
-                return a.__awaiter(w, void 0, void 0, function() {
+        var P, I = this,
+            w = function(e, t) {
+                return a.__awaiter(I, void 0, void 0, function() {
                     var n, r, i;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
@@ -7417,8 +7437,8 @@ webpackJsonp([98], {
             },
             R = n("wGye"),
             x = n("8/C/"),
-            j = 18,
-            D = 36,
+            D = 18,
+            j = 36,
             F = 72,
             M = function(e) {
                 function t() {
@@ -7426,7 +7446,7 @@ webpackJsonp([98], {
                     return t.state = {
                         selectedIndex: 2,
                         stagedImageURLs: {},
-                        saveStatus: E.b.NoChanges,
+                        saveStatus: v.b.NoChanges,
                         image1xError: !1,
                         image2xError: !1,
                         image4xError: !1
@@ -7438,7 +7458,7 @@ webpackJsonp([98], {
                                     r = e.stagedImageURLs[a.threshold];
                                 return {
                                     selectedIndex: n,
-                                    saveStatus: r && r.image1x && r.image2x && r.image4x ? E.b.DirtyChanges : E.b.NoChanges
+                                    saveStatus: r && r.image1x && r.image2x && r.image4x ? v.b.DirtyChanges : v.b.NoChanges
                                 }
                             }
                         })
@@ -7447,9 +7467,9 @@ webpackJsonp([98], {
                             return a.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, I(e, {
-                                            height: j,
-                                            width: j
+                                        return [4, w(e, {
+                                            height: D,
+                                            width: D
                                         })];
                                     case 1:
                                         return t.sent() ? (this.updateStagedImageURLs({
@@ -7465,9 +7485,9 @@ webpackJsonp([98], {
                             return a.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, I(e, {
-                                            height: D,
-                                            width: D
+                                        return [4, w(e, {
+                                            height: j,
+                                            width: j
                                         })];
                                     case 1:
                                         return t.sent() ? (this.updateStagedImageURLs({
@@ -7483,7 +7503,7 @@ webpackJsonp([98], {
                             return a.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, I(e, {
+                                        return [4, w(e, {
                                             height: F,
                                             width: F
                                         })];
@@ -7503,7 +7523,7 @@ webpackJsonp([98], {
                                     o = {};
                                 return e && (o = a.__assign({}, n.stagedImageURLs[i.threshold], e)), {
                                     stagedImageURLs: a.__assign({}, n.stagedImageURLs, (r = {}, r[i.threshold] = o, r)),
-                                    saveStatus: o && o.image1x && o.image2x && o.image4x ? E.b.DirtyChanges : E.b.NoChanges,
+                                    saveStatus: o && o.image1x && o.image2x && o.image4x ? v.b.DirtyChanges : v.b.NoChanges,
                                     image1xError: !1,
                                     image2xError: !1,
                                     image4xError: !1
@@ -7539,9 +7559,9 @@ webpackJsonp([98], {
                                                     }
                                                 }
                                             }
-                                        }, [4, r(Object(v.b)(s, l))]) : [2] : [2];
+                                        }, [4, r(Object(E.b)(s, l))]) : [2] : [2];
                                     case 1:
-                                        return d = u.sent(), Object(v.e)(R, {
+                                        return d = u.sent(), Object(E.e)(R, {
                                             login: i
                                         }, function(t) {
                                             if (t.user && t.user.settings && t.user.settings.cheer && t.user.settings.cheer.badges && d.data.updateCheerPartnerSettings && d.data.updateCheerPartnerSettings.cheer && d.data.updateCheerPartnerSettings.cheer.badges) {
@@ -7567,18 +7587,18 @@ webpackJsonp([98], {
                                             badges: {
                                                 tiers: [{
                                                     threshold: l.threshold,
-                                                    imageData1x: Object(N.b)(d.image1x),
-                                                    imageData2x: Object(N.b)(d.image2x),
-                                                    imageData4x: Object(N.b)(d.image4x)
+                                                    imageData1x: Object(O.b)(d.image1x),
+                                                    imageData2x: Object(O.b)(d.image2x),
+                                                    imageData4x: Object(O.b)(d.image4x)
                                                 }]
                                             }
                                         }, this.setState({
-                                            saveStatus: E.b.Working
+                                            saveStatus: v.b.Working
                                         }), m.label = 1;
                                     case 1:
-                                        return m.trys.push([1, 3, , 4]), [4, o(Object(v.a)(c))];
+                                        return m.trys.push([1, 3, , 4]), [4, o(Object(E.a)(c))];
                                     case 2:
-                                        return u = m.sent(), Object(v.e)(R, {
+                                        return u = m.sent(), Object(E.e)(R, {
                                             login: s
                                         }, function(e) {
                                             if (e.user && e.user.settings && e.user.settings.cheer && e.user.settings.cheer.badges && u.data.updateCheerPartnerSettings && u.data.updateCheerPartnerSettings.cheer && u.data.updateCheerPartnerSettings.cheer.badges) {
@@ -7588,11 +7608,11 @@ webpackJsonp([98], {
                                             }
                                             return e
                                         }), this.updateStagedImageURLs(), this.setState({
-                                            saveStatus: E.b.Success
+                                            saveStatus: v.b.Success
                                         }), [3, 4];
                                     case 3:
                                         return m.sent(), this.setState({
-                                            saveStatus: E.b.Error
+                                            saveStatus: v.b.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -7616,8 +7636,8 @@ webpackJsonp([98], {
                         type: S.B.Hollow,
                         fullWidth: !0
                     }, Object(p.d)("Reset to Default Badge", "ChatBadgeUploadForm")), d = m.badge.image1x, c = m.badge.image2x, u = m.badge.image4x);
-                    var h = n[m.threshold];
-                    return h && (d = h.image1x || d, c = h.image2x || c, u = h.image4x || u), r.createElement(y.a, {
+                    var g = n[m.threshold];
+                    return g && (d = g.image1x || d, c = g.image2x || c, u = g.image4x || u), r.createElement(y.a, {
                         label: Object(p.d)("Upload Badge Images", "ChatBadgeUploadForm")
                     }, r.createElement(S.Y, null, r.createElement(S.L, {
                         cols: {
@@ -7650,7 +7670,7 @@ webpackJsonp([98], {
                         display: S.R.InlineFlex,
                         flexDirection: S.T.Column,
                         alignItems: S.c.Center
-                    }, r.createElement(P, {
+                    }, r.createElement(C, {
                         onImageSubmit: this.onNormalImageSubmitted,
                         error: i
                     }, d ? r.createElement("img", {
@@ -7667,7 +7687,7 @@ webpackJsonp([98], {
                         display: S.R.InlineFlex,
                         flexDirection: S.T.Column,
                         alignItems: S.c.Center
-                    }, r.createElement(P, {
+                    }, r.createElement(C, {
                         onImageSubmit: this.onDoubleImageSubmitted,
                         error: o
                     }, c ? r.createElement("img", {
@@ -7684,7 +7704,7 @@ webpackJsonp([98], {
                         display: S.R.InlineFlex,
                         flexDirection: S.T.Column,
                         alignItems: S.c.Center
-                    }, r.createElement(P, {
+                    }, r.createElement(C, {
                         onImageSubmit: this.onQuadrupleImageSubmitted,
                         error: s
                     }, u ? r.createElement("img", {
@@ -7701,7 +7721,7 @@ webpackJsonp([98], {
                         gutterSize: S.Z.Medium
                     }, r.createElement(S.L, {
                         cols: 4
-                    }, r.createElement(E.a, {
+                    }, r.createElement(v.a, {
                         status: a,
                         onClick: this.onSaveButtonClick,
                         fullWidth: !0
@@ -7717,7 +7737,7 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            L = Object(g.d)(Object(u.a)(R, {
+            L = Object(h.d)(Object(u.a)(R, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7731,11 +7751,11 @@ webpackJsonp([98], {
             U = n("GH+X"),
             B = function(e) {
                 var t = e.match;
-                return r.createElement(S._8, null, r.createElement(h.a, {
+                return r.createElement(S._8, null, r.createElement(g.a, {
                     title: Object(p.d)("Cheer Chat Badge Settings", "CheerBadgesSettingsPage"),
                     description: Object(p.d)("Custom settings for Cheer chat badges", "CheerBadgesSettingsPage"),
                     linkToParent: "/" + t.params.channelName + "/dashboard/settings/revenue"
-                }), r.createElement(U.a, null, r.createElement(T, {
+                }), r.createElement(U.a, null, r.createElement(N, {
                     channelName: t.params.channelName
                 }), r.createElement(L, {
                     channelName: t.params.channelName
@@ -7745,89 +7765,85 @@ webpackJsonp([98], {
             W = n("gLfK");
         ! function(e) {
             e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
-        }(A || (A = {}));
+        }(P || (P = {}));
         var Q = n("D6iq"),
             Y = n("ZKiL"),
             G = 5,
             z = 300,
             H = 1e6,
-            q = function(e) {
+            X = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.state = {
-                        saveStatus: E.b.NoChanges,
+                        saveStatus: v.b.NoChanges,
                         leaderboardEnabled: !1,
                         recentCheerEnabled: !1,
-                        recentCheerTimeoutEnabled: !1,
                         recentCheerTimeoutError: !1
                     }, n.onLeaderboardEnabledCheckBoxClick = function(e) {
-                        n.setState({
-                            leaderboardEnabled: e.currentTarget.checked,
-                            saveStatus: E.b.DirtyChanges
+                        n.setState(function(t) {
+                            return {
+                                leaderboardEnabled: e.currentTarget.checked,
+                                saveStatus: t.recentCheerEnabled && t.recentCheerTimeoutError ? v.b.NoChanges : v.b.DirtyChanges
+                            }
                         })
                     }, n.onLeaderboardTimePeriodRadioButtonClick = function(e) {
                         n.setState({
                             leaderboardTimePeriod: e.currentTarget.value,
-                            saveStatus: E.b.DirtyChanges
+                            saveStatus: v.b.DirtyChanges
                         })
                     }, n.onRecentCheerEnabledCheckBoxChange = function(e) {
                         n.setState({
                             recentCheerEnabled: e.currentTarget.checked,
-                            saveStatus: E.b.DirtyChanges
-                        })
-                    }, n.onRecentCheerTimeoutEnabledCheckBoxChange = function(e) {
-                        n.setState({
-                            recentCheerTimeoutEnabled: e.currentTarget.checked,
-                            saveStatus: E.b.DirtyChanges
+                            saveStatus: v.b.DirtyChanges
                         })
                     }, n.onRecentCheerTimeoutInputChange = function(e) {
                         var t = parseInt(e.currentTarget.value, 10),
                             a = !t || t < G;
                         n.setState({
                             recentCheerTimeout: Math.min(t, z),
-                            saveStatus: a ? E.b.NoChanges : E.b.DirtyChanges,
+                            saveStatus: a ? v.b.NoChanges : v.b.DirtyChanges,
                             recentCheerTimeoutError: a
                         })
                     }, n.onRecentCheerMinimumBitsInputChange = function(e) {
                         var t = parseInt(e.currentTarget.value, 10);
                         n.setState({
                             recentCheerMinimumBits: Math.min(t, H),
-                            saveStatus: t ? E.b.DirtyChanges : E.b.NoChanges
+                            saveStatus: t ? v.b.DirtyChanges : v.b.NoChanges
                         })
                     }, n.onSaveClick = function() {
                         return a.__awaiter(n, void 0, void 0, function() {
-                            var e, t, n, r, i, o, s, l, d, c, u, m, p, h;
+                            var e, t, n, r, i, o, s, l, d, c, u, m, p;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        if (e = this.state, t = e.leaderboardTimePeriod, n = e.recentCheerTimeout, r = e.recentCheerMinimumBits, i = e.leaderboardEnabled, o = e.recentCheerTimeoutEnabled, s = e.recentCheerEnabled, l = this.props, d = l.setPinnedCheerSettings, c = l.data, u = l.channelName, !c.user || !c.user.id) return [2];
-                                        m = {
-                                            userID: c.user.id,
+                                        if (e = this.state, t = e.leaderboardTimePeriod, n = e.recentCheerTimeout, r = e.recentCheerMinimumBits, i = e.leaderboardEnabled, o = e.recentCheerEnabled, s = this.props, l = s.setPinnedCheerSettings, d = s.data, c = s.channelName, !(d.user && d.user.id && d.user.settings && d.user.settings.cheer)) return [2];
+                                        u = {
+                                            userID: d.user.id,
                                             recentCheer: {
-                                                canPin: s,
+                                                canPin: o,
                                                 minimumBits: r,
-                                                timeoutMilliseconds: o ? n : 0
+                                                timeoutMilliseconds: o ? n : void 0
                                             },
                                             leaderboard: {
                                                 isEnabled: i,
                                                 timePeriod: t
                                             }
-                                        }, p = Object(v.a)(m), this.setState({
-                                            saveStatus: E.b.Working
+                                        }, m = Object(E.a)(u), this.setState({
+                                            saveStatus: v.b.Working
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, d(p)];
+                                        return a.trys.push([1, 3, , 4]), [4, l(m)];
                                     case 2:
-                                        return h = a.sent(), Object(v.e)(Y, {
-                                            login: u
+                                        return p = a.sent(), Object(E.e)(Y, {
+                                            login: c
                                         }, function(e) {
-                                            return h.data.updateCheerPartnerSettings && e.user && e.user.settings && e.user.settings.cheer && (e.user.settings.cheer.recentCheer = h.data.updateCheerPartnerSettings.cheer.recentCheer, e.user.settings.cheer.leaderboard = h.data.updateCheerPartnerSettings.cheer.leaderboard), e
+                                            return p.data.updateCheerPartnerSettings && e.user && e.user.settings && e.user.settings.cheer && (e.user.settings.cheer.recentCheer = p.data.updateCheerPartnerSettings.cheer.recentCheer, e.user.settings.cheer.leaderboard = p.data.updateCheerPartnerSettings.cheer.leaderboard), e
                                         }), this.setState({
-                                            saveStatus: E.b.Success
+                                            saveStatus: v.b.Success
                                         }), [3, 4];
                                     case 3:
                                         return a.sent(), this.setState({
-                                            saveStatus: E.b.Error
+                                            saveStatus: v.b.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -7845,7 +7861,6 @@ webpackJsonp([98], {
                             leaderboardTimePeriod: o.timePeriod,
                             recentCheerEnabled: s.canPin,
                             recentCheerMinimumBits: s.minimumBits,
-                            recentCheerTimeoutEnabled: s.timeoutMilliseconds > 0,
                             recentCheerTimeout: s.timeoutMilliseconds
                         })
                     }
@@ -7862,7 +7877,6 @@ webpackJsonp([98], {
                             leaderboardTimePeriod: a.timePeriod,
                             recentCheerEnabled: r.canPin,
                             recentCheerMinimumBits: r.minimumBits,
-                            recentCheerTimeoutEnabled: r.timeoutMilliseconds > 0,
                             recentCheerTimeout: r.timeoutMilliseconds
                         })
                     }
@@ -7873,15 +7887,14 @@ webpackJsonp([98], {
                         a = e.recentCheerTimeout,
                         i = e.recentCheerMinimumBits,
                         o = e.leaderboardEnabled,
-                        s = e.recentCheerTimeoutEnabled,
-                        l = e.recentCheerTimeoutError,
-                        d = e.recentCheerEnabled,
-                        c = r.createElement(V.a, {
+                        s = e.recentCheerTimeoutError,
+                        l = e.recentCheerEnabled,
+                        d = r.createElement(V.a, {
                             status: t,
                             onClickSave: this.onSaveClick
                         });
                     return r.createElement(U.a, {
-                        footer: c
+                        footer: d
                     }, r.createElement(y.a, {
                         label: Object(p.d)("Enable Top Cheerers", "PinnedCheerSettings")
                     }, r.createElement(S.J, {
@@ -7895,8 +7908,8 @@ webpackJsonp([98], {
                         label: Object(p.d)("Top Cheerers Time Range", "PinnedCheerSettings")
                     }, r.createElement(S._8, null, r.createElement(S._21, {
                         label: Object(p.d)("Weekly", "PinnedCheerSettings"),
-                        value: A.WEEK,
-                        checked: n === A.WEEK,
+                        value: P.WEEK,
+                        checked: n === P.WEEK,
                         onChange: this.onLeaderboardTimePeriodRadioButtonClick
                     })), r.createElement(S._8, {
                         margin: {
@@ -7904,8 +7917,8 @@ webpackJsonp([98], {
                         }
                     }, r.createElement(S._21, {
                         label: Object(p.d)("Monthly", "PinnedCheerSettings"),
-                        value: A.MONTH,
-                        checked: n === A.MONTH,
+                        value: P.MONTH,
+                        checked: n === P.MONTH,
                         onChange: this.onLeaderboardTimePeriodRadioButtonClick
                     })), r.createElement(S._8, {
                         margin: {
@@ -7913,8 +7926,8 @@ webpackJsonp([98], {
                         }
                     }, r.createElement(S._21, {
                         label: Object(p.d)("All-Time", "PinnedCheerSettings"),
-                        value: A.ALLTIME,
-                        checked: n === A.ALLTIME,
+                        value: P.ALLTIME,
+                        checked: n === P.ALLTIME,
                         onChange: this.onLeaderboardTimePeriodRadioButtonClick
                     })), r.createElement(W.a, {
                         text: Object(p.d)("Choose Weekly for a leaderboard that automatically resets every Monday 12:01AM PT. Choose Monthly to reset every 1st day of the month. Choose All-Time for a leaderboard that tracks the Top Cheerers in your channel for all time, starting from when Bits launched in June of 2016.", "PinnedCheerSettings")
@@ -7922,27 +7935,22 @@ webpackJsonp([98], {
                         label: Object(p.d)("Enable Recent Cheers", "PinnedCheerSettings")
                     }, r.createElement(S.J, {
                         label: Object(p.d)("Pin Most Recent Cheer", "PinnedCheerSettings"),
-                        checked: d,
+                        checked: l,
                         onChange: this.onRecentCheerEnabledCheckBoxChange,
                         "data-test-selector": "pin-most-recent-cheer-checkbox-selector"
                     }), r.createElement(W.a, {
-                        text: Object(p.d)("Pin the most recent Cheer to the top of your chat. Note that you and your moderators can unpin a Pinned Cheer at any time.", "PinnedCheerSettings")
-                    })), r.createElement(y.a, {
-                        label: Object(p.d)("Recent Cheer Timeout", "PinnedCheerSettings")
-                    }, r.createElement(S.J, {
-                        label: Object(p.d)("Enable Recent Cheer Timeout", "PinnedCheerSettings"),
-                        checked: s,
-                        onChange: this.onRecentCheerTimeoutEnabledCheckBoxChange,
-                        "data-test-selector": "enable-recent-cheer-timeout-checkbox-selector"
-                    }), r.createElement(W.a, {
-                        text: Object(p.d)("If enabled, Pinned Recent Cheers will be automatically dismissed after the number of seconds that you set below.", "PinnedCheerSettings")
+                        text: r.createElement(r.Fragment, null, Object(p.d)("Pin the most recent Cheer to the top of your chat. Note that you and your moderators can unpin a Pinned Cheer at any time.", "PinnedCheerSettings"), r.createElement(S._8, {
+                            margin: {
+                                top: 1
+                            }
+                        }, Object(p.d)("If enabled, Pinned Recent Cheers will be automatically dismissed after the number of seconds that you set below.", "PinnedCheerSettings")))
                     }), r.createElement(S._8, {
                         margin: {
                             top: 1
                         }
                     }, r.createElement(S.W, {
                         label: Object(p.d)("Seconds", "PinnedCheerSettings"),
-                        error: l,
+                        error: l && s,
                         errorMessage: Object(p.d)("Timeout must be between {min} and {max} seconds", {
                             min: G,
                             max: z
@@ -7951,7 +7959,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._4, {
                         type: S._5.Number,
                         value: "" + a,
-                        disabled: !s,
+                        disabled: !l,
                         onChange: this.onRecentCheerTimeoutInputChange,
                         min: G,
                         max: z,
@@ -7970,7 +7978,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            X = Object(g.d)(Object(u.a)(Y, {
+            q = Object(h.d)(Object(u.a)(Y, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7980,25 +7988,25 @@ webpackJsonp([98], {
                 }
             }), Object(u.a)(Q, {
                 name: "setPinnedCheerSettings"
-            }))(q),
+            }))(X),
             K = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.match;
-                    return r.createElement(S._8, null, r.createElement(h.a, {
+                    return r.createElement(S._8, null, r.createElement(g.a, {
                         title: Object(p.d)("Pinned and Top Cheers Settings", "CheerSettingsPage"),
                         description: Object(p.d)("Custom settings for Pinned Cheering", "CheerSettingsPage"),
                         linkToParent: "/" + e.params.channelName + "/dashboard/settings/revenue"
-                    }), r.createElement(X, {
+                    }), r.createElement(q, {
                         channelName: e.params.channelName
                     }))
                 }, t
             }(r.Component),
             $ = n("qSfI"),
-            J = n("mQVd"),
-            Z = (n("hXLX"), function(e) {
+            Z = n("mQVd"),
+            J = (n("hXLX"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8015,11 +8023,11 @@ webpackJsonp([98], {
                                             customPrefix: {
                                                 isEnabled: t
                                             }
-                                        }, l = Object(v.a)(s), a.label = 1;
+                                        }, l = Object(E.a)(s), a.label = 1;
                                     case 1:
                                         return a.trys.push([1, 3, , 4]), [4, r(l)];
                                     case 2:
-                                        return d = a.sent(), Object(v.e)(J, {
+                                        return d = a.sent(), Object(E.e)(Z, {
                                             login: o
                                         }, function(e) {
                                             return d.data.updateCheerPartnerSettings && e.user && e.user.settings && e.user.settings.cheer && (e.user.settings.cheer.customPrefix.isEnabled = d.data.updateCheerPartnerSettings.cheer.customPrefix.isEnabled), e
@@ -8113,7 +8121,7 @@ webpackJsonp([98], {
                     }, u)))))
                 }, t
             }(r.Component)),
-            ee = Object(i.compose)(Object(u.a)(J, {
+            ee = Object(i.compose)(Object(u.a)(Z, {
                 name: "data",
                 options: function(e) {
                     return {
@@ -8124,7 +8132,7 @@ webpackJsonp([98], {
                 }
             }), Object(u.a)($, {
                 name: "setCheermotesEnable"
-            }))(Z),
+            }))(J),
             te = n("TFaR"),
             ne = n("HZww"),
             ae = (n("gABf"), function(e) {
@@ -8146,7 +8154,7 @@ webpackJsonp([98], {
                         position: S._15.Relative,
                         padding: 5,
                         background: S.n.Alt
-                    }, r.createElement(C.a, {
+                    }, r.createElement(A.a, {
                         allowedFileTypes: [".png", ".gif"],
                         onFilesSubmitted: this.onFilesSubmitted
                     }, r.createElement(S._35, {
@@ -8323,7 +8331,7 @@ webpackJsonp([98], {
                     }))
                 }, t
             }(r.PureComponent)),
-            he = function(e) {
+            ge = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8354,7 +8362,7 @@ webpackJsonp([98], {
         function(e) {
             e.Animated = "animated", e.Static = "static"
         }(de || (de = {}));
-        var ge = function(e) {
+        var he = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -8502,7 +8510,7 @@ webpackJsonp([98], {
                     flexDirection: S.T.Column
                 }, r.createElement(S._8, {
                     display: S.R.Flex
-                }, r.createElement(he, {
+                }, r.createElement(ge, {
                     name: "cheermote-upload-wizard-type",
                     selected: this.state.uploadType,
                     left: se.Simple,
@@ -8514,7 +8522,7 @@ webpackJsonp([98], {
                     padding: {
                         x: 2
                     }
-                }, r.createElement(he, {
+                }, r.createElement(ge, {
                     name: "cheermote-background",
                     selected: this.state.background,
                     left: le.Light,
@@ -8522,7 +8530,7 @@ webpackJsonp([98], {
                     right: le.Dark,
                     rightTitle: Object(p.d)("Dark", "CheermoteUploadArea"),
                     onToggle: this.onBackgroundChange
-                })), this.state.uploadType === se.Advanced && r.createElement(he, {
+                })), this.state.uploadType === se.Advanced && r.createElement(ge, {
                     name: "cheermote-animation",
                     selected: this.state.animation,
                     left: de.Animated,
@@ -8600,7 +8608,7 @@ webpackJsonp([98], {
             }
         }
         var fe = n("ihgL"),
-            ve = (n("I/Yr"), function(e) {
+            Ee = (n("I/Yr"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8613,7 +8621,7 @@ webpackJsonp([98], {
                             })
                         }
                     }, t.onSimpleImageSubmitted = function(e, n) {
-                        Object(v.e)(fe, {
+                        Object(E.e)(fe, {
                             login: t.props.channelName
                         }, function(t) {
                             if (t && t.user) {
@@ -8638,7 +8646,7 @@ webpackJsonp([98], {
                             }
                         })
                     }, t.onAdvancedImageSubmitted = function(e, n) {
-                        Object(v.e)(fe, {
+                        Object(E.e)(fe, {
                             login: t.props.channelName
                         }, function(t) {
                             if (t && t.user) {
@@ -8701,7 +8709,7 @@ webpackJsonp([98], {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(ge, {
+                    }, r.createElement(he, {
                         channelID: this.props.data.user.id,
                         uploadTier: a,
                         onSimpleImageSubmitted: this.onSimpleImageSubmitted,
@@ -8709,7 +8717,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.PureComponent)),
-            Ee = Object(i.compose)(Object(u.a)(fe, {
+            ve = Object(i.compose)(Object(u.a)(fe, {
                 options: function(e) {
                     return {
                         variables: {
@@ -8717,27 +8725,27 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }))(ve),
+            }))(Ee),
             ye = function(e) {
                 var t = e.match;
-                return r.createElement(S._8, null, r.createElement(h.a, {
+                return r.createElement(S._8, null, r.createElement(g.a, {
                     title: Object(p.d)("Custom Cheermote", "CheermotesSettingsPage"),
                     description: Object(p.d)("Custom Cheermote that viewers can use when Cheering in your channel", "CheermotesSettingsPage"),
                     linkToParent: "/" + t.params.channelName + "/dashboard/settings/revenue"
                 }), r.createElement(U.a, null, r.createElement(ee, {
                     channelName: t.params.channelName
-                }), r.createElement(Ee, {
+                }), r.createElement(ve, {
                     channelName: t.params.channelName
                 })))
             },
             Se = n("j7/Y"),
             ke = n("w9tK"),
             _e = n("vH/s"),
-            Oe = n("RH2O"),
-            Te = n("V5M+"),
-            Ne = n("7iMl"),
-            Ce = (n("pBCJ"), "GAME_COMMERCE"),
-            Pe = function(e) {
+            Te = n("RH2O"),
+            Ne = n("V5M+"),
+            Oe = n("7iMl"),
+            Ae = (n("pBCJ"), "GAME_COMMERCE"),
+            Ce = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8768,20 +8776,20 @@ webpackJsonp([98], {
                         id: "commerce-amendment",
                         label: Object(p.d)("Opt in to earn revenue from game sales on Twitch", "CommerceAmendment")
                     })), r.createElement(S.Q, null, Object(p.d)("Please read and agree to the following Commerce Addendum to become eligible for this program.", "CommerceAmendment")))
-                }, t = a.__decorate([Object(u.a)(Ne, {
+                }, t = a.__decorate([Object(u.a)(Oe, {
                     options: function(e) {
                         return {
                             variables: {
                                 login: e.channelName,
-                                amendmentType: Ce
+                                amendmentType: Ae
                             }
                         }
                     }
                 })], t)
             }(r.PureComponent),
-            Ae = n("2pd5"),
-            we = "amendment-modal-accept-button",
-            Ie = function(e) {
+            Pe = n("2pd5"),
+            Ie = "amendment-modal-accept-button",
+            we = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8797,7 +8805,7 @@ webpackJsonp([98], {
                                 right: .5
                             }
                         }, r.createElement(S.v, {
-                            "data-test-selector": we,
+                            "data-test-selector": Ie,
                             type: S.B.Text,
                             onClick: t.onAccept,
                             disabled: !t.state.hasUserScrolled
@@ -8812,7 +8820,7 @@ webpackJsonp([98], {
                                         if (!0 === this.props.amendmentAccepted || !this.props.setAmendmentAcceptance) return [3, 4];
                                         e.label = 1;
                                     case 1:
-                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(v.a)(Ce))];
+                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(E.a)(Ae))];
                                     case 2:
                                         return e.sent(), [3, 4];
                                     case 3:
@@ -8891,9 +8899,9 @@ webpackJsonp([98], {
                     }, Object(p.d)("Cancel", "CommerceAmendmentModal"))), this.renderAcceptButton(this.props.amendmentAccepted)))
                 }, t
             }(r.PureComponent),
-            Re = Object(u.a)(Ae, {
+            Re = Object(u.a)(Pe, {
                 name: "setAmendmentAcceptance"
-            })(Ie),
+            })(we),
             xe = (n("Fk2o"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -8909,88 +8917,88 @@ webpackJsonp([98], {
                     }))
                 }, t
             }(r.Component));
-        var je = Object(Oe.b)(null, function(e) {
-            return Object(g.b)({
-                closeModal: Te.c
+        var De = Object(Te.b)(null, function(e) {
+            return Object(h.b)({
+                closeModal: Ne.c
             }, e)
         })(xe);
-        var De, Fe = Object(Oe.b)(null, function(e) {
-                return Object(g.b)({
+        var je, Fe, Me, Le, Ue, Be, Ve, We, Qe = Object(Te.b)(null, function(e) {
+                return Object(h.b)({
                     showAmendmentModal: function(e) {
                         var t = a.__rest(e, []);
-                        return Object(Te.d)(je, t)
+                        return Object(Ne.d)(De, t)
                     }
                 }, e)
-            })(Pe),
-            Me = function(e) {
+            })(Ce),
+            Ye = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.match.params.channelName;
-                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
                         title: Object(p.d)("Game sales via Twitch", "CommerceAmendment"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), r.createElement(U.a, null, r.createElement(Fe, {
+                    }), r.createElement(U.a, null, r.createElement(Qe, {
                         channelName: e
                     })))
                 }, t
             }(r.PureComponent),
-            Le = Object(g.d)(Object(m.d)("CommerceAmendmentPage", {
+            Ge = Object(h.d)(Object(m.d)("CommerceAmendmentPage", {
                 autoReportInteractive: !0,
                 destination: ke.a.DashboardSettingsRevenueGameCommerce
             }), Object(Se.a)({
                 location: _e.PageviewLocation.DashboardSettingsRevenueGameCommerce
-            }))(Me),
-            Ue = n("j0yR"),
-            Be = n("K+dm"),
-            Ve = function(e) {
+            }))(Ye),
+            ze = n("j0yR"),
+            He = n("K+dm"),
+            Xe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.match.params.channelName;
-                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
                         title: Object(p.d)("Gear, games, and more via Amazon Associates", "CommerceAmendmentV2")
-                    }), r.createElement(U.a, null, r.createElement(Be.a, {
+                    }), r.createElement(U.a, null, r.createElement(He.a, {
                         channelName: e
-                    }), r.createElement(Ue.a, {
+                    }), r.createElement(ze.a, {
                         channelName: e
                     })))
                 }, t
             }(r.Component),
-            We = Object(g.d)(Object(m.d)("CommerceAmendmentV2Page", {
+            qe = Object(h.d)(Object(m.d)("CommerceAmendmentV2Page", {
                 autoReportInteractive: !0,
                 destination: ke.a.DashboardSettingsRevenueGameCommerceV2
             }), Object(Se.a)({
                 location: _e.PageviewLocation.DashboardSettingsRevenueGameCommerceV2
-            }))(Ve),
-            Qe = n("ew1p"),
-            Ye = n("SR0I"),
-            Ge = n("AQc/"),
-            ze = n("oR9V"),
-            He = n("xZ9c"),
-            qe = n("XnHd"),
-            Xe = n("rr+v"),
-            Ke = 1,
-            $e = 1e4,
-            Je = function(e) {
+            }))(Xe),
+            Ke = n("ew1p"),
+            $e = n("SR0I"),
+            Ze = n("AQc/"),
+            Je = n("oR9V"),
+            et = n("xZ9c"),
+            tt = n("XnHd"),
+            nt = n("rr+v"),
+            at = 1,
+            rt = 1e4,
+            it = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.state = {
-                        minBitsToCheerSaveStatus: ze.b.NoChanges,
-                        minBitsPerEmoteSaveStatus: ze.b.NoChanges,
+                        minBitsToCheerSaveStatus: Je.b.NoChanges,
+                        minBitsPerEmoteSaveStatus: Je.b.NoChanges,
                         minBitsToCheerError: !1,
                         minBitsPerEmoteError: !1
                     }, n.onMinBitsToCheerInputChange = function(e) {
                         var t = n.state,
                             a = t.minBitsPerEmote,
                             r = t.minBitsPerEmoteSaveStatus,
-                            i = Math.min(parseInt(e.currentTarget.value, 10), $e),
-                            o = ze.b.DirtyChanges,
+                            i = Math.min(parseInt(e.currentTarget.value, 10), rt),
+                            o = Je.b.DirtyChanges,
                             s = r,
                             l = !1;
-                        (!i || !a || i < Ke || a && i < a) && (o = ze.b.NoChanges, s = ze.b.NoChanges), a && i < a && (l = !0), n.setState({
+                        (!i || !a || i < at || a && i < a) && (o = Je.b.NoChanges, s = Je.b.NoChanges), a && i < a && (l = !0), n.setState({
                             minBitsToCheer: i,
                             minBitsToCheerError: l,
                             minBitsPerEmoteError: !1,
@@ -9001,11 +9009,11 @@ webpackJsonp([98], {
                         var t = n.state,
                             a = t.minBitsToCheer,
                             r = t.minBitsToCheerSaveStatus,
-                            i = Math.min(parseInt(e.currentTarget.value, 10), $e),
+                            i = Math.min(parseInt(e.currentTarget.value, 10), rt),
                             o = r,
-                            s = ze.b.DirtyChanges,
+                            s = Je.b.DirtyChanges,
                             l = !1;
-                        (!i || !a || i < Ke || a && a < i) && (o = ze.b.NoChanges, s = ze.b.NoChanges), a && a < i && (l = !0), n.setState({
+                        (!i || !a || i < at || a && a < i) && (o = Je.b.NoChanges, s = Je.b.NoChanges), a && a < i && (l = !0), n.setState({
                             minBitsPerEmote: i,
                             minBitsToCheerError: !1,
                             minBitsPerEmoteError: l,
@@ -9020,7 +9028,7 @@ webpackJsonp([98], {
                                     case 0:
                                         if (e = this.state.minBitsToCheer, t = this.props, n = t.setMinBitsToCheer, r = t.data, i = t.channelName, !e || !r.user || !r.user.id) return [2];
                                         this.setState({
-                                            minBitsToCheerSaveStatus: ze.b.Working
+                                            minBitsToCheerSaveStatus: Je.b.Working
                                         }), o = {
                                             userID: r.user.id,
                                             chatMessage: {
@@ -9028,18 +9036,18 @@ webpackJsonp([98], {
                                             }
                                         }, a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, n(Object(v.a)(o))];
+                                        return a.trys.push([1, 3, , 4]), [4, n(Object(E.a)(o))];
                                     case 2:
-                                        return s = a.sent(), Object(v.e)(He, {
+                                        return s = a.sent(), Object(E.e)(et, {
                                             login: i
                                         }, function(e) {
                                             return e.user && e.user.settings && e.user.settings.cheer && s.data.updateCheerPartnerSettings && (e.user.settings.cheer.chatMessage.minBitsToCheer = s.data.updateCheerPartnerSettings.cheer.chatMessage.minBitsToCheer), e
                                         }), this.setState({
-                                            minBitsToCheerSaveStatus: ze.b.Success
+                                            minBitsToCheerSaveStatus: Je.b.Success
                                         }), [3, 4];
                                     case 3:
                                         return a.sent(), this.setState({
-                                            minBitsToCheerSaveStatus: ze.b.Error
+                                            minBitsToCheerSaveStatus: Je.b.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -9054,7 +9062,7 @@ webpackJsonp([98], {
                                     case 0:
                                         if (e = this.state.minBitsPerEmote, t = this.props, n = t.setMinBitsPerEmote, r = t.data, i = t.channelName, !e || !r.user || !r.user.id) return [2];
                                         this.setState({
-                                            minBitsPerEmoteSaveStatus: ze.b.Working
+                                            minBitsPerEmoteSaveStatus: Je.b.Working
                                         }), o = {
                                             userID: r.user.id,
                                             chatMessage: {
@@ -9062,18 +9070,18 @@ webpackJsonp([98], {
                                             }
                                         }, a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, n(Object(v.a)(o))];
+                                        return a.trys.push([1, 3, , 4]), [4, n(Object(E.a)(o))];
                                     case 2:
-                                        return s = a.sent(), Object(v.e)(He, {
+                                        return s = a.sent(), Object(E.e)(et, {
                                             login: i
                                         }, function(e) {
                                             return e.user && e.user.settings && e.user.settings.cheer && s.data.updateCheerPartnerSettings && (e.user.settings.cheer.chatMessage.minBitsPerEmote = s.data.updateCheerPartnerSettings.cheer.chatMessage.minBitsPerEmote), e
                                         }), this.setState({
-                                            minBitsPerEmoteSaveStatus: ze.b.Success
+                                            minBitsPerEmoteSaveStatus: Je.b.Success
                                         }), [3, 4];
                                     case 3:
                                         return a.sent(), this.setState({
-                                            minBitsPerEmoteSaveStatus: ze.b.Error
+                                            minBitsPerEmoteSaveStatus: Je.b.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -9131,12 +9139,12 @@ webpackJsonp([98], {
                         }
                     }, r.createElement(S._4, {
                         type: S._5.Number,
-                        min: Ke,
-                        max: $e,
+                        min: at,
+                        max: rt,
                         value: isNaN(t) ? "" : String(t),
                         onChange: this.onMinBitsToCheerInputChange,
                         "data-test-selector": "cheer-minimum-bits-input"
-                    })), r.createElement(ze.a, {
+                    })), r.createElement(Je.a, {
                         status: o,
                         onClick: this.onMinBitsToCheerSave,
                         "data-test-selector": "cheer-minimum-bits-save-button"
@@ -9172,12 +9180,12 @@ webpackJsonp([98], {
                         }
                     }, r.createElement(S._4, {
                         type: S._5.Number,
-                        min: Ke,
-                        max: $e,
+                        min: at,
+                        max: rt,
                         value: isNaN(a) ? "" : String(a),
                         onChange: this.onMinBitsPerEmoteInputChange,
                         "data-test-selector": "emote-minimum-bits-input"
-                    })), r.createElement(ze.a, {
+                    })), r.createElement(Je.a, {
                         status: s,
                         onClick: this.onMinBitsPerEmoteSave,
                         "data-test-selector": "emote-minimum-bits-save-button"
@@ -9197,7 +9205,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            Ze = Object(g.d)(Object(u.a)(He, {
+            ot = Object(h.d)(Object(u.a)(et, {
                 options: function(e) {
                     return {
                         variables: {
@@ -9205,188 +9213,195 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }), Object(u.a)(Xe, {
+            }), Object(u.a)(nt, {
                 name: "setMinBitsToCheer"
-            }), Object(u.a)(qe, {
+            }), Object(u.a)(tt, {
                 name: "setMinBitsPerEmote"
-            }))(Je),
-            et = function(e) {
+            }))(it),
+            st = function(e) {
                 var t = e.channelName;
-                return r.createElement(r.Fragment, null, r.createElement(Ge.a, {
+                return r.createElement(r.Fragment, null, r.createElement(Ze.a, {
                     title: Object(p.d)("Bits & Cheering", "CheerSettingsForm")
-                }), r.createElement(U.a, null, r.createElement(Ze, {
+                }), r.createElement(U.a, null, r.createElement(ot, {
                     channelName: t
-                }), r.createElement(Ye.a, {
+                }), r.createElement($e.a, {
                     text: Object(p.d)("Cheer Badges", "CheerSettingsForm"),
                     linkTo: "/" + t + "/dashboard/settings/revenue/cheerbadges"
-                }), r.createElement(Ye.a, {
+                }), r.createElement($e.a, {
                     text: Object(p.d)("Cheermotes", "CheerSettingsForm"),
                     linkTo: "/" + t + "/dashboard/settings/revenue/cheermotes"
-                }), r.createElement(Ye.a, {
+                }), r.createElement($e.a, {
                     text: Object(p.d)("Pinned and Top Cheers", "CheerSettingsForm"),
                     linkTo: "/" + t + "/dashboard/settings/revenue/cheer"
                 })))
-            },
-            tt = n("xHx8");
+            };
+
+        function lt(e, t) {
+            if (!e || !t) return !1;
+            if (t.workflow.currentStep === Le.AGREEMENT_PENDING_UPGRADE) return !1;
+            var n = e.find(function(e) {
+                return e.category === je.PARTNER && e.isReceivingRevenue
+            });
+            return !(!(n && n.tags && n.tags.includes(Fe.LEGACY) && t) || t.isLegacy) || !(n && n.tags && (n.tags.includes(Fe.STANDARD) || n.tags.includes(Fe.PREMIUM)) && t && t.category === Me.CUSTOM_PARTNER) && !!n
+        }! function(e) {
+            e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+        }(je || (je = {})),
+        function(e) {
+            e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+        }(Fe || (Fe = {})),
+        function(e) {
+            e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+        }(Me || (Me = {})),
+        function(e) {
+            e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+        }(Le || (Le = {})),
+        function(e) {
+            e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+        }(Ue || (Ue = {})),
+        function(e) {
+            e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+        }(Be || (Be = {})),
+        function(e) {
+            e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+        }(Ve || (Ve = {})),
+        function(e) {
+            e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+        }(We || (We = {}));
+        var dt, ct = n("Tbnh");
         ! function(e) {
             e.PAYOUT_ONBOARDING_LINK = "onboarding-section__payout-onboarding-link", e.UPGRADE_AGREEMENT_LINK = "onboarding-section__upgrade-agreement-link", e.PAYOUTS_LINK = "onboarding-section__payouts-link", e.AFFILIATE_AGREEMENT_LINK = "onboarding-section__affiliate-agreement-link", e.PARTNER_AGREEMENT_LINK = "onboarding-section__partner-agreement-link", e.EXTENSIONS_DEVELOPER_AGREEMENT_LINK = "onboarding-section__extensions-developer-agreement-link"
-        }(De || (De = {}));
-        var nt = function(e) {
+        }(dt || (dt = {}));
+        var ut = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.data.loading || this.props.data.error || this.props.channelName !== this.props.data.currentUser.login ? null : r.createElement(r.Fragment, null, r.createElement(Ge.a, {
+                    var e = this.props.data,
+                        t = e.loading,
+                        n = e.error,
+                        a = e.currentUser;
+                    return t || n || !a || this.props.channelName !== a.login ? null : (this.props.latencyTracking.reportInteractive(), r.createElement(r.Fragment, null, r.createElement(Ze.a, {
                         title: Object(p.d)("Onboarding", "OnboardingSection")
-                    }), r.createElement(U.a, null, !this.hasAgreementPendingUpgrade && r.createElement(Ye.a, {
-                        "data-test-selector": De.PAYOUT_ONBOARDING_LINK,
+                    }), r.createElement(U.a, null, !this.hasAgreementPendingUpgrade && r.createElement($e.a, {
+                        "data-test-selector": dt.PAYOUT_ONBOARDING_LINK,
                         text: this.payoutOnboardingLinkText,
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/payout-onboarding"
-                    }), this.hasAgreementPendingUpgrade && r.createElement(Ye.a, {
-                        "data-test-selector": De.UPGRADE_AGREEMENT_LINK,
+                    }), this.hasAgreementPendingUpgrade && r.createElement($e.a, {
+                        "data-test-selector": dt.UPGRADE_AGREEMENT_LINK,
                         text: this.upgradeTermsLinkText,
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/upgrade-terms"
-                    }), this.hasCompletedOnboarding && r.createElement(Ye.a, {
-                        "data-test-selector": De.PAYOUTS_LINK,
+                    }), this.hasCompletedOnboarding && r.createElement($e.a, {
+                        "data-test-selector": dt.PAYOUTS_LINK,
                         text: Object(p.d)("Change Payout Method", "OnboardingSection"),
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/payouts"
-                    }), this.props.data.currentUser.roles.isAffiliate && r.createElement(Ye.a, {
-                        "data-test-selector": De.AFFILIATE_AGREEMENT_LINK,
+                    }), a && a.roles && a.roles.isAffiliate && r.createElement($e.a, {
+                        "data-test-selector": dt.AFFILIATE_AGREEMENT_LINK,
                         text: Object(p.d)("View Affiliate Agreement", "OnboardingSection"),
-                        linkTo: "https://www.twitch.tv/p/legal/affiliate-agreement/"
-                    }), this.showPartnerAgreementLink && r.createElement(Ye.a, {
-                        "data-test-selector": De.PARTNER_AGREEMENT_LINK,
+                        linkTo: "/p/legal/affiliate-agreement/"
+                    }), this.showPartnerAgreementLink && r.createElement($e.a, {
+                        "data-test-selector": dt.PARTNER_AGREEMENT_LINK,
                         text: Object(p.d)("View Active Partner Agreement", "OnboardingSection"),
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/view-terms"
-                    }), this.props.data.currentUser.roles.isExtensionsDeveloper && r.createElement(Ye.a, {
-                        "data-test-selector": De.EXTENSIONS_DEVELOPER_AGREEMENT_LINK,
+                    }), a && a.roles && a.roles.isExtensionsDeveloper && r.createElement($e.a, {
+                        "data-test-selector": dt.EXTENSIONS_DEVELOPER_AGREEMENT_LINK,
                         text: Object(p.d)("View Extensions Developer Agreement", "OnboardingSection"),
-                        linkTo: "https://www.twitch.tv/p/legal/developer-agreement/"
-                    })))
+                        linkTo: "/p/legal/developer-agreement/"
+                    }))))
                 }, Object.defineProperty(t.prototype, "hasAgreementPendingUpgrade", {
                     get: function() {
-                        return !!this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === Qe.WorkflowState.AGREEMENT_PENDING_UPGRADE
+                        return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === We.AGREEMENT_PENDING_UPGRADE)
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "hasCompletedOnboarding", {
                     get: function() {
-                        return !!this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === Qe.WorkflowState.COMPLETED
+                        return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === We.COMPLETED)
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "payoutOnboardingLinkText", {
                     get: function() {
-                        switch (this.props.data.currentUser.payoutInvite.category) {
-                            case Qe.OnboardEntity.Affiliate:
+                        var e = this.props.data.currentUser;
+                        if (!e || !e.payoutInvite) return null;
+                        switch (e.payoutInvite.category) {
+                            case Ve.AFFILIATE:
                                 return Object(p.d)("Affiliate Onboarding", "OnboardingSection");
-                            case Qe.OnboardEntity.StandardPartner:
-                            case Qe.OnboardEntity.PremiumPartner:
-                            case Qe.OnboardEntity.CustomPartner:
+                            case Ve.STANDARD_PARTNER:
+                            case Ve.PREMIUM_PARTNER:
+                            case Ve.CUSTOM_PARTNER:
                                 return Object(p.d)("Partner Onboarding", "OnboardingSection");
-                            case Qe.OnboardEntity.ExtensionsDeveloper:
+                            case Ve.EXTENSIONS_DEVELOPER:
                                 return Object(p.d)("Extensions Developer Onboarding", "OnboardingSection");
                             default:
-                                return ""
+                                return null
                         }
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "upgradeTermsLinkText", {
                     get: function() {
-                        switch (this.props.data.currentUser.payoutInvite.category) {
-                            case Qe.OnboardEntity.Affiliate:
+                        var e = this.props.data.currentUser;
+                        if (!e || !e.payoutInvite) return null;
+                        switch (e.payoutInvite.category) {
+                            case Ve.AFFILIATE:
                                 return Object(p.d)("Agree to the Twitch Affiliate Agreement", "OnboardingSection");
-                            case Qe.OnboardEntity.StandardPartner:
-                            case Qe.OnboardEntity.PremiumPartner:
+                            case Ve.STANDARD_PARTNER:
+                            case Ve.PREMIUM_PARTNER:
                                 return Object(p.d)("Agree to the Twitch Partner Agreement", "OnboardingSection");
                             default:
-                                return ""
+                                return null
                         }
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "isPaidPartner", {
-                    get: function() {
-                        return !!this.props.data.currentUser.payoutPlans && !!this.props.data.currentUser.payoutPlans.find(function(e) {
-                            return e.category === Qe.PayoutCategory.Partner && e.isReceivingRevenue
-                        })
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "isStandardPartner", {
-                    get: function() {
-                        return !!this.props.data.currentUser.payoutPlans && !!this.props.data.currentUser.payoutPlans.find(function(e) {
-                            return e.category === Qe.PayoutCategory.Partner && !!e.tags && e.tags.includes(Qe.PayoutPlanTag.Standard)
-                        })
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "isPremiumPartner", {
-                    get: function() {
-                        return !!this.props.data.currentUser.payoutPlans && !!this.props.data.currentUser.payoutPlans.find(function(e) {
-                            return e.category === Qe.PayoutCategory.Partner && !!e.tags && e.tags.includes(Qe.PayoutPlanTag.Premium)
-                        })
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "isLegacyPartner", {
-                    get: function() {
-                        return !!this.props.data.currentUser.payoutPlans && !!this.props.data.currentUser.payoutPlans.find(function(e) {
-                            return e.category === Qe.PayoutCategory.Partner && !!e.tags && e.tags.includes(Qe.PayoutPlanTag.Legacy)
-                        })
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "isCustomPartnerUpgrade", {
-                    get: function() {
-                        return this.props.data.currentUser.payoutInvite.category === Qe.OnboardEntity.CustomPartner && (this.isStandardPartner || this.isPremiumPartner)
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "isLegacyPartnerUpgrade", {
-                    get: function() {
-                        return this.isLegacyPartner && this.isStandardPartner && this.props.data.currentUser.payoutInvite.category === Qe.OnboardEntity.PremiumPartner
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "showPartnerAgreementLink", {
                     get: function() {
-                        return this.isPaidPartner && !this.hasAgreementPendingUpgrade && !this.isCustomPartnerUpgrade && !this.isLegacyPartnerUpgrade
+                        var e = this.props.data.currentUser;
+                        return !!e && lt(e.payoutPlans && e.payoutPlans.map(function(e) {
+                            return {
+                                category: e.category,
+                                tags: e.tags,
+                                isReceivingRevenue: e.isReceivingRevenue
+                            }
+                        }), e.payoutInvite && {
+                            category: e.payoutInvite.category,
+                            isLegacy: e.payoutInvite.isLegacy,
+                            workflow: {
+                                currentStep: e.payoutInvite.workflow && e.payoutInvite.workflow.currentStep
+                            }
+                        })
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            at = Object(i.compose)(Object(m.d)("OnboardingSection", {
-                autoReportInteractive: !0
-            }), Object(u.a)(tt))(nt),
-            rt = n("Aj/L"),
-            it = n("QRuM"),
-            ot = function(e) {
-                return r.createElement(S._8, null, r.createElement(Ge.a, {
+            mt = Object(i.compose)(Object(m.d)("OnboardingSection"), Object(u.a)(ct))(ut),
+            pt = n("Aj/L"),
+            gt = n("QRuM"),
+            ht = function(e) {
+                return r.createElement(S._8, null, r.createElement(Ze.a, {
                     title: Object(p.d)("Other Revenue Streams", "OtherRevenueStreamsForm")
-                }), r.createElement(U.a, null, r.createElement(Ye.a, {
+                }), r.createElement(U.a, null, r.createElement($e.a, {
                     text: Object(p.d)("Game sales via Twitch", "OtherRevenueStreamsForm"),
                     linkTo: "/" + e.channelName + "/dashboard/settings/revenue/game-commerce"
-                }), r.createElement(it.c, {
+                }), r.createElement(gt.c, {
                     name: "commerce_amendment_v2",
                     isStaff: e.isStaff
-                }, r.createElement(Ye.a, {
+                }, r.createElement($e.a, {
                     text: Object(p.d)("Gear, games, and more via Amazon Associates", "OtherRevenueStreamsForm"),
                     linkTo: "/" + e.channelName + "/dashboard/settings/revenue/game-commerce-v2"
-                })), r.createElement(Ye.a, {
+                })), r.createElement($e.a, {
                     text: Object(p.d)("Merch by Amazon (Beta)", "OtherRevenueStreamsForm"),
                     linkTo: "/" + e.channelName + "/dashboard/settings/revenue/merch-by-amazon"
                 })))
             };
-        var st, lt = Object(Oe.b)(function(e) {
-                var t = Object(rt.c)(e);
+        var bt, ft = Object(Te.b)(function(e) {
+                var t = Object(pt.c)(e);
                 return {
                     isStaff: !!(t && t.roles && t.roles.isStaff)
                 }
-            })(ot),
-            dt = function(e) {
+            })(ht),
+            Et = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -9404,12 +9419,12 @@ webpackJsonp([98], {
                     }))
                 }, t
             }(r.Component),
-            ct = n("9FLI"),
-            ut = n("exGi");
+            vt = n("9FLI"),
+            yt = n("exGi");
         ! function(e) {
             e[e.AD_FREE_VIEWING = 0] = "AD_FREE_VIEWING", e[e.IGNORE_SLOW_MODE = 1] = "IGNORE_SLOW_MODE", e[e.SUBSCRIBER_ONLY_CHAT = 2] = "SUBSCRIBER_ONLY_CHAT", e[e.SUBSCRIBER_ONLY_ARCHIVES = 3] = "SUBSCRIBER_ONLY_ARCHIVES"
-        }(st || (st = {}));
-        var mt = function(e) {
+        }(bt || (bt = {}));
+        var St = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.toggleBenefit = function(e, n) {
@@ -9420,7 +9435,7 @@ webpackJsonp([98], {
                                     case 0:
                                         if (!(this.props.data.user && this.props.data.user.id && this.props.data.user.roles && this.props.data.user.subscriptionProducts)) return [2];
                                         if (!(t = this.props.data.user.subscriptionProducts[0])) return [2];
-                                        r = e === st.AD_FREE_VIEWING ? n : t.hasAdFree, i = e === st.IGNORE_SLOW_MODE ? n : t.hasFastChat, o = e === st.SUBSCRIBER_ONLY_ARCHIVES ? n : t.hasSubonlyVideoArchive, s = e === st.SUBSCRIBER_ONLY_CHAT ? n : t.hasSubOnlyChat, l = this.props.data.user.subscriptionProducts, d = function(e) {
+                                        r = e === bt.AD_FREE_VIEWING ? n : t.hasAdFree, i = e === bt.IGNORE_SLOW_MODE ? n : t.hasFastChat, o = e === bt.SUBSCRIBER_ONLY_ARCHIVES ? n : t.hasSubonlyVideoArchive, s = e === bt.SUBSCRIBER_ONLY_CHAT ? n : t.hasSubOnlyChat, l = this.props.data.user.subscriptionProducts, d = function(e) {
                                             var t, n, d;
                                             return a.__generator(this, function(a) {
                                                 switch (a.label) {
@@ -9432,9 +9447,9 @@ webpackJsonp([98], {
                                                             hasFastChat: i,
                                                             hasSubOnlyVideoArchive: o,
                                                             hasSubOnlyChat: s
-                                                        }, [4, c.props.updateSubscriptionProduct(Object(v.a)(n))]) : [2, "continue"];
+                                                        }, [4, c.props.updateSubscriptionProduct(Object(E.a)(n))]) : [2, "continue"];
                                                     case 1:
-                                                        return d = a.sent(), Object(v.e)(ct, {
+                                                        return d = a.sent(), Object(E.e)(vt, {
                                                             login: c.props.channelName
                                                         }, function(t) {
                                                             if (t && t.user && t.user.subscriptionProducts && d.data.updateSubscriptionProduct) {
@@ -9471,37 +9486,37 @@ webpackJsonp([98], {
                         i = e.hasFastChat || !1,
                         o = e.hasSubOnlyChat || !1,
                         s = e.hasSubonlyVideoArchive || !1;
-                    return r.createElement(r.Fragment, null, r.createElement(Ge.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(Ze.a, {
                         title: Object(p.d)("Subscriptions", "DashboardRevenueSettings")
-                    }), r.createElement(U.a, null, r.createElement(Ye.a, {
+                    }), r.createElement(U.a, null, r.createElement($e.a, {
                         text: Object(p.d)("Subscription names", "SubsSettingsSection"),
                         linkTo: "/" + t + "/dashboard/settings/revenue/subscription/ticket"
-                    }), n && r.createElement(r.Fragment, null, r.createElement(Ye.a, {
+                    }), n && r.createElement(r.Fragment, null, r.createElement($e.a, {
                         text: Object(p.d)("Emotes", "SubsSettingsSection"),
                         linkTo: "/" + t + "/dashboard/settings/revenue/subscription/chatperks"
-                    }), r.createElement(Ye.a, {
+                    }), r.createElement($e.a, {
                         text: Object(p.d)("Loyalty badges", "SubsSettingsSection"),
                         linkTo: "/" + t + "/dashboard/settings/revenue/subscription/badges"
-                    }), r.createElement(dt, {
-                        benefit: st.AD_FREE_VIEWING,
+                    }), r.createElement(Et, {
+                        benefit: bt.AD_FREE_VIEWING,
                         label: Object(p.d)("Ad-Free viewing", "SubsSettingsSection"),
                         isToggled: a,
                         onChange: this.toggleBenefit,
                         description: Object(p.d)("Allow subscribers to watch your content on your channel ad-free", "SubsSettingsSection")
-                    })), r.createElement(dt, {
-                        benefit: st.IGNORE_SLOW_MODE,
+                    })), r.createElement(Et, {
+                        benefit: bt.IGNORE_SLOW_MODE,
                         label: Object(p.d)("Ignore slow mode", "SubsSettingsSection"),
                         isToggled: i,
                         onChange: this.toggleBenefit,
                         description: Object(p.d)("Allow subscribers to chat freely in your channel when chat is in slow mode", "SubsSettingsSection")
-                    }), r.createElement(dt, {
-                        benefit: st.SUBSCRIBER_ONLY_CHAT,
+                    }), r.createElement(Et, {
+                        benefit: bt.SUBSCRIBER_ONLY_CHAT,
                         label: Object(p.d)("Subscriber-only chat", "SubsSettingsSection"),
                         isToggled: o,
                         onChange: this.toggleBenefit,
                         description: Object(p.d)("Only allow subscribers and moderators to chat in your channel", "SubsSettingsSection")
-                    }), r.createElement(dt, {
-                        benefit: st.SUBSCRIBER_ONLY_ARCHIVES,
+                    }), r.createElement(Et, {
+                        benefit: bt.SUBSCRIBER_ONLY_ARCHIVES,
                         label: Object(p.d)("Subscriber-only archives", "SubsSettingsSection"),
                         isToggled: s,
                         onChange: this.toggleBenefit,
@@ -9509,7 +9524,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            pt = Object(g.d)(Object(u.a)(ct, {
+            kt = Object(h.d)(Object(u.a)(vt, {
                 options: function(e) {
                     return {
                         variables: {
@@ -9517,11 +9532,11 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }), Object(u.a)(ut, {
+            }), Object(u.a)(yt, {
                 name: "updateSubscriptionProduct"
-            }))(mt),
-            ht = n("nQ9n"),
-            gt = function(e) {
+            }))(St),
+            _t = n("nQ9n"),
+            Tt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -9534,13 +9549,13 @@ webpackJsonp([98], {
                         fullHeight: !0
                     }, r.createElement(l.a, null)) : r.createElement(c.b, null, r.createElement(S._8, {
                         fullHeight: !0
-                    }, r.createElement(at, {
+                    }, r.createElement(mt, {
                         channelName: this.channelName
-                    }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(r.Fragment, null, r.createElement(pt, {
+                    }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(r.Fragment, null, r.createElement(kt, {
                         channelName: this.channelName
-                    }), r.createElement(et, {
+                    }), r.createElement(st, {
                         channelName: this.channelName
-                    }), r.createElement(lt, {
+                    }), r.createElement(ft, {
                         channelName: this.channelName
                     }))))
                 }, Object.defineProperty(t.prototype, "channelName", {
@@ -9553,7 +9568,7 @@ webpackJsonp([98], {
                     get: function() {
                         var e = this.props.data.channel.payoutPlans;
                         return !!e && !!e.find(function(e) {
-                            return e.category === Qe.PayoutCategory.Affiliate && e.isReceivingRevenue
+                            return e.category === Ke.PayoutCategory.Affiliate && e.isReceivingRevenue
                         })
                     },
                     enumerable: !0,
@@ -9562,19 +9577,19 @@ webpackJsonp([98], {
                     get: function() {
                         var e = this.props.data.channel.payoutPlans;
                         return !!e && !!e.find(function(e) {
-                            return e.category === Qe.PayoutCategory.Partner && e.isReceivingRevenue
+                            return e.category === Ke.PayoutCategory.Partner && e.isReceivingRevenue
                         })
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            bt = Object(i.compose)(Object(m.d)("DashboardRevenueSettingsIndexPage", {
+            Nt = Object(i.compose)(Object(m.d)("DashboardRevenueSettingsIndexPage", {
                 autoReportInteractive: !0,
                 destination: ke.a.DashboardSettingsRevenue
             }), Object(Se.a)({
                 location: _e.PageviewLocation.DashboardRevenueSettings
-            }), Object(u.a)(ht, {
+            }), Object(u.a)(_t, {
                 options: function(e) {
                     return {
                         variables: {
@@ -9582,9 +9597,9 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }))(gt),
-            ft = n("vNxz"),
-            vt = function(e) {
+            }))(Tt),
+            Ot = n("vNxz"),
+            At = function(e) {
                 return r.createElement(S._35, {
                     background: S.n.Base,
                     padding: {
@@ -9621,12 +9636,12 @@ webpackJsonp([98], {
                     type: S.B.Text
                 }, Object(p.d)("Cancel", "LoyaltyBadgeUploadModalPresentation"))), r.createElement(S.v, {
                     onClick: e.onSaveClick
-                }, Object(p.d)("Save", "LoyaltyBadgeUploadModalPresentation"))), r.createElement(ft.a, {
+                }, Object(p.d)("Save", "LoyaltyBadgeUploadModalPresentation"))), r.createElement(Ot.a, {
                     closeOnBackdropClick: !0,
                     closeOnPageNavigation: !0
                 }))
             },
-            Et = function(e) {
+            Ct = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSaveClick = function() {
@@ -9636,32 +9651,32 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(vt, {
+                    return r.createElement(At, {
                         onSaveClick: this.onSaveClick,
                         onClose: this.onCancelClick
                     })
                 }, t
             }(r.Component);
-        var yt, St = Object(Oe.b)(null, function(e) {
-                return Object(g.b)({
-                    closeModal: Te.c
+        var Pt, It = Object(Te.b)(null, function(e) {
+                return Object(h.b)({
+                    closeModal: Ne.c
                 }, e)
-            })(Et),
-            kt = this,
-            _t = "subscriptions/v1/channels",
-            Ot = function() {
+            })(Ct),
+            wt = this,
+            Rt = "subscriptions/v1/channels",
+            xt = function() {
                 function e() {}
                 return e.getBadges = function(e) {
-                    return a.__awaiter(kt, void 0, void 0, function() {
+                    return a.__awaiter(wt, void 0, void 0, function() {
                         var t, n;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return a.trys.push([0, 2, , 3]), [4, re.a.getOrThrow(_t + "/" + e + "/badges", {
+                                    return a.trys.push([0, 2, , 3]), [4, re.a.getOrThrow(Rt + "/" + e + "/badges", {
                                         credentials: "include"
                                     })];
                                 case 1:
-                                    return t = a.sent(), [2, Nt(t.body)];
+                                    return t = a.sent(), [2, jt(t.body)];
                                 case 2:
                                     return n = a.sent(), [2, Promise.reject(n)];
                                 case 3:
@@ -9670,12 +9685,12 @@ webpackJsonp([98], {
                         })
                     })
                 }, e.getTimeoutStatuses = function(e) {
-                    return a.__awaiter(kt, void 0, void 0, function() {
+                    return a.__awaiter(wt, void 0, void 0, function() {
                         var t;
                         return a.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return n.trys.push([0, 2, , 3]), [4, re.a.getOrThrow(_t + "/" + e + "/timeout_statuses", {
+                                    return n.trys.push([0, 2, , 3]), [4, re.a.getOrThrow(Rt + "/" + e + "/timeout_statuses", {
                                         credentials: "include"
                                     })];
                                 case 1:
@@ -9688,12 +9703,12 @@ webpackJsonp([98], {
                         })
                     })
                 }, e.deleteBadge = function(e, t) {
-                    return a.__awaiter(kt, void 0, void 0, function() {
+                    return a.__awaiter(wt, void 0, void 0, function() {
                         var n;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return a.trys.push([0, 2, , 3]), [4, re.a.deleteOrThrow(_t + "/" + e + "/badges/" + t, {
+                                    return a.trys.push([0, 2, , 3]), [4, re.a.deleteOrThrow(Rt + "/" + e + "/badges/" + t, {
                                         credentials: "include"
                                     })];
                                 case 1:
@@ -9706,17 +9721,17 @@ webpackJsonp([98], {
                         })
                     })
                 }, e.uploadBadge = function(e, t) {
-                    return a.__awaiter(kt, void 0, void 0, function() {
+                    return a.__awaiter(wt, void 0, void 0, function() {
                         var n, r, i;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return a.trys.push([0, 2, , 3]), (n = new FormData).append("required_tenure_months", t.requiredTenureMonths.toString()), n.append("image_1x", t.image1x), n.append("image_2x", t.image2x), n.append("image_4x", t.image4x), [4, re.a.postOrThrow(_t + "/" + e + "/badges", {
+                                    return a.trys.push([0, 2, , 3]), (n = new FormData).append("required_tenure_months", t.requiredTenureMonths.toString()), n.append("image_1x", t.image1x), n.append("image_2x", t.image2x), n.append("image_4x", t.image4x), [4, re.a.postOrThrow(Rt + "/" + e + "/badges", {
                                         body: n,
                                         credentials: "include"
                                     })];
                                 case 1:
-                                    return r = a.sent(), [2, Tt(r.body)];
+                                    return r = a.sent(), [2, Dt(r.body)];
                                 case 2:
                                     return i = a.sent(), [2, Promise.reject(i)];
                                 case 3:
@@ -9726,7 +9741,7 @@ webpackJsonp([98], {
                     })
                 }, e
             }(),
-            Tt = function(e) {
+            Dt = function(e) {
                 return {
                     id: e.id,
                     requiredTenureMonths: e.required_tenure_months,
@@ -9736,21 +9751,21 @@ webpackJsonp([98], {
                     title: e.title
                 }
             },
-            Nt = function(e) {
+            jt = function(e) {
                 return e.map(function(e) {
-                    return Tt(e)
+                    return Dt(e)
                 })
             },
-            Ct = n("OjIq"),
-            Pt = (n("CRdy"), "https://static-cdn.jtvnw.net/badges/v1/19dd8673-124d-4f44-830c-b0f4f9d78635/2"),
-            At = "current-badge-image-selector",
-            wt = "current-badge-placeholder-selector",
-            It = function(e) {
+            Ft = n("OjIq"),
+            Mt = (n("CRdy"), "https://static-cdn.jtvnw.net/badges/v1/19dd8673-124d-4f44-830c-b0f4f9d78635/2"),
+            Lt = "current-badge-image-selector",
+            Ut = "current-badge-placeholder-selector",
+            Bt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCurrentBadges = function() {
                         var e = new Map(t.props.badgesMap),
-                            n = Ht.map(t => {
+                            n = nn.map(t => {
                                 const {
                                     requiredTenureMonths: n
                                 } = t, a = e.get(n);
@@ -9761,7 +9776,7 @@ webpackJsonp([98], {
                                     }
                                     return this.renderCurrentBadgePlaceholder(t)
                                 } {
-                                    const e = this.renderToolTip(Object(p.d)("Subscriber", "LoyaltyBadgeCurrentSection"), Pt);
+                                    const e = this.renderToolTip(Object(p.d)("Subscriber", "LoyaltyBadgeCurrentSection"), Mt);
                                     return this.renderCurrentBadgeImage(t, e)
                                 }
                             });
@@ -9772,10 +9787,10 @@ webpackJsonp([98], {
                             }
                         }, n)
                     }, t.renderCurrentBadgeImage = function(e, n) {
-                        var a = At;
+                        var a = Lt;
                         return t.renderCurrentBadge(e, "loyalty-badges-current-section__badge", a, n)
                     }, t.renderCurrentBadgePlaceholder = function(e) {
-                        var n = wt;
+                        var n = Ut;
                         return t.renderCurrentBadge(e, "loyalty-badges-current-section__placeholder", n)
                     }, t.renderCurrentBadge = function(e, t, n, a) {
                         return r.createElement(S._8, {
@@ -9803,7 +9818,7 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(Ct.a, {
+                    return r.createElement(Ft.a, {
                         title: Object(p.d)("Current Badges", "LoyaltyBadgeCurrentSection")
                     }, this.renderCurrentBadges())
                 }, t
@@ -9811,8 +9826,8 @@ webpackJsonp([98], {
         n("/GDT");
         ! function(e) {
             e[e.NoChanges = 0] = "NoChanges", e[e.Working = 1] = "Working", e[e.Success = 2] = "Success", e[e.Error = 3] = "Error"
-        }(yt || (yt = {}));
-        var Rt = function(e) {
+        }(Pt || (Pt = {}));
+        var Vt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderContainer = function(e, n) {
@@ -9832,11 +9847,11 @@ webpackJsonp([98], {
                         })), r.createElement(S.Q, null, n))
                     }, t.getButtonState = function(e) {
                         switch (e) {
-                            case yt.Working:
+                            case Pt.Working:
                                 return S.A.Loading;
-                            case yt.Success:
-                            case yt.NoChanges:
-                            case yt.Error:
+                            case Pt.Success:
+                            case Pt.NoChanges:
+                            case Pt.Error:
                             default:
                                 return S.A.Default
                         }
@@ -9860,13 +9875,13 @@ webpackJsonp([98], {
                         type: S.B.Alert,
                         state: this.getButtonState(this.props.deleteStatus),
                         onClick: this.props.showDeleteBadgeModal
-                    }, Object(p.d)("Delete Badge", "LoyaltyBadgeUploadSection"))), this.props.deleteStatus === yt.Error && r.createElement(S._12, {
+                    }, Object(p.d)("Delete Badge", "LoyaltyBadgeUploadSection"))), this.props.deleteStatus === Pt.Error && r.createElement(S._12, {
                         label: Object(p.d)("Failed to delete subscriber badge", "LoyaltyBadgeDeleteSection"),
                         type: S._13.Alert
                     })))
                 }, t
             }(r.Component),
-            xt = function(e) {
+            Wt = function(e) {
                 return r.createElement(S._35, {
                     background: S.n.Base,
                     padding: {
@@ -9903,12 +9918,12 @@ webpackJsonp([98], {
                     type: S.B.Text
                 }, Object(p.d)("Cancel", "LoyaltyBadgeDeleteModalPresentation"))), r.createElement(S.v, {
                     onClick: e.onDeleteClick
-                }, Object(p.d)("Delete", "LoyaltyBadgeDeleteModalPresentation"))), r.createElement(ft.a, {
+                }, Object(p.d)("Delete", "LoyaltyBadgeDeleteModalPresentation"))), r.createElement(Ot.a, {
                     closeOnBackdropClick: !0,
                     closeOnPageNavigation: !0
                 }))
             },
-            jt = function(e) {
+            Qt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onDeleteClick = function() {
@@ -9918,27 +9933,27 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(xt, {
+                    return r.createElement(Wt, {
                         onDeleteClick: this.onDeleteClick,
                         onClose: this.onCancelClick
                     })
                 }, t
             }(r.Component);
-        var Dt = Object(Oe.b)(null, function(e) {
-            return Object(g.b)({
-                closeModal: Te.c
+        var Yt = Object(Te.b)(null, function(e) {
+            return Object(h.b)({
+                closeModal: Ne.c
             }, e)
-        })(jt);
-        var Ft, Mt = Object(Oe.b)(null, function(e, t) {
-                return Object.assign(Object(g.b)({
+        })(Qt);
+        var Gt, zt = Object(Te.b)(null, function(e, t) {
+                return Object.assign(Object(h.b)({
                     showDeleteBadgeModal: function() {
-                        return Object(Te.d)(Dt, {
+                        return Object(Ne.d)(Yt, {
                             onDeleteClick: t.onDeleteClick
                         })
                     }
                 }, e), t)
-            })(Rt),
-            Lt = function() {
+            })(Vt),
+            Ht = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S.Q, {
                     bold: !0,
                     fontSize: S.V.Size7
@@ -9956,7 +9971,7 @@ webpackJsonp([98], {
                     }, "partnerhelp@twitch.tv")
                 }, "LoyaltyBadgeTimedOutSection"))))
             },
-            Ut = function() {
+            Xt = function() {
                 function e() {}
                 return e.readFile = function(e, t) {
                     var n = new FileReader;
@@ -9975,29 +9990,29 @@ webpackJsonp([98], {
         n("jlxi");
         ! function(e) {
             e[e.BadSizeError = 0] = "BadSizeError", e[e.BadImageError = 1] = "BadImageError", e[e.BadImageDimensionsError = 2] = "BadImageDimensionsError", e[e.None = 3] = "None"
-        }(Ft || (Ft = {}));
-        var Bt = 25e3,
-            Vt = Bt / 1e3,
-            Wt = ["image/png"],
-            Qt = function(e) {
+        }(Gt || (Gt = {}));
+        var qt = 25e3,
+            Kt = qt / 1e3,
+            $t = ["image/png"],
+            Zt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        errorStatus: Ft.None
+                        errorStatus: Gt.None
                     }, t.getErrorText = function() {
                         switch (t.state.errorStatus) {
-                            case Ft.BadSizeError:
+                            case Gt.BadSizeError:
                                 return Object(p.d)("Max file size is {fileSize} KB", {
-                                    fileSize: Vt
+                                    fileSize: Kt
                                 }, "LoyaltyBadgeFilePicker");
-                            case Ft.BadImageError:
+                            case Gt.BadImageError:
                                 return Object(p.d)("Bad PNG file", "LoyaltyBadgeFilePicker");
-                            case Ft.BadImageDimensionsError:
+                            case Gt.BadImageDimensionsError:
                                 return Object(p.d)("PNG must be {width} x {height}px", {
                                     width: t.props.widthRequirement,
                                     height: t.props.heightRequirement
                                 }, "LoyaltyBadgeFilePicker");
-                            case Ft.None:
+                            case Gt.None:
                             default:
                                 return
                         }
@@ -10005,20 +10020,20 @@ webpackJsonp([98], {
                         return a.__awaiter(t, void 0, void 0, function() {
                             var t, n = this;
                             return a.__generator(this, function(a) {
-                                return e.length < 1 ? [2] : (t = e[0]).size > Bt ? (this.setState({
-                                    errorStatus: Ft.BadSizeError
-                                }), [2]) : (Ut.readFile(t, function(e) {
-                                    Ut.readImage(e, n.props.widthRequirement, n.props.heightRequirement, function() {
+                                return e.length < 1 ? [2] : (t = e[0]).size > qt ? (this.setState({
+                                    errorStatus: Gt.BadSizeError
+                                }), [2]) : (Xt.readFile(t, function(e) {
+                                    Xt.readImage(e, n.props.widthRequirement, n.props.heightRequirement, function() {
                                         n.setState({
-                                            errorStatus: Ft.None
+                                            errorStatus: Gt.None
                                         }), n.props.onFileSubmitted(t, e)
                                     }, function() {
                                         n.setState({
-                                            errorStatus: Ft.BadImageDimensionsError
+                                            errorStatus: Gt.BadImageDimensionsError
                                         })
                                     }, function() {
                                         n.setState({
-                                            errorStatus: Ft.BadImageError
+                                            errorStatus: Gt.BadImageError
                                         })
                                     })
                                 }), [2])
@@ -10040,8 +10055,8 @@ webpackJsonp([98], {
                         display: S.R.InlineFlex,
                         flexDirection: S.T.Column,
                         position: S._15.Relative
-                    }, r.createElement(C.a, {
-                        allowedFileTypes: Wt,
+                    }, r.createElement(A.a, {
+                        allowedFileTypes: $t,
                         error: void 0 !== e,
                         onFilesSubmitted: this.onFilesSubmitted
                     }, r.createElement(S._8, {
@@ -10058,7 +10073,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            Yt = function(e) {
+            Jt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderFilePickerContents = function() {
@@ -10074,19 +10089,19 @@ webpackJsonp([98], {
                         t = e.image1xURL,
                         n = e.image2xURL,
                         a = e.image4xURL;
-                    return r.createElement(r.Fragment, null, r.createElement(Qt, {
+                    return r.createElement(r.Fragment, null, r.createElement(Zt, {
                         onFileSubmitted: this.props.onImage1xSubmitted,
                         heightRequirement: 18,
                         widthRequirement: 18
                     }, t ? r.createElement("img", {
                         src: t
-                    }) : this.renderFilePickerContents()), r.createElement(Qt, {
+                    }) : this.renderFilePickerContents()), r.createElement(Zt, {
                         onFileSubmitted: this.props.onImage2xSubmitted,
                         heightRequirement: 36,
                         widthRequirement: 36
                     }, n ? r.createElement("img", {
                         src: n
-                    }) : this.renderFilePickerContents()), r.createElement(Qt, {
+                    }) : this.renderFilePickerContents()), r.createElement(Zt, {
                         onFileSubmitted: this.props.onImage4xSubmitted,
                         heightRequirement: 72,
                         widthRequirement: 72
@@ -10095,13 +10110,13 @@ webpackJsonp([98], {
                     }) : this.renderFilePickerContents()))
                 }, t
             }(r.Component),
-            Gt = function(e) {
+            en = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isTimedOut: !1
                     }, t.renderTabs = function() {
-                        var e = Ht.map(function(e) {
+                        var e = nn.map(function(e) {
                             var n = e.requiredTenureMonths;
                             return r.createElement(S._36, {
                                 key: n,
@@ -10119,14 +10134,14 @@ webpackJsonp([98], {
                             margin: {
                                 top: 1
                             }
-                        }, n ? r.createElement(Mt, {
+                        }, n ? r.createElement(zt, {
                             image1xURL: n.image1xURL,
                             image2xURL: n.image2xURL,
                             image4xURL: n.image4xURL,
                             title: n.title,
                             onDeleteClick: t.props.onDeleteClick,
                             deleteStatus: t.props.deleteStatus
-                        }) : r.createElement(Yt, {
+                        }) : r.createElement(Jt, {
                             image1xURL: t.props.image1xDataURL,
                             image2xURL: t.props.image2xDataURL,
                             image4xURL: t.props.image4xDataURL,
@@ -10139,7 +10154,7 @@ webpackJsonp([98], {
                             var t, n, r, i, o;
                             return a.__generator(this, function(a) {
                                 if (e.currentTarget.parentElement)
-                                    for (t = e.currentTarget.parentElement.getAttribute("data-tab-target"), n = 0, r = Ht; n < r.length; n++) i = r[n], o = i.requiredTenureMonths, t === o.toString() && this.props.toggleActiveTab(o);
+                                    for (t = e.currentTarget.parentElement.getAttribute("data-tab-target"), n = 0, r = nn; n < r.length; n++) i = r[n], o = i.requiredTenureMonths, t === o.toString() && this.props.toggleActiveTab(o);
                                 return [2]
                             })
                         })
@@ -10151,7 +10166,7 @@ webpackJsonp([98], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, Ot.getTimeoutStatuses(this.props.channelId)];
+                                    return [4, xt.getTimeoutStatuses(this.props.channelId)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         isTimedOut: e
@@ -10160,13 +10175,13 @@ webpackJsonp([98], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return r.createElement(Ct.a, {
+                    return r.createElement(Ft.a, {
                         title: Object(p.d)("Manage Badges", "LoyaltyBadgeManageSection")
-                    }, this.state.isTimedOut ? r.createElement(Lt, null) : r.createElement(r.Fragment, null, this.renderTabs(), this.renderTabContent()))
+                    }, this.state.isTimedOut ? r.createElement(Ht, null) : r.createElement(r.Fragment, null, this.renderTabs(), this.renderTabContent()))
                 }, t
             }(r.Component),
-            zt = n("/D4H"),
-            Ht = [{
+            tn = n("/D4H"),
+            nn = [{
                 name: "Base",
                 requiredTenureMonths: 0
             }, {
@@ -10200,14 +10215,14 @@ webpackJsonp([98], {
                 name: "8-Year",
                 requiredTenureMonths: 96
             }],
-            qt = function(e) {
+            an = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         badgesMap: new Map,
                         activeTab: 0,
-                        saveStatus: E.b.NoChanges,
-                        deleteStatus: yt.NoChanges
+                        saveStatus: v.b.NoChanges,
+                        deleteStatus: Pt.NoChanges
                     }, t.onSaveClick = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
                             var e, t, n, r;
@@ -10216,7 +10231,7 @@ webpackJsonp([98], {
                                     case 0:
                                         if (!((e = this.props.data.user) && e.id && this.state.image1x && this.state.image2x && this.state.image4x)) return [3, 4];
                                         this.setState({
-                                            saveStatus: E.b.Working
+                                            saveStatus: v.b.Working
                                         }), t = {
                                             requiredTenureMonths: this.state.activeTab,
                                             image1x: this.state.image1x,
@@ -10224,7 +10239,7 @@ webpackJsonp([98], {
                                             image4x: this.state.image4x
                                         }, a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, Ot.uploadBadge(e.id, t)];
+                                        return a.trys.push([1, 3, , 4]), [4, xt.uploadBadge(e.id, t)];
                                     case 2:
                                         return n = a.sent(), (r = new Map(this.state.badgesMap)).set(n.requiredTenureMonths, n), this.setState({
                                             badgesMap: r,
@@ -10234,11 +10249,11 @@ webpackJsonp([98], {
                                             image1x: void 0,
                                             image2x: void 0,
                                             image4x: void 0,
-                                            saveStatus: E.b.Success
+                                            saveStatus: v.b.Success
                                         }), [3, 4];
                                     case 3:
                                         return a.sent(), this.setState({
-                                            saveStatus: E.b.Error
+                                            saveStatus: v.b.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -10256,16 +10271,16 @@ webpackJsonp([98], {
                                     image1x: void 0,
                                     image2x: void 0,
                                     image4x: void 0,
-                                    deleteStatus: yt.NoChanges,
-                                    saveStatus: E.b.NoChanges
+                                    deleteStatus: Pt.NoChanges,
+                                    saveStatus: v.b.NoChanges
                                 }), [2]
                             })
                         })
                     }, t.updateSaveStatus = function() {
                         t.state.image1x && t.state.image2x && t.state.image4x ? t.setState({
-                            saveStatus: E.b.DirtyChanges
+                            saveStatus: v.b.DirtyChanges
                         }) : t.setState({
-                            saveStatus: E.b.NoChanges
+                            saveStatus: v.b.NoChanges
                         })
                     }, t.onImage1xSubmitted = function(e, n) {
                         return a.__awaiter(t, void 0, void 0, function() {
@@ -10302,10 +10317,10 @@ webpackJsonp([98], {
                                     case 0:
                                         if (e = this.props.data.user, t = this.state.badgesMap.get(this.state.activeTab), !(e && e.id && t)) return [3, 4];
                                         this.setState({
-                                            deleteStatus: yt.Working
+                                            deleteStatus: Pt.Working
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, Ot.deleteBadge(e.id, t.id)];
+                                        return a.trys.push([1, 3, , 4]), [4, xt.deleteBadge(e.id, t.id)];
                                     case 2:
                                         return a.sent(), (n = new Map(this.state.badgesMap)).delete(t.requiredTenureMonths), this.setState({
                                             badgesMap: n,
@@ -10315,12 +10330,12 @@ webpackJsonp([98], {
                                             image1x: void 0,
                                             image2x: void 0,
                                             image4x: void 0,
-                                            saveStatus: E.b.NoChanges,
-                                            deleteStatus: yt.Success
+                                            saveStatus: v.b.NoChanges,
+                                            deleteStatus: Pt.Success
                                         }), [3, 4];
                                     case 3:
                                         return a.sent(), this.setState({
-                                            deleteStatus: yt.Error
+                                            deleteStatus: Pt.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -10339,7 +10354,7 @@ webpackJsonp([98], {
                         return a.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return this.props.data.user && this.props.data.user.id ? [4, Ot.getBadges(this.props.data.user.id)] : [2];
+                                    return this.props.data.user && this.props.data.user.id ? [4, xt.getBadges(this.props.data.user.id)] : [2];
                                 case 1:
                                     return e = n.sent(), t = new Map, e.forEach(function(e) {
                                         t.set(e.requiredTenureMonths, e)
@@ -10357,14 +10372,14 @@ webpackJsonp([98], {
                         status: this.state.saveStatus,
                         onClickSave: this.handleModalOpen
                     });
-                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
                         title: Object(p.d)("Loyalty Badges", "LoyaltyBadgesPageComponent"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(U.a, {
                         footer: e
-                    }, r.createElement(It, {
+                    }, r.createElement(Bt, {
                         badgesMap: this.state.badgesMap
-                    }), r.createElement(Gt, {
+                    }), r.createElement(en, {
                         activeTab: this.state.activeTab,
                         badgesMap: this.state.badgesMap,
                         channelId: this.props.data.user.id,
@@ -10380,7 +10395,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            Xt = Object(g.d)(Object(u.a)(zt, {
+            rn = Object(h.d)(Object(u.a)(tn, {
                 options: function(e) {
                     return {
                         variables: {
@@ -10388,21 +10403,21 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }))(qt);
-        var Kt, $t, Jt = Object(Oe.b)(null, function(e) {
-                return Object(g.b)({
+            }))(an);
+        var on, sn, ln = Object(Te.b)(null, function(e) {
+                return Object(h.b)({
                     showUploadBadgeModal: function(e) {
                         var t = a.__rest(e, []);
-                        return Object(Te.d)(St, t)
+                        return Object(Ne.d)(It, t)
                     }
                 }, e)
-            })(Xt),
-            Zt = function(e) {
+            })(rn),
+            dn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
                         title: Object(p.d)("Merch by Amazon (Beta)", "DashboardRevenueSettingsMerchByAmazon"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(U.a, null, r.createElement(S._35, {
@@ -10418,17 +10433,17 @@ webpackJsonp([98], {
                     }, Object(p.d)("Create & Manage Your Merch Account", "DashboardRevenueSettingsMerchByAmazon")))))
                 }, t
             }(r.Component),
-            en = Object(g.d)(Object(m.d)("MerchByAmazonPage", {
+            cn = Object(h.d)(Object(m.d)("MerchByAmazonPage", {
                 autoReportInteractive: !0,
                 destination: ke.a.DashboardSettingsRevenueMerchByAmazon
             }), Object(Se.a)({
                 location: _e.PageviewLocation.DashboardSettingsRevenueMerchByAmazon
-            }))(Zt),
-            tn = n("OAwv"),
-            nn = n("RweG"),
-            an = n("wuJz"),
-            rn = n("7GS+"),
-            on = function() {
+            }))(dn),
+            un = n("OAwv"),
+            mn = n("RweG"),
+            pn = n("wuJz"),
+            gn = n("7GS+"),
+            hn = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -10447,7 +10462,7 @@ webpackJsonp([98], {
                     }
                 }, "AffiliateAgreement")))
             },
-            sn = function() {
+            bn = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -10460,7 +10475,7 @@ webpackJsonp([98], {
                     buttonLabel: Object(p.d)("Next", "CustomPartnerAgreement")
                 }, "CustomPartnerAgreement")))
             },
-            ln = function() {
+            fn = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -10473,7 +10488,7 @@ webpackJsonp([98], {
                     buttonLabel: Object(p.d)("Next", "ExtensionsDeveloperAgreement")
                 }, "ExtensionsDeveloperAgreement")))
             },
-            dn = function(e) {
+            En = function(e) {
                 return r.createElement(S._35, {
                     background: S.n.Alt2,
                     padding: {
@@ -10502,7 +10517,7 @@ webpackJsonp([98], {
                     type: e.statusType
                 }))))
             },
-            cn = function(e) {
+            vn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10522,7 +10537,7 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(r.Fragment, null, r.createElement(dn, {
+                    return r.createElement(r.Fragment, null, r.createElement(En, {
                         title: Object(p.d)("Parent Consent", "ParentConfirmation")
                     }), r.createElement(S._8, {
                         padding: 2
@@ -10552,7 +10567,7 @@ webpackJsonp([98], {
                     })))))
                 }, t
             }(r.Component),
-            un = function() {
+            yn = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -10565,7 +10580,7 @@ webpackJsonp([98], {
                     buttonLabel: Object(p.d)("Next", "PartnerRedoInfo")
                 }, "PartnerRedoInfo")))
             },
-            mn = function(e) {
+            Sn = function(e) {
                 return r.createElement(S._8, {
                     position: S._15.Relative
                 }, r.createElement(S._8, {
@@ -10587,8 +10602,8 @@ webpackJsonp([98], {
                     }
                 }))
             },
-            pn = n("U5GC"),
-            hn = function(e) {
+            kn = n("U5GC"),
+            _n = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10630,7 +10645,7 @@ webpackJsonp([98], {
                             return a.__generator(this, function(s) {
                                 switch (s.label) {
                                     case 0:
-                                        return this.props.onboardEntity === Qe.OnboardEntity.StandardPartner || this.props.onboardEntity === Qe.OnboardEntity.PremiumPartner ? (n = this.props.data.currentUser.programAgreement || "", e = n && n.type, t = n && n.version) : (e = this.props.onboardEntity, t = "v1"), r = a.__assign({}, Object(v.a)({
+                                        return this.props.onboardEntity === Ke.OnboardEntity.StandardPartner || this.props.onboardEntity === Ke.OnboardEntity.PremiumPartner ? (n = this.props.data.currentUser.programAgreement || "", e = n && n.type, t = n && n.version) : (e = this.props.onboardEntity, t = "v1"), r = a.__assign({}, Object(E.a)({
                                             type: e,
                                             version: t
                                         })), [4, this.props.acceptProgramAgreement(r)];
@@ -10639,17 +10654,17 @@ webpackJsonp([98], {
                                             processingAgreement: !1
                                         }), [2]) : (o = function(e) {
                                             return e.currentUser.payoutInvite && e.currentUser.payoutInvite.workflow && i.data.acceptProgramAgreement.workflow && (e.currentUser.payoutInvite.workflow.currentStep = i.data.acceptProgramAgreement.workflow.currentStep), e
-                                        }, this.props.updateContainerQuery(o), this.props.updateStepDisplayed(Qe.OnboardStep.TaxInterview), [2])
+                                        }, this.props.updateContainerQuery(o), this.props.updateStepDisplayed(Ke.OnboardStep.TaxInterview), [2])
                                 }
                             })
                         })
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.data.loading) return r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(S._14, {
+                    if (this.props.data.loading) return r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._14, {
                         lineCount: 4
                     })));
-                    if (this.props.data.error) return r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(l.a, {
+                    if (this.props.data.error) return r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(l.a, {
                         message: Object(p.d)("Oops, something went wrong.", "PayoutOnboardingAgreement")
                     })));
                     var e = r.createElement(S.v, {
@@ -10662,31 +10677,31 @@ webpackJsonp([98], {
                     }, this.skipAgreement ? Object(p.d)("Next", "PayoutOnboardingAgreement") : Object(p.d)("Agree", "PayoutOnboardingAgreement"));
                     return r.createElement(U.a, {
                         footer: e
-                    }, r.createElement(Ct.a, null, r.createElement(S._35, {
+                    }, r.createElement(Ft.a, null, r.createElement(S._35, {
                         borderMarked: !0,
                         background: S.n.Base,
                         padding: 2,
                         elevation: 1
-                    }, this.renderAgreement)), !this.skipAgreement && this.requiresParentConsent && r.createElement(cn, {
+                    }, this.renderAgreement)), !this.skipAgreement && this.requiresParentConsent && r.createElement(vn, {
                         updateParentName: this.updateParentName,
                         updateParentConfirmation: this.updateParentConfirmation
                     }))
                 }, Object.defineProperty(t.prototype, "renderAgreement", {
                     get: function() {
-                        if (this.isPartnerRedo) return r.createElement(un, null);
+                        if (this.isPartnerRedo) return r.createElement(yn, null);
                         switch (this.props.onboardEntity) {
-                            case Qe.OnboardEntity.Affiliate:
-                                return r.createElement(on, null);
-                            case Qe.OnboardEntity.ExtensionsDeveloper:
-                                return r.createElement(ln, null);
-                            case Qe.OnboardEntity.StandardPartner:
-                            case Qe.OnboardEntity.PremiumPartner:
+                            case Ke.OnboardEntity.Affiliate:
+                                return r.createElement(hn, null);
+                            case Ke.OnboardEntity.ExtensionsDeveloper:
+                                return r.createElement(fn, null);
+                            case Ke.OnboardEntity.StandardPartner:
+                            case Ke.OnboardEntity.PremiumPartner:
                                 var e = this.props.data.currentUser.programAgreement;
-                                return e && r.createElement(mn, {
+                                return e && r.createElement(Sn, {
                                     body: e.body
                                 });
-                            case Qe.OnboardEntity.CustomPartner:
-                                return r.createElement(sn, null);
+                            case Ke.OnboardEntity.CustomPartner:
+                                return r.createElement(bn, null);
                             default:
                                 return null
                         }
@@ -10697,15 +10712,15 @@ webpackJsonp([98], {
                     get: function() {
                         if (!this.props.data.currentUser.roles.isPartner || !this.props.data.currentUser.payoutPlans) return !1;
                         var e = this.props.data.currentUser.payoutPlans.find(function(e) {
-                            return e.category === Qe.PayoutCategory.Partner
+                            return e.category === Ke.PayoutCategory.Partner
                         });
-                        return !!e && (!!e.isReceivingRevenue && (!!e.tags && (e.tags.includes(Qe.PayoutPlanTag.Standard) ? this.props.onboardEntity === Qe.OnboardEntity.StandardPartner : e.tags.includes(Qe.PayoutPlanTag.Premium) ? this.props.onboardEntity === Qe.OnboardEntity.PremiumPartner : !!e.tags.includes(Qe.PayoutPlanTag.Custom) && this.props.onboardEntity === Qe.OnboardEntity.CustomPartner)))
+                        return !!e && (!!e.isReceivingRevenue && (!!e.tags && (!(!this.props.data.currentUser.payoutInvite || !this.props.data.currentUser.payoutInvite.isLegacy) || !e.tags.includes(Ke.PayoutPlanTag.Legacy) && (e.tags.includes(Ke.PayoutPlanTag.Standard) ? this.props.onboardEntity === Ke.OnboardEntity.StandardPartner : e.tags.includes(Ke.PayoutPlanTag.Premium) ? this.props.onboardEntity === Ke.OnboardEntity.PremiumPartner : !!e.tags.includes(Ke.PayoutPlanTag.Custom) && this.props.onboardEntity === Ke.OnboardEntity.CustomPartner))))
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "skipAgreement", {
                     get: function() {
-                        return this.props.onboardEntity === Qe.OnboardEntity.ExtensionsDeveloper || this.props.onboardEntity === Qe.OnboardEntity.CustomPartner || this.isPartnerRedo
+                        return this.props.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper || this.props.onboardEntity === Ke.OnboardEntity.CustomPartner || this.isPartnerRedo
                     },
                     enumerable: !0,
                     configurable: !0
@@ -10713,7 +10728,7 @@ webpackJsonp([98], {
                     get: function() {
                         if (!this.props.workflow.registration) return !1;
                         var e = this.props.workflow.registration.birthdate;
-                        return Object(an.differenceInYears)(new Date, e) < 18
+                        return Object(pn.differenceInYears)(new Date, e) < 18
                     },
                     enumerable: !0,
                     configurable: !0
@@ -10725,39 +10740,39 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            gn = Object(g.d)(Object(u.a)(pn, {
+            Tn = Object(h.d)(Object(u.a)(kn, {
                 name: "data",
                 options: function(e) {
                     return {
                         variables: {
-                            withAgreement: e.onboardEntity === Qe.OnboardEntity.StandardPartner || e.onboardEntity === Qe.OnboardEntity.PremiumPartner
+                            withAgreement: e.onboardEntity === Ke.OnboardEntity.StandardPartner || e.onboardEntity === Ke.OnboardEntity.PremiumPartner
                         }
                     }
                 }
-            }), Object(u.a)(rn, {
+            }), Object(u.a)(gn, {
                 name: "acceptProgramAgreement"
-            }))(hn),
-            bn = function(e) {
-                if (e.status === $t.Completed) return null;
+            }))(_n),
+            Nn = function(e) {
+                if (e.status === sn.Completed) return null;
                 var t;
-                if (e.status === $t.UnderReview) switch (e.onboardEntity) {
-                        case Qe.OnboardEntity.ExtensionsDeveloper:
+                if (e.status === sn.UnderReview) switch (e.onboardEntity) {
+                        case Ke.OnboardEntity.ExtensionsDeveloper:
                             t = r.createElement(S.Q, null, Object(p.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutInfoBrick"));
                             break;
-                        case Qe.OnboardEntity.Affiliate:
-                        case Qe.OnboardEntity.StandardPartner:
-                        case Qe.OnboardEntity.PremiumPartner:
-                        case Qe.OnboardEntity.CustomPartner:
+                        case Ke.OnboardEntity.Affiliate:
+                        case Ke.OnboardEntity.StandardPartner:
+                        case Ke.OnboardEntity.PremiumPartner:
+                        case Ke.OnboardEntity.CustomPartner:
                             t = r.createElement(S.Q, null, Object(p.d)("Your payout information is currently under review. This typically only takes a few minutes.", "PayoutInfoBrick"))
-                    } else if (e.status === $t.NotStarted) switch (e.onboardEntity) {
-                        case Qe.OnboardEntity.ExtensionsDeveloper:
+                    } else if (e.status === sn.NotStarted) switch (e.onboardEntity) {
+                        case Ke.OnboardEntity.ExtensionsDeveloper:
                             t = r.createElement(r.Fragment, null, r.createElement(S._8, {
                                 margin: {
                                     bottom: 1
                                 }
                             }, r.createElement(S.Q, null, Object(p.d)("Provide additional financial information to continue this process and, further, providing this information enables you to participate with any monetization features that may become available.", "PayoutInfoBrick"))), r.createElement(S.Q, null, Object(p.d)('Because there are no monetization options and we have no way to pay you out at this time, please choose the "Hold Payouts" option on the following screen.', "PayoutInfoBrick")));
                             break;
-                        case Qe.OnboardEntity.Affiliate:
+                        case Ke.OnboardEntity.Affiliate:
                             t = r.createElement(r.Fragment, null, r.createElement(S._8, {
                                 margin: {
                                     bottom: 1
@@ -10772,9 +10787,9 @@ webpackJsonp([98], {
                                 }
                             }, "PayoutInfoBrick"))), r.createElement(S.Q, null, Object(p.d)('Choose "Hold Payouts" if you want us to hold your money until you are ready for a payout. Otherwise you will be paid automatically and charged a transaction fee each time you are paid out.', "PayoutInfoBrick")));
                             break;
-                        case Qe.OnboardEntity.StandardPartner:
-                        case Qe.OnboardEntity.PremiumPartner:
-                        case Qe.OnboardEntity.CustomPartner:
+                        case Ke.OnboardEntity.StandardPartner:
+                        case Ke.OnboardEntity.PremiumPartner:
+                        case Ke.OnboardEntity.CustomPartner:
                             t = r.createElement(r.Fragment, null, r.createElement(S._8, {
                                 margin: {
                                     bottom: 1
@@ -10790,18 +10805,18 @@ webpackJsonp([98], {
                         elevation: 1
                     }, t)
             },
-            fn = function(e) {
+            On = function(e) {
                 var t;
                 switch (e.onboardEntity) {
-                    case Qe.OnboardEntity.Affiliate:
+                    case Ke.OnboardEntity.Affiliate:
                         t = "https://help.twitch.tv/customer/portal/articles/2785925-affiliate-onboarding-guide";
                         break;
-                    case Qe.OnboardEntity.ExtensionsDeveloper:
+                    case Ke.OnboardEntity.ExtensionsDeveloper:
                         t = "https://dev.twitch.tv/docs/extensions/onboarding";
                         break;
-                    case Qe.OnboardEntity.StandardPartner:
-                    case Qe.OnboardEntity.PremiumPartner:
-                    case Qe.OnboardEntity.CustomPartner:
+                    case Ke.OnboardEntity.StandardPartner:
+                    case Ke.OnboardEntity.PremiumPartner:
+                    case Ke.OnboardEntity.CustomPartner:
                         t = "https://help.twitch.tv/customer/portal/articles/2853658-partner-onboarding-guide";
                         break;
                     default:
@@ -10819,13 +10834,13 @@ webpackJsonp([98], {
                     }
                 }, "OnboardingGuideLink"))
             },
-            vn = function(e) {
+            An = function(e) {
                 var t;
-                return e.onboardEntity === Qe.OnboardEntity.ExtensionsDeveloper ? (e.status === $t.NotStarted && (t = r.createElement(S.Q, null, Object(p.d)("Click the button below to submit your financial information.", "PayoutInfoText"))), e.status === $t.UnderReview && (t = r.createElement(S.Q, null, Object(p.d)("You can change your financial information if you wish to modify any previously submitted information. You may want to do this if your financial information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === $t.Completed && (t = r.createElement(r.Fragment, null, r.createElement(S._8, {
+                return e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper ? (e.status === sn.NotStarted && (t = r.createElement(S.Q, null, Object(p.d)("Click the button below to submit your financial information.", "PayoutInfoText"))), e.status === sn.UnderReview && (t = r.createElement(S.Q, null, Object(p.d)("You can change your financial information if you wish to modify any previously submitted information. You may want to do this if your financial information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === sn.Completed && (t = r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
                     }
-                }, r.createElement(S.Q, null, Object(p.d)("Your financial information was successfully validated.", "PayoutInfoText"))), r.createElement(S.Q, null, Object(p.d)("Click the button below if you wish to modify or correct any previously submitted financial information. Please note that this will erase your existing financial information and you will need to fully complete the form again.", "PayoutInfoText"))))) : (e.status === $t.NotStarted && (t = r.createElement(S.Q, null, Object(p.d)("Click the button below to submit your payout method.", "PayoutInfoText"))), e.status === $t.UnderReview && (t = r.createElement(S.Q, null, Object(p.d)("You can change your payout method if you wish to modify any previously submitted information. You may want to do this if your payout information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === $t.Completed && (t = r.createElement(r.Fragment, null, r.createElement(S._8, {
+                }, r.createElement(S.Q, null, Object(p.d)("Your financial information was successfully validated.", "PayoutInfoText"))), r.createElement(S.Q, null, Object(p.d)("Click the button below if you wish to modify or correct any previously submitted financial information. Please note that this will erase your existing financial information and you will need to fully complete the form again.", "PayoutInfoText"))))) : (e.status === sn.NotStarted && (t = r.createElement(S.Q, null, Object(p.d)("Click the button below to submit your payout method.", "PayoutInfoText"))), e.status === sn.UnderReview && (t = r.createElement(S.Q, null, Object(p.d)("You can change your payout method if you wish to modify any previously submitted information. You may want to do this if your payout information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === sn.Completed && (t = r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
                     }
@@ -10833,17 +10848,17 @@ webpackJsonp([98], {
                     margin: {
                         bottom: 2
                     }
-                }, t), e.status !== $t.Completed && r.createElement(S._8, {
+                }, t), e.status !== sn.Completed && r.createElement(S._8, {
                     margin: {
                         bottom: 2
                     }
-                }, r.createElement(fn, {
+                }, r.createElement(On, {
                     onboardEntity: e.onboardEntity
                 })))
             },
-            En = n("+8VM"),
-            yn = n("yDzg"),
-            Sn = (n("mfHG"), function(e) {
+            Cn = n("+8VM"),
+            Pn = n("yDzg"),
+            In = (n("mfHG"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10876,8 +10891,8 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component)),
-            kn = n("uAAQ"),
-            _n = (n("212O"), function(e) {
+            wn = n("uAAQ"),
+            Rn = (n("212O"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -10898,7 +10913,7 @@ webpackJsonp([98], {
                         className: "payout-method-modal__container",
                         background: S.n.Base,
                         padding: 2
-                    }, r.createElement(Sn, {
+                    }, r.createElement(In, {
                         tipaltiURL: this.tipaltiURL
                     }))
                 }, Object.defineProperty(t.prototype, "tipaltiURL", {
@@ -10909,89 +10924,89 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component)),
-            On = Object(g.d)(Object(u.a)(kn, {
+            xn = Object(h.d)(Object(u.a)(wn, {
                 options: function() {
                     return {
                         variables: {
-                            redirectURL: Object(yn.a)(window.location.href, {
+                            redirectURL: Object(Pn.a)(window.location.href, {
                                 redirect_tipalti: "true"
                             })
                         }
                     }
                 }
-            }))(_n),
-            Tn = function(e) {
+            }))(Rn),
+            Dn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(r.Fragment, null, r.createElement(On, null), r.createElement(En.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(xn, null), r.createElement(Cn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(r.Component);
         ! function(e) {
             e.ContinueButton = "payout-onboarding-payout-method__continue-button", e.HeaderStatus = "payout-onboarding-payout-method__header-status"
-        }(Kt || (Kt = {})),
+        }(on || (on = {})),
         function(e) {
             e[e.NotStarted = 0] = "NotStarted", e[e.UnderReview = 1] = "UnderReview", e[e.Completed = 2] = "Completed"
-        }($t || ($t = {}));
-        var Nn = function(e) {
+        }(sn || (sn = {}));
+        var jn = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.openPayoutMethodModal = function() {
                     t.props.showPayoutMethodModal()
                 }, t.handleContinueClick = function() {
-                    var e = t.props.onboardEntity === Qe.OnboardEntity.CustomPartner ? Qe.OnboardStep.Review : Qe.OnboardStep.Summary;
+                    var e = t.props.onboardEntity === Ke.OnboardEntity.CustomPartner ? Ke.OnboardStep.Review : Ke.OnboardStep.Summary;
                     t.props.updateStepDisplayed(e)
                 }, t
             }
             return a.__extends(t, e), t.prototype.render = function() {
-                return r.createElement(U.a, null, r.createElement(dn, {
+                return r.createElement(U.a, null, r.createElement(En, {
                     title: Object(p.d)("Payout Method", "PayoutOnboardingPayoutMethod"),
                     statusText: this.payoutStatusText,
                     statusType: this.payoutStatusType,
                     borderTop: !0,
-                    "data-test-selector": Kt.HeaderStatus
+                    "data-test-selector": on.HeaderStatus
                 }), r.createElement(S._35, {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: 2
-                }, r.createElement(bn, {
+                }, r.createElement(Nn, {
                     onboardEntity: this.props.onboardEntity,
                     status: this.payoutMethodStatus
-                }), r.createElement(vn, {
+                }), r.createElement(An, {
                     onboardEntity: this.props.onboardEntity,
                     status: this.payoutMethodStatus
                 }), r.createElement(S.v, {
                     onClick: this.openPayoutMethodModal,
-                    type: this.payoutMethodStatus === $t.NotStarted ? S.B.Default : S.B.Hollow
+                    type: this.payoutMethodStatus === sn.NotStarted ? S.B.Default : S.B.Hollow
                 }, this.payoutMethodButtonText)), r.createElement(S._35, {
                     padding: 2,
                     background: S.n.Alt2
                 }, r.createElement(S.v, {
-                    "data-test-selector": Kt.ContinueButton,
+                    "data-test-selector": on.ContinueButton,
                     size: S.z.Large,
                     onClick: this.handleContinueClick,
                     disabled: this.continueButtonDisabled
                 }, Object(p.d)("Continue", "PayoutOnboardingPayoutMethod"))))
             }, Object.defineProperty(t.prototype, "isExtensionsDeveloperOnboarding", {
                 get: function() {
-                    return this.props.onboardEntity === Qe.OnboardEntity.ExtensionsDeveloper
+                    return this.props.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "payoutMethodStatus", {
                 get: function() {
                     switch (this.props.workflow.currentStep) {
-                        case Qe.WorkflowState.PAYOUT_METHOD_PENDING:
-                            return $t.UnderReview;
-                        case Qe.WorkflowState.COMPLETED:
-                        case Qe.WorkflowState.REVIEW_PENDING:
-                        case Qe.WorkflowState.AGREEMENT_PENDING_UPGRADE:
-                            return $t.Completed;
+                        case Ke.WorkflowState.PAYOUT_METHOD_PENDING:
+                            return sn.UnderReview;
+                        case Ke.WorkflowState.COMPLETED:
+                        case Ke.WorkflowState.REVIEW_PENDING:
+                        case Ke.WorkflowState.AGREEMENT_PENDING_UPGRADE:
+                            return sn.Completed;
                         default:
-                            return $t.NotStarted
+                            return sn.NotStarted
                     }
                 },
                 enumerable: !0,
@@ -10999,9 +11014,9 @@ webpackJsonp([98], {
             }), Object.defineProperty(t.prototype, "payoutStatusText", {
                 get: function() {
                     switch (this.payoutMethodStatus) {
-                        case $t.UnderReview:
+                        case sn.UnderReview:
                             return Object(p.d)("Under Review", "PayoutOnboardingPayoutMethod");
-                        case $t.Completed:
+                        case sn.Completed:
                             return Object(p.d)("Completed", "PayoutOnboardingPayoutMethod");
                         default:
                             return Object(p.d)("Not Started", "PayoutOnboardingPayoutMethod")
@@ -11012,9 +11027,9 @@ webpackJsonp([98], {
             }), Object.defineProperty(t.prototype, "payoutStatusType", {
                 get: function() {
                     switch (this.payoutMethodStatus) {
-                        case $t.UnderReview:
+                        case sn.UnderReview:
                             return S._13.Warn;
-                        case $t.Completed:
+                        case sn.Completed:
                             return S._13.Success;
                         default:
                             return
@@ -11024,41 +11039,41 @@ webpackJsonp([98], {
                 configurable: !0
             }), Object.defineProperty(t.prototype, "payoutMethodButtonText", {
                 get: function() {
-                    return this.isExtensionsDeveloperOnboarding ? this.payoutMethodStatus === $t.NotStarted ? Object(p.d)("Set Financial Information", "PayoutOnboardingPayoutMethod") : Object(p.d)("Change Financial Information", "PayoutOnboardingPayoutMethod") : this.payoutMethodStatus === $t.NotStarted ? Object(p.d)("Set Payout Method", "PayoutOnboardingPayoutMethod") : Object(p.d)("Change Payout Method", "PayoutOnboardingPayoutMethod")
+                    return this.isExtensionsDeveloperOnboarding ? this.payoutMethodStatus === sn.NotStarted ? Object(p.d)("Set Financial Information", "PayoutOnboardingPayoutMethod") : Object(p.d)("Change Financial Information", "PayoutOnboardingPayoutMethod") : this.payoutMethodStatus === sn.NotStarted ? Object(p.d)("Set Payout Method", "PayoutOnboardingPayoutMethod") : Object(p.d)("Change Payout Method", "PayoutOnboardingPayoutMethod")
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "continueButtonDisabled", {
                 get: function() {
                     var e = this.props.workflow.currentStep;
-                    return e !== Qe.WorkflowState.COMPLETED && e !== Qe.WorkflowState.REVIEW_PENDING
+                    return e !== Ke.WorkflowState.COMPLETED && e !== Ke.WorkflowState.REVIEW_PENDING
                 },
                 enumerable: !0,
                 configurable: !0
             }), t
         }(r.Component);
-        var Cn, Pn = Object(g.d)(Object(Oe.b)(null, function(e) {
-                return Object(g.b)({
+        var Fn, Mn = Object(h.d)(Object(Te.b)(null, function(e) {
+                return Object(h.b)({
                     showPayoutMethodModal: function() {
-                        return Object(Te.d)(Tn, null)
+                        return Object(Ne.d)(Dn, null)
                     }
                 }, e)
-            }))(Nn),
-            An = /^[\s\da-zA-Z&\-,‘'\/#\.%]*$/,
-            wn = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-            In = function() {
+            }))(jn),
+            Ln = /^[\s\da-zA-Z&\-,‘'\/#\.%]*$/,
+            Un = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+            Bn = function() {
                 return Object(p.d)("Only the English alphabet (non-accented Latin characters), numbers, and these special characters & - , ‘ / # . % are accepted.", "PayoutOnboardingRegistration")
             },
-            Rn = function() {
+            Vn = function() {
                 return Object(p.d)("Must provide a valid email address.", "PayoutOnboardingRegistration")
             },
-            xn = function() {
+            Wn = function() {
                 return Object(p.d)("optional", "PayoutOnboardingRegistration")
             };
         ! function(e) {
             e.FIRST_NAME = "contact-info__first-name", e.MIDDLE_NAME = "contact-info__middle-name", e.LAST_NAME = "contact-info__last-name", e.EMAIL = "contact-info__email", e.CONFIRM_EMAIL = "contact-info__confirm-email", e.COMPANY_LEGAL_NAME = "contact-info__company-legal-name"
-        }(Cn || (Cn = {}));
-        var jn, Dn = function(e) {
+        }(Fn || (Fn = {}));
+        var Qn, Yn = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -11111,19 +11126,19 @@ webpackJsonp([98], {
             }
             return a.__extends(t, e), Object.defineProperty(t.prototype, "invalidFormatErrorMessage", {
                 get: function() {
-                    return In()
+                    return Bn()
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "invalidEmailErrorMessage", {
                 get: function() {
-                    return Rn()
+                    return Vn()
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "optionalText", {
                 get: function() {
-                    return xn()
+                    return Wn()
                 },
                 enumerable: !0,
                 configurable: !0
@@ -11148,15 +11163,15 @@ webpackJsonp([98], {
                 }, r.createElement(S.W, {
                     label: Object(p.d)("First Name", "ContactInfo"),
                     orientation: S.X.Horizontal,
-                    error: !An.test(this.state.firstName),
+                    error: !Ln.test(this.state.firstName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Cn.FIRST_NAME
+                    "data-test-selector": Fn.FIRST_NAME
                 }, r.createElement(S._4, {
                     autoFocus: !0,
                     type: S._5.Text,
                     value: this.state.firstName,
                     onChange: this.updateFirstName,
-                    error: !An.test(this.state.firstName)
+                    error: !Ln.test(this.state.firstName)
                 }))), r.createElement(S._8, {
                     margin: {
                         bottom: 2
@@ -11165,14 +11180,14 @@ webpackJsonp([98], {
                     label: Object(p.d)("Middle Name", "ContactInfo"),
                     labelOptional: this.optionalText,
                     orientation: S.X.Horizontal,
-                    error: !An.test(this.state.middleName),
+                    error: !Ln.test(this.state.middleName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Cn.MIDDLE_NAME
+                    "data-test-selector": Fn.MIDDLE_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.middleName,
                     onChange: this.updateMiddleName,
-                    error: !An.test(this.state.middleName)
+                    error: !Ln.test(this.state.middleName)
                 }))), r.createElement(S._8, {
                     margin: {
                         bottom: 2
@@ -11181,19 +11196,19 @@ webpackJsonp([98], {
                     label: Object(p.d)("Last Name", "ContactInfo"),
                     hint: Object(p.d)("Please type your full legal name. This must be the name shown on your income tax return used to report income.", "ContactInfo"),
                     orientation: S.X.Horizontal,
-                    error: !An.test(this.state.lastName),
+                    error: !Ln.test(this.state.lastName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Cn.LAST_NAME
+                    "data-test-selector": Fn.LAST_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.lastName,
                     onChange: this.updateLastName,
-                    error: !An.test(this.state.lastName)
+                    error: !Ln.test(this.state.lastName)
                 }))), r.createElement(S._8, {
                     margin: {
                         bottom: 2
                     }
-                }, r.createElement(pa, {
+                }, r.createElement(ka, {
                     onMonthChange: this.props.onMonthChange,
                     onDayChange: this.props.onDayChange,
                     onYearChange: this.props.onYearChange
@@ -11205,16 +11220,16 @@ webpackJsonp([98], {
                     label: Object(p.d)("Email", "ContactInfo"),
                     hint: Object(p.d)("We will use this email to send you important tax documentation and payout information.", "ContactInfo"),
                     orientation: S.X.Horizontal,
-                    error: !!this.state.email && !wn.test(this.state.email) && this.state.showEmailErrors,
+                    error: !!this.state.email && !Un.test(this.state.email) && this.state.showEmailErrors,
                     errorMessage: this.invalidEmailErrorMessage,
-                    "data-test-selector": Cn.EMAIL
+                    "data-test-selector": Fn.EMAIL
                 }, r.createElement(S._4, {
                     type: S._5.Email,
                     value: this.state.email,
                     onChange: this.updateEmail,
                     onFocus: this.hideEmailErrors,
                     onBlur: this.showEmailErrors,
-                    error: !!this.state.email && !wn.test(this.state.email) && this.state.showEmailErrors
+                    error: !!this.state.email && !Un.test(this.state.email) && this.state.showEmailErrors
                 }))), r.createElement(S._8, {
                     margin: {
                         bottom: 2
@@ -11224,7 +11239,7 @@ webpackJsonp([98], {
                     orientation: S.X.Horizontal,
                     error: this.state.email !== this.state.confirmEmail && this.state.showEmailErrors,
                     errorMessage: Object(p.d)("Email addresses must match.", "ContactInfo"),
-                    "data-test-selector": Cn.CONFIRM_EMAIL
+                    "data-test-selector": Fn.CONFIRM_EMAIL
                 }, r.createElement(S._4, {
                     type: S._5.Email,
                     value: this.state.confirmEmail,
@@ -11236,21 +11251,21 @@ webpackJsonp([98], {
                     label: Object(p.d)("Company Legal Name", "ContactInfo"),
                     labelOptional: this.optionalText,
                     orientation: S.X.Horizontal,
-                    error: !An.test(this.state.companyName),
+                    error: !Ln.test(this.state.companyName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Cn.COMPANY_LEGAL_NAME
+                    "data-test-selector": Fn.COMPANY_LEGAL_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.companyName,
                     onChange: this.updateCompanyName,
-                    error: !An.test(this.state.companyName)
+                    error: !Ln.test(this.state.companyName)
                 }))))
             }, t
         }(r.Component);
         ! function(e) {
             e.PARENT_NAME = "parent-info__parent-name", e.PARENT_EMAIL = "parent-info__parent-email"
-        }(jn || (jn = {}));
-        var Fn = function(e) {
+        }(Qn || (Qn = {}));
+        var Gn = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -11272,13 +11287,13 @@ webpackJsonp([98], {
                 this.props.onParentNameChange(""), this.props.onParentEmailChange("")
             }, Object.defineProperty(t.prototype, "invalidFormatErrorMessage", {
                 get: function() {
-                    return In()
+                    return Bn()
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "invalidEmailErrorMessage", {
                 get: function() {
-                    return Rn()
+                    return Vn()
                 },
                 enumerable: !0,
                 configurable: !0
@@ -11292,31 +11307,31 @@ webpackJsonp([98], {
                 }, r.createElement(S.W, {
                     label: Object(p.d)("Parent or Legal Guardian Name", "ParentInfo"),
                     orientation: S.X.Horizontal,
-                    error: !An.test(this.state.parentName),
+                    error: !Ln.test(this.state.parentName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": jn.PARENT_NAME
+                    "data-test-selector": Qn.PARENT_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.parentName,
                     onChange: this.updateParentName,
-                    error: !An.test(this.state.parentName)
+                    error: !Ln.test(this.state.parentName)
                 }))), r.createElement(S._8, null, r.createElement(S.W, {
                     label: Object(p.d)("Parent or Legal Guardian Email", "ParentInfo"),
                     hint: Object(p.d)("Individuals under the age of 18 must provide parent or legal guardian information.", "ParentInfo"),
                     orientation: S.X.Horizontal,
-                    error: !!this.state.parentEmail && !wn.test(this.state.parentEmail),
+                    error: !!this.state.parentEmail && !Un.test(this.state.parentEmail),
                     errorMessage: this.invalidEmailErrorMessage,
-                    "data-test-selector": jn.PARENT_EMAIL
+                    "data-test-selector": Qn.PARENT_EMAIL
                 }, r.createElement(S._4, {
                     type: S._5.Email,
                     value: this.state.parentEmail,
                     onChange: this.updateParentEmail,
-                    error: !!this.state.parentEmail && !wn.test(this.state.parentEmail)
+                    error: !!this.state.parentEmail && !Un.test(this.state.parentEmail)
                 }))))
             }, t
         }(r.Component);
 
-        function Mn(e) {
+        function zn(e) {
             switch (e.toUpperCase()) {
                 case "AB":
                     return Object(p.d)("Alberta", "format-canada-state");
@@ -11348,10 +11363,10 @@ webpackJsonp([98], {
                     return e
             }
         }
-        var Ln = ["AB", "BC", "MB", "NB", "NL", "NT", "NS", "NU", "ON", "PE", "QC", "SK", "YT"],
-            Un = n("yLtb");
+        var Hn = ["AB", "BC", "MB", "NB", "NL", "NT", "NS", "NU", "ON", "PE", "QC", "SK", "YT"],
+            Xn = n("yLtb");
 
-        function Bn(e) {
+        function qn(e) {
             switch (e.toUpperCase()) {
                 case "AL":
                     return Object(p.d)("Alabama", "format-usa-state");
@@ -11465,12 +11480,12 @@ webpackJsonp([98], {
                     return e
             }
         }
-        var Vn, Wn = ["AL", "AK", "AZ", "AR", "AA", "AE", "AP", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"],
-            Qn = ["A1", "A2", "AP", "CU", "EU", "IR", "KP", "MM", "SD", "SS", "SY", "TL"];
+        var Kn, $n = ["AL", "AK", "AZ", "AR", "AA", "AE", "AP", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"],
+            Zn = ["A1", "A2", "AP", "CU", "EU", "IR", "KP", "MM", "SD", "SS", "SY", "TL"];
         ! function(e) {
             e.COUNTRY = "permanent-address__country", e.STREET_ADDRESS = "permanent-address__street-address", e.STREET_ADDRESS_2 = "permanent-address__street-address-2", e.CITY = "permanent-address__city", e.STATE = "permanent-address__state", e.POSTAL = "permanent-address__postal"
-        }(Vn || (Vn = {}));
-        var Yn, Gn = function(e) {
+        }(Kn || (Kn = {}));
+        var Jn, ea = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11480,21 +11495,21 @@ webpackJsonp([98], {
                         city: "",
                         state: "",
                         postal: ""
-                    }, t.countrySelections = Un.a.map(function(e) {
-                        return Qn.includes(e) ? null : r.createElement("option", {
+                    }, t.countrySelections = Xn.a.map(function(e) {
+                        return Zn.includes(e) ? null : r.createElement("option", {
                             value: e,
                             key: "countryCode-" + e
-                        }, Object(Un.b)(e))
-                    }), t.usaStateSelections = Wn.map(function(e) {
+                        }, Object(Xn.b)(e))
+                    }), t.usaStateSelections = $n.map(function(e) {
                         return r.createElement("option", {
                             value: e,
                             key: "usaStateCode-" + e
-                        }, Bn(e))
-                    }), t.canadaStateSelections = Ln.map(function(e) {
+                        }, qn(e))
+                    }), t.canadaStateSelections = Hn.map(function(e) {
                         return r.createElement("option", {
                             value: e,
                             key: "canadaState-" + e
-                        }, Mn(e))
+                        }, zn(e))
                     }), t.handleCountryChange = function(e) {
                         var n = e.target.value,
                             a = "";
@@ -11532,17 +11547,40 @@ webpackJsonp([98], {
                         t.setState({
                             postal: n
                         }), t.props.onPostalChange(n)
+                    }, t.formatUniquePostalCodes = function(e) {
+                        var n = e.target.value;
+                        switch (t.state.country) {
+                            case "CA":
+                                /^[a-zA-Z0-9]{6}$/.test(n) && (n = n.slice(0, 3) + " " + n.slice(3));
+                                break;
+                            case "GB":
+                                if (/^[a-zA-Z0-9]{7}$/.test(n)) {
+                                    n = n.slice(0, 4) + " " + n.slice(4);
+                                    break
+                                }
+                                if (/^[a-zA-Z0-9]{6}$/.test(n)) {
+                                    n = n.slice(0, 3) + " " + n.slice(3);
+                                    break
+                                }
+                                if (/^[a-zA-Z0-9]{5}$/.test(n)) {
+                                    n = n.slice(0, 2) + " " + n.slice(2);
+                                    break
+                                }
+                        }
+                        t.setState({
+                            postal: n
+                        })
                     }, t
                 }
                 return a.__extends(t, e), Object.defineProperty(t.prototype, "invalidFormatErrorMessage", {
                     get: function() {
-                        return In()
+                        return Bn()
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "optionalText", {
                     get: function() {
-                        return xn()
+                        return Wn()
                     },
                     enumerable: !0,
                     configurable: !0
@@ -11565,7 +11603,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._30, {
                         defaultValue: "",
                         onChange: this.handleCountryChange,
-                        "data-test-selector": Vn.COUNTRY
+                        "data-test-selector": Kn.COUNTRY
                     }, r.createElement("option", {
                         value: "",
                         disabled: !0
@@ -11576,14 +11614,14 @@ webpackJsonp([98], {
                     }, r.createElement(S.W, {
                         label: Object(p.d)("Street Address", "PermanentAddress"),
                         orientation: S.X.Horizontal,
-                        error: !An.test(this.state.streetAddress),
+                        error: !Ln.test(this.state.streetAddress),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Vn.STREET_ADDRESS
+                        "data-test-selector": Kn.STREET_ADDRESS
                     }, r.createElement(S._4, {
                         type: S._5.Text,
                         value: this.state.streetAddress,
                         onChange: this.handleStreetAddressChange,
-                        error: !An.test(this.state.streetAddress)
+                        error: !Ln.test(this.state.streetAddress)
                     }))), r.createElement(S._8, {
                         margin: {
                             bottom: 2
@@ -11592,14 +11630,14 @@ webpackJsonp([98], {
                         label: Object(p.d)("Street Address 2", "PermanentAddress"),
                         labelOptional: this.optionalText,
                         orientation: S.X.Horizontal,
-                        error: !An.test(this.state.streetAddress2),
+                        error: !Ln.test(this.state.streetAddress2),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Vn.STREET_ADDRESS_2
+                        "data-test-selector": Kn.STREET_ADDRESS_2
                     }, r.createElement(S._4, {
                         type: S._5.Text,
                         value: this.state.streetAddress2,
                         onChange: this.handleStreetAddress2Change,
-                        error: !An.test(this.state.streetAddress2)
+                        error: !Ln.test(this.state.streetAddress2)
                     }))), r.createElement(S._8, {
                         margin: {
                             bottom: 2
@@ -11607,14 +11645,14 @@ webpackJsonp([98], {
                     }, r.createElement(S.W, {
                         label: Object(p.d)("City or Town", "PermanentAddress"),
                         orientation: S.X.Horizontal,
-                        error: !An.test(this.state.city),
+                        error: !Ln.test(this.state.city),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Vn.CITY
+                        "data-test-selector": Kn.CITY
                     }, r.createElement(S._4, {
                         type: S._5.Text,
                         value: this.state.city,
                         onChange: this.handleCityChange,
-                        error: !An.test(this.state.city)
+                        error: !Ln.test(this.state.city)
                     }))), r.createElement(S._8, {
                         margin: {
                             bottom: 2
@@ -11623,9 +11661,9 @@ webpackJsonp([98], {
                         label: Object(p.d)("State/Province", "PermanentAddress"),
                         labelOptional: "US" !== this.state.country && "CA" !== this.state.country ? this.optionalText : void 0,
                         orientation: S.X.Horizontal,
-                        error: !An.test(this.state.state),
+                        error: !Ln.test(this.state.state),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Vn.STATE
+                        "data-test-selector": Kn.STATE
                     }, "US" === this.state.country && r.createElement(S._30, {
                         onChange: this.handleStateSelectionChange
                     }, this.usaStateSelections), "CA" === this.state.country && r.createElement(S._30, {
@@ -11634,23 +11672,24 @@ webpackJsonp([98], {
                         type: S._5.Text,
                         value: this.state.state,
                         onChange: this.handleStateInputChange,
-                        error: !An.test(this.state.state)
+                        error: !Ln.test(this.state.state)
                     }))), r.createElement(S._8, null, r.createElement(S.W, {
                         label: Object(p.d)("Zip Code/Postal Code", "PermanentAddress"),
                         labelOptional: "US" !== this.state.country ? this.optionalText : void 0,
                         orientation: S.X.Horizontal,
-                        error: !An.test(this.state.postal),
+                        error: !Ln.test(this.state.postal),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Vn.POSTAL
+                        "data-test-selector": Kn.POSTAL
                     }, r.createElement(S._4, {
                         type: S._5.Text,
                         value: this.state.postal,
                         onChange: this.handlePostalChange,
-                        error: !An.test(this.state.postal)
+                        onBlur: this.formatUniquePostalCodes,
+                        error: !Ln.test(this.state.postal)
                     }))))
                 }, t
             }(r.Component),
-            zn = function() {
+            ta = function() {
                 return Object(p.d)("Please fill them out using the following guidelines: <x:link>Amazon Tax Information Interview Guidelines</x:link>", {
                     "x:link": function(e) {
                         return r.createElement(S.O, {
@@ -11661,7 +11700,7 @@ webpackJsonp([98], {
                     }
                 }, "RegistrationInfoBrick")
             },
-            Hn = function() {
+            na = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -11680,7 +11719,7 @@ webpackJsonp([98], {
                     }
                 }, r.createElement(S.Q, {
                     type: S._49.P
-                }, zn())), r.createElement(S._8, {
+                }, ta())), r.createElement(S._8, {
                     margin: {
                         bottom: 1
                     }
@@ -11696,7 +11735,7 @@ webpackJsonp([98], {
                     type: S._49.P
                 }, Object(p.d)("You will be able to edit this page later if your information changes.", "RegistrationInfoBrick"))))
             },
-            qn = function() {
+            aa = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -11709,33 +11748,33 @@ webpackJsonp([98], {
                     }
                 }, r.createElement(S.Q, {
                     type: S._49.P
-                }, zn())), r.createElement(S.Q, {
+                }, ta())), r.createElement(S.Q, {
                     type: S._49.P
                 }, Object(p.d)("This form must match your tax information exactly, and any inconsistencies may cause delays in your Payout Registration approval. Don't worry, you will still be able to edit this page later on if your information changes.", "RegistrationInfoBrick")))
             },
-            Xn = function(e) {
+            ra = function(e) {
                 return r.createElement(S._35, {
                     padding: 2,
                     borderMarked: !0,
                     background: S.n.Base,
                     elevation: 1
-                }, e.onboardEntity === Qe.OnboardEntity.ExtensionsDeveloper ? r.createElement(Hn, null) : r.createElement(qn, null))
+                }, e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper ? r.createElement(na, null) : r.createElement(aa, null))
             };
         ! function(e) {
             e.MONTH = "select-birthdate__month", e.YEAR = "select-birthdate__year", e.DAY = "select-birthdate__day"
-        }(Yn || (Yn = {}));
-        for (var Kn = [], $n = (new Date).getFullYear(), Jn = $n; Jn > $n - 100; Jn--) Kn.push(r.createElement("option", {
-            value: Jn,
-            key: "year-" + Jn
-        }, Jn));
-        var Zn, ea, ta, na, aa, ra, ia, oa, sa, la, da, ca, ua, ma, pa = function(e) {
+        }(Jn || (Jn = {}));
+        for (var ia = [], oa = (new Date).getFullYear(), sa = oa; sa > oa - 100; sa--) ia.push(r.createElement("option", {
+            value: sa,
+            key: "year-" + sa
+        }, sa));
+        var la, da, ca, ua, ma, pa, ga, ha, ba, fa, Ea, va, ya, Sa, ka = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         month: void 0,
                         year: void 0,
                         day: void 0
-                    }, t.yearSelections = Kn, t.handleMonthChange = function(e) {
+                    }, t.yearSelections = ia, t.handleMonthChange = function(e) {
                         var n = +e.target.value;
                         return t.setState({
                             month: n
@@ -11757,12 +11796,12 @@ webpackJsonp([98], {
                             i = n.year;
                         if (void 0 === a || void 0 === r || void 0 === i) return !1;
                         var o = new Date(i, a, r);
-                        return Object(an.differenceInYears)(new Date, o) < e
+                        return Object(pn.differenceInYears)(new Date, o) < e
                     }, t
                 }
                 return a.__extends(t, e), Object.defineProperty(t.prototype, "daySelections", {
                     get: function() {
-                        for (var e = this.state.month, t = this.state.year || $n, n = void 0 !== e ? new Date(t, e + 1, 0).getDate() : 31, a = [], i = 1; i <= n; i++) a.push(r.createElement("option", {
+                        for (var e = this.state.month, t = this.state.year || oa, n = void 0 !== e ? new Date(t, e + 1, 0).getDate() : 31, a = [], i = 1; i <= n; i++) a.push(r.createElement("option", {
                             value: i,
                             key: "day-" + i
                         }, i));
@@ -11786,7 +11825,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._30, {
                         defaultValue: "",
                         onChange: this.handleMonthChange,
-                        "data-test-selector": Yn.MONTH
+                        "data-test-selector": Jn.MONTH
                     }, r.createElement("option", {
                         value: "",
                         disabled: !0
@@ -11821,7 +11860,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._30, {
                         defaultValue: "",
                         onChange: this.handleDayChange,
-                        "data-test-selector": Yn.DAY
+                        "data-test-selector": Jn.DAY
                     }, r.createElement("option", {
                         value: "",
                         disabled: !0
@@ -11832,15 +11871,15 @@ webpackJsonp([98], {
                     }, r.createElement(S._30, {
                         defaultValue: "",
                         onChange: this.handleYearChange,
-                        "data-test-selector": Yn.YEAR
+                        "data-test-selector": Jn.YEAR
                     }, r.createElement("option", {
                         value: "",
                         disabled: !0
                     }, Object(p.d)("Year", "SelectBirthdate")), this.yearSelections))))
                 }, t
             }(r.Component),
-            ha = n("pMje"),
-            ga = function(e) {
+            _a = n("pMje"),
+            Ta = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11934,7 +11973,7 @@ webpackJsonp([98], {
                             i = n.year;
                         if (void 0 === a || void 0 === r || void 0 === i) return !1;
                         var o = new Date(i, a, r);
-                        return Object(an.differenceInYears)(new Date, o) < e
+                        return Object(pn.differenceInYears)(new Date, o) < e
                     }, t.handleContinueClick = function() {
                         t.setState({
                             submittingRegistration: !0
@@ -11946,7 +11985,7 @@ webpackJsonp([98], {
                                 switch (d.label) {
                                     case 0:
                                         if (e = this.state, t = e.year, n = e.month, r = e.day, void 0 === n || void 0 === r || void 0 === t) return [2];
-                                        i = new Date(t, n, r), o = a.__assign({}, Object(v.a)({
+                                        i = new Date(t, n, r), o = a.__assign({}, Object(E.a)({
                                             targetUserID: this.props.userID,
                                             birthdate: i,
                                             city: this.state.city,
@@ -11970,7 +12009,7 @@ webpackJsonp([98], {
                                             submittingRegistration: !1
                                         }), [2]) : (l = function(e) {
                                             return e.currentUser.payoutInvite.workflow && s.data.registerPayoutInformation.workflow && (e.currentUser.payoutInvite.workflow.currentStep = s.data.registerPayoutInformation.workflow.currentStep, e.currentUser.payoutInvite.workflow.registration = s.data.registerPayoutInformation.workflow.registration), e
-                                        }, this.props.updateContainerQuery(l), this.props.updateStepDisplayed(Qe.OnboardStep.Agreement), [3, 4]);
+                                        }, this.props.updateContainerQuery(l), this.props.updateStepDisplayed(Ke.OnboardStep.Agreement), [3, 4]);
                                     case 3:
                                         return d.sent(), this.setState({
                                             submittingRegistration: !1
@@ -11993,11 +12032,11 @@ webpackJsonp([98], {
                     }, Object(p.d)("Continue", "PayoutOnboardingRegistration"));
                     return r.createElement(U.a, {
                         footer: e
-                    }, r.createElement(Ct.a, null, r.createElement(Xn, {
+                    }, r.createElement(Ft.a, null, r.createElement(ra, {
                         onboardEntity: this.props.onboardEntity
-                    })), r.createElement(dn, {
+                    })), r.createElement(En, {
                         title: Object(p.d)("Contact Info", "PayoutOnboardingRegistration")
-                    }), r.createElement(Dn, {
+                    }), r.createElement(Yn, {
                         channelName: this.props.channelName,
                         onFirstNameChange: this.updateFirstName,
                         onMiddleNameChange: this.updateMiddleName,
@@ -12008,18 +12047,18 @@ webpackJsonp([98], {
                         onEmailChange: this.updateEmail,
                         onConfirmEmailChange: this.updateConfirmEmail,
                         onCompanyNameChange: this.updateCompanyName
-                    }), r.createElement(dn, {
+                    }), r.createElement(En, {
                         title: Object(p.d)("Permanent Address", "PayoutOnboardingRegistration")
-                    }), r.createElement(Gn, {
+                    }), r.createElement(ea, {
                         onCountryChange: this.updateCountry,
                         onStreetAddressChange: this.updateStreetAddress,
                         onStreetAddress2Change: this.updateStreetAddress2,
                         onCityChange: this.updateCity,
                         onStateChange: this.updateState,
                         onPostalChange: this.updatePostal
-                    }), this.isUserYoungerThan(18) && r.createElement(r.Fragment, null, r.createElement(dn, {
+                    }), this.isUserYoungerThan(18) && r.createElement(r.Fragment, null, r.createElement(En, {
                         title: Object(p.d)("Parent Info", "PayoutOnboardingRegistration")
-                    }), r.createElement(Fn, {
+                    }), r.createElement(Gn, {
                         onParentNameChange: this.updateParentName,
                         onParentEmailChange: this.updateParentEmail
                     })))
@@ -12043,36 +12082,36 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "validEmail", {
                     get: function() {
-                        return wn.test(this.state.email) && this.state.email === this.state.confirmEmail
+                        return Un.test(this.state.email) && this.state.email === this.state.confirmEmail
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "validAge", {
                     get: function() {
-                        return !this.isUserYoungerThan(13) && !(this.isUserYoungerThan(18) && !(this.state.parentName && An.test(this.state.parentName) && this.state.parentEmail && wn.test(this.state.parentEmail)))
+                        return !this.isUserYoungerThan(13) && !(this.isUserYoungerThan(18) && !(this.state.parentName && Ln.test(this.state.parentName) && this.state.parentEmail && Un.test(this.state.parentEmail)))
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "validInputFormat", {
                     get: function() {
-                        return !!(An.test(this.state.firstName) && An.test(this.state.lastName) && An.test(this.state.country) && An.test(this.state.streetAddress) && An.test(this.state.city)) && !(this.state.middleName && !An.test(this.state.middleName) || this.state.companyName && !An.test(this.state.companyName) || this.state.streetAddress2 && !An.test(this.state.streetAddress2) || this.state.state && !An.test(this.state.state) || this.state.postal && !An.test(this.state.postal))
+                        return !!(Ln.test(this.state.firstName) && Ln.test(this.state.lastName) && Ln.test(this.state.country) && Ln.test(this.state.streetAddress) && Ln.test(this.state.city)) && !(this.state.middleName && !Ln.test(this.state.middleName) || this.state.companyName && !Ln.test(this.state.companyName) || this.state.streetAddress2 && !Ln.test(this.state.streetAddress2) || this.state.state && !Ln.test(this.state.state) || this.state.postal && !Ln.test(this.state.postal))
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            ba = Object(g.d)(Object(u.a)(ha, {
+            Na = Object(h.d)(Object(u.a)(_a, {
                 name: "registerPayoutInformation"
-            }))(ga),
-            fa = function(e) {
+            }))(Ta),
+            Oa = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleContinueClick = function() {
-                        t.props.updateStepDisplayed(Qe.OnboardStep.Summary)
+                        t.props.updateStepDisplayed(Ke.OnboardStep.Summary)
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(U.a, null, r.createElement(dn, {
+                    return r.createElement(U.a, null, r.createElement(En, {
                         title: Object(p.d)("Partnership Approval", "PayoutOnboardingReview"),
                         statusText: this.statusText,
                         statusType: this.statusType,
@@ -12092,7 +12131,7 @@ webpackJsonp([98], {
                     }, Object(p.d)("Continue", "PayoutOnboardingReview"))))
                 }, Object.defineProperty(t.prototype, "inReview", {
                     get: function() {
-                        return this.props.workflow.currentStep === Qe.WorkflowState.REVIEW_PENDING
+                        return this.props.workflow.currentStep === Ke.WorkflowState.REVIEW_PENDING
                     },
                     enumerable: !0,
                     configurable: !0
@@ -12110,164 +12149,164 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            va = function() {
+            Aa = function() {
                 return Object(p.d)("Partner Onboarding", "PayoutOnboardingContainer")
             },
-            Ea = function() {
+            Ca = function() {
                 return Object(p.d)("Manage or modify your payout information.", "PayoutOnboardingContainer")
             },
-            ya = function() {
+            Pa = function() {
                 return Object(p.d)("Payout Registration", "PayoutOnboardingContainer")
             },
-            Sa = function() {
+            Ia = function() {
                 return Object(p.d)("Begin your payout registration.", "PayoutOnboardingContainer")
             },
-            ka = function() {
+            wa = function() {
                 return Object(p.d)("Twitch Partner Agreement", "PayoutOnboardingContainer")
             },
-            _a = function() {
+            Ra = function() {
                 return Object(p.d)("Agree to the Twitch Partner Agreement.", "PayoutOnboardingContainer")
             },
-            Oa = function() {
+            xa = function() {
                 return Object(p.d)("Tax Interviews", "PayoutOnboardingContainer")
             },
-            Ta = function() {
+            Da = function() {
                 return Object(p.d)("Submit your tax information. The two forms below are very similar, but the information is used for different situations, so both forms are required and should be filled out carefully.", "PayoutOnboardingContainer")
             },
-            Na = function() {
+            ja = function() {
                 return Object(p.d)("Payout Setup", "PayoutOnboardingContainer")
             },
-            Ca = function() {
+            Fa = function() {
                 return Object(p.d)("Choose your payout method.", "PayoutOnboardingContainer")
             },
-            Pa = ((Zn = {})[Qe.OnboardStep.Summary] = {
-                title: (ea = {}, ea[Qe.OnboardEntity.Affiliate] = function() {
+            Ma = ((la = {})[Ke.OnboardStep.Summary] = {
+                title: (da = {}, da[Ke.OnboardEntity.Affiliate] = function() {
                     return Object(p.d)("Affiliate Onboarding", "PayoutOnboardingContainer")
-                }, ea[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
+                }, da[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Extensions Developer Onboarding", "PayoutOnboardingContainer")
-                }, ea[Qe.OnboardEntity.StandardPartner] = function() {
-                    return va()
-                }, ea[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return va()
-                }, ea[Qe.OnboardEntity.CustomPartner] = function() {
-                    return va()
-                }, ea),
-                description: (ta = {}, ta[Qe.OnboardEntity.Affiliate] = function() {
-                    return Ea()
-                }, ta[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
+                }, da[Ke.OnboardEntity.StandardPartner] = function() {
+                    return Aa()
+                }, da[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return Aa()
+                }, da[Ke.OnboardEntity.CustomPartner] = function() {
+                    return Aa()
+                }, da),
+                description: (ca = {}, ca[Ke.OnboardEntity.Affiliate] = function() {
+                    return Ca()
+                }, ca[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Manage or modify your Extensions Developer Onboarding.", "PayoutOnboardingContainer")
-                }, ta[Qe.OnboardEntity.StandardPartner] = function() {
-                    return Ea()
-                }, ta[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return Ea()
-                }, ta[Qe.OnboardEntity.CustomPartner] = function() {
-                    return Ea()
-                }, ta)
-            }, Zn[Qe.OnboardStep.Registration] = {
-                title: (na = {}, na[Qe.OnboardEntity.Affiliate] = function() {
-                    return ya()
-                }, na[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
+                }, ca[Ke.OnboardEntity.StandardPartner] = function() {
+                    return Ca()
+                }, ca[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return Ca()
+                }, ca[Ke.OnboardEntity.CustomPartner] = function() {
+                    return Ca()
+                }, ca)
+            }, la[Ke.OnboardStep.Registration] = {
+                title: (ua = {}, ua[Ke.OnboardEntity.Affiliate] = function() {
+                    return Pa()
+                }, ua[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Extensions Developer Registration", "PayoutOnboardingContainer")
-                }, na[Qe.OnboardEntity.StandardPartner] = function() {
-                    return ya()
-                }, na[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return ya()
-                }, na[Qe.OnboardEntity.CustomPartner] = function() {
-                    return ya()
-                }, na),
-                description: (aa = {}, aa[Qe.OnboardEntity.Affiliate] = function() {
-                    return Sa()
-                }, aa[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
+                }, ua[Ke.OnboardEntity.StandardPartner] = function() {
+                    return Pa()
+                }, ua[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return Pa()
+                }, ua[Ke.OnboardEntity.CustomPartner] = function() {
+                    return Pa()
+                }, ua),
+                description: (ma = {}, ma[Ke.OnboardEntity.Affiliate] = function() {
+                    return Ia()
+                }, ma[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Begin your Extensions Developer Registration.", "PayoutOnboardingContainer")
-                }, aa[Qe.OnboardEntity.StandardPartner] = function() {
-                    return Sa()
-                }, aa[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return Sa()
-                }, aa[Qe.OnboardEntity.CustomPartner] = function() {
-                    return Sa()
-                }, aa)
-            }, Zn[Qe.OnboardStep.Agreement] = {
-                title: (ra = {}, ra[Qe.OnboardEntity.Affiliate] = function() {
+                }, ma[Ke.OnboardEntity.StandardPartner] = function() {
+                    return Ia()
+                }, ma[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return Ia()
+                }, ma[Ke.OnboardEntity.CustomPartner] = function() {
+                    return Ia()
+                }, ma)
+            }, la[Ke.OnboardStep.Agreement] = {
+                title: (pa = {}, pa[Ke.OnboardEntity.Affiliate] = function() {
                     return Object(p.d)("Twitch Affiliate Agreement", "PayoutOnboardingContainer")
-                }, ra[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
+                }, pa[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Twitch Extensions Developer Agreement", "PayoutOnboardingContainer")
-                }, ra[Qe.OnboardEntity.StandardPartner] = function() {
-                    return ka()
-                }, ra[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return ka()
-                }, ra[Qe.OnboardEntity.CustomPartner] = function() {
-                    return ka()
-                }, ra),
-                description: (ia = {}, ia[Qe.OnboardEntity.Affiliate] = function() {
+                }, pa[Ke.OnboardEntity.StandardPartner] = function() {
+                    return wa()
+                }, pa[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return wa()
+                }, pa[Ke.OnboardEntity.CustomPartner] = function() {
+                    return wa()
+                }, pa),
+                description: (ga = {}, ga[Ke.OnboardEntity.Affiliate] = function() {
                     return Object(p.d)("Agree to the Twitch Affiliate Agreement.", "PayoutOnboardingContainer")
-                }, ia[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
+                }, ga[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Agree to the Twitch Extensions Developer Agreement.", "PayoutOnboardingContainer")
-                }, ia[Qe.OnboardEntity.StandardPartner] = function() {
-                    return _a()
-                }, ia[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return _a()
-                }, ia[Qe.OnboardEntity.CustomPartner] = function() {
-                    return _a()
-                }, ia)
-            }, Zn[Qe.OnboardStep.TaxInterview] = {
-                title: (oa = {}, oa[Qe.OnboardEntity.Affiliate] = function() {
-                    return Oa()
-                }, oa[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
-                    return Oa()
-                }, oa[Qe.OnboardEntity.StandardPartner] = function() {
-                    return Oa()
-                }, oa[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return Oa()
-                }, oa[Qe.OnboardEntity.CustomPartner] = function() {
-                    return Oa()
-                }, oa),
-                description: (sa = {}, sa[Qe.OnboardEntity.Affiliate] = function() {
-                    return Ta()
-                }, sa[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
-                    return Ta()
-                }, sa[Qe.OnboardEntity.StandardPartner] = function() {
-                    return Ta()
-                }, sa[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return Ta()
-                }, sa[Qe.OnboardEntity.CustomPartner] = function() {
-                    return Ta()
-                }, sa)
-            }, Zn[Qe.OnboardStep.PayoutMethod] = {
-                title: (la = {}, la[Qe.OnboardEntity.Affiliate] = function() {
-                    return Na()
-                }, la[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
+                }, ga[Ke.OnboardEntity.StandardPartner] = function() {
+                    return Ra()
+                }, ga[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return Ra()
+                }, ga[Ke.OnboardEntity.CustomPartner] = function() {
+                    return Ra()
+                }, ga)
+            }, la[Ke.OnboardStep.TaxInterview] = {
+                title: (ha = {}, ha[Ke.OnboardEntity.Affiliate] = function() {
+                    return xa()
+                }, ha[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
+                    return xa()
+                }, ha[Ke.OnboardEntity.StandardPartner] = function() {
+                    return xa()
+                }, ha[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return xa()
+                }, ha[Ke.OnboardEntity.CustomPartner] = function() {
+                    return xa()
+                }, ha),
+                description: (ba = {}, ba[Ke.OnboardEntity.Affiliate] = function() {
+                    return Da()
+                }, ba[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
+                    return Da()
+                }, ba[Ke.OnboardEntity.StandardPartner] = function() {
+                    return Da()
+                }, ba[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return Da()
+                }, ba[Ke.OnboardEntity.CustomPartner] = function() {
+                    return Da()
+                }, ba)
+            }, la[Ke.OnboardStep.PayoutMethod] = {
+                title: (fa = {}, fa[Ke.OnboardEntity.Affiliate] = function() {
+                    return ja()
+                }, fa[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Financial Information", "PayoutOnboardingContainer")
-                }, la[Qe.OnboardEntity.StandardPartner] = function() {
-                    return Na()
-                }, la[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return Na()
-                }, la[Qe.OnboardEntity.CustomPartner] = function() {
-                    return Na()
-                }, la),
-                description: (da = {}, da[Qe.OnboardEntity.Affiliate] = function() {
-                    return Ca()
-                }, da[Qe.OnboardEntity.ExtensionsDeveloper] = function() {
+                }, fa[Ke.OnboardEntity.StandardPartner] = function() {
+                    return ja()
+                }, fa[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return ja()
+                }, fa[Ke.OnboardEntity.CustomPartner] = function() {
+                    return ja()
+                }, fa),
+                description: (Ea = {}, Ea[Ke.OnboardEntity.Affiliate] = function() {
+                    return Fa()
+                }, Ea[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Submit your financial information.", "PayoutOnboardingContainer")
-                }, da[Qe.OnboardEntity.StandardPartner] = function() {
-                    return Ca()
-                }, da[Qe.OnboardEntity.PremiumPartner] = function() {
-                    return Ca()
-                }, da[Qe.OnboardEntity.CustomPartner] = function() {
-                    return Ca()
-                }, da)
-            }, Zn[Qe.OnboardStep.Review] = {
-                title: (ca = {}, ca[Qe.OnboardEntity.CustomPartner] = function() {
+                }, Ea[Ke.OnboardEntity.StandardPartner] = function() {
+                    return Fa()
+                }, Ea[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return Fa()
+                }, Ea[Ke.OnboardEntity.CustomPartner] = function() {
+                    return Fa()
+                }, Ea)
+            }, la[Ke.OnboardStep.Review] = {
+                title: (va = {}, va[Ke.OnboardEntity.CustomPartner] = function() {
                     return Object(p.d)("Partnership Approval", "PayoutOnboardingContainer")
-                }, ca),
-                description: (ua = {}, ua[Qe.OnboardEntity.CustomPartner] = function() {
+                }, va),
+                description: (ya = {}, ya[Ke.OnboardEntity.CustomPartner] = function() {
                     return Object(p.d)("The Partnership Team will validate your paperwork and activate your new agreement.", "PayoutOnboardingContainer")
-                }, ua)
-            }, Zn),
-            Aa = function() {
+                }, ya)
+            }, la),
+            La = function() {
                 return Object(p.d)("Continue", "InProgressInfo")
             },
-            wa = function(e) {
-                var t = e.onboardEntity === Qe.OnboardEntity.ExtensionsDeveloper;
+            Ua = function(e) {
+                var t = e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper;
                 return r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -12279,9 +12318,9 @@ webpackJsonp([98], {
                 }, r.createElement(S.Q, {
                     type: S._49.P
                 }, t ? Object(p.d)("Your developer registration is currently in progress. Please click {buttonLabel} to pick up where you left off.", {
-                    buttonLabel: Aa()
+                    buttonLabel: La()
                 }, "InProgressInfo") : Object(p.d)("Your payout setup is currently in progress. Please click {buttonLabel} to pick up where you left off.", {
-                    buttonLabel: Aa()
+                    buttonLabel: La()
                 }, "InProgressInfo"))), r.createElement(S._2, {
                     margin: {
                         bottom: 1
@@ -12294,7 +12333,7 @@ webpackJsonp([98], {
                     type: S._49.P
                 }, t ? Object(p.d)("NOTE: Starting over will lose any progress.", "InProgressInfo") : Object(p.d)("NOTE: If you choose Start Over you will delete any stored payout information on your account and we will hold any payouts until you have fully completed the form.", "InProgressInfo")))
             },
-            Ia = function(e) {
+            Ba = function(e) {
                 return r.createElement(r.Fragment, null, r.createElement(S._2, {
                     margin: {
                         bottom: 1
@@ -12302,7 +12341,7 @@ webpackJsonp([98], {
                 }, r.createElement(S.Q, {
                     type: S._49.H4,
                     bold: !0
-                }, Object(p.d)("Setup Complete", "SetupCompleteInfo"))), e.onboardEntity === Qe.OnboardEntity.ExtensionsDeveloper ? r.createElement(S._2, {
+                }, Object(p.d)("Setup Complete", "SetupCompleteInfo"))), e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper ? r.createElement(S._2, {
                     margin: {
                         bottom: 1
                     }
@@ -12333,9 +12372,9 @@ webpackJsonp([98], {
             };
         ! function(e) {
             e.START_OVER_BUTTON = "progress-brick__start-over-button", e.CONTINUE_BUTTON = "progress-brick__continue-button"
-        }(ma || (ma = {}));
-        var Ra, xa, ja = ((Ra = {})[Qe.WorkflowState.AGREEMENT_NOT_STARTED] = Qe.OnboardStep.Agreement, Ra[Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED] = Qe.OnboardStep.TaxInterview, Ra[Qe.WorkflowState.PAYOUT_METHOD_NOT_STARTED] = Qe.OnboardStep.PayoutMethod, Ra[Qe.WorkflowState.PAYOUT_METHOD_PENDING] = Qe.OnboardStep.PayoutMethod, Ra[Qe.WorkflowState.REVIEW_PENDING] = Qe.OnboardStep.Review, Ra),
-            Da = function(e) {
+        }(Sa || (Sa = {}));
+        var Va, Wa, Qa = ((Va = {})[Ke.WorkflowState.AGREEMENT_NOT_STARTED] = Ke.OnboardStep.Agreement, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.PAYOUT_METHOD_NOT_STARTED] = Ke.OnboardStep.PayoutMethod, Va[Ke.WorkflowState.PAYOUT_METHOD_PENDING] = Ke.OnboardStep.PayoutMethod, Va[Ke.WorkflowState.REVIEW_PENDING] = Ke.OnboardStep.Review, Va),
+            Ya = function(e) {
                 return r.createElement(S._8, {
                     padding: {
                         bottom: 1
@@ -12344,9 +12383,9 @@ webpackJsonp([98], {
                     borderMarked: !0,
                     padding: 2,
                     elevation: 1
-                }, e.workflowState === Qe.WorkflowState.COMPLETED ? r.createElement(Ia, {
+                }, e.workflowState === Ke.WorkflowState.COMPLETED ? r.createElement(Ba, {
                     onboardEntity: e.onboardEntity
-                }) : r.createElement(wa, {
+                }) : r.createElement(Ua, {
                     onboardEntity: e.onboardEntity
                 }), r.createElement(S._8, {
                     display: S.R.Inline,
@@ -12354,31 +12393,31 @@ webpackJsonp([98], {
                         right: 1
                     }
                 }, r.createElement(S.v, {
-                    "data-test-selector": ma.START_OVER_BUTTON,
+                    "data-test-selector": Sa.START_OVER_BUTTON,
                     type: S.B.Hollow,
                     onClick: e.showStartOverModal
-                }, Object(p.d)("Start Over", "PayoutOnboardingSummary"))), e.workflowState !== Qe.WorkflowState.COMPLETED && r.createElement(S.v, {
-                    "data-test-selector": ma.CONTINUE_BUTTON,
+                }, Object(p.d)("Start Over", "PayoutOnboardingSummary"))), e.workflowState !== Ke.WorkflowState.COMPLETED && r.createElement(S.v, {
+                    "data-test-selector": Sa.CONTINUE_BUTTON,
                     onClick: function() {
-                        return e.updateStepDisplayed(ja[e.workflowState])
+                        return e.updateStepDisplayed(Qa[e.workflowState])
                     }
                 }, Object(p.d)("Continue", "PayoutOnboardingSummary"))))
             };
         n("gurA");
         ! function(e) {
             e[e.NotStarted = 0] = "NotStarted", e[e.Pending = 1] = "Pending", e[e.Failed = 2] = "Failed", e[e.Completed = 3] = "Completed"
-        }(xa || (xa = {}));
-        var Fa, Ma = function(e) {
+        }(Wa || (Wa = {}));
+        var Ga, za = function(e) {
                 var t, n;
                 return t = e.isEnabled ? r.createElement(S.O, {
                     onClick: e.onTitleClick
-                }, e.title) : e.title, e.type === xa.Pending ? n = r.createElement(S._24, {
+                }, e.title) : e.title, e.type === Wa.Pending ? n = r.createElement(S._24, {
                     asset: S._25.Halt,
                     type: S._26.Warn
-                }) : e.type === xa.Failed ? n = r.createElement(S._24, {
+                }) : e.type === Wa.Failed ? n = r.createElement(S._24, {
                     asset: S._25.Halt,
                     type: S._26.Alert
-                }) : e.type === xa.Completed && (n = r.createElement(S._24, {
+                }) : e.type === Wa.Completed && (n = r.createElement(S._24, {
                     asset: S._25.Check,
                     type: S._26.Success
                 })), r.createElement(S._8, null, r.createElement(S._8, {
@@ -12403,26 +12442,26 @@ webpackJsonp([98], {
                     color: S.K.Alt2
                 }, e.description)))
             },
-            La = function() {
+            Ha = function() {
                 return Object(p.d)("Submit your tax information.", "PayoutOnboardingSummary")
             },
-            Ua = function() {
+            Xa = function() {
                 return Object(p.d)("Choose your payout method.", "PayoutOnboardingSummary")
             },
-            Ba = function() {
+            qa = function() {
                 return Object(p.d)("Submit your financial information.", "PayoutOnboardingSummary")
             };
         ! function(e) {
             e.REGISTRATION = "registration-selector", e.AGREEMENT = "agreement-selector", e.TAX_INTERVIEW = "tax-interview-selector", e.PAYOUT_METHOD = "payout-method-selector", e.REVIEW = "review-selector"
-        }(Fa || (Fa = {}));
-        var Va = function(e, t, n) {
+        }(Ga || (Ga = {}));
+        var Ka = function(e, t, n) {
                 return Object(p.d)("Step {numOfCurrentStep} of {numOfTotalSteps}: {stepTitle}", {
                     numOfCurrentStep: e,
                     numOfTotalSteps: t,
                     stepTitle: n
                 }, "ProgressRow")
             },
-            Wa = function(e) {
+            $a = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleTitleClick = function(e) {
@@ -12432,117 +12471,117 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(U.a, null, r.createElement(Ct.a, null, this.isRegistrationComplete && r.createElement(Da, {
+                    return r.createElement(U.a, null, r.createElement(Ft.a, null, this.isRegistrationComplete && r.createElement(Ya, {
                         workflowState: this.props.workflow.currentStep,
                         onboardEntity: this.props.onboardEntity,
                         updateStepDisplayed: this.props.updateStepDisplayed,
                         showStartOverModal: this.props.showStartOverModal
-                    }), r.createElement(Ma, {
-                        "data-test-selector": Fa.REGISTRATION,
+                    }), r.createElement(za, {
+                        "data-test-selector": Ga.REGISTRATION,
                         title: this.step1Title,
                         description: this.step1Description,
                         type: this.step1Status,
-                        onTitleClick: this.handleTitleClick(Qe.OnboardStep.Registration),
+                        onTitleClick: this.handleTitleClick(Ke.OnboardStep.Registration),
                         isEnabled: !this.isRegistrationComplete
-                    }), r.createElement(Ma, {
-                        "data-test-selector": Fa.AGREEMENT,
+                    }), r.createElement(za, {
+                        "data-test-selector": Ga.AGREEMENT,
                         title: this.step2Title,
                         description: this.step2Description,
                         type: this.step2Status,
-                        onTitleClick: this.handleTitleClick(Qe.OnboardStep.Agreement),
+                        onTitleClick: this.handleTitleClick(Ke.OnboardStep.Agreement),
                         isEnabled: this.isRegistrationComplete && !this.isAgreementComplete
-                    }), r.createElement(Ma, {
-                        "data-test-selector": Fa.TAX_INTERVIEW,
+                    }), r.createElement(za, {
+                        "data-test-selector": Ga.TAX_INTERVIEW,
                         title: this.step3Title,
                         description: this.step3Description,
                         type: this.step3Status,
-                        onTitleClick: this.handleTitleClick(Qe.OnboardStep.TaxInterview),
+                        onTitleClick: this.handleTitleClick(Ke.OnboardStep.TaxInterview),
                         isEnabled: this.isAgreementComplete && !this.isTaxInterviewComplete
-                    }), r.createElement(Ma, {
-                        "data-test-selector": Fa.PAYOUT_METHOD,
+                    }), r.createElement(za, {
+                        "data-test-selector": Ga.PAYOUT_METHOD,
                         title: this.step4Title,
                         description: this.step4Description,
                         type: this.step4Status,
-                        onTitleClick: this.handleTitleClick(Qe.OnboardStep.PayoutMethod),
+                        onTitleClick: this.handleTitleClick(Ke.OnboardStep.PayoutMethod),
                         isEnabled: this.isTaxInterviewComplete && !this.isPayoutMethodComplete
-                    }), this.props.onboardEntity === Qe.OnboardEntity.CustomPartner && r.createElement(Ma, {
-                        "data-test-selector": Fa.REVIEW,
+                    }), this.props.onboardEntity === Ke.OnboardEntity.CustomPartner && r.createElement(za, {
+                        "data-test-selector": Ga.REVIEW,
                         title: this.step5Title,
                         description: this.step5Description,
                         type: this.step5Status,
-                        onTitleClick: this.handleTitleClick(Qe.OnboardStep.Review),
+                        onTitleClick: this.handleTitleClick(Ke.OnboardStep.Review),
                         isEnabled: this.isPayoutMethodComplete && !this.isReviewComplete
                     })))
                 }, Object.defineProperty(t.prototype, "isRegistrationComplete", {
                     get: function() {
-                        return this.props.workflow.currentStep !== Qe.WorkflowState.CANCELED && this.props.workflow.currentStep !== Qe.WorkflowState.REGISTRATION_NOT_STARTED
+                        return this.props.workflow.currentStep !== Ke.WorkflowState.CANCELED && this.props.workflow.currentStep !== Ke.WorkflowState.REGISTRATION_NOT_STARTED
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "isAgreementComplete", {
                     get: function() {
-                        return this.isRegistrationComplete && this.props.workflow.currentStep !== Qe.WorkflowState.AGREEMENT_NOT_STARTED
+                        return this.isRegistrationComplete && this.props.workflow.currentStep !== Ke.WorkflowState.AGREEMENT_NOT_STARTED
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "isTaxInterviewComplete", {
                     get: function() {
-                        return this.isAgreementComplete && ![Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED, Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING, Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED, Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED, Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH, Qe.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED, Qe.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING, Qe.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED, Qe.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED, Qe.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH].includes(this.props.workflow.currentStep)
+                        return this.isAgreementComplete && ![Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED, Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING, Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED, Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED, Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH, Ke.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED, Ke.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING, Ke.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED, Ke.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED, Ke.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH].includes(this.props.workflow.currentStep)
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "isPayoutMethodComplete", {
                     get: function() {
-                        return this.isTaxInterviewComplete && ![Qe.WorkflowState.PAYOUT_METHOD_NOT_STARTED, Qe.WorkflowState.PAYOUT_METHOD_PENDING].includes(this.props.workflow.currentStep)
+                        return this.isTaxInterviewComplete && ![Ke.WorkflowState.PAYOUT_METHOD_NOT_STARTED, Ke.WorkflowState.PAYOUT_METHOD_PENDING].includes(this.props.workflow.currentStep)
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "isReviewComplete", {
                     get: function() {
-                        return this.isPayoutMethodComplete && this.props.workflow.currentStep !== Qe.WorkflowState.REVIEW_PENDING
+                        return this.isPayoutMethodComplete && this.props.workflow.currentStep !== Ke.WorkflowState.REVIEW_PENDING
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "numOfTotalSteps", {
                     get: function() {
-                        return this.props.onboardEntity === Qe.OnboardEntity.CustomPartner ? 5 : 4
+                        return this.props.onboardEntity === Ke.OnboardEntity.CustomPartner ? 5 : 4
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step1Title", {
                     get: function() {
-                        return Va(Object(p.e)(1), Object(p.e)(this.numOfTotalSteps), Pa[Qe.OnboardStep.Registration].title[this.props.onboardEntity]())
+                        return Ka(Object(p.e)(1), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.Registration].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step1Description", {
                     get: function() {
-                        return this.props.onboardEntity === Qe.OnboardEntity.ExtensionsDeveloper ? this.isRegistrationComplete ? Object(p.d)("Your Extensions Developer Registration is complete.", "PayoutOnboardingSummary") : Object(p.d)("Begin your Extensions Developer Registration.", "PayoutOnboardingSummary") : this.isRegistrationComplete ? Object(p.d)("Your payout registration is complete.", "PayoutOnboardingSummary") : Object(p.d)("Begin your payout registration.", "PayoutOnboardingSummary")
+                        return this.props.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper ? this.isRegistrationComplete ? Object(p.d)("Your Extensions Developer Registration is complete.", "PayoutOnboardingSummary") : Object(p.d)("Begin your Extensions Developer Registration.", "PayoutOnboardingSummary") : this.isRegistrationComplete ? Object(p.d)("Your payout registration is complete.", "PayoutOnboardingSummary") : Object(p.d)("Begin your payout registration.", "PayoutOnboardingSummary")
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step1Status", {
                     get: function() {
-                        return this.isRegistrationComplete ? xa.Completed : xa.NotStarted
+                        return this.isRegistrationComplete ? Wa.Completed : Wa.NotStarted
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step2Title", {
                     get: function() {
-                        return Va(Object(p.e)(2), Object(p.e)(this.numOfTotalSteps), Pa[Qe.OnboardStep.Agreement].title[this.props.onboardEntity]())
+                        return Ka(Object(p.e)(2), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.Agreement].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step2Description", {
                     get: function() {
                         switch (this.props.onboardEntity) {
-                            case Qe.OnboardEntity.Affiliate:
+                            case Ke.OnboardEntity.Affiliate:
                                 return this.isAgreementComplete ? Object(p.d)("You have agreed to the Twitch Affiliate Agreement.", "PayoutOnboardingSummary") : Object(p.d)("Agree to the Twitch Affiliate Agreement.", "PayoutOnboardingSummary");
-                            case Qe.OnboardEntity.ExtensionsDeveloper:
+                            case Ke.OnboardEntity.ExtensionsDeveloper:
                                 return this.isAgreementComplete ? Object(p.d)("You have agreed to the Twitch Extensions Developer Agreement.", "PayoutOnboardingSummary") : Object(p.d)("Agree to the Twitch Extensions Developer Agreement.", "PayoutOnboardingSummary");
-                            case Qe.OnboardEntity.StandardPartner:
-                            case Qe.OnboardEntity.PremiumPartner:
-                            case Qe.OnboardEntity.CustomPartner:
+                            case Ke.OnboardEntity.StandardPartner:
+                            case Ke.OnboardEntity.PremiumPartner:
+                            case Ke.OnboardEntity.CustomPartner:
                                 return this.isAgreementComplete ? Object(p.d)("You have agreed to the Twitch Partner Agreement.", "PayoutOnboardingSummary") : Object(p.d)("Agree to the Twitch Partner Agreement.", "PayoutOnboardingSummary");
                             default:
                                 return ""
@@ -12552,34 +12591,34 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step2Status", {
                     get: function() {
-                        return this.isAgreementComplete ? xa.Completed : xa.NotStarted
+                        return this.isAgreementComplete ? Wa.Completed : Wa.NotStarted
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step3Title", {
                     get: function() {
-                        return Va(Object(p.e)(3), Object(p.e)(this.numOfTotalSteps), Pa[Qe.OnboardStep.TaxInterview].title[this.props.onboardEntity]())
+                        return Ka(Object(p.e)(3), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.TaxInterview].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step3Description", {
                     get: function() {
-                        if (!this.isAgreementComplete) return La();
+                        if (!this.isAgreementComplete) return Ha();
                         switch (this.props.workflow.currentStep) {
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
-                                return La();
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
+                                return Ha();
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
                                 return Object(p.d)("Your royalty tax information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary");
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH:
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED:
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH:
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH:
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED:
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH:
                                 return Object(p.d)("We could not successfully validate your tax information. Please review and correct your tax information.", "PayoutOnboardingSummary");
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED:
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED:
                                 return Object(p.d)("Royalty tax approved. Please complete your service tax information.", "PayoutOnboardingSummary");
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING:
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING:
                                 return Object(p.d)("Your service tax information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary");
                             default:
                                 return Object(p.d)("Your tax information has been successfully validated.", "PayoutOnboardingSummary")
@@ -12589,94 +12628,94 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step3Status", {
                     get: function() {
-                        if (!this.isAgreementComplete) return xa.NotStarted;
+                        if (!this.isAgreementComplete) return Wa.NotStarted;
                         switch (this.props.workflow.currentStep) {
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
-                                return xa.NotStarted;
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
-                                return xa.Pending;
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
-                            case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH:
-                                return xa.Failed;
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED:
-                                return xa.NotStarted;
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING:
-                                return xa.Pending;
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED:
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
-                            case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH:
-                                return xa.Failed;
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
+                                return Wa.NotStarted;
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
+                                return Wa.Pending;
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
+                            case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH:
+                                return Wa.Failed;
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED:
+                                return Wa.NotStarted;
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING:
+                                return Wa.Pending;
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED:
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
+                            case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH:
+                                return Wa.Failed;
                             default:
-                                return xa.Completed
+                                return Wa.Completed
                         }
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step4Title", {
                     get: function() {
-                        return Va(Object(p.e)(4), Object(p.e)(this.numOfTotalSteps), Pa[Qe.OnboardStep.PayoutMethod].title[this.props.onboardEntity]())
+                        return Ka(Object(p.e)(4), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.PayoutMethod].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step4Description", {
                     get: function() {
-                        var e = this.props.onboardEntity === Qe.OnboardEntity.ExtensionsDeveloper;
-                        return this.isTaxInterviewComplete ? this.props.workflow.currentStep === Qe.WorkflowState.PAYOUT_METHOD_PENDING ? e ? Object(p.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : this.isPayoutMethodComplete ? e ? Object(p.d)("Your financial information has been successfully validated.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method has been successfully validated.", "PayoutOnboardingSummary") : e ? Ba() : Ua() : e ? Ba() : Ua()
+                        var e = this.props.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper;
+                        return this.isTaxInterviewComplete ? this.props.workflow.currentStep === Ke.WorkflowState.PAYOUT_METHOD_PENDING ? e ? Object(p.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : this.isPayoutMethodComplete ? e ? Object(p.d)("Your financial information has been successfully validated.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method has been successfully validated.", "PayoutOnboardingSummary") : e ? qa() : Xa() : e ? qa() : Xa()
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step4Status", {
                     get: function() {
-                        return this.isTaxInterviewComplete ? this.props.workflow.currentStep === Qe.WorkflowState.PAYOUT_METHOD_PENDING ? xa.Pending : this.isPayoutMethodComplete ? xa.Completed : xa.NotStarted : xa.NotStarted
+                        return this.isTaxInterviewComplete ? this.props.workflow.currentStep === Ke.WorkflowState.PAYOUT_METHOD_PENDING ? Wa.Pending : this.isPayoutMethodComplete ? Wa.Completed : Wa.NotStarted : Wa.NotStarted
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step5Title", {
                     get: function() {
-                        return this.props.onboardEntity === Qe.OnboardEntity.CustomPartner ? Va(Object(p.e)(5), Object(p.e)(this.numOfTotalSteps), Pa[Qe.OnboardStep.Review].title[this.props.onboardEntity]()) : ""
+                        return this.props.onboardEntity === Ke.OnboardEntity.CustomPartner ? Ka(Object(p.e)(5), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.Review].title[this.props.onboardEntity]()) : ""
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step5Description", {
                     get: function() {
-                        return this.isPayoutMethodComplete ? this.props.workflow.currentStep === Qe.WorkflowState.REVIEW_PENDING ? Object(p.d)("The Partnership Team is currently validating your paperwork.", "PayoutOnboardingSummary") : Object(p.d)("The Partnership Team has approved your new agreement.", "PayoutOnboardingSummary") : Object(p.d)("The Partnership Team will validate your paperwork and activate your new agreement.", "PayoutOnboardingSummary")
+                        return this.isPayoutMethodComplete ? this.props.workflow.currentStep === Ke.WorkflowState.REVIEW_PENDING ? Object(p.d)("The Partnership Team is currently validating your paperwork.", "PayoutOnboardingSummary") : Object(p.d)("The Partnership Team has approved your new agreement.", "PayoutOnboardingSummary") : Object(p.d)("The Partnership Team will validate your paperwork and activate your new agreement.", "PayoutOnboardingSummary")
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step5Status", {
                     get: function() {
-                        return this.isPayoutMethodComplete ? this.props.workflow.currentStep === Qe.WorkflowState.REVIEW_PENDING ? xa.Pending : xa.Completed : xa.NotStarted
+                        return this.isPayoutMethodComplete ? this.props.workflow.currentStep === Ke.WorkflowState.REVIEW_PENDING ? Wa.Pending : Wa.Completed : Wa.NotStarted
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            Qa = function(e) {
+            Za = function(e) {
                 return Object(p.d)("Example {exampleNum}", {
                     exampleNum: Object(p.e)(e)
                 }, "TaxInfoBrick")
             },
-            Ya = function(e) {
-                if (e.taxStatus === ir.NotStarted || e.taxStatus === ir.Completed) return null;
+            Ja = function(e) {
+                if (e.taxStatus === gr.NotStarted || e.taxStatus === gr.Completed) return null;
                 var t;
                 switch (e.taxStatus) {
-                    case ir.Pending:
+                    case gr.Pending:
                         t = r.createElement(S.Q, {
                             type: S._49.P
                         }, Object(p.d)("Your tax information is currently under review. This typically takes a few minutes.", "TaxInfoBrick"));
                         break;
-                    case ir.ActionRequired:
+                    case gr.ActionRequired:
                         t = r.createElement(S.Q, {
                             type: S._49.P
                         }, Object(p.d)("Looks like you may need to mail documentation to Amazon to complete this process. However, you may be able to avoid this by consenting to electronic signature of your tax form. To do this, click the button below to retake the tax interview and be sure to check the box to consent to electronic signature.", "TaxInfoBrick"));
                         break;
-                    case ir.Failed:
+                    case gr.Failed:
                         t = r.createElement(S.Q, {
                             type: S._49.P
                         }, Object(p.d)("We could not successfully validate your tax information.", "TaxInfoBrick"));
                         break;
-                    case ir.Mismatch:
+                    case gr.Mismatch:
                         t = r.createElement(r.Fragment, null, r.createElement(S._2, {
                             margin: {
                                 bottom: 1
@@ -12689,7 +12728,7 @@ webpackJsonp([98], {
                             }
                         }, r.createElement(S.Q, {
                             type: S._49.P
-                        }, Qa(1))), r.createElement(S._8, {
+                        }, Za(1))), r.createElement(S._8, {
                             margin: {
                                 left: 1,
                                 bottom: 1
@@ -12706,7 +12745,7 @@ webpackJsonp([98], {
                             }
                         }, r.createElement(S.Q, {
                             type: S._49.P
-                        }, Qa(2))), r.createElement(S._8, {
+                        }, Za(2))), r.createElement(S._8, {
                             margin: {
                                 left: 1,
                                 bottom: 1
@@ -12734,7 +12773,7 @@ webpackJsonp([98], {
                     elevation: 1
                 }, t)
             },
-            Ga = function(e) {
+            er = function(e) {
                 return r.createElement(r.Fragment, null, r.createElement(S._2, {
                     margin: {
                         bottom: 1
@@ -12785,24 +12824,24 @@ webpackJsonp([98], {
                     type: S._49.P
                 }, "Email address: ", e.email)))
             },
-            za = function(e) {
+            tr = function(e) {
                 var t = e.workflow,
                     n = t.registration,
                     a = t.taxMismatchErrors;
                 if (!n || !a) return null;
                 var i = a.map(function(e, t) {
                     var a, i;
-                    if (e === Qe.TaxMismatchError.NAME) a = Object(p.d)("Name", "TaxMismatchSpecificErrors"), i = n.companyName ? n.companyName : [n.firstName, n.middleName, n.lastName].filter(function(e) {
+                    if (e === Ke.TaxMismatchError.NAME) a = Object(p.d)("Name", "TaxMismatchSpecificErrors"), i = n.companyName ? n.companyName : [n.firstName, n.middleName, n.lastName].filter(function(e) {
                         return null !== e
                     }).join(" ");
-                    else if (e === Qe.TaxMismatchError.EMAIL) a = Object(p.d)("Email", "TaxMismatchSpecificErrors"), i = n.email;
-                    else if (e === Qe.TaxMismatchError.STREET_ADDRESS) a = Object(p.d)("Street Address", "TaxMismatchSpecificErrors"), i = n.streetAddress;
-                    else if (e === Qe.TaxMismatchError.STREET_ADDRESS_2) a = Object(p.d)("Street Address 2", "TaxMismatchSpecificErrors"), i = n.streetAddress2;
-                    else if (e === Qe.TaxMismatchError.CITY) a = Object(p.d)("City or Town", "TaxMismatchSpecificErrors"), i = n.city;
-                    else if (e === Qe.TaxMismatchError.STATE) a = Object(p.d)("State/Province", "TaxMismatchSpecificErrors"), i = "US" === n.countryCode ? Bn(n.stateCode || "") : "CA" === n.countryCode ? Mn(n.stateCode || "") : n.stateCode;
-                    else if (e === Qe.TaxMismatchError.COUNTRY) a = Object(p.d)("Country", "TaxMismatchSpecificErrors"), i = Object(Un.b)(n.countryCode || "");
+                    else if (e === Ke.TaxMismatchError.EMAIL) a = Object(p.d)("Email", "TaxMismatchSpecificErrors"), i = n.email;
+                    else if (e === Ke.TaxMismatchError.STREET_ADDRESS) a = Object(p.d)("Street Address", "TaxMismatchSpecificErrors"), i = n.streetAddress;
+                    else if (e === Ke.TaxMismatchError.STREET_ADDRESS_2) a = Object(p.d)("Street Address 2", "TaxMismatchSpecificErrors"), i = n.streetAddress2;
+                    else if (e === Ke.TaxMismatchError.CITY) a = Object(p.d)("City or Town", "TaxMismatchSpecificErrors"), i = n.city;
+                    else if (e === Ke.TaxMismatchError.STATE) a = Object(p.d)("State/Province", "TaxMismatchSpecificErrors"), i = "US" === n.countryCode ? qn(n.stateCode || "") : "CA" === n.countryCode ? zn(n.stateCode || "") : n.stateCode;
+                    else if (e === Ke.TaxMismatchError.COUNTRY) a = Object(p.d)("Country", "TaxMismatchSpecificErrors"), i = Object(Xn.b)(n.countryCode || "");
                     else {
-                        if (e !== Qe.TaxMismatchError.POSTAL) return null;
+                        if (e !== Ke.TaxMismatchError.POSTAL) return null;
                         a = Object(p.d)("Zip Code/Postal Code", "TaxMismatchSpecificErrors"), i = n.postal
                     }
                     return r.createElement(S._2, {
@@ -12845,11 +12884,11 @@ webpackJsonp([98], {
                     buttonLabel: Object(p.d)("Start Over", "TaxMismatchSpecificErrors")
                 }, "TaxMismatchSpecificErrors"))))
             },
-            Ha = function(e) {
+            nr = function(e) {
                 var t = e.workflow.registration;
                 if (!t) return null;
                 switch (e.taxStatus) {
-                    case ir.NotStarted:
+                    case gr.NotStarted:
                         return r.createElement(r.Fragment, null, r.createElement(S._2, {
                             margin: {
                                 bottom: 1
@@ -12866,10 +12905,10 @@ webpackJsonp([98], {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(fn, {
+                        }, r.createElement(On, {
                             onboardEntity: e.onboardEntity
                         })));
-                    case ir.Pending:
+                    case gr.Pending:
                         return r.createElement(S._2, {
                             margin: {
                                 bottom: 2
@@ -12877,31 +12916,31 @@ webpackJsonp([98], {
                         }, r.createElement(S.Q, {
                             type: S._49.P
                         }, Object(p.d)("You can retake the Royalty Tax Interview if you wish to modify or correct any previously submitted information. You may want to do this if your tax information has been under review for more than 48 hours.", "TaxInfoRoyaltyText")));
-                    case ir.Completed:
+                    case gr.Completed:
                         return r.createElement(S.Q, {
                             type: S._49.P
                         }, Object(p.d)("Your royalty tax information was successfully validated.", "TaxInfoRoyaltyText"));
-                    case ir.ActionRequired:
-                        return r.createElement(r.Fragment, null, r.createElement(Ga, {
+                    case gr.ActionRequired:
+                        return r.createElement(r.Fragment, null, r.createElement(er, {
                             email: t.email
                         }), r.createElement(S._8, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(fn, {
+                        }, r.createElement(On, {
                             onboardEntity: e.onboardEntity
                         })));
-                    case ir.Mismatch:
-                        return r.createElement(r.Fragment, null, r.createElement(za, {
+                    case gr.Mismatch:
+                        return r.createElement(r.Fragment, null, r.createElement(tr, {
                             workflow: e.workflow
                         }), r.createElement(S._8, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(fn, {
+                        }, r.createElement(On, {
                             onboardEntity: e.onboardEntity
                         })));
-                    case ir.Failed:
+                    case gr.Failed:
                         return r.createElement(S._2, {
                             margin: {
                                 bottom: 2
@@ -12913,7 +12952,7 @@ webpackJsonp([98], {
                         return null
                 }
             },
-            qa = function(e) {
+            ar = function(e) {
                 var t = e.workflow.registration;
                 if (!t) return null;
                 if (!e.royaltyTaxCompleted) return r.createElement(r.Fragment, null, r.createElement(S._2, {
@@ -12926,11 +12965,11 @@ webpackJsonp([98], {
                     margin: {
                         bottom: 2
                     }
-                }, r.createElement(fn, {
+                }, r.createElement(On, {
                     onboardEntity: e.onboardEntity
                 })));
                 switch (e.taxStatus) {
-                    case ir.NotStarted:
+                    case gr.NotStarted:
                         return r.createElement(r.Fragment, null, r.createElement(S._2, {
                             margin: {
                                 bottom: 1
@@ -12947,10 +12986,10 @@ webpackJsonp([98], {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(fn, {
+                        }, r.createElement(On, {
                             onboardEntity: e.onboardEntity
                         })));
-                    case ir.Pending:
+                    case gr.Pending:
                         return r.createElement(S._2, {
                             margin: {
                                 bottom: 2
@@ -12958,31 +12997,31 @@ webpackJsonp([98], {
                         }, r.createElement(S.Q, {
                             type: S._49.P
                         }, Object(p.d)("You can retake the Service Tax Interview if you wish to modify or correct any previously submitted information. You may want to do this if your tax information has been under review for more than 48 hours.", "TaxInfoServiceText")));
-                    case ir.Completed:
+                    case gr.Completed:
                         return r.createElement(S.Q, {
                             type: S._49.P
                         }, Object(p.d)("Your service tax information was successfully validated.", "TaxInfoServiceText"));
-                    case ir.ActionRequired:
-                        return r.createElement(r.Fragment, null, r.createElement(Ga, {
+                    case gr.ActionRequired:
+                        return r.createElement(r.Fragment, null, r.createElement(er, {
                             email: t.email
                         }), r.createElement(S._8, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(fn, {
+                        }, r.createElement(On, {
                             onboardEntity: e.onboardEntity
                         })));
-                    case ir.Mismatch:
-                        return r.createElement(r.Fragment, null, r.createElement(za, {
+                    case gr.Mismatch:
+                        return r.createElement(r.Fragment, null, r.createElement(tr, {
                             workflow: e.workflow
                         }), r.createElement(S._8, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(fn, {
+                        }, r.createElement(On, {
                             onboardEntity: e.onboardEntity
                         })));
-                    case ir.Failed:
+                    case gr.Failed:
                         return r.createElement(S._2, {
                             margin: {
                                 bottom: 2
@@ -12994,10 +13033,10 @@ webpackJsonp([98], {
                         return null
                 }
             },
-            Xa = function() {
+            rr = function() {
                 return Object(p.d)("Start Over", "TaxPreviewInstructions")
             },
-            Ka = function(e) {
+            ir = function(e) {
                 return r.createElement(S._35, {
                     borderMarked: !0,
                     padding: 2,
@@ -13010,30 +13049,30 @@ webpackJsonp([98], {
                     }
                 }, r.createElement(S.Q, {
                     type: S._49.P
-                }, Object(p.d)("It is important that you enter consistent information throughout the onboarding process to ensure that we have your correct contact information, tax information, and payout information. When filling out the tax form on the following page, please make sure that you enter the same information as you did in Step 1. For your reference, here is the information you entered in Step 1.", "TaxPreviewInstructions"))), e.onboardEntity !== Qe.OnboardEntity.ExtensionsDeveloper && r.createElement(S._2, {
+                }, Object(p.d)("It is important that you enter consistent information throughout the onboarding process to ensure that we have your correct contact information, tax information, and payout information. When filling out the tax form on the following page, please make sure that you enter the same information as you did in Step 1. For your reference, here is the information you entered in Step 1.", "TaxPreviewInstructions"))), e.onboardEntity !== Ke.OnboardEntity.ExtensionsDeveloper && r.createElement(S._2, {
                     margin: {
                         bottom: 2
                     }
                 }, r.createElement(S.Q, {
                     type: S._49.P
                 }, Object(p.d)('If any of this information is incorrect, you must restart your Payout Registration by clicking "{buttonLabel}" below.', {
-                    buttonLabel: Xa()
-                }, "TaxPreviewInstructions"))), e.onboardEntity === Qe.OnboardEntity.ExtensionsDeveloper && r.createElement(S._2, {
+                    buttonLabel: rr()
+                }, "TaxPreviewInstructions"))), e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper && r.createElement(S._2, {
                     margin: {
                         bottom: 2
                     }
                 }, r.createElement(S.Q, {
                     type: S._49.P
                 }, Object(p.d)('If any of this information is incorrect, you must restart your Extensions Developer Registration by clicking "{buttonLabel}" below.', {
-                    buttonLabel: Xa()
+                    buttonLabel: rr()
                 }, "TaxPreviewInstructions"))), r.createElement(S.Q, {
                     type: S._49.P
                 }, Object(p.d)("Otherwise, please proceed by clicking the purple button and the tax form will appear in a new window. If the tax form does not appear, make sure that you have pop-ups enabled.", "TaxPreviewInstructions")))
             },
-            $a = function() {
+            or = function() {
                 return Object(p.d)("optional", "TaxPreviewReferenceInfo")
             },
-            Ja = function(e) {
+            sr = function(e) {
                 var t, n = e.workflow.registration;
                 if (!n) return null;
                 t = n.companyName ? n.companyName : [n.firstName, n.middleName, n.lastName].filter(function(e) {
@@ -13086,7 +13125,7 @@ webpackJsonp([98], {
                     orientation: S.X.Horizontal
                 }, r.createElement(S._4, {
                     type: S._5.Text,
-                    value: Object(Un.b)(n.countryCode),
+                    value: Object(Xn.b)(n.countryCode),
                     disabled: !0
                 }))), r.createElement(S._8, {
                     margin: {
@@ -13106,7 +13145,7 @@ webpackJsonp([98], {
                 }, r.createElement(S.W, {
                     label: Object(p.d)("Street Address 2", "TaxPreviewReferenceInfo"),
                     orientation: S.X.Horizontal,
-                    labelOptional: $a()
+                    labelOptional: or()
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: n.streetAddress2 || "",
@@ -13129,23 +13168,23 @@ webpackJsonp([98], {
                 }, r.createElement(S.W, {
                     label: Object(p.d)("State/Province", "TaxPreviewReferenceInfo"),
                     orientation: S.X.Horizontal,
-                    labelOptional: a || i ? "" : $a()
+                    labelOptional: a || i ? "" : or()
                 }, r.createElement(S._4, {
                     type: S._5.Text,
-                    value: a ? Bn(n.stateCode || "") : i ? Mn(n.stateCode || "") : n.stateCode || "",
+                    value: a ? qn(n.stateCode || "") : i ? zn(n.stateCode || "") : n.stateCode || "",
                     disabled: !0
                 }))), r.createElement(S.W, {
                     label: Object(p.d)("Zip Code/Postal Code", "TaxPreviewReferenceInfo"),
                     orientation: S.X.Horizontal,
-                    labelOptional: a ? "" : $a()
+                    labelOptional: a ? "" : or()
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: n.postal || "",
                     disabled: !0
                 })))
             },
-            Za = (n("ZDnG"), n("bv1+")),
-            er = function(e) {
+            lr = (n("ZDnG"), n("bv1+")),
+            dr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -13240,9 +13279,9 @@ webpackJsonp([98], {
                         }
                     }, r.createElement(S.Q, {
                         type: S._49.H4
-                    }, Object(p.d)("Information Reference", "TaxPreviewModal"))), r.createElement(Ka, {
+                    }, Object(p.d)("Information Reference", "TaxPreviewModal"))), r.createElement(ir, {
                         onboardEntity: this.props.onboardEntity
-                    }), r.createElement(Ja, {
+                    }), r.createElement(sr, {
                         channelName: this.props.channelName,
                         workflow: this.props.workflow
                     }), r.createElement(S._8, {
@@ -13275,13 +13314,13 @@ webpackJsonp([98], {
                     }, r.createElement(S._10, null))))
                 }, Object.defineProperty(t.prototype, "openTaxButtonText", {
                     get: function() {
-                        return this.props.taxType === rr.Royalty ? Object(p.d)("Open Royalty Tax Interview Form", "TaxPreviewModal") : Object(p.d)("Open Service Tax Interview Form", "TaxPreviewModal")
+                        return this.props.taxType === pr.Royalty ? Object(p.d)("Open Royalty Tax Interview Form", "TaxPreviewModal") : Object(p.d)("Open Service Tax Interview Form", "TaxPreviewModal")
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            tr = Object(i.compose)(Object(u.a)(Za, {
+            cr = Object(i.compose)(Object(u.a)(lr, {
                 options: function(e) {
                     return {
                         variables: {
@@ -13290,45 +13329,45 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }))(er),
-            nr = function(e) {
+            }))(dr),
+            ur = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(r.Fragment, null, r.createElement(tr, {
+                    return r.createElement(r.Fragment, null, r.createElement(cr, {
                         taxType: this.props.taxType,
                         channelName: this.props.channelName,
                         onboardEntity: this.props.onboardEntity,
                         workflow: this.props.workflow,
                         showStartOverModal: this.props.showStartOverModal,
                         closeTaxPreviewModal: this.props.closeModal
-                    }), r.createElement(En.a, {
+                    }), r.createElement(Cn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(r.Component);
-        var ar, rr, ir, or = Object(g.d)(Object(Oe.b)(null, function(e) {
-            return Object(g.b)({
-                closeModal: Te.c
+        var mr, pr, gr, hr = Object(h.d)(Object(Te.b)(null, function(e) {
+            return Object(h.b)({
+                closeModal: Ne.c
             }, e)
-        }))(nr);
+        }))(ur);
         ! function(e) {
             e.RoyaltyHeader = "payout-onboarding-tax-interview__royalty-header", e.RoyaltyButton = "payout-onboarding-tax-interview__royalty-button", e.ServiceHeader = "payout-onboarding-tax-interview__service-header", e.ServiceButton = "payout-onboarding-tax-interview__service-button", e.ContinueButton = "payout-onboarding-tax-interview__continue-button"
-        }(ar || (ar = {})),
+        }(mr || (mr = {})),
         function(e) {
             e.Royalty = "Royalty", e.Service = "Service"
-        }(rr || (rr = {})),
+        }(pr || (pr = {})),
         function(e) {
             e[e.NotStarted = 0] = "NotStarted", e[e.Pending = 1] = "Pending", e[e.Failed = 2] = "Failed", e[e.ActionRequired = 3] = "ActionRequired", e[e.Mismatch = 4] = "Mismatch", e[e.Completed = 5] = "Completed"
-        }(ir || (ir = {}));
-        var sr = function(e) {
+        }(gr || (gr = {}));
+        var br = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.handleRoyaltyTaxButtonClick = function() {
-                    t.showTaxPreviewModal(rr.Royalty)
+                    t.showTaxPreviewModal(pr.Royalty)
                 }, t.handleServiceTaxButtonClick = function() {
-                    t.showTaxPreviewModal(rr.Service)
+                    t.showTaxPreviewModal(pr.Service)
                 }, t.showTaxPreviewModal = function(e) {
                     var n = t.props,
                         a = n.channelName,
@@ -13343,53 +13382,53 @@ webpackJsonp([98], {
                         showStartOverModal: o
                     })
                 }, t.handleContinueClick = function() {
-                    t.props.updateStepDisplayed(Qe.OnboardStep.PayoutMethod)
+                    t.props.updateStepDisplayed(Ke.OnboardStep.PayoutMethod)
                 }, t
             }
             return a.__extends(t, e), t.prototype.render = function() {
-                return r.createElement(U.a, null, r.createElement(dn, {
+                return r.createElement(U.a, null, r.createElement(En, {
                     title: Object(p.d)("Royalty Tax Interview", "PayoutOnboardingTaxInterview"),
                     statusText: this.royaltyStatusText,
                     statusType: this.royaltyStatusType,
                     borderTop: !0,
-                    "data-test-selector": ar.RoyaltyHeader
+                    "data-test-selector": mr.RoyaltyHeader
                 }), r.createElement(S._8, {
                     padding: 2
-                }, r.createElement(Ya, {
+                }, r.createElement(Ja, {
                     taxStatus: this.royaltyTaxStatus
-                }), r.createElement(Ha, {
+                }), r.createElement(nr, {
                     taxStatus: this.royaltyTaxStatus,
                     workflow: this.props.workflow,
                     onboardEntity: this.props.onboardEntity
-                }), this.royaltyTaxStatus !== ir.Completed && r.createElement(S.v, {
+                }), this.royaltyTaxStatus !== gr.Completed && r.createElement(S.v, {
                     type: this.royaltyTaxButtonType,
                     disabled: this.royaltyTaxButtonDisabled,
                     onClick: this.handleRoyaltyTaxButtonClick,
-                    "data-test-selector": ar.RoyaltyButton
-                }, this.royaltyTaxButtonText)), r.createElement(dn, {
+                    "data-test-selector": mr.RoyaltyButton
+                }, this.royaltyTaxButtonText)), r.createElement(En, {
                     title: Object(p.d)("Service Tax Interview", "PayoutOnboardingTaxInterview"),
                     statusText: this.serviceStatusText,
                     statusType: this.serviceStatusType,
-                    "data-test-selector": ar.ServiceHeader
+                    "data-test-selector": mr.ServiceHeader
                 }), r.createElement(S._8, {
                     padding: 2
-                }, r.createElement(Ya, {
+                }, r.createElement(Ja, {
                     taxStatus: this.serviceTaxStatus
-                }), r.createElement(qa, {
-                    royaltyTaxCompleted: this.royaltyTaxStatus === ir.Completed,
+                }), r.createElement(ar, {
+                    royaltyTaxCompleted: this.royaltyTaxStatus === gr.Completed,
                     taxStatus: this.serviceTaxStatus,
                     workflow: this.props.workflow,
                     onboardEntity: this.props.onboardEntity
-                }), this.serviceTaxStatus !== ir.Completed && r.createElement(S.v, {
+                }), this.serviceTaxStatus !== gr.Completed && r.createElement(S.v, {
                     type: this.serviceTaxButtonType,
                     disabled: this.serviceTaxButtonDisabled,
                     onClick: this.handleServiceTaxButtonClick,
-                    "data-test-selector": ar.ServiceButton
+                    "data-test-selector": mr.ServiceButton
                 }, this.serviceTaxButtonText)), r.createElement(S._35, {
                     padding: 2,
                     background: S.n.Alt2
                 }, r.createElement(S.v, {
-                    "data-test-selector": ar.ContinueButton,
+                    "data-test-selector": mr.ContinueButton,
                     size: S.z.Large,
                     disabled: this.continueButtonDisabled,
                     onClick: this.handleContinueClick
@@ -13397,18 +13436,18 @@ webpackJsonp([98], {
             }, Object.defineProperty(t.prototype, "royaltyTaxStatus", {
                 get: function() {
                     switch (this.props.workflow.currentStep) {
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
-                            return ir.NotStarted;
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
-                            return ir.Pending;
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
-                            return ir.ActionRequired;
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH:
-                            return ir.Mismatch;
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
-                            return ir.Failed;
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
+                            return gr.NotStarted;
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
+                            return gr.Pending;
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
+                            return gr.ActionRequired;
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH:
+                            return gr.Mismatch;
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
+                            return gr.Failed;
                         default:
-                            return ir.Completed
+                            return gr.Completed
                     }
                 },
                 enumerable: !0,
@@ -13416,23 +13455,23 @@ webpackJsonp([98], {
             }), Object.defineProperty(t.prototype, "serviceTaxStatus", {
                 get: function() {
                     switch (this.props.workflow.currentStep) {
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH:
-                        case Qe.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
-                        case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED:
-                            return ir.NotStarted;
-                        case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING:
-                            return ir.Pending;
-                        case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
-                            return ir.ActionRequired;
-                        case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH:
-                            return ir.Mismatch;
-                        case Qe.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED:
-                            return ir.Failed;
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH:
+                        case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
+                        case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED:
+                            return gr.NotStarted;
+                        case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING:
+                            return gr.Pending;
+                        case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
+                            return gr.ActionRequired;
+                        case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH:
+                            return gr.Mismatch;
+                        case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED:
+                            return gr.Failed;
                         default:
-                            return ir.Completed
+                            return gr.Completed
                     }
                 },
                 enumerable: !0,
@@ -13463,101 +13502,101 @@ webpackJsonp([98], {
                 configurable: !0
             }), t.prototype.getStatusText = function(e) {
                 switch (e) {
-                    case ir.NotStarted:
+                    case gr.NotStarted:
                         return Object(p.d)("Not Started", "PayoutOnboardingTaxInterview");
-                    case ir.Pending:
+                    case gr.Pending:
                         return Object(p.d)("Under Review", "PayoutOnboardingTaxInterview");
-                    case ir.ActionRequired:
+                    case gr.ActionRequired:
                         return Object(p.d)("Additional Documentation Required", "PayoutOnboardingTaxInterview");
-                    case ir.Mismatch:
-                    case ir.Failed:
+                    case gr.Mismatch:
+                    case gr.Failed:
                         return Object(p.d)("Failed", "PayoutOnboardingTaxInterview");
-                    case ir.Completed:
+                    case gr.Completed:
                         return Object(p.d)("Completed", "PayoutOnboardingTaxInterview");
                     default:
                         return ""
                 }
             }, t.prototype.getStatusType = function(e) {
                 switch (e) {
-                    case ir.Pending:
+                    case gr.Pending:
                         return S._13.Warn;
-                    case ir.ActionRequired:
-                    case ir.Mismatch:
-                    case ir.Failed:
+                    case gr.ActionRequired:
+                    case gr.Mismatch:
+                    case gr.Failed:
                         return S._13.Alert;
-                    case ir.Completed:
+                    case gr.Completed:
                         return S._13.Success;
                     default:
                         return
                 }
             }, Object.defineProperty(t.prototype, "royaltyTaxButtonType", {
                 get: function() {
-                    return this.royaltyTaxStatus === ir.Pending || this.royaltyTaxStatus === ir.ActionRequired ? S.B.Hollow : S.B.Default
+                    return this.royaltyTaxStatus === gr.Pending || this.royaltyTaxStatus === gr.ActionRequired ? S.B.Hollow : S.B.Default
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "royaltyTaxButtonDisabled", {
                 get: function() {
-                    return this.royaltyTaxStatus === ir.Completed
+                    return this.royaltyTaxStatus === gr.Completed
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "royaltyTaxButtonText", {
                 get: function() {
-                    return this.royaltyTaxStatus === ir.NotStarted ? Object(p.d)("Begin Royalty Tax Interview", "PayoutOnboardingTaxInterview") : Object(p.d)("Retake Royalty Tax Interview", "PayoutOnboardingTaxInterview")
+                    return this.royaltyTaxStatus === gr.NotStarted ? Object(p.d)("Begin Royalty Tax Interview", "PayoutOnboardingTaxInterview") : Object(p.d)("Retake Royalty Tax Interview", "PayoutOnboardingTaxInterview")
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "serviceTaxButtonType", {
                 get: function() {
-                    return this.serviceTaxStatus === ir.Pending || this.serviceTaxStatus === ir.ActionRequired ? S.B.Hollow : S.B.Default
+                    return this.serviceTaxStatus === gr.Pending || this.serviceTaxStatus === gr.ActionRequired ? S.B.Hollow : S.B.Default
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "serviceTaxButtonDisabled", {
                 get: function() {
-                    return this.royaltyTaxStatus !== ir.Completed || this.serviceTaxStatus === ir.Completed
+                    return this.royaltyTaxStatus !== gr.Completed || this.serviceTaxStatus === gr.Completed
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "serviceTaxButtonText", {
                 get: function() {
-                    return this.serviceTaxStatus === ir.NotStarted ? Object(p.d)("Begin Service Tax Interview", "PayoutOnboardingTaxInterview") : Object(p.d)("Retake Service Tax Interview", "PayoutOnboardingTaxInterview")
+                    return this.serviceTaxStatus === gr.NotStarted ? Object(p.d)("Begin Service Tax Interview", "PayoutOnboardingTaxInterview") : Object(p.d)("Retake Service Tax Interview", "PayoutOnboardingTaxInterview")
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "continueButtonDisabled", {
                 get: function() {
-                    return this.royaltyTaxStatus !== ir.Completed || this.serviceTaxStatus !== ir.Completed
+                    return this.royaltyTaxStatus !== gr.Completed || this.serviceTaxStatus !== gr.Completed
                 },
                 enumerable: !0,
                 configurable: !0
             }), t
         }(r.Component);
-        var lr = Object(i.compose)(Object(Oe.b)(null, function(e) {
-                return Object(g.b)({
+        var fr = Object(i.compose)(Object(Te.b)(null, function(e) {
+                return Object(h.b)({
                     showTaxPreviewModal: function(e) {
                         var t = a.__rest(e, []);
-                        return Object(Te.d)(or, t)
+                        return Object(Ne.d)(hr, t)
                     }
                 }, e)
-            }))(sr),
-            dr = n("NrhD"),
-            cr = {
+            }))(br),
+            Er = n("NrhD"),
+            vr = {
                 "data-test-selector": "require-two-factor-enabled__enable-two-factor-message"
             },
-            ur = function(e) {
+            yr = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.data.loading ? r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(S._14, {
+                    return this.props.data.loading ? r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._14, {
                         lineCount: 4
-                    }))) : this.props.data.error ? r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(l.a, {
+                    }))) : this.props.data.error ? r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(l.a, {
                         message: Object(p.d)("Oops, something went wrong.", "RequireTwoFactorEnabled")
-                    }))) : this.hasTwoFactorEnabled ? r.createElement(r.Fragment, null, this.props.children) : r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(S.Q, a.__assign({
+                    }))) : this.hasTwoFactorEnabled ? r.createElement(r.Fragment, null, this.props.children) : r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S.Q, a.__assign({
                         type: S._49.P
-                    }, cr), this.props.enableTwoFactorMessage)), r.createElement(Ct.a, null, r.createElement(s.a, {
+                    }, vr), this.props.enableTwoFactorMessage)), r.createElement(Ft.a, null, r.createElement(s.a, {
                         to: "/settings/security"
                     }, r.createElement(S.v, null, Object(p.d)("Enable Two-Factor Authentication", "RequireTwoFactorEnabled")))))
                 }, Object.defineProperty(t.prototype, "hasTwoFactorEnabled", {
@@ -13568,9 +13607,9 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            mr = Object(i.compose)(Object(u.a)(dr))(ur),
-            pr = n("AbdN"),
-            hr = function(e) {
+            Sr = Object(i.compose)(Object(u.a)(Er))(yr),
+            kr = n("AbdN"),
+            _r = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -13653,7 +13692,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._10, null))))
                 }, t
             }(r.Component),
-            gr = (n("n8vm"), function(e) {
+            Tr = (n("n8vm"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -13662,30 +13701,30 @@ webpackJsonp([98], {
                         className: "start-over-modal__container",
                         background: S.n.Base,
                         padding: 2
-                    }, r.createElement(hr, {
+                    }, r.createElement(_r, {
                         cancelWorkflow: this.props.cancelWorkflow,
                         callCloseModal: this.props.closeModal
-                    }), r.createElement(En.a, {
+                    }), r.createElement(Cn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(r.Component));
-        var br = Object(Oe.b)(null, function(e) {
-                return Object(g.b)({
-                    closeModal: Te.c
+        var Nr = Object(Te.b)(null, function(e) {
+                return Object(h.b)({
+                    closeModal: Ne.c
                 }, e)
-            })(gr),
-            fr = n("Cte4"),
-            vr = n("CR5K"),
-            Er = function(e) {
+            })(Tr),
+            Or = n("Cte4"),
+            Ar = n("CR5K"),
+            Cr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        stepDisplayed: Qe.OnboardStep.Summary,
+                        stepDisplayed: Ke.OnboardStep.Summary,
                         redirectedAlready: !1
-                    }, t.backLinkURL = "/" + t.props.channelName + "/dashboard/settings/revenue", t.totalSteps = t.props.onboardEntity === Qe.OnboardEntity.CustomPartner ? 5 : 4, t.goBackToSummary = function() {
+                    }, t.backLinkURL = "/" + t.props.channelName + "/dashboard/settings/revenue", t.totalSteps = t.props.onboardEntity === Ke.OnboardEntity.CustomPartner ? 5 : 4, t.goBackToSummary = function() {
                         t.setState({
-                            stepDisplayed: Qe.OnboardStep.Summary
+                            stepDisplayed: Ke.OnboardStep.Summary
                         })
                     }, t.updateStepDisplayed = function(e) {
                         t.setState({
@@ -13697,7 +13736,7 @@ webpackJsonp([98], {
                             return a.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.props.startWorkflow(a.__assign({}, Object(v.a)({
+                                        return [4, this.props.startWorkflow(a.__assign({}, Object(E.a)({
                                             targetUserID: this.props.data.currentUser.id
                                         })))];
                                     case 1:
@@ -13713,18 +13752,18 @@ webpackJsonp([98], {
                             return a.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.props.cancelWorkflow(a.__assign({}, Object(v.a)({
+                                        return [4, this.props.cancelWorkflow(a.__assign({}, Object(E.a)({
                                             targetUserID: this.props.data.currentUser.id
                                         })))];
                                     case 1:
                                         return e = n.sent(), t = function(t) {
                                             return t.currentUser.payoutInvite && t.currentUser.payoutInvite.workflow && e.data.cancelPayoutOnboardingWorkflow.workflow && (t.currentUser.payoutInvite.workflow.id = e.data.cancelPayoutOnboardingWorkflow.workflow.id, t.currentUser.payoutInvite.workflow.currentStep = e.data.cancelPayoutOnboardingWorkflow.workflow.currentStep, t.currentUser.payoutInvite.workflow.registration = null, t.currentUser.payoutInvite.workflow.taxMismatchErrors = null), t
-                                        }, this.updateContainerQuery(t), this.updateStepDisplayed(Qe.OnboardStep.Summary), [2]
+                                        }, this.updateContainerQuery(t), this.updateStepDisplayed(Ke.OnboardStep.Summary), [2]
                                 }
                             })
                         })
                     }, t.updateContainerQuery = function(e) {
-                        Object(v.e)(fr, {}, e)
+                        Object(E.e)(Or, {}, e)
                     }, t.showStartOverModal = function() {
                         t.props.showStartOverModal({
                             cancelWorkflow: t.cancelWorkflow
@@ -13740,7 +13779,7 @@ webpackJsonp([98], {
                 }), t.prototype.componentDidUpdate = function() {
                     this.shouldRedirectPayoutMethod && this.setState({
                         redirectedAlready: !0,
-                        stepDisplayed: Qe.OnboardStep.PayoutMethod
+                        stepDisplayed: Ke.OnboardStep.PayoutMethod
                     })
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this.props.pubsub.messages.payoutOnboardingEvent,
@@ -13753,36 +13792,36 @@ webpackJsonp([98], {
                         if (this.state.redirectedAlready) return !1;
                         var e = this.props.data.currentUser.payoutInvite.workflow;
                         if (!e) return !1;
-                        if (e.currentStep !== Qe.WorkflowState.PAYOUT_METHOD_NOT_STARTED && e.currentStep !== Qe.WorkflowState.PAYOUT_METHOD_PENDING && e.currentStep !== Qe.WorkflowState.COMPLETED && e.currentStep !== Qe.WorkflowState.REVIEW_PENDING) return !1;
-                        var t = tn.parse(this.props.location.search);
+                        if (e.currentStep !== Ke.WorkflowState.PAYOUT_METHOD_NOT_STARTED && e.currentStep !== Ke.WorkflowState.PAYOUT_METHOD_PENDING && e.currentStep !== Ke.WorkflowState.COMPLETED && e.currentStep !== Ke.WorkflowState.REVIEW_PENDING) return !1;
+                        var t = un.parse(this.props.location.search);
                         return !!t && "true" === t.redirect_tipalti
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t.prototype.render = function() {
-                    if (this.props.data.loading) return r.createElement(r.Fragment, null, r.createElement(h.a, {
-                        title: Pa[Qe.OnboardStep.Summary].title[this.props.onboardEntity](),
-                        description: Pa[Qe.OnboardStep.Summary].description[this.props.onboardEntity](),
+                    if (this.props.data.loading) return r.createElement(r.Fragment, null, r.createElement(g.a, {
+                        title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                        description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                         linkToParent: this.backLinkURL
-                    }), r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(S._14, {
+                    }), r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._14, {
                         lineCount: 4
                     }))));
-                    if (this.props.data.error) return r.createElement(r.Fragment, null, r.createElement(h.a, {
-                        title: Pa[Qe.OnboardStep.Summary].title[this.props.onboardEntity](),
-                        description: Pa[Qe.OnboardStep.Summary].description[this.props.onboardEntity](),
+                    if (this.props.data.error) return r.createElement(r.Fragment, null, r.createElement(g.a, {
+                        title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                        description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                         linkToParent: this.backLinkURL
-                    }), r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(l.a, {
+                    }), r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(l.a, {
                         message: Object(p.d)("Oops, something went wrong.", "PayoutOnboardingContainer")
                     }))));
                     var e = this.props.onboardEntity,
                         t = this.updateStepDisplayed,
                         n = this.props.data.currentUser.payoutInvite.workflow,
                         i = this.updateContainerQuery;
-                    if (!n || n.currentStep === Qe.WorkflowState.CANCELED) return this.startWorkflow(), r.createElement(r.Fragment, null, r.createElement(h.a, {
-                        title: Pa[Qe.OnboardStep.Summary].title[this.props.onboardEntity](),
-                        description: Pa[Qe.OnboardStep.Summary].description[this.props.onboardEntity](),
+                    if (!n || n.currentStep === Ke.WorkflowState.CANCELED) return this.startWorkflow(), r.createElement(r.Fragment, null, r.createElement(g.a, {
+                        title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                        description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                         linkToParent: this.backLinkURL
-                    }), r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(S._14, {
+                    }), r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._14, {
                         lineCount: 4
                     }))));
                     var o, s = {
@@ -13792,71 +13831,71 @@ webpackJsonp([98], {
                         updateContainerQuery: i
                     };
                     switch (this.state.stepDisplayed) {
-                        case Qe.OnboardStep.Summary:
-                            return r.createElement(r.Fragment, null, r.createElement(h.a, {
-                                title: Pa[Qe.OnboardStep.Summary].title[this.props.onboardEntity](),
-                                description: Pa[Qe.OnboardStep.Summary].description[this.props.onboardEntity](),
+                        case Ke.OnboardStep.Summary:
+                            return r.createElement(r.Fragment, null, r.createElement(g.a, {
+                                title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                                description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                                 linkToParent: this.backLinkURL
-                            }), r.createElement(mr, {
+                            }), r.createElement(Sr, {
                                 enableTwoFactorMessage: this.enableTwoFactorMessage
-                            }, r.createElement(Wa, a.__assign({}, s, {
+                            }, r.createElement($a, a.__assign({}, s, {
                                 showStartOverModal: this.showStartOverModal
                             }))));
-                        case Qe.OnboardStep.Registration:
+                        case Ke.OnboardStep.Registration:
                             var d = {
                                 channelName: this.props.channelName,
                                 userID: this.props.data.currentUser.id
                             };
-                            o = r.createElement(ba, a.__assign({}, s, d));
+                            o = r.createElement(Na, a.__assign({}, s, d));
                             break;
-                        case Qe.OnboardStep.Agreement:
-                            o = r.createElement(gn, a.__assign({}, s));
+                        case Ke.OnboardStep.Agreement:
+                            o = r.createElement(Tn, a.__assign({}, s));
                             break;
-                        case Qe.OnboardStep.TaxInterview:
+                        case Ke.OnboardStep.TaxInterview:
                             d = {
                                 channelName: this.props.channelName,
                                 showStartOverModal: this.showStartOverModal
                             };
-                            o = r.createElement(lr, a.__assign({}, s, d));
+                            o = r.createElement(fr, a.__assign({}, s, d));
                             break;
-                        case Qe.OnboardStep.PayoutMethod:
-                            o = r.createElement(Pn, a.__assign({}, s));
+                        case Ke.OnboardStep.PayoutMethod:
+                            o = r.createElement(Mn, a.__assign({}, s));
                             break;
-                        case Qe.OnboardStep.Review:
-                            o = r.createElement(fa, a.__assign({}, s))
+                        case Ke.OnboardStep.Review:
+                            o = r.createElement(Oa, a.__assign({}, s))
                     }
-                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
                         title: Object(p.d)("Step {numOfCurrentStep} of {numOfTotalSteps}: {stepTitle}", {
                             numOfCurrentStep: Object(p.e)(this.state.stepDisplayed),
                             numOfTotalSteps: Object(p.e)(this.totalSteps),
-                            stepTitle: Pa[this.state.stepDisplayed].title[this.props.onboardEntity]()
+                            stepTitle: Ma[this.state.stepDisplayed].title[this.props.onboardEntity]()
                         }, "PayoutOnboardingContainer"),
-                        description: Pa[this.state.stepDisplayed].description[this.props.onboardEntity](),
+                        description: Ma[this.state.stepDisplayed].description[this.props.onboardEntity](),
                         onClick: this.goBackToSummary
-                    }), r.createElement(mr, {
+                    }), r.createElement(Sr, {
                         enableTwoFactorMessage: this.enableTwoFactorMessage
                     }, o))
                 }, t
             }(r.Component);
-        var yr, Sr, kr, _r, Or, Tr = Object(g.d)(Object(u.a)(fr), Object(u.a)(vr, {
+        var Pr, Ir, wr, Rr = Object(h.d)(Object(u.a)(Or), Object(u.a)(Ar, {
                 name: "startWorkflow"
-            }), Object(u.a)(pr, {
+            }), Object(u.a)(kr, {
                 name: "cancelWorkflow"
-            }), Object(nn.a)([{
+            }), Object(mn.a)([{
                 topic: function(e) {
                     return Object(ne.m)(e.currentUserID)
                 },
-                mapMessageTypesToProps: (yr = {}, yr["*"] = "payoutOnboardingEvent", yr)
-            }]), Object(Oe.b)(null, function(e) {
-                return Object(g.b)({
+                mapMessageTypesToProps: (Pr = {}, Pr["*"] = "payoutOnboardingEvent", Pr)
+            }]), Object(Te.b)(null, function(e) {
+                return Object(h.b)({
                     showStartOverModal: function(e) {
                         var t = a.__rest(e, []);
-                        return Object(Te.d)(br, t)
+                        return Object(Ne.d)(Nr, t)
                     }
                 }, e)
-            }), s.f)(Er),
-            Nr = n("lQfX"),
-            Cr = function(e) {
+            }), s.f)(Cr),
+            xr = n("lQfX"),
+            Dr = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -13873,22 +13912,22 @@ webpackJsonp([98], {
                         }
                     }, r.createElement(l.a, null)) : this.hasAgreementPendingUpgrade ? r.createElement(o.b, {
                         to: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue/upgrade-terms"
-                    }) : r.createElement(Tr, {
+                    }) : r.createElement(Rr, {
                         channelName: this.props.match.params.channelName,
                         currentUserID: this.props.data.currentUser.id,
                         onboardEntity: this.props.data.currentUser.payoutInvite.category
                     })
                 }, Object.defineProperty(t.prototype, "hasAgreementPendingUpgrade", {
                     get: function() {
-                        return !!this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === Qe.WorkflowState.AGREEMENT_PENDING_UPGRADE
+                        return !!this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === Ke.WorkflowState.AGREEMENT_PENDING_UPGRADE
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            Pr = Object(i.compose)(Object(u.a)(Nr))(Cr),
-            Ar = n("17w3"),
-            wr = (n("mHbH"), function(e) {
+            jr = Object(i.compose)(Object(u.a)(xr))(Dr),
+            Fr = n("17w3"),
+            Mr = (n("mHbH"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -13903,17 +13942,17 @@ webpackJsonp([98], {
                         padding: {
                             y: 5
                         }
-                    }, r.createElement(l.a, null)) : this.isOnboardingComplete ? r.createElement(r.Fragment, null, r.createElement(h.a, {
+                    }, r.createElement(l.a, null)) : this.isOnboardingComplete ? r.createElement(r.Fragment, null, r.createElement(g.a, {
                         title: Object(p.d)("Change Payout Method", "PayoutSettingsPage"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), r.createElement(mr, {
+                    }), r.createElement(Sr, {
                         enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to change your payout method.", "PayoutSettingsPage")
-                    }, r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(Sn, {
+                    }, r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(In, {
                         tipaltiURL: this.tipaltiURL
                     }))))) : r.createElement(d.a, null)
                 }, Object.defineProperty(t.prototype, "isOnboardingComplete", {
                     get: function() {
-                        return !!this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === Qe.WorkflowState.COMPLETED
+                        return !!this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === Ke.WorkflowState.COMPLETED
                     },
                     enumerable: !0,
                     configurable: !0
@@ -13925,9 +13964,9 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component)),
-            Ir = Object(i.compose)(Object(u.a)(Ar))(wr),
-            Rr = n("vBst"),
-            xr = function(e) {
+            Lr = Object(i.compose)(Object(u.a)(Fr))(Mr),
+            Ur = n("vBst"),
+            Br = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -13948,21 +13987,21 @@ webpackJsonp([98], {
                     }))
                 }, t
             }(r.Component),
-            jr = n("Kz5W"),
-            Dr = n("81je"),
-            Fr = function(e) {
+            Vr = n("Kz5W"),
+            Wr = n("81je"),
+            Qr = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     if (n.state = {
                             displayNames: new Array,
-                            saveStatus: E.b.NoChanges
+                            saveStatus: v.b.NoChanges
                         }, n.onDisplayNameChange = function(e, t) {
                             return a.__awaiter(n, void 0, void 0, function() {
                                 var n;
                                 return a.__generator(this, function(a) {
                                     return (n = this.state.displayNames.slice())[e] = t, this.setState({
                                         displayNames: n,
-                                        saveStatus: E.b.DirtyChanges
+                                        saveStatus: v.b.DirtyChanges
                                     }), [2]
                                 })
                             })
@@ -13973,7 +14012,7 @@ webpackJsonp([98], {
                                     switch (i.label) {
                                         case 0:
                                             if (!this.props.data.user || !this.props.data.user.id || !this.props.data.user.subscriptionProducts) return [2];
-                                            e = E.b.Working, this.setState({
+                                            e = v.b.Working, this.setState({
                                                 saveStatus: e
                                             }), t = function(t) {
                                                 var r, i, o;
@@ -13987,9 +14026,9 @@ webpackJsonp([98], {
                                                                 displayName: n.state.displayNames[t]
                                                             }, a.label = 1;
                                                         case 1:
-                                                            return a.trys.push([1, 3, , 4]), [4, n.props.updateSubscriptionProduct(Object(v.a)(i))];
+                                                            return a.trys.push([1, 3, , 4]), [4, n.props.updateSubscriptionProduct(Object(E.a)(i))];
                                                         case 2:
-                                                            return o = a.sent(), Object(v.e)(jr, {
+                                                            return o = a.sent(), Object(E.e)(Vr, {
                                                                 login: n.props.match.params.channelName
                                                             }, function(e) {
                                                                 if (e && e.user && e.user.subscriptionProducts && o.data.updateSubscriptionProduct) {
@@ -13997,9 +14036,9 @@ webpackJsonp([98], {
                                                                         a = o.data.updateSubscriptionProduct.product;
                                                                     if (n && a) return n.id = a.id, n.displayName = a.displayName, e
                                                                 }
-                                                            }), e = E.b.Success, [3, 4];
+                                                            }), e = v.b.Success, [3, 4];
                                                         case 3:
-                                                            return a.sent(), e = E.b.Error, [3, 4];
+                                                            return a.sent(), e = v.b.Error, [3, 4];
                                                         case 4:
                                                             return [2]
                                                     }
@@ -14028,11 +14067,11 @@ webpackJsonp([98], {
                             }), t
                         }, n.createSubPlanName = function(e) {
                             switch (e) {
-                                case Rr.a.Tier1:
+                                case Ur.a.Tier1:
                                     return Object(p.d)("Tier 1 Subscription Plan Name", "SubsNameSettingsPage");
-                                case Rr.a.Tier2:
+                                case Ur.a.Tier2:
                                     return Object(p.d)("TIer 2 Subscription Plan Name", "SubsNameSettingsPage");
-                                case Rr.a.Tier3:
+                                case Ur.a.Tier3:
                                     return Object(p.d)("Tier 3 Subscription Plan Name", "SubsNameSettingsPage");
                                 default:
                                     return Object(p.d)("Subscription Plan Name", "SubsNameSettingsPage")
@@ -14047,7 +14086,7 @@ webpackJsonp([98], {
                             displayNames: r.map(function(e) {
                                 return e.displayName
                             }),
-                            saveStatus: E.b.NoChanges
+                            saveStatus: v.b.NoChanges
                         }
                     }
                     return n
@@ -14059,7 +14098,7 @@ webpackJsonp([98], {
                             displayNames: t.map(function(e) {
                                 return e.displayName
                             }),
-                            saveStatus: E.b.NoChanges
+                            saveStatus: v.b.NoChanges
                         })
                     }
                 }, t.prototype.render = function() {
@@ -14070,7 +14109,7 @@ webpackJsonp([98], {
                         status: this.state.saveStatus,
                         onClickSave: this.onClickSave
                     });
-                    return r.createElement(S._8, null, r.createElement(h.a, {
+                    return r.createElement(S._8, null, r.createElement(g.a, {
                         title: Object(p.d)("Subscription Information", "SubsNameSettingsPage"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(U.a, {
@@ -14084,7 +14123,7 @@ webpackJsonp([98], {
                             i = t.id,
                             o = e.createSubPlanName(t.tier),
                             s = e.createSubPlanDescription(t.price || void 0);
-                        return 0 === n && (o = e.createSubPlanName(t.tier), s = e.createSubPlanDescription()), r.createElement(xr, {
+                        return 0 === n && (o = e.createSubPlanName(t.tier), s = e.createSubPlanDescription()), r.createElement(Br, {
                             key: i,
                             index: n,
                             label: o,
@@ -14095,7 +14134,7 @@ webpackJsonp([98], {
                     }) : null
                 }, t
             }(r.Component),
-            Mr = Object(g.d)(Object(u.a)(jr, {
+            Yr = Object(h.d)(Object(u.a)(Vr, {
                 options: function(e) {
                     return {
                         variables: {
@@ -14103,12 +14142,12 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }), Object(u.a)(Dr, {
+            }), Object(u.a)(Wr, {
                 name: "updateSubscriptionProduct"
-            }))(Fr),
-            Lr = n("3ecc"),
-            Ur = n("yOH8"),
-            Br = function(e) {
+            }))(Qr),
+            Gr = n("3ecc"),
+            zr = n("yOH8"),
+            Hr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -14151,7 +14190,7 @@ webpackJsonp([98], {
                             return a.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
-                                        return this.props.data.currentUser.payoutInvite.category === Qe.OnboardEntity.StandardPartner || this.props.data.currentUser.payoutInvite.category === Qe.OnboardEntity.PremiumPartner ? (n = this.props.data.currentUser.programAgreement || "", e = n && n.type, t = n && n.version) : (e = this.props.data.currentUser.payoutInvite.category, t = "v1"), r = a.__assign({}, Object(v.a)({
+                                        return this.props.data.currentUser.payoutInvite.category === Ke.OnboardEntity.StandardPartner || this.props.data.currentUser.payoutInvite.category === Ke.OnboardEntity.PremiumPartner ? (n = this.props.data.currentUser.programAgreement || "", e = n && n.type, t = n && n.version) : (e = this.props.data.currentUser.payoutInvite.category, t = "v1"), r = a.__assign({}, Object(E.a)({
                                             type: e,
                                             version: t
                                         })), [4, this.props.acceptProgramAgreement(r)];
@@ -14179,16 +14218,16 @@ webpackJsonp([98], {
                         padding: {
                             y: 5
                         }
-                    }, r.createElement(l.a, null)) : this.hasAgreementPendingUpgrade ? r.createElement(r.Fragment, null, r.createElement(h.a, {
+                    }, r.createElement(l.a, null)) : this.hasAgreementPendingUpgrade ? r.createElement(r.Fragment, null, r.createElement(g.a, {
                         title: this.headerTitle,
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), r.createElement(mr, {
+                    }), r.createElement(Sr, {
                         enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to accept your agreement.", "UpgradeTermsPage")
-                    }, r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(S._35, {
+                    }, r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._35, {
                         borderMarked: !0,
                         padding: 2,
                         elevation: 1
-                    }, this.renderAgreement)), this.requiresParentConsent && r.createElement(cn, {
+                    }, this.renderAgreement)), this.requiresParentConsent && r.createElement(vn, {
                         updateParentName: this.updateParentName,
                         updateParentConfirmation: this.updateParentConfirmation
                     }), r.createElement(S._35, {
@@ -14203,10 +14242,10 @@ webpackJsonp([98], {
                 }, Object.defineProperty(t.prototype, "headerTitle", {
                     get: function() {
                         switch (this.props.data.currentUser.payoutInvite.category) {
-                            case Qe.OnboardEntity.Affiliate:
+                            case Ke.OnboardEntity.Affiliate:
                                 return Object(p.d)("Agree to the Twitch Affiliate Agreement", "UpgradeTermsPage");
-                            case Qe.OnboardEntity.StandardPartner:
-                            case Qe.OnboardEntity.PremiumPartner:
+                            case Ke.OnboardEntity.StandardPartner:
+                            case Ke.OnboardEntity.PremiumPartner:
                                 return Object(p.d)("Agree to the Twitch Partner Agreement", "UpgradeTermsPage");
                             default:
                                 return ""
@@ -14216,19 +14255,19 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "hasAgreementPendingUpgrade", {
                     get: function() {
-                        return !!this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === Qe.WorkflowState.AGREEMENT_PENDING_UPGRADE
+                        return !!this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === Ke.WorkflowState.AGREEMENT_PENDING_UPGRADE
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "renderAgreement", {
                     get: function() {
                         switch (this.props.data.currentUser.payoutInvite.category) {
-                            case Qe.OnboardEntity.Affiliate:
-                                return r.createElement(on, null);
-                            case Qe.OnboardEntity.StandardPartner:
-                            case Qe.OnboardEntity.PremiumPartner:
+                            case Ke.OnboardEntity.Affiliate:
+                                return r.createElement(hn, null);
+                            case Ke.OnboardEntity.StandardPartner:
+                            case Ke.OnboardEntity.PremiumPartner:
                                 var e = this.props.data.currentUser.programAgreement;
-                                return e && r.createElement(mn, {
+                                return e && r.createElement(Sn, {
                                     body: e.body
                                 });
                             default:
@@ -14241,7 +14280,7 @@ webpackJsonp([98], {
                     get: function() {
                         if (!this.props.data.currentUser.payoutInvite.workflow) return !1;
                         var e = this.props.data.currentUser.payoutInvite.workflow.registration.birthdate;
-                        return Object(an.differenceInYears)(new Date, e) < 18
+                        return Object(pn.differenceInYears)(new Date, e) < 18
                     },
                     enumerable: !0,
                     configurable: !0
@@ -14253,10 +14292,10 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            Vr = Object(i.compose)(Object(u.a)(Ur), Object(u.a)(Lr, {
+            Xr = Object(i.compose)(Object(u.a)(zr), Object(u.a)(Gr, {
                 name: "acceptProgramAgreement"
-            }), o.f)(Br),
-            Wr = function() {
+            }), o.f)(Hr),
+            qr = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._2, {
                     margin: {
                         bottom: 1
@@ -14274,21 +14313,9 @@ webpackJsonp([98], {
                         }, e)
                     }
                 }, "CustomPartnerAgreement")))
-            };
-        ! function(e) {
-            e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
-        }(Sr || (Sr = {})),
-        function(e) {
-            e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
-        }(kr || (kr = {})),
-        function(e) {
-            e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER"
-        }(_r || (_r = {})),
-        function(e) {
-            e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
-        }(Or || (Or = {}));
-        var Qr = n("kB8u");
-        var Yr, Gr, zr = function(e) {
+            },
+            Kr = n("kB8u"),
+            $r = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -14303,12 +14330,12 @@ webpackJsonp([98], {
                         padding: {
                             y: 5
                         }
-                    }, r.createElement(l.a, null)) : this.canAccessViewTermsPage ? r.createElement(r.Fragment, null, r.createElement(h.a, {
+                    }, r.createElement(l.a, null)) : this.canAccessViewTermsPage ? r.createElement(r.Fragment, null, r.createElement(g.a, {
                         title: Object(p.d)("View Active Partner Agreement", "ViewTermsPage"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), r.createElement(mr, {
+                    }), r.createElement(Sr, {
                         enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to view your agreement.", "ViewTermsPage")
-                    }, r.createElement(U.a, null, r.createElement(Ct.a, null, r.createElement(S._35, {
+                    }, r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._35, {
                         borderMarked: !0,
                         padding: 2,
                         elevation: 1
@@ -14316,14 +14343,7 @@ webpackJsonp([98], {
                 }, Object.defineProperty(t.prototype, "canAccessViewTermsPage", {
                     get: function() {
                         var e = this.props.data.currentUser;
-                        return !!e && function(e, t) {
-                            if (!e || !t) return !1;
-                            if (t.workflow.currentStep === Or.AGREEMENT_PENDING_UPGRADE) return !1;
-                            var n = e.find(function(e) {
-                                return e.category === Sr.PARTNER && e.isReceivingRevenue
-                            });
-                            return !(!(n && n.tags && n.tags.includes(kr.LEGACY) && t) || t.isLegacy) || !(n && n.tags && (n.tags.includes(kr.STANDARD) || n.tags.includes(kr.PREMIUM)) && t && t.category === _r.CUSTOM_PARTNER) && !!n
-                        }(e.payoutPlans && e.payoutPlans.map(function(e) {
+                        return !!e && lt(e.payoutPlans && e.payoutPlans.map(function(e) {
                             return {
                                 category: e.category,
                                 tags: e.tags,
@@ -14344,10 +14364,10 @@ webpackJsonp([98], {
                         var e = this.props.data.currentUser;
                         if (!e || !e.payoutInvite) return null;
                         var t = e.payoutInvite;
-                        if (t.isLegacy || t.category === _r.CUSTOM_PARTNER) return r.createElement(Wr, null);
-                        if (t.category === _r.STANDARD_PARTNER || t.category === _r.PREMIUM_PARTNER) {
+                        if (t.isLegacy || t.category === Me.CUSTOM_PARTNER) return r.createElement(qr, null);
+                        if (t.category === Me.STANDARD_PARTNER || t.category === Me.PREMIUM_PARTNER) {
                             var n = this.props.data.currentUser && this.props.data.currentUser.programAgreement;
-                            return n && r.createElement(mn, {
+                            return n && r.createElement(Sn, {
                                 body: n.body
                             })
                         }
@@ -14356,15 +14376,15 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            Hr = Object(i.compose)(Object(u.a)(Qr))(zr);
+            Zr = Object(i.compose)(Object(u.a)(Kr))($r);
         ! function(e) {
             e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
-        }(Yr || (Yr = {})),
+        }(Ir || (Ir = {})),
         function(e) {
             e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
-        }(Gr || (Gr = {}));
-        var qr = n("3+pE"),
-            Xr = function(e) {
+        }(wr || (wr = {}));
+        var Jr = n("3+pE"),
+            ei = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -14373,25 +14393,25 @@ webpackJsonp([98], {
                         t = e.loading,
                         n = e.channel,
                         a = e.currentUser;
-                    return a && n ? this.isChannelOwner || this.isStaff ? n.payoutInvite && n.payoutInvite.category !== Yr.UNPAID_PARTNER ? (this.props.latencyTracking.reportInteractive(), r.createElement(c.b, null, r.createElement(S._8, {
+                    return a && n ? this.isChannelOwner || this.isStaff ? n.payoutInvite && n.payoutInvite.category !== Ir.UNPAID_PARTNER ? (this.props.latencyTracking.reportInteractive(), r.createElement(c.b, null, r.createElement(S._8, {
                         padding: 2,
                         fullHeight: !0
                     }, r.createElement(s.e, null, r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue",
                         exact: !0,
-                        component: bt
+                        component: Nt
                     }), this.isChannelOwner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/payout-onboarding",
-                        component: Pr
+                        component: jr
                     }), this.isChannelOwner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/payouts",
-                        component: Ir
+                        component: Lr
                     }), this.isChannelOwner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/upgrade-terms",
-                        component: Vr
+                        component: Xr
                     }), this.isChannelOwner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/view-terms",
-                        component: Hr
+                        component: Zr
                     }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/cheer",
                         component: K
@@ -14403,19 +14423,19 @@ webpackJsonp([98], {
                         component: B
                     }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/game-commerce",
-                        component: Le
+                        component: Ge
                     }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/game-commerce-v2",
-                        component: We
+                        component: qe
                     }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/merch-by-amazon",
-                        component: en
+                        component: cn
                     }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/ticket",
-                        component: Mr
+                        component: Yr
                     }), this.isPaidPartner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/badges",
-                        component: Jt
+                        component: ln
                     }), r.createElement(o.c, {
                         component: d.a
                     }))))) : r.createElement(S._8, {
@@ -14444,7 +14464,7 @@ webpackJsonp([98], {
                 }), Object.defineProperty(t.prototype, "isPaidAffiliate", {
                     get: function() {
                         return !!(this.props.data.channel && this.props.data.channel.payoutPlans && this.props.data.channel.payoutPlans.find(function(e) {
-                            return e.category === Gr.AFFILIATE && e.isReceivingRevenue
+                            return e.category === wr.AFFILIATE && e.isReceivingRevenue
                         }))
                     },
                     enumerable: !0,
@@ -14452,14 +14472,14 @@ webpackJsonp([98], {
                 }), Object.defineProperty(t.prototype, "isPaidPartner", {
                     get: function() {
                         return !!(this.props.data.channel && this.props.data.channel.payoutPlans && this.props.data.channel.payoutPlans.find(function(e) {
-                            return e.category === Gr.PARTNER && e.isReceivingRevenue
+                            return e.category === wr.PARTNER && e.isReceivingRevenue
                         }))
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            Kr = Object(i.compose)(Object(m.d)("DashboardRevenueSettingsRoot"), Object(u.a)(qr, {
+            ti = Object(i.compose)(Object(m.d)("DashboardRevenueSettingsRoot"), Object(u.a)(Jr, {
                 options: function(e) {
                     return {
                         variables: {
@@ -14467,12 +14487,12 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }))(Xr);
+            }))(ei);
         n.d(t, "DashboardRevenueSettingsRootComponent", function() {
-            return Xr
+            return ei
         }), n.d(t, "DashboardRevenueSettingsRoot", function() {
-            return Kr
+            return ti
         })
     }
 });
-//# sourceMappingURL=pages.dashboard-revenue-settings-a6805e21f6f99a8b3c1f2bc3e6ea3b2a.js.map
+//# sourceMappingURL=pages.dashboard-revenue-settings-0f828b70a84955eedbff35a1ae6a2133.js.map

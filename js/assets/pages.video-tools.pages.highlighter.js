@@ -404,12 +404,12 @@ webpackJsonp([101], {
                 }, t
             }(a.PureComponent);
         n.d(t, "a", function() {
-                return H
+                return I
             }),
             function(e) {
                 e[e.EditDescription = 0] = "EditDescription"
             }(y || (y = {}));
-        var H = function(e) {
+        var I = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.onDescriptionChangeHandler = function(e) {
@@ -660,7 +660,7 @@ webpackJsonp([101], {
         ! function(e) {
             e[e.CreateButton = 0] = "CreateButton", e[e.SaveError = 1] = "SaveError"
         }(V || (V = {}));
-        var H, I = function(e) {
+        var I, H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -774,7 +774,7 @@ webpackJsonp([101], {
         n("zECu");
         ! function(e) {
             e[e.Highlight = 0] = "Highlight", e[e.VideoManagerLink = 1] = "VideoManagerLink"
-        }(H || (H = {}));
+        }(I || (I = {}));
         var L = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -786,7 +786,7 @@ webpackJsonp([101], {
                                 alignItems: w.c.Center,
                                 background: w.n.Base,
                                 className: "save-success-highlight",
-                                "data-test-selector": H.Highlight,
+                                "data-test-selector": I.Highlight,
                                 display: w.R.Flex,
                                 elevation: 1,
                                 flexGrow: 0,
@@ -891,9 +891,9 @@ webpackJsonp([101], {
                     return Object(l.d)("Visit the <x:link>Video Producer</x:link> to view the created highlight(s).", {
                         "x:link": function(t) {
                             return a.createElement(w.O, {
-                                "data-test-selector": H.VideoManagerLink,
+                                "data-test-selector": I.VideoManagerLink,
                                 key: "video-manager-link",
-                                onClick: e.props.onComplete,
+                                targetBlank: !0,
                                 to: {
                                     pathname: "/" + e.props.owner.login + "/manager",
                                     state: {
@@ -907,7 +907,7 @@ webpackJsonp([101], {
                 }, t
             }(a.Component),
             F = n("H6Wp"),
-            M = (n("cJkA"), function(e) {
+            P = (n("cJkA"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.onSegmentUpdate = function(e, t) {
@@ -918,7 +918,7 @@ webpackJsonp([101], {
                             }
                         })
                     }, n.onCancel = function() {
-                        n.props.onCompletion(n.state.segmentsSnapshot)
+                        n.props.onCancel(n.state.segmentsSnapshot)
                     }, n.onCreateHighlightsRequest = function() {
                         return r.__awaiter(n, void 0, void 0, function() {
                             var e = this;
@@ -947,23 +947,18 @@ webpackJsonp([101], {
                     }, n
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    var e, t = this;
-                    if (this.state.savedHighlights.length > 0 && 0 === this.state.segmentsSnapshot.length) {
-                        e = a.createElement(L, {
-                            onComplete: function() {
-                                t.props.onCompletion([])
-                            },
-                            owner: this.props.owner,
-                            highlights: this.state.savedHighlights
-                        })
-                    } else e = a.createElement(I, {
+                    var e;
+                    return e = this.state.savedHighlights.length > 0 && 0 === this.state.segmentsSnapshot.length ? a.createElement(L, {
+                        onComplete: this.props.onPostSaveFinish,
+                        owner: this.props.owner,
+                        highlights: this.state.savedHighlights
+                    }) : a.createElement(H, {
                         onCreateRequest: this.onCreateHighlightsRequest,
                         onSegmentUpdate: this.onSegmentUpdate,
                         segments: this.state.segmentsSnapshot,
                         saving: this.state.saving,
                         saveError: this.state.saveError
-                    });
-                    return a.createElement(w.e, {
+                    }), a.createElement(w.e, {
                         type: w.j.FadeIn,
                         delay: w.f.Medium,
                         duration: w.g.Medium,
@@ -992,7 +987,7 @@ webpackJsonp([101], {
                                 case 4:
                                     return i = t.reduce(function(e, t) {
                                         return t.success && e.push(t.success), e
-                                    }, []), a = t.sort(function(e, t) {
+                                    }, this.state.savedHighlights), a = t.sort(function(e, t) {
                                         return e.segmentsIndex - t.segmentsIndex
                                     }), o = a.reduce(function(e, t) {
                                         return t.success || e.push(t.segment), e
@@ -1001,6 +996,10 @@ webpackJsonp([101], {
                                         saving: !1,
                                         saveError: s,
                                         savedHighlights: i
+                                    }, function() {
+                                        0 === o.length && d.props.onSaveSuccess(i.map(function(e) {
+                                            return e.id
+                                        }))
                                     }), [2]
                             }
                         })
@@ -1038,20 +1037,23 @@ webpackJsonp([101], {
                     })
                 }, t
             }(a.Component)),
-            G = Object(f.a)(F, {
+            M = Object(f.a)(F, {
                 name: "createHighlight"
-            })(M);
-        var P, B = Object(O.b)(null, function(e, t) {
+            })(P);
+        var G, B = Object(O.b)(null, function(e, t) {
             return {
-                onCompletion: function(n) {
-                    t.onCompletion(n), e(Object(_.c)())
+                onCancel: function(n) {
+                    t.onCancel(n), e(Object(_.c)())
+                },
+                onPostSaveFinish: function() {
+                    t.onPostSaveFinish(), e(Object(_.c)())
                 }
             }
-        })(G);
+        })(M);
         n("YBPv");
         ! function(e) {
             e[e.NoItems = 0] = "NoItems"
-        }(P || (P = {}));
+        }(G || (G = {}));
         var A = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
@@ -1087,9 +1089,10 @@ webpackJsonp([101], {
                         y: .5
                     }
                 }, a.createElement(w.v, {
-                    onClick: this.props.onSaveClick,
+                    blurAfterClick: !0,
                     disabled: 0 === this.props.queue.length,
                     fullWidth: !0,
+                    onClick: this.props.onSaveClick,
                     type: w.B.Hollow
                 }, Object(l.d)("Describe and Save", "VideoSegmentQueue"))))
             }, t.prototype.componentDidUpdate = function(e) {
@@ -1098,7 +1101,7 @@ webpackJsonp([101], {
                 var e = this;
                 return 0 === this.props.queue.length ? a.createElement(w._8, {
                     alignItems: w.c.Center,
-                    "data-test-selector": P.NoItems,
+                    "data-test-selector": G.NoItems,
                     display: w.R.Flex,
                     fullHeight: !0,
                     fullWidth: !0,
@@ -1149,7 +1152,9 @@ webpackJsonp([101], {
                 return {
                     onSaveClick: function() {
                         t.onSaveClick(), e(Object(_.d)(B, {
-                            onCompletion: t.onQueueChange,
+                            onCancel: t.onQueueChange,
+                            onPostSaveFinish: t.onPostSaveFinish,
+                            onSaveSuccess: t.onSaveSuccess,
                             owner: t.owner,
                             segments: t.queue
                         }))
@@ -1278,16 +1283,16 @@ webpackJsonp([101], {
                     })
                 }, t
             }(a.Component),
-            J = n("3HXW"),
-            X = function(e) {
+            X = n("3HXW"),
+            J = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.segment;
-                    return a.createElement(J.a, {
-                        color: J.c.Orange,
-                        handleSize: J.b.Small,
+                    return a.createElement(X.a, {
+                        color: X.c.Orange,
+                        handleSize: X.b.Small,
                         startOffset: e.startOffset,
                         endOffset: e.endOffset,
                         maxOffset: e.maxOffset,
@@ -1312,12 +1317,12 @@ webpackJsonp([101], {
             }(a.Component),
             $ = Object(u.compose)(Object(b.d)("VideoSegmentEditor", {
                 autoReportInteractive: !0
-            }))(X),
+            }))(J),
             Y = n("Kj+b");
         ! function(e) {
             e[e.ErrorMessage = 0] = "ErrorMessage"
         }(z || (z = {}));
-        var Z, ee = function(e) {
+        var Z = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderSelectSegmentButton = function() {
@@ -1453,7 +1458,7 @@ webpackJsonp([101], {
                     }
                 }, t
             }(a.Component),
-            te = Object(u.compose)(Object(f.a)(Y, {
+            ee = Object(u.compose)(Object(f.a)(Y, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1463,15 +1468,24 @@ webpackJsonp([101], {
                 }
             }), Object(b.d)("VideoTimeline", {
                 autoReportInteractive: !0
-            }))(ee),
-            ne = n("91s2"),
-            ie = 0,
-            re = -1,
-            ae = 2;
+            }))(Z);
+
+        function te(e) {
+            l.n.track(S.SpadeEventType.HighlighterCurationStart, {
+                channel_id: e.channelID,
+                client_time: e.currentTime.getTime(),
+                source_video_id: e.sourceVideoID,
+                user_id: e.userID
+            })
+        }
+        var ne, ie = n("91s2"),
+            re = (n("KXMn"), 0),
+            ae = -1,
+            oe = 2;
         ! function(e) {
             e[e.SourceVideoTitle = 0] = "SourceVideoTitle", e[e.SourceVideoDate = 1] = "SourceVideoDate", e[e.SourceVideoLength = 2] = "SourceVideoLength"
-        }(Z || (Z = {}));
-        var oe = function(e) {
+        }(ne || (ne = {}));
+        var se = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1480,61 +1494,50 @@ webpackJsonp([101], {
                             endOffset: 0
                         },
                         lastVideoOffset: null,
-                        requestedVideoOffset: ie,
+                        requestedVideoOffset: re,
                         shouldPlayerPause: !1,
                         videoSegmentQueue: []
-                    }, t.renderSourceVideoInfo = function() {
-                        return a.createElement(w._8, null, a.createElement(w.Q, {
-                            "data-test-selector": Z.SourceVideoTitle,
-                            fontSize: w.V.Size6,
-                            italic: !t.props.data.video.title,
-                            lines: 2,
-                            ellipsis: !0
-                        }, t.props.data.video.title || Object(l.d)("Untitled Broadcast", "SourceVideoInfo")), a.createElement(w._8, {
-                            display: w.R.Flex
-                        }, t.props.data.video.publishedAt && a.createElement(w.Q, {
-                            "data-test-selector": Z.SourceVideoDate,
-                            color: w.K.Alt2,
-                            fontSize: w.V.Size7,
-                            type: w._49.Span
-                        }, Object(l.c)(new Date(t.props.data.video.publishedAt), "medium"), " "), a.createElement(w._24, {
-                            asset: w._25.GlyphLength,
-                            type: w._26.Alt2,
-                            width: 12,
-                            height: 12
-                        }), a.createElement(w.Q, {
-                            "data-test-selector": Z.SourceVideoLength,
-                            color: w.K.Alt2,
-                            fontSize: w.V.Size7,
-                            type: w._49.Span
-                        }, " ", Object(g.b)(t.props.data.video.lengthSeconds))))
                     }, t.onSelectHighlightClick = function(e) {
                         t.setState(function(n) {
-                            var i = n.videoSegmentQueue,
-                                a = t.props.data.video,
-                                o = {
-                                    sourceVideoID: a.id,
-                                    startOffsetSeconds: e.startOffset,
-                                    endOffsetSeconds: e.endOffset,
-                                    metadata: {
-                                        description: a.description || "",
-                                        game: a.game,
-                                        language: a.language,
-                                        tags: a.tags,
-                                        title: Object(l.d)("Highlight: {videoTitle}", {
-                                            videoTitle: a.title
-                                        }, "HighlighterPage")
-                                    }
-                                };
-                            return r.__assign({}, n, {
-                                videoSegmentQueue: i.concat(o)
-                            })
+                            var i = t.props.data.video;
+                            if (i) {
+                                var a = {
+                                        sourceVideoID: i.id,
+                                        startOffsetSeconds: e.startOffset,
+                                        endOffsetSeconds: e.endOffset,
+                                        metadata: {
+                                            description: i.description || "",
+                                            game: i.game,
+                                            language: i.language,
+                                            tags: i.tags,
+                                            title: Object(l.d)("Highlight: {videoTitle}", {
+                                                videoTitle: i.title
+                                            }, "HighlighterPage")
+                                        }
+                                    },
+                                    o = n.videoSegmentQueue;
+                                return r.__assign({}, n, {
+                                    videoSegmentQueue: o.concat(a)
+                                })
+                            }
+                        })
+                    }, t.onPostSaveFinish = function() {
+                        t.setState({
+                            videoSegmentQueue: []
+                        }, function() {
+                            var e = t.props.data;
+                            e.video && (t.curationStartTime = new Date, te({
+                                channelID: e.video.owner ? e.video.owner.id : "",
+                                currentTime: t.curationStartTime,
+                                sourceVideoID: e.video.id,
+                                userID: e.currentUser ? e.currentUser.id : ""
+                            }))
                         })
                     }, t.onQueueChangeHandler = function(e) {
                         t.setState({
                             videoSegmentQueue: e
                         })
-                    }, t.onQueueSaveHandler = function() {
+                    }, t.onQueueSaveClick = function() {
                         t.setState({
                             shouldPlayerPause: !0
                         })
@@ -1545,6 +1548,30 @@ webpackJsonp([101], {
                                 videoSegmentQueue: n
                             }
                         })
+                    }, t.onSaveSuccess = function(e) {
+                        var n = t.props.data;
+                        if (n.video) {
+                            var i, r, a = t.curationStartTime || new Date;
+                            i = {
+                                channelID: n.video.owner ? n.video.owner.id : "",
+                                generatedVideoIDs: e,
+                                endTime: new Date,
+                                userID: n.currentUser ? n.currentUser.id : "",
+                                sourceVideoID: n.video.id,
+                                startTime: a
+                            }, r = function(e) {
+                                var t = (e.endTime.getTime() - e.startTime.getTime()) / 1e3;
+                                return {
+                                    channel_id: e.channelID,
+                                    client_time: e.endTime.getTime(),
+                                    curation_duration: t,
+                                    generated_video_count: e.generatedVideoIDs.length,
+                                    generated_video_ids: e.generatedVideoIDs.join(","),
+                                    source_video_id: e.sourceVideoID,
+                                    user_id: e.userID
+                                }
+                            }(i), l.n.track(S.SpadeEventType.HighlighterCurationFinish, r)
+                        }
                     }, t.onBeforeunloadHandler = function(e) {
                         if (0 === t.state.videoSegmentQueue.length) return !1;
                         var n = confirm(t.discardChangesMessage());
@@ -1558,7 +1585,7 @@ webpackJsonp([101], {
                             var n = t.state.currentSegmentOffsets;
                             e.startOffset === n.startOffset ? e.endOffset === n.endOffset || t.setState({
                                 currentSegmentOffsets: e,
-                                requestedVideoOffset: e.endOffset - ae,
+                                requestedVideoOffset: e.endOffset - oe,
                                 shouldPlayerPause: !1
                             }) : t.setState({
                                 currentSegmentOffsets: e,
@@ -1578,19 +1605,27 @@ webpackJsonp([101], {
                             shouldPlayerPause: !0,
                             lastVideoOffset: n
                         }) : t.state.requestedVideoOffset === n && t.setState({
-                            requestedVideoOffset: re
+                            requestedVideoOffset: ae
                         })
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     window.addEventListener("beforeunload", this.onBeforeunloadHandler), this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    e.data.loading !== this.props.data.loading && e.data.video && this.setState({
+                    (!this.props.data.loading || e.data.loading) && e.data.error || !e.data.video || this.setState({
                         currentSegmentOffsets: {
                             startOffset: 0,
                             endOffset: e.data.video.lengthSeconds
                         }
                     })
+                }, t.prototype.componentDidUpdate = function() {
+                    var e = this.props.data;
+                    !this.curationStartTime && e.video && (this.curationStartTime = new Date, te({
+                        channelID: e.video.owner ? e.video.owner.id : "",
+                        currentTime: this.curationStartTime,
+                        userID: e.currentUser ? e.currentUser.id : "",
+                        sourceVideoID: e.video.id
+                    }))
                 }, t.prototype.componentWillUnmount = function() {
                     window.removeEventListener("beforeunload", this.onBeforeunloadHandler)
                 }, t.prototype.render = function() {
@@ -1598,7 +1633,7 @@ webpackJsonp([101], {
                     var e = this.props.match.params.channelName;
                     return this.props.data.video && "" === this.props.data.video.id ? a.createElement(o.b, {
                         to: Object(s.d)(e)
-                    }) : !this.props.data.error && this.props.data.video && this.props.data.video.owner ? this.props.data.video.broadcastType !== h.a.Archive ? a.createElement(d.a, {
+                    }) : this.props.data.video && !this.props.data.error && this.props.data.video.owner ? this.props.data.video.broadcastType !== h.a.Archive ? a.createElement(d.a, {
                         message: Object(l.d)("You can only highlight past broadcasts.", "HighlighterPage")
                     }) : this.props.data.video.owner && this.props.data.video.owner.login !== e ? a.createElement(d.a, {
                         message: Object(l.d)("The selected video to highlight does not exist.", "HighlighterPage")
@@ -1607,26 +1642,23 @@ webpackJsonp([101], {
                     }, a.createElement(w._35, {
                         alignItems: w.c.Stretch,
                         background: w.n.Alt,
+                        className: "highlighter-page",
                         display: w.R.Flex,
                         flexDirection: w.T.Column,
                         fullHeight: !0,
                         fullWidth: !0,
                         padding: {
                             x: 3,
-                            y: 4
+                            top: 4
                         }
                     }, a.createElement(w.Y, null, a.createElement(w.L, {
                         cols: {
                             default: 12,
-                            md: 6,
-                            xl: 5,
-                            xxl: 4
+                            md: 6
                         },
                         offset: {
                             default: 0,
-                            md: 1,
-                            xl: 2,
-                            xxl: 3
+                            md: 1
                         }
                     }, a.createElement(w._35, {
                         fullHeight: !0,
@@ -1644,9 +1676,7 @@ webpackJsonp([101], {
                     })))), a.createElement(w.L, {
                         cols: {
                             default: 12,
-                            md: 4,
-                            xl: 3,
-                            xxl: 2
+                            md: 4
                         }
                     }, a.createElement(w._35, {
                         fullHeight: !0,
@@ -1655,9 +1685,11 @@ webpackJsonp([101], {
                         }
                     }, a.createElement(q, {
                         queue: this.state.videoSegmentQueue,
-                        onSegmentDelete: this.onRemoveSegment,
+                        onPostSaveFinish: this.onPostSaveFinish,
                         onQueueChange: this.onQueueChangeHandler,
-                        onSaveClick: this.onQueueSaveHandler,
+                        onSaveClick: this.onQueueSaveClick,
+                        onSaveSuccess: this.onSaveSuccess,
+                        onSegmentDelete: this.onRemoveSegment,
                         owner: {
                             displayName: this.props.data.video.owner.displayName,
                             id: this.props.data.video.owner.id,
@@ -1669,25 +1701,21 @@ webpackJsonp([101], {
                     }))), a.createElement(w.L, {
                         cols: {
                             default: 12,
-                            md: 6,
-                            xl: 5,
-                            xxl: 4
+                            md: 6
                         },
                         offset: {
                             default: 0,
-                            md: 1,
-                            xl: 2,
-                            xxl: 3
+                            md: 1
                         }
                     }, a.createElement(w._35, {
                         padding: {
                             bottom: 3
                         }
-                    }, this.renderSourceVideoInfo())), a.createElement(w.L, {
+                    }, this.renderSourceVideoInfo(this.props.data.video))), a.createElement(w.L, {
                         cols: {
                             default: 12
                         }
-                    }, a.createElement(te, {
+                    }, a.createElement(ee, {
                         onDragStart: this.onDragStart,
                         onSelectSegmentClick: this.onSelectHighlightClick,
                         onTimelineOffsetChange: this.onTimelineOffsetChange,
@@ -1695,11 +1723,36 @@ webpackJsonp([101], {
                     })))))) : a.createElement(d.a, {
                         message: Object(l.d)("Error loading video data. Please try again later.", "HighlighterPage")
                     })
+                }, t.prototype.renderSourceVideoInfo = function(e) {
+                    return a.createElement(w._8, null, a.createElement(w.Q, {
+                        "data-test-selector": ne.SourceVideoTitle,
+                        fontSize: w.V.Size6,
+                        italic: !e.title,
+                        lines: 2,
+                        ellipsis: !0
+                    }, e.title || Object(l.d)("Untitled Broadcast", "SourceVideoInfo")), a.createElement(w._8, {
+                        display: w.R.Flex
+                    }, e.publishedAt && a.createElement(w.Q, {
+                        "data-test-selector": ne.SourceVideoDate,
+                        color: w.K.Alt2,
+                        fontSize: w.V.Size7,
+                        type: w._49.Span
+                    }, Object(l.c)(new Date(e.publishedAt), "medium"), " "), a.createElement(w._24, {
+                        asset: w._25.GlyphLength,
+                        type: w._26.Alt2,
+                        width: 12,
+                        height: 12
+                    }), a.createElement(w.Q, {
+                        "data-test-selector": ne.SourceVideoLength,
+                        color: w.K.Alt2,
+                        fontSize: w.V.Size7,
+                        type: w._49.Span
+                    }, " ", Object(g.b)(e.lengthSeconds))))
                 }, t.prototype.discardChangesMessage = function() {
                     return Object(l.d)("Your highlights have not been created. Are you sure you want to leave?", "HighlighterPage")
                 }, t
             }(a.Component),
-            se = Object(u.compose)(Object(f.a)(ne, {
+            le = Object(u.compose)(Object(f.a)(ie, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1711,8 +1764,8 @@ webpackJsonp([101], {
                 destination: v.a.VideoManagerHighlighter
             }), Object(m.a)({
                 location: S.PageviewLocation.VideoManagerHighlighter
-            }))(oe),
-            le = function(e) {
+            }))(se),
+            de = function(e) {
                 return a.createElement(c.a, {
                     ownerLogin: e.match.params.channelName,
                     permittedRoles: {
@@ -1722,24 +1775,24 @@ webpackJsonp([101], {
                 }, function(t) {
                     var n = t.loading,
                         i = t.permitted;
-                    return n || i ? a.createElement(se, r.__assign({}, e)) : a.createElement(d.a, {
+                    return n || i ? a.createElement(le, r.__assign({}, e)) : a.createElement(d.a, {
                         message: Object(l.d)("Something went wrong. Please try again.", "HighlighterPageContainer")
                     })
                 })
             },
-            de = n("PRb0");
+            ce = n("PRb0");
         n.d(t, "b", function() {
-            return ce
-        }), n.d(t, "a", function() {
             return ue
+        }), n.d(t, "a", function() {
+            return pe
         });
-        var ce = function(e) {
+        var ue = function(e) {
                 return a.createElement(o.b, {
                     to: Object(s.d)(e.match.params.channelName)
                 })
             },
-            ue = function(e) {
-                return Object(de.a)() ? a.createElement(le, r.__assign({}, e)) : a.createElement(ce, r.__assign({}, e))
+            pe = function(e) {
+                return Object(ce.a)() ? a.createElement(de, r.__assign({}, e)) : a.createElement(ue, r.__assign({}, e))
             }
     },
     "12gq": function(e, t) {},
@@ -2539,6 +2592,14 @@ webpackJsonp([101], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "broadcastType"
                                 },
                                 arguments: [],
@@ -2632,16 +2693,36 @@ webpackJsonp([101], {
                                 directives: []
                             }]
                         }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 279
+                end: 301
             }
         };
         i.loc.source = {
-            body: '#import "twilight/features/video-field-editor/models/video-fields-fragment.gql"\nquery HighlighterPage_Video($videoID: ID!) {\nvideo(id: $videoID) {\nbroadcastType\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\n}\npreviewThumbnailURL(width: 160 height: 90)\npublishedAt\n...videoFields\n}\n}',
+            body: '#import "twilight/features/video-field-editor/models/video-fields-fragment.gql"\nquery HighlighterPage_Video($videoID: ID!) {\nvideo(id: $videoID) {\nid\nbroadcastType\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\n}\npreviewThumbnailURL(width: 160 height: 90)\npublishedAt\n...videoFields\n}\ncurrentUser {\nid\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -2916,6 +2997,7 @@ webpackJsonp([101], {
             return i.a
         })
     },
+    KXMn: function(e, t) {},
     "Kj+b": function(e, t) {
         var n = {
             kind: "Document",
@@ -4039,4 +4121,4 @@ webpackJsonp([101], {
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.highlighter-c024d315b609ef38184d53210e54beb9.js.map
+//# sourceMappingURL=pages.video-tools.pages.highlighter-0229cf88692d5d996acd9aed0f4a6b4a.js.map

@@ -17742,12 +17742,15 @@ webpackJsonp([90], {
                         height: 300
                     }))
                 }, t.prototype.chartContent = function() {
-                    return this.state.inFlightStatRequest ? r.createElement(f._10, {
+                    return this.state.inFlightStatRequest ? r.createElement(f._35, {
+                        className: Object(rt.c)(nt.a.Dark),
+                        fullHeight: !0
+                    }, r.createElement(f._10, {
                         fillContent: !0
-                    }) : this.state.didError ? r.createElement(f.Q, n.__assign({
+                    }), ";") : this.state.didError ? r.createElement(f.Q, n.__assign({
                         color: f.K.OverlayAlt,
                         fontSize: f.V.Size5
-                    }, ut), Object(s.d)("Oops. Something went wrong.", "StreamSummaryTimeseriesPanel")) : 0 === this.state.statData.values.length ? r.createElement(f._8, {
+                    }, ut), Object(s.d)("Whoops. Something went wrong.", "StreamSummaryTimeseriesPanel")) : 0 === this.state.statData.values.length ? r.createElement(f._8, {
                         display: f.R.Flex,
                         flexDirection: f.T.Column,
                         alignItems: f.c.Center,
@@ -17876,7 +17879,7 @@ webpackJsonp([90], {
                                 data: i
                             }];
                             for (s = 0, o = r.body.clips; s < o.length; s++) d = o[s], l = d.creates, u = d.plays, c = d.timestamp, i.creates.push(l), i.plays.push(u), i.dates.push(new Date(c));
-                            return i.interpolationChunkMinutes = r.body.interpolation_chunk_minutes, [2, {
+                            return [2, {
                                 isError: !1,
                                 data: i
                             }]
@@ -19824,4 +19827,4 @@ webpackJsonp([90], {
         })
     }
 });
-//# sourceMappingURL=pages.stream-summary-dedb6e5d9040df2d18b288dda0995b8e.js.map
+//# sourceMappingURL=pages.stream-summary-a93c078ce6fad502f60ea2434b9cc589.js.map
