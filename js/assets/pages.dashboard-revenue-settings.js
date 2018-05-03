@@ -1,4 +1,4 @@
-webpackJsonp([98], {
+webpackJsonp([99], {
     "+0KR": function(e, t, n) {
         "use strict";
         var a = n("oR9V");
@@ -2142,11 +2142,11 @@ webpackJsonp([98], {
                 category: "Monetization",
                 section_name: "amazon_associates"
             }, e);
-            l.n.track(d.SpadeEventType.PartnerAffiliateSettings, t)
+            l.n.track(c.SpadeEventType.PartnerAffiliateSettings, t)
         };
         var a, r, i, o, s = n("TToO"),
             l = n("6sO2"),
-            d = n("vH/s");
+            c = n("vH/s");
         ! function(e) {
             e.PARTNER = "partner", e.AFFILIATE = "affiliate", e.NONE = "none"
         }(a || (a = {})),
@@ -2273,13 +2273,13 @@ webpackJsonp([98], {
             o = n("V5M+"),
             s = n("GiK3"),
             l = n("6sO2"),
-            d = n("7vx8"),
-            c = n("HW2d"),
+            c = n("7vx8"),
+            d = n("HW2d"),
             u = n("Jo6h"),
             m = n("Odds"),
             p = n("tu8+"),
-            g = (n("pBoG"), "GAME_COMMERCE_V2"),
-            h = function(e) {
+            h = (n("pBoG"), "GAME_COMMERCE_V2"),
+            g = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2289,13 +2289,13 @@ webpackJsonp([98], {
                         var e = {
                                 channel: t.props.channelName,
                                 channel_id: t.props.data.user && t.props.data.user.id,
-                                partner_status: c.c.NONE,
-                                associate_status: c.a.NONE
+                                partner_status: d.c.NONE,
+                                associate_status: d.a.NONE
                             },
                             n = t.props.data.user && t.props.data.user.roles,
                             r = t.props.data.user && t.props.data.user.amazon.associatesStore.storeID;
-                        return n && (e.partner_status = n.isPartner ? c.c.PARTNER : n.isAffiliate ? c.c.AFFILIATE : c.c.NONE), r && (e.associate_status = c.a.LINKED), Object(c.d)(a.__assign({
-                            action: c.b.OptInEarnRevenueCheckbox
+                        return n && (e.partner_status = n.isPartner ? d.c.PARTNER : n.isAffiliate ? d.c.AFFILIATE : d.c.NONE), r && (e.associate_status = d.a.LINKED), Object(d.d)(a.__assign({
+                            action: d.b.OptInEarnRevenueCheckbox
                         }, e)), t.props.showAmendmentModal({
                             amendmentAccepted: t.state.amendmentAccepted,
                             trackingParameters: e
@@ -2322,12 +2322,12 @@ webpackJsonp([98], {
                         id: "amazon-retail-offers-amendment",
                         label: Object(l.d)("Opt in to earn revenue from sales on Amazon.com", "AmazonRetailOffersAmendment")
                     })), s.createElement(m.Q, null, Object(l.d)("Please read and agree to the new Commerce Addendum to become eligible for this program.", "AmazonRetailOffersAmendment")))
-                }, t = a.__decorate([Object(d.a)(p, {
+                }, t = a.__decorate([Object(c.a)(p, {
                     options: function(e) {
                         return {
                             variables: {
                                 login: e.channelName,
-                                amendmentType: g
+                                amendmentType: h
                             }
                         }
                     }
@@ -2367,10 +2367,10 @@ webpackJsonp([98], {
                                         if (!0 === this.props.amendmentAccepted || !this.props.setAmendmentAcceptance) return [3, 4];
                                         e.label = 1;
                                     case 1:
-                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(b.a)(g))];
+                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(b.a)(h))];
                                     case 2:
-                                        return e.sent(), Object(c.d)(a.__assign({
-                                            action: c.b.AcceptCommerceAddendum
+                                        return e.sent(), Object(d.d)(a.__assign({
+                                            action: d.b.AcceptCommerceAddendum
                                         }, this.props.trackingParameters)), [3, 4];
                                     case 3:
                                         return this.props.onClose(), [7];
@@ -2464,7 +2464,7 @@ webpackJsonp([98], {
                     }, Object(l.d)("Cancel", "AmazonRetailOffersAmendmentModal"))), this.renderAcceptButton(this.props.amendmentAccepted)))
                 }, t
             }(s.PureComponent),
-            y = Object(d.a)(f, {
+            y = Object(c.a)(f, {
                 name: "setAmendmentAcceptance"
             })(v),
             S = (n("4mOb"), function(e) {
@@ -2495,7 +2495,7 @@ webpackJsonp([98], {
                     return Object(o.d)(k, t)
                 }
             }, e)
-        })(h);
+        })(g);
         n.d(t, "a", function() {
             return _
         })
@@ -2884,32 +2884,6 @@ webpackJsonp([98], {
             };
         n.d(t, "a", function() {
             return i
-        })
-    },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var a, r = n("TToO"),
-            i = n("GiK3"),
-            o = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(a || (a = {}));
-        var s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, a.Off);
-                    return e === a.On || e === a.StaffOnly && this.props.isStaff ? this.props.children : null
-                }, t
-            }(i.Component),
-            l = s;
-        n.d(t, "a", function() {
-            return a
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "b", function() {
-            return l
         })
     },
     R9L7: function(e, t) {},
@@ -4221,14 +4195,14 @@ webpackJsonp([98], {
         }), n.o(l, "WorkflowState") && n.d(t, "WorkflowState", function() {
             return l.WorkflowState
         });
-        var d = n("shWG");
+        var c = n("shWG");
         n.d(t, "TaxMismatchError", function() {
-            return d.a
+            return c.a
         });
-        var c = n("RhBo");
-        n.n(c);
-        n.o(c, "WorkflowState") && n.d(t, "WorkflowState", function() {
-            return c.WorkflowState
+        var d = n("RhBo");
+        n.n(d);
+        n.o(d, "WorkflowState") && n.d(t, "WorkflowState", function() {
+            return d.WorkflowState
         });
         var u = n("mFFQ");
         n.d(t, "WorkflowState", function() {
@@ -4623,8 +4597,8 @@ webpackJsonp([98], {
             o = n("7vx8"),
             s = n("jF7o"),
             l = n("HW2d"),
-            d = n("Jo6h"),
-            c = n("Odds"),
+            c = n("Jo6h"),
+            d = n("Odds"),
             u = n("LHN4"),
             m = function(e) {
                 function t() {
@@ -4633,8 +4607,8 @@ webpackJsonp([98], {
                         return e ? Object(i.d)("Edit", "AmazonRetailAssociatesAccountLinking") : Object(i.d)("Get Started", "AmazonRetailAssociatesAccountLinking")
                     }, t.renderDescriptionText = function(e) {
                         return e ? Object(i.d)("Link to {storeID}", {
-                            storeID: r.createElement(c.Q, {
-                                type: c._49.Span,
+                            storeID: r.createElement(d.Q, {
+                                type: d._49.Span,
                                 bold: !0
                             }, e)
                         }, "AmazonRetailAssociatesAccountLinking") : Object(i.d)("Create and link an Amazon Associates account to your Twitch account. Only one Amazon account may be linked at any one time.", "AmazonRetailAssociatesAccountLinking")
@@ -4669,53 +4643,53 @@ webpackJsonp([98], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = null,
                         t = !1;
-                    return this.props.data.user && this.props.data.user.amazon && this.props.data.user.amazon.associatesStore && (e = this.props.data.user.amazon.associatesStore.storeID, t = this.props.data.user.amazon.associatesStore.isPayoutEnabled), r.createElement(r.Fragment, null, r.createElement(d.a, {
-                        orientation: c.X.Horizontal,
+                    return this.props.data.user && this.props.data.user.amazon && this.props.data.user.amazon.associatesStore && (e = this.props.data.user.amazon.associatesStore.storeID, t = this.props.data.user.amazon.associatesStore.isPayoutEnabled), r.createElement(r.Fragment, null, r.createElement(c.a, {
+                        orientation: d.X.Horizontal,
                         label: Object(i.d)("Link an Amazon Associates Account", "AmazonRetailAssociatesAccountLinking")
-                    }, r.createElement(c.Q, {
+                    }, r.createElement(d.Q, {
                         "data-test-selector": "amazon-associates-account-linking-setup-text"
-                    }, this.renderDescriptionText(e || null)), r.createElement(c._8, {
+                    }, this.renderDescriptionText(e || null)), r.createElement(d._8, {
                         padding: {
                             top: .5
                         }
-                    }, r.createElement(c.v, {
+                    }, r.createElement(d.v, {
                         "data-test-selector": "amazon-associates-account-linking-setup-button",
                         onClick: this.launchLinkAccount
-                    }, this.renderButtonText(e || null)))), r.createElement(d.a, {
-                        orientation: c.X.Horizontal,
+                    }, this.renderButtonText(e || null)))), r.createElement(c.a, {
+                        orientation: d.X.Horizontal,
                         label: Object(i.d)("Receive payments from Amazon.com", "AmazonRetailAssociatesAccountLinking")
-                    }, !(!e || t) && r.createElement(c.Q, {
-                        color: c.K.Error,
+                    }, !(!e || t) && r.createElement(d.Q, {
+                        color: d.K.Error,
                         "data-test-selector": "amazon-associates-account-linking-tax-info-error"
-                    }, Object(i.d)("You must complete your tax and payment forms before you will receive any payments.", "AmazonRetailAssociatesAccountLinking")), r.createElement(c.Q, null, Object(i.d)("To receive payments, please provide your <x:tax>Tax Information</x:tax> and your <x:payment>Payment Information</x:payment>. Note, changes made to your Tax Information must be made by the primary account holder and any changes after the 15th will go into effect the following month. Please ignore this message if you have already submitted your information.", {
+                    }, Object(i.d)("You must complete your tax and payment forms before you will receive any payments.", "AmazonRetailAssociatesAccountLinking")), r.createElement(d.Q, null, Object(i.d)("To receive payments, please provide your <x:tax>Tax Information</x:tax> and your <x:payment>Payment Information</x:payment>. Note, changes made to your Tax Information must be made by the primary account holder and any changes after the 15th will go into effect the following month. Please ignore this message if you have already submitted your information.", {
                         "x:tax": function(e) {
-                            return r.createElement(c.Q, {
+                            return r.createElement(d.Q, {
                                 key: "tax",
-                                type: c._49.Span,
+                                type: d._49.Span,
                                 bold: !0,
-                                decoration: c._47.Underline
+                                decoration: d._47.Underline
                             }, e)
                         },
                         "x:payment": function(e) {
-                            return r.createElement(c.Q, {
+                            return r.createElement(d.Q, {
                                 key: "payment",
-                                type: c._49.Span,
+                                type: d._49.Span,
                                 bold: !0,
-                                decoration: c._47.Underline
+                                decoration: d._47.Underline
                             }, e)
                         }
-                    }, "AmazonRetailAssociatesAccountLinking")), r.createElement(c._8, {
+                    }, "AmazonRetailAssociatesAccountLinking")), r.createElement(d._8, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(c._2, {
+                    }, r.createElement(d._2, {
                         padding: {
                             right: 2
                         }
                     }, r.createElement("a", {
                         href: "#",
                         onClick: this.launchAssociatesAccount
-                    }, Object(i.d)("Add/update tax information", "AmazonRetailAssociatesAccountLinking"))), r.createElement(c._2, {
+                    }, Object(i.d)("Add/update tax information", "AmazonRetailAssociatesAccountLinking"))), r.createElement(d._2, {
                         padding: {
                             right: 2
                         }
@@ -5669,13 +5643,13 @@ webpackJsonp([98], {
             var t = e.status,
                 n = e.children,
                 l = r.__rest(e, ["status", "children"]),
-                d = s.A.Default,
-                c = s.B.Default,
+                c = s.A.Default,
+                d = s.B.Default,
                 u = !1;
-            return t === a.Working ? d = s.A.Loading : t === a.Success ? d = s.A.Success : t === a.Error ? c = s.B.Alert : t === a.NoChanges && (u = !0), n || (n = t === a.Error ? Object(o.d)("Error", "Save Button") : Object(o.d)("Save", "Save Button")), i.createElement(s.v, r.__assign({
+            return t === a.Working ? c = s.A.Loading : t === a.Success ? c = s.A.Success : t === a.Error ? d = s.B.Alert : t === a.NoChanges && (u = !0), n || (n = t === a.Error ? Object(o.d)("Error", "Save Button") : Object(o.d)("Save", "Save Button")), i.createElement(s.v, r.__assign({
                 disabled: u,
-                state: d,
-                type: c
+                state: c,
+                type: d
             }, l), n)
         }
     },
@@ -7206,13 +7180,13 @@ webpackJsonp([98], {
             o = n("CIox"),
             s = n("F8kA"),
             l = n("yWCw"),
-            d = n("68hr"),
-            c = n("zCIC"),
+            c = n("68hr"),
+            d = n("zCIC"),
             u = n("7vx8"),
             m = n("CSlQ"),
             p = n("6sO2"),
-            g = n("5EkD"),
-            h = n("2KeS"),
+            h = n("5EkD"),
+            g = n("2KeS"),
             b = n("n63+"),
             f = n("d4P3"),
             E = n("oIkB"),
@@ -7289,11 +7263,11 @@ webpackJsonp([98], {
                         })
                     }, t.onItemToggle = function(e, n) {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var t, r, i, o, s, l, d, c, u;
+                            var t, r, i, o, s, l, c, d, u;
                             return a.__generator(this, function(m) {
                                 switch (m.label) {
                                     case 0:
-                                        return t = n.currentTarget.checked, r = this.props, i = r.channelName, o = r.data, s = r.updateBadgeTiers, this.tiers && o.user && o.user.id ? (l = this.tiers[e], d = {
+                                        return t = n.currentTarget.checked, r = this.props, i = r.channelName, o = r.data, s = r.updateBadgeTiers, this.tiers && o.user && o.user.id ? (l = this.tiers[e], c = {
                                             userID: o.user.id,
                                             badges: {
                                                 tiers: [{
@@ -7301,7 +7275,7 @@ webpackJsonp([98], {
                                                     threshold: l.threshold
                                                 }]
                                             }
-                                        }, c = {
+                                        }, d = {
                                             updateCheerPartnerSettings: {
                                                 __typename: "UpdateCheerPartnerSettingsPayload",
                                                 cheer: {
@@ -7314,7 +7288,7 @@ webpackJsonp([98], {
                                                     }
                                                 }
                                             }
-                                        }, [4, s(Object(E.b)(d, c))]) : [2];
+                                        }, [4, s(Object(E.b)(c, d))]) : [2];
                                     case 1:
                                         return u = m.sent(), Object(E.e)(b, {
                                             login: i
@@ -7357,7 +7331,7 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            N = Object(h.d)(Object(u.a)(b, {
+            N = Object(g.d)(Object(u.a)(b, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7532,7 +7506,7 @@ webpackJsonp([98], {
                         })
                     }, t.onRevertButtonClick = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, r, i, o, s, l, d, c = this;
+                            var e, t, n, r, i, o, s, l, c, d = this;
                             return a.__generator(this, function(u) {
                                 switch (u.label) {
                                     case 0:
@@ -7561,42 +7535,42 @@ webpackJsonp([98], {
                                             }
                                         }, [4, r(Object(E.b)(s, l))]) : [2] : [2];
                                     case 1:
-                                        return d = u.sent(), Object(E.e)(R, {
+                                        return c = u.sent(), Object(E.e)(R, {
                                             login: i
                                         }, function(t) {
-                                            if (t.user && t.user.settings && t.user.settings.cheer && t.user.settings.cheer.badges && d.data.updateCheerPartnerSettings && d.data.updateCheerPartnerSettings.cheer && d.data.updateCheerPartnerSettings.cheer.badges) {
-                                                var n = d.data.updateCheerPartnerSettings.cheer.badges.tiers[e],
+                                            if (t.user && t.user.settings && t.user.settings.cheer && t.user.settings.cheer.badges && c.data.updateCheerPartnerSettings && c.data.updateCheerPartnerSettings.cheer && c.data.updateCheerPartnerSettings.cheer.badges) {
+                                                var n = c.data.updateCheerPartnerSettings.cheer.badges.tiers[e],
                                                     r = t.user.settings.cheer.badges.tiers[e];
                                                 n && n.badge && r && r.badge && (r.badge = a.__assign({}, r.badge, n.badge))
                                             }
-                                            return c.updateStagedImageURLs(), t
+                                            return d.updateStagedImageURLs(), t
                                         }), [2]
                                 }
                             })
                         })
                     }, t.onSaveButtonClick = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, r, i, o, s, l, d, c, u;
+                            var e, t, n, r, i, o, s, l, c, d, u;
                             return a.__generator(this, function(m) {
                                 switch (m.label) {
                                     case 0:
                                         if (e = this.state, t = e.stagedImageURLs, n = e.selectedIndex, r = this.props, i = r.data, o = r.updateBadgeTierImages, s = r.channelName, !this.tiers || !i.user || !i.user.id) return [2];
-                                        if (l = this.tiers[n], !(d = t[l.threshold]).image1x || !d.image2x || !d.image4x) return [2];
-                                        c = {
+                                        if (l = this.tiers[n], !(c = t[l.threshold]).image1x || !c.image2x || !c.image4x) return [2];
+                                        d = {
                                             userID: i.user.id,
                                             badges: {
                                                 tiers: [{
                                                     threshold: l.threshold,
-                                                    imageData1x: Object(O.b)(d.image1x),
-                                                    imageData2x: Object(O.b)(d.image2x),
-                                                    imageData4x: Object(O.b)(d.image4x)
+                                                    imageData1x: Object(O.b)(c.image1x),
+                                                    imageData2x: Object(O.b)(c.image2x),
+                                                    imageData4x: Object(O.b)(c.image4x)
                                                 }]
                                             }
                                         }, this.setState({
                                             saveStatus: v.b.Working
                                         }), m.label = 1;
                                     case 1:
-                                        return m.trys.push([1, 3, , 4]), [4, o(Object(E.a)(c))];
+                                        return m.trys.push([1, 3, , 4]), [4, o(Object(E.a)(d))];
                                     case 2:
                                         return u = m.sent(), Object(E.e)(R, {
                                             login: s
@@ -7630,14 +7604,14 @@ webpackJsonp([98], {
                         o = e.image2xError,
                         s = e.image4xError;
                     if (!this.tiers) return null;
-                    var l, d, c, u, m = this.tiers[t];
+                    var l, c, d, u, m = this.tiers[t];
                     m.badge && m.badge.user && (l = r.createElement(S.v, {
                         onClick: this.onRevertButtonClick,
                         type: S.B.Hollow,
                         fullWidth: !0
-                    }, Object(p.d)("Reset to Default Badge", "ChatBadgeUploadForm")), d = m.badge.image1x, c = m.badge.image2x, u = m.badge.image4x);
-                    var g = n[m.threshold];
-                    return g && (d = g.image1x || d, c = g.image2x || c, u = g.image4x || u), r.createElement(y.a, {
+                    }, Object(p.d)("Reset to Default Badge", "ChatBadgeUploadForm")), c = m.badge.image1x, d = m.badge.image2x, u = m.badge.image4x);
+                    var h = n[m.threshold];
+                    return h && (c = h.image1x || c, d = h.image2x || d, u = h.image4x || u), r.createElement(y.a, {
                         label: Object(p.d)("Upload Badge Images", "ChatBadgeUploadForm")
                     }, r.createElement(S.Y, null, r.createElement(S.L, {
                         cols: {
@@ -7673,8 +7647,8 @@ webpackJsonp([98], {
                     }, r.createElement(C, {
                         onImageSubmit: this.onNormalImageSubmitted,
                         error: i
-                    }, d ? r.createElement("img", {
-                        src: d,
+                    }, c ? r.createElement("img", {
+                        src: c,
                         height: 18,
                         width: 18
                     }) : r.createElement(S._24, {
@@ -7690,8 +7664,8 @@ webpackJsonp([98], {
                     }, r.createElement(C, {
                         onImageSubmit: this.onDoubleImageSubmitted,
                         error: o
-                    }, c ? r.createElement("img", {
-                        src: c,
+                    }, d ? r.createElement("img", {
+                        src: d,
                         height: 36,
                         width: 36
                     }) : r.createElement(S._24, {
@@ -7737,7 +7711,7 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            L = Object(h.d)(Object(u.a)(R, {
+            L = Object(g.d)(Object(u.a)(R, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7751,7 +7725,7 @@ webpackJsonp([98], {
             U = n("GH+X"),
             B = function(e) {
                 var t = e.match;
-                return r.createElement(S._8, null, r.createElement(g.a, {
+                return r.createElement(S._8, null, r.createElement(h.a, {
                     title: Object(p.d)("Cheer Chat Badge Settings", "CheerBadgesSettingsPage"),
                     description: Object(p.d)("Custom settings for Cheer chat badges", "CheerBadgesSettingsPage"),
                     linkToParent: "/" + t.params.channelName + "/dashboard/settings/revenue"
@@ -7761,7 +7735,7 @@ webpackJsonp([98], {
                     channelName: t.params.channelName
                 })))
             },
-            V = n("WrTc"),
+            V = n("LIeg"),
             W = n("gLfK");
         ! function(e) {
             e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
@@ -7775,75 +7749,214 @@ webpackJsonp([98], {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.state = {
-                        saveStatus: v.b.NoChanges,
-                        leaderboardEnabled: !1,
-                        recentCheerEnabled: !1,
+                        recentCheerMinimumBitsSaveStatus: v.b.NoChanges,
+                        recentCheerTimeoutSaveStatus: v.b.NoChanges,
                         recentCheerTimeoutError: !1
                     }, n.onLeaderboardEnabledCheckBoxClick = function(e) {
-                        n.setState(function(t) {
-                            return {
-                                leaderboardEnabled: e.currentTarget.checked,
-                                saveStatus: t.recentCheerEnabled && t.recentCheerTimeoutError ? v.b.NoChanges : v.b.DirtyChanges
-                            }
+                        return a.__awaiter(n, void 0, void 0, function() {
+                            var t, n, r, i, o, s, l, c, d;
+                            return a.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        if (t = e.currentTarget.checked, n = this.props, r = n.setPinnedCheerSettings, i = n.data, o = n.channelName, !(i.user && i.user.id && i.user.settings && i.user.settings.cheer)) return [2];
+                                        s = {
+                                            userID: i.user.id,
+                                            leaderboard: {
+                                                isEnabled: t
+                                            }
+                                        }, l = V(i.user.settings.cheer, function(e) {
+                                            return e.leaderboard
+                                        }, function(e) {
+                                            return e.isEnabled = t, e
+                                        }), c = {
+                                            updateCheerPartnerSettings: {
+                                                __typename: "UpdateCheerPartnerSettingsPayload",
+                                                cheer: l
+                                            }
+                                        }, a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, r(Object(E.b)(s, c))];
+                                    case 2:
+                                        return d = a.sent(), Object(E.e)(Y, {
+                                            login: o
+                                        }, function(e) {
+                                            return e.user && e.user.settings && e.user.settings.cheer && d.data.updateCheerPartnerSettings && (e.user.settings.cheer.leaderboard.isEnabled = d.data.updateCheerPartnerSettings.cheer.leaderboard.isEnabled), e
+                                        }), [3, 4];
+                                    case 3:
+                                        return a.sent(), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
                         })
                     }, n.onLeaderboardTimePeriodRadioButtonClick = function(e) {
-                        n.setState({
-                            leaderboardTimePeriod: e.currentTarget.value,
-                            saveStatus: v.b.DirtyChanges
+                        return a.__awaiter(n, void 0, void 0, function() {
+                            var t, n, r, i, o, s, l, c, d;
+                            return a.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        if (t = e.currentTarget.value, n = this.props, r = n.setPinnedCheerSettings, i = n.data, o = n.channelName, !(i.user && i.user.id && i.user.settings && i.user.settings.cheer)) return [2];
+                                        s = {
+                                            userID: i.user.id,
+                                            leaderboard: {
+                                                timePeriod: t
+                                            }
+                                        }, l = V(i.user.settings.cheer, function(e) {
+                                            return e.leaderboard
+                                        }, function(e) {
+                                            return e.timePeriod = t, e
+                                        }), c = {
+                                            updateCheerPartnerSettings: {
+                                                __typename: "UpdateCheerPartnerSettingsPayload",
+                                                cheer: l
+                                            }
+                                        }, a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, r(Object(E.b)(s, c))];
+                                    case 2:
+                                        return d = a.sent(), Object(E.e)(Y, {
+                                            login: o
+                                        }, function(e) {
+                                            return e.user && e.user.settings && e.user.settings.cheer && d.data.updateCheerPartnerSettings && (e.user.settings.cheer.leaderboard.timePeriod = d.data.updateCheerPartnerSettings.cheer.leaderboard.timePeriod), e
+                                        }), [3, 4];
+                                    case 3:
+                                        return a.sent(), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
                         })
                     }, n.onRecentCheerEnabledCheckBoxChange = function(e) {
-                        n.setState({
-                            recentCheerEnabled: e.currentTarget.checked,
-                            saveStatus: v.b.DirtyChanges
+                        return a.__awaiter(n, void 0, void 0, function() {
+                            var t, n, r, i, o, s, l, c, d;
+                            return a.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        if (t = e.currentTarget.checked, n = this.props, r = n.setPinnedCheerSettings, i = n.data, o = n.channelName, !(i.user && i.user.id && i.user.settings && i.user.settings.cheer)) return [2];
+                                        s = {
+                                            userID: i.user.id,
+                                            recentCheer: {
+                                                canPin: t
+                                            }
+                                        }, l = V(i.user.settings.cheer, function(e) {
+                                            return e.recentCheer
+                                        }, function(e) {
+                                            return e.canPin = t, e
+                                        }), c = {
+                                            updateCheerPartnerSettings: {
+                                                __typename: "UpdateCheerPartnerSettingsPayload",
+                                                cheer: l
+                                            }
+                                        }, a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, r(Object(E.b)(s, c))];
+                                    case 2:
+                                        return d = a.sent(), Object(E.e)(Y, {
+                                            login: o
+                                        }, function(e) {
+                                            return e.user && e.user.settings && e.user.settings.cheer && d.data.updateCheerPartnerSettings && (e.user.settings.cheer.recentCheer.canPin = d.data.updateCheerPartnerSettings.cheer.recentCheer.canPin), e
+                                        }), [3, 4];
+                                    case 3:
+                                        return a.sent(), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
                         })
                     }, n.onRecentCheerTimeoutInputChange = function(e) {
                         var t = parseInt(e.currentTarget.value, 10),
                             a = !t || t < G;
                         n.setState({
                             recentCheerTimeout: Math.min(t, z),
-                            saveStatus: a ? v.b.NoChanges : v.b.DirtyChanges,
+                            recentCheerTimeoutSaveStatus: a ? v.b.NoChanges : v.b.DirtyChanges,
                             recentCheerTimeoutError: a
+                        })
+                    }, n.onRecentCheerTimeoutSaveButtonClick = function() {
+                        return a.__awaiter(n, void 0, void 0, function() {
+                            var e, t, n, r, i, o, s, l, c;
+                            return a.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        if (e = this.state.recentCheerTimeout, t = this.props, n = t.setPinnedCheerSettings, r = t.data, i = t.channelName, !(r.user && r.user.id && r.user.settings && r.user.settings.cheer && e)) return [2];
+                                        o = {
+                                            userID: r.user.id,
+                                            recentCheer: {
+                                                timeoutMilliseconds: e
+                                            }
+                                        }, s = V(r.user.settings.cheer, function(e) {
+                                            return e.recentCheer
+                                        }, function(t) {
+                                            return t.timeoutMilliseconds = e, t
+                                        }), l = {
+                                            updateCheerPartnerSettings: {
+                                                __typename: "UpdateCheerPartnerSettingsPayload",
+                                                cheer: s
+                                            }
+                                        }, this.setState({
+                                            recentCheerTimeoutSaveStatus: v.b.Working
+                                        }), a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, n(Object(E.b)(o, l))];
+                                    case 2:
+                                        return c = a.sent(), Object(E.e)(Y, {
+                                            login: i
+                                        }, function(e) {
+                                            return e.user && e.user.settings && e.user.settings.cheer && c.data.updateCheerPartnerSettings && (e.user.settings.cheer.recentCheer.timeoutMilliseconds = c.data.updateCheerPartnerSettings.cheer.recentCheer.timeoutMilliseconds), e
+                                        }), this.setState({
+                                            recentCheerTimeoutSaveStatus: v.b.Success
+                                        }), [3, 4];
+                                    case 3:
+                                        return a.sent(), this.setState({
+                                            recentCheerTimeoutSaveStatus: v.b.Error
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
                         })
                     }, n.onRecentCheerMinimumBitsInputChange = function(e) {
                         var t = parseInt(e.currentTarget.value, 10);
                         n.setState({
                             recentCheerMinimumBits: Math.min(t, H),
-                            saveStatus: t ? v.b.DirtyChanges : v.b.NoChanges
+                            recentCheerMinimumBitsSaveStatus: t ? v.b.DirtyChanges : v.b.NoChanges
                         })
-                    }, n.onSaveClick = function() {
+                    }, n.onRecentCheerMinimumBitsSaveButtonClick = function() {
                         return a.__awaiter(n, void 0, void 0, function() {
-                            var e, t, n, r, i, o, s, l, d, c, u, m, p;
+                            var e, t, n, r, i, o, s, l, c;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        if (e = this.state, t = e.leaderboardTimePeriod, n = e.recentCheerTimeout, r = e.recentCheerMinimumBits, i = e.leaderboardEnabled, o = e.recentCheerEnabled, s = this.props, l = s.setPinnedCheerSettings, d = s.data, c = s.channelName, !(d.user && d.user.id && d.user.settings && d.user.settings.cheer)) return [2];
-                                        u = {
-                                            userID: d.user.id,
+                                        if (e = this.state.recentCheerMinimumBits, t = this.props, n = t.setPinnedCheerSettings, r = t.data, i = t.channelName, !(r.user && r.user.id && r.user.settings && r.user.settings.cheer && e)) return [2];
+                                        o = {
+                                            userID: r.user.id,
                                             recentCheer: {
-                                                canPin: o,
-                                                minimumBits: r,
-                                                timeoutMilliseconds: o ? n : void 0
-                                            },
-                                            leaderboard: {
-                                                isEnabled: i,
-                                                timePeriod: t
+                                                minimumBits: e
                                             }
-                                        }, m = Object(E.a)(u), this.setState({
-                                            saveStatus: v.b.Working
+                                        }, s = V(r.user.settings.cheer, function(e) {
+                                            return e.recentCheer
+                                        }, function(t) {
+                                            return t.minimumBits = e, t
+                                        }), l = {
+                                            updateCheerPartnerSettings: {
+                                                __typename: "UpdateCheerPartnerSettingsPayload",
+                                                cheer: s
+                                            }
+                                        }, this.setState({
+                                            recentCheerMinimumBitsSaveStatus: v.b.Working
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, l(m)];
+                                        return a.trys.push([1, 3, , 4]), [4, n(Object(E.b)(o, l))];
                                     case 2:
-                                        return p = a.sent(), Object(E.e)(Y, {
-                                            login: c
+                                        return c = a.sent(), Object(E.e)(Y, {
+                                            login: i
                                         }, function(e) {
-                                            return p.data.updateCheerPartnerSettings && e.user && e.user.settings && e.user.settings.cheer && (e.user.settings.cheer.recentCheer = p.data.updateCheerPartnerSettings.cheer.recentCheer, e.user.settings.cheer.leaderboard = p.data.updateCheerPartnerSettings.cheer.leaderboard), e
+                                            return e.user && e.user.settings && e.user.settings.cheer && c.data.updateCheerPartnerSettings && (e.user.settings.cheer.recentCheer.minimumBits = c.data.updateCheerPartnerSettings.cheer.recentCheer.minimumBits), e
                                         }), this.setState({
-                                            saveStatus: v.b.Success
+                                            recentCheerMinimumBitsSaveStatus: v.b.Success
                                         }), [3, 4];
                                     case 3:
                                         return a.sent(), this.setState({
-                                            saveStatus: v.b.Error
+                                            recentCheerMinimumBitsSaveStatus: v.b.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -7852,54 +7965,33 @@ webpackJsonp([98], {
                         })
                     };
                     var r = t.data;
-                    if (!r.loading && !r.error && r.user && r.user.settings && r.user.settings.cheer) {
-                        var i = r.user.settings.cheer,
-                            o = i.leaderboard,
-                            s = i.recentCheer;
-                        n.state = a.__assign({}, n.state, {
-                            leaderboardEnabled: o.isEnabled,
-                            leaderboardTimePeriod: o.timePeriod,
-                            recentCheerEnabled: s.canPin,
-                            recentCheerMinimumBits: s.minimumBits,
-                            recentCheerTimeout: s.timeoutMilliseconds
-                        })
-                    }
-                    return n
+                    return !r.loading && !r.error && r.user && r.user.settings && r.user.settings.cheer && (n.state = a.__assign({}, n.state, {
+                        recentCheerTimeout: r.user.settings.cheer.recentCheer.timeoutMilliseconds,
+                        recentCheerMinimumBits: r.user.settings.cheer.recentCheer.minimumBits
+                    })), n
                 }
                 return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     var t = e.data;
-                    if (!t.loading && !t.error && t.user && t.user.settings && t.user.settings.cheer) {
-                        var n = t.user.settings.cheer,
-                            a = n.leaderboard,
-                            r = n.recentCheer;
-                        this.setState({
-                            leaderboardEnabled: a.isEnabled,
-                            leaderboardTimePeriod: a.timePeriod,
-                            recentCheerEnabled: r.canPin,
-                            recentCheerMinimumBits: r.minimumBits,
-                            recentCheerTimeout: r.timeoutMilliseconds
-                        })
-                    }
+                    !t.loading && !t.error && t.user && t.user.settings && t.user.settings.cheer && this.setState({
+                        recentCheerTimeout: t.user.settings.cheer.recentCheer.timeoutMilliseconds,
+                        recentCheerMinimumBits: t.user.settings.cheer.recentCheer.minimumBits
+                    })
                 }, t.prototype.render = function() {
-                    var e = this.state,
-                        t = e.saveStatus,
-                        n = e.leaderboardTimePeriod,
-                        a = e.recentCheerTimeout,
-                        i = e.recentCheerMinimumBits,
-                        o = e.leaderboardEnabled,
-                        s = e.recentCheerTimeoutError,
-                        l = e.recentCheerEnabled,
-                        d = r.createElement(V.a, {
-                            status: t,
-                            onClickSave: this.onSaveClick
-                        });
-                    return r.createElement(U.a, {
-                        footer: d
-                    }, r.createElement(y.a, {
+                    var e = this.props.data,
+                        t = this.state,
+                        n = t.recentCheerTimeout,
+                        a = t.recentCheerMinimumBits,
+                        i = t.recentCheerMinimumBitsSaveStatus,
+                        o = t.recentCheerTimeoutError,
+                        s = t.recentCheerTimeoutSaveStatus,
+                        l = !1,
+                        c = null,
+                        d = !1;
+                    return e.user && e.user.settings && e.user.settings.cheer && (l = e.user.settings.cheer.leaderboard.isEnabled, c = e.user.settings.cheer.leaderboard.timePeriod, d = e.user.settings.cheer.recentCheer.canPin), r.createElement(U.a, null, r.createElement(y.a, {
                         label: Object(p.d)("Enable Top Cheerers", "PinnedCheerSettings")
                     }, r.createElement(S.J, {
                         label: Object(p.d)("Enable Top Cheerers", "PinnedCheerSettingsCheckBox"),
-                        checked: o,
+                        checked: l,
                         onChange: this.onLeaderboardEnabledCheckBoxClick,
                         "data-test-selector": "top-cheerers-checkbox-selector"
                     }), r.createElement(W.a, {
@@ -7909,7 +8001,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._8, null, r.createElement(S._21, {
                         label: Object(p.d)("Weekly", "PinnedCheerSettings"),
                         value: P.WEEK,
-                        checked: n === P.WEEK,
+                        checked: c === P.WEEK,
                         onChange: this.onLeaderboardTimePeriodRadioButtonClick
                     })), r.createElement(S._8, {
                         margin: {
@@ -7918,7 +8010,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._21, {
                         label: Object(p.d)("Monthly", "PinnedCheerSettings"),
                         value: P.MONTH,
-                        checked: n === P.MONTH,
+                        checked: c === P.MONTH,
                         onChange: this.onLeaderboardTimePeriodRadioButtonClick
                     })), r.createElement(S._8, {
                         margin: {
@@ -7927,7 +8019,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._21, {
                         label: Object(p.d)("All-Time", "PinnedCheerSettings"),
                         value: P.ALLTIME,
-                        checked: n === P.ALLTIME,
+                        checked: c === P.ALLTIME,
                         onChange: this.onLeaderboardTimePeriodRadioButtonClick
                     })), r.createElement(W.a, {
                         text: Object(p.d)("Choose Weekly for a leaderboard that automatically resets every Monday 12:01AM PT. Choose Monthly to reset every 1st day of the month. Choose All-Time for a leaderboard that tracks the Top Cheerers in your channel for all time, starting from when Bits launched in June of 2016.", "PinnedCheerSettings")
@@ -7935,7 +8027,7 @@ webpackJsonp([98], {
                         label: Object(p.d)("Enable Recent Cheers", "PinnedCheerSettings")
                     }, r.createElement(S.J, {
                         label: Object(p.d)("Pin Most Recent Cheer", "PinnedCheerSettings"),
-                        checked: l,
+                        checked: d,
                         onChange: this.onRecentCheerEnabledCheckBoxChange,
                         "data-test-selector": "pin-most-recent-cheer-checkbox-selector"
                     }), r.createElement(W.a, {
@@ -7950,35 +8042,69 @@ webpackJsonp([98], {
                         }
                     }, r.createElement(S.W, {
                         label: Object(p.d)("Seconds", "PinnedCheerSettings"),
-                        error: l && s,
+                        error: d && o,
                         errorMessage: Object(p.d)("Timeout must be between {min} and {max} seconds", {
                             min: G,
                             max: z
                         }, "PinnedCheerSettings"),
                         "data-test-selector": "recent-cheer-timeout-form-group-selector"
+                    }, r.createElement(S.Y, null, r.createElement(S.L, {
+                        cols: {
+                            default: 12,
+                            sm: 3
+                        }
+                    }, r.createElement(S._8, {
+                        display: S.R.Flex
+                    }, r.createElement(S._8, {
+                        flexGrow: 1,
+                        margin: {
+                            right: 1
+                        }
                     }, r.createElement(S._4, {
                         type: S._5.Number,
-                        value: "" + a,
-                        disabled: !l,
+                        value: String(n),
+                        disabled: !d,
                         onChange: this.onRecentCheerTimeoutInputChange,
                         min: G,
                         max: z,
                         "data-test-selector": "recent-cheer-timeout-input-selector"
-                    })))), r.createElement(y.a, {
+                    })), r.createElement(S._8, {
+                        visibility: d ? S._60.Visible : S._60.Hidden
+                    }, r.createElement(v.a, {
+                        status: s,
+                        onClick: this.onRecentCheerTimeoutSaveButtonClick,
+                        "data-test-selector": "recent-cheer-timeout-save-button-selector"
+                    })))))))), r.createElement(y.a, {
                         label: Object(p.d)("Minimum Bits for a Recent Cheer", "CheerSettingsPage")
+                    }, r.createElement(S.Y, null, r.createElement(S.L, {
+                        cols: {
+                            default: 12,
+                            sm: 8
+                        }
+                    }, r.createElement(S._8, {
+                        display: S.R.Flex
+                    }, r.createElement(S._8, {
+                        flexGrow: 1,
+                        margin: {
+                            right: 1
+                        }
                     }, r.createElement(S._4, {
                         type: S._5.Number,
-                        value: "" + i,
+                        value: String(a),
                         onChange: this.onRecentCheerMinimumBitsInputChange,
                         min: 1,
                         max: H,
                         "data-test-selector": "recent-cheer-minimum-bits-input-selector"
-                    }), r.createElement(W.a, {
+                    })), r.createElement(v.a, {
+                        status: i,
+                        onClick: this.onRecentCheerMinimumBitsSaveButtonClick,
+                        "data-test-selector": "recent-cheer-minimum-bits-save-button-selector"
+                    })))), r.createElement(W.a, {
                         text: Object(p.d)("Sets the minimum number of Bits required for a Recent Cheer to be Pinned. Viewers will receive notifications indicating your Pinned Recent Cheer minimum.", "PinnedCheerSettings")
                     })))
                 }, t
             }(r.Component),
-            q = Object(h.d)(Object(u.a)(Y, {
+            q = Object(g.d)(Object(u.a)(Y, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7995,7 +8121,7 @@ webpackJsonp([98], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.match;
-                    return r.createElement(S._8, null, r.createElement(g.a, {
+                    return r.createElement(S._8, null, r.createElement(h.a, {
                         title: Object(p.d)("Pinned and Top Cheers Settings", "CheerSettingsPage"),
                         description: Object(p.d)("Custom settings for Pinned Cheering", "CheerSettingsPage"),
                         linkToParent: "/" + e.params.channelName + "/dashboard/settings/revenue"
@@ -8013,7 +8139,7 @@ webpackJsonp([98], {
                         cheermotesToggleError: !1
                     }, t.onItemToggle = function(e) {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var t, n, r, i, o, s, l, d;
+                            var t, n, r, i, o, s, l, c;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
@@ -8027,10 +8153,10 @@ webpackJsonp([98], {
                                     case 1:
                                         return a.trys.push([1, 3, , 4]), [4, r(l)];
                                     case 2:
-                                        return d = a.sent(), Object(E.e)(Z, {
+                                        return c = a.sent(), Object(E.e)(Z, {
                                             login: o
                                         }, function(e) {
-                                            return d.data.updateCheerPartnerSettings && e.user && e.user.settings && e.user.settings.cheer && (e.user.settings.cheer.customPrefix.isEnabled = d.data.updateCheerPartnerSettings.cheer.customPrefix.isEnabled), e
+                                            return c.data.updateCheerPartnerSettings && e.user && e.user.settings && e.user.settings.cheer && (e.user.settings.cheer.customPrefix.isEnabled = c.data.updateCheerPartnerSettings.cheer.customPrefix.isEnabled), e
                                         }), this.setState({
                                             cheermotesToggleError: !1
                                         }), [3, 4];
@@ -8059,13 +8185,13 @@ webpackJsonp([98], {
                     if (!e.loading && !e.error && e.user && e.user.settings && e.user.settings.cheer && (n = e.user.settings.cheer.customPrefix.isEnabled, a = r.createElement(S.Q, {
                             bold: !0
                         }, e.user.settings.cheer.customPrefix.prefix), e.user.settings.cheer.customPrefix && e.user.settings.cheer.customPrefix.tiers))
-                        for (var l = 0, d = (s = e.user.settings.cheer.customPrefix.tiers.slice().sort(function(e, t) {
+                        for (var l = 0, c = (s = e.user.settings.cheer.customPrefix.tiers.slice().sort(function(e, t) {
                                 return e.bits - t.bits
-                            })).length; l < d; l++) {
-                            var c = s[l].images;
-                            c && c[0] ? (o.push({
-                                url: c[0].url,
-                                id: c[0].id
+                            })).length; l < c; l++) {
+                            var d = s[l].images;
+                            d && d[0] ? (o.push({
+                                url: d[0].url,
+                                id: d[0].id
                             }), i++) : o.push(null)
                         }
                     var u = o.map(function(e, t) {
@@ -8205,7 +8331,7 @@ webpackJsonp([98], {
                 })
             })
         }
-        var oe, se, le, de, ce = ((oe = {})[1] = 28, oe[1.5] = 42, oe[2] = 56, oe[3] = 84, oe[4] = 112, oe),
+        var oe, se, le, ce, de = ((oe = {})[1] = 28, oe[1.5] = 42, oe[2] = 56, oe[3] = 84, oe[4] = 112, oe),
             ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -8238,7 +8364,7 @@ webpackJsonp([98], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.props.images.map(function(t) {
-                            var n = ce[t.dpiScale];
+                            var n = de[t.dpiScale];
                             return r.createElement(S._8, {
                                 key: t.dpiScale,
                                 padding: {
@@ -8331,7 +8457,7 @@ webpackJsonp([98], {
                     }))
                 }, t
             }(r.PureComponent)),
-            ge = function(e) {
+            he = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8361,18 +8487,18 @@ webpackJsonp([98], {
         }(le || (le = {})),
         function(e) {
             e.Animated = "animated", e.Static = "static"
-        }(de || (de = {}));
-        var he = function(e) {
+        }(ce || (ce = {}));
+        var ge = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
                     uploadType: se.Simple,
                     background: le.Light,
-                    animation: de.Animated,
+                    animation: ce.Animated,
                     uploading: !1
                 }, t.onUploadTypeChange = function(e) {
                     var n = e.currentTarget.value,
-                        a = de.Animated;
+                        a = ce.Animated;
                     t.setState({
                         uploadType: n,
                         animation: a
@@ -8497,7 +8623,7 @@ webpackJsonp([98], {
                 if (!this.props.uploadTier) return r.createElement(S._14, null);
                 var t = [],
                     n = (t = this.props.uploadTier.images.filter(function(t) {
-                        return (t.isAnimated && e.state.animation === de.Animated || !t.isAnimated && e.state.animation === de.Static) && t.theme.toLowerCase() === e.state.background
+                        return (t.isAnimated && e.state.animation === ce.Animated || !t.isAnimated && e.state.animation === ce.Static) && t.theme.toLowerCase() === e.state.background
                     }).slice().sort(function(e, t) {
                         return t.dpiScale - e.dpiScale
                     })).find(function(e) {
@@ -8510,7 +8636,7 @@ webpackJsonp([98], {
                     flexDirection: S.T.Column
                 }, r.createElement(S._8, {
                     display: S.R.Flex
-                }, r.createElement(ge, {
+                }, r.createElement(he, {
                     name: "cheermote-upload-wizard-type",
                     selected: this.state.uploadType,
                     left: se.Simple,
@@ -8522,7 +8648,7 @@ webpackJsonp([98], {
                     padding: {
                         x: 2
                     }
-                }, r.createElement(ge, {
+                }, r.createElement(he, {
                     name: "cheermote-background",
                     selected: this.state.background,
                     left: le.Light,
@@ -8530,12 +8656,12 @@ webpackJsonp([98], {
                     right: le.Dark,
                     rightTitle: Object(p.d)("Dark", "CheermoteUploadArea"),
                     onToggle: this.onBackgroundChange
-                })), this.state.uploadType === se.Advanced && r.createElement(ge, {
+                })), this.state.uploadType === se.Advanced && r.createElement(he, {
                     name: "cheermote-animation",
                     selected: this.state.animation,
-                    left: de.Animated,
+                    left: ce.Animated,
                     leftTitle: Object(p.d)("Animated", "CheermoteUploadArea"),
-                    right: de.Static,
+                    right: ce.Static,
                     rightTitle: Object(p.d)("Static", "CheermoteUploadArea"),
                     onToggle: this.onAnimationChange
                 })), r.createElement(S._8, {
@@ -8598,11 +8724,11 @@ webpackJsonp([98], {
                 o = a[8],
                 s = a[9],
                 l = n ? n.toUpperCase() : i.toUpperCase(),
-                d = "animated" === o;
+                c = "animated" === o;
             return {
-                id: e + ";" + r + ";" + l + ";" + d + ";" + s,
+                id: e + ";" + r + ";" + l + ";" + c + ";" + s,
                 dpiScale: parseInt(s, 10),
-                isAnimated: d,
+                isAnimated: c,
                 theme: l,
                 url: t
             }
@@ -8709,7 +8835,7 @@ webpackJsonp([98], {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(he, {
+                    }, r.createElement(ge, {
                         channelID: this.props.data.user.id,
                         uploadTier: a,
                         onSimpleImageSubmitted: this.onSimpleImageSubmitted,
@@ -8728,7 +8854,7 @@ webpackJsonp([98], {
             }))(Ee),
             ye = function(e) {
                 var t = e.match;
-                return r.createElement(S._8, null, r.createElement(g.a, {
+                return r.createElement(S._8, null, r.createElement(h.a, {
                     title: Object(p.d)("Custom Cheermote", "CheermotesSettingsPage"),
                     description: Object(p.d)("Custom Cheermote that viewers can use when Cheering in your channel", "CheermotesSettingsPage"),
                     linkToParent: "/" + t.params.channelName + "/dashboard/settings/revenue"
@@ -8918,12 +9044,12 @@ webpackJsonp([98], {
                 }, t
             }(r.Component));
         var De = Object(Te.b)(null, function(e) {
-            return Object(h.b)({
+            return Object(g.b)({
                 closeModal: Ne.c
             }, e)
         })(xe);
         var je, Fe, Me, Le, Ue, Be, Ve, We, Qe = Object(Te.b)(null, function(e) {
-                return Object(h.b)({
+                return Object(g.b)({
                     showAmendmentModal: function(e) {
                         var t = a.__rest(e, []);
                         return Object(Ne.d)(De, t)
@@ -8936,7 +9062,7 @@ webpackJsonp([98], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.match.params.channelName;
-                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
                         title: Object(p.d)("Game sales via Twitch", "CommerceAmendment"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(U.a, null, r.createElement(Qe, {
@@ -8944,7 +9070,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.PureComponent),
-            Ge = Object(h.d)(Object(m.d)("CommerceAmendmentPage", {
+            Ge = Object(g.d)(Object(m.d)("CommerceAmendmentPage", {
                 autoReportInteractive: !0,
                 destination: ke.a.DashboardSettingsRevenueGameCommerce
             }), Object(Se.a)({
@@ -8958,7 +9084,7 @@ webpackJsonp([98], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.match.params.channelName;
-                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
                         title: Object(p.d)("Gear, games, and more via Amazon Associates", "CommerceAmendmentV2")
                     }), r.createElement(U.a, null, r.createElement(He.a, {
                         channelName: e
@@ -8967,7 +9093,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            qe = Object(h.d)(Object(m.d)("CommerceAmendmentV2Page", {
+            qe = Object(g.d)(Object(m.d)("CommerceAmendmentV2Page", {
                 autoReportInteractive: !0,
                 destination: ke.a.DashboardSettingsRevenueGameCommerceV2
             }), Object(Se.a)({
@@ -9205,7 +9331,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            ot = Object(h.d)(Object(u.a)(et, {
+            ot = Object(g.d)(Object(u.a)(et, {
                 options: function(e) {
                     return {
                         variables: {
@@ -9267,10 +9393,10 @@ webpackJsonp([98], {
         function(e) {
             e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
         }(We || (We = {}));
-        var dt, ct = n("Tbnh");
+        var ct, dt = n("Tbnh");
         ! function(e) {
             e.PAYOUT_ONBOARDING_LINK = "onboarding-section__payout-onboarding-link", e.UPGRADE_AGREEMENT_LINK = "onboarding-section__upgrade-agreement-link", e.PAYOUTS_LINK = "onboarding-section__payouts-link", e.AFFILIATE_AGREEMENT_LINK = "onboarding-section__affiliate-agreement-link", e.PARTNER_AGREEMENT_LINK = "onboarding-section__partner-agreement-link", e.EXTENSIONS_DEVELOPER_AGREEMENT_LINK = "onboarding-section__extensions-developer-agreement-link"
-        }(dt || (dt = {}));
+        }(ct || (ct = {}));
         var ut = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -9283,27 +9409,27 @@ webpackJsonp([98], {
                     return t || n || !a || this.props.channelName !== a.login ? null : (this.props.latencyTracking.reportInteractive(), r.createElement(r.Fragment, null, r.createElement(Ze.a, {
                         title: Object(p.d)("Onboarding", "OnboardingSection")
                     }), r.createElement(U.a, null, !this.hasAgreementPendingUpgrade && r.createElement($e.a, {
-                        "data-test-selector": dt.PAYOUT_ONBOARDING_LINK,
+                        "data-test-selector": ct.PAYOUT_ONBOARDING_LINK,
                         text: this.payoutOnboardingLinkText,
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/payout-onboarding"
                     }), this.hasAgreementPendingUpgrade && r.createElement($e.a, {
-                        "data-test-selector": dt.UPGRADE_AGREEMENT_LINK,
+                        "data-test-selector": ct.UPGRADE_AGREEMENT_LINK,
                         text: this.upgradeTermsLinkText,
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/upgrade-terms"
                     }), this.hasCompletedOnboarding && r.createElement($e.a, {
-                        "data-test-selector": dt.PAYOUTS_LINK,
+                        "data-test-selector": ct.PAYOUTS_LINK,
                         text: Object(p.d)("Change Payout Method", "OnboardingSection"),
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/payouts"
                     }), a && a.roles && a.roles.isAffiliate && r.createElement($e.a, {
-                        "data-test-selector": dt.AFFILIATE_AGREEMENT_LINK,
+                        "data-test-selector": ct.AFFILIATE_AGREEMENT_LINK,
                         text: Object(p.d)("View Affiliate Agreement", "OnboardingSection"),
                         linkTo: "/p/legal/affiliate-agreement/"
                     }), this.showPartnerAgreementLink && r.createElement($e.a, {
-                        "data-test-selector": dt.PARTNER_AGREEMENT_LINK,
+                        "data-test-selector": ct.PARTNER_AGREEMENT_LINK,
                         text: Object(p.d)("View Active Partner Agreement", "OnboardingSection"),
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/view-terms"
                     }), a && a.roles && a.roles.isExtensionsDeveloper && r.createElement($e.a, {
-                        "data-test-selector": dt.EXTENSIONS_DEVELOPER_AGREEMENT_LINK,
+                        "data-test-selector": ct.EXTENSIONS_DEVELOPER_AGREEMENT_LINK,
                         text: Object(p.d)("View Extensions Developer Agreement", "OnboardingSection"),
                         linkTo: "/p/legal/developer-agreement/"
                     }))))
@@ -9375,16 +9501,16 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            mt = Object(i.compose)(Object(m.d)("OnboardingSection"), Object(u.a)(ct))(ut),
+            mt = Object(i.compose)(Object(m.d)("OnboardingSection"), Object(u.a)(dt))(ut),
             pt = n("Aj/L"),
-            gt = n("QRuM"),
-            ht = function(e) {
+            ht = n("QRuM"),
+            gt = function(e) {
                 return r.createElement(S._8, null, r.createElement(Ze.a, {
                     title: Object(p.d)("Other Revenue Streams", "OtherRevenueStreamsForm")
                 }), r.createElement(U.a, null, r.createElement($e.a, {
                     text: Object(p.d)("Game sales via Twitch", "OtherRevenueStreamsForm"),
                     linkTo: "/" + e.channelName + "/dashboard/settings/revenue/game-commerce"
-                }), r.createElement(gt.c, {
+                }), r.createElement(ht.c, {
                     name: "commerce_amendment_v2",
                     isStaff: e.isStaff
                 }, r.createElement($e.a, {
@@ -9400,7 +9526,7 @@ webpackJsonp([98], {
                 return {
                     isStaff: !!(t && t.roles && t.roles.isStaff)
                 }
-            })(ht),
+            })(gt),
             Et = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -9429,40 +9555,40 @@ webpackJsonp([98], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.toggleBenefit = function(e, n) {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var t, r, i, o, s, l, d, c, u;
+                            var t, r, i, o, s, l, c, d, u;
                             return a.__generator(this, function(m) {
                                 switch (m.label) {
                                     case 0:
                                         if (!(this.props.data.user && this.props.data.user.id && this.props.data.user.roles && this.props.data.user.subscriptionProducts)) return [2];
                                         if (!(t = this.props.data.user.subscriptionProducts[0])) return [2];
-                                        r = e === bt.AD_FREE_VIEWING ? n : t.hasAdFree, i = e === bt.IGNORE_SLOW_MODE ? n : t.hasFastChat, o = e === bt.SUBSCRIBER_ONLY_ARCHIVES ? n : t.hasSubonlyVideoArchive, s = e === bt.SUBSCRIBER_ONLY_CHAT ? n : t.hasSubOnlyChat, l = this.props.data.user.subscriptionProducts, d = function(e) {
-                                            var t, n, d;
+                                        r = e === bt.AD_FREE_VIEWING ? n : t.hasAdFree, i = e === bt.IGNORE_SLOW_MODE ? n : t.hasFastChat, o = e === bt.SUBSCRIBER_ONLY_ARCHIVES ? n : t.hasSubonlyVideoArchive, s = e === bt.SUBSCRIBER_ONLY_CHAT ? n : t.hasSubOnlyChat, l = this.props.data.user.subscriptionProducts, c = function(e) {
+                                            var t, n, c;
                                             return a.__generator(this, function(a) {
                                                 switch (a.label) {
                                                     case 0:
                                                         return (t = l[e]) ? (n = {
-                                                            targetUserID: c.props.data.user.id,
+                                                            targetUserID: d.props.data.user.id,
                                                             id: t.id,
                                                             hasAdFree: r,
                                                             hasFastChat: i,
                                                             hasSubOnlyVideoArchive: o,
                                                             hasSubOnlyChat: s
-                                                        }, [4, c.props.updateSubscriptionProduct(Object(E.a)(n))]) : [2, "continue"];
+                                                        }, [4, d.props.updateSubscriptionProduct(Object(E.a)(n))]) : [2, "continue"];
                                                     case 1:
-                                                        return d = a.sent(), Object(E.e)(vt, {
-                                                            login: c.props.channelName
+                                                        return c = a.sent(), Object(E.e)(vt, {
+                                                            login: d.props.channelName
                                                         }, function(t) {
-                                                            if (t && t.user && t.user.subscriptionProducts && d.data.updateSubscriptionProduct) {
+                                                            if (t && t.user && t.user.subscriptionProducts && c.data.updateSubscriptionProduct) {
                                                                 var n = t.user.subscriptionProducts[e],
-                                                                    a = d.data.updateSubscriptionProduct.product;
+                                                                    a = c.data.updateSubscriptionProduct.product;
                                                                 if (n && a) return n.id = a.id, n.hasAdFree = a.hasAdFree, n.hasFastChat = a.hasFastChat, n.hasSubonlyVideoArchive = a.hasSubonlyVideoArchive, n.hasSubOnlyChat = a.hasSubOnlyChat, t
                                                             }
                                                         }), [2]
                                                 }
                                             })
-                                        }, c = this, u = 0, m.label = 1;
+                                        }, d = this, u = 0, m.label = 1;
                                     case 1:
-                                        return u < l.length ? [5, d(u)] : [3, 4];
+                                        return u < l.length ? [5, c(u)] : [3, 4];
                                     case 2:
                                         m.sent(), m.label = 3;
                                     case 3:
@@ -9524,7 +9650,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            kt = Object(h.d)(Object(u.a)(vt, {
+            kt = Object(g.d)(Object(u.a)(vt, {
                 options: function(e) {
                     return {
                         variables: {
@@ -9547,7 +9673,7 @@ webpackJsonp([98], {
                         fillContent: !0
                     })) : this.props.data.error ? r.createElement(S._8, {
                         fullHeight: !0
-                    }, r.createElement(l.a, null)) : r.createElement(c.b, null, r.createElement(S._8, {
+                    }, r.createElement(l.a, null)) : r.createElement(d.b, null, r.createElement(S._8, {
                         fullHeight: !0
                     }, r.createElement(mt, {
                         channelName: this.channelName
@@ -9658,25 +9784,26 @@ webpackJsonp([98], {
                 }, t
             }(r.Component);
         var Pt, It = Object(Te.b)(null, function(e) {
-                return Object(h.b)({
+                return Object(g.b)({
                     closeModal: Ne.c
                 }, e)
             })(Ct),
-            wt = this,
-            Rt = "subscriptions/v1/channels",
-            xt = function() {
+            wt = n("WrTc"),
+            Rt = this,
+            xt = "subscriptions/v1/channels",
+            Dt = function() {
                 function e() {}
                 return e.getBadges = function(e) {
-                    return a.__awaiter(wt, void 0, void 0, function() {
+                    return a.__awaiter(Rt, void 0, void 0, function() {
                         var t, n;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return a.trys.push([0, 2, , 3]), [4, re.a.getOrThrow(Rt + "/" + e + "/badges", {
+                                    return a.trys.push([0, 2, , 3]), [4, re.a.getOrThrow(xt + "/" + e + "/badges", {
                                         credentials: "include"
                                     })];
                                 case 1:
-                                    return t = a.sent(), [2, jt(t.body)];
+                                    return t = a.sent(), [2, Ft(t.body)];
                                 case 2:
                                     return n = a.sent(), [2, Promise.reject(n)];
                                 case 3:
@@ -9685,12 +9812,12 @@ webpackJsonp([98], {
                         })
                     })
                 }, e.getTimeoutStatuses = function(e) {
-                    return a.__awaiter(wt, void 0, void 0, function() {
+                    return a.__awaiter(Rt, void 0, void 0, function() {
                         var t;
                         return a.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return n.trys.push([0, 2, , 3]), [4, re.a.getOrThrow(Rt + "/" + e + "/timeout_statuses", {
+                                    return n.trys.push([0, 2, , 3]), [4, re.a.getOrThrow(xt + "/" + e + "/timeout_statuses", {
                                         credentials: "include"
                                     })];
                                 case 1:
@@ -9703,12 +9830,12 @@ webpackJsonp([98], {
                         })
                     })
                 }, e.deleteBadge = function(e, t) {
-                    return a.__awaiter(wt, void 0, void 0, function() {
+                    return a.__awaiter(Rt, void 0, void 0, function() {
                         var n;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return a.trys.push([0, 2, , 3]), [4, re.a.deleteOrThrow(Rt + "/" + e + "/badges/" + t, {
+                                    return a.trys.push([0, 2, , 3]), [4, re.a.deleteOrThrow(xt + "/" + e + "/badges/" + t, {
                                         credentials: "include"
                                     })];
                                 case 1:
@@ -9721,17 +9848,17 @@ webpackJsonp([98], {
                         })
                     })
                 }, e.uploadBadge = function(e, t) {
-                    return a.__awaiter(wt, void 0, void 0, function() {
+                    return a.__awaiter(Rt, void 0, void 0, function() {
                         var n, r, i;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return a.trys.push([0, 2, , 3]), (n = new FormData).append("required_tenure_months", t.requiredTenureMonths.toString()), n.append("image_1x", t.image1x), n.append("image_2x", t.image2x), n.append("image_4x", t.image4x), [4, re.a.postOrThrow(Rt + "/" + e + "/badges", {
+                                    return a.trys.push([0, 2, , 3]), (n = new FormData).append("required_tenure_months", t.requiredTenureMonths.toString()), n.append("image_1x", t.image1x), n.append("image_2x", t.image2x), n.append("image_4x", t.image4x), [4, re.a.postOrThrow(xt + "/" + e + "/badges", {
                                         body: n,
                                         credentials: "include"
                                     })];
                                 case 1:
-                                    return r = a.sent(), [2, Dt(r.body)];
+                                    return r = a.sent(), [2, jt(r.body)];
                                 case 2:
                                     return i = a.sent(), [2, Promise.reject(i)];
                                 case 3:
@@ -9741,7 +9868,7 @@ webpackJsonp([98], {
                     })
                 }, e
             }(),
-            Dt = function(e) {
+            jt = function(e) {
                 return {
                     id: e.id,
                     requiredTenureMonths: e.required_tenure_months,
@@ -9751,21 +9878,21 @@ webpackJsonp([98], {
                     title: e.title
                 }
             },
-            jt = function(e) {
+            Ft = function(e) {
                 return e.map(function(e) {
-                    return Dt(e)
+                    return jt(e)
                 })
             },
-            Ft = n("OjIq"),
-            Mt = (n("CRdy"), "https://static-cdn.jtvnw.net/badges/v1/19dd8673-124d-4f44-830c-b0f4f9d78635/2"),
-            Lt = "current-badge-image-selector",
-            Ut = "current-badge-placeholder-selector",
-            Bt = function(e) {
+            Mt = n("OjIq"),
+            Lt = (n("CRdy"), "https://static-cdn.jtvnw.net/badges/v1/19dd8673-124d-4f44-830c-b0f4f9d78635/2"),
+            Ut = "current-badge-image-selector",
+            Bt = "current-badge-placeholder-selector",
+            Vt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCurrentBadges = function() {
                         var e = new Map(t.props.badgesMap),
-                            n = nn.map(t => {
+                            n = an.map(t => {
                                 const {
                                     requiredTenureMonths: n
                                 } = t, a = e.get(n);
@@ -9776,7 +9903,7 @@ webpackJsonp([98], {
                                     }
                                     return this.renderCurrentBadgePlaceholder(t)
                                 } {
-                                    const e = this.renderToolTip(Object(p.d)("Subscriber", "LoyaltyBadgeCurrentSection"), Mt);
+                                    const e = this.renderToolTip(Object(p.d)("Subscriber", "LoyaltyBadgeCurrentSection"), Lt);
                                     return this.renderCurrentBadgeImage(t, e)
                                 }
                             });
@@ -9787,10 +9914,10 @@ webpackJsonp([98], {
                             }
                         }, n)
                     }, t.renderCurrentBadgeImage = function(e, n) {
-                        var a = Lt;
+                        var a = Ut;
                         return t.renderCurrentBadge(e, "loyalty-badges-current-section__badge", a, n)
                     }, t.renderCurrentBadgePlaceholder = function(e) {
-                        var n = Ut;
+                        var n = Bt;
                         return t.renderCurrentBadge(e, "loyalty-badges-current-section__placeholder", n)
                     }, t.renderCurrentBadge = function(e, t, n, a) {
                         return r.createElement(S._8, {
@@ -9818,7 +9945,7 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(Ft.a, {
+                    return r.createElement(Mt.a, {
                         title: Object(p.d)("Current Badges", "LoyaltyBadgeCurrentSection")
                     }, this.renderCurrentBadges())
                 }, t
@@ -9827,7 +9954,7 @@ webpackJsonp([98], {
         ! function(e) {
             e[e.NoChanges = 0] = "NoChanges", e[e.Working = 1] = "Working", e[e.Success = 2] = "Success", e[e.Error = 3] = "Error"
         }(Pt || (Pt = {}));
-        var Vt = function(e) {
+        var Wt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderContainer = function(e, n) {
@@ -9881,7 +10008,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            Wt = function(e) {
+            Qt = function(e) {
                 return r.createElement(S._35, {
                     background: S.n.Base,
                     padding: {
@@ -9923,7 +10050,7 @@ webpackJsonp([98], {
                     closeOnPageNavigation: !0
                 }))
             },
-            Qt = function(e) {
+            Yt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onDeleteClick = function() {
@@ -9933,27 +10060,27 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(Wt, {
+                    return r.createElement(Qt, {
                         onDeleteClick: this.onDeleteClick,
                         onClose: this.onCancelClick
                     })
                 }, t
             }(r.Component);
-        var Yt = Object(Te.b)(null, function(e) {
-            return Object(h.b)({
+        var Gt = Object(Te.b)(null, function(e) {
+            return Object(g.b)({
                 closeModal: Ne.c
             }, e)
-        })(Qt);
-        var Gt, zt = Object(Te.b)(null, function(e, t) {
-                return Object.assign(Object(h.b)({
+        })(Yt);
+        var zt, Ht = Object(Te.b)(null, function(e, t) {
+                return Object.assign(Object(g.b)({
                     showDeleteBadgeModal: function() {
-                        return Object(Ne.d)(Yt, {
+                        return Object(Ne.d)(Gt, {
                             onDeleteClick: t.onDeleteClick
                         })
                     }
                 }, e), t)
-            })(Vt),
-            Ht = function() {
+            })(Wt),
+            Xt = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S.Q, {
                     bold: !0,
                     fontSize: S.V.Size7
@@ -9971,7 +10098,7 @@ webpackJsonp([98], {
                     }, "partnerhelp@twitch.tv")
                 }, "LoyaltyBadgeTimedOutSection"))))
             },
-            Xt = function() {
+            qt = function() {
                 function e() {}
                 return e.readFile = function(e, t) {
                     var n = new FileReader;
@@ -9990,29 +10117,29 @@ webpackJsonp([98], {
         n("jlxi");
         ! function(e) {
             e[e.BadSizeError = 0] = "BadSizeError", e[e.BadImageError = 1] = "BadImageError", e[e.BadImageDimensionsError = 2] = "BadImageDimensionsError", e[e.None = 3] = "None"
-        }(Gt || (Gt = {}));
-        var qt = 25e3,
-            Kt = qt / 1e3,
-            $t = ["image/png"],
-            Zt = function(e) {
+        }(zt || (zt = {}));
+        var Kt = 25e3,
+            $t = Kt / 1e3,
+            Zt = ["image/png"],
+            Jt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        errorStatus: Gt.None
+                        errorStatus: zt.None
                     }, t.getErrorText = function() {
                         switch (t.state.errorStatus) {
-                            case Gt.BadSizeError:
+                            case zt.BadSizeError:
                                 return Object(p.d)("Max file size is {fileSize} KB", {
-                                    fileSize: Kt
+                                    fileSize: $t
                                 }, "LoyaltyBadgeFilePicker");
-                            case Gt.BadImageError:
+                            case zt.BadImageError:
                                 return Object(p.d)("Bad PNG file", "LoyaltyBadgeFilePicker");
-                            case Gt.BadImageDimensionsError:
+                            case zt.BadImageDimensionsError:
                                 return Object(p.d)("PNG must be {width} x {height}px", {
                                     width: t.props.widthRequirement,
                                     height: t.props.heightRequirement
                                 }, "LoyaltyBadgeFilePicker");
-                            case Gt.None:
+                            case zt.None:
                             default:
                                 return
                         }
@@ -10020,20 +10147,20 @@ webpackJsonp([98], {
                         return a.__awaiter(t, void 0, void 0, function() {
                             var t, n = this;
                             return a.__generator(this, function(a) {
-                                return e.length < 1 ? [2] : (t = e[0]).size > qt ? (this.setState({
-                                    errorStatus: Gt.BadSizeError
-                                }), [2]) : (Xt.readFile(t, function(e) {
-                                    Xt.readImage(e, n.props.widthRequirement, n.props.heightRequirement, function() {
+                                return e.length < 1 ? [2] : (t = e[0]).size > Kt ? (this.setState({
+                                    errorStatus: zt.BadSizeError
+                                }), [2]) : (qt.readFile(t, function(e) {
+                                    qt.readImage(e, n.props.widthRequirement, n.props.heightRequirement, function() {
                                         n.setState({
-                                            errorStatus: Gt.None
+                                            errorStatus: zt.None
                                         }), n.props.onFileSubmitted(t, e)
                                     }, function() {
                                         n.setState({
-                                            errorStatus: Gt.BadImageDimensionsError
+                                            errorStatus: zt.BadImageDimensionsError
                                         })
                                     }, function() {
                                         n.setState({
-                                            errorStatus: Gt.BadImageError
+                                            errorStatus: zt.BadImageError
                                         })
                                     })
                                 }), [2])
@@ -10056,7 +10183,7 @@ webpackJsonp([98], {
                         flexDirection: S.T.Column,
                         position: S._15.Relative
                     }, r.createElement(A.a, {
-                        allowedFileTypes: $t,
+                        allowedFileTypes: Zt,
                         error: void 0 !== e,
                         onFilesSubmitted: this.onFilesSubmitted
                     }, r.createElement(S._8, {
@@ -10073,7 +10200,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            Jt = function(e) {
+            en = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderFilePickerContents = function() {
@@ -10089,19 +10216,19 @@ webpackJsonp([98], {
                         t = e.image1xURL,
                         n = e.image2xURL,
                         a = e.image4xURL;
-                    return r.createElement(r.Fragment, null, r.createElement(Zt, {
+                    return r.createElement(r.Fragment, null, r.createElement(Jt, {
                         onFileSubmitted: this.props.onImage1xSubmitted,
                         heightRequirement: 18,
                         widthRequirement: 18
                     }, t ? r.createElement("img", {
                         src: t
-                    }) : this.renderFilePickerContents()), r.createElement(Zt, {
+                    }) : this.renderFilePickerContents()), r.createElement(Jt, {
                         onFileSubmitted: this.props.onImage2xSubmitted,
                         heightRequirement: 36,
                         widthRequirement: 36
                     }, n ? r.createElement("img", {
                         src: n
-                    }) : this.renderFilePickerContents()), r.createElement(Zt, {
+                    }) : this.renderFilePickerContents()), r.createElement(Jt, {
                         onFileSubmitted: this.props.onImage4xSubmitted,
                         heightRequirement: 72,
                         widthRequirement: 72
@@ -10110,13 +10237,13 @@ webpackJsonp([98], {
                     }) : this.renderFilePickerContents()))
                 }, t
             }(r.Component),
-            en = function(e) {
+            tn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isTimedOut: !1
                     }, t.renderTabs = function() {
-                        var e = nn.map(function(e) {
+                        var e = an.map(function(e) {
                             var n = e.requiredTenureMonths;
                             return r.createElement(S._36, {
                                 key: n,
@@ -10134,14 +10261,14 @@ webpackJsonp([98], {
                             margin: {
                                 top: 1
                             }
-                        }, n ? r.createElement(zt, {
+                        }, n ? r.createElement(Ht, {
                             image1xURL: n.image1xURL,
                             image2xURL: n.image2xURL,
                             image4xURL: n.image4xURL,
                             title: n.title,
                             onDeleteClick: t.props.onDeleteClick,
                             deleteStatus: t.props.deleteStatus
-                        }) : r.createElement(Jt, {
+                        }) : r.createElement(en, {
                             image1xURL: t.props.image1xDataURL,
                             image2xURL: t.props.image2xDataURL,
                             image4xURL: t.props.image4xDataURL,
@@ -10154,7 +10281,7 @@ webpackJsonp([98], {
                             var t, n, r, i, o;
                             return a.__generator(this, function(a) {
                                 if (e.currentTarget.parentElement)
-                                    for (t = e.currentTarget.parentElement.getAttribute("data-tab-target"), n = 0, r = nn; n < r.length; n++) i = r[n], o = i.requiredTenureMonths, t === o.toString() && this.props.toggleActiveTab(o);
+                                    for (t = e.currentTarget.parentElement.getAttribute("data-tab-target"), n = 0, r = an; n < r.length; n++) i = r[n], o = i.requiredTenureMonths, t === o.toString() && this.props.toggleActiveTab(o);
                                 return [2]
                             })
                         })
@@ -10166,7 +10293,7 @@ webpackJsonp([98], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, xt.getTimeoutStatuses(this.props.channelId)];
+                                    return [4, Dt.getTimeoutStatuses(this.props.channelId)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         isTimedOut: e
@@ -10175,13 +10302,13 @@ webpackJsonp([98], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return r.createElement(Ft.a, {
+                    return r.createElement(Mt.a, {
                         title: Object(p.d)("Manage Badges", "LoyaltyBadgeManageSection")
-                    }, this.state.isTimedOut ? r.createElement(Ht, null) : r.createElement(r.Fragment, null, this.renderTabs(), this.renderTabContent()))
+                    }, this.state.isTimedOut ? r.createElement(Xt, null) : r.createElement(r.Fragment, null, this.renderTabs(), this.renderTabContent()))
                 }, t
             }(r.Component),
-            tn = n("/D4H"),
-            nn = [{
+            nn = n("/D4H"),
+            an = [{
                 name: "Base",
                 requiredTenureMonths: 0
             }, {
@@ -10215,7 +10342,7 @@ webpackJsonp([98], {
                 name: "8-Year",
                 requiredTenureMonths: 96
             }],
-            an = function(e) {
+            rn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10239,7 +10366,7 @@ webpackJsonp([98], {
                                             image4x: this.state.image4x
                                         }, a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, xt.uploadBadge(e.id, t)];
+                                        return a.trys.push([1, 3, , 4]), [4, Dt.uploadBadge(e.id, t)];
                                     case 2:
                                         return n = a.sent(), (r = new Map(this.state.badgesMap)).set(n.requiredTenureMonths, n), this.setState({
                                             badgesMap: r,
@@ -10320,7 +10447,7 @@ webpackJsonp([98], {
                                             deleteStatus: Pt.Working
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, xt.deleteBadge(e.id, t.id)];
+                                        return a.trys.push([1, 3, , 4]), [4, Dt.deleteBadge(e.id, t.id)];
                                     case 2:
                                         return a.sent(), (n = new Map(this.state.badgesMap)).delete(t.requiredTenureMonths), this.setState({
                                             badgesMap: n,
@@ -10354,7 +10481,7 @@ webpackJsonp([98], {
                         return a.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return this.props.data.user && this.props.data.user.id ? [4, xt.getBadges(this.props.data.user.id)] : [2];
+                                    return this.props.data.user && this.props.data.user.id ? [4, Dt.getBadges(this.props.data.user.id)] : [2];
                                 case 1:
                                     return e = n.sent(), t = new Map, e.forEach(function(e) {
                                         t.set(e.requiredTenureMonths, e)
@@ -10368,18 +10495,18 @@ webpackJsonp([98], {
                     if (!this.props.data.user || !this.props.data.user.id) return this.props.data.loading ? r.createElement(S._10, {
                         fillContent: !0
                     }) : this.props.data.error ? r.createElement(l.a, null) : void 0;
-                    var e = r.createElement(V.a, {
+                    var e = r.createElement(wt.a, {
                         status: this.state.saveStatus,
                         onClickSave: this.handleModalOpen
                     });
-                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
                         title: Object(p.d)("Loyalty Badges", "LoyaltyBadgesPageComponent"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(U.a, {
                         footer: e
-                    }, r.createElement(Bt, {
+                    }, r.createElement(Vt, {
                         badgesMap: this.state.badgesMap
-                    }), r.createElement(en, {
+                    }), r.createElement(tn, {
                         activeTab: this.state.activeTab,
                         badgesMap: this.state.badgesMap,
                         channelId: this.props.data.user.id,
@@ -10395,7 +10522,7 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component),
-            rn = Object(h.d)(Object(u.a)(tn, {
+            on = Object(g.d)(Object(u.a)(nn, {
                 options: function(e) {
                     return {
                         variables: {
@@ -10403,21 +10530,21 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }))(an);
-        var on, sn, ln = Object(Te.b)(null, function(e) {
-                return Object(h.b)({
+            }))(rn);
+        var sn, ln, cn = Object(Te.b)(null, function(e) {
+                return Object(g.b)({
                     showUploadBadgeModal: function(e) {
                         var t = a.__rest(e, []);
                         return Object(Ne.d)(It, t)
                     }
                 }, e)
-            })(rn),
+            })(on),
             dn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
                         title: Object(p.d)("Merch by Amazon (Beta)", "DashboardRevenueSettingsMerchByAmazon"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(U.a, null, r.createElement(S._35, {
@@ -10433,17 +10560,17 @@ webpackJsonp([98], {
                     }, Object(p.d)("Create & Manage Your Merch Account", "DashboardRevenueSettingsMerchByAmazon")))))
                 }, t
             }(r.Component),
-            cn = Object(h.d)(Object(m.d)("MerchByAmazonPage", {
+            un = Object(g.d)(Object(m.d)("MerchByAmazonPage", {
                 autoReportInteractive: !0,
                 destination: ke.a.DashboardSettingsRevenueMerchByAmazon
             }), Object(Se.a)({
                 location: _e.PageviewLocation.DashboardSettingsRevenueMerchByAmazon
             }))(dn),
-            un = n("OAwv"),
-            mn = n("RweG"),
-            pn = n("wuJz"),
+            mn = n("OAwv"),
+            pn = n("RweG"),
+            hn = n("wuJz"),
             gn = n("7GS+"),
-            hn = function() {
+            bn = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -10462,7 +10589,7 @@ webpackJsonp([98], {
                     }
                 }, "AffiliateAgreement")))
             },
-            bn = function() {
+            fn = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -10475,7 +10602,7 @@ webpackJsonp([98], {
                     buttonLabel: Object(p.d)("Next", "CustomPartnerAgreement")
                 }, "CustomPartnerAgreement")))
             },
-            fn = function() {
+            En = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -10488,7 +10615,7 @@ webpackJsonp([98], {
                     buttonLabel: Object(p.d)("Next", "ExtensionsDeveloperAgreement")
                 }, "ExtensionsDeveloperAgreement")))
             },
-            En = function(e) {
+            vn = function(e) {
                 return r.createElement(S._35, {
                     background: S.n.Alt2,
                     padding: {
@@ -10517,7 +10644,7 @@ webpackJsonp([98], {
                     type: e.statusType
                 }))))
             },
-            vn = function(e) {
+            yn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10537,7 +10664,7 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(r.Fragment, null, r.createElement(En, {
+                    return r.createElement(r.Fragment, null, r.createElement(vn, {
                         title: Object(p.d)("Parent Consent", "ParentConfirmation")
                     }), r.createElement(S._8, {
                         padding: 2
@@ -10567,7 +10694,7 @@ webpackJsonp([98], {
                     })))))
                 }, t
             }(r.Component),
-            yn = function() {
+            Sn = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -10580,7 +10707,7 @@ webpackJsonp([98], {
                     buttonLabel: Object(p.d)("Next", "PartnerRedoInfo")
                 }, "PartnerRedoInfo")))
             },
-            Sn = function(e) {
+            kn = function(e) {
                 return r.createElement(S._8, {
                     position: S._15.Relative
                 }, r.createElement(S._8, {
@@ -10602,8 +10729,8 @@ webpackJsonp([98], {
                     }
                 }))
             },
-            kn = n("U5GC"),
-            _n = function(e) {
+            _n = n("U5GC"),
+            Tn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10661,10 +10788,10 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.data.loading) return r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._14, {
+                    if (this.props.data.loading) return r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._14, {
                         lineCount: 4
                     })));
-                    if (this.props.data.error) return r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(l.a, {
+                    if (this.props.data.error) return r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(l.a, {
                         message: Object(p.d)("Oops, something went wrong.", "PayoutOnboardingAgreement")
                     })));
                     var e = r.createElement(S.v, {
@@ -10677,31 +10804,31 @@ webpackJsonp([98], {
                     }, this.skipAgreement ? Object(p.d)("Next", "PayoutOnboardingAgreement") : Object(p.d)("Agree", "PayoutOnboardingAgreement"));
                     return r.createElement(U.a, {
                         footer: e
-                    }, r.createElement(Ft.a, null, r.createElement(S._35, {
+                    }, r.createElement(Mt.a, null, r.createElement(S._35, {
                         borderMarked: !0,
                         background: S.n.Base,
                         padding: 2,
                         elevation: 1
-                    }, this.renderAgreement)), !this.skipAgreement && this.requiresParentConsent && r.createElement(vn, {
+                    }, this.renderAgreement)), !this.skipAgreement && this.requiresParentConsent && r.createElement(yn, {
                         updateParentName: this.updateParentName,
                         updateParentConfirmation: this.updateParentConfirmation
                     }))
                 }, Object.defineProperty(t.prototype, "renderAgreement", {
                     get: function() {
-                        if (this.isPartnerRedo) return r.createElement(yn, null);
+                        if (this.isPartnerRedo) return r.createElement(Sn, null);
                         switch (this.props.onboardEntity) {
                             case Ke.OnboardEntity.Affiliate:
-                                return r.createElement(hn, null);
+                                return r.createElement(bn, null);
                             case Ke.OnboardEntity.ExtensionsDeveloper:
-                                return r.createElement(fn, null);
+                                return r.createElement(En, null);
                             case Ke.OnboardEntity.StandardPartner:
                             case Ke.OnboardEntity.PremiumPartner:
                                 var e = this.props.data.currentUser.programAgreement;
-                                return e && r.createElement(Sn, {
+                                return e && r.createElement(kn, {
                                     body: e.body
                                 });
                             case Ke.OnboardEntity.CustomPartner:
-                                return r.createElement(bn, null);
+                                return r.createElement(fn, null);
                             default:
                                 return null
                         }
@@ -10728,7 +10855,7 @@ webpackJsonp([98], {
                     get: function() {
                         if (!this.props.workflow.registration) return !1;
                         var e = this.props.workflow.registration.birthdate;
-                        return Object(pn.differenceInYears)(new Date, e) < 18
+                        return Object(hn.differenceInYears)(new Date, e) < 18
                     },
                     enumerable: !0,
                     configurable: !0
@@ -10740,7 +10867,7 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            Tn = Object(h.d)(Object(u.a)(kn, {
+            Nn = Object(g.d)(Object(u.a)(_n, {
                 name: "data",
                 options: function(e) {
                     return {
@@ -10751,11 +10878,11 @@ webpackJsonp([98], {
                 }
             }), Object(u.a)(gn, {
                 name: "acceptProgramAgreement"
-            }))(_n),
-            Nn = function(e) {
-                if (e.status === sn.Completed) return null;
+            }))(Tn),
+            On = function(e) {
+                if (e.status === ln.Completed) return null;
                 var t;
-                if (e.status === sn.UnderReview) switch (e.onboardEntity) {
+                if (e.status === ln.UnderReview) switch (e.onboardEntity) {
                         case Ke.OnboardEntity.ExtensionsDeveloper:
                             t = r.createElement(S.Q, null, Object(p.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutInfoBrick"));
                             break;
@@ -10764,7 +10891,7 @@ webpackJsonp([98], {
                         case Ke.OnboardEntity.PremiumPartner:
                         case Ke.OnboardEntity.CustomPartner:
                             t = r.createElement(S.Q, null, Object(p.d)("Your payout information is currently under review. This typically only takes a few minutes.", "PayoutInfoBrick"))
-                    } else if (e.status === sn.NotStarted) switch (e.onboardEntity) {
+                    } else if (e.status === ln.NotStarted) switch (e.onboardEntity) {
                         case Ke.OnboardEntity.ExtensionsDeveloper:
                             t = r.createElement(r.Fragment, null, r.createElement(S._8, {
                                 margin: {
@@ -10805,7 +10932,7 @@ webpackJsonp([98], {
                         elevation: 1
                     }, t)
             },
-            On = function(e) {
+            An = function(e) {
                 var t;
                 switch (e.onboardEntity) {
                     case Ke.OnboardEntity.Affiliate:
@@ -10834,13 +10961,13 @@ webpackJsonp([98], {
                     }
                 }, "OnboardingGuideLink"))
             },
-            An = function(e) {
+            Cn = function(e) {
                 var t;
-                return e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper ? (e.status === sn.NotStarted && (t = r.createElement(S.Q, null, Object(p.d)("Click the button below to submit your financial information.", "PayoutInfoText"))), e.status === sn.UnderReview && (t = r.createElement(S.Q, null, Object(p.d)("You can change your financial information if you wish to modify any previously submitted information. You may want to do this if your financial information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === sn.Completed && (t = r.createElement(r.Fragment, null, r.createElement(S._8, {
+                return e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper ? (e.status === ln.NotStarted && (t = r.createElement(S.Q, null, Object(p.d)("Click the button below to submit your financial information.", "PayoutInfoText"))), e.status === ln.UnderReview && (t = r.createElement(S.Q, null, Object(p.d)("You can change your financial information if you wish to modify any previously submitted information. You may want to do this if your financial information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === ln.Completed && (t = r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
                     }
-                }, r.createElement(S.Q, null, Object(p.d)("Your financial information was successfully validated.", "PayoutInfoText"))), r.createElement(S.Q, null, Object(p.d)("Click the button below if you wish to modify or correct any previously submitted financial information. Please note that this will erase your existing financial information and you will need to fully complete the form again.", "PayoutInfoText"))))) : (e.status === sn.NotStarted && (t = r.createElement(S.Q, null, Object(p.d)("Click the button below to submit your payout method.", "PayoutInfoText"))), e.status === sn.UnderReview && (t = r.createElement(S.Q, null, Object(p.d)("You can change your payout method if you wish to modify any previously submitted information. You may want to do this if your payout information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === sn.Completed && (t = r.createElement(r.Fragment, null, r.createElement(S._8, {
+                }, r.createElement(S.Q, null, Object(p.d)("Your financial information was successfully validated.", "PayoutInfoText"))), r.createElement(S.Q, null, Object(p.d)("Click the button below if you wish to modify or correct any previously submitted financial information. Please note that this will erase your existing financial information and you will need to fully complete the form again.", "PayoutInfoText"))))) : (e.status === ln.NotStarted && (t = r.createElement(S.Q, null, Object(p.d)("Click the button below to submit your payout method.", "PayoutInfoText"))), e.status === ln.UnderReview && (t = r.createElement(S.Q, null, Object(p.d)("You can change your payout method if you wish to modify any previously submitted information. You may want to do this if your payout information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === ln.Completed && (t = r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
                     }
@@ -10848,17 +10975,17 @@ webpackJsonp([98], {
                     margin: {
                         bottom: 2
                     }
-                }, t), e.status !== sn.Completed && r.createElement(S._8, {
+                }, t), e.status !== ln.Completed && r.createElement(S._8, {
                     margin: {
                         bottom: 2
                     }
-                }, r.createElement(On, {
+                }, r.createElement(An, {
                     onboardEntity: e.onboardEntity
                 })))
             },
-            Cn = n("+8VM"),
-            Pn = n("yDzg"),
-            In = (n("mfHG"), function(e) {
+            Pn = n("+8VM"),
+            In = n("yDzg"),
+            wn = (n("mfHG"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10891,8 +11018,8 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(r.Component)),
-            wn = n("uAAQ"),
-            Rn = (n("212O"), function(e) {
+            Rn = n("uAAQ"),
+            xn = (n("212O"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -10913,7 +11040,7 @@ webpackJsonp([98], {
                         className: "payout-method-modal__container",
                         background: S.n.Base,
                         padding: 2
-                    }, r.createElement(In, {
+                    }, r.createElement(wn, {
                         tipaltiURL: this.tipaltiURL
                     }))
                 }, Object.defineProperty(t.prototype, "tipaltiURL", {
@@ -10924,34 +11051,34 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component)),
-            xn = Object(h.d)(Object(u.a)(wn, {
+            Dn = Object(g.d)(Object(u.a)(Rn, {
                 options: function() {
                     return {
                         variables: {
-                            redirectURL: Object(Pn.a)(window.location.href, {
+                            redirectURL: Object(In.a)(window.location.href, {
                                 redirect_tipalti: "true"
                             })
                         }
                     }
                 }
-            }))(Rn),
-            Dn = function(e) {
+            }))(xn),
+            jn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(r.Fragment, null, r.createElement(xn, null), r.createElement(Cn.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(Dn, null), r.createElement(Pn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(r.Component);
         ! function(e) {
             e.ContinueButton = "payout-onboarding-payout-method__continue-button", e.HeaderStatus = "payout-onboarding-payout-method__header-status"
-        }(on || (on = {})),
+        }(sn || (sn = {})),
         function(e) {
             e[e.NotStarted = 0] = "NotStarted", e[e.UnderReview = 1] = "UnderReview", e[e.Completed = 2] = "Completed"
-        }(sn || (sn = {}));
-        var jn = function(e) {
+        }(ln || (ln = {}));
+        var Fn = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.openPayoutMethodModal = function() {
@@ -10962,30 +11089,30 @@ webpackJsonp([98], {
                 }, t
             }
             return a.__extends(t, e), t.prototype.render = function() {
-                return r.createElement(U.a, null, r.createElement(En, {
+                return r.createElement(U.a, null, r.createElement(vn, {
                     title: Object(p.d)("Payout Method", "PayoutOnboardingPayoutMethod"),
                     statusText: this.payoutStatusText,
                     statusType: this.payoutStatusType,
                     borderTop: !0,
-                    "data-test-selector": on.HeaderStatus
+                    "data-test-selector": sn.HeaderStatus
                 }), r.createElement(S._35, {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: 2
-                }, r.createElement(Nn, {
+                }, r.createElement(On, {
                     onboardEntity: this.props.onboardEntity,
                     status: this.payoutMethodStatus
-                }), r.createElement(An, {
+                }), r.createElement(Cn, {
                     onboardEntity: this.props.onboardEntity,
                     status: this.payoutMethodStatus
                 }), r.createElement(S.v, {
                     onClick: this.openPayoutMethodModal,
-                    type: this.payoutMethodStatus === sn.NotStarted ? S.B.Default : S.B.Hollow
+                    type: this.payoutMethodStatus === ln.NotStarted ? S.B.Default : S.B.Hollow
                 }, this.payoutMethodButtonText)), r.createElement(S._35, {
                     padding: 2,
                     background: S.n.Alt2
                 }, r.createElement(S.v, {
-                    "data-test-selector": on.ContinueButton,
+                    "data-test-selector": sn.ContinueButton,
                     size: S.z.Large,
                     onClick: this.handleContinueClick,
                     disabled: this.continueButtonDisabled
@@ -11000,13 +11127,13 @@ webpackJsonp([98], {
                 get: function() {
                     switch (this.props.workflow.currentStep) {
                         case Ke.WorkflowState.PAYOUT_METHOD_PENDING:
-                            return sn.UnderReview;
+                            return ln.UnderReview;
                         case Ke.WorkflowState.COMPLETED:
                         case Ke.WorkflowState.REVIEW_PENDING:
                         case Ke.WorkflowState.AGREEMENT_PENDING_UPGRADE:
-                            return sn.Completed;
+                            return ln.Completed;
                         default:
-                            return sn.NotStarted
+                            return ln.NotStarted
                     }
                 },
                 enumerable: !0,
@@ -11014,9 +11141,9 @@ webpackJsonp([98], {
             }), Object.defineProperty(t.prototype, "payoutStatusText", {
                 get: function() {
                     switch (this.payoutMethodStatus) {
-                        case sn.UnderReview:
+                        case ln.UnderReview:
                             return Object(p.d)("Under Review", "PayoutOnboardingPayoutMethod");
-                        case sn.Completed:
+                        case ln.Completed:
                             return Object(p.d)("Completed", "PayoutOnboardingPayoutMethod");
                         default:
                             return Object(p.d)("Not Started", "PayoutOnboardingPayoutMethod")
@@ -11027,9 +11154,9 @@ webpackJsonp([98], {
             }), Object.defineProperty(t.prototype, "payoutStatusType", {
                 get: function() {
                     switch (this.payoutMethodStatus) {
-                        case sn.UnderReview:
+                        case ln.UnderReview:
                             return S._13.Warn;
-                        case sn.Completed:
+                        case ln.Completed:
                             return S._13.Success;
                         default:
                             return
@@ -11039,7 +11166,7 @@ webpackJsonp([98], {
                 configurable: !0
             }), Object.defineProperty(t.prototype, "payoutMethodButtonText", {
                 get: function() {
-                    return this.isExtensionsDeveloperOnboarding ? this.payoutMethodStatus === sn.NotStarted ? Object(p.d)("Set Financial Information", "PayoutOnboardingPayoutMethod") : Object(p.d)("Change Financial Information", "PayoutOnboardingPayoutMethod") : this.payoutMethodStatus === sn.NotStarted ? Object(p.d)("Set Payout Method", "PayoutOnboardingPayoutMethod") : Object(p.d)("Change Payout Method", "PayoutOnboardingPayoutMethod")
+                    return this.isExtensionsDeveloperOnboarding ? this.payoutMethodStatus === ln.NotStarted ? Object(p.d)("Set Financial Information", "PayoutOnboardingPayoutMethod") : Object(p.d)("Change Financial Information", "PayoutOnboardingPayoutMethod") : this.payoutMethodStatus === ln.NotStarted ? Object(p.d)("Set Payout Method", "PayoutOnboardingPayoutMethod") : Object(p.d)("Change Payout Method", "PayoutOnboardingPayoutMethod")
                 },
                 enumerable: !0,
                 configurable: !0
@@ -11052,28 +11179,28 @@ webpackJsonp([98], {
                 configurable: !0
             }), t
         }(r.Component);
-        var Fn, Mn = Object(h.d)(Object(Te.b)(null, function(e) {
-                return Object(h.b)({
+        var Mn, Ln = Object(g.d)(Object(Te.b)(null, function(e) {
+                return Object(g.b)({
                     showPayoutMethodModal: function() {
-                        return Object(Ne.d)(Dn, null)
+                        return Object(Ne.d)(jn, null)
                     }
                 }, e)
-            }))(jn),
-            Ln = /^[\s\da-zA-Z&\-,‘'\/#\.%]*$/,
-            Un = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-            Bn = function() {
+            }))(Fn),
+            Un = /^[\s\da-zA-Z&\-,‘'\/#\.%]*$/,
+            Bn = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+            Vn = function() {
                 return Object(p.d)("Only the English alphabet (non-accented Latin characters), numbers, and these special characters & - , ‘ / # . % are accepted.", "PayoutOnboardingRegistration")
             },
-            Vn = function() {
+            Wn = function() {
                 return Object(p.d)("Must provide a valid email address.", "PayoutOnboardingRegistration")
             },
-            Wn = function() {
+            Qn = function() {
                 return Object(p.d)("optional", "PayoutOnboardingRegistration")
             };
         ! function(e) {
             e.FIRST_NAME = "contact-info__first-name", e.MIDDLE_NAME = "contact-info__middle-name", e.LAST_NAME = "contact-info__last-name", e.EMAIL = "contact-info__email", e.CONFIRM_EMAIL = "contact-info__confirm-email", e.COMPANY_LEGAL_NAME = "contact-info__company-legal-name"
-        }(Fn || (Fn = {}));
-        var Qn, Yn = function(e) {
+        }(Mn || (Mn = {}));
+        var Yn, Gn = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -11126,19 +11253,19 @@ webpackJsonp([98], {
             }
             return a.__extends(t, e), Object.defineProperty(t.prototype, "invalidFormatErrorMessage", {
                 get: function() {
-                    return Bn()
+                    return Vn()
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "invalidEmailErrorMessage", {
                 get: function() {
-                    return Vn()
+                    return Wn()
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "optionalText", {
                 get: function() {
-                    return Wn()
+                    return Qn()
                 },
                 enumerable: !0,
                 configurable: !0
@@ -11163,15 +11290,15 @@ webpackJsonp([98], {
                 }, r.createElement(S.W, {
                     label: Object(p.d)("First Name", "ContactInfo"),
                     orientation: S.X.Horizontal,
-                    error: !Ln.test(this.state.firstName),
+                    error: !Un.test(this.state.firstName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Fn.FIRST_NAME
+                    "data-test-selector": Mn.FIRST_NAME
                 }, r.createElement(S._4, {
                     autoFocus: !0,
                     type: S._5.Text,
                     value: this.state.firstName,
                     onChange: this.updateFirstName,
-                    error: !Ln.test(this.state.firstName)
+                    error: !Un.test(this.state.firstName)
                 }))), r.createElement(S._8, {
                     margin: {
                         bottom: 2
@@ -11180,14 +11307,14 @@ webpackJsonp([98], {
                     label: Object(p.d)("Middle Name", "ContactInfo"),
                     labelOptional: this.optionalText,
                     orientation: S.X.Horizontal,
-                    error: !Ln.test(this.state.middleName),
+                    error: !Un.test(this.state.middleName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Fn.MIDDLE_NAME
+                    "data-test-selector": Mn.MIDDLE_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.middleName,
                     onChange: this.updateMiddleName,
-                    error: !Ln.test(this.state.middleName)
+                    error: !Un.test(this.state.middleName)
                 }))), r.createElement(S._8, {
                     margin: {
                         bottom: 2
@@ -11196,19 +11323,19 @@ webpackJsonp([98], {
                     label: Object(p.d)("Last Name", "ContactInfo"),
                     hint: Object(p.d)("Please type your full legal name. This must be the name shown on your income tax return used to report income.", "ContactInfo"),
                     orientation: S.X.Horizontal,
-                    error: !Ln.test(this.state.lastName),
+                    error: !Un.test(this.state.lastName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Fn.LAST_NAME
+                    "data-test-selector": Mn.LAST_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.lastName,
                     onChange: this.updateLastName,
-                    error: !Ln.test(this.state.lastName)
+                    error: !Un.test(this.state.lastName)
                 }))), r.createElement(S._8, {
                     margin: {
                         bottom: 2
                     }
-                }, r.createElement(ka, {
+                }, r.createElement(_a, {
                     onMonthChange: this.props.onMonthChange,
                     onDayChange: this.props.onDayChange,
                     onYearChange: this.props.onYearChange
@@ -11220,16 +11347,16 @@ webpackJsonp([98], {
                     label: Object(p.d)("Email", "ContactInfo"),
                     hint: Object(p.d)("We will use this email to send you important tax documentation and payout information.", "ContactInfo"),
                     orientation: S.X.Horizontal,
-                    error: !!this.state.email && !Un.test(this.state.email) && this.state.showEmailErrors,
+                    error: !!this.state.email && !Bn.test(this.state.email) && this.state.showEmailErrors,
                     errorMessage: this.invalidEmailErrorMessage,
-                    "data-test-selector": Fn.EMAIL
+                    "data-test-selector": Mn.EMAIL
                 }, r.createElement(S._4, {
                     type: S._5.Email,
                     value: this.state.email,
                     onChange: this.updateEmail,
                     onFocus: this.hideEmailErrors,
                     onBlur: this.showEmailErrors,
-                    error: !!this.state.email && !Un.test(this.state.email) && this.state.showEmailErrors
+                    error: !!this.state.email && !Bn.test(this.state.email) && this.state.showEmailErrors
                 }))), r.createElement(S._8, {
                     margin: {
                         bottom: 2
@@ -11239,7 +11366,7 @@ webpackJsonp([98], {
                     orientation: S.X.Horizontal,
                     error: this.state.email !== this.state.confirmEmail && this.state.showEmailErrors,
                     errorMessage: Object(p.d)("Email addresses must match.", "ContactInfo"),
-                    "data-test-selector": Fn.CONFIRM_EMAIL
+                    "data-test-selector": Mn.CONFIRM_EMAIL
                 }, r.createElement(S._4, {
                     type: S._5.Email,
                     value: this.state.confirmEmail,
@@ -11251,21 +11378,21 @@ webpackJsonp([98], {
                     label: Object(p.d)("Company Legal Name", "ContactInfo"),
                     labelOptional: this.optionalText,
                     orientation: S.X.Horizontal,
-                    error: !Ln.test(this.state.companyName),
+                    error: !Un.test(this.state.companyName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Fn.COMPANY_LEGAL_NAME
+                    "data-test-selector": Mn.COMPANY_LEGAL_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.companyName,
                     onChange: this.updateCompanyName,
-                    error: !Ln.test(this.state.companyName)
+                    error: !Un.test(this.state.companyName)
                 }))))
             }, t
         }(r.Component);
         ! function(e) {
             e.PARENT_NAME = "parent-info__parent-name", e.PARENT_EMAIL = "parent-info__parent-email"
-        }(Qn || (Qn = {}));
-        var Gn = function(e) {
+        }(Yn || (Yn = {}));
+        var zn = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -11287,13 +11414,13 @@ webpackJsonp([98], {
                 this.props.onParentNameChange(""), this.props.onParentEmailChange("")
             }, Object.defineProperty(t.prototype, "invalidFormatErrorMessage", {
                 get: function() {
-                    return Bn()
+                    return Vn()
                 },
                 enumerable: !0,
                 configurable: !0
             }), Object.defineProperty(t.prototype, "invalidEmailErrorMessage", {
                 get: function() {
-                    return Vn()
+                    return Wn()
                 },
                 enumerable: !0,
                 configurable: !0
@@ -11307,31 +11434,31 @@ webpackJsonp([98], {
                 }, r.createElement(S.W, {
                     label: Object(p.d)("Parent or Legal Guardian Name", "ParentInfo"),
                     orientation: S.X.Horizontal,
-                    error: !Ln.test(this.state.parentName),
+                    error: !Un.test(this.state.parentName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Qn.PARENT_NAME
+                    "data-test-selector": Yn.PARENT_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.parentName,
                     onChange: this.updateParentName,
-                    error: !Ln.test(this.state.parentName)
+                    error: !Un.test(this.state.parentName)
                 }))), r.createElement(S._8, null, r.createElement(S.W, {
                     label: Object(p.d)("Parent or Legal Guardian Email", "ParentInfo"),
                     hint: Object(p.d)("Individuals under the age of 18 must provide parent or legal guardian information.", "ParentInfo"),
                     orientation: S.X.Horizontal,
-                    error: !!this.state.parentEmail && !Un.test(this.state.parentEmail),
+                    error: !!this.state.parentEmail && !Bn.test(this.state.parentEmail),
                     errorMessage: this.invalidEmailErrorMessage,
-                    "data-test-selector": Qn.PARENT_EMAIL
+                    "data-test-selector": Yn.PARENT_EMAIL
                 }, r.createElement(S._4, {
                     type: S._5.Email,
                     value: this.state.parentEmail,
                     onChange: this.updateParentEmail,
-                    error: !!this.state.parentEmail && !Un.test(this.state.parentEmail)
+                    error: !!this.state.parentEmail && !Bn.test(this.state.parentEmail)
                 }))))
             }, t
         }(r.Component);
 
-        function zn(e) {
+        function Hn(e) {
             switch (e.toUpperCase()) {
                 case "AB":
                     return Object(p.d)("Alberta", "format-canada-state");
@@ -11363,10 +11490,10 @@ webpackJsonp([98], {
                     return e
             }
         }
-        var Hn = ["AB", "BC", "MB", "NB", "NL", "NT", "NS", "NU", "ON", "PE", "QC", "SK", "YT"],
-            Xn = n("yLtb");
+        var Xn = ["AB", "BC", "MB", "NB", "NL", "NT", "NS", "NU", "ON", "PE", "QC", "SK", "YT"],
+            qn = n("yLtb");
 
-        function qn(e) {
+        function Kn(e) {
             switch (e.toUpperCase()) {
                 case "AL":
                     return Object(p.d)("Alabama", "format-usa-state");
@@ -11480,12 +11607,12 @@ webpackJsonp([98], {
                     return e
             }
         }
-        var Kn, $n = ["AL", "AK", "AZ", "AR", "AA", "AE", "AP", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"],
-            Zn = ["A1", "A2", "AP", "CU", "EU", "IR", "KP", "MM", "SD", "SS", "SY", "TL"];
+        var $n, Zn = ["AL", "AK", "AZ", "AR", "AA", "AE", "AP", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"],
+            Jn = ["A1", "A2", "AP", "CU", "EU", "IR", "KP", "MM", "SD", "SS", "SY", "TL"];
         ! function(e) {
             e.COUNTRY = "permanent-address__country", e.STREET_ADDRESS = "permanent-address__street-address", e.STREET_ADDRESS_2 = "permanent-address__street-address-2", e.CITY = "permanent-address__city", e.STATE = "permanent-address__state", e.POSTAL = "permanent-address__postal"
-        }(Kn || (Kn = {}));
-        var Jn, ea = function(e) {
+        }($n || ($n = {}));
+        var ea, ta = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11495,21 +11622,21 @@ webpackJsonp([98], {
                         city: "",
                         state: "",
                         postal: ""
-                    }, t.countrySelections = Xn.a.map(function(e) {
-                        return Zn.includes(e) ? null : r.createElement("option", {
+                    }, t.countrySelections = qn.a.map(function(e) {
+                        return Jn.includes(e) ? null : r.createElement("option", {
                             value: e,
                             key: "countryCode-" + e
-                        }, Object(Xn.b)(e))
-                    }), t.usaStateSelections = $n.map(function(e) {
+                        }, Object(qn.b)(e))
+                    }), t.usaStateSelections = Zn.map(function(e) {
                         return r.createElement("option", {
                             value: e,
                             key: "usaStateCode-" + e
-                        }, qn(e))
-                    }), t.canadaStateSelections = Hn.map(function(e) {
+                        }, Kn(e))
+                    }), t.canadaStateSelections = Xn.map(function(e) {
                         return r.createElement("option", {
                             value: e,
                             key: "canadaState-" + e
-                        }, zn(e))
+                        }, Hn(e))
                     }), t.handleCountryChange = function(e) {
                         var n = e.target.value,
                             a = "";
@@ -11574,13 +11701,13 @@ webpackJsonp([98], {
                 }
                 return a.__extends(t, e), Object.defineProperty(t.prototype, "invalidFormatErrorMessage", {
                     get: function() {
-                        return Bn()
+                        return Vn()
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "optionalText", {
                     get: function() {
-                        return Wn()
+                        return Qn()
                     },
                     enumerable: !0,
                     configurable: !0
@@ -11603,7 +11730,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._30, {
                         defaultValue: "",
                         onChange: this.handleCountryChange,
-                        "data-test-selector": Kn.COUNTRY
+                        "data-test-selector": $n.COUNTRY
                     }, r.createElement("option", {
                         value: "",
                         disabled: !0
@@ -11614,14 +11741,14 @@ webpackJsonp([98], {
                     }, r.createElement(S.W, {
                         label: Object(p.d)("Street Address", "PermanentAddress"),
                         orientation: S.X.Horizontal,
-                        error: !Ln.test(this.state.streetAddress),
+                        error: !Un.test(this.state.streetAddress),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Kn.STREET_ADDRESS
+                        "data-test-selector": $n.STREET_ADDRESS
                     }, r.createElement(S._4, {
                         type: S._5.Text,
                         value: this.state.streetAddress,
                         onChange: this.handleStreetAddressChange,
-                        error: !Ln.test(this.state.streetAddress)
+                        error: !Un.test(this.state.streetAddress)
                     }))), r.createElement(S._8, {
                         margin: {
                             bottom: 2
@@ -11630,14 +11757,14 @@ webpackJsonp([98], {
                         label: Object(p.d)("Street Address 2", "PermanentAddress"),
                         labelOptional: this.optionalText,
                         orientation: S.X.Horizontal,
-                        error: !Ln.test(this.state.streetAddress2),
+                        error: !Un.test(this.state.streetAddress2),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Kn.STREET_ADDRESS_2
+                        "data-test-selector": $n.STREET_ADDRESS_2
                     }, r.createElement(S._4, {
                         type: S._5.Text,
                         value: this.state.streetAddress2,
                         onChange: this.handleStreetAddress2Change,
-                        error: !Ln.test(this.state.streetAddress2)
+                        error: !Un.test(this.state.streetAddress2)
                     }))), r.createElement(S._8, {
                         margin: {
                             bottom: 2
@@ -11645,14 +11772,14 @@ webpackJsonp([98], {
                     }, r.createElement(S.W, {
                         label: Object(p.d)("City or Town", "PermanentAddress"),
                         orientation: S.X.Horizontal,
-                        error: !Ln.test(this.state.city),
+                        error: !Un.test(this.state.city),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Kn.CITY
+                        "data-test-selector": $n.CITY
                     }, r.createElement(S._4, {
                         type: S._5.Text,
                         value: this.state.city,
                         onChange: this.handleCityChange,
-                        error: !Ln.test(this.state.city)
+                        error: !Un.test(this.state.city)
                     }))), r.createElement(S._8, {
                         margin: {
                             bottom: 2
@@ -11661,9 +11788,9 @@ webpackJsonp([98], {
                         label: Object(p.d)("State/Province", "PermanentAddress"),
                         labelOptional: "US" !== this.state.country && "CA" !== this.state.country ? this.optionalText : void 0,
                         orientation: S.X.Horizontal,
-                        error: !Ln.test(this.state.state),
+                        error: !Un.test(this.state.state),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Kn.STATE
+                        "data-test-selector": $n.STATE
                     }, "US" === this.state.country && r.createElement(S._30, {
                         onChange: this.handleStateSelectionChange
                     }, this.usaStateSelections), "CA" === this.state.country && r.createElement(S._30, {
@@ -11672,24 +11799,24 @@ webpackJsonp([98], {
                         type: S._5.Text,
                         value: this.state.state,
                         onChange: this.handleStateInputChange,
-                        error: !Ln.test(this.state.state)
+                        error: !Un.test(this.state.state)
                     }))), r.createElement(S._8, null, r.createElement(S.W, {
                         label: Object(p.d)("Zip Code/Postal Code", "PermanentAddress"),
                         labelOptional: "US" !== this.state.country ? this.optionalText : void 0,
                         orientation: S.X.Horizontal,
-                        error: !Ln.test(this.state.postal),
+                        error: !Un.test(this.state.postal),
                         errorMessage: this.invalidFormatErrorMessage,
-                        "data-test-selector": Kn.POSTAL
+                        "data-test-selector": $n.POSTAL
                     }, r.createElement(S._4, {
                         type: S._5.Text,
                         value: this.state.postal,
                         onChange: this.handlePostalChange,
                         onBlur: this.formatUniquePostalCodes,
-                        error: !Ln.test(this.state.postal)
+                        error: !Un.test(this.state.postal)
                     }))))
                 }, t
             }(r.Component),
-            ta = function() {
+            na = function() {
                 return Object(p.d)("Please fill them out using the following guidelines: <x:link>Amazon Tax Information Interview Guidelines</x:link>", {
                     "x:link": function(e) {
                         return r.createElement(S.O, {
@@ -11700,7 +11827,7 @@ webpackJsonp([98], {
                     }
                 }, "RegistrationInfoBrick")
             },
-            na = function() {
+            aa = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -11719,7 +11846,7 @@ webpackJsonp([98], {
                     }
                 }, r.createElement(S.Q, {
                     type: S._49.P
-                }, ta())), r.createElement(S._8, {
+                }, na())), r.createElement(S._8, {
                     margin: {
                         bottom: 1
                     }
@@ -11735,7 +11862,7 @@ webpackJsonp([98], {
                     type: S._49.P
                 }, Object(p.d)("You will be able to edit this page later if your information changes.", "RegistrationInfoBrick"))))
             },
-            aa = function() {
+            ra = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._8, {
                     margin: {
                         bottom: 1
@@ -11748,33 +11875,33 @@ webpackJsonp([98], {
                     }
                 }, r.createElement(S.Q, {
                     type: S._49.P
-                }, ta())), r.createElement(S.Q, {
+                }, na())), r.createElement(S.Q, {
                     type: S._49.P
                 }, Object(p.d)("This form must match your tax information exactly, and any inconsistencies may cause delays in your Payout Registration approval. Don't worry, you will still be able to edit this page later on if your information changes.", "RegistrationInfoBrick")))
             },
-            ra = function(e) {
+            ia = function(e) {
                 return r.createElement(S._35, {
                     padding: 2,
                     borderMarked: !0,
                     background: S.n.Base,
                     elevation: 1
-                }, e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper ? r.createElement(na, null) : r.createElement(aa, null))
+                }, e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper ? r.createElement(aa, null) : r.createElement(ra, null))
             };
         ! function(e) {
             e.MONTH = "select-birthdate__month", e.YEAR = "select-birthdate__year", e.DAY = "select-birthdate__day"
-        }(Jn || (Jn = {}));
-        for (var ia = [], oa = (new Date).getFullYear(), sa = oa; sa > oa - 100; sa--) ia.push(r.createElement("option", {
-            value: sa,
-            key: "year-" + sa
-        }, sa));
-        var la, da, ca, ua, ma, pa, ga, ha, ba, fa, Ea, va, ya, Sa, ka = function(e) {
+        }(ea || (ea = {}));
+        for (var oa = [], sa = (new Date).getFullYear(), la = sa; la > sa - 100; la--) oa.push(r.createElement("option", {
+            value: la,
+            key: "year-" + la
+        }, la));
+        var ca, da, ua, ma, pa, ha, ga, ba, fa, Ea, va, ya, Sa, ka, _a = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         month: void 0,
                         year: void 0,
                         day: void 0
-                    }, t.yearSelections = ia, t.handleMonthChange = function(e) {
+                    }, t.yearSelections = oa, t.handleMonthChange = function(e) {
                         var n = +e.target.value;
                         return t.setState({
                             month: n
@@ -11796,12 +11923,12 @@ webpackJsonp([98], {
                             i = n.year;
                         if (void 0 === a || void 0 === r || void 0 === i) return !1;
                         var o = new Date(i, a, r);
-                        return Object(pn.differenceInYears)(new Date, o) < e
+                        return Object(hn.differenceInYears)(new Date, o) < e
                     }, t
                 }
                 return a.__extends(t, e), Object.defineProperty(t.prototype, "daySelections", {
                     get: function() {
-                        for (var e = this.state.month, t = this.state.year || oa, n = void 0 !== e ? new Date(t, e + 1, 0).getDate() : 31, a = [], i = 1; i <= n; i++) a.push(r.createElement("option", {
+                        for (var e = this.state.month, t = this.state.year || sa, n = void 0 !== e ? new Date(t, e + 1, 0).getDate() : 31, a = [], i = 1; i <= n; i++) a.push(r.createElement("option", {
                             value: i,
                             key: "day-" + i
                         }, i));
@@ -11825,7 +11952,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._30, {
                         defaultValue: "",
                         onChange: this.handleMonthChange,
-                        "data-test-selector": Jn.MONTH
+                        "data-test-selector": ea.MONTH
                     }, r.createElement("option", {
                         value: "",
                         disabled: !0
@@ -11860,7 +11987,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._30, {
                         defaultValue: "",
                         onChange: this.handleDayChange,
-                        "data-test-selector": Jn.DAY
+                        "data-test-selector": ea.DAY
                     }, r.createElement("option", {
                         value: "",
                         disabled: !0
@@ -11871,15 +11998,15 @@ webpackJsonp([98], {
                     }, r.createElement(S._30, {
                         defaultValue: "",
                         onChange: this.handleYearChange,
-                        "data-test-selector": Jn.YEAR
+                        "data-test-selector": ea.YEAR
                     }, r.createElement("option", {
                         value: "",
                         disabled: !0
                     }, Object(p.d)("Year", "SelectBirthdate")), this.yearSelections))))
                 }, t
             }(r.Component),
-            _a = n("pMje"),
-            Ta = function(e) {
+            Ta = n("pMje"),
+            Na = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11973,7 +12100,7 @@ webpackJsonp([98], {
                             i = n.year;
                         if (void 0 === a || void 0 === r || void 0 === i) return !1;
                         var o = new Date(i, a, r);
-                        return Object(pn.differenceInYears)(new Date, o) < e
+                        return Object(hn.differenceInYears)(new Date, o) < e
                     }, t.handleContinueClick = function() {
                         t.setState({
                             submittingRegistration: !0
@@ -11981,8 +12108,8 @@ webpackJsonp([98], {
                     }, t.submitPayoutRegistration = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
                             var e, t, n, r, i, o, s, l;
-                            return a.__generator(this, function(d) {
-                                switch (d.label) {
+                            return a.__generator(this, function(c) {
+                                switch (c.label) {
                                     case 0:
                                         if (e = this.state, t = e.year, n = e.month, r = e.day, void 0 === n || void 0 === r || void 0 === t) return [2];
                                         i = new Date(t, n, r), o = a.__assign({}, Object(E.a)({
@@ -12001,17 +12128,17 @@ webpackJsonp([98], {
                                             streetAddress2: this.state.streetAddress2,
                                             parentName: this.state.parentName,
                                             parentEmail: this.state.parentEmail
-                                        })), d.label = 1;
+                                        })), c.label = 1;
                                     case 1:
-                                        return d.trys.push([1, 3, , 4]), [4, this.props.registerPayoutInformation(o)];
+                                        return c.trys.push([1, 3, , 4]), [4, this.props.registerPayoutInformation(o)];
                                     case 2:
-                                        return (s = d.sent()).data.registerPayoutInformation.error ? (this.setState({
+                                        return (s = c.sent()).data.registerPayoutInformation.error ? (this.setState({
                                             submittingRegistration: !1
                                         }), [2]) : (l = function(e) {
                                             return e.currentUser.payoutInvite.workflow && s.data.registerPayoutInformation.workflow && (e.currentUser.payoutInvite.workflow.currentStep = s.data.registerPayoutInformation.workflow.currentStep, e.currentUser.payoutInvite.workflow.registration = s.data.registerPayoutInformation.workflow.registration), e
                                         }, this.props.updateContainerQuery(l), this.props.updateStepDisplayed(Ke.OnboardStep.Agreement), [3, 4]);
                                     case 3:
-                                        return d.sent(), this.setState({
+                                        return c.sent(), this.setState({
                                             submittingRegistration: !1
                                         }), [3, 4];
                                     case 4:
@@ -12032,11 +12159,11 @@ webpackJsonp([98], {
                     }, Object(p.d)("Continue", "PayoutOnboardingRegistration"));
                     return r.createElement(U.a, {
                         footer: e
-                    }, r.createElement(Ft.a, null, r.createElement(ra, {
+                    }, r.createElement(Mt.a, null, r.createElement(ia, {
                         onboardEntity: this.props.onboardEntity
-                    })), r.createElement(En, {
+                    })), r.createElement(vn, {
                         title: Object(p.d)("Contact Info", "PayoutOnboardingRegistration")
-                    }), r.createElement(Yn, {
+                    }), r.createElement(Gn, {
                         channelName: this.props.channelName,
                         onFirstNameChange: this.updateFirstName,
                         onMiddleNameChange: this.updateMiddleName,
@@ -12047,18 +12174,18 @@ webpackJsonp([98], {
                         onEmailChange: this.updateEmail,
                         onConfirmEmailChange: this.updateConfirmEmail,
                         onCompanyNameChange: this.updateCompanyName
-                    }), r.createElement(En, {
+                    }), r.createElement(vn, {
                         title: Object(p.d)("Permanent Address", "PayoutOnboardingRegistration")
-                    }), r.createElement(ea, {
+                    }), r.createElement(ta, {
                         onCountryChange: this.updateCountry,
                         onStreetAddressChange: this.updateStreetAddress,
                         onStreetAddress2Change: this.updateStreetAddress2,
                         onCityChange: this.updateCity,
                         onStateChange: this.updateState,
                         onPostalChange: this.updatePostal
-                    }), this.isUserYoungerThan(18) && r.createElement(r.Fragment, null, r.createElement(En, {
+                    }), this.isUserYoungerThan(18) && r.createElement(r.Fragment, null, r.createElement(vn, {
                         title: Object(p.d)("Parent Info", "PayoutOnboardingRegistration")
-                    }), r.createElement(Gn, {
+                    }), r.createElement(zn, {
                         onParentNameChange: this.updateParentName,
                         onParentEmailChange: this.updateParentEmail
                     })))
@@ -12082,28 +12209,28 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "validEmail", {
                     get: function() {
-                        return Un.test(this.state.email) && this.state.email === this.state.confirmEmail
+                        return Bn.test(this.state.email) && this.state.email === this.state.confirmEmail
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "validAge", {
                     get: function() {
-                        return !this.isUserYoungerThan(13) && !(this.isUserYoungerThan(18) && !(this.state.parentName && Ln.test(this.state.parentName) && this.state.parentEmail && Un.test(this.state.parentEmail)))
+                        return !this.isUserYoungerThan(13) && !(this.isUserYoungerThan(18) && !(this.state.parentName && Un.test(this.state.parentName) && this.state.parentEmail && Bn.test(this.state.parentEmail)))
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "validInputFormat", {
                     get: function() {
-                        return !!(Ln.test(this.state.firstName) && Ln.test(this.state.lastName) && Ln.test(this.state.country) && Ln.test(this.state.streetAddress) && Ln.test(this.state.city)) && !(this.state.middleName && !Ln.test(this.state.middleName) || this.state.companyName && !Ln.test(this.state.companyName) || this.state.streetAddress2 && !Ln.test(this.state.streetAddress2) || this.state.state && !Ln.test(this.state.state) || this.state.postal && !Ln.test(this.state.postal))
+                        return !!(Un.test(this.state.firstName) && Un.test(this.state.lastName) && Un.test(this.state.country) && Un.test(this.state.streetAddress) && Un.test(this.state.city)) && !(this.state.middleName && !Un.test(this.state.middleName) || this.state.companyName && !Un.test(this.state.companyName) || this.state.streetAddress2 && !Un.test(this.state.streetAddress2) || this.state.state && !Un.test(this.state.state) || this.state.postal && !Un.test(this.state.postal))
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            Na = Object(h.d)(Object(u.a)(_a, {
+            Oa = Object(g.d)(Object(u.a)(Ta, {
                 name: "registerPayoutInformation"
-            }))(Ta),
-            Oa = function(e) {
+            }))(Na),
+            Aa = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleContinueClick = function() {
@@ -12111,7 +12238,7 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(U.a, null, r.createElement(En, {
+                    return r.createElement(U.a, null, r.createElement(vn, {
                         title: Object(p.d)("Partnership Approval", "PayoutOnboardingReview"),
                         statusText: this.statusText,
                         statusType: this.statusType,
@@ -12149,118 +12276,107 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            Aa = function() {
+            Ca = function() {
                 return Object(p.d)("Partner Onboarding", "PayoutOnboardingContainer")
             },
-            Ca = function() {
+            Pa = function() {
                 return Object(p.d)("Manage or modify your payout information.", "PayoutOnboardingContainer")
             },
-            Pa = function() {
+            Ia = function() {
                 return Object(p.d)("Payout Registration", "PayoutOnboardingContainer")
             },
-            Ia = function() {
+            wa = function() {
                 return Object(p.d)("Begin your payout registration.", "PayoutOnboardingContainer")
             },
-            wa = function() {
+            Ra = function() {
                 return Object(p.d)("Twitch Partner Agreement", "PayoutOnboardingContainer")
             },
-            Ra = function() {
+            xa = function() {
                 return Object(p.d)("Agree to the Twitch Partner Agreement.", "PayoutOnboardingContainer")
             },
-            xa = function() {
+            Da = function() {
                 return Object(p.d)("Tax Interviews", "PayoutOnboardingContainer")
             },
-            Da = function() {
+            ja = function() {
                 return Object(p.d)("Submit your tax information. The two forms below are very similar, but the information is used for different situations, so both forms are required and should be filled out carefully.", "PayoutOnboardingContainer")
             },
-            ja = function() {
+            Fa = function() {
                 return Object(p.d)("Payout Setup", "PayoutOnboardingContainer")
             },
-            Fa = function() {
+            Ma = function() {
                 return Object(p.d)("Choose your payout method.", "PayoutOnboardingContainer")
             },
-            Ma = ((la = {})[Ke.OnboardStep.Summary] = {
+            La = ((ca = {})[Ke.OnboardStep.Summary] = {
                 title: (da = {}, da[Ke.OnboardEntity.Affiliate] = function() {
                     return Object(p.d)("Affiliate Onboarding", "PayoutOnboardingContainer")
                 }, da[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Extensions Developer Onboarding", "PayoutOnboardingContainer")
                 }, da[Ke.OnboardEntity.StandardPartner] = function() {
-                    return Aa()
+                    return Ca()
                 }, da[Ke.OnboardEntity.PremiumPartner] = function() {
-                    return Aa()
+                    return Ca()
                 }, da[Ke.OnboardEntity.CustomPartner] = function() {
-                    return Aa()
+                    return Ca()
                 }, da),
-                description: (ca = {}, ca[Ke.OnboardEntity.Affiliate] = function() {
-                    return Ca()
-                }, ca[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
-                    return Object(p.d)("Manage or modify your Extensions Developer Onboarding.", "PayoutOnboardingContainer")
-                }, ca[Ke.OnboardEntity.StandardPartner] = function() {
-                    return Ca()
-                }, ca[Ke.OnboardEntity.PremiumPartner] = function() {
-                    return Ca()
-                }, ca[Ke.OnboardEntity.CustomPartner] = function() {
-                    return Ca()
-                }, ca)
-            }, la[Ke.OnboardStep.Registration] = {
-                title: (ua = {}, ua[Ke.OnboardEntity.Affiliate] = function() {
+                description: (ua = {}, ua[Ke.OnboardEntity.Affiliate] = function() {
                     return Pa()
                 }, ua[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
-                    return Object(p.d)("Extensions Developer Registration", "PayoutOnboardingContainer")
+                    return Object(p.d)("Manage or modify your Extensions Developer Onboarding.", "PayoutOnboardingContainer")
                 }, ua[Ke.OnboardEntity.StandardPartner] = function() {
                     return Pa()
                 }, ua[Ke.OnboardEntity.PremiumPartner] = function() {
                     return Pa()
                 }, ua[Ke.OnboardEntity.CustomPartner] = function() {
                     return Pa()
-                }, ua),
-                description: (ma = {}, ma[Ke.OnboardEntity.Affiliate] = function() {
+                }, ua)
+            }, ca[Ke.OnboardStep.Registration] = {
+                title: (ma = {}, ma[Ke.OnboardEntity.Affiliate] = function() {
                     return Ia()
                 }, ma[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
-                    return Object(p.d)("Begin your Extensions Developer Registration.", "PayoutOnboardingContainer")
+                    return Object(p.d)("Extensions Developer Registration", "PayoutOnboardingContainer")
                 }, ma[Ke.OnboardEntity.StandardPartner] = function() {
                     return Ia()
                 }, ma[Ke.OnboardEntity.PremiumPartner] = function() {
                     return Ia()
                 }, ma[Ke.OnboardEntity.CustomPartner] = function() {
                     return Ia()
-                }, ma)
-            }, la[Ke.OnboardStep.Agreement] = {
-                title: (pa = {}, pa[Ke.OnboardEntity.Affiliate] = function() {
-                    return Object(p.d)("Twitch Affiliate Agreement", "PayoutOnboardingContainer")
+                }, ma),
+                description: (pa = {}, pa[Ke.OnboardEntity.Affiliate] = function() {
+                    return wa()
                 }, pa[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
-                    return Object(p.d)("Twitch Extensions Developer Agreement", "PayoutOnboardingContainer")
+                    return Object(p.d)("Begin your Extensions Developer Registration.", "PayoutOnboardingContainer")
                 }, pa[Ke.OnboardEntity.StandardPartner] = function() {
                     return wa()
                 }, pa[Ke.OnboardEntity.PremiumPartner] = function() {
                     return wa()
                 }, pa[Ke.OnboardEntity.CustomPartner] = function() {
                     return wa()
-                }, pa),
+                }, pa)
+            }, ca[Ke.OnboardStep.Agreement] = {
+                title: (ha = {}, ha[Ke.OnboardEntity.Affiliate] = function() {
+                    return Object(p.d)("Twitch Affiliate Agreement", "PayoutOnboardingContainer")
+                }, ha[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
+                    return Object(p.d)("Twitch Extensions Developer Agreement", "PayoutOnboardingContainer")
+                }, ha[Ke.OnboardEntity.StandardPartner] = function() {
+                    return Ra()
+                }, ha[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return Ra()
+                }, ha[Ke.OnboardEntity.CustomPartner] = function() {
+                    return Ra()
+                }, ha),
                 description: (ga = {}, ga[Ke.OnboardEntity.Affiliate] = function() {
                     return Object(p.d)("Agree to the Twitch Affiliate Agreement.", "PayoutOnboardingContainer")
                 }, ga[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Agree to the Twitch Extensions Developer Agreement.", "PayoutOnboardingContainer")
                 }, ga[Ke.OnboardEntity.StandardPartner] = function() {
-                    return Ra()
+                    return xa()
                 }, ga[Ke.OnboardEntity.PremiumPartner] = function() {
-                    return Ra()
+                    return xa()
                 }, ga[Ke.OnboardEntity.CustomPartner] = function() {
-                    return Ra()
+                    return xa()
                 }, ga)
-            }, la[Ke.OnboardStep.TaxInterview] = {
-                title: (ha = {}, ha[Ke.OnboardEntity.Affiliate] = function() {
-                    return xa()
-                }, ha[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
-                    return xa()
-                }, ha[Ke.OnboardEntity.StandardPartner] = function() {
-                    return xa()
-                }, ha[Ke.OnboardEntity.PremiumPartner] = function() {
-                    return xa()
-                }, ha[Ke.OnboardEntity.CustomPartner] = function() {
-                    return xa()
-                }, ha),
-                description: (ba = {}, ba[Ke.OnboardEntity.Affiliate] = function() {
+            }, ca[Ke.OnboardStep.TaxInterview] = {
+                title: (ba = {}, ba[Ke.OnboardEntity.Affiliate] = function() {
                     return Da()
                 }, ba[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Da()
@@ -12270,42 +12386,53 @@ webpackJsonp([98], {
                     return Da()
                 }, ba[Ke.OnboardEntity.CustomPartner] = function() {
                     return Da()
-                }, ba)
-            }, la[Ke.OnboardStep.PayoutMethod] = {
-                title: (fa = {}, fa[Ke.OnboardEntity.Affiliate] = function() {
+                }, ba),
+                description: (fa = {}, fa[Ke.OnboardEntity.Affiliate] = function() {
                     return ja()
                 }, fa[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
-                    return Object(p.d)("Financial Information", "PayoutOnboardingContainer")
+                    return ja()
                 }, fa[Ke.OnboardEntity.StandardPartner] = function() {
                     return ja()
                 }, fa[Ke.OnboardEntity.PremiumPartner] = function() {
                     return ja()
                 }, fa[Ke.OnboardEntity.CustomPartner] = function() {
                     return ja()
-                }, fa),
-                description: (Ea = {}, Ea[Ke.OnboardEntity.Affiliate] = function() {
+                }, fa)
+            }, ca[Ke.OnboardStep.PayoutMethod] = {
+                title: (Ea = {}, Ea[Ke.OnboardEntity.Affiliate] = function() {
                     return Fa()
                 }, Ea[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
-                    return Object(p.d)("Submit your financial information.", "PayoutOnboardingContainer")
+                    return Object(p.d)("Financial Information", "PayoutOnboardingContainer")
                 }, Ea[Ke.OnboardEntity.StandardPartner] = function() {
                     return Fa()
                 }, Ea[Ke.OnboardEntity.PremiumPartner] = function() {
                     return Fa()
                 }, Ea[Ke.OnboardEntity.CustomPartner] = function() {
                     return Fa()
-                }, Ea)
-            }, la[Ke.OnboardStep.Review] = {
-                title: (va = {}, va[Ke.OnboardEntity.CustomPartner] = function() {
+                }, Ea),
+                description: (va = {}, va[Ke.OnboardEntity.Affiliate] = function() {
+                    return Ma()
+                }, va[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
+                    return Object(p.d)("Submit your financial information.", "PayoutOnboardingContainer")
+                }, va[Ke.OnboardEntity.StandardPartner] = function() {
+                    return Ma()
+                }, va[Ke.OnboardEntity.PremiumPartner] = function() {
+                    return Ma()
+                }, va[Ke.OnboardEntity.CustomPartner] = function() {
+                    return Ma()
+                }, va)
+            }, ca[Ke.OnboardStep.Review] = {
+                title: (ya = {}, ya[Ke.OnboardEntity.CustomPartner] = function() {
                     return Object(p.d)("Partnership Approval", "PayoutOnboardingContainer")
-                }, va),
-                description: (ya = {}, ya[Ke.OnboardEntity.CustomPartner] = function() {
+                }, ya),
+                description: (Sa = {}, Sa[Ke.OnboardEntity.CustomPartner] = function() {
                     return Object(p.d)("The Partnership Team will validate your paperwork and activate your new agreement.", "PayoutOnboardingContainer")
-                }, ya)
-            }, la),
-            La = function() {
+                }, Sa)
+            }, ca),
+            Ua = function() {
                 return Object(p.d)("Continue", "InProgressInfo")
             },
-            Ua = function(e) {
+            Ba = function(e) {
                 var t = e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper;
                 return r.createElement(S._8, {
                     margin: {
@@ -12318,9 +12445,9 @@ webpackJsonp([98], {
                 }, r.createElement(S.Q, {
                     type: S._49.P
                 }, t ? Object(p.d)("Your developer registration is currently in progress. Please click {buttonLabel} to pick up where you left off.", {
-                    buttonLabel: La()
+                    buttonLabel: Ua()
                 }, "InProgressInfo") : Object(p.d)("Your payout setup is currently in progress. Please click {buttonLabel} to pick up where you left off.", {
-                    buttonLabel: La()
+                    buttonLabel: Ua()
                 }, "InProgressInfo"))), r.createElement(S._2, {
                     margin: {
                         bottom: 1
@@ -12333,7 +12460,7 @@ webpackJsonp([98], {
                     type: S._49.P
                 }, t ? Object(p.d)("NOTE: Starting over will lose any progress.", "InProgressInfo") : Object(p.d)("NOTE: If you choose Start Over you will delete any stored payout information on your account and we will hold any payouts until you have fully completed the form.", "InProgressInfo")))
             },
-            Ba = function(e) {
+            Va = function(e) {
                 return r.createElement(r.Fragment, null, r.createElement(S._2, {
                     margin: {
                         bottom: 1
@@ -12372,9 +12499,9 @@ webpackJsonp([98], {
             };
         ! function(e) {
             e.START_OVER_BUTTON = "progress-brick__start-over-button", e.CONTINUE_BUTTON = "progress-brick__continue-button"
-        }(Sa || (Sa = {}));
-        var Va, Wa, Qa = ((Va = {})[Ke.WorkflowState.AGREEMENT_NOT_STARTED] = Ke.OnboardStep.Agreement, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED] = Ke.OnboardStep.TaxInterview, Va[Ke.WorkflowState.PAYOUT_METHOD_NOT_STARTED] = Ke.OnboardStep.PayoutMethod, Va[Ke.WorkflowState.PAYOUT_METHOD_PENDING] = Ke.OnboardStep.PayoutMethod, Va[Ke.WorkflowState.REVIEW_PENDING] = Ke.OnboardStep.Review, Va),
-            Ya = function(e) {
+        }(ka || (ka = {}));
+        var Wa, Qa, Ya = ((Wa = {})[Ke.WorkflowState.AGREEMENT_NOT_STARTED] = Ke.OnboardStep.Agreement, Wa[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED] = Ke.OnboardStep.TaxInterview, Wa[Ke.WorkflowState.PAYOUT_METHOD_NOT_STARTED] = Ke.OnboardStep.PayoutMethod, Wa[Ke.WorkflowState.PAYOUT_METHOD_PENDING] = Ke.OnboardStep.PayoutMethod, Wa[Ke.WorkflowState.REVIEW_PENDING] = Ke.OnboardStep.Review, Wa),
+            Ga = function(e) {
                 return r.createElement(S._8, {
                     padding: {
                         bottom: 1
@@ -12383,9 +12510,9 @@ webpackJsonp([98], {
                     borderMarked: !0,
                     padding: 2,
                     elevation: 1
-                }, e.workflowState === Ke.WorkflowState.COMPLETED ? r.createElement(Ba, {
+                }, e.workflowState === Ke.WorkflowState.COMPLETED ? r.createElement(Va, {
                     onboardEntity: e.onboardEntity
-                }) : r.createElement(Ua, {
+                }) : r.createElement(Ba, {
                     onboardEntity: e.onboardEntity
                 }), r.createElement(S._8, {
                     display: S.R.Inline,
@@ -12393,31 +12520,31 @@ webpackJsonp([98], {
                         right: 1
                     }
                 }, r.createElement(S.v, {
-                    "data-test-selector": Sa.START_OVER_BUTTON,
+                    "data-test-selector": ka.START_OVER_BUTTON,
                     type: S.B.Hollow,
                     onClick: e.showStartOverModal
                 }, Object(p.d)("Start Over", "PayoutOnboardingSummary"))), e.workflowState !== Ke.WorkflowState.COMPLETED && r.createElement(S.v, {
-                    "data-test-selector": Sa.CONTINUE_BUTTON,
+                    "data-test-selector": ka.CONTINUE_BUTTON,
                     onClick: function() {
-                        return e.updateStepDisplayed(Qa[e.workflowState])
+                        return e.updateStepDisplayed(Ya[e.workflowState])
                     }
                 }, Object(p.d)("Continue", "PayoutOnboardingSummary"))))
             };
         n("gurA");
         ! function(e) {
             e[e.NotStarted = 0] = "NotStarted", e[e.Pending = 1] = "Pending", e[e.Failed = 2] = "Failed", e[e.Completed = 3] = "Completed"
-        }(Wa || (Wa = {}));
-        var Ga, za = function(e) {
+        }(Qa || (Qa = {}));
+        var za, Ha = function(e) {
                 var t, n;
                 return t = e.isEnabled ? r.createElement(S.O, {
                     onClick: e.onTitleClick
-                }, e.title) : e.title, e.type === Wa.Pending ? n = r.createElement(S._24, {
+                }, e.title) : e.title, e.type === Qa.Pending ? n = r.createElement(S._24, {
                     asset: S._25.Halt,
                     type: S._26.Warn
-                }) : e.type === Wa.Failed ? n = r.createElement(S._24, {
+                }) : e.type === Qa.Failed ? n = r.createElement(S._24, {
                     asset: S._25.Halt,
                     type: S._26.Alert
-                }) : e.type === Wa.Completed && (n = r.createElement(S._24, {
+                }) : e.type === Qa.Completed && (n = r.createElement(S._24, {
                     asset: S._25.Check,
                     type: S._26.Success
                 })), r.createElement(S._8, null, r.createElement(S._8, {
@@ -12442,26 +12569,26 @@ webpackJsonp([98], {
                     color: S.K.Alt2
                 }, e.description)))
             },
-            Ha = function() {
+            Xa = function() {
                 return Object(p.d)("Submit your tax information.", "PayoutOnboardingSummary")
             },
-            Xa = function() {
+            qa = function() {
                 return Object(p.d)("Choose your payout method.", "PayoutOnboardingSummary")
             },
-            qa = function() {
+            Ka = function() {
                 return Object(p.d)("Submit your financial information.", "PayoutOnboardingSummary")
             };
         ! function(e) {
             e.REGISTRATION = "registration-selector", e.AGREEMENT = "agreement-selector", e.TAX_INTERVIEW = "tax-interview-selector", e.PAYOUT_METHOD = "payout-method-selector", e.REVIEW = "review-selector"
-        }(Ga || (Ga = {}));
-        var Ka = function(e, t, n) {
+        }(za || (za = {}));
+        var $a = function(e, t, n) {
                 return Object(p.d)("Step {numOfCurrentStep} of {numOfTotalSteps}: {stepTitle}", {
                     numOfCurrentStep: e,
                     numOfTotalSteps: t,
                     stepTitle: n
                 }, "ProgressRow")
             },
-            $a = function(e) {
+            Za = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleTitleClick = function(e) {
@@ -12471,41 +12598,41 @@ webpackJsonp([98], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(U.a, null, r.createElement(Ft.a, null, this.isRegistrationComplete && r.createElement(Ya, {
+                    return r.createElement(U.a, null, r.createElement(Mt.a, null, this.isRegistrationComplete && r.createElement(Ga, {
                         workflowState: this.props.workflow.currentStep,
                         onboardEntity: this.props.onboardEntity,
                         updateStepDisplayed: this.props.updateStepDisplayed,
                         showStartOverModal: this.props.showStartOverModal
-                    }), r.createElement(za, {
-                        "data-test-selector": Ga.REGISTRATION,
+                    }), r.createElement(Ha, {
+                        "data-test-selector": za.REGISTRATION,
                         title: this.step1Title,
                         description: this.step1Description,
                         type: this.step1Status,
                         onTitleClick: this.handleTitleClick(Ke.OnboardStep.Registration),
                         isEnabled: !this.isRegistrationComplete
-                    }), r.createElement(za, {
-                        "data-test-selector": Ga.AGREEMENT,
+                    }), r.createElement(Ha, {
+                        "data-test-selector": za.AGREEMENT,
                         title: this.step2Title,
                         description: this.step2Description,
                         type: this.step2Status,
                         onTitleClick: this.handleTitleClick(Ke.OnboardStep.Agreement),
                         isEnabled: this.isRegistrationComplete && !this.isAgreementComplete
-                    }), r.createElement(za, {
-                        "data-test-selector": Ga.TAX_INTERVIEW,
+                    }), r.createElement(Ha, {
+                        "data-test-selector": za.TAX_INTERVIEW,
                         title: this.step3Title,
                         description: this.step3Description,
                         type: this.step3Status,
                         onTitleClick: this.handleTitleClick(Ke.OnboardStep.TaxInterview),
                         isEnabled: this.isAgreementComplete && !this.isTaxInterviewComplete
-                    }), r.createElement(za, {
-                        "data-test-selector": Ga.PAYOUT_METHOD,
+                    }), r.createElement(Ha, {
+                        "data-test-selector": za.PAYOUT_METHOD,
                         title: this.step4Title,
                         description: this.step4Description,
                         type: this.step4Status,
                         onTitleClick: this.handleTitleClick(Ke.OnboardStep.PayoutMethod),
                         isEnabled: this.isTaxInterviewComplete && !this.isPayoutMethodComplete
-                    }), this.props.onboardEntity === Ke.OnboardEntity.CustomPartner && r.createElement(za, {
-                        "data-test-selector": Ga.REVIEW,
+                    }), this.props.onboardEntity === Ke.OnboardEntity.CustomPartner && r.createElement(Ha, {
+                        "data-test-selector": za.REVIEW,
                         title: this.step5Title,
                         description: this.step5Description,
                         type: this.step5Status,
@@ -12550,7 +12677,7 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step1Title", {
                     get: function() {
-                        return Ka(Object(p.e)(1), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.Registration].title[this.props.onboardEntity]())
+                        return $a(Object(p.e)(1), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.Registration].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
@@ -12562,13 +12689,13 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step1Status", {
                     get: function() {
-                        return this.isRegistrationComplete ? Wa.Completed : Wa.NotStarted
+                        return this.isRegistrationComplete ? Qa.Completed : Qa.NotStarted
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step2Title", {
                     get: function() {
-                        return Ka(Object(p.e)(2), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.Agreement].title[this.props.onboardEntity]())
+                        return $a(Object(p.e)(2), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.Agreement].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
@@ -12591,22 +12718,22 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step2Status", {
                     get: function() {
-                        return this.isAgreementComplete ? Wa.Completed : Wa.NotStarted
+                        return this.isAgreementComplete ? Qa.Completed : Qa.NotStarted
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step3Title", {
                     get: function() {
-                        return Ka(Object(p.e)(3), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.TaxInterview].title[this.props.onboardEntity]())
+                        return $a(Object(p.e)(3), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.TaxInterview].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step3Description", {
                     get: function() {
-                        if (!this.isAgreementComplete) return Ha();
+                        if (!this.isAgreementComplete) return Xa();
                         switch (this.props.workflow.currentStep) {
                             case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
-                                return Ha();
+                                return Xa();
                             case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
                                 return Object(p.d)("Your royalty tax information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary");
                             case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
@@ -12628,52 +12755,52 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step3Status", {
                     get: function() {
-                        if (!this.isAgreementComplete) return Wa.NotStarted;
+                        if (!this.isAgreementComplete) return Qa.NotStarted;
                         switch (this.props.workflow.currentStep) {
                             case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
-                                return Wa.NotStarted;
+                                return Qa.NotStarted;
                             case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
-                                return Wa.Pending;
+                                return Qa.Pending;
                             case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED:
                             case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
                             case Ke.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH:
-                                return Wa.Failed;
+                                return Qa.Failed;
                             case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED:
-                                return Wa.NotStarted;
+                                return Qa.NotStarted;
                             case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING:
-                                return Wa.Pending;
+                                return Qa.Pending;
                             case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED:
                             case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
                             case Ke.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH:
-                                return Wa.Failed;
+                                return Qa.Failed;
                             default:
-                                return Wa.Completed
+                                return Qa.Completed
                         }
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step4Title", {
                     get: function() {
-                        return Ka(Object(p.e)(4), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.PayoutMethod].title[this.props.onboardEntity]())
+                        return $a(Object(p.e)(4), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.PayoutMethod].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step4Description", {
                     get: function() {
                         var e = this.props.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper;
-                        return this.isTaxInterviewComplete ? this.props.workflow.currentStep === Ke.WorkflowState.PAYOUT_METHOD_PENDING ? e ? Object(p.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : this.isPayoutMethodComplete ? e ? Object(p.d)("Your financial information has been successfully validated.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method has been successfully validated.", "PayoutOnboardingSummary") : e ? qa() : Xa() : e ? qa() : Xa()
+                        return this.isTaxInterviewComplete ? this.props.workflow.currentStep === Ke.WorkflowState.PAYOUT_METHOD_PENDING ? e ? Object(p.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : this.isPayoutMethodComplete ? e ? Object(p.d)("Your financial information has been successfully validated.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method has been successfully validated.", "PayoutOnboardingSummary") : e ? Ka() : qa() : e ? Ka() : qa()
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step4Status", {
                     get: function() {
-                        return this.isTaxInterviewComplete ? this.props.workflow.currentStep === Ke.WorkflowState.PAYOUT_METHOD_PENDING ? Wa.Pending : this.isPayoutMethodComplete ? Wa.Completed : Wa.NotStarted : Wa.NotStarted
+                        return this.isTaxInterviewComplete ? this.props.workflow.currentStep === Ke.WorkflowState.PAYOUT_METHOD_PENDING ? Qa.Pending : this.isPayoutMethodComplete ? Qa.Completed : Qa.NotStarted : Qa.NotStarted
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step5Title", {
                     get: function() {
-                        return this.props.onboardEntity === Ke.OnboardEntity.CustomPartner ? Ka(Object(p.e)(5), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.Review].title[this.props.onboardEntity]()) : ""
+                        return this.props.onboardEntity === Ke.OnboardEntity.CustomPartner ? $a(Object(p.e)(5), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.Review].title[this.props.onboardEntity]()) : ""
                     },
                     enumerable: !0,
                     configurable: !0
@@ -12685,18 +12812,18 @@ webpackJsonp([98], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step5Status", {
                     get: function() {
-                        return this.isPayoutMethodComplete ? this.props.workflow.currentStep === Ke.WorkflowState.REVIEW_PENDING ? Wa.Pending : Wa.Completed : Wa.NotStarted
+                        return this.isPayoutMethodComplete ? this.props.workflow.currentStep === Ke.WorkflowState.REVIEW_PENDING ? Qa.Pending : Qa.Completed : Qa.NotStarted
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            Za = function(e) {
+            Ja = function(e) {
                 return Object(p.d)("Example {exampleNum}", {
                     exampleNum: Object(p.e)(e)
                 }, "TaxInfoBrick")
             },
-            Ja = function(e) {
+            er = function(e) {
                 if (e.taxStatus === gr.NotStarted || e.taxStatus === gr.Completed) return null;
                 var t;
                 switch (e.taxStatus) {
@@ -12728,7 +12855,7 @@ webpackJsonp([98], {
                             }
                         }, r.createElement(S.Q, {
                             type: S._49.P
-                        }, Za(1))), r.createElement(S._8, {
+                        }, Ja(1))), r.createElement(S._8, {
                             margin: {
                                 left: 1,
                                 bottom: 1
@@ -12745,7 +12872,7 @@ webpackJsonp([98], {
                             }
                         }, r.createElement(S.Q, {
                             type: S._49.P
-                        }, Za(2))), r.createElement(S._8, {
+                        }, Ja(2))), r.createElement(S._8, {
                             margin: {
                                 left: 1,
                                 bottom: 1
@@ -12773,7 +12900,7 @@ webpackJsonp([98], {
                     elevation: 1
                 }, t)
             },
-            er = function(e) {
+            tr = function(e) {
                 return r.createElement(r.Fragment, null, r.createElement(S._2, {
                     margin: {
                         bottom: 1
@@ -12824,7 +12951,7 @@ webpackJsonp([98], {
                     type: S._49.P
                 }, "Email address: ", e.email)))
             },
-            tr = function(e) {
+            nr = function(e) {
                 var t = e.workflow,
                     n = t.registration,
                     a = t.taxMismatchErrors;
@@ -12838,8 +12965,8 @@ webpackJsonp([98], {
                     else if (e === Ke.TaxMismatchError.STREET_ADDRESS) a = Object(p.d)("Street Address", "TaxMismatchSpecificErrors"), i = n.streetAddress;
                     else if (e === Ke.TaxMismatchError.STREET_ADDRESS_2) a = Object(p.d)("Street Address 2", "TaxMismatchSpecificErrors"), i = n.streetAddress2;
                     else if (e === Ke.TaxMismatchError.CITY) a = Object(p.d)("City or Town", "TaxMismatchSpecificErrors"), i = n.city;
-                    else if (e === Ke.TaxMismatchError.STATE) a = Object(p.d)("State/Province", "TaxMismatchSpecificErrors"), i = "US" === n.countryCode ? qn(n.stateCode || "") : "CA" === n.countryCode ? zn(n.stateCode || "") : n.stateCode;
-                    else if (e === Ke.TaxMismatchError.COUNTRY) a = Object(p.d)("Country", "TaxMismatchSpecificErrors"), i = Object(Xn.b)(n.countryCode || "");
+                    else if (e === Ke.TaxMismatchError.STATE) a = Object(p.d)("State/Province", "TaxMismatchSpecificErrors"), i = "US" === n.countryCode ? Kn(n.stateCode || "") : "CA" === n.countryCode ? Hn(n.stateCode || "") : n.stateCode;
+                    else if (e === Ke.TaxMismatchError.COUNTRY) a = Object(p.d)("Country", "TaxMismatchSpecificErrors"), i = Object(qn.b)(n.countryCode || "");
                     else {
                         if (e !== Ke.TaxMismatchError.POSTAL) return null;
                         a = Object(p.d)("Zip Code/Postal Code", "TaxMismatchSpecificErrors"), i = n.postal
@@ -12884,7 +13011,7 @@ webpackJsonp([98], {
                     buttonLabel: Object(p.d)("Start Over", "TaxMismatchSpecificErrors")
                 }, "TaxMismatchSpecificErrors"))))
             },
-            nr = function(e) {
+            ar = function(e) {
                 var t = e.workflow.registration;
                 if (!t) return null;
                 switch (e.taxStatus) {
@@ -12905,7 +13032,7 @@ webpackJsonp([98], {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(On, {
+                        }, r.createElement(An, {
                             onboardEntity: e.onboardEntity
                         })));
                     case gr.Pending:
@@ -12921,23 +13048,23 @@ webpackJsonp([98], {
                             type: S._49.P
                         }, Object(p.d)("Your royalty tax information was successfully validated.", "TaxInfoRoyaltyText"));
                     case gr.ActionRequired:
-                        return r.createElement(r.Fragment, null, r.createElement(er, {
+                        return r.createElement(r.Fragment, null, r.createElement(tr, {
                             email: t.email
                         }), r.createElement(S._8, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(On, {
+                        }, r.createElement(An, {
                             onboardEntity: e.onboardEntity
                         })));
                     case gr.Mismatch:
-                        return r.createElement(r.Fragment, null, r.createElement(tr, {
+                        return r.createElement(r.Fragment, null, r.createElement(nr, {
                             workflow: e.workflow
                         }), r.createElement(S._8, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(On, {
+                        }, r.createElement(An, {
                             onboardEntity: e.onboardEntity
                         })));
                     case gr.Failed:
@@ -12952,7 +13079,7 @@ webpackJsonp([98], {
                         return null
                 }
             },
-            ar = function(e) {
+            rr = function(e) {
                 var t = e.workflow.registration;
                 if (!t) return null;
                 if (!e.royaltyTaxCompleted) return r.createElement(r.Fragment, null, r.createElement(S._2, {
@@ -12965,7 +13092,7 @@ webpackJsonp([98], {
                     margin: {
                         bottom: 2
                     }
-                }, r.createElement(On, {
+                }, r.createElement(An, {
                     onboardEntity: e.onboardEntity
                 })));
                 switch (e.taxStatus) {
@@ -12986,7 +13113,7 @@ webpackJsonp([98], {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(On, {
+                        }, r.createElement(An, {
                             onboardEntity: e.onboardEntity
                         })));
                     case gr.Pending:
@@ -13002,23 +13129,23 @@ webpackJsonp([98], {
                             type: S._49.P
                         }, Object(p.d)("Your service tax information was successfully validated.", "TaxInfoServiceText"));
                     case gr.ActionRequired:
-                        return r.createElement(r.Fragment, null, r.createElement(er, {
+                        return r.createElement(r.Fragment, null, r.createElement(tr, {
                             email: t.email
                         }), r.createElement(S._8, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(On, {
+                        }, r.createElement(An, {
                             onboardEntity: e.onboardEntity
                         })));
                     case gr.Mismatch:
-                        return r.createElement(r.Fragment, null, r.createElement(tr, {
+                        return r.createElement(r.Fragment, null, r.createElement(nr, {
                             workflow: e.workflow
                         }), r.createElement(S._8, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(On, {
+                        }, r.createElement(An, {
                             onboardEntity: e.onboardEntity
                         })));
                     case gr.Failed:
@@ -13033,10 +13160,10 @@ webpackJsonp([98], {
                         return null
                 }
             },
-            rr = function() {
+            ir = function() {
                 return Object(p.d)("Start Over", "TaxPreviewInstructions")
             },
-            ir = function(e) {
+            or = function(e) {
                 return r.createElement(S._35, {
                     borderMarked: !0,
                     padding: 2,
@@ -13056,7 +13183,7 @@ webpackJsonp([98], {
                 }, r.createElement(S.Q, {
                     type: S._49.P
                 }, Object(p.d)('If any of this information is incorrect, you must restart your Payout Registration by clicking "{buttonLabel}" below.', {
-                    buttonLabel: rr()
+                    buttonLabel: ir()
                 }, "TaxPreviewInstructions"))), e.onboardEntity === Ke.OnboardEntity.ExtensionsDeveloper && r.createElement(S._2, {
                     margin: {
                         bottom: 2
@@ -13064,15 +13191,15 @@ webpackJsonp([98], {
                 }, r.createElement(S.Q, {
                     type: S._49.P
                 }, Object(p.d)('If any of this information is incorrect, you must restart your Extensions Developer Registration by clicking "{buttonLabel}" below.', {
-                    buttonLabel: rr()
+                    buttonLabel: ir()
                 }, "TaxPreviewInstructions"))), r.createElement(S.Q, {
                     type: S._49.P
                 }, Object(p.d)("Otherwise, please proceed by clicking the purple button and the tax form will appear in a new window. If the tax form does not appear, make sure that you have pop-ups enabled.", "TaxPreviewInstructions")))
             },
-            or = function() {
+            sr = function() {
                 return Object(p.d)("optional", "TaxPreviewReferenceInfo")
             },
-            sr = function(e) {
+            lr = function(e) {
                 var t, n = e.workflow.registration;
                 if (!n) return null;
                 t = n.companyName ? n.companyName : [n.firstName, n.middleName, n.lastName].filter(function(e) {
@@ -13125,7 +13252,7 @@ webpackJsonp([98], {
                     orientation: S.X.Horizontal
                 }, r.createElement(S._4, {
                     type: S._5.Text,
-                    value: Object(Xn.b)(n.countryCode),
+                    value: Object(qn.b)(n.countryCode),
                     disabled: !0
                 }))), r.createElement(S._8, {
                     margin: {
@@ -13145,7 +13272,7 @@ webpackJsonp([98], {
                 }, r.createElement(S.W, {
                     label: Object(p.d)("Street Address 2", "TaxPreviewReferenceInfo"),
                     orientation: S.X.Horizontal,
-                    labelOptional: or()
+                    labelOptional: sr()
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: n.streetAddress2 || "",
@@ -13168,22 +13295,22 @@ webpackJsonp([98], {
                 }, r.createElement(S.W, {
                     label: Object(p.d)("State/Province", "TaxPreviewReferenceInfo"),
                     orientation: S.X.Horizontal,
-                    labelOptional: a || i ? "" : or()
+                    labelOptional: a || i ? "" : sr()
                 }, r.createElement(S._4, {
                     type: S._5.Text,
-                    value: a ? qn(n.stateCode || "") : i ? zn(n.stateCode || "") : n.stateCode || "",
+                    value: a ? Kn(n.stateCode || "") : i ? Hn(n.stateCode || "") : n.stateCode || "",
                     disabled: !0
                 }))), r.createElement(S.W, {
                     label: Object(p.d)("Zip Code/Postal Code", "TaxPreviewReferenceInfo"),
                     orientation: S.X.Horizontal,
-                    labelOptional: a ? "" : or()
+                    labelOptional: a ? "" : sr()
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: n.postal || "",
                     disabled: !0
                 })))
             },
-            lr = (n("ZDnG"), n("bv1+")),
+            cr = (n("ZDnG"), n("bv1+")),
             dr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -13279,9 +13406,9 @@ webpackJsonp([98], {
                         }
                     }, r.createElement(S.Q, {
                         type: S._49.H4
-                    }, Object(p.d)("Information Reference", "TaxPreviewModal"))), r.createElement(ir, {
+                    }, Object(p.d)("Information Reference", "TaxPreviewModal"))), r.createElement(or, {
                         onboardEntity: this.props.onboardEntity
-                    }), r.createElement(sr, {
+                    }), r.createElement(lr, {
                         channelName: this.props.channelName,
                         workflow: this.props.workflow
                     }), r.createElement(S._8, {
@@ -13314,13 +13441,13 @@ webpackJsonp([98], {
                     }, r.createElement(S._10, null))))
                 }, Object.defineProperty(t.prototype, "openTaxButtonText", {
                     get: function() {
-                        return this.props.taxType === pr.Royalty ? Object(p.d)("Open Royalty Tax Interview Form", "TaxPreviewModal") : Object(p.d)("Open Service Tax Interview Form", "TaxPreviewModal")
+                        return this.props.taxType === hr.Royalty ? Object(p.d)("Open Royalty Tax Interview Form", "TaxPreviewModal") : Object(p.d)("Open Service Tax Interview Form", "TaxPreviewModal")
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            cr = Object(i.compose)(Object(u.a)(lr, {
+            ur = Object(i.compose)(Object(u.a)(cr, {
                 options: function(e) {
                     return {
                         variables: {
@@ -13330,44 +13457,44 @@ webpackJsonp([98], {
                     }
                 }
             }))(dr),
-            ur = function(e) {
+            mr = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(r.Fragment, null, r.createElement(cr, {
+                    return r.createElement(r.Fragment, null, r.createElement(ur, {
                         taxType: this.props.taxType,
                         channelName: this.props.channelName,
                         onboardEntity: this.props.onboardEntity,
                         workflow: this.props.workflow,
                         showStartOverModal: this.props.showStartOverModal,
                         closeTaxPreviewModal: this.props.closeModal
-                    }), r.createElement(Cn.a, {
+                    }), r.createElement(Pn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(r.Component);
-        var mr, pr, gr, hr = Object(h.d)(Object(Te.b)(null, function(e) {
-            return Object(h.b)({
+        var pr, hr, gr, br = Object(g.d)(Object(Te.b)(null, function(e) {
+            return Object(g.b)({
                 closeModal: Ne.c
             }, e)
-        }))(ur);
+        }))(mr);
         ! function(e) {
             e.RoyaltyHeader = "payout-onboarding-tax-interview__royalty-header", e.RoyaltyButton = "payout-onboarding-tax-interview__royalty-button", e.ServiceHeader = "payout-onboarding-tax-interview__service-header", e.ServiceButton = "payout-onboarding-tax-interview__service-button", e.ContinueButton = "payout-onboarding-tax-interview__continue-button"
-        }(mr || (mr = {})),
+        }(pr || (pr = {})),
         function(e) {
             e.Royalty = "Royalty", e.Service = "Service"
-        }(pr || (pr = {})),
+        }(hr || (hr = {})),
         function(e) {
             e[e.NotStarted = 0] = "NotStarted", e[e.Pending = 1] = "Pending", e[e.Failed = 2] = "Failed", e[e.ActionRequired = 3] = "ActionRequired", e[e.Mismatch = 4] = "Mismatch", e[e.Completed = 5] = "Completed"
         }(gr || (gr = {}));
-        var br = function(e) {
+        var fr = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.handleRoyaltyTaxButtonClick = function() {
-                    t.showTaxPreviewModal(pr.Royalty)
+                    t.showTaxPreviewModal(hr.Royalty)
                 }, t.handleServiceTaxButtonClick = function() {
-                    t.showTaxPreviewModal(pr.Service)
+                    t.showTaxPreviewModal(hr.Service)
                 }, t.showTaxPreviewModal = function(e) {
                     var n = t.props,
                         a = n.channelName,
@@ -13386,17 +13513,17 @@ webpackJsonp([98], {
                 }, t
             }
             return a.__extends(t, e), t.prototype.render = function() {
-                return r.createElement(U.a, null, r.createElement(En, {
+                return r.createElement(U.a, null, r.createElement(vn, {
                     title: Object(p.d)("Royalty Tax Interview", "PayoutOnboardingTaxInterview"),
                     statusText: this.royaltyStatusText,
                     statusType: this.royaltyStatusType,
                     borderTop: !0,
-                    "data-test-selector": mr.RoyaltyHeader
+                    "data-test-selector": pr.RoyaltyHeader
                 }), r.createElement(S._8, {
                     padding: 2
-                }, r.createElement(Ja, {
+                }, r.createElement(er, {
                     taxStatus: this.royaltyTaxStatus
-                }), r.createElement(nr, {
+                }), r.createElement(ar, {
                     taxStatus: this.royaltyTaxStatus,
                     workflow: this.props.workflow,
                     onboardEntity: this.props.onboardEntity
@@ -13404,17 +13531,17 @@ webpackJsonp([98], {
                     type: this.royaltyTaxButtonType,
                     disabled: this.royaltyTaxButtonDisabled,
                     onClick: this.handleRoyaltyTaxButtonClick,
-                    "data-test-selector": mr.RoyaltyButton
-                }, this.royaltyTaxButtonText)), r.createElement(En, {
+                    "data-test-selector": pr.RoyaltyButton
+                }, this.royaltyTaxButtonText)), r.createElement(vn, {
                     title: Object(p.d)("Service Tax Interview", "PayoutOnboardingTaxInterview"),
                     statusText: this.serviceStatusText,
                     statusType: this.serviceStatusType,
-                    "data-test-selector": mr.ServiceHeader
+                    "data-test-selector": pr.ServiceHeader
                 }), r.createElement(S._8, {
                     padding: 2
-                }, r.createElement(Ja, {
+                }, r.createElement(er, {
                     taxStatus: this.serviceTaxStatus
-                }), r.createElement(ar, {
+                }), r.createElement(rr, {
                     royaltyTaxCompleted: this.royaltyTaxStatus === gr.Completed,
                     taxStatus: this.serviceTaxStatus,
                     workflow: this.props.workflow,
@@ -13423,12 +13550,12 @@ webpackJsonp([98], {
                     type: this.serviceTaxButtonType,
                     disabled: this.serviceTaxButtonDisabled,
                     onClick: this.handleServiceTaxButtonClick,
-                    "data-test-selector": mr.ServiceButton
+                    "data-test-selector": pr.ServiceButton
                 }, this.serviceTaxButtonText)), r.createElement(S._35, {
                     padding: 2,
                     background: S.n.Alt2
                 }, r.createElement(S.v, {
-                    "data-test-selector": mr.ContinueButton,
+                    "data-test-selector": pr.ContinueButton,
                     size: S.z.Large,
                     disabled: this.continueButtonDisabled,
                     onClick: this.handleContinueClick
@@ -13573,30 +13700,30 @@ webpackJsonp([98], {
                 configurable: !0
             }), t
         }(r.Component);
-        var fr = Object(i.compose)(Object(Te.b)(null, function(e) {
-                return Object(h.b)({
+        var Er = Object(i.compose)(Object(Te.b)(null, function(e) {
+                return Object(g.b)({
                     showTaxPreviewModal: function(e) {
                         var t = a.__rest(e, []);
-                        return Object(Ne.d)(hr, t)
+                        return Object(Ne.d)(br, t)
                     }
                 }, e)
-            }))(br),
-            Er = n("NrhD"),
-            vr = {
+            }))(fr),
+            vr = n("NrhD"),
+            yr = {
                 "data-test-selector": "require-two-factor-enabled__enable-two-factor-message"
             },
-            yr = function(e) {
+            Sr = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.data.loading ? r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._14, {
+                    return this.props.data.loading ? r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._14, {
                         lineCount: 4
-                    }))) : this.props.data.error ? r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(l.a, {
+                    }))) : this.props.data.error ? r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(l.a, {
                         message: Object(p.d)("Oops, something went wrong.", "RequireTwoFactorEnabled")
-                    }))) : this.hasTwoFactorEnabled ? r.createElement(r.Fragment, null, this.props.children) : r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S.Q, a.__assign({
+                    }))) : this.hasTwoFactorEnabled ? r.createElement(r.Fragment, null, this.props.children) : r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S.Q, a.__assign({
                         type: S._49.P
-                    }, vr), this.props.enableTwoFactorMessage)), r.createElement(Ft.a, null, r.createElement(s.a, {
+                    }, yr), this.props.enableTwoFactorMessage)), r.createElement(Mt.a, null, r.createElement(s.a, {
                         to: "/settings/security"
                     }, r.createElement(S.v, null, Object(p.d)("Enable Two-Factor Authentication", "RequireTwoFactorEnabled")))))
                 }, Object.defineProperty(t.prototype, "hasTwoFactorEnabled", {
@@ -13607,9 +13734,9 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            Sr = Object(i.compose)(Object(u.a)(Er))(yr),
-            kr = n("AbdN"),
-            _r = function(e) {
+            kr = Object(i.compose)(Object(u.a)(vr))(Sr),
+            _r = n("AbdN"),
+            Tr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -13692,7 +13819,7 @@ webpackJsonp([98], {
                     }, r.createElement(S._10, null))))
                 }, t
             }(r.Component),
-            Tr = (n("n8vm"), function(e) {
+            Nr = (n("n8vm"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -13701,22 +13828,22 @@ webpackJsonp([98], {
                         className: "start-over-modal__container",
                         background: S.n.Base,
                         padding: 2
-                    }, r.createElement(_r, {
+                    }, r.createElement(Tr, {
                         cancelWorkflow: this.props.cancelWorkflow,
                         callCloseModal: this.props.closeModal
-                    }), r.createElement(Cn.a, {
+                    }), r.createElement(Pn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(r.Component));
-        var Nr = Object(Te.b)(null, function(e) {
-                return Object(h.b)({
+        var Or = Object(Te.b)(null, function(e) {
+                return Object(g.b)({
                     closeModal: Ne.c
                 }, e)
-            })(Tr),
-            Or = n("Cte4"),
-            Ar = n("CR5K"),
-            Cr = function(e) {
+            })(Nr),
+            Ar = n("Cte4"),
+            Cr = n("CR5K"),
+            Pr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -13763,7 +13890,7 @@ webpackJsonp([98], {
                             })
                         })
                     }, t.updateContainerQuery = function(e) {
-                        Object(E.e)(Or, {}, e)
+                        Object(E.e)(Ar, {}, e)
                     }, t.showStartOverModal = function() {
                         t.props.showStartOverModal({
                             cancelWorkflow: t.cancelWorkflow
@@ -13793,35 +13920,35 @@ webpackJsonp([98], {
                         var e = this.props.data.currentUser.payoutInvite.workflow;
                         if (!e) return !1;
                         if (e.currentStep !== Ke.WorkflowState.PAYOUT_METHOD_NOT_STARTED && e.currentStep !== Ke.WorkflowState.PAYOUT_METHOD_PENDING && e.currentStep !== Ke.WorkflowState.COMPLETED && e.currentStep !== Ke.WorkflowState.REVIEW_PENDING) return !1;
-                        var t = un.parse(this.props.location.search);
+                        var t = mn.parse(this.props.location.search);
                         return !!t && "true" === t.redirect_tipalti
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t.prototype.render = function() {
-                    if (this.props.data.loading) return r.createElement(r.Fragment, null, r.createElement(g.a, {
-                        title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
-                        description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
+                    if (this.props.data.loading) return r.createElement(r.Fragment, null, r.createElement(h.a, {
+                        title: La[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                        description: La[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                         linkToParent: this.backLinkURL
-                    }), r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._14, {
+                    }), r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._14, {
                         lineCount: 4
                     }))));
-                    if (this.props.data.error) return r.createElement(r.Fragment, null, r.createElement(g.a, {
-                        title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
-                        description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
+                    if (this.props.data.error) return r.createElement(r.Fragment, null, r.createElement(h.a, {
+                        title: La[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                        description: La[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                         linkToParent: this.backLinkURL
-                    }), r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(l.a, {
+                    }), r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(l.a, {
                         message: Object(p.d)("Oops, something went wrong.", "PayoutOnboardingContainer")
                     }))));
                     var e = this.props.onboardEntity,
                         t = this.updateStepDisplayed,
                         n = this.props.data.currentUser.payoutInvite.workflow,
                         i = this.updateContainerQuery;
-                    if (!n || n.currentStep === Ke.WorkflowState.CANCELED) return this.startWorkflow(), r.createElement(r.Fragment, null, r.createElement(g.a, {
-                        title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
-                        description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
+                    if (!n || n.currentStep === Ke.WorkflowState.CANCELED) return this.startWorkflow(), r.createElement(r.Fragment, null, r.createElement(h.a, {
+                        title: La[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                        description: La[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                         linkToParent: this.backLinkURL
-                    }), r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._14, {
+                    }), r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._14, {
                         lineCount: 4
                     }))));
                     var o, s = {
@@ -13832,70 +13959,70 @@ webpackJsonp([98], {
                     };
                     switch (this.state.stepDisplayed) {
                         case Ke.OnboardStep.Summary:
-                            return r.createElement(r.Fragment, null, r.createElement(g.a, {
-                                title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
-                                description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
+                            return r.createElement(r.Fragment, null, r.createElement(h.a, {
+                                title: La[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                                description: La[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                                 linkToParent: this.backLinkURL
-                            }), r.createElement(Sr, {
+                            }), r.createElement(kr, {
                                 enableTwoFactorMessage: this.enableTwoFactorMessage
-                            }, r.createElement($a, a.__assign({}, s, {
+                            }, r.createElement(Za, a.__assign({}, s, {
                                 showStartOverModal: this.showStartOverModal
                             }))));
                         case Ke.OnboardStep.Registration:
-                            var d = {
+                            var c = {
                                 channelName: this.props.channelName,
                                 userID: this.props.data.currentUser.id
                             };
-                            o = r.createElement(Na, a.__assign({}, s, d));
+                            o = r.createElement(Oa, a.__assign({}, s, c));
                             break;
                         case Ke.OnboardStep.Agreement:
-                            o = r.createElement(Tn, a.__assign({}, s));
+                            o = r.createElement(Nn, a.__assign({}, s));
                             break;
                         case Ke.OnboardStep.TaxInterview:
-                            d = {
+                            c = {
                                 channelName: this.props.channelName,
                                 showStartOverModal: this.showStartOverModal
                             };
-                            o = r.createElement(fr, a.__assign({}, s, d));
+                            o = r.createElement(Er, a.__assign({}, s, c));
                             break;
                         case Ke.OnboardStep.PayoutMethod:
-                            o = r.createElement(Mn, a.__assign({}, s));
+                            o = r.createElement(Ln, a.__assign({}, s));
                             break;
                         case Ke.OnboardStep.Review:
-                            o = r.createElement(Oa, a.__assign({}, s))
+                            o = r.createElement(Aa, a.__assign({}, s))
                     }
-                    return r.createElement(r.Fragment, null, r.createElement(g.a, {
+                    return r.createElement(r.Fragment, null, r.createElement(h.a, {
                         title: Object(p.d)("Step {numOfCurrentStep} of {numOfTotalSteps}: {stepTitle}", {
                             numOfCurrentStep: Object(p.e)(this.state.stepDisplayed),
                             numOfTotalSteps: Object(p.e)(this.totalSteps),
-                            stepTitle: Ma[this.state.stepDisplayed].title[this.props.onboardEntity]()
+                            stepTitle: La[this.state.stepDisplayed].title[this.props.onboardEntity]()
                         }, "PayoutOnboardingContainer"),
-                        description: Ma[this.state.stepDisplayed].description[this.props.onboardEntity](),
+                        description: La[this.state.stepDisplayed].description[this.props.onboardEntity](),
                         onClick: this.goBackToSummary
-                    }), r.createElement(Sr, {
+                    }), r.createElement(kr, {
                         enableTwoFactorMessage: this.enableTwoFactorMessage
                     }, o))
                 }, t
             }(r.Component);
-        var Pr, Ir, wr, Rr = Object(h.d)(Object(u.a)(Or), Object(u.a)(Ar, {
+        var Ir, wr, Rr, xr = Object(g.d)(Object(u.a)(Ar), Object(u.a)(Cr, {
                 name: "startWorkflow"
-            }), Object(u.a)(kr, {
+            }), Object(u.a)(_r, {
                 name: "cancelWorkflow"
-            }), Object(mn.a)([{
+            }), Object(pn.a)([{
                 topic: function(e) {
                     return Object(ne.m)(e.currentUserID)
                 },
-                mapMessageTypesToProps: (Pr = {}, Pr["*"] = "payoutOnboardingEvent", Pr)
+                mapMessageTypesToProps: (Ir = {}, Ir["*"] = "payoutOnboardingEvent", Ir)
             }]), Object(Te.b)(null, function(e) {
-                return Object(h.b)({
+                return Object(g.b)({
                     showStartOverModal: function(e) {
                         var t = a.__rest(e, []);
-                        return Object(Ne.d)(Nr, t)
+                        return Object(Ne.d)(Or, t)
                     }
                 }, e)
-            }), s.f)(Cr),
-            xr = n("lQfX"),
-            Dr = function(e) {
+            }), s.f)(Pr),
+            Dr = n("lQfX"),
+            jr = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -13912,7 +14039,7 @@ webpackJsonp([98], {
                         }
                     }, r.createElement(l.a, null)) : this.hasAgreementPendingUpgrade ? r.createElement(o.b, {
                         to: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue/upgrade-terms"
-                    }) : r.createElement(Rr, {
+                    }) : r.createElement(xr, {
                         channelName: this.props.match.params.channelName,
                         currentUserID: this.props.data.currentUser.id,
                         onboardEntity: this.props.data.currentUser.payoutInvite.category
@@ -13925,9 +14052,9 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            jr = Object(i.compose)(Object(u.a)(xr))(Dr),
-            Fr = n("17w3"),
-            Mr = (n("mHbH"), function(e) {
+            Fr = Object(i.compose)(Object(u.a)(Dr))(jr),
+            Mr = n("17w3"),
+            Lr = (n("mHbH"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -13942,14 +14069,14 @@ webpackJsonp([98], {
                         padding: {
                             y: 5
                         }
-                    }, r.createElement(l.a, null)) : this.isOnboardingComplete ? r.createElement(r.Fragment, null, r.createElement(g.a, {
+                    }, r.createElement(l.a, null)) : this.isOnboardingComplete ? r.createElement(r.Fragment, null, r.createElement(h.a, {
                         title: Object(p.d)("Change Payout Method", "PayoutSettingsPage"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), r.createElement(Sr, {
+                    }), r.createElement(kr, {
                         enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to change your payout method.", "PayoutSettingsPage")
-                    }, r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(In, {
+                    }, r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(wn, {
                         tipaltiURL: this.tipaltiURL
-                    }))))) : r.createElement(d.a, null)
+                    }))))) : r.createElement(c.a, null)
                 }, Object.defineProperty(t.prototype, "isOnboardingComplete", {
                     get: function() {
                         return !!this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === Ke.WorkflowState.COMPLETED
@@ -13964,9 +14091,9 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component)),
-            Lr = Object(i.compose)(Object(u.a)(Fr))(Mr),
-            Ur = n("vBst"),
-            Br = function(e) {
+            Ur = Object(i.compose)(Object(u.a)(Mr))(Lr),
+            Br = n("vBst"),
+            Vr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -13987,9 +14114,9 @@ webpackJsonp([98], {
                     }))
                 }, t
             }(r.Component),
-            Vr = n("Kz5W"),
-            Wr = n("81je"),
-            Qr = function(e) {
+            Wr = n("Kz5W"),
+            Qr = n("81je"),
+            Yr = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     if (n.state = {
@@ -14028,7 +14155,7 @@ webpackJsonp([98], {
                                                         case 1:
                                                             return a.trys.push([1, 3, , 4]), [4, n.props.updateSubscriptionProduct(Object(E.a)(i))];
                                                         case 2:
-                                                            return o = a.sent(), Object(E.e)(Vr, {
+                                                            return o = a.sent(), Object(E.e)(Wr, {
                                                                 login: n.props.match.params.channelName
                                                             }, function(e) {
                                                                 if (e && e.user && e.user.subscriptionProducts && o.data.updateSubscriptionProduct) {
@@ -14067,11 +14194,11 @@ webpackJsonp([98], {
                             }), t
                         }, n.createSubPlanName = function(e) {
                             switch (e) {
-                                case Ur.a.Tier1:
+                                case Br.a.Tier1:
                                     return Object(p.d)("Tier 1 Subscription Plan Name", "SubsNameSettingsPage");
-                                case Ur.a.Tier2:
+                                case Br.a.Tier2:
                                     return Object(p.d)("TIer 2 Subscription Plan Name", "SubsNameSettingsPage");
-                                case Ur.a.Tier3:
+                                case Br.a.Tier3:
                                     return Object(p.d)("Tier 3 Subscription Plan Name", "SubsNameSettingsPage");
                                 default:
                                     return Object(p.d)("Subscription Plan Name", "SubsNameSettingsPage")
@@ -14105,11 +14232,11 @@ webpackJsonp([98], {
                     if (!this.props.data.user || !this.props.data.user.subscriptionProducts) return this.props.data.loading ? r.createElement(S._10, {
                         fillContent: !0
                     }) : this.props.data.error ? r.createElement(l.a, null) : null;
-                    var e = r.createElement(V.a, {
+                    var e = r.createElement(wt.a, {
                         status: this.state.saveStatus,
                         onClickSave: this.onClickSave
                     });
-                    return r.createElement(S._8, null, r.createElement(g.a, {
+                    return r.createElement(S._8, null, r.createElement(h.a, {
                         title: Object(p.d)("Subscription Information", "SubsNameSettingsPage"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(U.a, {
@@ -14123,7 +14250,7 @@ webpackJsonp([98], {
                             i = t.id,
                             o = e.createSubPlanName(t.tier),
                             s = e.createSubPlanDescription(t.price || void 0);
-                        return 0 === n && (o = e.createSubPlanName(t.tier), s = e.createSubPlanDescription()), r.createElement(Br, {
+                        return 0 === n && (o = e.createSubPlanName(t.tier), s = e.createSubPlanDescription()), r.createElement(Vr, {
                             key: i,
                             index: n,
                             label: o,
@@ -14134,7 +14261,7 @@ webpackJsonp([98], {
                     }) : null
                 }, t
             }(r.Component),
-            Yr = Object(h.d)(Object(u.a)(Vr, {
+            Gr = Object(g.d)(Object(u.a)(Wr, {
                 options: function(e) {
                     return {
                         variables: {
@@ -14142,12 +14269,12 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }), Object(u.a)(Wr, {
+            }), Object(u.a)(Qr, {
                 name: "updateSubscriptionProduct"
-            }))(Qr),
-            Gr = n("3ecc"),
-            zr = n("yOH8"),
-            Hr = function(e) {
+            }))(Yr),
+            zr = n("3ecc"),
+            Hr = n("yOH8"),
+            Xr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -14218,16 +14345,16 @@ webpackJsonp([98], {
                         padding: {
                             y: 5
                         }
-                    }, r.createElement(l.a, null)) : this.hasAgreementPendingUpgrade ? r.createElement(r.Fragment, null, r.createElement(g.a, {
+                    }, r.createElement(l.a, null)) : this.hasAgreementPendingUpgrade ? r.createElement(r.Fragment, null, r.createElement(h.a, {
                         title: this.headerTitle,
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), r.createElement(Sr, {
+                    }), r.createElement(kr, {
                         enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to accept your agreement.", "UpgradeTermsPage")
-                    }, r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._35, {
+                    }, r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._35, {
                         borderMarked: !0,
                         padding: 2,
                         elevation: 1
-                    }, this.renderAgreement)), this.requiresParentConsent && r.createElement(vn, {
+                    }, this.renderAgreement)), this.requiresParentConsent && r.createElement(yn, {
                         updateParentName: this.updateParentName,
                         updateParentConfirmation: this.updateParentConfirmation
                     }), r.createElement(S._35, {
@@ -14238,7 +14365,7 @@ webpackJsonp([98], {
                         state: this.state.processingAgreement ? S.A.Loading : S.A.Default,
                         onClick: this.handleAgreeClick,
                         disabled: this.proceedButtonDisabled || this.state.processingAgreement
-                    }, Object(p.d)("Agree", "UpgradeTermsPage")))))) : r.createElement(d.a, null)
+                    }, Object(p.d)("Agree", "UpgradeTermsPage")))))) : r.createElement(c.a, null)
                 }, Object.defineProperty(t.prototype, "headerTitle", {
                     get: function() {
                         switch (this.props.data.currentUser.payoutInvite.category) {
@@ -14263,11 +14390,11 @@ webpackJsonp([98], {
                     get: function() {
                         switch (this.props.data.currentUser.payoutInvite.category) {
                             case Ke.OnboardEntity.Affiliate:
-                                return r.createElement(hn, null);
+                                return r.createElement(bn, null);
                             case Ke.OnboardEntity.StandardPartner:
                             case Ke.OnboardEntity.PremiumPartner:
                                 var e = this.props.data.currentUser.programAgreement;
-                                return e && r.createElement(Sn, {
+                                return e && r.createElement(kn, {
                                     body: e.body
                                 });
                             default:
@@ -14280,7 +14407,7 @@ webpackJsonp([98], {
                     get: function() {
                         if (!this.props.data.currentUser.payoutInvite.workflow) return !1;
                         var e = this.props.data.currentUser.payoutInvite.workflow.registration.birthdate;
-                        return Object(pn.differenceInYears)(new Date, e) < 18
+                        return Object(hn.differenceInYears)(new Date, e) < 18
                     },
                     enumerable: !0,
                     configurable: !0
@@ -14292,10 +14419,10 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            Xr = Object(i.compose)(Object(u.a)(zr), Object(u.a)(Gr, {
+            qr = Object(i.compose)(Object(u.a)(Hr), Object(u.a)(zr, {
                 name: "acceptProgramAgreement"
-            }), o.f)(Hr),
-            qr = function() {
+            }), o.f)(Xr),
+            Kr = function() {
                 return r.createElement(r.Fragment, null, r.createElement(S._2, {
                     margin: {
                         bottom: 1
@@ -14314,8 +14441,8 @@ webpackJsonp([98], {
                     }
                 }, "CustomPartnerAgreement")))
             },
-            Kr = n("kB8u"),
-            $r = function(e) {
+            $r = n("kB8u"),
+            Zr = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -14330,16 +14457,16 @@ webpackJsonp([98], {
                         padding: {
                             y: 5
                         }
-                    }, r.createElement(l.a, null)) : this.canAccessViewTermsPage ? r.createElement(r.Fragment, null, r.createElement(g.a, {
+                    }, r.createElement(l.a, null)) : this.canAccessViewTermsPage ? r.createElement(r.Fragment, null, r.createElement(h.a, {
                         title: Object(p.d)("View Active Partner Agreement", "ViewTermsPage"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), r.createElement(Sr, {
+                    }), r.createElement(kr, {
                         enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to view your agreement.", "ViewTermsPage")
-                    }, r.createElement(U.a, null, r.createElement(Ft.a, null, r.createElement(S._35, {
+                    }, r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._35, {
                         borderMarked: !0,
                         padding: 2,
                         elevation: 1
-                    }, this.renderAgreement))))) : r.createElement(d.a, null)
+                    }, this.renderAgreement))))) : r.createElement(c.a, null)
                 }, Object.defineProperty(t.prototype, "canAccessViewTermsPage", {
                     get: function() {
                         var e = this.props.data.currentUser;
@@ -14364,10 +14491,10 @@ webpackJsonp([98], {
                         var e = this.props.data.currentUser;
                         if (!e || !e.payoutInvite) return null;
                         var t = e.payoutInvite;
-                        if (t.isLegacy || t.category === Me.CUSTOM_PARTNER) return r.createElement(qr, null);
+                        if (t.isLegacy || t.category === Me.CUSTOM_PARTNER) return r.createElement(Kr, null);
                         if (t.category === Me.STANDARD_PARTNER || t.category === Me.PREMIUM_PARTNER) {
                             var n = this.props.data.currentUser && this.props.data.currentUser.programAgreement;
-                            return n && r.createElement(Sn, {
+                            return n && r.createElement(kn, {
                                 body: n.body
                             })
                         }
@@ -14376,15 +14503,15 @@ webpackJsonp([98], {
                     configurable: !0
                 }), t
             }(r.Component),
-            Zr = Object(i.compose)(Object(u.a)(Kr))($r);
+            Jr = Object(i.compose)(Object(u.a)($r))(Zr);
         ! function(e) {
             e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
-        }(Ir || (Ir = {})),
+        }(wr || (wr = {})),
         function(e) {
             e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
-        }(wr || (wr = {}));
-        var Jr = n("3+pE"),
-            ei = function(e) {
+        }(Rr || (Rr = {}));
+        var ei = n("3+pE"),
+            ti = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -14393,7 +14520,7 @@ webpackJsonp([98], {
                         t = e.loading,
                         n = e.channel,
                         a = e.currentUser;
-                    return a && n ? this.isChannelOwner || this.isStaff ? n.payoutInvite && n.payoutInvite.category !== Ir.UNPAID_PARTNER ? (this.props.latencyTracking.reportInteractive(), r.createElement(c.b, null, r.createElement(S._8, {
+                    return a && n ? this.isChannelOwner || this.isStaff ? n.payoutInvite && n.payoutInvite.category !== wr.UNPAID_PARTNER ? (this.props.latencyTracking.reportInteractive(), r.createElement(d.b, null, r.createElement(S._8, {
                         padding: 2,
                         fullHeight: !0
                     }, r.createElement(s.e, null, r.createElement(o.c, {
@@ -14402,16 +14529,16 @@ webpackJsonp([98], {
                         component: Nt
                     }), this.isChannelOwner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/payout-onboarding",
-                        component: jr
+                        component: Fr
                     }), this.isChannelOwner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/payouts",
-                        component: Lr
+                        component: Ur
                     }), this.isChannelOwner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/upgrade-terms",
-                        component: Xr
+                        component: qr
                     }), this.isChannelOwner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/view-terms",
-                        component: Zr
+                        component: Jr
                     }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/cheer",
                         component: K
@@ -14429,18 +14556,18 @@ webpackJsonp([98], {
                         component: qe
                     }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/merch-by-amazon",
-                        component: cn
+                        component: un
                     }), (this.isPaidAffiliate || this.isPaidPartner) && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/ticket",
-                        component: Yr
+                        component: Gr
                     }), this.isPaidPartner && r.createElement(o.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/badges",
-                        component: ln
+                        component: cn
                     }), r.createElement(o.c, {
-                        component: d.a
+                        component: c.a
                     }))))) : r.createElement(S._8, {
                         fullHeight: !0
-                    }, r.createElement(d.a, null)) : r.createElement(o.b, {
+                    }, r.createElement(c.a, null)) : r.createElement(o.b, {
                         to: "/" + a.login + "/dashboard"
                     }) : t ? r.createElement(S._8, {
                         fullHeight: !0
@@ -14464,7 +14591,7 @@ webpackJsonp([98], {
                 }), Object.defineProperty(t.prototype, "isPaidAffiliate", {
                     get: function() {
                         return !!(this.props.data.channel && this.props.data.channel.payoutPlans && this.props.data.channel.payoutPlans.find(function(e) {
-                            return e.category === wr.AFFILIATE && e.isReceivingRevenue
+                            return e.category === Rr.AFFILIATE && e.isReceivingRevenue
                         }))
                     },
                     enumerable: !0,
@@ -14472,14 +14599,14 @@ webpackJsonp([98], {
                 }), Object.defineProperty(t.prototype, "isPaidPartner", {
                     get: function() {
                         return !!(this.props.data.channel && this.props.data.channel.payoutPlans && this.props.data.channel.payoutPlans.find(function(e) {
-                            return e.category === wr.PARTNER && e.isReceivingRevenue
+                            return e.category === Rr.PARTNER && e.isReceivingRevenue
                         }))
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(r.Component),
-            ti = Object(i.compose)(Object(m.d)("DashboardRevenueSettingsRoot"), Object(u.a)(Jr, {
+            ni = Object(i.compose)(Object(m.d)("DashboardRevenueSettingsRoot"), Object(u.a)(ei, {
                 options: function(e) {
                     return {
                         variables: {
@@ -14487,12 +14614,12 @@ webpackJsonp([98], {
                         }
                     }
                 }
-            }))(ei);
+            }))(ti);
         n.d(t, "DashboardRevenueSettingsRootComponent", function() {
-            return ei
-        }), n.d(t, "DashboardRevenueSettingsRoot", function() {
             return ti
+        }), n.d(t, "DashboardRevenueSettingsRoot", function() {
+            return ni
         })
     }
 });
-//# sourceMappingURL=pages.dashboard-revenue-settings-0f828b70a84955eedbff35a1ae6a2133.js.map
+//# sourceMappingURL=pages.dashboard-revenue-settings-7326cec4d0879ea229adcf927cbbd488.js.map

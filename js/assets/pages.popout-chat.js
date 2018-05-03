@@ -641,7 +641,7 @@ webpackJsonp([34], {
                 SelfRequested: "self_requested"
             };
         ! function(e) {
-            e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.Ban = "ban", e.Clear = "clear", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
+            e.AddBlockedTerm = "add_blocked_term", e.AddPermittedTerm = "add_permitted_term", e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.Ban = "ban", e.Clear = "clear", e.DeleteBlockedTerm = "delete_blocked_term", e.DeletePermittedTerm = "delete_permitted_term", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.ModifiedAutoModProperties = "modified_automod_properties", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
         }(i || (i = {})),
         function(e) {
             e.AutoModMessageRejected = "automod_message_rejected", e.AutoModMessageApproved = "automod_message_approved", e.AutoModMessageDenied = "automod_message_denied"
@@ -3213,6 +3213,11 @@ webpackJsonp([34], {
                                 case R.ModerationActions.SubscribersOnly:
                                 case R.ModerationActions.SubscribersOnlyOff:
                                 case R.ModerationActions.Unhost:
+                                case R.ModerationActions.AddBlockedTerm:
+                                case R.ModerationActions.AddPermittedTerm:
+                                case R.ModerationActions.DeleteBlockedTerm:
+                                case R.ModerationActions.DeletePermittedTerm:
+                                case R.ModerationActions.ModifiedAutoModProperties:
                                 case R.ModerationActions.Unraid:
                                     n(Object(Pe.f)(e.data.moderation_action, e.data.created_by, e.data.created_by_user_id, e.data.args));
                                     break;
@@ -26622,16 +26627,17 @@ webpackJsonp([34], {
         "use strict";
         t.b = function(e, t, n) {
             void 0 === n && (n = !1);
-            return o(a, e, t, n)
-        }, t.a = function(e, t, n) {
-            void 0 === n && (n = !1);
-            return o(r, e, t, n)
-        };
+            return s(a, e, t, n)
+        }, t.a = o;
         var i = n("6sO2"),
-            a = "esport_channel_page_whitelist",
+            a = (n("QRuM"), "esport_channel_page_whitelist"),
             r = "esport_insider_pass_whitelist";
 
-        function o(e, t, n, a) {
+        function o(e, t, n) {
+            return void 0 === n && (n = !1), s(r, e, t, n)
+        }
+
+        function s(e, t, n, a) {
             void 0 === a && (a = !1);
             var r = i.b.get(e, []),
                 o = n && n.roles && n.roles.isStaff || a;
@@ -45829,4 +45835,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-25b84d97e260598bb6d8aa0f2e45d62f.js.map
+//# sourceMappingURL=pages.popout-chat-e55ffe214219909de349030f9c82d1e6.js.map

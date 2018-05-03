@@ -494,7 +494,7 @@ webpackJsonp([53], {
                             }
                         }, l.createElement(v.G, {
                             status: v.I.Live
-                        })), d && l.createElement("span", null, t.getFormattedViewCount(d, o)))), l.createElement(v._8, {
+                        })), void 0 !== d && l.createElement("span", null, t.getFormattedViewCount(d, o)))), l.createElement(v._8, {
                             position: v._15.Absolute,
                             padding: 1,
                             attachBottom: !0,
@@ -8632,4 +8632,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-0e7ba3d9e022cb66d4cc8dbc8796d63b.js.map
+//# sourceMappingURL=pages.front-98bd0357356c5ef72f3395a1e8efeb40.js.map

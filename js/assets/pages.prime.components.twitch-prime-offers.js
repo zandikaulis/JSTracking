@@ -12,6 +12,7 @@ webpackJsonp([114], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
+                    var e = this.props.partnerSocialLink && this.props.partnerSocialText;
                     return i.createElement(s._8, {
                         className: "prime-footer",
                         position: s._15.Relative
@@ -37,14 +38,14 @@ webpackJsonp([114], {
                     }, i.createElement(s._8, {
                         className: "prime-footer__twitter-links",
                         display: s.R.Flex,
-                        justifyContent: s._7.Between
+                        justifyContent: e ? s._7.Between : s._7.Center
                     }, i.createElement(s.O, {
                         to: "https://twitter.com/TwitchPrime",
                         targetBlank: !0
                     }, i.createElement(s.Q, {
                         bold: !0,
                         fontSize: s.V.Size5
-                    }, Object(a.d)("Follow us @TwitchPrime", "PrimeSubsite"))), this.props.partnerSocialLink && this.props.partnerSocialText && i.createElement(s.O, {
+                    }, Object(a.d)("Follow us @TwitchPrime", "PrimeSubsite"))), e && i.createElement(s.O, {
                         to: this.props.partnerSocialLink,
                         targetBlank: !0
                     }, i.createElement(s.Q, {
@@ -77,12 +78,13 @@ webpackJsonp([114], {
                         to: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
                         targetBlank: !0
                     }, Object(a.d)("Twitch Prime Guide", "PrimeSubsiteFooter")))))
-                }, t = n.__decorate([Object(o.d)("PrimeFooter", {
-                    autoReportInteractive: !0
-                })], t)
-            }(i.Component));
+                }, t
+            }(i.Component)),
+            l = Object(o.d)("PrimeFooter", {
+                autoReportInteractive: !0
+            })(c);
         r.d(t, "a", function() {
-            return c
+            return l
         })
     },
     cTXP: function(e, t) {},
@@ -206,11 +208,12 @@ webpackJsonp([114], {
                         targetBlank: !0,
                         onClick: this.onTryPrimeClick
                     }, Object(o.d)("Try Twitch Prime", "TryPrimeButton")))
-                }, t = n.__decorate([Object(u.d)("TryPrimeButton", {
-                    autoReportInteractive: !0
-                })], t)
+                }, t
             }(i.Component)),
-            O = (r("nVrf"), function(e) {
+            O = Object(u.d)("TryPrimeButton", {
+                autoReportInteractive: !0
+            })(b),
+            T = (r("nVrf"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -268,7 +271,7 @@ webpackJsonp([114], {
                         type: w._49.P,
                         fontSize: w.V.Size4,
                         bold: !0
-                    }, Object(o.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")), i.createElement(b, {
+                    }, Object(o.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")), i.createElement(O, {
                         externalReftag: this.props.externalReftag,
                         tracking: {
                             position: g.a.CenterBanner
@@ -287,11 +290,12 @@ webpackJsonp([114], {
                             lg: 2
                         }
                     })))
-                }, t = n.__decorate([Object(u.d)("TwitchPrimeBanner", {
-                    autoReportInteractive: !0
-                })], t)
+                }, t
             }(i.Component)),
-            T = (r("iiIr"), function(e) {
+            k = Object(u.d)("TwitchPrimeBanner", {
+                autoReportInteractive: !0
+            })(T),
+            E = (r("iiIr"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderOfferList = function(e, r) {
@@ -332,12 +336,12 @@ webpackJsonp([114], {
                     }, this.renderFooterUpsellButton()), i.createElement(d.a, null))))
                 }, t.prototype.renderBanner = function() {
                     var e = this.props.userData;
-                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(O, {
+                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(k, {
                         externalReftag: this.getReftagFromSearch()
                     })
                 }, t.prototype.renderFooterUpsellButton = function() {
                     var e = this.props.userData;
-                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(b, {
+                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(O, {
                         externalReftag: this.getReftagFromSearch(),
                         tracking: {
                             position: g.a.CenterFooter
@@ -349,16 +353,16 @@ webpackJsonp([114], {
                     if (t) return t[1]
                 }, t
             }(i.Component)),
-            k = Object(a.compose)(Object(c.a)(_, {
+            v = Object(a.compose)(Object(c.a)(_, {
                 name: "userData"
             }), Object(u.d)("TwitchPrimeOffersPage", {
                 destination: p.a.TwitchPrimeOffersPage
             }), Object(l.a)({
                 location: m.PageviewLocation.TwitchPrimeOffersPage
-            }))(T);
+            }))(E);
         r.d(t, "TwitchPrimeOffersPage", function() {
-            return k
+            return v
         })
     }
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-offers-04413564ffab6a6f5e57b3ac478e4fa2.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-offers-b02fa3b46a7f89f0d55ca96d82b300a3.js.map

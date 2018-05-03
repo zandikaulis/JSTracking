@@ -2509,6 +2509,11 @@ webpackJsonp([44], {
                                 case I.ModerationActions.SubscribersOnly:
                                 case I.ModerationActions.SubscribersOnlyOff:
                                 case I.ModerationActions.Unhost:
+                                case I.ModerationActions.AddBlockedTerm:
+                                case I.ModerationActions.AddPermittedTerm:
+                                case I.ModerationActions.DeleteBlockedTerm:
+                                case I.ModerationActions.DeletePermittedTerm:
+                                case I.ModerationActions.ModifiedAutoModProperties:
                                 case I.ModerationActions.Unraid:
                                     n(Object(Pe.f)(e.data.moderation_action, e.data.created_by, e.data.created_by_user_id, e.data.args));
                                     break;
@@ -17259,32 +17264,6 @@ webpackJsonp([44], {
             }
         };
         e.exports = n
-    },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var i, a = n("TToO"),
-            r = n("GiK3"),
-            o = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(i || (i = {}));
-        var s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, i.Off);
-                    return e === i.On || e === i.StaffOnly && this.props.isStaff ? this.props.children : null
-                }, t
-            }(r.Component),
-            l = s;
-        n.d(t, "a", function() {
-            return i
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "b", function() {
-            return l
-        })
     },
     QY1R: function(e, t) {
         var n = {
@@ -33583,4 +33562,4 @@ webpackJsonp([44], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-followers-5c823980793e5fcec74122cffb04894c.js.map
+//# sourceMappingURL=pages.channel-followers-f6ce1875a03b164981452a3f961342e2.js.map

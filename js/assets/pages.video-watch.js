@@ -1353,6 +1353,21 @@ webpackJsonp([38, 115], {
                 e.Admin = "admin", e.GlobalMod = "global_mod", e.Moderator = "mod", e.Owner = "owner", e.Staff = "staff", e.Subscriber = "subscriber", e.User = ""
             }(i || (i = {}))
     },
+    "6C1Z": function(e, t, n) {
+        "use strict";
+        t.b = function(e, t) {
+            return Object(i.d)(e) + "/edit/" + t
+        }, t.c = function(e, t) {
+            return Object(i.d)(e) + "/highlighter/" + t
+        }, t.d = function(e, t) {
+            return Object(i.d)(e) + "/schedule/" + t
+        }, t.a = function(e, t) {
+            return Object(i.d)(e) + "/appeal/" + t
+        }, t.e = function(e) {
+            return "/videos/" + e
+        };
+        var i = n("NY9D")
+    },
     "6CZb": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e) {
@@ -6112,32 +6127,6 @@ webpackJsonp([38, 115], {
         };
         var d = 0,
             u = 350
-    },
-    PRb0: function(e, t, n) {
-        "use strict";
-        t.a = function() {
-            if (r.a.buildType === a.a.Dev) return !0;
-            var e = r.b.get(s, i.Dev);
-            switch (e) {
-                case i.Dev:
-                    return !1;
-                case i.Staff:
-                    var t = Object(o.c)(r.o.store.getState());
-                    return !!(t && t.roles && t.roles.isStaff);
-                case i.Everyone:
-                    return !0;
-                default:
-                    var n = e;
-                    return n
-            }
-        };
-        var i, r = n("6sO2"),
-            a = n("Ejve"),
-            o = n("Aj/L"),
-            s = "twilight_moonstone";
-        ! function(e) {
-            e.Dev = "dev", e.Staff = "staff", e.Everyone = "everyone"
-        }(i || (i = {}))
     },
     PeVI: function(e, t) {},
     Ptqd: function(e, t) {
@@ -16474,7 +16463,8 @@ webpackJsonp([38, 115], {
             ce = n("+Znq"),
             de = n("LjAQ"),
             ue = n("mw/a"),
-            me = function(e) {
+            me = n("6C1Z"),
+            pe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -16491,7 +16481,6 @@ webpackJsonp([38, 115], {
                     autoReportInteractive: !0
                 })], t)
             }(u.Component),
-            pe = n("PRb0"),
             he = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -16527,7 +16516,7 @@ webpackJsonp([38, 115], {
                                 })
                             }
                         };
-                        return u.createElement(me, {
+                        return u.createElement(pe, {
                             key: "delete-option",
                             interactableProps: i,
                             testSelector: "qa-video-delete-button"
@@ -16555,18 +16544,17 @@ webpackJsonp([38, 115], {
                                 } else n.props.onShowLogin()
                             }
                         };
-                        return u.createElement(me, {
+                        return u.createElement(pe, {
                             key: "report-option",
                             interactableProps: i,
                             testSelector: "qa-video-report-button"
                         }, Object(B.d)("Report", "VideoOptions"))
                     }
                 }, t.prototype.renderHighlightOption = function(e, t) {
-                    var n, i;
-                    if (e.broadcastType === H.a.Archive && this.isVODOwner(e, t) && e.owner) return u.createElement(me, {
+                    if (e.broadcastType === H.a.Archive && this.isVODOwner(e, t) && e.owner) return u.createElement(pe, {
                         key: "highlight-option",
                         interactableProps: {
-                            linkTo: (n = e.owner.login, i = e.id, Object(pe.a)() ? "/" + n + "/manager/highlighter/" + i : "https://twitch.tv/" + n + "/manager/v" + i + "/highlight")
+                            linkTo: Object(me.c)(e.owner.login, e.id)
                         },
                         testSelector: "qa-video-highlight-button"
                     }, Object(B.d)("Highlight", "VideoOptions"))
@@ -19397,4 +19385,4 @@ webpackJsonp([38, 115], {
         }
     }
 });
-//# sourceMappingURL=pages.video-watch-ef8575cd75ff38781b251847ba94da23.js.map
+//# sourceMappingURL=pages.video-watch-d636d9047a32c470bb85e94ff7913437.js.map

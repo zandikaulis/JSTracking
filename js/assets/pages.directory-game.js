@@ -1509,7 +1509,7 @@ webpackJsonp([47], {
                             }
                         }, d.createElement(h.G, {
                             status: h.I.Live
-                        })), s && d.createElement("span", null, t.getFormattedViewCount(s, o)))), d.createElement(h._8, {
+                        })), void 0 !== s && d.createElement("span", null, t.getFormattedViewCount(s, o)))), d.createElement(h._8, {
                             position: h._15.Absolute,
                             padding: 1,
                             attachBottom: !0,
@@ -18845,4 +18845,4 @@ webpackJsonp([47], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-8d93f1e909ecf86582fd0f48ab526715.js.map
+//# sourceMappingURL=pages.directory-game-a69e2a0810b7f93cf1a3b1835d0dce9a.js.map

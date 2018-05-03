@@ -2071,8 +2071,8 @@ webpackJsonp([39], {
                             W = t,
                             C = e,
                             N = a.startRange && c(a.startRange, j),
-                            z = a.endRange && c(a.endRange, j),
-                            I = a.startRange && a.endRange && a.startRange < j && j < a.endRange,
+                            I = a.endRange && c(a.endRange, j),
+                            z = a.startRange && a.endRange && a.startRange < j && j < a.endRange,
                             R = a.minDate && j < a.minDate || a.maxDate && j > a.maxDate || a.disableWeekends && l(j) || a.disableDayFn && a.disableDayFn(j);
                         A && (x < i ? (F = y + F, W = h, C = M) : (F -= s, W = f, C = p));
                         var J = {
@@ -2085,8 +2085,8 @@ webpackJsonp([39], {
                             isDisabled: R,
                             isEmpty: A,
                             isStartRange: N,
-                            isEndRange: z,
-                            isInRange: I,
+                            isEndRange: I,
+                            isInRange: z,
                             showDaysInNextAndPreviousMonths: a.showDaysInNextAndPreviousMonths,
                             enableSelectionDaysInNextAndPreviousMonths: a.enableSelectionDaysInNextAndPreviousMonths
                         };
@@ -5407,15 +5407,15 @@ webpackJsonp([39], {
 
                 function N(e, t) {
                     return function(n) {
-                        return null != n ? (I(this, e, n), a.updateOffset(this, t), this) : z(this, e)
+                        return null != n ? (z(this, e, n), a.updateOffset(this, t), this) : I(this, e)
                     }
                 }
 
-                function z(e, t) {
+                function I(e, t) {
                     return e.isValid() ? e._d["get" + (e._isUTC ? "UTC" : "") + t]() : NaN
                 }
 
-                function I(e, t, n) {
+                function z(e, t, n) {
                     e.isValid() && e._d["set" + (e._isUTC ? "UTC" : "") + t](n)
                 }
 
@@ -5561,7 +5561,7 @@ webpackJsonp([39], {
                 }
 
                 function Ae(e) {
-                    return null != e ? (Oe(this, e), a.updateOffset(this, !0), this) : z(this, "Month")
+                    return null != e ? (Oe(this, e), a.updateOffset(this, !0), this) : I(this, "Month")
                 }
                 var Fe = _e;
                 var We = _e;
@@ -5580,10 +5580,10 @@ webpackJsonp([39], {
                 }
 
                 function Ne(e) {
-                    return ze(e) ? 366 : 365
+                    return Ie(e) ? 366 : 365
                 }
 
-                function ze(e) {
+                function Ie(e) {
                     return e % 4 == 0 && e % 100 != 0 || e % 400 == 0
                 }
                 V("Y", 0, 0, function() {
@@ -5600,7 +5600,7 @@ webpackJsonp([39], {
                 }), a.parseTwoDigitYear = function(e) {
                     return k(e) + (k(e) > 68 ? 1900 : 2e3)
                 };
-                var Ie = N("FullYear", !0);
+                var ze = N("FullYear", !0);
 
                 function Re(e) {
                     var t = new Date(Date.UTC.apply(null, arguments));
@@ -6079,11 +6079,11 @@ webpackJsonp([39], {
                     return t._isUTC ? (n = t.clone(), r = (g(e) || d(e) ? e.valueOf() : St(e).valueOf()) - n.valueOf(), n._d.setTime(n._d.valueOf() + r), a.updateOffset(n, !1), n) : St(e).local()
                 }
 
-                function zt(e) {
+                function It(e) {
                     return 15 * -Math.round(e._d.getTimezoneOffset() / 15)
                 }
 
-                function It() {
+                function zt() {
                     return !!this.isValid() && (this._isUTC && 0 === this._offset)
                 }
                 a.updateOffset = function() {};
@@ -6147,7 +6147,7 @@ webpackJsonp([39], {
                     var s = t._milliseconds,
                         i = At(t._days),
                         o = At(t._months);
-                    e.isValid() && (r = null == r || r, s && e._d.setTime(e._d.valueOf() + s * n), i && I(e, "Date", z(e, "Date") + i * n), o && Oe(e, z(e, "Month") + o * n), r && a.updateOffset(e, i || o))
+                    e.isValid() && (r = null == r || r, s && e._d.setTime(e._d.valueOf() + s * n), i && z(e, "Date", I(e, "Date") + i * n), o && Oe(e, I(e, "Month") + o * n), r && a.updateOffset(e, i || o))
                 }
                 Ut.fn = Et.prototype, Ut.invalid = function() {
                     return Ut(NaN)
@@ -6365,8 +6365,8 @@ webpackJsonp([39], {
                         isUTC: this._isUTC,
                         strict: this._strict
                     }
-                }, un.year = Ie, un.isLeapYear = function() {
-                    return ze(this.year())
+                }, un.year = ze, un.isLeapYear = function() {
+                    return Ie(this.year())
                 }, un.weekYear = function(e) {
                     return tn.call(this, e, this.week(), this.weekday(), this.localeData()._week.dow, this.localeData()._week.doy)
                 }, un.isoWeekYear = function(e) {
@@ -6415,13 +6415,13 @@ webpackJsonp([39], {
                         if ("string" == typeof e) {
                             if (null === (e = Ct(le, e))) return this
                         } else Math.abs(e) < 16 && !n && (e *= 60);
-                        return !this._isUTC && t && (r = zt(this)), this._offset = e, this._isUTC = !0, null != r && this.add(r, "m"), s !== e && (!t || this._changeInProgress ? Zt(this, Ut(e - s, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, a.updateOffset(this, !0), this._changeInProgress = null)), this
+                        return !this._isUTC && t && (r = It(this)), this._offset = e, this._isUTC = !0, null != r && this.add(r, "m"), s !== e && (!t || this._changeInProgress ? Zt(this, Ut(e - s, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, a.updateOffset(this, !0), this._changeInProgress = null)), this
                     }
-                    return this._isUTC ? s : zt(this)
+                    return this._isUTC ? s : It(this)
                 }, un.utc = function(e) {
                     return this.utcOffset(0, e)
                 }, un.local = function(e) {
-                    return this._isUTC && (this.utcOffset(0, e), this._isUTC = !1, e && this.subtract(zt(this), "m")), this
+                    return this._isUTC && (this.utcOffset(0, e), this._isUTC = !1, e && this.subtract(It(this), "m")), this
                 }, un.parseZone = function() {
                     if (null != this._tzm) this.utcOffset(this._tzm, !1, !0);
                     else if ("string" == typeof this._i) {
@@ -6437,11 +6437,11 @@ webpackJsonp([39], {
                     return !!this.isValid() && !this._isUTC
                 }, un.isUtcOffset = function() {
                     return !!this.isValid() && this._isUTC
-                }, un.isUtc = It, un.isUTC = It, un.zoneAbbr = function() {
+                }, un.isUtc = zt, un.isUTC = zt, un.zoneAbbr = function() {
                     return this._isUTC ? "UTC" : ""
                 }, un.zoneName = function() {
                     return this._isUTC ? "Coordinated Universal Time" : ""
-                }, un.dates = w("dates accessor is deprecated. Use date instead.", nn), un.months = w("months accessor is deprecated. Use month instead", Ae), un.years = w("years accessor is deprecated. Use year instead", Ie), un.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
+                }, un.dates = w("dates accessor is deprecated. Use date instead.", nn), un.months = w("months accessor is deprecated. Use month instead", Ae), un.years = w("years accessor is deprecated. Use year instead", ze), un.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
                     return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
                 }), un.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
                     if (!i(this._isDSTShifted)) return this._isDSTShifted;
@@ -6619,7 +6619,7 @@ webpackJsonp([39], {
                     };
                 var Nn = Math.abs;
 
-                function zn() {
+                function In() {
                     if (!this.isValid()) return this.localeData().invalidDate();
                     var e, t, n = Nn(this._milliseconds) / 1e3,
                         a = Nn(this._days),
@@ -6634,17 +6634,17 @@ webpackJsonp([39], {
                         _ = this.asSeconds();
                     return _ ? (_ < 0 ? "-" : "") + "P" + (s ? s + "Y" : "") + (i ? i + "M" : "") + (o ? o + "D" : "") + (d || u || l ? "T" : "") + (d ? d + "H" : "") + (u ? u + "M" : "") + (l ? l + "S" : "") : "P0D"
                 }
-                var In = Et.prototype;
-                return In.isValid = function() {
+                var zn = Et.prototype;
+                return zn.isValid = function() {
                     return this._isValid
-                }, In.abs = function() {
+                }, zn.abs = function() {
                     var e = this._data;
                     return this._milliseconds = fn(this._milliseconds), this._days = fn(this._days), this._months = fn(this._months), e.milliseconds = fn(e.milliseconds), e.seconds = fn(e.seconds), e.minutes = fn(e.minutes), e.hours = fn(e.hours), e.months = fn(e.months), e.years = fn(e.years), this
-                }, In.add = function(e, t) {
+                }, zn.add = function(e, t) {
                     return Mn(this, e, t, 1)
-                }, In.subtract = function(e, t) {
+                }, zn.subtract = function(e, t) {
                     return Mn(this, e, t, -1)
-                }, In.as = function(e) {
+                }, zn.as = function(e) {
                     if (!this.isValid()) return NaN;
                     var t, n, a = this._milliseconds;
                     if ("month" === (e = A(e)) || "year" === e) return t = this._days + a / 864e5, n = this._months + yn(t), "month" === e ? n : n / 12;
@@ -6664,19 +6664,19 @@ webpackJsonp([39], {
                         default:
                             throw new Error("Unknown unit " + e)
                     }
-                }, In.asMilliseconds = gn, In.asSeconds = Dn, In.asMinutes = kn, In.asHours = vn, In.asDays = Tn, In.asWeeks = wn, In.asMonths = bn, In.asYears = Sn, In.valueOf = function() {
+                }, zn.asMilliseconds = gn, zn.asSeconds = Dn, zn.asMinutes = kn, zn.asHours = vn, zn.asDays = Tn, zn.asWeeks = wn, zn.asMonths = bn, zn.asYears = Sn, zn.valueOf = function() {
                     return this.isValid() ? this._milliseconds + 864e5 * this._days + this._months % 12 * 2592e6 + 31536e6 * k(this._months / 12) : NaN
-                }, In._bubble = function() {
+                }, zn._bubble = function() {
                     var e, t, n, a, r, s = this._milliseconds,
                         i = this._days,
                         o = this._months,
                         d = this._data;
                     return s >= 0 && i >= 0 && o >= 0 || s <= 0 && i <= 0 && o <= 0 || (s += 864e5 * pn(Ln(o) + i), i = 0, o = 0), d.milliseconds = s % 1e3, e = D(s / 1e3), d.seconds = e % 60, t = D(e / 60), d.minutes = t % 60, n = D(t / 60), d.hours = n % 24, o += r = D(yn(i += D(n / 24))), i -= pn(Ln(r)), a = D(o / 12), o %= 12, d.days = i, d.months = o, d.years = a, this
-                }, In.get = function(e) {
+                }, zn.get = function(e) {
                     return e = A(e), this.isValid() ? this[e + "s"]() : NaN
-                }, In.milliseconds = Hn, In.seconds = jn, In.minutes = Pn, In.hours = En, In.days = On, In.weeks = function() {
+                }, zn.milliseconds = Hn, zn.seconds = jn, zn.minutes = Pn, zn.hours = En, zn.days = On, zn.weeks = function() {
                     return D(this.days() / 7)
-                }, In.months = An, In.years = Fn, In.humanize = function(e) {
+                }, zn.months = An, zn.years = Fn, zn.humanize = function(e) {
                     if (!this.isValid()) return this.localeData().invalidDate();
                     var t = this.localeData(),
                         n = function(e, t, n) {
@@ -6694,7 +6694,7 @@ webpackJsonp([39], {
                                 }.apply(null, l)
                         }(this, !e, t);
                     return e && (n = t.pastFuture(+this, n)), t.postformat(n)
-                }, In.toISOString = zn, In.toString = zn, In.toJSON = zn, In.locale = Qt, In.localeData = $t, In.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", zn), In.lang = Xt, V("X", 0, 0, "unix"), V("x", 0, 0, "valueOf"), ce("x", de), ce("X", /[+-]?\d+(\.\d{1,3})?/), pe("X", function(e, t, n) {
+                }, zn.toISOString = In, zn.toString = In, zn.toJSON = In, zn.locale = Qt, zn.localeData = $t, zn.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", In), zn.lang = Xt, V("X", 0, 0, "unix"), V("x", 0, 0, "valueOf"), ce("x", de), ce("X", /[+-]?\d+(\.\d{1,3})?/), pe("X", function(e, t, n) {
                     n._d = new Date(1e3 * parseFloat(e, 10))
                 }), pe("x", function(e, t, n) {
                     n._d = new Date(k(e))
@@ -8987,26 +8987,6 @@ webpackJsonp([39], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
-                                    value: "roles"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isStaff"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
                                     value: "paymentMethods"
                                 },
                                 arguments: [],
@@ -9384,11 +9364,11 @@ webpackJsonp([39], {
             }],
             loc: {
                 start: 0,
-                end: 611
+                end: 593
             }
         };
         n.loc.source = {
-            body: "query PaymentMethodsTab_UserPaymentMethods {\ncurrentUser {\nid\nroles {\nisStaff\n}\npaymentMethods {\nprovider\npaymentType\nbillingEmail\ncardType\nlastFour\nexpirationMonth\nexpirationYear\nextMethodID\npurchaseProfiles {\nid\nwillRenew\nexpiresAt\nrenewalPrice\nrenewalCurrency\nproductType\nsubscriptionBenefit {\nid\ntier\nuser {\ndisplayName\nprofileImageURL(width: 50)\nlogin\n}\n}\n}\n}\npaymentMethodConfigs {\nrecurly {\nbraintreeClientAuthorization\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\n}\nxsolla {\niframeURL\n}\nzuora {\nexternalAccountID\nhostedPageID\nhostedPageURL\npublicKey\nsignature\ntenantID\ntoken\n}\n}\n}\n}",
+            body: "query PaymentMethodsTab_UserPaymentMethods {\ncurrentUser {\nid\npaymentMethods {\nprovider\npaymentType\nbillingEmail\ncardType\nlastFour\nexpirationMonth\nexpirationYear\nextMethodID\npurchaseProfiles {\nid\nwillRenew\nexpiresAt\nrenewalPrice\nrenewalCurrency\nproductType\nsubscriptionBenefit {\nid\ntier\nuser {\ndisplayName\nprofileImageURL(width: 50)\nlogin\n}\n}\n}\n}\npaymentMethodConfigs {\nrecurly {\nbraintreeClientAuthorization\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\n}\nxsolla {\niframeURL\n}\nzuora {\nexternalAccountID\nhostedPageID\nhostedPageURL\npublicKey\nsignature\ntenantID\ntoken\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -10065,8 +10045,8 @@ webpackJsonp([39], {
             W = n.n(F),
             C = n("pNNA"),
             N = n.n(C),
-            z = n("lL4Y"),
-            I = n.n(z),
+            I = n("lL4Y"),
+            z = n.n(I),
             R = n("KVSr"),
             J = n.n(R),
             U = n("9pOZ"),
@@ -10670,7 +10650,7 @@ webpackJsonp([39], {
                             },
                             dark: {
                                 "1x": N.a,
-                                "2x": I.a
+                                "2x": z.a
                             }
                         }
                     }))), l.createElement(Y._8, {
@@ -11209,7 +11189,7 @@ webpackJsonp([39], {
                                         },
                                         dark: {
                                             "1x": N.a,
-                                            "2x": I.a
+                                            "2x": z.a
                                         }
                                     }
                                 });
@@ -11232,7 +11212,7 @@ webpackJsonp([39], {
                             onClick: t.handleUpdateToggleButton,
                             type: Y.B.Text,
                             "data-test-selector": je.CLOSE_BUTTON
-                        }, Object(m.d)("Cancel", "PaymentMethodCard")), (t.props.isStaff || m.a.buildType !== G.a.Production) && [a.Recurly, a.Zuora].includes(t.props.paymentProviderConfig.provider) && (n = l.createElement(Y.v, {
+                        }, Object(m.d)("Cancel", "PaymentMethodCard")), "yes" !== m.o.experiments.getAssignment("TWILIGHT_PAY__SAVED_PAYMENT_METHODS") && m.a.buildType === G.a.Production || [a.Recurly, a.Zuora].includes(t.props.paymentProviderConfig.provider) && (n = l.createElement(Y.v, {
                             onClick: t.handleDeleteButton,
                             type: Y.B.Hollow
                         }, Object(m.d)("Delete", "PaymentMethodCard"))), l.createElement(l.Fragment, null, !!n && l.createElement(Y._8, {
@@ -11468,7 +11448,7 @@ webpackJsonp([39], {
             Ne = Object(_.compose)(Object(y.a)(We, {
                 name: "deleteDefaultPaymentMethod"
             }))(Ce),
-            ze = function(e) {
+            Ie = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -11487,16 +11467,16 @@ webpackJsonp([39], {
                     }))
                 }, t
             }(l.Component);
-        var Ie = Object(r.b)(null, function(e) {
+        var ze = Object(r.b)(null, function(e) {
             return Object(s.b)({
                 closeModal: g.c
             }, e)
-        })(ze);
+        })(Ie);
         var Re, Je = Object(r.b)(null, function(e) {
                 return Object(s.b)({
                     showDeletePaymentMethodModal: function(e) {
                         var t = u.__rest(e, []);
-                        return Object(g.d)(Ie, t)
+                        return Object(g.d)(ze, t)
                     }
                 }, e)
             })(Ee),
@@ -11561,8 +11541,7 @@ webpackJsonp([39], {
                             paymentProviderConfig: i,
                             refetchPaymentMethodsData: e.refetchPaymentMethodsData,
                             subscriptions: n.purchaseProfiles,
-                            userID: e.props.data.currentUser.id,
-                            isStaff: e.props.data.currentUser.roles.isStaff
+                            userID: e.props.data.currentUser.id
                         })
                     })
                 }, t
@@ -11768,7 +11747,7 @@ webpackJsonp([39], {
                             },
                             dark: {
                                 "1x": N.a,
-                                "2x": I.a
+                                "2x": z.a
                             }
                         }
                     });
@@ -11810,7 +11789,7 @@ webpackJsonp([39], {
                                     },
                                     dark: {
                                         "1x": N.a,
-                                        "2x": I.a
+                                        "2x": z.a
                                     }
                                 }
                             });
@@ -15721,4 +15700,4 @@ webpackJsonp([39], {
             }(a || (a = {}))
     }
 });
-//# sourceMappingURL=pages.payments-4b168f5ab110f5a3120f481efb460974.js.map
+//# sourceMappingURL=pages.payments-cb75d8852c7a78094dcd5e276fc8bd27.js.map

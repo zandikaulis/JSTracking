@@ -1629,8 +1629,8 @@ webpackJsonp([51], {
                     return e.slug
                 }
             }), Object(c.d)("ClipsEditor"))(N),
-            I = n("oMs9"),
-            F = (n("Jbgd"), function(e) {
+            F = n("oMs9"),
+            I = (n("Jbgd"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1678,7 +1678,7 @@ webpackJsonp([51], {
             }(o.Component)),
             x = Object(c.d)("ClipsEditTopNav", {
                 autoReportInteractive: !0
-            })(F),
+            })(I),
             L = n("l21v"),
             D = function() {
                 return function(e) {
@@ -1967,7 +1967,7 @@ webpackJsonp([51], {
                     var t = e.data,
                         n = t.loading,
                         i = t.clip;
-                    return !n && i && i.creationState !== I.a.creating
+                    return !n && i && i.creationState !== F.a.creating
                 }, t
             }(o.Component),
             G = Object(v.a)(W, {
@@ -2048,23 +2048,29 @@ webpackJsonp([51], {
                     return t.state = {
                         isPollingTimedOut: !1,
                         isPlayerIframeLoaded: !1,
-                        hideContent: !1
+                        hideContent: !1,
+                        shouldAnimate: !0
                     }, t.timeoutID = 0, t.hasSentEditClip = !1, t.onLoaded = function() {
                         t.setState({
                             isPlayerIframeLoaded: !0
                         })
+                    }, t.onAnimationEnd = function() {
+                        t.setState({
+                            shouldAnimate: !1
+                        })
                     }, t.getIsClipResolved = function(e) {
                         var n = t.getClipCreationState(e);
-                        return t.getRawMediaExists(e) && (n === I.a.created || n === I.a.failed)
+                        return t.getRawMediaExists(e) && (n === F.a.created || n === F.a.failed)
                     }, t.getIsCreationFailed = function(e) {
-                        return t.getRawMediaExists(e) && t.getClipCreationState(e) === I.a.failed
+                        return t.getRawMediaExists(e) && t.getClipCreationState(e) === F.a.failed
                     }, t.getClipCreationState = function(e) {
                         return e.data.clip && e.data.clip.rawMedia && e.data.clip.rawMedia.status || ""
                     }, t.getRawMediaExists = function(e) {
                         return Boolean(e.data.clip && e.data.clip.rawMedia)
                     }, t.hideTransitioningState = function() {
                         t.setState({
-                            hideContent: !0
+                            hideContent: !0,
+                            shouldAnimate: !0
                         }), setTimeout(function() {
                             t.setState({
                                 hideContent: !1
@@ -2126,16 +2132,11 @@ webpackJsonp([51], {
                         isPostEdit: this.props.isPostEdit
                     }), o.createElement(O.e, {
                         duration: O.g.ExtraLong,
-                        enabled: !0,
+                        enabled: this.state.shouldAnimate,
                         fillMode: O.h.Both,
                         timing: O.i.EaseInOut,
-                        type: O.j.SlideInBottom
-                    }, o.createElement(O.e, {
-                        duration: O.g.ExtraLong,
-                        enabled: this.props.isPostEdit,
-                        fillMode: O.h.Both,
-                        timing: O.i.EaseInOut,
-                        type: O.j.SlideInBottom
+                        type: O.j.SlideInBottom,
+                        onAnimationEnd: this.onAnimationEnd
                     }, o.createElement(O._8, {
                         className: a,
                         padding: 2
@@ -2155,7 +2156,7 @@ webpackJsonp([51], {
                     }))), this.props.isPostEdit && o.createElement(Y, {
                         slug: this.props.slug,
                         createdAt: e && e.createdAt
-                    })), i))))
+                    })), i)))
                 }, t.prototype.maybeRedirectToView = function(e) {
                     var t = e.data.clip && e.data.clip.isPublished,
                         n = e.data.clip && e.data.clip.curator && this.props.userLogin && e.data.clip.curator.login !== this.props.userLogin;
@@ -5532,7 +5533,7 @@ webpackJsonp([51], {
                             var t = a.getPlayer();
                             t && t.postMessage(e, r.o.config.playerBaseURL)
                         }, a.onIncomingPlayerMessage = function(e) {
-                            e.origin === r.o.config.playerBaseURL && e.data.namespace === I && a.messageHandlers.forEach(function(t) {
+                            e.origin === r.o.config.playerBaseURL && e.data.namespace === F && a.messageHandlers.forEach(function(t) {
                                 t(e.data)
                             })
                         }, a.updatePlayerProps = function(t) {
@@ -5651,7 +5652,7 @@ webpackJsonp([51], {
             C = "bridgestateupdate",
             N = "bridgestorestateupdate",
             T = "player.embed.host",
-            I = "player.embed.client";
+            F = "player.embed.client";
         n.d(t, "t", function() {
             return o
         }), n.d(t, "p", function() {
@@ -5697,7 +5698,7 @@ webpackJsonp([51], {
         }), n.d(t, "b", function() {
             return T
         }), n.d(t, "a", function() {
-            return I
+            return F
         }), n.d(t, !1, function() {
             return "report"
         }), n.d(t, !1, function() {
@@ -6107,4 +6108,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-d49c2bd8bb39620ac0a35905865e7020.js.map
+//# sourceMappingURL=sites.clips.pages.create-3350e984e134c139dec8ac5bd5bfb79c.js.map

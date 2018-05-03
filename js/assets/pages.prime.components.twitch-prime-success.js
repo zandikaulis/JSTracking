@@ -1,4 +1,4 @@
-webpackJsonp([96], {
+webpackJsonp([97], {
     "+6x9": function(e, t, n) {
         "use strict";
         var r, i, a = n("TToO"),
@@ -1096,7 +1096,7 @@ webpackJsonp([96], {
                 SelfRequested: "self_requested"
             };
         ! function(e) {
-            e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.Ban = "ban", e.Clear = "clear", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
+            e.AddBlockedTerm = "add_blocked_term", e.AddPermittedTerm = "add_permitted_term", e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.Ban = "ban", e.Clear = "clear", e.DeleteBlockedTerm = "delete_blocked_term", e.DeletePermittedTerm = "delete_permitted_term", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.ModifiedAutoModProperties = "modified_automod_properties", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
         }(r || (r = {})),
         function(e) {
             e.AutoModMessageRejected = "automod_message_rejected", e.AutoModMessageApproved = "automod_message_approved", e.AutoModMessageDenied = "automod_message_denied"
@@ -1558,6 +1558,107 @@ webpackJsonp([96], {
         };
         n.loc.source = {
             body: "query ReportUserModal_UserCommunities($userId: ID!) {\nuser(id: $userId) {\nid\ndirectories {\nnodes {\nid\nname\ndisplayName\ndirectoryType\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    2655: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Prime_PrimeOffers_ClaimedPrimeOffer"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "dateOverride"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Time"
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "primeOffers"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "dateOverride"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "dateOverride"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "hasEntitlement"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 138
+            }
+        };
+        n.loc.source = {
+            body: "query Prime_PrimeOffers_ClaimedPrimeOffer($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\nself {\nhasEntitlement\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -3158,7 +3259,7 @@ webpackJsonp([96], {
                 }, t
             }(a.Component)),
             W = 50,
-            H = function(e) {
+            G = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onChange = function(e) {
@@ -3297,7 +3398,7 @@ webpackJsonp([96], {
                     }
                 }, t = i.__decorate([Object(l.d)("GiftRecipientSearch")], t)
             }(a.Component),
-            G = n("37Pp"),
+            H = n("37Pp"),
             z = n("odx1"),
             q = function(e) {
                 var t = null,
@@ -3370,7 +3471,7 @@ webpackJsonp([96], {
                 }, r, a.createElement(_._8, null, a.createElement(_.Q, {
                     type: _._49.H4,
                     bold: !0
-                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(G.a, {
+                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(H.a, {
                     subscriptionProduct: e.subscriptionProducts[0]
                 }), a.createElement(_._8, {
                     display: _.R.Flex
@@ -3833,7 +3934,7 @@ webpackJsonp([96], {
                         key: "subscribe-balloon"
                     }, t, e)
                 }, t.prototype.getGiftRecipientSearchPage = function() {
-                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(H, {
+                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(G, {
                         key: "gift-recipient-search-page",
                         onBack: this.goToPreviousPage,
                         selectedSubProduct: this.props.data.user.subscriptionProducts[this.state.selectedSubProductIndex],
@@ -4116,30 +4217,36 @@ webpackJsonp([96], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r = n("GiK3"),
-            i = n("3zLD"),
-            a = n("6sO2"),
-            o = n("j7/Y"),
-            s = n("w9tK"),
-            l = n("vH/s"),
-            c = n("CSlQ"),
-            u = n("P3dd"),
-            d = n("c6bv"),
-            p = n("RH2O"),
-            m = n("c8Oh"),
-            h = n("TToO"),
-            g = n("7vx8"),
-            f = n("v5ho"),
-            b = n("AadB"),
-            v = n("Odds"),
-            y = n("PCKG"),
-            k = (n("MTjQ"), function(e) {
+        var r = n("TToO"),
+            i = n("GiK3"),
+            a = n("3zLD"),
+            o = n("CIox"),
+            s = n("6sO2"),
+            l = n("7vx8"),
+            c = n("j7/Y"),
+            u = n("w9tK"),
+            d = n("vH/s"),
+            p = n("CSlQ"),
+            m = n("P3dd"),
+            h = n("Kckk"),
+            g = n("c6bv"),
+            f = n("RH2O"),
+            b = n("c8Oh"),
+            v = n("v5ho"),
+            y = n("AadB"),
+            k = n("Odds"),
+            _ = n("PCKG"),
+            S = (n("MTjQ"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return h.__extends(t, e), t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
                     if (this.props.data.error) return null;
-                    if (this.props.data.loading) return r.createElement(v._8, null, r.createElement(v._10, {
+                    if (this.props.data.loading) return i.createElement(k._8, null, i.createElement(k._10, {
                         fillContent: !0
                     }));
                     var e = this.props.data,
@@ -4148,16 +4255,16 @@ webpackJsonp([96], {
                             return t.broadcaster && t.broadcaster.login && t.broadcaster.id
                         }).map(function(e, t) {
                             var n = e.node;
-                            return r.createElement(b.b, {
+                            return i.createElement(y.b, {
                                 directoryName: "fortnite",
-                                directoryType: f.a.Games,
+                                directoryType: v.a.Games,
                                 streamIndex: t,
                                 streamNode: n,
                                 key: n.id,
                                 showPreview: !!n.broadcaster && !!n.broadcaster.roles && !!n.broadcaster.roles.isPartner
                             })
                         });
-                    return r.createElement(v._8, {
+                    return i.createElement(k._8, {
                         className: "twitch-prime-streamers__tower",
                         flexShrink: 0,
                         "data-target": "twitch-prime-streamers",
@@ -4168,39 +4275,39 @@ webpackJsonp([96], {
                         margin: {
                             x: "auto"
                         }
-                    }, r.createElement(v._8, {
+                    }, i.createElement(k._8, {
                         margin: {
                             y: 1
                         },
                         className: "twitch-prime-streamers__count"
-                    }, r.createElement(v.Q, {
-                        type: v._49.H3,
-                        color: v.K.Link,
+                    }, i.createElement(k.Q, {
+                        type: k._49.H3,
+                        color: k.K.Link,
                         bold: !0
-                    }, Object(a.d)("Check out Fortnite on Twitch.tv", "TwitchPrimeStreamers")), r.createElement(v.Q, {
-                        type: v._49.H4,
-                        color: v.K.Link
-                    }, Object(a.d)("{viewers, number} viewers right now", {
+                    }, Object(s.d)("Check out Fortnite on Twitch.tv", "TwitchPrimeStreamers")), i.createElement(k.Q, {
+                        type: k._49.H4,
+                        color: k.K.Link
+                    }, Object(s.d)("{viewers, number} viewers right now", {
                         viewers: e.directory && e.directory.viewersCount || 0
-                    }, "TwitchPrimeStreamers"))), r.createElement(v._55, {
-                        gutterSize: v._57.Small,
-                        childWidth: v._56.Large,
+                    }, "TwitchPrimeStreamers"))), i.createElement(k._55, {
+                        gutterSize: k._57.Small,
+                        childWidth: k._56.Large,
                         children: t,
                         center: !0
-                    }), r.createElement(v._8, {
+                    }), i.createElement(k._8, {
                         margin: {
                             y: 1
                         },
                         className: "twitch-prime-streamers__game-page",
-                        textAlign: v._45.Center
-                    }, r.createElement(v.O, {
+                        textAlign: k._45.Center
+                    }, i.createElement(k.O, {
                         to: "/game/directory/fortnite",
                         hoverUnderlineNone: !1,
-                        type: v.P.Default
-                    }, Object(a.d)("View more Fortnite on Twitch.tv >", "TwitchPrimeStreamers"))))
+                        type: k.P.Default
+                    }, Object(s.d)("View more Fortnite on Twitch.tv >", "TwitchPrimeStreamers"))))
                 }, t
-            }(r.Component)),
-            _ = Object(i.compose)(Object(c.d)("TwitchPrimeStreamers"), Object(g.a)(y, {
+            }(i.Component)),
+            T = Object(a.compose)(Object(p.d)("TwitchPrimeStreamers"), Object(l.a)(_, {
                 options: function(e) {
                     return {
                         fetchPolicy: "network-only",
@@ -4211,70 +4318,107 @@ webpackJsonp([96], {
                         }
                     }
                 }
-            }))(k);
-        var S = Object(p.b)(function(e) {
+            }))(S);
+        var w = Object(f.b)(function(e) {
                 return {
-                    languagePreferences: Object(m.a)(e)
+                    languagePreferences: Object(b.a)(e)
                 }
-            }, null)(_),
-            T = (n("Ql3t"), function() {
-                return r.createElement(v._8, {
-                    className: "twitch-prime-success"
-                }, r.createElement(v._8, {
-                    textAlign: v._45.Center,
-                    className: "twitch-prime-success__header"
-                }, r.createElement(d.a, {
-                    renderOfferImage: !0
-                }, r.createElement(v._8, null, r.createElement(v._8, {
-                    margin: {
-                        y: 2
+            }, null)(T),
+            E = n("dlQw"),
+            P = n("2655"),
+            O = (n("Ql3t"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getFortniteOffer = function() {
+                        var e = s.b.get(E.b, E.a),
+                            n = t.props.data,
+                            r = n && n.primeOffers,
+                            i = r && r.filter(function(t) {
+                                return t.id === e
+                            });
+                        return i && i[0]
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentDidUpdate = function() {
+                    !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.data;
+                    if (e && e.loading) return i.createElement(k._10, {
+                        fillContent: !0
+                    });
+                    var t = this.getFortniteOffer();
+                    return e && e.error || !t || !t.self || !t.self.hasEntitlement ? i.createElement(o.b, {
+                        to: "/prime/fortnite"
+                    }) : i.createElement(k._8, {
+                        className: "twitch-prime-success",
+                        "data-test-selector": "twitch-prime-success-page"
+                    }, i.createElement(k._8, {
+                        textAlign: k._45.Center,
+                        className: "twitch-prime-success__header"
+                    }, i.createElement(g.a, {
+                        renderOfferImage: !0
+                    }, i.createElement(k._8, null, i.createElement(k._8, {
+                        margin: {
+                            y: 2
+                        }
+                    }, i.createElement(k.Q, {
+                        type: k._49.H1,
+                        color: k.K.Overlay,
+                        transform: k._48.Uppercase,
+                        bold: !0
+                    }, Object(s.d)("Loot acquired!", "FortniteSuccess"))), i.createElement(k._8, {
+                        margin: {
+                            y: 2
+                        }
+                    }, i.createElement(k.Q, {
+                        type: k._49.H3,
+                        color: k.K.Overlay,
+                        transform: k._48.Uppercase,
+                        bold: !0
+                    }, Object(s.d)("Load up Fortnite and your rewards will be waiting for you!", "FortniteSuccess")))), i.createElement(k._8, {
+                        padding: {
+                            y: 2
+                        }
+                    }, i.createElement(k.Q, {
+                        type: k._49.H3,
+                        color: k.K.Overlay,
+                        bold: !0
+                    }, Object(s.d)("Problems? <x:link>Click here ›</x:link>", {
+                        "x:link": function(e) {
+                            return i.createElement(k.O, {
+                                to: "#faq",
+                                hoverUnderlineNone: !1,
+                                key: e,
+                                type: k.P.Overlay
+                            }, e)
+                        }
+                    }, "FortniteSuccess"))))), i.createElement(w, null), i.createElement(m.a, {
+                        partnerSocialLink: "https://twitter.com/FortniteGame",
+                        partnerSocialText: "@FortniteGame"
+                    }))
+                }, t
+            }(i.Component)),
+            C = Object(a.compose)(Object(l.a)(P, {
+                options: function() {
+                    return {
+                        variables: {
+                            dateOverride: Object(h.e)()
+                        }
                     }
-                }, r.createElement(v.Q, {
-                    type: v._49.H1,
-                    color: v.K.Overlay,
-                    transform: v._48.Uppercase,
-                    bold: !0
-                }, Object(a.d)("Loot acquired!", "FortniteSuccess"))), r.createElement(v._8, {
-                    margin: {
-                        y: 2
-                    }
-                }, r.createElement(v.Q, {
-                    type: v._49.H3,
-                    color: v.K.Overlay,
-                    transform: v._48.Uppercase,
-                    bold: !0
-                }, Object(a.d)("Load up Fortnite and your rewards will be waiting for you!", "FortniteSuccess")))), r.createElement(v._8, {
-                    padding: {
-                        y: 2
-                    }
-                }, r.createElement(v.Q, {
-                    type: v._49.H3,
-                    color: v.K.Overlay,
-                    bold: !0
-                }, Object(a.d)("Problems? <x:link>Click here ›</x:link>", {
-                    "x:link": function(e) {
-                        return r.createElement(v.O, {
-                            to: "#faq",
-                            hoverUnderlineNone: !1,
-                            key: e,
-                            type: v.P.Overlay
-                        }, e)
-                    }
-                }, "FortniteSuccess"))))), r.createElement(S, null), r.createElement(u.a, {
-                    partnerSocialLink: "https://twitter.com/FortniteGame",
-                    partnerSocialText: "@FortniteGame"
-                }))
-            }),
-            w = Object(i.compose)(Object(c.d)("TwitchPrimeSuccessPage", {
-                autoReportInteractive: !0,
-                destination: s.a.TwitchPrimeSuccessPage
-            }), Object(o.a)({
-                location: l.PageviewLocation.TwitchPrimeSuccessPage
-            }))(T);
-        n.d(t, "TwitchPrimeSuccessPageComponent", function() {
-            return T
+                }
+            }), Object(p.d)("TwitchPrimeSuccessPage", {
+                destination: u.a.TwitchPrimeSuccessPage
+            }), Object(c.a)({
+                location: d.PageviewLocation.TwitchPrimeSuccessPage
+            }))(O);
+        n.d(t, "TEST_SELECTOR", function() {
+            return "twitch-prime-success-page"
+        }), n.d(t, "TwitchPrimeSuccessPageComponent", function() {
+            return O
         }), n.d(t, "TwitchPrimeSuccessPage", function() {
-            return w
+            return C
         })
     },
     "9u8h": function(e, t, n) {
@@ -5544,7 +5688,7 @@ webpackJsonp([96], {
                     nextCard: B.socialMedia
                 })
             },
-            H = {
+            G = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username}'s Spam or Malicious Links", {
                         username: e
@@ -5555,7 +5699,7 @@ webpackJsonp([96], {
                 type: _.MultipleChoice,
                 value: "spam type"
             },
-            G = {
+            H = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username} for Inappropriate Content", {
                         username: e
@@ -5624,14 +5768,14 @@ webpackJsonp([96], {
                 "external site; committing violence": W.external_violence,
                 "external site; scam": B.socialMedia,
                 "ban evasion": z,
-                spam: H,
+                spam: G,
                 hateful: V.content,
                 impersonation: q,
                 "violence/threats": V.violence,
                 "threatening violence": V.violence,
                 "committing violence": V.violence,
                 abusive: V.content,
-                "inappropriate content": G,
+                "inappropriate content": H,
                 "intellectual property": x.legal,
                 "violating developer agreement": x.legal
             },
@@ -8768,6 +8912,7 @@ webpackJsonp([96], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
+                    var e = this.props.partnerSocialLink && this.props.partnerSocialText;
                     return i.createElement(s._8, {
                         className: "prime-footer",
                         position: s._15.Relative
@@ -8793,14 +8938,14 @@ webpackJsonp([96], {
                     }, i.createElement(s._8, {
                         className: "prime-footer__twitter-links",
                         display: s.R.Flex,
-                        justifyContent: s._7.Between
+                        justifyContent: e ? s._7.Between : s._7.Center
                     }, i.createElement(s.O, {
                         to: "https://twitter.com/TwitchPrime",
                         targetBlank: !0
                     }, i.createElement(s.Q, {
                         bold: !0,
                         fontSize: s.V.Size5
-                    }, Object(a.d)("Follow us @TwitchPrime", "PrimeSubsite"))), this.props.partnerSocialLink && this.props.partnerSocialText && i.createElement(s.O, {
+                    }, Object(a.d)("Follow us @TwitchPrime", "PrimeSubsite"))), e && i.createElement(s.O, {
                         to: this.props.partnerSocialLink,
                         targetBlank: !0
                     }, i.createElement(s.Q, {
@@ -8833,12 +8978,13 @@ webpackJsonp([96], {
                         to: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
                         targetBlank: !0
                     }, Object(a.d)("Twitch Prime Guide", "PrimeSubsiteFooter")))))
-                }, t = r.__decorate([Object(o.d)("PrimeFooter", {
-                    autoReportInteractive: !0
-                })], t)
-            }(i.Component));
+                }, t
+            }(i.Component)),
+            c = Object(o.d)("PrimeFooter", {
+                autoReportInteractive: !0
+            })(l);
         n.d(t, "a", function() {
-            return l
+            return c
         })
     },
     PCKG: function(e, t) {
@@ -9436,6 +9582,32 @@ webpackJsonp([96], {
         var u = 0,
             d = 350
     },
+    QRuM: function(e, t, n) {
+        "use strict";
+        var r, i = n("TToO"),
+            a = n("GiK3"),
+            o = n("6sO2");
+        ! function(e) {
+            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
+        }(r || (r = {}));
+        var s = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = o.b.get(this.props.name, r.Off);
+                    return e === r.On || e === r.StaffOnly && this.props.isStaff ? this.props.children : null
+                }, t
+            }(a.Component),
+            l = s;
+        n.d(t, "a", function() {
+            return r
+        }), n.d(t, "c", function() {
+            return s
+        }), n.d(t, "b", function() {
+            return l
+        })
+    },
     "QU+n": function(e, t) {
         var n = {
             kind: "Document",
@@ -9900,16 +10072,17 @@ webpackJsonp([96], {
         "use strict";
         t.b = function(e, t, n) {
             void 0 === n && (n = !1);
-            return o(i, e, t, n)
-        }, t.a = function(e, t, n) {
-            void 0 === n && (n = !1);
-            return o(a, e, t, n)
-        };
+            return s(i, e, t, n)
+        }, t.a = o;
         var r = n("6sO2"),
-            i = "esport_channel_page_whitelist",
+            i = (n("QRuM"), "esport_channel_page_whitelist"),
             a = "esport_insider_pass_whitelist";
 
-        function o(e, t, n, i) {
+        function o(e, t, n) {
+            return void 0 === n && (n = !1), s(a, e, t, n)
+        }
+
+        function s(e, t, n, i) {
             void 0 === i && (i = !1);
             var a = r.b.get(e, []),
                 o = n && n.roles && n.roles.isStaff || i;
@@ -11319,7 +11492,9 @@ webpackJsonp([96], {
                     })), this.props.children), this.props.renderOfferImage && this.renderOfferImage())))
                 }, t
             }(a.Component)),
-            c = Object(o.d)("TwitchPrimeBrandedHeader")(l);
+            c = Object(o.d)("TwitchPrimeBrandedHeader", {
+                autoReportInteractive: !0
+            })(l);
         n.d(t, !1, function() {
             return "twitch-prime-fortnite-header"
         }), n.d(t, !1, function() {
@@ -11746,6 +11921,17 @@ webpackJsonp([96], {
             return d
         })
     },
+    dlQw: function(e, t, n) {
+        "use strict";
+        n.d(t, "b", function() {
+            return r
+        }), n.d(t, "a", function() {
+            return i
+        });
+        n("6sO2");
+        var r = "twitch_prime_fortnite_offer_id",
+            i = "c0b1816d-300b-d234-828e-59e76119bffe"
+    },
     eBiB: function(e, t, n) {
         "use strict";
         t.a = function(e) {
@@ -11958,11 +12144,11 @@ webpackJsonp([96], {
             B = n("L3z0"),
             V = n("5MsU"),
             W = n("Tjmd"),
-            H = (n("4NZK"), n("Ryxq"));
+            G = (n("4NZK"), n("Ryxq"));
         ! function(e) {
             e.AnimatedThumbnails = "animated_thumbnails", e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding"
         }(P || (P = {}));
-        var G = {
+        var H = {
             allowfullscreen: !0,
             externalfullscreen: !1,
             autoplay: !0,
@@ -12004,7 +12190,7 @@ webpackJsonp([96], {
                             if (n.props.channelLogin) o.o.history.push("/" + n.props.channelLogin);
                             else if (n.props.vodID) {
                             var e = Math.floor(n.player.getCurrentTime());
-                            o.o.history.push("/videos/" + n.props.vodID + "?t=" + Object(H.a)(e))
+                            o.o.history.push("/videos/" + n.props.vodID + "?t=" + Object(G.a)(e))
                         } else n.props.collectionID && o.o.history.push("/collections/" + n.props.collectionID)
                     }, n.onPlayerReady = function() {
                         n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.setState({
@@ -12073,7 +12259,7 @@ webpackJsonp([96], {
                     }, n.updatePlayerTrackingDataFromProps = function() {
                         n.updatePlayerTrackingData(n.props)
                     }, n.updatePlayerType = function(e) {
-                        var t = e || G.player;
+                        var t = e || H.player;
                         n.player && n.playerType !== t && (n.player.setPlayerType(t), n.playerType = t)
                     }, n.maybeRecordClip = function() {
                         n.player && n.state.playerInitialized && n.player.recordClip()
@@ -12083,7 +12269,7 @@ webpackJsonp([96], {
                         isFullScreen: !1,
                         playerPaused: !1,
                         playerRefID: Object(j.a)()
-                    }, n.playerType = t.playerTypeOverride || G.player, n.lastSetChannel = t.channelLogin, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
+                    }, n.playerType = t.playerTypeOverride || H.player, n.lastSetChannel = t.channelLogin, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), o.n.eventEmitter.addListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), window.__playerScriptChunk && !t.tagInjected) {
@@ -12140,7 +12326,7 @@ webpackJsonp([96], {
                 }, t.prototype.trackMiniPlayerAction = function(e, t) {
                     this.player && this.state.playerInitialized && this.player.trackMiniPlayerAction(e, t)
                 }, t.prototype.initializePlayer = function() {
-                    var e = r.__assign({}, G, {
+                    var e = r.__assign({}, H, {
                         showtheatre: !this.props.disableTheatreButton,
                         allowfullscreen: !this.props.disableFullscreen,
                         externalfullscreen: this.props.fullscreen.supported(),
@@ -12148,7 +12334,7 @@ webpackJsonp([96], {
                     });
                     this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.vodID && (e.video = Object(M.b)(this.props.vodID), o.n.setVideoPlayerTrackingData({
                         vodID: this.props.vodID
-                    })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(H.a)(this.props.nextVideoOffset)), this.lastPausedProp = this.props.paused, e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
+                    })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(G.a)(this.props.nextVideoOffset)), this.lastPausedProp = this.props.paused, e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
                     var t = new window.Twitch.Player(this.playerRef, e);
                     this.player = t, t.addEventListener(V.a.PlayerReady, this.onPlayerReady), t.addEventListener(V.a.Online, this.onStreamStatusOnline), t.addEventListener(V.a.Offline, this.onStreamStatusOffline), t.addEventListener(B.a.Ended, this.onStreamStatusOffline), t.addEventListener(B.a.Play, this.onPlayerPlay), t.addEventListener(B.a.Playing, this.onPlayerPlaying), t.addEventListener(B.a.Seeked, this.onSeek), t.addEventListener(B.a.TimeUpdate, this.onTimeUpdate), t.addEventListener(V.a.TheatreChange, this.onTheatreChange), t.addEventListener(V.a.FullscreenChange, this.onFullScreenChange), t.addEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), t.addEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(V.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(V.a.OpenStream, this.onOpenStream), t.addEventListener(B.a.Pause, this.onPause), t.addEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), t.addEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.registerPlayer(this.player), x.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
                 }, t.prototype.registerBufferingEvent = function() {
@@ -14830,12 +15016,12 @@ webpackJsonp([96], {
             return void 0 !== e.watchedProgressPercent
         }
 
-        function H(e) {
+        function G(e) {
             return void 0 !== e.clipCreatedByChannelLogin
         }! function(e) {
             e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
         }(C || (C = {}));
-        var G = function(e) {
+        var H = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -14895,7 +15081,7 @@ webpackJsonp([96], {
                         value: Object(a.c)(new Date(this.props.datePublished), "medium")
                     }),
                     progressBarPercent: this.props.watchedProgressPercent
-                }) : H(this.props) ? i.createElement(I, {
+                }) : G(this.props) ? i.createElement(I, {
                     topLeft: i.createElement(x, {
                         value: Object(B.b)(this.props.durationInSeconds),
                         icon: c._25.Clip,
@@ -14910,7 +15096,7 @@ webpackJsonp([96], {
                     })
                 }) : void 0
             }, t.prototype.getViewCountLabel = function() {
-                return W(this.props) || H(this.props) ? Object(a.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                return W(this.props) || G(this.props) ? Object(a.d)("{viewerCount, plural, one {# view} other {# views}}", {
                     viewerCount: this.props.viewCount
                 }, "VideoPreviewCard") : ""
             }, t.prototype.renderIconicImage = function() {
@@ -14928,7 +15114,7 @@ webpackJsonp([96], {
                     text: this.props.channelLogin,
                     linkTo: this.props.channelLoginLinkTo
                 }];
-                return H(this.props) ? e.push({
+                return G(this.props) ? e.push({
                     text: Object(a.d)("Clipped by {userName}", {
                         userName: this.props.clipCreatedByChannelLogin
                     }, "VideoPreviewCard"),
@@ -14951,7 +15137,7 @@ webpackJsonp([96], {
         n.d(t, "b", function() {
             return C
         }), n.d(t, "a", function() {
-            return G
+            return H
         })
     },
     vKYI: function(e, t, n) {
@@ -15320,4 +15506,4 @@ webpackJsonp([96], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-5764308293dfbe351b8c0255fc72925a.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-24395434e705f24611dc2963986f7221.js.map

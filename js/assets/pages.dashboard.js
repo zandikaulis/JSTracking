@@ -708,20 +708,20 @@ webpackJsonp([46], {
                     m(a), r.firstDay > 0 && (i -= r.firstDay) < 0 && (i += 7);
                     for (var h = 0 === t ? 11 : t - 1, p = 11 === t ? 0 : t + 1, g = 0 === t ? e - 1 : e, b = 11 === t ? e + 1 : e, v = d(g, h), D = o + i, w = D; w > 7;) w -= 7;
                     D += 7 - w;
-                    for (var x, _, j, N, M = !1, E = 0, T = 0; E < D; E++) {
-                        var A = new Date(e, t, E - i + 1),
+                    for (var x, _, j, N, M = !1, T = 0, E = 0; T < D; T++) {
+                        var A = new Date(e, t, T - i + 1),
                             k = !!u(this._d) && f(A, this._d),
                             C = f(A, a),
                             I = -1 !== r.events.indexOf(A.toDateString()),
-                            R = E < i || E >= o + i,
-                            P = E - i + 1,
+                            R = T < i || T >= o + i,
+                            P = T - i + 1,
                             F = t,
                             L = e,
                             Y = r.startRange && f(r.startRange, A),
                             G = r.endRange && f(r.endRange, A),
                             B = r.startRange && r.endRange && r.startRange < A && A < r.endRange,
                             W = r.minDate && A < r.minDate || r.maxDate && A > r.maxDate || r.disableWeekends && l(A) || r.disableDayFn && r.disableDayFn(A);
-                        R && (E < i ? (P = v + P, F = h, L = g) : (P -= o, F = p, L = b));
+                        R && (T < i ? (P = v + P, F = h, L = g) : (P -= o, F = p, L = b));
                         var H = {
                             day: P,
                             month: F,
@@ -737,7 +737,7 @@ webpackJsonp([46], {
                             showDaysInNextAndPreviousMonths: r.showDaysInNextAndPreviousMonths,
                             enableSelectionDaysInNextAndPreviousMonths: r.enableSelectionDaysInNextAndPreviousMonths
                         };
-                        r.pickWholeWeek && k && (M = !0), c.push(y(H)), 7 == ++T && (r.showWeekNumber && c.unshift((x = E - i, _ = t, j = e, N = void 0, N = new Date(j, 0, 1), '<td class="pika-week">' + Math.ceil(((new Date(j, _, x) - N) / 864e5 + N.getDay() + 1) / 7) + "</td>")), s.push(O(c, r.isRTL, r.pickWholeWeek, M)), c = [], T = 0, M = !1)
+                        r.pickWholeWeek && k && (M = !0), c.push(y(H)), 7 == ++E && (r.showWeekNumber && c.unshift((x = T - i, _ = t, j = e, N = void 0, N = new Date(j, 0, 1), '<td class="pika-week">' + Math.ceil(((new Date(j, _, x) - N) / 864e5 + N.getDay() + 1) / 7) + "</td>")), s.push(O(c, r.isRTL, r.pickWholeWeek, M)), c = [], E = 0, M = !1)
                     }
                     return S(r, s, n)
                 },
@@ -938,15 +938,14 @@ webpackJsonp([46], {
         "use strict";
         var r = n("TToO"),
             a = n("GiK3"),
-            o = n("F8kA"),
-            i = n("7qqA"),
-            s = n("+TF1"),
-            c = n("u4Vk"),
-            u = function(e) {
+            o = n("7qqA"),
+            i = n("+TF1"),
+            s = n("u4Vk"),
+            c = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this,
-                        r = i.b.intervalFromID(n.props.summaryID);
-                    return r && Object(c.e)(r) && (n.summaryInterval = r), n.needsQuery = Boolean(n.summaryInterval && Object(c.c)(n.props.streamSummaryQuery.interval, n.summaryInterval)), n.state = {
+                        r = o.b.intervalFromID(n.props.summaryID);
+                    return r && Object(s.e)(r) && (n.summaryInterval = r), n.needsQuery = Boolean(n.summaryInterval && Object(s.c)(n.props.streamSummaryQuery.interval, n.summaryInterval)), n.state = {
                         isLoading: n.needsQuery,
                         streamSummaries: []
                     }, n
@@ -966,7 +965,7 @@ webpackJsonp([46], {
                         return r.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return this.needsQuery && this.props.streamSummaryQuery.channel ? (this.needsQuery = !1, [4, Object(s.b)(this.props.streamSummaryQuery.channel, this.summaryInterval)]) : [2];
+                                    return this.needsQuery && this.props.streamSummaryQuery.channel ? (this.needsQuery = !1, [4, Object(i.b)(this.props.streamSummaryQuery.channel, this.summaryInterval)]) : [2];
                                 case 1:
                                     return (e = t.sent()).isError && this.setState({
                                         isLoading: !1
@@ -979,104 +978,104 @@ webpackJsonp([46], {
                     })
                 }, t
             }(a.Component),
-            l = n("CIox"),
-            d = n("6sO2"),
-            m = n("9uzc"),
-            f = n("ylrR"),
-            h = n("Odds"),
-            p = {
+            u = n("CIox"),
+            l = n("6sO2"),
+            d = n("9uzc"),
+            m = n("ylrR"),
+            f = n("Odds"),
+            h = {
                 "data-test-selector": "stream-summary-date-time"
             },
-            g = function(e) {
+            p = function(e) {
                 var t = e.currentStreamSummary,
                     n = e.streamSummaries,
                     o = e.getURLForStreamSummary;
-                return a.createElement(h._8, {
-                    position: h._15.Relative,
+                return a.createElement(f._8, {
+                    position: f._15.Relative,
                     fullWidth: !0
-                }, a.createElement(f.a, {
+                }, a.createElement(m.a, {
                     control: function(e) {
                         var n, o = e.toggle;
-                        return a.createElement(h.v, r.__assign({
-                            type: h.B.Text
-                        }, p, {
+                        return a.createElement(f.v, r.__assign({
+                            type: f.B.Text
+                        }, h, {
                             onClick: o,
                             fullWidth: !0
-                        }), a.createElement(h.Q, {
-                            fontSize: h.V.Size4
-                        }, Object(d.c)(t.interval.start, {
+                        }), a.createElement(f.Q, {
+                            fontSize: f.V.Size4
+                        }, Object(l.c)(t.interval.start, {
                             weekday: "long",
                             month: "long",
                             day: "numeric"
-                        })), a.createElement(h.Q, {
-                            fontSize: h.V.Size6,
-                            color: h.K.Alt2
-                        }, (n = t.interval, Object(d.d)("{start, time, short} – {end, time, short}", {
+                        })), a.createElement(f.Q, {
+                            fontSize: f.V.Size6,
+                            color: f.K.Alt2
+                        }, (n = t.interval, Object(l.d)("{start, time, short} – {end, time, short}", {
                             start: n.start,
                             end: n.end
                         }, "StreamSummaryNav"))))
                     }
                 }, function(e) {
                     var r = e.close;
-                    return a.createElement(h.q, {
-                        direction: h.r.BottomCenter,
+                    return a.createElement(f.q, {
+                        direction: f.r.BottomCenter,
                         noTail: !0,
                         offsetY: "-2rem",
-                        size: h.s.Medium,
+                        size: f.s.Medium,
                         show: !0
-                    }, a.createElement(h._8, {
+                    }, a.createElement(f._8, {
                         padding: {
                             y: .5
                         }
                     }, n.slice().reverse().map(function(e) {
-                        return a.createElement(b, {
+                        return a.createElement(g, {
                             href: o(e),
                             isActive: t === e,
                             key: e.id,
                             onClick: r
-                        }, v(e.interval))
-                    }), !n.includes(t) && a.createElement(a.Fragment, null, a.createElement(h._14, {
+                        }, b(e.interval))
+                    }), !n.includes(t) && a.createElement(a.Fragment, null, a.createElement(f._14, {
                         height: 5
-                    }), a.createElement(b, {
+                    }), a.createElement(g, {
                         href: o(t),
                         isActive: !0,
                         onClick: r
-                    }, v(t.interval)))))
+                    }, b(t.interval)))))
                 }))
             },
-            b = function(e) {
+            g = function(e) {
                 var t, n = e.href,
                     r = e.isActive,
                     o = e.children,
                     i = e.onClick;
-                return t = r ? a.createElement(h._8, {
-                    display: h.R.Flex
-                }, a.createElement(h._8, {
-                    display: h.R.Flex,
+                return t = r ? a.createElement(f._8, {
+                    display: f.R.Flex
+                }, a.createElement(f._8, {
+                    display: f.R.Flex,
                     padding: {
                         right: 1
                     }
-                }, a.createElement(h._24, {
-                    asset: h._25.Check,
+                }, a.createElement(f._24, {
+                    asset: f._25.Check,
                     width: 10,
                     height: 10,
-                    type: h._26.Alt2
-                })), a.createElement(h.Q, {
-                    fontSize: h.V.Size6,
-                    color: h.K.Alt2
-                }, o)) : a.createElement(h._8, {
-                    display: h.R.Flex
-                }, a.createElement(h.Q, {
-                    fontSize: h.V.Size6
-                }, o)), a.createElement(h._6, {
+                    type: f._26.Alt2
+                })), a.createElement(f.Q, {
+                    fontSize: f.V.Size6,
+                    color: f.K.Alt2
+                }, o)) : a.createElement(f._8, {
+                    display: f.R.Flex
+                }, a.createElement(f.Q, {
+                    fontSize: f.V.Size6
+                }, o)), a.createElement(f._6, {
                     linkTo: n,
                     onClick: i,
                     disabled: r
-                }, a.createElement(h._8, {
-                    display: h.R.Flex,
-                    flexDirection: h.T.Row,
-                    alignItems: h.c.Center,
-                    justifyContent: h._7.Between,
+                }, a.createElement(f._8, {
+                    display: f.R.Flex,
+                    flexDirection: f.T.Row,
+                    alignItems: f.c.Center,
+                    justifyContent: f._7.Between,
                     padding: {
                         y: .5,
                         x: 1
@@ -1084,19 +1083,19 @@ webpackJsonp([46], {
                 }, t))
             };
 
-        function v(e) {
-            var t = Object(d.c)(e.start, {
+        function b(e) {
+            var t = Object(l.c)(e.start, {
                 weekday: "short",
                 month: "short",
                 day: "numeric"
             });
-            return Object(d.d)("{localizedStartDate} {start, time, short} – {end, time, short}", {
+            return Object(l.d)("{localizedStartDate} {start, time, short} – {end, time, short}", {
                 localizedStartDate: t,
                 start: e.start,
                 end: e.end
             }, "StreamSummaryNav")
         }
-        var y = function() {
+        var v = function() {
                 return function(e, t) {
                     if (this.isLast = !1, this.streamSummaries = e, this.last = this.streamSummaries[this.streamSummaries.length - 1], this.current = this.streamSummaries.find(function(e) {
                             return e.id === t
@@ -1106,90 +1105,66 @@ webpackJsonp([46], {
                     }
                 }
             }(),
-            O = (n("vU5Q"), function(e) {
-                var t, n = new y(e.query.streamSummaries, e.summaryID);
+            y = (n("vU5Q"), function(e) {
+                var t, n = new v(e.query.streamSummaries, e.summaryID);
                 if (!n.current && e.query.historicalStreamSummary) {
                     var r = e.query.historicalStreamSummary;
-                    n = new y([r], e.summaryID)
+                    n = new v([r], e.summaryID)
                 }
-                if (e.query.isLoading) t = a.createElement("div", null, a.createElement(h._14, {
+                if (e.query.isLoading) t = a.createElement("div", null, a.createElement(f._14, {
                     width: 200,
                     lineCount: 2
                 }));
-                else if (n.current) t = a.createElement(g, {
+                else if (n.current) t = a.createElement(p, {
                     currentStreamSummary: n.current,
                     streamSummaries: e.query.streamSummaries,
                     getURLForStreamSummary: e.getURLForStreamSummary
                 });
                 else if (e.query.streamSummaries.length) {
                     var o = e.query.streamSummaries[e.query.streamSummaries.length - 1];
-                    t = a.createElement(l.b, {
+                    t = a.createElement(u.b, {
                         to: e.getURLForStreamSummary(o)
                     })
-                } else t = a.createElement(D, null);
-                return a.createElement(h._8, {
-                    position: h._15.Relative
-                }, a.createElement(h._8, {
+                } else t = a.createElement(O, null);
+                return a.createElement(f._8, {
+                    position: f._15.Relative
+                }, a.createElement(f._8, {
                     margin: {
                         bottom: 2
                     }
-                }, a.createElement(m.a, {
+                }, a.createElement(d.a, {
                     previousPath: n.previous ? e.getURLForStreamSummary(n.previous) : "",
                     nextPath: n.next ? e.getURLForStreamSummary(n.next) : ""
                 }, t)), e.children(n))
             }),
-            D = function() {
-                return a.createElement(h.Q, {
+            O = function() {
+                return a.createElement(f.Q, {
                     className: "sm-nav__placeholder-text",
-                    type: h._49.H4,
-                    color: h.K.Alt2,
+                    type: f._49.H4,
+                    color: f.K.Alt2,
                     ellipsis: !0
-                }, Object(d.d)("Today would be a good day to start streaming!", "StreamSummaryNav"))
+                }, Object(l.d)("Today would be a good day to start streaming!", "StreamSummaryNav"))
             },
-            S = function(e) {
+            D = function(e) {
                 function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getURLForStreamSummary = function(e) {
-                        return e ? t.props.parentPath + "/" + e.id : ""
-                    }, t.handleRedirect = function(e) {
-                        t.props.replace(t.getURLForStreamSummary(e))
-                    }, t
+                    return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this;
-                    return a.createElement(u, {
+                    return a.createElement(c, {
                         streamSummaryQuery: this.props.query,
-                        summaryID: this.props.summaryID,
-                        onRedirect: this.handleRedirect
+                        summaryID: this.props.summaryID
                     }, function(t) {
-                        return a.createElement(O, {
+                        return a.createElement(y, {
                             summaryID: e.props.summaryID,
                             query: t,
-                            getURLForStreamSummary: e.getURLForStreamSummary
+                            getURLForStreamSummary: e.props.getURLForStreamSummary
                         }, e.props.children)
                     })
                 }, t
-            }(a.Component),
-            w = function(e) {
-                return a.createElement(o.d, null, function(t) {
-                    var n = t.match;
-                    return a.createElement(o.d, {
-                        path: n.url + "/:summaryID"
-                    }, function(t) {
-                        var o = t.match,
-                            i = t.history;
-                        return a.createElement(S, r.__assign({
-                            summaryID: o && o.params.summaryID || "",
-                            parentPath: n.url,
-                            replace: i.replace
-                        }, e))
-                    })
-                })
-            };
-        n.d(t, !1, function() {
-            return S
-        }), n.d(t, "a", function() {
-            return w
+            }(a.Component);
+        n.d(t, "a", function() {
+            return D
         })
     },
     "9r5b": function(e, t, n) {
@@ -1597,6 +1572,56 @@ webpackJsonp([46], {
             return r
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "f", function() {
             return d.d
+        })
+    },
+    AOOj: function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return "/" + e.channel.name + "/dashboard/stream-summary/" + e.id
+        }
+
+        function a(e) {
+            return "/" + e.channel.name + "/dashboard/stream-summary/" + e.id + "/referrals"
+        }
+        var o = n("6sO2"),
+            i = n("vH/s");
+
+        function s(e, t) {
+            u(i.SpadeEventType.StreamSummarySpotlightImpression, {
+                type: e,
+                streamSummary: t
+            })
+        }
+
+        function c(e, t) {
+            u(i.SpadeEventType.StreamSummarySpotlightClick, {
+                type: e,
+                streamSummary: t
+            })
+        }
+
+        function u(e, t) {
+            var n = {
+                spotlight_type: t.type,
+                stream_time: t.streamSummary.interval.start.getTime() / 1e3
+            };
+            o.n.track(e, n)
+        }
+        n.d(t, "d", function() {
+            return r
+        }), n.d(t, "e", function() {
+            return a
+        }), n.d(t, "b", function() {
+            return "clip"
+        }), n.d(t, "c", function() {
+            return "quest"
+        }), n.d(t, "a", function() {
+            return "achievement"
+        }), n.d(t, "g", function() {
+            return s
+        }), n.d(t, "f", function() {
+            return c
         })
     },
     AZvW: function(e, t, n) {
@@ -2091,8 +2116,8 @@ webpackJsonp([46], {
             j = n("q7Ag"),
             N = n("ytWG"),
             M = n("pD3p"),
-            E = n("Odds"),
-            T = "extensions_dashboard_notification_dismissed",
+            T = n("Odds"),
+            E = "extensions_dashboard_notification_dismissed",
             A = function(e) {
                 var t = e.channelName,
                     n = Object(g.d)("Extensions", "DashboardNav"),
@@ -2101,10 +2126,10 @@ webpackJsonp([46], {
                     path: "/:channelName/dashboard/extensions"
                 }, function(e) {
                     return function(e) {
-                        if (e) return g.l.set(T, !0), !1;
-                        return !g.l.get(T, !1)
-                    }(e.match) ? f.createElement(E._2, {
-                        position: E._15.Relative
+                        if (e) return g.l.set(E, !0), !1;
+                        return !g.l.get(E, !1)
+                    }(e.match) ? f.createElement(T._2, {
+                        position: T._15.Relative
                     }, f.createElement("li", {
                         className: "side-nav-dashboard-section__tooltip__wrapper"
                     }, f.createElement(M.a, {
@@ -2114,17 +2139,17 @@ webpackJsonp([46], {
                     })), f.createElement("div", {
                         className: "side-nav-dashboard-section__tooltip",
                         "data-test-selector": "extensions-nav-tooltip"
-                    }, f.createElement(E.q, {
-                        direction: E.r.RightCenter,
-                        size: E.s.Large,
+                    }, f.createElement(T.q, {
+                        direction: T.r.RightCenter,
+                        size: T.s.Large,
                         show: !0
-                    }, f.createElement(E._8, {
+                    }, f.createElement(T._8, {
                         margin: {
                             x: 2,
                             y: 1
                         }
-                    }, f.createElement(E.Q, {
-                        type: E._49.Span
+                    }, f.createElement(T.Q, {
+                        type: T._49.Span
                     }, f.createElement(N.a, null), Object(g.d)("Customize your stream with extensions! ", "DashboardNav"), f.createElement("a", {
                         target: "_blank",
                         rel: "noopener",
@@ -2208,8 +2233,8 @@ webpackJsonp([46], {
                         external: !this.useNewRevenueSettings
                     }, Y), Object(g.d)("Channel", "SettingsDashboardNav"))), this.props.permissions.isOwner && f.createElement("li", null, f.createElement(M.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/permissions"
-                    }, B), Object(g.d)("Permissions", "DashboardNav"))), this.canSeeAutoModSettings && f.createElement(E._2, {
-                        position: E._15.Relative
+                    }, B), Object(g.d)("Permissions", "DashboardNav"))), this.canSeeAutoModSettings && f.createElement(T._2, {
+                        position: T._15.Relative
                     }, f.createElement("li", {
                         className: "side-nav-dashboard-section__tooltip__wrapper"
                     }, f.createElement(M.a, m.__assign({
@@ -2217,17 +2242,17 @@ webpackJsonp([46], {
                         external: !Object(F.a)()
                     }, G), Object(g.d)("Moderation", "SettingsDashboardNav"), f.createElement(N.a, null)), f.createElement("div", {
                         className: "side-nav-dashboard-section__tooltip"
-                    }, f.createElement(E.q, {
-                        direction: E.r.RightCenter,
-                        size: E.s.Large,
+                    }, f.createElement(T.q, {
+                        direction: T.r.RightCenter,
+                        size: T.s.Large,
                         show: !0
-                    }, f.createElement(E._8, {
+                    }, f.createElement(T._8, {
                         margin: {
                             x: 2,
                             y: 1
                         }
-                    }, f.createElement(E.Q, {
-                        type: E._49.Span
+                    }, f.createElement(T.Q, {
+                        type: T._49.Span
                     }, f.createElement(N.a, null), Object(g.d)("Streamers and mods can set custom AutoMod levels, and update Blocked and Permitted Terms.", "AutoModSettings"))))))), this.canAccessRevenueSettings && f.createElement("li", null, f.createElement(M.a, m.__assign({
                         linkTo: this.revenueSettingsLink,
                         external: !this.useNewRevenueSettings
@@ -2302,7 +2327,7 @@ webpackJsonp([46], {
         ! function(e) {
             e[e.CollectionManagerLink = 0] = "CollectionManagerLink"
         }(k || (k = {}));
-        var U = function(e) {
+        var V = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2321,7 +2346,7 @@ webpackJsonp([46], {
                     }, Object(g.d)("Clips", "DashboardNav")))))
                 }, t
             }(f.Component),
-            V = n("CC3/"),
+            U = n("CC3/"),
             K = {
                 isOwner: !1,
                 isSiteAdmin: !1,
@@ -2340,14 +2365,14 @@ webpackJsonp([46], {
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
                     var e = this.getPermissions();
-                    return f.createElement(E._35, {
+                    return f.createElement(T._35, {
                         className: "dashboard-side-nav",
-                        background: E.n.Alt2,
+                        background: T.n.Alt2,
                         borderRight: !0,
                         flexShrink: 0,
                         flexGrow: 0,
                         fullHeight: !0,
-                        position: E._15.Relative
+                        position: T._15.Relative
                     }, f.createElement(x.b, null, f.createElement("nav", null, f.createElement(P, {
                         channelName: this.props.channelName,
                         permissions: e,
@@ -2356,7 +2381,7 @@ webpackJsonp([46], {
                         channelName: this.props.channelName,
                         permissions: e,
                         streamSummaryQuery: this.props.streamSummaryQuery
-                    }), f.createElement(U, {
+                    }), f.createElement(V, {
                         creatorLogin: this.props.channelName,
                         permissions: e
                     }), f.createElement(W, {
@@ -2364,21 +2389,23 @@ webpackJsonp([46], {
                         permissions: e
                     }))))
                 }, t.prototype.getPermissions = function() {
-                    return this.props.data.currentUser && this.props.data.user && this.props.data.user.roles && this.props.data.user.self ? {
-                        isOwner: this.props.channelName === this.props.data.currentUser.login,
-                        isSiteAdmin: this.props.data.currentUser.isSiteAdmin,
-                        isStaff: this.props.data.currentUser.isStaff,
-                        isPartner: this.props.data.user.roles.isPartner,
-                        isAffiliate: this.props.data.user.roles.isAffiliate,
-                        hasPartnerInvitation: Boolean(this.props.data.user.payoutInvite && this.props.data.user.payoutInvite.isForPartner),
-                        hasPayoutInvite: Boolean(this.props.data.user.payoutInvite),
-                        hasExtensionsDeveloperInvite: Boolean(this.props.data.user.payoutInvite && this.props.data.user.payoutInvite.isForExtensionsDeveloper),
-                        isInBountyProgram: this.props.data.user.bountyBoardSettings.isEnabled,
-                        isModerator: this.props.data.user.self.isModerator
+                    var e = this.props.data.currentUser,
+                        t = this.props.data.user;
+                    return e && t && t.roles && t.self ? {
+                        isOwner: this.props.channelName === e.login,
+                        isSiteAdmin: !!e.isSiteAdmin,
+                        isStaff: !!e.isStaff,
+                        isPartner: !!t.roles.isPartner,
+                        isAffiliate: !!t.roles.isAffiliate,
+                        hasPartnerInvitation: !!t.payoutInvite && t.payoutInvite.isForPartner,
+                        hasPayoutInvite: !!t.payoutInvite,
+                        hasExtensionsDeveloperInvite: !!t.payoutInvite && t.payoutInvite.isForExtensionsDeveloper,
+                        isInBountyProgram: !!t.bountyBoardSettings && t.bountyBoardSettings.isEnabled,
+                        isModerator: !!t.self.isModerator
                     } : K
                 }, t
             }(f.Component)),
-            q = Object(i.a)(V, {
+            q = Object(i.a)(U, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2394,53 +2421,56 @@ webpackJsonp([46], {
             ee = n("pK/l"),
             te = n("Cd7A"),
             ne = n("9Yaz"),
-            re = (n("e/z2"), function(e) {
+            re = n("AOOj"),
+            ae = (n("e/z2"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    return f.createElement(ee.a, null, f.createElement(E._35, {
+                    return f.createElement(ee.a, null, f.createElement(T._35, {
                         elevation: 1,
-                        background: E.n.Base,
-                        display: E.R.Flex,
-                        position: E._15.Relative,
-                        flexDirection: E.T.Row,
-                        flexWrap: E.U.NoWrap,
+                        background: T.n.Base,
+                        display: T.R.Flex,
+                        position: T._15.Relative,
+                        flexDirection: T.T.Row,
+                        flexWrap: T.U.NoWrap,
                         className: "referrals-page-nav-bar",
                         borderBottom: !0
-                    }, f.createElement(E._35, {
-                        position: E._15.Absolute,
-                        display: E.R.Flex,
-                        flexDirection: E.T.Row,
+                    }, f.createElement(T._35, {
+                        position: T._15.Absolute,
+                        display: T.R.Flex,
+                        flexDirection: T.T.Row,
                         attachTop: !0,
                         attachLeft: !0,
                         attachBottom: !0
-                    }, f.createElement(E.v, {
-                        type: E.B.Text,
+                    }, f.createElement(T.v, {
+                        type: T.B.Text,
                         linkTo: {
-                            pathname: "/" + this.props.channelName + "/dashboard/stream-summary",
+                            pathname: "/" + this.props.channelName + "/dashboard/stream-summary/" + this.props.streamSummaryID,
                             state: {
                                 content: X.PageviewContent.ReferralsBack,
                                 medium: X.PageviewMedium.StreamSummary
                             }
                         }
-                    }, f.createElement(E._8, {
+                    }, f.createElement(T._8, {
                         padding: {
                             left: 1,
                             right: 1
                         }
-                    }, f.createElement(E.Q, null, Object(g.d)("Back", "StreamSummaryReferralPage"))))), f.createElement(E._35, {
-                        display: E.R.Flex,
+                    }, f.createElement(T.Q, null, Object(g.d)("Back", "StreamSummaryReferralPage"))))), f.createElement(T._35, {
+                        display: T.R.Flex,
                         flexGrow: 1,
-                        flexWrap: E.U.NoWrap,
-                        justifyContent: E._7.Center,
-                        alignItems: E.c.Center
-                    }, f.createElement(E.Q, {
-                        type: E._49.H2,
-                        fontSize: E.V.Size4,
+                        flexWrap: T.U.NoWrap,
+                        justifyContent: T._7.Center,
+                        alignItems: T.c.Center
+                    }, f.createElement(T.Q, {
+                        type: T._49.H2,
+                        fontSize: T.V.Size4,
                         bold: !0
                     }, Object(g.d)("Views by Source", "StreamSummaryReferralPage")))), f.createElement(ne.a, {
-                        query: this.props.streamSummaryQuery
+                        query: this.props.streamSummaryQuery,
+                        summaryID: this.props.streamSummaryID,
+                        getURLForStreamSummary: re.e
                     }, function(e) {
                         return f.createElement(te.a, {
                             isLoading: !e.current,
@@ -2449,93 +2479,96 @@ webpackJsonp([46], {
                     }))
                 }, t
             }(f.Component)),
-            ae = Object(o.d)(Object($.d)("StreamSummaryReferralsPage", {
+            oe = Object(o.d)(Object($.d)("StreamSummaryReferralsPage", {
                 destination: J.a.ChannelDashboardStreamSummaryReferrals,
                 autoReportInteractive: !0
             }), Object(Z.a)({
                 location: X.PageviewLocation.DashboardStreamSummaryReferrals
-            }))(re),
-            oe = n("u4Vk"),
-            ie = b.a.wrap(function() {
+            }))(ae),
+            ie = n("u4Vk"),
+            se = b.a.wrap(function() {
                 return n.e(106).then(n.bind(null, "rE/F"))
             }, "AchievementsPage"),
-            se = b.a.wrap(function() {
+            ce = b.a.wrap(function() {
                 return n.e(109).then(n.bind(null, "RdZX"))
             }, "AutoModPage"),
-            ce = b.a.wrap(function() {
+            ue = b.a.wrap(function() {
                 return n.e(107).then(n.bind(null, "EOq4"))
             }, "BountiesPage"),
-            ue = b.a.wrap(function() {
-                return n.e(89).then(n.bind(null, "ehuU"))
-            }, "ChannelAnalyticsPageRoot"),
             le = b.a.wrap(function() {
+                return n.e(90).then(n.bind(null, "ehuU"))
+            }, "ChannelAnalyticsPageRoot"),
+            de = b.a.wrap(function() {
                 return n.e(87).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
-            de = b.a.wrap(function() {
-                return n.e(92).then(n.bind(null, "KO2S"))
-            }, "CollectionEditorPage"),
             me = b.a.wrap(function() {
+                return n.e(93).then(n.bind(null, "KO2S"))
+            }, "CollectionEditorPage"),
+            fe = b.a.wrap(function() {
                 return n.e(105).then(n.bind(null, "Dk8+"))
             }, "CollectionManagerPage"),
-            fe = b.a.wrap(function() {
-                return n.e(99).then(n.bind(null, "rFlM"))
-            }, "CommentModeratorPage"),
             he = b.a.wrap(function() {
-                return n.e(93).then(n.bind(null, "xM3a"))
-            }, "DashboardEventsRoot"),
+                return n.e(100).then(n.bind(null, "rFlM"))
+            }, "CommentModeratorPage"),
             pe = b.a.wrap(function() {
-                return n.e(98).then(n.bind(null, "yuX3"))
-            }, "DashboardRevenueSettingsRoot"),
+                return n.e(94).then(n.bind(null, "xM3a"))
+            }, "DashboardEventsRoot"),
             ge = b.a.wrap(function() {
-                return n.e(95).then(n.bind(null, "gIJZ"))
-            }, "DashboardSettingsRoot"),
+                return n.e(99).then(n.bind(null, "yuX3"))
+            }, "DashboardRevenueSettingsRoot"),
             be = b.a.wrap(function() {
-                return n.e(119).then(n.bind(null, "bcqU"))
-            }, "ExtensionConfigurePage"),
+                return n.e(96).then(n.bind(null, "gIJZ"))
+            }, "DashboardSettingsRoot"),
             ve = b.a.wrap(function() {
+                return n.e(88).then(n.bind(null, "bcqU"))
+            }, "ExtensionConfigurePage"),
+            ye = b.a.wrap(function() {
+                return n.e(88).then(n.bind(null, "1ZLG"))
+            }, "ExtensionDashboardRoot"),
+            Oe = b.a.wrap(function() {
                 return n.e(108).then(n.bind(null, "yJuJ"))
             }, "ExtensionManagerPage"),
-            ye = b.a.wrap(function() {
-                return n.e(101).then(n.bind(null, "Il1C"))
-            }, "HighlighterPage"),
-            Oe = b.a.wrap(function() {
-                return n.e(88).then(n.bind(null, "c1gU"))
-            }, "LivePage"),
             De = b.a.wrap(function() {
+                return n.e(102).then(n.bind(null, "Il1C"))
+            }, "HighlighterPage"),
+            Se = b.a.wrap(function() {
+                return n.e(89).then(n.bind(null, "c1gU"))
+            }, "LivePage"),
+            we = b.a.wrap(function() {
                 return n.e(87).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
-            Se = b.a.wrap(function() {
-                return n.e(120).then(n.bind(null, "8uM1"))
-            }, "PermissionsPage"),
-            we = b.a.wrap(function() {
-                return n.e(100).then(n.bind(null, "/fDj"))
-            }, "RedirectToLatestArchiveHighlighter"),
             xe = b.a.wrap(function() {
-                return n.e(90).then(n.bind(null, "tVPZ"))
-            }, "StreamSummaryPage"),
+                return n.e(118).then(n.bind(null, "8uM1"))
+            }, "PermissionsPage"),
             _e = b.a.wrap(function() {
-                return n.e(91).then(n.bind(null, "a9Y8"))
+                return n.e(120).then(n.bind(null, "/fDj"))
+            }, "RedirectToLatestArchiveHighlighter"),
+            je = b.a.wrap(function() {
+                return n.e(91).then(n.bind(null, "tVPZ"))
+            }, "StreamSummaryPage"),
+            Ne = b.a.wrap(function() {
+                return n.e(92).then(n.bind(null, "a9Y8"))
             }, "VideoManagerPage"),
-            je = function(e) {
+            Me = function(e) {
                 var t = e.match.params.pageName,
                     n = t ? "/" + encodeURIComponent(t) : "";
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.channelName) + "/dashboard" + n), null
             },
-            Ne = function(e) {
+            Te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isError: !1
                     }, t.logger = g.o.logger.withCategory("dashboard-root"), t.renderAchievementsPage = function() {
-                        return f.createElement(ie, {
+                        return f.createElement(se, {
                             channelName: t.props.match.params.channelName
                         })
                     }, t.renderExtensionsManagerPage = function() {
-                        return f.createElement(ve, {
+                        return f.createElement(Oe, {
                             channelName: t.props.match.params.channelName
                         })
                     }, t.renderLivePage = function(e) {
-                        return t.props.data.channel && t.props.data.channel.id ? f.createElement(Oe, {
+                        return t.props.data.channel && t.props.data.channel.id ? f.createElement(Se, {
                             channelID: t.props.data.channel.id,
                             channelName: t.props.match.params.channelName,
                             streamSummariesQuery: e
@@ -2567,25 +2600,25 @@ webpackJsonp([46], {
                         })
                     }
                     return this.props.data.loading || this.props.data.channel.id ? f.createElement(w.a, {
-                        interval: Object(oe.g)(30),
+                        interval: Object(ie.g)(30),
                         channelName: this.props.match.params.channelName
                     }, function(t) {
-                        return f.createElement(E._8, {
-                            display: E.R.Flex,
-                            flexDirection: E.T.Column,
-                            flexWrap: E.U.NoWrap,
+                        return f.createElement(T._8, {
+                            display: T.R.Flex,
+                            flexDirection: T.T.Column,
+                            flexWrap: T.U.NoWrap,
                             fullHeight: !0
-                        }, f.createElement(D.a, null), e.props.firstPageLoaded && e.props.isLoggedIn && f.createElement(S.a, null), f.createElement(E._8, {
-                            display: E.R.Flex,
-                            flexWrap: E.U.NoWrap,
-                            position: E._15.Relative,
-                            overflow: E._11.Hidden,
+                        }, f.createElement(D.a, null), e.props.firstPageLoaded && e.props.isLoggedIn && f.createElement(S.a, null), f.createElement(T._8, {
+                            display: T.R.Flex,
+                            flexWrap: T.U.NoWrap,
+                            position: T._15.Relative,
+                            overflow: T._11.Hidden,
                             fullHeight: !0
                         }, f.createElement(q, {
                             channelName: e.props.match.params.channelName,
                             streamSummaryQuery: t
-                        }), f.createElement(E._8, {
-                            position: E._15.Relative,
+                        }), f.createElement(T._8, {
+                            position: T._15.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0
@@ -2594,43 +2627,50 @@ webpackJsonp([46], {
                             render: e.renderAchievementsPage
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/channel-analytics",
-                            component: ue
+                            component: le
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/moderation",
-                            component: fe
+                            component: he
                         }), g.a.buildType !== O.a.Production && f.createElement(h.c, {
                             path: "/:channelName/dashboard/live",
                             render: function() {
                                 return e.renderLivePage(t)
                             }
                         }), f.createElement(h.c, {
-                            path: "/:channelName/dashboard/stream-summary/referrals",
-                            render: function() {
-                                return f.createElement(ae, {
-                                    channelName: e.props.match.params.channelName,
+                            path: "/:channelName/dashboard/stream-summary/:streamSummaryID/referrals",
+                            render: function(e) {
+                                var n = e.match;
+                                return f.createElement(oe, {
+                                    channelName: n.params.channelName,
+                                    streamSummaryID: n.params.streamSummaryID,
                                     streamSummaryQuery: t
                                 })
                             }
                         }), f.createElement(h.c, {
-                            path: "/:channelName/dashboard/stream-summary",
-                            render: function() {
-                                return f.createElement(xe, {
-                                    channelName: e.props.match.params.channelName,
+                            path: "/:channelName/dashboard/stream-summary/:streamSummaryID?",
+                            render: function(e) {
+                                var n = e.match;
+                                return f.createElement(je, {
+                                    channelName: n.params.channelName,
+                                    streamSummaryID: n.params.streamSummaryID || "",
                                     streamSummaryQuery: t
                                 })
                             }
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/extensions/:extensionID/configure",
-                            component: be
+                            component: ve
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/extensions",
                             render: e.renderExtensionsManagerPage
+                        }), g.a.buildType !== O.a.Production && f.createElement(h.c, {
+                            path: "/:channelName/dashboard/extensions-discovery",
+                            component: ye
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties/:selectedID",
-                            component: ce
+                            component: ue
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties",
-                            component: ce
+                            component: ue
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties/:selectedID",
                             component: y.a
@@ -2639,55 +2679,55 @@ webpackJsonp([46], {
                             component: y.a
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/events",
-                            component: he
+                            component: pe
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/settings/automod",
-                            component: se
+                            component: ce
                         }), e.showNewDashboardSettings && f.createElement(h.c, {
                             path: "/:channelName/dashboard/settings/revenue",
-                            component: pe
+                            component: ge
                         }), e.showNewDashboardSettings && f.createElement(h.c, {
                             path: "/:channelName/dashboard/settings",
-                            component: ge
+                            component: be
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/permissions",
-                            component: Se
+                            component: xe
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/:pageName?",
-                            render: je
+                            render: Me
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/schedule/:videoID",
-                            component: _e
+                            component: Ne
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/edit/:videoID",
-                            component: _e
+                            component: Ne
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/publish/:videoID",
-                            component: _e
+                            component: Ne
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/appeal/:videoID",
-                            component: _e
+                            component: Ne
                         }), f.createElement(h.c, {
                             path: "/:channelName/manager/clips/channel",
-                            component: le
-                        }), f.createElement(h.c, {
-                            path: "/:channelName/manager/clips",
-                            component: De
-                        }), f.createElement(h.c, {
-                            path: "/:channelName/manager/highlighter/:videoID",
-                            component: ye
-                        }), f.createElement(h.c, {
-                            path: "/:channelName/manager/highlighter",
-                            component: we
-                        }), f.createElement(h.c, {
-                            path: "/:creatorLogin/manager/collections/:collectionID",
                             component: de
                         }), f.createElement(h.c, {
-                            path: "/:creatorLogin/manager/collections",
+                            path: "/:channelName/manager/clips",
+                            component: we
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/highlighter/:videoID",
+                            component: De
+                        }), f.createElement(h.c, {
+                            path: "/:channelName/manager/highlighter",
+                            component: _e
+                        }), f.createElement(h.c, {
+                            path: "/:creatorLogin/manager/collections/:collectionID",
                             component: me
                         }), f.createElement(h.c, {
+                            path: "/:creatorLogin/manager/collections",
+                            component: fe
+                        }), f.createElement(h.c, {
                             path: "/:channelName/manager",
-                            component: _e
+                            component: Ne
                         })))))
                     }) : f.createElement(y.a, null)
                 }, Object.defineProperty(t.prototype, "showNewDashboardSettings", {
@@ -2698,7 +2738,7 @@ webpackJsonp([46], {
                     configurable: !0
                 }), t
             }(f.Component);
-        var Me = Object(r.compose)(Object(i.a)(d, {
+        var Ee = Object(r.compose)(Object(i.a)(d, {
             options: function(e) {
                 return {
                     variables: {
@@ -2722,9 +2762,9 @@ webpackJsonp([46], {
                 collapseSideNav: u.r,
                 expandSideNav: u.y
             }, e)
-        }))(Ne);
+        }))(Te);
         n.d(t, "DashboardRoot", function() {
-            return Me
+            return Ee
         })
     },
     "Eoz/": function(e, t, n) {
@@ -4839,7 +4879,7 @@ webpackJsonp([46], {
                     }
                 }(j.date, n),
                 M = N.year,
-                E = function(e, t) {
+                T = function(e, t) {
                     if (null === t) return null;
                     var n, r, a, o;
                     if (0 === e.length) return (r = new Date(0)).setUTCFullYear(t), r;
@@ -4862,8 +4902,8 @@ webpackJsonp([46], {
                     }
                     return null
                 }(N.restDateString, M);
-            if (E) {
-                var T, A = E.getTime(),
+            if (T) {
+                var E, A = T.getTime(),
                     k = 0;
                 return j.time && (k = function(e) {
                     var t, n, r;
@@ -4875,7 +4915,7 @@ webpackJsonp([46], {
                         return n % 24 * a + r * o + 1e3 * i
                     }
                     return null
-                }(j.time)), j.timezone ? (C = j.timezone, T = (I = S.exec(C)) ? 0 : (I = w.exec(C)) ? (R = 60 * parseInt(I[2], 10), "+" === I[1] ? -R : R) : (I = x.exec(C)) ? (R = 60 * parseInt(I[2], 10) + parseInt(I[3], 10), "+" === I[1] ? -R : R) : 0) : (T = new Date(A + k).getTimezoneOffset(), T = new Date(A + k + T * o).getTimezoneOffset()), new Date(A + k + T * o)
+                }(j.time)), j.timezone ? (C = j.timezone, E = (I = S.exec(C)) ? 0 : (I = w.exec(C)) ? (R = 60 * parseInt(I[2], 10), "+" === I[1] ? -R : R) : (I = x.exec(C)) ? (R = 60 * parseInt(I[2], 10) + parseInt(I[3], 10), "+" === I[1] ? -R : R) : 0) : (E = new Date(A + k).getTimezoneOffset(), E = new Date(A + k + E * o).getTimezoneOffset()), new Date(A + k + E * o)
             }
             var C, I, R;
             return new Date(e)
@@ -5622,4 +5662,4 @@ webpackJsonp([46], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-22ad9afb9fcd4fccd6657146da553f39.js.map
+//# sourceMappingURL=pages.dashboard-75cbae55bdcade1edb1a56d7ab8d292a.js.map

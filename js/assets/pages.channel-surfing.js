@@ -1,4 +1,4 @@
-webpackJsonp([94], {
+webpackJsonp([95], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -2599,6 +2599,11 @@ webpackJsonp([94], {
                                 case O.ModerationActions.SubscribersOnly:
                                 case O.ModerationActions.SubscribersOnlyOff:
                                 case O.ModerationActions.Unhost:
+                                case O.ModerationActions.AddBlockedTerm:
+                                case O.ModerationActions.AddPermittedTerm:
+                                case O.ModerationActions.DeleteBlockedTerm:
+                                case O.ModerationActions.DeletePermittedTerm:
+                                case O.ModerationActions.ModifiedAutoModProperties:
                                 case O.ModerationActions.Unraid:
                                     n(Object(Pe.f)(e.data.moderation_action, e.data.created_by, e.data.created_by_user_id, e.data.args));
                                     break;
@@ -10101,32 +10106,6 @@ webpackJsonp([94], {
             }
         };
         e.exports = n
-    },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var a, i = n("TToO"),
-            r = n("GiK3"),
-            s = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(a || (a = {}));
-        var o = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = s.b.get(this.props.name, a.Off);
-                    return e === a.On || e === a.StaffOnly && this.props.isStaff ? this.props.children : null
-                }, t
-            }(r.Component),
-            l = o;
-        n.d(t, "a", function() {
-            return a
-        }), n.d(t, "c", function() {
-            return o
-        }), n.d(t, "b", function() {
-            return l
-        })
     },
     QsiC: function(e, t, n) {
         var a = {
@@ -21969,4 +21948,4 @@ webpackJsonp([94], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-surfing-2c3aa4e63e81f05c4fc16d05c2503de8.js.map
+//# sourceMappingURL=pages.channel-surfing-0ba6f0c9e88fb99c141119134e4a667d.js.map

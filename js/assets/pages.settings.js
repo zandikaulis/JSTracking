@@ -7838,7 +7838,8 @@ webpackJsonp([41], {
             br = n("cumT"),
             yr = function(e) {
                 function t() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.shouldOpenURL = !0, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
                     return l.createElement(f.b, {
@@ -7848,7 +7849,7 @@ webpackJsonp([41], {
                     return this.props.data.currentUser && this.props.data.requestInfo ? this.props.data.currentUser.hasPrime ? l.createElement(l.Fragment, null, l.createElement(cr, null), l.createElement(vr, null), l.createElement(k.a, {
                         title: Object(d.d)("Subscriptions Settings", "SettingsPrimePage"),
                         description: Object(d.d)("Choose how your subscription activity will display in chat", "SettingsPrimePage")
-                    }), l.createElement(S.a, null, l.createElement(Hn, null))) : Object(Rn.a)(this.props.data.requestInfo.countryCode) ? (window.location.replace("https://twitch.amazon.com/prime?ref_=sm_w_tsp_p_t"), null) : l.createElement(u.b, {
+                    }), l.createElement(S.a, null, l.createElement(Hn, null))) : Object(Rn.a)(this.props.data.requestInfo.countryCode) ? (this.shouldOpenURL && (this.shouldOpenURL = !1, window.open("https://twitch.amazon.com/prime?ref_=sm_w_tsp_p_t")), null) : l.createElement(u.b, {
                         to: "/settings/turbo"
                     }) : null
                 }, t
@@ -9052,7 +9053,11 @@ webpackJsonp([41], {
                     })
                 }, t
             }(l.Component),
-            vi = Object(i.d)(Object(h.d)("HideSubscriptionGiftCountSetting"), Object(K.a)(gi), Object(K.a)(mi, {
+            vi = Object(i.d)(Object(h.d)("HideSubscriptionGiftCountSetting"), Object(K.a)(gi, {
+                options: {
+                    fetchPolicy: "network-only"
+                }
+            }), Object(K.a)(mi, {
                 name: "updateUserSubscriptionSettings"
             }))(fi),
             bi = n("NoSW"),
@@ -9262,11 +9267,7 @@ webpackJsonp([41], {
                         linkTo: "/settings/connections",
                         active: this.props.tabName === ki.Connections,
                         "data-a-target": "connections-tab"
-                    }, Object(d.d)("Connections", "SettingsTabs")), l.createElement(F._36, {
-                        linkTo: "/subscriptions",
-                        active: !1,
-                        "data-a-target": "subscriptions-tab"
-                    }, Object(d.d)("Subscriptions", "SettingsTabs")))))
+                    }, Object(d.d)("Connections", "SettingsTabs")))))
                 }, t.prototype.renderPremiumTab = function() {
                     if (this.props.data.currentUser && this.props.data.requestInfo) {
                         var e = this.props.data.currentUser,
@@ -10671,32 +10672,6 @@ webpackJsonp([41], {
             var n = typeof e;
             return !("number" != n && "symbol" != n && "boolean" != n && null != e && !i(e)) || o.test(e) || !a.test(e) || null != t && e in Object(t)
         }
-    },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var r, i = n("TToO"),
-            a = n("GiK3"),
-            o = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(r || (r = {}));
-        var s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, r.Off);
-                    return e === r.On || e === r.StaffOnly && this.props.isStaff ? this.props.children : null
-                }, t
-            }(a.Component),
-            c = s;
-        n.d(t, "a", function() {
-            return r
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "b", function() {
-            return c
-        })
     },
     Qe41: function(e, t) {
         e.exports = function(e) {
@@ -16606,4 +16581,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-3e52bed3835a7cfcbb185bbeb811f7eb.js.map
+//# sourceMappingURL=pages.settings-e3220a27cdc3e482475b42d6b4f43580.js.map

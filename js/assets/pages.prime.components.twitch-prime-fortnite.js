@@ -38,7 +38,9 @@ webpackJsonp([110], {
                     color: T.K.Link
                 }, e))
             }),
-            k = function() {
+            b = Object(_.d)("TwitchPrimeFortniteOffers", {
+                autoReportInteractive: !0
+            })(function() {
                 return l.createElement(T._8, {
                     className: "twitch-prime-fortnite-offers",
                     padding: {
@@ -62,12 +64,12 @@ webpackJsonp([110], {
                     transform: T._48.Uppercase,
                     color: T.K.Link
                 }, Object(m.d)("Exclusive!", "TwitchPrimeFortniteOffers")))), P(Object(m.d)("Battle Royale Trailblazer Outfit", "TwitchPrimeFortniteOffers")), P(Object(m.d)("Battle Royale True North Back Bling", "TwitchPrimeFortniteOffers")), P(Object(m.d)("Battle Royale Tenderizer Pickaxe", "TwitchPrimeFortniteOffers")), P(Object(m.d)("Battle Royale Freestylin’ Emote", "TwitchPrimeFortniteOffers")))
-            },
-            b = r("kQ9X"),
-            E = (r("F35x"), "twitch-prime-signup-call-to-action"),
-            C = "twitch-prime-claim-call-to-action",
-            O = "twitch-prime-login-call-to-action",
-            v = function(e) {
+            }),
+            k = r("kQ9X"),
+            C = (r("F35x"), "twitch-prime-signup-call-to-action"),
+            O = "twitch-prime-claim-call-to-action",
+            v = "twitch-prime-login-call-to-action",
+            E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderDescription = function() {
@@ -121,7 +123,7 @@ webpackJsonp([110], {
                             title: Object(m.d)("Have Twitch Prime?", "TwitchPrimeFortnite"),
                             body: Object(m.d)("Click here to login and get started", "TwitchPrimeFortnite"),
                             onClick: t.onLoginClick,
-                            dataTestSelector: O,
+                            dataTestSelector: v,
                             href: "#"
                         })
                     }, t.renderSignupCTA = function() {
@@ -131,14 +133,14 @@ webpackJsonp([110], {
                             title: Object(m.d)("Not a Twitch Prime member?", "TwitchPrimeFortnite"),
                             body: Object(m.d)("Click here to start your free trial or link your Amazon Prime account", "TwitchPrimeFortnite"),
                             href: e,
-                            dataTestSelector: E
+                            dataTestSelector: C
                         })
                     }, t.renderClaimCTA = function() {
                         return l.createElement(y.a, {
                             className: "twitch-prime-call-to-action--claim",
                             title: Object(m.d)("Click here for your loot", "TwitchPrimeFortnite"),
                             href: "/prime/fortnite/link",
-                            dataTestSelector: C
+                            dataTestSelector: O
                         })
                     }, t.getCurrentUser = function() {
                         var e = t.props.data;
@@ -162,7 +164,7 @@ webpackJsonp([110], {
                         className: "twitch-prime-fortnite"
                     }, l.createElement(w.a, {
                         renderOfferImage: !0
-                    }, this.renderDescription()), l.createElement(k, null), this.renderCTAs()), l.createElement(g.a, {
+                    }, this.renderDescription()), l.createElement(b, null), this.renderCTAs()), l.createElement(g.a, {
                         partnerSocialLink: "https://twitter.com/FortniteGame",
                         partnerSocialText: "@FortniteGame"
                     }))
@@ -170,9 +172,9 @@ webpackJsonp([110], {
             }(l.Component),
             x = Object(s.compose)(Object(_.d)("TwitchPrimeFortnitePage", {
                 destination: f.a.TwitchPrimeFortnitePage
-            }), Object(d.a)(b), Object(u.a)({
+            }), Object(d.a)(k), Object(u.a)({
                 location: h.PageviewLocation.TwitchPrimeFortnitePage
-            }))(v);
+            }))(E);
         var F = Object(n.b)(null, function(e) {
             return Object(i.b)({
                 login: function() {
@@ -197,6 +199,7 @@ webpackJsonp([110], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
+                    var e = this.props.partnerSocialLink && this.props.partnerSocialText;
                     return i.createElement(c._8, {
                         className: "prime-footer",
                         position: c._15.Relative
@@ -222,14 +225,14 @@ webpackJsonp([110], {
                     }, i.createElement(c._8, {
                         className: "prime-footer__twitter-links",
                         display: c.R.Flex,
-                        justifyContent: c._7.Between
+                        justifyContent: e ? c._7.Between : c._7.Center
                     }, i.createElement(c.O, {
                         to: "https://twitter.com/TwitchPrime",
                         targetBlank: !0
                     }, i.createElement(c.Q, {
                         bold: !0,
                         fontSize: c.V.Size5
-                    }, Object(a.d)("Follow us @TwitchPrime", "PrimeSubsite"))), this.props.partnerSocialLink && this.props.partnerSocialText && i.createElement(c.O, {
+                    }, Object(a.d)("Follow us @TwitchPrime", "PrimeSubsite"))), e && i.createElement(c.O, {
                         to: this.props.partnerSocialLink,
                         targetBlank: !0
                     }, i.createElement(c.Q, {
@@ -262,61 +265,65 @@ webpackJsonp([110], {
                         to: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
                         targetBlank: !0
                     }, Object(a.d)("Twitch Prime Guide", "PrimeSubsiteFooter")))))
-                }, t = n.__decorate([Object(o.d)("PrimeFooter", {
-                    autoReportInteractive: !0
-                })], t)
-            }(i.Component));
+                }, t
+            }(i.Component)),
+            s = Object(o.d)("PrimeFooter", {
+                autoReportInteractive: !0
+            })(l);
         r.d(t, "a", function() {
-            return l
+            return s
         })
     },
     TCPX: function(e, t, r) {
         "use strict";
         var n = r("GiK3"),
-            i = r("Odds"),
-            a = (r("0blB"), function(e) {
-                return n.createElement(i._8, {
-                    display: i.R.Flex,
-                    justifyContent: i._7.Center
-                }, n.createElement(i._8, {
+            i = r("CSlQ"),
+            a = r("Odds"),
+            o = (r("0blB"), function(e) {
+                return n.createElement(a._8, {
+                    display: a.R.Flex,
+                    justifyContent: a._7.Center
+                }, n.createElement(a._8, {
                     className: "twitch-prime-call-to-action " + e.className,
                     padding: {
                         x: 3
                     },
-                    textAlign: i._45.Center,
-                    alignItems: i.c.Center,
-                    display: i.R.Flex,
-                    flexDirection: i.T.Column,
-                    justifyContent: i._7.Around,
+                    textAlign: a._45.Center,
+                    alignItems: a.c.Center,
+                    display: a.R.Flex,
+                    flexDirection: a.T.Column,
+                    justifyContent: a._7.Around,
                     margin: 2
-                }, n.createElement(i._2, {
+                }, n.createElement(a._2, {
                     "data-test-selector": e.dataTestSelector,
                     "data-a-selector": e.dataASelector
                 }, n.createElement("a", {
                     href: e.href,
                     onClick: e.onClick,
                     className: "twitch-prime-call-to-action__link"
-                }, n.createElement(i._8, {
+                }, n.createElement(a._8, {
                     className: "fortnite-bold"
-                }, n.createElement(i.Q, {
-                    type: i._49.H2,
-                    transform: i._48.Uppercase,
+                }, n.createElement(a.Q, {
+                    type: a._49.H2,
+                    transform: a._48.Uppercase,
                     bold: !0
-                }, e.title)), e.body && n.createElement(i._8, {
+                }, e.title)), e.body && n.createElement(a._8, {
                     margin: {
                         y: 1
                     },
                     className: "twitch-prime-call-to-action__body"
-                }, n.createElement(i.Q, {
-                    type: i._49.P,
-                    transform: i._48.Uppercase
+                }, n.createElement(a.Q, {
+                    type: a._49.P,
+                    transform: a._48.Uppercase
                 }, e.body))))))
             }),
-            o = a;
+            c = Object(i.d)("TwitchPrimeCallToAction", {
+                autoReportInteractive: !0
+            })(o);
         r.d(t, !1, function() {
-            return a
-        }), r.d(t, "a", function() {
             return o
+        }), r.d(t, "a", function() {
+            return c
         })
     },
     c6bv: function(e, t, r) {
@@ -382,7 +389,9 @@ webpackJsonp([110], {
                     })), this.props.children), this.props.renderOfferImage && this.renderOfferImage())))
                 }, t
             }(a.Component)),
-            s = Object(o.d)("TwitchPrimeBrandedHeader")(l);
+            s = Object(o.d)("TwitchPrimeBrandedHeader", {
+                autoReportInteractive: !0
+            })(l);
         r.d(t, !1, function() {
             return "twitch-prime-fortnite-header"
         }), r.d(t, !1, function() {
@@ -521,4 +530,4 @@ webpackJsonp([110], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-fortnite-95c38b741c5551f5650ff0b9837cd341.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-fortnite-86d21c9ace7b2ab006a0600b7659cac9.js.map

@@ -4877,7 +4877,7 @@ webpackJsonp([52, 104], {
             })(D),
             R = n("T8ns"),
             G = L.a.wrap(function() {
-                return n.e(94).then(n.bind(null, "sx3M"))
+                return n.e(95).then(n.bind(null, "sx3M"))
             }, "ChannelSurfingPage"),
             A = L.a.wrap(function() {
                 return new Promise(function(e) {
@@ -6278,4 +6278,4 @@ webpackJsonp([52, 104], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-6f9c0595628822b7ef28a9d2b85eaf30.js.map
+//# sourceMappingURL=pages.onboarding-829cf723826c73ba5668128b5abefcbc.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([101], {
+webpackJsonp([102], {
     "/1dg": function(e, t, n) {
         "use strict";
         var i, r = n("TToO"),
@@ -404,12 +404,12 @@ webpackJsonp([101], {
                 }, t
             }(a.PureComponent);
         n.d(t, "a", function() {
-                return I
+                return H
             }),
             function(e) {
                 e[e.EditDescription = 0] = "EditDescription"
             }(y || (y = {}));
-        var I = function(e) {
+        var H = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.onDescriptionChangeHandler = function(e) {
@@ -502,1298 +502,6 @@ webpackJsonp([101], {
                 }))
             }, t
         }(a.Component)
-    },
-    "09xK": function(e, t, n) {
-        "use strict";
-        var i, r = n("TToO"),
-            a = n("GiK3"),
-            o = n("CIox"),
-            s = n("NY9D"),
-            l = n("6sO2"),
-            d = n("yWCw"),
-            c = n("Snvs"),
-            u = n("3zLD"),
-            p = n("zCIC"),
-            f = n("7vx8"),
-            m = n("j7/Y"),
-            h = n("6WAQ"),
-            g = n("mi6k"),
-            v = n("w9tK"),
-            S = n("vH/s"),
-            b = n("CSlQ"),
-            k = n("fc0G"),
-            y = function(e) {
-                return a.createElement(k.c, {
-                    vodID: e.videoID,
-                    disableTheatreButton: !0,
-                    playerTypeOverride: k.b.Highlighter,
-                    paused: e.paused,
-                    nextVideoOffset: e.nextVideoOffset,
-                    onVideoTimeChange: e.onVideoTimeChange,
-                    onPauseToggled: e.onPauseToggled
-                })
-            },
-            O = n("RH2O"),
-            _ = n("V5M+"),
-            C = n("+8VM"),
-            E = n("oIkB"),
-            x = n("d0Y8"),
-            w = n("Odds"),
-            T = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e;
-                    if (this.props.offsets) {
-                        var t = this.props.offsets;
-                        e = Object(g.b)(this.props.lengthSeconds) + " (" + Object(g.b)(t.startOffsetSeconds) + " - " + Object(g.b)(t.endOffsetSeconds) + ")"
-                    } else e = Object(g.b)(this.props.lengthSeconds);
-                    return a.createElement(w._35, {
-                        ellipsis: !0
-                    }, a.createElement(w.Q, {
-                        ellipsis: !0,
-                        "data-test-selector": i.Title,
-                        fontSize: w.V.Size6,
-                        title: this.props.title
-                    }, this.props.title || "<" + Object(l.d)("Untitled", "VideoSegment") + ">"), a.createElement(w._8, {
-                        display: w.R.Flex,
-                        alignItems: w.c.Center
-                    }, a.createElement(w._24, {
-                        asset: w._25.GlyphLength,
-                        height: 12,
-                        width: 12
-                    }), " ", a.createElement(w.Q, {
-                        "data-test-selector": i.Duration,
-                        type: w._49.Span,
-                        fontSize: w.V.Size7
-                    }, e)))
-                }, t
-            }(a.Component);
-        n("bJlE");
-        ! function(e) {
-            e[e.Duration = 0] = "Duration", e[e.ErrorIcon = 1] = "ErrorIcon", e[e.Index = 2] = "Index", e[e.Game = 3] = "Game", e[e.Title = 4] = "Title"
-        }(i || (i = {}));
-        var V, D = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = null;
-                    return this.props.error && (e = a.createElement(w._24, {
-                        asset: w._25.Warning,
-                        "data-test-selector": i.ErrorIcon,
-                        height: 28,
-                        type: w._26.Live,
-                        width: 28
-                    })), a.createElement(w._8, {
-                        alignItems: w.c.Stretch,
-                        display: w.R.Flex,
-                        fullWidth: !0,
-                        flexDirection: w.T.Row,
-                        padding: 1
-                    }, a.createElement(w._8, {
-                        flexGrow: 0,
-                        flexShrink: 0
-                    }, a.createElement(w._35, {
-                        alignItems: w.c.Center,
-                        background: w.n.AccentAlt2,
-                        className: "video-segment__item-index",
-                        display: w.R.Flex,
-                        fullHeight: !0,
-                        justifyContent: w._7.Center
-                    }, a.createElement(w.Q, {
-                        color: w.K.Overlay,
-                        "data-test-selector": i.Index,
-                        fontSize: w.V.Size4,
-                        type: w._49.H4
-                    }, "" + (this.props.listIndex + 1)))), a.createElement(w._8, {
-                        flexGrow: 1,
-                        flexShrink: 1,
-                        padding: {
-                            left: 1
-                        },
-                        ellipsis: !0
-                    }, a.createElement(T, {
-                        lengthSeconds: this.props.lengthSeconds,
-                        offsets: this.props.offsets,
-                        title: this.props.title
-                    })), e)
-                }, t
-            }(a.Component),
-            R = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = this.props.segments.map(function(t, n) {
-                            return a.createElement(w._6, {
-                                alert: !!t.error,
-                                blurAfterClick: !0,
-                                disabled: e.props.disabled,
-                                key: n,
-                                onClick: function() {
-                                    e.props.onSegmentSelect(n)
-                                },
-                                selected: n === e.props.selectedSegmentIndex
-                            }, a.createElement(w._8, {
-                                padding: {
-                                    y: .5,
-                                    x: 1
-                                }
-                            }, a.createElement(D, {
-                                lengthSeconds: t.endOffsetSeconds - t.startOffsetSeconds,
-                                listIndex: n,
-                                offsets: {
-                                    startOffsetSeconds: t.startOffsetSeconds,
-                                    endOffsetSeconds: t.endOffsetSeconds
-                                },
-                                title: t.metadata.title
-                            })))
-                        });
-                    return a.createElement(p.b, {
-                        suppressScrollX: !0
-                    }, a.createElement("div", null, t))
-                }, t
-            }(a.Component);
-        ! function(e) {
-            e[e.CreateButton = 0] = "CreateButton", e[e.SaveError = 1] = "SaveError"
-        }(V || (V = {}));
-        var I, H = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        selectedSegmentIndex: 0
-                    }, t.onSegmentSelect = function(e) {
-                        t.setState({
-                            selectedSegmentIndex: e
-                        })
-                    }, t.onSegmentVideoFieldChange = function(e) {
-                        var n = r.__assign({}, t.selectedSegment(), {
-                            metadata: e
-                        });
-                        t.props.onSegmentUpdate(n, t.state.selectedSegmentIndex)
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(w._8, {
-                        alignItems: w.c.Stretch,
-                        display: w.R.Flex,
-                        flexDirection: w.T.Row,
-                        fullHeight: !0,
-                        fullWidth: !0
-                    }, this.renderLeftColumn(), this.renderRightColumn())
-                }, t.prototype.renderLeftColumn = function() {
-                    var e = -1 !== this.props.segments.findIndex(function(e) {
-                            return !!e.error
-                        }),
-                        t = null;
-                    return this.props.saveError && (t = a.createElement(w.e, {
-                        delay: w.f.Short,
-                        type: w.j.BounceIn,
-                        enabled: !0
-                    }, a.createElement(w._35, {
-                        background: w.n.Base,
-                        border: !0,
-                        color: w.K.Error,
-                        margin: {
-                            bottom: 1
-                        },
-                        padding: 1
-                    }, a.createElement(w.Q, {
-                        color: w.K.Error,
-                        "data-test-selector": V.SaveError
-                    }, this.props.saveError)))), a.createElement(w._35, {
-                        border: !0,
-                        className: "highlight-creator-modal__left-column",
-                        display: w.R.Flex,
-                        flexDirection: w.T.Column,
-                        flexGrow: 0,
-                        flexShrink: 0
-                    }, a.createElement(w._35, {
-                        background: w.n.Alt2,
-                        borderBottom: !0,
-                        padding: 1,
-                        flexGrow: 0,
-                        flexShrink: 0
-                    }, a.createElement(w.Q, {
-                        color: w.K.Alt2,
-                        fontSize: w.V.Size4
-                    }, Object(l.d)("Highlight Creator", "HighlightCreatorModal"))), a.createElement(w._8, {
-                        flexGrow: 1,
-                        flexShrink: 1,
-                        position: w._15.Relative
-                    }, a.createElement(w._8, {
-                        position: w._15.Absolute,
-                        attachTop: !0,
-                        attachLeft: !0,
-                        attachRight: !0,
-                        attachBottom: !0
-                    }, a.createElement(R, {
-                        onSegmentSelect: this.onSegmentSelect,
-                        disabled: this.props.saving,
-                        segments: this.props.segments,
-                        selectedSegmentIndex: this.state.selectedSegmentIndex
-                    }))), a.createElement(w._35, {
-                        alignItems: w.c.Center,
-                        background: w.n.Alt2,
-                        borderTop: !0,
-                        display: w.R.Flex,
-                        flexGrow: 0,
-                        flexShrink: 0
-                    }, a.createElement(w._8, {
-                        margin: 1,
-                        fullWidth: !0
-                    }, t, a.createElement(w.v, {
-                        "data-test-selector": V.CreateButton,
-                        disabled: this.props.saving || e,
-                        onClick: this.props.onCreateRequest,
-                        fullWidth: !0,
-                        state: this.props.saving ? w.A.Loading : w.A.Default
-                    }, Object(l.d)("Save Highlights", "HighlightCreatorModal")))))
-                }, t.prototype.renderRightColumn = function() {
-                    return a.createElement(w._8, {
-                        padding: {
-                            x: 3,
-                            y: 2
-                        },
-                        flexGrow: 1,
-                        flexShrink: 1
-                    }, a.createElement(x.VideoFieldEditor, {
-                        onChange: this.onSegmentVideoFieldChange,
-                        disabled: this.props.saving,
-                        video: this.selectedSegment().metadata
-                    }))
-                }, t.prototype.selectedSegment = function() {
-                    return this.props.segments[this.state.selectedSegmentIndex]
-                }, t
-            }(a.Component),
-            N = n("zAjo"),
-            j = n("sJBK");
-        n("zECu");
-        ! function(e) {
-            e[e.Highlight = 0] = "Highlight", e[e.VideoManagerLink = 1] = "VideoManagerLink"
-        }(I || (I = {}));
-        var L = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = this.props.highlights.map(function(t, n) {
-                            return a.createElement(w._35, {
-                                alignItems: w.c.Center,
-                                background: w.n.Base,
-                                className: "save-success-highlight",
-                                "data-test-selector": I.Highlight,
-                                display: w.R.Flex,
-                                elevation: 1,
-                                flexGrow: 0,
-                                flexShrink: 0,
-                                fullWidth: !0,
-                                justifyContent: w._7.Center,
-                                key: n,
-                                margin: {
-                                    y: 1
-                                },
-                                padding: {
-                                    x: 2,
-                                    y: 1
-                                }
-                            }, a.createElement(w._8, {
-                                flexGrow: 1,
-                                flexShrink: 1,
-                                ellipsis: !0
-                            }, a.createElement(D, {
-                                lengthSeconds: t.lengthSeconds,
-                                listIndex: n,
-                                title: t.title
-                            })), a.createElement(w._8, {
-                                flexGrow: 0,
-                                flexShrink: 0,
-                                padding: {
-                                    left: 2
-                                }
-                            }, a.createElement(N.a, {
-                                balloonDirection: w.r.RightCenter,
-                                buttonType: w.B.Hollow,
-                                content: {
-                                    type: j.a.Video,
-                                    id: t.id,
-                                    owner: {
-                                        id: e.props.owner.id,
-                                        displayName: e.props.owner.displayName
-                                    },
-                                    title: t.title
-                                },
-                                tracking: {
-                                    location: S.PageviewLocation.VideoManagerHighlighter
-                                }
-                            })))
-                        });
-                    return a.createElement(w._35, {
-                        alignItems: w.c.Center,
-                        background: w.n.Alt,
-                        display: w.R.Flex,
-                        flexDirection: w.T.Column,
-                        fullHeight: !0,
-                        fullWidth: !0,
-                        justifyContent: w._7.Center,
-                        padding: 3
-                    }, a.createElement(w._8, {
-                        alignItems: w.c.Center,
-                        display: w.R.Flex,
-                        flexDirection: w.T.Column,
-                        flexGrow: 0,
-                        flexShrink: 0,
-                        fullWidth: !0,
-                        justifyContent: w._7.End
-                    }, a.createElement(w.Q, {
-                        type: w._49.H3
-                    }, Object(l.d)("Success!", "SaveSuccessOverview")), a.createElement(w._8, {
-                        padding: {
-                            top: 1
-                        }
-                    }, this.renderVideoManagerLink())), a.createElement(w._8, {
-                        flexGrow: 1,
-                        flexShrink: 1,
-                        fullWidth: !0,
-                        margin: {
-                            x: 2,
-                            top: 1
-                        },
-                        overflow: w._11.Hidden,
-                        position: w._15.Relative
-                    }, a.createElement(w._2, {
-                        fullWidth: !0,
-                        position: w._15.Absolute
-                    }, a.createElement(p.b, {
-                        autoHide: !1,
-                        suppressScrollX: !0
-                    }, a.createElement(w._8, {
-                        alignItems: w.c.Center,
-                        display: w.R.Flex,
-                        flexDirection: w.T.Column,
-                        justifyContent: w._7.Center,
-                        padding: 5
-                    }, t)))), a.createElement(w._8, {
-                        flexGrow: 0,
-                        flexShrink: 0,
-                        padding: {
-                            top: 1
-                        }
-                    }, a.createElement(w.v, {
-                        onClick: this.props.onComplete
-                    }, Object(l.d)("Continue editing", "SaveSuccessOverview"))))
-                }, t.prototype.renderVideoManagerLink = function() {
-                    var e = this;
-                    return Object(l.d)("Visit the <x:link>Video Producer</x:link> to view the created highlight(s).", {
-                        "x:link": function(t) {
-                            return a.createElement(w.O, {
-                                "data-test-selector": I.VideoManagerLink,
-                                key: "video-manager-link",
-                                targetBlank: !0,
-                                to: {
-                                    pathname: "/" + e.props.owner.login + "/manager",
-                                    state: {
-                                        content: S.PageviewContent.HighlighterSuccess,
-                                        medium: S.PageviewMedium.VideoManagerHighlighter
-                                    }
-                                }
-                            }, t)
-                        }
-                    }, "SaveSuccessOverview")
-                }, t
-            }(a.Component),
-            F = n("H6Wp"),
-            P = (n("cJkA"), function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    n.onSegmentUpdate = function(e, t) {
-                        "" === e.metadata.title ? e.error = Object(l.d)("A highlight must have a title", "HighlightCreatorModal") : e.error = void 0, n.setState(function(n) {
-                            var i = n.segmentsSnapshot.slice(0);
-                            return i.splice(t, 1, e), {
-                                segmentsSnapshot: i
-                            }
-                        })
-                    }, n.onCancel = function() {
-                        n.props.onCancel(n.state.segmentsSnapshot)
-                    }, n.onCreateHighlightsRequest = function() {
-                        return r.__awaiter(n, void 0, void 0, function() {
-                            var e = this;
-                            return r.__generator(this, function(t) {
-                                return this.setState({
-                                    saveError: null,
-                                    saving: !0
-                                }, function() {
-                                    return e.createHighlights()
-                                }), [2]
-                            })
-                        })
-                    };
-                    var i = t.segments.map(function(e) {
-                        return r.__assign({}, e, {
-                            metadata: r.__assign({}, e.metadata, {
-                                tags: e.metadata.tags.slice()
-                            })
-                        })
-                    });
-                    return n.state = {
-                        saveError: null,
-                        savedHighlights: [],
-                        saving: !1,
-                        segmentsSnapshot: i
-                    }, n
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e;
-                    return e = this.state.savedHighlights.length > 0 && 0 === this.state.segmentsSnapshot.length ? a.createElement(L, {
-                        onComplete: this.props.onPostSaveFinish,
-                        owner: this.props.owner,
-                        highlights: this.state.savedHighlights
-                    }) : a.createElement(H, {
-                        onCreateRequest: this.onCreateHighlightsRequest,
-                        onSegmentUpdate: this.onSegmentUpdate,
-                        segments: this.state.segmentsSnapshot,
-                        saving: this.state.saving,
-                        saveError: this.state.saveError
-                    }), a.createElement(w.e, {
-                        type: w.j.FadeIn,
-                        delay: w.f.Medium,
-                        duration: w.g.Medium,
-                        enabled: !0
-                    }, a.createElement(w._35, {
-                        background: w.n.Base,
-                        className: "highlight-creator-modal"
-                    }, e), a.createElement(C.a, {
-                        onClose: this.onCancel
-                    }))
-                }, t.prototype.createHighlights = function() {
-                    return r.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n, i, a, o, s, d = this;
-                        return r.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    e = this.state.segmentsSnapshot.map(function(e, t) {
-                                        return d.createHighlight(e, t)
-                                    }), t = [], r.label = 1;
-                                case 1:
-                                    return r.trys.push([1, 3, , 4]), [4, Promise.all(e)];
-                                case 2:
-                                    return t = r.sent(), [3, 4];
-                                case 3:
-                                    return n = r.sent(), l.j.error(n, "Unexpected error creating highlights"), [3, 4];
-                                case 4:
-                                    return i = t.reduce(function(e, t) {
-                                        return t.success && e.push(t.success), e
-                                    }, this.state.savedHighlights), a = t.sort(function(e, t) {
-                                        return e.segmentsIndex - t.segmentsIndex
-                                    }), o = a.reduce(function(e, t) {
-                                        return t.success || e.push(t.segment), e
-                                    }, []), s = null, o.length > 0 && (s = Object(l.d)("Some or all of your highlights have failed to save. These have been returned to your creation queue. Please try again.", "HighlightCreatorModalContainer")), this.setState({
-                                        segmentsSnapshot: o,
-                                        saving: !1,
-                                        saveError: s,
-                                        savedHighlights: i
-                                    }, function() {
-                                        0 === o.length && d.props.onSaveSuccess(i.map(function(e) {
-                                            return e.id
-                                        }))
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.createHighlight = function(e, t) {
-                    return r.__awaiter(this, void 0, void 0, function() {
-                        var n, i, a, o;
-                        return r.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    n = {
-                                        segmentsIndex: t,
-                                        segment: e
-                                    }, i = {
-                                        sourceVideoID: e.sourceVideoID,
-                                        startOffsetSeconds: e.startOffsetSeconds,
-                                        endOffsetSeconds: e.endOffsetSeconds,
-                                        metadata: {
-                                            description: e.metadata.description,
-                                            language: e.metadata.language,
-                                            tags: e.metadata.tags,
-                                            title: e.metadata.title
-                                        }
-                                    }, r.label = 1;
-                                case 1:
-                                    return r.trys.push([1, 3, , 4]), [4, this.props.createHighlight(Object(E.a)(i))];
-                                case 2:
-                                    return a = r.sent().data, n.success = a.createVideoHighlight.highlight, [3, 4];
-                                case 3:
-                                    return o = r.sent(), l.j.error(o, "HighlightCreatorModalContainer"), [3, 4];
-                                case 4:
-                                    return [2, n]
-                            }
-                        })
-                    })
-                }, t
-            }(a.Component)),
-            M = Object(f.a)(F, {
-                name: "createHighlight"
-            })(P);
-        var G, B = Object(O.b)(null, function(e, t) {
-            return {
-                onCancel: function(n) {
-                    t.onCancel(n), e(Object(_.c)())
-                },
-                onPostSaveFinish: function() {
-                    t.onPostSaveFinish(), e(Object(_.c)())
-                }
-            }
-        })(M);
-        n("YBPv");
-        ! function(e) {
-            e[e.NoItems = 0] = "NoItems"
-        }(G || (G = {}));
-        var A = function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.scrollableAreaRef = null, t.scrollRefHandler = function(e) {
-                    t.scrollableAreaRef = e
-                }, t
-            }
-            return r.__extends(t, e), t.prototype.render = function() {
-                return a.createElement(w._35, {
-                    background: w.n.Base,
-                    borderRadius: w.t.Small,
-                    border: !0,
-                    display: w.R.Flex,
-                    elevation: 2,
-                    flexDirection: w.T.Column,
-                    fullHeight: !0
-                }, a.createElement(w._35, {
-                    background: w.n.Alt,
-                    borderBottom: !0,
-                    padding: 1
-                }, a.createElement(w.Q, {
-                    fontSize: w.V.Size5
-                }, Object(l.d)("Highlights", "VideoSegmentQueue"))), a.createElement(w._2, {
-                    flexGrow: 1,
-                    flexShrink: 1
-                }, a.createElement(p.b, {
-                    autoHide: !1,
-                    suppressScrollX: !0,
-                    scrollRef: this.scrollRefHandler
-                }, a.createElement("div", null, this.renderSegments()))), a.createElement(w._35, {
-                    padding: {
-                        x: 1,
-                        y: .5
-                    }
-                }, a.createElement(w.v, {
-                    blurAfterClick: !0,
-                    disabled: 0 === this.props.queue.length,
-                    fullWidth: !0,
-                    onClick: this.props.onSaveClick,
-                    type: w.B.Hollow
-                }, Object(l.d)("Describe and Save", "VideoSegmentQueue"))))
-            }, t.prototype.componentDidUpdate = function(e) {
-                this.props.queue.length > e.queue.length && this.scrollableAreaRef && this.scrollableAreaRef.scrollToBottom()
-            }, t.prototype.renderSegments = function() {
-                var e = this;
-                return 0 === this.props.queue.length ? a.createElement(w._8, {
-                    alignItems: w.c.Center,
-                    "data-test-selector": G.NoItems,
-                    display: w.R.Flex,
-                    fullHeight: !0,
-                    fullWidth: !0,
-                    justifyContent: w._7.Center,
-                    padding: 1
-                }, a.createElement(w.Q, {
-                    color: w.K.Alt2
-                }, Object(l.d)("No highlights queued for export.", "VideoSegmentQueue"))) : this.props.queue.map(function(t, n) {
-                    return a.createElement(w._35, {
-                        className: "video-segment-queue__video-card",
-                        alignItems: w.c.Center,
-                        borderBottom: !0,
-                        display: w.R.Flex,
-                        flexDirection: w.T.Row,
-                        key: n
-                    }, a.createElement(w._8, {
-                        flexGrow: 1,
-                        flexShrink: 1,
-                        overflow: w._11.Hidden
-                    }, a.createElement(D, {
-                        listIndex: n,
-                        lengthSeconds: t.endOffsetSeconds - t.startOffsetSeconds,
-                        offsets: {
-                            startOffsetSeconds: t.startOffsetSeconds,
-                            endOffsetSeconds: t.endOffsetSeconds
-                        },
-                        title: t.metadata.title
-                    })), a.createElement(w._8, {
-                        className: "video-segment-queue__delete-button",
-                        flexGrow: 0,
-                        flexShrink: 0,
-                        margin: {
-                            right: 1
-                        }
-                    }, a.createElement(w.w, {
-                        ariaLabel: Object(l.d)("Remove highlight from queue", "VideoSegmentQueue"),
-                        icon: w._25.Trash,
-                        onClick: function() {
-                            e.props.onSegmentDelete(n)
-                        },
-                        size: w.x.Small,
-                        type: w.y.Secondary
-                    })))
-                })
-            }, t
-        }(a.Component);
-        var U, q = Object(O.b)(null, function(e, t) {
-                return {
-                    onSaveClick: function() {
-                        t.onSaveClick(), e(Object(_.d)(B, {
-                            onCancel: t.onQueueChange,
-                            onPostSaveFinish: t.onPostSaveFinish,
-                            onSaveSuccess: t.onSaveSuccess,
-                            owner: t.owner,
-                            segments: t.queue
-                        }))
-                    }
-                }
-            })(A),
-            K = n("+Znq"),
-            Q = n("6BvN");
-        ! function(e) {
-            e[e.EndFormGroup = 0] = "EndFormGroup", e[e.Offsets = 1] = "Offsets", e[e.StartFormGroup = 2] = "StartFormGroup", e[e.UpdateButton = 3] = "UpdateButton"
-        }(U || (U = {}));
-        var z, W = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.onStartChange = function(e) {
-                        n.setState({
-                            startOffset: e.currentTarget.value
-                        })
-                    }, n.onEndChange = function(e) {
-                        n.setState({
-                            endOffset: e.currentTarget.value
-                        })
-                    }, n.onKeyDown = function(e) {
-                        e.keyCode === Q.a.Enter && n.update()
-                    }, n.onInputBlur = function() {
-                        n.update()
-                    }, n.onUpdateClick = function() {
-                        n.update()
-                    }, n.state = {
-                        startOffset: Object(g.b)(t.segment.startOffset),
-                        endOffset: Object(g.b)(t.segment.endOffset)
-                    }, n
-                }
-                return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    var t = this.props.segment,
-                        n = e.segment,
-                        i = !1,
-                        r = this.state.startOffset,
-                        a = this.state.endOffset;
-                    t.startOffset !== n.startOffset && (r = Object(g.b)(n.startOffset), i = !0), t.endOffset !== n.endOffset && (a = Object(g.b)(n.endOffset), i = !0), i && this.setState({
-                        startOffset: r,
-                        endOffset: a
-                    })
-                }, t.prototype.render = function() {
-                    var e = this.props.segment;
-                    return a.createElement(K.a, null, a.createElement(w.v, {
-                        type: w.B.Text
-                    }, a.createElement(w._8, {
-                        display: w.R.Flex,
-                        justifyContent: w._7.Center
-                    }, a.createElement(w._24, {
-                        asset: w._25.Edit
-                    }), a.createElement(w._8, {
-                        padding: {
-                            left: .5
-                        }
-                    }, a.createElement(w.Q, {
-                        align: w._59.Middle,
-                        "data-test-selector": U.Offsets,
-                        type: w._49.Span
-                    }, Object(g.b)(e.startOffset) + " - " + Object(g.b)(e.endOffset))))), a.createElement(w.q, {
-                        direction: w.r.BottomCenter
-                    }, a.createElement(w._8, {
-                        display: w.R.Flex,
-                        flexDirection: w.T.Column,
-                        margin: .5
-                    }, a.createElement(w._8, {
-                        padding: {
-                            bottom: .5
-                        }
-                    }, this.renderStartInput()), a.createElement(w._8, {
-                        padding: {
-                            bottom: .5
-                        }
-                    }, this.renderEndInput()), a.createElement(w.v, {
-                        blurAfterClick: !0,
-                        "data-test-selector": U.UpdateButton,
-                        disabled: !this.canUpdate(),
-                        onClick: this.onUpdateClick
-                    }, Object(l.d)("Update", "OffsetBalloonButton")))))
-                }, t.prototype.renderStartInput = function() {
-                    var e = this.state.startOffset,
-                        t = !this.validClockValue(e);
-                    return a.createElement(w.W, {
-                        "data-test-selector": U.StartFormGroup,
-                        error: t,
-                        label: Object(l.d)("Start time", "OffsetBalloonButton")
-                    }, a.createElement(w._4, {
-                        error: t,
-                        onBlur: this.onInputBlur,
-                        onChange: this.onStartChange,
-                        onKeyDown: this.onKeyDown,
-                        required: !0,
-                        type: w._5.Text,
-                        value: this.state.startOffset
-                    }))
-                }, t.prototype.renderEndInput = function() {
-                    var e = this.state.endOffset,
-                        t = !this.validClockValue(e);
-                    return a.createElement(w.W, {
-                        "data-test-selector": U.EndFormGroup,
-                        error: t,
-                        label: Object(l.d)("End time", "OffsetBalloonButton")
-                    }, a.createElement(w._4, {
-                        error: t,
-                        onBlur: this.onInputBlur,
-                        onChange: this.onEndChange,
-                        onKeyDown: this.onKeyDown,
-                        required: !0,
-                        type: w._5.Text,
-                        value: e
-                    }))
-                }, t.prototype.validClockValue = function(e) {
-                    var t = Object(g.a)(e);
-                    return !isNaN(t)
-                }, t.prototype.canUpdate = function() {
-                    if (!(this.validClockValue(this.state.startOffset) && this.validClockValue(this.state.endOffset))) return !1;
-                    var e = this.props.segment,
-                        t = Object(g.a)(this.state.startOffset),
-                        n = Object(g.a)(this.state.endOffset);
-                    return (t !== e.startOffset || n !== e.endOffset) && (!(t < e.minOffset || n > e.maxOffset) && !(n <= t))
-                }, t.prototype.update = function() {
-                    this.canUpdate() && this.props.onUpdate({
-                        startOffset: Object(g.a)(this.state.startOffset),
-                        endOffset: Object(g.a)(this.state.endOffset)
-                    })
-                }, t
-            }(a.Component),
-            X = n("3HXW"),
-            J = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = this.props.segment;
-                    return a.createElement(X.a, {
-                        color: X.c.Orange,
-                        handleSize: X.b.Small,
-                        startOffset: e.startOffset,
-                        endOffset: e.endOffset,
-                        maxOffset: e.maxOffset,
-                        minOffset: e.minOffset,
-                        onLeftDrag: this.props.onOffsetChange,
-                        onLeftDragEnd: this.props.onOffsetChange,
-                        onLeftDragStart: this.props.onDragStart,
-                        onRightDrag: this.props.onOffsetChange,
-                        onRightDragEnd: this.props.onOffsetChange,
-                        onRightDragStart: this.props.onDragStart
-                    }, a.createElement(w._35, {
-                        alignItems: w.c.Center,
-                        display: w.R.Flex,
-                        fullWidth: !0,
-                        justifyContent: w._7.Center,
-                        padding: {
-                            y: 3
-                        },
-                        textAlign: w._45.Center
-                    }))
-                }, t
-            }(a.Component),
-            $ = Object(u.compose)(Object(b.d)("VideoSegmentEditor", {
-                autoReportInteractive: !0
-            }))(J),
-            Y = n("Kj+b");
-        ! function(e) {
-            e[e.ErrorMessage = 0] = "ErrorMessage"
-        }(z || (z = {}));
-        var Z = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.renderSelectSegmentButton = function() {
-                        var e, t = !n.props.data.loading && n.props.data.video && n.props.data.video.id,
-                            i = n.state.timelineSegments[n.state.activeIndex];
-                        return e = t ? a.createElement(w.Q, {
-                            color: w.K.OverlayAlt,
-                            fontSize: w.V.Size7
-                        }, "(" + Object(g.b)(i.endOffset - i.startOffset) + ")") : a.createElement(w._14, {
-                            lineCount: 1
-                        }), a.createElement(w._8, {
-                            position: w._15.Relative,
-                            attachTop: !0,
-                            fullWidth: !0,
-                            display: w.R.Flex,
-                            justifyContent: w._7.Center
-                        }, a.createElement(w._35, {
-                            elevation: 3,
-                            position: w._15.Absolute,
-                            attachBottom: !0,
-                            margin: {
-                                bottom: 1
-                            }
-                        }, a.createElement(w.v, {
-                            onClick: n.onSelectSegmentClick,
-                            blurAfterClick: !0,
-                            disabled: !t
-                        }, a.createElement(w._8, {
-                            padding: {
-                                x: 2
-                            }
-                        }, a.createElement(w.Q, null, Object(l.d)("Select Highlight", "VideoSegmentSelector")), e))))
-                    }, n.renderTimelineSegments = function() {
-                        return n.props.data.loading ? a.createElement(w._8, {
-                            padding: {
-                                y: 3
-                            },
-                            display: w.R.Flex,
-                            flexDirection: w.T.Column,
-                            alignItems: w.c.Center
-                        }, a.createElement(w._10, null)) : !n.props.data.error && (n.props.data.loading || n.props.data.video && n.props.data.video.id) ? n.state.timelineSegments.map(function(e) {
-                            return a.createElement($, {
-                                key: e.createdAt,
-                                onDragStart: n.props.onDragStart,
-                                onOffsetChange: n.onActiveSegmentOffsetChange,
-                                segment: e
-                            })
-                        }) : a.createElement(w._8, {
-                            "data-test-selector": z.ErrorMessage,
-                            padding: {
-                                y: 3
-                            },
-                            textAlign: w._45.Center
-                        }, a.createElement(w.Q, {
-                            fontSize: w.V.Size4
-                        }, Object(l.d)("Video data failed to load. Please try again later.", "VideoTimeline")))
-                    }, n.onActiveSegmentOffsetChange = function(e) {
-                        n.updateActiveSegmentOffsets(e)
-                    }, n.onSelectSegmentClick = function() {
-                        var e = n.state.timelineSegments[n.state.activeIndex];
-                        n.props.onSelectSegmentClick({
-                            startOffset: e.startOffset,
-                            endOffset: e.endOffset
-                        })
-                    }, n.props.data && !n.props.data.loading && n.props.data.video ? n.state = {
-                        timelineSegments: [n.getInitialTimelineSegment(t)],
-                        activeIndex: 0
-                    } : n.state = {
-                        timelineSegments: [n.getPlaceholderTimelineSegment()],
-                        activeIndex: 0
-                    }, n
-                }
-                return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    this.props.data.loading && !e.data.loading && e.data.video && (this.state = {
-                        timelineSegments: [this.getInitialTimelineSegment(e)],
-                        activeIndex: 0
-                    })
-                }, t.prototype.render = function() {
-                    return a.createElement(w._35, {
-                        background: w.n.Base,
-                        elevation: 2,
-                        fullWidth: !0,
-                        margin: {
-                            top: 1
-                        },
-                        padding: {
-                            top: 3
-                        }
-                    }, this.renderSelectSegmentButton(), a.createElement(w._35, {
-                        background: w.n.Alt2,
-                        elevation: 1
-                    }, this.renderTimelineSegments()), a.createElement(w._8, {
-                        alignItems: w.c.Center,
-                        display: w.R.Flex,
-                        justifyContent: w._7.Center,
-                        padding: {
-                            y: 1
-                        }
-                    }, a.createElement(W, {
-                        onUpdate: this.onActiveSegmentOffsetChange,
-                        segment: this.state.timelineSegments[this.state.activeIndex]
-                    })))
-                }, t.prototype.updateActiveSegmentOffsets = function(e) {
-                    var t = this;
-                    this.setState(function(n) {
-                        var i = t.state.timelineSegments[t.state.activeIndex],
-                            a = r.__assign({}, i, {
-                                startOffset: Math.floor(e.startOffset),
-                                endOffset: Math.ceil(e.endOffset)
-                            }),
-                            o = n.timelineSegments.slice();
-                        return o[t.state.activeIndex] = a, {
-                            timelineSegments: o
-                        }
-                    }, function() {
-                        t.props.onTimelineOffsetChange(e)
-                    })
-                }, t.prototype.getInitialTimelineSegment = function(e) {
-                    return {
-                        minOffset: 0,
-                        maxOffset: e.data.video.lengthSeconds,
-                        startOffset: Math.floor(15 * e.data.video.lengthSeconds / 100),
-                        endOffset: Math.ceil(85 * e.data.video.lengthSeconds / 100),
-                        createdAt: Date.now()
-                    }
-                }, t.prototype.getPlaceholderTimelineSegment = function() {
-                    return {
-                        minOffset: 0,
-                        maxOffset: 0,
-                        startOffset: 0,
-                        endOffset: 0,
-                        createdAt: Date.now()
-                    }
-                }, t
-            }(a.Component),
-            ee = Object(u.compose)(Object(f.a)(Y, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            videoID: e.videoID
-                        }
-                    }
-                }
-            }), Object(b.d)("VideoTimeline", {
-                autoReportInteractive: !0
-            }))(Z);
-
-        function te(e) {
-            l.n.track(S.SpadeEventType.HighlighterCurationStart, {
-                channel_id: e.channelID,
-                client_time: e.currentTime.getTime(),
-                source_video_id: e.sourceVideoID,
-                user_id: e.userID
-            })
-        }
-        var ne, ie = n("91s2"),
-            re = (n("KXMn"), 0),
-            ae = -1,
-            oe = 2;
-        ! function(e) {
-            e[e.SourceVideoTitle = 0] = "SourceVideoTitle", e[e.SourceVideoDate = 1] = "SourceVideoDate", e[e.SourceVideoLength = 2] = "SourceVideoLength"
-        }(ne || (ne = {}));
-        var se = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        currentSegmentOffsets: {
-                            startOffset: 0,
-                            endOffset: 0
-                        },
-                        lastVideoOffset: null,
-                        requestedVideoOffset: re,
-                        shouldPlayerPause: !1,
-                        videoSegmentQueue: []
-                    }, t.onSelectHighlightClick = function(e) {
-                        t.setState(function(n) {
-                            var i = t.props.data.video;
-                            if (i) {
-                                var a = {
-                                        sourceVideoID: i.id,
-                                        startOffsetSeconds: e.startOffset,
-                                        endOffsetSeconds: e.endOffset,
-                                        metadata: {
-                                            description: i.description || "",
-                                            game: i.game,
-                                            language: i.language,
-                                            tags: i.tags,
-                                            title: Object(l.d)("Highlight: {videoTitle}", {
-                                                videoTitle: i.title
-                                            }, "HighlighterPage")
-                                        }
-                                    },
-                                    o = n.videoSegmentQueue;
-                                return r.__assign({}, n, {
-                                    videoSegmentQueue: o.concat(a)
-                                })
-                            }
-                        })
-                    }, t.onPostSaveFinish = function() {
-                        t.setState({
-                            videoSegmentQueue: []
-                        }, function() {
-                            var e = t.props.data;
-                            e.video && (t.curationStartTime = new Date, te({
-                                channelID: e.video.owner ? e.video.owner.id : "",
-                                currentTime: t.curationStartTime,
-                                sourceVideoID: e.video.id,
-                                userID: e.currentUser ? e.currentUser.id : ""
-                            }))
-                        })
-                    }, t.onQueueChangeHandler = function(e) {
-                        t.setState({
-                            videoSegmentQueue: e
-                        })
-                    }, t.onQueueSaveClick = function() {
-                        t.setState({
-                            shouldPlayerPause: !0
-                        })
-                    }, t.onRemoveSegment = function(e) {
-                        t.setState(function(t) {
-                            var n = t.videoSegmentQueue.slice();
-                            return n.splice(e, 1), {
-                                videoSegmentQueue: n
-                            }
-                        })
-                    }, t.onSaveSuccess = function(e) {
-                        var n = t.props.data;
-                        if (n.video) {
-                            var i, r, a = t.curationStartTime || new Date;
-                            i = {
-                                channelID: n.video.owner ? n.video.owner.id : "",
-                                generatedVideoIDs: e,
-                                endTime: new Date,
-                                userID: n.currentUser ? n.currentUser.id : "",
-                                sourceVideoID: n.video.id,
-                                startTime: a
-                            }, r = function(e) {
-                                var t = (e.endTime.getTime() - e.startTime.getTime()) / 1e3;
-                                return {
-                                    channel_id: e.channelID,
-                                    client_time: e.endTime.getTime(),
-                                    curation_duration: t,
-                                    generated_video_count: e.generatedVideoIDs.length,
-                                    generated_video_ids: e.generatedVideoIDs.join(","),
-                                    source_video_id: e.sourceVideoID,
-                                    user_id: e.userID
-                                }
-                            }(i), l.n.track(S.SpadeEventType.HighlighterCurationFinish, r)
-                        }
-                    }, t.onBeforeunloadHandler = function(e) {
-                        if (0 === t.state.videoSegmentQueue.length) return !1;
-                        var n = confirm(t.discardChangesMessage());
-                        return e.returnValue = n, n
-                    }, t.onDragStart = function() {
-                        t.setState({
-                            shouldPlayerPause: !0
-                        })
-                    }, t.onTimelineOffsetChange = function(e) {
-                        if (null !== t.state.currentSegmentOffsets) {
-                            var n = t.state.currentSegmentOffsets;
-                            e.startOffset === n.startOffset ? e.endOffset === n.endOffset || t.setState({
-                                currentSegmentOffsets: e,
-                                requestedVideoOffset: e.endOffset - oe,
-                                shouldPlayerPause: !1
-                            }) : t.setState({
-                                currentSegmentOffsets: e,
-                                requestedVideoOffset: e.startOffset,
-                                shouldPlayerPause: !1
-                            })
-                        }
-                    }, t.onPauseToggled = function(e) {
-                        t.setState({
-                            shouldPlayerPause: e
-                        })
-                    }, t.onVideoTimeChange = function(e) {
-                        var n = Math.floor(e);
-                        n !== t.state.lastVideoOffset ? n !== t.state.currentSegmentOffsets.endOffset || !0 === t.state.shouldPlayerPause ? t.setState({
-                            lastVideoOffset: n
-                        }) : t.setState({
-                            shouldPlayerPause: !0,
-                            lastVideoOffset: n
-                        }) : t.state.requestedVideoOffset === n && t.setState({
-                            requestedVideoOffset: ae
-                        })
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    window.addEventListener("beforeunload", this.onBeforeunloadHandler), this.props.latencyTracking.reportInteractive()
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    (!this.props.data.loading || e.data.loading) && e.data.error || !e.data.video || this.setState({
-                        currentSegmentOffsets: {
-                            startOffset: 0,
-                            endOffset: e.data.video.lengthSeconds
-                        }
-                    })
-                }, t.prototype.componentDidUpdate = function() {
-                    var e = this.props.data;
-                    !this.curationStartTime && e.video && (this.curationStartTime = new Date, te({
-                        channelID: e.video.owner ? e.video.owner.id : "",
-                        currentTime: this.curationStartTime,
-                        userID: e.currentUser ? e.currentUser.id : "",
-                        sourceVideoID: e.video.id
-                    }))
-                }, t.prototype.componentWillUnmount = function() {
-                    window.removeEventListener("beforeunload", this.onBeforeunloadHandler)
-                }, t.prototype.render = function() {
-                    if (this.props.data.loading) return null;
-                    var e = this.props.match.params.channelName;
-                    return this.props.data.video && "" === this.props.data.video.id ? a.createElement(o.b, {
-                        to: Object(s.d)(e)
-                    }) : this.props.data.video && !this.props.data.error && this.props.data.video.owner ? this.props.data.video.broadcastType !== h.a.Archive ? a.createElement(d.a, {
-                        message: Object(l.d)("You can only highlight past broadcasts.", "HighlighterPage")
-                    }) : this.props.data.video.owner && this.props.data.video.owner.login !== e ? a.createElement(d.a, {
-                        message: Object(l.d)("The selected video to highlight does not exist.", "HighlighterPage")
-                    }) : a.createElement(p.b, null, a.createElement(w._23, {
-                        centered: !0
-                    }, a.createElement(w._35, {
-                        alignItems: w.c.Stretch,
-                        background: w.n.Alt,
-                        className: "highlighter-page",
-                        display: w.R.Flex,
-                        flexDirection: w.T.Column,
-                        fullHeight: !0,
-                        fullWidth: !0,
-                        padding: {
-                            x: 3,
-                            top: 4
-                        }
-                    }, a.createElement(w.Y, null, a.createElement(w.L, {
-                        cols: {
-                            default: 12,
-                            md: 6
-                        },
-                        offset: {
-                            default: 0,
-                            md: 1
-                        }
-                    }, a.createElement(w._35, {
-                        fullHeight: !0,
-                        padding: {
-                            bottom: 1
-                        }
-                    }, a.createElement(w.k, {
-                        ratio: w.l.Aspect16x9
-                    }, a.createElement(y, {
-                        videoID: this.props.data.video.id,
-                        paused: this.state.shouldPlayerPause,
-                        onVideoTimeChange: this.onVideoTimeChange,
-                        nextVideoOffset: this.state.requestedVideoOffset,
-                        onPauseToggled: this.onPauseToggled
-                    })))), a.createElement(w.L, {
-                        cols: {
-                            default: 12,
-                            md: 4
-                        }
-                    }, a.createElement(w._35, {
-                        fullHeight: !0,
-                        padding: {
-                            bottom: 1
-                        }
-                    }, a.createElement(q, {
-                        queue: this.state.videoSegmentQueue,
-                        onPostSaveFinish: this.onPostSaveFinish,
-                        onQueueChange: this.onQueueChangeHandler,
-                        onSaveClick: this.onQueueSaveClick,
-                        onSaveSuccess: this.onSaveSuccess,
-                        onSegmentDelete: this.onRemoveSegment,
-                        owner: {
-                            displayName: this.props.data.video.owner.displayName,
-                            id: this.props.data.video.owner.id,
-                            login: e
-                        }
-                    }), a.createElement(o.a, {
-                        when: this.state.videoSegmentQueue.length > 0,
-                        message: this.discardChangesMessage()
-                    }))), a.createElement(w.L, {
-                        cols: {
-                            default: 12,
-                            md: 6
-                        },
-                        offset: {
-                            default: 0,
-                            md: 1
-                        }
-                    }, a.createElement(w._35, {
-                        padding: {
-                            bottom: 3
-                        }
-                    }, this.renderSourceVideoInfo(this.props.data.video))), a.createElement(w.L, {
-                        cols: {
-                            default: 12
-                        }
-                    }, a.createElement(ee, {
-                        onDragStart: this.onDragStart,
-                        onSelectSegmentClick: this.onSelectHighlightClick,
-                        onTimelineOffsetChange: this.onTimelineOffsetChange,
-                        videoID: this.props.data.video.id
-                    })))))) : a.createElement(d.a, {
-                        message: Object(l.d)("Error loading video data. Please try again later.", "HighlighterPage")
-                    })
-                }, t.prototype.renderSourceVideoInfo = function(e) {
-                    return a.createElement(w._8, null, a.createElement(w.Q, {
-                        "data-test-selector": ne.SourceVideoTitle,
-                        fontSize: w.V.Size6,
-                        italic: !e.title,
-                        lines: 2,
-                        ellipsis: !0
-                    }, e.title || Object(l.d)("Untitled Broadcast", "SourceVideoInfo")), a.createElement(w._8, {
-                        display: w.R.Flex
-                    }, e.publishedAt && a.createElement(w.Q, {
-                        "data-test-selector": ne.SourceVideoDate,
-                        color: w.K.Alt2,
-                        fontSize: w.V.Size7,
-                        type: w._49.Span
-                    }, Object(l.c)(new Date(e.publishedAt), "medium"), " "), a.createElement(w._24, {
-                        asset: w._25.GlyphLength,
-                        type: w._26.Alt2,
-                        width: 12,
-                        height: 12
-                    }), a.createElement(w.Q, {
-                        "data-test-selector": ne.SourceVideoLength,
-                        color: w.K.Alt2,
-                        fontSize: w.V.Size7,
-                        type: w._49.Span
-                    }, " ", Object(g.b)(e.lengthSeconds))))
-                }, t.prototype.discardChangesMessage = function() {
-                    return Object(l.d)("Your highlights have not been created. Are you sure you want to leave?", "HighlighterPage")
-                }, t
-            }(a.Component),
-            le = Object(u.compose)(Object(f.a)(ie, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            videoID: e.match.params.videoID
-                        }
-                    }
-                }
-            }), Object(b.d)("HighlighterPage", {
-                destination: v.a.VideoManagerHighlighter
-            }), Object(m.a)({
-                location: S.PageviewLocation.VideoManagerHighlighter
-            }))(se),
-            de = function(e) {
-                return a.createElement(c.a, {
-                    ownerLogin: e.match.params.channelName,
-                    permittedRoles: {
-                        editor: !0,
-                        staff: !0
-                    }
-                }, function(t) {
-                    var n = t.loading,
-                        i = t.permitted;
-                    return n || i ? a.createElement(le, r.__assign({}, e)) : a.createElement(d.a, {
-                        message: Object(l.d)("Something went wrong. Please try again.", "HighlighterPageContainer")
-                    })
-                })
-            },
-            ce = n("PRb0");
-        n.d(t, "b", function() {
-            return ue
-        }), n.d(t, "a", function() {
-            return pe
-        });
-        var ue = function(e) {
-                return a.createElement(o.b, {
-                    to: Object(s.d)(e.match.params.channelName)
-                })
-            },
-            pe = function(e) {
-                return Object(ce.a)() ? a.createElement(de, r.__assign({}, e)) : a.createElement(ue, r.__assign({}, e))
-            }
     },
     "12gq": function(e, t) {},
     "164Z": function(e, t) {
@@ -2992,130 +1700,1254 @@ webpackJsonp([101], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var i = n("09xK");
+        var i, r = n("TToO"),
+            a = n("GiK3"),
+            o = n("6sO2"),
+            s = n("yWCw"),
+            l = n("Snvs"),
+            d = n("3zLD"),
+            c = n("CIox"),
+            u = n("zCIC"),
+            p = n("7vx8"),
+            f = n("j7/Y"),
+            m = n("6WAQ"),
+            h = n("mi6k"),
+            g = n("NY9D"),
+            v = n("w9tK"),
+            S = n("vH/s"),
+            b = n("CSlQ"),
+            k = n("fc0G"),
+            y = function(e) {
+                return a.createElement(k.c, {
+                    vodID: e.videoID,
+                    disableTheatreButton: !0,
+                    playerTypeOverride: k.b.Highlighter,
+                    paused: e.paused,
+                    nextVideoOffset: e.nextVideoOffset,
+                    onVideoTimeChange: e.onVideoTimeChange,
+                    onPauseToggled: e.onPauseToggled
+                })
+            },
+            O = n("RH2O"),
+            _ = n("V5M+"),
+            C = n("+8VM"),
+            E = n("oIkB"),
+            x = n("d0Y8"),
+            w = n("Odds"),
+            T = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e;
+                    if (this.props.offsets) {
+                        var t = this.props.offsets;
+                        e = Object(h.b)(this.props.lengthSeconds) + " (" + Object(h.b)(t.startOffsetSeconds) + " - " + Object(h.b)(t.endOffsetSeconds) + ")"
+                    } else e = Object(h.b)(this.props.lengthSeconds);
+                    return a.createElement(w._35, {
+                        ellipsis: !0
+                    }, a.createElement(w.Q, {
+                        ellipsis: !0,
+                        "data-test-selector": i.Title,
+                        fontSize: w.V.Size6,
+                        title: this.props.title
+                    }, this.props.title || "<" + Object(o.d)("Untitled", "VideoSegment") + ">"), a.createElement(w._8, {
+                        display: w.R.Flex,
+                        alignItems: w.c.Center
+                    }, a.createElement(w._24, {
+                        asset: w._25.GlyphLength,
+                        height: 12,
+                        width: 12
+                    }), " ", a.createElement(w.Q, {
+                        "data-test-selector": i.Duration,
+                        type: w._49.Span,
+                        fontSize: w.V.Size7
+                    }, e)))
+                }, t
+            }(a.Component);
+        n("bJlE");
+        ! function(e) {
+            e[e.Duration = 0] = "Duration", e[e.ErrorIcon = 1] = "ErrorIcon", e[e.Index = 2] = "Index", e[e.Game = 3] = "Game", e[e.Title = 4] = "Title"
+        }(i || (i = {}));
+        var V, D = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = null;
+                    return this.props.error && (e = a.createElement(w._24, {
+                        asset: w._25.Warning,
+                        "data-test-selector": i.ErrorIcon,
+                        height: 28,
+                        type: w._26.Live,
+                        width: 28
+                    })), a.createElement(w._8, {
+                        alignItems: w.c.Stretch,
+                        display: w.R.Flex,
+                        fullWidth: !0,
+                        flexDirection: w.T.Row,
+                        padding: 1
+                    }, a.createElement(w._8, {
+                        flexGrow: 0,
+                        flexShrink: 0
+                    }, a.createElement(w._35, {
+                        alignItems: w.c.Center,
+                        background: w.n.AccentAlt2,
+                        className: "video-segment__item-index",
+                        display: w.R.Flex,
+                        fullHeight: !0,
+                        justifyContent: w._7.Center
+                    }, a.createElement(w.Q, {
+                        color: w.K.Overlay,
+                        "data-test-selector": i.Index,
+                        fontSize: w.V.Size4,
+                        type: w._49.H4
+                    }, "" + (this.props.listIndex + 1)))), a.createElement(w._8, {
+                        flexGrow: 1,
+                        flexShrink: 1,
+                        padding: {
+                            left: 1
+                        },
+                        ellipsis: !0
+                    }, a.createElement(T, {
+                        lengthSeconds: this.props.lengthSeconds,
+                        offsets: this.props.offsets,
+                        title: this.props.title
+                    })), e)
+                }, t
+            }(a.Component),
+            R = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.segments.map(function(t, n) {
+                            return a.createElement(w._6, {
+                                alert: !!t.error,
+                                blurAfterClick: !0,
+                                disabled: e.props.disabled,
+                                key: n,
+                                onClick: function() {
+                                    e.props.onSegmentSelect(n)
+                                },
+                                selected: n === e.props.selectedSegmentIndex
+                            }, a.createElement(w._8, {
+                                padding: {
+                                    y: .5,
+                                    x: 1
+                                }
+                            }, a.createElement(D, {
+                                lengthSeconds: t.endOffsetSeconds - t.startOffsetSeconds,
+                                listIndex: n,
+                                offsets: {
+                                    startOffsetSeconds: t.startOffsetSeconds,
+                                    endOffsetSeconds: t.endOffsetSeconds
+                                },
+                                title: t.metadata.title
+                            })))
+                        });
+                    return a.createElement(u.b, {
+                        suppressScrollX: !0
+                    }, a.createElement("div", null, t))
+                }, t
+            }(a.Component);
+        ! function(e) {
+            e[e.CreateButton = 0] = "CreateButton", e[e.SaveError = 1] = "SaveError"
+        }(V || (V = {}));
+        var H, I = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        selectedSegmentIndex: 0
+                    }, t.onSegmentSelect = function(e) {
+                        t.setState({
+                            selectedSegmentIndex: e
+                        })
+                    }, t.onSegmentVideoFieldChange = function(e) {
+                        var n = r.__assign({}, t.selectedSegment(), {
+                            metadata: e
+                        });
+                        t.props.onSegmentUpdate(n, t.state.selectedSegmentIndex)
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(w._8, {
+                        alignItems: w.c.Stretch,
+                        display: w.R.Flex,
+                        flexDirection: w.T.Row,
+                        fullHeight: !0,
+                        fullWidth: !0
+                    }, this.renderLeftColumn(), this.renderRightColumn())
+                }, t.prototype.renderLeftColumn = function() {
+                    var e = -1 !== this.props.segments.findIndex(function(e) {
+                            return !!e.error
+                        }),
+                        t = null;
+                    return this.props.saveError && (t = a.createElement(w.e, {
+                        delay: w.f.Short,
+                        type: w.j.BounceIn,
+                        enabled: !0
+                    }, a.createElement(w._35, {
+                        background: w.n.Base,
+                        border: !0,
+                        color: w.K.Error,
+                        margin: {
+                            bottom: 1
+                        },
+                        padding: 1
+                    }, a.createElement(w.Q, {
+                        color: w.K.Error,
+                        "data-test-selector": V.SaveError
+                    }, this.props.saveError)))), a.createElement(w._35, {
+                        border: !0,
+                        className: "highlight-creator-modal__left-column",
+                        display: w.R.Flex,
+                        flexDirection: w.T.Column,
+                        flexGrow: 0,
+                        flexShrink: 0
+                    }, a.createElement(w._35, {
+                        background: w.n.Alt2,
+                        borderBottom: !0,
+                        padding: 1,
+                        flexGrow: 0,
+                        flexShrink: 0
+                    }, a.createElement(w.Q, {
+                        color: w.K.Alt2,
+                        fontSize: w.V.Size4
+                    }, Object(o.d)("Highlight Creator", "HighlightCreatorModal"))), a.createElement(w._8, {
+                        flexGrow: 1,
+                        flexShrink: 1,
+                        position: w._15.Relative
+                    }, a.createElement(w._8, {
+                        position: w._15.Absolute,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        attachRight: !0,
+                        attachBottom: !0
+                    }, a.createElement(R, {
+                        onSegmentSelect: this.onSegmentSelect,
+                        disabled: this.props.saving,
+                        segments: this.props.segments,
+                        selectedSegmentIndex: this.state.selectedSegmentIndex
+                    }))), a.createElement(w._35, {
+                        alignItems: w.c.Center,
+                        background: w.n.Alt2,
+                        borderTop: !0,
+                        display: w.R.Flex,
+                        flexGrow: 0,
+                        flexShrink: 0
+                    }, a.createElement(w._8, {
+                        margin: 1,
+                        fullWidth: !0
+                    }, t, a.createElement(w.v, {
+                        "data-test-selector": V.CreateButton,
+                        disabled: this.props.saving || e,
+                        onClick: this.props.onCreateRequest,
+                        fullWidth: !0,
+                        state: this.props.saving ? w.A.Loading : w.A.Default
+                    }, Object(o.d)("Save Highlights", "HighlightCreatorModal")))))
+                }, t.prototype.renderRightColumn = function() {
+                    return a.createElement(w._8, {
+                        padding: {
+                            x: 3,
+                            y: 2
+                        },
+                        flexGrow: 1,
+                        flexShrink: 1
+                    }, a.createElement(x.VideoFieldEditor, {
+                        onChange: this.onSegmentVideoFieldChange,
+                        disabled: this.props.saving,
+                        video: this.selectedSegment().metadata
+                    }))
+                }, t.prototype.selectedSegment = function() {
+                    return this.props.segments[this.state.selectedSegmentIndex]
+                }, t
+            }(a.Component),
+            L = n("zAjo"),
+            N = n("sJBK");
+        n("zECu");
+        ! function(e) {
+            e[e.Highlight = 0] = "Highlight", e[e.VideoManagerLink = 1] = "VideoManagerLink"
+        }(H || (H = {}));
+        var j = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.highlights.map(function(t, n) {
+                            return a.createElement(w._35, {
+                                alignItems: w.c.Center,
+                                background: w.n.Base,
+                                className: "save-success-highlight",
+                                "data-test-selector": H.Highlight,
+                                display: w.R.Flex,
+                                elevation: 1,
+                                flexGrow: 0,
+                                flexShrink: 0,
+                                fullWidth: !0,
+                                justifyContent: w._7.Center,
+                                key: n,
+                                margin: {
+                                    y: 1
+                                },
+                                padding: {
+                                    x: 2,
+                                    y: 1
+                                }
+                            }, a.createElement(w._8, {
+                                flexGrow: 1,
+                                flexShrink: 1,
+                                ellipsis: !0
+                            }, a.createElement(D, {
+                                lengthSeconds: t.lengthSeconds,
+                                listIndex: n,
+                                title: t.title
+                            })), a.createElement(w._8, {
+                                flexGrow: 0,
+                                flexShrink: 0,
+                                padding: {
+                                    left: 2
+                                }
+                            }, a.createElement(L.a, {
+                                balloonDirection: w.r.RightCenter,
+                                buttonType: w.B.Hollow,
+                                content: {
+                                    type: N.a.Video,
+                                    id: t.id,
+                                    owner: {
+                                        id: e.props.owner.id,
+                                        displayName: e.props.owner.displayName
+                                    },
+                                    title: t.title
+                                },
+                                tracking: {
+                                    location: S.PageviewLocation.VideoManagerHighlighter
+                                }
+                            })))
+                        });
+                    return a.createElement(w._35, {
+                        alignItems: w.c.Center,
+                        background: w.n.Alt,
+                        display: w.R.Flex,
+                        flexDirection: w.T.Column,
+                        fullHeight: !0,
+                        fullWidth: !0,
+                        justifyContent: w._7.Center,
+                        padding: 3
+                    }, a.createElement(w._8, {
+                        alignItems: w.c.Center,
+                        display: w.R.Flex,
+                        flexDirection: w.T.Column,
+                        flexGrow: 0,
+                        flexShrink: 0,
+                        fullWidth: !0,
+                        justifyContent: w._7.End
+                    }, a.createElement(w.Q, {
+                        type: w._49.H3
+                    }, Object(o.d)("Success!", "SaveSuccessOverview")), a.createElement(w._8, {
+                        padding: {
+                            top: 1
+                        }
+                    }, this.renderVideoManagerLink())), a.createElement(w._8, {
+                        flexGrow: 1,
+                        flexShrink: 1,
+                        fullWidth: !0,
+                        margin: {
+                            x: 2,
+                            top: 1
+                        },
+                        overflow: w._11.Hidden,
+                        position: w._15.Relative
+                    }, a.createElement(w._2, {
+                        fullWidth: !0,
+                        position: w._15.Absolute
+                    }, a.createElement(u.b, {
+                        autoHide: !1,
+                        suppressScrollX: !0
+                    }, a.createElement(w._8, {
+                        alignItems: w.c.Center,
+                        display: w.R.Flex,
+                        flexDirection: w.T.Column,
+                        justifyContent: w._7.Center,
+                        padding: 5
+                    }, t)))), a.createElement(w._8, {
+                        flexGrow: 0,
+                        flexShrink: 0,
+                        padding: {
+                            top: 1
+                        }
+                    }, a.createElement(w.v, {
+                        onClick: this.props.onComplete
+                    }, Object(o.d)("Continue editing", "SaveSuccessOverview"))))
+                }, t.prototype.renderVideoManagerLink = function() {
+                    var e = this;
+                    return Object(o.d)("Visit the <x:link>Video Producer</x:link> to view the created highlight(s).", {
+                        "x:link": function(t) {
+                            return a.createElement(w.O, {
+                                "data-test-selector": H.VideoManagerLink,
+                                key: "video-manager-link",
+                                targetBlank: !0,
+                                to: {
+                                    pathname: "/" + e.props.owner.login + "/manager",
+                                    state: {
+                                        content: S.PageviewContent.HighlighterSuccess,
+                                        medium: S.PageviewMedium.VideoManagerHighlighter
+                                    }
+                                }
+                            }, t)
+                        }
+                    }, "SaveSuccessOverview")
+                }, t
+            }(a.Component),
+            F = n("H6Wp"),
+            P = (n("cJkA"), function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    n.onSegmentUpdate = function(e, t) {
+                        "" === e.metadata.title ? e.error = Object(o.d)("A highlight must have a title", "HighlightCreatorModal") : e.error = void 0, n.setState(function(n) {
+                            var i = n.segmentsSnapshot.slice(0);
+                            return i.splice(t, 1, e), {
+                                segmentsSnapshot: i
+                            }
+                        })
+                    }, n.onCancel = function() {
+                        n.props.onCancel(n.state.segmentsSnapshot)
+                    }, n.onCreateHighlightsRequest = function() {
+                        return r.__awaiter(n, void 0, void 0, function() {
+                            var e = this;
+                            return r.__generator(this, function(t) {
+                                return this.setState({
+                                    saveError: null,
+                                    saving: !0
+                                }, function() {
+                                    return e.createHighlights()
+                                }), [2]
+                            })
+                        })
+                    };
+                    var i = t.segments.map(function(e) {
+                        return r.__assign({}, e, {
+                            metadata: r.__assign({}, e.metadata, {
+                                tags: e.metadata.tags.slice()
+                            })
+                        })
+                    });
+                    return n.state = {
+                        saveError: null,
+                        savedHighlights: [],
+                        saving: !1,
+                        segmentsSnapshot: i
+                    }, n
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e;
+                    return e = this.state.savedHighlights.length > 0 && 0 === this.state.segmentsSnapshot.length ? a.createElement(j, {
+                        onComplete: this.props.onPostSaveFinish,
+                        owner: this.props.owner,
+                        highlights: this.state.savedHighlights
+                    }) : a.createElement(I, {
+                        onCreateRequest: this.onCreateHighlightsRequest,
+                        onSegmentUpdate: this.onSegmentUpdate,
+                        segments: this.state.segmentsSnapshot,
+                        saving: this.state.saving,
+                        saveError: this.state.saveError
+                    }), a.createElement(w.e, {
+                        type: w.j.FadeIn,
+                        delay: w.f.Medium,
+                        duration: w.g.Medium,
+                        enabled: !0
+                    }, a.createElement(w._35, {
+                        background: w.n.Base,
+                        className: "highlight-creator-modal"
+                    }, e), a.createElement(C.a, {
+                        onClose: this.onCancel
+                    }))
+                }, t.prototype.createHighlights = function() {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        var e, t, n, i, a, s, l, d = this;
+                        return r.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    e = this.state.segmentsSnapshot.map(function(e, t) {
+                                        return d.createHighlight(e, t)
+                                    }), t = [], r.label = 1;
+                                case 1:
+                                    return r.trys.push([1, 3, , 4]), [4, Promise.all(e)];
+                                case 2:
+                                    return t = r.sent(), [3, 4];
+                                case 3:
+                                    return n = r.sent(), o.j.error(n, "Unexpected error creating highlights"), [3, 4];
+                                case 4:
+                                    return i = t.reduce(function(e, t) {
+                                        return t.success && e.push(t.success), e
+                                    }, this.state.savedHighlights), a = t.sort(function(e, t) {
+                                        return e.segmentsIndex - t.segmentsIndex
+                                    }), s = a.reduce(function(e, t) {
+                                        return t.success || e.push(t.segment), e
+                                    }, []), l = null, s.length > 0 && (l = Object(o.d)("Some or all of your highlights have failed to save. These have been returned to your creation queue. Please try again.", "HighlightCreatorModalContainer")), this.setState({
+                                        segmentsSnapshot: s,
+                                        saving: !1,
+                                        saveError: l,
+                                        savedHighlights: i
+                                    }, function() {
+                                        0 === s.length && d.props.onSaveSuccess(i.map(function(e) {
+                                            return e.id
+                                        }))
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t.prototype.createHighlight = function(e, t) {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        var n, i, a, s;
+                        return r.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    n = {
+                                        segmentsIndex: t,
+                                        segment: e
+                                    }, i = {
+                                        sourceVideoID: e.sourceVideoID,
+                                        startOffsetSeconds: e.startOffsetSeconds,
+                                        endOffsetSeconds: e.endOffsetSeconds,
+                                        metadata: {
+                                            description: e.metadata.description,
+                                            language: e.metadata.language,
+                                            tags: e.metadata.tags,
+                                            title: e.metadata.title
+                                        }
+                                    }, r.label = 1;
+                                case 1:
+                                    return r.trys.push([1, 3, , 4]), [4, this.props.createHighlight(Object(E.a)(i))];
+                                case 2:
+                                    return a = r.sent().data, n.success = a.createVideoHighlight.highlight, [3, 4];
+                                case 3:
+                                    return s = r.sent(), o.j.error(s, "HighlightCreatorModalContainer"), [3, 4];
+                                case 4:
+                                    return [2, n]
+                            }
+                        })
+                    })
+                }, t
+            }(a.Component)),
+            M = Object(p.a)(F, {
+                name: "createHighlight"
+            })(P);
+        var G, B = Object(O.b)(null, function(e, t) {
+            return {
+                onCancel: function(n) {
+                    t.onCancel(n), e(Object(_.c)())
+                },
+                onPostSaveFinish: function() {
+                    t.onPostSaveFinish(), e(Object(_.c)())
+                }
+            }
+        })(M);
+        n("YBPv");
+        ! function(e) {
+            e[e.NoItems = 0] = "NoItems"
+        }(G || (G = {}));
+        var A = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.scrollableAreaRef = null, t.scrollRefHandler = function(e) {
+                    t.scrollableAreaRef = e
+                }, t
+            }
+            return r.__extends(t, e), t.prototype.render = function() {
+                return a.createElement(w._35, {
+                    background: w.n.Base,
+                    borderRadius: w.t.Small,
+                    border: !0,
+                    display: w.R.Flex,
+                    elevation: 2,
+                    flexDirection: w.T.Column,
+                    fullHeight: !0
+                }, a.createElement(w._35, {
+                    background: w.n.Alt,
+                    borderBottom: !0,
+                    padding: 1
+                }, a.createElement(w.Q, {
+                    fontSize: w.V.Size5
+                }, Object(o.d)("Highlights", "VideoSegmentQueue"))), a.createElement(w._2, {
+                    flexGrow: 1,
+                    flexShrink: 1
+                }, a.createElement(u.b, {
+                    autoHide: !1,
+                    suppressScrollX: !0,
+                    scrollRef: this.scrollRefHandler
+                }, a.createElement("div", null, this.renderSegments()))), a.createElement(w._35, {
+                    padding: {
+                        x: 1,
+                        y: .5
+                    }
+                }, a.createElement(w.v, {
+                    blurAfterClick: !0,
+                    disabled: 0 === this.props.queue.length,
+                    fullWidth: !0,
+                    onClick: this.props.onSaveClick,
+                    type: w.B.Hollow
+                }, Object(o.d)("Describe and Save", "VideoSegmentQueue"))))
+            }, t.prototype.componentDidUpdate = function(e) {
+                this.props.queue.length > e.queue.length && this.scrollableAreaRef && this.scrollableAreaRef.scrollToBottom()
+            }, t.prototype.renderSegments = function() {
+                var e = this;
+                return 0 === this.props.queue.length ? a.createElement(w._8, {
+                    alignItems: w.c.Center,
+                    "data-test-selector": G.NoItems,
+                    display: w.R.Flex,
+                    fullHeight: !0,
+                    fullWidth: !0,
+                    justifyContent: w._7.Center,
+                    padding: 1
+                }, a.createElement(w.Q, {
+                    color: w.K.Alt2
+                }, Object(o.d)("No highlights queued for export.", "VideoSegmentQueue"))) : this.props.queue.map(function(t, n) {
+                    return a.createElement(w._35, {
+                        className: "video-segment-queue__video-card",
+                        alignItems: w.c.Center,
+                        borderBottom: !0,
+                        display: w.R.Flex,
+                        flexDirection: w.T.Row,
+                        key: n
+                    }, a.createElement(w._8, {
+                        flexGrow: 1,
+                        flexShrink: 1,
+                        overflow: w._11.Hidden
+                    }, a.createElement(D, {
+                        listIndex: n,
+                        lengthSeconds: t.endOffsetSeconds - t.startOffsetSeconds,
+                        offsets: {
+                            startOffsetSeconds: t.startOffsetSeconds,
+                            endOffsetSeconds: t.endOffsetSeconds
+                        },
+                        title: t.metadata.title
+                    })), a.createElement(w._8, {
+                        className: "video-segment-queue__delete-button",
+                        flexGrow: 0,
+                        flexShrink: 0,
+                        margin: {
+                            right: 1
+                        }
+                    }, a.createElement(w.w, {
+                        ariaLabel: Object(o.d)("Remove highlight from queue", "VideoSegmentQueue"),
+                        icon: w._25.Trash,
+                        onClick: function() {
+                            e.props.onSegmentDelete(n)
+                        },
+                        size: w.x.Small,
+                        type: w.y.Secondary
+                    })))
+                })
+            }, t
+        }(a.Component);
+        var U, q = Object(O.b)(null, function(e, t) {
+                return {
+                    onSaveClick: function() {
+                        t.onSaveClick(), e(Object(_.d)(B, {
+                            onCancel: t.onQueueChange,
+                            onPostSaveFinish: t.onPostSaveFinish,
+                            onSaveSuccess: t.onSaveSuccess,
+                            owner: t.owner,
+                            segments: t.queue
+                        }))
+                    }
+                }
+            })(A),
+            K = n("+Znq"),
+            Q = n("6BvN");
+        ! function(e) {
+            e[e.EndFormGroup = 0] = "EndFormGroup", e[e.Offsets = 1] = "Offsets", e[e.StartFormGroup = 2] = "StartFormGroup", e[e.UpdateButton = 3] = "UpdateButton"
+        }(U || (U = {}));
+        var W = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.onStartChange = function(e) {
+                        n.setState({
+                            startOffset: e.currentTarget.value
+                        })
+                    }, n.onEndChange = function(e) {
+                        n.setState({
+                            endOffset: e.currentTarget.value
+                        })
+                    }, n.onKeyDown = function(e) {
+                        e.keyCode === Q.a.Enter && n.update()
+                    }, n.onInputBlur = function() {
+                        n.update()
+                    }, n.onUpdateClick = function() {
+                        n.update()
+                    }, n.state = {
+                        startOffset: Object(h.b)(t.segment.startOffset),
+                        endOffset: Object(h.b)(t.segment.endOffset)
+                    }, n
+                }
+                return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    var t = this.props.segment,
+                        n = e.segment,
+                        i = !1,
+                        r = this.state.startOffset,
+                        a = this.state.endOffset;
+                    t.startOffset !== n.startOffset && (r = Object(h.b)(n.startOffset), i = !0), t.endOffset !== n.endOffset && (a = Object(h.b)(n.endOffset), i = !0), i && this.setState({
+                        startOffset: r,
+                        endOffset: a
+                    })
+                }, t.prototype.render = function() {
+                    var e = this.props.segment;
+                    return a.createElement(K.a, null, a.createElement(w.v, {
+                        type: w.B.Text
+                    }, a.createElement(w._8, {
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center
+                    }, a.createElement(w._24, {
+                        asset: w._25.Edit
+                    }), a.createElement(w._8, {
+                        padding: {
+                            left: .5
+                        }
+                    }, a.createElement(w.Q, {
+                        align: w._59.Middle,
+                        "data-test-selector": U.Offsets,
+                        type: w._49.Span
+                    }, Object(h.b)(e.startOffset) + " - " + Object(h.b)(e.endOffset))))), a.createElement(w.q, {
+                        direction: w.r.BottomCenter
+                    }, a.createElement(w._8, {
+                        display: w.R.Flex,
+                        flexDirection: w.T.Column,
+                        margin: .5
+                    }, a.createElement(w._8, {
+                        padding: {
+                            bottom: .5
+                        }
+                    }, this.renderStartInput()), a.createElement(w._8, {
+                        padding: {
+                            bottom: .5
+                        }
+                    }, this.renderEndInput()), a.createElement(w.v, {
+                        blurAfterClick: !0,
+                        "data-test-selector": U.UpdateButton,
+                        disabled: !this.canUpdate(),
+                        onClick: this.onUpdateClick
+                    }, Object(o.d)("Update", "OffsetBalloonButton")))))
+                }, t.prototype.renderStartInput = function() {
+                    var e = this.state.startOffset,
+                        t = !this.validClockValue(e);
+                    return a.createElement(w.W, {
+                        "data-test-selector": U.StartFormGroup,
+                        error: t,
+                        label: Object(o.d)("Start time", "OffsetBalloonButton")
+                    }, a.createElement(w._4, {
+                        error: t,
+                        onBlur: this.onInputBlur,
+                        onChange: this.onStartChange,
+                        onKeyDown: this.onKeyDown,
+                        required: !0,
+                        type: w._5.Text,
+                        value: this.state.startOffset
+                    }))
+                }, t.prototype.renderEndInput = function() {
+                    var e = this.state.endOffset,
+                        t = !this.validClockValue(e);
+                    return a.createElement(w.W, {
+                        "data-test-selector": U.EndFormGroup,
+                        error: t,
+                        label: Object(o.d)("End time", "OffsetBalloonButton")
+                    }, a.createElement(w._4, {
+                        error: t,
+                        onBlur: this.onInputBlur,
+                        onChange: this.onEndChange,
+                        onKeyDown: this.onKeyDown,
+                        required: !0,
+                        type: w._5.Text,
+                        value: e
+                    }))
+                }, t.prototype.validClockValue = function(e) {
+                    var t = Object(h.a)(e);
+                    return !isNaN(t)
+                }, t.prototype.canUpdate = function() {
+                    if (!(this.validClockValue(this.state.startOffset) && this.validClockValue(this.state.endOffset))) return !1;
+                    var e = this.props.segment,
+                        t = Object(h.a)(this.state.startOffset),
+                        n = Object(h.a)(this.state.endOffset);
+                    return (t !== e.startOffset || n !== e.endOffset) && (!(t < e.minOffset || n > e.maxOffset) && !(n <= t))
+                }, t.prototype.update = function() {
+                    this.canUpdate() && this.props.onUpdate({
+                        startOffset: Object(h.a)(this.state.startOffset),
+                        endOffset: Object(h.a)(this.state.endOffset)
+                    })
+                }, t
+            }(a.Component),
+            z = n("3HXW"),
+            X = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onDrag = function(e) {
+                        var n = t.props.segment;
+                        e.startOffset === n.startOffset && e.endOffset === n.endOffset || t.props.onOffsetChange(e)
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = this.props.segment;
+                    return a.createElement(z.a, {
+                        color: z.c.Orange,
+                        handleSize: z.b.Small,
+                        startOffset: e.startOffset,
+                        endOffset: e.endOffset,
+                        maxOffset: e.maxOffset,
+                        minOffset: e.minOffset,
+                        onLeftDrag: this.onDrag,
+                        onLeftDragStart: this.props.onStartOffsetFocus,
+                        onRightDrag: this.onDrag,
+                        onRightDragStart: this.props.onEndOffsetFocus
+                    }, a.createElement(w._35, {
+                        alignItems: w.c.Center,
+                        display: w.R.Flex,
+                        fullWidth: !0,
+                        justifyContent: w._7.Center,
+                        padding: {
+                            y: 3
+                        },
+                        textAlign: w._45.Center
+                    }))
+                }, t
+            }(a.Component),
+            J = Object(d.compose)(Object(b.d)("VideoSegmentEditor", {
+                autoReportInteractive: !0
+            }))(X),
+            Y = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.renderSelectSegmentButton = function() {
+                        var e = n.state.timelineSegments[n.state.activeIndex];
+                        return a.createElement(w._8, {
+                            position: w._15.Relative,
+                            attachTop: !0,
+                            fullWidth: !0,
+                            display: w.R.Flex,
+                            justifyContent: w._7.Center
+                        }, a.createElement(w._35, {
+                            elevation: 3,
+                            position: w._15.Absolute,
+                            attachBottom: !0,
+                            margin: {
+                                bottom: 1
+                            }
+                        }, a.createElement(w.v, {
+                            blurAfterClick: !0,
+                            onClick: n.onSelectSegmentClick
+                        }, a.createElement(w._8, {
+                            padding: {
+                                x: 2
+                            }
+                        }, a.createElement(w.Q, null, Object(o.d)("Select Highlight", "VideoSegmentSelector")), a.createElement(w.Q, {
+                            color: w.K.OverlayAlt,
+                            fontSize: w.V.Size7
+                        }, "(" + Object(h.b)(e.endOffset - e.startOffset) + ")")))))
+                    }, n.renderTimelineSegments = function() {
+                        return n.state.timelineSegments.map(function(e) {
+                            return a.createElement(J, {
+                                key: e.createdAt,
+                                onStartOffsetFocus: n.props.onStartOffsetFocus,
+                                onEndOffsetFocus: n.props.onEndOffsetFocus,
+                                onOffsetChange: n.onActiveSegmentOffsetChange,
+                                segment: e
+                            })
+                        })
+                    }, n.onActiveSegmentOffsetChange = function(e) {
+                        n.updateActiveSegmentOffsets(e)
+                    }, n.onSelectSegmentClick = function() {
+                        var e = n.state.timelineSegments[n.state.activeIndex];
+                        n.props.onSelectSegmentClick({
+                            startOffset: e.startOffset,
+                            endOffset: e.endOffset
+                        })
+                    }, n.state = {
+                        timelineSegments: [n.getInitialTimelineSegment(t.videoLengthSeconds)],
+                        activeIndex: 0
+                    }, n
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(w._35, {
+                        background: w.n.Base,
+                        elevation: 2,
+                        fullWidth: !0,
+                        margin: {
+                            top: 1
+                        },
+                        padding: {
+                            top: 3
+                        }
+                    }, this.renderSelectSegmentButton(), a.createElement(w._35, {
+                        background: w.n.Alt2,
+                        elevation: 1
+                    }, this.renderTimelineSegments()), a.createElement(w._8, {
+                        alignItems: w.c.Center,
+                        display: w.R.Flex,
+                        justifyContent: w._7.Center,
+                        padding: {
+                            y: 1
+                        }
+                    }, a.createElement(W, {
+                        onUpdate: this.onActiveSegmentOffsetChange,
+                        segment: this.state.timelineSegments[this.state.activeIndex]
+                    })))
+                }, t.prototype.updateActiveSegmentOffsets = function(e) {
+                    var t = this;
+                    this.setState(function(n) {
+                        var i = t.state.timelineSegments[t.state.activeIndex],
+                            a = r.__assign({}, i, {
+                                startOffset: Math.floor(e.startOffset),
+                                endOffset: Math.ceil(e.endOffset)
+                            }),
+                            o = n.timelineSegments.slice();
+                        return o[t.state.activeIndex] = a, {
+                            timelineSegments: o
+                        }
+                    }, function() {
+                        t.props.onTimelineOffsetChange(e)
+                    })
+                }, t.prototype.getInitialTimelineSegment = function(e) {
+                    return {
+                        minOffset: 0,
+                        maxOffset: e,
+                        startOffset: Math.floor(15 * e / 100),
+                        endOffset: Math.ceil(85 * e / 100),
+                        createdAt: Date.now()
+                    }
+                }, t
+            }(a.Component),
+            $ = Object(d.compose)(Object(b.d)("VideoTimeline", {
+                autoReportInteractive: !0
+            }))(Y);
+
+        function Z(e) {
+            o.n.track(S.SpadeEventType.HighlighterCurationStart, {
+                channel_id: e.channelID,
+                client_time: e.currentTime.getTime(),
+                source_video_id: e.sourceVideoID,
+                user_id: e.userID
+            })
+        }
+        var ee, te = n("91s2"),
+            ne = (n("KXMn"), 0),
+            ie = -1,
+            re = 2;
+
+        function ae(e) {
+            return Math.max(0, e - re)
+        }! function(e) {
+            e[e.SourceVideoTitle = 0] = "SourceVideoTitle", e[e.SourceVideoDate = 1] = "SourceVideoDate", e[e.SourceVideoLength = 2] = "SourceVideoLength"
+        }(ee || (ee = {}));
+        var oe = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        currentSegmentOffsets: {
+                            startOffset: 0,
+                            endOffset: 0
+                        },
+                        lastVideoOffset: null,
+                        requestedPlayerOffset: ne,
+                        shouldPlayerPause: !1,
+                        videoSegmentQueue: []
+                    }, t.onSelectHighlightClick = function(e) {
+                        t.setState(function(n) {
+                            var i = t.props.data.video;
+                            if (i) {
+                                var a = {
+                                        sourceVideoID: i.id,
+                                        startOffsetSeconds: e.startOffset,
+                                        endOffsetSeconds: e.endOffset,
+                                        metadata: {
+                                            description: i.description || "",
+                                            game: i.game,
+                                            language: i.language,
+                                            tags: i.tags,
+                                            title: Object(o.d)("Highlight: {videoTitle}", {
+                                                videoTitle: i.title
+                                            }, "HighlighterPage")
+                                        }
+                                    },
+                                    s = n.videoSegmentQueue;
+                                return r.__assign({}, n, {
+                                    videoSegmentQueue: s.concat(a)
+                                })
+                            }
+                        })
+                    }, t.onPostSaveFinish = function() {
+                        t.setState({
+                            videoSegmentQueue: []
+                        }, function() {
+                            var e = t.props.data;
+                            e.video && (t.curationStartTime = new Date, Z({
+                                channelID: e.video.owner ? e.video.owner.id : "",
+                                currentTime: t.curationStartTime,
+                                sourceVideoID: e.video.id,
+                                userID: e.currentUser ? e.currentUser.id : ""
+                            }))
+                        })
+                    }, t.onQueueChangeHandler = function(e) {
+                        t.setState({
+                            videoSegmentQueue: e
+                        })
+                    }, t.onQueueSaveClick = function() {
+                        t.setState({
+                            shouldPlayerPause: !0
+                        })
+                    }, t.onRemoveSegment = function(e) {
+                        t.setState(function(t) {
+                            var n = t.videoSegmentQueue.slice();
+                            return n.splice(e, 1), {
+                                videoSegmentQueue: n
+                            }
+                        })
+                    }, t.onSaveSuccess = function(e) {
+                        var n = t.props.data;
+                        if (n.video) {
+                            var i, r, a = t.curationStartTime || new Date;
+                            i = {
+                                channelID: n.video.owner ? n.video.owner.id : "",
+                                generatedVideoIDs: e,
+                                endTime: new Date,
+                                userID: n.currentUser ? n.currentUser.id : "",
+                                sourceVideoID: n.video.id,
+                                startTime: a
+                            }, r = function(e) {
+                                var t = (e.endTime.getTime() - e.startTime.getTime()) / 1e3;
+                                return {
+                                    channel_id: e.channelID,
+                                    client_time: e.endTime.getTime(),
+                                    curation_duration: t,
+                                    generated_video_count: e.generatedVideoIDs.length,
+                                    generated_video_ids: e.generatedVideoIDs.join(","),
+                                    source_video_id: e.sourceVideoID,
+                                    user_id: e.userID
+                                }
+                            }(i), o.n.track(S.SpadeEventType.HighlighterCurationFinish, r)
+                        }
+                    }, t.onBeforeunloadHandler = function(e) {
+                        if (0 === t.state.videoSegmentQueue.length) return !1;
+                        var n = confirm(t.discardChangesMessage());
+                        return e.returnValue = n, n
+                    }, t.onTimelineStartOffsetFocus = function(e) {
+                        t.setState({
+                            currentSegmentOffsets: e,
+                            requestedPlayerOffset: e.startOffset,
+                            shouldPlayerPause: !1
+                        })
+                    }, t.onTimelineEndOffsetFocus = function(e) {
+                        t.setState({
+                            currentSegmentOffsets: e,
+                            requestedPlayerOffset: ae(e.endOffset),
+                            shouldPlayerPause: !1
+                        })
+                    }, t.onTimelineOffsetChange = function(e) {
+                        if (null !== t.state.currentSegmentOffsets) {
+                            var n = t.state.currentSegmentOffsets;
+                            e.startOffset === n.startOffset ? e.endOffset === n.endOffset || t.setState({
+                                currentSegmentOffsets: e,
+                                requestedPlayerOffset: ae(n.endOffset),
+                                shouldPlayerPause: !1
+                            }) : t.setState({
+                                currentSegmentOffsets: e,
+                                requestedPlayerOffset: e.startOffset,
+                                shouldPlayerPause: !1
+                            })
+                        }
+                    }, t.onPlayerPauseToggle = function(e) {
+                        t.setState({
+                            shouldPlayerPause: e
+                        })
+                    }, t.onPlayerTimeChange = function(e) {
+                        var n = Math.floor(e);
+                        n !== t.state.lastVideoOffset ? n !== t.state.currentSegmentOffsets.endOffset || !0 === t.state.shouldPlayerPause ? t.setState({
+                            lastVideoOffset: n
+                        }) : t.setState({
+                            shouldPlayerPause: !0,
+                            lastVideoOffset: n
+                        }) : t.state.requestedPlayerOffset === n && t.setState({
+                            requestedPlayerOffset: ie
+                        })
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    window.addEventListener("beforeunload", this.onBeforeunloadHandler), this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    (!this.props.data.loading || e.data.loading) && e.data.error || !e.data.video || this.setState({
+                        currentSegmentOffsets: {
+                            startOffset: 0,
+                            endOffset: e.data.video.lengthSeconds
+                        }
+                    })
+                }, t.prototype.componentDidUpdate = function() {
+                    var e = this.props.data;
+                    !this.curationStartTime && e.video && (this.curationStartTime = new Date, Z({
+                        channelID: e.video.owner ? e.video.owner.id : "",
+                        currentTime: this.curationStartTime,
+                        userID: e.currentUser ? e.currentUser.id : "",
+                        sourceVideoID: e.video.id
+                    }))
+                }, t.prototype.componentWillUnmount = function() {
+                    window.removeEventListener("beforeunload", this.onBeforeunloadHandler)
+                }, t.prototype.render = function() {
+                    if (this.props.data.loading) return null;
+                    var e = this.props.match.params.channelName;
+                    return this.props.data.video && "" === this.props.data.video.id ? a.createElement(c.b, {
+                        to: Object(g.d)(e)
+                    }) : this.props.data.video && !this.props.data.error && this.props.data.video.owner ? this.props.data.video.broadcastType !== m.a.Archive ? a.createElement(s.a, {
+                        message: Object(o.d)("You can only highlight past broadcasts.", "HighlighterPage")
+                    }) : this.props.data.video.owner && this.props.data.video.owner.login !== e ? a.createElement(s.a, {
+                        message: Object(o.d)("The selected video to highlight does not exist.", "HighlighterPage")
+                    }) : a.createElement(u.b, null, a.createElement(w._23, {
+                        centered: !0
+                    }, a.createElement(w._35, {
+                        alignItems: w.c.Stretch,
+                        background: w.n.Alt,
+                        className: "highlighter-page",
+                        display: w.R.Flex,
+                        flexDirection: w.T.Column,
+                        fullHeight: !0,
+                        fullWidth: !0,
+                        padding: {
+                            x: 3,
+                            top: 4
+                        }
+                    }, a.createElement(w.Y, null, a.createElement(w.L, {
+                        cols: {
+                            default: 12,
+                            md: 6
+                        },
+                        offset: {
+                            default: 0,
+                            md: 1
+                        }
+                    }, a.createElement(w._35, {
+                        fullHeight: !0,
+                        padding: {
+                            bottom: 1
+                        }
+                    }, a.createElement(w.k, {
+                        ratio: w.l.Aspect16x9
+                    }, a.createElement(y, {
+                        videoID: this.props.data.video.id,
+                        paused: this.state.shouldPlayerPause,
+                        onVideoTimeChange: this.onPlayerTimeChange,
+                        nextVideoOffset: this.state.requestedPlayerOffset,
+                        onPauseToggled: this.onPlayerPauseToggle
+                    })))), a.createElement(w.L, {
+                        cols: {
+                            default: 12,
+                            md: 4
+                        }
+                    }, a.createElement(w._35, {
+                        fullHeight: !0,
+                        padding: {
+                            bottom: 1
+                        }
+                    }, a.createElement(q, {
+                        queue: this.state.videoSegmentQueue,
+                        onPostSaveFinish: this.onPostSaveFinish,
+                        onQueueChange: this.onQueueChangeHandler,
+                        onSaveClick: this.onQueueSaveClick,
+                        onSaveSuccess: this.onSaveSuccess,
+                        onSegmentDelete: this.onRemoveSegment,
+                        owner: {
+                            displayName: this.props.data.video.owner.displayName,
+                            id: this.props.data.video.owner.id,
+                            login: e
+                        }
+                    }), a.createElement(c.a, {
+                        when: this.state.videoSegmentQueue.length > 0,
+                        message: this.discardChangesMessage()
+                    }))), a.createElement(w.L, {
+                        cols: {
+                            default: 12,
+                            md: 6
+                        },
+                        offset: {
+                            default: 0,
+                            md: 1
+                        }
+                    }, a.createElement(w._35, {
+                        padding: {
+                            bottom: 3
+                        }
+                    }, this.renderSourceVideoInfo(this.props.data.video))), a.createElement(w.L, {
+                        cols: {
+                            default: 12
+                        }
+                    }, a.createElement($, {
+                        onStartOffsetFocus: this.onTimelineStartOffsetFocus,
+                        onEndOffsetFocus: this.onTimelineEndOffsetFocus,
+                        onSelectSegmentClick: this.onSelectHighlightClick,
+                        onTimelineOffsetChange: this.onTimelineOffsetChange,
+                        videoLengthSeconds: this.props.data.video.lengthSeconds
+                    })))))) : a.createElement(s.a, {
+                        message: Object(o.d)("Error loading video data. Please try again later.", "HighlighterPage")
+                    })
+                }, t.prototype.renderSourceVideoInfo = function(e) {
+                    return a.createElement(w._8, null, a.createElement(w.Q, {
+                        "data-test-selector": ee.SourceVideoTitle,
+                        fontSize: w.V.Size6,
+                        italic: !e.title,
+                        lines: 2,
+                        ellipsis: !0
+                    }, e.title || Object(o.d)("Untitled Broadcast", "SourceVideoInfo")), a.createElement(w._8, {
+                        display: w.R.Flex
+                    }, e.publishedAt && a.createElement(w.Q, {
+                        "data-test-selector": ee.SourceVideoDate,
+                        color: w.K.Alt2,
+                        fontSize: w.V.Size7,
+                        type: w._49.Span
+                    }, Object(o.c)(new Date(e.publishedAt), "medium"), " "), a.createElement(w._24, {
+                        asset: w._25.GlyphLength,
+                        type: w._26.Alt2,
+                        width: 12,
+                        height: 12
+                    }), a.createElement(w.Q, {
+                        "data-test-selector": ee.SourceVideoLength,
+                        color: w.K.Alt2,
+                        fontSize: w.V.Size7,
+                        type: w._49.Span
+                    }, " ", Object(h.b)(e.lengthSeconds))))
+                }, t.prototype.discardChangesMessage = function() {
+                    return Object(o.d)("Your highlights have not been created. Are you sure you want to leave?", "HighlighterPage")
+                }, t
+            }(a.Component),
+            se = Object(d.compose)(Object(p.a)(te, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            videoID: e.match.params.videoID
+                        }
+                    }
+                }
+            }), Object(b.d)("HighlighterPage", {
+                destination: v.a.VideoManagerHighlighter
+            }), Object(f.a)({
+                location: S.PageviewLocation.VideoManagerHighlighter
+            }))(oe),
+            le = function(e) {
+                return a.createElement(l.a, {
+                    ownerLogin: e.match.params.channelName,
+                    permittedRoles: {
+                        editor: !0,
+                        staff: !0
+                    }
+                }, function(t) {
+                    var n = t.loading,
+                        i = t.permitted;
+                    return n || i ? a.createElement(se, r.__assign({}, e)) : a.createElement(s.a, {
+                        message: Object(o.d)("Something went wrong. Please try again.", "HighlighterPageContainer")
+                    })
+                })
+            };
         n.d(t, "HighlighterPage", function() {
-            return i.a
+            return le
         })
     },
     KXMn: function(e, t) {},
-    "Kj+b": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "HighlighterVideoTimeline_Video"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "videoID"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "ID"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "video"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "id"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "videoID"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "lengthSeconds"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 96
-            }
-        };
-        n.loc.source = {
-            body: "query HighlighterVideoTimeline_Video($videoID: ID!) {\nvideo(id: $videoID) {\nid\nlengthSeconds\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    PRb0: function(e, t, n) {
-        "use strict";
-        t.a = function() {
-            if (r.a.buildType === a.a.Dev) return !0;
-            var e = r.b.get(s, i.Dev);
-            switch (e) {
-                case i.Dev:
-                    return !1;
-                case i.Staff:
-                    var t = Object(o.c)(r.o.store.getState());
-                    return !!(t && t.roles && t.roles.isStaff);
-                case i.Everyone:
-                    return !0;
-                default:
-                    var n = e;
-                    return n
-            }
-        };
-        var i, r = n("6sO2"),
-            a = n("Ejve"),
-            o = n("Aj/L"),
-            s = "twilight_moonstone";
-        ! function(e) {
-            e.Dev = "dev", e.Staff = "staff", e.Everyone = "everyone"
-        }(i || (i = {}))
-    },
     Snvs: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -4121,4 +3953,4 @@ webpackJsonp([101], {
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.highlighter-0229cf88692d5d996acd9aed0f4a6b4a.js.map
+//# sourceMappingURL=pages.video-tools.pages.highlighter-46ba8197d028bedc8a2ca4dff12ec141.js.map

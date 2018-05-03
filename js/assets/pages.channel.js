@@ -3451,6 +3451,11 @@ webpackJsonp([31], {
                                 case O.ModerationActions.SubscribersOnly:
                                 case O.ModerationActions.SubscribersOnlyOff:
                                 case O.ModerationActions.Unhost:
+                                case O.ModerationActions.AddBlockedTerm:
+                                case O.ModerationActions.AddPermittedTerm:
+                                case O.ModerationActions.DeleteBlockedTerm:
+                                case O.ModerationActions.DeletePermittedTerm:
+                                case O.ModerationActions.ModifiedAutoModProperties:
                                 case O.ModerationActions.Unraid:
                                     n(Object(Be.f)(e.data.moderation_action, e.data.created_by, e.data.created_by_user_id, e.data.args));
                                     break;
@@ -11906,7 +11911,7 @@ webpackJsonp([31], {
                             }
                         }, d.createElement(h.G, {
                             status: h.I.Live
-                        })), s && d.createElement("span", null, t.getFormattedViewCount(s, o)))), d.createElement(h._8, {
+                        })), void 0 !== s && d.createElement("span", null, t.getFormattedViewCount(s, o)))), d.createElement(h._8, {
                             position: h._15.Absolute,
                             padding: 1,
                             attachBottom: !0,
@@ -18330,6 +18335,14 @@ webpackJsonp([31], {
                                         },
                                         arguments: [],
                                         directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "type"
+                                        },
+                                        arguments: [],
+                                        directives: []
                                     }]
                                 }
                             }]
@@ -18339,11 +18352,11 @@ webpackJsonp([31], {
             }],
             loc: {
                 start: 0,
-                end: 284
+                end: 289
             }
         };
         n.loc.source = {
-            body: "query Drops_DropsCampaignDetails_User($login: String! $isLoggedIn: Boolean!) {\nuser(login: $login) {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nself @include(if: $isLoggedIn) {\nisDropsLinked\n}\nactiveDropCampaigns{\nconnectionURL\napplicableChannels {\nid\n}\n}\n}\nisStreamDropsEnabled\n}\n}\n}",
+            body: "query Drops_DropsCampaignDetails_User($login: String! $isLoggedIn: Boolean!) {\nuser(login: $login) {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nself @include(if: $isLoggedIn) {\nisDropsLinked\n}\nactiveDropCampaigns{\nconnectionURL\napplicableChannels {\nid\n}\n}\n}\nisStreamDropsEnabled\ntype\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -26639,32 +26652,6 @@ webpackJsonp([31], {
             var n = typeof e;
             return !("number" != n && "symbol" != n && "boolean" != n && null != e && !a(e)) || o.test(e) || !r.test(e) || null != t && e in Object(t)
         }
-    },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var i, a = n("TToO"),
-            r = n("GiK3"),
-            o = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(i || (i = {}));
-        var s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, i.Off);
-                    return e === i.On || e === i.StaffOnly && this.props.isStaff ? this.props.children : null
-                }, t
-            }(r.Component),
-            l = s;
-        n.d(t, "a", function() {
-            return i
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "b", function() {
-            return l
-        })
     },
     QXSC: function(e, t) {},
     QY1R: function(e, t) {
@@ -46105,6 +46092,14 @@ webpackJsonp([31], {
                                                         kind: "Field",
                                                         name: {
                                                             kind: "Name",
+                                                            value: "type"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
                                                             value: "isEntitled"
                                                         },
                                                         arguments: [],
@@ -46122,11 +46117,11 @@ webpackJsonp([31], {
             }],
             loc: {
                 start: 0,
-                end: 168
+                end: 173
             }
         };
         n.loc.source = {
-            body: "query EsportsIndividualProgress($channelID: ID!) {\nuser(id: $channelID) {\nid\ntournament {\nid\nself {\nprogress {\namount\n}\n}\nrewards {\nindividual {\nid\nisEntitled\n}\n}\n}\n}\n}",
+            body: "query EsportsIndividualProgress($channelID: ID!) {\nuser(id: $channelID) {\nid\ntournament {\nid\nself {\nprogress {\namount\n}\n}\nrewards {\nindividual {\nid\ntype\nisEntitled\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -50456,7 +50451,9 @@ webpackJsonp([31], {
                             default:
                                 i = []
                         }
-                        return i.length < 1 ? [] : Object(kn.a)(i.slice()).slice(0, n).map(function(e, t) {
+                        return (i = i.filter(function(e) {
+                            return "emote" === e.type
+                        })).length < 1 ? [] : Object(kn.a)(i.slice()).slice(0, n).map(function(e, t) {
                             return u.createElement(D._8, {
                                 key: t,
                                 className: "esports-ftue__emote-image-container",
@@ -51960,12 +51957,15 @@ webpackJsonp([31], {
                         width: 50,
                         asset: D._25.DeadGlitch
                     })));
-                    var t = 0,
-                        n = 0;
-                    if (this.props.data && this.props.data.user && this.props.data.user.tournament && (t = this.props.data.user.tournament.rewards.individual.length, n = this.props.data.user.tournament.rewards.individual.filter(function(e) {
+                    var t = [],
+                        n = 0,
+                        i = 0;
+                    if (this.props.data && this.props.data.user && this.props.data.user.tournament && (n = (t = this.props.data.user.tournament.rewards.individual.filter(function(e) {
+                            return "emote" === e.type
+                        })).length, i = t.filter(function(e) {
                             return e.isEntitled
                         }).length), this.props.data && this.props.data.user && this.props.data.user.tournament && this.props.data.user.tournament.self) {
-                        var i = this.props.data.user.tournament.self.progress.amount <= 2600 ? this.props.data.user.tournament.self.progress.amount / 2600 : 1;
+                        var a = this.props.data.user.tournament.self.progress.amount <= 2600 ? this.props.data.user.tournament.self.progress.amount / 2600 : 1;
                         e = u.createElement(D._8, {
                             className: "esports-individual-progress__user-progress-ring",
                             padding: {
@@ -51975,17 +51975,17 @@ webpackJsonp([31], {
                             flexDirection: D.T.Column,
                             textAlign: D._45.Center
                         }, u.createElement(fi, {
-                            percentComplete: i,
+                            percentComplete: a,
                             segments: 26
-                        }), t > 0 && u.createElement(D._8, {
+                        }), n > 0 && u.createElement(D._8, {
                             padding: {
                                 top: 2
                             }
                         }, u.createElement(D.Q, {
                             fontSize: D.V.Size3
                         }, Object(p.d)("{entitled} / {total}", {
-                            entitled: Object(p.e)(n),
-                            total: Object(p.e)(t)
+                            entitled: Object(p.e)(i),
+                            total: Object(p.e)(n)
                         }, "EsportsProgressTab"))))
                     }
                     return u.createElement(D._8, {
@@ -52503,7 +52503,7 @@ webpackJsonp([31], {
                         padding: {
                             bottom: 1
                         }
-                    }, this.props.description && u.createElement(D.Q, null, "this.props.description"))), u.createElement(D._8, {
+                    }, this.props.description && u.createElement(D.Q, null, this.props.description))), u.createElement(D._8, {
                         "data-test-selector": "esports-reward-group-display-children"
                     }, this.props.children))
                 }, t
@@ -52720,7 +52720,9 @@ webpackJsonp([31], {
                         }
                     }, u.createElement(Oi, {
                         milestones: this.props.inidividualMilestone,
-                        rewards: this.props.rewards.individual
+                        rewards: this.props.rewards.individual.filter(function(e) {
+                            return "emote" === e.type
+                        })
                     })), u.createElement(D._8, {
                         padding: {
                             top: 2
@@ -52757,11 +52759,9 @@ webpackJsonp([31], {
                     }, t.getTeamMilestone = function() {
                         return t.getMilestoneForType(_n.a.Team)
                     }, t.getMilestoneForType = function(e) {
-                        if (!t.props.data || !t.props.data.user.tournament || !t.props.data.user.tournament.self) return [];
-                        var n = t.props.data.user.tournament.self.progress.milestones.filter(function(t) {
+                        return t.props.data && t.props.data.user.tournament && t.props.data.user.tournament.self ? t.props.data.user.tournament.self.progress.milestones.filter(function(t) {
                             return t.objectiveTag === e
-                        }).pop();
-                        return n ? [n] : []
+                        }) : []
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.componentDidUpdate = function() {
@@ -53240,6 +53240,7 @@ webpackJsonp([31], {
                         return u.createElement(qi, {
                             title: n,
                             onClearEsportsNotification: t.clearEsportsNotification,
+                            countdownTimeSec: 10,
                             cardBody: i,
                             cardFooter: a
                         })
@@ -53258,6 +53259,13 @@ webpackJsonp([31], {
                     e.pubsub.messages.userNotificationEvent && this.setState({
                         showNotification: !0
                     })
+                }, t.prototype.shouldComponentUpdate = function(e, t) {
+                    if (t.showNotification !== this.state.showNotification) return !0;
+                    if (e.pubsub.messages.userNotificationEvent) {
+                        var n = e.pubsub.messages.userNotificationEvent;
+                        if (n.type === N.PubsubMessageType.UserGiftEvent && n.data.contents && n.data.contents.length > 0 && this.currentUserOwnsEmote(n.data.contents[0].id)) return !1
+                    }
+                    return !0
                 }, t.prototype.render = function() {
                     if (!this.state.showNotification || !this.props.sessionUserID) return null;
                     var e = null;
@@ -54523,7 +54531,7 @@ webpackJsonp([31], {
                             o = void 0,
                             s = !1,
                             l = "";
-                        if (a.game && a.game.activeDropCampaigns) {
+                        if (a.game && a.game.activeDropCampaigns && "live" === a.type) {
                             var d = a.game.activeDropCampaigns;
                             if (d.length > 0) s = !!d.some(function(e) {
                                 return l = e.connectionURL, 0 === e.applicableChannels.length
@@ -63047,4 +63055,4 @@ webpackJsonp([31], {
         }
     }
 });
-//# sourceMappingURL=pages.channel-e707d7f7a345536011ad87dc803a2c11.js.map
+//# sourceMappingURL=pages.channel-1ea126002fba1bd25c2d21aa07f55237.js.map

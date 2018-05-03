@@ -1,4 +1,4 @@
-webpackJsonp([88], {
+webpackJsonp([89], {
     "+5Qw": function(e, t) {},
     "+LDM": function(e, t) {
         e.exports = function(e, t) {
@@ -2657,6 +2657,11 @@ webpackJsonp([88], {
                                 case R.ModerationActions.SubscribersOnly:
                                 case R.ModerationActions.SubscribersOnlyOff:
                                 case R.ModerationActions.Unhost:
+                                case R.ModerationActions.AddBlockedTerm:
+                                case R.ModerationActions.AddPermittedTerm:
+                                case R.ModerationActions.DeleteBlockedTerm:
+                                case R.ModerationActions.DeletePermittedTerm:
+                                case R.ModerationActions.ModifiedAutoModProperties:
                                 case R.ModerationActions.Unraid:
                                     n(Object(Pe.f)(e.data.moderation_action, e.data.created_by, e.data.created_by_user_id, e.data.args));
                                     break;
@@ -19514,32 +19519,6 @@ webpackJsonp([88], {
             }
         }
         l.prototype.clear = i, l.prototype.delete = a, l.prototype.get = r, l.prototype.has = o, l.prototype.set = s, e.exports = l
-    },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var i, a = n("TToO"),
-            r = n("GiK3"),
-            o = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(i || (i = {}));
-        var s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, i.Off);
-                    return e === i.On || e === i.StaffOnly && this.props.isStaff ? this.props.children : null
-                }, t
-            }(r.Component),
-            l = s;
-        n.d(t, "a", function() {
-            return i
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "b", function() {
-            return l
-        })
     },
     QY1R: function(e, t) {
         var n = {
@@ -41485,4 +41464,4 @@ webpackJsonp([88], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.live-f93dba0c8a37019180d02cf769adbb56.js.map
+//# sourceMappingURL=pages.live-ca72cae7b153d6d32e802375be530484.js.map

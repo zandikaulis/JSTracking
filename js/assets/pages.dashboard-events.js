@@ -1,4 +1,4 @@
-webpackJsonp([93], {
+webpackJsonp([94], {
     "+27R": function(e, t, n) {
         (function(e) {
             "use strict";
@@ -560,7 +560,8 @@ webpackJsonp([93], {
                     }, i.createElement(r._8, null, i.createElement(r.v, {
                         type: r.B.Default,
                         onClick: this.onConfirm,
-                        "data-test-selector": s.onConfirm
+                        "data-test-selector": s.onConfirm,
+                        "data-a-target": "on-confirm"
                     }, this.props.okText)), i.createElement(r._8, {
                         margin: {
                             left: 1
@@ -19133,4 +19134,4 @@ webpackJsonp([93], {
             }
     }
 });
-//# sourceMappingURL=pages.dashboard-events-7a687ed9fbfa2af13983dafb92c7a174.js.map
+//# sourceMappingURL=pages.dashboard-events-3968a15aa8f97863423b791ac2a852c3.js.map

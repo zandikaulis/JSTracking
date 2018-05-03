@@ -2513,6 +2513,11 @@ webpackJsonp([40], {
                                 case R.ModerationActions.SubscribersOnly:
                                 case R.ModerationActions.SubscribersOnlyOff:
                                 case R.ModerationActions.Unhost:
+                                case R.ModerationActions.AddBlockedTerm:
+                                case R.ModerationActions.AddPermittedTerm:
+                                case R.ModerationActions.DeleteBlockedTerm:
+                                case R.ModerationActions.DeletePermittedTerm:
+                                case R.ModerationActions.ModifiedAutoModProperties:
                                 case R.ModerationActions.Unraid:
                                     n(Object(Pe.f)(e.data.moderation_action, e.data.created_by, e.data.created_by_user_id, e.data.args));
                                     break;
@@ -19015,32 +19020,6 @@ webpackJsonp([40], {
             }
         };
         e.exports = n
-    },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var i, a = n("TToO"),
-            r = n("GiK3"),
-            o = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(i || (i = {}));
-        var s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, i.Off);
-                    return e === i.On || e === i.StaffOnly && this.props.isStaff ? this.props.children : null
-                }, t
-            }(r.Component),
-            l = s;
-        n.d(t, "a", function() {
-            return i
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "b", function() {
-            return l
-        })
     },
     QY1R: function(e, t) {
         var n = {
@@ -37398,4 +37377,4 @@ webpackJsonp([40], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-clips-50540507979cd106120730738df64a25.js.map
+//# sourceMappingURL=pages.channel-clips-78362a8112e78e1f5604cd01422b551c.js.map

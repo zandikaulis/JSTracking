@@ -16126,6 +16126,8 @@ webpackJsonp([82], {
                     this.raise("purchase", e)
                 }, e.prototype.crate = function(e) {
                     this.raise("crate", e)
+                }, e.prototype.rewardgift = function(e) {
+                    this.raise("rewardgift", e)
                 }, e.prototype.raid = function(e) {
                     this.raise("raid", e)
                 }, e.prototype.ritual = function(e) {
@@ -16164,7 +16166,7 @@ webpackJsonp([82], {
             e[e.Badge = 0] = "Badge", e[e.Bits = 1] = "Bits", e[e.Emote = 2] = "Emote", e[e.InGameContent = 3] = "InGameContent"
         }(u || (u = {})),
         function(e) {
-            e[e.Message = 0] = "Message", e[e.Notice = 1] = "Notice", e[e.Action = 2] = "Action", e[e.Purchase = 3] = "Purchase", e[e.UserNotice = 4] = "UserNotice", e[e.Crate = 5] = "Crate"
+            e[e.Message = 0] = "Message", e[e.Notice = 1] = "Notice", e[e.Action = 2] = "Action", e[e.Purchase = 3] = "Purchase", e[e.UserNotice = 4] = "UserNotice", e[e.Crate = 5] = "Crate", e[e.RewardGift = 6] = "RewardGift"
         }(c || (c = {}));
         var d = function() {
                 function e(e, t, n, r) {
@@ -16670,38 +16672,52 @@ webpackJsonp([82], {
                                             timestamp: Date.now(),
                                             type: c.Crate
                                         })
+                                    } else if ("rewardgift" === s) {
+                                        I = this.createChatMessage(e, i);
+                                        var M = a.getInteger(e.tags["msg-param-bits-amount"]),
+                                            L = a.getInteger(e.tags["msg-param-min-cheer-amount"]);
+                                        j = a.getInteger(e.tags["msg-param-selected-count"]);
+                                        this.events.rewardgift({
+                                            bitsAmount: M,
+                                            minCheerAmount: L,
+                                            selectedCount: j,
+                                            message: I,
+                                            user: this.createUser(e),
+                                            timestamp: Date.now(),
+                                            type: c.RewardGift
+                                        })
                                     } else if ("purchase" === s) {
-                                        var M = e.tags,
-                                            L = {
+                                        var D = e.tags,
+                                            N = {
                                                 purchased: {
                                                     type: "game",
-                                                    title: M["msg-param-title"].split("\\s").join(" "),
-                                                    boxart: M["msg-param-imageURL"]
+                                                    title: D["msg-param-title"].split("\\s").join(" "),
+                                                    boxart: D["msg-param-imageURL"]
                                                 },
-                                                numCrates: parseInt(M["msg-param-crateCount"], 10) || 0,
+                                                numCrates: parseInt(D["msg-param-crateCount"], 10) || 0,
                                                 crateLoot: []
                                             },
-                                            D = M["msg-param-emoticons"];
-                                        D && (t = L.crateLoot).push.apply(t, D.split(",").map(function(e) {
+                                            F = D["msg-param-emoticons"];
+                                        F && (t = N.crateLoot).push.apply(t, F.split(",").map(function(e) {
                                             return {
                                                 id: e,
                                                 type: u.Emote
                                             }
                                         }));
-                                        var N = M["msg-param-badges"];
-                                        N && (n = L.crateLoot).push.apply(n, N.split(",").map(function(e) {
+                                        var q = D["msg-param-badges"];
+                                        q && (n = N.crateLoot).push.apply(n, q.split(",").map(function(e) {
                                             return {
                                                 img: e,
                                                 type: u.Badge
                                             }
                                         }));
-                                        var F = +M["msg-param-bits"];
-                                        F && L.crateLoot.push({
-                                            quantity: F,
+                                        var U = +D["msg-param-bits"];
+                                        U && N.crateLoot.push({
+                                            quantity: U,
                                             type: u.Bits
                                         });
-                                        var q = M["msg-param-inGameContent"];
-                                        q && (r = L.crateLoot).push.apply(r, q.split(",").map(function(e) {
+                                        var B = D["msg-param-inGameContent"];
+                                        B && (r = N.crateLoot).push.apply(r, B.split(",").map(function(e) {
                                             return {
                                                 img: e,
                                                 type: u.InGameContent
@@ -16709,24 +16725,24 @@ webpackJsonp([82], {
                                         }));
                                         I = {
                                             user: this.createUser(e),
-                                            timestamp: +M["tmi-sent-ts"],
+                                            timestamp: +D["tmi-sent-ts"],
                                             body: i
                                         };
                                         this.events.purchase({
                                             message: I,
-                                            purchase: L,
+                                            purchase: N,
                                             timestamp: Date.now(),
                                             type: c.Purchase
                                         })
                                     } else if ("ritual" === s) {
-                                        var U = e.tags["msg-param-ritual-name"];
+                                        var H = e.tags["msg-param-ritual-name"];
                                         I = {
                                             user: this.createUser(e),
                                             timestamp: +e.tags["tmi-sent-ts"],
                                             body: i
                                         };
                                         this.events.ritual({
-                                            type: U,
+                                            type: H,
                                             message: I
                                         })
                                     } else {
@@ -16735,42 +16751,42 @@ webpackJsonp([82], {
                                     }
                                     break;
                                 case "HOSTTARGET":
-                                    var B = +i.split(" ")[1] || 0;
+                                    var Q = +i.split(" ")[1] || 0;
                                     if ("-" === i.split(" ")[0]) this.commands.unhost.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
                                     }), this.events.unhost({
                                         channel: o,
-                                        viewers: B
+                                        viewers: Q
                                     });
                                     else {
-                                        var H = i.split(" ")[0];
+                                        var V = i.split(" ")[0];
                                         this.commands.host.signal({
                                             channel: o,
                                             msgid: s,
                                             succeeded: !0
                                         }), this.events.hosting({
                                             channel: o,
-                                            target: H,
-                                            viewers: B
+                                            target: V,
+                                            viewers: Q
                                         })
                                     }
                                     break;
                                 case "CLEARCHAT":
                                     if (e.params.length > 1) {
-                                        var Q = +e.tags["ban-duration"] || null,
-                                            V = a.decodeTag(e.tags["ban-reason"]);
-                                        null === Q ? this.events.ban({
+                                        var z = +e.tags["ban-duration"] || null,
+                                            W = a.decodeTag(e.tags["ban-reason"]);
+                                        null === z ? this.events.ban({
                                             channel: o,
-                                            reason: V,
+                                            reason: W,
                                             userLogin: i,
                                             duration: null
                                         }) : this.events.timeout({
                                             channel: o,
-                                            reason: V,
+                                            reason: W,
                                             userLogin: i,
-                                            duration: Q
+                                            duration: z
                                         })
                                     } else this.events.clearchat({
                                         channel: o
@@ -16787,19 +16803,19 @@ webpackJsonp([82], {
                                     break;
                                 case "USERSTATE":
                                     e.tags.username = this.session.username;
-                                    var z = this.createUser(e);
+                                    var K = this.createUser(e);
                                     this.commands.sendMessage.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
-                                    }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(o, this.session.username), a.isJustinfan(this.session.username) || this.session.hasJoinedChannel(o) || (this.session.onJoinedChannel(o, z), this.events.joined({
+                                    }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(o, this.session.username), a.isJustinfan(this.session.username) || this.session.hasJoinedChannel(o) || (this.session.onJoinedChannel(o, K), this.events.joined({
                                         channel: o,
                                         username: this.session.username,
                                         gotUsername: !0
                                     })), this.session.updateBadges(o, e.badges) && this.events.badgesupdated({
                                         badges: e.badges,
                                         username: a.username(this.session.username)
-                                    }), this.session.updateUserState(o, z);
+                                    }), this.session.updateUserState(o, K);
                                     break;
                                 case "GLOBALUSERSTATE":
                                     this.logger.debug("Updated global user state", {
@@ -16807,27 +16823,27 @@ webpackJsonp([82], {
                                     }), this.session.globaluserstate = e.tags;
                                     break;
                                 case "ROOMSTATE":
-                                    var W = a.channel(e.params[0]),
-                                        K = this.createRoomState(e);
-                                    this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === W && this.commands.join.signal({
+                                    var G = a.channel(e.params[0]),
+                                        J = this.createRoomState(e);
+                                    this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === G && this.commands.join.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
                                     }), this.events.roomstate({
                                         channel: o,
-                                        state: K
-                                    }), e.tags.hasOwnProperty("slow") && !e.tags.hasOwnProperty("subs-only") && (K.slowMode ? this.events.slowmode({
+                                        state: J
+                                    }), e.tags.hasOwnProperty("slow") && !e.tags.hasOwnProperty("subs-only") && (J.slowMode ? this.events.slowmode({
                                         channel: o,
                                         enabled: !0,
-                                        length: K.slowModeDuration
+                                        length: J.slowModeDuration
                                     }) : this.events.slowmode({
                                         channel: o,
                                         enabled: !1,
                                         length: 0
-                                    })), e.tags.hasOwnProperty("followers-only") && !e.tags.hasOwnProperty("subs-only") && (K.followersOnly ? this.events.followersonly({
+                                    })), e.tags.hasOwnProperty("followers-only") && !e.tags.hasOwnProperty("subs-only") && (J.followersOnly ? this.events.followersonly({
                                         channel: o,
                                         enabled: !0,
-                                        length: K.followersOnlyRequirement
+                                        length: J.followersOnlyRequirement
                                     }) : this.events.followersonly({
                                         channel: o,
                                         enabled: !1,
@@ -16838,12 +16854,12 @@ webpackJsonp([82], {
                                     this.logger.warn("Could not parse message from tmi.twitch.tv:\n" + JSON.stringify(e, null, 4))
                             } else if ("jtv" === e.prefix) switch (e.command) {
                                 case "MODE":
-                                    var G = e.params[2];
-                                    "+o" === i ? (this.session.addChannelModerator(o, G), this.events.mod({
-                                        username: G,
+                                    var Y = e.params[2];
+                                    "+o" === i ? (this.session.addChannelModerator(o, Y), this.events.mod({
+                                        username: Y,
                                         channel: o
-                                    })) : "-o" === i && (this.session.removeChannelModerator(o, G), this.events.unmod({
-                                        username: G,
+                                    })) : "-o" === i && (this.session.removeChannelModerator(o, Y), this.events.unmod({
+                                        username: Y,
                                         channel: o
                                     }));
                                     break;
@@ -16859,28 +16875,28 @@ webpackJsonp([82], {
                                 case "366":
                                     break;
                                 case "JOIN":
-                                    var J = e.prefix.split("!")[0];
-                                    a.isJustinfan(this.session.username) && this.session.username === J && (this.session.onJoinedChannel(o, this.createUser(e)), this.events.joined({
+                                    var X = e.prefix.split("!")[0];
+                                    a.isJustinfan(this.session.username) && this.session.username === X && (this.session.onJoinedChannel(o, this.createUser(e)), this.events.joined({
                                         channel: o,
-                                        username: J,
+                                        username: X,
                                         gotUsername: !0
-                                    })), this.session.username !== J && this.events.joined({
+                                    })), this.session.username !== X && this.events.joined({
                                         channel: o,
-                                        username: J,
+                                        username: X,
                                         gotUsername: !1
                                     });
                                     break;
                                 case "PART":
-                                    var Y = e.prefix.split("!")[0],
-                                        X = this.session.username === Y;
-                                    X && (this.session.onPartedChannel(o), this.commands.part.signal({
+                                    var $ = e.prefix.split("!")[0],
+                                        Z = this.session.username === $;
+                                    Z && (this.session.onPartedChannel(o), this.commands.part.signal({
                                         channel: o,
                                         msgid: s,
                                         succeeded: !0
                                     })), this.events.parted({
                                         channel: o,
-                                        username: Y,
-                                        isSelf: X
+                                        username: $,
+                                        isSelf: Z
                                     });
                                     break;
                                 case "WHISPER":
@@ -16892,31 +16908,31 @@ webpackJsonp([82], {
                                     break;
                                 case "PRIVMSG":
                                     if (e.tags.username = e.prefix.split("!")[0], "jtv" === e.tags.username) {
-                                        var $ = a.username(i.split(" ")[0]);
+                                        var ee = a.username(i.split(" ")[0]);
                                         if (i.includes("hosting you for")) {
-                                            B = a.extractNumber(i);
+                                            Q = a.extractNumber(i);
                                             this.events.hosted({
                                                 channel: o,
-                                                from: $,
+                                                from: ee,
                                                 isAuto: i.includes("auto"),
-                                                viewers: B
+                                                viewers: Q
                                             })
                                         } else i.includes("hosting you") && this.events.hosted({
                                             channel: o,
-                                            from: $,
+                                            from: ee,
                                             isAuto: i.includes("auto"),
                                             viewers: 0
                                         })
                                     } else {
-                                        var Z = i.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
+                                        var te = i.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
                                         I = this.createChatMessage(e, i);
-                                        if (Z && Z.length >= 2) {
+                                        if (te && te.length >= 2) {
                                             e.tags["message-type"] = "action";
-                                            var ee = Z[1];
+                                            var ne = te[1];
                                             this.events.action({
                                                 type: c.Action,
                                                 timestamp: Date.now(),
-                                                action: ee,
+                                                action: ne,
                                                 channel: o,
                                                 message: I,
                                                 sentByCurrentUser: !1
@@ -17585,6 +17601,8 @@ webpackJsonp([82], {
                     this.add("clearchat", e)
                 }, e.prototype.crate = function(e) {
                     this.add("crate", e)
+                }, e.prototype.rewardgift = function(e) {
+                    this.add("rewardgift", e)
                 }, e.prototype.purchase = function(e) {
                     this.add("purchase", e)
                 }, e.prototype.unraid = function(e) {
@@ -36015,4 +36033,4 @@ webpackJsonp([82], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-99d65b7a57848c18310a702d7048b8d8.js.map
+//# sourceMappingURL=vendor-7bc9ff2d030e8dac6a3dd2a091e472fc.js.map
