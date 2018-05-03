@@ -665,6 +665,18 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
+        "9a93c54d-a771-4dd6-ab25-02216c2d6c2a": {
+            "name": "twilight_pubg_filters",
+            "v": 3661,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant"
+            }]
+        },
         "a9667563-723a-4cf7-b253-674d9eef0a53": {
             "name": "twilight_web_onboarding_user",
             "v": 2506,
