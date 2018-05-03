@@ -1729,6 +1729,18 @@ window.SiteOptions = {
                 "value": "exoplayer_2"
             }]
         },
+        "49083595-80d4-4c13-93a2-20a605b3318e": {
+            "name": "Player Core WASM experiment",
+            "v": 3658,
+            "t": 1,
+            "groups": [{
+                "weight": 5,
+                "value": "wasm"
+            }, {
+                "weight": 95,
+                "value": "asmjs"
+            }]
+        },
         "497e1277-7fff-4c16-98f0-6b55c8b59a4f": {
             "name": "I18N_GAME_NAMES",
             "v": 1237,
@@ -1839,11 +1851,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 3647,
+            "v": 3657,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-a7eb9d.sjc02.hls.ttvnw.net/v1/segment/Ck_feUoqIqqdN-LogIbLv55gScTjBtve_jfvFB3nGB6a4Zz9ZmXm5b3sZkQEGX2njSz692UTaKBDuimQjdtD-82z58LEmIRP4L6Kk13rRowWjBO-Dp3tV5fuRRGR7R9dLW8AaP9OQoCWmTrvxao9sTCHKdObgodkCAMHzwN5m0wjZQoa2fuyJYlLvs1vPuKI6wCNJhSIN2tcPTN1HCQr9lvSYAsMt3xMYYc_HaJnWpvM9V82PObIxTAmrllbcPoeWZsCb1KyLSVDyJtnRbcq33klHXW2wLgO7v13cIsbkNknURlWc_80NrQlTpUPzOP8c6dc6otUnfRIapHt_FzGGKINgqZ7RPZmBz6QrONHSEPqQlaefYdLXtnQIeF9nuBN3tmbK7POhmRrQ3FktchrzP6FlZ5yRB6DdQy5VFuhYAN1TD695WbG6Vdg_EyRcv192n-p73PPBDs6YnCmDetG9ze79Ar8Fq8jNPrqbXKN8LhKLWL-c8Sjj0Gji-_ozL6_HoiEffIlUqUGujOzoI6L2KkcRSdB.ts"
+                "value": "//video-edge-2c5c9a.sjc02.hls.ttvnw.net/v1/segment/CvDwExpQqLh41_H-PTxIab0-jWC7PZOf2C8CfX2BaaMmkjifqHHW9ycvYrKBFK3AWjL6ebSzD9oOH4eTUHJ_jk5w_49HBqu8LSjGsTiOPDFby6DF8l0eCb61CFbG5LbrxEJbP7G0ygYXwpXjsNIAzy6xUqwPZyYtQvYZBxlsEIuwhP-nFl-F8qECAZ4-LtLSWCyEfMeoacRuFnT3wjmJNp8GdyyR8bSMxktSDVQ9dR0lDlkCUp6RbDgJCRbz22SZUWCHRwRbeV8m800M0ia_tvzTGZMQw5W9AS-z6GnACFjM-9XjFywHt1GzQvh0yBOM4Ver4edfj4j5wkOUS4kKIhL7sALgk1pHXFY58ogXGrapeBE3crANNwQm5xbpoCFHZYB-7SpX48Kzzz0EZmvsD1-356jqj6iHr_1LZtRqBL1BPHwlpKnXG_lWGqW5GCex1eD00LtZxaPONCWSrkinbAiQHKS5cLQCE9CadBYH2W23lEKKQUQ5Hqt3YUgQZh1oCSpFW0bmsXByaw9WFCSrhShTzl_tos.ts"
             }]
         },
         "4bc4a7c7-21b7-44f5-a0fb-79f430ee8ac4": {
