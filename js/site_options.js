@@ -4950,13 +4950,13 @@ window.SiteOptions = {
         },
         "d5d96231-332d-4538-92c5-bdadbf938201": {
             "name": "mobile_web_branch",
-            "v": 3436,
+            "v": 3665,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 50,
                 "value": "treatment"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "control"
             }]
         },
