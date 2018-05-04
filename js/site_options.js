@@ -459,6 +459,18 @@ window.SiteOptions = {
                 "value": "variant"
             }]
         },
+        "158b4a89-454f-496c-aa2d-646886c43ec4": {
+            "name": "ios_discover",
+            "v": 3680,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "15a67dfe-256c-428c-928f-d3c4c13d0abf": {
             "name": "android_broadcast_abs",
             "v": 3262,
@@ -4187,6 +4199,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "active"
+            }]
+        },
+        "b156afda-e215-413a-b9f9-efebda54ce96": {
+            "name": "ios_aa_2018",
+            "v": 3681,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
             }]
         },
         "b19d0945-ad8e-49c9-89f8-2dbb99bddf92": {
