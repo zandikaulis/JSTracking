@@ -303,16 +303,16 @@ window.__twilightSettings = {
         },
         "3468778b-76fe-4cdf-add6-1be0dceea214": {
             "name": "TWILIGHT_DASHBOARD_LIVE",
-            "v": 3660,
+            "v": 3671,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "disabled"
             }, {
                 "weight": 0,
                 "value": "twilight"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "ember"
             }]
         },
