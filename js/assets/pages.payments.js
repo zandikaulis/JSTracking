@@ -298,25 +298,34 @@ webpackJsonp([39], {
             i = n("GiK3"),
             o = n("6sO2"),
             d = n("Odds"),
-            u = n("2nfn"),
-            l = n.n(u),
-            _ = n("N01O"),
-            m = n.n(_),
-            c = n("8WTh"),
-            h = n.n(c),
-            f = n("nO5C"),
-            M = n.n(f),
-            p = n("EAav"),
-            y = n.n(p),
-            L = n("tWfJ"),
-            Y = n.n(L),
-            g = n("6hIG"),
-            D = n.n(g);
+            u = n("RH2O"),
+            l = n("ywmo"),
+            _ = n.n(l),
+            m = n("Ob63"),
+            c = n.n(m),
+            h = n("N01O"),
+            f = n.n(h),
+            M = n("8WTh"),
+            p = n.n(M),
+            y = n("nO5C"),
+            L = n.n(y),
+            Y = n("yZWV"),
+            g = n.n(Y),
+            D = n("EAav"),
+            k = n.n(D),
+            v = n("tWfJ"),
+            T = n.n(v),
+            w = n("6hIG"),
+            b = n.n(w),
+            S = n("pNNA"),
+            x = n.n(S),
+            H = n("NXs7"),
+            j = n("0nzt");
         ! function(e) {
             e.AmericanExpress = "american_express", e.Discover = "discover", e.MasterCard = "mastercard", e.Visa = "visa"
         }(a || (a = {}));
-        var k = n("zskx"),
-            v = function(e) {
+        var P = n("zskx"),
+            E = (n("VSLj"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -324,68 +333,81 @@ webpackJsonp([39], {
                     var e = this.imageSource,
                         t = e.src,
                         n = e.alt;
-                    return i.createElement(d.N, {
+                    return i.createElement(d._8, {
+                        className: "payment-method-image"
+                    }, i.createElement(d.N, {
                         src: t,
                         alt: n
-                    })
+                    }))
                 }, Object.defineProperty(t.prototype, "imageSource", {
                     get: function() {
                         var e = Object(o.d)("credit card", "PaymentMethodImage");
                         switch (this.props.paymentInstrumentType) {
-                            case k.a.CreditCard:
+                            case P.a.CreditCard:
                                 switch (this.props.cardType) {
                                     case a.AmericanExpress:
                                         return {
-                                            src: m.a,
+                                            src: f.a,
                                             alt: Object(o.d)("American Express", "PaymentMethodImage")
                                         };
                                     case a.Discover:
                                         return {
-                                            src: h.a,
+                                            src: p.a,
                                             alt: Object(o.d)("Discover", "PaymentMethodImage")
                                         };
                                     case a.MasterCard:
                                         return {
-                                            src: M.a,
+                                            src: this.props.darkModeEnabled && !this.ignoreDarkMode ? g.a : L.a,
                                             alt: Object(o.d)("Mastercard", "PaymentMethodImage")
                                         };
                                     case a.Visa:
                                         return {
-                                            src: y.a,
+                                            src: k.a,
                                             alt: Object(o.d)("Visa", "PaymentMethodImage")
                                         };
                                     default:
                                         return {
-                                            src: Y.a,
+                                            src: T.a,
                                             alt: e
                                         }
                                 }
-                            case k.a.AmazonPay:
+                            case P.a.AmazonPay:
                                 return {
-                                    src: l.a,
+                                    src: this.props.darkModeEnabled && !this.ignoreDarkMode ? c.a : _.a,
                                     alt: Object(o.d)("Amazon Pay", "PaymentMethodImage")
                                 };
-                            case k.a.Paypal:
+                            case P.a.Paypal:
                                 return {
-                                    src: D.a,
+                                    src: this.props.darkModeEnabled && !this.ignoreDarkMode ? x.a : b.a,
                                     alt: Object(o.d)("Paypal", "PaymentMethodImage")
                                 };
                             default:
                                 return {
-                                    src: Y.a,
+                                    src: T.a,
                                     alt: e
                                 }
                         }
                     },
                     enumerable: !0,
                     configurable: !0
+                }), Object.defineProperty(t.prototype, "ignoreDarkMode", {
+                    get: function() {
+                        return !!window.location.href.match(/.*\/checkout\/[\w\d-]+(\/|\/\?.*|\?.*)?$/)
+                    },
+                    enumerable: !0,
+                    configurable: !0
                 }), t
-            }(i.Component);
+            }(i.Component));
+        var O = Object(u.b)(function(e) {
+            return {
+                darkModeEnabled: Object(j.a)(e) === H.a.Dark
+            }
+        })(E);
         n("+72U");
         n.d(t, "a", function() {
-            return T
+            return A
         });
-        var T = function(e) {
+        var A = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -402,7 +424,7 @@ webpackJsonp([39], {
                 }, i.createElement(d._8, {
                     alignItems: d.c.Center,
                     display: d.R.Flex
-                }, i.createElement(v, {
+                }, i.createElement(O, {
                     paymentInstrumentType: this.paymentMethod.paymentType,
                     cardType: this.paymentMethod.cardType
                 }), this.renderLastFour()), i.createElement(d._8, {
@@ -7334,6 +7356,7 @@ webpackJsonp([39], {
             })
         })(n("PJh5"))
     },
+    VSLj: function(e, t) {},
     VaeB: function(e, t, n) {
         var a = n("xA5w");
         e.exports = function(e) {
@@ -8465,6 +8488,14 @@ webpackJsonp([39], {
                                                                         kind: "Field",
                                                                         name: {
                                                                             kind: "Name",
+                                                                            value: "id"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
                                                                             value: "profileImageURL"
                                                                         },
                                                                         arguments: [{
@@ -8572,11 +8603,11 @@ webpackJsonp([39], {
             }],
             loc: {
                 start: 0,
-                end: 492
+                end: 495
             }
         };
         n.loc.source = {
-            body: "query TransactionHistoryTab_UserPaymentTransactions($first: Int $after: Cursor $filters: PaymentTransactionConnectionCriteriaInput!) {\ncurrentUser {\nid\npaymentTransactions(first: $first after: $after criteria: $filters) {\npageInfo {\nhasNextPage\n}\ntotalCount\nfirstPurchasedAt\nlastPurchasedAt\nedges {\ncursor\nnode {\nid\npurchasedAt\nproduct {\ntype\nname\ntier\nowner {\nprofileImageURL(width: 50)\nlogin\n}\n}\ngrossAmount\ncurrency\nisGift\npaymentMethod {\nprovider\npaymentType\ncardType\nlastFour\n}\n}\n}\n}\n}\n}",
+            body: "query TransactionHistoryTab_UserPaymentTransactions($first: Int $after: Cursor $filters: PaymentTransactionConnectionCriteriaInput!) {\ncurrentUser {\nid\npaymentTransactions(first: $first after: $after criteria: $filters) {\npageInfo {\nhasNextPage\n}\ntotalCount\nfirstPurchasedAt\nlastPurchasedAt\nedges {\ncursor\nnode {\nid\npurchasedAt\nproduct {\ntype\nname\ntier\nowner {\nid\nprofileImageURL(width: 50)\nlogin\n}\n}\ngrossAmount\ncurrency\nisGift\npaymentMethod {\nprovider\npaymentType\ncardType\nlastFour\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -9155,6 +9186,14 @@ webpackJsonp([39], {
                                                                 kind: "Field",
                                                                 name: {
                                                                     kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
@@ -9364,11 +9403,11 @@ webpackJsonp([39], {
             }],
             loc: {
                 start: 0,
-                end: 593
+                end: 596
             }
         };
         n.loc.source = {
-            body: "query PaymentMethodsTab_UserPaymentMethods {\ncurrentUser {\nid\npaymentMethods {\nprovider\npaymentType\nbillingEmail\ncardType\nlastFour\nexpirationMonth\nexpirationYear\nextMethodID\npurchaseProfiles {\nid\nwillRenew\nexpiresAt\nrenewalPrice\nrenewalCurrency\nproductType\nsubscriptionBenefit {\nid\ntier\nuser {\ndisplayName\nprofileImageURL(width: 50)\nlogin\n}\n}\n}\n}\npaymentMethodConfigs {\nrecurly {\nbraintreeClientAuthorization\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\n}\nxsolla {\niframeURL\n}\nzuora {\nexternalAccountID\nhostedPageID\nhostedPageURL\npublicKey\nsignature\ntenantID\ntoken\n}\n}\n}\n}",
+            body: "query PaymentMethodsTab_UserPaymentMethods {\ncurrentUser {\nid\npaymentMethods {\nprovider\npaymentType\nbillingEmail\ncardType\nlastFour\nexpirationMonth\nexpirationYear\nextMethodID\npurchaseProfiles {\nid\nwillRenew\nexpiresAt\nrenewalPrice\nrenewalCurrency\nproductType\nsubscriptionBenefit {\nid\ntier\nuser {\nid\ndisplayName\nprofileImageURL(width: 50)\nlogin\n}\n}\n}\n}\npaymentMethodConfigs {\nrecurly {\nbraintreeClientAuthorization\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\n}\nxsolla {\niframeURL\n}\nzuora {\nexternalAccountID\nhostedPageID\nhostedPageURL\npublicKey\nsignature\ntenantID\ntoken\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -15552,6 +15591,9 @@ webpackJsonp([39], {
             })
         })(n("PJh5"))
     },
+    yZWV: function(e, t, n) {
+        e.exports = n.p + "assets/mastercard_dark-0b521e1b7c99187e10967eaea8c426ca.svg"
+    },
     ymQ7: function(e, t, n) {
         var a = n("xA5w"),
             r = n("JURy"),
@@ -15700,4 +15742,4 @@ webpackJsonp([39], {
             }(a || (a = {}))
     }
 });
-//# sourceMappingURL=pages.payments-cb75d8852c7a78094dcd5e276fc8bd27.js.map
+//# sourceMappingURL=pages.payments-b3f0f49b47c199f2d005fdea9199a326.js.map

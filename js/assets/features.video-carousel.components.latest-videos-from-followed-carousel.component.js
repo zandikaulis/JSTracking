@@ -414,7 +414,7 @@ webpackJsonp([115], {
                             medium: this.props.tracking.medium,
                             source: {}
                         },
-                        videoCardSize: p._56.Medium,
+                        videoCardSize: p._56.Large,
                         videos: e
                     })) : null
                 }, t
@@ -433,4 +433,4 @@ webpackJsonp([115], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-723e99c54d4fa247e447e1cfd352434c.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-d781ba672c5e87e3e065e5a508def238.js.map

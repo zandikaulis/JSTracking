@@ -3603,7 +3603,7 @@ webpackJsonp([38, 115], {
                             medium: this.props.tracking.medium,
                             source: {}
                         },
-                        videoCardSize: m._56.Medium,
+                        videoCardSize: m._56.Large,
                         videos: e
                     })) : null
                 }, t
@@ -19385,4 +19385,4 @@ webpackJsonp([38, 115], {
         }
     }
 });
-//# sourceMappingURL=pages.video-watch-d636d9047a32c470bb85e94ff7913437.js.map
+//# sourceMappingURL=pages.video-watch-637e4e23cdd419b3d48d696e7be6060c.js.map

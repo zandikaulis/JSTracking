@@ -15473,7 +15473,7 @@ webpackJsonp([32, 115], {
                             medium: this.props.tracking.medium,
                             source: {}
                         },
-                        videoCardSize: m._56.Medium,
+                        videoCardSize: m._56.Large,
                         videos: e
                     })) : null
                 }, t
@@ -26589,6 +26589,11 @@ webpackJsonp([32, 115], {
                     n.props.activeChatters.isDirty && n.setState({
                         chatMembers: n.props.activeChatters.getActiveChatters()
                     })
+                }, n.incrementAndHideAutomodTooltipCounter = function() {
+                    var e = s.l.get("automodChatCogTooltipSeenNumTimes", 0) + 1;
+                    s.l.set("automodChatCogTooltipSeenNumTimes", e), n.setState({
+                        showAutomodSettingsTooltip: !1
+                    })
                 }, n.setChatInputRef = function(e) {
                     return n.chatInputRef = e
                 }, n.setAutocompleteInputRef = function(e) {
@@ -26933,11 +26938,6 @@ webpackJsonp([32, 115], {
                 }, t)
             }, t.prototype.renderChatCogTooltips = function() {
                 return this.state.showRaidsSettingsTooltip ? a.createElement(kt, null) : this.state.showAutomodSettingsTooltip && Object(Nt.a)() ? a.createElement(bt, null) : null
-            }, t.prototype.incrementAndHideAutomodTooltipCounter = function() {
-                var e = s.l.get("automodChatCogTooltipSeenNumTimes", 0) + 1;
-                s.l.set("automodChatCogTooltipSeenNumTimes", e), this.setState({
-                    showAutomodSettingsTooltip: !1
-                })
             }, t.prototype.sendRegularMessage = function() {
                 this.props.onSendMessage && this.props.onSendMessage(this.state.value) && (this.trackChatEvent(), this.trackMentions(), this.autocompleteInputRef.setValue(""), this.setState({
                     showCard: ot.None
@@ -39418,4 +39418,4 @@ webpackJsonp([32, 115], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-videos-3e33f9ebd625227046afe0e272a806b2.js.map
+//# sourceMappingURL=pages.channel-videos-cdb5ce283340d07391b83f7648499740.js.map

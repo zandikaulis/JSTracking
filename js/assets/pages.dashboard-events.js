@@ -17250,16 +17250,16 @@ webpackJsonp([94], {
                         error: ""
                     }, t.onCommit = function(e) {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var t, n, i, r, s, o;
-                            return a.__generator(this, function(d) {
-                                switch (d.label) {
+                            var t, n, i, r, s, o, d;
+                            return a.__generator(this, function(l) {
+                                switch (l.label) {
                                     case 0:
                                         if (!(this.props.user && this.props.user.id && this.props.user.login && e)) return this.setState({
                                             error: Object(v.d)("An unexpected error occurred creating your event", "TimetableEventModal")
                                         }), [2];
-                                        t = e.imageID ? e.imageID : null, n = Object(W.a)(), i = this.props.user.login, r = this.props.user.id, d.label = 1;
+                                        t = e.imageID ? e.imageID : null, n = Object(W.a)(), i = this.props.user.login, r = this.props.user.id, l.label = 1;
                                     case 1:
-                                        return d.trys.push([1, 6, , 7]), this.props.eventID ? (s = this.props.eventID, [4, this.props.updateTimetableEvent(a.__assign({}, Object(m.a)({
+                                        return l.trys.push([1, 6, , 7]), this.props.eventID ? (o = this.props.eventID, [4, this.props.updateTimetableEvent(a.__assign({}, Object(m.a)({
                                             id: this.props.eventID,
                                             coverImageID: t,
                                             defaultTimeZone: n,
@@ -17270,7 +17270,7 @@ webpackJsonp([94], {
                                             optimisticResponse: {
                                                 updateTimetableEvent: {
                                                     event: {
-                                                        id: s,
+                                                        id: o,
                                                         title: e.title,
                                                         description: e.description,
                                                         defaultTimeZone: n,
@@ -17288,7 +17288,7 @@ webpackJsonp([94], {
                                             }
                                         }))]) : [3, 3];
                                     case 2:
-                                        return d.sent(), [3, 5];
+                                        return l.sent(), [3, 5];
                                     case 3:
                                         return [4, this.props.createTimetableEvent(a.__assign({}, Object(m.a)({
                                             coverImageID: t,
@@ -17370,12 +17370,13 @@ webpackJsonp([94], {
                                             }
                                         }))];
                                     case 4:
-                                        d.sent(), d.label = 5;
+                                        if (s = l.sent(), this.props.onCreate && s.data && s.data.createTimetableEvent && s.data.createTimetableEvent.event) return o = s.data.createTimetableEvent.event.id, this.props.onCreate(o), [2];
+                                        l.label = 5;
                                     case 5:
                                         return this.props.closeModal(), [3, 7];
                                     case 6:
-                                        return o = d.sent(), this.setState({
-                                            error: o.toString()
+                                        return d = l.sent(), this.setState({
+                                            error: d.toString()
                                         }), [3, 7];
                                     case 7:
                                         return [2]
@@ -17479,7 +17480,7 @@ webpackJsonp([94], {
                             src: t.props.navigatedCollection.imageURL,
                             alt: "" !== t.props.navigatedCollection.imageURL ? t.props.navigatedCollection.title : ""
                         })), n = i.createElement(E.O, {
-                            to: "/" + t.props.channelName + "/dashboard/events/"
+                            to: "/" + t.props.channelName + "/dashboard/events"
                         }, i.createElement(E.Q, {
                             type: E._49.H4,
                             bold: !0
@@ -17982,6 +17983,10 @@ webpackJsonp([94], {
                             isSegmentEvent: !1,
                             editableEventID: void 0
                         })
+                    }, t.onTimetableCreated = function(e) {
+                        v.o.history.push(a.__assign({}, v.o.history.location, {
+                            pathname: v.o.history.location.pathname + "/" + e
+                        }))
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
@@ -18128,6 +18133,7 @@ webpackJsonp([94], {
                             e = i.createElement(U, {
                                 user: this.props.user,
                                 closeModal: this.closeModal,
+                                onCreate: this.onTimetableCreated,
                                 eventID: this.state.editableEventID
                             });
                             break;
@@ -19134,4 +19140,4 @@ webpackJsonp([94], {
             }
     }
 });
-//# sourceMappingURL=pages.dashboard-events-3968a15aa8f97863423b791ac2a852c3.js.map
+//# sourceMappingURL=pages.dashboard-events-11ebc643acec6e6eda7a63f679b34d14.js.map

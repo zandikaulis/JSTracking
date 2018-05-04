@@ -3294,6 +3294,14 @@ webpackJsonp([99], {
                                         kind: "Field",
                                         name: {
                                             kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
                                             value: "isLegacy"
                                         },
                                         arguments: [],
@@ -3307,11 +3315,11 @@ webpackJsonp([99], {
             }],
             loc: {
                 start: 0,
-                end: 255
+                end: 258
             }
         };
         n.loc.source = {
-            body: "query PayoutOnboardingAgreement_CurrentUser($withAgreement: Boolean!) {\ncurrentUser {\nid\nroles {\nisPartner\n}\npayoutPlans {\ncategory\nisReceivingRevenue\ntags\n}\nprogramAgreement @include(if: $withAgreement) {\ntype\nversion\nbody\n}\npayoutInvite {\nisLegacy\n}\n}\n}",
+            body: "query PayoutOnboardingAgreement_CurrentUser($withAgreement: Boolean!) {\ncurrentUser {\nid\nroles {\nisPartner\n}\npayoutPlans {\ncategory\nisReceivingRevenue\ntags\n}\nprogramAgreement @include(if: $withAgreement) {\ntype\nversion\nbody\n}\npayoutInvite {\nid\nisLegacy\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -7414,7 +7422,7 @@ webpackJsonp([99], {
             D = 18,
             j = 36,
             F = 72,
-            M = function(e) {
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7711,7 +7719,7 @@ webpackJsonp([99], {
                     configurable: !0
                 }), t
             }(r.Component),
-            L = Object(g.d)(Object(u.a)(R, {
+            M = Object(g.d)(Object(u.a)(R, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7721,7 +7729,7 @@ webpackJsonp([99], {
                 }
             }), Object(u.a)(x, {
                 name: "updateBadgeTierImages"
-            }))(M),
+            }))(L),
             U = n("GH+X"),
             B = function(e) {
                 var t = e.match;
@@ -7731,7 +7739,7 @@ webpackJsonp([99], {
                     linkToParent: "/" + t.params.channelName + "/dashboard/settings/revenue"
                 }), r.createElement(U.a, null, r.createElement(N, {
                     channelName: t.params.channelName
-                }), r.createElement(L, {
+                }), r.createElement(M, {
                     channelName: t.params.channelName
                 })))
             },
@@ -8282,7 +8290,8 @@ webpackJsonp([99], {
                         background: S.n.Alt
                     }, r.createElement(A.a, {
                         allowedFileTypes: [".png", ".gif"],
-                        onFilesSubmitted: this.onFilesSubmitted
+                        onFilesSubmitted: this.onFilesSubmitted,
+                        error: this.props.error
                     }, r.createElement(S._35, {
                         position: S._15.Absolute,
                         attachTop: !0,
@@ -8351,9 +8360,9 @@ webpackJsonp([99], {
                                     case 1:
                                         return a.trys.push([1, 3, , 4]), [4, ie(this.props.channelID, t)];
                                     case 2:
-                                        return r = a.sent(), this.props.onImageSubmitted(this.props.tier, e, r), [3, 4];
+                                        return r = a.sent(), this.props.onImageSubmitted(this.props.tier, e, r, de[n]), [3, 4];
                                     case 3:
-                                        return i = a.sent(), this.props.onImageSubmissionError(i), [3, 4];
+                                        return i = a.sent(), this.props.onImageSubmissionError("advanced", i), [3, 4];
                                     case 4:
                                         return [2]
                                 }
@@ -8363,22 +8372,24 @@ webpackJsonp([99], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
-                        t = this.props.images.map(function(t) {
-                            var n = de[t.dpiScale];
+                        t = this.props.errorDimension,
+                        n = this.props.images.map(function(n) {
+                            var a = de[n.dpiScale];
                             return r.createElement(S._8, {
-                                key: t.dpiScale,
+                                key: n.dpiScale,
                                 padding: {
                                     bottom: 1
                                 }
                             }, r.createElement(ae, {
                                 onImageSubmit: e.onImageSubmitted,
-                                dimension: n,
-                                dpiScale: t.dpiScale
-                            }, t ? r.createElement("img", {
-                                src: t.url,
-                                height: n,
-                                width: n
-                            }) : r.createElement(S._24, {
+                                dimension: a,
+                                dpiScale: n.dpiScale,
+                                error: !!e.props.uploadError && !!t && a === t
+                            }, n ? r.createElement("img", {
+                                src: n.url,
+                                height: a,
+                                width: a
+                            }) : e.props.uploadError ? r.createElement(S.Q, null, "this.props.uploadError") : r.createElement(S._24, {
                                 asset: S._25.Plus,
                                 height: 32,
                                 width: 32
@@ -8389,7 +8400,7 @@ webpackJsonp([99], {
                         display: S.R.Flex,
                         flexDirection: S.T.Row,
                         flexWrap: S.U.Wrap
-                    }, t)
+                    }, n)
                 }, t
             }(r.PureComponent),
             me = function(e) {
@@ -8432,9 +8443,9 @@ webpackJsonp([99], {
                                     case 1:
                                         return a.trys.push([1, 3, , 4]), [4, ie(this.props.channelID, t)];
                                     case 2:
-                                        return n = a.sent(), this.props.onImageSubmitted(this.props.tier, e, n), [3, 4];
+                                        return n = a.sent(), this.props.onImageSubmitted(this.props.tier, e, n, 112), [3, 4];
                                     case 3:
-                                        return r = a.sent(), this.props.onImageSubmissionError(r), [3, 4];
+                                        return r = a.sent(), this.props.onImageSubmissionError("simple", r), [3, 4];
                                     case 4:
                                         return [2]
                                 }
@@ -8445,12 +8456,13 @@ webpackJsonp([99], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(ae, {
                         onImageSubmit: this.onImageSubmitted,
-                        dimension: 112
+                        dimension: 112,
+                        error: !!this.props.uploadError
                     }, this.props.image ? r.createElement("img", {
                         src: this.props.image,
                         height: 112,
                         width: 112
-                    }) : r.createElement(S._24, {
+                    }) : this.props.uploadError ? r.createElement(S.Q, null, "this.props.uploadError") : r.createElement(S._24, {
                         asset: S._25.Plus,
                         height: 32,
                         width: 32
@@ -8513,15 +8525,15 @@ webpackJsonp([99], {
                     t.setState({
                         animation: n
                     })
-                }, t.onSimpleImageSubmitted = function(e, n, a) {
-                    t.uploadImageProgress(e, n, a, function(e, n) {
+                }, t.onSimpleImageSubmitted = function(e, n, a, r) {
+                    t.uploadImageProgress(e, n, a, se.Simple, r, function(e, n) {
                         t.props.onSimpleImageSubmitted(e, n)
                     })
-                }, t.onAdvancedImageUpload = function(e, n, a) {
-                    t.uploadImageProgress(e, n, a, function(e, n) {
+                }, t.onAdvancedImageUpload = function(e, n, a, r) {
+                    t.uploadImageProgress(e, n, a, se.Advanced, r, function(e, n) {
                         t.props.onAdvancedImageSubmitted(e, n[0])
                     })
-                }, t.uploadImageProgress = function(e, n, r, i) {
+                }, t.uploadImageProgress = function(e, n, r, i, o, s) {
                     t.unsubscribe = p.k.subscribe({
                         topic: Object(ne.t)(r.uploadID),
                         success: function() {
@@ -8532,7 +8544,9 @@ webpackJsonp([99], {
                                         case 0:
                                             return t.trys.push([0, 2, , 3]), this.setState({
                                                 uploading: !0,
-                                                loadingError: void 0
+                                                simpleLoadingError: void 0,
+                                                advancedLoadingError: void 0,
+                                                errorDimension: void 0
                                             }), [4, function(e, t) {
                                                 return a.__awaiter(this, void 0, void 0, function() {
                                                     var n;
@@ -8553,7 +8567,7 @@ webpackJsonp([99], {
                                         case 1:
                                             return t.sent(), [3, 3];
                                         case 2:
-                                            return e = t.sent(), this.onCreateUploadRequestError(e), [3, 3];
+                                            return e = t.sent(), this.onCreateUploadRequestError(i, e), [3, 3];
                                         case 3:
                                             return [2]
                                     }
@@ -8565,14 +8579,14 @@ webpackJsonp([99], {
                                 return a.__generator(this, function(t) {
                                     switch (n.status) {
                                         case te.a.COMPLETE:
-                                            i(e, r.imageURLs), this.setState({
+                                            s(e, r.imageURLs), this.setState({
                                                 uploading: !1
                                             }), this.unsubscribe && this.unsubscribe();
                                             break;
                                         case te.a.POSTPROCESS_COMPLETE:
                                             break;
                                         default:
-                                            this.handleImageUploadError(n.status), this.setState({
+                                            this.handleImageUploadError(n.status, i, o), this.setState({
                                                 uploading: !1
                                             }), this.unsubscribe && this.unsubscribe()
                                     }
@@ -8581,38 +8595,42 @@ webpackJsonp([99], {
                             })
                         }
                     })
-                }, t.handleImageUploadError = function(e) {
-                    var n;
+                }, t.handleImageUploadError = function(e, n, a) {
+                    var r;
                     switch (e) {
                         case te.a.FILE_SIZE_VALIDATION_FAILED:
-                            n = Object(p.d)("Please make sure you file is under 500kb", "CheermoteUploadArea");
+                            r = Object(p.d)("Please make sure you file is under 500kb", "CheermoteUploadArea");
                             break;
                         case te.a.IMAGE_FORMAT_VALIDATION_FAILED:
-                            n = Object(p.d)("Please make sure your image is the correct format for uploading", "CheermoteUploadArea");
+                            r = Object(p.d)("Please make sure your image is the correct format for uploading", "CheermoteUploadArea");
                             break;
                         case te.a.HEIGHT_VALIDATION_FAILED:
-                            n = Object(p.d)("Please ensure your image is the correct height for the dimension you are uploading", "CheermoteUploadArea");
-                            break;
                         case te.a.WIDTH_VALIDATION_FAILED:
-                            n = Object(p.d)("Please ensure your image is the correct width for the dimension you are uploading", "CheermoteUploadArea");
+                            r = Object(p.d)("Image must be {d} x {d}px", {
+                                d: a
+                            }, "CheermoteUploadArea");
                             break;
                         case te.a.ASPECT_RATIO_VALIDATION_FAILED:
-                            n = Object(p.d)("Please ensure your image has the correct aspect ratio for the dimension you are uploading", "CheermoteUploadArea");
+                            r = Object(p.d)("Please ensure your image has the correct aspect ratio for the dimension you are uploading", "CheermoteUploadArea");
                             break;
                         case te.a.FEATURE_SERVICE_FAILED:
-                            n = Object(p.d)("Failed to save new images. Please try again.", "CheermoteUploadArea");
+                            r = Object(p.d)("Failed to save new images. Please try again.", "CheermoteUploadArea");
                             break;
                         default:
-                            n = Object(p.d)("Something went wrong. Please try again", "CheermoteUploadArea")
+                            r = Object(p.d)("Something went wrong. Please try again", "CheermoteUploadArea")
                     }
                     t.setState({
-                        loadingError: n
+                        simpleLoadingError: n === se.Simple ? r : void 0,
+                        advancedLoadingError: n === se.Advanced ? r : void 0,
+                        errorDimension: a
                     })
-                }, t.onCreateUploadRequestError = function(e) {
+                }, t.onCreateUploadRequestError = function(e, n) {
+                    var a = Object(p.d)("An error occurred while creating upload request: {errorMsg}", {
+                        errorMsg: n.message
+                    }, "CheermoteUploadArea");
                     t.setState({
-                        loadingError: Object(p.d)("An error occurred while creating upload request: {errorMsg}", {
-                            errorMsg: e.message
-                        }, "CheermoteUploadArea")
+                        simpleLoadingError: e === se.Simple ? a : void 0,
+                        advancedLoadingError: e === se.Advanced ? a : void 0
                     })
                 }, t
             }
@@ -8673,7 +8691,8 @@ webpackJsonp([99], {
                     tier: this.props.uploadTier.bits,
                     image: n && n.url,
                     onImageSubmitted: this.onSimpleImageSubmitted,
-                    onImageSubmissionError: this.onCreateUploadRequestError
+                    onImageSubmissionError: this.onCreateUploadRequestError,
+                    uploadError: this.state.simpleLoadingError
                 }), this.state.uploadType === se.Advanced && r.createElement(ue, {
                     channelID: this.props.channelID,
                     images: t,
@@ -8681,8 +8700,10 @@ webpackJsonp([99], {
                     background: this.state.background,
                     animationType: this.state.animation,
                     onImageSubmitted: this.onAdvancedImageUpload,
-                    onImageSubmissionError: this.onCreateUploadRequestError
-                })), this.state.loadingError && r.createElement(S._35, {
+                    onImageSubmissionError: this.onCreateUploadRequestError,
+                    uploadError: this.state.advancedLoadingError,
+                    errorDimension: this.state.errorDimension
+                })), this.state.uploadType === se.Simple && this.state.simpleLoadingError && n && n.url && r.createElement(S._35, {
                     display: S.R.Flex,
                     alignItems: S.c.Center,
                     background: S.n.Alt,
@@ -8692,7 +8713,17 @@ webpackJsonp([99], {
                     }
                 }, r.createElement(S.Q, {
                     color: S.K.Error
-                }, this.state.loadingError)), n && r.createElement(S._8, {
+                }, this.state.simpleLoadingError)), this.state.uploadType === se.Advanced && this.state.advancedLoadingError && t.length && r.createElement(S._35, {
+                    display: S.R.Flex,
+                    alignItems: S.c.Center,
+                    background: S.n.Alt,
+                    padding: 1,
+                    margin: {
+                        top: 1
+                    }
+                }, r.createElement(S.Q, {
+                    color: S.K.Error
+                }, this.state.advancedLoadingError)), n && r.createElement(S._8, {
                     padding: {
                         top: 2
                     }
@@ -9048,7 +9079,7 @@ webpackJsonp([99], {
                 closeModal: Ne.c
             }, e)
         })(xe);
-        var je, Fe, Me, Le, Ue, Be, Ve, We, Qe = Object(Te.b)(null, function(e) {
+        var je, Fe, Le, Me, Ue, Be, Ve, We, Qe = Object(Te.b)(null, function(e) {
                 return Object(g.b)({
                     showAmendmentModal: function(e) {
                         var t = a.__rest(e, []);
@@ -9364,11 +9395,11 @@ webpackJsonp([99], {
 
         function lt(e, t) {
             if (!e || !t) return !1;
-            if (t.workflow.currentStep === Le.AGREEMENT_PENDING_UPGRADE) return !1;
+            if (t.workflow.currentStep === Me.AGREEMENT_PENDING_UPGRADE) return !1;
             var n = e.find(function(e) {
                 return e.category === je.PARTNER && e.isReceivingRevenue
             });
-            return !(!(n && n.tags && n.tags.includes(Fe.LEGACY) && t) || t.isLegacy) || !(n && n.tags && (n.tags.includes(Fe.STANDARD) || n.tags.includes(Fe.PREMIUM)) && t && t.category === Me.CUSTOM_PARTNER) && !!n
+            return !(!(n && n.tags && n.tags.includes(Fe.LEGACY) && t) || t.isLegacy) || !(n && n.tags && (n.tags.includes(Fe.STANDARD) || n.tags.includes(Fe.PREMIUM)) && t && t.category === Le.CUSTOM_PARTNER) && !!n
         }! function(e) {
             e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
         }(je || (je = {})),
@@ -9377,10 +9408,10 @@ webpackJsonp([99], {
         }(Fe || (Fe = {})),
         function(e) {
             e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
-        }(Me || (Me = {})),
+        }(Le || (Le = {})),
         function(e) {
             e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
-        }(Le || (Le = {})),
+        }(Me || (Me = {})),
         function(e) {
             e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
         }(Ue || (Ue = {})),
@@ -9883,8 +9914,8 @@ webpackJsonp([99], {
                     return jt(e)
                 })
             },
-            Mt = n("OjIq"),
-            Lt = (n("CRdy"), "https://static-cdn.jtvnw.net/badges/v1/19dd8673-124d-4f44-830c-b0f4f9d78635/2"),
+            Lt = n("OjIq"),
+            Mt = (n("CRdy"), "https://static-cdn.jtvnw.net/badges/v1/19dd8673-124d-4f44-830c-b0f4f9d78635/2"),
             Ut = "current-badge-image-selector",
             Bt = "current-badge-placeholder-selector",
             Vt = function(e) {
@@ -9903,7 +9934,7 @@ webpackJsonp([99], {
                                     }
                                     return this.renderCurrentBadgePlaceholder(t)
                                 } {
-                                    const e = this.renderToolTip(Object(p.d)("Subscriber", "LoyaltyBadgeCurrentSection"), Lt);
+                                    const e = this.renderToolTip(Object(p.d)("Subscriber", "LoyaltyBadgeCurrentSection"), Mt);
                                     return this.renderCurrentBadgeImage(t, e)
                                 }
                             });
@@ -9945,7 +9976,7 @@ webpackJsonp([99], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(Mt.a, {
+                    return r.createElement(Lt.a, {
                         title: Object(p.d)("Current Badges", "LoyaltyBadgeCurrentSection")
                     }, this.renderCurrentBadges())
                 }, t
@@ -10302,7 +10333,7 @@ webpackJsonp([99], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return r.createElement(Mt.a, {
+                    return r.createElement(Lt.a, {
                         title: Object(p.d)("Manage Badges", "LoyaltyBadgeManageSection")
                     }, this.state.isTimedOut ? r.createElement(Xt, null) : r.createElement(r.Fragment, null, this.renderTabs(), this.renderTabContent()))
                 }, t
@@ -10788,10 +10819,10 @@ webpackJsonp([99], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.data.loading) return r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._14, {
+                    if (this.props.data.loading) return r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(S._14, {
                         lineCount: 4
                     })));
-                    if (this.props.data.error) return r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(l.a, {
+                    if (this.props.data.error) return r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(l.a, {
                         message: Object(p.d)("Oops, something went wrong.", "PayoutOnboardingAgreement")
                     })));
                     var e = r.createElement(S.v, {
@@ -10804,7 +10835,7 @@ webpackJsonp([99], {
                     }, this.skipAgreement ? Object(p.d)("Next", "PayoutOnboardingAgreement") : Object(p.d)("Agree", "PayoutOnboardingAgreement"));
                     return r.createElement(U.a, {
                         footer: e
-                    }, r.createElement(Mt.a, null, r.createElement(S._35, {
+                    }, r.createElement(Lt.a, null, r.createElement(S._35, {
                         borderMarked: !0,
                         background: S.n.Base,
                         padding: 2,
@@ -11179,7 +11210,7 @@ webpackJsonp([99], {
                 configurable: !0
             }), t
         }(r.Component);
-        var Mn, Ln = Object(g.d)(Object(Te.b)(null, function(e) {
+        var Ln, Mn = Object(g.d)(Object(Te.b)(null, function(e) {
                 return Object(g.b)({
                     showPayoutMethodModal: function() {
                         return Object(Ne.d)(jn, null)
@@ -11199,7 +11230,7 @@ webpackJsonp([99], {
             };
         ! function(e) {
             e.FIRST_NAME = "contact-info__first-name", e.MIDDLE_NAME = "contact-info__middle-name", e.LAST_NAME = "contact-info__last-name", e.EMAIL = "contact-info__email", e.CONFIRM_EMAIL = "contact-info__confirm-email", e.COMPANY_LEGAL_NAME = "contact-info__company-legal-name"
-        }(Mn || (Mn = {}));
+        }(Ln || (Ln = {}));
         var Yn, Gn = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
@@ -11292,7 +11323,7 @@ webpackJsonp([99], {
                     orientation: S.X.Horizontal,
                     error: !Un.test(this.state.firstName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Mn.FIRST_NAME
+                    "data-test-selector": Ln.FIRST_NAME
                 }, r.createElement(S._4, {
                     autoFocus: !0,
                     type: S._5.Text,
@@ -11309,7 +11340,7 @@ webpackJsonp([99], {
                     orientation: S.X.Horizontal,
                     error: !Un.test(this.state.middleName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Mn.MIDDLE_NAME
+                    "data-test-selector": Ln.MIDDLE_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.middleName,
@@ -11325,7 +11356,7 @@ webpackJsonp([99], {
                     orientation: S.X.Horizontal,
                     error: !Un.test(this.state.lastName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Mn.LAST_NAME
+                    "data-test-selector": Ln.LAST_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.lastName,
@@ -11349,7 +11380,7 @@ webpackJsonp([99], {
                     orientation: S.X.Horizontal,
                     error: !!this.state.email && !Bn.test(this.state.email) && this.state.showEmailErrors,
                     errorMessage: this.invalidEmailErrorMessage,
-                    "data-test-selector": Mn.EMAIL
+                    "data-test-selector": Ln.EMAIL
                 }, r.createElement(S._4, {
                     type: S._5.Email,
                     value: this.state.email,
@@ -11366,7 +11397,7 @@ webpackJsonp([99], {
                     orientation: S.X.Horizontal,
                     error: this.state.email !== this.state.confirmEmail && this.state.showEmailErrors,
                     errorMessage: Object(p.d)("Email addresses must match.", "ContactInfo"),
-                    "data-test-selector": Mn.CONFIRM_EMAIL
+                    "data-test-selector": Ln.CONFIRM_EMAIL
                 }, r.createElement(S._4, {
                     type: S._5.Email,
                     value: this.state.confirmEmail,
@@ -11380,7 +11411,7 @@ webpackJsonp([99], {
                     orientation: S.X.Horizontal,
                     error: !Un.test(this.state.companyName),
                     errorMessage: this.invalidFormatErrorMessage,
-                    "data-test-selector": Mn.COMPANY_LEGAL_NAME
+                    "data-test-selector": Ln.COMPANY_LEGAL_NAME
                 }, r.createElement(S._4, {
                     type: S._5.Text,
                     value: this.state.companyName,
@@ -12159,7 +12190,7 @@ webpackJsonp([99], {
                     }, Object(p.d)("Continue", "PayoutOnboardingRegistration"));
                     return r.createElement(U.a, {
                         footer: e
-                    }, r.createElement(Mt.a, null, r.createElement(ia, {
+                    }, r.createElement(Lt.a, null, r.createElement(ia, {
                         onboardEntity: this.props.onboardEntity
                     })), r.createElement(vn, {
                         title: Object(p.d)("Contact Info", "PayoutOnboardingRegistration")
@@ -12303,10 +12334,10 @@ webpackJsonp([99], {
             Fa = function() {
                 return Object(p.d)("Payout Setup", "PayoutOnboardingContainer")
             },
-            Ma = function() {
+            La = function() {
                 return Object(p.d)("Choose your payout method.", "PayoutOnboardingContainer")
             },
-            La = ((ca = {})[Ke.OnboardStep.Summary] = {
+            Ma = ((ca = {})[Ke.OnboardStep.Summary] = {
                 title: (da = {}, da[Ke.OnboardEntity.Affiliate] = function() {
                     return Object(p.d)("Affiliate Onboarding", "PayoutOnboardingContainer")
                 }, da[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
@@ -12411,15 +12442,15 @@ webpackJsonp([99], {
                     return Fa()
                 }, Ea),
                 description: (va = {}, va[Ke.OnboardEntity.Affiliate] = function() {
-                    return Ma()
+                    return La()
                 }, va[Ke.OnboardEntity.ExtensionsDeveloper] = function() {
                     return Object(p.d)("Submit your financial information.", "PayoutOnboardingContainer")
                 }, va[Ke.OnboardEntity.StandardPartner] = function() {
-                    return Ma()
+                    return La()
                 }, va[Ke.OnboardEntity.PremiumPartner] = function() {
-                    return Ma()
+                    return La()
                 }, va[Ke.OnboardEntity.CustomPartner] = function() {
-                    return Ma()
+                    return La()
                 }, va)
             }, ca[Ke.OnboardStep.Review] = {
                 title: (ya = {}, ya[Ke.OnboardEntity.CustomPartner] = function() {
@@ -12598,7 +12629,7 @@ webpackJsonp([99], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(U.a, null, r.createElement(Mt.a, null, this.isRegistrationComplete && r.createElement(Ga, {
+                    return r.createElement(U.a, null, r.createElement(Lt.a, null, this.isRegistrationComplete && r.createElement(Ga, {
                         workflowState: this.props.workflow.currentStep,
                         onboardEntity: this.props.onboardEntity,
                         updateStepDisplayed: this.props.updateStepDisplayed,
@@ -12677,7 +12708,7 @@ webpackJsonp([99], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step1Title", {
                     get: function() {
-                        return $a(Object(p.e)(1), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.Registration].title[this.props.onboardEntity]())
+                        return $a(Object(p.e)(1), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.Registration].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
@@ -12695,7 +12726,7 @@ webpackJsonp([99], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step2Title", {
                     get: function() {
-                        return $a(Object(p.e)(2), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.Agreement].title[this.props.onboardEntity]())
+                        return $a(Object(p.e)(2), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.Agreement].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
@@ -12724,7 +12755,7 @@ webpackJsonp([99], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step3Title", {
                     get: function() {
-                        return $a(Object(p.e)(3), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.TaxInterview].title[this.props.onboardEntity]())
+                        return $a(Object(p.e)(3), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.TaxInterview].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
@@ -12781,7 +12812,7 @@ webpackJsonp([99], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step4Title", {
                     get: function() {
-                        return $a(Object(p.e)(4), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.PayoutMethod].title[this.props.onboardEntity]())
+                        return $a(Object(p.e)(4), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.PayoutMethod].title[this.props.onboardEntity]())
                     },
                     enumerable: !0,
                     configurable: !0
@@ -12800,7 +12831,7 @@ webpackJsonp([99], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "step5Title", {
                     get: function() {
-                        return this.props.onboardEntity === Ke.OnboardEntity.CustomPartner ? $a(Object(p.e)(5), Object(p.e)(this.numOfTotalSteps), La[Ke.OnboardStep.Review].title[this.props.onboardEntity]()) : ""
+                        return this.props.onboardEntity === Ke.OnboardEntity.CustomPartner ? $a(Object(p.e)(5), Object(p.e)(this.numOfTotalSteps), Ma[Ke.OnboardStep.Review].title[this.props.onboardEntity]()) : ""
                     },
                     enumerable: !0,
                     configurable: !0
@@ -13717,13 +13748,13 @@ webpackJsonp([99], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.data.loading ? r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._14, {
+                    return this.props.data.loading ? r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(S._14, {
                         lineCount: 4
-                    }))) : this.props.data.error ? r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(l.a, {
+                    }))) : this.props.data.error ? r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(l.a, {
                         message: Object(p.d)("Oops, something went wrong.", "RequireTwoFactorEnabled")
-                    }))) : this.hasTwoFactorEnabled ? r.createElement(r.Fragment, null, this.props.children) : r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S.Q, a.__assign({
+                    }))) : this.hasTwoFactorEnabled ? r.createElement(r.Fragment, null, this.props.children) : r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(S.Q, a.__assign({
                         type: S._49.P
-                    }, yr), this.props.enableTwoFactorMessage)), r.createElement(Mt.a, null, r.createElement(s.a, {
+                    }, yr), this.props.enableTwoFactorMessage)), r.createElement(Lt.a, null, r.createElement(s.a, {
                         to: "/settings/security"
                     }, r.createElement(S.v, null, Object(p.d)("Enable Two-Factor Authentication", "RequireTwoFactorEnabled")))))
                 }, Object.defineProperty(t.prototype, "hasTwoFactorEnabled", {
@@ -13927,17 +13958,17 @@ webpackJsonp([99], {
                     configurable: !0
                 }), t.prototype.render = function() {
                     if (this.props.data.loading) return r.createElement(r.Fragment, null, r.createElement(h.a, {
-                        title: La[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
-                        description: La[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
+                        title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                        description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                         linkToParent: this.backLinkURL
-                    }), r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._14, {
+                    }), r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(S._14, {
                         lineCount: 4
                     }))));
                     if (this.props.data.error) return r.createElement(r.Fragment, null, r.createElement(h.a, {
-                        title: La[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
-                        description: La[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
+                        title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                        description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                         linkToParent: this.backLinkURL
-                    }), r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(l.a, {
+                    }), r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(l.a, {
                         message: Object(p.d)("Oops, something went wrong.", "PayoutOnboardingContainer")
                     }))));
                     var e = this.props.onboardEntity,
@@ -13945,10 +13976,10 @@ webpackJsonp([99], {
                         n = this.props.data.currentUser.payoutInvite.workflow,
                         i = this.updateContainerQuery;
                     if (!n || n.currentStep === Ke.WorkflowState.CANCELED) return this.startWorkflow(), r.createElement(r.Fragment, null, r.createElement(h.a, {
-                        title: La[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
-                        description: La[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
+                        title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                        description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                         linkToParent: this.backLinkURL
-                    }), r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._14, {
+                    }), r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(S._14, {
                         lineCount: 4
                     }))));
                     var o, s = {
@@ -13960,8 +13991,8 @@ webpackJsonp([99], {
                     switch (this.state.stepDisplayed) {
                         case Ke.OnboardStep.Summary:
                             return r.createElement(r.Fragment, null, r.createElement(h.a, {
-                                title: La[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
-                                description: La[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
+                                title: Ma[Ke.OnboardStep.Summary].title[this.props.onboardEntity](),
+                                description: Ma[Ke.OnboardStep.Summary].description[this.props.onboardEntity](),
                                 linkToParent: this.backLinkURL
                             }), r.createElement(kr, {
                                 enableTwoFactorMessage: this.enableTwoFactorMessage
@@ -13986,7 +14017,7 @@ webpackJsonp([99], {
                             o = r.createElement(Er, a.__assign({}, s, c));
                             break;
                         case Ke.OnboardStep.PayoutMethod:
-                            o = r.createElement(Ln, a.__assign({}, s));
+                            o = r.createElement(Mn, a.__assign({}, s));
                             break;
                         case Ke.OnboardStep.Review:
                             o = r.createElement(Aa, a.__assign({}, s))
@@ -13995,9 +14026,9 @@ webpackJsonp([99], {
                         title: Object(p.d)("Step {numOfCurrentStep} of {numOfTotalSteps}: {stepTitle}", {
                             numOfCurrentStep: Object(p.e)(this.state.stepDisplayed),
                             numOfTotalSteps: Object(p.e)(this.totalSteps),
-                            stepTitle: La[this.state.stepDisplayed].title[this.props.onboardEntity]()
+                            stepTitle: Ma[this.state.stepDisplayed].title[this.props.onboardEntity]()
                         }, "PayoutOnboardingContainer"),
-                        description: La[this.state.stepDisplayed].description[this.props.onboardEntity](),
+                        description: Ma[this.state.stepDisplayed].description[this.props.onboardEntity](),
                         onClick: this.goBackToSummary
                     }), r.createElement(kr, {
                         enableTwoFactorMessage: this.enableTwoFactorMessage
@@ -14053,8 +14084,8 @@ webpackJsonp([99], {
                 }), t
             }(r.Component),
             Fr = Object(i.compose)(Object(u.a)(Dr))(jr),
-            Mr = n("17w3"),
-            Lr = (n("mHbH"), function(e) {
+            Lr = n("17w3"),
+            Mr = (n("mHbH"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -14074,7 +14105,7 @@ webpackJsonp([99], {
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(kr, {
                         enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to change your payout method.", "PayoutSettingsPage")
-                    }, r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(wn, {
+                    }, r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(wn, {
                         tipaltiURL: this.tipaltiURL
                     }))))) : r.createElement(c.a, null)
                 }, Object.defineProperty(t.prototype, "isOnboardingComplete", {
@@ -14091,7 +14122,7 @@ webpackJsonp([99], {
                     configurable: !0
                 }), t
             }(r.Component)),
-            Ur = Object(i.compose)(Object(u.a)(Mr))(Lr),
+            Ur = Object(i.compose)(Object(u.a)(Lr))(Mr),
             Br = n("vBst"),
             Vr = function(e) {
                 function t() {
@@ -14350,7 +14381,7 @@ webpackJsonp([99], {
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(kr, {
                         enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to accept your agreement.", "UpgradeTermsPage")
-                    }, r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._35, {
+                    }, r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(S._35, {
                         borderMarked: !0,
                         padding: 2,
                         elevation: 1
@@ -14462,7 +14493,7 @@ webpackJsonp([99], {
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
                     }), r.createElement(kr, {
                         enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to view your agreement.", "ViewTermsPage")
-                    }, r.createElement(U.a, null, r.createElement(Mt.a, null, r.createElement(S._35, {
+                    }, r.createElement(U.a, null, r.createElement(Lt.a, null, r.createElement(S._35, {
                         borderMarked: !0,
                         padding: 2,
                         elevation: 1
@@ -14491,8 +14522,8 @@ webpackJsonp([99], {
                         var e = this.props.data.currentUser;
                         if (!e || !e.payoutInvite) return null;
                         var t = e.payoutInvite;
-                        if (t.isLegacy || t.category === Me.CUSTOM_PARTNER) return r.createElement(Kr, null);
-                        if (t.category === Me.STANDARD_PARTNER || t.category === Me.PREMIUM_PARTNER) {
+                        if (t.isLegacy || t.category === Le.CUSTOM_PARTNER) return r.createElement(Kr, null);
+                        if (t.category === Le.STANDARD_PARTNER || t.category === Le.PREMIUM_PARTNER) {
                             var n = this.props.data.currentUser && this.props.data.currentUser.programAgreement;
                             return n && r.createElement(kn, {
                                 body: n.body
@@ -14622,4 +14653,4 @@ webpackJsonp([99], {
         })
     }
 });
-//# sourceMappingURL=pages.dashboard-revenue-settings-7326cec4d0879ea229adcf927cbbd488.js.map
+//# sourceMappingURL=pages.dashboard-revenue-settings-aa6fabd01e519f1fd93948399420caab.js.map

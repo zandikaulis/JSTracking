@@ -425,10 +425,10 @@ webpackJsonp([57], {
                     }, i.createElement(u.a, null)))))))), i.createElement(S, null))))
                 }, t
             }(i.Component)),
-            I = Object(p.d)("PrimeTopNav", {
+            P = Object(p.d)("PrimeTopNav", {
                 autoReportInteractive: !0
             })(x),
-            P = c.a.wrap(function() {
+            I = c.a.wrap(function() {
                 return n.e(114).then(n.bind(null, "o0He"))
             }, "TwitchPrimeOffersPage"),
             T = c.a.wrap(function() {
@@ -438,7 +438,7 @@ webpackJsonp([57], {
                 return n.e(112).then(n.bind(null, "Uen5"))
             }, "TwitchPrimeLinkingPage"),
             L = c.a.wrap(function() {
-                return n.e(110).then(n.bind(null, "HnrI"))
+                return n.e(109).then(n.bind(null, "HnrI"))
             }, "TwitchPrimeFortnitePage"),
             R = function(e) {
                 function t() {
@@ -451,7 +451,7 @@ webpackJsonp([57], {
                         display: E.R.Flex,
                         flexDirection: E.T.Column,
                         position: E._15.Relative
-                    }, i.createElement(I, null), i.createElement(E._2, {
+                    }, i.createElement(P, null), i.createElement(E._2, {
                         position: E._15.Relative,
                         flexGrow: 1,
                         fullHeight: !0,
@@ -474,7 +474,7 @@ webpackJsonp([57], {
                         component: L
                     }), i.createElement(s.d, {
                         path: "/prime",
-                        component: P
+                        component: I
                     })))))) : (window.location.replace("https://twitch.amazon.com/prime?ref_=SM_OW_DT"), null)
                 }, t
             }(i.Component),
@@ -807,7 +807,10 @@ webpackJsonp([57], {
                             var n = (e.primeOffers || []).map(function(e) {
                                 return "" + e.id
                             });
-                            t.updateOfferStatus(), Object(b.l)(n)
+                            Object(y.k)({
+                                hasPrime: t.hasPrime(),
+                                numberOfOffers: n.length
+                            }), t.updateOfferStatus(), Object(b.l)(n)
                         }
                     }, t.updateOfferStatus = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
@@ -966,8 +969,8 @@ webpackJsonp([57], {
                     firstPageLoaded: !!e.session.firstPageLoaded
                 }
             })(S),
-            I = n("lfvs"),
-            P = n("Hs3O"),
+            P = n("lfvs"),
+            I = n("Hs3O"),
             T = (n("ukY1"), n("F1v6")),
             w = function(e) {
                 function t() {
@@ -982,10 +985,10 @@ webpackJsonp([57], {
                         t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
                     if (!Object(b.m)(e, t)) return null;
                     if (this.props.data.loading) return null;
-                    var n = Object(P.d)(P.a, ""),
+                    var n = Object(I.d)(I.a, ""),
                         r = Object(c.d)("Twitch Prime", "BlueBar"),
                         i = s.createElement("span", null, Object(c.d)("Free loot every month, plus exclusives and surprises, ad-free viewing, and loads more.", "BlueBar")),
-                        a = Object(P.d)(P.a, ""),
+                        a = Object(I.d)(I.a, ""),
                         o = Object(c.d)("Start Your Free Trial", "BlueBar");
                     if (!this.props.data.loading && !this.props.data.error) {
                         var l = this.props.data;
@@ -995,7 +998,7 @@ webpackJsonp([57], {
                                     n = e.externalURL, r = e.text;
                                     break;
                                 case "twitch.prime.bluebar.center1":
-                                    i = s.createElement(I, {
+                                    i = s.createElement(P, {
                                         source: e.text,
                                         renderers: {
                                             Link: function(e) {
@@ -1016,6 +1019,7 @@ webpackJsonp([57], {
                     return s.createElement(v._35, {
                         color: v.K.Base,
                         className: "blue-bar",
+                        "data-a-target": "blue-bar",
                         position: v._15.Relative,
                         fullWidth: !0,
                         zIndex: v._62.Above
@@ -1058,6 +1062,7 @@ webpackJsonp([57], {
                         }
                     }, s.createElement("a", {
                         className: "blue-bar__link",
+                        "data-a-target": "blue-bar__link",
                         href: n,
                         target: "_blank",
                         rel: "noopener noreferrer"
@@ -1673,14 +1678,14 @@ webpackJsonp([57], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClick = function() {
-                        Object(v.k)({
+                        Object(v.l)({
                             offerID: t.props.offerID,
                             externalURL: t.getLink(),
                             hasPrime: !1,
                             index: t.props.index
                         })
                     }, t.onHover = function() {
-                        Object(v.l)({
+                        Object(v.m)({
                             offerID: t.props.offerID,
                             externalURL: t.getLink(),
                             hasPrime: !1,
@@ -1759,8 +1764,8 @@ webpackJsonp([57], {
                     })
                 }, t
             }(a.Component),
-            I = Object(o.compose)(Object(c.a)(S), Object(p.d)("PrimeInstructions"))(x),
-            P = n("dnng"),
+            P = Object(o.compose)(Object(c.a)(S), Object(p.d)("PrimeInstructions"))(x),
+            I = n("dnng"),
             T = (n("nFc2"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -2077,7 +2082,7 @@ webpackJsonp([57], {
                             i = t.props.data || {};
                         if (t.state.error) {
                             var o = t.getErrorType();
-                            return a.createElement(P.a, {
+                            return a.createElement(I.a, {
                                 fontSize: u.V.Size6,
                                 testTarget: "prime-offer-error",
                                 errorType: o
@@ -2092,7 +2097,7 @@ webpackJsonp([57], {
                                 orientation: t.props.orientation
                             })
                         }
-                        return a.createElement(I, {
+                        return a.createElement(P, {
                             offerID: e.id,
                             offerDescription: e.description,
                             offerType: e.deliveryMethod,
@@ -2546,8 +2551,15 @@ webpackJsonp([57], {
                 user_agent: navigator.userAgent
             })
         }, t.k = function(e) {
-            u(e, i.Click, a.StartYourFreeTrial)
+            s.n.track(l.SpadeEventType.CrownInteraction, {
+                has_prime: e.hasPrime,
+                client_time: Date.now(),
+                number_of_offers: e.numberOfOffers,
+                user_agent: navigator.userAgent
+            })
         }, t.l = function(e) {
+            u(e, i.Click, a.StartYourFreeTrial)
+        }, t.m = function(e) {
             u(e, i.Hover, a.StartYourFreeTrial)
         }, t.g = function(e, t) {
             u(t, i.Click, e ? a.MoreInfo : a.CloseInfo)
@@ -3354,4 +3366,4 @@ webpackJsonp([57], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.prime-e0f771ab363dd49f5a21b89cfcd6dd5b.js.map
+//# sourceMappingURL=pages.prime-20657f9f68852a2d1691c931b089012d.js.map

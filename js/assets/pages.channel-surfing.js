@@ -14236,6 +14236,11 @@ webpackJsonp([95], {
                     n.props.activeChatters.isDirty && n.setState({
                         chatMembers: n.props.activeChatters.getActiveChatters()
                     })
+                }, n.incrementAndHideAutomodTooltipCounter = function() {
+                    var e = o.l.get("automodChatCogTooltipSeenNumTimes", 0) + 1;
+                    o.l.set("automodChatCogTooltipSeenNumTimes", e), n.setState({
+                        showAutomodSettingsTooltip: !1
+                    })
                 }, n.setChatInputRef = function(e) {
                     return n.chatInputRef = e
                 }, n.setAutocompleteInputRef = function(e) {
@@ -14580,11 +14585,6 @@ webpackJsonp([95], {
                 }, t)
             }, t.prototype.renderChatCogTooltips = function() {
                 return this.state.showRaidsSettingsTooltip ? i.createElement(kt, null) : this.state.showAutomodSettingsTooltip && Object(Nt.a)() ? i.createElement(vt, null) : null
-            }, t.prototype.incrementAndHideAutomodTooltipCounter = function() {
-                var e = o.l.get("automodChatCogTooltipSeenNumTimes", 0) + 1;
-                o.l.set("automodChatCogTooltipSeenNumTimes", e), this.setState({
-                    showAutomodSettingsTooltip: !1
-                })
             }, t.prototype.sendRegularMessage = function() {
                 this.props.onSendMessage && this.props.onSendMessage(this.state.value) && (this.trackChatEvent(), this.trackMentions(), this.autocompleteInputRef.setValue(""), this.setState({
                     showCard: st.None
@@ -21948,4 +21948,4 @@ webpackJsonp([95], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-surfing-0ba6f0c9e88fb99c141119134e4a667d.js.map
+//# sourceMappingURL=pages.channel-surfing-008fd1eed2d56e6f104468800bc480cb.js.map

@@ -26421,6 +26421,11 @@ webpackJsonp([89], {
                     n.props.activeChatters.isDirty && n.setState({
                         chatMembers: n.props.activeChatters.getActiveChatters()
                     })
+                }, n.incrementAndHideAutomodTooltipCounter = function() {
+                    var e = s.l.get("automodChatCogTooltipSeenNumTimes", 0) + 1;
+                    s.l.set("automodChatCogTooltipSeenNumTimes", e), n.setState({
+                        showAutomodSettingsTooltip: !1
+                    })
                 }, n.setChatInputRef = function(e) {
                     return n.chatInputRef = e
                 }, n.setAutocompleteInputRef = function(e) {
@@ -26765,11 +26770,6 @@ webpackJsonp([89], {
                 }, t)
             }, t.prototype.renderChatCogTooltips = function() {
                 return this.state.showRaidsSettingsTooltip ? a.createElement(kt, null) : this.state.showAutomodSettingsTooltip && Object(wt.a)() ? a.createElement(bt, null) : null
-            }, t.prototype.incrementAndHideAutomodTooltipCounter = function() {
-                var e = s.l.get("automodChatCogTooltipSeenNumTimes", 0) + 1;
-                s.l.set("automodChatCogTooltipSeenNumTimes", e), this.setState({
-                    showAutomodSettingsTooltip: !1
-                })
             }, t.prototype.sendRegularMessage = function() {
                 this.props.onSendMessage && this.props.onSendMessage(this.state.value) && (this.trackChatEvent(), this.trackMentions(), this.autocompleteInputRef.setValue(""), this.setState({
                     showCard: ot.None
@@ -30612,7 +30612,7 @@ webpackJsonp([89], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = Object(g.d)("delete", "RerunVideoRow");
-                    if (!this.props.queueItem || !this.props.queueItem.video) return r.createElement("div", {
+                    if (!this.props.queueItem || !this.props.queueItem.video) return this.props.connectDropTarget(r.createElement("div", {
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave
                     }, r.createElement(k._8, {
@@ -30634,7 +30634,7 @@ webpackJsonp([89], {
                         ariaLabel: e,
                         icon: k._25.Close,
                         onClick: this.onRemoveVideo
-                    })));
+                    }))));
                     var t = Object(g.c)(new Date(this.props.queueItem.video.publishedAt || this.props.queueItem.video.recordedAt || ""), "medium"),
                         n = Object(g.d)("Published on {publishedAt}", {
                             publishedAt: t
@@ -30646,7 +30646,7 @@ webpackJsonp([89], {
                         o = t + " · " + i + " · " + a,
                         s = Pe(this.props.vodcastState, this.props.collectionID, this.props.queueItem.video.id),
                         l = n + " · " + this.props.queueItem.video.broadcastType + " · " + a,
-                        d = !this.props.isDragging && this.props.draggingItem;
+                        d = this.props.draggingItem && this.props.draggingItem.id !== this.props.queueItem.itemID;
                     return this.props.connectDropTarget(this.props.connectDragPreview(r.createElement("div", {
                         className: this.props.isDragging ? "dragging" : "",
                         onMouseEnter: this.onMouseEnter,
@@ -41464,4 +41464,4 @@ webpackJsonp([89], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.live-ca72cae7b153d6d32e802375be530484.js.map
+//# sourceMappingURL=pages.live-cff2495e4a253ebfed9fedfc775f107b.js.map

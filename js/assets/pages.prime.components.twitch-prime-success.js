@@ -8,7 +8,7 @@ webpackJsonp([97], {
             c = n("Odds");
         n("JhPt");
         ! function(e) {
-            e.Default = "default", e.Large = "large"
+            e.Default = "default", e.Medium = "medium", e.Large = "large"
         }(r || (r = {})),
         function(e) {
             e.Default = "default", e.Brand = "brand"
@@ -33,6 +33,8 @@ webpackJsonp([97], {
                     }),
                     p = o({
                         "esports-square__svg--large": this.props.size === r.Large
+                    }, {
+                        "esports-square__svg--medium": this.props.size === r.Medium
                     }),
                     m = 59,
                     h = 0;
@@ -2759,7 +2761,7 @@ webpackJsonp([97], {
                 return r
             }),
             function(e) {
-                e.Individual = "INDIVIDUAL", e.Team = "TEAM", e.Global = "GLOBAL", e.Insider = "INSIDER", e.Bits = "BITS"
+                e.Individual = "INDIVIDUAL", e.Team = "TEAM", e.Global = "GLOBAL", e.Insider = "INSIDER"
             }(r || (r = {}))
     },
     "6WAQ": function(e, t, n) {
@@ -4301,7 +4303,7 @@ webpackJsonp([97], {
                         className: "twitch-prime-streamers__game-page",
                         textAlign: k._45.Center
                     }, i.createElement(k.O, {
-                        to: "/game/directory/fortnite",
+                        to: "/directory/game/Fortnite",
                         hoverUnderlineNone: !1,
                         type: k.P.Default
                     }, Object(s.d)("View more Fortnite on Twitch.tv >", "TwitchPrimeStreamers"))))
@@ -15506,4 +15508,4 @@ webpackJsonp([97], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-24395434e705f24611dc2963986f7221.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-871d623c87c90918943a628ed1355b53.js.map

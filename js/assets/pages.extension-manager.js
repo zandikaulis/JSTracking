@@ -3180,7 +3180,7 @@ webpackJsonp([108], {
                         hasCardImageError: !1
                     }, n.renderAnchorTypePills = function() {
                         var e = n.props.extension,
-                            t = Object(T.e)(e).map(function(e) {
+                            t = Object(T.e)(e.views).map(function(e) {
                                 return l.createElement(u._8, {
                                     key: e,
                                     display: u.R.InlineBlock,
@@ -3191,7 +3191,7 @@ webpackJsonp([108], {
                                     anchorType: e
                                 }))
                             });
-                        return Object(T.f)(e).includes(g.ExtensionPlatform.Mobile) && t.push(l.createElement(u._8, {
+                        return Object(T.f)(e.views).includes(g.ExtensionPlatform.Mobile) && t.push(l.createElement(u._8, {
                             key: "mobile",
                             display: u.R.InlineBlock,
                             padding: {
@@ -3275,19 +3275,21 @@ webpackJsonp([108], {
                         t = n.isInstalled,
                         i = n.isChannelCheeringEnabled,
                         a = n.extension,
-                        r = Object(m.d)("Install", "AvailableExtensionCard");
+                        r = a.clientID,
+                        s = a.version,
+                        o = Object(m.d)("Install", "AvailableExtensionCard");
                     if (a.state === T.c.Released && a.isBitsEnabled && !i) {
-                        var s = Object(m.d)("This extension can only be used by Partner or Affiliate channels that have Bits enabled.", "AvailableExtensionCard");
+                        var d = Object(m.d)("This extension can only be used by Partner or Affiliate channels that have Bits enabled.", "AvailableExtensionCard");
                         e = l.createElement(u._52, {
-                            label: s,
+                            label: d,
                             direction: u._54.Left
                         }, l.createElement(u.v, {
                             onClick: this.onInstall,
                             disabled: !0
-                        }, r))
+                        }, o))
                     } else e = l.createElement(u.v, {
                         onClick: this.onInstall
-                    }, r);
+                    }, o);
                     return l.createElement(u._35, {
                         display: u.R.Flex,
                         flexWrap: u.U.NoWrap,
@@ -3339,7 +3341,7 @@ webpackJsonp([108], {
                             y: 1
                         }
                     }, l.createElement(q.a, {
-                        to: Object(z.c)(a)
+                        to: Object(z.c)(r, s)
                     }, l.createElement(u.v, {
                         type: u.B.Hollow
                     }, Object(m.d)("Details", "AvailableExtensionCard"))), l.createElement(u._8, {
@@ -3513,21 +3515,22 @@ webpackJsonp([108], {
                         var e = n.props,
                             t = e.installedExtension,
                             i = e.availableSlots,
-                            a = Object(T.e)(n.props.installedExtension.extension),
-                            r = [];
-                        if (a.includes(T.b.Component)) {
-                            var s = n.renderComponentAnchorOptions(i);
-                            s.length && r.push(s)
+                            a = t.extension.views,
+                            r = Object(T.e)(a),
+                            s = [];
+                        if (r.includes(T.b.Component)) {
+                            var o = n.renderComponentAnchorOptions(i);
+                            o.length && s.push(o)
                         }
-                        if (a.includes(T.b.VideoOverlay)) {
-                            var o = n.renderOverlayAnchorOptions(i);
-                            o.length && r.push(o)
+                        if (r.includes(T.b.VideoOverlay)) {
+                            var d = n.renderOverlayAnchorOptions(i);
+                            d.length && s.push(d)
                         }
-                        if (a.includes(T.b.Panel)) {
-                            var d = n.renderPanelAnchorOptions(i);
-                            d.length && r.push(d)
+                        if (r.includes(T.b.Panel)) {
+                            var c = n.renderPanelAnchorOptions(i);
+                            c.length && s.push(c)
                         }
-                        return t.activationConfig.state === T.a.Active && r.push(n.renderDeactivate()), r.reduce(function(e, n, t) {
+                        return t.activationConfig.state === T.a.Active && s.push(n.renderDeactivate()), s.reduce(function(e, n, t) {
                             var i = l.createElement(u._35, {
                                 key: t,
                                 borderTop: !0,
@@ -3676,7 +3679,10 @@ webpackJsonp([108], {
                 return i.__extends(n, e), n.prototype.render = function() {
                     var e = this.props,
                         n = e.installedExtension,
-                        t = e.channelName;
+                        t = e.channelName,
+                        i = n.extension,
+                        a = i.clientID,
+                        r = i.version;
                     return l.createElement(u._8, {
                         padding: 1,
                         display: u.R.Flex,
@@ -3686,7 +3692,7 @@ webpackJsonp([108], {
                         display: u.R.Flex,
                         flexWrap: u.U.NoWrap
                     }, l.createElement(q.a, {
-                        to: Object(z.a)(t, n.extension)
+                        to: Object(z.a)(t, a, r)
                     }, l.createElement(u.w, {
                         ariaLabel: Object(m.d)("Configure", "InstalledExtensionActions"),
                         icon: u._25.Gear
@@ -3704,7 +3710,7 @@ webpackJsonp([108], {
                         hasCardImageError: !1
                     }, n.renderAnchorTypePills = function() {
                         var e = n.props.installedExtension.extension,
-                            t = Object(T.e)(e).map(function(e) {
+                            t = Object(T.e)(e.views).map(function(e) {
                                 return l.createElement(u._8, {
                                     key: e,
                                     display: u.R.InlineBlock,
@@ -3715,7 +3721,7 @@ webpackJsonp([108], {
                                     anchorType: e
                                 }))
                             });
-                        return Object(T.f)(e).includes(g.ExtensionPlatform.Mobile) && t.push(l.createElement(u._8, {
+                        return Object(T.f)(e.views).includes(g.ExtensionPlatform.Mobile) && t.push(l.createElement(u._8, {
                             key: "mobile",
                             display: u.R.InlineBlock,
                             padding: {
@@ -3758,7 +3764,7 @@ webpackJsonp([108], {
                     }), l.createElement(u.D, null, l.createElement(u._8, {
                         padding: 1
                     }, l.createElement(q.a, {
-                        to: Object(z.c)(d)
+                        to: Object(z.c)(d.clientID, d.version)
                     }, l.createElement(u.Q, {
                         type: u._49.H5
                     }, d.name)), this.renderAnchorTypePills(), d.state !== T.c.Released && l.createElement(J, {
@@ -3948,7 +3954,8 @@ webpackJsonp([108], {
                                 return (o = i.sent().data).installExtension && o.installExtension.installedExtension && (l = o.installExtension.installedExtension, d = function(e) {
                                     return e.currentUser.installedExtensions.push(l), e
                                 }, Object(j.e)(de, {}, d), a({
-                                    extension: l.extension,
+                                    extensionClientID: l.extension.clientID,
+                                    extensionVersion: l.extension.version,
                                     login: n
                                 })), [3, 4];
                             case 3:
@@ -4391,4 +4398,4 @@ webpackJsonp([108], {
         })
     }
 });
-//# sourceMappingURL=pages.extension-manager-cc379a62c7af71c63a73f40de7e9fa7a.js.map
+//# sourceMappingURL=pages.extension-manager-a662363f31bb6a3c3de956b6692c332d.js.map

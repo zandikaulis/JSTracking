@@ -1267,7 +1267,7 @@ webpackJsonp([61], {
                     margin: {
                         top: 1
                     }
-                }, c.createElement(S.Q, null, Object(d.d)('To use your free channel subscription, go to a channel of your choice and select "Subscribe Free"', "AvailablePrimeSubCard"))))
+                }, c.createElement(S.Q, null, Object(d.d)('To use your free subscription, go to a channel of your choice and select "Subscribe Free"', "AvailablePrimeSubCard"))))
             }),
             _ = n("SZoP"),
             B = n("urTJ"),
@@ -2150,7 +2150,7 @@ webpackJsonp([61], {
                 }) : void 0
             }, t.prototype.renderEmptyMessage = function() {
                 var e = "";
-                return e = this.props.subscriptionType === X.Paid ? Object(d.d)("Any active subscriptions you purchase will show up here.", "SubscriptionsManagementTab") : Object(d.d)("Any active gift subscriptions you have will show up here.", "SubscriptionsManagementTab"), c.createElement(S._35, {
+                return e = this.props.subscriptionType === X.Paid ? Object(d.d)("Any active subscriptions you purchase will show up here.", "SubscriptionsManagementTab") : this.props.subscriptionType === X.Gifts ? Object(d.d)("Any active gift subscriptions you have will show up here.", "SubscriptionsManagementTab") : Object(d.d)("Any other subscriptions you have will show up here.", "SubscriptionsManagementTab"), c.createElement(S._35, {
                     display: S.R.Flex,
                     justifyContent: S._7.Center,
                     background: S.n.Base,
@@ -2460,4 +2460,4 @@ webpackJsonp([61], {
         })
     }
 });
-//# sourceMappingURL=pages.subscriptions-management-7ce9b05e2580d247c22ab7453d9696b6.js.map
+//# sourceMappingURL=pages.subscriptions-management-8f38be1823ef00c81137fad779d6acf2.js.map

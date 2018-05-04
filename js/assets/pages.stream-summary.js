@@ -17726,7 +17726,7 @@ webpackJsonp([91], {
                         fullHeight: !0
                     }, r.createElement(f._10, {
                         fillContent: !0
-                    }), ";") : this.state.didError ? r.createElement(f.Q, n.__assign({
+                    })) : this.state.didError ? r.createElement(f.Q, n.__assign({
                         color: f.K.OverlayAlt,
                         fontSize: f.V.Size5
                     }, it), Object(s.d)("Whoops. Something went wrong.", "StreamSummaryTimeseriesPanel")) : 0 === this.state.statData.values.length ? r.createElement(f._8, {
@@ -17791,6 +17791,7 @@ webpackJsonp([91], {
                                             n = e.dates[0];
                                         if (!n) return a;
                                         for (var r = e.interpolationChunkMinutes, i = Object(oe.subMinutes)(n, r); i.getTime() >= t.start.getTime();) a.dates.push(i), a.values.push(0), i = Object(oe.subMinutes)(i, r);
+                                        a.dates.reverse();
                                         var s = 0;
                                         for (i = n; i.getTime() <= t.end.getTime();) {
                                             var o = e.dates[s];
@@ -19816,4 +19817,4 @@ webpackJsonp([91], {
         })
     }
 });
-//# sourceMappingURL=pages.stream-summary-94016d7a2365115be37ac8711c582efb.js.map
+//# sourceMappingURL=pages.stream-summary-6b10beba9a990f6b5b6125e50de520b8.js.map

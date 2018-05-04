@@ -71,9 +71,6 @@ webpackJsonp([112], {
                     justifyContent: a._7.Center
                 }, r.createElement(a._8, {
                     className: "twitch-prime-call-to-action " + e.className,
-                    padding: {
-                        x: 3
-                    },
                     textAlign: a._45.Center,
                     alignItems: a.c.Center,
                     display: a.R.Flex,
@@ -82,7 +79,16 @@ webpackJsonp([112], {
                     margin: 2
                 }, r.createElement(a._2, {
                     "data-test-selector": e.dataTestSelector,
-                    "data-a-selector": e.dataASelector
+                    "data-a-selector": e.dataASelector,
+                    padding: {
+                        x: 2
+                    },
+                    alignItems: a.c.Center,
+                    display: a.R.Flex,
+                    flexDirection: a.T.Column,
+                    justifyContent: a._7.Center,
+                    fullWidth: !0,
+                    fullHeight: !0
                 }, r.createElement("a", {
                     href: e.href,
                     onClick: e.onClick,
@@ -135,8 +141,8 @@ webpackJsonp([112], {
             k = n("TCPX"),
             w = n("dlQw"),
             y = n("Odds"),
-            v = n("7XNA"),
-            E = (n("r3tw"), "twitch-prime__call-to-action"),
+            C = n("7XNA"),
+            v = (n("r3tw"), "twitch-prime__call-to-action"),
             T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -182,7 +188,7 @@ webpackJsonp([112], {
                             title: Object(o.d)("Click here to refresh", "TwitchPrimeLinking"),
                             body: Object(o.d)("Refresh to try claiming and linking your account again", "TwitchPrimeLinking"),
                             onClick: t.claimOffer,
-                            dataTestSelector: E,
+                            dataTestSelector: v,
                             href: "/prime/fortnite/link"
                         })
                     }, t.renderLinkCallToAction = function() {
@@ -191,7 +197,7 @@ webpackJsonp([112], {
                             title: Object(o.d)("Claim loot", "TwitchPrimeLinking"),
                             body: Object(o.d)("Link your Epic account to your Twitch Prime account here", "TwitchPrimeLinking"),
                             onClick: t.claimOffer,
-                            dataTestSelector: E,
+                            dataTestSelector: v,
                             href: "#"
                         })
                     }, t.renderSpinner = function() {
@@ -244,7 +250,9 @@ webpackJsonp([112], {
                     var e = this.props.data;
                     if (e.loading) return null;
                     var t = e && e.currentUser;
-                    return !e.error && t && t.hasPrime ? i.createElement(y._8, {
+                    return e.error || !t ? i.createElement(c.b, {
+                        to: "/prime/fortnite"
+                    }) : i.createElement(y._8, {
                         display: y.R.Flex,
                         flexDirection: y.T.Column,
                         justifyContent: y._7.Center,
@@ -254,22 +262,20 @@ webpackJsonp([112], {
                         fullWidth: !0
                     }, i.createElement(g.a, {
                         alwaysCentered: !0
-                    })), !this.state.error && this.renderLinkExperience(), this.state.error && this.renderErrorExperience()) : i.createElement(c.b, {
-                        to: "/prime/fortnite"
-                    })
+                    })), !this.state.error && this.renderLinkExperience(), this.state.error && this.renderErrorExperience())
                 }, t
             }(i.Component),
-            b = Object(a.compose)(Object(u.d)("TwitchPrimeLinkingPage", {
+            E = Object(a.compose)(Object(u.d)("TwitchPrimeLinkingPage", {
                 destination: p.a.TwitchPrimeLinkingPage
-            }), Object(l.a)(v), Object(l.a)(_, {
+            }), Object(l.a)(C), Object(l.a)(_, {
                 name: "claimPrimeOffer"
             }), Object(m.a)({
                 location: f.PageviewLocation.TwitchPrimeLinkingPage
             }))(T);
         n.d(t, "CALL_TO_ACTION_SELECTOR", function() {
-            return E
+            return v
         }), n.d(t, "TwitchPrimeLinkingPage", function() {
-            return b
+            return E
         })
     },
     c6bv: function(e, t, n) {
@@ -428,4 +434,4 @@ webpackJsonp([112], {
     r3tw: function(e, t) {},
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-linking-4d17ce49a6dfe5535068566ec9929e18.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-linking-e520236026dbc5ff91ed197dd4e293f8.js.map

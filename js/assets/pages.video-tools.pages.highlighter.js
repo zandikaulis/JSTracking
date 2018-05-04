@@ -2623,23 +2623,41 @@ webpackJsonp([102], {
 
         function Z(e) {
             o.n.track(S.SpadeEventType.HighlighterCurationStart, {
+                channel: e.channelLogin,
                 channel_id: e.channelID,
                 client_time: e.currentTime.getTime(),
                 source_video_id: e.sourceVideoID,
                 user_id: e.userID
             })
         }
-        var ee, te = n("91s2"),
-            ne = (n("KXMn"), 0),
-            ie = -1,
-            re = 2;
 
-        function ae(e) {
-            return Math.max(0, e - re)
+        function ee(e) {
+            var t = function(e) {
+                var t = Math.round((e.endTime.getTime() - e.startTime.getTime()) / 1e3);
+                return {
+                    channel: e.channelLogin,
+                    channel_id: e.channelID,
+                    client_time: e.endTime.getTime(),
+                    curation_duration: t,
+                    generated_video_count: e.generatedVideoIDs.length,
+                    generated_video_ids: e.generatedVideoIDs.join(","),
+                    source_video_id: e.sourceVideoID,
+                    user_id: e.userID
+                }
+            }(e);
+            o.n.track(S.SpadeEventType.HighlighterCurationFinish, t)
+        }
+        var te, ne = n("91s2"),
+            ie = (n("KXMn"), 0),
+            re = -1,
+            ae = 2;
+
+        function oe(e) {
+            return Math.max(0, e - ae)
         }! function(e) {
             e[e.SourceVideoTitle = 0] = "SourceVideoTitle", e[e.SourceVideoDate = 1] = "SourceVideoDate", e[e.SourceVideoLength = 2] = "SourceVideoLength"
-        }(ee || (ee = {}));
-        var oe = function(e) {
+        }(te || (te = {}));
+        var se = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2648,7 +2666,7 @@ webpackJsonp([102], {
                             endOffset: 0
                         },
                         lastVideoOffset: null,
-                        requestedPlayerOffset: ne,
+                        requestedPlayerOffset: ie,
                         shouldPlayerPause: !1,
                         videoSegmentQueue: []
                     }, t.onSelectHighlightClick = function(e) {
@@ -2680,12 +2698,17 @@ webpackJsonp([102], {
                             videoSegmentQueue: []
                         }, function() {
                             var e = t.props.data;
-                            e.video && (t.curationStartTime = new Date, Z({
-                                channelID: e.video.owner ? e.video.owner.id : "",
-                                currentTime: t.curationStartTime,
-                                sourceVideoID: e.video.id,
-                                userID: e.currentUser ? e.currentUser.id : ""
-                            }))
+                            if (e.video) {
+                                t.curationStartTime = new Date;
+                                var n = e.video.owner;
+                                Z({
+                                    channelID: n ? n.id : null,
+                                    channelLogin: n ? n.login : null,
+                                    currentTime: t.curationStartTime,
+                                    sourceVideoID: e.video.id,
+                                    userID: e.currentUser ? e.currentUser.id : null
+                                })
+                            }
                         })
                     }, t.onQueueChangeHandler = function(e) {
                         t.setState({
@@ -2705,26 +2728,17 @@ webpackJsonp([102], {
                     }, t.onSaveSuccess = function(e) {
                         var n = t.props.data;
                         if (n.video) {
-                            var i, r, a = t.curationStartTime || new Date;
-                            i = {
-                                channelID: n.video.owner ? n.video.owner.id : "",
+                            var i = t.curationStartTime || new Date,
+                                r = n.video.owner;
+                            ee({
+                                channelLogin: r ? r.login : null,
+                                channelID: r ? r.id : null,
                                 generatedVideoIDs: e,
                                 endTime: new Date,
-                                userID: n.currentUser ? n.currentUser.id : "",
+                                userID: n.currentUser ? n.currentUser.id : null,
                                 sourceVideoID: n.video.id,
-                                startTime: a
-                            }, r = function(e) {
-                                var t = (e.endTime.getTime() - e.startTime.getTime()) / 1e3;
-                                return {
-                                    channel_id: e.channelID,
-                                    client_time: e.endTime.getTime(),
-                                    curation_duration: t,
-                                    generated_video_count: e.generatedVideoIDs.length,
-                                    generated_video_ids: e.generatedVideoIDs.join(","),
-                                    source_video_id: e.sourceVideoID,
-                                    user_id: e.userID
-                                }
-                            }(i), o.n.track(S.SpadeEventType.HighlighterCurationFinish, r)
+                                startTime: i
+                            })
                         }
                     }, t.onBeforeunloadHandler = function(e) {
                         if (0 === t.state.videoSegmentQueue.length) return !1;
@@ -2739,7 +2753,7 @@ webpackJsonp([102], {
                     }, t.onTimelineEndOffsetFocus = function(e) {
                         t.setState({
                             currentSegmentOffsets: e,
-                            requestedPlayerOffset: ae(e.endOffset),
+                            requestedPlayerOffset: oe(e.endOffset),
                             shouldPlayerPause: !1
                         })
                     }, t.onTimelineOffsetChange = function(e) {
@@ -2747,7 +2761,7 @@ webpackJsonp([102], {
                             var n = t.state.currentSegmentOffsets;
                             e.startOffset === n.startOffset ? e.endOffset === n.endOffset || t.setState({
                                 currentSegmentOffsets: e,
-                                requestedPlayerOffset: ae(n.endOffset),
+                                requestedPlayerOffset: oe(n.endOffset),
                                 shouldPlayerPause: !1
                             }) : t.setState({
                                 currentSegmentOffsets: e,
@@ -2767,27 +2781,41 @@ webpackJsonp([102], {
                             shouldPlayerPause: !0,
                             lastVideoOffset: n
                         }) : t.state.requestedPlayerOffset === n && t.setState({
-                            requestedPlayerOffset: ie
+                            requestedPlayerOffset: re
                         })
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     window.addEventListener("beforeunload", this.onBeforeunloadHandler), this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    (!this.props.data.loading || e.data.loading) && e.data.error || !e.data.video || this.setState({
-                        currentSegmentOffsets: {
-                            startOffset: 0,
-                            endOffset: e.data.video.lengthSeconds
+                    var t = this.props.data.loading && !e.data.loading;
+                    if ((t || !e.data.error) && e.data.video) {
+                        if (t && e.data.video && e.data.video.owner) {
+                            var n = e.data.video.owner.displayName;
+                            o.o.setPageTitle(Object(o.d)("{ownerDisplayName} - Highlighter", {
+                                ownerDisplayName: n
+                            }, "HighlighterPage"))
                         }
-                    })
+                        this.setState({
+                            currentSegmentOffsets: {
+                                startOffset: 0,
+                                endOffset: e.data.video.lengthSeconds
+                            }
+                        })
+                    }
                 }, t.prototype.componentDidUpdate = function() {
                     var e = this.props.data;
-                    !this.curationStartTime && e.video && (this.curationStartTime = new Date, Z({
-                        channelID: e.video.owner ? e.video.owner.id : "",
-                        currentTime: this.curationStartTime,
-                        userID: e.currentUser ? e.currentUser.id : "",
-                        sourceVideoID: e.video.id
-                    }))
+                    if (!this.curationStartTime && e.video) {
+                        this.curationStartTime = new Date;
+                        var t = e.video.owner;
+                        Z({
+                            channelID: t ? t.id : null,
+                            channelLogin: t ? t.login : null,
+                            currentTime: this.curationStartTime,
+                            userID: e.currentUser ? e.currentUser.id : null,
+                            sourceVideoID: e.video.id
+                        })
+                    }
                 }, t.prototype.componentWillUnmount = function() {
                     window.removeEventListener("beforeunload", this.onBeforeunloadHandler)
                 }, t.prototype.render = function() {
@@ -2888,7 +2916,7 @@ webpackJsonp([102], {
                     })
                 }, t.prototype.renderSourceVideoInfo = function(e) {
                     return a.createElement(w._8, null, a.createElement(w.Q, {
-                        "data-test-selector": ee.SourceVideoTitle,
+                        "data-test-selector": te.SourceVideoTitle,
                         fontSize: w.V.Size6,
                         italic: !e.title,
                         lines: 2,
@@ -2896,7 +2924,7 @@ webpackJsonp([102], {
                     }, e.title || Object(o.d)("Untitled Broadcast", "SourceVideoInfo")), a.createElement(w._8, {
                         display: w.R.Flex
                     }, e.publishedAt && a.createElement(w.Q, {
-                        "data-test-selector": ee.SourceVideoDate,
+                        "data-test-selector": te.SourceVideoDate,
                         color: w.K.Alt2,
                         fontSize: w.V.Size7,
                         type: w._49.Span
@@ -2906,7 +2934,7 @@ webpackJsonp([102], {
                         width: 12,
                         height: 12
                     }), a.createElement(w.Q, {
-                        "data-test-selector": ee.SourceVideoLength,
+                        "data-test-selector": te.SourceVideoLength,
                         color: w.K.Alt2,
                         fontSize: w.V.Size7,
                         type: w._49.Span
@@ -2915,7 +2943,7 @@ webpackJsonp([102], {
                     return Object(o.d)("Your highlights have not been created. Are you sure you want to leave?", "HighlighterPage")
                 }, t
             }(a.Component),
-            se = Object(d.compose)(Object(p.a)(te, {
+            le = Object(d.compose)(Object(p.a)(ne, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2927,8 +2955,8 @@ webpackJsonp([102], {
                 destination: v.a.VideoManagerHighlighter
             }), Object(f.a)({
                 location: S.PageviewLocation.VideoManagerHighlighter
-            }))(oe),
-            le = function(e) {
+            }))(se),
+            de = function(e) {
                 return a.createElement(l.a, {
                     ownerLogin: e.match.params.channelName,
                     permittedRoles: {
@@ -2938,13 +2966,13 @@ webpackJsonp([102], {
                 }, function(t) {
                     var n = t.loading,
                         i = t.permitted;
-                    return n || i ? a.createElement(se, r.__assign({}, e)) : a.createElement(s.a, {
+                    return n || i ? a.createElement(le, r.__assign({}, e)) : a.createElement(s.a, {
                         message: Object(o.d)("Something went wrong. Please try again.", "HighlighterPageContainer")
                     })
                 })
             };
         n.d(t, "HighlighterPage", function() {
-            return le
+            return de
         })
     },
     KXMn: function(e, t) {},
@@ -3953,4 +3981,4 @@ webpackJsonp([102], {
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.highlighter-46ba8197d028bedc8a2ca4dff12ec141.js.map
+//# sourceMappingURL=pages.video-tools.pages.highlighter-5fa3ead1547484cf8036d1432366a5c3.js.map

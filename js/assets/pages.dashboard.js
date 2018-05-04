@@ -2490,7 +2490,7 @@ webpackJsonp([46], {
                 return n.e(106).then(n.bind(null, "rE/F"))
             }, "AchievementsPage"),
             ce = b.a.wrap(function() {
-                return n.e(109).then(n.bind(null, "RdZX"))
+                return n.e(110).then(n.bind(null, "RdZX"))
             }, "AutoModPage"),
             ue = b.a.wrap(function() {
                 return n.e(107).then(n.bind(null, "EOq4"))
@@ -2502,7 +2502,7 @@ webpackJsonp([46], {
                 return n.e(87).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
             me = b.a.wrap(function() {
-                return n.e(93).then(n.bind(null, "KO2S"))
+                return n.e(92).then(n.bind(null, "KO2S"))
             }, "CollectionEditorPage"),
             fe = b.a.wrap(function() {
                 return n.e(105).then(n.bind(null, "Dk8+"))
@@ -2547,7 +2547,7 @@ webpackJsonp([46], {
                 return n.e(91).then(n.bind(null, "tVPZ"))
             }, "StreamSummaryPage"),
             Ne = b.a.wrap(function() {
-                return n.e(92).then(n.bind(null, "a9Y8"))
+                return n.e(93).then(n.bind(null, "a9Y8"))
             }, "VideoManagerPage"),
             Me = function(e) {
                 var t = e.match.params.pageName,
@@ -5662,4 +5662,4 @@ webpackJsonp([46], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-75cbae55bdcade1edb1a56d7ab8d292a.js.map
+//# sourceMappingURL=pages.dashboard-db400b7694f8e9dd33ef2392acec3970.js.map

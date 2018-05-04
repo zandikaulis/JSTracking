@@ -3422,7 +3422,7 @@ webpackJsonp([49], {
             });
             return d.createElement("div", null, n, d.createElement(_._55, {
                 gutterSize: _._57.Small,
-                childWidth: _._56.Medium,
+                childWidth: _._56.Large,
                 placeholderItems: 20
             }, o, i))
         }
@@ -3594,7 +3594,7 @@ webpackJsonp([49], {
                 }));
             return d.createElement("div", null, n, d.createElement(_._55, {
                 gutterSize: _._57.Small,
-                childWidth: _._56.Medium,
+                childWidth: _._56.Large,
                 placeholderItems: 20
             }, o, i))
         }
@@ -3630,7 +3630,7 @@ webpackJsonp([49], {
                         listContext: J.b.MixedGameAndChannelList,
                         trackingMedium: k.PageviewMedium.Following,
                         trackingContent: k.PageviewContent.SuggestedVideos,
-                        videoCardSize: _._56.Medium,
+                        videoCardSize: _._56.Large,
                         videos: t
                     }))
                 }, t = l.__decorate([Object(v.a)(ee, {
@@ -10168,4 +10168,4 @@ webpackJsonp([49], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-becb4e80df681c5f1708df5a5ff6ae77.js.map
+//# sourceMappingURL=pages.following-b720c3dd46d77d38fca73671d3a87411.js.map
