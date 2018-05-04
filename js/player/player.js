@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".46c1c16e60ba07aab3ad.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ea1557ad773534ad4480.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -7545,7 +7545,7 @@
             }),
             Ce = function() {
                 function e(t, n, i, o) {
-                    h(this, e), this.player = t, this.tracker = n, this.store = i, this.options = o, this.hasPlayed = !1, this.hasFiredVideoPlay = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -1 / 0, this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.store.getState().experiments.get(oe.i), this.countessTracker = new r({
+                    h(this, e), this.player = t, this.tracker = n, this.store = i, this.options = o, this.firstPlayAutoMuted = !1, this.hasPlayed = !1, this.hasFiredVideoPlay = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -1 / 0, this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.store.getState().experiments.get(oe.i), this.countessTracker = new r({
                         host: ie.k
                     }), this.comscore = new re(this, this.player, this.store), this.latencyTracker = new D(this, .001, this.player, this.store), this.initProperties(), this.initEvents(), this.unsubscribes = [], this.unsubscribes.push(this._subscribeCaptions(this.store)), this.unsubscribes.push(Object(ae.a)(this.store, ["quality.current", "quality.selected"], this.onQualityChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["collection.id"], this.onCollectionChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["ui.isMini"], this.onMiniChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["playback.ended"], this.onPlaybackEnded.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["error"], this.onError.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["stream"], this.onStreamChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["watchParty.vodId"], this.onWatchPartyVodChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["watchParty.watchPartyId"], this.onWatchPartyChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["chromecast.castingState"], this.onCastingChange.bind(this))), this.onError()
                 }
@@ -7650,18 +7650,17 @@
                             u = t.performance,
                             c = t.stream,
                             l = t.streamMetadata,
-                            d = t.playback,
-                            f = this.player.getNetworkProfile().filter(function(e) {
+                            d = this.player.getNetworkProfile().filter(function(e) {
                                 return e.startTime > this.lastNetworkProfile
                             }.bind(this));
-                        this.lastNetworkProfile = f.reduce(function(e, t) {
+                        this.lastNetworkProfile = d.reduce(function(e, t) {
                             return Math.max(e, t.startTime)
                         }, this.lastNetworkProfile);
-                        var p = this.getNetworkProfileStats(f);
-                        this.player.video && b()(p, {
+                        var f = this.getNetworkProfileStats(d);
+                        this.player.video && b()(f, {
                             vod_timestamp: this.player.getCurrentTime()
                         });
-                        var h = {
+                        var p = {
                             autoplayed: this.options.autoplay,
                             broadcast_id: l.broadcastID,
                             captions_enabled: r.enabled,
@@ -7676,18 +7675,18 @@
                             tab_session_id: Object(T.b)(),
                             time_spent_hidden: u.timeHidden,
                             transcoder_type: s.transcodestack,
-                            auto_muted: d.automatedMute
+                            auto_muted: this.firstPlayAutoMuted
                         };
                         if (c.contentType === Y.a && i.id) {
                             this.store.dispatch(Object(he.s)());
-                            var m = j.b.get(he.j),
-                                y = m ? m[he.i] : "";
-                            h.collection_item_position = O()(i.items, {
+                            var h = j.b.get(he.j),
+                                m = h ? h[he.i] : "";
+                            p.collection_item_position = O()(i.items, {
                                 itemId: c.videoId.substr(1)
-                            }), h.collection_id = i.id, h.collection_session_id = y
+                            }), p.collection_id = i.id, p.collection_session_id = m
                         }
-                        this.trackEvent(le.a.MINUTE_WATCHED, b()({}, p, h)), this.store.dispatch(Object(ue.g)()), this.trackNetworkProfile.then(function(t) {
-                            "yes" === t && f.length > 0 && e.tracker.trackEvents(f.map(function(e) {
+                        this.trackEvent(le.a.MINUTE_WATCHED, b()({}, f, p)), this.store.dispatch(Object(ue.g)()), this.trackNetworkProfile.then(function(t) {
+                            "yes" === t && d.length > 0 && e.tracker.trackEvents(d.map(function(e) {
                                 return {
                                     event: "network_profile",
                                     properties: {
@@ -7714,7 +7713,7 @@
                     value: function() {
                         this.player.getChannel() ? this.onLoadChannel() : this.player.getVideo() ? this.onLoadVideo() : C()(se.c, this.store.getState().env.playerType) && this.tracker.setProperties({
                             content_mode: fe.a
-                        }), this.minutesWatchedTimer.destroy(), this.initMinutesWatchedTimer(), this.hasPlayed = !1, this.bufferEmptyCount = 0, this.bufferEmptyStartTime = null
+                        }), this.minutesWatchedTimer.destroy(), this.initMinutesWatchedTimer(), this.hasPlayed = !1, this.bufferEmptyCount = 0, this.bufferEmptyStartTime = null, this.firstPlayAutoMuted = !1
                     }
                 }, {
                     key: "onLoadChannel",
@@ -7801,11 +7800,12 @@
                             o = t.manifestInfo,
                             a = t.performance,
                             s = t.stream,
-                            u = t.streamMetadata;
+                            u = t.streamMetadata,
+                            c = t.playback;
                         if (null !== this.bufferEmptyStartTime) {
-                            var c = (new Date).getTime();
+                            var l = (new Date).getTime();
                             this.trackEvent(le.a.BUFFER_REFILL, {
-                                buffering_time: (c - this.bufferEmptyStartTime) / 1e3,
+                                buffering_time: (l - this.bufferEmptyStartTime) / 1e3,
                                 buffer_empty_count: this.bufferEmptyCount,
                                 broadcast_id: u.broadcastID,
                                 community_ids: i.ids,
@@ -7813,28 +7813,30 @@
                             }), this.bufferEmptyStartTime = null
                         }
                         if (!this.hasPlayed) {
-                            var l = {
+                            this.firstPlayAutoMuted = c.automatedMute;
+                            var d = {
                                 time_since_load_start: Date.now() - n.playSessionStartTime,
                                 community_ids: i.ids,
                                 manifest_broadcast_id: o.broadcast_id,
                                 broadcast_id: u.broadcastID,
                                 autoplayed: this.options.autoplay,
                                 tab_session_id: Object(T.b)(),
-                                seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3
+                                seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
+                                auto_muted: this.firstPlayAutoMuted
                             };
                             if (this.hasFiredVideoPlay || (a.milestones.forEach(function(e) {
                                     var t = "time_to_" + e.name;
-                                    l[t] = e.time - a.initTime
-                                }), l.time_spent_hidden = a.timeHidden), s.contentType === Y.a && (Object(G.A)(s.videoId).then(function(t) {
+                                    d[t] = e.time - a.initTime
+                                }), d.time_spent_hidden = a.timeHidden), s.contentType === Y.a && (Object(G.A)(s.videoId).then(function(t) {
                                     e.countessTracker.trackVODView(t)
                                 }), r.id)) {
-                                var d = j.b.get(he.j),
-                                    f = d ? d[he.i] : "";
-                                l.collection_item_position = O()(r.items, {
+                                var f = j.b.get(he.j),
+                                    p = f ? f[he.i] : "";
+                                d.collection_item_position = O()(r.items, {
                                     itemId: s.videoId.substr(1)
-                                }), l.collection_id = r.id, l.collection_session_id = f
+                                }), d.collection_id = r.id, d.collection_session_id = p
                             }
-                            this.trackEvent(le.a.VIDEO_PLAY, l), this.hasPlayed = !0, this.hasFiredVideoPlay = !0, this.store.dispatch(Q.c()), this.store.dispatch(Q.d())
+                            this.trackEvent(le.a.VIDEO_PLAY, d), this.hasPlayed = !0, this.hasFiredVideoPlay = !0, this.store.dispatch(Q.c()), this.store.dispatch(Q.d())
                         }
                         this.minutesWatchedTimer.start()
                     }
@@ -31528,7 +31530,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.05.04-160512+27cf479305cc699b78cbaa8a47f81e455979b686",
+                    app_version: "2018.05.04-204202+f60a4f5a426e32618ed777c6308b01eae43a9bfa",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
