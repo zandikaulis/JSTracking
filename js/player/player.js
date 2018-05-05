@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ea1557ad773534ad4480.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c862f9c22c24703f2402.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -7139,78 +7139,99 @@
     }, function(e, t, n) {
         "use strict";
 
-        function r(e) {
-            this._host = e.host
+        function r(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
         }
 
         function i(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+
+        function o(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
 
-        function o(e) {
+        function a(e) {
+            this._host = e.host
+        }
+
+        function s(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function u(e) {
             return function(t) {
-                return N.v3(t, 0) / 4294967295 <= e
+                return F.v3(t, 0) / 4294967295 <= e
             }
         }
 
-        function a(e, t) {
+        function c(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
 
-        function s(e) {
-            return e.stream instanceof A.b ? Promise.resolve(v()({}, ne, {
+        function l(e) {
+            return e.stream instanceof U.b ? Promise.resolve(_()({}, ce, {
                 ns_st_ci: e.streamMetadata.broadcastID,
                 ns_st_st: e.streamMetadata.channel.displayName,
                 ns_st_ep: e.streamMetadata.channel.status,
-                ns_st_ge: Z[e.streamMetadata.game] || ee,
-                ns_st_ddt: p(new Date(e.streamMetadata.createdAt)),
+                ns_st_ge: ae[e.streamMetadata.game] || se,
+                ns_st_ddt: y(new Date(e.streamMetadata.createdAt)),
                 ns_st_ce: !0
-            })) : e.stream instanceof Y.b ? Object(G.A)(e.stream.videoId).then(function(e) {
-                return v()({}, ne, {
+            })) : e.stream instanceof te.b ? Object(ee.A)(e.stream.videoId).then(function(e) {
+                return _()({}, ce, {
                     ns_st_ci: e.broadcast_id,
                     ns_st_cl: 1e3 * e.length,
                     ns_st_st: e.channel.display_name,
                     ns_st_ep: e.title,
-                    ns_st_ge: Z[e.game] || ee,
-                    ns_st_ddt: p(new Date(e.recorded_at)),
+                    ns_st_ge: ae[e.game] || se,
+                    ns_st_ddt: y(new Date(e.recorded_at)),
                     ns_st_ce: "archive" === e.broadcast_type
                 })
             }) : Promise.reject(new Error("No stream is currently playing; no metadata is available."))
         }
 
-        function u(e) {
-            return e.stream instanceof A.b ? e.streamMetadata.channel.partner ? K.a.StreamingTag.ContentType.Live : K.a.StreamingTag.ContentType.UserGeneratedLive : e.stream instanceof Y.b ? Object(G.A)(e.stream.videoId).then(function(e) {
-                var t = 1e3 * e.length >= te;
-                return e.partner ? t ? K.a.StreamingTag.ContentType.LongFormOnDemand : K.a.StreamingTag.ContentType.ShortFormOnDemand : t ? K.a.StreamingTag.ContentType.UserGeneratedLongFormOnDemand : K.a.StreamingTag.ContentType.UserGeneratedShortFormOnDemand
-            }) : K.a.StreamingTag.ContentType.Other
+        function d(e) {
+            return e.stream instanceof U.b ? e.streamMetadata.channel.partner ? Z.a.StreamingTag.ContentType.Live : Z.a.StreamingTag.ContentType.UserGeneratedLive : e.stream instanceof te.b ? Object(ee.A)(e.stream.videoId).then(function(e) {
+                var t = 1e3 * e.length >= ue;
+                return e.partner ? t ? Z.a.StreamingTag.ContentType.LongFormOnDemand : Z.a.StreamingTag.ContentType.ShortFormOnDemand : t ? Z.a.StreamingTag.ContentType.UserGeneratedLongFormOnDemand : Z.a.StreamingTag.ContentType.UserGeneratedShortFormOnDemand
+            }) : Z.a.StreamingTag.ContentType.Other
         }
 
-        function c(e) {
+        function f(e) {
             return {
                 ns_st_cl: (1e3 * e.time_break).toString()
             }
         }
 
-        function l(e, t) {
-            if (e.stream instanceof A.b) return K.a.StreamingTag.AdType.LinearLive;
-            if (e.stream instanceof Y.b) switch (t.roll_type) {
-                case z.c:
-                    return K.a.StreamingTag.AdType.LinearOnDemandPreRoll;
-                case z.a:
-                    return K.a.StreamingTag.AdType.LinearOnDemandMidRoll;
-                case z.b:
-                    return K.a.StreamingTag.AdType.LinearOnDemandPostRoll
+        function p(e, t) {
+            if (e.stream instanceof U.b) return Z.a.StreamingTag.AdType.LinearLive;
+            if (e.stream instanceof te.b) switch (t.roll_type) {
+                case J.c:
+                    return Z.a.StreamingTag.AdType.LinearOnDemandPreRoll;
+                case J.a:
+                    return Z.a.StreamingTag.AdType.LinearOnDemandMidRoll;
+                case J.b:
+                    return Z.a.StreamingTag.AdType.LinearOnDemandPostRoll
             }
-            return K.a.StreamingTag.AdType.Other
+            return Z.a.StreamingTag.AdType.Other
         }
 
-        function d(e) {
-            return F()(e, function(e, t, n) {
-                return e[n] = f(t), e
+        function h(e) {
+            return Y()(e, function(e, t, n) {
+                return e[n] = m(t), e
             }, {})
         }
 
-        function f(e) {
+        function m(e) {
             switch (e) {
                 case !0:
                     return "1";
@@ -7222,55 +7243,35 @@
             return String(e)
         }
 
-        function p(e) {
-            return e.getUTCFullYear() + "-" + B()(e.getUTCMonth() + 1, 2, "0") + "-" + B()(e.getUTCDate(), 2, "0")
+        function y(e) {
+            return e.getUTCFullYear() + "-" + K()(e.getUTCMonth() + 1, 2, "0") + "-" + K()(e.getUTCDate(), 2, "0")
         }
 
-        function h(e, t) {
+        function v(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
 
-        function m(e) {
+        function g(e) {
             var t = String(e).trim(),
                 n = t.indexOf(" ");
             return n > 0 ? t.slice(0, n) : t
         }
-        var y = n(5),
-            v = n.n(y),
-            g = n(30),
-            b = n.n(g),
-            _ = n(21),
-            w = n.n(_),
-            k = n(49),
-            E = n.n(k),
-            S = n(80),
-            O = n.n(S),
-            P = n(7),
-            C = n.n(P),
-            T = n(240),
-            x = n(171),
-            R = n(307),
-            j = n(31),
-            I = n(36);
-        r.prototype._trackEvent = function(e) {
-            (new Image).src = e
-        }, r.prototype.trackVODView = function(e) {
-            this._trackEvent(e.increment_view_count_url)
-        }, r.prototype.trackView = function(e, t) {
-            var n = {
-                    type: e,
-                    id: t
-                },
-                r = {
-                    u: JSON.stringify(n)
-                },
-                i = this._host + "/ping.gif?" + Object(I.stringify)(r);
-            this._trackEvent(i)
-        };
-        var A = n(13),
-            N = n(485),
-            L = n(37),
-            M = function() {
+        var b = n(5),
+            _ = n.n(b),
+            w = n(30),
+            k = n.n(w),
+            E = n(21),
+            S = n.n(E),
+            O = n(49),
+            P = n.n(O),
+            C = n(80),
+            T = n.n(C),
+            x = n(7),
+            R = n.n(x),
+            j = n(240),
+            I = n(171),
+            A = n(307),
+            N = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -7281,23 +7282,136 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            D = function() {
-                function e(t, n, r, a) {
-                    i(this, e), this._analytics = t, this._sample = o(n), this._player = r, this._store = a, r.addEventListener(L.u, this._onSegmentChange.bind(this))
+            L = [5, 15, 45],
+            M = function() {
+                function e() {
+                    o(this, e)
                 }
-                return M(e, [{
+                return N(e, [{
+                    key: "setPeriods",
+                    value: function() {}
+                }, {
+                    key: "getPeriods",
+                    value: function() {
+                        return []
+                    }
+                }, {
+                    key: "start",
+                    value: function() {}
+                }, {
+                    key: "reset",
+                    value: function() {}
+                }, {
+                    key: "onNSecondPlay",
+                    value: function() {}
+                }, {
+                    key: "destroy",
+                    value: function() {}
+                }]), e
+            }(),
+            D = function(e) {
+                function t(e) {
+                    o(this, t);
+                    var n = r(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+                    return n._timeoutIds = [], n._callbacks = [], n._periods = L, n._window = e, n
+                }
+                return i(t, e), N(t, [{
+                    key: "setPeriods",
+                    value: function() {
+                        var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : L;
+                        this.reset(), this._periods = e
+                    }
+                }, {
+                    key: "getPeriods",
+                    value: function() {
+                        return this._periods.slice()
+                    }
+                }, {
+                    key: "start",
+                    value: function() {
+                        var e = this;
+                        this._periods.forEach(function(t, n) {
+                            var r = e._window.setTimeout(function() {
+                                return e._timeoutHandler(t)
+                            }, 1e3 * t);
+                            e._timeoutIds[n] = r
+                        })
+                    }
+                }, {
+                    key: "reset",
+                    value: function() {
+                        var e = this;
+                        this._timeoutIds.forEach(function(t) {
+                            e._window.clearTimeout(t)
+                        }), this._timeoutIds = []
+                    }
+                }, {
+                    key: "_timeoutHandler",
+                    value: function(e) {
+                        this._callbacks.forEach(function(t) {
+                            t(e)
+                        })
+                    }
+                }, {
+                    key: "onNSecondPlay",
+                    value: function(e) {
+                        this._callbacks.push(e)
+                    }
+                }, {
+                    key: "destroy",
+                    value: function() {
+                        this.reset(), this._callbacks = [], this._window = null, this._periods = []
+                    }
+                }]), t
+            }(M),
+            q = n(31),
+            B = n(36);
+        a.prototype._trackEvent = function(e) {
+            (new Image).src = e
+        }, a.prototype.trackVODView = function(e) {
+            this._trackEvent(e.increment_view_count_url)
+        }, a.prototype.trackView = function(e, t) {
+            var n = {
+                    type: e,
+                    id: t
+                },
+                r = {
+                    u: JSON.stringify(n)
+                },
+                i = this._host + "/ping.gif?" + Object(B.stringify)(r);
+            this._trackEvent(i)
+        };
+        var U = n(13),
+            F = n(485),
+            V = n(37),
+            H = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            z = function() {
+                function e(t, n, r, i) {
+                    s(this, e), this._analytics = t, this._sample = u(n), this._player = r, this._store = i, r.addEventListener(V.u, this._onSegmentChange.bind(this))
+                }
+                return H(e, [{
                     key: "_segmentName",
                     value: function(e) {
                         var t = this._store.getState(),
                             n = t.stream,
                             r = t.quality;
-                        return (n.contentType === A.a ? n.channel.toLowerCase() : "") + "," + r.current + "," + e
+                        return (n.contentType === U.a ? n.channel.toLowerCase() : "") + "," + r.current + "," + e
                     }
                 }, {
                     key: "_onSegmentChange",
                     value: function(e) {
                         var t = this._segmentName(e.name);
-                        this._sample(t) && this._store.getState().stream.contentType === A.a && this._analytics.trackEvent("latency_report_playback", {
+                        this._sample(t) && this._store.getState().stream.contentType === U.a && this._analytics.trackEvent("latency_report_playback", {
                             segment: t,
                             broadcaster_send: e.broadcaster_send,
                             ingest_receive: e.ingest_receive,
@@ -7309,20 +7423,20 @@
                     }
                 }]), e
             }(),
-            q = n(486),
-            B = n.n(q),
-            U = n(83),
-            F = n.n(U),
-            V = n(26),
-            H = n(85),
-            z = n(53),
-            W = n(279),
+            W = n(486),
             K = n.n(W),
-            G = n(10),
-            Y = n(11),
-            Q = n(191),
-            $ = n(18),
-            J = function() {
+            G = n(83),
+            Y = n.n(G),
+            Q = n(26),
+            $ = n(85),
+            J = n(53),
+            X = n(279),
+            Z = n.n(X),
+            ee = n(10),
+            te = n(11),
+            ne = n(191),
+            re = n(18),
+            ie = function() {
                 function e(e, t) {
                     var n = [],
                         r = !0,
@@ -7347,7 +7461,7 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            X = function() {
+            oe = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -7358,14 +7472,14 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Z = {
+            ae = {
                 Creative: "Creative",
                 Poker: "Poker",
                 Music: "Music"
             },
-            ee = "Gaming",
-            te = 6e5,
-            ne = {
+            se = "Gaming",
+            ue = 6e5,
+            ce = {
                 ns_st_cl: null,
                 ns_st_st: null,
                 ns_st_pu: null,
@@ -7383,14 +7497,14 @@
                 c4: "twitch.tv",
                 c6: null
             },
-            re = function() {
+            le = function() {
                 function e(t, n, r) {
-                    a(this, e), this.analytics = t, this.player = n, this.store = r, this.ended = !1;
+                    c(this, e), this.analytics = t, this.player = n, this.store = r, this.ended = !1;
                     var i = r.getState(),
                         o = i.window;
-                    n.addEventListener(V.n, this.onPlaying.bind(this)), n.addEventListener(V.k, this.onPause.bind(this)), n.addEventListener(V.q, this.onSeeking.bind(this)), n.addEventListener(V.f, this.onEnded.bind(this)), n.addEventListener(H.AD_START, this.onAdStart.bind(this)), n.addEventListener(H.AD_IMPRESSION, this.onAdImpression.bind(this)), n.addEventListener(H.AD_IMPRESSION_COMPLETE, this.onAdImpressionComplete.bind(this)), n.addEventListener(H.AD_END, this.onAdEnd.bind(this)), o.addEventListener("beforeunload", this)
+                    n.addEventListener(Q.n, this.onPlaying.bind(this)), n.addEventListener(Q.k, this.onPause.bind(this)), n.addEventListener(Q.q, this.onSeeking.bind(this)), n.addEventListener(Q.f, this.onEnded.bind(this)), n.addEventListener($.AD_START, this.onAdStart.bind(this)), n.addEventListener($.AD_IMPRESSION, this.onAdImpression.bind(this)), n.addEventListener($.AD_IMPRESSION_COMPLETE, this.onAdImpressionComplete.bind(this)), n.addEventListener($.AD_END, this.onAdEnd.bind(this)), o.addEventListener("beforeunload", this)
                 }
-                return X(e, [{
+                return oe(e, [{
                     key: "handleEvent",
                     value: function(e) {
                         switch (e.type) {
@@ -7403,22 +7517,22 @@
                     value: function() {
                         var e = this.store.getState(),
                             t = e.stream.contentType;
-                        e.ads.currentMetadata.contentType !== $.f.NONE || t !== Y.a && t !== A.a || Promise.all([s(e), u(e)]).then(function(t) {
-                            var n = J(t, 2),
+                        e.ads.currentMetadata.contentType !== re.f.NONE || t !== te.a && t !== U.a || Promise.all([l(e), d(e)]).then(function(t) {
+                            var n = ie(t, 2),
                                 r = n[0],
                                 i = n[1];
-                            e.comscore.streamingTag.playVideoContentPart(d(r), i)
+                            e.comscore.streamingTag.playVideoContentPart(h(r), i)
                         }), this.ended = !1
                     }
                 }, {
                     key: "onPause",
                     value: function() {
-                        this.store.getState().ads.currentMetadata.contentType === $.f.NONE && this._stop()
+                        this.store.getState().ads.currentMetadata.contentType === re.f.NONE && this._stop()
                     }
                 }, {
                     key: "onSeeking",
                     value: function() {
-                        this.analytics.hasPlayed && !this.player.paused && (this.ended ? (this.store.dispatch(Object(Q.b)()), this.ended = !1) : this._stop())
+                        this.analytics.hasPlayed && !this.player.paused && (this.ended ? (this.store.dispatch(Object(ne.b)()), this.ended = !1) : this._stop())
                     }
                 }, {
                     key: "onEnded",
@@ -7428,13 +7542,13 @@
                 }, {
                     key: "onAdStart",
                     value: function(e) {
-                        e.roll_type !== z.b && this._stop()
+                        e.roll_type !== J.b && this._stop()
                     }
                 }, {
                     key: "onAdImpression",
                     value: function(e) {
                         var t = this.store.getState();
-                        t.comscore.streamingTag.playVideoAdvertisement(d(c(e)), l(t, e))
+                        t.comscore.streamingTag.playVideoAdvertisement(h(f(e)), p(t, e))
                     }
                 }, {
                     key: "onAdImpressionComplete",
@@ -7444,7 +7558,7 @@
                 }, {
                     key: "onAdEnd",
                     value: function(e) {
-                        e.roll_type !== z.b && this.onPlaying()
+                        e.roll_type !== J.b && this.onPlaying()
                     }
                 }, {
                     key: "onBeforeUnload",
@@ -7463,39 +7577,39 @@
                     }
                 }]), e
             }(),
-            ie = n(9),
-            oe = n(45),
-            ae = n(17),
-            se = n(6),
-            ue = n(105),
-            ce = n(280),
-            le = n(192),
-            de = n(104),
-            fe = n(89),
-            pe = n(57),
-            he = n(38);
+            de = n(9),
+            fe = n(45),
+            pe = n(17),
+            he = n(6),
+            me = n(105),
+            ye = n(280),
+            ve = n(192),
+            ge = n(104),
+            be = n(89),
+            _e = n(57),
+            we = n(38);
         n.d(t, "e", function() {
-            return ve
-        }), n.d(t, "g", function() {
-            return ge
-        }), n.d(t, "j", function() {
-            return be
-        }), n.d(t, "i", function() {
-            return _e
-        }), n.d(t, "h", function() {
-            return we
-        }), n.d(t, "f", function() {
-            return ke
-        }), n.d(t, "b", function() {
-            return Ee
-        }), n.d(t, "d", function() {
             return Se
-        }), n.d(t, "c", function() {
+        }), n.d(t, "g", function() {
             return Oe
-        }), n.d(t, "a", function() {
+        }), n.d(t, "j", function() {
+            return Pe
+        }), n.d(t, "i", function() {
             return Ce
+        }), n.d(t, "h", function() {
+            return Te
+        }), n.d(t, "f", function() {
+            return xe
+        }), n.d(t, "b", function() {
+            return Re
+        }), n.d(t, "d", function() {
+            return je
+        }), n.d(t, "c", function() {
+            return Ie
+        }), n.d(t, "a", function() {
+            return Ne
         });
-        var me = function() {
+        var ke = function() {
                 function e(e, t) {
                     var n = [],
                         r = !0,
@@ -7520,7 +7634,7 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            ye = function() {
+            Ee = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -7531,29 +7645,29 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            ve = "rebroadcast",
-            ge = "video_play_load_start",
-            be = "video_play_oauth",
-            _e = "video_play_nauth",
-            we = "video_play_master_manifest",
-            ke = "site_mini_player_action",
-            Ee = "watch_party",
-            Se = "watch_party_rerun",
-            Oe = "watch_party_premiere",
-            Pe = Object.freeze({
+            Se = "rebroadcast",
+            Oe = "video_play_load_start",
+            Pe = "video_play_oauth",
+            Ce = "video_play_nauth",
+            Te = "video_play_master_manifest",
+            xe = "site_mini_player_action",
+            Re = "watch_party",
+            je = "watch_party_rerun",
+            Ie = "watch_party_premiere",
+            Ae = Object.freeze({
                 segment_protocol: "https"
             }),
-            Ce = function() {
-                function e(t, n, i, o) {
-                    h(this, e), this.player = t, this.tracker = n, this.store = i, this.options = o, this.firstPlayAutoMuted = !1, this.hasPlayed = !1, this.hasFiredVideoPlay = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -1 / 0, this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.store.getState().experiments.get(oe.i), this.countessTracker = new r({
-                        host: ie.k
-                    }), this.comscore = new re(this, this.player, this.store), this.latencyTracker = new D(this, .001, this.player, this.store), this.initProperties(), this.initEvents(), this.unsubscribes = [], this.unsubscribes.push(this._subscribeCaptions(this.store)), this.unsubscribes.push(Object(ae.a)(this.store, ["quality.current", "quality.selected"], this.onQualityChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["collection.id"], this.onCollectionChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["ui.isMini"], this.onMiniChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["playback.ended"], this.onPlaybackEnded.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["error"], this.onError.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["stream"], this.onStreamChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["watchParty.vodId"], this.onWatchPartyVodChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["watchParty.watchPartyId"], this.onWatchPartyChange.bind(this))), this.unsubscribes.push(Object(ae.a)(this.store, ["chromecast.castingState"], this.onCastingChange.bind(this))), this.onError()
+            Ne = function() {
+                function e(t, n, r, i) {
+                    v(this, e), this.player = t, this.tracker = n, this.store = r, this.options = i, this.firstPlayAutoMuted = !1, this.hasPlayed = !1, this.hasFiredVideoPlay = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -1 / 0, this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.store.getState().experiments.get(fe.i), this.nSecondPlayTimer = new M, this.countessTracker = new a({
+                        host: de.k
+                    }), this.comscore = new le(this, this.player, this.store), this.latencyTracker = new z(this, .001, this.player, this.store), this.initProperties(), this.initEvents(), this.unsubscribes = [], this.unsubscribes.push(this._subscribeCaptions(this.store)), this.unsubscribes.push(Object(pe.a)(this.store, ["quality.current", "quality.selected"], this.onQualityChange.bind(this))), this.unsubscribes.push(Object(pe.a)(this.store, ["collection.id"], this.onCollectionChange.bind(this))), this.unsubscribes.push(Object(pe.a)(this.store, ["ui.isMini"], this.onMiniChange.bind(this))), this.unsubscribes.push(Object(pe.a)(this.store, ["playback.ended"], this.onPlaybackEnded.bind(this))), this.unsubscribes.push(Object(pe.a)(this.store, ["error"], this.onError.bind(this))), this.unsubscribes.push(Object(pe.a)(this.store, ["stream"], this.onStreamChange.bind(this))), this.unsubscribes.push(Object(pe.a)(this.store, ["watchParty.vodId"], this.onWatchPartyVodChange.bind(this))), this.unsubscribes.push(Object(pe.a)(this.store, ["watchParty.watchPartyId"], this.onWatchPartyChange.bind(this))), this.unsubscribes.push(Object(pe.a)(this.store, ["chromecast.castingState"], this.onCastingChange.bind(this))), this.onError()
                 }
-                return ye(e, [{
+                return Ee(e, [{
                     key: "_subscribeCaptions",
                     value: function(e) {
                         var t = this;
-                        return Object(ae.a)(e, ["captions"], function(e, n) {
+                        return Object(pe.a)(e, ["captions"], function(e, n) {
                             var r = e.captions,
                                 i = n.captions;
                             r.preset !== i.preset && t.trackEvent("player_caption_preset", {
@@ -7567,18 +7681,18 @@
                         if (this.tracker.setProperties({
                                 content_id: "",
                                 customer_id: ""
-                            }), this.tracker.setProperties(Object(G.C)().then(function(e) {
+                            }), this.tracker.setProperties(Object(ee.C)().then(function(e) {
                                 return {
                                     login: e.currentUser ? e.currentUser.login : void 0,
                                     turbo: !!e.currentUser && Boolean(e.currentUser.hasTurbo)
                                 }
-                            })), this.tracker.setProperties(Object(G.s)().then(function(e) {
+                            })), this.tracker.setProperties(Object(ee.s)().then(function(e) {
                                 return {
                                     user_id: e._id,
                                     staff: "staff" === e.type
                                 }
                             })), this.options.channel) {
-                            var e = Object(G.d)(this.options.channel);
+                            var e = Object(ee.d)(this.options.channel);
                             this.tracker.setProperties(e.then(function(e) {
                                 return null === e.channel.viewer ? {
                                     subscriber: !1
@@ -7591,12 +7705,20 @@
                 }, {
                     key: "initMinutesWatchedTimer",
                     value: function() {
-                        this.minutesWatchedTimer = new R.b, this.minutesWatchedTimer.on(R.a, this.onMinuteWatched.bind(this))
+                        this.minutesWatchedTimer = new A.b, this.minutesWatchedTimer.on(A.a, this.onMinuteWatched.bind(this))
+                    }
+                }, {
+                    key: "initNSecondPlayTimer",
+                    value: function() {
+                        var e = this.store.getState(),
+                            t = e.window,
+                            n = e.playerOptions;
+                        this.nSecondPlayTimer = new D(t), this.nSecondPlayTimer.onNSecondPlay(this.onNSecondPlay.bind(this)), n.nSecondPlayPeriods.length > 0 && this.nSecondPlayTimer.setPeriods(this.options.nSecondPlayPeriods)
                     }
                 }, {
                     key: "initEvents",
                     value: function() {
-                        this.initMinutesWatchedTimer(), this.player.addEventListener(L.o, this.onBackendInit.bind(this)), this.player.addEventListener(V.j, this.onLoadStart.bind(this)), this.player.addEventListener(V.k, this.onPause.bind(this)), this.player.addEventListener(V.u, this.onWaiting.bind(this)), this.player.addEventListener(V.n, this.onPlaying.bind(this)), this.player.addEventListener(V.n, this.onQualityChange.bind(this)), this.player.addEventListener(V.f, this.onEnded.bind(this)), this.player.addEventListener(V.q, this.onSeeking.bind(this)), this.player.addEventListener(V.s, this.onTimeUpdate.bind(this)), this.player.addEventListener(V.c, this.onCanPlay.bind(this))
+                        this.initMinutesWatchedTimer(), R()(he.b, this.store.getState().env.playerType) && this.initNSecondPlayTimer(), this.player.addEventListener(V.o, this.onBackendInit.bind(this)), this.player.addEventListener(Q.j, this.onLoadStart.bind(this)), this.player.addEventListener(Q.k, this.onPause.bind(this)), this.player.addEventListener(Q.u, this.onWaiting.bind(this)), this.player.addEventListener(Q.n, this.onPlaying.bind(this)), this.player.addEventListener(Q.n, this.onQualityChange.bind(this)), this.player.addEventListener(Q.f, this.onEnded.bind(this)), this.player.addEventListener(Q.q, this.onSeeking.bind(this)), this.player.addEventListener(Q.s, this.onTimeUpdate.bind(this)), this.player.addEventListener(Q.c, this.onCanPlay.bind(this))
                     }
                 }, {
                     key: "getNetworkProfileStats",
@@ -7626,10 +7748,57 @@
                         }
                     }
                 }, {
+                    key: "_getBaseMinuteWatchedProperties",
+                    value: function() {
+                        var e = this.store.getState(),
+                            t = e.analytics,
+                            n = e.captions,
+                            r = e.collection,
+                            i = e.communities,
+                            o = e.lang,
+                            a = e.manifestInfo,
+                            s = e.performance,
+                            u = e.stream,
+                            c = e.streamMetadata,
+                            l = e.playback,
+                            d = {
+                                autoplayed: this.options.autoplay,
+                                broadcast_id: c.broadcastID,
+                                captions_enabled: n.enabled,
+                                community_ids: i.ids,
+                                language: o.langCode,
+                                manifest_broadcast_id: a.broadcast_id,
+                                minutes_logged: this.minutesWatchedTimer.totalMinutes,
+                                player_size_mode: this._getPlayerDisplayMode(),
+                                quality_change_count: t.qualityChangeCount,
+                                seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
+                                streamType: c.streamType,
+                                tab_session_id: Object(j.b)(),
+                                time_spent_hidden: s.timeHidden,
+                                transcoder_type: a.transcodestack,
+                                auto_muted: this.firstPlayAutoMuted
+                            };
+                        if (u.contentType === te.a && (_()(d, {
+                                vod_timestamp: l.currentTime
+                            }), r.id)) {
+                            this.store.dispatch(Object(we.s)());
+                            var f = q.b.get(we.j),
+                                p = f ? f[we.i] : "";
+                            _()(d, {
+                                collection_item_position: T()(r.items, {
+                                    itemId: u.videoId.substr(1)
+                                }),
+                                collection_id: r.id,
+                                collection_session_id: p
+                            })
+                        }
+                        return d
+                    }
+                }, {
                     key: "trackEvent",
                     value: function(e, t) {
-                        var n = v()({}, Pe, this.player.getVideoInfo()),
-                            r = b()({}, w()(n, ["bandwidth", "cluster", "current_bitrate", "current_fps", "decoded_frames", "dropped_frames", "hls_latency_broadcaster", "hls_latency_encoder", "hls_latency_broadcaster_send_time", "hls_latency_ingest_receive_time", "hls_latency_ingest_send_time", "hls_latency_transcode_receive_time", "hls_latency_transcode_send_time", "hls_target_duration", "manifest_cluster", "manifest_node", "manifest_node_type", "serving_id", "node", "user_ip", "vid_display_height", "vid_display_width", "vid_height", "vid_width", "video_buffer_size", "vod_cdn_origin", "vod_cdn_region"]), {
+                        var n = _()({}, Ae, this.player.getVideoInfo()),
+                            r = k()({}, S()(n, ["bandwidth", "cluster", "current_bitrate", "current_fps", "decoded_frames", "dropped_frames", "hls_latency_broadcaster", "hls_latency_encoder", "hls_latency_broadcaster_send_time", "hls_latency_ingest_receive_time", "hls_latency_ingest_send_time", "hls_latency_transcode_receive_time", "hls_latency_transcode_send_time", "hls_target_duration", "manifest_cluster", "manifest_node", "manifest_node_type", "serving_id", "node", "user_ip", "vid_display_height", "vid_display_width", "vid_height", "vid_width", "video_buffer_size", "vod_cdn_origin", "vod_cdn_region"]), {
                                 volume: this.player.getVolume(),
                                 muted: this.player.getMuted(),
                                 is_https: "https" === n.segment_protocol
@@ -7640,53 +7809,17 @@
                     key: "onMinuteWatched",
                     value: function() {
                         var e = this,
-                            t = this.store.getState(),
-                            n = t.analytics,
-                            r = t.captions,
-                            i = t.collection,
-                            o = t.communities,
-                            a = t.lang,
-                            s = t.manifestInfo,
-                            u = t.performance,
-                            c = t.stream,
-                            l = t.streamMetadata,
-                            d = this.player.getNetworkProfile().filter(function(e) {
+                            t = this.player.getNetworkProfile().filter(function(e) {
                                 return e.startTime > this.lastNetworkProfile
                             }.bind(this));
-                        this.lastNetworkProfile = d.reduce(function(e, t) {
+                        this.lastNetworkProfile = t.reduce(function(e, t) {
                             return Math.max(e, t.startTime)
                         }, this.lastNetworkProfile);
-                        var f = this.getNetworkProfileStats(d);
-                        this.player.video && b()(f, {
-                            vod_timestamp: this.player.getCurrentTime()
-                        });
-                        var p = {
-                            autoplayed: this.options.autoplay,
-                            broadcast_id: l.broadcastID,
-                            captions_enabled: r.enabled,
-                            community_ids: o.ids,
-                            language: a.langCode,
-                            manifest_broadcast_id: s.broadcast_id,
-                            minutes_logged: this.minutesWatchedTimer.totalMinutes,
-                            player_size_mode: this._getPlayerDisplayMode(),
-                            quality_change_count: n.qualityChangeCount,
-                            seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
-                            streamType: l.streamType,
-                            tab_session_id: Object(T.b)(),
-                            time_spent_hidden: u.timeHidden,
-                            transcoder_type: s.transcodestack,
-                            auto_muted: this.firstPlayAutoMuted
-                        };
-                        if (c.contentType === Y.a && i.id) {
-                            this.store.dispatch(Object(he.s)());
-                            var h = j.b.get(he.j),
-                                m = h ? h[he.i] : "";
-                            p.collection_item_position = O()(i.items, {
-                                itemId: c.videoId.substr(1)
-                            }), p.collection_id = i.id, p.collection_session_id = m
-                        }
-                        this.trackEvent(le.a.MINUTE_WATCHED, b()({}, f, p)), this.store.dispatch(Object(ue.g)()), this.trackNetworkProfile.then(function(t) {
-                            "yes" === t && d.length > 0 && e.tracker.trackEvents(d.map(function(e) {
+                        var n = this.getNetworkProfileStats(t),
+                            r = this._getBaseMinuteWatchedProperties(),
+                            i = k()({}, r, n);
+                        this.trackEvent(ve.b.MINUTE_WATCHED, i), this.store.dispatch(Object(me.g)()), this.trackNetworkProfile.then(function(n) {
+                            "yes" === n && t.length > 0 && e.tracker.trackEvents(t.map(function(e) {
                                 return {
                                     event: "network_profile",
                                     properties: {
@@ -7704,6 +7837,14 @@
                         })
                     }
                 }, {
+                    key: "onNSecondPlay",
+                    value: function(e) {
+                        var t = k()({}, this._getBaseMinuteWatchedProperties(), {
+                            seconds_after_play: e
+                        });
+                        this.trackEvent(ve.a, t)
+                    }
+                }, {
                     key: "onBackendInit",
                     value: function() {
                         this.tracker.setProperty("backend", this.player.getBackend()), this.tracker.setProperty("backend_version", this.player.getVersion()), this.tracker.trackEvent("video_init")
@@ -7711,8 +7852,8 @@
                 }, {
                     key: "onLoadStart",
                     value: function() {
-                        this.player.getChannel() ? this.onLoadChannel() : this.player.getVideo() ? this.onLoadVideo() : C()(se.c, this.store.getState().env.playerType) && this.tracker.setProperties({
-                            content_mode: fe.a
+                        this.player.getChannel() ? this.onLoadChannel() : this.player.getVideo() ? this.onLoadVideo() : R()(he.c, this.store.getState().env.playerType) && this.tracker.setProperties({
+                            content_mode: be.a
                         }), this.minutesWatchedTimer.destroy(), this.initMinutesWatchedTimer(), this.hasPlayed = !1, this.bufferEmptyCount = 0, this.bufferEmptyStartTime = null, this.firstPlayAutoMuted = !1
                     }
                 }, {
@@ -7720,22 +7861,22 @@
                     value: function() {
                         var e = this,
                             t = this.player.getChannel(),
-                            n = Object(G.b)(t),
-                            r = Object(G.a)(t);
+                            n = Object(ee.b)(t),
+                            r = Object(ee.a)(t);
                         n.then(function(e) {
                             this.countessTracker.trackView("channel", e._id)
                         }.bind(this));
                         var i = {},
                             o = {},
                             a = Promise.all([n, r]).then(function(e) {
-                                var n = me(e, 2),
+                                var n = ke(e, 2),
                                     r = n[0],
                                     a = n[1];
-                                return i = r, o = a, Object(G.i)(t)
+                                return i = r, o = a, Object(ee.i)(t)
                             }).then(function(t) {
-                                e.store.dispatch(Object(ce.b)(t));
+                                e.store.dispatch(Object(ye.b)(t));
                                 var n = o.broadcaster_software,
-                                    r = Object(x.b)(n),
+                                    r = Object(I.b)(n),
                                     a = r.live,
                                     s = r.contentMode;
                                 return {
@@ -7755,11 +7896,11 @@
                     key: "onLoadVideo",
                     value: function() {
                         var e = this.player.getVideo(),
-                            t = Object(G.A)(e);
+                            t = Object(ee.A)(e);
                         this.tracker.setProperties(t.then(function(e) {
-                            return Object(G.b)(e.channel.name)
+                            return Object(ee.b)(e.channel.name)
                         }).then(function(e) {
-                            return w()(e, "partner")
+                            return S()(e, "partner")
                         }));
                         var n = t.then(function(e) {
                             return {
@@ -7782,7 +7923,7 @@
                             t = e.communities,
                             n = e.manifestInfo,
                             r = e.streamMetadata;
-                        this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(le.a.BUFFER_EMPTY, {
+                        this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(ve.b.BUFFER_EMPTY, {
                             buffer_empty_count: this.bufferEmptyCount,
                             community_ids: t.ids,
                             broadcast_id: r.broadcastID,
@@ -7804,7 +7945,7 @@
                             c = t.playback;
                         if (null !== this.bufferEmptyStartTime) {
                             var l = (new Date).getTime();
-                            this.trackEvent(le.a.BUFFER_REFILL, {
+                            this.trackEvent(ve.b.BUFFER_REFILL, {
                                 buffering_time: (l - this.bufferEmptyStartTime) / 1e3,
                                 buffer_empty_count: this.bufferEmptyCount,
                                 broadcast_id: u.broadcastID,
@@ -7820,23 +7961,23 @@
                                 manifest_broadcast_id: o.broadcast_id,
                                 broadcast_id: u.broadcastID,
                                 autoplayed: this.options.autoplay,
-                                tab_session_id: Object(T.b)(),
+                                tab_session_id: Object(j.b)(),
                                 seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
                                 auto_muted: this.firstPlayAutoMuted
                             };
                             if (this.hasFiredVideoPlay || (a.milestones.forEach(function(e) {
                                     var t = "time_to_" + e.name;
                                     d[t] = e.time - a.initTime
-                                }), d.time_spent_hidden = a.timeHidden), s.contentType === Y.a && (Object(G.A)(s.videoId).then(function(t) {
+                                }), d.time_spent_hidden = a.timeHidden), s.contentType === te.a && (Object(ee.A)(s.videoId).then(function(t) {
                                     e.countessTracker.trackVODView(t)
                                 }), r.id)) {
-                                var f = j.b.get(he.j),
-                                    p = f ? f[he.i] : "";
-                                d.collection_item_position = O()(r.items, {
+                                var f = q.b.get(we.j),
+                                    p = f ? f[we.i] : "";
+                                d.collection_item_position = T()(r.items, {
                                     itemId: s.videoId.substr(1)
                                 }), d.collection_id = r.id, d.collection_session_id = p
                             }
-                            this.trackEvent(le.a.VIDEO_PLAY, d), this.hasPlayed = !0, this.hasFiredVideoPlay = !0, this.store.dispatch(Q.c()), this.store.dispatch(Q.d())
+                            this.trackEvent(ve.b.VIDEO_PLAY, d), this.hasPlayed = !0, this.hasFiredVideoPlay = !0, this.store.dispatch(ne.c()), this.store.dispatch(ne.d()), this.nSecondPlayTimer.start()
                         }
                         this.minutesWatchedTimer.start()
                     }
@@ -7869,7 +8010,7 @@
                             t = e.ads,
                             n = e.adsManager,
                             r = e.stream;
-                        (t.currentMetadata.contentType !== $.f.IMA || r.contentType !== Y.a || n.paused) && this.minutesWatchedTimer.stop()
+                        (t.currentMetadata.contentType !== re.f.IMA || r.contentType !== te.a || n.paused) && (this.minutesWatchedTimer.stop(), this.nSecondPlayTimer.reset())
                     }
                 }, {
                     key: "onPlaybackEnded",
@@ -7882,8 +8023,8 @@
                         var e = this.store.getState().error,
                             t = e.hasError,
                             n = e.code;
-                        t && this.trackEvent(le.b, {
-                            reason: pe.a.getMessage(n),
+                        t && this.trackEvent(ve.c, {
+                            reason: _e.a.getMessage(n),
                             code: n
                         })
                     }
@@ -7896,7 +8037,7 @@
                                 content_id: "",
                                 customer_id: ""
                             };
-                        t.contentType === de.a && (n = v()(n, {
+                        t.contentType === ge.a && (n = _()(n, {
                             content_id: t.contentId,
                             customer_id: t.customerId
                         })), this.tracker.setProperties(n)
@@ -7927,7 +8068,7 @@
                 }, {
                     key: "onEnded",
                     value: function() {
-                        this.minutesWatchedTimer.reset(), this.bufferEmptyStartTime = null
+                        this.minutesWatchedTimer.reset(), this.nSecondPlayTimer.reset(), this.bufferEmptyStartTime = null
                     }
                 }, {
                     key: "onQualityChange",
@@ -7935,11 +8076,11 @@
                         var e = this.store.getState(),
                             t = e.quality;
                         if (0 !== t.available.length) {
-                            var n = E()(t.available, function(e) {
+                            var n = P()(t.available, function(e) {
                                     return e.group === t.selected
                                 }),
                                 r = n ? n.name : t.current;
-                            this.tracker.setProperty("quality", m(r)), this.tracker.setProperty("stream_format", t.current)
+                            this.tracker.setProperty("quality", g(r)), this.tracker.setProperty("stream_format", t.current)
                         }
                     }
                 }, {
@@ -7963,19 +8104,19 @@
                         var e = this.store.getState(),
                             t = e.env,
                             n = e.ui;
-                        t.playerType === se.v && this.tracker.setProperty("player", n.isMini ? se.w : se.v)
+                        t.playerType === he.v && this.tracker.setProperty("player", n.isMini ? he.w : he.v)
                     }
                 }, {
                     key: "_getPlayerDisplayMode",
                     value: function() {
                         var e = this.store.getState(),
                             t = e.ui;
-                        return e.screenMode.isFullScreen ? "fullscreen" : this.options.player === se.t ? "popout" : this.player.getTheatre() ? "theatre mode" : t.isMini ? "mini" : ""
+                        return e.screenMode.isFullScreen ? "fullscreen" : this.options.player === he.t ? "popout" : this.player.getTheatre() ? "theatre mode" : t.isMini ? "mini" : ""
                     }
                 }, {
                     key: "destroy",
                     value: function() {
-                        this.minutesWatchedTimer.destroy(), this.comscore.destroy(), this.unsubscribes.map(function(e) {
+                        this.minutesWatchedTimer.destroy(), this.nSecondPlayTimer.destroy(), this.comscore.destroy(), this.unsubscribes.map(function(e) {
                             e()
                         })
                     }
@@ -14862,10 +15003,12 @@
             d = "reset tag"
     }, function(e, t, n) {
         "use strict";
-        n.d(t, "a", function() {
+        n.d(t, "b", function() {
             return r
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return i
+        }), n.d(t, "a", function() {
+            return o
         });
         var r = Object.freeze({
                 VIDEO_PLAY: "video-play",
@@ -14873,7 +15016,8 @@
                 BUFFER_EMPTY: "buffer-empty",
                 BUFFER_REFILL: "buffer-refill"
             }),
-            i = "video_playback_error"
+            i = "video_playback_error",
+            o = "n_second_play"
     }, function(e, t, n) {
         "use strict";
 
@@ -31530,7 +31674,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.05.04-204202+f60a4f5a426e32618ed777c6308b01eae43a9bfa",
+                    app_version: "2018.05.04-235504+7d32fcfbf4e97d9c5112ea5db68c5110d71d3019",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -35855,7 +35999,7 @@
         }
 
         function co(e) {
-            var t = Ja()(e, ["branding", "collection", "channel", "channelId", "force_preroll", "force_midroll", "force_preroll_id", "force_midroll_id", "showInfo", "showMature", "showtheatre", "tt_content", "tt_medium", "video"]);
+            var t = Ja()(e, ["branding", "collection", "channel", "channelId", "force_preroll", "force_midroll", "force_preroll_id", "force_midroll_id", "nSecondPlayPeriods", "showInfo", "showMature", "showtheatre", "tt_content", "tt_medium", "video"]);
             return {
                 type: hk,
                 playerOptions: t
@@ -36887,7 +37031,9 @@
                 o = hs.a.name === rS;
             return (i || o) && n.autoplay && !Ca()(es.c, n.player) && (n.muted = !0), n.tracking = cc()({}, n.tracking, n.trackingProperties, {
                 player: n.player
-            }), n
+            }), n.nSecondPlayPeriods && (Array.isArray(n.nSecondPlayPeriods) && !n.nSecondPlayPeriods.some(function(e) {
+                return "number" != typeof e
+            }) || delete n.nSecondPlayPeriods), n
         }
 
         function wa(e, t) {
@@ -37269,7 +37415,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            ns = Object.freeze((Oa = {}, u(Oa, Qa.a.MINUTE_WATCHED, ["time", "device_id", "play_session_id", "customer_id", "content_id", "seconds_offset"]), u(Oa, Qa.a.VIDEO_PLAY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "time_since_load_start", "seconds_offset"]), u(Oa, Qa.a.BUFFER_EMPTY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "buffer_empty_count"]), u(Oa, Qa.b, ["time", "device_id", "play_session_id", "customer_id", "content_id", "reason", "code"]), Oa)),
+            ns = Object.freeze((Oa = {}, u(Oa, Qa.a, ["time", "device_id", "play_session_id", "customer_id", "content_id", "seconds_after_play"]), u(Oa, Qa.b.MINUTE_WATCHED, ["time", "device_id", "play_session_id", "customer_id", "content_id", "seconds_offset"]), u(Oa, Qa.b.VIDEO_PLAY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "time_since_load_start", "seconds_offset"]), u(Oa, Qa.b.BUFFER_EMPTY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "buffer_empty_count"]), u(Oa, Qa.c, ["time", "device_id", "play_session_id", "customer_id", "content_id", "reason", "code"]), Oa)),
             rs = Object.freeze(Object.keys(ns)),
             is = function() {
                 function e(t) {
@@ -38873,8 +39019,8 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Yc = Object.freeze((Fs = {}, ne(Fs, Qa.a.MINUTE_WATCHED, "minuteWatched"), ne(Fs, Qa.a.VIDEO_PLAY, "videoPlay"), ne(Fs, Qa.a.BUFFER_EMPTY, "bufferEmpty"), ne(Fs, Qa.b, "videoError"), Fs)),
-            Qc = Object.freeze((Vs = {}, ne(Vs, "ended", !0), ne(Vs, "pause", !0), ne(Vs, "play", !0), ne(Vs, "playing", !0), ne(Vs, "offline", !0), ne(Vs, "online", !0), ne(Vs, Dc, !0), ne(Vs, "playbackBlocked", !0), ne(Vs, "minuteWatched", !0), ne(Vs, "videoPlay", !0), ne(Vs, "bufferEmpty", !0), ne(Vs, "videoError", !0), ne(Vs, "captions", !0), Vs)),
+            Yc = Object.freeze((Fs = {}, ne(Fs, Qa.b.MINUTE_WATCHED, "minuteWatched"), ne(Fs, Qa.b.VIDEO_PLAY, "videoPlay"), ne(Fs, Qa.b.BUFFER_EMPTY, "bufferEmpty"), ne(Fs, Qa.c, "videoError"), ne(Fs, Qa.a, "nSecondPlay"), Fs)),
+            Qc = Object.freeze((Vs = {}, ne(Vs, "ended", !0), ne(Vs, "pause", !0), ne(Vs, "play", !0), ne(Vs, "playing", !0), ne(Vs, "offline", !0), ne(Vs, "online", !0), ne(Vs, Dc, !0), ne(Vs, "playbackBlocked", !0), ne(Vs, "minuteWatched", !0), ne(Vs, "videoPlay", !0), ne(Vs, "bufferEmpty", !0), ne(Vs, "videoError", !0), ne(Vs, "nSecondPlay", !0), ne(Vs, "captions", !0), Vs)),
             $c = Object.freeze({
                 origin: ""
             }),
@@ -45975,7 +46121,8 @@
                 channelId: "",
                 video: "",
                 tt_content: "",
-                tt_medium: ""
+                tt_medium: "",
+                nSecondPlayPeriods: []
             }),
             yk = {
                 absAvailable: !1,
