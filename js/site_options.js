@@ -2493,6 +2493,18 @@ window.SiteOptions = {
                 "value": "month"
             }]
         },
+        "633fce9b-1bb8-49ea-886a-52e91a1b4575": {
+            "name": "ios_clips_sleepy_time",
+            "v": 3698,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "sleepy"
+            }]
+        },
         "64207922-aa6c-475e-b53d-84ce535d0d04": {
             "name": "ios_chomments_v2",
             "v": 1730,
@@ -4088,6 +4100,18 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "enabled"
+            }]
+        },
+        "add0c209-b45c-4ea5-b6f8-96a3d9e85699": {
+            "name": "android_clips_sleepy_time",
+            "v": 3697,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "sleepy"
             }]
         },
         "adff30ad-0ef3-4b61-9892-1c6b10500bd4": {
