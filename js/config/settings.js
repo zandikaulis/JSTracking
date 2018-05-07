@@ -756,6 +756,18 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
+        "c9fb1ee5-b3ff-4bfb-9584-4412a8878f16": {
+            "name": "TWILIGHT_SUBS_AFFILIATE_BADGES",
+            "v": 3688,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "affiliate_access"
+            }]
+        },
         "d1fe9a0a-e9f2-4450-ac57-4ff2eefa0dcf": {
             "name": "twilight_get_bits_top_nav",
             "v": 3550,
