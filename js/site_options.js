@@ -4006,6 +4006,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "aa19fae8-0e00-4922-8f1f-6699cc654671": {
+            "name": "mobile_web_singapore_first_byte",
+            "v": 3700,
+            "t": 1,
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "treatment"
+            }]
+        },
         "aa886844-3254-4197-b026-518f2fa75c10": {
             "name": "CVP MediaPlayer backend control Aug 17",
             "v": 2564,
