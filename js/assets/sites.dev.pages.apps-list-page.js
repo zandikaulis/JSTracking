@@ -1,4 +1,4 @@
-webpackJsonp([98], {
+webpackJsonp([100], {
     "+/J2": function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e, t) {
@@ -231,6 +231,27 @@ webpackJsonp([98], {
             return 1 === r(e).getDate()
         }
     },
+    "77kt": function(e, t, n) {
+        "use strict";
+        t.a = function(e, t) {
+            var n, u = o.o.config.authSettings.clientID,
+                i = t ? t.headers : {};
+            if (Array.isArray(i)) {
+                var s = (n = i.slice()).findIndex(function(e) {
+                    return "Client-Id" === e[0]
+                });
+                s >= 0 && n.splice(s, 1), n.push(["Client-Id", u])
+            } else i instanceof Headers ? (n = new Headers(i)).set("Client-Id", u) : n = r.__assign({}, i, {
+                "Client-Id": u
+            });
+            return Object(a.a)(e, r.__assign({}, t, {
+                headers: n
+            }))
+        };
+        var r = n("TToO"),
+            o = n("6sO2"),
+            a = n("rYDZ")
+    },
     "7EGB": function(e, t, n) {
         var r = n("Jvcu");
         e.exports = function(e, t) {
@@ -300,212 +321,6 @@ webpackJsonp([98], {
             var n = Number(t);
             return r(e, -n)
         }
-    },
-    "9u8h": function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return u
-        });
-        var r = n("TToO"),
-            o = n("6sO2"),
-            a = n("Aj/L"),
-            u = function() {
-                function e() {}
-                return e.get = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(o) {
-                            switch (o.label) {
-                                case 0:
-                                    return [4, this.request(e, r.__assign({}, t, {
-                                        method: "GET"
-                                    }), n)];
-                                case 1:
-                                    return [2, o.sent()]
-                            }
-                        })
-                    })
-                }, e.getOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(o) {
-                            switch (o.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
-                                        method: "GET"
-                                    }), n)];
-                                case 1:
-                                    return [2, o.sent()]
-                            }
-                        })
-                    })
-                }, e.put = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(o) {
-                            switch (o.label) {
-                                case 0:
-                                    return [4, this.request(e, r.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, o.sent()]
-                            }
-                        })
-                    })
-                }, e.putOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(o) {
-                            switch (o.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, o.sent()]
-                            }
-                        })
-                    })
-                }, e.post = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(o) {
-                            switch (o.label) {
-                                case 0:
-                                    return [4, this.request(e, r.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, o.sent()]
-                            }
-                        })
-                    })
-                }, e.postOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(o) {
-                            switch (o.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, o.sent()]
-                            }
-                        })
-                    })
-                }, e.delete = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(o) {
-                            switch (o.label) {
-                                case 0:
-                                    return [4, this.request(e, r.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, o.sent()]
-                            }
-                        })
-                    })
-                }, e.deleteOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(o) {
-                            switch (o.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, o.sent()]
-                            }
-                        })
-                    })
-                }, e.request = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        var o, a, u, i;
-                        return r.__generator(this, function(s) {
-                            switch (s.label) {
-                                case 0:
-                                    return t = this.constructOptions(t, n), o = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, o), u = r.__assign({}, t, {
-                                        body: a
-                                    }), [4, this._fetch(e, u)];
-                                case 1:
-                                    return i = s.sent(), [4, this.constructLegacyAPIResponse(i)];
-                                case 2:
-                                    return [2, s.sent()]
-                            }
-                        })
-                    })
-                }, e.requestOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        var o, a;
-                        return r.__generator(this, function(u) {
-                            switch (u.label) {
-                                case 0:
-                                    return u.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
-                                case 1:
-                                    if ((o = u.sent()).error || o.requestError) throw new Error("Error while making request");
-                                    return a = r.__assign({}, o, {
-                                        body: o.body
-                                    }), [2, Promise.resolve(a)];
-                                case 2:
-                                    throw u.sent();
-                                case 3:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, e.getAPIURL = function(e) {
-                    return new URL(e, o.o.config.apiBaseURL)
-                }, e.constructLegacyAPIResponse = function(e) {
-                    return r.__awaiter(this, void 0, void 0, function() {
-                        var t, n, o, a;
-                        return r.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    t = {
-                                        status: e.status
-                                    }, r.label = 1;
-                                case 1:
-                                    return r.trys.push([1, 3, , 4]), [4, e.json()];
-                                case 2:
-                                    return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
-                                case 3:
-                                    return o = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = o), [3, 4];
-                                case 4:
-                                    return [2, t]
-                            }
-                        })
-                    })
-                }, e._fetch = function(e, t) {
-                    return void 0 === t && (t = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return [4, fetch(this.getAPIURL(e).toString(), t)];
-                                case 1:
-                                    return [2, n.sent()]
-                            }
-                        })
-                    })
-                }, e.constructOptions = function(e, t) {
-                    return e = Object.assign({}, e, {
-                        headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
-                    })
-                }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
-                        contentType: t
-                    }), null) : null
-                }, e.getDefaultHeaders = function(e, t) {
-                    var n = o.o.store.getState(),
-                        r = {
-                            Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
-                            "Accept-Language": "en-us",
-                            "Client-ID": o.o.config.legacyClientID,
-                            "X-Requested-With": "XMLHttpRequest"
-                        };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                    var u = Object(a.c)(n);
-                    return u && (r.Authorization = "OAuth " + u.authToken, u.legacyCSRFToken && (r["Twitch-Api-Token"] = u.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                        r[e] && delete r[e]
-                    }), r
-                }, e.logger = o.o.logger.withCategory("legacy-api"), e
-            }()
     },
     A2zO: function(e, t, n) {
         var r = n("Be26");
@@ -1152,9 +967,9 @@ webpackJsonp([98], {
             o = n("GiK3"),
             a = n("j7/Y"),
             u = n("w9tK"),
-            i = n("9u8h"),
-            s = n("vH/s"),
-            c = n("CSlQ"),
+            i = n("vH/s"),
+            s = n("CSlQ"),
+            c = n("o8Qr"),
             f = n("6sO2"),
             p = n("wuJz");
 
@@ -1191,13 +1006,13 @@ webpackJsonp([98], {
                     }, Object(f.d)("Delete", "DevAppListRow")))))
                 }, t
             }(o.Component),
-            h = Object(c.d)("DevAppListRow")(d),
+            x = Object(s.d)("DevAppListRow")(d),
             g = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderAppRows = function() {
                         return t.props.apps.map(function(e) {
-                            return o.createElement(h, {
+                            return o.createElement(x, {
                                 key: e.id,
                                 app: e,
                                 onDelete: t.props.onDelete
@@ -1222,11 +1037,11 @@ webpackJsonp([98], {
                     }), o.createElement(v._42, {
                         label: ""
                     })), o.createElement(v._39, null, e))
-                }, t = r.__decorate([Object(c.d)("DevAppsList", {
+                }, t = r.__decorate([Object(s.d)("DevAppsList", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component),
-            x = function(e) {
+            h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1258,9 +1073,9 @@ webpackJsonp([98], {
                     })))
                 }, t
             }(o.Component),
-            m = Object(c.d)("DevAppsComponent", {
+            m = Object(s.d)("DevAppsComponent", {
                 autoReportInteractive: !0
-            })(x),
+            })(h),
             w = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -1274,7 +1089,9 @@ webpackJsonp([98], {
                                         if (!window.confirm("Are you sure you want to delete this App?")) return [3, 6];
                                         t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 5, , 6]), [4, i.a.delete("/kraken/apps/" + e)];
+                                        return t.trys.push([1, 5, , 6]), [4, Object(c.a)("https://api.twitch.tv/kraken/apps/" + e, {
+                                            method: "DELETE"
+                                        })];
                                     case 2:
                                         return 204 !== t.sent().status ? [3, 4] : [4, this.loadApps()];
                                     case 3:
@@ -1290,20 +1107,26 @@ webpackJsonp([98], {
                         })
                     }, n.loadApps = function() {
                         return r.__awaiter(n, void 0, void 0, function() {
-                            var e, t;
-                            return r.__generator(this, function(n) {
-                                switch (n.label) {
+                            var e, t, n;
+                            return r.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return n.trys.push([0, 2, , 3]), [4, i.a.get("/kraken/apps")];
+                                        return r.trys.push([0, 4, , 5]), [4, Object(c.a)("https://api.twitch.tv/kraken/apps")];
                                     case 1:
-                                        return 200 === (e = n.sent()).status && e.body && (t = e.body.apps.filter(function(e) {
-                                            return !e.name.startsWith("Extension ")
-                                        }), this.setState({
-                                            apps: t
-                                        })), [3, 3];
+                                        return 200 !== (e = r.sent()).status ? [3, 3] : [4, e.json()];
                                     case 2:
-                                        return n.sent(), [2];
+                                        (t = r.sent()) && (n = t.apps.filter(function(e) {
+                                            return !e.name.startsWith("Extension ")
+                                        }).sort(function(e, t) {
+                                            return new Date(t.updated_at).getTime() - new Date(e.updated_at).getTime()
+                                        }), this.setState({
+                                            apps: n
+                                        })), r.label = 3;
                                     case 3:
+                                        return [3, 5];
+                                    case 4:
+                                        return r.sent(), [2];
+                                    case 5:
                                         return [2]
                                 }
                             })
@@ -1326,10 +1149,10 @@ webpackJsonp([98], {
                         apps: this.state.apps,
                         onDelete: this.onDelete
                     })
-                }, t = r.__decorate([Object(c.d)("DevAppsListPage", {
+                }, t = r.__decorate([Object(s.d)("DevAppsListPage", {
                     destination: u.a.DevSiteApps
                 }), Object(a.a)({
-                    location: s.PageviewLocation.DevSiteApps
+                    location: i.PageviewLocation.DevSiteApps
                 })], t)
             }(o.Component);
         n.d(t, "DevAppsPage", function() {
@@ -1706,27 +1529,27 @@ webpackJsonp([98], {
             var l = n || {},
                 v = r(e, t),
                 d = l.locale,
-                h = i.distanceInWords.localize;
-            d && d.distanceInWords && d.distanceInWords.localize && (h = d.distanceInWords.localize);
-            var g, x, m = {
+                x = i.distanceInWords.localize;
+            d && d.distanceInWords && d.distanceInWords.localize && (x = d.distanceInWords.localize);
+            var g, h, m = {
                 addSuffix: Boolean(l.addSuffix),
                 comparison: v
             };
-            v > 0 ? (g = o(e), x = o(t)) : (g = o(t), x = o(e));
-            var w, D = a(x, g),
-                T = x.getTimezoneOffset() - g.getTimezoneOffset(),
-                y = Math.round(D / 60) - T;
-            if (y < 2) return l.includeSeconds ? D < 5 ? h("lessThanXSeconds", 5, m) : D < 10 ? h("lessThanXSeconds", 10, m) : D < 20 ? h("lessThanXSeconds", 20, m) : D < 40 ? h("halfAMinute", null, m) : h(D < 60 ? "lessThanXMinutes" : "xMinutes", 1, m) : 0 === y ? h("lessThanXMinutes", 1, m) : h("xMinutes", y, m);
-            if (y < 45) return h("xMinutes", y, m);
-            if (y < 90) return h("aboutXHours", 1, m);
-            if (y < s) return h("aboutXHours", Math.round(y / 60), m);
-            if (y < c) return h("xDays", 1, m);
-            if (y < f) return h("xDays", Math.round(y / s), m);
-            if (y < p) return h("aboutXMonths", w = Math.round(y / f), m);
-            if ((w = u(x, g)) < 12) return h("xMonths", Math.round(y / f), m);
-            var M = w % 12,
-                b = Math.floor(w / 12);
-            return M < 3 ? h("aboutXYears", b, m) : M < 9 ? h("overXYears", b, m) : h("almostXYears", b + 1, m)
+            v > 0 ? (g = o(e), h = o(t)) : (g = o(t), h = o(e));
+            var w, D = a(h, g),
+                M = h.getTimezoneOffset() - g.getTimezoneOffset(),
+                T = Math.round(D / 60) - M;
+            if (T < 2) return l.includeSeconds ? D < 5 ? x("lessThanXSeconds", 5, m) : D < 10 ? x("lessThanXSeconds", 10, m) : D < 20 ? x("lessThanXSeconds", 20, m) : D < 40 ? x("halfAMinute", null, m) : x(D < 60 ? "lessThanXMinutes" : "xMinutes", 1, m) : 0 === T ? x("lessThanXMinutes", 1, m) : x("xMinutes", T, m);
+            if (T < 45) return x("xMinutes", T, m);
+            if (T < 90) return x("aboutXHours", 1, m);
+            if (T < s) return x("aboutXHours", Math.round(T / 60), m);
+            if (T < c) return x("xDays", 1, m);
+            if (T < f) return x("xDays", Math.round(T / s), m);
+            if (T < p) return x("aboutXMonths", w = Math.round(T / f), m);
+            if ((w = u(h, g)) < 12) return x("xMonths", Math.round(T / f), m);
+            var y = w % 12,
+                A = Math.floor(w / 12);
+            return y < 3 ? x("aboutXYears", A, m) : y < 9 ? x("overXYears", A, m) : x("almostXYears", A + 1, m)
         }
     },
     nZeo: function(e, t, n) {
@@ -1763,6 +1586,30 @@ webpackJsonp([98], {
                 u = 6 + (a < n ? -7 : 0) - (a - n);
             return o.setHours(0, 0, 0, 0), o.setDate(o.getDate() + u), o
         }
+    },
+    o8Qr: function(e, t, n) {
+        "use strict";
+        t.a = function(e, t) {
+            var n, a = t ? t.headers : {};
+            if (Array.isArray(a)) {
+                var u = (n = a.slice()).findIndex(function(e) {
+                    return "Content-Type" === e[0]
+                });
+                u >= 0 && n.splice(u, 1), n.push(["Content-Type", "application/json"]);
+                var i = n.findIndex(function(e) {
+                    return "Accept" === e[0]
+                });
+                i >= 0 && n.splice(i, 1), n.push(["Accept", "application/vnd.twitchtv.v5+json; charset=UTF-8"])
+            } else a instanceof Headers ? ((n = new Headers(a)).set("Content-Type", "application/json"), n.set("Accept", "application/vnd.twitchtv.v5+json; charset=UTF-8")) : n = r.__assign({}, a, {
+                "Content-Type": "application/json",
+                Accept: "application/vnd.twitchtv.v5+json; charset=UTF-8"
+            });
+            return Object(o.a)(e, r.__assign({}, t, {
+                headers: n
+            }))
+        };
+        var r = n("TToO"),
+            o = n("77kt")
     },
     oNnY: function(e, t, n) {
         var r = n("zZbG"),
@@ -1835,6 +1682,32 @@ webpackJsonp([98], {
             return n.setFullYear(n.getFullYear() - i * s), i * (s - (a(n, u) === -i))
         }
     },
+    rYDZ: function(e, t, n) {
+        "use strict";
+        t.a = function(e, t) {
+            var n = Object(a.c)(o.o.store.getState());
+            if (!n) return fetch(e, t);
+            var i, s = t ? t.headers : {};
+            if (Array.isArray(s)) {
+                var c = (i = s.slice()).findIndex(function(e) {
+                    return "Authorization" === e[0]
+                });
+                c >= 0 && i.splice(c, 1), i.push(["Authorization", u(n)])
+            } else s instanceof Headers ? (i = new Headers(s)).set("Authorization", u(n)) : i = r.__assign({}, s, {
+                Authorization: u(n)
+            });
+            return fetch(e, r.__assign({}, t, {
+                headers: i
+            }))
+        };
+        var r = n("TToO"),
+            o = n("6sO2"),
+            a = n("Aj/L");
+
+        function u(e) {
+            return "OAuth " + e.authToken
+        }
+    },
     sdTe: function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e, t) {
@@ -1857,21 +1730,21 @@ webpackJsonp([98], {
                 l = f.locale,
                 v = u.distanceInWords.localize;
             l && l.distanceInWords && l.distanceInWords.localize && (v = l.distanceInWords.localize);
-            var d, h, g, x = {
+            var d, x, g, h = {
                 addSuffix: Boolean(f.addSuffix),
                 comparison: p
             };
-            p > 0 ? (d = o(e), h = o(t)) : (d = o(t), h = o(e));
+            p > 0 ? (d = o(e), x = o(t)) : (d = o(t), x = o(e));
             var m = Math[f.partialMethod ? String(f.partialMethod) : "floor"],
-                w = a(h, d),
-                D = h.getTimezoneOffset() - d.getTimezoneOffset(),
-                T = m(w / 60) - D;
-            if ("s" === (g = f.unit ? String(f.unit) : T < 1 ? "s" : T < 60 ? "m" : T < i ? "h" : T < s ? "d" : T < c ? "M" : "Y")) return v("xSeconds", w, x);
-            if ("m" === g) return v("xMinutes", T, x);
-            if ("h" === g) return v("xHours", m(T / 60), x);
-            if ("d" === g) return v("xDays", m(T / i), x);
-            if ("M" === g) return v("xMonths", m(T / s), x);
-            if ("Y" === g) return v("xYears", m(T / c), x);
+                w = a(x, d),
+                D = x.getTimezoneOffset() - d.getTimezoneOffset(),
+                M = m(w / 60) - D;
+            if ("s" === (g = f.unit ? String(f.unit) : M < 1 ? "s" : M < 60 ? "m" : M < i ? "h" : M < s ? "d" : M < c ? "M" : "Y")) return v("xSeconds", w, h);
+            if ("m" === g) return v("xMinutes", M, h);
+            if ("h" === g) return v("xHours", m(M / 60), h);
+            if ("d" === g) return v("xDays", m(M / i), h);
+            if ("M" === g) return v("xMonths", m(M / s), h);
+            if ("Y" === g) return v("xYears", m(M / c), h);
             throw new Error("Unknown unit: " + g)
         }
     },
@@ -2135,18 +2008,18 @@ webpackJsonp([98], {
             l = [/^([+-]\d{4})/, /^([+-]\d{5})/, /^([+-]\d{6})/],
             v = /^-(\d{2})$/,
             d = /^-?(\d{3})$/,
-            h = /^-?(\d{2})-?(\d{2})$/,
+            x = /^-?(\d{2})-?(\d{2})$/,
             g = /^-?W(\d{2})$/,
-            x = /^-?W(\d{2})-?(\d{1})$/,
+            h = /^-?W(\d{2})-?(\d{1})$/,
             m = /^(\d{2}([.,]\d*)?)$/,
             w = /^(\d{2}):?(\d{2}([.,]\d*)?)$/,
             D = /^(\d{2}):?(\d{2}):?(\d{2}([.,]\d*)?)$/,
-            T = /([Z+-].*)$/,
-            y = /^(Z)$/,
-            M = /^([+-])(\d{2})$/,
-            b = /^([+-])(\d{2}):?(\d{2})$/;
+            M = /([Z+-].*)$/,
+            T = /^(Z)$/,
+            y = /^([+-])(\d{2})$/,
+            A = /^([+-])(\d{2}):?(\d{2})$/;
 
-        function A(e, t, n) {
+        function b(e, t, n) {
             t = t || 0, n = n || 0;
             var r = new Date(0);
             r.setUTCFullYear(e, 0, 4);
@@ -2158,16 +2031,16 @@ webpackJsonp([98], {
             if ("string" != typeof e) return new Date(e);
             var n = (t || {}).additionalDigits;
             n = null == n ? u : Number(n);
-            var O = function(e) {
+            var Y = function(e) {
                     var t, n = {},
                         r = e.split(i);
                     if (s.test(r[0]) ? (n.date = null, t = r[0]) : (n.date = r[0], t = r[1]), t) {
-                        var o = T.exec(t);
+                        var o = M.exec(t);
                         o ? (n.time = t.replace(o[1], ""), n.timezone = o[1]) : n.time = t
                     }
                     return n
                 }(e),
-                _ = function(e, t) {
+                O = function(e, t) {
                     var n, r = f[t],
                         o = l[t];
                     if (n = p.exec(e) || o.exec(e)) {
@@ -2187,9 +2060,9 @@ webpackJsonp([98], {
                     return {
                         year: null
                     }
-                }(O.date, n),
-                Y = _.year,
-                S = function(e, t) {
+                }(Y.date, n),
+                S = O.year,
+                I = function(e, t) {
                     if (null === t) return null;
                     var n, r, o, a;
                     if (0 === e.length) return (r = new Date(0)).setUTCFullYear(t), r;
@@ -2199,23 +2072,23 @@ webpackJsonp([98], {
                         var u = parseInt(n[1], 10);
                         return r.setUTCFullYear(t, 0, u), r
                     }
-                    if (n = h.exec(e)) {
+                    if (n = x.exec(e)) {
                         r = new Date(0), o = parseInt(n[1], 10) - 1;
                         var i = parseInt(n[2], 10);
                         return r.setUTCFullYear(t, o, i), r
                     }
-                    if (n = g.exec(e)) return a = parseInt(n[1], 10) - 1, A(t, a);
-                    if (n = x.exec(e)) {
+                    if (n = g.exec(e)) return a = parseInt(n[1], 10) - 1, b(t, a);
+                    if (n = h.exec(e)) {
                         a = parseInt(n[1], 10) - 1;
                         var s = parseInt(n[2], 10) - 1;
-                        return A(t, a, s)
+                        return b(t, a, s)
                     }
                     return null
-                }(_.restDateString, Y);
-            if (S) {
-                var I, E = S.getTime(),
-                    F = 0;
-                return O.time && (F = function(e) {
+                }(O.restDateString, S);
+            if (I) {
+                var _, F = I.getTime(),
+                    H = 0;
+                return Y.time && (H = function(e) {
                     var t, n, r;
                     if (t = m.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * o;
                     if (t = w.exec(e)) return n = parseInt(t[1], 10), r = parseFloat(t[2].replace(",", ".")), n % 24 * o + r * a;
@@ -2225,9 +2098,9 @@ webpackJsonp([98], {
                         return n % 24 * o + r * a + 1e3 * u
                     }
                     return null
-                }(O.time)), O.timezone ? (k = O.timezone, I = (N = y.exec(k)) ? 0 : (N = M.exec(k)) ? (H = 60 * parseInt(N[2], 10), "+" === N[1] ? -H : H) : (N = b.exec(k)) ? (H = 60 * parseInt(N[2], 10) + parseInt(N[3], 10), "+" === N[1] ? -H : H) : 0) : (I = new Date(E + F).getTimezoneOffset(), I = new Date(E + F + I * a).getTimezoneOffset()), new Date(E + F + I * a)
+                }(Y.time)), Y.timezone ? (k = Y.timezone, _ = (N = T.exec(k)) ? 0 : (N = y.exec(k)) ? (E = 60 * parseInt(N[2], 10), "+" === N[1] ? -E : E) : (N = A.exec(k)) ? (E = 60 * parseInt(N[2], 10) + parseInt(N[3], 10), "+" === N[1] ? -E : E) : 0) : (_ = new Date(F + H).getTimezoneOffset(), _ = new Date(F + H + _ * a).getTimezoneOffset()), new Date(F + H + _ * a)
             }
-            var k, N, H;
+            var k, N, E;
             return new Date(e)
         }
     },
@@ -2293,4 +2166,4 @@ webpackJsonp([98], {
         }
     }
 });
-//# sourceMappingURL=sites.dev.pages.apps-list-page-b34ea03a05d334010a45a67f8080602e.js.map
+//# sourceMappingURL=sites.dev.pages.apps-list-page-48befbc7095b37ebc0228702157fc2bd.js.map

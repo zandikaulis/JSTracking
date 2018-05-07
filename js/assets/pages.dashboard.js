@@ -2487,67 +2487,67 @@ webpackJsonp([46], {
             }))(ae),
             ie = n("u4Vk"),
             se = b.a.wrap(function() {
-                return n.e(106).then(n.bind(null, "rE/F"))
+                return n.e(108).then(n.bind(null, "rE/F"))
             }, "AchievementsPage"),
             ce = b.a.wrap(function() {
-                return n.e(110).then(n.bind(null, "RdZX"))
+                return n.e(113).then(n.bind(null, "RdZX"))
             }, "AutoModPage"),
             ue = b.a.wrap(function() {
-                return n.e(107).then(n.bind(null, "EOq4"))
+                return n.e(109).then(n.bind(null, "EOq4"))
             }, "BountiesPage"),
             le = b.a.wrap(function() {
-                return n.e(90).then(n.bind(null, "ehuU"))
+                return n.e(92).then(n.bind(null, "ehuU"))
             }, "ChannelAnalyticsPageRoot"),
             de = b.a.wrap(function() {
-                return n.e(87).then(n.bind(null, "aeDV"))
+                return n.e(89).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
             me = b.a.wrap(function() {
-                return n.e(92).then(n.bind(null, "KO2S"))
+                return n.e(94).then(n.bind(null, "KO2S"))
             }, "CollectionEditorPage"),
             fe = b.a.wrap(function() {
-                return n.e(105).then(n.bind(null, "Dk8+"))
+                return n.e(107).then(n.bind(null, "Dk8+"))
             }, "CollectionManagerPage"),
             he = b.a.wrap(function() {
-                return n.e(100).then(n.bind(null, "rFlM"))
+                return n.e(102).then(n.bind(null, "rFlM"))
             }, "CommentModeratorPage"),
             pe = b.a.wrap(function() {
-                return n.e(94).then(n.bind(null, "xM3a"))
+                return n.e(96).then(n.bind(null, "xM3a"))
             }, "DashboardEventsRoot"),
             ge = b.a.wrap(function() {
-                return n.e(99).then(n.bind(null, "yuX3"))
+                return n.e(101).then(n.bind(null, "yuX3"))
             }, "DashboardRevenueSettingsRoot"),
             be = b.a.wrap(function() {
-                return n.e(96).then(n.bind(null, "gIJZ"))
+                return n.e(98).then(n.bind(null, "gIJZ"))
             }, "DashboardSettingsRoot"),
             ve = b.a.wrap(function() {
-                return n.e(88).then(n.bind(null, "bcqU"))
+                return n.e(90).then(n.bind(null, "bcqU"))
             }, "ExtensionConfigurePage"),
             ye = b.a.wrap(function() {
-                return n.e(88).then(n.bind(null, "1ZLG"))
+                return n.e(90).then(n.bind(null, "1ZLG"))
             }, "ExtensionDashboardRoot"),
             Oe = b.a.wrap(function() {
-                return n.e(108).then(n.bind(null, "yJuJ"))
+                return n.e(110).then(n.bind(null, "yJuJ"))
             }, "ExtensionManagerPage"),
             De = b.a.wrap(function() {
-                return n.e(102).then(n.bind(null, "Il1C"))
+                return n.e(104).then(n.bind(null, "Il1C"))
             }, "HighlighterPage"),
             Se = b.a.wrap(function() {
-                return n.e(89).then(n.bind(null, "c1gU"))
+                return n.e(91).then(n.bind(null, "c1gU"))
             }, "LivePage"),
             we = b.a.wrap(function() {
-                return n.e(87).then(n.bind(null, "aeDV"))
+                return n.e(89).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
             xe = b.a.wrap(function() {
-                return n.e(118).then(n.bind(null, "8uM1"))
+                return n.e(120).then(n.bind(null, "8uM1"))
             }, "PermissionsPage"),
             _e = b.a.wrap(function() {
-                return n.e(120).then(n.bind(null, "/fDj"))
+                return n.e(122).then(n.bind(null, "/fDj"))
             }, "RedirectToLatestArchiveHighlighter"),
             je = b.a.wrap(function() {
-                return n.e(91).then(n.bind(null, "tVPZ"))
+                return n.e(93).then(n.bind(null, "tVPZ"))
             }, "StreamSummaryPage"),
             Ne = b.a.wrap(function() {
-                return n.e(93).then(n.bind(null, "a9Y8"))
+                return n.e(95).then(n.bind(null, "a9Y8"))
             }, "VideoManagerPage"),
             Me = function(e) {
                 var t = e.match.params.pageName,
@@ -2671,12 +2671,6 @@ webpackJsonp([46], {
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/bounties",
                             component: ue
-                        }), f.createElement(h.c, {
-                            path: "/:channelName/dashboard/bounties/:selectedID",
-                            component: y.a
-                        }), f.createElement(h.c, {
-                            path: "/:channelName/dashboard/bounties",
-                            component: y.a
                         }), f.createElement(h.c, {
                             path: "/:channelName/dashboard/events",
                             component: pe
@@ -5662,4 +5656,4 @@ webpackJsonp([46], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-db400b7694f8e9dd33ef2392acec3970.js.map
+//# sourceMappingURL=pages.dashboard-a089ca838b0b06f65bf82bc6dac76072.js.map

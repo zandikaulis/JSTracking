@@ -2414,6 +2414,16 @@ webpackJsonp([40], {
                             message: t,
                             selectedCount: n
                         }))
+                    }, this.onRewardGiftEvent = function(e) {
+                        var t, n, a, r;
+                        i.postMessage((t = e.user, n = e.selectedCount, a = e.bitsAmount, r = e.minCheerAmount, {
+                            type: _e.b.RewardGift,
+                            id: Object(Te.a)("rewardGift"),
+                            selectedCount: n,
+                            bitsAmount: a,
+                            minCheerAmount: r,
+                            user: t
+                        }))
                     }, this.convertMessage = function(e) {
                         var t = i.bitsConfig || S.a,
                             n = e.message.user.username === i.userLogin ? i.selfEmotes : void 0;
@@ -2460,7 +2470,7 @@ webpackJsonp([40], {
                 }, e.prototype.updateBlockLinks = function(e) {
                     this.blockLinks = e
                 }, e.prototype.connectHandlers = function() {
-                    this.client.events.removeAll(), this.client.events.joined(this.onJoinedEvent), this.client.events.disconnected(this.onDisconnectedEvent), this.client.events.reconnecting(this.onReconnectingEvent), this.client.events.chat(this.onChatMessageEvent), this.client.events.usernotice(this.onChatMessageEvent), this.client.events.notice(this.onChatNoticeEvent), this.client.events.action(this.onChatActionEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.hosted(this.onHostedEvent), this.client.events.hosting(this.onHostingEvent), this.client.events.unhost(this.onUnhostEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.purchase(this.onPurchaseEvent), this.client.events.crate(this.onCrateEvent), this.client.events.ritual(this.onRitualEvent), this.client.events.subscription(this.onSubscriptionEvent), this.client.events.resub(this.onResubscriptionEvent), this.client.events.subgift(this.onSubscriptionGiftEvent), this.client.events.timeout(this.onTimeoutEvent), this.client.events.ban(this.onBanEvent), this.client.events.clearchat(this.onClearChatEvent), this.client.events.raid(this.onRaidEvent), this.client.events.unraid(this.onUnraidEvent), this.client.events.mods(this.onRoomModsEvent), this.client.events.roomstate(this.onRoomStateEvent), this.client.events.followersonly(this.onFollowerOnlyModeEvent), this.client.events.slowmode(this.onSlowModeEvent), this.client.events.subscribers(this.onSubscriberOnlyModeEvent), this.client.events.emoteonlymode(this.onEmoteOnlyModeEvent), this.client.events.charity(this.onBitsCharityEvent)
+                    this.client.events.removeAll(), this.client.events.joined(this.onJoinedEvent), this.client.events.disconnected(this.onDisconnectedEvent), this.client.events.reconnecting(this.onReconnectingEvent), this.client.events.chat(this.onChatMessageEvent), this.client.events.usernotice(this.onChatMessageEvent), this.client.events.notice(this.onChatNoticeEvent), this.client.events.action(this.onChatActionEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.hosted(this.onHostedEvent), this.client.events.hosting(this.onHostingEvent), this.client.events.unhost(this.onUnhostEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.purchase(this.onPurchaseEvent), this.client.events.crate(this.onCrateEvent), this.client.events.rewardgift(this.onRewardGiftEvent), this.client.events.ritual(this.onRitualEvent), this.client.events.subscription(this.onSubscriptionEvent), this.client.events.resub(this.onResubscriptionEvent), this.client.events.subgift(this.onSubscriptionGiftEvent), this.client.events.timeout(this.onTimeoutEvent), this.client.events.ban(this.onBanEvent), this.client.events.clearchat(this.onClearChatEvent), this.client.events.raid(this.onRaidEvent), this.client.events.unraid(this.onUnraidEvent), this.client.events.mods(this.onRoomModsEvent), this.client.events.roomstate(this.onRoomStateEvent), this.client.events.followersonly(this.onFollowerOnlyModeEvent), this.client.events.slowmode(this.onSlowModeEvent), this.client.events.subscribers(this.onSubscriberOnlyModeEvent), this.client.events.emoteonlymode(this.onEmoteOnlyModeEvent), this.client.events.charity(this.onBitsCharityEvent)
                 }, e.prototype.shouldBlockLinks = function(e) {
                     return e.username !== this.channelLogin && e.userType !== Me.a.Staff && e.userType !== Me.a.GlobalMod && e.userType !== Me.a.Moderator && this.blockLinks
                 }, e.prototype.postMessageToCurrentChannel = function(e, t) {
@@ -4638,7 +4648,52 @@ webpackJsonp([40], {
                     months: e.event.months
                 }, "ChatLine"))
             },
-            ie = function(e) {
+            ie = n("Nctl"),
+            ae = n.n(ie),
+            re = (n("zI5R"), function(e) {
+                if (!e.event.user) return null;
+                var t = a.createElement(X, {
+                        contentID: e.event.user.id,
+                        login: e.event.user.username,
+                        sourceType: T.a.chat_message
+                    }, e.event.user.displayName),
+                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in Chat!", {
+                        gifterButton: t,
+                        selectedCount: e.event.selectedCount
+                    }, "RewardGiftNoticeLine"),
+                    i = e.event.minCheerAmount > 0 && Object(r.d)("Cheer at least {minCheerAmount} Bits to share with Chat!", {
+                        minCheerAmount: e.event.minCheerAmount
+                    }, "RewardGiftNoticeLine");
+                return a.createElement(E._8, {
+                    className: "reward-gift-user-notice",
+                    margin: {
+                        y: .5
+                    }
+                }, a.createElement(E._8, {
+                    display: E.R.Flex,
+                    alignItems: E.c.Center,
+                    padding: {
+                        x: 1,
+                        y: .5
+                    }
+                }, a.createElement("img", {
+                    className: "reward-gift-user-notice__icon",
+                    src: ae.a
+                }), a.createElement(E.Q, {
+                    color: E.K.Alt2,
+                    type: E._49.Span
+                }, n)), a.createElement(E._8, {
+                    className: "reward-gift-user-notice__action",
+                    padding: {
+                        x: 1,
+                        y: 1
+                    }
+                }, a.createElement(E.Q, {
+                    bold: !0,
+                    color: E.K.Link
+                }, i)))
+            }),
+            oe = function(e) {
                 var t = e.event.message,
                     n = t.user.isIntl ? t.user.userDisplayName + " (" + t.user.userLogin + ")" : t.user.userDisplayName,
                     i = Object(r.d)("{user} is new here. Say hello!", {
@@ -4652,7 +4707,7 @@ webpackJsonp([40], {
                     color: E.K.Alt2
                 }, i)
             },
-            ae = function(e) {
+            se = function(e) {
                 var t = a.createElement(X, {
                         contentID: e.event.user.id,
                         login: e.event.user.username,
@@ -4697,9 +4752,9 @@ webpackJsonp([40], {
                     type: E._49.Span
                 }, i)
             };
-        var re = n("6d2v"),
-            oe = n("OAwv"),
-            se = Object(s.compose)(Object(l.a)(re, {
+        var le = n("6d2v"),
+            de = n("OAwv"),
+            ce = Object(s.compose)(Object(l.a)(le, {
                 options: function(e) {
                     return {
                         variables: {
@@ -4720,7 +4775,7 @@ webpackJsonp([40], {
                 if (!n) return a.createElement(E._8, null, Object(r.d)("This room is in subscribers only mode.", "SubsOnlyUpsellLine"));
                 var o = a.createElement(E.O, {
                     targetBlank: !0,
-                    to: n + "?" + oe.stringify({
+                    to: n + "?" + de.stringify({
                         ref: "subscriber_only_mode_chat"
                     })
                 }, n);
@@ -4728,9 +4783,9 @@ webpackJsonp([40], {
                     productLink: o
                 }, "SubsOnlyUpsellLine"))
             }),
-            le = (n("+5Qw"), "timeout_success"),
-            de = "ban_success",
-            ce = function(e) {
+            ue = (n("+5Qw"), "timeout_success"),
+            me = "ban_success",
+            pe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -4851,9 +4906,13 @@ webpackJsonp([40], {
                                 channelID: this.props.channelID,
                                 onPushMessage: this.props.onPushMessage,
                                 senderLogin: e.user.username
-                            }), a.createElement(ae, {
+                            }), a.createElement(se, {
                                 event: e
                             }));
+                        case k.b.RewardGift:
+                            return a.createElement(re, {
+                                event: e
+                            });
                         case k.b.BitsCharity:
                             return a.createElement(E._8, {
                                 className: "chat-line__bits-charity",
@@ -4918,12 +4977,12 @@ webpackJsonp([40], {
                             }));
                             if ("msg_subsonly" === e.msgid) return a.createElement(E._8, {
                                 className: "chat-line__status"
-                            }, a.createElement(se, {
+                            }, a.createElement(ce, {
                                 channelID: this.props.channelID
                             }));
                             if (this.props.isCurrentUserModerator) switch (e.msgid) {
-                                case le:
-                                case de:
+                                case ue:
+                                case me:
                                     return null
                             }
                             return a.createElement(E._8, {
@@ -4942,7 +5001,7 @@ webpackJsonp([40], {
                                 color: E.K.Alt2
                             }, Object(r.d)("The raid has been cancelled.", "RaidCancelMessage")));
                         case k.b.Ritual:
-                            return a.createElement(G, null, a.createElement(ie, {
+                            return a.createElement(G, null, a.createElement(oe, {
                                 event: e
                             }), a.createElement(x, {
                                 badgeSets: this.props.badgeSets,
@@ -4964,7 +5023,7 @@ webpackJsonp([40], {
                 }, t
             }(a.Component);
         n.d(t, "a", function() {
-            return ce
+            return pe
         })
     },
     "4Q9N": function(e, t, n) {
@@ -15767,7 +15826,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(126).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(128).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -15779,7 +15838,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(125).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(127).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -15791,7 +15850,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(124).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(126).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -15803,7 +15862,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(123).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(125).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -17847,6 +17906,9 @@ webpackJsonp([40], {
         };
         var i = n("qkCi"),
             a = n("INp2")
+    },
+    Nctl: function(e, t, n) {
+        e.exports = n.p + "assets/bits-crate-fd354824f8cadead34bd7c4850b36abe.png"
     },
     O0Qc: function(e, t, n) {
         "use strict";
@@ -32889,7 +32951,7 @@ webpackJsonp([40], {
                 return s.ModerationActions
             }),
             function(e) {
-                e[e.Message = 0] = "Message", e[e.Moderation = 1] = "Moderation", e[e.ModerationAction = 2] = "ModerationAction", e[e.TargetedModerationAction = 3] = "TargetedModerationAction", e[e.AutoMod = 4] = "AutoMod", e[e.Connected = 5] = "Connected", e[e.Disconnected = 6] = "Disconnected", e[e.Reconnect = 7] = "Reconnect", e[e.Hosting = 8] = "Hosting", e[e.Unhost = 9] = "Unhost", e[e.Hosted = 10] = "Hosted", e[e.Subscription = 11] = "Subscription", e[e.Resubscription = 12] = "Resubscription", e[e.SubGift = 13] = "SubGift", e[e.Clear = 14] = "Clear", e[e.SubscriberOnlyMode = 15] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 16] = "FollowerOnlyMode", e[e.SlowMode = 17] = "SlowMode", e[e.EmoteOnlyMode = 18] = "EmoteOnlyMode", e[e.RoomMods = 19] = "RoomMods", e[e.RoomState = 20] = "RoomState", e[e.Raid = 21] = "Raid", e[e.Unraid = 22] = "Unraid", e[e.Ritual = 23] = "Ritual", e[e.Notice = 24] = "Notice", e[e.Info = 25] = "Info", e[e.BadgesUpdated = 26] = "BadgesUpdated", e[e.Purchase = 27] = "Purchase", e[e.BitsCharity = 28] = "BitsCharity", e[e.CrateGift = 29] = "CrateGift"
+                e[e.Message = 0] = "Message", e[e.Moderation = 1] = "Moderation", e[e.ModerationAction = 2] = "ModerationAction", e[e.TargetedModerationAction = 3] = "TargetedModerationAction", e[e.AutoMod = 4] = "AutoMod", e[e.Connected = 5] = "Connected", e[e.Disconnected = 6] = "Disconnected", e[e.Reconnect = 7] = "Reconnect", e[e.Hosting = 8] = "Hosting", e[e.Unhost = 9] = "Unhost", e[e.Hosted = 10] = "Hosted", e[e.Subscription = 11] = "Subscription", e[e.Resubscription = 12] = "Resubscription", e[e.SubGift = 13] = "SubGift", e[e.Clear = 14] = "Clear", e[e.SubscriberOnlyMode = 15] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 16] = "FollowerOnlyMode", e[e.SlowMode = 17] = "SlowMode", e[e.EmoteOnlyMode = 18] = "EmoteOnlyMode", e[e.RoomMods = 19] = "RoomMods", e[e.RoomState = 20] = "RoomState", e[e.Raid = 21] = "Raid", e[e.Unraid = 22] = "Unraid", e[e.Ritual = 23] = "Ritual", e[e.Notice = 24] = "Notice", e[e.Info = 25] = "Info", e[e.BadgesUpdated = 26] = "BadgesUpdated", e[e.Purchase = 27] = "Purchase", e[e.BitsCharity = 28] = "BitsCharity", e[e.CrateGift = 29] = "CrateGift", e[e.RewardGift = 30] = "RewardGift"
             }(i || (i = {})),
             function(e) {
                 e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention"
@@ -36985,6 +37047,7 @@ webpackJsonp([40], {
     },
     z4Db: function(e, t) {},
     z7Cp: function(e, t) {},
+    zI5R: function(e, t) {},
     zLjL: function(e, t) {
         var n = {
             kind: "Document",
@@ -37377,4 +37440,4 @@ webpackJsonp([40], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-clips-8c76c64ec301918b31a8dbff472cdabc.js.map
+//# sourceMappingURL=pages.channel-clips-338b630d895a57eeec59553ad446f17d.js.map

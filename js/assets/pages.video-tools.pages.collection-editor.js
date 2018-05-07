@@ -1,4 +1,4 @@
-webpackJsonp([92], {
+webpackJsonp([94], {
     "+bIS": function(e, t, n) {
         "use strict";
 
@@ -8151,4 +8151,4 @@ webpackJsonp([92], {
         }
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-ae0518dc2fd5ab6d4bd5293ef2e07b84.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-a9ce32736ef65cea92bce866e2b820ba.js.map

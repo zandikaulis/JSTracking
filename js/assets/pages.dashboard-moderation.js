@@ -1,4 +1,4 @@
-webpackJsonp([100], {
+webpackJsonp([102], {
     "+V/3": function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
@@ -2145,8 +2145,8 @@ webpackJsonp([100], {
                     }
                 })], t)
             }(r.Component),
-            Q = n("mw/a"),
-            G = function(e) {
+            G = n("mw/a"),
+            Q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.onReportButtonClick = function(e) {
@@ -2155,7 +2155,7 @@ webpackJsonp([100], {
                             r = e.currentTarget.getAttribute("data-target-user-login") || "";
                         t.props.showReportUserModal({
                             reportContext: {
-                                contentType: Q.a.Raid,
+                                contentType: G.a.Raid,
                                 targetUserID: o,
                                 contentID: n,
                                 extra: JSON.stringify({
@@ -2284,7 +2284,7 @@ webpackJsonp([100], {
                         return Object(F.d)(L.a, t)
                     }
                 }, e)
-            })(G),
+            })(Q),
             Y = n("UzRK"),
             J = n("YDbY"),
             Z = (n("7t3k"), function(e) {
@@ -4464,7 +4464,7 @@ webpackJsonp([100], {
                     replies: {}
                 }, e)
             },
-            Q = function(e, t) {
+            G = function(e, t) {
                 var n = X(e);
                 return t.forEach(function(e) {
                     var t, o = e.id,
@@ -4484,7 +4484,7 @@ webpackJsonp([100], {
                     }
                 }), n
             },
-            G = function(e, t) {
+            Q = function(e, t) {
                 if (t in e.parentComments) return e.parentComments[t]
             },
             $ = function(e, t) {
@@ -4630,7 +4630,7 @@ webpackJsonp([100], {
                             source: H
                         });
                         return a.__assign({}, e, {
-                            comments: Q(e.comments, [n]),
+                            comments: G(e.comments, [n]),
                             isPostCooldownActive: !0
                         });
                     case m:
@@ -4648,7 +4648,7 @@ webpackJsonp([100], {
                             p = t.comments.slice();
                         if ("" === o) r = t.cursor;
                         else if (l = a.__assign({}, e.replyCursorMap, ((M = {})[o] = t.cursor.future, M)), t.cursor.future === P) {
-                            var g = G(e.comments, o);
+                            var g = Q(e.comments, o);
                             if (g) {
                                 var y = a.__assign({}, g, {
                                     moreReplies: !1
@@ -4656,7 +4656,7 @@ webpackJsonp([100], {
                                 p.push(y)
                             }
                         }
-                        var E = Q(e.comments, p);
+                        var E = G(e.comments, p);
                         return e.isScrollingSynced && (E = Y(E, ce)), a.__assign({}, e, {
                             comments: E,
                             cursor: r,
@@ -4665,7 +4665,7 @@ webpackJsonp([100], {
                         });
                     case b:
                         return a.__assign({}, e, {
-                            comments: Q(K(), t.comments),
+                            comments: G(K(), t.comments),
                             hasLoadedData: !0,
                             cursor: t.cursor,
                             replyCursorMap: {}
@@ -4676,7 +4676,7 @@ webpackJsonp([100], {
                         });
                     case i:
                         return a.__assign({}, e, {
-                            comments: Q(K(), t.comments),
+                            comments: G(K(), t.comments),
                             cursor: t.cursor,
                             hasLoadedData: !0,
                             errorMessage: ""
@@ -4720,7 +4720,7 @@ webpackJsonp([100], {
                         });
                     case f:
                         return a.__assign({}, e, {
-                            comments: Q(e.comments, t.comments)
+                            comments: G(e.comments, t.comments)
                         });
                     case O:
                         return a.__assign({}, e, {
@@ -5041,10 +5041,10 @@ webpackJsonp([100], {
             })
         }
         var Ke = n("6WAQ"),
-            Qe = function(e) {
+            Ge = function(e) {
                 return e + "s"
             },
-            Ge = {
+            Qe = {
                 beginSec: Number.MIN_VALUE,
                 endSec: Number.MAX_VALUE
             },
@@ -5057,7 +5057,7 @@ webpackJsonp([100], {
                     i = r.comments;
                 return 0 === i.commentCount ? [] : Array.from(new re(i)).reduce(function(r, s) {
                     return s.offset > a ? r : (s.comments.forEach(function(a) {
-                        var s = G(i, a);
+                        var s = Q(i, a);
                         if (void 0 !== s && (n || !$e(o, s))) return "comment" === s.source && rt(e.vodChat.comments.isReplayFilterOn, t) ? r : r.push(et(s, e, n, o, t))
                     }), r)
                 }, []).sort(Ze)
@@ -5117,7 +5117,7 @@ webpackJsonp([100], {
                 })
             },
             ot = function(e) {
-                return 0 === e.commentCount ? Ge : {
+                return 0 === e.commentCount ? Qe : {
                     beginSec: e.minOffset,
                     endSec: e.maxOffset
                 }
@@ -5392,7 +5392,7 @@ webpackJsonp([100], {
                                     users: [ye(l.commenter)]
                                 }, e.dispatch((c = o, a.__assign({
                                     type: u
-                                }, c))), e.dispatch(bt(Gt, o)), setTimeout(function() {
+                                }, c))), e.dispatch(bt(Qt, o)), setTimeout(function() {
                                     e.dispatch({
                                         type: _
                                     })
@@ -5434,7 +5434,7 @@ webpackJsonp([100], {
                     })
                 })
             },
-            Qt = function(e, t) {
+            Gt = function(e, t) {
                 return a.__awaiter(Bt, void 0, void 0, function() {
                     var n, o;
                     return a.__generator(this, function(i) {
@@ -5456,7 +5456,7 @@ webpackJsonp([100], {
                                     type: f
                                 }, s))), [3, 3];
                             case 2:
-                                return o = i.sent(), r.j.error(o, Qt.name), [3, 3];
+                                return o = i.sent(), r.j.error(o, Gt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -5464,7 +5464,7 @@ webpackJsonp([100], {
                     })
                 })
             },
-            Gt = function(e, t, n, o) {
+            Qt = function(e, t, n, o) {
                 return a.__awaiter(Bt, void 0, void 0, function() {
                     var e, i;
                     return a.__generator(this, function(a) {
@@ -5499,7 +5499,7 @@ webpackJsonp([100], {
                                     }
                                 }(t, e)), [3, 3];
                             case 2:
-                                return i = a.sent(), r.j.error(i, Gt.name), [3, 3];
+                                return i = a.sent(), r.j.error(i, Qt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -6170,8 +6170,8 @@ webpackJsonp([100], {
                 }
                 return n
             },
-            Qn = n("Ryxq"),
-            Gn = "ban-user",
+            Gn = n("Ryxq"),
+            Qn = "ban-user",
             $n = "delete-comment-button",
             Yn = "reply-button",
             Jn = "relative-time-title",
@@ -6276,7 +6276,7 @@ webpackJsonp([100], {
                         }, kt.createElement(Ct._6, {
                             alert: !0,
                             onClick: t.onBanUserClickHandler,
-                            "data-test-selector": Gn
+                            "data-test-selector": Qn
                         }, kt.createElement(Ct._8, {
                             padding: {
                                 y: .5,
@@ -6325,7 +6325,7 @@ webpackJsonp([100], {
                             o = Kn(n, {
                                 tt_medium: "video_chat",
                                 tt_content: "message_share_link",
-                                t: Object(Qn.a)(e.contentOffset),
+                                t: Object(Gn.a)(e.contentOffset),
                                 comment: e.id
                             });
                         return Object(zn.a)(o.toString()), t.setState({
@@ -6949,7 +6949,7 @@ webpackJsonp([100], {
                     }, Object(ae.d)("Video Chat is currently unavailable.", "VideoChat")));
                     else {
                         var s = void 0;
-                        s = this.props.hasFetchedComments && this.props.offsetRange === Ge ? kt.createElement(Ct._2, {
+                        s = this.props.hasFetchedComments && this.props.offsetRange === Qe ? kt.createElement(Ct._2, {
                             display: Ct.R.Flex,
                             margin: {
                                 x: 1,
@@ -7124,7 +7124,7 @@ webpackJsonp([100], {
                                 if (n.highlightTimestamp && n.currentVideoTime !== n.highlightTimestamp) return;
                                 return n.highlightedMessageID && (r.highlightedMessageID = n.highlightedMessageID), void e(vt(qt, r))
                             }
-                            if (n.offsetRange !== Ge) {
+                            if (n.offsetRange !== Qe) {
                                 if (st((c = {
                                         cursor: n.cursor,
                                         currentVideoTime: n.currentVideoTime,
@@ -7259,7 +7259,7 @@ webpackJsonp([100], {
         }), n.d(t, "y", function() {
             return qt
         }), n.d(t, "H", function() {
-            return Qt
+            return Gt
         }), n.d(t, "D", function() {
             return Yt
         }), n.d(t, "E", function() {
@@ -7283,7 +7283,7 @@ webpackJsonp([100], {
         }), n.d(t, !1, function() {}), n.d(t, "h", function() {
             return ln
         }), n.d(t, "t", function() {
-            return Qe
+            return Ge
         }), n.d(t, "s", function() {
             return pn
         }), n.d(t, "f", function() {
@@ -7846,7 +7846,7 @@ webpackJsonp([100], {
                 return s.ModerationActions
             }),
             function(e) {
-                e[e.Message = 0] = "Message", e[e.Moderation = 1] = "Moderation", e[e.ModerationAction = 2] = "ModerationAction", e[e.TargetedModerationAction = 3] = "TargetedModerationAction", e[e.AutoMod = 4] = "AutoMod", e[e.Connected = 5] = "Connected", e[e.Disconnected = 6] = "Disconnected", e[e.Reconnect = 7] = "Reconnect", e[e.Hosting = 8] = "Hosting", e[e.Unhost = 9] = "Unhost", e[e.Hosted = 10] = "Hosted", e[e.Subscription = 11] = "Subscription", e[e.Resubscription = 12] = "Resubscription", e[e.SubGift = 13] = "SubGift", e[e.Clear = 14] = "Clear", e[e.SubscriberOnlyMode = 15] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 16] = "FollowerOnlyMode", e[e.SlowMode = 17] = "SlowMode", e[e.EmoteOnlyMode = 18] = "EmoteOnlyMode", e[e.RoomMods = 19] = "RoomMods", e[e.RoomState = 20] = "RoomState", e[e.Raid = 21] = "Raid", e[e.Unraid = 22] = "Unraid", e[e.Ritual = 23] = "Ritual", e[e.Notice = 24] = "Notice", e[e.Info = 25] = "Info", e[e.BadgesUpdated = 26] = "BadgesUpdated", e[e.Purchase = 27] = "Purchase", e[e.BitsCharity = 28] = "BitsCharity", e[e.CrateGift = 29] = "CrateGift"
+                e[e.Message = 0] = "Message", e[e.Moderation = 1] = "Moderation", e[e.ModerationAction = 2] = "ModerationAction", e[e.TargetedModerationAction = 3] = "TargetedModerationAction", e[e.AutoMod = 4] = "AutoMod", e[e.Connected = 5] = "Connected", e[e.Disconnected = 6] = "Disconnected", e[e.Reconnect = 7] = "Reconnect", e[e.Hosting = 8] = "Hosting", e[e.Unhost = 9] = "Unhost", e[e.Hosted = 10] = "Hosted", e[e.Subscription = 11] = "Subscription", e[e.Resubscription = 12] = "Resubscription", e[e.SubGift = 13] = "SubGift", e[e.Clear = 14] = "Clear", e[e.SubscriberOnlyMode = 15] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 16] = "FollowerOnlyMode", e[e.SlowMode = 17] = "SlowMode", e[e.EmoteOnlyMode = 18] = "EmoteOnlyMode", e[e.RoomMods = 19] = "RoomMods", e[e.RoomState = 20] = "RoomState", e[e.Raid = 21] = "Raid", e[e.Unraid = 22] = "Unraid", e[e.Ritual = 23] = "Ritual", e[e.Notice = 24] = "Notice", e[e.Info = 25] = "Info", e[e.BadgesUpdated = 26] = "BadgesUpdated", e[e.Purchase = 27] = "Purchase", e[e.BitsCharity = 28] = "BitsCharity", e[e.CrateGift = 29] = "CrateGift", e[e.RewardGift = 30] = "RewardGift"
             }(o || (o = {})),
             function(e) {
                 e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention"
@@ -8496,7 +8496,7 @@ webpackJsonp([100], {
                     }))
                 }, t
             }(u.Component)),
-            Q = (n("OFAp"), function(e) {
+            G = (n("OFAp"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.searchInputChangeHandler = function(e) {
@@ -8574,11 +8574,11 @@ webpackJsonp([100], {
                     }, t)))))
                 }, t
             }(u.Component)),
-            G = Object(k.d)("SearchFilter")(Q),
+            Q = Object(k.d)("SearchFilter")(G),
             $ = (n("r8Zf"), Object(k.d)("FilterOptions", {
                 autoReportInteractive: !0
             })(function(e) {
-                return u.createElement(G, {
+                return u.createElement(Q, {
                     disabled: e.disabled,
                     onSearchTermChange: e.onSearchTermChange,
                     onSearchResultClick: e.onSearchResultClick,
@@ -10005,4 +10005,4 @@ webpackJsonp([100], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-moderation-0837a0de86c40fb852a6c20ad05f3227.js.map
+//# sourceMappingURL=pages.dashboard-moderation-9b90ff869e01309123d23e60769029f1.js.map

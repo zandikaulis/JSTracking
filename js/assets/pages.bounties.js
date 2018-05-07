@@ -1,4 +1,4 @@
-webpackJsonp([107], {
+webpackJsonp([109], {
     "1zmE": function(e, t, n) {
         var a = {
             kind: "Document",
@@ -518,17 +518,17 @@ webpackJsonp([107], {
                     }))
                 }, t
             }(l.Component));
-        var I, S, A, O = Object(v.b)(null, function(e) {
+        var I, A, S, O = Object(v.b)(null, function(e) {
             return Object(s.b)({
                 closeModal: _.c
             }, e)
         })(C);
         ! function(e) {
             e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-        }(I || (I = {})), (S || (S = {})).PAY_TO_STREAM = "PAY_TO_STREAM",
+        }(I || (I = {})), (A || (A = {})).PAY_TO_STREAM = "PAY_TO_STREAM",
             function(e) {
                 e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
-            }(A || (A = {}));
+            }(S || (S = {}));
         var x = n("dwSm"),
             N = function(e) {
                 function t() {
@@ -1472,14 +1472,15 @@ webpackJsonp([107], {
                         color: k.K.Alt2
                     }, Object(c.d)("You currently have no bounties in progress", "BountiesPage")), a.length > 0 ? l.createElement(l.Fragment, null, this.renderTitle(this.COMPLETED), this.renderBounties(a)) : null)
                 }, t.prototype.renderRightColumn = function(e) {
+                    var t = c.b.get("bounty_board_available_bounties_date", "Thu Apr 05 2063 00:00:00 GMT-0700 (PDT)");
                     return l.createElement(k._8, {
                         key: "right-column"
                     }, this.renderTitle(this.AVAILABLE), e.length > 0 ? this.renderBounties(e) : l.createElement(k.Q, {
                         color: k.K.Alt2
-                    }, Object(c.d)("All bounties have been claimed! Make sure to check back on {availableData} when the next round are released.", {
-                        availableData: l.createElement(k.Q, {
+                    }, Object(c.d)("All bounties have been claimed! Make sure to check back on {availableDate} when the next round are released.", {
+                        availableDate: l.createElement(k.Q, {
                             type: k._49.Strong
-                        }, Object(c.c)(new Date("Sun May 13 2018 00:00:00 GMT-0700 (PDT)")))
+                        }, Object(c.c)(new Date(t)))
                     }, "BountiesPage")))
                 }, t.prototype.renderLeftColumnPlaceholders = function() {
                     return l.createElement(k._8, {
@@ -2383,4 +2384,4 @@ webpackJsonp([107], {
     },
     y0HA: function(e, t) {}
 });
-//# sourceMappingURL=pages.bounties-e5359c933565fc0a981b5158a29b23d0.js.map
+//# sourceMappingURL=pages.bounties-7d0e50ad1a263fa433e9442f77e797ab.js.map

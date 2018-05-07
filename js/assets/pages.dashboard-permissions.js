@@ -1,4 +1,4 @@
-webpackJsonp([118], {
+webpackJsonp([120], {
     "8uM1": function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -282,4 +282,4 @@ webpackJsonp([118], {
         })
     }
 });
-//# sourceMappingURL=pages.dashboard-permissions-4355b0263c1e7afb2dddbbea7e3672f7.js.map
+//# sourceMappingURL=pages.dashboard-permissions-c060be0047cc0ff8f565e14f59d80e33.js.map

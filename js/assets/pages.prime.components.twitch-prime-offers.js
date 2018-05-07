@@ -1,4 +1,4 @@
-webpackJsonp([114], {
+webpackJsonp([115], {
     JVP6: function(e, t) {},
     P3dd: function(e, t, r) {
         "use strict";
@@ -85,6 +85,51 @@ webpackJsonp([114], {
             })(c);
         r.d(t, "a", function() {
             return l
+        })
+    },
+    Zh2I: function(e, t, r) {
+        "use strict";
+        var n = r("TToO"),
+            i = r("GiK3"),
+            a = r("6sO2"),
+            o = r("Hs3O"),
+            s = r("CSlQ"),
+            c = r("Tr7p"),
+            l = r("Odds"),
+            p = (r("cTXP"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onTryPrimeClick = function() {
+                        Object(c.j)({
+                            buttonPosition: t.props.tracking.position
+                        })
+                    }, t
+                }
+                return n.__extends(t, e), t.prototype.getLink = function() {
+                    if (this.props.externalURI) return this.props.externalURI;
+                    var e = this.props.externalReftag || o.c;
+                    return Object(o.d)(e, window.location.pathname.substring(1))
+                }, t.prototype.render = function() {
+                    return i.createElement(l._8, {
+                        className: "prime-upsell-button__subsite",
+                        margin: {
+                            top: 2,
+                            bottom: 1
+                        }
+                    }, i.createElement(l.v, {
+                        fullWidth: !0,
+                        size: l.z.Large,
+                        linkTo: this.getLink(),
+                        targetBlank: !0,
+                        onClick: this.onTryPrimeClick
+                    }, Object(a.d)("Try Twitch Prime", "TryPrimeButton")))
+                }, t
+            }(i.Component)),
+            m = Object(s.d)("TryPrimeButton", {
+                autoReportInteractive: !0
+            })(p);
+        r.d(t, "a", function() {
+            return m
         })
     },
     cTXP: function(e, t) {},
@@ -179,127 +224,14 @@ webpackJsonp([114], {
             g = r("Tr7p"),
             _ = r("4VmI"),
             P = r("Kckk"),
-            y = r("Hs3O"),
-            w = r("Odds"),
-            b = (r("cTXP"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onTryPrimeClick = function() {
-                        Object(g.j)({
-                            buttonPosition: t.props.tracking.position
-                        })
-                    }, t
-                }
-                return n.__extends(t, e), t.prototype.getLink = function() {
-                    if (this.props.externalURI) return this.props.externalURI;
-                    var e = this.props.externalReftag || y.c;
-                    return Object(y.d)(e, window.location.pathname.substring(1))
-                }, t.prototype.render = function() {
-                    return i.createElement(w._8, {
-                        className: "prime-upsell-button__subsite",
-                        margin: {
-                            top: 2,
-                            bottom: 1
-                        }
-                    }, i.createElement(w.v, {
-                        fullWidth: !0,
-                        size: w.z.Large,
-                        linkTo: this.getLink(),
-                        targetBlank: !0,
-                        onClick: this.onTryPrimeClick
-                    }, Object(o.d)("Try Twitch Prime", "TryPrimeButton")))
-                }, t
-            }(i.Component)),
-            O = Object(u.d)("TryPrimeButton", {
-                autoReportInteractive: !0
-            })(b),
-            T = (r("nVrf"), function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return n.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(w._35, {
-                        "data-test-target": "prime-banner-upsell",
-                        className: "prime-banner-upsell",
-                        padding: {
-                            x: 5,
-                            y: 2
-                        },
-                        borderBottom: !0
-                    }, i.createElement(w.Y, null, i.createElement(w.L, {
-                        cols: {
-                            default: 12,
-                            sm: 12,
-                            md: 2,
-                            lg: 2
-                        }
-                    }), i.createElement(w.L, {
-                        cols: {
-                            default: 12,
-                            sm: 12,
-                            md: 4,
-                            lg: 4
-                        }
-                    }, i.createElement(w._35, {
-                        className: "prime-upsell__logo-container",
-                        display: w.R.Flex,
-                        padding: 2,
-                        justifyContent: w._7.Center,
-                        alignItems: w.c.Center,
-                        textAlign: w._45.Center
-                    }, i.createElement(w._24, {
-                        asset: w._25.LogoTwitchPrime,
-                        width: 330,
-                        height: 150
-                    }))), i.createElement(w.L, {
-                        cols: {
-                            default: 12,
-                            sm: 12,
-                            md: 4,
-                            lg: 4
-                        }
-                    }, i.createElement(w._35, {
-                        display: w.R.Flex,
-                        justifyContent: w._7.Center,
-                        alignItems: w.c.Center,
-                        textAlign: w._45.Center,
-                        padding: 2
-                    }, i.createElement(w._8, {
-                        alignSelf: w.d.Center,
-                        className: "prime-upsell__msg-container"
-                    }, i.createElement(w.Q, {
-                        type: w._49.P,
-                        fontSize: w.V.Size4,
-                        bold: !0
-                    }, Object(o.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")), i.createElement(O, {
-                        externalReftag: this.props.externalReftag,
-                        tracking: {
-                            position: g.a.CenterBanner
-                        }
-                    }), i.createElement(w.Q, {
-                        type: w._49.P,
-                        fontSize: w.V.Size5
-                    }, Object(o.d)("Powered by Amazon Prime", "PrimeUpsell")), i.createElement(w.N, {
-                        src: "https://m.media-amazon.com/images/G/01/sm/twitchtv/assets/images/amazon_logo_SPOT_W_mono_2x.png",
-                        alt: "Amazon Prime Logo"
-                    })))), i.createElement(w.L, {
-                        cols: {
-                            default: 12,
-                            sm: 12,
-                            md: 2,
-                            lg: 2
-                        }
-                    })))
-                }, t
-            }(i.Component)),
-            k = Object(u.d)("TwitchPrimeBanner", {
-                autoReportInteractive: !0
-            })(T),
-            E = (r("iiIr"), function(e) {
+            O = r("Zh2I"),
+            y = r("o6O8"),
+            T = r("Odds"),
+            b = (r("iiIr"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderOfferList = function(e, r) {
-                        return i.createElement(w._8, {
+                        return i.createElement(T._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
                         }, i.createElement(f.a, {
@@ -319,29 +251,29 @@ webpackJsonp([114], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.props.userData.loading && !this.props.userData.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return i.createElement(w._2, {
+                    return i.createElement(T._2, {
                         fullWidth: !0
                     }, i.createElement(s.b, {
                         suppressScrollX: !0
-                    }, i.createElement(w._8, {
+                    }, i.createElement(T._8, {
                         fullWidth: !0
-                    }, this.renderBanner(), i.createElement(w._35, {
-                        background: w.n.Base,
+                    }, this.renderBanner(), i.createElement(T._35, {
+                        background: T.n.Base,
                         className: "prime-offers"
-                    }, this.renderOfferList(h.a.Game, Object(o.d)("Free Games with Prime", "PrimePageOffers")), this.renderOfferList(h.a.InGameLoot, Object(o.d)("Free In-Game Loot with Prime", "PrimePageOffers"))), i.createElement(w._35, {
-                        justifyContent: w._7.Center,
-                        alignItems: w.c.Center,
-                        textAlign: w._45.Center,
+                    }, this.renderOfferList(h.a.Game, Object(o.d)("Free Games with Prime", "PrimePageOffers")), this.renderOfferList(h.a.InGameLoot, Object(o.d)("Free In-Game Loot with Prime", "PrimePageOffers"))), i.createElement(T._35, {
+                        justifyContent: T._7.Center,
+                        alignItems: T.c.Center,
+                        textAlign: T._45.Center,
                         padding: 2
                     }, this.renderFooterUpsellButton()), i.createElement(d.a, null))))
                 }, t.prototype.renderBanner = function() {
                     var e = this.props.userData;
-                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(k, {
+                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(y.a, {
                         externalReftag: this.getReftagFromSearch()
                     })
                 }, t.prototype.renderFooterUpsellButton = function() {
                     var e = this.props.userData;
-                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(O, {
+                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(O.a, {
                         externalReftag: this.getReftagFromSearch(),
                         tracking: {
                             position: g.a.CenterFooter
@@ -353,16 +285,113 @@ webpackJsonp([114], {
                     if (t) return t[1]
                 }, t
             }(i.Component)),
-            v = Object(a.compose)(Object(c.a)(_, {
+            w = Object(a.compose)(Object(c.a)(_, {
                 name: "userData"
             }), Object(u.d)("TwitchPrimeOffersPage", {
                 destination: p.a.TwitchPrimeOffersPage
             }), Object(l.a)({
                 location: m.PageviewLocation.TwitchPrimeOffersPage
-            }))(E);
+            }))(b);
         r.d(t, "TwitchPrimeOffersPage", function() {
-            return v
+            return w
+        })
+    },
+    o6O8: function(e, t, r) {
+        "use strict";
+        var n = r("TToO"),
+            i = r("GiK3"),
+            a = r("6sO2"),
+            o = r("CSlQ"),
+            s = r("Tr7p"),
+            c = r("Zh2I"),
+            l = r("Odds"),
+            p = (r("nVrf"), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return n.__extends(t, e), t.prototype.render = function() {
+                    return i.createElement(l._35, {
+                        "data-test-target": "prime-banner-upsell",
+                        className: "prime-banner-upsell",
+                        padding: {
+                            x: 5,
+                            y: 2
+                        },
+                        borderBottom: !0
+                    }, i.createElement(l.Y, null, i.createElement(l.L, {
+                        cols: {
+                            default: 12,
+                            sm: 12,
+                            md: 2,
+                            lg: 2
+                        }
+                    }), i.createElement(l.L, {
+                        cols: {
+                            default: 12,
+                            sm: 12,
+                            md: 4,
+                            lg: 4
+                        }
+                    }, i.createElement(l._35, {
+                        className: "prime-upsell__logo-container",
+                        display: l.R.Flex,
+                        padding: 2,
+                        justifyContent: l._7.Center,
+                        alignItems: l.c.Center,
+                        textAlign: l._45.Center
+                    }, i.createElement(l._24, {
+                        asset: l._25.LogoTwitchPrime,
+                        width: 330,
+                        height: 150
+                    }))), i.createElement(l.L, {
+                        cols: {
+                            default: 12,
+                            sm: 12,
+                            md: 4,
+                            lg: 4
+                        }
+                    }, i.createElement(l._35, {
+                        display: l.R.Flex,
+                        justifyContent: l._7.Center,
+                        alignItems: l.c.Center,
+                        textAlign: l._45.Center,
+                        padding: 2
+                    }, i.createElement(l._8, {
+                        alignSelf: l.d.Center,
+                        className: "prime-upsell__msg-container"
+                    }, i.createElement(l.Q, {
+                        type: l._49.P,
+                        fontSize: l.V.Size4,
+                        bold: !0
+                    }, Object(a.d)("Free games, in-game loot, exclusives and surprises. New offers every month with Twitch Prime membership.", "PrimeUpsell")), i.createElement(c.a, {
+                        externalReftag: this.props.externalReftag,
+                        tracking: {
+                            position: s.a.CenterBanner
+                        }
+                    }), i.createElement(l.Q, {
+                        type: l._49.P,
+                        fontSize: l.V.Size5
+                    }, Object(a.d)("Powered by Amazon Prime", "PrimeUpsell")), i.createElement(l.N, {
+                        src: "https://m.media-amazon.com/images/G/01/sm/twitchtv/assets/images/amazon_logo_SPOT_W_mono_2x.png",
+                        alt: "Amazon Prime Logo"
+                    })))), i.createElement(l.L, {
+                        cols: {
+                            default: 12,
+                            sm: 12,
+                            md: 2,
+                            lg: 2
+                        }
+                    })))
+                }, t
+            }(i.Component)),
+            m = Object(o.d)("TwitchPrimeBanner", {
+                autoReportInteractive: !0
+            })(p);
+        r.d(t, !1, function() {
+            return "prime-banner-upsell"
+        }), r.d(t, "a", function() {
+            return m
         })
     }
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-offers-8bdc37ee7ff430c4b96fccf456ee12e1.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-offers-1029a4e1521319d3adea096e1a2cff5a.js.map

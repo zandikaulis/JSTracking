@@ -429,16 +429,16 @@ webpackJsonp([57], {
                 autoReportInteractive: !0
             })(x),
             I = c.a.wrap(function() {
-                return n.e(114).then(n.bind(null, "o0He"))
+                return n.e(115).then(n.bind(null, "o0He"))
             }, "TwitchPrimeOffersPage"),
             T = c.a.wrap(function() {
-                return n.e(97).then(n.bind(null, "9GX+"))
+                return n.e(99).then(n.bind(null, "9GX+"))
             }, "TwitchPrimeSuccessPage"),
-            w = c.a.wrap(function() {
-                return n.e(112).then(n.bind(null, "Uen5"))
-            }, "TwitchPrimeLinkingPage"),
             L = c.a.wrap(function() {
-                return n.e(109).then(n.bind(null, "HnrI"))
+                return n.e(111).then(n.bind(null, "Uen5"))
+            }, "TwitchPrimeLinkingPage"),
+            w = c.a.wrap(function() {
+                return n.e(112).then(n.bind(null, "HnrI"))
             }, "TwitchPrimeFortnitePage"),
             R = function(e) {
                 function t() {
@@ -465,13 +465,13 @@ webpackJsonp([57], {
                         fullHeight: !0
                     }, i.createElement(o.e, null, i.createElement(s.d, {
                         path: "/prime/fortnite/link",
-                        component: w
+                        component: L
                     }), i.createElement(s.d, {
                         path: "/prime/fortnite/success",
                         component: T
                     }), i.createElement(s.d, {
                         path: "/prime/fortnite",
-                        component: L
+                        component: w
                     }), i.createElement(s.d, {
                         path: "/prime",
                         component: I
@@ -972,7 +972,7 @@ webpackJsonp([57], {
             P = n("lfvs"),
             I = n("Hs3O"),
             T = (n("ukY1"), n("F1v6")),
-            w = function(e) {
+            L = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1087,7 +1087,7 @@ webpackJsonp([57], {
                     }, o)))))
                 }, t
             }(s.Component),
-            L = Object(l.compose)(Object(u.a)(T, {
+            w = Object(l.compose)(Object(u.a)(T, {
                 options: function() {
                     return {
                         variables: {
@@ -1096,12 +1096,12 @@ webpackJsonp([57], {
                         }
                     }
                 }
-            }), Object(h.d)("BlueBarComponent"))(w),
+            }), Object(h.d)("BlueBarComponent"))(L),
             R = n("dnng");
         n.d(t, "c", function() {
             return x
         }), n.d(t, "a", function() {
-            return L
+            return w
         }), n.d(t, "b", function() {
             return R.a
         }), n.d(t, "d", function() {
@@ -1541,7 +1541,7 @@ webpackJsonp([57], {
                             externalURL: t.props.externalURL,
                             hasPrime: !0,
                             index: t.props.index
-                        }, t.props.offerType), t.props.claimCallback && t.props.offerType !== _.d.EXTERNAL_OFFER && t.props.claimCallback(e)
+                        }, t.props.offerType), t.props.claimCallback && t.props.offerType !== _.d.EXTERNAL_OFFER && !t.props.externalURL && t.props.claimCallback(e)
                     }, t.onHover = function() {
                         Object(v.e)({
                             offerID: t.props.offerID,
@@ -1566,26 +1566,31 @@ webpackJsonp([57], {
                     }, this.getClaimButton())
                 }, t.prototype.getClaimButton = function() {
                     var e = this.props,
-                        t = this.getButtonText(),
-                        n = a.createElement(g.a, {
-                            onHover: this.onHover
-                        }, a.createElement(u.v, {
-                            fullWidth: !0,
-                            state: this.props.claiming ? u.A.Loading : u.A.Default,
-                            disabled: this.props.claiming,
-                            onClick: this.onClick,
-                            "data-a-target": "prime-claim-button"
-                        }, t));
-                    return e.offerType === _.d.EXTERNAL_OFFER ? a.createElement(g.a, {
+                        t = e.externalURL,
+                        n = e.claiming,
+                        r = e.offerType,
+                        i = this.getButtonText();
+                    if (t || r === _.d.EXTERNAL_OFFER) return a.createElement(g.a, {
                         onHover: this.onHover
                     }, a.createElement(u.v, {
                         fullWidth: !0,
-                        linkTo: e.externalURL,
+                        linkTo: t,
                         targetBlank: !0,
                         onClick: this.onClick
-                    }, t)) : a.createElement(u._8, {
+                    }, i));
+                    var o = a.createElement(g.a, {
+                        onHover: this.onHover
+                    }, a.createElement(u.v, {
+                        fullWidth: !0,
+                        state: n ? u.A.Loading : u.A.Default,
+                        disabled: n,
+                        linkTo: t,
+                        onClick: this.onClick,
+                        "data-a-target": "prime-claim-button"
+                    }, i));
+                    return a.createElement(u._8, {
                         position: u._15.Relative
-                    }, n)
+                    }, o)
                 }, t.prototype.getButtonText = function() {
                     var e = Object(s.d)("Learn More", "PrimeClaimButton");
                     if (this.props.externalURL) return e;
@@ -1752,7 +1757,7 @@ webpackJsonp([57], {
                         index: this.props.index
                     })
                 }, t.prototype.getClaimDescriptionSection = function() {
-                    if (this.props.offerType === _.d.EXTERNAL_OFFER) return null;
+                    if (this.props.offerType === _.d.EXTERNAL_OFFER || this.props.externalURL) return null;
                     var e = this.props.data;
                     return a.createElement(E, {
                         description: this.props.offerDescription,
@@ -1809,7 +1814,7 @@ webpackJsonp([57], {
                     }))
                 }, t = i.__decorate([Object(p.d)("CopyButton")], t)
             }(a.Component)),
-            w = function(e) {
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -1844,7 +1849,7 @@ webpackJsonp([57], {
                     }))) : null
                 }, t = i.__decorate([Object(p.d)("CopyableItem")], t)
             }(a.Component),
-            L = (n("yqdF"), function(e) {
+            w = (n("yqdF"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.getClaimInstructions = function() {
@@ -1905,7 +1910,7 @@ webpackJsonp([57], {
             }(a.Component)),
             R = Object(p.d)("PrimeClaimInstructions", {
                 autoReportInteractive: !0
-            })(L),
+            })(w),
             U = (n("S5wX"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1924,7 +1929,7 @@ webpackJsonp([57], {
                     }, this.getCodeOrConfirmation(e), this.getPrimeClaimInstructions())
                 }, t.prototype.getCodeOrConfirmation = function(e) {
                     var t = Object(_.i)(e);
-                    if (this.props.code && this.props.deliveryMethod === _.d.CLAIM_CODE) return a.createElement(u._8, null, a.createElement(w, {
+                    if (this.props.code && this.props.deliveryMethod === _.d.CLAIM_CODE) return a.createElement(u._8, null, a.createElement(L, {
                         initialText: this.props.code,
                         readOnly: !0,
                         textCenter: !0
@@ -2088,7 +2093,7 @@ webpackJsonp([57], {
                                 errorType: o
                             })
                         }
-                        if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && Object(_.k)(i)) {
+                        if (!n.externalURL && (t.isCurrentOfferClaimed(e) || t.state.claimed) && Object(_.k)(i)) {
                             var s = t.state.claimData || r.claimData;
                             return a.createElement(j, {
                                 claimInstructions: e.claimInstructions,
@@ -2361,20 +2366,24 @@ webpackJsonp([57], {
                 }, t.prototype.getFreeGamesWithPrimeOfferIds = function() {
                     return s.b.get("prime_free_game_offerids", [])
                 }, t.prototype.getSortedOffers = function() {
-                    var e = this.getUserId();
+                    var e = this,
+                        t = this.getUserId();
                     if (!this.props.offersData || !this.props.offersData.primeOffers) return [];
-                    var t = this.props.offersData.primeOffers;
-                    if (e) {
-                        var n = t.filter(function(e) {
-                                return e.self && e.self.hasEntitlement
+                    var n = this.props.offersData.primeOffers;
+                    if (t) {
+                        var r = n.filter(function(t) {
+                                return !e.offerHasExternalURL(t) && t.self && t.self.hasEntitlement
                             }).sort(_.n),
-                            r = this.filterOffersByOfferType(n),
-                            i = t.filter(function(e) {
-                                return !e.self || !e.self.hasEntitlement
+                            i = this.filterOffersByOfferType(r),
+                            a = n.filter(function(t) {
+                                return e.offerHasExternalURL(t) || !t.self || !t.self.hasEntitlement
                             }).sort(_.n);
-                        return this.filterOffersByOfferType(i).concat(r)
+                        return this.filterOffersByOfferType(a).concat(i)
                     }
-                    return this.filterOffersByOfferType(t).slice().sort(_.n)
+                    return this.filterOffersByOfferType(n).slice().sort(_.n)
+                }, t.prototype.offerHasExternalURL = function(e) {
+                    var t = e && e.content;
+                    return t && t.externalURL
                 }, t.prototype.filterOffersByOfferType = function(e) {
                     var t = this.getFreeGamesWithPrimeOfferIds();
                     return this.props.offerFilterType === z.a.Game ? e.filter(function(e) {
@@ -3366,4 +3375,4 @@ webpackJsonp([57], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.prime-20657f9f68852a2d1691c931b089012d.js.map
+//# sourceMappingURL=pages.prime-929bf2abb4b713be306d08a765c8daae.js.map
