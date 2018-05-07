@@ -39,6 +39,7 @@ window.__twilightSettings = {
     "extensions_bits_banner_enabled": true,
     "extensions_mobile_banner_enabled": false,
     "first_page_loaded_timeout": 30000,
+    "gdpr_consent_enabled": false,
     "google_analytics_url": "https://ssl.google-analytics.com/ga.js",
     "impact_experiment_key": false,
     "ivw_countries": ["DE"],
