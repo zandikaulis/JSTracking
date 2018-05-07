@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c862f9c22c24703f2402.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".30f3519d519cddf9684d.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -29195,28 +29195,40 @@
         var Fe = Object(C.b)(De, qe)(Ue),
             Ve = n(60);
         n.d(t, "a", function() {
-            return Ge
+            return Ke
         });
         var He = {
                 getCurrentTime: S.a.func.isRequired,
-                showBottomControls: S.a.bool.isRequired
+                isShowingCollectionSidebar: S.a.bool.isRequired,
+                isShowingAd: S.a.bool.isRequired
             },
-            ze = x()("pl-controls-bottom", "pl-flex", "qa-controls-bottom"),
-            We = function(e) {
+            ze = (x()("pl-controls-bottom", "pl-flex", "qa-controls-bottom"), function(e) {
+                var t = e.collection,
+                    n = e.screen;
                 return {
-                    showBottomControls: e.collection.currentView !== Ve.b
+                    isShowingCollectionSidebar: t.currentView === Ve.b,
+                    isShowingAd: n[0] === Ne.c || n[0] === Ne.l
                 }
-            },
-            Ke = function(e) {
-                var t = e.getCurrentTime;
-                return e.showBottomControls ? k.a.createElement("div", {
-                    className: ze
+            }),
+            We = function(e) {
+                var t = e.getCurrentTime,
+                    n = e.isShowingCollectionSidebar,
+                    r = e.isShowingAd;
+                if (n) return null;
+                var i = x()({
+                    "pl-controls-bottom": !0,
+                    "pl-controls-bottom__advertisement": r,
+                    "pl-flex": !0,
+                    "qa-controls-bottom": !0
+                });
+                return k.a.createElement("div", {
+                    className: i
                 }, k.a.createElement(Fe, {
                     getCurrentTime: t
-                }), k.a.createElement(O.a, null), k.a.createElement(ee, null), k.a.createElement(P.a, null)) : null
+                }), k.a.createElement(O.a, null), k.a.createElement(ee, null), k.a.createElement(P.a, null))
             };
-        Ke.propTypes = He;
-        var Ge = Object(C.b)(We)(Ke)
+        We.propTypes = He;
+        var Ke = Object(C.b)(ze)(We)
     }, function(e, t, n) {
         "use strict";
 
@@ -31674,7 +31686,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.05.04-235504+7d32fcfbf4e97d9c5112ea5db68c5110d71d3019",
+                    app_version: "2018.05.07-200802+6122165531b54888b2c257c9586ce76541590668",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -34050,10 +34062,12 @@
         }
 
         function sn(e) {
-            var t = e.children;
-            return e.showTopBar ? sl.a.createElement("div", {
+            var t = e.children,
+                n = e.isAmazonVSEPlayer,
+                r = e.isShowingAd;
+            return n || r ? null : sl.a.createElement("div", {
                 className: "pl-controls-top js-controls-top"
-            }, t) : null
+            }, t)
         }
 
         function un(e, t) {
@@ -37440,7 +37454,7 @@
                 }]), e
             }(),
             os = n(105),
-            as = "//video-edge-e8e991.sjc02.hls.ttvnw.net/v1/segment/Ci9t89yrYYb7yOBlSJAXe6wlUED-aMELStW6Y7FLp_5ZqrTEU1Q-XsAqub31Cu6mIuX2KuqC42ye78fOWI2-TIZbebHb5b3rytMFnjAmf0t51FQaJvu18-zQITSsAxtnG6Yh-5fdjzqATs1ukr8yBpZzxs5pVKXGA1mqoiYCYg0DUupMkfLt_WaudtH18kFSUi3GxkTG3fmN2P77jZukrUA4b1T-25Ap7PcgIlOoPTGebHiaH3ojPKvYCpnfdD1hHmurODrHj-fg80b3EEu0vte1XGARV74kXHoGYj1yHY-Pj-jkXhtcTVJM0EV67jFBhbrZFJPE1aj_2itP3zJuBf_guflVJ_YAeQBclzfmm8fgrtE0DZLImhx9Dwmsut_5z7Cvnf_XCH2liIKgmAAA59aAmLul41ru2VzR_qXFKmSHnQY0G8v5c-6p1mw2Rj52ouz71pU4K7JiGIWYxiPZ1fDq42DqdVevmwZvEkHKDmZvQVYvT_5fdnHiqVvqClmdaYyNEsZaKnWFOiMAEouzxBIwna8W.ts",
+            as = "//video-edge-b84487.sjc02.hls.ttvnw.net/v1/segment/Csnx45O-aSwpvR95ktp0hRpoRUPhbTe5-rGhnHUPJkIiB4KA-xjsKc1DaVhKF1w-mWj7ZZeetxOJzRAazZc_ig0Wwbp9yfpZjZcpbn3VMHpfpNJn9LN0dfW25gJxHrIS5kpCZEBUIKJP6ILMFuqJs45YyFuvET2bzHCTYjMQ7DIXkqZTVFFpl48S_1zE4m7V6yraIHons5W4I6B83YEZnf2kbjcl3rIF31zWVbiHDk_uK64yOfZcZZyCvRG04OLS7t-qTSDNUHIxTDB1uvxyDtcLgO5dgggacgBhDw7xg6bMMI4wdti7xhd3TslyZhQb-71gQIYka4zHMpVHbxckMsq9nACQ9-QNSeuZ0N-f4kBalh4YCMm91MkzKIqH8dOIcGLPKwSPQ2G_x7xruQUrZTH1QCXA2bWDf4V7KTpiR1Pv1YLyXXEZdOCFAFYzoAwgbG0E74ceEVSvXq5hdFC0-pBlnfQwGZkq2LbAUqpPmmNn6EqK6iH2QJLVvZT19vrK_bqTpOU3iC9o0JLx2zn2iO7H7kYavfxr58fGUOlw.ts",
             ss = n(50),
             us = n(270),
             cs = n(139),
@@ -42773,13 +42787,15 @@
         var xh = Object(dl.c)()(Object(ll.b)(Ch)(an)),
             Rh = {
                 children: nd.a.node.isRequired,
-                showTopBar: nd.a.bool.isRequired
+                isAmazonVSEPlayer: nd.a.bool.isRequired,
+                isShowingAd: nd.a.bool.isRequired
             },
             jh = function(e) {
                 var t = e.env,
-                    n = e.ui;
+                    n = e.screen;
                 return {
-                    showTopBar: t.playerType !== es.e && !n.isMini
+                    isAmazonVSEPlayer: t.playerType === es.e,
+                    isShowingAd: n[0] === tc.c || n[0] === tc.l
                 }
             };
         sn.propTypes = Rh;
