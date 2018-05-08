@@ -1467,13 +1467,13 @@ window.SiteOptions = {
         },
         "3fa31c3d-1477-40a5-9433-0b64b398c86a": {
             "name": "TWILIGHT_SUB_CHECKOUT_VARIANT",
-            "v": 3357,
+            "v": 3706,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "recurly"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "zuora"
             }]
         },
