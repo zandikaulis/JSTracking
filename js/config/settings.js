@@ -136,13 +136,13 @@ window.__twilightSettings = {
         },
         "080c0331-3073-4539-992f-93274236a97d": {
             "name": "TWILIGHT_PAY__SAVED_PAYMENT_METHODS",
-            "v": 3649,
+            "v": 3707,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 25,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 75,
                 "value": "no"
             }]
         },
@@ -714,13 +714,13 @@ window.__twilightSettings = {
         },
         "afcda2ba-dd12-4d9a-9428-df6a71104db8": {
             "name": "twilight_new_homepage",
-            "v": 3656,
+            "v": 3709,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "experiment"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }]
         },
