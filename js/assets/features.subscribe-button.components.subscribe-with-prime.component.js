@@ -2120,6 +2120,7 @@ webpackJsonp([59], {
                 has_prime: e.hasPrime,
                 client_time: Date.now(),
                 number_of_offers: e.numberOfOffers,
+                action: n.SeeOffers,
                 user_agent: navigator.userAgent
             })
         }, t.l = function(e) {
@@ -2180,7 +2181,7 @@ webpackJsonp([59], {
                 has_prime: e.hasPrime
             })
         }! function(e) {
-            e.Open = "click_open", e.Close = "click_close", e.Hover = "hover"
+            e.Open = "click_open", e.Close = "click_close", e.Hover = "hover", e.SeeOffers = "see_offers"
         }(n || (n = {})),
         function(e) {
             e.Hover = "hover", e.Click = "click"
@@ -2879,4 +2880,4 @@ webpackJsonp([59], {
     yqdF: function(e, t) {},
     zAvr: function(e, t) {}
 });
-//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-fc6c44bf6eda792e73aa2d2d1b3c6dec.js.map
+//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-e1d1255d9bbfbd8f8633a685411a482f.js.map

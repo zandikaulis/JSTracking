@@ -1,4 +1,4 @@
-webpackJsonp([111], {
+webpackJsonp([112], {
     "0blB": function(e, t) {},
     "7XNA": function(e, t) {
         var n = {
@@ -65,26 +65,32 @@ webpackJsonp([111], {
         "use strict";
         var i = n("TToO"),
             r = n("GiK3"),
-            o = n("6sO2"),
-            a = n("Odds"),
-            c = (n("j9al"), function(e) {
+            o = n("O27J"),
+            a = n("6sO2"),
+            c = n("Odds"),
+            l = (n("j9al"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                    var e = this.props.hash,
+                        t = e && o.findDOMNode(this.refs[e]);
+                    t && t.scrollIntoView()
+                }, t.prototype.render = function() {
                     return r.createElement("div", {
-                        id: "faq"
-                    }, r.createElement(a._35, {
+                        id: "faq",
+                        ref: "faq"
+                    }, r.createElement(c._35, {
                         className: "twitch-prime-faq",
                         padding: {
                             x: 1,
                             y: 5
                         }
-                    }, r.createElement(a._23, {
+                    }, r.createElement(c._23, {
                         centered: !0
-                    }, r.createElement(a.Y, {
-                        justifyContent: a._7.Center
-                    }, r.createElement(a.L, {
+                    }, r.createElement(c.Y, {
+                        justifyContent: c._7.Center
+                    }, r.createElement(c.L, {
                         cols: {
                             default: 12,
                             sm: 10,
@@ -92,80 +98,81 @@ webpackJsonp([111], {
                             lg: 7,
                             xl: 6
                         }
-                    }, r.createElement(a._8, {
+                    }, r.createElement(c._8, {
                         margin: {
                             bottom: 2
                         },
-                        textAlign: a._45.Center,
+                        textAlign: c._45.Center,
                         fullWidth: !0
-                    }, r.createElement(a.Q, {
-                        type: a._49.H2,
+                    }, r.createElement(c.Q, {
+                        type: c._49.H2,
                         bold: !0
-                    }, Object(o.d)("FAQ/Help", "PrimeFAQComponent"))), this.renderQuestion(Object(o.d)("Q: Do I need a Twitch Prime membership to get Fortnite content?", "PrimeFAQComponent"), "membership"), this.renderAnswer(Object(o.d)("A: Yes.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: What exactly will I get in the Twitch Prime Pack #2?", "PrimeFAQComponent"), "loot"), this.renderAnswer(Object(o.d)("A: This pack includes 4 distinct items, all of which are exclusively available to Twitch Prime members:", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("Battle Royale Trailblazer Outfit: On the forefront of victory.", "PrimeFAQComponent"), Object(o.d)("Battle Royale True North Back Bling: Find your way.", "PrimeFAQComponent"), Object(o.d)("Battle Royale Tenderizer Pickaxe: Leave a good first impression.", "PrimeFAQComponent"), Object(o.d)("Battle Royale Freestylin’ Emote: Tear up the dance floor.", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("Note: All items are cosmetic only and provide no competitive advantage. All items for Twitch Prime Pack #2 are for Battle Royale only.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: How do I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "content"), this.renderAnswer(Object(o.d)("A: If you already have an active Twitch Prime membership (either paid or free trial), log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: I already linked my Twitch and Epic account when I claimed the first Twitch Prime Pack. Do I need to claim again to get the current Twitch Prime content?", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("A: YES. You must claim each Twitch Prime Pack individually. If you already linked your Twitch and Epic accounts for the previous Twitch Prime loot in Fortnite, log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: How do I become a Twitch Prime member?", "PrimeFAQComponent"), "signup"), this.renderAnswerWithLink(Object(o.d)("A: Twitch Prime is included with Amazon Prime in the US, Mexico, Canada, Italy, France, Germany, Belgium, Austria, Spain, Japan, Singapore, Netherlands, and the United Kingdom. Twitch Prime is included with Prime Video in over 200 other countries and territories. If you are already an Amazon Prime member, you get Twitch Prime at no additional cost by connecting your Amazon account to your Twitch account at <x:link>http://www.twitchprime.com</x:link>.", {
+                    }, Object(a.d)("FAQ/Help", "PrimeFAQComponent"))), this.renderQuestion(Object(a.d)("Do I need a Twitch Prime membership to get Fortnite content?", "PrimeFAQComponent"), "membership"), this.renderAnswer(Object(a.d)("Yes.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("What exactly will I get in the Twitch Prime Pack #2?", "PrimeFAQComponent"), "loot"), this.renderAnswer(Object(a.d)("This pack includes 4 distinct items, all of which are exclusively available to Twitch Prime members:", "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("Battle Royale Trailblazer Outfit: On the forefront of victory.", "PrimeFAQComponent"), Object(a.d)("Battle Royale True North Back Bling: Find your way.", "PrimeFAQComponent"), Object(a.d)("Battle Royale Tenderizer Pickaxe: Leave a good first impression.", "PrimeFAQComponent"), Object(a.d)("Battle Royale Freestylin’ Emote: Tear up the dance floor.", "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("Note: All items are cosmetic only and provide no competitive advantage. All items for Twitch Prime Pack #2 are for Battle Royale only.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("How do I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "content"), this.renderAnswer(Object(a.d)("If you already have an active Twitch Prime membership (either paid or free trial), log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("I already linked my Twitch and Epic account when I claimed the first Twitch Prime Pack. Do I need to claim again to get the current Twitch Prime content?", "PrimeFAQComponent"), "linkedaccount"), this.renderAnswer(Object(a.d)("YES. You must claim each Twitch Prime Pack individually. If you already linked your Twitch and Epic accounts for the previous Twitch Prime loot in Fortnite, log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("How do I become a Twitch Prime member?", "PrimeFAQComponent"), "signup"), this.renderAnswerWithLink(Object(a.d)("Twitch Prime is included with Amazon Prime in the US, Mexico, Canada, Italy, France, Germany, Belgium, Austria, Spain, Japan, Singapore, Netherlands, and the United Kingdom. Twitch Prime is included with Prime Video in over 200 other countries and territories. If you are already an Amazon Prime member, you get Twitch Prime at no additional cost by connecting your Amazon account to your Twitch account at <x:link>http://www.twitchprime.com</x:link>.", {
                         "x:link": function(e) {
-                            return r.createElement(a.O, {
+                            return r.createElement(c.O, {
                                 key: e,
                                 to: "http://www.twitchprime.com"
                             }, e)
                         }
-                    }, "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("If you are not already an Amazon Prime member, you may start your free trial (if available) above. Follow all of the steps and the content that is currently available will be sent directly to your game account.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: When will I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("A: If you've followed all of the steps in the claim process for this offer, your content will be waiting for you in your locker the next time you log in to Fortnite!", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: Can I change which Epic account my Fortnite content is delivered to?", "PrimeFAQComponent")), this.renderAnswerWithLink(Object(o.d)("A: If you claimed the first Fortnite Twitch Prime Pack and would like to use a different Epic account for this offer, you may unlink your previous Epic account from Twitch and link a new one to receive content on that account after completing the claim process above. You can manage your connected accounts at <x:link>https://www.epicgames.com/account/connected</x:link>.", {
+                    }, "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("If you are not already an Amazon Prime member, you may start your free trial (if available) above. Follow all of the steps and the content that is currently available will be sent directly to your game account.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("When will I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "when"), this.renderAnswer(Object(a.d)("If you've followed all of the steps in the claim process for this offer, your content will be waiting for you in your locker the next time you log in to Fortnite!", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Can I change which Epic account my Fortnite content is delivered to?", "PrimeFAQComponent"), "changeaccount"), this.renderAnswerWithLink(Object(a.d)("If you claimed the first Fortnite Twitch Prime Pack and would like to use a different Epic account for this offer, you may unlink your previous Epic account from Twitch and link a new one to receive content on that account after completing the claim process above. You can manage your connected accounts at <x:link>https://www.epicgames.com/account/connected</x:link>.", {
                         "x:link": function(e) {
-                            return r.createElement(a.O, {
+                            return r.createElement(c.O, {
                                 key: e,
                                 to: "https://www.epicgames.com/account/connected"
                             }, e)
                         }
-                    }, "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: I received an error that my Twitch or Amazon account has already claimed this content. What do I do?", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("A: This happens when a different Twitch account was linked to your Amazon account (or vice versa) and claimed the current Twitch Prime Pack. Please check that the same Twitch account is linked to the Amazon account that was originally used to claim this Twitch Prime Pack.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: I play Fortnite on my PS4/Xbox One/PC primarily, but also play on mobile. Will I be able to access the Twitch Prime content everywhere that I play?", "PrimeFAQComponent"), "mobile"), this.renderAnswer(Object(o.d)("A: As long as you use the same Epic account to play on each platform, you will be able to access your Twitch Prime content across PC/console and mobile. Content is not shared between Xbox One and PS4, however.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: Can I link multiple Twitch Prime accounts to my Epic account and get additional content?", "PrimeFAQComponent"), "multiple"), this.renderAnswer(Object(o.d)("A: No. Each offer can only be applied once to a single Epic account.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: How long do I have to claim Twitch Prime Pack #2?", "PrimeFAQComponent"), "duration"), this.renderAnswer(Object(o.d)("A: You'll have until July 11, 2018 at 9 AM PST to claim the Twitch Prime Pack #2.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: Can I still get previous Twitch Prime content for Fortnite?", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("A: You will only receive content that is currently available. However, if you have successfully claimed the first Twitch Prime pack but not completed the account linking flow prior to May 9, 2018 at 9 AM PST, you will receive that content after completing the current offer claim flow above.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: Do I continue to receive content if my free trial expires? What happens to my content if I no longer have a Prime membership or my free trial expires?", "PrimeFAQComponent"), "freetrial"), this.renderAnswer(Object(o.d)("A: You need to have an active Twitch Prime membership to receive content that is currently available. Once you claim your Fortnite content, all content that is delivered to your game is yours to keep, subject to any Epic Games rules or policies that apply to the content. However, you will not receive future content without an active Twitch Prime membership.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Q: Where can I get Fortnite?", "PrimeFAQComponent"), "fortnite"), this.renderAnswerWithLink(Object(o.d)("A: Fortnite: Battle Royale is free! Visit <x:link>https://www.epicgames.com/fortnite/en-US/buy-now/battle-royale</x:link> to find out how to start playing on PC, Xbox One, PS4, and iOS.", {
+                    }, "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("I received an error that my Twitch or Amazon account has already claimed this content. What do I do?", "PrimeFAQComponent"), "alreadyclaimed"), this.renderAnswer(Object(a.d)("This happens when a different Twitch account was linked to your Amazon account (or vice versa) and claimed the current Twitch Prime Pack. Please check that the same Twitch account is linked to the Amazon account that was originally used to claim this Twitch Prime Pack.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("I play Fortnite on my PS4/Xbox One/PC primarily, but also play on mobile. Will I be able to access the Twitch Prime content everywhere that I play?", "PrimeFAQComponent"), "mobile"), this.renderAnswer(Object(a.d)("As long as you use the same Epic account to play on each platform, you will be able to access your Twitch Prime content across PC/console and mobile. Content is not shared between Xbox One and PS4, however.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Can I link multiple Twitch Prime accounts to my Epic account and get additional content?", "PrimeFAQComponent"), "multiple"), this.renderAnswer(Object(a.d)("No. Each offer can only be applied once to a single Epic account.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("How long do I have to claim Twitch Prime Pack #2?", "PrimeFAQComponent"), "duration"), this.renderAnswer(Object(a.d)("You'll have until July 11, 2018 at 9 AM PST to claim the Twitch Prime Pack #2.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Can I still get previous Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "pack1"), this.renderAnswer(Object(a.d)("You will only receive content that is currently available. However, if you have successfully claimed the first Twitch Prime pack but not completed the account linking flow prior to May 9, 2018 at 9 AM PST, you will receive that content after completing the current offer claim flow above.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Do I continue to receive content if my free trial expires? What happens to my content if I no longer have a Prime membership or my free trial expires?", "PrimeFAQComponent"), "freetrial"), this.renderAnswer(Object(a.d)("You need to have an active Twitch Prime membership to receive content that is currently available. Once you claim your Fortnite content, all content that is delivered to your game is yours to keep, subject to any Epic Games rules or policies that apply to the content. However, you will not receive future content without an active Twitch Prime membership.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Where can I get Fortnite?", "PrimeFAQComponent"), "fortnite"), this.renderAnswerWithLink(Object(a.d)("Fortnite: Battle Royale is free! Visit <x:link>https://www.epicgames.com/fortnite/en-US/buy-now/battle-royale</x:link> to find out how to start playing on PC, Xbox One, PS4, and iOS.", {
                         "x:link": function(e) {
-                            return r.createElement(a.O, {
+                            return r.createElement(c.O, {
                                 key: e,
                                 to: "https://www.epicgames.com/fortnite/en-US/buy-now/battle-royale"
                             }, e)
                         }
-                    }, "PrimeFAQComponent")), r.createElement(a._8, {
+                    }, "PrimeFAQComponent")), r.createElement(c._8, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(a.v, {
-                        linkTo: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
+                    }, r.createElement(c.v, {
+                        linkTo: "https://help.twitch.tv/customer/portal/articles/2572060-twitch-prime-guide#HelpContact",
                         fullWidth: !0
-                    }, Object(o.d)("Need help? Contact Us", "PrimeFAQComponent"))))))))
+                    }, Object(a.d)("Need help? Contact Us", "PrimeFAQComponent"))))))))
                 }, t.prototype.renderQuestion = function(e, t) {
                     return r.createElement("div", {
-                        id: t
-                    }, r.createElement(a._8, {
+                        id: t,
+                        ref: t
+                    }, r.createElement(c._8, {
                         margin: {
-                            bottom: 1
+                            top: 2
                         }
-                    }, r.createElement(a.Q, {
-                        type: a._49.H4,
+                    }, r.createElement(c.Q, {
+                        type: c._49.H4,
                         bold: !0
                     }, e)))
                 }, t.prototype.renderAnswer = function() {
                     for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
-                    return 1 === e.length ? r.createElement(a._8, {
+                    return 1 === e.length ? r.createElement(c._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(a.Q, null, e[0])) : r.createElement(a._8, {
+                    }, r.createElement(c.Q, null, e[0])) : r.createElement(c._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(a._58, null, r.createElement("ul", null, e.map(function(e) {
+                    }, r.createElement(c._58, null, r.createElement("ul", null, e.map(function(e) {
                         return r.createElement("li", {
                             key: e
-                        }, r.createElement(a.Q, null, e))
+                        }, r.createElement(c.Q, null, e))
                     }))))
                 }, t.prototype.renderAnswerWithLink = function(e) {
-                    return r.createElement(a._8, {
+                    return r.createElement(c._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(a.Q, null, e))
+                    }, r.createElement(c.Q, null, e))
                 }, t
             }(r.Component));
         n.d(t, "a", function() {
-            return c
+            return l
         })
     },
     P3dd: function(e, t, n) {
@@ -248,11 +255,11 @@ webpackJsonp([111], {
                     }, Object(o.d)("Twitch Prime Guide", "PrimeSubsiteFooter")))))
                 }, t
             }(r.Component)),
-            m = Object(a.d)("PrimeFooter", {
+            s = Object(a.d)("PrimeFooter", {
                 autoReportInteractive: !0
             })(l);
         n.d(t, "a", function() {
-            return m
+            return s
         })
     },
     TCPX: function(e, t, n) {
@@ -324,12 +331,12 @@ webpackJsonp([111], {
             a = n("CIox"),
             c = n("6sO2"),
             l = n("68hr"),
-            m = n("7vx8"),
-            s = n("j7/Y"),
+            s = n("7vx8"),
+            m = n("j7/Y"),
             d = n("oIkB"),
             p = n("w9tK"),
-            u = n("vH/s"),
-            h = n("CSlQ"),
+            h = n("vH/s"),
+            u = n("CSlQ"),
             f = n("Kloa"),
             w = n("P3dd"),
             y = n("/3Cb"),
@@ -452,25 +459,28 @@ webpackJsonp([111], {
                     }) : r.createElement(k._8, {
                         display: k.R.Flex,
                         flexDirection: k.T.Column,
-                        justifyContent: k._7.Center,
+                        justifyContent: k._7.Center
+                    }, r.createElement(k._8, {
                         className: "twitch-prime-fortnite twitch-prime-linking"
                     }, r.createElement(k._8, {
                         className: "twitch-prime-linking__header",
                         fullWidth: !0
                     }, r.createElement(_.a, {
                         alwaysCentered: !0
-                    })), !this.state.error && this.renderLinkExperience(), this.state.error && this.renderErrorExperience(), r.createElement(f.a, null), r.createElement(w.a, {
+                    })), !this.state.error && this.renderLinkExperience(), this.state.error && this.renderErrorExperience()), r.createElement(f.a, {
+                        hash: this.props.location.hash.replace("#", "")
+                    }), r.createElement(w.a, {
                         partnerSocialLink: "https://twitter.com/FortniteGame",
                         partnerSocialText: "@FortniteGame"
                     }))
                 }, t
             }(r.Component),
-            T = Object(o.compose)(Object(h.d)("TwitchPrimeLinkingPage", {
+            T = Object(o.compose)(Object(u.d)("TwitchPrimeLinkingPage", {
                 destination: p.a.TwitchPrimeLinkingPage
-            }), Object(m.a)(C), Object(m.a)(y, {
+            }), Object(s.a)(C), Object(s.a)(y, {
                 name: "claimPrimeOffer"
-            }), Object(s.a)({
-                location: u.PageviewLocation.TwitchPrimeLinkingPage
+            }), Object(m.a)({
+                location: h.PageviewLocation.TwitchPrimeLinkingPage
             }))(O);
         n.d(t, "CALL_TO_ACTION_SELECTOR", function() {
             return v
@@ -541,7 +551,7 @@ webpackJsonp([111], {
                     })), this.props.children), this.props.renderOfferImage && this.renderOfferImage())))
                 }, t
             }(o.Component)),
-            m = Object(a.d)("TwitchPrimeBrandedHeader", {
+            s = Object(a.d)("TwitchPrimeBrandedHeader", {
                 autoReportInteractive: !0
             })(l);
         n.d(t, !1, function() {
@@ -549,7 +559,7 @@ webpackJsonp([111], {
         }), n.d(t, !1, function() {
             return l
         }), n.d(t, "a", function() {
-            return m
+            return s
         })
     },
     dlQw: function(e, t, n) {
@@ -586,11 +596,11 @@ webpackJsonp([111], {
                                 var o = r.referenceTracking,
                                     a = o.content,
                                     l = o.medium,
-                                    m = o.content_index;
+                                    s = o.content_index;
                                 c.o.tracking.trackPageview(i.__assign({
                                     content: a,
                                     medium: l,
-                                    content_index: m,
+                                    content_index: s,
                                     location: e.location
                                 }, t))
                             }
@@ -635,4 +645,4 @@ webpackJsonp([111], {
     r3tw: function(e, t) {},
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-linking-3b4967aab7bb563f62ac007778857fee.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-linking-24f1da3c851278e8909e3ae8c1659259.js.map

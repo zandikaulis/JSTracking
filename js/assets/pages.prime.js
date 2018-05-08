@@ -154,10 +154,12 @@ webpackJsonp([57], {
             k = n("HW6M"),
             O = n("rCmJ"),
             y = n("7vx8"),
-            b = n("8PKe"),
-            E = n("Odds"),
-            N = n("icPo"),
-            D = (n("9wqU"), function(e) {
+            b = n("NSHk"),
+            E = n("CSUN"),
+            N = n("8PKe"),
+            D = n("Odds"),
+            C = n("icPo"),
+            S = (n("9wqU"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -171,7 +173,16 @@ webpackJsonp([57], {
                             }
                         })
                     }, t.onLoginClick = function(e) {
-                        e.preventDefault(), t.props.login()
+                        e.preventDefault();
+                        var t = Object(g.b)();
+                        Object(g.c)(m.SpadeEventType.PassportShow, {
+                            action: g.a.TopNavLoginButton,
+                            nonce: t,
+                            type: b.a.Login,
+                            auth_ux: "redirect"
+                        }), window.location.assign(Object(E.a)(b.a.Login, {
+                            redirect: !0
+                        }))
                     }, t.onLogoutClick = function(e) {
                         e.preventDefault(), t.props.logout()
                     }, t
@@ -181,13 +192,13 @@ webpackJsonp([57], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.data.error) return i.createElement(b.b, null);
+                    if (this.props.data.error) return i.createElement(N.b, null);
                     if (this.props.data.loading) return this.renderPlaceholders();
                     if (this.props.isLoggedIn) {
                         var e = k({
                             "twitch-prime-top-nav-user__dropdown--open": this.state.dropdownOpen
                         });
-                        return i.createElement(E._2, {
+                        return i.createElement(D._2, {
                             className: "twitch-prime-top-nav-user__wrapper",
                             margin: {
                                 right: 2
@@ -195,111 +206,112 @@ webpackJsonp([57], {
                         }, i.createElement(O.a, {
                             onClickOut: this.onClickOut,
                             className: e
-                        }, i.createElement(E._8, {
-                            display: E.R.Flex,
+                        }, i.createElement(D._8, {
+                            display: D.R.Flex,
                             className: "twitch-prime-top-nav-user twitch-prime-top-nav-user--signed-in",
                             fullHeight: !0,
-                            zIndex: E._62.Above
-                        }, i.createElement(E._6, {
+                            zIndex: D._62.Above
+                        }, i.createElement(D._6, {
                             onClick: this.toggleDropdown,
                             "data-test-selector": "user-menu-toggle",
                             blurAfterClick: !0,
                             alpha: !0
-                        }, i.createElement(E._8, {
-                            display: E.R.Flex,
-                            flexWrap: E.U.NoWrap,
-                            alignItems: E.c.Center,
+                        }, i.createElement(D._8, {
+                            display: D.R.Flex,
+                            flexWrap: D.U.NoWrap,
+                            alignItems: D.c.Center,
                             flexGrow: 1,
                             padding: {
                                 right: 1
                             },
                             fullHeight: !0
-                        }, i.createElement(E._8, {
+                        }, i.createElement(D._8, {
                             margin: {
                                 x: 1
                             },
                             flexShrink: 0
-                        }, i.createElement(E.e, {
-                            type: E.j.FadeIn,
-                            duration: E.g.Long,
+                        }, i.createElement(D.e, {
+                            type: D.j.FadeIn,
+                            duration: D.g.Long,
                             enabled: !0
-                        }, i.createElement(E.m, {
+                        }, i.createElement(D.m, {
                             size: 30,
                             src: this.props.data.currentUser.profileImageURL,
                             alt: "User avatar"
-                        }))), i.createElement(E._8, {
+                        }))), i.createElement(D._8, {
                             flexGrow: 1,
                             flexShrink: 1,
-                            flexDirection: E.T.Column,
+                            flexDirection: D.T.Column,
                             ellipsis: !0
-                        }, i.createElement(E._35, {
+                        }, i.createElement(D._35, {
                             className: "twitch-prime-top-nav-user__username"
-                        }, this.props.data.currentUser.displayName)), i.createElement(E._35, {
-                            display: E.R.Flex,
+                        }, this.props.data.currentUser.displayName)), i.createElement(D._35, {
+                            display: D.R.Flex,
                             flexShrink: 0,
                             className: "twitch-prime-top-nav-user__expand"
-                        }, i.createElement(E._24, {
-                            asset: E._25.GlyphArrDown
+                        }, i.createElement(D._24, {
+                            asset: D._25.GlyphArrDown
                         }))))), this.renderDropdown()))
                     }
-                    return i.createElement(E._35, {
-                        display: E.R.Flex,
+                    return i.createElement(D._35, {
+                        display: D.R.Flex,
                         fullHeight: !0,
                         padding: {
                             right: 1
                         },
                         className: "twitch-prime-top-nav-user"
-                    }, i.createElement(E._8, {
-                        display: E.R.Flex,
-                        flexWrap: E.U.NoWrap,
+                    }, i.createElement(D._8, {
+                        display: D.R.Flex,
+                        flexWrap: D.U.NoWrap,
                         margin: {
                             x: .5
                         },
-                        alignItems: E.c.Center,
+                        alignItems: D.c.Center,
                         flexGrow: 1
-                    }, i.createElement(E.v, {
-                        onClick: this.onLoginClick
+                    }, i.createElement(D.v, {
+                        onClick: this.onLoginClick,
+                        "data-test-selector": "login-button"
                     }, Object(l.d)("Log in", "PrimeUser"))))
                 }, t.prototype.renderDropdown = function() {
                     var e = k({
                             "twitch-prime-top-nav-user__dropdown": !0,
                             "twitch-prime-top-nav-user__dropdown--open": this.state.dropdownOpen
                         }),
-                        t = i.createElement(E._6, {
+                        t = i.createElement(D._6, {
                             onClick: this.onLogoutClick,
                             alpha: !0
-                        }, i.createElement(E._35, {
-                            color: E.K.Alt,
-                            display: E.R.Flex,
-                            alignItems: E.c.Center,
+                        }, i.createElement(D._35, {
+                            color: D.K.Alt,
+                            display: D.R.Flex,
+                            alignItems: D.c.Center,
                             padding: {
                                 x: 2,
                                 y: .5
                             }
-                        }, i.createElement(E._8, {
-                            display: E.R.Flex,
-                            alignItems: E.c.Center,
+                        }, i.createElement(D._8, {
+                            display: D.R.Flex,
+                            alignItems: D.c.Center,
                             margin: {
                                 right: 1
                             }
-                        }, i.createElement(E._24, {
-                            asset: E._25.NavLogout,
+                        }, i.createElement(D._24, {
+                            asset: D._25.NavLogout,
                             height: 18,
                             width: 18
-                        })), i.createElement(E.Q, null, Object(l.d)("Log Out", "PrimeUser"))));
-                    return i.createElement(E._35, {
+                        })), i.createElement(D.Q, null, Object(l.d)("Log Out", "PrimeUser"))));
+                    return i.createElement(D._35, {
                         className: e,
-                        background: E.n.Base,
-                        zIndex: E._62.Below,
+                        background: D.n.Base,
+                        zIndex: D._62.Below,
                         fullWidth: !0,
-                        overflow: E._11.Hidden,
-                        position: E._15.Absolute,
+                        overflow: D._11.Hidden,
+                        position: D._15.Absolute,
                         "data-test-selector": "dropdown-down",
                         borderLeft: this.state.dropdownOpen,
                         borderTop: this.state.dropdownOpen,
                         borderBottom: this.state.dropdownOpen,
                         borderRight: this.state.dropdownOpen
-                    }, i.createElement(E._8, {
+                    }, i.createElement(D._8, {
                         padding: {
                             y: 1
                         }
@@ -307,30 +319,30 @@ webpackJsonp([57], {
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.renderPlaceholders = function() {
-                    return i.createElement(E._8, null, i.createElement(E._8, {
+                    return i.createElement(D._8, null, i.createElement(D._8, {
                         className: "twitch-prime-top-nav-user",
-                        display: E.R.Flex,
-                        alignItems: E.c.Center,
-                        justifyContent: E._7.Between,
+                        display: D.R.Flex,
+                        alignItems: D.c.Center,
+                        justifyContent: D._7.Between,
                         fullHeight: !0,
                         padding: {
                             x: 1
                         }
-                    }, i.createElement(E._8, null, i.createElement(E._14, {
+                    }, i.createElement(D._8, null, i.createElement(D._14, {
                         width: 30,
                         height: 30
-                    })), i.createElement(E._35, {
-                        display: E.R.Flex,
+                    })), i.createElement(D._35, {
+                        display: D.R.Flex,
                         flexShrink: 0,
                         className: "twitch-prime-top-nav-user__expand"
-                    }, i.createElement(E._24, {
-                        asset: E._25.GlyphArrDown,
-                        type: E._26.Placeholder
+                    }, i.createElement(D._24, {
+                        asset: D._25.GlyphArrDown,
+                        type: D._26.Placeholder
                     }))))
                 }, t
             }(i.Component)),
-            C = Object(a.compose)(Object(y.a)(N), Object(p.d)("PrimeUser"))(D);
-        var S = Object(f.b)(function(e) {
+            x = Object(a.compose)(Object(y.a)(C), Object(p.d)("PrimeUser"))(S);
+        var P = Object(f.b)(function(e) {
                 return {
                     isLoggedIn: Object(_.d)(e)
                 }
@@ -344,31 +356,31 @@ webpackJsonp([57], {
                         return Object(v.h)(g.a.TopNavSignupButton)
                     }
                 }, e)
-            })(C),
-            x = (n("kOVI"), function(e) {
+            })(x),
+            I = (n("kOVI"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(E._2, {
-                        position: E._15.Fixed,
+                    return i.createElement(D._2, {
+                        position: D._15.Fixed,
                         attachTop: !0,
                         fullWidth: !0
                     }, i.createElement("nav", {
                         className: "twitch-prime-top-nav"
-                    }, i.createElement(E._8, {
+                    }, i.createElement(D._8, {
                         className: "twitch-prime-top-nav__menu",
-                        display: E.R.Flex,
-                        alignItems: E.c.Center,
-                        flexWrap: E.U.NoWrap,
+                        display: D.R.Flex,
+                        alignItems: D.c.Center,
+                        flexWrap: D.U.NoWrap,
                         fullHeight: !0,
-                        justifyContent: E._7.Between
-                    }, i.createElement(E._8, {
+                        justifyContent: D._7.Between
+                    }, i.createElement(D._8, {
                         className: "twitch-prime-top-nav__menu__left",
-                        display: E.R.Flex
-                    }, i.createElement(E._2, {
-                        display: E.R.InlineFlex,
-                        alignItems: E.c.Center,
+                        display: D.R.Flex
+                    }, i.createElement(D._2, {
+                        display: D.R.InlineFlex,
+                        alignItems: D.c.Center,
                         flexShrink: 0,
                         padding: {
                             left: .5,
@@ -383,106 +395,106 @@ webpackJsonp([57], {
                             }
                         },
                         className: "twitch-prime-top-nav__home-link"
-                    }, i.createElement(E._24, {
-                        asset: E._25.LogoTwitchPrime,
+                    }, i.createElement(D._24, {
+                        asset: D._25.LogoTwitchPrime,
                         width: 90,
                         height: 40
-                    }))), i.createElement(E._8, {
+                    }))), i.createElement(D._8, {
                         className: "twitch-prime-top-nav__ellipsis-button",
-                        display: E.R.Flex,
-                        alignItems: E.c.Center,
+                        display: D.R.Flex,
+                        alignItems: D.c.Center,
                         margin: {
                             left: 1
                         }
-                    }, i.createElement(d.a, null, i.createElement(E.w, {
-                        icon: E._25.NavMore,
-                        type: E.y.Default,
+                    }, i.createElement(d.a, null, i.createElement(D.w, {
+                        icon: D._25.NavMore,
+                        type: D.y.Default,
                         ariaLabel: Object(l.d)("More nav items", "PrimeTopNav"),
                         "data-a-target": "twitch-prime-top-nav__ellipsis-icon"
-                    }), i.createElement(E.q, {
-                        direction: E.r.Bottom,
+                    }), i.createElement(D.q, {
+                        direction: D.r.Bottom,
                         tailOffset: 7,
-                        size: E.s.Small,
+                        size: D.s.Small,
                         "data-a-target": "overflow-menu"
-                    }, i.createElement(E._8, {
+                    }, i.createElement(D._8, {
                         padding: 1
                     }, i.createElement(d.a, {
-                        display: E.R.Block
-                    }, i.createElement(E._6, {
+                        display: D.R.Block
+                    }, i.createElement(D._6, {
                         "data-target": "twitch-prime-top-nav-language-selector-click",
                         "data-a-target": "twitch-prime-top-nav-language-selector"
-                    }, i.createElement(E._8, {
+                    }, i.createElement(D._8, {
                         padding: {
                             y: .5,
                             x: 1
                         }
-                    }, Object(l.d)("Language", "PrimeTopNav"))), i.createElement(E.q, {
-                        size: E.s.Small,
-                        direction: E.r.BottomCenter,
+                    }, Object(l.d)("Language", "PrimeTopNav"))), i.createElement(D.q, {
+                        size: D.s.Small,
+                        direction: D.r.BottomCenter,
                         offsetY: "15px",
                         "data-target": "language-selector",
                         "data-a-target": "language-selector-menu"
-                    }, i.createElement(u.a, null)))))))), i.createElement(S, null))))
+                    }, i.createElement(u.a, null)))))))), i.createElement(P, null))))
                 }, t
             }(i.Component)),
-            P = Object(p.d)("PrimeTopNav", {
+            T = Object(p.d)("PrimeTopNav", {
                 autoReportInteractive: !0
-            })(x),
-            I = c.a.wrap(function() {
-                return n.e(115).then(n.bind(null, "o0He"))
-            }, "TwitchPrimeOffersPage"),
-            T = c.a.wrap(function() {
-                return n.e(99).then(n.bind(null, "9GX+"))
-            }, "TwitchPrimeSuccessPage"),
+            })(I),
             L = c.a.wrap(function() {
-                return n.e(111).then(n.bind(null, "Uen5"))
-            }, "TwitchPrimeLinkingPage"),
+                return n.e(117).then(n.bind(null, "o0He"))
+            }, "TwitchPrimeOffersPage"),
             w = c.a.wrap(function() {
-                return n.e(112).then(n.bind(null, "HnrI"))
+                return n.e(100).then(n.bind(null, "9GX+"))
+            }, "TwitchPrimeSuccessPage"),
+            R = c.a.wrap(function() {
+                return n.e(112).then(n.bind(null, "Uen5"))
+            }, "TwitchPrimeLinkingPage"),
+            U = c.a.wrap(function() {
+                return n.e(113).then(n.bind(null, "HnrI"))
             }, "TwitchPrimeFortnitePage"),
-            R = function(e) {
+            j = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return l.b.get("prime_subsite_up", !1) ? i.createElement(E._8, {
+                    return l.b.get("prime_subsite_up", !1) ? i.createElement(D._8, {
                         className: "prime-root",
                         fullHeight: !0,
-                        display: E.R.Flex,
-                        flexDirection: E.T.Column,
-                        position: E._15.Relative
-                    }, i.createElement(P, null), i.createElement(E._2, {
-                        position: E._15.Relative,
+                        display: D.R.Flex,
+                        flexDirection: D.T.Column,
+                        position: D._15.Relative
+                    }, i.createElement(T, null), i.createElement(D._2, {
+                        position: D._15.Relative,
                         flexGrow: 1,
                         fullHeight: !0,
                         fullWidth: !0,
                         margin: {
                             top: 5
                         },
-                        overflow: E._11.Scroll
-                    }, i.createElement("main", null, i.createElement(E._8, {
+                        overflow: D._11.Scroll
+                    }, i.createElement("main", null, i.createElement(D._8, {
                         className: "prime-main",
                         fullHeight: !0
                     }, i.createElement(o.e, null, i.createElement(s.d, {
                         path: "/prime/fortnite/link",
-                        component: L
+                        component: R
                     }), i.createElement(s.d, {
                         path: "/prime/fortnite/success",
-                        component: T
-                    }), i.createElement(s.d, {
-                        path: "/prime/fortnite",
                         component: w
                     }), i.createElement(s.d, {
+                        path: "/prime/fortnite",
+                        component: U
+                    }), i.createElement(s.d, {
                         path: "/prime",
-                        component: I
+                        component: L
                     })))))) : (window.location.replace("https://twitch.amazon.com/prime?ref_=SM_OW_DT"), null)
                 }, t
             }(i.Component),
-            U = Object(a.compose)(s.f, Object(p.d)("PrimeRoot", {
+            F = Object(a.compose)(s.f, Object(p.d)("PrimeRoot", {
                 autoReportInteractive: !0
-            }))(R);
+            }))(j);
         n.d(t, "PrimeRoot", function() {
-            return U
+            return F
         })
     },
     "2Nqs": function(e, t) {},
@@ -2564,6 +2576,7 @@ webpackJsonp([57], {
                 has_prime: e.hasPrime,
                 client_time: Date.now(),
                 number_of_offers: e.numberOfOffers,
+                action: r.SeeOffers,
                 user_agent: navigator.userAgent
             })
         }, t.l = function(e) {
@@ -2624,7 +2637,7 @@ webpackJsonp([57], {
                 has_prime: e.hasPrime
             })
         }! function(e) {
-            e.Open = "click_open", e.Close = "click_close", e.Hover = "hover"
+            e.Open = "click_open", e.Close = "click_close", e.Hover = "hover", e.SeeOffers = "see_offers"
         }(r || (r = {})),
         function(e) {
             e.Hover = "hover", e.Click = "click"
@@ -3375,4 +3388,4 @@ webpackJsonp([57], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.prime-929bf2abb4b713be306d08a765c8daae.js.map
+//# sourceMappingURL=pages.prime-c6d060216b27b1351cb6fcc466355a46.js.map

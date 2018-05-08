@@ -1,4 +1,4 @@
-webpackJsonp([97], {
+webpackJsonp([98], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -1683,16 +1683,13 @@ webpackJsonp([97], {
             ne = (n("W266"), "nativeBroadcastNotifDismissed"),
             ae = [{
                 title: "English",
-                login: "esamarathon"
+                login: "RPGLimitBreak"
             }, {
                 title: "Français",
                 login: "LeFrenchRestream"
             }, {
-                title: "Deutsch",
-                login: "GermenchRestream"
-            }, {
-                title: "Русский",
-                login: "SpeedrunsRussia"
+                title: "日本語",
+                login: "japanese_restream"
             }],
             ie = function(e) {
                 function t() {
@@ -1735,7 +1732,7 @@ webpackJsonp([97], {
                     if (!this.isEventChannel(this.props.channelLogin)) return null;
                     if (this.hasDismissedForChannel(this.props.channelLogin)) return null;
                     var e = Date.now();
-                    if (e < 15191352e5 || e >= 15195132e5) return null;
+                    if (e < 15262344e5 || e >= 15268212e5) return null;
                     var t = this.getChannelLinks();
                     return t.length ? o.createElement(x._35, {
                         attachLeft: !0,
@@ -1751,13 +1748,13 @@ webpackJsonp([97], {
                         }
                     }, o.createElement(x.Q, {
                         type: x._49.H4
-                    }, Object(u.d)("ESA Winter 2018", "NativeBroadcastNotification"))), o.createElement(x._8, {
+                    }, Object(u.d)("RPG Limit Break 2018", "NativeBroadcastNotification"))), o.createElement(x._8, {
                         margin: {
                             bottom: 1
                         }
                     }, o.createElement(x.Q, {
                         color: x.K.OverlayAlt
-                    }, Object(u.d)("Want to watch ESA in you local language? Try one of these international broadcasts!", "NativeBroadcastNotification"))), o.createElement("ul", null, t), o.createElement(x._8, {
+                    }, Object(u.d)("Want to watch RPGLB in your local language? Try one of these international broadcasts!", "NativeBroadcastNotification"))), o.createElement("ul", null, t), o.createElement(x._8, {
                         attachRight: !0,
                         attachTop: !0,
                         margin: 1,
@@ -1785,7 +1782,7 @@ webpackJsonp([97], {
                     }).includes(e.toLowerCase())
                 }, t.prototype.hasDismissedForChannel = function(e) {
                     var t = u.l.get(ne, {})[e.toLowerCase()];
-                    return !!t && t >= 15191352e5
+                    return !!t && t >= 15262344e5
                 }, t
             }(o.Component),
             re = n("+Znq"),
@@ -15779,7 +15776,7 @@ webpackJsonp([97], {
                     return this.props.data.error ? null : this.getContent()
                 }, t.prototype.renderIgnoreButton = function() {
                     var e = this.props.data.currentUser;
-                    return this.props.isEmbedded || e && e.login === this.props.targetLogin ? null : h.createElement(y._8, {
+                    return !this.props.isEmbedded && e && this.props.data.targetUser && e.login !== this.props.targetLogin ? h.createElement(y._8, {
                         key: "Ignore",
                         position: y._15.Absolute,
                         attachRight: !0,
@@ -15792,7 +15789,7 @@ webpackJsonp([97], {
                         targetDisplayName: this.props.data.targetUser.displayName,
                         targetLogin: this.props.targetLogin,
                         sendMessageToTMI: this.props.sendMessageToTMI
-                    }))
+                    })) : null
                 }, t.prototype.renderHideButton = function() {
                     return h.createElement(y._8, {
                         className: "viewer-card__hide",
@@ -22011,4 +22008,4 @@ webpackJsonp([97], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-surfing-76ee2a8252f226078dc047141c76c32a.js.map
+//# sourceMappingURL=pages.channel-surfing-6d3333e1ddf2437c078da80a50f0b6c9.js.map

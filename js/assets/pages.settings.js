@@ -2427,8 +2427,8 @@ webpackJsonp([41], {
             x = n("5LoI"),
             N = n("MAZT"),
             j = n("5Y57"),
-            U = n("kqTE"),
-            T = n("zCIC"),
+            T = n("kqTE"),
+            U = n("zCIC"),
             D = n("HW6M"),
             I = n("5kgt"),
             P = n("puy8"),
@@ -2515,7 +2515,7 @@ webpackJsonp([41], {
                 return l.createElement(A, c.__assign({}, e))
             }),
             M = (n("Y4as"), function(e) {
-                return l.createElement(T.b, {
+                return l.createElement(U.b, {
                     className: "autohost-list-edit",
                     suppressScrollX: !0
                 }, l.createElement(F._8, null, e.autohostChannels && e.autohostChannels.map(function(t, n) {
@@ -2596,7 +2596,7 @@ webpackJsonp([41], {
                     return this.props.isWaiting ? t = l.createElement(F._10, {
                         fillContent: !0
                     }) : this.props.userResults && (t = this.props.userResults.map(function(t) {
-                        return l.createElement(U.a, {
+                        return l.createElement(T.a, {
                             key: t.id
                         }, l.createElement(B, {
                             user: t,
@@ -2626,12 +2626,12 @@ webpackJsonp([41], {
                         isErrored: this.props.isSearchErrored
                     }, l.createElement(F._8, {
                         className: "autohost-list__user-search"
-                    }, l.createElement(T.b, {
+                    }, l.createElement(U.b, {
                         contentClassName: "autohost-list__user-search-content",
                         suppressScrollX: !0
                     }, l.createElement(F._8, {
                         fullWidth: !0
-                    }, t, l.createElement(T.a, {
+                    }, t, l.createElement(U.a, {
                         enabled: !this.props.isWaiting && this.props.isUserSearchOpen,
                         loadMore: this.props.loadMore
                     })))))), l.createElement(L, {
@@ -3746,8 +3746,8 @@ webpackJsonp([41], {
                     showPlaceholder: e.loading
                 })
             },
-            Ue = n("woYr"),
-            Te = function(e) {
+            Te = n("woYr"),
+            Ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3781,7 +3781,7 @@ webpackJsonp([41], {
                                                     })
                                                 })
                                             } : t
-                                        }, Object(pe.e)(Ue, {}, t), this.logger.debug("Updated chat setting", {
+                                        }, Object(pe.e)(Te, {}, t), this.logger.debug("Updated chat setting", {
                                             requireVerifiedAccount: e
                                         }), this.setState({
                                             saving: !1,
@@ -3827,11 +3827,11 @@ webpackJsonp([41], {
                     })
                 }, t
             }(l.Component),
-            De = Object(de.compose)(Object(h.d)("EmailVerificationToggle"), Object(K.a)(Ue, {
+            De = Object(de.compose)(Object(h.d)("EmailVerificationToggle"), Object(K.a)(Te, {
                 options: {
                     fetchPolicy: "network-only"
                 }
-            }), me())(Te),
+            }), me())(Ue),
             Ie = function(e) {
                 var t = e.saving || e.errorLoading;
                 return l.createElement(fe.a, {
@@ -5273,8 +5273,8 @@ webpackJsonp([41], {
                     configurable: !0
                 }), t
             }(l.Component),
-            Ut = n("pkUp"),
-            Tt = Object(K.a)(Ut)(jt),
+            Tt = n("pkUp"),
+            Ut = Object(K.a)(Tt)(jt),
             Dt = (n("XCQF"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6404,7 +6404,7 @@ webpackJsonp([41], {
                     return l.createElement("div", null, l.createElement(k.a, {
                         title: Object(d.d)("Recommended Connections", "SettingsConnectionsPage"),
                         description: Object(d.d)("Manage your connected accounts and services", "SettingsConnectionsPage")
-                    }), l.createElement(S.a, null, l.createElement(Ot, null), l.createElement(Tt, null), l.createElement(rn, null), l.createElement(fn, null), l.createElement(Bt, null), l.createElement(sn, null), l.createElement(Ht, null), l.createElement(hn, null), l.createElement(un, null), l.createElement(Jt, null), l.createElement(en, null)), l.createElement(k.a, {
+                    }), l.createElement(S.a, null, l.createElement(Ot, null), l.createElement(Ut, null), l.createElement(rn, null), l.createElement(fn, null), l.createElement(Bt, null), l.createElement(sn, null), l.createElement(Ht, null), l.createElement(hn, null), l.createElement(un, null), l.createElement(Jt, null), l.createElement(en, null)), l.createElement(k.a, {
                         title: Object(d.d)("Extensions Connections", "SettingsConnectionsPage"),
                         description: Object(d.d)("You have shared your Twitch username with these extensions", "SettingsConnectionsPage")
                     }), l.createElement(S.a, null, l.createElement(Rt, null)), l.createElement(k.a, {
@@ -6645,7 +6645,7 @@ webpackJsonp([41], {
                         margin: {
                             bottom: .5
                         }
-                    }, this.renderToggles(), l.createElement(T.a, {
+                    }, this.renderToggles(), l.createElement(U.a, {
                         loadMore: this.props.loadMore,
                         enabled: n,
                         pixelThreshold: 200
@@ -6726,7 +6726,7 @@ webpackJsonp([41], {
             xn = n("OOv5"),
             Nn = n("JBcW"),
             jn = (n("mVHD"), d.o.logger.withCategory("browser-push-notifications-settings")),
-            Un = function(e) {
+            Tn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -6864,7 +6864,7 @@ webpackJsonp([41], {
                     })
                 }, t
             }(l.Component),
-            Tn = Object(de.compose)(Object(h.d)("BrowserPushNotificationsSettings"))(Un),
+            Un = Object(de.compose)(Object(h.d)("BrowserPushNotificationsSettings"))(Tn),
             Dn = (n("iOZM"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -7268,7 +7268,7 @@ webpackJsonp([41], {
                         startCollapsed: !t
                     }))
                 }, t.prototype.renderBrowserPushNotifications = function() {
-                    return Object(yn.a)() && !Object(Sn.a)() ? l.createElement(Tn, null) : null
+                    return Object(yn.a)() && !Object(Sn.a)() ? l.createElement(Un, null) : null
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t = c.__decorate([Object(h.d)("SettingsNotificationsPage", {
@@ -8000,11 +8000,11 @@ webpackJsonp([41], {
                 }, t
             }(l.Component),
             jr = n("FuaS"),
-            Ur = n("FsFC");
+            Tr = n("FsFC");
         ! function(e) {
             e[e.Loading = 0] = "Loading", e[e.Error = 1] = "Error", e[e.Eligible = 2] = "Eligible", e[e.NotEligible = 3] = "NotEligible"
         }(xr || (xr = {}));
-        var Tr = function(e) {
+        var Ur = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8053,7 +8053,7 @@ webpackJsonp([41], {
                                 distanceFromNow: function(e) {
                                     var t = Date.now(),
                                         n = (new Date(e).getTime() - t) / 1e3;
-                                    if (!(n <= 0)) return Object(Ur.b)(n)
+                                    if (!(n <= 0)) return Object(Tr.b)(n)
                                 }(this.state.eligibilityTimeISO) || ""
                             }, "UsernameSetting");
                         default:
@@ -8104,7 +8104,7 @@ webpackJsonp([41], {
                         login: this.props.login,
                         onChange: this.props.onEmailChange,
                         verified: this.props.emailVerified
-                    }), l.createElement(Tr, {
+                    }), l.createElement(Ur, {
                         emailVerified: this.props.emailVerified,
                         login: this.props.login
                     }), l.createElement(_.a, {
@@ -9278,7 +9278,7 @@ webpackJsonp([41], {
                 }, t
             }(l.Component),
             ji = Object(de.compose)(Object(h.d)("SettingsTabs"), Object(K.a)(xi))(Ni),
-            Ui = function() {
+            Ti = function() {
                 return l.createElement(F._8, {
                     fullWidth: !0,
                     display: F.R.Flex,
@@ -9290,7 +9290,7 @@ webpackJsonp([41], {
                     to: "/products/turbo/ticket/edit"
                 }, Object(d.d)("Cancel Turbo", "CancelTurboLink")))
             },
-            Ti = n("hRPz"),
+            Ui = n("hRPz"),
             Di = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -9302,7 +9302,7 @@ webpackJsonp([41], {
                 }, t.prototype.renderPageContent = function() {
                     return this.props.data.currentUser ? this.props.data.currentUser.hasPrime ? l.createElement(u.b, {
                         to: "/settings/prime"
-                    }) : this.props.data.currentUser.hasTurbo ? l.createElement(l.Fragment, null, l.createElement(S.a, null, l.createElement(dt.a, null, l.createElement(Ui, null))), l.createElement(lr, null), l.createElement(br, null)) : Object(Mn.a)(this.props.data.requestInfo.countryCode) ? l.createElement(u.b, {
+                    }) : this.props.data.currentUser.hasTurbo ? l.createElement(l.Fragment, null, l.createElement(S.a, null, l.createElement(dt.a, null, l.createElement(Ti, null))), l.createElement(lr, null), l.createElement(br, null)) : Object(Mn.a)(this.props.data.requestInfo.countryCode) ? l.createElement(u.b, {
                         to: "/settings/prime"
                     }) : (window.location.replace("https://www.twitch.tv/products/turbo/ticket"), null) : this.props.data.loading ? l.createElement(F._10, {
                         fillContent: !0
@@ -9314,7 +9314,7 @@ webpackJsonp([41], {
                 destination: b.a.SettingsTurbo
             }), Object(v.a)({
                 location: y.PageviewLocation.SettingsPage
-            }), Object(K.a)(Ti))(Di),
+            }), Object(K.a)(Ui))(Di),
             Pi = 3,
             Fi = function(e) {
                 function t() {
@@ -13621,6 +13621,74 @@ webpackJsonp([41], {
         }
         a.Cache = r, e.exports = a
     },
+    "j7/Y": function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            i = n("OAwv"),
+            a = n("GiK3"),
+            o = n("F8kA"),
+            s = n("6sO2");
+
+        function c(e) {
+            return function(t) {
+                var n = function(n) {
+                    function o(t) {
+                        var i = n.call(this, t) || this;
+                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
+                            if (!(i.tracked || e.skip && e.skip(i.props))) {
+                                i.tracked = !0;
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
+                                var n = r.__assign({}, i.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var a = i.referenceTracking,
+                                    o = a.content,
+                                    c = a.medium,
+                                    l = a.content_index;
+                                s.o.tracking.trackPageview(r.__assign({
+                                    content: o,
+                                    medium: c,
+                                    content_index: l,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                    }
+                    return r.__extends(o, n), o.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, o.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, o.prototype.render = function() {
+                        return a.createElement(t, r.__assign({}, this.props))
+                    }, o.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? i.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var r = "",
+                                a = i.stringify(t);
+                            a.length > 0 && (r = "?" + a), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: r
+                            })
+                        }
+                        return n
+                    }, o
+                }(a.Component);
+                return Object(o.f)(n)
+            }
+        }
+        n.d(t, "a", function() {
+            return c
+        })
+    },
     "j7X+": function(e, t) {
         var n = {
             kind: "Document",
@@ -16742,4 +16810,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-36167362b108d025dd3d9903fb727d31.js.map
+//# sourceMappingURL=pages.settings-d024d383dc2b1c7a6653ce664144c2d1.js.map

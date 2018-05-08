@@ -3100,7 +3100,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(129).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3112,7 +3112,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(128).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3124,7 +3124,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(126).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(127).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3136,7 +3136,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(125).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(126).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3436,9 +3436,9 @@ webpackJsonp([50], {
                     }))))))
                 }, t
             }(l.Component)),
-            A = Object(h.d)("EventVideoCard")(x);
+            T = Object(h.d)("EventVideoCard")(x);
 
-        function T(e) {
+        function A(e) {
             var t = null;
             e.videos && e.videos.edges && e.videos.edges.length > 0 && (t = function(e) {
                 var t = e.offsetSeconds,
@@ -3796,7 +3796,7 @@ webpackJsonp([50], {
                         };
                         c = l.createElement("div", {
                             className: "timetable-segment__video-embed"
-                        }, l.createElement(A, {
+                        }, l.createElement(T, {
                             video: this.props.event.video.video,
                             offsetSeconds: this.props.event.video.offsetSeconds,
                             tracking: u
@@ -4732,7 +4732,7 @@ webpackJsonp([50], {
                     if (this.props.data.error || !this.props.data.event) return this.errorPage();
                     if (this.props.data.event.__typename === i.EVENT_LEAF) {
                         if (this.props.data.event.parent) {
-                            var e = (t = T(this.props.data.event), n = null, t.channel && (n = s.__assign({}, t.channel, {
+                            var e = (t = A(this.props.data.event), n = null, t.channel && (n = s.__assign({}, t.channel, {
                                 stream: null
                             })), {
                                 id: t.id,
@@ -4750,7 +4750,7 @@ webpackJsonp([50], {
                             });
                             return this.eventCollection(de(this.props.data.event.parent), [e])
                         }
-                        return this.eventLeaf(T(this.props.data.event))
+                        return this.eventLeaf(A(this.props.data.event))
                     }
                     var t, n;
                     return function(e) {
@@ -5805,8 +5805,8 @@ webpackJsonp([50], {
                     showModal: b.d
                 }, e)
             })(F),
-            A = n("70dR"),
-            T = (n("z4Db"), n("kOMe"));
+            T = n("70dR"),
+            A = (n("z4Db"), n("kOMe"));
         n.d(t, "b", function() {
             return R
         }), n.d(t, "a", function() {
@@ -6067,7 +6067,7 @@ webpackJsonp([50], {
                     margin: {
                         left: 1
                     }
-                }, r.createElement(A.a, {
+                }, r.createElement(T.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     channelLogin: this.props.channelLogin,
                     hideEsportsSubscription: this.props.hideEsportsSubscription
@@ -6233,7 +6233,7 @@ webpackJsonp([50], {
                 }
             }, t.prototype.reportInteractive = function() {
                 !this.props.data || this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
-            }, t = i.__decorate([Object(u.a)(T, {
+            }, t = i.__decorate([Object(u.a)(A, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7144,6 +7144,74 @@ webpackJsonp([50], {
             s = "https://vk.com/share.php"
     },
     ioX4: function(e, t) {},
+    "j7/Y": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("OAwv"),
+            r = n("GiK3"),
+            o = n("F8kA"),
+            s = n("6sO2");
+
+        function l(e) {
+            return function(t) {
+                var n = function(n) {
+                    function o(t) {
+                        var a = n.call(this, t) || this;
+                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
+                            if (!(a.tracked || e.skip && e.skip(a.props))) {
+                                a.tracked = !0;
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
+                                var n = i.__assign({}, a.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var r = a.referenceTracking,
+                                    o = r.content,
+                                    l = r.medium,
+                                    d = r.content_index;
+                                s.o.tracking.trackPageview(i.__assign({
+                                    content: o,
+                                    medium: l,
+                                    content_index: d,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
+                    }
+                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, o.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, o.prototype.render = function() {
+                        return r.createElement(t, i.__assign({}, this.props))
+                    }, o.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? a.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var i = "",
+                                r = a.stringify(t);
+                            r.length > 0 && (i = "?" + r), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: i
+                            })
+                        }
+                        return n
+                    }, o
+                }(r.Component);
+                return Object(o.f)(n)
+            }
+        }
+        n.d(t, "a", function() {
+            return l
+        })
+    },
     jpZi: function(e, t) {},
     kOMe: function(e, t) {
         var n = {
@@ -8221,8 +8289,8 @@ webpackJsonp([50], {
                     }
                 }, t, a.createElement(d.Q, null, e.value))
             }),
-            A = n("vKYI"),
-            T = (n("jpZi"), 300),
+            T = n("vKYI"),
+            A = (n("jpZi"), 300),
             R = 5e3,
             D = "preview-card-thumbnail__image-selector",
             U = function(e) {
@@ -8253,7 +8321,7 @@ webpackJsonp([50], {
                                     isLiveVideoPreviewLoading: !0,
                                     isLiveVideoPreviewTimedOut: !1
                                 })
-                            }, T)
+                            }, A)
                         })
                     }, t.handleBlur = function() {
                         t.clearTimeouts(), t.setState({
@@ -8301,7 +8369,7 @@ webpackJsonp([50], {
                     return this.shouldShowLiveVideoPreview() ? [a.createElement("div", {
                         key: "player-key",
                         className: s((t = {}, t["preview-card-thumbnail__image--hidden"] = !this.state.isLiveVideoPreviewLoaded, t))
-                    }, a.createElement(A.a, {
+                    }, a.createElement(T.a, {
                         channelLogin: this.props.liveChannelLogin,
                         onPlayerPlaying: this.onLivePreviewLoaded
                     })), a.createElement("div", {
@@ -9024,4 +9092,4 @@ webpackJsonp([50], {
     yU6t: function(e, t) {},
     z4Db: function(e, t) {}
 });
-//# sourceMappingURL=pages.event-landing-1b01d1509e840f5fe33d97e18bbe2de4.js.map
+//# sourceMappingURL=pages.event-landing-71e9c137f9286561aa717a6ce4842d0d.js.map

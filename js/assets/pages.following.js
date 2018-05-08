@@ -2142,8 +2142,8 @@ webpackJsonp([49], {
             T = n("PLRK"),
             P = (n("GiGb"), "directory-first-item"),
             I = "directory-game__card_container",
-            A = 5e3,
-            x = 300,
+            x = 5e3,
+            A = 300,
             D = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -2299,7 +2299,7 @@ webpackJsonp([49], {
                                     previewTimedOut: !1,
                                     streamLoaded: !1
                                 })
-                            }, x)
+                            }, A)
                         }))
                     }, n.onFocusHandler = function() {
                         n.setState({
@@ -2329,7 +2329,7 @@ webpackJsonp([49], {
                                 streamLoaded: !1,
                                 loadingPreview: !1
                             })
-                        }, A)
+                        }, x)
                     }, n.setRef = function(e) {
                         e && (n.thumbnailNode = r.findDOMNode(e), n.addThumbnailListener())
                     }, n.getVideoPlayer = function() {
@@ -2966,8 +2966,8 @@ webpackJsonp([49], {
             T = n("+8VM"),
             P = n("zCIC"),
             I = n("T0IN"),
-            A = n("5G5w"),
-            x = n("6lWU"),
+            x = n("5G5w"),
+            A = n("6lWU"),
             D = (n("A8Kk"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -2978,7 +2978,7 @@ webpackJsonp([49], {
                             var i = e.node;
                             return i && i.id ? d.createElement(_._8, {
                                 key: i.id
-                            }, d.createElement(A.a, {
+                            }, d.createElement(x.a, {
                                 info: "",
                                 title: i.name,
                                 imageAlt: i.name,
@@ -3065,7 +3065,7 @@ webpackJsonp([49], {
                         onClick: this.onClickContinue,
                         disabled: 0 === this.state.followCount
                     }, Object(m.d)("Continue", "FollowGamesModal"))), d.createElement(T.a, null)))
-                }, t = l.__decorate([Object(v.a)(x, {
+                }, t = l.__decorate([Object(v.a)(A, {
                     options: {
                         variables: {
                             limit: 40
@@ -3652,7 +3652,7 @@ webpackJsonp([49], {
                         },
                         enabled: function() {
                             return ie.a.wrap(function() {
-                                return n.e(119).then(n.bind(null, "IwGL"))
+                                return n.e(120).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
@@ -3841,7 +3841,7 @@ webpackJsonp([49], {
                 })], t)
             }(d.Component),
             de = function() {
-                return n.e(124).then(n.bind(null, "oms2"))
+                return n.e(125).then(n.bind(null, "oms2"))
             },
             ce = function(e) {
                 function t() {
@@ -4988,7 +4988,7 @@ webpackJsonp([49], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(129).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -5000,7 +5000,7 @@ webpackJsonp([49], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(128).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -5012,7 +5012,7 @@ webpackJsonp([49], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(126).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(127).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -5024,7 +5024,7 @@ webpackJsonp([49], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(125).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(126).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -7958,6 +7958,74 @@ webpackJsonp([49], {
             })
         }
     },
+    "j7/Y": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("OAwv"),
+            r = n("GiK3"),
+            o = n("F8kA"),
+            s = n("6sO2");
+
+        function l(e) {
+            return function(t) {
+                var n = function(n) {
+                    function o(t) {
+                        var a = n.call(this, t) || this;
+                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
+                            if (!(a.tracked || e.skip && e.skip(a.props))) {
+                                a.tracked = !0;
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
+                                var n = i.__assign({}, a.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var r = a.referenceTracking,
+                                    o = r.content,
+                                    l = r.medium,
+                                    d = r.content_index;
+                                s.o.tracking.trackPageview(i.__assign({
+                                    content: o,
+                                    medium: l,
+                                    content_index: d,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
+                    }
+                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, o.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, o.prototype.render = function() {
+                        return r.createElement(t, i.__assign({}, this.props))
+                    }, o.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? a.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var i = "",
+                                r = a.stringify(t);
+                            r.length > 0 && (i = "?" + r), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: i
+                            })
+                        }
+                        return n
+                    }, o
+                }(r.Component);
+                return Object(o.f)(n)
+            }
+        }
+        n.d(t, "a", function() {
+            return l
+        })
+    },
     jkA6: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -9042,8 +9110,8 @@ webpackJsonp([49], {
                     }
                 }, t, a.createElement(d.Q, null, e.value))
             }),
-            A = n("vKYI"),
-            x = (n("jpZi"), 300),
+            x = n("vKYI"),
+            A = (n("jpZi"), 300),
             D = 5e3,
             U = "preview-card-thumbnail__image-selector",
             R = function(e) {
@@ -9074,7 +9142,7 @@ webpackJsonp([49], {
                                     isLiveVideoPreviewLoading: !0,
                                     isLiveVideoPreviewTimedOut: !1
                                 })
-                            }, x)
+                            }, A)
                         })
                     }, t.handleBlur = function() {
                         t.clearTimeouts(), t.setState({
@@ -9122,7 +9190,7 @@ webpackJsonp([49], {
                     return this.shouldShowLiveVideoPreview() ? [a.createElement("div", {
                         key: "player-key",
                         className: s((t = {}, t["preview-card-thumbnail__image--hidden"] = !this.state.isLiveVideoPreviewLoaded, t))
-                    }, a.createElement(A.a, {
+                    }, a.createElement(x.a, {
                         channelLogin: this.props.liveChannelLogin,
                         onPlayerPlaying: this.onLivePreviewLoaded
                     })), a.createElement("div", {
@@ -10168,4 +10236,4 @@ webpackJsonp([49], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-0f881a538d31117e2a34936c27bdde7f.js.map
+//# sourceMappingURL=pages.following-d09599e069653ad9b748cfee7e1044cc.js.map

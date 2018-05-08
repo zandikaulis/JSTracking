@@ -1,4 +1,4 @@
-webpackJsonp([118], {
+webpackJsonp([119], {
     "77kt": function(e, t, r) {
         "use strict";
         t.a = function(e, t) {
@@ -340,41 +340,42 @@ webpackJsonp([118], {
             a = r("GiK3"),
             o = r("CIox"),
             s = r("j7/Y"),
-            i = r("w9tK"),
-            c = r("vH/s"),
-            p = r("CSlQ"),
-            l = r("o8Qr"),
-            u = r("Odds"),
-            d = r("6sO2"),
-            m = r("dadB"),
-            h = function(e) {
+            i = r("mIvh"),
+            c = r("w9tK"),
+            p = r("vH/s"),
+            l = r("CSlQ"),
+            u = r("o8Qr"),
+            d = r("Odds"),
+            m = r("6sO2"),
+            h = r("dadB"),
+            g = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(u._8, null, a.createElement(u._2, {
+                    return a.createElement(d._8, null, a.createElement(d._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement("header", null, a.createElement(u._2, {
+                    }, a.createElement("header", null, a.createElement(d._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(u.Q, {
-                        type: u._49.H2
-                    }, Object(d.d)("Register Your Application", "DevCreateApp"))), a.createElement(u.Q, {
-                        type: u._49.P
-                    }, Object(d.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevCreateApp")))), a.createElement(m.a, {
+                    }, a.createElement(d.Q, {
+                        type: d._49.H2
+                    }, Object(m.d)("Register Your Application", "DevCreateApp"))), a.createElement(d.Q, {
+                        type: d._49.P
+                    }, Object(m.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevCreateApp")))), a.createElement(h.a, {
                         onSave: this.props.onSave,
                         categories: this.props.categories,
                         errorMessage: this.props.errorMessage
                     }))
                 }, t
             }(a.Component),
-            g = Object(p.d)("DevAppCreateComponent")(h),
-            f = function(e) {
+            f = Object(l.d)("DevAppCreateComponent")(g),
+            v = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -386,7 +387,7 @@ webpackJsonp([118], {
                             return n.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return r.trys.push([0, 4, , 5]), [4, Object(l.a)("https://api.twitch.tv/kraken/app_categories")];
+                                        return r.trys.push([0, 4, , 5]), [4, Object(u.a)(i.a + "/kraken/app_categories")];
                                     case 1:
                                         return 200 !== (e = r.sent()).status ? [3, 3] : [4, e.json()];
                                     case 2:
@@ -410,7 +411,7 @@ webpackJsonp([118], {
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, Object(l.a)("https://api.twitch.tv/kraken/apps", {
+                                        return [4, Object(u.a)(i.a + "/kraken/apps", {
                                             method: "POST",
                                             body: JSON.stringify(e)
                                         })];
@@ -432,22 +433,22 @@ webpackJsonp([118], {
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.fetchCategories()
                 }, t.prototype.render = function() {
-                    return this.state.categories ? a.createElement(g, {
+                    return this.state.categories ? a.createElement(f, {
                         categories: this.state.categories,
                         onSave: this.onSave,
                         errorMessage: this.state.errorMessage
-                    }) : a.createElement(u._10, {
+                    }) : a.createElement(d._10, {
                         fillContent: !0
                     })
-                }, t = n.__decorate([Object(p.d)("DevAppCreatePage", {
-                    destination: i.a.DevSiteAppCreate
+                }, t = n.__decorate([Object(l.d)("DevAppCreatePage", {
+                    destination: c.a.DevSiteAppCreate
                 }), Object(s.a)({
-                    location: c.PageviewLocation.DevSiteAppCreate
+                    location: p.PageviewLocation.DevSiteAppCreate
                 })], t)
             }(a.Component),
-            v = Object(o.f)(f);
+            _ = Object(o.f)(v);
         r.d(t, "DevAppCreatePage", function() {
-            return v
+            return _
         })
     },
     o8Qr: function(e, t, r) {
@@ -501,4 +502,4 @@ webpackJsonp([118], {
         }
     }
 });
-//# sourceMappingURL=sites.dev.pages.app-create-page-82887939606e970b8824eefc862fbb4e.js.map
+//# sourceMappingURL=sites.dev.pages.app-create-page-085c0dc0ad29bdfc4a8bbb4d8674fbf0.js.map

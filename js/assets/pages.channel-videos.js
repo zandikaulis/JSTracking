@@ -1,4 +1,4 @@
-webpackJsonp([32, 119], {
+webpackJsonp([32, 120], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -1901,16 +1901,13 @@ webpackJsonp([32, 119], {
             ne = (n("W266"), "nativeBroadcastNotifDismissed"),
             ie = [{
                 title: "English",
-                login: "esamarathon"
+                login: "RPGLimitBreak"
             }, {
                 title: "Français",
                 login: "LeFrenchRestream"
             }, {
-                title: "Deutsch",
-                login: "GermenchRestream"
-            }, {
-                title: "Русский",
-                login: "SpeedrunsRussia"
+                title: "日本語",
+                login: "japanese_restream"
             }],
             ae = function(e) {
                 function t() {
@@ -1953,7 +1950,7 @@ webpackJsonp([32, 119], {
                     if (!this.isEventChannel(this.props.channelLogin)) return null;
                     if (this.hasDismissedForChannel(this.props.channelLogin)) return null;
                     var e = Date.now();
-                    if (e < 15191352e5 || e >= 15195132e5) return null;
+                    if (e < 15262344e5 || e >= 15268212e5) return null;
                     var t = this.getChannelLinks();
                     return t.length ? s.createElement(L._35, {
                         attachLeft: !0,
@@ -1969,13 +1966,13 @@ webpackJsonp([32, 119], {
                         }
                     }, s.createElement(L.Q, {
                         type: L._49.H4
-                    }, Object(u.d)("ESA Winter 2018", "NativeBroadcastNotification"))), s.createElement(L._8, {
+                    }, Object(u.d)("RPG Limit Break 2018", "NativeBroadcastNotification"))), s.createElement(L._8, {
                         margin: {
                             bottom: 1
                         }
                     }, s.createElement(L.Q, {
                         color: L.K.OverlayAlt
-                    }, Object(u.d)("Want to watch ESA in you local language? Try one of these international broadcasts!", "NativeBroadcastNotification"))), s.createElement("ul", null, t), s.createElement(L._8, {
+                    }, Object(u.d)("Want to watch RPGLB in your local language? Try one of these international broadcasts!", "NativeBroadcastNotification"))), s.createElement("ul", null, t), s.createElement(L._8, {
                         attachRight: !0,
                         attachTop: !0,
                         margin: 1,
@@ -2003,7 +2000,7 @@ webpackJsonp([32, 119], {
                     }).includes(e.toLowerCase())
                 }, t.prototype.hasDismissedForChannel = function(e) {
                     var t = u.l.get(ne, {})[e.toLowerCase()];
-                    return !!t && t >= 15191352e5
+                    return !!t && t >= 15262344e5
                 }, t
             }(s.Component),
             re = n("+Znq"),
@@ -16358,7 +16355,7 @@ webpackJsonp([32, 119], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(129).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16370,7 +16367,7 @@ webpackJsonp([32, 119], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(128).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16382,7 +16379,7 @@ webpackJsonp([32, 119], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(126).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(127).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -16394,7 +16391,7 @@ webpackJsonp([32, 119], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(125).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(126).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -28139,7 +28136,7 @@ webpackJsonp([32, 119], {
                     return this.props.data.error ? null : this.getContent()
                 }, t.prototype.renderIgnoreButton = function() {
                     var e = this.props.data.currentUser;
-                    return this.props.isEmbedded || e && e.login === this.props.targetLogin ? null : h.createElement(y._8, {
+                    return !this.props.isEmbedded && e && this.props.data.targetUser && e.login !== this.props.targetLogin ? h.createElement(y._8, {
                         key: "Ignore",
                         position: y._15.Absolute,
                         attachRight: !0,
@@ -28152,7 +28149,7 @@ webpackJsonp([32, 119], {
                         targetDisplayName: this.props.data.targetUser.displayName,
                         targetLogin: this.props.targetLogin,
                         sendMessageToTMI: this.props.sendMessageToTMI
-                    }))
+                    })) : null
                 }, t.prototype.renderHideButton = function() {
                     return h.createElement(y._8, {
                         className: "viewer-card__hide",
@@ -32249,6 +32246,74 @@ webpackJsonp([32, 119], {
             }
         };
         e.exports = n
+    },
+    "j7/Y": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("OAwv"),
+            r = n("GiK3"),
+            o = n("F8kA"),
+            s = n("6sO2");
+
+        function l(e) {
+            return function(t) {
+                var n = function(n) {
+                    function o(t) {
+                        var a = n.call(this, t) || this;
+                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
+                            if (!(a.tracked || e.skip && e.skip(a.props))) {
+                                a.tracked = !0;
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
+                                var n = i.__assign({}, a.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var r = a.referenceTracking,
+                                    o = r.content,
+                                    l = r.medium,
+                                    d = r.content_index;
+                                s.o.tracking.trackPageview(i.__assign({
+                                    content: o,
+                                    medium: l,
+                                    content_index: d,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
+                    }
+                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, o.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, o.prototype.render = function() {
+                        return r.createElement(t, i.__assign({}, this.props))
+                    }, o.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? a.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var i = "",
+                                r = a.stringify(t);
+                            r.length > 0 && (i = "?" + r), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: i
+                            })
+                        }
+                        return n
+                    }, o
+                }(r.Component);
+                return Object(o.f)(n)
+            }
+        }
+        n.d(t, "a", function() {
+            return l
+        })
     },
     jIAO: function(e, t, n) {
         "use strict";
@@ -39481,4 +39546,4 @@ webpackJsonp([32, 119], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-videos-2466b54e6212054c62e2a1e888c91e63.js.map
+//# sourceMappingURL=pages.channel-videos-69eb27f0ba2fbd8726fb4e0603f29f18.js.map

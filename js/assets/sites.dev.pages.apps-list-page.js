@@ -1,4 +1,4 @@
-webpackJsonp([100], {
+webpackJsonp([101], {
     "+/J2": function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e, t) {
@@ -965,19 +965,20 @@ webpackJsonp([100], {
         });
         var r = n("TToO"),
             o = n("GiK3"),
-            a = n("j7/Y"),
-            u = n("w9tK"),
-            i = n("vH/s"),
-            s = n("CSlQ"),
-            c = n("o8Qr"),
-            f = n("6sO2"),
-            p = n("wuJz");
+            a = n("6sO2"),
+            u = n("j7/Y"),
+            i = n("mIvh"),
+            s = n("w9tK"),
+            c = n("vH/s"),
+            f = n("CSlQ"),
+            p = n("o8Qr"),
+            l = n("wuJz");
 
-        function l(e, t) {
-            return Object(p.format)(e, t)
+        function v(e, t) {
+            return Object(l.format)(e, t)
         }
-        var v = n("Odds"),
-            d = function(e) {
+        var d = n("Odds"),
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onDelete = function(e) {
@@ -987,32 +988,32 @@ webpackJsonp([100], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = l(new Date(this.props.app.created_at), "MM/DD/YYYY, hh:mm a"),
-                        t = l(new Date(this.props.app.updated_at), "MM/DD/YYYY, hh:mm a");
-                    return o.createElement(v._43, {
+                    var e = v(new Date(this.props.app.created_at), "MM/DD/YYYY, hh:mm a"),
+                        t = v(new Date(this.props.app.updated_at), "MM/DD/YYYY, hh:mm a");
+                    return o.createElement(d._43, {
                         key: this.props.app.id
-                    }, o.createElement(v._40, null, this.props.app.name), o.createElement(v._40, null, this.props.app.redirect_uri), o.createElement(v._40, null, e), o.createElement(v._40, null, t), o.createElement(v._40, null, o.createElement(v._8, {
-                        display: v.R.Flex,
-                        justifyContent: v._7.Center
-                    }, o.createElement(v._8, {
+                    }, o.createElement(d._40, null, this.props.app.name), o.createElement(d._40, null, this.props.app.redirect_uri), o.createElement(d._40, null, e), o.createElement(d._40, null, t), o.createElement(d._40, null, o.createElement(d._8, {
+                        display: d.R.Flex,
+                        justifyContent: d._7.Center
+                    }, o.createElement(d._8, {
                         margin: {
                             right: 1
                         }
-                    }, o.createElement(v.v, {
+                    }, o.createElement(d.v, {
                         linkTo: "/console/apps/" + this.props.app.id
-                    }, Object(f.d)("Manage", "DevAppListRow"))), o.createElement(v.v, {
+                    }, Object(a.d)("Manage", "DevAppListRow"))), o.createElement(d.v, {
                         onClick: this.onDelete,
                         "data-test-selector": "dev-apps-list-row-delete"
-                    }, Object(f.d)("Delete", "DevAppListRow")))))
+                    }, Object(a.d)("Delete", "DevAppListRow")))))
                 }, t
             }(o.Component),
-            x = Object(s.d)("DevAppListRow")(d),
-            g = function(e) {
+            g = Object(f.d)("DevAppListRow")(x),
+            h = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderAppRows = function() {
                         return t.props.apps.map(function(e) {
-                            return o.createElement(x, {
+                            return o.createElement(g, {
                                 key: e.id,
                                 app: e,
                                 onDelete: t.props.onDelete
@@ -1024,59 +1025,59 @@ webpackJsonp([100], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.renderAppRows();
-                    return o.createElement(v._38, {
+                    return o.createElement(d._38, {
                         alternateRows: !0
-                    }, o.createElement(v._41, null, o.createElement(v._42, {
-                        label: Object(f.d)("Name", "DevAppsList")
-                    }), o.createElement(v._42, {
-                        label: Object(f.d)("URL", "DevAppsList")
-                    }), o.createElement(v._42, {
-                        label: Object(f.d)("Date Created", "DevAppsList")
-                    }), o.createElement(v._42, {
-                        label: Object(f.d)("Last Updated", "DevAppsList")
-                    }), o.createElement(v._42, {
+                    }, o.createElement(d._41, null, o.createElement(d._42, {
+                        label: Object(a.d)("Name", "DevAppsList")
+                    }), o.createElement(d._42, {
+                        label: Object(a.d)("URL", "DevAppsList")
+                    }), o.createElement(d._42, {
+                        label: Object(a.d)("Date Created", "DevAppsList")
+                    }), o.createElement(d._42, {
+                        label: Object(a.d)("Last Updated", "DevAppsList")
+                    }), o.createElement(d._42, {
                         label: ""
-                    })), o.createElement(v._39, null, e))
-                }, t = r.__decorate([Object(s.d)("DevAppsList", {
+                    })), o.createElement(d._39, null, e))
+                }, t = r.__decorate([Object(f.d)("DevAppsList", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component),
-            h = function(e) {
+            m = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return o.createElement(v._8, {
+                    return o.createElement(d._8, {
                         className: "dev-apps"
-                    }, o.createElement(v._2, {
+                    }, o.createElement(d._2, {
                         margin: {
                             bottom: 2
                         }
-                    }, o.createElement("header", null, o.createElement(v.Q, {
-                        type: v._49.H3
-                    }, Object(f.d)("Developer Applications", "DevApps")), o.createElement(v.Q, {
-                        type: v._49.P
-                    }, Object(f.d)("You have registered these apps to use the Twitch API", "DevApps")))), o.createElement(v._8, null, o.createElement(v._8, {
+                    }, o.createElement("header", null, o.createElement(d.Q, {
+                        type: d._49.H3
+                    }, Object(a.d)("Developer Applications", "DevApps")), o.createElement(d.Q, {
+                        type: d._49.P
+                    }, Object(a.d)("You have registered these apps to use the Twitch API", "DevApps")))), o.createElement(d._8, null, o.createElement(d._8, {
                         margin: {
                             bottom: 1
                         },
-                        justifyContent: v._7.End,
-                        display: v.R.Flex
-                    }, o.createElement(v.v, {
-                        icon: v._25.Plus,
+                        justifyContent: d._7.End,
+                        display: d.R.Flex
+                    }, o.createElement(d.v, {
+                        icon: d._25.Plus,
                         linkTo: "/console/apps/create"
-                    }, Object(f.d)("Register Your Application", "DevApps"))), o.createElement(g, {
+                    }, Object(a.d)("Register Your Application", "DevApps"))), o.createElement(h, {
                         apps: this.props.apps,
                         onDelete: this.props.onDelete
                     })))
                 }, t
             }(o.Component),
-            m = Object(s.d)("DevAppsComponent", {
+            w = Object(f.d)("DevAppsComponent", {
                 autoReportInteractive: !0
-            })(h),
-            w = function(e) {
+            })(m),
+            D = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -1086,10 +1087,10 @@ webpackJsonp([100], {
                             return r.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        if (!window.confirm("Are you sure you want to delete this App?")) return [3, 6];
+                                        if (!window.confirm(Object(a.d)("Are you sure you want to delete this App?", "DevApps"))) return [3, 6];
                                         t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 5, , 6]), [4, Object(c.a)("https://api.twitch.tv/kraken/apps/" + e, {
+                                        return t.trys.push([1, 5, , 6]), [4, Object(p.a)(i.a + "/kraken/apps/" + e, {
                                             method: "DELETE"
                                         })];
                                     case 2:
@@ -1111,7 +1112,7 @@ webpackJsonp([100], {
                             return r.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return r.trys.push([0, 4, , 5]), [4, Object(c.a)("https://api.twitch.tv/kraken/apps")];
+                                        return r.trys.push([0, 4, , 5]), [4, Object(p.a)(i.a + "/kraken/apps")];
                                     case 1:
                                         return 200 !== (e = r.sent()).status ? [3, 3] : [4, e.json()];
                                     case 2:
@@ -1145,18 +1146,18 @@ webpackJsonp([100], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return o.createElement(m, {
+                    return o.createElement(w, {
                         apps: this.state.apps,
                         onDelete: this.onDelete
                     })
-                }, t = r.__decorate([Object(s.d)("DevAppsListPage", {
-                    destination: u.a.DevSiteApps
-                }), Object(a.a)({
-                    location: i.PageviewLocation.DevSiteApps
+                }, t = r.__decorate([Object(f.d)("DevAppsListPage", {
+                    destination: s.a.DevSiteApps
+                }), Object(u.a)({
+                    location: c.PageviewLocation.DevSiteApps
                 })], t)
             }(o.Component);
         n.d(t, "DevAppsPage", function() {
-            return w
+            return D
         })
     },
     "cA+x": function(e, t, n) {
@@ -2031,7 +2032,7 @@ webpackJsonp([100], {
             if ("string" != typeof e) return new Date(e);
             var n = (t || {}).additionalDigits;
             n = null == n ? u : Number(n);
-            var Y = function(e) {
+            var O = function(e) {
                     var t, n = {},
                         r = e.split(i);
                     if (s.test(r[0]) ? (n.date = null, t = r[0]) : (n.date = r[0], t = r[1]), t) {
@@ -2040,7 +2041,7 @@ webpackJsonp([100], {
                     }
                     return n
                 }(e),
-                O = function(e, t) {
+                Y = function(e, t) {
                     var n, r = f[t],
                         o = l[t];
                     if (n = p.exec(e) || o.exec(e)) {
@@ -2060,8 +2061,8 @@ webpackJsonp([100], {
                     return {
                         year: null
                     }
-                }(Y.date, n),
-                S = O.year,
+                }(O.date, n),
+                S = Y.year,
                 I = function(e, t) {
                     if (null === t) return null;
                     var n, r, o, a;
@@ -2084,11 +2085,11 @@ webpackJsonp([100], {
                         return b(t, a, s)
                     }
                     return null
-                }(O.restDateString, S);
+                }(Y.restDateString, S);
             if (I) {
                 var _, F = I.getTime(),
                     H = 0;
-                return Y.time && (H = function(e) {
+                return O.time && (H = function(e) {
                     var t, n, r;
                     if (t = m.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * o;
                     if (t = w.exec(e)) return n = parseInt(t[1], 10), r = parseFloat(t[2].replace(",", ".")), n % 24 * o + r * a;
@@ -2098,7 +2099,7 @@ webpackJsonp([100], {
                         return n % 24 * o + r * a + 1e3 * u
                     }
                     return null
-                }(Y.time)), Y.timezone ? (k = Y.timezone, _ = (N = T.exec(k)) ? 0 : (N = y.exec(k)) ? (E = 60 * parseInt(N[2], 10), "+" === N[1] ? -E : E) : (N = A.exec(k)) ? (E = 60 * parseInt(N[2], 10) + parseInt(N[3], 10), "+" === N[1] ? -E : E) : 0) : (_ = new Date(F + H).getTimezoneOffset(), _ = new Date(F + H + _ * a).getTimezoneOffset()), new Date(F + H + _ * a)
+                }(O.time)), O.timezone ? (k = O.timezone, _ = (N = T.exec(k)) ? 0 : (N = y.exec(k)) ? (E = 60 * parseInt(N[2], 10), "+" === N[1] ? -E : E) : (N = A.exec(k)) ? (E = 60 * parseInt(N[2], 10) + parseInt(N[3], 10), "+" === N[1] ? -E : E) : 0) : (_ = new Date(F + H).getTimezoneOffset(), _ = new Date(F + H + _ * a).getTimezoneOffset()), new Date(F + H + _ * a)
             }
             var k, N, E;
             return new Date(e)
@@ -2166,4 +2167,4 @@ webpackJsonp([100], {
         }
     }
 });
-//# sourceMappingURL=sites.dev.pages.apps-list-page-48befbc7095b37ebc0228702157fc2bd.js.map
+//# sourceMappingURL=sites.dev.pages.apps-list-page-126a700a8a43cd85a0912bdc737911d9.js.map

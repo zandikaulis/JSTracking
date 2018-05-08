@@ -435,7 +435,7 @@ webpackJsonp([116], {
                         channel: e.channel,
                         channel_id: e.channelId,
                         clickthrough_location: e.clickthroughLocation
-                    }, s.n.track(i.SpadeEventType.SubsLandingStreamerClick, t), [2]
+                    }, i.n.track(s.SpadeEventType.SubsLandingStreamerClick, t), [2]
                 })
             })
         }, t.b = function(e) {
@@ -473,23 +473,91 @@ webpackJsonp([116], {
                         vod_type: "",
                         viewport_height: window.innerHeight,
                         viewport_width: window.innerWidth
-                    }, s.n.track(i.SpadeEventType.Subscription, n), [2]
+                    }, i.n.track(s.SpadeEventType.Subscription, n), [2]
                 })
             })
         };
         var r = n("TToO"),
-            s = n("6sO2"),
-            i = n("vH/s")
+            i = n("6sO2"),
+            s = n("vH/s")
     },
     Xv4P: function(e, t) {},
     bPto: function(e, t) {},
+    "j7/Y": function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            i = n("OAwv"),
+            s = n("GiK3"),
+            a = n("F8kA"),
+            o = n("6sO2");
+
+        function c(e) {
+            return function(t) {
+                var n = function(n) {
+                    function a(t) {
+                        var i = n.call(this, t) || this;
+                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
+                            if (!(i.tracked || e.skip && e.skip(i.props))) {
+                                i.tracked = !0;
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
+                                var n = r.__assign({}, i.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var s = i.referenceTracking,
+                                    a = s.content,
+                                    c = s.medium,
+                                    l = s.content_index;
+                                o.o.tracking.trackPageview(r.__assign({
+                                    content: a,
+                                    medium: c,
+                                    content_index: l,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, o.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                    }
+                    return r.__extends(a, n), a.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, a.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, a.prototype.render = function() {
+                        return s.createElement(t, r.__assign({}, this.props))
+                    }, a.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? i.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var r = "",
+                                s = i.stringify(t);
+                            s.length > 0 && (r = "?" + s), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: r
+                            })
+                        }
+                        return n
+                    }, a
+                }(s.Component);
+                return Object(a.f)(n)
+            }
+        }
+        n.d(t, "a", function() {
+            return c
+        })
+    },
     uy5s: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r, s = n("RH2O"),
-            i = n("TToO"),
+        var r, i = n("RH2O"),
+            s = n("TToO"),
             a = n("GiK3"),
             o = n("6sO2"),
             c = n("yWCw"),
@@ -497,17 +565,17 @@ webpackJsonp([116], {
             u = n("7vx8"),
             p = n("j7/Y"),
             d = n("TeXj"),
-            b = n("w9tK"),
-            m = n("vH/s"),
+            m = n("w9tK"),
+            b = n("vH/s"),
             h = n("Tzcg"),
             g = n("CSlQ"),
             _ = n("Odds"),
             f = (n("bPto"), n("027l")),
-            E = function(e) {
+            k = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     return this.props.data.loading || !this.props.data.user ? a.createElement("div", {
@@ -618,7 +686,7 @@ webpackJsonp([116], {
                     }, a.createElement(_.Q, {
                         color: _.K.Overlay
                     }, Object(o.d)("Verified Twitch Partner", "SubsBroadcasterBanner")))) : null
-                }, t = i.__decorate([Object(g.d)("SubsBroadcasterBanner"), Object(u.a)(f, {
+                }, t = s.__decorate([Object(g.d)("SubsBroadcasterBanner"), Object(u.a)(f, {
                     options: function(e) {
                         return {
                             variables: {
@@ -628,15 +696,15 @@ webpackJsonp([116], {
                     }
                 })], t)
             }(a.Component),
-            k = n("7LIQ"),
+            E = n("7LIQ"),
             v = n("YEG/"),
-            P = n("FDYX"),
-            T = n("XFEc"),
+            T = n("FDYX"),
+            P = n("XFEc"),
             y = (n("Xv4P"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.productName = Object(o.d)("All-Access Pass", "SubsPlanEsports"), t.onSubClick = function(e) {
-                        Object(T.b)({
+                        Object(P.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -653,7 +721,7 @@ webpackJsonp([116], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(_._14, null) : a.createElement(_._8, {
@@ -686,8 +754,8 @@ webpackJsonp([116], {
                     var t = Object(o.d)("Overwatch League All-Access Pass Benefits", "SubsPlanEsports"),
                         n = Object(o.d)("Exclusive Command Center Stream", "SubPlanEsports"),
                         r = Object(o.d)("Match Analysis Videos by Players", "SubPlanEsports"),
-                        s = Object(o.d)("Participate in Post-Match Q&A", "SubPlanEsports"),
-                        i = Object(o.d)("Passholder-Only Chat Access", "SubPlanEsports"),
+                        i = Object(o.d)("Participate in Post-Match Q&A", "SubPlanEsports"),
+                        s = Object(o.d)("Passholder-Only Chat Access", "SubPlanEsports"),
                         c = Object(o.d)("Ad-Free Viewing on Overwatch League", "SubPlanEsports"),
                         l = Object(o.d)("Overwatch In-Game Content", "SubPlanEsports"),
                         u = Object(o.d)("Get All-Access Pass for $19.99 with Twitch Prime", "SubsPlanEsports"),
@@ -741,10 +809,10 @@ webpackJsonp([116], {
                         padding: {
                             top: 1
                         }
-                    }, a.createElement(_.Q, null, n), a.createElement(_.Q, null, r), a.createElement(_.Q, null, s), a.createElement(_.Q, null, i), a.createElement(_.Q, null, c), a.createElement(_.Q, null, l))))] : this.props.subscriptionProducts.map(function(d, b) {
-                        var m = d.price;
-                        return Object(P.d)([d]) && (m = Object(P.a)(d)), a.createElement(_._35, {
-                            key: "subs-broadcaster-plan-" + b,
+                    }, a.createElement(_.Q, null, n), a.createElement(_.Q, null, r), a.createElement(_.Q, null, i), a.createElement(_.Q, null, s), a.createElement(_.Q, null, c), a.createElement(_.Q, null, l))))] : this.props.subscriptionProducts.map(function(d, m) {
+                        var b = d.price;
+                        return Object(T.d)([d]) && (b = Object(T.a)(d)), a.createElement(_._35, {
+                            key: "subs-broadcaster-plan-" + m,
                             className: "subs-plan-esports__plan",
                             margin: 1,
                             elevation: 2,
@@ -794,11 +862,11 @@ webpackJsonp([116], {
                             padding: {
                                 top: 1
                             }
-                        }, a.createElement(_.Q, null, n), a.createElement(_.Q, null, r), a.createElement(_.Q, null, s), a.createElement(_.Q, null, i), a.createElement(_.Q, null, c), a.createElement(_.Q, null, l))), a.createElement(_._8, {
+                        }, a.createElement(_.Q, null, n), a.createElement(_.Q, null, r), a.createElement(_.Q, null, i), a.createElement(_.Q, null, s), a.createElement(_.Q, null, c), a.createElement(_.Q, null, l))), a.createElement(_._8, {
                             margin: 1
                         }, a.createElement(v.a, {
-                            isSubbedToTier: e.isSubbedToTier(b),
-                            tierPrice: m,
+                            isSubbedToTier: e.isSubbedToTier(m),
+                            tierPrice: b,
                             reportSubAction: e.onSubClick,
                             url: d.url + "/ticket",
                             targetBlank: !1,
@@ -817,7 +885,7 @@ webpackJsonp([116], {
                     return a.createElement(_._8, {
                         margin: 1,
                         className: "subs-plan-esports__base-emotes"
-                    }, a.createElement(k.a, {
+                    }, a.createElement(E.a, {
                         emoteSet: {
                             id: "",
                             emotes: e
@@ -825,14 +893,14 @@ webpackJsonp([116], {
                         onClickEmote: void 0,
                         locked: !1
                     }))
-                }, t = i.__decorate([Object(g.d)("SubsPlanEsports")], t)
+                }, t = s.__decorate([Object(g.d)("SubsPlanEsports")], t)
             }(a.Component)),
             S = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(_._8, null, a.createElement(E, {
+                return s.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(_._8, null, a.createElement(k, {
                         channelName: this.props.channelDisplayName
                     }), a.createElement(_._8, {
                         display: _.R.Flex,
@@ -855,7 +923,7 @@ webpackJsonp([116], {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return s.__extends(t, e), t.prototype.render = function() {
                     return this.props.subscriptionProduct.emotes.length < 1 ? null : a.createElement(_._8, {
                         key: this.props.subscriptionProduct.id,
                         display: _.R.Flex,
@@ -910,7 +978,7 @@ webpackJsonp([116], {
                                 })
                         }
                     }, t.onSubClick = function(e) {
-                        Object(T.b)({
+                        Object(P.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -927,7 +995,7 @@ webpackJsonp([116], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? this.messages.mobileSubbed : this.messages.subscribe;
@@ -1007,7 +1075,7 @@ webpackJsonp([116], {
                             e = this.props.subscriptionProducts[0]
                     }
                     var t = e.price;
-                    Object(P.d)([e]) && (t = Object(P.a)(e));
+                    Object(T.d)([e]) && (t = Object(T.a)(e));
                     var n = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? a.createElement(_.Q, {
                         type: _._49.H5
                     }, Object(o.d)("Tier 1 Subscription", "SubsBroadcasterPlanTabs")) : a.createElement(N.a, {
@@ -1076,7 +1144,7 @@ webpackJsonp([116], {
                     var e = Object(h.b)(this.props.subscriptionProducts[0].emotes);
                     return a.createElement(_._8, {
                         className: "subs-broadcaster-tabbed-tiers__emotes"
-                    }, a.createElement(k.a, {
+                    }, a.createElement(E.a, {
                         emoteSet: {
                             id: this.state.emoteSetId || "",
                             emotes: e
@@ -1084,13 +1152,13 @@ webpackJsonp([116], {
                         onClickEmote: void 0,
                         locked: !1
                     }))
-                }, t = i.__decorate([Object(g.d)("SubPlanTabs")], t)
+                }, t = s.__decorate([Object(g.d)("SubPlanTabs")], t)
             }(a.Component),
-            I = (n("5EZR"), function(e) {
+            j = (n("5EZR"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSubClick = function(e) {
-                        Object(T.b)({
+                        Object(P.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -1107,7 +1175,7 @@ webpackJsonp([116], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (!this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1) return a.createElement(_._14, null);
@@ -1171,7 +1239,7 @@ webpackJsonp([116], {
                         targetBlank: !1
                     })))] : this.props.subscriptionProducts.map(function(t, n) {
                         var r = t.price;
-                        return Object(P.d)([t]) && (r = Object(P.a)(t)), a.createElement(_._35, {
+                        return Object(T.d)([t]) && (r = Object(T.a)(t)), a.createElement(_._35, {
                             key: "subs-broadcaster-plan-" + n,
                             className: "subs-plan-tiers__plan",
                             margin: 1,
@@ -1219,7 +1287,7 @@ webpackJsonp([116], {
                     return a.createElement(_._8, {
                         margin: 1,
                         className: "subs-plan-tiers__base-emotes"
-                    }, a.createElement(k.a, {
+                    }, a.createElement(E.a, {
                         emoteSet: {
                             id: "",
                             emotes: e
@@ -1273,14 +1341,14 @@ webpackJsonp([116], {
                         subscribed: Object(o.d)("Subscribed", "SubsPlanTiers"),
                         includes: Object(o.d)("Includes everything listed above.", "SubsPlanTiers")
                     }
-                }, t = i.__decorate([Object(g.d)("SubsPlanTiers")], t)
+                }, t = s.__decorate([Object(g.d)("SubsPlanTiers")], t)
             }(a.Component)),
-            j = function(e) {
+            I = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(_._8, null, a.createElement(E, {
+                return s.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(_._8, null, a.createElement(k, {
                         channelName: this.props.channelDisplayName
                     }), a.createElement(C.a, {
                         subscriptionProducts: this.props.subscriptionProducts
@@ -1307,7 +1375,7 @@ webpackJsonp([116], {
                         breakpointMedium: {
                             display: _.R.Flex
                         }
-                    }, a.createElement(I, {
+                    }, a.createElement(j, {
                         subbedPlatform: this.props.subbedPlatform,
                         subscriptionProducts: this.props.subscriptionProducts,
                         subTier: this.props.subTier,
@@ -1329,7 +1397,7 @@ webpackJsonp([116], {
                         subPlatform: null
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     o.o.setPageTitle("Subscriptions"), this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     if (!e.data.loading) {
@@ -1363,7 +1431,7 @@ webpackJsonp([116], {
                         alignItems: _.c.Center
                     }, a.createElement(_._10, null));
                     var e = Object(d.c)(this.props.data.user.id),
-                        t = a.createElement(j, {
+                        t = a.createElement(I, {
                             subbedPlatform: this.state.subPlatform,
                             channelDisplayName: this.props.data.user.displayName,
                             channelId: this.props.data.user.id,
@@ -1379,7 +1447,7 @@ webpackJsonp([116], {
                         subscriptionProducts: this.state.subscriptionProducts,
                         subTier: this.state.subTier
                     })), a.createElement(l.b, null, t)
-                }, t = i.__decorate([Object(u.a)(w, {
+                }, t = s.__decorate([Object(u.a)(w, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1388,15 +1456,15 @@ webpackJsonp([116], {
                         }
                     }
                 }), Object(g.d)("SubsBroadcasterPage", {
-                    destination: b.a.SubsBroadcasterPage
+                    destination: m.a.SubsBroadcasterPage
                 }), Object(p.a)({
-                    location: m.PageviewLocation.SubsBroadcasterPage
+                    location: b.PageviewLocation.SubsBroadcasterPage
                 })], t)
             }(a.Component),
-            L = Object(s.b)()(F);
+            L = Object(i.b)()(F);
         n.d(t, "SubsBroadcasterPage", function() {
             return L
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-99f595558d50bce917c6039bee3d697b.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-7e68c749c3cbeb47e1db4968700c0084.js.map

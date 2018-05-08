@@ -1,4 +1,4 @@
-webpackJsonp([62], {
+webpackJsonp([63], {
     "+V/3": function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
@@ -1209,6 +1209,74 @@ webpackJsonp([62], {
         }
         i.definitions = i.definitions.concat(s(n("QU+n").definitions)), i.definitions = i.definitions.concat(s(n("cpDk").definitions)), e.exports = i
     },
+    "j7/Y": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            r = n("OAwv"),
+            s = n("GiK3"),
+            a = n("F8kA"),
+            o = n("6sO2");
+
+        function u(e) {
+            return function(t) {
+                var n = function(n) {
+                    function a(t) {
+                        var r = n.call(this, t) || this;
+                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
+                            if (!(r.tracked || e.skip && e.skip(r.props))) {
+                                r.tracked = !0;
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = i.__assign({}, e.properties));
+                                var n = i.__assign({}, r.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var s = r.referenceTracking,
+                                    a = s.content,
+                                    u = s.medium,
+                                    c = s.content_index;
+                                o.o.tracking.trackPageview(i.__assign({
+                                    content: a,
+                                    medium: u,
+                                    content_index: c,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, o.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
+                    }
+                    return i.__extends(a, n), a.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, a.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, a.prototype.render = function() {
+                        return s.createElement(t, i.__assign({}, this.props))
+                    }, a.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? r.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var i = "",
+                                s = r.stringify(t);
+                            s.length > 0 && (i = "?" + s), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: i
+                            })
+                        }
+                        return n
+                    }, a
+                }(s.Component);
+                return Object(a.f)(n)
+            }
+        }
+        n.d(t, "a", function() {
+            return u
+        })
+    },
     jQFB: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -1232,7 +1300,7 @@ webpackJsonp([62], {
             v = n("7vx8"),
             k = n("oIkB"),
             S = n("Odds"),
-            y = (n("SR+V"), function() {
+            _ = (n("SR+V"), function() {
                 return c.createElement(S._35, {
                     className: "available-prime-sub-card",
                     border: !0,
@@ -1269,24 +1337,24 @@ webpackJsonp([62], {
                     }
                 }, c.createElement(S.Q, null, Object(d.d)('To use your free subscription, go to a channel of your choice and select "Subscribe Free"', "AvailablePrimeSubCard"))))
             }),
-            _ = n("SZoP"),
+            y = n("SZoP"),
             B = n("urTJ"),
             E = n("V5M+"),
             O = n("+8VM"),
             C = n("9u8h");
-        var N, T;
+        var T, N;
         n("l6se");
         ! function(e) {
             e.ErrorMessage = "DisableGiftModalErrorMessage", e.CancelButton = "DisableGiftCancelButton", e.ConfirmButton = "DisableGiftConfirmButton"
-        }(N || (N = {})),
+        }(T || (T = {})),
         function(e) {
             e[e.Success = 0] = "Success", e[e.Error = 1] = "Error", e[e.InProgress = 2] = "InProgress", e[e.Unconfirmed = 3] = "Unconfirmed"
-        }(T || (T = {}));
+        }(N || (N = {}));
         var w, P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        requestStatus: T.Unconfirmed
+                        requestStatus: N.Unconfirmed
                     }, t.onConfirmDisableGift = function() {
                         return u.__awaiter(t, void 0, void 0, function() {
                             var e, t, n, i = this;
@@ -1294,7 +1362,7 @@ webpackJsonp([62], {
                                 switch (r.label) {
                                     case 0:
                                         e = this.props.currentUserID, t = this.props.originID, n = this.props.subscriptionProductID, this.setState({
-                                            requestStatus: T.InProgress
+                                            requestStatus: N.InProgress
                                         }), r.label = 1;
                                     case 1:
                                         return r.trys.push([1, 3, , 4]), [4, function(e, t, n) {
@@ -1326,13 +1394,13 @@ webpackJsonp([62], {
                                         }(e, t, n)];
                                     case 2:
                                         return r.sent(), this.setState({
-                                            requestStatus: T.Success
+                                            requestStatus: N.Success
                                         }, function() {
                                             i.props.onSuccess()
                                         }), [3, 4];
                                     case 3:
                                         return r.sent(), this.setState({
-                                            requestStatus: T.Error
+                                            requestStatus: N.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -1367,16 +1435,16 @@ webpackJsonp([62], {
                         state: this.getConfirmButtonState(),
                         type: S.B.Alert,
                         onClick: this.onConfirmDisableGift,
-                        "data-test-selector": N.ConfirmButton
+                        "data-test-selector": T.ConfirmButton
                     }, Object(d.d)("Disable Benefits", "DisableGiftModal"))), c.createElement(S.v, {
                         onClick: this.props.onCancel,
-                        "data-test-selector": N.CancelButton
+                        "data-test-selector": T.CancelButton
                     }, Object(d.d)("Cancel", "DisableGiftModal"))), c.createElement(O.a, {
                         closeOnBackdropClick: !0,
                         closeOnPageNavigation: !0
                     }))
                 }, t.prototype.renderErrorDisplay = function() {
-                    return this.state.requestStatus === T.Error ? c.createElement(S._35, {
+                    return this.state.requestStatus === N.Error ? c.createElement(S._35, {
                         borderTop: !0,
                         borderRight: !0,
                         borderBottom: !0,
@@ -1385,16 +1453,16 @@ webpackJsonp([62], {
                             top: 1
                         },
                         className: "disable-gift-modal__error",
-                        "data-test-selector": N.ErrorMessage
+                        "data-test-selector": T.ErrorMessage
                     }, c.createElement(S.Q, null, Object(d.d)("Something went wrong and your request could not be processed at this time. Please try again later.", "DisableGiftModal"))) : null
                 }, t.prototype.getConfirmButtonState = function() {
                     switch (this.state.requestStatus) {
-                        case T.InProgress:
+                        case N.InProgress:
                             return S.A.Loading;
-                        case T.Success:
+                        case N.Success:
                             return S.A.Success;
-                        case T.Unconfirmed:
-                        case T.Error:
+                        case N.Unconfirmed:
+                        case N.Error:
                         default:
                             return S.A.Default
                     }
@@ -1424,7 +1492,7 @@ webpackJsonp([62], {
                         t.props.currentUserID && t.props.subscription.user && t.props.subscription.product && t.props.subscription.originID && t.props.showDisableGiftModal({
                             onCancel: t.props.closeModal,
                             onSuccess: t.props.onDisableGiftSuccess,
-                            formattedChannelDisplayName: Object(_.a)(t.props.subscription.user.login, t.props.subscription.user.displayName),
+                            formattedChannelDisplayName: Object(y.a)(t.props.subscription.user.login, t.props.subscription.user.displayName),
                             currentUserID: t.props.currentUserID,
                             originID: t.props.subscription.originID,
                             subscriptionProductID: t.props.subscription.product.id
@@ -1619,7 +1687,8 @@ webpackJsonp([62], {
                         margin: {
                             bottom: 1
                         },
-                        display: S.R.Flex
+                        display: S.R.Flex,
+                        flexWrap: S.U.Wrap
                     }, c.createElement(S._2, {
                         margin: {
                             right: .5
@@ -1727,7 +1796,7 @@ webpackJsonp([62], {
         function(e) {
             e.TierDisplay = "TierDisplay", e.ExpiryMessage = "ExpiryMessage", e.PaidUpgradeMessage = "PaidUpgradeMessage", e.CancelPaidUpgradeButton = "CancelPaidUpgradeButton"
         }(q || (q = {}));
-        var J, X, K = function(e) {
+        var J, K, X = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1819,7 +1888,7 @@ webpackJsonp([62], {
                     var e, t, n = null,
                         i = "",
                         r = void 0;
-                    if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) n = this.props.subBenefit.user.bannerImageURL, e = Object(_.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), i = this.props.subBenefit.user.displayName, r = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
+                    if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) n = this.props.subBenefit.user.bannerImageURL, e = Object(y.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), i = this.props.subBenefit.user.displayName, r = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
                     else {
                         if (!this.isTurbo) return null;
                         i = e = Object(d.d)("Twitch Turbo", "SubscriptionCard"), r = "/settings/turbo", t = "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png"
@@ -1967,7 +2036,7 @@ webpackJsonp([62], {
                     if (this.props.subBenefit.gift && this.props.subBenefit.gift.isGift) {
                         var e = void 0;
                         return e = this.props.subBenefit.gift.gifter ? Object(d.d)("Gift Subscription from {sender}", {
-                            sender: Object(_.a)(this.props.subBenefit.gift.gifter.login, this.props.subBenefit.gift.gifter.displayName)
+                            sender: Object(y.a)(this.props.subBenefit.gift.gifter.login, this.props.subBenefit.gift.gifter.displayName)
                         }, "SubscriptionCard") : Object(d.d)("Gift Subscription", "SubscriptionCard"), c.createElement(S._8, {
                             display: S.R.Flex,
                             margin: {
@@ -2070,7 +2139,7 @@ webpackJsonp([62], {
             }(c.Component),
             Z = Object(g.compose)(Object(b.d)("SubscriptionCard", {
                 autoReportInteractive: !0
-            }))(K),
+            }))(X),
             ee = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -2098,11 +2167,11 @@ webpackJsonp([62], {
                             r.purchasedWithPrime ? (t = !0, e.unshift(s)) : e.push(s)
                         }
                     }
-                    return this.props.type === X.Paid && this.props.hasPrime && !t && e.unshift(c.createElement(y, {
+                    return this.props.type === K.Paid && this.props.hasPrime && !t && e.unshift(c.createElement(_, {
                         key: "prime-subscription-available"
                     })), e
                 }, t.prototype.filterSubType = function(e) {
-                    return !!e && (!(this.props.type !== X.Other || !e.product || "324" !== e.product.id) || !(this.props.type === X.Other || !e.user))
+                    return !!e && (!(this.props.type !== K.Other || !e.product || "324" !== e.product.id) || !(this.props.type === K.Other || !e.user))
                 }, t
             }(c.Component),
             te = Object(g.compose)(Object(b.d)("SubscriptionsManagementTower", {
@@ -2112,7 +2181,7 @@ webpackJsonp([62], {
         (J || (J = {})).EmptyMessage = "SubscriptionsEmptyMessage",
             function(e) {
                 e[e.Paid = 0] = "Paid", e[e.Gifts = 1] = "Gifts", e[e.Mobile = 2] = "Mobile", e[e.Other = 3] = "Other"
-            }(X || (X = {}));
+            }(K || (K = {}));
         var ie = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
@@ -2150,7 +2219,7 @@ webpackJsonp([62], {
                 }) : void 0
             }, t.prototype.renderEmptyMessage = function() {
                 var e = "";
-                return e = this.props.subscriptionType === X.Paid ? Object(d.d)("Any active subscriptions you purchase will show up here.", "SubscriptionsManagementTab") : this.props.subscriptionType === X.Gifts ? Object(d.d)("Any active gift subscriptions you have will show up here.", "SubscriptionsManagementTab") : Object(d.d)("Any other subscriptions you have will show up here.", "SubscriptionsManagementTab"), c.createElement(S._35, {
+                return e = this.props.subscriptionType === K.Paid ? Object(d.d)("Any active subscriptions you purchase will show up here.", "SubscriptionsManagementTab") : this.props.subscriptionType === K.Gifts ? Object(d.d)("Any active gift subscriptions you have will show up here.", "SubscriptionsManagementTab") : Object(d.d)("Any other subscriptions you have will show up here.", "SubscriptionsManagementTab"), c.createElement(S._35, {
                     display: S.R.Flex,
                     justifyContent: S._7.Center,
                     background: S.n.Base,
@@ -2161,7 +2230,7 @@ webpackJsonp([62], {
             }, t.prototype.getSubCount = function() {
                 var e = this;
                 return this.props.data.currentUser && this.props.data.currentUser.subscriptionBenefits && this.props.data.currentUser.subscriptionBenefits.edges ? this.props.data.currentUser.subscriptionBenefits.edges.reduce(function(t, n) {
-                    return e.props.subscriptionType !== X.Other && n.node && n.node.user ? ++t : e.props.subscriptionType === X.Other && n.node && !n.node.user && n.node.product && "324" === n.node.product.id ? ++t : t
+                    return e.props.subscriptionType !== K.Other && n.node && n.node.user ? ++t : e.props.subscriptionType === K.Other && n.node && !n.node.user && n.node.product && "324" === n.node.product.id ? ++t : t
                 }, 0) : 0
             }, t.prototype.getTurboBadge = function() {
                 var e = void 0;
@@ -2177,22 +2246,22 @@ webpackJsonp([62], {
 
         function re(e) {
             switch (e) {
-                case X.Gifts:
+                case K.Gifts:
                     return {
                         filter: "GIFT",
                         platform: "WEB"
                     };
-                case X.Mobile:
+                case K.Mobile:
                     return {
                         filter: "PLATFORM",
                         platform: "ANDROID"
                     };
-                case X.Other:
+                case K.Other:
                     return {
                         filter: "ALL",
                         platform: "WEB"
                     };
-                case X.Paid:
+                case K.Paid:
                 default:
                     return {
                         filter: "PLATFORM",
@@ -2324,14 +2393,14 @@ webpackJsonp([62], {
                     var e, t, n;
                     switch (this.state.currentTab) {
                         case ae.Gifts:
-                            e = X.Gifts, t = se.GiftsTab, n = this.updateGiftSubCount;
+                            e = K.Gifts, t = se.GiftsTab, n = this.updateGiftSubCount;
                             break;
                         case ae.Other:
-                            e = X.Other, t = se.OtherTab, n = this.updateOtherSubCount;
+                            e = K.Other, t = se.OtherTab, n = this.updateOtherSubCount;
                             break;
                         case ae.Paid:
                         default:
-                            t = se.PaidTab, e = X.Paid, n = this.updateWebSubCount
+                            t = se.PaidTab, e = K.Paid, n = this.updateWebSubCount
                     }
                     return c.createElement(S._8, {
                         margin: {
@@ -2460,4 +2529,4 @@ webpackJsonp([62], {
         })
     }
 });
-//# sourceMappingURL=pages.subscriptions-management-6598cd7679791ef22166ccc8b4656f75.js.map
+//# sourceMappingURL=pages.subscriptions-management-4237b3e7442db31d09264496590c761f.js.map

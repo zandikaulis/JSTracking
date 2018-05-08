@@ -1,4 +1,4 @@
-webpackJsonp([102], {
+webpackJsonp([103], {
     "+V/3": function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
@@ -5831,7 +5831,6 @@ webpackJsonp([102], {
                     });
                 return o.push(n), kt.createElement("span", {
                     key: t.id,
-                    className: "qa-mod-message",
                     style: {
                         color: e.allowActionTextColors && t.isAction ? t.userColor : ""
                     }
@@ -10005,4 +10004,4 @@ webpackJsonp([102], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-moderation-9b90ff869e01309123d23e60769029f1.js.map
+//# sourceMappingURL=pages.dashboard-moderation-7fb547a356327edb8d8a4c81e2e22355.js.map

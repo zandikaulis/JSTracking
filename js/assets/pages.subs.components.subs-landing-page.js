@@ -1,4 +1,4 @@
-webpackJsonp([114], {
+webpackJsonp([115], {
     "1KsR": function(e, t) {},
     "2oK2": function(e, t) {
         var n = {
@@ -241,22 +241,22 @@ webpackJsonp([114], {
     XFEc: function(e, t, n) {
         "use strict";
         t.a = function(e) {
-            return s.__awaiter(this, void 0, void 0, function() {
+            return r.__awaiter(this, void 0, void 0, function() {
                 var t;
-                return s.__generator(this, function(n) {
+                return r.__generator(this, function(n) {
                     return t = {
                         login: e.login,
                         user_id: Number(e.userId),
                         channel: e.channel,
                         channel_id: e.channelId,
                         clickthrough_location: e.clickthroughLocation
-                    }, r.n.track(a.SpadeEventType.SubsLandingStreamerClick, t), [2]
+                    }, s.n.track(a.SpadeEventType.SubsLandingStreamerClick, t), [2]
                 })
             })
         }, t.b = function(e) {
-            return s.__awaiter(this, void 0, void 0, function() {
+            return r.__awaiter(this, void 0, void 0, function() {
                 var t, n;
-                return s.__generator(this, function(s) {
+                return r.__generator(this, function(r) {
                     if (t = null, e.isSubscribedCurrentTier) switch (e.isSubscribedCurrentTier) {
                         case "1000":
                             t = "$4.99";
@@ -288,21 +288,89 @@ webpackJsonp([114], {
                         vod_type: "",
                         viewport_height: window.innerHeight,
                         viewport_width: window.innerWidth
-                    }, r.n.track(a.SpadeEventType.Subscription, n), [2]
+                    }, s.n.track(a.SpadeEventType.Subscription, n), [2]
                 })
             })
         };
-        var s = n("TToO"),
-            r = n("6sO2"),
+        var r = n("TToO"),
+            s = n("6sO2"),
             a = n("vH/s")
+    },
+    "j7/Y": function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            s = n("OAwv"),
+            a = n("GiK3"),
+            i = n("F8kA"),
+            o = n("6sO2");
+
+        function l(e) {
+            return function(t) {
+                var n = function(n) {
+                    function i(t) {
+                        var s = n.call(this, t) || this;
+                        return s.tracked = !1, s.referenceTracking = {}, s.trackPageview = function() {
+                            if (!(s.tracked || e.skip && e.skip(s.props))) {
+                                s.tracked = !0;
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(s.props) : e.properties && (t = r.__assign({}, e.properties));
+                                var n = r.__assign({}, s.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var a = s.referenceTracking,
+                                    i = a.content,
+                                    l = a.medium,
+                                    c = a.content_index;
+                                o.o.tracking.trackPageview(r.__assign({
+                                    content: i,
+                                    medium: l,
+                                    content_index: c,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, o.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), s
+                    }
+                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, i.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, i.prototype.render = function() {
+                        return a.createElement(t, r.__assign({}, this.props))
+                    }, i.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? s.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var r = "",
+                                a = s.stringify(t);
+                            a.length > 0 && (r = "?" + a), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: r
+                            })
+                        }
+                        return n
+                    }, i
+                }(a.Component);
+                return Object(i.f)(n)
+            }
+        }
+        n.d(t, "a", function() {
+            return l
+        })
     },
     "kd/b": function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var s = n("RH2O"),
-            r = n("TToO"),
+        var r = n("RH2O"),
+            s = n("TToO"),
             a = n("GiK3"),
             i = n("6sO2"),
             o = n("tKQv"),
@@ -317,10 +385,10 @@ webpackJsonp([114], {
             f = n("2KeS"),
             _ = n("+xm8"),
             b = n("f2i/"),
-            S = n("Aj/L"),
-            k = n("7vx8"),
-            v = n("oIkB"),
-            y = n("F8kA"),
+            k = n("Aj/L"),
+            v = n("7vx8"),
+            y = n("oIkB"),
+            S = n("F8kA"),
             w = n("Odds"),
             E = (n("1KsR"), function(e) {
                 function t() {
@@ -329,11 +397,11 @@ webpackJsonp([114], {
                         t.props.onClick(t.props.followedChannel.id, t.props.followedChannel.login)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.followedChannel.profileImageURL;
-                    return e || (e = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png"), a.createElement(y.a, {
+                    return e || (e = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png"), a.createElement(S.a, {
                         className: "followed-channel-link",
                         to: "/subs/" + this.props.followedChannel.login,
                         onClick: this.handleClick
@@ -361,7 +429,7 @@ webpackJsonp([114], {
                         ellipsis: !0,
                         noWrap: !0
                     }, this.props.followedChannel.displayName))))
-                }, t = r.__decorate([Object(h.d)("FollowedChannelLink")], t)
+                }, t = s.__decorate([Object(h.d)("FollowedChannelLink")], t)
             }(a.Component)),
             C = n("XFEc"),
             N = n("2oK2"),
@@ -415,7 +483,7 @@ webpackJsonp([114], {
                         if (!t.props.data.loading && !t.props.data.error && t.props.data.currentUser.follows && t.props.data.currentUser.follows.pageInfo.hasNextPage) return t.props.loadMore()
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     if (e.data.currentUser && e.data.currentUser.follows) {
                         var t = (e.data.currentUser.follows.edges || []).map(function(e) {
                             return e.node
@@ -453,7 +521,7 @@ webpackJsonp([114], {
                         onClick: this.onLoginClick,
                         "data-a-target": "login-button"
                     }, this.messages.login), a.createElement(w.Q, null, this.messages.loginTitle))
-                }, t = r.__decorate([Object(k.a)(N, {
+                }, t = s.__decorate([Object(v.a)(N, {
                     options: function() {
                         return {
                             variables: {
@@ -463,20 +531,20 @@ webpackJsonp([114], {
                         }
                     },
                     props: function(e) {
-                        return r.__assign({}, e, {
+                        return s.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
                                     query: N,
-                                    variables: r.__assign({}, e.data.variables, {
+                                    variables: s.__assign({}, e.data.variables, {
                                         cursor: e.data.currentUser.follows ? e.data.currentUser.follows.edges[e.data.currentUser.follows.edges.length - 1].cursor : ""
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
-                                            s = [];
-                                        return e.currentUser.follows && n.currentUser.follows ? s = Object(v.c)(e.currentUser.follows.edges, n.currentUser.follows.edges) : !e.currentUser.follows && n.currentUser.follows ? s = n.currentUser.follows.edges : e.currentUser.follows && !n.currentUser.follows && (s = e.currentUser.follows.edges), {
-                                            currentUser: r.__assign({}, n.currentUser, {
-                                                follows: r.__assign({}, n.currentUser.follows, {
-                                                    edges: s
+                                            r = [];
+                                        return e.currentUser.follows && n.currentUser.follows ? r = Object(y.c)(e.currentUser.follows.edges, n.currentUser.follows.edges) : !e.currentUser.follows && n.currentUser.follows ? r = n.currentUser.follows.edges : e.currentUser.follows && !n.currentUser.follows && (r = e.currentUser.follows.edges), {
+                                            currentUser: s.__assign({}, n.currentUser, {
+                                                follows: s.__assign({}, n.currentUser.follows, {
+                                                    edges: r
                                                 })
                                             })
                                         }
@@ -487,9 +555,9 @@ webpackJsonp([114], {
                     }
                 })], t)
             }(a.Component));
-        var x = Object(s.b)(function(e) {
+        var x = Object(r.b)(function(e) {
                 return {
-                    isLoggedIn: Object(S.d)(e)
+                    isLoggedIn: Object(k.d)(e)
                 }
             }, function(e) {
                 return Object(f.b)({
@@ -498,13 +566,13 @@ webpackJsonp([114], {
                     }
                 }, e)
             })(O),
-            F = n("6BvN"),
-            I = n("HM6l"),
-            R = n("5LoI"),
-            L = n("MAZT"),
-            j = n("uTyw"),
-            U = n("rCmJ"),
-            T = n("SZoP"),
+            T = n("6BvN"),
+            F = n("HM6l"),
+            L = n("5LoI"),
+            j = n("MAZT"),
+            I = n("uTyw"),
+            R = n("rCmJ"),
+            U = n("SZoP"),
             P = (n("np4D"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -516,7 +584,7 @@ webpackJsonp([114], {
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return s.__extends(t, e), t.prototype.render = function() {
                     var e;
                     return e = this.props.isWaiting ? a.createElement(w._10, {
                         fillContent: !0
@@ -550,7 +618,7 @@ webpackJsonp([114], {
                     var e = this;
                     if (!this.props.streamerResults) return a.createElement(w._8, null);
                     var t = this.props.streamerResults.results.map(function(t) {
-                        var n = Object(T.a)(t.login || "", t.name || "");
+                        var n = Object(U.a)(t.login || "", t.name || "");
                         return a.createElement(w._6, {
                             linkTo: "/subs/" + t.login,
                             tabIndex: -1,
@@ -600,7 +668,7 @@ webpackJsonp([114], {
                         t.props.onChange(e.target.value)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return s.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(w._8, {
                         margin: {
                             top: 2
@@ -614,7 +682,7 @@ webpackJsonp([114], {
                         position: w._15.Relative
                     }, a.createElement("div", {
                         className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
-                    }, a.createElement(U.a, {
+                    }, a.createElement(R.a, {
                         onClickOut: this.props.onClickOut
                     }, a.createElement(w._27, {
                         onChange: this.handleChange,
@@ -639,7 +707,7 @@ webpackJsonp([114], {
                 }, t
             }(a.Component),
             K = 50;
-        var W = function(e) {
+        var A = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onChange = function(e) {
@@ -657,9 +725,9 @@ webpackJsonp([114], {
                             isOpen: !0
                         })
                     }, n.onKeyDown = function(e) {
-                        n.state.term && (e.keyCode === F.a.Esc ? n.setState({
+                        n.state.term && (e.keyCode === T.a.Esc ? n.setState({
                             isOpen: !1
-                        }) : e.keyCode === F.a.Up ? n.focusNext(-1) : e.keyCode === F.a.Down && n.focusNext(1))
+                        }) : e.keyCode === T.a.Up ? n.focusNext(-1) : e.keyCode === T.a.Down && n.focusNext(1))
                     }, n.onResultSelected = function(e) {
                         n.setState({
                             isOpen: !1
@@ -673,45 +741,45 @@ webpackJsonp([114], {
                         }, e);
                         Object(C.a)(t)
                     }, n.loadMore = function() {
-                        return r.__awaiter(n, void 0, void 0, function() {
-                            var e, t, n, s;
-                            return r.__generator(this, function(a) {
+                        return s.__awaiter(n, void 0, void 0, function() {
+                            var e, t, n, r;
+                            return s.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         if (this.state.queryID || !0 === this.state.exhaustedHits) return [2];
                                         e = this.state.currentPage + 1, a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(R.a.Users, this.state.term, "", {
+                                        return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(L.a.Users, this.state.term, "", {
                                             page: e,
                                             facetFilters: "has_subscription_products:true"
                                         })];
                                     case 2:
                                         return t = a.sent(), [3, 4];
                                     case 3:
-                                        return n = a.sent(), i.j.error(n, "Algolia page search failed"), this.setState(r.__assign({}, this.getEmptyState(), {
+                                        return n = a.sent(), i.j.error(n, "Algolia page search failed"), this.setState(s.__assign({}, this.getEmptyState(), {
                                             isErrored: !0,
                                             isOpen: !0
                                         })), [2];
                                     case 4:
-                                        return t ? (s = Object(j.b)({
+                                        return t ? (r = Object(I.b)({
                                             searchResults: t,
                                             append: e > 0,
                                             currentUserResults: this.state.currentUserResults
                                         }), this.setState({
-                                            currentUserResults: s.currentUserResults,
+                                            currentUserResults: r.currentUserResults,
                                             term: this.state.term,
                                             isOpen: !0,
                                             isWaiting: !1,
                                             currentPage: e,
-                                            exhaustedHits: s.exhaustedHits
-                                        }), [2]) : (this.setState(r.__assign({}, this.getEmptyState(), {
+                                            exhaustedHits: r.exhaustedHits
+                                        }), [2]) : (this.setState(s.__assign({}, this.getEmptyState(), {
                                             isErrored: !0,
                                             isOpen: !0
                                         })), [2])
                                 }
                             })
                         })
-                    }, n.state = n.getEmptyState(), n.searchClient = new L.a({
+                    }, n.state = n.getEmptyState(), n.searchClient = new j.a({
                         appId: i.a.algoliaApplicationID,
                         apiKey: i.a.algoliaAPIKey,
                         apolloClient: i.o.apollo.client,
@@ -719,7 +787,7 @@ webpackJsonp([114], {
                         config: i.a
                     }), n
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     return a.createElement(M, {
@@ -736,9 +804,9 @@ webpackJsonp([114], {
                     })
                 }, t.prototype.focusNext = function(e) {
                     var t, n = document.querySelectorAll("[data-ts_selectable=true]"),
-                        s = document.activeElement,
-                        r = Array.prototype.indexOf.call(n, s);
-                    if ((t = r < 0 ? e > 0 ? 0 : n.length - 1 : r + e) < 0 && (t = 0), !(t >= n.length)) {
+                        r = document.activeElement,
+                        s = Array.prototype.indexOf.call(n, r);
+                    if ((t = s < 0 ? e > 0 ? 0 : n.length - 1 : s + e) < 0 && (t = 0), !(t >= n.length)) {
                         var a = n.item(t);
                         a.focus(), a.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
                             currentFocus: a
@@ -760,40 +828,40 @@ webpackJsonp([114], {
                         exhaustedHits: !1
                     }
                 }, t.prototype.doSearch = function(e) {
-                    return r.__awaiter(this, void 0, void 0, function() {
-                        var t, n, s, a, o, l;
-                        return r.__generator(this, function(c) {
+                    return s.__awaiter(this, void 0, void 0, function() {
+                        var t, n, r, a, o, l;
+                        return s.__generator(this, function(c) {
                             switch (c.label) {
                                 case 0:
-                                    this.inputTimer = 0, t = -1, n = I.a(), s = "INPUT" === document.activeElement.tagName, this.setState({
+                                    this.inputTimer = 0, t = -1, n = F.a(), r = "INPUT" === document.activeElement.tagName, this.setState({
                                         queryID: n,
-                                        focusSelectable: !s && !!this.state.currentFocus
+                                        focusSelectable: !r && !!this.state.currentFocus
                                     }), c.label = 1;
                                 case 1:
-                                    return c.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(R.a.Users, e, n, {
+                                    return c.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(L.a.Users, e, n, {
                                         facetFilters: "has_subscription_products:true"
                                     })];
                                 case 2:
                                     return a = c.sent(), [3, 4];
                                 case 3:
-                                    return o = c.sent(), i.j.error(o, "Algolia top results search failed"), this.setState(r.__assign({}, this.getEmptyState(), {
+                                    return o = c.sent(), i.j.error(o, "Algolia top results search failed"), this.setState(s.__assign({}, this.getEmptyState(), {
                                         isErrored: !0,
                                         isOpen: !0,
                                         term: e
                                     })), [2];
                                 case 4:
-                                    return a ? this.state.queryID !== a.id ? [2] : (l = Object(j.b)({
+                                    return a ? this.state.queryID !== a.id ? [2] : (l = Object(I.b)({
                                         searchResults: a,
                                         append: !1
                                     }), this.setState(function(n) {
-                                        return r.__assign({}, n, l, {
+                                        return s.__assign({}, n, l, {
                                             queryID: "",
                                             term: e,
                                             isOpen: !0,
                                             isWaiting: !1,
                                             currentPage: t
                                         })
-                                    }), [2]) : (this.setState(r.__assign({}, this.getEmptyState(), {
+                                    }), [2]) : (this.setState(s.__assign({}, this.getEmptyState(), {
                                         isErrored: !0,
                                         isOpen: !0,
                                         term: e
@@ -801,14 +869,14 @@ webpackJsonp([114], {
                             }
                         })
                     })
-                }, t = r.__decorate([Object(h.d)("StreamerSearch")], t)
+                }, t = s.__decorate([Object(h.d)("StreamerSearch")], t)
             }(a.Component),
-            H = Object(s.b)(function(e) {
+            W = Object(r.b)(function(e) {
                 return {
-                    user: Object(S.c)(e)
+                    user: Object(k.c)(e)
                 }
-            })(W),
-            z = (n("rbRz"), function(e) {
+            })(A),
+            H = (n("rbRz"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.messages = {
@@ -822,7 +890,7 @@ webpackJsonp([114], {
                         emotesInfo: Object(i.d)("Subscribing to a streamer unlocks custom emotes, usable on any channel on Twitch. The more subs a streamer has, the more custom emotes slots will be unlocked, so more support equals more rewards for everyone.", "SubsLandingPage")
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), i.o.setPageTitle("Subscriptions")
                 }, t.prototype.render = function() {
                     return a.createElement(w._8, {
@@ -884,7 +952,7 @@ webpackJsonp([114], {
                     }, a.createElement(w.Q, {
                         type: w._49.P,
                         fontSize: w.V.Size5
-                    }, this.messages.searchInfo)), a.createElement(H, null), a.createElement(x, null), a.createElement(w._8, {
+                    }, this.messages.searchInfo)), a.createElement(W, null), a.createElement(x, null), a.createElement(w._8, {
                         className: "subs-landing-page-contents__section",
                         display: w.R.Flex,
                         justifyContent: w._7.Center,
@@ -966,15 +1034,15 @@ webpackJsonp([114], {
                         type: w._49.P,
                         fontSize: w.V.Size5
                     }, this.messages.emotesInfo)))))))))
-                }, t = r.__decorate([Object(h.d)("SubsLandingPage", {
+                }, t = s.__decorate([Object(h.d)("SubsLandingPage", {
                     destination: m.a.SubsLandingPage
                 }), Object(p.a)({
                     location: g.PageviewLocation.SubsLandingPage
                 })], t)
             }(a.Component)),
-            A = Object(s.b)()(z);
+            z = Object(r.b)()(H);
         n.d(t, "SubsLandingPage", function() {
-            return A
+            return z
         })
     },
     np4D: function(e, t) {},
@@ -984,4 +1052,4 @@ webpackJsonp([114], {
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-ece0ad336f55d53c8d7923a525fd2085.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-6fba9d02d9479e5c5664b7c9113eb4e8.js.map

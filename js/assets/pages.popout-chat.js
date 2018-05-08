@@ -2297,16 +2297,13 @@ webpackJsonp([34], {
             ne = (n("W266"), "nativeBroadcastNotifDismissed"),
             ie = [{
                 title: "English",
-                login: "esamarathon"
+                login: "RPGLimitBreak"
             }, {
                 title: "Français",
                 login: "LeFrenchRestream"
             }, {
-                title: "Deutsch",
-                login: "GermenchRestream"
-            }, {
-                title: "Русский",
-                login: "SpeedrunsRussia"
+                title: "日本語",
+                login: "japanese_restream"
             }],
             ae = function(e) {
                 function t() {
@@ -2349,7 +2346,7 @@ webpackJsonp([34], {
                     if (!this.isEventChannel(this.props.channelLogin)) return null;
                     if (this.hasDismissedForChannel(this.props.channelLogin)) return null;
                     var e = Date.now();
-                    if (e < 15191352e5 || e >= 15195132e5) return null;
+                    if (e < 15262344e5 || e >= 15268212e5) return null;
                     var t = this.getChannelLinks();
                     return t.length ? s.createElement(j._35, {
                         attachLeft: !0,
@@ -2365,13 +2362,13 @@ webpackJsonp([34], {
                         }
                     }, s.createElement(j.Q, {
                         type: j._49.H4
-                    }, Object(u.d)("ESA Winter 2018", "NativeBroadcastNotification"))), s.createElement(j._8, {
+                    }, Object(u.d)("RPG Limit Break 2018", "NativeBroadcastNotification"))), s.createElement(j._8, {
                         margin: {
                             bottom: 1
                         }
                     }, s.createElement(j.Q, {
                         color: j.K.OverlayAlt
-                    }, Object(u.d)("Want to watch ESA in you local language? Try one of these international broadcasts!", "NativeBroadcastNotification"))), s.createElement("ul", null, t), s.createElement(j._8, {
+                    }, Object(u.d)("Want to watch RPGLB in your local language? Try one of these international broadcasts!", "NativeBroadcastNotification"))), s.createElement("ul", null, t), s.createElement(j._8, {
                         attachRight: !0,
                         attachTop: !0,
                         margin: 1,
@@ -2399,7 +2396,7 @@ webpackJsonp([34], {
                     }).includes(e.toLowerCase())
                 }, t.prototype.hasDismissedForChannel = function(e) {
                     var t = u.l.get(ne, {})[e.toLowerCase()];
-                    return !!t && t >= 15191352e5
+                    return !!t && t >= 15262344e5
                 }, t
             }(s.Component),
             re = n("+Znq"),
@@ -4516,8 +4513,7 @@ webpackJsonp([34], {
                             }).reduce(function(n, i, a, r) {
                                 if (t.notificationsFor(i).forEach(function(e) {
                                         n.push(e)
-                                    }), n.push(i), 0 == --e && n.push(t.createNewMessagesIndicator()), 0 === a);
-                                else if (a < r.length - 1) {
+                                    }), n.push(i), 0 == --e && n.push(t.createNewMessagesIndicator()), a < r.length - 1) {
                                     var o = r[a + 1];
                                     !i.deletedAt && t.shouldAddTimestamp(i, o) && n.push(t.createTimestampMessage(i))
                                 }
@@ -34129,7 +34125,7 @@ webpackJsonp([34], {
                     return this.props.data.error ? null : this.getContent()
                 }, t.prototype.renderIgnoreButton = function() {
                     var e = this.props.data.currentUser;
-                    return this.props.isEmbedded || e && e.login === this.props.targetLogin ? null : h.createElement(y._8, {
+                    return !this.props.isEmbedded && e && this.props.data.targetUser && e.login !== this.props.targetLogin ? h.createElement(y._8, {
                         key: "Ignore",
                         position: y._15.Absolute,
                         attachRight: !0,
@@ -34142,7 +34138,7 @@ webpackJsonp([34], {
                         targetDisplayName: this.props.data.targetUser.displayName,
                         targetLogin: this.props.targetLogin,
                         sendMessageToTMI: this.props.sendMessageToTMI
-                    }))
+                    })) : null
                 }, t.prototype.renderHideButton = function() {
                     return h.createElement(y._8, {
                         className: "viewer-card__hide",
@@ -45911,4 +45907,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-cdb114df61f1a89f9417e274d3fbf925.js.map
+//# sourceMappingURL=pages.popout-chat-b23f31528be12f978446e581b283729b.js.map

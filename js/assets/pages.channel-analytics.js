@@ -1,4 +1,4 @@
-webpackJsonp([92], {
+webpackJsonp([93], {
     "+27R": function(e, t, a) {
         (function(e) {
             "use strict";
@@ -2333,23 +2333,23 @@ webpackJsonp([92], {
                     referrals: h.items.slice(0, 3),
                     totals: h.totals,
                     translationFunc: i.b,
-                    title: Object(r.d)("Twitch", "ChannelAnalyticsReferralPanel")
+                    title: Object(r.d)("Twitch", "DashboardReferralPanel")
                 }), n.createElement(c.a, {
                     referrals: p.items.slice(0, 3),
                     totals: p.totals,
                     translationFunc: _,
-                    title: Object(r.d)("Channels", "ChannelAnalyticsReferralPanel")
+                    title: Object(r.d)("Channels", "DashboardReferralPanel")
                 }), n.createElement(c.a, {
                     referrals: g.items.slice(0, 3),
                     totals: g.totals,
                     translationFunc: i.a,
-                    title: Object(r.d)("External", "ChannelAnalyticsReferralPanel")
+                    title: Object(r.d)("External", "DashboardReferralPanel")
                 })), n.createElement(d.a, {
                     onClick: f,
-                    message: Object(r.d)("View details", "ChannelAnalyticsReferralPanel"),
+                    message: Object(r.d)("View details", "DashboardReferralPanel"),
                     linkTo: o
                 }))), n.createElement(l.a, {
-                    title: Object(r.d)("Where did my views come from?", "ChannelAnalyticsReferralPanel")
+                    title: Object(r.d)("Where did my views come from?", "DashboardReferralPanel")
                 }, y)
             };
 
@@ -2664,159 +2664,6 @@ webpackJsonp([92], {
                     this.chart = e
                 }
             })
-        }
-    },
-    "72Lu": function(e, t, a) {
-        "use strict";
-        e.exports = {
-            aliceblue: [240, 248, 255],
-            antiquewhite: [250, 235, 215],
-            aqua: [0, 255, 255],
-            aquamarine: [127, 255, 212],
-            azure: [240, 255, 255],
-            beige: [245, 245, 220],
-            bisque: [255, 228, 196],
-            black: [0, 0, 0],
-            blanchedalmond: [255, 235, 205],
-            blue: [0, 0, 255],
-            blueviolet: [138, 43, 226],
-            brown: [165, 42, 42],
-            burlywood: [222, 184, 135],
-            cadetblue: [95, 158, 160],
-            chartreuse: [127, 255, 0],
-            chocolate: [210, 105, 30],
-            coral: [255, 127, 80],
-            cornflowerblue: [100, 149, 237],
-            cornsilk: [255, 248, 220],
-            crimson: [220, 20, 60],
-            cyan: [0, 255, 255],
-            darkblue: [0, 0, 139],
-            darkcyan: [0, 139, 139],
-            darkgoldenrod: [184, 134, 11],
-            darkgray: [169, 169, 169],
-            darkgreen: [0, 100, 0],
-            darkgrey: [169, 169, 169],
-            darkkhaki: [189, 183, 107],
-            darkmagenta: [139, 0, 139],
-            darkolivegreen: [85, 107, 47],
-            darkorange: [255, 140, 0],
-            darkorchid: [153, 50, 204],
-            darkred: [139, 0, 0],
-            darksalmon: [233, 150, 122],
-            darkseagreen: [143, 188, 143],
-            darkslateblue: [72, 61, 139],
-            darkslategray: [47, 79, 79],
-            darkslategrey: [47, 79, 79],
-            darkturquoise: [0, 206, 209],
-            darkviolet: [148, 0, 211],
-            deeppink: [255, 20, 147],
-            deepskyblue: [0, 191, 255],
-            dimgray: [105, 105, 105],
-            dimgrey: [105, 105, 105],
-            dodgerblue: [30, 144, 255],
-            firebrick: [178, 34, 34],
-            floralwhite: [255, 250, 240],
-            forestgreen: [34, 139, 34],
-            fuchsia: [255, 0, 255],
-            gainsboro: [220, 220, 220],
-            ghostwhite: [248, 248, 255],
-            gold: [255, 215, 0],
-            goldenrod: [218, 165, 32],
-            gray: [128, 128, 128],
-            green: [0, 128, 0],
-            greenyellow: [173, 255, 47],
-            grey: [128, 128, 128],
-            honeydew: [240, 255, 240],
-            hotpink: [255, 105, 180],
-            indianred: [205, 92, 92],
-            indigo: [75, 0, 130],
-            ivory: [255, 255, 240],
-            khaki: [240, 230, 140],
-            lavender: [230, 230, 250],
-            lavenderblush: [255, 240, 245],
-            lawngreen: [124, 252, 0],
-            lemonchiffon: [255, 250, 205],
-            lightblue: [173, 216, 230],
-            lightcoral: [240, 128, 128],
-            lightcyan: [224, 255, 255],
-            lightgoldenrodyellow: [250, 250, 210],
-            lightgray: [211, 211, 211],
-            lightgreen: [144, 238, 144],
-            lightgrey: [211, 211, 211],
-            lightpink: [255, 182, 193],
-            lightsalmon: [255, 160, 122],
-            lightseagreen: [32, 178, 170],
-            lightskyblue: [135, 206, 250],
-            lightslategray: [119, 136, 153],
-            lightslategrey: [119, 136, 153],
-            lightsteelblue: [176, 196, 222],
-            lightyellow: [255, 255, 224],
-            lime: [0, 255, 0],
-            limegreen: [50, 205, 50],
-            linen: [250, 240, 230],
-            magenta: [255, 0, 255],
-            maroon: [128, 0, 0],
-            mediumaquamarine: [102, 205, 170],
-            mediumblue: [0, 0, 205],
-            mediumorchid: [186, 85, 211],
-            mediumpurple: [147, 112, 219],
-            mediumseagreen: [60, 179, 113],
-            mediumslateblue: [123, 104, 238],
-            mediumspringgreen: [0, 250, 154],
-            mediumturquoise: [72, 209, 204],
-            mediumvioletred: [199, 21, 133],
-            midnightblue: [25, 25, 112],
-            mintcream: [245, 255, 250],
-            mistyrose: [255, 228, 225],
-            moccasin: [255, 228, 181],
-            navajowhite: [255, 222, 173],
-            navy: [0, 0, 128],
-            oldlace: [253, 245, 230],
-            olive: [128, 128, 0],
-            olivedrab: [107, 142, 35],
-            orange: [255, 165, 0],
-            orangered: [255, 69, 0],
-            orchid: [218, 112, 214],
-            palegoldenrod: [238, 232, 170],
-            palegreen: [152, 251, 152],
-            paleturquoise: [175, 238, 238],
-            palevioletred: [219, 112, 147],
-            papayawhip: [255, 239, 213],
-            peachpuff: [255, 218, 185],
-            peru: [205, 133, 63],
-            pink: [255, 192, 203],
-            plum: [221, 160, 221],
-            powderblue: [176, 224, 230],
-            purple: [128, 0, 128],
-            rebeccapurple: [102, 51, 153],
-            red: [255, 0, 0],
-            rosybrown: [188, 143, 143],
-            royalblue: [65, 105, 225],
-            saddlebrown: [139, 69, 19],
-            salmon: [250, 128, 114],
-            sandybrown: [244, 164, 96],
-            seagreen: [46, 139, 87],
-            seashell: [255, 245, 238],
-            sienna: [160, 82, 45],
-            silver: [192, 192, 192],
-            skyblue: [135, 206, 235],
-            slateblue: [106, 90, 205],
-            slategray: [112, 128, 144],
-            slategrey: [112, 128, 144],
-            snow: [255, 250, 250],
-            springgreen: [0, 255, 127],
-            steelblue: [70, 130, 180],
-            tan: [210, 180, 140],
-            teal: [0, 128, 128],
-            thistle: [216, 191, 216],
-            tomato: [255, 99, 71],
-            turquoise: [64, 224, 208],
-            violet: [238, 130, 238],
-            wheat: [245, 222, 179],
-            white: [255, 255, 255],
-            whitesmoke: [245, 245, 245],
-            yellow: [255, 255, 0],
-            yellowgreen: [154, 205, 50]
         }
     },
     "7LV+": function(e, t, a) {
@@ -7257,18 +7104,18 @@ webpackJsonp([92], {
                 };
                 var P = {};
 
-                function A(e, t) {
+                function H(e, t) {
                     var a = e.toLowerCase();
                     P[a] = P[a + "s"] = P[t] = e
                 }
 
-                function H(e) {
+                function A(e) {
                     return "string" == typeof e ? P[e] || P[e.toLowerCase()] : void 0
                 }
 
                 function E(e) {
                     var t, a, n = {};
-                    for (a in e) u(e, a) && (t = H(a)) && (n[t] = e[a]);
+                    for (a in e) u(e, a) && (t = A(a)) && (n[t] = e[a]);
                     return n
                 }
                 var F = {};
@@ -7409,7 +7256,7 @@ webpackJsonp([92], {
                     return this.localeData().monthsShort(this, e)
                 }), G("MMMM", 0, 0, function(e) {
                     return this.localeData().months(this, e)
-                }), A("month", "M"), R("month", 8), he("M", te), he("MM", te, X), he("MMM", function(e, t) {
+                }), H("month", "M"), R("month", 8), he("M", te), he("MM", te, X), he("MMM", function(e, t) {
                     return t.monthsShortRegex(e)
                 }), he("MMMM", function(e, t) {
                     return t.monthsRegex(e)
@@ -7423,7 +7270,7 @@ webpackJsonp([92], {
                     Oe = "January_February_March_April_May_June_July_August_September_October_November_December".split("_");
                 var Pe = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_");
 
-                function Ae(e, t) {
+                function He(e, t) {
                     var a;
                     if (!e.isValid()) return e;
                     if ("string" == typeof t)
@@ -7432,8 +7279,8 @@ webpackJsonp([92], {
                     return a = Math.min(e.date(), Ce(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, a), e
                 }
 
-                function He(e) {
-                    return null != e ? (Ae(this, e), n.updateOffset(this, !0), this) : I(this, "Month")
+                function Ae(e) {
+                    return null != e ? (He(this, e), n.updateOffset(this, !0), this) : I(this, "Month")
                 }
                 var Ee = ce;
                 var Fe = ce;
@@ -7463,7 +7310,7 @@ webpackJsonp([92], {
                     return e <= 9999 ? "" + e : "+" + e
                 }), G(0, ["YY", 2], 0, function() {
                     return this.year() % 100
-                }), G(0, ["YYYY", 4], 0, "year"), G(0, ["YYYYY", 5], 0, "year"), G(0, ["YYYYYY", 6, !0], 0, "year"), A("year", "y"), R("year", 1), he("Y", le), he("YY", te, X), he("YYYY", ie, $), he("YYYYY", se, ee), he("YYYYYY", se, ee), ge(["YYYYY", "YYYYYY"], be), ge("YYYY", function(e, t) {
+                }), G(0, ["YYYY", 4], 0, "year"), G(0, ["YYYYY", 5], 0, "year"), G(0, ["YYYYYY", 6, !0], 0, "year"), H("year", "y"), R("year", 1), he("Y", le), he("YY", te, X), he("YYYY", ie, $), he("YYYYY", se, ee), he("YYYYYY", se, ee), ge(["YYYYY", "YYYYYY"], be), ge("YYYY", function(e, t) {
                     t[be] = 2 === e.length ? n.parseTwoDigitYear(e) : k(e)
                 }), ge("YY", function(e, t) {
                     t[be] = n.parseTwoDigitYear(e)
@@ -7506,7 +7353,7 @@ webpackJsonp([92], {
                         r = Ve(e + 1, t, a);
                     return (We(e) - n + r) / 7
                 }
-                G("w", ["ww", 2], "wo", "week"), G("W", ["WW", 2], "Wo", "isoWeek"), A("week", "w"), A("isoWeek", "W"), R("week", 5), R("isoWeek", 5), he("w", te), he("ww", te, X), he("W", te), he("WW", te, X), ye(["w", "ww", "W", "WW"], function(e, t, a, n) {
+                G("w", ["ww", 2], "wo", "week"), G("W", ["WW", 2], "Wo", "isoWeek"), H("week", "w"), H("isoWeek", "W"), R("week", 5), R("isoWeek", 5), he("w", te), he("ww", te, X), he("W", te), he("WW", te, X), ye(["w", "ww", "W", "WW"], function(e, t, a, n) {
                     t[n.substr(0, 1)] = k(e)
                 });
                 G("d", 0, "do", "day"), G("dd", 0, 0, function(e) {
@@ -7515,7 +7362,7 @@ webpackJsonp([92], {
                     return this.localeData().weekdaysShort(this, e)
                 }), G("dddd", 0, 0, function(e) {
                     return this.localeData().weekdays(this, e)
-                }), G("e", 0, 0, "weekday"), G("E", 0, 0, "isoWeekday"), A("day", "d"), A("weekday", "e"), A("isoWeekday", "E"), R("day", 11), R("weekday", 11), R("isoWeekday", 11), he("d", te), he("e", te), he("E", te), he("dd", function(e, t) {
+                }), G("e", 0, 0, "weekday"), G("E", 0, 0, "isoWeekday"), H("day", "d"), H("weekday", "e"), H("isoWeekday", "E"), R("day", 11), R("weekday", 11), R("isoWeekday", 11), he("d", te), he("e", te), he("E", te), he("dd", function(e, t) {
                     return t.weekdaysMinRegex(e)
                 }), he("ddd", function(e, t) {
                     return t.weekdaysShortRegex(e)
@@ -7570,7 +7417,7 @@ webpackJsonp([92], {
                     return "" + this.hours() + N(this.minutes(), 2)
                 }), G("Hmmss", 0, 0, function() {
                     return "" + this.hours() + N(this.minutes(), 2) + N(this.seconds(), 2)
-                }), tt("a", !0), tt("A", !1), A("hour", "h"), R("hour", 13), he("a", at), he("A", at), he("H", te), he("h", te), he("k", te), he("HH", te, X), he("hh", te, X), he("kk", te, X), he("hmm", ae), he("hmmss", ne), he("Hmm", ae), he("Hmmss", ne), ge(["H", "HH"], ke), ge(["k", "kk"], function(e, t, a) {
+                }), tt("a", !0), tt("A", !1), H("hour", "h"), R("hour", 13), he("a", at), he("A", at), he("H", te), he("h", te), he("k", te), he("HH", te, X), he("hh", te, X), he("kk", te, X), he("hmm", ae), he("hmmss", ne), he("Hmm", ae), he("Hmmss", ne), ge(["H", "HH"], ke), ge(["k", "kk"], function(e, t, a) {
                     var n = k(e);
                     t[ke] = 24 === n ? 0 : n
                 }), ge(["a", "A"], function(e, t, a) {
@@ -7918,11 +7765,11 @@ webpackJsonp([92], {
                     }(t), this._milliseconds = +u + 1e3 * d + 6e4 * l + 1e3 * o * 60 * 60, this._days = +s + 7 * i, this._months = +r + 3 * n + 12 * a, this._data = {}, this._locale = mt(), this._bubble()
                 }
 
-                function At(e) {
+                function Ht(e) {
                     return e instanceof Pt
                 }
 
-                function Ht(e) {
+                function At(e) {
                     return e < 0 ? -1 * Math.round(-1 * e) : Math.round(e)
                 }
 
@@ -7965,7 +7812,7 @@ webpackJsonp([92], {
                 function Bt(e, t) {
                     var a, n, r, i = e,
                         s = null;
-                    return At(e) ? i = {
+                    return Ht(e) ? i = {
                         ms: e._milliseconds,
                         d: e._days,
                         M: e._months
@@ -7975,7 +7822,7 @@ webpackJsonp([92], {
                         h: k(s[ke]) * a,
                         m: k(s[De]) * a,
                         s: k(s[Se]) * a,
-                        ms: k(Ht(1e3 * s[Ye])) * a
+                        ms: k(At(1e3 * s[Ye])) * a
                     }) : (s = Vt.exec(e)) ? (a = "-" === s[1] ? -1 : 1, i = {
                         y: Jt(s[2], a),
                         M: Jt(s[3], a),
@@ -7992,7 +7839,7 @@ webpackJsonp([92], {
                         };
                         t = Wt(t, e), e.isBefore(t) ? a = Ut(e, t) : ((a = Ut(t, e)).milliseconds = -a.milliseconds, a.months = -a.months);
                         return a
-                    }(Tt(i.from), Tt(i.to)), (i = {}).ms = r.milliseconds, i.M = r.months), n = new Pt(i), At(e) && u(e, "_locale") && (n._locale = e._locale), n
+                    }(Tt(i.from), Tt(i.to)), (i = {}).ms = r.milliseconds, i.M = r.months), n = new Pt(i), Ht(e) && u(e, "_locale") && (n._locale = e._locale), n
                 }
 
                 function Jt(e, t) {
@@ -8017,9 +7864,9 @@ webpackJsonp([92], {
 
                 function qt(e, t, a, r) {
                     var i = t._milliseconds,
-                        s = Ht(t._days),
-                        o = Ht(t._months);
-                    e.isValid() && (r = null == r || r, i && e._d.setTime(e._d.valueOf() + i * a), s && z(e, "Date", I(e, "Date") + s * a), o && Ae(e, I(e, "Month") + o * a), r && n.updateOffset(e, s || o))
+                        s = At(t._days),
+                        o = At(t._months);
+                    e.isValid() && (r = null == r || r, i && e._d.setTime(e._d.valueOf() + i * a), s && z(e, "Date", I(e, "Date") + s * a), o && He(e, I(e, "Month") + o * a), r && n.updateOffset(e, s || o))
                 }
                 Bt.fn = Pt.prototype, Bt.invalid = function() {
                     return Bt(NaN)
@@ -8056,23 +7903,23 @@ webpackJsonp([92], {
                     return this.weekYear() % 100
                 }), G(0, ["GG", 2], 0, function() {
                     return this.isoWeekYear() % 100
-                }), ea("gggg", "weekYear"), ea("ggggg", "weekYear"), ea("GGGG", "isoWeekYear"), ea("GGGGG", "isoWeekYear"), A("weekYear", "gg"), A("isoWeekYear", "GG"), R("weekYear", 1), R("isoWeekYear", 1), he("G", le), he("g", le), he("GG", te, X), he("gg", te, X), he("GGGG", ie, $), he("gggg", ie, $), he("GGGGG", se, ee), he("ggggg", se, ee), ye(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, a, n) {
+                }), ea("gggg", "weekYear"), ea("ggggg", "weekYear"), ea("GGGG", "isoWeekYear"), ea("GGGGG", "isoWeekYear"), H("weekYear", "gg"), H("isoWeekYear", "GG"), R("weekYear", 1), R("isoWeekYear", 1), he("G", le), he("g", le), he("GG", te, X), he("gg", te, X), he("GGGG", ie, $), he("gggg", ie, $), he("GGGGG", se, ee), he("ggggg", se, ee), ye(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, a, n) {
                     t[n.substr(0, 2)] = k(e)
                 }), ye(["gg", "GG"], function(e, t, a, r) {
                     t[r] = n.parseTwoDigitYear(e)
-                }), G("Q", 0, "Qo", "quarter"), A("quarter", "Q"), R("quarter", 7), he("Q", Q), ge("Q", function(e, t) {
+                }), G("Q", 0, "Qo", "quarter"), H("quarter", "Q"), R("quarter", 7), he("Q", Q), ge("Q", function(e, t) {
                     t[ve] = 3 * (k(e) - 1)
-                }), G("D", ["DD", 2], "Do", "date"), A("date", "D"), R("date", 9), he("D", te), he("DD", te, X), he("Do", function(e, t) {
+                }), G("D", ["DD", 2], "Do", "date"), H("date", "D"), R("date", 9), he("D", te), he("DD", te, X), he("Do", function(e, t) {
                     return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient
                 }), ge(["D", "DD"], Le), ge("Do", function(e, t) {
                     t[Le] = k(e.match(te)[0])
                 });
                 var aa = W("Date", !0);
-                G("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), A("dayOfYear", "DDD"), R("dayOfYear", 4), he("DDD", re), he("DDDD", Z), ge(["DDD", "DDDD"], function(e, t, a) {
+                G("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), H("dayOfYear", "DDD"), R("dayOfYear", 4), he("DDD", re), he("DDDD", Z), ge(["DDD", "DDDD"], function(e, t, a) {
                     a._dayOfYear = k(e)
-                }), G("m", ["mm", 2], 0, "minute"), A("minute", "m"), R("minute", 14), he("m", te), he("mm", te, X), ge(["m", "mm"], De);
+                }), G("m", ["mm", 2], 0, "minute"), H("minute", "m"), R("minute", 14), he("m", te), he("mm", te, X), ge(["m", "mm"], De);
                 var na = W("Minutes", !1);
-                G("s", ["ss", 2], 0, "second"), A("second", "s"), R("second", 15), he("s", te), he("ss", te, X), ge(["s", "ss"], Se);
+                G("s", ["ss", 2], 0, "second"), H("second", "s"), R("second", 15), he("s", te), he("ss", te, X), ge(["s", "ss"], Se);
                 var ra, ia = W("Seconds", !1);
                 for (G("S", 0, 0, function() {
                         return ~~(this.millisecond() / 100)
@@ -8090,7 +7937,7 @@ webpackJsonp([92], {
                         return 1e5 * this.millisecond()
                     }), G(0, ["SSSSSSSSS", 9], 0, function() {
                         return 1e6 * this.millisecond()
-                    }), A("millisecond", "ms"), R("millisecond", 16), he("S", re, Q), he("SS", re, X), he("SSS", re, Z), ra = "SSSS"; ra.length <= 9; ra += "S") he(ra, oe);
+                    }), H("millisecond", "ms"), R("millisecond", 16), he("S", re, Q), he("SS", re, X), he("SSS", re, Z), ra = "SSSS"; ra.length <= 9; ra += "S") he(ra, oe);
 
                 function sa(e, t) {
                     t[Ye] = k(1e3 * ("0." + e))
@@ -8113,10 +7960,10 @@ webpackJsonp([92], {
                     return new b(this)
                 }, la.diff = function(e, t, a) {
                     var n, r, i, s;
-                    return this.isValid() && (n = Wt(e, this)).isValid() ? (r = 6e4 * (n.utcOffset() - this.utcOffset()), "year" === (t = H(t)) || "month" === t || "quarter" === t ? (o = this, l = n, c = 12 * (l.year() - o.year()) + (l.month() - o.month()), m = o.clone().add(c, "months"), l - m < 0 ? (d = o.clone().add(c - 1, "months"), u = (l - m) / (m - d)) : (d = o.clone().add(c + 1, "months"), u = (l - m) / (d - m)), s = -(c + u) || 0, "quarter" === t ? s /= 3 : "year" === t && (s /= 12)) : (i = this - n, s = "second" === t ? i / 1e3 : "minute" === t ? i / 6e4 : "hour" === t ? i / 36e5 : "day" === t ? (i - r) / 864e5 : "week" === t ? (i - r) / 6048e5 : i), a ? s : L(s)) : NaN;
+                    return this.isValid() && (n = Wt(e, this)).isValid() ? (r = 6e4 * (n.utcOffset() - this.utcOffset()), "year" === (t = A(t)) || "month" === t || "quarter" === t ? (o = this, l = n, c = 12 * (l.year() - o.year()) + (l.month() - o.month()), m = o.clone().add(c, "months"), l - m < 0 ? (d = o.clone().add(c - 1, "months"), u = (l - m) / (m - d)) : (d = o.clone().add(c + 1, "months"), u = (l - m) / (d - m)), s = -(c + u) || 0, "quarter" === t ? s /= 3 : "year" === t && (s /= 12)) : (i = this - n, s = "second" === t ? i / 1e3 : "minute" === t ? i / 6e4 : "hour" === t ? i / 36e5 : "day" === t ? (i - r) / 864e5 : "week" === t ? (i - r) / 6048e5 : i), a ? s : L(s)) : NaN;
                     var o, l, d, u, c, m
                 }, la.endOf = function(e) {
-                    return void 0 === (e = H(e)) || "millisecond" === e ? this : ("date" === e && (e = "day"), this.startOf(e).add(1, "isoWeek" === e ? "week" : e).subtract(1, "ms"))
+                    return void 0 === (e = A(e)) || "millisecond" === e ? this : ("date" === e && (e = "day"), this.startOf(e).add(1, "isoWeek" === e ? "week" : e).subtract(1, "ms"))
                 }, la.format = function(e) {
                     e || (e = this.isUtc() ? n.defaultFormatUtc : n.defaultFormat);
                     var t = q(this, e);
@@ -8136,20 +7983,20 @@ webpackJsonp([92], {
                 }, la.toNow = function(e) {
                     return this.to(Tt(), e)
                 }, la.get = function(e) {
-                    return x(this[e = H(e)]) ? this[e]() : this
+                    return x(this[e = A(e)]) ? this[e]() : this
                 }, la.invalidAt = function() {
                     return h(this).overflow
                 }, la.isAfter = function(e, t) {
                     var a = v(e) ? e : Tt(e);
-                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = H(s(t) ? "millisecond" : t)) ? this.valueOf() > a.valueOf() : a.valueOf() < this.clone().startOf(t).valueOf())
+                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = A(s(t) ? "millisecond" : t)) ? this.valueOf() > a.valueOf() : a.valueOf() < this.clone().startOf(t).valueOf())
                 }, la.isBefore = function(e, t) {
                     var a = v(e) ? e : Tt(e);
-                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = H(s(t) ? "millisecond" : t)) ? this.valueOf() < a.valueOf() : this.clone().endOf(t).valueOf() < a.valueOf())
+                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = A(s(t) ? "millisecond" : t)) ? this.valueOf() < a.valueOf() : this.clone().endOf(t).valueOf() < a.valueOf())
                 }, la.isBetween = function(e, t, a, n) {
                     return ("(" === (n = n || "()")[0] ? this.isAfter(e, a) : !this.isBefore(e, a)) && (")" === n[1] ? this.isBefore(t, a) : !this.isAfter(t, a))
                 }, la.isSame = function(e, t) {
                     var a, n = v(e) ? e : Tt(e);
-                    return !(!this.isValid() || !n.isValid()) && ("millisecond" === (t = H(t || "millisecond")) ? this.valueOf() === n.valueOf() : (a = n.valueOf(), this.clone().startOf(t).valueOf() <= a && a <= this.clone().endOf(t).valueOf()))
+                    return !(!this.isValid() || !n.isValid()) && ("millisecond" === (t = A(t || "millisecond")) ? this.valueOf() === n.valueOf() : (a = n.valueOf(), this.clone().startOf(t).valueOf() <= a && a <= this.clone().endOf(t).valueOf()))
                 }, la.isSameOrAfter = function(e, t) {
                     return this.isSame(e, t) || this.isAfter(e, t)
                 }, la.isSameOrBefore = function(e, t) {
@@ -8170,10 +8017,10 @@ webpackJsonp([92], {
                                     return e.priority - t.priority
                                 }), t
                             }(e = E(e)), n = 0; n < a.length; n++) this[a[n].unit](e[a[n].unit]);
-                    else if (x(this[e = H(e)])) return this[e](t);
+                    else if (x(this[e = A(e)])) return this[e](t);
                     return this
                 }, la.startOf = function(e) {
-                    switch (e = H(e)) {
+                    switch (e = A(e)) {
                         case "year":
                             this.month(0);
                         case "quarter":
@@ -8245,7 +8092,7 @@ webpackJsonp([92], {
                     return ta.call(this, e, this.isoWeek(), this.isoWeekday(), 1, 4)
                 }, la.quarter = la.quarters = function(e) {
                     return null == e ? Math.ceil((this.month() + 1) / 3) : this.month(3 * (e - 1) + this.month() % 3)
-                }, la.month = He, la.daysInMonth = function() {
+                }, la.month = Ae, la.daysInMonth = function() {
                     return Ce(this.year(), this.month())
                 }, la.week = la.weeks = function(e) {
                     var t = this.localeData().week(this);
@@ -8313,7 +8160,7 @@ webpackJsonp([92], {
                     return this._isUTC ? "UTC" : ""
                 }, la.zoneName = function() {
                     return this._isUTC ? "Coordinated Universal Time" : ""
-                }, la.dates = Y("dates accessor is deprecated. Use date instead.", aa), la.months = Y("months accessor is deprecated. Use month instead", He), la.years = Y("years accessor is deprecated. Use year instead", ze), la.zone = Y("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
+                }, la.dates = Y("dates accessor is deprecated. Use date instead.", aa), la.months = Y("months accessor is deprecated. Use month instead", Ae), la.years = Y("years accessor is deprecated. Use year instead", ze), la.zone = Y("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
                     return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
                 }), la.isDSTShifted = Y("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
                     if (!s(this._isDSTShifted)) return this._isDSTShifted;
@@ -8478,8 +8325,8 @@ webpackJsonp([92], {
                     ja = Ta("minutes"),
                     Oa = Ta("hours"),
                     Pa = Ta("days"),
-                    Aa = Ta("months"),
-                    Ha = Ta("years");
+                    Ha = Ta("months"),
+                    Aa = Ta("years");
                 var Ea = Math.round,
                     Fa = {
                         ss: 44,
@@ -8519,7 +8366,7 @@ webpackJsonp([92], {
                 }, Ia.as = function(e) {
                     if (!this.isValid()) return NaN;
                     var t, a, n = this._milliseconds;
-                    if ("month" === (e = H(e)) || "year" === e) return t = this._days + n / 864e5, a = this._months + ga(t), "month" === e ? a : a / 12;
+                    if ("month" === (e = A(e)) || "year" === e) return t = this._days + n / 864e5, a = this._months + ga(t), "month" === e ? a : a / 12;
                     switch (t = this._days + Math.round(ya(this._months)), e) {
                         case "week":
                             return t / 7 + n / 6048e5;
@@ -8545,10 +8392,10 @@ webpackJsonp([92], {
                         l = this._data;
                     return i >= 0 && s >= 0 && o >= 0 || i <= 0 && s <= 0 && o <= 0 || (i += 864e5 * fa(ya(o) + s), s = 0, o = 0), l.milliseconds = i % 1e3, e = L(i / 1e3), l.seconds = e % 60, t = L(e / 60), l.minutes = t % 60, a = L(t / 60), l.hours = a % 24, o += r = L(ga(s += L(a / 24))), s -= fa(ya(r)), n = L(o / 12), o %= 12, l.days = s, l.months = o, l.years = n, this
                 }, Ia.get = function(e) {
-                    return e = H(e), this.isValid() ? this[e + "s"]() : NaN
+                    return e = A(e), this.isValid() ? this[e + "s"]() : NaN
                 }, Ia.milliseconds = xa, Ia.seconds = Ca, Ia.minutes = ja, Ia.hours = Oa, Ia.days = Pa, Ia.weeks = function() {
                     return L(this.days() / 7)
-                }, Ia.months = Aa, Ia.years = Ha, Ia.humanize = function(e) {
+                }, Ia.months = Ha, Ia.years = Aa, Ia.humanize = function(e) {
                     if (!this.isValid()) return this.localeData().invalidDate();
                     var t = this.localeData(),
                         a = function(e, t, a) {
@@ -8584,7 +8431,7 @@ webpackJsonp([92], {
                     return ha(e, t, a, "weekdays")
                 }, n.parseZone = function() {
                     return Tt.apply(null, arguments).parseZone()
-                }, n.localeData = mt, n.isDuration = At, n.monthsShort = function(e, t) {
+                }, n.localeData = mt, n.isDuration = Ht, n.monthsShort = function(e, t) {
                     return ma(e, t, "monthsShort")
                 }, n.weekdaysMin = function(e, t, a) {
                     return ha(e, t, a, "weekdaysMin")
@@ -8598,7 +8445,7 @@ webpackJsonp([92], {
                     return O(st)
                 }, n.weekdaysShort = function(e, t, a) {
                     return ha(e, t, a, "weekdaysShort")
-                }, n.normalizeUnits = H, n.relativeTimeRounding = function(e) {
+                }, n.normalizeUnits = A, n.relativeTimeRounding = function(e) {
                     return void 0 === e ? Ea : "function" == typeof e && (Ea = e, !0)
                 }, n.relativeTimeThreshold = function(e, t) {
                     return void 0 !== Fa[e] && (void 0 === t ? Fa[e] : (Fa[e] = t, "s" === e && (Fa.ss = t - 1), !0))
@@ -8867,52 +8714,6 @@ webpackJsonp([92], {
         })(a("PJh5"))
     },
     T0UN: function(e, t) {},
-    TWHA: function(e, t, a) {
-        var n = a("YjuW"),
-            r = function() {
-                return new d
-            };
-        for (var i in n) {
-            r[i + "Raw"] = function(e) {
-                return function(t) {
-                    return "number" == typeof t && (t = Array.prototype.slice.call(arguments)), n[e](t)
-                }
-            }(i);
-            var s = /(\w+)2(\w+)/.exec(i),
-                o = s[1],
-                l = s[2];
-            (r[o] = r[o] || {})[l] = r[i] = function(e) {
-                return function(t) {
-                    "number" == typeof t && (t = Array.prototype.slice.call(arguments));
-                    var a = n[e](t);
-                    if ("string" == typeof a || void 0 === a) return a;
-                    for (var r = 0; r < a.length; r++) a[r] = Math.round(a[r]);
-                    return a
-                }
-            }(i)
-        }
-        var d = function() {
-            this.convs = {}
-        };
-        d.prototype.routeSpace = function(e, t) {
-            var a = t[0];
-            return void 0 === a ? this.getValues(e) : ("number" == typeof a && (a = Array.prototype.slice.call(t)), this.setValues(e, a))
-        }, d.prototype.setValues = function(e, t) {
-            return this.space = e, this.convs = {}, this.convs[e] = t, this
-        }, d.prototype.getValues = function(e) {
-            var t = this.convs[e];
-            if (!t) {
-                var a = this.space,
-                    n = this.convs[a];
-                t = r[a][e](n), this.convs[e] = t
-            }
-            return t
-        }, ["rgb", "hsl", "hsv", "cmyk", "keyword"].forEach(function(e) {
-            d.prototype[e] = function(t) {
-                return this.routeSpace(e, arguments)
-            }
-        }), e.exports = r
-    },
     Tqun: function(e, t, a) {
         (function(e) {
             "use strict";
@@ -9501,19 +9302,19 @@ webpackJsonp([92], {
                             C = "bottom" === r.position ? t.top + v : t.bottom;
                         if (i.each(f, function(a, n) {
                                 if (!i.isNullOrUndef(a.label)) {
-                                    var s, o, c, h, g, y, M, b, L, k, D, j, O, P, A = a.label;
+                                    var s, o, c, h, g, y, M, b, L, k, D, j, O, P, H = a.label;
                                     n === t.zeroLineIndex && r.offset === m.offsetGridLines ? (s = m.zeroLineWidth, o = m.zeroLineColor, c = m.zeroLineBorderDash, h = m.zeroLineBorderDashOffset) : (s = i.valueAtIndexOrDefault(m.lineWidth, n), o = i.valueAtIndexOrDefault(m.color, n), c = i.valueOrDefault(m.borderDash, d.borderDash), h = i.valueOrDefault(m.borderDashOffset, d.borderDashOffset));
-                                    var H = "middle",
+                                    var A = "middle",
                                         E = "middle",
                                         F = u.padding;
                                     if (p) {
                                         var R = v + F;
-                                        "bottom" === r.position ? (E = _ ? "middle" : "top", H = _ ? "right" : "center", P = t.top + R) : (E = _ ? "middle" : "bottom", H = _ ? "left" : "center", P = t.bottom - R);
+                                        "bottom" === r.position ? (E = _ ? "middle" : "top", A = _ ? "right" : "center", P = t.top + R) : (E = _ ? "middle" : "bottom", A = _ ? "left" : "center", P = t.bottom - R);
                                         var W = l(t, n, m.offsetGridLines && f.length > 1);
                                         W < t.left && (o = "rgba(0,0,0,0)"), W += i.aliasPixel(s), O = t.getPixelForTick(n) + u.labelOffset, g = M = L = D = W, y = x, b = C, k = e.top, j = e.bottom
                                     } else {
                                         var I, z = "left" === r.position;
-                                        u.mirror ? (H = z ? "left" : "right", I = F) : (H = z ? "right" : "left", I = v + F), O = z ? t.right - I : t.left + I;
+                                        u.mirror ? (A = z ? "left" : "right", I = F) : (A = z ? "right" : "left", I = v + F), O = z ? t.right - I : t.left + I;
                                         var N = l(t, n, m.offsetGridLines && f.length > 1);
                                         N < t.top && (o = "rgba(0,0,0,0)"), N += i.aliasPixel(s), P = t.getPixelForTick(n) + u.labelOffset, g = w, M = T, L = e.left, D = e.right, y = b = k = j = N
                                     }
@@ -9533,10 +9334,10 @@ webpackJsonp([92], {
                                         glBorderDash: c,
                                         glBorderDashOffset: h,
                                         rotation: -1 * S,
-                                        label: A,
+                                        label: H,
                                         major: a.major,
                                         textBaseline: E,
-                                        textAlign: H
+                                        textAlign: A
                                     })
                                 }
                             }), i.each(Y, function(e) {
@@ -9550,11 +9351,11 @@ webpackJsonp([92], {
                                 }
                             }), h.display) {
                             var j, O, P = 0,
-                                A = s(h) / 2;
-                            if (p) j = t.left + (t.right - t.left) / 2, O = "bottom" === r.position ? t.bottom - A - D.bottom : t.top + A + D.top;
+                                H = s(h) / 2;
+                            if (p) j = t.left + (t.right - t.left) / 2, O = "bottom" === r.position ? t.bottom - H - D.bottom : t.top + H + D.top;
                             else {
-                                var H = "left" === r.position;
-                                j = H ? t.left + A + D.top : t.right - A - D.top, O = t.top + (t.bottom - t.top) / 2, P = H ? -.5 * Math.PI : .5 * Math.PI
+                                var A = "left" === r.position;
+                                j = A ? t.left + H + D.top : t.right - H - D.top, O = t.top + (t.bottom - t.top) / 2, P = A ? -.5 * Math.PI : .5 * Math.PI
                             }
                             o.save(), o.translate(j, O), o.rotate(P), o.textAlign = "center", o.textBaseline = "middle", o.fillStyle = L, o.font = k.font, o.fillText(h.labelString, 0, 0), o.restore()
                         }
@@ -10363,444 +10164,6 @@ webpackJsonp([92], {
             })
         })(a("PJh5"))
     },
-    YjuW: function(e, t) {
-        function a(e) {
-            var t, a, n = e[0] / 255,
-                r = e[1] / 255,
-                i = e[2] / 255,
-                s = Math.min(n, r, i),
-                o = Math.max(n, r, i),
-                l = o - s;
-            return o == s ? t = 0 : n == o ? t = (r - i) / l : r == o ? t = 2 + (i - n) / l : i == o && (t = 4 + (n - r) / l), (t = Math.min(60 * t, 360)) < 0 && (t += 360), a = (s + o) / 2, [t, 100 * (o == s ? 0 : a <= .5 ? l / (o + s) : l / (2 - o - s)), 100 * a]
-        }
-
-        function n(e) {
-            var t, a, n = e[0],
-                r = e[1],
-                i = e[2],
-                s = Math.min(n, r, i),
-                o = Math.max(n, r, i),
-                l = o - s;
-            return a = 0 == o ? 0 : l / o * 1e3 / 10, o == s ? t = 0 : n == o ? t = (r - i) / l : r == o ? t = 2 + (i - n) / l : i == o && (t = 4 + (n - r) / l), (t = Math.min(60 * t, 360)) < 0 && (t += 360), [t, a, o / 255 * 1e3 / 10]
-        }
-
-        function i(e) {
-            var t = e[0],
-                n = e[1],
-                r = e[2];
-            return [a(e)[0], 100 * (1 / 255 * Math.min(t, Math.min(n, r))), 100 * (r = 1 - 1 / 255 * Math.max(t, Math.max(n, r)))]
-        }
-
-        function s(e) {
-            var t, a = e[0] / 255,
-                n = e[1] / 255,
-                r = e[2] / 255;
-            return [100 * ((1 - a - (t = Math.min(1 - a, 1 - n, 1 - r))) / (1 - t) || 0), 100 * ((1 - n - t) / (1 - t) || 0), 100 * ((1 - r - t) / (1 - t) || 0), 100 * t]
-        }
-
-        function o(e) {
-            return D[JSON.stringify(e)]
-        }
-
-        function l(e) {
-            var t = e[0] / 255,
-                a = e[1] / 255,
-                n = e[2] / 255;
-            return [100 * (.4124 * (t = t > .04045 ? Math.pow((t + .055) / 1.055, 2.4) : t / 12.92) + .3576 * (a = a > .04045 ? Math.pow((a + .055) / 1.055, 2.4) : a / 12.92) + .1805 * (n = n > .04045 ? Math.pow((n + .055) / 1.055, 2.4) : n / 12.92)), 100 * (.2126 * t + .7152 * a + .0722 * n), 100 * (.0193 * t + .1192 * a + .9505 * n)]
-        }
-
-        function d(e) {
-            var t = l(e),
-                a = t[0],
-                n = t[1],
-                r = t[2];
-            return n /= 100, r /= 108.883, a = (a /= 95.047) > .008856 ? Math.pow(a, 1 / 3) : 7.787 * a + 16 / 116, [116 * (n = n > .008856 ? Math.pow(n, 1 / 3) : 7.787 * n + 16 / 116) - 16, 500 * (a - n), 200 * (n - (r = r > .008856 ? Math.pow(r, 1 / 3) : 7.787 * r + 16 / 116))]
-        }
-
-        function u(e) {
-            var t, a, n, r, i, s = e[0] / 360,
-                o = e[1] / 100,
-                l = e[2] / 100;
-            if (0 == o) return [i = 255 * l, i, i];
-            t = 2 * l - (a = l < .5 ? l * (1 + o) : l + o - l * o), r = [0, 0, 0];
-            for (var d = 0; d < 3; d++)(n = s + 1 / 3 * -(d - 1)) < 0 && n++, n > 1 && n--, i = 6 * n < 1 ? t + 6 * (a - t) * n : 2 * n < 1 ? a : 3 * n < 2 ? t + (a - t) * (2 / 3 - n) * 6 : t, r[d] = 255 * i;
-            return r
-        }
-
-        function c(e) {
-            var t = e[0] / 60,
-                a = e[1] / 100,
-                n = e[2] / 100,
-                r = Math.floor(t) % 6,
-                i = t - Math.floor(t),
-                s = 255 * n * (1 - a),
-                o = 255 * n * (1 - a * i),
-                l = 255 * n * (1 - a * (1 - i));
-            n *= 255;
-            switch (r) {
-                case 0:
-                    return [n, l, s];
-                case 1:
-                    return [o, n, s];
-                case 2:
-                    return [s, n, l];
-                case 3:
-                    return [s, o, n];
-                case 4:
-                    return [l, s, n];
-                case 5:
-                    return [n, s, o]
-            }
-        }
-
-        function m(e) {
-            var t, a, n, i, s = e[0] / 360,
-                o = e[1] / 100,
-                l = e[2] / 100,
-                d = o + l;
-            switch (d > 1 && (o /= d, l /= d), a = 1 - l, n = 6 * s - (t = Math.floor(6 * s)), 0 != (1 & t) && (n = 1 - n), i = o + n * (a - o), t) {
-                default:
-                    case 6:
-                    case 0:
-                    r = a,
-                g = i,
-                b = o;
-                break;
-                case 1:
-                        r = i,
-                    g = a,
-                    b = o;
-                    break;
-                case 2:
-                        r = o,
-                    g = a,
-                    b = i;
-                    break;
-                case 3:
-                        r = o,
-                    g = i,
-                    b = a;
-                    break;
-                case 4:
-                        r = i,
-                    g = o,
-                    b = a;
-                    break;
-                case 5:
-                        r = a,
-                    g = o,
-                    b = i
-            }
-            return [255 * r, 255 * g, 255 * b]
-        }
-
-        function h(e) {
-            var t = e[0] / 100,
-                a = e[1] / 100,
-                n = e[2] / 100,
-                r = e[3] / 100;
-            return [255 * (1 - Math.min(1, t * (1 - r) + r)), 255 * (1 - Math.min(1, a * (1 - r) + r)), 255 * (1 - Math.min(1, n * (1 - r) + r))]
-        }
-
-        function _(e) {
-            var t, a, n, r = e[0] / 100,
-                i = e[1] / 100,
-                s = e[2] / 100;
-            return a = -.9689 * r + 1.8758 * i + .0415 * s, n = .0557 * r + -.204 * i + 1.057 * s, t = (t = 3.2406 * r + -1.5372 * i + -.4986 * s) > .0031308 ? 1.055 * Math.pow(t, 1 / 2.4) - .055 : t *= 12.92, a = a > .0031308 ? 1.055 * Math.pow(a, 1 / 2.4) - .055 : a *= 12.92, n = n > .0031308 ? 1.055 * Math.pow(n, 1 / 2.4) - .055 : n *= 12.92, [255 * (t = Math.min(Math.max(0, t), 1)), 255 * (a = Math.min(Math.max(0, a), 1)), 255 * (n = Math.min(Math.max(0, n), 1))]
-        }
-
-        function p(e) {
-            var t = e[0],
-                a = e[1],
-                n = e[2];
-            return a /= 100, n /= 108.883, t = (t /= 95.047) > .008856 ? Math.pow(t, 1 / 3) : 7.787 * t + 16 / 116, [116 * (a = a > .008856 ? Math.pow(a, 1 / 3) : 7.787 * a + 16 / 116) - 16, 500 * (t - a), 200 * (a - (n = n > .008856 ? Math.pow(n, 1 / 3) : 7.787 * n + 16 / 116))]
-        }
-
-        function f(e) {
-            var t, a, n, r, i = e[0],
-                s = e[1],
-                o = e[2];
-            return i <= 8 ? r = (a = 100 * i / 903.3) / 100 * 7.787 + 16 / 116 : (a = 100 * Math.pow((i + 16) / 116, 3), r = Math.pow(a / 100, 1 / 3)), [t = t / 95.047 <= .008856 ? t = 95.047 * (s / 500 + r - 16 / 116) / 7.787 : 95.047 * Math.pow(s / 500 + r, 3), a, n = n / 108.883 <= .008859 ? n = 108.883 * (r - o / 200 - 16 / 116) / 7.787 : 108.883 * Math.pow(r - o / 200, 3)]
-        }
-
-        function y(e) {
-            var t, a = e[0],
-                n = e[1],
-                r = e[2];
-            return (t = 360 * Math.atan2(r, n) / 2 / Math.PI) < 0 && (t += 360), [a, Math.sqrt(n * n + r * r), t]
-        }
-
-        function M(e) {
-            return _(f(e))
-        }
-
-        function v(e) {
-            var t, a = e[0],
-                n = e[1];
-            return t = e[2] / 360 * 2 * Math.PI, [a, n * Math.cos(t), n * Math.sin(t)]
-        }
-
-        function L(e) {
-            return k[e]
-        }
-        e.exports = {
-            rgb2hsl: a,
-            rgb2hsv: n,
-            rgb2hwb: i,
-            rgb2cmyk: s,
-            rgb2keyword: o,
-            rgb2xyz: l,
-            rgb2lab: d,
-            rgb2lch: function(e) {
-                return y(d(e))
-            },
-            hsl2rgb: u,
-            hsl2hsv: function(e) {
-                var t = e[0],
-                    a = e[1] / 100,
-                    n = e[2] / 100;
-                if (0 === n) return [0, 0, 0];
-                return [t, 100 * (2 * (a *= (n *= 2) <= 1 ? n : 2 - n) / (n + a)), 100 * ((n + a) / 2)]
-            },
-            hsl2hwb: function(e) {
-                return i(u(e))
-            },
-            hsl2cmyk: function(e) {
-                return s(u(e))
-            },
-            hsl2keyword: function(e) {
-                return o(u(e))
-            },
-            hsv2rgb: c,
-            hsv2hsl: function(e) {
-                var t, a, n = e[0],
-                    r = e[1] / 100,
-                    i = e[2] / 100;
-                return t = r * i, [n, 100 * (t = (t /= (a = (2 - r) * i) <= 1 ? a : 2 - a) || 0), 100 * (a /= 2)]
-            },
-            hsv2hwb: function(e) {
-                return i(c(e))
-            },
-            hsv2cmyk: function(e) {
-                return s(c(e))
-            },
-            hsv2keyword: function(e) {
-                return o(c(e))
-            },
-            hwb2rgb: m,
-            hwb2hsl: function(e) {
-                return a(m(e))
-            },
-            hwb2hsv: function(e) {
-                return n(m(e))
-            },
-            hwb2cmyk: function(e) {
-                return s(m(e))
-            },
-            hwb2keyword: function(e) {
-                return o(m(e))
-            },
-            cmyk2rgb: h,
-            cmyk2hsl: function(e) {
-                return a(h(e))
-            },
-            cmyk2hsv: function(e) {
-                return n(h(e))
-            },
-            cmyk2hwb: function(e) {
-                return i(h(e))
-            },
-            cmyk2keyword: function(e) {
-                return o(h(e))
-            },
-            keyword2rgb: L,
-            keyword2hsl: function(e) {
-                return a(L(e))
-            },
-            keyword2hsv: function(e) {
-                return n(L(e))
-            },
-            keyword2hwb: function(e) {
-                return i(L(e))
-            },
-            keyword2cmyk: function(e) {
-                return s(L(e))
-            },
-            keyword2lab: function(e) {
-                return d(L(e))
-            },
-            keyword2xyz: function(e) {
-                return l(L(e))
-            },
-            xyz2rgb: _,
-            xyz2lab: p,
-            xyz2lch: function(e) {
-                return y(p(e))
-            },
-            lab2xyz: f,
-            lab2rgb: M,
-            lab2lch: y,
-            lch2lab: v,
-            lch2xyz: function(e) {
-                return f(v(e))
-            },
-            lch2rgb: function(e) {
-                return M(v(e))
-            }
-        };
-        var k = {
-                aliceblue: [240, 248, 255],
-                antiquewhite: [250, 235, 215],
-                aqua: [0, 255, 255],
-                aquamarine: [127, 255, 212],
-                azure: [240, 255, 255],
-                beige: [245, 245, 220],
-                bisque: [255, 228, 196],
-                black: [0, 0, 0],
-                blanchedalmond: [255, 235, 205],
-                blue: [0, 0, 255],
-                blueviolet: [138, 43, 226],
-                brown: [165, 42, 42],
-                burlywood: [222, 184, 135],
-                cadetblue: [95, 158, 160],
-                chartreuse: [127, 255, 0],
-                chocolate: [210, 105, 30],
-                coral: [255, 127, 80],
-                cornflowerblue: [100, 149, 237],
-                cornsilk: [255, 248, 220],
-                crimson: [220, 20, 60],
-                cyan: [0, 255, 255],
-                darkblue: [0, 0, 139],
-                darkcyan: [0, 139, 139],
-                darkgoldenrod: [184, 134, 11],
-                darkgray: [169, 169, 169],
-                darkgreen: [0, 100, 0],
-                darkgrey: [169, 169, 169],
-                darkkhaki: [189, 183, 107],
-                darkmagenta: [139, 0, 139],
-                darkolivegreen: [85, 107, 47],
-                darkorange: [255, 140, 0],
-                darkorchid: [153, 50, 204],
-                darkred: [139, 0, 0],
-                darksalmon: [233, 150, 122],
-                darkseagreen: [143, 188, 143],
-                darkslateblue: [72, 61, 139],
-                darkslategray: [47, 79, 79],
-                darkslategrey: [47, 79, 79],
-                darkturquoise: [0, 206, 209],
-                darkviolet: [148, 0, 211],
-                deeppink: [255, 20, 147],
-                deepskyblue: [0, 191, 255],
-                dimgray: [105, 105, 105],
-                dimgrey: [105, 105, 105],
-                dodgerblue: [30, 144, 255],
-                firebrick: [178, 34, 34],
-                floralwhite: [255, 250, 240],
-                forestgreen: [34, 139, 34],
-                fuchsia: [255, 0, 255],
-                gainsboro: [220, 220, 220],
-                ghostwhite: [248, 248, 255],
-                gold: [255, 215, 0],
-                goldenrod: [218, 165, 32],
-                gray: [128, 128, 128],
-                green: [0, 128, 0],
-                greenyellow: [173, 255, 47],
-                grey: [128, 128, 128],
-                honeydew: [240, 255, 240],
-                hotpink: [255, 105, 180],
-                indianred: [205, 92, 92],
-                indigo: [75, 0, 130],
-                ivory: [255, 255, 240],
-                khaki: [240, 230, 140],
-                lavender: [230, 230, 250],
-                lavenderblush: [255, 240, 245],
-                lawngreen: [124, 252, 0],
-                lemonchiffon: [255, 250, 205],
-                lightblue: [173, 216, 230],
-                lightcoral: [240, 128, 128],
-                lightcyan: [224, 255, 255],
-                lightgoldenrodyellow: [250, 250, 210],
-                lightgray: [211, 211, 211],
-                lightgreen: [144, 238, 144],
-                lightgrey: [211, 211, 211],
-                lightpink: [255, 182, 193],
-                lightsalmon: [255, 160, 122],
-                lightseagreen: [32, 178, 170],
-                lightskyblue: [135, 206, 250],
-                lightslategray: [119, 136, 153],
-                lightslategrey: [119, 136, 153],
-                lightsteelblue: [176, 196, 222],
-                lightyellow: [255, 255, 224],
-                lime: [0, 255, 0],
-                limegreen: [50, 205, 50],
-                linen: [250, 240, 230],
-                magenta: [255, 0, 255],
-                maroon: [128, 0, 0],
-                mediumaquamarine: [102, 205, 170],
-                mediumblue: [0, 0, 205],
-                mediumorchid: [186, 85, 211],
-                mediumpurple: [147, 112, 219],
-                mediumseagreen: [60, 179, 113],
-                mediumslateblue: [123, 104, 238],
-                mediumspringgreen: [0, 250, 154],
-                mediumturquoise: [72, 209, 204],
-                mediumvioletred: [199, 21, 133],
-                midnightblue: [25, 25, 112],
-                mintcream: [245, 255, 250],
-                mistyrose: [255, 228, 225],
-                moccasin: [255, 228, 181],
-                navajowhite: [255, 222, 173],
-                navy: [0, 0, 128],
-                oldlace: [253, 245, 230],
-                olive: [128, 128, 0],
-                olivedrab: [107, 142, 35],
-                orange: [255, 165, 0],
-                orangered: [255, 69, 0],
-                orchid: [218, 112, 214],
-                palegoldenrod: [238, 232, 170],
-                palegreen: [152, 251, 152],
-                paleturquoise: [175, 238, 238],
-                palevioletred: [219, 112, 147],
-                papayawhip: [255, 239, 213],
-                peachpuff: [255, 218, 185],
-                peru: [205, 133, 63],
-                pink: [255, 192, 203],
-                plum: [221, 160, 221],
-                powderblue: [176, 224, 230],
-                purple: [128, 0, 128],
-                rebeccapurple: [102, 51, 153],
-                red: [255, 0, 0],
-                rosybrown: [188, 143, 143],
-                royalblue: [65, 105, 225],
-                saddlebrown: [139, 69, 19],
-                salmon: [250, 128, 114],
-                sandybrown: [244, 164, 96],
-                seagreen: [46, 139, 87],
-                seashell: [255, 245, 238],
-                sienna: [160, 82, 45],
-                silver: [192, 192, 192],
-                skyblue: [135, 206, 235],
-                slateblue: [106, 90, 205],
-                slategray: [112, 128, 144],
-                slategrey: [112, 128, 144],
-                snow: [255, 250, 250],
-                springgreen: [0, 255, 127],
-                steelblue: [70, 130, 180],
-                tan: [210, 180, 140],
-                teal: [0, 128, 128],
-                thistle: [216, 191, 216],
-                tomato: [255, 99, 71],
-                turquoise: [64, 224, 208],
-                violet: [238, 130, 238],
-                wheat: [245, 222, 179],
-                white: [255, 255, 255],
-                whitesmoke: [245, 245, 245],
-                yellow: [255, 255, 0],
-                yellowgreen: [154, 205, 50]
-            },
-            D = {};
-        for (var S in k) D[JSON.stringify(k[S])] = S
-    },
     ZFGz: function(e, t, a) {
         (function(e) {
             "use strict";
@@ -11403,125 +10766,6 @@ webpackJsonp([92], {
                 }
             })
         })(a("PJh5"))
-    },
-    ajDi: function(e, t, a) {
-        var n = a("72Lu");
-
-        function r(e) {
-            if (e) {
-                var t = [0, 0, 0],
-                    a = 1,
-                    r = e.match(/^#([a-fA-F0-9]{3})$/i);
-                if (r) {
-                    r = r[1];
-                    for (var i = 0; i < t.length; i++) t[i] = parseInt(r[i] + r[i], 16)
-                } else if (r = e.match(/^#([a-fA-F0-9]{6})$/i)) {
-                    r = r[1];
-                    for (i = 0; i < t.length; i++) t[i] = parseInt(r.slice(2 * i, 2 * i + 2), 16)
-                } else if (r = e.match(/^rgba?\(\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/i)) {
-                    for (i = 0; i < t.length; i++) t[i] = parseInt(r[i + 1]);
-                    a = parseFloat(r[4])
-                } else if (r = e.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,\s*([+-]?[\d\.]+)\%\s*,\s*([+-]?[\d\.]+)\%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/i)) {
-                    for (i = 0; i < t.length; i++) t[i] = Math.round(2.55 * parseFloat(r[i + 1]));
-                    a = parseFloat(r[4])
-                } else if (r = e.match(/(\w+)/)) {
-                    if ("transparent" == r[1]) return [0, 0, 0, 0];
-                    if (!(t = n[r[1]])) return
-                }
-                for (i = 0; i < t.length; i++) t[i] = u(t[i], 0, 255);
-                return a = a || 0 == a ? u(a, 0, 1) : 1, t[3] = a, t
-            }
-        }
-
-        function i(e) {
-            if (e) {
-                var t = e.match(/^hsla?\(\s*([+-]?\d+)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)/);
-                if (t) {
-                    var a = parseFloat(t[4]);
-                    return [u(parseInt(t[1]), 0, 360), u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(a) ? 1 : a, 0, 1)]
-                }
-            }
-        }
-
-        function s(e) {
-            if (e) {
-                var t = e.match(/^hwb\(\s*([+-]?\d+)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)/);
-                if (t) {
-                    var a = parseFloat(t[4]);
-                    return [u(parseInt(t[1]), 0, 360), u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(a) ? 1 : a, 0, 1)]
-                }
-            }
-        }
-
-        function o(e, t) {
-            return void 0 === t && (t = void 0 !== e[3] ? e[3] : 1), "rgba(" + e[0] + ", " + e[1] + ", " + e[2] + ", " + t + ")"
-        }
-
-        function l(e, t) {
-            return "rgba(" + Math.round(e[0] / 255 * 100) + "%, " + Math.round(e[1] / 255 * 100) + "%, " + Math.round(e[2] / 255 * 100) + "%, " + (t || e[3] || 1) + ")"
-        }
-
-        function d(e, t) {
-            return void 0 === t && (t = void 0 !== e[3] ? e[3] : 1), "hsla(" + e[0] + ", " + e[1] + "%, " + e[2] + "%, " + t + ")"
-        }
-
-        function u(e, t, a) {
-            return Math.min(Math.max(t, e), a)
-        }
-
-        function c(e) {
-            var t = e.toString(16).toUpperCase();
-            return t.length < 2 ? "0" + t : t
-        }
-        e.exports = {
-            getRgba: r,
-            getHsla: i,
-            getRgb: function(e) {
-                var t = r(e);
-                return t && t.slice(0, 3)
-            },
-            getHsl: function(e) {
-                var t = i(e);
-                return t && t.slice(0, 3)
-            },
-            getHwb: s,
-            getAlpha: function(e) {
-                var t = r(e);
-                if (t) return t[3];
-                if (t = i(e)) return t[3];
-                if (t = s(e)) return t[3]
-            },
-            hexString: function(e) {
-                return "#" + c(e[0]) + c(e[1]) + c(e[2])
-            },
-            rgbString: function(e, t) {
-                if (t < 1 || e[3] && e[3] < 1) return o(e, t);
-                return "rgb(" + e[0] + ", " + e[1] + ", " + e[2] + ")"
-            },
-            rgbaString: o,
-            percentString: function(e, t) {
-                if (t < 1 || e[3] && e[3] < 1) return l(e, t);
-                var a = Math.round(e[0] / 255 * 100),
-                    n = Math.round(e[1] / 255 * 100),
-                    r = Math.round(e[2] / 255 * 100);
-                return "rgb(" + a + "%, " + n + "%, " + r + "%)"
-            },
-            percentaString: l,
-            hslString: function(e, t) {
-                if (t < 1 || e[3] && e[3] < 1) return d(e, t);
-                return "hsl(" + e[0] + ", " + e[1] + "%, " + e[2] + "%)"
-            },
-            hslaString: d,
-            hwbString: function(e, t) {
-                void 0 === t && (t = void 0 !== e[3] ? e[3] : 1);
-                return "hwb(" + e[0] + ", " + e[1] + "%, " + e[2] + "%" + (void 0 !== t && 1 !== t ? ", " + t : "") + ")"
-            },
-            keyword: function(e) {
-                return m[e.slice(0, 3)]
-            }
-        };
-        var m = {};
-        for (var h in n) m[n[h]] = h
     },
     aqvp: function(e, t, a) {
         (function(e) {
@@ -12558,8 +11802,8 @@ webpackJsonp([92], {
         }
         var O = a("BSOV"),
             P = a("ylrR"),
-            A = a("9uzc"),
-            H = a("u4Vk"),
+            H = a("9uzc"),
+            A = a("u4Vk"),
             E = {
                 "data-test-selector": "time-range"
             },
@@ -12599,7 +11843,7 @@ webpackJsonp([92], {
                                 padding: {
                                     bottom: 2
                                 }
-                            }, i.createElement(A.a, {
+                            }, i.createElement(H.a, {
                                 previousPath: e.pathWithShiftedInterval(-1),
                                 nextPath: e.pathWithShiftedInterval(1),
                                 onPrevious: e.handlePrevious,
@@ -12663,7 +11907,7 @@ webpackJsonp([92], {
                         numDays: t
                     }, "ChannelAnalyticsNavBar")
                 }, t.prototype.pathWithShiftedInterval = function(e) {
-                    var t = Object(H.h)(this.props.urlStore.params, e);
+                    var t = Object(A.h)(this.props.urlStore.params, e);
                     return j(t) ? this.props.urlStore.buildPathWithParams(t) : ""
                 }, t
             }(i.Component),
@@ -13608,7 +12852,7 @@ webpackJsonp([92], {
                         [Object(l.d)("Start Time", "CSVExporterStreamSessions"), Object(l.d)("End Time", "CSVExporterStreamSessions"), Object(l.d)("Average Viewers", "CSVExporterStreamSessions"), Object(l.d)("Max. Viewers", "CSVExporterStreamSessions"), Object(l.d)("Total Views", "CSVExporterStreamSessions"), Object(l.d)("Unique Views", "CSVExporterStreamSessions"), Object(l.d)("Minutes Watched", "CSVExporterStreamSessions"), Object(l.d)("New Followers", "CSVExporterStreamSessions"), Object(l.d)("Chatters", "CSVExporterStreamSessions"), Object(l.d)("Chat Messages", "CSVExporterStreamSessions"), Object(l.d)("Clips Created", "CSVExporterStreamSessions"), Object(l.d)("Clip Views", "CSVExporterStreamSessions"), Object(l.d)("Ad Breaks (Minutes)", "CSVExporterStreamSessions"), Object(l.d)("Minutes Streamed", "CSVExporterStreamSessions")]
                     ];
                     return e.forEach(function(e) {
-                        a.push(['"' + e.interval.start + '"', '"' + e.interval.end + '"', "" + e.avgViewerCount, "" + e.maxViewerCount, "" + e.totalViewers, "" + e.uniqueViewers, "" + e.totalMinutesWatched, "" + e.followersChange, "" + e.uniqueChatters, "" + e.messagesTotal, "" + e.clipCreatesTotal, "" + e.clipPlaysTotal, "" + e.commercialLengthTotal / 60, "" + Object(H.a)(e.interval)])
+                        a.push(['"' + e.interval.start + '"', '"' + e.interval.end + '"', "" + e.avgViewerCount, "" + e.maxViewerCount, "" + e.totalViewers, "" + e.uniqueViewers, "" + e.totalMinutesWatched, "" + e.followersChange, "" + e.uniqueChatters, "" + e.messagesTotal, "" + e.clipCreatesTotal, "" + e.clipPlaysTotal, "" + e.commercialLengthTotal / 60, "" + Object(A.a)(e.interval)])
                     }), {
                         fileName: Object(l.d)("Stream Sessions {start, date} to {end, date}.csv", {
                             start: t.start,
@@ -13622,7 +12866,7 @@ webpackJsonp([92], {
                             return e.toDateString()
                         })), [Object(l.d)("Average Viewers", "CSVExporterStreamSessionsAggregated")].concat(t.weightedAverage(e, function(e) {
                             return {
-                                weight: Object(H.a)(e.interval),
+                                weight: Object(A.a)(e.interval),
                                 value: e.avgViewerCount,
                                 date: e.interval.start
                             }
@@ -13638,7 +12882,7 @@ webpackJsonp([92], {
                             }
                         })), [Object(l.d)("Average Unique Views", "CSVExporterStreamSessionsAggregated")].concat(t.weightedAverage(e, function(e) {
                             return {
-                                weight: Object(H.a)(e.interval),
+                                weight: Object(A.a)(e.interval),
                                 value: e.uniqueViewers,
                                 date: e.interval.start
                             }
@@ -13654,7 +12898,7 @@ webpackJsonp([92], {
                             }
                         })), [Object(l.d)("Average Unique Chatters", "CSVExporterStreamSessionsAggregated")].concat(t.weightedAverage(e, function(e) {
                             return {
-                                weight: Object(H.a)(e.interval),
+                                weight: Object(A.a)(e.interval),
                                 value: e.uniqueChatters,
                                 date: e.interval.start
                             }
@@ -13680,7 +12924,7 @@ webpackJsonp([92], {
                             }
                         })), [Object(l.d)("Minutes Streamed", "CSVExporterStreamSessionsAggregated")].concat(t.sum(e, function(e) {
                             return {
-                                value: Object(H.a)(e.interval),
+                                value: Object(A.a)(e.interval),
                                 date: e.interval.start
                             }
                         }))
@@ -13931,10 +13175,10 @@ webpackJsonp([92], {
                     })
                 }, t
             }(i.Component),
-            Ae = {
+            He = {
                 "data-test-selector": "stats-dropdown-title"
             },
-            He = {
+            Ae = {
                 "data-test-selector": "date-picker-toggle"
             },
             Ee = function(e) {
@@ -13956,7 +13200,7 @@ webpackJsonp([92], {
                                 icon: b._25.GlyphArrUpDown,
                                 onClick: t,
                                 size: b.x.Small
-                            }, He)))
+                            }, Ae)))
                         }
                     }, function(t) {
                         var a = t.close;
@@ -13969,7 +13213,7 @@ webpackJsonp([92], {
                                 onClick: Object(f.compose)(a, e.props.onUpdateStat.bind(e, t, e.props.index)),
                                 key: t,
                                 alpha: !0
-                            }, Ae), i.createElement(b._8, {
+                            }, He), i.createElement(b._8, {
                                 padding: 1
                             }, i.createElement(b.Q, {
                                 color: b.K.Link
@@ -14758,7 +14002,7 @@ webpackJsonp([92], {
                     }, function(a) {
                         return i.createElement(ct, {
                             interval: a.params,
-                            lookbackInterval: Object(H.h)(a.params, -1),
+                            lookbackInterval: Object(A.h)(a.params, -1),
                             channel: t
                         }, function(n) {
                             return i.createElement(i.Fragment, null, i.createElement(s.c, {
@@ -15674,21 +14918,21 @@ webpackJsonp([92], {
                         });
                         var P = Math.max(S - x, 0);
                         x += P, C += Math.max(Y - C, 0);
-                        var A = Math.max(w - j, 0);
-                        j += A, O += Math.max(T - O, 0);
-                        var H = i - j - O,
+                        var H = Math.max(w - j, 0);
+                        j += H, O += Math.max(T - O, 0);
+                        var A = i - j - O,
                             E = r - x - C;
-                        E === L && H === k || (n.each(m, function(e) {
-                            e.height = H
+                        E === L && A === k || (n.each(m, function(e) {
+                            e.height = A
                         }), n.each(h, function(e) {
-                            e.height = H
+                            e.height = A
                         }), n.each(_, function(e) {
                             e.fullWidth || (e.width = E)
                         }), n.each(p, function(e) {
                             e.fullWidth || (e.width = E)
-                        }), k = H, L = E);
+                        }), k = A, L = E);
                         var F = l + P,
-                            R = u + A;
+                            R = u + H;
                         n.each(m.concat(_), I), F += L, R += k, n.each(h, I), n.each(p, I), e.chartArea = {
                             left: x,
                             top: j,
@@ -17675,266 +16919,6 @@ webpackJsonp([92], {
             })
         })(a("PJh5"))
     },
-    rWJA: function(e, t, a) {
-        var n = a("TWHA"),
-            r = a("ajDi"),
-            i = function(e) {
-                return e instanceof i ? e : this instanceof i ? (this.valid = !1, this.values = {
-                    rgb: [0, 0, 0],
-                    hsl: [0, 0, 0],
-                    hsv: [0, 0, 0],
-                    hwb: [0, 0, 0],
-                    cmyk: [0, 0, 0, 0],
-                    alpha: 1
-                }, void("string" == typeof e ? (t = r.getRgba(e)) ? this.setValues("rgb", t) : (t = r.getHsla(e)) ? this.setValues("hsl", t) : (t = r.getHwb(e)) && this.setValues("hwb", t) : "object" == typeof e && (void 0 !== (t = e).r || void 0 !== t.red ? this.setValues("rgb", t) : void 0 !== t.l || void 0 !== t.lightness ? this.setValues("hsl", t) : void 0 !== t.v || void 0 !== t.value ? this.setValues("hsv", t) : void 0 !== t.w || void 0 !== t.whiteness ? this.setValues("hwb", t) : void 0 === t.c && void 0 === t.cyan || this.setValues("cmyk", t)))) : new i(e);
-                var t
-            };
-        i.prototype = {
-            isValid: function() {
-                return this.valid
-            },
-            rgb: function() {
-                return this.setSpace("rgb", arguments)
-            },
-            hsl: function() {
-                return this.setSpace("hsl", arguments)
-            },
-            hsv: function() {
-                return this.setSpace("hsv", arguments)
-            },
-            hwb: function() {
-                return this.setSpace("hwb", arguments)
-            },
-            cmyk: function() {
-                return this.setSpace("cmyk", arguments)
-            },
-            rgbArray: function() {
-                return this.values.rgb
-            },
-            hslArray: function() {
-                return this.values.hsl
-            },
-            hsvArray: function() {
-                return this.values.hsv
-            },
-            hwbArray: function() {
-                var e = this.values;
-                return 1 !== e.alpha ? e.hwb.concat([e.alpha]) : e.hwb
-            },
-            cmykArray: function() {
-                return this.values.cmyk
-            },
-            rgbaArray: function() {
-                var e = this.values;
-                return e.rgb.concat([e.alpha])
-            },
-            hslaArray: function() {
-                var e = this.values;
-                return e.hsl.concat([e.alpha])
-            },
-            alpha: function(e) {
-                return void 0 === e ? this.values.alpha : (this.setValues("alpha", e), this)
-            },
-            red: function(e) {
-                return this.setChannel("rgb", 0, e)
-            },
-            green: function(e) {
-                return this.setChannel("rgb", 1, e)
-            },
-            blue: function(e) {
-                return this.setChannel("rgb", 2, e)
-            },
-            hue: function(e) {
-                return e && (e = (e %= 360) < 0 ? 360 + e : e), this.setChannel("hsl", 0, e)
-            },
-            saturation: function(e) {
-                return this.setChannel("hsl", 1, e)
-            },
-            lightness: function(e) {
-                return this.setChannel("hsl", 2, e)
-            },
-            saturationv: function(e) {
-                return this.setChannel("hsv", 1, e)
-            },
-            whiteness: function(e) {
-                return this.setChannel("hwb", 1, e)
-            },
-            blackness: function(e) {
-                return this.setChannel("hwb", 2, e)
-            },
-            value: function(e) {
-                return this.setChannel("hsv", 2, e)
-            },
-            cyan: function(e) {
-                return this.setChannel("cmyk", 0, e)
-            },
-            magenta: function(e) {
-                return this.setChannel("cmyk", 1, e)
-            },
-            yellow: function(e) {
-                return this.setChannel("cmyk", 2, e)
-            },
-            black: function(e) {
-                return this.setChannel("cmyk", 3, e)
-            },
-            hexString: function() {
-                return r.hexString(this.values.rgb)
-            },
-            rgbString: function() {
-                return r.rgbString(this.values.rgb, this.values.alpha)
-            },
-            rgbaString: function() {
-                return r.rgbaString(this.values.rgb, this.values.alpha)
-            },
-            percentString: function() {
-                return r.percentString(this.values.rgb, this.values.alpha)
-            },
-            hslString: function() {
-                return r.hslString(this.values.hsl, this.values.alpha)
-            },
-            hslaString: function() {
-                return r.hslaString(this.values.hsl, this.values.alpha)
-            },
-            hwbString: function() {
-                return r.hwbString(this.values.hwb, this.values.alpha)
-            },
-            keyword: function() {
-                return r.keyword(this.values.rgb, this.values.alpha)
-            },
-            rgbNumber: function() {
-                var e = this.values.rgb;
-                return e[0] << 16 | e[1] << 8 | e[2]
-            },
-            luminosity: function() {
-                for (var e = this.values.rgb, t = [], a = 0; a < e.length; a++) {
-                    var n = e[a] / 255;
-                    t[a] = n <= .03928 ? n / 12.92 : Math.pow((n + .055) / 1.055, 2.4)
-                }
-                return .2126 * t[0] + .7152 * t[1] + .0722 * t[2]
-            },
-            contrast: function(e) {
-                var t = this.luminosity(),
-                    a = e.luminosity();
-                return t > a ? (t + .05) / (a + .05) : (a + .05) / (t + .05)
-            },
-            level: function(e) {
-                var t = this.contrast(e);
-                return t >= 7.1 ? "AAA" : t >= 4.5 ? "AA" : ""
-            },
-            dark: function() {
-                var e = this.values.rgb;
-                return (299 * e[0] + 587 * e[1] + 114 * e[2]) / 1e3 < 128
-            },
-            light: function() {
-                return !this.dark()
-            },
-            negate: function() {
-                for (var e = [], t = 0; t < 3; t++) e[t] = 255 - this.values.rgb[t];
-                return this.setValues("rgb", e), this
-            },
-            lighten: function(e) {
-                var t = this.values.hsl;
-                return t[2] += t[2] * e, this.setValues("hsl", t), this
-            },
-            darken: function(e) {
-                var t = this.values.hsl;
-                return t[2] -= t[2] * e, this.setValues("hsl", t), this
-            },
-            saturate: function(e) {
-                var t = this.values.hsl;
-                return t[1] += t[1] * e, this.setValues("hsl", t), this
-            },
-            desaturate: function(e) {
-                var t = this.values.hsl;
-                return t[1] -= t[1] * e, this.setValues("hsl", t), this
-            },
-            whiten: function(e) {
-                var t = this.values.hwb;
-                return t[1] += t[1] * e, this.setValues("hwb", t), this
-            },
-            blacken: function(e) {
-                var t = this.values.hwb;
-                return t[2] += t[2] * e, this.setValues("hwb", t), this
-            },
-            greyscale: function() {
-                var e = this.values.rgb,
-                    t = .3 * e[0] + .59 * e[1] + .11 * e[2];
-                return this.setValues("rgb", [t, t, t]), this
-            },
-            clearer: function(e) {
-                var t = this.values.alpha;
-                return this.setValues("alpha", t - t * e), this
-            },
-            opaquer: function(e) {
-                var t = this.values.alpha;
-                return this.setValues("alpha", t + t * e), this
-            },
-            rotate: function(e) {
-                var t = this.values.hsl,
-                    a = (t[0] + e) % 360;
-                return t[0] = a < 0 ? 360 + a : a, this.setValues("hsl", t), this
-            },
-            mix: function(e, t) {
-                var a = e,
-                    n = void 0 === t ? .5 : t,
-                    r = 2 * n - 1,
-                    i = this.alpha() - a.alpha(),
-                    s = ((r * i == -1 ? r : (r + i) / (1 + r * i)) + 1) / 2,
-                    o = 1 - s;
-                return this.rgb(s * this.red() + o * a.red(), s * this.green() + o * a.green(), s * this.blue() + o * a.blue()).alpha(this.alpha() * n + a.alpha() * (1 - n))
-            },
-            toJSON: function() {
-                return this.rgb()
-            },
-            clone: function() {
-                var e, t, a = new i,
-                    n = this.values,
-                    r = a.values;
-                for (var s in n) n.hasOwnProperty(s) && (e = n[s], "[object Array]" === (t = {}.toString.call(e)) ? r[s] = e.slice(0) : "[object Number]" === t ? r[s] = e : console.error("unexpected color value:", e));
-                return a
-            }
-        }, i.prototype.spaces = {
-            rgb: ["red", "green", "blue"],
-            hsl: ["hue", "saturation", "lightness"],
-            hsv: ["hue", "saturation", "value"],
-            hwb: ["hue", "whiteness", "blackness"],
-            cmyk: ["cyan", "magenta", "yellow", "black"]
-        }, i.prototype.maxes = {
-            rgb: [255, 255, 255],
-            hsl: [360, 100, 100],
-            hsv: [360, 100, 100],
-            hwb: [360, 100, 100],
-            cmyk: [100, 100, 100, 100]
-        }, i.prototype.getValues = function(e) {
-            for (var t = this.values, a = {}, n = 0; n < e.length; n++) a[e.charAt(n)] = t[e][n];
-            return 1 !== t.alpha && (a.a = t.alpha), a
-        }, i.prototype.setValues = function(e, t) {
-            var a, r, i = this.values,
-                s = this.spaces,
-                o = this.maxes,
-                l = 1;
-            if (this.valid = !0, "alpha" === e) l = t;
-            else if (t.length) i[e] = t.slice(0, e.length), l = t[e.length];
-            else if (void 0 !== t[e.charAt(0)]) {
-                for (a = 0; a < e.length; a++) i[e][a] = t[e.charAt(a)];
-                l = t.a
-            } else if (void 0 !== t[s[e][0]]) {
-                var d = s[e];
-                for (a = 0; a < e.length; a++) i[e][a] = t[d[a]];
-                l = t.alpha
-            }
-            if (i.alpha = Math.max(0, Math.min(1, void 0 === l ? i.alpha : l)), "alpha" === e) return !1;
-            for (a = 0; a < e.length; a++) r = Math.max(0, Math.min(o[e][a], i[e][a])), i[e][a] = Math.round(r);
-            for (var u in s) u !== e && (i[u] = n[e][u](i[e]));
-            return !0
-        }, i.prototype.setSpace = function(e, t) {
-            var a = t[0];
-            return void 0 === a ? this.getValues(e) : ("number" == typeof a && (a = Array.prototype.slice.call(t)), this.setValues(e, a), this)
-        }, i.prototype.setChannel = function(e, t, a) {
-            var n = this.values[e];
-            return void 0 === a ? n[t] : a === n[t] ? this : (n[t] = a, this.setValues(e, n), this)
-        }, "undefined" != typeof window && (window.Color = i), e.exports = i
-    },
     sFj2: function(e, t, a) {
         "use strict";
         var n = a("k7DW"),
@@ -19361,8 +18345,8 @@ webpackJsonp([92], {
                     }
                 }, t
             }(i.Component),
-            A = a("dNsn"),
-            H = function(e) {
+            H = a("dNsn"),
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatTooltipLabel = function(e) {
@@ -19386,7 +18370,7 @@ webpackJsonp([92], {
                                     void 0 === a[r] && (a[r] = 0), a[r] += n.count
                                 }
                             }), Object.keys(a).map(function(e) {
-                                return Object(A.a)(Number(e), a[e])
+                                return Object(H.a)(Number(e), a[e])
                             })
                         }
                     }, t
@@ -20041,7 +19025,7 @@ webpackJsonp([92], {
                     return Object(n.d)("Subscriptions", "ChannelAnalyticsTopStatsDropdown")
                 },
                 Tab: se,
-                Chart: H,
+                Chart: A,
                 dataGroup: ne.Revenue
             }, le[ae.Revenue] = {
                 title: function() {
@@ -21443,4 +20427,4 @@ webpackJsonp([92], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-analytics-39fdd2eab28d28b84b3f2d6509b06688.js.map
+//# sourceMappingURL=pages.channel-analytics-bb02e4be393b93e49024e445450a0d4b.js.map

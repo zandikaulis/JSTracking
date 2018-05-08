@@ -1,4 +1,4 @@
-webpackJsonp([61], {
+webpackJsonp([62], {
     "10JX": function(e, t) {},
     "1WAG": function(e, t) {
         var r = {
@@ -2497,4 +2497,4 @@ webpackJsonp([61], {
         e.exports = r.p + "assets/bits_checkout_paypal_1x-4f1874a574476c628e79dcaff2abd2fe.png"
     }
 });
-//# sourceMappingURL=pages.bits-checkout-a0dafa423f2f9cf02984022051d5b181.js.map
+//# sourceMappingURL=pages.bits-checkout-e132960006ebb00a67c2486a532903c6.js.map

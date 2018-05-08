@@ -1,4 +1,4 @@
-webpackJsonp([117], {
+webpackJsonp([118], {
     "77kt": function(e, t, r) {
         "use strict";
         t.a = function(e, t) {
@@ -20,212 +20,6 @@ webpackJsonp([117], {
             a = r("6sO2"),
             o = r("rYDZ")
     },
-    "9u8h": function(e, t, r) {
-        "use strict";
-        r.d(t, "a", function() {
-            return s
-        });
-        var n = r("TToO"),
-            a = r("6sO2"),
-            o = r("Aj/L"),
-            s = function() {
-                function e() {}
-                return e.get = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, n.__assign({}, t, {
-                                        method: "GET"
-                                    }), r)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.getOrThrow = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, n.__assign({}, t, {
-                                        method: "GET"
-                                    }), r)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.put = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, n.__assign({}, t, {
-                                        method: "PUT"
-                                    }), r)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.putOrThrow = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, n.__assign({}, t, {
-                                        method: "PUT"
-                                    }), r)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.post = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, n.__assign({}, t, {
-                                        method: "POST"
-                                    }), r)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.postOrThrow = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, n.__assign({}, t, {
-                                        method: "POST"
-                                    }), r)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.delete = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, n.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), r)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.deleteOrThrow = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, n.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), r)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.request = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        var a, o, s, i;
-                        return n.__generator(this, function(c) {
-                            switch (c.label) {
-                                case 0:
-                                    return t = this.constructOptions(t, r), a = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, a), s = n.__assign({}, t, {
-                                        body: o
-                                    }), [4, this._fetch(e, s)];
-                                case 1:
-                                    return i = c.sent(), [4, this.constructLegacyAPIResponse(i)];
-                                case 2:
-                                    return [2, c.sent()]
-                            }
-                        })
-                    })
-                }, e.requestOrThrow = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, void 0, function() {
-                        var a, o;
-                        return n.__generator(this, function(s) {
-                            switch (s.label) {
-                                case 0:
-                                    return s.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
-                                case 1:
-                                    if ((a = s.sent()).error || a.requestError) throw new Error("Error while making request");
-                                    return o = n.__assign({}, a, {
-                                        body: a.body
-                                    }), [2, Promise.resolve(o)];
-                                case 2:
-                                    throw s.sent();
-                                case 3:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, e.getAPIURL = function(e) {
-                    return new URL(e, a.o.config.apiBaseURL)
-                }, e.constructLegacyAPIResponse = function(e) {
-                    return n.__awaiter(this, void 0, void 0, function() {
-                        var t, r, a, o;
-                        return n.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    t = {
-                                        status: e.status
-                                    }, n.label = 1;
-                                case 1:
-                                    return n.trys.push([1, 3, , 4]), [4, e.json()];
-                                case 2:
-                                    return r = n.sent(), e.ok ? t.body = r : t.error = r, [3, 4];
-                                case 3:
-                                    return a = n.sent(), e.headers && e.headers.get && (o = e.headers.get("Content-Type")) && -1 !== o.indexOf("application/json") && (t.requestError = a), [3, 4];
-                                case 4:
-                                    return [2, t]
-                            }
-                        })
-                    })
-                }, e._fetch = function(e, t) {
-                    return void 0 === t && (t = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, fetch(this.getAPIURL(e).toString(), t)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.constructOptions = function(e, t) {
-                    return e = Object.assign({}, e, {
-                        headers: n.__assign({}, this.getDefaultHeaders(e, t), e.headers)
-                    })
-                }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
-                        contentType: t
-                    }), null) : null
-                }, e.getDefaultHeaders = function(e, t) {
-                    var r = a.o.store.getState(),
-                        n = {
-                            Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
-                            "Accept-Language": "en-us",
-                            "Client-ID": a.o.config.legacyClientID,
-                            "X-Requested-With": "XMLHttpRequest"
-                        };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (n["Content-Type"] = "application/json; charset=UTF-8");
-                    var s = Object(o.c)(r);
-                    return s && (n.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (n["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                        n[e] && delete n[e]
-                    }), n
-                }, e.logger = a.o.logger.withCategory("legacy-api"), e
-            }()
-    },
     Az3k: function(e, t, r) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -234,36 +28,36 @@ webpackJsonp([117], {
         var n = r("TToO"),
             a = r("GiK3"),
             o = r("CIox"),
-            s = r("j7/Y"),
-            i = r("w9tK"),
-            c = r("9u8h"),
-            p = r("vH/s"),
-            u = r("CSlQ"),
+            s = r("6sO2"),
+            i = r("j7/Y"),
+            c = r("mIvh"),
+            p = r("w9tK"),
+            u = r("vH/s"),
+            l = r("CSlQ"),
             d = r("o8Qr"),
-            l = r("Odds"),
-            h = r("2KeS"),
-            f = r("6sO2"),
+            h = r("Odds"),
+            m = r("2KeS"),
             g = r("dadB"),
-            m = function(e) {
+            f = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(l._8, null, a.createElement(l._2, {
+                    return a.createElement(h._8, null, a.createElement(h._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement("header", null, a.createElement(l._2, {
+                    }, a.createElement("header", null, a.createElement(h._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(l.Q, {
-                        type: l._49.H2
-                    }, Object(f.d)("Manage Application: ", "DevAppEdit"), " ", this.props.app.name)), a.createElement(l.Q, {
-                        type: l._49.P
-                    }, Object(f.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevAppEdit")))), a.createElement(g.a, {
+                    }, a.createElement(h.Q, {
+                        type: h._49.H2
+                    }, Object(s.d)("Manage Application: ", "DevAppEdit"), " ", this.props.app.name)), a.createElement(h.Q, {
+                        type: h._49.P
+                    }, Object(s.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevAppEdit")))), a.createElement(g.a, {
                         app: this.props.app,
                         onResetSecret: this.props.onResetSecret,
                         onSave: this.props.onUpdate,
@@ -275,10 +69,10 @@ webpackJsonp([117], {
                     }))
                 }, t
             }(a.Component),
-            _ = Object(h.d)(Object(u.d)("DevAppEditPageComponent", {
+            v = Object(m.d)(Object(l.d)("DevAppEditPageComponent", {
                 autoReportInteractive: !0
-            }))(m),
-            v = function(e) {
+            }))(f),
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -288,21 +82,25 @@ webpackJsonp([117], {
                         succeeded: !1
                     }, t.loadApp = function() {
                         return n.__awaiter(t, void 0, void 0, function() {
-                            var e, t;
-                            return n.__generator(this, function(r) {
-                                switch (r.label) {
+                            var e, t, r;
+                            return n.__generator(this, function(n) {
+                                switch (n.label) {
                                     case 0:
                                         if (!(e = this.props.match.params.id)) return [2];
-                                        r.label = 1;
+                                        n.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, c.a.get("/kraken/apps/" + e)];
+                                        return n.trys.push([1, 5, , 6]), [4, Object(d.a)(c.a + "/kraken/apps/" + e)];
                                     case 2:
-                                        return 200 === (t = r.sent()).status && t.body && this.setState({
-                                            app: t.body
-                                        }), [3, 4];
+                                        return 200 !== (t = n.sent()).status ? [3, 4] : [4, t.json()];
                                     case 3:
-                                        return r.sent(), [2];
+                                        (r = n.sent()) && this.setState({
+                                            app: r
+                                        }), n.label = 4;
                                     case 4:
+                                        return [3, 6];
+                                    case 5:
+                                        return n.sent(), [2];
+                                    case 6:
                                         return [2]
                                 }
                             })
@@ -313,7 +111,7 @@ webpackJsonp([117], {
                             return n.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return r.trys.push([0, 4, , 5]), [4, Object(d.a)("https://api.twitch.tv/kraken/app_categories")];
+                                        return r.trys.push([0, 4, , 5]), [4, Object(d.a)(c.a + "/kraken/app_categories")];
                                     case 1:
                                         return 200 !== (e = r.sent()).status ? [3, 3] : [4, e.json()];
                                     case 2:
@@ -339,7 +137,7 @@ webpackJsonp([117], {
                                     case 0:
                                         t = this.props.match.params.id, n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 7, , 8]), [4, Object(d.a)("https://api.twitch.tv/kraken/apps/" + t, {
+                                        return n.trys.push([1, 7, , 8]), [4, Object(d.a)(c.a + "/kraken/apps/" + t, {
                                             method: "PUT",
                                             body: JSON.stringify(e)
                                         })];
@@ -349,7 +147,7 @@ webpackJsonp([117], {
                                         return (a = n.sent()) && this.setState({
                                             succeeded: !0,
                                             app: a
-                                        }), [2];
+                                        }), [3, 6];
                                     case 4:
                                         return [4, r.json()];
                                     case 5:
@@ -371,10 +169,10 @@ webpackJsonp([117], {
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        if (e = this.props.match.params.id, !window.confirm("Are you sure you want to generate a new secret?")) return [3, 6];
+                                        if (e = this.props.match.params.id, !window.confirm(Object(s.d)("Are you sure you want to generate a new secret?", "DevAppEdit"))) return [3, 6];
                                         n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 5, , 6]), [4, Object(d.a)("https://api.twitch.tv/kraken/apps/" + e + "/reset_secret", {
+                                        return n.trys.push([1, 5, , 6]), [4, Object(d.a)(c.a + "/kraken/apps/" + e + "/reset_secret", {
                                             method: "POST"
                                         })];
                                     case 2:
@@ -412,7 +210,7 @@ webpackJsonp([117], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return this.state.app && this.state.categories ? a.createElement(_, {
+                    return this.state.app && this.state.categories ? a.createElement(v, {
                         app: this.state.app,
                         onUpdate: this.onUpdate,
                         onResetSecret: this.onResetSecret,
@@ -421,18 +219,18 @@ webpackJsonp([117], {
                         categories: this.state.categories,
                         errorMessage: this.state.errorMessage,
                         succeeded: this.state.succeeded
-                    }) : a.createElement(l._10, {
+                    }) : a.createElement(h._10, {
                         fillContent: !0
                     })
-                }, t = n.__decorate([Object(u.d)("DevAppEditPage", {
-                    destination: i.a.DevSiteAppEdit
-                }), Object(s.a)({
-                    location: p.PageviewLocation.DevSiteAppEdit
+                }, t = n.__decorate([Object(l.d)("DevAppEditPage", {
+                    destination: p.a.DevSiteAppEdit
+                }), Object(i.a)({
+                    location: u.PageviewLocation.DevSiteAppEdit
                 })], t)
             }(a.Component),
-            y = Object(o.f)(v);
+            y = Object(o.f)(_);
         r.d(t, "DevAppEditContainer", function() {
-            return v
+            return _
         }), r.d(t, "DevAppEditPage", function() {
             return y
         })
@@ -489,10 +287,10 @@ webpackJsonp([117], {
             u = Object(i.d)("DevAppSecret", {
                 autoReportInteractive: !0
             })(p),
-            d = (r("TldM"), "app-form-other-category-input"),
-            l = "app-form-extended-information",
+            l = (r("TldM"), "app-form-other-category-input"),
+            d = "app-form-extended-information",
             h = "app-form-submit-button",
-            f = function(e) {
+            m = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -524,11 +322,11 @@ webpackJsonp([117], {
                             value: t.state.categoryOther,
                             type: c._5.Text,
                             onChange: t.setCategoryOther,
-                            "data-test-selector": d
+                            "data-test-selector": l
                         })))
                     }, t.renderExistingAppDetails = function() {
                         if (t.props.app) return a.createElement(c._8, {
-                            "data-test-selector": l
+                            "data-test-selector": d
                         }, a.createElement(c._8, {
                             margin: {
                                 bottom: 1
@@ -540,7 +338,7 @@ webpackJsonp([117], {
                             value: t.state.id,
                             disabled: !0,
                             type: c._5.Text,
-                            "data-test-selector": d
+                            "data-test-selector": l
                         }))))
                     }, t.renderAppSecret = function() {
                         if (t.props.app) return a.createElement(u, {
@@ -663,13 +461,13 @@ webpackJsonp([117], {
             }(a.Component),
             g = Object(o.d)(Object(i.d)("DevAppForm", {
                 autoReportInteractive: !0
-            }))(f);
+            }))(m);
         r.d(t, !1, function() {
             return "app-form-category-select"
         }), r.d(t, !1, function() {
-            return d
-        }), r.d(t, !1, function() {
             return l
+        }), r.d(t, !1, function() {
+            return d
         }), r.d(t, !1, function() {
             return h
         }), r.d(t, !1, function() {
@@ -799,4 +597,4 @@ webpackJsonp([117], {
         }
     }
 });
-//# sourceMappingURL=sites.dev.pages.app-edit-page-430523fae7e4f5ba2ddceedd9d5b0d1d.js.map
+//# sourceMappingURL=sites.dev.pages.app-edit-page-85075e22a565bbe36f20703dd14d0ee2.js.map

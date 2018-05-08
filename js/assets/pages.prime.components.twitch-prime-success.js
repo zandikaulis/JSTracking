@@ -1,4 +1,4 @@
-webpackJsonp([99], {
+webpackJsonp([100], {
     "+6x9": function(e, t, n) {
         "use strict";
         var i, r, a = n("TToO"),
@@ -3060,15 +3060,15 @@ webpackJsonp([99], {
                 }
             }))(j),
             M = n("daN3"),
-            A = n("CwIZ"),
-            U = (n("+YN9"), function(e) {
+            U = n("CwIZ"),
+            A = (n("+YN9"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         selectedUser: null
                     }, t.reportGiftCheckoutAction = function() {
                         t.props.reportSubMenuAction({
-                            action: A.a.BuyGiftSub,
+                            action: U.a.BuyGiftSub,
                             checkoutButtonTier: t.props.selectedProductPrice,
                             giftRecipient: t.state.selectedUser ? t.state.selectedUser.login : null
                         })
@@ -3267,7 +3267,7 @@ webpackJsonp([99], {
                             id: "gift-recipient-search",
                             placeholder: Object(c.d)("Search for a Twitch ID", "GiftRecipientSearch"),
                             "data-test-selector": "gift-recipient-search-input-selector"
-                        }), a.createElement(U, {
+                        }), a.createElement(A, {
                             hasInput: this.props.hasInput,
                             userResults: this.props.userResults,
                             isErrored: this.props.isErrored,
@@ -3433,7 +3433,7 @@ webpackJsonp([99], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goToPreviousPage = function() {
                         t.props.reportSubMenuAction({
-                            action: A.a.ClickBack,
+                            action: U.a.ClickBack,
                             modalLevel: t.props.currentPage === i.SubOptions || t.props.currentPage === i.GiftOptions ? "top_page" : "second_page"
                         }), t.props.currentPage !== i.RecipientSelect || t.props.showTop()
                     }, t
@@ -3855,7 +3855,7 @@ webpackJsonp([99], {
                         })
                     }, t.showGiftOptions = function() {
                         t.props.reportSubMenuAction({
-                            action: A.a.ClickGiftSubOptions,
+                            action: U.a.ClickGiftSubOptions,
                             modalLevel: "second_page"
                         }), t.setState(function() {
                             return {
@@ -3864,7 +3864,7 @@ webpackJsonp([99], {
                         })
                     }, t.showSubOptions = function() {
                         t.props.reportSubMenuAction({
-                            action: A.a.ClickMoreSubOptions,
+                            action: U.a.ClickMoreSubOptions,
                             modalLevel: "second_page"
                         }), t.setState(function() {
                             return {
@@ -3873,7 +3873,7 @@ webpackJsonp([99], {
                         })
                     }, t.goToPreviousPage = function() {
                         if (t.props.reportSubMenuAction({
-                                action: A.a.ClickBack,
+                                action: U.a.ClickBack,
                                 modalLevel: t.state.currentPage === i.SubOptions || t.state.currentPage === i.GiftOptions ? "top_page" : "second_page"
                             }), t.state.currentPage === i.GiftOptions || t.state.currentPage === i.SubOptions || t.state.giftShortcut) return t.showTop(), void t.setState({
                             giftShortcut: !1
@@ -3887,7 +3887,7 @@ webpackJsonp([99], {
                         }) : t.setState({
                             giftShortcut: !1
                         }), t.props.reportSubMenuAction({
-                            action: A.a.GiftASub,
+                            action: U.a.GiftASub,
                             checkoutButtonTier: t.props.data.user.subscriptionProducts[t.state.selectedSubProductIndex].price
                         }), t.showRecipientSelect()
                     }, t.onSelectTierTab = function(e) {
@@ -3908,7 +3908,7 @@ webpackJsonp([99], {
                     }, t.handleTopPageSubButtonClick = function() {
                         if (!t.props.data.user || !t.props.data.user.subscriptionProducts) return null;
                         t.props.reportSubMenuAction({
-                            action: A.a.ClickCheckout,
+                            action: U.a.ClickCheckout,
                             checkoutButtonTier: t.props.data.user.subscriptionProducts[0].price
                         })
                     }, t.onSubscribedWithPrime = function() {
@@ -4112,7 +4112,7 @@ webpackJsonp([99], {
                     }, t.modalLevel = "top_page", t.reportSubMenuAction = function(e) {
                         var n = !!(t.props.data.user && t.props.data.user.self && t.props.data.user.self.subscriptionBenefit),
                             i = t.props.data.requestInfo && Object(g.a)(t.props.data.requestInfo.countryCode);
-                        Object(A.b)({
+                        Object(U.b)({
                             action: e.action || "",
                             channelLogin: t.props.channelLogin || "",
                             channelID: t.props.data && t.props.data.user.id,
@@ -4120,18 +4120,18 @@ webpackJsonp([99], {
                             hasSubCredit: !!t.props.data.user.self && t.props.data.user.self.canPrimeSubscribe,
                             hostChannelID: t.props.hostChannelID,
                             hostChannelLogin: t.props.hostChannelLogin,
-                            isMenuOpen: !(e.action === A.a.OpenSubMenu),
+                            isMenuOpen: !(e.action === U.a.OpenSubMenu),
                             sub_location: "channel_page",
                             modal: !n,
                             modalLevel: n ? "" : t.modalLevel.slice(),
                             showPrimeContent: i,
                             giftRecipient: e.giftRecipient || null
-                        }), !e.modalLevel || e.action !== A.a.ClickMoreSubOptions && e.action !== A.a.ClickBack || (t.modalLevel = e.modalLevel, t.setState({
+                        }), !e.modalLevel || e.action !== U.a.ClickMoreSubOptions && e.action !== U.a.ClickBack || (t.modalLevel = e.modalLevel, t.setState({
                             activeTierPrice: m.a.Prime
                         }))
                     }, t.handleMenuToggle = function(e) {
                         t.reportSubMenuAction({
-                            action: e ? A.a.CloseSubMenu : A.a.OpenSubMenu
+                            action: e ? U.a.CloseSubMenu : U.a.OpenSubMenu
                         })
                     }, t.onSelectTierTab = function(e) {
                         t.state.activeTierPrice !== e && t.setState({
@@ -4139,7 +4139,7 @@ webpackJsonp([99], {
                         })
                     }, t.onSubscribedWithPrime = function() {
                         t.reportSubMenuAction({
-                            action: A.a.SubWithPrime
+                            action: U.a.SubWithPrime
                         }), t.modalLevel = ""
                     }, t
                 }
@@ -4466,7 +4466,9 @@ webpackJsonp([99], {
                                 type: _.P.Overlay
                             }, e)
                         }
-                    }, "FortniteSuccess"))))), r.createElement(P, null), r.createElement(m.a, null), r.createElement(h.a, {
+                    }, "FortniteSuccess"))))), r.createElement(P, null), r.createElement(m.a, {
+                        hash: this.props.location.hash.replace("#", "")
+                    }), r.createElement(h.a, {
                         partnerSocialLink: "https://twitter.com/FortniteGame",
                         partnerSocialText: "@FortniteGame"
                     }))
@@ -5672,7 +5674,7 @@ webpackJsonp([99], {
                     value: "profile general report reason"
                 }
             },
-            A = {
+            U = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username}'s Room", {
                         username: e
@@ -5683,18 +5685,18 @@ webpackJsonp([99], {
                 value: "room report user",
                 type: _.MultipleChoice
             },
-            U = {
+            A = {
                 getTitle: R.tellUsMore,
                 items: [T.input_description],
                 type: _.Confirm,
                 value: "tell us more"
             },
             B = {
-                banEvasion: r.__assign({}, U, {
+                banEvasion: r.__assign({}, A, {
                     items: [T.input_usernames, T.input_description],
                     value: "ban evasion tell us more"
                 }),
-                socialMedia: r.__assign({}, U, {
+                socialMedia: r.__assign({}, A, {
                     items: [T.input_link, T.input_connection, T.input_description],
                     nextCard: x.socialMedia,
                     value: "social media tell us more"
@@ -5813,14 +5815,14 @@ webpackJsonp([99], {
                 value: "impersonation type"
             },
             q = L,
-            K = U,
+            K = A,
             Y = I,
             $ = {
                 video: F.identifyUser,
                 whisper: D,
                 chat: j.content,
                 profile: M.content,
-                room: A,
+                room: U,
                 "somewhere else": W.identifyLocation,
                 streamer: F.content,
                 "someone else in video": F.content,
@@ -5864,7 +5866,7 @@ webpackJsonp([99], {
                 EVENT_REPORT: M.content,
                 EXTENSION_REPORT: M.content,
                 LIVE_UP_REPORT: M.content,
-                ROOM_REPORT: A,
+                ROOM_REPORT: U,
                 WHISPER_REPORT: D,
                 VOD_COMMENT_REPORT: j.content
             },
@@ -7944,26 +7946,32 @@ webpackJsonp([99], {
         "use strict";
         var i = n("TToO"),
             r = n("GiK3"),
-            a = n("6sO2"),
-            o = n("Odds"),
-            s = (n("j9al"), function(e) {
+            a = n("O27J"),
+            o = n("6sO2"),
+            s = n("Odds"),
+            l = (n("j9al"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                    var e = this.props.hash,
+                        t = e && a.findDOMNode(this.refs[e]);
+                    t && t.scrollIntoView()
+                }, t.prototype.render = function() {
                     return r.createElement("div", {
-                        id: "faq"
-                    }, r.createElement(o._35, {
+                        id: "faq",
+                        ref: "faq"
+                    }, r.createElement(s._35, {
                         className: "twitch-prime-faq",
                         padding: {
                             x: 1,
                             y: 5
                         }
-                    }, r.createElement(o._23, {
+                    }, r.createElement(s._23, {
                         centered: !0
-                    }, r.createElement(o.Y, {
-                        justifyContent: o._7.Center
-                    }, r.createElement(o.L, {
+                    }, r.createElement(s.Y, {
+                        justifyContent: s._7.Center
+                    }, r.createElement(s.L, {
                         cols: {
                             default: 12,
                             sm: 10,
@@ -7971,80 +7979,81 @@ webpackJsonp([99], {
                             lg: 7,
                             xl: 6
                         }
-                    }, r.createElement(o._8, {
+                    }, r.createElement(s._8, {
                         margin: {
                             bottom: 2
                         },
-                        textAlign: o._45.Center,
+                        textAlign: s._45.Center,
                         fullWidth: !0
-                    }, r.createElement(o.Q, {
-                        type: o._49.H2,
+                    }, r.createElement(s.Q, {
+                        type: s._49.H2,
                         bold: !0
-                    }, Object(a.d)("FAQ/Help", "PrimeFAQComponent"))), this.renderQuestion(Object(a.d)("Q: Do I need a Twitch Prime membership to get Fortnite content?", "PrimeFAQComponent"), "membership"), this.renderAnswer(Object(a.d)("A: Yes.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: What exactly will I get in the Twitch Prime Pack #2?", "PrimeFAQComponent"), "loot"), this.renderAnswer(Object(a.d)("A: This pack includes 4 distinct items, all of which are exclusively available to Twitch Prime members:", "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("Battle Royale Trailblazer Outfit: On the forefront of victory.", "PrimeFAQComponent"), Object(a.d)("Battle Royale True North Back Bling: Find your way.", "PrimeFAQComponent"), Object(a.d)("Battle Royale Tenderizer Pickaxe: Leave a good first impression.", "PrimeFAQComponent"), Object(a.d)("Battle Royale Freestylin’ Emote: Tear up the dance floor.", "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("Note: All items are cosmetic only and provide no competitive advantage. All items for Twitch Prime Pack #2 are for Battle Royale only.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: How do I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "content"), this.renderAnswer(Object(a.d)("A: If you already have an active Twitch Prime membership (either paid or free trial), log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: I already linked my Twitch and Epic account when I claimed the first Twitch Prime Pack. Do I need to claim again to get the current Twitch Prime content?", "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("A: YES. You must claim each Twitch Prime Pack individually. If you already linked your Twitch and Epic accounts for the previous Twitch Prime loot in Fortnite, log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: How do I become a Twitch Prime member?", "PrimeFAQComponent"), "signup"), this.renderAnswerWithLink(Object(a.d)("A: Twitch Prime is included with Amazon Prime in the US, Mexico, Canada, Italy, France, Germany, Belgium, Austria, Spain, Japan, Singapore, Netherlands, and the United Kingdom. Twitch Prime is included with Prime Video in over 200 other countries and territories. If you are already an Amazon Prime member, you get Twitch Prime at no additional cost by connecting your Amazon account to your Twitch account at <x:link>http://www.twitchprime.com</x:link>.", {
+                    }, Object(o.d)("FAQ/Help", "PrimeFAQComponent"))), this.renderQuestion(Object(o.d)("Do I need a Twitch Prime membership to get Fortnite content?", "PrimeFAQComponent"), "membership"), this.renderAnswer(Object(o.d)("Yes.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("What exactly will I get in the Twitch Prime Pack #2?", "PrimeFAQComponent"), "loot"), this.renderAnswer(Object(o.d)("This pack includes 4 distinct items, all of which are exclusively available to Twitch Prime members:", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("Battle Royale Trailblazer Outfit: On the forefront of victory.", "PrimeFAQComponent"), Object(o.d)("Battle Royale True North Back Bling: Find your way.", "PrimeFAQComponent"), Object(o.d)("Battle Royale Tenderizer Pickaxe: Leave a good first impression.", "PrimeFAQComponent"), Object(o.d)("Battle Royale Freestylin’ Emote: Tear up the dance floor.", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("Note: All items are cosmetic only and provide no competitive advantage. All items for Twitch Prime Pack #2 are for Battle Royale only.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("How do I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "content"), this.renderAnswer(Object(o.d)("If you already have an active Twitch Prime membership (either paid or free trial), log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("I already linked my Twitch and Epic account when I claimed the first Twitch Prime Pack. Do I need to claim again to get the current Twitch Prime content?", "PrimeFAQComponent"), "linkedaccount"), this.renderAnswer(Object(o.d)("YES. You must claim each Twitch Prime Pack individually. If you already linked your Twitch and Epic accounts for the previous Twitch Prime loot in Fortnite, log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("How do I become a Twitch Prime member?", "PrimeFAQComponent"), "signup"), this.renderAnswerWithLink(Object(o.d)("Twitch Prime is included with Amazon Prime in the US, Mexico, Canada, Italy, France, Germany, Belgium, Austria, Spain, Japan, Singapore, Netherlands, and the United Kingdom. Twitch Prime is included with Prime Video in over 200 other countries and territories. If you are already an Amazon Prime member, you get Twitch Prime at no additional cost by connecting your Amazon account to your Twitch account at <x:link>http://www.twitchprime.com</x:link>.", {
                         "x:link": function(e) {
-                            return r.createElement(o.O, {
+                            return r.createElement(s.O, {
                                 key: e,
                                 to: "http://www.twitchprime.com"
                             }, e)
                         }
-                    }, "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("If you are not already an Amazon Prime member, you may start your free trial (if available) above. Follow all of the steps and the content that is currently available will be sent directly to your game account.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: When will I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("A: If you've followed all of the steps in the claim process for this offer, your content will be waiting for you in your locker the next time you log in to Fortnite!", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: Can I change which Epic account my Fortnite content is delivered to?", "PrimeFAQComponent")), this.renderAnswerWithLink(Object(a.d)("A: If you claimed the first Fortnite Twitch Prime Pack and would like to use a different Epic account for this offer, you may unlink your previous Epic account from Twitch and link a new one to receive content on that account after completing the claim process above. You can manage your connected accounts at <x:link>https://www.epicgames.com/account/connected</x:link>.", {
+                    }, "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("If you are not already an Amazon Prime member, you may start your free trial (if available) above. Follow all of the steps and the content that is currently available will be sent directly to your game account.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("When will I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "when"), this.renderAnswer(Object(o.d)("If you've followed all of the steps in the claim process for this offer, your content will be waiting for you in your locker the next time you log in to Fortnite!", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Can I change which Epic account my Fortnite content is delivered to?", "PrimeFAQComponent"), "changeaccount"), this.renderAnswerWithLink(Object(o.d)("If you claimed the first Fortnite Twitch Prime Pack and would like to use a different Epic account for this offer, you may unlink your previous Epic account from Twitch and link a new one to receive content on that account after completing the claim process above. You can manage your connected accounts at <x:link>https://www.epicgames.com/account/connected</x:link>.", {
                         "x:link": function(e) {
-                            return r.createElement(o.O, {
+                            return r.createElement(s.O, {
                                 key: e,
                                 to: "https://www.epicgames.com/account/connected"
                             }, e)
                         }
-                    }, "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: I received an error that my Twitch or Amazon account has already claimed this content. What do I do?", "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("A: This happens when a different Twitch account was linked to your Amazon account (or vice versa) and claimed the current Twitch Prime Pack. Please check that the same Twitch account is linked to the Amazon account that was originally used to claim this Twitch Prime Pack.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: I play Fortnite on my PS4/Xbox One/PC primarily, but also play on mobile. Will I be able to access the Twitch Prime content everywhere that I play?", "PrimeFAQComponent"), "mobile"), this.renderAnswer(Object(a.d)("A: As long as you use the same Epic account to play on each platform, you will be able to access your Twitch Prime content across PC/console and mobile. Content is not shared between Xbox One and PS4, however.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: Can I link multiple Twitch Prime accounts to my Epic account and get additional content?", "PrimeFAQComponent"), "multiple"), this.renderAnswer(Object(a.d)("A: No. Each offer can only be applied once to a single Epic account.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: How long do I have to claim Twitch Prime Pack #2?", "PrimeFAQComponent"), "duration"), this.renderAnswer(Object(a.d)("A: You'll have until July 11, 2018 at 9 AM PST to claim the Twitch Prime Pack #2.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: Can I still get previous Twitch Prime content for Fortnite?", "PrimeFAQComponent")), this.renderAnswer(Object(a.d)("A: You will only receive content that is currently available. However, if you have successfully claimed the first Twitch Prime pack but not completed the account linking flow prior to May 9, 2018 at 9 AM PST, you will receive that content after completing the current offer claim flow above.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: Do I continue to receive content if my free trial expires? What happens to my content if I no longer have a Prime membership or my free trial expires?", "PrimeFAQComponent"), "freetrial"), this.renderAnswer(Object(a.d)("A: You need to have an active Twitch Prime membership to receive content that is currently available. Once you claim your Fortnite content, all content that is delivered to your game is yours to keep, subject to any Epic Games rules or policies that apply to the content. However, you will not receive future content without an active Twitch Prime membership.", "PrimeFAQComponent")), this.renderQuestion(Object(a.d)("Q: Where can I get Fortnite?", "PrimeFAQComponent"), "fortnite"), this.renderAnswerWithLink(Object(a.d)("A: Fortnite: Battle Royale is free! Visit <x:link>https://www.epicgames.com/fortnite/en-US/buy-now/battle-royale</x:link> to find out how to start playing on PC, Xbox One, PS4, and iOS.", {
+                    }, "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("I received an error that my Twitch or Amazon account has already claimed this content. What do I do?", "PrimeFAQComponent"), "alreadyclaimed"), this.renderAnswer(Object(o.d)("This happens when a different Twitch account was linked to your Amazon account (or vice versa) and claimed the current Twitch Prime Pack. Please check that the same Twitch account is linked to the Amazon account that was originally used to claim this Twitch Prime Pack.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("I play Fortnite on my PS4/Xbox One/PC primarily, but also play on mobile. Will I be able to access the Twitch Prime content everywhere that I play?", "PrimeFAQComponent"), "mobile"), this.renderAnswer(Object(o.d)("As long as you use the same Epic account to play on each platform, you will be able to access your Twitch Prime content across PC/console and mobile. Content is not shared between Xbox One and PS4, however.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Can I link multiple Twitch Prime accounts to my Epic account and get additional content?", "PrimeFAQComponent"), "multiple"), this.renderAnswer(Object(o.d)("No. Each offer can only be applied once to a single Epic account.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("How long do I have to claim Twitch Prime Pack #2?", "PrimeFAQComponent"), "duration"), this.renderAnswer(Object(o.d)("You'll have until July 11, 2018 at 9 AM PST to claim the Twitch Prime Pack #2.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Can I still get previous Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "pack1"), this.renderAnswer(Object(o.d)("You will only receive content that is currently available. However, if you have successfully claimed the first Twitch Prime pack but not completed the account linking flow prior to May 9, 2018 at 9 AM PST, you will receive that content after completing the current offer claim flow above.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Do I continue to receive content if my free trial expires? What happens to my content if I no longer have a Prime membership or my free trial expires?", "PrimeFAQComponent"), "freetrial"), this.renderAnswer(Object(o.d)("You need to have an active Twitch Prime membership to receive content that is currently available. Once you claim your Fortnite content, all content that is delivered to your game is yours to keep, subject to any Epic Games rules or policies that apply to the content. However, you will not receive future content without an active Twitch Prime membership.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("Where can I get Fortnite?", "PrimeFAQComponent"), "fortnite"), this.renderAnswerWithLink(Object(o.d)("Fortnite: Battle Royale is free! Visit <x:link>https://www.epicgames.com/fortnite/en-US/buy-now/battle-royale</x:link> to find out how to start playing on PC, Xbox One, PS4, and iOS.", {
                         "x:link": function(e) {
-                            return r.createElement(o.O, {
+                            return r.createElement(s.O, {
                                 key: e,
                                 to: "https://www.epicgames.com/fortnite/en-US/buy-now/battle-royale"
                             }, e)
                         }
-                    }, "PrimeFAQComponent")), r.createElement(o._8, {
+                    }, "PrimeFAQComponent")), r.createElement(s._8, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(o.v, {
-                        linkTo: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
+                    }, r.createElement(s.v, {
+                        linkTo: "https://help.twitch.tv/customer/portal/articles/2572060-twitch-prime-guide#HelpContact",
                         fullWidth: !0
-                    }, Object(a.d)("Need help? Contact Us", "PrimeFAQComponent"))))))))
+                    }, Object(o.d)("Need help? Contact Us", "PrimeFAQComponent"))))))))
                 }, t.prototype.renderQuestion = function(e, t) {
                     return r.createElement("div", {
-                        id: t
-                    }, r.createElement(o._8, {
+                        id: t,
+                        ref: t
+                    }, r.createElement(s._8, {
                         margin: {
-                            bottom: 1
+                            top: 2
                         }
-                    }, r.createElement(o.Q, {
-                        type: o._49.H4,
+                    }, r.createElement(s.Q, {
+                        type: s._49.H4,
                         bold: !0
                     }, e)))
                 }, t.prototype.renderAnswer = function() {
                     for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
-                    return 1 === e.length ? r.createElement(o._8, {
+                    return 1 === e.length ? r.createElement(s._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(o.Q, null, e[0])) : r.createElement(o._8, {
+                    }, r.createElement(s.Q, null, e[0])) : r.createElement(s._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(o._58, null, r.createElement("ul", null, e.map(function(e) {
+                    }, r.createElement(s._58, null, r.createElement("ul", null, e.map(function(e) {
                         return r.createElement("li", {
                             key: e
-                        }, r.createElement(o.Q, null, e))
+                        }, r.createElement(s.Q, null, e))
                     }))))
                 }, t.prototype.renderAnswerWithLink = function(e) {
-                    return r.createElement(o._8, {
+                    return r.createElement(s._8, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(o.Q, null, e))
+                    }, r.createElement(s.Q, null, e))
                 }, t
             }(r.Component));
         n.d(t, "a", function() {
-            return s
+            return l
         })
     },
     Kxgf: function(e, t, n) {
@@ -8138,7 +8147,7 @@ webpackJsonp([99], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(129).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -8150,7 +8159,7 @@ webpackJsonp([99], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(128).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -8162,7 +8171,7 @@ webpackJsonp([99], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(126).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(127).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -8174,7 +8183,7 @@ webpackJsonp([99], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(125).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(126).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -12331,8 +12340,8 @@ webpackJsonp([99], {
             j = n("eBiB"),
             D = n("HM6l"),
             M = n("JpYe"),
-            A = n("ZVME"),
-            U = n("CSlQ"),
+            U = n("ZVME"),
+            A = n("CSlQ"),
             B = n("L3z0"),
             V = n("5MsU"),
             W = n("Tjmd"),
@@ -12532,30 +12541,30 @@ webpackJsonp([99], {
                 }, t.prototype.registerBufferingEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 1e3,
-                        group: A.a.Player,
-                        key: A.b.PlayerBuffering,
-                        label: A.c.Buffering
+                        group: U.a.Player,
+                        key: U.b.PlayerBuffering,
+                        label: U.c.Buffering
                     })
                 }, t.prototype.registerCreatedEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 1e3,
-                        group: A.a.Player,
-                        key: A.b.PlayerCreated,
-                        label: A.c.Created
+                        group: U.a.Player,
+                        key: U.b.PlayerCreated,
+                        label: U.c.Created
                     })
                 }, t.prototype.registerLoadedEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 2500,
-                        group: A.a.Player,
-                        key: A.b.PlayerLoaded,
-                        label: A.c.Init
+                        group: U.a.Player,
+                        key: U.b.PlayerLoaded,
+                        label: U.c.Init
                     })
                 }, t.prototype.registerPlayedEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 4e3,
-                        group: A.a.Player,
-                        key: A.b.PlayerPlayed,
-                        label: A.c.FirstFrame
+                        group: U.a.Player,
+                        key: U.b.PlayerPlayed,
+                        label: U.c.FirstFrame
                     })
                 }, t.prototype.reportPlayerBuffering = function() {
                     this.hasBuffered || (this.hasBuffered = !0, this.playerBuffering && this.props.latencyTracking.reportCustomEvent(this.playerBuffering))
@@ -12579,7 +12588,7 @@ webpackJsonp([99], {
                     L.unbind("alt+x")
                 }, t.tagInjected = !1, t
             }(r.Component),
-            q = Object(U.d)("VideoPlayer")(Q);
+            q = Object(A.d)("VideoPlayer")(Q);
         var K = Object(f.d)(Object(g.b)(function(e) {
             return {
                 isWhispersBottomBarVisible: Object(C.b)(e),
@@ -15171,7 +15180,7 @@ webpackJsonp([99], {
                     }))
                 }, t
             }(r.Component),
-            A = (n("ea7N"), function(e) {
+            U = (n("ea7N"), function(e) {
                 var t = null;
                 return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
                     return r.createElement(c._8, {
@@ -15198,7 +15207,7 @@ webpackJsonp([99], {
                     className: "preview-card-titles__subtitle-wrapper"
                 }, t))
             }),
-            U = n("IOwa"),
+            A = n("IOwa"),
             B = n("mi6k");
 
         function V(e) {
@@ -15249,7 +15258,7 @@ webpackJsonp([99], {
                 }, this.renderTitles())), this.renderAppendages())
             }, t.prototype.renderOverlay = function() {
                 return V(this.props) ? r.createElement(I, {
-                    topLeft: r.createElement(U.a, {
+                    topLeft: r.createElement(A.a, {
                         type: this.props.streamType,
                         hosting: !!this.props.hostedByChannelLogin
                     }),
@@ -15315,7 +15324,7 @@ webpackJsonp([99], {
                 }) : this.props.context !== C.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && e.push({
                     text: this.props.gameTitle,
                     linkTo: this.props.gameTitleLinkTo
-                }), r.createElement(A, {
+                }), r.createElement(U, {
                     title: this.props.title,
                     linkTo: this.props.linkTo,
                     subtitles: e
@@ -15699,4 +15708,4 @@ webpackJsonp([99], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-f1b9b41f5be6a9b0a247690b3473dddf.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-3c2679131ae3541cc1be5e45842e71af.js.map

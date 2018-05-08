@@ -1,4 +1,4 @@
-webpackJsonp([80], {
+webpackJsonp([82], {
     BBWW: function(e, n) {
         var t = {
             kind: "Document",
@@ -492,4 +492,4 @@ webpackJsonp([80], {
             }), Object(c.d)("SubscribedChannels"))(f)
     }
 });
-//# sourceMappingURL=features.side-nav.components.subscribed-channels.component-5da16c3f22d3daa619c164f59f2ce9f9.js.map
+//# sourceMappingURL=features.side-nav.components.subscribed-channels.component-9ec467c62f7552a229958543f96cf9cb.js.map

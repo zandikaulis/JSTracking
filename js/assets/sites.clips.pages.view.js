@@ -1464,7 +1464,7 @@ webpackJsonp([48], {
                     return this.props.data.clip ? (e = this.props.data.clip.video ? o.createElement(k.v, {
                         targetBlank: !0,
                         linkTo: Object(g.g)(this.props.data.clip.video.id, {
-                            t: Object(re.a)(this.props.data.clip.video.offsetSeconds),
+                            t: Object(re.a)(this.props.data.clip.videoOffsetSeconds),
                             tt_medium: "clips_web",
                             tt_content: "full_vod_button"
                         })
@@ -8448,6 +8448,14 @@ webpackJsonp([48], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "videoOffsetSeconds"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "video"
                                 },
                                 arguments: [],
@@ -8462,14 +8470,6 @@ webpackJsonp([48], {
                                         },
                                         arguments: [],
                                         directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "offsetSeconds"
-                                        },
-                                        arguments: [],
-                                        directives: []
                                     }]
                                 }
                             }]
@@ -8479,11 +8479,11 @@ webpackJsonp([48], {
             }],
             loc: {
                 start: 0,
-                end: 94
+                end: 99
             }
         };
         n.loc.source = {
-            body: "query ClipsFullVideoButton($slug: ID!) {\nclip(slug: $slug) {\nid\nvideo {\nid\noffsetSeconds\n}\n}\n}",
+            body: "query ClipsFullVideoButton($slug: ID!) {\nclip(slug: $slug) {\nid\nvideoOffsetSeconds\nvideo {\nid\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -11622,4 +11622,4 @@ webpackJsonp([48], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-e0cb25036b3c16d35cab66cd273c1c04.js.map
+//# sourceMappingURL=sites.clips.pages.view-5feb6c79bbba35841b5ac66563a169f8.js.map

@@ -116,6 +116,74 @@ webpackJsonp([70], {
             return i.PageviewLocation
         })
     },
+    "j7/Y": function(e, t, n) {
+        "use strict";
+        var r = n("TToO"),
+            i = n("OAwv"),
+            o = n("GiK3"),
+            a = n("F8kA"),
+            s = n("6sO2");
+
+        function d(e) {
+            return function(t) {
+                var n = function(n) {
+                    function a(t) {
+                        var i = n.call(this, t) || this;
+                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
+                            if (!(i.tracked || e.skip && e.skip(i.props))) {
+                                i.tracked = !0;
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
+                                var n = r.__assign({}, i.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var o = i.referenceTracking,
+                                    a = o.content,
+                                    d = o.medium,
+                                    c = o.content_index;
+                                s.o.tracking.trackPageview(r.__assign({
+                                    content: a,
+                                    medium: d,
+                                    content_index: c,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                    }
+                    return r.__extends(a, n), a.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, a.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, a.prototype.render = function() {
+                        return o.createElement(t, r.__assign({}, this.props))
+                    }, a.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? i.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var r = "",
+                                o = i.stringify(t);
+                            o.length > 0 && (r = "?" + o), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: r
+                            })
+                        }
+                        return n
+                    }, a
+                }(o.Component);
+                return Object(a.f)(n)
+            }
+        }
+        n.d(t, "a", function() {
+            return d
+        })
+    },
     mlfa: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -123,23 +191,23 @@ webpackJsonp([70], {
         });
         var r = n("TToO"),
             i = n("GiK3"),
-            s = n("3zLD"),
+            o = n("3zLD"),
             a = n("RH2O"),
-            o = n("2KeS"),
+            s = n("2KeS"),
             d = n("6sO2"),
             c = n("7vx8"),
             u = n("j7/Y"),
             l = n("+xm8"),
-            f = n("f2i/"),
-            p = n("w9tK"),
-            g = n("Aj/L"),
-            m = n("CSlQ"),
-            v = n("9+OC"),
-            h = n("yWCw"),
-            F = n("sgJd"),
-            k = n("iPhu"),
-            b = n("Odds"),
-            y = function(e) {
+            p = n("f2i/"),
+            f = n("w9tK"),
+            m = n("Aj/L"),
+            g = n("CSlQ"),
+            h = n("9+OC"),
+            v = n("yWCw"),
+            k = n("sgJd"),
+            _ = n("iPhu"),
+            y = n("Odds"),
+            F = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.state = {
@@ -166,41 +234,41 @@ webpackJsonp([70], {
                         })
                     }
                 }, t.prototype.render = function() {
-                    return this.props.isLoggedIn ? i.createElement(b._8, {
+                    return this.props.isLoggedIn ? i.createElement(y._8, {
                         padding: {
                             x: 3,
                             y: 2
                         }
-                    }, i.createElement(F.a, {
-                        activeTab: F.b.Friends
-                    }), this.renderContent(), i.createElement(b._8, {
-                        display: b.R.Flex,
-                        justifyContent: b._7.Center
-                    }, this.props.loading && i.createElement(b._10, null))) : (this.props.login(), i.createElement(h.a, {
+                    }, i.createElement(k.a, {
+                        activeTab: k.b.Friends
+                    }), this.renderContent(), i.createElement(y._8, {
+                        display: y.R.Flex,
+                        justifyContent: y._7.Center
+                    }, this.props.loading && i.createElement(y._10, null))) : (this.props.login(), i.createElement(v.a, {
                         message: Object(d.d)("You must be logged in to view this page", "FriendsPage")
                     }))
                 }, t.prototype.renderContent = function() {
                     if (!this.props.isLoggedIn || this.props.loading) return null;
-                    if (this.props.error) return i.createElement(h.a, {
+                    if (this.props.error) return i.createElement(v.a, {
                         message: Object(d.d)("Failed to load friends", "FriendRequestsPage")
                     });
-                    if (0 === this.state.filteredUsers.length) return i.createElement(b._8, {
-                        textAlign: b._45.Center,
+                    if (0 === this.state.filteredUsers.length) return i.createElement(y._8, {
+                        textAlign: y._45.Center,
                         padding: {
                             y: 5
                         }
-                    }, i.createElement(b.Q, {
-                        color: b.K.Alt2,
-                        fontSize: b.V.Size4,
+                    }, i.createElement(y.Q, {
+                        color: y.K.Alt2,
+                        fontSize: y.V.Size4,
                         italic: !0
                     }, Object(d.d)("You don't have any friends yet. :(", "FriendsPage")));
                     var e = this.state.filteredUsers.map(function(e) {
-                        return e.id ? i.createElement(b._8, {
+                        return e.id ? i.createElement(y._8, {
                             key: e.id,
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(k.a, {
+                        }, i.createElement(_.a, {
                             id: e.id,
                             showButtonsOnHover: !0,
                             userData: {
@@ -208,10 +276,10 @@ webpackJsonp([70], {
                             }
                         })) : null
                     });
-                    return i.createElement(b._55, {
+                    return i.createElement(y._55, {
                         center: !0,
-                        childWidth: b._56.Large,
-                        gutterSize: b._57.Small,
+                        childWidth: y._56.Large,
+                        gutterSize: y._57.Small,
                         placeholderItems: 10
                     }, e)
                 }, t.prototype.detectUserDataChange = function(e, t) {
@@ -236,12 +304,12 @@ webpackJsonp([70], {
                 }, t
             }(i.Component),
             O = n("/ohK"),
-            S = function(e) {
+            b = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    d.o.setPageTitle(Object(d.d)("Friends", "FriendsPage")), _(this.props) && this.props.latencyTracking.reportInteractive()
+                    d.o.setPageTitle(Object(d.d)("Friends", "FriendsPage")), S(this.props) && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.props.data && 1 === this.props.data.networkStatus && e.data && 1 !== e.data.networkStatus && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
@@ -253,69 +321,69 @@ webpackJsonp([70], {
                             loading: e && e.loading || !1,
                             login: this.props.login
                         };
-                    return i.createElement(y, r.__assign({}, t))
+                    return i.createElement(F, r.__assign({}, t))
                 }, t
             }(i.Component);
 
-        function _(e) {
+        function S(e) {
             return !e.isLoggedIn
         }
-        var j = Object(s.compose)(Object(a.b)(function(e) {
+        var T = Object(o.compose)(Object(a.b)(function(e) {
             return {
-                isLoggedIn: Object(g.d)(e)
+                isLoggedIn: Object(m.d)(e)
             }
         }, function(e) {
-            return Object(o.b)({
+            return Object(s.b)({
                 login: function() {
-                    return Object(f.f)(l.a.FriendsPage)
+                    return Object(p.f)(l.a.FriendsPage)
                 }
             }, e)
         }), Object(c.a)(O, {
-            skip: _,
+            skip: S,
             options: {
                 notifyOnNetworkStatusChange: !0
             }
-        }), Object(m.d)("FriendsPage", {
-            destination: p.a.Friends
+        }), Object(g.d)("FriendsPage", {
+            destination: f.a.Friends
         }), Object(u.a)({
-            location: v.PageviewLocation.Friends
-        }))(S);
+            location: h.PageviewLocation.Friends
+        }))(b);
         n.d(t, "FriendsPage", function() {
-            return j
+            return T
         })
     },
     sgJd: function(e, t, n) {
         "use strict";
         var r, i = n("GiK3"),
-            s = n("6sO2"),
+            o = n("6sO2"),
             a = n("Odds");
         ! function(e) {
             e[e.Friends = 0] = "Friends", e[e.Requests = 1] = "Requests"
         }(r || (r = {}));
-        var o = function(e) {
+        var s = function(e) {
             return i.createElement(a._8, {
                 margin: {
                     bottom: 2
                 }
             }, i.createElement(a.Q, {
                 type: a._49.H2
-            }, Object(s.d)("Friends", "FriendsHeader")), i.createElement(a._8, {
+            }, Object(o.d)("Friends", "FriendsHeader")), i.createElement(a._8, {
                 margin: {
                     top: 1
                 }
             }, i.createElement(a._37, null, i.createElement(a._36, {
                 active: e.activeTab === r.Friends,
                 linkTo: "/friends"
-            }, Object(s.d)("Your Friends", "FriendsHeader")), i.createElement(a._36, {
+            }, Object(o.d)("Your Friends", "FriendsHeader")), i.createElement(a._36, {
                 active: e.activeTab === r.Requests,
                 linkTo: "/friends/requests"
-            }, Object(s.d)("Friend Requests", "FriendsHeader")))))
+            }, Object(o.d)("Friend Requests", "FriendsHeader")))))
         };
         n.d(t, "b", function() {
             return r
         }), n.d(t, "a", function() {
-            return o
+            return s
         })
     }
 });
-//# sourceMappingURL=pages.friends-b02077500c4ab124cec8c8eef5dc18c3.js.map
+//# sourceMappingURL=pages.friends-df61f452ce7cb70942b90b6902fc31ae.js.map

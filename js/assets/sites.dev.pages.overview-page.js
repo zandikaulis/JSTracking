@@ -1,4 +1,4 @@
-webpackJsonp([121], {
+webpackJsonp([122], {
     "4ci7": function(t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
@@ -8,60 +8,61 @@ webpackJsonp([121], {
             r = n("GiK3"),
             i = n("2KeS"),
             o = n("j7/Y"),
-            s = n("w9tK"),
-            c = n("vH/s"),
-            p = n("CSlQ"),
-            u = n("77kt"),
-            l = n("6sO2"),
-            d = n("Odds"),
-            h = function(t) {
+            s = n("mIvh"),
+            c = n("w9tK"),
+            p = n("vH/s"),
+            u = n("CSlQ"),
+            l = n("77kt"),
+            d = n("6sO2"),
+            h = n("Odds"),
+            m = function(t) {
                 function e() {
                     return null !== t && t.apply(this, arguments) || this
                 }
                 return a.__extends(e, t), e.prototype.render = function() {
-                    return r.createElement(d._35, {
+                    return r.createElement(h._35, {
                         className: "tenant-panel",
-                        display: d.R.Flex,
-                        flexDirection: d.T.Column,
+                        display: h.R.Flex,
+                        flexDirection: h.T.Column,
                         border: !0
-                    }, r.createElement(d._8, {
+                    }, r.createElement(h._8, {
                         className: "tenant-panel__info",
-                        display: d.R.Block,
-                        textAlign: d._45.Center,
+                        display: h.R.Block,
+                        textAlign: h._45.Center,
                         margin: {
                             y: 1
                         },
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(d._2, {
+                    }, r.createElement(h._2, {
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(d.Q, {
-                        type: d._49.H2,
+                    }, r.createElement(h.Q, {
+                        type: h._49.H2,
                         className: "tenant-panel__count",
-                        color: d.K.Alt2
-                    }, this.props.tenant.count)), r.createElement(d.Q, {
-                        type: d._49.H3,
-                        transform: d._48.Uppercase,
+                        color: h.K.Alt2
+                    }, this.props.tenant.count)), r.createElement(h.Q, {
+                        type: h._49.H3,
+                        transform: h._48.Uppercase,
                         className: "tenant-panel__name",
-                        color: d.K.Alt2
-                    }, this.props.tenant.name)), r.createElement(d._35, {
+                        color: h.K.Alt2
+                    }, this.props.tenant.name)), r.createElement(h._35, {
                         className: "tenant-panel__action",
-                        display: d.R.Flex,
+                        display: h.R.Flex,
                         padding: {
                             y: 1
                         },
-                        background: d.n.Alt2,
-                        justifyContent: d._7.Center
-                    }, r.createElement(d.v, {
-                        type: d.B.Hollow,
+                        background: h.n.Alt2,
+                        justifyContent: h._7.Center
+                    }, r.createElement(h.v, {
+                        type: h.B.Hollow,
                         linkTo: this.props.tenant.entryUrl
-                    }, r.createElement(d.Q, {
-                        transform: d._48.Uppercase
-                    }, Object(l.d)("View", "DevTenantPanel"), " ", this.props.tenant.name))))
-                }, e = a.__decorate([Object(p.d)("DevTenantPanel", {
+                    }, r.createElement(h.Q, {
+                        transform: h._48.Uppercase
+                    }, Object(d.d)("View", "DevTenantPanel"), " ", this.props.tenant.name))))
+                }, e = a.__decorate([Object(u.d)("DevTenantPanel", {
                     autoReportInteractive: !0
                 })], e)
             }(r.Component),
@@ -71,30 +72,30 @@ webpackJsonp([121], {
                 }
                 return a.__extends(e, t), e.prototype.render = function() {
                     var t = this.props.tenants.map(function(t, e) {
-                        return r.createElement(d.L, {
+                        return r.createElement(h.L, {
                             cols: {
                                 default: 12,
                                 sm: 6,
                                 md: 3
                             },
                             key: e
-                        }, r.createElement(d._8, {
+                        }, r.createElement(h._8, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(h, {
+                        }, r.createElement(m, {
                             tenant: t
                         })))
                     });
-                    return r.createElement(d.Y, {
-                        gutterSize: d.Z.Small
+                    return r.createElement(h.Y, {
+                        gutterSize: h.Z.Small
                     }, t)
                 }, e
             }(r.Component),
-            m = Object(i.d)(Object(p.d)("DevOverviewPagePresentation", {
+            f = Object(i.d)(Object(u.d)("DevOverviewPagePresentation", {
                 autoReportInteractive: !0
             }))(v),
-            f = [{
+            _ = [{
                 name: "Extensions",
                 entryUrl: "https://dev.twitch.tv/dashboard/extensions",
                 count: 0
@@ -111,18 +112,18 @@ webpackJsonp([121], {
                 entryUrl: "https://dev.twitch.tv/dashboard/drops",
                 count: 0
             }],
-            _ = function(t) {
+            g = function(t) {
                 function e() {
                     var e = null !== t && t.apply(this, arguments) || this;
                     return e.state = {
-                        tenants: f
+                        tenants: _
                     }, e.loadApps = function() {
                         return a.__awaiter(e, void 0, void 0, function() {
                             var t, e, n;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 4, , 5]), [4, Object(u.a)("https://api.twitch.tv/kraken/apps", {
+                                        return a.trys.push([0, 4, , 5]), [4, Object(l.a)(s.a + "/kraken/apps", {
                                             headers: {
                                                 "Content-Type": "application/json",
                                                 Accept: "application/vnd.twitchtv.v5+json; charset=UTF-8"
@@ -159,22 +160,22 @@ webpackJsonp([121], {
                 return a.__extends(e, t), e.prototype.componentDidMount = function() {
                     this.loadApps()
                 }, e.prototype.render = function() {
-                    return r.createElement(m, {
+                    return r.createElement(f, {
                         tenants: this.state.tenants
                     })
-                }, e = a.__decorate([Object(p.d)("DevOverviewPage", {
-                    destination: s.a.DevSiteOverview
+                }, e = a.__decorate([Object(u.d)("DevOverviewPage", {
+                    destination: c.a.DevSiteOverview
                 }), Object(o.a)({
-                    location: c.PageviewLocation.DevSiteOverview
+                    location: p.PageviewLocation.DevSiteOverview
                 })], e)
             }(r.Component),
-            g = Object(i.d)(Object(p.d)("DevOverviewPage", {
-                destination: s.a.DevSiteOverview
+            y = Object(i.d)(Object(u.d)("DevOverviewPage", {
+                destination: c.a.DevSiteOverview
             }), Object(o.a)({
-                location: c.PageviewLocation.DevSiteOverview
-            }))(_);
+                location: p.PageviewLocation.DevSiteOverview
+            }))(g);
         n.d(e, "DevOverviewPage", function() {
-            return g
+            return y
         })
     },
     "77kt": function(t, e, n) {
@@ -293,4 +294,4 @@ webpackJsonp([121], {
         }
     }
 });
-//# sourceMappingURL=sites.dev.pages.overview-page-23439d430ab93e6ba425ea938e0655dc.js.map
+//# sourceMappingURL=sites.dev.pages.overview-page-dfbd42f275bcf1f230a21870622d7b9a.js.map
