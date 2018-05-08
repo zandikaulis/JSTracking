@@ -2968,6 +2968,13 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
 
 // Public interface
 
+MediaPlayer.createWorker = function (url) {
+    // Resolve relative urls in worker based on worker url
+    var base = url.substring(0, url.lastIndexOf('/') + 1);
+    var str = "var Module={locateFile:function(url){return'" + base + "'+url}};importScripts('" + url +"')";
+    return new Worker(URL.createObjectURL(new Blob([str])));
+}
+
 MediaPlayer.prototype.delete = function () {
     this._postMessage(WorkerMessage.DELETE);
     this._worker.removeEventListener('message', this._onmessage);
