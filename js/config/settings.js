@@ -723,13 +723,13 @@ window.__twilightSettings = {
         },
         "afcda2ba-dd12-4d9a-9428-df6a71104db8": {
             "name": "twilight_new_homepage",
-            "v": 3729,
+            "v": 3731,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 100,
                 "value": "experiment"
             }, {
-                "weight": 90,
+                "weight": 0,
                 "value": "control"
             }]
         },
