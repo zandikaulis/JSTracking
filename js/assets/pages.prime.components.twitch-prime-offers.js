@@ -340,6 +340,7 @@ webpackJsonp([117], {
                         alignItems: l.c.Center,
                         textAlign: l._45.Center
                     }, i.createElement(l._24, {
+                        type: l._26.Inherit,
                         asset: l._25.LogoTwitchPrime,
                         width: 330,
                         height: 150
@@ -394,4 +395,4 @@ webpackJsonp([117], {
         })
     }
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-offers-eb9e2505a660f236ab4835ffad2abed8.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-offers-92440848122062646627dc1516286ee0.js.map

@@ -14446,6 +14446,7 @@ webpackJsonp([41], {
                         alignItems: l.c.Center,
                         textAlign: l._45.Center
                     }, i.createElement(l._24, {
+                        type: l._26.Inherit,
                         asset: l._25.LogoTwitchPrime,
                         width: 330,
                         height: 150
@@ -16810,4 +16811,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-d024d383dc2b1c7a6653ce664144c2d1.js.map
+//# sourceMappingURL=pages.settings-97980aac2fa4b1a3f7566e620db6df69.js.map

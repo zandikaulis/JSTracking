@@ -779,7 +779,7 @@ webpackJsonp([58], {
                     }, t.renderOfferList = function() {
                         var e = t.props.offersData,
                             r = t.showOffersByDefault() || !1,
-                            n = e && !e.loading && !e.error;
+                            n = e && !e.loading;
                         return t.offersLoadedEvent && n && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), n || r ? s.createElement(g._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
@@ -2418,7 +2418,7 @@ webpackJsonp([58], {
                         var e = t.props.offersData,
                             r = e.primeOffers,
                             n = void 0 === r || null === r;
-                        return e.loading || !e.error && n
+                        return e.loading || n
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], r = 0; r < 3; ++r) {
                             var n = a.createElement(W, {
@@ -2464,7 +2464,7 @@ webpackJsonp([58], {
                     var e = this,
                         t = this.props.offersData;
                     if (this.shouldShowPlaceholders()) return this.renderOfferPlaceholders();
-                    if (!t.error && t.primeOffers && t.primeOffers.length) {
+                    if (t.primeOffers && t.primeOffers.length) {
                         var r = this.getSortedOffers(),
                             n = r[r.length - 1];
                         return r.map(function(t, r) {
@@ -2936,14 +2936,6 @@ webpackJsonp([58], {
                                         },
                                         arguments: [],
                                         directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "status"
-                                        },
-                                        arguments: [],
-                                        directives: []
                                     }]
                                 }
                             }]
@@ -2953,11 +2945,11 @@ webpackJsonp([58], {
             }],
             loc: {
                 start: 0,
-                end: 283
+                end: 276
             }
         };
         r.loc.source = {
-            body: "query Prime_PrimeOfferList_PrimeOffers($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\ntitle\nimageURL\nclaimInstructions\ndescription\ndeliveryMethod\npriority\ncontent {\ngame {\nid\nname\n}\nexternalURL\npublisher\ncategories\n}\nself {\nhasEntitlement\nclaimData\nstatus\n}\n}\n}",
+            body: "query Prime_PrimeOfferList_PrimeOffers($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\ntitle\nimageURL\nclaimInstructions\ndescription\ndeliveryMethod\npriority\ncontent {\ngame {\nid\nname\n}\nexternalURL\npublisher\ncategories\n}\nself {\nhasEntitlement\nclaimData\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -3363,4 +3355,4 @@ webpackJsonp([58], {
     yqdF: function(e, t) {},
     zAvr: function(e, t) {}
 });
-//# sourceMappingURL=features.twitch-prime.components.prime-subscribe.component-fc76b35d7c868b229cf22738f38b6de3.js.map
+//# sourceMappingURL=features.twitch-prime.components.prime-subscribe.component-d6879276c8276824fc170cb764215e89.js.map
