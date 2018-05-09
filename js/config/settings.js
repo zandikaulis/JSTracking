@@ -41,6 +41,7 @@ window.__twilightSettings = {
     "esports_cheerbomb_flag": "staff",
     "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on", "wrestling", "hearthstone"],
     "extensions_bits_banner_enabled": true,
+    "extensions_discovery_enabled": false,
     "extensions_mobile_banner_enabled": false,
     "first_page_loaded_timeout": 30000,
     "gdpr_consent_enabled": false,
