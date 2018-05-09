@@ -96,7 +96,7 @@ window.__twilightSettings = {
     "twilight_routes_enabled": true,
     "twilight_video_manager_public": false,
     "twilight_video_manager_staff": true,
-    "twitch_prime_fortnite": false,
+    "twitch_prime_fortnite": true,
     "twitch_prime_fortnite_link_url": "https://www.epicgames.com/fortnite/twitch-prime-pack2",
     "twitch_prime_fortnite_offer_id": "c0b1816d-300b-d234-828e-59e76119bffe",
     "twitch_prime_fortnite_signup_url": "https://twitch.amazon.com/prime/country?ingress=epic-fortnite",
