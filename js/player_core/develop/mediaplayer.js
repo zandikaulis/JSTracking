@@ -2948,7 +2948,6 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
     this._state = {
         looping: false,
         autoSwitchQuality: true,
-        version: 'unknown',
     };
     this._stats = {};
     this._resetState();
@@ -2964,6 +2963,11 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
         clientTrackingInfo: getClientTrackingInfo(),
         mseSupported: isMSESupported(),
     });
+
+    // Not needed anymore, but still need to emit async for backwards compatibility
+    setTimeout(function () {
+        this._emitter.emit(PlayerEvent.INITIALIZED);
+    }.bind(this), 0);
 }
 
 // Public interface
@@ -3083,7 +3087,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return this._state.version;
+    return "2.3.0-cf76232a";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3259,7 +3263,6 @@ MediaPlayer.prototype._attachHandlers = function () {
         updateState = function (state) {
             objectAssign(this._state, state);
         }.bind(this);
-    em.on(PlayerEvent.INITIALIZED, updateState);
     em.on(PlayerEvent.QUALITY_CHANGED, updateState);
     em.on(PlayerEvent.AUTO_SWITCH_QUALITY_CHANGED, updateState);
     em.on(PlayerEvent.DURATION_CHANGED, updateState);
