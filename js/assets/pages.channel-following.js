@@ -17188,6 +17188,157 @@ webpackJsonp([43], {
         };
         e.exports = n
     },
+    "QU+n": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "badge"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "Badge"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "setID"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "version"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "title"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "image1x"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "size"
+                            },
+                            value: {
+                                kind: "EnumValue",
+                                value: "NORMAL"
+                            }
+                        }],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "image2x"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "size"
+                            },
+                            value: {
+                                kind: "EnumValue",
+                                value: "DOUBLE"
+                            }
+                        }],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "image4x"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "size"
+                            },
+                            value: {
+                                kind: "EnumValue",
+                                value: "QUADRUPLE"
+                            }
+                        }],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "clickAction"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "clickURL"
+                        },
+                        arguments: [],
+                        directives: []
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 170
+            }
+        };
+        n.loc.source = {
+            body: "fragment badge on Badge {\nid\nsetID\nversion\ntitle\nimage1x: imageURL(size: NORMAL)\nimage2x: imageURL(size: DOUBLE)\nimage4x: imageURL(size: QUADRUPLE)\nclickAction\nclickURL\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     QY1R: function(e, t) {
         var n = {
             kind: "Document",
@@ -24535,69 +24686,68 @@ webpackJsonp([43], {
     "ZUp+": function(e, t) {},
     ZiSq: function(e, t, n) {
         "use strict";
-        var i, a = n("TToO"),
-            r = n("RH2O"),
-            o = n("2KeS"),
-            s = n("+xm8"),
-            l = n("V5M+"),
-            d = n("f2i/"),
-            c = n("Aj/L"),
-            u = n("ass3"),
-            m = n("oSFp"),
-            p = n("HW6M"),
-            h = n("GiK3");
-        ! function(e) {
-            e[e.None = 0] = "None", e[e.Left = 1] = "Left", e[e.Middle = 2] = "Middle", e[e.Right = 3] = "Right"
-        }(i || (i = {}));
-        var g = n("6sO2"),
+        var i = n("RH2O"),
+            a = n("2KeS"),
+            r = n("ass3"),
+            o = n("TToO"),
+            s = n("HW6M"),
+            l = n("GiK3"),
+            d = n("cvQl"),
+            c = n("+xm8"),
+            u = n("V5M+"),
+            m = n("f2i/"),
+            p = n("Aj/L"),
+            h = n("oSFp"),
+            g = n("6sO2"),
             f = n("E9Qg"),
             v = n("+Znq"),
             b = n("5s0/"),
             k = n("7vx8"),
-            y = n("Odds");
+            y = n("TeXj"),
+            _ = n("Odds");
         n("fbnZ");
 
-        function _(e) {
+        function C(e) {
             e.stopPropagation()
         }
-        var C, S = function(e) {
-                return h.createElement(y._2, {
-                    display: y.R.InlineBlock
-                }, h.createElement("div", {
+        var S, E = function(e) {
+                return l.createElement(_._2, {
+                    display: _.R.InlineBlock
+                }, l.createElement("div", {
                     className: "viewer-card-drag-cancel",
-                    onMouseDown: _
+                    onMouseDown: C
                 }, e.children))
             },
-            E = n("O0Qc"),
-            N = n("CSlQ"),
-            w = function(e) {
+            N = n("O0Qc"),
+            w = n("CSlQ"),
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isIgnored: !1
                     }, t.ignoreUser = function() {
-                        t.props.sendMessageToTMI(Object(E.h)(t.props.targetLogin)), t.setState({
+                        t.props.sendMessageToTMI(Object(N.h)(t.props.targetLogin)), t.setState({
                             isIgnored: !0
                         })
                     }, t.unignoreUser = function() {
-                        t.props.sendMessageToTMI(Object(E.j)(t.props.targetLogin)), t.setState({
+                        t.props.sendMessageToTMI(Object(N.j)(t.props.targetLogin)), t.setState({
                             isIgnored: !1
                         })
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (this.state.isIgnored) {
                         var e = Object(g.d)("Unblock User", "ViewerCardIgnoreAction");
-                        return h.createElement(y._52, {
+                        return l.createElement(_._52, {
                             key: "Ignore",
                             label: e,
-                            direction: y._54.Top,
-                            align: y._53.Right,
+                            direction: _._54.Top,
+                            align: _._53.Right,
                             offsetX: "15%"
-                        }, h.createElement(y.w, {
-                            icon: y._25.Unignore,
+                        }, l.createElement(_.w, {
+                            icon: _._25.Unignore,
                             ariaLabel: Object(g.d)("Unblock {displayName}", {
                                 displayName: this.props.targetDisplayName
                             }, "ViewerCardIgnoreAction"),
@@ -24606,28 +24756,28 @@ webpackJsonp([43], {
                         }))
                     }
                     var t = Object(g.d)("Block User", "ViewerCardIgnoreAction");
-                    return h.createElement(y._52, {
+                    return l.createElement(_._52, {
                         key: "Ignore",
                         label: t,
-                        direction: y._54.Top,
-                        align: y._53.Right,
+                        direction: _._54.Top,
+                        align: _._53.Right,
                         offsetX: "15%"
-                    }, h.createElement(y.w, {
-                        icon: y._25.Ignore,
+                    }, l.createElement(_.w, {
+                        icon: _._25.Ignore,
                         ariaLabel: Object(g.d)("Block {displayName}", {
                             displayName: this.props.targetDisplayName
                         }, "ViewerCardIgnoreAction"),
                         onClick: this.ignoreUser,
                         overlay: !0
                     }))
-                }, t = a.__decorate([Object(N.d)("ViewerCardIgnoreAction")], t)
-            }(h.Component),
-            D = n("oIkB"),
-            R = n("Dc1A"),
-            I = n("1Eny"),
-            O = n("zVM8"),
-            M = "10 minutes",
-            T = function(e) {
+                }, t = o.__decorate([Object(w.d)("ViewerCardIgnoreAction")], t)
+            }(l.Component),
+            R = n("oIkB"),
+            I = n("Dc1A"),
+            O = n("1Eny"),
+            M = n("zVM8"),
+            T = "10 minutes",
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onBanClick = function() {
@@ -24635,7 +24785,7 @@ webpackJsonp([43], {
                             n = e.banUser,
                             i = e.channelID,
                             a = e.userLogin;
-                        n(Object(D.a)({
+                        n(Object(R.a)({
                             channelID: i,
                             bannedUserLogin: a
                         }))
@@ -24644,103 +24794,103 @@ webpackJsonp([43], {
                             n = e.banUser,
                             i = e.channelID,
                             a = e.userLogin;
-                        n(Object(D.a)({
+                        n(Object(R.a)({
                             channelID: i,
                             bannedUserLogin: a,
-                            expiresIn: M
+                            expiresIn: T
                         }))
                     }, t.onUnbanClick = function() {
                         var e = t.props,
                             n = e.unbanUser,
                             i = e.channelID,
                             a = e.userLogin;
-                        n(Object(D.a)({
+                        n(Object(R.a)({
                             channelID: i,
                             bannedUserLogin: a
                         }))
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return h.createElement(y._8, {
-                        display: y.R.InlineFlex
+                    return l.createElement(_._8, {
+                        display: _.R.InlineFlex
                     }, this.getContent())
                 }, t.prototype.getContent = function() {
                     return this.props.data.loading || this.props.data.error ? [this.renderBanAction(!0), this.renderTimeoutAction(!0)] : this.props.data.chatRoomBanStatus ? this.props.data.chatRoomBanStatus.isPermanent ? [this.renderUnbanAction(), this.renderTimeoutAction(!0)] : [this.renderBanAction(), this.renderUntimeoutAction()] : [this.renderBanAction(), this.renderTimeoutAction()]
                 }, t.prototype.renderTimeoutAction = function(e) {
                     void 0 === e && (e = !1);
                     var t = Object(g.d)("Timeout User", "ViewerCardModActions");
-                    return h.createElement(y._8, {
+                    return l.createElement(_._8, {
                         key: "Timeout",
                         padding: {
                             right: 1
                         }
-                    }, h.createElement(y._52, {
+                    }, l.createElement(_._52, {
                         label: t,
-                        direction: y._54.Top,
-                        align: y._53.Left,
+                        direction: _._54.Top,
+                        align: _._53.Left,
                         offsetX: "20%"
-                    }, h.createElement(y.w, {
-                        icon: y._25.Timeout,
+                    }, l.createElement(_.w, {
+                        icon: _._25.Timeout,
                         disabled: e,
                         ariaLabel: t,
                         onClick: this.onTimeoutClick
                     })))
                 }, t.prototype.renderUntimeoutAction = function() {
                     var e = Object(g.d)("Untimeout User", "ViewerCardModActions");
-                    return h.createElement(y._8, {
+                    return l.createElement(_._8, {
                         key: "Untimeout",
                         padding: {
                             right: 1
                         }
-                    }, h.createElement(y._52, {
+                    }, l.createElement(_._52, {
                         label: e,
-                        direction: y._54.Top,
-                        align: y._53.Left,
+                        direction: _._54.Top,
+                        align: _._53.Left,
                         offsetX: "20%"
-                    }, h.createElement(y.w, {
-                        icon: y._25.FollowCheck,
+                    }, l.createElement(_.w, {
+                        icon: _._25.FollowCheck,
                         ariaLabel: e,
                         onClick: this.onUnbanClick
                     })))
                 }, t.prototype.renderBanAction = function(e) {
                     void 0 === e && (e = !1);
                     var t = Object(g.d)("Ban User", "ViewerCardModActions");
-                    return h.createElement(y._8, {
+                    return l.createElement(_._8, {
                         key: "Ban",
                         padding: {
                             right: 1
                         }
-                    }, h.createElement(y._52, {
+                    }, l.createElement(_._52, {
                         label: t,
-                        direction: y._54.Top,
-                        align: y._53.Left,
+                        direction: _._54.Top,
+                        align: _._53.Left,
                         offsetX: "20%"
-                    }, h.createElement(y.w, {
-                        icon: y._25.Ban,
+                    }, l.createElement(_.w, {
+                        icon: _._25.Ban,
                         disabled: e,
                         ariaLabel: t,
                         onClick: this.onBanClick
                     })))
                 }, t.prototype.renderUnbanAction = function() {
                     var e = Object(g.d)("Unban User", "ViewerCardModActions");
-                    return h.createElement(y._8, {
+                    return l.createElement(_._8, {
                         key: "Unban",
                         padding: {
                             right: 1
                         }
-                    }, h.createElement(y._52, {
+                    }, l.createElement(_._52, {
                         label: e,
-                        direction: y._54.Top,
-                        align: y._53.Left,
+                        direction: _._54.Top,
+                        align: _._53.Left,
                         offsetX: "20%"
-                    }, h.createElement(y.w, {
-                        icon: y._25.FollowCheck,
+                    }, l.createElement(_.w, {
+                        icon: _._25.FollowCheck,
                         ariaLabel: e,
                         onClick: this.onUnbanClick
                     })))
-                }, t = a.__decorate([Object(N.d)("ViewerCardModActions"), Object(k.a)(O, {
+                }, t = o.__decorate([Object(w.d)("ViewerCardModActions"), Object(k.a)(M, {
                     options: function(e) {
                         return {
                             variables: {
@@ -24750,14 +24900,14 @@ webpackJsonp([43], {
                             fetchPolicy: "cache-and-network"
                         }
                     }
-                }), Object(k.a)(R, {
+                }), Object(k.a)(I, {
                     name: "banUser",
                     options: function(e) {
                         return {
                             update: function(t, n) {
                                 ! function(e, t, n) {
                                     var i = e.readQuery({
-                                        query: O,
+                                        query: M,
                                         variables: {
                                             targetUserID: n.userID,
                                             channelID: n.channelID
@@ -24767,7 +24917,7 @@ webpackJsonp([43], {
                                         isPermanent: !0,
                                         __typename: "ChatRoomBanStatus"
                                     }), e.writeQuery({
-                                        query: O,
+                                        query: M,
                                         variables: {
                                             targetUserID: n.userID,
                                             channelID: n.channelID
@@ -24778,25 +24928,25 @@ webpackJsonp([43], {
                             }
                         }
                     }
-                }), Object(k.a)(I, {
+                }), Object(k.a)(O, {
                     name: "unbanUser",
                     options: function(e) {
                         return {
                             update: function(t) {
                                 ! function(e, t) {
                                     var n = e.readQuery({
-                                        query: O,
+                                        query: M,
                                         variables: {
                                             targetUserID: t.userID,
                                             channelID: t.channelID
                                         }
                                     });
                                     if (n) {
-                                        var i = a.__assign({}, n, {
+                                        var i = o.__assign({}, n, {
                                             chatRoomBanStatus: null
                                         });
                                         e.writeQuery({
-                                            query: O,
+                                            query: M,
                                             variables: {
                                                 targetUserID: t.userID,
                                                 channelID: t.channelID
@@ -24809,67 +24959,128 @@ webpackJsonp([43], {
                         }
                     }
                 })], t)
-            }(h.Component),
-            L = function(e) {
+            }(l.Component),
+            x = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.modUser = function() {
-                        n.props.sendMessageToTMI(Object(E.i)(n.props.targetLogin)), n.setState({
+                        n.props.sendMessageToTMI(Object(N.i)(n.props.targetLogin)), n.setState({
                             isModerator: !0
                         })
                     }, n.unmodUser = function() {
-                        n.props.sendMessageToTMI(Object(E.k)(n.props.targetLogin)), n.setState({
+                        n.props.sendMessageToTMI(Object(N.k)(n.props.targetLogin)), n.setState({
                             isModerator: !1
                         })
                     }, n.state = {
                         isModerator: !1
                     }, n
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (this.state.isModerator) {
                         var e = Object(g.d)("Unmod User", "ViewerCardOwnerActions");
-                        return h.createElement(y._8, {
+                        return l.createElement(_._8, {
                             key: "OP",
-                            display: y.R.InlineFlex,
+                            display: _.R.InlineFlex,
                             padding: {
                                 right: 1
                             }
-                        }, h.createElement(y._52, {
+                        }, l.createElement(_._52, {
                             label: e,
-                            direction: y._54.Top,
-                            align: y._53.Center
-                        }, h.createElement(y.w, {
-                            icon: y._25.FollowCheck,
+                            direction: _._54.Top,
+                            align: _._53.Center
+                        }, l.createElement(_.w, {
+                            icon: _._25.FollowCheck,
                             ariaLabel: e,
                             onClick: this.unmodUser
                         })))
                     }
                     e = Object(g.d)("Mod User", "ViewerCardOwnerActions");
-                    return h.createElement(y._8, {
+                    return l.createElement(_._8, {
                         key: "OP",
-                        display: y.R.InlineFlex,
+                        display: _.R.InlineFlex,
                         padding: {
                             right: 1
                         }
-                    }, h.createElement(y._52, {
+                    }, l.createElement(_._52, {
                         label: e,
-                        direction: y._54.Top,
-                        align: y._53.Center
-                    }, h.createElement(y.w, {
-                        icon: y._25.OP,
+                        direction: _._54.Top,
+                        align: _._53.Center
+                    }, l.createElement(_.w, {
+                        icon: _._25.OP,
                         ariaLabel: e,
                         onClick: this.modUser
                     })))
-                }, t = a.__decorate([Object(N.d)("ViewerCardOwnerActions")], t)
-            }(h.Component),
-            x = n("O9wU"),
-            j = n("phns"),
-            U = n("mw/a"),
-            A = n("daN3"),
-            F = n("YH6m"),
-            B = function(e) {
+                }, t = o.__decorate([Object(w.d)("ViewerCardOwnerActions")], t)
+            }(l.Component),
+            j = n("O9wU"),
+            U = n("phns"),
+            A = n("mw/a"),
+            F = n("daN3"),
+            B = n("37Pp"),
+            P = n("CwIZ"),
+            V = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getSubscribeButton = function() {
+                        var e = t.props.subscriptionProducts[0],
+                            n = Object(g.d)("Gift All-Access Pass", "EsportsGiftDescription");
+                        return l.createElement(F.a, {
+                            subProductId: e.id,
+                            giftRecipient: t.props.giftRecipient,
+                            checkoutURL: e.url,
+                            buttonMessage: n,
+                            purchase: e.price,
+                            onClick: t.reportGiftCheckoutAction
+                        })
+                    }, t.reportGiftCheckoutAction = function() {
+                        t.reportSubMenuAction({
+                            action: P.a.BuyGiftSub,
+                            checkoutButtonTier: t.props.subscriptionProducts[0].price,
+                            giftRecipient: t.props.giftRecipient ? t.props.giftRecipient : null
+                        })
+                    }, t.reportSubMenuAction = function(e) {
+                        t.props.reportSubMenuAction && t.props.reportSubMenuAction(e)
+                    }, t
+                }
+                return o.__extends(t, e), t.prototype.render = function() {
+                    return l.createElement(_._8, null, l.createElement(_._8, {
+                        display: _.R.Flex,
+                        justifyContent: _._7.Between,
+                        alignItems: _.c.Center,
+                        fullWidth: !0
+                    }, l.createElement(_.Q, {
+                        bold: !0,
+                        type: _._49.H5
+                    }, Object(g.d)("Gift the Overwatch League All-Access Pass", "EsportsGiftDescription")), l.createElement(_.v, {
+                        type: _.B.Text,
+                        icon: _._25.AngleLeft,
+                        onClick: this.props.onBack,
+                        "data-test-selector": "sub-gift-select-back-button"
+                    }, l.createElement(_._8, {
+                        alignItems: _.c.Center,
+                        display: _.R.InlineFlex
+                    }, l.createElement(_.Q, null, Object(g.d)("Back", "EsportsGiftDescription"))))), l.createElement(_._8, {
+                        className: "channel-header__subscription-balloon-options"
+                    }, l.createElement(_._8, null, l.createElement(_._8, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, l.createElement(_.Q, null, Object(g.d)("Exclusive Command Center stream access plus Passholder-only chat, Post-match Q&A and match-analysis videos by players, and 23 Twitch emotes, 2 Twitch badges and more!", "EsportsGiftDescription"))), l.createElement(B.a, {
+                        subscriptionProduct: this.props.subscriptionProducts[0],
+                        isGift: !0,
+                        isOneTime: !0
+                    }), l.createElement(_._8, {
+                        margin: {
+                            top: 1,
+                            right: 1
+                        }
+                    }, this.getSubscribeButton()))))
+                }, t
+            }(l.Component),
+            H = n("YH6m"),
+            G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onGiftSelect = function() {
@@ -24880,24 +25091,29 @@ webpackJsonp([43], {
                         t.props.reportSubMenuAction && t.props.reportSubMenuAction(e)
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return h.createElement(y._8, null, h.createElement(y._8, {
-                        display: y.R.Flex,
-                        justifyContent: y._7.Between,
-                        alignItems: y.c.Center,
+                return o.__extends(t, e), t.prototype.render = function() {
+                    return this.props.isEsportGiftingApproved ? l.createElement(V, {
+                        onBack: this.props.onBack,
+                        subscriptionProducts: this.props.subscriptionProducts,
+                        giftRecipient: this.props.giftRecipient,
+                        reportSubMenuAction: this.props.reportSubMenuAction
+                    }) : l.createElement(_._8, null, l.createElement(_._8, {
+                        display: _.R.Flex,
+                        justifyContent: _._7.Between,
+                        alignItems: _.c.Center,
                         fullWidth: !0
-                    }, h.createElement(y.Q, {
+                    }, l.createElement(_.Q, {
                         bold: !0,
-                        type: y._49.H5
-                    }, Object(g.d)("Choose A Gift Subscription", "GiftTierTabs")), h.createElement(y.v, {
-                        type: y.B.Text,
-                        icon: y._25.AngleLeft,
+                        type: _._49.H5
+                    }, Object(g.d)("Choose A Gift Subscription", "GiftTierTabs")), l.createElement(_.v, {
+                        type: _.B.Text,
+                        icon: _._25.AngleLeft,
                         onClick: this.props.onBack,
                         "data-test-selector": "sub-gift-select-back-button"
-                    }, h.createElement(y._8, {
-                        alignItems: y.c.Center,
-                        display: y.R.InlineFlex
-                    }, h.createElement(y.Q, null, Object(g.d)("Back", "GiftTierTabs"))))), h.createElement(F.a, {
+                    }, l.createElement(_._8, {
+                        alignItems: _.c.Center,
+                        display: _.R.InlineFlex
+                    }, l.createElement(_.Q, null, Object(g.d)("Back", "GiftTierTabs"))))), l.createElement(H.a, {
                         canPrimeSubscribe: !1,
                         channelDisplayName: this.props.channelDisplayName,
                         giftRecipient: this.props.giftRecipient,
@@ -24910,310 +25126,329 @@ webpackJsonp([43], {
                         userHasPrime: !1
                     }))
                 }, t
-            }(h.Component),
-            P = n("pQNb"),
-            V = n("CwIZ"),
-            H = n("m4HT"),
-            G = (n("VSa1"), n("BBNG"));
+            }(l.Component),
+            q = n("pQNb"),
+            W = n("m4HT"),
+            z = (n("VSa1"), n("BBNG"));
         ! function(e) {
             e[e.ActionsPage = 0] = "ActionsPage", e[e.SubGiftSelectPage = 1] = "SubGiftSelectPage"
-        }(C || (C = {}));
-        var q = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        currentPage: C.ActionsPage
-                    }, t.getContent = function() {
-                        if (t.props.data.loading || t.props.data.error) return t.renderHideButton();
-                        var e = {
-                                backgroundImage: "url(" + (t.props.data.targetUser.bannerImageURL || f) + ")"
-                            },
-                            n = t.state.currentPage === C.ActionsPage ? t.renderActions() : t.renderSubGiftSelect();
-                        return h.createElement(y._35, {
-                            border: !0,
-                            className: "viewer-card",
-                            elevation: 1,
-                            "data-a-target": "viewer-card"
-                        }, h.createElement(y._3, {
-                            background: y.n.AccentAlt2
-                        }, h.createElement("div", {
-                            className: "viewer-card__background",
-                            style: e
-                        }, h.createElement(y._8, {
-                            display: y.R.Flex,
-                            flexDirection: y.T.Column,
-                            fullHeight: !0,
-                            fullWidth: !0,
-                            className: "viewer-card__overlay"
-                        }, h.createElement(y._35, {
-                            alignItems: y.c.Start,
-                            background: y.n.Overlay,
-                            className: "viewer-card__banner",
-                            display: y.R.Flex,
-                            flexDirection: y.T.Row,
-                            flexGrow: 1,
-                            fullWidth: !0,
-                            justifyContent: y._7.Start,
-                            padding: 1,
-                            position: y._15.Relative,
-                            textAlign: y._45.Center
-                        }, h.createElement(S, null, h.createElement(y.m, {
-                            src: t.props.data.targetUser.profileImageURL,
-                            size: 50,
-                            alt: t.props.data.targetUser.displayName
-                        })), h.createElement(S, null, h.createElement(y._8, {
-                            alignItems: y.c.Center,
-                            margin: 1,
-                            className: "viewer-card__display-name",
-                            ellipsis: !0
-                        }, h.createElement(y.Q, {
-                            color: y.K.Overlay,
-                            type: y._49.H4
-                        }, h.createElement(y.O, {
-                            hoverUnderlineNone: !0,
-                            targetBlank: !0,
-                            to: "/" + t.props.targetLogin,
-                            type: y.P.Inherit
-                        }, t.props.data.targetUser.displayName)))), h.createElement(S, null, t.renderHideButton()), h.createElement(S, null, t.renderIgnoreButton()))))), n)
-                    }, t.toggleGiftPage = function() {
-                        var e = t.state.currentPage === C.ActionsPage ? C.SubGiftSelectPage : C.ActionsPage;
-                        e === C.SubGiftSelectPage && t.trackGiftEvent(), t.setState({
-                            currentPage: e
-                        })
-                    }, t.onWhisperButtonClick = function() {
-                        t.props.hideViewerCard()
-                    }, t.handleReportUserClick = function() {
-                        if (!t.props.isLoggedIn) return t.props.login();
-                        t.props.showReportUserModal({
-                            reportContext: {
-                                contentType: t.reportContentTypeFromSourceType(t.props.sourceType),
-                                targetUserID: t.props.data.targetUser.id,
-                                contentID: t.props.sourceID,
-                                extra: JSON.stringify({
-                                    channel_id: t.props.channelID.toString()
-                                }),
-                                additionalTrackingID: t.props.channelID
-                            },
-                            title: Object(g.d)("Report {channelDisplayName}", {
-                                channelDisplayName: t.props.data.targetUser.displayName
-                            }, "ReportUserModalTitle")
-                        })
-                    }, t.trackBuyGiftSubEvent = function(e) {
-                        Object(V.b)(a.__assign({}, e, {
-                            action: V.a.BuyGiftSub,
-                            channelID: t.props.channelID || "",
-                            channelLogin: t.props.data.channelUser.login || "",
-                            isMenuOpen: null,
-                            hasSubCredit: null,
-                            sub_location: "viewer_card",
-                            modal: !1,
-                            showPrimeContent: !0,
-                            giftRecipient: t.props.data.targetUser.login
-                        }))
-                    }, t.trackGiftEvent = function() {
-                        Object(V.b)({
-                            action: V.a.GiftASub,
-                            channelID: t.props.channelID || "",
-                            channelLogin: t.props.data.channelUser.login || "",
-                            isMenuOpen: null,
-                            hasSubCredit: null,
-                            sub_location: "viewer_card",
-                            modal: !1,
-                            showPrimeContent: !0,
-                            giftRecipient: t.props.data.targetUser.login
-                        })
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return this.props.data.error ? null : this.getContent()
-                }, t.prototype.renderIgnoreButton = function() {
-                    var e = this.props.data.currentUser;
-                    return !this.props.isEmbedded && e && this.props.data.targetUser && e.login !== this.props.targetLogin ? h.createElement(y._8, {
-                        key: "Ignore",
-                        position: y._15.Absolute,
-                        attachRight: !0,
-                        attachBottom: !0,
-                        margin: {
-                            bottom: .5,
-                            right: .5
-                        }
-                    }, h.createElement(w, {
-                        targetDisplayName: this.props.data.targetUser.displayName,
-                        targetLogin: this.props.targetLogin,
-                        sendMessageToTMI: this.props.sendMessageToTMI
-                    })) : null
-                }, t.prototype.renderHideButton = function() {
-                    return h.createElement(y._8, {
-                        className: "viewer-card__hide",
-                        position: y._15.Absolute,
-                        attachRight: !0,
-                        attachTop: !0,
-                        margin: {
-                            top: .5,
-                            right: .5
+        }(S || (S = {}));
+        var Q = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.state = {
+                    currentPage: S.ActionsPage
+                }, t.getContent = function() {
+                    if (t.props.data.loading || t.props.data.error) return t.renderHideButton();
+                    var e = {
+                            backgroundImage: "url(" + (t.props.data.targetUser.bannerImageURL || f) + ")"
                         },
-                        "data-a-target": "viewer-card-close-button"
-                    }, h.createElement(y.w, {
-                        icon: y._25.Close,
-                        onClick: this.props.hideViewerCard,
-                        ariaLabel: Object(g.d)("Hide", "ViewerCard"),
-                        overlay: !0
-                    }))
-                }, t.prototype.renderActions = function() {
-                    var e = this.props.data.currentUser;
-                    return this.props.isEmbedded || e && e.login === this.props.targetLogin ? null : h.createElement(y._35, {
-                        className: "viewer-card__actions",
-                        "data-test-selector": "viewer-card-actions",
-                        attachBottom: !0
-                    }, this.renderSocialActions(), this.renderChatActions())
-                }, t.prototype.renderSocialActions = function() {
-                    return h.createElement(y._35, {
-                        display: y.R.Flex,
-                        background: y.n.Base,
-                        flexDirection: y.T.Row,
+                        n = t.state.currentPage === S.ActionsPage ? t.renderActions() : t.renderSubGiftSelect();
+                    return l.createElement(_._35, {
+                        border: !0,
+                        className: "viewer-card",
+                        elevation: 1,
+                        "data-a-target": "viewer-card"
+                    }, l.createElement(_._3, {
+                        background: _.n.AccentAlt2
+                    }, l.createElement("div", {
+                        className: "viewer-card__background",
+                        style: e
+                    }, l.createElement(_._8, {
+                        display: _.R.Flex,
+                        flexDirection: _.T.Column,
+                        fullHeight: !0,
                         fullWidth: !0,
-                        padding: {
-                            y: 1,
-                            left: 1,
-                            right: .5
-                        }
-                    }, h.createElement(y._8, {
-                        margin: {
-                            right: .5
-                        }
-                    }, h.createElement(S, null, h.createElement(j.a, {
-                        friendData: {
-                            user: this.props.data.targetUser
-                        },
-                        targetID: this.props.data.targetUser.id
-                    }))), h.createElement(y._8, {
-                        margin: {
-                            right: .5
-                        }
-                    }, h.createElement(S, null, this.renderWhisperButton())), h.createElement(y._8, {
-                        margin: {
-                            right: .5
-                        }
-                    }, h.createElement(S, null, this.renderGiftSubscriptionButton())), h.createElement(y._8, {
+                        className: "viewer-card__overlay"
+                    }, l.createElement(_._35, {
+                        alignItems: _.c.Start,
+                        background: _.n.Overlay,
+                        className: "viewer-card__banner",
+                        display: _.R.Flex,
+                        flexDirection: _.T.Row,
                         flexGrow: 1,
-                        textAlign: y._45.Right
-                    }, h.createElement(S, null, h.createElement(v.a, {
-                        key: "MoreOptionsButton"
-                    }, h.createElement(y.w, {
-                        ariaLabel: Object(g.d)("More options", "ViewerCard"),
-                        icon: y._25.More,
-                        "data-a-target": "viewer-card-more-button"
-                    }), h.createElement(y.q, {
-                        direction: y.r.BottomRight,
-                        "data-a-target": "viewer-card-more-balloon"
-                    }, h.createElement(y._8, {
-                        padding: {
-                            y: 1
-                        }
-                    }, h.createElement(y._6, {
-                        onClick: this.handleReportUserClick,
-                        "data-a-target": "viewer-card-report-button"
-                    }, h.createElement(y._8, {
-                        padding: {
-                            x: 1
-                        }
-                    }, Object(g.d)("Report {user}", {
-                        user: this.props.targetLogin
-                    }, "ViewerCard")))))))))
-                }, t.prototype.renderWhisperButton = function() {
-                    if (!this.props.data.currentUser || !this.props.data.targetUser) return null;
-                    var e = Object(H.a)(this.props.data.currentUser.id, this.props.data.targetUser.id);
-                    return h.createElement(b.a, {
-                        onClick: this.onWhisperButtonClick,
-                        isPopout: this.props.isPopout,
-                        threadID: e
-                    })
-                }, t.prototype.renderGiftSubscriptionButton = function() {
-                    return !this.props.data.channelUser || !this.props.data.channelUser.subscriptionProducts || this.props.data.channelUser.subscriptionProducts.length < 1 ? null : h.createElement(A.a, {
-                        onClick: this.toggleGiftPage,
-                        subProductId: this.props.data.channelUser.subscriptionProducts[0].id,
-                        giftRecipient: this.props.targetLogin
-                    })
-                }, t.prototype.renderSubGiftSelect = function() {
-                    return h.createElement(y._8, null, h.createElement(P.a, {
-                        subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
-                        isGift: !0
-                    }), h.createElement(y._35, {
-                        background: y.n.Base,
-                        attachBottom: !0,
-                        display: y.R.Flex,
-                        flexDirection: y.T.Row,
-                        justifyContent: y._7.Between,
                         fullWidth: !0,
-                        flexGrow: 0,
-                        padding: 2
-                    }, h.createElement(B, {
-                        onBack: this.toggleGiftPage,
-                        channelDisplayName: this.props.data.channelUser.displayName,
-                        subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
-                        giftRecipient: this.props.data.targetUser.login,
-                        reportSubMenuAction: this.trackBuyGiftSubEvent
-                    })))
-                }, t.prototype.renderChatActions = function() {
-                    var e = [];
-                    return this.isModeratorOrHigher() && e.push(h.createElement(T, {
-                        key: "ModActions",
-                        channelID: this.props.data.channelUser.id,
-                        userID: this.props.data.targetUser.id,
-                        userLogin: this.props.targetLogin
-                    })), this.isOwnerOrHigher() && e.push(h.createElement(L, {
-                        key: "OwnerActions",
-                        sendMessageToTMI: this.props.sendMessageToTMI,
-                        targetLogin: this.props.targetLogin
-                    })), e.length ? h.createElement(y._35, {
-                        display: y.R.Flex,
-                        background: y.n.Alt2,
-                        fullWidth: !0,
-                        padding: {
-                            x: 1,
-                            y: .5
-                        }
-                    }, h.createElement(S, null, e)) : null
-                }, t.prototype.isOwnerOrHigher = function() {
-                    var e = this.props.data;
-                    return !(e.loading || e.error || !e.currentUser) && (e.currentUser.roles.isGlobalMod || e.currentUser.roles.isSiteAdmin || e.currentUser.roles.isStaff || this.isOwner())
-                }, t.prototype.isModeratorOrHigher = function() {
-                    return this.isOwnerOrHigher() || this.props.data.channelUser.self && this.props.data.channelUser.self.isModerator
-                }, t.prototype.isOwner = function() {
-                    var e = this.props.data;
-                    return !(e.loading || e.error || !e.currentUser) && e.currentUser.id === e.channelUser.id
-                }, t.prototype.reportContentTypeFromSourceType = function(e) {
-                    switch (e) {
-                        case x.a.chat_message:
-                            return U.a.Chat;
-                        case x.a.room_message:
-                            return U.a.Room;
-                        case x.a.recent_raids:
-                            return U.a.Raid;
-                        case x.a.viewer_list:
-                        default:
-                            return U.a.User
+                        justifyContent: _._7.Start,
+                        padding: 1,
+                        position: _._15.Relative,
+                        textAlign: _._45.Center
+                    }, l.createElement(E, null, l.createElement(_.m, {
+                        src: t.props.data.targetUser.profileImageURL,
+                        size: 50,
+                        alt: t.props.data.targetUser.displayName
+                    })), l.createElement(E, null, l.createElement(_._8, {
+                        alignItems: _.c.Center,
+                        margin: 1,
+                        className: "viewer-card__display-name",
+                        ellipsis: !0
+                    }, l.createElement(_.Q, {
+                        color: _.K.Overlay,
+                        type: _._49.H4
+                    }, l.createElement(_.O, {
+                        hoverUnderlineNone: !0,
+                        targetBlank: !0,
+                        to: "/" + t.props.targetLogin,
+                        type: _.P.Inherit
+                    }, t.props.data.targetUser.displayName)))), l.createElement(E, null, t.renderHideButton()), l.createElement(E, null, t.renderIgnoreButton()))))), n)
+                }, t.toggleGiftPage = function() {
+                    var e = t.state.currentPage === S.ActionsPage ? S.SubGiftSelectPage : S.ActionsPage;
+                    e === S.SubGiftSelectPage && t.trackGiftEvent(), t.setState({
+                        currentPage: e
+                    })
+                }, t.onWhisperButtonClick = function() {
+                    t.props.hideViewerCard()
+                }, t.handleReportUserClick = function() {
+                    if (!t.props.isLoggedIn) return t.props.login();
+                    t.props.showReportUserModal({
+                        reportContext: {
+                            contentType: t.reportContentTypeFromSourceType(t.props.sourceType),
+                            targetUserID: t.props.data.targetUser.id,
+                            contentID: t.props.sourceID,
+                            extra: JSON.stringify({
+                                channel_id: t.props.channelID.toString()
+                            }),
+                            additionalTrackingID: t.props.channelID
+                        },
+                        title: Object(g.d)("Report {channelDisplayName}", {
+                            channelDisplayName: t.props.data.targetUser.displayName
+                        }, "ReportUserModalTitle")
+                    })
+                }, t.trackBuyGiftSubEvent = function(e) {
+                    Object(P.b)(o.__assign({}, e, {
+                        action: P.a.BuyGiftSub,
+                        channelID: t.props.channelID || "",
+                        channelLogin: t.props.data.channelUser.login || "",
+                        isMenuOpen: null,
+                        hasSubCredit: null,
+                        sub_location: "viewer_card",
+                        modal: !1,
+                        showPrimeContent: !0,
+                        giftRecipient: t.props.data.targetUser.login
+                    }))
+                }, t.trackGiftEvent = function() {
+                    Object(P.b)({
+                        action: P.a.GiftASub,
+                        channelID: t.props.channelID || "",
+                        channelLogin: t.props.data.channelUser.login || "",
+                        isMenuOpen: null,
+                        hasSubCredit: null,
+                        sub_location: "viewer_card",
+                        modal: !1,
+                        showPrimeContent: !0,
+                        giftRecipient: t.props.data.targetUser.login
+                    })
+                }, t
+            }
+            return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                this.props.latencyTracking.reportInteractive()
+            }, t.prototype.render = function() {
+                return this.props.data.error ? null : this.getContent()
+            }, t.prototype.renderIgnoreButton = function() {
+                var e = this.props.data.currentUser;
+                return !this.props.isEmbedded && e && this.props.data.targetUser && e.login !== this.props.targetLogin ? l.createElement(_._8, {
+                    key: "Ignore",
+                    position: _._15.Absolute,
+                    attachRight: !0,
+                    attachBottom: !0,
+                    margin: {
+                        bottom: .5,
+                        right: .5
                     }
-                }, t = a.__decorate([Object(N.d)("ViewerCard"), Object(k.a)(G, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                targetLogin: e.targetLogin,
-                                channelID: e.channelID
-                            }
+                }, l.createElement(D, {
+                    targetDisplayName: this.props.data.targetUser.displayName,
+                    targetLogin: this.props.targetLogin,
+                    sendMessageToTMI: this.props.sendMessageToTMI
+                })) : null
+            }, t.prototype.renderHideButton = function() {
+                return l.createElement(_._8, {
+                    className: "viewer-card__hide",
+                    position: _._15.Absolute,
+                    attachRight: !0,
+                    attachTop: !0,
+                    margin: {
+                        top: .5,
+                        right: .5
+                    },
+                    "data-a-target": "viewer-card-close-button"
+                }, l.createElement(_.w, {
+                    icon: _._25.Close,
+                    onClick: this.props.hideViewerCard,
+                    ariaLabel: Object(g.d)("Hide", "ViewerCard"),
+                    overlay: !0
+                }))
+            }, t.prototype.renderActions = function() {
+                var e = this.props.data.currentUser;
+                return this.props.isEmbedded || e && e.login === this.props.targetLogin ? null : l.createElement(_._35, {
+                    className: "viewer-card__actions",
+                    "data-test-selector": "viewer-card-actions",
+                    attachBottom: !0
+                }, this.renderSocialActions(), this.renderChatActions())
+            }, t.prototype.renderSocialActions = function() {
+                return l.createElement(_._35, {
+                    display: _.R.Flex,
+                    background: _.n.Base,
+                    flexDirection: _.T.Row,
+                    fullWidth: !0,
+                    padding: {
+                        y: 1,
+                        left: 1,
+                        right: .5
+                    }
+                }, l.createElement(_._8, {
+                    margin: {
+                        right: .5
+                    }
+                }, l.createElement(E, null, l.createElement(U.a, {
+                    friendData: {
+                        user: this.props.data.targetUser
+                    },
+                    targetID: this.props.data.targetUser.id
+                }))), l.createElement(_._8, {
+                    margin: {
+                        right: .5
+                    }
+                }, l.createElement(E, null, this.renderWhisperButton())), l.createElement(_._8, {
+                    margin: {
+                        right: .5
+                    }
+                }, l.createElement(E, null, this.renderGiftSubscriptionButton())), l.createElement(_._8, {
+                    flexGrow: 1,
+                    textAlign: _._45.Right
+                }, l.createElement(E, null, l.createElement(v.a, {
+                    key: "MoreOptionsButton"
+                }, l.createElement(_.w, {
+                    ariaLabel: Object(g.d)("More options", "ViewerCard"),
+                    icon: _._25.More,
+                    "data-a-target": "viewer-card-more-button"
+                }), l.createElement(_.q, {
+                    direction: _.r.BottomRight,
+                    "data-a-target": "viewer-card-more-balloon"
+                }, l.createElement(_._8, {
+                    padding: {
+                        y: 1
+                    }
+                }, l.createElement(_._6, {
+                    onClick: this.handleReportUserClick,
+                    "data-a-target": "viewer-card-report-button"
+                }, l.createElement(_._8, {
+                    padding: {
+                        x: 1
+                    }
+                }, Object(g.d)("Report {user}", {
+                    user: this.props.targetLogin
+                }, "ViewerCard")))))))))
+            }, t.prototype.renderWhisperButton = function() {
+                if (!this.props.data.currentUser || !this.props.data.targetUser) return null;
+                var e = Object(W.a)(this.props.data.currentUser.id, this.props.data.targetUser.id);
+                return l.createElement(b.a, {
+                    onClick: this.onWhisperButtonClick,
+                    isPopout: this.props.isPopout,
+                    threadID: e
+                })
+            }, t.prototype.renderGiftSubscriptionButton = function() {
+                return !this.props.data.channelUser || !this.props.data.channelUser.subscriptionProducts || this.props.data.channelUser.subscriptionProducts.length < 1 ? null : l.createElement(F.a, {
+                    onClick: this.toggleGiftPage,
+                    subProductId: this.props.data.channelUser.subscriptionProducts[0].id,
+                    giftRecipient: this.props.targetLogin,
+                    isEsportChannel: Object(y.a)(this.props.data.channelUser.id, this.props.sessionUser)
+                })
+            }, t.prototype.renderSubGiftSelect = function() {
+                var e = Object(y.b)(this.props.data.channelUser.id, this.props.sessionUser);
+                return l.createElement(_._8, null, l.createElement(q.a, {
+                    subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
+                    isGift: !0
+                }), l.createElement(_._35, {
+                    background: _.n.Base,
+                    attachBottom: !0,
+                    display: _.R.Flex,
+                    flexDirection: _.T.Row,
+                    justifyContent: _._7.Between,
+                    fullWidth: !0,
+                    flexGrow: 0,
+                    padding: 2
+                }, l.createElement(G, {
+                    onBack: this.toggleGiftPage,
+                    channelDisplayName: this.props.data.channelUser.displayName,
+                    subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
+                    giftRecipient: this.props.data.targetUser.login,
+                    reportSubMenuAction: this.trackBuyGiftSubEvent,
+                    isEsportGiftingApproved: e
+                })))
+            }, t.prototype.renderChatActions = function() {
+                var e = [];
+                return this.isModeratorOrHigher() && e.push(l.createElement(L, {
+                    key: "ModActions",
+                    channelID: this.props.data.channelUser.id,
+                    userID: this.props.data.targetUser.id,
+                    userLogin: this.props.targetLogin
+                })), this.isOwnerOrHigher() && e.push(l.createElement(x, {
+                    key: "OwnerActions",
+                    sendMessageToTMI: this.props.sendMessageToTMI,
+                    targetLogin: this.props.targetLogin
+                })), e.length ? l.createElement(_._35, {
+                    display: _.R.Flex,
+                    background: _.n.Alt2,
+                    fullWidth: !0,
+                    padding: {
+                        x: 1,
+                        y: .5
+                    }
+                }, l.createElement(E, null, e)) : null
+            }, t.prototype.isOwnerOrHigher = function() {
+                var e = this.props.data;
+                return !(e.loading || e.error || !e.currentUser) && (e.currentUser.roles.isGlobalMod || e.currentUser.roles.isSiteAdmin || e.currentUser.roles.isStaff || this.isOwner())
+            }, t.prototype.isModeratorOrHigher = function() {
+                return this.isOwnerOrHigher() || this.props.data.channelUser.self && this.props.data.channelUser.self.isModerator
+            }, t.prototype.isOwner = function() {
+                var e = this.props.data;
+                return !(e.loading || e.error || !e.currentUser) && e.currentUser.id === e.channelUser.id
+            }, t.prototype.reportContentTypeFromSourceType = function(e) {
+                switch (e) {
+                    case j.a.chat_message:
+                        return A.a.Chat;
+                    case j.a.room_message:
+                        return A.a.Room;
+                    case j.a.recent_raids:
+                        return A.a.Raid;
+                    case j.a.viewer_list:
+                    default:
+                        return A.a.User
+                }
+            }, t = o.__decorate([Object(w.d)("ViewerCard"), Object(k.a)(z, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            targetLogin: e.targetLogin,
+                            channelID: e.channelID
                         }
                     }
-                })], t)
-            }(h.Component),
-            W = (n("PqoY"), function(e) {
+                }
+            })], t)
+        }(l.Component);
+        var K = Object(i.b)(function(e) {
+                return {
+                    sessionUser: Object(p.c)(e),
+                    isLoggedIn: Object(p.d)(e)
+                }
+            }, function(e) {
+                return Object(a.b)({
+                    hideViewerCard: r.c,
+                    login: function() {
+                        return Object(m.f)(c.a.ViewerCard)
+                    },
+                    showReportUserModal: function(e) {
+                        var t = o.__rest(e, []);
+                        return Object(u.d)(h.a, t)
+                    }
+                }, e)
+            })(Q),
+            $ = (n("PqoY"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         dragging: !1
                     }, t.onDragStart = function(e) {
-                        t.cardContainerRef && t.layerRef && e.nativeEvent.which === i.Left && (t.layerRef.addEventListener("mousemove", t.onDrag), window.addEventListener("mouseup", t.onDragEnd), window.addEventListener("selectstart", t.cancelSelection), t.setState({
+                        t.cardContainerRef && t.layerRef && e.button === d.a.Left && (t.layerRef.addEventListener("mousemove", t.onDrag), window.addEventListener("mouseup", t.onDragEnd), window.addEventListener("selectstart", t.cancelSelection), t.setState({
                             dragging: !0
                         }), t.initCardX = t.cardContainerRef.offsetLeft, t.initCardY = t.cardContainerRef.offsetTop, t.initMouseX = e.clientX, t.initMouseY = e.clientY)
                     }, t.onDrag = function(e) {
@@ -25230,7 +25465,7 @@ webpackJsonp([43], {
                         e.preventDefault()
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                return o.__extends(t, e), t.prototype.componentWillUnmount = function() {
                     this.props.hideViewerCard(), this.rafHandle && cancelAnimationFrame(this.rafHandle), this.removeDragListeners()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.props.viewerCardOptions && e.viewerCardOptions && (e.viewerCardOptions.targetLogin === this.props.viewerCardOptions.targetLogin && e.viewerCardOptions.initialTopOffset === this.props.viewerCardOptions.initialTopOffset || this.cardContainerRef && (this.cardContainerRef.style.left = "0px"))
@@ -25253,63 +25488,52 @@ webpackJsonp([43], {
                                 top: Math.max(this.props.viewerCardOptions.initialTopOffset - r.top, 0) + "px"
                             }
                         }
-                        i = h.createElement(y._2, {
-                            className: p(n),
-                            position: y._15.Absolute
-                        }, h.createElement("div", {
+                        i = l.createElement(_._2, {
+                            className: s(n),
+                            position: _._15.Absolute
+                        }, l.createElement("div", {
                             onMouseDown: this.onDragStart,
                             ref: function(t) {
                                 e.cardContainerRef = t
                             },
                             style: a,
                             "data-a-target": "viewer-card-positioner"
-                        }, h.createElement(q, {
+                        }, l.createElement(K, {
                             channelID: this.props.channelID,
-                            hideViewerCard: this.props.hideViewerCard,
                             isPopout: this.props.isPopout,
                             isEmbedded: this.props.isEmbedded,
-                            sendMessageToTMI: this.props.onSendMessage,
-                            showReportUserModal: this.props.showReportUserModal,
-                            sourceID: this.props.viewerCardOptions.sourceID,
-                            sourceType: this.props.viewerCardOptions.sourceType,
                             targetLogin: this.props.viewerCardOptions.targetLogin,
-                            isLoggedIn: this.props.isLoggedIn,
-                            login: this.props.login
+                            sourceType: this.props.viewerCardOptions.sourceType,
+                            sourceID: this.props.viewerCardOptions.sourceID,
+                            hideViewerCard: this.props.hideViewerCard,
+                            sendMessageToTMI: this.props.onSendMessage
                         })))
                     }
-                    return h.createElement(y._2, {
-                        className: p(t),
+                    return l.createElement(_._2, {
+                        className: s(t),
                         fullHeight: !0,
                         fullWidth: !0,
-                        position: y._15.Relative,
-                        zIndex: y._62.Default
-                    }, h.createElement("div", {
+                        position: _._15.Relative,
+                        zIndex: _._62.Default
+                    }, l.createElement("div", {
                         onMouseUp: this.onDragEnd,
                         ref: function(t) {
                             e.layerRef = t
                         }
                     }, i))
                 }, t
-            }(h.Component));
-        var z = Object(r.b)(function(e) {
+            }(l.Component));
+        var Y = Object(i.b)(function(e) {
             return {
-                viewerCardOptions: e.viewerCard.viewerCardOptions,
-                isLoggedIn: Object(c.d)(e)
+                viewerCardOptions: e.viewerCard.viewerCardOptions
             }
         }, function(e) {
-            return Object(o.b)({
-                hideViewerCard: u.c,
-                login: function() {
-                    return Object(d.f)(s.a.ViewerCard)
-                },
-                showReportUserModal: function(e) {
-                    var t = a.__rest(e, []);
-                    return Object(l.d)(m.a, t)
-                }
+            return Object(a.b)({
+                hideViewerCard: r.c
             }, e)
-        })(W);
+        })($);
         n.d(t, "a", function() {
-            return z
+            return Y
         })
     },
     aSvS: function(e, t, n) {
@@ -25406,6 +25630,16 @@ webpackJsonp([43], {
     },
     cv4W: function(e, t, n) {
         e.exports = n.p + "assets/gift3-03f7dd6edab76b3567ff92bba447d5cb.png"
+    },
+    cvQl: function(e, t, n) {
+        "use strict";
+        var i;
+        n.d(t, "a", function() {
+                return i
+            }),
+            function(e) {
+                e[e.Left = 0] = "Left", e[e.Middle = 1] = "Middle", e[e.Right = 2] = "Right", e[e.Back = 3] = "Back", e[e.Forward = 4] = "Forward"
+            }(i || (i = {}))
     },
     cxb0: function(e, t) {
         var n = {
@@ -33690,4 +33924,4 @@ webpackJsonp([43], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-following-ff9948cd4ba53304adb9fc4f2fec9156.js.map
+//# sourceMappingURL=pages.channel-following-2c3d754d02bab35f83db68bbce8bd659.js.map

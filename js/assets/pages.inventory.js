@@ -201,7 +201,7 @@ webpackJsonp([68], {
                             padding: .5
                         }, c.createElement(h.Q, {
                             fontSize: h.V.Size4,
-                            "aria-label": Object(d.d)("Count of Drops awarded for {gameName}", {
+                            ariaLabel: Object(d.d)("Count of Drops awarded for {gameName}", {
                                 gameName: n
                             }, "DropsListPresentation")
                         }, e.count))), c.createElement(h.Q, {
@@ -1039,4 +1039,4 @@ webpackJsonp([68], {
         i.definitions = i.definitions.concat(a(n("UP6l").definitions)), i.definitions = i.definitions.concat(a(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-852fc856494020ea0ef135261933b830.js.map
+//# sourceMappingURL=pages.inventory-0a219d578b552978f3782b13c71bd410.js.map

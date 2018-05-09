@@ -2902,57 +2902,8 @@ webpackJsonp([53], {
                     noWrap: !0
                 }, r)))
             }),
-            p = n("fc0G"),
-            v = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onChannelStatus = function() {}, t.onWheelPostMessage = function(e) {
-                        if (t.postMessageIsWheelEvent(e) && t.componentEl) {
-                            var n = e.data.args[0].data,
-                                a = new WheelEvent("wheel", i.__assign({
-                                    bubbles: !0
-                                }, n));
-                            t.componentEl.dispatchEvent(a)
-                        }
-                    }, t.setComponentRef = function(e) {
-                        t.componentEl = e
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive(), window.addEventListener("message", this.onWheelPostMessage)
-                }, t.prototype.componentWillUnmount = function() {
-                    window.removeEventListener("message", this.onWheelPostMessage)
-                }, t.prototype.render = function() {
-                    return a.createElement("div", {
-                        ref: this.setComponentRef
-                    }, a.createElement(s.k, {
-                        ratio: s.l.Aspect16x9
-                    }, this.getVideoEmbedComponent()))
-                }, t.prototype.getVideoEmbedComponent = function() {
-                    var e = this.props,
-                        t = e.channelLogin,
-                        n = e.vodID,
-                        r = e.embedURL,
-                        o = e.playerTypeOverride,
-                        d = {
-                            disableTheatreButton: !0,
-                            onChannelStatus: this.onChannelStatus,
-                            playerTypeOverride: o || p.b.Frontpage
-                        };
-                    return r ? a.createElement("iframe", {
-                        src: r,
-                        width: "100%",
-                        height: "100%",
-                        allowFullScreen: !0
-                    }) : t ? a.createElement(p.c, i.__assign({
-                        channelLogin: t
-                    }, d)) : n ? a.createElement(p.c, i.__assign({
-                        vodID: n
-                    }, d)) : a.createElement(s._8, null)
-                }, t.prototype.postMessageIsWheelEvent = function(e) {
-                    return "player.embed.client" === e.data.namespace && "bridgeplayereventwithpayload" === e.data.method && e.data.args.length > 0 && "wheel" === e.data.args[0].event
-                }, t = i.__decorate([Object(d.d)("EmbedVideoPlayer")], t)
-            }(a.Component),
+            p = n("NqVV"),
+            v = n("fc0G"),
             g = function(e, t) {
                 var n = e.embed,
                     i = n.broadcaster,
@@ -2973,9 +2924,9 @@ webpackJsonp([53], {
                     thumbnailURL: g,
                     type: c.b.Clip,
                     viewCount: k
-                }, a.createElement(v, {
+                }, a.createElement(p.a, {
                     embedURL: m,
-                    playerTypeOverride: p.b.Feed
+                    playerTypeOverride: v.b.Feed
                 })), a.createElement(u, {
                     author: i,
                     title: r,
@@ -3031,9 +2982,9 @@ webpackJsonp([53], {
                     thumbnailURL: l,
                     type: c.b.Stream,
                     viewCount: m
-                }, a.createElement(v, {
+                }, a.createElement(p.a, {
                     channelLogin: i.login,
-                    playerTypeOverride: p.b.Feed
+                    playerTypeOverride: v.b.Feed
                 })), a.createElement(u, {
                     author: i,
                     title: d,
@@ -3066,9 +3017,9 @@ webpackJsonp([53], {
                     thumbnailURL: g,
                     type: c.b.Video,
                     viewCount: k
-                }, a.createElement(v, {
+                }, a.createElement(p.a, {
                     vodID: i,
-                    playerTypeOverride: p.b.Feed
+                    playerTypeOverride: v.b.Feed
                 })), a.createElement(u, {
                     author: r,
                     title: f || "",
@@ -3522,6 +3473,71 @@ webpackJsonp([53], {
             })
         }
         i.definitions = i.definitions.concat(r(n("I5q7").definitions)), i.definitions = i.definitions.concat(r(n("S0OZ").definitions)), i.definitions = i.definitions.concat(r(n("fWQn").definitions)), e.exports = i
+    },
+    NqVV: function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("GiK3"),
+            r = n("CSlQ"),
+            o = n("fc0G"),
+            d = n("Odds"),
+            s = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onChannelStatus = function() {}, t.onWheelPostMessage = function(e) {
+                        if (t.postMessageIsWheelEvent(e) && t.componentEl) {
+                            var n = e.data.args[0].data,
+                                a = new WheelEvent("wheel", i.__assign({
+                                    bubbles: !0
+                                }, n));
+                            t.componentEl.dispatchEvent(a)
+                        }
+                    }, t.setComponentRef = function(e) {
+                        t.componentEl = e
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive(), window.addEventListener("message", this.onWheelPostMessage)
+                }, t.prototype.componentWillUnmount = function() {
+                    window.removeEventListener("message", this.onWheelPostMessage)
+                }, t.prototype.render = function() {
+                    return a.createElement("div", {
+                        ref: this.setComponentRef
+                    }, a.createElement(d.k, {
+                        ratio: d.l.Aspect16x9
+                    }, this.getVideoEmbedComponent()))
+                }, t.prototype.getVideoEmbedComponent = function() {
+                    var e = this.props,
+                        t = e.channelLogin,
+                        n = e.vodID,
+                        r = e.embedURL,
+                        s = e.playerTypeOverride,
+                        l = {
+                            disableTheatreButton: !0,
+                            onChannelStatus: this.onChannelStatus,
+                            playerTypeOverride: s || o.b.Frontpage
+                        };
+                    return r ? a.createElement("iframe", {
+                        src: r,
+                        width: "100%",
+                        height: "100%",
+                        allowFullScreen: !0
+                    }) : t ? a.createElement(o.c, i.__assign({
+                        channelLogin: t
+                    }, l)) : n ? a.createElement(o.c, i.__assign({
+                        vodID: n
+                    }, l)) : a.createElement(d._8, null)
+                }, t.prototype.postMessageIsWheelEvent = function(e) {
+                    return "player.embed.client" === e.data.namespace && "bridgeplayereventwithpayload" === e.data.method && e.data.args.length > 0 && "wheel" === e.data.args[0].event
+                }, t = i.__decorate([Object(r.d)("EmbedVideoPlayer")], t)
+            }(a.Component);
+        n.d(t, !1, function() {
+            return "player.embed.client"
+        }), n.d(t, !1, function() {
+            return "bridgeplayereventwithpayload"
+        }), n.d(t, "a", function() {
+            return s
+        })
     },
     OkeX: function(e, t) {
         var n = {
@@ -8700,4 +8716,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-05c7dd52e60376dae57c4d308f2a314f.js.map
+//# sourceMappingURL=pages.front-5177236e8b159cd6120f732cee1d1594.js.map

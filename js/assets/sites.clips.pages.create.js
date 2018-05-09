@@ -657,8 +657,9 @@ webpackJsonp([51], {
             o = n("TToO"),
             s = n("HW6M"),
             l = n("GiK3"),
-            d = n("kLf9"),
-            c = n("Odds");
+            d = n("cvQl"),
+            c = n("kLf9"),
+            u = n("Odds");
         n("cJZy");
         ! function(e) {
             e.LeftHandle = "left-handle", e.Overlay = "overlay", e.RightHandle = "right-handle", e.SelectedSection = "section", e.Slider = "slider"
@@ -666,7 +667,7 @@ webpackJsonp([51], {
         function(e) {
             e.LeftHandle = "leftHandle", e.Slider = "slider", e.RightHandle = "rightHandle"
         }(a || (a = {}));
-        var u = function(e) {
+        var p = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.leftHandleRef = null, n.containerRef = null, n.rightHandleRef = null, n.sliderHandleRef = null, n.getHandleHandlers = function(e) {
@@ -707,18 +708,20 @@ webpackJsonp([51], {
                 }, n.leftHandleRefHandler = function(e) {
                     n.leftHandleRef = e
                 }, n.onLeftMouseDown = function(e) {
-                    var t = e.clientX;
-                    n.setState(function(e) {
-                        return {
-                            previousPosition: t,
-                            previousBaseValue: e.startOffset
-                        }
-                    }, function() {
-                        n.props.onLeftDragStart && n.props.onLeftDragStart({
-                            startOffset: n.state.startOffset,
-                            endOffset: n.state.endOffset
-                        }), n.addHandleListeners(a.LeftHandle)
-                    })
+                    if (n.shouldHandleClick(e.button)) {
+                        var t = e.clientX;
+                        n.setState(function(e) {
+                            return {
+                                previousPosition: t,
+                                previousBaseValue: e.startOffset
+                            }
+                        }, function() {
+                            n.props.onLeftDragStart && n.props.onLeftDragStart({
+                                startOffset: n.state.startOffset,
+                                endOffset: n.state.endOffset
+                            }), n.addHandleListeners(a.LeftHandle)
+                        })
+                    }
                 }, n.onLeftMouseUp = function() {
                     n.setState({
                         previousPosition: null,
@@ -751,18 +754,20 @@ webpackJsonp([51], {
                 }, n.rightHandleRefHandler = function(e) {
                     n.rightHandleRef = e
                 }, n.onRightMouseDown = function(e) {
-                    var t = e.clientX;
-                    n.setState(function(e) {
-                        return {
-                            previousPosition: t,
-                            previousBaseValue: e.endOffset
-                        }
-                    }, function() {
-                        n.props.onRightDragStart && n.props.onRightDragStart({
-                            startOffset: n.state.startOffset,
-                            endOffset: n.state.endOffset
-                        }), n.addHandleListeners(a.RightHandle)
-                    })
+                    if (n.shouldHandleClick(e.button)) {
+                        var t = e.clientX;
+                        n.setState(function(e) {
+                            return {
+                                previousPosition: t,
+                                previousBaseValue: e.endOffset
+                            }
+                        }, function() {
+                            n.props.onRightDragStart && n.props.onRightDragStart({
+                                startOffset: n.state.startOffset,
+                                endOffset: n.state.endOffset
+                            }), n.addHandleListeners(a.RightHandle)
+                        })
+                    }
                 }, n.onRightMouseUp = function() {
                     n.setState({
                         previousPosition: null,
@@ -795,18 +800,20 @@ webpackJsonp([51], {
                 }, n.sliderHandleRefHandler = function(e) {
                     n.sliderHandleRef = e
                 }, n.onSliderMouseDown = function(e) {
-                    var t = e.clientX;
-                    n.setState(function(e) {
-                        return {
-                            previousPosition: t,
-                            previousBaseValue: e.startOffset
-                        }
-                    }, function() {
-                        n.props.onSliderDragStart && n.props.onSliderDragStart({
-                            startOffset: n.state.startOffset,
-                            endOffset: n.state.endOffset
-                        }), n.addHandleListeners(a.Slider)
-                    })
+                    if (n.shouldHandleClick(e.button)) {
+                        var t = e.clientX;
+                        n.setState(function(e) {
+                            return {
+                                previousPosition: t,
+                                previousBaseValue: e.startOffset
+                            }
+                        }, function() {
+                            n.props.onSliderDragStart && n.props.onSliderDragStart({
+                                startOffset: n.state.startOffset,
+                                endOffset: n.state.endOffset
+                            }), n.addHandleListeners(a.Slider)
+                        })
+                    }
                 }, n.onSliderMouseUp = function() {
                     n.setState({
                         previousPosition: null,
@@ -871,8 +878,8 @@ webpackJsonp([51], {
                     endOffset: e.endOffset
                 })
             }, t.prototype.render = function() {
-                var e, t, n, a, o = this.props.handleSize ? this.props.handleSize : d.c.Small,
-                    u = (e = {
+                var e, t, n, a, o = this.props.handleSize ? this.props.handleSize : c.c.Small,
+                    d = (e = {
                         handleSize: o,
                         minOffset: this.props.minOffset,
                         maxOffset: this.props.maxOffset,
@@ -889,49 +896,49 @@ webpackJsonp([51], {
                     });
                 return l.createElement("div", {
                     ref: this.handleContainerRef
-                }, l.createElement(c._2, {
+                }, l.createElement(u._2, {
                     flexGrow: 0,
                     flexShrink: 0
                 }, l.createElement("div", {
                     "data-test-selector": i.SelectedSection,
-                    style: u
-                }, l.createElement(c._8, {
+                    style: d
+                }, l.createElement(u._8, {
                     className: "draggable-slider__container",
-                    position: c._15.Relative,
-                    display: c.R.Flex,
-                    justifyContent: c._7.Center
-                }, l.createElement(c._8, {
-                    position: c._15.Absolute,
+                    position: u._15.Relative,
+                    display: u.R.Flex,
+                    justifyContent: u._7.Center
+                }, l.createElement(u._8, {
+                    position: u._15.Absolute,
                     attachTop: !0,
                     fullWidth: !0
-                }, l.createElement(c._8, {
-                    position: c._15.Relative,
+                }, l.createElement(u._8, {
+                    position: u._15.Relative,
                     attachTop: !0,
                     fullWidth: !0,
-                    display: c.R.Flex,
-                    justifyContent: c._7.Center
-                }, l.createElement(c._8, {
-                    position: c._15.Absolute,
+                    display: u.R.Flex,
+                    justifyContent: u._7.Center
+                }, l.createElement(u._8, {
+                    position: u._15.Absolute,
                     attachBottom: !0,
                     margin: {
                         bottom: 1
                     }
-                }, this.props.popover))), l.createElement(c._35, {
+                }, this.props.popover))), l.createElement(u._35, {
                     className: p,
                     fullWidth: !0,
-                    display: c.R.Flex,
-                    justifyContent: c._7.Between
-                }, l.createElement(d.a, {
+                    display: u.R.Flex,
+                    justifyContent: u._7.Between
+                }, l.createElement(c.a, {
                     "data-test-selector": i.LeftHandle,
                     color: this.props.color,
-                    handlePosition: d.b.Left,
+                    handlePosition: c.b.Left,
                     onRef: this.leftHandleRefHandler,
                     onMouseDown: this.onLeftMouseDown,
                     size: this.props.handleSize
-                }), this.renderSliderContent(), l.createElement(d.a, {
+                }), this.renderSliderContent(), l.createElement(c.a, {
                     "data-test-selector": i.RightHandle,
                     color: this.props.color,
-                    handlePosition: d.b.Right,
+                    handlePosition: c.b.Right,
                     onRef: this.rightHandleRefHandler,
                     onMouseDown: this.onRightMouseDown,
                     size: this.props.handleSize
@@ -950,21 +957,23 @@ webpackJsonp([51], {
                     "draggable-slider__overlay--blue": this.props.color === r.a.Blue,
                     "draggable-slider__overlay--orange": this.props.color === r.a.Orange
                 });
-                return l.createElement(c._8, {
+                return l.createElement(u._8, {
                     className: t,
-                    display: c.R.InlineBlock,
-                    overflow: c._11.Hidden,
+                    display: u.R.InlineBlock,
+                    overflow: u._11.Hidden,
                     "data-test-selector": i.Overlay,
                     fullWidth: !0
                 }, e)
+            }, t.prototype.shouldHandleClick = function(e) {
+                return e === d.a.Left
             }, t
         }(l.Component);
         n.d(t, "c", function() {
             return r.a
         }), n.d(t, "a", function() {
-            return u
+            return p
         }), n.d(t, !1, function() {}), n.d(t, "b", function() {
-            return d.c
+            return c.c
         })
     },
     "3KVC": function(e, t, n) {
@@ -4409,6 +4418,16 @@ webpackJsonp([51], {
         e.exports = n
     },
     cJZy: function(e, t) {},
+    cvQl: function(e, t, n) {
+        "use strict";
+        var i;
+        n.d(t, "a", function() {
+                return i
+            }),
+            function(e) {
+                e[e.Left = 0] = "Left", e[e.Middle = 1] = "Middle", e[e.Right = 2] = "Right", e[e.Back = 3] = "Back", e[e.Forward = 4] = "Forward"
+            }(i || (i = {}))
+    },
     dPTw: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -6108,4 +6127,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-3350e984e134c139dec8ac5bd5bfb79c.js.map
+//# sourceMappingURL=sites.clips.pages.create-92dce11847bb6519c940f80e04b8a588.js.map

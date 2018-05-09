@@ -144,7 +144,7 @@ webpackJsonp([64], {
                     }, n.createElement(R, {
                         imgURL: c.a,
                         title: Object(i.d)("Bebo", "BroadcastRootPage"),
-                        link: "http://bebo.com",
+                        link: "http://www.bebo.com/",
                         longDescription: Object(i.d)("Free, easy, all-in-one Windows software that includes what you need to stream and display alerts and overlays. Recommended for first-time streamers.", "BroadcastRootPage"),
                         setupGuideLink: "https://help.bebo.com/getting-started/how-do-i-get-started-with-bebo"
                     })), n.createElement(j._8, {
@@ -154,7 +154,7 @@ webpackJsonp([64], {
                     }, n.createElement(R, {
                         imgURL: k.a,
                         title: Object(i.d)("Streamlabs OBS", "BroadcastRootPage"),
-                        link: "https://streamlabs.com/streamlabs-obs?s=25",
+                        link: "https://streamlabs.com/streamlabs-obs/",
                         longDescription: Object(i.d)("Streamlabs OBS is free, open source, and easy way to get started streaming. The app is built on top of OBS with a whole lot of exciting features: facemasks, built-in widgets & chat, game specific encoders and thousands of free overlays and themes.", "BroadcastRootPage"),
                         setupGuideLink: "https://support.streamlabs.com/hc/en-us/articles/115004797393-Streamlabs-OBS-All-In-One-Window-Walk-Through"
                     })), n.createElement(j._8, {
@@ -355,4 +355,4 @@ webpackJsonp([64], {
         e.exports = a.p + "assets/xsplit_broadcaster_1x-404b22413674582ad019f70631921904.png"
     }
 });
-//# sourceMappingURL=pages.broadcast-672506b9b96f8a61b42e182754b73869.js.map
+//# sourceMappingURL=pages.broadcast-ccc63158b122f01e5e6e6eb641b551bc.js.map

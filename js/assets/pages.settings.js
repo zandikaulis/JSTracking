@@ -9287,7 +9287,7 @@ webpackJsonp([41], {
                 }, l.createElement(F.Q, {
                     fontSize: F.V.Size2
                 }, Object(d.d)("You've gone Turbo!", "CancelTurboLink")), l.createElement(F.Q, null, Object(d.d)("We hope you're enjoying your new chat shwag and watching ad-free.", "CancelTurboLink")), l.createElement(F.O, {
-                    to: "/products/turbo/ticket/edit"
+                    to: "/unsubscribe/turbo"
                 }, Object(d.d)("Cancel Turbo", "CancelTurboLink")))
             },
             Ui = n("hRPz"),
@@ -16811,4 +16811,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-97980aac2fa4b1a3f7566e620db6df69.js.map
+//# sourceMappingURL=pages.settings-e640016b423c675ba7979d88ba63e795.js.map

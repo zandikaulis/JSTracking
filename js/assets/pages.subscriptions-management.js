@@ -568,6 +568,157 @@ webpackJsonp([63], {
         };
         e.exports = n
     },
+    "QU+n": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "badge"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "Badge"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "setID"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "version"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "title"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "image1x"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "size"
+                            },
+                            value: {
+                                kind: "EnumValue",
+                                value: "NORMAL"
+                            }
+                        }],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "image2x"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "size"
+                            },
+                            value: {
+                                kind: "EnumValue",
+                                value: "DOUBLE"
+                            }
+                        }],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "image4x"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "size"
+                            },
+                            value: {
+                                kind: "EnumValue",
+                                value: "QUADRUPLE"
+                            }
+                        }],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "clickAction"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "clickURL"
+                        },
+                        arguments: [],
+                        directives: []
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 170
+            }
+        };
+        n.loc.source = {
+            body: "fragment badge on Badge {\nid\nsetID\nversion\ntitle\nimage1x: imageURL(size: NORMAL)\nimage2x: imageURL(size: DOUBLE)\nimage4x: imageURL(size: QUADRUPLE)\nclickAction\nclickURL\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     "SR+V": function(e, t) {},
     cpDk: function(e, t, n) {
         var i = {
@@ -1300,7 +1451,7 @@ webpackJsonp([63], {
             v = n("7vx8"),
             k = n("oIkB"),
             S = n("Odds"),
-            _ = (n("SR+V"), function() {
+            y = (n("SR+V"), function() {
                 return c.createElement(S._35, {
                     className: "available-prime-sub-card",
                     border: !0,
@@ -1337,24 +1488,24 @@ webpackJsonp([63], {
                     }
                 }, c.createElement(S.Q, null, Object(d.d)('To use your free subscription, go to a channel of your choice and select "Subscribe Free"', "AvailablePrimeSubCard"))))
             }),
-            y = n("SZoP"),
+            _ = n("SZoP"),
             B = n("urTJ"),
             E = n("V5M+"),
             O = n("+8VM"),
-            C = n("9u8h");
-        var T, N;
+            N = n("9u8h");
+        var C, T;
         n("l6se");
         ! function(e) {
             e.ErrorMessage = "DisableGiftModalErrorMessage", e.CancelButton = "DisableGiftCancelButton", e.ConfirmButton = "DisableGiftConfirmButton"
-        }(T || (T = {})),
+        }(C || (C = {})),
         function(e) {
             e[e.Success = 0] = "Success", e[e.Error = 1] = "Error", e[e.InProgress = 2] = "InProgress", e[e.Unconfirmed = 3] = "Unconfirmed"
-        }(N || (N = {}));
+        }(T || (T = {}));
         var w, P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        requestStatus: N.Unconfirmed
+                        requestStatus: T.Unconfirmed
                     }, t.onConfirmDisableGift = function() {
                         return u.__awaiter(t, void 0, void 0, function() {
                             var e, t, n, i = this;
@@ -1362,7 +1513,7 @@ webpackJsonp([63], {
                                 switch (r.label) {
                                     case 0:
                                         e = this.props.currentUserID, t = this.props.originID, n = this.props.subscriptionProductID, this.setState({
-                                            requestStatus: N.InProgress
+                                            requestStatus: T.InProgress
                                         }), r.label = 1;
                                     case 1:
                                         return r.trys.push([1, 3, , 4]), [4, function(e, t, n) {
@@ -1377,7 +1528,7 @@ webpackJsonp([63], {
                                                                 product_id: n
                                                             }, s.label = 1;
                                                         case 1:
-                                                            return s.trys.push([1, 3, , 4]), [4, C.a.postOrThrow("/v5/subscriptions/gift/cancel", {
+                                                            return s.trys.push([1, 3, , 4]), [4, N.a.postOrThrow("/v5/subscriptions/gift/cancel", {
                                                                 body: i
                                                             }, {
                                                                 version: 5
@@ -1394,13 +1545,13 @@ webpackJsonp([63], {
                                         }(e, t, n)];
                                     case 2:
                                         return r.sent(), this.setState({
-                                            requestStatus: N.Success
+                                            requestStatus: T.Success
                                         }, function() {
                                             i.props.onSuccess()
                                         }), [3, 4];
                                     case 3:
                                         return r.sent(), this.setState({
-                                            requestStatus: N.Error
+                                            requestStatus: T.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -1435,16 +1586,16 @@ webpackJsonp([63], {
                         state: this.getConfirmButtonState(),
                         type: S.B.Alert,
                         onClick: this.onConfirmDisableGift,
-                        "data-test-selector": T.ConfirmButton
+                        "data-test-selector": C.ConfirmButton
                     }, Object(d.d)("Disable Benefits", "DisableGiftModal"))), c.createElement(S.v, {
                         onClick: this.props.onCancel,
-                        "data-test-selector": T.CancelButton
+                        "data-test-selector": C.CancelButton
                     }, Object(d.d)("Cancel", "DisableGiftModal"))), c.createElement(O.a, {
                         closeOnBackdropClick: !0,
                         closeOnPageNavigation: !0
                     }))
                 }, t.prototype.renderErrorDisplay = function() {
-                    return this.state.requestStatus === N.Error ? c.createElement(S._35, {
+                    return this.state.requestStatus === T.Error ? c.createElement(S._35, {
                         borderTop: !0,
                         borderRight: !0,
                         borderBottom: !0,
@@ -1453,16 +1604,16 @@ webpackJsonp([63], {
                             top: 1
                         },
                         className: "disable-gift-modal__error",
-                        "data-test-selector": T.ErrorMessage
+                        "data-test-selector": C.ErrorMessage
                     }, c.createElement(S.Q, null, Object(d.d)("Something went wrong and your request could not be processed at this time. Please try again later.", "DisableGiftModal"))) : null
                 }, t.prototype.getConfirmButtonState = function() {
                     switch (this.state.requestStatus) {
-                        case N.InProgress:
+                        case T.InProgress:
                             return S.A.Loading;
-                        case N.Success:
+                        case T.Success:
                             return S.A.Success;
-                        case N.Unconfirmed:
-                        case N.Error:
+                        case T.Unconfirmed:
+                        case T.Error:
                         default:
                             return S.A.Default
                     }
@@ -1492,7 +1643,7 @@ webpackJsonp([63], {
                         t.props.currentUserID && t.props.subscription.user && t.props.subscription.product && t.props.subscription.originID && t.props.showDisableGiftModal({
                             onCancel: t.props.closeModal,
                             onSuccess: t.props.onDisableGiftSuccess,
-                            formattedChannelDisplayName: Object(y.a)(t.props.subscription.user.login, t.props.subscription.user.displayName),
+                            formattedChannelDisplayName: Object(_.a)(t.props.subscription.user.login, t.props.subscription.user.displayName),
                             currentUserID: t.props.currentUserID,
                             originID: t.props.subscription.originID,
                             subscriptionProductID: t.props.subscription.product.id
@@ -1545,12 +1696,12 @@ webpackJsonp([63], {
                     var e = {
                         alert: !0
                     };
-                    return this.props.subscription.user && this.props.subscription.product ? (e.linkTo = this.props.subscription.product.url + "/ticket/edit", this.renderInteractable(w.DoNotRenewButton, Object(d.d)("Don't Renew Subscription", "EditSubscriptionBalloon"), e)) : null
+                    return this.props.subscription.product ? (e.linkTo = "/unsubscribe/" + this.props.subscription.product.name, this.renderInteractable(w.DoNotRenewButton, Object(d.d)("Don't Renew Subscription", "EditSubscriptionBalloon"), e)) : null
                 }, t.prototype.renderCancelAndRefundButton = function() {
-                    if (this.props.subscription.user) {
+                    if (this.props.subscription.product) {
                         var e = {
                             alert: !0,
-                            linkTo: "/products/" + this.props.subscription.user.login + "/ticket/edit?cancel=true"
+                            linkTo: "/unsubscribe/" + this.props.subscription.product.name + "?cancel=true"
                         };
                         return this.renderInteractable(w.CancelAndRefundButton, Object(d.d)("Cancel And Refund", "EditSubscriptionBalloon"), e)
                     }
@@ -1575,7 +1726,7 @@ webpackJsonp([63], {
             j = Object(g.compose)(Object(b.d)("EditSubscriptionBalloon", {
                 autoReportInteractive: !0
             }))(F);
-        var I = Object(i.b)(void 0, function(e) {
+        var R = Object(i.b)(void 0, function(e) {
                 return Object(r.b)({
                     showDisableGiftModal: function(e) {
                         var t = u.__rest(e, []);
@@ -1584,11 +1735,11 @@ webpackJsonp([63], {
                     closeModal: E.c
                 }, e)
             })(j),
-            R = n("7LIQ"),
+            I = n("7LIQ"),
             A = n("Tzcg"),
-            M = n("+V/3");
+            x = n("+V/3");
 
-        function x(e) {
+        function M(e) {
             return {
                 id: e.id,
                 setID: e.setID,
@@ -1597,13 +1748,13 @@ webpackJsonp([63], {
                 image1x: e.image1x,
                 image2x: e.image2x,
                 image4x: e.image4x,
-                clickAction: M.b,
+                clickAction: x.b,
                 clickURL: e.clickURL || ""
             }
         }
         var L, G = n("MjRD");
         (L || (L = {})).HasAdFreeMessage = "HasAdFreeMessage";
-        var V, q, Q = function(e) {
+        var V, Q, q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1676,7 +1827,7 @@ webpackJsonp([63], {
                         return e && "subscriber" === e.setID
                     }).sort(this.compareBadgeVersion).forEach(function(t) {
                         if (t) {
-                            var n = x(t);
+                            var n = M(t);
                             e.push(c.createElement(B.a, {
                                 key: "subscription-benefit-badge-" + t.id,
                                 badge: n
@@ -1703,7 +1854,7 @@ webpackJsonp([63], {
                     var e = this.getEmotesFromProducts();
                     return 0 === e.length ? null : c.createElement(S._8, null, c.createElement(S.Q, null, Object(d.d)("{count, plural, one {# subscriber emote} other {# subscriber emotes}}", {
                         count: e.length
-                    }, "SubscriptionBenefitsBalloon")), c.createElement(R.a, {
+                    }, "SubscriptionBenefitsBalloon")), c.createElement(I.a, {
                         emoteSet: {
                             id: "",
                             emotes: e
@@ -1771,7 +1922,7 @@ webpackJsonp([63], {
                         }
                     }
                 }
-            }), Object(b.d)("SubscriptionBenefitsBalloon"))(Q),
+            }), Object(b.d)("SubscriptionBenefitsBalloon"))(q),
             H = n("E9Qg"),
             W = n.n(H),
             $ = (n("AnDU"), function(e) {
@@ -1795,7 +1946,7 @@ webpackJsonp([63], {
         }(V || (V = {})),
         function(e) {
             e.TierDisplay = "TierDisplay", e.ExpiryMessage = "ExpiryMessage", e.PaidUpgradeMessage = "PaidUpgradeMessage", e.CancelPaidUpgradeButton = "CancelPaidUpgradeButton"
-        }(q || (q = {}));
+        }(Q || (Q = {}));
         var J, K, X = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1823,7 +1974,7 @@ webpackJsonp([63], {
                                                                 purchase_profile_id: n
                                                             }, a.label = 1;
                                                         case 1:
-                                                            return a.trys.push([1, 3, , 4]), [4, C.a.postOrThrow("/kraken/checkout/users/" + e + "/products/" + t + "/purchase/cancel", {
+                                                            return a.trys.push([1, 3, , 4]), [4, N.a.postOrThrow("/kraken/checkout/users/" + e + "/products/" + t + "/purchase/cancel", {
                                                                 body: r
                                                             }, {
                                                                 version: 5
@@ -1888,7 +2039,7 @@ webpackJsonp([63], {
                     var e, t, n = null,
                         i = "",
                         r = void 0;
-                    if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) n = this.props.subBenefit.user.bannerImageURL, e = Object(y.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), i = this.props.subBenefit.user.displayName, r = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
+                    if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) n = this.props.subBenefit.user.bannerImageURL, e = Object(_.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), i = this.props.subBenefit.user.displayName, r = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
                     else {
                         if (!this.isTurbo) return null;
                         i = e = Object(d.d)("Twitch Turbo", "SubscriptionCard"), r = "/settings/turbo", t = "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png"
@@ -1926,7 +2077,7 @@ webpackJsonp([63], {
                         display: S.R.Flex,
                         justifyContent: S._7.End,
                         className: "subscription-card__edit-button"
-                    }, c.createElement(I, {
+                    }, c.createElement(R, {
                         subscription: this.props.subBenefit,
                         currentUserID: this.props.currentUserID,
                         onDisableGiftSuccess: this.onGiftDisableSuccess
@@ -1972,7 +2123,7 @@ webpackJsonp([63], {
                 }, t.prototype.renderTierDisplay = function() {
                     return c.createElement(S._8, {
                         display: S.R.Flex,
-                        "data-test-selector": q.TierDisplay
+                        "data-test-selector": Q.TierDisplay
                     }, c.createElement(S._35, {
                         background: S.n.Alt2,
                         display: S.R.Flex,
@@ -2017,7 +2168,7 @@ webpackJsonp([63], {
                     if (this.props.subBenefit.user && this.props.subBenefit.user.self ? t = this.props.subBenefit.user.self.displayBadges.find(function(e) {
                             return null !== e && "subscriber" === e.setID
                         }) : this.isTurbo && this.props.turboBadge && (e = Object(d.d)("Turbo Badge", "SubscriptionCard"), t = this.props.turboBadge), t) {
-                        var n = x(t);
+                        var n = M(t);
                         return c.createElement(S._8, {
                             display: S.R.Flex,
                             margin: {
@@ -2036,7 +2187,7 @@ webpackJsonp([63], {
                     if (this.props.subBenefit.gift && this.props.subBenefit.gift.isGift) {
                         var e = void 0;
                         return e = this.props.subBenefit.gift.gifter ? Object(d.d)("Gift Subscription from {sender}", {
-                            sender: Object(y.a)(this.props.subBenefit.gift.gifter.login, this.props.subBenefit.gift.gifter.displayName)
+                            sender: Object(_.a)(this.props.subBenefit.gift.gifter.login, this.props.subBenefit.gift.gifter.displayName)
                         }, "SubscriptionCard") : Object(d.d)("Gift Subscription", "SubscriptionCard"), c.createElement(S._8, {
                             display: S.R.Flex,
                             margin: {
@@ -2061,7 +2212,7 @@ webpackJsonp([63], {
                             type: S.B.Text,
                             onClick: this.onCancelPaidUpgrade,
                             state: this.state.cancelPaidUpgradeStatus === V.InProgress ? S.A.Loading : S.A.Default,
-                            "data-test-selector": q.CancelPaidUpgradeButton
+                            "data-test-selector": Q.CancelPaidUpgradeButton
                         }, Object(d.d)("Cancel Paid Subscription", "SubscriptionCard"))
                     }
                     return null
@@ -2097,7 +2248,7 @@ webpackJsonp([63], {
                         margin: {
                             bottom: .5
                         },
-                        "data-test-selector": q.ExpiryMessage
+                        "data-test-selector": Q.ExpiryMessage
                     }, c.createElement(S._8, {
                         margin: {
                             right: 1
@@ -2116,7 +2267,7 @@ webpackJsonp([63], {
                             margin: {
                                 bottom: .5
                             },
-                            "data-test-selector": q.PaidUpgradeMessage
+                            "data-test-selector": Q.PaidUpgradeMessage
                         }, c.createElement(S._8, {
                             margin: {
                                 right: 1
@@ -2167,7 +2318,7 @@ webpackJsonp([63], {
                             r.purchasedWithPrime ? (t = !0, e.unshift(s)) : e.push(s)
                         }
                     }
-                    return this.props.type === K.Paid && this.props.hasPrime && !t && e.unshift(c.createElement(_, {
+                    return this.props.type === K.Paid && this.props.hasPrime && !t && e.unshift(c.createElement(y, {
                         key: "prime-subscription-available"
                     })), e
                 }, t.prototype.filterSubType = function(e) {
@@ -2529,4 +2680,4 @@ webpackJsonp([63], {
         })
     }
 });
-//# sourceMappingURL=pages.subscriptions-management-4237b3e7442db31d09264496590c761f.js.map
+//# sourceMappingURL=pages.subscriptions-management-e48825394cd689f4944817f7078b9718.js.map

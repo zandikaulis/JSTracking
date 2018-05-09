@@ -432,7 +432,7 @@ webpackJsonp([57], {
                 return n.e(117).then(n.bind(null, "o0He"))
             }, "TwitchPrimeOffersPage"),
             T = c.a.wrap(function() {
-                return n.e(100).then(n.bind(null, "9GX+"))
+                return n.e(101).then(n.bind(null, "9GX+"))
             }, "TwitchPrimeSuccessPage"),
             L = c.a.wrap(function() {
                 return n.e(112).then(n.bind(null, "Uen5"))
@@ -3368,4 +3368,4 @@ webpackJsonp([57], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.prime-75824e792ee6b0fedf3a60a3c1aaba10.js.map
+//# sourceMappingURL=pages.prime-8ee0b256d644f945201ee8e3b077025a.js.map

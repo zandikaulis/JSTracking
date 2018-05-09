@@ -692,8 +692,9 @@ webpackJsonp([105], {
             o = n("TToO"),
             s = n("HW6M"),
             l = n("GiK3"),
-            d = n("kLf9"),
-            c = n("Odds");
+            d = n("cvQl"),
+            c = n("kLf9"),
+            u = n("Odds");
         n("cJZy");
         ! function(e) {
             e.LeftHandle = "left-handle", e.Overlay = "overlay", e.RightHandle = "right-handle", e.SelectedSection = "section", e.Slider = "slider"
@@ -701,7 +702,7 @@ webpackJsonp([105], {
         function(e) {
             e.LeftHandle = "leftHandle", e.Slider = "slider", e.RightHandle = "rightHandle"
         }(r || (r = {}));
-        var u = function(e) {
+        var p = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.leftHandleRef = null, n.containerRef = null, n.rightHandleRef = null, n.sliderHandleRef = null, n.getHandleHandlers = function(e) {
@@ -742,18 +743,20 @@ webpackJsonp([105], {
                 }, n.leftHandleRefHandler = function(e) {
                     n.leftHandleRef = e
                 }, n.onLeftMouseDown = function(e) {
-                    var t = e.clientX;
-                    n.setState(function(e) {
-                        return {
-                            previousPosition: t,
-                            previousBaseValue: e.startOffset
-                        }
-                    }, function() {
-                        n.props.onLeftDragStart && n.props.onLeftDragStart({
-                            startOffset: n.state.startOffset,
-                            endOffset: n.state.endOffset
-                        }), n.addHandleListeners(r.LeftHandle)
-                    })
+                    if (n.shouldHandleClick(e.button)) {
+                        var t = e.clientX;
+                        n.setState(function(e) {
+                            return {
+                                previousPosition: t,
+                                previousBaseValue: e.startOffset
+                            }
+                        }, function() {
+                            n.props.onLeftDragStart && n.props.onLeftDragStart({
+                                startOffset: n.state.startOffset,
+                                endOffset: n.state.endOffset
+                            }), n.addHandleListeners(r.LeftHandle)
+                        })
+                    }
                 }, n.onLeftMouseUp = function() {
                     n.setState({
                         previousPosition: null,
@@ -786,18 +789,20 @@ webpackJsonp([105], {
                 }, n.rightHandleRefHandler = function(e) {
                     n.rightHandleRef = e
                 }, n.onRightMouseDown = function(e) {
-                    var t = e.clientX;
-                    n.setState(function(e) {
-                        return {
-                            previousPosition: t,
-                            previousBaseValue: e.endOffset
-                        }
-                    }, function() {
-                        n.props.onRightDragStart && n.props.onRightDragStart({
-                            startOffset: n.state.startOffset,
-                            endOffset: n.state.endOffset
-                        }), n.addHandleListeners(r.RightHandle)
-                    })
+                    if (n.shouldHandleClick(e.button)) {
+                        var t = e.clientX;
+                        n.setState(function(e) {
+                            return {
+                                previousPosition: t,
+                                previousBaseValue: e.endOffset
+                            }
+                        }, function() {
+                            n.props.onRightDragStart && n.props.onRightDragStart({
+                                startOffset: n.state.startOffset,
+                                endOffset: n.state.endOffset
+                            }), n.addHandleListeners(r.RightHandle)
+                        })
+                    }
                 }, n.onRightMouseUp = function() {
                     n.setState({
                         previousPosition: null,
@@ -830,18 +835,20 @@ webpackJsonp([105], {
                 }, n.sliderHandleRefHandler = function(e) {
                     n.sliderHandleRef = e
                 }, n.onSliderMouseDown = function(e) {
-                    var t = e.clientX;
-                    n.setState(function(e) {
-                        return {
-                            previousPosition: t,
-                            previousBaseValue: e.startOffset
-                        }
-                    }, function() {
-                        n.props.onSliderDragStart && n.props.onSliderDragStart({
-                            startOffset: n.state.startOffset,
-                            endOffset: n.state.endOffset
-                        }), n.addHandleListeners(r.Slider)
-                    })
+                    if (n.shouldHandleClick(e.button)) {
+                        var t = e.clientX;
+                        n.setState(function(e) {
+                            return {
+                                previousPosition: t,
+                                previousBaseValue: e.startOffset
+                            }
+                        }, function() {
+                            n.props.onSliderDragStart && n.props.onSliderDragStart({
+                                startOffset: n.state.startOffset,
+                                endOffset: n.state.endOffset
+                            }), n.addHandleListeners(r.Slider)
+                        })
+                    }
                 }, n.onSliderMouseUp = function() {
                     n.setState({
                         previousPosition: null,
@@ -906,8 +913,8 @@ webpackJsonp([105], {
                     endOffset: e.endOffset
                 })
             }, t.prototype.render = function() {
-                var e, t, n, r, o = this.props.handleSize ? this.props.handleSize : d.c.Small,
-                    u = (e = {
+                var e, t, n, r, o = this.props.handleSize ? this.props.handleSize : c.c.Small,
+                    d = (e = {
                         handleSize: o,
                         minOffset: this.props.minOffset,
                         maxOffset: this.props.maxOffset,
@@ -924,49 +931,49 @@ webpackJsonp([105], {
                     });
                 return l.createElement("div", {
                     ref: this.handleContainerRef
-                }, l.createElement(c._2, {
+                }, l.createElement(u._2, {
                     flexGrow: 0,
                     flexShrink: 0
                 }, l.createElement("div", {
                     "data-test-selector": i.SelectedSection,
-                    style: u
-                }, l.createElement(c._8, {
+                    style: d
+                }, l.createElement(u._8, {
                     className: "draggable-slider__container",
-                    position: c._15.Relative,
-                    display: c.R.Flex,
-                    justifyContent: c._7.Center
-                }, l.createElement(c._8, {
-                    position: c._15.Absolute,
+                    position: u._15.Relative,
+                    display: u.R.Flex,
+                    justifyContent: u._7.Center
+                }, l.createElement(u._8, {
+                    position: u._15.Absolute,
                     attachTop: !0,
                     fullWidth: !0
-                }, l.createElement(c._8, {
-                    position: c._15.Relative,
+                }, l.createElement(u._8, {
+                    position: u._15.Relative,
                     attachTop: !0,
                     fullWidth: !0,
-                    display: c.R.Flex,
-                    justifyContent: c._7.Center
-                }, l.createElement(c._8, {
-                    position: c._15.Absolute,
+                    display: u.R.Flex,
+                    justifyContent: u._7.Center
+                }, l.createElement(u._8, {
+                    position: u._15.Absolute,
                     attachBottom: !0,
                     margin: {
                         bottom: 1
                     }
-                }, this.props.popover))), l.createElement(c._35, {
+                }, this.props.popover))), l.createElement(u._35, {
                     className: p,
                     fullWidth: !0,
-                    display: c.R.Flex,
-                    justifyContent: c._7.Between
-                }, l.createElement(d.a, {
+                    display: u.R.Flex,
+                    justifyContent: u._7.Between
+                }, l.createElement(c.a, {
                     "data-test-selector": i.LeftHandle,
                     color: this.props.color,
-                    handlePosition: d.b.Left,
+                    handlePosition: c.b.Left,
                     onRef: this.leftHandleRefHandler,
                     onMouseDown: this.onLeftMouseDown,
                     size: this.props.handleSize
-                }), this.renderSliderContent(), l.createElement(d.a, {
+                }), this.renderSliderContent(), l.createElement(c.a, {
                     "data-test-selector": i.RightHandle,
                     color: this.props.color,
-                    handlePosition: d.b.Right,
+                    handlePosition: c.b.Right,
                     onRef: this.rightHandleRefHandler,
                     onMouseDown: this.onRightMouseDown,
                     size: this.props.handleSize
@@ -985,21 +992,23 @@ webpackJsonp([105], {
                     "draggable-slider__overlay--blue": this.props.color === a.a.Blue,
                     "draggable-slider__overlay--orange": this.props.color === a.a.Orange
                 });
-                return l.createElement(c._8, {
+                return l.createElement(u._8, {
                     className: t,
-                    display: c.R.InlineBlock,
-                    overflow: c._11.Hidden,
+                    display: u.R.InlineBlock,
+                    overflow: u._11.Hidden,
                     "data-test-selector": i.Overlay,
                     fullWidth: !0
                 }, e)
+            }, t.prototype.shouldHandleClick = function(e) {
+                return e === d.a.Left
             }, t
         }(l.Component);
         n.d(t, "c", function() {
             return a.a
         }), n.d(t, "a", function() {
-            return u
+            return p
         }), n.d(t, !1, function() {}), n.d(t, "b", function() {
-            return d.c
+            return c.c
         })
     },
     "6rqt": function(e, t) {},
@@ -1970,7 +1979,7 @@ webpackJsonp([105], {
         ! function(e) {
             e[e.Highlight = 0] = "Highlight", e[e.VideoManagerLink = 1] = "VideoManagerLink"
         }(H || (H = {}));
-        var j = function(e) {
+        var F = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2101,7 +2110,7 @@ webpackJsonp([105], {
                     }, "SaveSuccessOverview")
                 }, t
             }(a.Component),
-            F = n("H6Wp"),
+            j = n("H6Wp"),
             P = (n("cJkA"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -2143,7 +2152,7 @@ webpackJsonp([105], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e;
-                    return e = this.state.savedHighlights.length > 0 && 0 === this.state.segmentsSnapshot.length ? a.createElement(j, {
+                    return e = this.state.savedHighlights.length > 0 && 0 === this.state.segmentsSnapshot.length ? a.createElement(F, {
                         onComplete: this.props.onPostSaveFinish,
                         owner: this.props.owner,
                         highlights: this.state.savedHighlights
@@ -2232,7 +2241,7 @@ webpackJsonp([105], {
                     })
                 }, t
             }(a.Component)),
-            M = Object(p.a)(F, {
+            M = Object(p.a)(j, {
                 name: "createHighlight"
             })(P);
         var G, B = Object(O.b)(null, function(e, t) {
@@ -2356,8 +2365,8 @@ webpackJsonp([105], {
                     }
                 }
             })(A),
-            K = n("+Znq"),
-            Q = n("6BvN");
+            Q = n("+Znq"),
+            K = n("6BvN");
         ! function(e) {
             e[e.EndFormGroup = 0] = "EndFormGroup", e[e.Offsets = 1] = "Offsets", e[e.StartFormGroup = 2] = "StartFormGroup", e[e.UpdateButton = 3] = "UpdateButton"
         }(U || (U = {}));
@@ -2373,7 +2382,7 @@ webpackJsonp([105], {
                             endOffset: e.currentTarget.value
                         })
                     }, n.onKeyDown = function(e) {
-                        e.keyCode === Q.a.Enter && n.update()
+                        e.keyCode === K.a.Enter && n.update()
                     }, n.onInputBlur = function() {
                         n.update()
                     }, n.onUpdateClick = function() {
@@ -2395,7 +2404,7 @@ webpackJsonp([105], {
                     })
                 }, t.prototype.render = function() {
                     var e = this.props.segment;
-                    return a.createElement(K.a, null, a.createElement(w.v, {
+                    return a.createElement(Q.a, null, a.createElement(w.v, {
                         type: w.B.Text
                     }, a.createElement(w._8, {
                         display: w.R.Flex,
@@ -3310,6 +3319,16 @@ webpackJsonp([105], {
     },
     cJZy: function(e, t) {},
     cJkA: function(e, t) {},
+    cvQl: function(e, t, n) {
+        "use strict";
+        var i;
+        n.d(t, "a", function() {
+                return i
+            }),
+            function(e) {
+                e[e.Left = 0] = "Left", e[e.Middle = 1] = "Middle", e[e.Right = 2] = "Right", e[e.Back = 3] = "Back", e[e.Forward = 4] = "Forward"
+            }(i || (i = {}))
+    },
     d0Y8: function(e, t, n) {
         "use strict";
         var i = n("6rqt"),
@@ -3981,4 +4000,4 @@ webpackJsonp([105], {
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.highlighter-597b27a27544a1d9fde41ecb62dbcd20.js.map
+//# sourceMappingURL=pages.video-tools.pages.highlighter-35a6114b75300575037c7118a6e8f4de.js.map

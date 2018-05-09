@@ -211,81 +211,72 @@ webpackJsonp([47], {
             })(O),
             D = (n("LEV+"), "live-channel-card-link-selector"),
             L = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.renderVariation = function() {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderVariation = function() {
                         return a.createElement("div", i.__assign({
                             className: "live-channel-card"
-                        }, Object(N._63)(n.props)), a.createElement(l.a, {
+                        }, Object(N._63)(t.props)), a.createElement(l.a, {
                             context: l.b.MixedGameAndChannelList,
-                            title: n.props.title,
-                            linkTo: n.props.linkTo,
+                            title: t.props.title,
+                            linkTo: t.props.linkTo,
                             thumbnailImageProps: {
-                                src: n.props.imageSrc,
-                                alt: n.props.imageAlt
+                                src: t.props.imageSrc,
+                                alt: t.props.imageAlt
                             },
-                            channelLogin: n.props.channelName,
-                            channelLoginLinkTo: n.props.channelNameLinkTo,
+                            channelLogin: t.props.channelName,
+                            channelLoginLinkTo: t.props.channelNameLinkTo,
                             channelImageProps: {
-                                src: n.props.channelImageSrc || "",
-                                alt: n.props.channelName
+                                src: t.props.channelImageSrc || "",
+                                alt: t.props.channelName
                             },
-                            gameTitle: n.props.gameTitle,
-                            gameTitleLinkTo: n.props.gameLinkTo,
+                            gameTitle: t.props.gameTitle,
+                            gameTitleLinkTo: t.props.gameLinkTo,
                             gameBoxArtImageProps: {
-                                src: n.props.gameImageSrc,
-                                alt: n.props.gameTitle
+                                src: t.props.gameImageSrc,
+                                alt: t.props.gameTitle
                             },
-                            playerMetadata: n.props.streamMetadata || void 0,
-                            playerMetadataGame: n.props.streamMetadata ? n.props.gameTitle : void 0,
-                            streamType: n.props.streamType || c.a.Live,
-                            currentViewerCount: n.props.viewerCount,
-                            enableLivePreview: n.props.enableLivePreview,
-                            hostedByChannelLogin: n.props.hostedByChannelLogin
+                            playerMetadata: t.props.streamMetadata || void 0,
+                            playerMetadataGame: t.props.streamMetadata ? t.props.gameTitle : void 0,
+                            streamType: t.props.streamType || c.a.Live,
+                            currentViewerCount: t.props.viewerCount,
+                            enableLivePreview: t.props.enableLivePreview,
+                            hostedByChannelLogin: t.props.hostedByChannelLogin
                         }))
-                    }, n.renderFallback = function() {
-                        var e = null;
-                        !0 !== n.state.isPremiereExperimentActive && n.props.vodcast && (e = a.createElement(N._8, {
-                            display: N.R.InlineBlock,
-                            padding: {
-                                right: .5
-                            }
-                        }, a.createElement(N._12, {
-                            label: Object(o.d)("Vodcast", "LiveChannelCard")
-                        })));
-                        var t = Object(o.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
-                            viewerCount: n.props.viewerCount,
+                    }, t.renderFallback = function() {
+                        var e = Object(o.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
+                            viewerCount: t.props.viewerCount,
                             channel: a.createElement(r.a, {
-                                to: n.props.channelNameLinkTo,
+                                to: t.props.channelNameLinkTo,
                                 className: "live-channel-card__videos",
                                 "data-a-target": "live-channel-card-channel-name-link"
-                            }, n.props.channelName)
+                            }, t.props.channelName)
                         }, "Live Channel Card");
                         return a.createElement("div", i.__assign({
                             className: "live-channel-card"
-                        }, Object(N._63)(n.props)), a.createElement(N.C, {
-                            key: n.props.title
+                        }, Object(N._63)(t.props)), a.createElement(N.C, {
+                            key: t.props.title
                         }, a.createElement(N._8, {
                             fullWidth: !0
                         }, a.createElement(N.k, {
                             overflow: !0
                         }, a.createElement("div", null, a.createElement(r.a, {
-                            to: n.props.linkTo,
-                            title: n.props.hideTooltip ? void 0 : n.props.title,
+                            to: t.props.linkTo,
+                            title: t.props.hideTooltip ? void 0 : t.props.title,
                             "data-a-target": "live-channel-card-thumbnail-link",
                             "data-test-selector": D
-                        }, n.props.children ? n.props.children : a.createElement(N.E, {
-                            alt: n.props.imageAlt,
-                            src: n.props.imageSrc,
+                        }, t.props.children ? t.props.children : a.createElement(N.E, {
+                            alt: t.props.imageAlt,
+                            src: t.props.imageSrc,
                             aspect: N.l.Aspect16x9
-                        }), n.renderContentType()), n.renderGameBoxArt()))), a.createElement(N.D, null, a.createElement(N._8, {
+                        }), t.renderContentType()), t.renderGameBoxArt()))), a.createElement(N.D, null, a.createElement(N._8, {
                             display: N.R.Flex,
                             flexWrap: N.U.NoWrap
                         }, a.createElement(N._8, {
                             flexGrow: 1,
                             ellipsis: !0
                         }, a.createElement(r.a, {
-                            to: n.props.linkTo,
+                            to: t.props.linkTo,
                             className: "live-channel-card__channel",
                             "data-a-target": "live-channel-card-title-link"
                         }, a.createElement(N._2, {
@@ -298,26 +289,20 @@ webpackJsonp([47], {
                             lineHeight: N._9.Body,
                             ellipsis: !0,
                             className: "live-channel-card__title"
-                        }, n.props.title))), a.createElement(N._8, {
+                        }, t.props.title))), a.createElement(N._8, {
                             className: "live-channel-card__meta",
                             display: N.R.Flex,
                             flexWrap: N.U.NoWrap
-                        }, e, a.createElement(N.Q, {
+                        }, a.createElement(N.Q, {
                             type: N._49.Span,
                             ellipsis: !0
-                        }, t))), a.createElement(N._8, {
+                        }, e))), a.createElement(N._8, {
                             flexGrow: 0,
                             flexShrink: 0
-                        }, n.renderStreamMetadata())))))
-                    }, n.state = {
-                        isPremiereExperimentActive: !1
-                    }, n
+                        }, t.renderStreamMetadata())))))
+                    }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    "yes" === o.o.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW") && o.b.get("premiere_video_manager_staff", !1) && this.setState({
-                        isPremiereExperimentActive: !0
-                    })
-                }, t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = {
                         assignments: {
                             fallback: this.renderFallback,
@@ -352,7 +337,7 @@ webpackJsonp([47], {
                         aspect: N.l.BoxArt
                     })))) : null
                 }, t.prototype.renderContentType = function() {
-                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? a.createElement(N._8, {
+                    return "string" == typeof this.props.streamType && this.props.streamType ? a.createElement(N._8, {
                         position: N._15.Absolute,
                         attachLeft: !0,
                         attachTop: !0,
@@ -12633,29 +12618,25 @@ webpackJsonp([47], {
             u = n("3yQz"),
             m = n("Odds"),
             p = (n("C2pI"), function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    n.sortChangeHandler = function(e) {
-                        n.props.onVideoSortChange(e.target.value)
-                    }, n.renderLanguageSelector = function() {
-                        return n.props.hideLanguageSelector ? null : r.createElement(m._8, {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.sortChangeHandler = function(e) {
+                        t.props.onVideoSortChange(e.target.value)
+                    }, t.renderLanguageSelector = function() {
+                        return t.props.hideLanguageSelector ? null : r.createElement(m._8, {
                             display: m.R.InlineFlex,
                             margin: {
                                 right: 1
                             }
                         }, r.createElement(s.a, null))
-                    }, n.typeChangeHandler = function(e) {
-                        if (n.balloonWrapperRef.toggleBalloon(!1), n.props.onVideoFilterChange) {
-                            var t = e.currentTarget.getAttribute("data-filter-type");
-                            t && n.props.onVideoFilterChange(t)
+                    }, t.typeChangeHandler = function(e) {
+                        if (t.balloonWrapperRef.toggleBalloon(!1), t.props.onVideoFilterChange) {
+                            var n = e.currentTarget.getAttribute("data-filter-type");
+                            n && t.props.onVideoFilterChange(n)
                         }
-                    }, n.saveBalloonWrapperRef = function(e) {
-                        n.balloonWrapperRef = e
-                    };
-                    var i = o.o.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW");
-                    return n.state = {
-                        isPremiereExperimentActive: "yes" === i
-                    }, n
+                    }, t.saveBalloonWrapperRef = function(e) {
+                        t.balloonWrapperRef = e
+                    }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e, t = Object(o.d)("All Videos", "VideoFilter"),
@@ -12686,20 +12667,8 @@ webpackJsonp([47], {
                         },
                         v = {
                             "video-filters": !0
-                        },
-                        f = null;
-                    return this.state.isPremiereExperimentActive && (f = r.createElement(m._6, {
-                        onClick: this.typeChangeHandler,
-                        "data-filter-type": d.a.PastPremiere,
-                        "data-a-target": "video-type-filter-past-premieres"
-                    }, r.createElement(m._8, {
-                        className: a(this.props.broadcastType === d.a.PastPremiere ? g : v),
-                        padding: {
-                            y: .5,
-                            x: 1
-                        },
-                        "data-test-selector": "filter-item-past-premiere"
-                    }, n))), r.createElement(m._8, {
+                        };
+                    return r.createElement(m._8, {
                         margin: {
                             bottom: 2
                         },
@@ -12735,7 +12704,18 @@ webpackJsonp([47], {
                             x: 1
                         },
                         "data-test-selector": "filter-item-all"
-                    }, t)), f, r.createElement(m._6, {
+                    }, t)), r.createElement(m._6, {
+                        onClick: this.typeChangeHandler,
+                        "data-filter-type": d.a.PastPremiere,
+                        "data-a-target": "video-type-filter-past-premieres"
+                    }, r.createElement(m._8, {
+                        className: a(this.props.broadcastType === d.a.PastPremiere ? g : v),
+                        padding: {
+                            y: .5,
+                            x: 1
+                        },
+                        "data-test-selector": "filter-item-past-premiere"
+                    }, n)), r.createElement(m._6, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.Archive,
                         "data-a-target": "video-type-filter-past-broadcasts"
@@ -19120,4 +19100,4 @@ webpackJsonp([47], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-0e77591360abd2e252dbf079ed63063c.js.map
+//# sourceMappingURL=pages.directory-game-af87fc1c76e98ce74410269a51fb4311.js.map

@@ -6,22 +6,22 @@ webpackJsonp([110], {
         var i = n("GiK3"),
             a = n("6sO2"),
             r = n("MDGG"),
-            o = n("Odds"),
-            c = function(e) {
-                return 0 === e.achievement.progress ? i.createElement("span", null) : e.achievement.completedAt ? i.createElement(o._8, {
-                    display: o.R.InlineFlex,
-                    alignItems: o.c.Center
+            l = n("Odds"),
+            o = function(e) {
+                return 0 === e.achievement.progress ? i.createElement("span", null) : e.achievement.completedAt ? i.createElement(l._8, {
+                    display: l.R.InlineFlex,
+                    alignItems: l.c.Center
                 }, i.createElement(r.a, {
                     date: e.achievement.completedAt
-                })) : i.createElement(o._35, {
+                })) : i.createElement(l._35, {
                     className: "ach-card__pill-wrapper",
-                    fontSize: o.V.Size5
-                }, i.createElement(o._12, {
+                    fontSize: l.V.Size5
+                }, i.createElement(l._12, {
                     label: Object(a.e)(e.achievement.progressRatio, "percent")
                 }))
             };
         n.d(t, "a", function() {
-            return c
+            return o
         })
     },
     KMD5: function(e, t, n) {
@@ -29,19 +29,19 @@ webpackJsonp([110], {
         var i = n("GiK3"),
             a = n("6sO2"),
             r = n("rEvf"),
-            o = n("Odds"),
-            c = function(e) {
+            l = n("Odds"),
+            o = function(e) {
                 return e.quest.completedAchievements.includes(e.achievement) ? i.createElement("span", {
                     title: Object(a.d)("Completed within the last 30 days", "AchievementsQuests")
-                }, i.createElement(r.a, null)) : e.achievement.completedAt ? null : e.achievement.progress ? i.createElement(o._35, {
+                }, i.createElement(r.a, null)) : e.achievement.completedAt ? null : e.achievement.progress ? i.createElement(l._35, {
                     className: "ach-card__pill-wrapper",
-                    fontSize: o.V.Size5
-                }, i.createElement(o._12, {
+                    fontSize: l.V.Size5
+                }, i.createElement(l._12, {
                     label: Object(a.e)(e.achievement.progressRatio, "percent")
                 })) : null
             };
         n.d(t, "a", function() {
-            return c
+            return o
         })
     },
     MDGG: function(e, t, n) {
@@ -49,7 +49,7 @@ webpackJsonp([110], {
         var i = n("GiK3"),
             a = n("6sO2"),
             r = n("Odds"),
-            o = function(e) {
+            l = function(e) {
                 var t = Object(a.d)("Completed on {completedAt, date, short}", {
                         completedAt: e.date
                     }, "AchievementCard"),
@@ -61,34 +61,33 @@ webpackJsonp([110], {
                 }, n)
             };
         n.d(t, "a", function() {
-            return o
+            return l
         })
     },
-    Nwhx: function(e, t) {},
     RVgG: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             a = n("HW6M"),
             r = n("GiK3"),
-            o = n("F8kA"),
-            c = n("i3Vq"),
-            l = n("PGY2"),
+            l = n("F8kA"),
+            o = n("i3Vq"),
+            c = n("PGY2"),
             s = n("Odds"),
             m = {
                 "data-test-selector": "achievement-card"
             },
-            d = function(e) {
-                return r.createElement(o.a, i.__assign({
+            u = function(e) {
+                return r.createElement(l.a, i.__assign({
                     className: "ach-link",
                     "aria-hidden": e.isHidden,
                     tabIndex: e.isHidden ? -1 : void 0,
-                    to: l.b.achievement(e.achievement)
-                }, m), r.createElement(u, {
+                    to: c.b.achievement(e.achievement)
+                }, m), r.createElement(h, {
                     achievement: e.achievement,
                     className: e.layoutClassName
                 }, e.children))
             },
-            u = function(e) {
+            h = function(e) {
                 var t, n = a(e.className, {
                     "ach-card": !0,
                     "ach-card--completed": Boolean(e.achievement.completedAt),
@@ -107,425 +106,214 @@ webpackJsonp([110], {
                     position: s._15.Relative
                 }, r.createElement(s._35, {
                     className: "ach-card__inner"
-                }, r.createElement(c.a, {
+                }, r.createElement(o.a, {
                     achievement: e.achievement
                 }, r.createElement("div", null, t, e.children))))
             };
         n.d(t, !1, function() {
             return m
         }), n.d(t, "a", function() {
-            return d
-        })
-    },
-    WmaG: function(e, t, n) {
-        "use strict";
-        var i, a = n("TToO"),
-            r = n("GiK3"),
-            o = n("6sO2"),
-            c = n("+Znq"),
-            l = n("RH2O"),
-            s = n("PGY2"),
-            m = n("vH/s");
-
-        function d(e) {
-            o.n.track(m.SpadeEventType.DashboardHelpInteraction, e)
-        }! function(e) {
-            e.OpenHelp = "open_help", e.LearnMore = "learn_more", e.OpenSendFeedback = "open_send_feedback", e.CancelFeedback = "cancel_feedback", e.SentFeedback = "sent_feedback"
-        }(i || (i = {}));
-        var u = n("Odds"),
-            h = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.handleCancel = function() {
-                        d({
-                            action: i.CancelFeedback,
-                            location: "dashboard/" + n.props.page
-                        }), n.props.onClose()
-                    }, n.handleChange = function(e) {
-                        n.setState({
-                            body: e.currentTarget.value
-                        })
-                    }, n.sendFeedback = function() {
-                        return a.__awaiter(n, void 0, void 0, function() {
-                            var e, t;
-                            return a.__generator(this, function(n) {
-                                switch (n.label) {
-                                    case 0:
-                                        return this.setState({
-                                            inFlight: !0,
-                                            errorMessage: ""
-                                        }), e = "https://api.twitch.tv/kraken/users/" + this.props.currentUserID + "/stats_feedbacks", [4, Object(s.c)({
-                                            path: e,
-                                            method: "POST",
-                                            body: {
-                                                message: this.state.body,
-                                                page: this.props.page
-                                            }
-                                        })];
-                                    case 1:
-                                        return t = n.sent(), d({
-                                            action: i.SentFeedback,
-                                            location: "dashboard/" + this.props.page
-                                        }), t.isError() ? this.setState({
-                                            inFlight: !1,
-                                            errorMessage: t.error.message
-                                        }) : this.setState({
-                                            body: "",
-                                            inFlight: !1,
-                                            errorMessage: "",
-                                            successTimeout: setTimeout(this.props.onClose, 2e3)
-                                        }), [2]
-                                }
-                            })
-                        })
-                    }, n.state = {
-                        body: "",
-                        inFlight: !1,
-                        errorMessage: "",
-                        successTimeout: 0
-                    }, n
-                }
-                return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                    clearTimeout(this.state.successTimeout)
-                }, t.prototype.render = function() {
-                    return r.createElement(u._8, {
-                        padding: 2
-                    }, r.createElement(u.W, {
-                        label: Object(o.d)("How can we improve this page for you?", "DashboardFeedbackForm"),
-                        error: Boolean(this.state.errorMessage.length),
-                        errorMessage: this.state.errorMessage
-                    }, r.createElement(u._8, {
-                        padding: {
-                            top: 1
-                        }
-                    }, r.createElement(u._46, {
-                        disabled: this.state.inFlight || this.state.successTimeout > 0,
-                        onChange: this.handleChange,
-                        placeholder: Object(o.d)("It would help me if this page...", "DashboardFeedbackForm"),
-                        rows: 4,
-                        noResize: !0
-                    }))), r.createElement(u._8, {
-                        display: u.R.Flex,
-                        flexGrow: 1,
-                        flexWrap: u.U.NoWrap,
-                        justifyContent: u._7.End,
-                        padding: {
-                            top: 2
-                        }
-                    }, r.createElement(u._8, {
-                        padding: {
-                            right: 1
-                        }
-                    }, r.createElement(u.v, {
-                        onClick: this.handleCancel,
-                        type: u.B.Text,
-                        "data-test-selector": "feedback-form-cancel"
-                    }, Object(o.d)("Cancel", "DashboardFeedbackForm"))), r.createElement(u.v, {
-                        disabled: this.state.inFlight || this.state.successTimeout > 0 || 0 === this.state.body.length,
-                        onClick: this.sendFeedback,
-                        "data-test-selector": "feedback-form-submit"
-                    }, this.state.successTimeout > 0 ? Object(o.d)("Sent", "DashboardFeedbackForm") : Object(o.d)("Send Feedback", "DashboardFeedbackForm"))))
-                }, t
-            }(r.Component);
-        var p = Object(l.b)(function(e) {
-                return {
-                    currentUserID: e.session.user && e.session.user.id || null
-                }
-            })(h),
-            f = (n("Nwhx"), function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.selectFeedbackForm = function() {
-                        n.setState({
-                            isFeedbackFormSelected: !0
-                        }), d({
-                            action: i.OpenSendFeedback,
-                            location: "dashboard/" + n.props.page
-                        })
-                    }, n.unselectFeedbackForm = function() {
-                        n.setState({
-                            isFeedbackFormSelected: !1
-                        })
-                    }, n.handleLearnMoreClick = function() {
-                        d({
-                            action: i.LearnMore,
-                            location: "dashboard/" + n.props.page
-                        })
-                    }, n.handleToggle = function(e) {
-                        e ? n.setState({
-                            isFeedbackFormSelected: !1
-                        }) : d({
-                            action: i.OpenHelp,
-                            location: "dashboard/" + n.props.page
-                        })
-                    }, n.state = {
-                        isFeedbackFormSelected: !1
-                    }, n
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e;
-                    return e = this.state.isFeedbackFormSelected ? r.createElement(p, {
-                        page: this.props.page,
-                        onClose: this.unselectFeedbackForm,
-                        key: 0
-                    }) : r.createElement(u._35, {
-                        padding: {
-                            top: .5,
-                            bottom: .5
-                        },
-                        color: u.K.Base
-                    }, r.createElement(u._6, {
-                        linkTo: this.props.learnMoreUrl,
-                        onClick: this.handleLearnMoreClick,
-                        targetBlank: !0
-                    }, r.createElement(u._8, {
-                        padding: {
-                            y: .5,
-                            x: 1
-                        }
-                    }, r.createElement(u.Q, null, Object(o.d)("Learn More", "DashboardHelpMenu")))), r.createElement(u._6, {
-                        onClick: this.selectFeedbackForm
-                    }, r.createElement(u._8, {
-                        padding: {
-                            y: .5,
-                            x: 1
-                        }
-                    }, r.createElement(u.Q, null, Object(o.d)("Send Feedback", "DashboardHelpMenu"))))), r.createElement(u._35, {
-                        className: "help-menu",
-                        position: u._15.Absolute,
-                        margin: {
-                            bottom: 2,
-                            right: 2
-                        },
-                        zIndex: u._62.Above,
-                        background: u.n.Overlay,
-                        elevation: 3,
-                        attachBottom: !0,
-                        attachRight: !0
-                    }, r.createElement(c.a, {
-                        onToggle: this.handleToggle,
-                        tooltipProps: {
-                            align: u._53.Right,
-                            direction: u._54.Top,
-                            label: Object(o.d)("Help & Feedback", "DashboardHelpMenu"),
-                            offsetX: "6px",
-                            offsetY: "10px"
-                        }
-                    }, r.createElement(u.w, {
-                        ariaLabel: Object(o.d)("Feedback", "DashboardHelpMenu"),
-                        icon: u._25.QuestionMark,
-                        "data-a-target": "help-button",
-                        overlay: !0
-                    }), r.createElement(u.q, {
-                        direction: u.r.TopRight,
-                        size: this.state.isFeedbackFormSelected ? u.s.Large : u.s.Small,
-                        "data-a-target": "help-balloon",
-                        offsetX: "6px"
-                    }, e)))
-                }, t
-            }(r.Component));
-        n.d(t, "a", function() {
-            return f
+            return u
         })
     },
     Xcw2: function(e, t, n) {
         "use strict";
         var i, a = n("TToO"),
             r = n("GiK3"),
-            o = n("AJEV"),
-            c = n("6w0d"),
-            l = n("6sO2");
+            l = n("AJEV"),
+            o = n("6w0d"),
+            c = n("6sO2");
 
         function s(e, t) {
             var n = function() {
                     if (i) return i;
                     return i = {
                         broadcast_n_hours_30_days: {
-                            title: Object(l.d)("New day, new stream", "AchievementTitle"),
+                            title: Object(c.d)("New day, new stream", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Stream for {numOfHours, number} hours in the last 30 days", {
+                                return Object(c.d)("Stream for {numOfHours, number} hours in the last 30 days", {
                                     numOfHours: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Stream on a regular schedule to help draw in more viewers. Find the balance that works for you.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Stream on a regular schedule to help draw in more viewers. Find the balance that works for you.", "AchievementLongDescription"),
                             levelGoals: [4, 8, 25, 40]
                         },
                         n_followers: {
-                            title: Object(l.d)("What is thy bidding?", "AchievementTitle"),
+                            title: Object(c.d)("What is thy bidding?", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Reach {numOfFollowers, number} followers", {
+                                return Object(c.d)("Reach {numOfFollowers, number} followers", {
                                     numOfFollowers: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Followers can opt in to be notified when you stream or share an update.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Followers can opt in to be notified when you stream or share an update.", "AchievementLongDescription"),
                             levelGoals: [2, 10, 50, 200]
                         },
                         n_broadcast_days_30_days: {
-                            title: Object(l.d)("Like clockwork", "AchievementTitle"),
+                            title: Object(c.d)("Like clockwork", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Stream for {numOfDays, number} unique days in the last 30 days", {
+                                return Object(c.d)("Stream for {numOfDays, number} unique days in the last 30 days", {
                                     numOfDays: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Stream on different days to reach different viewers. Unique days are based on GMT.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Stream on different days to reach different viewers. Unique days are based on GMT.", "AchievementLongDescription"),
                             levelGoals: [2, 7, 12, 25]
                         },
                         n_concurrents_30_days: {
-                            title: Object(l.d)("Who watches the watchers?", "AchievementTitle"),
+                            title: Object(c.d)("Who watches the watchers?", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Reach {numOfViewers, number} average viewers in the last 30 days", {
+                                return Object(c.d)("Reach {numOfViewers, number} average viewers in the last 30 days", {
                                     numOfViewers: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Check average viewers on your stats page. If you notice a spike, try to replicate that magic!", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Check average viewers on your stats page. If you notice a spike, try to replicate that magic!", "AchievementLongDescription"),
                             levelGoals: [3, 10, 15, 75]
                         },
                         first_stream: {
-                            title: Object(l.d)("It's happening", "AchievementTitle"),
+                            title: Object(c.d)("It's happening", "AchievementTitle"),
                             description: function() {
-                                return Object(l.d)("Start your first stream", "AchievementDescription")
+                                return Object(c.d)("Start your first stream", "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Start your first stream on Twitch to complete this achievement.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Start your first stream on Twitch to complete this achievement.", "AchievementLongDescription"),
                             levelGoals: []
                         },
                         single_dashboard_visit: {
-                            title: Object(l.d)("Know your stuff", "AchievementTitle"),
+                            title: Object(c.d)("Know your stuff", "AchievementTitle"),
                             description: function() {
-                                return Object(l.d)("Explore your dashboard", "AchievementDescription")
+                                return Object(c.d)("Explore your dashboard", "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Your dashboard is the best place to update your stream settings, monitor stats, and more.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Your dashboard is the best place to update your stream settings, monitor stats, and more.", "AchievementLongDescription"),
                             levelGoals: []
                         },
                         single_broadcast_title: {
-                            title: Object(l.d)("Name of the game", "AchievementTitle"),
+                            title: Object(c.d)("Name of the game", "AchievementTitle"),
                             description: function() {
-                                return Object(l.d)("Update your stream title", "AchievementDescription")
+                                return Object(c.d)("Update your stream title", "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Add a compelling title to draw viewers to your stream.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Add a compelling title to draw viewers to your stream.", "AchievementLongDescription"),
                             levelGoals: []
                         },
                         single_select_game_community: {
-                            title: Object(l.d)("We belong", "AchievementTitle"),
+                            title: Object(c.d)("We belong", "AchievementTitle"),
                             description: function() {
-                                return Object(l.d)("Update your Game/Category and Community", "AchievementDescription")
+                                return Object(c.d)("Update your Game/Category and Community", "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Tag your stream with a Game/Category and Community to help viewers find your channel.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Tag your stream with a Game/Category and Community to help viewers find your channel.", "AchievementLongDescription"),
                             levelGoals: []
                         },
                         n_hours_lifetime: {
-                            title: Object(l.d)("The empire business", "AchievementTitle"),
+                            title: Object(c.d)("The empire business", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Stream for {numOfHours, number} hours total", {
+                                return Object(c.d)("Stream for {numOfHours, number} hours total", {
                                     numOfHours: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("The more you stream, the more often viewers can tune in. Take a break whenever you need to.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("The more you stream, the more often viewers can tune in. Take a break whenever you need to.", "AchievementLongDescription"),
                             levelGoals: [250, 500, 1e3, 2e3]
                         },
                         n_same_week_stream_start_time: {
-                            title: Object(l.d)("Same time next week", "AchievementTitle"),
+                            title: Object(c.d)("Same time next week", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Start a stream on the same day of week and time for {numOfWeeks, number} weeks in a row", {
+                                return Object(c.d)("Start a stream on the same day of week and time for {numOfWeeks, number} weeks in a row", {
                                     numOfWeeks: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("When you stream on the same day and time each week, viewers know when to tune in.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("When you stream on the same day and time each week, viewers know when to tune in.", "AchievementLongDescription"),
                             levelGoals: [2, 4, 8, 16]
                         },
                         n_minute_watched_lifetime: {
-                            title: Object(l.d)("Kind of a big deal", "AchievementTitle"),
+                            title: Object(c.d)("Kind of a big deal", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Reach {numOfHours, number} hours watched total on your channel", {
+                                return Object(c.d)("Reach {numOfHours, number} hours watched total on your channel", {
                                     numOfHours: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("The more you stream, the more often viewers can tune in. If you're partner and unlock this achievement, you'll have a chance to get swag!", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("The more you stream, the more often viewers can tune in. If you're partner and unlock this achievement, you'll have a chance to get swag!", "AchievementLongDescription"),
                             levelGoals: [25e4, 5e5, 1e6, 1e7]
                         },
                         n_viewers_lifetime: {
-                            title: Object(l.d)("People know me", "AchievementTitle"),
+                            title: Object(c.d)("People know me", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Have {numOfViewers, number} viewers at the same time", {
+                                return Object(c.d)("Have {numOfViewers, number} viewers at the same time", {
                                     numOfViewers: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Keep your viewers around by welcoming them to your channel and responding to their comments.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Keep your viewers around by welcoming them to your channel and responding to their comments.", "AchievementLongDescription"),
                             levelGoals: [50, 100, 250, 1e3]
                         },
                         n_unique_chatter_broadcast: {
-                            title: Object(l.d)("Talk to me", "AchievementTitle"),
+                            title: Object(c.d)("Talk to me", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Get {numOfPeople, number} people chatting at the same time", {
+                                return Object(c.d)("Get {numOfPeople, number} people chatting at the same time", {
                                     numOfPeople: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Chat with your viewers to engage them. Engaged viewers are more likely to return.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Chat with your viewers to engage them. Engaged viewers are more likely to return.", "AchievementLongDescription"),
                             levelGoals: [25, 50, 100, 200]
                         },
                         n_raid_consecutive_broadcast: {
-                            title: Object(l.d)("Raiding party", "AchievementTitle"),
+                            title: Object(c.d)("Raiding party", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Raid {numOfStreams, number} times with 2 or more raiders", {
+                                return Object(c.d)("Raid {numOfStreams, number} times with 2 or more raiders", {
                                     numOfStreams: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)('Type "/raid (channel)" in chat to bring your viewers to another awesome streamer.', "AchievementLongDescription"),
+                            longDescription: Object(c.d)('Type "/raid (channel)" in chat to bring your viewers to another awesome streamer.', "AchievementLongDescription"),
                             levelGoals: [100]
                         },
                         n_days_since_first_stream: {
-                            title: Object(l.d)("Happy Twitchiversary", "AchievementTitle"),
+                            title: Object(c.d)("Happy Twitchiversary", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Reach your {numOfYears, number}-year streaming anniversary on Twitch", {
+                                return Object(c.d)("Reach your {numOfYears, number}-year streaming anniversary on Twitch", {
                                     numOfYears: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("We really wanted to send you some cake, but this Achievement will have to do. See you again next year!", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("We really wanted to send you some cake, but this Achievement will have to do. See you again next year!", "AchievementLongDescription"),
                             levelGoals: [1, 2, 3, 4]
                         },
                         n_autohost: {
-                            title: Object(l.d)("Mr. Roboto", "AchievementTitle"),
+                            title: Object(c.d)("Mr. Roboto", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Add {numOfChannels, number} channels to your auto host list", {
+                                return Object(c.d)("Add {numOfChannels, number} channels to your auto host list", {
                                     numOfChannels: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Add to your auto host list from channel settings to highlight another channel whenever you're offline.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Add to your auto host list from channel settings to highlight another channel whenever you're offline.", "AchievementLongDescription"),
                             levelGoals: [5]
                         },
                         single_twitchcon2017: {
-                            title: Object(l.d)("TwitchCon get", "AchievementTitle"),
+                            title: Object(c.d)("TwitchCon get", "AchievementTitle"),
                             description: function() {
-                                return Object(l.d)("Purchase a TwitchCon ticket", "AchievementDescription")
+                                return Object(c.d)("Purchase a TwitchCon ticket", "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("You provided your Twitch ID when you purchased your TwitchCon ticket. If you missed this year, hopefully you can make it next year!", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("You provided your Twitch ID when you purchased your TwitchCon ticket. If you missed this year, hopefully you can make it next year!", "AchievementLongDescription"),
                             levelGoals: []
                         },
                         single_chat: {
-                            title: Object(l.d)("Message in a bottle", "AchievementTitle"),
+                            title: Object(c.d)("Message in a bottle", "AchievementTitle"),
                             description: function() {
-                                return Object(l.d)("Send a chat message in your own channel", "AchievementDescription")
+                                return Object(c.d)("Send a chat message in your own channel", "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Talking while streaming is great, but also try chatting and emoting in your own channel.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Talking while streaming is great, but also try chatting and emoting in your own channel.", "AchievementLongDescription"),
                             levelGoals: []
                         },
                         n_days_no_viewers: {
-                            title: Object(l.d)("Hang in there", "AchievementTitle"),
+                            title: Object(c.d)("Hang in there", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Had < {numOfViewers, number} viewers for two streams and kept at it", {
+                                return Object(c.d)("Had < {numOfViewers, number} viewers for two streams and kept at it", {
                                     numOfViewers: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("Streaming isn't easy and it takes time to attract viewers. Try inviting your friends to get started.", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("Streaming isn't easy and it takes time to attract viewers. Try inviting your friends to get started.", "AchievementLongDescription"),
                             levelGoals: [3]
                         },
                         n_max_concurrents_m_streams: {
-                            title: Object(l.d)("The horde descends", "AchievementTitle"),
+                            title: Object(c.d)("The horde descends", "AchievementTitle"),
                             description: function(e) {
-                                return Object(l.d)("Reach at least {numOfViewers, number} viewers over five streams.", {
+                                return Object(c.d)("Reach at least {numOfViewers, number} viewers over five streams.", {
                                     numOfViewers: e
                                 }, "AchievementDescription")
                             },
-                            longDescription: Object(l.d)("They'll tell two friends. And they'll tell two friends. And they'll tell two friends. See a pattern?", "AchievementLongDescription"),
+                            longDescription: Object(c.d)("They'll tell two friends. And they'll tell two friends. And they'll tell two friends. See a pattern?", "AchievementLongDescription"),
                             levelGoals: [9999]
                         }
                     }
@@ -544,13 +332,13 @@ webpackJsonp([110], {
         }
         var m = n("heIq");
 
-        function d(e, t) {
+        function u(e, t) {
             var n = new Map,
                 i = [];
             e.achievements.forEach(function(e) {
                 var i = function(e, t) {
                     var n = s(e.key, e.level);
-                    return new o.a({
+                    return new l.a({
                         channelName: t.name,
                         id: e._id,
                         completedAt: e.completed_at ? new Date(e.completed_at) : null,
@@ -572,36 +360,36 @@ webpackJsonp([110], {
                 }(e, t);
                 n.set(i.id, i)
             });
-            var a = new o.b(Array.from(n.values()));
+            var a = new l.b(Array.from(n.values()));
             return e.quests.forEach(function(e) {
-                var a, r, c, l = (a = e, r = t.role, c = Object(m.d)(a.key), new o.e({
+                var a, r, o, c = (a = e, r = t.role, o = Object(m.d)(a.key), new l.e({
                     id: a._id,
                     key: a.key,
                     completedAt: a.completed_at ? new Date(a.completed_at) : null,
-                    title: c.title,
-                    getInstructions: c.getInstructions,
-                    learnMoreURL: c.learnMoreURL,
-                    hasTimedCompletionWindow: c.hasTimedCompletionWindow,
-                    position: c.position,
+                    title: o.title,
+                    getInstructions: o.getInstructions,
+                    learnMoreURL: o.learnMoreURL,
+                    hasTimedCompletionWindow: o.hasTimedCompletionWindow,
+                    position: o.position,
                     role: r,
                     achievements: []
                 }));
-                i.push(l), e.achievements.forEach(function(e) {
+                i.push(c), e.achievements.forEach(function(e) {
                     var t = e._id,
                         i = n.get(t);
-                    i && (l.achievements.push(i), i.quest = l)
-                }), l.finalize()
+                    i && (c.achievements.push(i), i.quest = c)
+                }), c.finalize()
             }), {
-                quests: o.e.sort(i),
+                quests: l.e.sort(i),
                 achievements: a
             }
         }
-        var u = function(e) {
+        var h = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
                     quests: [],
-                    achievements: new o.b,
+                    achievements: new l.b,
                     isLoading: !0,
                     channelName: void 0
                 }, t
@@ -630,15 +418,15 @@ webpackJsonp([110], {
                                         return a.__generator(this, function(r) {
                                             switch (r.label) {
                                                 case 0:
-                                                    return t = "/v5/channels/" + e.id + "/achievement_progressions", [4, Object(c.a)({
+                                                    return t = "/v5/channels/" + e.id + "/achievement_progressions", [4, Object(o.a)({
                                                         path: t
                                                     })];
                                                 case 1:
                                                     return (n = r.sent()).isError() ? [2, {
                                                         isError: !0,
                                                         quests: [],
-                                                        achievements: new o.b
-                                                    }] : (i = d(n.body, e), [2, a.__assign({
+                                                        achievements: new l.b
+                                                    }] : (i = u(n.body, e), [2, a.__assign({
                                                         isError: !1
                                                     }, i)])
                                             }
@@ -657,7 +445,7 @@ webpackJsonp([110], {
             }, t
         }(r.Component);
         n.d(t, "a", function() {
-            return u
+            return h
         })
     },
     bQ8d: function(e, t, n) {
@@ -808,7 +596,7 @@ webpackJsonp([110], {
         var i = n("GiK3"),
             a = n("sjgK"),
             r = n("Odds"),
-            o = function(e) {
+            l = function(e) {
                 return i.createElement(r._8, {
                     display: r.R.Flex,
                     flexWrap: r.U.NoWrap,
@@ -866,7 +654,7 @@ webpackJsonp([110], {
                 }, e.children))
             };
         n.d(t, "a", function() {
-            return o
+            return l
         })
     },
     jQxI: function(e, t) {},
@@ -878,30 +666,30 @@ webpackJsonp([110], {
         var i = n("TToO"),
             a = n("GiK3"),
             r = n("2KeS"),
-            o = n("6sO2"),
-            c = n("7vx8"),
-            l = n("j7/Y"),
+            l = n("6sO2"),
+            o = n("7vx8"),
+            c = n("j7/Y"),
             s = n("w9tK"),
             m = n("vH/s"),
-            d = n("CSlQ"),
-            u = (n("jQxI"), n("Xcw2")),
-            h = n("K/WB"),
+            u = n("CSlQ"),
+            h = (n("jQxI"), n("Xcw2")),
+            d = n("K/WB"),
             p = n("g7OG"),
-            f = n("CIox"),
-            v = n("RVgG"),
-            b = n("D6QB"),
-            g = n("HW6M"),
+            v = n("CIox"),
+            f = n("RVgG"),
+            g = n("D6QB"),
+            b = n("HW6M"),
             _ = n("F8kA"),
             y = n("i3Vq"),
-            E = n("MDGG"),
-            A = n("PGY2"),
+            A = n("MDGG"),
+            E = n("PGY2"),
             O = n("Odds"),
-            k = {
+            w = {
                 src: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
                 alt: "VoHiYo"
             },
-            w = function(e) {
-                var t = g({
+            j = function(e) {
+                var t = b({
                     "ach-card": !0,
                     "ach-card--expanded": !0,
                     "ach-card--completed": Boolean(e.achievement.completedAt),
@@ -927,7 +715,7 @@ webpackJsonp([110], {
                         right: 1
                     }
                 }, a.createElement(_.a, {
-                    to: A.b.channelAchievements(e.achievement.channelName)
+                    to: E.b.channelAchievements(e.achievement.channelName)
                 }, a.createElement(O.w, {
                     ariaLabel: "Close",
                     icon: O._25.Close
@@ -946,7 +734,7 @@ webpackJsonp([110], {
                     padding: 1,
                     background: O.n.Alt2,
                     border: !0
-                }, a.createElement(O.m, i.__assign({}, k, {
+                }, a.createElement(O.m, i.__assign({}, w, {
                     size: 30
                 })), a.createElement(O._35, {
                     color: O.K.Alt,
@@ -959,27 +747,27 @@ webpackJsonp([110], {
                 }, a.createElement("p", null, e.achievement.longDescription))))))
             },
             S = function(e) {
-                return 0 === e.achievement.progress ? a.createElement("span", null) : e.achievement.completedAt ? a.createElement(E.a, {
+                return 0 === e.achievement.progress ? a.createElement("span", null) : e.achievement.completedAt ? a.createElement(A.a, {
                     date: e.achievement.completedAt
                 }) : a.createElement(O._35, {
                     className: "ach-card__pill-wrapper",
                     fontSize: O.V.Size5
                 }, a.createElement(O._12, {
-                    label: Object(o.e)(e.achievement.progressRatio, "percent")
+                    label: Object(l.e)(e.achievement.progressRatio, "percent")
                 }))
             },
-            j = n("u3ZQ"),
+            k = n("u3ZQ"),
             D = n("b9IH"),
             T = {
                 "data-test-selector": "recently-completed-achievements-list"
             },
-            C = {
+            x = {
                 "data-test-selector": "not-completed-achievements-list"
             },
-            x = {
+            C = {
                 "data-test-selector": "past-completed-achievements-list"
             },
-            F = function(e) {
+            N = function(e) {
                 return a.createElement(O._8, {
                     padding: {
                         x: 4,
@@ -988,11 +776,11 @@ webpackJsonp([110], {
                     margin: {
                         bottom: 2
                     }
-                }, e.isLoading ? q() : a.createElement(N, {
+                }, e.isLoading ? P() : a.createElement(R, {
                     achievements: e.achievements
                 }))
             },
-            N = function(e) {
+            R = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1025,14 +813,14 @@ webpackJsonp([110], {
                         type: O._49.H3,
                         fontSize: O.V.Size4,
                         bold: !0
-                    }, Object(o.d)("Recently Completed", "AchievementsList"))), this.props.achievements.topRecentlyCompleted.map(function(t) {
-                        return a.createElement(R, {
+                    }, Object(l.d)("Recently Completed", "AchievementsList"))), this.props.achievements.topRecentlyCompleted.map(function(t) {
+                        return a.createElement(q, {
                             achievement: t,
                             key: t.id
-                        }, !e.state.didCelebrate && a.createElement(j.a, {
+                        }, !e.state.didCelebrate && a.createElement(k.a, {
                             confettiCount: 30
                         }))
-                    })), Boolean(this.props.achievements.notCompleted.length) && a.createElement("div", i.__assign({}, C), a.createElement(O._8, {
+                    })), Boolean(this.props.achievements.notCompleted.length) && a.createElement("div", i.__assign({}, x), a.createElement(O._8, {
                         padding: {
                             bottom: 1
                         },
@@ -1043,8 +831,8 @@ webpackJsonp([110], {
                         type: O._49.H3,
                         fontSize: O.V.Size4,
                         bold: !0
-                    }, Object(o.d)("In Progress", "AchievementsList"))), this.props.achievements.notCompleted.map(function(e) {
-                        return a.createElement(R, {
+                    }, Object(l.d)("In Progress", "AchievementsList"))), this.props.achievements.notCompleted.map(function(e) {
+                        return a.createElement(q, {
                             achievement: e,
                             key: e.id
                         })
@@ -1052,7 +840,7 @@ webpackJsonp([110], {
                         margin: {
                             top: 3
                         }
-                    }, x), a.createElement(O._8, {
+                    }, C), a.createElement(O._8, {
                         padding: {
                             bottom: 1
                         },
@@ -1063,34 +851,34 @@ webpackJsonp([110], {
                         type: O._49.H3,
                         fontSize: O.V.Size4,
                         bold: !0
-                    }, Object(o.d)("Completed", "AchievementsList"))), this.props.achievements.pastCompleted.map(function(e) {
-                        return a.createElement(R, {
+                    }, Object(l.d)("Completed", "AchievementsList"))), this.props.achievements.pastCompleted.map(function(e) {
+                        return a.createElement(q, {
                             achievement: e,
                             key: e.id
                         })
                     })))
                 }, t
             }(a.Component),
-            R = function(e) {
-                return a.createElement(f.c, {
-                    path: A.b.achievement(e.achievement),
+            q = function(e) {
+                return a.createElement(v.c, {
+                    path: E.b.achievement(e.achievement),
                     exact: !0
                 }, function(t) {
                     var n = t.match;
-                    return Boolean(n) ? a.createElement(w, {
+                    return Boolean(n) ? a.createElement(j, {
                         achievement: e.achievement,
                         refDelegate: D.a
                     }) : a.createElement(O._35, {
                         elevation: 1
-                    }, a.createElement(v.a, {
+                    }, a.createElement(f.a, {
                         achievement: e.achievement,
                         layoutClassName: "ach-card--in-list"
-                    }, a.createElement("div", null, e.children, a.createElement(b.a, {
+                    }, a.createElement("div", null, e.children, a.createElement(g.a, {
                         achievement: e.achievement
                     }))))
                 })
             },
-            q = function() {
+            P = function() {
                 var e = Array(3).fill("").map(function(e, t) {
                     return a.createElement(O._8, {
                         margin: {
@@ -1107,30 +895,30 @@ webpackJsonp([110], {
                     }
                 }, T, {
                     key: "recently-completed"
-                }), e), a.createElement("div", i.__assign({}, C, {
+                }), e), a.createElement("div", i.__assign({}, x, {
                     key: "not-completed"
                 }), e), a.createElement(O._8, i.__assign({
                     margin: {
                         top: 3
                     }
-                }, x, {
+                }, C, {
                     key: "past-completed"
                 }), e)]
             },
             G = n("WmaG"),
-            P = (n("xX1i"), {
+            z = (n("xX1i"), {
                 "data-test-selector": "quests-col"
             }),
             I = {
                 "data-test-selector": "achs-col"
             },
-            z = function(e) {
-                var t = g({
+            K = function(e) {
+                var t = b({
                         "ach-col": !0,
                         "ach-col--q": !0,
                         "ach-col--spotlight": e.isSpotlightShown
                     }),
-                    n = g({
+                    n = b({
                         "ach-col": !0,
                         "ach-col--l": !0,
                         "ach-col--spotlight": e.isSpotlightShown
@@ -1159,7 +947,7 @@ webpackJsonp([110], {
                     }
                 }, a.createElement(O._8, i.__assign({
                     className: t
-                }, P), a.createElement(O._8, {
+                }, z), a.createElement(O._8, {
                     padding: {
                         x: 4,
                         y: 4
@@ -1186,25 +974,25 @@ webpackJsonp([110], {
                 }))
             },
             L = n("rEvf"),
-            K = n("heIq");
+            V = n("heIq");
 
-        function V(e) {
+        function B(e) {
             var t = {
                 spotlight_type: e.type,
                 achievement_key: e.achievementKey ? e.achievementKey : null,
                 quest_key: e.questKey ? e.questKey : null
             };
-            o.n.track(m.SpadeEventType.AchievementSpotlightImpression, t)
+            l.n.track(m.SpadeEventType.AchievementSpotlightImpression, t)
         }
 
-        function B(e) {
+        function W(e) {
             var t = {
                 quest_id: e
             };
-            o.n.track(m.SpadeEventType.AchievementQuestBannerClick, t)
+            l.n.track(m.SpadeEventType.AchievementQuestBannerClick, t)
         }
-        var W = n("AJEV"),
-            M = function(e) {
+        var F = n("AJEV"),
+            Q = function(e) {
                 if (e.isPartner) return a.createElement(H, {
                     title: e.title,
                     subtitle: e.subtitle,
@@ -1260,7 +1048,7 @@ webpackJsonp([110], {
                     asset: O._25.Verified
                 })))
             },
-            Q = function(e) {
+            M = function(e) {
                 return a.createElement(O._35, {
                     display: O.R.Flex,
                     flexGrow: 1,
@@ -1299,19 +1087,19 @@ webpackJsonp([110], {
                         t = null,
                         n = null;
                     switch (e.key) {
-                        case K.c:
-                            e.role === W.d.Partner ? t = a.createElement(Z, null) : e.role === W.d.Affiliate && e.completedAt && (t = a.createElement($, {
+                        case V.c:
+                            e.role === F.d.Partner ? t = a.createElement(Z, null) : e.role === F.d.Affiliate && e.completedAt && (t = a.createElement($, {
                                 questKey: e.key
                             }));
                             break;
-                        case K.b:
-                            e.role === W.d.Partner ? t = a.createElement(Z, null) : e.role === W.d.Affiliate ? t = a.createElement(X, null) : e.role === W.d.None && e.completedAt && (t = a.createElement(J, {
+                        case V.b:
+                            e.role === F.d.Partner ? t = a.createElement(Z, null) : e.role === F.d.Affiliate ? t = a.createElement(X, null) : e.role === F.d.None && e.completedAt && (t = a.createElement(J, {
                                 channelName: this.props.channelName,
                                 questKey: e.key
                             }));
                             break;
-                        case K.a:
-                            e.role === W.d.Partner ? t = a.createElement(Z, null) : e.role === W.d.Affiliate ? t = a.createElement(X, null) : e.completedAt && (t = a.createElement(Y, null))
+                        case V.a:
+                            e.role === F.d.Partner ? t = a.createElement(Z, null) : e.role === F.d.Affiliate ? t = a.createElement(X, null) : e.completedAt && (t = a.createElement(Y, null))
                     }
                     return t && (n = a.createElement(O._35, {
                         padding: 1,
@@ -1320,51 +1108,51 @@ webpackJsonp([110], {
                 }, t
             }(a.Component),
             Y = function() {
-                return a.createElement(M, {
-                    title: Object(o.d)("You've started your path as a Twitch streamer", "AchievementsBannerItBegins"),
-                    subtitle: Object(o.d)("Which achievement will you complete next?", "AchievementsBannerItBegins")
+                return a.createElement(Q, {
+                    title: Object(l.d)("You've started your path as a Twitch streamer", "AchievementsBannerItBegins"),
+                    subtitle: Object(l.d)("Which achievement will you complete next?", "AchievementsBannerItBegins")
                 })
             },
             X = function() {
-                return a.createElement(M, {
-                    title: Object(o.d)("Congratulations! You’re a Twitch Affiliate", "AchievementsBannerPathToAffiliate"),
-                    subtitle: Object(o.d)("Learn more", "AchievementsBannerPathToAffiliate"),
+                return a.createElement(Q, {
+                    title: Object(l.d)("Congratulations! You’re a Twitch Affiliate", "AchievementsBannerPathToAffiliate"),
+                    subtitle: Object(l.d)("Learn more", "AchievementsBannerPathToAffiliate"),
                     url: "https://help.twitch.tv/customer/en/portal/topics/1070347-affiliate-program/articles"
                 })
             },
             J = function(e) {
-                return a.createElement(Q, {
-                    title: Object(o.d)("You're eligible to become a Twitch Affiliate", "AchievementsBannerPathToAffiliate"),
-                    subtitle: Object(o.d)("Click Get Started to begin", "AchievementsBannerPathToAffiliate"),
-                    cta: Object(o.d)("Get Started", "AchievementsBannerPathToAffiliate"),
+                return a.createElement(M, {
+                    title: Object(l.d)("You're eligible to become a Twitch Affiliate", "AchievementsBannerPathToAffiliate"),
+                    subtitle: Object(l.d)("Click Get Started to begin", "AchievementsBannerPathToAffiliate"),
+                    cta: Object(l.d)("Get Started", "AchievementsBannerPathToAffiliate"),
                     url: "https://www.twitch.tv/" + e.channelName + "/dashboard/settings",
                     onClickCTA: function() {
-                        return B(e.questKey)
+                        return W(e.questKey)
                     }
                 })
             },
             Z = function() {
-                return a.createElement(M, {
-                    title: Object(o.d)("Congratulations! You’re a Twitch Partner", "AchievementsBannerPathToPartner"),
-                    subtitle: Object(o.d)("Learn more", "AchievementsBannerPathToPartner"),
+                return a.createElement(Q, {
+                    title: Object(l.d)("Congratulations! You’re a Twitch Partner", "AchievementsBannerPathToPartner"),
+                    subtitle: Object(l.d)("Learn more", "AchievementsBannerPathToPartner"),
                     url: "https://help.twitch.tv/customer/portal/topics/301854-partner-program/articles",
                     isPartner: !0
                 })
             },
             $ = function(e) {
-                return a.createElement(Q, {
-                    title: Object(o.d)("Apply to become a Twitch Partner today", "AchievementsBannerPathToPartner"),
-                    subtitle: Object(o.d)("We usually follow up within 7 business days", "AchievementsBannerPathToPartner"),
-                    cta: Object(o.d)("Apply", "AchievementsBannerPathToPartner"),
+                return a.createElement(M, {
+                    title: Object(l.d)("Apply to become a Twitch Partner today", "AchievementsBannerPathToPartner"),
+                    subtitle: Object(l.d)("We usually follow up within 7 business days", "AchievementsBannerPathToPartner"),
+                    cta: Object(l.d)("Apply", "AchievementsBannerPathToPartner"),
                     url: "https://www.twitch.tv/partner/signup",
                     onClickCTA: function() {
-                        return B(e.questKey)
+                        return W(e.questKey)
                     }
                 })
             },
             ee = n("KMD5"),
             te = function(e) {
-                var t = g({
+                var t = b({
                         "ach-q-item": !0,
                         "ach-q-item--expanded": e.isActive
                     }),
@@ -1376,9 +1164,9 @@ webpackJsonp([110], {
                         "aria-hidden": !e.isActive,
                         tabIndex: -1,
                         target: "_blank"
-                    }, Object(o.d)("Learn more", "AchievementsPathToAffiliate")),
+                    }, Object(l.d)("Learn more", "AchievementsPathToAffiliate")),
                     r = e.quest.getInstructions(n),
-                    c = Object(o.d)("{numCompleted, number} of {numTotal, number}", {
+                    o = Object(l.d)("{numCompleted, number} of {numTotal, number}", {
                         numCompleted: e.quest.completedAchievementsCount,
                         numTotal: e.quest.achievements.length
                     }, "AchievementsQuests");
@@ -1426,7 +1214,7 @@ webpackJsonp([110], {
                     className: "ach-q-item__label",
                     color: O.K.Alt2,
                     fontSize: O.V.Size5
-                }, c))))), a.createElement(U, {
+                }, o))))), a.createElement(U, {
                     quest: e.quest,
                     channelName: e.channelName
                 }), a.createElement(O._35, {
@@ -1436,7 +1224,7 @@ webpackJsonp([110], {
                     },
                     background: O.n.Base
                 }, e.quest.achievements.map(function(t) {
-                    return a.createElement(v.a, {
+                    return a.createElement(f.a, {
                         key: t.id,
                         achievement: t,
                         isHidden: !e.isActive
@@ -1528,13 +1316,13 @@ webpackJsonp([110], {
             re = {
                 "data-test-selector": "title"
             },
-            oe = {
+            le = {
                 "data-test-selector": "subtitle"
             },
-            ce = {
+            oe = {
                 "data-test-selector": "dismiss"
             },
-            le = function(e) {
+            ce = function(e) {
                 var t = e.title,
                     n = e.subtitle;
                 return a.createElement(O._35, {
@@ -1544,7 +1332,7 @@ webpackJsonp([110], {
                     className: "ach-sb",
                     elevation: 1,
                     border: !0
-                }, a.createElement(j.a, {
+                }, a.createElement(k.a, {
                     confettiCount: 40,
                     infinite: !0
                 }), a.createElement(O._8, {
@@ -1558,7 +1346,7 @@ webpackJsonp([110], {
                     fontSize: O.V.Size4,
                     bold: !0,
                     ellipsis: !0
-                }), t), a.createElement(O.Q, i.__assign({}, oe, {
+                }), t), a.createElement(O.Q, i.__assign({}, le, {
                     fontSize: O.V.Size5,
                     color: O.K.Alt2,
                     ellipsis: !0
@@ -1585,8 +1373,8 @@ webpackJsonp([110], {
                     position: O._15.Absolute,
                     attachRight: !0,
                     attachTop: !0
-                }, a.createElement(O.w, i.__assign({}, ce, {
-                    ariaLabel: Object(o.d)("Close", "AchievementSpotlightDismiss"),
+                }, a.createElement(O.w, i.__assign({}, oe, {
+                    ariaLabel: Object(l.d)("Close", "AchievementSpotlightDismiss"),
                     type: O.y.Default,
                     size: O.x.Large,
                     icon: O._25.Close,
@@ -1594,10 +1382,10 @@ webpackJsonp([110], {
                 })))))
             },
             me = "https://static-cdn.jtvnw.net/emoticons/v1/135393/3.0",
-            de = "PartyTime",
-            ue = function() {
-                var e = Object(o.d)("Celebrate milestones and track your progress towards becoming an Affiliate or Partner.", "AchievementsSpotlight"),
-                    t = Object(o.d)("Learn more", "AchievementsSpotlight");
+            ue = "PartyTime",
+            he = function() {
+                var e = Object(l.d)("Celebrate milestones and track your progress towards becoming an Affiliate or Partner.", "AchievementsSpotlight"),
+                    t = Object(l.d)("Learn more", "AchievementsSpotlight");
                 return a.createElement(O._35, {
                     padding: 2,
                     className: "ach-sb",
@@ -1616,7 +1404,7 @@ webpackJsonp([110], {
                     alignItems: O.c.Center
                 }, a.createElement(O.m, {
                     src: me,
-                    alt: de,
+                    alt: ue,
                     size: 30
                 })), a.createElement(O._8, {
                     flexGrow: 1,
@@ -1628,7 +1416,7 @@ webpackJsonp([110], {
                     fontSize: O.V.Size4,
                     bold: !0,
                     ellipsis: !0
-                }), Object(o.d)("Welcome to Achievements", "AchievementsSpotlight")), a.createElement(O.Q, i.__assign({}, oe, {
+                }), Object(l.d)("Welcome to Achievements", "AchievementsSpotlight")), a.createElement(O.Q, i.__assign({}, le, {
                     fontSize: O.V.Size5,
                     color: O.K.Alt2,
                     ellipsis: !0
@@ -1637,7 +1425,7 @@ webpackJsonp([110], {
                     href: "https://help.twitch.tv/customer/portal/articles/2877819"
                 }, t)))))
             },
-            he = (n("533y"), "achievement-spotlights"),
+            de = (n("533y"), "achievement-spotlights"),
             pe = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -1651,8 +1439,8 @@ webpackJsonp([110], {
                         var e, t = n.dismissedSpotlights[n.spotlightKey],
                             a = "number" == typeof t ? t + 1 : 1,
                             r = i.__assign({}, n.dismissedSpotlights, ((e = {})[n.spotlightKey] = a, e));
-                        return o.l.set(he, r), a
-                    }, n.dismissedSpotlights = o.l.get(he, {}), n
+                        return l.l.set(de, r), a
+                    }, n.dismissedSpotlights = l.l.get(de, {}), n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = null;
@@ -1660,17 +1448,17 @@ webpackJsonp([110], {
                         this.handleViewSpotlight();
                         var t = void 0;
                         switch (this.bannerType) {
-                            case K.c:
-                                t = a.createElement(fe, null);
-                                break;
-                            case K.b:
+                            case V.c:
                                 t = a.createElement(ve, null);
                                 break;
-                            case K.a:
-                                t = a.createElement(be, null);
+                            case V.b:
+                                t = a.createElement(fe, null);
+                                break;
+                            case V.a:
+                                t = a.createElement(ge, null);
                                 break;
                             default:
-                                t = a.createElement(ue, null)
+                                t = a.createElement(he, null)
                         }
                         e = a.createElement(se, {
                             onDismissSpotlight: this.handleDismissSpotlight
@@ -1687,7 +1475,7 @@ webpackJsonp([110], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "bannerType", {
                     get: function() {
-                        var e = W.e.topCelebratable(this.props.quests);
+                        var e = F.e.topCelebratable(this.props.quests);
                         return e ? e.key : "first_time"
                     },
                     enumerable: !0,
@@ -1700,49 +1488,49 @@ webpackJsonp([110], {
                     configurable: !0
                 }), t
             }(a.PureComponent),
-            fe = function() {
-                var e = Object(ae.b)(K.c),
-                    t = a.createElement(ge, {
-                        title: e.title
-                    }),
-                    n = e.bannerTitle(t);
-                return V({
-                    type: "quest",
-                    questKey: K.c
-                }), a.createElement(le, {
-                    title: n,
-                    subtitle: e.subtitle
-                })
-            },
             ve = function() {
-                var e = Object(ae.b)(K.b),
-                    t = a.createElement(ge, {
+                var e = Object(ae.b)(V.c),
+                    t = a.createElement(be, {
                         title: e.title
                     }),
                     n = e.bannerTitle(t);
-                return V({
+                return B({
                     type: "quest",
-                    questKey: K.b
-                }), a.createElement(le, {
+                    questKey: V.c
+                }), a.createElement(ce, {
                     title: n,
                     subtitle: e.subtitle
                 })
             },
-            be = function() {
-                var e = Object(ae.b)(K.a),
-                    t = a.createElement(ge, {
+            fe = function() {
+                var e = Object(ae.b)(V.b),
+                    t = a.createElement(be, {
                         title: e.title
                     }),
                     n = e.bannerTitle(t);
-                return V({
+                return B({
                     type: "quest",
-                    questKey: K.a
-                }), a.createElement(le, {
+                    questKey: V.b
+                }), a.createElement(ce, {
                     title: n,
                     subtitle: e.subtitle
                 })
             },
-            ge = function(e) {
+            ge = function() {
+                var e = Object(ae.b)(V.a),
+                    t = a.createElement(be, {
+                        title: e.title
+                    }),
+                    n = e.bannerTitle(t);
+                return B({
+                    type: "quest",
+                    questKey: V.a
+                }), a.createElement(ce, {
+                    title: n,
+                    subtitle: e.subtitle
+                })
+            },
+            be = function(e) {
                 var t = e.title;
                 return a.createElement(O.Q, {
                     type: O._49.Span,
@@ -1754,24 +1542,24 @@ webpackJsonp([110], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    o.o.setPageTitle(Object(o.d)("Achievements", "DashboardAchievementsPage"))
+                    l.o.setPageTitle(Object(l.d)("Achievements", "DashboardAchievementsPage"))
                 }, t.prototype.render = function() {
                     if (void 0 === this.props.data.channel) return null;
-                    var e = h.a.fromChannelData(this.props.data.channel);
-                    return a.createElement(u.a, {
+                    var e = d.a.fromChannelData(this.props.data.channel);
+                    return a.createElement(h.a, {
                         channel: e
                     }, function(t) {
                         return a.createElement(pe, i.__assign({}, t, {
                             channelName: e.name
                         }), function(n) {
-                            return a.createElement(z, {
+                            return a.createElement(K, {
                                 isSpotlightShown: n,
                                 left: a.createElement(ie, {
                                     quests: t.quests,
                                     channel: e,
                                     isLoading: t.isLoading
                                 }),
-                                right: a.createElement(F, {
+                                right: a.createElement(N, {
                                     achievements: t.achievements,
                                     isLoading: t.isLoading
                                 })
@@ -1780,7 +1568,7 @@ webpackJsonp([110], {
                     })
                 }, t
             }(a.Component),
-            ye = Object(r.d)(Object(c.a)(p, {
+            ye = Object(r.d)(Object(o.a)(p, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1788,10 +1576,10 @@ webpackJsonp([110], {
                         }
                     }
                 }
-            }), Object(d.d)("AchievementsPage", {
+            }), Object(u.d)("AchievementsPage", {
                 destination: s.a.ChannelDashboardAchievements,
                 autoReportInteractive: !0
-            }), Object(l.a)({
+            }), Object(c.a)({
                 location: m.PageviewLocation.DashboardAchievements
             }))(_e);
         n.d(t, "AchievementsPageComponent", function() {
@@ -1841,7 +1629,7 @@ webpackJsonp([110], {
         function r(e) {
             return a[e]
         }
-        var o = {
+        var l = {
             1: "I",
             2: "II",
             3: "III",
@@ -1849,20 +1637,20 @@ webpackJsonp([110], {
             5: "V"
         };
 
-        function c(e) {
-            return o[e]
+        function o(e) {
+            return l[e]
         }
-        var l = n("heIq");
+        var c = n("heIq");
         n.d(t, "a", function() {
             return r
         }), n.d(t, "b", function() {
-            return c
+            return o
         }), n.d(t, !1, function() {
-            return l.a
+            return c.a
         }), n.d(t, !1, function() {
-            return l.b
+            return c.b
         }), n.d(t, !1, function() {
-            return l.c
+            return c.c
         })
     },
     u3ZQ: function(e, t, n) {
@@ -1870,12 +1658,12 @@ webpackJsonp([110], {
         var i = n("TToO"),
             a = n("HW6M"),
             r = n("GiK3"),
-            o = n("bQ8d"),
-            c = n("Odds"),
-            l = (n("49jV"), ["confetti-layer__confetti--slow", "confetti-layer__confetti--medium", "confetti-layer__confetti--fast"]),
+            l = n("bQ8d"),
+            o = n("Odds"),
+            c = (n("49jV"), ["confetti-layer__confetti--slow", "confetti-layer__confetti--medium", "confetti-layer__confetti--fast"]),
             s = ["rgba(247, 42, 107, 1)", "rgba(255, 113, 105, 1)", "rgba(253, 226, 132, 1)", "rgba(181, 138, 242, 1)"],
             m = ["0.011s", "0.176s", "0.321s", "0.446s", "0.849s", "1.056s", "1.229s", "1.333s", "1.379s", "1.828s"],
-            d = function(e) {
+            u = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1885,26 +1673,26 @@ webpackJsonp([110], {
                             "confetti-layer__confetti": !0,
                             "confetti-layer__confetti--infinite": this.props.infinite
                         });
-                    return r.createElement(c._8, {
+                    return r.createElement(o._8, {
                         className: "confetti-layer",
-                        position: c._15.Absolute,
-                        overflow: c._11.Hidden,
-                        zIndex: c._62.Default,
+                        position: o._15.Absolute,
+                        overflow: o._11.Hidden,
+                        zIndex: o._62.Default,
                         attachTop: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         attachLeft: !0
-                    }, Object(o.c)(this.props.confettiCount, function(n) {
+                    }, Object(l.c)(this.props.confettiCount, function(n) {
                         return r.createElement("div", {
                             key: n,
-                            className: t + " " + Object(o.b)(l),
+                            className: t + " " + Object(l.b)(c),
                             style: {
                                 position: "absolute",
-                                left: Object(o.a)(2, 95) + "%",
-                                width: Object(o.a)(4, 10) + "px",
-                                height: Object(o.a)(4, 10) + "px",
-                                backgroundColor: "" + Object(o.b)(e.props.colors),
-                                animationDelay: "" + Object(o.b)(m)
+                                left: Object(l.a)(2, 95) + "%",
+                                width: Object(l.a)(4, 10) + "px",
+                                height: Object(l.a)(4, 10) + "px",
+                                backgroundColor: "" + Object(l.b)(e.props.colors),
+                                animationDelay: "" + Object(l.b)(m)
                             }
                         })
                     }))
@@ -1913,7 +1701,7 @@ webpackJsonp([110], {
                 }, t
             }(r.PureComponent);
         n.d(t, "a", function() {
-            return d
+            return u
         })
     },
     xX1i: function(e, t) {},
@@ -1960,4 +1748,4 @@ webpackJsonp([110], {
         var i, a = n("6sO2")
     }
 });
-//# sourceMappingURL=pages.achievements-13f66013a76cb72ed8898aff0014b753.js.map
+//# sourceMappingURL=pages.achievements-25fea3a3e47ca5d8878c8688345c5e47.js.map
