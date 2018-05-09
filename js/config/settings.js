@@ -81,6 +81,7 @@ window.__twilightSettings = {
     "sizmek_versatag_teams": ["wrestling"],
     "spade_url": "https://video-edge-aa5277.sjc02.hls.ttvnw.net/v1/segment/CmV0K8jo0nDirmViY-qw-duv0EstwY7BE5Gk92VIPatS-otMpRq-t9Aa_4C1ILl4XVY1zxpmnVWZlZrFPHQIAmv7ACdBvZ409N42dshuNYZd2WJw7kpUoPkInE9X2hxzqyos7kP3Sf_kIFFEU-a69ID-Ypu3l_0vwYG-KNu2k3DiCM-aSDXMcJA7h5-VbWOWtx1zlCH56vcBNn8MJsZWJjFyDkEFIJNHxTcm-PGO1RBRh_ySWZ-5Wda3DICzx0Wi8I6UFpPSpAQl1Ui389Qf25JsEiEHMusLwCmhBMnltiboh6k4N5_CCBHID59jnRMItfTawAqvjIJbzYT78swroVvEy02fi030_oJJMXzr3uyegH8eca8wuHtunMH8VTK09ihn_FFvxrE0S3kyq2dalPgWmdVdxRGX0qRx9QSHsDIOHUQ0oMoZv80PCCpyHhv0sw--JUYPbVbr198D9ucNNCyNXjYq6jECOg5BBuCbBKtJX5vC7J0sHCa6nTOjGzVNoI2h91YpUHWrqS8NvURMSClFUYLeqLA9wtkA.ts",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
+    "teams_landing_launch": false,
     "tvapp_ps4_ads_enabled": true,
     "tvapp_ps4_channel_blacklist": [133497623, 157092761],
     "tvapp_ps4_preroll_duration": 30,
@@ -136,13 +137,13 @@ window.__twilightSettings = {
         },
         "080c0331-3073-4539-992f-93274236a97d": {
             "name": "TWILIGHT_PAY__SAVED_PAYMENT_METHODS",
-            "v": 3707,
+            "v": 3733,
             "t": 2,
             "groups": [{
-                "weight": 25,
+                "weight": 50,
                 "value": "yes"
             }, {
-                "weight": 75,
+                "weight": 50,
                 "value": "no"
             }]
         },
