@@ -1101,7 +1101,7 @@ webpackJsonp([84], {
         }), t.c = function(e, t) {
             var n = {
                 action: t.action,
-                auth_ux: t.auth_ux || "modal",
+                auth_ux: "modal",
                 type: t.type,
                 nonce: t.nonce
             };
@@ -12946,23 +12946,23 @@ webpackJsonp([84], {
     "CH+Z": function(e, t) {},
     CSUN: function(e, t, n) {
         "use strict";
-        t.a = function(e, t) {
-            var n = {
+        t.a = function(e) {
+            var t = {
                     next: window.location.href,
                     nonce: Object(r.b)()
                 },
-                s = {
+                n = {
                     client_id: i.a.authSettings.clientID,
                     lang: i.o.intl.getLanguageCode() || "en",
                     login_type: e,
                     redirect_uri: i.a.authSettings.redirectURI,
                     response_type: "token",
                     scope: i.a.authSettings.scopes.join(" "),
-                    state: JSON.stringify(n)
+                    state: JSON.stringify(t)
                 };
-            !i.a.authSettings.embedded || t && t.redirect || (s.embed = "true");
-            i.a.authSettings.forceVerify && (s.force_verify = "true");
-            return Object(o.i)(n), Object(a.a)(i.a.passportBaseURL + "/oauth2/authorize", s)
+            i.a.authSettings.embedded && (n.embed = "true");
+            i.a.authSettings.forceVerify && (n.force_verify = "true");
+            return Object(o.i)(t), Object(a.a)(i.a.passportBaseURL + "/oauth2/authorize", n)
         };
         var i = n("6sO2"),
             r = n("HM6l"),
@@ -50366,4 +50366,4 @@ webpackJsonp([84], {
         e.exports = n
     }
 }, [5]);
-//# sourceMappingURL=core-ab0e5950a97b51be3529767f82fd2ded.js.map
+//# sourceMappingURL=core-e83e5116511ccc397a31124ed75e0626.js.map
