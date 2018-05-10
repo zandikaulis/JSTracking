@@ -3087,7 +3087,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-bd86a3ea";
+    return "2.3.0-e7e4ab91";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -4393,17 +4393,44 @@ Queue.prototype.empty = function () {
   !*** ./settings sync ^\.\/.*\.json$ ***!
   \**************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function webpackEmptyContext(req) {
-	var e = new Error('Cannot find module "' + req + '".');
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
+var map = {
+	"./nospd.json": "./settings/nospd.json"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	var module = __webpack_require__(id);
+	return module;
 }
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = "./settings sync recursive ^\\.\\/.*\\.json$";
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error('Cannot find module "' + req + '".');
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./settings sync recursive ^\\.\\/.*\\.json$";
+
+/***/ }),
+
+/***/ "./settings/nospd.json":
+/*!*****************************!*\
+  !*** ./settings/nospd.json ***!
+  \*****************************/
+/*! exports provided: buffercontrol, default */
+/***/ (function(module) {
+
+module.exports = {"buffercontrol":{"liveSpeedUpRate":1}};
 
 /***/ })
 
