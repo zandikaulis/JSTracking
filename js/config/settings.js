@@ -772,6 +772,21 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
+        "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9": {
+            "name": "twilight_vod_shoryuken",
+            "v": 3753,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }, {
+                "weight": 0,
+                "value": "variant2"
+            }]
+        },
         "c9fb1ee5-b3ff-4bfb-9584-4412a8878f16": {
             "name": "TWILIGHT_SUBS_AFFILIATE_BADGES",
             "v": 3688,
