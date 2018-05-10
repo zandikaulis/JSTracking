@@ -501,6 +501,9 @@ webpackJsonp([112], {
                     return t.renderOfferImage = function() {
                         return o.createElement(c._8, {
                             textAlign: c._45.Center,
+                            breakpointMedium: {
+                                textAlign: c._45.Right
+                            },
                             className: "twitch-prime-fortnite__offer-image twitch-prime-fortnite__offer-image--desktop"
                         }, o.createElement(c.N, {
                             alt: "Offer items",
@@ -536,10 +539,24 @@ webpackJsonp([112], {
                         margin: {
                             y: 0,
                             x: "auto"
+                        },
+                        padding: {
+                            x: 1
                         }
                     }, o.createElement(c._8, {
                         textAlign: c._45.Center,
-                        alignSelf: c.d.Start,
+                        breakpointMedium: {
+                            textAlign: c._45.Left
+                        },
+                        breakpointLarge: {
+                            margin: {
+                                bottom: 5
+                            },
+                            padding: {
+                                left: 5
+                            }
+                        },
+                        alignSelf: c.d.Center,
                         className: "twitch-prime-fortnite__header__section"
                     }, o.createElement(c._8, {
                         className: t,
@@ -645,4 +662,4 @@ webpackJsonp([112], {
     r3tw: function(e, t) {},
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-linking-24f1da3c851278e8909e3ae8c1659259.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-linking-4b223c64dc21b323fe8fbc5ca33a9529.js.map

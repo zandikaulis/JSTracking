@@ -1,4 +1,4 @@
-webpackJsonp([55], {
+webpackJsonp([56], {
     "+GT7": function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -3343,12 +3343,15 @@ webpackJsonp([55], {
                     return null
             }
         }
+
+        function k(e) {
+            return {
+                medium: "twitch_home",
+                content: e ? "carousel_promo" : "carousel_backfill"
+            }
+        }
         n("i6UE");
-        var k = {
-                content: "carousel",
-                medium: "twitch_home"
-            },
-            w = function(e) {
+        var w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -3359,7 +3362,7 @@ webpackJsonp([55], {
                                 game: i.createElement(v.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
-                                        state: k
+                                        state: k(t.props.item.isScheduled)
                                     }
                                 }, t.props.item.content.gameName)
                             }, "HorizontalCarouselPlayer"),
@@ -3407,7 +3410,7 @@ webpackJsonp([55], {
                         }, i.createElement(v.a, {
                             to: {
                                 pathname: "/" + t.props.item.broadcaster.login,
-                                state: k
+                                state: k(t.props.item.isScheduled)
                             },
                             "data-a-target": "carousel-profile-image"
                         }, i.createElement(p.m, {
@@ -3451,12 +3454,12 @@ webpackJsonp([55], {
                     }, t.getLinkForTitle = function() {
                         if (t.props.item.content.type === c.b.Stream) return {
                             pathname: "/" + t.props.item.broadcaster.login,
-                            state: k
+                            state: k(t.props.item.isScheduled)
                         };
                         var e = t.state && t.state.videoOffset || 0;
                         return {
                             pathname: "/videos/" + t.props.item.content.id + "?t=" + e,
-                            state: k
+                            state: k(t.props.item.isScheduled)
                         }
                     }, t.getPlaceholderRender = function() {
                         var e = r("horizontal-carousel-player__details", {
@@ -3542,7 +3545,7 @@ webpackJsonp([55], {
                                 }, i.createElement(v.a, {
                                     to: {
                                         pathname: "/" + t.props.item.broadcaster.login,
-                                        state: k
+                                        state: k(t.props.item.isScheduled)
                                     },
                                     "data-a-target": "carousel-broadcaster-displayname"
                                 }, Object(f.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName))),
@@ -3551,7 +3554,7 @@ webpackJsonp([55], {
                                 }, i.createElement(v.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
-                                        state: k
+                                        state: k(t.props.item.isScheduled)
                                     },
                                     "data-a-target": "carousel-broadcaster-game-name"
                                 }, t.props.item.content.gameName))
@@ -4963,4 +4966,4 @@ webpackJsonp([55], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-fd48d1e7e40f5dd63a5fee56178acb9d.js.map
+//# sourceMappingURL=pages.anon-front-1cfdfeaf3a183d32d19f9699651b6b0a.js.map

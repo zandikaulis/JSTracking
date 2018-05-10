@@ -1,4 +1,4 @@
-webpackJsonp([47], {
+webpackJsonp([48], {
     "+GT7": function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -4858,7 +4858,7 @@ webpackJsonp([47], {
                                             })];
                                         case 2:
                                             return (l = i.sent()).status > 300 && r(new Error(Object(Qt.e)(l.status))), this.unsubscribe = a.k.subscribe({
-                                                topic: Object(qt.t)(s),
+                                                topic: Object(qt.s)(s),
                                                 success: function() {
                                                     c.timeoutID = setTimeout(function() {
                                                         c.unsubscribe(), r(new Error(Object(Qt.d)()))
@@ -12607,28 +12607,25 @@ webpackJsonp([47], {
     },
     VDV3: function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("HW6M"),
-            r = n("GiK3"),
-            o = n("6sO2"),
-            s = n("6yQB"),
-            l = n("+Znq"),
-            d = n("6WAQ"),
-            c = n("JpYe"),
-            u = n("3yQz"),
-            m = n("Odds"),
-            p = (n("C2pI"), function(e) {
+        var i, a = n("TToO"),
+            r = n("HW6M"),
+            o = n("GiK3"),
+            s = n("6sO2"),
+            l = n("6yQB"),
+            d = n("+Znq"),
+            c = n("6WAQ"),
+            u = n("JpYe"),
+            m = n("3yQz"),
+            p = n("Odds");
+        n("C2pI");
+        ! function(e) {
+            e.SortNewest = "sort-option-newest", e.SortPopular = "sort-option-popular", e.SortSelector = "sort-selector"
+        }(i || (i = {}));
+        var h = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.sortChangeHandler = function(e) {
                         t.props.onVideoSortChange(e.target.value)
-                    }, t.renderLanguageSelector = function() {
-                        return t.props.hideLanguageSelector ? null : r.createElement(m._8, {
-                            display: m.R.InlineFlex,
-                            margin: {
-                                right: 1
-                            }
-                        }, r.createElement(s.a, null))
                     }, t.typeChangeHandler = function(e) {
                         if (t.balloonWrapperRef.toggleBalloon(!1), t.props.onVideoFilterChange) {
                             var n = e.currentTarget.getAttribute("data-filter-type");
@@ -12638,137 +12635,148 @@ webpackJsonp([47], {
                         t.balloonWrapperRef = e
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e, t = Object(o.d)("All Videos", "VideoFilter"),
-                        n = Object(o.d)("Past Premieres", "VideoFilter"),
-                        i = Object(o.d)("Past Broadcasts", "VideoFilter"),
-                        s = Object(o.d)("Highlights", "VideoFilter"),
-                        p = Object(o.d)("Uploads", "VideoFilter"),
-                        h = this.props.selectedSort && Object(c.f)(this.props.selectedSort) || u.a;
+                return a.__extends(t, e), t.prototype.render = function() {
+                    var e, t = Object(s.d)("All Videos", "VideoFilter"),
+                        n = Object(s.d)("Past Premieres", "VideoFilter"),
+                        i = Object(s.d)("Past Broadcasts", "VideoFilter"),
+                        a = Object(s.d)("Highlights", "VideoFilter"),
+                        l = Object(s.d)("Uploads", "VideoFilter");
                     switch (this.props.broadcastType) {
-                        case d.a.PastPremiere:
+                        case c.a.PastPremiere:
                             e = n;
                             break;
-                        case d.a.Archive:
+                        case c.a.Archive:
                             e = i;
                             break;
-                        case d.a.Highlight:
-                            e = s;
+                        case c.a.Highlight:
+                            e = a;
                             break;
-                        case d.a.Upload:
-                            e = p;
+                        case c.a.Upload:
+                            e = l;
                             break;
                         default:
                             e = t
                     }
-                    var g = {
+                    var u = {
                             "video-filters": !0,
                             "video-filters--active": !0
                         },
-                        v = {
+                        m = {
                             "video-filters": !0
                         };
-                    return r.createElement(m._8, {
+                    return o.createElement(p._8, {
                         margin: {
                             bottom: 2
                         },
-                        display: m.R.Flex,
-                        justifyContent: m._7.Between
-                    }, r.createElement("div", null, this.renderLanguageSelector(), r.createElement(m._8, {
-                        display: m.R.InlineFlex
-                    }, r.createElement(l.a, {
+                        display: p.R.Flex,
+                        justifyContent: p._7.Between
+                    }, o.createElement("div", null, this.renderLanguageSelector(), o.createElement(p._8, {
+                        display: p.R.InlineFlex
+                    }, o.createElement(d.a, {
                         ref: this.saveBalloonWrapperRef
-                    }, r.createElement(m.v, {
-                        type: m.B.Hollow,
+                    }, o.createElement(p.v, {
+                        type: p.B.Hollow,
                         "data-test-selector": "filter-dropdown-button",
                         "data-a-target": "video-type-filter-dropdown",
                         dropdown: !0
-                    }, e), r.createElement(m.q, {
-                        direction: m.r.Bottom,
+                    }, e), o.createElement(p.q, {
+                        direction: p.r.Bottom,
                         "data-a-target": "video-type-filter-balloon",
                         offsetX: "0",
                         noTail: !0
-                    }, r.createElement(m._8, {
+                    }, o.createElement(p._8, {
                         className: "layout",
                         padding: {
                             y: 1
                         }
-                    }, r.createElement(m._6, {
+                    }, o.createElement(p._6, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": "all",
                         "data-a-target": "video-type-filter-all"
-                    }, r.createElement(m._8, {
-                        className: a(this.props.broadcastType ? v : g),
+                    }, o.createElement(p._8, {
+                        className: r(this.props.broadcastType ? m : u),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-all"
-                    }, t)), r.createElement(m._6, {
+                    }, t)), o.createElement(p._6, {
                         onClick: this.typeChangeHandler,
-                        "data-filter-type": d.a.PastPremiere,
+                        "data-filter-type": c.a.PastPremiere,
                         "data-a-target": "video-type-filter-past-premieres"
-                    }, r.createElement(m._8, {
-                        className: a(this.props.broadcastType === d.a.PastPremiere ? g : v),
+                    }, o.createElement(p._8, {
+                        className: r(this.props.broadcastType === c.a.PastPremiere ? u : m),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-past-premiere"
-                    }, n)), r.createElement(m._6, {
+                    }, n)), o.createElement(p._6, {
                         onClick: this.typeChangeHandler,
-                        "data-filter-type": d.a.Archive,
+                        "data-filter-type": c.a.Archive,
                         "data-a-target": "video-type-filter-past-broadcasts"
-                    }, r.createElement(m._8, {
-                        className: a(this.props.broadcastType === d.a.Archive ? g : v),
+                    }, o.createElement(p._8, {
+                        className: r(this.props.broadcastType === c.a.Archive ? u : m),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-archive"
-                    }, i)), r.createElement(m._6, {
+                    }, i)), o.createElement(p._6, {
                         onClick: this.typeChangeHandler,
-                        "data-filter-type": d.a.Highlight,
+                        "data-filter-type": c.a.Highlight,
                         "data-a-target": "video-type-filter-highlights"
-                    }, r.createElement(m._8, {
-                        className: a(this.props.broadcastType === d.a.Highlight ? g : v),
+                    }, o.createElement(p._8, {
+                        className: r(this.props.broadcastType === c.a.Highlight ? u : m),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-highlight"
-                    }, s)), r.createElement(m._6, {
+                    }, a)), o.createElement(p._6, {
                         onClick: this.typeChangeHandler,
-                        "data-filter-type": d.a.Upload,
+                        "data-filter-type": c.a.Upload,
                         "data-a-target": "video-type-filter-uploads"
-                    }, r.createElement(m._8, {
-                        className: a(this.props.broadcastType === d.a.Upload ? g : v),
+                    }, o.createElement(p._8, {
+                        className: r(this.props.broadcastType === c.a.Upload ? u : m),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-upload"
-                    }, p))))))), r.createElement("div", null, r.createElement(m._30, {
+                    }, l))))))), o.createElement("div", null, this.renderSortSelector()))
+                }, t.prototype.renderLanguageSelector = function() {
+                    return this.props.hideLanguageSelector ? null : o.createElement(p._8, {
+                        display: p.R.InlineFlex,
+                        margin: {
+                            right: 1
+                        }
+                    }, o.createElement(l.a, null))
+                }, t.prototype.renderSortSelector = function() {
+                    if (this.props.hideSortSelector) return null;
+                    var e = this.props.selectedSort && Object(u.f)(this.props.selectedSort) || m.a;
+                    return o.createElement(p._30, {
+                        "data-a-target": "video-sort-select",
+                        "data-test-selector": i.SortSelector,
                         name: "sort",
                         onChange: this.sortChangeHandler,
-                        value: h,
-                        "data-a-target": "video-sort-select"
-                    }, r.createElement("option", {
-                        "data-test-selector": "sort-option-newest",
-                        value: u.a,
-                        "data-a-target": "video-sort-newest"
-                    }, Object(o.d)("Newest", "VideoFilter")), r.createElement("option", {
-                        "data-test-selector": "sort-option-popular",
-                        value: u.b,
-                        "data-a-target": "video-sort-popular"
-                    }, Object(o.d)("Popular", "VideoFilter")))))
+                        value: e
+                    }, o.createElement("option", {
+                        "data-a-target": "video-sort-newest",
+                        "data-test-selector": i.SortNewest,
+                        value: m.a
+                    }, Object(s.d)("Newest", "VideoFilter")), o.createElement("option", {
+                        "data-a-target": "video-sort-popular",
+                        "data-test-selector": i.SortPopular,
+                        value: m.b
+                    }, Object(s.d)("Popular", "VideoFilter")))
                 }, t
-            }(r.Component)),
-            h = n("ISok");
+            }(o.Component),
+            g = n("ISok");
         n.d(t, "a", function() {
-            return p
+            return h
         }), n.d(t, "b", function() {
-            return h.a
+            return g.a
         }), n.d(t, !1, function() {})
     },
     Vr3l: function(e, t, n) {
@@ -19100,4 +19108,4 @@ webpackJsonp([47], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-af87fc1c76e98ce74410269a51fb4311.js.map
+//# sourceMappingURL=pages.directory-game-532dda183246e6d7c4b169fd8c3e74ff.js.map

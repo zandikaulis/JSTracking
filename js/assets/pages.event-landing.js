@@ -1,4 +1,4 @@
-webpackJsonp([50], {
+webpackJsonp([51], {
     "+Aaf": function(e, t) {},
     "/SNv": function(e, t, n) {
         e.exports = n.p + "assets/hearthstone-classes-b3b59eedbe78268cf62299a41ec09be1.png"
@@ -6929,7 +6929,7 @@ webpackJsonp([50], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = d.k.subscribe({
-                                                    topic: Object(p.j)(this.props.userID),
+                                                    topic: Object(p.i)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(g.c)(n, o.currentImage)
@@ -8781,7 +8781,7 @@ webpackJsonp([50], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = c.k.subscribe({
-                                            topic: Object(h.j)(this.props.userID),
+                                            topic: Object(h.i)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(b.c)(n, r.currentImage)
@@ -9092,4 +9092,4 @@ webpackJsonp([50], {
     yU6t: function(e, t) {},
     z4Db: function(e, t) {}
 });
-//# sourceMappingURL=pages.event-landing-71e9c137f9286561aa717a6ce4842d0d.js.map
+//# sourceMappingURL=pages.event-landing-6ada8bb0dedd0291bc495de228978dff.js.map

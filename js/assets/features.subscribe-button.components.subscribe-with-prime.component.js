@@ -1,4 +1,4 @@
-webpackJsonp([59], {
+webpackJsonp([60], {
     "/3Cb": function(e, t) {
         var r = {
             kind: "Document",
@@ -384,8 +384,8 @@ webpackJsonp([59], {
             b = Object(h.d)("PrimeOfferHeader", {
                 autoReportInteractive: !0
             })(_),
-            k = r("Lpko"),
-            O = r("Tr7p"),
+            O = r("Lpko"),
+            k = r("Tr7p"),
             y = r("Kckk");
         ! function(e) {
             e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
@@ -406,15 +406,18 @@ webpackJsonp([59], {
                             r = o.parse(e);
                         return r && !!r.expandoffers || t.props.openByDefault
                     }, t.onToggleMenu = function(e) {
-                        t.offersLoadedEvent = t.registerOffersLoadedEvent();
-                        var r = t.props.offersData;
-                        !r || r.loading || r.error || t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), t.seeOffers(), e && t.setState({
+                        t.seeOffers(), e && t.setState({
                             numOfUnseenOffers: 0
-                        }), Object(O.c)(!e, {
-                            hasPrime: t.hasPrime()
+                        }), Object(k.c)(!e, {
+                            hasPrime: t.hasPrime(),
+                            numberOfOffers: t.getNumberOfOffers()
                         })
+                    }, t.getNumberOfOffers = function() {
+                        var e = t.props.offersData,
+                            r = e && e.primeOffers;
+                        return r && r.length || 0
                     }, t.onHover = function() {
-                        Object(O.b)({
+                        Object(k.b)({
                             hasPrime: t.hasPrime()
                         })
                     }, t.hasPrime = function() {
@@ -444,10 +447,7 @@ webpackJsonp([59], {
                             var r = (e.primeOffers || []).map(function(e) {
                                 return "" + e.id
                             });
-                            Object(O.k)({
-                                hasPrime: t.hasPrime(),
-                                numberOfOffers: r.length
-                            }), t.updateOfferStatus(), Object(y.l)(r)
+                            t.updateOfferStatus(), Object(y.l)(r)
                         }
                     }, t.updateOfferStatus = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
@@ -491,23 +491,34 @@ webpackJsonp([59], {
                     }, t.renderOfferList = function() {
                         var e = t.props.offersData,
                             r = t.showOffersByDefault() || !1,
-                            n = e && !e.loading;
+                            n = e && !e.loading && !e.error;
                         return t.offersLoadedEvent && n && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), n || r ? s.createElement(g._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
                         }, s.createElement(b, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), s.createElement(k.a, null)) : null
+                        }), s.createElement(O.a, null)) : null
                     }, t.shouldReportInteractive = function() {
                         return (!t.isUserDataLoading || t.isUserDataError) && (!t.isOffersDataLoading || t.isOffersDataError)
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.shouldReportInteractive() && this.props.latencyTracking.reportInteractive(), this.getUnseenOffers(this.props)
+                    this.shouldReportInteractive() && this.props.latencyTracking.reportInteractive(), this.offersLoadedEvent = this.registerOffersLoadedEvent(), this.getUnseenOffers(this.props)
                 }, t.prototype.componentDidUpdate = function() {
                     this.shouldReportInteractive() && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.getUnseenOffers(e)
+                    this.getUnseenOffers(e);
+                    var t = this.props.offersData,
+                        r = e.offersData;
+                    if (t && t.loading && r && !r.loading && r.primeOffers) {
+                        this.props.latencyTracking.reportCustomEvent(this.offersLoadedEvent);
+                        var n = r.primeOffers,
+                            i = n && n.length;
+                        Object(k.d)({
+                            hasPrime: this.hasPrime(),
+                            numberOfOffers: i || 0
+                        })
+                    }
                 }, t.prototype.render = function() {
                     var e = this.props.userData && this.props.userData.requestInfo && Object(d.a)(this.props.userData.requestInfo.countryCode),
                         t = this.props.userData && this.props.userData.currentUser && this.props.userData.currentUser.hasPrime;
@@ -608,8 +619,8 @@ webpackJsonp([59], {
             })(C),
             T = r("lfvs"),
             I = r("Hs3O"),
-            x = (r("ukY1"), r("F1v6")),
-            L = function(e) {
+            L = (r("ukY1"), r("F1v6")),
+            x = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -724,7 +735,7 @@ webpackJsonp([59], {
                     }, o)))))
                 }, t
             }(s.Component),
-            R = Object(c.compose)(Object(p.a)(x, {
+            R = Object(c.compose)(Object(p.a)(L, {
                 options: function() {
                     return {
                         variables: {
@@ -733,7 +744,7 @@ webpackJsonp([59], {
                         }
                     }
                 }
-            }), Object(h.d)("BlueBarComponent"))(L),
+            }), Object(h.d)("BlueBarComponent"))(x),
             U = r("dnng");
         r.d(t, "c", function() {
             return P
@@ -1025,9 +1036,9 @@ webpackJsonp([59], {
         }), r.d(t, "n", function() {
             return _
         }), r.d(t, "m", function() {
-            return k
-        }), r.d(t, "e", function() {
             return O
+        }), r.d(t, "e", function() {
+            return k
         }), r.d(t, "k", function() {
             return y
         }), r.d(t, "j", function() {
@@ -1092,10 +1103,10 @@ webpackJsonp([59], {
             b = function(e) {
                 return c.l.get(e, [])
             },
-            k = function(e, t) {
+            O = function(e, t) {
                 return void 0 !== e && void 0 !== t && (!e && Object(l.a)(t))
             },
-            O = function() {
+            k = function() {
                 var e = location.search,
                     t = a.parse(e);
                 return t && t.dateOverride || void 0
@@ -1168,18 +1179,18 @@ webpackJsonp([59], {
             g = r("Tr7p"),
             _ = r("Kckk"),
             b = (r("w/8h"), r("sq7i")),
-            k = function(e) {
+            O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClick = function(e) {
-                        Object(g.d)({
+                        Object(g.e)({
                             offerID: t.props.offerID,
                             externalURL: t.props.externalURL,
                             hasPrime: !0,
                             index: t.props.index
                         }, t.props.offerType), t.props.claimCallback && t.props.offerType !== _.d.EXTERNAL_OFFER && !t.props.externalURL && t.props.claimCallback(e)
                     }, t.onHover = function() {
-                        Object(g.e)({
+                        Object(g.f)({
                             offerID: t.props.offerID,
                             externalURL: t.props.externalURL,
                             hasPrime: !0,
@@ -1241,13 +1252,13 @@ webpackJsonp([59], {
                     }
                 }, t
             }(a.Component),
-            O = Object(o.compose)(Object(l.a)(b), Object(u.d)("PrimeClaimButton"))(k),
+            k = Object(o.compose)(Object(l.a)(b), Object(u.d)("PrimeClaimButton"))(O),
             y = (r("zAvr"), function(e) {
                 function t(t) {
                     var r = e.call(this, t) || this;
                     return r.toggleShowDescription = function() {
                         var e = !r.state.showDescription;
-                        Object(g.g)(e, {
+                        Object(g.h)(e, {
                             offerID: r.props.offerID,
                             externalURL: r.props.externalURL,
                             hasPrime: r.props.hasPrime,
@@ -1256,12 +1267,12 @@ webpackJsonp([59], {
                             showDescription: e
                         })
                     }, r.onHover = function() {
-                        r.state.showDescription ? Object(g.f)({
+                        r.state.showDescription ? Object(g.g)({
                             offerID: r.props.offerID,
                             externalURL: r.props.externalURL,
                             hasPrime: r.props.hasPrime,
                             index: r.props.index
-                        }) : Object(g.h)({
+                        }) : Object(g.i)({
                             offerID: r.props.offerID,
                             externalURL: r.props.externalURL,
                             hasPrime: r.props.hasPrime,
@@ -1378,7 +1389,7 @@ webpackJsonp([59], {
                     }, this.getCallToAction(), this.getClaimDescriptionSection())
                 }, t.prototype.getCallToAction = function() {
                     var e = this.props.data;
-                    return Object(_.k)(e) ? a.createElement(O, {
+                    return Object(_.k)(e) ? a.createElement(k, {
                         offerType: this.props.offerType,
                         offerID: this.props.offerID,
                         claimCallback: this.props.claimCallback,
@@ -1407,7 +1418,7 @@ webpackJsonp([59], {
             }(a.Component),
             T = Object(o.compose)(Object(l.a)(C), Object(u.d)("PrimeInstructions"))(P),
             I = r("dnng"),
-            x = (r("nFc2"), function(e) {
+            L = (r("nFc2"), function(e) {
                 function t(t) {
                     var r = e.call(this, t) || this;
                     return r.setRef = function(e) {
@@ -1450,7 +1461,7 @@ webpackJsonp([59], {
                     }))
                 }, t = i.__decorate([Object(u.d)("CopyButton")], t)
             }(a.Component)),
-            L = function(e) {
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -1480,7 +1491,7 @@ webpackJsonp([59], {
                         value: this.state.value,
                         disabled: this.props.disabled,
                         readOnly: this.props.readOnly
-                    })), a.createElement(p._8, null, a.createElement(x, {
+                    })), a.createElement(p._8, null, a.createElement(L, {
                         clipboardText: this.state.value
                     }))) : null
                 }, t = i.__decorate([Object(u.d)("CopyableItem")], t)
@@ -1565,7 +1576,7 @@ webpackJsonp([59], {
                     }, this.getCodeOrConfirmation(e), this.getPrimeClaimInstructions())
                 }, t.prototype.getCodeOrConfirmation = function(e) {
                     var t = Object(_.i)(e);
-                    if (this.props.code && this.props.deliveryMethod === _.d.CLAIM_CODE) return a.createElement(p._8, null, a.createElement(L, {
+                    if (this.props.code && this.props.deliveryMethod === _.d.CLAIM_CODE) return a.createElement(p._8, null, a.createElement(x, {
                         initialText: this.props.code,
                         readOnly: !0,
                         textCenter: !0
@@ -2112,38 +2123,39 @@ webpackJsonp([59], {
             s.n.track(c.SpadeEventType.CrownInteraction, {
                 has_prime: t.hasPrime,
                 client_time: Date.now(),
+                number_of_offers: t.numberOfOffers,
                 action: e ? n.Open : n.Close,
                 user_agent: navigator.userAgent
             })
-        }, t.k = function(e) {
+        }, t.d = function(e) {
             s.n.track(c.SpadeEventType.CrownInteraction, {
                 has_prime: e.hasPrime,
                 client_time: Date.now(),
                 number_of_offers: e.numberOfOffers,
-                action: n.SeeOffers,
+                action: n.OffersLoaded,
                 user_agent: navigator.userAgent
             })
         }, t.l = function(e) {
             p(e, i.Click, a.StartYourFreeTrial)
         }, t.m = function(e) {
             p(e, i.Hover, a.StartYourFreeTrial)
-        }, t.g = function(e, t) {
+        }, t.h = function(e, t) {
             p(t, i.Click, e ? a.MoreInfo : a.CloseInfo)
-        }, t.d = function(e, t) {
-            u(e, i.Click, t)
-        }, t.h = function(e) {
-            p(e, i.Hover, a.MoreInfo)
-        }, t.f = function(e) {
-            p(e, i.Hover, a.CloseInfo)
         }, t.e = function(e, t) {
-            u(e, i.Hover, t)
+            u(e, i.Click, t)
         }, t.i = function(e) {
+            p(e, i.Hover, a.MoreInfo)
+        }, t.g = function(e) {
+            p(e, i.Hover, a.CloseInfo)
+        }, t.f = function(e, t) {
+            u(e, i.Hover, t)
+        }, t.j = function(e) {
             s.n.track(c.SpadeEventType.PrimeLootPagePageview, {
                 client_time: Date.now(),
                 reftag: e.reftag,
                 user_agent: navigator.userAgent
             })
-        }, t.j = function(e) {
+        }, t.k = function(e) {
             s.n.track(c.SpadeEventType.PrimeLootPageTryPrimeClick, {
                 client_time: Date.now(),
                 button_position: e.buttonPosition,
@@ -2181,7 +2193,7 @@ webpackJsonp([59], {
                 has_prime: e.hasPrime
             })
         }! function(e) {
-            e.Open = "click_open", e.Close = "click_close", e.Hover = "hover", e.SeeOffers = "see_offers"
+            e.Open = "click_open", e.Close = "click_close", e.Hover = "hover", e.OffersLoaded = "offers_loaded"
         }(n || (n = {})),
         function(e) {
             e.Hover = "hover", e.Click = "click"
@@ -2872,4 +2884,4 @@ webpackJsonp([59], {
     yqdF: function(e, t) {},
     zAvr: function(e, t) {}
 });
-//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-f26cf729441a2d43277c77bfcac34224.js.map
+//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-7c78e522359e17ea33c31f5a3f8a4f82.js.map

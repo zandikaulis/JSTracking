@@ -93,12 +93,12 @@ webpackJsonp([99], {
             i = r("2iRz"),
             u = r("F6hB");
         e.exports = function(e, t, r) {
-            for (var c = -1, l = (t = n(t, e)).length, h = !1; ++c < l;) {
-                var d = u(t[c]);
-                if (!(h = null != e && r(e, d))) break;
-                e = e[d]
+            for (var c = -1, l = (t = n(t, e)).length, d = !1; ++c < l;) {
+                var h = u(t[c]);
+                if (!(d = null != e && r(e, h))) break;
+                e = e[h]
             }
-            return h || ++c != l ? h : !!(l = null == e ? 0 : e.length) && i(l) && s(d, l) && (a(e) || o(e))
+            return d || ++c != l ? d : !!(l = null == e ? 0 : e.length) && i(l) && s(h, l) && (a(e) || o(e))
         }
     },
     "1nXM": function(e, t, r) {
@@ -201,7 +201,7 @@ webpackJsonp([99], {
         e.exports = function(e, t, r) {
             var l = -1;
             t = n(t.length ? t : [c], i(o));
-            var h = a(e, function(e, r, o) {
+            var d = a(e, function(e, r, o) {
                 return {
                     criteria: n(t, function(t) {
                         return t(e)
@@ -210,7 +210,7 @@ webpackJsonp([99], {
                     value: e
                 }
             });
-            return s(h, function(e, t) {
+            return s(d, function(e, t) {
                 return u(e, t, r)
             })
         }
@@ -499,8 +499,8 @@ webpackJsonp([99], {
             u = r("pUak"),
             c = 1,
             l = 2,
-            h = "[object Boolean]",
-            d = "[object Date]",
+            d = "[object Boolean]",
+            h = "[object Date]",
             p = "[object Error]",
             f = "[object Map]",
             g = "[object Number]",
@@ -519,8 +519,8 @@ webpackJsonp([99], {
                     e = e.buffer, t = t.buffer;
                 case S:
                     return !(e.byteLength != t.byteLength || !O(new o(e), new o(t)));
-                case h:
                 case d:
+                case h:
                 case g:
                     return a(+e, +t);
                 case p:
@@ -602,18 +602,18 @@ webpackJsonp([99], {
                 l = !i;
             if (null == e) return !c;
             for (e = Object(e); u--;) {
-                var h = r[u];
-                if (l && h[2] ? h[1] !== e[h[0]] : !(h[0] in e)) return !1
+                var d = r[u];
+                if (l && d[2] ? d[1] !== e[d[0]] : !(d[0] in e)) return !1
             }
             for (; ++u < c;) {
-                var d = (h = r[u])[0],
-                    p = e[d],
-                    f = h[1];
-                if (l && h[2]) {
-                    if (void 0 === p && !(d in e)) return !1
+                var h = (d = r[u])[0],
+                    p = e[h],
+                    f = d[1];
+                if (l && d[2]) {
+                    if (void 0 === p && !(h in e)) return !1
                 } else {
                     var g = new n;
-                    if (i) var v = i(p, f, d, e, t, g);
+                    if (i) var v = i(p, f, h, e, t, g);
                     if (!(void 0 === v ? o(f, p, a | s, i, g) : v)) return !1
                 }
             }
@@ -629,10 +629,10 @@ webpackJsonp([99], {
             u = Function.prototype,
             c = Object.prototype,
             l = u.toString,
-            h = c.hasOwnProperty,
-            d = RegExp("^" + l.call(h).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
+            d = c.hasOwnProperty,
+            h = RegExp("^" + l.call(d).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
         e.exports = function(e) {
-            return !(!a(e) || o(e)) && (n(e) ? d : i).test(s(e))
+            return !(!a(e) || o(e)) && (n(e) ? h : i).test(s(e))
         }
     },
     Czj7: function(e, t, r) {
@@ -689,11 +689,11 @@ webpackJsonp([99], {
             u = r("/UYc"),
             c = r("F6hB"),
             l = 1,
-            h = 2;
+            d = 2;
         e.exports = function(e, t) {
             return s(e) && i(t) ? u(c(e), t) : function(r) {
                 var s = o(r, e);
-                return void 0 === s && s === t ? a(r, e) : n(t, s, l | h)
+                return void 0 === s && s === t ? a(r, e) : n(t, s, l | d)
             }
         }
     },
@@ -921,8 +921,8 @@ webpackJsonp([99], {
             u = r("mG6l"),
             c = r("mPnA"),
             l = r("YOyG"),
-            h = 1,
-            d = "[object Arguments]",
+            d = 1,
+            h = "[object Arguments]",
             p = "[object Array]",
             f = "[object Object]",
             g = Object.prototype.hasOwnProperty;
@@ -931,15 +931,15 @@ webpackJsonp([99], {
                 S = u(t),
                 x = b ? p : i(e),
                 _ = S ? p : i(t),
-                E = (x = x == d ? f : x) == f,
-                O = (_ = _ == d ? f : _) == f,
+                E = (x = x == h ? f : x) == f,
+                O = (_ = _ == h ? f : _) == f,
                 w = x == _;
             if (w && c(e)) {
                 if (!c(t)) return !1;
                 b = !0, E = !1
             }
             if (w && !E) return y || (y = new n), b || l(e) ? o(e, t, r, v, m, y) : a(e, t, x, r, v, m, y);
-            if (!(r & h)) {
+            if (!(r & d)) {
                 var C = E && g.call(e, "__wrapped__"),
                     j = O && g.call(t, "__wrapped__");
                 if (C || j) {
@@ -1030,12 +1030,12 @@ webpackJsonp([99], {
         e.exports = function(e, t) {
             var r = a(e),
                 l = !r && o(e),
-                h = !r && !l && s(e),
-                d = !r && !l && !h && u(e),
-                p = r || l || h || d,
+                d = !r && !l && s(e),
+                h = !r && !l && !d && u(e),
+                p = r || l || d || h,
                 f = p ? n(e.length, String) : [],
                 g = f.length;
-            for (var v in e) !t && !c.call(e, v) || p && ("length" == v || h && ("offset" == v || "parent" == v) || d && ("buffer" == v || "byteLength" == v || "byteOffset" == v) || i(v, g)) || f.push(v);
+            for (var v in e) !t && !c.call(e, v) || p && ("length" == v || d && ("offset" == v || "parent" == v) || h && ("buffer" == v || "byteLength" == v || "byteOffset" == v) || i(v, g)) || f.push(v);
             return f
         }
     },
@@ -1140,7 +1140,7 @@ webpackJsonp([99], {
                             x: e.pageX,
                             y: e.pageY
                         };
-                        var a = (0, d.closest)(e.target, function(e) {
+                        var a = (0, h.closest)(e.target, function(e) {
                             return null != e.sortableInfo
                         });
                         if (a && a.sortableInfo && t.nodeIsChild(a) && !t.state.sorting) {
@@ -1148,7 +1148,7 @@ webpackJsonp([99], {
                                 i = a.sortableInfo,
                                 u = i.index,
                                 c = i.collection;
-                            if (s && !(0, d.closest)(e.target, function(e) {
+                            if (s && !(0, h.closest)(e.target, function(e) {
                                     return null != e.sortableHandle
                                 })) return;
                             t.manager.active = {
@@ -1188,14 +1188,14 @@ webpackJsonp([99], {
                                 u = n.onSortStart,
                                 c = n.useWindowAsScrollContainer,
                                 l = r.node,
-                                h = r.collection,
+                                d = r.collection,
                                 p = l.sortableInfo.index,
-                                g = (0, d.getElementMargin)(l),
+                                g = (0, h.getElementMargin)(l),
                                 v = t.container.getBoundingClientRect(),
                                 m = a({
                                     index: p,
                                     node: l,
-                                    collection: h
+                                    collection: d
                                 });
                             t.node = l, t.margin = g, t.width = m.width, t.height = m.height, t.marginOffset = {
                                 x: t.margin.left + t.margin.right,
@@ -1216,9 +1216,9 @@ webpackJsonp([99], {
                             if (x.forEach(function(e, t) {
                                     "file" !== e.type && b[t] && (e.value = b[t].value)
                                 }), t.helper = t.document.body.appendChild(S), t.helper.style.position = "fixed", t.helper.style.top = t.boundingClientRect.top - g.top + "px", t.helper.style.left = t.boundingClientRect.left - g.left + "px", t.helper.style.width = t.width + "px", t.helper.style.height = t.height + "px", t.helper.style.boxSizing = "border-box", t.helper.style.pointerEvents = "none", i && (t.sortableGhost = l, l.style.visibility = "hidden", l.style.opacity = 0), t.minTranslate = {}, t.maxTranslate = {}, t.axis.x && (t.minTranslate.x = (c ? 0 : v.left) - t.boundingClientRect.left - t.width / 2, t.maxTranslate.x = (c ? t.contentWindow.innerWidth : v.left + v.width) - t.boundingClientRect.left - t.width / 2), t.axis.y && (t.minTranslate.y = (c ? 0 : v.top) - t.boundingClientRect.top - t.height / 2, t.maxTranslate.y = (c ? t.contentWindow.innerHeight : v.top + v.height) - t.boundingClientRect.top - t.height / 2), s)(y = t.helper.classList).add.apply(y, f(s.split(" ")));
-                            t.listenerNode = e.touches ? l : t.contentWindow, d.events.move.forEach(function(e) {
+                            t.listenerNode = e.touches ? l : t.contentWindow, h.events.move.forEach(function(e) {
                                 return t.listenerNode.addEventListener(e, t.handleSortMove, !1)
-                            }), d.events.end.forEach(function(e) {
+                            }), h.events.end.forEach(function(e) {
                                 return t.listenerNode.addEventListener(e, t.handleSortEnd, !1)
                             }), t.setState({
                                 sorting: !0,
@@ -1226,7 +1226,7 @@ webpackJsonp([99], {
                             }), u && u({
                                 node: l,
                                 index: p,
-                                collection: h
+                                collection: d
                             }, e)
                         }
                     }, t.handleSortMove = function(e) {
@@ -1237,15 +1237,15 @@ webpackJsonp([99], {
                             n = r.hideSortableGhost,
                             o = r.onSortEnd,
                             a = t.manager.active.collection;
-                        t.listenerNode && (d.events.move.forEach(function(e) {
+                        t.listenerNode && (h.events.move.forEach(function(e) {
                             return t.listenerNode.removeEventListener(e, t.handleSortMove)
-                        }), d.events.end.forEach(function(e) {
+                        }), h.events.end.forEach(function(e) {
                             return t.listenerNode.removeEventListener(e, t.handleSortEnd)
                         })), t.helper.parentNode.removeChild(t.helper), n && t.sortableGhost && (t.sortableGhost.style.visibility = "", t.sortableGhost.style.opacity = "");
                         for (var s = t.manager.refs[a], i = 0, u = s.length; i < u; i++) {
                             var c = s[i],
                                 l = c.node;
-                            c.edgeOffset = null, l.style[d.vendorPrefix + "Transform"] = "", l.style[d.vendorPrefix + "TransitionDuration"] = ""
+                            c.edgeOffset = null, l.style[h.vendorPrefix + "Transform"] = "", l.style[h.vendorPrefix + "TransitionDuration"] = ""
                         }
                         clearInterval(t.autoscrollInterval), t.autoscrollInterval = null, t.manager.active = null, t.setState({
                             sorting: !1,
@@ -1277,7 +1277,7 @@ webpackJsonp([99], {
                             };
                             t.scrollContainer.scrollTop += e.top, t.scrollContainer.scrollLeft += e.left, t.translate.x += e.left, t.translate.y += e.top, t.animateNodes()
                         }, 5))
-                    }, t.manager = new h.default, t.events = {
+                    }, t.manager = new d.default, t.events = {
                         start: t.handleStart,
                         move: t.handleMove,
                         end: t.handleEnd
@@ -1310,7 +1310,7 @@ webpackJsonp([99], {
                             o = this.props.contentWindow || window;
                         this.container = "function" == typeof r ? r(this.getWrappedInstance()) : (0, c.findDOMNode)(this), this.document = this.container.ownerDocument || document, this.scrollContainer = n ? this.document.body : this.container, this.contentWindow = "function" == typeof o ? o() : o;
                         var a = function(t) {
-                            e.events.hasOwnProperty(t) && d.events[t].forEach(function(r) {
+                            e.events.hasOwnProperty(t) && h.events[t].forEach(function(r) {
                                 return e.container.addEventListener(r, e.events[t], !1)
                             })
                         };
@@ -1321,7 +1321,7 @@ webpackJsonp([99], {
                     value: function() {
                         var e = this,
                             t = function(t) {
-                                e.events.hasOwnProperty(t) && d.events[t].forEach(function(r) {
+                                e.events.hasOwnProperty(t) && h.events[t].forEach(function(r) {
                                     return e.container.removeEventListener(r, e.events[t])
                                 })
                             };
@@ -1392,7 +1392,7 @@ webpackJsonp([99], {
                                 u = o(i, 2),
                                 c = u[0],
                                 l = u[1],
-                                h = {
+                                d = {
                                     x: this.width / 2 - c.x,
                                     y: this.height / 2 - c.y
                                 },
@@ -1400,9 +1400,9 @@ webpackJsonp([99], {
                                     x: this.width / 2 - l.x,
                                     y: this.height / 2 - l.y
                                 };
-                            s.x = (0, d.limit)(this.minTranslate.x + h.x, this.maxTranslate.x - p.x, s.x), s.y = (0, d.limit)(this.minTranslate.y + h.y, this.maxTranslate.y - p.y, s.y)
+                            s.x = (0, h.limit)(this.minTranslate.x + d.x, this.maxTranslate.x - p.x, s.x), s.y = (0, h.limit)(this.minTranslate.y + d.y, this.maxTranslate.y - p.y, s.y)
                         }
-                        "x" === r ? s.y = 0 : "y" === r && (s.x = 0), this.helper.style[d.vendorPrefix + "Transform"] = "translate3d(" + s.x + "px," + s.y + "px, 0)"
+                        "x" === r ? s.y = 0 : "y" === r && (s.x = 0), this.helper.style[h.vendorPrefix + "Transform"] = "translate3d(" + s.x + "px," + s.y + "px, 0)"
                     }
                 }, {
                     key: "animateNodes",
@@ -1427,10 +1427,10 @@ webpackJsonp([99], {
                         for (var i = 0, u = n.length; i < u; i++) {
                             var c = n[i].node,
                                 l = c.sortableInfo.index,
-                                h = c.offsetWidth,
+                                d = c.offsetWidth,
                                 p = c.offsetHeight,
                                 f = {
-                                    width: this.width > h ? h / 2 : this.width / 2,
+                                    width: this.width > d ? d / 2 : this.width / 2,
                                     height: this.height > p ? p / 2 : this.height / 2
                                 },
                                 g = {
@@ -1441,7 +1441,7 @@ webpackJsonp([99], {
                             v || (n[i].edgeOffset = v = this.getEdgeOffset(c));
                             var m = i < n.length - 1 && n[i + 1],
                                 y = i > 0 && n[i - 1];
-                            m && !m.edgeOffset && (m.edgeOffset = this.getEdgeOffset(m.node)), l !== this.index ? (t && (c.style[d.vendorPrefix + "TransitionDuration"] = t + "ms"), this.axis.x ? this.axis.y ? l < this.index && (a.left + s.left - f.width <= v.left && a.top + s.top <= v.top + f.height || a.top + s.top + f.height <= v.top) ? (g.x = this.width + this.marginOffset.x, v.left + g.x > this.containerBoundingRect.width - f.width && (g.x = m.edgeOffset.left - v.left, g.y = m.edgeOffset.top - v.top), null === this.newIndex && (this.newIndex = l)) : l > this.index && (a.left + s.left + f.width >= v.left && a.top + s.top + f.height >= v.top || a.top + s.top + f.height >= v.top + p) && (g.x = -(this.width + this.marginOffset.x), v.left + g.x < this.containerBoundingRect.left + f.width && (g.x = y.edgeOffset.left - v.left, g.y = y.edgeOffset.top - v.top), this.newIndex = l) : l > this.index && a.left + s.left + f.width >= v.left ? (g.x = -(this.width + this.marginOffset.x), this.newIndex = l) : l < this.index && a.left + s.left <= v.left + f.width && (g.x = this.width + this.marginOffset.x, null == this.newIndex && (this.newIndex = l)) : this.axis.y && (l > this.index && a.top + s.top + f.height >= v.top ? (g.y = -(this.height + this.marginOffset.y), this.newIndex = l) : l < this.index && a.top + s.top <= v.top + f.height && (g.y = this.height + this.marginOffset.y, null == this.newIndex && (this.newIndex = l))), c.style[d.vendorPrefix + "Transform"] = "translate3d(" + g.x + "px," + g.y + "px,0)") : r && (this.sortableGhost = c, c.style.visibility = "hidden", c.style.opacity = 0)
+                            m && !m.edgeOffset && (m.edgeOffset = this.getEdgeOffset(m.node)), l !== this.index ? (t && (c.style[h.vendorPrefix + "TransitionDuration"] = t + "ms"), this.axis.x ? this.axis.y ? l < this.index && (a.left + s.left - f.width <= v.left && a.top + s.top <= v.top + f.height || a.top + s.top + f.height <= v.top) ? (g.x = this.width + this.marginOffset.x, v.left + g.x > this.containerBoundingRect.width - f.width && (g.x = m.edgeOffset.left - v.left, g.y = m.edgeOffset.top - v.top), null === this.newIndex && (this.newIndex = l)) : l > this.index && (a.left + s.left + f.width >= v.left && a.top + s.top + f.height >= v.top || a.top + s.top + f.height >= v.top + p) && (g.x = -(this.width + this.marginOffset.x), v.left + g.x < this.containerBoundingRect.left + f.width && (g.x = y.edgeOffset.left - v.left, g.y = y.edgeOffset.top - v.top), this.newIndex = l) : l > this.index && a.left + s.left + f.width >= v.left ? (g.x = -(this.width + this.marginOffset.x), this.newIndex = l) : l < this.index && a.left + s.left <= v.left + f.width && (g.x = this.width + this.marginOffset.x, null == this.newIndex && (this.newIndex = l)) : this.axis.y && (l > this.index && a.top + s.top + f.height >= v.top ? (g.y = -(this.height + this.marginOffset.y), this.newIndex = l) : l < this.index && a.top + s.top <= v.top + f.height && (g.y = this.height + this.marginOffset.y, null == this.newIndex && (this.newIndex = l))), c.style[h.vendorPrefix + "Transform"] = "translate3d(" + g.x + "px," + g.y + "px,0)") : r && (this.sortableGhost = c, c.style.visibility = "hidden", c.style.opacity = 0)
                         }
                         null == this.newIndex && (this.newIndex = this.index)
                     }
@@ -1456,10 +1456,10 @@ webpackJsonp([99], {
                         var t = p.withRef ? "wrappedInstance" : null;
                         return i.default.createElement(e, n({
                             ref: t
-                        }, (0, d.omit)(this.props, "contentWindow", "useWindowAsScrollContainer", "distance", "helperClass", "hideSortableGhost", "transitionDuration", "useDragHandle", "pressDelay", "pressThreshold", "shouldCancelStart", "onSortStart", "onSortMove", "onSortEnd", "axis", "lockAxis", "lockOffset", "lockToContainerEdges", "getContainer", "getHelperDimensions")))
+                        }, (0, h.omit)(this.props, "contentWindow", "useWindowAsScrollContainer", "distance", "helperClass", "hideSortableGhost", "transitionDuration", "useDragHandle", "pressDelay", "pressThreshold", "shouldCancelStart", "onSortStart", "onSortMove", "onSortEnd", "axis", "lockAxis", "lockOffset", "lockToContainerEdges", "getContainer", "getHelperDimensions")))
                     }
                 }]), r
-            }(s.Component), t.displayName = (0, d.provideDisplayName)("sortableList", e), t.defaultProps = {
+            }(s.Component), t.displayName = (0, h.provideDisplayName)("sortableList", e), t.defaultProps = {
                 axis: "y",
                 transitionDuration: 300,
                 pressDelay: 0,
@@ -1507,8 +1507,8 @@ webpackJsonp([99], {
             u = p(r("qUKr")),
             c = r("O27J"),
             l = p(r("crWv")),
-            h = p(r("xKuy")),
-            d = r("Vgej");
+            d = p(r("xKuy")),
+            h = r("Vgej");
 
         function p(e) {
             return e && e.__esModule ? e : {
@@ -1801,8 +1801,8 @@ webpackJsonp([99], {
             u = r("43dD"),
             c = r("NuOc"),
             l = c(n),
-            h = c(o),
-            d = c(a),
+            d = c(o),
+            h = c(a),
             p = c(s),
             f = c(i),
             g = u;
@@ -1813,9 +1813,9 @@ webpackJsonp([99], {
             if (n) switch (n) {
                 case l:
                     return "[object DataView]";
-                case h:
-                    return "[object Map]";
                 case d:
+                    return "[object Map]";
+                case h:
                     return "[object Promise]";
                 case p:
                     return "[object Set]";
@@ -1908,9 +1908,9 @@ webpackJsonp([99], {
                 if (void 0 === t) c = new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");
                 else {
                     var l = [r, o, a, s, i, u],
-                        h = 0;
+                        d = 0;
                     (c = new Error(t.replace(/%s/g, function() {
-                        return l[h++]
+                        return l[d++]
                     }))).name = "Invariant Violation"
                 }
                 throw c.framesToPop = 1, c
@@ -2059,8 +2059,8 @@ webpackJsonp([99], {
             u = r("F8kA"),
             c = r("68hr"),
             l = r("zCIC"),
-            h = r("3zLD"),
-            d = r("6sO2"),
+            d = r("3zLD"),
+            h = r("6sO2"),
             p = r("j7/Y"),
             f = r("w9tK"),
             g = r("vH/s"),
@@ -2073,14 +2073,71 @@ webpackJsonp([99], {
             _ = r("HM6l"),
             E = r("9u8h"),
             O = r("5LoI"),
-            w = r("MAZT"),
-            C = r("5Y57"),
-            j = r("kqTE"),
-            k = r("HW6M"),
-            T = r("5kgt"),
-            P = r("puy8"),
-            A = r("Odds"),
-            R = (r("x3dg"), function(e) {
+            w = r("MAZT");
+
+        function C(e) {
+            var t = e.settings;
+            return {
+                vodcastHosting: !t.deprioritize_vodcast,
+                enabled: t.enabled,
+                strategy: t.strategy,
+                teamHost: t.team_host,
+                raidPreference: t.can_be_raided_by
+            }
+        }
+        var j = r("6BvN"),
+            k = function(e, t, r, n) {
+                if (t) {
+                    var o = document.querySelectorAll(".autohost-list-item");
+                    if (!(o.length < 1)) {
+                        var a = document.activeElement,
+                            s = Array.prototype.indexOf.call(o, a),
+                            i = s;
+                        switch (e) {
+                            case j.a.Space:
+                                return r ? (n && (o.item(n).tabIndex = 0), {
+                                    isSorting: !1,
+                                    selectedIndex: null
+                                }) : s >= 0 ? (o.item(s).tabIndex = -1, {
+                                    isSorting: !0,
+                                    selectedIndex: s
+                                }) : void 0;
+                            case j.a.Up:
+                                if (0 === s) return;
+                                i = s < 0 ? o.length - 1 : s - 1;
+                                break;
+                            case j.a.Down:
+                                if ((i = s + 1) >= o.length) return;
+                                break;
+                            default:
+                                return
+                        }
+                        if (!r) {
+                            var u = o.item(i);
+                            u.focus(), u.tabIndex = 0, n && (o.item(n).tabIndex = -1)
+                        }
+                        if (null !== n) {
+                            var c = Object(x.arrayMove)(t, s, i);
+                            return r ? {
+                                autohostChannels: c,
+                                selectedIndex: i
+                            } : {
+                                autohostChannels: c
+                            }
+                        }
+                    }
+                }
+            },
+            T = function(e, t) {
+                return !(e !== j.a.Space || !t)
+            },
+            A = r("5Y57"),
+            P = r("kqTE"),
+            I = r("HW6M"),
+            R = r("5kgt"),
+            D = r("puy8"),
+            M = r("Odds"),
+            F = (r("x3dg"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2098,86 +2155,95 @@ webpackJsonp([99], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(d.d)("Remove", "AutohostListItem"),
+                    var e = Object(h.d)("Remove", "AutohostListItem"),
                         t = !this.props.isSorting && this.state.hovered,
                         r = {
                             "autohost-list-item": !0,
-                            "autohost-list-item--hovered": t
+                            "autohost-list-item--hovered": t,
+                            "autohost-list-item--selected": this.props.selected
                         },
                         n = null;
-                    t && (n = s.createElement(A._8, {
+                    (t || this.props.selected) && (n = s.createElement(M._8, {
                         className: "autohost-list-item--remove",
                         padding: {
                             right: 1
                         },
-                        display: A.R.Flex,
+                        display: M.R.Flex,
                         attachRight: !0
-                    }, s.createElement(A._52, {
+                    }, s.createElement(M._52, {
                         label: e,
-                        direction: A._54.Left
-                    }, s.createElement(A.w, {
+                        direction: M._54.Left
+                    }, s.createElement(M.w, {
                         "data-test-selector": "AUTO_HOST_REMOVE_BUTTON",
                         ariaLabel: e,
-                        icon: A._25.Trash,
+                        icon: M._25.Trash,
                         onClick: this.onRemoveClick,
                         overlay: !0
                     }))));
-                    var o = this.props.user.avatar || Object(P.c)(this.props.user.id, 64);
-                    return s.createElement(A._2, a.__assign({
-                        className: k(r),
+                    var o = this.props.user.avatar || Object(D.c)(this.props.user.id, 64);
+                    return s.createElement(M._2, a.__assign({
+                        className: I(r),
                         padding: {
                             y: 1,
                             x: 1
                         }
-                    }, Object(T.a)(this.props)), s.createElement("div", {
+                    }, Object(R.a)(this.props)), s.createElement("div", {
                         onMouseEnter: this.onMouseEnter,
-                        onMouseLeave: this.onMouseLeave
-                    }, s.createElement(A.C, {
+                        onMouseLeave: this.onMouseLeave,
+                        tabIndex: -1
+                    }, s.createElement(M.C, {
                         row: !0
-                    }, s.createElement(A._8, {
+                    }, s.createElement(M._8, {
                         className: "autohost-list-item__avatar"
-                    }, s.createElement(A.k, {
-                        ratio: A.l.Aspect1x1
+                    }, s.createElement(M.k, {
+                        ratio: M.l.Aspect1x1
                     }, s.createElement("img", {
                         alt: this.props.user.name,
                         src: o,
                         draggable: !1
-                    }))), s.createElement(A._8, {
+                    }))), s.createElement(M._8, {
                         flexGrow: 1,
-                        display: A.R.Flex,
-                        position: A._15.Relative
-                    }, s.createElement(A._2, {
+                        display: M.R.Flex,
+                        position: M._15.Relative
+                    }, s.createElement(M._2, {
                         padding: {
                             x: 1
                         },
                         flexGrow: 1
-                    }, s.createElement(A.Q, {
-                        type: A._49.Span,
+                    }, s.createElement(M.Q, {
+                        type: M._49.Span,
                         ellipsis: !0
                     }, this.props.user.name))), n)))
                 }, t
             }(s.Component)),
-            I = Object(x.SortableElement)(function(e) {
-                return s.createElement(R, a.__assign({}, e))
+            L = Object(x.SortableElement)(function(e) {
+                return s.createElement(F, a.__assign({}, e))
             }),
-            D = (r("N/hX"), function(e) {
+            N = (r("N/hX"), function(e) {
                 return s.createElement(l.b, {
                     className: "autohost-list-edit",
                     suppressScrollX: !0
-                }, s.createElement(A._8, null, e.autohostChannels && e.autohostChannels.map(function(t, r) {
-                    return s.createElement(I, {
+                }, s.createElement("ul", {
+                    onKeyDown: e.onKeyDown,
+                    role: "listbox",
+                    tabIndex: 0,
+                    "data-test-selector": "AUTO_HOST_LIST_SELECTOR"
+                }, e.autohostChannels && e.autohostChannels.map(function(t, r) {
+                    return s.createElement("li", {
+                        key: t.id
+                    }, s.createElement(L, {
                         user: t,
-                        key: t.id,
                         index: r,
                         onRemoveClick: e.onHostRemoved,
-                        isSorting: e.isSorting
-                    })
+                        isSorting: e.isSorting,
+                        selected: e.selectedIndex === r
+                    }))
                 })))
             }),
-            M = Object(x.SortableContainer)(function(e) {
-                return s.createElement(D, a.__assign({}, e))
+            K = Object(x.SortableContainer)(function(e) {
+                return s.createElement(N, a.__assign({}, e))
             }),
-            F = function(e) {
+            H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onAddClick = function() {
@@ -2188,46 +2254,46 @@ webpackJsonp([99], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = null;
-                    e = this.props.user.added ? s.createElement(A.v, {
+                    e = this.props.user.added ? s.createElement(M.v, {
                         onClick: this.onAddedClick,
                         "data-test-selector": "AUTO_HOST_REMOVE_BUTTON",
-                        icon: A._25.Check,
-                        statusAlertIcon: A._25.Trash,
-                        statusAlertText: Object(d.d)("Remove", "AutohostUserResultCard")
-                    }, Object(d.d)("Added", "AutohostUserResultCard")) : s.createElement(A.v, {
-                        type: A.B.Hollow,
+                        icon: M._25.Check,
+                        statusAlertIcon: M._25.Trash,
+                        statusAlertText: Object(h.d)("Remove", "AutohostUserResultCard")
+                    }, Object(h.d)("Added", "AutohostUserResultCard")) : s.createElement(M.v, {
+                        type: M.B.Hollow,
                         onClick: this.onAddClick,
                         "data-test-selector": "AUTO_HOST_ADD_BUTTON"
-                    }, Object(d.d)("Add", "AutohostUserResultCard"));
-                    var t = this.props.user.avatar || Object(P.c)(this.props.user.id, 64);
-                    return s.createElement(A._8, a.__assign({
+                    }, Object(h.d)("Add", "AutohostUserResultCard"));
+                    var t = this.props.user.avatar || Object(D.c)(this.props.user.id, 64);
+                    return s.createElement(M._8, a.__assign({
                         padding: {
                             y: .5,
                             x: 1
                         }
-                    }, Object(T.a)(this.props)), s.createElement(A.C, {
+                    }, Object(R.a)(this.props)), s.createElement(M.C, {
                         row: !0
-                    }, s.createElement(A.E, {
+                    }, s.createElement(M.E, {
                         alt: this.props.user.name,
                         src: t,
-                        size: A.F.Size4,
-                        aspect: A.l.Aspect1x1
-                    }), s.createElement(A._8, {
+                        size: M.F.Size4,
+                        aspect: M.l.Aspect1x1
+                    }), s.createElement(M._8, {
                         flexGrow: 1,
-                        display: A.R.Flex,
-                        position: A._15.Relative
-                    }, s.createElement(A._2, {
+                        display: M.R.Flex,
+                        position: M._15.Relative
+                    }, s.createElement(M._2, {
                         padding: {
                             x: 1
                         },
                         flexGrow: 1
-                    }, s.createElement(A.Q, {
-                        type: A._49.Span,
+                    }, s.createElement(M.Q, {
+                        type: M._49.Span,
                         ellipsis: !0
                     }, this.props.user.name))), e))
                 }, t
             }(s.Component),
-            L = (r("qhiD"), function(e) {
+            U = (r("qhiD"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.userSearch = null, t.setUserSearchRef = function(e) {
@@ -2239,48 +2305,48 @@ webpackJsonp([99], {
                 }, t.prototype.render = function() {
                     var e = this,
                         t = null;
-                    return this.props.isWaiting ? t = s.createElement(A._10, {
+                    return this.props.isWaiting ? t = s.createElement(M._10, {
                         fillContent: !0
                     }) : this.props.userResults && (t = this.props.userResults.map(function(t) {
-                        return s.createElement(j.a, {
+                        return s.createElement(P.a, {
                             key: t.id
-                        }, s.createElement(F, {
+                        }, s.createElement(H, {
                             user: t,
                             onAddClick: e.props.onHostAdded,
                             onAddedClick: e.props.onHostRemoved,
                             key: t.id
                         }))
-                    })), s.createElement(A._8, {
+                    })), s.createElement(M._8, {
                         className: "autohost-list",
-                        alignContent: A.b.Center
-                    }, s.createElement(A._8, {
-                        position: A._15.Relative,
+                        alignContent: M.b.Center
+                    }, s.createElement(M._8, {
+                        position: M._15.Relative,
                         margin: {
                             y: 1
                         }
-                    }, s.createElement(C.a, {
+                    }, s.createElement(A.a, {
                         onChange: this.props.onUserInputChange,
                         onFocusInput: this.props.onFocusInput,
                         ref: this.setUserSearchRef,
-                        placeholder: Object(d.d)("Search channels to host", "AutohostList"),
+                        placeholder: Object(h.d)("Search channels to host", "AutohostList"),
                         balloonProps: {
                             show: this.props.isUserSearchOpen,
-                            direction: A.r.Bottom,
-                            size: A.s.Large
+                            direction: M.r.Bottom,
+                            size: M.s.Large
                         },
                         onClose: this.props.onSearchClose,
                         isErrored: this.props.isSearchErrored
-                    }, s.createElement(A._8, {
+                    }, s.createElement(M._8, {
                         className: "autohost-list__user-search"
                     }, s.createElement(l.b, {
                         contentClassName: "autohost-list__user-search-content",
                         suppressScrollX: !0
-                    }, s.createElement(A._8, {
+                    }, s.createElement(M._8, {
                         fullWidth: !0
                     }, t, s.createElement(l.a, {
                         enabled: !this.props.isWaiting && this.props.isUserSearchOpen,
                         loadMore: this.props.loadMore
-                    })))))), s.createElement(M, {
+                    })))))), s.createElement(K, {
                         onHostRemoved: this.props.onHostRemoved,
                         autohostChannels: this.props.autohostChannels,
                         onSortEnd: this.props.onSortEnd,
@@ -2290,14 +2356,15 @@ webpackJsonp([99], {
                         onSortStart: this.props.onSortStart,
                         isSorting: this.props.isSorting,
                         selectedIndex: this.props.selectedIndex,
-                        distance: 20
+                        distance: 20,
+                        onKeyDown: this.props.onKeyDown
                     }))
                 }, t
             }(s.Component)),
-            N = 100,
-            K = "/kraken/streams/recommended",
-            H = "kraken/autohost/list",
-            U = function(e) {
+            z = 100,
+            G = "/kraken/streams/recommended",
+            q = "kraken/autohost/list",
+            W = function(e) {
                 function t(t) {
                     var r = e.call(this, t) || this;
                     return r.state = {
@@ -2308,7 +2375,8 @@ webpackJsonp([99], {
                         isWaiting: !1,
                         autohostChannels: [],
                         recommendedChannels: null,
-                        currentPage: 0
+                        currentPage: 0,
+                        selectedIndex: null
                     }, r.onUserInputChange = function(e) {
                         if (r.inputTimer && (clearTimeout(r.inputTimer), r.inputTimer = 0), r.props.onUserInput(), !e) return r.setRecommendedChannels(), void r.setState(function() {
                             return {
@@ -2324,10 +2392,10 @@ webpackJsonp([99], {
                             currentPage: 0
                         }), r.inputTimer = setTimeout(function() {
                             return r.doUserSearch(e)
-                        }, N)
+                        }, z)
                     }, r.loadMore = function() {
                         return a.__awaiter(r, void 0, void 0, function() {
-                            var e, t, r, n, o, s = this;
+                            var e, t, r, n, o;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
@@ -2340,23 +2408,11 @@ webpackJsonp([99], {
                                     case 2:
                                         return t = a.sent(), [3, 4];
                                     case 3:
-                                        return r = a.sent(), d.j.error(r, "Algolia page search failed"), this.setState({
+                                        return r = a.sent(), h.j.error(r, "Algolia page search failed"), this.setState({
                                             isUserSearchOpen: !0
                                         }), this.props.onError(""), [2];
                                     case 4:
-                                        return t && t.users ? (n = t.users.hits.filter(function(e) {
-                                            return !s.props.user || e.objectID !== s.props.user.id
-                                        }).map(function(e) {
-                                            return {
-                                                id: e.objectID,
-                                                avatar: e.profile_image,
-                                                login: e.login,
-                                                name: e.name,
-                                                added: !!s.state.autohostChannels.find(function(t) {
-                                                    return t.id === e.objectID
-                                                })
-                                            }
-                                        }), o = t.exhaustedHits, this.setState(function(t) {
+                                        return t && t.users ? (n = this.deserializeUserResults(t), o = t.exhaustedHits, this.setState(function(t) {
                                             return {
                                                 userResults: t.userResults.concat(n),
                                                 isUserSearchOpen: !0,
@@ -2370,48 +2426,31 @@ webpackJsonp([99], {
                         })
                     }, r.addChannel = function(e) {
                         return a.__awaiter(r, void 0, void 0, function() {
-                            var t, r, n;
-                            return a.__generator(this, function(o) {
-                                switch (o.label) {
+                            var t, r, n, o = this;
+                            return a.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         if (!this.state.autohostChannels) return [2];
                                         (t = this.state.autohostChannels.map(function(e) {
                                             return e.id
-                                        })).push(e.id), o.label = 1;
+                                        })).push(e.id), a.label = 1;
                                     case 1:
-                                        return o.trys.push([1, 3, , 4]), [4, E.a.putOrThrow(H, {
+                                        return a.trys.push([1, 3, , 4]), [4, E.a.putOrThrow(q, {
                                             body: {
                                                 targets: t.join(",")
                                             }
                                         })];
                                     case 2:
-                                        return o.sent(), [3, 4];
+                                        return a.sent(), [3, 4];
                                     case 3:
-                                        return r = o.sent(), n = Object(d.d)("Unable to add user to auto host list", "AutohostList"), d.j.error(r, n, {
+                                        return r = a.sent(), n = Object(h.d)("Unable to add user to auto host list", "AutohostList"), h.j.error(r, n, {
                                             target: e
                                         }), this.props.onError(n), [2];
                                     case 4:
                                         return this.setState(function(t) {
-                                            var r = t.userResults.findIndex(function(t) {
-                                                    return e.id === t.id
-                                                }),
-                                                n = t.userResults;
-                                            t.userResults && r >= 0 && (n = S(t.userResults, function(e) {
-                                                return e[r]
-                                            }, function(e) {
-                                                return e.added = !0, e
-                                            }));
-                                            var o = t.recommendedChannels ? t.recommendedChannels.findIndex(function(t) {
-                                                    return e.id === t.id
-                                                }) : -1,
-                                                a = t.recommendedChannels;
-                                            return t.recommendedChannels && o >= 0 && (a = S(t.recommendedChannels, function(e) {
-                                                return e[o]
-                                            }, function(e) {
-                                                return e.added = !0, e
-                                            })), {
-                                                userResults: n,
-                                                recommendedChannels: a,
+                                            return {
+                                                userResults: o.updateAdded(t.userResults, e.id, !0) || [],
+                                                recommendedChannels: o.updateAdded(t.recommendedChannels, e.id, !0),
                                                 autohostChannels: t.autohostChannels.concat([e])
                                             }
                                         }), [2]
@@ -2436,11 +2475,11 @@ webpackJsonp([99], {
                                         }), [2];
                                         o.label = 1;
                                     case 1:
-                                        return o.trys.push([1, 3, , 4]), [4, E.a.getOrThrow(K)];
+                                        return o.trys.push([1, 3, , 4]), [4, E.a.getOrThrow(G)];
                                     case 2:
                                         return e = o.sent(), [3, 4];
                                     case 3:
-                                        return t = o.sent(), d.j.error(t, "Unable to retrieve recomended channels"), [2];
+                                        return t = o.sent(), h.j.error(t, "Unable to retrieve recomended channels"), [2];
                                     case 4:
                                         return e.body && (r = e.body.recommended_streams.map(function(e) {
                                             var t = String(e.channel._id);
@@ -2471,11 +2510,11 @@ webpackJsonp([99], {
                             return a.__generator(this, function(o) {
                                 switch (o.label) {
                                     case 0:
-                                        return o.trys.push([0, 2, , 3]), [4, E.a.getOrThrow(H)];
+                                        return o.trys.push([0, 2, , 3]), [4, E.a.getOrThrow(q)];
                                     case 1:
                                         return e = o.sent(), [3, 3];
                                     case 2:
-                                        return t = o.sent(), r = Object(d.d)("Unable to fetch auto host list", "AutohostList"), d.j.error(t, r), this.props.onError(r), [2];
+                                        return t = o.sent(), r = Object(h.d)("Unable to fetch auto host list", "AutohostList"), h.j.error(t, r), this.props.onError(r), [2];
                                     case 3:
                                         return e.body && (n = e.body.targets.map(function(e) {
                                             return {
@@ -2492,15 +2531,18 @@ webpackJsonp([99], {
                         })
                     }, r.removeChannel = function(e) {
                         return a.__awaiter(r, void 0, void 0, function() {
-                            var t, r, n, o, s;
+                            var t, r, n, o, s, i = this;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         if (!this.state.autohostChannels) return [2];
-                                        if (t = [], 1 !== this.state.autohostChannels.length) return [3, 5];
+                                        if (this.setState({
+                                                isSorting: !1,
+                                                selectedIndex: null
+                                            }), t = [], 1 !== this.state.autohostChannels.length) return [3, 5];
                                         a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, E.a.deleteOrThrow(H)];
+                                        return a.trys.push([1, 3, , 4]), [4, E.a.deleteOrThrow(q)];
                                     case 2:
                                         return a.sent(), [3, 4];
                                     case 3:
@@ -2515,7 +2557,7 @@ webpackJsonp([99], {
                                             return e.id
                                         }), a.label = 6;
                                     case 6:
-                                        return a.trys.push([6, 8, , 9]), [4, E.a.putOrThrow(H, {
+                                        return a.trys.push([6, 8, , 9]), [4, E.a.putOrThrow(q, {
                                             body: {
                                                 targets: o.join(",")
                                             }
@@ -2526,72 +2568,50 @@ webpackJsonp([99], {
                                         return s = a.sent(), this.reportChannelError(e, s), [2];
                                     case 9:
                                         return this.setState(function(r) {
-                                            var n = r.userResults.findIndex(function(t) {
-                                                    return e.id === t.id
-                                                }),
-                                                o = r.userResults;
-                                            r.userResults && n >= 0 && (o = S(r.userResults, function(e) {
-                                                return e[n]
-                                            }, function(e) {
-                                                return e.added = !1, e
-                                            }));
-                                            var a = r.recommendedChannels ? r.recommendedChannels.findIndex(function(t) {
-                                                    return e.id === t.id
-                                                }) : -1,
-                                                s = r.recommendedChannels;
-                                            return r.recommendedChannels && a >= 0 && (s = S(r.recommendedChannels, function(e) {
-                                                return e[a]
-                                            }, function(e) {
-                                                return e.added = !1, e
-                                            })), {
-                                                userResults: o,
-                                                recommendedChannels: s,
+                                            return {
+                                                userResults: i.updateAdded(r.userResults, e.id, !1) || [],
+                                                recommendedChannels: i.updateAdded(r.recommendedChannels, e.id, !1),
                                                 autohostChannels: t
                                             }
                                         }), [2]
                                 }
                             })
                         })
+                    }, r.updateAdded = function(e, t, r) {
+                        var n = e ? e.findIndex(function(e) {
+                                return t === e.id
+                            }) : -1,
+                            o = e;
+                        return e && n >= 0 && (o = S(e, function(e) {
+                            return e[n]
+                        }, function(e) {
+                            return e.added = r, e
+                        })), o
+                    }, r.onKeyDown = function(e) {
+                        var t = k(e.keyCode, r.state.autohostChannels, r.state.isSorting, r.state.selectedIndex);
+                        t && r.setState(t), T(e.keyCode, r.state.isSorting) && r.updateList(r.state.autohostChannels)
                     }, r.onChannelOrderChange = function(e) {
                         return a.__awaiter(r, void 0, void 0, function() {
-                            var t, r, n, o;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
-                                    case 0:
-                                        if (e.newIndex === e.oldIndex) return this.setState({
-                                            isSorting: !1
-                                        }), [2];
-                                        t = Object(x.arrayMove)(this.state.autohostChannels, e.oldIndex, e.newIndex), this.setState({
-                                            autohostChannels: t,
-                                            isSorting: !1
-                                        }), r = t.map(function(e) {
-                                            return e.id
-                                        }), a.label = 1;
-                                    case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, E.a.putOrThrow(H, {
-                                            body: {
-                                                targets: r.join(",")
-                                            }
-                                        })];
-                                    case 2:
-                                        return a.sent(), [3, 4];
-                                    case 3:
-                                        return n = a.sent(), o = Object(d.d)("Unable to re order auto host list", "AutohostList"), d.j.error(n, o), this.props.onError(o), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
+                            var t;
+                            return a.__generator(this, function(r) {
+                                return e.newIndex === e.oldIndex ? (this.setState({
+                                    isSorting: !1
+                                }), [2]) : (t = Object(x.arrayMove)(this.state.autohostChannels, e.oldIndex, e.newIndex), this.setState({
+                                    autohostChannels: t,
+                                    isSorting: !1
+                                }), this.updateList(t), [2])
                             })
                         })
                     }, r.onChannelOrderChangeStart = function() {
-                        r.setState({
+                        return r.setState({
                             isSorting: !0
                         })
                     }, r.searchClient = new w.a({
-                        appId: d.a.algoliaApplicationID,
-                        apiKey: d.a.algoliaAPIKey,
-                        apolloClient: d.o.apollo.client,
-                        logger: d.j,
-                        config: d.a
+                        appId: h.a.algoliaApplicationID,
+                        apiKey: h.a.algoliaAPIKey,
+                        apolloClient: h.o.apollo.client,
+                        logger: h.j,
+                        config: h.a
                     }), r
                 }
                 return a.__extends(t, e), t.prototype.componentWillMount = function() {
@@ -2601,7 +2621,7 @@ webpackJsonp([99], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return s.createElement(L, {
+                    return s.createElement(U, {
                         onUserInputChange: this.onUserInputChange,
                         isUserSearchOpen: this.state.isUserSearchOpen,
                         userResults: this.state.userResults,
@@ -2615,11 +2635,13 @@ webpackJsonp([99], {
                         loadMore: this.loadMore,
                         onSortEnd: this.onChannelOrderChange,
                         onSortStart: this.onChannelOrderChangeStart,
-                        isSorting: this.state.isSorting
+                        isSorting: this.state.isSorting,
+                        onKeyDown: this.onKeyDown,
+                        selectedIndex: this.state.selectedIndex
                     })
                 }, t.prototype.doUserSearch = function(e) {
                     return a.__awaiter(this, void 0, void 0, function() {
-                        var t, r, n, o, s = this;
+                        var t, r, n, o;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -2631,24 +2653,12 @@ webpackJsonp([99], {
                                 case 2:
                                     return r = a.sent(), [3, 4];
                                 case 3:
-                                    return n = a.sent(), d.j.error(n, "Algolia autohost user search failed"), this.setState({
+                                    return n = a.sent(), h.j.error(n, "Algolia autohost user search failed"), this.setState({
                                         isWaiting: !1,
                                         isUserSearchOpen: !0
                                     }), this.props.onError(""), [2];
                                 case 4:
-                                    return r && r.users ? (o = r.users.hits.filter(function(e) {
-                                        return !s.props.user || e.objectID !== s.props.user.id
-                                    }).map(function(e) {
-                                        return {
-                                            id: e.objectID,
-                                            avatar: e.profile_image,
-                                            name: e.name,
-                                            login: e.login,
-                                            added: !!s.state.autohostChannels.find(function(t) {
-                                                return t.id === e.objectID
-                                            })
-                                        }
-                                    }), this.setState({
+                                    return r && r.users ? (o = this.deserializeUserResults(r), this.setState({
                                         userResults: o,
                                         isUserSearchOpen: !0,
                                         isWaiting: !1,
@@ -2658,19 +2668,58 @@ webpackJsonp([99], {
                             }
                         })
                     })
+                }, t.prototype.deserializeUserResults = function(e) {
+                    var t = this;
+                    return e.users ? e.users.hits.filter(function(e) {
+                        return !t.props.user || e.objectID !== t.props.user.id
+                    }).map(function(e) {
+                        return {
+                            id: e.objectID,
+                            avatar: e.profile_image,
+                            name: e.name,
+                            login: e.login,
+                            added: !!t.state.autohostChannels.find(function(t) {
+                                return t.id === e.objectID
+                            })
+                        }
+                    }) : []
                 }, t.prototype.reportChannelError = function(e, t) {
-                    var r = Object(d.d)("Unable to remove channel from auto host list", "AutohostList");
-                    d.j.error(t, r, {
+                    var r = Object(h.d)("Unable to remove channel from auto host list", "AutohostList");
+                    h.j.error(t, r, {
                         target: e
                     }), this.props.onError(r)
+                }, t.prototype.updateList = function(e) {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var t, r, n;
+                        return a.__generator(this, function(o) {
+                            switch (o.label) {
+                                case 0:
+                                    t = e.map(function(e) {
+                                        return e.id
+                                    }), o.label = 1;
+                                case 1:
+                                    return o.trys.push([1, 3, , 4]), [4, E.a.putOrThrow(q, {
+                                        body: {
+                                            targets: t.join(",")
+                                        }
+                                    })];
+                                case 2:
+                                    return o.sent(), [3, 4];
+                                case 3:
+                                    return r = o.sent(), n = Object(h.d)("Unable to re order auto host list", "AutohostList"), h.j.error(r, n), this.props.onError(n), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
+                        })
+                    })
                 }, t
             }(s.Component);
-        var G = Object(n.b)(function(e) {
+        var V, B = Object(n.b)(function(e) {
                 return {
                     user: Object(o.c)(e)
                 }
-            })(U),
-            z = function(e) {
+            })(W),
+            Q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2686,35 +2735,35 @@ webpackJsonp([99], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(A._8, null, s.createElement(m.a, {
-                        title: Object(d.d)("Host list", "AuthohostListPage"),
+                    return s.createElement(M._8, null, s.createElement(m.a, {
+                        title: Object(h.d)("Host list", "AuthohostListPage"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings"
                     }), s.createElement(b.a, null, s.createElement(y.a, {
                         error: !!this.state.autohostError,
                         errorMessage: this.state.autohostError
-                    }, s.createElement(A._8, {
-                        display: A.R.Flex,
-                        justifyContent: A._7.Center
-                    }, s.createElement(G, {
+                    }, s.createElement(M._8, {
+                        display: M.R.Flex,
+                        justifyContent: M._7.Center
+                    }, s.createElement(B, {
                         onError: this.handleAutohostError,
                         onUserInput: this.handleAutohostInput,
                         isSearchErrored: !!this.state.autohostError
                     })))))
                 }, t
             }(s.Component),
-            q = Object(h.compose)(Object(v.d)("AutohostListPage", {
+            J = Object(d.compose)(Object(v.d)("AutohostListPage", {
                 autoReportInteractive: !0,
                 destination: f.a.AutohostSettings
             }), Object(p.a)({
                 location: g.PageviewLocation.AutohostSettings
-            }))(z),
-            W = r("AQc/"),
-            V = r("Jo6h"),
-            B = r("SR0I"),
-            Q = r("deXC"),
-            J = r("f2K8"),
-            Y = r("s6nI"),
-            X = function(e) {
+            }))(Q),
+            Y = r("AQc/"),
+            X = r("Jo6h"),
+            $ = r("SR0I"),
+            Z = r("deXC"),
+            ee = r("f2K8"),
+            te = r("s6nI"),
+            re = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleToggleEnabled = function(e) {
@@ -2731,71 +2780,71 @@ webpackJsonp([99], {
                         })
                     }, t.handleSetRandomAutohostStrategy = function() {
                         t.props.saveSettings({
-                            strategy: J.AutohostStrategy.Random
+                            strategy: ee.AutohostStrategy.Random
                         })
                     }, t.handleSetOrderedAutohostStrategy = function() {
                         t.props.saveSettings({
-                            strategy: J.AutohostStrategy.Ordered
+                            strategy: ee.AutohostStrategy.Ordered
                         })
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(b.a, null, this.props.requestState === Y.a.Error && s.createElement(y.a, null, s.createElement(A.Q, {
-                        color: A.K.Error
-                    }, Object(d.d)("Something went wrong. Give it another try later.", "AutohostSettings"))), s.createElement(Q.a, {
-                        label: Object(d.d)("Auto host channels", "AutohostSettings"),
+                    return s.createElement(b.a, null, this.props.requestState === te.a.Error && s.createElement(y.a, null, s.createElement(M.Q, {
+                        color: M.K.Error
+                    }, Object(h.d)("Something went wrong. Give it another try later.", "AutohostSettings"))), s.createElement(Z.a, {
+                        label: Object(h.d)("Auto host channels", "AutohostSettings"),
                         name: "enabled",
-                        disabled: this.props.requestState === Y.a.Loading,
+                        disabled: this.props.requestState === te.a.Loading,
                         checked: this.props.autohostSettings.enabled,
                         onChange: this.handleToggleEnabled,
-                        description: Object(d.d)("Automatically host channels from your host list when you're offline", "AutohostSettings"),
+                        description: Object(h.d)("Automatically host channels from your host list when you're offline", "AutohostSettings"),
                         id: "auto-host-channels-toggle",
                         "data-test-selector": "auto-host-channels-toggle"
-                    }), s.createElement(Q.a, {
-                        label: Object(d.d)("Host team channels", "AutohostSettings"),
+                    }), s.createElement(Z.a, {
+                        label: Object(h.d)("Host team channels", "AutohostSettings"),
                         name: "teamHost",
-                        disabled: this.props.requestState === Y.a.Loading,
+                        disabled: this.props.requestState === te.a.Loading,
                         checked: this.props.autohostSettings.teamHost,
                         onChange: this.handleToggleTeamHost,
                         id: "team-host",
-                        description: Object(d.d)("Include team channels in your host list", "AutohostSettings")
-                    }), s.createElement(Q.a, {
-                        label: Object(d.d)("Host pre-recorded videos", "AutohostSettings"),
+                        description: Object(h.d)("Include team channels in your host list", "AutohostSettings")
+                    }), s.createElement(Z.a, {
+                        label: Object(h.d)("Host pre-recorded videos", "AutohostSettings"),
                         name: "vodcastHosting",
-                        disabled: this.props.requestState === Y.a.Loading,
+                        disabled: this.props.requestState === te.a.Loading,
                         checked: this.props.autohostSettings.vodcastHosting,
                         onChange: this.handleToggleVodcastHosting,
-                        description: Object(d.d)("Include channels streaming pre-recorded video, like Premieres or Reruns", "AutohostSettings"),
+                        description: Object(h.d)("Include channels streaming pre-recorded video, like Premieres or Reruns", "AutohostSettings"),
                         id: "vodcast-hosting-toggle"
-                    }), s.createElement(V.a, {
-                        orientation: A.X.Horizontal,
-                        label: Object(d.d)("Hosting priority", "AutohostSettings")
-                    }, s.createElement(A._8, {
+                    }), s.createElement(X.a, {
+                        orientation: M.X.Horizontal,
+                        label: Object(h.d)("Hosting priority", "AutohostSettings")
+                    }, s.createElement(M._8, {
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(A._21, {
-                        disabled: this.props.requestState === Y.a.Loading,
-                        checked: this.props.autohostSettings.strategy === J.AutohostStrategy.Ordered,
+                    }, s.createElement(M._21, {
+                        disabled: this.props.requestState === te.a.Loading,
+                        checked: this.props.autohostSettings.strategy === ee.AutohostStrategy.Ordered,
                         onChange: this.handleSetOrderedAutohostStrategy,
-                        label: Object(d.d)("Host channels by the order they appear in the list", "AutohostSettings"),
+                        label: Object(h.d)("Host channels by the order they appear in the list", "AutohostSettings"),
                         name: "hostPriority",
-                        value: J.AutohostStrategy.Ordered
-                    })), s.createElement(A._21, {
-                        disabled: this.props.requestState === Y.a.Loading,
-                        checked: this.props.autohostSettings.strategy === J.AutohostStrategy.Random,
+                        value: ee.AutohostStrategy.Ordered
+                    })), s.createElement(M._21, {
+                        disabled: this.props.requestState === te.a.Loading,
+                        checked: this.props.autohostSettings.strategy === ee.AutohostStrategy.Random,
                         onChange: this.handleSetRandomAutohostStrategy,
-                        label: Object(d.d)("Host channels randomly from the list", "AutohostSettings"),
+                        label: Object(h.d)("Host channels randomly from the list", "AutohostSettings"),
                         name: "hostPriority",
-                        value: J.AutohostStrategy.Random
-                    })), s.createElement(B.a, {
-                        text: Object(d.d)("Host list", "AutohostSettings"),
-                        description: Object(d.d)("Add and manage your hosted channels", "AutohostSettings"),
+                        value: ee.AutohostStrategy.Random
+                    })), s.createElement($.a, {
+                        text: Object(h.d)("Host list", "AutohostSettings"),
+                        description: Object(h.d)("Add and manage your hosted channels", "AutohostSettings"),
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/autohost"
                     }))
                 }, t
             }(s.Component),
-            $ = function(e) {
+            ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleSetRaidPreference = function(e) {
@@ -2811,89 +2860,78 @@ webpackJsonp([99], {
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return s.createElement(b.a, null, this.props.requestState === Y.a.Error && s.createElement(y.a, null, s.createElement(A.Q, {
-                        color: A.K.Error
-                    }, Object(d.d)("Something went wrong. Give it another try later.", "RaidSettingsForm"))), s.createElement(V.a, {
-                        orientation: A.X.Horizontal,
-                        label: Object(d.d)("Raid", "RaidSettingsForm")
-                    }, s.createElement(A._8, {
+                    return s.createElement(b.a, null, this.props.requestState === te.a.Error && s.createElement(y.a, null, s.createElement(M.Q, {
+                        color: M.K.Error
+                    }, Object(h.d)("Something went wrong. Give it another try later.", "RaidSettingsForm"))), s.createElement(X.a, {
+                        orientation: M.X.Horizontal,
+                        label: Object(h.d)("Raid", "RaidSettingsForm")
+                    }, s.createElement(M._8, {
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(A._21, {
-                        disabled: this.props.requestState === Y.a.Loading,
-                        checked: this.props.raidPreference === J.RaidPreference.All,
+                    }, s.createElement(M._21, {
+                        disabled: this.props.requestState === te.a.Loading,
+                        checked: this.props.raidPreference === ee.RaidPreference.All,
                         onChange: this.handleSetRaidPreference,
-                        label: Object(d.d)("Allow all raids", "RaidSettingsForm"),
+                        label: Object(h.d)("Allow all raids", "RaidSettingsForm"),
                         name: "raidPreference",
-                        value: J.RaidPreference.All
-                    })), s.createElement(A._8, {
+                        value: ee.RaidPreference.All
+                    })), s.createElement(M._8, {
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(A._21, {
-                        disabled: this.props.requestState === Y.a.Loading,
-                        checked: this.props.raidPreference === J.RaidPreference.Network,
+                    }, s.createElement(M._21, {
+                        disabled: this.props.requestState === te.a.Loading,
+                        checked: this.props.raidPreference === ee.RaidPreference.Network,
                         onChange: this.handleSetRaidPreference,
-                        label: Object(d.d)("Only allow raids from friends, teammates, and followed channels", "RaidSettingsForm"),
+                        label: Object(h.d)("Only allow raids from friends, teammates, and followed channels", "RaidSettingsForm"),
                         name: "raidPreference",
-                        value: J.RaidPreference.Network
-                    })), s.createElement(A._8, {
+                        value: ee.RaidPreference.Network
+                    })), s.createElement(M._8, {
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(A._21, {
-                        disabled: this.props.requestState === Y.a.Loading,
-                        checked: this.props.raidPreference === J.RaidPreference.None,
+                    }, s.createElement(M._21, {
+                        disabled: this.props.requestState === te.a.Loading,
+                        checked: this.props.raidPreference === ee.RaidPreference.None,
                         onChange: this.handleSetRaidPreference,
-                        label: Object(d.d)("Block all raids", "RaidSettingsForm"),
+                        label: Object(h.d)("Block all raids", "RaidSettingsForm"),
                         name: "raidPreference",
-                        value: J.RaidPreference.None
+                        value: ee.RaidPreference.None
                     }))))
                 }, t
             }(s.Component),
-            Z = Object(v.d)("RaidSettingsForm")($),
-            ee = function(e) {
-                return s.createElement(s.Fragment, null, s.createElement(W.a, {
-                    title: Object(d.d)("Auto Hosting", "DashboardSettings")
-                }), s.createElement(X, {
+            oe = Object(v.d)("RaidSettingsForm")(ne),
+            ae = function(e) {
+                return s.createElement(s.Fragment, null, s.createElement(Y.a, {
+                    title: Object(h.d)("Auto Hosting", "DashboardSettings")
+                }), s.createElement(re, {
                     channelName: e.channelName,
                     autohostSettings: e.autohostSettings,
                     requestState: e.requestState,
                     saveSettings: e.saveSettings
-                }), s.createElement(W.a, {
-                    title: Object(d.d)("Raids", "DashboardSettings")
-                }), s.createElement(Z, {
+                }), s.createElement(Y.a, {
+                    title: Object(h.d)("Raids", "DashboardSettings")
+                }), s.createElement(oe, {
                     raidPreference: e.autohostSettings.raidPreference,
                     requestState: e.requestState,
                     saveSettings: e.saveSettings
                 }))
-            };
-
-        function te(e) {
-            var t = e.settings;
-            return {
-                vodcastHosting: !t.deprioritize_vodcast,
-                enabled: t.enabled,
-                strategy: t.strategy,
-                teamHost: t.team_host,
-                raidPreference: t.can_be_raided_by
-            }
-        }
-        var re, ne = function(e) {
+            },
+            se = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        autohostSettings: J.DEFAULT_AUTOHOST_SETTINGS,
-                        requestState: J.RequestState.Loading
-                    }, t.logger = d.o.logger.withCategory("raid-settings-form"), t.saveSettings = function(e) {
+                        autohostSettings: ee.DEFAULT_AUTOHOST_SETTINGS,
+                        requestState: ee.RequestState.Loading
+                    }, t.logger = h.o.logger.withCategory("raid-settings-form"), t.saveSettings = function(e) {
                         return a.__awaiter(t, void 0, void 0, function() {
                             var t, r;
                             return a.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         return this.setState({
-                                            requestState: J.RequestState.Loading
+                                            requestState: ee.RequestState.Loading
                                         }), [4, function(e) {
                                             return a.__awaiter(this, void 0, void 0, function() {
                                                 var t;
@@ -2916,7 +2954,7 @@ webpackJsonp([99], {
                                                                 error: t.error || t.requestError
                                                             }] : [2, {
                                                                 isError: !1,
-                                                                autohostSettings: te(t.body)
+                                                                autohostSettings: C(t.body)
                                                             }]
                                                     }
                                                     var n
@@ -2925,10 +2963,10 @@ webpackJsonp([99], {
                                         }(a.__assign({}, this.state.autohostSettings, e))];
                                     case 1:
                                         return (t = n.sent()).isError ? (this.setState({
-                                            requestState: J.RequestState.Error
+                                            requestState: ee.RequestState.Error
                                         }), r = new Error("Channel Properties Settings error"), this.logger.error(r, "Failed to load channel data", t.error)) : this.setState({
                                             autohostSettings: t.autohostSettings,
-                                            requestState: J.RequestState.Success
+                                            requestState: ee.RequestState.Success
                                         }), [2]
                                 }
                             })
@@ -2954,7 +2992,7 @@ webpackJsonp([99], {
                                                             autohostSettings: void 0
                                                         }] : [2, {
                                                             isError: !1,
-                                                            autohostSettings: te(e.body)
+                                                            autohostSettings: C(e.body)
                                                         }]
                                                 }
                                             })
@@ -2962,16 +3000,16 @@ webpackJsonp([99], {
                                     }()];
                                 case 1:
                                     return (e = t.sent()).isError ? this.setState({
-                                        requestState: J.RequestState.Error
+                                        requestState: ee.RequestState.Error
                                     }) : this.setState({
                                         autohostSettings: e.autohostSettings,
-                                        requestState: J.RequestState.Success
+                                        requestState: ee.RequestState.Success
                                     }), [2]
                             }
                         })
                     })
                 }, t.prototype.render = function() {
-                    return s.createElement(ee, {
+                    return s.createElement(ae, {
                         channelName: this.props.channelName,
                         autohostSettings: this.state.autohostSettings,
                         requestState: this.state.requestState,
@@ -2979,9 +3017,9 @@ webpackJsonp([99], {
                     })
                 }, t
             }(s.Component),
-            oe = r("2hJ3"),
-            ae = r("gLfK"),
-            se = function(e) {
+            ie = r("2hJ3"),
+            ue = r("gLfK"),
+            ce = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2995,7 +3033,7 @@ webpackJsonp([99], {
                             })
                         })
                     }, t.copyToClipboard = function() {
-                        Object(oe.a)(t.keyInput.value), t.setState({
+                        Object(ie.a)(t.keyInput.value), t.setState({
                             streamKeyCopied: !0
                         })
                     }, t
@@ -3003,89 +3041,89 @@ webpackJsonp([99], {
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.channelPropertiesError) return s.createElement(b.a, null, s.createElement(y.a, null, s.createElement(A.Q, {
-                        color: A.K.Error
+                    if (this.props.channelPropertiesError) return s.createElement(b.a, null, s.createElement(y.a, null, s.createElement(M.Q, {
+                        color: M.K.Error
                     }, this.props.channelPropertiesError)));
-                    var e = A.A.Default,
-                        t = this.props.resetStatus === Y.a.Loading;
-                    return this.props.resetStatus === Y.a.Success ? e = A.A.Success : this.props.resetStatus === Y.a.Error ? t = !0 : this.props.resetStatus === Y.a.Loading && (e = A.A.Loading), s.createElement(b.a, null, s.createElement(V.a, {
-                        label: Object(d.d)("Stream key", "StreamKeySettingsForm"),
+                    var e = M.A.Default,
+                        t = this.props.resetStatus === te.a.Loading;
+                    return this.props.resetStatus === te.a.Success ? e = M.A.Success : this.props.resetStatus === te.a.Error ? t = !0 : this.props.resetStatus === te.a.Loading && (e = M.A.Loading), s.createElement(b.a, null, s.createElement(X.a, {
+                        label: Object(h.d)("Stream key", "StreamKeySettingsForm"),
                         error: !!this.props.streamKeyError,
                         errorMessage: this.props.streamKeyError || ""
-                    }, s.createElement(A._8, {
-                        display: A.R.Flex
-                    }, s.createElement(A._8, {
+                    }, s.createElement(M._8, {
+                        display: M.R.Flex
+                    }, s.createElement(M._8, {
                         flexGrow: 1
-                    }, s.createElement(A._4, {
+                    }, s.createElement(M._4, {
                         readOnly: !0,
-                        type: this.props.showStreamKey ? A._5.Text : A._5.Password,
+                        type: this.props.showStreamKey ? M._5.Text : M._5.Password,
                         value: this.props.channelProperties ? this.props.channelProperties.streamKey : "",
                         refDelegate: this.setKeyInputRef
-                    })), s.createElement(A.v, {
-                        ariaLabel: Object(d.d)("Copy Stream Key", "StreamKeySettingsForm"),
+                    })), s.createElement(M.v, {
+                        ariaLabel: Object(h.d)("Copy Stream Key", "StreamKeySettingsForm"),
                         onClick: this.copyToClipboard,
                         "data-test-selector": "COPY_BUTTON_SELECTOR"
-                    }, this.state.streamKeyCopied ? Object(d.d)("Copied", "StreamKeySettingsForm") : Object(d.d)("Copy", "StreamKeySettingsForm")), s.createElement(A._8, {
+                    }, this.state.streamKeyCopied ? Object(h.d)("Copied", "StreamKeySettingsForm") : Object(h.d)("Copy", "StreamKeySettingsForm")), s.createElement(M._8, {
                         padding: {
                             left: 1
                         }
-                    }, s.createElement(A.v, {
-                        ariaLabel: Object(d.d)("Reset Stream Key", "StreamKeySettingsForm"),
+                    }, s.createElement(M.v, {
+                        ariaLabel: Object(h.d)("Reset Stream Key", "StreamKeySettingsForm"),
                         onClick: this.props.handleResetStreamKeyClicked,
-                        type: A.B.Hollow,
+                        type: M.B.Hollow,
                         state: e,
                         disabled: t
-                    }, Object(d.d)("Reset", "StreamKeySettings")))), s.createElement(A._8, {
+                    }, Object(h.d)("Reset", "StreamKeySettings")))), s.createElement(M._8, {
                         padding: {
                             top: .5
                         }
-                    }, s.createElement(A.O, {
+                    }, s.createElement(M.O, {
                         onClick: this.props.handleStreamKeyDisplayToggled
-                    }, this.props.showStreamKey ? Object(d.d)("Hide", "StreamKeySettingsForm") : Object(d.d)("Show", "StreamKeySettingsForm")))), s.createElement(V.a, {
-                        label: Object(d.d)("Store past broadcasts", "StreamKeySettingsForm"),
+                    }, this.props.showStreamKey ? Object(h.d)("Hide", "StreamKeySettingsForm") : Object(h.d)("Show", "StreamKeySettingsForm")))), s.createElement(X.a, {
+                        label: Object(h.d)("Store past broadcasts", "StreamKeySettingsForm"),
                         error: !!this.props.saveVodsError,
                         errorMessage: this.props.saveVodsError || ""
-                    }, s.createElement(A._8, {
+                    }, s.createElement(M._8, {
                         margin: {
                             bottom: .5
                         }
-                    }, s.createElement(A._51, {
-                        disabled: this.props.saveVodsState === Y.a.Loading,
+                    }, s.createElement(M._51, {
+                        disabled: this.props.saveVodsState === te.a.Loading,
                         checked: !(!this.props.channelProperties || !this.props.channelProperties.saveVods),
                         onChange: this.props.handleSaveVodsToggled
-                    }), s.createElement(ae.a, {
-                        text: Object(d.d)("Save your past broadcasts for 14 days", "StreamKeySettingsForm")
-                    }))), s.createElement(V.a, {
-                        orientation: A.X.Horizontal,
-                        label: Object(d.d)("Optimization preference", "StreamKeySettingsForm"),
+                    }), s.createElement(ue.a, {
+                        text: Object(h.d)("Save your past broadcasts for 14 days", "StreamKeySettingsForm")
+                    }))), s.createElement(X.a, {
+                        orientation: M.X.Horizontal,
+                        label: Object(h.d)("Optimization preference", "StreamKeySettingsForm"),
                         error: !!this.props.latencyPrefError,
                         errorMessage: this.props.latencyPrefError || ""
-                    }, s.createElement(A._8, {
+                    }, s.createElement(M._8, {
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(A._21, {
-                        disabled: this.props.latencyPrefState === Y.a.Loading,
-                        checked: !(!this.props.channelProperties || this.props.channelProperties.latencyPreference !== re.Normal),
+                    }, s.createElement(M._21, {
+                        disabled: this.props.latencyPrefState === te.a.Loading,
+                        checked: !(!this.props.channelProperties || this.props.channelProperties.latencyPreference !== V.Normal),
                         onChange: this.handleSetLatencyPreference,
-                        label: Object(d.d)("Normal latency: Best for highest video quality, highest resolution, and to reduce video buffering", "StreamKeySettingsForm"),
+                        label: Object(h.d)("Normal latency: Best for highest video quality, highest resolution, and to reduce video buffering", "StreamKeySettingsForm"),
                         name: "optPreference",
-                        value: String(re.Normal)
-                    })), s.createElement(A._21, {
-                        disabled: this.props.latencyPrefState === Y.a.Loading,
-                        checked: !(!this.props.channelProperties || this.props.channelProperties.latencyPreference !== re.Low),
+                        value: String(V.Normal)
+                    })), s.createElement(M._21, {
+                        disabled: this.props.latencyPrefState === te.a.Loading,
+                        checked: !(!this.props.channelProperties || this.props.channelProperties.latencyPreference !== V.Low),
                         onChange: this.handleSetLatencyPreference,
-                        label: Object(d.d)("Low latency: Best for near real-time interactions with viewers", "StreamKeySettingsForm"),
+                        label: Object(h.d)("Low latency: Best for near real-time interactions with viewers", "StreamKeySettingsForm"),
                         name: "optPreference",
-                        value: String(re.Low)
+                        value: String(V.Low)
                     })))
                 }, t
             }(s.Component),
-            ie = Object(v.d)("ChannelPropertiesSettingsForm")(se);
+            le = Object(v.d)("ChannelPropertiesSettingsForm")(ce);
         ! function(e) {
             e[e.Normal = 2] = "Normal", e[e.Low = 0] = "Low"
-        }(re || (re = {}));
-        var ue = function(e) {
+        }(V || (V = {}));
+        var de = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -3093,12 +3131,12 @@ webpackJsonp([99], {
                     channelPropertiesError: null,
                     streamKeyError: null,
                     showStreamKey: !1,
-                    resetKeyState: Y.a.Loading,
-                    saveVodsState: Y.a.Loading,
+                    resetKeyState: te.a.Loading,
+                    saveVodsState: te.a.Loading,
                     saveVodsError: null,
-                    latencyPrefState: Y.a.Loading,
+                    latencyPrefState: te.a.Loading,
                     latencyPrefError: null
-                }, t.logger = d.o.logger.withCategory("stream-key-settings"), t.fetchChannelProperties = function() {
+                }, t.logger = h.o.logger.withCategory("stream-key-settings"), t.fetchChannelProperties = function() {
                     return a.__awaiter(t, void 0, void 0, function() {
                         var e, t, r, n, o, s;
                         return a.__generator(this, function(a) {
@@ -3118,7 +3156,7 @@ webpackJsonp([99], {
                                 case 3:
                                     return o = a.sent(), e = o, [3, 4];
                                 case 4:
-                                    return r && r.error && (e = new Error("Channel Properties Settings error"), t = r.error), e ? (s = Object(d.d)("Failed to load channel properties.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to load channel data", t), this.setState({
+                                    return r && r.error && (e = new Error("Channel Properties Settings error"), t = r.error), e ? (s = Object(h.d)("Failed to load channel properties.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to load channel data", t), this.setState({
                                         channelPropertiesError: s
                                     }), [2]) : [2]
                             }
@@ -3138,21 +3176,21 @@ webpackJsonp([99], {
                                 case 0:
                                     if (!this.props.user) return [2];
                                     this.setState({
-                                        resetKeyState: Y.a.Loading
+                                        resetKeyState: te.a.Loading
                                     }), n = "/v5/channels/" + this.props.user.id + "/channel_properties/regenerate_stream_key", a.label = 1;
                                 case 1:
                                     return a.trys.push([1, 3, , 4]), [4, E.a.put(n)];
                                 case 2:
                                     return r = a.sent(), this.setState({
                                         channelProperties: this.deserializeChannelProperties(r),
-                                        resetKeyState: Y.a.Success
+                                        resetKeyState: te.a.Success
                                     }), [3, 4];
                                 case 3:
                                     return o = a.sent(), e = o, [3, 4];
                                 case 4:
-                                    return r && r.error && (e = new Error("Channel Properties Settings error"), t = r.error), e ? (s = Object(d.d)("Failed to reset stream key.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to reset stream key", t), this.setState({
+                                    return r && r.error && (e = new Error("Channel Properties Settings error"), t = r.error), e ? (s = Object(h.d)("Failed to reset stream key.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to reset stream key", t), this.setState({
                                         streamKeyError: s,
-                                        resetKeyState: Y.a.Error
+                                        resetKeyState: te.a.Error
                                     }), [2]) : [2]
                             }
                         })
@@ -3165,7 +3203,7 @@ webpackJsonp([99], {
                                 case 0:
                                     if (!this.props.user || !this.state.channelProperties) return [2];
                                     this.setState({
-                                        saveVodsState: Y.a.Loading
+                                        saveVodsState: te.a.Loading
                                     }), n = "/v5/channels/" + this.props.user.id + "/channel_properties", a.label = 1;
                                 case 1:
                                     return a.trys.push([1, 3, , 4]), [4, E.a.put(n, {
@@ -3176,14 +3214,14 @@ webpackJsonp([99], {
                                 case 2:
                                     return r = a.sent(), this.setState({
                                         channelProperties: this.deserializeChannelProperties(r),
-                                        saveVodsState: Y.a.Success
+                                        saveVodsState: te.a.Success
                                     }), [3, 4];
                                 case 3:
                                     return o = a.sent(), e = o, [3, 4];
                                 case 4:
-                                    return r && r.error && (e = new Error("Channel Properties Settings error"), t = r.error), e ? (s = Object(d.d)("Failed to update broadcast preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to update vods preference", t), this.setState({
+                                    return r && r.error && (e = new Error("Channel Properties Settings error"), t = r.error), e ? (s = Object(h.d)("Failed to update broadcast preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to update vods preference", t), this.setState({
                                         saveVodsError: s,
-                                        saveVodsState: Y.a.Error
+                                        saveVodsState: te.a.Error
                                     }), [2]) : [2]
                             }
                         })
@@ -3196,7 +3234,7 @@ webpackJsonp([99], {
                                 case 0:
                                     if (!this.props.user || !this.state.channelProperties) return [2];
                                     this.setState({
-                                        latencyPrefState: Y.a.Loading
+                                        latencyPrefState: te.a.Loading
                                     }), o = "/v5/channels/" + this.props.user.id + "/channel_properties", a.label = 1;
                                 case 1:
                                     return a.trys.push([1, 3, , 4]), [4, E.a.put(o, {
@@ -3207,14 +3245,14 @@ webpackJsonp([99], {
                                 case 2:
                                     return n = a.sent(), this.setState({
                                         channelProperties: this.deserializeChannelProperties(n),
-                                        latencyPrefState: Y.a.Success
+                                        latencyPrefState: te.a.Success
                                     }), [3, 4];
                                 case 3:
                                     return s = a.sent(), t = s, [3, 4];
                                 case 4:
-                                    return n && n.error && (t = new Error("Channel Properties Settings error"), r = n.error), t ? (i = Object(d.d)("Failed to update optimization preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to update hls segment duration preference", r), this.setState({
+                                    return n && n.error && (t = new Error("Channel Properties Settings error"), r = n.error), t ? (i = Object(h.d)("Failed to update optimization preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to update hls segment duration preference", r), this.setState({
                                         latencyPrefError: i,
-                                        latencyPrefState: Y.a.Error
+                                        latencyPrefState: te.a.Error
                                     }), [2]) : [2]
                             }
                         })
@@ -3224,7 +3262,7 @@ webpackJsonp([99], {
             return a.__extends(t, e), t.prototype.componentWillMount = function() {
                 this.fetchChannelProperties()
             }, t.prototype.render = function() {
-                return s.createElement(ie, {
+                return s.createElement(le, {
                     channelProperties: this.state.channelProperties,
                     channelPropertiesError: this.state.channelPropertiesError,
                     showStreamKey: this.state.showStreamKey,
@@ -3247,31 +3285,31 @@ webpackJsonp([99], {
                 } : null
             }, t
         }(s.Component);
-        var ce = Object(n.b)(function(e) {
+        var he = Object(n.b)(function(e) {
                 return {
                     user: Object(o.c)(e)
                 }
-            })(ue),
-            le = r("7vx8"),
-            he = function(e) {
+            })(de),
+            pe = r("7vx8"),
+            fe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.dropsSettingsError) return s.createElement(b.a, null, s.createElement(y.a, null, s.createElement(A.Q, {
-                        color: A.K.Error
+                    if (this.props.dropsSettingsError) return s.createElement(b.a, null, s.createElement(y.a, null, s.createElement(M.Q, {
+                        color: M.K.Error
                     }, this.props.dropsSettingsError)));
-                    var e = s.createElement(A.O, {
+                    var e = s.createElement(M.O, {
                             to: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops"
-                        }, Object(d.d)("Learn more", "DropSettingsForm")),
-                        t = Object(d.d)("Alert your viewers when they have a chance to earn in-game loot. {learnMoreLink}", {
+                        }, Object(h.d)("Learn more", "DropSettingsForm")),
+                        t = Object(h.d)("Alert your viewers when they have a chance to earn in-game loot. {learnMoreLink}", {
                             learnMoreLink: e
                         }, "DropSettingsForm");
-                    return s.createElement(b.a, null, s.createElement(Q.a, {
-                        label: Object(d.d)("Drops", "DropSettingsForm"),
-                        disabled: null === this.props.requestState || this.props.requestState === Y.a.Loading,
+                    return s.createElement(b.a, null, s.createElement(Z.a, {
+                        label: Object(h.d)("Drops", "DropSettingsForm"),
+                        disabled: null === this.props.requestState || this.props.requestState === te.a.Loading,
                         checked: !!this.props.isDropsEnabled,
                         onChange: this.props.handleDropSettingsToggle,
                         description: t,
@@ -3279,16 +3317,16 @@ webpackJsonp([99], {
                     }))
                 }, t
             }(s.Component),
-            de = Object(v.d)("DropsSettingsForm")(he),
-            pe = r("fqzE"),
-            fe = function(e) {
+            ge = Object(v.d)("DropsSettingsForm")(fe),
+            ve = r("fqzE"),
+            me = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isDropsEnabled: null,
                         dropsSettingsError: null,
                         requestState: null
-                    }, t.logger = d.o.logger.withCategory("stream-key-settings"), t.fetchDrops = function(e) {
+                    }, t.logger = h.o.logger.withCategory("stream-key-settings"), t.fetchDrops = function(e) {
                         return a.__awaiter(t, void 0, void 0, function() {
                             var t, r, n, o, s, i;
                             return a.__generator(this, function(a) {
@@ -3296,19 +3334,19 @@ webpackJsonp([99], {
                                     case 0:
                                         if (null !== this.state.requestState || !e.data || !e.data.user) return [2];
                                         this.setState({
-                                            requestState: Y.a.Loading
+                                            requestState: te.a.Loading
                                         }), o = "/kraken/channels/" + e.data.user.id + "/vhs", a.label = 1;
                                     case 1:
                                         return a.trys.push([1, 3, , 4]), [4, E.a.get(o)];
                                     case 2:
                                         return (n = a.sent()).body && this.setState({
                                             isDropsEnabled: !n.body.opt_out_status,
-                                            requestState: Y.a.Success
+                                            requestState: te.a.Success
                                         }), [3, 4];
                                     case 3:
                                         return s = a.sent(), t = s, [3, 4];
                                     case 4:
-                                        return n && n.error && (t = new Error("Drops Settings error"), r = n.error), t ? (i = Object(d.d)("Failed to load Drops.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to load channel data", r), this.setState({
+                                        return n && n.error && (t = new Error("Drops Settings error"), r = n.error), t ? (i = Object(h.d)("Failed to load Drops.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to load channel data", r), this.setState({
                                             dropsSettingsError: i
                                         }), [2]) : [2]
                                 }
@@ -3322,7 +3360,7 @@ webpackJsonp([99], {
                                     case 0:
                                         if (!this.props.data || !this.props.data.user) return [2];
                                         this.setState({
-                                            requestState: Y.a.Loading
+                                            requestState: te.a.Loading
                                         }), n = "/kraken/channels/" + this.props.data.user.id + "/vhs", a.label = 1;
                                     case 1:
                                         return a.trys.push([1, 6, , 7]), this.state.isDropsEnabled ? [4, E.a.delete(n)] : [3, 3];
@@ -3335,14 +3373,14 @@ webpackJsonp([99], {
                                     case 5:
                                         return this.setState({
                                             isDropsEnabled: !this.state.isDropsEnabled,
-                                            requestState: Y.a.Success
+                                            requestState: te.a.Success
                                         }), [3, 7];
                                     case 6:
                                         return o = a.sent(), e = o, [3, 7];
                                     case 7:
-                                        return r && r.error && (e = new Error("Drops Settings error"), t = r.error), e ? (s = Object(d.d)("Failed to update drops.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to update drops preference", t), this.setState({
+                                        return r && r.error && (e = new Error("Drops Settings error"), t = r.error), e ? (s = Object(h.d)("Failed to update drops.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to update drops preference", t), this.setState({
                                             dropsSettingsError: s,
-                                            requestState: Y.a.Error
+                                            requestState: te.a.Error
                                         }), [2]) : [2]
                                 }
                             })
@@ -3354,7 +3392,7 @@ webpackJsonp([99], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.fetchDrops(e)
                 }, t.prototype.render = function() {
-                    return s.createElement(de, {
+                    return s.createElement(ge, {
                         isDropsEnabled: this.state.isDropsEnabled,
                         dropsSettingsError: this.state.dropsSettingsError,
                         requestState: this.state.requestState,
@@ -3362,7 +3400,7 @@ webpackJsonp([99], {
                     })
                 }, t
             }(s.Component),
-            ge = Object(h.compose)(Object(le.a)(pe, {
+            ye = Object(d.compose)(Object(pe.a)(ve, {
                 options: function(e) {
                     return {
                         variables: {
@@ -3370,45 +3408,45 @@ webpackJsonp([99], {
                         }
                     }
                 }
-            }))(fe),
-            ve = function(e) {
+            }))(me),
+            be = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(A._8, null, s.createElement(W.a, {
-                        title: Object(d.d)("Stream Key & Preferences", "DashboardSettings")
-                    }), s.createElement(ce, null), s.createElement(ne, {
+                    return s.createElement(M._8, null, s.createElement(Y.a, {
+                        title: Object(h.d)("Stream Key & Preferences", "DashboardSettings")
+                    }), s.createElement(he, null), s.createElement(se, {
                         channelName: this.props.match.params.channelName
-                    }), s.createElement(W.a, {
-                        title: Object(d.d)("Drops", "DashboardSettings")
-                    }), s.createElement(ge, {
+                    }), s.createElement(Y.a, {
+                        title: Object(h.d)("Drops", "DashboardSettings")
+                    }), s.createElement(ye, {
                         channelName: this.props.match.params.channelName
                     }))
                 }, t
             }(s.Component),
-            me = Object(h.compose)(Object(v.d)("DashboardSettingsIndexPage", {
+            Se = Object(d.compose)(Object(v.d)("DashboardSettingsIndexPage", {
                 autoReportInteractive: !0,
                 destination: f.a.DashboardSettingsIndex
             }), Object(p.a)({
                 location: g.PageviewLocation.DashboardSettingsIndex
-            }))(ve),
-            ye = function(e) {
+            }))(be),
+            xe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.match.params.channelName === this.props.userLogin || this.props.isStaff ? s.createElement(l.b, null, s.createElement(A._8, {
+                    return this.props.match.params.channelName === this.props.userLogin || this.props.isStaff ? s.createElement(l.b, null, s.createElement(M._8, {
                         padding: 2,
                         fullHeight: !0
                     }, s.createElement(u.e, null, s.createElement(i.c, {
                         path: "/:channelName/dashboard/settings/autohost",
                         exact: !0,
-                        component: q
+                        component: J
                     }), s.createElement(i.c, {
                         path: "/:channelName/dashboard/settings",
                         exact: !0,
-                        component: me
+                        component: Se
                     }), s.createElement(i.c, {
                         component: c.a
                     })))) : s.createElement(i.b, {
@@ -3416,15 +3454,15 @@ webpackJsonp([99], {
                     })
                 }, t
             }(s.Component);
-        var be = Object(n.b)(function(e) {
+        var _e = Object(n.b)(function(e) {
             var t = Object(o.c)(e);
             return {
                 userLogin: t && t.login,
                 isStaff: t && t.roles && t.roles.isStaff
             }
-        })(ye);
+        })(xe);
         r.d(t, "DashboardSettingsRoot", function() {
-            return be
+            return _e
         })
     },
     gKqb: function(e, t, r) {
@@ -3552,18 +3590,18 @@ webpackJsonp([99], {
         e.exports = function(e, t, r, s, i, u) {
             var c = r & o,
                 l = n(e),
-                h = l.length;
-            if (h != n(t).length && !c) return !1;
-            for (var d = h; d--;) {
-                var p = l[d];
+                d = l.length;
+            if (d != n(t).length && !c) return !1;
+            for (var h = d; h--;) {
+                var p = l[h];
                 if (!(c ? p in t : a.call(t, p))) return !1
             }
             var f = u.get(e);
             if (f && u.get(t)) return f == t;
             var g = !0;
             u.set(e, t), u.set(t, e);
-            for (var v = c; ++d < h;) {
-                var m = e[p = l[d]],
+            for (var v = c; ++h < d;) {
+                var m = e[p = l[h]],
                     y = t[p];
                 if (s) var b = c ? s(y, m, p, t, e, u) : s(m, y, p, e, t, u);
                 if (!(void 0 === b ? m === y || i(m, y, r, s, u) : b)) {
@@ -3741,19 +3779,19 @@ webpackJsonp([99], {
             s = 1,
             i = 2;
         e.exports = function(e, t, r, u, c, l) {
-            var h = r & s,
-                d = e.length,
+            var d = r & s,
+                h = e.length,
                 p = t.length;
-            if (d != p && !(h && p > d)) return !1;
+            if (h != p && !(d && p > h)) return !1;
             var f = l.get(e);
             if (f && l.get(t)) return f == t;
             var g = -1,
                 v = !0,
                 m = r & i ? new n : void 0;
-            for (l.set(e, t), l.set(t, e); ++g < d;) {
+            for (l.set(e, t), l.set(t, e); ++g < h;) {
                 var y = e[g],
                     b = t[g];
-                if (u) var S = h ? u(b, y, g, t, e, l) : u(y, b, g, e, t, l);
+                if (u) var S = d ? u(b, y, g, t, e, l) : u(y, b, g, e, t, l);
                 if (void 0 !== S) {
                     if (S) continue;
                     v = !1;
@@ -4121,7 +4159,7 @@ webpackJsonp([99], {
                 }
             }();
         t.default = function(e) {
-            var t, r, h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+            var t, r, d = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
                 withRef: !1
             };
             return r = t = function(t) {
@@ -4191,12 +4229,12 @@ webpackJsonp([99], {
                 }, {
                     key: "getWrappedInstance",
                     value: function() {
-                        return (0, c.default)(h.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call"), this.refs.wrappedInstance
+                        return (0, c.default)(d.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call"), this.refs.wrappedInstance
                     }
                 }, {
                     key: "render",
                     value: function() {
-                        var t = h.withRef ? "wrappedInstance" : null;
+                        var t = d.withRef ? "wrappedInstance" : null;
                         return s.default.createElement(e, n({
                             ref: t
                         }, (0, l.omit)(this.props, "collection", "disabled", "index")))
@@ -4213,13 +4251,13 @@ webpackJsonp([99], {
             }, r
         };
         var a = r("GiK3"),
-            s = h(a),
-            i = h(r("qUKr")),
+            s = d(a),
+            i = d(r("qUKr")),
             u = r("O27J"),
-            c = h(r("crWv")),
+            c = d(r("crWv")),
             l = r("Vgej");
 
-        function h(e) {
+        function d(e) {
             return e && e.__esModule ? e : {
                 default: e
             }
@@ -4252,4 +4290,4 @@ webpackJsonp([99], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-settings-62acf32e3354d76adadb81636939730a.js.map
+//# sourceMappingURL=pages.dashboard-settings-08c29b1bc8bc88ec07c30b14547feebb.js.map

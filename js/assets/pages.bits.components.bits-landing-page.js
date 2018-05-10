@@ -2396,7 +2396,7 @@ webpackJsonp([106], {
                 return a
             }),
             function(e) {
-                e[e.Text = 0] = "Text", e[e.Mention = 1] = "Mention", e[e.Link = 2] = "Link", e[e.Emote = 3] = "Emote", e[e.ClipLink = 4] = "ClipLink", e[e.VideoLink = 5] = "VideoLink"
+                e[e.Text = 0] = "Text", e[e.CurrentUserHighlight = 1] = "CurrentUserHighlight", e[e.Mention = 2] = "Mention", e[e.Link = 3] = "Link", e[e.Emote = 4] = "Emote", e[e.ClipLink = 5] = "ClipLink", e[e.VideoLink = 6] = "VideoLink"
             }(a || (a = {}))
     },
     nrdj: function(e, t, n) {
@@ -2595,4 +2595,4 @@ webpackJsonp([106], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-1de0fd5d5b57c4bfafeef1f84b706eae.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-bbfc9c5091fcf1c3e5c8de34a48e7f30.js.map

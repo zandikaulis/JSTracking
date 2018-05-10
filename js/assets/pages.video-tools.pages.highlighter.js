@@ -348,17 +348,12 @@ webpackJsonp([105], {
                         }, n.fireChangeGame)
                     }, n.fireChangeGame = function() {
                         n.props.onChange(n.state.selectedGame)
-                    }, n.searchClient = new x, n.state = n.state = {
-                        searchTerm: t.currentGameTitle,
-                        gameResults: w,
-                        isSearchPending: !1,
-                        nextAlgoliaPage: 0,
-                        selectedGame: V(t.currentGameTitle),
-                        redrawKey: Math.random()
-                    }, n
+                    }, n.searchClient = new x, n.state = n.getInitialState(t), n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.startNewSearch(this.props.currentGameTitle)
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    e.currentGameTitle !== this.props.currentGameTitle && this.setState(this.getInitialState(e))
                 }, t.prototype.render = function() {
                     return this.props.disabled ? a.createElement("div", {
                         className: "game-selector__search-container"
@@ -379,6 +374,15 @@ webpackJsonp([105], {
                         selectGameByName: this.selectGameByName,
                         triggerLoadMore: this.triggerLoadMore
                     })
+                }, t.prototype.getInitialState = function(e) {
+                    return {
+                        searchTerm: e.currentGameTitle,
+                        gameResults: w,
+                        isSearchPending: !1,
+                        nextAlgoliaPage: 0,
+                        selectedGame: V(e.currentGameTitle),
+                        redrawKey: Math.random()
+                    }
                 }, t
             }(a.Component),
             R = function(e) {
@@ -2225,7 +2229,8 @@ webpackJsonp([105], {
                                             description: e.metadata.description,
                                             language: e.metadata.language,
                                             tags: e.metadata.tags,
-                                            title: e.metadata.title
+                                            title: e.metadata.title,
+                                            game: e.metadata.game ? e.metadata.game.id : null
                                         }
                                     }, r.label = 1;
                                 case 1:
@@ -4000,4 +4005,4 @@ webpackJsonp([105], {
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.highlighter-35a6114b75300575037c7118a6e8f4de.js.map
+//# sourceMappingURL=pages.video-tools.pages.highlighter-a3066e16a978d82fc05d36f4f28d9196.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([56], {
+webpackJsonp([57], {
     "+Aaf": function(e, t) {},
     "0H+u": function(e, t) {
         var n = {
@@ -2292,7 +2292,7 @@ webpackJsonp([56], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = c.k.subscribe({
-                                                    topic: Object(m.j)(this.props.userID),
+                                                    topic: Object(m.i)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(f.c)(n, o.currentImage)
@@ -3258,7 +3258,7 @@ webpackJsonp([56], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = d.k.subscribe({
-                                            topic: Object(g.j)(this.props.userID),
+                                            topic: Object(g.i)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(k.c)(n, r.currentImage)
@@ -3846,4 +3846,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-collections-2dd95973aa2872a755d757cacb3bbdf9.js.map
+//# sourceMappingURL=pages.channel-collections-121b87f2ddfb2ef4d01c3b309a65463c.js.map

@@ -335,8 +335,9 @@ webpackJsonp([111], {
                         type: w._49.Span
                     }, Object(c.d)("Bounty:", "AcceptBountyModal")), " ", l.createElement(w.Q, {
                         type: w._49.Span
-                    }, Object(c.d)("{bountyTitle} at your typical concurrent viewer count and with #Sponsored in your stream title", {
-                        bountyTitle: this.props.bounty.campaign.title
+                    }, Object(c.d)("{bountyTitle} with an average of {ccuMax} concurrent viewers and #sponsored in your stream title.", {
+                        bountyTitle: this.props.bounty.campaign.title,
+                        ccuMax: this.props.bounty.maximumPayoutCCU || 0
                     }, "AcceptBountyModal"))), l.createElement(w._8, null, l.createElement(w.Q, {
                         bold: !0,
                         type: w._49.Span
@@ -496,10 +497,10 @@ webpackJsonp([111], {
                     }, Object(c.d)("Close", "AcceptBountyModal")))))
                 }, t
             }(l.PureComponent),
-            T = Object(d.a)(k, {
+            C = Object(d.a)(k, {
                 name: "claimBounty"
             })(B),
-            C = (n("KP8S"), function(e) {
+            T = (n("KP8S"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -507,7 +508,7 @@ webpackJsonp([111], {
                     return l.createElement(w._35, {
                         className: "accept-bounty-modal__container",
                         background: w.n.Base
-                    }, l.createElement(T, {
+                    }, l.createElement(C, {
                         "data-test-selector": "accept-bounty-modal-selector",
                         onClose: this.props.closeModal,
                         bounty: this.props.bounty,
@@ -518,17 +519,17 @@ webpackJsonp([111], {
                     }))
                 }, t
             }(l.Component));
-        var I, A, O, S = Object(v.b)(null, function(e) {
+        var I, A, S, O = Object(v.b)(null, function(e) {
             return Object(s.b)({
                 closeModal: _.c
             }, e)
-        })(C);
+        })(T);
         ! function(e) {
             e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
         }(I || (I = {})), (A || (A = {})).PAY_TO_STREAM = "PAY_TO_STREAM",
             function(e) {
                 e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
-            }(O || (O = {}));
+            }(S || (S = {}));
         var N = n("dwSm"),
             x = function(e) {
                 function t() {
@@ -656,7 +657,8 @@ webpackJsonp([111], {
                         }
                     }, l.createElement(w.v, {
                         "data-test-selector": "cancel-bounty-modal-cancel-button",
-                        onClick: this.onClose
+                        onClick: this.onClose,
+                        type: w.B.Hollow
                     }, Object(c.d)("Nevermind", "CancelBountyModal"))), l.createElement(w._8, {
                         margin: {
                             left: .5,
@@ -665,7 +667,8 @@ webpackJsonp([111], {
                     }, l.createElement(w.v, {
                         "data-test-selector": "cancel-bounty-modal-confirm-button",
                         disabled: "" === this.state.reason || !!this.state.errorCode,
-                        onClick: this.onCancel
+                        onClick: this.onCancel,
+                        type: w.B.Alert
                     }, n))))
                 }, t
             }(l.PureComponent),
@@ -690,7 +693,7 @@ webpackJsonp([111], {
                     }))
                 }, t
             }(l.Component));
-        var L, M = Object(v.b)(null, function(e) {
+        var M, L = Object(v.b)(null, function(e) {
                 return Object(s.b)({
                     closeModal: _.c
                 }, e)
@@ -698,7 +701,7 @@ webpackJsonp([111], {
             R = n("F8kA");
         ! function(e) {
             e.ViewDetails = "view_details", e.ViewLegal = "view_legal", e.DeclineLegal = "decline_legal", e.AcceptLegal = "accept_legal", e.Terms = "terms", e.CancelBounty = "cancel_bounty", e.ViewTermsOfUse = "view_terms_of_use", e.DismissFTUE = "dismiss_first_time_user_experience"
-        }(L || (L = {}));
+        }(M || (M = {}));
         n("j2K2");
         var j = {
                 "data-test-selector": "bounty-expanded-section"
@@ -730,7 +733,8 @@ webpackJsonp([111], {
                                     type: w.B.Text,
                                     onClick: t.showTermsModal
                                 }, Object(c.d)("Terms", "BountyItem"))), l.createElement(w.v, {
-                                    onClick: t.showCancelBountyModal
+                                    onClick: t.showCancelBountyModal,
+                                    type: w.B.Hollow
                                 }, Object(c.d)("Cancel", "BountyItem")));
                                 break;
                             case g.COMPLETED:
@@ -787,9 +791,9 @@ webpackJsonp([111], {
                             alignItems: w.c.Center
                         }, n))))
                     }, t.trackViewDetails = function() {
-                        t.props.bounty.id === t.props.selectedItem || t.props.bounty.campaign.id === t.props.selectedItem || t.trackAction(L.ViewDetails)
+                        t.props.bounty.id === t.props.selectedItem || t.props.bounty.campaign.id === t.props.selectedItem || t.trackAction(M.ViewDetails)
                     }, t.showTermsModal = function() {
-                        t.trackAction(L.Terms), t.props.showAcceptBountyModal({
+                        t.trackAction(M.Terms), t.props.showAcceptBountyModal({
                             bounty: t.props.bounty,
                             channelID: t.props.channelID,
                             channelName: t.props.channelName,
@@ -797,7 +801,7 @@ webpackJsonp([111], {
                             refreshData: t.props.refreshData
                         })
                     }, t.showAcceptBountyModal = function() {
-                        t.trackAction(L.ViewLegal), t.props.showAcceptBountyModal({
+                        t.trackAction(M.ViewLegal), t.props.showAcceptBountyModal({
                             bounty: t.props.bounty,
                             channelID: t.props.channelID,
                             channelName: t.props.channelName,
@@ -965,13 +969,19 @@ webpackJsonp([111], {
                             return l.createElement(l.Fragment, null, l.createElement(w.Q, {
                                 type: w._49.P,
                                 key: "bounty_description_" + e.id
-                            }, Object(c.d)("Stream for 1 hour straight at <x:bold>your typical concurrent viewer count</x:bold>. If your average does not hit typical numbers, you will get a <x:bold>proportional percentage</x:bold> of the payout.", {
+                            }, Object(c.d)("Stream for 1 hour straight with an average of {ccuMax} <x:bold>concurrent viewers</x:bold>. If you don’t hit an average of at least {ccuMin} <x:bold>concurrents</x:bold>, you will not receive a payout. If you achieve the minimum but do not reach the goal goal, you will get a <x:bold>proportional percentage</x:bold> of the payout.", {
                                 "x:bold": function(e) {
                                     return l.createElement(w.Q, {
                                         key: "x_bold_text_" + ++t,
                                         type: w._49.Strong
                                     }, e)
-                                }
+                                },
+                                ccuMax: l.createElement(w.Q, {
+                                    type: w._49.Strong
+                                }, e.maximumPayoutCCU || 0),
+                                ccuMin: l.createElement(w.Q, {
+                                    type: w._49.Strong
+                                }, e.minimumPayoutCCU || 0)
                             }, "BountyItem")), l.createElement("ul", {
                                 className: "bounty-item__description-list",
                                 key: "bounty_rule_list_" + e.id
@@ -1041,21 +1051,21 @@ webpackJsonp([111], {
                     }
                 }, t
             }(l.Component),
-            Q = Object(s.d)(Object(f.d)("BountyItem", {
+            U = Object(s.d)(Object(f.d)("BountyItem", {
                 autoReportInteractive: !0
             }))(F);
-        var U = Object(v.b)(null, function(e) {
+        var Q = Object(v.b)(null, function(e) {
                 return Object(s.b)({
                     showAcceptBountyModal: function(e) {
                         var t = i.__rest(e, []);
-                        return Object(_.d)(S, t)
+                        return Object(_.d)(O, t)
                     },
                     showCancelBountyModal: function(e) {
                         var t = i.__rest(e, []);
-                        return Object(_.d)(M, t)
+                        return Object(_.d)(L, t)
                     }
                 }, e)
-            })(Q),
+            })(U),
             V = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -1169,7 +1179,7 @@ webpackJsonp([111], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.showModal = function(e) {
-                        e.preventDefault(), e.stopPropagation(), t.props.trackPageAction(L.ViewTermsOfUse), t.props.showTOUModal()
+                        e.preventDefault(), e.stopPropagation(), t.props.trackPageAction(M.ViewTermsOfUse), t.props.showTOUModal()
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
@@ -1184,14 +1194,14 @@ webpackJsonp([111], {
                     }, Object(c.d)("Terms of Use", "TermsOfUseBountyCard")))))
                 }, t
             }(l.Component);
-        var G = Object(v.b)(null, function(e) {
+        var H = Object(v.b)(null, function(e) {
                 return Object(s.b)({
                     showTOUModal: function() {
                         return Object(_.d)(Y, {})
                     }
                 }, e)
             })(q),
-            H = (n("MRI1"), function(e) {
+            G = (n("MRI1"), function(e) {
                 return l.createElement(w._35, {
                     className: "bb-page",
                     margin: {
@@ -1220,7 +1230,7 @@ webpackJsonp([111], {
                 }, l.createElement(w.C, {
                     background: w.n.Base,
                     elevation: 1
-                }, l.createElement(G, {
+                }, l.createElement(H, {
                     trackPageAction: e.trackPageAction
                 })))), l.createElement(w._35, {
                     className: "bb-col-wrapper bb-col-wrapper--r",
@@ -1252,7 +1262,7 @@ webpackJsonp([111], {
                         var e, t = n.dismissedBanners[n.bannerKey],
                             a = "number" == typeof t ? t + 1 : 1,
                             r = i.__assign({}, n.dismissedBanners, ((e = {})[n.bannerKey] = a, e));
-                        c.l.set(K, r), n.props.trackPageAction(L.DismissFTUE), n.setState({
+                        c.l.set(K, r), n.props.trackPageAction(M.DismissFTUE), n.setState({
                             didDismiss: !0
                         })
                     }, n.dismissedBanners = c.l.get(K, {}), n
@@ -1375,7 +1385,7 @@ webpackJsonp([111], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.AVAILABLE = Object(c.d)("Available", "BountiesPage"), t.COMPLETED = Object(c.d)("Completed", "BountiesPage"), t.IN_PROGRESS = Object(c.d)("In Progress", "BountiesPage"), t.impressionGroupID = Object(p.b)(), t.renderBounty = function(e) {
-                        return l.createElement(U, {
+                        return l.createElement(Q, {
                             bounty: e,
                             channelID: t.props.data.user.id,
                             channelName: t.props.match.params.channelName,
@@ -1434,7 +1444,7 @@ webpackJsonp([111], {
                     if (this.props.data.loading) return l.createElement(w._8, {
                         padding: 2,
                         fullHeight: !0
-                    }, l.createElement(H, {
+                    }, l.createElement(G, {
                         left: this.renderLeftColumnPlaceholders(),
                         right: this.renderRightColumnPlaceholders(),
                         trackPageAction: this.trackPageAction
@@ -1456,7 +1466,7 @@ webpackJsonp([111], {
                     }, l.createElement(z, {
                         channelName: this.props.match.params.channelName,
                         trackPageAction: this.trackPageAction
-                    }), l.createElement(H, {
+                    }), l.createElement(G, {
                         left: this.renderLeftColumn(n, t, a),
                         right: this.renderRightColumn(r),
                         trackPageAction: this.trackPageAction
@@ -1768,6 +1778,22 @@ webpackJsonp([111], {
                         kind: "Field",
                         name: {
                             kind: "Name",
+                            value: "maximumPayoutCCU"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "minimumPayoutCCU"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
                             value: "restriction"
                         },
                         arguments: [],
@@ -1788,11 +1814,11 @@ webpackJsonp([111], {
             }],
             loc: {
                 start: 0,
-                end: 298
+                end: 332
             }
         };
         a.loc.source = {
-            body: '#import "twilight/features/bounties/models/bounty-campaign.gql"\n#import "twilight/features/bounties/models/bounty-restriction.gql"\nfragment bounty on Bounty {\nid\ncampaign {\n...bountyCampaign\n}\nstatus\nlastModifiedAt\nstartAt\nendAt\npayoutCents\nmaximumPayoutCents\nrestriction {\n...bountyRestriction\n}\n}',
+            body: '#import "twilight/features/bounties/models/bounty-campaign.gql"\n#import "twilight/features/bounties/models/bounty-restriction.gql"\nfragment bounty on Bounty {\nid\ncampaign {\n...bountyCampaign\n}\nstatus\nlastModifiedAt\nstartAt\nendAt\npayoutCents\nmaximumPayoutCents\nmaximumPayoutCCU\nminimumPayoutCCU\nrestriction {\n...bountyRestriction\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -2172,4 +2198,4 @@ webpackJsonp([111], {
     },
     y0HA: function(e, t) {}
 });
-//# sourceMappingURL=pages.bounties-dd3f0955b77f98246602a96a41ec5e2b.js.map
+//# sourceMappingURL=pages.bounties-b471d210299b749e9f6493c3db9ccf90.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([41], {
+webpackJsonp([42], {
     "+0KR": function(e, t, n) {
         "use strict";
         var r = n("oR9V");
@@ -12050,7 +12050,7 @@ webpackJsonp([41], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onTryPrimeClick = function() {
-                        Object(c.j)({
+                        Object(c.k)({
                             buttonPosition: t.props.tracking.position
                         })
                     }, t
@@ -12854,7 +12854,7 @@ webpackJsonp([41], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = l.k.subscribe({
-                                                    topic: Object(h.j)(this.props.userID),
+                                                    topic: Object(h.i)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(f.c)(n, o.currentImage)
@@ -16153,7 +16153,7 @@ webpackJsonp([41], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = u.k.subscribe({
-                                            topic: Object(g.j)(this.props.userID),
+                                            topic: Object(g.i)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(S.c)(n, a.currentImage)
@@ -16811,4 +16811,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-e640016b423c675ba7979d88ba63e795.js.map
+//# sourceMappingURL=pages.settings-b5395aeaaf718c25cbb79a79d341017f.js.map

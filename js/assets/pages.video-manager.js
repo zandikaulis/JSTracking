@@ -529,17 +529,12 @@ webpackJsonp([96], {
                         }, n.fireChangeGame)
                     }, n.fireChangeGame = function() {
                         n.props.onChange(n.state.selectedGame)
-                    }, n.searchClient = new Y, n.state = n.state = {
-                        searchTerm: t.currentGameTitle,
-                        gameResults: w,
-                        isSearchPending: !1,
-                        nextAlgoliaPage: 0,
-                        selectedGame: S(t.currentGameTitle),
-                        redrawKey: Math.random()
-                    }, n
+                    }, n.searchClient = new Y, n.state = n.getInitialState(t), n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.startNewSearch(this.props.currentGameTitle)
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    e.currentGameTitle !== this.props.currentGameTitle && this.setState(this.getInitialState(e))
                 }, t.prototype.render = function() {
                     return this.props.disabled ? i.createElement("div", {
                         className: "game-selector__search-container"
@@ -560,6 +555,15 @@ webpackJsonp([96], {
                         selectGameByName: this.selectGameByName,
                         triggerLoadMore: this.triggerLoadMore
                     })
+                }, t.prototype.getInitialState = function(e) {
+                    return {
+                        searchTerm: e.currentGameTitle,
+                        gameResults: w,
+                        isSearchPending: !1,
+                        nextAlgoliaPage: 0,
+                        selectedGame: S(e.currentGameTitle),
+                        redrawKey: Math.random()
+                    }
                 }, t
             }(i.Component),
             O = function(e) {
@@ -15301,7 +15305,7 @@ webpackJsonp([96], {
                 location: tn.PageviewLocation.VideoManager
             }), Object(qt.a)([{
                 topic: function(e) {
-                    return e.data.user ? Object(Xt.A)(e.data.user.id) : ""
+                    return e.data.user ? Object(Xt.z)(e.data.user.id) : ""
                 },
                 mapMessageTypesToProps: (ni = {}, ni[Zt.PubsubMessageType.VideoThumbnailProcessingComplete] = "videoThumbnailProcessed", ni[Zt.PubsubMessageType.VideoThumbnailProcessingError] = "videoThumbnailError", ni)
             }]))(si);
@@ -22243,4 +22247,4 @@ webpackJsonp([96], {
             r = "public"
     }
 });
-//# sourceMappingURL=pages.video-manager-e617ada00761156b404cc7a297e1d66d.js.map
+//# sourceMappingURL=pages.video-manager-1a60ed01e7e3b3ce271f36070a1df839.js.map

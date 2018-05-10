@@ -100,7 +100,7 @@ webpackJsonp([117], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onTryPrimeClick = function() {
-                        Object(c.j)({
+                        Object(c.k)({
                             buttonPosition: t.props.tracking.position
                         })
                     }, t
@@ -245,7 +245,7 @@ webpackJsonp([117], {
                     }, t
                 }
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
-                    o.o.setPageTitle(Object(o.d)("Free games and in-game loot every month with Twitch Prime membership", "PrimeSubsite")), Object(g.i)({
+                    o.o.setPageTitle(Object(o.d)("Free games and in-game loot every month with Twitch Prime membership", "PrimeSubsite")), Object(g.j)({
                         reftag: this.getReftagFromSearch()
                     }), this.props.userData.loading && !this.props.userData.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentDidUpdate = function() {
@@ -395,4 +395,4 @@ webpackJsonp([117], {
         })
     }
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-offers-92440848122062646627dc1516286ee0.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-offers-564125ae1450e22eeea4bafa3744c173.js.map

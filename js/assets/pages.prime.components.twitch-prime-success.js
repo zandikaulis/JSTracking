@@ -4012,7 +4012,7 @@ webpackJsonp([101], {
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return Object(f.y)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(f.x)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -6719,23 +6719,23 @@ webpackJsonp([101], {
             return i.PubsubTopic.ChatRoomsChannel + "." + e
         }, t.g = function(e) {
             return i.PubsubTopic.ChatRoomsUser + "." + e
-        }, t.A = function(e) {
-            return i.PubsubTopic.VideoThumbnailProcessing + "." + e
-        }, t.j = function(e) {
-            return i.PubsubTopic.ImageUpload + "." + e
-        }, t.t = function(e) {
-            return i.PubsubTopic.UploadService + "." + e
         }, t.z = function(e) {
+            return i.PubsubTopic.VideoThumbnailProcessing + "." + e
+        }, t.i = function(e) {
+            return i.PubsubTopic.ImageUpload + "." + e
+        }, t.s = function(e) {
+            return i.PubsubTopic.UploadService + "." + e
+        }, t.y = function(e) {
             return i.PubsubTopic.VideoPlaybackById + "." + e
-        }, t.m = function(e) {
+        }, t.l = function(e) {
             return i.PubsubTopic.PayoutOnboardingEvents + "." + e
-        }, t.n = function(e) {
+        }, t.m = function(e) {
             return i.PubsubTopic.Presence + "." + e
-        }, t.k = function(e, t) {
+        }, t.j = function(e, t) {
             return i.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
-        }, t.o = function(e) {
+        }, t.n = function(e) {
             return i.PubsubTopic.Raid + "." + e
-        }, t.p = function(e) {
+        }, t.o = function(e) {
             return i.PubsubTopic.StreamChange + "." + e
         }, t.h = function(e) {
             return i.PubsubTopic.Friendship + "." + e
@@ -6743,27 +6743,25 @@ webpackJsonp([101], {
             return i.PubsubTopic.ChannelBitsPinEvents + "." + e
         }, t.a = function(e) {
             return i.PubsubTopic.BitsLeaderboardEvents + "." + e.id
-        }, t.u = function(e) {
+        }, t.t = function(e) {
             return i.PubsubTopic.UserBitsUpdates + "." + e
-        }, t.y = function(e) {
-            return i.PubsubTopic.UserSubscribeEvents + "." + e
         }, t.x = function(e) {
-            return i.PubsubTopic.UserCrateEvents + "." + e
-        }, t.i = function(e) {
-            return i.PubsubTopic.CampaignGlobalEvents + "." + e
-        }, t.v = function(e) {
-            return i.PubsubTopic.CampaignUserEvents + "." + e
+            return i.PubsubTopic.UserSubscribeEvents + "." + e
         }, t.w = function(e) {
+            return i.PubsubTopic.UserCrateEvents + "." + e
+        }, t.u = function(e) {
+            return i.PubsubTopic.CampaignUserEvents + "." + e
+        }, t.v = function(e) {
             return i.PubsubTopic.UserCommerceEvents + "." + e
-        }, t.B = function(e) {
+        }, t.A = function(e) {
             return i.PubsubTopic.Whispers + "." + e
-        }, t.l = function(e) {
+        }, t.k = function(e) {
             return i.PubsubTopic.OnsiteNotifications + "." + e
-        }, t.q = function(e) {
+        }, t.p = function(e) {
             return i.PubsubTopic.StreamChatRoom + "." + e
         }, t.d = function(e) {
             return i.PubsubTopic.ChannelEventUpdates + "." + e
-        }, t.s = function(e) {
+        }, t.r = function(e) {
             return r.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -6774,7 +6772,7 @@ webpackJsonp([101], {
                     })
                 }
             })
-        }, t.r = function(e) {
+        }, t.q = function(e) {
             return r.k.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -10318,6 +10316,9 @@ webpackJsonp([101], {
                     return t.renderOfferImage = function() {
                         return a.createElement(s._8, {
                             textAlign: s._45.Center,
+                            breakpointMedium: {
+                                textAlign: s._45.Right
+                            },
                             className: "twitch-prime-fortnite__offer-image twitch-prime-fortnite__offer-image--desktop"
                         }, a.createElement(s.N, {
                             alt: "Offer items",
@@ -10353,10 +10354,24 @@ webpackJsonp([101], {
                         margin: {
                             y: 0,
                             x: "auto"
+                        },
+                        padding: {
+                            x: 1
                         }
                     }, a.createElement(s._8, {
                         textAlign: s._45.Center,
-                        alignSelf: s.d.Start,
+                        breakpointMedium: {
+                            textAlign: s._45.Left
+                        },
+                        breakpointLarge: {
+                            margin: {
+                                bottom: 5
+                            },
+                            padding: {
+                                left: 5
+                            }
+                        },
+                        alignSelf: s.d.Center,
                         className: "twitch-prime-fortnite__header__section"
                     }, a.createElement(s._8, {
                         className: t,
@@ -11892,12 +11907,12 @@ webpackJsonp([101], {
                     assignments: (t = {
                         fallback: function() {
                             return s.a.wrap(function() {
-                                return n.e(59).then(n.bind(null, "tkxl"))
+                                return n.e(60).then(n.bind(null, "tkxl"))
                             }, "SubscribeWithPrimeButton", c)(e)
                         }
                     }, t[r.TREATMENT] = function() {
                         return s.a.wrap(function() {
-                            return n.e(58).then(n.bind(null, "JJaH"))
+                            return n.e(59).then(n.bind(null, "JJaH"))
                         }, "PrimeSubscribeButton", c)(e)
                     }, t),
                     loader: function() {
@@ -13541,4 +13556,4 @@ webpackJsonp([101], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-f779ae08bff09cc57e33da1655d145f4.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-6ae282c87eca725c575853c3478b20a1.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([64], {
+webpackJsonp([65], {
     "15A3": function(e, t, a) {
         e.exports = a.p + "assets/streamlabs_obs_small-6949e63f4c841043cd4f704afe233a83.png"
     },
@@ -355,4 +355,4 @@ webpackJsonp([64], {
         e.exports = a.p + "assets/xsplit_broadcaster_1x-404b22413674582ad019f70631921904.png"
     }
 });
-//# sourceMappingURL=pages.broadcast-ccc63158b122f01e5e6e6eb641b551bc.js.map
+//# sourceMappingURL=pages.broadcast-9eb6324035031de647f2bfe274c76811.js.map

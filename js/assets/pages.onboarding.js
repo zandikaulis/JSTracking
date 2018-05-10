@@ -1,4 +1,4 @@
-webpackJsonp([52, 107], {
+webpackJsonp([53, 107], {
     "+GT7": function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -4930,7 +4930,7 @@ webpackJsonp([52, 107], {
             })(D),
             R = n("T8ns"),
             G = L.a.wrap(function() {
-                return n.e(98).then(n.bind(null, "sx3M"))
+                return n.e(97).then(n.bind(null, "sx3M"))
             }, "ChannelSurfingPage"),
             A = L.a.wrap(function() {
                 return new Promise(function(e) {
@@ -6331,4 +6331,4 @@ webpackJsonp([52, 107], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-d7f68ff7b744fe5fe19223ab649d15d6.js.map
+//# sourceMappingURL=pages.onboarding-aa8854e7e9d4de29658b7ea265d31107.js.map

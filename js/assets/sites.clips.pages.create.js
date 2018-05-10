@@ -1,4 +1,4 @@
-webpackJsonp([51], {
+webpackJsonp([52], {
     "+Znq": function(e, t, n) {
         "use strict";
         var i = n("jetF");
@@ -5195,16 +5195,17 @@ webpackJsonp([51], {
         "use strict";
         var i = n("TToO"),
             a = n("6sO2"),
-            r = n("iydZ"),
-            o = n("mwvJ"),
-            s = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?");
-        var l = n("YhVV"),
-            d = n("3KVC"),
-            c = n("e1CU");
+            r = n("Aj/L"),
+            o = n("iydZ"),
+            s = n("mwvJ"),
+            l = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?");
+        var d = n("YhVV"),
+            c = n("3KVC"),
+            u = n("e1CU");
         t.a = function(e, t, n, a, r, o) {
             void 0 === o && (o = !1);
             var s;
-            s = r ? Object(l.b)(e, r) : function(e) {
+            s = r ? Object(d.b)(e, r) : function(e) {
                 var t = [];
                 e && Object.keys(e).forEach(function(n) {
                     var i = e[n];
@@ -5216,9 +5217,9 @@ webpackJsonp([51], {
                                 images: {
                                     themed: !1,
                                     sources: {
-                                        "1x": y(n, 1),
-                                        "2x": y(n, 2),
-                                        "4x": y(n, 4)
+                                        "1x": S(n, 1),
+                                        "2x": S(n, 2),
+                                        "4x": S(n, 4)
                                     }
                                 }
                             }
@@ -5227,154 +5228,184 @@ webpackJsonp([51], {
                 });
                 return t
             }(t.emotes);
-            var d = Object(c.a)(t.displayName, t.username);
+            var l = Object(u.a)(t.displayName, t.username);
             return {
                 badges: t.badges || {},
                 bits: t.bits,
-                user: i.__assign({}, d, {
+                user: i.__assign({}, l, {
                     userLogin: t.username,
                     userID: t.userID,
                     userType: t.userType,
-                    color: t.color || f(t.userID)
+                    color: t.color || v(t.userID)
                 }),
-                messageParts: e ? m(e, s, t.bits, n, a, d.userDisplayName) : [],
+                messageParts: e ? y(e, s, t.bits, n, a, t.username) : [],
                 deleted: o,
                 timestamp: Date.now()
             }
-        }, t.b = f, t.g = m, t.d = h, t.c = v, t.f = y, t.e = function(e) {
+        }, t.b = v, t.g = y, t.d = k, t.c = _, t.f = S, t.e = function(e) {
             return {
-                src: y(e, 1),
-                srcSet: y(e, 1) + " 1x, " + y(e, 2) + " 2x, " + y(e, 3) + " 4x"
+                src: S(e, 1),
+                srcSet: S(e, 1) + " 1x, " + S(e, 2) + " 2x, " + S(e, 3) + " 4x"
             }
         };
-        var u = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
-            p = {};
+        var p = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
+            f = {},
+            m = /^(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,8}(?:\/[\w./@#%&()\-+=:?~]*)?)$/g,
+            h = /@([^\u0000-\u007F]|[\w-])+/,
+            g = /['"*([{</]+/;
 
-        function f(e, t) {
-            return void 0 === t && (t = 15), "number" != typeof p[e] && (p[e] = Math.floor(Math.random() * t)), u[p[e]]
+        function v(e, t) {
+            return void 0 === t && (t = 15), "number" != typeof f[e] && (f[e] = Math.floor(Math.random() * t)), p[f[e]]
         }
 
-        function m(e, t, n, a, r, s) {
+        function y(e, t, n, a, r, o) {
             void 0 === t && (t = []);
             var l = [],
                 d = 0,
-                c = h(e);
+                c = k(e);
             t.forEach(function(t) {
                 var u = c ? c.slice(d, t.startIndex).join("") : e.slice(d, t.startIndex);
-                u && (l = n ? l.concat(g(u, s, r, a)) : l.concat(v(u, s, r))), l.push({
-                    type: o.a.Emote,
+                u && (l = n ? l.concat(b(u, o, r, a)) : l.concat(_(u, o, r))), l.push({
+                    type: s.a.Emote,
                     content: i.__assign({
                         alt: c ? c.slice(t.startIndex, t.endIndex).join("") : e.slice(t.startIndex, t.endIndex)
                     }, t.data)
                 }), d = t.endIndex
             });
             var u = c ? c.slice(d).join("") : e.slice(d);
-            return u && (l = n ? l.concat(g(u, s, r, a)) : l.concat(v(u, s, r))), l
+            return u && (l = n ? l.concat(b(u, o, r, a)) : l.concat(_(u, o, r))), l
         }
 
-        function h(e) {
+        function k(e) {
             return e.match(/[^\uD800-\uDFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDFFF]/g)
         }
 
-        function g(e, t, n, i) {
-            if (!i) return v(e, t, n);
-            var a = Object(r.c)(e, i).map(function(e) {
-                return e.type === o.a.Text ? v(e.content, t, n) : e
+        function b(e, t, n, i) {
+            if (!i) return _(e, t, n);
+            var a = Object(o.c)(e, i).map(function(e) {
+                return e.type === s.a.Text ? _(e.content, t, n) : e
             });
             return [].concat.apply([], a)
         }
 
-        function v(e, t, n) {
-            var i = /^(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,8}(?:\/[\w./@#%&()\-+=:?~]*)?)$/g,
-                r = /([^\w@#%\-+=:~])?(@)([^\u0000-\u007F]+|\w+)+([^\w./@#%&()\-+=:?~]|\s|$)/g,
-                l = [],
-                c = e.split(/\s+/);
-            return c.forEach(function(e, u) {
-                i.lastIndex = 0;
-                var p = i.exec(e);
-                r.lastIndex = 0;
-                var f = r.exec(e);
-                if (p) {
-                    var m = p.index;
-                    0 !== m && l.push({
-                        type: o.a.Text,
-                        content: "" + e.slice(0, m)
+        function _(e, t, n) {
+            var i = [],
+                o = e.split(/\s+/),
+                d = Object(r.c)(a.o.store.getState());
+            return o.forEach(function(e, r) {
+                m.lastIndex = 0, h.lastIndex = 0;
+                var u = m.exec(e),
+                    p = 0 === r,
+                    f = r === o.length - 1,
+                    v = function(e, t, n, i, a) {
+                        var r = [],
+                            o = e.indexOf("@"),
+                            l = e.match(h),
+                            d = e.slice(0, o),
+                            c = 0 === d.length || g.test(d);
+                        if (!l || l.length < 1 || !c) return r;
+                        var u = l[0].slice(1);
+                        o > 0 && r.push({
+                            type: s.a.Text,
+                            content: (n ? "" : " ") + e.slice(0, o)
+                        });
+                        r.push({
+                            type: s.a.Mention,
+                            content: {
+                                sender: t,
+                                recipient: u,
+                                isCurrentUserRecipient: w(u, a)
+                            }
+                        });
+                        var p = o + u.length + 1;
+                        p < e.length && r.push({
+                            type: s.a.Text,
+                            content: e.slice(p) + (i ? "" : " ")
+                        });
+                        return r
+                    }(e, t, p, f, d);
+                if (u) {
+                    var y = u.index;
+                    0 !== y && i.push({
+                        type: s.a.Text,
+                        content: "" + e.slice(0, y)
                     });
-                    var h = i.lastIndex;
-                    if (n) l.push({
-                        type: o.a.Text,
+                    var k = m.lastIndex;
+                    if (n) i.push({
+                        type: s.a.Text,
                         content: " <" + Object(a.d)("deleted link", "CreateMessageData") + "> "
                     });
                     else {
-                        var g = (p[1] ? "" : "https://") + e.slice(m, h);
+                        var b = (u[1] ? "" : "https://") + e.slice(y, k);
                         if (function(e) {
-                                return void 0 === e && (e = ""), s.test(e) && !e.includes("clips.twitch.tv/2017/")
-                            }(g)) {
-                            var v = function(e) {
+                                return void 0 === e && (e = ""), l.test(e) && !e.includes("clips.twitch.tv/2017/")
+                            }(b)) {
+                            var _ = function(e) {
                                 void 0 === e && (e = "");
-                                var t = e.match(s);
+                                var t = e.match(l);
                                 return null === t ? "" : t && t.length > 0 && void 0 !== t.index ? t[1] : ""
-                            }(g);
-                            l.push({
-                                type: o.a.ClipLink,
+                            }(b);
+                            i.push({
+                                type: s.a.ClipLink,
                                 content: {
-                                    slug: v,
-                                    url: g,
-                                    displayText: e.slice(m, h)
+                                    slug: _,
+                                    url: b,
+                                    displayText: e.slice(y, k)
                                 }
                             })
-                        } else if (Object(d.a)(g)) {
-                            var y = Object(d.b)(g);
-                            l.push({
-                                type: o.a.VideoLink,
+                        } else if (Object(c.a)(b)) {
+                            var S = Object(c.b)(b);
+                            i.push({
+                                type: s.a.VideoLink,
                                 content: {
-                                    id: y,
-                                    url: g,
-                                    displayText: e.slice(m, h)
+                                    id: S,
+                                    url: b,
+                                    displayText: e.slice(y, k)
                                 }
                             })
-                        } else l.push({
-                            type: o.a.Link,
+                        } else i.push({
+                            type: s.a.Link,
                             content: {
-                                displayText: e.slice(m, h),
-                                url: g
+                                displayText: e.slice(y, k),
+                                url: b
                             }
                         })
                     }
-                    var k = e.slice(h),
-                        b = "";
-                    u < c.length - 1 && (b = " "), k && l.push({
-                        type: o.a.Text,
-                        content: "" + k + b
+                    var O = e.slice(k),
+                        E = "";
+                    r < o.length - 1 && (E = " "), O && i.push({
+                        type: s.a.Text,
+                        content: "" + O + E
                     })
-                } else {
-                    if (!f) {
-                        var _ = l.length && l[l.length - 1];
-                        b = "";
-                        if (u < c.length - 1 && (b = " "), _ && _.type === o.a.Text) _.content += e + b;
-                        else {
-                            var S = "";
-                            u && (S = " "), l.push({
-                                type: o.a.Text,
-                                content: S + e + b
-                            })
-                        }
-                        return
+                } else if (v.length > 0) i.push.apply(i, v);
+                else if (w(e, d)) i.push({
+                    type: s.a.CurrentUserHighlight,
+                    content: e
+                });
+                else {
+                    var C = i.length && i[i.length - 1];
+                    E = f ? "" : " ";
+                    if (C && C.type === s.a.Text) C.content += e + E;
+                    else {
+                        var N = p ? "" : " ";
+                        i.push({
+                            type: s.a.Text,
+                            content: N + e + E
+                        })
                     }
-                    var w = f[3];
-                    l.push({
-                        type: o.a.Mention,
-                        content: {
-                            sender: t,
-                            recipient: w
-                        }
-                    })
                 }
-            }), l
+            }), i
         }
 
-        function y(e, t) {
+        function S(e, t) {
             return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
+        }
+
+        function w(e, t) {
+            if (!t) return !1;
+            var n = t.displayName,
+                i = t.login;
+            return e === n || e.toLowerCase() === i
         }
     },
     mwvJ: function(e, t, n) {
@@ -5384,7 +5415,7 @@ webpackJsonp([51], {
                 return i
             }),
             function(e) {
-                e[e.Text = 0] = "Text", e[e.Mention = 1] = "Mention", e[e.Link = 2] = "Link", e[e.Emote = 3] = "Emote", e[e.ClipLink = 4] = "ClipLink", e[e.VideoLink = 5] = "VideoLink"
+                e[e.Text = 0] = "Text", e[e.CurrentUserHighlight = 1] = "CurrentUserHighlight", e[e.Mention = 2] = "Mention", e[e.Link = 3] = "Link", e[e.Emote = 4] = "Emote", e[e.ClipLink = 5] = "ClipLink", e[e.VideoLink = 6] = "VideoLink"
             }(i || (i = {}))
     },
     nU46: function(e, t, n) {
@@ -6127,4 +6158,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-92dce11847bb6519c940f80e04b8a588.js.map
+//# sourceMappingURL=sites.clips.pages.create-2f6cedb0f3cff160be41c34f15605e01.js.map
