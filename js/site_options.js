@@ -263,13 +263,13 @@ window.SiteOptions = {
         },
         "0ace5fda-aa24-4263-9b07-e8a3099729d6": {
             "name": "ios_theater_offline_channel_deeplink_to_profile",
-            "v": 3453,
+            "v": 3764,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "enabled"
             }]
         },
@@ -1434,11 +1434,11 @@ window.SiteOptions = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 3667,
+            "v": 3765,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.5.1"
+                "value": "2.5.4"
             }]
         },
         "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": {
@@ -2031,14 +2031,20 @@ window.SiteOptions = {
         },
         "4f2ebce8-68ed-40a4-afb2-9db8fb09711d": {
             "name": "vod_qos_model",
-            "v": 3653,
+            "v": 3760,
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 70,
                 "value": "control"
             }, {
-                "weight": 20,
-                "value": "control20"
+                "weight": 10,
+                "value": "control10"
+            }, {
+                "weight": 10,
+                "value": "business_logic_reverse"
+            }, {
+                "weight": 10,
+                "value": "open_asia"
             }]
         },
         "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": {
@@ -2624,13 +2630,13 @@ window.SiteOptions = {
         },
         "67118dd1-5594-41af-80e8-420571737679": {
             "name": "android_profile_tab_order",
-            "v": 3217,
+            "v": 3771,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "active"
             }]
         },
@@ -4641,13 +4647,13 @@ window.SiteOptions = {
         },
         "c2a121ef-cd70-423f-8e65-de028477a140": {
             "name": "ios_profile_redesign_tab_reorder",
-            "v": 3197,
+            "v": 3763,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "enabled"
             }]
         },
@@ -4809,13 +4815,13 @@ window.SiteOptions = {
         },
         "c96f651c-0d69-43cf-9127-7eab817e5ebd": {
             "name": "android_dead_channel_to_profile",
-            "v": 3159,
+            "v": 3770,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "active"
             }]
         },
@@ -5545,14 +5551,17 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3756,
+            "v": 3768,
             "t": 1,
             "groups": [{
                 "weight": 80,
                 "value": "2.5.1"
             }, {
-                "weight": 20,
-                "value": "2.5.3+rebuf2"
+                "weight": 10,
+                "value": "2.5.4+spd"
+            }, {
+                "weight": 10,
+                "value": "2.5.4"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
