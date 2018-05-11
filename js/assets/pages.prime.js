@@ -432,13 +432,13 @@ webpackJsonp([58], {
                 return n.e(117).then(n.bind(null, "o0He"))
             }, "TwitchPrimeOffersPage"),
             T = c.a.wrap(function() {
-                return n.e(101).then(n.bind(null, "9GX+"))
+                return n.e(102).then(n.bind(null, "9GX+"))
             }, "TwitchPrimeSuccessPage"),
             L = c.a.wrap(function() {
-                return n.e(112).then(n.bind(null, "Uen5"))
+                return n.e(113).then(n.bind(null, "Uen5"))
             }, "TwitchPrimeLinkingPage"),
             w = c.a.wrap(function() {
-                return n.e(113).then(n.bind(null, "HnrI"))
+                return n.e(114).then(n.bind(null, "HnrI"))
             }, "TwitchPrimeFortnitePage"),
             R = function(e) {
                 function t() {
@@ -852,15 +852,12 @@ webpackJsonp([58], {
                             })
                         })
                     }, t.renderOfferList = function() {
-                        var e = t.props.offersData,
-                            n = t.showOffersByDefault() || !1,
-                            r = e && !e.loading && !e.error;
-                        return t.offersLoadedEvent && r && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), r || n ? s.createElement(v._8, {
+                        return s.createElement(v._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
                         }, s.createElement(k, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), s.createElement(O.a, null)) : null
+                        }), s.createElement(O.a, null))
                     }, t.shouldReportInteractive = function() {
                         return (!t.isUserDataLoading || t.isUserDataError) && (!t.isOffersDataLoading || t.isOffersDataError)
                     }, t
@@ -961,7 +958,7 @@ webpackJsonp([58], {
             S = Object(l.compose)(Object(u.a)(N, {
                 name: "offersData",
                 skip: function(e) {
-                    return !e.firstPageLoaded
+                    return !e.firstPageLoaded && !e.openByDefault
                 },
                 options: function() {
                     return {
@@ -2309,11 +2306,8 @@ webpackJsonp([58], {
                     }, t.getOfferListOrientation = function() {
                         return t.props.listDirection || _.c.Default
                     }, t.shouldShowPlaceholders = function() {
-                        if (!t.props.offersData) return !0;
-                        var e = t.props.offersData,
-                            n = e.primeOffers,
-                            r = void 0 === n || null === n;
-                        return e.loading || r
+                        var e = t.props.offersData;
+                        return !e || e.loading
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], n = 0; n < 3; ++n) {
                             var r = a.createElement(H, {
@@ -3380,4 +3374,4 @@ webpackJsonp([58], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.prime-d9ac9e166fbf04c37e13f3cbb5dba1d2.js.map
+//# sourceMappingURL=pages.prime-3651762489999e0a6be3626903773d8f.js.map

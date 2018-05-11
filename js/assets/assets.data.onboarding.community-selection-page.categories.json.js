@@ -1,4 +1,4 @@
-webpackJsonp([124], {
+webpackJsonp([125], {
     Revh: function(e, a) {
         e.exports = [{
             games: ["League of Legends", "Dota 2", "Heroes of the Storm", "Smite", "Vainglory", "Paragon", "Clash Royale", "Heroes of Newerth", "Arena of Valor", "Battlerite"],
@@ -78,4 +78,4 @@ webpackJsonp([124], {
         }]
     }
 });
-//# sourceMappingURL=assets.data.onboarding.community-selection-page.categories.json-8bed201615b1f3eb1e5be45961694012.js.map
+//# sourceMappingURL=assets.data.onboarding.community-selection-page.categories.json-75e03852c772b1987613156caa2f2715.js.map

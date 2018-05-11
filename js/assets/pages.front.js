@@ -2368,12 +2368,12 @@ webpackJsonp([54], {
             }(r.Component),
             R = n("Y4Yc"),
             I = "twilight_onboarding",
-            T = "twilight_onboarding-prompt_dismissed",
-            D = {
+            D = "twilight_onboarding-prompt_dismissed",
+            T = {
                 domain: window.location.hostname.endsWith(".twitch.tv") ? ".twitch.tv" : void 0,
                 secure: "https:" === window.location.protocol
             },
-            x = a.__assign({}, D, {
+            x = a.__assign({}, T, {
                 expires: 365
             }),
             P = 3,
@@ -2389,7 +2389,7 @@ webpackJsonp([54], {
                             source: e
                         }), window.location.assign("/hi" + location.search)
                     }, n.dismissOnboardingPrompt = function() {
-                        Object(S.f)(), h.set(T, "true", x), n.setState({
+                        Object(S.f)(), h.set(D, "true", x), n.setState({
                             isOnboardingDismissedCookieSet: !0
                         })
                     }, n.followedGamesForUserHasLoaded = function() {
@@ -2400,7 +2400,7 @@ webpackJsonp([54], {
                     var i = o.o.experiments.getAssignment(y.i);
                     return n.state = {
                         inOnboardingExperiment: Object(y.n)(i),
-                        isOnboardingDismissedCookieSet: void 0 !== h.get(T)
+                        isOnboardingDismissedCookieSet: void 0 !== h.get(D)
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
@@ -5001,8 +5001,8 @@ webpackJsonp([54], {
             var t = [];
             return e && 0 !== e.length && (t = e.slice().sort(function(e, t) {
                 return function(e, t) {
-                    if (e.emote.id === D.emote.id) return -1;
-                    if (t.emote.id === D.emote.id) return 1;
+                    if (e.emote.id === T.emote.id) return -1;
+                    if (t.emote.id === T.emote.id) return 1;
                     var n = e.self.hasReacted,
                         i = t.self.hasReacted;
                     if (e.count === t.count) {
@@ -5027,13 +5027,13 @@ webpackJsonp([54], {
                         self: m.__assign({}, t[l].self, {
                             hasReacted: e === i.Add
                         })
-                    }) : e === i.Add && c.push(m.__assign({}, D, {
-                        emote: m.__assign({}, D.emote, {
+                    }) : e === i.Add && c.push(m.__assign({}, T, {
+                        emote: m.__assign({}, T.emote, {
                             id: r,
                             token: o
                         }),
                         count: 1,
-                        self: m.__assign({}, D.self, {
+                        self: m.__assign({}, T.self, {
                             hasReacted: !0
                         })
                     })), n(m.__assign({}, Object(E.a)({
@@ -5054,7 +5054,7 @@ webpackJsonp([54], {
             O = n("Mlfg"),
             R = n("Dqkc"),
             I = n("P+j/"),
-            T = (n("24qG"), function(e) {
+            D = (n("24qG"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.closeEmoteSelector = function() {
@@ -5103,7 +5103,7 @@ webpackJsonp([54], {
                     }), e))
                 }, t = m.__decorate([Object(h.d)("ReactionSelector")], t)
             }(a.Component)),
-            D = {
+            T = {
                 emote: {
                     id: "9",
                     token: "<3",
@@ -5156,7 +5156,7 @@ webpackJsonp([54], {
                 }, t.prototype.render = function() {
                     var e = this,
                         t = N(this.props.reactions);
-                    0 !== t.length && t[0].emote.id === D.emote.id || (t = [D].concat(t));
+                    0 !== t.length && t[0].emote.id === T.emote.id || (t = [T].concat(t));
                     var n = this.props.emoteSelectorAndOverflowPos && this.props.emoteSelectorAndOverflowPos === b.r.Bottom ? b.r.BottomCenter : b.r.TopCenter,
                         i = null;
                     this.state.additionalReactionsVisible && (i = a.createElement(S, {
@@ -5188,7 +5188,7 @@ webpackJsonp([54], {
                         margin: {
                             right: 1
                         }
-                    }, a.createElement(T, {
+                    }, a.createElement(D, {
                         onEmoteSelect: this.addReaction,
                         position: n
                     }, a.createElement(b._24, {
@@ -7381,7 +7381,7 @@ webpackJsonp([54], {
         }
         n("0OPT");
         var I = 6,
-            T = function(e) {
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7533,78 +7533,10 @@ webpackJsonp([54], {
                 }, t = i.__decorate([Object(c.d)("CarouselPlayer")], t)
             }(r.Component);
         n.d(t, "a", function() {
-            return T
+            return D
         })
     },
     i6UE: function(e, t) {},
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("GiK3"),
-            o = n("F8kA"),
-            d = n("6sO2");
-
-        function s(e) {
-            return function(t) {
-                var n = function(n) {
-                    function o(t) {
-                        var a = n.call(this, t) || this;
-                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
-                            if (!(a.tracked || e.skip && e.skip(a.props))) {
-                                a.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
-                                var n = i.__assign({}, a.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var r = a.referenceTracking,
-                                    o = r.content,
-                                    s = r.medium,
-                                    l = r.content_index;
-                                d.o.tracking.trackPageview(i.__assign({
-                                    content: o,
-                                    medium: s,
-                                    content_index: l,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, d.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : d.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
-                    }
-                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, o.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, o.prototype.render = function() {
-                        return r.createElement(t, i.__assign({}, this.props))
-                    }, o.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                r = a.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return n
-                    }, o
-                }(r.Component);
-                return Object(o.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return s
-        })
-    },
     jPY3: function(e, t) {},
     kaF0: function(e, t) {},
     kuCN: function(e, t) {},
@@ -8719,4 +8651,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-ef030e3bfbc41858140409b6dcb131a3.js.map
+//# sourceMappingURL=pages.front-7db1647a00102127f153a1ffc49dc7b5.js.map

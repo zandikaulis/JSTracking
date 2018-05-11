@@ -1,4 +1,4 @@
-webpackJsonp([61], {
+webpackJsonp([62], {
     "/gww": function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
@@ -1450,74 +1450,6 @@ webpackJsonp([61], {
         e.exports = n
     },
     "eFj+": function(e, t) {},
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            r = n("OAwv"),
-            o = n("GiK3"),
-            a = n("F8kA"),
-            s = n("6sO2");
-
-        function m(e) {
-            return function(t) {
-                var n = function(n) {
-                    function a(t) {
-                        var r = n.call(this, t) || this;
-                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
-                            if (!(r.tracked || e.skip && e.skip(r.props))) {
-                                r.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = i.__assign({}, e.properties));
-                                var n = i.__assign({}, r.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var o = r.referenceTracking,
-                                    a = o.content,
-                                    m = o.medium,
-                                    u = o.content_index;
-                                s.o.tracking.trackPageview(i.__assign({
-                                    content: a,
-                                    medium: m,
-                                    content_index: u,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
-                    }
-                    return i.__extends(a, n), a.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, a.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, a.prototype.render = function() {
-                        return o.createElement(t, i.__assign({}, this.props))
-                    }, a.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? r.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                o = r.stringify(t);
-                            o.length > 0 && (i = "?" + o), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return n
-                    }, a
-                }(o.Component);
-                return Object(a.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return m
-        })
-    },
     nC3l: function(e, t) {
         var n = {
             kind: "Document",
@@ -2495,8 +2427,8 @@ webpackJsonp([61], {
             I = n("puy8"),
             M = n("HM6l"),
             j = n("5LoI"),
-            x = n("MAZT"),
-            R = (n("5ghP"), function(e) {
+            R = n("MAZT"),
+            x = (n("5ghP"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -2580,7 +2512,7 @@ webpackJsonp([61], {
                             searching: !1,
                             results: []
                         })
-                    }, n.searchClient = new x.a({
+                    }, n.searchClient = new R.a({
                         appId: c.a.algoliaApplicationID,
                         apiKey: c.a.algoliaAPIKey,
                         apolloClient: c.o.apollo.client,
@@ -2784,7 +2716,7 @@ webpackJsonp([61], {
                         t = Object.keys(this.state.moderatedUsers).map(function(t) {
                             return e.state.moderatedUsers[t]
                         });
-                    return r.createElement(R, {
+                    return r.createElement(x, {
                         title: Object(c.d)("Channel Moderation", "CommunityChannelModeration"),
                         placeholder: Object(c.d)("Search to ban/timeout channels", "CommunityChannelModeration"),
                         displayUsers: t,
@@ -3092,7 +3024,7 @@ webpackJsonp([61], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(R, {
+                    return r.createElement(x, {
                         title: Object(c.d)("Community Leader", "CommunityLeader"),
                         placeholder: Object(c.d)("Search to choose a different leader for this community", "CommunityLeader"),
                         getUserContent: this.getButtonForUser
@@ -3238,7 +3170,7 @@ webpackJsonp([61], {
                         t = Object.keys(this.state.moderators).map(function(t) {
                             return e.state.moderators[t]
                         });
-                    return r.createElement(R, {
+                    return r.createElement(x, {
                         title: Object(c.d)("Moderators", "CommunityModerators"),
                         placeholder: Object(c.d)("Search to add moderators", "CommunityModerators"),
                         description: Object(c.d)("Moderators can help you manage your community by banning or timing out channels that violate your rules.", "CommunityModerators"),
@@ -3536,4 +3468,4 @@ webpackJsonp([61], {
     sJt0: function(e, t) {},
     wyZy: function(e, t) {}
 });
-//# sourceMappingURL=pages.community-moderation-c61753666fa8970f49933b5ac1e4e521.js.map
+//# sourceMappingURL=pages.community-moderation-cb8590e77b2d797bf8d818bf6e67cd89.js.map

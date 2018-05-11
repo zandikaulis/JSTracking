@@ -1,4 +1,4 @@
-webpackJsonp([113], {
+webpackJsonp([114], {
     "0blB": function(e, t) {},
     "8+KY": function(e, t) {},
     F35x: function(e, t) {},
@@ -678,4 +678,4 @@ webpackJsonp([113], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-fortnite-7ef70441352b58824e4314b05df59361.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-fortnite-5f111399d0189c57a665736f0566ff50.js.map

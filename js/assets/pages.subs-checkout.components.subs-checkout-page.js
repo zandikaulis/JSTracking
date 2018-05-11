@@ -2480,15 +2480,12 @@ webpackJsonp([36], {
                             })
                         })
                     }, t.renderOfferList = function() {
-                        var e = t.props.offersData,
-                            n = t.showOffersByDefault() || !1,
-                            i = e && !e.loading && !e.error;
-                        return t.offersLoadedEvent && i && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), i || n ? s.createElement(v._8, {
+                        return s.createElement(v._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
                         }, s.createElement(y, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), s.createElement(k.a, null)) : null
+                        }), s.createElement(k.a, null))
                     }, t.shouldReportInteractive = function() {
                         return (!t.isUserDataLoading || t.isUserDataError) && (!t.isOffersDataLoading || t.isOffersDataError)
                     }, t
@@ -2589,7 +2586,7 @@ webpackJsonp([36], {
             O = Object(c.compose)(Object(d.a)(N, {
                 name: "offersData",
                 skip: function(e) {
-                    return !e.firstPageLoaded
+                    return !e.firstPageLoaded && !e.openByDefault
                 },
                 options: function() {
                     return {
@@ -8100,14 +8097,13 @@ webpackJsonp([36], {
             c = n("TToO"),
             l = n("OAwv"),
             u = n("GiK3"),
-            d = n("6sO2"),
-            p = n("68hr"),
-            m = n("7vx8"),
-            f = n("j7/Y"),
-            h = n("w9tK"),
-            g = n("vH/s"),
-            v = n("969Z");
-        var b = Object(i.b)(function(e) {
+            d = n("68hr"),
+            p = n("7vx8"),
+            m = n("j7/Y"),
+            f = n("w9tK"),
+            h = n("vH/s"),
+            g = n("969Z");
+        var v = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e),
                     sessionUser: Object(s.c)(e)
@@ -8118,54 +8114,50 @@ webpackJsonp([36], {
                         return Object(o.f)(a.a.DashboardPage)
                     }
                 }, e)
-            })(v.a),
-            y = n("CSlQ"),
-            k = n("tnNl"),
-            _ = n("TP6L"),
-            E = n("Odds"),
-            S = n("EaWz"),
-            N = function(e) {
+            })(g.a),
+            b = n("CSlQ"),
+            y = n("tnNl"),
+            k = n("TP6L"),
+            _ = n("Odds"),
+            E = n("EaWz"),
+            S = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return c.__extends(t, e), t.prototype.componentWillMount = function() {
-                    if (this.props.match.params.productName) {
-                        "no" !== d.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT") || ["testingteamsub", "owlallaccess2018"].includes(this.props.match.params.productName) || window.location.assign("/products/" + this.props.match.params.productName + this.props.location.search)
-                    }
-                }, t.prototype.componentDidMount = function() {
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (!this.props.match.params.productName) return u.createElement(p.a, null);
+                    if (!this.props.match.params.productName) return u.createElement(d.a, null);
                     if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), u.createElement(u.Fragment, null);
                     var e = this.props.match.params.productName,
                         t = this.props.data && this.props.data.recipient || null;
-                    return u.createElement(E._8, {
-                        display: E.R.Flex,
-                        flexDirection: E.T.Column,
-                        flexWrap: E.U.NoWrap,
-                        position: E._15.Relative,
+                    return u.createElement(_._8, {
+                        display: _.R.Flex,
+                        flexDirection: _.T.Column,
+                        flexWrap: _.U.NoWrap,
+                        position: _._15.Relative,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, u.createElement(_.a, null), u.createElement(E._8, {
+                    }, u.createElement(k.a, null), u.createElement(_._8, {
                         breakpointLarge: {
-                            display: E.R.Hide
+                            display: _.R.Hide
                         }
-                    }, u.createElement(k.a, null)), u.createElement(E._8, {
-                        display: E.R.Flex,
-                        flexWrap: E.U.NoWrap,
-                        position: E._15.Relative,
+                    }, u.createElement(y.a, null)), u.createElement(_._8, {
+                        display: _.R.Flex,
+                        flexWrap: _.U.NoWrap,
+                        position: _._15.Relative,
                         fullHeight: !0
-                    }, u.createElement(b, {
+                    }, u.createElement(v, {
                         productName: e,
                         isGift: !(!t || !t.id),
                         recipientID: t && t.id,
                         recipientDisplayName: t && t.displayName
                     })))
-                }, t = c.__decorate([Object(y.d)("SubsCheckoutPage", {
-                    destination: h.a.SubsCheckoutPage
-                }), Object(f.a)({
-                    location: g.PageviewLocation.SubsCheckoutPage
-                }), Object(m.a)(S, {
+                }, t = c.__decorate([Object(b.d)("SubsCheckoutPage", {
+                    destination: f.a.SubsCheckoutPage
+                }), Object(m.a)({
+                    location: h.PageviewLocation.SubsCheckoutPage
+                }), Object(p.a)(E, {
                     options: function(e) {
                         return {
                             fetchPolicy: "cache-first",
@@ -8179,7 +8171,7 @@ webpackJsonp([36], {
                     }
                 })], t)
             }(u.Component);
-        var w = Object(i.b)(function(e) {
+        var N = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(s.d)(e)
             }
@@ -8189,9 +8181,9 @@ webpackJsonp([36], {
                     return Object(o.f)(a.a.SubsCheckoutPage)
                 }
             }, e)
-        })(N);
+        })(S);
         n.d(t, "SubsCheckoutPage", function() {
-            return w
+            return N
         })
     },
     I7cV: function(e, t, n) {
@@ -9291,11 +9283,8 @@ webpackJsonp([36], {
                     }, t.getOfferListOrientation = function() {
                         return t.props.listDirection || b.c.Default
                     }, t.shouldShowPlaceholders = function() {
-                        if (!t.props.offersData) return !0;
-                        var e = t.props.offersData,
-                            n = e.primeOffers,
-                            i = void 0 === n || null === n;
-                        return e.loading || i
+                        var e = t.props.offersData;
+                        return !e || e.loading
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], n = 0; n < 3; ++n) {
                             var i = a.createElement(H, {
@@ -22029,4 +22018,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-2de224e7cb1dd7bf75cae62447b8d4da.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-7aa50c0eab06ba00d7787bab5b70183c.js.map

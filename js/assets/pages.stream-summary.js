@@ -1,4 +1,4 @@
-webpackJsonp([93], {
+webpackJsonp([94], {
     "+27R": function(e, t, a) {
         (function(e) {
             "use strict";
@@ -310,6 +310,23 @@ webpackJsonp([93], {
                 }
             })
         })(a("PJh5"))
+    },
+    "/Cz7": function(e, t, a) {
+        "use strict";
+        t.a = function(e, t) {
+            var a = new URL("https://www.twitch.tv/collections/" + e);
+            t && (a.search = i.stringify(t));
+            return a.toString()
+        }, t.b = function(e, t) {
+            var a = new URL("https://www.twitch.tv/videos/" + e);
+            t && (a.search = i.stringify(n.__assign({}, t, {
+                t: "number" == typeof t.t ? Object(r.a)(t.t) : void 0
+            })));
+            return a.toString()
+        };
+        var n = a("TToO"),
+            i = a("OAwv"),
+            r = (a.n(i), a("Ryxq"))
     },
     "/bsm": function(e, t, a) {
         (function(e) {
@@ -16603,9 +16620,10 @@ webpackJsonp([93], {
             })(Qe),
             Xe = a("NXs7"),
             $e = a("VAT8"),
-            et = a("Q65K"),
-            tt = f.M.Purple12,
-            at = function(e) {
+            et = a("/Cz7"),
+            tt = a("Q65K"),
+            at = f.M.Purple12,
+            nt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleCanvasReady = function(e) {
@@ -16619,7 +16637,7 @@ webpackJsonp([93], {
                                             maxRotation: 0,
                                             minRotation: 0,
                                             maxTicksLimit: 4,
-                                            fontColor: tt,
+                                            fontColor: at,
                                             fontSize: 10,
                                             padding: 5
                                         },
@@ -16634,7 +16652,7 @@ webpackJsonp([93], {
                                         ticks: {
                                             min: 0,
                                             maxTicksLimit: 6,
-                                            fontColor: tt,
+                                            fontColor: at,
                                             fontSize: 10,
                                             padding: 5
                                         },
@@ -16658,15 +16676,21 @@ webpackJsonp([93], {
                                         label: t.formatTooltipLabel
                                     }
                                 },
+                                onClick: t.handleDatasetClick,
                                 responsive: !0
                             }
                         })
                     }, t.formatTooltipLabel = function(e) {
                         return t.props.formatTooltipLabel(Number(e.yLabel))
+                    }, t.handleDatasetClick = function(e, a) {
+                        if (a && 0 !== a.length) {
+                            var n = a[0];
+                            t.props.onDatasetClick(n._index)
+                        }
                     }, t
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(et.a, {
+                    return i.createElement(tt.a, {
                         onCanvasReady: this.handleCanvasReady
                     })
                 }, t.prototype.componentDidUpdate = function() {
@@ -16688,22 +16712,22 @@ webpackJsonp([93], {
                     return t.addColorStop(0, f.M.Purple15), t.addColorStop(1, f.M.Purple11), t
                 }, t
             }(i.Component),
-            nt = a("InMe"),
-            it = 5;
-        var rt = {
+            it = a("InMe"),
+            rt = 5;
+        var st = {
             get: function() {
                 return Object(s.d)("Error", "StreamSummaryExportTimeseriesStats")
             }
         };
 
-        function st(e, t) {
-            return e.isError ? rt : e.data.dates.reduce(function(a, n, i) {
+        function ot(e, t) {
+            return e.isError ? st : e.data.dates.reduce(function(a, n, i) {
                 return a.set(n.getTime(), String(t(e.data)[i] || ""))
             }, new Map)
         }
-        var ot = 5;
+        var dt = 5;
 
-        function dt(e, t) {
+        function lt(e, t) {
             return n.__awaiter(this, void 0, void 0, function() {
                 var a, i, r, s, o, d, l, u, c;
                 return n.__generator(this, function(n) {
@@ -16717,7 +16741,7 @@ webpackJsonp([93], {
                                     messages: [],
                                     participants: [],
                                     dates: [],
-                                    interpolationChunkMinutes: ot
+                                    interpolationChunkMinutes: dt
                                 }, i.isError()) return [2, {
                                 isError: !0,
                                 data: r
@@ -16732,7 +16756,7 @@ webpackJsonp([93], {
             })
         }
 
-        function lt(e, t) {
+        function ut(e, t) {
             return n.__awaiter(this, void 0, void 0, function() {
                 var a, i, r, s, o, d, l, u, c, m;
                 return n.__generator(this, function(n) {
@@ -16751,41 +16775,13 @@ webpackJsonp([93], {
                                     facebookPlays: [],
                                     twitterPlays: [],
                                     dates: [],
-                                    interpolationChunkMinutes: ot
+                                    interpolationChunkMinutes: dt
                                 }, i.isError()) return [2, {
                                 isError: !0,
                                 data: r
                             }];
                             for (s = 0, o = i.body.clips; s < o.length; s++) d = o[s], l = d.creates, u = d.plays, c = d.timestamp, m = d.plays_breakdown, r.creates.push(l), r.plays.push(u), r.otherPlays.push(m.other || 0), r.twitchPlays.push(m.twitch || 0), r.redditPlays.push(m.reddit || 0), r.facebookPlays.push(m.facebook || 0), r.twitterPlays.push(m.twitter || 0), r.dates.push(new Date(c));
                             return [2, {
-                                isError: !1,
-                                data: r
-                            }]
-                    }
-                })
-            })
-        }
-
-        function ut(e, t) {
-            return n.__awaiter(this, void 0, void 0, function() {
-                var a, i, r, s, o, d, l, u;
-                return n.__generator(this, function(n) {
-                    switch (n.label) {
-                        case 0:
-                            return a = T.stringify(Object(j.i)(t)), [4, Object(O.c)({
-                                path: "/v5/channels/" + e + "/analytics/commercials_time_series?" + a
-                            })];
-                        case 1:
-                            if (i = n.sent(), r = {
-                                    values: [],
-                                    dates: [],
-                                    interpolationChunkMinutes: ot
-                                }, i.isError()) return [2, {
-                                isError: !0,
-                                data: r
-                            }];
-                            for (s = 0, o = i.body.commercial; s < o.length; s++) d = o[s], l = d.length, u = d.timestamp, r.values.push(l), r.dates.push(new Date(u));
-                            return r.interpolationChunkMinutes = i.body.interpolation_chunk_minutes, [2, {
                                 isError: !1,
                                 data: r
                             }]
@@ -16801,18 +16797,18 @@ webpackJsonp([93], {
                     switch (n.label) {
                         case 0:
                             return a = T.stringify(Object(j.i)(t)), [4, Object(O.c)({
-                                path: "/v5/channels/" + e + "/analytics/stats_time_series?" + a
+                                path: "/v5/channels/" + e + "/analytics/commercials_time_series?" + a
                             })];
                         case 1:
                             if (i = n.sent(), r = {
                                     values: [],
                                     dates: [],
-                                    interpolationChunkMinutes: ot
+                                    interpolationChunkMinutes: dt
                                 }, i.isError()) return [2, {
                                 isError: !0,
                                 data: r
                             }];
-                            for (s = 0, o = i.body.concurrent_viewers; s < o.length; s++) d = o[s], l = d.count, u = d.timestamp, r.values.push(l), r.dates.push(new Date(u));
+                            for (s = 0, o = i.body.commercial; s < o.length; s++) d = o[s], l = d.length, u = d.timestamp, r.values.push(l), r.dates.push(new Date(u));
                             return r.interpolationChunkMinutes = i.body.interpolation_chunk_minutes, [2, {
                                 isError: !1,
                                 data: r
@@ -16829,18 +16825,18 @@ webpackJsonp([93], {
                     switch (n.label) {
                         case 0:
                             return a = T.stringify(Object(j.i)(t)), [4, Object(O.c)({
-                                path: "/v5/channels/" + e + "/analytics/followers_time_series?" + a
+                                path: "/v5/channels/" + e + "/analytics/stats_time_series?" + a
                             })];
                         case 1:
                             if (i = n.sent(), r = {
                                     values: [],
                                     dates: [],
-                                    interpolationChunkMinutes: ot
+                                    interpolationChunkMinutes: dt
                                 }, i.isError()) return [2, {
                                 isError: !0,
                                 data: r
                             }];
-                            for (s = 0, o = i.body.followers_change; s < o.length; s++) d = o[s], l = d.count, u = d.timestamp, r.values.push(l), r.dates.push(new Date(u));
+                            for (s = 0, o = i.body.concurrent_viewers; s < o.length; s++) d = o[s], l = d.count, u = d.timestamp, r.values.push(l), r.dates.push(new Date(u));
                             return r.interpolationChunkMinutes = i.body.interpolation_chunk_minutes, [2, {
                                 isError: !1,
                                 data: r
@@ -16857,18 +16853,18 @@ webpackJsonp([93], {
                     switch (n.label) {
                         case 0:
                             return a = T.stringify(Object(j.i)(t)), [4, Object(O.c)({
-                                path: "/v5/channels/" + e + "/analytics/subscription_purchase?" + a
+                                path: "/v5/channels/" + e + "/analytics/followers_time_series?" + a
                             })];
                         case 1:
                             if (i = n.sent(), r = {
                                     values: [],
                                     dates: [],
-                                    interpolationChunkMinutes: ot
+                                    interpolationChunkMinutes: dt
                                 }, i.isError()) return [2, {
                                 isError: !0,
                                 data: r
                             }];
-                            for (s = 0, o = i.body.subscription_purchase_activities; s < o.length; s++) d = o[s], l = d.count, u = d.timestamp, r.values.push(l), r.dates.push(new Date(u));
+                            for (s = 0, o = i.body.followers_change; s < o.length; s++) d = o[s], l = d.count, u = d.timestamp, r.values.push(l), r.dates.push(new Date(u));
                             return r.interpolationChunkMinutes = i.body.interpolation_chunk_minutes, [2, {
                                 isError: !1,
                                 data: r
@@ -16885,18 +16881,18 @@ webpackJsonp([93], {
                     switch (n.label) {
                         case 0:
                             return a = T.stringify(Object(j.i)(t)), [4, Object(O.c)({
-                                path: "/v5/channels/" + e + "/analytics/view_summary_time_series?" + a
+                                path: "/v5/channels/" + e + "/analytics/subscription_purchase?" + a
                             })];
                         case 1:
                             if (i = n.sent(), r = {
+                                    values: [],
                                     dates: [],
-                                    totalViews: [],
-                                    interpolationChunkMinutes: ot
+                                    interpolationChunkMinutes: dt
                                 }, i.isError()) return [2, {
                                 isError: !0,
                                 data: r
                             }];
-                            for (s = 0, o = i.body.view_summary; s < o.length; s++) d = o[s], l = d.total_views, u = d.timestamp, r.totalViews.push(l), r.dates.push(new Date(u));
+                            for (s = 0, o = i.body.subscription_purchase_activities; s < o.length; s++) d = o[s], l = d.count, u = d.timestamp, r.values.push(l), r.dates.push(new Date(u));
                             return r.interpolationChunkMinutes = i.body.interpolation_chunk_minutes, [2, {
                                 isError: !1,
                                 data: r
@@ -16912,7 +16908,35 @@ webpackJsonp([93], {
                 return n.__generator(this, function(n) {
                     switch (n.label) {
                         case 0:
-                            return [4, Promise.all([dt(e, t), lt(e, t), ut(e, t), ct(e, t), ht(e, t), mt(e, t), _t(e, t)])];
+                            return a = T.stringify(Object(j.i)(t)), [4, Object(O.c)({
+                                path: "/v5/channels/" + e + "/analytics/view_summary_time_series?" + a
+                            })];
+                        case 1:
+                            if (i = n.sent(), r = {
+                                    dates: [],
+                                    totalViews: [],
+                                    interpolationChunkMinutes: dt
+                                }, i.isError()) return [2, {
+                                isError: !0,
+                                data: r
+                            }];
+                            for (s = 0, o = i.body.view_summary; s < o.length; s++) d = o[s], l = d.total_views, u = d.timestamp, r.totalViews.push(l), r.dates.push(new Date(u));
+                            return r.interpolationChunkMinutes = i.body.interpolation_chunk_minutes, [2, {
+                                isError: !1,
+                                data: r
+                            }]
+                    }
+                })
+            })
+        }
+
+        function pt(e, t) {
+            return n.__awaiter(this, void 0, void 0, function() {
+                var a, i, r, s, o, d, l, u;
+                return n.__generator(this, function(n) {
+                    switch (n.label) {
+                        case 0:
+                            return [4, Promise.all([lt(e, t), ut(e, t), ct(e, t), mt(e, t), ft(e, t), _t(e, t), ht(e, t)])];
                         case 1:
                             return a = n.sent(), i = a[0], r = a[1], s = a[2], o = a[3], d = a[4], l = a[5], u = a[6], [2, {
                                 chat: i,
@@ -16927,7 +16951,7 @@ webpackJsonp([93], {
                 })
             })
         }
-        var pt = function(e) {
+        var yt = function(e) {
             function t(t) {
                 var a = e.call(this, t) || this;
                 return a.handleExport = function() {
@@ -16947,7 +16971,7 @@ webpackJsonp([93], {
                                     return r = t, Boolean(Object.keys(r).find(function(e) {
                                         return r[e].isError
                                     })) && this.alert(Object(s.d)("Part of the CSV export failed. Please try again in a few minutes.", "StreamSummaryTimeseriesExport")), i = function(e) {
-                                        for (var t = e.interval, a = e.timeseriesResponse, n = [], i = Object(oe.addMinutes)(t.start, (it - t.start.getMinutes() % it) % it); i.getTime() <= t.end.getTime();) n.push(i), i = Object(oe.addMinutes)(i, it);
+                                        for (var t = e.interval, a = e.timeseriesResponse, n = [], i = Object(oe.addMinutes)(t.start, (rt - t.start.getMinutes() % rt) % rt); i.getTime() <= t.end.getTime();) n.push(i), i = Object(oe.addMinutes)(i, rt);
                                         var r = [
                                             [Object(s.d)("Timestamp", "StreamSummaryExportTimeseriesStats")].concat(n.map(function(e) {
                                                 return Object(s.c)(e, {
@@ -16957,46 +16981,46 @@ webpackJsonp([93], {
                                             }))
                                         ];
                                         return new Map([
-                                            [Object(s.d)("Viewers", "StreamSummaryExportTimeseriesStats"), st(a.viewers, function(e) {
+                                            [Object(s.d)("Viewers", "StreamSummaryExportTimeseriesStats"), ot(a.viewers, function(e) {
                                                 return e.values
                                             })],
-                                            [Object(s.d)("Live Views", "StreamSummaryExportTimeseriesStats"), st(a.liveViews, function(e) {
+                                            [Object(s.d)("Live Views", "StreamSummaryExportTimeseriesStats"), ot(a.liveViews, function(e) {
                                                 return e.totalViews
                                             })],
-                                            [Object(s.d)("New Followers", "StreamSummaryExportTimeseriesStats"), st(a.followers, function(e) {
+                                            [Object(s.d)("New Followers", "StreamSummaryExportTimeseriesStats"), ot(a.followers, function(e) {
                                                 return e.values
                                             })],
-                                            [Object(s.d)("Chatters", "StreamSummaryExportTimeseriesStats"), st(a.chat, function(e) {
+                                            [Object(s.d)("Chatters", "StreamSummaryExportTimeseriesStats"), ot(a.chat, function(e) {
                                                 return e.participants
                                             })],
-                                            [Object(s.d)("Chat Messages", "StreamSummaryExportTimeseriesStats"), st(a.chat, function(e) {
+                                            [Object(s.d)("Chat Messages", "StreamSummaryExportTimeseriesStats"), ot(a.chat, function(e) {
                                                 return e.messages
                                             })],
-                                            [Object(s.d)("Ad Breaks", "StreamSummaryExportTimeseriesStats"), st(a.commercials, function(e) {
+                                            [Object(s.d)("Ad Breaks", "StreamSummaryExportTimeseriesStats"), ot(a.commercials, function(e) {
                                                 return e.values
                                             })],
-                                            [Object(s.d)("Subscriptions", "StreamSummaryExportTimeseriesStats"), st(a.subscriptions, function(e) {
+                                            [Object(s.d)("Subscriptions", "StreamSummaryExportTimeseriesStats"), ot(a.subscriptions, function(e) {
                                                 return e.values
                                             })],
-                                            [Object(s.d)("Clips Created", "StreamSummaryExportTimeseriesStats"), st(a.clips, function(e) {
+                                            [Object(s.d)("Clips Created", "StreamSummaryExportTimeseriesStats"), ot(a.clips, function(e) {
                                                 return e.creates
                                             })],
-                                            [Object(s.d)("All Clip Views", "StreamSummaryExportTimeseriesStats"), st(a.clips, function(e) {
+                                            [Object(s.d)("All Clip Views", "StreamSummaryExportTimeseriesStats"), ot(a.clips, function(e) {
                                                 return e.plays
                                             })],
-                                            [Object(s.d)("Twitch Clip Views", "StreamSummaryExportTimeseriesStats"), st(a.clips, function(e) {
+                                            [Object(s.d)("Twitch Clip Views", "StreamSummaryExportTimeseriesStats"), ot(a.clips, function(e) {
                                                 return e.twitchPlays
                                             })],
-                                            [Object(s.d)("Reddit Clip Views", "StreamSummaryExportTimeseriesStats"), st(a.clips, function(e) {
+                                            [Object(s.d)("Reddit Clip Views", "StreamSummaryExportTimeseriesStats"), ot(a.clips, function(e) {
                                                 return e.redditPlays
                                             })],
-                                            [Object(s.d)("Facebook Clip Views", "StreamSummaryExportTimeseriesStats"), st(a.clips, function(e) {
+                                            [Object(s.d)("Facebook Clip Views", "StreamSummaryExportTimeseriesStats"), ot(a.clips, function(e) {
                                                 return e.facebookPlays
                                             })],
-                                            [Object(s.d)("Twitter Clip Views", "StreamSummaryExportTimeseriesStats"), st(a.clips, function(e) {
+                                            [Object(s.d)("Twitter Clip Views", "StreamSummaryExportTimeseriesStats"), ot(a.clips, function(e) {
                                                 return e.twitterPlays
                                             })],
-                                            [Object(s.d)("Other Clip Views", "StreamSummaryExportTimeseriesStats"), st(a.clips, function(e) {
+                                            [Object(s.d)("Other Clip Views", "StreamSummaryExportTimeseriesStats"), ot(a.clips, function(e) {
                                                 return e.otherPlays
                                             })]
                                         ]).forEach(function(e, t) {
@@ -17008,17 +17032,17 @@ webpackJsonp([93], {
                                                 start: t.start,
                                                 end: t.end
                                             }, "StreamSummaryExportTimeseriesStats"),
-                                            rows: Object(nt.c)(r)
+                                            rows: Object(it.c)(r)
                                         }
                                     }({
                                         interval: e.interval,
                                         timeseriesResponse: t
-                                    }), this.downloadFile(i.fileName, Object(nt.b)(i.rows)), [2]
+                                    }), this.downloadFile(i.fileName, Object(it.b)(i.rows)), [2]
                             }
                             var r
                         })
                     })
-                }, a.downloadFile = t.downloadFile || nt.a, a.alert = t.alert || window.alert, a.fetchAllTimeseries = t.fetchAllTimeseries || ft, a
+                }, a.downloadFile = t.downloadFile || it.a, a.alert = t.alert || window.alert, a.fetchAllTimeseries = t.fetchAllTimeseries || pt, a
             }
             return n.__extends(t, e), t.prototype.render = function() {
                 return i.createElement(R.a, {
@@ -17030,13 +17054,13 @@ webpackJsonp([93], {
             }, t
         }(i.Component);
         a("Rra7");
-        var yt, Mt = {
+        var Mt, gt = {
                 "data-test-selector": "subtitle"
             },
-            gt = {
+            vt = {
                 "data-test-selector": "error"
             },
-            vt = function(e) {
+            Lt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -17052,6 +17076,16 @@ webpackJsonp([93], {
                         }, function() {
                             return t.fetchCurrentStatData()
                         })
+                    }, t.onDatasetClick = function(e) {
+                        if (t.props.streamSummary && t.props.streamSummary.videoId) {
+                            var a = t.props.streamSummary.videoRecordedAt,
+                                n = t.props.streamSummary.videoId,
+                                i = (t.state.statData.dates[e].getTime() - a.getTime()) / 1e3,
+                                r = Object(et.b)(n.substring(1), {
+                                    t: i
+                                });
+                            window.open(r)
+                        }
                     }, t.formatTooltipLabel = function(e) {
                         return t.currentStat.formatTooltipLabel ? t.currentStat.formatTooltipLabel(e) : Object(s.d)("{label}: {value, number}", {
                             label: t.currentStat.titleMessage(),
@@ -17093,9 +17127,9 @@ webpackJsonp([93], {
                             key: t,
                             value: t
                         }, e.titleMessage())
-                    }))), i.createElement("div", n.__assign({}, Mt), Boolean(this.state.statData.values.length) && this.currentStat.subtitleMessage(this.props.streamSummary))), i.createElement("div", {
+                    }))), i.createElement("div", n.__assign({}, gt), Boolean(this.state.statData.values.length) && this.currentStat.subtitleMessage(this.props.streamSummary))), i.createElement("div", {
                         className: "timeseries-panel__chart-area"
-                    }, this.chartContent())), i.createElement(pt, {
+                    }, this.chartContent())), i.createElement(yt, {
                         streamSummary: this.props.streamSummary
                     })) : i.createElement(f._8, {
                         margin: {
@@ -17113,7 +17147,7 @@ webpackJsonp([93], {
                     })) : this.state.didError ? i.createElement(f.Q, n.__assign({
                         color: f.K.OverlayAlt,
                         fontSize: f.V.Size5
-                    }, gt), Object(s.d)("Whoops. Something went wrong.", "StreamSummaryTimeseriesPanel")) : 0 === this.state.statData.values.length ? i.createElement(f._8, {
+                    }, vt), Object(s.d)("Whoops. Something went wrong.", "StreamSummaryTimeseriesPanel")) : 0 === this.state.statData.values.length ? i.createElement(f._8, {
                         display: f.R.Flex,
                         flexDirection: f.T.Column,
                         alignItems: f.c.Center,
@@ -17131,9 +17165,10 @@ webpackJsonp([93], {
                     })), i.createElement(f.Q, {
                         color: f.K.OverlayAlt,
                         fontSize: f.V.Size5
-                    }, Object(s.d)("Not enough data for us to display", "StreamSummaryTimeseriesPanel"))) : i.createElement(at, {
+                    }, Object(s.d)("Not enough data for us to display", "StreamSummaryTimeseriesPanel"))) : i.createElement(nt, {
                         datasetLabel: this.currentStat.titleMessage(),
                         labels: this.formattedDates,
+                        onDatasetClick: this.onDatasetClick,
                         values: this.state.statData.values,
                         formatTooltipLabel: this.formatTooltipLabel
                     })
@@ -17191,12 +17226,12 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.PureComponent),
-            Lt = a("FsFC");
+            bt = a("FsFC");
         ! function(e) {
             e.AverageViewers = "average-viewers", e.NewFollowers = "new-followers"
-        }(yt || (yt = {}));
-        var bt = [{
-                fetch: ct,
+        }(Mt || (Mt = {}));
+        var kt = [{
+                fetch: mt,
                 titleMessage: function() {
                     return Object(s.d)("Average Viewers", "StreamSummaryTimeseriesStats")
                 },
@@ -17221,7 +17256,7 @@ webpackJsonp([93], {
                         return n.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, ht(e, t)];
+                                    return [4, ft(e, t)];
                                 case 1:
                                     return [2, {
                                         isError: (a = n.sent()).isError,
@@ -17249,7 +17284,7 @@ webpackJsonp([93], {
                     }, "StreamSummaryTimeseriesStats")
                 }
             }, {
-                fetch: mt,
+                fetch: _t,
                 titleMessage: function() {
                     return Object(s.d)("New Followers", "StreamSummaryTimeseriesStats")
                 },
@@ -17264,7 +17299,7 @@ webpackJsonp([93], {
                     }, "StreamSummaryTimeseriesStats")
                 }
             }, {
-                fetch: _t,
+                fetch: ht,
                 titleMessage: function() {
                     return Object(s.d)("New Subscriptions", "StreamSummaryTimeseriesStats")
                 },
@@ -17285,7 +17320,7 @@ webpackJsonp([93], {
                         return n.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, dt(e, t)];
+                                    return [4, lt(e, t)];
                                 case 1:
                                     return [2, {
                                         isError: (a = n.sent()).isError,
@@ -17319,7 +17354,7 @@ webpackJsonp([93], {
                         return n.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, dt(e, t)];
+                                    return [4, lt(e, t)];
                                 case 1:
                                     return [2, {
                                         isError: (a = n.sent()).isError,
@@ -17347,13 +17382,13 @@ webpackJsonp([93], {
                     }, "StreamSummaryTimeseriesStats")
                 }
             }, {
-                fetch: ut,
+                fetch: ct,
                 titleMessage: function() {
                     return Object(s.d)("Ad Breaks", "StreamSummaryTimeseriesStats")
                 },
                 subtitleMessage: function(e) {
                     return Object(s.d)("<x:time>{time} of ad breaks</x:time> for this stream", {
-                        time: Object(Lt.b)(e.commercialLengthTotal, Lt.a.HumanizedShort),
+                        time: Object(bt.b)(e.commercialLengthTotal, bt.a.HumanizedShort),
                         "x:time": function(e) {
                             return i.createElement("strong", {
                                 key: "time"
@@ -17362,7 +17397,7 @@ webpackJsonp([93], {
                     }, "StreamSummaryTimeseriesStats")
                 },
                 formatTooltipLabel: function(e) {
-                    return Object(Lt.b)(e, Lt.a.HumanizedShort)
+                    return Object(bt.b)(e, bt.a.HumanizedShort)
                 }
             }, {
                 fetch: function(e, t) {
@@ -17371,7 +17406,7 @@ webpackJsonp([93], {
                         return n.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, lt(e, t)];
+                                    return [4, ut(e, t)];
                                 case 1:
                                     return [2, {
                                         isError: (a = n.sent()).isError,
@@ -17405,7 +17440,7 @@ webpackJsonp([93], {
                         return n.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, lt(e, t)];
+                                    return [4, ut(e, t)];
                                 case 1:
                                     return [2, {
                                         isError: (a = n.sent()).isError,
@@ -17433,17 +17468,17 @@ webpackJsonp([93], {
                     }, "StreamSummaryTimeseriesStats")
                 }
             }],
-            kt = a("FuaS"),
-            Yt = a("6w0d"),
-            Dt = {
+            Yt = a("FuaS"),
+            Dt = a("6w0d"),
+            wt = {
                 "data-test-selector": "summary-tip-message"
             },
-            wt = {
+            St = {
                 "data-test-selector": "summary-learn-more-cta"
             },
-            St = "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
-            xt = "VoHiYo",
-            Tt = function(e) {
+            xt = "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
+            Tt = "VoHiYo",
+            jt = function(e) {
                 var t = e.tip;
                 return e.isLoading ? i.createElement(f._8, {
                     margin: {
@@ -17467,8 +17502,8 @@ webpackJsonp([93], {
                         bottom: 1
                     }
                 }, i.createElement(f.m, {
-                    src: St,
-                    alt: xt,
+                    src: xt,
+                    alt: Tt,
                     size: 30
                 }), i.createElement(f._8, {
                     margin: {
@@ -17477,21 +17512,21 @@ webpackJsonp([93], {
                 }, i.createElement(f.Q, n.__assign({
                     type: f._49.Span,
                     fontSize: f.V.Size5
-                }, Dt), t.body), i.createElement(jt, {
+                }, wt), t.body), i.createElement(Ot, {
                     url: t.url
                 }))))))
             },
-            jt = function(e) {
+            Ot = function(e) {
                 var t = e.url;
                 return t ? i.createElement(f.Q, n.__assign({
                     type: f._49.Span,
                     fontSize: f.V.Size5
-                }, wt), " ", i.createElement("a", {
+                }, St), " ", i.createElement("a", {
                     target: "_blank",
                     href: t
                 }, Object(s.d)("Learn More", "StreamTipsLearnMoreCTA"))) : null
             },
-            Ot = function(e) {
+            Ht = function(e) {
                 function t(t) {
                     var a = e.call(this, t) || this;
                     return a.state = {
@@ -17501,7 +17536,7 @@ webpackJsonp([93], {
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.requestTip()
                 }, t.prototype.render = function() {
-                    return this.state.tip ? i.createElement(Tt, {
+                    return this.state.tip ? i.createElement(jt, {
                         tip: this.state.tip,
                         isLoading: this.props.isLoading
                     }) : null
@@ -17511,10 +17546,10 @@ webpackJsonp([93], {
                         return n.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, Object(Yt.a)({
+                                    return [4, Object(Dt.a)({
                                         path: "/v5/stream_summary/tip",
                                         headers: {
-                                            "Accept-Language": Object(kt.a)() || "en"
+                                            "Accept-Language": Object(Yt.a)() || "en"
                                         }
                                     })];
                                 case 1:
@@ -17524,8 +17559,8 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            Ht = a("a+9f"),
-            Pt = function(e) {
+            Pt = a("a+9f"),
+            Ct = function(e) {
                 var t = e.streamSummary,
                     a = e.topClips;
                 if (a.isLoading) return i.createElement(f._8, {
@@ -17539,7 +17574,7 @@ webpackJsonp([93], {
                 var n = Object(s.d)("View More Clips", "StreamSummaryTopClipsPanelCTA");
                 return i.createElement(I.a, {
                     title: Object(s.d)("What were my top clips?", "StreamSummaryTopClipsPanel")
-                }, i.createElement(Ct, {
+                }, i.createElement(Et, {
                     clipsAttrs: a
                 }), t ? i.createElement(R.a, {
                     message: n,
@@ -17547,7 +17582,7 @@ webpackJsonp([93], {
                     targetBlank: !0
                 }) : i.createElement("p", null, n))
             },
-            Ct = function(e) {
+            Et = function(e) {
                 if (e.clipsAttrs.isLoading)
                     for (var t = [], a = 0; a < 5; a++) t.push(i.createElement(f._35, {
                         padding: {
@@ -17562,28 +17597,28 @@ webpackJsonp([93], {
                 return i.createElement(f._35, {
                     borderBottom: !0
                 }, e.clipsAttrs.clips.slice(0, 5).map(function(e, t) {
-                    return i.createElement(Ht.a, n.__assign({}, e, {
+                    return i.createElement(Pt.a, n.__assign({}, e, {
                         key: t
                     }))
                 }))
             },
-            Et = a("4mYF"),
-            At = a("NqVV"),
-            Ft = a("6C1Z"),
-            Wt = function(e) {
+            At = a("4mYF"),
+            Ft = a("NqVV"),
+            Wt = a("6C1Z"),
+            It = function(e) {
                 var t = e.streamSummary;
                 return t ? t.videoId ? i.createElement(I.a, {
                     title: Object(s.d)("What is the video for this stream?", "StreamSummaryVodPanel")
-                }, i.createElement(Et.a, {
+                }, i.createElement(At.a, {
                     key: t.videoId,
-                    type: Et.b.Video,
+                    type: At.b.Video,
                     viewCount: t.videoViews,
                     thumbnailURL: t.videoThumbnail
-                }, i.createElement(At.a, {
+                }, i.createElement(Ft.a, {
                     vodID: t.videoId
                 })), i.createElement(R.a, {
                     message: Object(s.d)("Highlight video", "StreamSummaryVodPanelCTA"),
-                    linkTo: Object(Ft.c)(t.channel.name, t.videoId.substring(1)),
+                    linkTo: Object(Wt.c)(t.channel.name, t.videoId.substring(1)),
                     targetBlank: !0
                 })) : null : i.createElement(f._8, {
                     margin: {
@@ -17593,8 +17628,8 @@ webpackJsonp([93], {
                     height: 448
                 }))
             },
-            It = a("ItYp"),
-            Rt = (a("4CR3"), function(e) {
+            Rt = a("ItYp"),
+            zt = (a("4CR3"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -17622,7 +17657,7 @@ webpackJsonp([93], {
                                 channelName: e.props.channelName,
                                 previousStreamSummary: t.previous,
                                 streamSummary: t.current
-                            }), i.createElement(Nt, {
+                            }), i.createElement(Vt, {
                                 channelName: e.props.channelName,
                                 streamSummaryID: e.props.streamSummaryID,
                                 data: e.props.data,
@@ -17637,12 +17672,12 @@ webpackJsonp([93], {
                     }))
                 }, t
             }(i.Component)),
-            zt = Object(r.compose)(Object(c.d)("StreamSummaryPage", {
+            Nt = Object(r.compose)(Object(c.d)("StreamSummaryPage", {
                 destination: l.a.ChannelDashboardStreamSummary,
                 autoReportInteractive: !0
             }), Object(d.a)({
                 location: u.PageviewLocation.DashboardStreamSummary
-            }), Object(o.a)(It, {
+            }), Object(o.a)(Rt, {
                 options: function(e) {
                     return {
                         variables: {
@@ -17650,9 +17685,9 @@ webpackJsonp([93], {
                         }
                     }
                 }
-            }))(Rt);
+            }))(zt);
 
-        function Nt(e) {
+        function Vt(e) {
             var t = e.streamSummaryCursor,
                 a = e.data,
                 n = s.b.get("stream_summary_new_referrals", !1),
@@ -17679,15 +17714,15 @@ webpackJsonp([93], {
                     left: 1,
                     right: 1
                 }
-            }, s.b.get("stream_summary_timeseries_panel", !1) ? i.createElement(vt, {
+            }, s.b.get("stream_summary_timeseries_panel", !1) ? i.createElement(Lt, {
                 streamSummary: t.current,
-                timeseriesStats: bt
+                timeseriesStats: kt
             }) : i.createElement(E, {
                 streamSummary: t.current
-            }), i.createElement(Pt, {
+            }), i.createElement(Ct, {
                 streamSummary: t.current,
                 topClips: e.topClips
-            }), s.b.get("stream_summary_vod_panel", !1) && i.createElement(Wt, {
+            }), s.b.get("stream_summary_vod_panel", !1) && i.createElement(It, {
                 streamSummary: t.current
             }), n && i.createElement(h.a, {
                 streamSummaries: t.current ? [t.current] : [],
@@ -17711,7 +17746,7 @@ webpackJsonp([93], {
                     left: 1,
                     right: 1
                 }
-            }, !r && i.createElement(Ot, {
+            }, !r && i.createElement(Ht, {
                 isLoading: !t.current
             }), i.createElement(X, {
                 quest: t.current && e.achievementProgressionsQuery.quests[0]
@@ -17721,7 +17756,7 @@ webpackJsonp([93], {
             }))))
         }
         a.d(t, "StreamSummaryPage", function() {
-            return zt
+            return Nt
         }), a.d(t, "PublicProps", function() {})
     },
     tkWw: function(e, t, a) {
@@ -19101,4 +19136,4 @@ webpackJsonp([93], {
         })
     }
 });
-//# sourceMappingURL=pages.stream-summary-768e54aa73bfaf9afbe6d77bc2c0527a.js.map
+//# sourceMappingURL=pages.stream-summary-e13097e171f56ae3116f776664c0ccec.js.map

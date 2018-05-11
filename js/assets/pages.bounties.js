@@ -1,4 +1,4 @@
-webpackJsonp([111], {
+webpackJsonp([112], {
     "1zmE": function(e, t, n) {
         var a = {
             kind: "Document",
@@ -256,8 +256,8 @@ webpackJsonp([111], {
         ! function(e) {
             e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
         }(g || (g = {})), (E || (E = {})).PAY_TO_STREAM = "PAY_TO_STREAM";
-        var k = n("Is0m"),
-            B = function(e) {
+        var B = n("Is0m"),
+            k = function(e) {
                 function t() {
                     var t, n = null !== e && e.apply(this, arguments) || this;
                     return n.state = {
@@ -376,7 +376,7 @@ webpackJsonp([111], {
                         type: w._49.Strong
                     }, "Bounty Requirements:")), l.createElement("br", null), l.createElement("ul", {
                         className: "accept-bounty-modal__bounty-requirements"
-                    }, l.createElement("li", null, "Influencer is a party to a Content License Agreement (“Agreement”) with Twitch."), l.createElement("li", null, "Influencer agrees to provide the services as set forth in the Bounty. As compensation for the services, Twitch will pay Influencer in accordance with the terms set forth in the Bounty. Payments by Twitch to Influencer are based on certain concurrent user (“CCU”) requirements being met. If Influencer does not meet the CCU requirements as set forth in the Bounty, Influencer will receive a pro rata portion of the Compensation. In addition, if Influencer does not meet the Minimum Bar as defined above, then no portion of the Compensation will be payable to Influencer."), l.createElement("li", null, "Title of broadcast related to the Bounty will state any relationship with the Bounty Partner as instructed by Twitch: i.e. “Ad Content of X,” “Paid Advertisement of X,” or “Sponsored Ad of X.”  Influencer must include any disclosures provided by Twitch for the purposes of disclosing the relationship between Twitch and Bounty Partner."), l.createElement("li", null, "Influencer to save a VOD of the broadcast as a highlight to their Twitch channel."), l.createElement("li", null, "If applicable, Influencer to post on social media accounts/tweet at the start of the broadcast to raise awareness for the Bounty. These posts/tweets and any subsequent posts in connection with the Bounty must contain “#ad”."), l.createElement("li", null, "Influencer shall not commit any act or make any statement that disparages Twitch, Bounty Partner, or their respective products/services, or brings Twitch or the Bounty Partner disrepute, contempt, scandal, or ridicule for the Bounty Period and six (6) months thereafter.  Twitch may immediately take down, or request the take down of, any Influencer content that violates this section and Influencer shall cooperate with Twitch to execute such takedowns."), l.createElement("li", null, "If Influencer fails to comply with any of the above Bounty requirements, Twitch may at its discretion immediately terminate this Bounty Order and disqualify the influencer from participating in future Bounties.")), l.createElement("br", null), l.createElement(w._8, {
+                    }, l.createElement("li", null, "Influencer is a party to a Content License Agreement (“Agreement”) with Twitch."), l.createElement("li", null, "Influencer agrees to provide the services as set forth in the Bounty. As compensation for the services, Twitch will pay Influencer in accordance with the terms set forth in the Bounty. Payments by Twitch to Influencer are based on certain concurrent user (“CCU”) requirements being met. If Influencer does not meet the CCU requirements as set forth in the Bounty, Influencer will receive a pro rata portion of the Compensation. In addition, if Influencer does not meet the Minimum Bar as defined above, then no portion of the Compensation will be payable to Influencer."), l.createElement("li", null, 'Title of the broadcast related to the Bounty will state any relationship with the Bounty Partner as instructed by Twitch: i.e. "Ad Content of X", "Paid Advertisement of X" or "#sponsored".'), l.createElement("li", null, "Influencer to save a VOD of the broadcast as a highlight to their Twitch channel."), l.createElement("li", null, "If applicable, Influencer to post on social media accounts/tweet at the start of the broadcast to raise awareness for the Bounty. These posts/tweets and any subsequent posts in connection with the Bounty must contain “#sponsored”."), l.createElement("li", null, "Influencer shall not commit any act or make any statement that disparages Twitch, Bounty Partner, or their respective products/services, or brings Twitch or the Bounty Partner disrepute, contempt, scandal, or ridicule for the Bounty Period and six (6) months thereafter.  Twitch may immediately take down, or request the take down of, any Influencer content that violates this section and Influencer shall cooperate with Twitch to execute such takedowns."), l.createElement("li", null, "If Influencer fails to comply with any of the above Bounty requirements, Twitch may at its discretion immediately terminate this Bounty Order and disqualify the influencer from participating in future Bounties.")), l.createElement("br", null), l.createElement(w._8, {
                         textAlign: w._45.Center
                     }, l.createElement(w.Q, {
                         type: w._49.Strong
@@ -497,9 +497,9 @@ webpackJsonp([111], {
                     }, Object(c.d)("Close", "AcceptBountyModal")))))
                 }, t
             }(l.PureComponent),
-            C = Object(d.a)(k, {
+            C = Object(d.a)(B, {
                 name: "claimBounty"
-            })(B),
+            })(k),
             T = (n("KP8S"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -519,7 +519,7 @@ webpackJsonp([111], {
                     }))
                 }, t
             }(l.Component));
-        var I, A, S, O = Object(v.b)(null, function(e) {
+        var I, A, O, S = Object(v.b)(null, function(e) {
             return Object(s.b)({
                 closeModal: _.c
             }, e)
@@ -529,9 +529,9 @@ webpackJsonp([111], {
         }(I || (I = {})), (A || (A = {})).PAY_TO_STREAM = "PAY_TO_STREAM",
             function(e) {
                 e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
-            }(S || (S = {}));
-        var N = n("dwSm"),
-            x = function(e) {
+            }(O || (O = {}));
+        var x = n("dwSm"),
+            N = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -672,9 +672,9 @@ webpackJsonp([111], {
                     }, n))))
                 }, t
             }(l.PureComponent),
-            D = Object(d.a)(N, {
+            D = Object(d.a)(x, {
                 name: "cancelBounty"
-            })(x),
+            })(N),
             P = (n("IuHc"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -698,12 +698,13 @@ webpackJsonp([111], {
                     closeModal: _.c
                 }, e)
             })(P),
+            j = n("lfvs"),
             R = n("F8kA");
         ! function(e) {
             e.ViewDetails = "view_details", e.ViewLegal = "view_legal", e.DeclineLegal = "decline_legal", e.AcceptLegal = "accept_legal", e.Terms = "terms", e.CancelBounty = "cancel_bounty", e.ViewTermsOfUse = "view_terms_of_use", e.DismissFTUE = "dismiss_first_time_user_experience"
         }(M || (M = {}));
         n("j2K2");
-        var j = {
+        var U = {
                 "data-test-selector": "bounty-expanded-section"
             },
             F = function(e) {
@@ -717,7 +718,18 @@ webpackJsonp([111], {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, l.createElement(w.Q, null, Object(c.d)("Game key included with bounty activation. Keys are emailed 72 hours after bounty activation.", "BountyItem")));
+                            }, l.createElement(w.Q, null, Object(c.d)("Game key included with bounty activation. Keys are emailed 72 hours after bounty activation.", "BountyItem"))),
+                            s = e.campaign.details ? l.createElement(w._8, {
+                                fullWidth: !0,
+                                margin: {
+                                    bottom: 1
+                                }
+                            }, l.createElement(j, {
+                                source: e.campaign.details,
+                                renderers: {
+                                    Link: t.renderNewWindowLink
+                                }
+                            })) : null;
                         switch (e.status) {
                             case g.AVAILABLE:
                                 n = l.createElement(w.v, {
@@ -735,11 +747,11 @@ webpackJsonp([111], {
                                 }, Object(c.d)("Terms", "BountyItem"))), l.createElement(w.v, {
                                     onClick: t.showCancelBountyModal,
                                     type: w.B.Hollow
-                                }, Object(c.d)("Cancel", "BountyItem")));
+                                }, Object(c.d)("Cancel Bounty", "BountyItem")));
                                 break;
                             case g.COMPLETED:
                             case g.CANCELLED:
-                                o = null
+                                o = null, s = null
                         }
                         return l.createElement(w.e, {
                             type: w.j.SlideInTop,
@@ -749,7 +761,7 @@ webpackJsonp([111], {
                         }, l.createElement(w._35, i.__assign({
                             className: "bounty-item__expanded",
                             elevation: 1
-                        }, j, {
+                        }, U, {
                             padding: 2,
                             display: w.R.Flex,
                             flexDirection: w.T.Column,
@@ -777,7 +789,7 @@ webpackJsonp([111], {
                             padding: {
                                 y: 2
                             }
-                        }, t.renderDescriptionText(e)))), o, l.createElement(w._8, {
+                        }, t.renderDescriptionText(e)))), o, s, l.createElement(w._8, {
                             fullWidth: !0,
                             display: w.R.Flex,
                             flexDirection: w.T.Row,
@@ -815,6 +827,11 @@ webpackJsonp([111], {
                             handleBountyStatusChanged: t.props.handleBountyStatusChanged,
                             refreshData: t.props.refreshData
                         })
+                    }, t.renderNewWindowLink = function(e) {
+                        return l.createElement("a", {
+                            href: e.href,
+                            target: "_blank"
+                        }, e.children)
                     }, t.trackImpression = function() {
                         var e, n;
                         e = {
@@ -937,31 +954,53 @@ webpackJsonp([111], {
                         background: w.n.Base
                     }, a)))), n && this.renderExpanded(e))
                 }, t.prototype.renderDescriptionText = function(e) {
-                    var t = 0;
+                    var t = e.payoutCents || 0,
+                        n = e.maximumPayoutCents || 0,
+                        a = e.maximumPayoutCCU || 0,
+                        r = 0;
                     switch (e.status) {
                         case g.COMPLETED:
-                            return e.payoutCents === e.maximumPayoutCents ? Object(c.d)("Based on your concurrent viewers, you got the max payout of <x:bold>${maxPayout}</x:bold>.  Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
+                            return 0 === e.payoutCents ? Object(c.d)("Unfortunately your average concurrent viewers did not reach the minimum requirement of <x:bold>{ccuMin} concurrent viewers</x:bold> and you will not receive a payout for this bounty. Make sure to do bounties during your peak hours to increase your chances of a good payout.", {
                                 "x:bold": function(e) {
                                     return l.createElement(w.Q, {
-                                        key: "x_bold_text_" + ++t,
+                                        key: "x_bold_text_" + ++r,
                                         type: w._49.Strong
                                     }, e)
                                 },
-                                maxPayout: (e.maximumPayoutCents || 0) / 100
+                                ccuMin: e.minimumPayoutCCU || 0
+                            }, "BountyItem") : t === n ? Object(c.d)("Based on your concurrent viewers, you got the max payout of <x:bold>${maxPayout}</x:bold>.  Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
+                                "x:bold": function(e) {
+                                    return l.createElement(w.Q, {
+                                        key: "x_bold_text_" + ++r,
+                                        type: w._49.Strong
+                                    }, e)
+                                },
+                                maxPayout: n / 100
+                            }, "BountyItem") : a ? Object(c.d)("You hit <x:bold>{percentPayout}%</x:bold> of your {ccuMax} concurrent viewers goal, for a payout of <x:bold>${payout}</x:bold> out of a potential ${maxPayout}. Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
+                                "x:bold": function(e) {
+                                    return l.createElement(w.Q, {
+                                        key: "x_bold_text_" + ++r,
+                                        type: w._49.Strong
+                                    }, e)
+                                },
+                                percentPayout: Math.floor(t / n * 100),
+                                ccuMax: a,
+                                payout: t / 100,
+                                maxPayout: n / 100
                             }, "BountyItem") : Object(c.d)("Based on your concurrent viewers, you got a payout of <x:bold>${payout}</x:bold> out of a potential ${maxPayout}. Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
                                 "x:bold": function(e) {
                                     return l.createElement(w.Q, {
-                                        key: "x_bold_text_" + ++t,
+                                        key: "x_bold_text_" + ++r,
                                         type: w._49.Strong
                                     }, e)
                                 },
-                                payout: (e.payoutCents || 0) / 100,
-                                maxPayout: e.maximumPayoutCents / 100
+                                payout: t / 100,
+                                maxPayout: n / 100
                             }, "BountyItem");
                         case g.CANCELLED:
                             return e.lastModifiedAt ? Object(c.d)("This bounty was cancelled on {dateCancelled}.", {
                                 dateCancelled: l.createElement(w.Q, {
-                                    key: "x_bold_text_" + ++t,
+                                    key: "x_bold_text_" + ++r,
                                     type: w._49.Strong
                                 }, Object(c.c)(new Date(e.lastModifiedAt)))
                             }, "BountyItem") : Object(c.d)("This bounty was cancelled.", "BountyItem");
@@ -969,39 +1008,39 @@ webpackJsonp([111], {
                             return l.createElement(l.Fragment, null, l.createElement(w.Q, {
                                 type: w._49.P,
                                 key: "bounty_description_" + e.id
-                            }, Object(c.d)("Stream for 1 hour straight with an average of {ccuMax} <x:bold>concurrent viewers</x:bold>. If you don’t hit an average of at least {ccuMin} <x:bold>concurrents</x:bold>, you will not receive a payout. If you achieve the minimum but do not reach the goal goal, you will get a <x:bold>proportional percentage</x:bold> of the payout.", {
+                            }, Object(c.d)("Stream for 1 hour straight with an average of {ccuMax} <x:bold>concurrent viewers</x:bold>. If you don’t hit an average of at least {ccuMin} <x:bold>concurrents</x:bold>, you will not receive a payout. If you achieve the minimum but do not reach the goal, you will get a <x:bold>proportional percentage</x:bold> of the payout.", {
                                 "x:bold": function(e) {
                                     return l.createElement(w.Q, {
-                                        key: "x_bold_text_" + ++t,
+                                        key: "x_bold_text_" + ++r,
                                         type: w._49.Strong
                                     }, e)
                                 },
                                 ccuMax: l.createElement(w.Q, {
                                     type: w._49.Strong
-                                }, e.maximumPayoutCCU || 0),
+                                }, a),
                                 ccuMin: l.createElement(w.Q, {
                                     type: w._49.Strong
-                                }, e.minimumPayoutCCU || 0)
+                                }, e.minimumPayoutCCU)
                             }, "BountyItem")), l.createElement("ul", {
                                 className: "bounty-item__description-list",
                                 key: "bounty_rule_list_" + e.id
                             }, l.createElement("li", {
                                 key: "bounty_rule_1_" + e.id
-                            }, Object(c.d)("Don't disparage the brand.", "BountyItem")), l.createElement("li", {
+                            }, Object(c.d)("No needless bad-mouthing of the content.", "BountyItem")), l.createElement("li", {
                                 key: "bounty_rule_2_" + e.id
-                            }, Object(c.d)("Put <x:bold>#Sponsored</x:bold> in your stream title.", {
+                            }, Object(c.d)("Put <x:bold>#sponsored</x:bold> in your stream title.", {
                                 "x:bold": function(e) {
                                     return l.createElement(w.Q, {
-                                        key: "x_bold_text_" + ++t,
+                                        key: "x_bold_text_" + ++r,
                                         type: w._49.Strong
                                     }, e)
                                 }
                             }, "BountyItem")), l.createElement("li", {
                                 key: "bounty_rule_3_" + e.id
-                            }, Object(c.d)('Turn on the <x:bold>"Store Past Broadcasts"</x:bold> option in your <x:link>Channel Settings</x:link>.', {
+                            }, Object(c.d)('Turn on the "<x:bold>Store Past Broadcasts</x:bold>" option in your <x:link>Channel Settings</x:link>.', {
                                 "x:bold": function(e) {
                                     return l.createElement(w.Q, {
-                                        key: "x_bold_text_" + ++t,
+                                        key: "x_bold_text_" + ++r,
                                         type: w._49.Strong
                                     }, e)
                                 },
@@ -1051,22 +1090,22 @@ webpackJsonp([111], {
                     }
                 }, t
             }(l.Component),
-            U = Object(s.d)(Object(f.d)("BountyItem", {
+            Q = Object(s.d)(Object(f.d)("BountyItem", {
                 autoReportInteractive: !0
             }))(F);
-        var Q = Object(v.b)(null, function(e) {
+        var V = Object(v.b)(null, function(e) {
                 return Object(s.b)({
                     showAcceptBountyModal: function(e) {
                         var t = i.__rest(e, []);
-                        return Object(_.d)(O, t)
+                        return Object(_.d)(S, t)
                     },
                     showCancelBountyModal: function(e) {
                         var t = i.__rest(e, []);
                         return Object(_.d)(L, t)
                     }
                 }, e)
-            })(U),
-            V = function(e) {
+            })(Q),
+            W = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1156,7 +1195,7 @@ webpackJsonp([111], {
                     }, Object(c.d)("OK", "TermsOfUseBountyModal")))))
                 }, t
             }(l.PureComponent),
-            W = (n("nELE"), function(e) {
+            Y = (n("nELE"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1164,18 +1203,18 @@ webpackJsonp([111], {
                     return l.createElement(w._35, {
                         className: "accept-bounty-modal__container",
                         background: w.n.Base
-                    }, l.createElement(V, {
+                    }, l.createElement(W, {
                         "data-test-selector": "tou-bounty-modal-selector",
                         onClose: this.props.closeModal
                     }))
                 }, t
             }(l.Component));
-        var Y = Object(v.b)(null, function(e) {
+        var q = Object(v.b)(null, function(e) {
                 return Object(s.b)({
                     closeModal: _.c
                 }, e)
-            })(W),
-            q = function(e) {
+            })(Y),
+            H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.showModal = function(e) {
@@ -1194,14 +1233,14 @@ webpackJsonp([111], {
                     }, Object(c.d)("Terms of Use", "TermsOfUseBountyCard")))))
                 }, t
             }(l.Component);
-        var H = Object(v.b)(null, function(e) {
+        var G = Object(v.b)(null, function(e) {
                 return Object(s.b)({
                     showTOUModal: function() {
-                        return Object(_.d)(Y, {})
+                        return Object(_.d)(q, {})
                     }
                 }, e)
-            })(q),
-            G = (n("MRI1"), function(e) {
+            })(H),
+            K = (n("MRI1"), function(e) {
                 return l.createElement(w._35, {
                     className: "bb-page",
                     margin: {
@@ -1230,7 +1269,7 @@ webpackJsonp([111], {
                 }, l.createElement(w.C, {
                     background: w.n.Base,
                     elevation: 1
-                }, l.createElement(H, {
+                }, l.createElement(G, {
                     trackPageAction: e.trackPageAction
                 })))), l.createElement(w._35, {
                     className: "bb-col-wrapper bb-col-wrapper--r",
@@ -1252,8 +1291,8 @@ webpackJsonp([111], {
                     }
                 }, e.right)))
             }),
-            K = (n("y0HA"), "bounty_board_ftue_banner"),
-            z = function(e) {
+            z = (n("y0HA"), "bounty_board_ftue_banner"),
+            $ = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -1262,10 +1301,10 @@ webpackJsonp([111], {
                         var e, t = n.dismissedBanners[n.bannerKey],
                             a = "number" == typeof t ? t + 1 : 1,
                             r = i.__assign({}, n.dismissedBanners, ((e = {})[n.bannerKey] = a, e));
-                        c.l.set(K, r), n.props.trackPageAction(M.DismissFTUE), n.setState({
+                        c.l.set(z, r), n.props.trackPageAction(M.DismissFTUE), n.setState({
                             didDismiss: !0
                         })
-                    }, n.dismissedBanners = c.l.get(K, {}), n
+                    }, n.dismissedBanners = c.l.get(z, {}), n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = 0;
@@ -1299,7 +1338,7 @@ webpackJsonp([111], {
                         margin: {
                             top: 2
                         }
-                    }, l.createElement(w.Q, null, Object(c.d)("Some quick ground rules you should know if you pick up a bounty:", "BountiesPageFTUEBanner")), l.createElement(w._2, {
+                    }, l.createElement(w.Q, null, Object(c.d)("Bounty Board allows you to browse and accept sponsored opportunities (AKA bounties) from brands. Before you activate a bounty, here are a couple important things to keep in mind:", "BountiesPageFTUEBanner")), l.createElement(w._2, {
                         margin: {
                             left: 1
                         }
@@ -1307,7 +1346,7 @@ webpackJsonp([111], {
                         className: "bb-ftue__rules-list"
                     }, l.createElement("li", {
                         key: "bb_ftue_rule_1"
-                    }, Object(c.d)('<x:bold>No disparaging the brand.</x:bold> You can share your opinion of the content, even if you’re not totally into it, but there’s a difference between "This isn’t my thing" and "This is garbage".', {
+                    }, Object(c.d)("<x:bold>No needless bad-mouthing.</x:bold> You can share your authentic opinion of the content, even if it’s not entirely positive. However, be mindful of the difference between constructive feedback, which is welcome, and mean-spirited bashing, which is not.", {
                         "x:bold": function(t) {
                             return l.createElement(w.Q, {
                                 key: "x_bold_" + ++e,
@@ -1316,7 +1355,15 @@ webpackJsonp([111], {
                         }
                     }, "BountiesPageFTUEBanner")), l.createElement("li", {
                         key: "bb_ftue_rule_2"
-                    }, Object(c.d)("<x:bold>Put #Sponsored in your stream title.</x:bold> We require you to disclose that you’re participating in a sponsored stream and it’s one way we track bounty completion. If you don’t do it, you won't get paid.", {
+                    }, Object(c.d)('<x:bold>We’ll use the stream title, game and Past Broadcast to verify bounty completion.</x:bold> Update your stream title to include <x:bold>#sponsored</x:bold>, stream under the correct game, and have "Store Past Broadcasts" on in your <x:link>Channel Settings</x:link>. Otherwise, you won\'t get paid.', {
+                        "x:link": function(e) {
+                            return l.createElement("a", {
+                                key: "settings_link",
+                                href: "https://www.twitch.tv/broadcast/dashboard/settings",
+                                target: "_blank",
+                                rel: "noopener noreferrer"
+                            }, e)
+                        },
                         "x:bold": function(t) {
                             return l.createElement(w.Q, {
                                 key: "x_bold_" + ++e,
@@ -1325,24 +1372,16 @@ webpackJsonp([111], {
                         }
                     }, "BountiesPageFTUEBanner")), l.createElement("li", {
                         key: "bb_ftue_rule_3"
-                    }, Object(c.d)('<x:bold>Turn on the "Store Past Broadcasts" option in your</x:bold> <x:link>Channel Settings</x:link>. This is another method we use to track proper bounty completion.', {
+                    }, Object(c.d)("<x:bold>We require you to disclose your bounties to viewers.</x:bold> In addition to including <x:bold>#sponsored</x:bold> in your stream title, make sure that your viewers are aware that your bounties are sponsored content.", {
                         "x:bold": function(t) {
                             return l.createElement(w.Q, {
                                 key: "x_bold_" + ++e,
                                 type: w._49.Strong
                             }, t)
-                        },
-                        "x:link": function(e) {
-                            return l.createElement("a", {
-                                key: "settings_link",
-                                href: "https://www.twitch.tv/broadcast/dashboard/settings",
-                                target: "_blank",
-                                rel: "noopener noreferrer"
-                            }, e)
                         }
                     }, "BountiesPageFTUEBanner")), l.createElement("li", {
                         key: "bb_ftue_rule_4"
-                    }, Object(c.d)("<x:bold>Payouts are based on your typical concurrent viewer numbers being met</x:bold>. This exact number has been outlined in your onboarding email. If your average during the bounty stream is below this amount, you will get a <x:bold>partial amount</x:bold> of that payout", {
+                    }, Object(c.d)("<x:bold>Payouts are based on concurrent viewer requirements being met.</x:bold> You’ll get a payout for hitting the minimum viewer requirements provided in the bounty. If you achieve the minimum but don't reach the average viewer goal, you’ll get a percentage of the maximum payout.", {
                         "x:bold": function(t) {
                             return l.createElement(w.Q, {
                                 key: "x_bold_" + ++e,
@@ -1379,13 +1418,13 @@ webpackJsonp([111], {
                     configurable: !0
                 }), t
             }(l.Component),
-            $ = n("WmaG"),
-            X = n("1zmE"),
-            J = function(e) {
+            X = n("WmaG"),
+            J = n("1zmE"),
+            Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.AVAILABLE = Object(c.d)("Available", "BountiesPage"), t.COMPLETED = Object(c.d)("Completed", "BountiesPage"), t.IN_PROGRESS = Object(c.d)("In Progress", "BountiesPage"), t.impressionGroupID = Object(p.b)(), t.renderBounty = function(e) {
-                        return l.createElement(Q, {
+                        return l.createElement(V, {
                             bounty: e,
                             channelID: t.props.data.user.id,
                             channelName: t.props.match.params.channelName,
@@ -1396,7 +1435,7 @@ webpackJsonp([111], {
                             impressionGroupID: t.impressionGroupID
                         })
                     }, t.handleBountyStatusChanged = function(e) {
-                        Object(h.e)(X, {
+                        Object(h.e)(J, {
                             login: t.props.match.params.channelName
                         }, function(t) {
                             if (t.user) switch (t.user.availableBounties = t.user.availableBounties.filter(function(t) {
@@ -1444,7 +1483,7 @@ webpackJsonp([111], {
                     if (this.props.data.loading) return l.createElement(w._8, {
                         padding: 2,
                         fullHeight: !0
-                    }, l.createElement(G, {
+                    }, l.createElement(K, {
                         left: this.renderLeftColumnPlaceholders(),
                         right: this.renderRightColumnPlaceholders(),
                         trackPageAction: this.trackPageAction
@@ -1463,14 +1502,14 @@ webpackJsonp([111], {
                         fullHeight: !0,
                         display: w.R.Flex,
                         flexDirection: w.T.Column
-                    }, l.createElement(z, {
+                    }, l.createElement($, {
                         channelName: this.props.match.params.channelName,
                         trackPageAction: this.trackPageAction
-                    }), l.createElement(G, {
+                    }), l.createElement(K, {
                         left: this.renderLeftColumn(n, t, a),
                         right: this.renderRightColumn(r),
                         trackPageAction: this.trackPageAction
-                    }), l.createElement($.a, {
+                    }), l.createElement(X.a, {
                         learnMoreUrl: "https://help.twitch.tv/customer/portal/articles/2936067-bounty-board-program-information-and-faq",
                         page: "bounties"
                     }))
@@ -1482,16 +1521,28 @@ webpackJsonp([111], {
                         color: w.K.Alt2
                     }, Object(c.d)("You currently have no bounties in progress", "BountiesPage")), a.length > 0 ? l.createElement(l.Fragment, null, this.renderTitle(this.COMPLETED), this.renderBounties(a)) : null)
                 }, t.prototype.renderRightColumn = function(e) {
-                    var t = c.b.get("bounty_board_available_bounties_date", "Thu Apr 05 2063 00:00:00 GMT-0700 (PDT)");
+                    var t = c.b.get("bounty_board_available_bounties_date", "Thu Apr 05 2063 00:00:00 GMT-0700 (PDT)"),
+                        n = 0 === e.length ? l.createElement(w.Q, {
+                            "data-test-selector": "bounties-page-empty-available-bounty-text-selector",
+                            color: w.K.Alt2
+                        }, Object(c.d)("All bounties have been claimed! Make sure to check back on {availableDate} when the next round are released.", {
+                            availableDate: l.createElement(w.Q, {
+                                type: w._49.Strong
+                            }, Object(c.c)(new Date(t)))
+                        }, "BountiesPage")) : l.createElement(w._8, {
+                            margin: {
+                                y: 2
+                            }
+                        }, l.createElement(w.Q, {
+                            color: w.K.Alt2
+                        }, Object(c.d)("The next round of bounties will be released on {availableDate}.", {
+                            availableDate: l.createElement(w.Q, {
+                                type: w._49.Strong
+                            }, Object(c.c)(new Date(t)))
+                        }, "BountiesPage")));
                     return l.createElement(w._8, {
                         key: "right-column"
-                    }, this.renderTitle(this.AVAILABLE), e.length > 0 ? this.renderBounties(e) : l.createElement(w.Q, {
-                        color: w.K.Alt2
-                    }, Object(c.d)("All bounties have been claimed! Make sure to check back on {availableDate} when the next round are released.", {
-                        availableDate: l.createElement(w.Q, {
-                            type: w._49.Strong
-                        }, Object(c.c)(new Date(t)))
-                    }, "BountiesPage")))
+                    }, this.renderTitle(this.AVAILABLE), this.renderBounties(e), n)
                 }, t.prototype.renderLeftColumnPlaceholders = function() {
                     return l.createElement(w._8, {
                         key: "left-column-placeholders"
@@ -1540,11 +1591,11 @@ webpackJsonp([111], {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t
             }(l.Component),
-            Z = Object(s.d)(Object(f.d)("BountiesPage", {
+            ee = Object(s.d)(Object(f.d)("BountiesPage", {
                 destination: y.a.ChannelDashboardBounties
             }), Object(m.a)({
                 location: b.PageviewLocation.DashboardBounties
-            }), Object(d.a)(X, {
+            }), Object(d.a)(J, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1552,9 +1603,11 @@ webpackJsonp([111], {
                         }
                     }
                 }
-            }))(J);
-        n.d(t, "BountiesPage", function() {
-            return Z
+            }))(Z);
+        n.d(t, "EMPTY_AVAILABLE_BOUNTY_TEXT_SELECTOR", function() {
+            return "bounties-page-empty-available-bounty-text-selector"
+        }), n.d(t, "BountiesPage", function() {
+            return ee
         })
     },
     Is0m: function(e, t, n) {
@@ -2198,4 +2251,4 @@ webpackJsonp([111], {
     },
     y0HA: function(e, t) {}
 });
-//# sourceMappingURL=pages.bounties-b471d210299b749e9f6493c3db9ccf90.js.map
+//# sourceMappingURL=pages.bounties-505404975d2a13ea59442bc9da638011.js.map

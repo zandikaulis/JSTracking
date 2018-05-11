@@ -1,4 +1,4 @@
-webpackJsonp([99], {
+webpackJsonp([100], {
     "+bIS": function(e, t, r) {
         "use strict";
 
@@ -2131,8 +2131,8 @@ webpackJsonp([99], {
             T = function(e, t) {
                 return !(e !== j.a.Space || !t)
             },
-            A = r("5Y57"),
-            P = r("kqTE"),
+            P = r("5Y57"),
+            A = r("kqTE"),
             I = r("HW6M"),
             R = r("5kgt"),
             D = r("puy8"),
@@ -2308,7 +2308,7 @@ webpackJsonp([99], {
                     return this.props.isWaiting ? t = s.createElement(M._10, {
                         fillContent: !0
                     }) : this.props.userResults && (t = this.props.userResults.map(function(t) {
-                        return s.createElement(P.a, {
+                        return s.createElement(A.a, {
                             key: t.id
                         }, s.createElement(H, {
                             user: t,
@@ -2324,7 +2324,7 @@ webpackJsonp([99], {
                         margin: {
                             y: 1
                         }
-                    }, s.createElement(A.a, {
+                    }, s.createElement(P.a, {
                         onChange: this.props.onUserInputChange,
                         onFocusInput: this.props.onFocusInput,
                         ref: this.setUserSearchRef,
@@ -3029,7 +3029,7 @@ webpackJsonp([99], {
                     }, t.handleSetLatencyPreference = function(e) {
                         return a.__awaiter(t, void 0, void 0, function() {
                             return a.__generator(this, function(t) {
-                                return [2, this.props.handleSetLatencyPreference(Number(e.currentTarget.value))]
+                                return [2, this.props.handleSetLatencyPreference(e.currentTarget.value)]
                             })
                         })
                     }, t.copyToClipboard = function() {
@@ -3092,8 +3092,8 @@ webpackJsonp([99], {
                         checked: !(!this.props.channelProperties || !this.props.channelProperties.saveVods),
                         onChange: this.props.handleSaveVodsToggled
                     }), s.createElement(ue.a, {
-                        text: Object(h.d)("Save your past broadcasts for 14 days", "StreamKeySettingsForm")
-                    }))), s.createElement(X.a, {
+                        text: Object(h.d)("Automatically save broadcasts for up to 14 days (60 days for Partners, Turbo and Prime users)", "StreamKeySettingsForm")
+                    }))), this.props.channelProperties && this.props.channelProperties.latencyControlsEnabled && s.createElement(X.a, {
                         orientation: M.X.Horizontal,
                         label: Object(h.d)("Optimization preference", "StreamKeySettingsForm"),
                         error: !!this.props.latencyPrefError,
@@ -3108,20 +3108,20 @@ webpackJsonp([99], {
                         onChange: this.handleSetLatencyPreference,
                         label: Object(h.d)("Normal latency: Best for highest video quality, highest resolution, and to reduce video buffering", "StreamKeySettingsForm"),
                         name: "optPreference",
-                        value: String(V.Normal)
+                        value: V.Normal
                     })), s.createElement(M._21, {
                         disabled: this.props.latencyPrefState === te.a.Loading,
                         checked: !(!this.props.channelProperties || this.props.channelProperties.latencyPreference !== V.Low),
                         onChange: this.handleSetLatencyPreference,
                         label: Object(h.d)("Low latency: Best for near real-time interactions with viewers", "StreamKeySettingsForm"),
                         name: "optPreference",
-                        value: String(V.Low)
+                        value: V.Low
                     })))
                 }, t
             }(s.Component),
             le = Object(v.d)("ChannelPropertiesSettingsForm")(ce);
         ! function(e) {
-            e[e.Normal = 2] = "Normal", e[e.Low = 0] = "Low"
+            e.Normal = "normal", e.Low = "low"
         }(V || (V = {}));
         var de = function(e) {
             function t() {
@@ -3239,7 +3239,7 @@ webpackJsonp([99], {
                                 case 1:
                                     return a.trys.push([1, 3, , 4]), [4, E.a.put(o, {
                                         body: {
-                                            hls_segment_duration: e
+                                            latency: e
                                         }
                                     })];
                                 case 2:
@@ -3250,7 +3250,7 @@ webpackJsonp([99], {
                                 case 3:
                                     return s = a.sent(), t = s, [3, 4];
                                 case 4:
-                                    return n && n.error && (t = new Error("Channel Properties Settings error"), r = n.error), t ? (i = Object(h.d)("Failed to update optimization preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to update hls segment duration preference", r), this.setState({
+                                    return n && n.error && (t = new Error("Channel Properties Settings error"), r = n.error), t ? (i = Object(h.d)("Failed to update optimization preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to update latency preference", r), this.setState({
                                         latencyPrefError: i,
                                         latencyPrefState: te.a.Error
                                     }), [2]) : [2]
@@ -3280,7 +3280,8 @@ webpackJsonp([99], {
             }, t.prototype.deserializeChannelProperties = function(e) {
                 return e.body && this.props.user ? {
                     streamKey: "live_" + this.props.user.id + "_" + e.body.stream_key,
-                    latencyPreference: e.body.hls_segment_duration,
+                    latencyControlsEnabled: e.body.latency_controls_enabled,
+                    latencyPreference: e.body.latency,
                     saveVods: e.body.save_vods
                 } : null
             }, t
@@ -4290,4 +4291,4 @@ webpackJsonp([99], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-settings-08c29b1bc8bc88ec07c30b14547feebb.js.map
+//# sourceMappingURL=pages.dashboard-settings-31b227b49e63a7dbe035fff2ab670095.js.map

@@ -507,6 +507,23 @@ webpackJsonp([105], {
             }, t
         }(a.Component)
     },
+    "/Cz7": function(e, t, n) {
+        "use strict";
+        t.a = function(e, t) {
+            var n = new URL("https://www.twitch.tv/collections/" + e);
+            t && (n.search = r.stringify(t));
+            return n.toString()
+        }, t.b = function(e, t) {
+            var n = new URL("https://www.twitch.tv/videos/" + e);
+            t && (n.search = r.stringify(i.__assign({}, t, {
+                t: "number" == typeof t.t ? Object(a.a)(t.t) : void 0
+            })));
+            return n.toString()
+        };
+        var i = n("TToO"),
+            r = n("OAwv"),
+            a = (n.n(r), n("Ryxq"))
+    },
     "12gq": function(e, t) {},
     "164Z": function(e, t) {
         var n = {
@@ -1978,12 +1995,12 @@ webpackJsonp([105], {
                 }, t
             }(a.Component),
             L = n("zAjo"),
-            N = n("sJBK");
+            j = n("sJBK");
         n("zECu");
         ! function(e) {
             e[e.Highlight = 0] = "Highlight", e[e.VideoManagerLink = 1] = "VideoManagerLink"
         }(H || (H = {}));
-        var F = function(e) {
+        var N = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2027,7 +2044,7 @@ webpackJsonp([105], {
                                 balloonDirection: w.r.RightCenter,
                                 buttonType: w.B.Hollow,
                                 content: {
-                                    type: N.a.Video,
+                                    type: j.a.Video,
                                     id: t.id,
                                     owner: {
                                         id: e.props.owner.id,
@@ -2114,7 +2131,7 @@ webpackJsonp([105], {
                     }, "SaveSuccessOverview")
                 }, t
             }(a.Component),
-            j = n("H6Wp"),
+            F = n("H6Wp"),
             P = (n("cJkA"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -2156,7 +2173,7 @@ webpackJsonp([105], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e;
-                    return e = this.state.savedHighlights.length > 0 && 0 === this.state.segmentsSnapshot.length ? a.createElement(F, {
+                    return e = this.state.savedHighlights.length > 0 && 0 === this.state.segmentsSnapshot.length ? a.createElement(N, {
                         onComplete: this.props.onPostSaveFinish,
                         owner: this.props.owner,
                         highlights: this.state.savedHighlights
@@ -2246,7 +2263,7 @@ webpackJsonp([105], {
                     })
                 }, t
             }(a.Component)),
-            M = Object(p.a)(j, {
+            M = Object(p.a)(F, {
                 name: "createHighlight"
             })(P);
         var G, B = Object(O.b)(null, function(e, t) {
@@ -2375,7 +2392,7 @@ webpackJsonp([105], {
         ! function(e) {
             e[e.EndFormGroup = 0] = "EndFormGroup", e[e.Offsets = 1] = "Offsets", e[e.StartFormGroup = 2] = "StartFormGroup", e[e.UpdateButton = 3] = "UpdateButton"
         }(U || (U = {}));
-        var W = function(e) {
+        var z = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onStartChange = function(e) {
@@ -2492,7 +2509,7 @@ webpackJsonp([105], {
                     })
                 }, t
             }(a.Component),
-            z = n("3HXW"),
+            W = n("3HXW"),
             X = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -2503,9 +2520,9 @@ webpackJsonp([105], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.segment;
-                    return a.createElement(z.a, {
-                        color: z.c.Orange,
-                        handleSize: z.b.Small,
+                    return a.createElement(W.a, {
+                        color: W.c.Orange,
+                        handleSize: W.b.Small,
                         startOffset: e.startOffset,
                         endOffset: e.endOffset,
                         maxOffset: e.maxOffset,
@@ -2602,7 +2619,7 @@ webpackJsonp([105], {
                         padding: {
                             y: 1
                         }
-                    }, a.createElement(W, {
+                    }, a.createElement(z, {
                         onUpdate: this.onActiveSegmentOffsetChange,
                         segment: this.state.timelineSegments[this.state.activeIndex]
                     })))
@@ -3603,29 +3620,16 @@ webpackJsonp([105], {
             a = n("6sO2"),
             o = n("+Znq"),
             s = n("xX9u"),
-            l = n("OAwv"),
-            d = n("Ryxq");
-
-        function c(e, t) {
-            var n = new URL("https://www.twitch.tv/collections/" + e);
-            return t && (n.search = l.stringify(t)), n.toString()
-        }
-
-        function u(e, t) {
-            var n = new URL("https://www.twitch.tv/videos/" + e);
-            return t && (n.search = l.stringify(i.__assign({}, t, {
-                t: "number" == typeof t.t ? Object(d.a)(t.t) : void 0
-            }))), n.toString()
-        }
-        var p = n("Odds"),
-            f = function(e) {
+            l = n("/Cz7"),
+            d = n("Odds"),
+            c = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = this,
-                        t = c(this.props.collection.id);
-                    return r.createElement("div", null, r.createElement(p.Q, null, Object(a.d)("Collection Link", "VideoShareBox")), r.createElement(s.a, {
+                        t = Object(l.a)(this.props.collection.id);
+                    return r.createElement("div", null, r.createElement(d.Q, null, Object(a.d)("Collection Link", "VideoShareBox")), r.createElement(s.a, {
                         onClick: function() {
                             e.props.onClick(t)
                         },
@@ -3633,29 +3637,30 @@ webpackJsonp([105], {
                     }))
                 }, t
             }(r.Component),
-            m = n("cAee"),
-            h = function(e) {
+            u = n("cAee"),
+            p = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClickHandler = function(e) {
                         var n = {
                             location: t.props.tracking.location,
-                            platform: m.a.Link,
+                            platform: u.a.Link,
                             shareURL: e
                         };
-                        Object(m.b)(t.props.collection, n, a.o.apollo.client)
+                        Object(u.b)(t.props.collection, n, a.o.apollo.client)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(f, i.__assign({}, this.props, {
+                    return r.createElement(c, i.__assign({}, this.props, {
                         onClick: this.onClickHandler
                     }))
                 }, t
             }(r.Component),
-            g = n("AoO8"),
-            v = n("vH/s"),
-            S = n("sJBK");
-        var b = function(e) {
+            f = n("AoO8"),
+            m = n("vH/s"),
+            h = n("Ryxq"),
+            g = n("sJBK");
+        var v = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3663,7 +3668,7 @@ webpackJsonp([105], {
                     var e = this,
                         t = this.props.content,
                         n = this.getEmbedPlayerContentURL(t);
-                    return r.createElement("div", null, r.createElement(p.Q, null, Object(a.d)("Embed Video", "VideoShareBox")), r.createElement(s.a, {
+                    return r.createElement("div", null, r.createElement(d.Q, null, Object(a.d)("Embed Video", "VideoShareBox")), r.createElement(s.a, {
                         onClick: function() {
                             e.props.onClick(n)
                         },
@@ -3675,11 +3680,11 @@ webpackJsonp([105], {
                                 autoplay: !1
                             };
                             switch (e.type) {
-                                case S.a.Collection:
-                                    e.currentVideo ? (n.video = e.currentVideo.id, n.t = t ? Object(d.a)(t) : void 0) : n.collection = e.id;
+                                case g.a.Collection:
+                                    e.currentVideo ? (n.video = e.currentVideo.id, n.t = t ? Object(h.a)(t) : void 0) : n.collection = e.id;
                                     break;
-                                case S.a.Video:
-                                    n.video = e.id, n.t = t ? Object(d.a)(t) : void 0
+                                case g.a.Video:
+                                    n.video = e.id, n.t = t ? Object(h.a)(t) : void 0
                             }
                             return n
                         }(e, null !== this.props.selectedVideoStartTime ? this.props.selectedVideoStartTime : void 0),
@@ -3689,7 +3694,7 @@ webpackJsonp([105], {
                             displayName: n,
                             title: i
                         }, "VideoShareBox");
-                    return Object(g.b)(t, {
+                    return Object(f.b)(t, {
                         textLink: {
                             url: this.getEmbedPlayerContentURL(e),
                             text: r
@@ -3699,19 +3704,19 @@ webpackJsonp([105], {
                     })
                 }, t.prototype.getEmbedPlayerContentURL = function(e) {
                     switch (e.type) {
-                        case S.a.Collection:
-                            return e.currentVideo ? u(e.currentVideo.id, {
-                                tt_medium: v.PageviewMedium.VideoEmbed,
-                                tt_content: v.PageviewContent.TextLink,
+                        case g.a.Collection:
+                            return e.currentVideo ? Object(l.b)(e.currentVideo.id, {
+                                tt_medium: m.PageviewMedium.VideoEmbed,
+                                tt_content: m.PageviewContent.TextLink,
                                 t: this.props.selectedVideoStartTime
-                            }) : c(e.id, {
-                                tt_medium: v.PageviewMedium.VideoEmbed,
-                                tt_content: v.PageviewContent.TextLink
+                            }) : Object(l.a)(e.id, {
+                                tt_medium: m.PageviewMedium.VideoEmbed,
+                                tt_content: m.PageviewContent.TextLink
                             });
-                        case S.a.Video:
-                            return u(e.id, {
-                                tt_medium: v.PageviewMedium.VideoEmbed,
-                                tt_content: v.PageviewContent.TextLink,
+                        case g.a.Video:
+                            return Object(l.b)(e.id, {
+                                tt_medium: m.PageviewMedium.VideoEmbed,
+                                tt_content: m.PageviewContent.TextLink,
                                 t: this.props.selectedVideoStartTime
                             });
                         default:
@@ -3719,16 +3724,16 @@ webpackJsonp([105], {
                     }
                 }, t
             }(r.Component),
-            k = function(e) {
+            S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClickHandler = function(e) {
                         var n = t.props.content;
                         switch (n.type) {
-                            case S.a.Collection:
+                            case g.a.Collection:
                                 n.currentVideo ? t.trackVideoShare(e, n.currentVideo) : t.trackCollectionShare(e, n);
                                 break;
-                            case S.a.Video:
+                            case g.a.Video:
                                 t.trackVideoShare(e, n);
                                 break;
                             default:
@@ -3737,43 +3742,43 @@ webpackJsonp([105], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(b, i.__assign({}, this.props, {
+                    return r.createElement(v, i.__assign({}, this.props, {
                         onClick: this.onClickHandler
                     }))
                 }, t.prototype.trackCollectionShare = function(e, t) {
                     var n = {
                         location: this.props.tracking.location,
-                        platform: m.a.Embed,
+                        platform: u.a.Embed,
                         shareURL: e
                     };
-                    Object(m.b)(t, n, a.o.apollo.client)
+                    Object(u.b)(t, n, a.o.apollo.client)
                 }, t.prototype.trackVideoShare = function(e, t) {
                     var n = {
                         location: this.props.tracking.location,
-                        platform: m.a.Embed,
+                        platform: u.a.Embed,
                         shareURL: e
                     };
-                    Object(m.c)(t, n, a.o.apollo.client)
+                    Object(u.c)(t, n, a.o.apollo.client)
                 }, t
             }(r.Component),
-            y = n("bhVC"),
-            O = [{
-                type: y.b.Twitter,
+            b = n("bhVC"),
+            k = [{
+                type: b.b.Twitter,
                 selector: "twitter-button"
             }, {
-                type: y.b.Facebook,
+                type: b.b.Facebook,
                 selector: "fb-button"
             }, {
-                type: y.b.VKontakte,
+                type: b.b.VKontakte,
                 selector: "vk-button"
             }, {
-                type: y.b.Reddit,
+                type: b.b.Reddit,
                 selector: "reddit-button"
             }, {
-                type: y.b.Copy,
+                type: b.b.Copy,
                 selector: "copy-link-button"
             }],
-            _ = function(e) {
+            y = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3782,8 +3787,8 @@ webpackJsonp([105], {
                         t = this.props.content,
                         n = this.getContentURL(t),
                         i = this.getSocialShareContextTitle(t),
-                        a = O.map(function(t) {
-                            return r.createElement(y.a, {
+                        a = k.map(function(t) {
+                            return r.createElement(b.a, {
                                 "data-test-selector": t.selector,
                                 key: t.type,
                                 onShareClick: function(t) {
@@ -3794,9 +3799,9 @@ webpackJsonp([105], {
                                 url: n
                             })
                         });
-                    return r.createElement(p._8, {
-                        display: p.R.Flex,
-                        justifyContent: p._7.Between
+                    return r.createElement(d._8, {
+                        display: d.R.Flex,
+                        justifyContent: d._7.Between
                     }, a)
                 }, t.prototype.getSocialShareContextTitle = function(e) {
                     return Object(a.d)("Check out {title} from {displayName} on www.twitch.tv", {
@@ -3805,13 +3810,13 @@ webpackJsonp([105], {
                     }, "VideoShareBox")
                 }, t.prototype.getContentURL = function(e) {
                     switch (e.type) {
-                        case S.a.Collection:
-                            return e.currentVideo ? u(e.currentVideo.id, {
+                        case g.a.Collection:
+                            return e.currentVideo ? Object(l.b)(e.currentVideo.id, {
                                 collection: e.id,
                                 t: this.props.selectedVideoStartTime
-                            }) : c(e.id);
-                        case S.a.Video:
-                            return u(e.id, {
+                            }) : Object(l.a)(e.id);
+                        case g.a.Video:
+                            return Object(l.b)(e.id, {
                                 t: this.props.selectedVideoStartTime
                             });
                         default:
@@ -3819,34 +3824,34 @@ webpackJsonp([105], {
                     }
                 }, t
             }(r.Component),
-            C = function(e) {
+            O = function(e) {
                 switch (e) {
-                    case y.b.Twitter:
-                        return m.a.Twitter;
-                    case y.b.Reddit:
-                        return m.a.Reddit;
-                    case y.b.VKontakte:
-                        return m.a.VKontakte;
-                    case y.b.Facebook:
-                        return m.a.Facebook;
-                    case y.b.Copy:
-                        return m.a.Copy;
-                    case y.b.CopyInput:
-                        return m.a.Link;
+                    case b.b.Twitter:
+                        return u.a.Twitter;
+                    case b.b.Reddit:
+                        return u.a.Reddit;
+                    case b.b.VKontakte:
+                        return u.a.VKontakte;
+                    case b.b.Facebook:
+                        return u.a.Facebook;
+                    case b.b.Copy:
+                        return u.a.Copy;
+                    case b.b.CopyInput:
+                        return u.a.Link;
                     default:
                         return e
                 }
             },
-            E = function(e) {
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClickHandler = function(e, n) {
                         var i = t.props.content;
                         switch (i.type) {
-                            case S.a.Collection:
+                            case g.a.Collection:
                                 i.currentVideo ? t.trackVideoShare(e, i.currentVideo, n, i.id) : t.trackCollectionShare(e, i, n);
                                 break;
-                            case S.a.Video:
+                            case g.a.Video:
                                 t.trackVideoShare(e, i, n);
                                 break;
                             default:
@@ -3855,28 +3860,28 @@ webpackJsonp([105], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(_, i.__assign({}, this.props, {
+                    return r.createElement(y, i.__assign({}, this.props, {
                         onClick: this.onClickHandler
                     }))
                 }, t.prototype.trackCollectionShare = function(e, t, n) {
                     var i = {
                         location: this.props.tracking.location,
-                        platform: C(n),
+                        platform: O(n),
                         shareURL: e
                     };
-                    Object(m.b)(t, i, a.o.apollo.client)
+                    Object(u.b)(t, i, a.o.apollo.client)
                 }, t.prototype.trackVideoShare = function(e, t, n, i) {
                     var r = {
                         collectionID: i,
                         location: this.props.tracking.location,
-                        platform: C(n),
+                        platform: O(n),
                         shareURL: e
                     };
-                    Object(m.c)(t, r, a.o.apollo.client)
+                    Object(u.c)(t, r, a.o.apollo.client)
                 }, t
             }(r.Component),
-            x = n("mi6k"),
-            w = function(e) {
+            C = n("mi6k"),
+            E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onShareTimestampClick = function(e) {
@@ -3887,8 +3892,8 @@ webpackJsonp([105], {
                     var e = this,
                         t = {};
                     this.props.collectionID && (t.collection = this.props.collectionID), this.props.selectedVideoStartTime && (t.t = this.props.selectedVideoStartTime);
-                    var n = u(this.props.video.id, t);
-                    return r.createElement("div", null, r.createElement(p.Q, null, Object(a.d)("Video Link", "VideoShareBox")), r.createElement(s.a, {
+                    var n = Object(l.b)(this.props.video.id, t);
+                    return r.createElement("div", null, r.createElement(d.Q, null, Object(a.d)("Video Link", "VideoShareBox")), r.createElement(s.a, {
                         onClick: function() {
                             e.props.onInputClick(n)
                         },
@@ -3897,12 +3902,12 @@ webpackJsonp([105], {
                 }, t.prototype.renderCurrentVideoOffsetLinkOption = function() {
                     if (void 0 === this.props.currentVideoTime) return null;
                     var e = this.props.selectedVideoStartTime || this.props.currentVideoTime,
-                        t = Object(x.b)(e);
-                    return r.createElement(p._8, {
+                        t = Object(C.b)(e);
+                    return r.createElement(d._8, {
                         padding: {
                             top: .5
                         }
-                    }, r.createElement(p.J, {
+                    }, r.createElement(d.J, {
                         id: "video-share-timestamp-toggle",
                         label: Object(a.d)("Skip to {deeplinkTimestamp}", {
                             deeplinkTimestamp: t
@@ -3914,29 +3919,29 @@ webpackJsonp([105], {
                     }))
                 }, t
             }(r.Component),
-            T = function(e) {
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClickHandler = function(e, n) {
                         var i = {
                             collectionID: n,
                             location: t.props.tracking.location,
-                            platform: m.a.Link,
+                            platform: u.a.Link,
                             shareURL: e
                         };
-                        Object(m.c)(t.props.video, i, a.o.apollo.client)
+                        Object(u.c)(t.props.video, i, a.o.apollo.client)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(w, i.__assign({}, this.props, {
+                    return r.createElement(E, i.__assign({}, this.props, {
                         onInputClick: this.onClickHandler
                     }))
                 }, t
             }(r.Component);
         n.d(t, "a", function() {
-            return V
+            return w
         });
-        var V = function(e) {
+        var w = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {}, t.onVideoStartTimeChangeHandler = function(e) {
@@ -3947,42 +3952,42 @@ webpackJsonp([105], {
             }
             return i.__extends(t, e), t.prototype.render = function() {
                 var e = null;
-                return this.props.content && (e = this.shareBalloonContent(this.props.content)), r.createElement(o.a, null, r.createElement(p.v, {
+                return this.props.content && (e = this.shareBalloonContent(this.props.content)), r.createElement(o.a, null, r.createElement(d.v, {
                     disabled: !this.props.content,
-                    icon: p._25.Share,
+                    icon: d._25.Share,
                     type: this.props.buttonType
-                }, Object(a.d)("Share", "VideoShareBox")), r.createElement(p.q, {
+                }, Object(a.d)("Share", "VideoShareBox")), r.createElement(d.q, {
                     direction: this.props.balloonDirection,
-                    size: p.s.Small
+                    size: d.s.Small
                 }, e))
             }, t.prototype.shareBalloonContent = function(e) {
-                return r.createElement(p._8, {
+                return r.createElement(d._8, {
                     padding: 1
-                }, r.createElement(E, {
+                }, r.createElement(_, {
                     content: e,
                     selectedVideoStartTime: this.state.selectedVideoStartTime,
                     tracking: this.props.tracking
                 }), this.renderCollectionShareInput(e), this.renderVideoShareInput(e), this.renderEmbedPlayerInput(e))
             }, t.prototype.renderCollectionShareInput = function(e) {
-                return e.type !== S.a.Collection ? null : r.createElement(p._8, {
+                return e.type !== g.a.Collection ? null : r.createElement(d._8, {
                     padding: {
                         top: 1
                     }
-                }, r.createElement(h, {
+                }, r.createElement(p, {
                     collection: e,
                     tracking: this.props.tracking
                 }))
             }, t.prototype.renderVideoShareInput = function(e) {
                 var t, n;
-                if (e.type === S.a.Collection) {
+                if (e.type === g.a.Collection) {
                     if (!e.currentVideo) return null;
                     n = e.id, t = e.currentVideo
                 } else t = e;
-                return r.createElement(p._8, {
+                return r.createElement(d._8, {
                     padding: {
                         top: 1
                     }
-                }, r.createElement(T, {
+                }, r.createElement(x, {
                     collectionID: n,
                     currentVideoTime: this.props.currentVideoTime,
                     onVideoStartTimeChange: this.onVideoStartTimeChangeHandler,
@@ -3991,11 +3996,11 @@ webpackJsonp([105], {
                     video: t
                 }))
             }, t.prototype.renderEmbedPlayerInput = function(e) {
-                return r.createElement(p._8, {
+                return r.createElement(d._8, {
                     padding: {
                         top: 1
                     }
-                }, r.createElement(k, {
+                }, r.createElement(S, {
                     content: e,
                     selectedVideoStartTime: this.state.selectedVideoStartTime,
                     tracking: this.props.tracking
@@ -4005,4 +4010,4 @@ webpackJsonp([105], {
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.highlighter-a3066e16a978d82fc05d36f4f28d9196.js.map
+//# sourceMappingURL=pages.video-tools.pages.highlighter-4cc841dd2a03a2e6ad601abe1ed32abf.js.map

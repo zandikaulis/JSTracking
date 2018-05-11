@@ -1,4 +1,4 @@
-webpackJsonp([104, 107], {
+webpackJsonp([106, 108], {
     "+I3D": function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -1332,7 +1332,7 @@ webpackJsonp([104, 107], {
             i = function() {
                 return a.__awaiter(r, void 0, void 0, function() {
                     return a.__generator(this, function(e) {
-                        return [2, n.e(124).then(n.bind(null, "Revh"))]
+                        return [2, n.e(125).then(n.bind(null, "Revh"))]
                     })
                 })
             }
@@ -1465,10 +1465,12 @@ webpackJsonp([104, 107], {
                             context: n.props.directoryType === v.a.Games ? d.b.SingleGameList : d.b.MixedGameAndChannelList,
                             title: e.title || G.a,
                             linkTo: n.getLinkTo("/" + e.broadcaster.login, t),
+                            onVideoTitleClick: n.onVideoTitleClick,
                             thumbnailImageProps: {
                                 src: e.previewImageURL || o.a.defaultStreamPreviewURL,
                                 alt: "" + e.broadcaster.login
                             },
+                            onThumbnailClick: n.onThumbnailClick,
                             channelLogin: e.broadcaster.login || "",
                             channelLoginLinkTo: n.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                             channelImageProps: {
@@ -1547,6 +1549,8 @@ webpackJsonp([104, 107], {
                             viewerCount: e.viewersCount || 0,
                             title: e.title || G.a,
                             channelName: Object(c.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
+                            onTitleClick: n.onVideoTitleClick,
+                            onThumbnailClick: n.onThumbnailClick,
                             gameImageSrc: n.shouldShowGame("boxArtURL") || o.a.defaultBoxArtURL,
                             gameTitle: n.shouldShowGame("name"),
                             gameLinkTo: n.getLinkTo(Object(u.c)(n.shouldShowGame("name")), t),
@@ -1599,6 +1603,10 @@ webpackJsonp([104, 107], {
                         })) : void 0 : null
                     }, n.shouldShowGame = function(e) {
                         return n.props.directoryType !== v.a.Games && n.props.streamNode.game ? n.props.streamNode.game[e] : ""
+                    }, n.onThumbnailClick = function(e) {
+                        n.props.onThumbnailClick && n.props.onThumbnailClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
+                    }, n.onVideoTitleClick = function(e) {
+                        n.props.onVideoTitleClick && n.props.onVideoTitleClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
                     }, n.onMouseEnterHandler = function() {
                         !n.props.showPreview || n.state.hovered && !n.state.previewTimedOut || (n.removeThumbnailListener(), n.clearTimeouts(), n.setState({
                             hovered: !0
@@ -3763,4 +3771,4 @@ webpackJsonp([104, 107], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-e2e02d0351d5d826681ced2338a875ec.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-4ca9a37ca5dd3ca42fb528766419ed96.js.map

@@ -1,23 +1,23 @@
-webpackJsonp([70], {
+webpackJsonp([71], {
     "5Arz": function(e, t) {},
     BAkg: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r, a = n("RH2O"),
+        var a, r = n("RH2O"),
             i = n("2KeS"),
             o = n("+xm8"),
-            c = n("f2i/"),
-            s = n("Aj/L"),
-            m = n("TToO"),
+            m = n("f2i/"),
+            c = n("Aj/L"),
+            s = n("TToO"),
             u = n("GiK3"),
             l = n("3zLD"),
             d = n("6sO2"),
-            p = n("7vx8"),
+            C = n("7vx8"),
             _ = n("j7/Y"),
             g = n("oIkB"),
-            C = n("w9tK"),
+            p = n("w9tK"),
             h = n("vH/s"),
             y = n("CSlQ"),
             O = n("Odds"),
@@ -52,31 +52,31 @@ webpackJsonp([70], {
             });
         ! function(e) {
             e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
-        }(r || (r = {}));
-        var N, k = n("Nr/G");
+        }(a || (a = {}));
+        var N, b = n("Nr/G");
         n("5Arz");
         ! function(e) {
             e.Name = "create-community-page__name", e.DisplayName = "create-community-page__display-name", e.ShortDescription = "create-community-page__short-description", e.LongDescription = "create-community-long--description", e.Rules = "create-community-page__rules", e.CheckBox = "create-community-page__checkbox", e.ErrorWrapper = "create-community-page__error"
         }(N || (N = {}));
-        var f = function(e) {
+        var k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         saving: !1,
                         errorMessage: null
                     }, t.onClick = function() {
-                        return m.__awaiter(t, void 0, void 0, function() {
+                        return s.__awaiter(t, void 0, void 0, function() {
                             var e, t, n;
-                            return m.__generator(this, function(a) {
-                                switch (a.label) {
+                            return s.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
                                         if (!(this.state.longDescription && this.state.name && this.state.rules && this.state.shortDescription)) return [2];
                                         this.setState({
                                             saving: !0,
                                             errorMessage: null
-                                        }), e = Object(d.d)("Something went wrong. Please try again later.", "CreateCommunityErrors"), a.label = 1;
+                                        }), e = Object(d.d)("Something went wrong. Please try again later.", "CreateCommunityErrors"), r.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, this.props.createCommunity(Object(g.a)({
+                                        return r.trys.push([1, 3, , 4]), [4, this.props.createCommunity(Object(g.a)({
                                             description: this.state.longDescription,
                                             displayName: this.state.displayName,
                                             name: this.state.name,
@@ -84,30 +84,30 @@ webpackJsonp([70], {
                                             summary: this.state.shortDescription
                                         }))];
                                     case 2:
-                                        return (t = a.sent()).data.createCommunity && t.data.createCommunity.community && t.data.createCommunity.community.name ? (d.o.history.push("/communities/" + t.data.createCommunity.community.name), [2]) : (n = null, t.data.createCommunity ? t.data.createCommunity.error && (n = function(e) {
+                                        return (t = r.sent()).data.createCommunity && t.data.createCommunity.community && t.data.createCommunity.community.name ? (d.o.history.push("/communities/" + t.data.createCommunity.community.name), [2]) : (n = null, t.data.createCommunity ? t.data.createCommunity.error && (n = function(e) {
                                             var t = Object(d.d)("That name is unavailable", "CreateCommunityErrors");
                                             switch (e) {
-                                                case r.ACCOUNT_TOO_YOUNG:
+                                                case a.ACCOUNT_TOO_YOUNG:
                                                     return Object(d.d)("Your account must be at least 90 days old to create a Community", "CreateCommunityErrors");
-                                                case r.COMMUNITY_NAME_EXISTS:
+                                                case a.COMMUNITY_NAME_EXISTS:
                                                     return t;
-                                                case r.COMMUNITY_NAME_INVALID:
+                                                case a.COMMUNITY_NAME_INVALID:
                                                     return Object(d.d)("That name contains invalid characters", "CreateCommunityErrors");
-                                                case r.COMMUNITY_NAME_RESERVED:
+                                                case a.COMMUNITY_NAME_RESERVED:
                                                     return t;
-                                                case r.DISPLAY_NAME_INVALID:
+                                                case a.DISPLAY_NAME_INVALID:
                                                     return Object(d.d)("That display name is invalid", "CreateCommunityErrors");
-                                                case r.DESCRIPTION_TOO_LONG:
+                                                case a.DESCRIPTION_TOO_LONG:
                                                     return Object(d.d)("Your long description is too long", "CreateCommunityErrors");
-                                                case r.OWN_TO_MANY_COMMUNITIES:
+                                                case a.OWN_TO_MANY_COMMUNITIES:
                                                     return Object(d.d)("You cannot currently create more than 5 Communities", "CreateCommunityErrors");
-                                                case r.RULES_TOO_LONG:
+                                                case a.RULES_TOO_LONG:
                                                     return Object(d.d)("Your rules are too long", "CreateCommunityErrors");
-                                                case r.SUMMARY_TOO_LONG:
+                                                case a.SUMMARY_TOO_LONG:
                                                     return Object(d.d)("Your short description is too long", "CreateCommunityErrors");
-                                                case r.TWO_FACTOR_NOT_ENABLED:
+                                                case a.TWO_FACTOR_NOT_ENABLED:
                                                     return Object(d.d)("You must have two-factor authentication enabled", "CreateCommunityErrors");
-                                                case r.UNVERIFIED_EMAIL:
+                                                case a.UNVERIFIED_EMAIL:
                                                     return Object(d.d)("Your email must be verified to create a Community", "CreateCommunityErrors");
                                                 default:
                                                     return Object(d.d)("Something went wrong", "CreateCommunityErrors")
@@ -117,7 +117,7 @@ webpackJsonp([70], {
                                             errorMessage: n
                                         }), [3, 4]);
                                     case 3:
-                                        return a.sent(), this.setState({
+                                        return r.sent(), this.setState({
                                             saving: !1,
                                             errorMessage: e
                                         }), [3, 4];
@@ -170,13 +170,13 @@ webpackJsonp([70], {
                         })
                     }, t
                 }
-                return m.__extends(t, e), t.prototype.render = function() {
+                return s.__extends(t, e), t.prototype.render = function() {
                     var e = Object(d.d)("Create a Community", "CreateCommunityPage"),
                         t = this.state.shortDescription ? this.state.shortDescription.length : 0,
                         n = Object(d.d)("{count}/160", {
                             count: t
                         }, "CreateCommunityPage"),
-                        r = this.state.errorMessage && u.createElement(O._8, {
+                        a = this.state.errorMessage && u.createElement(O._8, {
                             fullWidth: !0,
                             margin: {
                                 bottom: 1
@@ -207,7 +207,7 @@ webpackJsonp([70], {
                         margin: {
                             right: 3
                         }
-                    }, r, u.createElement(O._8, {
+                    }, a, u.createElement(O._8, {
                         margin: {
                             bottom: 1
                         }
@@ -288,25 +288,25 @@ webpackJsonp([70], {
                     })), this.renderCreateButton(e)), u.createElement(E, null)))
                 }, t
             }(u.Component),
-            b = Object(l.compose)(Object(y.d)("CreateCommunityPage", {
+            f = Object(l.compose)(Object(y.d)("CreateCommunityPage", {
                 autoReportInteractive: !0,
-                destination: C.a.CommunityCreate
-            }), Object(p.a)(k, {
+                destination: p.a.CommunityCreate
+            }), Object(C.a)(b, {
                 name: "createCommunity"
             }), Object(_.a)({
                 location: h.PageviewLocation.CommunityCreate
-            }))(f);
-        var T = Object(a.b)(function(e) {
+            }))(k);
+        var T = Object(r.b)(function(e) {
             return {
-                isLoggedIn: Object(s.d)(e)
+                isLoggedIn: Object(c.d)(e)
             }
         }, function(e) {
             return Object(i.b)({
                 login: function() {
-                    return Object(c.f)(o.a.CommunityCreate)
+                    return Object(m.f)(o.a.CommunityCreate)
                 }
             }, e)
-        })(b);
+        })(f);
         n.d(t, "CreateCommunityPage", function() {
             return T
         })
@@ -423,74 +423,6 @@ webpackJsonp([70], {
         };
         e.exports = n
     },
-    VR5Q: function(e, t) {},
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var r = n("TToO"),
-            a = n("OAwv"),
-            i = n("GiK3"),
-            o = n("F8kA"),
-            c = n("6sO2");
-
-        function s(e) {
-            return function(t) {
-                var n = function(n) {
-                    function o(t) {
-                        var a = n.call(this, t) || this;
-                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
-                            if (!(a.tracked || e.skip && e.skip(a.props))) {
-                                a.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = r.__assign({}, e.properties));
-                                var n = r.__assign({}, a.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var i = a.referenceTracking,
-                                    o = i.content,
-                                    s = i.medium,
-                                    m = i.content_index;
-                                c.o.tracking.trackPageview(r.__assign({
-                                    content: o,
-                                    medium: s,
-                                    content_index: m,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, c.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
-                    }
-                    return r.__extends(o, n), o.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, o.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, o.prototype.render = function() {
-                        return i.createElement(t, r.__assign({}, this.props))
-                    }, o.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var r = "",
-                                i = a.stringify(t);
-                            i.length > 0 && (r = "?" + i), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: r
-                            })
-                        }
-                        return n
-                    }, o
-                }(i.Component);
-                return Object(o.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return s
-        })
-    }
+    VR5Q: function(e, t) {}
 });
-//# sourceMappingURL=pages.create-community-a2a52f4d1a04a6bc091183b9a0520dd4.js.map
+//# sourceMappingURL=pages.create-community-fb1742adbc0fbb1d831bccd7381d7af4.js.map

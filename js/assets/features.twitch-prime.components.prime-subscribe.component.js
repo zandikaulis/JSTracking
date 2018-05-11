@@ -777,15 +777,12 @@ webpackJsonp([59], {
                             })
                         })
                     }, t.renderOfferList = function() {
-                        var e = t.props.offersData,
-                            r = t.showOffersByDefault() || !1,
-                            n = e && !e.loading && !e.error;
-                        return t.offersLoadedEvent && n && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), n || r ? s.createElement(g._8, {
+                        return s.createElement(g._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
                         }, s.createElement(b, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), s.createElement(_.a, null)) : null
+                        }), s.createElement(_.a, null))
                     }, t.shouldReportInteractive = function() {
                         return (!t.isUserDataLoading || t.isUserDataError) && (!t.isOffersDataLoading || t.isOffersDataError)
                     }, t
@@ -886,7 +883,7 @@ webpackJsonp([59], {
             P = Object(l.compose)(Object(u.a)(E, {
                 name: "offersData",
                 skip: function(e) {
-                    return !e.firstPageLoaded
+                    return !e.firstPageLoaded && !e.openByDefault
                 },
                 options: function() {
                     return {
@@ -2425,11 +2422,8 @@ webpackJsonp([59], {
                     }, t.getOfferListOrientation = function() {
                         return t.props.listDirection || k.c.Default
                     }, t.shouldShowPlaceholders = function() {
-                        if (!t.props.offersData) return !0;
-                        var e = t.props.offersData,
-                            r = e.primeOffers,
-                            n = void 0 === r || null === r;
-                        return e.loading || n
+                        var e = t.props.offersData;
+                        return !e || e.loading
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], r = 0; r < 3; ++r) {
                             var n = a.createElement(W, {
@@ -3367,4 +3361,4 @@ webpackJsonp([59], {
     yqdF: function(e, t) {},
     zAvr: function(e, t) {}
 });
-//# sourceMappingURL=features.twitch-prime.components.prime-subscribe.component-8ec35477e9a9eaac20f5ab29a109c977.js.map
+//# sourceMappingURL=features.twitch-prime.components.prime-subscribe.component-53603ff3e1fda46030ac52811a82567f.js.map

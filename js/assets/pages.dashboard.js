@@ -2260,86 +2260,91 @@ webpackJsonp([47], {
             b = n("bZTi"),
             v = n("yWCw"),
             y = n("68hr"),
-            w = n("Ejve"),
+            w = n("Tc6d"),
             O = n("TP6L"),
             S = n("H+d0"),
-            D = n("7qqA"),
-            x = n("zCIC"),
-            k = n("06ME"),
-            _ = n("q7Ag"),
-            M = n("ytWG"),
-            j = n("pD3p"),
-            T = n("Odds"),
-            E = "extensions_dashboard_notification_dismissed",
-            N = function(e) {
+            D = n("X4PA"),
+            x = n("7qqA"),
+            k = n("zCIC"),
+            _ = n("06ME"),
+            M = n("q7Ag"),
+            j = n("ytWG"),
+            T = n("pD3p"),
+            E = n("Odds"),
+            N = "extensions_dashboard_notification_dismissed",
+            A = function(e) {
                 var t = e.channelName,
                     n = Object(g.d)("Extensions", "DashboardNav"),
-                    r = Object(_.c)(t);
+                    r = Object(M.c)(t);
                 return h.createElement(f.c, {
                     path: "/:channelName/dashboard/extensions"
                 }, function(e) {
                     return function(e) {
-                        if (e) return g.l.set(E, !0), !1;
-                        return !g.l.get(E, !1)
-                    }(e.match) ? h.createElement(T._2, {
-                        position: T._15.Relative
+                        if (e) return g.l.set(N, !0), !1;
+                        return !g.l.get(N, !1)
+                    }(e.match) ? h.createElement(E._2, {
+                        position: E._15.Relative
                     }, h.createElement("li", {
                         className: "side-nav-dashboard-section__tooltip__wrapper"
-                    }, h.createElement(j.a, {
+                    }, h.createElement(T.a, {
                         linkTo: r
-                    }, n, h.createElement(M.a, {
+                    }, n, h.createElement(j.a, {
                         "data-test-selector": "extensions-nav-hotspot"
                     })), h.createElement("div", {
                         className: "side-nav-dashboard-section__tooltip",
                         "data-test-selector": "extensions-nav-tooltip"
-                    }, h.createElement(T.q, {
-                        direction: T.r.RightCenter,
-                        size: T.s.Large,
+                    }, h.createElement(E.q, {
+                        direction: E.r.RightCenter,
+                        size: E.s.Large,
                         show: !0
-                    }, h.createElement(T._8, {
+                    }, h.createElement(E._8, {
                         margin: {
                             x: 2,
                             y: 1
                         }
-                    }, h.createElement(T.Q, {
-                        type: T._49.Span
-                    }, h.createElement(M.a, null), Object(g.d)("Customize your stream with extensions! ", "DashboardNav"), h.createElement("a", {
+                    }, h.createElement(E.Q, {
+                        type: E._49.Span
+                    }, h.createElement(j.a, null), Object(g.d)("Customize your stream with extensions! ", "DashboardNav"), h.createElement("a", {
                         target: "_blank",
                         rel: "noopener",
                         href: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions"
-                    }, Object(g.d)("Learn more here.", "DashboardNav")))))))) : h.createElement("li", null, h.createElement(j.a, {
+                    }, Object(g.d)("Learn more here.", "DashboardNav")))))))) : h.createElement("li", null, h.createElement(T.a, {
                         linkTo: r
                     }, n))
                 })
             };
-        var A, C = n("zDNk"),
-            I = (n("uwYd"), {
+        var C, I = n("zDNk"),
+            F = (n("uwYd"), {
                 "data-test-selector": "activity-link-selector"
             }),
-            F = {
+            R = {
                 "data-test-selector": "bounties-link-selector"
             },
-            R = function(e) {
+            P = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    return h.createElement(h.Fragment, null, h.createElement(C.a, null, Object(g.d)("Dashboard", "DashboardNav")), h.createElement("ul", null, h.createElement("li", null, h.createElement(j.a, {
+                    return h.createElement(h.Fragment, null, h.createElement(I.a, null, Object(g.d)("Dashboard", "DashboardNav")), h.createElement("ul", null, h.createElement("li", null, h.createElement(T.a, {
                         linkTo: "/" + this.props.channelName + "/dashboard",
                         external: !0,
                         exact: !0
-                    }, Object(g.d)("Live", "DashboardNav"))), h.createElement(N, {
+                    }, Object(g.d)("Live", "DashboardNav"))), h.createElement(A, {
                         channelName: this.props.channelName
-                    }), h.createElement("li", null, h.createElement(j.a, {
+                    }), h.createElement("li", null, h.createElement(T.a, {
                         linkTo: "/" + this.props.channelName + "/dashboard/achievements"
-                    }, Object(g.d)("Achievements", "DashboardNav"))), h.createElement("li", null, h.createElement(j.a, {
+                    }, Object(g.d)("Achievements", "DashboardNav"))), h.createElement("li", null, h.createElement(T.a, {
                         linkTo: "/" + this.props.channelName + "/dashboard/events"
-                    }, Object(g.d)("Events", "DashboardNav"))), this.canAccessActivity && h.createElement("li", null, h.createElement(j.a, m.__assign({
+                    }, Object(g.d)("Events", "DashboardNav"))), this.canAccessActivity && h.createElement("li", null, h.createElement(T.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/activity",
                         external: !0
-                    }, I), Object(g.d)("Activity", "DashboardNav"))), this.canAccessBounties && h.createElement("li", null, h.createElement(j.a, m.__assign({
+                    }, F), Object(g.d)("Activity", "DashboardNav"))), h.createElement("li", null, h.createElement(T.a, {
+                        linkTo: "/broadcast",
+                        external: !0,
+                        exact: !0
+                    }, Object(g.d)("Streaming Tools", "DashboardNav"))), this.canAccessBounties && h.createElement("li", null, h.createElement(T.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/bounties"
-                    }, F), Object(g.d)("Bounty Board", "DashboardNav")))))
+                    }, R), Object(g.d)("Bounty Board", "DashboardNav")))))
                 }, Object.defineProperty(t.prototype, "canAccessBounties", {
                     get: function() {
                         var e = this.props.permissions,
@@ -2362,54 +2367,54 @@ webpackJsonp([47], {
                     configurable: !0
                 }), t
             }(h.Component),
-            P = n("YDbY"),
-            L = {
+            L = n("YDbY"),
+            Y = {
                 "data-test-selector": "revenue-settings-link-selector"
             },
-            Y = {
+            G = {
                 "data-test-selector": "settings-link-selector"
             },
-            G = {
+            H = {
                 "data-test-selector": "moderation-link-selector"
             },
-            H = {
+            W = {
                 "data-test-selector": "permissions-link-selector"
             },
-            W = function(e) {
+            B = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    return this.canSeeSettingsSection ? h.createElement(h.Fragment, null, h.createElement(C.a, null, Object(g.d)("Settings", "SettingsDashboardNav")), h.createElement("ul", null, this.canAccessSettings && h.createElement("li", null, h.createElement(j.a, m.__assign({
+                    return this.canSeeSettingsSection ? h.createElement(h.Fragment, null, h.createElement(I.a, null, Object(g.d)("Settings", "SettingsDashboardNav")), h.createElement("ul", null, this.canAccessSettings && h.createElement("li", null, h.createElement(T.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/settings",
                         exact: !0,
                         external: !this.useNewRevenueSettings
-                    }, Y), Object(g.d)("Channel", "SettingsDashboardNav"))), this.props.permissions.isOwner && h.createElement("li", null, h.createElement(j.a, m.__assign({
+                    }, G), Object(g.d)("Channel", "SettingsDashboardNav"))), this.props.permissions.isOwner && h.createElement("li", null, h.createElement(T.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/permissions"
-                    }, H), Object(g.d)("Permissions", "DashboardNav"))), this.canSeeAutoModSettings && h.createElement(T._2, {
-                        position: T._15.Relative
+                    }, W), Object(g.d)("Permissions", "DashboardNav"))), this.canSeeAutoModSettings && h.createElement(E._2, {
+                        position: E._15.Relative
                     }, h.createElement("li", {
                         className: "side-nav-dashboard-section__tooltip__wrapper"
-                    }, h.createElement(j.a, m.__assign({
+                    }, h.createElement(T.a, m.__assign({
                         linkTo: "/" + this.props.channelName + "/dashboard/settings/automod",
-                        external: !Object(P.a)()
-                    }, G), Object(g.d)("Moderation", "SettingsDashboardNav"), h.createElement(M.a, null)), h.createElement("div", {
+                        external: !Object(L.a)()
+                    }, H), Object(g.d)("Moderation", "SettingsDashboardNav"), h.createElement(j.a, null)), h.createElement("div", {
                         className: "side-nav-dashboard-section__tooltip"
-                    }, h.createElement(T.q, {
-                        direction: T.r.RightCenter,
-                        size: T.s.Large,
+                    }, h.createElement(E.q, {
+                        direction: E.r.RightCenter,
+                        size: E.s.Large,
                         show: !0
-                    }, h.createElement(T._8, {
+                    }, h.createElement(E._8, {
                         margin: {
                             x: 2,
                             y: 1
                         }
-                    }, h.createElement(T.Q, {
-                        type: T._49.Span
-                    }, h.createElement(M.a, null), Object(g.d)("Streamers and mods can set custom AutoMod levels, and update Blocked and Permitted Terms.", "AutoModSettings"))))))), this.canAccessRevenueSettings && h.createElement("li", null, h.createElement(j.a, m.__assign({
+                    }, h.createElement(E.Q, {
+                        type: E._49.Span
+                    }, h.createElement(j.a, null), Object(g.d)("Streamers and mods can set custom AutoMod levels, and update Blocked and Permitted Terms.", "AutoModSettings"))))))), this.canAccessRevenueSettings && h.createElement("li", null, h.createElement(T.a, m.__assign({
                         linkTo: this.revenueSettingsLink,
                         external: !this.useNewRevenueSettings
-                    }, L), this.revenueSettingsLabel)))) : null
+                    }, Y), this.revenueSettingsLabel)))) : null
                 }, Object.defineProperty(t.prototype, "canSeeSettingsSection", {
                     get: function() {
                         return this.canAccessSettings || this.canAccessRevenueSettings || this.canSeeAutoModSettings
@@ -2418,7 +2423,7 @@ webpackJsonp([47], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "canSeeAutoModSettings", {
                     get: function() {
-                        return Object(P.a)() && (this.props.permissions.isOwner || this.props.permissions.isModerator || this.props.permissions.isStaff || this.props.permissions.isSiteAdmin)
+                        return Object(L.a)() && (this.props.permissions.isOwner || this.props.permissions.isModerator || this.props.permissions.isStaff || this.props.permissions.isSiteAdmin)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -2475,32 +2480,32 @@ webpackJsonp([47], {
                     configurable: !0
                 }), t
             }(h.Component),
-            B = n("NY9D"),
-            V = n("L2R7");
+            V = n("NY9D"),
+            z = n("L2R7");
         ! function(e) {
             e[e.CollectionManagerLink = 0] = "CollectionManagerLink"
-        }(A || (A = {}));
-        var z = function(e) {
+        }(C || (C = {}));
+        var q = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    return h.createElement(h.Fragment, null, h.createElement(C.a, null, Object(g.d)("Videos", "DashboardNav")), h.createElement("ul", null, h.createElement("li", null, h.createElement(j.a, {
-                        linkTo: Object(B.d)(this.props.creatorLogin),
+                    return h.createElement(h.Fragment, null, h.createElement(I.a, null, Object(g.d)("Videos", "DashboardNav")), h.createElement("ul", null, h.createElement("li", null, h.createElement(T.a, {
+                        linkTo: Object(V.d)(this.props.creatorLogin),
                         exact: !0
-                    }, Object(g.d)("Video Producer", "DashboardNav"))), h.createElement("li", null, h.createElement(j.a, {
+                    }, Object(g.d)("Video Producer", "DashboardNav"))), h.createElement("li", null, h.createElement(T.a, {
                         linkTo: "/" + this.props.creatorLogin + "/dashboard/moderation"
-                    }, Object(g.d)("Video Moderation", "DashboardNav"))), h.createElement("li", null, h.createElement(j.a, {
-                        "data-test-selector": A.CollectionManagerLink,
-                        external: !Object(V.a)(),
+                    }, Object(g.d)("Video Moderation", "DashboardNav"))), h.createElement("li", null, h.createElement(T.a, {
+                        "data-test-selector": C.CollectionManagerLink,
+                        external: !Object(z.a)(),
                         linkTo: "/" + this.props.creatorLogin + "/manager/collections"
-                    }, Object(g.d)("Collections", "DashboardNav"))), h.createElement("li", null, h.createElement(j.a, {
+                    }, Object(g.d)("Collections", "DashboardNav"))), h.createElement("li", null, h.createElement(T.a, {
                         linkTo: "/" + this.props.creatorLogin + "/manager/clips"
                     }, Object(g.d)("Clips", "DashboardNav")))))
                 }, t
             }(h.Component),
             U = n("CC3/"),
-            q = {
+            K = {
                 isOwner: !1,
                 isSiteAdmin: !1,
                 isStaff: !1,
@@ -2512,32 +2517,32 @@ webpackJsonp([47], {
                 isModerator: !1,
                 isInBountyProgram: !1
             },
-            K = (n("9DtG"), function(e) {
+            Q = (n("9DtG"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
                     var e = this.getPermissions();
-                    return h.createElement(T._35, {
+                    return h.createElement(E._35, {
                         className: "dashboard-side-nav",
-                        background: T.n.Alt2,
+                        background: E.n.Alt2,
                         borderRight: !0,
                         flexShrink: 0,
                         flexGrow: 0,
                         fullHeight: !0,
-                        position: T._15.Relative
-                    }, h.createElement(x.b, null, h.createElement("nav", null, h.createElement(R, {
+                        position: E._15.Relative
+                    }, h.createElement(k.b, null, h.createElement("nav", null, h.createElement(P, {
                         channelName: this.props.channelName,
                         permissions: e,
                         streamSummaryQuery: this.props.streamSummaryQuery
-                    }), h.createElement(k.b, {
+                    }), h.createElement(_.b, {
                         channelName: this.props.channelName,
                         permissions: e,
                         streamSummaryQuery: this.props.streamSummaryQuery
-                    }), h.createElement(z, {
+                    }), h.createElement(q, {
                         creatorLogin: this.props.channelName,
                         permissions: e
-                    }), h.createElement(W, {
+                    }), h.createElement(B, {
                         channelName: this.props.channelName,
                         permissions: e
                     }))))
@@ -2555,10 +2560,10 @@ webpackJsonp([47], {
                         hasExtensionsDeveloperInvite: !!t.payoutInvite && t.payoutInvite.isForExtensionsDeveloper,
                         isInBountyProgram: !!t.bountyBoardSettings && t.bountyBoardSettings.isEnabled,
                         isModerator: !!t.self.isModerator
-                    } : q
+                    } : K
                 }, t
             }(h.Component)),
-            Q = Object(i.a)(U, {
+            Z = Object(i.a)(U, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2566,167 +2571,161 @@ webpackJsonp([47], {
                         }
                     }
                 }
-            })(K),
-            Z = n("j7/Y"),
-            J = n("w9tK"),
-            X = n("vH/s"),
-            $ = n("CSlQ"),
-            ee = n("pK/l"),
-            te = n("WmaG"),
-            ne = n("Cd7A"),
-            re = n("9Yaz"),
-            ae = n("AOOj"),
-            oe = (n("e/z2"), function(e) {
+            })(Q),
+            J = n("j7/Y"),
+            X = n("w9tK"),
+            $ = n("vH/s"),
+            ee = n("CSlQ"),
+            te = n("pK/l"),
+            ne = n("WmaG"),
+            re = n("Cd7A"),
+            ae = n("9Yaz"),
+            oe = n("AOOj"),
+            ie = (n("e/z2"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    return h.createElement(ee.a, null, h.createElement(T._35, {
+                    return h.createElement(te.a, null, h.createElement(E._35, {
                         elevation: 1,
-                        background: T.n.Base,
-                        display: T.R.Flex,
-                        position: T._15.Relative,
-                        flexDirection: T.T.Row,
-                        flexWrap: T.U.NoWrap,
+                        background: E.n.Base,
+                        display: E.R.Flex,
+                        position: E._15.Relative,
+                        flexDirection: E.T.Row,
+                        flexWrap: E.U.NoWrap,
                         className: "referrals-page-nav-bar",
                         borderBottom: !0
-                    }, h.createElement(T._35, {
-                        position: T._15.Absolute,
-                        display: T.R.Flex,
-                        flexDirection: T.T.Row,
+                    }, h.createElement(E._35, {
+                        position: E._15.Absolute,
+                        display: E.R.Flex,
+                        flexDirection: E.T.Row,
                         attachTop: !0,
                         attachLeft: !0,
                         attachBottom: !0
-                    }, h.createElement(T.v, {
-                        type: T.B.Text,
+                    }, h.createElement(E.v, {
+                        type: E.B.Text,
                         linkTo: {
                             pathname: "/" + this.props.channelName + "/dashboard/stream-summary/" + this.props.streamSummaryID,
                             state: {
-                                content: X.PageviewContent.ReferralsBack,
-                                medium: X.PageviewMedium.StreamSummary
+                                content: $.PageviewContent.ReferralsBack,
+                                medium: $.PageviewMedium.StreamSummary
                             }
                         }
-                    }, h.createElement(T._8, {
+                    }, h.createElement(E._8, {
                         padding: {
                             left: 1,
                             right: 1
                         }
-                    }, h.createElement(T.Q, null, Object(g.d)("Back", "StreamSummaryReferralPage"))))), h.createElement(T._35, {
-                        display: T.R.Flex,
+                    }, h.createElement(E.Q, null, Object(g.d)("Back", "StreamSummaryReferralPage"))))), h.createElement(E._35, {
+                        display: E.R.Flex,
                         flexGrow: 1,
-                        flexWrap: T.U.NoWrap,
-                        justifyContent: T._7.Center,
-                        alignItems: T.c.Center
-                    }, h.createElement(T.Q, {
-                        type: T._49.H2,
-                        fontSize: T.V.Size4,
+                        flexWrap: E.U.NoWrap,
+                        justifyContent: E._7.Center,
+                        alignItems: E.c.Center
+                    }, h.createElement(E.Q, {
+                        type: E._49.H2,
+                        fontSize: E.V.Size4,
                         bold: !0
-                    }, Object(g.d)("Views by Source", "StreamSummaryReferralPage")))), h.createElement(re.a, {
+                    }, Object(g.d)("Views by Source", "StreamSummaryReferralPage")))), h.createElement(ae.a, {
                         query: this.props.streamSummaryQuery,
                         summaryID: this.props.streamSummaryID,
-                        getURLForStreamSummary: ae.e
+                        getURLForStreamSummary: oe.e
                     }, function(e) {
-                        return h.createElement(ne.a, {
+                        return h.createElement(re.a, {
                             isLoading: !e.current,
                             streamSummaries: e.current ? [e.current] : []
                         })
-                    }), h.createElement(te.a, {
+                    }), h.createElement(ne.a, {
                         learnMoreUrl: "https://help.twitch.tv/customer/portal/articles/2877822",
                         page: "stream-summary"
                     }))
                 }, t
             }(h.Component)),
-            ie = Object(o.d)(Object($.d)("StreamSummaryReferralsPage", {
-                destination: J.a.ChannelDashboardStreamSummaryReferrals,
+            se = Object(o.d)(Object(ee.d)("StreamSummaryReferralsPage", {
+                destination: X.a.ChannelDashboardStreamSummaryReferrals,
                 autoReportInteractive: !0
-            }), Object(Z.a)({
-                location: X.PageviewLocation.DashboardStreamSummaryReferrals
-            }))(oe),
-            se = n("u4Vk"),
-            ue = b.a.wrap(function() {
-                return n.e(110).then(n.bind(null, "rE/F"))
-            }, "AchievementsPage"),
+            }), Object(J.a)({
+                location: $.PageviewLocation.DashboardStreamSummaryReferrals
+            }))(ie),
+            ue = n("u4Vk"),
             ce = b.a.wrap(function() {
-                return n.e(114).then(n.bind(null, "RdZX"))
-            }, "AutoModPage"),
+                return n.e(111).then(n.bind(null, "rE/F"))
+            }, "AchievementsPage"),
             le = b.a.wrap(function() {
-                return n.e(111).then(n.bind(null, "EOq4"))
-            }, "BountiesPage"),
+                return n.e(115).then(n.bind(null, "RdZX"))
+            }, "AutoModPage"),
             de = b.a.wrap(function() {
-                return n.e(94).then(n.bind(null, "ehuU"))
-            }, "ChannelAnalyticsPageRoot"),
+                return n.e(112).then(n.bind(null, "EOq4"))
+            }, "BountiesPage"),
             me = b.a.wrap(function() {
-                return n.e(90).then(n.bind(null, "aeDV"))
-            }, "ChannelClipsManagerPage"),
+                return n.e(95).then(n.bind(null, "ehuU"))
+            }, "ChannelAnalyticsPageRoot"),
             he = b.a.wrap(function() {
-                return n.e(95).then(n.bind(null, "KO2S"))
-            }, "CollectionEditorPage"),
+                return n.e(92).then(n.bind(null, "aeDV"))
+            }, "ChannelClipsManagerPage"),
             fe = b.a.wrap(function() {
-                return n.e(109).then(n.bind(null, "Dk8+"))
-            }, "CollectionManagerPage"),
+                return n.e(96).then(n.bind(null, "KO2S"))
+            }, "CollectionEditorPage"),
             pe = b.a.wrap(function() {
-                return n.e(103).then(n.bind(null, "rFlM"))
-            }, "CommentModeratorPage"),
+                return n.e(110).then(n.bind(null, "Dk8+"))
+            }, "CollectionManagerPage"),
             ge = b.a.wrap(function() {
-                return n.e(98).then(n.bind(null, "xM3a"))
-            }, "DashboardEventsRoot"),
+                return n.e(104).then(n.bind(null, "rFlM"))
+            }, "CommentModeratorPage"),
             be = b.a.wrap(function() {
-                return n.e(102).then(n.bind(null, "yuX3"))
-            }, "DashboardRevenueSettingsRoot"),
+                return n.e(99).then(n.bind(null, "xM3a"))
+            }, "DashboardEventsRoot"),
             ve = b.a.wrap(function() {
-                return n.e(99).then(n.bind(null, "gIJZ"))
-            }, "DashboardSettingsRoot"),
+                return n.e(103).then(n.bind(null, "yuX3"))
+            }, "DashboardRevenueSettingsRoot"),
             ye = b.a.wrap(function() {
+                return n.e(100).then(n.bind(null, "gIJZ"))
+            }, "DashboardSettingsRoot"),
+            we = b.a.wrap(function() {
                 return n.e(91).then(n.bind(null, "bcqU"))
             }, "ExtensionConfigurePage"),
-            we = b.a.wrap(function() {
+            Oe = b.a.wrap(function() {
                 return n.e(91).then(n.bind(null, "1ZLG"))
             }, "ExtensionDashboardRoot"),
-            Oe = b.a.wrap(function() {
-                return n.e(108).then(n.bind(null, "yJuJ"))
-            }, "ExtensionManagerPage"),
             Se = b.a.wrap(function() {
+                return n.e(109).then(n.bind(null, "yJuJ"))
+            }, "ExtensionManagerPage"),
+            De = b.a.wrap(function() {
                 return n.e(105).then(n.bind(null, "Il1C"))
             }, "HighlighterPage"),
-            De = b.a.wrap(function() {
-                return n.e(92).then(n.bind(null, "c1gU"))
-            }, "LivePage"),
             xe = b.a.wrap(function() {
-                return n.e(90).then(n.bind(null, "aeDV"))
-            }, "MyClipsManagerPage"),
+                return n.e(93).then(n.bind(null, "c1gU"))
+            }, "LivePage"),
             ke = b.a.wrap(function() {
-                return n.e(121).then(n.bind(null, "8uM1"))
-            }, "PermissionsPage"),
+                return n.e(92).then(n.bind(null, "aeDV"))
+            }, "MyClipsManagerPage"),
             _e = b.a.wrap(function() {
-                return n.e(123).then(n.bind(null, "/fDj"))
-            }, "RedirectToLatestArchiveHighlighter"),
+                return n.e(122).then(n.bind(null, "8uM1"))
+            }, "PermissionsPage"),
             Me = b.a.wrap(function() {
-                return n.e(93).then(n.bind(null, "tVPZ"))
-            }, "StreamSummaryPage"),
+                return n.e(124).then(n.bind(null, "/fDj"))
+            }, "RedirectToLatestArchiveHighlighter"),
             je = b.a.wrap(function() {
-                return n.e(96).then(n.bind(null, "a9Y8"))
+                return n.e(94).then(n.bind(null, "tVPZ"))
+            }, "StreamSummaryPage"),
+            Te = b.a.wrap(function() {
+                return n.e(97).then(n.bind(null, "a9Y8"))
             }, "VideoManagerPage"),
-            Te = function(e) {
-                var t = e.location.search.match(/legacy=true/) ? "?legacy=true" : "",
-                    n = e.match.params.pageName,
-                    r = n ? "/" + encodeURIComponent(n) : "";
-                return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.channelName) + "/dashboard" + r + t), null
-            },
             Ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isError: !1
                     }, t.logger = g.o.logger.withCategory("dashboard-root"), t.renderAchievementsPage = function() {
-                        return h.createElement(ue, {
+                        return h.createElement(ce, {
                             channelName: t.props.match.params.channelName
                         })
                     }, t.renderExtensionsManagerPage = function() {
-                        return h.createElement(Oe, {
+                        return h.createElement(Se, {
                             channelName: t.props.match.params.channelName
                         })
                     }, t.renderLivePage = function(e) {
-                        return t.props.data.channel && t.props.data.channel.id ? h.createElement(De, {
+                        return t.props.data.channel && t.props.data.channel.id ? h.createElement(xe, {
                             channelID: t.props.data.channel.id,
                             channelLogin: t.props.match.params.channelName,
                             isStaff: t.props.isStaff,
@@ -2759,38 +2758,38 @@ webpackJsonp([47], {
                             to: "/" + n + "/dashboard/" + t
                         })
                     }
-                    return this.props.data.loading || this.props.data.channel.id ? h.createElement(D.a, {
-                        interval: Object(se.g)(30),
+                    return this.props.data.loading || this.props.data.channel.id ? h.createElement(x.a, {
+                        interval: Object(ue.g)(30),
                         channelName: this.props.match.params.channelName
                     }, function(t) {
-                        return h.createElement(T._8, {
-                            display: T.R.Flex,
-                            flexDirection: T.T.Column,
-                            flexWrap: T.U.NoWrap,
+                        return h.createElement(E._8, {
+                            display: E.R.Flex,
+                            flexDirection: E.T.Column,
+                            flexWrap: E.U.NoWrap,
                             fullHeight: !0
-                        }, h.createElement(O.a, null), e.props.firstPageLoaded && e.props.isLoggedIn && h.createElement(S.a, null), h.createElement(T._8, {
-                            display: T.R.Flex,
-                            flexWrap: T.U.NoWrap,
-                            position: T._15.Relative,
-                            overflow: T._11.Hidden,
+                        }, h.createElement(O.a, null), e.props.firstPageLoaded && e.props.isLoggedIn && h.createElement(S.a, null), h.createElement(E._8, {
+                            display: E.R.Flex,
+                            flexWrap: E.U.NoWrap,
+                            position: E._15.Relative,
+                            overflow: E._11.Hidden,
                             fullHeight: !0
-                        }, h.createElement(Q, {
+                        }, h.createElement(Z, {
                             channelName: e.props.match.params.channelName,
                             streamSummaryQuery: t
-                        }), h.createElement(T._8, {
-                            position: T._15.Relative,
+                        }), h.createElement(E._8, {
+                            position: E._15.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
-                            overflow: T._11.Hidden
+                            overflow: E._11.Hidden
                         }, h.createElement(p.e, null, h.createElement(f.c, {
                             path: "/:channelName/dashboard/achievements",
                             render: e.renderAchievementsPage
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/channel-analytics",
-                            component: de
+                            component: me
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/moderation",
-                            component: pe
+                            component: ge
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/live",
                             render: function() {
@@ -2800,7 +2799,7 @@ webpackJsonp([47], {
                             path: "/:channelName/dashboard/stream-summary/:streamSummaryID/referrals",
                             render: function(e) {
                                 var n = e.match;
-                                return h.createElement(ie, {
+                                return h.createElement(se, {
                                     channelName: n.params.channelName,
                                     streamSummaryID: n.params.streamSummaryID,
                                     streamSummaryQuery: t
@@ -2810,7 +2809,7 @@ webpackJsonp([47], {
                             path: "/:channelName/dashboard/stream-summary/:streamSummaryID?",
                             render: function(e) {
                                 var n = e.match;
-                                return h.createElement(Me, {
+                                return h.createElement(je, {
                                     channelName: n.params.channelName,
                                     streamSummaryID: n.params.streamSummaryID || "",
                                     streamSummaryQuery: t
@@ -2818,70 +2817,70 @@ webpackJsonp([47], {
                             }
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/extensions/:extensionID/configure",
-                            component: ye
+                            component: we
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/extensions",
                             render: e.renderExtensionsManagerPage
-                        }), g.a.buildType !== w.a.Production && h.createElement(f.c, {
+                        }), g.b.get(w.a, !1) && h.createElement(f.c, {
                             path: "/:channelName/dashboard/extensions-discovery",
-                            component: we
+                            component: Oe
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/bounties/:selectedID",
-                            component: le
+                            component: de
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/bounties",
-                            component: le
+                            component: de
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/events",
-                            component: ge
+                            component: be
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/settings/automod",
-                            component: ce
+                            component: le
                         }), e.showNewDashboardSettings && h.createElement(f.c, {
                             path: "/:channelName/dashboard/settings/revenue",
-                            component: be
+                            component: ve
                         }), e.showNewDashboardSettings && h.createElement(f.c, {
                             path: "/:channelName/dashboard/settings",
-                            component: ve
+                            component: ye
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/permissions",
-                            component: ke
-                        }), h.createElement(f.c, {
-                            path: "/:channelName/dashboard/:pageName?",
-                            render: Te
-                        }), h.createElement(f.c, {
-                            path: "/:channelName/manager/schedule/:videoID",
-                            component: je
-                        }), h.createElement(f.c, {
-                            path: "/:channelName/manager/edit/:videoID",
-                            component: je
-                        }), h.createElement(f.c, {
-                            path: "/:channelName/manager/publish/:videoID",
-                            component: je
-                        }), h.createElement(f.c, {
-                            path: "/:channelName/manager/appeal/:videoID",
-                            component: je
-                        }), h.createElement(f.c, {
-                            path: "/:channelName/manager/clips/channel",
-                            component: me
-                        }), h.createElement(f.c, {
-                            path: "/:channelName/manager/clips",
-                            component: xe
-                        }), h.createElement(f.c, {
-                            path: "/:channelName/manager/highlighter/:videoID",
-                            component: Se
-                        }), h.createElement(f.c, {
-                            path: "/:channelName/manager/highlighter",
                             component: _e
                         }), h.createElement(f.c, {
-                            path: "/:creatorLogin/manager/collections/:collectionID",
+                            path: "/:channelName/dashboard/:pageName?",
+                            component: D.a
+                        }), h.createElement(f.c, {
+                            path: "/:channelName/manager/schedule/:videoID",
+                            component: Te
+                        }), h.createElement(f.c, {
+                            path: "/:channelName/manager/edit/:videoID",
+                            component: Te
+                        }), h.createElement(f.c, {
+                            path: "/:channelName/manager/publish/:videoID",
+                            component: Te
+                        }), h.createElement(f.c, {
+                            path: "/:channelName/manager/appeal/:videoID",
+                            component: Te
+                        }), h.createElement(f.c, {
+                            path: "/:channelName/manager/clips/channel",
                             component: he
                         }), h.createElement(f.c, {
-                            path: "/:creatorLogin/manager/collections",
+                            path: "/:channelName/manager/clips",
+                            component: ke
+                        }), h.createElement(f.c, {
+                            path: "/:channelName/manager/highlighter/:videoID",
+                            component: De
+                        }), h.createElement(f.c, {
+                            path: "/:channelName/manager/highlighter",
+                            component: Me
+                        }), h.createElement(f.c, {
+                            path: "/:creatorLogin/manager/collections/:collectionID",
                             component: fe
                         }), h.createElement(f.c, {
+                            path: "/:creatorLogin/manager/collections",
+                            component: pe
+                        }), h.createElement(f.c, {
                             path: "/:channelName/manager",
-                            component: je
+                            component: Te
                         })))))
                     }) : h.createElement(y.a, null)
                 }, Object.defineProperty(t.prototype, "showNewDashboardSettings", {
@@ -3593,6 +3592,16 @@ webpackJsonp([47], {
                 return this.routeSpace(e, arguments)
             }
         }), e.exports = a
+    },
+    Tc6d: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return r
+        }), n.d(t, "b", function() {
+            return a
+        });
+        var r = "extensions_discovery_enabled",
+            a = 3
     },
     ToRI: function(e, t, n) {
         var r = n("xA5w");
@@ -4752,74 +4761,6 @@ webpackJsonp([47], {
             return n.setFullYear(t, 0, 4), n.setHours(0, 0, 0, 0), a(n)
         }
     },
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var r = n("TToO"),
-            a = n("OAwv"),
-            o = n("GiK3"),
-            i = n("F8kA"),
-            s = n("6sO2");
-
-        function u(e) {
-            return function(t) {
-                var n = function(n) {
-                    function i(t) {
-                        var a = n.call(this, t) || this;
-                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
-                            if (!(a.tracked || e.skip && e.skip(a.props))) {
-                                a.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = r.__assign({}, e.properties));
-                                var n = r.__assign({}, a.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var o = a.referenceTracking,
-                                    i = o.content,
-                                    u = o.medium,
-                                    c = o.content_index;
-                                s.o.tracking.trackPageview(r.__assign({
-                                    content: i,
-                                    medium: u,
-                                    content_index: c,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
-                    }
-                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, i.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, i.prototype.render = function() {
-                        return o.createElement(t, r.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var r = "",
-                                o = a.stringify(t);
-                            o.length > 0 && (r = "?" + o), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: r
-                            })
-                        }
-                        return n
-                    }, i
-                }(o.Component);
-                return Object(i.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return u
-        })
-    },
     jQas: function(e, t, n) {
         var r = n("SJLv");
         e.exports = function() {
@@ -5133,10 +5074,12 @@ webpackJsonp([47], {
             return "/" + e + "/dashboard/extensions-discovery"
         }, t.f = function(e) {
             return "/" + e + "/dashboard/extensions-discovery/installed"
-        }, t.g = function(e) {
+        }, t.h = function(e) {
             return "/" + e + "/dashboard/extensions-discovery/whitelisted"
-        }, t.a = function(e, t) {
-            return "/" + e + "/dashboard/extensions-discovery/" + t
+        }, t.a = function(e) {
+            return "/ext/categories/" + e
+        }, t.g = function(e) {
+            return "/ext/search?q=" + encodeURIComponent(e)
         }
     },
     qNYo: function(e, t, n) {
@@ -5562,15 +5505,16 @@ webpackJsonp([47], {
                 this.interval = {
                     start: e.start,
                     end: e.end
-                }, this.now = new Date, this.id = e.start.getTime() + "-" + e.end.getTime(), this.isCompleted = this.getIsCompleted(), this.channel = e.channel, this.avgViewerCount = e.avgViewerCount, this.maxViewerCount = e.maxViewerCount, this.followersChange = e.followersChange, this.totalViewers = e.totalViewers, this.uniqueViewers = e.uniqueViewers, this.totalMinutesWatched = e.totalMinutesWatched, this.uniqueChatters = e.uniqueChatters, this.incomingRaids = e.incomingRaids, this.peakViewershipTime = e.peakViewershipTime, this.startChannelStatus = e.startChannelStatus, this.messagesTotal = e.messagesTotal, this.videoId = e.videoId, this.videoViews = e.videoViews, this.videoThumbnail = e.videoThumbnail, this.clipCreatesTotal = e.clipCreatesTotal, this.clipPlaysTotal = e.clipPlaysTotal, this.clipPlaysBreakdown = e.clipPlaysBreakdown, this.commercialCount = e.commercialCount, this.commercialDensity = e.commercialDensity, this.commercialLengthTotal = e.commercialLengthTotal, this.subscriptionsNew = e.subscriptionsNew, this.videoPlayExternalReferrers = e.videoPlayExternalReferrers, this.videoPlayInternalChannelsReferrers = e.videoPlayInternalChannelsReferrers, this.videoPlayInternalTwitchReferrers = e.videoPlayInternalTwitchReferrers, this.videoPlayAllReferrers = e.videoPlayAllReferrers, this.videoPlayGeographics = e.videoPlayGeographics, this.videoPlayPlatforms = e.videoPlayPlatforms
+                }, this.now = new Date, this.id = e.start.getTime() + "-" + e.end.getTime(), this.isCompleted = this.getIsCompleted(), this.channel = e.channel, this.avgViewerCount = e.avgViewerCount, this.maxViewerCount = e.maxViewerCount, this.followersChange = e.followersChange, this.totalViewers = e.totalViewers, this.uniqueViewers = e.uniqueViewers, this.totalMinutesWatched = e.totalMinutesWatched, this.uniqueChatters = e.uniqueChatters, this.incomingRaids = e.incomingRaids, this.peakViewershipTime = e.peakViewershipTime, this.startChannelStatus = e.startChannelStatus, this.messagesTotal = e.messagesTotal, this.videoId = e.videoId, this.videoRecordedAt = e.videoRecordedAt, this.videoViews = e.videoViews, this.videoThumbnail = e.videoThumbnail, this.clipCreatesTotal = e.clipCreatesTotal, this.clipPlaysTotal = e.clipPlaysTotal, this.clipPlaysBreakdown = e.clipPlaysBreakdown, this.commercialCount = e.commercialCount, this.commercialDensity = e.commercialDensity, this.commercialLengthTotal = e.commercialLengthTotal, this.subscriptionsNew = e.subscriptionsNew, this.videoPlayExternalReferrers = e.videoPlayExternalReferrers, this.videoPlayInternalChannelsReferrers = e.videoPlayInternalChannelsReferrers, this.videoPlayInternalTwitchReferrers = e.videoPlayInternalTwitchReferrers, this.videoPlayAllReferrers = e.videoPlayAllReferrers, this.videoPlayGeographics = e.videoPlayGeographics, this.videoPlayPlatforms = e.videoPlayPlatforms
             }
             return e.fromPayload = function(t, n) {
                 var r = t.videos[0],
                     a = r && r._id,
-                    i = r && r.views,
-                    u = r && r.thumbnails && r.thumbnails.small && r.thumbnails.small.length && r.thumbnails.small[0].url || "",
-                    c = r && r.title || "",
-                    l = {
+                    i = r && new Date(r.recorded_at),
+                    u = r && r.views,
+                    c = r && r.thumbnails && r.thumbnails.small && r.thumbnails.small.length && r.thumbnails.small[0].url || "",
+                    l = r && r.title || "",
+                    d = {
                         twitch: 0,
                         reddit: 0,
                         facebook: 0,
@@ -5578,42 +5522,43 @@ webpackJsonp([47], {
                         other: 0
                     };
                 (t.stats.clip_plays_breakdown || []).forEach(function(e) {
-                    return l[e.key] = Number(e.value)
+                    return d[e.key] = Number(e.value)
                 });
-                var d = t.summary,
-                    m = t.stats,
-                    h = Object(o.b)((m.video_play_external_referrers || []).concat(m.video_play_internal_channels_referrers || [], m.video_play_internal_twitch_referrers || []));
+                var m = t.summary,
+                    h = t.stats,
+                    f = Object(o.b)((h.video_play_external_referrers || []).concat(h.video_play_internal_channels_referrers || [], h.video_play_internal_twitch_referrers || []));
                 return new e({
                     start: new Date(t.start_time),
                     end: new Date(t.end_time),
-                    avgViewerCount: Number(d.concurrents_average),
-                    maxViewerCount: Number(d.concurrents_max),
-                    followersChange: Number(d.followers_change),
-                    totalViewers: Number(d.video_play_total),
-                    uniqueViewers: Number(d.video_play_unique),
-                    totalMinutesWatched: Number(d.minutes_watched_total),
-                    clipCreatesTotal: Number(d.clip_creates_total),
-                    clipPlaysTotal: Number(d.clip_plays_total),
-                    clipPlaysBreakdown: l,
-                    commercialCount: Number(d.commercial_count),
-                    commercialDensity: Number(d.commercial_density),
-                    commercialLengthTotal: Number(d.commercial_length_total),
-                    subscriptionsNew: Number(d.subscriptions_new),
-                    uniqueChatters: Number(d.chatters_unique),
-                    peakViewershipTime: new Date(d.concurrents_peak_time),
-                    incomingRaids: Number(d.raids_incoming),
-                    startChannelStatus: c,
-                    messagesTotal: Number(d.messages_total),
+                    avgViewerCount: Number(m.concurrents_average),
+                    maxViewerCount: Number(m.concurrents_max),
+                    followersChange: Number(m.followers_change),
+                    totalViewers: Number(m.video_play_total),
+                    uniqueViewers: Number(m.video_play_unique),
+                    totalMinutesWatched: Number(m.minutes_watched_total),
+                    clipCreatesTotal: Number(m.clip_creates_total),
+                    clipPlaysTotal: Number(m.clip_plays_total),
+                    clipPlaysBreakdown: d,
+                    commercialCount: Number(m.commercial_count),
+                    commercialDensity: Number(m.commercial_density),
+                    commercialLengthTotal: Number(m.commercial_length_total),
+                    subscriptionsNew: Number(m.subscriptions_new),
+                    uniqueChatters: Number(m.chatters_unique),
+                    peakViewershipTime: new Date(m.concurrents_peak_time),
+                    incomingRaids: Number(m.raids_incoming),
+                    startChannelStatus: l,
+                    messagesTotal: Number(m.messages_total),
                     videoId: a,
-                    videoViews: i,
-                    videoThumbnail: u,
+                    videoRecordedAt: i,
+                    videoViews: u,
+                    videoThumbnail: c,
                     channel: n,
-                    videoPlayExternalReferrers: Object(o.b)(m.video_play_external_referrers, s),
-                    videoPlayInternalChannelsReferrers: Object(o.b)(m.video_play_internal_channels_referrers),
-                    videoPlayInternalTwitchReferrers: Object(o.b)(m.video_play_internal_twitch_referrers),
-                    videoPlayAllReferrers: h,
-                    videoPlayGeographics: Object(o.b)(m.video_play_geographics),
-                    videoPlayPlatforms: Object(o.b)(m.video_play_platforms)
+                    videoPlayExternalReferrers: Object(o.b)(h.video_play_external_referrers, s),
+                    videoPlayInternalChannelsReferrers: Object(o.b)(h.video_play_internal_channels_referrers),
+                    videoPlayInternalTwitchReferrers: Object(o.b)(h.video_play_internal_twitch_referrers),
+                    videoPlayAllReferrers: f,
+                    videoPlayGeographics: Object(o.b)(h.video_play_geographics),
+                    videoPlayPlatforms: Object(o.b)(h.video_play_platforms)
                 })
             }, e.intervalFromID = function(e) {
                 var t = e.split("-"),
@@ -6987,4 +6932,4 @@ webpackJsonp([47], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-9601b9985135ea64b211d2d90c68fb34.js.map
+//# sourceMappingURL=pages.dashboard-6bafea66493af81dbdcbadf435016bd3.js.map

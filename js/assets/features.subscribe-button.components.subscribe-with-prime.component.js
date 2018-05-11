@@ -1,4 +1,4 @@
-webpackJsonp([60], {
+webpackJsonp([61], {
     "/3Cb": function(e, t) {
         var r = {
             kind: "Document",
@@ -489,15 +489,12 @@ webpackJsonp([60], {
                             })
                         })
                     }, t.renderOfferList = function() {
-                        var e = t.props.offersData,
-                            r = t.showOffersByDefault() || !1,
-                            n = e && !e.loading && !e.error;
-                        return t.offersLoadedEvent && n && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), n || r ? s.createElement(g._8, {
+                        return s.createElement(g._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
                         }, s.createElement(b, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), s.createElement(O.a, null)) : null
+                        }), s.createElement(O.a, null))
                     }, t.shouldReportInteractive = function() {
                         return (!t.isUserDataLoading || t.isUserDataError) && (!t.isOffersDataLoading || t.isOffersDataError)
                     }, t
@@ -598,7 +595,7 @@ webpackJsonp([60], {
             C = Object(c.compose)(Object(p.a)(S, {
                 name: "offersData",
                 skip: function(e) {
-                    return !e.firstPageLoaded
+                    return !e.firstPageLoaded && !e.openByDefault
                 },
                 options: function() {
                     return {
@@ -619,8 +616,8 @@ webpackJsonp([60], {
             })(C),
             T = r("lfvs"),
             I = r("Hs3O"),
-            L = (r("ukY1"), r("F1v6")),
-            x = function(e) {
+            x = (r("ukY1"), r("F1v6")),
+            L = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -735,7 +732,7 @@ webpackJsonp([60], {
                     }, o)))))
                 }, t
             }(s.Component),
-            R = Object(c.compose)(Object(p.a)(L, {
+            R = Object(c.compose)(Object(p.a)(x, {
                 options: function() {
                     return {
                         variables: {
@@ -744,7 +741,7 @@ webpackJsonp([60], {
                         }
                     }
                 }
-            }), Object(h.d)("BlueBarComponent"))(x),
+            }), Object(h.d)("BlueBarComponent"))(L),
             U = r("dnng");
         r.d(t, "c", function() {
             return P
@@ -1418,7 +1415,7 @@ webpackJsonp([60], {
             }(a.Component),
             T = Object(o.compose)(Object(l.a)(C), Object(u.d)("PrimeInstructions"))(P),
             I = r("dnng"),
-            L = (r("nFc2"), function(e) {
+            x = (r("nFc2"), function(e) {
                 function t(t) {
                     var r = e.call(this, t) || this;
                     return r.setRef = function(e) {
@@ -1461,7 +1458,7 @@ webpackJsonp([60], {
                     }))
                 }, t = i.__decorate([Object(u.d)("CopyButton")], t)
             }(a.Component)),
-            x = function(e) {
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -1491,7 +1488,7 @@ webpackJsonp([60], {
                         value: this.state.value,
                         disabled: this.props.disabled,
                         readOnly: this.props.readOnly
-                    })), a.createElement(p._8, null, a.createElement(L, {
+                    })), a.createElement(p._8, null, a.createElement(x, {
                         clipboardText: this.state.value
                     }))) : null
                 }, t = i.__decorate([Object(u.d)("CopyableItem")], t)
@@ -1576,7 +1573,7 @@ webpackJsonp([60], {
                     }, this.getCodeOrConfirmation(e), this.getPrimeClaimInstructions())
                 }, t.prototype.getCodeOrConfirmation = function(e) {
                     var t = Object(_.i)(e);
-                    if (this.props.code && this.props.deliveryMethod === _.d.CLAIM_CODE) return a.createElement(p._8, null, a.createElement(x, {
+                    if (this.props.code && this.props.deliveryMethod === _.d.CLAIM_CODE) return a.createElement(p._8, null, a.createElement(L, {
                         initialText: this.props.code,
                         readOnly: !0,
                         textCenter: !0
@@ -1945,11 +1942,8 @@ webpackJsonp([60], {
                     }, t.getOfferListOrientation = function() {
                         return t.props.listDirection || _.c.Default
                     }, t.shouldShowPlaceholders = function() {
-                        if (!t.props.offersData) return !0;
-                        var e = t.props.offersData,
-                            r = e.primeOffers,
-                            n = void 0 === r || null === r;
-                        return e.loading || n
+                        var e = t.props.offersData;
+                        return !e || e.loading
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], r = 0; r < 3; ++r) {
                             var n = a.createElement(W, {
@@ -2884,4 +2878,4 @@ webpackJsonp([60], {
     yqdF: function(e, t) {},
     zAvr: function(e, t) {}
 });
-//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-7c78e522359e17ea33c31f5a3f8a4f82.js.map
+//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-2c8aa4d721169dff27535066d98ba0e8.js.map

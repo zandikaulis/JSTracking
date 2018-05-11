@@ -1,4 +1,4 @@
-webpackJsonp([103], {
+webpackJsonp([104], {
     "+V/3": function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
@@ -1507,24 +1507,21 @@ webpackJsonp([103], {
         "use strict";
         var o = n("HW6M"),
             r = n("GiK3"),
-            a = n("Odds"),
-            i = (n("V+9p"), function(e) {
+            a = (n("V+9p"), function(e) {
                 var t = e.isAtMention ? "@" : "",
                     n = o("mention-fragment", {
                         "mention-fragment--recipient": e.isCurrentUserRecipient
                     });
-                return r.createElement(a._8, {
+                return r.createElement("span", {
                     className: n,
-                    alignItems: a.c.Center,
-                    display: a.R.InlineFlex,
                     "data-a-target": "chat-message-mention"
                 }, "" + t + e.recipient)
             }),
-            s = i;
-        s.displayName = "MentionFragment", n.d(t, !1, function() {
-            return i
+            i = a;
+        i.displayName = "MentionFragment", n.d(t, !1, function() {
+            return a
         }), n.d(t, "a", function() {
-            return s
+            return i
         })
     },
     LDoa: function(e, t) {},
@@ -10176,4 +10173,4 @@ webpackJsonp([103], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-moderation-f9ee84c96b11a507d925b407702e1f72.js.map
+//# sourceMappingURL=pages.dashboard-moderation-e828c77ea0840389dc5583de820aa2a4.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([92], {
+webpackJsonp([93], {
     "+27R": function(e, t, n) {
         (function(e) {
             "use strict";
@@ -3342,7 +3342,7 @@ webpackJsonp([92], {
                             user: i
                         }))
                     }, this.onSubscriptionGiftEvent = function(e) {
-                        var t, n, i, r, o, s, l, d, u;
+                        var t, n, i, r, o, s, l, d, u, c;
                         switch (e.methods.plan) {
                             case "1000":
                                 t = "Tier 1";
@@ -3356,11 +3356,12 @@ webpackJsonp([92], {
                             default:
                                 t = "custom"
                         }
-                        a.postMessageToCurrentChannel(e, (n = e.channel, i = e.user, r = e.methods.prime, o = t, s = e.recipientName, l = e.recipientID, d = e.recipientLogin, u = e.senderCount, {
+                        a.postMessageToCurrentChannel(e, (n = e.channel, i = e.user, r = e.methods.prime, o = t, s = e.recipientName, l = e.recipientID, d = e.recipientLogin, u = e.senderCount, c = e.methods.planName, {
                             type: ke.b.SubGift,
                             id: Object(xe.a)(i.username + "-sub"),
                             channel: n.slice(1),
                             isPrime: r,
+                            planName: c,
                             recipientDisplayName: s,
                             recipientID: l,
                             recipientLogin: d,
@@ -6713,7 +6714,7 @@ webpackJsonp([92], {
                     months: e.event.months
                 }, "ChatLine"))
             },
-            ae = n("Nctl"),
+            ae = n("JgFW"),
             ie = n.n(ae),
             re = (n("zI5R"), function(e) {
                 if (!e.event.user) return null;
@@ -6741,10 +6742,14 @@ webpackJsonp([92], {
                         x: 1,
                         y: .5
                     }
+                }, i.createElement(D._2, {
+                    margin: {
+                        right: 1
+                    }
                 }, i.createElement("img", {
                     className: "reward-gift-user-notice__icon",
                     src: ie.a
-                }), i.createElement(D.Q, {
+                })), i.createElement(D.Q, {
                     color: D.K.Alt2,
                     type: D._49.Span
                 }, n)), i.createElement(D._8, {
@@ -6772,7 +6777,8 @@ webpackJsonp([92], {
                     color: D.K.Alt2
                 }, a)
             },
-            se = function(e) {
+            se = "All-Access Pass",
+            le = function(e) {
                 var t = i.createElement(X, {
                         contentID: e.event.user.id,
                         login: e.event.user.username,
@@ -6784,8 +6790,11 @@ webpackJsonp([92], {
                         sourceType: x.a.chat_message
                     }, e.event.recipientDisplayName),
                     a = null;
-                return a = "custom" === e.event.tier ? function(e, t, n) {
-                    return 1 === n ? Object(r.d)("{userLogin} gifted a Sub to {recipient}! It's their first Gift Sub in the channel!", {
+                return a = "custom" === e.event.tier ? function(e, t, n, a) {
+                    return a === se ? Object(r.d)("{userLogin} just gifted an All-Access Pass to {recipient}!", {
+                        userLogin: e,
+                        recipient: t
+                    }, "SubGiftNoticeLine") : 1 === n ? Object(r.d)("{userLogin} gifted a Sub to {recipient}! It's their first Gift Sub in the channel!", {
                         userLogin: e,
                         recipient: t
                     }, "ChatLine") : n > 1 ? Object(r.d)("{userLogin} gifted a Sub to {recipient}! They've given {senderCount} Gift Subs in the channel!", {
@@ -6796,7 +6805,7 @@ webpackJsonp([92], {
                         userLogin: e,
                         recipient: t
                     }, "ChatLine")
-                }(t, n, e.event.senderCount) : function(e, t, n, a) {
+                }(t, n, e.event.senderCount, e.event.planName) : function(e, t, n, a) {
                     var i = ee(t);
                     return 1 === a ? Object(r.d)("{userLogin} gifted a {subTier} Sub to {recipient}! It's their first Gift Sub in the channel!", {
                         userLogin: e,
@@ -6817,9 +6826,9 @@ webpackJsonp([92], {
                     type: D._49.Span
                 }, a)
             };
-        var le, de = n("6d2v"),
-            ue = n("OAwv"),
-            ce = Object(s.compose)(Object(l.a)(de, {
+        var de, ue = n("6d2v"),
+            ce = n("OAwv"),
+            me = Object(s.compose)(Object(l.a)(ue, {
                 options: function(e) {
                     return {
                         variables: {
@@ -6840,7 +6849,7 @@ webpackJsonp([92], {
                 if (!n) return i.createElement(D._8, null, Object(r.d)("This room is in subscribers only mode.", "SubsOnlyUpsellLine"));
                 var o = i.createElement(D.O, {
                     targetBlank: !0,
-                    to: n + "?" + ue.stringify({
+                    to: n + "?" + ce.stringify({
                         ref: "subscriber_only_mode_chat"
                     })
                 }, n);
@@ -6848,32 +6857,32 @@ webpackJsonp([92], {
                     productLink: o
                 }, "SubsOnlyUpsellLine"))
             }),
-            me = "https://www.twitch.tv/settings/connections";
+            he = "https://www.twitch.tv/settings/connections";
         ! function(e) {
             e.Kickback = "msg_blizzard", e.Enabled = "blizzard_connect_on", e.Disabled = "blizzard_connect_off", e.AlreadyEnabled = "already_blizzard_mode_on", e.AlreadyDisabled = "already_blizzard_mode_off"
-        }(le || (le = {}));
-        var he = function(e) {
+        }(de || (de = {}));
+        var pe = function(e) {
                 var t = null;
                 switch (e.type) {
-                    case le.Kickback:
+                    case de.Kickback:
                         var n = i.createElement(D.O, {
                             targetBlank: !0,
-                            to: me
-                        }, me);
+                            to: he
+                        }, he);
                         t = Object(r.d)("You must connect your Blizzard account to send messages in this room. You can connect your Blizzard account in your Twitch settings at {settingsLink}", {
                             settingsLink: n
                         }, "BlizzardConnectModeNoticeLine");
                         break;
-                    case le.Enabled:
+                    case de.Enabled:
                         t = Object(r.d)("This room now requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case le.Disabled:
+                    case de.Disabled:
                         t = Object(r.d)("This room no longer requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case le.AlreadyEnabled:
+                    case de.AlreadyEnabled:
                         t = Object(r.d)("This room already requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case le.AlreadyDisabled:
+                    case de.AlreadyDisabled:
                         t = Object(r.d)("This room does not require a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
                     default:
@@ -6881,9 +6890,9 @@ webpackJsonp([92], {
                 }
                 return i.createElement(D._8, null, t)
             },
-            pe = (n("+5Qw"), "timeout_success"),
-            fe = "ban_success",
-            ge = function(e) {
+            fe = (n("+5Qw"), "timeout_success"),
+            ge = "ban_success",
+            _e = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7004,7 +7013,7 @@ webpackJsonp([92], {
                                 channelID: this.props.channelID,
                                 onPushMessage: this.props.onPushMessage,
                                 senderLogin: e.user.username
-                            }), i.createElement(se, {
+                            }), i.createElement(le, {
                                 event: e
                             }));
                         case b.b.RewardGift:
@@ -7077,23 +7086,23 @@ webpackJsonp([92], {
                                 case "msg_subsonly":
                                     return i.createElement(D._8, {
                                         className: "chat-line__status"
-                                    }, i.createElement(ce, {
+                                    }, i.createElement(me, {
                                         channelID: this.props.channelID
                                     }));
-                                case le.Kickback:
-                                case le.Enabled:
-                                case le.Disabled:
-                                case le.AlreadyEnabled:
-                                case le.AlreadyDisabled:
+                                case de.Kickback:
+                                case de.Enabled:
+                                case de.Disabled:
+                                case de.AlreadyEnabled:
+                                case de.AlreadyDisabled:
                                     return i.createElement(D._8, {
                                         className: "chat-line__status"
-                                    }, i.createElement(he, {
+                                    }, i.createElement(pe, {
                                         type: e.msgid
                                     }))
                             }
                             if (this.props.isCurrentUserModerator) switch (e.msgid) {
-                                case pe:
                                 case fe:
+                                case ge:
                                     return null
                             }
                             return i.createElement(D._8, {
@@ -7134,7 +7143,7 @@ webpackJsonp([92], {
                 }, t
             }(i.Component);
         n.d(t, "a", function() {
-            return ge
+            return _e
         })
     },
     "4QUG": function(e, t, n) {
@@ -11858,10 +11867,6 @@ webpackJsonp([92], {
                 }
                 return s.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.state.showRoomPicker && this.dismissGeneralOnboarding()
-                }, t.prototype.componentDidMount = function() {
-                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t.prototype.componentDidUpdate = function() {
-                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this;
                     if (this.props.data && !e.isPopout && (this.props.data.loading || this.props.channelLogin !== e.channelLogin) && e.data.user && e.data.user.channelRooms) {
@@ -12099,7 +12104,9 @@ webpackJsonp([92], {
                         })), e.type === p.PubsubMessageType.ChatRoomsRoomViewUpdated && t.user && (e = e, t.user.self.isModerator = e.data.room_view.permissions.moderate), t
                     }
                 }
-            }), Object(b.d)("RoomSelector"))(ha);
+            }), Object(b.d)("RoomSelector", {
+                autoReportInteractive: !0
+            }))(ha);
         var fa = Object(a.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded,
@@ -20256,27 +20263,29 @@ webpackJsonp([92], {
             return i
         }), n.d(t, "a", function() {
             return r
-        }), n.d(t, "e", function() {
+        }), n.d(t, "f", function() {
             return o
         }), n.d(t, "b", function() {
             return s
-        }), t.g = function(e) {
+        }), n.d(t, "e", function() {
+            return l
+        }), t.h = function(e) {
             if (e.isBitsEnabled) return a.Bits;
             if (e.vendorCode && e.sku) return a.InExtensionPurchases;
             return null
-        }, t.h = function(e) {
+        }, t.i = function(e) {
             var t = [];
             e.component && e.component.viewerURL && t.push(s.Component);
             e.panel && e.panel.viewerURL && t.push(s.Panel);
             e.videoOverlay && e.videoOverlay.viewerURL && t.push(s.VideoOverlay);
             return t
-        }, t.i = function(e) {
+        }, t.j = function(e) {
             var t = [d.ExtensionPlatform.Web];
             e.mobile && e.mobile.viewerURL && t.push(d.ExtensionPlatform.Mobile);
             return t
-        }, t.f = function(e) {
+        }, t.g = function(e) {
             return e.extension.id + ":" + e.extension.version
-        }, t.j = function(e) {
+        }, t.k = function(e) {
             if (e.requiredActions) return e.requiredActions.some(function(e) {
                 var t = e.type;
                 return t === l.RequiresConfiguration
@@ -21383,6 +21392,9 @@ webpackJsonp([92], {
         }
     },
     "Jc+w": function(e, t) {},
+    JgFW: function(e, t, n) {
+        e.exports = n.p + "assets/gift-open-e5a3f997d2326bf1feb2f923509af672.png"
+    },
     JtUK: function(e, t, n) {
         "use strict";
         t.a = function(e, t, n) {
@@ -22562,24 +22574,21 @@ webpackJsonp([92], {
         "use strict";
         var a = n("HW6M"),
             i = n("GiK3"),
-            r = n("Odds"),
-            o = (n("V+9p"), function(e) {
+            r = (n("V+9p"), function(e) {
                 var t = e.isAtMention ? "@" : "",
                     n = a("mention-fragment", {
                         "mention-fragment--recipient": e.isCurrentUserRecipient
                     });
-                return i.createElement(r._8, {
+                return i.createElement("span", {
                     className: n,
-                    alignItems: r.c.Center,
-                    display: r.R.InlineFlex,
                     "data-a-target": "chat-message-mention"
                 }, "" + t + e.recipient)
             }),
-            s = o;
-        s.displayName = "MentionFragment", n.d(t, !1, function() {
-            return o
+            o = r;
+        o.displayName = "MentionFragment", n.d(t, !1, function() {
+            return r
         }), n.d(t, "a", function() {
-            return s
+            return o
         })
     },
     "LD/U": function(e, t, n) {
@@ -25028,9 +25037,6 @@ webpackJsonp([92], {
         };
         var a = n("qkCi"),
             i = n("INp2")
-    },
-    Nctl: function(e, t, n) {
-        e.exports = n.p + "assets/bits-crate-fd354824f8cadead34bd7c4850b36abe.png"
     },
     Nd3h: function(e, t, n) {
         (function(e) {
@@ -40057,7 +40063,7 @@ webpackJsonp([92], {
                         n && a && a.data && t.setState(function(e) {
                             return {
                                 selectedExtensionInstallation: e.extensionInstallations.find(function(e) {
-                                    return Object(_e.f)(e) === n
+                                    return Object(_e.g)(e) === n
                                 })
                             }
                         })
@@ -40097,10 +40103,10 @@ webpackJsonp([92], {
                     }, r.createElement(g._8, {
                         padding: 2
                     }, r.createElement(g._30, {
-                        value: u && Object(_e.f)(u),
+                        value: u && Object(_e.g)(u),
                         onChange: this.onExtensionChange
                     }, d.map(function(e) {
-                        var t = Object(_e.f)(e);
+                        var t = Object(_e.g)(e);
                         return r.createElement("option", {
                             key: t,
                             value: t
@@ -58647,4 +58653,4 @@ webpackJsonp([92], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.live-910b709cb268f75394fe929dd4b0b2db.js.map
+//# sourceMappingURL=pages.live-12c06db6299e0d324d31b04e855a1f3c.js.map
