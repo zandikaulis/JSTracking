@@ -871,6 +871,21 @@ window.__twilightSettings = {
                 "value": "off"
             }]
         },
+        "db6dc127-b372-48fe-9d8b-493ea6c51c57": {
+            "name": "twilight_preview_card_iconic_images",
+            "v": 3778,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "boxart"
+            }, {
+                "weight": 0,
+                "value": "nothing"
+            }]
+        },
         "e0fdfc17-389d-4ba5-8596-065352ddc01e": {
             "name": "twilight_browser_notifications_upsell",
             "v": 3659,
