@@ -6160,7 +6160,7 @@ webpackJsonp([33, 121], {
                     }, this.resetBufferState = function() {
                         o.buffer = [], o.eventMap = new Map, o.offset = 0, o._isDirty = !1, o._hasNewerLeft = !0, o._hasOlderLeft = !0, o.newestCursor = void 0, o.oldestCursor = void 0
                     }, this.loadMore = function(e) {
-                        return Object(he.d)(Object(he.c)(c.o.apollo.client.link, {
+                        return Object(he.e)(Object(he.c)(c.o.apollo.client.link, {
                             query: ge,
                             variables: {
                                 roomID: o.roomID,
@@ -8366,7 +8366,7 @@ webpackJsonp([33, 121], {
                         return !!a && (r.roles.isStaff || r.roles.isGlobalMod || r.roles.isSiteAdmin || a.id === i || !!t.self && t.self.isModerator)
                     }, n.onUpdateLastReadAt = function() {
                         var e;
-                        Object(he.d)(Object(he.c)(c.o.apollo.client.link, s.__assign({
+                        Object(he.e)(Object(he.c)(c.o.apollo.client.link, s.__assign({
                             query: Sn
                         }, (e = n.props.roomID, s.__assign({}, Object(E.a)({
                             lastReadAt: (new Date).toISOString(),
@@ -40475,4 +40475,4 @@ webpackJsonp([33, 121], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-videos-a81787c1df6e8c3a16484c673f6d929e.js.map
+//# sourceMappingURL=pages.channel-videos-146dc71c453aa7466e25e8baed3b2055.js.map
