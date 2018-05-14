@@ -11,7 +11,7 @@ window.__twilightSettings = {
     "bits_truex_api_url": "https://get.truex.com/v2",
     "bits_truex_partner_hash": "af4f4f3a5b1e302e3e17383b8dd300cb6867ec84",
     "bits_truex_script_url": "https://static.truex.com/js/client.js",
-    "bounty_board_available_bounties_date": "Sun May 14 2018 00:00:00 GMT-0700 (PDT)",
+    "bounty_board_available_bounties_date": "Mon May 28 2018 00:00:00 GMT-0700 (PDT)",
     "browser_notifications_launch": true,
     "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
