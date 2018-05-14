@@ -2067,7 +2067,7 @@ webpackJsonp([48], {
                 }, t.prototype.updateClipIndex = function(e) {
                     var t = Math.max(0, e),
                         n = this.props.getClips();
-                    n.length - t < 4 && this.props.loadMoreClips(), t < n.length && this.props.showModal(G, {
+                    n.length - t < 4 && this.props.loadMoreClips(), t < n.length && this.props.showModal(B, {
                         getClips: this.props.getClips,
                         clip: n[t],
                         clipIndex: t,
@@ -2154,12 +2154,12 @@ webpackJsonp([48], {
                     }))
                 }, t = u.__decorate([Object(s.d)("ClipsViewModal")], t)
             }(a.Component));
-        var G = Object(l.b)(null, function(e) {
+        var B = Object(l.b)(null, function(e) {
                 return Object(d.b)({
                     showModal: c.d
                 }, e)
             })(V),
-            B = n("iOr9"),
+            G = n("iOr9"),
             H = n("vKFS"),
             W = n("XOun"),
             q = (n("Ajho"), function(e) {
@@ -2168,7 +2168,7 @@ webpackJsonp([48], {
                     return t.getClips = function() {
                         return t.props.clips
                     }, t.openModal = function(e) {
-                        e.preventDefault(), t.props.showModal(G, {
+                        e.preventDefault(), t.props.showModal(B, {
                             getClips: t.getClips,
                             clip: t.props.clip,
                             clipIndex: t.props.clipIndex,
@@ -2347,7 +2347,7 @@ webpackJsonp([48], {
                         },
                         name: "TWILIGHT_VIDEO_CARD_UPDATES"
                     };
-                    return a.createElement(B.a, u.__assign({}, e))
+                    return a.createElement(G.a, u.__assign({}, e))
                 }, t.prototype.renderEmpty = function() {
                     var e = this.props.timeFilterValue === Q.b.All ? a.createElement(D._8, null, a.createElement(D.Q, {
                         fontSize: D.V.Size4
@@ -2405,7 +2405,7 @@ webpackJsonp([48], {
         var $ = Object(l.b)(null, function(e, t) {
                 return Object.assign(Object(d.b)({
                     showClipsViewModal: function(e, n, i) {
-                        return Object(c.d)(G, {
+                        return Object(c.d)(B, {
                             getClips: i,
                             clip: e,
                             clipIndex: n,
@@ -3168,8 +3168,8 @@ webpackJsonp([48], {
         var M = n("GiK3"),
             U = n("RH2O"),
             V = n("c8Oh"),
-            G = n("6yQB"),
-            B = n("yWCw"),
+            B = n("6yQB"),
+            G = n("yWCw"),
             H = n("DtWM"),
             W = n("7vx8"),
             q = n("j7/Y"),
@@ -3978,8 +3978,8 @@ webpackJsonp([48], {
             Me = n("jkA6"),
             Ue = n("7FW4"),
             Ve = n("peXu"),
-            Ge = n("F3Wg"),
-            Be = n("SN3I"),
+            Be = n("F3Wg"),
+            Ge = n("SN3I"),
             He = n("MMhf"),
             We = function(e) {
                 function t() {
@@ -4023,7 +4023,7 @@ webpackJsonp([48], {
                             trackingMedium: a
                         })
                     });
-                    return M.createElement("div", null, M.createElement(Be.a, {
+                    return M.createElement("div", null, M.createElement(Ge.a, {
                         languageCode: this.props.languageCode
                     }), M.createElement(re._55, {
                         gutterSize: re._57.Small,
@@ -4032,7 +4032,7 @@ webpackJsonp([48], {
                     }, s, t))
                 }, t.prototype.getViewAllPath = function() {
                     return this.props.directoryType === ee.a.Communities ? Object(xe.a)(this.props.directoryName) + "/" + this.props.languageCode : Object(xe.c)(this.props.directoryName) + "/" + this.props.languageCode
-                }, t = i.__decorate([Object(W.a)(Ge, {
+                }, t = i.__decorate([Object(W.a)(Be, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -4741,20 +4741,34 @@ webpackJsonp([48], {
                             })
                         }), e
                     }, t.getSelected = function() {
-                        if (!t.state.selected) return Object(a.d)("Remaining Players", "PUBGRemainingPlayersFilter");
-                        return t.selectedRenderRemainingPlayer(t.state.selected, function(e) {
-                            e.stopPropagation(), Je({
-                                game: Ke.a.PUBG,
-                                item_action: Re.Deselect,
-                                item_name: Pe.RemainingPlayers,
-                                item_value: t.state.selected ? t.state.selected.name.toLowerCase() : "",
-                                open_click: !1
-                            }), t.setState({
-                                selected: void 0
-                            }, function() {
-                                t.balloonWrapperRef.toggleBalloon(!1), t.props.onSelect()
-                            })
-                        })
+                        return t.state.selected ? M.createElement(re._8, null, M.createElement(re._2, {
+                            padding: {
+                                left: .5
+                            }
+                        }, M.createElement("span", null, bt(t.state.selected.name)))) : Object(a.d)("Remaining Players", "PUBGRemainingPlayersFilter")
+                    }, t.getSelectedListItem = function() {
+                        if (!t.state.selected) return null;
+                        return M.createElement(re._35, {
+                            borderBottom: !0
+                        }, M.createElement(se, {
+                            key: "pubg-" + t.state.selected.name,
+                            name: bt(t.state.selected.name),
+                            onClick: function(e) {
+                                e.stopPropagation(), Je({
+                                    game: Ke.a.PUBG,
+                                    item_action: Re.Deselect,
+                                    item_name: Pe.RemainingPlayers,
+                                    item_value: t.state.selected ? t.state.selected.name.toLowerCase() : "",
+                                    open_click: !1
+                                }), t.setState({
+                                    selected: void 0
+                                }, function() {
+                                    t.balloonWrapperRef.toggleBalloon(!1), t.props.onSelect()
+                                })
+                            },
+                            withClose: !0,
+                            "data-test-selector": _t
+                        }))
                     }, t.loadRemainingPlayerData = function() {
                         return i.__awaiter(t, void 0, void 0, function() {
                             var e, t;
@@ -4810,19 +4824,6 @@ webpackJsonp([48], {
                             withClose: n,
                             "data-test-selector": St
                         })
-                    }, t.selectedRenderRemainingPlayer = function(e, t) {
-                        return M.createElement(re._8, null, M.createElement("span", {
-                            "data-test-selector": _t,
-                            onClick: t
-                        }, M.createElement(re._24, {
-                            asset: re._25.Close,
-                            height: 9,
-                            width: 9
-                        })), M.createElement(re._2, {
-                            padding: {
-                                left: .5
-                            }
-                        }, M.createElement("span", null, bt(e.name))))
                     }, t.saveBalloonWrapperRef = function(e) {
                         t.balloonWrapperRef = e
                     }, t
@@ -4850,7 +4851,7 @@ webpackJsonp([48], {
                         padding: {
                             y: 1
                         }
-                    }, this.getRemainingPlayersFilters())))))
+                    }, this.getSelectedListItem(), this.getRemainingPlayersFilters())))))
                 }, t
             }(M.Component);
         var Et = Object(U.b)(function(e) {
@@ -4878,20 +4879,34 @@ webpackJsonp([48], {
                             })
                         }), e
                     }, t.getSelected = function() {
-                        if (!t.state.selected) return Object(a.d)("Team Type", "PUBGTeamTypeFilter");
-                        return t.selectedRenderMode(t.state.selected, function(e) {
-                            e.stopPropagation(), Je({
-                                game: Ke.a.PUBG,
-                                item_action: Re.Deselect,
-                                item_name: Pe.TeamType,
-                                item_value: t.state.selected ? t.state.selected.name.toLowerCase() : "",
-                                open_click: !1
-                            }), t.setState({
-                                selected: void 0
-                            }, function() {
-                                t.balloonWrapperRef.toggleBalloon(!1), t.props.onSelect()
-                            })
-                        })
+                        return t.state.selected ? M.createElement(re._8, null, M.createElement(re._2, {
+                            padding: {
+                                left: .5
+                            }
+                        }, M.createElement("span", null, bt(t.state.selected.name)))) : Object(a.d)("Team Type", "PUBGTeamTypeFilter")
+                    }, t.getSelectedListItem = function() {
+                        if (!t.state.selected) return null;
+                        return M.createElement(re._35, {
+                            borderBottom: !0
+                        }, M.createElement(se, {
+                            key: "pubg-" + t.state.selected.name,
+                            name: bt(t.state.selected.name),
+                            onClick: function(e) {
+                                e.stopPropagation(), Je({
+                                    game: Ke.a.PUBG,
+                                    item_action: Re.Deselect,
+                                    item_name: Pe.TeamType,
+                                    item_value: t.state.selected ? t.state.selected.name.toLowerCase() : "",
+                                    open_click: !1
+                                }), t.setState({
+                                    selected: void 0
+                                }, function() {
+                                    t.balloonWrapperRef.toggleBalloon(!1), t.props.onSelect()
+                                })
+                            },
+                            withClose: !0,
+                            "data-test-selector": wt
+                        }))
                     }, t.loadTeamTypeData = function() {
                         return i.__awaiter(t, void 0, void 0, function() {
                             var e, t;
@@ -4947,19 +4962,6 @@ webpackJsonp([48], {
                             withClose: n,
                             "data-test-selector": Nt
                         })
-                    }, t.selectedRenderMode = function(e, t) {
-                        return M.createElement(re._8, null, M.createElement("span", {
-                            "data-test-selector": wt,
-                            onClick: t
-                        }, M.createElement(re._24, {
-                            asset: re._25.Close,
-                            height: 9,
-                            width: 9
-                        })), M.createElement(re._2, {
-                            padding: {
-                                left: .5
-                            }
-                        }, M.createElement("span", null, bt(e.name))))
                     }, t.saveBalloonWrapperRef = function(e) {
                         t.balloonWrapperRef = e
                     }, t
@@ -4987,7 +4989,7 @@ webpackJsonp([48], {
                         padding: {
                             y: 1
                         }
-                    }, this.getTeamTypeFilters())))))
+                    }, this.getSelectedListItem(), this.getTeamTypeFilters())))))
                 }, t
             }(M.Component);
         var Tt = Object(U.b)(function(e) {
@@ -5004,7 +5006,7 @@ webpackJsonp([48], {
                         return n.state.directoryType === ee.a.Communities || e !== Ke.a.PUBG ? null : M.createElement(ht, null)
                     }, n.getAdditionalFilters = function() {
                         var e = [];
-                        if (n.props.match.params.encodedLanguage || e.push(M.createElement(G.a, null)), n.state.directoryType === ee.a.Communities) return e;
+                        if (n.props.match.params.encodedLanguage || e.push(M.createElement(B.a, null)), n.state.directoryType === ee.a.Communities) return e;
                         switch (decodeURI(n.props.match.params.encodedCommunityName).toLowerCase()) {
                             case Ke.a.Hearthstone:
                                 e.push(M.createElement(et, null), M.createElement(rt, null));
@@ -5120,15 +5122,15 @@ webpackJsonp([48], {
                     }, M.createElement(re._10, {
                         fillContent: !0
                     }));
-                    if (this.props.data.error) return M.createElement(B.a, {
+                    if (this.props.data.error) return M.createElement(G.a, {
                         message: Object(a.d)("Error loading data.", "DirectoryGamePage")
                     });
-                    if (!this.props.data.directory) return M.createElement(B.a, {
+                    if (!this.props.data.directory) return M.createElement(G.a, {
                         message: Object(a.d)("Game does not exist", "DirectoryGamePage")
                     });
                     var t = null,
                         n = null;
-                    this.props.match.params.encodedLanguage ? n = M.createElement(Be.a, {
+                    this.props.match.params.encodedLanguage ? n = M.createElement(Ge.a, {
                         languageCode: this.props.match.params.encodedLanguage
                     }) : "en" !== this.props.languageCode && (n = M.createElement(re._8, {
                         margin: {
@@ -5359,12 +5361,12 @@ webpackJsonp([48], {
             }
         });
         var Ut, Vt = n("V5M+"),
-            Gt = n("9u8h"),
-            Bt = n("5eRk");
+            Bt = n("9u8h"),
+            Gt = n("5eRk");
 
         function Ht() {
             var e = this;
-            return Object(W.a)(Bt, {
+            return Object(W.a)(Gt, {
                 props: function(t) {
                     return {
                         createUploadURLMutation: function(n, a, r) {
@@ -5593,7 +5595,7 @@ webpackJsonp([48], {
                             return i.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, Gt.a.delete(nn(this.props.data.directory.id))];
+                                        return [4, Bt.a.delete(nn(this.props.data.directory.id))];
                                     case 1:
                                         return t.sent(), this.trackAvatarEdit(), e = function(e) {
                                             return e.directory.avatarURL = Xt, e
@@ -5812,7 +5814,7 @@ webpackJsonp([48], {
                             return i.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.props.data.directory ? [4, Gt.a.delete(an(this.props.data.directory.id))] : [2];
+                                        return this.props.data.directory ? [4, Bt.a.delete(an(this.props.data.directory.id))] : [2];
                                     case 1:
                                         return t.sent(), this.trackBannerEdit(), e = function(e) {
                                             return e.directory && (e.directory.coverURL = Zt), e
@@ -6130,12 +6132,12 @@ webpackJsonp([48], {
                 }, e)
             })(Object(Sn.f)(xn)),
             Vn = n("/XPz"),
-            Gn = n("D88i");
+            Bn = n("D88i");
         n("5yZy");
         ! function(e) {
             e[e.DirectoryPage = 0] = "DirectoryPage", e[e.DirectoryVideosPage = 1] = "DirectoryVideosPage", e[e.DirectoryClipsPage = 2] = "DirectoryClipsPage", e[e.DirectoryDetailsPage = 3] = "DirectoryDetailsPage"
         }(Mn || (Mn = {}));
-        var Bn = function(e) {
+        var Gn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6257,7 +6259,7 @@ webpackJsonp([48], {
                     }].filter(function(t) {
                         return t.whitelistDirectories.includes(e.props.directoryType)
                     })
-                }, t = i.__decorate([Object(W.a)(Gn, {
+                }, t = i.__decorate([Object(W.a)(Bn, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -6282,7 +6284,7 @@ webpackJsonp([48], {
                     }), M.createElement(fn, {
                         directoryType: this.props.directoryType,
                         directoryName: this.props.directoryName
-                    }), M.createElement(Bn, {
+                    }), M.createElement(Gn, {
                         directoryType: this.props.directoryType,
                         directoryName: this.props.directoryName,
                         activeTab: this.props.activeTab
@@ -6518,7 +6520,7 @@ webpackJsonp([48], {
                     if (this.props.data.loading && !this.props.data.game) return M.createElement(re._10, {
                         fillContent: !0
                     });
-                    if (this.props.data.error) return M.createElement(B.a, {
+                    if (this.props.data.error) return M.createElement(G.a, {
                         message: Object(Qn.d)("Error loading data.", "DirectoryGameClipsContent")
                     });
                     if (this.props.data.game) {
@@ -6544,7 +6546,7 @@ webpackJsonp([48], {
                             loadMore: this.props.loadMore
                         }))
                     }
-                    return M.createElement(B.a, {
+                    return M.createElement(G.a, {
                         message: Object(Qn.d)("Game does not exist", "DirectoryGameClipsContent")
                     })
                 }, t = i.__decorate([Object(X.d)("DirectoryGameClipsContent", {
@@ -7348,7 +7350,7 @@ webpackJsonp([48], {
                     }
                 }, t.prototype.render = function() {
                     if (!this.props.data.loading) {
-                        if (this.props.data.error) return M.createElement(B.a, {
+                        if (this.props.data.error) return M.createElement(G.a, {
                             message: Object(a.d)("Error loading data.", "DirectoryGameDetailsPage")
                         });
                         if (!this.props.data.game || !this.props.data.game.product || !this.props.data.game.product.id) return M.createElement(si.a, null)
@@ -7430,8 +7432,8 @@ webpackJsonp([48], {
             }(M.Component),
             Ui = n("vKFS"),
             Vi = n("JpYe"),
-            Gi = n("n2E0"),
-            Bi = n("VDV3"),
+            Bi = n("n2E0"),
+            Gi = n("VDV3"),
             Hi = n("3yQz"),
             Wi = n("JtGN"),
             qi = Hi.b,
@@ -7457,7 +7459,7 @@ webpackJsonp([48], {
                         var r = Object(a.d)("{gameName} videos are temporarily unavailable.", {
                             gameName: t
                         }, "DirectoryVideosPage");
-                        return M.createElement(B.a, {
+                        return M.createElement(G.a, {
                             message: r
                         })
                     }
@@ -7465,7 +7467,7 @@ webpackJsonp([48], {
                         r = Object(a.d)("{gameName} does not exist.", {
                             gameName: t
                         }, "DirectoryVideosPage");
-                        return M.createElement(B.a, {
+                        return M.createElement(G.a, {
                             message: r
                         })
                     }
@@ -7477,14 +7479,14 @@ webpackJsonp([48], {
                             bottom: 3,
                             x: 3
                         }
-                    }, M.createElement(Bi.a, {
+                    }, M.createElement(Gi.a, {
                         onVideoSortChange: this.onVideoSortChange,
                         onVideoFilterChange: this.onVideoFilterChange,
                         selectedSort: n,
                         broadcastType: i
-                    }), M.createElement(Bi.b, {
+                    }), M.createElement(Gi.c, {
                         hideGameArt: !0,
-                        trackingContent: Object(Gi.a)(n),
+                        trackingContent: Object(Bi.a)(n),
                         trackingMedium: $.PageviewMedium.GameVideos,
                         videos: e,
                         listContext: Ui.b.SingleGameList
@@ -13416,9 +13418,11 @@ webpackJsonp([48], {
             g = n("ISok");
         n.d(t, "a", function() {
             return h
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return g.a
-        }), n.d(t, !1, function() {})
+        }), n.d(t, "b", function() {
+            return m.c
+        })
     },
     Vr3l: function(e, t, n) {
         e.exports = n.p + "assets/overwatch-chars-9fc82f039194a365a8d6d2bf2797e041.png"
@@ -19549,4 +19553,4 @@ webpackJsonp([48], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-a1c2b3d3e0a6192ab78b72015876a23b.js.map
+//# sourceMappingURL=pages.directory-game-af8a6cf25c530bb280ff0a6a6b0a2b6d.js.map

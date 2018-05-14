@@ -1698,7 +1698,10 @@ webpackJsonp([61], {
                                 y: .5
                             }
                         }, a.createElement(p._35, {
-                            className: "prime-offer__content"
+                            className: "prime-offer__content",
+                            margin: {
+                                bottom: 2
+                            }
                         }, a.createElement(p._35, {
                             className: "prime-offer__content__text",
                             background: p.n.Base
@@ -1706,8 +1709,9 @@ webpackJsonp([61], {
                             className: "prime-offer__publisher"
                         }, a.createElement(p.Q, {
                             type: p._49.P,
-                            color: p.K.Alt2,
-                            fontSize: p.V.Size7
+                            color: p.K.OverlayAlt,
+                            fontSize: p.V.Size7,
+                            transform: p._48.Uppercase
                         }, r.publisher)), a.createElement(p._8, {
                             className: "prime-offer__title",
                             alignItems: p.c.Start
@@ -2878,4 +2882,4 @@ webpackJsonp([61], {
     yqdF: function(e, t) {},
     zAvr: function(e, t) {}
 });
-//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-2c8aa4d721169dff27535066d98ba0e8.js.map
+//# sourceMappingURL=features.subscribe-button.components.subscribe-with-prime.component-6b70f5e7adda7f792c2cc90f6095eefc.js.map

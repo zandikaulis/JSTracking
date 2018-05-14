@@ -58,7 +58,7 @@ webpackJsonp([78], {
                             bottom: 2
                         },
                         margin: {
-                            bottom: 1
+                            y: 1
                         },
                         borderBottom: !0
                     }, c.createElement(h.Q, {
@@ -116,4 +116,4 @@ webpackJsonp([78], {
         })
     }
 });
-//# sourceMappingURL=sites.dev.pages.dashboard-b2148d83ad897f6d2cbdb4f37e22e9ad.js.map
+//# sourceMappingURL=sites.dev.pages.dashboard-ca6c92d76b4c7366430a019aef655ad7.js.map

@@ -1,126 +1,6 @@
 webpackJsonp([57], {
     "+Aaf": function(e, t) {},
-    "0H+u": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "UserImageUploader"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "login"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "bannerImageURL"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "offlineImageURL"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 108
-            }
-        };
-        n.loc.source = {
-            body: "query UserImageUploader($login: String!) {\nuser(login: $login) {\nid\nlogin\nbannerImageURL\nofflineImageURL\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    "1E7T": function(e, t) {},
-    "4Jix": function(e, t) {},
-    "4Q9N": function(e, t, n) {
-        "use strict";
-        var i;
-        n.d(t, "a", function() {
-                return i
-            }),
-            function(e) {
-                e.ProfileImage = "profile_image", e.ProfileBanner = "profile_banner", e.ChannelOfflineImage = "channel_offline_image"
-            }(i || (i = {}))
-    },
-    "4Uxc": function(e, t) {
+    "+t2Q": function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -463,6 +343,126 @@ webpackJsonp([57], {
             }
         };
         e.exports = n
+    },
+    "0H+u": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "UserImageUploader"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "login"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "bannerImageURL"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "offlineImageURL"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 108
+            }
+        };
+        n.loc.source = {
+            body: "query UserImageUploader($login: String!) {\nuser(login: $login) {\nid\nlogin\nbannerImageURL\nofflineImageURL\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    "1E7T": function(e, t) {},
+    "4Jix": function(e, t) {},
+    "4Q9N": function(e, t, n) {
+        "use strict";
+        var i;
+        n.d(t, "a", function() {
+                return i
+            }),
+            function(e) {
+                e.ProfileImage = "profile_image", e.ProfileBanner = "profile_banner", e.ChannelOfflineImage = "channel_offline_image"
+            }(i || (i = {}))
     },
     "9u8h": function(e, t, n) {
         "use strict";
@@ -981,6 +981,98 @@ webpackJsonp([57], {
             return "serviceWorker" in window.navigator && "PushManager" in window
         }
     },
+    LdTg: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "ChannelCollectionsPage"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "ownerLogin"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "ownerLogin"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 92
+            }
+        };
+        n.loc.source = {
+            body: "query ChannelCollectionsPage($ownerLogin: String!) {\nuser(login: $ownerLogin) {\nid\nlogin\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     O8Ns: function(e, t, n) {
         "use strict";
         var i, a, r = function(e, t, n) {
@@ -1471,7 +1563,7 @@ webpackJsonp([57], {
             E = n("4Q9N"),
             w = n("Odds"),
             C = (n("4Jix"), n("Ojfd")),
-            I = function(e) {
+            N = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
@@ -1538,7 +1630,7 @@ webpackJsonp([57], {
                     this.props.closeModal()
                 }, t
             }(r.Component),
-            N = Object(u.a)(C, {
+            I = Object(u.a)(C, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1549,7 +1641,7 @@ webpackJsonp([57], {
                 skip: function(e) {
                     return !e.channelLogin || !e.firstPageLoaded
                 }
-            })(I);
+            })(N);
         var O = Object(b.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
@@ -1559,7 +1651,7 @@ webpackJsonp([57], {
                     closeModal: k.c,
                     showModal: k.d
                 }, e)
-            })(N),
+            })(I),
             T = n("x9n8"),
             x = n("CSlQ"),
             D = (n("WClm"), function(e) {
@@ -1592,19 +1684,19 @@ webpackJsonp([57], {
                     }))
                 }, t = i.__decorate([Object(x.d)("EditProfileOverlay")], t)
             }(r.Component));
-        var j = Object(b.b)(null, function(e) {
+        var L = Object(b.b)(null, function(e) {
                 return Object(_.b)({
                     showModal: k.d
                 }, e)
             })(D),
-            U = n("70dR"),
+            j = n("70dR"),
             F = (n("z4Db"), n("kOMe"));
         n.d(t, "b", function() {
-            return L
+            return A
         }), n.d(t, "a", function() {
             return z
         });
-        var L, A = "channel-header__edit-profile-overlay",
+        var A, U = "channel-header__edit-profile-overlay",
             P = "channel-header__verified-badge",
             R = "channel-header__live-indicator",
             M = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL",
@@ -1612,7 +1704,7 @@ webpackJsonp([57], {
             B = "browser-notifications-upsell-seen";
         ! function(e) {
             e[e.Channel = 1] = "Channel", e[e.Clips = 2] = "Clips", e[e.Collections = 3] = "Collections", e[e.Events = 4] = "Events", e[e.Success = 5] = "Success", e[e.Followers = 6] = "Followers", e[e.Following = 7] = "Following", e[e.Videos = 8] = "Videos"
-        }(L || (L = {}));
+        }(A || (A = {}));
         var z = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
@@ -1642,7 +1734,7 @@ webpackJsonp([57], {
                     pulse: !0
                 }))), n.renderAvatarEditButton = function() {
                     return n.props.data && n.props.data.user && n.isChannelEditor() ? r.createElement(w._35, {
-                        className: A,
+                        className: U,
                         background: w.n.Overlay,
                         position: w._15.Absolute,
                         attachTop: !0,
@@ -1652,7 +1744,7 @@ webpackJsonp([57], {
                         display: w.R.InlineFlex,
                         alignItems: w.c.Center,
                         justifyContent: w._7.Center
-                    }, r.createElement(j, {
+                    }, r.createElement(L, {
                         userID: n.props.data.user.id,
                         login: n.props.data.user.login,
                         displayName: n.props.data.user.displayName
@@ -1725,11 +1817,11 @@ webpackJsonp([57], {
                     u = 0,
                     p = s.a.defaultAvatarURL;
                 this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, u = this.props.data.user.follows.totalCount, p = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles && this.props.data.user.roles.isPartner);
-                var h = this.state.live && !this.isActiveTab(L.Channel),
+                var h = this.state.live && !this.isActiveTab(A.Channel),
                     g = this.createChannelLinks(n, i, u),
                     f = {
                         "channel-header__user": !0,
-                        "channel-header__user--selected": this.isActiveTab(L.Channel)
+                        "channel-header__user--selected": this.isActiveTab(A.Channel)
                     },
                     v = null;
                 this.canRenderBitsButton() && (v = r.createElement(w._8, {
@@ -1767,7 +1859,7 @@ webpackJsonp([57], {
                     lineCount: 1,
                     width: 120
                 })), h && this.ChannelStatusIndicatorElement, t && this.verifiedBadgeElement);
-                b = this.isActiveTab(L.Channel) ? r.createElement("div", {
+                b = this.isActiveTab(A.Channel) ? r.createElement("div", {
                     className: "channel-header__banner-toggle",
                     onClick: this.toggleChannelBanner,
                     "data-target": "channel-header__channel-link",
@@ -1779,7 +1871,7 @@ webpackJsonp([57], {
                 }, _) : _;
                 var k = this.state.bannerHidden ? w.R.HideAccessible : w.R.Block,
                     y = null;
-                return this.isActiveTab(L.Channel) && (y = r.createElement(w._8, {
+                return this.isActiveTab(A.Channel) && (y = r.createElement(w._8, {
                     display: k
                 }, r.createElement(O, {
                     channelLogin: this.props.channelLogin,
@@ -1859,7 +1951,7 @@ webpackJsonp([57], {
                     margin: {
                         left: 1
                     }
-                }, r.createElement(U.a, {
+                }, r.createElement(j.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     channelLogin: this.props.channelLogin,
                     hideEsportsSubscription: this.props.hideEsportsSubscription
@@ -1949,37 +2041,37 @@ webpackJsonp([57], {
                     count: Object(s.e)(e),
                     pathSuffix: "videos/all",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(L.Videos)
+                    isSelected: this.isActiveTab(A.Videos)
                 }, {
                     label: Object(s.d)("Clips", "ChannelHeader"),
                     pathSuffix: "clips",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(L.Clips)
+                    isSelected: this.isActiveTab(A.Clips)
                 }, {
                     label: Object(s.d)("Collections", "ChannelHeader"),
                     pathSuffix: "collections",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(L.Collections)
+                    isSelected: this.isActiveTab(A.Collections)
                 }, {
                     label: Object(s.d)("Events", "ChannelHeader"),
                     pathSuffix: "events",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(L.Events)
+                    isSelected: this.isActiveTab(A.Events)
                 }, {
                     label: Object(s.d)("Followers", "ChannelHeader"),
                     count: Object(s.e)(t),
                     pathSuffix: "followers",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(L.Followers)
+                    isSelected: this.isActiveTab(A.Followers)
                 }, {
                     label: Object(s.d)("Following", "ChannelHeader"),
                     count: Object(s.e)(n),
                     pathSuffix: "following",
                     isExternal: !1,
-                    isSelected: this.isActiveTab(L.Following)
+                    isSelected: this.isActiveTab(A.Following)
                 }]
             }, t.prototype.isActiveTab = function(e) {
-                return L[this.props.currentPage] === L[e]
+                return A[this.props.currentPage] === A[e]
             }, t.prototype.isChannelEditor = function() {
                 return !!this.props.data && !!this.props.data.currentUser && !!this.props.data.user && !!this.props.data.currentUser.roles && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin)
             }, t.prototype.getChannelHeaderSize = function() {
@@ -2016,7 +2108,7 @@ webpackJsonp([57], {
                     }
                 }
             }, t.prototype.canRenderBitsButton = function() {
-                return this.props.data && !this.props.data.loading && this.props.currentPage !== L.Clips && this.props.data.currentUser && this.props.data.user && this.props.data.user.cheer && !1 === this.state.isGetBitsButtonTopNavExperimentEnabled
+                return this.props.data && !this.props.data.loading && this.props.currentPage !== A.Clips && this.props.data.user && this.props.data.user.cheer && !1 === this.state.isGetBitsButtonTopNavExperimentEnabled
             }, t.prototype.getWidth = function(e) {
                 return e ? {
                     width: e.clientWidth
@@ -3418,8 +3510,8 @@ webpackJsonp([57], {
                     }
                 })], t)
             }(c.Component),
-            I = Object(S.d)("Profile Edit")(C);
-        var N = Object(i.b)(function(e) {
+            N = Object(S.d)("Profile Edit")(C);
+        var I = Object(i.b)(function(e) {
             return {
                 authToken: Object(o.a)(e)
             }
@@ -3429,9 +3521,9 @@ webpackJsonp([57], {
                     return t.successCallback && t.successCallback(), Object(r.c)()
                 }
             }, e)
-        })(I);
+        })(N);
         n.d(t, "a", function() {
-            return N
+            return I
         })
     },
     xgnX: function(e, t, n) {
@@ -3511,15 +3603,15 @@ webpackJsonp([57], {
         var i = n("TToO"),
             a = n("GiK3"),
             r = n("3zLD"),
-            o = n("6sO2"),
-            s = n("yWCw"),
-            l = n("zCIC"),
-            c = n("j7/Y"),
-            d = n("SZoP"),
-            u = n("w9tK"),
-            p = n("vH/s"),
-            m = n("SI0h"),
-            h = n("CSlQ"),
+            o = n("j7/Y"),
+            s = n("w9tK"),
+            l = n("vH/s"),
+            c = n("SI0h"),
+            d = n("CSlQ"),
+            u = n("6sO2"),
+            p = n("yWCw"),
+            m = n("zCIC"),
+            h = n("SZoP"),
             g = n("F8kA"),
             f = n("kk4f"),
             v = n("Odds"),
@@ -3529,15 +3621,15 @@ webpackJsonp([57], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.computeViewsMessage = function() {
                         var e = t.props.totalViews || b;
-                        return 0 === e || 1 === e ? Object(o.d)("{viewCount, plural, one {# view}  other {# views}}", {
+                        return 0 === e || 1 === e ? Object(u.d)("{viewCount, plural, one {# view}  other {# views}}", {
                             viewCount: e
-                        }, "CollectionCard") : Object(o.d)("{viewCount} views", {
-                            viewCount: Object(o.f)(e)
+                        }, "CollectionCard") : Object(u.d)("{viewCount} views", {
+                            viewCount: Object(u.f)(e)
                         }, "CollectionCard")
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(o.d)("By {channelName}", {
+                    var e = Object(u.d)("By {channelName}", {
                         channelName: a.createElement(v.O, {
                             "data-test-selector": "collection-card-channel-link",
                             to: this.props.channelLinkTo,
@@ -3552,8 +3644,8 @@ webpackJsonp([57], {
                         to: {
                             pathname: this.props.linkTo,
                             state: {
-                                content: p.PageviewContent.CollectionCard,
-                                medium: p.PageviewMedium.ChannelCollections
+                                content: l.PageviewContent.CollectionCard,
+                                medium: l.PageviewMedium.ChannelCollections
                             }
                         },
                         title: this.props.title,
@@ -3581,8 +3673,8 @@ webpackJsonp([57], {
                         to: {
                             pathname: this.props.linkTo,
                             state: {
-                                content: p.PageviewContent.CollectionCard,
-                                medium: p.PageviewMedium.ChannelCollections
+                                content: l.PageviewContent.CollectionCard,
+                                medium: l.PageviewMedium.ChannelCollections
                             }
                         },
                         "data-test-selector": "collection-card-title-link",
@@ -3597,7 +3689,7 @@ webpackJsonp([57], {
                     }, " · " + this.computeViewsMessage())))))
                 }, t
             }(a.Component),
-            k = Object(h.d)("CollectionCard", {
+            k = Object(d.d)("CollectionCard", {
                 autoReportInteractive: !0
             })(_),
             y = function(e) {
@@ -3605,7 +3697,7 @@ webpackJsonp([57], {
                 return t = e.showCollectionsManagerButton ? a.createElement("div", null, a.createElement(v.Q, {
                     type: v._49.H4,
                     "data-test-selector": "no-collections"
-                }, Object(o.d)("Create a collection of your videos from Video Producer.", "collection-page")), a.createElement(v._8, {
+                }, Object(u.d)("Create a collection of your videos from Video Producer.", "collection-page")), a.createElement(v._8, {
                     padding: {
                         top: 2
                     }
@@ -3613,11 +3705,11 @@ webpackJsonp([57], {
                     type: v.B.Hollow,
                     linkTo: "/" + e.channelLogin + "/manager/collections",
                     "data-test-selector": "no-collections-button"
-                }, Object(o.d)("Go to Video Producer", "collection-page")))) : a.createElement(v.Q, {
+                }, Object(u.d)("Go to Video Producer", "collection-page")))) : a.createElement(v.Q, {
                     type: v._49.H4,
                     italic: !0,
                     "data-test-selector": "no-collections"
-                }, Object(o.d)("No collections found.", "collection-page")), a.createElement(v._35, {
+                }, Object(u.d)("No collections found.", "collection-page")), a.createElement(v._35, {
                     color: v.K.Alt2,
                     textAlign: v._45.Center,
                     padding: {
@@ -3625,30 +3717,27 @@ webpackJsonp([57], {
                     }
                 }, t)
             },
-            S = n("Ic9h"),
-            E = n("4Uxc"),
-            w = function(e) {
+            S = n("+t2Q"),
+            E = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                    if (!this.props.data.loading && this.props.data.user) return o.o.setPageTitle(this.props.data.user.displayName), void this.props.latencyTracking.reportInteractive(this.props.data.user.collections.edges.length + 1);
-                    this.props.latencyTracking.reportInteractive()
+                    this.props.data.loading || (this.props.data.user && u.o.setPageTitle(this.props.data.user.displayName), this.props.latencyTracking.reportInteractive())
                 }, t.prototype.render = function() {
-                    var e;
                     if (!this.props.data.error && this.props.data.user) {
-                        var t = this.props.data.user,
-                            n = t.collections.edges.map(function(e) {
+                        var e = this.props.data.user,
+                            t = e.collections.edges.map(function(e) {
                                 return e.node
                             }),
-                            i = !this.props.data.loading && !this.props.data.error && !!t.collections.pageInfo.hasNextPage,
-                            r = null;
-                        0 === n.length && (r = a.createElement(y, {
+                            n = !this.props.data.loading && !this.props.data.error && !!e.collections.pageInfo.hasNextPage,
+                            i = null;
+                        0 === t.length && (i = a.createElement(y, {
                             showCollectionsManagerButton: this.showCollectionManagerButton(),
-                            channelLogin: this.props.match.params.channelLogin
+                            channelLogin: this.props.channelLogin
                         }));
-                        var c = null;
-                        0 !== n.length && this.showCollectionManagerButton() && (c = a.createElement(v._8, {
+                        var r = null;
+                        0 !== t.length && this.showCollectionManagerButton() && (r = a.createElement(v._8, {
                             display: v.R.Flex,
                             justifyContent: v._7.End,
                             padding: {
@@ -3656,37 +3745,38 @@ webpackJsonp([57], {
                             }
                         }, a.createElement(v.v, {
                             type: v.B.Hollow,
-                            linkTo: "/" + this.props.match.params.channelLogin + "/manager/collections",
+                            linkTo: "/" + this.props.channelLogin + "/manager/collections",
                             "data-test-selector": "collections-manage-button"
-                        }, Object(o.d)("Manage your collections", "collection-page"))));
-                        var u = n.map(function(e, n) {
+                        }, Object(u.d)("Manage your collections", "collection-page"))));
+                        var o = t.map(function(t, n) {
                             return a.createElement(v._8, {
-                                key: e.id,
+                                key: t.id,
                                 margin: {
                                     bottom: 2
                                 }
                             }, a.createElement(k, {
-                                channelLinkTo: "/" + t.login,
-                                channelDisplayName: Object(d.a)(t.login, t.displayName),
-                                imageSrc: e.thumbnailURL,
-                                linkTo: "/collections/" + e.id,
-                                title: e.title,
-                                totalViews: e.viewCount,
-                                videoCount: e.items.totalCount,
+                                channelLinkTo: "/" + e.login,
+                                channelDisplayName: Object(h.a)(e.login, e.displayName),
+                                imageSrc: t.thumbnailURL,
+                                linkTo: "/collections/" + t.id,
+                                title: t.title,
+                                totalViews: t.viewCount,
+                                videoCount: t.items.totalCount,
                                 "data-a-target": "collection-card-" + n
                             }))
                         });
-                        e = a.createElement("div", null, c, r, a.createElement(v._55, {
+                        return a.createElement("div", null, r, i, a.createElement(v._55, {
                             gutterSize: v._57.Small,
                             childWidth: v._56.Large,
                             placeholderItems: 20
-                        }, u), a.createElement(l.a, {
-                            enabled: i,
+                        }, o), a.createElement(m.a, {
+                            enabled: n,
                             loadMore: this.props.loadMore
                         }))
-                    } else if (this.props.data.loading && !this.props.data.user) {
-                        for (var p = [], h = 0; h < 12; h++) p.push(a.createElement(v._8, {
-                            key: "collection-placeholder-" + h,
+                    }
+                    if (this.props.data.loading && !this.props.data.user) {
+                        for (var s = [], l = 0; l < 12; l++) s.push(a.createElement(v._8, {
+                            key: "collection-placeholder-" + l,
                             padding: {
                                 bottom: 2
                             },
@@ -3704,34 +3794,30 @@ webpackJsonp([57], {
                         }, a.createElement(v._14, {
                             width: 100
                         }))));
-                        e = a.createElement(v._55, {
+                        return a.createElement(v._55, {
                             gutterSize: v._57.Small,
                             childWidth: v._56.Medium,
                             placeholderItems: 20
-                        }, p)
-                    } else e = a.createElement(v._8, {
+                        }, s)
+                    }
+                    return a.createElement(v._8, {
                         margin: {
                             top: 5
                         }
-                    }, a.createElement(s.a, {
-                        message: Object(o.d)("These collections are temporarily unavailable.", "channel-collections")
-                    }));
-                    return a.createElement(v._8, {
-                        fullHeight: !0,
-                        "data-test-selector": "channel-collections-page"
-                    }, a.createElement(S.a, {
-                        currentPage: m.b.Collections,
-                        ownerLogin: this.props.match.params.channelLogin
-                    }, e))
+                    }, a.createElement(p.a, {
+                        message: Object(u.d)("These collections are temporarily unavailable.", "channel-collections")
+                    }))
                 }, t.prototype.showCollectionManagerButton = function() {
                     return !(!this.props.data.currentUser || !this.props.data.user) && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff)
                 }, t
             }(a.Component),
-            C = {
+            w = Object(r.compose)(Object(d.d)("ChannelCollectionsContent", {
+                destination: s.a.ChannelCollections
+            }), Object(r.graphql)(S, {
                 options: function(e) {
                     return {
                         variables: {
-                            ownerLogin: e.match.params.channelLogin,
+                            ownerLogin: e.channelLogin,
                             limit: 30
                         }
                     }
@@ -3740,7 +3826,7 @@ webpackJsonp([57], {
                     return i.__assign({}, e, {
                         loadMore: function() {
                             return e.data.fetchMore({
-                                query: E,
+                                query: S,
                                 variables: i.__assign({}, e.data.variables, {
                                     cursor: e.data.user.collections.edges[Math.max(e.data.user.collections.edges.length - 1, 0)].cursor
                                 }),
@@ -3758,11 +3844,38 @@ webpackJsonp([57], {
                         }
                     })
                 }
-            },
-            I = Object(r.compose)(Object(r.graphql)(E, C), Object(h.d)("ChannelCollectionsPage", {
-                destination: u.a.ChannelCollections
-            }), Object(c.a)({
-                location: p.PageviewLocation.ChannelCollections,
+            }))(E),
+            C = n("Ic9h"),
+            N = n("LdTg"),
+            I = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(v._8, {
+                        fullHeight: !0,
+                        "data-test-selector": "channel-collections-page"
+                    }, a.createElement(C.a, {
+                        currentPage: c.b.Collections,
+                        ownerLogin: this.props.match.params.channelLogin
+                    }, a.createElement(w, {
+                        channelLogin: this.props.match.params.channelLogin
+                    })))
+                }, t
+            }(a.Component),
+            O = Object(r.compose)(Object(d.d)("ChannelCollectionsPage", {
+                destination: s.a.ChannelCollections,
+                autoReportInteractive: !0
+            }), Object(r.graphql)(N, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            ownerLogin: e.match.params.channelLogin
+                        }
+                    }
+                }
+            }), Object(o.a)({
+                location: l.PageviewLocation.ChannelCollections,
                 properties: function(e) {
                     return {
                         channel: e.match.params.channelLogin,
@@ -3772,10 +3885,10 @@ webpackJsonp([57], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(w);
+            }))(I);
         n.d(t, "ChannelCollectionsPage", function() {
-            return I
+            return O
         })
     }
 });
-//# sourceMappingURL=pages.channel-collections-a95522d3f46660ebced45150e2117c0a.js.map
+//# sourceMappingURL=pages.channel-collections-abe33ee1ccb05c3db6dec96aebeb8c45.js.map

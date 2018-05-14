@@ -1972,6 +1972,8 @@ webpackJsonp([102], {
             return i
         }), n.d(t, "a", function() {
             return a
+        }), n.d(t, "c", function() {
+            return r
         });
         var r, i = "VIEWS",
             a = "TIME";
@@ -9190,7 +9192,7 @@ webpackJsonp([102], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(o.d)(this.props.user),
+                    var e = Object(o.e)(this.props.user),
                         t = !e,
                         n = this.getPrimePromotionTextNode(t, e),
                         r = this.props.isOverlay ? s.K.Overlay : s.K.Base,
@@ -9243,18 +9245,20 @@ webpackJsonp([102], {
         "use strict";
         t.c = function(e, t, n) {
             void 0 === n && (n = !1);
-            return d(a, e, t, n)
-        }, t.a = u, t.b = function(e, t, n) {
+            return p(a, e, t, n)
+        }, t.a = d, t.b = function(e, t, n) {
             void 0 === n && (n = !1);
             var a = r.b.get(s, i.a.Off),
                 o = t && t.roles && t.roles.isStaff || !1;
-            return u(e, t, n) && (a === i.a.On || a === i.a.StaffOnly && o)
-        }, t.d = function(e) {
+            return d(e, t, n) && (a === i.a.On || a === i.a.StaffOnly && o)
+        }, t.e = function(e) {
             var t = r.b.get(l, i.a.Off),
                 n = r.b.get(c, []),
                 a = e && n.includes(e.id) || !1,
                 o = e && e.roles && e.roles.isStaff || !1;
             return t === i.a.On || t === i.a.StaffOnly && o || a
+        }, t.d = function(e, t) {
+            return p(u, e, t)
         };
         var r = n("6sO2"),
             i = n("QRuM"),
@@ -9262,13 +9266,14 @@ webpackJsonp([102], {
             o = "esport_insider_pass_whitelist",
             s = "esport_insider_pass_gifting_launch",
             l = "esport_insider_prime_bits_launch",
-            c = "esport_insider_prime_bits_launch_user_whitelist";
+            c = "esport_insider_prime_bits_launch_user_whitelist",
+            u = "esports_room_cheering_whitelist";
 
-        function u(e, t, n) {
-            return void 0 === n && (n = !1), d(o, e, t, n)
+        function d(e, t, n) {
+            return void 0 === n && (n = !1), p(o, e, t, n)
         }
 
-        function d(e, t, n, i) {
+        function p(e, t, n, i) {
             void 0 === i && (i = !1);
             var a = r.b.get(e, []),
                 o = n && n.roles && n.roles.isStaff || i;
@@ -13622,4 +13627,4 @@ webpackJsonp([102], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-0d70ad46ab51a70ed71f5c63b5203d0b.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-5282c140a77ff21e9495af985acf7fc3.js.map

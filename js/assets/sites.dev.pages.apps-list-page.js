@@ -1000,10 +1000,12 @@ webpackJsonp([101], {
                             right: 1
                         }
                     }, o.createElement(d.v, {
-                        linkTo: "/console/apps/" + this.props.app.id
+                        linkTo: "/console/apps/" + this.props.app.id,
+                        type: d.B.Hollow
                     }, Object(a.d)("Manage", "DevAppListRow"))), o.createElement(d.v, {
                         onClick: this.onDelete,
-                        "data-test-selector": "dev-apps-list-row-delete"
+                        "data-test-selector": "dev-apps-list-row-delete",
+                        type: d.B.Hollow
                     }, Object(a.d)("Delete", "DevAppListRow")))))
                 }, t
             }(o.Component),
@@ -1054,12 +1056,18 @@ webpackJsonp([101], {
                     }, o.createElement(d._2, {
                         margin: {
                             bottom: 2
+                        },
+                        display: d.R.Flex,
+                        justifyContent: d._7.Between
+                    }, o.createElement("header", null, o.createElement(d._8, null, o.createElement(d._8, {
+                        margin: {
+                            bottom: .5
                         }
-                    }, o.createElement("header", null, o.createElement(d.Q, {
+                    }, o.createElement(d.Q, {
                         type: d._49.H3
-                    }, Object(a.d)("Developer Applications", "DevApps")), o.createElement(d.Q, {
+                    }, Object(a.d)("Developer Applications", "DevApps"))), o.createElement(d.Q, {
                         type: d._49.P
-                    }, Object(a.d)("You have registered these apps to use the Twitch API", "DevApps")))), o.createElement(d._8, null, o.createElement(d._8, {
+                    }, Object(a.d)("You have registered these apps to use the Twitch API", "DevApps"))), o.createElement(d._8, {
                         margin: {
                             bottom: 1
                         },
@@ -1068,7 +1076,7 @@ webpackJsonp([101], {
                     }, o.createElement(d.v, {
                         icon: d._25.Plus,
                         linkTo: "/console/apps/create"
-                    }, Object(a.d)("Register Your Application", "DevApps"))), o.createElement(h, {
+                    }, Object(a.d)("Register Your Application", "DevApps"))))), o.createElement(d._8, null, o.createElement(h, {
                         apps: this.props.apps,
                         onDelete: this.props.onDelete
                     })))
@@ -2099,9 +2107,9 @@ webpackJsonp([101], {
                         return n % 24 * o + r * a + 1e3 * u
                     }
                     return null
-                }(O.time)), O.timezone ? (k = O.timezone, _ = (N = T.exec(k)) ? 0 : (N = y.exec(k)) ? (E = 60 * parseInt(N[2], 10), "+" === N[1] ? -E : E) : (N = A.exec(k)) ? (E = 60 * parseInt(N[2], 10) + parseInt(N[3], 10), "+" === N[1] ? -E : E) : 0) : (_ = new Date(F + H).getTimezoneOffset(), _ = new Date(F + H + _ * a).getTimezoneOffset()), new Date(F + H + _ * a)
+                }(O.time)), O.timezone ? (k = O.timezone, _ = (E = T.exec(k)) ? 0 : (E = y.exec(k)) ? (N = 60 * parseInt(E[2], 10), "+" === E[1] ? -N : N) : (E = A.exec(k)) ? (N = 60 * parseInt(E[2], 10) + parseInt(E[3], 10), "+" === E[1] ? -N : N) : 0) : (_ = new Date(F + H).getTimezoneOffset(), _ = new Date(F + H + _ * a).getTimezoneOffset()), new Date(F + H + _ * a)
             }
-            var k, N, E;
+            var k, E, N;
             return new Date(e)
         }
     },
@@ -2167,4 +2175,4 @@ webpackJsonp([101], {
         }
     }
 });
-//# sourceMappingURL=sites.dev.pages.apps-list-page-126a700a8a43cd85a0912bdc737911d9.js.map
+//# sourceMappingURL=sites.dev.pages.apps-list-page-d26da95561348ee7ee24c313a5223267.js.map

@@ -2178,7 +2178,10 @@ webpackJsonp([59], {
                                 y: .5
                             }
                         }, a.createElement(u._35, {
-                            className: "prime-offer__content"
+                            className: "prime-offer__content",
+                            margin: {
+                                bottom: 2
+                            }
                         }, a.createElement(u._35, {
                             className: "prime-offer__content__text",
                             background: u.n.Base
@@ -2186,8 +2189,9 @@ webpackJsonp([59], {
                             className: "prime-offer__publisher"
                         }, a.createElement(u.Q, {
                             type: u._49.P,
-                            color: u.K.Alt2,
-                            fontSize: u.V.Size7
+                            color: u.K.OverlayAlt,
+                            fontSize: u.V.Size7,
+                            transform: u._48.Uppercase
                         }, r.publisher)), a.createElement(u._8, {
                             className: "prime-offer__title",
                             alignItems: u.c.Start
@@ -3361,4 +3365,4 @@ webpackJsonp([59], {
     yqdF: function(e, t) {},
     zAvr: function(e, t) {}
 });
-//# sourceMappingURL=features.twitch-prime.components.prime-subscribe.component-53603ff3e1fda46030ac52811a82567f.js.map
+//# sourceMappingURL=features.twitch-prime.components.prime-subscribe.component-d122bde44644248add3edb2c72e06ed4.js.map

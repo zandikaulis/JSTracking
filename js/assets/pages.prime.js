@@ -2062,7 +2062,10 @@ webpackJsonp([58], {
                                 y: .5
                             }
                         }, a.createElement(u._35, {
-                            className: "prime-offer__content"
+                            className: "prime-offer__content",
+                            margin: {
+                                bottom: 2
+                            }
                         }, a.createElement(u._35, {
                             className: "prime-offer__content__text",
                             background: u.n.Base
@@ -2070,8 +2073,9 @@ webpackJsonp([58], {
                             className: "prime-offer__publisher"
                         }, a.createElement(u.Q, {
                             type: u._49.P,
-                            color: u.K.Alt2,
-                            fontSize: u.V.Size7
+                            color: u.K.OverlayAlt,
+                            fontSize: u.V.Size7,
+                            transform: u._48.Uppercase
                         }, n.publisher)), a.createElement(u._8, {
                             className: "prime-offer__title",
                             alignItems: u.c.Start
@@ -3374,4 +3378,4 @@ webpackJsonp([58], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.prime-3651762489999e0a6be3626903773d8f.js.map
+//# sourceMappingURL=pages.prime-f37177c7a07921d6ad583d7755996f75.js.map

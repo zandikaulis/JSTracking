@@ -6410,7 +6410,7 @@ webpackJsonp([51], {
                     }
                 }
             }, t.prototype.canRenderBitsButton = function() {
-                return this.props.data && !this.props.data.loading && this.props.currentPage !== R.Clips && this.props.data.currentUser && this.props.data.user && this.props.data.user.cheer && !1 === this.state.isGetBitsButtonTopNavExperimentEnabled
+                return this.props.data && !this.props.data.loading && this.props.currentPage !== R.Clips && this.props.data.user && this.props.data.user.cheer && !1 === this.state.isGetBitsButtonTopNavExperimentEnabled
             }, t.prototype.getWidth = function(e) {
                 return e ? {
                     width: e.clientWidth
@@ -9078,4 +9078,4 @@ webpackJsonp([51], {
     yU6t: function(e, t) {},
     z4Db: function(e, t) {}
 });
-//# sourceMappingURL=pages.event-landing-a5678e88efae7177536a1c22f2e7a66e.js.map
+//# sourceMappingURL=pages.event-landing-8c75bf54ee2002c8759a6ffe062b6afc.js.map

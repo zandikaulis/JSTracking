@@ -1,4 +1,4 @@
-webpackJsonp([39, 121], {
+webpackJsonp([38, 121], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -1065,6 +1065,130 @@ webpackJsonp([39, 121], {
         }
     },
     "2IkU": function(e, t) {},
+    "2gZ/": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "VideoWatch_UpvoteVideo"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "UpvoteVideoInput"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "upvoteVideo"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "video"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "self"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "isUpvoted"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "upvotes"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 133
+            }
+        };
+        n.loc.source = {
+            body: "mutation VideoWatch_UpvoteVideo($input: UpvoteVideoInput!) {\nupvoteVideo(input: $input) {\nvideo {\nid\nself {\nisUpvoted\n}\nupvotes\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     "2hJ3": function(e, t, n) {
         "use strict";
         t.a = function(e) {
@@ -7521,7 +7645,7 @@ webpackJsonp([39, 121], {
                     }
                 }
             }, t.prototype.canRenderBitsButton = function() {
-                return this.props.data && !this.props.data.loading && this.props.currentPage !== A.Clips && this.props.data.currentUser && this.props.data.user && this.props.data.user.cheer && !1 === this.state.isGetBitsButtonTopNavExperimentEnabled
+                return this.props.data && !this.props.data.loading && this.props.currentPage !== A.Clips && this.props.data.user && this.props.data.user.cheer && !1 === this.state.isGetBitsButtonTopNavExperimentEnabled
             }, t.prototype.getWidth = function(e) {
                 return e ? {
                     width: e.clientWidth
@@ -9990,16 +10114,44 @@ webpackJsonp([39, 121], {
                         },
                         arguments: [],
                         directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "upvotes"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "self"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "isUpvoted"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 858
+                end: 885
             }
         };
         n.loc.source = {
-            body: "query VideoWatchPage_Video($videoID: ID $collectionID: ID! $useCollectionID: Boolean!) {\ncurrentUser {\nid\ndisplayName\n}\n# If the page specifies a video ID query it directly.\nvideo(id: $videoID options: { includePrivate: true }) @skip(if: $useCollectionID) {\n...videoWatchData\n}\n# If the page is a collection page grab the first video from the collection.\ncollection(id: $collectionID) @include(if: $useCollectionID) {\nid\nitems(first: 1) {\ntotalCount\nedges {\nnode {\n... on Video {\n...videoWatchData\n}\n}\n}\n}\nowner {\nid\nlogin\ndisplayName\n}\n}\n}\n# These are the fields used by the watch page.\nfragment videoWatchData on Video {\nid\nbroadcastType\ntitle\ndescription\nlengthSeconds\npublishedAt\nviewCount\nscope\npreviewThumbnailURL(width: 126 height: 71)\ngame {\nid\nboxArtURL(width: 138 height: 190)\nname\n}\nowner {\nid\ndisplayName\nlogin\nchatSettings {\nrules\n}\n}\nlanguage\n}",
+            body: "query VideoWatchPage_Video($videoID: ID $collectionID: ID! $useCollectionID: Boolean!) {\ncurrentUser {\nid\ndisplayName\n}\n# If the page specifies a video ID query it directly.\nvideo(id: $videoID options: { includePrivate: true }) @skip(if: $useCollectionID) {\n...videoWatchData\n}\n# If the page is a collection page grab the first video from the collection.\ncollection(id: $collectionID) @include(if: $useCollectionID) {\nid\nitems(first: 1) {\ntotalCount\nedges {\nnode {\n... on Video {\n...videoWatchData\n}\n}\n}\n}\nowner {\nid\nlogin\ndisplayName\n}\n}\n}\n# These are the fields used by the watch page.\nfragment videoWatchData on Video {\nid\nbroadcastType\ntitle\ndescription\nlengthSeconds\npublishedAt\nviewCount\nscope\npreviewThumbnailURL(width: 126 height: 71)\ngame {\nid\nboxArtURL(width: 138 height: 190)\nname\n}\nowner {\nid\ndisplayName\nlogin\nchatSettings {\nrules\n}\n}\nlanguage\nupvotes\nself {\nisUpvoted\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -16960,7 +17112,68 @@ webpackJsonp([39, 121], {
                     }
                 }, e)
             })(Object(ee.f)(he)),
-            fe = (n("YhgU"), function(e) {
+            fe = n("iOr9"),
+            ve = n("7vx8"),
+            be = n("2gZ/"),
+            ke = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        hasError: !1
+                    }, t.renderVariant1 = function() {
+                        return u.createElement(R.v, {
+                            icon: t.props.upvoted ? R._25.Liked : R._25.Like,
+                            type: R.B.Hollow,
+                            onClick: t.upvoteVideo
+                        }, null !== t.props.upvotes && t.props.upvotes.toString())
+                    }, t.renderVariant2 = function() {
+                        var e = t.props.upvoted ? t.props.upvotes && t.props.upvotes.toString() : null;
+                        return u.createElement(R.v, {
+                            icon: t.props.upvoted ? R._25.Liked : R._25.Like,
+                            type: R.B.Hollow,
+                            onClick: t.upvoteVideo
+                        }, e)
+                    }, t.upvoteVideo = function() {
+                        t.props.currentUserID && t.props.upvoteVideo({
+                            variables: {
+                                input: {
+                                    videoID: t.props.videoID,
+                                    positionSeconds: t.props.positionSeconds,
+                                    isUpvoted: !t.props.upvoted,
+                                    userID: t.props.currentUserID
+                                }
+                            }
+                        })
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    if (null === this.props.upvoted || null === this.props.upvotes || !1 === this.props.loggedIn || this.state.hasError) return null;
+                    var e = {
+                        assignments: {
+                            fallback: function() {
+                                return null
+                            },
+                            variant1: this.renderVariant1,
+                            variant2: this.renderVariant2
+                        },
+                        name: "TWILIGHT_VOD_SHORYUKEN"
+                    };
+                    return u.createElement(fe.a, l.__assign({}, e))
+                }, t.prototype.componentDidCatch = function() {
+                    this.setState({
+                        hasError: !0
+                    })
+                }, t.prototype.componentDidMount = function() {
+                    null === this.props.upvoted || null === this.props.upvotes || !1 === this.props.loggedIn || this.state.hasError || "control" !== p.o.experiments.getAssignment("TWILIGHT_VOD_SHORYUKEN") && p.o.tracking.track(_.SpadeEventType.VODPageviewMetadata, {
+                        upvote_count: this.props.upvotes,
+                        vod_id: this.props.videoID
+                    })
+                }, t
+            }(u.Component),
+            ye = Object(ve.a)(be, {
+                name: "upvoteVideo"
+            })(ke),
+            _e = (n("YhgU"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -17016,6 +17229,17 @@ webpackJsonp([39, 121], {
                         flexGrow: 0
                     }, u.createElement(R._8, {
                         padding: {
+                            left: 1
+                        }
+                    }, this.props.video && u.createElement(ye, {
+                        videoID: this.props.video.id,
+                        positionSeconds: this.props.lastVideoOffset,
+                        upvotes: this.props.video.upvotes,
+                        upvoted: this.props.video.self && this.props.video.self.isUpvoted,
+                        loggedIn: null !== this.props.currentUser,
+                        currentUserID: this.props.currentUser && this.props.currentUser.id
+                    })), u.createElement(R._8, {
+                        padding: {
                             x: 1
                         }
                     }, u.createElement(j.a, {
@@ -17036,13 +17260,13 @@ webpackJsonp([39, 121], {
                     })))), e)
                 }, t
             }(u.Component)),
-            ve = Object(w.d)("VideoInfoBar", {
+            Se = Object(w.d)("VideoInfoBar", {
                 autoReportInteractive: !0
-            })(fe),
-            be = n("Aj/L");
-        var ke = Object(i.b)(function(e) {
+            })(_e),
+            Ce = n("Aj/L");
+        var we = Object(i.b)(function(e) {
                 return {
-                    isLoggedIn: Object(be.d)(e)
+                    isLoggedIn: Object(Ce.d)(e)
                 }
             })(function(e) {
                 var t;
@@ -17097,9 +17321,9 @@ webpackJsonp([39, 121], {
                     }
                 }, t))
             }),
-            ye = (n("VnsS"), n("eeM1")),
-            _e = -1,
-            Se = function(e) {
+            Ee = (n("VnsS"), n("eeM1")),
+            Oe = -1,
+            De = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = p.j.withCategory("VideoWatchPage"), n.onPlayerSeekRequest = function(e) {
@@ -17110,7 +17334,7 @@ webpackJsonp([39, 121], {
                         n.props.onLogin()
                     }, n.getInitialVideoOffsetTime = function() {
                         var e, t, i = d.parse(n.props.location.search);
-                        return i.t ? (e = i.t, (t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "")) ? 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0) : 0) : _e
+                        return i.t ? (e = i.t, (t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "")) ? 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0) : 0) : Oe
                     }, n.onPlayerNavigationEvent = function(e) {
                         var t = n.getVideo(),
                             i = t ? t.id : "",
@@ -17126,7 +17350,7 @@ webpackJsonp([39, 121], {
                         }, function() {
                             n.props.onVideoTimeChange(t)
                         }) : n.state.requestedVideoOffset === t && n.setState({
-                            requestedVideoOffset: _e
+                            requestedVideoOffset: Oe
                         })
                     }, n.getMiniPlayerTitle = function() {
                         var e = n.getVideo();
@@ -17135,7 +17359,7 @@ webpackJsonp([39, 121], {
                         return e || t ? !e && t ? "/collections/" + t : "/videos/" + e + (t ? "?collection=" + t : "") : (n.logger.error(new Error, "Tried to generate a mini player URL based on the current route, but critical options were missing."), "/")
                     }, n.state = {
                         requestedVideoOffset: n.getInitialVideoOffsetTime(),
-                        lastVideoOffset: _e,
+                        lastVideoOffset: Oe,
                         miniPlayerRouteLink: n.getMiniPlayerURL(t.match.params.videoID, t.match.params.collectionID)
                     }, n
                 }
@@ -17162,10 +17386,10 @@ webpackJsonp([39, 121], {
                     if (this.props.data.error || e && e.id && !e.owner) return u.createElement(h.a, {
                         message: Object(p.d)("Whoops, we can't load that video right now.", "VideoWatchPage")
                     });
-                    if (!this.props.data.loading && (!e || e && "" === e.id) && !t) return u.createElement(ke, null);
+                    if (!this.props.data.loading && (!e || e && "" === e.id) && !t) return u.createElement(we, null);
                     var r = c("video-watch-page__right-column", ((d = {})[Object(b.c)(f.a.Dark)] = this.props.theatreModeEnabled, d)),
                         a = {};
-                    this.state.requestedVideoOffset !== _e && (a.nextVideoOffset = this.state.requestedVideoOffset), "" !== t && (a.collectionID = t);
+                    this.state.requestedVideoOffset !== Oe && (a.nextVideoOffset = this.state.requestedVideoOffset), "" !== t && (a.collectionID = t);
                     var o = this.props.match.params.videoID;
                     o && (a.vodID = o);
                     var d, m = null;
@@ -17188,7 +17412,7 @@ webpackJsonp([39, 121], {
                         }, a),
                         miniPlayerTitle: this.getMiniPlayerTitle(),
                         miniPlayerContentRoute: this.state.miniPlayerRouteLink
-                    })), !n && u.createElement(ve, {
+                    })), !n && u.createElement(Se, {
                         collectionID: Object(k.a)(this.props),
                         currentUser: this.props.data.currentUser || null,
                         video: e || null,
@@ -17223,7 +17447,7 @@ webpackJsonp([39, 121], {
                     var e = {},
                         t = d.parse(this.props.location.search),
                         n = this.getInitialVideoOffsetTime();
-                    return n !== _e && (e.highlightTimestamp = n), t.comment && (e.highlightedMessageID = t.comment), e
+                    return n !== Oe && (e.highlightTimestamp = n), t.comment && (e.highlightedMessageID = t.comment), e
                 }, t.prototype.reportInteractive = function() {
                     this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.getVideo = function() {
@@ -17252,7 +17476,7 @@ webpackJsonp([39, 121], {
                     })
                 }, t
             }(u.Component),
-            Ce = Object(m.compose)(Object(m.graphql)(ye, {
+            Te = Object(m.compose)(Object(m.graphql)(Ee, {
                 options: function(e) {
                     return {
                         variables: {
@@ -17290,8 +17514,8 @@ webpackJsonp([39, 121], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(Se);
-        var we = Object(i.b)(function(e) {
+            }))(De);
+        var Ne = Object(i.b)(function(e) {
             return {
                 theatreModeEnabled: e.ui.theatreModeEnabled
             }
@@ -17302,9 +17526,9 @@ webpackJsonp([39, 121], {
                 },
                 onVideoTimeChange: s.q
             }, e)
-        })(Ce);
+        })(Te);
         n.d(t, "VideoWatchPage", function() {
-            return we
+            return Ne
         })
     },
     urTJ: function(e, t, n) {
@@ -19612,4 +19836,4 @@ webpackJsonp([39, 121], {
         }
     }
 });
-//# sourceMappingURL=pages.video-watch-d3f8e67b76edbef37217f06a8130f33f.js.map
+//# sourceMappingURL=pages.video-watch-bfe4d660c6e7efaafa43b19dbc6f7c18.js.map

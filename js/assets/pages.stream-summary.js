@@ -2540,24 +2540,24 @@ webpackJsonp([94], {
                         return e.videoPlayExternalReferrers
                     })),
                     M = n.createElement(s.a, null);
-                return (_.totals || f.totals || y.totals) && (M = n.createElement(n.Fragment, null, n.createElement(m._35, {
+                return (_.total || f.total || y.total) && (M = n.createElement(n.Fragment, null, n.createElement(m._35, {
                     borderBottom: !0,
                     padding: {
                         bottom: 1
                     }
                 }, n.createElement(c.a, {
                     referrals: _.items.slice(0, 3),
-                    totals: _.totals,
+                    total: _.total,
                     translationFunc: r.b,
                     title: Object(i.d)("Twitch", "DashboardReferralPanel")
                 }), n.createElement(c.a, {
                     referrals: f.items.slice(0, 3),
-                    totals: f.totals,
+                    total: f.total,
                     translationFunc: h,
                     title: Object(i.d)("Channels", "DashboardReferralPanel")
                 }), n.createElement(c.a, {
                     referrals: y.items.slice(0, 3),
-                    totals: y.totals,
+                    total: y.total,
                     translationFunc: r.a,
                     title: Object(i.d)("External", "DashboardReferralPanel")
                 })), n.createElement(l.a, {
@@ -16005,7 +16005,7 @@ webpackJsonp([94], {
                 title: Object(s.d)("Where did my views come from?", "StreamSummaryReferralPanel")
             }, i.createElement(f._35, {
                 className: "referral-panel",
-                flexDirection: a.totals ? void 0 : f.T.Column,
+                flexDirection: a.total ? void 0 : f.T.Column,
                 margin: {
                     bottom: 2
                 },
@@ -16018,15 +16018,15 @@ webpackJsonp([94], {
                 }
             }, i.createElement($.a, {
                 referrals: a.items.slice(0, te),
-                totals: a.totals,
+                total: a.total,
                 translationFunc: ee,
                 subtitle: function(e) {
                     if (!e) return "";
                     return Object(s.d)("{viewCount, plural, one {# view across all web sources} other {# views across all web sources}}", {
                         viewCount: e
                     }, "StreamSummaryReferralPanel")
-                }(a.totals)
-            }), !a.totals && i.createElement(re, null)), i.createElement(se, {
+                }(a.total)
+            }), !a.total && i.createElement(re, null)), i.createElement(se, {
                 streamSummary: t
             })))
         }
@@ -16056,7 +16056,7 @@ webpackJsonp([94], {
 
         function se(e) {
             var t, a = e.streamSummary;
-            return a ? (t = a.videoPlayAllReferrers.totals ? Object(s.d)("View More Stats", "StreamSummaryReferralPanel") : Object(s.d)("View Stats", "StreamSummaryReferralPanel"), i.createElement(R.a, {
+            return a ? (t = a.videoPlayAllReferrers.total ? Object(s.d)("View More Stats", "StreamSummaryReferralPanel") : Object(s.d)("View Stats", "StreamSummaryReferralPanel"), i.createElement(R.a, {
                 message: t,
                 linkTo: "https://twitch.tv/" + a.channel.name + "/dashboard/stats",
                 targetBlank: !0
@@ -19136,4 +19136,4 @@ webpackJsonp([94], {
         })
     }
 });
-//# sourceMappingURL=pages.stream-summary-e13097e171f56ae3116f776664c0ccec.js.map
+//# sourceMappingURL=pages.stream-summary-2cd48ea08eae405c2a2bb9f0a715a107.js.map

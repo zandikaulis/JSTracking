@@ -2155,13 +2155,13 @@ webpackJsonp([47], {
                 }, r.createElement(m, {
                     isLoading: n,
                     referrals: d.items.slice(0, 15),
-                    totals: d.totals,
+                    total: u.total,
                     translationFunc: o.b,
                     title: Object(a.d)("Views by Location", "ChannelAnalyticsReferralPage")
                 }), r.createElement(m, {
                     isLoading: n,
                     referrals: u.items.slice(0, 15),
-                    totals: u.totals,
+                    total: u.total,
                     translationFunc: i.c,
                     title: Object(a.d)("Views by Platform", "ChannelAnalyticsReferralPage")
                 })), r.createElement(c._8, {
@@ -2176,19 +2176,19 @@ webpackJsonp([47], {
                 }, r.createElement(m, {
                     isLoading: n,
                     referrals: f.items.slice(0, 15),
-                    totals: f.totals,
+                    total: f.total,
                     translationFunc: i.b,
                     title: Object(a.d)("Views from Twitch", "ChannelAnalyticsReferralPage")
                 }), r.createElement(m, {
                     isLoading: n,
                     referrals: h.items.slice(0, 15),
-                    totals: h.totals,
+                    total: h.total,
                     translationFunc: l,
                     title: Object(a.d)("Views from Channels", "ChannelAnalyticsReferralPage")
                 }), r.createElement(m, {
                     isLoading: n,
                     referrals: p.items.slice(0, 15),
-                    totals: p.totals,
+                    total: p.total,
                     translationFunc: i.a,
                     title: Object(a.d)("Views from Outside Twitch", "ChannelAnalyticsReferralPage")
                 })))
@@ -2197,7 +2197,7 @@ webpackJsonp([47], {
         function m(e) {
             var t = e.isLoading,
                 n = e.referrals,
-                a = e.totals,
+                a = e.total,
                 o = e.translationFunc,
                 i = e.title;
             return t ? r.createElement(c._8, {
@@ -2217,7 +2217,7 @@ webpackJsonp([47], {
                 background: c.n.Base
             }, r.createElement(u.a, {
                 referrals: n,
-                totals: a,
+                total: a,
                 translationFunc: o,
                 title: i
             }))
@@ -5742,7 +5742,7 @@ webpackJsonp([47], {
         }
         var d = function(e) {
             var t = e.referrals,
-                n = e.totals,
+                n = e.total,
                 s = e.translationFunc,
                 u = e.title,
                 d = e.subtitle;
@@ -5794,6 +5794,7 @@ webpackJsonp([47], {
             }, t.map(function(e, t) {
                 return a.createElement(m, {
                     referral: e,
+                    total: n,
                     translationFunc: s,
                     key: t
                 })
@@ -5801,11 +5802,11 @@ webpackJsonp([47], {
         };
 
         function m(e) {
-            var t, n = e.referral,
-                c = e.translationFunc;
-            return t = n.share > 0 ? Object(o.d)("{share, number, percent}", {
-                share: n.share / 100
-            }, "ReferralGroup") : Object(o.d)("< 1%", "ReferralGroup"), a.createElement(i._35, {
+            var t, n, c = e.referral,
+                d = e.total,
+                m = e.translationFunc,
+                h = (t = c.count / d, Math.round(100 * t) / 100);
+            return n = .01 <= h ? Object(o.e)(h, "percent") : Object(o.d)("< 1%", "ReferralGroup"), a.createElement(i._35, {
                 className: "referral-group-row",
                 padding: {
                     y: 1,
@@ -5827,7 +5828,7 @@ webpackJsonp([47], {
             }, a.createElement(i.Q, r.__assign({
                 fontSize: i.V.Size5,
                 ellipsis: !0
-            }, u), c(n.name)))), a.createElement(i.L, {
+            }, u), m(c.name)))), a.createElement(i.L, {
                 cols: {
                     default: 2,
                     xs: 3,
@@ -5841,7 +5842,7 @@ webpackJsonp([47], {
             }, a.createElement(i.Q, r.__assign({
                 color: i.K.Alt2,
                 ellipsis: !0
-            }, s), t))), a.createElement(i.L, {
+            }, s), n))), a.createElement(i.L, {
                 cols: {
                     default: 5,
                     xs: 4,
@@ -5852,14 +5853,14 @@ webpackJsonp([47], {
                     top: .5
                 }
             }, a.createElement(i._52, {
-                label: l(n.count),
+                label: l(c.count),
                 direction: i._54.Top,
                 align: i._53.Center,
                 display: i.R.Block
             }, a.createElement(i._35, {
                 background: i.n.Alt2
             }, a.createElement(i._18, {
-                value: Math.max(n.share, 1)
+                value: Math.max(100 * h, 1)
             })))))))
         }
         n.d(t, !1, function() {
@@ -6212,34 +6213,30 @@ webpackJsonp([47], {
         t.b = function(e, t) {
             void 0 === t && (t = r);
             var n = {
-                totals: 0,
+                total: 0,
                 items: []
             };
             if (!e) return n;
             return n.items = e.map(function(e) {
-                return n.totals += Number(e.value), {
+                return n.total += Number(e.value), {
                     name: t(e.key),
-                    count: Number(e.value),
-                    share: 0
+                    count: Number(e.value)
                 }
-            }), n.items.forEach(function(e) {
-                e.share = o(e.count / n.totals)
             }), n.items = n.items.sort(a), n
         }, t.a = function(e) {
             var t = {
-                    totals: 0,
+                    total: 0,
                     items: []
                 },
                 n = new Map;
             return e.forEach(function(e) {
-                t.totals += e.totals, e.items.forEach(function(e) {
+                t.total += e.total, e.items.forEach(function(e) {
                     n.set(e.name, (n.get(e.name) || 0) + e.count)
                 })
             }), n.forEach(function(e, n) {
                 t.items.push({
                     name: n,
-                    count: e,
-                    share: o(e / t.totals)
+                    count: e
                 })
             }), t.items = t.items.sort(a), t
         };
@@ -6249,10 +6246,6 @@ webpackJsonp([47], {
 
         function a(e, t) {
             return e.count === t.count ? e.name.localeCompare(t.name) : e.count > t.count ? -1 : 1
-        }
-
-        function o(e) {
-            return Math.round(100 * e)
         }
     },
     yLtb: function(e, t, n) {
@@ -6932,4 +6925,4 @@ webpackJsonp([47], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-6bafea66493af81dbdcbadf435016bd3.js.map
+//# sourceMappingURL=pages.dashboard-d2960c556e9e73e090a96dc3eac81353.js.map

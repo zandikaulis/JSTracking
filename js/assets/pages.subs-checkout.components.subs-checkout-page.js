@@ -9039,7 +9039,10 @@ webpackJsonp([36], {
                                 y: .5
                             }
                         }, a.createElement(d._35, {
-                            className: "prime-offer__content"
+                            className: "prime-offer__content",
+                            margin: {
+                                bottom: 2
+                            }
                         }, a.createElement(d._35, {
                             className: "prime-offer__content__text",
                             background: d.n.Base
@@ -9047,8 +9050,9 @@ webpackJsonp([36], {
                             className: "prime-offer__publisher"
                         }, a.createElement(d.Q, {
                             type: d._49.P,
-                            color: d.K.Alt2,
-                            fontSize: d.V.Size7
+                            color: d.K.OverlayAlt,
+                            fontSize: d.V.Size7,
+                            transform: d._48.Uppercase
                         }, n.publisher)), a.createElement(d._8, {
                             className: "prime-offer__title",
                             alignItems: d.c.Start
@@ -13974,7 +13978,7 @@ webpackJsonp([36], {
                         className: "top-nav__search",
                         flexGrow: 1,
                         alignSelf: H.d.Center
-                    }, !this.state.isError && u.createElement(te, null))), !this.state.isError && this.renderTwitchPrimeCrown(), !this.state.isError && this.renderOnsiteNotifications(), this.props.isLoggedIn && this.state.isGetBitsButtonExperimentEnabled && this.renderBitsButton(), !this.state.isError && u.createElement(H._8, {
+                    }, !this.state.isError && u.createElement(te, null))), !this.state.isError && this.renderTwitchPrimeCrown(), !this.state.isError && this.renderOnsiteNotifications(), this.state.isGetBitsButtonExperimentEnabled && this.renderBitsButton(), !this.state.isError && u.createElement(H._8, {
                         className: "top-nav__nav-items-container",
                         display: H.R.Flex,
                         alignItems: H.c.Center,
@@ -14034,7 +14038,7 @@ webpackJsonp([36], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(o.d)(this.props.user),
+                    var e = Object(o.e)(this.props.user),
                         t = !e,
                         n = this.getPrimePromotionTextNode(t, e),
                         i = this.props.isOverlay ? s.K.Overlay : s.K.Base,
@@ -14290,18 +14294,20 @@ webpackJsonp([36], {
         "use strict";
         t.c = function(e, t, n) {
             void 0 === n && (n = !1);
-            return d(a, e, t, n)
-        }, t.a = u, t.b = function(e, t, n) {
+            return p(a, e, t, n)
+        }, t.a = d, t.b = function(e, t, n) {
             void 0 === n && (n = !1);
             var a = i.b.get(s, r.a.Off),
                 o = t && t.roles && t.roles.isStaff || !1;
-            return u(e, t, n) && (a === r.a.On || a === r.a.StaffOnly && o)
-        }, t.d = function(e) {
+            return d(e, t, n) && (a === r.a.On || a === r.a.StaffOnly && o)
+        }, t.e = function(e) {
             var t = i.b.get(c, r.a.Off),
                 n = i.b.get(l, []),
                 a = e && n.includes(e.id) || !1,
                 o = e && e.roles && e.roles.isStaff || !1;
             return t === r.a.On || t === r.a.StaffOnly && o || a
+        }, t.d = function(e, t) {
+            return p(u, e, t)
         };
         var i = n("6sO2"),
             r = n("QRuM"),
@@ -14309,13 +14315,14 @@ webpackJsonp([36], {
             o = "esport_insider_pass_whitelist",
             s = "esport_insider_pass_gifting_launch",
             c = "esport_insider_prime_bits_launch",
-            l = "esport_insider_prime_bits_launch_user_whitelist";
+            l = "esport_insider_prime_bits_launch_user_whitelist",
+            u = "esports_room_cheering_whitelist";
 
-        function u(e, t, n) {
-            return void 0 === n && (n = !1), d(o, e, t, n)
+        function d(e, t, n) {
+            return void 0 === n && (n = !1), p(o, e, t, n)
         }
 
-        function d(e, t, n, r) {
+        function p(e, t, n, r) {
             void 0 === r && (r = !1);
             var a = i.b.get(e, []),
                 o = n && n.roles && n.roles.isStaff || r;
@@ -22018,4 +22025,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-7aa50c0eab06ba00d7787bab5b70183c.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-78b1761d38597b814cae172760b27d2b.js.map

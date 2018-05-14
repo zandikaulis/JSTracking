@@ -1,4 +1,4 @@
-webpackJsonp([38], {
+webpackJsonp([39], {
     "+3pi": function(e, t, n) {
         "use strict";
         var i, r = n("GiK3"),
@@ -3932,6 +3932,8 @@ webpackJsonp([38], {
             return r
         }), n.d(t, "a", function() {
             return a
+        }), n.d(t, "c", function() {
+            return i
         });
         var i, r = "VIEWS",
             a = "TIME";
@@ -17879,7 +17881,10 @@ webpackJsonp([38], {
                                 y: .5
                             }
                         }, a.createElement(u._35, {
-                            className: "prime-offer__content"
+                            className: "prime-offer__content",
+                            margin: {
+                                bottom: 2
+                            }
                         }, a.createElement(u._35, {
                             className: "prime-offer__content__text",
                             background: u.n.Base
@@ -17887,8 +17892,9 @@ webpackJsonp([38], {
                             className: "prime-offer__publisher"
                         }, a.createElement(u.Q, {
                             type: u._49.P,
-                            color: u.K.Alt2,
-                            fontSize: u.V.Size7
+                            color: u.K.OverlayAlt,
+                            fontSize: u.V.Size7,
+                            transform: u._48.Uppercase
                         }, n.publisher)), a.createElement(u._8, {
                             className: "prime-offer__title",
                             alignItems: u.c.Start
@@ -21719,7 +21725,7 @@ webpackJsonp([38], {
                 return n.e(42).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             Ye = se.a.wrap(function() {
-                return n.e(39).then(n.bind(null, "uiPj"))
+                return n.e(38).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
             Ze = se.a.wrap(function() {
                 return n.e(66).then(n.bind(null, "6Vx1"))
@@ -24663,7 +24669,7 @@ webpackJsonp([38], {
                         className: "top-nav__search",
                         flexGrow: 1,
                         alignSelf: W.d.Center
-                    }, !this.state.isError && d.createElement(te, null))), !this.state.isError && this.renderTwitchPrimeCrown(), !this.state.isError && this.renderOnsiteNotifications(), this.props.isLoggedIn && this.state.isGetBitsButtonExperimentEnabled && this.renderBitsButton(), !this.state.isError && d.createElement(W._8, {
+                    }, !this.state.isError && d.createElement(te, null))), !this.state.isError && this.renderTwitchPrimeCrown(), !this.state.isError && this.renderOnsiteNotifications(), this.state.isGetBitsButtonExperimentEnabled && this.renderBitsButton(), !this.state.isError && d.createElement(W._8, {
                         className: "top-nav__nav-items-container",
                         display: W.R.Flex,
                         alignItems: W.c.Center,
@@ -24723,7 +24729,7 @@ webpackJsonp([38], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(o.d)(this.props.user),
+                    var e = Object(o.e)(this.props.user),
                         t = !e,
                         n = this.getPrimePromotionTextNode(t, e),
                         i = this.props.isOverlay ? s.K.Overlay : s.K.Base,
@@ -24980,18 +24986,20 @@ webpackJsonp([38], {
         "use strict";
         t.c = function(e, t, n) {
             void 0 === n && (n = !1);
-            return u(a, e, t, n)
-        }, t.a = d, t.b = function(e, t, n) {
+            return p(a, e, t, n)
+        }, t.a = u, t.b = function(e, t, n) {
             void 0 === n && (n = !1);
             var a = i.b.get(s, r.a.Off),
                 o = t && t.roles && t.roles.isStaff || !1;
-            return d(e, t, n) && (a === r.a.On || a === r.a.StaffOnly && o)
-        }, t.d = function(e) {
+            return u(e, t, n) && (a === r.a.On || a === r.a.StaffOnly && o)
+        }, t.e = function(e) {
             var t = i.b.get(l, r.a.Off),
                 n = i.b.get(c, []),
                 a = e && n.includes(e.id) || !1,
                 o = e && e.roles && e.roles.isStaff || !1;
             return t === r.a.On || t === r.a.StaffOnly && o || a
+        }, t.d = function(e, t) {
+            return p(d, e, t)
         };
         var i = n("6sO2"),
             r = n("QRuM"),
@@ -24999,13 +25007,14 @@ webpackJsonp([38], {
             o = "esport_insider_pass_whitelist",
             s = "esport_insider_pass_gifting_launch",
             l = "esport_insider_prime_bits_launch",
-            c = "esport_insider_prime_bits_launch_user_whitelist";
+            c = "esport_insider_prime_bits_launch_user_whitelist",
+            d = "esports_room_cheering_whitelist";
 
-        function d(e, t, n) {
-            return void 0 === n && (n = !1), u(o, e, t, n)
+        function u(e, t, n) {
+            return void 0 === n && (n = !1), p(o, e, t, n)
         }
 
-        function u(e, t, n, r) {
+        function p(e, t, n, r) {
             void 0 === r && (r = !1);
             var a = i.b.get(e, []),
                 o = n && n.roles && n.roles.isStaff || r;
@@ -37543,4 +37552,4 @@ webpackJsonp([38], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.subs-cdad6191915d82f18341e3c4fa852b22.js.map
+//# sourceMappingURL=pages.subs-f22441604fc9a6764434ecad75fb56bc.js.map

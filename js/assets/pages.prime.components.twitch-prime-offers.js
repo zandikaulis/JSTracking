@@ -260,7 +260,7 @@ webpackJsonp([117], {
                     }, this.renderBanner(), i.createElement(T._35, {
                         background: T.n.Base,
                         className: "prime-offers"
-                    }, this.renderOfferList(h.a.Game, Object(o.d)("Free Games with Prime", "PrimePageOffers")), this.renderOfferList(h.a.InGameLoot, Object(o.d)("Free In-Game Loot with Prime", "PrimePageOffers"))), i.createElement(T._35, {
+                    }, this.renderOfferList(h.a.InGameLoot, Object(o.d)("Free In-Game Loot with Prime", "PrimePageOffers")), this.renderOfferList(h.a.Game, Object(o.d)("Free Games with Prime", "PrimePageOffers"))), i.createElement(T._35, {
                         justifyContent: T._7.Center,
                         alignItems: T.c.Center,
                         textAlign: T._45.Center,
@@ -395,4 +395,4 @@ webpackJsonp([117], {
         })
     }
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-offers-564125ae1450e22eeea4bafa3744c173.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-offers-f96ac4f6ea54f9a3850cb41e13c63764.js.map

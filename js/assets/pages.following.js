@@ -3781,7 +3781,7 @@ webpackJsonp([50], {
                         var n = Object(C.a)(this.props.directoryWidth, 240, 2);
                         t = t.slice(0, n)
                     }
-                    return d.createElement("div", null, e, d.createElement(Z.b, {
+                    return d.createElement("div", null, e, d.createElement(Z.c, {
                         listContext: J.b.MixedGameAndChannelList,
                         trackingMedium: k.PageviewMedium.Following,
                         trackingContent: k.PageviewContent.SuggestedVideos,
@@ -6582,9 +6582,11 @@ webpackJsonp([50], {
             v = n("ISok");
         n.d(t, "a", function() {
             return g
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return v.a
-        }), n.d(t, !1, function() {})
+        }), n.d(t, "b", function() {
+            return u.c
+        })
     },
     Vr3l: function(e, t, n) {
         e.exports = n.p + "assets/overwatch-chars-9fc82f039194a365a8d6d2bf2797e041.png"
@@ -10222,4 +10224,4 @@ webpackJsonp([50], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-a694b5890a4c40f634e993795cee6306.js.map
+//# sourceMappingURL=pages.following-82111110cd7db4cbd10940c773990d9d.js.map
