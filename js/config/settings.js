@@ -149,6 +149,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "09222d5a-f2b2-4d02-b3db-b87b9a10751e": {
+            "name": "TWILIGHT_OWL_SUB_ONLY_VOD",
+            "v": 3777,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": {
             "name": "twilight_animated_directory_thumbnails",
             "v": 3227,
