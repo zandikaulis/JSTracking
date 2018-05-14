@@ -2031,10 +2031,10 @@ window.SiteOptions = {
         },
         "4f2ebce8-68ed-40a4-afb2-9db8fb09711d": {
             "name": "vod_qos_model",
-            "v": 3782,
+            "v": 3784,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 20,
                 "value": "control"
             }, {
                 "weight": 10,
@@ -2044,13 +2044,16 @@ window.SiteOptions = {
                 "value": "business_logic_reverse"
             }, {
                 "weight": 10,
-                "value": "open_asia"
-            }, {
-                "weight": 10,
                 "value": "poisson_v1"
             }, {
-                "weight": 10,
+                "weight": 20,
                 "value": "more_asia"
+            }, {
+                "weight": 20,
+                "value": "control20"
+            }, {
+                "weight": 10,
+                "value": "no_cf_override"
             }]
         },
         "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": {
@@ -4755,16 +4758,16 @@ window.SiteOptions = {
         },
         "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9": {
             "name": "twilight_vod_shoryuken",
-            "v": 3773,
+            "v": 3785,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "variant1"
             }, {
-                "weight": 100,
+                "weight": 98,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "variant2"
             }]
         },

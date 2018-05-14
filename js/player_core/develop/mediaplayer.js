@@ -2826,6 +2826,7 @@ module.exports = {
 /***/ (function(module, exports) {
 
 module.exports = {
+    PLAYER_LOADED_IN_WORKER: 'player_loaded_in_worker',
     HLS_MASTER_PLAYLIST_REQUEST: 'master_manifest_request',
     HLS_MASTER_PLAYLIST_READY: 'master_manifest_ready',
     HLS_MEDIA_PLAYLIST_REQUEST: 'variant_request',
@@ -3087,7 +3088,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-326f9a2a";
+    return "2.3.0-9f54dbf1";
 }
 
 MediaPlayer.prototype.isLooping = function () {
