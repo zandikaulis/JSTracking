@@ -95,6 +95,7 @@ window.__twilightSettings = {
     "twilight_collections_manager_enabled": true,
     "twilight_dashboard_permissions": "off",
     "twilight_moonstone": "everyone",
+    "twilight_owl_sub_only_vod": false,
     "twilight_routes": ["bitsCheckout", "broadcast", "channel", "channelFollowing", "channelFollowers", "channelEvents", "clips", "collections", "communitiesCreate", "community", "communityModeration", "dashboardAchievements", "dashboardEvents", "dashboardExtensions", "dashboardExtensionsConfigure", "dashboardModeration", "dashboardStreamSummary", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGameDetails", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "extensionDetails", "friends", "index", "inventory", "managerany", "managerClips", "managerClipsChannel", "managerCollections", "managerHighlights", "managerIndex", "managerPastBroadcast", "managerUploads", "merchStore", "settingsNotifications", "settingsProfile", "subscriptions", "subUnsubscribe", "video", "videos"],
     "twilight_routes_enabled": true,
     "twilight_video_manager_public": false,
@@ -147,18 +148,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 50,
                 "value": "no"
-            }]
-        },
-        "09222d5a-f2b2-4d02-b3db-b87b9a10751e": {
-            "name": "TWILIGHT_OWL_SUB_ONLY_VOD",
-            "v": 3777,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "no"
-            }, {
-                "weight": 0,
-                "value": "yes"
             }]
         },
         "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": {
