@@ -8420,7 +8420,7 @@ webpackJsonp([35], {
                     }, this.resetBufferState = function() {
                         o.buffer = [], o.eventMap = new Map, o.offset = 0, o._isDirty = !1, o._hasNewerLeft = !0, o._hasOlderLeft = !0, o.newestCursor = void 0, o.oldestCursor = void 0
                     }, this.loadMore = function(e) {
-                        return Object(he.e)(Object(he.c)(c.o.apollo.client.link, {
+                        return Object(he.d)(Object(he.c)(c.o.apollo.client.link, {
                             query: ge,
                             variables: {
                                 roomID: o.roomID,
@@ -10626,7 +10626,7 @@ webpackJsonp([35], {
                         return !!a && (r.roles.isStaff || r.roles.isGlobalMod || r.roles.isSiteAdmin || a.id === i || !!t.self && t.self.isModerator)
                     }, n.onUpdateLastReadAt = function() {
                         var e;
-                        Object(he.e)(Object(he.c)(c.o.apollo.client.link, s.__assign({
+                        Object(he.d)(Object(he.c)(c.o.apollo.client.link, s.__assign({
                             query: Sn
                         }, (e = n.props.roomID, s.__assign({}, Object(E.a)({
                             lastReadAt: (new Date).toISOString(),
@@ -46231,4 +46231,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-23bf2ef899171b13414b5f968b5fc13f.js.map
+//# sourceMappingURL=pages.embed-chat-077970ca3152d98c73e73047554dd356.js.map
