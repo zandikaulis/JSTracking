@@ -97,7 +97,7 @@ window.__twilightSettings = {
     "twilight_collections_manager_enabled": true,
     "twilight_dashboard_permissions": "off",
     "twilight_moonstone": "everyone",
-    "twilight_owl_sub_only_vod": false,
+    "twilight_owl_sub_only_vod": true,
     "twilight_routes": ["bitsCheckout", "broadcast", "channel", "channelFollowing", "channelFollowers", "channelEvents", "checkout", "clips", "collections", "communitiesCreate", "community", "communityModeration", "dashboardAchievements", "dashboardEvents", "dashboardExtensions", "dashboardExtensionsConfigure", "dashboardModeration", "dashboardStreamSummary", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGameDetails", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "extensionDetails", "friends", "index", "inventory", "managerany", "managerClips", "managerClipsChannel", "managerCollections", "managerHighlights", "managerIndex", "managerPastBroadcast", "managerUploads", "merchStore", "settingsNotifications", "settingsProfile", "subscriptions", "subUnsubscribe", "video", "videos"],
     "twilight_routes_enabled": true,
     "twilight_video_manager_public": false,
