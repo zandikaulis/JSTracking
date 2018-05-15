@@ -1942,6 +1942,18 @@ window.SiteOptions = {
                 "value": "active_last_tab"
             }]
         },
+        "4cfb5972-e20e-4ae1-92dd-7287ec58b4a4": {
+            "name": "twilight_theatre_fullscreen_v2",
+            "v": 3793,
+            "t": 1,
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "treatment"
+            }]
+        },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
             "name": "baking_bread_d",
             "v": 2591,

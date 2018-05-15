@@ -436,6 +436,18 @@ window.__twilightSettings = {
                 "value": "upsell"
             }]
         },
+        "4cfb5972-e20e-4ae1-92dd-7287ec58b4a4": {
+            "name": "twilight_theatre_fullscreen_v2",
+            "v": 3793,
+            "t": 1,
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "treatment"
+            }]
+        },
         "4d3d19a7-38c5-4328-9730-7d99565d5edd": {
             "name": "twilight_premiere_upload_flow",
             "v": 2851,
