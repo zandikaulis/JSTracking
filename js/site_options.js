@@ -1633,18 +1633,6 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
-        "44c4bb4e-5580-4f0b-8fc9-a8cd426e4e99": {
-            "name": "CHANNEL_FOLLOW_BUTTON",
-            "v": 1252,
-            "t": 1,
-            "groups": [{
-                "weight": 10,
-                "value": "no_sub"
-            }, {
-                "weight": 90,
-                "value": "control"
-            }]
-        },
         "44dbd670-63e6-4f7f-aa47-417f3eccd939": {
             "name": "bashful_bandit",
             "v": 930,
@@ -5330,21 +5318,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "yes"
-            }]
-        },
-        "e15d2a40-b2bb-4819-af2b-cb7a6f0e31cb": {
-            "name": "CHANNEL_SIGNUP_CTA_V2",
-            "v": 1436,
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "show"
-            }, {
-                "weight": 0,
-                "value": "show_dismiss"
-            }, {
-                "weight": 100,
-                "value": "control"
             }]
         },
         "e1e75bee-1e03-4633-b820-c03ec9dd1c30": {
