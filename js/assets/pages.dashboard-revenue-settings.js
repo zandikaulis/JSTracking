@@ -10870,59 +10870,28 @@ webpackJsonp([103], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.toggleBenefit = function(e, n) {
                         return r.__awaiter(t, void 0, void 0, function() {
-                            var t, a, i, o, s, l, c, d, u, m;
-                            return r.__generator(this, function(p) {
-                                switch (p.label) {
-                                    case 0:
-                                        if (!(this.props.data.user && this.props.data.user.id && this.props.data.user.roles && this.props.data.user.subscriptionProducts)) return [2];
-                                        if (!(t = this.props.data.user.subscriptionProducts[0])) return [2];
-                                        a = e === Mt.AD_FREE_VIEWING ? n : t.hasAdFree, i = e === Mt.IGNORE_SLOW_MODE ? n : t.hasFastChat, o = e === Mt.SUBSCRIBER_ONLY_ARCHIVES ? n : t.hasSubonlyVideoArchive, s = e === Mt.SUBSCRIBER_ONLY_CHAT ? n : t.hasSubOnlyChat, l = this.props.data.user.subscriptionProducts, c = this.props.data.user.id, d = function(e) {
-                                            var t, n, d, m;
-                                            return r.__generator(this, function(r) {
-                                                switch (r.label) {
-                                                    case 0:
-                                                        return (t = l[e]) ? (n = {
-                                                            targetUserID: c,
-                                                            id: t.id,
-                                                            hasAdFree: a,
-                                                            hasFastChat: i,
-                                                            hasSubOnlyVideoArchive: o,
-                                                            hasSubOnlyChat: s
-                                                        }, d = {
-                                                            updateSubscriptionProduct: {
-                                                                product: {
-                                                                    id: t.id,
-                                                                    hasAdFree: a,
-                                                                    hasFastChat: i,
-                                                                    hasSubonlyVideoArchive: o,
-                                                                    hasSubOnlyChat: s,
-                                                                    __typename: "SubscriptionProduct"
-                                                                },
-                                                                __typename: "UpdateSubscriptionProductPayload"
-                                                            }
-                                                        }, [4, u.props.updateSubscriptionProduct(Object(b.b)(n, d))]) : [2, "continue"];
-                                                    case 1:
-                                                        return m = r.sent(), Object(b.e)(Vt, {
-                                                            login: u.props.channelName
-                                                        }, function(t) {
-                                                            if (t && t.user && t.user.subscriptionProducts && m.data.updateSubscriptionProduct) {
-                                                                var n = t.user.subscriptionProducts[e],
-                                                                    a = m.data.updateSubscriptionProduct.product;
-                                                                if (n && a) return n.id = a.id, n.hasAdFree = a.hasAdFree, n.hasFastChat = a.hasFastChat, n.hasSubonlyVideoArchive = a.hasSubonlyVideoArchive, n.hasSubOnlyChat = a.hasSubOnlyChat, t
-                                                            }
-                                                        }), [2]
-                                                }
-                                            })
-                                        }, u = this, m = 0, p.label = 1;
-                                    case 1:
-                                        return m < l.length ? [5, d(m)] : [3, 4];
-                                    case 2:
-                                        p.sent(), p.label = 3;
-                                    case 3:
-                                        return m++, [3, 1];
-                                    case 4:
-                                        return [2]
-                                }
+                            var t, a, i, o, s, l, c, d;
+                            return r.__generator(this, function(r) {
+                                return this.props.data.user && this.props.data.user.id && this.props.data.user.roles && this.props.data.user.subscriptionProducts && (t = this.props.data.user.subscriptionProducts[0]) ? (a = e === Mt.AD_FREE_VIEWING ? n : t.hasAdFree, i = e === Mt.IGNORE_SLOW_MODE ? n : t.hasFastChat, o = e === Mt.SUBSCRIBER_ONLY_ARCHIVES ? n : t.hasSubonlyVideoArchive, s = e === Mt.SUBSCRIBER_ONLY_CHAT ? n : t.hasSubOnlyChat, l = this.props.data.user.id, c = {
+                                    targetUserID: l,
+                                    id: t.id,
+                                    hasAdFree: a,
+                                    hasFastChat: i,
+                                    hasSubOnlyVideoArchive: o,
+                                    hasSubOnlyChat: s
+                                }, d = {
+                                    updateSubscriptionProduct: {
+                                        product: {
+                                            id: t.id,
+                                            hasAdFree: a,
+                                            hasFastChat: i,
+                                            hasSubonlyVideoArchive: o,
+                                            hasSubOnlyChat: s,
+                                            __typename: "SubscriptionProduct"
+                                        },
+                                        __typename: "UpdateSubscriptionProductPayload"
+                                    }
+                                }, this.props.updateSubscriptionProduct(Object(b.b)(c, d)), [2]) : [2]
                             })
                         })
                     }, t
@@ -15459,50 +15428,31 @@ webpackJsonp([103], {
                         })
                     }, t.onClickSave = function() {
                         return r.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, a;
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                            var e, t, n, a, i;
+                            return r.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
                                         if (!this.props.data.user || !this.props.data.user.id || !this.props.data.user.subscriptionProducts) return [2];
                                         e = f.b.Working, this.setState({
                                             saveStatus: e
-                                        }), t = function(t) {
-                                            var a, i, o, s;
-                                            return r.__generator(this, function(r) {
-                                                switch (r.label) {
-                                                    case 0:
-                                                        if (!(a = n.props.data.user.subscriptionProducts[t])) return [2, "continue"];
-                                                        i = n.state.displayNames[t], o = {
-                                                            targetUserID: n.props.data.user.id,
-                                                            id: a.id,
-                                                            displayName: i
-                                                        }, r.label = 1;
-                                                    case 1:
-                                                        return r.trys.push([1, 3, , 4]), [4, n.props.updateSubscriptionProduct(Object(b.a)(o))];
-                                                    case 2:
-                                                        return s = r.sent(), Object(b.e)(li, {
-                                                            login: n.props.match.params.channelName
-                                                        }, function(e) {
-                                                            if (e && e.user && e.user.subscriptionProducts && s.data.updateSubscriptionProduct) {
-                                                                var n = e.user.subscriptionProducts[t],
-                                                                    a = s.data.updateSubscriptionProduct.product;
-                                                                if (n && a) return n.id = a.id, n.displayName = a.displayName, e
-                                                            }
-                                                        }), e = f.b.Success, [3, 4];
-                                                    case 3:
-                                                        return r.sent(), e = f.b.Error, [3, 4];
-                                                    case 4:
-                                                        return [2]
-                                                }
-                                            })
-                                        }, n = this, a = 0, i.label = 1;
+                                        }), t = 0, r.label = 1;
                                     case 1:
-                                        return a < this.state.displayNames.length ? [5, t(a)] : [3, 4];
+                                        if (!(t < this.state.displayNames.length)) return [3, 6];
+                                        if (!(n = this.props.data.user.subscriptionProducts[t])) return [3, 5];
+                                        a = this.state.displayNames[t], i = {
+                                            targetUserID: this.props.data.user.id,
+                                            id: n.id,
+                                            displayName: a
+                                        }, r.label = 2;
                                     case 2:
-                                        i.sent(), i.label = 3;
+                                        return r.trys.push([2, 4, , 5]), [4, this.props.updateSubscriptionProduct(Object(b.a)(i))];
                                     case 3:
-                                        return a++, [3, 1];
+                                        return r.sent(), e = f.b.Success, [3, 5];
                                     case 4:
+                                        return r.sent(), e = f.b.Error, [3, 5];
+                                    case 5:
+                                        return t++, [3, 1];
+                                    case 6:
                                         return this.setState({
                                             saveStatus: e
                                         }), [2]
@@ -15965,4 +15915,4 @@ webpackJsonp([103], {
     },
     z1LJ: function(e, t) {}
 });
-//# sourceMappingURL=pages.dashboard-revenue-settings-56065917d18b0da050e3982002db616e.js.map
+//# sourceMappingURL=pages.dashboard-revenue-settings-9395c1604100d2beb52f83e6028f9e2b.js.map

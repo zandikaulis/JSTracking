@@ -1,73 +1,21 @@
 webpackJsonp([32], {
-    SFZn: function(t, e, n) {
+    SFZn: function(t, e, i) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
         });
-        var i = n("TToO");
-        new Map;
-        this && this.__assign || Object.assign;
-
-        function o(t) {
-            if ("Document" !== t.kind) throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? http://docs.apollostack.com/apollo-client/core.html#gql');
-            var e = t.definitions.filter(function(t) {
-                return "FragmentDefinition" !== t.kind
-            }).map(function(t) {
-                if ("OperationDefinition" !== t.kind) throw new Error('Schema type definitions not allowed in queries. Found: "' + t.kind + '"');
-                return t
-            });
-            if (e.length > 1) throw new Error("Ambiguous GraphQL document: contains " + e.length + " operations")
-        }
-
-        function a(t) {
-            if (Array.isArray(t)) return t.map(function(t) {
-                return a(t)
-            });
-            if (null !== t && "object" == typeof t) {
-                var e = {};
-                for (var n in t) t.hasOwnProperty(n) && (e[n] = a(t[n]));
-                return e
-            }
-            return t
-        }
-        var r = {
-            kind: "Field",
-            name: {
-                kind: "Name",
-                value: "__typename"
-            }
-        };
-        var c = new Map;
-
-        function s(t) {
-            o(t);
-            var e = c.get(t);
-            if (e) return e;
-            var n = a(t);
-            return n.definitions.forEach(function(t) {
-                var e = "OperationDefinition" === t.kind;
-                ! function t(e, n) {
-                    void 0 === n && (n = !1), e.selections && (n || e.selections.some(function(t) {
-                        return "Field" === t.kind && "__typename" === t.name.value
-                    }) || e.selections.push(r), e.selections.forEach(function(e) {
-                        "Field" === e.kind ? 0 !== e.name.value.lastIndexOf("__", 0) && e.selectionSet && t(e.selectionSet) : "InlineFragment" === e.kind && e.selectionSet && t(e.selectionSet)
-                    }))
-                }(t.selectionSet, e)
-            }), c.set(t, n), n
-        }
-        new Map;
-        n("mSTb");
-        Object.create({});
-        var u = n("U3i2"),
-            f = n("XF1M"),
-            d = n("UhWx"),
-            l = n("WfBs"),
-            p = n("c8sn"),
-            m = n("wHbv");
-        n.d(e, "MockOnsiteNotifications", function() {
-            return g
+        var n = i("TToO"),
+            o = i("+zi7"),
+            a = i("U3i2"),
+            c = i("XF1M"),
+            s = i("UhWx"),
+            r = i("WfBs"),
+            u = i("c8sn"),
+            f = i("wHbv");
+        i.d(e, "MockOnsiteNotifications", function() {
+            return d
         });
-        var g = {
+        var d = {
             getMockOnsiteNotification: function(t) {
                 return {
                     id: t || "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx".replace(/[xy]/g, function(t) {
@@ -90,13 +38,13 @@ webpackJsonp([32], {
                 }
             },
             getMockOnsiteNotificationModels: function(t) {
-                for (var e = [], n = 0; n < t; n++) e.push(g.getMockOnsiteNotification());
+                for (var e = [], i = 0; i < t; i++) e.push(d.getMockOnsiteNotification());
                 return e
             },
             getMockOnsiteNotificationEdges: function(t) {
-                for (var e = [], n = 0; n < t; n++) e.push({
+                for (var e = [], i = 0; i < t; i++) e.push({
                     cursor: "",
-                    node: i.__assign({}, g.getMockOnsiteNotification(n.toString())),
+                    node: n.__assign({}, d.getMockOnsiteNotification(i.toString())),
                     __typename: "OnsiteNotificationEdge"
                 });
                 return e
@@ -109,7 +57,7 @@ webpackJsonp([32], {
                             pageInfo: {
                                 hasNextPage: !1
                             },
-                            edges: g.getMockOnsiteNotificationEdges(t)
+                            edges: d.getMockOnsiteNotificationEdges(t)
                         }
                     }
                 }
@@ -117,7 +65,7 @@ webpackJsonp([32], {
             getMockSummaryData: function(t) {
                 return {
                     request: {
-                        query: s(p)
+                        query: Object(o.a)(u)
                     },
                     result: {
                         data: {
@@ -148,7 +96,7 @@ webpackJsonp([32], {
             getMockViewedMutationData: function() {
                 return {
                     request: {
-                        query: s(m)
+                        query: Object(o.a)(f)
                     },
                     result: {
                         data: {
@@ -171,14 +119,14 @@ webpackJsonp([32], {
                 }
             },
             getMockListOnsiteNotifications: function(t) {
-                return g.getMockOnsiteNotifications(g.getMockOnsiteNotificationEdges(t))
+                return d.getMockOnsiteNotifications(d.getMockOnsiteNotificationEdges(t))
             },
             getMockOnsiteNotifications: function(t) {
                 return {
                     request: {
-                        query: s(d),
+                        query: Object(o.a)(s),
                         variables: {
-                            limit: u.a,
+                            limit: a.a,
                             cursor: "",
                             language: "en"
                         }
@@ -204,7 +152,7 @@ webpackJsonp([32], {
             getMockDeleteNotificationMutation: function(t) {
                 return {
                     request: {
-                        query: s(f),
+                        query: Object(o.a)(c),
                         variables: {
                             input: {
                                 id: t
@@ -234,7 +182,7 @@ webpackJsonp([32], {
                 });
                 return {
                     request: {
-                        query: s(l),
+                        query: Object(o.a)(r),
                         variables: {
                             input: {
                                 ids: t
@@ -252,21 +200,6 @@ webpackJsonp([32], {
                 }
             }
         }
-    },
-    mSTb: function(t, e, n) {
-        "use strict";
-        (function(t) {
-            function n(e) {
-                return (void 0 !== t ? "production" : "development") === e
-            }
-            e.b = function() {
-                return !0 === n("production")
-            }, e.a = function() {
-                return !0 === n("development")
-            }, e.c = function() {
-                return !0 === n("test")
-            }
-        }).call(e, n("W2nU"))
     }
 });
-//# sourceMappingURL=features.onsite-notifications.test.mock-onsite-notifications-666f18c09a441a61c9c9bed1ae965c8f.js.map
+//# sourceMappingURL=features.onsite-notifications.test.mock-onsite-notifications-1bde8124be751ae1eefead3b0ea40ef7.js.map

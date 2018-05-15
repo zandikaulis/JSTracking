@@ -1,19 +1,22 @@
 webpackJsonp([64], {
     "+V/3": function(e, t, n) {
         "use strict";
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
             return i
-        }), n.d(t, "c", function() {
-            return r
         }), n.d(t, "d", function() {
+            return r
+        }), n.d(t, "e", function() {
             return s
-        }), n.d(t, "a", function() {
+        }), n.d(t, "b", function() {
             return a
+        }), n.d(t, "a", function() {
+            return o
         });
         var i = "subscribe_to_channel",
             r = "turbo",
             s = "visit_url",
-            a = "broadcaster"
+            a = "none",
+            o = "broadcaster"
     },
     "16B9": function(e, t) {},
     "2IkU": function(e, t) {},
@@ -1680,7 +1683,7 @@ webpackJsonp([64], {
                 image1x: e.image1x,
                 image2x: e.image2x,
                 image4x: e.image4x,
-                clickAction: M.b,
+                clickAction: M.c,
                 clickURL: e.clickURL || ""
             }
         }
@@ -2589,11 +2592,11 @@ webpackJsonp([64], {
             }, t.prototype.getTargetURL = function() {
                 var e = this.props.badge;
                 switch (e.clickAction) {
-                    case s.d:
+                    case s.e:
                         return e.clickURL;
-                    case s.b:
-                        return e.channelName ? this.getSubscriberLink() : "";
                     case s.c:
+                        return e.channelName ? this.getSubscriberLink() : "";
+                    case s.d:
                         return "https://www.twitch.tv/products/turbo?ref=chat_badge";
                     default:
                         return ""
@@ -2612,4 +2615,4 @@ webpackJsonp([64], {
         })
     }
 });
-//# sourceMappingURL=pages.subscriptions-management-a93df12d93b1851a91839cfe59b54e17.js.map
+//# sourceMappingURL=pages.subscriptions-management-361debf9aed2148637be8919e8b3320a.js.map

@@ -2,19 +2,22 @@ webpackJsonp([98], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
             return a
-        }), n.d(t, "c", function() {
-            return i
         }), n.d(t, "d", function() {
+            return i
+        }), n.d(t, "e", function() {
             return r
-        }), n.d(t, "a", function() {
+        }), n.d(t, "b", function() {
             return s
+        }), n.d(t, "a", function() {
+            return o
         });
         var a = "subscribe_to_channel",
             i = "turbo",
             r = "visit_url",
-            s = "broadcaster"
+            s = "none",
+            o = "broadcaster"
     },
     "+WrY": function(e, t, n) {
         "use strict";
@@ -79,7 +82,7 @@ webpackJsonp([98], {
                                                 notice: Object(o.d)("No user matching that login.", "WhisperCommandHandler")
                                             })];
                                         case 4:
-                                            return a.trys.push([4, 6, , 7]), [4, Object(p.a)({
+                                            return a.trys.push([4, 6, , 7]), [4, Object(p.b)({
                                                 currentUserID: this.props.userID,
                                                 emotes: this.props.emoteMap || {},
                                                 message: t,
@@ -3417,7 +3420,7 @@ webpackJsonp([98], {
                     return n && n.has(t) ? n.get(t) || null : void 0 !== (n = this.globalsBySet.get(e)) && n.get(t) || null
                 }, e.prototype.indexBadges = function(e, t, n) {
                     e.forEach(function(e) {
-                        n && e.clickAction === r.b && (e = s.__assign({}, e, {
+                        n && e.clickAction === r.c && (e = s.__assign({}, e, {
                             channelName: n
                         }));
                         var a = t.get(e.setID);
@@ -4088,8 +4091,7 @@ webpackJsonp([98], {
                     color: E.K.Alt2
                 }, a)
             },
-            oe = "All-Access Pass",
-            le = function(e) {
+            oe = function(e) {
                 var t = i.createElement(X, {
                         contentID: e.event.user.id,
                         login: e.event.user.username,
@@ -4101,11 +4103,13 @@ webpackJsonp([98], {
                         sourceType: M.a.chat_message
                     }, e.event.recipientDisplayName),
                     a = null;
-                return a = "custom" === e.event.tier ? function(e, t, n, a) {
-                    return a === oe ? Object(r.d)("{userLogin} just gifted an All-Access Pass to {recipient}!", {
+                return a = "All-Access Pass" === e.event.planName ? function(e, t) {
+                    return Object(r.d)("{userLogin} just gifted an All-Access Pass to {recipient}!", {
                         userLogin: e,
                         recipient: t
-                    }, "SubGiftNoticeLine") : 1 === n ? Object(r.d)("{userLogin} gifted a Sub to {recipient}! It's their first Gift Sub in the channel!", {
+                    }, "SubGiftNoticeLine")
+                }(t, n) : "custom" === e.event.tier ? function(e, t, n) {
+                    return 1 === n ? Object(r.d)("{userLogin} gifted a Sub to {recipient}! It's their first Gift Sub in the channel!", {
                         userLogin: e,
                         recipient: t
                     }, "ChatLine") : n > 1 ? Object(r.d)("{userLogin} gifted a Sub to {recipient}! They've given {senderCount} Gift Subs in the channel!", {
@@ -4116,7 +4120,7 @@ webpackJsonp([98], {
                         userLogin: e,
                         recipient: t
                     }, "ChatLine")
-                }(t, n, e.event.senderCount, e.event.planName) : function(e, t, n, a) {
+                }(t, n, e.event.senderCount) : function(e, t, n, a) {
                     var i = ee(t);
                     return 1 === a ? Object(r.d)("{userLogin} gifted a {subTier} Sub to {recipient}! It's their first Gift Sub in the channel!", {
                         userLogin: e,
@@ -4137,9 +4141,9 @@ webpackJsonp([98], {
                     type: E._49.Span
                 }, a)
             };
-        var ce, de = n("6d2v"),
-            ue = n("OAwv"),
-            pe = Object(o.compose)(Object(l.a)(de, {
+        var le, ce = n("6d2v"),
+            de = n("OAwv"),
+            ue = Object(o.compose)(Object(l.a)(ce, {
                 options: function(e) {
                     return {
                         variables: {
@@ -4160,7 +4164,7 @@ webpackJsonp([98], {
                 if (!n) return i.createElement(E._8, null, Object(r.d)("This room is in subscribers only mode.", "SubsOnlyUpsellLine"));
                 var s = i.createElement(E.O, {
                     targetBlank: !0,
-                    to: n + "?" + ue.stringify({
+                    to: n + "?" + de.stringify({
                         ref: "subscriber_only_mode_chat"
                     })
                 }, n);
@@ -4168,32 +4172,32 @@ webpackJsonp([98], {
                     productLink: s
                 }, "SubsOnlyUpsellLine"))
             }),
-            me = "https://www.twitch.tv/settings/connections";
+            pe = "https://www.twitch.tv/settings/connections";
         ! function(e) {
             e.Kickback = "msg_blizzard", e.Enabled = "blizzard_connect_on", e.Disabled = "blizzard_connect_off", e.AlreadyEnabled = "already_blizzard_mode_on", e.AlreadyDisabled = "already_blizzard_mode_off"
-        }(ce || (ce = {}));
-        var he = function(e) {
+        }(le || (le = {}));
+        var me = function(e) {
                 var t = null;
                 switch (e.type) {
-                    case ce.Kickback:
+                    case le.Kickback:
                         var n = i.createElement(E.O, {
                             targetBlank: !0,
-                            to: me
-                        }, me);
+                            to: pe
+                        }, pe);
                         t = Object(r.d)("You must connect your Blizzard account to send messages in this room. You can connect your Blizzard account in your Twitch settings at {settingsLink}", {
                             settingsLink: n
                         }, "BlizzardConnectModeNoticeLine");
                         break;
-                    case ce.Enabled:
+                    case le.Enabled:
                         t = Object(r.d)("This room now requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case ce.Disabled:
+                    case le.Disabled:
                         t = Object(r.d)("This room no longer requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case ce.AlreadyEnabled:
+                    case le.AlreadyEnabled:
                         t = Object(r.d)("This room already requires a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
-                    case ce.AlreadyDisabled:
+                    case le.AlreadyDisabled:
                         t = Object(r.d)("This room does not require a Blizzard account connection to chat.", "BlizzardConnectModeNoticeLine");
                         break;
                     default:
@@ -4201,9 +4205,9 @@ webpackJsonp([98], {
                 }
                 return i.createElement(E._8, null, t)
             },
-            ge = (n("+5Qw"), "timeout_success"),
-            fe = "ban_success",
-            be = function(e) {
+            he = (n("+5Qw"), "timeout_success"),
+            ge = "ban_success",
+            fe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -4324,7 +4328,7 @@ webpackJsonp([98], {
                                 channelID: this.props.channelID,
                                 onPushMessage: this.props.onPushMessage,
                                 senderLogin: e.user.username
-                            }), i.createElement(le, {
+                            }), i.createElement(oe, {
                                 event: e
                             }));
                         case k.b.RewardGift:
@@ -4397,23 +4401,23 @@ webpackJsonp([98], {
                                 case "msg_subsonly":
                                     return i.createElement(E._8, {
                                         className: "chat-line__status"
-                                    }, i.createElement(pe, {
+                                    }, i.createElement(ue, {
                                         channelID: this.props.channelID
                                     }));
-                                case ce.Kickback:
-                                case ce.Enabled:
-                                case ce.Disabled:
-                                case ce.AlreadyEnabled:
-                                case ce.AlreadyDisabled:
+                                case le.Kickback:
+                                case le.Enabled:
+                                case le.Disabled:
+                                case le.AlreadyEnabled:
+                                case le.AlreadyDisabled:
                                     return i.createElement(E._8, {
                                         className: "chat-line__status"
-                                    }, i.createElement(he, {
+                                    }, i.createElement(me, {
                                         type: e.msgid
                                     }))
                             }
                             if (this.props.isCurrentUserModerator) switch (e.msgid) {
+                                case he:
                                 case ge:
-                                case fe:
                                     return null
                             }
                             return i.createElement(E._8, {
@@ -4454,7 +4458,7 @@ webpackJsonp([98], {
                 }, t
             }(i.Component);
         n.d(t, "a", function() {
-            return be
+            return fe
         })
     },
     "4VHW": function(e, t) {},
@@ -13669,7 +13673,7 @@ webpackJsonp([98], {
                         top: 1,
                         bottom: .5
                     }
-                }, o.createElement(u.Q, null, Object(c.d)("Cheer 150 Bits or more to hype your team and get a team emote! Cheer along with your fellow fans to unlock in-game skins based on everyone’s Cheers!", "OWL2018Introduction"))), o.createElement(u._8, {
+                }, o.createElement(u.Q, null, Object(c.d)("Unlock an emote set by cheering 250 Bits or more! Cheer 500 Bits or more and you’ll unlock a second set and share emotes with Chat!", "OWL2018Introduction"))), o.createElement(u._8, {
                     padding: {
                         bottom: 1
                     }
@@ -18911,11 +18915,11 @@ webpackJsonp([98], {
             }, t.prototype.getTargetURL = function() {
                 var e = this.props.badge;
                 switch (e.clickAction) {
-                    case r.d:
+                    case r.e:
                         return e.clickURL;
-                    case r.b:
-                        return e.channelName ? this.getSubscriberLink() : "";
                     case r.c:
+                        return e.channelName ? this.getSubscriberLink() : "";
+                    case r.d:
                         return "https://www.twitch.tv/products/turbo?ref=chat_badge";
                     default:
                         return ""
@@ -22347,4 +22351,4 @@ webpackJsonp([98], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-surfing-9403df300c736a6297424603b60bf335.js.map
+//# sourceMappingURL=pages.channel-surfing-dc036ac8efcce49c3f84f884b1b4fd22.js.map

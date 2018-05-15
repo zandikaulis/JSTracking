@@ -1,19 +1,22 @@
 webpackJsonp([104], {
     "+V/3": function(e, t, n) {
         "use strict";
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
             return o
-        }), n.d(t, "c", function() {
-            return r
         }), n.d(t, "d", function() {
+            return r
+        }), n.d(t, "e", function() {
             return a
-        }), n.d(t, "a", function() {
+        }), n.d(t, "b", function() {
             return i
+        }), n.d(t, "a", function() {
+            return s
         });
         var o = "subscribe_to_channel",
             r = "turbo",
             a = "visit_url",
-            i = "broadcaster"
+            i = "none",
+            s = "broadcaster"
     },
     "0TFF": function(e, t, n) {
         var o = {
@@ -552,7 +555,7 @@ webpackJsonp([104], {
                     return n && n.has(t) ? n.get(t) || null : void 0 !== (n = this.globalsBySet.get(e)) && n.get(t) || null
                 }, e.prototype.indexBadges = function(e, t, n) {
                     e.forEach(function(e) {
-                        n && e.clickAction === a.b && (e = i.__assign({}, e, {
+                        n && e.clickAction === a.c && (e = i.__assign({}, e, {
                             channelName: n
                         }));
                         var o = t.get(e.setID);
@@ -7536,11 +7539,11 @@ webpackJsonp([104], {
             }, t.prototype.getTargetURL = function() {
                 var e = this.props.badge;
                 switch (e.clickAction) {
-                    case a.d:
+                    case a.e:
                         return e.clickURL;
-                    case a.b:
-                        return e.channelName ? this.getSubscriberLink() : "";
                     case a.c:
+                        return e.channelName ? this.getSubscriberLink() : "";
+                    case a.d:
                         return "https://www.twitch.tv/products/turbo?ref=chat_badge";
                     default:
                         return ""
@@ -10173,4 +10176,4 @@ webpackJsonp([104], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-moderation-e828c77ea0840389dc5583de820aa2a4.js.map
+//# sourceMappingURL=pages.dashboard-moderation-f9be455990e555fdf09b963c7eb9d9a4.js.map

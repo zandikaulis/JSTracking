@@ -438,7 +438,7 @@ webpackJsonp([40], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "ignoreDarkMode", {
                     get: function() {
-                        return !!window.location.href.match(/.*\/checkout\/[\w\d-]+(\/|\/\?.*|\?.*)?$/)
+                        return !!window.location.href.match(/.*\/products\/[\w\d-]+(\/|\/\?.*|\?.*)?$/)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -15742,4 +15742,4 @@ webpackJsonp([40], {
             }(a || (a = {}))
     }
 });
-//# sourceMappingURL=pages.payments-3b42c58416c5e5ac3870318095f66a56.js.map
+//# sourceMappingURL=pages.payments-49394daa4b90f27ae3502952a6a5d640.js.map

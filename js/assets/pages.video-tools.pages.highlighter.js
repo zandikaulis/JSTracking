@@ -978,7 +978,8 @@ webpackJsonp([105], {
                     attachBottom: !0,
                     margin: {
                         bottom: 1
-                    }
+                    },
+                    zIndex: u._62.Above
                 }, this.props.popover))), l.createElement(u._35, {
                     className: p,
                     fullWidth: !0,
@@ -1476,9 +1477,13 @@ webpackJsonp([105], {
     },
     AoO8: function(e, t, n) {
         "use strict";
-        t.c = l, t.b = function(e, t) {
-            return d(l(e), t)
-        }, t.a = d;
+        t.b = function(e, t) {
+            return l(function(e) {
+                e.video && (e.video = Object(o.b)(e.video));
+                var t = r.stringify(e);
+                return a.o.config.playerBaseURL + "/?" + t
+            }(e), t)
+        }, t.a = l;
         var i = n("TToO"),
             r = n("OAwv"),
             a = (n.n(r), n("6sO2")),
@@ -1490,13 +1495,7 @@ webpackJsonp([105], {
                 allowFullscreen: !0
             };
 
-        function l(e) {
-            e.video && (e.video = Object(o.b)(e.video));
-            var t = r.stringify(e);
-            return a.o.config.playerBaseURL + "/?" + t
-        }
-
-        function d(e, t) {
+        function l(e, t) {
             void 0 === t && (t = s);
             var n, r, a = i.__assign({}, s, t),
                 o = '<iframe src="' + e + '" frameborder="0" ' + (a.allowFullscreen ? 'allowfullscreen="true" ' : "") + (a.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + a.height + '" width="' + a.width + '"></iframe>';
@@ -4010,4 +4009,4 @@ webpackJsonp([105], {
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.highlighter-4cc841dd2a03a2e6ad601abe1ed32abf.js.map
+//# sourceMappingURL=pages.video-tools.pages.highlighter-efc10b128536d616022eaa6534f77698.js.map

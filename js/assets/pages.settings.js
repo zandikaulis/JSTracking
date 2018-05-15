@@ -4077,7 +4077,7 @@ webpackJsonp([42], {
                             right: 2
                         }
                     }, l.createElement(F.O, {
-                        to: "https://www.twitch.tv/team/" + this.props.team.name + "/edit"
+                        to: "/teams/" + this.props.team.name + "/dashboard"
                     }, Object(d.d)("Edit", "TeamManagerItem"))), l.createElement(F._8, null, l.createElement(F.O, {
                         to: "https://www.twitch.tv/team/" + this.props.team.name
                     }, Object(d.d)("View", "TeamManagerItem")))))
@@ -5191,7 +5191,12 @@ webpackJsonp([42], {
                         value: St.SouthEastAsia
                     }, this.getRegionText(St.SouthEastAsia)))))
                 }, t.prototype.getSubtitle = function() {
-                    return this.connected ? this.props.data.currentUser.blizzardAccount.battleTag + " - " + this.getRegionText(this.props.data.currentUser.blizzardAccount.region) : Object(d.d)("Connect your Blizzard games and Twitch activity", "BlizzardConnection")
+                    if (this.connected) {
+                        var e = this.getRegionText(this.props.data.currentUser.blizzardAccount.region),
+                            t = this.props.data.currentUser.blizzardAccount.battleTag;
+                        return t && t.length > 0 && (e = t + " - " + e), e
+                    }
+                    return Object(d.d)("Connect your Blizzard games and Twitch activity", "BlizzardConnection")
                 }, t.prototype.getRegionText = function(e) {
                     switch (e) {
                         case St.NorthAmerica:
@@ -5267,7 +5272,7 @@ webpackJsonp([42], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "connected", {
                     get: function() {
-                        return !!(this.props.data.currentUser && this.props.data.currentUser.accountConnections.blizzard && this.props.data.currentUser.accountConnections.blizzard.battleTag && this.props.data.currentUser.blizzardAccount)
+                        return !!(this.props.data.currentUser && this.props.data.currentUser.accountConnections.blizzard && this.props.data.currentUser.blizzardAccount)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -16737,4 +16742,4 @@ webpackJsonp([42], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-e22bca3cc4e29719803ec03d62724638.js.map
+//# sourceMappingURL=pages.settings-709b64ce14a364b050b1dee5aa5f4515.js.map

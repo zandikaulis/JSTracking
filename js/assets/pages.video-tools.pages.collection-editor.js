@@ -1182,9 +1182,13 @@ webpackJsonp([96], {
     },
     AoO8: function(e, t, n) {
         "use strict";
-        t.c = c, t.b = function(e, t) {
-            return s(c(e), t)
-        }, t.a = s;
+        t.b = function(e, t) {
+            return c(function(e) {
+                e.video && (e.video = Object(a.b)(e.video));
+                var t = o.stringify(e);
+                return r.o.config.playerBaseURL + "/?" + t
+            }(e), t)
+        }, t.a = c;
         var i = n("TToO"),
             o = n("OAwv"),
             r = (n.n(o), n("6sO2")),
@@ -1196,13 +1200,7 @@ webpackJsonp([96], {
                 allowFullscreen: !0
             };
 
-        function c(e) {
-            e.video && (e.video = Object(a.b)(e.video));
-            var t = o.stringify(e);
-            return r.o.config.playerBaseURL + "/?" + t
-        }
-
-        function s(e, t) {
+        function c(e, t) {
             void 0 === t && (t = l);
             var n, o, r = i.__assign({}, l, t),
                 a = '<iframe src="' + e + '" frameborder="0" ' + (r.allowFullscreen ? 'allowfullscreen="true" ' : "") + (r.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + r.height + '" width="' + r.width + '"></iframe>';
@@ -8156,4 +8154,4 @@ webpackJsonp([96], {
         }
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-f75dd3a3ccf51bb3053985f5620b9631.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-fcda60172f53a3430b2c15f47ef1c120.js.map

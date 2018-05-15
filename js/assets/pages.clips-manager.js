@@ -355,9 +355,13 @@ webpackJsonp([92], {
     },
     AoO8: function(e, t, n) {
         "use strict";
-        t.c = o, t.b = function(e, t) {
-            return c(o(e), t)
-        }, t.a = c;
+        t.b = function(e, t) {
+            return o(function(e) {
+                e.video && (e.video = Object(s.b)(e.video));
+                var t = r.stringify(e);
+                return i.o.config.playerBaseURL + "/?" + t
+            }(e), t)
+        }, t.a = o;
         var a = n("TToO"),
             r = n("OAwv"),
             i = (n.n(r), n("6sO2")),
@@ -369,13 +373,7 @@ webpackJsonp([92], {
                 allowFullscreen: !0
             };
 
-        function o(e) {
-            e.video && (e.video = Object(s.b)(e.video));
-            var t = r.stringify(e);
-            return i.o.config.playerBaseURL + "/?" + t
-        }
-
-        function c(e, t) {
+        function o(e, t) {
             void 0 === t && (t = l);
             var n, r, i = a.__assign({}, l, t),
                 s = '<iframe src="' + e + '" frameborder="0" ' + (i.allowFullscreen ? 'allowfullscreen="true" ' : "") + (i.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + i.height + '" width="' + i.width + '"></iframe>';
@@ -4210,4 +4208,4 @@ webpackJsonp([92], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-08bf4a5957dbb1edc221a6051930a25a.js.map
+//# sourceMappingURL=pages.clips-manager-e088c3ab15f5e59942277a6b0c0aee6e.js.map

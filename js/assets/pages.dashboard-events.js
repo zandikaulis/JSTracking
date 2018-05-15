@@ -2241,40 +2241,42 @@ webpackJsonp([99], {
     },
     "3Ybq": function(e, t, n) {
         "use strict";
-        n.d(t, "e", function() {
+        n.d(t, "f", function() {
             return r
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return s
-        }), n.d(t, "p", function() {
+        }), n.d(t, "q", function() {
             return i
-        }), n.d(t, "n", function() {
-            return l
-        }), n.d(t, "j", function() {
+        }), n.d(t, "o", function() {
             return u
-        }), n.d(t, "m", function() {
-            return m
-        }), n.d(t, "i", function() {
-            return _
         }), n.d(t, "k", function() {
+            return m
+        }), n.d(t, "n", function() {
+            return _
+        }), n.d(t, "j", function() {
             return c
         }), n.d(t, "l", function() {
             return h
-        }), n.d(t, "q", function() {
+        }), n.d(t, "m", function() {
             return p
         }), n.d(t, "r", function() {
             return f
-        }), n.d(t, "g", function() {
+        }), n.d(t, "s", function() {
             return v
-        }), n.d(t, "f", function() {
-            return M
         }), n.d(t, "h", function() {
+            return M
+        }), n.d(t, "g", function() {
             return g
-        }), n.d(t, "o", function() {
+        }), n.d(t, "i", function() {
             return k
+        }), n.d(t, "p", function() {
+            return y
         }), n.d(t, "b", function() {
             return o
         }), n.d(t, "c", function() {
             return d
+        }), n.d(t, "d", function() {
+            return l
         });
         var a = n("zGmo");
         n.d(t, "a", function() {
@@ -2285,18 +2287,18 @@ webpackJsonp([99], {
         ! function(e) {
             e.Private = "PRIVATE", e.Public = "PUBLIC"
         }(i || (i = {}));
-        var o, d, l = "uploading",
-            u = "pending_transcode",
-            m = "transcoding",
-            _ = "failed",
-            c = "recorded",
-            h = "recording",
-            p = [c, h],
-            f = [m, u, _],
-            v = "FORMAT_NOT_SUPPORTED",
-            M = "BAD_ASSET",
-            g = "INTERNAL_ERROR",
-            k = {
+        var o, d, l, u = "uploading",
+            m = "pending_transcode",
+            _ = "transcoding",
+            c = "failed",
+            h = "recorded",
+            p = "recording",
+            f = [h, p],
+            v = [_, m, c],
+            M = "FORMAT_NOT_SUPPORTED",
+            g = "BAD_ASSET",
+            k = "INTERNAL_ERROR",
+            y = {
                 VIDEO_PREMIERE_STATUS_UNSCHEDULED: "unscheduled",
                 VIDEO_PREMIERE_STATUS_SCHEDULED: "scheduled",
                 VIDEO_PREMIERE_STATUS_STARTED: "started",
@@ -2307,7 +2309,10 @@ webpackJsonp([99], {
         }(o || (o = {})),
         function(e) {
             e.None = "NONE", e.Expiring = "EXPIRING"
-        }(d || (d = {}))
+        }(d || (d = {})),
+        function(e) {
+            e.Everyone = "", e.SubOnly = "sub_only"
+        }(l || (l = {}))
     },
     "3hfc": function(e, t, n) {
         (function(e) {
@@ -10773,7 +10778,7 @@ webpackJsonp([99], {
                     return this.props.removeNow || e.unshift({
                         value: a.Now,
                         displayValue: Object(o.d)("Now", "EventModalDateTimePicker"),
-                        disabled: !this.props.video || this.props.video.status !== v.k,
+                        disabled: !this.props.video || this.props.video.status !== v.l,
                         disabledMessage: Object(o.d)("Video is still being processed", "EventModalDateTimePicker")
                     }), e
                 }, t.prototype.setDateTime = function(e, t, n) {
@@ -19140,4 +19145,4 @@ webpackJsonp([99], {
             }
     }
 });
-//# sourceMappingURL=pages.dashboard-events-1fbb4cc3bb1bedd58bff7d770e1da801.js.map
+//# sourceMappingURL=pages.dashboard-events-d0020d99b0aa3bd45849d186ca30db55.js.map

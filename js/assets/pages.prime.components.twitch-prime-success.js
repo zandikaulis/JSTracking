@@ -2751,7 +2751,7 @@ webpackJsonp([102], {
                 return r
             }),
             function(e) {
-                e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange"
+                e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open"
             }(r || (r = {}))
     },
     "6O9f": function(e, t) {},
@@ -3235,8 +3235,8 @@ webpackJsonp([102], {
                     return a.createElement(k._14, null)
                 }, t
             }(a.Component)),
-            G = 50,
-            V = function(e) {
+            V = 50,
+            G = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onChange = function(e) {
@@ -3244,7 +3244,7 @@ webpackJsonp([102], {
                             isWaiting: !0
                         }), n.inputTimer = setTimeout(function() {
                             return n.doSearch(e)
-                        }, G)) : n.setState(n.getEmptyState())
+                        }, V)) : n.setState(n.getEmptyState())
                     }, n.loadMore = function() {
                         return i.__awaiter(n, void 0, void 0, function() {
                             var e, t, n;
@@ -3407,7 +3407,7 @@ webpackJsonp([102], {
                         isEsportGiftingApproved: this.props.isEsportGiftingApproved
                     })
                 }, t.prototype.getGiftRecipientSearchPage = function() {
-                    return this.props.subscriptionProducts ? a.createElement(V, {
+                    return this.props.subscriptionProducts ? a.createElement(G, {
                         key: "gift-recipient-search-page",
                         onBack: this.goToPreviousPage,
                         selectedSubProduct: this.props.subscriptionProducts[0],
@@ -3949,7 +3949,7 @@ webpackJsonp([102], {
                         key: "subscribe-balloon"
                     }, t, e)
                 }, t.prototype.getGiftRecipientSearchPage = function() {
-                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(V, {
+                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(G, {
                         key: "gift-recipient-search-page",
                         onBack: this.goToPreviousPage,
                         selectedSubProduct: this.props.data.user.subscriptionProducts[this.state.selectedSubProductIndex],
@@ -5653,7 +5653,7 @@ webpackJsonp([102], {
                     value: "social media tell us more"
                 })
             },
-            G = {
+            V = {
                 content: {
                     getTitle: N.reportAbusive,
                     getLabel: R.relevantStatements,
@@ -5675,7 +5675,7 @@ webpackJsonp([102], {
                     value: "violence type"
                 }
             },
-            V = {
+            G = {
                 identifyLocation: {
                     getTitle: function(e) {
                         return Object(l.d)("Report {username} for something else...", {
@@ -5704,11 +5704,11 @@ webpackJsonp([102], {
                     nextCard: B.socialMedia,
                     value: "external site conduct"
                 },
-                external_violence: i.__assign({}, G.violence, {
+                external_violence: i.__assign({}, V.violence, {
                     items: [T.threat_me, T.threat_person, T.threat_group],
                     nextCard: B.socialMedia
                 }),
-                external_abusive: i.__assign({}, G.content, {
+                external_abusive: i.__assign({}, V.content, {
                     items: [T.hateSpeech, T.harassment, T.external_abusiveViolence, T.external_commitingViolence, T.swatting, T.personalInfo],
                     nextCard: B.socialMedia
                 })
@@ -5774,7 +5774,7 @@ webpackJsonp([102], {
                 chat: j.content,
                 profile: M.content,
                 room: U,
-                "somewhere else": V.identifyLocation,
+                "somewhere else": G.identifyLocation,
                 streamer: F.content,
                 "someone else in video": F.content,
                 "someone in chat": j.content,
@@ -5784,22 +5784,22 @@ webpackJsonp([102], {
                 "channel owner": M.content,
                 "community member": j.content,
                 "on twitch": M.content,
-                "another site": V.externalSite,
+                "another site": G.externalSite,
                 "twitch event": L.twitchEvent,
                 "brigading/raids": B.socialMedia,
-                threatening: V.external_violence,
-                "hateful/harassing": V.external_abusive,
-                "external site; threatening violence": V.external_violence,
-                "external site; committing violence": V.external_violence,
+                threatening: G.external_violence,
+                "hateful/harassing": G.external_abusive,
+                "external site; threatening violence": G.external_violence,
+                "external site; committing violence": G.external_violence,
                 "external site; scam": B.socialMedia,
                 "ban evasion": z,
                 spam: H,
-                hateful: G.content,
+                hateful: V.content,
                 impersonation: Q,
-                "violence/threats": G.violence,
-                "threatening violence": G.violence,
-                "committing violence": G.violence,
-                abusive: G.content,
+                "violence/threats": V.violence,
+                "threatening violence": V.violence,
+                "committing violence": V.violence,
+                abusive: V.content,
                 "inappropriate content": W,
                 "intellectual property": L.legal,
                 "violating developer agreement": L.legal
@@ -9280,6 +9280,92 @@ webpackJsonp([102], {
             return a.includes(t) || a.includes(t + "-staff") && o
         }
     },
+    Tg4T: function(e, t, n) {
+        "use strict";
+        var r, i = n("TToO"),
+            a = n("GiK3"),
+            o = n("6sO2"),
+            s = n("Odds");
+        ! function(e) {
+            e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
+        }(r || (r = {}));
+        var l = function(e) {
+            function t() {
+                return null !== e && e.apply(this, arguments) || this
+            }
+            return i.__extends(t, e), t.prototype.render = function() {
+                if (!(this.props.restriction && this.props.restriction.productName && this.props.restriction.title && this.props.videoID)) return null;
+                var e = Object(o.d)("Get It Now", "VideoPreviewCardRestriction"),
+                    t = this.props.restriction.canViewRestricted,
+                    n = t ? Object(o.d)("unlocked", "VideoPreviewCardRestriction") : Object(o.d)("locked", "VideoPreviewCardRestriction"),
+                    i = t ? s._25.Unlock : s._25.Lock;
+                return a.createElement(s._8, null, !t && a.createElement(s._35, {
+                    background: s.n.Overlay,
+                    className: "video-preview-card-restriction",
+                    color: s.K.Overlay,
+                    display: s.R.Flex,
+                    position: s._15.Absolute,
+                    attachTop: !0,
+                    attachLeft: !0,
+                    zIndex: s._62.Default,
+                    padding: {
+                        x: 5
+                    },
+                    textAlign: s._45.Center,
+                    fullWidth: !0,
+                    fullHeight: !0,
+                    alignItems: s.c.Center,
+                    alignContent: s.b.Center,
+                    flexDirection: s.T.Column,
+                    flexWrap: s.U.Wrap,
+                    justifyContent: s._7.Center,
+                    "data-test-selector": r.LockSelector
+                }, a.createElement(s._2, {
+                    margin: {
+                        bottom: 1
+                    }
+                }, a.createElement(s.Q, {
+                    color: s.K.Overlay,
+                    fontSize: s.V.Size5,
+                    "data-test-selector": r.UpsellSelector
+                }, Object(o.d)("View with {title}", {
+                    title: this.props.restriction.title
+                }, "VideoPreviewCardRestriction"))), a.createElement(s._8, null, a.createElement(s.v, {
+                    type: s.B.Hollow,
+                    ariaLabel: e,
+                    targetBlank: !0,
+                    disabled: "" === this.props.restriction.productName,
+                    linkTo: "https://www.twitch.tv/products/" + this.props.restriction.productName,
+                    overlay: !0
+                }, e))), a.createElement(s._35, {
+                    display: s.R.InlineFlex,
+                    position: s._15.Absolute,
+                    attachTop: this.props.attachTop,
+                    attachBottom: !this.props.attachTop,
+                    attachRight: !0,
+                    margin: .5,
+                    zIndex: s._62.Default,
+                    fontSize: s.V.Size6,
+                    background: s.n.Overlay,
+                    borderRadius: s.t.Medium,
+                    color: s.K.Overlay
+                }, a.createElement(s._52, {
+                    direction: this.props.attachTop ? s._54.Bottom : s._54.Top,
+                    align: s._53.Right,
+                    label: n
+                }, a.createElement(s._24, {
+                    asset: i,
+                    height: 20,
+                    width: 20
+                }))))
+            }, t
+        }(a.PureComponent);
+        n.d(t, !1, function() {
+            return r
+        }), n.d(t, "a", function() {
+            return l
+        })
+    },
     Tjmd: function(e, t, n) {
         "use strict";
         t.b = function(e, t) {
@@ -10157,7 +10243,7 @@ webpackJsonp([102], {
     aBed: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return _
+            return k
         });
         var r = n("TToO"),
             i = n("HW6M"),
@@ -10171,11 +10257,12 @@ webpackJsonp([102], {
             p = n("mi6k"),
             m = n("CSlQ"),
             h = n("81qH"),
-            g = n("Odds"),
-            f = n("a0ve"),
-            b = (n.n(f), "video-view-count"),
-            v = "video-length",
-            y = function(e) {
+            g = n("Tg4T"),
+            f = n("Odds"),
+            b = n("a0ve"),
+            v = (n.n(b), "video-view-count"),
+            y = "video-length",
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10183,6 +10270,11 @@ webpackJsonp([102], {
                         didAnimatedPreviewLoad: !1,
                         didAnimatedPreviewFailToLoad: !1
                     }, t.renderVariation = function() {
+                        var e = {
+                            productName: t.props.video.restriction && t.props.video.restriction.productName,
+                            title: t.props.video.restriction && t.props.video.restriction.productTitle,
+                            canViewRestricted: t.props.video.self && !t.props.video.self.isRestricted || !1
+                        };
                         return o.createElement(u.a, {
                             context: t.props.context,
                             title: t.props.video.title,
@@ -10222,63 +10314,74 @@ webpackJsonp([102], {
                                 src: t.props.video.animatedPreviewURL,
                                 alt: ""
                             } : void 0,
-                            watchedProgressPercent: t.getVideoPreviousWatchPercentage() || 0
+                            watchedProgressPercent: t.getVideoPreviousWatchPercentage() || 0,
+                            restriction: e,
+                            videoID: t.props.video.id
                         })
                     }, t.renderFallback = function() {
                         var e = null,
                             n = t.getVideoPreviousWatchPercentage();
-                        return null !== n && (e = o.createElement(g._8, {
-                            position: g._15.Absolute,
+                        null !== n && (e = o.createElement(f._8, {
+                            position: f._15.Absolute,
                             attachBottom: !0,
                             fullWidth: !0
-                        }, o.createElement(g._18, {
-                            size: g._20.Small,
+                        }, o.createElement(f._18, {
+                            size: f._20.Small,
                             value: n,
                             mask: !0
-                        }))), o.createElement("div", r.__assign({
+                        })));
+                        var i = {
+                            productName: t.props.video.restriction && t.props.video.restriction.productName,
+                            title: t.props.video.restriction && t.props.video.restriction.productTitle,
+                            canViewRestricted: t.props.video.self && !t.props.video.self.isRestricted || !1
+                        };
+                        return o.createElement("div", r.__assign({
                             onClick: t.onClickHandler,
                             onMouseEnter: t.onMouseEnterHandler,
                             onMouseLeave: t.onMouseLeaveHandler
-                        }, Object(g._63)(t.props)), o.createElement(g.C, null, o.createElement(g._8, {
+                        }, Object(f._63)(t.props)), o.createElement(f.C, null, o.createElement(f._8, {
                             fullWidth: !0
-                        }, o.createElement(g.k, {
+                        }, o.createElement(f.k, {
                             overflow: !0
-                        }, o.createElement("div", null, o.createElement(g._35, {
-                            display: g.R.InlineFlex,
-                            position: g._15.Absolute,
+                        }, o.createElement("div", null, o.createElement(g.a, {
+                            videoID: t.props.video.id,
+                            restriction: i
+                        }), o.createElement(f._35, {
+                            display: f.R.InlineFlex,
+                            position: f._15.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             margin: .5,
-                            zIndex: g._62.Default,
-                            fontSize: g.V.Size6,
-                            background: g.n.Overlay,
-                            color: g.K.Overlay,
+                            zIndex: f._62.Default,
+                            fontSize: f.V.Size6,
+                            background: f.n.Overlay,
+                            color: f.K.Overlay,
                             className: "video-preview-card__preview-overlay-stat"
-                        }, o.createElement(g._34, {
-                            "data-test-selector": b,
-                            icon: g._25.GlyphViews,
+                        }, o.createElement(f._34, {
+                            "data-test-selector": v,
+                            icon: f._25.GlyphViews,
                             label: Object(l.d)("views", "VideoPreviewCard"),
                             value: Object(l.f)(t.props.video.viewCount)
-                        })), o.createElement(g._35, {
-                            display: g.R.InlineFlex,
-                            position: g._15.Absolute,
+                        })), o.createElement(f._35, {
+                            display: f.R.InlineFlex,
+                            position: f._15.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             margin: .5,
-                            zIndex: g._62.Default,
-                            fontSize: g.V.Size6,
-                            background: g.n.Overlay,
-                            color: g.K.Overlay,
+                            zIndex: f._62.Default,
+                            fontSize: f.V.Size6,
+                            background: f.n.Overlay,
+                            color: f.K.Overlay,
                             className: "video-preview-card__preview-overlay-stat"
-                        }, o.createElement(g._34, {
-                            "data-test-selector": v,
-                            icon: g._25.GlyphLength,
+                        }, o.createElement(f._34, {
+                            "data-test-selector": y,
+                            icon: f._25.GlyphLength,
                             label: Object(l.d)("length", "VideoPreviewCard"),
                             value: Object(p.b)(t.props.video.lengthSeconds)
-                        })), t.videoPreviewImage(), e))), o.createElement(g.D, null, o.createElement(g._8, {
-                            display: g.R.Flex,
-                            flexDirection: g.T.Row,
-                            flexWrap: g.U.NoWrap,
+                        })), t.videoPreviewImage(), e))), o.createElement(f.D, null, o.createElement(f._8, {
+                            display: f.R.Flex,
+                            flexDirection: f.T.Row,
+                            flexWrap: f.U.NoWrap,
                             padding: {
                                 top: .5
                             }
@@ -10332,7 +10435,7 @@ webpackJsonp([102], {
                         n = i("video-preview-card__preview-image", {
                             "video-preview-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                         });
-                    return o.createElement(g.k, {
+                    return o.createElement(f.k, {
                         overflow: !0
                     }, o.createElement(s.a, {
                         to: {
@@ -10346,10 +10449,10 @@ webpackJsonp([102], {
                     }, o.createElement("div", {
                         className: t,
                         "data-test-selector": "preview-image-wrapper"
-                    }, o.createElement(g._2, {
+                    }, o.createElement(f._2, {
                         flexShrink: 0
-                    }, o.createElement("figure", null, o.createElement(g.k, {
-                        ratio: g.l.Aspect16x9
+                    }, o.createElement("figure", null, o.createElement(f.k, {
+                        ratio: f.l.Aspect16x9
                     }, o.createElement("img", {
                         alt: this.props.video.title,
                         className: n,
@@ -10368,9 +10471,9 @@ webpackJsonp([102], {
                         n = i("video-preview-card__image-wrapper", {
                             "video-preview-card__image-wrapper--watched": null !== this.getVideoPreviousWatchPercentage() && !this.state.hovered
                         });
-                    return o.createElement(g._8, {
+                    return o.createElement(f._8, {
                         "data-test-selector": "game-box-art",
-                        display: g.R.InlineFlex,
+                        display: f.R.InlineFlex,
                         flexShrink: 0,
                         padding: {
                             bottom: .5
@@ -10379,21 +10482,21 @@ webpackJsonp([102], {
                         to: t,
                         title: e.name,
                         "data-a-target": "video-preview-card-boxart-link"
-                    }, o.createElement(g._2, {
+                    }, o.createElement(f._2, {
                         margin: {
                             right: 1
                         }
                     }, o.createElement("figure", {
                         className: "video-preview-card__game-art"
-                    }, o.createElement(g._52, {
-                        display: g.R.Block,
-                        direction: g._54.Bottom,
+                    }, o.createElement(f._52, {
+                        display: f.R.Block,
+                        direction: f._54.Bottom,
                         label: e.name
                     }, o.createElement("div", {
                         className: n,
                         "data-test-selector": "game-box-art-wrapper"
-                    }, o.createElement(g.E, {
-                        aspect: g.l.BoxArt,
+                    }, o.createElement(f.E, {
+                        aspect: f.l.BoxArt,
                         alt: e.name,
                         src: e.boxArtURL || l.a.defaultBoxArtURL
                     })))))))
@@ -10413,18 +10516,18 @@ webpackJsonp([102], {
                             title: Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
                         }, Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName))
                     }
-                    return o.createElement(g._8, {
-                        display: g.R.Flex,
-                        flexDirection: g.T.Column,
-                        overflow: g._11.Hidden
-                    }, o.createElement(g._8, {
+                    return o.createElement(f._8, {
+                        display: f.R.Flex,
+                        flexDirection: f.T.Column,
+                        overflow: f._11.Hidden
+                    }, o.createElement(f._8, {
                         "data-test-selector": "video-title",
-                        overflow: g._11.Hidden,
-                        position: g._15.Relative
-                    }, o.createElement(g.Q, {
-                        color: g.K.Base,
-                        fontSize: g.V.Size5,
-                        lineHeight: g._9.Heading
+                        overflow: f._11.Hidden,
+                        position: f._15.Relative
+                    }, o.createElement(f.Q, {
+                        color: f.K.Base,
+                        fontSize: f.V.Size5,
+                        lineHeight: f._9.Heading
                     }, o.createElement(s.a, {
                         className: "video-preview-card__video-title",
                         to: {
@@ -10434,16 +10537,16 @@ webpackJsonp([102], {
                         },
                         title: this.props.video.title,
                         "data-a-target": "video-preview-card-title-link"
-                    }, this.props.video.title))), o.createElement(g._8, {
+                    }, this.props.video.title))), o.createElement(f._8, {
                         flexShrink: 0,
                         flexGrow: 0,
                         ellipsis: !0
-                    }, o.createElement(g.Q, {
-                        type: g._49.Span,
-                        color: g.K.Alt2,
+                    }, o.createElement(f.Q, {
+                        type: f._49.Span,
+                        color: f.K.Alt2,
                         ellipsis: !0,
                         title: this.formatTitle(e)
-                    }, e, o.createElement(g._2, {
+                    }, e, o.createElement(f._2, {
                         padding: {
                             x: .5
                         }
@@ -10462,7 +10565,7 @@ webpackJsonp([102], {
                     }
                 }, t
             }(o.Component),
-            _ = Object(m.d)("VideoPreviewCard")(y)
+            k = Object(m.d)("VideoPreviewCard")(_)
     },
     aMxy: function(e, t, n) {
         "use strict";
@@ -10894,44 +10997,42 @@ webpackJsonp([102], {
                 e()
             })
         };
-        var E, O = n("7enT"),
-            C = n("0nzt"),
-            R = n("Hjbq"),
-            N = n("j0cR"),
-            I = n("HW6M"),
-            L = n("BwgW"),
-            x = n("knr3"),
-            F = n("OAwv"),
-            j = n("eBiB"),
-            D = n("HM6l"),
-            M = n("JpYe"),
-            U = n("ZVME"),
-            A = n("CSlQ"),
-            B = n("L3z0"),
-            G = n("5MsU"),
-            V = n("Tjmd"),
-            H = (n("4NZK"), n("Ryxq"));
-        ! function(e) {
-            e.AnimatedThumbnails = "animated_thumbnails", e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding"
-        }(E || (E = {}));
-        var W = {
-            allowfullscreen: !0,
-            externalfullscreen: !1,
-            autoplay: !0,
-            branding: !1,
-            channelInfo: !1,
-            controls: !0,
-            height: "100%",
-            playsinline: !0,
-            player: E.Site,
-            showInfo: !1,
-            showtheatre: !1,
-            trackingProperties: {
-                client_app: "twilight"
-            },
-            width: "100%",
-            oauth_token: ""
-        };
+        var E = n("7enT"),
+            O = n("0nzt"),
+            C = n("Hjbq"),
+            R = n("j0cR"),
+            N = n("HW6M"),
+            I = n("BwgW"),
+            L = n("knr3"),
+            x = n("OAwv"),
+            F = n("eBiB"),
+            j = n("HM6l"),
+            D = n("JpYe"),
+            M = n("ZVME"),
+            U = n("CSlQ"),
+            A = n("L3z0"),
+            B = n("5MsU"),
+            V = n("ijOz"),
+            G = n("Tjmd"),
+            H = (n("4NZK"), n("Ryxq")),
+            W = {
+                allowfullscreen: !0,
+                externalfullscreen: !1,
+                autoplay: !0,
+                branding: !1,
+                channelInfo: !1,
+                controls: !0,
+                height: "100%",
+                playsinline: !0,
+                player: V.c.Site,
+                showInfo: !1,
+                showtheatre: !1,
+                trackingProperties: {
+                    client_app: "twilight"
+                },
+                width: "100%",
+                oauth_token: ""
+            };
 
         function z() {
             return !!window.Twitch && !!window.Twitch.Player
@@ -10952,7 +11053,7 @@ webpackJsonp([102], {
                             playSessionID: e.playSessionId
                         }))
                     }, n.onOpenStream = function() {
-                        if (n.props.playerTypeOverride === E.Frontpage && n.player)
+                        if (n.props.playerTypeOverride === V.c.Frontpage && n.player)
                             if (n.props.channelLogin) o.o.history.push("/" + n.props.channelLogin);
                             else if (n.props.vodID) {
                             var e = Math.floor(n.player.getCurrentTime());
@@ -10973,9 +11074,9 @@ webpackJsonp([102], {
                             playerPaused: e
                         }), n.props.onPauseToggled && n.props.onPauseToggled(e)
                     }, n.onStreamStatusOnline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(G.a.Online)
+                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(B.a.Online)
                     }, n.onStreamStatusOffline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(G.a.Offline)
+                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(B.a.Offline)
                     }, n.onTheatreChange = function(e) {
                         e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
                     }, n.onFullScreenChange = function() {
@@ -10984,6 +11085,8 @@ webpackJsonp([102], {
                         }))
                     }, n.onExternalFullScreenChange = function() {
                         n.player && (n.logger.debug("External Fullscreen change", n.player.fullscreen), n.player.fullscreen !== n.state.isFullScreen && (n.player.fullscreen ? n.enterFullscreen() : n.exitFullscreen()))
+                    }, n.onClipsModerationOpen = function(e) {
+                        n.player && (n.logger.debug("Clips Moderation Open", e), n.props.onClipsModerationOpen && n.props.onClipsModerationOpen(e))
                     }, n.onTwilightFullscreenChange = function() {
                         var e = n.props.fullscreen.element(),
                             t = !!e && !!n.playerRef && e.contains(n.playerRef);
@@ -10997,12 +11100,12 @@ webpackJsonp([102], {
                     }, n.onTransitionToCollectionVod = function(e) {
                         if (n.props.onNavigationRequest) {
                             var t = {};
-                            e.vodId && (t.videoID = Object(j.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
+                            e.vodId && (t.videoID = Object(F.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
                         }
                     }, n.onTransitionToRecommendedVod = function(e) {
                         if (n.props.onNavigationRequest) {
                             var t = {};
-                            e.vodId && (t.videoID = Object(j.a)(e.vodId)), n.props.onNavigationRequest(t)
+                            e.vodId && (t.videoID = Object(F.a)(e.vodId)), n.props.onNavigationRequest(t)
                         }
                     }, n.onPersistentPlayerToggled = function() {
                         n.props.togglePersistentPlayer && n.props.togglePersistentPlayer()
@@ -11034,7 +11137,7 @@ webpackJsonp([102], {
                         playerInitialized: !1,
                         isFullScreen: !1,
                         playerPaused: !1,
-                        playerRefID: Object(D.a)()
+                        playerRefID: Object(j.a)()
                     }, n.playerType = t.playerTypeOverride || W.player, n.lastSetChannel = t.channelLogin, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -11048,19 +11151,36 @@ webpackJsonp([102], {
                 }, t.prototype.componentWillUpdate = function(e, t) {
                     if (this.state.canInitializePlayer || !t.canInitializePlayer) {
                         if (t.canInitializePlayer && t.playerInitialized) {
-                            this.updatePlayerTrackingData(e), this.updatePlayerType(e.playerTypeOverride), this.player && t.isFullScreen !== this.player.fullscreen && this.player.setFullscreen(t.isFullScreen), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused);
-                            var n = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (n || Object(V.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void o.n.setVideoPlayerTrackingData({
+                            if (this.updatePlayerTrackingData(e), this.updatePlayerType(e.playerTypeOverride), this.player && t.isFullScreen !== this.player.fullscreen && this.player.setFullscreen(t.isFullScreen), this.player) {
+                                var n = this.props.editing || {},
+                                    r = e.editing || {},
+                                    i = n.startOffset,
+                                    a = n.endOffset,
+                                    s = n.videoUrl,
+                                    l = n.isPostEdit;
+                                s !== r.videoUrl && r.slug && this.player.setEditClipStream({
+                                    videoUrl: r.videoUrl,
+                                    slug: r.slug
+                                }), l !== r.isPostEdit && this.player.updateClipsEditing({
+                                    isPostEdit: r.isPostEdit
+                                }), i === r.startOffset && a === r.endOffset || this.player.updateEditingOffsets([{
+                                    startOffset: r.startOffset,
+                                    endOffset: r.endOffset
+                                }])
+                            }
+                            this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused);
+                            var c = e.channelLogin !== this.lastSetChannel;
+                            if (this.player && e.channelLogin && (c || Object(G.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void o.n.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
-                            var r = e.collectionID && this.props.collectionID !== e.collectionID,
-                                i = e.vodID && this.props.vodID !== e.vodID;
-                            if (r || i) {
-                                var a = e.vodID ? Object(M.b)(e.vodID) : "";
-                                if ("" !== a && o.n.setVideoPlayerTrackingData({
+                            var u = e.collectionID && this.props.collectionID !== e.collectionID,
+                                d = e.vodID && this.props.vodID !== e.vodID;
+                            if (u || d) {
+                                var p = e.vodID ? Object(D.b)(e.vodID) : "";
+                                if ("" !== p && o.n.setVideoPlayerTrackingData({
                                         vodID: e.vodID
                                     }), !this.player) return;
-                                r || e.collectionID && i ? this.player.setCollection(e.collectionID, a, e.nextVideoOffset) : this.player.setVideo(a, e.nextVideoOffset)
+                                u || e.collectionID && d ? this.player.setCollection(e.collectionID, p, e.nextVideoOffset) : this.player.setVideo(p, e.nextVideoOffset)
                             } else void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset)
                         }
                     } else this.initializePlayer()
@@ -11072,21 +11192,24 @@ webpackJsonp([102], {
                         t !== n && (n === this.state.playerRefID && this.state.playerPaused ? this.togglePause(!1) : n === this.state.playerRefID || this.state.playerPaused || this.togglePause(!0))
                     }
                 }, t.prototype.render = function() {
-                    var e = I("video-player", {
-                        "video-player--theatre": this.props.theatreModeEnabled,
-                        "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible,
-                        "video-player--logged-in": this.props.isLoggedIn,
-                        "video-player--fullscreen": this.state.isFullScreen
-                    });
+                    var e = N("video-player", {
+                            "video-player--theatre": this.props.theatreModeEnabled,
+                            "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible,
+                            "video-player--logged-in": this.props.isLoggedIn,
+                            "video-player--fullscreen": this.state.isFullScreen
+                        }),
+                        t = N("video-player__container", {
+                            "video-player__container--clips": V.a.includes(this.playerType)
+                        });
                     return i.createElement("div", {
-                        className: I(e),
+                        className: N(e),
                         "data-test-selector": "video-player"
                     }, i.createElement("div", {
-                        className: "video-player__container",
+                        className: t,
                         ref: this.attachRef
                     }))
                 }, t.prototype.componentWillUnmount = function() {
-                    this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(G.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(G.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(G.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Play, this.onPlayerPlay), this.player.removeEventListener(B.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(G.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(G.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(G.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(G.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(B.a.Seeked, this.onSeek), this.player.removeEventListener(B.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(G.a.OpenStream, this.onOpenStream), this.player.removeEventListener(B.a.Pause, this.onPause), this.player.removeEventListener(G.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), L.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
+                    this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(B.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(B.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(B.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(A.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(A.a.Play, this.onPlayerPlay), this.player.removeEventListener(A.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(B.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(B.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(B.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(B.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(A.a.Seeked, this.onSeek), this.player.removeEventListener(A.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(B.a.OpenStream, this.onOpenStream), this.player.removeEventListener(A.a.Pause, this.onPause), this.player.removeEventListener(B.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(A.a.LoadedMetadata, this.onMetadataLoaded), I.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
                         vodID: void 0
                     })
                 }, t.prototype.trackMiniPlayerAction = function(e, t) {
@@ -11098,38 +11221,38 @@ webpackJsonp([102], {
                         externalfullscreen: this.props.fullscreen.supported(),
                         autoplay: !this.props.paused
                     });
-                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.vodID && (e.video = Object(M.b)(this.props.vodID), o.n.setVideoPlayerTrackingData({
+                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride, this.props.playerTypeOverride === V.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(D.b)(this.props.vodID), o.n.setVideoPlayerTrackingData({
                         vodID: this.props.vodID
                     })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(H.a)(this.props.nextVideoOffset)), this.lastPausedProp = this.props.paused, e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
                     var t = new window.Twitch.Player(this.playerRef, e);
-                    this.player = t, t.addEventListener(G.a.PlayerReady, this.onPlayerReady), t.addEventListener(G.a.Online, this.onStreamStatusOnline), t.addEventListener(G.a.Offline, this.onStreamStatusOffline), t.addEventListener(B.a.Ended, this.onStreamStatusOffline), t.addEventListener(B.a.Play, this.onPlayerPlay), t.addEventListener(B.a.Playing, this.onPlayerPlaying), t.addEventListener(B.a.Seeked, this.onSeek), t.addEventListener(B.a.TimeUpdate, this.onTimeUpdate), t.addEventListener(G.a.TheatreChange, this.onTheatreChange), t.addEventListener(G.a.FullscreenChange, this.onFullScreenChange), t.addEventListener(G.a.ExternalFullscreenChange, this.onExternalFullScreenChange), t.addEventListener(G.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(G.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(G.a.OpenStream, this.onOpenStream), t.addEventListener(B.a.Pause, this.onPause), t.addEventListener(G.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), t.addEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), L.extensionService.registerPlayer(this.player), L.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
+                    this.player = t, t.addEventListener(B.a.PlayerReady, this.onPlayerReady), t.addEventListener(B.a.Online, this.onStreamStatusOnline), t.addEventListener(B.a.Offline, this.onStreamStatusOffline), t.addEventListener(A.a.Ended, this.onStreamStatusOffline), t.addEventListener(A.a.Play, this.onPlayerPlay), t.addEventListener(A.a.Playing, this.onPlayerPlaying), t.addEventListener(A.a.Seeked, this.onSeek), t.addEventListener(A.a.TimeUpdate, this.onTimeUpdate), t.addEventListener(B.a.TheatreChange, this.onTheatreChange), t.addEventListener(B.a.FullscreenChange, this.onFullScreenChange), t.addEventListener(B.a.ExternalFullscreenChange, this.onExternalFullScreenChange), t.addEventListener(B.a.ClipsModerationOpen, this.onClipsModerationOpen), t.addEventListener(B.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(B.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(B.a.OpenStream, this.onOpenStream), t.addEventListener(A.a.Pause, this.onPause), t.addEventListener(B.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), t.addEventListener(A.a.LoadedMetadata, this.onMetadataLoaded), I.extensionService.registerPlayer(this.player), I.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
                 }, t.prototype.registerBufferingEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 1e3,
-                        group: U.a.Player,
-                        key: U.b.PlayerBuffering,
-                        label: U.c.Buffering
+                        group: M.a.Player,
+                        key: M.b.PlayerBuffering,
+                        label: M.c.Buffering
                     })
                 }, t.prototype.registerCreatedEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 1e3,
-                        group: U.a.Player,
-                        key: U.b.PlayerCreated,
-                        label: U.c.Created
+                        group: M.a.Player,
+                        key: M.b.PlayerCreated,
+                        label: M.c.Created
                     })
                 }, t.prototype.registerLoadedEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 2500,
-                        group: U.a.Player,
-                        key: U.b.PlayerLoaded,
-                        label: U.c.Init
+                        group: M.a.Player,
+                        key: M.b.PlayerLoaded,
+                        label: M.c.Init
                     })
                 }, t.prototype.registerPlayedEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 4e3,
-                        group: U.a.Player,
-                        key: U.b.PlayerPlayed,
-                        label: U.c.FirstFrame
+                        group: M.a.Player,
+                        key: M.b.PlayerPlayed,
+                        label: M.c.FirstFrame
                     })
                 }, t.prototype.reportPlayerBuffering = function() {
                     this.hasBuffered || (this.hasBuffered = !0, this.playerBuffering && this.props.latencyTracking.reportCustomEvent(this.playerBuffering))
@@ -11138,40 +11261,40 @@ webpackJsonp([102], {
                 }, t.prototype.enterFullscreen = function() {
                     this.setState({
                         isFullScreen: !0
-                    }), this.props.supportTheatreFullscreen ? (this.props.enableFullscreenTheatreMode(), this.props.fullscreen.enable(document.body)) : this.props.fullscreen.enable(this.playerRef)
+                    }), this.props.fullscreenRef ? this.props.fullscreen.enable(this.props.fullscreenRef) : this.props.supportTheatreFullscreen ? (this.props.enableFullscreenTheatreMode(), this.props.fullscreen.enable(document.body)) : this.props.fullscreen.enable(this.playerRef)
                 }, t.prototype.exitFullscreen = function() {
                     this.state.isFullScreen && (this.props.disableFullscreenTheatreMode(), this.setState({
                         isFullScreen: !1
                     }), this.props.fullscreen.disable())
                 }, t.prototype.maybeAttachToWindow = function(e) {
-                    F.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
+                    x.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
                 }, t.prototype.maybeDetachFromWindow = function() {
                     window.player = void 0
                 }, t.prototype.bindHotKeys = function() {
-                    x.bind("alt+x", this.maybeRecordClip)
+                    L.bind("alt+x", this.maybeRecordClip)
                 }, t.prototype.unbindHotKeys = function() {
-                    x.unbind("alt+x")
+                    L.unbind("alt+x")
                 }, t.tagInjected = !1, t
             }(i.Component),
-            q = Object(A.d)("VideoPlayer")(Q);
+            q = Object(U.d)("VideoPlayer")(Q);
         var K = Object(f.d)(Object(g.b)(function(e) {
             return {
-                isWhispersBottomBarVisible: Object(C.b)(e),
+                isWhispersBottomBarVisible: Object(O.b)(e),
                 theatreModeEnabled: e.ui.theatreModeEnabled,
                 rightColumnExpanded: e.ui.rightColumnExpanded,
                 sideNavExpanded: e.ui.sideNavExpanded,
                 isLoggedIn: Object(_.d)(e),
                 authToken: Object(_.a)(e),
-                activeVideoPlayerRefID: Object(N.a)(e)
+                activeVideoPlayerRefID: Object(R.a)(e)
             }
         }, function(e) {
             return Object(f.b)({
-                enableTheatreMode: O.v,
-                disableTheatreMode: O.t,
-                enableFullscreenTheatreMode: O.u,
-                disableFullscreenTheatreMode: O.s,
-                togglePersistentPlayer: O.B,
-                reportPlayerInstanceStarted: R.b
+                enableTheatreMode: E.v,
+                disableTheatreMode: E.t,
+                enableFullscreenTheatreMode: E.u,
+                disableFullscreenTheatreMode: E.s,
+                togglePersistentPlayer: E.B,
+                reportPlayerInstanceStarted: C.b
             }, e)
         }), function(e) {
             return function(t) {
@@ -11233,12 +11356,12 @@ webpackJsonp([102], {
             return h
         }), n.d(t, "a", function() {
             return S
-        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
-            return E
-        }), n.d(t, !1, function() {}), n.d(t, "c", function() {
+        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "c", function() {
             return K
         }), n.d(t, "d", function() {
             return Y
+        }), n.d(t, "b", function() {
+            return V.c
         })
     },
     hdYS: function(e, t, n) {
@@ -11335,6 +11458,24 @@ webpackJsonp([102], {
         n.d(t, "a", function() {
             return o
         })
+    },
+    ijOz: function(e, t, n) {
+        "use strict";
+        var r;
+        n.d(t, "c", function() {
+                return r
+            }), n.d(t, "a", function() {
+                return a
+            }), n.d(t, "b", function() {
+                return i
+            }),
+            function(e) {
+                e.AnimatedThumbnails = "animated_thumbnails", e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding", e.ClipsViewing = "clips-viewing", e.ClipsEditing = "clips-editing", e.ClipsEmbed = "clips-embed"
+            }(r || (r = {}));
+        var i, a = [r.ClipsEditing, r.ClipsViewing, r.ClipsEmbed];
+        ! function(e) {
+            e.Delete = "delete", e.DeleteAll = "deleteAll", e.ReportUser = "report"
+        }(i || (i = {}))
     },
     j0cR: function(e, t, n) {
         "use strict";
@@ -13122,22 +13263,23 @@ webpackJsonp([102], {
                 }, t))
             }),
             w = n("IOwa"),
-            P = n("mi6k");
+            P = n("mi6k"),
+            E = n("Tg4T");
 
-        function E(e) {
+        function O(e) {
             return void 0 !== e.streamType
         }
 
-        function O(e) {
+        function C(e) {
             return void 0 !== e.watchedProgressPercent
         }
 
-        function C(e) {
+        function R(e) {
             return void 0 !== e.clipCreatedByChannelLogin
         }! function(e) {
             e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
         }(g || (g = {}));
-        var R = function(e) {
+        var N = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -13146,13 +13288,17 @@ webpackJsonp([102], {
                     className: "preview-card"
                 }, i.createElement(c._8, {
                     position: c._15.Relative
-                }, i.createElement(c.O, {
+                }, C(this.props) && i.createElement(E.a, {
+                    videoID: this.props.videoID || "",
+                    restriction: this.props.restriction,
+                    attachTop: !0
+                }), i.createElement(c.O, {
                     to: this.props.linkTo,
                     onClick: this.props.onClick
                 }, i.createElement(S, {
                     staticImageProps: this.props.thumbnailImageProps,
-                    animatedImageProps: O(this.props) && this.props.animatedImageProps || void 0,
-                    liveChannelLogin: E(this.props) && this.props.enableLivePreview ? this.props.channelLogin : void 0,
+                    animatedImageProps: C(this.props) && this.props.animatedImageProps || void 0,
+                    liveChannelLogin: O(this.props) && this.props.enableLivePreview ? this.props.channelLogin : void 0,
                     onClick: this.props.onThumbnailClick
                 }), this.renderOverlay())), i.createElement(c._8, {
                     display: c.R.Flex,
@@ -13169,7 +13315,7 @@ webpackJsonp([102], {
                     overflow: c._11.Hidden
                 }, this.renderTitles())), this.renderAppendages())
             }, t.prototype.renderOverlay = function() {
-                return E(this.props) ? i.createElement(f, {
+                return O(this.props) ? i.createElement(f, {
                     topLeft: i.createElement(w.a, {
                         type: this.props.streamType,
                         hosting: !!this.props.hostedByChannelLogin
@@ -13181,7 +13327,7 @@ webpackJsonp([102], {
                         }, "VideoPreviewCard")
                     }),
                     bottomRight: void 0
-                }) : O(this.props) ? i.createElement(f, {
+                }) : C(this.props) ? i.createElement(f, {
                     topLeft: i.createElement(b, {
                         value: Object(P.b)(this.props.durationInSeconds),
                         icon: c._25.GlyphArrRight,
@@ -13195,7 +13341,7 @@ webpackJsonp([102], {
                         value: Object(a.c)(new Date(this.props.datePublished), "medium")
                     }),
                     progressBarPercent: this.props.watchedProgressPercent
-                }) : C(this.props) ? i.createElement(f, {
+                }) : R(this.props) ? i.createElement(f, {
                     topLeft: i.createElement(b, {
                         value: Object(P.b)(this.props.durationInSeconds),
                         icon: c._25.Clip,
@@ -13210,7 +13356,7 @@ webpackJsonp([102], {
                     })
                 }) : void 0
             }, t.prototype.getViewCountLabel = function() {
-                return O(this.props) || C(this.props) ? Object(a.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                return C(this.props) || R(this.props) ? Object(a.d)("{viewerCount, plural, one {# view} other {# views}}", {
                     viewerCount: this.props.viewCount
                 }, "VideoPreviewCard") : ""
             }, t.prototype.renderIconicImage = function() {
@@ -13236,7 +13382,7 @@ webpackJsonp([102], {
                     text: this.props.channelLogin,
                     linkTo: this.props.channelLoginLinkTo
                 }];
-                return C(this.props) ? e.push({
+                return R(this.props) ? e.push({
                     text: Object(a.d)("Clipped by {userName}", {
                         userName: this.props.clipCreatedByChannelLogin
                     }, "VideoPreviewCard"),
@@ -13260,7 +13406,7 @@ webpackJsonp([102], {
         n.d(t, "b", function() {
             return g
         }), n.d(t, "a", function() {
-            return R
+            return N
         })
     },
     vKYI: function(e, t, n) {
@@ -13627,4 +13773,4 @@ webpackJsonp([102], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-5282c140a77ff21e9495af985acf7fc3.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-d6fd39efe4164536c11b66bb211583b4.js.map

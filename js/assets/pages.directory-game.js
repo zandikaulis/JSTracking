@@ -1,4 +1,4 @@
-webpackJsonp([48], {
+webpackJsonp([50], {
     "+GT7": function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -13116,6 +13116,92 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
+    Tg4T: function(e, t, n) {
+        "use strict";
+        var i, a = n("TToO"),
+            r = n("GiK3"),
+            o = n("6sO2"),
+            s = n("Odds");
+        ! function(e) {
+            e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
+        }(i || (i = {}));
+        var l = function(e) {
+            function t() {
+                return null !== e && e.apply(this, arguments) || this
+            }
+            return a.__extends(t, e), t.prototype.render = function() {
+                if (!(this.props.restriction && this.props.restriction.productName && this.props.restriction.title && this.props.videoID)) return null;
+                var e = Object(o.d)("Get It Now", "VideoPreviewCardRestriction"),
+                    t = this.props.restriction.canViewRestricted,
+                    n = t ? Object(o.d)("unlocked", "VideoPreviewCardRestriction") : Object(o.d)("locked", "VideoPreviewCardRestriction"),
+                    a = t ? s._25.Unlock : s._25.Lock;
+                return r.createElement(s._8, null, !t && r.createElement(s._35, {
+                    background: s.n.Overlay,
+                    className: "video-preview-card-restriction",
+                    color: s.K.Overlay,
+                    display: s.R.Flex,
+                    position: s._15.Absolute,
+                    attachTop: !0,
+                    attachLeft: !0,
+                    zIndex: s._62.Default,
+                    padding: {
+                        x: 5
+                    },
+                    textAlign: s._45.Center,
+                    fullWidth: !0,
+                    fullHeight: !0,
+                    alignItems: s.c.Center,
+                    alignContent: s.b.Center,
+                    flexDirection: s.T.Column,
+                    flexWrap: s.U.Wrap,
+                    justifyContent: s._7.Center,
+                    "data-test-selector": i.LockSelector
+                }, r.createElement(s._2, {
+                    margin: {
+                        bottom: 1
+                    }
+                }, r.createElement(s.Q, {
+                    color: s.K.Overlay,
+                    fontSize: s.V.Size5,
+                    "data-test-selector": i.UpsellSelector
+                }, Object(o.d)("View with {title}", {
+                    title: this.props.restriction.title
+                }, "VideoPreviewCardRestriction"))), r.createElement(s._8, null, r.createElement(s.v, {
+                    type: s.B.Hollow,
+                    ariaLabel: e,
+                    targetBlank: !0,
+                    disabled: "" === this.props.restriction.productName,
+                    linkTo: "https://www.twitch.tv/products/" + this.props.restriction.productName,
+                    overlay: !0
+                }, e))), r.createElement(s._35, {
+                    display: s.R.InlineFlex,
+                    position: s._15.Absolute,
+                    attachTop: this.props.attachTop,
+                    attachBottom: !this.props.attachTop,
+                    attachRight: !0,
+                    margin: .5,
+                    zIndex: s._62.Default,
+                    fontSize: s.V.Size6,
+                    background: s.n.Overlay,
+                    borderRadius: s.t.Medium,
+                    color: s.K.Overlay
+                }, r.createElement(s._52, {
+                    direction: this.props.attachTop ? s._54.Bottom : s._54.Top,
+                    align: s._53.Right,
+                    label: n
+                }, r.createElement(s._24, {
+                    asset: a,
+                    height: 20,
+                    width: 20
+                }))))
+            }, t
+        }(r.PureComponent);
+        n.d(t, !1, function() {
+            return i
+        }), n.d(t, "a", function() {
+            return l
+        })
+    },
     U9Fb: function(e, t) {
         var n = {
             kind: "Document",
@@ -13947,7 +14033,7 @@ webpackJsonp([48], {
     aBed: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return b
+            return _
         });
         var i = n("TToO"),
             a = n("HW6M"),
@@ -13961,11 +14047,12 @@ webpackJsonp([48], {
             m = n("mi6k"),
             p = n("CSlQ"),
             h = n("81qH"),
-            g = n("Odds"),
-            v = n("a0ve"),
-            f = (n.n(v), "video-view-count"),
-            y = "video-length",
-            k = function(e) {
+            g = n("Tg4T"),
+            v = n("Odds"),
+            f = n("a0ve"),
+            y = (n.n(f), "video-view-count"),
+            k = "video-length",
+            b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -13973,6 +14060,11 @@ webpackJsonp([48], {
                         didAnimatedPreviewLoad: !1,
                         didAnimatedPreviewFailToLoad: !1
                     }, t.renderVariation = function() {
+                        var e = {
+                            productName: t.props.video.restriction && t.props.video.restriction.productName,
+                            title: t.props.video.restriction && t.props.video.restriction.productTitle,
+                            canViewRestricted: t.props.video.self && !t.props.video.self.isRestricted || !1
+                        };
                         return o.createElement(c.a, {
                             context: t.props.context,
                             title: t.props.video.title,
@@ -14012,63 +14104,74 @@ webpackJsonp([48], {
                                 src: t.props.video.animatedPreviewURL,
                                 alt: ""
                             } : void 0,
-                            watchedProgressPercent: t.getVideoPreviousWatchPercentage() || 0
+                            watchedProgressPercent: t.getVideoPreviousWatchPercentage() || 0,
+                            restriction: e,
+                            videoID: t.props.video.id
                         })
                     }, t.renderFallback = function() {
                         var e = null,
                             n = t.getVideoPreviousWatchPercentage();
-                        return null !== n && (e = o.createElement(g._8, {
-                            position: g._15.Absolute,
+                        null !== n && (e = o.createElement(v._8, {
+                            position: v._15.Absolute,
                             attachBottom: !0,
                             fullWidth: !0
-                        }, o.createElement(g._18, {
-                            size: g._20.Small,
+                        }, o.createElement(v._18, {
+                            size: v._20.Small,
                             value: n,
                             mask: !0
-                        }))), o.createElement("div", i.__assign({
+                        })));
+                        var a = {
+                            productName: t.props.video.restriction && t.props.video.restriction.productName,
+                            title: t.props.video.restriction && t.props.video.restriction.productTitle,
+                            canViewRestricted: t.props.video.self && !t.props.video.self.isRestricted || !1
+                        };
+                        return o.createElement("div", i.__assign({
                             onClick: t.onClickHandler,
                             onMouseEnter: t.onMouseEnterHandler,
                             onMouseLeave: t.onMouseLeaveHandler
-                        }, Object(g._63)(t.props)), o.createElement(g.C, null, o.createElement(g._8, {
+                        }, Object(v._63)(t.props)), o.createElement(v.C, null, o.createElement(v._8, {
                             fullWidth: !0
-                        }, o.createElement(g.k, {
+                        }, o.createElement(v.k, {
                             overflow: !0
-                        }, o.createElement("div", null, o.createElement(g._35, {
-                            display: g.R.InlineFlex,
-                            position: g._15.Absolute,
+                        }, o.createElement("div", null, o.createElement(g.a, {
+                            videoID: t.props.video.id,
+                            restriction: a
+                        }), o.createElement(v._35, {
+                            display: v.R.InlineFlex,
+                            position: v._15.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             margin: .5,
-                            zIndex: g._62.Default,
-                            fontSize: g.V.Size6,
-                            background: g.n.Overlay,
-                            color: g.K.Overlay,
+                            zIndex: v._62.Default,
+                            fontSize: v.V.Size6,
+                            background: v.n.Overlay,
+                            color: v.K.Overlay,
                             className: "video-preview-card__preview-overlay-stat"
-                        }, o.createElement(g._34, {
-                            "data-test-selector": f,
-                            icon: g._25.GlyphViews,
+                        }, o.createElement(v._34, {
+                            "data-test-selector": y,
+                            icon: v._25.GlyphViews,
                             label: Object(l.d)("views", "VideoPreviewCard"),
                             value: Object(l.f)(t.props.video.viewCount)
-                        })), o.createElement(g._35, {
-                            display: g.R.InlineFlex,
-                            position: g._15.Absolute,
+                        })), o.createElement(v._35, {
+                            display: v.R.InlineFlex,
+                            position: v._15.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             margin: .5,
-                            zIndex: g._62.Default,
-                            fontSize: g.V.Size6,
-                            background: g.n.Overlay,
-                            color: g.K.Overlay,
+                            zIndex: v._62.Default,
+                            fontSize: v.V.Size6,
+                            background: v.n.Overlay,
+                            color: v.K.Overlay,
                             className: "video-preview-card__preview-overlay-stat"
-                        }, o.createElement(g._34, {
-                            "data-test-selector": y,
-                            icon: g._25.GlyphLength,
+                        }, o.createElement(v._34, {
+                            "data-test-selector": k,
+                            icon: v._25.GlyphLength,
                             label: Object(l.d)("length", "VideoPreviewCard"),
                             value: Object(m.b)(t.props.video.lengthSeconds)
-                        })), t.videoPreviewImage(), e))), o.createElement(g.D, null, o.createElement(g._8, {
-                            display: g.R.Flex,
-                            flexDirection: g.T.Row,
-                            flexWrap: g.U.NoWrap,
+                        })), t.videoPreviewImage(), e))), o.createElement(v.D, null, o.createElement(v._8, {
+                            display: v.R.Flex,
+                            flexDirection: v.T.Row,
+                            flexWrap: v.U.NoWrap,
                             padding: {
                                 top: .5
                             }
@@ -14122,7 +14225,7 @@ webpackJsonp([48], {
                         n = a("video-preview-card__preview-image", {
                             "video-preview-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                         });
-                    return o.createElement(g.k, {
+                    return o.createElement(v.k, {
                         overflow: !0
                     }, o.createElement(s.a, {
                         to: {
@@ -14136,10 +14239,10 @@ webpackJsonp([48], {
                     }, o.createElement("div", {
                         className: t,
                         "data-test-selector": "preview-image-wrapper"
-                    }, o.createElement(g._2, {
+                    }, o.createElement(v._2, {
                         flexShrink: 0
-                    }, o.createElement("figure", null, o.createElement(g.k, {
-                        ratio: g.l.Aspect16x9
+                    }, o.createElement("figure", null, o.createElement(v.k, {
+                        ratio: v.l.Aspect16x9
                     }, o.createElement("img", {
                         alt: this.props.video.title,
                         className: n,
@@ -14158,9 +14261,9 @@ webpackJsonp([48], {
                         n = a("video-preview-card__image-wrapper", {
                             "video-preview-card__image-wrapper--watched": null !== this.getVideoPreviousWatchPercentage() && !this.state.hovered
                         });
-                    return o.createElement(g._8, {
+                    return o.createElement(v._8, {
                         "data-test-selector": "game-box-art",
-                        display: g.R.InlineFlex,
+                        display: v.R.InlineFlex,
                         flexShrink: 0,
                         padding: {
                             bottom: .5
@@ -14169,21 +14272,21 @@ webpackJsonp([48], {
                         to: t,
                         title: e.name,
                         "data-a-target": "video-preview-card-boxart-link"
-                    }, o.createElement(g._2, {
+                    }, o.createElement(v._2, {
                         margin: {
                             right: 1
                         }
                     }, o.createElement("figure", {
                         className: "video-preview-card__game-art"
-                    }, o.createElement(g._52, {
-                        display: g.R.Block,
-                        direction: g._54.Bottom,
+                    }, o.createElement(v._52, {
+                        display: v.R.Block,
+                        direction: v._54.Bottom,
                         label: e.name
                     }, o.createElement("div", {
                         className: n,
                         "data-test-selector": "game-box-art-wrapper"
-                    }, o.createElement(g.E, {
-                        aspect: g.l.BoxArt,
+                    }, o.createElement(v.E, {
+                        aspect: v.l.BoxArt,
                         alt: e.name,
                         src: e.boxArtURL || l.a.defaultBoxArtURL
                     })))))))
@@ -14203,18 +14306,18 @@ webpackJsonp([48], {
                             title: Object(u.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
                         }, Object(u.a)(this.props.video.owner.login, this.props.video.owner.displayName))
                     }
-                    return o.createElement(g._8, {
-                        display: g.R.Flex,
-                        flexDirection: g.T.Column,
-                        overflow: g._11.Hidden
-                    }, o.createElement(g._8, {
+                    return o.createElement(v._8, {
+                        display: v.R.Flex,
+                        flexDirection: v.T.Column,
+                        overflow: v._11.Hidden
+                    }, o.createElement(v._8, {
                         "data-test-selector": "video-title",
-                        overflow: g._11.Hidden,
-                        position: g._15.Relative
-                    }, o.createElement(g.Q, {
-                        color: g.K.Base,
-                        fontSize: g.V.Size5,
-                        lineHeight: g._9.Heading
+                        overflow: v._11.Hidden,
+                        position: v._15.Relative
+                    }, o.createElement(v.Q, {
+                        color: v.K.Base,
+                        fontSize: v.V.Size5,
+                        lineHeight: v._9.Heading
                     }, o.createElement(s.a, {
                         className: "video-preview-card__video-title",
                         to: {
@@ -14224,16 +14327,16 @@ webpackJsonp([48], {
                         },
                         title: this.props.video.title,
                         "data-a-target": "video-preview-card-title-link"
-                    }, this.props.video.title))), o.createElement(g._8, {
+                    }, this.props.video.title))), o.createElement(v._8, {
                         flexShrink: 0,
                         flexGrow: 0,
                         ellipsis: !0
-                    }, o.createElement(g.Q, {
-                        type: g._49.Span,
-                        color: g.K.Alt2,
+                    }, o.createElement(v.Q, {
+                        type: v._49.Span,
+                        color: v.K.Alt2,
                         ellipsis: !0,
                         title: this.formatTitle(e)
-                    }, e, o.createElement(g._2, {
+                    }, e, o.createElement(v._2, {
                         padding: {
                             x: .5
                         }
@@ -14252,7 +14355,7 @@ webpackJsonp([48], {
                     }
                 }, t
             }(o.Component),
-            b = Object(p.d)("VideoPreviewCard")(k)
+            _ = Object(p.d)("VideoPreviewCard")(b)
     },
     aFoJ: function(e, t) {
         var n = {
@@ -16210,6 +16313,14 @@ webpackJsonp([48], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "isRestricted"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "viewingHistory"
                                 },
                                 arguments: [],
@@ -16244,16 +16355,44 @@ webpackJsonp([48], {
                         },
                         arguments: [],
                         directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "restriction"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "productName"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "productTitle"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 302
+                end: 356
             }
         };
         n.loc.source = {
-            body: "fragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nviewingHistory {\nposition\n}\n}\ntitle\nviewCount\n}",
+            body: "fragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -18490,22 +18629,23 @@ webpackJsonp([48], {
                 }, t))
             }),
             E = n("IOwa"),
-            w = n("mi6k");
+            w = n("mi6k"),
+            N = n("Tg4T");
 
-        function N(e) {
+        function O(e) {
             return void 0 !== e.streamType
         }
 
-        function O(e) {
+        function T(e) {
             return void 0 !== e.watchedProgressPercent
         }
 
-        function T(e) {
+        function D(e) {
             return void 0 !== e.clipCreatedByChannelLogin
         }! function(e) {
             e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
         }(g || (g = {}));
-        var D = function(e) {
+        var L = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -18514,13 +18654,17 @@ webpackJsonp([48], {
                     className: "preview-card"
                 }, a.createElement(d._8, {
                     position: d._15.Relative
-                }, a.createElement(d.O, {
+                }, T(this.props) && a.createElement(N.a, {
+                    videoID: this.props.videoID || "",
+                    restriction: this.props.restriction,
+                    attachTop: !0
+                }), a.createElement(d.O, {
                     to: this.props.linkTo,
                     onClick: this.props.onClick
                 }, a.createElement(S, {
                     staticImageProps: this.props.thumbnailImageProps,
-                    animatedImageProps: O(this.props) && this.props.animatedImageProps || void 0,
-                    liveChannelLogin: N(this.props) && this.props.enableLivePreview ? this.props.channelLogin : void 0,
+                    animatedImageProps: T(this.props) && this.props.animatedImageProps || void 0,
+                    liveChannelLogin: O(this.props) && this.props.enableLivePreview ? this.props.channelLogin : void 0,
                     onClick: this.props.onThumbnailClick
                 }), this.renderOverlay())), a.createElement(d._8, {
                     display: d.R.Flex,
@@ -18537,7 +18681,7 @@ webpackJsonp([48], {
                     overflow: d._11.Hidden
                 }, this.renderTitles())), this.renderAppendages())
             }, t.prototype.renderOverlay = function() {
-                return N(this.props) ? a.createElement(v, {
+                return O(this.props) ? a.createElement(v, {
                     topLeft: a.createElement(E.a, {
                         type: this.props.streamType,
                         hosting: !!this.props.hostedByChannelLogin
@@ -18549,7 +18693,7 @@ webpackJsonp([48], {
                         }, "VideoPreviewCard")
                     }),
                     bottomRight: void 0
-                }) : O(this.props) ? a.createElement(v, {
+                }) : T(this.props) ? a.createElement(v, {
                     topLeft: a.createElement(f, {
                         value: Object(w.b)(this.props.durationInSeconds),
                         icon: d._25.GlyphArrRight,
@@ -18563,7 +18707,7 @@ webpackJsonp([48], {
                         value: Object(r.c)(new Date(this.props.datePublished), "medium")
                     }),
                     progressBarPercent: this.props.watchedProgressPercent
-                }) : T(this.props) ? a.createElement(v, {
+                }) : D(this.props) ? a.createElement(v, {
                     topLeft: a.createElement(f, {
                         value: Object(w.b)(this.props.durationInSeconds),
                         icon: d._25.Clip,
@@ -18578,7 +18722,7 @@ webpackJsonp([48], {
                     })
                 }) : void 0
             }, t.prototype.getViewCountLabel = function() {
-                return O(this.props) || T(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                return T(this.props) || D(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                     viewerCount: this.props.viewCount
                 }, "VideoPreviewCard") : ""
             }, t.prototype.renderIconicImage = function() {
@@ -18604,7 +18748,7 @@ webpackJsonp([48], {
                     text: this.props.channelLogin,
                     linkTo: this.props.channelLoginLinkTo
                 }];
-                return T(this.props) ? e.push({
+                return D(this.props) ? e.push({
                     text: Object(r.d)("Clipped by {userName}", {
                         userName: this.props.clipCreatedByChannelLogin
                     }, "VideoPreviewCard"),
@@ -18628,7 +18772,7 @@ webpackJsonp([48], {
         n.d(t, "b", function() {
             return g
         }), n.d(t, "a", function() {
-            return D
+            return L
         })
     },
     vKYI: function(e, t, n) {
@@ -19553,4 +19697,4 @@ webpackJsonp([48], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-af8a6cf25c530bb280ff0a6a6b0a2b6d.js.map
+//# sourceMappingURL=pages.directory-game-75fcd02db141e7aedc7832e0833a7167.js.map
