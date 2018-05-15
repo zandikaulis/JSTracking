@@ -33,7 +33,7 @@ window.__twilightSettings = {
     "detector_urls": ["https://s0.2mdn.net/", "https://adservice.google.com", "https://pagead2.googlesyndication.com/", "https://r.nexac.com/e/getdata.xgi?foo=bar"],
     "env_test": "This is a test in Production",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445", "27697171"],
-    "esport_insider_pass_gifting_launch": "staff",
+    "esport_insider_pass_gifting_launch": "on",
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
     "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff"],
     "esport_insider_prime_bits_launch": "off",
@@ -591,7 +591,7 @@ window.__twilightSettings = {
         },
         "60936fd6-ef0a-49f1-9421-712f2ba02513": {
             "name": "TWILIGHT_DASHBOARD_SETTINGS_LAUNCH",
-            "v": 3530,
+            "v": 3796,
             "t": 2,
             "groups": [{
                 "weight": 100,
