@@ -2569,7 +2569,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-26e16f35";
+    return "2.3.0-fcee27f0";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3879,7 +3879,7 @@ Queue.prototype.empty = function () {
 
 var map = {
 	"./nospd.json": "./settings/nospd.json",
-	"./rebuf2.json": "./settings/rebuf2.json"
+	"./rebuf1.json": "./settings/rebuf1.json"
 };
 
 
@@ -3917,14 +3917,14 @@ module.exports = {"buffercontrol":{"liveSpeedUpRate":1}};
 
 /***/ }),
 
-/***/ "./settings/rebuf2.json":
+/***/ "./settings/rebuf1.json":
 /*!******************************!*\
-  !*** ./settings/rebuf2.json ***!
+  !*** ./settings/rebuf1.json ***!
   \******************************/
 /*! exports provided: buffercontrol, default */
 /***/ (function(module) {
 
-module.exports = {"buffercontrol":{"rebufferPenalty":2}};
+module.exports = {"buffercontrol":{"rebufferPenalty":1}};
 
 /***/ })
 
