@@ -36,7 +36,7 @@ window.__twilightSettings = {
     "esport_insider_pass_gifting_launch": "on",
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
     "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff"],
-    "esport_insider_prime_bits_launch": "off",
+    "esport_insider_prime_bits_launch": "on",
     "esport_insider_prime_bits_launch_user_whitelist": ["186243532", "215590603"],
     "esports_cheerbomb_flag": "staff",
     "esports_room_cheering_whitelist": ["27697171-staff"],
