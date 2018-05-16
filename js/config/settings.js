@@ -85,6 +85,7 @@ window.__twilightSettings = {
     "spade_url": "https://video-edge-62a934.sjc02.hls.ttvnw.net/v1/segment/CkkO4t8LwQLaTWrCtxDt54tZI_R7x6Hd57yv-UE2pn3V14_7b4lG9bYK1gt3C-S_5y4yow6DfosG7CvaPHWSOcWFwYS2KkIM-2Ak6cJ-o2IIVBwDtBBjSwZgRFcjo39zCIaXELu9g9GokQVDCV7ohNAdtiORY1X76mtW-0GQBgmHlek1Cwh-WAIk8le5ybjE3e4igFcF62lrejcM27c8hTTB6wcKPwRYun9EYi5ZXYxTrRTM2W-mhwFg7pSwvYlGolgve8Um8JL9RA3d6emDLw0-O7kLljG32Kx1_FUb-ktA1JzBijzAmuJ_3CACyEEsmQheVACU43J4JMe1I5ygd4XvCWstAUSKGlMKWtHELb9gf_fcGOrrqwprIm_sRKUpXd7c7fBwKjMiJfSo-kmJh46OrJ9h843siI_H9yiGH8grLoIjTVtFQPwTHLjZ_pRP9KZL-Sd8LUTV6y8XPJF3whgwt3Sopz3oVxyBSf02aLqI4BVKnxycnWegVUAr7_tBXW4JxTEyQPzSNVHsmV6x17Dr22R8kjcQM.ts",
     "stream_summary_new_referrals": true,
     "stream_summary_timeseries_panel": true,
+    "stream_summary_vod_panel": true,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "teams_landing_launch": false,
     "tvapp_ps4_ads_enabled": true,
@@ -616,13 +617,13 @@ window.__twilightSettings = {
         },
         "6f35b29f-bedf-4023-8002-652a308ee963": {
             "name": "TWILIGHT_REMOVE_DASHBOARD_STATS_AND_REVENUE",
-            "v": 3759,
+            "v": 3810,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
