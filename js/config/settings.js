@@ -71,6 +71,7 @@ window.__twilightSettings = {
     "prime_promo_content_base_url": "https://twitch.amazon.com/prime",
     "prime_subsite_up": true,
     "prime-crown-hidden-ids": ["8ab0a940-c4f2-f0b4-86bf-50b6407a889f", "e4b0a979-23b5-0ef4-e488-63541e91a514"],
+    "prime-loot-page-hidden-ids": [],
     "quantcast_account": "p-16uNVwiyGoWyg",
     "quantcast_labels": "gaming",
     "quantcast_url": "https://edge.quantserve.com/quant.js",
