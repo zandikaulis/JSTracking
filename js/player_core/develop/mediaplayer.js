@@ -2569,7 +2569,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-fedafeeb";
+    return "2.3.0-33f533e9";
 }
 
 MediaPlayer.prototype.isLooping = function () {
