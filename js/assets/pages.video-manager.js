@@ -3216,14 +3216,21 @@ webpackJsonp([97], {
             u = n("bdk8");
         n.n(u);
         ! function(e) {
-            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
+            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
         }(a || (a = {}));
         var c = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.renderLink = function() {
                     var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                    return n.isLink() ? i.createElement("a", r.__assign({
+                    return n.props.type === a.Download ? i.createElement("a", r.__assign({
+                        href: n.props.url,
+                        target: "_blank",
+                        className: e,
+                        onClick: n.onShareClickHandler
+                    }, Object(l._63)(n.props), {
+                        download: n.props.text
+                    }), n.renderIcon()) : n.isLink() ? i.createElement("a", r.__assign({
                         href: n.getLinkTarget(),
                         target: "_blank",
                         className: e,
@@ -3246,16 +3253,27 @@ webpackJsonp([97], {
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
-                    var e = n.getAssetFromType();
+                    var e = n.getAssetFromType(),
+                        t = n.getAssetSizeFromType();
                     return i.createElement(l._8, {
-                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
+                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
+                        display: l.R.Flex,
+                        justifyContent: l._7.Center,
+                        alignItems: l.c.Center
                     }, i.createElement(l._24, {
                         asset: e,
-                        width: 30,
-                        height: 30
+                        width: t,
+                        height: t
                     }))
                 }, n.isLink = function() {
                     return n.props.type !== a.Copy
+                }, n.getAssetSizeFromType = function() {
+                    switch (n.props.type) {
+                        case a.Download:
+                            return 20;
+                        default:
+                            return 30
+                    }
                 }, n.getTooltipFromType = function() {
                     switch (n.props.type) {
                         case a.Twitter:
@@ -3266,6 +3284,8 @@ webpackJsonp([97], {
                             return "Facebook";
                         case a.VKontakte:
                             return "VKontakte";
+                        case a.Download:
+                            return Object(o.d)("Download", "SocialButton");
                         case a.Copy:
                             return n.state.isCopied ? Object(o.d)("Copied", "SocialButton") : Object(o.d)("Copy to clipboard", "SocialButton");
                         default:
@@ -3281,6 +3301,8 @@ webpackJsonp([97], {
                             return l._25.VKontakte;
                         case a.Reddit:
                             return l._25.Reddit;
+                        case a.Download:
+                            return l._25.Download;
                         case a.Copy:
                         default:
                             return l._25.Copy
@@ -3295,6 +3317,8 @@ webpackJsonp([97], {
                             return e + "--facebook";
                         case a.VKontakte:
                             return e + "--vkontakte";
+                        case a.Download:
+                            return e + "--download";
                         case a.Copy:
                             return e + "--copy";
                         default:
@@ -3327,7 +3351,7 @@ webpackJsonp([97], {
                     className: "social-button"
                 }, i.createElement(l._52, {
                     label: this.getTooltipFromType(),
-                    direction: l._54.Top
+                    direction: l._54.Bottom
                 }, this.renderLink()))
             }, t
         }(i.Component)
@@ -8048,6 +8072,7 @@ webpackJsonp([97], {
                         });
                     return o.createElement(m._8, {
                         position: m._15.Relative,
+                        "data-a-target": "time-pick-field",
                         className: "time-picker"
                     }, o.createElement(l.a, {
                         onClickOut: this.closeDropdown
@@ -11946,6 +11971,7 @@ webpackJsonp([97], {
                         "data-test-selector": "cancel-button"
                     }, Object(l.d)("Cancel", "CancelPremiereModal"))), Bt.createElement(ge.v, {
                         onClick: this.onConfirm,
+                        "data-a-target": "confirm",
                         "data-test-selector": "confirm-button"
                     }, Object(l.d)("Yes, cancel Premiere", "CancelPremiereModal"))), Bt.createElement(Xn.a, {
                         closeOnBackdropClick: !0
@@ -12025,6 +12051,7 @@ webpackJsonp([97], {
                             icon: ge._25.GlyphArrDown,
                             type: ge.B.Hollow,
                             onClick: t.onScheduleDropdownClick,
+                            "data-a-target": "open-premiere-dropdown",
                             "data-test-selector": "dropdown-actions"
                         }), Bt.createElement(ge.q, {
                             direction: ge.r.BottomRight,
@@ -12032,6 +12059,7 @@ webpackJsonp([97], {
                             show: t.state.actionDropdownOpen,
                             offsetY: "0",
                             offsetX: "1rem",
+                            "data-a-target": "premiere-dropdown-option",
                             "data-test-selector": "dropdown-balloon"
                         }, e.callToActionButton.dropdownActions.map(t.renderDropdownAction))))
                     }, t.renderDropdownAction = function(e) {
@@ -12077,7 +12105,7 @@ webpackJsonp([97], {
                             onClick: e,
                             linkTo: t,
                             "data-test-selector": "primary-action",
-                            "data-a-target": "video-card-cta"
+                            "data-a-target": "schedule-premiere"
                         }, this.props.displayProps.callToActionButton.message), this.renderDropdownActions(this.props.displayProps))
                     }
                 }, t.prototype.getLinkOrAction = function(e) {
@@ -15895,7 +15923,7 @@ webpackJsonp([97], {
             l = (n.n(d), n("164Z"));
         n.n(l);
         ! function(e) {
-            e.Copy = "link", e.Embed = "option_embed", e.Facebook = "fb", e.Link = "option_link", e.Reddit = "reddit", e.Twitter = "twitter", e.Unknown = "", e.VKontakte = "vk"
+            e.Copy = "link", e.Embed = "option_embed", e.Facebook = "fb", e.Link = "option_link", e.Reddit = "reddit", e.Twitter = "twitter", e.Unknown = "", e.VKontakte = "vk", e.Download = "download"
         }(a || (a = {}))
     },
     cyXw: function(e, t, n) {
@@ -16058,6 +16086,7 @@ webpackJsonp([97], {
                         onDragEnter: this.onDragEnter,
                         onDragLeave: this.onDragLeave,
                         onDrop: this.onDrop,
+                        "data-a-target": "event-image-placeholder",
                         "data-test-selector": m.DragDropWrapper
                     }, !this.state.isResetting && o.createElement(d.a, {
                         allowedFileTypes: [p.a.JPEG],
@@ -18954,6 +18983,7 @@ webpackJsonp([97], {
                     return i.createElement("div", {
                         className: "game-selector__search-container",
                         "data-click-out-id": "game-selector-search-balloon",
+                        "data-a-target": "game-field",
                         onKeyDown: this.onKeyDown
                     }, i.createElement(u.a, {
                         onClickOut: this.onClickOut
@@ -22146,6 +22176,8 @@ webpackJsonp([97], {
                         return c.a.Copy;
                     case v.b.CopyInput:
                         return c.a.Link;
+                    case v.b.Download:
+                        return c.a.Download;
                     default:
                         return e
                 }
@@ -22336,4 +22368,4 @@ webpackJsonp([97], {
             r = "public"
     }
 });
-//# sourceMappingURL=pages.video-manager-c28089b2887fea2a9dcd104f699737eb.js.map
+//# sourceMappingURL=pages.video-manager-86dcbe530987a55219aa639424e0b337.js.map

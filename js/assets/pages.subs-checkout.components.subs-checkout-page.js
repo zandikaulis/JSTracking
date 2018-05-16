@@ -5724,7 +5724,7 @@ webpackJsonp([36], {
                 return r
             }),
             function(e) {
-                e.Playing = "PLAYING", e.Streaming = "BROADCASTING", e.Watching = "WATCHING"
+                e.Playing = "PLAYING", e.Streaming = "STREAMING", e.Watching = "WATCHING"
             }(i || (i = {})),
             function(e) {
                 e.Playing = "playing", e.Streaming = "broadcasting", e.Watching = "watching"
@@ -14435,6 +14435,15 @@ webpackJsonp([36], {
                         }
                     }, Object(d.d)("About", "TopNav"))), u.createElement(H._6, {
                         targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/legal/ad-choices",
+                        "data-a-target": "ad-choices-link"
+                    }, u.createElement(H._8, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(d.d)("Ad Choices", "TopNav"))), u.createElement(H._6, {
+                        targetBlank: !0,
                         linkTo: "http://twitchadvertising.tv/",
                         "data-a-target": "advertisers-link"
                     }, u.createElement(H._8, {
@@ -14551,6 +14560,15 @@ webpackJsonp([36], {
                             x: 1
                         }
                     }, Object(d.d)("Press", "TopNav"))), u.createElement(H._6, {
+                        targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/legal/privacy-policy",
+                        "data-a-target": "privacy-policy-link"
+                    }, u.createElement(H._8, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(d.d)("Privacy Policy", "TopNav"))), u.createElement(H._6, {
                         targetBlank: !0,
                         linkTo: "https://twitch.tv/p/security",
                         "data-a-target": "security-link"
@@ -22696,4 +22714,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-80aa17162b0bfe1d3a080d9ca06223ce.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-e7992fb63ad5277b849872494857a1a7.js.map

@@ -10503,14 +10503,21 @@ webpackJsonp([43], {
             c = n("bdk8");
         n.n(c);
         ! function(e) {
-            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
+            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
         }(i || (i = {}));
         var u = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.renderLink = function() {
                     var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                    return n.isLink() ? r.createElement("a", a.__assign({
+                    return n.props.type === i.Download ? r.createElement("a", a.__assign({
+                        href: n.props.url,
+                        target: "_blank",
+                        className: e,
+                        onClick: n.onShareClickHandler
+                    }, Object(d._63)(n.props), {
+                        download: n.props.text
+                    }), n.renderIcon()) : n.isLink() ? r.createElement("a", a.__assign({
                         href: n.getLinkTarget(),
                         target: "_blank",
                         className: e,
@@ -10533,16 +10540,27 @@ webpackJsonp([43], {
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
-                    var e = n.getAssetFromType();
+                    var e = n.getAssetFromType(),
+                        t = n.getAssetSizeFromType();
                     return r.createElement(d._8, {
-                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
+                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
+                        display: d.R.Flex,
+                        justifyContent: d._7.Center,
+                        alignItems: d.c.Center
                     }, r.createElement(d._24, {
                         asset: e,
-                        width: 30,
-                        height: 30
+                        width: t,
+                        height: t
                     }))
                 }, n.isLink = function() {
                     return n.props.type !== i.Copy
+                }, n.getAssetSizeFromType = function() {
+                    switch (n.props.type) {
+                        case i.Download:
+                            return 20;
+                        default:
+                            return 30
+                    }
                 }, n.getTooltipFromType = function() {
                     switch (n.props.type) {
                         case i.Twitter:
@@ -10553,6 +10571,8 @@ webpackJsonp([43], {
                             return "Facebook";
                         case i.VKontakte:
                             return "VKontakte";
+                        case i.Download:
+                            return Object(o.d)("Download", "SocialButton");
                         case i.Copy:
                             return n.state.isCopied ? Object(o.d)("Copied", "SocialButton") : Object(o.d)("Copy to clipboard", "SocialButton");
                         default:
@@ -10568,6 +10588,8 @@ webpackJsonp([43], {
                             return d._25.VKontakte;
                         case i.Reddit:
                             return d._25.Reddit;
+                        case i.Download:
+                            return d._25.Download;
                         case i.Copy:
                         default:
                             return d._25.Copy
@@ -10582,6 +10604,8 @@ webpackJsonp([43], {
                             return e + "--facebook";
                         case i.VKontakte:
                             return e + "--vkontakte";
+                        case i.Download:
+                            return e + "--download";
                         case i.Copy:
                             return e + "--copy";
                         default:
@@ -10614,7 +10638,7 @@ webpackJsonp([43], {
                     className: "social-button"
                 }, r.createElement(d._52, {
                     label: this.getTooltipFromType(),
-                    direction: d._54.Top
+                    direction: d._54.Bottom
                 }, this.renderLink()))
             }, t
         }(r.Component)
@@ -35683,4 +35707,4 @@ webpackJsonp([43], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-events-688c19bfef62d154313bc61d9e35cd35.js.map
+//# sourceMappingURL=pages.channel-events-9846fdee1f898ba05a8b19806180cac4.js.map

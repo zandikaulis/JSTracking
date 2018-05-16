@@ -18692,7 +18692,7 @@ webpackJsonp([35], {
                 return a
             }),
             function(e) {
-                e.Playing = "PLAYING", e.Streaming = "BROADCASTING", e.Watching = "WATCHING"
+                e.Playing = "PLAYING", e.Streaming = "STREAMING", e.Watching = "WATCHING"
             }(i || (i = {})),
             function(e) {
                 e.Playing = "playing", e.Streaming = "broadcasting", e.Watching = "watching"
@@ -46640,4 +46640,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-ac4a85282f91c0948c2286d618a0ad89.js.map
+//# sourceMappingURL=pages.embed-chat-74068251cf272fe6eb521fbace30844d.js.map

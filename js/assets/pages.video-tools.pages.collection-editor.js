@@ -605,14 +605,21 @@ webpackJsonp([96], {
             d = n("bdk8");
         n.n(d);
         ! function(e) {
-            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
+            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
         }(i || (i = {}));
         var u = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.renderLink = function() {
                     var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                    return n.isLink() ? r.createElement("a", o.__assign({
+                    return n.props.type === i.Download ? r.createElement("a", o.__assign({
+                        href: n.props.url,
+                        target: "_blank",
+                        className: e,
+                        onClick: n.onShareClickHandler
+                    }, Object(s._63)(n.props), {
+                        download: n.props.text
+                    }), n.renderIcon()) : n.isLink() ? r.createElement("a", o.__assign({
                         href: n.getLinkTarget(),
                         target: "_blank",
                         className: e,
@@ -635,16 +642,27 @@ webpackJsonp([96], {
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
-                    var e = n.getAssetFromType();
+                    var e = n.getAssetFromType(),
+                        t = n.getAssetSizeFromType();
                     return r.createElement(s._8, {
-                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
+                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
+                        display: s.R.Flex,
+                        justifyContent: s._7.Center,
+                        alignItems: s.c.Center
                     }, r.createElement(s._24, {
                         asset: e,
-                        width: 30,
-                        height: 30
+                        width: t,
+                        height: t
                     }))
                 }, n.isLink = function() {
                     return n.props.type !== i.Copy
+                }, n.getAssetSizeFromType = function() {
+                    switch (n.props.type) {
+                        case i.Download:
+                            return 20;
+                        default:
+                            return 30
+                    }
                 }, n.getTooltipFromType = function() {
                     switch (n.props.type) {
                         case i.Twitter:
@@ -655,6 +673,8 @@ webpackJsonp([96], {
                             return "Facebook";
                         case i.VKontakte:
                             return "VKontakte";
+                        case i.Download:
+                            return Object(a.d)("Download", "SocialButton");
                         case i.Copy:
                             return n.state.isCopied ? Object(a.d)("Copied", "SocialButton") : Object(a.d)("Copy to clipboard", "SocialButton");
                         default:
@@ -670,6 +690,8 @@ webpackJsonp([96], {
                             return s._25.VKontakte;
                         case i.Reddit:
                             return s._25.Reddit;
+                        case i.Download:
+                            return s._25.Download;
                         case i.Copy:
                         default:
                             return s._25.Copy
@@ -684,6 +706,8 @@ webpackJsonp([96], {
                             return e + "--facebook";
                         case i.VKontakte:
                             return e + "--vkontakte";
+                        case i.Download:
+                            return e + "--download";
                         case i.Copy:
                             return e + "--copy";
                         default:
@@ -716,7 +740,7 @@ webpackJsonp([96], {
                     className: "social-button"
                 }, r.createElement(s._52, {
                     label: this.getTooltipFromType(),
-                    direction: s._54.Top
+                    direction: s._54.Bottom
                 }, this.renderLink()))
             }, t
         }(r.Component)
@@ -2318,7 +2342,7 @@ webpackJsonp([96], {
             e.AddVideoButton = "AddVideoButton", e.RemoveVideoButton = "AddVideoButton", e.DoneButton = "DoneButton"
         }(_ || (_ = {}));
         var N = 200,
-            j = function(e) {
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2405,7 +2429,7 @@ webpackJsonp([96], {
                                 after: n,
                                 collectionID: t.props.data.collection.id
                             },
-                            updateQuery: D
+                            updateQuery: j
                         }).then(function() {})
                     }, t.onCompleteClickHandler = function() {
                         t.props.onComplete()
@@ -2565,7 +2589,7 @@ webpackJsonp([96], {
                     return !this.props.data.collection || this.props.data.collection.items.totalCount >= 100
                 }, t
             }(r.Component),
-            D = function(e, t) {
+            j = function(e, t) {
                 if (!t.fetchMoreResult) return e;
                 var n = t.fetchMoreResult;
                 return n.user && n.user.searchVideos ? {
@@ -2590,8 +2614,8 @@ webpackJsonp([96], {
                 name: "addCollectionItem"
             }), Object(p.graphql)(b, {
                 name: "removeCollectionItem"
-            }))(j);
-        var F, R = Object(s.b)(function(e) {
+            }))(D);
+        var F, A = Object(s.b)(function(e) {
                 return {
                     currentUser: Object(u.c)(e)
                 }
@@ -2602,7 +2626,7 @@ webpackJsonp([96], {
                     }
                 }
             })(V),
-            A = n("CIox"),
+            R = n("CIox"),
             P = n("i61F"),
             M = n("j7/Y"),
             L = n("w9tK"),
@@ -2794,7 +2818,7 @@ webpackJsonp([96], {
             }(r.Component),
             Y = Object(p.compose)(Object(p.graphql)(W, {
                 name: "updateCollection"
-            }))(Object(A.f)($));
+            }))(Object(R.f)($));
         var J, X = Object(s.b)(null, function(e) {
                 return {
                     onDeleteOptionClick: function(t, n) {
@@ -2804,7 +2828,7 @@ webpackJsonp([96], {
                         }))
                     },
                     onAddVideosClick: function(t, n) {
-                        e(Object(d.d)(R, {
+                        e(Object(d.d)(A, {
                             collection: t,
                             onComplete: n
                         }))
@@ -3173,7 +3197,7 @@ webpackJsonp([96], {
                     }), n = this.props.data.collection.items.pageInfo.hasNextPage || !1) : this.props.data.collection && this.props.data.collection.items.totalCount <= 0 ? (e = r.createElement(X, {
                         collection: this.props.data.collection,
                         onVideosChange: this.props.data.refetch
-                    }), t = this.noCollectionItemsCTA()) : (e = this.collectionUnavailableError(), t = this.collectionItemsUnavaibleError()), this.props.data.collection && this.props.data.collection.owner && this.props.data.collection.owner.login !== this.props.match.params.creatorLogin ? r.createElement(A.b, {
+                    }), t = this.noCollectionItemsCTA()) : (e = this.collectionUnavailableError(), t = this.collectionItemsUnavaibleError()), this.props.data.collection && this.props.data.collection.owner && this.props.data.collection.owner.login !== this.props.match.params.creatorLogin ? r.createElement(R.b, {
                         to: "/" + this.props.match.params.creatorLogin + "/manager/collections"
                     }) : r.createElement(f.b, null, r.createElement(E._8, {
                         padding: 3,
@@ -3317,7 +3341,7 @@ webpackJsonp([96], {
         var ye = Object(s.b)(null, function(e) {
                 return {
                     onAddVideosClick: function(t, n) {
-                        e(Object(d.d)(R, {
+                        e(Object(d.d)(A, {
                             collection: t,
                             onComplete: n
                         }))
@@ -5219,7 +5243,7 @@ webpackJsonp([96], {
             s = (n.n(c), n("164Z"));
         n.n(s);
         ! function(e) {
-            e.Copy = "link", e.Embed = "option_embed", e.Facebook = "fb", e.Link = "option_link", e.Reddit = "reddit", e.Twitter = "twitter", e.Unknown = "", e.VKontakte = "vk"
+            e.Copy = "link", e.Embed = "option_embed", e.Facebook = "fb", e.Link = "option_link", e.Reddit = "reddit", e.Twitter = "twitter", e.Unknown = "", e.VKontakte = "vk", e.Download = "download"
         }(i || (i = {}))
     },
     cXqt: function(e, t, n) {
@@ -7971,6 +7995,8 @@ webpackJsonp([96], {
                         return u.a.Copy;
                     case k.b.CopyInput:
                         return u.a.Link;
+                    case k.b.Download:
+                        return u.a.Download;
                     default:
                         return e
                 }
@@ -8154,4 +8180,4 @@ webpackJsonp([96], {
         }
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-fcda60172f53a3430b2c15f47ef1c120.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-4539eb6000ba02054231695554bbb874.js.map

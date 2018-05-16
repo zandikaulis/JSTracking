@@ -5061,14 +5061,21 @@ webpackJsonp([49], {
             u = n("bdk8");
         n.n(u);
         ! function(e) {
-            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
+            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
         }(i || (i = {}));
         var d = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.renderLink = function() {
                     var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                    return n.isLink() ? a.createElement("a", r.__assign({
+                    return n.props.type === i.Download ? a.createElement("a", r.__assign({
+                        href: n.props.url,
+                        target: "_blank",
+                        className: e,
+                        onClick: n.onShareClickHandler
+                    }, Object(c._63)(n.props), {
+                        download: n.props.text
+                    }), n.renderIcon()) : n.isLink() ? a.createElement("a", r.__assign({
                         href: n.getLinkTarget(),
                         target: "_blank",
                         className: e,
@@ -5091,16 +5098,27 @@ webpackJsonp([49], {
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
-                    var e = n.getAssetFromType();
+                    var e = n.getAssetFromType(),
+                        t = n.getAssetSizeFromType();
                     return a.createElement(c._8, {
-                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
+                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
+                        display: c.R.Flex,
+                        justifyContent: c._7.Center,
+                        alignItems: c.c.Center
                     }, a.createElement(c._24, {
                         asset: e,
-                        width: 30,
-                        height: 30
+                        width: t,
+                        height: t
                     }))
                 }, n.isLink = function() {
                     return n.props.type !== i.Copy
+                }, n.getAssetSizeFromType = function() {
+                    switch (n.props.type) {
+                        case i.Download:
+                            return 20;
+                        default:
+                            return 30
+                    }
                 }, n.getTooltipFromType = function() {
                     switch (n.props.type) {
                         case i.Twitter:
@@ -5111,6 +5129,8 @@ webpackJsonp([49], {
                             return "Facebook";
                         case i.VKontakte:
                             return "VKontakte";
+                        case i.Download:
+                            return Object(o.d)("Download", "SocialButton");
                         case i.Copy:
                             return n.state.isCopied ? Object(o.d)("Copied", "SocialButton") : Object(o.d)("Copy to clipboard", "SocialButton");
                         default:
@@ -5126,6 +5146,8 @@ webpackJsonp([49], {
                             return c._25.VKontakte;
                         case i.Reddit:
                             return c._25.Reddit;
+                        case i.Download:
+                            return c._25.Download;
                         case i.Copy:
                         default:
                             return c._25.Copy
@@ -5140,6 +5162,8 @@ webpackJsonp([49], {
                             return e + "--facebook";
                         case i.VKontakte:
                             return e + "--vkontakte";
+                        case i.Download:
+                            return e + "--download";
                         case i.Copy:
                             return e + "--copy";
                         default:
@@ -5172,7 +5196,7 @@ webpackJsonp([49], {
                     className: "social-button"
                 }, a.createElement(c._52, {
                     label: this.getTooltipFromType(),
-                    direction: c._54.Top
+                    direction: c._54.Bottom
                 }, this.renderLink()))
             }, t
         }(a.Component)
@@ -8485,6 +8509,62 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
+    McFO: function(e, t, n) {
+        "use strict";
+        var i = n("RH2O"),
+            r = n("Aj/L"),
+            a = n("TToO"),
+            o = n("GiK3"),
+            s = n("Snvs"),
+            l = n("bhVC"),
+            c = n("7vx8"),
+            u = n("WNmM"),
+            d = n("U2Sd"),
+            p = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.data.clip,
+                        n = t && t.curator && t.curator.login === this.props.userLogin,
+                        i = "";
+                    if (t && t.videoQualities) {
+                        var r = t.videoQualities[0];
+                        i = r.sourceURL
+                    }
+                    var a = this.props,
+                        c = a.broadcasterId,
+                        d = a.broadcasterLogin,
+                        p = a.forceShow;
+                    return o.createElement(s.a, {
+                        ownerLogin: this.props.broadcasterLogin,
+                        permittedRoles: {
+                            editor: !0,
+                            staff: !0
+                        }
+                    }, function(r) {
+                        var a = r.permitted;
+                        return i && (a || n || p) ? o.createElement(l.a, {
+                            type: l.b.Download,
+                            text: e.props.slug,
+                            url: i,
+                            onShareClick: t ? Object(u.c)(t.id, t.game && t.game.name, c, d, e.props.pageType) : void 0
+                        }) : null
+                    })
+                }, t
+            }(o.Component),
+            m = Object(c.a)(d)(p);
+        var h = Object(i.b)(function(e) {
+            var t = Object(r.c)(e);
+            return {
+                userLogin: t ? t.login : ""
+            }
+        })(m);
+        n.d(t, "a", function() {
+            return h
+        })
+    },
     NY9D: function(e, t, n) {
         "use strict";
         t.c = function(e) {
@@ -9328,6 +9408,81 @@ webpackJsonp([49], {
             return r.test(e)
         }
     },
+    Snvs: function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = n("3zLD"),
+            o = n("6sO2"),
+            s = n("7vx8"),
+            l = n("CSlQ"),
+            c = n("acVP"),
+            u = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        loading: !0,
+                        permitted: !1,
+                        roles: {
+                            staff: !1,
+                            editor: !1,
+                            owner: !1
+                        },
+                        error: null
+                    }, t.logger = o.j.withCategory("role-restricted"), t
+                }
+                return i.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
+                    e.data.loading && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    var t = p(e),
+                        n = {
+                            loading: e.data.loading,
+                            permitted: d(t, e.permittedRoles),
+                            roles: t,
+                            error: null
+                        };
+                    e.data.error ? (n.error = new Error(e.data.error.toString()), this.logger.warn("Unable to retrieve data from GraphQL.", {
+                        err: n.error
+                    })) : e.data.loading || e.data.user && e.data.currentUser || (n.error = new Error("Failed to fetch user information"), this.logger.warn("Failed to fetch user information.", {
+                        err: n.error
+                    })), this.setState(n)
+                }, t.prototype.render = function() {
+                    return this.props.children(this.state)
+                }, t
+            }(r.Component);
+
+        function d(e, t) {
+            return !!e.owner || (!(!e.staff || !t.staff) || !(!e.editor || !t.editor))
+        }
+
+        function p(e) {
+            var t = e.data,
+                n = {
+                    staff: !1,
+                    editor: !1,
+                    owner: !1
+                };
+            return !t.error && !t.loading && t.user && t.currentUser && (n.staff = !(!t.currentUser.roles || !t.currentUser.roles.isStaff), n.editor = !(!t.user.self || !t.user.self.isEditor), n.owner = t.user.id === t.currentUser.id), n
+        }
+        var m = Object(a.compose)(Object(s.a)(c, {
+            options: function(e) {
+                return {
+                    variables: {
+                        contentOwnerLogin: e.ownerLogin
+                    }
+                }
+            }
+        }), Object(l.d)("RoleRestricted"))(u);
+        n.d(t, !1, function() {
+            return u
+        }), n.d(t, !1, function() {
+            return d
+        }), n.d(t, !1, function() {
+            return p
+        }), n.d(t, "a", function() {
+            return m
+        })
+    },
     TTpp: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
@@ -9551,6 +9706,186 @@ webpackJsonp([49], {
                     return !t.hasOwnProperty(e.token) && (t[e.token] = !0)
                 })
             }
+    },
+    U2Sd: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "ClipsDownloadButton"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "slug"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ID"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "clip"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "slug"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "slug"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "curator"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "login"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "broadcaster"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "game"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "name"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "videoQualities"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "sourceURL"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 152
+            }
+        };
+        n.loc.source = {
+            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\ncurator {\nid\nlogin\n}\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     U5tC: function(e, t) {
         var n = {
@@ -9991,7 +10326,7 @@ webpackJsonp([49], {
         var i, r, a = n("6sO2"),
             o = n("8Wuk"),
             s = n("vH/s"),
-            l = ((i = {})[o.b.Twitter] = "twitter", i[o.b.Reddit] = "reddit", i[o.b.VKontakte] = "vkontakte", i[o.b.Facebook] = "facebook", i[o.b.Copy] = "link", i[o.b.CopyInput] = "option_link", i),
+            l = ((i = {})[o.b.Twitter] = "twitter", i[o.b.Reddit] = "reddit", i[o.b.VKontakte] = "vkontakte", i[o.b.Facebook] = "facebook", i[o.b.Copy] = "link", i[o.b.CopyInput] = "option_link", i[o.b.Download] = "download", i),
             c = {
                 MyClips: "MyClips",
                 ClipsOfMyChannel: "ClipsOfMyChannel"
@@ -10708,12 +11043,13 @@ webpackJsonp([49], {
             m = n("CSlQ"),
             h = n("sEID"),
             f = n("WNmM"),
-            g = n("46tX"),
-            b = n("rCmJ"),
-            v = n("2hJ3"),
-            y = n("f6Cj"),
-            k = n("Odds"),
-            S = (n("Jjeq"), function(e) {
+            g = n("McFO"),
+            b = n("46tX"),
+            v = n("rCmJ"),
+            y = n("2hJ3"),
+            k = n("f6Cj"),
+            S = n("Odds"),
+            _ = (n("Jjeq"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getUrl = function() {
@@ -10721,12 +11057,12 @@ webpackJsonp([49], {
                     }, t.onShareClick = function() {
                         t.props.onShareClick && t.props.onShareClick(t.props.type)
                     }, t.copyPageUrl = function() {
-                        t.onShareClick(), Object(v.a)(t.getUrl())
+                        t.onShareClick(), Object(y.a)(t.getUrl())
                     }, t.renderIcon = function() {
                         var e = t.getAssetFromType();
-                        return r.createElement(k._8, {
+                        return r.createElement(S._8, {
                             className: "clips-mobile-share-sheet__share-icon clips-social-button__icon " + t.addSocialClassModifier("clips-social-button__icon")
-                        }, r.createElement(k._24, {
+                        }, r.createElement(S._24, {
                             asset: e,
                             fill: !0
                         }))
@@ -10735,16 +11071,16 @@ webpackJsonp([49], {
                     }, t.getAssetFromType = function() {
                         switch (t.props.type) {
                             case l.b.Twitter:
-                                return k._25.Twitter;
+                                return S._25.Twitter;
                             case l.b.Facebook:
-                                return k._25.Facebook;
+                                return S._25.Facebook;
                             case l.b.VKontakte:
-                                return k._25.VKontakte;
+                                return S._25.VKontakte;
                             case l.b.Reddit:
-                                return k._25.Reddit;
+                                return S._25.Reddit;
                             case l.b.Copy:
                             default:
-                                return k._25.Copy
+                                return S._25.Copy
                         }
                     }, t.getLabelFromType = function() {
                         switch (t.props.type) {
@@ -10784,34 +11120,34 @@ webpackJsonp([49], {
                             a = n || "";
                         switch (i) {
                             case l.b.Reddit:
-                                return Object(y.b)(r, a);
+                                return Object(k.b)(r, a);
                             case l.b.VKontakte:
-                                return Object(y.d)(r);
+                                return Object(k.d)(r);
                             case l.b.Facebook:
-                                return Object(y.a)(r);
+                                return Object(k.a)(r);
                             case l.b.Twitter:
-                                return Object(y.c)(r, a);
+                                return Object(k.c)(r, a);
                             default:
                                 return ""
                         }
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = r.createElement(k._8, {
+                    var e = r.createElement(S._8, {
                         className: "clips-mobile-share-sheet__row",
-                        display: k.R.Flex,
-                        alignItems: k.c.Center,
+                        display: S.R.Flex,
+                        alignItems: S.c.Center,
                         key: this.props.type,
                         margin: {
                             bottom: 1,
                             x: 2
                         }
-                    }, this.renderIcon(), r.createElement(k._35, {
+                    }, this.renderIcon(), r.createElement(S._35, {
                         margin: {
                             left: 1
                         }
-                    }, r.createElement(k.Q, {
-                        type: k._49.Span
+                    }, r.createElement(S.Q, {
+                        type: S._49.Span
                     }, this.getLabelFromType())));
                     return this.renderLink(e)
                 }, t.prototype.renderLink = function(e) {
@@ -10826,7 +11162,7 @@ webpackJsonp([49], {
                     }, e)
                 }, t
             }(r.Component)),
-            _ = function(e) {
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10862,53 +11198,53 @@ webpackJsonp([49], {
                     var e = this,
                         t = Object(a.d)("Share Clip", "ClipsSocialShare"),
                         n = Object(a.d)("Copied!", "ClipsSocialShare");
-                    return r.createElement(k._8, {
-                        display: k.R.Flex,
-                        justifyContent: k._7.End,
-                        alignItems: k.c.Center,
+                    return r.createElement(S._8, {
+                        display: S.R.Flex,
+                        justifyContent: S._7.End,
+                        alignItems: S.c.Center,
                         margin: {
                             top: 1,
                             bottom: 1
                         }
-                    }, r.createElement(k.v, {
-                        type: k.B.Hollow,
+                    }, r.createElement(S.v, {
+                        type: S.B.Hollow,
                         onClick: this.onToggleShareButton,
                         "data-test-selector": "social-share-mobile-button"
-                    }, t), this.state.isModalOpen && r.createElement(k._35, {
-                        position: k._15.Fixed,
-                        background: k.n.Overlay,
-                        zIndex: k._62.Above,
+                    }, t), this.state.isModalOpen && r.createElement(S._35, {
+                        position: S._15.Fixed,
+                        background: S.n.Overlay,
+                        zIndex: S._62.Above,
                         attachLeft: !0,
                         attachTop: !0,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, r.createElement(b.a, {
+                    }, r.createElement(v.a, {
                         onClickOut: this.onClickOut
-                    }, r.createElement(k._8, {
-                        position: k._15.Absolute,
+                    }, r.createElement(S._8, {
+                        position: S._15.Absolute,
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         className: "clips-mobile-share-sheet",
-                        display: k.R.Flex,
-                        flexDirection: k.T.Column,
-                        zIndex: k._62.Above,
+                        display: S.R.Flex,
+                        flexDirection: S.T.Column,
+                        zIndex: S._62.Above,
                         "data-test-selector": "social-share-mobile-menu-root"
-                    }, r.createElement(k.e, {
-                        type: k.j.SlideInBottom,
+                    }, r.createElement(S.e, {
+                        type: S.j.SlideInBottom,
                         enabled: this.state.isModalOpen
-                    }, r.createElement(k._35, {
-                        background: k.n.Base,
+                    }, r.createElement(S._35, {
+                        background: S.n.Base,
                         elevation: 3,
                         padding: {
                             bottom: 2
                         }
-                    }, r.createElement(k._35, {
+                    }, r.createElement(S._35, {
                         className: "clips-mobile-share-sheet__title",
-                        display: k.R.Flex,
-                        flexDirection: k.T.Row,
-                        justifyContent: k._7.Between,
-                        alignItems: k.c.Center,
+                        display: S.R.Flex,
+                        flexDirection: S.T.Row,
+                        justifyContent: S._7.Between,
+                        alignItems: S.c.Center,
                         margin: {
                             bottom: 2
                         },
@@ -10917,68 +11253,68 @@ webpackJsonp([49], {
                             left: 2
                         },
                         borderBottom: !0
-                    }, r.createElement(k.Q, {
+                    }, r.createElement(S.Q, {
                         bold: !0,
-                        color: k.K.Alt,
-                        type: k._49.Span,
-                        fontSize: k.V.Size6,
+                        color: S.K.Alt,
+                        type: S._49.Span,
+                        fontSize: S.V.Size6,
                         "data-test-selector": "social-share-mobile-menu-title"
-                    }, t), r.createElement(k.w, {
+                    }, t), r.createElement(S.w, {
                         "data-test-selector": "social-share-mobile-menu-close",
-                        icon: k._25.Close,
+                        icon: S._25.Close,
                         ariaLabel: "Close Share",
-                        size: k.x.Large,
+                        size: S.x.Large,
                         onClick: this.onToggleShareButton
-                    })), r.createElement(k._8, null, h.b.map(function(t) {
-                        return r.createElement(S, {
+                    })), r.createElement(S._8, null, h.b.map(function(t) {
+                        return r.createElement(_, {
                             key: t.type,
                             type: t.type,
                             text: e.props.clip.title,
                             url: Object(p.a)(e.props.clip.url, t.params),
                             onShareClick: e.onShareClick
                         })
-                    }))))))), this.state.isCopiedModalOpen && r.createElement(k._8, {
+                    }))))))), this.state.isCopiedModalOpen && r.createElement(S._8, {
                         fullWidth: !0,
                         attachLeft: !0,
                         attachBottom: !0,
                         className: "clips-mobile-share-sheet",
-                        position: k._15.Fixed,
-                        zIndex: k._62.Above
-                    }, r.createElement(k.e, {
-                        type: k.j.SlideInBottom,
-                        duration: k.g.Short,
+                        position: S._15.Fixed,
+                        zIndex: S._62.Above
+                    }, r.createElement(S.e, {
+                        type: S.j.SlideInBottom,
+                        duration: S.g.Short,
                         enabled: this.state.isCopiedModalOpen
-                    }, r.createElement(k._35, {
+                    }, r.createElement(S._35, {
                         padding: {
                             x: 1,
                             y: 1
                         },
-                        background: k.n.Base,
+                        background: S.n.Base,
                         elevation: 3,
                         borderTop: !0,
-                        display: k.R.Flex,
-                        alignItems: k.c.Center
-                    }, r.createElement(k._8, {
+                        display: S.R.Flex,
+                        alignItems: S.c.Center
+                    }, r.createElement(S._8, {
                         margin: {
                             right: .5
                         }
-                    }, r.createElement(k.e, {
-                        type: k.j.BounceIn,
-                        duration: k.g.Medium,
-                        delay: k.f.Short,
+                    }, r.createElement(S.e, {
+                        type: S.j.BounceIn,
+                        duration: S.g.Medium,
+                        delay: S.f.Short,
                         enabled: this.state.isCopiedModalOpen
-                    }, r.createElement(k._24, {
-                        type: k._26.Success,
-                        asset: k._25.Check
-                    }))), r.createElement(k.Q, {
-                        type: k._49.Span,
-                        fontSize: k.V.Size4,
+                    }, r.createElement(S._24, {
+                        type: S._26.Success,
+                        asset: S._25.Check
+                    }))), r.createElement(S.Q, {
+                        type: S._49.Span,
+                        fontSize: S.V.Size4,
                         bold: !0
                     }, n)))))
                 }, t
             }(r.Component),
-            T = n("bnNq"),
-            C = (n("twHn"), function(e) {
+            C = n("bnNq"),
+            E = (n("twHn"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.trackLinkShare = function() {
@@ -10993,22 +11329,34 @@ webpackJsonp([49], {
                 }, t.prototype.render = function() {
                     var e = this,
                         t = this.props.data.clip;
-                    if (!t && !Object(g.c)(window.navigator.userAgent)) return r.createElement(k._8, null, this.renderPlaceholders());
-                    if (!t && Object(g.c)(window.navigator.userAgent)) return r.createElement(k._8, null, this.renderMobilePlaceholders());
-                    if (Object(g.c)(window.navigator.userAgent)) return r.createElement(_, {
+                    if (!t && !Object(b.c)(window.navigator.userAgent)) return r.createElement(S._8, null, this.renderPlaceholders());
+                    if (!t && Object(b.c)(window.navigator.userAgent)) return r.createElement(S._8, null, this.renderMobilePlaceholders());
+                    if (Object(b.c)(window.navigator.userAgent)) return r.createElement(T, {
                         clip: t
                     });
                     var n = Object(a.d)("More", "ClipsSocialShare");
-                    return r.createElement(k._8, {
-                        display: k.R.Flex,
-                        justifyContent: k._7.End,
-                        alignItems: k.c.Center,
+                    return r.createElement(S._8, {
+                        display: S.R.Flex,
+                        position: S._15.Relative,
+                        zIndex: S._62.Above,
+                        justifyContent: S._7.End,
+                        alignItems: S.c.Center,
                         margin: {
                             y: 1
                         }
-                    }, h.b.map(function(n) {
-                        return r.createElement(k._8, {
-                            display: k.R.InlineBlock,
+                    }, r.createElement(S._8, {
+                        display: S.R.InlineBlock,
+                        margin: {
+                            right: 1
+                        }
+                    }, r.createElement(g.a, {
+                        broadcasterLogin: t.broadcaster && t.broadcaster.login || "",
+                        broadcasterId: t.broadcaster && t.broadcaster.id || "",
+                        slug: this.props.slug,
+                        pageType: this.props.pageType
+                    })), h.b.map(function(n) {
+                        return r.createElement(S._8, {
+                            display: S.R.InlineBlock,
                             key: n.type,
                             margin: {
                                 right: 1
@@ -11020,33 +11368,33 @@ webpackJsonp([49], {
                             url: Object(p.a)(t.url, n.params),
                             onShareClick: Object(f.c)(t.id, t.game && t.game.name, t.broadcaster && t.broadcaster.id, t.broadcaster && t.broadcaster.login, e.props.pageType)
                         }))
-                    }), r.createElement(k._8, {
-                        display: k.R.InlineBlock,
-                        position: k._15.Relative
-                    }, r.createElement(c.a, null, r.createElement(k.v, {
-                        type: k.B.Hollow,
+                    }), r.createElement(S._8, {
+                        display: S.R.InlineBlock,
+                        position: S._15.Relative
+                    }, r.createElement(c.a, null, r.createElement(S.v, {
+                        type: S.B.Hollow,
                         ariaLabel: n,
                         "data-test-selector": "social-share-button"
-                    }, n), r.createElement(k.q, {
-                        direction: k.r.BottomRight,
+                    }, n), r.createElement(S.q, {
+                        direction: S.r.BottomRight,
                         noTail: !0
-                    }, r.createElement(k._8, {
+                    }, r.createElement(S._8, {
                         padding: 1
-                    }, r.createElement(k.W, {
+                    }, r.createElement(S.W, {
                         id: "social-share-link",
-                        orientation: k.X.Vertical,
+                        orientation: S.X.Vertical,
                         label: Object(a.d)("Link", "ClipsSocialShare"),
                         "data-test-selector": "social-share-link"
                     }, r.createElement(o.a, {
                         value: t.url,
                         onClick: this.trackLinkShare
-                    })), r.createElement(k._8, {
+                    })), r.createElement(S._8, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(k.W, {
+                    }, r.createElement(S.W, {
                         id: "social-share-link",
-                        orientation: k.X.Vertical,
+                        orientation: S.X.Vertical,
                         label: Object(a.d)("Embed Link", "ClipsSocialShare"),
                         "data-test-selector": "social-share-embed-link"
                     }, r.createElement(o.a, {
@@ -11056,68 +11404,68 @@ webpackJsonp([49], {
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.clip && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.renderPlaceholders = function() {
-                    return r.createElement(k.e, {
-                        type: k.j.FadeIn,
-                        duration: k.g.Medium,
+                    return r.createElement(S.e, {
+                        type: S.j.FadeIn,
+                        duration: S.g.Medium,
                         enabled: !0
-                    }, r.createElement(k._8, {
+                    }, r.createElement(S._8, {
                         margin: {
                             top: 1,
                             bottom: 1
                         },
-                        display: k.R.Flex,
-                        justifyContent: k._7.End
-                    }, r.createElement(k._8, {
+                        display: S.R.Flex,
+                        justifyContent: S._7.End
+                    }, r.createElement(S._8, {
                         margin: {
                             left: 1
                         }
-                    }, r.createElement(k._14, {
+                    }, r.createElement(S._14, {
                         width: 30,
                         height: 30
-                    })), r.createElement(k._8, {
+                    })), r.createElement(S._8, {
                         margin: {
                             left: 1
                         }
-                    }, r.createElement(k._14, {
+                    }, r.createElement(S._14, {
                         width: 30,
                         height: 30
-                    })), r.createElement(k._8, {
+                    })), r.createElement(S._8, {
                         margin: {
                             left: 1
                         }
-                    }, r.createElement(k._14, {
+                    }, r.createElement(S._14, {
                         width: 30,
                         height: 30
-                    })), r.createElement(k._8, {
+                    })), r.createElement(S._8, {
                         margin: {
                             left: 1
                         }
-                    }, r.createElement(k._14, {
+                    }, r.createElement(S._14, {
                         width: 30,
                         height: 30
-                    })), r.createElement(k._8, {
+                    })), r.createElement(S._8, {
                         margin: {
                             left: 1
                         }
-                    }, r.createElement(k._14, {
+                    }, r.createElement(S._14, {
                         width: 46,
                         height: 30
                     }))))
                 }, t.prototype.renderMobilePlaceholders = function() {
-                    return r.createElement(k._8, {
+                    return r.createElement(S._8, {
                         margin: {
                             y: 1
                         },
-                        display: k.R.Flex,
-                        justifyContent: k._7.End
-                    }, r.createElement(k._8, null, r.createElement(k._14, {
+                        display: S.R.Flex,
+                        justifyContent: S._7.End
+                    }, r.createElement(S._8, null, r.createElement(S._14, {
                         width: 72,
                         height: 30
                     })))
-                }, t = i.__decorate([Object(m.d)("ClipsSocialShare"), Object(u.a)(T)], t)
+                }, t = i.__decorate([Object(m.d)("ClipsSocialShare"), Object(u.a)(C)], t)
             }(r.Component));
         n.d(t, "a", function() {
-            return C
+            return E
         })
     },
     a0y1: function(e, t, n) {
@@ -11174,6 +11522,150 @@ webpackJsonp([49], {
         }), n.d(t, "TargetedModerationActions", function() {
             return a.e
         })
+    },
+    acVP: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "RoleRestricted"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "contentOwnerLogin"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "roles"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isStaff"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "contentOwnerLogin"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isEditor"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 147
+            }
+        };
+        n.loc.source = {
+            body: "query RoleRestricted($contentOwnerLogin: String!) {\ncurrentUser {\nid\nroles {\nisStaff\n}\n}\nuser(login: $contentOwnerLogin) {\nid\nself {\nisEditor\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     arZ9: function(e, t) {},
     bdk8: function(e, t) {},
@@ -14198,16 +14690,17 @@ webpackJsonp([49], {
     sEID: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
-            return l
-        }), n.d(t, "a", function() {
             return c
+        }), n.d(t, "a", function() {
+            return u
         });
         var i = n("GiK3"),
             r = (n.n(i), n("8Wuk")),
             a = n("yDzg"),
             o = n("WNmM"),
-            s = n("Odds"),
-            l = [{
+            s = n("McFO"),
+            l = n("Odds"),
+            c = [{
                 type: r.b.Twitter,
                 params: {
                     tt_medium: "twtr"
@@ -14225,13 +14718,23 @@ webpackJsonp([49], {
             }, {
                 type: r.b.Copy
             }],
-            c = function(e) {
-                return i.createElement(s._8, {
+            u = function(e) {
+                return i.createElement(l._8, {
                     className: "clips-social-share",
-                    display: s.R.Flex,
-                    flexWrap: s.U.NoWrap
-                }, l.map(function(t) {
-                    return i.createElement(s._8, {
+                    display: l.R.Flex,
+                    flexWrap: l.U.NoWrap
+                }, i.createElement(l._8, {
+                    display: l.R.InlineBlock,
+                    margin: {
+                        right: 1
+                    }
+                }, i.createElement(s.a, {
+                    broadcasterLogin: e.clip.broadcaster && e.clip.broadcaster.login || "",
+                    broadcasterId: e.clip.broadcaster && e.clip.broadcaster.id || "",
+                    slug: e.clip.slug,
+                    pageType: e.pageType
+                })), c.map(function(t) {
+                    return i.createElement(l._8, {
                         key: t.type,
                         margin: {
                             right: 1
@@ -15626,4 +16129,4 @@ webpackJsonp([49], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.create-c854e5046e370521ef049c6937b369b6.js.map
+//# sourceMappingURL=sites.clips.pages.create-fef327815d8ded7afff8017ff258d31c.js.map

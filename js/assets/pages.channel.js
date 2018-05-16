@@ -14520,14 +14520,21 @@ webpackJsonp([30], {
             c = n("bdk8");
         n.n(c);
         ! function(e) {
-            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
+            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
         }(i || (i = {}));
         var u = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.renderLink = function() {
                     var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                    return n.isLink() ? r.createElement("a", a.__assign({
+                    return n.props.type === i.Download ? r.createElement("a", a.__assign({
+                        href: n.props.url,
+                        target: "_blank",
+                        className: e,
+                        onClick: n.onShareClickHandler
+                    }, Object(d._63)(n.props), {
+                        download: n.props.text
+                    }), n.renderIcon()) : n.isLink() ? r.createElement("a", a.__assign({
                         href: n.getLinkTarget(),
                         target: "_blank",
                         className: e,
@@ -14550,16 +14557,27 @@ webpackJsonp([30], {
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
-                    var e = n.getAssetFromType();
+                    var e = n.getAssetFromType(),
+                        t = n.getAssetSizeFromType();
                     return r.createElement(d._8, {
-                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
+                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
+                        display: d.R.Flex,
+                        justifyContent: d._7.Center,
+                        alignItems: d.c.Center
                     }, r.createElement(d._24, {
                         asset: e,
-                        width: 30,
-                        height: 30
+                        width: t,
+                        height: t
                     }))
                 }, n.isLink = function() {
                     return n.props.type !== i.Copy
+                }, n.getAssetSizeFromType = function() {
+                    switch (n.props.type) {
+                        case i.Download:
+                            return 20;
+                        default:
+                            return 30
+                    }
                 }, n.getTooltipFromType = function() {
                     switch (n.props.type) {
                         case i.Twitter:
@@ -14570,6 +14588,8 @@ webpackJsonp([30], {
                             return "Facebook";
                         case i.VKontakte:
                             return "VKontakte";
+                        case i.Download:
+                            return Object(o.d)("Download", "SocialButton");
                         case i.Copy:
                             return n.state.isCopied ? Object(o.d)("Copied", "SocialButton") : Object(o.d)("Copy to clipboard", "SocialButton");
                         default:
@@ -14585,6 +14605,8 @@ webpackJsonp([30], {
                             return d._25.VKontakte;
                         case i.Reddit:
                             return d._25.Reddit;
+                        case i.Download:
+                            return d._25.Download;
                         case i.Copy:
                         default:
                             return d._25.Copy
@@ -14599,6 +14621,8 @@ webpackJsonp([30], {
                             return e + "--facebook";
                         case i.VKontakte:
                             return e + "--vkontakte";
+                        case i.Download:
+                            return e + "--download";
                         case i.Copy:
                             return e + "--copy";
                         default:
@@ -14631,7 +14655,7 @@ webpackJsonp([30], {
                     className: "social-button"
                 }, r.createElement(d._52, {
                     label: this.getTooltipFromType(),
-                    direction: d._54.Top
+                    direction: d._54.Bottom
                 }, this.renderLink()))
             }, t
         }(r.Component)
@@ -14961,6 +14985,86 @@ webpackJsonp([30], {
         e.exports = function() {
             this.__data__ = i ? i(null) : {}, this.size = 0
         }
+    },
+    "9Fb+": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("KSGD"),
+            r = n("GiK3"),
+            o = n("6sO2");
+
+        function s(e, t) {
+            return function(n) {
+                return function(s) {
+                    function l() {
+                        var e = null !== s && s.apply(this, arguments) || this;
+                        return e.state = {
+                            hadImpression: !1,
+                            didScroll: !1
+                        }, e.logger = o.j.withCategory("with-impression-listener"), e.setRef = function(t) {
+                            return e.element = t
+                        }, e.registerImpressionCallback = function(t) {
+                            e.reportImpression = t
+                        }, e
+                    }
+                    return i.__extends(l, s), l.prototype.componentDidMount = function() {
+                        this.scrollContext = this.context;
+                        var n = this.scrollContext.registerReceiver;
+                        n ? t && void 0 !== t.percentage && void 0 !== t.pixels ? this.logger.warn("<" + e + " /> should only be initialized with percentage or pixel thresholds, not both") : this.unregister = n(this) : this.logger.warn("<" + e + " /> initialized missing a <ScrollableArea /> provider")
+                    }, l.prototype.componentWillUnmount = function() {
+                        this.unregister && this.unregister()
+                    }, l.prototype.render = function() {
+                        var e = {
+                            impressionListener: {
+                                hadImpression: this.state.hadImpression,
+                                didScroll: this.state.didScroll,
+                                registerImpressionCallback: this.registerImpressionCallback
+                            }
+                        };
+                        return r.createElement("div", {
+                            ref: this.setRef
+                        }, r.createElement(n, i.__assign({}, this.props, e)))
+                    }, l.prototype.checkVisible = function(e) {
+                        return i.__awaiter(this, void 0, void 0, function() {
+                            var t, n;
+                            return i.__generator(this, function(i) {
+                                return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
+                                    hadImpression: t,
+                                    didScroll: n
+                                }), this.reportImpression && this.reportImpression(n)), [2]
+                            })
+                        })
+                    }, l.prototype.isVisible = function(e) {
+                        if (!this.element) return !1;
+                        var n = this.element.getBoundingClientRect();
+                        if (n.left < e.right && n.right > e.left && n.top < e.bottom && n.bottom > e.top) {
+                            if (!t || 0 === t.percentage || 0 === t.pixels) return !0;
+                            var i = t.percentage,
+                                a = t.pixels,
+                                r = n.bottom - n.top,
+                                o = e.bottom - e.top,
+                                s = Math.min(e.bottom - n.top, r, o);
+                            if (a) {
+                                if (r >= a) return s >= a;
+                                i = 100
+                            }
+                            return !i || 100 * (s / r) >= i
+                        }
+                        return !1
+                    }, l.prototype.isScrolled = function() {
+                        if (!this.scrollContext) return !1;
+                        var e = this.scrollContext.getScrollContent();
+                        return !(!e || 0 === e.scrollTop)
+                    }, l.contextTypes = {
+                        registerReceiver: a.func,
+                        getScrollContent: a.func
+                    }, l
+                }(r.Component)
+            }
+        }
+        n.d(t, "a", function() {
+            return s
+        })
     },
     "9GW9": function(e, t) {
         e.exports = function(e) {
@@ -49993,78 +50097,8 @@ webpackJsonp([30], {
                 panel_target: t.panelTarget || null
             })
         }
-
-        function Pe(e, t) {
-            return function(n) {
-                return function(i) {
-                    function a() {
-                        var e = null !== i && i.apply(this, arguments) || this;
-                        return e.state = {
-                            hadImpression: !1,
-                            didScroll: !1
-                        }, e.logger = c.j.withCategory("with-impression-listener"), e.setRef = function(t) {
-                            return e.element = t
-                        }, e.registerImpressionCallback = function(t) {
-                            e.reportImpression = t
-                        }, e
-                    }
-                    return r.__extends(a, i), a.prototype.componentDidMount = function() {
-                        this.scrollContext = this.context;
-                        var n = this.scrollContext.registerReceiver;
-                        n ? t && void 0 !== t.percentage && void 0 !== t.pixels ? this.logger.warn("<" + e + " /> should only be initialized with percentage or pixel thresholds, not both") : this.unregister = n(this) : this.logger.warn("<" + e + " /> initialized missing a <ScrollableArea /> provider")
-                    }, a.prototype.componentWillUnmount = function() {
-                        this.unregister && this.unregister()
-                    }, a.prototype.render = function() {
-                        var e = {
-                            impressionListener: {
-                                hadImpression: this.state.hadImpression,
-                                didScroll: this.state.didScroll,
-                                registerImpressionCallback: this.registerImpressionCallback
-                            }
-                        };
-                        return l.createElement("div", {
-                            ref: this.setRef
-                        }, l.createElement(n, r.__assign({}, this.props, e)))
-                    }, a.prototype.checkVisible = function(e) {
-                        return r.__awaiter(this, void 0, void 0, function() {
-                            var t, n;
-                            return r.__generator(this, function(i) {
-                                return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
-                                    hadImpression: t,
-                                    didScroll: n
-                                }), this.reportImpression && this.reportImpression(n)), [2]
-                            })
-                        })
-                    }, a.prototype.isVisible = function(e) {
-                        if (!this.element) return !1;
-                        var n = this.element.getBoundingClientRect();
-                        if (n.left < e.right && n.right > e.left && n.top < e.bottom && n.bottom > e.top) {
-                            if (!t || 0 === t.percentage || 0 === t.pixels) return !0;
-                            var i = t.percentage,
-                                a = t.pixels,
-                                r = n.bottom - n.top,
-                                o = e.bottom - e.top,
-                                s = Math.min(e.bottom - n.top, r, o);
-                            if (a) {
-                                if (r >= a) return s >= a;
-                                i = 100
-                            }
-                            return !i || 100 * (s / r) >= i
-                        }
-                        return !1
-                    }, a.prototype.isScrolled = function() {
-                        if (!this.scrollContext) return !1;
-                        var e = this.scrollContext.getScrollContent();
-                        return !(!e || 0 === e.scrollTop)
-                    }, a.contextTypes = {
-                        registerReceiver: s.func,
-                        getScrollContent: s.func
-                    }, a
-                }(l.Component)
-            }
-        }
-        n("1fMN");
-        var Be = /^https?:\/\//,
+        var Pe = n("9Fb+"),
+            Be = (n("1fMN"), /^https?:\/\//),
             Ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -50123,7 +50157,7 @@ webpackJsonp([30], {
                     }, this.props.panel.title), e, t)
                 }, t
             }(l.Component),
-            Ve = Object(d.compose)(Pe("DefaultPanel", {
+            Ve = Object(d.compose)(Object(Pe.a)("DefaultPanel", {
                 pixels: 100
             }))(Ue),
             ze = n("2KeS"),
@@ -51088,7 +51122,7 @@ webpackJsonp([30], {
                     }
                 }, t
             }(l.Component),
-            Nt = Object(d.compose)(Pe("ExtensionPanel", {
+            Nt = Object(d.compose)(Object(Pe.a)("ExtensionPanel", {
                 pixels: 100
             }))(St);
         var wt = Object(i.b)(function(e) {
@@ -66279,4 +66313,4 @@ webpackJsonp([30], {
         }
     }
 });
-//# sourceMappingURL=pages.channel-52619a046b7ad44fd0701d7586b27983.js.map
+//# sourceMappingURL=pages.channel-6eb3244325a388e0e99076318d31d5cc.js.map

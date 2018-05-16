@@ -13519,10 +13519,10 @@ webpackJsonp([85], {
                 e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
             }(r || (r = {})),
             function(e) {
-                e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionDetails = "extension_details", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.Games = "directory_games", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.Live = "live_channel", e.LiveHost = "live_host", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.LatestCollection = "latest_collection", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.Video = "video", e.VideoShelf = "video_shelf"
+                e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionDetails = "extension_details", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.Games = "directory_games", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.Live = "live_channel", e.LiveHost = "live_host", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.LatestCollection = "latest_collection", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.ShelfChannelMetadata = "shelf_channel_metadata", e.ShelfGameBoxart = "shelf_game_boxart", e.ShelfGameMetadata = "shelf_game_metadata", e.ShelfUserThumbnail = "shelf_user_thumbnail", e.ShelfVideoThumbnail = "shelf_video_thumbnail", e.ShelfVideoTitle = "shelf_video_title", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.Video = "video", e.VideoShelf = "video_shelf"
             }(a || (a = {})),
             function(e) {
-                e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.ExtensionManagerCarousel = "extension_mgr_carousel", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopNav = "twitch_topnav", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
+                e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.ExtensionManagerCarousel = "extension_mgr_carousel", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopNav = "twitch_topnav", e.TwitchHome = "twitch_home", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
             }(o || (o = {})),
             function(e) {
                 e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Overview = "overview", e.Videos = "videos"
@@ -14197,7 +14197,7 @@ webpackJsonp([85], {
                 return r
             }),
             function(e) {
-                e.Playing = "PLAYING", e.Streaming = "BROADCASTING", e.Watching = "WATCHING"
+                e.Playing = "PLAYING", e.Streaming = "STREAMING", e.Watching = "WATCHING"
             }(i || (i = {})),
             function(e) {
                 e.Playing = "playing", e.Streaming = "broadcasting", e.Watching = "watching"
@@ -16183,6 +16183,7 @@ webpackJsonp([85], {
                 "5fd568be-2073-4f99-84d5-565e8b2a3343": "no",
                 "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": "off",
                 "03f25f55-ded6-417a-b241-d656571c4a1f": "off",
+                "f3920cff-ef57-46c9-8dd9-b4f145acf6e5": "control",
                 "080c0331-3073-4539-992f-93274236a97d": "off",
                 "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9": "control",
                 "3468778b-76fe-4cdf-add6-1be0dceea214": "disabled",
@@ -16224,6 +16225,7 @@ webpackJsonp([85], {
                 TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT: "ba473bec-1ad3-4b55-9b3e-fdc002ba695c",
                 TWILIGHT_WATCH_WINSTON: "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773",
                 TWILIGHT_WATCH_SYMMETRA: "03f25f55-ded6-417a-b241-d656571c4a1f",
+                TWILIGHT_DISCOVERY_FRONTPAGE_MVP: "f3920cff-ef57-46c9-8dd9-b4f145acf6e5",
                 TWILIGHT_VOD_SHORYUKEN: "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9",
                 TWILIGHT_DASHBOARD_LIVE: "3468778b-76fe-4cdf-add6-1be0dceea214",
                 TWILIGHT_VOD_PROVOCATEUR: "51efc82d-cfe8-42bd-ae4b-9304112ed9df",
@@ -16236,6 +16238,7 @@ webpackJsonp([85], {
                 TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV: "variant_a",
                 TWILIGHT_VIDEO_CARD_UPDATES: "variation",
                 TWILIGHT_NEW_REPORTING_WIZARD: "yes",
+                TWILIGHT_DISCOVERY_FRONTPAGE_MVP: "variant",
                 TWILIGHT_PAY__SAVED_PAYMENT_METHODS: "yes",
                 TWILIGHT_PUBG_FILTERS: "variant"
             },
@@ -27564,6 +27567,11 @@ webpackJsonp([85], {
                     leaderboard: "hpto_logged_in_leaderboard",
                     rightTop: "hpto_logged_in_rcol_top",
                     rightBottom: "hpto_logged_in_rcol_bottom"
+                },
+                newFront: {
+                    top: "Twitch_FPTop",
+                    after2ndShelf: "Twitch_FPAfter2ndShelf",
+                    after4thShelf: "Twitch_FPAfter4thShelf"
                 }
             },
             o = {
@@ -27610,6 +27618,19 @@ webpackJsonp([85], {
                     ],
                     rightBottom: [
                         [300, 600]
+                    ]
+                },
+                newFront: {
+                    top: [
+                        [970, 66],
+                        [728, 90]
+                    ],
+                    after2ndShelf: [
+                        [970, 250]
+                    ],
+                    after4thShelf: [
+                        [970, 66],
+                        [970, 67]
                     ]
                 }
             },
@@ -27912,6 +27933,845 @@ webpackJsonp([85], {
             }
         };
         e.exports = n
+    },
+    RGTy: function(e, t, n) {
+        "use strict";
+        var i = n("/UH7"),
+            r = n("RH2O"),
+            a = n("0nzt"),
+            o = n("uXDg"),
+            s = n("QPF3"),
+            l = n("TToO"),
+            c = n("HW6M"),
+            d = n("GiK3"),
+            u = n("6sO2"),
+            p = n("7vx8"),
+            m = n("WIs4"),
+            h = n("aMxy"),
+            g = n("oIkB"),
+            f = n("HZww"),
+            v = n("rCmJ"),
+            b = n("zCIC"),
+            y = n("+Znq"),
+            k = n("puy8"),
+            _ = n("HM6l"),
+            w = n("ZVME"),
+            S = n("CSlQ"),
+            E = n("5LoI"),
+            C = n("MAZT"),
+            T = n("hvzu"),
+            N = n("Odds"),
+            O = (n("zC6J"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleThreadClick = function() {
+                        t.props.selectThread(t.props.threadID)
+                    }, t.handleArchiveClick = function(e) {
+                        e.stopPropagation(), t.props.archiveThread(t.props.threadID)
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    var e, t, n, i = this.props.user,
+                        r = this.props.lastMessage ? Object(T.a)(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes, this.props.lastMessage.editedAt) : null,
+                        a = this.props.unreadMessageCount,
+                        o = Object(u.d)("Unknown", "ThreadListItem");
+                    return i ? ((e = i.displayName || i.login) || (e = o), t = i.login, n = i.profileImageURL) : (e = o, t = o, n = null), d.createElement("div", {
+                        onClick: this.handleThreadClick,
+                        role: "listitem"
+                    }, d.createElement(N._35, {
+                        className: "whispers-list-item",
+                        borderBottom: !0,
+                        padding: 1,
+                        display: N.R.Flex,
+                        flexDirection: N.T.Row,
+                        flexWrap: N.U.NoWrap,
+                        fullWidth: !0,
+                        alignItems: N.c.Center,
+                        "data-a-target": "whisper-with-" + t
+                    }, d.createElement(N._8, {
+                        className: "whispers-list-item__avatar",
+                        margin: {
+                            right: .5
+                        },
+                        flexShrink: 0
+                    }, d.createElement(N.m, {
+                        size: 30,
+                        alt: Object(u.d)("{interlocutorName}'s Avatar", {
+                            interlocutorName: e
+                        }, "WhisperThreadListItem"),
+                        src: n,
+                        onLoad: this.props.avatarOnLoadCallback
+                    })), d.createElement(N._8, {
+                        fullWidth: !0,
+                        display: N.R.Inline
+                    }, d.createElement(N.Q, {
+                        fontSize: N.V.Size5,
+                        bold: !0,
+                        italic: e === o
+                    }, e), d.createElement(N._8, {
+                        className: "whispers-list-item__last-message",
+                        ellipsis: !0
+                    }, r)), d.createElement(N._8, {
+                        className: "whispers-list-item__unread-count",
+                        margin: {
+                            right: 1
+                        },
+                        textAlign: N._45.Right
+                    }, d.createElement(N.Q, {
+                        bold: !0
+                    }, a > 0 && !this.props.muted ? a : null), this.props.muted && d.createElement(N._8, {
+                        display: N.R.Flex,
+                        alignItems: N.c.Center,
+                        justifyContent: N._7.Center
+                    }, d.createElement(N._24, {
+                        type: N._26.Alt2,
+                        asset: N._25.WhisperMuted
+                    }))), d.createElement("div", {
+                        className: "whispers-list-item__archive"
+                    }, d.createElement(N.w, {
+                        ariaLabel: Object(u.d)("Archive Thread", "WhisperThreadListItem"),
+                        tabIndex: -1,
+                        icon: N._25.Close,
+                        "data-a-target": "whispers-list-item__archive-button",
+                        onClick: this.handleArchiveClick,
+                        "data-click-out-id": "whispers-list-item__archive-button"
+                    }))))
+                }, t
+            }(d.Component)),
+            R = n("7miU"),
+            I = n("n9f8"),
+            D = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.markAllWhispersAsRead = function() {
+                        var e = Object(g.a)({
+                            markAllAsRead: !0
+                        });
+                        n.props.markAllWhispersAsRead && (Object(R.i)(), n.props.markAllWhispersAsRead(e)), n.props.onMarkAllMessagesRead && n.props.onMarkAllMessagesRead()
+                    }, n.toggleDoNotDisturb = function() {
+                        n.state.doNotDisturb ? (u.m.set("whisperDoNotDisturb", !1), Object(R.f)(), n.setState({
+                            doNotDisturb: !1
+                        })) : (u.m.set("whisperDoNotDisturb", !0), Object(R.g)(), n.setState({
+                            doNotDisturb: !0
+                        }))
+                    }, n.state = {
+                        doNotDisturb: u.m.get("whisperDoNotDisturb", !1)
+                    }, n
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    var e = this.state.doNotDisturb ? Object(u.d)("Disable Do Not Disturb", "ThreadsBoxSettings") : Object(u.d)("Enable Do Not Disturb", "ThreadsBoxSettings"),
+                        t = Object(u.d)("Mark All Whispers as Read", "ThreadsBoxSettings");
+                    return d.createElement(N._8, {
+                        className: "threads-box-settings",
+                        display: N.R.Flex,
+                        flexDirection: N.T.Column,
+                        margin: 1
+                    }, d.createElement(N._6, {
+                        ariaLabel: e,
+                        onClick: this.toggleDoNotDisturb
+                    }, d.createElement(N._8, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, e)), d.createElement(N._6, {
+                        ariaLabel: t,
+                        onClick: this.markAllWhispersAsRead
+                    }, d.createElement(N._8, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, t)))
+                }, t = l.__decorate([Object(p.a)(I, {
+                    name: "markAllWhispersAsRead"
+                })], t)
+            }(d.Component),
+            x = n("m4HT"),
+            L = (n("U8pM"), function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.onMarkAllMessagesRead = function() {
+                        n.settingsMenu.toggleBalloon(!1)
+                    }, n.renderUserSearchResult = function(e, t) {
+                        var i = Object(u.d)("{username}'s avatar", {
+                                username: e.name
+                            }, "ThreadsBox"),
+                            r = e.profile_image || Object(k.c)(e.objectID, 30);
+                        return d.createElement("div", {
+                            key: "searchResult:" + e.objectID,
+                            onClick: n.handleUserSearchResultClick(e, t)
+                        }, d.createElement(N._35, {
+                            className: "whispers-list-item",
+                            borderBottom: !0,
+                            padding: 1,
+                            "data-a-target": "whisper-search-result-" + e.login,
+                            display: N.R.Flex,
+                            flexDirection: N.T.Row,
+                            flexWrap: N.U.NoWrap,
+                            fullWidth: !0,
+                            alignItems: N.c.Center
+                        }, d.createElement(N._8, {
+                            margin: {
+                                right: .5
+                            },
+                            flexShrink: 0
+                        }, d.createElement(N.m, {
+                            size: 30,
+                            src: r,
+                            alt: i
+                        })), d.createElement(N._8, {
+                            fullWidth: !0,
+                            display: N.R.Flex,
+                            flexDirection: N.T.Column
+                        }, d.createElement(N.Q, {
+                            fontSize: N.V.Size5,
+                            bold: !0
+                        }, e.login), d.createElement(N._8, null, " "))))
+                    }, n.saveSettingsMenuRef = function(e) {
+                        return n.settingsMenu = e
+                    }, n.handleConversationsClick = function() {
+                        n.state.open || (n.props.latencyTracking.resetCustomEvents(w.a.Whispers), n.whispersHistoryLatencyEvent = n.props.latencyTracking.registerCustomEvent({
+                            benchmark: 200,
+                            group: w.a.Whispers,
+                            key: w.b.WhispersHistory,
+                            label: w.c.History,
+                            start: w.d.Registration
+                        })), n.setState(function(e) {
+                            return {
+                                open: !e.open
+                            }
+                        })
+                    }, n.selectThread = function(e) {
+                        n.handleClose(), n.clearSearchText(), n.props.selectThread(e)
+                    }, n.handleClose = function() {
+                        n.setState({
+                            open: !1
+                        })
+                    }, n.clearSearchText = function() {
+                        n.setState({
+                            searchText: "",
+                            searching: !1
+                        })
+                    }, n.onSearchInputChange = function(e) {
+                        return l.__awaiter(n, void 0, void 0, function() {
+                            var t, n = this;
+                            return l.__generator(this, function(i) {
+                                return t = e.currentTarget.value, clearTimeout(this.inputTimeout), t && 0 !== t.length ? (this.setState({
+                                    searchText: t,
+                                    searching: !0
+                                }), this.inputTimeout = setTimeout(function() {
+                                    n.search(n.state.searchText)
+                                }, 200), [2]) : (this.inputTimeout = 0, this.clearSearchText(), [2])
+                            })
+                        })
+                    }, n.handleUserSearchResultClick = function(e, t) {
+                        return function() {
+                            var i = e.objectID;
+                            if (null !== n.props.currentUserID && i !== n.props.currentUserID) {
+                                n.handleClose(), n.clearSearchText();
+                                var r = Object(x.a)(n.props.currentUserID, i);
+                                Object(R.e)({
+                                    threadID: r,
+                                    targetUserlogin: e.login,
+                                    searchResultRank: t
+                                }), Object(R.b)({
+                                    searchResultRank: t,
+                                    searchQuery: n.state.searchText,
+                                    isConversation: !1
+                                }), n.props.selectThread(r)
+                            }
+                        }
+                    }, n.filterExistingThreads = function(e) {
+                        var t = e.toLowerCase();
+                        return n.props.orderedThreadIDs.filter(function(e) {
+                            var i = n.props.threadsByID[e].participants.find(function(e) {
+                                return !!e && e.id !== n.props.currentUserID
+                            });
+                            return !(!i || !i.displayName) && i.displayName.toLowerCase().indexOf(t) >= 0
+                        })
+                    }, n.searchClient = new C.a({
+                        appId: u.a.algoliaApplicationID,
+                        apiKey: u.a.algoliaAPIKey,
+                        apolloClient: u.o.apollo.client,
+                        logger: u.j,
+                        config: u.a
+                    }), n.state = {
+                        open: !1,
+                        searchText: "",
+                        searching: !1
+                    }, n
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    return d.createElement(v.a, {
+                        onClickOut: this.handleClose
+                    }, d.createElement(N._3, {
+                        className: "whispers-threads-box__container " + (this.state.open ? "whispers-threads-box__container--open" : ""),
+                        display: N.R.Flex,
+                        flexDirection: N.T.Column,
+                        flexWrap: N.U.NoWrap,
+                        border: !0,
+                        background: N.n.Base,
+                        position: N._15.Absolute,
+                        attachBottom: !0,
+                        attachRight: !0,
+                        "data-click-out-id": "threads-box",
+                        "data-a-target": "threads-box-" + (this.state.open ? "open" : "closed")
+                    }, d.createElement("div", {
+                        "aria-labelledby": "whispers-box-header"
+                    }, this.renderHeader(), this.renderList(), this.renderFooter())))
+                }, t.prototype.renderOpenCloseButton = function() {
+                    var e = null;
+                    if (this.props.unreadCount > 0) {
+                        var t = this.props.unreadCount > 99 ? "99+" : this.props.unreadCount.toString();
+                        e = d.createElement(N._8, {
+                            className: "whispers-threads-box__unread",
+                            margin: {
+                                y: .5
+                            }
+                        }, d.createElement("span", {
+                            className: "whispers-threads-box__unread--count",
+                            "data-a-target": "whisper-unreads"
+                        }, t))
+                    }
+                    return d.createElement(N._35, {
+                        className: "whispers-threads-box__open-close",
+                        position: N._15.Relative,
+                        background: N.n.Alt2,
+                        display: N.R.Flex,
+                        alignItems: N.c.Center,
+                        justifyContent: N._7.Center
+                    }, e, d.createElement(N.w, {
+                        ariaLabel: Object(u.d)("Close Threads", "WhisperThreadsBox"),
+                        icon: N._25.Conversations,
+                        onClick: this.handleConversationsClick,
+                        "data-a-target": "whisper-box-button"
+                    }))
+                }, t.prototype.renderList = function() {
+                    var e, t = this;
+                    if (!this.state.open) return null;
+                    var n = null;
+                    "" !== this.state.searchText && (n = d.createElement(N._35, {
+                        key: "otherPeopleDivider",
+                        borderBottom: !0,
+                        padding: {
+                            x: 1,
+                            y: .5
+                        }
+                    }, Object(u.d)("Other People", "WhispersThreadBox")));
+                    var i = null;
+                    if (this.state.searching ? i = d.createElement(N._8, {
+                            display: N.R.Flex,
+                            flexDirection: N.T.Column,
+                            margin: {
+                                top: 4
+                            },
+                            alignItems: N.c.Center
+                        }, d.createElement(N._10, {
+                            delay: 0
+                        })) : this.state.searchResults && this.state.searchResults.users && "" !== this.state.searchText && (i = this.state.searchResults.users.hits.filter(function(e) {
+                            return !t.props.threadsByID[e.objectID]
+                        }).map(this.renderUserSearchResult)), this.props.error) e = d.createElement(N._8, {
+                        margin: {
+                            x: "auto"
+                        },
+                        display: N.R.Flex,
+                        justifyContent: N._7.Center,
+                        alignItems: N.c.Center,
+                        fullHeight: !0
+                    }, d.createElement(N.Q, {
+                        color: N.K.Error
+                    }, Object(u.d)("There was a problem loading whispers.", "WhisperThreadsBox")));
+                    else if (this.props.loading) e = d.createElement(N._10, null);
+                    else {
+                        var r = this.props.orderedThreadIDs;
+                        "" !== this.state.searchText && (r = this.filterExistingThreads(this.state.searchText)), e = r.filter(function(e) {
+                            return t.props.threadsByID[e] && !t.props.threadsByID[e].archived
+                        }).map(function(e, n) {
+                            var i = 0 === n ? function() {
+                                    t.props.latencyTracking.reportCustomEvent(t.whispersHistoryLatencyEvent)
+                                } : void 0,
+                                r = t.props.threadsByID[e],
+                                a = r.participants.find(function(e) {
+                                    return !!e && e.id !== t.props.currentUserID
+                                });
+                            return a ? d.createElement(O, {
+                                key: "whisperThread:" + r.id,
+                                user: a,
+                                threadID: r.id,
+                                lastMessage: r.lastMessage,
+                                archiveThread: t.props.archiveThread,
+                                selectThread: t.selectThread,
+                                unreadMessageCount: r.unreadMessagesCount,
+                                muted: r.muted,
+                                avatarOnLoadCallback: i
+                            }) : null
+                        })
+                    }
+                    return d.createElement(b.b, {
+                        suppressScrollX: !0
+                    }, d.createElement("div", {
+                        role: "list"
+                    }, e, n, i, d.createElement(b.a, {
+                        enabled: this.state.open,
+                        loadMore: this.props.loadMore,
+                        pixelThreshold: 200
+                    })))
+                }, t.prototype.renderHeader = function() {
+                    return this.state.open ? d.createElement(N._35, {
+                        className: "whispers-threads-box__header",
+                        "data-a-target": "whispers-threads-box__header",
+                        alignItems: N.c.Center,
+                        background: N.n.Alt,
+                        borderBottom: !0,
+                        color: N.K.Base,
+                        display: N.R.Flex,
+                        flexDirection: N.T.Row,
+                        flexGrow: 0,
+                        flexShrink: 0,
+                        padding: {
+                            y: .5,
+                            x: 1
+                        },
+                        "data-click-hide-id": "threads-box-header"
+                    }, d.createElement(N._2, {
+                        flexGrow: 1,
+                        display: N.R.Flex
+                    }, d.createElement("div", {
+                        id: "whispers-box-header"
+                    }, d.createElement(N.Q, {
+                        type: N._49.Span,
+                        bold: !0
+                    }, Object(u.d)("Whispers", "WhisperThreadsBox")))), d.createElement(y.a, {
+                        ref: this.saveSettingsMenuRef
+                    }, d.createElement(N.w, {
+                        ariaLabel: Object(u.d)("Settings", "WhisperThreadsBox"),
+                        icon: N._25.Gear,
+                        "data-a-target": "whisper-settings-button"
+                    }), d.createElement(N.q, {
+                        size: N.s.Small,
+                        direction: N.r.BottomRight,
+                        offsetX: "0.5rem"
+                    }, d.createElement(D, {
+                        onMarkAllMessagesRead: this.onMarkAllMessagesRead
+                    }))), d.createElement(N.w, {
+                        ariaLabel: Object(u.d)("Minimize", "WhisperThreadsBox"),
+                        icon: N._25.Minimize,
+                        onClick: this.handleClose,
+                        "data-a-target": "whisper-close-button"
+                    })) : null
+                }, t.prototype.renderFooter = function() {
+                    return this.state.open ? d.createElement(N._35, {
+                        display: N.R.Flex,
+                        flexGrow: 0,
+                        flexShrink: 0,
+                        alignItems: N.c.Center,
+                        borderTop: !0,
+                        background: N.n.Alt
+                    }, d.createElement(N._8, {
+                        flexGrow: 1,
+                        padding: {
+                            top: .5,
+                            bottom: .5,
+                            left: 1
+                        }
+                    }, d.createElement(N._27, {
+                        onChange: this.onSearchInputChange,
+                        value: this.state.searchText,
+                        placeholder: Object(u.d)("Search for People", "WhisperThreadsBox"),
+                        id: "threads-box-filter",
+                        autoFocus: !0,
+                        "data-a-target": "whisper-search-input"
+                    })), this.renderOpenCloseButton()) : this.renderOpenCloseButton()
+                }, t.prototype.search = function(e) {
+                    return l.__awaiter(this, void 0, void 0, function() {
+                        var t;
+                        return l.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return e ? [4, this.searchClient.queryForType(E.a.Users, e, _.a())] : [2];
+                                case 1:
+                                    return t = n.sent(), this.setState({
+                                        searchResults: t,
+                                        searching: !1
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t = l.__decorate([Object(S.d)("WhisperCenter", {
+                    autoReportInteractive: !0
+                })], t)
+            }(d.Component)),
+            P = n("1Mw/");
+        var F = Object(r.b)(function(e) {
+            return {
+                openedThreads: e.whispers.display.openedIDs.map(function(t) {
+                    return Object(i.b)(e, t)
+                }),
+                focusedThreadID: e.whispers.display.focusedID
+            }
+        }, function(e) {
+            return {
+                onBlockThread: function(t) {
+                    return e(o.h(t, Object(s.a)()))
+                },
+                onCloseThread: function(t) {
+                    return e(o.h(t, Object(s.a)()))
+                },
+                onCollapseThread: function(t) {
+                    return e(o.i(t, Object(s.a)()))
+                },
+                onExpandThread: function(t) {
+                    return e(o.j(t, Object(s.a)()))
+                },
+                onFocusThread: function(t) {
+                    return e(o.k(t, Object(s.a)()))
+                },
+                onUnfocusThread: function(t) {
+                    return e(o.n(t, Object(s.a)()))
+                },
+                onResizeContent: function() {
+                    return e(o.m(Object(s.a)()))
+                }
+            }
+        })(P.a);
+
+        function A(e) {
+            return Object.keys(e).reduce(function(t, n) {
+                var i = e[n];
+                return i.muted || i.archived ? t : t + i.unreadMessagesCount
+            }, 0)
+        }
+        var M = function(e) {
+                for (var t = {}, n = 0, i = e; n < i.length; n++) {
+                    var r = i[n];
+                    t[r.id] = l.__assign({}, U(r))
+                }
+                return t
+            },
+            U = function(e) {
+                return {
+                    id: e.id,
+                    messageHistory: e.messages.edges.map(function(e) {
+                        return e.node
+                    }).slice(0, -1),
+                    lastMessage: e.messages.edges.map(function(e) {
+                        return e.node
+                    }).find(function(e) {
+                        return !e.deletedAt
+                    }) || null,
+                    spamInfo: e.spamInfo,
+                    participants: e.participants,
+                    muted: e.isMuted,
+                    archived: e.isArchived,
+                    unreadMessagesCount: e.unreadMessagesCount
+                }
+            },
+            j = n("9RMu"),
+            B = n("DCOT"),
+            H = n("Lj1H");
+        var W = n("qpaC"),
+            V = n("8p/O"),
+            z = (n("n7G4"), function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    n.erroredLoadingMore = !1, n.logger = u.j.withCategory("whispers"), n.archiveThread = function(e) {
+                        if (n.state.threadsByID[e]) {
+                            var t = l.__assign({}, Object(g.a)({
+                                threadID: e,
+                                isArchived: !0
+                            }), {
+                                optimisticResponse: {
+                                    updateWhisperThread: {
+                                        thread: {
+                                            __typename: "WhisperThread",
+                                            id: e,
+                                            isArchived: !0
+                                        },
+                                        __typename: "UpdateWhisperThreadPayload"
+                                    }
+                                }
+                            });
+                            n.props.archiveThread && (n.props.closeThread(e), n.props.data.currentUser && Object(R.a)(e), n.props.archiveThread(t))
+                        }
+                    }, n.selectThread = function(e) {
+                        n.props.openThread({
+                            threadID: e,
+                            collapsed: !1
+                        })
+                    }, n.loadMore = function() {
+                        return l.__awaiter(n, void 0, void 0, function() {
+                            var e;
+                            return l.__generator(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        if (this.props.data.loading || this.props.data.error || this.erroredLoadingMore) return [3, 4];
+                                        t.label = 1;
+                                    case 1:
+                                        return t.trys.push([1, 3, , 4]), [4, this.props.loadMore()];
+                                    case 2:
+                                        return t.sent(), [3, 4];
+                                    case 3:
+                                        return e = t.sent(), this.logger.warn("Load more whisper threads failed", {
+                                            error: e
+                                        }), this.erroredLoadingMore = !0, [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, n.handleThreadDataReport = function(e, t) {
+                        n.state.threadsByID[e] || Object(g.e)(V, {
+                            cursor: null
+                        }, function(e) {
+                            return e.currentUser && e.currentUser.whisperThreads && e.currentUser.whisperThreads.edges.unshift({
+                                cursor: "0",
+                                node: l.__assign({}, t, {
+                                    isArchived: !1
+                                }),
+                                __typename: "WhisperThreadEdge"
+                            }), e
+                        });
+                        var i = l.__assign({}, n.state.threadsByID[e]);
+                        t.messages && (i.messageHistory = t.messages.edges.map(function(e) {
+                            return e.node
+                        }).slice(0, -1)), !1 !== t.isMuted && !0 !== t.isMuted || (i.muted = t.isMuted);
+                        var r, a = l.__assign({}, n.state.threadsByID, ((r = {})[e] = i, r));
+                        n.setState({
+                            threadsByID: a,
+                            unreadCount: A(a)
+                        })
+                    };
+                    var i = n.props.data.currentUser && n.props.data.currentUser.whisperThreads && M(n.props.data.currentUser.whisperThreads.edges.map(function(e) {
+                        return e.node
+                    })) || {};
+                    return n.state = {
+                        error: !!n.props.data.error,
+                        orderedThreadIDs: n.props.data.currentUser && n.props.data.currentUser.whisperThreads && n.props.data.currentUser.whisperThreads.edges.map(function(e) {
+                            return e.node.id
+                        }) || [],
+                        renderError: !1,
+                        threadsByID: i,
+                        unreadCount: A(i)
+                    }, n
+                }
+                return l.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
+                    var n = this;
+                    this.setState({
+                        renderError: !0
+                    }, function() {
+                        n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            info: t
+                        })
+                    })
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    if (e.data.error) this.setState({
+                        error: !!e.data.error
+                    });
+                    else if (!e.data.loading && e.data.currentUser && e.data.currentUser.whisperThreads) {
+                        var t = M(e.data.currentUser.whisperThreads.edges.map(function(e) {
+                            return e.node
+                        }));
+                        this.setState({
+                            threadsByID: t,
+                            orderedThreadIDs: e.data.currentUser.whisperThreads.edges.map(function(e) {
+                                return e.node.id
+                            }),
+                            unreadCount: A(t)
+                        })
+                    }
+                }, t.prototype.render = function() {
+                    if (!this.props.data.currentUser || this.state.renderError || !this.props.isVisible) return null;
+                    var e = c({
+                        whispers: !0,
+                        "whispers--theatre-mode": this.props.theatreModeEnabled,
+                        "whispers--right-column-expanded": this.props.rightColumnExpanded
+                    });
+                    return d.createElement(N._8, {
+                        className: e,
+                        position: N._15.Absolute,
+                        attachBottom: !0,
+                        attachLeft: !0,
+                        margin: {
+                            right: 1
+                        }
+                    }, d.createElement(F, {
+                        currentUserID: this.props.data.currentUser.id,
+                        reportThreadData: this.handleThreadDataReport,
+                        archiveThread: this.archiveThread
+                    }), d.createElement(L, {
+                        currentUserID: this.props.data.currentUser.id,
+                        error: this.state.error,
+                        loading: this.props.data.loading,
+                        unreadCount: this.state.unreadCount,
+                        orderedThreadIDs: this.state.orderedThreadIDs,
+                        threadsByID: this.state.threadsByID,
+                        selectThread: this.selectThread,
+                        archiveThread: this.archiveThread,
+                        loadMore: this.loadMore
+                    }))
+                }, t = l.__decorate([Object(p.a)(V, {
+                    props: function(e) {
+                        return l.__assign({}, e, {
+                            loadMore: function() {
+                                return e.data.fetchMore({
+                                    query: V,
+                                    variables: l.__assign({}, e.data.variables, {
+                                        cursor: e.data.currentUser && e.data.currentUser.whisperThreads && e.data.currentUser.whisperThreads.edges.length > 0 ? e.data.currentUser.whisperThreads.edges[e.data.currentUser.whisperThreads.edges.length - 1].cursor : null
+                                    }),
+                                    updateQuery: function(e, t) {
+                                        var n = t.fetchMoreResult;
+                                        return n.currentUser ? e.currentUser && e.currentUser.whisperThreads ? n.currentUser.whisperThreads ? {
+                                            currentUser: l.__assign({}, n.currentUser, {
+                                                whisperThreads: l.__assign({}, n.currentUser.whisperThreads, {
+                                                    edges: Object(g.c)(e.currentUser.whisperThreads.edges, n.currentUser.whisperThreads.edges)
+                                                })
+                                            })
+                                        } : {
+                                            currentUser: l.__assign({}, n.currentUser, {
+                                                whisperThreads: e.currentUser.whisperThreads
+                                            })
+                                        } : {
+                                            currentUser: n.currentUser
+                                        } : {
+                                            currentUser: null
+                                        }
+                                    }
+                                })
+                            }
+                        })
+                    }
+                }), Object(p.a)(W, {
+                    name: "archiveThread"
+                }), Object(m.a)(function(e) {
+                    return {
+                        query: V,
+                        types: [h.PubsubMessageType.WhisperDeleted, h.PubsubMessageType.WhisperEdited, h.PubsubMessageType.WhisperSent, h.PubsubMessageType.WhisperAllThreadsUpdate, h.PubsubMessageType.WhisperReceived, h.PubsubMessageType.WhisperThreadUpdate],
+                        variables: l.__assign({}, e.data.variables),
+                        skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
+                        topic: Object(f.A)(e.data.currentUser && e.data.currentUser.id || ""),
+                        mutator: function(t, n) {
+                            if (!n.currentUser || !n.currentUser.whisperThreads) return n;
+                            if (Object(H.e)(t) || Object(H.d)(t)) {
+                                if (Object(H.d)(t)) {
+                                    var i = n.currentUser.whisperThreads.edges.find(function(e) {
+                                        return e.node.id === t.data_object.thread_id
+                                    });
+                                    if (i) {
+                                        var r = i.node.participants.find(function(e) {
+                                            return !!e && e.id === "" + t.data_object.from_id
+                                        });
+                                        r && Object(R.l)({
+                                            targetUserLogin: r.login,
+                                            threadID: t.data_object.thread_id
+                                        })
+                                    }
+                                }
+                                return function(e, t, n, i) {
+                                    if (!t.currentUser || !t.currentUser.whisperThreads) return t;
+                                    var r = u.m.get("whisperDoNotDisturb", !1),
+                                        a = t.currentUser.whisperThreads.edges.find(function(t) {
+                                            return t.node.id === e.data_object.thread_id
+                                        });
+                                    if (a) {
+                                        var o = Object(j.c)(e);
+                                        a.node.messages.edges.unshift(o), Object(H.d)(e) && (e.data_object.thread_id !== n ? a.node.unreadMessagesCount += 1 : Object(B.a)({
+                                            threadID: e.data_object.thread_id,
+                                            lastReadMessageID: e.data_object.message_id
+                                        }, e.data_object.id), i({
+                                            threadID: e.data_object.thread_id,
+                                            collapsed: !0,
+                                            hidden: r
+                                        })), a.node.isArchived = !1;
+                                        var s = t.currentUser.whisperThreads.edges.filter(function(t) {
+                                            return t.node.id !== e.data_object.thread_id
+                                        });
+                                        s.unshift(a), t.currentUser.whisperThreads.edges = s
+                                    } else i({
+                                        threadID: e.data_object.thread_id,
+                                        collapsed: !0,
+                                        hidden: r
+                                    });
+                                    return t
+                                }(t, n, e.focusedThreadID, e.openThread)
+                            }
+                            return Object(H.b)(t) ? function(e, t) {
+                                if (!t.currentUser || !t.currentUser.whisperThreads) return t;
+                                var n = t.currentUser.whisperThreads.edges.find(function(t) {
+                                    return t.node.id === e.data_object.thread_id
+                                });
+                                if (n) {
+                                    var i = n.node.messages.edges.find(function(t) {
+                                        return t.node.id === e.data_object.message_id
+                                    });
+                                    i && (i.node.deletedAt = new Date(1e3 * e.data_object.deleted_at).toISOString(), i.node.content.content = e.data_object.body, i.node.content.emotes = Object(j.b)(e.data_object.tags.emotes))
+                                }
+                                return t
+                            }(t, n) : Object(H.c)(t) ? function(e, t) {
+                                if (!t.currentUser || !t.currentUser.whisperThreads) return t;
+                                var n = t.currentUser.whisperThreads.edges.find(function(t) {
+                                    return t.node.id === e.data_object.thread_id
+                                });
+                                if (n) {
+                                    var i = n.node.messages.edges.find(function(t) {
+                                        return t.node.id === e.data_object.message_id
+                                    });
+                                    i && (i.node.editedAt = new Date(1e3 * e.data_object.edited_at).toISOString(), i.node.content.content = e.data_object.body, i.node.content.emotes = Object(j.b)(e.data_object.tags.emotes))
+                                }
+                                return t
+                            }(t, n) : Object(H.f)(t) ? function(e, t, n) {
+                                if (!t.currentUser || !t.currentUser.whisperThreads) return t;
+                                var i = t.currentUser.whisperThreads.edges.findIndex(function(t) {
+                                    return t.node.id === e.data_object.id
+                                });
+                                if (i >= 0) {
+                                    var r = t.currentUser.whisperThreads.edges[i],
+                                        a = r.node.messages.edges[0].cursor,
+                                        o = parseInt(a, 10) - e.data_object.last_read;
+                                    r.node.unreadMessagesCount = o >= 0 ? o : 0, r.node.isMuted = e.data_object.muted, !r.node.isArchived && e.data_object.archived && n(e.data_object.id), r.node.isArchived = e.data_object.archived
+                                }
+                                return t
+                            }(t, n, e.closeThread) : Object(H.a)(t) ? function(e, t) {
+                                return t.currentUser && t.currentUser.whisperThreads ? (e.data_object.mark_all_read && t.currentUser.whisperThreads.edges.forEach(function(e) {
+                                    e.node.unreadMessagesCount = 0
+                                }), t) : t
+                            }(t, n) : n
+                        },
+                        skipMessage: function(e, t) {
+                            if (Object(H.e)(e)) {
+                                if (!t.currentUser || !t.currentUser.whisperThreads) return !1;
+                                var n = t.currentUser.whisperThreads.edges.find(function(t) {
+                                    return t.node.id === e.data_object.thread_id
+                                });
+                                if (n && n.node.messages.edges.findIndex(function(t) {
+                                        return t.node.id === e.data_object.nonce
+                                    }) >= 0) return !0
+                            }
+                            return !1
+                        }
+                    }
+                })], t)
+            }(d.Component));
+        var G = Object(r.b)(function(e) {
+            return {
+                isVisible: Object(a.b)(e),
+                rightColumnExpanded: e.ui.rightColumnExpanded,
+                theatreModeEnabled: e.ui.theatreModeEnabled,
+                focusedThreadID: e.whispers.display.focusedID
+            }
+        }, function(e) {
+            return {
+                openThread: function(t) {
+                    return e(o.l(t, Object(s.a)()))
+                },
+                closeThread: function(t) {
+                    return e(o.h(t, Object(s.a)()))
+                }
+            }
+        })(z);
+        n.d(t, "a", function() {
+            return G
+        })
     },
     "RSE+": function(e, t, n) {
         "use strict";
@@ -28295,890 +29155,64 @@ webpackJsonp([85], {
             }(r.Component), n("2aoH")),
             k = n("TP6L"),
             _ = n("H+d0"),
-            w = n("/UH7"),
-            S = n("0nzt"),
-            E = n("uXDg"),
-            C = n("QPF3"),
-            T = n("HW6M"),
-            N = n("7vx8"),
-            O = n("WIs4"),
-            R = n("aMxy"),
-            I = n("oIkB"),
-            D = n("HZww"),
-            x = n("rCmJ"),
-            L = n("zCIC"),
-            P = n("+Znq"),
-            F = n("puy8"),
-            A = n("HM6l"),
-            M = n("ZVME"),
-            U = n("CSlQ"),
-            j = n("5LoI"),
-            B = n("MAZT"),
-            H = n("hvzu"),
-            W = (n("zC6J"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleThreadClick = function() {
-                        t.props.selectThread(t.props.threadID)
-                    }, t.handleArchiveClick = function(e) {
-                        e.stopPropagation(), t.props.archiveThread(t.props.threadID)
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e, t, n, i = this.props.user,
-                        a = this.props.lastMessage ? Object(H.a)(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes, this.props.lastMessage.editedAt) : null,
-                        o = this.props.unreadMessageCount,
-                        s = Object(g.d)("Unknown", "ThreadListItem");
-                    return i ? ((e = i.displayName || i.login) || (e = s), t = i.login, n = i.profileImageURL) : (e = s, t = s, n = null), r.createElement("div", {
-                        onClick: this.handleThreadClick,
-                        role: "listitem"
-                    }, r.createElement(f._35, {
-                        className: "whispers-list-item",
-                        borderBottom: !0,
-                        padding: 1,
-                        display: f.R.Flex,
-                        flexDirection: f.T.Row,
-                        flexWrap: f.U.NoWrap,
-                        fullWidth: !0,
-                        alignItems: f.c.Center,
-                        "data-a-target": "whisper-with-" + t
-                    }, r.createElement(f._8, {
-                        className: "whispers-list-item__avatar",
-                        margin: {
-                            right: .5
-                        },
-                        flexShrink: 0
-                    }, r.createElement(f.m, {
-                        size: 30,
-                        alt: Object(g.d)("{interlocutorName}'s Avatar", {
-                            interlocutorName: e
-                        }, "WhisperThreadListItem"),
-                        src: n,
-                        onLoad: this.props.avatarOnLoadCallback
-                    })), r.createElement(f._8, {
-                        fullWidth: !0,
-                        display: f.R.Inline
-                    }, r.createElement(f.Q, {
-                        fontSize: f.V.Size5,
-                        bold: !0,
-                        italic: e === s
-                    }, e), r.createElement(f._8, {
-                        className: "whispers-list-item__last-message",
-                        ellipsis: !0
-                    }, a)), r.createElement(f._8, {
-                        className: "whispers-list-item__unread-count",
-                        margin: {
-                            right: 1
-                        },
-                        textAlign: f._45.Right
-                    }, r.createElement(f.Q, {
-                        bold: !0
-                    }, o > 0 && !this.props.muted ? o : null), this.props.muted && r.createElement(f._8, {
-                        display: f.R.Flex,
-                        alignItems: f.c.Center,
-                        justifyContent: f._7.Center
-                    }, r.createElement(f._24, {
-                        type: f._26.Alt2,
-                        asset: f._25.WhisperMuted
-                    }))), r.createElement("div", {
-                        className: "whispers-list-item__archive"
-                    }, r.createElement(f.w, {
-                        ariaLabel: Object(g.d)("Archive Thread", "WhisperThreadListItem"),
-                        tabIndex: -1,
-                        icon: f._25.Close,
-                        "data-a-target": "whispers-list-item__archive-button",
-                        onClick: this.handleArchiveClick,
-                        "data-click-out-id": "whispers-list-item__archive-button"
-                    }))))
-                }, t
-            }(r.Component)),
-            V = n("7miU"),
-            z = n("n9f8"),
-            G = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.markAllWhispersAsRead = function() {
-                        var e = Object(I.a)({
-                            markAllAsRead: !0
-                        });
-                        n.props.markAllWhispersAsRead && (Object(V.i)(), n.props.markAllWhispersAsRead(e)), n.props.onMarkAllMessagesRead && n.props.onMarkAllMessagesRead()
-                    }, n.toggleDoNotDisturb = function() {
-                        n.state.doNotDisturb ? (g.m.set("whisperDoNotDisturb", !1), Object(V.f)(), n.setState({
-                            doNotDisturb: !1
-                        })) : (g.m.set("whisperDoNotDisturb", !0), Object(V.g)(), n.setState({
-                            doNotDisturb: !0
-                        }))
-                    }, n.state = {
-                        doNotDisturb: g.m.get("whisperDoNotDisturb", !1)
-                    }, n
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = this.state.doNotDisturb ? Object(g.d)("Disable Do Not Disturb", "ThreadsBoxSettings") : Object(g.d)("Enable Do Not Disturb", "ThreadsBoxSettings"),
-                        t = Object(g.d)("Mark All Whispers as Read", "ThreadsBoxSettings");
-                    return r.createElement(f._8, {
-                        className: "threads-box-settings",
-                        display: f.R.Flex,
-                        flexDirection: f.T.Column,
-                        margin: 1
-                    }, r.createElement(f._6, {
-                        ariaLabel: e,
-                        onClick: this.toggleDoNotDisturb
-                    }, r.createElement(f._8, {
-                        padding: {
-                            y: .5,
-                            x: 1
-                        }
-                    }, e)), r.createElement(f._6, {
-                        ariaLabel: t,
-                        onClick: this.markAllWhispersAsRead
-                    }, r.createElement(f._8, {
-                        padding: {
-                            y: .5,
-                            x: 1
-                        }
-                    }, t)))
-                }, t = i.__decorate([Object(N.a)(z, {
-                    name: "markAllWhispersAsRead"
-                })], t)
-            }(r.Component),
-            q = n("m4HT"),
-            Q = (n("U8pM"), function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.onMarkAllMessagesRead = function() {
-                        n.settingsMenu.toggleBalloon(!1)
-                    }, n.renderUserSearchResult = function(e, t) {
-                        var i = Object(g.d)("{username}'s avatar", {
-                                username: e.name
-                            }, "ThreadsBox"),
-                            a = e.profile_image || Object(F.c)(e.objectID, 30);
-                        return r.createElement("div", {
-                            key: "searchResult:" + e.objectID,
-                            onClick: n.handleUserSearchResultClick(e, t)
-                        }, r.createElement(f._35, {
-                            className: "whispers-list-item",
-                            borderBottom: !0,
-                            padding: 1,
-                            "data-a-target": "whisper-search-result-" + e.login,
-                            display: f.R.Flex,
-                            flexDirection: f.T.Row,
-                            flexWrap: f.U.NoWrap,
-                            fullWidth: !0,
-                            alignItems: f.c.Center
-                        }, r.createElement(f._8, {
-                            margin: {
-                                right: .5
-                            },
-                            flexShrink: 0
-                        }, r.createElement(f.m, {
-                            size: 30,
-                            src: a,
-                            alt: i
-                        })), r.createElement(f._8, {
-                            fullWidth: !0,
-                            display: f.R.Flex,
-                            flexDirection: f.T.Column
-                        }, r.createElement(f.Q, {
-                            fontSize: f.V.Size5,
-                            bold: !0
-                        }, e.login), r.createElement(f._8, null, " "))))
-                    }, n.saveSettingsMenuRef = function(e) {
-                        return n.settingsMenu = e
-                    }, n.handleConversationsClick = function() {
-                        n.state.open || (n.props.latencyTracking.resetCustomEvents(M.a.Whispers), n.whispersHistoryLatencyEvent = n.props.latencyTracking.registerCustomEvent({
-                            benchmark: 200,
-                            group: M.a.Whispers,
-                            key: M.b.WhispersHistory,
-                            label: M.c.History,
-                            start: M.d.Registration
-                        })), n.setState(function(e) {
-                            return {
-                                open: !e.open
-                            }
-                        })
-                    }, n.selectThread = function(e) {
-                        n.handleClose(), n.clearSearchText(), n.props.selectThread(e)
-                    }, n.handleClose = function() {
-                        n.setState({
-                            open: !1
-                        })
-                    }, n.clearSearchText = function() {
-                        n.setState({
-                            searchText: "",
-                            searching: !1
-                        })
-                    }, n.onSearchInputChange = function(e) {
-                        return i.__awaiter(n, void 0, void 0, function() {
-                            var t, n = this;
-                            return i.__generator(this, function(i) {
-                                return t = e.currentTarget.value, clearTimeout(this.inputTimeout), t && 0 !== t.length ? (this.setState({
-                                    searchText: t,
-                                    searching: !0
-                                }), this.inputTimeout = setTimeout(function() {
-                                    n.search(n.state.searchText)
-                                }, 200), [2]) : (this.inputTimeout = 0, this.clearSearchText(), [2])
-                            })
-                        })
-                    }, n.handleUserSearchResultClick = function(e, t) {
-                        return function() {
-                            var i = e.objectID;
-                            if (null !== n.props.currentUserID && i !== n.props.currentUserID) {
-                                n.handleClose(), n.clearSearchText();
-                                var r = Object(q.a)(n.props.currentUserID, i);
-                                Object(V.e)({
-                                    threadID: r,
-                                    targetUserlogin: e.login,
-                                    searchResultRank: t
-                                }), Object(V.b)({
-                                    searchResultRank: t,
-                                    searchQuery: n.state.searchText,
-                                    isConversation: !1
-                                }), n.props.selectThread(r)
-                            }
-                        }
-                    }, n.filterExistingThreads = function(e) {
-                        var t = e.toLowerCase();
-                        return n.props.orderedThreadIDs.filter(function(e) {
-                            var i = n.props.threadsByID[e].participants.find(function(e) {
-                                return !!e && e.id !== n.props.currentUserID
-                            });
-                            return !(!i || !i.displayName) && i.displayName.toLowerCase().indexOf(t) >= 0
-                        })
-                    }, n.searchClient = new B.a({
-                        appId: g.a.algoliaApplicationID,
-                        apiKey: g.a.algoliaAPIKey,
-                        apolloClient: g.o.apollo.client,
-                        logger: g.j,
-                        config: g.a
-                    }), n.state = {
-                        open: !1,
-                        searchText: "",
-                        searching: !1
-                    }, n
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(x.a, {
-                        onClickOut: this.handleClose
-                    }, r.createElement(f._3, {
-                        className: "whispers-threads-box__container " + (this.state.open ? "whispers-threads-box__container--open" : ""),
-                        display: f.R.Flex,
-                        flexDirection: f.T.Column,
-                        flexWrap: f.U.NoWrap,
-                        border: !0,
-                        background: f.n.Base,
-                        position: f._15.Absolute,
-                        attachBottom: !0,
-                        attachRight: !0,
-                        "data-click-out-id": "threads-box",
-                        "data-a-target": "threads-box-" + (this.state.open ? "open" : "closed")
-                    }, r.createElement("div", {
-                        "aria-labelledby": "whispers-box-header"
-                    }, this.renderHeader(), this.renderList(), this.renderFooter())))
-                }, t.prototype.renderOpenCloseButton = function() {
-                    var e = null;
-                    if (this.props.unreadCount > 0) {
-                        var t = this.props.unreadCount > 99 ? "99+" : this.props.unreadCount.toString();
-                        e = r.createElement(f._8, {
-                            className: "whispers-threads-box__unread",
-                            margin: {
-                                y: .5
-                            }
-                        }, r.createElement("span", {
-                            className: "whispers-threads-box__unread--count",
-                            "data-a-target": "whisper-unreads"
-                        }, t))
-                    }
-                    return r.createElement(f._35, {
-                        className: "whispers-threads-box__open-close",
-                        position: f._15.Relative,
-                        background: f.n.Alt2,
-                        display: f.R.Flex,
-                        alignItems: f.c.Center,
-                        justifyContent: f._7.Center
-                    }, e, r.createElement(f.w, {
-                        ariaLabel: Object(g.d)("Close Threads", "WhisperThreadsBox"),
-                        icon: f._25.Conversations,
-                        onClick: this.handleConversationsClick,
-                        "data-a-target": "whisper-box-button"
-                    }))
-                }, t.prototype.renderList = function() {
-                    var e, t = this;
-                    if (!this.state.open) return null;
-                    var n = null;
-                    "" !== this.state.searchText && (n = r.createElement(f._35, {
-                        key: "otherPeopleDivider",
-                        borderBottom: !0,
-                        padding: {
-                            x: 1,
-                            y: .5
-                        }
-                    }, Object(g.d)("Other People", "WhispersThreadBox")));
-                    var i = null;
-                    if (this.state.searching ? i = r.createElement(f._8, {
-                            display: f.R.Flex,
-                            flexDirection: f.T.Column,
-                            margin: {
-                                top: 4
-                            },
-                            alignItems: f.c.Center
-                        }, r.createElement(f._10, {
-                            delay: 0
-                        })) : this.state.searchResults && this.state.searchResults.users && "" !== this.state.searchText && (i = this.state.searchResults.users.hits.filter(function(e) {
-                            return !t.props.threadsByID[e.objectID]
-                        }).map(this.renderUserSearchResult)), this.props.error) e = r.createElement(f._8, {
-                        margin: {
-                            x: "auto"
-                        },
-                        display: f.R.Flex,
-                        justifyContent: f._7.Center,
-                        alignItems: f.c.Center,
-                        fullHeight: !0
-                    }, r.createElement(f.Q, {
-                        color: f.K.Error
-                    }, Object(g.d)("There was a problem loading whispers.", "WhisperThreadsBox")));
-                    else if (this.props.loading) e = r.createElement(f._10, null);
-                    else {
-                        var a = this.props.orderedThreadIDs;
-                        "" !== this.state.searchText && (a = this.filterExistingThreads(this.state.searchText)), e = a.filter(function(e) {
-                            return t.props.threadsByID[e] && !t.props.threadsByID[e].archived
-                        }).map(function(e, n) {
-                            var i = 0 === n ? function() {
-                                    t.props.latencyTracking.reportCustomEvent(t.whispersHistoryLatencyEvent)
-                                } : void 0,
-                                a = t.props.threadsByID[e],
-                                o = a.participants.find(function(e) {
-                                    return !!e && e.id !== t.props.currentUserID
-                                });
-                            return o ? r.createElement(W, {
-                                key: "whisperThread:" + a.id,
-                                user: o,
-                                threadID: a.id,
-                                lastMessage: a.lastMessage,
-                                archiveThread: t.props.archiveThread,
-                                selectThread: t.selectThread,
-                                unreadMessageCount: a.unreadMessagesCount,
-                                muted: a.muted,
-                                avatarOnLoadCallback: i
-                            }) : null
-                        })
-                    }
-                    return r.createElement(L.b, {
-                        suppressScrollX: !0
-                    }, r.createElement("div", {
-                        role: "list"
-                    }, e, n, i, r.createElement(L.a, {
-                        enabled: this.state.open,
-                        loadMore: this.props.loadMore,
-                        pixelThreshold: 200
-                    })))
-                }, t.prototype.renderHeader = function() {
-                    return this.state.open ? r.createElement(f._35, {
-                        className: "whispers-threads-box__header",
-                        "data-a-target": "whispers-threads-box__header",
-                        alignItems: f.c.Center,
-                        background: f.n.Alt,
-                        borderBottom: !0,
-                        color: f.K.Base,
-                        display: f.R.Flex,
-                        flexDirection: f.T.Row,
-                        flexGrow: 0,
-                        flexShrink: 0,
-                        padding: {
-                            y: .5,
-                            x: 1
-                        },
-                        "data-click-hide-id": "threads-box-header"
-                    }, r.createElement(f._2, {
-                        flexGrow: 1,
-                        display: f.R.Flex
-                    }, r.createElement("div", {
-                        id: "whispers-box-header"
-                    }, r.createElement(f.Q, {
-                        type: f._49.Span,
-                        bold: !0
-                    }, Object(g.d)("Whispers", "WhisperThreadsBox")))), r.createElement(P.a, {
-                        ref: this.saveSettingsMenuRef
-                    }, r.createElement(f.w, {
-                        ariaLabel: Object(g.d)("Settings", "WhisperThreadsBox"),
-                        icon: f._25.Gear,
-                        "data-a-target": "whisper-settings-button"
-                    }), r.createElement(f.q, {
-                        size: f.s.Small,
-                        direction: f.r.BottomRight,
-                        offsetX: "0.5rem"
-                    }, r.createElement(G, {
-                        onMarkAllMessagesRead: this.onMarkAllMessagesRead
-                    }))), r.createElement(f.w, {
-                        ariaLabel: Object(g.d)("Minimize", "WhisperThreadsBox"),
-                        icon: f._25.Minimize,
-                        onClick: this.handleClose,
-                        "data-a-target": "whisper-close-button"
-                    })) : null
-                }, t.prototype.renderFooter = function() {
-                    return this.state.open ? r.createElement(f._35, {
-                        display: f.R.Flex,
-                        flexGrow: 0,
-                        flexShrink: 0,
-                        alignItems: f.c.Center,
-                        borderTop: !0,
-                        background: f.n.Alt
-                    }, r.createElement(f._8, {
-                        flexGrow: 1,
-                        padding: {
-                            top: .5,
-                            bottom: .5,
-                            left: 1
-                        }
-                    }, r.createElement(f._27, {
-                        onChange: this.onSearchInputChange,
-                        value: this.state.searchText,
-                        placeholder: Object(g.d)("Search for People", "WhisperThreadsBox"),
-                        id: "threads-box-filter",
-                        autoFocus: !0,
-                        "data-a-target": "whisper-search-input"
-                    })), this.renderOpenCloseButton()) : this.renderOpenCloseButton()
-                }, t.prototype.search = function(e) {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var t;
-                        return i.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return e ? [4, this.searchClient.queryForType(j.a.Users, e, A.a())] : [2];
-                                case 1:
-                                    return t = n.sent(), this.setState({
-                                        searchResults: t,
-                                        searching: !1
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t = i.__decorate([Object(U.d)("WhisperCenter", {
-                    autoReportInteractive: !0
-                })], t)
-            }(r.Component)),
-            K = n("1Mw/");
-        var $ = Object(c.b)(function(e) {
-            return {
-                openedThreads: e.whispers.display.openedIDs.map(function(t) {
-                    return Object(w.b)(e, t)
-                }),
-                focusedThreadID: e.whispers.display.focusedID
-            }
-        }, function(e) {
-            return {
-                onBlockThread: function(t) {
-                    return e(E.h(t, Object(C.a)()))
-                },
-                onCloseThread: function(t) {
-                    return e(E.h(t, Object(C.a)()))
-                },
-                onCollapseThread: function(t) {
-                    return e(E.i(t, Object(C.a)()))
-                },
-                onExpandThread: function(t) {
-                    return e(E.j(t, Object(C.a)()))
-                },
-                onFocusThread: function(t) {
-                    return e(E.k(t, Object(C.a)()))
-                },
-                onUnfocusThread: function(t) {
-                    return e(E.n(t, Object(C.a)()))
-                },
-                onResizeContent: function() {
-                    return e(E.m(Object(C.a)()))
-                }
-            }
-        })(K.a);
-
-        function Y(e) {
-            return Object.keys(e).reduce(function(t, n) {
-                var i = e[n];
-                return i.muted || i.archived ? t : t + i.unreadMessagesCount
-            }, 0)
-        }
-        var Z = function(e) {
-                for (var t = {}, n = 0, r = e; n < r.length; n++) {
-                    var a = r[n];
-                    t[a.id] = i.__assign({}, X(a))
-                }
-                return t
-            },
-            X = function(e) {
-                return {
-                    id: e.id,
-                    messageHistory: e.messages.edges.map(function(e) {
-                        return e.node
-                    }).slice(0, -1),
-                    lastMessage: e.messages.edges.map(function(e) {
-                        return e.node
-                    }).find(function(e) {
-                        return !e.deletedAt
-                    }) || null,
-                    spamInfo: e.spamInfo,
-                    participants: e.participants,
-                    muted: e.isMuted,
-                    archived: e.isArchived,
-                    unreadMessagesCount: e.unreadMessagesCount
-                }
-            },
-            J = n("9RMu"),
-            ee = n("DCOT"),
-            te = n("Lj1H");
-        var ne = n("qpaC"),
-            ie = n("8p/O"),
-            re = (n("n7G4"), function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    n.erroredLoadingMore = !1, n.logger = g.j.withCategory("whispers"), n.archiveThread = function(e) {
-                        if (n.state.threadsByID[e]) {
-                            var t = i.__assign({}, Object(I.a)({
-                                threadID: e,
-                                isArchived: !0
-                            }), {
-                                optimisticResponse: {
-                                    updateWhisperThread: {
-                                        thread: {
-                                            __typename: "WhisperThread",
-                                            id: e,
-                                            isArchived: !0
-                                        },
-                                        __typename: "UpdateWhisperThreadPayload"
-                                    }
-                                }
-                            });
-                            n.props.archiveThread && (n.props.closeThread(e), n.props.data.currentUser && Object(V.a)(e), n.props.archiveThread(t))
-                        }
-                    }, n.selectThread = function(e) {
-                        n.props.openThread({
-                            threadID: e,
-                            collapsed: !1
-                        })
-                    }, n.loadMore = function() {
-                        return i.__awaiter(n, void 0, void 0, function() {
-                            var e;
-                            return i.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        if (this.props.data.loading || this.props.data.error || this.erroredLoadingMore) return [3, 4];
-                                        t.label = 1;
-                                    case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, this.props.loadMore()];
-                                    case 2:
-                                        return t.sent(), [3, 4];
-                                    case 3:
-                                        return e = t.sent(), this.logger.warn("Load more whisper threads failed", {
-                                            error: e
-                                        }), this.erroredLoadingMore = !0, [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, n.handleThreadDataReport = function(e, t) {
-                        n.state.threadsByID[e] || Object(I.e)(ie, {
-                            cursor: null
-                        }, function(e) {
-                            return e.currentUser && e.currentUser.whisperThreads && e.currentUser.whisperThreads.edges.unshift({
-                                cursor: "0",
-                                node: i.__assign({}, t, {
-                                    isArchived: !1
-                                }),
-                                __typename: "WhisperThreadEdge"
-                            }), e
-                        });
-                        var r = i.__assign({}, n.state.threadsByID[e]);
-                        t.messages && (r.messageHistory = t.messages.edges.map(function(e) {
-                            return e.node
-                        }).slice(0, -1)), !1 !== t.isMuted && !0 !== t.isMuted || (r.muted = t.isMuted);
-                        var a, o = i.__assign({}, n.state.threadsByID, ((a = {})[e] = r, a));
-                        n.setState({
-                            threadsByID: o,
-                            unreadCount: Y(o)
-                        })
-                    };
-                    var r = n.props.data.currentUser && n.props.data.currentUser.whisperThreads && Z(n.props.data.currentUser.whisperThreads.edges.map(function(e) {
-                        return e.node
-                    })) || {};
-                    return n.state = {
-                        error: !!n.props.data.error,
-                        orderedThreadIDs: n.props.data.currentUser && n.props.data.currentUser.whisperThreads && n.props.data.currentUser.whisperThreads.edges.map(function(e) {
-                            return e.node.id
-                        }) || [],
-                        renderError: !1,
-                        threadsByID: r,
-                        unreadCount: Y(r)
-                    }, n
-                }
-                return i.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
-                    var n = this;
-                    this.setState({
-                        renderError: !0
-                    }, function() {
-                        n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
-                            info: t
-                        })
-                    })
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    if (e.data.error) this.setState({
-                        error: !!e.data.error
-                    });
-                    else if (!e.data.loading && e.data.currentUser && e.data.currentUser.whisperThreads) {
-                        var t = Z(e.data.currentUser.whisperThreads.edges.map(function(e) {
-                            return e.node
-                        }));
-                        this.setState({
-                            threadsByID: t,
-                            orderedThreadIDs: e.data.currentUser.whisperThreads.edges.map(function(e) {
-                                return e.node.id
-                            }),
-                            unreadCount: Y(t)
-                        })
-                    }
-                }, t.prototype.render = function() {
-                    if (!this.props.data.currentUser || this.state.renderError || !this.props.isVisible) return null;
-                    var e = T({
-                        whispers: !0,
-                        "whispers--theatre-mode": this.props.theatreModeEnabled,
-                        "whispers--right-column-expanded": this.props.rightColumnExpanded
-                    });
-                    return r.createElement(f._8, {
-                        className: e,
-                        position: f._15.Absolute,
-                        attachBottom: !0,
-                        attachLeft: !0,
-                        margin: {
-                            right: 1
-                        }
-                    }, r.createElement($, {
-                        currentUserID: this.props.data.currentUser.id,
-                        reportThreadData: this.handleThreadDataReport,
-                        archiveThread: this.archiveThread
-                    }), r.createElement(Q, {
-                        currentUserID: this.props.data.currentUser.id,
-                        error: this.state.error,
-                        loading: this.props.data.loading,
-                        unreadCount: this.state.unreadCount,
-                        orderedThreadIDs: this.state.orderedThreadIDs,
-                        threadsByID: this.state.threadsByID,
-                        selectThread: this.selectThread,
-                        archiveThread: this.archiveThread,
-                        loadMore: this.loadMore
-                    }))
-                }, t = i.__decorate([Object(N.a)(ie, {
-                    props: function(e) {
-                        return i.__assign({}, e, {
-                            loadMore: function() {
-                                return e.data.fetchMore({
-                                    query: ie,
-                                    variables: i.__assign({}, e.data.variables, {
-                                        cursor: e.data.currentUser && e.data.currentUser.whisperThreads && e.data.currentUser.whisperThreads.edges.length > 0 ? e.data.currentUser.whisperThreads.edges[e.data.currentUser.whisperThreads.edges.length - 1].cursor : null
-                                    }),
-                                    updateQuery: function(e, t) {
-                                        var n = t.fetchMoreResult;
-                                        return n.currentUser ? e.currentUser && e.currentUser.whisperThreads ? n.currentUser.whisperThreads ? {
-                                            currentUser: i.__assign({}, n.currentUser, {
-                                                whisperThreads: i.__assign({}, n.currentUser.whisperThreads, {
-                                                    edges: Object(I.c)(e.currentUser.whisperThreads.edges, n.currentUser.whisperThreads.edges)
-                                                })
-                                            })
-                                        } : {
-                                            currentUser: i.__assign({}, n.currentUser, {
-                                                whisperThreads: e.currentUser.whisperThreads
-                                            })
-                                        } : {
-                                            currentUser: n.currentUser
-                                        } : {
-                                            currentUser: null
-                                        }
-                                    }
-                                })
-                            }
-                        })
-                    }
-                }), Object(N.a)(ne, {
-                    name: "archiveThread"
-                }), Object(O.a)(function(e) {
-                    return {
-                        query: ie,
-                        types: [R.PubsubMessageType.WhisperDeleted, R.PubsubMessageType.WhisperEdited, R.PubsubMessageType.WhisperSent, R.PubsubMessageType.WhisperAllThreadsUpdate, R.PubsubMessageType.WhisperReceived, R.PubsubMessageType.WhisperThreadUpdate],
-                        variables: i.__assign({}, e.data.variables),
-                        skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                        topic: Object(D.A)(e.data.currentUser && e.data.currentUser.id || ""),
-                        mutator: function(t, n) {
-                            if (!n.currentUser || !n.currentUser.whisperThreads) return n;
-                            if (Object(te.e)(t) || Object(te.d)(t)) {
-                                if (Object(te.d)(t)) {
-                                    var i = n.currentUser.whisperThreads.edges.find(function(e) {
-                                        return e.node.id === t.data_object.thread_id
-                                    });
-                                    if (i) {
-                                        var r = i.node.participants.find(function(e) {
-                                            return !!e && e.id === "" + t.data_object.from_id
-                                        });
-                                        r && Object(V.l)({
-                                            targetUserLogin: r.login,
-                                            threadID: t.data_object.thread_id
-                                        })
-                                    }
-                                }
-                                return function(e, t, n, i) {
-                                    if (!t.currentUser || !t.currentUser.whisperThreads) return t;
-                                    var r = g.m.get("whisperDoNotDisturb", !1),
-                                        a = t.currentUser.whisperThreads.edges.find(function(t) {
-                                            return t.node.id === e.data_object.thread_id
-                                        });
-                                    if (a) {
-                                        var o = Object(J.c)(e);
-                                        a.node.messages.edges.unshift(o), Object(te.d)(e) && (e.data_object.thread_id !== n ? a.node.unreadMessagesCount += 1 : Object(ee.a)({
-                                            threadID: e.data_object.thread_id,
-                                            lastReadMessageID: e.data_object.message_id
-                                        }, e.data_object.id), i({
-                                            threadID: e.data_object.thread_id,
-                                            collapsed: !0,
-                                            hidden: r
-                                        })), a.node.isArchived = !1;
-                                        var s = t.currentUser.whisperThreads.edges.filter(function(t) {
-                                            return t.node.id !== e.data_object.thread_id
-                                        });
-                                        s.unshift(a), t.currentUser.whisperThreads.edges = s
-                                    } else i({
-                                        threadID: e.data_object.thread_id,
-                                        collapsed: !0,
-                                        hidden: r
-                                    });
-                                    return t
-                                }(t, n, e.focusedThreadID, e.openThread)
-                            }
-                            return Object(te.b)(t) ? function(e, t) {
-                                if (!t.currentUser || !t.currentUser.whisperThreads) return t;
-                                var n = t.currentUser.whisperThreads.edges.find(function(t) {
-                                    return t.node.id === e.data_object.thread_id
-                                });
-                                if (n) {
-                                    var i = n.node.messages.edges.find(function(t) {
-                                        return t.node.id === e.data_object.message_id
-                                    });
-                                    i && (i.node.deletedAt = new Date(1e3 * e.data_object.deleted_at).toISOString(), i.node.content.content = e.data_object.body, i.node.content.emotes = Object(J.b)(e.data_object.tags.emotes))
-                                }
-                                return t
-                            }(t, n) : Object(te.c)(t) ? function(e, t) {
-                                if (!t.currentUser || !t.currentUser.whisperThreads) return t;
-                                var n = t.currentUser.whisperThreads.edges.find(function(t) {
-                                    return t.node.id === e.data_object.thread_id
-                                });
-                                if (n) {
-                                    var i = n.node.messages.edges.find(function(t) {
-                                        return t.node.id === e.data_object.message_id
-                                    });
-                                    i && (i.node.editedAt = new Date(1e3 * e.data_object.edited_at).toISOString(), i.node.content.content = e.data_object.body, i.node.content.emotes = Object(J.b)(e.data_object.tags.emotes))
-                                }
-                                return t
-                            }(t, n) : Object(te.f)(t) ? function(e, t, n) {
-                                if (!t.currentUser || !t.currentUser.whisperThreads) return t;
-                                var i = t.currentUser.whisperThreads.edges.findIndex(function(t) {
-                                    return t.node.id === e.data_object.id
-                                });
-                                if (i >= 0) {
-                                    var r = t.currentUser.whisperThreads.edges[i],
-                                        a = r.node.messages.edges[0].cursor,
-                                        o = parseInt(a, 10) - e.data_object.last_read;
-                                    r.node.unreadMessagesCount = o >= 0 ? o : 0, r.node.isMuted = e.data_object.muted, !r.node.isArchived && e.data_object.archived && n(e.data_object.id), r.node.isArchived = e.data_object.archived
-                                }
-                                return t
-                            }(t, n, e.closeThread) : Object(te.a)(t) ? function(e, t) {
-                                return t.currentUser && t.currentUser.whisperThreads ? (e.data_object.mark_all_read && t.currentUser.whisperThreads.edges.forEach(function(e) {
-                                    e.node.unreadMessagesCount = 0
-                                }), t) : t
-                            }(t, n) : n
-                        },
-                        skipMessage: function(e, t) {
-                            if (Object(te.e)(e)) {
-                                if (!t.currentUser || !t.currentUser.whisperThreads) return !1;
-                                var n = t.currentUser.whisperThreads.edges.find(function(t) {
-                                    return t.node.id === e.data_object.thread_id
-                                });
-                                if (n && n.node.messages.edges.findIndex(function(t) {
-                                        return t.node.id === e.data_object.nonce
-                                    }) >= 0) return !0
-                            }
-                            return !1
-                        }
-                    }
-                })], t)
-            }(r.Component));
-        var ae = Object(c.b)(function(e) {
-                return {
-                    isVisible: Object(S.b)(e),
-                    rightColumnExpanded: e.ui.rightColumnExpanded,
-                    theatreModeEnabled: e.ui.theatreModeEnabled,
-                    focusedThreadID: e.whispers.display.focusedID
-                }
-            }, function(e) {
-                return {
-                    openThread: function(t) {
-                        return e(E.l(t, Object(C.a)()))
-                    },
-                    closeThread: function(t) {
-                        return e(E.h(t, Object(C.a)()))
-                    }
-                }
-            })(re),
-            oe = n("F8kA"),
-            se = n("bZTi"),
-            le = n("yWCw"),
-            ce = n("Ejve"),
-            de = n("eBiB"),
-            ue = n("0Mfl"),
-            pe = n("X4PA"),
-            me = se.a.wrap(function() {
-                return n.e(41).then(n.bind(null, "gZGZ"))
+            w = n("RGTy"),
+            S = n("F8kA"),
+            E = n("bZTi"),
+            C = n("yWCw"),
+            T = n("Ejve"),
+            N = n("eBiB"),
+            O = n("0Mfl"),
+            R = n("CSlQ"),
+            I = n("X4PA"),
+            D = E.a.wrap(function() {
+                return n.e(40).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
-            he = se.a.wrap(function() {
+            x = E.a.wrap(function() {
                 return n.e(57).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
-            ge = se.a.wrap(function() {
+            L = E.a.wrap(function() {
                 return n.e(43).then(n.bind(null, "lW0T"))
             }, "ChannelEventsPage"),
-            fe = se.a.wrap(function() {
+            P = E.a.wrap(function() {
                 return n.e(45).then(n.bind(null, "35Zp"))
             }, "ChannelFollowersPage"),
-            ve = se.a.wrap(function() {
+            F = E.a.wrap(function() {
                 return n.e(44).then(n.bind(null, "ztSx"))
             }, "ChannelFollowingPage"),
-            be = se.a.wrap(function() {
+            A = E.a.wrap(function() {
                 return n.e(30).then(n.bind(null, "oFVJ"))
             }, "ChannelPage"),
-            ye = se.a.wrap(function() {
+            M = E.a.wrap(function() {
                 return n.e(30).then(n.bind(null, "oFVJ"))
             }, "ChannelRoot"),
-            ke = se.a.wrap(function() {
+            U = E.a.wrap(function() {
                 return n.e(33).then(n.bind(null, "g8mI"))
             }, "ChannelVideosPage"),
-            _e = se.a.wrap(function() {
+            j = E.a.wrap(function() {
                 return n.e(31).then(n.bind(null, "jWoj"))
             }, "MessagesPage"),
-            we = se.a.wrap(function() {
+            B = E.a.wrap(function() {
                 return n.e(79).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
-            Se = function(e) {
-                return r.createElement(oe.c, {
+            H = function(e) {
+                return r.createElement(S.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            Ee = function(e) {
-                return r.createElement(oe.c, {
+            W = function(e) {
+                return r.createElement(S.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            Ce = function(e) {
-                return r.createElement(oe.c, {
+            V = function(e) {
+                return r.createElement(S.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            Te = function(e) {
+            z = function(e) {
                 return window.location.replace(g.a.playerBaseURL + "/?channel=" + e.match.params.channelName), null
             },
-            Ne = function(e) {
+            G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -29195,206 +29229,206 @@ webpackJsonp([85], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    if (this.state.isError) return r.createElement(le.a, {
+                    if (this.state.isError) return r.createElement(C.a, {
                         message: Object(g.d)("An error occurred on this page", "ChannelPageRouter")
                     });
                     var e = "on" === g.o.experiments.getAssignment("TWILIGHT_WATCH_SYMMETRA");
-                    return r.createElement(oe.e, null, e ? r.createElement(oe.d, {
+                    return r.createElement(S.e, null, e ? r.createElement(S.d, {
                         path: "/:channelName",
-                        component: ye,
+                        component: M,
                         exact: !0
-                    }) : r.createElement(oe.d, {
+                    }) : r.createElement(S.d, {
                         path: "/:channelName",
-                        component: be,
+                        component: A,
                         exact: !0
-                    }), r.createElement(oe.d, {
+                    }), r.createElement(S.d, {
                         path: "/:channelName/report",
-                        component: we
-                    }), r.createElement(oe.d, {
+                        component: B
+                    }), r.createElement(S.d, {
                         path: "/:channelLogin/profile",
-                        render: Ee
-                    }), r.createElement(oe.d, {
+                        render: W
+                    }), r.createElement(S.d, {
                         path: "/:channelLogin/videos/(past_broadcasts?)",
-                        render: Ce
-                    }), e ? r.createElement(oe.d, {
+                        render: V
+                    }), e ? r.createElement(S.d, {
                         path: "/:channelName/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                        component: ye
-                    }) : r.createElement(oe.d, {
+                        component: M
+                    }) : r.createElement(S.d, {
                         path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                        component: ke
-                    }), r.createElement(oe.d, {
+                        component: U
+                    }), r.createElement(S.d, {
                         path: "/:channelLogin/videos/:unknownFilter?",
-                        render: Ee
-                    }), e ? r.createElement(oe.d, {
+                        render: W
+                    }), e ? r.createElement(S.d, {
                         path: "/:channelName/clips",
-                        component: ye
-                    }) : r.createElement(oe.d, {
+                        component: M
+                    }) : r.createElement(S.d, {
                         path: "/:channelName/clips",
-                        component: me
-                    }), r.createElement(oe.d, {
+                        component: D
+                    }), r.createElement(S.d, {
                         path: "/:channelLogin/chat",
-                        render: Se
-                    }), e ? r.createElement(oe.d, {
+                        render: H
+                    }), e ? r.createElement(S.d, {
                         path: "/:channelName/collections",
-                        component: ye
-                    }) : r.createElement(oe.d, {
+                        component: M
+                    }) : r.createElement(S.d, {
                         path: "/:channelLogin/collections",
-                        component: he
-                    }), e ? r.createElement(oe.d, {
+                        component: x
+                    }), e ? r.createElement(S.d, {
                         path: "/:channelName/events",
-                        component: ye
-                    }) : r.createElement(oe.d, {
+                        component: M
+                    }) : r.createElement(S.d, {
                         path: "/:channelLogin/events",
-                        component: ge
-                    }), e ? r.createElement(oe.d, {
+                        component: L
+                    }), e ? r.createElement(S.d, {
                         path: "/:channelName/followers",
-                        component: ye
-                    }) : r.createElement(oe.d, {
+                        component: M
+                    }) : r.createElement(S.d, {
                         path: "/:channelLogin/followers",
-                        component: fe
-                    }), e ? r.createElement(oe.d, {
+                        component: P
+                    }), e ? r.createElement(S.d, {
                         path: "/:channelName/following",
-                        component: ye
-                    }) : r.createElement(oe.d, {
+                        component: M
+                    }) : r.createElement(S.d, {
                         path: "/:channelLogin/following",
-                        component: ve
-                    }), r.createElement(oe.d, {
+                        component: F
+                    }), r.createElement(S.d, {
                         path: "/:channelLogin/inbox",
-                        component: _e
-                    }), r.createElement(oe.d, {
+                        component: j
+                    }), r.createElement(S.d, {
                         path: "/:channelLogin/outbox",
-                        component: _e
-                    }), e ? r.createElement(oe.d, {
+                        component: j
+                    }), e ? r.createElement(S.d, {
                         path: "/:channelName/p/:entityID",
-                        component: ye
-                    }) : r.createElement(oe.d, {
+                        component: M
+                    }) : r.createElement(S.d, {
                         path: "/:channelName/p/:entityID",
-                        component: be
-                    }), e ? r.createElement(oe.d, {
+                        component: A
+                    }), e ? r.createElement(S.d, {
                         path: "/:channelName/rooms/:roomName",
-                        component: ye
-                    }) : r.createElement(oe.d, {
+                        component: M
+                    }) : r.createElement(S.d, {
                         path: "/:channelName/rooms/:roomName",
-                        component: be
-                    }), r.createElement(oe.d, {
+                        component: A
+                    }), r.createElement(S.d, {
                         path: "/:channelName/embed",
-                        render: Te
-                    }), r.createElement(oe.d, {
+                        render: z
+                    }), r.createElement(S.d, {
                         path: "/:channelName/popout",
-                        render: Te
-                    }), r.createElement(oe.d, {
+                        render: z
+                    }), r.createElement(S.d, {
                         path: "*",
-                        component: pe.a
+                        component: I.a
                     }))
                 }, t
             }(r.Component),
-            Oe = Object(U.d)("ChannelPageRedesignRouter", {
+            q = Object(R.d)("ChannelPageRedesignRouter", {
                 autoReportInteractive: !0
-            })(Ne),
-            Re = se.a.wrap(function() {
+            })(G),
+            Q = E.a.wrap(function() {
                 return n.e(56).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
-            Ie = se.a.wrap(function() {
+            K = E.a.wrap(function() {
                 return n.e(65).then(n.bind(null, "41t4"))
             }, "BroadcastPage"),
-            De = se.a.wrap(function() {
+            $ = E.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
-            xe = se.a.wrap(function() {
+            Y = E.a.wrap(function() {
                 return n.e(62).then(n.bind(null, "rujk"))
             }, "CommunityModerationRoot"),
-            Le = se.a.wrap(function() {
+            Z = E.a.wrap(function() {
                 return n.e(71).then(n.bind(null, "BAkg"))
             }, "CreateCommunityPage"),
-            Pe = se.a.wrap(function() {
+            X = E.a.wrap(function() {
                 return n.e(76).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
-            Fe = se.a.wrap(function() {
+            J = E.a.wrap(function() {
                 return n.e(50).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
-            Ae = se.a.wrap(function() {
+            ee = E.a.wrap(function() {
                 return n.e(70).then(n.bind(null, "IzAE"))
             }, "DevOnlyTestingCarouselPage"),
-            Me = se.a.wrap(function() {
+            te = E.a.wrap(function() {
                 return n.e(80).then(n.bind(null, "mqYJ"))
             }, "EmailUnsubscribePage"),
-            Ue = se.a.wrap(function() {
+            ne = E.a.wrap(function() {
                 return n.e(82).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
-            je = se.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "NTi8"))
+            ie = E.a.wrap(function() {
+                return n.e(53).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
-            Be = se.a.wrap(function() {
+            re = E.a.wrap(function() {
                 return n.e(60).then(n.bind(null, "0QnV"))
             }, "ExtensionsRoot"),
-            He = se.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "IpE8"))
+            ae = E.a.wrap(function() {
+                return n.e(52).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
-            We = se.a.wrap(function() {
-                return n.e(54).then(n.bind(null, "IOEW"))
+            oe = E.a.wrap(function() {
+                return n.e(51).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
-            Ve = se.a.wrap(function() {
+            se = E.a.wrap(function() {
                 return n.e(74).then(n.bind(null, "H+V/"))
             }, "FriendRequestsPage"),
-            ze = se.a.wrap(function() {
+            le = E.a.wrap(function() {
                 return n.e(73).then(n.bind(null, "mlfa"))
             }, "FriendsPage"),
-            Ge = se.a.wrap(function() {
+            ce = E.a.wrap(function() {
                 return n.e(69).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
-            qe = se.a.wrap(function() {
+            de = E.a.wrap(function() {
                 return n.e(83).then(n.bind(null, "o8EG"))
             }, "ManagerRedirectPage"),
-            Qe = se.a.wrap(function() {
+            ue = E.a.wrap(function() {
                 return n.e(31).then(n.bind(null, "jWoj"))
             }, "MessagesPage"),
-            Ke = se.a.wrap(function() {
-                return n.e(40).then(n.bind(null, "gZLf"))
+            pe = E.a.wrap(function() {
+                return n.e(41).then(n.bind(null, "gZLf"))
             }, "PaymentsLandingPage"),
-            $e = se.a.wrap(function() {
+            me = E.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
-            Ye = se.a.wrap(function() {
+            he = E.a.wrap(function() {
                 return n.e(38).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            Ze = se.a.wrap(function() {
+            ge = E.a.wrap(function() {
                 return n.e(66).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            Xe = se.a.wrap(function() {
+            fe = E.a.wrap(function() {
                 return n.e(64).then(n.bind(null, "jQFB"))
             }, "SubscriptionsManagementPage"),
-            Je = se.a.wrap(function() {
+            ve = E.a.wrap(function() {
                 return n.e(47).then(n.bind(null, "GUP0"))
             }, "UnsubscribePage"),
-            et = function() {
+            be = function() {
                 return window.location.assign(window.location.href), null
             },
-            tt = function(e) {
-                var t = Object(de.a)(e.match.params.videoID);
-                return r.createElement(oe.c, {
+            ye = function(e) {
+                var t = Object(N.a)(e.match.params.videoID);
+                return r.createElement(S.c, {
                     to: "/videos/" + t
                 })
             },
-            nt = function() {
-                return r.createElement(oe.c, {
+            ke = function() {
+                return r.createElement(S.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            it = function(e) {
-                return r.createElement(oe.c, {
+            _e = function(e) {
+                return r.createElement(S.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            rt = function() {
-                return r.createElement(oe.c, {
+            we = function() {
+                return r.createElement(S.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            at = function() {
-                return window.location.replace(ue.a), null
+            Se = function() {
+                return window.location.replace(O.a), null
             },
-            ot = function(e) {
+            Ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -29411,190 +29445,190 @@ webpackJsonp([85], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return this.state.isError ? r.createElement(le.a, {
+                    return this.state.isError ? r.createElement(C.a, {
                         message: Object(g.d)("An error occurred on this page", "DefaultRootRouter")
-                    }) : r.createElement(oe.e, null, g.a.buildType !== ce.a.Production && r.createElement(oe.d, {
+                    }) : r.createElement(S.e, null, g.a.buildType !== T.a.Production && r.createElement(S.d, {
                         path: "/_dev/testing/carousel",
-                        component: Ae
-                    }), g.a.buildType !== ce.a.Production && r.createElement(oe.d, {
+                        component: ee
+                    }), g.a.buildType !== T.a.Production && r.createElement(S.d, {
                         path: "/_dev/testing/amazon-offers/:channelName",
-                        component: Ze
-                    }), g.a.buildType !== ce.a.Production && r.createElement(oe.d, {
+                        component: ge
+                    }), g.a.buildType !== T.a.Production && r.createElement(S.d, {
                         path: "/_dev",
-                        component: Pe
-                    }), r.createElement(oe.d, {
+                        component: X
+                    }), r.createElement(S.d, {
                         exact: !0,
                         path: "/",
-                        component: this.props.isLoggedIn ? We : Re
-                    }), r.createElement(oe.d, {
+                        component: this.props.isLoggedIn ? oe : Q
+                    }), r.createElement(S.d, {
                         path: "/activate",
-                        render: et
-                    }), r.createElement(oe.d, {
+                        render: be
+                    }), r.createElement(S.d, {
                         path: "/bits",
-                        render: et
-                    }), r.createElement(oe.d, {
+                        render: be
+                    }), r.createElement(S.d, {
                         path: "/bits-checkout",
-                        render: et
-                    }), r.createElement(oe.d, {
+                        render: be
+                    }), r.createElement(S.d, {
                         path: "/checkout",
-                        render: et
-                    }), r.createElement(oe.d, {
+                        render: be
+                    }), r.createElement(S.d, {
                         path: "/products",
-                        render: et
-                    }), r.createElement(oe.d, {
+                        render: be
+                    }), r.createElement(S.d, {
                         path: "/embed",
-                        render: et
-                    }), r.createElement(oe.d, {
+                        render: be
+                    }), r.createElement(S.d, {
                         path: "/popout",
-                        render: et
-                    }), r.createElement(oe.d, {
+                        render: be
+                    }), r.createElement(S.d, {
                         path: "/prime",
-                        render: et
-                    }), r.createElement(oe.d, {
+                        render: be
+                    }), r.createElement(S.d, {
                         path: "/subs",
-                        render: et
-                    }), r.createElement(oe.d, {
+                        render: be
+                    }), r.createElement(S.d, {
                         path: "/broadcast",
-                        component: Ie
-                    }), r.createElement(oe.d, {
+                        component: K
+                    }), r.createElement(S.d, {
                         path: "/collections/:collectionID",
-                        component: Ye
-                    }), r.createElement(oe.d, {
+                        component: he
+                    }), r.createElement(S.d, {
                         path: "/communities/create",
-                        component: Le
-                    }), r.createElement(oe.d, {
+                        component: Z
+                    }), r.createElement(S.d, {
                         path: "/communities/:encodedCommunityName/details",
-                        component: Fe
-                    }), r.createElement(oe.d, {
+                        component: J
+                    }), r.createElement(S.d, {
                         path: "/communities/:encodedCommunityName/moderation/:page?",
-                        component: xe
-                    }), r.createElement(oe.d, {
+                        component: Y
+                    }), r.createElement(S.d, {
                         path: "/communities/:encodedCommunityName/:encodedLanguage",
-                        component: Fe
-                    }), r.createElement(oe.d, {
+                        component: J
+                    }), r.createElement(S.d, {
                         path: "/communities/:encodedCommunityName",
-                        component: Fe
-                    }), r.createElement(oe.d, {
+                        component: J
+                    }), r.createElement(S.d, {
                         path: "/directory/communities",
-                        component: De
-                    }), r.createElement(oe.d, {
+                        component: $
+                    }), r.createElement(S.d, {
                         path: "/directory/creative",
-                        component: De
-                    }), r.createElement(oe.d, {
+                        component: $
+                    }), r.createElement(S.d, {
                         path: "/directory/following/:category?",
-                        component: He
-                    }), r.createElement(oe.d, {
+                        component: ae
+                    }), r.createElement(S.d, {
                         path: "/directory/game/:encodedCommunityName/clips",
-                        component: Fe
-                    }), r.createElement(oe.d, {
+                        component: J
+                    }), r.createElement(S.d, {
                         path: "/directory/game/:encodedCommunityName/details",
-                        component: Fe
-                    }), r.createElement(oe.d, {
+                        component: J
+                    }), r.createElement(S.d, {
                         path: "/directory/game/:encodedCommunityName/videos/:filter",
-                        component: Fe
-                    }), r.createElement(oe.d, {
+                        component: J
+                    }), r.createElement(S.d, {
                         path: "/directory/game/:encodedCommunityName/videos",
-                        render: it
-                    }), r.createElement(oe.d, {
+                        render: _e
+                    }), r.createElement(S.d, {
                         path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                        component: Fe
-                    }), r.createElement(oe.d, {
+                        component: J
+                    }), r.createElement(S.d, {
                         path: "/directory/game/:encodedCommunityName",
-                        component: Fe
-                    }), r.createElement(oe.d, {
+                        component: J
+                    }), r.createElement(S.d, {
                         path: "/directory/all/ps4",
-                        component: De
-                    }), r.createElement(oe.d, {
+                        component: $
+                    }), r.createElement(S.d, {
                         path: "/directory/all/xb1",
-                        component: rt
-                    }), r.createElement(oe.d, {
+                        component: we
+                    }), r.createElement(S.d, {
                         path: "/directory/all/xbox",
-                        component: De
-                    }), r.createElement(oe.d, {
+                        component: $
+                    }), r.createElement(S.d, {
                         path: "/directory/all/:encodedLanguage",
-                        component: De
-                    }), r.createElement(oe.d, {
+                        component: $
+                    }), r.createElement(S.d, {
                         path: "/directory/all",
-                        component: De
-                    }), r.createElement(oe.d, {
+                        component: $
+                    }), r.createElement(S.d, {
                         path: "/directory/:category?",
-                        component: De
-                    }), r.createElement(oe.d, {
+                        component: $
+                    }), r.createElement(S.d, {
                         path: "/events/:eventName",
-                        component: je
-                    }), r.createElement(oe.d, {
+                        component: ie
+                    }), r.createElement(S.d, {
                         path: "/email-unsubscribe",
-                        component: Me
-                    }), r.createElement(oe.d, {
+                        component: te
+                    }), r.createElement(S.d, {
                         path: "/email-verification/:emailOpaqueId",
-                        component: Ue
-                    }), r.createElement(oe.d, {
+                        component: ne
+                    }), r.createElement(S.d, {
                         path: "/ext",
-                        component: Be
-                    }), r.createElement(oe.d, {
+                        component: re
+                    }), r.createElement(S.d, {
                         path: "/friends/requests",
-                        component: Ve
-                    }), r.createElement(oe.d, {
+                        component: se
+                    }), r.createElement(S.d, {
                         path: "/friends",
-                        component: ze
-                    }), r.createElement(oe.d, {
+                        component: le
+                    }), r.createElement(S.d, {
                         path: "/payments",
-                        component: Ke
-                    }), r.createElement(oe.d, {
+                        component: pe
+                    }), r.createElement(S.d, {
                         path: "/following",
-                        component: nt
-                    }), r.createElement(oe.d, {
+                        component: ke
+                    }), r.createElement(S.d, {
                         path: "/inbox",
-                        component: Qe
-                    }), r.createElement(oe.d, {
+                        component: ue
+                    }), r.createElement(S.d, {
                         path: "/inventory",
-                        component: Ge
-                    }), r.createElement(oe.d, {
+                        component: ce
+                    }), r.createElement(S.d, {
                         path: "/outbox",
-                        component: Qe
-                    }), r.createElement(oe.d, {
+                        component: ue
+                    }), r.createElement(S.d, {
                         path: "/videos/v:videoID",
-                        render: tt
-                    }), r.createElement(oe.d, {
+                        render: ye
+                    }), r.createElement(S.d, {
                         path: "/videos/:videoID",
-                        component: Ye
-                    }), r.createElement(oe.d, {
+                        component: he
+                    }), r.createElement(S.d, {
                         path: "/store",
-                        render: at
-                    }), r.createElement(oe.d, {
+                        render: Se
+                    }), r.createElement(S.d, {
                         path: "/store/merch",
-                        render: at
-                    }), r.createElement(oe.d, {
+                        render: Se
+                    }), r.createElement(S.d, {
                         path: "/subscriptions",
-                        component: Xe
-                    }), r.createElement(oe.d, {
+                        component: fe
+                    }), r.createElement(S.d, {
                         path: "/unsubscribe/:productName",
-                        component: Je
-                    }), r.createElement(oe.d, {
+                        component: ve
+                    }), r.createElement(S.d, {
                         path: "/settings/:tab?",
-                        component: $e
-                    }), r.createElement(oe.d, {
+                        component: me
+                    }), r.createElement(S.d, {
                         path: "/manager/:pageName?",
-                        component: qe
-                    }), r.createElement(oe.d, {
+                        component: de
+                    }), r.createElement(S.d, {
                         path: "/messages/:pageName?",
-                        component: Qe
-                    }), r.createElement(oe.d, {
+                        component: ue
+                    }), r.createElement(S.d, {
                         path: "*",
-                        component: Oe
+                        component: q
                     }))
                 }, t
             }(r.Component),
-            st = Object(U.d)("DefaultRootRouter", {
+            Ce = Object(R.d)("DefaultRootRouter", {
                 autoReportInteractive: !0
-            })(ot);
+            })(Ee);
         n.d(t, "b", function() {
-            return lt
+            return Te
         }), n.d(t, "a", function() {
-            return ct
+            return Ne
         });
-        var lt = "twilight-main",
-            ct = function(e) {
+        var Te = "twilight-main",
+            Ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -29625,14 +29659,14 @@ webpackJsonp([85], {
                         flexDirection: f.T.Column,
                         zIndex: this.props.theatreModeEnabled ? void 0 : f._62.Default
                     }, r.createElement("main", {
-                        className: lt
+                        className: Te
                     }, r.createElement(y.b, null), r.createElement(s.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, r.createElement(st, {
+                    }, r.createElement(Ce, {
                         isLoggedIn: this.props.isLoggedIn
                     }), r.createElement(a.b, {
                         mainRef: this.state.rootScrollableContentRef
-                    })), r.createElement(v, null), this.props.firstPageLoaded && r.createElement(ae, null))), r.createElement(o.a, null)))
+                    })), r.createElement(v, null), this.props.firstPageLoaded && r.createElement(w.a, null))), r.createElement(o.a, null)))
                 }, t
             }(r.Component)
     },
@@ -32146,6 +32180,15 @@ webpackJsonp([85], {
                         }
                     }, Object(u.d)("About", "TopNav"))), d.createElement(H._6, {
                         targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/legal/ad-choices",
+                        "data-a-target": "ad-choices-link"
+                    }, d.createElement(H._8, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(u.d)("Ad Choices", "TopNav"))), d.createElement(H._6, {
+                        targetBlank: !0,
                         linkTo: "http://twitchadvertising.tv/",
                         "data-a-target": "advertisers-link"
                     }, d.createElement(H._8, {
@@ -32262,6 +32305,15 @@ webpackJsonp([85], {
                             x: 1
                         }
                     }, Object(u.d)("Press", "TopNav"))), d.createElement(H._6, {
+                        targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/legal/privacy-policy",
+                        "data-a-target": "privacy-policy-link"
+                    }, d.createElement(H._8, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(u.d)("Privacy Policy", "TopNav"))), d.createElement(H._6, {
                         targetBlank: !0,
                         linkTo: "https://twitch.tv/p/security",
                         "data-a-target": "security-link"
@@ -42952,7 +43004,7 @@ webpackJsonp([85], {
                 return i
             }),
             function(e) {
-                e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
             }(i || (i = {}))
     },
     kLsX: function(e, t) {},
@@ -45788,7 +45840,7 @@ webpackJsonp([85], {
                 return n.e(84).then(n.bind(null, "EtaR"))
             }, "TeamsLandingPage"),
             se = m.a.wrap(function() {
-                return n.e(53).then(n.bind(null, "lI8O"))
+                return n.e(54).then(n.bind(null, "lI8O"))
             }, "OnboardingRoot"),
             le = function(e) {
                 return i.createElement(p.c, {
@@ -46448,7 +46500,7 @@ webpackJsonp([85], {
                             clientID: "d6g6o112aam5s8q2di888us9o3kuyh",
                             cookieName: "twilight-user.dev",
                             forceVerify: !0,
-                            redirectURI: "https://wwww.twitch.tv/passport-callback",
+                            redirectURI: "https://www.twitch.tv/passport-callback",
                             scopes: ["user_read"]
                         }
                     }, t
@@ -48827,4 +48879,4 @@ webpackJsonp([85], {
         e.exports = n
     }
 }, [5]);
-//# sourceMappingURL=core-bd6cc73e3a0a66a845db266694039d9f.js.map
+//# sourceMappingURL=core-09028bb77f3d666b0a46b4fd32cd553e.js.map

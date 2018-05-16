@@ -2672,7 +2672,7 @@ webpackJsonp([46], {
                 return n.e(95).then(n.bind(null, "ehuU"))
             }, "ChannelAnalyticsPageRoot"),
             he = b.a.wrap(function() {
-                return n.e(92).then(n.bind(null, "aeDV"))
+                return n.e(91).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
             fe = b.a.wrap(function() {
                 return n.e(96).then(n.bind(null, "KO2S"))
@@ -2693,10 +2693,10 @@ webpackJsonp([46], {
                 return n.e(100).then(n.bind(null, "gIJZ"))
             }, "DashboardSettingsRoot"),
             we = b.a.wrap(function() {
-                return n.e(91).then(n.bind(null, "bcqU"))
+                return n.e(92).then(n.bind(null, "bcqU"))
             }, "ExtensionConfigurePage"),
             Oe = b.a.wrap(function() {
-                return n.e(91).then(n.bind(null, "1ZLG"))
+                return n.e(92).then(n.bind(null, "1ZLG"))
             }, "ExtensionDashboardRoot"),
             Se = b.a.wrap(function() {
                 return n.e(107).then(n.bind(null, "yJuJ"))
@@ -2708,7 +2708,7 @@ webpackJsonp([46], {
                 return n.e(93).then(n.bind(null, "c1gU"))
             }, "LivePage"),
             ke = b.a.wrap(function() {
-                return n.e(92).then(n.bind(null, "aeDV"))
+                return n.e(91).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
             _e = b.a.wrap(function() {
                 return n.e(121).then(n.bind(null, "8uM1"))
@@ -2736,13 +2736,14 @@ webpackJsonp([46], {
                             channelName: t.props.match.params.channelName
                         })
                     }, t.renderLivePage = function(e) {
-                        return t.props.data.channel && t.props.data.channel.id ? h.createElement(xe, {
-                            channelID: t.props.data.channel.id,
+                        var n = t.props.data.channel;
+                        return n && n.id && null !== n.isPartner ? h.createElement(xe, {
+                            channelID: n.id,
                             channelLogin: t.props.match.params.channelName,
+                            isPartner: n.isPartner,
                             isStaff: t.props.isStaff,
                             streamSummariesQuery: e,
-                            userLogin: t.props.userLogin,
-                            userID: t.props.userID
+                            userLogin: t.props.userLogin
                         }) : null
                     }, t
                 }
@@ -3495,6 +3496,14 @@ webpackJsonp([46], {
                                 },
                                 arguments: [],
                                 directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "isPartner"
+                                },
+                                arguments: [],
+                                directives: []
                             }]
                         }
                     }]
@@ -3502,11 +3511,11 @@ webpackJsonp([46], {
             }],
             loc: {
                 start: 0,
-                end: 96
+                end: 106
             }
         };
         n.loc.source = {
-            body: "query DashboardRoot_Channel($channelName: String!) {\nchannel: user(login: $channelName) {\nid\n}\n}",
+            body: "query DashboardRoot_Channel($channelName: String!) {\nchannel: user(login: $channelName) {\nid\nisPartner\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -7002,4 +7011,4 @@ webpackJsonp([46], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-3d4583ed9f2f6937dcf59ec5bdba159e.js.map
+//# sourceMappingURL=pages.dashboard-1b6951296b0c490a92f4f49831edc6e2.js.map

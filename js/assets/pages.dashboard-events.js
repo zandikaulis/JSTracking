@@ -4258,14 +4258,21 @@ webpackJsonp([99], {
             u = n("bdk8");
         n.n(u);
         ! function(e) {
-            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
+            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
         }(a || (a = {}));
         var m = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.renderLink = function() {
                     var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                    return n.isLink() ? r.createElement("a", i.__assign({
+                    return n.props.type === a.Download ? r.createElement("a", i.__assign({
+                        href: n.props.url,
+                        target: "_blank",
+                        className: e,
+                        onClick: n.onShareClickHandler
+                    }, Object(l._63)(n.props), {
+                        download: n.props.text
+                    }), n.renderIcon()) : n.isLink() ? r.createElement("a", i.__assign({
                         href: n.getLinkTarget(),
                         target: "_blank",
                         className: e,
@@ -4288,16 +4295,27 @@ webpackJsonp([99], {
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
-                    var e = n.getAssetFromType();
+                    var e = n.getAssetFromType(),
+                        t = n.getAssetSizeFromType();
                     return r.createElement(l._8, {
-                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
+                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
+                        display: l.R.Flex,
+                        justifyContent: l._7.Center,
+                        alignItems: l.c.Center
                     }, r.createElement(l._24, {
                         asset: e,
-                        width: 30,
-                        height: 30
+                        width: t,
+                        height: t
                     }))
                 }, n.isLink = function() {
                     return n.props.type !== a.Copy
+                }, n.getAssetSizeFromType = function() {
+                    switch (n.props.type) {
+                        case a.Download:
+                            return 20;
+                        default:
+                            return 30
+                    }
                 }, n.getTooltipFromType = function() {
                     switch (n.props.type) {
                         case a.Twitter:
@@ -4308,6 +4326,8 @@ webpackJsonp([99], {
                             return "Facebook";
                         case a.VKontakte:
                             return "VKontakte";
+                        case a.Download:
+                            return Object(s.d)("Download", "SocialButton");
                         case a.Copy:
                             return n.state.isCopied ? Object(s.d)("Copied", "SocialButton") : Object(s.d)("Copy to clipboard", "SocialButton");
                         default:
@@ -4323,6 +4343,8 @@ webpackJsonp([99], {
                             return l._25.VKontakte;
                         case a.Reddit:
                             return l._25.Reddit;
+                        case a.Download:
+                            return l._25.Download;
                         case a.Copy:
                         default:
                             return l._25.Copy
@@ -4337,6 +4359,8 @@ webpackJsonp([99], {
                             return e + "--facebook";
                         case a.VKontakte:
                             return e + "--vkontakte";
+                        case a.Download:
+                            return e + "--download";
                         case a.Copy:
                             return e + "--copy";
                         default:
@@ -4369,7 +4393,7 @@ webpackJsonp([99], {
                     className: "social-button"
                 }, r.createElement(l._52, {
                     label: this.getTooltipFromType(),
-                    direction: l._54.Top
+                    direction: l._54.Bottom
                 }, this.renderLink()))
             }, t
         }(r.Component)
@@ -10646,6 +10670,7 @@ webpackJsonp([99], {
                         });
                     return s.createElement(_._8, {
                         position: _._15.Relative,
+                        "data-a-target": "time-pick-field",
                         className: "time-picker"
                     }, s.createElement(l.a, {
                         onClickOut: this.closeDropdown
@@ -11938,6 +11963,7 @@ webpackJsonp([99], {
                         onDragEnter: this.onDragEnter,
                         onDragLeave: this.onDragLeave,
                         onDrop: this.onDrop,
+                        "data-a-target": "event-image-placeholder",
                         "data-test-selector": _.DragDropWrapper
                     }, !this.state.isResetting && s.createElement(d.a, {
                         allowedFileTypes: [h.a.JPEG],
@@ -13363,6 +13389,7 @@ webpackJsonp([99], {
                     return r.createElement("div", {
                         className: "game-selector__search-container",
                         "data-click-out-id": "game-selector-search-balloon",
+                        "data-a-target": "game-field",
                         onKeyDown: this.onKeyDown
                     }, r.createElement(u.a, {
                         onClickOut: this.onClickOut
@@ -19145,4 +19172,4 @@ webpackJsonp([99], {
             }
     }
 });
-//# sourceMappingURL=pages.dashboard-events-d0020d99b0aa3bd45849d186ca30db55.js.map
+//# sourceMappingURL=pages.dashboard-events-59f12e54f7b2bc62a929fca2982e14f5.js.map

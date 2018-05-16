@@ -4039,7 +4039,7 @@ webpackJsonp([104], {
             l = (n.n(c), n("164Z"));
         n.n(l);
         ! function(e) {
-            e.Copy = "link", e.Embed = "option_embed", e.Facebook = "fb", e.Link = "option_link", e.Reddit = "reddit", e.Twitter = "twitter", e.Unknown = "", e.VKontakte = "vk"
+            e.Copy = "link", e.Embed = "option_embed", e.Facebook = "fb", e.Link = "option_link", e.Reddit = "reddit", e.Twitter = "twitter", e.Unknown = "", e.VKontakte = "vk", e.Download = "download"
         }(o || (o = {}))
     },
     cPfx: function(e, t) {},
@@ -10176,4 +10176,4 @@ webpackJsonp([104], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-moderation-f9be455990e555fdf09b963c7eb9d9a4.js.map
+//# sourceMappingURL=pages.dashboard-moderation-a3770d118c38cb1adff1a337866cbcc4.js.map

@@ -1201,18 +1201,19 @@ webpackJsonp([109], {
     },
     A9VK: function(e, t, n) {
         "use strict";
-        n.d(t, "a", function() {
-            return i
-        });
-        var a = n("TToO"),
-            r = this,
-            i = function() {
-                return a.__awaiter(r, void 0, void 0, function() {
-                    return a.__generator(this, function(e) {
-                        return [2, n.e(125).then(n.bind(null, "Revh"))]
-                    })
+        t.a = function() {
+            return a.__awaiter(this, void 0, void 0, function() {
+                return a.__generator(this, function(e) {
+                    switch (e.label) {
+                        case 0:
+                            return [4, n.e(125).then(n.bind(null, "Revh"))];
+                        case 1:
+                            return [2, e.sent().items]
+                    }
                 })
-            }
+            })
+        };
+        var a = n("TToO")
     },
     AadB: function(e, t, n) {
         "use strict";
@@ -3481,4 +3482,4 @@ webpackJsonp([109], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.featured-genres-fb9aca55244175fd3e2fd5c1ee69a1be.js.map
+//# sourceMappingURL=pages.anon-front.components.featured-genres-a2e290e33f2de9cad0a2abf06a15361f.js.map

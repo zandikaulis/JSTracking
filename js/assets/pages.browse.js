@@ -3804,7 +3804,7 @@ webpackJsonp([55], {
                             case 0:
                                 return [4, n.e(132).then(n.bind(null, "tk3B"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -3816,7 +3816,7 @@ webpackJsonp([55], {
                             case 0:
                                 return [4, n.e(131).then(n.bind(null, "e/M0"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -3828,7 +3828,7 @@ webpackJsonp([55], {
                             case 0:
                                 return [4, n.e(130).then(n.bind(null, "Dan5"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -3840,7 +3840,7 @@ webpackJsonp([55], {
                             case 0:
                                 return [4, n.e(129).then(n.bind(null, "sQp1"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -3852,7 +3852,7 @@ webpackJsonp([55], {
                             case 0:
                                 return [4, n.e(128).then(n.bind(null, "+kKy"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -3864,7 +3864,7 @@ webpackJsonp([55], {
                             case 0:
                                 return [4, n.e(127).then(n.bind(null, "2NJ8"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -5181,8 +5181,11 @@ webpackJsonp([55], {
         t.a = function(e, t, n) {
             void 0 === n && (n = 1);
             if (!t || !e) return -1;
-            return Math.floor(e / t) * n
-        }
+            var r = window.getComputedStyle(document.documentElement).fontSize || a.toString(),
+                i = parseFloat(r) / a;
+            return Math.floor(e / (t * i)) * n
+        };
+        var a = 10
     },
     plcU: function(e, t) {
         var n = {
@@ -5462,7 +5465,8 @@ webpackJsonp([55], {
                     align: d.a.Center
                 }, r.createElement(d.N, a.__assign({}, e.imageProps))));
                 return e.linkTo && (t = r.createElement(d.O, {
-                    to: e.linkTo
+                    to: e.linkTo,
+                    onClick: e.onClick
                 }, t)), t
             });
         g.displayName = "PreviewCardIconicImage";
@@ -5626,7 +5630,7 @@ webpackJsonp([55], {
                         key: "player-key",
                         className: s((t = {}, t["preview-card-thumbnail__image--hidden"] = !this.state.isLiveVideoPreviewLoaded, t))
                     }, r.createElement(y.a, {
-                        channelLogin: this.props.liveChannelLogin,
+                        channelLogin: this.props.liveChannelLogin || void 0,
                         onPlayerPlaying: this.onLivePreviewLoaded
                     })), r.createElement("div", {
                         key: "image-key",
@@ -5670,9 +5674,11 @@ webpackJsonp([55], {
                         key: t,
                         "data-test-selector": "preview-card-titles__subtitle"
                     }, r.createElement(d.Q, {
-                        color: d.K.Alt
+                        color: d.K.Alt,
+                        ellipsis: !0
                     }, "string" == typeof e ? e : r.createElement(d.O, {
                         to: e.linkTo,
+                        onClick: e.onClick,
                         type: d.P.Inherit
                     }, e.text)))
                 })), r.createElement("div", null, r.createElement(d.O, {
@@ -5721,13 +5727,12 @@ webpackJsonp([55], {
                     restriction: this.props.restriction,
                     attachTop: !0
                 }), r.createElement(d.O, {
-                    to: this.props.linkTo,
-                    onClick: this.props.onClick
-                }, r.createElement(w, {
+                    to: this.props.thumbnailLinkTo || this.props.linkTo,
+                    onClick: this.props.onThumbnailClick || this.props.onClick
+                }, this.props.thumbnailImageProps && r.createElement(w, {
                     staticImageProps: this.props.thumbnailImageProps,
                     animatedImageProps: L(this.props) && this.props.animatedImageProps || void 0,
-                    liveChannelLogin: O(this.props) && this.props.enableLivePreview ? this.props.channelLogin : void 0,
-                    onClick: this.props.onThumbnailClick
+                    liveChannelLogin: O(this.props) && this.props.enableLivePreview ? this.props.channelLogin : null
                 }), this.renderOverlay())), r.createElement(d._8, {
                     display: d.R.Flex,
                     flexWrap: d.U.NoWrap,
@@ -5794,7 +5799,8 @@ webpackJsonp([55], {
                     }
                 }, r.createElement(g, {
                     imageProps: this.props.gameBoxArtImageProps,
-                    linkTo: this.props.gameTitleLinkTo,
+                    linkTo: this.props.gameBoxArtImageLinkTo || this.props.gameTitleLinkTo,
+                    onClick: this.props.gameTitleOnClick,
                     aspect: d.l.BoxArt
                 })) : (this.props.context === h.SingleGameList || this.props.context === h.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? r.createElement(d._8, {
                     margin: {
@@ -5802,26 +5808,30 @@ webpackJsonp([55], {
                     }
                 }, r.createElement(g, {
                     imageProps: this.props.channelImageProps,
-                    linkTo: this.props.channelLoginLinkTo,
+                    linkTo: this.props.channelImageLinkTo || this.props.channelLoginLinkTo,
+                    onClick: this.props.channelLoginOnClick,
                     aspect: d.l.Aspect1x1
                 })) : void 0
             }, t.prototype.renderTitles = function() {
                 var e = [{
                     text: this.props.channelLogin,
-                    linkTo: this.props.channelLoginLinkTo
+                    linkTo: this.props.channelLoginLinkTo,
+                    onClick: this.props.channelLoginOnClick
                 }];
-                return P(this.props) ? e.push({
+                return P(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? e.push({
                     text: Object(i.d)("Clipped by {userName}", {
-                        userName: this.props.clipCreatedByChannelLogin
+                        userName: this.props.clipCreatedByChannelLogin || ""
                     }, "VideoPreviewCard"),
-                    linkTo: this.props.clipCreatedByChannelLoginLinkTo
+                    linkTo: this.props.clipCreatedByChannelLoginLinkTo,
+                    onClick: this.props.clipCreatedByChannelLoginOnClick
                 }) : this.props.context !== h.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && e.push({
                     text: this.props.gameTitle,
-                    linkTo: this.props.gameTitleLinkTo
+                    linkTo: this.props.gameTitleLinkTo,
+                    onClick: this.props.gameTitleOnClick
                 }), r.createElement(S, {
                     title: this.props.title,
-                    onClick: this.props.onVideoTitleClick,
-                    linkTo: this.props.linkTo,
+                    onClick: this.props.onVideoTitleClick || this.props.onClick,
+                    linkTo: this.props.videoTitleLinkTo || this.props.linkTo,
                     subtitles: e
                 })
             }, t.prototype.renderAppendages = function() {
@@ -6291,4 +6301,4 @@ webpackJsonp([55], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-242ad41768a65336d1633916b86bc35e.js.map
+//# sourceMappingURL=pages.browse-97c49df758253a0bc6aada8ab44028e3.js.map

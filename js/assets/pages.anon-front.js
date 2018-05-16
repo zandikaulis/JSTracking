@@ -195,7 +195,7 @@ webpackJsonp([56], {
                 }, t
             }(r.Component)),
             O = Object(i.f)(L);
-        var P = Object(u.b)(function(e) {
+        var T = Object(u.b)(function(e) {
                 return {
                     leagueOfLegends: {
                         championsMap: e.directory.leagueOfLegends.championsMap,
@@ -209,7 +209,7 @@ webpackJsonp([56], {
                     onLoadLeagueOfLegendsChampions: g.a
                 }, e)
             })(O),
-            T = (n("LEV+"), "live-channel-card-link-selector"),
+            P = (n("LEV+"), "live-channel-card-link-selector"),
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -266,7 +266,7 @@ webpackJsonp([56], {
                             to: t.props.linkTo,
                             title: t.props.hideTooltip ? void 0 : t.props.title,
                             "data-a-target": "live-channel-card-thumbnail-link",
-                            "data-test-selector": T,
+                            "data-test-selector": P,
                             onClick: t.props.onThumbnailClick
                         }, t.props.children ? t.props.children : r.createElement(C.E, {
                             alt: t.props.imageAlt,
@@ -351,14 +351,14 @@ webpackJsonp([56], {
                         hosting: this.props.hosting
                     })) : null
                 }, t.prototype.renderStreamMetadata = function() {
-                    return this.props.streamMetadata ? r.createElement(P, {
+                    return this.props.streamMetadata ? r.createElement(T, {
                         streamMetadata: this.props.streamMetadata
                     }) : null
                 }, t
             }(r.Component),
             N = x;
         n.d(t, !1, function() {
-            return T
+            return P
         }), n.d(t, !1, function() {
             return x
         }), n.d(t, "a", function() {
@@ -1171,7 +1171,7 @@ webpackJsonp([56], {
             C = n("7vx8"),
             L = n("NY9D"),
             O = n("dXGo"),
-            P = (n("APTF"), function(e) {
+            T = (n("APTF"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1303,7 +1303,7 @@ webpackJsonp([56], {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t = r.__decorate([Object(C.a)(O), Object(d.d)("FeaturedGames")], t)
             }(i.Component)),
-            T = n("+GT7"),
+            P = n("+GT7"),
             x = n("SZoP");
         ! function(e) {
             e[e.All = 1] = "All", e[e.Xbox = 2] = "Xbox", e[e.PS4 = 3] = "PS4"
@@ -1350,7 +1350,7 @@ webpackJsonp([56], {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, i.createElement(T.a, {
+                            }, i.createElement(P.a, {
                                 imageSrc: a && a.previewImageURL || o.a.defaultStreamPreviewURL,
                                 imageAlt: a && a.title || "",
                                 viewerCount: a && a.viewersCount || 0,
@@ -1529,7 +1529,7 @@ webpackJsonp([56], {
                                     withStreams: e
                                 })
                             }
-                            return i.createElement(P, null)
+                            return i.createElement(T, null)
                         }
                     }, n.renderTopCreative = function() {
                         if (n.state.categoriesExperimentAssignment) {
@@ -2540,7 +2540,7 @@ webpackJsonp([56], {
                             case 0:
                                 return [4, n.e(132).then(n.bind(null, "tk3B"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -2552,7 +2552,7 @@ webpackJsonp([56], {
                             case 0:
                                 return [4, n.e(131).then(n.bind(null, "e/M0"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -2564,7 +2564,7 @@ webpackJsonp([56], {
                             case 0:
                                 return [4, n.e(130).then(n.bind(null, "Dan5"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -2576,7 +2576,7 @@ webpackJsonp([56], {
                             case 0:
                                 return [4, n.e(129).then(n.bind(null, "sQp1"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -2588,7 +2588,7 @@ webpackJsonp([56], {
                             case 0:
                                 return [4, n.e(128).then(n.bind(null, "+kKy"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -2600,7 +2600,7 @@ webpackJsonp([56], {
                             case 0:
                                 return [4, n.e(127).then(n.bind(null, "2NJ8"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -3609,42 +3609,8 @@ webpackJsonp([56], {
             h = n("lfvs"),
             v = n("F8kA"),
             f = n("SZoP"),
-            _ = n("fc0G");
-
-        function y(e) {
-            switch (e.type) {
-                case c.b.Stream:
-                    return i.createElement(_.c, {
-                        channelLogin: e.id,
-                        vodID: "",
-                        disableTheatreButton: !0,
-                        playerTypeOverride: _.b.Frontpage,
-                        onInit: e.onPlayerInit,
-                        onDestroy: e.onPlayerDestroy
-                    });
-                case c.b.Vod:
-                    return i.createElement(_.c, {
-                        channelLogin: "",
-                        vodID: e.id,
-                        disableTheatreButton: !0,
-                        playerTypeOverride: _.b.Frontpage,
-                        onInit: e.onPlayerInit,
-                        onDestroy: e.onPlayerDestroy,
-                        onVideoTimeChange: e.onVideoTimeChange
-                    });
-                default:
-                    return null
-            }
-        }
-
-        function k(e) {
-            return {
-                medium: "twitch_home",
-                content: e ? "carousel_promo" : "carousel_backfill"
-            }
-        }
-        n("i6UE");
-        var b = function(e) {
+            _ = n("p+bz"),
+            y = (n("i6UE"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -3655,7 +3621,7 @@ webpackJsonp([56], {
                                 game: i.createElement(v.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
-                                        state: k(t.props.item.isScheduled)
+                                        state: Object(_.b)(t.props.item.isScheduled)
                                     }
                                 }, t.props.item.content.gameName)
                             }, "HorizontalCarouselPlayer"),
@@ -3681,7 +3647,7 @@ webpackJsonp([56], {
                             className: "horizontal-carousel-player__video",
                             position: p._15.Relative,
                             overflow: p._11.Hidden
-                        }, y(a))), i.createElement(p._8, {
+                        }, Object(_.c)(a))), i.createElement(p._8, {
                             className: e,
                             flexGrow: 0,
                             padding: 2
@@ -3703,7 +3669,7 @@ webpackJsonp([56], {
                         }, i.createElement(v.a, {
                             to: {
                                 pathname: "/" + t.props.item.broadcaster.login,
-                                state: k(t.props.item.isScheduled)
+                                state: Object(_.b)(t.props.item.isScheduled)
                             },
                             "data-a-target": "carousel-profile-image"
                         }, i.createElement(p.m, {
@@ -3747,12 +3713,12 @@ webpackJsonp([56], {
                     }, t.getLinkForTitle = function() {
                         if (t.props.item.content.type === c.b.Stream) return {
                             pathname: "/" + t.props.item.broadcaster.login,
-                            state: k(t.props.item.isScheduled)
+                            state: Object(_.b)(t.props.item.isScheduled)
                         };
                         var e = t.state && t.state.videoOffset || 0;
                         return {
                             pathname: "/videos/" + t.props.item.content.id + "?t=" + e,
-                            state: k(t.props.item.isScheduled)
+                            state: Object(_.b)(t.props.item.isScheduled)
                         }
                     }, t.getPlaceholderRender = function() {
                         var e = r("horizontal-carousel-player__details", {
@@ -3822,10 +3788,10 @@ webpackJsonp([56], {
                 }, t.prototype.render = function() {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t
-            }(i.Component),
-            w = n("RH2O"),
-            E = n("hdYS"),
-            S = (n("0v28"), function(e) {
+            }(i.Component)),
+            k = n("RH2O"),
+            b = n("hdYS"),
+            w = (n("0v28"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -3838,7 +3804,7 @@ webpackJsonp([56], {
                                 }, i.createElement(v.a, {
                                     to: {
                                         pathname: "/" + t.props.item.broadcaster.login,
-                                        state: k(t.props.item.isScheduled)
+                                        state: Object(_.b)(t.props.item.isScheduled)
                                     },
                                     "data-a-target": "carousel-broadcaster-displayname"
                                 }, Object(f.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName))),
@@ -3847,7 +3813,7 @@ webpackJsonp([56], {
                                 }, i.createElement(v.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
-                                        state: k(t.props.item.isScheduled)
+                                        state: Object(_.b)(t.props.item.isScheduled)
                                     },
                                     "data-a-target": "carousel-broadcaster-game-name"
                                 }, t.props.item.content.gameName))
@@ -3869,7 +3835,7 @@ webpackJsonp([56], {
                             className: "vertical-carousel-player__video",
                             position: p._15.Relative,
                             overflow: p._11.Hidden
-                        }, y(a)), i.createElement(p._8, {
+                        }, Object(_.c)(a)), i.createElement(p._8, {
                             className: r(e),
                             display: p.R.Flex,
                             flexWrap: p.U.NoWrap,
@@ -3962,11 +3928,11 @@ webpackJsonp([56], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t.prototype.renderFollowButton = function() {
-                    return this.props.firstPageLoaded ? i.createElement(E.a, {
+                    return this.props.firstPageLoaded ? i.createElement(b.a, {
                         "data-a-target": "carousel-follow-button",
                         channelLogin: this.props.item.broadcaster.login,
-                        followUIType: E.b.IconAndText,
-                        unfollowUIType: E.b.IconOnly,
+                        followUIType: b.b.IconAndText,
+                        unfollowUIType: b.b.IconOnly,
                         showLoadingPlaceholder: !0
                     }) : i.createElement(p._14, {
                         width: 70,
@@ -3974,30 +3940,21 @@ webpackJsonp([56], {
                     })
                 }, t
             }(i.Component));
-        var C = Object(w.b)(function(e) {
+        var E = Object(k.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(S),
-            L = n("vH/s"),
-            O = "google_calendar",
-            P = "backfill";
-
-        function T(e) {
-            o.n.track(L.SpadeEventType.FrontPageCarouselNavButtonClick, {
-                direction: e
-            })
-        }
-        n("0OPT");
-        var x = 6,
-            N = function(e) {
+            })(w),
+            S = n("o6H2"),
+            C = (n("0OPT"), 6),
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         activeItem: t.props.items[0],
                         startingIndex: 0
                     }, t.displayEventFired = !1, t.renderLeftButton = function() {
-                        if (t.props.items.length > x) {
+                        if (t.props.items.length > C) {
                             var e = t.state.startingIndex > 0;
                             return i.createElement(p._8, {
                                 display: p.R.Flex,
@@ -4012,8 +3969,8 @@ webpackJsonp([56], {
                         }
                         return null
                     }, t.renderRightButton = function() {
-                        if (t.props.items.length > x) {
-                            var e = t.props.items.length > t.state.startingIndex + x;
+                        if (t.props.items.length > C) {
+                            var e = t.props.items.length > t.state.startingIndex + C;
                             return i.createElement(p._8, {
                                 display: p.R.Flex,
                                 alignItems: p.c.Stretch
@@ -4027,10 +3984,7 @@ webpackJsonp([56], {
                         }
                         return null
                     }, t.getCardsRender = function() {
-                        var e, n;
-                        if (t.state.activeItem) return t.displayEventFired || (e = t.props.items, n = {}, e.forEach(function(e, t) {
-                            n["carousel_slot_" + t + "_channel"] = e.broadcaster.login, n["carousel_slot_" + t + "_priority"] = e.priorityLevel, n["carousel_slot_" + t + "_game"] = e.content.gameName, n["carousel_slot_" + t + "_ccu"] = e.content.viewersCount, n["carousel_slot_" + t + "_type"] = e.content.subType, e.isScheduled ? n["carousel_slot_" + t + "_source"] = O : n["carousel_slot_" + t + "_source"] = P
-                        }), o.n.track(L.SpadeEventType.FrontPageCarouselDisplay, n), t.displayEventFired = !0), t.props.items.slice(t.state.startingIndex, t.state.startingIndex + x).map(function(e, n) {
+                        if (t.state.activeItem) return t.displayEventFired || (Object(S.a)(t.props.items), t.displayEventFired = !0), t.props.items.slice(t.state.startingIndex, t.state.startingIndex + C).map(function(e, n) {
                             return i.createElement(g, {
                                 key: e.content.id,
                                 item: e,
@@ -4039,8 +3993,8 @@ webpackJsonp([56], {
                                 "data-a-target": "carousel-card-" + n
                             })
                         });
-                        for (var a = [], r = 0; r < x; r++) a.push(i.createElement(p._8, {
-                            key: r,
+                        for (var e = [], n = 0; n < C; n++) e.push(i.createElement(p._8, {
+                            key: n,
                             margin: {
                                 x: .5
                             },
@@ -4054,7 +4008,7 @@ webpackJsonp([56], {
                         }, i.createElement(p._14, {
                             height: 4
                         }))));
-                        return a
+                        return e
                     }, t.getLayoutRender = function() {
                         var e = {
                             darkTheme: t.props.darkTheme || !1,
@@ -4064,15 +4018,15 @@ webpackJsonp([56], {
                         };
                         switch (t.props.layout) {
                             case c.c.Vertical:
-                                return i.createElement(C, a.__assign({}, e));
+                                return i.createElement(E, a.__assign({}, e));
                             default:
-                                return i.createElement(b, a.__assign({}, e))
+                                return i.createElement(y, a.__assign({}, e))
                         }
                     }, t.selectContent = function(e) {
                         t.setState({
                             activeItem: e
                         });
-                        var n, a = {
+                        var n = {
                             broadcast_type: e.content.subType,
                             carousel_index: t.props.items.indexOf(e),
                             channel: e.broadcaster.login,
@@ -4080,26 +4034,22 @@ webpackJsonp([56], {
                             promotion_was_scheduled: e.isScheduled,
                             views: e.content.viewersCount
                         };
-                        n = a, o.n.track(L.SpadeEventType.FrontPageCarouselClick, n)
+                        Object(S.b)(n)
                     }, t.trackPromotionClick = function(e, n) {
-                        var r = e.broadcaster,
-                            i = e.content,
-                            s = e.isScheduled;
-                        ! function(e, t) {
-                            var n = a.__assign({
-                                clicked_element: t
-                            }, e);
-                            o.n.track(L.SpadeEventType.FrontPageCarouselPromotionCardClick, n)
-                        }({
-                            broadcast_type: i.subType,
-                            carousel_index: t.props.items.indexOf(t.state.activeItem),
-                            channel: r.displayName,
-                            game: i.gameName,
-                            promotion_was_scheduled: s,
-                            views: i.viewersCount
-                        }, n)
+                        var a = e.broadcaster,
+                            r = e.content,
+                            i = e.isScheduled,
+                            o = {
+                                broadcast_type: r.subType,
+                                carousel_index: t.props.items.indexOf(t.state.activeItem),
+                                channel: a.displayName,
+                                game: r.gameName,
+                                promotion_was_scheduled: i,
+                                views: r.viewersCount
+                            };
+                        Object(S.d)(o, n)
                     }, t.trackPromotionView = function(e) {
-                        var n, a = {
+                        var n = {
                             broadcast_type: e.content.subType,
                             carousel_index: t.props.items.indexOf(e),
                             channel: e.broadcaster.login,
@@ -4107,14 +4057,14 @@ webpackJsonp([56], {
                             promotion_was_scheduled: e.isScheduled,
                             views: e.content.viewersCount
                         };
-                        n = a, o.n.track(L.SpadeEventType.FrontPageCarouselPromotionCardView, n)
+                        Object(S.e)(n)
                     }, t.handlePageRight = function() {
-                        var e = t.props.items.length - x;
-                        e !== t.state.startingIndex && (T("next"), t.setState({
+                        var e = t.props.items.length - C;
+                        e !== t.state.startingIndex && (Object(S.c)("next"), t.setState({
                             startingIndex: e
                         }))
                     }, t.handlePageLeft = function() {
-                        t.state.startingIndex > 0 && (T("prev"), t.setState({
+                        t.state.startingIndex > 0 && (Object(S.c)("prev"), t.setState({
                             startingIndex: 0
                         }))
                     }, t
@@ -4142,7 +4092,7 @@ webpackJsonp([56], {
                 }, t = a.__decorate([Object(d.d)("CarouselPlayer")], t)
             }(i.Component);
         n.d(t, "a", function() {
-            return N
+            return L
         })
     },
     i6UE: function(e, t) {},
@@ -4158,6 +4108,33 @@ webpackJsonp([56], {
                 e.CounterStrike = "counter-strike: global offensive", e.Hearthstone = "hearthstone", e.LeagueOfLegends = "league of legends", e.Overwatch = "overwatch"
             }(a || (a = {}))
     },
+    o6H2: function(e, t, n) {
+        "use strict";
+        t.a = function(e) {
+            var t = {};
+            e.forEach(function(e, n) {
+                t["carousel_slot_" + n + "_channel"] = e.broadcaster.login, t["carousel_slot_" + n + "_priority"] = e.priorityLevel, t["carousel_slot_" + n + "_game"] = e.content.gameName, t["carousel_slot_" + n + "_ccu"] = e.content.viewersCount, t["carousel_slot_" + n + "_type"] = e.content.subType, e.isScheduled ? t["carousel_slot_" + n + "_source"] = o : t["carousel_slot_" + n + "_source"] = s
+            }), r.n.track(i.SpadeEventType.FrontPageCarouselDisplay, t)
+        }, t.b = function(e) {
+            r.n.track(i.SpadeEventType.FrontPageCarouselClick, e)
+        }, t.d = function(e, t) {
+            var n = a.__assign({
+                clicked_element: t
+            }, e);
+            r.n.track(i.SpadeEventType.FrontPageCarouselPromotionCardClick, n)
+        }, t.e = function(e) {
+            r.n.track(i.SpadeEventType.FrontPageCarouselPromotionCardView, e)
+        }, t.c = function(e) {
+            r.n.track(i.SpadeEventType.FrontPageCarouselNavButtonClick, {
+                direction: e
+            })
+        };
+        var a = n("TToO"),
+            r = n("6sO2"),
+            i = n("vH/s"),
+            o = "google_calendar",
+            s = "backfill"
+    },
     o8Pq: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -4171,6 +4148,70 @@ webpackJsonp([56], {
         }), n.d(t, "FeaturedBroadcasters", function() {
             return a.a
         })
+    },
+    "p+bz": function(e, t, n) {
+        "use strict";
+        t.c = function(e) {
+            switch (e.type) {
+                case r.b.Stream:
+                    return a.createElement(i.c, {
+                        channelLogin: e.id,
+                        vodID: "",
+                        showChannelInfoOnHover: e.showChannelInfoOnHover,
+                        disableTheatreButton: !0,
+                        playerTypeOverride: i.b.Frontpage,
+                        onInit: e.onPlayerInit,
+                        onDestroy: e.onPlayerDestroy
+                    });
+                case r.b.Vod:
+                    return a.createElement(i.c, {
+                        channelLogin: "",
+                        vodID: e.id,
+                        disableTheatreButton: !0,
+                        playerTypeOverride: i.b.Frontpage,
+                        onInit: e.onPlayerInit,
+                        onDestroy: e.onPlayerDestroy,
+                        onVideoTimeChange: e.onVideoTimeChange
+                    });
+                default:
+                    return null
+            }
+        }, t.a = function(e) {
+            return e.map(function(e) {
+                var t = "",
+                    n = null;
+                return e.stream && e.stream.game && null !== e.stream.game.name && (t = e.stream.game.name), e.stream && e.stream.broadcaster && (n = e.stream.broadcaster), {
+                    broadcaster: {
+                        displayName: n && n.displayName ? n.displayName : "",
+                        id: n && n.id ? n.id : "",
+                        login: n && n.login ? n.login : "",
+                        profileImageURL: n && n.profileImageURL ? n.profileImageURL : ""
+                    },
+                    content: {
+                        id: n && n.login ? n.login : "",
+                        gameName: t,
+                        previewImageURL: e.stream && e.stream.previewImageURL ? e.stream.previewImageURL : "",
+                        type: r.b.Stream,
+                        subType: e.stream && e.stream.type ? e.stream.type : "",
+                        viewersCount: e.stream && e.stream.viewersCount ? e.stream.viewersCount : 0
+                    },
+                    description: "",
+                    imageURL: e.imageURL || "",
+                    isScheduled: e.isScheduled || !1,
+                    isSponsored: e.isSponsored || !1,
+                    priorityLevel: e.priorityLevel || 10,
+                    title: e.title || ""
+                }
+            })
+        }, t.b = function(e) {
+            return {
+                medium: "twitch_home",
+                content: e ? "carousel_promo" : "carousel_backfill"
+            }
+        };
+        var a = n("GiK3"),
+            r = (n.n(a), n("WKwZ")),
+            i = n("fc0G")
     },
     pqU3: function(e, t, n) {
         "use strict";
@@ -4595,7 +4636,8 @@ webpackJsonp([56], {
                     align: c.a.Center
                 }, r.createElement(c.N, a.__assign({}, e.imageProps))));
                 return e.linkTo && (t = r.createElement(c.O, {
-                    to: e.linkTo
+                    to: e.linkTo,
+                    onClick: e.onClick
                 }, t)), t
             });
         g.displayName = "PreviewCardIconicImage";
@@ -4759,7 +4801,7 @@ webpackJsonp([56], {
                         key: "player-key",
                         className: s((t = {}, t["preview-card-thumbnail__image--hidden"] = !this.state.isLiveVideoPreviewLoaded, t))
                     }, r.createElement(_.a, {
-                        channelLogin: this.props.liveChannelLogin,
+                        channelLogin: this.props.liveChannelLogin || void 0,
                         onPlayerPlaying: this.onLivePreviewLoaded
                     })), r.createElement("div", {
                         key: "image-key",
@@ -4803,9 +4845,11 @@ webpackJsonp([56], {
                         key: t,
                         "data-test-selector": "preview-card-titles__subtitle"
                     }, r.createElement(c.Q, {
-                        color: c.K.Alt
+                        color: c.K.Alt,
+                        ellipsis: !0
                     }, "string" == typeof e ? e : r.createElement(c.O, {
                         to: e.linkTo,
+                        onClick: e.onClick,
                         type: c.P.Inherit
                     }, e.text)))
                 })), r.createElement("div", null, r.createElement(c.O, {
@@ -4831,11 +4875,11 @@ webpackJsonp([56], {
             return void 0 !== e.streamType
         }
 
-        function P(e) {
+        function T(e) {
             return void 0 !== e.watchedProgressPercent
         }
 
-        function T(e) {
+        function P(e) {
             return void 0 !== e.clipCreatedByChannelLogin
         }! function(e) {
             e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
@@ -4849,18 +4893,17 @@ webpackJsonp([56], {
                     className: "preview-card"
                 }, r.createElement(c._8, {
                     position: c._15.Relative
-                }, P(this.props) && r.createElement(L.a, {
+                }, T(this.props) && r.createElement(L.a, {
                     videoID: this.props.videoID || "",
                     restriction: this.props.restriction,
                     attachTop: !0
                 }), r.createElement(c.O, {
-                    to: this.props.linkTo,
-                    onClick: this.props.onClick
-                }, r.createElement(w, {
+                    to: this.props.thumbnailLinkTo || this.props.linkTo,
+                    onClick: this.props.onThumbnailClick || this.props.onClick
+                }, this.props.thumbnailImageProps && r.createElement(w, {
                     staticImageProps: this.props.thumbnailImageProps,
-                    animatedImageProps: P(this.props) && this.props.animatedImageProps || void 0,
-                    liveChannelLogin: O(this.props) && this.props.enableLivePreview ? this.props.channelLogin : void 0,
-                    onClick: this.props.onThumbnailClick
+                    animatedImageProps: T(this.props) && this.props.animatedImageProps || void 0,
+                    liveChannelLogin: O(this.props) && this.props.enableLivePreview ? this.props.channelLogin : null
                 }), this.renderOverlay())), r.createElement(c._8, {
                     display: c.R.Flex,
                     flexWrap: c.U.NoWrap,
@@ -4888,7 +4931,7 @@ webpackJsonp([56], {
                         }, "VideoPreviewCard")
                     }),
                     bottomRight: void 0
-                }) : P(this.props) ? r.createElement(v, {
+                }) : T(this.props) ? r.createElement(v, {
                     topLeft: r.createElement(f, {
                         value: Object(C.b)(this.props.durationInSeconds),
                         icon: c._25.GlyphArrRight,
@@ -4902,7 +4945,7 @@ webpackJsonp([56], {
                         value: Object(i.c)(new Date(this.props.datePublished), "medium")
                     }),
                     progressBarPercent: this.props.watchedProgressPercent
-                }) : T(this.props) ? r.createElement(v, {
+                }) : P(this.props) ? r.createElement(v, {
                     topLeft: r.createElement(f, {
                         value: Object(C.b)(this.props.durationInSeconds),
                         icon: c._25.Clip,
@@ -4917,7 +4960,7 @@ webpackJsonp([56], {
                     })
                 }) : void 0
             }, t.prototype.getViewCountLabel = function() {
-                return P(this.props) || T(this.props) ? Object(i.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                return T(this.props) || P(this.props) ? Object(i.d)("{viewerCount, plural, one {# view} other {# views}}", {
                     viewerCount: this.props.viewCount
                 }, "VideoPreviewCard") : ""
             }, t.prototype.renderIconicImage = function() {
@@ -4927,7 +4970,8 @@ webpackJsonp([56], {
                     }
                 }, r.createElement(g, {
                     imageProps: this.props.gameBoxArtImageProps,
-                    linkTo: this.props.gameTitleLinkTo,
+                    linkTo: this.props.gameBoxArtImageLinkTo || this.props.gameTitleLinkTo,
+                    onClick: this.props.gameTitleOnClick,
                     aspect: c.l.BoxArt
                 })) : (this.props.context === h.SingleGameList || this.props.context === h.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? r.createElement(c._8, {
                     margin: {
@@ -4935,26 +4979,30 @@ webpackJsonp([56], {
                     }
                 }, r.createElement(g, {
                     imageProps: this.props.channelImageProps,
-                    linkTo: this.props.channelLoginLinkTo,
+                    linkTo: this.props.channelImageLinkTo || this.props.channelLoginLinkTo,
+                    onClick: this.props.channelLoginOnClick,
                     aspect: c.l.Aspect1x1
                 })) : void 0
             }, t.prototype.renderTitles = function() {
                 var e = [{
                     text: this.props.channelLogin,
-                    linkTo: this.props.channelLoginLinkTo
+                    linkTo: this.props.channelLoginLinkTo,
+                    onClick: this.props.channelLoginOnClick
                 }];
-                return T(this.props) ? e.push({
+                return P(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? e.push({
                     text: Object(i.d)("Clipped by {userName}", {
-                        userName: this.props.clipCreatedByChannelLogin
+                        userName: this.props.clipCreatedByChannelLogin || ""
                     }, "VideoPreviewCard"),
-                    linkTo: this.props.clipCreatedByChannelLoginLinkTo
+                    linkTo: this.props.clipCreatedByChannelLoginLinkTo,
+                    onClick: this.props.clipCreatedByChannelLoginOnClick
                 }) : this.props.context !== h.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && e.push({
                     text: this.props.gameTitle,
-                    linkTo: this.props.gameTitleLinkTo
+                    linkTo: this.props.gameTitleLinkTo,
+                    onClick: this.props.gameTitleOnClick
                 }), r.createElement(E, {
                     title: this.props.title,
-                    onClick: this.props.onVideoTitleClick,
-                    linkTo: this.props.linkTo,
+                    onClick: this.props.onVideoTitleClick || this.props.onClick,
+                    linkTo: this.props.videoTitleLinkTo || this.props.linkTo,
                     subtitles: e
                 })
             }, t.prototype.renderAppendages = function() {
@@ -5064,4 +5112,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-6a580041b5fd6bcbdd712b4de39aa40e.js.map
+//# sourceMappingURL=pages.anon-front-9541bc5f6070a659be8d1a5f7046f6b1.js.map

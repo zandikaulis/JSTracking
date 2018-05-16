@@ -1,4 +1,4 @@
-webpackJsonp([41], {
+webpackJsonp([40], {
     "+5Qw": function(e, t) {},
     "+Aaf": function(e, t) {},
     "+V/3": function(e, t, n) {
@@ -3105,6 +3105,434 @@ webpackJsonp([41], {
     },
     "1bR2": function(e, t, n) {
         e.exports = n.p + "assets/gift1-8573b4d1700bd278971c52e7d077d1c4.png"
+    },
+    "1qqv": function(e, t, n) {
+        "use strict";
+        var i, a, r = n("RH2O"),
+            o = n("2KeS"),
+            s = n("V5M+"),
+            l = n("TToO"),
+            d = n("HW6M"),
+            c = n("GiK3"),
+            u = n("6sO2"),
+            m = n("+8VM"),
+            p = n("sikP"),
+            h = n("CSlQ"),
+            g = n("oSFp"),
+            f = n("mw/a"),
+            v = n("6BvN"),
+            b = n("F8kA"),
+            k = n("rCmJ"),
+            y = n("4Gcm"),
+            C = n("8Wuk"),
+            _ = n("2hJ3"),
+            S = n("NY9D"),
+            E = n("HM6l"),
+            N = n("sEID"),
+            w = n("jetF"),
+            D = n("7vx8"),
+            O = n("J4ib");
+        ! function(e) {
+            e.AR = "AR", e.ASL = "ASL", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.ES = "ES", e.FI = "FI", e.FR = "FR", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.OTHER = "OTHER", e.PL = "PL", e.PT = "PT", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH"
+        }(i || (i = {})),
+        function(e) {
+            e[e.View = 0] = "View", e[e.Report = 1] = "Report", e[e.Delete = 2] = "Delete", e[e.DeleteAll = 3] = "DeleteAll", e[e.Ban = 4] = "Ban", e[e.Timeout = 5] = "Timeout"
+        }(a || (a = {}));
+        var R = n("Odds"),
+            I = n("6fIs"),
+            T = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.renderMenuItem = function(e) {
+                        var t = n.menuData.get(e);
+                        return e && t ? c.createElement(R._6, {
+                            key: t.display,
+                            onClick: t.destinationHandler,
+                            "data-a-target": "clip-moderation-button-" + t.display
+                        }, c.createElement(R._8, {
+                            padding: {
+                                x: 1,
+                                y: .5
+                            }
+                        }, t.display)) : null
+                    }, n.menuData = new Map([
+                        [a.Report, {
+                            display: Object(O.d)("Report", "ModerationMenu"),
+                            destinationHandler: function() {
+                                return n.props.updateModalViewState(a.Report)
+                            }
+                        }],
+                        [a.Delete, {
+                            display: Object(O.d)("Delete", "ModerationMenu"),
+                            destinationHandler: function() {
+                                return n.props.updateModalViewState(a.Delete)
+                            }
+                        }],
+                        [a.DeleteAll, {
+                            display: Object(O.d)("Delete All Clips from Video", "ModerationMenu"),
+                            destinationHandler: function() {
+                                return n.props.updateModalViewState(a.DeleteAll)
+                            }
+                        }],
+                        [a.Ban, {
+                            display: Object(O.d)("Ban User", "ModerationMenu"),
+                            destinationHandler: function() {
+                                return n.props.updateModalViewState(a.Ban)
+                            }
+                        }],
+                        [a.Timeout, {
+                            display: Object(O.d)("Timeout User (24 hr)", "ModerationMenu"),
+                            destinationHandler: function() {
+                                return n.props.updateModalViewState(a.Timeout)
+                            }
+                        }]
+                    ]), n
+                }
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.data,
+                        t = this.props.clip;
+                    if (!e || !e.currentUser) return null;
+                    var n = e.currentUser.isStaff || e.currentUser.isSiteAdmin,
+                        i = !!t.curator && e.currentUser.id === t.curator.id,
+                        r = !!t.broadcaster && e.currentUser.id === t.broadcaster.id,
+                        o = i || r || n,
+                        s = r || n,
+                        l = [a.Report];
+                    return o && l.push(a.Delete), s && (l.push(a.DeleteAll), t.curator && t.broadcaster && (l.push(a.Ban), l.push(a.Timeout))), c.createElement(R._8, {
+                        className: "moderation-menu"
+                    }, c.createElement(w.a, null, c.createElement(R.v, {
+                        type: R.B.Hollow,
+                        icon: R._25.More,
+                        ariaLabel: Object(O.d)("More Options", "ModerationMenu"),
+                        "data-a-target": "moderation-menu-button"
+                    }), c.createElement(R.q, {
+                        direction: R.r.TopRight
+                    }, c.createElement(R._8, {
+                        padding: {
+                            y: .5
+                        }
+                    }, this.moderationMenuRender(l)))))
+                }, t.prototype.moderationMenuRender = function(e) {
+                    var t = this;
+                    return e.map(function(e) {
+                        return t.renderMenuItem(e)
+                    })
+                }, t = l.__decorate([Object(D.a)(I), Object(h.d)("ModerationMenu")], t)
+            }(c.Component),
+            M = n("WNmM"),
+            L = (n("MjlB"), 2e3),
+            x = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        isShowingBalloon: !1,
+                        playerRefID: Object(E.a)()
+                    }, t.timeoutID = null, t.copyClipURL = function() {
+                        var e;
+                        try {
+                            e = Object(_.a)(t.props.clip.url)
+                        } catch (e) {
+                            return void u.j.warn("Failed to copy", e)
+                        }
+                        e && (t.setState({
+                            isShowingBalloon: !0
+                        }), t.timeoutID = setTimeout(function() {
+                            t.setState({
+                                isShowingBalloon: !1
+                            })
+                        }, L), Object(M.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(C.b.CopyInput))
+                    }, t.dismissBalloon = function() {
+                        t.setState({
+                            isShowingBalloon: !1
+                        }), t.timeoutID && (clearTimeout(t.timeoutID), t.timeoutID = null)
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive(), this.props.reportPlayerInstanceStarted(this.state.playerRefID)
+                }, t.prototype.render = function() {
+                    var e, t = this.props.clip.broadcaster && c.createElement(b.a, {
+                        to: "/" + this.props.clip.broadcaster.login,
+                        onClick: this.props.closeModal,
+                        "data-a-target": "clip-modal-broadcaster-link"
+                    }, this.props.clip.broadcaster.login);
+                    return e = this.props.clip.game && t ? Object(u.d)("{broadcaster} playing {game}", {
+                        broadcaster: t,
+                        game: c.createElement(b.a, {
+                            to: "" + Object(S.c)(this.props.clip.game.name),
+                            onClick: this.props.closeModal,
+                            "data-a-target": "clip-modal-game-link"
+                        }, this.props.clip.game.name)
+                    }, "ClipsViewModalContent") : t, c.createElement(R._35, {
+                        className: "clips-view-modal-content",
+                        background: R.n.Base
+                    }, c.createElement(R._8, {
+                        padding: {
+                            bottom: 2
+                        }
+                    }, c.createElement(R.k, {
+                        ratio: R.l.Aspect16x9
+                    }, c.createElement("iframe", {
+                        src: this.props.clip.embedURL,
+                        width: "100%",
+                        height: "100%",
+                        allowFullScreen: !0
+                    }))), c.createElement(R._8, {
+                        padding: {
+                            x: 2,
+                            bottom: 2
+                        }
+                    }, c.createElement(R._8, {
+                        display: R.R.Flex,
+                        flexWrap: R.U.NoWrap
+                    }, c.createElement(R._8, {
+                        flexGrow: 1,
+                        margin: {
+                            right: 1
+                        }
+                    }, c.createElement(k.a, {
+                        onClickOut: this.dismissBalloon
+                    }, c.createElement(y.a, {
+                        text: this.props.clip.url,
+                        icon: !0,
+                        iconAsset: R._25.Link,
+                        onSelection: this.copyClipURL,
+                        "data-a-target": "clip-share-input"
+                    }, c.createElement(R.q, {
+                        show: this.state.isShowingBalloon,
+                        direction: R.r.TopRight
+                    }, c.createElement(R._6, {
+                        onClick: this.dismissBalloon
+                    }, c.createElement(R._8, {
+                        padding: 1
+                    }, c.createElement(R.Q, {
+                        bold: !0
+                    }, Object(u.d)("Link copied to clipboard", "ClipsViewModalContent")))))))), c.createElement(N.a, {
+                        clip: this.props.clip,
+                        pageType: this.props.pageType
+                    }), c.createElement(T, {
+                        clip: this.props.clip,
+                        updateModalViewState: this.props.updateModalViewState
+                    }))), c.createElement(R._8, {
+                        padding: {
+                            x: 2,
+                            bottom: 2
+                        },
+                        display: R.R.Flex,
+                        flexWrap: R.U.NoWrap,
+                        justifyContent: R._7.Between,
+                        fullWidth: !0,
+                        overflow: R._11.Hidden
+                    }, c.createElement(R._8, {
+                        flexGrow: 1,
+                        ellipsis: !0
+                    }, c.createElement(R._2, {
+                        ellipsis: !0
+                    }, c.createElement(R._35, {
+                        display: R.R.Flex,
+                        fontSize: R.V.Size5
+                    }, c.createElement(R._8, {
+                        ellipsis: !0
+                    }, this.props.clip.title), c.createElement(R._8, {
+                        flexShrink: 0
+                    }, c.createElement(R.Q, {
+                        type: R._49.Span,
+                        color: R.K.Alt2
+                    }, " • ", Object(u.d)("{created, date, medium}", {
+                        created: new Date(this.props.clip.createdAt)
+                    }, "ClipsViewModalContent"))))), c.createElement(R._2, {
+                        ellipsis: !0
+                    }, c.createElement(R._35, {
+                        color: R.K.Alt2
+                    }, e, e && !!this.props.clip.curator && c.createElement("span", null, " • "), this.props.clip.curator && Object(u.d)("Clipped by {curator}", {
+                        curator: c.createElement(b.a, {
+                            to: "/" + this.props.clip.curator.login,
+                            onClick: this.props.closeModal,
+                            "data-a-target": "clip-modal-curator-link"
+                        }, this.props.clip.curator.login)
+                    }, "ClipsViewModalContent")))), c.createElement(R._35, {
+                        display: R.R.Flex,
+                        padding: {
+                            bottom: 2,
+                            left: 2
+                        },
+                        fontSize: R.V.Size5,
+                        color: R.K.Alt2,
+                        flexShrink: 0
+                    }, c.createElement(R._8, {
+                        margin: {
+                            right: .5
+                        },
+                        alignItems: R.c.Center,
+                        display: R.R.Flex
+                    }, c.createElement(R._24, {
+                        asset: R._25.GlyphViews
+                    })), Object(u.d)("{viewCount, number} views", {
+                        viewCount: this.props.clip.viewCount
+                    }, "ClipsViewModalContent"))))
+                }, t = l.__decorate([Object(h.d)("ClipsViewModalContent")], t)
+            }(c.Component),
+            j = n("Hjbq");
+        var F = Object(r.b)(null, function(e) {
+                return Object(o.b)({
+                    reportPlayerInstanceStarted: j.b
+                }, e)
+            })(x),
+            A = (n("GOrw"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onKeyDown = function(e) {
+                        var n = e.charCode || e.keyCode;
+                        n === v.a.Left ? t.updateClipBackward() : n === v.a.Right && t.updateClipForward()
+                    }, t.updateClipForward = function() {
+                        t.updateClipIndex(t.props.clipIndex + 1)
+                    }, t.updateClipBackward = function() {
+                        t.updateClipIndex(t.props.clipIndex - 1)
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive(), this.setUpArrowListeners()
+                }, t.prototype.render = function() {
+                    var e = null,
+                        t = null;
+                    this.props.clipIndex > 0 && (e = c.createElement(R._8, {
+                        position: R._15.Absolute,
+                        display: R.R.Flex,
+                        alignItems: R.c.Stretch,
+                        className: "clip-carousel-button clip-carousel-button--left"
+                    }, c.createElement(R.w, {
+                        ariaLabel: Object(u.d)("Previous clip", "ClipsViewModalNavigation"),
+                        type: R.y.Primary,
+                        icon: R._25.AngleLeft,
+                        onClick: this.updateClipBackward,
+                        "data-test-selector": "clips-view-modal-navigation-back"
+                    })));
+                    var n = this.props.getClips();
+                    return this.props.loadMoreClips && n.length - this.props.clipIndex < 4 && this.props.loadMoreClips(), this.props.clipIndex < n.length - 1 && (t = c.createElement(R._8, {
+                        position: R._15.Absolute,
+                        display: R.R.Flex,
+                        alignItems: R.c.Stretch,
+                        className: "clip-carousel-button clip-carousel-button--right"
+                    }, c.createElement(R.w, {
+                        ariaLabel: Object(u.d)("Next clip", "ClipsViewModalNavigation"),
+                        type: R.y.Primary,
+                        icon: R._25.AngleRight,
+                        onClick: this.updateClipForward,
+                        "data-test-selector": "clips-view-modal-navigation-forward"
+                    }))), c.createElement(R._8, {
+                        className: "clips-view-modal-navigation"
+                    }, e, c.createElement(F, {
+                        clip: this.props.clip,
+                        updateModalViewState: this.props.updateModalViewState,
+                        pageType: this.props.pageType,
+                        closeModal: this.props.closeModal
+                    }), t)
+                }, t.prototype.componentWillUnmount = function() {
+                    document.removeEventListener("keydown", this.onKeyDown)
+                }, t.prototype.setUpArrowListeners = function() {
+                    document.addEventListener("keydown", this.onKeyDown)
+                }, t.prototype.updateClipIndex = function(e) {
+                    var t = Math.max(0, e),
+                        n = this.props.getClips();
+                    n.length - t < 4 && this.props.loadMoreClips && this.props.loadMoreClips(), t < n.length && this.props.showModal(V, {
+                        getClips: this.props.getClips,
+                        clip: n[t],
+                        clipIndex: t,
+                        loadMoreClips: this.props.loadMoreClips,
+                        pageType: this.props.pageType
+                    })
+                }, t
+            }(c.Component)),
+            U = Object(h.d)("ClipsViewModalNavigation")(A);
+        var B = Object(r.b)(null, function(e) {
+                return Object(o.b)({
+                    showModal: s.d,
+                    closeModal: s.c
+                }, e)
+            })(U),
+            P = (n("/+aa"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        modalView: a.View
+                    }, t.setToViewState = function() {
+                        t.updateClipsModalViewState(a.View)
+                    }, t.updateClipsModalViewState = function(e) {
+                        t.setState({
+                            modalView: e
+                        })
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e, t, n = ((t = {})["clips-modal-view"] = !0, t["clips-modal-view--wide"] = !1, t);
+                    switch (this.state.modalView) {
+                        case a.Report:
+                            e = c.createElement(g.a, {
+                                title: Object(u.d)("Report this Clip", "ClipsViewModal"),
+                                reportContext: {
+                                    contentType: f.a.Clip,
+                                    contentID: this.props.clip.slug,
+                                    targetUserID: this.props.clip.broadcaster && this.props.clip.broadcaster.id || "",
+                                    additionalTrackingID: this.props.clip.curator && this.props.clip.curator.id || ""
+                                },
+                                onClose: this.setToViewState
+                            });
+                            break;
+                        case a.Delete:
+                            e = c.createElement(p.d, {
+                                slug: this.props.clip.slug,
+                                onClose: this.setToViewState
+                            });
+                            break;
+                        case a.DeleteAll:
+                            e = c.createElement(p.e, {
+                                slug: this.props.clip.slug,
+                                onClose: this.setToViewState
+                            });
+                            break;
+                        case a.Ban:
+                        case a.Timeout:
+                            if (this.props.clip.curator && this.props.clip.broadcaster) {
+                                e = c.createElement(p.b, {
+                                    targetUser: {
+                                        displayName: this.props.clip.curator.displayName || "",
+                                        login: this.props.clip.curator.login || ""
+                                    },
+                                    broadcasterID: this.props.clip.broadcaster.id || "",
+                                    isTemporary: this.state.modalView === a.Timeout,
+                                    onClose: this.setToViewState
+                                });
+                                break
+                            }
+                        default:
+                            e = c.createElement(B, {
+                                getClips: this.props.getClips,
+                                clip: this.props.clip,
+                                clipIndex: this.props.clipIndex,
+                                updateModalViewState: this.updateClipsModalViewState,
+                                loadMoreClips: this.props.loadMoreClips,
+                                pageType: this.props.pageType
+                            }), n["clips-modal-view--wide"] = !0
+                    }
+                    return c.createElement(R._8, {
+                        className: d(n)
+                    }, e, c.createElement(m.a, {
+                        closeOnBackdropClick: !0,
+                        closeOnPageNavigation: !0
+                    }))
+                }, t = l.__decorate([Object(h.d)("ClipsViewModal")], t)
+            }(c.Component));
+        var V = Object(r.b)(null, function(e) {
+            return Object(o.b)({
+                showModal: s.d
+            }, e)
+        })(P);
+        n.d(t, "a", function() {
+            return V
+        })
     },
     "1tZx": function(e, t) {},
     "1vwK": function(e, t) {},
@@ -10746,433 +11174,30 @@ webpackJsonp([41], {
     },
     "5bwi": function(e, t, n) {
         "use strict";
-        var i, a = n("GiK3"),
-            r = n("6sO2"),
-            o = n("6yQB"),
-            s = n("CSlQ"),
-            l = n("RH2O"),
-            d = n("2KeS"),
-            c = n("V5M+"),
+        var i = n("GiK3"),
+            a = n("6sO2"),
+            r = n("6yQB"),
+            o = n("CSlQ"),
+            s = n("RH2O"),
+            l = n("2KeS"),
+            d = n("V5M+"),
+            c = n("1qqv"),
             u = n("TToO"),
-            m = n("HW6M"),
-            p = n("+8VM"),
-            h = n("sikP"),
-            g = n("oSFp"),
-            f = n("mw/a"),
-            v = n("6BvN"),
-            b = n("F8kA"),
-            k = n("rCmJ"),
-            y = n("4Gcm"),
-            C = n("8Wuk"),
-            _ = n("2hJ3"),
-            S = n("NY9D"),
-            E = n("HM6l"),
-            N = n("sEID"),
-            w = n("jetF"),
-            D = n("7vx8"),
-            O = n("J4ib");
-        ! function(e) {
-            e[e.View = 0] = "View", e[e.Report = 1] = "Report", e[e.Delete = 2] = "Delete", e[e.DeleteAll = 3] = "DeleteAll", e[e.Ban = 4] = "Ban", e[e.Timeout = 5] = "Timeout"
-        }(i || (i = {}));
-        var R = n("Odds"),
-            I = n("6fIs"),
-            T = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.renderMenuItem = function(e) {
-                        var t = n.menuData.get(e);
-                        return e && t ? a.createElement(R._6, {
-                            key: t.display,
-                            onClick: t.destinationHandler,
-                            "data-a-target": "clip-moderation-button-" + t.display
-                        }, a.createElement(R._8, {
-                            padding: {
-                                x: 1,
-                                y: .5
-                            }
-                        }, t.display)) : null
-                    }, n.menuData = new Map([
-                        [i.Report, {
-                            display: Object(O.d)("Report", "ModerationMenu"),
-                            destinationHandler: function() {
-                                return n.props.updateModalViewState(i.Report)
-                            }
-                        }],
-                        [i.Delete, {
-                            display: Object(O.d)("Delete", "ModerationMenu"),
-                            destinationHandler: function() {
-                                return n.props.updateModalViewState(i.Delete)
-                            }
-                        }],
-                        [i.DeleteAll, {
-                            display: Object(O.d)("Delete All Clips from Video", "ModerationMenu"),
-                            destinationHandler: function() {
-                                return n.props.updateModalViewState(i.DeleteAll)
-                            }
-                        }],
-                        [i.Ban, {
-                            display: Object(O.d)("Ban User", "ModerationMenu"),
-                            destinationHandler: function() {
-                                return n.props.updateModalViewState(i.Ban)
-                            }
-                        }],
-                        [i.Timeout, {
-                            display: Object(O.d)("Timeout User (24 hr)", "ModerationMenu"),
-                            destinationHandler: function() {
-                                return n.props.updateModalViewState(i.Timeout)
-                            }
-                        }]
-                    ]), n
-                }
-                return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.data,
-                        t = this.props.clip;
-                    if (!e || !e.currentUser) return null;
-                    var n = e.currentUser.isStaff || e.currentUser.isSiteAdmin,
-                        r = !!t.curator && e.currentUser.id === t.curator.id,
-                        o = !!t.broadcaster && e.currentUser.id === t.broadcaster.id,
-                        s = r || o || n,
-                        l = o || n,
-                        d = [i.Report];
-                    return s && d.push(i.Delete), l && (d.push(i.DeleteAll), t.curator && t.broadcaster && (d.push(i.Ban), d.push(i.Timeout))), a.createElement(R._8, {
-                        className: "moderation-menu"
-                    }, a.createElement(w.a, null, a.createElement(R.v, {
-                        type: R.B.Hollow,
-                        icon: R._25.More,
-                        ariaLabel: Object(O.d)("More Options", "ModerationMenu"),
-                        "data-a-target": "moderation-menu-button"
-                    }), a.createElement(R.q, {
-                        direction: R.r.TopRight
-                    }, a.createElement(R._8, {
-                        padding: {
-                            y: .5
-                        }
-                    }, this.moderationMenuRender(d)))))
-                }, t.prototype.moderationMenuRender = function(e) {
-                    var t = this;
-                    return e.map(function(e) {
-                        return t.renderMenuItem(e)
-                    })
-                }, t = u.__decorate([Object(D.a)(I), Object(s.d)("ModerationMenu")], t)
-            }(a.Component),
-            M = n("WNmM"),
-            L = (n("MjlB"), 2e3),
-            x = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        isShowingBalloon: !1,
-                        playerRefID: Object(E.a)()
-                    }, t.timeoutID = null, t.copyClipURL = function() {
-                        var e;
-                        try {
-                            e = Object(_.a)(t.props.clip.url)
-                        } catch (e) {
-                            return void r.j.warn("Failed to copy", e)
-                        }
-                        e && (t.setState({
-                            isShowingBalloon: !0
-                        }), t.timeoutID = setTimeout(function() {
-                            t.setState({
-                                isShowingBalloon: !1
-                            })
-                        }, L), Object(M.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(C.b.CopyInput))
-                    }, t.dismissBalloon = function() {
-                        t.setState({
-                            isShowingBalloon: !1
-                        }), t.timeoutID && (clearTimeout(t.timeoutID), t.timeoutID = null)
-                    }, t
-                }
-                return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive(), this.props.reportPlayerInstanceStarted(this.state.playerRefID)
-                }, t.prototype.render = function() {
-                    var e, t = this.props.clip.broadcaster && a.createElement(b.a, {
-                        to: "/" + this.props.clip.broadcaster.login,
-                        onClick: this.props.closeModal,
-                        "data-a-target": "clip-modal-broadcaster-link"
-                    }, this.props.clip.broadcaster.login);
-                    return e = this.props.clip.game && t ? Object(r.d)("{broadcaster} playing {game}", {
-                        broadcaster: t,
-                        game: a.createElement(b.a, {
-                            to: "" + Object(S.c)(this.props.clip.game.name),
-                            onClick: this.props.closeModal,
-                            "data-a-target": "clip-modal-game-link"
-                        }, this.props.clip.game.name)
-                    }, "ClipsViewModalContent") : t, a.createElement(R._35, {
-                        className: "clips-view-modal-content",
-                        background: R.n.Base
-                    }, a.createElement(R._8, {
-                        padding: {
-                            bottom: 2
-                        }
-                    }, a.createElement(R.k, {
-                        ratio: R.l.Aspect16x9
-                    }, a.createElement("iframe", {
-                        src: this.props.clip.embedURL,
-                        width: "100%",
-                        height: "100%",
-                        allowFullScreen: !0
-                    }))), a.createElement(R._8, {
-                        padding: {
-                            x: 2,
-                            bottom: 2
-                        }
-                    }, a.createElement(R._8, {
-                        display: R.R.Flex,
-                        flexWrap: R.U.NoWrap
-                    }, a.createElement(R._8, {
-                        flexGrow: 1,
-                        margin: {
-                            right: 1
-                        }
-                    }, a.createElement(k.a, {
-                        onClickOut: this.dismissBalloon
-                    }, a.createElement(y.a, {
-                        text: this.props.clip.url,
-                        icon: !0,
-                        iconAsset: R._25.Link,
-                        onSelection: this.copyClipURL,
-                        "data-a-target": "clip-share-input"
-                    }, a.createElement(R.q, {
-                        show: this.state.isShowingBalloon,
-                        direction: R.r.TopRight
-                    }, a.createElement(R._6, {
-                        onClick: this.dismissBalloon
-                    }, a.createElement(R._8, {
-                        padding: 1
-                    }, a.createElement(R.Q, {
-                        bold: !0
-                    }, Object(r.d)("Link copied to clipboard", "ClipsViewModalContent")))))))), a.createElement(N.a, {
-                        clip: this.props.clip,
-                        pageType: this.props.pageType
-                    }), a.createElement(T, {
-                        clip: this.props.clip,
-                        updateModalViewState: this.props.updateModalViewState
-                    }))), a.createElement(R._8, {
-                        padding: {
-                            x: 2,
-                            bottom: 2
-                        },
-                        display: R.R.Flex,
-                        flexWrap: R.U.NoWrap,
-                        justifyContent: R._7.Between,
-                        fullWidth: !0,
-                        overflow: R._11.Hidden
-                    }, a.createElement(R._8, {
-                        flexGrow: 1,
-                        ellipsis: !0
-                    }, a.createElement(R._2, {
-                        ellipsis: !0
-                    }, a.createElement(R._35, {
-                        display: R.R.Flex,
-                        fontSize: R.V.Size5
-                    }, a.createElement(R._8, {
-                        ellipsis: !0
-                    }, this.props.clip.title), a.createElement(R._8, {
-                        flexShrink: 0
-                    }, a.createElement(R.Q, {
-                        type: R._49.Span,
-                        color: R.K.Alt2
-                    }, " • ", Object(r.d)("{created, date, medium}", {
-                        created: new Date(this.props.clip.createdAt)
-                    }, "ClipsViewModalContent"))))), a.createElement(R._2, {
-                        ellipsis: !0
-                    }, a.createElement(R._35, {
-                        color: R.K.Alt2
-                    }, e, e && !!this.props.clip.curator && a.createElement("span", null, " • "), this.props.clip.curator && Object(r.d)("Clipped by {curator}", {
-                        curator: a.createElement(b.a, {
-                            to: "/" + this.props.clip.curator.login,
-                            onClick: this.props.closeModal,
-                            "data-a-target": "clip-modal-curator-link"
-                        }, this.props.clip.curator.login)
-                    }, "ClipsViewModalContent")))), a.createElement(R._35, {
-                        display: R.R.Flex,
-                        padding: {
-                            bottom: 2,
-                            left: 2
-                        },
-                        fontSize: R.V.Size5,
-                        color: R.K.Alt2,
-                        flexShrink: 0
-                    }, a.createElement(R._8, {
-                        margin: {
-                            right: .5
-                        },
-                        alignItems: R.c.Center,
-                        display: R.R.Flex
-                    }, a.createElement(R._24, {
-                        asset: R._25.GlyphViews
-                    })), Object(r.d)("{viewCount, number} views", {
-                        viewCount: this.props.clip.viewCount
-                    }, "ClipsViewModalContent"))))
-                }, t = u.__decorate([Object(s.d)("ClipsViewModalContent")], t)
-            }(a.Component),
-            j = n("Hjbq");
-        var F = Object(l.b)(null, function(e) {
-                return Object(d.b)({
-                    reportPlayerInstanceStarted: j.b
-                }, e)
-            })(x),
-            A = (n("GOrw"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onKeyDown = function(e) {
-                        var n = e.charCode || e.keyCode;
-                        n === v.a.Left ? t.updateClipBackward() : n === v.a.Right && t.updateClipForward()
-                    }, t.updateClipForward = function() {
-                        t.updateClipIndex(t.props.clipIndex + 1)
-                    }, t.updateClipBackward = function() {
-                        t.updateClipIndex(t.props.clipIndex - 1)
-                    }, t
-                }
-                return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive(), this.setUpArrowListeners()
-                }, t.prototype.render = function() {
-                    var e = null,
-                        t = null;
-                    this.props.clipIndex > 0 && (e = a.createElement(R._8, {
-                        position: R._15.Absolute,
-                        display: R.R.Flex,
-                        alignItems: R.c.Stretch,
-                        className: "clip-carousel-button clip-carousel-button--left"
-                    }, a.createElement(R.w, {
-                        ariaLabel: Object(r.d)("Previous clip", "ClipsViewModalNavigation"),
-                        type: R.y.Primary,
-                        icon: R._25.AngleLeft,
-                        onClick: this.updateClipBackward,
-                        "data-test-selector": "clips-view-modal-navigation-back"
-                    })));
-                    var n = this.props.getClips();
-                    return this.props.loadMoreClips && n.length - this.props.clipIndex < 4 && this.props.loadMoreClips(), this.props.clipIndex < n.length - 1 && (t = a.createElement(R._8, {
-                        position: R._15.Absolute,
-                        display: R.R.Flex,
-                        alignItems: R.c.Stretch,
-                        className: "clip-carousel-button clip-carousel-button--right"
-                    }, a.createElement(R.w, {
-                        ariaLabel: Object(r.d)("Next clip", "ClipsViewModalNavigation"),
-                        type: R.y.Primary,
-                        icon: R._25.AngleRight,
-                        onClick: this.updateClipForward,
-                        "data-test-selector": "clips-view-modal-navigation-forward"
-                    }))), a.createElement(R._8, {
-                        className: "clips-view-modal-navigation"
-                    }, e, a.createElement(F, {
-                        clip: this.props.clip,
-                        updateModalViewState: this.props.updateModalViewState,
-                        pageType: this.props.pageType,
-                        closeModal: this.props.closeModal
-                    }), t)
-                }, t.prototype.componentWillUnmount = function() {
-                    document.removeEventListener("keydown", this.onKeyDown)
-                }, t.prototype.setUpArrowListeners = function() {
-                    document.addEventListener("keydown", this.onKeyDown)
-                }, t.prototype.updateClipIndex = function(e) {
-                    var t = Math.max(0, e),
-                        n = this.props.getClips();
-                    n.length - t < 4 && this.props.loadMoreClips(), t < n.length && this.props.showModal(V, {
-                        getClips: this.props.getClips,
-                        clip: n[t],
-                        clipIndex: t,
-                        loadMoreClips: this.props.loadMoreClips,
-                        pageType: this.props.pageType
-                    })
-                }, t
-            }(a.Component)),
-            U = Object(s.d)("ClipsViewModalNavigation")(A);
-        var B = Object(l.b)(null, function(e) {
-                return Object(d.b)({
-                    showModal: c.d,
-                    closeModal: c.c
-                }, e)
-            })(U),
-            P = (n("/+aa"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        modalView: i.View
-                    }, t.setToViewState = function() {
-                        t.updateClipsModalViewState(i.View)
-                    }, t.updateClipsModalViewState = function(e) {
-                        t.setState({
-                            modalView: e
-                        })
-                    }, t
-                }
-                return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e, t, n = ((t = {})["clips-modal-view"] = !0, t["clips-modal-view--wide"] = !1, t);
-                    switch (this.state.modalView) {
-                        case i.Report:
-                            e = a.createElement(g.a, {
-                                title: Object(r.d)("Report this Clip", "ClipsViewModal"),
-                                reportContext: {
-                                    contentType: f.a.Clip,
-                                    contentID: this.props.clip.slug,
-                                    targetUserID: this.props.clip.broadcaster ? this.props.clip.broadcaster.id : "",
-                                    additionalTrackingID: this.props.clip.curator ? this.props.clip.curator.id : ""
-                                },
-                                onClose: this.setToViewState
-                            });
-                            break;
-                        case i.Delete:
-                            e = a.createElement(h.d, {
-                                slug: this.props.clip.slug,
-                                onClose: this.setToViewState
-                            });
-                            break;
-                        case i.DeleteAll:
-                            e = a.createElement(h.e, {
-                                slug: this.props.clip.slug,
-                                onClose: this.setToViewState
-                            });
-                            break;
-                        case i.Ban:
-                        case i.Timeout:
-                            if (this.props.clip.curator && this.props.clip.broadcaster) {
-                                e = a.createElement(h.b, {
-                                    targetUser: this.props.clip.curator,
-                                    broadcasterID: this.props.clip.broadcaster.id,
-                                    isTemporary: this.state.modalView === i.Timeout,
-                                    onClose: this.setToViewState
-                                });
-                                break
-                            }
-                        default:
-                            e = a.createElement(B, {
-                                getClips: this.props.getClips,
-                                clip: this.props.clip,
-                                clipIndex: this.props.clipIndex,
-                                updateModalViewState: this.updateClipsModalViewState,
-                                loadMoreClips: this.props.loadMoreClips,
-                                pageType: this.props.pageType
-                            }), n["clips-modal-view--wide"] = !0
-                    }
-                    return a.createElement(R._8, {
-                        className: m(n)
-                    }, e, a.createElement(p.a, {
-                        closeOnBackdropClick: !0,
-                        closeOnPageNavigation: !0
-                    }))
-                }, t = u.__decorate([Object(s.d)("ClipsViewModal")], t)
-            }(a.Component));
-        var V = Object(l.b)(null, function(e) {
-                return Object(d.b)({
-                    showModal: c.d
-                }, e)
-            })(P),
-            H = n("iOr9"),
-            G = n("vKFS"),
-            W = n("XOun"),
-            z = (n("Ajho"), function(e) {
+            m = n("iOr9"),
+            p = n("vKFS"),
+            h = n("J4ib"),
+            g = n("F8kA"),
+            f = n("NY9D"),
+            v = n("WNmM"),
+            b = n("XOun"),
+            k = n("Odds"),
+            y = (n("Ajho"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getClips = function() {
                         return t.props.clips
                     }, t.openModal = function(e) {
-                        e.preventDefault(), t.props.showModal(V, {
+                        e.preventDefault(), t.props.showModal(c.a, {
                             getClips: t.getClips,
                             clip: t.props.clip,
                             clipIndex: t.props.clipIndex,
@@ -11186,122 +11211,122 @@ webpackJsonp([41], {
                 }, t.prototype.render = function() {
                     var e = null,
                         t = null;
-                    return this.props.pageType === M.b.Channel && this.props.clip.game && (e = a.createElement(R._35, {
-                        position: R._15.Absolute,
+                    return this.props.pageType === v.b.Channel && this.props.clip.game && (e = i.createElement(k._35, {
+                        position: k._15.Absolute,
                         attachBottom: !0,
                         attachRight: !0,
                         borderRight: !1,
                         borderBottom: !1,
                         className: "clips-preview-card__boxart"
-                    }, a.createElement(b.a, {
-                        to: Object(S.c)(this.props.clip.game.name) + "/clips",
+                    }, i.createElement(g.a, {
+                        to: Object(f.c)(this.props.clip.game.name) + "/clips",
                         "data-test-selector": "card-view-game-link",
                         "data-a-target": "clip-game-link"
-                    }, a.createElement(R._52, {
-                        display: R.R.Block,
-                        direction: R._54.Bottom,
+                    }, i.createElement(k._52, {
+                        display: k.R.Block,
+                        direction: k._54.Bottom,
                         label: this.props.clip.game.name
-                    }, a.createElement(R.E, {
+                    }, i.createElement(k.E, {
                         alt: this.props.clip.game.name,
-                        src: this.props.clip.game.boxArtURL,
-                        aspect: R.l.BoxArt,
-                        size: R.F.Size4
-                    }))))), this.props.pageType === M.b.Game && this.props.clip.broadcaster && (t = a.createElement(R._8, null, a.createElement(b.a, {
+                        src: this.props.clip.game.boxArtURL || a.a.defaultBoxArtURL,
+                        aspect: k.l.BoxArt,
+                        size: k.F.Size4
+                    }))))), this.props.pageType === v.b.Game && this.props.clip.broadcaster && (t = i.createElement(k._8, null, i.createElement(g.a, {
                         className: "clips-preview-card__display-name",
                         to: "/" + this.props.clip.broadcaster.login + "/clips"
-                    }, this.props.clip.broadcaster.login))), a.createElement(R._8, {
+                    }, this.props.clip.broadcaster.login))), i.createElement(k._8, {
                         margin: {
                             bottom: 2,
                             right: 1
                         }
-                    }, a.createElement(R.C, u.__assign({
+                    }, i.createElement(k.C, u.__assign({
                         row: !0
-                    }, Object(R._63)(this.props)), a.createElement(R._8, {
-                        position: R._15.Relative,
+                    }, Object(k._63)(this.props)), i.createElement(k._8, {
+                        position: k._15.Relative,
                         margin: {
                             right: 1
                         },
                         flexShrink: 0
-                    }, a.createElement(b.a, {
+                    }, i.createElement(g.a, {
                         to: this.props.clip.url,
                         onClick: this.openModal,
                         "data-a-target": "clip-thumbnail-link"
-                    }, a.createElement(R.E, {
-                        src: this.props.clip.thumbnailURL || r.o.config.defaultStreamPreviewURL,
+                    }, i.createElement(k.E, {
+                        src: this.props.clip.thumbnailURL || a.o.config.defaultStreamPreviewURL,
                         alt: this.props.clip.title,
-                        aspect: R.l.Aspect16x9,
-                        size: R.F.Size24
-                    })), e), a.createElement(R.D, {
-                        overflow: R._11.Hidden
-                    }, a.createElement(R.Q, {
-                        type: R._49.H3,
-                        fontSize: R.V.Size5
-                    }, a.createElement(b.a, {
+                        aspect: k.l.Aspect16x9,
+                        size: k.F.Size24
+                    })), e), i.createElement(k.D, {
+                        overflow: k._11.Hidden
+                    }, i.createElement(k.Q, {
+                        type: k._49.H3,
+                        fontSize: k.V.Size5
+                    }, i.createElement(g.a, {
                         className: "clips-preview-card__title",
                         to: this.props.clip.url,
                         onClick: this.openModal,
                         "data-a-target": "clip-title-link"
-                    }, this.props.clip.title)), a.createElement(R.Q, {
+                    }, this.props.clip.title)), i.createElement(k.Q, {
                         ellipsis: !0
-                    }, t), a.createElement(R.Q, {
-                        color: R.K.Alt2,
+                    }, t), i.createElement(k.Q, {
+                        color: k.K.Alt2,
                         ellipsis: !0
-                    }, Object(r.d)("{created, date, medium}", {
+                    }, Object(a.d)("{created, date, medium}", {
                         created: new Date(this.props.clip.createdAt)
-                    }, "ClipsCardView"), this.props.clip.curator && a.createElement("span", null, " · ", this.props.isClipChampExperiment && this.props.clip.champBadge && a.createElement(R._8, {
+                    }, "ClipsCardView"), this.props.clip.curator && i.createElement("span", null, " · ", this.props.isClipChampExperiment && this.props.clip.champBadge && i.createElement(k._8, {
                         margin: {
                             right: .5
                         },
-                        display: R.R.InlineBlock
-                    }, a.createElement(W.a, {
+                        display: k.R.InlineBlock
+                    }, i.createElement(b.a, {
                         pageType: this.props.pageType
-                    })), Object(r.d)("Clipped by {curator}", {
-                        curator: a.createElement(b.a, {
+                    })), Object(a.d)("Clipped by {curator}", {
+                        curator: i.createElement(g.a, {
                             className: "clips-preview-card__display-name",
                             to: "/" + this.props.clip.curator.login,
                             "data-a-target": "clip-curator-link"
                         }, this.props.clip.curator.login)
-                    }, "ClipsCardView"))), a.createElement(R.Q, {
-                        color: R.K.Alt2
-                    }, Object(r.d)("{viewCount, number} views", {
+                    }, "ClipsCardView"))), i.createElement(k.Q, {
+                        color: k.K.Alt2
+                    }, Object(a.d)("{viewCount, number} views", {
                         viewCount: this.props.clip.viewCount
                     }, "ClipsCardView")))))
-                }, t = u.__decorate([Object(s.d)("ClipsCardView")], t)
-            }(a.Component));
-        var q = Object(l.b)(null, function(e) {
-                return Object(d.b)({
-                    showModal: c.d
+                }, t = u.__decorate([Object(o.d)("ClipsCardView")], t)
+            }(i.Component));
+        var C = Object(s.b)(null, function(e) {
+                return Object(l.b)({
+                    showModal: d.d
                 }, e)
-            })(z),
-            Q = n("QAcM"),
-            K = function(e) {
+            })(y),
+            _ = n("QAcM"),
+            S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderVariation = function() {
-                        if (0 === t.props.clips.length) return a.createElement(R._8, {
+                        if (0 === t.props.clips.length) return i.createElement(k._8, {
                             className: "clips-cards"
                         }, t.renderEmpty());
-                        var e = G.b.MixedGameAndChannelList;
-                        return t.props.pageType === M.b.Channel && (e = G.b.SingleChannelList), t.props.pageType === M.b.Game && (e = G.b.SingleGameList), a.createElement(R._8, {
+                        var e = p.b.MixedGameAndChannelList;
+                        return t.props.pageType === v.b.Channel && (e = p.b.SingleChannelList), t.props.pageType === v.b.Game && (e = p.b.SingleGameList), i.createElement(k._8, {
                             className: "clips-cards",
                             fullWidth: !0
-                        }, a.createElement(R._55, {
-                            gutterSize: R._57.Small,
-                            childWidth: R._56.Large,
+                        }, i.createElement(k._55, {
+                            gutterSize: k._57.Small,
+                            childWidth: k._56.Large,
                             placeholderItems: 20
-                        }, t.props.clips.map(function(n, i) {
-                            return a.createElement(R._8, {
+                        }, t.props.clips.map(function(n, a) {
+                            return i.createElement(k._8, {
                                 margin: {
                                     bottom: 2
                                 },
-                                key: i
-                            }, a.createElement(G.a, {
+                                key: a
+                            }, i.createElement(p.a, {
                                 context: e,
                                 title: n.title,
                                 linkTo: n.url,
-                                onClick: t.openModal.bind(t, n, i),
+                                onClick: t.openModal.bind(t, n, a),
                                 thumbnailImageProps: {
-                                    src: n.thumbnailURL || O.p.config.defaultStreamPreviewURL,
+                                    src: n.thumbnailURL || h.p.config.defaultStreamPreviewURL,
                                     alt: n.title
                                 },
                                 channelLogin: n.broadcaster && n.broadcaster.login || "",
@@ -11317,7 +11342,7 @@ webpackJsonp([41], {
                                     pathname: "/directory/game/" + encodeURI(n.game.name)
                                 } : void 0,
                                 gameBoxArtImageProps: n.game ? {
-                                    src: n.game.boxArtURL,
+                                    src: n.game.boxArtURL || h.a.defaultBoxArtURL,
                                     alt: n.game.name
                                 } : void 0,
                                 datePublished: n.createdAt,
@@ -11328,13 +11353,13 @@ webpackJsonp([41], {
                             }))
                         })))
                     }, t.renderFallback = function() {
-                        return a.createElement(R._8, {
+                        return i.createElement(k._8, {
                             className: "clips-cards"
-                        }, a.createElement(R.Y, {
-                            gutterSize: R.Z.None
+                        }, i.createElement(k.Y, {
+                            gutterSize: k.Z.None
                         }, 0 === t.props.clips.length ? t.renderEmpty() : t.renderClips()))
                     }, t.updateToAllTime = function() {
-                        t.props.updateTimeFilter(Q.b.All)
+                        t.props.updateTimeFilter(_.b.All)
                     }, t.openModal = function(e, n, i) {
                         i.preventDefault(), t.props.showClipsViewModal(e, n, function() {
                             return t.props.clips
@@ -11351,65 +11376,65 @@ webpackJsonp([41], {
                         },
                         name: "TWILIGHT_VIDEO_CARD_UPDATES"
                     };
-                    return a.createElement(H.a, u.__assign({}, e))
+                    return i.createElement(m.a, u.__assign({}, e))
                 }, t.prototype.renderEmpty = function() {
-                    var e = this.props.timeFilterValue === Q.b.All ? a.createElement(R._8, null, a.createElement(R.Q, {
-                        fontSize: R.V.Size4
-                    }, Object(O.d)("No Clips Found", "ClipsCards")), a.createElement(R._8, {
+                    var e = this.props.timeFilterValue === _.b.All ? i.createElement(k._8, null, i.createElement(k.Q, {
+                        fontSize: k.V.Size4
+                    }, Object(h.d)("No Clips Found", "ClipsCards")), i.createElement(k._8, {
                         margin: 3
-                    }, Object(O.d)("<x:link>Learn how</x:link> to make and share clips of this channel", {
+                    }, Object(h.d)("<x:link>Learn how</x:link> to make and share clips of this channel", {
                         "x:link": function(e) {
-                            return a.createElement("a", {
+                            return i.createElement("a", {
                                 href: "https://help.twitch.tv/customer/portal/articles/2442508-how-to-use-clips",
                                 target: "_blank"
                             }, e)
                         }
-                    }, "ClipsCards"))) : a.createElement(R._8, null, a.createElement(R.Q, {
-                        fontSize: R.V.Size4
-                    }, Object(O.d)("No clips were created in this time period.", "ClipsCards"), a.createElement("br", null), Object(O.d)("Check out all popular clips from this channel instead.", "ClipsCards")), a.createElement(R._8, {
+                    }, "ClipsCards"))) : i.createElement(k._8, null, i.createElement(k.Q, {
+                        fontSize: k.V.Size4
+                    }, Object(h.d)("No clips were created in this time period.", "ClipsCards"), i.createElement("br", null), Object(h.d)("Check out all popular clips from this channel instead.", "ClipsCards")), i.createElement(k._8, {
                         margin: 3
-                    }, a.createElement(R.v, {
-                        type: R.B.Hollow,
+                    }, i.createElement(k.v, {
+                        type: k.B.Hollow,
                         onClick: this.updateToAllTime
-                    }, Object(O.d)("See all popular clips", "ClipCards"))));
-                    return a.createElement(R._8, {
+                    }, Object(h.d)("See all popular clips", "ClipCards"))));
+                    return i.createElement(k._8, {
                         fullWidth: !0
-                    }, a.createElement(R.Y, null, a.createElement(R.L, {
+                    }, i.createElement(k.Y, null, i.createElement(k.L, {
                         cols: 3
-                    }), a.createElement(R.L, {
+                    }), i.createElement(k.L, {
                         cols: 6
-                    }, a.createElement(R._8, {
-                        textAlign: R._45.Center
-                    }, e)), a.createElement(R.L, {
+                    }, i.createElement(k._8, {
+                        textAlign: k._45.Center
+                    }, e)), i.createElement(k.L, {
                         cols: 3
                     })))
                 }, t.prototype.renderClips = function() {
                     var e = this,
-                        t = "on" === O.p.dynamicSettings.get("twilight_clips_already", "off");
-                    return this.props.clips.map(function(n, i) {
-                        return a.createElement(R.L, {
+                        t = "on" === h.p.dynamicSettings.get("twilight_clips_already", "off");
+                    return this.props.clips.map(function(n, a) {
+                        return i.createElement(k.L, {
                             cols: {
                                 default: 12,
                                 xl: 6
                             },
                             key: n.slug
-                        }, a.createElement(q, {
+                        }, i.createElement(C, {
                             clip: n,
                             clips: e.props.clips,
-                            clipIndex: i,
+                            clipIndex: a,
                             "data-target": "clips-card-view",
-                            "data-a-target": "clips-card-" + i,
+                            "data-a-target": "clips-card-" + a,
                             isClipChampExperiment: t,
                             loadMoreClips: e.props.loadMoreClips,
                             pageType: e.props.pageType
                         }))
                     })
-                }, t = u.__decorate([Object(s.d)("ClipCards")], t)
-            }(a.Component);
-        var $ = Object(l.b)(null, function(e, t) {
-                return Object.assign(Object(d.b)({
+                }, t = u.__decorate([Object(o.d)("ClipCards")], t)
+            }(i.Component);
+        var E = Object(s.b)(null, function(e, t) {
+                return Object.assign(Object(l.b)({
                     showClipsViewModal: function(e, n, i) {
-                        return Object(c.d)(V, {
+                        return Object(d.d)(c.a, {
                             getClips: i,
                             clip: e,
                             clipIndex: n,
@@ -11418,34 +11443,34 @@ webpackJsonp([41], {
                         })
                     }
                 }, e), t)
-            })(K),
-            Y = function(e) {
-                return a.createElement(R._8, null, a.createElement(R._8, {
-                    display: R.R.Flex,
-                    flexWrap: R.U.NoWrap,
-                    justifyContent: R._7.Between,
+            })(S),
+            N = function(e) {
+                return i.createElement(k._8, null, i.createElement(k._8, {
+                    display: k.R.Flex,
+                    flexWrap: k.U.NoWrap,
+                    justifyContent: k._7.Between,
                     margin: {
                         bottom: 2
                     },
                     fullWidth: !0
-                }, a.createElement(R._8, {
-                    display: R.R.Flex,
-                    flexWrap: R.U.NoWrap
-                }, e.pageType === M.b.Game && a.createElement(R._8, {
+                }, i.createElement(k._8, {
+                    display: k.R.Flex,
+                    flexWrap: k.U.NoWrap
+                }, e.pageType === v.b.Game && i.createElement(k._8, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement(o.a, null)), a.createElement(R._8, null, a.createElement(Q.c, {
+                }, i.createElement(r.a, null)), i.createElement(k._8, null, i.createElement(_.c, {
                     updateTimeFilter: e.updateTimeFilter,
                     timeFilterValue: e.timeFilterValue
-                }))), a.createElement(R.v, {
+                }))), i.createElement(k.v, {
                     linkTo: "https://twitch.tv/manager/clips",
                     targetBlank: !0,
-                    type: R.B.Hollow,
+                    type: k.B.Hollow,
                     "data-a-target": "manage-clips-button"
-                }, Object(r.d)("Manage my clips", "TopClips"))), a.createElement(R._8, null, e.isLoading ? a.createElement(R._10, {
+                }, Object(a.d)("Manage my clips", "TopClips"))), i.createElement(k._8, null, e.isLoading ? i.createElement(k._10, {
                     fillContent: !0
-                }) : a.createElement($, {
+                }) : i.createElement(E, {
                     clips: e.clips,
                     pageType: e.pageType,
                     loadMoreClips: e.loadMoreClips,
@@ -11453,13 +11478,13 @@ webpackJsonp([41], {
                     timeFilterValue: e.timeFilterValue
                 })))
             },
-            J = Object(s.d)("TopClips", {
+            w = Object(o.d)("TopClips", {
                 autoReportInteractive: !0
-            })(Y);
+            })(N);
         n.d(t, !1, function() {
-            return Y
+            return N
         }), n.d(t, "a", function() {
-            return J
+            return w
         })
     },
     "5vPJ": function(e, t, n) {
@@ -11990,14 +12015,21 @@ webpackJsonp([41], {
             c = n("bdk8");
         n.n(c);
         ! function(e) {
-            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
+            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
         }(i || (i = {}));
         var u = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.renderLink = function() {
                     var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                    return n.isLink() ? r.createElement("a", a.__assign({
+                    return n.props.type === i.Download ? r.createElement("a", a.__assign({
+                        href: n.props.url,
+                        target: "_blank",
+                        className: e,
+                        onClick: n.onShareClickHandler
+                    }, Object(d._63)(n.props), {
+                        download: n.props.text
+                    }), n.renderIcon()) : n.isLink() ? r.createElement("a", a.__assign({
                         href: n.getLinkTarget(),
                         target: "_blank",
                         className: e,
@@ -12020,16 +12052,27 @@ webpackJsonp([41], {
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
-                    var e = n.getAssetFromType();
+                    var e = n.getAssetFromType(),
+                        t = n.getAssetSizeFromType();
                     return r.createElement(d._8, {
-                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
+                        className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
+                        display: d.R.Flex,
+                        justifyContent: d._7.Center,
+                        alignItems: d.c.Center
                     }, r.createElement(d._24, {
                         asset: e,
-                        width: 30,
-                        height: 30
+                        width: t,
+                        height: t
                     }))
                 }, n.isLink = function() {
                     return n.props.type !== i.Copy
+                }, n.getAssetSizeFromType = function() {
+                    switch (n.props.type) {
+                        case i.Download:
+                            return 20;
+                        default:
+                            return 30
+                    }
                 }, n.getTooltipFromType = function() {
                     switch (n.props.type) {
                         case i.Twitter:
@@ -12040,6 +12083,8 @@ webpackJsonp([41], {
                             return "Facebook";
                         case i.VKontakte:
                             return "VKontakte";
+                        case i.Download:
+                            return Object(o.d)("Download", "SocialButton");
                         case i.Copy:
                             return n.state.isCopied ? Object(o.d)("Copied", "SocialButton") : Object(o.d)("Copy to clipboard", "SocialButton");
                         default:
@@ -12055,6 +12100,8 @@ webpackJsonp([41], {
                             return d._25.VKontakte;
                         case i.Reddit:
                             return d._25.Reddit;
+                        case i.Download:
+                            return d._25.Download;
                         case i.Copy:
                         default:
                             return d._25.Copy
@@ -12069,6 +12116,8 @@ webpackJsonp([41], {
                             return e + "--facebook";
                         case i.VKontakte:
                             return e + "--vkontakte";
+                        case i.Download:
+                            return e + "--download";
                         case i.Copy:
                             return e + "--copy";
                         default:
@@ -12101,7 +12150,7 @@ webpackJsonp([41], {
                     className: "social-button"
                 }, r.createElement(d._52, {
                     label: this.getTooltipFromType(),
-                    direction: d._54.Top
+                    direction: d._54.Bottom
                 }, this.renderLink()))
             }, t
         }(r.Component)
@@ -16418,7 +16467,7 @@ webpackJsonp([41], {
                             case 0:
                                 return [4, n.e(132).then(n.bind(null, "tk3B"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -16430,7 +16479,7 @@ webpackJsonp([41], {
                             case 0:
                                 return [4, n.e(131).then(n.bind(null, "e/M0"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -16442,7 +16491,7 @@ webpackJsonp([41], {
                             case 0:
                                 return [4, n.e(130).then(n.bind(null, "Dan5"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -16454,7 +16503,7 @@ webpackJsonp([41], {
                             case 0:
                                 return [4, n.e(129).then(n.bind(null, "sQp1"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -16466,7 +16515,7 @@ webpackJsonp([41], {
                             case 0:
                                 return [4, n.e(128).then(n.bind(null, "+kKy"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -16478,7 +16527,7 @@ webpackJsonp([41], {
                             case 0:
                                 return [4, n.e(127).then(n.bind(null, "2NJ8"))];
                             case 1:
-                                return [2, e.sent()]
+                                return [2, e.sent().items]
                         }
                     })
                 })
@@ -18291,6 +18340,62 @@ webpackJsonp([41], {
         e.exports = n
     },
     MSFW: function(e, t) {},
+    McFO: function(e, t, n) {
+        "use strict";
+        var i = n("RH2O"),
+            a = n("Aj/L"),
+            r = n("TToO"),
+            o = n("GiK3"),
+            s = n("Snvs"),
+            l = n("bhVC"),
+            d = n("7vx8"),
+            c = n("WNmM"),
+            u = n("U2Sd"),
+            m = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.data.clip,
+                        n = t && t.curator && t.curator.login === this.props.userLogin,
+                        i = "";
+                    if (t && t.videoQualities) {
+                        var a = t.videoQualities[0];
+                        i = a.sourceURL
+                    }
+                    var r = this.props,
+                        d = r.broadcasterId,
+                        u = r.broadcasterLogin,
+                        m = r.forceShow;
+                    return o.createElement(s.a, {
+                        ownerLogin: this.props.broadcasterLogin,
+                        permittedRoles: {
+                            editor: !0,
+                            staff: !0
+                        }
+                    }, function(a) {
+                        var r = a.permitted;
+                        return i && (r || n || m) ? o.createElement(l.a, {
+                            type: l.b.Download,
+                            text: e.props.slug,
+                            url: i,
+                            onShareClick: t ? Object(c.c)(t.id, t.game && t.game.name, d, u, e.props.pageType) : void 0
+                        }) : null
+                    })
+                }, t
+            }(o.Component),
+            p = Object(d.a)(u)(m);
+        var h = Object(i.b)(function(e) {
+            var t = Object(a.c)(e);
+            return {
+                userLogin: t ? t.login : ""
+            }
+        })(p);
+        n.d(t, "a", function() {
+            return h
+        })
+    },
     Mful: function(e, t, n) {
         var i = {
             kind: "Document",
@@ -22394,6 +22499,81 @@ webpackJsonp([41], {
         };
         e.exports = n
     },
+    Snvs: function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("GiK3"),
+            r = n("3zLD"),
+            o = n("6sO2"),
+            s = n("7vx8"),
+            l = n("CSlQ"),
+            d = n("acVP"),
+            c = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        loading: !0,
+                        permitted: !1,
+                        roles: {
+                            staff: !1,
+                            editor: !1,
+                            owner: !1
+                        },
+                        error: null
+                    }, t.logger = o.j.withCategory("role-restricted"), t
+                }
+                return i.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
+                    e.data.loading && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    var t = m(e),
+                        n = {
+                            loading: e.data.loading,
+                            permitted: u(t, e.permittedRoles),
+                            roles: t,
+                            error: null
+                        };
+                    e.data.error ? (n.error = new Error(e.data.error.toString()), this.logger.warn("Unable to retrieve data from GraphQL.", {
+                        err: n.error
+                    })) : e.data.loading || e.data.user && e.data.currentUser || (n.error = new Error("Failed to fetch user information"), this.logger.warn("Failed to fetch user information.", {
+                        err: n.error
+                    })), this.setState(n)
+                }, t.prototype.render = function() {
+                    return this.props.children(this.state)
+                }, t
+            }(a.Component);
+
+        function u(e, t) {
+            return !!e.owner || (!(!e.staff || !t.staff) || !(!e.editor || !t.editor))
+        }
+
+        function m(e) {
+            var t = e.data,
+                n = {
+                    staff: !1,
+                    editor: !1,
+                    owner: !1
+                };
+            return !t.error && !t.loading && t.user && t.currentUser && (n.staff = !(!t.currentUser.roles || !t.currentUser.roles.isStaff), n.editor = !(!t.user.self || !t.user.self.isEditor), n.owner = t.user.id === t.currentUser.id), n
+        }
+        var p = Object(r.compose)(Object(s.a)(d, {
+            options: function(e) {
+                return {
+                    variables: {
+                        contentOwnerLogin: e.ownerLogin
+                    }
+                }
+            }
+        }), Object(l.d)("RoleRestricted"))(c);
+        n.d(t, !1, function() {
+            return c
+        }), n.d(t, !1, function() {
+            return u
+        }), n.d(t, !1, function() {
+            return m
+        }), n.d(t, "a", function() {
+            return p
+        })
+    },
     TCxx: function(e, t) {
         var n = {
             kind: "Document",
@@ -23792,6 +23972,186 @@ webpackJsonp([41], {
         };
         e.exports = n
     },
+    U2Sd: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "ClipsDownloadButton"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "slug"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ID"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "clip"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "slug"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "slug"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "curator"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "login"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "broadcaster"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "game"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "name"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "videoQualities"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "sourceURL"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 152
+            }
+        };
+        n.loc.source = {
+            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\ncurator {\nid\nlogin\n}\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     UMQJ: function(e, t) {
         var n = {
             kind: "Document",
@@ -24326,7 +24686,7 @@ webpackJsonp([41], {
         var i, a, r = n("6sO2"),
             o = n("8Wuk"),
             s = n("vH/s"),
-            l = ((i = {})[o.b.Twitter] = "twitter", i[o.b.Reddit] = "reddit", i[o.b.VKontakte] = "vkontakte", i[o.b.Facebook] = "facebook", i[o.b.Copy] = "link", i[o.b.CopyInput] = "option_link", i),
+            l = ((i = {})[o.b.Twitter] = "twitter", i[o.b.Reddit] = "reddit", i[o.b.VKontakte] = "vkontakte", i[o.b.Facebook] = "facebook", i[o.b.Copy] = "link", i[o.b.CopyInput] = "option_link", i[o.b.Download] = "download", i),
             d = {
                 MyClips: "MyClips",
                 ClipsOfMyChannel: "ClipsOfMyChannel"
@@ -28563,6 +28923,150 @@ webpackJsonp([41], {
         var i = n("qkCi"),
             a = n("INp2")
     },
+    acVP: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "RoleRestricted"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "contentOwnerLogin"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "roles"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isStaff"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "contentOwnerLogin"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isEditor"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 147
+            }
+        };
+        n.loc.source = {
+            body: "query RoleRestricted($contentOwnerLogin: String!) {\ncurrentUser {\nid\nroles {\nisStaff\n}\n}\nuser(login: $contentOwnerLogin) {\nid\nself {\nisEditor\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     ass3: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -28628,6 +29132,15 @@ webpackJsonp([41], {
             function(e) {
                 e.TokenNotAvailable = "TOKEN_NOT_AVAILABLE", e.TokenNotFound = "TOKEN_NOT_FOUND", e.UserBanned = "USER_CHAT_BANNED", e.UserNotFollowing = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.UserNotSubbed = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.UserTimedOut = "USER_CHAT_TIMED_OUT"
             }(r || (r = {}))
+    },
+    bhVC: function(e, t, n) {
+        "use strict";
+        var i = n("8Wuk");
+        n.d(t, "a", function() {
+            return i.a
+        }), n.d(t, "b", function() {
+            return i.b
+        })
     },
     c8Oh: function(e, t, n) {
         "use strict";
@@ -34213,16 +34726,17 @@ webpackJsonp([41], {
     sEID: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
-            return l
-        }), n.d(t, "a", function() {
             return d
+        }), n.d(t, "a", function() {
+            return c
         });
         var i = n("GiK3"),
             a = (n.n(i), n("8Wuk")),
             r = n("yDzg"),
             o = n("WNmM"),
-            s = n("Odds"),
-            l = [{
+            s = n("McFO"),
+            l = n("Odds"),
+            d = [{
                 type: a.b.Twitter,
                 params: {
                     tt_medium: "twtr"
@@ -34240,13 +34754,23 @@ webpackJsonp([41], {
             }, {
                 type: a.b.Copy
             }],
-            d = function(e) {
-                return i.createElement(s._8, {
+            c = function(e) {
+                return i.createElement(l._8, {
                     className: "clips-social-share",
-                    display: s.R.Flex,
-                    flexWrap: s.U.NoWrap
-                }, l.map(function(t) {
-                    return i.createElement(s._8, {
+                    display: l.R.Flex,
+                    flexWrap: l.U.NoWrap
+                }, i.createElement(l._8, {
+                    display: l.R.InlineBlock,
+                    margin: {
+                        right: 1
+                    }
+                }, i.createElement(s.a, {
+                    broadcasterLogin: e.clip.broadcaster && e.clip.broadcaster.login || "",
+                    broadcasterId: e.clip.broadcaster && e.clip.broadcaster.id || "",
+                    slug: e.clip.slug,
+                    pageType: e.pageType
+                })), d.map(function(t) {
+                    return i.createElement(l._8, {
                         key: t.type,
                         margin: {
                             right: 1
@@ -36137,7 +36661,8 @@ webpackJsonp([41], {
                     align: d.a.Center
                 }, a.createElement(d.N, i.__assign({}, e.imageProps))));
                 return e.linkTo && (t = a.createElement(d.O, {
-                    to: e.linkTo
+                    to: e.linkTo,
+                    onClick: e.onClick
                 }, t)), t
             });
         h.displayName = "PreviewCardIconicImage";
@@ -36301,7 +36826,7 @@ webpackJsonp([41], {
                         key: "player-key",
                         className: s((t = {}, t["preview-card-thumbnail__image--hidden"] = !this.state.isLiveVideoPreviewLoaded, t))
                     }, a.createElement(b.a, {
-                        channelLogin: this.props.liveChannelLogin,
+                        channelLogin: this.props.liveChannelLogin || void 0,
                         onPlayerPlaying: this.onLivePreviewLoaded
                     })), a.createElement("div", {
                         key: "image-key",
@@ -36345,9 +36870,11 @@ webpackJsonp([41], {
                         key: t,
                         "data-test-selector": "preview-card-titles__subtitle"
                     }, a.createElement(d.Q, {
-                        color: d.K.Alt
+                        color: d.K.Alt,
+                        ellipsis: !0
                     }, "string" == typeof e ? e : a.createElement(d.O, {
                         to: e.linkTo,
+                        onClick: e.onClick,
                         type: d.P.Inherit
                     }, e.text)))
                 })), a.createElement("div", null, a.createElement(d.O, {
@@ -36396,13 +36923,12 @@ webpackJsonp([41], {
                     restriction: this.props.restriction,
                     attachTop: !0
                 }), a.createElement(d.O, {
-                    to: this.props.linkTo,
-                    onClick: this.props.onClick
-                }, a.createElement(_, {
+                    to: this.props.thumbnailLinkTo || this.props.linkTo,
+                    onClick: this.props.onThumbnailClick || this.props.onClick
+                }, this.props.thumbnailImageProps && a.createElement(_, {
                     staticImageProps: this.props.thumbnailImageProps,
                     animatedImageProps: O(this.props) && this.props.animatedImageProps || void 0,
-                    liveChannelLogin: D(this.props) && this.props.enableLivePreview ? this.props.channelLogin : void 0,
-                    onClick: this.props.onThumbnailClick
+                    liveChannelLogin: D(this.props) && this.props.enableLivePreview ? this.props.channelLogin : null
                 }), this.renderOverlay())), a.createElement(d._8, {
                     display: d.R.Flex,
                     flexWrap: d.U.NoWrap,
@@ -36469,7 +36995,8 @@ webpackJsonp([41], {
                     }
                 }, a.createElement(h, {
                     imageProps: this.props.gameBoxArtImageProps,
-                    linkTo: this.props.gameTitleLinkTo,
+                    linkTo: this.props.gameBoxArtImageLinkTo || this.props.gameTitleLinkTo,
+                    onClick: this.props.gameTitleOnClick,
                     aspect: d.l.BoxArt
                 })) : (this.props.context === g.SingleGameList || this.props.context === g.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(d._8, {
                     margin: {
@@ -36477,26 +37004,30 @@ webpackJsonp([41], {
                     }
                 }, a.createElement(h, {
                     imageProps: this.props.channelImageProps,
-                    linkTo: this.props.channelLoginLinkTo,
+                    linkTo: this.props.channelImageLinkTo || this.props.channelLoginLinkTo,
+                    onClick: this.props.channelLoginOnClick,
                     aspect: d.l.Aspect1x1
                 })) : void 0
             }, t.prototype.renderTitles = function() {
                 var e = [{
                     text: this.props.channelLogin,
-                    linkTo: this.props.channelLoginLinkTo
+                    linkTo: this.props.channelLoginLinkTo,
+                    onClick: this.props.channelLoginOnClick
                 }];
-                return R(this.props) ? e.push({
+                return R(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? e.push({
                     text: Object(r.d)("Clipped by {userName}", {
-                        userName: this.props.clipCreatedByChannelLogin
+                        userName: this.props.clipCreatedByChannelLogin || ""
                     }, "VideoPreviewCard"),
-                    linkTo: this.props.clipCreatedByChannelLoginLinkTo
+                    linkTo: this.props.clipCreatedByChannelLoginLinkTo,
+                    onClick: this.props.clipCreatedByChannelLoginOnClick
                 }) : this.props.context !== g.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && e.push({
                     text: this.props.gameTitle,
-                    linkTo: this.props.gameTitleLinkTo
+                    linkTo: this.props.gameTitleLinkTo,
+                    onClick: this.props.gameTitleOnClick
                 }), a.createElement(S, {
                     title: this.props.title,
-                    onClick: this.props.onVideoTitleClick,
-                    linkTo: this.props.linkTo,
+                    onClick: this.props.onVideoTitleClick || this.props.onClick,
+                    linkTo: this.props.videoTitleLinkTo || this.props.linkTo,
                     subtitles: e
                 })
             }, t.prototype.renderAppendages = function() {
@@ -38385,4 +38916,4 @@ webpackJsonp([41], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-clips-b753d95268a0eb1661962c57131742df.js.map
+//# sourceMappingURL=pages.channel-clips-ae9a74dd8a9822e4eb98647364d593a5.js.map

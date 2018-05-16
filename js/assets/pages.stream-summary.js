@@ -15582,7 +15582,7 @@ webpackJsonp([94], {
                 return i.createElement("div", null, i.createElement(f._35, {
                     className: t,
                     margin: {
-                        bottom: 2
+                        bottom: 4
                     },
                     elevation: 1,
                     padding: 2
@@ -15763,9 +15763,6 @@ webpackJsonp([94], {
                 return a.length ? i.createElement(R.a, {
                     title: Object(s.d)("What is my achievements progress?", "StreamSummaryAchievementsPanel")
                 }, i.createElement(f._35, {
-                    margin: {
-                        bottom: 2
-                    },
                     elevation: 1,
                     background: f.n.Base
                 }, i.createElement(f._35, {
@@ -15907,7 +15904,7 @@ webpackJsonp([94], {
             $ = function(e) {
                 return e.quest && !e.quest.isFinished ? i.createElement(f._35, {
                     margin: {
-                        bottom: 2
+                        bottom: 4
                     },
                     elevation: 1,
                     padding: 2,
@@ -15989,9 +15986,6 @@ webpackJsonp([94], {
             }, i.createElement(f._35, {
                 className: "referral-panel",
                 flexDirection: a.total ? void 0 : f.T.Column,
-                margin: {
-                    bottom: 2
-                },
                 elevation: 1,
                 background: f.n.Base
             }, i.createElement(f._35, {
@@ -17090,7 +17084,7 @@ webpackJsonp([94], {
                         background: f.n.Accent,
                         borderRadius: f.t.Small,
                         margin: {
-                            bottom: 2
+                            bottom: 4
                         },
                         elevation: 1
                     }, i.createElement(f._8, {
@@ -17726,6 +17720,25 @@ webpackJsonp([94], {
                 topClips: e.topClips
             }), s.b.get("stream_summary_vod_panel", !1) && i.createElement(Rt, {
                 streamSummary: t.current
+            }), !n && i.createElement(re, {
+                streamSummary: t.current
+            }), !r && i.createElement(Pt, {
+                isLoading: !t.current
+            })), i.createElement(f._8, {
+                className: "sm-mw__col",
+                display: f.R.Flex,
+                flexGrow: 1,
+                flexWrap: f.U.NoWrap,
+                flexDirection: f.T.Column,
+                padding: {
+                    left: 1,
+                    right: 1
+                }
+            }, i.createElement($, {
+                quest: t.current && e.achievementProgressionsQuery.quests[0]
+            }), i.createElement(N, {
+                query: e.achievementProgressionsQuery,
+                streamSummaryCursor: t
             }), n && i.createElement(h.a, {
                 streamSummaries: t.current ? [t.current] : [],
                 isLoading: !Boolean(t.current),
@@ -17737,25 +17750,6 @@ webpackJsonp([94], {
                         medium: u.PageviewMedium.StreamSummary
                     }
                 }
-            }), !n && i.createElement(re, {
-                streamSummary: t.current
-            })), i.createElement(f._8, {
-                className: "sm-mw__col",
-                display: f.R.Flex,
-                flexGrow: 1,
-                flexWrap: f.U.NoWrap,
-                flexDirection: f.T.Column,
-                padding: {
-                    left: 1,
-                    right: 1
-                }
-            }, !r && i.createElement(Pt, {
-                isLoading: !t.current
-            }), i.createElement($, {
-                quest: t.current && e.achievementProgressionsQuery.quests[0]
-            }), i.createElement(N, {
-                query: e.achievementProgressionsQuery,
-                streamSummaryCursor: t
             }))))
         }
         a.d(t, "StreamSummaryPage", function() {
@@ -19139,4 +19133,4 @@ webpackJsonp([94], {
         })
     }
 });
-//# sourceMappingURL=pages.stream-summary-eafffce80c81458b5bf8911d499dd273.js.map
+//# sourceMappingURL=pages.stream-summary-534cfe95645b8a4acf3438af513f7496.js.map

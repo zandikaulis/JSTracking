@@ -1804,14 +1804,6 @@ webpackJsonp([93], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
-                                    value: "isPartner"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
                                     value: "adProperties"
                                 },
                                 arguments: [],
@@ -1863,11 +1855,11 @@ webpackJsonp([93], {
             }],
             loc: {
                 start: 0,
-                end: 164
+                end: 154
             }
         };
         n.loc.source = {
-            body: "query LiveDashboard_ChannelIDFromLogin ($login: String!) {\nchannel: user(login: $login) {\nid\nisPartner\nadProperties {\nfrequency\nmaxAdBreakLength\n}\nstream {\nid\n}\n}\n}",
+            body: "query LiveDashboard_ChannelIDFromLogin ($login: String!) {\nchannel: user(login: $login) {\nid\nadProperties {\nfrequency\nmaxAdBreakLength\n}\nstream {\nid\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -40039,7 +40031,8 @@ webpackJsonp([93], {
                     offsetX: "1rem",
                     "data-test-selector": G.Balloon,
                     direction: g.r.Left,
-                    show: this.state.showCogWheelOptions
+                    show: this.state.showCogWheelOptions,
+                    size: g.s.Small
                 }, this.props.children))
             }, t
         }(r.Component);
@@ -40560,15 +40553,19 @@ webpackJsonp([93], {
                 }, t.prototype.componentDidUpdate = function(e) {
                     e.data.loading && !this.props.data.loading && this.setDefaultAdBreakValues()
                 }, t.prototype.render = function() {
-                    return this.props.data.loading ? r.createElement(g._8, {
+                    var e;
+                    return e = this.props.data.loading ? r.createElement(g._8, {
+                        padding: {
+                            y: 2
+                        },
                         className: "live-dashboard-ads-widget__loading",
                         fullWidth: !0
                     }, r.createElement(g._10, {
                         fillContent: !0
-                    })) : this.props.data.channel.isPartner ? r.createElement(ee, {
+                    })) : (!0 === this.state.adPlaying ? this.getAdPlayingView : this.getDefaultView)(), r.createElement(ee, {
                         name: I.AdsWidget,
                         title: Object(l.d)("Run Ad Break", "LiveDashboard")
-                    }, !0 === this.state.adPlaying ? this.getAdPlayingView() : this.getDefaultView()) : null
+                    }, e)
                 }, t
             }(r.Component),
             ue = Object(h.d)(Object(m.d)("AdsWidget"), Object(p.a)(oe, {
@@ -41447,7 +41444,13 @@ webpackJsonp([93], {
                 }, t.prototype.componentWillUnMount = function() {
                     clearInterval(this.intervalID)
                 }, t.prototype.render = function() {
-                    return this.props.loginID !== this.props.channelID || this.props.data.loading ? null : r.createElement(ee, {
+                    if (this.props.loginID !== this.props.channelID || this.props.data.loading) return null;
+                    var e = this.state,
+                        t = e.autoHosters,
+                        n = e.hosters,
+                        a = t.length,
+                        i = n.length;
+                    return r.createElement(ee, {
                         cogWheel: this.renderCogWheelOptions(),
                         name: I.HostWidget,
                         title: Object(l.d)("Host", "HostWidget")
@@ -41462,23 +41465,23 @@ webpackJsonp([93], {
                     }, r.createElement(g._37, null, r.createElement(g._36, {
                         active: this.state.hostingYouSelected,
                         onClick: this.switchToHostingYou
-                    }, Object(l.d)("Hosting You", "HostWidget"), r.createElement(g._8, {
+                    }, Object(l.d)("Hosting You", "HostWidget"), i > 0 && r.createElement(g._8, {
                         display: g.R.Inline,
                         margin: {
                             left: .5
                         }
                     }, r.createElement(g._12, {
-                        label: Object(l.f)(this.state.hosters.length)
+                        label: Object(l.f)(i)
                     }))), r.createElement(g._36, {
                         active: !this.state.hostingYouSelected,
                         onClick: this.switchToAutoHostsYou
-                    }, Object(l.d)("Auto Hosts You", "HostWidget"), r.createElement(g._8, {
+                    }, Object(l.d)("Auto Hosts You", "HostWidget"), a > 0 && r.createElement(g._8, {
                         display: g.R.Inline,
                         margin: {
                             left: .5
                         }
                     }, r.createElement(g._12, {
-                        label: Object(l.f)(this.state.autoHosters.length)
+                        label: Object(l.f)(a)
                     })))), r.createElement(g._8, {
                         fullHeight: !0,
                         fullWidth: !0,
@@ -42508,8 +42511,8 @@ webpackJsonp([93], {
                     flexWrap: g.U.NoWrap
                 }, r.createElement(g._24, {
                     asset: g._25.DeadGlitch,
-                    width: 92,
-                    height: 96
+                    width: 40,
+                    height: 46
                 })), r.createElement(g.Q, {
                     fontSize: g.V.Size4
                 }, Object(l.d)("Oops, something went wrong", "VideoProducerWidget-ErrorLoadingData")), r.createElement(g.Q, {
@@ -42811,7 +42814,7 @@ webpackJsonp([93], {
                     }, e.video.title)), r.createElement(g.Q, {
                         ellipsis: !0,
                         color: g.K.Alt2,
-                        fontSize: g.V.Size6
+                        fontSize: g.V.Size7
                     }, Object(l.c)(e.video.createdAt, {
                         month: "short",
                         day: "numeric",
@@ -43127,7 +43130,7 @@ webpackJsonp([93], {
                     }, t.renderStoppingRerunButton = function() {
                         return r.createElement(g.v, {
                             fullWidth: !0,
-                            type: g.B.Hollow,
+                            type: g.B.Default,
                             disabled: !0,
                             "data-test-selector": cn.stoppingRerun
                         }, Object(l.d)("Stopping Rerun...", "RerunActionButton"))
@@ -43172,7 +43175,7 @@ webpackJsonp([93], {
                     return t.state = {
                         hovered: !1
                     }, t.onMouseEnter = function() {
-                        t.setState({
+                        t.props.draggingItem || t.setState({
                             hovered: !0
                         })
                     }, t.onMouseLeave = function() {
@@ -43233,19 +43236,20 @@ webpackJsonp([93], {
                         }, "RerunVideoRow"),
                         o = t + " · " + a + " · " + i,
                         s = wt(this.props.vodcastState, this.props.collectionID, this.props.queueItem.video.id),
-                        d = n + " · " + this.props.queueItem.video.broadcastType + " · " + i,
+                        d = n + " · " + a + " · " + i,
                         u = Lt(this.props.vodcastState, this.props.collectionID) && this.state.hovered ? g.n.Alt2 : void 0,
                         c = this.props.draggingItem && this.props.draggingItem.id !== this.props.queueItem.itemID;
                     return this.props.connectDropTarget(this.props.connectDragPreview(r.createElement("div", {
                         className: this.props.isDragging ? "vp-widget-dragging" : "",
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave
+                    }, r.createElement(g._8, {
+                        margin: {
+                            y: 1
+                        }
                     }, r.createElement(g._35, {
                         display: g.R.Flex,
                         alignItems: g.c.Center,
-                        margin: {
-                            y: 1
-                        },
                         background: u
                     }, r.createElement(g._8, {
                         position: g._15.Relative
@@ -43289,7 +43293,7 @@ webpackJsonp([93], {
                     }, this.props.queueItem.video.title)), r.createElement(g.Q, {
                         ellipsis: !0,
                         color: g.K.Alt2,
-                        fontSize: g.V.Size6,
+                        fontSize: g.V.Size7,
                         title: d
                     }, o)), (!this.state.hovered || c || !this.props.rerunOffline) && this.renderTimePart(s), this.state.hovered && !c && this.props.rerunOffline && [r.createElement(g.w, {
                         key: "close",
@@ -43303,14 +43307,17 @@ webpackJsonp([93], {
                         "data-test-selector": Pt.DRAG_HANDLE
                     }, r.createElement(g._8, {
                         display: g.R.Flex,
-                        alignItems: g.c.Center
+                        alignItems: g.c.Center,
+                        padding: {
+                            x: .5
+                        }
                     }, r.createElement(g._24, {
                         asset: g._25.DragHandle,
                         type: g._26.Brand
                     }))))]), s && r.createElement(Gt, {
                         positionSeconds: this.props.vodcastState.positionSeconds,
                         lengthSeconds: this.props.queueItem.video.lengthSeconds
-                    }))))
+                    })))))
                 }, t.prototype.renderTimePart = function(e) {
                     return this.props.queueItem && this.props.queueItem.video ? e ? r.createElement(qt, {
                         positionSeconds: this.props.vodcastState.positionSeconds,
@@ -44315,12 +44322,13 @@ webpackJsonp([93], {
                     }, t.getCardComponent = function(e) {
                         var n = t.props,
                             a = n.channelLogin,
-                            i = n.channelID;
+                            i = n.channelID,
+                            o = n.isPartner;
                         switch (e) {
                             case I.AdsWidget:
-                                return r.createElement(ue, {
+                                return o ? r.createElement(ue, {
                                     channelLogin: a
-                                });
+                                }) : null;
                             case I.ExtensionLiveConfigure:
                                 return r.createElement(Me, {
                                     channelLogin: a
@@ -59343,4 +59351,4 @@ webpackJsonp([93], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.live-ff4c14aefb2c2f619d9da75acaea8ff0.js.map
+//# sourceMappingURL=pages.live-faea7710bc341e7ca679d3e51882a80c.js.map
