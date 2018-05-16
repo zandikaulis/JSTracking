@@ -1434,11 +1434,11 @@ window.SiteOptions = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 3765,
+            "v": 3800,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.5.4"
+                "value": "2.5.6"
             }]
         },
         "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": {
