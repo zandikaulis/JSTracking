@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".7f10102a3c51115bfb6e.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".19107d842b541ed0ea41.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -26464,7 +26464,7 @@
                                 maxHeight: e - P.i + "px"
                             };
                         return E.a.createElement("div", {
-                            className: "pl-menu",
+                            className: "pl-menu extension-modal__main",
                             style: n
                         }, t)
                     }
@@ -28420,12 +28420,16 @@
                 }, {
                     key: "handleWindowBlur",
                     value: function() {
-                        this.props.installation.activationConfig.slot === this.props.menuState.extensionSlot && this.props.closeExtensionMenu()
+                        var e = this.props.installation.activationConfig.slot,
+                            t = this.props.menuState.modalOptions;
+                        e === this.props.menuState.extensionSlot && (this.props.closeExtensionMenu(), t.resultCallback && t.resultCallback(t.defaultResult))
                     }
                 }, {
                     key: "handleClickOutside",
                     value: function() {
-                        this.props.installation.activationConfig.slot === this.props.menuState.extensionSlot && this.props.closeExtensionMenu()
+                        var e = this.props.installation.activationConfig.slot,
+                            t = this.props.menuState.modalOptions;
+                        e === this.props.menuState.extensionSlot && (this.props.closeExtensionMenu(), t.resultCallback && t.resultCallback(t.defaultResult))
                     }
                 }, {
                     key: "trackEvent",
@@ -28517,8 +28521,10 @@
                     key: "_closeMenu",
                     value: function() {
                         var e = this.props,
-                            t = e.installation;
-                        (0, e.closeExtensionMenu)(), this.trackEvent("extension_viewer_settings_close", t)
+                            t = e.installation,
+                            n = e.closeExtensionMenu,
+                            r = e.menuState;
+                        n(), r.modalOptions.resultCallback && r.modalOptions.resultCallback(r.modalOptions.defaultResult), this.trackEvent("extension_viewer_settings_close", t)
                     }
                 }, {
                     key: "_onClick",
@@ -31703,7 +31709,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.05.16-174036+1cd432d5998fa2665e5102a9b230ceb24dbca587",
+                    app_version: "2018.05.17-181536+26ee4941d35ea496654fb4d433a0effac36ab313",
                     flash_version: r,
                     referrer_url: o,
                     referrer_host: a.host,
@@ -37550,7 +37556,7 @@
                 }]), e
             }(),
             ls = n(105),
-            ds = "//video-edge-62a934.sjc02.hls.ttvnw.net/v1/segment/CkkO4t8LwQLaTWrCtxDt54tZI_R7x6Hd57yv-UE2pn3V14_7b4lG9bYK1gt3C-S_5y4yow6DfosG7CvaPHWSOcWFwYS2KkIM-2Ak6cJ-o2IIVBwDtBBjSwZgRFcjo39zCIaXELu9g9GokQVDCV7ohNAdtiORY1X76mtW-0GQBgmHlek1Cwh-WAIk8le5ybjE3e4igFcF62lrejcM27c8hTTB6wcKPwRYun9EYi5ZXYxTrRTM2W-mhwFg7pSwvYlGolgve8Um8JL9RA3d6emDLw0-O7kLljG32Kx1_FUb-ktA1JzBijzAmuJ_3CACyEEsmQheVACU43J4JMe1I5ygd4XvCWstAUSKGlMKWtHELb9gf_fcGOrrqwprIm_sRKUpXd7c7fBwKjMiJfSo-kmJh46OrJ9h843siI_H9yiGH8grLoIjTVtFQPwTHLjZ_pRP9KZL-Sd8LUTV6y8XPJF3whgwt3Sopz3oVxyBSf02aLqI4BVKnxycnWegVUAr7_tBXW4JxTEyQPzSNVHsmV6x17Dr22R8kjcQM.ts",
+            ds = "//video-edge-96d243.sjc02.hls.ttvnw.net/v1/segment/CoGwIs1rt_H1UNaXziC8Wns2Onm8Si6sT1RxSILyH6eBSBXHvmolrgU9AL1pWBfOwVAjJ7ho7nhPST2c242XCGdvNKtWMU2IoCGrSRa1fla-CTOvpCMfQgpp4C52iJhdSM1uxT0Dtr60QxC8mlHF3iMtoiSADw87Tdw0pVAqjhv5xjEHjDHQzQbclZWzU3eKpwcK_l5lVYIivdB-Xpt7fSjGOCjq2CRt6KHWJPscInBAs4A9zRYDdHqbotFBCg_USCyvbUxnDbNUfdnhog-prjnJu0lu59mjTfVtyOEwh14xn1g9ANMJZtcJS1GxB2IXt-Updck_Idhcm5kHr0ntcQfaPM2KoUtFRrZpLzX9TUmDfFfqpHkq4SJNl8iq6tLfdgE-aDzAW9DUZoxieu0UMLCdz7hDJ01OSqTeY_LknIpBv_oT7583FfEoHMbidX-FVmhyD1KEqLY64VoUr5OA0IMlRxRDIkzQP5zUOR4IlHn0pc1VI_HvFZlubv4cOJGFzfK6RxG9aDN9zry2kR9Nyxzk-KbhlfnUzBC.ts",
             fs = n(50),
             ps = n(269),
             hs = n(139),
@@ -57397,7 +57403,8 @@
             "Buy Bits": "Buy Bits",
             "By clicking ": "By clicking ",
             "You need {{bitsRequired}} more Bits to proceed.": "You need {{bitsRequired}} more Bits to proceed.",
-            "Sorry, something went wrong. Please try again.": "Sorry, something went wrong. Please try again."
+            "Sorry, something went wrong. Please try again.": "Sorry, something went wrong. Please try again.",
+            "Command Center view: Watch with All-Access Pass": "Command Center view: Watch with All-Access Pass"
         }
     }, function(e, t, n) {
         /**
