@@ -26,7 +26,6 @@ window.__twilightSettings = {
     "crate_trickster_launch": "off",
     "dashboard_live_twilight": "off",
     "dashboard_moderation_settings_enabled": true,
-    "dashboard_nav_reorg": true,
     "dashboard_settings_launch": "off",
     "dashboard_vp_widget_enabled": true,
     "deprecated_messages_download_enabled": true,
@@ -52,7 +51,7 @@ window.__twilightSettings = {
     "ivw_url": "https://script.ioam.de/iam.js",
     "krux_countries": ["US"],
     "krux_url": "https://cdn.krxd.net/controltag?confid=JYk8LCsC",
-    "legacy_routes": ["^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/dashboard$", "^/[a-zA-Z0-9_\\-%]+/dashboard/action_log$", "^/[a-zA-Z0-9_\\-%]+/dashboard/activity$", "^/[a-zA-Z0-9_\\-%]+/dashboard/commercial$", "^/[a-zA-Z0-9_\\-%]+/dashboard/delay$", "^/[a-zA-Z0-9_\\-%]+/dashboard/permissions$", "^/[a-zA-Z0-9_\\-%]+/dashboard/revenue$", "^/[a-zA-Z0-9_\\-%]+/dashboard/settings(?!/automod)", "^/[a-zA-Z0-9_\\-%]+/dashboard/stats$", "^/[a-zA-Z0-9_\\-%]+/dashboard/streamkey$", "^/[a-zA-Z0-9_\\-%]+/dashboard/subscription(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/video-stats(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/subscribe(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/dashboard/?$", "^/directory/random$", "^/health_check$", "^/partner/.+$", "^/profile$", "^/search$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/team/[a-zA-Z0-9_-]+(?!/edit)($|/.*)", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/upload$", "^/user/.+$", "^/yt/.+$"],
+    "legacy_routes": ["^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/dashboard$", "^/[a-zA-Z0-9_\\-%]+/dashboard/action_log$", "^/[a-zA-Z0-9_\\-%]+/dashboard/commercial$", "^/[a-zA-Z0-9_\\-%]+/dashboard/delay$", "^/[a-zA-Z0-9_\\-%]+/dashboard/revenue$", "^/[a-zA-Z0-9_\\-%]+/dashboard/settings(?!/automod)", "^/[a-zA-Z0-9_\\-%]+/dashboard/stats$", "^/[a-zA-Z0-9_\\-%]+/dashboard/streamkey$", "^/[a-zA-Z0-9_\\-%]+/dashboard/subscription(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/video-stats(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/subscribe(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/dashboard/?$", "^/directory/random$", "^/health_check$", "^/partner/.+$", "^/profile$", "^/search$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/team/[a-zA-Z0-9_-]+(?!/edit)($|/.*)", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/upload$", "^/user/.+$", "^/yt/.+$"],
     "legacy_routes_enabled": true,
     "longtask_tracking_sample_rate": 0.1,
     "native_broadcast_blacklist": ["germenchrestream"],
@@ -97,10 +96,10 @@ window.__twilightSettings = {
     "tvapp_xbox_preroll_frequency": 900,
     "twilight_clips_already": "on",
     "twilight_collections_manager_enabled": true,
-    "twilight_dashboard_permissions": "off",
+    "twilight_dashboard_permissions": "on",
     "twilight_moonstone": "everyone",
     "twilight_owl_sub_only_vod": true,
-    "twilight_routes": ["bitsCheckout", "broadcast", "channel", "channelFollowing", "channelFollowers", "channelEvents", "checkout", "clips", "collections", "communitiesCreate", "community", "communityModeration", "dashboardAchievements", "dashboardEvents", "dashboardExtensions", "dashboardExtensionsConfigure", "dashboardModeration", "dashboardStreamSummary", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGameDetails", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "extensionDetails", "friends", "index", "inventory", "managerany", "managerClips", "managerClipsChannel", "managerCollections", "managerHighlights", "managerIndex", "managerPastBroadcast", "managerUploads", "merchStore", "settingsNotifications", "settingsProfile", "subscriptions", "subUnsubscribe", "video", "videos"],
+    "twilight_routes": ["bitsCheckout", "broadcast", "channel", "channelFollowing", "channelFollowers", "channelEvents", "checkout", "clips", "collections", "communitiesCreate", "community", "communityModeration", "dashboardAchievements", "dashboardActivity", "dashboardEvents", "dashboardExtensions", "dashboardExtensionsConfigure", "dashboardModeration", "dashboardPermissions", "dashboardStreamSummary", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGameDetails", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "extensionDetails", "friends", "index", "inventory", "managerany", "managerClips", "managerClipsChannel", "managerCollections", "managerHighlights", "managerIndex", "managerPastBroadcast", "managerUploads", "merchStore", "settingsNotifications", "settingsProfile", "subscriptions", "subUnsubscribe", "video", "videos"],
     "twilight_routes_enabled": true,
     "twilight_video_manager_public": false,
     "twilight_video_manager_staff": true,
@@ -288,18 +287,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 5,
                 "value": "on"
-            }]
-        },
-        "32099615-3609-4658-9f6b-5c1c1daa3510": {
-            "name": "TWILIGHT_STREAM_SUMMARY",
-            "v": 2445,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
             }]
         },
         "326523fd-48bf-4043-9635-7bef334069e0": {
@@ -952,18 +939,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "variant"
-            }]
-        },
-        "f7249378-b153-4612-bd09-972fbb0b0b7e": {
-            "name": "TWILIGHT_ACHIEVE",
-            "v": 2444,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
             }]
         },
         "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
