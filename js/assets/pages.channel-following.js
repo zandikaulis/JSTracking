@@ -1,4 +1,4 @@
-webpackJsonp([44], {
+webpackJsonp([43], {
     "+5Qw": function(e, t) {},
     "+Aaf": function(e, t) {},
     "+V/3": function(e, t, n) {
@@ -4125,12 +4125,18 @@ webpackJsonp([44], {
                         login: e.event.user.username,
                         sourceType: M.a.chat_message
                     }, e.event.user.displayName),
-                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in Chat!", {
+                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in chat.", {
                         gifterButton: t,
                         selectedCount: e.event.selectedCount
                     }, "RewardGiftNoticeLine"),
-                    i = e.event.minCheerAmount > 0 && Object(r.d)("Cheer at least {minCheerAmount} Bits to share with Chat!", {
-                        minCheerAmount: e.event.minCheerAmount
+                    i = Object(r.d)("<x:link>Cheer at least {minCheerAmount} Bits to share rewards with chat!</x:link>", {
+                        minCheerAmount: e.event.minCheerAmount,
+                        "x:link": function(e) {
+                            return a.createElement(E.O, {
+                                to: "https://blog.twitch.tv/earn-overwatch-league-loot-a494e1c21634",
+                                targetBlank: !0
+                            }, e)
+                        }
                     }, "RewardGiftNoticeLine");
                 return a.createElement(E._8, {
                     className: "reward-gift-user-notice",
@@ -4154,7 +4160,7 @@ webpackJsonp([44], {
                 })), a.createElement(E.Q, {
                     color: E.K.Alt2,
                     type: E._49.Span
-                }, n)), a.createElement(E._8, {
+                }, n)), e.event.minCheerAmount > 0 && a.createElement(E._8, {
                     className: "reward-gift-user-notice__action",
                     padding: {
                         x: 1,
@@ -34425,4 +34431,4 @@ webpackJsonp([44], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-following-6e10f8cde4d5ebc9d43cc613552f96cf.js.map
+//# sourceMappingURL=pages.channel-following-660df60205157f4aa84ac186999937cd.js.map

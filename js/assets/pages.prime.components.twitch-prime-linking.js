@@ -385,7 +385,7 @@ webpackJsonp([113], {
                         }, r.createElement(k.Q, {
                             type: k._49.H3,
                             color: k.K.Link
-                        }, Object(g.f)(t.state.error))), t.renderRefreshCallToAction()))
+                        }, Object(g.g)(t.state.error))), t.renderRefreshCallToAction()))
                     }, t.renderRefreshCallToAction = function() {
                         return r.createElement(b.a, {
                             className: "twitch-prime-call-to-action--refresh",
@@ -662,4 +662,4 @@ webpackJsonp([113], {
     r3tw: function(e, t) {},
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-linking-83ec2b5312cb97c13f52ac79295e4ca5.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-linking-63cd65cd9419bc82383278c85f83d845.js.map

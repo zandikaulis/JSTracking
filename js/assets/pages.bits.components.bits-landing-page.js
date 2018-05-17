@@ -65,6 +65,7 @@ webpackJsonp([108], {
         var r, o = {
                 ChatTooltip: "card",
                 GetBitsButton: "get_bits_button",
+                GetBitsButtonTopNav: "topnav",
                 BitsLandingPage: "bits_landing_page"
             },
             s = {
@@ -2595,4 +2596,4 @@ webpackJsonp([108], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-1ee0282cab3944126a31913c5b57e629.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-d4cfa23a8b23e5713175f2db1e032f77.js.map

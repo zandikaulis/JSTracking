@@ -211,72 +211,81 @@ webpackJsonp([117], {
         var n = r("TToO"),
             i = r("GiK3"),
             a = r("3zLD"),
-            o = r("6sO2"),
-            s = r("zCIC"),
-            c = r("7vx8"),
-            l = r("j7/Y"),
-            p = r("w9tK"),
-            m = r("vH/s"),
-            u = r("CSlQ"),
-            d = r("P3dd"),
-            f = r("Lpko"),
-            h = r("LXDe"),
-            g = r("Tr7p"),
-            _ = r("4VmI"),
-            P = r("Kckk"),
-            O = r("Zh2I"),
-            y = r("o6O8"),
-            T = r("Odds"),
+            o = r("O27J"),
+            s = r("6sO2"),
+            c = r("zCIC"),
+            l = r("7vx8"),
+            p = r("j7/Y"),
+            m = r("w9tK"),
+            u = r("vH/s"),
+            d = r("CSlQ"),
+            f = r("P3dd"),
+            h = r("Lpko"),
+            g = r("LXDe"),
+            _ = r("Tr7p"),
+            P = r("4VmI"),
+            O = r("Kckk"),
+            y = r("Zh2I"),
+            T = r("o6O8"),
+            w = r("Odds"),
             b = (r("iiIr"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderOfferList = function(e, r) {
-                        return i.createElement(T._8, {
+                        var n = e.toLowerCase();
+                        return i.createElement("div", {
+                            id: n,
+                            ref: n
+                        }, i.createElement(w._8, {
                             "data-a-target": "offers-list",
                             className: "prime-offers__list"
-                        }, i.createElement(f.a, {
+                        }, i.createElement(h.a, {
+                            placement: O.d.LootPage,
                             ignoreFirstPageLoad: !0,
                             externalReftag: t.getReftagFromSearch(),
-                            listDirection: P.c.Horizontal,
+                            listDirection: O.c.Horizontal,
                             offerFilterType: e,
                             sectionTitle: r,
                             hideUpsell: !0
-                        }))
+                        })))
                     }, t
                 }
                 return n.__extends(t, e), t.prototype.componentDidMount = function() {
-                    o.o.setPageTitle(Object(o.d)("Free games and in-game loot every month with Twitch Prime membership", "PrimeSubsite")), Object(g.j)({
+                    s.o.setPageTitle(Object(s.d)("Free games and in-game loot every month with Twitch Prime membership", "PrimeSubsite")), Object(_.j)({
                         reftag: this.getReftagFromSearch()
                     }), this.props.userData.loading && !this.props.userData.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentDidUpdate = function() {
-                    this.props.userData.loading && !this.props.userData.error || this.props.latencyTracking.reportInteractive()
+                    this.props.userData.loading && !this.props.userData.error || this.props.latencyTracking.reportInteractive();
+                    var e = this.props.location.hash.replace("#", ""),
+                        t = e && o.findDOMNode(this.refs[e]);
+                    t && t.scrollIntoView()
                 }, t.prototype.render = function() {
-                    return i.createElement(T._2, {
+                    return i.createElement(w._2, {
                         fullWidth: !0
-                    }, i.createElement(s.b, {
+                    }, i.createElement(c.b, {
                         suppressScrollX: !0
-                    }, i.createElement(T._8, {
+                    }, i.createElement(w._8, {
                         fullWidth: !0
-                    }, this.renderBanner(), i.createElement(T._35, {
-                        background: T.n.Base,
+                    }, this.renderBanner(), i.createElement(w._35, {
+                        background: w.n.Base,
                         className: "prime-offers"
-                    }, this.renderOfferList(h.a.InGameLoot, Object(o.d)("Free In-Game Loot with Prime", "PrimePageOffers")), this.renderOfferList(h.a.Game, Object(o.d)("Free Games with Prime", "PrimePageOffers"))), i.createElement(T._35, {
-                        justifyContent: T._7.Center,
-                        alignItems: T.c.Center,
-                        textAlign: T._45.Center,
+                    }, this.renderOfferList(g.a.InGameLoot, Object(s.d)("Free In-Game Loot with Prime", "PrimePageOffers")), this.renderOfferList(g.a.Game, Object(s.d)("Free Games with Prime", "PrimePageOffers"))), i.createElement(w._35, {
+                        justifyContent: w._7.Center,
+                        alignItems: w.c.Center,
+                        textAlign: w._45.Center,
                         padding: 2
-                    }, this.renderFooterUpsellButton()), i.createElement(d.a, null))))
+                    }, this.renderFooterUpsellButton()), i.createElement(f.a, null))))
                 }, t.prototype.renderBanner = function() {
                     var e = this.props.userData;
-                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(y.a, {
+                    if (!Object(O.k)(e) && !Object(O.l)(e)) return i.createElement(T.a, {
                         externalReftag: this.getReftagFromSearch()
                     })
                 }, t.prototype.renderFooterUpsellButton = function() {
                     var e = this.props.userData;
-                    if (!Object(P.j)(e) && !Object(P.k)(e)) return i.createElement(O.a, {
+                    if (!Object(O.k)(e) && !Object(O.l)(e)) return i.createElement(y.a, {
                         externalReftag: this.getReftagFromSearch(),
                         tracking: {
-                            position: g.a.CenterFooter
+                            position: _.a.CenterFooter
                         }
                     })
                 }, t.prototype.getReftagFromSearch = function() {
@@ -285,15 +294,15 @@ webpackJsonp([117], {
                     if (t) return t[1]
                 }, t
             }(i.Component)),
-            w = Object(a.compose)(Object(c.a)(_, {
+            k = Object(a.compose)(Object(l.a)(P, {
                 name: "userData"
-            }), Object(u.d)("TwitchPrimeOffersPage", {
-                destination: p.a.TwitchPrimeOffersPage
-            }), Object(l.a)({
-                location: m.PageviewLocation.TwitchPrimeOffersPage
+            }), Object(d.d)("TwitchPrimeOffersPage", {
+                destination: m.a.TwitchPrimeOffersPage
+            }), Object(p.a)({
+                location: u.PageviewLocation.TwitchPrimeOffersPage
             }))(b);
         r.d(t, "TwitchPrimeOffersPage", function() {
-            return w
+            return k
         })
     },
     o6O8: function(e, t, r) {
@@ -395,4 +404,4 @@ webpackJsonp([117], {
         })
     }
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-offers-f96ac4f6ea54f9a3850cb41e13c63764.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-offers-0900396d77d001fca704c8acaaae021a.js.map

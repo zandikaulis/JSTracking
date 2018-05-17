@@ -6593,12 +6593,18 @@ webpackJsonp([30], {
                         login: e.event.user.username,
                         sourceType: T.a.chat_message
                     }, e.event.user.displayName),
-                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in Chat!", {
+                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in chat.", {
                         gifterButton: t,
                         selectedCount: e.event.selectedCount
                     }, "RewardGiftNoticeLine"),
-                    i = e.event.minCheerAmount > 0 && Object(r.d)("Cheer at least {minCheerAmount} Bits to share with Chat!", {
-                        minCheerAmount: e.event.minCheerAmount
+                    i = Object(r.d)("<x:link>Cheer at least {minCheerAmount} Bits to share rewards with chat!</x:link>", {
+                        minCheerAmount: e.event.minCheerAmount,
+                        "x:link": function(e) {
+                            return a.createElement(S.O, {
+                                to: "https://blog.twitch.tv/earn-overwatch-league-loot-a494e1c21634",
+                                targetBlank: !0
+                            }, e)
+                        }
                     }, "RewardGiftNoticeLine");
                 return a.createElement(S._8, {
                     className: "reward-gift-user-notice",
@@ -6622,7 +6628,7 @@ webpackJsonp([30], {
                 })), a.createElement(S.Q, {
                     color: S.K.Alt2,
                     type: S._49.Span
-                }, n)), a.createElement(S._8, {
+                }, n)), e.event.minCheerAmount > 0 && a.createElement(S._8, {
                     className: "reward-gift-user-notice__action",
                     padding: {
                         x: 1,
@@ -18688,20 +18694,7 @@ webpackJsonp([30], {
                         padding: {
                             bottom: 2
                         }
-                    }, a.createElement("ul", null, n)), this.props.insiderPurchaseState === m.a.PrePurchase && a.createElement(c._8, {
-                        "data-test-selector": "many-more-selector",
-                        padding: {
-                            y: 3
-                        }
-                    }, a.createElement(c.Q, {
-                        fontSize: c.V.Size4,
-                        italic: !0,
-                        color: c.K.Alt2
-                    }, Object(r.d)("More game content coming with All-Access,", "EsportsInsiderRewards")), a.createElement(c.Q, {
-                        fontSize: c.V.Size4,
-                        italic: !0,
-                        color: c.K.Alt2
-                    }, Object(r.d)("tune in on 4/14 to learn more!", "EsportsInsiderRewards"))), !i && a.createElement(c._8, {
+                    }, a.createElement("ul", null, n)), !i && a.createElement(c._8, {
                         display: c.R.Flex,
                         justifyContent: c._7.Center
                     }, a.createElement(c._35, {
@@ -18786,8 +18779,6 @@ webpackJsonp([30], {
             }(a.PureComponent);
         n.d(t, !1, function() {
             return "in-game-content-selector"
-        }), n.d(t, !1, function() {
-            return "many-more-selector"
         }), n.d(t, "b", function() {
             return f
         }), n.d(t, "a", function() {
@@ -21848,8 +21839,10 @@ webpackJsonp([30], {
     },
     Ic9h: function(e, t, n) {
         "use strict";
-        n.d(t, "a", function() {
-            return f
+        n.d(t, "b", function() {
+            return h
+        }), n.d(t, "a", function() {
+            return g
         });
         var i = n("TToO"),
             a = n("HW6M"),
@@ -21862,12 +21855,13 @@ webpackJsonp([30], {
             u = n("2aoH"),
             m = n("Odds"),
             p = n("1E7T"),
-            h = (n.n(p), function(e) {
+            h = (n.n(p), "channel-page-layout__scroll-area--theatre-mode"),
+            f = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e, t = a(((e = {})["channel-page-layout__scroll-area--theatre-mode"] = !!this.props.theatreMode, e));
+                    var e, t = a(((e = {})[h] = !!this.props.theatreMode, e));
                     return o.createElement(m._8, i.__assign({
                         className: "chennel-page-layout",
                         display: m.R.Flex,
@@ -21890,8 +21884,8 @@ webpackJsonp([30], {
                 }, t.contextTypes = {
                     scrollToTop: r.func
                 }, t
-            }(o.Component)),
-            f = Object(s.f)(h)
+            }(o.Component),
+            g = Object(s.f)(f)
     },
     Ii8z: function(e, t) {
         e.exports = function(e, t, n) {
@@ -49338,7 +49332,12 @@ webpackJsonp([30], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     if (e.pubsub.messages.userCrateEvent) {
                         var t = e.pubsub.messages.userCrateEvent;
-                        (n = this.props.pubsub.messages.userCrateEvent) && t.crates[0].crateID !== n.crates[0].crateID && this.clearCrateNotification(), this.setState({
+                        (n = this.props.pubsub.messages.userCrateEvent) && t.crates[0].crateID !== n.crates[0].crateID ? this.setState({
+                            showNotification: !0,
+                            isPlayingVideo: !1,
+                            isCrateOpened: !1,
+                            showInventoryNag: !1
+                        }) : n || this.setState({
                             showNotification: !0
                         }), Object(M.d)({
                             action: M.a.View,
@@ -49351,7 +49350,12 @@ webpackJsonp([30], {
                     if (e.pubsub.messages.userCampaignEvent) {
                         var n;
                         t = e.pubsub.messages.userCampaignEvent;
-                        (n = this.props.pubsub.messages.userCampaignEvent) && n.data.contents.length > 0 && t.data.contents.length > 0 && t.data.contents[0].id !== n.data.contents[0].id && this.clearCrateNotification(), this.setState({
+                        (n = this.props.pubsub.messages.userCampaignEvent) && n.data.contents.length > 0 && t.data.contents.length > 0 && t.data.contents[0].id !== n.data.contents[0].id ? this.setState({
+                            showNotification: !0,
+                            isPlayingVideo: !1,
+                            isCrateOpened: !1,
+                            showInventoryNag: !1
+                        }) : n || this.setState({
                             showNotification: !0
                         })
                     }
@@ -55182,16 +55186,19 @@ webpackJsonp([30], {
                             a = e.team,
                             r = e.insider,
                             o = 0,
-                            s = 0;
-                        i.length > 0 && (o += i.length, s += i.filter(function(e) {
+                            s = 0,
+                            l = i.filter(function(e) {
+                                return "emote" === e.type
+                            });
+                        l.length > 0 && (o += l.length, s += l.filter(function(e) {
                             return e.isEntitled
                         }).length), a.length > 0 && (o += a.length, s += a.filter(function(e) {
                             return e.isEntitled
                         }).length), n.length > 0 && (o += n.length, s += n.filter(function(e) {
                             return e.isEntitled
                         }).length);
-                        var l = t.props.subscriptionProducts.length > 0 ? mn(t.props.subscriptionProducts[0], t.props.hasInsiderPass) : [];
-                        return l.length > 0 && (o += l.length, s += l.filter(function(e) {
+                        var d = t.props.subscriptionProducts.length > 0 ? mn(t.props.subscriptionProducts[0], t.props.hasInsiderPass) : [];
+                        return d.length > 0 && (o += d.length, s += d.filter(function(e) {
                             return e.isEntitled
                         }).length), t.props.badgeRewards.length > 0 && (o += t.props.badgeRewards.length, s += t.props.badgeRewards.filter(function(e) {
                             return e.isEntitled
@@ -55693,7 +55700,8 @@ webpackJsonp([30], {
                         var u = n.contents.map(function(e) {
                                 return l.createElement(S._8, {
                                     key: e.id,
-                                    padding: 1
+                                    padding: .5,
+                                    display: S.R.InlineBlock
                                 }, l.createElement("img", {
                                     className: "esports-notification-card__emote",
                                     src: e.imageURL,
@@ -55708,10 +55716,9 @@ webpackJsonp([30], {
                                 margin: {
                                     top: 1
                                 },
-                                display: S.R.InlineFlex,
+                                display: S.R.InlineBlock,
                                 background: S.n.Base,
-                                justifyContent: S._7.Center,
-                                alignItems: S.c.Center
+                                textAlign: S._45.Center
                             }, u), o),
                             p = t.renderCheerAgainFooter(ta);
                         return l.createElement(Xi, {
@@ -58051,16 +58058,17 @@ webpackJsonp([30], {
                     sessionUser: Object(a.c)(e)
                 }
             })(Vr),
-            Hr = n("CIox");
+            Hr = n("CIox"),
+            Gr = n("eXld");
         n("qKWt");
-        var Gr = "channel_page_channel_panels_test_selector",
-            Wr = "esport_insider_pass_secondary_channel",
-            qr = function(e) {
+        var Wr = "channel_page_channel_panels_test_selector",
+            qr = "esport_insider_pass_secondary_channel",
+            Qr = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.currentWatchingActivity = {
                         userID: null
-                    }, n.secondaryChannel = c.b.get(Wr, ""), n.renderOtherArea = function() {
+                    }, n.secondaryChannel = c.b.get(qr, ""), n.renderOtherArea = function() {
                         return l.createElement(S._8, null, "Other Area")
                     }, n.renderPanelArea = function() {
                         var e = n.props.data.currentUser ? n.props.data.currentUser.id : null,
@@ -58095,7 +58103,7 @@ webpackJsonp([30], {
                             className: o({
                                 "channel-page__panel-container": !0
                             }),
-                            "data-test-selector": Gr,
+                            "data-test-selector": Wr,
                             flexGrow: 1,
                             flexShrink: 1
                         }, n.props.firstPageLoaded && l.createElement(an, {
@@ -58193,16 +58201,22 @@ webpackJsonp([30], {
                         n = t && t.stream && t.stream.game ? t.stream.game.name : void 0;
                     if (!this.props.data.loading && !this.props.data.error && !t) return l.createElement(u.a, null);
                     var i = null;
-                    return !this.state.isHosting && this.props.firstPageLoaded && t && t.id && (i = l.createElement(ua, {
+                    !this.state.isHosting && this.props.firstPageLoaded && t && t.id && (i = l.createElement(ua, {
                         channelName: e,
                         channelID: t.id,
                         triggerPlayerReposition: this.triggerPlayerReposition
-                    })), l.createElement(S._35, {
+                    }));
+                    var a, r = o(((a = {})[Ir.b] = this.props.theatreModeEnabled, a));
+                    return l.createElement(S._35, {
                         className: "channel-root",
                         fullHeight: !0,
                         padding: 1,
                         background: S.n.Alt2
-                    }, i, !this.state.isHosting && l.createElement(Tr, {
+                    }, l.createElement(Gr.b, {
+                        className: r,
+                        suppressScrollX: !0,
+                        addPaddingWhenPlayerIsPersisting: !0
+                    }), i, !this.state.isHosting && l.createElement(Tr, {
                         channelLogin: e
                     }), l.createElement(Ka.a, {
                         hostChannelID: t && t.id ? t.id : "",
@@ -58305,7 +58319,7 @@ webpackJsonp([30], {
                     scrollToTop: s.func
                 }, t
             }(l.Component),
-            Qr = Object(d.compose)(Object(m.a)(Ar, {
+            Kr = Object(d.compose)(Object(m.a)(Ar, {
                 options: function(e) {
                     return {
                         variables: {
@@ -58340,8 +58354,8 @@ webpackJsonp([30], {
                         }(e)
                     }
                 }
-            }))(qr);
-        var Kr = Object(d.compose)(Object(i.b)(function(e) {
+            }))(Qr);
+        var Yr = Object(d.compose)(Object(i.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded,
                 isLoggedIn: Object(a.d)(e),
@@ -58349,11 +58363,11 @@ webpackJsonp([30], {
                 theatreModeEnabled: e.ui.theatreModeEnabled,
                 sessionUser: Object(a.c)(e)
             }
-        }))(Qr);
+        }))(Kr);
         n.d(t, "ChannelPage", function() {
             return zr
         }), n.d(t, "ChannelRoot", function() {
-            return Kr
+            return Yr
         })
     },
     oLZt: function(e, t) {},
@@ -65143,22 +65157,21 @@ webpackJsonp([30], {
             s = n("3zLD"),
             l = n("6sO2"),
             d = n("qLt5"),
-            c = n("yWCw"),
-            u = n("7vx8"),
-            m = n("eiNi"),
-            p = n("oIkB"),
-            h = n("9u8h"),
-            f = n("HM6l"),
-            g = n("5Y57"),
-            v = n("zCIC"),
-            b = n("lfvs"),
-            k = n("Odds"),
-            y = (n("9ltb"), function(e) {
-                return e.community ? o.createElement(v.b, {
+            c = n("7vx8"),
+            u = n("eiNi"),
+            m = n("oIkB"),
+            p = n("9u8h"),
+            h = n("HM6l"),
+            f = n("5Y57"),
+            g = n("zCIC"),
+            v = n("lfvs"),
+            b = n("Odds"),
+            k = (n("9ltb"), function(e) {
+                return e.community ? o.createElement(g.b, {
                     suppressScrollX: !0
-                }, o.createElement(k._8, {
+                }, o.createElement(b._8, {
                     margin: 1
-                }, o.createElement(k._35, {
+                }, o.createElement(b._35, {
                     borderBottom: !0,
                     padding: {
                         bottom: 2
@@ -65166,12 +65179,12 @@ webpackJsonp([30], {
                     margin: {
                         bottom: .5
                     }
-                }, o.createElement(k.Q, null, Object(l.d)("{streamerCount} Streamers", {
+                }, o.createElement(b.Q, null, Object(l.d)("{streamerCount} Streamers", {
                     streamerCount: e.community.channels || 0
-                }, "CommunityInfoPanel"))), o.createElement(k.Q, {
-                    type: k._49.Strong,
-                    color: k.K.Alt2
-                }, Object(l.d)("Community Description", "CommunityInfoPanel")), o.createElement(k.Q, null, e.community.summary), o.createElement(k._35, {
+                }, "CommunityInfoPanel"))), o.createElement(b.Q, {
+                    type: b._49.Strong,
+                    color: b.K.Alt2
+                }, Object(l.d)("Community Description", "CommunityInfoPanel")), o.createElement(b.Q, null, e.community.summary), o.createElement(b._35, {
                     borderTop: !0,
                     padding: {
                         top: .5
@@ -65179,25 +65192,25 @@ webpackJsonp([30], {
                     margin: {
                         top: 2
                     }
-                }, o.createElement(k.Q, {
-                    type: k._49.Strong,
-                    color: k.K.Alt2
-                }, Object(l.d)("Community Rules", "CommunityInfoPanel"))), o.createElement(b, {
+                }, o.createElement(b.Q, {
+                    type: b._49.Strong,
+                    color: b.K.Alt2
+                }, Object(l.d)("Community Rules", "CommunityInfoPanel"))), o.createElement(v, {
                     source: e.community.rules
-                }))) : o.createElement(k._2, {
+                }))) : o.createElement(b._2, {
                     padding: {
                         y: 5
                     },
                     className: "community-info-panel__placeholder"
-                }, o.createElement(k.Q, {
-                    fontSize: k.V.Size4,
+                }, o.createElement(b.Q, {
+                    fontSize: b.V.Size4,
                     italic: !0,
-                    color: k.K.Alt2
+                    color: b.K.Alt2
                 }, Object(l.d)("Hover over a community", "CommunityInfoPanel")))
             }),
-            _ = n("kqTE"),
-            E = n("5kgt"),
-            C = function(e) {
+            y = n("kqTE"),
+            _ = n("5kgt"),
+            E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClick = function() {
@@ -65207,54 +65220,54 @@ webpackJsonp([30], {
                 return a.__extends(t, e), t.prototype.showComponentUpdate = function() {
                     return !1
                 }, t.prototype.render = function() {
-                    return o.createElement(_.a, null, o.createElement(k._6, a.__assign({
+                    return o.createElement(y.a, null, o.createElement(b._6, a.__assign({
                         key: "community_" + this.props.community.objectID,
                         tabIndex: -1,
                         onClick: this.onClick
-                    }, Object(E.a)(this.props)), o.createElement(k._8, {
+                    }, Object(_.a)(this.props)), o.createElement(b._8, {
                         fullWidth: !0,
                         padding: {
                             y: .5,
                             x: 1
                         }
-                    }, o.createElement(k.C, {
+                    }, o.createElement(b.C, {
                         row: !0
-                    }, o.createElement(k.E, {
+                    }, o.createElement(b.E, {
                         src: this.props.community.avatar_image_url ? this.props.community.avatar_image_url : "",
                         alt: this.props.community.name,
-                        size: k.F.Size2,
-                        aspect: k.l.BoxArt
-                    }), o.createElement(k._8, {
+                        size: b.F.Size2,
+                        aspect: b.l.BoxArt
+                    }), o.createElement(b._8, {
                         fullWidth: !0,
-                        display: k.R.Flex,
-                        overflow: k._11.Hidden,
-                        position: k._15.Relative
-                    }, o.createElement(k._2, {
+                        display: b.R.Flex,
+                        overflow: b._11.Hidden,
+                        position: b._15.Relative
+                    }, o.createElement(b._2, {
                         margin: {
                             left: .5
                         },
                         flexGrow: 1
-                    }, o.createElement(k.Q, {
-                        type: k._49.Span,
-                        fontSize: k.V.Size7,
+                    }, o.createElement(b.Q, {
+                        type: b._49.Span,
+                        fontSize: b.V.Size7,
                         ellipsis: !0
-                    }, this.props.community.name)), o.createElement(k._8, {
-                        display: k.R.Flex,
-                        alignItems: k.c.Center,
+                    }, this.props.community.name)), o.createElement(b._8, {
+                        display: b.R.Flex,
+                        alignItems: b.c.Center,
                         attachRight: !0
-                    }, o.createElement(k._24, {
-                        asset: k._25.NavProfile,
-                        type: k._26.Alt2,
+                    }, o.createElement(b._24, {
+                        asset: b._25.NavProfile,
+                        type: b._26.Alt2,
                         width: 12,
                         height: 12
-                    }), o.createElement(k.Q, {
-                        type: k._49.Span,
+                    }), o.createElement(b.Q, {
+                        type: b._49.Span,
                         className: "search-panel__link",
                         ellipsis: !0
                     }, Object(l.e)(this.props.community.viewers || 0))))))))
                 }, t
             }(o.Component),
-            S = function(e) {
+            C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -65274,49 +65287,49 @@ webpackJsonp([30], {
                     this.communitySearch && e.isCommunitySearchOpen !== this.props.isCommunitySearchOpen && this.communitySearch.toggle(e.isCommunitySearchOpen)
                 }, t.prototype.render = function() {
                     var e = this;
-                    return o.createElement("div", null, o.createElement(k.W, {
+                    return o.createElement("div", null, o.createElement(b.W, {
                         error: this.props.error,
                         errorMessage: this.props.errorMessage,
                         label: Object(l.d)("Communities", "CommunitySearch")
-                    }, o.createElement(g.a, {
+                    }, o.createElement(f.a, {
                         enableMouseEvents: !0,
                         onChange: this.props.onCommunityInputChange,
                         onFocusChange: this.onFocusChange,
                         ref: this.setCommunitySearchRef,
                         placeholder: Object(l.d)("Add up to 3 communities", "CommunitySearch"),
                         balloonProps: {
-                            size: k.s.Medium,
-                            direction: k.r.Bottom
+                            size: b.s.Medium,
+                            direction: b.r.Bottom
                         }
-                    }, o.createElement(k._8, {
-                        display: k.R.Flex
-                    }, o.createElement(v.b, {
+                    }, o.createElement(b._8, {
+                        display: b.R.Flex
+                    }, o.createElement(g.b, {
                         height: 300,
                         suppressScrollX: !0,
                         className: "edit-broadcast__community-search__section"
-                    }, o.createElement(k._8, null, this.props.communityResults && this.props.communityResults.hits.map(function(t, n) {
-                        return o.createElement(C, {
+                    }, o.createElement(b._8, null, this.props.communityResults && this.props.communityResults.hits.map(function(t, n) {
+                        return o.createElement(E, {
                             key: t.objectID,
                             "data-idx": n,
                             community: t,
                             onCommunityResultSelected: e.onCommunityResultSelected
                         })
-                    }))), o.createElement(k._8, {
+                    }))), o.createElement(b._8, {
                         className: "edit-broadcast__community-search__section"
-                    }, o.createElement(y, {
+                    }, o.createElement(k, {
                         community: this.props.communityResults && null !== this.state.focusedCommunityIdx ? this.props.communityResults.hits[this.state.focusedCommunityIdx] : null
-                    }))))), o.createElement(k._8, {
+                    }))))), o.createElement(b._8, {
                         margin: {
                             top: .5
                         }
                     }, this.props.selectedCommunities && this.props.selectedCommunities.map(function(t, n) {
-                        return o.createElement(k._8, {
-                            display: k.R.Inline,
+                        return o.createElement(b._8, {
+                            display: b.R.Inline,
                             margin: {
                                 right: .5
                             },
                             key: t.objectID + "_" + n
-                        }, o.createElement(k._44, {
+                        }, o.createElement(b._44, {
                             label: t.name,
                             key: t.objectID,
                             onClose: e.props.onRemoveCommunity,
@@ -65325,10 +65338,10 @@ webpackJsonp([30], {
                     })))
                 }, t
             }(o.Component),
-            N = n("5LoI"),
-            w = n("MAZT"),
-            I = 50,
-            D = function(e) {
+            S = n("5LoI"),
+            N = n("MAZT"),
+            w = 50,
+            I = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -65347,7 +65360,7 @@ webpackJsonp([30], {
                                     isWaiting: !0
                                 }), this.inputTimer = setTimeout(function() {
                                     return t.doCommunitySearch(e)
-                                }, I), [2]) : (this.setState({
+                                }, w), [2]) : (this.setState({
                                     isCommunitySearchOpen: !1,
                                     communityTerm: ""
                                 }), [2])
@@ -65357,7 +65370,7 @@ webpackJsonp([30], {
                         n.props.selectedCommunities && 3 === n.props.selectedCommunities.length ? n.props.onError(Object(l.d)("You can only participate in up to 3 Communities at the same time.", "EditBroadcastModal")) : (n.setState({
                             isCommunitySearchOpen: !1
                         }), n.props.onCommunityResultSelected(e))
-                    }, n.searchClient = new w.a({
+                    }, n.searchClient = new N.a({
                         appId: l.a.algoliaApplicationID,
                         apiKey: l.a.algoliaAPIKey,
                         apolloClient: l.o.apollo.client,
@@ -65366,7 +65379,7 @@ webpackJsonp([30], {
                     }), n
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(S, a.__assign({}, this.props, {
+                    return o.createElement(C, a.__assign({}, this.props, {
                         onCommunityInputChange: this.onCommunityInputChange,
                         isCommunitySearchOpen: this.state.isCommunitySearchOpen,
                         communityResults: this.state.communityResults,
@@ -65380,11 +65393,11 @@ webpackJsonp([30], {
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    this.inputTimer = 0, t = Object(f.a)(), this.setState({
+                                    this.inputTimer = 0, t = Object(h.a)(), this.setState({
                                         queryID: t
                                     }), n = null, a.label = 1;
                                 case 1:
-                                    return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(N.a.Communities, e, t)];
+                                    return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(S.a.Communities, e, t)];
                                 case 2:
                                     return n = a.sent(), [3, 4];
                                 case 3:
@@ -65399,7 +65412,7 @@ webpackJsonp([30], {
                     })
                 }, t
             }(o.Component),
-            O = function(e) {
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClick = function() {
@@ -65407,33 +65420,33 @@ webpackJsonp([30], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(k._6, a.__assign({
+                    return o.createElement(b._6, a.__assign({
                         onClick: this.onClick,
                         tabIndex: -1
-                    }, Object(E.a)(this.props)), o.createElement(k._8, {
+                    }, Object(_.a)(this.props)), o.createElement(b._8, {
                         padding: {
                             y: .5,
                             x: 1
                         }
-                    }, o.createElement(k.C, {
+                    }, o.createElement(b.C, {
                         row: !0
-                    }, o.createElement(k.E, {
+                    }, o.createElement(b.E, {
                         alt: this.props.game.name,
                         src: "https://static-cdn.jtvnw.net/ttv-boxart/" + this.props.game.name + "-40x55.jpg",
-                        size: k.F.Size3,
-                        aspect: k.l.BoxArt
-                    }), o.createElement(k.D, {
-                        overflow: k._11.Hidden
-                    }, o.createElement(k._2, {
+                        size: b.F.Size3,
+                        aspect: b.l.BoxArt
+                    }), o.createElement(b.D, {
+                        overflow: b._11.Hidden
+                    }, o.createElement(b._2, {
                         padding: {
                             x: 1
                         }
-                    }, o.createElement(k.Q, {
-                        type: k._49.P
+                    }, o.createElement(b.Q, {
+                        type: b._49.P
                     }, this.props.game.name))))))
                 }, t
             }(o.Component),
-            R = function(e) {
+            O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.gameSearch = null, t.setGameSearchRef = function(e) {
@@ -65446,25 +65459,25 @@ webpackJsonp([30], {
                     this.gameSearch && this.gameSearch.setValue(this.props.selectedGame)
                 }, t.prototype.render = function() {
                     var e = this;
-                    return o.createElement(k.W, {
+                    return o.createElement(b.W, {
                         error: this.props.error,
                         errorMessage: this.props.errorMessage,
                         label: Object(l.d)("Game/Category", "GameSearch")
-                    }, o.createElement(g.a, {
+                    }, o.createElement(f.a, {
                         onChange: this.props.onGameInputChange,
                         ref: this.setGameSearchRef,
                         placeholder: Object(l.d)("Search for a game or category", "GameSearch"),
                         balloonProps: {
                             show: this.props.isGameSearchOpen,
-                            direction: k.r.Bottom
+                            direction: b.r.Bottom
                         }
-                    }, o.createElement(v.b, {
+                    }, o.createElement(g.b, {
                         className: "edit-broadcast__game-search",
                         suppressScrollX: !0
                     }, o.createElement("div", null, this.props.gameResults && this.props.gameResults.hits.map(function(t) {
-                        return o.createElement(_.a, {
+                        return o.createElement(y.a, {
                             key: t.objectID
-                        }, o.createElement(O, {
+                        }, o.createElement(D, {
                             game: t,
                             onClick: e.props.onGameResultSelected,
                             key: t.objectID
@@ -65472,8 +65485,8 @@ webpackJsonp([30], {
                     })))))
                 }, t
             }(o.Component),
-            T = 100,
-            x = function(e) {
+            R = 100,
+            T = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -65491,7 +65504,7 @@ webpackJsonp([30], {
                                     isWaiting: !0
                                 }), this.inputTimer = setTimeout(function() {
                                     return t.doGameSearch(e)
-                                }, T), [2]) : (this.setState({
+                                }, R), [2]) : (this.setState({
                                     isGameSearchOpen: !1,
                                     gameTerm: ""
                                 }), this.props.onGameCleared(), [2])
@@ -65501,7 +65514,7 @@ webpackJsonp([30], {
                         n.setState({
                             isGameSearchOpen: !1
                         }), n.props.onGameResultSelected(e)
-                    }, n.searchClient = new w.a({
+                    }, n.searchClient = new N.a({
                         appId: l.a.algoliaApplicationID,
                         apiKey: l.a.algoliaAPIKey,
                         apolloClient: l.o.apollo.client,
@@ -65510,7 +65523,7 @@ webpackJsonp([30], {
                     }), n
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(R, a.__assign({}, this.props, {
+                    return o.createElement(O, a.__assign({}, this.props, {
                         onGameInputChange: this.onGameInputChange,
                         isGameSearchOpen: this.state.isGameSearchOpen,
                         gameResults: this.state.gameResults,
@@ -65523,13 +65536,13 @@ webpackJsonp([30], {
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return this.inputTimer = 0, t = Object(f.a)(), e.length < 3 ? [2] : [4, this.setState({
+                                    return this.inputTimer = 0, t = Object(h.a)(), e.length < 3 ? [2] : [4, this.setState({
                                         queryID: t
                                     })];
                                 case 1:
                                     a.sent(), n = null, a.label = 2;
                                 case 2:
-                                    return a.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(N.a.Games, e, t)];
+                                    return a.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(S.a.Games, e, t)];
                                 case 3:
                                     return n = a.sent(), [3, 5];
                                 case 4:
@@ -65545,30 +65558,23 @@ webpackJsonp([30], {
                 }, t
             }(o.Component);
         ! function(e) {
-            e.broadcastLanguageMode = "edit-broadcast__broadcast-language-mode-checkbox", e.goLiveNotification = "edit-broadcast__go-live-notification", e.titleInput = "edit-broadcast__title-input"
+            e.broadcastLanguageMode = "edit-broadcast__broadcast-language-mode-checkbox", e.goLiveNotification = "edit-broadcast__go-live-notification", e.primaryContent = "edit-broadcast__primary-content", e.titleInput = "edit-broadcast__title-input"
         }(i || (i = {}));
-        var F = 140,
-            M = Object(l.d)("Done", "EditBroadcastComponent"),
-            L = Object(l.d)("Title field is required.", "EditBroadcastComponent"),
-            j = {
+        var x = 140,
+            F = {
                 Accept: "application/vnd.twitchtv.v5+json; charset=UTF-8",
                 "Accept-Language": "en-us",
                 "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
             },
-            A = n("m8RJ"),
-            P = n("5txU"),
-            B = (n("O04U"), function(e) {
+            M = n("m8RJ"),
+            L = n("5txU"),
+            j = (n("O04U"), 2500),
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        gameResults: null,
-                        isDisabled: !0,
-                        isErrored: !1,
-                        isLoaded: !1,
-                        queryID: null,
-                        selectedCommunities: [],
-                        selectedGame: "",
                         broadcasterLanguageModeEnabled: !1,
+                        buttonState: b.A.Default,
                         fields: {
                             title: {},
                             goLiveNotification: {},
@@ -65577,17 +65583,23 @@ webpackJsonp([30], {
                             language: {
                                 value: "en"
                             }
-                        }
+                        },
+                        gameResults: null,
+                        isButtonDisabled: !0,
+                        isLoaded: !1,
+                        queryID: null,
+                        selectedCommunities: [],
+                        selectedGame: ""
                     }, t.setInitialState = function(e) {
                         var n = e.data.user;
                         t.setState(function(e) {
-                            var t = e,
+                            var t = a.__assign({}, e),
                                 i = n.broadcastSettings;
-                            i && (t.fields.language.value = i.language), t.fields.title.value = n && n.stream && n.stream.title || n && n.lastBroadcast && n.lastBroadcast.title || "", t.isDisabled = !1, t.selectedGame = n.stream && n.stream.id && n.stream.game && n.stream.game.name || n.lastBroadcast && n.lastBroadcast.game && n.lastBroadcast.game.name || "";
-                            var a = n && n.directories.nodes.filter(function(e) {
-                                return e.directoryType === m.b.Community
+                            i && (t.fields.language.value = i.language), t.fields.title.value = n && n.stream && n.stream.title || n && n.lastBroadcast && n.lastBroadcast.title || "", t.isButtonDisabled = !1, t.selectedGame = n.stream && n.stream.id && n.stream.game && n.stream.game.name || n.lastBroadcast && n.lastBroadcast.game && n.lastBroadcast.game.name || "";
+                            var r = n && n.directories.nodes.filter(function(e) {
+                                return e.directoryType === u.b.Community
                             });
-                            return t.selectedCommunities = a.map(function(e) {
+                            return t.selectedCommunities = r.map(function(e) {
                                 return {
                                     objectID: e.id,
                                     name: e.name,
@@ -65600,33 +65612,33 @@ webpackJsonp([30], {
                             }), t
                         }), t.fetchGoLiveNotification(n.id)
                     }, t.getRemainingCharacters = function(e) {
-                        return (F - (e && e.length || 0)).toString()
+                        return (x - (e && e.length || 0)).toString()
                     }, t.registerHandleErrorMessage = function(e) {
                         return function(n) {
                             t.setState(function(i) {
-                                var a = i;
-                                return a.fields[e].errorMessage = n, a.isDisabled = !t.areAllFieldsValid(a.fields), a
+                                var r = a.__assign({}, i);
+                                return r.fields[e].errorType = n, r.isButtonDisabled = !t.areAllFieldsValid(r.fields), r
                             })
                         }
                     }, t.registerHandleFieldChange = function(e) {
                         return function(n) {
                             var i = n.currentTarget.value;
                             t.setState(function(n) {
-                                var a = n;
-                                return a.fields[e].value = i, a.fields[e].errorMessage = t.isFieldValid(e, i) ? "" : L, a.isDisabled = !t.areAllFieldsValid(a.fields), a
+                                var r = a.__assign({}, n);
+                                return r.fields[e].value = i, r.fields[e].errorType = t.isFieldValid(i) ? "max-characters" : "", r.isButtonDisabled = !t.areAllFieldsValid(r.fields), r
                             })
                         }
-                    }, t.isFieldValid = function(e, t) {
-                        return "title" !== e || !t.match(/^$/) && t.length <= F
+                    }, t.isFieldValid = function(e) {
+                        return e.match(/^$/) && e.length <= x
                     }, t.areAllFieldsValid = function(e) {
                         return Object.keys(e).reduce(function(t, n) {
                             if (!t || "communities" === n) return t;
-                            var i = e[n].errorMessage;
+                            var i = e[n].errorType;
                             return void 0 === i || "" === i
                         }, !0)
                     }, t.handleLanguageChange = function(e) {
                         t.setState(function(t) {
-                            var n = t;
+                            var n = a.__assign({}, t);
                             return n.fields.language.value = e, n
                         })
                     }, t.handleBroadcastLanguageModeEnabledChange = function(e) {
@@ -65657,42 +65669,59 @@ webpackJsonp([30], {
                         })
                     }, t.handleSubmit = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            return a.__generator(this, function(e) {
-                                switch (e.label) {
+                            var e, t, n, i, r, o = this;
+                            return a.__generator(this, function(s) {
+                                switch (s.label) {
                                     case 0:
                                         return this.setState({
-                                            isDisabled: !0
-                                        }), this.state.fields.title.value || void 0 === this.state.fields.title ? [4, Promise.all([this.updateChannel(), this.updateUserGoLiveNotification(), this.updateChannelCommunities(), this.updateChannelBroadcasterLanguageEnabled()])] : (this.registerHandleErrorMessage("title")(L), [2]);
+                                            buttonState: b.A.Loading,
+                                            isButtonDisabled: !0
+                                        }), [4, Promise.all([this.updateChannel(), this.updateUserGoLiveNotification(), this.updateChannelCommunities(), this.updateChannelBroadcasterLanguageEnabled()])];
                                     case 1:
-                                        return e.sent(), [4, this.props.data.refetch()];
+                                        return e = s.sent(), t = "", n = e.reduce(function(e, n) {
+                                            if (n) {
+                                                t = n.message;
+                                                var i = n.type;
+                                                i && (e[i] = n.fieldErrorMessage)
+                                            }
+                                            return e
+                                        }, {}), [4, this.props.data.refetch()];
                                     case 2:
-                                        return e.sent(), this.props.onSubmit && this.props.onSubmit(), this.setState({
-                                            isDisabled: !1
-                                        }), [2]
+                                        return s.sent(), (i = this.props.onSubmit) && i(), r = !!t, this.setState(function(e) {
+                                            var i = a.__assign({}, e.fields);
+                                            return Object.keys(n).forEach(function(e) {
+                                                var t = i[e];
+                                                t.errorType = n[e], i[e] = t
+                                            }), a.__assign({}, e, {
+                                                buttonState: t ? b.A.Default : b.A.Success,
+                                                fetchError: !!t,
+                                                fields: i,
+                                                isButtonDisabled: r
+                                            })
+                                        }), setTimeout(function() {
+                                            o.setState({
+                                                buttonState: b.A.Default,
+                                                fetchError: !1,
+                                                isButtonDisabled: !1
+                                            })
+                                        }, j), [2]
                                 }
                             })
                         })
                     }, t.fetchGoLiveNotification = function(e) {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var t, n, i;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+                            var t, n, i, r;
+                            return a.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
-                                        return t = "/kraken/users/" + e + "/notifications/custom?notification_type=streamup", n = "Unable to fetch go live notification", [4, h.a.request(t, {
-                                            method: "GET"
-                                        })];
+                                        return t = "/kraken/users/" + e + "/notifications/custom?notification_type=streamup", [4, p.a.get(t)];
                                     case 1:
-                                        return i = a.sent(), this.setState(function(e) {
-                                            var t = e;
-                                            if (t.isLoaded = !0, !i || i && 200 !== i.status) {
-                                                var a = i && i.error && i.error.toString() || n;
-                                                t.isErrored = !0, l.j.error(new Error(a), n)
-                                            } else if (t.isErrored = !1, i.body) {
-                                                var r = i.body.message;
-                                                t.fields.goLiveNotification.value = r || ""
-                                            }
-                                            return t
-                                        }), [2]
+                                        return (n = o.sent()).body && !n.error ? (i = n.body.message, this.setState(function(e) {
+                                            var t = a.__assign({}, e);
+                                            return t.fields.goLiveNotification.value = i || "", t.isLoaded = !0, t
+                                        })) : (r = Object(l.d)("Unable to fetch go live notification", "StreamInformation"), l.j.error(new Error(r), r), this.setState({
+                                            isLoaded: !0
+                                        })), [2]
                                 }
                             })
                         })
@@ -65705,204 +65734,225 @@ webpackJsonp([30], {
                 }, t.prototype.componentDidMount = function() {
                     this.props.data.user && this.setInitialState(this.props)
                 }, t.prototype.render = function() {
-                    var e = this.props,
-                        t = e.cancelComponent,
-                        n = e.submitText;
-                    return o.createElement(k._8, {
+                    var e = this.props.cancelComponent;
+                    return o.createElement(b._8, {
                         fullHeight: !0,
-                        display: k.R.Flex,
-                        flexDirection: k.T.Column,
-                        alignItems: k.c.Center,
-                        justifyContent: k._7.Center
-                    }, o.createElement(k._8, {
+                        display: b.R.Flex,
+                        flexDirection: b.T.Column,
+                        alignItems: b.c.Center,
+                        justifyContent: b._7.Center
+                    }, o.createElement(b._8, {
                         fullWidth: !0
-                    }, this.getContent(), o.createElement(k._8, {
+                    }, this.getContent(), o.createElement(b._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, o.createElement(k.O, {
+                    }, o.createElement(b.O, {
                         targetBlank: !0,
                         to: "https://help.twitch.tv/customer/portal/articles/983016"
-                    }, Object(l.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), o.createElement(k._8, {
-                        alignItems: k.c.Start,
-                        display: k.R.Flex,
-                        flexDirection: k.T.Row,
+                    }, Object(l.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), o.createElement(b._8, {
+                        alignItems: b.c.Start,
+                        display: b.R.Flex,
+                        flexDirection: b.T.Row,
                         fullWidth: !0,
-                        justifyContent: k._7.Start,
+                        justifyContent: b._7.Start,
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(k.v, {
-                        disabled: this.state.isDisabled,
+                    }, o.createElement(b.v, {
+                        disabled: this.state.isButtonDisabled,
+                        fullWidth: !e,
+                        icon: this.state.buttonState === b.A.Success ? b._25.Check : void 0,
                         onClick: this.handleSubmit,
-                        fullWidth: !t
-                    }, void 0 !== n ? n : M), t || null)))
+                        state: this.state.buttonState
+                    }, this.getButtonText()), e || null)))
+                }, t.prototype.getButtonText = function() {
+                    if (this.state.fetchError) return Object(l.d)("An error occurred", "EditBroadcastComponent");
+                    var e = this.props.submitText;
+                    switch (this.state.buttonState) {
+                        default:
+                            case b.A.Default:
+                            return void 0 !== e ? e : Object(l.d)("Done", "EditBroadcastComponent");
+                        case b.A.Loading:
+                                return Object(l.d)("Updating...", "StreamInformation");
+                        case b.A.Success:
+                                return ""
+                    }
+                }, t.prototype.getErrorMessage = function(e) {
+                    switch (e) {
+                        default: return e;
+                        case "max-characters":
+                                return Object(l.d)("field is required.", "EditBroadcastComponent")
+                    }
                 }, t.prototype.getContent = function() {
                     var e;
-                    if (this.props.data && this.props.data.user && this.props.data.user.stream && !this.props.data.loading && this.state.isLoaded)
-                        if (this.props.data.error) e = o.createElement(c.a, null);
-                        else {
-                            var t = this.state.fields,
-                                n = t.title,
-                                a = t.goLiveNotification,
-                                r = t.gameCategory,
-                                s = t.communities;
-                            e = o.createElement(o.Fragment, null, o.createElement(k._8, {
-                                margin: {
-                                    bottom: 2
-                                }
-                            }, o.createElement(k.W, {
-                                error: !!n.errorMessage,
-                                errorMessage: n.errorMessage,
-                                label: Object(l.d)("Title", "EditBroadcastComponent"),
-                                labelOptional: this.getRemainingCharacters(n.value)
-                            }, o.createElement(k._46, {
-                                "data-test-selector": i.titleInput,
-                                onChange: this.registerHandleFieldChange("title"),
-                                maxLength: F,
-                                noResize: !0,
-                                placeholder: Object(l.d)("Enter a title", "EditBroadcastComponent"),
-                                rows: 3,
-                                value: this.state.fields.title.value
-                            }))), o.createElement(k._8, {
-                                margin: {
-                                    bottom: 2
-                                }
-                            }, o.createElement(k.W, {
-                                error: !!a.errorMessage,
-                                errorMessage: a.errorMessage,
-                                label: Object(l.d)("Go Live Notification", "EditBroadcastComponent"),
-                                labelOptional: this.getRemainingCharacters(a.value)
-                            }, o.createElement(k._46, {
-                                "data-test-selector": i.goLiveNotification,
-                                maxLength: F,
-                                noResize: !0,
-                                onChange: this.registerHandleFieldChange("goLiveNotification"),
-                                placeholder: Object(l.d)("{channelName} went live!", {
-                                    channelName: this.props.channelName
-                                }, "EditBroadcastComponent"),
-                                rows: 3,
-                                value: this.state.fields.goLiveNotification.value
-                            }))), o.createElement(k._8, {
-                                margin: {
-                                    bottom: 2
-                                }
-                            }, o.createElement(x, {
-                                error: !!r.errorMessage,
-                                errorMessage: r.errorMessage,
-                                onGameResultSelected: this.handleGameResultSelected,
-                                onGameCleared: this.handleGameCleared,
-                                selectedGame: this.state.selectedGame
-                            })), o.createElement(k._8, {
-                                margin: {
-                                    bottom: 2
-                                }
-                            }, o.createElement(D, {
-                                error: !!s.errorMessage,
-                                errorMessage: s.errorMessage,
-                                selectedCommunities: this.state.selectedCommunities,
-                                onChange: this.registerHandleErrorMessage("communities"),
-                                onCommunityResultSelected: this.handleCommunityResultSelected,
-                                onRemoveCommunity: this.handleRemoveCommunity,
-                                onError: this.registerHandleErrorMessage("communities")
-                            })), o.createElement(k._8, {
-                                margin: {
-                                    bottom: 1
-                                }
-                            }, o.createElement(d.a, {
-                                label: Object(l.d)("Language", "EditBroadcastComponent"),
-                                onChange: this.handleLanguageChange,
-                                defaultLanguage: this.state.fields.language.value || "en",
-                                disabled: !1
-                            }), o.createElement(k._8, {
-                                margin: {
-                                    top: .5
-                                }
-                            }, o.createElement(k.J, {
-                                label: Object(l.d)("Restrict Chat Language", "EditBroadcastComponent"),
-                                onChange: this.handleBroadcastLanguageModeEnabledChange,
-                                checked: this.state.broadcasterLanguageModeEnabled,
-                                "data-test-selector": i.broadcastLanguageMode
-                            }))))
+                    if (this.props.data && this.props.data.user && this.props.data.user.stream && !this.props.data.loading && this.state.isLoaded) {
+                        var t = this.state.fields,
+                            n = t.title,
+                            a = t.goLiveNotification,
+                            r = t.gameCategory,
+                            s = t.communities,
+                            c = this.getErrorMessage(n.errorType),
+                            u = this.getErrorMessage(a.errorType),
+                            m = this.getErrorMessage(r.errorType),
+                            p = this.getErrorMessage(s.errorType);
+                        e = o.createElement(o.Fragment, null, o.createElement(b._8, {
+                            "data-test-selector": i.primaryContent,
+                            margin: {
+                                bottom: 2
+                            }
+                        }, o.createElement(b.W, {
+                            error: !!c,
+                            errorMessage: c,
+                            label: Object(l.d)("Title", "EditBroadcastComponent"),
+                            labelOptional: this.getRemainingCharacters(n.value)
+                        }, o.createElement(b._46, {
+                            "data-test-selector": i.titleInput,
+                            onChange: this.registerHandleFieldChange("title"),
+                            maxLength: x,
+                            noResize: !0,
+                            placeholder: Object(l.d)("Enter a title", "EditBroadcastComponent"),
+                            rows: 3,
+                            value: this.state.fields.title.value
+                        }))), o.createElement(b._8, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, o.createElement(b.W, {
+                            error: !!u,
+                            errorMessage: u,
+                            label: Object(l.d)("Go Live Notification", "EditBroadcastComponent"),
+                            labelOptional: this.getRemainingCharacters(a.value)
+                        }, o.createElement(b._46, {
+                            "data-test-selector": i.goLiveNotification,
+                            maxLength: x,
+                            noResize: !0,
+                            onChange: this.registerHandleFieldChange("goLiveNotification"),
+                            placeholder: Object(l.d)("{channelName} went live!", {
+                                channelName: this.props.channelName
+                            }, "EditBroadcastComponent"),
+                            rows: 3,
+                            value: this.state.fields.goLiveNotification.value
+                        }))), o.createElement(b._8, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, o.createElement(T, {
+                            error: !!m,
+                            errorMessage: m,
+                            onGameResultSelected: this.handleGameResultSelected,
+                            onGameCleared: this.handleGameCleared,
+                            selectedGame: this.state.selectedGame
+                        })), o.createElement(b._8, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, o.createElement(I, {
+                            error: !!p,
+                            errorMessage: p,
+                            selectedCommunities: this.state.selectedCommunities,
+                            onChange: this.registerHandleErrorMessage("communities"),
+                            onCommunityResultSelected: this.handleCommunityResultSelected,
+                            onRemoveCommunity: this.handleRemoveCommunity,
+                            onError: this.registerHandleErrorMessage("communities")
+                        })), o.createElement(b._8, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, o.createElement(d.a, {
+                            label: Object(l.d)("Language", "EditBroadcastComponent"),
+                            onChange: this.handleLanguageChange,
+                            defaultLanguage: this.state.fields.language.value || "en",
+                            disabled: !1
+                        }), o.createElement(b._8, {
+                            margin: {
+                                top: .5
+                            }
+                        }, o.createElement(b.J, {
+                            label: Object(l.d)("Restrict Chat Language", "EditBroadcastComponent"),
+                            onChange: this.handleBroadcastLanguageModeEnabledChange,
+                            checked: this.state.broadcasterLanguageModeEnabled,
+                            "data-test-selector": i.broadcastLanguageMode
+                        }))))
+                    } else e = o.createElement(b._8, {
+                        fullWidth: !0,
+                        padding: {
+                            y: 2
                         }
-                    else e = o.createElement(k._10, {
+                    }, o.createElement(b._10, {
                         fillContent: !0
-                    });
+                    }));
                     return e
                 }, t.prototype.updateChannel = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n;
-                        return a.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    e = {
-                                        "channel[broadcaster_language]": this.state.fields.language.value,
-                                        "channel[game]": this.state.selectedGame,
-                                        "channel[status]": this.state.fields.title.value || "",
-                                        on_site: "1"
-                                    }, t = "/kraken/channels/" + this.props.channelID, i.label = 1;
-                                case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, h.a.put(t, {
-                                        body: r.stringify(e, {
-                                            arrayFormat: "bracket"
-                                        }),
-                                        headers: j
-                                    })];
-                                case 2:
-                                    return i.sent(), [3, 4];
-                                case 3:
-                                    return n = i.sent(), l.j.error(n, "Unable to update broadcaster languge mode"), [3, 4];
-                                case 4:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, t.prototype.updateUserGoLiveNotification = function() {
                     return a.__awaiter(this, void 0, void 0, function() {
                         var e, t, n, i;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    if (!(e = this.props.data.user)) return [3, 4];
-                                    t = "notification_type=streamup&message=" + this.state.fields.goLiveNotification.value, n = "/kraken/users/" + e.id + "/notifications/custom?" + t, a.label = 1;
-                                case 1:
-                                    return a.trys.push([1, 3, , 4]), [4, h.a.request(n, {
-                                        method: "PUT"
+                                    return e = {
+                                        "channel[broadcaster_language]": this.state.fields.language.value,
+                                        "channel[game]": this.state.selectedGame,
+                                        "channel[status]": this.state.fields.title.value || "",
+                                        on_site: "1"
+                                    }, t = "/kraken/channels/" + this.props.channelID, [4, p.a.put(t, {
+                                        body: r.stringify(e, {
+                                            arrayFormat: "bracket"
+                                        }),
+                                        headers: F
                                     })];
+                                case 1:
+                                    return (n = a.sent().error) ? (i = n && n.error || Object(l.d)("Cannot update channel information", "StreamInformation"), l.j.error(new Error(i), i), [2, {
+                                        message: i,
+                                        fieldErrorMessage: "",
+                                        type: null
+                                    }]) : [2]
+                            }
+                        })
+                    })
+                }, t.prototype.updateUserGoLiveNotification = function() {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var e, t, n, i, r, o;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return (e = this.props.data.user) ? (t = "notification_type=streamup&message=" + this.state.fields.goLiveNotification.value, n = "/kraken/users/" + e.id + "/notifications/custom?" + t, [4, p.a.request(n, {
+                                        method: "PUT"
+                                    })]) : [3, 2];
+                                case 1:
+                                    if (i = a.sent().error) return r = i && "failed_automod" === i.message && Object(l.d)("Don't send what you wouldn't say to grandma", "StreamInformation"), o = Object(l.d)("Unable to update user go live notification", "StreamInformation"), l.j.error(new Error(o), o), [2, {
+                                        message: o,
+                                        fieldErrorMessage: r || "",
+                                        type: "goLiveNotification"
+                                    }];
+                                    a.label = 2;
                                 case 2:
-                                    return a.sent(), [3, 4];
-                                case 3:
-                                    return i = a.sent(), l.j.error(i, "Unable to update user go live notification"), [3, 4];
-                                case 4:
                                     return [2]
                             }
                         })
                     })
                 }, t.prototype.updateChannelCommunities = function() {
                     return a.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n;
-                        return a.__generator(this, function(i) {
-                            switch (i.label) {
+                        var e, t, n, i;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
-                                    e = "/kraken/channels/" + this.props.channelID + "/communities/", t = this.state.selectedCommunities.map(function(e) {
+                                    return e = "/kraken/channels/" + this.props.channelID + "/communities/", t = this.state.selectedCommunities.map(function(e) {
                                         return e.objectID
-                                    }), i.label = 1;
-                                case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, h.a.put(e, {
+                                    }), [4, p.a.put(e, {
                                         body: r.stringify({
                                             community_ids: t,
                                             on_site: "1"
                                         }, {
                                             arrayFormat: "bracket"
                                         }),
-                                        headers: j
+                                        headers: F
                                     })];
-                                case 2:
-                                    return i.sent(), [3, 4];
-                                case 3:
-                                    return n = i.sent(), l.j.error(n, "Unable to update broadcaster languge mode"), [3, 4];
-                                case 4:
-                                    return [2]
+                                case 1:
+                                    return (n = a.sent().error) ? (i = Object(l.d)("Unable to update broadcaster language mode", "StreamInformation"), l.j.error(new Error(i), i), [2, {
+                                        message: i,
+                                        fieldErrorMessage: n && n.message,
+                                        type: "language"
+                                    }]) : [2]
                             }
                         })
                     })
@@ -65912,7 +65962,7 @@ webpackJsonp([30], {
                         return a.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return this.props.updateChatSettings && this.props.data.user.chatSettings.isBroadcasterLanguageModeEnabled !== this.state.broadcasterLanguageModeEnabled ? (e = a.__assign({}, Object(p.a)({
+                                    return this.props.updateChatSettings && this.props.data.user.chatSettings.isBroadcasterLanguageModeEnabled !== this.state.broadcasterLanguageModeEnabled ? (e = a.__assign({}, Object(m.a)({
                                         channelID: this.props.channelID,
                                         isBroadcasterLanguageModeEnabled: this.state.broadcasterLanguageModeEnabled
                                     }), {
@@ -65930,15 +65980,15 @@ webpackJsonp([30], {
                                     return t = i.sent(), n = function(e) {
                                         var n = e.user;
                                         return n && (n.chatSettings.isBroadcasterLanguageModeEnabled = t.data.updateChatSettings.chatSettings.isBroadcasterLanguageModeEnabled), e
-                                    }, Object(p.e)(P, {
+                                    }, Object(m.e)(L, {
                                         login: this.props.channelName
-                                    }, n), [2]
+                                    }, n), [2, {}]
                             }
                         })
                     })
                 }, t
-            }(o.Component)),
-            U = Object(s.compose)(Object(u.a)(P, {
+            }(o.Component),
+            P = Object(s.compose)(Object(c.a)(L, {
                 options: function(e) {
                     return {
                         fetchPolicy: "network-only",
@@ -65947,13 +65997,13 @@ webpackJsonp([30], {
                         }
                     }
                 }
-            }), Object(u.a)(A, {
+            }), Object(c.a)(M, {
                 name: "updateChatSettings"
-            }))(B);
+            }))(A);
         n.d(t, !1, function() {
-            return B
+            return A
         }), n.d(t, "a", function() {
-            return U
+            return P
         })
     },
     "zTg+": function(e, t) {
@@ -66313,4 +66363,4 @@ webpackJsonp([30], {
         }
     }
 });
-//# sourceMappingURL=pages.channel-6eb3244325a388e0e99076318d31d5cc.js.map
+//# sourceMappingURL=pages.channel-c75e28be0c18f80f99e99bdf4fd471eb.js.map

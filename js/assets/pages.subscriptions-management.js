@@ -1389,6 +1389,7 @@ webpackJsonp([64], {
             y = (n("SR+V"), function() {
                 return c.createElement(S._35, {
                     className: "available-prime-sub-card",
+                    "data-a-target": "available-prime-sub-card",
                     border: !0,
                     background: S.n.Base,
                     display: S.R.Flex,
@@ -1596,6 +1597,7 @@ webpackJsonp([64], {
                         label: e
                     }, c.createElement(S.w, {
                         onClick: this.onEditClick,
+                        "data-a-target": "subscription-card-edit-button",
                         ariaLabel: e,
                         icon: S._25.Gear,
                         type: S.y.Secondary,
@@ -1650,6 +1652,7 @@ webpackJsonp([64], {
                 }, t.prototype.renderInteractable = function(e, t, n) {
                     return c.createElement(S._6, u.__assign({}, n, {
                         ariaLabel: t,
+                        "data-a-target": e,
                         "data-test-selector": e,
                         key: "edit-subscription-" + e
                     }), c.createElement(S._8, {
@@ -1689,7 +1692,7 @@ webpackJsonp([64], {
         }
         var x, G = n("MjRD");
         (x || (x = {})).HasAdFreeMessage = "HasAdFreeMessage";
-        var V, Q, q = function(e) {
+        var V = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1849,7 +1852,7 @@ webpackJsonp([64], {
                     return Object(A.b)(e)
                 }, t
             }(c.Component),
-            z = Object(g.compose)(Object(v.a)(G, {
+            Q = Object(g.compose)(Object(v.a)(G, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1857,12 +1860,12 @@ webpackJsonp([64], {
                         }
                     }
                 }
-            }), Object(b.d)("SubscriptionBenefitsBalloon"))(q),
-            H = n("E9Qg"),
-            W = n.n(H),
-            $ = (n("AnDU"), function(e) {
+            }), Object(b.d)("SubscriptionBenefitsBalloon"))(V),
+            q = n("E9Qg"),
+            z = n.n(q),
+            W = (n("AnDU"), function(e) {
                 var t = {
-                    backgroundImage: "url(" + (e.bannerImageSrc || W.a) + ")"
+                    backgroundImage: "url(" + (e.bannerImageSrc || z.a) + ")"
                 };
                 return c.createElement(S._35, {
                     background: S.n.Base,
@@ -1874,19 +1877,26 @@ webpackJsonp([64], {
                     style: t
                 })))
             }),
-            Y = n("cpDk");
+            H = n("cpDk");
+
+        function $(e, t) {
+            return t || (t = new Date), t.getMonth() === e.getMonth() && e.getDate() - t.getDate() > 25 ? Object(d.h)(e, {
+                units: "day"
+            }) : Object(d.h)(e)
+        }
+        var Y, J;
         n("16B9");
         ! function(e) {
             e[e.NotStarted = 0] = "NotStarted", e[e.InProgress = 1] = "InProgress", e[e.Error = 2] = "Error", e[e.Success = 3] = "Success"
-        }(V || (V = {})),
+        }(Y || (Y = {})),
         function(e) {
             e.TierDisplay = "TierDisplay", e.ExpiryMessage = "ExpiryMessage", e.PaidUpgradeMessage = "PaidUpgradeMessage", e.CancelPaidUpgradeButton = "CancelPaidUpgradeButton"
-        }(Q || (Q = {}));
-        var J, X, K = function(e) {
+        }(J || (J = {}));
+        var X, K, Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        cancelPaidUpgradeStatus: V.NotStarted
+                        cancelPaidUpgradeStatus: Y.NotStarted
                     }, t.onCancelPaidUpgrade = function() {
                         return u.__awaiter(t, void 0, void 0, function() {
                             return u.__generator(this, function(e) {
@@ -1894,7 +1904,7 @@ webpackJsonp([64], {
                                     case 0:
                                         if (!(this.props.currentUserID && this.props.subBenefit.product && this.props.subBenefit.product.name && this.props.subBenefit.originID && this.props.subBenefit.paidUpgrade)) return [3, 4];
                                         this.setState({
-                                            cancelPaidUpgradeStatus: V.InProgress
+                                            cancelPaidUpgradeStatus: Y.InProgress
                                         }), e.label = 1;
                                     case 1:
                                         return e.trys.push([1, 3, , 4]), [4, function(e, t, n, i) {
@@ -1926,11 +1936,11 @@ webpackJsonp([64], {
                                         }(this.props.currentUserID, this.props.subBenefit.product.name, this.props.subBenefit.paidUpgrade.originID, this.props.subBenefit.originID)];
                                     case 2:
                                         return e.sent(), this.setState({
-                                            cancelPaidUpgradeStatus: V.Success
+                                            cancelPaidUpgradeStatus: Y.Success
                                         }, this.onCancelPaidUpgradeSuccess), [3, 4];
                                     case 3:
                                         return e.sent(), this.setState({
-                                            cancelPaidUpgradeStatus: V.Error
+                                            cancelPaidUpgradeStatus: Y.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -1939,7 +1949,7 @@ webpackJsonp([64], {
                         })
                     }, t.onGiftDisableSuccess = function() {
                         Object(k.d)({
-                            fragment: Y,
+                            fragment: H,
                             id: t.props.subBenefit.id,
                             mutator: function(e) {
                                 return {
@@ -1960,7 +1970,7 @@ webpackJsonp([64], {
                         })
                     }, t.onCancelPaidUpgradeSuccess = function() {
                         Object(k.d)({
-                            fragment: Y,
+                            fragment: H,
                             id: t.props.subBenefit.id,
                             mutator: function(e) {
                                 return u.__assign({}, e, {
@@ -1980,11 +1990,12 @@ webpackJsonp([64], {
                         i = e = Object(d.d)("Twitch Turbo", "SubscriptionCard"), r = "/settings/turbo", t = "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png"
                     }
                     return c.createElement(S._8, {
+                        "data-a-target": "subscription-card",
                         className: "subscription-card",
                         margin: {
                             bottom: 2
                         }
-                    }, c.createElement($, {
+                    }, c.createElement(W, {
                         bannerImageSrc: n,
                         linkTo: r
                     }), c.createElement(S.C, {
@@ -2030,6 +2041,7 @@ webpackJsonp([64], {
                         hoverUnderlineNone: !0,
                         type: S.P.Inherit,
                         to: r,
+                        "data-a-target": "subscription-card__channel-name",
                         className: "subscription-card__channel-name"
                     }, c.createElement(S.Q, {
                         bold: !0,
@@ -2040,7 +2052,7 @@ webpackJsonp([64], {
                         margin: {
                             top: .5
                         }
-                    }, this.props.subBenefit.user && this.props.subBenefit.user.login && c.createElement(z, {
+                    }, this.props.subBenefit.user && this.props.subBenefit.user.login && c.createElement(Q, {
                         channelLogin: this.props.subBenefit.user.login
                     }), this.renderPaidUpgradeButton())))))
                 }, t.prototype.renderVerifiedPartnerBadge = function() {
@@ -2058,11 +2070,12 @@ webpackJsonp([64], {
                 }, t.prototype.renderTierDisplay = function() {
                     return c.createElement(S._8, {
                         display: S.R.Flex,
-                        "data-test-selector": Q.TierDisplay
+                        "data-test-selector": J.TierDisplay
                     }, c.createElement(S._35, {
                         background: S.n.Alt2,
                         display: S.R.Flex,
                         flexDirection: S.T.Row,
+                        "data-a-target": this.props.subBenefit.purchasedWithPrime ? "subscription-card__tier-display-prime" : "subscription-card__tier-display",
                         className: this.props.subBenefit.purchasedWithPrime ? "subscription-card__tier-display-prime" : "subscription-card__tier-display",
                         padding: {
                             x: 1,
@@ -2143,47 +2156,47 @@ webpackJsonp([64], {
                             type: S.B.Text,
                             linkTo: this.props.subBenefit.product.url
                         }, Object(d.d)("Continue Subscription", "SubscriptionCard"));
-                        if (this.state.cancelPaidUpgradeStatus !== V.Success) return c.createElement(S.v, {
+                        if (this.state.cancelPaidUpgradeStatus !== Y.Success) return c.createElement(S.v, {
                             type: S.B.Text,
                             onClick: this.onCancelPaidUpgrade,
-                            state: this.state.cancelPaidUpgradeStatus === V.InProgress ? S.A.Loading : S.A.Default,
-                            "data-test-selector": Q.CancelPaidUpgradeButton
+                            state: this.state.cancelPaidUpgradeStatus === Y.InProgress ? S.A.Loading : S.A.Default,
+                            "data-test-selector": J.CancelPaidUpgradeButton
                         }, Object(d.d)("Cancel Paid Subscription", "SubscriptionCard"))
                     }
                     return null
                 }, t.prototype.renderBenefitRenewsOrEndsOn = function() {
-                    var e = Object(d.d)("Lifetime Subscription", "SubscriptionCard"),
+                    var e = null,
                         t = S._25.Timeout;
-                    if (!this.props.subBenefit.renewsAt && this.props.subBenefit.endsAt) {
-                        var n = new Date(this.props.subBenefit.endsAt),
-                            i = Object(d.c)(n, {
-                                month: "short",
-                                day: "numeric"
-                            }),
-                            r = Object(d.h)(n);
-                        e = Object(d.d)("Benefits end {date} ({relative})", {
-                            date: i,
-                            relative: r
-                        }, "SubscriptionCard"), t = S._25.Timeout
-                    } else if (this.props.subBenefit.renewsAt) {
-                        var s = new Date(this.props.subBenefit.renewsAt);
-                        if (s.getTime() > (new Date).getTime()) {
+                    if (this.props.subBenefit.endsAt) {
+                        if (!this.props.subBenefit.renewsAt && this.props.subBenefit.endsAt) {
+                            var n = new Date(this.props.subBenefit.endsAt),
+                                i = Object(d.c)(n, {
+                                    month: "short",
+                                    day: "numeric"
+                                }),
+                                r = $(n);
+                            e = Object(d.d)("Benefits end {date} ({relative})", {
+                                date: i,
+                                relative: r
+                            }, "SubscriptionCard"), t = S._25.Timeout
+                        } else if (this.props.subBenefit.renewsAt) {
+                            var s = new Date(this.props.subBenefit.renewsAt);
                             i = Object(d.c)(s, {
                                 month: "short",
                                 day: "numeric"
-                            }), r = Object(d.h)(s);
+                            }), r = $(s);
                             e = Object(d.d)("Renews on {date} ({relative})", {
                                 date: i,
                                 relative: r
                             }, "SubscriptionCard"), t = S._25.Refresh
                         }
-                    }
+                    } else e = Object(d.d)("Lifetime Subscription", "SubscriptionCard");
                     return null !== e ? c.createElement(S._8, {
                         display: S.R.Flex,
                         margin: {
                             bottom: .5
                         },
-                        "data-test-selector": Q.ExpiryMessage
+                        "data-test-selector": J.ExpiryMessage
                     }, c.createElement(S._8, {
                         margin: {
                             right: 1
@@ -2192,7 +2205,7 @@ webpackJsonp([64], {
                         asset: t
                     })), c.createElement(S.Q, null, e)) : null
                 }, t.prototype.renderPaidUpgradeInfo = function() {
-                    if (this.props.subBenefit.paidUpgrade && this.state.cancelPaidUpgradeStatus !== V.Success) {
+                    if (this.props.subBenefit.paidUpgrade && this.state.cancelPaidUpgradeStatus !== Y.Success) {
                         var e = Object(d.c)(new Date(this.props.subBenefit.paidUpgrade.startsAt), {
                             month: "short",
                             day: "numeric"
@@ -2202,7 +2215,7 @@ webpackJsonp([64], {
                             margin: {
                                 bottom: .5
                             },
-                            "data-test-selector": Q.PaidUpgradeMessage
+                            "data-test-selector": J.PaidUpgradeMessage
                         }, c.createElement(S._8, {
                             margin: {
                                 right: 1
@@ -2223,10 +2236,10 @@ webpackJsonp([64], {
                     configurable: !0
                 }), t
             }(c.Component),
-            Z = Object(g.compose)(Object(b.d)("SubscriptionCard", {
+            ee = Object(g.compose)(Object(b.d)("SubscriptionCard", {
                 autoReportInteractive: !0
-            }))(K),
-            ee = function(e) {
+            }))(Z),
+            te = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2244,7 +2257,7 @@ webpackJsonp([64], {
                     for (var e = [], t = !1, n = 0, i = this.props.subscriptions; n < i.length; n++) {
                         var r = i[n];
                         if (r && this.filterSubType(r)) {
-                            var s = c.createElement(Z, {
+                            var s = c.createElement(ee, {
                                 subBenefit: r,
                                 key: "subscription-" + r.id,
                                 turboBadge: this.props.turboBadge,
@@ -2253,22 +2266,22 @@ webpackJsonp([64], {
                             r.purchasedWithPrime ? (t = !0, e.unshift(s)) : e.push(s)
                         }
                     }
-                    return this.props.type === X.Paid && this.props.hasPrime && !t && e.unshift(c.createElement(y, {
+                    return this.props.type === K.Paid && this.props.hasPrime && !t && e.unshift(c.createElement(y, {
                         key: "prime-subscription-available"
                     })), e
                 }, t.prototype.filterSubType = function(e) {
-                    return !!e && (!(this.props.type !== X.Other || !e.product || "324" !== e.product.id) || !(this.props.type === X.Other || !e.user))
+                    return !!e && (!(this.props.type !== K.Other || !e.product || "324" !== e.product.id) || !(this.props.type === K.Other || !e.user))
                 }, t
             }(c.Component),
-            te = Object(g.compose)(Object(b.d)("SubscriptionsManagementTower", {
+            ne = Object(g.compose)(Object(b.d)("SubscriptionsManagementTower", {
                 autoReportInteractive: !0
-            }))(ee),
-            ne = n("fEk1");
-        (J || (J = {})).EmptyMessage = "SubscriptionsEmptyMessage",
+            }))(te),
+            ie = n("fEk1");
+        (X || (X = {})).EmptyMessage = "SubscriptionsEmptyMessage",
             function(e) {
-                e[e.Paid = 0] = "Paid", e[e.Gifts = 1] = "Gifts", e[e.Mobile = 2] = "Mobile", e[e.Other = 3] = "Other"
-            }(X || (X = {}));
-        var ie = function(e) {
+                e.Paid = "Paid", e.Gifts = "Gifts", e.Mobile = "Mobile", e.Other = "Other"
+            }(K || (K = {}));
+        var re = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -2285,7 +2298,7 @@ webpackJsonp([64], {
                         });
                         return e.length < 1 ? this.renderEmptyMessage() : c.createElement(S._8, {
                             className: "subscriptions-management-tab"
-                        }, c.createElement(te, {
+                        }, c.createElement(ne, {
                             subscriptions: e,
                             hasPrime: this.props.data.currentUser.hasPrime,
                             type: this.props.subscriptionType,
@@ -2305,18 +2318,19 @@ webpackJsonp([64], {
                 }) : void 0
             }, t.prototype.renderEmptyMessage = function() {
                 var e = "";
-                return e = this.props.subscriptionType === X.Paid ? Object(d.d)("Any active subscriptions you purchase will show up here.", "SubscriptionsManagementTab") : this.props.subscriptionType === X.Gifts ? Object(d.d)("Any active gift subscriptions you have will show up here.", "SubscriptionsManagementTab") : Object(d.d)("Any other subscriptions you have will show up here.", "SubscriptionsManagementTab"), c.createElement(S._35, {
+                return e = this.props.subscriptionType === K.Paid ? Object(d.d)("Any active subscriptions you purchase will show up here.", "SubscriptionsManagementTab") : this.props.subscriptionType === K.Gifts ? Object(d.d)("Any active gift subscriptions you have will show up here.", "SubscriptionsManagementTab") : Object(d.d)("Any other subscriptions you have will show up here.", "SubscriptionsManagementTab"), c.createElement(S._35, {
                     display: S.R.Flex,
                     justifyContent: S._7.Center,
                     background: S.n.Base,
                     padding: 3,
                     border: !0,
-                    "data-test-selector": J.EmptyMessage
+                    "data-a-target": X.EmptyMessage + "-" + this.props.subscriptionType,
+                    "data-test-selector": X.EmptyMessage
                 }, c.createElement(S.Q, null, e))
             }, t.prototype.getSubCount = function() {
                 var e = this;
                 return this.props.data.currentUser && this.props.data.currentUser.subscriptionBenefits && this.props.data.currentUser.subscriptionBenefits.edges ? this.props.data.currentUser.subscriptionBenefits.edges.reduce(function(t, n) {
-                    return e.props.subscriptionType !== X.Other && n.node && n.node.user ? ++t : e.props.subscriptionType === X.Other && n.node && !n.node.user && n.node.product && "324" === n.node.product.id ? ++t : t
+                    return e.props.subscriptionType !== K.Other && n.node && n.node.user ? ++t : e.props.subscriptionType === K.Other && n.node && !n.node.user && n.node.product && "324" === n.node.product.id ? ++t : t
                 }, 0) : 0
             }, t.prototype.getTurboBadge = function() {
                 var e = void 0;
@@ -2330,24 +2344,24 @@ webpackJsonp([64], {
             }, t
         }(c.Component);
 
-        function re(e) {
+        function se(e) {
             switch (e) {
-                case X.Gifts:
+                case K.Gifts:
                     return {
                         filter: "GIFT",
                         platform: "WEB"
                     };
-                case X.Mobile:
+                case K.Mobile:
                     return {
                         filter: "PLATFORM",
                         platform: "ANDROID"
                     };
-                case X.Other:
+                case K.Other:
                     return {
                         filter: "ALL",
                         platform: "WEB"
                     };
-                case X.Paid:
+                case K.Paid:
                 default:
                     return {
                         filter: "PLATFORM",
@@ -2355,14 +2369,14 @@ webpackJsonp([64], {
                     }
             }
         }
-        var se, ae, oe = Object(g.compose)(Object(v.a)(ne, {
+        var ae, oe, ue = Object(g.compose)(Object(v.a)(ie, {
                 options: function(e) {
                     return {
                         variables: {
                             limit: 100,
                             cursor: "",
-                            filter: re(e.subscriptionType).filter,
-                            platform: re(e.subscriptionType).platform
+                            filter: se(e.subscriptionType).filter,
+                            platform: se(e.subscriptionType).platform
                         }
                     }
                 },
@@ -2370,7 +2384,7 @@ webpackJsonp([64], {
                     return u.__assign({}, e, {
                         loadMore: function() {
                             return e.data.fetchMore({
-                                query: ne,
+                                query: ie,
                                 variables: u.__assign({}, e.data.variables, {
                                     cursor: e.data.currentUser && e.data.currentUser.subscriptionBenefits && e.data.currentUser.subscriptionBenefits.edges && e.data.currentUser.subscriptionBenefits.edges[e.data.currentUser.subscriptionBenefits.edges.length - 1].cursor
                                 }),
@@ -2389,45 +2403,45 @@ webpackJsonp([64], {
                         }
                     })
                 }
-            }), Object(b.d)("SubscriptionsManagementTab"))(ie),
-            ue = n("9+OC");
+            }), Object(b.d)("SubscriptionsManagementTab"))(re),
+            ce = n("9+OC");
         n("tCaF");
         ! function(e) {
             e.PaidTab = "SubscriptionsPaidTab", e.GiftsTab = "SubscriptionsGiftsTab", e.MobileTab = "SubscriptionsMobileTab", e.OtherTab = "SubscriptionsOtherTab"
-        }(se || (se = {})),
+        }(ae || (ae = {})),
         function(e) {
             e.Gifts = "GIFTS", e.Paid = "PAID", e.Mobile = "MOBILE", e.Other = "OTHER"
-        }(ae || (ae = {}));
-        var ce = function(e) {
+        }(oe || (oe = {}));
+        var de = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        currentTab: ae.Paid,
+                        currentTab: oe.Paid,
                         paidWebSubCount: 0,
                         giftSubCount: 0,
                         mobileSubCount: 0,
                         otherSubCount: 0
                     }, t.toggleTab = function(e) {
                         if (e.currentTarget.parentElement) switch (e.currentTarget.parentElement.getAttribute("data-tab-title")) {
-                            case ae.Gifts:
+                            case oe.Gifts:
                                 t.setState({
-                                    currentTab: ae.Gifts
+                                    currentTab: oe.Gifts
                                 });
                                 break;
-                            case ae.Mobile:
+                            case oe.Mobile:
                                 t.setState({
-                                    currentTab: ae.Mobile
+                                    currentTab: oe.Mobile
                                 });
                                 break;
-                            case ae.Other:
+                            case oe.Other:
                                 t.setState({
-                                    currentTab: ae.Other
+                                    currentTab: oe.Other
                                 });
                                 break;
-                            case ae.Paid:
+                            case oe.Paid:
                             default:
                                 t.setState({
-                                    currentTab: ae.Paid
+                                    currentTab: oe.Paid
                                 })
                         }
                     }, t.updateWebSubCount = function(e) {
@@ -2463,36 +2477,39 @@ webpackJsonp([64], {
                     }))
                 }, t.prototype.renderTabs = function() {
                     return c.createElement(S._37, null, c.createElement(S._36, {
-                        active: this.state.currentTab === ae.Paid,
+                        active: this.state.currentTab === oe.Paid,
                         onClick: this.toggleTab,
-                        "data-tab-title": ae.Paid
+                        "data-a-target": oe.Paid,
+                        "data-tab-title": oe.Paid
                     }, Object(d.d)("Your Subscriptions", "SubscriptionsManagementPage")), c.createElement(S._36, {
-                        active: this.state.currentTab === ae.Gifts,
+                        active: this.state.currentTab === oe.Gifts,
                         onClick: this.toggleTab,
-                        "data-tab-title": ae.Gifts
+                        "data-a-target": oe.Gifts,
+                        "data-tab-title": oe.Gifts
                     }, Object(d.d)("Gift Subscriptions", "SubscriptionsManagementPage")), c.createElement(S._36, {
-                        active: this.state.currentTab === ae.Other,
+                        active: this.state.currentTab === oe.Other,
                         onClick: this.toggleTab,
-                        "data-tab-title": ae.Other
+                        "data-a-target": oe.Other,
+                        "data-tab-title": oe.Other
                     }, Object(d.d)("Other Subscriptions", "SubscriptionsManagementPage")))
                 }, t.prototype.renderTabContent = function() {
                     var e, t, n;
                     switch (this.state.currentTab) {
-                        case ae.Gifts:
-                            e = X.Gifts, t = se.GiftsTab, n = this.updateGiftSubCount;
+                        case oe.Gifts:
+                            e = K.Gifts, t = ae.GiftsTab, n = this.updateGiftSubCount;
                             break;
-                        case ae.Other:
-                            e = X.Other, t = se.OtherTab, n = this.updateOtherSubCount;
+                        case oe.Other:
+                            e = K.Other, t = ae.OtherTab, n = this.updateOtherSubCount;
                             break;
-                        case ae.Paid:
+                        case oe.Paid:
                         default:
-                            t = se.PaidTab, e = X.Paid, n = this.updateWebSubCount
+                            t = ae.PaidTab, e = K.Paid, n = this.updateWebSubCount
                     }
                     return c.createElement(S._8, {
                         margin: {
                             top: 2
                         }
-                    }, c.createElement(oe, {
+                    }, c.createElement(ue, {
                         subscriptionType: e,
                         visible: !0,
                         reportSubCount: n,
@@ -2500,13 +2517,13 @@ webpackJsonp([64], {
                     }))
                 }, t
             }(c.Component),
-            de = Object(r.d)(Object(b.d)("SubsManagementPage", {
+            le = Object(r.d)(Object(b.d)("SubsManagementPage", {
                 autoReportInteractive: !0,
                 destination: m.a.SubsManagementPage
             }), Object(p.a)({
-                location: ue.PageviewLocation.SubsManagementPage
-            }))(ce);
-        var le = Object(i.b)(function(e) {
+                location: ce.PageviewLocation.SubsManagementPage
+            }))(de);
+        var pe = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(o.d)(e)
             }
@@ -2516,9 +2533,9 @@ webpackJsonp([64], {
                     return a.f(s.a.SubsManagementPage)
                 }
             }, e)
-        })(de);
+        })(le);
         n.d(t, "SubscriptionsManagementPage", function() {
-            return le
+            return pe
         })
     },
     l6se: function(e, t) {},
@@ -2615,4 +2632,4 @@ webpackJsonp([64], {
         })
     }
 });
-//# sourceMappingURL=pages.subscriptions-management-361debf9aed2148637be8919e8b3320a.js.map
+//# sourceMappingURL=pages.subscriptions-management-624144d20bfdab3d1f45ff0befb3e45c.js.map

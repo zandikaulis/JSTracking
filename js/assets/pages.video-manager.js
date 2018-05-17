@@ -8828,14 +8828,16 @@ webpackJsonp([97], {
         }
 
         function M(e) {
+            var t = {
+                restrictionType: p.RestrictionType.Everyone,
+                productName: "owlallaccess2018",
+                title: "All-Access Pass"
+            };
+            if (!e) return t;
             try {
                 return JSON.parse(e)
             } catch (e) {
-                return l.o.logger.error(e, "Network error fetching timeseries data"), {
-                    restrictionType: p.RestrictionType.Everyone,
-                    productName: "owlallaccess2018",
-                    title: "All-Access Pass"
-                }
+                return l.o.logger.error(e, "Unable to parse restriction json: ${restrictionJson}"), t
             }
         }
 
@@ -9496,7 +9498,7 @@ webpackJsonp([97], {
 
         function ke(e) {
             var t = xe(e);
-            return !!t && t < ve
+            return void 0 !== t && t < ve
         }
 
         function we(e) {
@@ -9554,7 +9556,7 @@ webpackJsonp([97], {
         }
 
         function xe(e) {
-            if (e.deleteAt) return Math.ceil((new Date(e.deleteAt).valueOf() - Date.now()) / 1e3 / ye)
+            if (e.deleteAt) return Math.max(0, Math.ceil((new Date(e.deleteAt).valueOf() - Date.now()) / 1e3 / ye))
         }
         var Pe, He = 3e4;
 
@@ -12370,7 +12372,7 @@ webpackJsonp([97], {
                         inheritColor: !0
                     }));
                     else if (o.uploadProgress) a = this.renderUploadProgressText();
-                    else if (o.expirationWarning && i) {
+                    else if (o.expirationWarning && void 0 !== i) {
                         a = Bt.createElement(ge._35, {
                             fontSize: ge.V.Size8
                         }, Object(l.d)("{numDays, number} days", {
@@ -13247,7 +13249,7 @@ webpackJsonp([97], {
                 }
                 return d.__extends(t, e), t.prototype.render = function() {
                     return Bt.createElement(ge.W, {
-                        label: Object(l.d)("Permissions", "EditVideoPropertiesFields")
+                        label: Object(l.d)("Permissions", "RestrictionSelect")
                     }, Bt.createElement(ge._30, {
                         onChange: this.onChange,
                         disabled: this.props.disabled,
@@ -22368,4 +22370,4 @@ webpackJsonp([97], {
             r = "public"
     }
 });
-//# sourceMappingURL=pages.video-manager-86dcbe530987a55219aa639424e0b337.js.map
+//# sourceMappingURL=pages.video-manager-7e9b032a237903819db141ff6947ae31.js.map

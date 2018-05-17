@@ -1515,6 +1515,14 @@ webpackJsonp([103], {
                                         },
                                         arguments: [],
                                         directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isAffiliate"
+                                        },
+                                        arguments: [],
+                                        directives: []
                                     }]
                                 }
                             }, {
@@ -1576,11 +1584,11 @@ webpackJsonp([103], {
             }],
             loc: {
                 start: 0,
-                end: 188
+                end: 200
             }
         };
         n.loc.source = {
-            body: "query SubsSettingsSection_Query ($login: String!) {\nuser(login: $login) {\nid\nroles {\nisPartner\n}\nsubscriptionProducts {\nid\nhasAdFree\nhasFastChat\nhasSubonlyVideoArchive\nhasSubOnlyChat\n}\n}\n}",
+            body: "query SubsSettingsSection_Query ($login: String!) {\nuser(login: $login) {\nid\nroles {\nisPartner\nisAffiliate\n}\nsubscriptionProducts {\nid\nhasAdFree\nhasFastChat\nhasSubonlyVideoArchive\nhasSubOnlyChat\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -7674,8 +7682,8 @@ webpackJsonp([103], {
             e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
         }(a || (a = {}));
         var N, O = n("+QF8"),
-            C = 10,
-            A = "prefix",
+            A = 10,
+            C = "prefix",
             P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -7704,14 +7712,14 @@ webpackJsonp([103], {
                         }, Object(g.d)("Please set your emoticon prefix. The prefix must be approved before submitting your emoticons.", "EmoticonPrefix"))
                     }, t.renderPrefixSection = function() {
                         var e = t.props.prefixState,
-                            n = 0 === t.state.prefix.length ? A : t.state.prefix;
+                            n = 0 === t.state.prefix.length ? C : t.state.prefix;
                         return i.createElement(y.a, {
                             label: Object(g.d)("Unique Prefix", "EmoticonPrefix")
                         }, i.createElement(T._4, {
                             type: T._5.Text,
                             disabled: e === a.PENDING,
-                            maxLength: C,
-                            placeholder: A,
+                            maxLength: A,
+                            placeholder: C,
                             value: t.state.prefix,
                             onChange: t.onPrefixChange
                         }), i.createElement(v.a, {
@@ -8004,23 +8012,24 @@ webpackJsonp([103], {
                                     case 0:
                                         e = [this.state.emote28 || "", this.state.emote56 || "", this.state.emote112 || ""], n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, this.props.uploadEmoticon(this.props.channelId, this.props.productId, e, this.state.code && this.state.code.toUpperCase() || "")];
+                                        return n.trys.push([1, 4, , 5]), [4, this.props.uploadEmoticon(this.props.channelId, this.props.productId, e, this.state.code && this.state.code.toUpperCase() || "")];
                                     case 2:
-                                        return n.sent(), this.props.refresh(), this.setState({
+                                        return n.sent(), this.setState({
                                             code: "",
                                             emote28: "",
                                             emote56: "",
-                                            emote112: ""
-                                        }), this.setState({
+                                            emote112: "",
                                             status: M.Success
-                                        }), [3, 4];
+                                        }), [4, this.props.refresh()];
                                     case 3:
+                                        return n.sent(), this.forceUpdate(), [3, 5];
+                                    case 4:
                                         return (t = n.sent()) && "CODE_NOT_UNIQUE" === t.message ? this.setState({
                                             status: M.CodeNotUnique
                                         }) : this.setState({
                                             status: M.Error
-                                        }), [3, 4];
-                                    case 4:
+                                        }), [3, 5];
+                                    case 5:
                                         return [2]
                                 }
                             })
@@ -8428,34 +8437,53 @@ webpackJsonp([103], {
                             emotesDeleteQueue: t.state.emotesDeleteQueue
                         }))
                     }, t.deleteEmotes = function() {
-                        0 !== t.state.emotesDeleteQueue.length && t.state.emotesDeleteQueue.forEach(function(e) {
-                            (function(e, t) {
-                                return r.__awaiter(this, void 0, void 0, function() {
-                                    return r.__generator(this, function(n) {
-                                        switch (n.label) {
-                                            case 0:
-                                                return [4, R.a.delete("/api/ticket_products/" + e + "/remove_emoticon", {
-                                                    headers: {
-                                                        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-                                                        Accept: "application/json"
-                                                    },
-                                                    credentials: "include",
-                                                    body: "emoticon_id=" + t + "&on_site=1"
-                                                })];
-                                            case 1:
-                                                if (n.sent().status >= 400) throw new Error("failed to delete emoticon");
-                                                return [2]
-                                        }
-                                    })
-                                })
-                            })(t.props.channelName, e).then(function() {
-                                t.setState({
-                                    deleteStatus: B.Success
-                                })
-                            }, function() {
-                                t.setState({
-                                    deleteStatus: B.Error
-                                })
+                        return r.__awaiter(t, void 0, void 0, function() {
+                            var e, t, n;
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        if (0 === this.state.emotesDeleteQueue.length) return [2];
+                                        e = 0, t = this.state.emotesDeleteQueue, a.label = 1;
+                                    case 1:
+                                        if (!(e < t.length)) return [3, 7];
+                                        n = t[e], a.label = 2;
+                                    case 2:
+                                        return a.trys.push([2, 4, 5, 6]), [4, function(e, t) {
+                                            return r.__awaiter(this, void 0, void 0, function() {
+                                                return r.__generator(this, function(n) {
+                                                    switch (n.label) {
+                                                        case 0:
+                                                            return [4, R.a.deleteOrThrow("/api/ticket_products/" + e + "/remove_emoticon", {
+                                                                headers: {
+                                                                    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                                                                    Accept: "application/json"
+                                                                },
+                                                                credentials: "include",
+                                                                body: "emoticon_id=" + t + "&on_site=1"
+                                                            })];
+                                                        case 1:
+                                                            if (n.sent().status >= 400) throw new Error("failed to delete emoticon");
+                                                            return [2]
+                                                    }
+                                                })
+                                            })
+                                        }(this.props.channelName, n)];
+                                    case 3:
+                                        return a.sent(), [3, 6];
+                                    case 4:
+                                        return a.sent(), this.setState({
+                                            deleteStatus: B.Error
+                                        }), [2];
+                                    case 5:
+                                        return this.setState({
+                                            deleteStatus: B.Success,
+                                            isEditing: !1
+                                        }), this.props.data.refetch(), [7];
+                                    case 6:
+                                        return e++, [3, 1];
+                                    case 7:
+                                        return [2]
+                                }
                             })
                         })
                     }, t.toggleEmotesEditing = function() {
@@ -8466,7 +8494,16 @@ webpackJsonp([103], {
                             }
                         })
                     }, t.refresh = function() {
-                        t.props.data.refetch()
+                        return r.__awaiter(t, void 0, void 0, function() {
+                            return r.__generator(this, function(e) {
+                                switch (e.label) {
+                                    case 0:
+                                        return [4, this.props.data.refetch()];
+                                    case 1:
+                                        return e.sent(), [2, Promise.resolve()]
+                                }
+                            })
+                        })
                     }, t.toggleActiveTab = function(e) {
                         return r.__awaiter(t, void 0, void 0, function() {
                             var t, n = this;
@@ -9525,37 +9562,29 @@ webpackJsonp([103], {
                         a = i.createElement(T._14, {
                             width: 100,
                             height: 18
+                        });
+                    !e.loading && !e.error && e.user && e.user.settings && e.user.settings.cheer && (n = e.user.settings.cheer.customPrefix.isEnabled, a = i.createElement(T.Q, {
+                        bold: !0
+                    }, e.user.settings.cheer.customPrefix.prefix));
+                    var r = this.tiers.map(function(e, t) {
+                            var n = e.images[0];
+                            return i.createElement(T._35, {
+                                key: n ? n.id : t,
+                                background: T.n.Alt2,
+                                border: !0,
+                                className: "cheermote-enable-form__cheermote-preview",
+                                margin: {
+                                    right: 4 === t ? 0 : 1
+                                },
+                                display: T.R.InlineFlex
+                            }, i.createElement("img", {
+                                src: n ? n.url : "",
+                                alt: "Cheermote"
+                            }))
                         }),
-                        r = 0,
-                        o = [],
-                        s = [];
-                    if (!e.loading && !e.error && e.user && e.user.settings && e.user.settings.cheer && (n = e.user.settings.cheer.customPrefix.isEnabled, a = i.createElement(T.Q, {
-                            bold: !0
-                        }, e.user.settings.cheer.customPrefix.prefix), e.user.settings.cheer.customPrefix && e.user.settings.cheer.customPrefix.tiers))
-                        for (var l = 0, c = (s = e.user.settings.cheer.customPrefix.tiers.slice().sort(function(e, t) {
-                                return e.bits - t.bits
-                            })).length; l < c; l++) {
-                            var d = s[l].images;
-                            d && d[0] ? (o.push({
-                                url: d[0].url,
-                                id: d[0].id
-                            }), r++) : o.push(null)
-                        }
-                    var u = o.map(function(e, t) {
-                        return i.createElement(T._35, {
-                            key: e ? e.id : "",
-                            background: T.n.Alt2,
-                            border: !0,
-                            className: "cheermote-enable-form__cheermote-preview",
-                            margin: {
-                                right: 4 === t ? 0 : 1
-                            },
-                            display: T.R.InlineFlex
-                        }, i.createElement("img", {
-                            src: e ? e.url : "",
-                            alt: "Cheermote"
-                        }))
-                    });
+                        o = this.tiers.filter(function(e) {
+                            return e.images && e.images[0]
+                        }).length;
                     return i.createElement(y.a, {
                         label: Object(g.d)("Enable Cheermotes", "CheermtoesEnableForm")
                     }, i.createElement(T._51, {
@@ -9579,9 +9608,9 @@ webpackJsonp([103], {
                         color: T.K.Alt2
                     }, Object(g.d)("Tiers", "CheermotesEnableForm")), " ", i.createElement(T.Q, {
                         type: T._49.Span,
-                        color: 5 === r ? T.K.Base : T.K.Error
+                        color: 5 === o ? T.K.Base : T.K.Error
                     }, Object(g.d)("{tierNum}/{totalTiers}", {
-                        tierNum: r,
+                        tierNum: o,
                         totalTiers: 5
                     }, "CheermotesEnableForm")), i.createElement(T.Y, null, i.createElement(T.L, {
                         cols: 4
@@ -9591,8 +9620,15 @@ webpackJsonp([103], {
                         },
                         display: T.R.Flex,
                         justifyContent: T._7.Between
-                    }, u)))))
-                }, t
+                    }, r)))))
+                }, Object.defineProperty(t.prototype, "tiers", {
+                    get: function() {
+                        var e, t = this.props.data;
+                        return t.user && t.user.settings && t.user.settings.cheer && t.user.settings.cheer.customPrefix.tiers && t.user.settings.cheer.customPrefix.tiers.length > 0 && (e = t.user.settings.cheer.customPrefix.tiers), e || []
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t
             }(i.Component)),
             Oe = Object(o.compose)(Object(m.a)(Te, {
                 name: "data",
@@ -9606,8 +9642,8 @@ webpackJsonp([103], {
             }), Object(m.a)(_e, {
                 name: "setCheermotesEnable"
             }))(Ne),
-            Ce = n("HZww"),
-            Ae = (n("gABf"), function(e) {
+            Ae = n("HZww"),
+            Ce = (n("gABf"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onFilesSubmitted = function(e) {
@@ -9717,7 +9753,7 @@ webpackJsonp([103], {
                                 padding: {
                                     bottom: 1
                                 }
-                            }, i.createElement(Ae, {
+                            }, i.createElement(Ce, {
                                 onImageSubmit: e.onImageSubmitted,
                                 dimension: a,
                                 dpiScale: n.dpiScale,
@@ -9791,7 +9827,7 @@ webpackJsonp([103], {
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(Ae, {
+                    return i.createElement(Ce, {
                         onImageSubmit: this.onImageSubmitted,
                         dimension: 112,
                         error: !!this.props.uploadError
@@ -9872,7 +9908,7 @@ webpackJsonp([103], {
                     })
                 }, t.uploadImageProgress = function(e, n, a, i, o, s) {
                     t.unsubscribe = g.k.subscribe({
-                        topic: Object(Ce.s)(a.uploadID),
+                        topic: Object(Ae.s)(a.uploadID),
                         success: function() {
                             return r.__awaiter(t, void 0, void 0, function() {
                                 var e;
@@ -10125,16 +10161,13 @@ webpackJsonp([103], {
                                         i = a.tiers.findIndex(function(t) {
                                             return t.bits === e
                                         });
-                                    if (i >= 0) {
-                                        var o = function(e, t) {
-                                            return t.map(function(t) {
-                                                return Be(e, t)
-                                            }).concat(t.map(function(t) {
-                                                return Be(e, t, "dark")
-                                            }))
-                                        }(r, n);
-                                        t.user.settings.cheer.customPrefix.tiers[i].images = o
-                                    }
+                                    i >= 0 && (t.user.settings.cheer.customPrefix.tiers[i].images = function(e, t) {
+                                        return t.map(function(t) {
+                                            return Be(e, t)
+                                        }).concat(t.map(function(t) {
+                                            return Be(e, t, "dark")
+                                        }))
+                                    }(r, n))
                                 }
                                 return t
                             }
@@ -10178,11 +10211,7 @@ webpackJsonp([103], {
                         textAlign: T._45.Center,
                         alignItems: T.c.Center
                     }, i.createElement(T.Q, null, Object(g.d)("An unexpected error occurred while loading the upload wizard", "CheermotesUploadForm")));
-                    var t = [];
-                    this.props.data && this.props.data.user && this.props.data.user.settings.cheer.customPrefix.tiers && this.props.data.user.settings.cheer.customPrefix.tiers.length > 0 && (t = this.props.data.user.settings.cheer.customPrefix.tiers.slice().sort(function(e, t) {
-                        return e.bits - t.bits
-                    }));
-                    var n = t.map(function(t) {
+                    var t = this.tiers.map(function(t) {
                             return i.createElement(T._36, {
                                 key: t.id,
                                 active: e.state.activeTab === t.bits,
@@ -10190,7 +10219,7 @@ webpackJsonp([103], {
                                 "data-tab-target": t.bits
                             }, t.bits)
                         }),
-                        a = t.find(function(t) {
+                        n = this.tiers.find(function(t) {
                             return t.bits === e.state.activeTab
                         });
                     return i.createElement(y.a, {
@@ -10199,17 +10228,25 @@ webpackJsonp([103], {
                         padding: {
                             bottom: 2
                         }
-                    }, i.createElement(T.Q, null, Object(g.d)('Please upload a 112 x 112px GIF image with a transparent background. Your image will be automatically scaled to smaller sizes. To fine-ture smaller sizes and light/dark mode, turn on "Advanced" option below. (The maximum file size is 500kb)', "CheermotesUploadForm"))), i.createElement(T._37, null, n), i.createElement(T._8, {
+                    }, i.createElement(T.Q, null, Object(g.d)('Please upload a 112 x 112px GIF image with a transparent background. Your image will be automatically scaled to smaller sizes. To fine-ture smaller sizes and light/dark mode, turn on "Advanced" option below. (The maximum file size is 500kb)', "CheermotesUploadForm"))), i.createElement(T._37, null, t), i.createElement(T._8, {
                         padding: {
                             top: 2
                         }
                     }, i.createElement(Ue, {
                         channelID: this.props.data.user.id,
-                        uploadTier: a,
+                        uploadTier: n,
                         onSimpleImageSubmitted: this.onSimpleImageSubmitted,
                         onAdvancedImageSubmitted: this.onAdvancedImageSubmitted
                     })))
-                }, t
+                }, Object.defineProperty(t.prototype, "tiers", {
+                    get: function() {
+                        var e = this.props.data,
+                            t = [];
+                        return e.user && e.user.settings.cheer.customPrefix.tiers && e.user.settings.cheer.customPrefix.tiers.length > 0 && (t = e.user.settings.cheer.customPrefix.tiers), t
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t
             }(i.PureComponent)),
             Qe = Object(o.compose)(Object(m.a)(Ve, {
                 options: function(e) {
@@ -10474,8 +10511,8 @@ webpackJsonp([103], {
             Tt = n("xZ9c"),
             Nt = n("XnHd"),
             Ot = n("rr+v"),
-            Ct = 1,
-            At = 1e4,
+            At = 1,
+            Ct = 1e4,
             Pt = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -10488,11 +10525,11 @@ webpackJsonp([103], {
                         var t = n.state,
                             a = t.minBitsPerEmote,
                             r = t.minBitsPerEmoteSaveStatus,
-                            i = Math.min(parseInt(e.currentTarget.value, 10), At),
+                            i = Math.min(parseInt(e.currentTarget.value, 10), Ct),
                             o = _t.b.DirtyChanges,
                             s = r,
                             l = !1;
-                        (!i || !a || i < Ct || a && i < a) && (o = _t.b.NoChanges, s = _t.b.NoChanges), a && i < a && (l = !0), n.setState({
+                        (!i || !a || i < At || a && i < a) && (o = _t.b.NoChanges, s = _t.b.NoChanges), a && i < a && (l = !0), n.setState({
                             minBitsToCheer: i,
                             minBitsToCheerError: l,
                             minBitsPerEmoteError: !1,
@@ -10503,11 +10540,11 @@ webpackJsonp([103], {
                         var t = n.state,
                             a = t.minBitsToCheer,
                             r = t.minBitsToCheerSaveStatus,
-                            i = Math.min(parseInt(e.currentTarget.value, 10), At),
+                            i = Math.min(parseInt(e.currentTarget.value, 10), Ct),
                             o = r,
                             s = _t.b.DirtyChanges,
                             l = !1;
-                        (!i || !a || i < Ct || a && a < i) && (o = _t.b.NoChanges, s = _t.b.NoChanges), a && a < i && (l = !0), n.setState({
+                        (!i || !a || i < At || a && a < i) && (o = _t.b.NoChanges, s = _t.b.NoChanges), a && a < i && (l = !0), n.setState({
                             minBitsPerEmote: i,
                             minBitsToCheerError: !1,
                             minBitsPerEmoteError: l,
@@ -10633,8 +10670,8 @@ webpackJsonp([103], {
                         }
                     }, i.createElement(T._4, {
                         type: T._5.Number,
-                        min: Ct,
-                        max: At,
+                        min: At,
+                        max: Ct,
                         value: isNaN(t) ? "" : String(t),
                         onChange: this.onMinBitsToCheerInputChange,
                         "data-test-selector": "cheer-minimum-bits-input"
@@ -10674,8 +10711,8 @@ webpackJsonp([103], {
                         }
                     }, i.createElement(T._4, {
                         type: T._5.Number,
-                        min: Ct,
-                        max: At,
+                        min: At,
+                        max: Ct,
                         value: isNaN(a) ? "" : String(a),
                         onChange: this.onMinBitsPerEmoteInputChange,
                         "data-test-selector": "emote-minimum-bits-input"
@@ -10713,7 +10750,8 @@ webpackJsonp([103], {
                 name: "setMinBitsPerEmote"
             }))(Pt),
             wt = function(e) {
-                var t = e.channelName;
+                var t = e.channelName,
+                    n = e.isPartner;
                 return i.createElement(i.Fragment, null, i.createElement(kt.a, {
                     title: Object(g.d)("Bits & Cheering", "CheerSettingsForm")
                 }), i.createElement(_.a, null, i.createElement(It, {
@@ -10721,9 +10759,10 @@ webpackJsonp([103], {
                 }), i.createElement(St.a, {
                     text: Object(g.d)("Cheer Badges", "CheerSettingsForm"),
                     linkTo: "/" + t + "/dashboard/settings/revenue/cheerbadges"
-                }), i.createElement(St.a, {
+                }), n && i.createElement(St.a, {
                     text: Object(g.d)("Cheermotes", "CheerSettingsForm"),
-                    linkTo: "/" + t + "/dashboard/settings/revenue/cheermotes"
+                    linkTo: "/" + t + "/dashboard/settings/revenue/cheermotes",
+                    "data-test-selector": "cheermotes-settings-link-selector"
                 }), i.createElement(St.a, {
                     text: Object(g.d)("Pinned and Top Cheers", "CheerSettingsForm"),
                     linkTo: "/" + t + "/dashboard/settings/revenue/cheer"
@@ -10957,43 +10996,44 @@ webpackJsonp([103], {
                     if (!e) return null;
                     var t = this.props.channelName,
                         n = this.props.data.user.roles.isPartner || !1,
-                        a = e.hasAdFree,
-                        r = e.hasFastChat || !1,
-                        o = e.hasSubOnlyChat || !1,
-                        s = e.hasSubonlyVideoArchive || !1;
+                        a = this.props.data.user.roles.isAffiliate || !1,
+                        r = e.hasAdFree,
+                        o = e.hasFastChat || !1,
+                        s = e.hasSubOnlyChat || !1,
+                        l = e.hasSubonlyVideoArchive || !1;
                     return i.createElement(i.Fragment, null, i.createElement(kt.a, {
                         title: Object(g.d)("Subscriptions", "DashboardRevenueSettings")
                     }), i.createElement(_.a, null, i.createElement(St.a, {
                         text: Object(g.d)("Subscription names", "SubsSettingsSection"),
                         linkTo: "/" + t + "/dashboard/settings/revenue/subscription/ticket"
-                    }), n && i.createElement(i.Fragment, null, i.createElement(St.a, {
+                    }), (n || a) && i.createElement(St.a, {
                         text: Object(g.d)("Emotes", "SubsSettingsSection"),
                         linkTo: "/" + t + "/dashboard/settings/revenue/subscription/chatperks"
-                    }), i.createElement(St.a, {
+                    }), n && i.createElement(i.Fragment, null, i.createElement(St.a, {
                         text: Object(g.d)("Loyalty badges", "SubsSettingsSection"),
                         linkTo: "/" + t + "/dashboard/settings/revenue/subscription/badges"
                     }), i.createElement(Wt, {
                         benefit: Bt.AD_FREE_VIEWING,
                         label: Object(g.d)("Ad-Free viewing", "SubsSettingsSection"),
-                        isToggled: a,
+                        isToggled: r,
                         onChange: this.toggleBenefit,
                         description: Object(g.d)("Allow subscribers to watch your content on your channel ad-free", "SubsSettingsSection")
                     })), i.createElement(Wt, {
                         benefit: Bt.IGNORE_SLOW_MODE,
                         label: Object(g.d)("Ignore slow mode", "SubsSettingsSection"),
-                        isToggled: r,
+                        isToggled: o,
                         onChange: this.toggleBenefit,
                         description: Object(g.d)("Allow subscribers to chat freely in your channel when chat is in slow mode", "SubsSettingsSection")
                     }), i.createElement(Wt, {
                         benefit: Bt.SUBSCRIBER_ONLY_CHAT,
                         label: Object(g.d)("Subscriber-only chat", "SubsSettingsSection"),
-                        isToggled: o,
+                        isToggled: s,
                         onChange: this.toggleBenefit,
                         description: Object(g.d)("Only allow subscribers and moderators to chat in your channel", "SubsSettingsSection")
                     }), i.createElement(Wt, {
                         benefit: Bt.SUBSCRIBER_ONLY_ARCHIVES,
                         label: Object(g.d)("Subscriber-only archives", "SubsSettingsSection"),
-                        isToggled: s,
+                        isToggled: l,
                         onChange: this.toggleBenefit,
                         description: Object(g.d)("Only allow subscribers to watch your past broadcasts", "SubsSettingsSection")
                     })))
@@ -11029,7 +11069,8 @@ webpackJsonp([103], {
                     }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(i.Fragment, null, i.createElement(zt, {
                         channelName: this.channelName
                     }), i.createElement(wt, {
-                        channelName: this.channelName
+                        channelName: this.channelName,
+                        isPartner: this.isPaidPartner
                     }), i.createElement(Vt, {
                         channelName: this.channelName
                     }))))
@@ -11689,7 +11730,7 @@ webpackJsonp([103], {
                 name: "8-Year",
                 requiredTenureMonths: 96
             }],
-            Cn = function(e) {
+            An = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11869,7 +11910,7 @@ webpackJsonp([103], {
                     })))
                 }, t
             }(i.Component),
-            An = Object(h.d)(Object(m.a)(Nn, {
+            Cn = Object(h.d)(Object(m.a)(Nn, {
                 options: function(e) {
                     return {
                         variables: {
@@ -11877,7 +11918,7 @@ webpackJsonp([103], {
                         }
                     }
                 }
-            }))(Cn);
+            }))(An);
         var Pn, In, wn = Object(qe.b)(null, function(e) {
                 return Object(h.b)({
                     showUploadBadgeModal: function(e) {
@@ -11885,7 +11926,7 @@ webpackJsonp([103], {
                         return Object(Xe.d)(en, t)
                     }
                 }, e)
-            })(An),
+            })(Cn),
             Rn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -13226,7 +13267,7 @@ webpackJsonp([103], {
                     type: T._49.P
                 }, Object(g.d)("This form must match your tax information exactly, and any inconsistencies may cause delays in your Payout Registration approval. Don't worry, you will still be able to edit this page later on if your information changes.", "RegistrationInfoBrick")))
             },
-            Ca = function(e) {
+            Aa = function(e) {
                 return i.createElement(T._35, {
                     padding: 2,
                     borderMarked: !0,
@@ -13237,7 +13278,7 @@ webpackJsonp([103], {
         ! function(e) {
             e.MONTH = "select-birthdate__month", e.YEAR = "select-birthdate__year", e.DAY = "select-birthdate__day"
         }(ka || (ka = {}));
-        for (var Aa = [], Pa = (new Date).getFullYear(), Ia = Pa; Ia > Pa - 100; Ia--) Aa.push(i.createElement("option", {
+        for (var Ca = [], Pa = (new Date).getFullYear(), Ia = Pa; Ia > Pa - 100; Ia--) Ca.push(i.createElement("option", {
             value: Ia,
             key: "year-" + Ia
         }, Ia));
@@ -13248,7 +13289,7 @@ webpackJsonp([103], {
                         month: void 0,
                         year: void 0,
                         day: void 0
-                    }, t.yearSelections = Aa, t.handleMonthChange = function(e) {
+                    }, t.yearSelections = Ca, t.handleMonthChange = function(e) {
                         var n = +e.target.value;
                         return t.setState({
                             month: n
@@ -13506,7 +13547,7 @@ webpackJsonp([103], {
                     }, Object(g.d)("Continue", "PayoutOnboardingRegistration"));
                     return i.createElement(_.a, {
                         footer: e
-                    }, i.createElement(k.a, null, i.createElement(Ca, {
+                    }, i.createElement(k.a, null, i.createElement(Aa, {
                         onboardEntity: this.props.onboardEntity
                     })), i.createElement(Vn, {
                         title: Object(g.d)("Contact Info", "PayoutOnboardingRegistration")
@@ -14507,10 +14548,10 @@ webpackJsonp([103], {
                         return null
                 }
             },
-            Cr = function() {
+            Ar = function() {
                 return Object(g.d)("Start Over", "TaxPreviewInstructions")
             },
-            Ar = function(e) {
+            Cr = function(e) {
                 return i.createElement(T._35, {
                     borderMarked: !0,
                     padding: 2,
@@ -14530,7 +14571,7 @@ webpackJsonp([103], {
                 }, i.createElement(T.Q, {
                     type: T._49.P
                 }, Object(g.d)('If any of this information is incorrect, you must restart your Payout Registration by clicking "{buttonLabel}" below.', {
-                    buttonLabel: Cr()
+                    buttonLabel: Ar()
                 }, "TaxPreviewInstructions"))), e.onboardEntity === yt.OnboardEntity.ExtensionsDeveloper && i.createElement(T._2, {
                     margin: {
                         bottom: 2
@@ -14538,7 +14579,7 @@ webpackJsonp([103], {
                 }, i.createElement(T.Q, {
                     type: T._49.P
                 }, Object(g.d)('If any of this information is incorrect, you must restart your Extensions Developer Registration by clicking "{buttonLabel}" below.', {
-                    buttonLabel: Cr()
+                    buttonLabel: Ar()
                 }, "TaxPreviewInstructions"))), i.createElement(T.Q, {
                     type: T._49.P
                 }, Object(g.d)("Otherwise, please proceed by clicking the purple button and the tax form will appear in a new window. If the tax form does not appear, make sure that you have pop-ups enabled.", "TaxPreviewInstructions")))
@@ -14753,7 +14794,7 @@ webpackJsonp([103], {
                         }
                     }, i.createElement(T.Q, {
                         type: T._49.H4
-                    }, Object(g.d)("Information Reference", "TaxPreviewModal"))), i.createElement(Ar, {
+                    }, Object(g.d)("Information Reference", "TaxPreviewModal"))), i.createElement(Cr, {
                         onboardEntity: this.props.onboardEntity
                     }), i.createElement(Ir, {
                         channelName: this.props.channelName,
@@ -15357,7 +15398,7 @@ webpackJsonp([103], {
                 name: "cancelWorkflow"
             }), Object(jn.a)([{
                 topic: function(e) {
-                    return Object(Ce.l)(e.currentUserID)
+                    return Object(Ae.l)(e.currentUserID)
                 },
                 mapMessageTypesToProps: (Jr = {}, Jr["*"] = "payoutOnboardingEvent", Jr)
             }]), Object(qe.b)(null, function(e) {
@@ -15889,9 +15930,6 @@ webpackJsonp([103], {
                         path: "/:channelName/dashboard/settings/revenue/cheer",
                         component: ke
                     }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
-                        path: "/:channelName/dashboard/settings/revenue/cheermotes",
-                        component: Ge
-                    }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
                         path: "/:channelName/dashboard/settings/revenue/cheerbadges",
                         component: pe
                     }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
@@ -15909,6 +15947,9 @@ webpackJsonp([103], {
                     }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/ticket",
                         component: pi
+                    }), this.isPaidPartner && i.createElement(s.c, {
+                        path: "/:channelName/dashboard/settings/revenue/cheermotes",
+                        component: Ge
                     }), this.isPaidPartner && i.createElement(s.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/badges",
                         component: wn
@@ -15968,4 +16009,4 @@ webpackJsonp([103], {
     },
     z1LJ: function(e, t) {}
 });
-//# sourceMappingURL=pages.dashboard-revenue-settings-fcc2c190d8f80e778d66625b5a5fa650.js.map
+//# sourceMappingURL=pages.dashboard-revenue-settings-0f05d52d7fd1886abaac14f14351f045.js.map

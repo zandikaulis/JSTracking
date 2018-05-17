@@ -976,7 +976,7 @@ webpackJsonp([112], {
                                     }, e)
                                 },
                                 maxPayout: n / 100
-                            }, "BountyItem") : a ? Object(c.d)("You hit <x:bold>{percentPayout}%</x:bold> of your {ccuMax} concurrent viewers goal, for a payout of <x:bold>${payout}</x:bold> out of a potential ${maxPayout}. Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
+                            }, "BountyItem") : a ? Object(c.d)("You hit <x:bold>{percentPayout}%</x:bold> of your target payout goal, for a total of <x:bold>${payout}</x:bold>. Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
                                 "x:bold": function(e) {
                                     return l.createElement(w.Q, {
                                         key: "x_bold_text_" + ++r,
@@ -984,9 +984,7 @@ webpackJsonp([112], {
                                     }, e)
                                 },
                                 percentPayout: Math.floor(t / n * 100),
-                                ccuMax: a,
-                                payout: t / 100,
-                                maxPayout: n / 100
+                                payout: t / 100
                             }, "BountyItem") : Object(c.d)("Based on your concurrent viewers, you got a payout of <x:bold>${payout}</x:bold> out of a potential ${maxPayout}. Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
                                 "x:bold": function(e) {
                                     return l.createElement(w.Q, {
@@ -2251,4 +2249,4 @@ webpackJsonp([112], {
     },
     y0HA: function(e, t) {}
 });
-//# sourceMappingURL=pages.bounties-505404975d2a13ea59442bc9da638011.js.map
+//# sourceMappingURL=pages.bounties-c231fe0ffd3b9a386975b03a12a9ccf0.js.map

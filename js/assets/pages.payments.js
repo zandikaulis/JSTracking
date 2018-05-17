@@ -1,4 +1,4 @@
-webpackJsonp([41], {
+webpackJsonp([40], {
     "+/J2": function(e, t, n) {
         var a = n("xA5w");
         e.exports = function(e, t) {
@@ -381,7 +381,7 @@ webpackJsonp([41], {
                                         };
                                     case a.MasterCard:
                                         return {
-                                            src: this.props.darkModeEnabled && !this.ignoreDarkMode ? T.a : k.a,
+                                            src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? T.a : k.a,
                                             alt: Object(o.d)("Mastercard", "PaymentMethodImage")
                                         };
                                     case a.Visa:
@@ -401,8 +401,8 @@ webpackJsonp([41], {
                                 }
                             case G.a.AmazonPay:
                                 return {
-                                    src: this.props.darkModeEnabled && !this.ignoreDarkMode ? f.a : _.a,
-                                    srcSet: this.props.darkModeEnabled && !this.ignoreDarkMode ? {
+                                    src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? f.a : _.a,
+                                    srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
                                         "1x": f.a,
                                         "2x": p.a
                                     } : {
@@ -413,8 +413,8 @@ webpackJsonp([41], {
                                 };
                             case G.a.Paypal:
                                 return {
-                                    src: this.props.darkModeEnabled && !this.ignoreDarkMode ? W.a : E.a,
-                                    srcSet: this.props.darkModeEnabled && !this.ignoreDarkMode ? {
+                                    src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? W.a : E.a,
+                                    srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
                                         "1x": W.a,
                                         "2x": N.a
                                     } : {
@@ -433,12 +433,6 @@ webpackJsonp([41], {
                                     alt: e
                                 }
                         }
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "ignoreDarkMode", {
-                    get: function() {
-                        return !!window.location.href.match(/.*\/products\/[\w\d-]+(\/|\/\?.*|\?.*)?$/)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -473,7 +467,8 @@ webpackJsonp([41], {
                 }, i.createElement(Z, {
                     paymentInstrumentType: this.paymentMethod.paymentType,
                     cardType: this.paymentMethod.cardType,
-                    paymentProvider: this.paymentMethod.provider
+                    paymentProvider: this.paymentMethod.provider,
+                    ignoreDarkMode: !0
                 }), this.renderLastFour()), i.createElement(d._8, {
                     display: d.R.Flex,
                     justifyContent: d._7.Center,
@@ -15742,4 +15737,4 @@ webpackJsonp([41], {
             }(a || (a = {}))
     }
 });
-//# sourceMappingURL=pages.payments-6e3bb81d4e5b535b9a18cacad7bcc270.js.map
+//# sourceMappingURL=pages.payments-97b29493ab2d34c4f60bec94eb4943e5.js.map

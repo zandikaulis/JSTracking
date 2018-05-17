@@ -220,14 +220,15 @@ webpackJsonp([102], {
                             context: l.b.MixedGameAndChannelList,
                             title: t.props.title,
                             linkTo: t.props.linkTo,
-                            onVideoTitleClick: t.props.onTitleClick,
+                            onVideoTitleClick: t.props.onClick,
                             thumbnailImageProps: {
                                 src: t.props.imageSrc,
                                 alt: t.props.imageAlt
                             },
-                            onThumbnailClick: t.props.onThumbnailClick,
+                            onThumbnailClick: t.props.onClick,
                             channelLogin: t.props.channelName,
                             channelLoginLinkTo: t.props.channelNameLinkTo,
+                            channelLoginOnClick: t.props.onClick,
                             channelImageProps: {
                                 src: t.props.channelImageSrc || "",
                                 alt: t.props.channelName
@@ -250,6 +251,7 @@ webpackJsonp([102], {
                             viewerCount: t.props.viewerCount,
                             channel: i.createElement(a.a, {
                                 to: t.props.channelNameLinkTo,
+                                onClick: t.props.onClick,
                                 className: "live-channel-card__videos",
                                 "data-a-target": "live-channel-card-channel-name-link"
                             }, t.props.channelName)
@@ -267,7 +269,7 @@ webpackJsonp([102], {
                             title: t.props.hideTooltip ? void 0 : t.props.title,
                             "data-a-target": "live-channel-card-thumbnail-link",
                             "data-test-selector": R,
-                            onClick: t.props.onThumbnailClick
+                            onClick: t.props.onClick
                         }, t.props.children ? t.props.children : i.createElement(P.E, {
                             alt: t.props.imageAlt,
                             src: t.props.imageSrc,
@@ -280,7 +282,7 @@ webpackJsonp([102], {
                             ellipsis: !0
                         }, i.createElement(P.O, {
                             to: t.props.linkTo,
-                            onClick: t.props.onTitleClick,
+                            onClick: t.props.onClick,
                             className: "live-channel-card__channel",
                             "data-a-target": "live-channel-card-title-link"
                         }, i.createElement(P._2, {
@@ -2203,358 +2205,361 @@ webpackJsonp([102], {
         "use strict";
         var r = n("TToO"),
             i = n("GiK3"),
-            a = n("6sO2"),
-            o = n("+Znq"),
-            s = n("7vx8"),
-            l = n("oIkB"),
-            c = n("2BvQ"),
-            u = n("xrVp"),
-            d = n("YugT"),
-            p = {
+            a = n("2KeS"),
+            o = n("6sO2"),
+            s = n("+Znq"),
+            l = n("7vx8"),
+            c = n("oIkB"),
+            u = n("2BvQ"),
+            d = n("xrVp"),
+            p = n("YugT"),
+            m = {
                 Channel: "channel"
             };
-        var m = n("vH/s"),
-            h = n("CSlQ"),
-            g = n("Odds"),
-            f = n("VNvG"),
-            b = (n("3ydF"), n("SUA7")),
-            v = n("x4k6");
+        var h = n("vH/s"),
+            g = n("CSlQ"),
+            f = n("Odds"),
+            b = n("VNvG"),
+            v = (n("3ydF"), n("SUA7")),
+            y = n("x4k6");
         n.d(t, "b", function() {
-            return y
-        }), n.d(t, "a", function() {
             return _
+        }), n.d(t, "a", function() {
+            return S
         });
-        var y;
+        var _;
         ! function(e) {
             e[e.IconOnly = 0] = "IconOnly", e[e.TextOnly = 1] = "TextOnly", e[e.IconAndText = 2] = "IconAndText"
-        }(y || (y = {}));
-        var _ = function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.state = {
-                    isFollowing: !1,
-                    showDropdown: !1,
-                    disableNotifications: !0
-                }, t.userDataLoaded = function() {
-                    return t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.user
-                }, t.toggleFollowing = function() {
-                    var e;
-                    t.state.isFollowing ? (t.unfollowUser(), e = m.SpadeEventType.Unfollow) : (t.followUser(), e = m.SpadeEventType.Follow);
-                    var n = t.getFollowData();
-                    n && function(e, t) {
-                        r.__awaiter(this, void 0, void 0, function() {
-                            var n, i, o, s, l, p, m, h, g, f;
-                            return r.__generator(this, function(r) {
-                                switch (r.label) {
-                                    case 0:
-                                        if (n = null, i = null, o = null, s = null, l = null, !t.channelID) return [3, 5];
-                                        r.label = 1;
-                                    case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, a.o.apollo.client.query({
-                                            query: d,
-                                            variables: {
-                                                id: t.channelID
-                                            }
-                                        })];
-                                    case 2:
-                                        return s = r.sent(), [3, 4];
-                                    case 3:
-                                        return m = r.sent(), a.j.error(m, "Failed to make query for channel info in FollowEvent reporting.", {
-                                            channelID: t.channelID
-                                        }), [3, 4];
-                                    case 4:
-                                        (o = s && s.data && s.data.user) ? l = o.hosting.stream && o.hosting.stream.game ? o.hosting.stream.game.name : o.stream && o.stream.game && o.stream.game.name: a.j.error(new Error("GraphQL empty response"), "Query for channel info in FollowEvent reporting return no data.", {
-                                            channelID: t.channelID
-                                        }), r.label = 5;
-                                    case 5:
-                                        if (!(h = a.n.getVideoPlayerTrackingData().vodID)) return [3, 10];
-                                        r.label = 6;
-                                    case 6:
-                                        return r.trys.push([6, 8, , 9]), [4, a.o.apollo.client.query({
-                                            query: c,
-                                            variables: {
-                                                id: h
-                                            }
-                                        })];
-                                    case 7:
-                                        return n = r.sent(), [3, 9];
-                                    case 8:
-                                        return g = r.sent(), a.j.error(g, "Failed to make query for VOd info in FollowEvent reporting.", {
-                                            currentVODID: h
-                                        }), [3, 9];
-                                    case 9:
-                                        (i = n && n.data && n.data.video) ? p = Object(u.a)(i.broadcastType): (p = null, a.j.error(new Error("GraphQL empty response"), "Query for video info in FollowEvent reporting return no data.", {
-                                            currentVODID: h
-                                        })), r.label = 10;
-                                    case 10:
-                                        return f = {
-                                            channel: t.channelLogin,
-                                            channel_id: t.channelID,
-                                            channel_game: l,
-                                            cta_visible: a.n.getVideoPlayerTrackingData().followCTAVisible,
-                                            host_channel: t.hostChannelLogin,
-                                            host_channel_id: t.hostChannelID,
-                                            game: t.game,
-                                            partner: o ? o.isPartner : null,
-                                            src: t.src,
-                                            vod_id: h,
-                                            vod_type: p
-                                        }, a.n.track(e, f), [2]
-                                }
+        }(_ || (_ = {}));
+        var k = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        isFollowing: !1,
+                        showDropdown: !1,
+                        disableNotifications: !0
+                    }, t.userDataLoaded = function() {
+                        return t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.user
+                    }, t.toggleFollowing = function() {
+                        var e;
+                        t.state.isFollowing ? (t.unfollowUser(), e = h.SpadeEventType.Unfollow) : (t.followUser(), e = h.SpadeEventType.Follow);
+                        var n = t.getFollowData();
+                        n && function(e, t) {
+                            r.__awaiter(this, void 0, void 0, function() {
+                                var n, i, a, s, l, c, m, h, g, f;
+                                return r.__generator(this, function(r) {
+                                    switch (r.label) {
+                                        case 0:
+                                            if (n = null, i = null, a = null, s = null, l = null, !t.channelID) return [3, 5];
+                                            r.label = 1;
+                                        case 1:
+                                            return r.trys.push([1, 3, , 4]), [4, o.o.apollo.client.query({
+                                                query: p,
+                                                variables: {
+                                                    id: t.channelID
+                                                }
+                                            })];
+                                        case 2:
+                                            return s = r.sent(), [3, 4];
+                                        case 3:
+                                            return m = r.sent(), o.j.error(m, "Failed to make query for channel info in FollowEvent reporting.", {
+                                                channelID: t.channelID
+                                            }), [3, 4];
+                                        case 4:
+                                            (a = s && s.data && s.data.user) ? l = a.hosting.stream && a.hosting.stream.game ? a.hosting.stream.game.name : a.stream && a.stream.game && a.stream.game.name: o.j.error(new Error("GraphQL empty response"), "Query for channel info in FollowEvent reporting return no data.", {
+                                                channelID: t.channelID
+                                            }), r.label = 5;
+                                        case 5:
+                                            if (!(h = o.n.getVideoPlayerTrackingData().vodID)) return [3, 10];
+                                            r.label = 6;
+                                        case 6:
+                                            return r.trys.push([6, 8, , 9]), [4, o.o.apollo.client.query({
+                                                query: u,
+                                                variables: {
+                                                    id: h
+                                                }
+                                            })];
+                                        case 7:
+                                            return n = r.sent(), [3, 9];
+                                        case 8:
+                                            return g = r.sent(), o.j.error(g, "Failed to make query for VOd info in FollowEvent reporting.", {
+                                                currentVODID: h
+                                            }), [3, 9];
+                                        case 9:
+                                            (i = n && n.data && n.data.video) ? c = Object(d.a)(i.broadcastType): (c = null, o.j.error(new Error("GraphQL empty response"), "Query for video info in FollowEvent reporting return no data.", {
+                                                currentVODID: h
+                                            })), r.label = 10;
+                                        case 10:
+                                            return f = {
+                                                channel: t.channelLogin,
+                                                channel_id: t.channelID,
+                                                channel_game: l,
+                                                cta_visible: o.n.getVideoPlayerTrackingData().followCTAVisible,
+                                                host_channel: t.hostChannelLogin,
+                                                host_channel_id: t.hostChannelID,
+                                                game: t.game,
+                                                partner: a ? a.isPartner : null,
+                                                src: t.src,
+                                                vod_id: h,
+                                                vod_type: c
+                                            }, o.n.track(e, f), [2]
+                                    }
+                                })
                             })
-                        })
-                    }(e, {
-                        channelLogin: n.user && n.user.login || "",
-                        channelID: n.user && n.user.id || "",
-                        hostChannelLogin: t.props.hostChannelLogin,
-                        hostChannelID: t.props.hostChannelID,
-                        src: p.Channel
-                    }), t.setState(function(e) {
-                        return {
-                            isFollowing: !e.isFollowing,
-                            disableNotifications: !1
-                        }
-                    })
-                }, t.followUser = function() {
-                    var e = t.getFollowData();
-                    if (t.props.followUser && e) {
-                        t.setState({
-                            showDropdown: !0
-                        });
-                        var n = r.__assign({}, Object(l.a)({
-                            disableNotifications: !1,
-                            targetID: e.user && e.user.id || ""
-                        }), {
-                            optimisticResponse: {
-                                followUser: {
-                                    __typename: "FollowUserPayload",
-                                    follow: {
-                                        disableNotifications: !1,
-                                        __typename: "Follow"
-                                    }
-                                }
-                            }
-                        });
-                        t.props.followUser(n).then(function(e) {
-                            Object(l.e)(v, {
-                                login: t.props.channelLogin
-                            }, function(t) {
-                                var n = t.user;
-                                return n && n.self && (n.self.follower ? n.self.follower.disableNotifications = e.data.followUser.follow.disableNotifications : n.self.follower = {
-                                    __typename: "FollowerEdge",
-                                    disableNotifications: e.data.followUser.follow.disableNotifications
-                                }), t
-                            }), t.props.onFollow && t.props.onFollow(t.props.channelLogin)
-                        })
-                    }
-                }, t.unfollowUser = function() {
-                    var e = t.getFollowData();
-                    if (t.props.unfollowUser && e) {
-                        var n = r.__assign({}, Object(l.a)({
-                            targetID: e.user && e.user.id || ""
-                        }), {
-                            optimisticResponse: {
-                                unfollowUser: {
-                                    __typename: "UnfollowUserPayload",
-                                    follow: {
-                                        disableNotifications: null,
-                                        __typename: "Follow"
-                                    }
-                                }
-                            }
-                        });
-                        t.props.unfollowUser(n).then(function() {
-                            Object(l.e)(v, {
-                                login: t.props.channelLogin
-                            }, function(e) {
-                                var t = e.user;
-                                return t && t.self && (t.self.follower ? t.self.follower.disableNotifications = null : t.self.follower = {
-                                    __typename: "FollowerEdge",
-                                    disableNotifications: null
-                                }), e
-                            }), t.props.onUnfollow && t.props.onUnfollow(t.props.channelLogin)
-                        })
-                    }
-                }, t.toggleNotificationsEnabled = function() {
-                    var e = t.getFollowData();
-                    if (t.props.followUser && e) {
-                        var n = r.__assign({}, Object(l.a)({
-                            disableNotifications: !t.state.disableNotifications,
-                            targetID: e.user && e.user.id || ""
-                        }), {
-                            optimisticResponse: {
-                                followUser: {
-                                    __typename: "FollowUserPayload",
-                                    follow: {
-                                        disableNotifications: !t.state.disableNotifications,
-                                        __typename: "Follow"
-                                    }
-                                }
-                            }
-                        });
-                        t.props.followUser(n).then(function(e) {
-                            Object(l.e)(v, {
-                                login: t.props.channelLogin
-                            }, function(t) {
-                                var n = t.user;
-                                return n && n.self && (n.self.follower ? n.self.follower.disableNotifications = e.data.followUser.follow.disableNotifications : n.self.follower = {
-                                    __typename: "FollowerEdge",
-                                    disableNotifications: e.data.followUser.follow.disableNotifications
-                                }), t
-                            })
+                        }(e, {
+                            channelLogin: n.user && n.user.login || "",
+                            channelID: n.user && n.user.id || "",
+                            hostChannelLogin: t.props.hostChannelLogin,
+                            hostChannelID: t.props.hostChannelID,
+                            src: m.Channel
                         }), t.setState(function(e) {
                             return {
-                                disableNotifications: !e.disableNotifications
+                                isFollowing: !e.isFollowing,
+                                disableNotifications: !1
                             }
                         })
-                    }
-                }, t.getFollowData = function() {
-                    return t.props.followData ? t.props.followData : t.props.data
-                }, t
-            }
-            return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                this.reportInteractive()
-            }, t.prototype.componentDidUpdate = function() {
-                this.props.channelLogin && !this.userDataLoaded() || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.reportInteractive()
-            }, t.prototype.componentWillMount = function() {
-                var e = this.props.followData;
-                if (e) {
-                    var t = e.user;
-                    this.setState({
-                        isFollowing: t && t.self && t.self.follower && null !== t.self.follower.disableNotifications || !1,
-                        disableNotifications: t && t.self && t.self.follower && t.self.follower.disableNotifications
-                    })
+                    }, t.followUser = function() {
+                        var e = t.getFollowData();
+                        if (t.props.followUser && e) {
+                            t.setState({
+                                showDropdown: !0
+                            });
+                            var n = r.__assign({}, Object(c.a)({
+                                disableNotifications: !1,
+                                targetID: e.user && e.user.id || ""
+                            }), {
+                                optimisticResponse: {
+                                    followUser: {
+                                        __typename: "FollowUserPayload",
+                                        follow: {
+                                            disableNotifications: !1,
+                                            __typename: "Follow"
+                                        }
+                                    }
+                                }
+                            });
+                            t.props.followUser(n).then(function(e) {
+                                Object(c.e)(y, {
+                                    login: t.props.channelLogin
+                                }, function(t) {
+                                    var n = t.user;
+                                    return n && n.self && (n.self.follower ? n.self.follower.disableNotifications = e.data.followUser.follow.disableNotifications : n.self.follower = {
+                                        __typename: "FollowerEdge",
+                                        disableNotifications: e.data.followUser.follow.disableNotifications
+                                    }), t
+                                }), t.props.onFollow && t.props.onFollow(t.props.channelLogin)
+                            })
+                        }
+                    }, t.unfollowUser = function() {
+                        var e = t.getFollowData();
+                        if (t.props.unfollowUser && e) {
+                            var n = r.__assign({}, Object(c.a)({
+                                targetID: e.user && e.user.id || ""
+                            }), {
+                                optimisticResponse: {
+                                    unfollowUser: {
+                                        __typename: "UnfollowUserPayload",
+                                        follow: {
+                                            disableNotifications: null,
+                                            __typename: "Follow"
+                                        }
+                                    }
+                                }
+                            });
+                            t.props.unfollowUser(n).then(function() {
+                                Object(c.e)(y, {
+                                    login: t.props.channelLogin
+                                }, function(e) {
+                                    var t = e.user;
+                                    return t && t.self && (t.self.follower ? t.self.follower.disableNotifications = null : t.self.follower = {
+                                        __typename: "FollowerEdge",
+                                        disableNotifications: null
+                                    }), e
+                                }), t.props.onUnfollow && t.props.onUnfollow(t.props.channelLogin)
+                            })
+                        }
+                    }, t.toggleNotificationsEnabled = function() {
+                        var e = t.getFollowData();
+                        if (t.props.followUser && e) {
+                            var n = r.__assign({}, Object(c.a)({
+                                disableNotifications: !t.state.disableNotifications,
+                                targetID: e.user && e.user.id || ""
+                            }), {
+                                optimisticResponse: {
+                                    followUser: {
+                                        __typename: "FollowUserPayload",
+                                        follow: {
+                                            disableNotifications: !t.state.disableNotifications,
+                                            __typename: "Follow"
+                                        }
+                                    }
+                                }
+                            });
+                            t.props.followUser(n).then(function(e) {
+                                Object(c.e)(y, {
+                                    login: t.props.channelLogin
+                                }, function(t) {
+                                    var n = t.user;
+                                    return n && n.self && (n.self.follower ? n.self.follower.disableNotifications = e.data.followUser.follow.disableNotifications : n.self.follower = {
+                                        __typename: "FollowerEdge",
+                                        disableNotifications: e.data.followUser.follow.disableNotifications
+                                    }), t
+                                })
+                            }), t.setState(function(e) {
+                                return {
+                                    disableNotifications: !e.disableNotifications
+                                }
+                            })
+                        }
+                    }, t.getFollowData = function() {
+                        return t.props.followData ? t.props.followData : t.props.data
+                    }, t
                 }
-            }, t.prototype.componentWillReceiveProps = function(e) {
-                if (e.data && !e.data.loading && !e.data.error) {
-                    var t = e.data.user;
-                    this.setState({
-                        isFollowing: t && t.self && t.self.follower && null !== t.self.follower.disableNotifications || !1,
-                        disableNotifications: !(t && t.self && t.self.follower && null !== t.self.follower.disableNotifications) || t.self.follower.disableNotifications
-                    })
-                }
-            }, t.prototype.render = function() {
-                return this.props.isLoggedIn ? !this.props.showLoadingPlaceholder || this.props.data && !this.props.data.loading ? this.props.currentUserLogin !== this.props.channelLogin && this.props.followUser && this.props.unfollowUser && (this.props.followData || this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.user) ? this.state.isFollowing ? this.props.hideWhenFollowing ? null : this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown() : this.renderFollowButton(this.toggleFollowing) : null : this.renderPlaceholder() : this.renderFollowButton(this.props.login)
-            }, t.prototype.renderPlaceholder = function() {
-                switch (this.props.size) {
-                    case g.z.Large:
-                        return i.createElement(g._14, {
-                            width: 93,
-                            height: 36
-                        });
-                    case g.z.Small:
-                        return i.createElement(g._14, {
-                            width: 66,
-                            height: 24
-                        });
-                    default:
-                        return i.createElement(g._14, {
-                            width: 70,
-                            height: 30
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.reportInteractive()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.props.channelLogin && !this.userDataLoaded() || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.reportInteractive()
+                }, t.prototype.componentWillMount = function() {
+                    var e = this.props.followData;
+                    if (e) {
+                        var t = e.user;
+                        this.setState({
+                            isFollowing: t && t.self && t.self.follower && null !== t.self.follower.disableNotifications || !1,
+                            disableNotifications: t && t.self && t.self.follower && t.self.follower.disableNotifications
                         })
-                }
-            }, t.prototype.renderFollowButton = function(e) {
-                var t = this.props.isHostedFollow && this.props.channelName ? Object(a.d)("Follow {username}", {
-                    username: this.props.channelName
-                }, "FollowButton") : Object(a.d)("Follow", "FollowButton");
-                return i.createElement(g.v, r.__assign({
-                    ariaLabel: t,
-                    blurAfterClick: this.props.blurAfterClick,
-                    "data-a-target": "follow-button",
-                    "data-test-selector": "follow-button",
-                    icon: this.props.followUIType === y.TextOnly ? void 0 : g._25.Heart,
-                    onClick: e,
-                    size: this.props.size,
-                    tabIndex: this.props.tabIndex
-                }, Object(g._63)(this.props)), this.props.followUIType === y.IconOnly ? null : t)
-            }, t.prototype.renderUnfollowButton = function() {
-                var e = Object(a.d)("Unfollow", "FollowButton");
-                return i.createElement(g.v, r.__assign({
-                    ariaLabel: e,
-                    blurAfterClick: this.props.blurAfterClick,
-                    "data-a-target": "unfollow-button",
-                    "data-test-selector": "unfollow-button",
-                    icon: this.props.unfollowUIType === y.TextOnly ? void 0 : g._25.Heart,
-                    statusAlertIcon: this.props.unfollowUIType === y.TextOnly ? void 0 : g._25.Unheart,
-                    statusAlertText: this.props.unfollowUIType === y.IconOnly ? "" : e,
-                    tabIndex: this.props.tabIndex,
-                    size: this.props.size,
-                    onClick: this.toggleFollowing
-                }, Object(g._63)(this.props)), this.props.unfollowUIType === y.IconOnly ? null : Object(a.d)("Followed", "FollowButton"))
-            }, t.prototype.renderUnfollowButtonWithDropdown = function() {
-                var e = this.props.balloonDirection ? this.props.balloonDirection : g.r.BottomRight,
-                    t = this.getFollowData(),
-                    n = t && t.user && t.user.displayName || "",
-                    r = this.state.disableNotifications ? Object(a.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "FollowButton") : Object(a.d)("You will be notified on this channel's activity, including when they go live.", "FollowButton");
-                return i.createElement(g._8, {
-                    display: g.R.Flex,
-                    className: "follow-btn",
-                    "data-test-selector": "unfollow-button__dropdown"
-                }, i.createElement(g._8, null, this.renderUnfollowButton()), i.createElement(o.a, {
-                    display: g.R.InlineFlex,
-                    openByDefault: this.state.showDropdown
-                }, i.createElement("button", {
-                    tabIndex: this.props.tabIndex,
-                    "aria-label": Object(a.d)("Dropdown", "FollowButton"),
-                    className: "follow-btn__dropdown-toggle",
-                    "data-a-target": "follow-dropdown-toggle"
-                }, i.createElement(g._8, {
-                    justifyContent: g._7.Center,
-                    display: g.R.Flex,
-                    alignItems: g.c.Stretch,
-                    fullHeight: !0
-                }, i.createElement(g._24, {
-                    asset: g._25.GlyphArrDown
-                }))), i.createElement(g.q, {
-                    size: g.s.Small,
-                    direction: e,
-                    "data-a-target": "follow-notifications-balloon"
-                }, i.createElement(g._35, {
-                    color: g.K.Base,
-                    display: g.R.Flex,
-                    flexWrap: g.U.Wrap,
-                    padding: 1
-                }, i.createElement(g._8, {
-                    display: g.R.Flex,
-                    margin: {
-                        bottom: 1
                     }
-                }, i.createElement(g.Q, {
-                    type: g._49.H6
-                }, Object(a.d)("You are following {followingName}", {
-                    followingName: n
-                }, "FollowButton"))), i.createElement(g._8, {
-                    display: g.R.Flex,
-                    flexWrap: g.U.NoWrap,
-                    padding: {
-                        bottom: 1
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    if (e.data && !e.data.loading && !e.data.error) {
+                        var t = e.data.user;
+                        this.setState({
+                            isFollowing: t && t.self && t.self.follower && null !== t.self.follower.disableNotifications || !1,
+                            disableNotifications: !(t && t.self && t.self.follower && null !== t.self.follower.disableNotifications) || t.self.follower.disableNotifications
+                        })
                     }
-                }, i.createElement(g._8, {
-                    display: g.R.Flex,
-                    padding: {
-                        right: 2
+                }, t.prototype.render = function() {
+                    return this.props.isLoggedIn ? !this.props.showLoadingPlaceholder || this.props.data && !this.props.data.loading ? this.props.currentUserLogin !== this.props.channelLogin && this.props.followUser && this.props.unfollowUser && (this.props.followData || this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.user) ? this.state.isFollowing ? this.props.hideWhenFollowing ? null : this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown() : this.renderFollowButton(this.toggleFollowing) : null : this.renderPlaceholder() : this.renderFollowButton(this.props.login)
+                }, t.prototype.renderPlaceholder = function() {
+                    switch (this.props.size) {
+                        case f.z.Large:
+                            return i.createElement(f._14, {
+                                width: 93,
+                                height: 36
+                            });
+                        case f.z.Small:
+                            return i.createElement(f._14, {
+                                width: 66,
+                                height: 24
+                            });
+                        default:
+                            return i.createElement(f._14, {
+                                width: 70,
+                                height: 30
+                            })
                     }
-                }, i.createElement("span", null, i.createElement(g.Q, {
-                    type: g._49.H6
-                }, Object(a.d)("Notifications", "FollowButton")))), i.createElement(g._8, {
-                    display: g.R.Flex,
-                    flexShrink: 0
-                }, i.createElement(g._51, {
-                    onChange: this.toggleNotificationsEnabled,
-                    checked: !this.state.disableNotifications,
-                    "data-a-target": "notifications-toggle"
-                }))), i.createElement(g._8, {
-                    display: g.R.InlineFlex,
-                    padding: {
-                        bottom: 1
-                    }
-                }, i.createElement(g.Q, {
-                    type: g._49.Span,
-                    color: g.K.Alt2
-                }, r))))))
-            }, t.prototype.reportInteractive = function() {
-                k(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-            }, t = r.__decorate([Object(s.a)(v, {
+                }, t.prototype.renderFollowButton = function(e) {
+                    var t = this.props.isHostedFollow && this.props.channelName ? Object(o.d)("Follow {username}", {
+                        username: this.props.channelName
+                    }, "FollowButton") : Object(o.d)("Follow", "FollowButton");
+                    return i.createElement(f.v, r.__assign({
+                        ariaLabel: t,
+                        blurAfterClick: this.props.blurAfterClick,
+                        "data-a-target": "follow-button",
+                        "data-test-selector": "follow-button",
+                        icon: this.props.followUIType === _.TextOnly ? void 0 : f._25.Heart,
+                        onClick: e,
+                        size: this.props.size,
+                        tabIndex: this.props.tabIndex
+                    }, Object(f._63)(this.props)), this.props.followUIType === _.IconOnly ? null : t)
+                }, t.prototype.renderUnfollowButton = function() {
+                    var e = Object(o.d)("Unfollow", "FollowButton");
+                    return i.createElement(f.v, r.__assign({
+                        ariaLabel: e,
+                        blurAfterClick: this.props.blurAfterClick,
+                        "data-a-target": "unfollow-button",
+                        "data-test-selector": "unfollow-button",
+                        icon: this.props.unfollowUIType === _.TextOnly ? void 0 : f._25.Heart,
+                        statusAlertIcon: this.props.unfollowUIType === _.TextOnly ? void 0 : f._25.Unheart,
+                        statusAlertText: this.props.unfollowUIType === _.IconOnly ? "" : e,
+                        tabIndex: this.props.tabIndex,
+                        size: this.props.size,
+                        onClick: this.toggleFollowing
+                    }, Object(f._63)(this.props)), this.props.unfollowUIType === _.IconOnly ? null : Object(o.d)("Followed", "FollowButton"))
+                }, t.prototype.renderUnfollowButtonWithDropdown = function() {
+                    var e = this.props.balloonDirection ? this.props.balloonDirection : f.r.BottomRight,
+                        t = this.getFollowData(),
+                        n = t && t.user && t.user.displayName || "",
+                        r = this.state.disableNotifications ? Object(o.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "FollowButton") : Object(o.d)("You will be notified on this channel's activity, including when they go live.", "FollowButton");
+                    return i.createElement(f._8, {
+                        display: f.R.Flex,
+                        className: "follow-btn",
+                        "data-test-selector": "unfollow-button__dropdown"
+                    }, i.createElement(f._8, null, this.renderUnfollowButton()), i.createElement(s.a, {
+                        display: f.R.InlineFlex,
+                        openByDefault: this.state.showDropdown
+                    }, i.createElement("button", {
+                        tabIndex: this.props.tabIndex,
+                        "aria-label": Object(o.d)("Dropdown", "FollowButton"),
+                        className: "follow-btn__dropdown-toggle",
+                        "data-a-target": "follow-dropdown-toggle"
+                    }, i.createElement(f._8, {
+                        justifyContent: f._7.Center,
+                        display: f.R.Flex,
+                        alignItems: f.c.Stretch,
+                        fullHeight: !0
+                    }, i.createElement(f._24, {
+                        asset: f._25.GlyphArrDown
+                    }))), i.createElement(f.q, {
+                        size: f.s.Small,
+                        direction: e,
+                        "data-a-target": "follow-notifications-balloon"
+                    }, i.createElement(f._35, {
+                        color: f.K.Base,
+                        display: f.R.Flex,
+                        flexWrap: f.U.Wrap,
+                        padding: 1
+                    }, i.createElement(f._8, {
+                        display: f.R.Flex,
+                        margin: {
+                            bottom: 1
+                        }
+                    }, i.createElement(f.Q, {
+                        type: f._49.H6
+                    }, Object(o.d)("You are following {followingName}", {
+                        followingName: n
+                    }, "FollowButton"))), i.createElement(f._8, {
+                        display: f.R.Flex,
+                        flexWrap: f.U.NoWrap,
+                        padding: {
+                            bottom: 1
+                        }
+                    }, i.createElement(f._8, {
+                        display: f.R.Flex,
+                        padding: {
+                            right: 2
+                        }
+                    }, i.createElement("span", null, i.createElement(f.Q, {
+                        type: f._49.H6
+                    }, Object(o.d)("Notifications", "FollowButton")))), i.createElement(f._8, {
+                        display: f.R.Flex,
+                        flexShrink: 0
+                    }, i.createElement(f._51, {
+                        onChange: this.toggleNotificationsEnabled,
+                        checked: !this.state.disableNotifications,
+                        "data-a-target": "notifications-toggle"
+                    }))), i.createElement(f._8, {
+                        display: f.R.InlineFlex,
+                        padding: {
+                            bottom: 1
+                        }
+                    }, i.createElement(f.Q, {
+                        type: f._49.Span,
+                        color: f.K.Alt2
+                    }, r))))))
+                }, t.prototype.reportInteractive = function() {
+                    T(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                }, t
+            }(i.Component),
+            S = Object(a.d)(Object(l.a)(y, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2563,16 +2568,15 @@ webpackJsonp([102], {
                     }
                 },
                 skip: function(e) {
-                    return k(e)
+                    return T(e)
                 }
-            }), Object(s.a)(f, {
+            }), Object(l.a)(b, {
                 name: "followUser"
-            }), Object(s.a)(b, {
+            }), Object(l.a)(v, {
                 name: "unfollowUser"
-            }), Object(h.d)("FollowButton")], t)
-        }(i.Component);
+            }), Object(g.d)("FollowButton"))(k);
 
-        function k(e) {
+        function T(e) {
             return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
         }
     },
@@ -3235,8 +3239,8 @@ webpackJsonp([102], {
                     return a.createElement(k._14, null)
                 }, t
             }(a.Component)),
-            V = 50,
-            G = function(e) {
+            G = 50,
+            V = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onChange = function(e) {
@@ -3244,7 +3248,7 @@ webpackJsonp([102], {
                             isWaiting: !0
                         }), n.inputTimer = setTimeout(function() {
                             return n.doSearch(e)
-                        }, V)) : n.setState(n.getEmptyState())
+                        }, G)) : n.setState(n.getEmptyState())
                     }, n.loadMore = function() {
                         return i.__awaiter(n, void 0, void 0, function() {
                             var e, t, n;
@@ -3379,7 +3383,7 @@ webpackJsonp([102], {
         ! function(e) {
             e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
         }(r || (r = {}));
-        var H = function(e) {
+        var W = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goToPreviousPage = function() {
@@ -3407,7 +3411,7 @@ webpackJsonp([102], {
                         isEsportGiftingApproved: this.props.isEsportGiftingApproved
                     })
                 }, t.prototype.getGiftRecipientSearchPage = function() {
-                    return this.props.subscriptionProducts ? a.createElement(G, {
+                    return this.props.subscriptionProducts ? a.createElement(V, {
                         key: "gift-recipient-search-page",
                         onBack: this.goToPreviousPage,
                         selectedSubProduct: this.props.subscriptionProducts[0],
@@ -3416,7 +3420,7 @@ webpackJsonp([102], {
                     }) : null
                 }, t
             }(a.Component),
-            W = n("37Pp"),
+            H = n("37Pp"),
             z = n("odx1"),
             Q = function(e) {
                 var t = null,
@@ -3489,7 +3493,7 @@ webpackJsonp([102], {
                 }, r, a.createElement(k._8, null, a.createElement(k.Q, {
                     type: k._49.H4,
                     bold: !0
-                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(W.a, {
+                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(H.a, {
                     subscriptionProduct: e.subscriptionProducts[0]
                 }), a.createElement(k._8, {
                     display: k.R.Flex
@@ -3784,8 +3788,8 @@ webpackJsonp([102], {
                 }, t
             }(a.Component));
         n("UKw0");
-        var X = n("+p4h"),
-            Z = function(e) {
+        var Z = n("+p4h"),
+            X = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3863,7 +3867,7 @@ webpackJsonp([102], {
                             checkoutButtonTier: t.props.data.user.subscriptionProducts[0].price
                         })
                     }, t.onSubscribedWithPrime = function() {
-                        t.props.onSubscribedWithPrime(), Object(b.e)(X, {
+                        t.props.onSubscribedWithPrime(), Object(b.e)(Z, {
                             login: t.props.channelLogin
                         }, function(e) {
                             return e.user && e.user.self && (e.user.self.canPrimeSubscribe = !1, e.user.self.subscriptionBenefit = {
@@ -3949,7 +3953,7 @@ webpackJsonp([102], {
                         key: "subscribe-balloon"
                     }, t, e)
                 }, t.prototype.getGiftRecipientSearchPage = function() {
-                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(G, {
+                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(V, {
                         key: "gift-recipient-search-page",
                         onBack: this.goToPreviousPage,
                         selectedSubProduct: this.props.data.user.subscriptionProducts[this.state.selectedSubProductIndex],
@@ -4027,7 +4031,7 @@ webpackJsonp([102], {
                 }, t.prototype.getEsportPage = function() {
                     return this.props.data.user ? a.createElement(k._8, {
                         key: "subscribe-balloon"
-                    }, a.createElement(H, {
+                    }, a.createElement(W, {
                         channelLogin: this.props.channelLogin,
                         handleTopPageSubButtonClick: this.handleTopPageSubButtonClick,
                         reportSubMenuAction: this.props.reportSubMenuAction,
@@ -4039,7 +4043,7 @@ webpackJsonp([102], {
                         showRecipientSelect: this.showRecipientSelect,
                         isEsportGiftingApproved: this.props.isEsportGiftingApproved
                     })) : null
-                }, t = i.__decorate([Object(d.a)(X, {
+                }, t = i.__decorate([Object(d.a)(Z, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -4143,7 +4147,7 @@ webpackJsonp([102], {
                         size: k.s.Large,
                         direction: v,
                         "data-a-target": "sub-balloon"
-                    }, a.createElement(Z, {
+                    }, a.createElement(X, {
                         authToken: this.props.authToken,
                         channelLogin: this.props.channelLogin || "",
                         inPrimeRegion: e,
@@ -4429,7 +4433,7 @@ webpackJsonp([102], {
                 options: function() {
                     return {
                         variables: {
-                            dateOverride: Object(g.e)()
+                            dateOverride: Object(g.f)()
                         }
                     }
                 }
@@ -5653,7 +5657,7 @@ webpackJsonp([102], {
                     value: "social media tell us more"
                 })
             },
-            V = {
+            G = {
                 content: {
                     getTitle: N.reportAbusive,
                     getLabel: R.relevantStatements,
@@ -5675,7 +5679,7 @@ webpackJsonp([102], {
                     value: "violence type"
                 }
             },
-            G = {
+            V = {
                 identifyLocation: {
                     getTitle: function(e) {
                         return Object(l.d)("Report {username} for something else...", {
@@ -5704,16 +5708,16 @@ webpackJsonp([102], {
                     nextCard: B.socialMedia,
                     value: "external site conduct"
                 },
-                external_violence: i.__assign({}, V.violence, {
+                external_violence: i.__assign({}, G.violence, {
                     items: [T.threat_me, T.threat_person, T.threat_group],
                     nextCard: B.socialMedia
                 }),
-                external_abusive: i.__assign({}, V.content, {
+                external_abusive: i.__assign({}, G.content, {
                     items: [T.hateSpeech, T.harassment, T.external_abusiveViolence, T.external_commitingViolence, T.swatting, T.personalInfo],
                     nextCard: B.socialMedia
                 })
             },
-            H = {
+            W = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username}'s Spam or Malicious Links", {
                         username: e
@@ -5724,7 +5728,7 @@ webpackJsonp([102], {
                 type: k.MultipleChoice,
                 value: "spam type"
             },
-            W = {
+            H = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username} for Inappropriate Content", {
                         username: e
@@ -5774,7 +5778,7 @@ webpackJsonp([102], {
                 chat: j.content,
                 profile: M.content,
                 room: U,
-                "somewhere else": G.identifyLocation,
+                "somewhere else": V.identifyLocation,
                 streamer: F.content,
                 "someone else in video": F.content,
                 "someone in chat": j.content,
@@ -5784,32 +5788,32 @@ webpackJsonp([102], {
                 "channel owner": M.content,
                 "community member": j.content,
                 "on twitch": M.content,
-                "another site": G.externalSite,
+                "another site": V.externalSite,
                 "twitch event": L.twitchEvent,
                 "brigading/raids": B.socialMedia,
-                threatening: G.external_violence,
-                "hateful/harassing": G.external_abusive,
-                "external site; threatening violence": G.external_violence,
-                "external site; committing violence": G.external_violence,
+                threatening: V.external_violence,
+                "hateful/harassing": V.external_abusive,
+                "external site; threatening violence": V.external_violence,
+                "external site; committing violence": V.external_violence,
                 "external site; scam": B.socialMedia,
                 "ban evasion": z,
-                spam: H,
-                hateful: V.content,
+                spam: W,
+                hateful: G.content,
                 impersonation: Q,
-                "violence/threats": V.violence,
-                "threatening violence": V.violence,
-                "committing violence": V.violence,
-                abusive: V.content,
-                "inappropriate content": W,
+                "violence/threats": G.violence,
+                "threatening violence": G.violence,
+                "committing violence": G.violence,
+                abusive: G.content,
+                "inappropriate content": H,
                 "intellectual property": L.legal,
                 "violating developer agreement": L.legal
             },
-            X = {
+            Z = {
                 selfharm: L.selfharm,
                 harm: L.violence,
                 other: Y
             },
-            Z = {
+            X = {
                 CHANNEL_FEED_POST_REPORT: M.content,
                 COMMUNITY_REPORT: M.content,
                 CHAT_REPORT: j.content,
@@ -5829,7 +5833,7 @@ webpackJsonp([102], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        currentCard: t.props.currentCard || Z[t.props.reportContentType] || q,
+                        currentCard: t.props.currentCard || X[t.props.reportContentType] || q,
                         prevCards: [],
                         currentSelection: null,
                         prevSelections: [],
@@ -5946,7 +5950,7 @@ webpackJsonp([102], {
                                                 });
                                                 break;
                                             case P.b.Success:
-                                                r = Y, X[t] && (r = X[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
+                                                r = Y, Z[t] && (r = Z[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
                                                     currentCard: r,
                                                     prevCards: [],
                                                     prevSelections: [],
@@ -6402,14 +6406,15 @@ webpackJsonp([102], {
                             context: n.props.directoryType === b.a.Games ? c.b.SingleGameList : c.b.MixedGameAndChannelList,
                             title: e.title || N.a,
                             linkTo: n.getLinkTo("/" + e.broadcaster.login, t),
-                            onVideoTitleClick: n.onVideoTitleClick,
+                            onVideoTitleClick: n.onClick,
                             thumbnailImageProps: {
                                 src: e.previewImageURL || o.a.defaultStreamPreviewURL,
                                 alt: "" + e.broadcaster.login
                             },
-                            onThumbnailClick: n.onThumbnailClick,
+                            onThumbnailClick: n.onClick,
                             channelLogin: e.broadcaster.login || "",
                             channelLoginLinkTo: n.getLinkTo("/" + e.broadcaster.login + "/videos", t),
+                            channelLoginOnClick: n.onClick,
                             channelImageProps: {
                                 src: e.broadcaster.profileImageURL || "",
                                 alt: "" + e.broadcaster.login
@@ -6486,8 +6491,7 @@ webpackJsonp([102], {
                             viewerCount: e.viewersCount || 0,
                             title: e.title || N.a,
                             channelName: Object(d.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
-                            onTitleClick: n.onVideoTitleClick,
-                            onThumbnailClick: n.onThumbnailClick,
+                            onClick: n.onClick,
                             gameImageSrc: n.shouldShowGame("boxArtURL") || o.a.defaultBoxArtURL,
                             gameTitle: n.shouldShowGame("name"),
                             gameLinkTo: n.getLinkTo(Object(p.c)(n.shouldShowGame("name")), t),
@@ -6540,10 +6544,8 @@ webpackJsonp([102], {
                         })) : void 0 : null
                     }, n.shouldShowGame = function(e) {
                         return n.props.directoryType !== b.a.Games && n.props.streamNode.game ? n.props.streamNode.game[e] : ""
-                    }, n.onThumbnailClick = function(e) {
-                        n.props.onThumbnailClick && n.props.onThumbnailClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
-                    }, n.onVideoTitleClick = function(e) {
-                        n.props.onVideoTitleClick && n.props.onVideoTitleClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
+                    }, n.onClick = function(e) {
+                        n.props.onClick && n.props.onClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
                     }, n.onMouseEnterHandler = function() {
                         !n.props.showPreview || n.state.hovered && !n.state.previewTimedOut || (n.removeThumbnailListener(), n.clearTimeouts(), n.setState({
                             hovered: !0
@@ -7565,7 +7567,7 @@ webpackJsonp([102], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(132).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(133).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -7577,7 +7579,7 @@ webpackJsonp([102], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(132).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -7589,7 +7591,7 @@ webpackJsonp([102], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(131).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -7601,7 +7603,7 @@ webpackJsonp([102], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(130).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -7613,7 +7615,7 @@ webpackJsonp([102], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(129).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -7625,7 +7627,7 @@ webpackJsonp([102], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(128).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -7682,9 +7684,9 @@ webpackJsonp([102], {
                         disabled: !0,
                         key: "default"
                     }, t), e)))
-                }, t = r.__decorate([Object(c.d)("ReportReasonSelect")], t)
+                }, t
             }(a.Component),
-            h = Object(l.a)(p, {
+            h = Object(o.d)(Object(l.a)(p, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7692,7 +7694,7 @@ webpackJsonp([102], {
                         }
                     }
                 }
-            })(m),
+            }), Object(c.d)("ReportReasonSelect"))(m),
             g = (n("I4TS"), n("1EXI"));
         n.d(t, "a", function() {
             return b
@@ -9174,106 +9176,31 @@ webpackJsonp([102], {
             return i.test(e)
         }
     },
-    TTpp: function(e, t, n) {
-        "use strict";
-        n.d(t, "b", function() {
-            return l
-        }), n.d(t, "a", function() {
-            return c
-        });
-        var r = n("TToO"),
-            i = n("GiK3"),
-            a = (n.n(i), n("6sO2")),
-            o = n("TeXj"),
-            s = n("Odds"),
-            l = "https://blog.twitch.tv/overwatch-league-all-access-pass-on-twitch-8cbf3e23df0a",
-            c = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(o.e)(this.props.user),
-                        t = !e,
-                        n = this.getPrimePromotionTextNode(t, e),
-                        r = this.props.isOverlay ? s.K.Overlay : s.K.Base,
-                        c = this.props.isOverlay ? s.P.Overlay : s.P.Default;
-                    return n ? i.createElement(s._8, null, i.createElement(s._8, {
-                        display: s.R.Flex
-                    }, i.createElement(s._8, {
-                        margin: {
-                            right: .5
-                        }
-                    }, i.createElement(s._24, {
-                        asset: s._25.Crown,
-                        type: s._26.Prime
-                    })), i.createElement(s.Q, {
-                        color: r
-                    }, n)), t && !e && i.createElement(s.Q, {
-                        fontSize: s.V.Size7
-                    }, i.createElement(s.O, {
-                        to: l,
-                        type: c
-                    }, Object(a.d)("Offer available for a limited time. Terms and conditions apply", "EsportsCampaignTabs")))) : null
-                }, t.prototype.getPrimePromotionTextNode = function(e, t) {
-                    var n = this.props.isOverlay ? s.P.Overlay : s.P.Default;
-                    if (this.props.userHasPrime) {
-                        if (t) return Object(a.d)("Get 500 Bits as a bonus reward on purchase, only with Twitch Prime.", "EsportsCampaignTabs");
-                        if (e) return Object(a.d)("You’re saving $10 off the $29.99 price with Twitch Prime", "EsportsCampaignTabs")
-                    } else {
-                        var r = function(e) {
-                            return i.createElement(s.Q, {
-                                noWrap: !0,
-                                type: s._49.Span
-                            }, i.createElement(s.O, {
-                                key: "insider-prime-link",
-                                to: a.a.tryPrimeURI,
-                                type: n,
-                                targetBlank: !0
-                            }, e))
-                        };
-                        if (t) return Object(a.d)("Get 500 Bits as a bonus reward on purchase, only with Twitch Prime <x:link>Sign up now</x:link>", {
-                            "x:link": r
-                        }, "EsportsCampaignTabs");
-                        if (e) return Object(a.d)("Get $10 off with Twitch Prime <x:link>Sign up now</x:link>", {
-                            "x:link": r
-                        }, "EsportsCampaignTabs")
-                    }
-                }, t
-            }(i.PureComponent)
-    },
     TeXj: function(e, t, n) {
         "use strict";
         t.c = function(e, t, n) {
             void 0 === n && (n = !1);
-            return p(a, e, t, n)
-        }, t.a = d, t.b = function(e, t, n) {
+            return u(a, e, t, n)
+        }, t.a = c, t.b = function(e, t, n) {
             void 0 === n && (n = !1);
             var a = r.b.get(s, i.a.Off),
                 o = t && t.roles && t.roles.isStaff || !1;
-            return d(e, t, n) && (a === i.a.On || a === i.a.StaffOnly && o)
-        }, t.e = function(e) {
-            var t = r.b.get(l, i.a.Off),
-                n = r.b.get(c, []),
-                a = e && n.includes(e.id) || !1,
-                o = e && e.roles && e.roles.isStaff || !1;
-            return t === i.a.On || t === i.a.StaffOnly && o || a
+            return c(e, t, n) && (a === i.a.On || a === i.a.StaffOnly && o)
         }, t.d = function(e, t) {
-            return p(u, e, t)
+            return u(l, e, t)
         };
         var r = n("6sO2"),
             i = n("QRuM"),
             a = "esport_channel_page_whitelist",
             o = "esport_insider_pass_whitelist",
             s = "esport_insider_pass_gifting_launch",
-            l = "esport_insider_prime_bits_launch",
-            c = "esport_insider_prime_bits_launch_user_whitelist",
-            u = "esports_room_cheering_whitelist";
+            l = "esports_room_cheering_whitelist";
 
-        function d(e, t, n) {
-            return void 0 === n && (n = !1), p(o, e, t, n)
+        function c(e, t, n) {
+            return void 0 === n && (n = !1), u(o, e, t, n)
         }
 
-        function p(e, t, n, i) {
+        function u(e, t, n, i) {
             void 0 === i && (i = !1);
             var a = r.b.get(e, []),
                 o = n && n.roles && n.roles.isStaff || i;
@@ -9507,6 +9434,16 @@ webpackJsonp([102], {
                         return Object(r.d)("Something went wrong", "BanTimeoutErrorMessages")
                 }
             }
+    },
+    UvtE: function(e, t, n) {
+        "use strict";
+        var r = n("sADG"),
+            i = n("nWgz");
+        n.d(t, "b", function() {
+            return r.a
+        }), n.d(t, !1, function() {}), n.d(t, "a", function() {
+            return i.a
+        })
     },
     V9YC: function(e, t, n) {
         "use strict";
@@ -10229,14 +10166,54 @@ webpackJsonp([102], {
         "use strict";
         var r = n("RH2O"),
             i = n("Aj/L"),
-            a = n("TTpp");
-        var o = Object(r.b)(function(e) {
+            a = n("TToO"),
+            o = n("GiK3"),
+            s = n("6sO2"),
+            l = n("Odds"),
+            c = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    var e = this.getPrimePromotionTextNode(),
+                        t = this.props.isOverlay ? l.K.Overlay : l.K.Base;
+                    return e ? o.createElement(l._8, null, o.createElement(l._8, {
+                        display: l.R.Flex
+                    }, o.createElement(l._8, {
+                        margin: {
+                            right: .5
+                        }
+                    }, o.createElement(l._24, {
+                        asset: l._25.Crown,
+                        type: l._26.Prime
+                    })), o.createElement(l.Q, {
+                        color: t
+                    }, e))) : null
+                }, t.prototype.getPrimePromotionTextNode = function() {
+                    var e = this.props.isOverlay ? l.P.Overlay : l.P.Default;
+                    if (this.props.userHasPrime) return Object(s.d)("Get 500 Bits as a bonus reward on purchase, only with Twitch Prime.", "EsportsCampaignTabs");
+                    return Object(s.d)("Get 500 Bits as a bonus reward on purchase, only with Twitch Prime <x:link>Sign up now</x:link>", {
+                        "x:link": function(t) {
+                            return o.createElement(l.Q, {
+                                noWrap: !0,
+                                type: l._49.Span
+                            }, o.createElement(l.O, {
+                                key: "insider-prime-link",
+                                to: s.a.tryPrimeURI,
+                                type: e,
+                                targetBlank: !0
+                            }, t))
+                        }
+                    }, "EsportsCampaignTabs")
+                }, t
+            }(o.PureComponent);
+        var u = Object(r.b)(function(e) {
             return {
                 user: Object(i.c)(e)
             }
-        })(a.a);
+        })(c);
         n.d(t, "a", function() {
-            return o
+            return u
         })
     },
     a4C9: function(e, t) {},
@@ -10999,23 +10976,24 @@ webpackJsonp([102], {
         };
         var C = n("7enT"),
             E = n("0nzt"),
-            O = n("Hjbq"),
-            R = n("j0cR"),
-            N = n("HW6M"),
-            I = n("BwgW"),
-            L = n("knr3"),
-            x = n("OAwv"),
-            F = n("eBiB"),
-            j = n("HM6l"),
-            D = n("JpYe"),
-            M = n("ZVME"),
-            U = n("CSlQ"),
-            A = n("L3z0"),
-            B = n("5MsU"),
+            O = n("UvtE"),
+            R = n("Hjbq"),
+            N = n("j0cR"),
+            I = n("HW6M"),
+            L = n("BwgW"),
+            x = n("knr3"),
+            F = n("OAwv"),
+            j = n("eBiB"),
+            D = n("HM6l"),
+            M = n("JpYe"),
+            U = n("ZVME"),
+            A = n("CSlQ"),
+            B = n("L3z0"),
+            G = n("5MsU"),
             V = n("ijOz"),
-            G = n("Tjmd"),
+            W = n("Tjmd"),
             H = (n("4NZK"), n("Ryxq")),
-            W = {
+            z = {
                 allowfullscreen: !0,
                 externalfullscreen: !1,
                 autoplay: !0,
@@ -11031,17 +11009,18 @@ webpackJsonp([102], {
                     client_app: "twilight"
                 },
                 width: "100%",
-                oauth_token: ""
+                oauth_token: "",
+                gdprConsent: !1
             };
 
-        function z() {
+        function Q() {
             return !!window.Twitch && !!window.Twitch.Player
         }
-        var Q = function(e) {
+        var q = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.logger = o.j.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
-                        z() ? (n.setState({
+                    return n.lastGDPRConsent = !1, n.logger = o.j.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
+                        Q() ? (n.setState({
                             canInitializePlayer: !0
                         }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
                     }, n.attachRef = function(e) {
@@ -11074,9 +11053,9 @@ webpackJsonp([102], {
                             playerPaused: e
                         }), n.props.onPauseToggled && n.props.onPauseToggled(e)
                     }, n.onStreamStatusOnline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(B.a.Online)
+                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(G.a.Online)
                     }, n.onStreamStatusOffline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(B.a.Offline)
+                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(G.a.Offline)
                     }, n.onTheatreChange = function(e) {
                         e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
                     }, n.onFullScreenChange = function() {
@@ -11100,12 +11079,12 @@ webpackJsonp([102], {
                     }, n.onTransitionToCollectionVod = function(e) {
                         if (n.props.onNavigationRequest) {
                             var t = {};
-                            e.vodId && (t.videoID = Object(F.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
+                            e.vodId && (t.videoID = Object(j.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
                         }
                     }, n.onTransitionToRecommendedVod = function(e) {
                         if (n.props.onNavigationRequest) {
                             var t = {};
-                            e.vodId && (t.videoID = Object(F.a)(e.vodId)), n.props.onNavigationRequest(t)
+                            e.vodId && (t.videoID = Object(j.a)(e.vodId)), n.props.onNavigationRequest(t)
                         }
                     }, n.onPersistentPlayerToggled = function() {
                         n.props.togglePersistentPlayer && n.props.togglePersistentPlayer()
@@ -11128,17 +11107,17 @@ webpackJsonp([102], {
                     }, n.updatePlayerTrackingDataFromProps = function() {
                         n.updatePlayerTrackingData(n.props)
                     }, n.updatePlayerType = function(e) {
-                        var t = e || W.player;
+                        var t = e || z.player;
                         n.player && n.playerType !== t && (n.player.setPlayerType(t), n.playerType = t)
                     }, n.maybeRecordClip = function() {
                         n.player && n.state.playerInitialized && n.player.recordClip()
                     }, n.playerBuffering = n.registerBufferingEvent(), n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
-                        canInitializePlayer: z(),
+                        canInitializePlayer: Q(),
                         playerInitialized: !1,
                         isFullScreen: !1,
                         playerPaused: !1,
-                        playerRefID: Object(j.a)()
-                    }, n.playerType = t.playerTypeOverride || W.player, n.lastSetChannel = t.channelLogin, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
+                        playerRefID: Object(D.a)()
+                    }, n.playerType = t.playerTypeOverride || z.player, n.lastSetChannel = t.channelLogin, n.lastGDPRConsent = t.gdpr.consentGiven, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), o.n.eventEmitter.addListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), window.__playerScriptChunk && !t.tagInjected) {
@@ -11168,15 +11147,15 @@ webpackJsonp([102], {
                                     endOffset: r.endOffset
                                 }])
                             }
-                            this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused);
+                            this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && e.gdpr.consentGiven !== this.lastGDPRConsent && (this.player.setGDPRConsent(e.gdpr.consentGiven), this.lastGDPRConsent = e.gdpr.consentGiven);
                             var c = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (c || Object(G.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void o.n.setVideoPlayerTrackingData({
+                            if (this.player && e.channelLogin && (c || Object(W.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void o.n.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
                             var u = e.collectionID && this.props.collectionID !== e.collectionID,
                                 d = e.vodID && this.props.vodID !== e.vodID;
                             if (u || d) {
-                                var p = e.vodID ? Object(D.b)(e.vodID) : "";
+                                var p = e.vodID ? Object(M.b)(e.vodID) : "";
                                 if ("" !== p && o.n.setVideoPlayerTrackingData({
                                         vodID: e.vodID
                                     }), !this.player) return;
@@ -11192,67 +11171,68 @@ webpackJsonp([102], {
                         t !== n && (n === this.state.playerRefID && this.state.playerPaused ? this.togglePause(!1) : n === this.state.playerRefID || this.state.playerPaused || this.togglePause(!0))
                     }
                 }, t.prototype.render = function() {
-                    var e = N("video-player", {
+                    var e = I("video-player", {
                             "video-player--theatre": this.props.theatreModeEnabled,
                             "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible,
                             "video-player--logged-in": this.props.isLoggedIn,
                             "video-player--fullscreen": this.state.isFullScreen
                         }),
-                        t = N("video-player__container", {
+                        t = I("video-player__container", {
                             "video-player__container--clips": V.a.includes(this.playerType)
                         });
                     return i.createElement("div", {
-                        className: N(e),
+                        className: I(e),
                         "data-test-selector": "video-player"
                     }, i.createElement("div", {
                         className: t,
                         ref: this.attachRef
                     }))
                 }, t.prototype.componentWillUnmount = function() {
-                    this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(B.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(B.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(B.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(A.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(A.a.Play, this.onPlayerPlay), this.player.removeEventListener(A.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(B.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(B.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(B.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(B.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(A.a.Seeked, this.onSeek), this.player.removeEventListener(A.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(B.a.OpenStream, this.onOpenStream), this.player.removeEventListener(A.a.Pause, this.onPause), this.player.removeEventListener(B.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(A.a.LoadedMetadata, this.onMetadataLoaded), I.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
+                    this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(G.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(G.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(G.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Play, this.onPlayerPlay), this.player.removeEventListener(B.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(G.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(G.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(G.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(G.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(B.a.Seeked, this.onSeek), this.player.removeEventListener(B.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(G.a.OpenStream, this.onOpenStream), this.player.removeEventListener(B.a.Pause, this.onPause), this.player.removeEventListener(G.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), L.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
                         vodID: void 0
                     })
                 }, t.prototype.trackMiniPlayerAction = function(e, t) {
                     this.player && this.state.playerInitialized && this.player.trackMiniPlayerAction(e, t)
                 }, t.prototype.initializePlayer = function() {
-                    var e = r.__assign({}, W, {
+                    var e = r.__assign({}, z, {
                         showtheatre: !this.props.disableTheatreButton,
                         allowfullscreen: !this.props.disableFullscreen,
                         externalfullscreen: this.props.fullscreen.supported(),
-                        autoplay: !this.props.paused
+                        autoplay: !this.props.paused,
+                        gdprConsent: this.props.gdpr.consentGiven
                     });
-                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride, this.props.playerTypeOverride === V.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(D.b)(this.props.vodID), o.n.setVideoPlayerTrackingData({
+                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride, this.props.playerTypeOverride === V.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(M.b)(this.props.vodID), o.n.setVideoPlayerTrackingData({
                         vodID: this.props.vodID
                     })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(H.a)(this.props.nextVideoOffset)), this.lastPausedProp = this.props.paused, e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
                     var t = new window.Twitch.Player(this.playerRef, e);
-                    this.player = t, t.addEventListener(B.a.PlayerReady, this.onPlayerReady), t.addEventListener(B.a.Online, this.onStreamStatusOnline), t.addEventListener(B.a.Offline, this.onStreamStatusOffline), t.addEventListener(A.a.Ended, this.onStreamStatusOffline), t.addEventListener(A.a.Play, this.onPlayerPlay), t.addEventListener(A.a.Playing, this.onPlayerPlaying), t.addEventListener(A.a.Seeked, this.onSeek), t.addEventListener(A.a.TimeUpdate, this.onTimeUpdate), t.addEventListener(B.a.TheatreChange, this.onTheatreChange), t.addEventListener(B.a.FullscreenChange, this.onFullScreenChange), t.addEventListener(B.a.ExternalFullscreenChange, this.onExternalFullScreenChange), t.addEventListener(B.a.ClipsModerationOpen, this.onClipsModerationOpen), t.addEventListener(B.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(B.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(B.a.OpenStream, this.onOpenStream), t.addEventListener(A.a.Pause, this.onPause), t.addEventListener(B.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), t.addEventListener(A.a.LoadedMetadata, this.onMetadataLoaded), I.extensionService.registerPlayer(this.player), I.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
+                    this.player = t, t.addEventListener(G.a.PlayerReady, this.onPlayerReady), t.addEventListener(G.a.Online, this.onStreamStatusOnline), t.addEventListener(G.a.Offline, this.onStreamStatusOffline), t.addEventListener(B.a.Ended, this.onStreamStatusOffline), t.addEventListener(B.a.Play, this.onPlayerPlay), t.addEventListener(B.a.Playing, this.onPlayerPlaying), t.addEventListener(B.a.Seeked, this.onSeek), t.addEventListener(B.a.TimeUpdate, this.onTimeUpdate), t.addEventListener(G.a.TheatreChange, this.onTheatreChange), t.addEventListener(G.a.FullscreenChange, this.onFullScreenChange), t.addEventListener(G.a.ExternalFullscreenChange, this.onExternalFullScreenChange), t.addEventListener(G.a.ClipsModerationOpen, this.onClipsModerationOpen), t.addEventListener(G.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(G.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(G.a.OpenStream, this.onOpenStream), t.addEventListener(B.a.Pause, this.onPause), t.addEventListener(G.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), t.addEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), L.extensionService.registerPlayer(this.player), L.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
                 }, t.prototype.registerBufferingEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 1e3,
-                        group: M.a.Player,
-                        key: M.b.PlayerBuffering,
-                        label: M.c.Buffering
+                        group: U.a.Player,
+                        key: U.b.PlayerBuffering,
+                        label: U.c.Buffering
                     })
                 }, t.prototype.registerCreatedEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 1e3,
-                        group: M.a.Player,
-                        key: M.b.PlayerCreated,
-                        label: M.c.Created
+                        group: U.a.Player,
+                        key: U.b.PlayerCreated,
+                        label: U.c.Created
                     })
                 }, t.prototype.registerLoadedEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 2500,
-                        group: M.a.Player,
-                        key: M.b.PlayerLoaded,
-                        label: M.c.Init
+                        group: U.a.Player,
+                        key: U.b.PlayerLoaded,
+                        label: U.c.Init
                     })
                 }, t.prototype.registerPlayedEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 4e3,
-                        group: M.a.Player,
-                        key: M.b.PlayerPlayed,
-                        label: M.c.FirstFrame
+                        group: U.a.Player,
+                        key: U.b.PlayerPlayed,
+                        label: U.c.FirstFrame
                     })
                 }, t.prototype.reportPlayerBuffering = function() {
                     this.hasBuffered || (this.hasBuffered = !0, this.playerBuffering && this.props.latencyTracking.reportCustomEvent(this.playerBuffering))
@@ -11267,17 +11247,17 @@ webpackJsonp([102], {
                         isFullScreen: !1
                     }), this.props.fullscreen.disable())
                 }, t.prototype.maybeAttachToWindow = function(e) {
-                    x.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
+                    F.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
                 }, t.prototype.maybeDetachFromWindow = function() {
                     window.player = void 0
                 }, t.prototype.bindHotKeys = function() {
-                    L.bind("alt+x", this.maybeRecordClip)
+                    x.bind("alt+x", this.maybeRecordClip)
                 }, t.prototype.unbindHotKeys = function() {
-                    L.unbind("alt+x")
+                    x.unbind("alt+x")
                 }, t.tagInjected = !1, t
             }(i.Component),
-            q = Object(U.d)("VideoPlayer")(Q);
-        var K = Object(f.d)(Object(g.b)(function(e) {
+            K = Object(A.d)("VideoPlayer")(q);
+        var Y = Object(f.d)(Object(g.b)(function(e) {
             return {
                 isWhispersBottomBarVisible: Object(E.b)(e),
                 theatreModeEnabled: e.ui.theatreModeEnabled,
@@ -11285,7 +11265,7 @@ webpackJsonp([102], {
                 sideNavExpanded: e.ui.sideNavExpanded,
                 isLoggedIn: Object(_.d)(e),
                 authToken: Object(_.a)(e),
-                activeVideoPlayerRefID: Object(R.a)(e)
+                activeVideoPlayerRefID: Object(N.a)(e)
             }
         }, function(e) {
             return Object(f.b)({
@@ -11294,7 +11274,7 @@ webpackJsonp([102], {
                 enableFullscreenTheatreMode: C.u,
                 disableFullscreenTheatreMode: C.s,
                 togglePersistentPlayer: C.B,
-                reportPlayerInstanceStarted: O.b
+                reportPlayerInstanceStarted: R.b
             }, e)
         }), function(e) {
             return function(t) {
@@ -11330,9 +11310,9 @@ webpackJsonp([102], {
                     w.exit()
                 }, n
             }(i.Component)
-        }, T.f)(q);
+        }, Object(O.b)(), T.f)(K);
 
-        function Y(e, t, n) {
+        function $(e, t, n) {
             if (e.collectionID || !e.videoID)
                 if (e.collectionID && e.videoID) {
                     if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
@@ -11357,9 +11337,9 @@ webpackJsonp([102], {
         }), n.d(t, "a", function() {
             return S
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "c", function() {
-            return K
-        }), n.d(t, "d", function() {
             return Y
+        }), n.d(t, "d", function() {
+            return $
         }), n.d(t, "b", function() {
             return V.c
         })
@@ -13780,4 +13760,4 @@ webpackJsonp([102], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-658c51e6efcf46989eae6f629fc27f4b.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-d73256b94cd16a1de9d6c099c67f12b7.js.map

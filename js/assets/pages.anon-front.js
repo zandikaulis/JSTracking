@@ -220,14 +220,15 @@ webpackJsonp([56], {
                             context: l.b.MixedGameAndChannelList,
                             title: t.props.title,
                             linkTo: t.props.linkTo,
-                            onVideoTitleClick: t.props.onTitleClick,
+                            onVideoTitleClick: t.props.onClick,
                             thumbnailImageProps: {
                                 src: t.props.imageSrc,
                                 alt: t.props.imageAlt
                             },
-                            onThumbnailClick: t.props.onThumbnailClick,
+                            onThumbnailClick: t.props.onClick,
                             channelLogin: t.props.channelName,
                             channelLoginLinkTo: t.props.channelNameLinkTo,
+                            channelLoginOnClick: t.props.onClick,
                             channelImageProps: {
                                 src: t.props.channelImageSrc || "",
                                 alt: t.props.channelName
@@ -250,6 +251,7 @@ webpackJsonp([56], {
                             viewerCount: t.props.viewerCount,
                             channel: r.createElement(i.a, {
                                 to: t.props.channelNameLinkTo,
+                                onClick: t.props.onClick,
                                 className: "live-channel-card__videos",
                                 "data-a-target": "live-channel-card-channel-name-link"
                             }, t.props.channelName)
@@ -267,7 +269,7 @@ webpackJsonp([56], {
                             title: t.props.hideTooltip ? void 0 : t.props.title,
                             "data-a-target": "live-channel-card-thumbnail-link",
                             "data-test-selector": P,
-                            onClick: t.props.onThumbnailClick
+                            onClick: t.props.onClick
                         }, t.props.children ? t.props.children : r.createElement(C.E, {
                             alt: t.props.imageAlt,
                             src: t.props.imageSrc,
@@ -280,7 +282,7 @@ webpackJsonp([56], {
                             ellipsis: !0
                         }, r.createElement(C.O, {
                             to: t.props.linkTo,
-                            onClick: t.props.onTitleClick,
+                            onClick: t.props.onClick,
                             className: "live-channel-card__channel",
                             "data-a-target": "live-channel-card-title-link"
                         }, r.createElement(C._2, {
@@ -2538,7 +2540,7 @@ webpackJsonp([56], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(132).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(133).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2550,7 +2552,7 @@ webpackJsonp([56], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(132).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2562,7 +2564,7 @@ webpackJsonp([56], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(131).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2574,7 +2576,7 @@ webpackJsonp([56], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(130).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2586,7 +2588,7 @@ webpackJsonp([56], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(129).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2598,7 +2600,7 @@ webpackJsonp([56], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(128).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -5112,4 +5114,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-9541bc5f6070a659be8d1a5f7046f6b1.js.map
+//# sourceMappingURL=pages.anon-front-fa0af99e0c62fffac9af585a24033181.js.map

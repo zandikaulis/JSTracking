@@ -1,4 +1,4 @@
-webpackJsonp([76], {
+webpackJsonp([77], {
     "9u8h": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -449,9 +449,8 @@ webpackJsonp([76], {
             throw new Error("Throwing an uncaught error.")
         }
         var w = n("2KeS"),
-            k = n("sADG"),
-            b = n("nWgz"),
-            S = function(e) {
+            k = n("UvtE"),
+            b = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -466,7 +465,7 @@ webpackJsonp([76], {
                     })
                 }, t.prototype.render = function() {
                     var e = window.location.search.includes("gdpr_override"),
-                        t = Object(b.a)(),
+                        t = Object(k.a)(),
                         n = e || t;
                     return r.createElement(d._8, {
                         padding: 2
@@ -512,14 +511,14 @@ webpackJsonp([76], {
                     }, "Use the dynamic settings override instead to simulate the scenario where our consent solution determines you do not need to see the notice since you are not in an EEA country.")))
                 }, t
             }(r.Component),
-            T = Object(w.d)(Object(c.d)("GDPRTestPage", {
+            S = Object(w.d)(Object(c.d)("GDPRTestPage", {
                 autoReportInteractive: !0,
                 destination: s.a.Unknown
-            }), Object(k.a)())(S),
-            O = n("3zLD"),
-            C = n("7vx8"),
-            q = n("z7vJ"),
-            L = function(e) {
+            }), Object(k.b)())(b),
+            T = n("3zLD"),
+            O = n("7vx8"),
+            C = n("z7vJ"),
+            q = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -531,7 +530,7 @@ webpackJsonp([76], {
                     }, r.createElement("p", null, "Testing GraphQL"))
                 }, t
             }(r.Component),
-            A = Object(O.compose)(Object(C.a)(q, {
+            L = Object(T.compose)(Object(O.a)(C, {
                 options: function(e) {
                     return {
                         variables: {
@@ -539,8 +538,8 @@ webpackJsonp([76], {
                         }
                     }
                 }
-            }), a.f)(L),
-            D = function(e) {
+            }), a.f)(q),
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -561,13 +560,13 @@ webpackJsonp([76], {
                         })
                     }, 1e3)
                 }, t.prototype.render = function() {
-                    return r.createElement(A, {
+                    return r.createElement(L, {
                         shouldSkip: this.state.shouldSkip
                     })
                 }, t
             }(r.Component),
             R = n("9u8h"),
-            N = function(e) {
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.logger = o.o.logger.withCategory("legacy-api-test"), t.testFailingAPICall = function() {
@@ -600,23 +599,23 @@ webpackJsonp([76], {
                     }, r.createElement("p", null, "Testing LegacyAPI"))
                 }, t
             }(r.Component),
-            x = function() {
+            N = function() {
                 return r.createElement(i.e, null, r.createElement(i.c, {
                     path: "/_dev/legacy-api",
-                    component: N
-                }), r.createElement(i.c, {
-                    path: "/_dev/gql",
                     component: D
                 }), r.createElement(i.c, {
+                    path: "/_dev/gql",
+                    component: A
+                }), r.createElement(i.c, {
                     path: "/_dev/gdpr",
-                    component: T
+                    component: S
                 }), r.createElement(i.c, {
                     path: "/_dev",
                     component: m
                 }))
             };
         n.d(t, "DevOnlyRoot", function() {
-            return x
+            return N
         })
     },
     z7vJ: function(e, t) {
@@ -779,4 +778,4 @@ webpackJsonp([76], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-28e65aea81284a26ddabd064a1925cfd.js.map
+//# sourceMappingURL=pages.dev-only-3edd55763a9cc406b8ec6e08abffd2dc.js.map

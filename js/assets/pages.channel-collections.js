@@ -857,8 +857,10 @@ webpackJsonp([57], {
     },
     Ic9h: function(e, t, n) {
         "use strict";
-        n.d(t, "a", function() {
-            return g
+        n.d(t, "b", function() {
+            return h
+        }), n.d(t, "a", function() {
+            return f
         });
         var i = n("TToO"),
             a = n("HW6M"),
@@ -871,12 +873,13 @@ webpackJsonp([57], {
             u = n("2aoH"),
             p = n("Odds"),
             m = n("1E7T"),
-            h = (n.n(m), function(e) {
+            h = (n.n(m), "channel-page-layout__scroll-area--theatre-mode"),
+            g = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e, t = a(((e = {})["channel-page-layout__scroll-area--theatre-mode"] = !!this.props.theatreMode, e));
+                    var e, t = a(((e = {})[h] = !!this.props.theatreMode, e));
                     return o.createElement(p._8, i.__assign({
                         className: "chennel-page-layout",
                         display: p.R.Flex,
@@ -899,8 +902,8 @@ webpackJsonp([57], {
                 }, t.contextTypes = {
                     scrollToTop: r.func
                 }, t
-            }(o.Component)),
-            g = Object(s.f)(h)
+            }(o.Component),
+            f = Object(s.f)(g)
     },
     J8WN: function(e, t, n) {
         "use strict";
@@ -3611,16 +3614,17 @@ webpackJsonp([57], {
             u = n("6sO2"),
             p = n("yWCw"),
             m = n("zCIC"),
-            h = n("SZoP"),
-            g = n("F8kA"),
-            f = n("kk4f"),
-            v = n("Odds"),
-            b = 0,
-            _ = function(e) {
+            h = n("7vx8"),
+            g = n("SZoP"),
+            f = n("F8kA"),
+            v = n("kk4f"),
+            b = n("Odds"),
+            _ = 0,
+            k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.computeViewsMessage = function() {
-                        var e = t.props.totalViews || b;
+                        var e = t.props.totalViews || _;
                         return 0 === e || 1 === e ? Object(u.d)("{viewCount, plural, one {# view}  other {# views}}", {
                             viewCount: e
                         }, "CollectionCard") : Object(u.d)("{viewCount} views", {
@@ -3630,17 +3634,17 @@ webpackJsonp([57], {
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = Object(u.d)("By {channelName}", {
-                        channelName: a.createElement(v.O, {
+                        channelName: a.createElement(b.O, {
                             "data-test-selector": "collection-card-channel-link",
                             to: this.props.channelLinkTo,
                             hoverUnderlineNone: !0
                         }, this.props.channelDisplayName)
                     }, "ChannelCollections");
-                    return a.createElement(v.C, i.__assign({
+                    return a.createElement(b.C, i.__assign({
                         key: this.props.title
-                    }, Object(v._63)(this.props)), a.createElement(v._2, {
-                        position: v._15.Relative
-                    }, a.createElement(g.a, {
+                    }, Object(b._63)(this.props)), a.createElement(b._2, {
+                        position: b._15.Relative
+                    }, a.createElement(f.a, {
                         to: {
                             pathname: this.props.linkTo,
                             state: {
@@ -3650,26 +3654,26 @@ webpackJsonp([57], {
                         },
                         title: this.props.title,
                         "data-test-selector": 'collection-card-overlay-link"'
-                    }, a.createElement(f.a, {
+                    }, a.createElement(v.a, {
                         alt: this.props.title,
                         sizes: [{
                             size: "320px"
                         }],
                         src: this.props.imageSrc,
                         videoCount: this.props.videoCount
-                    }))), a.createElement(v.D, {
+                    }))), a.createElement(b.D, {
                         "data-test-selector": "collection-card-body"
-                    }, a.createElement(v._8, {
-                        display: v.R.Flex,
-                        flexDirection: v.T.Column,
-                        flexWrap: v.U.NoWrap,
+                    }, a.createElement(b._8, {
+                        display: b.R.Flex,
+                        flexDirection: b.T.Column,
+                        flexWrap: b.U.NoWrap,
                         padding: {
                             top: .5
                         }
-                    }, a.createElement(v.Q, {
-                        fontSize: v.V.Size5,
+                    }, a.createElement(b.Q, {
+                        fontSize: b.V.Size5,
                         ellipsis: !0
-                    }, a.createElement(v.O, {
+                    }, a.createElement(b.O, {
                         to: {
                             pathname: this.props.linkTo,
                             state: {
@@ -3679,46 +3683,46 @@ webpackJsonp([57], {
                         },
                         "data-test-selector": "collection-card-title-link",
                         hoverUnderlineNone: !0
-                    }, this.props.title)), a.createElement(v.Q, {
-                        color: v.K.Alt2,
+                    }, this.props.title)), a.createElement(b.Q, {
+                        color: b.K.Alt2,
                         ellipsis: !0
-                    }, a.createElement(v.Q, {
-                        type: v._49.Span
-                    }, e), a.createElement(v.Q, {
-                        type: v._49.Span
+                    }, a.createElement(b.Q, {
+                        type: b._49.Span
+                    }, e), a.createElement(b.Q, {
+                        type: b._49.Span
                     }, " · " + this.computeViewsMessage())))))
                 }, t
             }(a.Component),
-            k = Object(d.d)("CollectionCard", {
+            y = Object(d.d)("CollectionCard", {
                 autoReportInteractive: !0
-            })(_),
-            y = function(e) {
+            })(k),
+            S = function(e) {
                 var t;
-                return t = e.showCollectionsManagerButton ? a.createElement("div", null, a.createElement(v.Q, {
-                    type: v._49.H4,
+                return t = e.showCollectionsManagerButton ? a.createElement("div", null, a.createElement(b.Q, {
+                    type: b._49.H4,
                     "data-test-selector": "no-collections"
-                }, Object(u.d)("Create a collection of your videos from Video Producer.", "collection-page")), a.createElement(v._8, {
+                }, Object(u.d)("Create a collection of your videos from Video Producer.", "collection-page")), a.createElement(b._8, {
                     padding: {
                         top: 2
                     }
-                }, a.createElement(v.v, {
-                    type: v.B.Hollow,
+                }, a.createElement(b.v, {
+                    type: b.B.Hollow,
                     linkTo: "/" + e.channelLogin + "/manager/collections",
                     "data-test-selector": "no-collections-button"
-                }, Object(u.d)("Go to Video Producer", "collection-page")))) : a.createElement(v.Q, {
-                    type: v._49.H4,
+                }, Object(u.d)("Go to Video Producer", "collection-page")))) : a.createElement(b.Q, {
+                    type: b._49.H4,
                     italic: !0,
                     "data-test-selector": "no-collections"
-                }, Object(u.d)("No collections found.", "collection-page")), a.createElement(v._35, {
-                    color: v.K.Alt2,
-                    textAlign: v._45.Center,
+                }, Object(u.d)("No collections found.", "collection-page")), a.createElement(b._35, {
+                    color: b.K.Alt2,
+                    textAlign: b._45.Center,
                     padding: {
                         top: 5
                     }
                 }, t)
             },
-            S = n("+t2Q"),
-            E = function(e) {
+            E = n("+t2Q"),
+            w = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3732,31 +3736,31 @@ webpackJsonp([57], {
                             }),
                             n = !this.props.data.loading && !this.props.data.error && !!e.collections.pageInfo.hasNextPage,
                             i = null;
-                        0 === t.length && (i = a.createElement(y, {
+                        0 === t.length && (i = a.createElement(S, {
                             showCollectionsManagerButton: this.showCollectionManagerButton(),
                             channelLogin: this.props.channelLogin
                         }));
                         var r = null;
-                        0 !== t.length && this.showCollectionManagerButton() && (r = a.createElement(v._8, {
-                            display: v.R.Flex,
-                            justifyContent: v._7.End,
+                        0 !== t.length && this.showCollectionManagerButton() && (r = a.createElement(b._8, {
+                            display: b.R.Flex,
+                            justifyContent: b._7.End,
                             padding: {
                                 bottom: 2
                             }
-                        }, a.createElement(v.v, {
-                            type: v.B.Hollow,
+                        }, a.createElement(b.v, {
+                            type: b.B.Hollow,
                             linkTo: "/" + this.props.channelLogin + "/manager/collections",
                             "data-test-selector": "collections-manage-button"
                         }, Object(u.d)("Manage your collections", "collection-page"))));
                         var o = t.map(function(t, n) {
-                            return a.createElement(v._8, {
+                            return a.createElement(b._8, {
                                 key: t.id,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, a.createElement(k, {
+                            }, a.createElement(y, {
                                 channelLinkTo: "/" + e.login,
-                                channelDisplayName: Object(h.a)(e.login, e.displayName),
+                                channelDisplayName: Object(g.a)(e.login, e.displayName),
                                 imageSrc: t.thumbnailURL,
                                 linkTo: "/collections/" + t.id,
                                 title: t.title,
@@ -3765,9 +3769,9 @@ webpackJsonp([57], {
                                 "data-a-target": "collection-card-" + n
                             }))
                         });
-                        return a.createElement("div", null, r, i, a.createElement(v._55, {
-                            gutterSize: v._57.Small,
-                            childWidth: v._56.Large,
+                        return a.createElement("div", null, r, i, a.createElement(b._55, {
+                            gutterSize: b._57.Small,
+                            childWidth: b._56.Large,
                             placeholderItems: 20
                         }, o), a.createElement(m.a, {
                             enabled: n,
@@ -3775,32 +3779,32 @@ webpackJsonp([57], {
                         }))
                     }
                     if (this.props.data.loading && !this.props.data.user) {
-                        for (var s = [], l = 0; l < 12; l++) s.push(a.createElement(v._8, {
+                        for (var s = [], l = 0; l < 12; l++) s.push(a.createElement(b._8, {
                             key: "collection-placeholder-" + l,
                             padding: {
                                 bottom: 2
                             },
                             "data-test-selector": "collections-placeholder"
-                        }, a.createElement(v._8, {
+                        }, a.createElement(b._8, {
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(v.k, {
-                            ratio: v.l.Aspect16x9
-                        }, a.createElement(v._14, null))), a.createElement(v.Q, null, a.createElement(v._14, {
+                        }, a.createElement(b.k, {
+                            ratio: b.l.Aspect16x9
+                        }, a.createElement(b._14, null))), a.createElement(b.Q, null, a.createElement(b._14, {
                             width: 150
-                        })), a.createElement(v.Q, {
-                            fontSize: v.V.Size7
-                        }, a.createElement(v._14, {
+                        })), a.createElement(b.Q, {
+                            fontSize: b.V.Size7
+                        }, a.createElement(b._14, {
                             width: 100
                         }))));
-                        return a.createElement(v._55, {
-                            gutterSize: v._57.Small,
-                            childWidth: v._56.Medium,
+                        return a.createElement(b._55, {
+                            gutterSize: b._57.Small,
+                            childWidth: b._56.Medium,
                             placeholderItems: 20
                         }, s)
                     }
-                    return a.createElement(v._8, {
+                    return a.createElement(b._8, {
                         margin: {
                             top: 5
                         }
@@ -3811,9 +3815,7 @@ webpackJsonp([57], {
                     return !(!this.props.data.currentUser || !this.props.data.user) && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff)
                 }, t
             }(a.Component),
-            w = Object(r.compose)(Object(d.d)("ChannelCollectionsContent", {
-                destination: s.a.ChannelCollections
-            }), Object(r.graphql)(S, {
+            C = Object(r.compose)(Object(d.d)("ChannelCollectionsContent"), Object(h.a)(E, {
                 options: function(e) {
                     return {
                         variables: {
@@ -3826,7 +3828,7 @@ webpackJsonp([57], {
                     return i.__assign({}, e, {
                         loadMore: function() {
                             return e.data.fetchMore({
-                                query: S,
+                                query: E,
                                 variables: i.__assign({}, e.data.variables, {
                                     cursor: e.data.user.collections.edges[Math.max(e.data.user.collections.edges.length - 1, 0)].cursor
                                 }),
@@ -3844,29 +3846,29 @@ webpackJsonp([57], {
                         }
                     })
                 }
-            }))(E),
-            C = n("Ic9h"),
-            N = n("LdTg"),
-            I = function(e) {
+            }))(w),
+            N = n("Ic9h"),
+            I = n("LdTg"),
+            O = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(v._8, {
+                    return a.createElement(b._8, {
                         fullHeight: !0,
                         "data-test-selector": "channel-collections-page"
-                    }, a.createElement(C.a, {
+                    }, a.createElement(N.a, {
                         currentPage: c.b.Collections,
                         ownerLogin: this.props.match.params.channelLogin
-                    }, a.createElement(w, {
+                    }, a.createElement(C, {
                         channelLogin: this.props.match.params.channelLogin
                     })))
                 }, t
             }(a.Component),
-            O = Object(r.compose)(Object(d.d)("ChannelCollectionsPage", {
+            T = Object(r.compose)(Object(d.d)("ChannelCollectionsPage", {
                 destination: s.a.ChannelCollections,
                 autoReportInteractive: !0
-            }), Object(r.graphql)(N, {
+            }), Object(r.graphql)(I, {
                 options: function(e) {
                     return {
                         variables: {
@@ -3885,10 +3887,10 @@ webpackJsonp([57], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(I);
+            }))(O);
         n.d(t, "ChannelCollectionsPage", function() {
-            return O
+            return T
         })
     }
 });
-//# sourceMappingURL=pages.channel-collections-abe33ee1ccb05c3db6dec96aebeb8c45.js.map
+//# sourceMappingURL=pages.channel-collections-bc5269fa2b9c11306949dea3dcb66106.js.map

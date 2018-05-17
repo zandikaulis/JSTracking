@@ -4037,12 +4037,18 @@ webpackJsonp([98], {
                         login: e.event.user.username,
                         sourceType: M.a.chat_message
                     }, e.event.user.displayName),
-                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in Chat!", {
+                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in chat.", {
                         gifterButton: t,
                         selectedCount: e.event.selectedCount
                     }, "RewardGiftNoticeLine"),
-                    a = e.event.minCheerAmount > 0 && Object(r.d)("Cheer at least {minCheerAmount} Bits to share with Chat!", {
-                        minCheerAmount: e.event.minCheerAmount
+                    a = Object(r.d)("<x:link>Cheer at least {minCheerAmount} Bits to share rewards with chat!</x:link>", {
+                        minCheerAmount: e.event.minCheerAmount,
+                        "x:link": function(e) {
+                            return i.createElement(E.O, {
+                                to: "https://blog.twitch.tv/earn-overwatch-league-loot-a494e1c21634",
+                                targetBlank: !0
+                            }, e)
+                        }
                     }, "RewardGiftNoticeLine");
                 return i.createElement(E._8, {
                     className: "reward-gift-user-notice",
@@ -4066,7 +4072,7 @@ webpackJsonp([98], {
                 })), i.createElement(E.Q, {
                     color: E.K.Alt2,
                     type: E._49.Span
-                }, n)), i.createElement(E._8, {
+                }, n)), e.event.minCheerAmount > 0 && i.createElement(E._8, {
                     className: "reward-gift-user-notice__action",
                     padding: {
                         x: 1,
@@ -4878,9 +4884,10 @@ webpackJsonp([98], {
                         onClick: this.props.clearLanguagePreferences,
                         "data-a-target": "language-clear-all"
                     }, Object(c.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = o.__decorate([Object(m.d)("LanguageSelectMenu")], t)
-            }(l.Component));
-        var f = Object(a.b)(function(e) {
+                }, t
+            }(l.Component)),
+            f = Object(i.d)(Object(m.d)("LanguageSelectMenu"))(g);
+        var b = Object(a.b)(function(e) {
             return {
                 languagePreferences: Object(s.a)(e)
             }
@@ -4889,9 +4896,9 @@ webpackJsonp([98], {
                 updateLanguagePreferences: r.c,
                 clearLanguagePreferences: r.a
             }, e)
-        })(g);
+        })(f);
         n.d(t, "a", function() {
-            return f
+            return b
         })
     },
     "7LVu": function(e, t) {},
@@ -22351,4 +22358,4 @@ webpackJsonp([98], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-surfing-dc036ac8efcce49c3f84f884b1b4fd22.js.map
+//# sourceMappingURL=pages.channel-surfing-dde563778baa0a22e83206bf623d8912.js.map

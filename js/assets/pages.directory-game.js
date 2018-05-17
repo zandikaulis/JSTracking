@@ -220,14 +220,15 @@ webpackJsonp([50], {
                             context: l.b.MixedGameAndChannelList,
                             title: t.props.title,
                             linkTo: t.props.linkTo,
-                            onVideoTitleClick: t.props.onTitleClick,
+                            onVideoTitleClick: t.props.onClick,
                             thumbnailImageProps: {
                                 src: t.props.imageSrc,
                                 alt: t.props.imageAlt
                             },
-                            onThumbnailClick: t.props.onThumbnailClick,
+                            onThumbnailClick: t.props.onClick,
                             channelLogin: t.props.channelName,
                             channelLoginLinkTo: t.props.channelNameLinkTo,
+                            channelLoginOnClick: t.props.onClick,
                             channelImageProps: {
                                 src: t.props.channelImageSrc || "",
                                 alt: t.props.channelName
@@ -250,6 +251,7 @@ webpackJsonp([50], {
                             viewerCount: t.props.viewerCount,
                             channel: a.createElement(r.a, {
                                 to: t.props.channelNameLinkTo,
+                                onClick: t.props.onClick,
                                 className: "live-channel-card__videos",
                                 "data-a-target": "live-channel-card-channel-name-link"
                             }, t.props.channelName)
@@ -267,7 +269,7 @@ webpackJsonp([50], {
                             title: t.props.hideTooltip ? void 0 : t.props.title,
                             "data-a-target": "live-channel-card-thumbnail-link",
                             "data-test-selector": D,
-                            onClick: t.props.onThumbnailClick
+                            onClick: t.props.onClick
                         }, t.props.children ? t.props.children : a.createElement(w.E, {
                             alt: t.props.imageAlt,
                             src: t.props.imageSrc,
@@ -280,7 +282,7 @@ webpackJsonp([50], {
                             ellipsis: !0
                         }, a.createElement(w.O, {
                             to: t.props.linkTo,
-                            onClick: t.props.onTitleClick,
+                            onClick: t.props.onClick,
                             className: "live-channel-card__channel",
                             "data-a-target": "live-channel-card-title-link"
                         }, a.createElement(w._2, {
@@ -1794,14 +1796,15 @@ webpackJsonp([50], {
     "4Gcm": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return l
+            return c
         });
         var i = n("TToO"),
             a = n("GiK3"),
-            r = (n.n(a), n("CSlQ")),
-            o = n("Odds"),
-            s = n("Jg0G"),
-            l = (n.n(s), function(e) {
+            r = (n.n(a), n("2KeS")),
+            o = n("CSlQ"),
+            s = n("Odds"),
+            l = n("Jg0G"),
+            d = (n.n(l), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.selectOnFocus = function(e) {
@@ -1811,19 +1814,20 @@ webpackJsonp([50], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(o._8, i.__assign({
-                        position: o._15.Relative,
+                    return a.createElement(s._8, i.__assign({
+                        position: s._15.Relative,
                         className: "selectable-input-wrapper"
-                    }, Object(o._63)(this.props)), a.createElement(o._4, {
-                        type: o._5.Text,
+                    }, Object(s._63)(this.props)), a.createElement(s._4, {
+                        type: s._5.Text,
                         value: this.props.text,
                         readOnly: !0,
                         onFocus: this.selectOnFocus,
                         icon: this.props.iconAsset,
                         id: this.props.id
                     }), this.props.children)
-                }, t = i.__decorate([Object(r.d)("SelectableInput")], t)
-            }(a.Component))
+                }, t
+            }(a.Component)),
+            c = Object(r.d)(Object(o.d)("SelectableInput"))(d)
     },
     "4Tv+": function(e, t, n) {
         "use strict";
@@ -2876,9 +2880,10 @@ webpackJsonp([50], {
                         onClick: this.props.clearLanguagePreferences,
                         "data-a-target": "language-clear-all"
                     }, Object(d.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = s.__decorate([Object(p.d)("LanguageSelectMenu")], t)
-            }(l.Component));
-        var v = Object(i.b)(function(e) {
+                }, t
+            }(l.Component)),
+            v = Object(a.d)(Object(p.d)("LanguageSelectMenu"))(h);
+        var f = Object(i.b)(function(e) {
             return {
                 languagePreferences: Object(o.a)(e)
             }
@@ -2887,9 +2892,9 @@ webpackJsonp([50], {
                 updateLanguagePreferences: r.c,
                 clearLanguagePreferences: r.a
             }, e)
-        })(h);
+        })(v);
         n.d(t, "a", function() {
-            return v
+            return f
         })
     },
     "7FW4": function(e, t, n) {
@@ -5086,8 +5091,8 @@ webpackJsonp([50], {
                                             character_name: t.overwatchCharacter
                                         };
                                     case Ke.a.PUBG:
-                                        var n = "";
-                                        return n = t.pubgPlayerAliveMax ? t.pubgPlayerAliveMin && "1" === t.pubgPlayerAliveMin ? Ae.FewerThan25 : Ae.Range25To50 : Ae.MoreThan50, {
+                                        var n = void 0;
+                                        return t.pubgPlayerAliveMax ? n = t.pubgPlayerAliveMin && "1" === t.pubgPlayerAliveMin ? Ae.FewerThan25 : Ae.Range25To50 : t.pubgPlayerAliveMin && (n = Ae.MoreThan50), {
                                             team_type: t.pubgGameMode && t.pubgGameMode.toLowerCase(),
                                             remaining_players: n
                                         };
@@ -5179,8 +5184,7 @@ webpackJsonp([50], {
                     }).map(function(t, n) {
                         var i = t.node;
                         return M.createElement(Oe.b, {
-                            onThumbnailClick: e.trackBrowseClick,
-                            onVideoTitleClick: e.trackBrowseClick,
+                            onClick: e.trackBrowseClick,
                             directoryName: decodeURIComponent(e.props.match.params.encodedCommunityName),
                             directoryType: e.state.directoryType,
                             streamIndex: n,
@@ -8866,14 +8870,15 @@ webpackJsonp([50], {
                             context: n.props.directoryType === f.a.Games ? d.b.SingleGameList : d.b.MixedGameAndChannelList,
                             title: e.title || L.a,
                             linkTo: n.getLinkTo("/" + e.broadcaster.login, t),
-                            onVideoTitleClick: n.onVideoTitleClick,
+                            onVideoTitleClick: n.onClick,
                             thumbnailImageProps: {
                                 src: e.previewImageURL || o.a.defaultStreamPreviewURL,
                                 alt: "" + e.broadcaster.login
                             },
-                            onThumbnailClick: n.onThumbnailClick,
+                            onThumbnailClick: n.onClick,
                             channelLogin: e.broadcaster.login || "",
                             channelLoginLinkTo: n.getLinkTo("/" + e.broadcaster.login + "/videos", t),
+                            channelLoginOnClick: n.onClick,
                             channelImageProps: {
                                 src: e.broadcaster.profileImageURL || "",
                                 alt: "" + e.broadcaster.login
@@ -8950,8 +8955,7 @@ webpackJsonp([50], {
                             viewerCount: e.viewersCount || 0,
                             title: e.title || L.a,
                             channelName: Object(u.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
-                            onTitleClick: n.onVideoTitleClick,
-                            onThumbnailClick: n.onThumbnailClick,
+                            onClick: n.onClick,
                             gameImageSrc: n.shouldShowGame("boxArtURL") || o.a.defaultBoxArtURL,
                             gameTitle: n.shouldShowGame("name"),
                             gameLinkTo: n.getLinkTo(Object(m.c)(n.shouldShowGame("name")), t),
@@ -9004,10 +9008,8 @@ webpackJsonp([50], {
                         })) : void 0 : null
                     }, n.shouldShowGame = function(e) {
                         return n.props.directoryType !== f.a.Games && n.props.streamNode.game ? n.props.streamNode.game[e] : ""
-                    }, n.onThumbnailClick = function(e) {
-                        n.props.onThumbnailClick && n.props.onThumbnailClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
-                    }, n.onVideoTitleClick = function(e) {
-                        n.props.onVideoTitleClick && n.props.onVideoTitleClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
+                    }, n.onClick = function(e) {
+                        n.props.onClick && n.props.onClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
                     }, n.onMouseEnterHandler = function() {
                         !n.props.showPreview || n.state.hovered && !n.state.previewTimedOut || (n.removeThumbnailListener(), n.clearTimeouts(), n.setState({
                             hovered: !0
@@ -11399,7 +11401,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(132).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(133).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -11411,7 +11413,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(132).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -11423,7 +11425,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(131).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -11435,7 +11437,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(130).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -11447,7 +11449,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(129).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -11459,7 +11461,7 @@ webpackJsonp([50], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(128).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -20231,4 +20233,4 @@ webpackJsonp([50], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-de595268246b381d908390c79d49f67c.js.map
+//# sourceMappingURL=pages.directory-game-20ec7d65ae464112768f55b79c5dc9bf.js.map

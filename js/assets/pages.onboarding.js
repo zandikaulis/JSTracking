@@ -220,14 +220,15 @@ webpackJsonp([54, 109], {
                             context: l.b.MixedGameAndChannelList,
                             title: t.props.title,
                             linkTo: t.props.linkTo,
-                            onVideoTitleClick: t.props.onTitleClick,
+                            onVideoTitleClick: t.props.onClick,
                             thumbnailImageProps: {
                                 src: t.props.imageSrc,
                                 alt: t.props.imageAlt
                             },
-                            onThumbnailClick: t.props.onThumbnailClick,
+                            onThumbnailClick: t.props.onClick,
                             channelLogin: t.props.channelName,
                             channelLoginLinkTo: t.props.channelNameLinkTo,
+                            channelLoginOnClick: t.props.onClick,
                             channelImageProps: {
                                 src: t.props.channelImageSrc || "",
                                 alt: t.props.channelName
@@ -250,6 +251,7 @@ webpackJsonp([54, 109], {
                             viewerCount: t.props.viewerCount,
                             channel: a.createElement(i.a, {
                                 to: t.props.channelNameLinkTo,
+                                onClick: t.props.onClick,
                                 className: "live-channel-card__videos",
                                 "data-a-target": "live-channel-card-channel-name-link"
                             }, t.props.channelName)
@@ -267,7 +269,7 @@ webpackJsonp([54, 109], {
                             title: t.props.hideTooltip ? void 0 : t.props.title,
                             "data-a-target": "live-channel-card-thumbnail-link",
                             "data-test-selector": N,
-                            onClick: t.props.onThumbnailClick
+                            onClick: t.props.onClick
                         }, t.props.children ? t.props.children : a.createElement(E.E, {
                             alt: t.props.imageAlt,
                             src: t.props.imageSrc,
@@ -280,7 +282,7 @@ webpackJsonp([54, 109], {
                             ellipsis: !0
                         }, a.createElement(E.O, {
                             to: t.props.linkTo,
-                            onClick: t.props.onTitleClick,
+                            onClick: t.props.onClick,
                             className: "live-channel-card__channel",
                             "data-a-target": "live-channel-card-title-link"
                         }, a.createElement(E._2, {
@@ -1115,7 +1117,8 @@ webpackJsonp([54, 109], {
                             flexDirection: y.T.Column,
                             ellipsis: !0
                         }, u.createElement(y._35, {
-                            className: "minimal-top-nav__username"
+                            className: "minimal-top-nav__username",
+                            "data-a-target": "user-display-name"
                         }, this.props.data.currentUser.displayName)), u.createElement(y._35, {
                             display: y.R.Flex,
                             flexShrink: 0,
@@ -2268,7 +2271,7 @@ webpackJsonp([54, 109], {
                 return r.__generator(this, function(e) {
                     switch (e.label) {
                         case 0:
-                            return [4, n.e(125).then(n.bind(null, "Revh"))];
+                            return [4, n.e(126).then(n.bind(null, "Revh"))];
                         case 1:
                             return [2, e.sent().items]
                     }
@@ -2406,14 +2409,15 @@ webpackJsonp([54, 109], {
                             context: n.props.directoryType === f.a.Games ? c.b.SingleGameList : c.b.MixedGameAndChannelList,
                             title: e.title || I.a,
                             linkTo: n.getLinkTo("/" + e.broadcaster.login, t),
-                            onVideoTitleClick: n.onVideoTitleClick,
+                            onVideoTitleClick: n.onClick,
                             thumbnailImageProps: {
                                 src: e.previewImageURL || o.a.defaultStreamPreviewURL,
                                 alt: "" + e.broadcaster.login
                             },
-                            onThumbnailClick: n.onThumbnailClick,
+                            onThumbnailClick: n.onClick,
                             channelLogin: e.broadcaster.login || "",
                             channelLoginLinkTo: n.getLinkTo("/" + e.broadcaster.login + "/videos", t),
+                            channelLoginOnClick: n.onClick,
                             channelImageProps: {
                                 src: e.broadcaster.profileImageURL || "",
                                 alt: "" + e.broadcaster.login
@@ -2490,8 +2494,7 @@ webpackJsonp([54, 109], {
                             viewerCount: e.viewersCount || 0,
                             title: e.title || I.a,
                             channelName: Object(u.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
-                            onTitleClick: n.onVideoTitleClick,
-                            onThumbnailClick: n.onThumbnailClick,
+                            onClick: n.onClick,
                             gameImageSrc: n.shouldShowGame("boxArtURL") || o.a.defaultBoxArtURL,
                             gameTitle: n.shouldShowGame("name"),
                             gameLinkTo: n.getLinkTo(Object(m.c)(n.shouldShowGame("name")), t),
@@ -2544,10 +2547,8 @@ webpackJsonp([54, 109], {
                         })) : void 0 : null
                     }, n.shouldShowGame = function(e) {
                         return n.props.directoryType !== f.a.Games && n.props.streamNode.game ? n.props.streamNode.game[e] : ""
-                    }, n.onThumbnailClick = function(e) {
-                        n.props.onThumbnailClick && n.props.onThumbnailClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
-                    }, n.onVideoTitleClick = function(e) {
-                        n.props.onVideoTitleClick && n.props.onVideoTitleClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
+                    }, n.onClick = function(e) {
+                        n.props.onClick && n.props.onClick(e, n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.id)
                     }, n.onMouseEnterHandler = function() {
                         !n.props.showPreview || n.state.hovered && !n.state.previewTimedOut || (n.removeThumbnailListener(), n.clearTimeouts(), n.setState({
                             hovered: !0
@@ -2961,7 +2962,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(132).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(133).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2973,7 +2974,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(132).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2985,7 +2986,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(131).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2997,7 +2998,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(130).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -3009,7 +3010,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(129).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -3021,7 +3022,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(128).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6445,4 +6446,4 @@ webpackJsonp([54, 109], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-d888a89f66d0fdb95cf1a00682abda26.js.map
+//# sourceMappingURL=pages.onboarding-f811c573a843f9ef9fe18785481f1852.js.map

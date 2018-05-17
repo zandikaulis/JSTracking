@@ -15182,13 +15182,14 @@ webpackJsonp([95], {
                 return n.__extends(t, e), t.prototype.render = function() {
                     var e = this.props,
                         t = e.children,
-                        a = e.direction;
+                        a = e.direction,
+                        n = e.size;
                     return r.createElement("div", {
                         onMouseEnter: this.handleHover,
                         onMouseLeave: this.handleHover
                     }, r.createElement(i._35, {
                         display: i.R.Flex,
-                        padding: {
+                        margin: {
                             x: 1
                         },
                         position: i._15.Relative
@@ -15205,7 +15206,7 @@ webpackJsonp([95], {
                     })), r.createElement(i.q, {
                         show: this.state.isHovered,
                         direction: a,
-                        offsetX: "1rem"
+                        size: n
                     }, r.createElement(i._8, {
                         padding: {
                             x: 1,
@@ -15213,7 +15214,8 @@ webpackJsonp([95], {
                         }
                     }, t))))
                 }, t.defaultProps = {
-                    direction: i.r.Bottom
+                    direction: i.r.Bottom,
+                    size: i.s.Small
                 }, t
             }(r.Component));
         a.d(t, "a", function() {
@@ -20230,4 +20232,4 @@ webpackJsonp([95], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-analytics-6a7ad6ad5b9a17077e1e9dab0da1644d.js.map
+//# sourceMappingURL=pages.channel-analytics-768a99f0032f84b78cec2ae31e18e96b.js.map

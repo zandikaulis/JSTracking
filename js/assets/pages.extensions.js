@@ -2347,8 +2347,9 @@ webpackJsonp([60], {
                         background: v.n.Base,
                         position: v._15.Relative,
                         overflow: v._11.Hidden
-                    }, r.createElement(v._8, {
-                        className: o ? "extension-card__icon-bg" : ""
+                    }, r.createElement(v._35, {
+                        className: o ? "extension-card__icon-bg" : "",
+                        background: v.n.AccentAlt2
                     }, r.createElement(v.E, {
                         src: e,
                         alt: i,
@@ -4245,4 +4246,4 @@ webpackJsonp([60], {
         e.exports = t.p + "assets/discovery-splash-fallback-d5c69de700c33441b513b34421ad3d16.png"
     }
 });
-//# sourceMappingURL=pages.extensions-8679667e144daae46f125c1254830f3c.js.map
+//# sourceMappingURL=pages.extensions-ded3ebb5a8f7c417f95693faeefca94d.js.map

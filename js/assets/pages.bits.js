@@ -139,7 +139,8 @@ webpackJsonp([68], {
                             flexDirection: v.T.Column,
                             ellipsis: !0
                         }, p.createElement(v._35, {
-                            className: "minimal-top-nav__username"
+                            className: "minimal-top-nav__username",
+                            "data-a-target": "user-display-name"
                         }, this.props.data.currentUser.displayName)), p.createElement(v._35, {
                             display: v.R.Flex,
                             flexShrink: 0,
@@ -531,4 +532,4 @@ webpackJsonp([68], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.bits-0d97b5d3c2174ea7fb7344409891b34e.js.map
+//# sourceMappingURL=pages.bits-3e2d3f9857d2c77f943a5b97a156700f.js.map

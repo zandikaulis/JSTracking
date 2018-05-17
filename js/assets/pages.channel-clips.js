@@ -1,4 +1,4 @@
-webpackJsonp([40], {
+webpackJsonp([39], {
     "+5Qw": function(e, t) {},
     "+Aaf": function(e, t) {},
     "+V/3": function(e, t, n) {
@@ -4454,14 +4454,15 @@ webpackJsonp([40], {
     "4Gcm": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return l
+            return c
         });
         var i = n("TToO"),
             a = n("GiK3"),
-            r = (n.n(a), n("CSlQ")),
-            o = n("Odds"),
-            s = n("Jg0G"),
-            l = (n.n(s), function(e) {
+            r = (n.n(a), n("2KeS")),
+            o = n("CSlQ"),
+            s = n("Odds"),
+            l = n("Jg0G"),
+            d = (n.n(l), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.selectOnFocus = function(e) {
@@ -4471,19 +4472,20 @@ webpackJsonp([40], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(o._8, i.__assign({
-                        position: o._15.Relative,
+                    return a.createElement(s._8, i.__assign({
+                        position: s._15.Relative,
                         className: "selectable-input-wrapper"
-                    }, Object(o._63)(this.props)), a.createElement(o._4, {
-                        type: o._5.Text,
+                    }, Object(s._63)(this.props)), a.createElement(s._4, {
+                        type: s._5.Text,
                         value: this.props.text,
                         readOnly: !0,
                         onFocus: this.selectOnFocus,
                         icon: this.props.iconAsset,
                         id: this.props.id
                     }), this.props.children)
-                }, t = i.__decorate([Object(r.d)("SelectableInput")], t)
-            }(a.Component))
+                }, t
+            }(a.Component)),
+            c = Object(r.d)(Object(o.d)("SelectableInput"))(d)
     },
     "4Jix": function(e, t) {},
     "4Q5V": function(e, t, n) {
@@ -5086,12 +5088,18 @@ webpackJsonp([40], {
                         login: e.event.user.username,
                         sourceType: T.a.chat_message
                     }, e.event.user.displayName),
-                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in Chat!", {
+                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in chat.", {
                         gifterButton: t,
                         selectedCount: e.event.selectedCount
                     }, "RewardGiftNoticeLine"),
-                    i = e.event.minCheerAmount > 0 && Object(r.d)("Cheer at least {minCheerAmount} Bits to share with Chat!", {
-                        minCheerAmount: e.event.minCheerAmount
+                    i = Object(r.d)("<x:link>Cheer at least {minCheerAmount} Bits to share rewards with chat!</x:link>", {
+                        minCheerAmount: e.event.minCheerAmount,
+                        "x:link": function(e) {
+                            return a.createElement(E.O, {
+                                to: "https://blog.twitch.tv/earn-overwatch-league-loot-a494e1c21634",
+                                targetBlank: !0
+                            }, e)
+                        }
                     }, "RewardGiftNoticeLine");
                 return a.createElement(E._8, {
                     className: "reward-gift-user-notice",
@@ -5115,7 +5123,7 @@ webpackJsonp([40], {
                 })), a.createElement(E.Q, {
                     color: E.K.Alt2,
                     type: E._49.Span
-                }, n)), a.createElement(E._8, {
+                }, n)), e.event.minCheerAmount > 0 && a.createElement(E._8, {
                     className: "reward-gift-user-notice__action",
                     padding: {
                         x: 1,
@@ -11829,9 +11837,10 @@ webpackJsonp([40], {
                         onClick: this.props.clearLanguagePreferences,
                         "data-a-target": "language-clear-all"
                     }, Object(d.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = s.__decorate([Object(p.d)("LanguageSelectMenu")], t)
-            }(l.Component));
-        var f = Object(i.b)(function(e) {
+                }, t
+            }(l.Component)),
+            f = Object(a.d)(Object(p.d)("LanguageSelectMenu"))(g);
+        var v = Object(i.b)(function(e) {
             return {
                 languagePreferences: Object(o.a)(e)
             }
@@ -11840,9 +11849,9 @@ webpackJsonp([40], {
                 updateLanguagePreferences: r.c,
                 clearLanguagePreferences: r.a
             }, e)
-        })(g);
+        })(f);
         n.d(t, "a", function() {
-            return f
+            return v
         })
     },
     "7LVu": function(e, t) {},
@@ -16465,7 +16474,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(132).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(133).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16477,7 +16486,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(132).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16489,7 +16498,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(131).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16501,7 +16510,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(130).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16513,7 +16522,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(129).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16525,7 +16534,7 @@ webpackJsonp([40], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(128).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -38916,4 +38925,4 @@ webpackJsonp([40], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-clips-ae9a74dd8a9822e4eb98647364d593a5.js.map
+//# sourceMappingURL=pages.channel-clips-67ae177b5a9e7d7466e786cc5daaf79c.js.map

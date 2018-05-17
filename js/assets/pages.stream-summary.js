@@ -13162,13 +13162,14 @@ webpackJsonp([94], {
                 return n.__extends(t, e), t.prototype.render = function() {
                     var e = this.props,
                         t = e.children,
-                        a = e.direction;
+                        a = e.direction,
+                        n = e.size;
                     return i.createElement("div", {
                         onMouseEnter: this.handleHover,
                         onMouseLeave: this.handleHover
                     }, i.createElement(r._35, {
                         display: r.R.Flex,
-                        padding: {
+                        margin: {
                             x: 1
                         },
                         position: r._15.Relative
@@ -13185,7 +13186,7 @@ webpackJsonp([94], {
                     })), i.createElement(r.q, {
                         show: this.state.isHovered,
                         direction: a,
-                        offsetX: "1rem"
+                        size: n
                     }, i.createElement(r._8, {
                         padding: {
                             x: 1,
@@ -13193,7 +13194,8 @@ webpackJsonp([94], {
                         }
                     }, t))))
                 }, t.defaultProps = {
-                    direction: r.r.Bottom
+                    direction: r.r.Bottom,
+                    size: r.s.Small
                 }, t
             }(i.Component));
         a.d(t, "a", function() {
@@ -19133,4 +19135,4 @@ webpackJsonp([94], {
         })
     }
 });
-//# sourceMappingURL=pages.stream-summary-534cfe95645b8a4acf3438af513f7496.js.map
+//# sourceMappingURL=pages.stream-summary-24b4ce0f76cdd2c9b6cc477a38374a32.js.map

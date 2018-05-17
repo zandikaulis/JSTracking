@@ -722,6 +722,7 @@ webpackJsonp([35], {
         var r, o = {
                 ChatTooltip: "card",
                 GetBitsButton: "get_bits_button",
+                GetBitsButtonTopNav: "topnav",
                 BitsLandingPage: "bits_landing_page"
             },
             s = {
@@ -6816,12 +6817,18 @@ webpackJsonp([35], {
                         login: e.event.user.username,
                         sourceType: I.a.chat_message
                     }, e.event.user.displayName),
-                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in Chat!", {
+                    n = Object(r.d)("{gifterButton}'s Cheer shared rewards to {selectedCount} others in chat.", {
                         gifterButton: t,
                         selectedCount: e.event.selectedCount
                     }, "RewardGiftNoticeLine"),
-                    i = e.event.minCheerAmount > 0 && Object(r.d)("Cheer at least {minCheerAmount} Bits to share with Chat!", {
-                        minCheerAmount: e.event.minCheerAmount
+                    i = Object(r.d)("<x:link>Cheer at least {minCheerAmount} Bits to share rewards with chat!</x:link>", {
+                        minCheerAmount: e.event.minCheerAmount,
+                        "x:link": function(e) {
+                            return a.createElement(E.O, {
+                                to: "https://blog.twitch.tv/earn-overwatch-league-loot-a494e1c21634",
+                                targetBlank: !0
+                            }, e)
+                        }
                     }, "RewardGiftNoticeLine");
                 return a.createElement(E._8, {
                     className: "reward-gift-user-notice",
@@ -6845,7 +6852,7 @@ webpackJsonp([35], {
                 })), a.createElement(E.Q, {
                     color: E.K.Alt2,
                     type: E._49.Span
-                }, n)), a.createElement(E._8, {
+                }, n)), e.event.minCheerAmount > 0 && a.createElement(E._8, {
                     className: "reward-gift-user-notice__action",
                     padding: {
                         x: 1,
@@ -12971,11 +12978,12 @@ webpackJsonp([35], {
                         direction: p._54.Top,
                         label: Object(u.d)("Whispers are disabled in popout chat", "WhispersDisabledText")
                     }, n)
-                }, t = d.__decorate([Object(m.d)("WhisperButton", {
-                    autoReportInteractive: !0
-                })], t)
-            }(c.Component);
-        var g = Object(i.b)(null, function(e) {
+                }, t
+            }(c.Component),
+            g = Object(a.d)(Object(m.d)("WhisperButton", {
+                autoReportInteractive: !0
+            }))(h);
+        var f = Object(i.b)(null, function(e) {
             return Object(a.b)({
                 login: function() {
                     return Object(o.f)(r.a.WhisperButton)
@@ -12988,9 +12996,9 @@ webpackJsonp([35], {
                     }, Object(l.a)())
                 }
             }, e)
-        })(h);
+        })(g);
         n.d(t, "a", function() {
-            return g
+            return f
         })
     },
     "5vPJ": function(e, t, n) {
@@ -21665,9 +21673,9 @@ webpackJsonp([35], {
                         disabled: !0,
                         key: "default"
                     }, t), e)))
-                }, t = i.__decorate([Object(d.d)("ReportReasonSelect")], t)
+                }, t
             }(r.Component),
-            h = Object(l.a)(m, {
+            h = Object(o.d)(Object(l.a)(m, {
                 options: function(e) {
                     return {
                         variables: {
@@ -21675,7 +21683,7 @@ webpackJsonp([35], {
                         }
                     }
                 }
-            })(p),
+            }), Object(d.d)("ReportReasonSelect"))(p),
             g = (n("I4TS"), n("1EXI"));
         n.d(t, "a", function() {
             return v
@@ -28752,35 +28760,27 @@ webpackJsonp([35], {
         "use strict";
         t.c = function(e, t, n) {
             void 0 === n && (n = !1);
-            return m(r, e, t, n)
-        }, t.a = u, t.b = function(e, t, n) {
+            return c(r, e, t, n)
+        }, t.a = d, t.b = function(e, t, n) {
             void 0 === n && (n = !1);
             var r = i.b.get(s, a.a.Off),
                 o = t && t.roles && t.roles.isStaff || !1;
-            return u(e, t, n) && (r === a.a.On || r === a.a.StaffOnly && o)
-        }, t.e = function(e) {
-            var t = i.b.get(l, a.a.Off),
-                n = i.b.get(d, []),
-                r = e && n.includes(e.id) || !1,
-                o = e && e.roles && e.roles.isStaff || !1;
-            return t === a.a.On || t === a.a.StaffOnly && o || r
+            return d(e, t, n) && (r === a.a.On || r === a.a.StaffOnly && o)
         }, t.d = function(e, t) {
-            return m(c, e, t)
+            return c(l, e, t)
         };
         var i = n("6sO2"),
             a = n("QRuM"),
             r = "esport_channel_page_whitelist",
             o = "esport_insider_pass_whitelist",
             s = "esport_insider_pass_gifting_launch",
-            l = "esport_insider_prime_bits_launch",
-            d = "esport_insider_prime_bits_launch_user_whitelist",
-            c = "esports_room_cheering_whitelist";
+            l = "esports_room_cheering_whitelist";
 
-        function u(e, t, n) {
-            return void 0 === n && (n = !1), m(o, e, t, n)
+        function d(e, t, n) {
+            return void 0 === n && (n = !1), c(o, e, t, n)
         }
 
-        function m(e, t, n, a) {
+        function c(e, t, n, a) {
             void 0 === a && (a = !1);
             var r = i.b.get(e, []),
                 o = n && n.roles && n.roles.isStaff || a;
@@ -46640,4 +46640,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-74068251cf272fe6eb521fbace30844d.js.map
+//# sourceMappingURL=pages.embed-chat-2f1ee9fd952b1b35cb87100afa6dc478.js.map

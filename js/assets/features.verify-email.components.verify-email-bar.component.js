@@ -491,7 +491,7 @@ webpackJsonp([75], {
                     if (T.has(this.props.location.pathname)) {
                         var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                             t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                        return Object(d.m)(e, t)
+                        return Object(d.n)(e, t)
                     }
                     return !1
                 }, t.prototype.shouldRespectDismissal = function() {
@@ -609,4 +609,4 @@ webpackJsonp([75], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-96b838f8ad24df6dc921f77e34679462.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-47042da5d1d7f9a028cfb4bd6ffbfe17.js.map
