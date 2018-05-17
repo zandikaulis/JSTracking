@@ -69,7 +69,7 @@ window.__twilightSettings = {
     "prime_landing_page_base_url": "https://twitch.amazon.com/prime",
     "prime_promo_content_base_url": "https://twitch.amazon.com/prime",
     "prime_subsite_up": true,
-    "prime-crown-hidden-ids": ["8ab0a940-c4f2-f0b4-86bf-50b6407a889f", "e4b0a979-23b5-0ef4-e488-63541e91a514"],
+    "prime-crown-hidden-ids": ["8ab0a940-c4f2-f0b4-86bf-50b6407a889f", "d4ad337d-a2d6-6c95-1a1c-1a5f81bea047", "e0ad410f-9f5e-102c-95be-c5ab46e82375", "e4b0a979-23b5-0ef4-e488-63541e91a514"],
     "prime-loot-page-hidden-ids": ["08b1b582-33c3-ac69-22ff-91e547267a5c"],
     "quantcast_account": "p-16uNVwiyGoWyg",
     "quantcast_labels": "gaming",
