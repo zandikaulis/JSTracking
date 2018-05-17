@@ -2053,18 +2053,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "4f952587-515d-44ac-b0cc-86769f543c72": {
-            "name": "TWILIGHT_ALL_THE_STATS",
-            "v": 3536,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
-            }]
-        },
         "505329a0-55a7-46e5-bf82-c320029e1539": {
             "name": "Video_Manager_V2",
             "v": 1792,

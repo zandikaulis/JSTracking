@@ -464,18 +464,6 @@ window.__twilightSettings = {
                 "value": "yes"
             }]
         },
-        "4f952587-515d-44ac-b0cc-86769f543c72": {
-            "name": "TWILIGHT_ALL_THE_STATS",
-            "v": 3536,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
-            }]
-        },
         "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
             "name": "twilight_new_browse",
             "v": 2683,
