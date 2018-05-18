@@ -1,4 +1,4 @@
-webpackJsonp([69], {
+webpackJsonp([70], {
     DZCb: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -971,4 +971,4 @@ webpackJsonp([69], {
         i.definitions = i.definitions.concat(r(n("UP6l").definitions)), i.definitions = i.definitions.concat(r(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-a5b367e494f61afd455403ff128a47ca.js.map
+//# sourceMappingURL=pages.inventory-403f8e85675ae9827d1fc5f6e8a513f0.js.map

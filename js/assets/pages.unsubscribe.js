@@ -1581,7 +1581,7 @@ webpackJsonp([47], {
                     }, Object(u.d)("All-Access benefits last up to the start of the 2019 Overwatch League Season. Twitch emotes, badges, and in-game content are yours to keep forever!", "EsportsTicketDescription"))))))
                 }, t
             }(s.PureComponent),
-            L = Object(o.compose)(Object(c.a)(M, {
+            U = Object(o.compose)(Object(c.a)(M, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1590,7 +1590,7 @@ webpackJsonp([47], {
                     }
                 }
             }))(j),
-            U = n("CSlQ"),
+            L = n("CSlQ"),
             P = n("5Kxe"),
             z = function(e) {
                 function t() {
@@ -1609,7 +1609,7 @@ webpackJsonp([47], {
                     return n ? s.createElement(S, null) : !t || r ? s.createElement(_, null) : this.isTurboProduct ? s.createElement(D, {
                         productPrice: t.price,
                         productPriceInterval: t.interval && t.interval.unit
-                    }) : this.isEsportsProduct ? s.createElement(L, {
+                    }) : this.isEsportsProduct ? s.createElement(U, {
                         ownerID: t.owner && t.owner.id,
                         badges: this.badges,
                         emotes: this.emotes,
@@ -1696,7 +1696,7 @@ webpackJsonp([47], {
                     configurable: !0
                 }), t
             }(s.Component),
-            H = Object(o.compose)(Object(U.d)("TicketDescription"), Object(c.a)(P, {
+            H = Object(o.compose)(Object(L.d)("TicketDescription"), Object(c.a)(P, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2105,10 +2105,9 @@ webpackJsonp([47], {
                         r = !!this.props.data.user.tournament.rewards.insider.heroSkins.find(function(e) {
                             return e.id === g
                         }),
-                        s = Object(i.d)("The Players Pack", "EsportsInsiderRewards"),
-                        f = this.props.insiderPurchaseState === m.a.PostPurchase && this.props.blizzardRewardsAvailable,
-                        h = this.props.data.user.tournament.rewards.insider,
-                        b = h.heroSkins.concat(h.inGameContent).some(function(e) {
+                        s = this.props.insiderPurchaseState === m.a.PostPurchase && this.props.blizzardRewardsAvailable,
+                        f = this.props.data.user.tournament.rewards.insider,
+                        h = f.heroSkins.concat(f.inGameContent).some(function(e) {
                             return e.canBeFulfilled
                         });
                     return a.createElement(l._8, {
@@ -2122,9 +2121,9 @@ webpackJsonp([47], {
                     }, a.createElement(l.Q, {
                         fontSize: l.V.Size3,
                         bold: !0
-                    }, Object(i.d)("Overwatch Content with the All-Access Pass", "EsportsInsiderRewards")), f && !b && a.createElement(l.Q, {
+                    }, Object(i.d)("Overwatch Content with the All-Access Pass", "EsportsInsiderRewards")), s && !h && a.createElement(l.Q, {
                         fontSize: l.V.Size4
-                    }, Object(i.d)("All in-game rewards have been claimed to your Blizzard account", "EsportsInsiderRewards")), f && b && a.createElement(l._8, {
+                    }, Object(i.d)("All in-game rewards have been claimed to your Blizzard account", "EsportsInsiderRewards")), s && h && a.createElement(l._8, {
                         display: l.R.Flex,
                         flexDirection: l.T.Row,
                         flexWrap: l.U.Wrap,
@@ -2136,7 +2135,7 @@ webpackJsonp([47], {
                         tournamentID: this.props.data.user.tournament.id,
                         enabled: !0,
                         inGame: !0
-                    })), !f && a.createElement(l.Q, {
+                    })), !s && a.createElement(l.Q, {
                         fontSize: l.V.Size4
                     }, Object(i.d)("A Blizzard account link is required to redeem in-game rewards", "EsportsInsiderRewards")), r && a.createElement(l._8, {
                         display: l.R.Flex,
@@ -2160,7 +2159,7 @@ webpackJsonp([47], {
                         fontSize: l.V.Size4,
                         noWrap: !0,
                         bold: !0
-                    }, s), a.createElement(l.Q, {
+                    }, Object(i.d)("The Players Pack", "EsportsInsiderRewards")), a.createElement(l.Q, {
                         fontSize: l.V.Size5,
                         bold: !0
                     }, Object(i.d)("D.Va, Ana, Zarya, Genji, Sombra, Lucio, Widowmaker, Orisa, Winston, Reinhardt, Zenyatta, Junkrat", "EsportsInsiderRewards")), a.createElement(l.Q, {
@@ -2182,79 +2181,7 @@ webpackJsonp([47], {
                         padding: {
                             bottom: 2
                         }
-                    }, a.createElement("ul", null, n)), !r && a.createElement(l._8, {
-                        display: l.R.Flex,
-                        justifyContent: l._7.Center
-                    }, a.createElement(l._35, {
-                        className: "insider-pass-rewards__players-pack insider-pass-rewards__players-pack__prelaunch",
-                        textAlign: l._45.Center,
-                        margin: {
-                            top: 3,
-                            bottom: 5
-                        },
-                        padding: {
-                            y: .5
-                        },
-                        breakpointLarge: {
-                            padding: {
-                                y: 1
-                            }
-                        },
-                        breakpointExtraExtraLarge: {
-                            padding: {
-                                y: 2
-                            }
-                        },
-                        background: l.n.Accent,
-                        color: l.K.Overlay,
-                        fullWidth: !0
-                    }, a.createElement(l.N, {
-                        className: "insider-pass-rewards__players-pack__logo",
-                        src: o.c + "/owl-2017/all-access-logo.svg",
-                        alt: Object(i.d)("Overwatch League All-Access Pass on Twitch", "EsportsInsiderRewards")
-                    }), a.createElement(l._2, {
-                        margin: {
-                            top: .5
-                        },
-                        breakpointLarge: {
-                            margin: {
-                                top: 1
-                            }
-                        }
-                    }, a.createElement(l.Q, {
-                        className: "insider-pass-rewards__players-pack__title",
-                        bold: !0,
-                        transform: l._48.Uppercase
-                    }, s)), a.createElement(l.Q, {
-                        fontSize: l.V.Size8,
-                        breakpointLarge: {
-                            fontSize: l.V.Size7
-                        },
-                        breakpointExtraLarge: {
-                            fontSize: l.V.Size5
-                        },
-                        breakpointExtraExtraLarge: {
-                            fontSize: l.V.Size4
-                        },
-                        bold: !0
-                    }, Object(i.d)("12 Exclusive Overwatch League Away Skins", "EsportsInsiderRewards")), a.createElement(l.N, {
-                        className: "insider-pass-rewards__players-pack__image",
-                        src: o.c + "/owl-2017/players-pack.jpg",
-                        alt: "The Players Pack Skins"
-                    }), a.createElement(l.Q, {
-                        fontSize: l.V.Size6,
-                        breakpointLarge: {
-                            fontSize: l.V.Size5
-                        },
-                        breakpointExtraLarge: {
-                            fontSize: l.V.Size4
-                        },
-                        breakpointExtraExtraLarge: {
-                            fontSize: l.V.Size3
-                        },
-                        bold: !0,
-                        italic: !0
-                    }, Object(i.d)("Coming this May, free with the All-Access Pass", "EsportsInsiderRewards")))))
+                    }, a.createElement("ul", null, n)))
                 }, t = r.__decorate([Object(s.a)(f, {
                     options: function(e) {
                         return {
@@ -5465,4 +5392,4 @@ webpackJsonp([47], {
         }
     }
 });
-//# sourceMappingURL=pages.unsubscribe-28b8d7e71f61170ff521f9cf57f9571c.js.map
+//# sourceMappingURL=pages.unsubscribe-0a221327da6f0a47c2f4b69e093b9646.js.map

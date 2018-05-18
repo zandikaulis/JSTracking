@@ -2982,7 +2982,7 @@ webpackJsonp([102], {
             L = n("SZoP"),
             x = n("2KeS"),
             F = n("lK86"),
-            j = function(e) {
+            D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3001,7 +3001,7 @@ webpackJsonp([102], {
                     }, e))
                 }, t
             }(a.Component),
-            D = Object(x.d)(Object(l.d)("GiftRecipientIneligibleMessage"), Object(d.a)(F, {
+            j = Object(x.d)(Object(l.d)("GiftRecipientIneligibleMessage"), Object(d.a)(F, {
                 options: function(e) {
                     return {
                         variables: {
@@ -3013,7 +3013,7 @@ webpackJsonp([102], {
                 skip: function(e) {
                     return !e.recipientLogin || !e.subProductId
                 }
-            }))(j),
+            }))(D),
             M = n("daN3"),
             U = n("CwIZ"),
             A = (n("+YN9"), function(e) {
@@ -3093,7 +3093,7 @@ webpackJsonp([102], {
                             bold: !0,
                             type: k._49.Span
                         }, this.getFormattedDisplayName())
-                    }, "GiftRecipientCheckoutButton")))), a.createElement(D, {
+                    }, "GiftRecipientCheckoutButton")))), a.createElement(j, {
                         subProductId: this.props.selectedProductId,
                         recipientLogin: this.state.selectedUser ? this.state.selectedUser.login : null,
                         isEsportChannel: this.props.isEsportChannel
@@ -5592,7 +5592,7 @@ webpackJsonp([102], {
                     value: "video general report reason"
                 }
             },
-            j = {
+            D = {
                 content: {
                     getTitle: N.reportMessage,
                     getLabel: R.contentGeneral,
@@ -5608,7 +5608,7 @@ webpackJsonp([102], {
                     value: "message general report reason"
                 }
             },
-            D = i.__assign({}, j.content, {
+            j = i.__assign({}, D.content, {
                 getDescription: function() {
                     return Object(l.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
                 }
@@ -5774,19 +5774,19 @@ webpackJsonp([102], {
             Y = I,
             $ = {
                 video: F.identifyUser,
-                whisper: D,
-                chat: j.content,
+                whisper: j,
+                chat: D.content,
                 profile: M.content,
                 room: U,
                 "somewhere else": V.identifyLocation,
                 streamer: F.content,
                 "someone else in video": F.content,
-                "someone in chat": j.content,
+                "someone in chat": D.content,
                 general_video: F.general,
-                general_messaging: j.general,
+                general_messaging: D.general,
                 general_profile: M.general,
                 "channel owner": M.content,
-                "community member": j.content,
+                "community member": D.content,
                 "on twitch": M.content,
                 "another site": V.externalSite,
                 "twitch event": L.twitchEvent,
@@ -5816,14 +5816,14 @@ webpackJsonp([102], {
             X = {
                 CHANNEL_FEED_POST_REPORT: M.content,
                 COMMUNITY_REPORT: M.content,
-                CHAT_REPORT: j.content,
+                CHAT_REPORT: D.content,
                 CLIP_REPORT: F.content,
                 EVENT_REPORT: M.content,
                 EXTENSION_REPORT: M.content,
                 LIVE_UP_REPORT: M.content,
                 ROOM_REPORT: U,
-                WHISPER_REPORT: D,
-                VOD_COMMENT_REPORT: j.content
+                WHISPER_REPORT: j,
+                VOD_COMMENT_REPORT: D.content
             },
             J = "report-wizard-back",
             ee = "report-wizard-close",
@@ -6395,7 +6395,7 @@ webpackJsonp([102], {
             L = "directory-game__card_container",
             x = 5e3,
             F = 300,
-            j = function(e) {
+            D = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderVariation = function() {
@@ -6632,7 +6632,7 @@ webpackJsonp([102], {
         }), n.d(t, !1, function() {
             return L
         }), n.d(t, "b", function() {
-            return j
+            return D
         })
     },
     BJwU: function(e, t) {},
@@ -10983,8 +10983,8 @@ webpackJsonp([102], {
             L = n("BwgW"),
             x = n("knr3"),
             F = n("OAwv"),
-            j = n("eBiB"),
-            D = n("HM6l"),
+            D = n("eBiB"),
+            j = n("HM6l"),
             M = n("JpYe"),
             U = n("ZVME"),
             A = n("CSlQ"),
@@ -11079,12 +11079,12 @@ webpackJsonp([102], {
                     }, n.onTransitionToCollectionVod = function(e) {
                         if (n.props.onNavigationRequest) {
                             var t = {};
-                            e.vodId && (t.videoID = Object(j.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
+                            e.vodId && (t.videoID = Object(D.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
                         }
                     }, n.onTransitionToRecommendedVod = function(e) {
                         if (n.props.onNavigationRequest) {
                             var t = {};
-                            e.vodId && (t.videoID = Object(j.a)(e.vodId)), n.props.onNavigationRequest(t)
+                            e.vodId && (t.videoID = Object(D.a)(e.vodId)), n.props.onNavigationRequest(t)
                         }
                     }, n.onPersistentPlayerToggled = function() {
                         n.props.togglePersistentPlayer && n.props.togglePersistentPlayer()
@@ -11116,7 +11116,7 @@ webpackJsonp([102], {
                         playerInitialized: !1,
                         isFullScreen: !1,
                         playerPaused: !1,
-                        playerRefID: Object(D.a)()
+                        playerRefID: Object(j.a)()
                     }, n.playerType = t.playerTypeOverride || z.player, n.lastSetChannel = t.channelLogin, n.lastGDPRConsent = t.gdpr.consentGiven, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -11173,7 +11173,7 @@ webpackJsonp([102], {
                 }, t.prototype.render = function() {
                     var e = I("video-player", {
                             "video-player--theatre": this.props.theatreModeEnabled,
-                            "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible,
+                            "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible && !this.state.isFullScreen,
                             "video-player--logged-in": this.props.isLoggedIn,
                             "video-player--fullscreen": this.state.isFullScreen
                         }),
@@ -11450,7 +11450,7 @@ webpackJsonp([102], {
                 return i
             }),
             function(e) {
-                e.AnimatedThumbnails = "animated_thumbnails", e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding", e.ClipsViewing = "clips-viewing", e.ClipsEditing = "clips-editing", e.ClipsEmbed = "clips-embed"
+                e.AnimatedThumbnails = "animated_thumbnails", e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding", e.ClipsViewing = "clips-viewing", e.ClipsEditing = "clips-editing", e.ClipsEmbed = "clips-embed", e.Dashboard = "dashboard"
             }(r || (r = {}));
         var i, a = [r.ClipsEditing, r.ClipsViewing, r.ClipsEmbed];
         ! function(e) {
@@ -13760,4 +13760,4 @@ webpackJsonp([102], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-d73256b94cd16a1de9d6c099c67f12b7.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-7d328315bc55c433aefd2c9d29a29c6d.js.map

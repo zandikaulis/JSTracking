@@ -1544,9 +1544,8 @@ webpackJsonp([111], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     l.o.setPageTitle(Object(l.d)("Achievements", "DashboardAchievementsPage"))
                 }, t.prototype.render = function() {
-                    if (void 0 === this.props.data.channel) return null;
-                    var e = d.a.fromChannelData(this.props.data.channel);
-                    return a.createElement(h.a, {
+                    var e = d.a.fromChannelData(this.props.data);
+                    return e ? a.createElement(h.a, {
                         channel: e
                     }, function(t) {
                         return a.createElement(pe, i.__assign({}, t, {
@@ -1565,7 +1564,7 @@ webpackJsonp([111], {
                                 })
                             })
                         })
-                    })
+                    }) : null
                 }, t
             }(a.Component),
             ye = Object(r.d)(Object(o.a)(p, {
@@ -1748,4 +1747,4 @@ webpackJsonp([111], {
         var i, a = n("6sO2")
     }
 });
-//# sourceMappingURL=pages.achievements-eb7f578253f353a8efafe07348502b96.js.map
+//# sourceMappingURL=pages.achievements-340d398953ec631866c2ffbbb45b2d57.js.map

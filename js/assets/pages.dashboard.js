@@ -1019,7 +1019,7 @@ webpackJsonp([46], {
                         return r.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return this.props.data.channel ? (e = i.c.fromChannelData(this.props.data.channel), this.setState({
+                                    return (e = i.c.fromChannelData(this.props.data)) ? (this.setState({
                                         isLoading: !0,
                                         channel: e
                                     }), [4, Object(u.b)(e, this.props.interval)]) : [2];
@@ -2347,8 +2347,7 @@ webpackJsonp([46], {
                     }, Object(g.d)("Achievements", "DashboardNav"))), h.createElement("li", null, h.createElement(E.a, {
                         linkTo: "/" + this.props.channelName + "/dashboard/events"
                     }, Object(g.d)("Events", "DashboardNav"))), this.canAccessActivity && h.createElement("li", null, h.createElement(E.a, m.__assign({
-                        linkTo: "/" + this.props.channelName + "/dashboard/activity",
-                        external: !0
+                        linkTo: "/" + this.props.channelName + "/dashboard/activity"
                     }, R), Object(g.d)("Activity", "DashboardNav"))), h.createElement("li", null, h.createElement(E.a, {
                         linkTo: "/broadcast",
                         external: !0,
@@ -3177,15 +3176,17 @@ webpackJsonp([46], {
                     Object.assign(this, e)
                 }
                 return e.fromChannelData = function(t) {
-                    return new e({
-                        id: t.id,
-                        name: t.login,
+                    return t && t.channel && t.channel.id && t.channel.login ? new e({
+                        id: t.channel.id,
+                        name: t.channel.login,
                         role: function(e) {
-                            if (e.roles.isAffiliate) return r.d.Affiliate;
-                            if (e.roles.isPartner) return r.d.Partner;
+                            if (e && e.roles) {
+                                if (e.roles.isAffiliate) return r.d.Affiliate;
+                                if (e.roles.isPartner) return r.d.Partner
+                            }
                             return r.d.None
-                        }(t)
-                    })
+                        }(t.channel)
+                    }) : null
                 }, e
             }()
     },
@@ -4830,7 +4831,7 @@ webpackJsonp([46], {
                 return i(r.OpenStreamPicker)
             },
             u = function() {
-                return i(r.OpenStreamPicker)
+                return i(r.VisitPreviousStream)
             },
             c = function() {
                 return i(r.VisitNextStream)
@@ -7021,4 +7022,4 @@ webpackJsonp([46], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-7738c33c141b476aa99b28e1a775a939.js.map
+//# sourceMappingURL=pages.dashboard-fa729180880b90de9b76b7e4dc8a7e3c.js.map

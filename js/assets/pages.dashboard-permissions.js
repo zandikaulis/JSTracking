@@ -779,6 +779,7 @@ webpackJsonp([119], {
                                 },
                                 display: p.R.InlineFlex
                             }, o.createElement(k.a, {
+                                buttonType: p.B.Hollow,
                                 isPopout: !1,
                                 threadID: Object(Q.a)(t.props.user.id, e.id)
                             })), o.createElement(m.a, {
@@ -990,6 +991,7 @@ webpackJsonp([119], {
                                 },
                                 display: p.R.InlineFlex
                             }, o.createElement(k.a, {
+                                buttonType: p.B.Hollow,
                                 threadID: Object(Q.a)(t.props.user.id, e.id),
                                 isPopout: !1
                             })), o.createElement(p.v, {
@@ -1278,4 +1280,4 @@ webpackJsonp([119], {
         })
     }
 });
-//# sourceMappingURL=pages.dashboard-permissions-5e47ebc75852196aaa7373dff0aff0f3.js.map
+//# sourceMappingURL=pages.dashboard-permissions-9209c4a2c5d4085f28c323d4ec41431a.js.map

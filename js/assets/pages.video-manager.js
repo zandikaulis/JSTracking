@@ -13487,9 +13487,12 @@ webpackJsonp([97], {
                             newCustomThumbnailPreviewSrc: e.previewSrc
                         })
                     }, n.onFileSelected = function(e) {
-                        e.stopPropagation(), e && e.target && e.target.files && e.target.files[0] && n.setState({
-                            selectedFile: e.target.files[0]
-                        })
+                        e.stopPropagation(), e && e.target && e.target.files && e.target.files[0] && (e.target.files[0].type.match("image/") ? n.setState({
+                            selectedFile: e.target.files[0],
+                            thumbnailTypeError: !1
+                        }) : n.setState({
+                            thumbnailTypeError: !0
+                        }))
                     }, n.renderWhenSelecting = function() {
                         var e = cr(n.props.video.thumbnails, n.props.thumbnailURLToDelete, n.props.video.preview, n.state.newCustomThumbnailPreviewSrc),
                             t = e.map(function(e, t) {
@@ -13511,29 +13514,33 @@ webpackJsonp([97], {
                         }));
                         var a = {
                                 "thumbnail-selector-cropper": !0,
-                                "thumbnail-selector-cropper--error": null !== n.props.error
+                                "thumbnail-selector-cropper--error": n.state.thumbnailTypeError || null !== n.props.error
                             },
                             r = null;
-                        return n.props.error && (r = Bt.createElement(ge._35, {
-                            color: ge.K.Error,
-                            padding: {
-                                bottom: 1
-                            },
-                            display: ge.R.Flex,
-                            alignItems: ge.c.Center
-                        }, Bt.createElement(ge._8, {
-                            margin: {
-                                right: 1
-                            },
-                            display: ge.R.Flex
-                        }, Bt.createElement(ge._24, {
-                            asset: ge._25.Warning,
-                            type: ge._26.Inherit,
-                            width: 24,
-                            height: 24
-                        })), Bt.createElement(ge.Q, {
-                            "data-test-selector": mr.thumbnailErrorSelector
-                        }, n.props.error))), Bt.createElement("div", {
+                        if (n.props.error || n.state.thumbnailTypeError) {
+                            var i = Object(l.d)("Please select a valid image file.", "VideoManagerThumbnailSelectorCropper");
+                            r = Bt.createElement(ge._35, {
+                                color: ge.K.Error,
+                                padding: {
+                                    bottom: 1
+                                },
+                                display: ge.R.Flex,
+                                alignItems: ge.c.Center
+                            }, Bt.createElement(ge._8, {
+                                margin: {
+                                    right: 1
+                                },
+                                display: ge.R.Flex
+                            }, Bt.createElement(ge._24, {
+                                asset: ge._25.Warning,
+                                type: ge._26.Inherit,
+                                width: 24,
+                                height: 24
+                            })), Bt.createElement(ge.Q, {
+                                "data-test-selector": mr.thumbnailErrorSelector
+                            }, n.state.thumbnailTypeError ? i : n.props.error))
+                        }
+                        return Bt.createElement("div", {
                             className: Kn(a)
                         }, r, Bt.createElement("figure", {
                             className: "thumbnail-selector-cropper__thumbnail"
@@ -13568,7 +13575,8 @@ webpackJsonp([97], {
                         }) : (n.props.onThumbnailDelete(e), n.props.onSelectedThumbnailChange(ur(t, n.props.video.preview)))
                     }, n.state = {
                         selectedFile: null,
-                        newCustomThumbnailPreviewSrc: void 0
+                        newCustomThumbnailPreviewSrc: void 0,
+                        thumbnailTypeError: !1
                     }, n
                 }
                 return d.__extends(t, e), t.prototype.render = function() {
@@ -22370,4 +22378,4 @@ webpackJsonp([97], {
             r = "public"
     }
 });
-//# sourceMappingURL=pages.video-manager-7e9b032a237903819db141ff6947ae31.js.map
+//# sourceMappingURL=pages.video-manager-fd7f9ef35bd1801486eb1666b40b805a.js.map

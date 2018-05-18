@@ -13796,10 +13796,9 @@ webpackJsonp([95], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     l.o.setPageTitle(Object(l.d)("Channel Analytics", "DashboardChannelAnalyticsPage"))
                 }, t.prototype.render = function() {
-                    var e = this;
-                    if (!this.props.data.channel) return null;
-                    var t = M.c.fromChannelData(this.props.data.channel);
-                    return i.createElement(at, {
+                    var e = this,
+                        t = M.c.fromChannelData(this.props.data);
+                    return t ? i.createElement(at, {
                         location: this.props.location,
                         history: this.props.history
                     }, function(a) {
@@ -13818,7 +13817,7 @@ webpackJsonp([95], {
                                 render: ct.bind(e, t, a, n)
                             }))
                         })
-                    })
+                    }) : null
                 }, t
             }(i.Component),
             ut = function(e, t, a) {
@@ -20232,4 +20231,4 @@ webpackJsonp([95], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-analytics-768a99f0032f84b78cec2ae31e18e96b.js.map
+//# sourceMappingURL=pages.channel-analytics-fb5eaafa9ec7f9c2ca17fd4f302e854f.js.map
