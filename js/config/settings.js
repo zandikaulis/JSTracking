@@ -942,6 +942,18 @@ window.__twilightSettings = {
                 "value": "variant"
             }]
         },
+        "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7": {
+            "name": "twilight_clips_on_the_brain",
+            "v": 3824,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
             "name": "TWILIGHT_RAID_AUTO_JOIN",
             "v": 3413,
