@@ -12220,9 +12220,10 @@ webpackJsonp([34], {
                     }, this.renderHeader(), this.renderRoomPicker(), this.renderHiddenState(), this.renderChat(), this.renderCurrentRoom())
                 }, t.prototype.renderChat = function() {
                     if (this.props.isHidden && !this.props.isPopout) return null;
-                    var e = this.state.activeRoomID !== Si;
+                    var e = this.state.activeRoomID !== Si,
+                        t = this.props.bitsConfig.orderedActions.length > 0;
                     return l.createElement(v.a, {
-                        bitsConfig: this.props.bitsConfig,
+                        bitsConfig: t ? this.props.bitsConfig : void 0,
                         channelLogin: this.props.channelLogin,
                         clientID: c.a.authSettings.clientID,
                         isBackground: e,
@@ -46564,4 +46565,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-653a0bd065d50051707ec99e7c2f42d7.js.map
+//# sourceMappingURL=pages.popout-chat-8ef62278471913cb19022099f0b563c5.js.map

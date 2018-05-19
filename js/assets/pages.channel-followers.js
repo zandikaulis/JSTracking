@@ -9722,9 +9722,10 @@ webpackJsonp([44], {
                     }, this.renderHeader(), this.renderRoomPicker(), this.renderHiddenState(), this.renderChat(), this.renderCurrentRoom())
                 }, t.prototype.renderChat = function() {
                     if (this.props.isHidden && !this.props.isPopout) return null;
-                    var e = this.state.activeRoomID !== Si;
+                    var e = this.state.activeRoomID !== Si,
+                        t = this.props.bitsConfig.orderedActions.length > 0;
                     return l.createElement(v.a, {
-                        bitsConfig: this.props.bitsConfig,
+                        bitsConfig: t ? this.props.bitsConfig : void 0,
                         channelLogin: this.props.channelLogin,
                         clientID: c.a.authSettings.clientID,
                         isBackground: e,
@@ -34346,4 +34347,4 @@ webpackJsonp([44], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-followers-962e4c094f595697464e2e6e7495cea8.js.map
+//# sourceMappingURL=pages.channel-followers-f8cd155b6eca3f18b0ac205f893a2a41.js.map

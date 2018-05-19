@@ -12253,9 +12253,10 @@ webpackJsonp([93], {
                     }, this.renderHeader(), this.renderRoomPicker(), this.renderHiddenState(), this.renderChat(), this.renderCurrentRoom())
                 }, t.prototype.renderChat = function() {
                     if (this.props.isHidden && !this.props.isPopout) return null;
-                    var e = this.state.activeRoomID !== Sa;
+                    var e = this.state.activeRoomID !== Sa,
+                        t = this.props.bitsConfig.orderedActions.length > 0;
                     return l.createElement(_.a, {
-                        bitsConfig: this.props.bitsConfig,
+                        bitsConfig: t ? this.props.bitsConfig : void 0,
                         channelLogin: this.props.channelLogin,
                         clientID: u.a.authSettings.clientID,
                         isBackground: e,
@@ -59667,4 +59668,4 @@ webpackJsonp([93], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.live-267654c5779b075877b9210944abd3ea.js.map
+//# sourceMappingURL=pages.live-28ad858441cee23e6575600b5314d548.js.map
