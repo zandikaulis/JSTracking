@@ -1260,16 +1260,16 @@ window.SiteOptions = {
         },
         "3468778b-76fe-4cdf-add6-1be0dceea214": {
             "name": "TWILIGHT_DASHBOARD_LIVE",
-            "v": 3814,
+            "v": 3834,
             "t": 2,
             "groups": [{
                 "weight": 0,
                 "value": "disabled"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "twilight"
             }, {
-                "weight": 100,
+                "weight": 80,
                 "value": "ember"
             }]
         },
@@ -2489,13 +2489,13 @@ window.SiteOptions = {
         },
         "60936fd6-ef0a-49f1-9421-712f2ba02513": {
             "name": "TWILIGHT_DASHBOARD_SETTINGS_LAUNCH",
-            "v": 3798,
+            "v": 3833,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }]
         },
