@@ -38,7 +38,7 @@ window.__twilightSettings = {
     "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff"],
     "esport_insider_prime_bits_launch": "on",
     "esport_insider_prime_bits_launch_user_whitelist": ["186243532", "215590603"],
-    "esports_room_cheering_whitelist": ["27697171-staff"],
+    "esports_room_cheering_whitelist": ["27697171"],
     "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on", "wrestling", "hearthstone"],
     "extensions_bits_banner_enabled": true,
     "extensions_discovery_enabled": false,
