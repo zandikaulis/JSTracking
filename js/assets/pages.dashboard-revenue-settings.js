@@ -1,4 +1,4 @@
-webpackJsonp([103], {
+webpackJsonp([101], {
     "+0KR": function(e, t, n) {
         "use strict";
         var a = n("oR9V");
@@ -3014,6 +3014,7 @@ webpackJsonp([103], {
         };
         e.exports = n
     },
+    MQKV: function(e, t) {},
     NrhD: function(e, t) {
         var n = {
             kind: "Document",
@@ -8292,11 +8293,11 @@ webpackJsonp([103], {
                     }, i.createElement(N.Q, null, Object(h.d)("1 extra emoticon for $9.99 subscribers, and 1 extra for $24.99 subscribers.", "EmoticonsList")), i.createElement(N.Q, null, Object(h.d)("$24.99 subscribers will have access to both emoticons.", "EmoticonsList"))))), this.props.nextEmoticonLimit > 0 ? u : null)
                 }, t
             }(i.Component)),
-            G = (n("KcSS"), n("VRWR"));
+            z = (n("KcSS"), n("VRWR"));
         ! function(e) {
             e[e.None = 0] = "None", e[e.Error = 1] = "Error", e[e.Success = 2] = "Success"
         }(B || (B = {}));
-        var Y = function(e) {
+        var G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8537,7 +8538,7 @@ webpackJsonp([103], {
                     }, i.createElement(N.Q, null, Object(h.d)("Something went wrong and your request could not be processed at this time. Please try again later.", "ChatEmoticonsSettingsPage"))) : null
                 }, t
             }(i.Component),
-            z = Object(g.d)(Object(m.a)(G, {
+            Y = Object(g.d)(Object(m.a)(z, {
                 options: function(e) {
                     return {
                         variables: {
@@ -8545,8 +8546,8 @@ webpackJsonp([103], {
                         }
                     }
                 }
-            }))(Y),
-            H = function(e) {
+            }))(G),
+            q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refetch = function() {
@@ -8554,7 +8555,7 @@ webpackJsonp([103], {
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return this.props.data.user && this.props.data.user.id && this.props.data.user.emoticonPrefix && this.props.data.user.emoticonPrefix.state ? this.props.data.user && this.props.data.user.emoticonPrefix.state === T.ACTIVE ? i.createElement(z, {
+                    return this.props.data.user && this.props.data.user.id && this.props.data.user.emoticonPrefix && this.props.data.user.emoticonPrefix.state ? this.props.data.user && this.props.data.user.emoticonPrefix.state === T.ACTIVE ? i.createElement(Y, {
                         channelName: this.props.match.params.channelName,
                         emoticonPrefix: this.props.data.user.emoticonPrefix.name
                     }) : i.createElement(I, {
@@ -8570,7 +8571,7 @@ webpackJsonp([103], {
                     })
                 }, t
             }(i.Component),
-            q = Object(g.d)(Object(m.a)(w, {
+            H = Object(g.d)(Object(m.a)(w, {
                 options: function(e) {
                     return {
                         variables: {
@@ -8578,7 +8579,7 @@ webpackJsonp([103], {
                         }
                     }
                 }
-            }))(H),
+            }))(q),
             X = n("n63+"),
             K = n("d4P3"),
             $ = function(e) {
@@ -10258,7 +10259,7 @@ webpackJsonp([103], {
                     }
                 }
             }))(We),
-            Ge = function(e) {
+            ze = function(e) {
                 var t = e.match;
                 return i.createElement(N._8, null, i.createElement(S.a, {
                     title: Object(h.d)("Custom Cheermote", "CheermotesSettingsPage"),
@@ -10270,10 +10271,10 @@ webpackJsonp([103], {
                     channelName: t.params.channelName
                 })))
             },
-            Ye = n("j7/Y"),
-            ze = n("w9tK"),
-            He = n("vH/s"),
-            qe = n("RH2O"),
+            Ge = n("j7/Y"),
+            Ye = n("w9tK"),
+            qe = n("vH/s"),
+            He = n("RH2O"),
             Xe = n("V5M+"),
             Ke = n("7iMl"),
             $e = (n("pBCJ"), "GAME_COMMERCE"),
@@ -10449,12 +10450,12 @@ webpackJsonp([103], {
                     }))
                 }, t
             }(i.Component));
-        var rt = Object(qe.b)(null, function(e) {
+        var rt = Object(He.b)(null, function(e) {
             return Object(g.b)({
                 closeModal: Xe.c
             }, e)
         })(at);
-        var it, ot, st, lt, ct, dt, ut, mt, pt = Object(qe.b)(null, function(e) {
+        var it, ot, st, lt, ct, dt, ut, mt, pt = Object(He.b)(null, function(e) {
                 return Object(g.b)({
                     showAmendmentModal: function(e) {
                         var t = r.__rest(e, []);
@@ -10478,9 +10479,9 @@ webpackJsonp([103], {
             }(i.PureComponent),
             ht = Object(g.d)(Object(p.d)("CommerceAmendmentPage", {
                 autoReportInteractive: !0,
-                destination: ze.a.DashboardSettingsRevenueGameCommerce
-            }), Object(Ye.a)({
-                location: He.PageviewLocation.DashboardSettingsRevenueGameCommerce
+                destination: Ye.a.DashboardSettingsRevenueGameCommerce
+            }), Object(Ge.a)({
+                location: qe.PageviewLocation.DashboardSettingsRevenueGameCommerce
             }))(gt),
             bt = n("j0yR"),
             ft = n("K+dm"),
@@ -10501,9 +10502,9 @@ webpackJsonp([103], {
             }(i.Component),
             vt = Object(g.d)(Object(p.d)("CommerceAmendmentV2Page", {
                 autoReportInteractive: !0,
-                destination: ze.a.DashboardSettingsRevenueGameCommerceV2
-            }), Object(Ye.a)({
-                location: He.PageviewLocation.DashboardSettingsRevenueGameCommerceV2
+                destination: Ye.a.DashboardSettingsRevenueGameCommerceV2
+            }), Object(Ge.a)({
+                location: qe.PageviewLocation.DashboardSettingsRevenueGameCommerceV2
             }))(Et),
             yt = n("ew1p"),
             St = n("SR0I"),
@@ -10929,7 +10930,7 @@ webpackJsonp([103], {
                     linkTo: "/" + e.channelName + "/dashboard/settings/revenue/merch-by-amazon"
                 })))
             };
-        var Bt, Vt = Object(qe.b)(function(e) {
+        var Bt, Vt = Object(He.b)(function(e) {
                 var t = Object(Lt.c)(e);
                 return {
                     isStaff: !!(t && t.roles && t.roles.isStaff)
@@ -10954,11 +10955,11 @@ webpackJsonp([103], {
                 }, t
             }(i.Component),
             Qt = n("9FLI"),
-            Gt = n("exGi");
+            zt = n("exGi");
         ! function(e) {
             e[e.AD_FREE_VIEWING = 0] = "AD_FREE_VIEWING", e[e.IGNORE_SLOW_MODE = 1] = "IGNORE_SLOW_MODE", e[e.SUBSCRIBER_ONLY_CHAT = 2] = "SUBSCRIBER_ONLY_CHAT", e[e.SUBSCRIBER_ONLY_ARCHIVES = 3] = "SUBSCRIBER_ONLY_ARCHIVES"
         }(Bt || (Bt = {}));
-        var Yt = function(e) {
+        var Gt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.toggleBenefit = function(e, n) {
@@ -11040,7 +11041,7 @@ webpackJsonp([103], {
                     })))
                 }, t
             }(i.Component),
-            zt = Object(g.d)(Object(m.a)(Qt, {
+            Yt = Object(g.d)(Object(m.a)(Qt, {
                 options: function(e) {
                     return {
                         variables: {
@@ -11048,11 +11049,11 @@ webpackJsonp([103], {
                         }
                     }
                 }
-            }), Object(m.a)(Gt, {
+            }), Object(m.a)(zt, {
                 name: "updateSubscriptionProduct"
-            }))(Yt),
-            Ht = n("nQ9n"),
-            qt = function(e) {
+            }))(Gt),
+            qt = n("nQ9n"),
+            Ht = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -11067,7 +11068,7 @@ webpackJsonp([103], {
                         fullHeight: !0
                     }, i.createElement(jt, {
                         channelName: this.channelName
-                    }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(i.Fragment, null, i.createElement(zt, {
+                    }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(i.Fragment, null, i.createElement(Yt, {
                         channelName: this.channelName
                     }), i.createElement(wt, {
                         channelName: this.channelName,
@@ -11103,10 +11104,10 @@ webpackJsonp([103], {
             }(i.Component),
             Xt = Object(o.compose)(Object(p.d)("DashboardRevenueSettingsIndexPage", {
                 autoReportInteractive: !0,
-                destination: ze.a.DashboardSettingsRevenue
-            }), Object(Ye.a)({
-                location: He.PageviewLocation.DashboardRevenueSettings
-            }), Object(m.a)(Ht, {
+                destination: Ye.a.DashboardSettingsRevenue
+            }), Object(Ge.a)({
+                location: qe.PageviewLocation.DashboardRevenueSettings
+            }), Object(m.a)(qt, {
                 options: function(e) {
                     return {
                         variables: {
@@ -11114,7 +11115,7 @@ webpackJsonp([103], {
                         }
                     }
                 }
-            }))(qt),
+            }))(Ht),
             Kt = n("vNxz"),
             $t = function(e) {
                 return i.createElement(N._35, {
@@ -11174,7 +11175,7 @@ webpackJsonp([103], {
                     })
                 }, t
             }(i.Component);
-        var Zt, en = Object(qe.b)(null, function(e) {
+        var Zt, en = Object(He.b)(null, function(e) {
                 return Object(g.b)({
                     closeModal: Xe.c
                 }, e)
@@ -11455,12 +11456,12 @@ webpackJsonp([103], {
                     })
                 }, t
             }(i.Component);
-        var gn = Object(qe.b)(null, function(e) {
+        var gn = Object(He.b)(null, function(e) {
             return Object(g.b)({
                 closeModal: Xe.c
             }, e)
         })(pn);
-        var hn, bn = Object(qe.b)(null, function(e, t) {
+        var hn, bn = Object(He.b)(null, function(e, t) {
                 return Object.assign(Object(g.b)({
                     showDeleteBadgeModal: function() {
                         return Object(Xe.d)(gn, {
@@ -11920,7 +11921,7 @@ webpackJsonp([103], {
                     }
                 }
             }))(An);
-        var Pn, In, wn = Object(qe.b)(null, function(e) {
+        var Pn, In, wn = Object(He.b)(null, function(e) {
                 return Object(g.b)({
                     showUploadBadgeModal: function(e) {
                         var t = r.__rest(e, []);
@@ -11951,9 +11952,9 @@ webpackJsonp([103], {
             }(i.Component),
             xn = Object(g.d)(Object(p.d)("MerchByAmazonPage", {
                 autoReportInteractive: !0,
-                destination: ze.a.DashboardSettingsRevenueMerchByAmazon
-            }), Object(Ye.a)({
-                location: He.PageviewLocation.DashboardSettingsRevenueMerchByAmazon
+                destination: Ye.a.DashboardSettingsRevenueMerchByAmazon
+            }), Object(Ge.a)({
+                location: qe.PageviewLocation.DashboardSettingsRevenueMerchByAmazon
             }))(Rn),
             Dn = n("OAwv"),
             Fn = n("RweG"),
@@ -12096,7 +12097,7 @@ webpackJsonp([103], {
                     buttonLabel: Object(h.d)("Next", "PartnerRedoInfo")
                 }, "PartnerRedoInfo")))
             },
-            Gn = function(e) {
+            zn = function(e) {
                 return i.createElement(N._8, {
                     position: N._15.Relative
                 }, i.createElement(N._8, {
@@ -12118,8 +12119,8 @@ webpackJsonp([103], {
                     }
                 }))
             },
-            Yn = n("U5GC"),
-            zn = function(e) {
+            Gn = n("U5GC"),
+            Yn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -12213,7 +12214,7 @@ webpackJsonp([103], {
                             case yt.OnboardEntity.StandardPartner:
                             case yt.OnboardEntity.PremiumPartner:
                                 var e = this.props.data.currentUser.programAgreement;
-                                return e && i.createElement(Gn, {
+                                return e && i.createElement(zn, {
                                     body: e.body
                                 });
                             case yt.OnboardEntity.CustomPartner:
@@ -12256,7 +12257,7 @@ webpackJsonp([103], {
                     configurable: !0
                 }), t
             }(i.Component),
-            Hn = Object(g.d)(Object(m.a)(Yn, {
+            qn = Object(g.d)(Object(m.a)(Gn, {
                 name: "data",
                 options: function(e) {
                     return {
@@ -12267,8 +12268,8 @@ webpackJsonp([103], {
                 }
             }), Object(m.a)(Ln, {
                 name: "acceptProgramAgreement"
-            }))(zn),
-            qn = function(e) {
+            }))(Yn),
+            Hn = function(e) {
                 if (e.status === In.Completed) return null;
                 var t;
                 if (e.status === In.UnderReview) switch (e.onboardEntity) {
@@ -12488,7 +12489,7 @@ webpackJsonp([103], {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: 2
-                }, i.createElement(qn, {
+                }, i.createElement(Hn, {
                     onboardEntity: this.props.onboardEntity,
                     status: this.payoutMethodStatus
                 }), i.createElement(Kn, {
@@ -12568,7 +12569,7 @@ webpackJsonp([103], {
                 configurable: !0
             }), t
         }(i.Component);
-        var ia, oa = Object(g.d)(Object(qe.b)(null, function(e) {
+        var ia, oa = Object(g.d)(Object(He.b)(null, function(e) {
                 return Object(g.b)({
                     showPayoutMethodModal: function() {
                         return Object(Xe.d)(aa, null)
@@ -12599,14 +12600,25 @@ webpackJsonp([103], {
                     email: "",
                     confirmEmail: "",
                     companyName: "",
-                    showEmailErrors: !1
-                }, t.showEmailErrors = function() {
+                    emailFocused: !1,
+                    confirmEmailFocused: !1
+                }, t.onEmailBlur = function() {
                     t.setState({
-                        showEmailErrors: !0
+                        emailFocused: !1,
+                        confirmEmailFocused: !1
                     })
-                }, t.hideEmailErrors = function() {
+                }, t.onEmailFocus = function() {
                     t.setState({
-                        showEmailErrors: !1
+                        emailFocused: !0,
+                        confirmEmailFocused: !0
+                    })
+                }, t.onConfirmEmailBlur = function() {
+                    t.setState({
+                        confirmEmailFocused: !1
+                    })
+                }, t.onConfirmEmailFocus = function() {
+                    t.setState({
+                        confirmEmailFocused: !0
                     })
                 }, t.updateFirstName = function(e) {
                     var n = e.target.value;
@@ -12666,8 +12678,7 @@ webpackJsonp([103], {
                         bottom: 2
                     }
                 }, i.createElement(N.W, {
-                    label: Object(h.d)("Channel Name", "ContactInfo"),
-                    orientation: N.X.Horizontal
+                    label: Object(h.d)("Channel Name", "ContactInfo")
                 }, i.createElement(N._4, {
                     type: N._5.Text,
                     value: this.props.channelName,
@@ -12678,7 +12689,6 @@ webpackJsonp([103], {
                     }
                 }, i.createElement(N.W, {
                     label: Object(h.d)("First Name", "ContactInfo"),
-                    orientation: N.X.Horizontal,
                     error: !sa.test(this.state.firstName),
                     errorMessage: this.invalidFormatErrorMessage,
                     "data-test-selector": ia.FIRST_NAME
@@ -12695,7 +12705,6 @@ webpackJsonp([103], {
                 }, i.createElement(N.W, {
                     label: Object(h.d)("Middle Name", "ContactInfo"),
                     labelOptional: this.optionalText,
-                    orientation: N.X.Horizontal,
                     error: !sa.test(this.state.middleName),
                     errorMessage: this.invalidFormatErrorMessage,
                     "data-test-selector": ia.MIDDLE_NAME
@@ -12711,7 +12720,6 @@ webpackJsonp([103], {
                 }, i.createElement(N.W, {
                     label: Object(h.d)("Last Name", "ContactInfo"),
                     hint: Object(h.d)("Please type your full legal name. This must be the name shown on your income tax return used to report income.", "ContactInfo"),
-                    orientation: N.X.Horizontal,
                     error: !sa.test(this.state.lastName),
                     errorMessage: this.invalidFormatErrorMessage,
                     "data-test-selector": ia.LAST_NAME
@@ -12724,7 +12732,7 @@ webpackJsonp([103], {
                     margin: {
                         bottom: 2
                     }
-                }, i.createElement(Ya, {
+                }, i.createElement(Ga, {
                     onMonthChange: this.props.onMonthChange,
                     onDayChange: this.props.onDayChange,
                     onYearChange: this.props.onYearChange
@@ -12735,38 +12743,35 @@ webpackJsonp([103], {
                 }, i.createElement(N.W, {
                     label: Object(h.d)("Email", "ContactInfo"),
                     hint: Object(h.d)("We will use this email to send you important tax documentation and payout information.", "ContactInfo"),
-                    orientation: N.X.Horizontal,
-                    error: !!this.state.email && !la.test(this.state.email) && this.state.showEmailErrors,
+                    error: this.showEmailError,
                     errorMessage: this.invalidEmailErrorMessage,
                     "data-test-selector": ia.EMAIL
                 }, i.createElement(N._4, {
                     type: N._5.Email,
                     value: this.state.email,
                     onChange: this.updateEmail,
-                    onFocus: this.hideEmailErrors,
-                    onBlur: this.showEmailErrors,
-                    error: !!this.state.email && !la.test(this.state.email) && this.state.showEmailErrors
+                    onFocus: this.onEmailFocus,
+                    onBlur: this.onEmailBlur,
+                    error: this.showEmailError
                 }))), i.createElement(N._8, {
                     margin: {
                         bottom: 2
                     }
                 }, i.createElement(N.W, {
                     label: Object(h.d)("Confirm Email", "ContactInfo"),
-                    orientation: N.X.Horizontal,
-                    error: this.state.email !== this.state.confirmEmail && this.state.showEmailErrors,
+                    error: this.showConfirmEmailError,
                     errorMessage: Object(h.d)("Email addresses must match.", "ContactInfo"),
                     "data-test-selector": ia.CONFIRM_EMAIL
                 }, i.createElement(N._4, {
                     type: N._5.Email,
                     value: this.state.confirmEmail,
                     onChange: this.updateConfirmEmail,
-                    onFocus: this.hideEmailErrors,
-                    onBlur: this.showEmailErrors,
-                    error: this.state.email !== this.state.confirmEmail && this.state.showEmailErrors
+                    onFocus: this.onConfirmEmailFocus,
+                    onBlur: this.onConfirmEmailBlur,
+                    error: this.showConfirmEmailError
                 }))), i.createElement(N._8, null, i.createElement(N.W, {
                     label: Object(h.d)("Company Legal Name", "ContactInfo"),
                     labelOptional: this.optionalText,
-                    orientation: N.X.Horizontal,
                     error: !sa.test(this.state.companyName),
                     errorMessage: this.invalidFormatErrorMessage,
                     "data-test-selector": ia.COMPANY_LEGAL_NAME
@@ -12776,7 +12781,19 @@ webpackJsonp([103], {
                     onChange: this.updateCompanyName,
                     error: !sa.test(this.state.companyName)
                 }))))
-            }, t
+            }, Object.defineProperty(t.prototype, "showEmailError", {
+                get: function() {
+                    return !this.state.emailFocused && !!this.state.email && !la.test(this.state.email)
+                },
+                enumerable: !0,
+                configurable: !0
+            }), Object.defineProperty(t.prototype, "showConfirmEmailError", {
+                get: function() {
+                    return !this.state.emailFocused && !this.state.confirmEmailFocused && !!this.state.email && this.state.email !== this.state.confirmEmail
+                },
+                enumerable: !0,
+                configurable: !0
+            }), t
         }(i.Component);
         ! function(e) {
             e.PARENT_NAME = "parent-info__parent-name", e.PARENT_EMAIL = "parent-info__parent-email"
@@ -12822,7 +12839,6 @@ webpackJsonp([103], {
                     }
                 }, i.createElement(N.W, {
                     label: Object(h.d)("Parent or Legal Guardian Name", "ParentInfo"),
-                    orientation: N.X.Horizontal,
                     error: !sa.test(this.state.parentName),
                     errorMessage: this.invalidFormatErrorMessage,
                     "data-test-selector": ma.PARENT_NAME
@@ -12834,7 +12850,6 @@ webpackJsonp([103], {
                 }))), i.createElement(N._8, null, i.createElement(N.W, {
                     label: Object(h.d)("Parent or Legal Guardian Email", "ParentInfo"),
                     hint: Object(h.d)("Individuals under the age of 18 must provide parent or legal guardian information.", "ParentInfo"),
-                    orientation: N.X.Horizontal,
                     error: !!this.state.parentEmail && !la.test(this.state.parentEmail),
                     errorMessage: this.invalidEmailErrorMessage,
                     "data-test-selector": ma.PARENT_EMAIL
@@ -13101,21 +13116,23 @@ webpackJsonp([103], {
                     enumerable: !0,
                     configurable: !0
                 }), t.prototype.render = function() {
-                    return i.createElement(N._8, {
-                        padding: 2
-                    }, i.createElement(N._8, {
-                        margin: {
-                            bottom: 3
+                    return i.createElement(i.Fragment, null, i.createElement(N._8, {
+                        padding: {
+                            x: 2,
+                            top: 2,
+                            bottom: 0
                         }
                     }, i.createElement(N.Q, {
-                        type: N._49.P
+                        fontSize: N.V.Size6
                     }, Object(h.d)("Your permanent address is your primary residential address. It is not your P.O. Box or mailing address. If you are a college student studying in another state, but still have a permanent address in your home state (such as your parents' house), then your home state is your principal residence address. If you are registering on behalf of a corporation, please input the primary headquarters address.", "PermanentAddress"))), i.createElement(N._8, {
+                        className: "payout-onboarding-registration__form-container",
+                        padding: 2
+                    }, i.createElement(N._8, {
                         margin: {
                             bottom: 2
                         }
                     }, i.createElement(N.W, {
-                        label: Object(h.d)("Country", "PermanentAddress"),
-                        orientation: N.X.Horizontal
+                        label: Object(h.d)("Country", "PermanentAddress")
                     }, i.createElement(N._30, {
                         defaultValue: "",
                         onChange: this.handleCountryChange,
@@ -13129,7 +13146,6 @@ webpackJsonp([103], {
                         }
                     }, i.createElement(N.W, {
                         label: Object(h.d)("Street Address", "PermanentAddress"),
-                        orientation: N.X.Horizontal,
                         error: !sa.test(this.state.streetAddress),
                         errorMessage: this.invalidFormatErrorMessage,
                         "data-test-selector": va.STREET_ADDRESS
@@ -13145,7 +13161,6 @@ webpackJsonp([103], {
                     }, i.createElement(N.W, {
                         label: Object(h.d)("Street Address 2", "PermanentAddress"),
                         labelOptional: this.optionalText,
-                        orientation: N.X.Horizontal,
                         error: !sa.test(this.state.streetAddress2),
                         errorMessage: this.invalidFormatErrorMessage,
                         "data-test-selector": va.STREET_ADDRESS_2
@@ -13160,7 +13175,6 @@ webpackJsonp([103], {
                         }
                     }, i.createElement(N.W, {
                         label: Object(h.d)("City or Town", "PermanentAddress"),
-                        orientation: N.X.Horizontal,
                         error: !sa.test(this.state.city),
                         errorMessage: this.invalidFormatErrorMessage,
                         "data-test-selector": va.CITY
@@ -13176,7 +13190,6 @@ webpackJsonp([103], {
                     }, i.createElement(N.W, {
                         label: Object(h.d)("State/Province", "PermanentAddress"),
                         labelOptional: "US" !== this.state.country && "CA" !== this.state.country ? this.optionalText : void 0,
-                        orientation: N.X.Horizontal,
                         error: !sa.test(this.state.state),
                         errorMessage: this.invalidFormatErrorMessage,
                         "data-test-selector": va.STATE
@@ -13192,7 +13205,6 @@ webpackJsonp([103], {
                     }))), i.createElement(N._8, null, i.createElement(N.W, {
                         label: Object(h.d)("Zip Code/Postal Code", "PermanentAddress"),
                         labelOptional: "US" !== this.state.country ? this.optionalText : void 0,
-                        orientation: N.X.Horizontal,
                         error: !sa.test(this.state.postal),
                         errorMessage: this.invalidFormatErrorMessage,
                         "data-test-selector": va.POSTAL
@@ -13202,7 +13214,7 @@ webpackJsonp([103], {
                         onChange: this.handlePostalChange,
                         onBlur: this.formatUniquePostalCodes,
                         error: !sa.test(this.state.postal)
-                    }))))
+                    })))))
                 }, t
             }(i.Component),
             Na = function() {
@@ -13222,33 +13234,33 @@ webpackJsonp([103], {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("Financial information is required to validate your identity. Further, providing this information enables you to participate with any monetization features that may become available.", "RegistrationInfoBrick"))), i.createElement(N._8, {
                     margin: {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("Twitch is a subsidiary of Amazon and will use some Amazon tools to register and approve your information for Extensions development.", "RegistrationInfoBrick"))), i.createElement(N._8, {
                     margin: {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Na())), i.createElement(N._8, {
                     margin: {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("If you are registering on behalf of a company, please fill in the company's information. If you are an individual, please use your personal information.", "RegistrationInfoBrick"))), i.createElement(N._8, {
                     margin: {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("The form must match your tax information exactly and any inconsistencies may cause delays in your registration approval.", "RegistrationInfoBrick"))), i.createElement(N._8, null, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("You will be able to edit this page later if your information changes.", "RegistrationInfoBrick"))))
             },
             Oa = function() {
@@ -13257,24 +13269,19 @@ webpackJsonp([103], {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("Twitch is a subsidiary of Amazon, and will use some Amazon tools to help you get paid, including the forms on this page.", "RegistrationInfoBrick"))), i.createElement(N._8, {
                     margin: {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Na())), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("This form must match your tax information exactly, and any inconsistencies may cause delays in your Payout Registration approval. Don't worry, you will still be able to edit this page later on if your information changes.", "RegistrationInfoBrick")))
             },
             Aa = function(e) {
-                return i.createElement(N._35, {
-                    padding: 2,
-                    borderMarked: !0,
-                    background: N.n.Base,
-                    elevation: 1
-                }, e.onboardEntity === yt.OnboardEntity.ExtensionsDeveloper ? i.createElement(Ta, null) : i.createElement(Oa, null))
+                return i.createElement(i.Fragment, null, e.onboardEntity === yt.OnboardEntity.ExtensionsDeveloper ? i.createElement(Ta, null) : i.createElement(Oa, null))
             };
         ! function(e) {
             e.MONTH = "select-birthdate__month", e.YEAR = "select-birthdate__year", e.DAY = "select-birthdate__day"
@@ -13283,7 +13290,7 @@ webpackJsonp([103], {
             value: Ia,
             key: "year-" + Ia
         }, Ia));
-        var wa, Ra, xa, Da, Fa, ja, La, Ma, Ua, Ba, Va, Wa, Qa, Ga, Ya = function(e) {
+        var wa, Ra, xa, Da, Fa, ja, La, Ma, Ua, Ba, Va, Wa, Qa, za, Ga = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -13329,11 +13336,10 @@ webpackJsonp([103], {
                     return i.createElement(N.W, {
                         label: Object(h.d)("Date of Birth", "SelectBirthdate"),
                         hint: Object(h.d)("If you are registering on behalf of a company, please use your personal date of birth.", "SelectBirthdate"),
-                        orientation: N.X.Horizontal,
                         error: this.isUserYoungerThan(13),
                         errorMessage: Object(h.d)("You must be 13 or older to continue.", "SelectBirthdate")
                     }, i.createElement(N.Y, {
-                        gutterSize: N.Z.Medium
+                        gutterSize: N.Z.Small
                     }, i.createElement(N.L, {
                         cols: {
                             default: 4
@@ -13394,8 +13400,8 @@ webpackJsonp([103], {
                     }, Object(h.d)("Year", "SelectBirthdate")), this.yearSelections))))
                 }, t
             }(i.Component),
-            za = n("pMje"),
-            Ha = function(e) {
+            Ya = n("pMje"),
+            qa = (n("MQKV"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -13552,7 +13558,9 @@ webpackJsonp([103], {
                         onboardEntity: this.props.onboardEntity
                     })), i.createElement(Vn, {
                         title: Object(h.d)("Contact Info", "PayoutOnboardingRegistration")
-                    }), i.createElement(pa, {
+                    }), i.createElement(N._8, {
+                        className: "payout-onboarding-registration__form-container"
+                    }, i.createElement(pa, {
                         channelName: this.props.channelName,
                         onFirstNameChange: this.updateFirstName,
                         onMiddleNameChange: this.updateMiddleName,
@@ -13563,7 +13571,7 @@ webpackJsonp([103], {
                         onEmailChange: this.updateEmail,
                         onConfirmEmailChange: this.updateConfirmEmail,
                         onCompanyNameChange: this.updateCompanyName
-                    }), i.createElement(Vn, {
+                    })), i.createElement(Vn, {
                         title: Object(h.d)("Permanent Address", "PayoutOnboardingRegistration")
                     }), i.createElement(_a, {
                         onCountryChange: this.updateCountry,
@@ -13574,10 +13582,12 @@ webpackJsonp([103], {
                         onPostalChange: this.updatePostal
                     }), this.isUserYoungerThan(18) && i.createElement(i.Fragment, null, i.createElement(Vn, {
                         title: Object(h.d)("Parent Info", "PayoutOnboardingRegistration")
-                    }), i.createElement(ga, {
+                    }), i.createElement(N._8, {
+                        className: "payout-onboarding-registration__form-container"
+                    }, i.createElement(ga, {
                         onParentNameChange: this.updateParentName,
                         onParentEmailChange: this.updateParentEmail
-                    })))
+                    }))))
                 }, Object.defineProperty(t.prototype, "isRegistrationComplete", {
                     get: function() {
                         return this.requiredFieldsEntered && this.validPermanentAddress && this.validEmail && this.validAge && this.validInputFormat
@@ -13615,10 +13625,10 @@ webpackJsonp([103], {
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(i.Component),
-            qa = Object(g.d)(Object(m.a)(za, {
+            }(i.Component)),
+            Ha = Object(g.d)(Object(m.a)(Ya, {
                 name: "registerPayoutInformation"
-            }))(Ha),
+            }))(qa),
             Xa = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -13888,7 +13898,7 @@ webpackJsonp([103], {
             };
         ! function(e) {
             e.START_OVER_BUTTON = "progress-brick__start-over-button", e.CONTINUE_BUTTON = "progress-brick__continue-button"
-        }(Ga || (Ga = {}));
+        }(za || (za = {}));
         var dr, ur, mr = ((dr = {})[yt.WorkflowState.AGREEMENT_NOT_STARTED] = yt.OnboardStep.Agreement, dr[yt.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.ROYALTY_TAX_INTERVIEW_MISMATCH] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.ROYALTY_TAX_INTERVIEW_FAILED] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.SERVICE_TAX_INTERVIEW_NOT_STARTED] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.SERVICE_TAX_INTERVIEW_PENDING] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.SERVICE_TAX_INTERVIEW_MISMATCH] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.SERVICE_TAX_INTERVIEW_FAILED] = yt.OnboardStep.TaxInterview, dr[yt.WorkflowState.PAYOUT_METHOD_NOT_STARTED] = yt.OnboardStep.PayoutMethod, dr[yt.WorkflowState.PAYOUT_METHOD_PENDING] = yt.OnboardStep.PayoutMethod, dr[yt.WorkflowState.REVIEW_PENDING] = yt.OnboardStep.Review, dr),
             pr = function(e) {
                 return i.createElement(N._35, {
@@ -13911,12 +13921,12 @@ webpackJsonp([103], {
                         right: 1
                     }
                 }, i.createElement(N.v, {
-                    "data-test-selector": Ga.CONTINUE_BUTTON,
+                    "data-test-selector": za.CONTINUE_BUTTON,
                     onClick: function() {
                         return e.updateStepDisplayed(mr[e.workflowState])
                     }
                 }, Object(h.d)("Continue", "PayoutOnboardingSummary"))), i.createElement(N.v, {
-                    "data-test-selector": Ga.START_OVER_BUTTON,
+                    "data-test-selector": za.START_OVER_BUTTON,
                     type: N.B.Hollow,
                     onClick: e.showStartOverModal
                 }, Object(h.d)("Start Over", "PayoutOnboardingSummary")))))
@@ -14259,17 +14269,17 @@ webpackJsonp([103], {
                 switch (e.taxStatus) {
                     case Lr.Pending:
                         t = i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Your tax information is currently under review. This typically takes a few minutes.", "TaxInfoBrick"));
                         break;
                     case Lr.ActionRequired:
                         t = i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Looks like you may need to mail documentation to Amazon to complete this process. However, you may be able to avoid this by consenting to electronic signature of your tax form. To do this, click the button below to retake the tax interview and be sure to check the box to consent to electronic signature.", "TaxInfoBrick"));
                         break;
                     case Lr.Failed:
                         t = i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("We could not successfully validate your tax information.", "TaxInfoBrick"));
                         break;
                     case Lr.Mismatch:
@@ -14278,43 +14288,43 @@ webpackJsonp([103], {
                                 bottom: 1
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Thank you for completing your tax interview. However, the details you have just entered into the tax form does not match the information on file from Step 1 (Registration). Your tax information from Steps 1 and 3 MUST match in order to receive payouts from Twitch.", "TaxInfoBrick"))), i.createElement(N._2, {
                             margin: {
                                 bottom: 1
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Sr(1))), i.createElement(N._8, {
                             margin: {
                                 left: 1,
                                 bottom: 1
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Step 1 user is John Doe from the United States of America.", "TaxInfoBrick")), i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Step 3 tax information should be for John Doe from the United States of America.", "TaxInfoBrick")), i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Step 4 selected payout method is check paid to John Doe from the United States of America.", "TaxInfoBrick"))), i.createElement(N._2, {
                             margin: {
                                 bottom: 1
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Sr(2))), i.createElement(N._8, {
                             margin: {
                                 left: 1,
                                 bottom: 1
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Step 1 user is John Doe working for Cool Gaming, Inc. from France.", "TaxInfoBrick")), i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Step 3 tax information should be for Cool Gaming, Inc. from France.", "TaxInfoBrick")), i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Step 4 selected payout method is a wire paid to Cool Gaming, Inc. from France.", "TaxInfoBrick"))), i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Please see the list of errors below for the specific fields that require correction.", "TaxInfoBrick")));
                         break;
                     default:
@@ -14336,49 +14346,49 @@ webpackJsonp([103], {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("If you prefer not to consent to electronic signature, you will be required to mail additional documentation to Amazon. As a reminder, Twitch is a subsidiary of Amazon, and Amazon handles our tax forms. To proceed, please follow these instructions:", "TaxActionRequiredInfo"))), i.createElement(N._8, {
                     margin: {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("1. Click the button below to retake the tax information interview.", "TaxActionRequiredInfo")), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("2. Proceed to the page that asks you to print out a hardcopy of the tax form and print out the form.", "TaxActionRequiredInfo")), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("3. Sign the form with a blue or black pen.", "TaxActionRequiredInfo")), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("4. Mail the hardcopy of your tax form to:", "TaxActionRequiredInfo"))), i.createElement(N._8, {
                     margin: {
                         left: 2,
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, "Amazon"), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, "Attn: FinOps Tax"), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, "P.O. Box 80683"), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, "Seattle, WA, 98108-0683"), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, "U.S.A.")), i.createElement(N._8, {
                     margin: {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("To assist Amazon with locating your account, please write the following at the top of the form in the white space:", "TaxActionRequiredInfo"))), i.createElement(N._8, {
                     margin: {
                         left: 2,
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, "Amazon subsidiary: Twitch Interactive, Inc."), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, "Email address: ", e.email)))
             },
             Nr = function(e) {
@@ -14407,7 +14417,7 @@ webpackJsonp([103], {
                             left: 1
                         }
                     }, i.createElement(N.Q, {
-                        type: N._49.P
+                        fontSize: N.V.Size6
                     }, i.createElement(N.Q, {
                         bold: !0,
                         type: N._49.Span
@@ -14426,7 +14436,7 @@ webpackJsonp([103], {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("The following data you entered in Step 1 does not match the data entered on the tax interview in Step 3:", "TaxMismatchSpecificErrors"))), i.createElement(N._8, {
                     margin: {
                         bottom: 1
@@ -14436,7 +14446,7 @@ webpackJsonp([103], {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("To fix this, please click the button below to edit your tax form and correct these values. Alternatively, if the tax form has the correct information, you can choose to edit Step 1 instead. To do this, click the button below and then click {buttonLabel} to reset the onboarding flow.", {
                     buttonLabel: Object(h.d)("Start Over", "TaxMismatchSpecificErrors")
                 }, "TaxMismatchSpecificErrors"))))
@@ -14451,13 +14461,13 @@ webpackJsonp([103], {
                                 bottom: 1
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("A new window will open where you can submit your royalty tax information. Please complete the tax information interview fully.", "TaxInfoRoyaltyText"))), i.createElement(N._2, {
                             margin: {
                                 bottom: 1
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)('Once you\'ve filled out the form, if your status still says "Not Started", please wait a minute or two for it to update to "Under Review".', "TaxInfoRoyaltyText"))), i.createElement(N._8, {
                             margin: {
                                 bottom: 2
@@ -14471,11 +14481,11 @@ webpackJsonp([103], {
                                 bottom: 2
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("You can retake the Royalty Tax Interview if you wish to modify or correct any previously submitted information. You may want to do this if your tax information has been under review for more than 48 hours.", "TaxInfoRoyaltyText")));
                     case Lr.Completed:
                         return i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Your royalty tax information was successfully validated.", "TaxInfoRoyaltyText"));
                     case Lr.ActionRequired:
                         return i.createElement(i.Fragment, null, i.createElement(_r, {
@@ -14503,7 +14513,7 @@ webpackJsonp([103], {
                                 bottom: 2
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Please click the button below to retake the Royalty Tax Interview and correct your information.", "TaxInfoRoyaltyText")));
                     default:
                         return null
@@ -14517,7 +14527,7 @@ webpackJsonp([103], {
                         bottom: 1
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("Please complete your Royalty Tax Interview first. Once your royalty tax information is fully validated, you will need to complete the Service Tax Interview.", "TaxInfoServiceText"))), i.createElement(N._8, {
                     margin: {
                         bottom: 2
@@ -14532,13 +14542,13 @@ webpackJsonp([103], {
                                 bottom: 1
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("A new window will open where you can submit your service tax information. Please complete the tax information interview fully.", "TaxInfoServiceText"))), i.createElement(N._2, {
                             margin: {
                                 bottom: 1
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)('Once you\'ve filled out the form, if your status still says "Not Started", please wait a minute or two for it to update to "Under Review".', "TaxInfoServiceText"))), i.createElement(N._8, {
                             margin: {
                                 bottom: 2
@@ -14552,11 +14562,11 @@ webpackJsonp([103], {
                                 bottom: 2
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("You can retake the Service Tax Interview if you wish to modify or correct any previously submitted information. You may want to do this if your tax information has been under review for more than 48 hours.", "TaxInfoServiceText")));
                     case Lr.Completed:
                         return i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Your service tax information was successfully validated.", "TaxInfoServiceText"));
                     case Lr.ActionRequired:
                         return i.createElement(i.Fragment, null, i.createElement(_r, {
@@ -14584,7 +14594,7 @@ webpackJsonp([103], {
                                 bottom: 2
                             }
                         }, i.createElement(N.Q, {
-                            type: N._49.P
+                            fontSize: N.V.Size6
                         }, Object(h.d)("Please click the button below to retake the Service Tax Interview and correct your information.", "TaxInfoServiceText")));
                     default:
                         return null
@@ -14594,9 +14604,8 @@ webpackJsonp([103], {
                 return Object(h.d)("Start Over", "TaxPreviewInstructions")
             },
             Cr = function(e) {
-                return i.createElement(N._35, {
-                    borderMarked: !0,
-                    padding: 2,
+                return i.createElement(N._8, {
+                    padding: 1,
                     margin: {
                         bottom: 1
                     }
@@ -14605,13 +14614,13 @@ webpackJsonp([103], {
                         bottom: 2
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("It is important that you enter consistent information throughout the onboarding process to ensure that we have your correct contact information, tax information, and payout information. When filling out the tax form on the following page, please make sure that you enter the same information as you did in Step 1. For your reference, here is the information you entered in Step 1.", "TaxPreviewInstructions"))), e.onboardEntity !== yt.OnboardEntity.ExtensionsDeveloper && i.createElement(N._2, {
                     margin: {
                         bottom: 2
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)('If any of this information is incorrect, you must restart your Payout Registration by clicking "{buttonLabel}" below.', {
                     buttonLabel: Ar()
                 }, "TaxPreviewInstructions"))), e.onboardEntity === yt.OnboardEntity.ExtensionsDeveloper && i.createElement(N._2, {
@@ -14619,11 +14628,11 @@ webpackJsonp([103], {
                         bottom: 2
                     }
                 }, i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)('If any of this information is incorrect, you must restart your Extensions Developer Registration by clicking "{buttonLabel}" below.', {
                     buttonLabel: Ar()
                 }, "TaxPreviewInstructions"))), i.createElement(N.Q, {
-                    type: N._49.P
+                    fontSize: N.V.Size6
                 }, Object(h.d)("Otherwise, please proceed by clicking the purple button and the tax form will appear in a new window. If the tax form does not appear, make sure that you have pop-ups enabled.", "TaxPreviewInstructions")))
             },
             Pr = function() {
@@ -14830,7 +14839,11 @@ webpackJsonp([103], {
                         className: "tax-preview-modal__container",
                         background: N.n.Base,
                         padding: 2
-                    }, i.createElement(N._2, {
+                    }, i.createElement(N._35, {
+                        borderBottom: !0,
+                        padding: {
+                            bottom: 1
+                        },
                         margin: {
                             bottom: 1
                         }
@@ -14853,18 +14866,18 @@ webpackJsonp([103], {
                             right: 2
                         }
                     }, i.createElement(N.v, {
-                        type: N.B.Text,
-                        onClick: this.props.showStartOverModal,
+                        onClick: this.handleOpenTaxInterviewClick,
                         disabled: this.state.openingTaxInterview
-                    }, Object(h.d)("Start Over", "TaxPreviewModal"))), i.createElement(N._8, {
+                    }, this.openTaxButtonText)), i.createElement(N._8, {
                         display: N.R.InlineBlock,
                         margin: {
                             right: 2
                         }
                     }, i.createElement(N.v, {
-                        onClick: this.handleOpenTaxInterviewClick,
+                        type: N.B.Text,
+                        onClick: this.props.showStartOverModal,
                         disabled: this.state.openingTaxInterview
-                    }, this.openTaxButtonText)), this.state.openingTaxInterview && i.createElement(N._8, {
+                    }, Object(h.d)("Start Over", "TaxPreviewModal"))), this.state.openingTaxInterview && i.createElement(N._8, {
                         display: N.R.Flex,
                         justifyContent: N._7.Center,
                         flexDirection: N.T.Column
@@ -14892,7 +14905,7 @@ webpackJsonp([103], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(i.Fragment, null, i.createElement(xr, {
+                    return i.createElement(N._8, null, i.createElement(xr, {
                         taxType: this.props.taxType,
                         channelName: this.props.channelName,
                         onboardEntity: this.props.onboardEntity,
@@ -14904,7 +14917,7 @@ webpackJsonp([103], {
                     }))
                 }, t
             }(i.Component);
-        var Fr, jr, Lr, Mr = Object(g.d)(Object(qe.b)(null, function(e) {
+        var Fr, jr, Lr, Mr = Object(g.d)(Object(He.b)(null, function(e) {
             return Object(g.b)({
                 closeModal: Xe.c
             }, e)
@@ -14993,6 +15006,8 @@ webpackJsonp([103], {
             }, Object.defineProperty(t.prototype, "royaltyTaxStatus", {
                 get: function() {
                     switch (this.props.workflow.currentStep) {
+                        case yt.WorkflowState.REGISTRATION_NOT_STARTED:
+                        case yt.WorkflowState.AGREEMENT_NOT_STARTED:
                         case yt.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
                             return Lr.NotStarted;
                         case yt.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
@@ -15012,6 +15027,8 @@ webpackJsonp([103], {
             }), Object.defineProperty(t.prototype, "serviceTaxStatus", {
                 get: function() {
                     switch (this.props.workflow.currentStep) {
+                        case yt.WorkflowState.REGISTRATION_NOT_STARTED:
+                        case yt.WorkflowState.AGREEMENT_NOT_STARTED:
                         case yt.WorkflowState.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
                         case yt.WorkflowState.ROYALTY_TAX_INTERVIEW_PENDING:
                         case yt.WorkflowState.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
@@ -15130,7 +15147,7 @@ webpackJsonp([103], {
                 configurable: !0
             }), t
         }(i.Component);
-        var Br = Object(o.compose)(Object(qe.b)(null, function(e) {
+        var Br = Object(o.compose)(Object(He.b)(null, function(e) {
                 return Object(g.b)({
                     showTaxPreviewModal: function(e) {
                         var t = r.__rest(e, []);
@@ -15164,9 +15181,9 @@ webpackJsonp([103], {
                     configurable: !0
                 }), t
             }(i.Component),
-            Gr = Object(o.compose)(Object(m.a)(Vr))(Qr),
-            Yr = n("AbdN"),
-            zr = function(e) {
+            zr = Object(o.compose)(Object(m.a)(Vr))(Qr),
+            Gr = n("AbdN"),
+            Yr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -15249,7 +15266,7 @@ webpackJsonp([103], {
                     }, i.createElement(N._10, null))))
                 }, t
             }(i.Component),
-            Hr = (n("n8vm"), function(e) {
+            qr = (n("n8vm"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -15258,7 +15275,7 @@ webpackJsonp([103], {
                         className: "start-over-modal__container",
                         background: N.n.Base,
                         padding: 2
-                    }, i.createElement(zr, {
+                    }, i.createElement(Yr, {
                         cancelWorkflow: this.props.cancelWorkflow,
                         callCloseModal: this.props.closeModal
                     }), i.createElement($n.a, {
@@ -15266,11 +15283,11 @@ webpackJsonp([103], {
                     }))
                 }, t
             }(i.Component));
-        var qr = Object(qe.b)(null, function(e) {
+        var Hr = Object(He.b)(null, function(e) {
                 return Object(g.b)({
                     closeModal: Xe.c
                 }, e)
-            })(Hr),
+            })(qr),
             Xr = n("Cte4"),
             Kr = n("CR5K"),
             $r = function(e) {
@@ -15393,7 +15410,7 @@ webpackJsonp([103], {
                                 title: or[yt.OnboardStep.Summary].title[this.props.onboardEntity](),
                                 description: or[yt.OnboardStep.Summary].description[this.props.onboardEntity](),
                                 linkToParent: this.backLinkURL
-                            }), i.createElement(Gr, {
+                            }), i.createElement(zr, {
                                 enableTwoFactorMessage: this.enableTwoFactorMessage
                             }, i.createElement(yr, r.__assign({}, s, {
                                 showStartOverModal: this.showStartOverModal
@@ -15403,10 +15420,10 @@ webpackJsonp([103], {
                                 channelName: this.props.channelName,
                                 userID: this.props.data.currentUser.id
                             };
-                            o = i.createElement(qa, r.__assign({}, s, l));
+                            o = i.createElement(Ha, r.__assign({}, s, l));
                             break;
                         case yt.OnboardStep.Agreement:
-                            o = i.createElement(Hn, r.__assign({}, s));
+                            o = i.createElement(qn, r.__assign({}, s));
                             break;
                         case yt.OnboardStep.TaxInterview:
                             l = {
@@ -15429,25 +15446,25 @@ webpackJsonp([103], {
                         }, "PayoutOnboardingContainer"),
                         description: or[this.state.stepDisplayed].description[this.props.onboardEntity](),
                         onClick: this.goBackToSummary
-                    }), i.createElement(Gr, {
+                    }), i.createElement(zr, {
                         enableTwoFactorMessage: this.enableTwoFactorMessage
                     }, o))
                 }, t
             }(i.Component);
         var Jr, Zr, ei, ti = Object(g.d)(Object(m.a)(Xr), Object(m.a)(Kr, {
                 name: "startWorkflow"
-            }), Object(m.a)(Yr, {
+            }), Object(m.a)(Gr, {
                 name: "cancelWorkflow"
             }), Object(Fn.a)([{
                 topic: function(e) {
                     return Object(Ae.l)(e.currentUserID)
                 },
                 mapMessageTypesToProps: (Jr = {}, Jr["*"] = "payoutOnboardingEvent", Jr)
-            }]), Object(qe.b)(null, function(e) {
+            }]), Object(He.b)(null, function(e) {
                 return Object(g.b)({
                     showStartOverModal: function(e) {
                         var t = r.__rest(e, []);
-                        return Object(Xe.d)(qr, t)
+                        return Object(Xe.d)(Hr, t)
                     }
                 }, e)
             }), l.f)($r),
@@ -15502,7 +15519,7 @@ webpackJsonp([103], {
                     }, i.createElement(c.a, null)) : this.isOnboardingComplete ? i.createElement(i.Fragment, null, i.createElement(S.a, {
                         title: Object(h.d)("Change Payout Method", "PayoutSettingsPage"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), i.createElement(Gr, {
+                    }), i.createElement(zr, {
                         enableTwoFactorMessage: Object(h.d)("You must enable two-factor authentication to change your payout method.", "PayoutSettingsPage")
                     }, i.createElement(_.a, null, i.createElement(k.a, null, i.createElement(Zn, {
                         tipaltiURL: this.tipaltiURL
@@ -15772,7 +15789,7 @@ webpackJsonp([103], {
                     }, i.createElement(c.a, null)) : this.hasAgreementPendingUpgrade ? i.createElement(i.Fragment, null, i.createElement(S.a, {
                         title: this.headerTitle,
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), i.createElement(Gr, {
+                    }), i.createElement(zr, {
                         enableTwoFactorMessage: Object(h.d)("You must enable two-factor authentication to accept your agreement.", "UpgradeTermsPage")
                     }, i.createElement(_.a, null, i.createElement(k.a, null, i.createElement(N._35, {
                         borderMarked: !0,
@@ -15818,7 +15835,7 @@ webpackJsonp([103], {
                             case yt.OnboardEntity.StandardPartner:
                             case yt.OnboardEntity.PremiumPartner:
                                 var e = this.props.data.currentUser.programAgreement;
-                                return e && i.createElement(Gn, {
+                                return e && i.createElement(zn, {
                                     body: e.body
                                 });
                             default:
@@ -15884,7 +15901,7 @@ webpackJsonp([103], {
                     }, i.createElement(c.a, null)) : this.canAccessViewTermsPage ? i.createElement(i.Fragment, null, i.createElement(S.a, {
                         title: Object(h.d)("View Active Partner Agreement", "ViewTermsPage"),
                         linkToParent: "/" + this.props.match.params.channelName + "/dashboard/settings/revenue"
-                    }), i.createElement(Gr, {
+                    }), i.createElement(zr, {
                         enableTwoFactorMessage: Object(h.d)("You must enable two-factor authentication to view your agreement.", "ViewTermsPage")
                     }, i.createElement(_.a, null, i.createElement(k.a, null, i.createElement(N._35, {
                         borderMarked: !0,
@@ -15918,7 +15935,7 @@ webpackJsonp([103], {
                         if (t.isLegacy || t.category === st.CUSTOM_PARTNER) return i.createElement(Ei, null);
                         if (t.category === st.STANDARD_PARTNER || t.category === st.PREMIUM_PARTNER) {
                             var n = this.props.data.currentUser && this.props.data.currentUser.programAgreement;
-                            return n && i.createElement(Gn, {
+                            return n && i.createElement(zn, {
                                 body: n.body
                             })
                         }
@@ -15985,13 +16002,13 @@ webpackJsonp([103], {
                         component: xn
                     }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/chatperks",
-                        component: q
+                        component: H
                     }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/ticket",
                         component: pi
                     }), this.isPaidPartner && i.createElement(s.c, {
                         path: "/:channelName/dashboard/settings/revenue/cheermotes",
-                        component: Ge
+                        component: ze
                     }), this.isPaidPartner && i.createElement(s.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/badges",
                         component: wn
@@ -16051,4 +16068,4 @@ webpackJsonp([103], {
     },
     z1LJ: function(e, t) {}
 });
-//# sourceMappingURL=pages.dashboard-revenue-settings-9844598106a34591f3b48fbf3ea29f98.js.map
+//# sourceMappingURL=pages.dashboard-revenue-settings-6793513bf397bfb59b140ea48a2b88f6.js.map

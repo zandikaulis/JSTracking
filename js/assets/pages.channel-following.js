@@ -3273,6 +3273,44 @@ webpackJsonp([43], {
                                                     kind: "NamedType",
                                                     name: {
                                                         kind: "Name",
+                                                        value: "CheermoteToken"
+                                                    }
+                                                },
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "bitsAmount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "prefix"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "tier"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }]
+                                                }
+                                            }, {
+                                                kind: "InlineFragment",
+                                                typeCondition: {
+                                                    kind: "NamedType",
+                                                    name: {
+                                                        kind: "Name",
                                                         value: "Emote"
                                                     }
                                                 },
@@ -3366,11 +3404,11 @@ webpackJsonp([43], {
             }],
             loc: {
                 start: 0,
-                end: 183
+                end: 232
             }
         };
         n.loc.source = {
-            body: "fragment roomMessageContent on RoomMessage {\ncontent {\ntext\nfragments {\ntext\ncontent {\n... on Emote {\nemoteID: id\nsetID\ntoken\n}\n... on User {\nid\nlogin\ndisplayName\n}\n__typename\n}\n}\n}\n}",
+            body: "fragment roomMessageContent on RoomMessage {\ncontent {\ntext\nfragments {\ntext\ncontent {\n... on CheermoteToken {\nbitsAmount\nprefix\ntier\n}\n... on Emote {\nemoteID: id\nsetID\ntoken\n}\n... on User {\nid\nlogin\ndisplayName\n}\n__typename\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -6060,18 +6098,24 @@ webpackJsonp([43], {
                                         content: null,
                                         __typename: "RoomMessageFragment"
                                     },
-                                    n = e.emoticon,
-                                    i = e.mention,
-                                    a = e.text;
-                                return n && (t.content = {
-                                    emoteID: n.id,
-                                    setID: n.set_id,
-                                    token: a,
+                                    n = e.cheermote,
+                                    i = e.emoticon,
+                                    a = e.mention,
+                                    r = e.text;
+                                return n ? t.content = {
+                                    bitsAmount: n.bits_amount,
+                                    prefix: n.prefix,
+                                    tier: n.tier,
+                                    __typename: De.CHEERMOTE
+                                } : i ? t.content = {
+                                    emoteID: i.id,
+                                    setID: i.set_id,
+                                    token: r,
                                     __typename: De.EMOTE
-                                }), i && (t.content = {
-                                    id: i.user_id,
-                                    login: i.login,
-                                    displayName: i.display_name,
+                                } : a && (t.content = {
+                                    id: a.user_id,
+                                    login: a.login,
+                                    displayName: a.display_name,
                                     __typename: De.MENTION
                                 }), t
                             }), o = n.sender.badges.map(function(e) {
@@ -34347,4 +34391,4 @@ webpackJsonp([43], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-following-f750c940fcf61671f11ed96bff6ee173.js.map
+//# sourceMappingURL=pages.channel-following-9198ce4f68a5fd8d2250575bb260ebe1.js.map

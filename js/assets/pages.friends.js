@@ -1,4 +1,4 @@
-webpackJsonp([74], {
+webpackJsonp([72], {
     "/ohK": function(e, t, n) {
         var r = {
             kind: "Document",
@@ -318,4 +318,4 @@ webpackJsonp([74], {
         })
     }
 });
-//# sourceMappingURL=pages.friends-4f2eeff6f002a1065e23e665da2fad11.js.map
+//# sourceMappingURL=pages.friends-c9a47bf0658327a4a6127581b450e253.js.map

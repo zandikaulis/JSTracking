@@ -1,4 +1,4 @@
-webpackJsonp([54, 109], {
+webpackJsonp([54, 107], {
     "+GT7": function(e, t, n) {
         "use strict";
         var r = n("TToO"),
@@ -441,7 +441,7 @@ webpackJsonp([54, 109], {
                             }
                         })
                     };
-                    var r = i.o.experiments.getAssignment(u.j);
+                    var r = i.o.experiments.getAssignment(u.k);
                     return n.state = {
                         categoryChange: null,
                         isFollowCategoriesExperimentEnabled: r === u.d.ENABLED
@@ -2271,7 +2271,7 @@ webpackJsonp([54, 109], {
                 return r.__generator(this, function(e) {
                     switch (e.label) {
                         case 0:
-                            return [4, n.e(126).then(n.bind(null, "Revh"))];
+                            return [4, n.e(124).then(n.bind(null, "Revh"))];
                         case 1:
                             return [2, e.sent().items]
                     }
@@ -2962,7 +2962,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(133).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(131).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2974,7 +2974,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(132).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(130).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2986,7 +2986,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(129).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -2998,7 +2998,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(128).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -3010,7 +3010,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(127).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -3022,7 +3022,7 @@ webpackJsonp([54, 109], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(126).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -4730,7 +4730,7 @@ webpackJsonp([54, 109], {
                     }, n.completeAndRedirectToForYou = function() {
                         Object(g.d)();
                         var e = "" === location.search ? "?tt_medium=onboarding" : location.search + "&tt_medium=onboarding";
-                        window.location.assign("/directory/following/foryou" + e)
+                        n.state.inDiscoveryFrontpageExperiment ? window.location.assign("/" + e) : window.location.assign("/directory/following/foryou" + e)
                     }, n.moveNextToChannelSurfing = function() {
                         o.o.history.push("/hi/surf" + location.search)
                     }, n.redirectToFrontPage = function() {
@@ -4742,11 +4742,13 @@ webpackJsonp([54, 109], {
                     }, n.userFollowedGamesDataLoaded = function(e) {
                         return e.data && !e.data.loading && !e.data.error && e.data.currentUser
                     };
-                    var a = o.o.experiments.getAssignment(h.i),
-                        i = o.o.experiments.getAssignment(h.h);
+                    var a = o.o.experiments.getAssignment(h.j),
+                        i = o.o.experiments.getAssignment(h.i),
+                        s = o.o.experiments.getAssignment(h.e);
                     return n.state = {
-                        inOnboardingExperiment: Object(h.n)(a),
-                        inChannelSurfingExperiment: Object(h.m)(a, i)
+                        inOnboardingExperiment: Object(h.p)(a),
+                        inChannelSurfingExperiment: Object(h.n)(a, i),
+                        inDiscoveryFrontpageExperiment: Object(h.o)(s)
                     }, n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -5093,7 +5095,7 @@ webpackJsonp([54, 109], {
             O = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this,
-                        r = i.o.experiments.getAssignment(o.f) === o.b.Yes;
+                        r = i.o.experiments.getAssignment(o.g) === o.b.Yes;
                     return n.state = {
                         isCategoriesExperimentEnabled: r
                     }, n
@@ -5165,7 +5167,7 @@ webpackJsonp([54, 109], {
             })(D),
             R = n("T8ns"),
             G = L.a.wrap(function() {
-                return n.e(98).then(n.bind(null, "sx3M"))
+                return n.e(96).then(n.bind(null, "sx3M"))
             }, "ChannelSurfingPage"),
             A = L.a.wrap(function() {
                 return new Promise(function(e) {
@@ -6446,4 +6448,4 @@ webpackJsonp([54, 109], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-f811c573a843f9ef9fe18785481f1852.js.map
+//# sourceMappingURL=pages.onboarding-56e7e520507ae840cf3e7e9394cb9bf8.js.map

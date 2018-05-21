@@ -1,4 +1,4 @@
-webpackJsonp([119], {
+webpackJsonp([117], {
     "8uM1": function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -49,10 +49,11 @@ webpackJsonp([119], {
                     }, this.props.children)
                 }, t
             }(o.Component),
+            f = n("+8VM"),
             g = n("PGY2"),
-            f = this,
-            S = function(e, t) {
-                return i.__awaiter(f, void 0, void 0, function() {
+            S = this,
+            b = function(e, t) {
+                return i.__awaiter(S, void 0, void 0, function() {
                     var n;
                     return i.__generator(this, function(r) {
                         switch (r.label) {
@@ -78,8 +79,8 @@ webpackJsonp([119], {
                     })
                 })
             },
-            b = function(e, t) {
-                return i.__awaiter(f, void 0, void 0, function() {
+            v = function(e, t) {
+                return i.__awaiter(S, void 0, void 0, function() {
                     var n;
                     return i.__generator(this, function(r) {
                         switch (r.label) {
@@ -100,19 +101,19 @@ webpackJsonp([119], {
                     })
                 })
             },
-            v = (n("YSdj"), {
+            y = (n("YSdj"), {
                 "data-test-selector": "cancel-button"
             }),
-            y = {
+            C = {
                 "data-test-selector": "close-button"
             },
-            C = {
+            z = {
                 "data-test-selector": "remove-button"
             };
         ! function(e) {
             e[e.Pending = 0] = "Pending", e[e.InFlight = 1] = "InFlight", e[e.Failed = 2] = "Failed", e[e.Success = 3] = "Success"
         }(r || (r = {}));
-        var z, j, P = function(e) {
+        var j, P, w = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onClickRemove = function() {
@@ -123,7 +124,7 @@ webpackJsonp([119], {
                                     case 0:
                                         return this.setState({
                                             requestState: r.InFlight
-                                        }), [4, b(this.props.channelID, this.props.email)];
+                                        }), [4, v(this.props.channelID, this.props.email)];
                                     case 1:
                                         return (e = t.sent()).isError ? this.setState({
                                             requestState: r.Failed
@@ -156,7 +157,7 @@ webpackJsonp([119], {
                             margin: {
                                 x: 1
                             }
-                        }, o.createElement(p.v, i.__assign({}, y, {
+                        }, o.createElement(p.v, i.__assign({}, C, {
                             onClick: this.props.onClose
                         }), Object(s.d)("Close", "PermissionsRemoveAuthorizedStreamerConfirmation"))))),
                         t = o.createElement(o.Fragment, null, o.createElement(p._8, null, o.createElement(p._8, {
@@ -176,14 +177,14 @@ webpackJsonp([119], {
                             margin: {
                                 x: 1
                             }
-                        }, o.createElement(p.v, i.__assign({}, v, {
+                        }, o.createElement(p.v, i.__assign({}, y, {
                             onClick: this.props.onClose,
                             type: p.B.Hollow
                         }), Object(s.d)("No, Keep Them", "PermissionsRemoveAuthorizedStreamerConfirmation"))), o.createElement(p._8, {
                             margin: {
                                 x: 1
                             }
-                        }, o.createElement(p.v, i.__assign({}, C, {
+                        }, o.createElement(p.v, i.__assign({}, z, {
                             disabled: this.state.requestState === r.InFlight,
                             onClick: this.onClickRemove
                         }), Object(s.d)("Yes, Remove Them", "PermissionsRemoveAuthorizedStreamerConfirmation")))));
@@ -199,33 +200,27 @@ webpackJsonp([119], {
                     }, o.createElement(p.Q, {
                         bold: !0,
                         fontSize: p.V.Size4
-                    }, Object(s.d)("Remove This Authorized Streamer?", "PermissionsRemoveAuthorizedStreamerConfirmation")), o.createElement(p._8, {
-                        position: p._15.Absolute,
-                        attachTop: !0,
-                        attachRight: !0
-                    }, o.createElement(p.v, {
-                        onClick: this.props.onClose,
-                        icon: p._25.Close,
-                        type: p.B.Text
-                    }))), this.state.requestState === r.Failed ? e : t)
+                    }, Object(s.d)("Remove This Authorized Streamer?", "PermissionsRemoveAuthorizedStreamerConfirmation"))), this.state.requestState === r.Failed ? e : t, o.createElement(f.a, {
+                        closeOnBackdropClick: !0
+                    }))
                 }, t
             }(o.Component),
-            w = (n("RYKF"), {
+            O = (n("RYKF"), {
                 "data-test-selector": "email"
             }),
-            O = {
+            x = {
                 "data-test-selector": "send"
             },
-            x = {
+            R = {
                 "data-test-selector": "remove"
             },
-            R = {
+            A = {
                 "data-test-selector": "empty"
             },
-            A = {
+            F = {
                 "data-test-selector": "loading"
             },
-            F = {
+            D = {
                 "data-test-selector": "error"
             },
             T = {
@@ -233,18 +228,18 @@ webpackJsonp([119], {
             };
         ! function(e) {
             e[e.Waiting = 0] = "Waiting", e[e.Error = 1] = "Error", e[e.NotFound = 2] = "NotFound", e[e.Success = 3] = "Success"
-        }(z || (z = {})),
+        }(j || (j = {})),
         function(e) {
             e[e.Loading = 0] = "Loading", e[e.Success = 1] = "Success", e[e.Error = 2] = "Error"
-        }(j || (j = {}));
-        var D, I = function(e) {
+        }(P || (P = {}));
+        var I, k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         authorizedStreamers: [],
                         emailAddress: "",
-                        inviteState: z.Waiting,
-                        requestState: j.Loading
+                        inviteState: j.Waiting,
+                        requestState: P.Loading
                     }, t.updateAuthorizedStreamers = function(e) {
                         t.setState({
                             authorizedStreamers: e
@@ -262,17 +257,17 @@ webpackJsonp([119], {
                                 switch (n.label) {
                                     case 0:
                                         return this.setState({
-                                            inviteState: z.Waiting
-                                        }), e.length > 0 ? [4, S(this.props.user.id, e)] : [3, 2];
+                                            inviteState: j.Waiting
+                                        }), e.length > 0 ? [4, b(this.props.user.id, e)] : [3, 2];
                                     case 1:
                                         (t = n.sent()).isNotFound ? this.setState({
-                                            inviteState: z.NotFound
+                                            inviteState: j.NotFound
                                         }) : t.isError ? this.setState({
-                                            inviteState: z.Error
+                                            inviteState: j.Error
                                         }) : this.setState({
                                             authorizedStreamers: t.authorizedStreamers,
                                             emailAddress: "",
-                                            inviteState: z.Success
+                                            inviteState: j.Success
                                         }), n.label = 2;
                                     case 2:
                                         return [2]
@@ -285,7 +280,7 @@ webpackJsonp([119], {
                             return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, S(this.props.user.id, e)];
+                                        return [4, b(this.props.user.id, e)];
                                     case 1:
                                         return (t = n.sent()).isError || this.setState({
                                             authorizedStreamers: t.authorizedStreamers
@@ -294,7 +289,7 @@ webpackJsonp([119], {
                             })
                         })
                     }, t.isEmpty = function() {
-                        return t.state.requestState === j.Success && 0 === t.state.authorizedStreamers.length
+                        return t.state.requestState === P.Success && 0 === t.state.authorizedStreamers.length
                     }, t.renderSuccess = function() {
                         var e = o.createElement(p._8, {
                             margin: {
@@ -314,11 +309,11 @@ webpackJsonp([119], {
                             onKeyDown: t.handleKeyDown,
                             value: t.state.emailAddress,
                             placeholder: Object(s.d)("Enter an email address", "PermissionsAuthorizedStreamers")
-                        })), o.createElement(p._8, null, o.createElement(p.v, i.__assign({}, O, {
+                        })), o.createElement(p._8, null, o.createElement(p.v, i.__assign({}, x, {
                             onClick: function() {
                                 return t.sendInvite(t.state.emailAddress)
                             }
-                        }), Object(s.d)("Send Invite", "PermissionsAuthorizedStreamers")))), t.state.inviteState === z.NotFound && o.createElement(p.Q, i.__assign({}, T, {
+                        }), Object(s.d)("Send Invite", "PermissionsAuthorizedStreamers")))), t.state.inviteState === j.NotFound && o.createElement(p.Q, i.__assign({}, T, {
                             color: p.K.Error,
                             fontSize: p.V.Size7
                         }), Object(s.d)("That email address isn't linked to a Twitch account. Make sure the email is linked to a Twitch account.", "PermissionsAuthorizedStreamers")));
@@ -331,7 +326,7 @@ webpackJsonp([119], {
                             padding: {
                                 y: 5
                             }
-                        }, R), o.createElement(p._8, {
+                        }, A), o.createElement(p._8, {
                             padding: {
                                 bottom: .5
                             }
@@ -360,7 +355,7 @@ webpackJsonp([119], {
                                 margin: {
                                     left: 1
                                 }
-                            }, o.createElement(p.Q, i.__assign({}, w), e.email))), o.createElement(p._8, null, o.createElement(p._8, {
+                            }, o.createElement(p.Q, i.__assign({}, O), e.email))), o.createElement(p._8, null, o.createElement(p._8, {
                                 margin: {
                                     right: 1
                                 },
@@ -372,7 +367,7 @@ webpackJsonp([119], {
                                 }
                             }, Object(s.d)("Resend Invite", "PermissionsAuthorizedStreamersRow"))), o.createElement(m.a, {
                                 triggerModal: function(n) {
-                                    return o.createElement(P, {
+                                    return o.createElement(w, {
                                         channelID: t.props.user.id,
                                         email: e.email,
                                         onClose: n,
@@ -383,7 +378,7 @@ webpackJsonp([119], {
                                 return o.createElement(p.v, i.__assign({
                                     type: p.B.Text,
                                     onClick: e
-                                }, x), Object(s.d)("Remove", "PermissionsAuthorizedStreamersRow"))
+                                }, R), Object(s.d)("Remove", "PermissionsAuthorizedStreamersRow"))
                             })))
                         }))
                     }, t.renderError = function() {
@@ -399,7 +394,7 @@ webpackJsonp([119], {
                                 bottom: 5,
                                 left: 0
                             }
-                        }, F), o.createElement(p._8, {
+                        }, D), o.createElement(p._8, {
                             padding: {
                                 top: 5,
                                 bottom: .5
@@ -415,7 +410,7 @@ webpackJsonp([119], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.user && this.state.requestState !== j.Loading ? o.createElement(E, {
+                    return this.props.user && this.state.requestState !== P.Loading ? o.createElement(E, {
                         className: "authorized-streamers-panel"
                     }, o.createElement(_, null, o.createElement(p._8, {
                         alignItems: p.c.Center,
@@ -426,7 +421,7 @@ webpackJsonp([119], {
                         fontSize: p.V.Size5
                     }, Object(s.d)("People who can stream to your channel", "PermissionsAuthorizedStreamers")), o.createElement(h.a, {
                         size: p.s.Medium
-                    }, Object(s.d)("When you invite someone to stream to your channel, we'll send them a new stream key and instructions.", "PermissionsAuthorizedStreamers")))), this.state.requestState === j.Success ? this.renderSuccess() : this.renderError()) : o.createElement(p._14, i.__assign({}, A, {
+                    }, Object(s.d)("When you invite someone to stream to your channel, we'll send them a new stream key and instructions.", "PermissionsAuthorizedStreamers")))), this.state.requestState === P.Success ? this.renderSuccess() : this.renderError()) : o.createElement(p._14, i.__assign({}, F, {
                         height: 300,
                         width: 533
                     }))
@@ -440,7 +435,7 @@ webpackJsonp([119], {
                         return i.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return this.props.user ? [4, (n = this.props.user.id, i.__awaiter(f, void 0, void 0, function() {
+                                    return this.props.user ? [4, (n = this.props.user.id, i.__awaiter(S, void 0, void 0, function() {
                                         var e;
                                         return i.__generator(this, function(t) {
                                             switch (t.label) {
@@ -461,10 +456,10 @@ webpackJsonp([119], {
                                     }))] : [2];
                                 case 1:
                                     return (e = t.sent()).isError ? this.setState({
-                                        requestState: j.Error
+                                        requestState: P.Error
                                     }) : this.setState({
                                         authorizedStreamers: e.authorizedStreamers,
-                                        requestState: j.Success
+                                        requestState: P.Success
                                     }), [2]
                             }
                             var n
@@ -472,9 +467,9 @@ webpackJsonp([119], {
                     })
                 }, t
             }(o.Component),
-            k = n("5s0/"),
-            Q = n("m4HT"),
-            N = function(e) {
+            Q = n("5s0/"),
+            N = n("m4HT"),
+            V = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -509,10 +504,10 @@ webpackJsonp([119], {
                     }, Object(s.d)("Starting Vodcasts", "ChannelEditorsTooltip"))))))
                 }, t
             }(o.Component),
-            V = (n("Wvrm"), {
+            K = (n("Wvrm"), {
                 "data-test-selector": "confirm-remove-editor"
             }),
-            K = function(e) {
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleRemoveEditor = function() {
@@ -535,15 +530,7 @@ webpackJsonp([119], {
                     }, o.createElement(p.Q, {
                         bold: !0,
                         fontSize: p.V.Size4
-                    }, Object(s.d)("Remove This Editor?", "PermissionsRemoveEditorConfirmation")), o.createElement(p._8, {
-                        attachRight: !0,
-                        attachTop: !0,
-                        position: p._15.Absolute
-                    }, o.createElement(p.v, {
-                        onClick: this.props.onClose,
-                        icon: p._25.Close,
-                        type: p.B.Text
-                    }))), o.createElement(p._8, null, o.createElement(p._8, {
+                    }, Object(s.d)("Remove This Editor?", "PermissionsRemoveEditorConfirmation"))), o.createElement(p._8, null, o.createElement(p._8, {
                         display: p.R.Flex,
                         alignItems: p.c.Center,
                         flexDirection: p.T.Column,
@@ -578,21 +565,23 @@ webpackJsonp([119], {
                         margin: {
                             x: 1
                         }
-                    }, o.createElement(p.v, i.__assign({}, V, {
+                    }, o.createElement(p.v, i.__assign({}, K, {
                         onClick: this.handleRemoveEditor
-                    }), Object(s.d)("Yes, Remove Editor", "PermissionsRemoveEditorConfirmation")))))
+                    }), Object(s.d)("Yes, Remove Editor", "PermissionsRemoveEditorConfirmation")))), o.createElement(f.a, {
+                        closeOnBackdropClick: !0
+                    }))
                 }, t
             }(o.Component),
-            L = n("9u8h"),
-            M = this,
-            q = function(e) {
+            M = n("9u8h"),
+            q = this,
+            B = function(e) {
                 var t = e.channelID,
                     n = e.editorLogin;
-                return i.__awaiter(M, void 0, void 0, function() {
+                return i.__awaiter(q, void 0, void 0, function() {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, L.a.postOrThrow("https://api.twitch.tv/v5/permissions/channels/" + t + "/editors", {
+                                return [4, M.a.postOrThrow("https://api.twitch.tv/v5/permissions/channels/" + t + "/editors", {
                                     body: {
                                         granted_to_login: n
                                     }
@@ -603,61 +592,61 @@ webpackJsonp([119], {
                     })
                 })
             },
-            B = this,
             H = this,
-            W = function(e) {
+            W = this,
+            G = function(e) {
                 var t = e.channelID,
                     n = e.editorID;
-                return i.__awaiter(H, void 0, void 0, function() {
+                return i.__awaiter(W, void 0, void 0, function() {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, L.a.deleteOrThrow("https://api.twitch.tv/v5/permissions/channels/" + t + "/editors/" + n)];
+                                return [4, M.a.deleteOrThrow("https://api.twitch.tv/v5/permissions/channels/" + t + "/editors/" + n)];
                             case 1:
                                 return e.sent(), [2]
                         }
                     })
                 })
             },
-            G = {
+            Y = {
                 "data-test-selector": "login"
             },
-            Y = {
+            U = {
                 "data-test-selector": "empty"
             },
-            U = {
+            Z = {
                 "data-test-selector": "loading"
             },
-            Z = {
+            J = {
                 "data-test-selector": "error"
             },
-            J = {
+            X = {
                 "data-test-selector": "add-editor"
             },
-            X = {
+            $ = {
                 "data-test-selector": "add-editor-input"
             },
-            $ = {
+            ee = {
                 "data-test-selector": "add-editor-error"
             },
-            ee = {
+            te = {
                 "data-test-selector": "remove-editor"
             };
         ! function(e) {
             e[e.Loading = 0] = "Loading", e[e.Success = 1] = "Success", e[e.Error = 2] = "Error"
-        }(D || (D = {}));
-        var te, ne = function(e) {
+        }(I || (I = {}));
+        var ne, re = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         channelEditors: [],
                         editorLogin: "",
-                        requestState: D.Loading
+                        requestState: I.Loading
                     }, t.handleRemoveEditor = function(e) {
                         return i.__awaiter(t, void 0, void 0, function() {
                             var t;
                             return i.__generator(this, function(n) {
-                                return W({
+                                return G({
                                     channelID: this.props.user.id,
                                     editorID: e.id
                                 }), t = this.state.channelEditors.filter(function(t) {
@@ -674,22 +663,22 @@ webpackJsonp([119], {
                                 switch (n.label) {
                                     case 0:
                                         return n.trys.push([0, 2, , 3]), this.setState({
-                                            addEditorRequestState: D.Loading
-                                        }), [4, q({
+                                            addEditorRequestState: I.Loading
+                                        }), [4, B({
                                             channelID: this.props.user.id,
                                             editorLogin: e
                                         })];
                                     case 1:
                                         return t = n.sent(), this.setState(function(e) {
                                             return {
-                                                addEditorRequestState: D.Success,
+                                                addEditorRequestState: I.Success,
                                                 channelEditors: e.channelEditors.concat([t]),
                                                 editorLogin: ""
                                             }
                                         }), [3, 3];
                                     case 2:
                                         return n.sent(), this.setState({
-                                            addEditorRequestState: D.Error
+                                            addEditorRequestState: I.Error
                                         }), [3, 3];
                                     case 3:
                                         return [2]
@@ -714,22 +703,22 @@ webpackJsonp([119], {
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(p._4, i.__assign({}, X, {
+                        }, o.createElement(p._4, i.__assign({}, $, {
                             type: p._5.Text,
                             placeholder: Object(s.d)("Add an editor", "ChannelEditors"),
                             onChange: t.handleEditorLoginChange,
                             onKeyDown: t.handleKeyDown,
                             value: t.state.editorLogin
-                        }))), o.createElement(p.v, i.__assign({}, J, {
+                        }))), o.createElement(p.v, i.__assign({}, X, {
                             onClick: function() {
                                 return t.handleAddEditor(t.state.editorLogin)
                             }
-                        }), Object(s.d)("Add", "ChannelEditors"))), t.state.addEditorRequestState === D.Error && o.createElement(p.Q, i.__assign({
+                        }), Object(s.d)("Add", "ChannelEditors"))), t.state.addEditorRequestState === I.Error && o.createElement(p.Q, i.__assign({
                             color: p.K.Error,
                             fontSize: p.V.Size7
-                        }, $), Object(s.d)("Failed to add editor. Try again.", "PermissionsChannelEditors")))
+                        }, ee), Object(s.d)("Failed to add editor. Try again.", "PermissionsChannelEditors")))
                     }, t.isEmpty = function() {
-                        return t.state.requestState === D.Success && 0 === t.state.channelEditors.length
+                        return t.state.requestState === I.Success && 0 === t.state.channelEditors.length
                     }, t.renderSuccess = function() {
                         return o.createElement(o.Fragment, null, t.renderAddEditorForm(), t.isEmpty() ? o.createElement(p._8, i.__assign({
                             display: p.R.Flex,
@@ -740,7 +729,7 @@ webpackJsonp([119], {
                             padding: {
                                 y: 5
                             }
-                        }, Y), o.createElement(p._8, {
+                        }, U), o.createElement(p._8, {
                             padding: {
                                 bottom: .5
                             }
@@ -773,18 +762,18 @@ webpackJsonp([119], {
                                 margin: {
                                     left: 1
                                 }
-                            }, o.createElement(p.Q, i.__assign({}, G), e.login))), o.createElement(p._8, null, o.createElement(p._8, {
+                            }, o.createElement(p.Q, i.__assign({}, Y), e.login))), o.createElement(p._8, null, o.createElement(p._8, {
                                 margin: {
                                     right: 1
                                 },
                                 display: p.R.InlineFlex
-                            }, o.createElement(k.a, {
+                            }, o.createElement(Q.a, {
                                 buttonType: p.B.Hollow,
                                 isPopout: !1,
-                                threadID: Object(Q.a)(t.props.user.id, e.id)
+                                threadID: Object(N.a)(t.props.user.id, e.id)
                             })), o.createElement(m.a, {
                                 triggerModal: function(n) {
-                                    return o.createElement(K, {
+                                    return o.createElement(L, {
                                         channel: e,
                                         onClose: n,
                                         onRemoveEditor: function() {
@@ -793,7 +782,7 @@ webpackJsonp([119], {
                                     })
                                 }
                             }, function(e) {
-                                return o.createElement(p.v, i.__assign({}, ee, {
+                                return o.createElement(p.v, i.__assign({}, te, {
                                     onClick: e,
                                     type: p.B.Text
                                 }), Object(s.d)("Remove", "PermissionsChannelEditors"))
@@ -812,7 +801,7 @@ webpackJsonp([119], {
                                 bottom: 5,
                                 left: 0
                             }
-                        }, Z), o.createElement(p._8, {
+                        }, J), o.createElement(p._8, {
                             padding: {
                                 top: 5,
                                 bottom: .5
@@ -828,14 +817,14 @@ webpackJsonp([119], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.user && this.state.requestState !== D.Loading ? o.createElement(E, null, o.createElement(_, null, o.createElement(p._8, {
+                    return this.props.user && this.state.requestState !== I.Loading ? o.createElement(E, null, o.createElement(_, null, o.createElement(p._8, {
                         alignItems: p.c.Center,
                         display: p.R.Flex
                     }, o.createElement(p.Q, {
                         bold: !0,
                         color: p.K.Alt,
                         fontSize: p.V.Size5
-                    }, Object(s.d)("People who can manage your channel", "DashboardPermissionsPage")), o.createElement(N, null))), this.state.requestState === D.Success ? this.renderSuccess() : this.renderError()) : o.createElement(p._14, i.__assign({}, U, {
+                    }, Object(s.d)("People who can manage your channel", "DashboardPermissionsPage")), o.createElement(V, null))), this.state.requestState === I.Success ? this.renderSuccess() : this.renderError()) : o.createElement(p._14, i.__assign({}, Z, {
                         height: 300,
                         width: 533
                     }))
@@ -852,11 +841,11 @@ webpackJsonp([119], {
                                     if (!this.props.user) return [2];
                                     t.label = 1;
                                 case 1:
-                                    return t.trys.push([1, 3, , 4]), [4, (n = this.props.user.id, i.__awaiter(B, void 0, void 0, function() {
+                                    return t.trys.push([1, 3, , 4]), [4, (n = this.props.user.id, i.__awaiter(H, void 0, void 0, function() {
                                         return i.__generator(this, function(e) {
                                             switch (e.label) {
                                                 case 0:
-                                                    return [4, L.a.getOrThrow("https://api.twitch.tv/v5/permissions/channels/" + n + "/editors")];
+                                                    return [4, M.a.getOrThrow("https://api.twitch.tv/v5/permissions/channels/" + n + "/editors")];
                                                 case 1:
                                                     return [2, e.sent().body.editors || []]
                                             }
@@ -865,11 +854,11 @@ webpackJsonp([119], {
                                 case 2:
                                     return e = t.sent(), this.setState({
                                         channelEditors: e,
-                                        requestState: D.Success
+                                        requestState: I.Success
                                     }), [3, 4];
                                 case 3:
                                     return t.sent(), this.setState({
-                                        requestState: D.Error
+                                        requestState: I.Error
                                     }), [3, 4];
                                 case 4:
                                     return [2]
@@ -879,7 +868,7 @@ webpackJsonp([119], {
                     })
                 }, t
             }(o.Component),
-            re = function(e) {
+            ie = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -914,30 +903,30 @@ webpackJsonp([119], {
                     }, Object(s.d)("Starting Vodcasts", "DashboardPermissionsPage"))))))
                 }, t
             }(o.Component),
-            ie = n("Cfz3"),
-            oe = {
+            oe = n("Cfz3"),
+            ae = {
                 "data-test-selector": "login"
             },
-            ae = {
+            se = {
                 "data-test-selector": "empty"
             },
-            se = {
+            le = {
                 "data-test-selector": "loading"
             },
-            le = {
+            ce = {
                 "data-test-selector": "error"
             };
         ! function(e) {
             e[e.Loading = 0] = "Loading", e[e.Success = 1] = "Success", e[e.Error = 2] = "Error"
-        }(te || (te = {}));
-        var ce = function(e) {
+        }(ne || (ne = {}));
+        var de = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         editableChannels: [],
-                        requestState: te.Loading
+                        requestState: ne.Loading
                     }, t.isEmpty = function() {
-                        return t.state.requestState === te.Success && 0 === t.state.editableChannels.length
+                        return t.state.requestState === ne.Success && 0 === t.state.editableChannels.length
                     }, t.renderSuccess = function() {
                         return t.isEmpty() ? o.createElement(p._8, i.__assign({
                             display: p.R.Flex,
@@ -951,7 +940,7 @@ webpackJsonp([119], {
                                 bottom: 5,
                                 left: 0
                             }
-                        }, ae), o.createElement(p._8, {
+                        }, se), o.createElement(p._8, {
                             padding: {
                                 top: 5,
                                 bottom: .5
@@ -985,14 +974,14 @@ webpackJsonp([119], {
                                 margin: {
                                     left: 1
                                 }
-                            }, o.createElement(p.Q, i.__assign({}, oe), e.login))), o.createElement(p._8, null, o.createElement(p._8, {
+                            }, o.createElement(p.Q, i.__assign({}, ae), e.login))), o.createElement(p._8, null, o.createElement(p._8, {
                                 margin: {
                                     right: 1
                                 },
                                 display: p.R.InlineFlex
-                            }, o.createElement(k.a, {
+                            }, o.createElement(Q.a, {
                                 buttonType: p.B.Hollow,
-                                threadID: Object(Q.a)(t.props.user.id, e.id),
+                                threadID: Object(N.a)(t.props.user.id, e.id),
                                 isPopout: !1
                             })), o.createElement(p.v, {
                                 linkTo: "/" + e.login + "/dashboard",
@@ -1012,7 +1001,7 @@ webpackJsonp([119], {
                                 bottom: 5,
                                 left: 0
                             }
-                        }, le), o.createElement(p._8, {
+                        }, ce), o.createElement(p._8, {
                             padding: {
                                 top: 5,
                                 bottom: .5
@@ -1028,16 +1017,16 @@ webpackJsonp([119], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.user && this.state.requestState !== te.Loading ? o.createElement(E, null, o.createElement(_, null, o.createElement(p._8, {
+                    return this.props.user && this.state.requestState !== ne.Loading ? o.createElement(E, null, o.createElement(_, null, o.createElement(p._8, {
                         alignItems: p.c.Center,
                         display: p.R.Flex
                     }, o.createElement(p.Q, {
                         bold: !0,
                         color: p.K.Alt,
                         fontSize: p.V.Size5
-                    }, Object(s.d)("Channels you can manage", "DashboardPermissionsPage")), o.createElement(re, null)), o.createElement(p.O, {
-                        to: "/dashboard/" + this.props.channelName
-                    }, Object(s.d)("Go to your Channel", "DashboardPermissionsPage"))), this.state.requestState === te.Success ? this.renderSuccess() : this.renderError()) : o.createElement(p._14, i.__assign({}, se, {
+                    }, Object(s.d)("Channels you can manage", "DashboardPermissionsPage")), o.createElement(ie, null)), o.createElement(p.O, {
+                        to: "/" + this.props.channelName
+                    }, Object(s.d)("Go to your Channel", "DashboardPermissionsPage"))), this.state.requestState === ne.Success ? this.renderSuccess() : this.renderError()) : o.createElement(p._14, i.__assign({}, le, {
                         height: 300,
                         width: 533
                     }))
@@ -1054,15 +1043,15 @@ webpackJsonp([119], {
                                     if (!this.props.user) return [2];
                                     t.label = 1;
                                 case 1:
-                                    return t.trys.push([1, 3, , 4]), [4, Object(ie.a)(this.props.user.id)];
+                                    return t.trys.push([1, 3, , 4]), [4, Object(oe.a)(this.props.user.id)];
                                 case 2:
                                     return e = t.sent(), this.setState({
                                         editableChannels: e,
-                                        requestState: te.Success
+                                        requestState: ne.Success
                                     }), [3, 4];
                                 case 3:
                                     return t.sent(), this.setState({
-                                        requestState: te.Error
+                                        requestState: ne.Error
                                     }), [3, 4];
                                 case 4:
                                     return [2]
@@ -1071,7 +1060,7 @@ webpackJsonp([119], {
                     })
                 }, t
             }(o.Component),
-            de = function(e) {
+            ue = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1096,12 +1085,12 @@ webpackJsonp([119], {
                         gutterSize: p.Z.Medium
                     }, o.createElement(p.L, {
                         cols: 6
-                    }, o.createElement(ce, {
+                    }, o.createElement(de, {
                         user: this.props.user,
                         channelName: this.props.match.params.channelName
                     })), o.createElement(p.L, {
                         cols: 6
-                    }, o.createElement(ne, {
+                    }, o.createElement(re, {
                         user: this.props.user,
                         channelName: this.props.match.params.channelName
                     }))), o.createElement(p._8, {
@@ -1118,7 +1107,7 @@ webpackJsonp([119], {
                         gutterSize: p.Z.Medium
                     }, o.createElement(p.L, {
                         cols: 6
-                    }, o.createElement(I, {
+                    }, o.createElement(k, {
                         user: this.props.user,
                         channelName: this.props.match.params.channelName
                     })), o.createElement(p.L, {
@@ -1126,29 +1115,29 @@ webpackJsonp([119], {
                     })), o.createElement(c.a, null)))
                 }, t
             }(o.Component),
-            ue = n("3zLD"),
-            me = n("RH2O"),
-            he = n("j7/Y"),
-            pe = n("w9tK"),
-            Ee = n("vH/s"),
-            _e = n("Aj/L"),
+            me = n("3zLD"),
+            he = n("RH2O"),
+            pe = n("j7/Y"),
+            Ee = n("w9tK"),
+            _e = n("vH/s"),
+            fe = n("Aj/L"),
             ge = n("CSlQ");
-        var fe = Object(ue.compose)(Object(ge.d)("PermissionsPage", {
-            destination: pe.a.DashboardPermissions,
+        var Se = Object(me.compose)(Object(ge.d)("PermissionsPage", {
+            destination: Ee.a.DashboardPermissions,
             autoReportInteractive: !0
-        }), Object(he.a)({
-            location: Ee.PageviewLocation.DashboardPermissions
-        }), Object(me.b)(function(e) {
-            var t = Object(_e.c)(e);
+        }), Object(pe.a)({
+            location: _e.PageviewLocation.DashboardPermissions
+        }), Object(he.b)(function(e) {
+            var t = Object(fe.c)(e);
             return {
                 isStaff: t && t.roles && t.roles.isStaff,
                 user: t
             }
-        }))(de);
+        }))(ue);
         n.d(t, "PermissionsPageComponent", function() {
-            return de
+            return ue
         }), n.d(t, "PermissionsPage", function() {
-            return fe
+            return Se
         })
     },
     Cfz3: function(e, t, n) {
@@ -1180,9 +1169,8 @@ webpackJsonp([119], {
             i = n("GiK3"),
             o = n("RH2O"),
             a = n("2KeS"),
-            s = n("+8VM"),
-            l = n("V5M+"),
-            c = function(e) {
+            s = n("V5M+"),
+            l = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
@@ -1201,19 +1189,17 @@ webpackJsonp([119], {
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement(i.Fragment, null, this.props.children(this.openModal), i.createElement(s.a, {
-                        closeOnBackdropClick: !0
-                    }))
+                    return this.props.children(this.openModal)
                 }, t
             }(i.Component);
-        var d = Object(o.b)(null, function(e) {
+        var c = Object(o.b)(null, function(e) {
             return Object(a.b)({
-                showModal: l.d,
-                closeModal: l.c
+                showModal: s.d,
+                closeModal: s.c
             }, e)
-        })(c);
+        })(l);
         n.d(t, "a", function() {
-            return d
+            return c
         })
     },
     Wvrm: function(e, t) {},
@@ -1280,4 +1266,4 @@ webpackJsonp([119], {
         })
     }
 });
-//# sourceMappingURL=pages.dashboard-permissions-9209c4a2c5d4085f28c323d4ec41431a.js.map
+//# sourceMappingURL=pages.dashboard-permissions-c727e17b09a31334b97ba99b6bfeea4b.js.map

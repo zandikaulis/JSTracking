@@ -2950,9 +2950,10 @@ webpackJsonp([52], {
                     n.userDataLoaded = function() {
                         return n.props.data && !n.props.data.loading
                     };
-                    var i = m.o.experiments.getAssignment(w.i);
+                    var i = m.o.experiments.getAssignment(w.j),
+                        a = m.o.experiments.getAssignment(w.e);
                     return n.state = {
-                        inOnboarding: Object(w.n)(i)
+                        shouldSeeForYou: Object(w.p)(i) && !Object(w.o)(a)
                     }, n
                 }
                 return l.__extends(t, e), t.prototype.componentDidUpdate = function() {
@@ -2987,7 +2988,7 @@ webpackJsonp([52], {
                             targetBlank: Object(y.b)(),
                             "data-a-target": "following-communities-tab"
                         }, Object(m.d)("Communities", "FollowingPage"))];
-                    if (this.state.inOnboarding && !this.props.data.error && this.props.data.currentUser && Object(w.o)(new Date(this.props.data.currentUser.createdAt))) {
+                    if (this.state.shouldSeeForYou && !this.props.data.error && this.props.data.currentUser && Object(w.q)(new Date(this.props.data.currentUser.createdAt))) {
                         var n = d.createElement(_._36, {
                             key: "following-foryou-tab",
                             "data-test-selector": "for-you-tab",
@@ -3808,7 +3809,7 @@ webpackJsonp([52], {
                         },
                         enabled: function() {
                             return ie.a.wrap(function() {
-                                return n.e(122).then(n.bind(null, "IwGL"))
+                                return n.e(120).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
@@ -3997,7 +3998,7 @@ webpackJsonp([52], {
                 })], t)
             }(d.Component),
             de = function() {
-                return n.e(127).then(n.bind(null, "oms2"))
+                return n.e(125).then(n.bind(null, "oms2"))
             },
             ce = function(e) {
                 function t() {
@@ -4272,16 +4273,18 @@ webpackJsonp([52], {
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     m.o.setPageTitle(Object(m.d)("For You", "ForYouPage"));
-                    var e = m.o.experiments.getAssignment(w.i);
-                    if (Object(w.n)(e)) {
-                        var t = m.o.experiments.getAssignment(w.g),
-                            n = m.o.experiments.getAssignment(w.h);
-                        Object(w.l)(e, t) && this.loadChannelRankingsByGameData(), this.setState({
-                            inChannelSurfingExperiment: Object(w.m)(e, n)
+                    var e = m.o.experiments.getAssignment(w.j),
+                        t = m.o.experiments.getAssignment(w.e);
+                    if (!Object(w.p)(e) || Object(w.o)(t)) this.redirectToFollowing();
+                    else {
+                        var n = m.o.experiments.getAssignment(w.h),
+                            i = m.o.experiments.getAssignment(w.i);
+                        Object(w.m)(e, n) && this.loadChannelRankingsByGameData(), this.setState({
+                            inChannelSurfingExperiment: Object(w.n)(e, i)
                         })
-                    } else this.redirectToFollowing()
+                    }
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.userFollowedGamesDataLoaded(e) && !Object(w.o)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
+                    this.userFollowedGamesDataLoaded(e) && !Object(w.q)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
                 }, t.prototype.componentDidUpdate = function() {
                     this.userFollowedGamesDataLoaded(this.props) && !this.state.loadingRankedChannelData && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
@@ -5148,7 +5151,7 @@ webpackJsonp([52], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(133).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(131).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -5160,7 +5163,7 @@ webpackJsonp([52], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(132).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(130).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -5172,7 +5175,7 @@ webpackJsonp([52], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(129).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -5184,7 +5187,7 @@ webpackJsonp([52], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(128).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -5196,7 +5199,7 @@ webpackJsonp([52], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(127).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -5208,7 +5211,7 @@ webpackJsonp([52], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(126).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -10379,4 +10382,4 @@ webpackJsonp([52], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-76480adf4dea05180084d9c845ce8634.js.map
+//# sourceMappingURL=pages.following-394b9ae6d0a99cc5ca72987b27e6fb2c.js.map

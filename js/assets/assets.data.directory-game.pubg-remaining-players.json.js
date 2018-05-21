@@ -1,4 +1,4 @@
-webpackJsonp([128], {
+webpackJsonp([126], {
     "2NJ8": function(a, e) {
         a.exports = {
             items: [{
@@ -25,4 +25,4 @@ webpackJsonp([128], {
         }
     }
 });
-//# sourceMappingURL=assets.data.directory-game.pubg-remaining-players.json-36dcd2bb7da03151d90ef5431a3543e6.js.map
+//# sourceMappingURL=assets.data.directory-game.pubg-remaining-players.json-841b50400c1397857d77a6e3908650d6.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([108], {
+webpackJsonp([106], {
     "/LBW": function(e, t, n) {
         "use strict";
         t.h = function(e) {
@@ -840,6 +840,14 @@ webpackJsonp([108], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "currencyCode"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "promotion"
                                 },
                                 arguments: [],
@@ -871,11 +879,11 @@ webpackJsonp([108], {
             }],
             loc: {
                 start: 0,
-                end: 145
+                end: 158
             }
         };
         n.loc.source = {
-            body: "fragment bitsOffersFragment on BitsOffer {\nid\ntype\nbits\n... on BitsBundleOffer {\nprice\ndiscount\nisPromo\nurl\nincludesVAT\npromotion {\nid\ntype\n}\n}\n}",
+            body: "fragment bitsOffersFragment on BitsOffer {\nid\ntype\nbits\n... on BitsBundleOffer {\nprice\ndiscount\nisPromo\nurl\nincludesVAT\ncurrencyCode\npromotion {\nid\ntype\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -1351,13 +1359,31 @@ webpackJsonp([108], {
                 }, a, t, n))
             }),
             F = function(e) {
-                var t = null;
-                e.pricesIncludeVAT && (t = l.createElement(b.Q, {
-                    "data-test-selector": "prices-include-vat-selector",
-                    italic: !0,
+                var t = l.createElement(b.Q, {
                     type: b._49.P,
                     color: b.K.Alt
-                }, Object(u.d)("Prices include VAT", "Bits--BuyCard")));
+                }, Object(u.d)("Prices are shown in <x:bold>{currencyCode}</x:bold>", {
+                    "x:bold": function(e) {
+                        return l.createElement(b.Q, {
+                            type: b._49.Span,
+                            bold: !0
+                        }, e)
+                    },
+                    currencyCode: e.currencyCode
+                }, "Bits--BuyCard"));
+                e.pricesIncludeVAT && (t = l.createElement(b.Q, {
+                    "data-test-selector": "prices-include-vat-selector",
+                    type: b._49.P,
+                    color: b.K.Alt
+                }, Object(u.d)("Prices are shown in <x:bold>{currencyCode}</x:bold> and <x:bold>include VAT</x:bold>", {
+                    "x:bold": function(e) {
+                        return l.createElement(b.Q, {
+                            type: b._49.Span,
+                            bold: !0
+                        }, e)
+                    },
+                    currencyCode: e.currencyCode
+                }, "Bits--BuyCard")));
                 var n = null;
                 e.minBitsToCheer && e.minBitsToCheer > 1 && (n = l.createElement(b.Q, {
                     "data-test-selector": "min-bits-to-cheer-selector",
@@ -1382,14 +1408,14 @@ webpackJsonp([108], {
                     },
                     borderBottom: !0,
                     flexShrink: 0
-                }, l.createElement(b._8, {
-                    margin: {
-                        bottom: 1
-                    }
-                }, l.createElement(b.Q, {
+                }, l.createElement(b._8, null, e.location === g.b.ChatTooltip && l.createElement(b.Q, {
                     type: b._49.H4,
                     color: b.K.Alt
-                }, Object(u.d)("Purchase Bits", "Bits--BuyCard")), t), a, n)
+                }, Object(u.d)("Purchase Bits", "Bits--BuyCard")), t), e.location === g.b.ChatTooltip && l.createElement(b._8, {
+                    margin: {
+                        top: 1
+                    }
+                }, a, n))
             },
             M = n("nrdj"),
             q = function(e) {
@@ -1473,7 +1499,7 @@ webpackJsonp([108], {
                     }))
                 }, t
             }(l.Component),
-            U = (n("q8Cw"), function(e) {
+            Q = (n("q8Cw"), function(e) {
                 var t = Object(u.d)("Something's wrong!", "Bits--WatchAdError"),
                     n = Object(u.d)("Something went wrong. Wait a while and try again.", "Bits--WatchAdError"),
                     i = "adserrorgeneric";
@@ -1539,11 +1565,11 @@ webpackJsonp([108], {
                     color: b.K.Alt2
                 }, n), r)
             }),
-            Q = n("CSlQ"),
-            z = n("aqNN"),
-            G = (n("6Rwu"), "storage.wateb.agreedToWatebTerms.v1"),
-            V = "bits-show-wateb-terms",
-            K = "bits-agree-wateb-terms";
+            U = n("CSlQ"),
+            G = n("aqNN"),
+            z = (n("6Rwu"), "storage.wateb.agreedToWatebTerms.v1"),
+            K = "bits-show-wateb-terms",
+            V = "bits-agree-wateb-terms";
         ! function(e) {
             e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
         }(x || (x = {}));
@@ -1555,7 +1581,7 @@ webpackJsonp([108], {
                         watebError: null,
                         bitsAwarded: 0,
                         showWatebTerms: !1,
-                        agreedToWatebTerms: u.l.get(G, !1)
+                        agreedToWatebTerms: u.l.get(z, !1)
                     }, t.onBuyPopupClose = function(e) {
                         Object(w.a)(e, function() {
                             t.props.data && t.props.data.refetch()
@@ -1576,7 +1602,7 @@ webpackJsonp([108], {
                                 x: 2
                             },
                             textAlign: b._45.Left,
-                            "data-a-target": V
+                            "data-a-target": K
                         }, n), l.createElement(b._35, {
                             margin: {
                                 top: 2,
@@ -1623,10 +1649,10 @@ webpackJsonp([108], {
                         }, l.createElement(b.v, {
                             size: b.z.Small,
                             onClick: t.onAgreeToWatebTerms,
-                            "data-a-target": K
+                            "data-a-target": V
                         }, Object(u.d)("Continue", "Bits--Watch-Ad-Terms"))))
                     }, t.onAgreeToWatebTerms = function() {
-                        u.l.set(G, !0), t.setState({
+                        u.l.set(z, !0), t.setState({
                             agreedToWatebTerms: !0,
                             showWatebTerms: !1
                         }), t.showWatchAdModal()
@@ -1657,7 +1683,10 @@ webpackJsonp([108], {
                     return !e.adModalOpen
                 }, t.prototype.render = function() {
                     var e = {
-                            border: !0,
+                            borderTop: !0,
+                            borderBottom: this.props.location !== g.b.GetBitsButton,
+                            borderLeft: this.props.location !== g.b.GetBitsButton,
+                            borderRight: this.props.location !== g.b.GetBitsButton,
                             background: b.n.Base,
                             fullWidth: !0,
                             elevation: 3
@@ -1722,14 +1751,19 @@ webpackJsonp([108], {
                         }).some(function(e) {
                             return e.includesVAT
                         }),
-                        o = this.props.data.user ? this.props.data.user.id : "",
-                        s = l.createElement(D, {
+                        o = "",
+                        s = i.filter(function(e) {
+                            return e.type === I.b
+                        }).pop();
+                    s && s.type === I.b && (o = s.currencyCode);
+                    var d = this.props.data.user ? this.props.data.user.id : "",
+                        m = l.createElement(D, {
                             offers: i,
                             fullsize: this.props.fullsize,
                             hidePromos: this.props.hidePromos,
                             hideWateb: this.props.hideWateb,
                             bitsConfig: this.props.bitsConfig,
-                            channelID: o,
+                            channelID: d,
                             channelLogin: this.props.channelLogin,
                             closeAllBits: this.props.closeAllBits,
                             currentUserSHA: this.props.data && this.props.data.currentUser && this.props.data.currentUser.idSHA1,
@@ -1739,13 +1773,15 @@ webpackJsonp([108], {
                             onClose: this.props.onClose,
                             trackBitsCardInteraction: this.props.trackBitsCardInteraction
                         }),
-                        d = null;
-                    return this.props.location === g.b.ChatTooltip && (d = l.createElement(F, {
-                        bitsBalance: this.props.data && this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
-                        displayName: this.props.data && this.props.data.user && this.props.data.user.displayName || this.props.channelLogin || "",
-                        minBitsToCheer: this.props.data && this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.settings.cheerMinimumBits,
-                        pricesIncludeVAT: r
-                    })), l.createElement(b._35, c.__assign({
+                        p = l.createElement(F, {
+                            bitsBalance: this.props.data && this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
+                            displayName: this.props.data && this.props.data.user && this.props.data.user.displayName || this.props.channelLogin || "",
+                            minBitsToCheer: this.props.data && this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.settings.cheerMinimumBits,
+                            pricesIncludeVAT: r,
+                            currencyCode: o,
+                            location: this.props.location
+                        });
+                    return l.createElement(b._35, c.__assign({
                         className: t,
                         padding: {
                             top: 1
@@ -1753,7 +1789,7 @@ webpackJsonp([108], {
                         display: b.R.Flex,
                         flexDirection: b.T.Column,
                         "data-a-target": "bits-buy-card"
-                    }, e), n, d, s)
+                    }, e), n, p, m)
                 }, t.prototype.renderWatebCard = function() {
                     if (this.props.data && this.props.data.currentUser) switch (this.state.wateb) {
                         case x.Awarded:
@@ -1765,7 +1801,7 @@ webpackJsonp([108], {
                                 truexUserID: this.props.data.currentUser.idSHA1
                             });
                         case x.Error:
-                            return l.createElement(U, {
+                            return l.createElement(Q, {
                                 type: this.state.watebError || a.Unknown,
                                 onClose: this.props.onClose,
                                 onTryAgain: this.resetAdErrorState
@@ -1781,7 +1817,7 @@ webpackJsonp([108], {
                         requestRef: g.c.ShowAdButton,
                         channelID: this.props.data.user.id
                     })
-                }, t = c.__decorate([Object(p.a)(z, {
+                }, t = c.__decorate([Object(p.a)(G, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -1794,7 +1830,7 @@ webpackJsonp([108], {
                     }
                 })], t)
             }(l.Component),
-            X = Object(C.compose)(Object(Q.d)("BitsBuyCard", {
+            X = Object(C.compose)(Object(U.d)("BitsBuyCard", {
                 autoReportInteractive: !0
             }))(Y);
 
@@ -2596,4 +2632,4 @@ webpackJsonp([108], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-46483314f565946e924e99a58da3d96a.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-7fbbff6b5fd0a884374378b960285d9b.js.map

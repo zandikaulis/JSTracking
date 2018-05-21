@@ -1,4 +1,4 @@
-webpackJsonp([129], {
+webpackJsonp([127], {
     "+kKy": function(a, o) {
         a.exports = {
             items: [{
@@ -20,4 +20,4 @@ webpackJsonp([129], {
         }
     }
 });
-//# sourceMappingURL=assets.data.directory-game.pubg-game-modes.json-49f8a37a513581d36785c63db8a8ea25.js.map
+//# sourceMappingURL=assets.data.directory-game.pubg-game-modes.json-bd52e7e71b26913ac783a8077a31b173.js.map

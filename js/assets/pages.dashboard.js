@@ -2659,70 +2659,70 @@ webpackJsonp([46], {
             }))(ie),
             ue = n("u4Vk"),
             ce = b.a.wrap(function() {
-                return n.e(111).then(n.bind(null, "rE/F"))
+                return n.e(109).then(n.bind(null, "rE/F"))
             }, "AchievementsPage"),
             le = b.a.wrap(function() {
-                return n.e(115).then(n.bind(null, "RdZX"))
+                return n.e(113).then(n.bind(null, "RdZX"))
             }, "AutoModPage"),
             de = b.a.wrap(function() {
-                return n.e(112).then(n.bind(null, "EOq4"))
+                return n.e(110).then(n.bind(null, "EOq4"))
             }, "BountiesPage"),
             me = b.a.wrap(function() {
-                return n.e(95).then(n.bind(null, "ehuU"))
+                return n.e(93).then(n.bind(null, "ehuU"))
             }, "ChannelAnalyticsPageRoot"),
             he = b.a.wrap(function() {
-                return n.e(91).then(n.bind(null, "aeDV"))
+                return n.e(89).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
             fe = b.a.wrap(function() {
-                return n.e(96).then(n.bind(null, "KO2S"))
+                return n.e(94).then(n.bind(null, "KO2S"))
             }, "CollectionEditorPage"),
             pe = b.a.wrap(function() {
-                return n.e(110).then(n.bind(null, "Dk8+"))
+                return n.e(108).then(n.bind(null, "Dk8+"))
             }, "CollectionManagerPage"),
             ge = b.a.wrap(function() {
-                return n.e(104).then(n.bind(null, "rFlM"))
+                return n.e(102).then(n.bind(null, "rFlM"))
             }, "CommentModeratorPage"),
             be = b.a.wrap(function() {
-                return n.e(99).then(n.bind(null, "xM3a"))
+                return n.e(97).then(n.bind(null, "xM3a"))
             }, "DashboardEventsRoot"),
             ve = b.a.wrap(function() {
-                return n.e(103).then(n.bind(null, "yuX3"))
+                return n.e(101).then(n.bind(null, "yuX3"))
             }, "DashboardRevenueSettingsRoot"),
             ye = b.a.wrap(function() {
-                return n.e(100).then(n.bind(null, "gIJZ"))
+                return n.e(98).then(n.bind(null, "gIJZ"))
             }, "DashboardSettingsRoot"),
             we = b.a.wrap(function() {
-                return n.e(92).then(n.bind(null, "bcqU"))
+                return n.e(90).then(n.bind(null, "bcqU"))
             }, "ExtensionConfigurePage"),
             Oe = b.a.wrap(function() {
-                return n.e(92).then(n.bind(null, "1ZLG"))
+                return n.e(90).then(n.bind(null, "1ZLG"))
             }, "ExtensionDashboardRoot"),
             Se = b.a.wrap(function() {
-                return n.e(107).then(n.bind(null, "yJuJ"))
+                return n.e(105).then(n.bind(null, "yJuJ"))
             }, "ExtensionManagerPage"),
             De = b.a.wrap(function() {
-                return n.e(105).then(n.bind(null, "Il1C"))
+                return n.e(103).then(n.bind(null, "Il1C"))
             }, "HighlighterPage"),
             xe = b.a.wrap(function() {
-                return n.e(93).then(n.bind(null, "c1gU"))
+                return n.e(91).then(n.bind(null, "c1gU"))
             }, "LivePage"),
             ke = b.a.wrap(function() {
-                return n.e(125).then(n.bind(null, "B65D"))
+                return n.e(123).then(n.bind(null, "B65D"))
             }, "ActivityPage"),
             _e = b.a.wrap(function() {
-                return n.e(91).then(n.bind(null, "aeDV"))
+                return n.e(89).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
             je = b.a.wrap(function() {
-                return n.e(119).then(n.bind(null, "8uM1"))
+                return n.e(117).then(n.bind(null, "8uM1"))
             }, "PermissionsPage"),
             Me = b.a.wrap(function() {
-                return n.e(124).then(n.bind(null, "/fDj"))
+                return n.e(122).then(n.bind(null, "/fDj"))
             }, "RedirectToLatestArchiveHighlighter"),
             Ee = b.a.wrap(function() {
-                return n.e(94).then(n.bind(null, "tVPZ"))
+                return n.e(92).then(n.bind(null, "tVPZ"))
             }, "StreamSummaryPage"),
             Te = b.a.wrap(function() {
-                return n.e(97).then(n.bind(null, "a9Y8"))
+                return n.e(95).then(n.bind(null, "a9Y8"))
             }, "VideoManagerPage"),
             Ne = function(e) {
                 function t() {
@@ -2738,14 +2738,17 @@ webpackJsonp([46], {
                             channelName: t.props.match.params.channelName
                         })
                     }, t.renderLivePage = function(e) {
-                        var n = t.props.data.channel;
-                        return n && n.id && null !== n.isPartner ? h.createElement(xe, {
-                            channelID: n.id,
+                        var n = t.props,
+                            r = n.userID,
+                            a = n.data.channel;
+                        return a && a.id && null !== a.isPartner && r ? h.createElement(xe, {
+                            channelID: a.id,
                             channelLogin: t.props.match.params.channelName,
-                            isPartner: n.isPartner,
+                            isPartner: a.isPartner,
                             isStaff: t.props.isStaff,
                             streamSummariesQuery: e,
-                            userLogin: t.props.userLogin
+                            userLogin: t.props.userLogin,
+                            userID: r
                         }) : null
                     }, t.renderActivityPage = function() {
                         return t.props.data.channel && t.props.data.channel.id ? h.createElement(ke, {
@@ -2864,6 +2867,14 @@ webpackJsonp([46], {
                         }), e.showNewDashboardSettings && h.createElement(f.c, {
                             path: "/:channelName/dashboard/settings",
                             component: ye
+                        }), h.createElement(f.c, {
+                            path: "/:channelName/dashboard/streamkey",
+                            render: function(e) {
+                                var t = e.match;
+                                return h.createElement(f.b, {
+                                    to: "/" + t.params.channelName + "/dashboard/settings"
+                                })
+                            }
                         }), h.createElement(f.c, {
                             path: "/:channelName/dashboard/permissions",
                             component: je
@@ -7022,4 +7033,4 @@ webpackJsonp([46], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-fa729180880b90de9b76b7e4dc8a7e3c.js.map
+//# sourceMappingURL=pages.dashboard-e851ef5d4aefff00d02dcac94f26faa1.js.map

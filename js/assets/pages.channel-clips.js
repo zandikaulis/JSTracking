@@ -4186,6 +4186,44 @@ webpackJsonp([39], {
                                                     kind: "NamedType",
                                                     name: {
                                                         kind: "Name",
+                                                        value: "CheermoteToken"
+                                                    }
+                                                },
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "bitsAmount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "prefix"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "tier"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }]
+                                                }
+                                            }, {
+                                                kind: "InlineFragment",
+                                                typeCondition: {
+                                                    kind: "NamedType",
+                                                    name: {
+                                                        kind: "Name",
                                                         value: "Emote"
                                                     }
                                                 },
@@ -4279,11 +4317,11 @@ webpackJsonp([39], {
             }],
             loc: {
                 start: 0,
-                end: 183
+                end: 232
             }
         };
         n.loc.source = {
-            body: "fragment roomMessageContent on RoomMessage {\ncontent {\ntext\nfragments {\ntext\ncontent {\n... on Emote {\nemoteID: id\nsetID\ntoken\n}\n... on User {\nid\nlogin\ndisplayName\n}\n__typename\n}\n}\n}\n}",
+            body: "fragment roomMessageContent on RoomMessage {\ncontent {\ntext\nfragments {\ntext\ncontent {\n... on CheermoteToken {\nbitsAmount\nprefix\ntier\n}\n... on Emote {\nemoteID: id\nsetID\ntoken\n}\n... on User {\nid\nlogin\ndisplayName\n}\n__typename\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -7023,18 +7061,24 @@ webpackJsonp([39], {
                                         content: null,
                                         __typename: "RoomMessageFragment"
                                     },
-                                    n = e.emoticon,
-                                    i = e.mention,
-                                    a = e.text;
-                                return n && (t.content = {
-                                    emoteID: n.id,
-                                    setID: n.set_id,
-                                    token: a,
+                                    n = e.cheermote,
+                                    i = e.emoticon,
+                                    a = e.mention,
+                                    r = e.text;
+                                return n ? t.content = {
+                                    bitsAmount: n.bits_amount,
+                                    prefix: n.prefix,
+                                    tier: n.tier,
+                                    __typename: De.CHEERMOTE
+                                } : i ? t.content = {
+                                    emoteID: i.id,
+                                    setID: i.set_id,
+                                    token: r,
                                     __typename: De.EMOTE
-                                }), i && (t.content = {
-                                    id: i.user_id,
-                                    login: i.login,
-                                    displayName: i.display_name,
+                                } : a && (t.content = {
+                                    id: a.user_id,
+                                    login: a.login,
+                                    displayName: a.display_name,
                                     __typename: De.MENTION
                                 }), t
                             }), o = n.sender.badges.map(function(e) {
@@ -16389,7 +16433,7 @@ webpackJsonp([39], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(133).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(131).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16401,7 +16445,7 @@ webpackJsonp([39], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(132).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(130).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16413,7 +16457,7 @@ webpackJsonp([39], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(129).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16425,7 +16469,7 @@ webpackJsonp([39], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(128).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16437,7 +16481,7 @@ webpackJsonp([39], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(127).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -16449,7 +16493,7 @@ webpackJsonp([39], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(126).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -38841,4 +38885,4 @@ webpackJsonp([39], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-clips-71f91e73d15c8cd0cfbdb790ddcc744a.js.map
+//# sourceMappingURL=pages.channel-clips-f321deba415f7603f2d2dd0a0adfe8aa.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([93], {
+webpackJsonp([91], {
     "+27R": function(e, t, n) {
         (function(e) {
             "use strict";
@@ -4721,6 +4721,44 @@ webpackJsonp([93], {
                                                     kind: "NamedType",
                                                     name: {
                                                         kind: "Name",
+                                                        value: "CheermoteToken"
+                                                    }
+                                                },
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "bitsAmount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "prefix"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "tier"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }]
+                                                }
+                                            }, {
+                                                kind: "InlineFragment",
+                                                typeCondition: {
+                                                    kind: "NamedType",
+                                                    name: {
+                                                        kind: "Name",
                                                         value: "Emote"
                                                     }
                                                 },
@@ -4814,11 +4852,11 @@ webpackJsonp([93], {
             }],
             loc: {
                 start: 0,
-                end: 183
+                end: 232
             }
         };
         n.loc.source = {
-            body: "fragment roomMessageContent on RoomMessage {\ncontent {\ntext\nfragments {\ntext\ncontent {\n... on Emote {\nemoteID: id\nsetID\ntoken\n}\n... on User {\nid\nlogin\ndisplayName\n}\n__typename\n}\n}\n}\n}",
+            body: "fragment roomMessageContent on RoomMessage {\ncontent {\ntext\nfragments {\ntext\ncontent {\n... on CheermoteToken {\nbitsAmount\nprefix\ntier\n}\n... on Emote {\nemoteID: id\nsetID\ntoken\n}\n... on User {\nid\nlogin\ndisplayName\n}\n__typename\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -8728,18 +8766,24 @@ webpackJsonp([93], {
                                         content: null,
                                         __typename: "RoomMessageFragment"
                                     },
-                                    n = e.emoticon,
-                                    a = e.mention,
-                                    i = e.text;
-                                return n && (t.content = {
-                                    emoteID: n.id,
-                                    setID: n.set_id,
-                                    token: i,
+                                    n = e.cheermote,
+                                    a = e.emoticon,
+                                    i = e.mention,
+                                    r = e.text;
+                                return n ? t.content = {
+                                    bitsAmount: n.bits_amount,
+                                    prefix: n.prefix,
+                                    tier: n.tier,
+                                    __typename: Le.CHEERMOTE
+                                } : a ? t.content = {
+                                    emoteID: a.id,
+                                    setID: a.set_id,
+                                    token: r,
                                     __typename: Le.EMOTE
-                                }), a && (t.content = {
-                                    id: a.user_id,
-                                    login: a.login,
-                                    displayName: a.display_name,
+                                } : i && (t.content = {
+                                    id: i.user_id,
+                                    login: i.login,
+                                    displayName: i.display_name,
                                     __typename: Le.MENTION
                                 }), t
                             }), o = n.sender.badges.map(function(e) {
@@ -41941,9 +41985,10 @@ webpackJsonp([93], {
                         type: _._49.P
                     }, Object(l.d)("Get your stream key from the <x:link>Twitch Dashboard</x:link>.", {
                         "x:link": function(t) {
-                            return r.createElement("a", {
-                                href: "/" + e.props.channelLogin + "/dashboard/settings/streamkey",
-                                target: "_blank"
+                            return r.createElement(_.O, {
+                                key: "stream-key",
+                                targetBlank: !0,
+                                to: "/" + e.props.channelLogin + "/dashboard/settings"
                             }, t)
                         }
                     }, "RunStreamTest"))), r.createElement(_._8, {
@@ -44763,8 +44808,7 @@ webpackJsonp([93], {
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    if (e = this.props, t = e.channelID, n = e.userID, a = !1, !n) return [3, 4];
-                                    i.label = 1;
+                                    e = this.props, t = e.channelID, n = e.userID, a = !1, i.label = 1;
                                 case 1:
                                     return i.trys.push([1, 3, , 4]), [4, Object(Pn.a)(n)];
                                 case 2:
@@ -59668,4 +59712,4 @@ webpackJsonp([93], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.live-28ad858441cee23e6575600b5314d548.js.map
+//# sourceMappingURL=pages.live-32516d9638237d62ef74cfd85694d15a.js.map

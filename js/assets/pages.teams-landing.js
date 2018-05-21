@@ -1,4 +1,4 @@
-webpackJsonp([65], {
+webpackJsonp([63], {
     "2hJ3": function(e, n, t) {
         "use strict";
         n.a = function(e) {
@@ -599,8 +599,8 @@ webpackJsonp([65], {
         var a, i = t("TToO"),
             r = t("GiK3"),
             l = (t.n(r), t("6sO2")),
-            d = t("2hJ3"),
-            m = t("f6Cj"),
+            m = t("2hJ3"),
+            d = t("f6Cj"),
             s = t("Odds"),
             o = t("bdk8");
         t.n(o);
@@ -638,7 +638,7 @@ webpackJsonp([65], {
                 }, t.getUrl = function() {
                     return t.props.url || window.location.href
                 }, t.copyPageUrl = function(e) {
-                    e && e.preventDefault(), t.props.onShareClick && t.props.onShareClick(t.props.type), Object(d.a)(t.getUrl()), t.setState({
+                    e && e.preventDefault(), t.props.onShareClick && t.props.onShareClick(t.props.type), Object(m.a)(t.getUrl()), t.setState({
                         isCopied: !0
                     })
                 }, t.renderIcon = function() {
@@ -721,13 +721,13 @@ webpackJsonp([65], {
                         l = n || "";
                     switch (i) {
                         case a.Reddit:
-                            return Object(m.b)(r, l);
+                            return Object(d.b)(r, l);
                         case a.VKontakte:
-                            return Object(m.d)(r);
+                            return Object(d.d)(r);
                         case a.Facebook:
-                            return Object(m.a)(r);
+                            return Object(d.a)(r);
                         case a.Twitter:
-                            return Object(m.c)(r, l);
+                            return Object(d.c)(r, l);
                         default:
                             return ""
                     }
@@ -748,26 +748,26 @@ webpackJsonp([65], {
     AoO8: function(e, n, t) {
         "use strict";
         n.b = function(e, n) {
-            return m(function(e) {
+            return d(function(e) {
                 e.video && (e.video = Object(l.b)(e.video));
                 var n = i.stringify(e);
                 return r.o.config.playerBaseURL + "/?" + n
             }(e), n)
-        }, n.a = m;
+        }, n.a = d;
         var a = t("TToO"),
             i = t("OAwv"),
             r = (t.n(i), t("6sO2")),
             l = t("JpYe"),
-            d = {
+            m = {
                 height: 378,
                 width: 620,
                 allowScrolling: !0,
                 allowFullscreen: !0
             };
 
-        function m(e, n) {
-            void 0 === n && (n = d);
-            var t, i, r = a.__assign({}, d, n),
+        function d(e, n) {
+            void 0 === n && (n = m);
+            var t, i, r = a.__assign({}, m, n),
                 l = '<iframe src="' + e + '" frameborder="0" ' + (r.allowFullscreen ? 'allowfullscreen="true" ' : "") + (r.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + r.height + '" width="' + r.width + '"></iframe>';
             return r.textLink && (l += (t = r.textLink.url, i = r.textLink.text, '<a href="' + t + '" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">' + i + "</a>")), l
         }
@@ -781,8 +781,8 @@ webpackJsonp([65], {
             i = t("2KeS"),
             r = t("6sO2"),
             l = t("j7/Y"),
-            d = t("w9tK"),
-            m = t("vH/s"),
+            m = t("w9tK"),
+            d = t("vH/s"),
             s = t("CSlQ"),
             o = t("TP6L"),
             c = t("TToO"),
@@ -798,20 +798,17 @@ webpackJsonp([65], {
                     t = null;
                 n.live && (t = a.createElement(b._8, {
                     margin: {
-                        x: .5
+                        right: .5
                     }
                 }, a.createElement(b.G, {
                     status: b.I.Live
                 })));
                 var i = null;
-                n.live && (i = a.createElement(b._8, {
-                    margin: {
-                        x: .5
-                    }
-                }, a.createElement(b.Q, {
+                n.live && (i = a.createElement(b._8, null, a.createElement(b.Q, {
                     color: b.K.Alt2
                 }, Object(r.e)(n.viewersCount))));
                 return a.createElement(b._6, {
+                    alpha: !0,
                     onClick: function() {
                         e.onClick({
                             userID: n.userID,
@@ -829,6 +826,7 @@ webpackJsonp([65], {
                     }
                 }, a.createElement(b.m, {
                     alt: n.displayName,
+                    borderRadius: b.t.Medium,
                     size: 30,
                     src: n.profileImageURL
                 }), a.createElement(b._8, {
@@ -836,11 +834,14 @@ webpackJsonp([65], {
                     flexShrink: 1,
                     overflow: b._11.Hidden,
                     margin: {
-                        x: .5
+                        left: 1
                     }
                 }, a.createElement(b.Q, {
-                    ellipsis: !0
-                }, n.displayName)), t, i))
+                    ellipsis: !0,
+                    fontSize: b.V.Size5
+                }, n.displayName)), a.createElement(b._8, {
+                    display: b.R.Flex
+                }, t, i)))
             },
             h = function() {
                 function e(e) {
@@ -881,10 +882,10 @@ webpackJsonp([65], {
                         if (i) {
                             var r = i.id,
                                 l = i.displayName,
-                                d = i.login,
-                                m = i.stream;
-                            if (r && l && d && m) {
-                                var s = m.viewersCount || 0,
+                                m = i.login,
+                                d = i.stream;
+                            if (r && l && m && d) {
+                                var s = d.viewersCount || 0,
                                     o = i.profileImageURL || "";
                                 e.push({
                                     userID: r,
@@ -892,7 +893,7 @@ webpackJsonp([65], {
                                     live: !0,
                                     viewersCount: s,
                                     profileImageURL: o,
-                                    login: d
+                                    login: m
                                 })
                             }
                         }
@@ -907,14 +908,14 @@ webpackJsonp([65], {
                         if (i) {
                             var r = i.id,
                                 l = i.displayName,
-                                d = i.login;
-                            r && l && d && e.push({
+                                m = i.login;
+                            r && l && m && e.push({
                                 userID: r,
                                 displayName: l,
                                 live: !1,
                                 viewersCount: 0,
                                 profileImageURL: i.profileImageURL,
-                                login: d
+                                login: m
                             })
                         }
                     }
@@ -997,23 +998,32 @@ webpackJsonp([65], {
                         flexDirection: b.T.Column
                     }, a.createElement(b._8, {
                         display: b.R.Flex,
-                        flexShrink: 0
+                        flexShrink: 0,
+                        alignItems: b.c.Center,
+                        margin: {
+                            bottom: 1
+                        }
                     }, a.createElement(b._8, {
                         flexGrow: 1,
                         flexShrink: 1
                     }, a.createElement(b.Q, {
-                        fontSize: b.V.Size5,
-                        type: b._49.Strong
+                        bold: !0,
+                        fontSize: b.V.Size4
                     }, Object(r.d)("Team Members", "TeamLandingPage_MemberList"))), a.createElement(b.Q, {
                         color: b.K.Alt2
-                    }, Object(r.e)(this.props.data.total))), a.createElement(v.b, null, a.createElement(b._8, null, n, a.createElement(y.a, {
+                    }, Object(r.e)(this.props.data.total))), a.createElement(b._35, {
+                        display: b.R.Flex,
+                        flexDirection: b.T.Column,
+                        background: b.n.Base,
+                        elevation: 1
+                    }, a.createElement(v.b, null, a.createElement(b._8, null, n, a.createElement(y.a, {
                         loadMore: this.props.loadMore,
                         enabled: this.props.data.infiniteScrollEnabled,
                         contentLength: this.props.data.numLoaded
-                    }))))
+                    })))))
                 }, n
             }(a.Component),
-            L = Object(i.d)(Object(s.d)("MemberList"), Object(k.a)(w, {
+            M = Object(i.d)(Object(s.d)("MemberList"), Object(k.a)(w, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1046,7 +1056,7 @@ webpackJsonp([65], {
                                             i = _(t.getLiveMemberEdges(), a.getLiveMemberEdges()),
                                             r = F(t.getLiveMemberPageInfo(), a.getLiveMemberPageInfo()),
                                             l = _(t.getMemberEdges(), a.getMemberEdges()),
-                                            d = F(t.getMemberPageInfo(), a.getMemberPageInfo());
+                                            m = F(t.getMemberPageInfo(), a.getMemberPageInfo());
                                         return {
                                             team: {
                                                 __typename: "Team",
@@ -1059,7 +1069,7 @@ webpackJsonp([65], {
                                                 members: {
                                                     __typename: "UserConnection",
                                                     edges: l,
-                                                    pageInfo: d
+                                                    pageInfo: m
                                                 },
                                                 allMembers: {
                                                     __typename: "UserConnection",
@@ -1074,14 +1084,23 @@ webpackJsonp([65], {
                     }
                 }
             }))(T),
-            M = t("lfvs"),
+            L = t("lfvs"),
             x = Object(i.d)(Object(s.d)("TeamsDescription", {
                 autoReportInteractive: !0
             }))(function(e) {
-                return e.description ? a.createElement(b._8, null, a.createElement(b.Q, {
+                return e.description ? a.createElement(b._8, {
+                    margin: {
+                        top: 2
+                    }
+                }, a.createElement(b.Q, {
                     bold: !0,
                     fontSize: b.V.Size4
-                }, e.displayName), a.createElement(b._8, null, a.createElement(b._58, null, a.createElement(M, {
+                }, e.displayName), a.createElement(b._35, {
+                    color: b.K.Alt2,
+                    margin: {
+                        top: 1
+                    }
+                }, a.createElement(b._58, null, a.createElement(L, {
                     source: e.description
                 })))) : null
             }),
@@ -1109,7 +1128,7 @@ webpackJsonp([65], {
                         allowFullscreen: !0
                     }),
                     l = "https://www.twitch.tv/embed/" + e.login + "/chat",
-                    d = Object(j.a)(l, {
+                    m = Object(j.a)(l, {
                         height: 500,
                         width: 350,
                         allowFullscreen: !1,
@@ -1160,11 +1179,11 @@ webpackJsonp([65], {
                         top: 1
                     }
                 }, a.createElement(b.Q, null, Object(r.d)("Embed Chat", "ChannelShareButton")), a.createElement(O.a, {
-                    value: d
+                    value: m
                 }))))))
             },
             A = t("F8kA"),
-            U = function(e) {
+            V = function(e) {
                 return a.createElement(b._8, {
                     padding: {
                         left: .5
@@ -1181,7 +1200,7 @@ webpackJsonp([65], {
                     title: e.displayName
                 }, e.displayName))
             },
-            V = function(e) {
+            U = function(e) {
                 return a.createElement(b._52, {
                     align: b._53.Left,
                     direction: b._54.Bottom,
@@ -1198,7 +1217,7 @@ webpackJsonp([65], {
                     type: b._49.Span,
                     fontSize: b.V.Size5
                 }, a.Children.map(e.children, function(n, t) {
-                    if (n.type !== U) throw new Error("Communities only accepts CommunityLink components as children");
+                    if (n.type !== V) throw new Error("Communities only accepts CommunityLink components as children");
                     return a.createElement(a.Fragment, null, n, t !== a.Children.count(e.children) - 1 && ",")
                 }))))
             },
@@ -1281,13 +1300,13 @@ webpackJsonp([65], {
                                 i = null;
                             if (t && t.length > 0) {
                                 var r = t.map(function(e, n) {
-                                    return a.createElement(U, {
+                                    return a.createElement(V, {
                                         name: e.name,
                                         displayName: e.displayName,
                                         key: e.name + "_" + n
                                     })
                                 });
-                                i = a.createElement(V, null, r)
+                                i = a.createElement(U, null, r)
                             }
                             return i
                         }
@@ -1329,8 +1348,10 @@ webpackJsonp([65], {
                 return c.__extends(n, e), n.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, n.prototype.render = function() {
-                    return a.createElement(b._8, {
+                    return a.createElement(b._35, {
                         className: "teams-player",
+                        background: b.n.Base,
+                        elevation: 1,
                         fullWidth: !0
                     }, this.renderTopBar(), a.createElement(b.k, {
                         ratio: b.l.Aspect16x9
@@ -1423,6 +1444,7 @@ webpackJsonp([65], {
                 }, n.prototype.renderBottomBar = function() {
                     var e = this.getTitle();
                     return a.createElement(b._35, {
+                        alignItems: b.c.Center,
                         display: b.R.Flex,
                         flexWrap: b.U.NoWrap,
                         justifyContent: b._7.Between,
@@ -1449,13 +1471,7 @@ webpackJsonp([65], {
                         className: "teams-player__action-container",
                         display: b.R.Flex,
                         alignItems: b.c.Center,
-                        justifyContent: b._7.End,
-                        margin: {
-                            top: 1
-                        },
-                        padding: {
-                            top: 1
-                        }
+                        justifyContent: b._7.End
                     }, a.createElement(b._8, {
                         display: b.R.Flex,
                         margin: {
@@ -1516,7 +1532,7 @@ webpackJsonp([65], {
                         }
                     }, a.createElement(b._35, {
                         className: "teams-page-body__inner-container",
-                        background: b.n.Base,
+                        background: b.n.Alt2,
                         display: b.R.Flex,
                         padding: 2
                     }, a.createElement(b._8, {
@@ -1526,7 +1542,7 @@ webpackJsonp([65], {
                         margin: {
                             right: 2
                         }
-                    }, this.renderLogo(), a.createElement(L, {
+                    }, this.renderLogo(), a.createElement(M, {
                         teamName: this.props.teamName,
                         onMemberItemClick: this.changeSelectedMember
                     })), a.createElement(b._8, {
@@ -1615,10 +1631,10 @@ webpackJsonp([65], {
                 }, e.children))
             },
             ae = Object(i.d)(Object(s.d)("TeamsLandingPage", {
-                destination: d.a.TeamsLandingPage,
+                destination: m.a.TeamsLandingPage,
                 autoReportInteractive: !0
             }), Object(l.a)({
-                location: m.PageviewLocation.TeamsLandingPage
+                location: d.PageviewLocation.TeamsLandingPage
             }))(function(e) {
                 return r.b.get("teams_landing_launch", !1) ? a.createElement(te, null, a.createElement(ne, {
                     teamName: e.match.params.teamName
@@ -2152,7 +2168,7 @@ webpackJsonp([65], {
             i = t("GiK3"),
             r = t("F8kA"),
             l = t("Odds"),
-            d = function(e) {
+            m = function(e) {
                 return i.createElement(l._8, {
                     margin: {
                         right: 1
@@ -2185,7 +2201,7 @@ webpackJsonp([65], {
                 }), e.title))))
             };
         t.d(n, "a", function() {
-            return d
+            return m
         })
     },
     eakv: function(e, n) {
@@ -2618,7 +2634,7 @@ webpackJsonp([65], {
                 title: n
             })
         }, n.d = function(e) {
-            return Object(a.a)(d, {
+            return Object(a.a)(m, {
                 url: e
             })
         };
@@ -2626,7 +2642,7 @@ webpackJsonp([65], {
             i = "https://www.facebook.com/sharer/sharer.php",
             r = "https://www.twitter.com/share",
             l = "https://www.reddit.com/submit",
-            d = "https://vk.com/share.php"
+            m = "https://vk.com/share.php"
     },
     xX9u: function(e, n, t) {
         "use strict";
@@ -2654,4 +2670,4 @@ webpackJsonp([65], {
         })
     }
 });
-//# sourceMappingURL=pages.teams-landing-d79a62c5c125744c371611f13595aa77.js.map
+//# sourceMappingURL=pages.teams-landing-a73b04e5b3bc9016c660306586e2d406.js.map

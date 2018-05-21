@@ -1,4 +1,4 @@
-webpackJsonp([66], {
+webpackJsonp([64], {
     "15A3": function(e, t, a) {
         e.exports = a.p + "assets/streamlabs_obs_small-6949e63f4c841043cd4f704afe233a83.png"
     },
@@ -23,65 +23,65 @@ webpackJsonp([66], {
             f = a.n(b),
             h = a("IN5m"),
             y = a.n(h),
-            w = a("15A3"),
-            O = a.n(w),
+            O = a("15A3"),
+            w = a.n(O),
             E = a("yI+T"),
             _ = a.n(E),
             B = a("j7/Y"),
             k = a("w9tK"),
             x = a("vH/s"),
-            v = a("CSlQ"),
-            R = a("Odds"),
-            j = function(e) {
-                return n.createElement(R._35, {
-                    background: R.n.Base,
+            R = a("CSlQ"),
+            j = a("Odds"),
+            v = function(e) {
+                return n.createElement(j._35, {
+                    background: j.n.Base,
                     elevation: 1,
                     padding: 2,
-                    display: R.R.Flex,
-                    flexDirection: R.T.Column,
+                    display: j.R.Flex,
+                    flexDirection: j.T.Column,
                     fullHeight: !0
-                }, n.createElement(R._8, {
-                    display: R.R.Flex,
-                    justifyContent: R._7.Center,
+                }, n.createElement(j._8, {
+                    display: j.R.Flex,
+                    justifyContent: j._7.Center,
                     margin: {
                         top: 1
                     }
-                }, n.createElement(R.N, {
+                }, n.createElement(j.N, {
                     alt: e.title,
                     src: e.imgURL
-                })), n.createElement(R._8, {
+                })), n.createElement(j._8, {
                     margin: {
                         top: 2,
                         bottom: 1
                     }
-                }, n.createElement(R.Q, {
-                    fontSize: R.V.Size5
-                }, e.title), n.createElement(R.O, {
+                }, n.createElement(j.Q, {
+                    fontSize: j.V.Size5
+                }, e.title), n.createElement(j.O, {
                     targetBlank: !0,
                     to: e.link
-                }, e.link)), n.createElement(R.Q, {
-                    type: R._49.P,
-                    color: R.K.Alt2
-                }, e.longDescription), n.createElement(R._8, {
-                    display: R.R.Flex,
-                    flexDirection: R.T.Column,
+                }, e.link)), n.createElement(j.Q, {
+                    type: j._49.P,
+                    color: j.K.Alt2
+                }, e.longDescription), n.createElement(j._8, {
+                    display: j.R.Flex,
+                    flexDirection: j.T.Column,
                     fullWidth: !0,
                     flexGrow: 1,
-                    justifyContent: R._7.End,
+                    justifyContent: j._7.End,
                     margin: {
                         top: 2
                     }
-                }, n.createElement(R.v, {
+                }, n.createElement(j.v, {
                     fullWidth: !0,
-                    type: R.B.Hollow,
+                    type: j.B.Hollow,
                     linkTo: e.link
-                }, Object(i.d)("Download", "BroadcastItemCard")), n.createElement(R._8, {
+                }, Object(i.d)("Download", "BroadcastItemCard")), n.createElement(j._8, {
                     margin: {
                         top: 1
                     }
-                }, n.createElement(R.v, {
+                }, n.createElement(j.v, {
                     fullWidth: !0,
-                    type: R.B.Text,
+                    type: j.B.Text,
                     linkTo: e.setupGuideLink
                 }, Object(i.d)("Setup Guide", "BroadcastItemCard")))))
             },
@@ -93,7 +93,7 @@ webpackJsonp([66], {
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = Object(i.d)("For more info, visit the <x:link>Support Center</x:link>.", {
                             "x:link": function(e) {
-                                return n.createElement(R.O, {
+                                return n.createElement(j.O, {
                                     key: "helplink",
                                     targetBlank: !0,
                                     to: "https://help.twitch.tv/customer/portal/topics/301257-getting-started/articles"
@@ -102,128 +102,128 @@ webpackJsonp([66], {
                         }, "BroadcastRootPage"),
                         t = Object(i.d)("Looking for your stream key? You can find it on your <x:link>dashboard</x:link>.", {
                             "x:link": function(e) {
-                                return n.createElement(R.O, {
+                                return n.createElement(j.O, {
                                     key: "dashboardlink",
                                     targetBlank: !0,
-                                    to: "https://www.twitch.tv/broadcast/dashboard/streamkey"
+                                    to: "/broadcast/dashboard/settings"
                                 }, e)
                             }
                         }, "BroadcastRootPage");
-                    return n.createElement(R._8, {
+                    return n.createElement(j._8, {
                         className: "broadcast-container"
-                    }, n.createElement(L.a, null, n.createElement(R.Q, {
+                    }, n.createElement(L.a, null, n.createElement(j.Q, {
                         bold: !0,
-                        type: R._49.H4
-                    }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), n.createElement(R._8, {
+                        type: j._49.H4
+                    }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), n.createElement(j._8, {
                         margin: {
                             y: 1
                         }
-                    }, n.createElement(R.Q, {
-                        color: R.K.Alt2,
-                        type: R._49.P
-                    }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), n.createElement(R.Q, {
-                        color: R.K.Alt2
-                    }, e)), n.createElement(R.Q, {
-                        color: R.K.Alt2
-                    }, t), n.createElement(R._8, {
+                    }, n.createElement(j.Q, {
+                        color: j.K.Alt2,
+                        type: j._49.P
+                    }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), n.createElement(j.Q, {
+                        color: j.K.Alt2
+                    }, e)), n.createElement(j.Q, {
+                        color: j.K.Alt2
+                    }, t), n.createElement(j._8, {
                         margin: {
                             y: 2
                         }
-                    }, n.createElement(R.Q, {
+                    }, n.createElement(j.Q, {
                         bold: !0,
-                        type: R._49.H4
-                    }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), n.createElement(R._55, {
-                        childWidth: R._56.Large,
-                        gutterSize: R._57.Small,
+                        type: j._49.H4
+                    }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), n.createElement(j._55, {
+                        childWidth: j._56.Large,
+                        gutterSize: j._57.Small,
                         noGrow: !0,
                         placeholderItems: 8
-                    }, n.createElement(R._8, {
+                    }, n.createElement(j._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(j, {
+                    }, n.createElement(v, {
                         imgURL: c.a,
                         title: Object(i.d)("Bebo", "BroadcastRootPage"),
                         link: "http://www.bebo.com/",
                         longDescription: Object(i.d)("Free, easy, all-in-one Windows software that includes what you need to stream and display alerts and overlays. Recommended for first-time streamers.", "BroadcastRootPage"),
                         setupGuideLink: "https://help.bebo.com/getting-started/how-do-i-get-started-with-bebo"
-                    })), n.createElement(R._8, {
+                    })), n.createElement(j._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(j, {
-                        imgURL: O.a,
+                    }, n.createElement(v, {
+                        imgURL: w.a,
                         title: Object(i.d)("Streamlabs OBS", "BroadcastRootPage"),
                         link: "https://streamlabs.com/streamlabs-obs/",
                         longDescription: Object(i.d)("Streamlabs OBS is free, open source, and easy way to get started streaming. The app is built on top of OBS with a whole lot of exciting features: facemasks, built-in widgets & chat, game specific encoders and thousands of free overlays and themes.", "BroadcastRootPage"),
                         setupGuideLink: "https://support.streamlabs.com/hc/en-us/articles/115004797393-Streamlabs-OBS-All-In-One-Window-Walk-Through"
-                    })), n.createElement(R._8, {
+                    })), n.createElement(j._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(j, {
+                    }, n.createElement(v, {
                         imgURL: _.a,
                         title: Object(i.d)("XSplit Broadcaster", "BroadcastRootPage"),
                         link: "http://www.xsplit.com/",
                         longDescription: Object(i.d)("Simple yet powerful live streaming and recording software. XSplit Broadcaster is a revolutionary audio/video mixing application that allows for highly customizable professional quality live broadcasts by using simple and intuitive interface anyone can master.", "BroadcastRootPage"),
                         setupGuideLink: "https://www.xsplit.com/support"
-                    })), n.createElement(R._8, {
+                    })), n.createElement(j._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(j, {
+                    }, n.createElement(v, {
                         imgURL: p.a,
                         title: Object(i.d)("Open Broadcast Software", "BroadcastRootPage"),
                         link: "http://obsproject.com/",
                         longDescription: Object(i.d)("Free and open source software for recording and live streaming. Source code is available to everyone to contribute and improve.", "BroadcastRootPage"),
                         setupGuideLink: "https://obsproject.com/help"
-                    }))), n.createElement(R._8, {
+                    }))), n.createElement(j._8, {
                         margin: {
                             y: 2
                         }
-                    }, n.createElement(R.Q, {
+                    }, n.createElement(j.Q, {
                         bold: !0,
-                        type: R._49.H4
-                    }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), n.createElement(R._55, {
-                        childWidth: R._56.Large,
-                        gutterSize: R._57.Small,
+                        type: j._49.H4
+                    }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), n.createElement(j._55, {
+                        childWidth: j._56.Large,
+                        gutterSize: j._57.Small,
                         noGrow: !0,
                         placeholderItems: 3
-                    }, n.createElement(R._8, {
+                    }, n.createElement(j._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(j, {
+                    }, n.createElement(v, {
                         imgURL: y.a,
                         title: Object(i.d)("Streamlabs", "BroadcastRootPage"),
                         link: "https://streamlabs.com/",
                         longDescription: Object(i.d)("Level up your stream with alerts, donations, and 20+ interactive widgets.", "BroadcastRootPage"),
                         setupGuideLink: "https://support.streamlabs.com/hc/en-us/categories/202602847-Help"
-                    })), n.createElement(R._8, {
+                    })), n.createElement(j._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(j, {
+                    }, n.createElement(v, {
                         imgURL: f.a,
                         title: Object(i.d)("StreamElements", "BroadcastRootPage"),
                         link: "https://streamelements.com/",
                         longDescription: Object(i.d)("A full suite for all your streaming needs: Bot, Overlays, Loyalty points, Giveaways and much more for new and veteran streamers alike.", "BroadcastRootPage"),
                         setupGuideLink: "https://support.streamelements.com/hc/en-us/articles/115003424812-Quick-Start-Guide"
-                    })), n.createElement(R._8, {
+                    })), n.createElement(j._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(j, {
+                    }, n.createElement(v, {
                         imgURL: d.a,
                         title: Object(i.d)("Muxy", "BroadcastRootPage"),
                         link: "https://www.muxy.io/",
                         longDescription: Object(i.d)("Muxy provides alerts, tips, a real-time Live Feed, Cheer visualizations, and stream analytics.", "BroadcastRootPage"),
                         setupGuideLink: "https://muxy.io/tutorial/"
-                    })), n.createElement(R._8, {
+                    })), n.createElement(j._8, {
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(j, {
+                    }, n.createElement(v, {
                         imgURL: g.a,
                         title: Object(i.d)("Opera Event", "BroadcastRootPage"),
                         link: "https://www.operaevent.co/",
@@ -232,7 +232,7 @@ webpackJsonp([66], {
                     })))))
                 }, t
             }(n.Component)),
-            S = Object(r.compose)(Object(v.d)("BroadcastPage", {
+            S = Object(r.compose)(Object(R.d)("BroadcastPage", {
                 autoReportInteractive: !0,
                 destination: k.a.BroadcastPage
             }), Object(B.a)({
@@ -287,4 +287,4 @@ webpackJsonp([66], {
         e.exports = a.p + "assets/xsplit_broadcaster_1x-404b22413674582ad019f70631921904.png"
     }
 });
-//# sourceMappingURL=pages.broadcast-11ffaeced3c3b0056fd26eaf61b4d3e2.js.map
+//# sourceMappingURL=pages.broadcast-cbb740142d0268d4bb3fc446680cb072.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([106, 109], {
+webpackJsonp([104, 107], {
     "+I3D": function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -73,7 +73,7 @@ webpackJsonp([106, 109], {
                             }
                         })
                     };
-                    var a = i.o.experiments.getAssignment(c.j);
+                    var a = i.o.experiments.getAssignment(c.k);
                     return n.state = {
                         categoryChange: null,
                         isFollowCategoriesExperimentEnabled: a === c.d.ENABLED
@@ -1329,7 +1329,7 @@ webpackJsonp([106, 109], {
                 return a.__generator(this, function(e) {
                     switch (e.label) {
                         case 0:
-                            return [4, n.e(126).then(n.bind(null, "Revh"))];
+                            return [4, n.e(124).then(n.bind(null, "Revh"))];
                         case 1:
                             return [2, e.sent().items]
                     }
@@ -1455,7 +1455,7 @@ webpackJsonp([106, 109], {
             I = "directory-game__card_container",
             x = 5e3,
             A = 300,
-            R = function(e) {
+            j = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderVariation = function() {
@@ -1692,7 +1692,7 @@ webpackJsonp([106, 109], {
         }), n.d(t, !1, function() {
             return I
         }), n.d(t, "b", function() {
-            return R
+            return j
         })
     },
     AtoX: function(e, t) {},
@@ -2991,7 +2991,7 @@ webpackJsonp([106, 109], {
                     }, n.completeAndRedirectToForYou = function() {
                         Object(h.d)();
                         var e = "" === location.search ? "?tt_medium=onboarding" : location.search + "&tt_medium=onboarding";
-                        window.location.assign("/directory/following/foryou" + e)
+                        n.state.inDiscoveryFrontpageExperiment ? window.location.assign("/" + e) : window.location.assign("/directory/following/foryou" + e)
                     }, n.moveNextToChannelSurfing = function() {
                         o.o.history.push("/hi/surf" + location.search)
                     }, n.redirectToFrontPage = function() {
@@ -3003,11 +3003,13 @@ webpackJsonp([106, 109], {
                     }, n.userFollowedGamesDataLoaded = function(e) {
                         return e.data && !e.data.loading && !e.data.error && e.data.currentUser
                     };
-                    var r = o.o.experiments.getAssignment(g.i),
-                        i = o.o.experiments.getAssignment(g.h);
+                    var r = o.o.experiments.getAssignment(g.j),
+                        i = o.o.experiments.getAssignment(g.i),
+                        s = o.o.experiments.getAssignment(g.e);
                     return n.state = {
-                        inOnboardingExperiment: Object(g.n)(r),
-                        inChannelSurfingExperiment: Object(g.m)(r, i)
+                        inOnboardingExperiment: Object(g.p)(r),
+                        inChannelSurfingExperiment: Object(g.n)(r, i),
+                        inDiscoveryFrontpageExperiment: Object(g.o)(s)
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -3770,4 +3772,4 @@ webpackJsonp([106, 109], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-ba410f030659c9f69c42702261a6cad5.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-679eab7603cc3537b4b0adcb47da2512.js.map

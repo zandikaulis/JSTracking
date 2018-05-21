@@ -1,4 +1,4 @@
-webpackJsonp([98], {
+webpackJsonp([96], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -20528,7 +20528,7 @@ webpackJsonp([98], {
                     }, n.goBackToCommunitySelectionPage = function() {
                         o.o.history.push("/hi" + location.search)
                     }, n.trackAndComplete = function() {
-                        Object(b.d)(), n.followedChannelsCount > 0 ? n.redirectWithQueryParams("/directory/following/live") : n.redirectWithQueryParams("/directory/following/foryou")
+                        Object(b.d)(), n.followedChannelsCount > 0 ? n.redirectWithQueryParams("/directory/following/live") : n.state.inDiscoveryExperiment ? n.redirectWithQueryParams("/") : n.redirectWithQueryParams("/directory/following/foryou")
                     }, n.trackAndSkip = function() {
                         H({
                             action: L.Skip,
@@ -20588,20 +20588,22 @@ webpackJsonp([98], {
                             }, 1e3)
                         })
                     };
-                    var i = o.o.experiments.getAssignment(f.i),
-                        r = o.o.experiments.getAssignment(f.h);
+                    var i = o.o.experiments.getAssignment(f.j),
+                        r = o.o.experiments.getAssignment(f.i),
+                        s = o.o.experiments.getAssignment(f.e);
                     return n.state = {
-                        channelSurfingExperimentAssignment: Object(f.m)(i, r) ? r : null,
+                        channelSurfingExperimentAssignment: Object(f.n)(i, r) ? r : null,
                         channelIndex: 0,
                         previouslyViewedCount: 0,
                         channelSurfingData: [],
+                        inDiscoveryExperiment: Object(f.o)(s),
                         transitionDirection: null
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     o.o.setPageTitle(Object(m.d)("Welcome", "ChannelSurfingPage")), i.bind("left", this.trackAndMoveToPreviousChannel), i.bind("right", this.trackAndMoveToNextChannel)
                 }, t.prototype.componentDidUpdate = function() {
-                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive(), (null !== this.state.channelSurfingExperimentAssignment && (!this.props.data.currentUser || Object(f.o)(new Date(this.props.data.currentUser.createdAt))) || r.parse(window.location.search).onboarding_override) && (this.state.channelSurfingData.length || !this.dataMappedToState) || this.redirectWithQueryParams("/")
+                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive(), (null !== this.state.channelSurfingExperimentAssignment && (!this.props.data.currentUser || Object(f.q)(new Date(this.props.data.currentUser.createdAt))) || r.parse(window.location.search).onboarding_override) && (this.state.channelSurfingData.length || !this.dataMappedToState) || this.redirectWithQueryParams("/")
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this,
                         n = this.followedGamesDataLoaded(e) && !this.dataMappedToState,
@@ -22246,4 +22248,4 @@ webpackJsonp([98], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-surfing-c2801ec307b5b460e495cfffcede323a.js.map
+//# sourceMappingURL=pages.channel-surfing-857be6390ae6d776d2813a7c77e83626.js.map
