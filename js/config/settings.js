@@ -67,7 +67,7 @@ window.__twilightSettings = {
     "premiere_video_manager_public": true,
     "premiere_video_manager_staff": true,
     "prime_blocked_regions": ["IN", "IND", "CU", "CUB", "SD", "SUD", "IR", "IRN", "CHN", "CN", "SY", "SYR", "PRK", "KP"],
-    "prime_free_game_offerids": ["24b121ff-c28c-3ec7-1aa7-6bf48a1369ce", "eeb0140c-4e6e-c4f7-b996-2514b73bad16", "16b0a758-b6f5-5b28-9fd2-d783bb56d479", "16ae8ce0-a549-1636-392b-de7974041046", "e4b0b372-e2df-1d53-c62a-9973e88a5283", "d4b16fab-cb60-1533-4ee7-e0cd056bea8e", "d8b0bb99-331e-fcc1-b8c0-90ff22a5e8f1", "9cb12509-e3cc-be80-34b8-66c7d3db9306", "32adea46-5f3c-7a9f-27b8-feaf61532727", "d2b0abd3-b417-eb29-d339-12372f440056", "beae1d86-7da5-a19e-a478-c73c245d934d"],
+    "prime_free_game_offerids": ["24b121ff-c28c-3ec7-1aa7-6bf48a1369ce", "eeb0140c-4e6e-c4f7-b996-2514b73bad16", "16b0a758-b6f5-5b28-9fd2-d783bb56d479", "16ae8ce0-a549-1636-392b-de7974041046", "e4b0b372-e2df-1d53-c62a-9973e88a5283", "d4b16fab-cb60-1533-4ee7-e0cd056bea8e", "d8b0bb99-331e-fcc1-b8c0-90ff22a5e8f1", "9cb12509-e3cc-be80-34b8-66c7d3db9306", "32adea46-5f3c-7a9f-27b8-feaf61532727", "d2b0abd3-b417-eb29-d339-12372f440056", "beae1d86-7da5-a19e-a478-c73c245d934d", "8ab0a940-c4f2-f0b4-86bf-50b6407a889f", "d4ad337d-a2d6-6c95-1a1c-1a5f81bea047", "e0ad410f-9f5e-102c-95be-c5ab46e82375", "e4b0a979-23b5-0ef4-e488-63541e91a514"],
     "prime_landing_page_base_url": "https://twitch.amazon.com/prime",
     "prime_promo_content_base_url": "https://twitch.amazon.com/prime",
     "prime_subsite_up": true,
