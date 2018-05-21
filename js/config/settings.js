@@ -493,11 +493,20 @@ window.__twilightSettings = {
         },
         "51efc82d-cfe8-42bd-ae4b-9304112ed9df": {
             "name": "twilight_vod_provocateur",
-            "v": 3712,
+            "v": 3832,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 77,
                 "value": "control"
+            }, {
+                "weight": 9,
+                "value": "variant1"
+            }, {
+                "weight": 5,
+                "value": "variant2"
+            }, {
+                "weight": 9,
+                "value": "variant3"
             }]
         },
         "54b18ea6-2b6a-4ed7-9128-2497572d31e2": {
