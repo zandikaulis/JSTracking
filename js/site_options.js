@@ -1248,13 +1248,13 @@ window.SiteOptions = {
         },
         "3454d73f-f381-4453-93ad-3ea9d7209993": {
             "name": "ios_gdpr_track_personal_data",
-            "v": 3714,
+            "v": 3839,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "active"
             }]
         },
@@ -3867,13 +3867,13 @@ window.SiteOptions = {
         },
         "9c1c65b0-607c-497c-b89f-cd14e84f08d0": {
             "name": "android_gdpr_track_personal_data",
-            "v": 3710,
+            "v": 3840,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "active"
             }]
         },
