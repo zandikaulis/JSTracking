@@ -876,62 +876,55 @@ webpackJsonp([63], {
                         });
                     return e.concat(t)
                 }, e.prototype.getLiveMembers = function() {
-                    for (var e = [], n = 0, t = this.getLiveMemberEdges(); n < t.length; n++) {
-                        var a = t[n],
-                            i = a && a.node;
-                        if (i) {
-                            var r = i.id,
-                                l = i.displayName,
-                                m = i.login,
-                                d = i.stream;
-                            if (r && l && m && d) {
-                                var s = d.viewersCount || 0,
-                                    o = i.profileImageURL || "";
-                                e.push({
-                                    userID: r,
-                                    displayName: l,
+                    for (var e = new Set, n = [], t = 0, a = this.getLiveMemberEdges(); t < a.length; t++) {
+                        var i = a[t],
+                            r = i && i.node;
+                        if (r) {
+                            var l = r.id,
+                                m = r.displayName,
+                                d = r.login,
+                                s = r.stream;
+                            if (l && m && d && s) {
+                                var o = s.viewersCount || 0,
+                                    c = r.profileImageURL || "";
+                                e.has(l) || (e.add(l), n.push({
+                                    userID: l,
+                                    displayName: m,
                                     live: !0,
-                                    viewersCount: s,
-                                    profileImageURL: o,
-                                    login: m
-                                })
+                                    viewersCount: o,
+                                    profileImageURL: c,
+                                    login: d
+                                }))
                             }
                         }
                     }
-                    return e.sort(function(e, n) {
+                    return n.sort(function(e, n) {
                         return n.viewersCount - e.viewersCount
-                    }), e
+                    }), n
                 }, e.prototype.getMembers = function() {
-                    for (var e = [], n = 0, t = this.getMemberEdges(); n < t.length; n++) {
-                        var a = t[n],
-                            i = a && a.node;
-                        if (i) {
-                            var r = i.id,
-                                l = i.displayName,
-                                m = i.login;
-                            r && l && m && e.push({
-                                userID: r,
-                                displayName: l,
+                    for (var e = new Set, n = [], t = 0, a = this.getMemberEdges(); t < a.length; t++) {
+                        var i = a[t],
+                            r = i && i.node;
+                        if (r) {
+                            var l = r.id,
+                                m = r.displayName,
+                                d = r.login;
+                            l && m && d && (e.has(l) || (e.add(l), n.push({
+                                userID: l,
+                                displayName: m,
                                 live: !1,
                                 viewersCount: 0,
-                                profileImageURL: i.profileImageURL,
-                                login: m
-                            })
+                                profileImageURL: r.profileImageURL,
+                                login: d
+                            })))
                         }
                     }
-                    return e
+                    return n
                 }, e
             }();
 
         function _(e, n) {
-            var t = new Set(e.filter(function(e) {
-                return !!e.node
-            }).map(function(e) {
-                return e.node.id
-            }));
-            return e.concat(n.filter(function(e) {
-                return !e.node || !t.has(e.node.id)
-            }))
+            return e.concat(n)
         }
         var N, S, C = function(e) {
                 for (var n = e.length - 1; n >= 0; n--) {
@@ -969,7 +962,7 @@ webpackJsonp([63], {
                 }
             },
             w = t("2ohs"),
-            T = function(e) {
+            T = (t("OO/U"), function(e) {
                 function n() {
                     var n = null !== e && e.apply(this, arguments) || this;
                     return n.state = {
@@ -1012,6 +1005,7 @@ webpackJsonp([63], {
                     }, Object(r.d)("Team Members", "TeamLandingPage_MemberList"))), a.createElement(b.Q, {
                         color: b.K.Alt2
                     }, Object(r.e)(this.props.data.total))), a.createElement(b._35, {
+                        className: "member-list__scrollable-container",
                         display: b.R.Flex,
                         flexDirection: b.T.Column,
                         background: b.n.Base,
@@ -1022,7 +1016,7 @@ webpackJsonp([63], {
                         contentLength: this.props.data.numLoaded
                     })))))
                 }, n
-            }(a.Component),
+            }(a.Component)),
             M = Object(i.d)(Object(s.d)("MemberList"), Object(k.a)(w, {
                 options: function(e) {
                     return {
@@ -1183,7 +1177,7 @@ webpackJsonp([63], {
                 }))))))
             },
             A = t("F8kA"),
-            V = function(e) {
+            U = function(e) {
                 return a.createElement(b._8, {
                     padding: {
                         left: .5
@@ -1200,7 +1194,7 @@ webpackJsonp([63], {
                     title: e.displayName
                 }, e.displayName))
             },
-            U = function(e) {
+            V = function(e) {
                 return a.createElement(b._52, {
                     align: b._53.Left,
                     direction: b._54.Bottom,
@@ -1217,7 +1211,7 @@ webpackJsonp([63], {
                     type: b._49.Span,
                     fontSize: b.V.Size5
                 }, a.Children.map(e.children, function(n, t) {
-                    if (n.type !== V) throw new Error("Communities only accepts CommunityLink components as children");
+                    if (n.type !== U) throw new Error("Communities only accepts CommunityLink components as children");
                     return a.createElement(a.Fragment, null, n, t !== a.Children.count(e.children) - 1 && ",")
                 }))))
             },
@@ -1300,13 +1294,13 @@ webpackJsonp([63], {
                                 i = null;
                             if (t && t.length > 0) {
                                 var r = t.map(function(e, n) {
-                                    return a.createElement(V, {
+                                    return a.createElement(U, {
                                         name: e.name,
                                         displayName: e.displayName,
                                         key: e.name + "_" + n
                                     })
                                 });
-                                i = a.createElement(U, null, r)
+                                i = a.createElement(V, null, r)
                             }
                             return i
                         }
@@ -1534,7 +1528,8 @@ webpackJsonp([63], {
                         className: "teams-page-body__inner-container",
                         background: b.n.Alt2,
                         display: b.R.Flex,
-                        padding: 2
+                        padding: 2,
+                        fullHeight: !0
                     }, a.createElement(b._8, {
                         className: "teams-page-body__column--left",
                         display: b.R.Flex,
@@ -1627,7 +1622,8 @@ webpackJsonp([63], {
                     fullHeight: !0
                 }, a.createElement(o.a, null), a.createElement(b._8, {
                     flexGrow: 1,
-                    display: b.R.Flex
+                    display: b.R.Flex,
+                    fullHeight: !0
                 }, e.children))
             },
             ae = Object(i.d)(Object(s.d)("TeamsLandingPage", {
@@ -2152,6 +2148,7 @@ webpackJsonp([63], {
         };
         e.exports = t
     },
+    "OO/U": function(e, n) {},
     bdk8: function(e, n) {},
     bhVC: function(e, n, t) {
         "use strict";
@@ -2670,4 +2667,4 @@ webpackJsonp([63], {
         })
     }
 });
-//# sourceMappingURL=pages.teams-landing-a73b04e5b3bc9016c660306586e2d406.js.map
+//# sourceMappingURL=pages.teams-landing-cfb3ea117737f6717c3fe0550fd393c9.js.map

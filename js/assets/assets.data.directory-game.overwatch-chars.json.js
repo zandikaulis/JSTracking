@@ -1,4 +1,4 @@
-webpackJsonp([128], {
+webpackJsonp([127], {
     sQp1: function(e, i) {
         e.exports = {
             items: [{
@@ -283,4 +283,4 @@ webpackJsonp([128], {
         }
     }
 });
-//# sourceMappingURL=assets.data.directory-game.overwatch-chars.json-10ecd5d3b05b6ed7f41fab56c7b568fb.js.map
+//# sourceMappingURL=assets.data.directory-game.overwatch-chars.json-0caf7aaefc5b273d91a688ebc8592084.js.map

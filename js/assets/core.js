@@ -1,4 +1,4 @@
-webpackJsonp([83], {
+webpackJsonp([82], {
     "+3pi": function(e, t, n) {
         "use strict";
         var i, r = n("GiK3"),
@@ -1641,7 +1641,7 @@ webpackJsonp([83], {
         var i = n("TToO"),
             r = n("GiK3"),
             a = n("6sO2"),
-            o = n("nWgz"),
+            o = n("UvtE"),
             s = n("7vx8"),
             l = n("Odds"),
             c = n("7Qq+"),
@@ -5290,6 +5290,13 @@ webpackJsonp([83], {
             function(e) {
                 e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open"
             }(i || (i = {}))
+    },
+    "5a05": function(e, t, n) {
+        "use strict";
+        var i = n("sADG");
+        n.d(t, "a", function() {
+            return i.a
+        })
     },
     "5k1t": function(e, t, n) {
         "use strict";
@@ -11757,6 +11764,343 @@ webpackJsonp([83], {
             }
         })
     },
+    BBWW: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "SideNav_SubscribedChannels"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "limit"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Int"
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "cursor"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Cursor"
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "isLive"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Boolean"
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "subscribedChannels"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "after"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "cursor"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "live"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isLive"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "pageInfo"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "hasNextPage"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "edges"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "cursor"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "node"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "displayName"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "login"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "profileImageURL"
+                                                        },
+                                                        arguments: [{
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "width"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "70"
+                                                            }
+                                                        }],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "broadcastSettings"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "title"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "stream"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "viewersCount"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "game"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: {
+                                                                    kind: "SelectionSet",
+                                                                    selections: [{
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "id"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "name"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }]
+                                                                }
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "type"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 344
+            }
+        };
+        n.loc.source = {
+            body: "query SideNav_SubscribedChannels($limit: Int $cursor: Cursor $isLive: Boolean) {\ncurrentUser {\nid\nsubscribedChannels(first: $limit after: $cursor live: $isLive){\npageInfo{\nhasNextPage\n}\nedges {\ncursor\nnode{\nid\ndisplayName\nlogin\nprofileImageURL(width: 70)\nbroadcastSettings {\nid\ntitle\n}\nstream {\nid\nviewersCount\ngame {\nid\nname\n}\ntype\n}\n}\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     BC6Q: function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
@@ -13775,16 +14119,16 @@ webpackJsonp([83], {
                 return s
             }),
             function(e) {
-                e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensions = "dashboard/extensions", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live-page", e.DashboardPermissions = "dashboard/permissions", e.DashboardRevenueSettings = "dashboard/settings/revenue", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.ContentUnavailable = "404", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit"
+                e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live-page", e.DashboardPermissions = "dashboard/permissions", e.DashboardRevenueSettings = "dashboard/settings/revenue", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.ContentUnavailable = "404", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit"
             }(i || (i = {})),
             function(e) {
                 e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
             }(r || (r = {})),
             function(e) {
-                e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionDetails = "extension_details", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.Games = "directory_games", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.Live = "live_channel", e.LiveHost = "live_host", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.LatestCollection = "latest_collection", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.ShelfChannelMetadata = "shelf_channel_metadata", e.ShelfGameBoxart = "shelf_game_boxart", e.ShelfGameMetadata = "shelf_game_metadata", e.ShelfUserThumbnail = "shelf_user_thumbnail", e.ShelfVideoThumbnail = "shelf_video_thumbnail", e.ShelfVideoTitle = "shelf_video_title", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.Video = "video", e.VideoShelf = "video_shelf"
+                e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionCard = "extension_card", e.ExtensionCategoryPreview = "extension_category_preview", e.ExtensionDetails = "extension_details", e.ExtensionNavTabLink = "extension_nav_tab_link", e.ExtensionSearchBar = "extension_search_bar", e.ExtensionConfigureButton = "extension_configure_button", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.Games = "directory_games", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.InstalledExtensionCard = "installed_extension_card", e.Live = "live_channel", e.LiveHost = "live_host", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.LatestCollection = "latest_collection", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.ShelfChannelMetadata = "shelf_channel_metadata", e.ShelfGameBoxart = "shelf_game_boxart", e.ShelfGameMetadata = "shelf_game_metadata", e.ShelfUserThumbnail = "shelf_user_thumbnail", e.ShelfVideoThumbnail = "shelf_video_thumbnail", e.ShelfVideoTitle = "shelf_video_title", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.Video = "video", e.VideoShelf = "video_shelf"
             }(a || (a = {})),
             function(e) {
-                e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.ExtensionManagerCarousel = "extension_mgr_carousel", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopNav = "twitch_topnav", e.TwitchHome = "twitch_home", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
+                e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.ExtensionManagerCarousel = "extension_mgr_carousel", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.ExtensionCategory = "extension_category", e.ExtensionConfiguration = "extension_configuration", e.ExtensionPage = "extension_page", e.ExtensionSearch = "extension_search", e.ExtensionDiscovery = "extension_discovery", e.ExtensionManagement = "extension_management", e.ExtensionDashboardTopNav = "extension_dashboard_top_nav", e.ExtensionInstalledModal = "extension_modal_installed", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopNav = "twitch_topnav", e.TwitchHome = "twitch_home", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
             }(o || (o = {})),
             function(e) {
                 e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Overview = "overview", e.Videos = "videos"
@@ -14821,6 +15165,15 @@ webpackJsonp([83], {
         }
     },
     GHQc: function(e, t) {},
+    GSZ7: function(e, t, n) {
+        "use strict";
+        t.b = function() {
+            return i.b.get("gdpr_consent_enabled", !1)
+        }, t.a = function() {
+            return i.b.get("gdpr_disabled_eea_consent", !1)
+        };
+        var i = n("6sO2")
+    },
     GfPd: function(e, t, n) {
         "use strict";
         var i, r = n("TToO"),
@@ -20662,47 +21015,23 @@ webpackJsonp([83], {
                     }))
                 }, t
             }(a.Component),
-            xe = n("iOr9"),
-            Le = n("bZTi"),
-            Pe = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV";
+            xe = (n("iOr9"), n("bZTi"), "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV");
         ! function(e) {
             e.VARIANT_A = "variant_a", e.VARIANT_B = "variant_b", e.CONTROL = "control"
         }(Oe || (Oe = {}));
-        var Fe = function(e) {
-                var t, r = {
-                    name: Pe,
-                    assignments: (t = {
-                        fallback: function() {
-                            return null
-                        }
-                    }, t[Oe.VARIANT_A] = function() {
-                        return Le.a.wrap(function() {
-                            return n.e(80).then(n.bind(null, "Rxng"))
-                        }, "SubscribedChannels", {
-                            placeholder: null,
-                            failSilently: !0
-                        })({
-                            collapsed: e.collapsed
-                        })
-                    }, t),
-                    loader: function() {
-                        return null
-                    }
-                };
-                return a.createElement(xe.a, i.__assign({}, r))
-            },
-            Ae = n("/Vp/");
+        var Le = n("Rxng"),
+            Pe = n("/Vp/");
         n("vQuK");
         n.d(t, "b", function() {
-            return Me
+            return Fe
         }), n.d(t, "a", function() {
-            return Ve
+            return Be
         });
-        var Me = 1200,
-            Ue = "treatment",
-            je = "control",
-            Be = "left_nav_order_exp",
-            He = function(e) {
+        var Fe = 1200,
+            Ae = "treatment",
+            Me = "control",
+            Ue = "left_nav_order_exp",
+            je = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.logger = s.o.logger.withCategory("side-nav"), n.handleToggleVisibility = function() {
@@ -20713,9 +21042,9 @@ webpackJsonp([83], {
                         })
                     }, n.collapseOnBreakpoint = function() {
                         var e = window.innerWidth;
-                        e < Me && !n.state.forceCollapsed ? n.setState({
+                        e < Fe && !n.state.forceCollapsed ? n.setState({
                             forceCollapsed: !0
-                        }) : e >= Me && n.state.forceCollapsed && n.setState({
+                        }) : e >= Fe && n.state.forceCollapsed && n.setState({
                             forceCollapsed: !1
                         }), n.resetAnimationState()
                     }, n.handleWindowResize = function() {
@@ -20724,7 +21053,7 @@ webpackJsonp([83], {
                         n.resizeAnimationFrame = null
                     }, n.onHistoryChange = function(e) {
                         var t = n.props.isLoggedIn,
-                            i = Object(Ae.a)({
+                            i = Object(Pe.a)({
                                 isLoggedIn: t,
                                 location: e
                             });
@@ -20739,9 +21068,9 @@ webpackJsonp([83], {
                         n.props.isLoggedIn && (n.props.data.loading || n.props.data.error) || n.props.latencyTracking.reportInteractive()
                     }, n.getRelevanceSortingAssignment = function(e) {
                         switch (e) {
-                            case Ue:
+                            case Ae:
                                 return !0;
-                            case je:
+                            case Me:
                             default:
                                 return !1
                         }
@@ -20749,15 +21078,16 @@ webpackJsonp([83], {
                     var i = t.isLoggedIn,
                         r = t.location,
                         a = s.o.experiments.getAssignment("TWILIGHT_AML_RANKING_FOLLOWS"),
-                        o = s.o.experiments.getAssignment(Pe);
+                        o = s.o.experiments.getAssignment(xe);
                     return n.state = {
                         isError: !1,
-                        isLeftNavOrderExperiment: o === Be,
-                        hideSideNav: Object(Ae.a)({
+                        isLeftNavOrderExperiment: o === Ue,
+                        hideSideNav: Object(Pe.a)({
                             isLoggedIn: i,
                             location: r
                         }),
                         forceCollapsed: !1,
+                        showSubscribedChannels: o === Oe.VARIANT_A,
                         sortByRelevance: n.getRelevanceSortingAssignment(a)
                     }, n
                 }
@@ -20886,7 +21216,7 @@ webpackJsonp([83], {
                         })) : a.createElement(k._8, {
                             flexGrow: 1,
                             fullWidth: !0
-                        }, a.createElement(Fe, {
+                        }, this.state.showSubscribedChannels && a.createElement(Le.SubscribedChannels, {
                             collapsed: e
                         }), a.createElement(Y, {
                             collapsed: e,
@@ -20951,7 +21281,7 @@ webpackJsonp([83], {
                     }
                 })], t)
             }(a.Component),
-            Ve = Object(o.f)(He)
+            Be = Object(o.f)(je)
     },
     Lj1H: function(e, t, n) {
         "use strict";
@@ -27752,102 +28082,6 @@ webpackJsonp([83], {
                 e[e.Popular = 0] = "Popular", e[e.Newest = 1] = "Newest"
             }(a || (a = {}))
     },
-    POFW: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "ImpactExperimentManager_CurrentUser"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "roles"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isAffiliate"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isPartner"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isSiteAdmin"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isStaff"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 116
-            }
-        };
-        n.loc.source = {
-            body: "query ImpactExperimentManager_CurrentUser {\ncurrentUser {\nid\nroles {\nisAffiliate\nisPartner\nisSiteAdmin\nisStaff\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     POVT: function(e, t) {
         var n = {
             kind: "Document",
@@ -29311,6 +29545,161 @@ webpackJsonp([83], {
             return c
         })
     },
+    Rxng: function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = n("3zLD"),
+            o = n("6sO2"),
+            s = n("yWCw"),
+            l = n("7vx8"),
+            c = n("2o2f"),
+            d = n("CSlQ"),
+            u = n("+3pi"),
+            p = n("abYt"),
+            m = n("SZoP"),
+            h = n("vH/s"),
+            g = n("4t/L"),
+            f = n("Odds"),
+            v = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onChannelClick = function() {
+                        t.props.onChannelClick(t.props.index, t.props.channel)
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = Object(m.a)(this.props.channel.login, this.props.channel.displayName, !0);
+                    return r.createElement(g.a, {
+                        avatarAlt: e,
+                        avatarSrc: this.props.channel.profileImageURL,
+                        collapsed: this.props.collapsed,
+                        linkTo: {
+                            pathname: "/" + this.props.channel.login,
+                            state: {
+                                content: h.PageviewContent.SubscribedChannels,
+                                medium: h.PageviewMedium.SideNav
+                            }
+                        },
+                        metadataLeft: this.renderMetadataLeft(),
+                        metadataRight: this.renderMetadataRight(),
+                        onClick: this.onChannelClick,
+                        offline: !1,
+                        title: e,
+                        titleElement: Object(m.a)(this.props.channel.login, this.props.channel.displayName),
+                        tooltipContent: this.renderTooltipContent()
+                    })
+                }, t.prototype.renderMetadataLeft = function() {
+                    return this.props.channel.stream && this.props.channel.stream.game ? this.props.channel.stream.game.name : null
+                }, t.prototype.renderMetadataRight = function() {
+                    return this.props.channel.stream && this.props.channel.stream.id ? r.createElement(f._8, {
+                        display: f.R.Flex,
+                        alignItems: f.c.Center
+                    }, r.createElement(f.G, {
+                        status: f.I.Live,
+                        size: f.H.Small
+                    }), r.createElement(f._8, {
+                        margin: {
+                            left: .5
+                        }
+                    }, Object(o.e)(this.props.channel.stream.viewersCount || 0))) : null
+                }, t.prototype.renderTooltipContent = function() {
+                    if (this.props.channel.stream && this.props.channel.broadcastSettings && this.props.channel.broadcastSettings.title) return r.createElement(f.Q, {
+                        color: f.K.Base
+                    }, this.props.channel.broadcastSettings.title)
+                }, t = i.__decorate([Object(d.d)("SubscribedChannel", {
+                    autoReportInteractive: !0
+                })], t)
+            }(r.Component),
+            b = n("yDaU"),
+            y = n("BBWW");
+        n.d(t, "SubscribedChannelsComponent", function() {
+            return _
+        }), n.d(t, "SubscribedChannels", function() {
+            return S
+        });
+        var k = 3,
+            _ = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        displayAmount: k
+                    }, t.onClickShowMore = function() {
+                        var e = t.props.data.currentUser && t.props.data.currentUser.subscribedChannels && t.props.data.currentUser.subscribedChannels.edges ? t.props.data.currentUser.subscribedChannels.edges.length : 0,
+                            n = Math.min(t.state.displayAmount + k, e);
+                        t.setState({
+                            displayAmount: n
+                        })
+                    }, t.onClickShowLess = function() {
+                        var e = t.state.displayAmount;
+                        t.state.displayAmount % k != 0 ? e -= e % k : e -= k, t.setState({
+                            displayAmount: e
+                        })
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                    this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e;
+                    if (this.props.data.error) e = r.createElement(s.a, {
+                        key: "subscribed-channels-error"
+                    });
+                    else {
+                        if (this.props.data.loading || !this.hasLiveSubscriptions()) return null;
+                        e = this.renderSubscribedChannels();
+                        var t = this.renderShowMore();
+                        t && e.push(t)
+                    }
+                    return r.createElement(f._8, {
+                        className: "subscribed-channels"
+                    }, r.createElement(p.a, {
+                        title: Object(o.d)("Subscribed Channels", "SubscribedChannels"),
+                        collapsed: this.props.collapsed,
+                        collapsedIcon: f._25.Star
+                    }), e)
+                }, t.prototype.renderSubscribedChannels = function() {
+                    var e = [];
+                    if (!(this.props.data && this.props.data.currentUser && this.props.data.currentUser.subscribedChannels && this.props.data.currentUser.subscribedChannels.edges)) return e;
+                    for (var t = 0; t < this.props.data.currentUser.subscribedChannels.edges.length && t < this.state.displayAmount; t++) {
+                        var n = this.props.data.currentUser.subscribedChannels.edges[t].node;
+                        n && n.stream && n.stream.type === c.a.Live && e.push(r.createElement(v, {
+                            collapsed: this.props.collapsed,
+                            key: "subscribed-channels-" + n.id,
+                            channel: n,
+                            resubAvailable: !0,
+                            onChannelClick: this.onChannelClick,
+                            index: t
+                        }))
+                    }
+                    return e
+                }, t.prototype.renderShowMore = function() {
+                    return this.props.collapsed || !this.props.data || !this.props.data.currentUser || !this.props.data.currentUser.subscribedChannels || !this.props.data.currentUser.subscribedChannels.edges || this.props.data.currentUser.subscribedChannels.edges.length <= k ? null : r.createElement(u.a, {
+                        key: "subscribed-channels-show-more",
+                        onClickMore: this.onClickShowMore,
+                        onClickLess: this.onClickShowLess,
+                        lessDisabled: this.state.displayAmount <= k,
+                        moreDisabled: this.state.displayAmount >= this.props.data.currentUser.subscribedChannels.edges.length
+                    })
+                }, t.prototype.onChannelClick = function(e, t) {
+                    Object(b.d)(e, t.stream ? t.stream.type : null)
+                }, t.prototype.hasLiveSubscriptions = function() {
+                    return !!this.props.data.currentUser && !!this.props.data.currentUser.subscribedChannels && !!this.props.data.currentUser.subscribedChannels.edges && this.props.data.currentUser.subscribedChannels.edges.length > 0
+                }, t
+            }(r.Component),
+            S = Object(a.compose)(Object(l.a)(y, {
+                options: {
+                    pollInterval: 6e5,
+                    variables: {
+                        limit: 50,
+                        cursor: null,
+                        isLive: !0
+                    }
+                }
+            }), Object(d.d)("SubscribedChannels"))(_)
+    },
     Ryxq: function(e, t, n) {
         "use strict";
         t.a = function(e) {
@@ -29549,56 +29938,97 @@ webpackJsonp([83], {
                     to: "/"
                 })
             }),
-            x = n("X4PA"),
-            L = E.a.wrap(function() {
+            x = n("7vx8"),
+            L = n("X4PA"),
+            P = n("sH1u"),
+            F = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.redirectToSubCheckout = function() {
+                        var e = new URL(window.location.href);
+                        e.pathname = "/products/" + t.productName, window.location.assign(e.toString())
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    !this.props.data.loading && this.productName && this.redirectToSubCheckout()
+                }, t.prototype.componentDidUpdate = function() {
+                    !this.props.data.loading && this.productName && this.redirectToSubCheckout()
+                }, t.prototype.render = function() {
+                    return this.props.data.user && this.productName ? r.createElement(f._10, {
+                        fillContent: !0
+                    }) : this.props.data.loading ? r.createElement(f._10, {
+                        fillContent: !0
+                    }) : r.createElement(L.a, null)
+                }, Object.defineProperty(t.prototype, "productName", {
+                    get: function() {
+                        if (this.props.data.user && this.props.data.user.subscriptionProducts) {
+                            var e = this.props.data.user.subscriptionProducts[0];
+                            return e && e.name
+                        }
+                        return null
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t
+            }(r.Component),
+            A = Object(x.a)(P, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            channelLogin: e.match.params.channelLogin
+                        }
+                    }
+                }
+            })(F),
+            M = E.a.wrap(function() {
                 return n.e(39).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
-            P = E.a.wrap(function() {
+            U = E.a.wrap(function() {
                 return n.e(57).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
-            F = E.a.wrap(function() {
+            j = E.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "lW0T"))
             }, "ChannelEventsPage"),
-            A = E.a.wrap(function() {
+            B = E.a.wrap(function() {
                 return n.e(44).then(n.bind(null, "35Zp"))
             }, "ChannelFollowersPage"),
-            M = E.a.wrap(function() {
+            H = E.a.wrap(function() {
                 return n.e(43).then(n.bind(null, "ztSx"))
             }, "ChannelFollowingPage"),
-            U = E.a.wrap(function() {
+            V = E.a.wrap(function() {
                 return n.e(30).then(n.bind(null, "oFVJ"))
             }, "ChannelPage"),
-            j = E.a.wrap(function() {
+            z = E.a.wrap(function() {
                 return n.e(30).then(n.bind(null, "oFVJ"))
             }, "ChannelRoot"),
-            B = E.a.wrap(function() {
+            W = E.a.wrap(function() {
                 return n.e(33).then(n.bind(null, "g8mI"))
             }, "ChannelVideosPage"),
-            H = E.a.wrap(function() {
+            G = E.a.wrap(function() {
                 return n.e(31).then(n.bind(null, "jWoj"))
             }, "MessagesPage"),
-            V = E.a.wrap(function() {
+            q = E.a.wrap(function() {
                 return n.e(78).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
-            z = function(e) {
+            Q = function(e) {
                 return r.createElement(w.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            W = function(e) {
+            K = function(e) {
                 return r.createElement(w.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            G = function(e) {
+            $ = function(e) {
                 return r.createElement(w.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            q = function(e) {
+            Y = function(e) {
                 return window.location.replace(g.a.playerBaseURL + "/?channel=" + e.match.params.channelLogin), null
             },
-            Q = function(e) {
+            Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -29621,212 +30051,215 @@ webpackJsonp([83], {
                     var e = "on" === g.o.experiments.getAssignment("TWILIGHT_WATCH_SYMMETRA");
                     return r.createElement(w.e, null, e ? r.createElement(w.d, {
                         path: "/:channelLogin",
-                        component: j,
+                        component: z,
                         exact: !0
                     }) : r.createElement(w.d, {
                         path: "/:channelName",
-                        component: U,
+                        component: V,
                         exact: !0
                     }), e ? r.createElement(w.d, {
                         path: "/:channelLogin/clips",
-                        component: j
+                        component: z
                     }) : r.createElement(w.d, {
                         path: "/:channelName/clips",
-                        component: L
-                    }), r.createElement(w.d, {
-                        path: "/:channelLogin/chat",
-                        render: z
-                    }), e ? r.createElement(w.d, {
-                        path: "/:channelLogin/collections",
-                        component: j
-                    }) : r.createElement(w.d, {
-                        path: "/:channelLogin/collections",
-                        component: P
-                    }), r.createElement(w.d, {
-                        path: "/:channelLogin/embed",
-                        render: q
-                    }), e && r.createElement(w.d, {
-                        path: "/:channelLogin/esports-loot",
-                        component: j
-                    }), e && r.createElement(w.d, {
-                        path: "/:channelLogin/esports-pass",
-                        component: j
-                    }), e && r.createElement(w.d, {
-                        path: "/:channelLogin/esports-progress",
-                        component: j
-                    }), e ? r.createElement(w.d, {
-                        path: "/:channelLogin/events",
-                        component: j
-                    }) : r.createElement(w.d, {
-                        path: "/:channelLogin/events",
-                        component: F
-                    }), e ? r.createElement(w.d, {
-                        path: "/:channelLogin/followers",
-                        component: j
-                    }) : r.createElement(w.d, {
-                        path: "/:channelLogin/followers",
-                        component: A
-                    }), e ? r.createElement(w.d, {
-                        path: "/:channelLogin/following",
-                        component: j
-                    }) : r.createElement(w.d, {
-                        path: "/:channelLogin/following",
                         component: M
                     }), r.createElement(w.d, {
-                        path: "/:channelLogin/inbox",
+                        path: "/:channelLogin/chat",
+                        render: Q
+                    }), e ? r.createElement(w.d, {
+                        path: "/:channelLogin/collections",
+                        component: z
+                    }) : r.createElement(w.d, {
+                        path: "/:channelLogin/collections",
+                        component: U
+                    }), r.createElement(w.d, {
+                        path: "/:channelLogin/embed",
+                        render: Y
+                    }), e && r.createElement(w.d, {
+                        path: "/:channelLogin/esports-loot",
+                        component: z
+                    }), e && r.createElement(w.d, {
+                        path: "/:channelLogin/esports-pass",
+                        component: z
+                    }), e && r.createElement(w.d, {
+                        path: "/:channelLogin/esports-progress",
+                        component: z
+                    }), e ? r.createElement(w.d, {
+                        path: "/:channelLogin/events",
+                        component: z
+                    }) : r.createElement(w.d, {
+                        path: "/:channelLogin/events",
+                        component: j
+                    }), e ? r.createElement(w.d, {
+                        path: "/:channelLogin/followers",
+                        component: z
+                    }) : r.createElement(w.d, {
+                        path: "/:channelLogin/followers",
+                        component: B
+                    }), e ? r.createElement(w.d, {
+                        path: "/:channelLogin/following",
+                        component: z
+                    }) : r.createElement(w.d, {
+                        path: "/:channelLogin/following",
                         component: H
+                    }), r.createElement(w.d, {
+                        path: "/:channelLogin/inbox",
+                        component: G
                     }), r.createElement(w.d, {
                         path: "/:channelLogin/outbox",
-                        component: H
+                        component: G
                     }), r.createElement(w.d, {
                         path: "/:channelLogin/profile",
-                        render: W
+                        render: K
                     }), r.createElement(w.d, {
                         path: "/:channelName/report",
-                        component: V
+                        component: q
                     }), e ? r.createElement(w.d, {
                         path: "/:channelLogin/p/:entityID",
-                        component: j
+                        component: z
                     }) : r.createElement(w.d, {
                         path: "/:channelName/p/:entityID",
-                        component: U
+                        component: V
                     }), r.createElement(w.d, {
                         path: "/:channelLogin/popout",
-                        render: q
+                        render: Y
                     }), e ? r.createElement(w.d, {
                         path: "/:channelLogin/rooms/:roomName",
-                        component: j
+                        component: z
                     }) : r.createElement(w.d, {
                         path: "/:channelName/rooms/:roomName",
-                        component: U
+                        component: V
                     }), r.createElement(w.d, {
                         path: "/:channelLogin/videos/(past_broadcasts?)",
-                        render: G
+                        render: $
                     }), e ? r.createElement(w.d, {
                         path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                        component: j
+                        component: z
                     }) : r.createElement(w.d, {
                         path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                        component: B
+                        component: W
                     }), r.createElement(w.d, {
                         path: "/:channelLogin/videos/:unknownFilter?",
-                        render: W
+                        render: K
                     }), r.createElement(w.d, {
                         path: "/:channelLogin/settings",
                         component: D
                     }), r.createElement(w.d, {
+                        path: "/:channelLogin/subscribe",
+                        component: A
+                    }), r.createElement(w.d, {
                         path: "*",
-                        component: x.a
+                        component: L.a
                     }))
                 }, t
             }(r.Component),
-            K = Object(R.d)("ChannelPageRedesignRouter", {
+            X = Object(R.d)("ChannelPageRedesignRouter", {
                 autoReportInteractive: !0
-            })(Q),
-            $ = E.a.wrap(function() {
+            })(Z),
+            J = E.a.wrap(function() {
                 return n.e(56).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
-            Y = E.a.wrap(function() {
+            ee = E.a.wrap(function() {
                 return n.e(64).then(n.bind(null, "41t4"))
             }, "BroadcastPage"),
-            Z = E.a.wrap(function() {
+            te = E.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
-            X = E.a.wrap(function() {
+            ne = E.a.wrap(function() {
                 return n.e(60).then(n.bind(null, "rujk"))
             }, "CommunityModerationRoot"),
-            J = E.a.wrap(function() {
+            ie = E.a.wrap(function() {
                 return n.e(70).then(n.bind(null, "BAkg"))
             }, "CreateCommunityPage"),
-            ee = E.a.wrap(function() {
+            re = E.a.wrap(function() {
                 return n.e(75).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
-            te = E.a.wrap(function() {
+            ae = E.a.wrap(function() {
                 return n.e(50).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
-            ne = E.a.wrap(function() {
+            oe = E.a.wrap(function() {
                 return n.e(69).then(n.bind(null, "IzAE"))
             }, "DevOnlyTestingCarouselPage"),
-            ie = E.a.wrap(function() {
+            se = E.a.wrap(function() {
                 return n.e(79).then(n.bind(null, "mqYJ"))
             }, "EmailUnsubscribePage"),
-            re = E.a.wrap(function() {
-                return n.e(81).then(n.bind(null, "Tj44"))
+            le = E.a.wrap(function() {
+                return n.e(80).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
-            ae = E.a.wrap(function() {
+            ce = E.a.wrap(function() {
                 return n.e(53).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
-            oe = E.a.wrap(function() {
+            de = E.a.wrap(function() {
                 return n.e(59).then(n.bind(null, "0QnV"))
             }, "ExtensionsRoot"),
-            se = E.a.wrap(function() {
+            ue = E.a.wrap(function() {
                 return n.e(52).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
-            le = E.a.wrap(function() {
+            pe = E.a.wrap(function() {
                 return n.e(51).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
-            ce = E.a.wrap(function() {
+            me = E.a.wrap(function() {
                 return n.e(73).then(n.bind(null, "H+V/"))
             }, "FriendRequestsPage"),
-            de = E.a.wrap(function() {
+            he = E.a.wrap(function() {
                 return n.e(72).then(n.bind(null, "mlfa"))
             }, "FriendsPage"),
-            ue = E.a.wrap(function() {
+            ge = E.a.wrap(function() {
                 return n.e(68).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
-            pe = E.a.wrap(function() {
-                return n.e(82).then(n.bind(null, "o8EG"))
+            fe = E.a.wrap(function() {
+                return n.e(81).then(n.bind(null, "o8EG"))
             }, "ManagerRedirectPage"),
-            me = E.a.wrap(function() {
+            ve = E.a.wrap(function() {
                 return n.e(31).then(n.bind(null, "jWoj"))
             }, "MessagesPage"),
-            he = E.a.wrap(function() {
+            be = E.a.wrap(function() {
                 return n.e(40).then(n.bind(null, "gZLf"))
             }, "PaymentsLandingPage"),
-            ge = E.a.wrap(function() {
+            ye = E.a.wrap(function() {
                 return n.e(41).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
-            fe = E.a.wrap(function() {
-                return n.e(37).then(n.bind(null, "uiPj"))
+            ke = E.a.wrap(function() {
+                return n.e(38).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            ve = E.a.wrap(function() {
+            _e = E.a.wrap(function() {
                 return n.e(65).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            be = E.a.wrap(function() {
+            Se = E.a.wrap(function() {
                 return n.e(62).then(n.bind(null, "jQFB"))
             }, "SubscriptionsManagementPage"),
-            ye = E.a.wrap(function() {
+            we = E.a.wrap(function() {
                 return n.e(49).then(n.bind(null, "GUP0"))
             }, "UnsubscribePage"),
-            ke = function() {
+            Ee = function() {
                 return window.location.assign(window.location.href), null
             },
-            _e = function(e) {
+            Ce = function(e) {
                 var t = Object(N.a)(e.match.params.videoID);
                 return r.createElement(w.c, {
                     to: "/videos/" + t
                 })
             },
-            Se = function() {
+            Te = function() {
                 return r.createElement(w.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            we = function(e) {
+            Ne = function(e) {
                 return r.createElement(w.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            Ee = function() {
+            Oe = function() {
                 return r.createElement(w.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            Ce = function() {
+            Re = function() {
                 return window.location.replace(O.a), null
             },
-            Te = function(e) {
+            Ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -29847,186 +30280,186 @@ webpackJsonp([83], {
                         message: Object(g.d)("An error occurred on this page", "DefaultRootRouter")
                     }) : r.createElement(w.e, null, g.a.buildType !== T.a.Production && r.createElement(w.d, {
                         path: "/_dev/testing/carousel",
-                        component: ne
+                        component: oe
                     }), g.a.buildType !== T.a.Production && r.createElement(w.d, {
                         path: "/_dev/testing/amazon-offers/:channelName",
-                        component: ve
+                        component: _e
                     }), g.a.buildType !== T.a.Production && r.createElement(w.d, {
                         path: "/_dev",
-                        component: ee
+                        component: re
                     }), r.createElement(w.d, {
                         exact: !0,
                         path: "/",
-                        component: this.props.isLoggedIn ? le : $
+                        component: this.props.isLoggedIn ? pe : J
                     }), r.createElement(w.d, {
                         path: "/activate",
-                        render: ke
+                        render: Ee
                     }), r.createElement(w.d, {
                         path: "/bits",
-                        render: ke
+                        render: Ee
                     }), r.createElement(w.d, {
                         path: "/bits-checkout",
-                        render: ke
+                        render: Ee
                     }), r.createElement(w.d, {
                         path: "/checkout",
-                        render: ke
+                        render: Ee
                     }), r.createElement(w.d, {
                         path: "/products",
-                        render: ke
+                        render: Ee
                     }), r.createElement(w.d, {
                         path: "/embed",
-                        render: ke
+                        render: Ee
                     }), r.createElement(w.d, {
                         path: "/popout",
-                        render: ke
+                        render: Ee
                     }), r.createElement(w.d, {
                         path: "/prime",
-                        render: ke
+                        render: Ee
                     }), r.createElement(w.d, {
                         path: "/subs",
-                        render: ke
+                        render: Ee
                     }), r.createElement(w.d, {
                         path: "/broadcast",
-                        component: Y
+                        component: ee
                     }), r.createElement(w.d, {
                         path: "/collections/:collectionID",
-                        component: fe
+                        component: ke
                     }), r.createElement(w.d, {
                         path: "/communities/create",
-                        component: J
-                    }), r.createElement(w.d, {
-                        path: "/communities/:encodedCommunityName/details",
-                        component: te
-                    }), r.createElement(w.d, {
-                        path: "/communities/:encodedCommunityName/moderation/:page?",
-                        component: X
-                    }), r.createElement(w.d, {
-                        path: "/communities/:encodedCommunityName/:encodedLanguage",
-                        component: te
-                    }), r.createElement(w.d, {
-                        path: "/communities/:encodedCommunityName",
-                        component: te
-                    }), r.createElement(w.d, {
-                        path: "/directory/communities",
-                        component: Z
-                    }), r.createElement(w.d, {
-                        path: "/directory/creative",
-                        component: Z
-                    }), r.createElement(w.d, {
-                        path: "/directory/following/:category?",
-                        component: se
-                    }), r.createElement(w.d, {
-                        path: "/directory/game/:encodedCommunityName/clips",
-                        component: te
-                    }), r.createElement(w.d, {
-                        path: "/directory/game/:encodedCommunityName/details",
-                        component: te
-                    }), r.createElement(w.d, {
-                        path: "/directory/game/:encodedCommunityName/videos/:filter",
-                        component: te
-                    }), r.createElement(w.d, {
-                        path: "/directory/game/:encodedCommunityName/videos",
-                        render: we
-                    }), r.createElement(w.d, {
-                        path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                        component: te
-                    }), r.createElement(w.d, {
-                        path: "/directory/game/:encodedCommunityName",
-                        component: te
-                    }), r.createElement(w.d, {
-                        path: "/directory/all/ps4",
-                        component: Z
-                    }), r.createElement(w.d, {
-                        path: "/directory/all/xb1",
-                        component: Ee
-                    }), r.createElement(w.d, {
-                        path: "/directory/all/xbox",
-                        component: Z
-                    }), r.createElement(w.d, {
-                        path: "/directory/all/:encodedLanguage",
-                        component: Z
-                    }), r.createElement(w.d, {
-                        path: "/directory/all",
-                        component: Z
-                    }), r.createElement(w.d, {
-                        path: "/directory/:category?",
-                        component: Z
-                    }), r.createElement(w.d, {
-                        path: "/events/:eventName",
-                        component: ae
-                    }), r.createElement(w.d, {
-                        path: "/email-unsubscribe",
                         component: ie
                     }), r.createElement(w.d, {
-                        path: "/email-verification/:emailOpaqueId",
-                        component: re
+                        path: "/communities/:encodedCommunityName/details",
+                        component: ae
                     }), r.createElement(w.d, {
-                        path: "/ext",
-                        component: oe
+                        path: "/communities/:encodedCommunityName/moderation/:page?",
+                        component: ne
                     }), r.createElement(w.d, {
-                        path: "/friends/requests",
-                        component: ce
+                        path: "/communities/:encodedCommunityName/:encodedLanguage",
+                        component: ae
                     }), r.createElement(w.d, {
-                        path: "/friends",
-                        component: de
+                        path: "/communities/:encodedCommunityName",
+                        component: ae
                     }), r.createElement(w.d, {
-                        path: "/payments",
-                        component: he
+                        path: "/directory/communities",
+                        component: te
                     }), r.createElement(w.d, {
-                        path: "/following",
-                        component: Se
+                        path: "/directory/creative",
+                        component: te
                     }), r.createElement(w.d, {
-                        path: "/inbox",
-                        component: me
-                    }), r.createElement(w.d, {
-                        path: "/inventory",
+                        path: "/directory/following/:category?",
                         component: ue
                     }), r.createElement(w.d, {
-                        path: "/outbox",
+                        path: "/directory/game/:encodedCommunityName/clips",
+                        component: ae
+                    }), r.createElement(w.d, {
+                        path: "/directory/game/:encodedCommunityName/details",
+                        component: ae
+                    }), r.createElement(w.d, {
+                        path: "/directory/game/:encodedCommunityName/videos/:filter",
+                        component: ae
+                    }), r.createElement(w.d, {
+                        path: "/directory/game/:encodedCommunityName/videos",
+                        render: Ne
+                    }), r.createElement(w.d, {
+                        path: "/directory/game/:encodedCommunityName/:encodedLanguage",
+                        component: ae
+                    }), r.createElement(w.d, {
+                        path: "/directory/game/:encodedCommunityName",
+                        component: ae
+                    }), r.createElement(w.d, {
+                        path: "/directory/all/ps4",
+                        component: te
+                    }), r.createElement(w.d, {
+                        path: "/directory/all/xb1",
+                        component: Oe
+                    }), r.createElement(w.d, {
+                        path: "/directory/all/xbox",
+                        component: te
+                    }), r.createElement(w.d, {
+                        path: "/directory/all/:encodedLanguage",
+                        component: te
+                    }), r.createElement(w.d, {
+                        path: "/directory/all",
+                        component: te
+                    }), r.createElement(w.d, {
+                        path: "/directory/:category?",
+                        component: te
+                    }), r.createElement(w.d, {
+                        path: "/events/:eventName",
+                        component: ce
+                    }), r.createElement(w.d, {
+                        path: "/email-unsubscribe",
+                        component: se
+                    }), r.createElement(w.d, {
+                        path: "/email-verification/:emailOpaqueId",
+                        component: le
+                    }), r.createElement(w.d, {
+                        path: "/ext",
+                        component: de
+                    }), r.createElement(w.d, {
+                        path: "/friends/requests",
                         component: me
                     }), r.createElement(w.d, {
-                        path: "/videos/v:videoID",
-                        render: _e
+                        path: "/friends",
+                        component: he
                     }), r.createElement(w.d, {
-                        path: "/videos/:videoID",
-                        component: fe
-                    }), r.createElement(w.d, {
-                        path: "/store",
-                        render: Ce
-                    }), r.createElement(w.d, {
-                        path: "/store/merch",
-                        render: Ce
-                    }), r.createElement(w.d, {
-                        path: "/subscriptions",
+                        path: "/payments",
                         component: be
                     }), r.createElement(w.d, {
-                        path: "/unsubscribe/:productName",
-                        component: ye
+                        path: "/following",
+                        component: Te
                     }), r.createElement(w.d, {
-                        path: "/settings/:tab?",
+                        path: "/inbox",
+                        component: ve
+                    }), r.createElement(w.d, {
+                        path: "/inventory",
                         component: ge
                     }), r.createElement(w.d, {
+                        path: "/outbox",
+                        component: ve
+                    }), r.createElement(w.d, {
+                        path: "/videos/v:videoID",
+                        render: Ce
+                    }), r.createElement(w.d, {
+                        path: "/videos/:videoID",
+                        component: ke
+                    }), r.createElement(w.d, {
+                        path: "/store",
+                        render: Re
+                    }), r.createElement(w.d, {
+                        path: "/store/merch",
+                        render: Re
+                    }), r.createElement(w.d, {
+                        path: "/subscriptions",
+                        component: Se
+                    }), r.createElement(w.d, {
+                        path: "/unsubscribe/:productName",
+                        component: we
+                    }), r.createElement(w.d, {
+                        path: "/settings/:tab?",
+                        component: ye
+                    }), r.createElement(w.d, {
                         path: "/manager/:pageName?",
-                        component: pe
+                        component: fe
                     }), r.createElement(w.d, {
                         path: "/messages/:pageName?",
-                        component: me
+                        component: ve
                     }), r.createElement(w.d, {
                         path: "*",
-                        component: K
+                        component: X
                     }))
                 }, t
             }(r.Component),
-            Ne = Object(R.d)("DefaultRootRouter", {
+            De = Object(R.d)("DefaultRootRouter", {
                 autoReportInteractive: !0
-            })(Te);
+            })(Ie);
         n.d(t, "b", function() {
-            return Oe
+            return xe
         }), n.d(t, "a", function() {
-            return Re
+            return Le
         });
-        var Oe = "twilight-main",
-            Re = function(e) {
+        var xe = "twilight-main",
+            Le = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -30057,10 +30490,10 @@ webpackJsonp([83], {
                         flexDirection: f.T.Column,
                         zIndex: this.props.theatreModeEnabled ? void 0 : f._62.Default
                     }, r.createElement("main", {
-                        className: Oe
+                        className: xe
                     }, r.createElement(y.b, null), r.createElement(s.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, r.createElement(Ne, {
+                    }, r.createElement(De, {
                         isLoggedIn: this.props.isLoggedIn
                     }), r.createElement(a.b, {
                         mainRef: this.state.rootScrollableContentRef
@@ -31718,7 +32151,7 @@ webpackJsonp([83], {
                             content: g.PageviewContent.SelfChannel,
                             medium: g.PageviewMedium.TopNav
                         }
-                    }, m = Object(B.a)("/" + this.props.data.currentUser.login + "/manager"), h = "/" + this.props.data.currentUser.login + "/dashboard" + (Object(Ne.a)(this.props.data.currentUser.roles.isStaff) ? "/live" : "")), d.createElement(y._35, {
+                    }, m = Object(B.a)("/" + this.props.data.currentUser.login + "/manager"), h = "/" + this.props.data.currentUser.login + "/dashboard" + (Object(Ne.a)(this.props.data.currentUser.roles && this.props.data.currentUser.roles.isStaff) ? "/live" : "")), d.createElement(y._35, {
                         overflow: y._11.Hidden,
                         position: y._15.Absolute,
                         className: e,
@@ -35680,6 +36113,10 @@ webpackJsonp([83], {
                             }), t().addEventListener("impressionViewable", s)
                         })
                     })
+                }, e.setRequestPersonalizedAds = function(e) {
+                    u.debug("Setting GPT personalization", e), this.polyfillGoogletag(), window.googletag.cmd.push(function() {
+                        window.googletag.pubads().setRequestNonPersonalizedAds(e ? 0 : 1)
+                    })
                 }, e.normalizeTargetingValue = function(e) {
                     var t = function(e) {
                         return e.replace(d, "_")
@@ -35698,12 +36135,13 @@ webpackJsonp([83], {
     },
     UvtE: function(e, t, n) {
         "use strict";
-        var i = n("sADG"),
-            r = n("nWgz");
+        var i = n("5a05");
         n.d(t, "b", function() {
             return i.a
-        }), n.d(t, !1, function() {}), n.d(t, "a", function() {
-            return r.a
+        });
+        var r = n("GSZ7");
+        n.d(t, "a", function() {
+            return r.b
         })
     },
     V150: function(e, t) {},
@@ -38730,6 +39168,7 @@ webpackJsonp([83], {
         })
     },
     bcXL: function(e, t) {},
+    bhwk: function(e, t) {},
     bkpq: function(e, t, n) {
         "use strict";
         t.a = function(e) {
@@ -43609,7 +44048,7 @@ webpackJsonp([83], {
                 return i
             }),
             function(e) {
-                e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardStreamDelay = "live_dashboard_stream_delay", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
             }(i || (i = {}))
     },
     kLsX: function(e, t) {},
@@ -44796,13 +45235,6 @@ webpackJsonp([83], {
         }(i || (i = {}))
     },
     nFc2: function(e, t) {},
-    nWgz: function(e, t, n) {
-        "use strict";
-        t.a = function() {
-            return i.b.get("gdpr_consent_enabled", !1)
-        };
-        var i = n("6sO2")
-    },
     nist: function(e, t) {},
     nmYW: function(e, t) {
         var n = {
@@ -46064,11 +46496,12 @@ webpackJsonp([83], {
             k = n("7vx8"),
             _ = n("Ejve"),
             S = n("QG7y"),
-            w = n("XTs4"),
-            E = "https://www.googletagservices.com/tag/js/gpt.js",
-            C = "https://c.amazon-adsystem.com/aax2/apstag.js",
-            T = 3036,
-            N = function(e) {
+            w = n("5a05"),
+            E = n("XTs4"),
+            C = "https://www.googletagservices.com/tag/js/gpt.js",
+            T = "https://c.amazon-adsystem.com/aax2/apstag.js",
+            N = 3036,
+            O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -46084,9 +46517,9 @@ webpackJsonp([83], {
                                 e = t, n = i
                             }),
                             r = document.createElement("script");
-                        return r.async = !0, r.src = C, r.onload = function() {
+                        return r.async = !0, r.src = T, r.onload = function() {
                             window.apstag && window.apstag.init && window.apstag.init({
-                                pubID: T,
+                                pubID: N,
                                 adServer: "googletag",
                                 bidTimeout: 2e3
                             }, e)
@@ -46095,11 +46528,11 @@ webpackJsonp([83], {
                         }, t.containerRef && t.containerRef.appendChild(r), i
                     }, t.injectGoogleTag = function(e) {
                         var n = document.createElement("script");
-                        n.async = !0, n.src = E, t.containerRef && t.containerRef.appendChild(n), n.onerror = function() {
+                        n.async = !0, n.src = C, t.containerRef && t.containerRef.appendChild(n), n.onerror = function() {
                             return a.o.adBlockDetector.setBlockDetectedToTrue()
                         }, f.a.initialize(S.i);
                         var i = y.parse(window.location.search).campaign || "";
-                        return i && t.logger.debug("Setting campaign", i), f.a.setAppWideTracking("campaign", i), f.a.setAppWideTracking("server", a.a.buildType === _.a.Production ? "production" : "dev"), f.a.setAppWideTracking("salt", "true"), f.a.setAppWideTracking("kuid", window.Krux && window.Krux.user || ""), f.a.setAppWideTracking("loggedin", e.data.currentUser ? "true" : "false"), e.trackingSet(), t.logger.debug("Tracking is set"), Promise.resolve()
+                        return i && t.logger.debug("Setting campaign", i), f.a.setAppWideTracking("campaign", i), f.a.setAppWideTracking("server", a.a.buildType === _.a.Production ? "production" : "dev"), f.a.setAppWideTracking("salt", "true"), f.a.setAppWideTracking("kuid", window.Krux && window.Krux.user || ""), f.a.setAppWideTracking("loggedin", e.data.currentUser ? "true" : "false"), f.a.setRequestPersonalizedAds(e.gdpr.consentGiven), e.trackingSet(), t.logger.debug("Tracking is set"), Promise.resolve()
                     }, t.setContainerRef = function(e) {
                         return t.containerRef = e
                     }, t
@@ -46141,7 +46574,7 @@ webpackJsonp([83], {
                                 case 1:
                                     n.sent(), n.label = 2;
                                 case 2:
-                                    return [2]
+                                    return this.shouldUpdatePersonalization(e, this.props) && f.a.setRequestPersonalizedAds(e.gdpr.consentGiven), [2]
                             }
                         })
                     })
@@ -46155,16 +46588,19 @@ webpackJsonp([83], {
                     var t = !e.data.loading && !e.data.error,
                         n = e.data.currentUser && (e.data.currentUser.hasTurbo || e.data.currentUser.hasPrime);
                     return !this.isInjected && t && !n
-                }, t = u.__decorate([Object(k.a)(w)], t)
-            }(i.Component);
-        var O = Object(c.b)(null, function(e) {
+                }, t.prototype.shouldUpdatePersonalization = function(e, t) {
+                    return this.isInjected && e.gdpr.consentGiven !== t.gdpr.consentGiven
+                }, t
+            }(i.Component),
+            R = Object(v.d)(Object(k.a)(E), Object(w.a)())(O);
+        var I = Object(c.b)(null, function(e) {
                 return Object(v.b)({
                     trackingSet: b.b
                 }, e)
-            })(N),
-            R = n("OOv5"),
-            I = n("LBNC"),
-            D = function(e) {
+            })(R),
+            D = n("OOv5"),
+            x = n("LBNC"),
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.logger = a.o.logger.withCategory("browser-push-notifications"), t
@@ -46175,10 +46611,10 @@ webpackJsonp([83], {
                         return u.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    if (!Object(I.a)()) return this.logger.debug("unsupported browser"), [2];
+                                    if (!Object(x.a)()) return this.logger.debug("unsupported browser"), [2];
                                     t.label = 1;
                                 case 1:
-                                    return t.trys.push([1, 3, , 4]), [4, R.a.initialize()];
+                                    return t.trys.push([1, 3, , 4]), [4, D.a.initialize()];
                                 case 2:
                                     return t.sent(), [3, 4];
                                 case 3:
@@ -46192,70 +46628,33 @@ webpackJsonp([83], {
                     return null
                 }, t
             }(i.Component),
-            x = n("cVFG"),
-            L = n("zezF"),
-            P = n("lbHh"),
-            F = n("zcHb"),
-            A = n("POFW"),
-            M = {
-                id: "1d1ef835-74d2-4fad-9918-656dccaf6410",
-                name: "twilight_v_ember_aa",
-                type: F.a.Device,
-                version: 1
-            },
-            U = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.tracked = !1, t
-                }
-                return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.sendExperimentEvent(this.props)
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.sendExperimentEvent(e)
-                }, t.prototype.shouldComponentUpdate = function() {
-                    return !1
-                }, t.prototype.render = function() {
-                    return null
-                }, t.prototype.sendExperimentEvent = function(e) {
-                    if (a.o.dynamicSettings.get("impact_experiment_key", !1) && !this.tracked && void 0 !== e.data.currentUser) {
-                        this.tracked = !0;
-                        var t = "",
-                            n = P.get("impact_excluded"),
-                            i = P.get("impact_included");
-                        n || this.isPrivilegedUser(e) ? t = "control" : i && (t = "treatment"), a.o.experiments.trackExperiment(u.__assign({
-                            assignment: t
-                        }, M))
-                    }
-                }, t.prototype.isPrivilegedUser = function(e) {
-                    return !(!e.data.currentUser || !e.data.currentUser.roles) && (e.data.currentUser.roles.isAffiliate || e.data.currentUser.roles.isPartner || e.data.currentUser.roles.isSiteAdmin || e.data.currentUser.roles.isStaff)
-                }, t
-            }(i.Component),
-            j = Object(k.a)(A)(U),
-            B = n("CSlQ"),
-            H = n("6Vb7"),
-            V = n("08LF"),
-            z = n("GfPd"),
-            W = n("c8Is"),
-            G = "update_chunks",
-            q = "twilight.update_manager.known_builds",
-            Q = /^assets\/(.+)-.+\.(.+?)$/i;
+            P = n("cVFG"),
+            F = n("zezF"),
+            A = n("CSlQ"),
+            M = n("6Vb7"),
+            U = n("08LF"),
+            j = n("GfPd"),
+            B = n("c8Is"),
+            H = "update_chunks",
+            V = "twilight.update_manager.known_builds",
+            z = /^assets\/(.+)-.+\.(.+?)$/i;
 
-        function K(e) {
-            var t = Q.exec(e);
+        function W(e) {
+            var t = z.exec(e);
             if (t) return t[1] + "." + t[2]
         }
 
-        function $(e, t) {
+        function G(e, t) {
             return u.__awaiter(this, void 0, void 0, function() {
                 var n, i, r, o, s, l, c, d, p, m, h, g;
                 return u.__generator(this, function(u) {
                     switch (u.label) {
                         case 0:
-                            for (n = a.o.dynamicSettings.get(G, []), i = {
+                            for (n = a.o.dynamicSettings.get(H, []), i = {
                                     headers: new Headers({
                                         "Content-Type": "application/octet-stream"
                                     })
-                                }, r = [], o = 0, s = e; o < s.length; o++) l = s[o], (c = K(l)) && n.includes(c) && r.push(fetch("" + a.o.config.cdnURL + l, i));
+                                }, r = [], o = 0, s = e; o < s.length; o++) l = s[o], (c = W(l)) && n.includes(c) && r.push(fetch("" + a.o.config.cdnURL + l, i));
                             return 0 === r.length ? [2, !1] : [4, Promise.all(r)];
                         case 1:
                             for (d = u.sent(), p = !1, m = 0, h = d; m < h.length; m++)(g = h[m]).ok || (p = !0, t.warn("Failed to preload chunk.", {
@@ -46268,21 +46667,21 @@ webpackJsonp([83], {
             })
         }
 
-        function Y() {
-            return new Set(a.m.get(q, [])).add(a.o.config.buildID)
+        function q() {
+            return new Set(a.m.get(V, [])).add(a.o.config.buildID)
         }
 
-        function Z(e) {
-            a.m.set(q, Array.from(Y().add(e)))
+        function Q(e) {
+            a.m.set(V, Array.from(q().add(e)))
         }
-        var X = function(e) {
+        var K = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         newBuilds: new Set,
                         rejectedBuilds: new Set,
                         shouldReloadOnTransition: !1
-                    }, t.knownBuilds = Y(), t.logger = a.o.logger.withCategory("update-manager"), t.handleHistoryChange = function() {
+                    }, t.knownBuilds = q(), t.logger = a.o.logger.withCategory("update-manager"), t.handleHistoryChange = function() {
                         t.state.shouldReloadOnTransition && window.location.reload(!0)
                     }, t.processManifest = function() {
                         return u.__awaiter(t, void 0, void 0, function() {
@@ -46315,7 +46714,7 @@ webpackJsonp([83], {
                                             })
                                         }(this.logger)];
                                     case 1:
-                                        return (e = i.sent()) ? this.knownBuilds.has(e.release.buildId) || this.state.rejectedBuilds.has(e.release.buildId) ? [3, 5] : this.state.newBuilds.has(e.release.buildId) ? [3, 3] : [4, $(e.release.files, this.logger)] : (this.logger.debug("Manifest is missing. Skipping preload", {
+                                        return (e = i.sent()) ? this.knownBuilds.has(e.release.buildId) || this.state.rejectedBuilds.has(e.release.buildId) ? [3, 5] : this.state.newBuilds.has(e.release.buildId) ? [3, 3] : [4, G(e.release.files, this.logger)] : (this.logger.debug("Manifest is missing. Skipping preload", {
                                             currentBuildID: a.o.config.buildID
                                         }), [2]);
                                     case 2:
@@ -46323,7 +46722,7 @@ webpackJsonp([83], {
                                             currentBuildID: a.o.config.buildID,
                                             releaseBuildID: e.release.buildId
                                         }), this.setState(function(t) {
-                                            return Z(e.release.buildId), {
+                                            return Q(e.release.buildId), {
                                                 newBuilds: new Set(t.newBuilds).add(e.release.buildId),
                                                 shouldReloadOnTransition: !e.canary || a.o.config.buildID !== e.canary.buildId
                                             }
@@ -46341,13 +46740,13 @@ webpackJsonp([83], {
                                             }
                                         }), i.label = 6;
                                     case 6:
-                                        return e.canary ? (t = e.canary.buildId, this.knownBuilds.has(t) || this.state.rejectedBuilds.has(t) ? [3, 9] : this.state.newBuilds.has(t) ? [3, 8] : [4, $(e.canary.files, this.logger)]) : [3, 10];
+                                        return e.canary ? (t = e.canary.buildId, this.knownBuilds.has(t) || this.state.rejectedBuilds.has(t) ? [3, 9] : this.state.newBuilds.has(t) ? [3, 8] : [4, G(e.canary.files, this.logger)]) : [3, 10];
                                     case 7:
                                         i.sent() && (this.logger.debug("Preloading canary chunks succeeded", {
                                             currentBuildID: a.o.config.buildID,
                                             canaryBuildID: t
                                         }), this.setState(function(e) {
-                                            return Z(t), {
+                                            return Q(t), {
                                                 newBuilds: new Set(e.newBuilds).add(t)
                                             }
                                         })), i.label = 8;
@@ -46380,40 +46779,40 @@ webpackJsonp([83], {
                     return null
                 }, t
             }(i.Component),
-            J = n("2pjT"),
-            ee = n("iPhu"),
-            te = n("T8ns");
-        var ne = Object(c.b)(function(e) {
+            $ = n("2pjT"),
+            Y = n("iPhu"),
+            Z = n("T8ns");
+        var X = Object(c.b)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e),
                     firstPageLoaded: e.session.firstPageLoaded,
                     theatreModeEnabled: e.ui.theatreModeEnabled
                 }
-            })(te.a),
-            ie = n("Odds"),
-            re = (n("WqMu"), m.a.wrap(function() {
+            })(Z.a),
+            J = n("Odds"),
+            ee = (n("WqMu"), m.a.wrap(function() {
                 return n.e(46).then(n.bind(null, "EkQQ"))
             }, "DashboardRoot")),
-            ae = m.a.wrap(function() {
+            te = m.a.wrap(function() {
                 return n.e(36).then(n.bind(null, "r7VP"))
             }, "TeamsDashboardRoot"),
-            oe = m.a.wrap(function() {
+            ne = m.a.wrap(function() {
                 return n.e(63).then(n.bind(null, "EtaR"))
             }, "TeamsLandingPage"),
-            se = m.a.wrap(function() {
+            ie = m.a.wrap(function() {
                 return n.e(54).then(n.bind(null, "lI8O"))
             }, "OnboardingRoot"),
-            le = function(e) {
+            re = function(e) {
                 return i.createElement(p.c, {
                     to: "/teams/" + e.match.params.teamName + "/dashboard"
                 })
             },
-            ce = function(e) {
+            ae = function(e) {
                 return i.createElement(p.c, {
                     to: "/team/" + e.match.params.teamName
                 })
             },
-            de = function(e) {
+            oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onHistoryChange = function(e, n) {
@@ -46433,72 +46832,72 @@ webpackJsonp([83], {
                         t && document.body.classList.remove(t), n && document.body.classList.add(n)
                     }
                 }, t.prototype.render = function() {
-                    return i.createElement("div", null, i.createElement(ie._8, {
+                    return i.createElement("div", null, i.createElement(J._8, {
                         className: "twilight-root",
-                        overflow: ie._11.Hidden,
-                        display: ie.R.Flex,
-                        flexDirection: ie.T.Column,
-                        flexWrap: ie.U.NoWrap,
-                        position: ie._15.Absolute,
+                        overflow: J._11.Hidden,
+                        display: J.R.Flex,
+                        flexDirection: J.T.Column,
+                        flexWrap: J.U.NoWrap,
+                        position: J._15.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         attachLeft: !0
-                    }, i.createElement(O, null), i.createElement(x.a, null), i.createElement(L.b, null), i.createElement(p.e, null, i.createElement(p.d, {
+                    }, i.createElement(I, null), i.createElement(P.a, null), i.createElement(F.b, null), i.createElement(p.e, null, i.createElement(p.d, {
                         path: "/:channelName/dashboard/:pageName?",
-                        component: re
+                        component: ee
                     }), i.createElement(p.d, {
                         path: "/hi",
-                        component: se
+                        component: ie
                     }), i.createElement(p.d, {
                         path: "/:channelName/:pageName(manager|manager_v2)",
-                        component: re
+                        component: ee
                     }), i.createElement(p.d, {
                         path: "/event/:teamName",
-                        component: ce
+                        component: ae
                     }), "}", i.createElement(p.d, {
                         exact: !0,
                         path: "/team/:teamName/edit",
-                        render: le
+                        render: re
                     }), i.createElement(p.d, {
                         path: "/team/:teamName",
-                        component: oe
+                        component: ne
                     }), i.createElement(p.d, {
                         path: "/teams/:teamName/dashboard/:pageName?",
-                        component: ae
+                        component: te
                     }), i.createElement(p.d, {
                         path: "/",
-                        component: ne
-                    })), i.createElement(ee.b, null), i.createElement(z.b, null), i.createElement(h.a, null), this.props.firstPageLoaded && i.createElement(V.a, null), this.props.firstPageLoaded && i.createElement(W.a, {
+                        component: X
+                    })), i.createElement(Y.b, null), i.createElement(j.b, null), i.createElement(h.a, null), this.props.firstPageLoaded && i.createElement(U.a, null), this.props.firstPageLoaded && i.createElement(B.a, {
                         history: this.props.history
-                    }), this.props.isLoggedIn && i.createElement(J.a, null), a.o.benchmarking.toolsEnabled && i.createElement(B.c, {
+                    }), this.props.isLoggedIn && i.createElement($.a, null), a.o.benchmarking.toolsEnabled && i.createElement(A.c, {
                         benchmarking: a.o.benchmarking
-                    }), this.props.firstPageLoaded && i.createElement(H.b, {
+                    }), this.props.firstPageLoaded && i.createElement(M.b, {
                         history: this.props.history
-                    }), this.props.firstPageLoaded && i.createElement(X, null), this.props.firstPageLoaded && i.createElement(D, null), this.props.firstPageLoaded && i.createElement(j, null)))
+                    }), this.props.firstPageLoaded && i.createElement(K, null), this.props.firstPageLoaded && i.createElement(L, null)))
                 }, t
             }(i.Component),
-            ue = Object(B.d)("Root", {
+            se = Object(A.d)("Root", {
                 isRoot: !0
-            })(de);
-        var pe, me = Object(c.b)(function(e) {
+            })(oe);
+        var le, ce = Object(c.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
                     isLoggedIn: Object(s.d)(e),
                     theme: Object(d.a)(e)
                 }
-            })(ue),
-            he = Object(r.f)(me);
+            })(se),
+            de = Object(r.f)(ce);
 
-        function ge() {
+        function ue() {
             a.o.mount(i.createElement(r.d, {
                 history: a.o.history
-            }, i.createElement(he, null)), document.getElementById("root"))
+            }, i.createElement(de, null)), document.getElementById("root"))
         }
-        var fe = !1;
-        pe = a.o.store.getReduxStore().subscribe(function() {
+        var pe = !1;
+        le = a.o.store.getReduxStore().subscribe(function() {
             var e = a.o.store.getState();
-            !fe && Object(s.e)(e) && (fe = !0, pe(), a.a.optimizedBuild ? ge() : setTimeout(ge, 500))
+            !pe && Object(s.e)(e) && (pe = !0, le(), a.a.optimizedBuild ? ue() : setTimeout(ue, 500))
         }), Object(l.a)(), a.o.store.dispatch(Object(o.e)())
     },
     rWzl: function(e, t) {
@@ -47119,20 +47518,20 @@ webpackJsonp([83], {
                         var e = null !== t && t.apply(this, arguments) || this;
                         return e.state = {
                             consentGiven: Object(c.a)()
-                        }, e.dynamicSettingsEnabled = Object(d.a)(), e.logger = s.j.withCategory("with-gdpr-consent"), e.initializeEvidon = function() {
+                        }, e.logger = s.j.withCategory("with-gdpr-consent"), e.initializeEvidon = function() {
                             e.logger.debug("Listening to EvidonManager", {
                                 displayName: n.displayName
-                            }), u.a.addListeners({
+                            }), d.a.addListeners({
                                 consent: e.onConsentChange
-                            }), u.a.loadScripts()
+                            }), d.a.loadScripts()
                         }, e.onConsentChange = function(t) {
                             e.setState({
                                 consentGiven: t
                             })
                         }, e.canInitializeEvidon = function(t) {
-                            return !!(e.isEnabled() && t.data && t.data.requestInfo && (t.data.requestInfo.isFromEEA || e.hasQueryParamOverride()))
-                        }, e.isEnabled = function() {
-                            return e.hasQueryParamOverride() || e.dynamicSettingsEnabled
+                            return !!(e.isGDPRConsentEnabled() && t.data && t.data.requestInfo && (t.data.requestInfo.isFromEEA || e.hasQueryParamOverride()))
+                        }, e.isGDPRConsentEnabled = function() {
+                            return e.hasQueryParamOverride() || Object(u.b)()
                         }, e
                     }
                     return i.__extends(n, t), n.prototype.componentDidMount = function() {
@@ -47141,20 +47540,19 @@ webpackJsonp([83], {
                         var t = this.props.data && !this.props.data.loading && (!e.data || e.data.loading);
                         t && this.canInitializeEvidon(this.props) && this.initializeEvidon()
                     }, n.prototype.componentWillUnmount = function() {
-                        u.a.removeListeners({
+                        d.a.removeListeners({
                             consent: this.onConsentChange
                         })
                     }, n.prototype.render = function() {
-                        var t = !1,
+                        var t = this.isGDPRConsentEnabled(),
                             n = this.props.data && this.props.data.requestInfo,
-                            a = n && (n.isFromEEA || this.hasQueryParamOverride()),
-                            o = n && !a;
-                        (!this.isEnabled() || o || a && this.state.consentGiven) && (t = !0);
-                        var s = {
-                            gdpr: {
-                                consentGiven: t
-                            }
-                        };
+                            a = n && !n.isFromEEA && !this.hasQueryParamOverride(),
+                            o = a || (t ? this.state.consentGiven : Object(u.a)()),
+                            s = {
+                                gdpr: {
+                                    consentGiven: o
+                                }
+                            };
                         return r.createElement(e, i.__assign({}, s, this.props))
                     }, n.prototype.hasQueryParamOverride = function() {
                         return window.location.search.includes("gdpr_override")
@@ -47180,10 +47578,131 @@ webpackJsonp([83], {
             s = n("6sO2"),
             l = n("7vx8"),
             c = n("u2Hz"),
-            d = n("nWgz"),
-            u = n("VCvu"),
-            p = n("mZoE");
-        n.n(p)
+            d = n("VCvu"),
+            u = n("GSZ7"),
+            p = n("mZoE"),
+            m = (n.n(p), n("bhwk"));
+        n.n(m)
+    },
+    sH1u: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "ChannelSubscribeRedirect"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "channelLogin"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "channelLogin"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "subscriptionProducts"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "name"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "tier"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 130
+            }
+        };
+        n.loc.source = {
+            body: "query ChannelSubscribeRedirect($channelLogin: String!) {\nuser(login: $channelLogin) {\nid\nsubscriptionProducts {\nid\nname\ntier\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     sq7i: function(e, t) {
         var n = {
@@ -47903,7 +48422,7 @@ webpackJsonp([83], {
                 return i
             }),
             function(e) {
-                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteOverview = "dev.overview", e.Unknown = "unknown"
+                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteOverview = "dev.overview", e.Unknown = "unknown"
             }(i || (i = {}))
     },
     wG4N: function(e, t) {
@@ -49396,4 +49915,4 @@ webpackJsonp([83], {
         e.exports = n
     }
 }, [5]);
-//# sourceMappingURL=core-58fa9a37b88289ac09480562c421ea83.js.map
+//# sourceMappingURL=core-22cd1ef7a172b9c11f1d829685044fd9.js.map

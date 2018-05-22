@@ -1,4 +1,4 @@
-webpackJsonp([95], {
+webpackJsonp([94], {
     "+27R": function(e, t, n) {
         (function(e) {
             "use strict";
@@ -4176,6 +4176,9 @@ webpackJsonp([95], {
             }, {
                 code: "pt",
                 label: "Português"
+            }, {
+                code: "ro",
+                label: "Română"
             }, {
                 code: "ru",
                 label: "Русский"
@@ -11238,27 +11241,8 @@ webpackJsonp([95], {
                     width: 16
                 })) : ""))
             },
-            ln = (n("un8E"), [{
-                key: null,
-                label: Object(l.d)("All", "VideoManagerFilter")
-            }, {
-                key: u.a.Upload,
-                label: Object(l.d)("Upload", "VideoManagerFilter")
-            }, {
-                key: u.a.PastPremiere,
-                label: Object(l.d)("Past Premiere", "VideoManagerFilter")
-            }, {
-                key: u.a.Archive,
-                label: Object(l.d)("Past Broadcast", "VideoManagerFilter")
-            }, {
-                key: u.a.Highlight,
-                label: Object(l.d)("Highlight", "VideoManagerFilter")
-            }, {
-                key: p.ExtraFilterType.Expiring,
-                label: Object(l.d)("Expiring", "VideoManagerFilter")
-            }]),
-            un = "filters-container",
-            cn = function(e) {
+            ln = (n("un8E"), "filters-container"),
+            un = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChangeFilter = function(e) {
@@ -11267,7 +11251,25 @@ webpackJsonp([95], {
                 }
                 return d.__extends(t, e), t.prototype.render = function() {
                     var e = this,
-                        t = ln.map(function(t) {
+                        t = [{
+                            key: null,
+                            label: Object(l.d)("All", "VideoManagerFilter")
+                        }, {
+                            key: u.a.Upload,
+                            label: Object(l.d)("Upload", "VideoManagerFilter")
+                        }, {
+                            key: u.a.PastPremiere,
+                            label: Object(l.d)("Past Premiere", "VideoManagerFilter")
+                        }, {
+                            key: u.a.Archive,
+                            label: Object(l.d)("Past Broadcast", "VideoManagerFilter")
+                        }, {
+                            key: u.a.Highlight,
+                            label: Object(l.d)("Highlight", "VideoManagerFilter")
+                        }, {
+                            key: p.ExtraFilterType.Expiring,
+                            label: Object(l.d)("Expiring", "VideoManagerFilter")
+                        }].map(function(t) {
                             return Bt.createElement(dn, {
                                 key: t.key || "",
                                 onClick: e.onChangeFilter,
@@ -11278,7 +11280,7 @@ webpackJsonp([95], {
                             })
                         });
                     return Bt.createElement(ge._8, {
-                        className: un,
+                        className: ln,
                         flexShrink: 1
                     }, Bt.createElement(ge._8, {
                         margin: {
@@ -11290,7 +11292,7 @@ webpackJsonp([95], {
                     }, Object(l.d)("Filter", "VideoManager"))), Bt.createElement("div", null, t))
                 }, t
             }(Bt.PureComponent),
-            mn = function(e) {
+            cn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11351,12 +11353,12 @@ webpackJsonp([95], {
                     return t
                 }, t
             }(Bt.Component),
-            _n = Object(rn.d)("MiniVideoStats", {
+            mn = Object(rn.d)("MiniVideoStats", {
                 autoReportInteractive: !0
-            })(mn),
-            pn = n("J8WN"),
-            hn = "video-upload-error-text",
-            fn = function(e) {
+            })(cn),
+            _n = n("J8WN"),
+            pn = "video-upload-error-text",
+            hn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getErrorMessage = function(e) {
@@ -11367,7 +11369,7 @@ webpackJsonp([95], {
                             flexWrap: ge.U.NoWrap
                         }, Bt.createElement(ge.Q, {
                             fontSize: ge.V.Size5,
-                            "data-test-selector": hn
+                            "data-test-selector": pn
                         }, e))
                     }, t
                 }
@@ -11382,7 +11384,7 @@ webpackJsonp([95], {
                     }, e)) : null
                 }, t
             }(Bt.Component),
-            gn = (n("D4Og"), function(e) {
+            fn = (n("D4Og"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -11391,7 +11393,7 @@ webpackJsonp([95], {
                         className: "upload-box",
                         position: ge._15.Relative,
                         fullWidth: !0
-                    }, Bt.createElement(pn.a, {
+                    }, Bt.createElement(_n.a, {
                         allowedFileTypes: D.e,
                         onFilesSubmitted: this.props.onFilesSubmitted,
                         error: this.props.errors.length > 0,
@@ -11428,7 +11430,7 @@ webpackJsonp([95], {
                     }, Object(l.d)("Drag and drop or select files to upload", "UploadFilesBox")), Bt.createElement(ge.Q, {
                         fontSize: ge.V.Size6,
                         color: ge.K.Alt2
-                    }, Object(l.d)("The Twitch uploader supports MP4, MOV, AVI and FLV files. Encoding must be H.264. Max file size is 20 GB.", "UploadFilesBox"))) : Bt.createElement(fn, {
+                    }, Object(l.d)("The Twitch uploader supports MP4, MOV, AVI and FLV files. Encoding must be H.264. Max file size is 20 GB.", "UploadFilesBox"))) : Bt.createElement(hn, {
                         errors: this.props.errors
                     })
                 }, t.prototype.renderUploadIcon = function() {
@@ -11453,8 +11455,8 @@ webpackJsonp([95], {
                     }))
                 }, t
             }(Bt.Component)),
-            Mn = n("KSGD"),
-            vn = function(e) {
+            gn = n("KSGD"),
+            Mn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleClick = function() {
@@ -11479,10 +11481,10 @@ webpackJsonp([95], {
                         }
                     }, e), Bt.createElement("span", null, this.props.text)))
                 }, t.contextTypes = {
-                    closeMenu: Mn.func
+                    closeMenu: gn.func
                 }, t
             }(Bt.Component),
-            yn = function(e) {
+            vn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleClick = function() {
@@ -11526,12 +11528,12 @@ webpackJsonp([95], {
                         }
                     }, t, e), Bt.createElement("span", null, this.props.text), n))
                 }, t.contextTypes = {
-                    menuChangeCallback: Mn.func
+                    menuChangeCallback: gn.func
                 }, t
             }(Bt.Component),
-            Ln = "add-to-vodcast-queue",
-            bn = "add-to-collection",
-            Dn = function(e) {
+            yn = "add-to-vodcast-queue",
+            Ln = "add-to-collection",
+            bn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.message = function() {
@@ -11543,7 +11545,7 @@ webpackJsonp([95], {
                 return d.__extends(t, e), t.prototype.render = function() {
                     var e = null,
                         t = null;
-                    return this.props.hasMenuNavigationHeader || (e = Bt.createElement(yn, {
+                    return this.props.hasMenuNavigationHeader || (e = Bt.createElement(vn, {
                         icon: ge._25.Plus,
                         text: Object(l.d)("Add to", "VideoManagerMenuPageAddTo"),
                         navTarget: p.KEY_ROOT,
@@ -11557,25 +11559,25 @@ webpackJsonp([95], {
                         flexGrow: 0
                     })), Bt.createElement("div", {
                         "data-test-selector-menu": p.KEY_ADD_TO
-                    }, e, t, Bt.createElement(yn, {
-                        "data-test-selector": bn,
+                    }, e, t, Bt.createElement(vn, {
+                        "data-test-selector": Ln,
                         text: Object(l.d)("Collections", "VideoManagerMenuPageAddTo"),
                         navTarget: p.KEY_COLLECTIONS,
                         navArrowSide: p.DropdownMenuNavDirection.Right
-                    }), Bt.createElement(vn, {
-                        "data-test-selector": Ln,
+                    }), Bt.createElement(Mn, {
+                        "data-test-selector": yn,
                         disabled: this.props.inVodcastQueue || this.props.vodcastQueueUnavailable,
                         text: this.message(),
                         onClick: this.onAddVideoToVodcastQueue
                     }))
                 }, t
             }(Bt.Component),
-            Tn = (n("bKut"), n("kk4f")),
-            kn = n("B9Px"),
-            wn = n("6BvN"),
-            Yn = "CollectionTitle",
-            En = "CollectionCreateButton",
-            Sn = function(e) {
+            Dn = (n("bKut"), n("kk4f")),
+            Tn = n("B9Px"),
+            kn = n("6BvN"),
+            wn = "CollectionTitle",
+            Yn = "CollectionCreateButton",
+            En = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.onTitleChange = function(e) {
@@ -11606,7 +11608,7 @@ webpackJsonp([95], {
                             })
                         })
                     }, t.onKeyDown = function(e) {
-                        e.keyCode === wn.a.Enter && t.hasTitle() && t.onSubmit()
+                        e.keyCode === kn.a.Enter && t.hasTitle() && t.onSubmit()
                     }, t.hasTitle = function() {
                         return Boolean(t.state.title && t.state.title.length > 0)
                     }, t.saveInputRef = function(e) {
@@ -11622,7 +11624,7 @@ webpackJsonp([95], {
                         flexGrow: 1,
                         flexShrink: 0
                     }, Bt.createElement(ge._4, {
-                        "data-test-selector": Yn,
+                        "data-test-selector": wn,
                         autoComplete: "off",
                         name: "collection-name",
                         placeholder: Object(l.d)("Create a collection", "VideoManagerMenuPageCollections"),
@@ -11635,17 +11637,17 @@ webpackJsonp([95], {
                         flexShrink: 0
                     }, Bt.createElement(ge.v, {
                         onClick: this.onSubmit,
-                        "data-test-selector": En,
+                        "data-test-selector": Yn,
                         disabled: !this.hasTitle()
                     }, Object(l.d)("Create", "VideoManagerMenuPageCollections")))) : Bt.createElement(ge._8, null)
                 }, t = d.__decorate([Object(rn.d)("CollectionCreator")], t)
             }(Bt.Component);
-        var On = Object(a.b)(null, function(e) {
+        var Sn = Object(a.b)(null, function(e) {
                 return Object(r.b)({
-                    createCollectionWithVideo: kn.d
+                    createCollectionWithVideo: Tn.d
                 }, e)
-            })(Sn),
-            Cn = function(e) {
+            })(En),
+            On = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11655,7 +11657,7 @@ webpackJsonp([95], {
                 return d.__extends(t, e), t.prototype.render = function() {
                     return Bt.createElement("div", {
                         "data-test-selector-menu": p.KEY_COLLECTIONS
-                    }, Bt.createElement(yn, {
+                    }, Bt.createElement(vn, {
                         text: Object(l.d)("Collections", "VideoManagerMenuPageCollections"),
                         navTarget: p.KEY_ADD_TO,
                         navArrowSide: p.DropdownMenuNavDirection.Left
@@ -11666,35 +11668,35 @@ webpackJsonp([95], {
                         display: ge.R.Flex,
                         flexGrow: 0,
                         flexWrap: ge.U.NoWrap
-                    }), Bt.createElement(On, {
+                    }), Bt.createElement(Sn, {
                         channelID: this.props.channelID,
                         videoID: this.props.video.id
-                    }), Bt.createElement(Tn.b, {
+                    }), Bt.createElement(Dn.b, {
                         channelID: this.props.channelID,
                         videoID: this.props.video.id
                     }))
                 }, t
             }(Bt.Component);
-        var jn = Object(a.b)(function(e) {
+        var Cn = Object(a.b)(function(e) {
                 return {
                     videoID: e.collections.videoID
                 }
-            })(Cn),
-            xn = n("kDWL");
+            })(On),
+            jn = n("kDWL");
 
-        function Pn(e, t) {
+        function xn(e, t) {
             var n = l.n.getLastPageview(),
                 a = n && n.location || an.PageviewLocation.None;
-            l.n.track(xn.a.VODDownloadClick, {
+            l.n.track(jn.a.VODDownloadClick, {
                 vod_id: e,
                 vod_type: t,
                 location: a
             })
         }
-        var Hn = "preparing",
-            An = "download",
-            In = "download-button",
-            Vn = function(e) {
+        var Pn = "preparing",
+            Hn = "download",
+            An = "download-button",
+            In = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onDownload = function() {
@@ -11703,7 +11705,7 @@ webpackJsonp([95], {
                             return d.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        Pn(this.props.video.id, this.props.video.broadcastType), t.label = 1;
+                                        xn(this.props.video.id, this.props.video.broadcastType), t.label = 1;
                                     case 1:
                                         return t.trys.push([1, 3, , 4]), [4, this.props.onDownloadVideo(this.props.video)];
                                     case 2:
@@ -11722,7 +11724,7 @@ webpackJsonp([95], {
                     return Bt.createElement(ge._6, {
                         onClick: this.onDownload,
                         disabled: e,
-                        "data-test-selector": In
+                        "data-test-selector": An
                     }, Bt.createElement(ge._2, {
                         padding: 1,
                         flexGrow: 1,
@@ -11731,7 +11733,7 @@ webpackJsonp([95], {
                     }, e ? this.renderPreparingState() : this.renderDownloadState()))
                 }, t.prototype.renderDownloadState = function() {
                     return Bt.createElement(ge._35, {
-                        "data-test-selector": An
+                        "data-test-selector": Hn
                     }, Bt.createElement(ge._8, {
                         padding: {
                             right: 1
@@ -11741,7 +11743,7 @@ webpackJsonp([95], {
                     })), Bt.createElement("span", null, Object(l.d)("Download", "VideoManagerMenuRoot")))
                 }, t.prototype.renderPreparingState = function() {
                     return Bt.createElement(ge._8, {
-                        "data-test-selector": Hn
+                        "data-test-selector": Pn
                     }, Bt.createElement(ge._8, {
                         padding: {
                             right: 1
@@ -11750,10 +11752,10 @@ webpackJsonp([95], {
                         size: ge._33.Small
                     })), Bt.createElement("span", null, Object(l.d)("Preparing...", "VideoManagerMenuRoot")))
                 }, t.contextTypes = {
-                    closeMenu: Mn.func
+                    closeMenu: gn.func
                 }, t
             }(Bt.Component),
-            Fn = function(e) {
+            Vn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleClick = function() {
@@ -11779,17 +11781,17 @@ webpackJsonp([95], {
                         }
                     }, e), Bt.createElement("span", null, this.props.text)))
                 }, t.contextTypes = {
-                    closeMenu: Mn.func
+                    closeMenu: gn.func
                 }, t
             }(Bt.Component),
-            Rn = n("6C1Z"),
-            Nn = "delete-video",
-            Wn = "add-selector",
-            Un = "highlight-selector",
-            zn = "watch-video",
-            Gn = "export",
-            Jn = "appeal-muted-tracks",
-            Bn = function(e) {
+            Fn = n("6C1Z"),
+            Rn = "delete-video",
+            Nn = "add-selector",
+            Wn = "highlight-selector",
+            Un = "watch-video",
+            zn = "export",
+            Gn = "appeal-muted-tracks",
+            Jn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onWatch = function() {
@@ -11808,56 +11810,56 @@ webpackJsonp([95], {
                         }(this.props.video);
                     return Bt.createElement("div", {
                         "data-test-selector-menu": p.KEY_ROOT
-                    }, t.menu.canEdit && Bt.createElement(Fn, {
+                    }, t.menu.canEdit && Bt.createElement(Vn, {
                         icon: ge._25.Edit,
                         text: Object(l.d)("Edit", "VideoManagerMenuRoot"),
-                        link: Object(Rn.b)(this.props.channelName, this.props.video.id)
-                    }), t.menu.canAddToVodcast && Bt.createElement(yn, {
-                        "data-test-selector": Wn,
+                        link: Object(Fn.b)(this.props.channelName, this.props.video.id)
+                    }), t.menu.canAddToVodcast && Bt.createElement(vn, {
+                        "data-test-selector": Nn,
                         icon: ge._25.Plus,
                         text: Object(l.d)("Add to", "VideoManagerMenuRoot"),
                         navTarget: p.KEY_ADD_TO,
                         navArrowSide: p.DropdownMenuNavDirection.Right
-                    }), this.props.isOwner && this.props.video.mutedSegments && this.props.video.mutedSegments.length > 0 && Bt.createElement(Fn, {
+                    }), this.props.isOwner && this.props.video.mutedSegments && this.props.video.mutedSegments.length > 0 && Bt.createElement(Vn, {
                         icon: ge._25.Muted,
                         text: Object(l.d)("Appeal Muted Audio", "VideoManagerMenuRoot"),
-                        link: Object(Rn.a)(this.props.channelName, this.props.video.id),
-                        "data-test-selector": Jn
-                    }), t.menu.canDownload && Bt.createElement(Vn, {
+                        link: Object(Fn.a)(this.props.channelName, this.props.video.id),
+                        "data-test-selector": Gn
+                    }), t.menu.canDownload && Bt.createElement(In, {
                         onDownloadVideo: this.props.onDownloadVideo,
                         video: this.props.video,
                         videoDownloads: this.props.videoDownloads
-                    }), t.menu.canHighlight && Bt.createElement(Fn, {
-                        "data-test-selector": Un,
+                    }), t.menu.canHighlight && Bt.createElement(Vn, {
+                        "data-test-selector": Wn,
                         icon: ge._25.Clip,
                         text: Object(l.d)("Highlight", "VideoManagerMenuRoot"),
-                        link: Object(Rn.c)(this.props.channelName, this.props.video.id),
+                        link: Object(Fn.c)(this.props.channelName, this.props.video.id),
                         targetBlank: !0
-                    }), a && Bt.createElement(vn, {
+                    }), a && Bt.createElement(Mn, {
                         icon: ge._25.Play,
                         text: Object(l.d)("Watch", "VideoManagerMenuRoot"),
                         onClick: this.onWatch,
-                        "data-test-selector": zn
-                    }), n && Bt.createElement(vn, {
-                        "data-test-selector": Gn,
+                        "data-test-selector": Un
+                    }), n && Bt.createElement(Mn, {
+                        "data-test-selector": zn,
                         onClick: this.onExport,
                         icon: ge._25.Upload,
                         text: Object(l.d)("Export", "VideoManagerMenuRoot")
                     }), Bt.createElement("div", {
                         className: "mg-05 border-t border-l font-size-6 flex-grow-0 flex flex-nowrap"
-                    }), Bt.createElement(vn, {
+                    }), Bt.createElement(Mn, {
                         icon: ge._25.Trash,
                         text: Object(l.d)("Delete", "VideoManagerMenuRoot"),
                         onClick: this.onDelete,
                         "data-a-target": "delete-video-option",
-                        "data-test-selector": Nn
+                        "data-test-selector": Rn
                     }))
                 }, t
             }(Bt.Component),
-            Kn = n("HW6M"),
-            Qn = n("O27J"),
-            qn = n("rCmJ"),
-            Zn = (n("b8CJ"), function(e) {
+            Bn = n("HW6M"),
+            Kn = n("O27J"),
+            Qn = n("rCmJ"),
+            qn = (n("b8CJ"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.handleMenuChange = function(e, t) {
@@ -11883,7 +11885,7 @@ webpackJsonp([95], {
                             currentKey: n.startKey()
                         })
                     }, n.refHandler = function(e) {
-                        n.menuButtonRef = Object(Qn.findDOMNode)(e)
+                        n.menuButtonRef = Object(Kn.findDOMNode)(e)
                     }, n.inBottomHalf = function() {
                         return !!n.menuButtonRef && n.menuButtonRef.getBoundingClientRect().top > .55 * window.innerHeight
                     }, n.state = {
@@ -11898,7 +11900,7 @@ webpackJsonp([95], {
                             return t.props.contentKey === e.state.currentKey
                         }),
                         n = t && t.props.contentKey === p.KEY_COLLECTIONS,
-                        a = Kn("video-card-dropdown__dropdown-wrapper", {
+                        a = Bn("video-card-dropdown__dropdown-wrapper", {
                             "video-card-dropdown__hidden": !this.state.isDropdownMenuOpen,
                             "video-card-dropdown__dropdown-wrapper-right": this.props.isRightAligned,
                             "video-card-dropdown__dropdown-wide": n,
@@ -11910,7 +11912,7 @@ webpackJsonp([95], {
                         ref: this.refHandler
                     }, Bt.createElement(ge._2, {
                         fullHeight: !0
-                    }, Bt.createElement(qn.a, {
+                    }, Bt.createElement(Qn.a, {
                         className: "video-manager-card--menu",
                         onClickOut: this.onClickOut
                     }, Bt.createElement(ge._8, {
@@ -11937,12 +11939,12 @@ webpackJsonp([95], {
                         closeMenu: this.onClickOut
                     }
                 }, t.childContextTypes = {
-                    menuChangeCallback: Mn.func,
-                    closeMenu: Mn.func
+                    menuChangeCallback: gn.func,
+                    closeMenu: gn.func
                 }, t
             }(Bt.Component)),
-            Xn = n("+8VM"),
-            $n = (n("kmtA"), function(e) {
+            Zn = n("+8VM"),
+            Xn = (n("kmtA"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onConfirm = function() {
@@ -11975,12 +11977,12 @@ webpackJsonp([95], {
                         onClick: this.onConfirm,
                         "data-a-target": "confirm",
                         "data-test-selector": "confirm-button"
-                    }, Object(l.d)("Yes, cancel Premiere", "CancelPremiereModal"))), Bt.createElement(Xn.a, {
+                    }, Object(l.d)("Yes, cancel Premiere", "CancelPremiereModal"))), Bt.createElement(Zn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(Bt.Component)),
-            ea = (n("9Nh+"), function(e) {
+            $n = (n("9Nh+"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -12022,12 +12024,12 @@ webpackJsonp([95], {
                         linkTo: this.props.onConfirm,
                         onClick: this.props.closeModal,
                         "data-test-selector": "confirm-button"
-                    }, Object(l.d)("Publish without Premiere", "ConfirmPublishModal"))), Bt.createElement(Xn.a, {
+                    }, Object(l.d)("Publish without Premiere", "ConfirmPublishModal"))), Bt.createElement(Zn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(Bt.Component)),
-            ta = (n("yISp"), function(e) {
+            ea = (n("yISp"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -12046,7 +12048,7 @@ webpackJsonp([95], {
                         if (e.callToActionButton && e.callToActionButton.dropdownActions && e.callToActionButton.dropdownActions.length > 0) return Bt.createElement("span", {
                             className: "premiere-dropdown",
                             "data-a-target": "premiere-dropdown"
-                        }, Bt.createElement(qn.a, {
+                        }, Bt.createElement(Qn.a, {
                             className: "premiere-dropdown__clickout",
                             onClickOut: t.hideScheduleDropdown
                         }, Bt.createElement(ge.v, {
@@ -12081,12 +12083,12 @@ webpackJsonp([95], {
                             textAlign: ge._45.Left
                         }, e.message))
                     }, t.onCancelPremiere = function() {
-                        t.props.showModal($n, {
+                        t.props.showModal(Xn, {
                             closeModal: t.props.closeModal,
                             onConfirm: t.props.onDeletePremiere
                         }), t.hideScheduleDropdown()
                     }, t.onImmediatePublish = function() {
-                        t.props.showModal(ea, {
+                        t.props.showModal($n, {
                             dismissModalPermanently: t.props.dismissImmediatePublishModal,
                             closeModal: t.props.closeModal,
                             onConfirm: t.props.publishURL
@@ -12118,7 +12120,7 @@ webpackJsonp([95], {
                     }
                 }, t
             }(Bt.Component)),
-            na = (n("8R0z"), function(e) {
+            ta = (n("8R0z"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleClick = function(e) {
@@ -12162,9 +12164,9 @@ webpackJsonp([95], {
                     }, Object(sn.a)(this.props)), a) : a
                 }, t
             }(Bt.Component)),
-            aa = "status-bar-published",
-            ra = "stat-view-count",
-            ia = function(e) {
+            na = "status-bar-published",
+            aa = "stat-view-count",
+            ra = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -12176,7 +12178,7 @@ webpackJsonp([95], {
                     }
                     return this.props.video.viewableAt ? Bt.createElement("div", {
                         className: "video-card__status-display-bar",
-                        "data-test-selector": aa
+                        "data-test-selector": na
                     }, Object(l.d)("Scheduled: {scheduledDate}", {
                         scheduledDate: e
                     }, "VideoManager")) : Bt.createElement(ge._35, {
@@ -12184,30 +12186,30 @@ webpackJsonp([95], {
                         fullWidth: !0,
                         color: ge.K.Link,
                         className: "video-card__status-display-bar"
-                    }, Bt.createElement(na, {
+                    }, Bt.createElement(ta, {
                         stat: this.props.video.viewCount,
                         icon: ge._25.GlyphViews,
                         label: "Views",
                         video: this.props.video,
                         hoverDisplay: !0,
-                        "data-test-selector": ra
+                        "data-test-selector": aa
                     }))
                 }, t
             }(Bt.Component),
-            oa = n("mi6k"),
-            sa = "video-card-sub-pill-selector",
-            da = "video-card-broadcast-type-stat-selector",
-            la = "video-card-duration-stat-selector",
-            ua = "video-card-publish-date-selector",
-            ca = "video-card-scheduled-date-selector",
-            ma = function(e) {
+            ia = n("mi6k"),
+            oa = "video-card-sub-pill-selector",
+            sa = "video-card-broadcast-type-stat-selector",
+            da = "video-card-duration-stat-selector",
+            la = "video-card-publish-date-selector",
+            ua = "video-card-scheduled-date-selector",
+            ca = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return d.__extends(t, e), t.prototype.render = function() {
                     var e = null;
                     return this.props.subOnlyChannel && (e = Bt.createElement(ge._12, {
-                        "data-test-selector": sa,
+                        "data-test-selector": oa,
                         label: Object(l.d)("Sub-only", "VideoManager")
                     })), Bt.createElement(ge._35, {
                         color: ge.K.Alt2,
@@ -12246,7 +12248,7 @@ webpackJsonp([95], {
                         margin: {
                             right: 1
                         },
-                        "data-test-selector": ca
+                        "data-test-selector": ua
                     }, Bt.createElement(ge._8, {
                         margin: {
                             right: 1
@@ -12275,10 +12277,10 @@ webpackJsonp([95], {
                         margin: {
                             right: 1
                         },
-                        "data-test-selector": ua
+                        "data-test-selector": la
                     }, e.toLocaleDateString())
                 }, t.prototype.durationElement = function(e) {
-                    var t = this.props.video.lengthSeconds ? Object(oa.b)(this.props.video.lengthSeconds) : "--:--";
+                    var t = this.props.video.lengthSeconds ? Object(ia.b)(this.props.video.lengthSeconds) : "--:--";
                     return e ? Bt.createElement(ge._8, {
                         display: ge.R.Flex,
                         alignItems: ge.c.Center,
@@ -12306,7 +12308,7 @@ webpackJsonp([95], {
                         label: Object(l.d)("Duration", "VideoManager"),
                         value: e,
                         icon: ge._25.GlyphLength,
-                        "data-test-selector": la
+                        "data-test-selector": da
                     })
                 }, t.prototype.broadcastTypeElement = function() {
                     return Bt.createElement(ge._8, {
@@ -12326,23 +12328,23 @@ webpackJsonp([95], {
                         label: Object(l.d)("Type", "VideoManager.VideoLabel"),
                         value: Object(T.a)(this.props.video.broadcastType),
                         icon: ge._25.NavVideos,
-                        "data-test-selector": da
+                        "data-test-selector": sa
                     }))
                 }, t
             }(Bt.Component),
-            _a = 1024,
-            pa = _a * _a,
-            ha = pa * _a;
+            ma = 1024,
+            _a = ma * ma,
+            pa = _a * ma;
 
-        function fa(e) {
+        function ha(e) {
             return Number(e.toFixed(1))
         }
         n("AGa4");
-        var ga = "video_card_thumbnail_uploading_selector",
-            Ma = "video_card_thumbnail_selector",
-            va = "video_card_thumbnail_overlay_selector",
-            ya = "video_card_thumbnail_overlay_icon_selector",
-            La = function(e) {
+        var fa = "video_card_thumbnail_uploading_selector",
+            ga = "video_card_thumbnail_selector",
+            Ma = "video_card_thumbnail_overlay_selector",
+            va = "video_card_thumbnail_overlay_icon_selector",
+            ya = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -12358,7 +12360,7 @@ webpackJsonp([95], {
                         }
                     }, Bt.createElement(ge._24, {
                         asset: t.overlayIcon,
-                        "data-test-selector": ya
+                        "data-test-selector": va
                     })));
                     var i = xe(this.props.video),
                         o = e.subrow;
@@ -12393,7 +12395,7 @@ webpackJsonp([95], {
                             textAlign: ge._45.Center,
                             "data-a-target": "video-card-thumbnail",
                             className: "video-card-thumbnail__video-state-overlay",
-                            "data-test-selector": va
+                            "data-test-selector": Ma
                         }, n, Bt.createElement(ge.Q, null, t), a)
                     }
                     return r
@@ -12403,7 +12405,7 @@ webpackJsonp([95], {
                         className: "video-card-thumbnail__wrapper"
                     }, Bt.createElement("figure", {
                         className: "video-card-thumbnail",
-                        "data-test-selector": Ma
+                        "data-test-selector": ga
                     }, Bt.createElement(ge.k, {
                         ratio: ge.l.Aspect16x9,
                         align: ge.a.Center
@@ -12415,18 +12417,18 @@ webpackJsonp([95], {
                     if (this.props.videoUpload) return Bt.createElement(ge.Q, {
                         color: ge.K.OverlayAlt,
                         "data-a-target": "video-card-thumbnail-uploading",
-                        "data-test-selector": ga
-                    }, (e = this.props.videoUpload.totalBytesSent, t = this.props.videoUpload.fileSizeBytes, n = this.props.videoUpload.progressPercentage, t >= ha ? Object(l.d)("{progress, number} GB / {total, number} GB ({percentage, number}%)", {
-                        progress: fa(e / ha),
-                        total: fa(t / ha),
+                        "data-test-selector": fa
+                    }, (e = this.props.videoUpload.totalBytesSent, t = this.props.videoUpload.fileSizeBytes, n = this.props.videoUpload.progressPercentage, t >= pa ? Object(l.d)("{progress, number} GB / {total, number} GB ({percentage, number}%)", {
+                        progress: ha(e / pa),
+                        total: ha(t / pa),
                         percentage: n
-                    }, "VideoManager.Uploader") : t >= pa ? Object(l.d)("{progress, number} MB / {total, number} MB ({percentage, number}%)", {
-                        progress: fa(e / pa),
-                        total: fa(t / pa),
+                    }, "VideoManager.Uploader") : t >= _a ? Object(l.d)("{progress, number} MB / {total, number} MB ({percentage, number}%)", {
+                        progress: ha(e / _a),
+                        total: ha(t / _a),
                         percentage: n
-                    }, "VideoManager.Uploader") : t >= _a ? Object(l.d)("{progress, number} KB / {total, number} KB ({percentage, number}%)", {
-                        progress: fa(e / _a),
-                        total: fa(t / _a),
+                    }, "VideoManager.Uploader") : t >= ma ? Object(l.d)("{progress, number} KB / {total, number} KB ({percentage, number}%)", {
+                        progress: ha(e / ma),
+                        total: ha(t / ma),
                         percentage: n
                     }, "VideoManager.Uploader") : Object(l.d)("{progress, number} B / {total, number} B ({percentage, number}%)", {
                         progress: e,
@@ -12436,8 +12438,8 @@ webpackJsonp([95], {
                     var e, t, n
                 }, t
             }(Bt.Component),
-            ba = (n("j4wl"), "test-selector-error"),
-            Da = function(e) {
+            La = (n("j4wl"), "test-selector-error"),
+            ba = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -12451,16 +12453,16 @@ webpackJsonp([95], {
                 return d.__extends(t, e), t.prototype.render = function() {
                     var e = null,
                         t = je(this.props.video, this.props.videoUpload);
-                    return e = t.callToActionButton ? Bt.createElement(ta, {
+                    return e = t.callToActionButton ? Bt.createElement(ea, {
                         displayProps: t,
                         onDeleteVideo: this.onDeleteVideo,
-                        scheduleURL: Object(Rn.d)(this.props.channelName, this.props.video.id),
+                        scheduleURL: Object(Fn.d)(this.props.channelName, this.props.video.id),
                         showModal: this.props.showModal,
                         closeModal: this.props.closeModal,
                         onDeletePremiere: this.onDeletePremiere,
                         dismissImmediatePublishModal: this.props.dismissImmediatePublishModal,
                         publishURL: "/" + this.props.user.login + "/manager/publish/" + this.props.video.id
-                    }) : Bt.createElement(ia, {
+                    }) : Bt.createElement(ra, {
                         video: this.props.video,
                         channelName: this.props.channelName
                     }), Bt.createElement(ge._8, {
@@ -12505,7 +12507,7 @@ webpackJsonp([95], {
                     }))
                 }, t.prototype.renderVideoMetadata = function(e) {
                     var t;
-                    return e.interactableMetaData && (this.props.video && e.callToActionButton && e.callToActionButton.action === L.EditPremiereEvent ? t = Object(Rn.d)(this.props.channelName, this.props.video.id) : e.menu.canEdit && (t = Object(Rn.b)(this.props.channelName, this.props.video.id))), t ? Bt.createElement(ge._6, {
+                    return e.interactableMetaData && (this.props.video && e.callToActionButton && e.callToActionButton.action === L.EditPremiereEvent ? t = Object(Fn.d)(this.props.channelName, this.props.video.id) : e.menu.canEdit && (t = Object(Fn.b)(this.props.channelName, this.props.video.id))), t ? Bt.createElement(ge._6, {
                         linkTo: t,
                         alpha: !0
                     }, this.renderVideoMetadataCard()) : this.renderVideoMetadataCard()
@@ -12530,13 +12532,13 @@ webpackJsonp([95], {
                             return null
                         }(this.props.video, this.props.videoUpload),
                         t = e ? Bt.createElement(ge._8, null, Bt.createElement(ge.Q, {
-                            "data-test-selector": ba,
+                            "data-test-selector": La,
                             bold: !0
                         }, e)) : null;
                     return Bt.createElement(ge.C, {
                         row: !0,
                         "data-video-id": this.props.video.id
-                    }, Bt.createElement(La, {
+                    }, Bt.createElement(ya, {
                         video: this.props.video,
                         videoUpload: this.props.videoUpload
                     }), Bt.createElement(ge.D, null, Bt.createElement(ge._8, {
@@ -12546,7 +12548,7 @@ webpackJsonp([95], {
                     }, Bt.createElement(ge.Q, {
                         type: ge._49.H5,
                         color: ge.K.Alt
-                    }, t, this.props.video.title), Bt.createElement(ma, {
+                    }, t, this.props.video.title), Bt.createElement(ca, {
                         video: this.props.video,
                         subOnlyChannel: this.props.subOnlyChannel
                     }))))
@@ -12555,10 +12557,10 @@ webpackJsonp([95], {
                         flexGrow: 0,
                         flexShrink: 0,
                         position: ge._15.Relative
-                    }, Bt.createElement(Zn, {
+                    }, Bt.createElement(qn, {
                         isRightAligned: !0,
                         icon: ge._25.More
-                    }, Bt.createElement(Bn, {
+                    }, Bt.createElement(Jn, {
                         video: this.props.video,
                         channelName: this.props.channelName,
                         contentKey: p.KEY_ROOT,
@@ -12569,14 +12571,14 @@ webpackJsonp([95], {
                         videoDownloads: this.props.videoDownloads,
                         onWatch: this.props.onWatch,
                         isOwner: this.props.isOwner
-                    }), Bt.createElement(Dn, {
+                    }), Bt.createElement(bn, {
                         inVodcastQueue: this.props.inVodcastQueue,
                         onAddVideoToVodcastQueue: this.props.onAddVideoToVodcastQueue,
                         video: this.props.video,
                         channelName: this.props.channelName,
                         contentKey: p.KEY_ADD_TO,
                         vodcastQueueUnavailable: this.props.vodcastQueueUnavailable
-                    }), Bt.createElement(jn, {
+                    }), Bt.createElement(Cn, {
                         video: this.props.video,
                         channelName: this.props.channelName,
                         contentKey: p.KEY_COLLECTIONS,
@@ -12584,15 +12586,15 @@ webpackJsonp([95], {
                     }))) : null
                 }, t
             }(Bt.Component),
-            Ta = n("8/8b"),
-            ka = n("sW0/"),
-            wa = n("CIox"),
-            Ya = n("F8kA"),
-            Ea = n("VAT8"),
-            Sa = n("N221"),
-            Oa = "appealing-track",
-            Ca = "new-track",
-            ja = function(e) {
+            Da = n("8/8b"),
+            Ta = n("sW0/"),
+            ka = n("CIox"),
+            wa = n("F8kA"),
+            Ya = n("VAT8"),
+            Ea = n("N221"),
+            Sa = "appealing-track",
+            Oa = "new-track",
+            Ca = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.appeals = [], t.getAppealReasons = function() {
@@ -12619,10 +12621,10 @@ webpackJsonp([95], {
                     var e = null,
                         t = null;
                     return this.props.track.track_appeal ? (e = Bt.createElement(ge.Q, {
-                        "data-test-selector": Oa
+                        "data-test-selector": Sa
                     }, this.props.track.track_appeal.reason), t = Bt.createElement(ge.Q, null)) : (e = Bt.createElement(ge._30, {
                         onChange: this.onChange,
-                        "data-test-selector": Ca
+                        "data-test-selector": Oa
                     }, this.getAppealReasons()), t = Bt.createElement(ge._24, {
                         asset: ge._25.Check,
                         type: 0 !== this.state.selectedIndex ? ge._26.Success : ge._26.Placeholder,
@@ -12662,9 +12664,9 @@ webpackJsonp([95], {
                     }, e)))
                 }, t
             }(Bt.PureComponent),
-            xa = "appeal",
-            Pa = "track-row",
-            Ha = function(e) {
+            ja = "appeal",
+            xa = "track-row",
+            Pa = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onAppealRowUpdate = function(e, n) {
@@ -12696,11 +12698,11 @@ webpackJsonp([95], {
                 }, t.prototype.renderTracks = function(e) {
                     var t = this,
                         n = e.map(function(e) {
-                            return Bt.createElement(ja, {
+                            return Bt.createElement(Ca, {
                                 key: e.id,
                                 track: e,
                                 onUpdateAppealReason: t.onAppealRowUpdate,
-                                "data-test-selector": Pa
+                                "data-test-selector": xa
                             })
                         });
                     return Bt.createElement(ge._8, null, n)
@@ -12803,7 +12805,7 @@ webpackJsonp([95], {
                         }
                     }, Bt.createElement(ge.Q, {
                         color: ge.K.Alt
-                    }, "Appeal Reason")))), Bt.createElement(ge._35, null, Bt.createElement(Sa.b, null, Bt.createElement(ge._8, null, this.renderTracks(e)))), Bt.createElement(ge._35, {
+                    }, "Appeal Reason")))), Bt.createElement(ge._35, null, Bt.createElement(Ea.b, null, Bt.createElement(ge._8, null, this.renderTracks(e)))), Bt.createElement(ge._35, {
                         display: ge.R.Flex,
                         padding: {
                             top: 2,
@@ -12812,15 +12814,15 @@ webpackJsonp([95], {
                         borderTop: !0,
                         justifyContent: ge._7.Center
                     }, Bt.createElement(ge.v, {
-                        "data-test-selector": xa,
+                        "data-test-selector": ja,
                         onClick: this.onClick
                     }, Object(l.d)("Appeal Selected", "VideoManagerAppealMutedAudio"))))
                 }, t
             }(Bt.PureComponent),
-            Aa = "BACK_TEST_SELECTOR",
-            Ia = "SUBMIT_TEST_SELECTOR",
-            Va = "TRACK_TEST_SELECTOR",
-            Fa = function(e) {
+            Ha = "BACK_TEST_SELECTOR",
+            Aa = "SUBMIT_TEST_SELECTOR",
+            Ia = "TRACK_TEST_SELECTOR",
+            Va = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSubmit = function() {
@@ -12893,7 +12895,7 @@ webpackJsonp([95], {
                         return Bt.createElement(ge._35, {
                             key: e.id,
                             padding: 1,
-                            "data-test-selector": Va
+                            "data-test-selector": Ia
                         }, Bt.createElement(ge.Y, {
                             gutterSize: ge.Z.Medium
                         }, Bt.createElement(ge.L, {
@@ -13025,24 +13027,24 @@ webpackJsonp([95], {
                     }, Bt.createElement(ge.v, {
                         type: ge.B.Text,
                         onClick: this.props.onBack,
-                        "data-test-selector": Aa
+                        "data-test-selector": Ha
                     }, Object(l.d)("Back", "VideoManagerAppealMutedAudio"))), Bt.createElement(ge._35, {
                         margin: {
                             left: 1
                         }
                     }, Bt.createElement(ge.v, {
                         onClick: this.onSubmit,
-                        "data-test-selector": Ia
+                        "data-test-selector": Aa
                     }, Object(l.d)("Submit", "VideoManagerAppealMutedAudio")))), this.renderError())
                 }, t
             }(Bt.PureComponent),
-            Ra = (n("6kfM"), "CANCEL_TEST_SELECTOR"),
-            Na = "MODAL_ANIMATION_TEST_SELECTOR",
-            Wa = "LIST_MUTED_AUDIO_TRACKS_TEST_SELECTOR",
-            Ua = "SUBMIT_APPEAL_TEST_SELECTOR",
-            za = "no-track",
-            Ga = 15e3,
-            Ja = function(e) {
+            Fa = (n("6kfM"), "CANCEL_TEST_SELECTOR"),
+            Ra = "MODAL_ANIMATION_TEST_SELECTOR",
+            Na = "LIST_MUTED_AUDIO_TRACKS_TEST_SELECTOR",
+            Wa = "SUBMIT_APPEAL_TEST_SELECTOR",
+            Ua = "no-track",
+            za = 15e3,
+            Ga = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -13054,7 +13056,7 @@ webpackJsonp([95], {
                         },
                         tracksForAppeal: []
                     }, t.timeoutID = null, t.fetchAudioTracks = function() {
-                        t.props.fetchMutedTracks(t.props.videoID), t.timeoutID = setTimeout(t.fetchAudioTracks, Ga)
+                        t.props.fetchMutedTracks(t.props.videoID), t.timeoutID = setTimeout(t.fetchAudioTracks, za)
                     }, t.onAppealSelected = function(e) {
                         t.setState({
                             tracksForAppeal: e
@@ -13080,17 +13082,17 @@ webpackJsonp([95], {
                     this.timeoutID && clearTimeout(this.timeoutID), this.props.clearMutedTracks()
                 }, t.prototype.renderFields = function() {
                     var e = null;
-                    return this.props.apiData.mutedTracks.data && 0 !== this.props.apiData.mutedTracks.data.length ? (e = this.state.tracksForAppeal && 0 !== this.state.tracksForAppeal.length ? Bt.createElement(Fa, d.__assign({}, this.props, {
+                    return this.props.apiData.mutedTracks.data && 0 !== this.props.apiData.mutedTracks.data.length ? (e = this.state.tracksForAppeal && 0 !== this.state.tracksForAppeal.length ? Bt.createElement(Va, d.__assign({}, this.props, {
                         error: this.props.apiData.submitAppeal.error,
                         tracksForAppeal: this.state.tracksForAppeal,
                         onBack: this.onBack,
                         onExit: this.onClose,
-                        "data-test-selector": Ua
-                    })) : Bt.createElement(Ha, {
+                        "data-test-selector": Wa
+                    })) : Bt.createElement(Pa, {
                         videoID: this.props.videoID,
                         mutedTracks: this.props.apiData.mutedTracks,
                         onAppealSelected: this.onAppealSelected,
-                        "data-test-selector": Wa
+                        "data-test-selector": Na
                     }), Bt.createElement(ge.e, {
                         type: ge.j.FadeIn,
                         delay: ge.f.Medium,
@@ -13101,7 +13103,7 @@ webpackJsonp([95], {
                     }) : Bt.createElement(ge._35, {
                         padding: 2,
                         borderTop: !0,
-                        "data-test-selector": za
+                        "data-test-selector": Ua
                     }, Bt.createElement(ge._8, null, Bt.createElement(ge.Q, {
                         fontSize: ge.V.Size4
                     }, Object(l.d)("Error: Unable to find muted audio details", "VideoManagerAppealMutedAudio"))), Bt.createElement(ge.v, {
@@ -13112,7 +13114,7 @@ webpackJsonp([95], {
                         className: "appeal-muted-audio-modal",
                         position: ge._15.Fixed
                     }, Bt.createElement(ge.e, d.__assign({}, this.state.animationProps, {
-                        "data-test-selector": Na
+                        "data-test-selector": Ra
                     }), Bt.createElement(ge._35, {
                         className: "appeal-muted-audio-modal__content",
                         background: ge.n.Base,
@@ -13121,7 +13123,7 @@ webpackJsonp([95], {
                         fullWidth: !0,
                         fullHeight: !0,
                         padding: 1
-                    }, Bt.createElement(qn.a, {
+                    }, Bt.createElement(Qn.a, {
                         onClickOut: this.onClose
                     }, Bt.createElement(ge._35, {
                         display: ge.R.Flex
@@ -13136,16 +13138,16 @@ webpackJsonp([95], {
                     }, Bt.createElement(ge.v, {
                         type: ge.B.Text,
                         onClick: this.onClose,
-                        "data-test-selector": Ra
+                        "data-test-selector": Fa
                     }, Bt.createElement(ge._24, {
                         asset: ge._25.Close,
                         type: ge._26.Alt2
-                    })))), Bt.createElement(Qt.b, null, Bt.createElement(ge._8, null, this.renderFields())))))), Bt.createElement(Xn.a, {
+                    })))), Bt.createElement(Qt.b, null, Bt.createElement(ge._8, null, this.renderFields())))))), Bt.createElement(Zn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(Bt.PureComponent);
-        var Ba = Object(a.b)(function(e) {
+        var Ja = Object(a.b)(function(e) {
             return {
                 isLoggedIn: Object(o.d)(e),
                 apiData: {
@@ -13159,9 +13161,9 @@ webpackJsonp([95], {
                 submitAppeal: ht,
                 clearMutedTracks: ft
             }, e)
-        })(Ja);
+        })(Ga);
 
-        function Ka(e, t, n, a) {
+        function Ba(e, t, n, a) {
             var r = this;
             return void 0 === n && (n = void 0), void 0 === a && (a = void 0), ze(function(i) {
                 return d.__awaiter(r, void 0, void 0, function() {
@@ -13234,13 +13236,13 @@ webpackJsonp([95], {
                 })
             })
         }
-        var Qa, qa = n("TeXj"),
-            Za = n("jcM9"),
-            Xa = n("d0Y8");
+        var Ka, Qa = n("TeXj"),
+            qa = n("jcM9"),
+            Za = n("d0Y8");
         ! function(e) {
             e.EveryoneOption = "everyone", e.SubOnlyOption = "sub-only"
-        }(Qa || (Qa = {}));
-        var $a = function(e) {
+        }(Ka || (Ka = {}));
+        var Xa = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onChange = function(e) {
@@ -13258,21 +13260,21 @@ webpackJsonp([95], {
                         key: "everyone",
                         value: p.RestrictionType.Everyone,
                         selected: this.props.defaultValue.restrictionType === p.RestrictionType.Everyone,
-                        "data-test-selector": Qa.EveryoneOption
+                        "data-test-selector": Ka.EveryoneOption
                     }, Object(l.d)("Everyone", "RestrictionSelect")), Bt.createElement("option", {
                         key: p.RestrictionType.SubOnly,
                         value: p.RestrictionType.SubOnly,
                         selected: this.props.defaultValue.restrictionType === p.RestrictionType.SubOnly,
-                        "data-test-selector": Qa.SubOnlyOption
+                        "data-test-selector": Ka.SubOnlyOption
                     }, Object(l.d)("$29.99 All-Access Pass purchaser only", "RestrictionSelect"))))
                 }, t
             }(Bt.Component),
-            er = n("eoJF"),
-            tr = n.n(er),
-            nr = n("XXg/"),
-            ar = (n("Ofgn"), 1280),
-            rr = 720,
-            ir = function(e) {
+            $a = n("eoJF"),
+            er = n.n($a),
+            tr = n("XXg/"),
+            nr = (n("Ofgn"), 1280),
+            ar = 720,
+            rr = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = l.o.logger.withCategory("video-manager"), n.imageHeight = 0, n.imageWidth = 0, n.onUpdateCurrentCrop = function(e, t) {
@@ -13304,7 +13306,7 @@ webpackJsonp([95], {
                         })
                     }, n.onFinishCropping = function() {
                         n.props.onFinishCropping({
-                            previewSrc: Object(nr.a)(n.state.previewSrc, n.getScaledValue(n.state.percentCrop.x, n.imageWidth), n.getScaledValue(n.state.percentCrop.y, n.imageHeight), n.getScaledValue(n.state.percentCrop.width, n.imageWidth), n.getScaledValue(n.state.percentCrop.height, n.imageHeight), ar, rr),
+                            previewSrc: Object(tr.a)(n.state.previewSrc, n.getScaledValue(n.state.percentCrop.x, n.imageWidth), n.getScaledValue(n.state.percentCrop.y, n.imageHeight), n.getScaledValue(n.state.percentCrop.width, n.imageWidth), n.getScaledValue(n.state.percentCrop.height, n.imageHeight), nr, ar),
                             uploadParams: {
                                 file: n.props.file,
                                 cropX: n.getScaledValue(n.state.percentCrop.x, n.imageWidth),
@@ -13346,7 +13348,7 @@ webpackJsonp([95], {
                     });
                     return this.state.previewSrc ? Bt.createElement("div", null, Bt.createElement("figure", {
                         className: "thumbnail-selector-cropper__thumbnail-cropper"
-                    }, Bt.createElement(tr.a, {
+                    }, Bt.createElement(er.a, {
                         src: this.state.previewSrc,
                         crop: e,
                         onComplete: this.onUpdateCurrentCrop,
@@ -13362,8 +13364,8 @@ webpackJsonp([95], {
                     }, Object(l.d)("Finish Cropping", "VideoManagerThumbnailSelectorCropper")))) : null
                 }, t
             }(Bt.Component),
-            or = (n("0NhW"), "thumbnail-selector-cropper__thumbnail-select-image"),
-            sr = function(e) {
+            ir = (n("0NhW"), "thumbnail-selector-cropper__thumbnail-select-image"),
+            or = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleOnClick = function() {
@@ -13390,10 +13392,10 @@ webpackJsonp([95], {
                             size: ge.x.Small
                         })))
                     }
-                    var n, a = ((n = {})[or] = !0, n["thumbnail-selector-cropper__thumbnail-select-image--selected"] = this.props.isSelected, n["thumbnail-selector-cropper__custom-thumbnail"] = this.props.isCustomThumbnail, n),
+                    var n, a = ((n = {})[ir] = !0, n["thumbnail-selector-cropper__thumbnail-select-image--selected"] = this.props.isSelected, n["thumbnail-selector-cropper__custom-thumbnail"] = this.props.isCustomThumbnail, n),
                         r = "";
                     return r = this.props.isSelected ? Object(l.d)("Currently selected video thumbnail", "VideoManagerThumbnailSelectorCropper") : Object(l.d)("Video thumbnail option", "VideoManagerThumbnailSelectorCropper"), Bt.createElement("div", {
-                        className: Kn(a),
+                        className: Bn(a),
                         onClick: this.handleOnClick
                     }, Bt.createElement("figure", null, Bt.createElement(ge.k, {
                         ratio: ge.l.Aspect16x9
@@ -13403,7 +13405,7 @@ webpackJsonp([95], {
                     }))), e)
                 }, t
             }(Bt.Component),
-            dr = (n("8xgK"), function(e) {
+            sr = (n("8xgK"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -13437,20 +13439,20 @@ webpackJsonp([95], {
                     }))))
                 }, t
             }(Bt.Component)),
-            lr = 4;
+            dr = 4;
 
-        function ur(e, t) {
+        function lr(e, t) {
             return e.find(function(e) {
                 return e.url === t
             }) ? t : e[0] ? e[0].url : ""
         }
 
-        function cr(e, t, n, a) {
+        function ur(e, t, n, a) {
             for (var r = [fe.f, fe.e].map(function(t) {
                     return e.filter(function(e) {
                         return e.type === t
                     })
-                }), i = r[0], o = r[1]; i.length > lr - 1;) i.pop();
+                }), i = r[0], o = r[1]; i.length > dr - 1;) i.pop();
             var s = i.slice();
             if (a) s.push({
                 url: a,
@@ -13465,14 +13467,14 @@ webpackJsonp([95], {
             return s
         }
         n("rjL0");
-        var mr = {
+        var cr = {
                 thumbnailErrorSelector: "thumbnail-error-selector"
             },
-            _r = function(e) {
+            mr = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderWhenCropping = function(e) {
-                        return Bt.createElement(ir, {
+                        return Bt.createElement(rr, {
                             file: e,
                             onFinishCropping: n.onFinishCropping,
                             onFailedReadFile: n.onFailedReadFile
@@ -13494,9 +13496,9 @@ webpackJsonp([95], {
                             thumbnailTypeError: !0
                         }))
                     }, n.renderWhenSelecting = function() {
-                        var e = cr(n.props.video.thumbnails, n.props.thumbnailURLToDelete, n.props.video.preview, n.state.newCustomThumbnailPreviewSrc),
+                        var e = ur(n.props.video.thumbnails, n.props.thumbnailURLToDelete, n.props.video.preview, n.state.newCustomThumbnailPreviewSrc),
                             t = e.map(function(e, t) {
-                                return Bt.createElement(sr, {
+                                return Bt.createElement(or, {
                                     key: "thumbnail-row-" + t,
                                     title: n.props.video.title,
                                     thumbnailSrc: e.url,
@@ -13508,7 +13510,7 @@ webpackJsonp([95], {
                             });
                         void 0 === e.find(function(e) {
                             return e.type === p.THUMBNAIL_TYPE_CUSTOM
-                        }) && t.push(Bt.createElement(dr, {
+                        }) && t.push(Bt.createElement(sr, {
                             key: "thumbnail-row-b",
                             onSelectedFile: n.onFileSelected
                         }));
@@ -13537,11 +13539,11 @@ webpackJsonp([95], {
                                 width: 24,
                                 height: 24
                             })), Bt.createElement(ge.Q, {
-                                "data-test-selector": mr.thumbnailErrorSelector
+                                "data-test-selector": cr.thumbnailErrorSelector
                             }, n.state.thumbnailTypeError ? i : n.props.error))
                         }
                         return Bt.createElement("div", {
-                            className: Kn(a)
+                            className: Bn(a)
                         }, r, Bt.createElement("figure", {
                             className: "thumbnail-selector-cropper__thumbnail"
                         }, Bt.createElement(ge._35, {
@@ -13567,12 +13569,12 @@ webpackJsonp([95], {
                             fontSize: ge.V.Size7
                         }, Object(l.d)("Max thumbnail size: 1280 x 720px", "VideoManagerThumbnailSelectorCropper"))))
                     }, n.onDeleteCustomThumbnail = function(e) {
-                        var t = cr(n.props.video.thumbnails, e, n.props.video.preview, void 0);
+                        var t = ur(n.props.video.thumbnails, e, n.props.video.preview, void 0);
                         e === n.state.newCustomThumbnailPreviewSrc ? n.setState({
                             newCustomThumbnailPreviewSrc: ""
                         }, function() {
-                            n.props.onNewCustomThumbnailChange(void 0), n.props.onSelectedThumbnailChange(ur(t, n.props.video.preview))
-                        }) : (n.props.onThumbnailDelete(e), n.props.onSelectedThumbnailChange(ur(t, n.props.video.preview)))
+                            n.props.onNewCustomThumbnailChange(void 0), n.props.onSelectedThumbnailChange(lr(t, n.props.video.preview))
+                        }) : (n.props.onThumbnailDelete(e), n.props.onSelectedThumbnailChange(lr(t, n.props.video.preview)))
                     }, n.state = {
                         selectedFile: null,
                         newCustomThumbnailPreviewSrc: void 0,
@@ -13583,12 +13585,12 @@ webpackJsonp([95], {
                     return this.state.selectedFile ? this.renderWhenCropping(this.state.selectedFile) : this.renderWhenSelecting()
                 }, t
             }(Bt.Component),
-            pr = n("2hJ3"),
-            hr = function(e) {
+            _r = n("2hJ3"),
+            pr = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCopyToClipboard = function() {
-                        Object(pr.a)(n.props.url), n.setState({
+                        Object(_r.a)(n.props.url), n.setState({
                             isCopied: !0
                         })
                     }, n.state = {
@@ -13615,7 +13617,7 @@ webpackJsonp([95], {
                     }, e))))
                 }, t
             }(Bt.PureComponent),
-            fr = function(e) {
+            hr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getVideoFields = function(e) {
@@ -13650,7 +13652,7 @@ webpackJsonp([95], {
                     }, t
                 }
                 return d.__extends(t, e), t.prototype.render = function() {
-                    var e = Bt.createElement(hr, {
+                    var e = Bt.createElement(pr, {
                         url: this.props.video.url
                     });
                     return this.props.video.broadcastType && this.props.video.broadcastType.toLowerCase() === u.a.PremiereUpload.toLowerCase() && (e = null), Bt.createElement(ge.Y, {
@@ -13664,7 +13666,7 @@ webpackJsonp([95], {
                         margin: {
                             bottom: 2
                         }
-                    }, Bt.createElement(_r, {
+                    }, Bt.createElement(mr, {
                         video: this.props.video,
                         thumbnailURLToDelete: this.props.thumbnailURLToDelete,
                         onNewCustomThumbnailChange: this.props.onNewCustomThumbnailChange,
@@ -13684,7 +13686,7 @@ webpackJsonp([95], {
                 }, t.prototype.renderVideoFieldEditor = function() {
                     var e = this.props.video,
                         t = this.getVideoFields(e),
-                        n = Bt.createElement(Xa.VideoFieldEditor, {
+                        n = Bt.createElement(Za.VideoFieldEditor, {
                             disabled: this.props.saving,
                             onChange: this.onVideoFieldChangeHandler,
                             titleError: this.props.titleError ? this.props.titleError : void 0,
@@ -13695,14 +13697,14 @@ webpackJsonp([95], {
                         margin: {
                             top: 2
                         }
-                    }, Bt.createElement($a, {
+                    }, Bt.createElement(Xa, {
                         disabled: this.props.saving,
                         defaultValue: this.props.video.restriction,
                         onChange: this.onRestrictionChangeHandler
                     }))), Bt.createElement(ge._8, null, n, a)
                 }, t
             }(Bt.Component),
-            gr = function() {
+            fr = function() {
                 return Bt.createElement(ge._8, null, Bt.createElement(ge.Y, {
                     gutterSize: ge.Z.Large
                 }, Bt.createElement(ge.L, {
@@ -13757,17 +13759,17 @@ webpackJsonp([95], {
                     lineCount: 6
                 }))))
             },
-            Mr = (n("mtNH"), "CANCEL_TEST_SELECTOR"),
-            vr = "SAVE_TEST_SELECTOR",
-            yr = "MODAL_ANIMATION_TEST_SELECTOR",
-            Lr = "SAVE_ERROR_SELECTOR",
-            br = "watch-selector",
-            Dr = "highlight-selector",
-            Tr = "download-selector",
-            kr = "add-to-selector",
-            wr = "download",
-            Yr = "preparing",
-            Er = function(e) {
+            gr = (n("mtNH"), "CANCEL_TEST_SELECTOR"),
+            Mr = "SAVE_TEST_SELECTOR",
+            vr = "MODAL_ANIMATION_TEST_SELECTOR",
+            yr = "SAVE_ERROR_SELECTOR",
+            Lr = "watch-selector",
+            br = "highlight-selector",
+            Dr = "download-selector",
+            Tr = "add-to-selector",
+            kr = "download",
+            wr = "preparing",
+            Yr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -13823,7 +13825,7 @@ webpackJsonp([95], {
                             return d.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return this.props.apiData.video ? (Pn(this.props.apiData.video.id, this.props.apiData.video.broadcastType), [4, this.props.onDownload(this.props.apiData.video.id, this.props.notificationService)]) : [2];
+                                        return this.props.apiData.video ? (xn(this.props.apiData.video.id, this.props.apiData.video.broadcastType), [4, this.props.onDownload(this.props.apiData.video.id, this.props.notificationService)]) : [2];
                                     case 1:
                                         return e.sent(), [2]
                                 }
@@ -13891,8 +13893,8 @@ webpackJsonp([95], {
                         fontSize: ge.V.Size4
                     }, i.message));
                     else if (!this.props.apiData.loading && this.state.videoEdits && this.props.apiData.video) {
-                        var o = l.b.get("twilight_owl_sub_only_vod", !1) && Object(qa.c)(this.props.user.id, this.props.sessionUser);
-                        a = Bt.createElement(fr, {
+                        var o = l.b.get("twilight_owl_sub_only_vod", !1) && Object(Qa.c)(this.props.user.id, this.props.sessionUser);
+                        a = Bt.createElement(hr, {
                             video: (e = this.props.apiData.video, t = this.state.videoEdits, n = null, t.game && (n = {
                                 __typename: "Game",
                                 id: "",
@@ -13918,7 +13920,7 @@ webpackJsonp([95], {
                             titleError: this.state.titleError,
                             showRestrictions: o
                         })
-                    } else a = Bt.createElement(gr, null);
+                    } else a = Bt.createElement(fr, null);
                     return Bt.createElement(ge.e, {
                         type: ge.j.FadeIn,
                         delay: ge.f.Medium,
@@ -13938,13 +13940,13 @@ webpackJsonp([95], {
                         display: ge.R.Flex,
                         alignItems: ge.c.Center
                     }, Bt.createElement(ge.Q, {
-                        "data-test-selector": Lr,
+                        "data-test-selector": yr,
                         color: ge.K.Error
                     }, a.message))), Bt.createElement(ge._8, {
                         className: "edit-video-properties-modal",
                         zIndex: ge._62.Below
                     }, Bt.createElement(ge.e, d.__assign({}, this.state.animationProps, {
-                        "data-test-selector": yr
+                        "data-test-selector": vr
                     }), Bt.createElement(ge._35, {
                         className: "edit-video-properties-modal__content",
                         background: ge.n.Base
@@ -13952,7 +13954,7 @@ webpackJsonp([95], {
                         fullWidth: !0,
                         fullHeight: !0,
                         padding: 4
-                    }, Bt.createElement(qn.a, {
+                    }, Bt.createElement(Qn.a, {
                         onClickOut: this.onCancel
                     }, Bt.createElement(ge._35, {
                         display: ge.R.Flex,
@@ -13976,12 +13978,12 @@ webpackJsonp([95], {
                     }, Bt.createElement(ge.v, {
                         type: ge.B.Text,
                         onClick: this.onCancel,
-                        "data-test-selector": Mr
+                        "data-test-selector": gr
                     }, Object(l.d)("Cancel", "VideoManagerEdit")), " ", Bt.createElement(ge.v, {
                         onClick: this.onSaveVideo,
                         disabled: e || t,
                         state: e ? ge.A.Loading : ge.A.Default,
-                        "data-test-selector": vr
+                        "data-test-selector": Mr
                     }, this.props.publishFlow ? Object(l.d)("Publish", "VideoManagerEdit") : Object(l.d)("Save Changes", "VideoManagerEdit")))), Bt.createElement(Qt.b, null, Bt.createElement(ge._8, null, this.renderFields())))))))
                 }, t.prototype.renderVideoActions = function() {
                     var e = this.props.apiData.video;
@@ -13999,8 +14001,8 @@ webpackJsonp([95], {
                             right: .5
                         }
                     }, Bt.createElement(ge.v, {
-                        "data-test-selector": Dr,
-                        linkTo: Object(Rn.c)(this.props.channelName, e.id),
+                        "data-test-selector": br,
+                        linkTo: Object(Fn.c)(this.props.channelName, e.id),
                         type: ge.B.Text,
                         disabled: this.props.saving,
                         targetBlank: !0
@@ -14008,12 +14010,12 @@ webpackJsonp([95], {
                         padding: {
                             right: .5
                         }
-                    }, Bt.createElement(Zn, {
-                        "data-test-selector": kr,
+                    }, Bt.createElement(qn, {
+                        "data-test-selector": Tr,
                         icon: ge._25.Plus,
                         isRightAligned: !1,
                         buttonText: Object(l.d)("Add to", "VideoManagerEditCard")
-                    }, Bt.createElement(Dn, {
+                    }, Bt.createElement(bn, {
                         vodcastQueueUnavailable: this.props.vodcastQueueUnavailable,
                         onAddVideoToVodcastQueue: this.onAddVideoToVodcastQueue,
                         video: e,
@@ -14021,7 +14023,7 @@ webpackJsonp([95], {
                         contentKey: p.KEY_ADD_TO,
                         hasMenuNavigationHeader: !0,
                         inVodcastQueue: this.props.isInVodcastQueue(this.props.videoID)
-                    }), Bt.createElement(jn, {
+                    }), Bt.createElement(Cn, {
                         video: e,
                         channelName: this.props.channelName,
                         contentKey: p.KEY_COLLECTIONS,
@@ -14030,7 +14032,7 @@ webpackJsonp([95], {
                         padding: {
                             right: .5
                         }
-                    }, Bt.createElement(Za.a, {
+                    }, Bt.createElement(qa.a, {
                         balloonDirection: ge.r.Bottom,
                         buttonType: ge.B.Text,
                         content: {
@@ -14044,7 +14046,7 @@ webpackJsonp([95], {
                             right: .5
                         }
                     }, Bt.createElement(ge.v, {
-                        "data-test-selector": br,
+                        "data-test-selector": Lr,
                         onClick: this.onWatch,
                         icon: ge._25.Play,
                         type: ge.B.Text,
@@ -14058,7 +14060,7 @@ webpackJsonp([95], {
                         display: ge.R.Flex,
                         alignItems: ge.c.Center,
                         color: ge.K.Alt2,
-                        "data-test-selector": Yr
+                        "data-test-selector": wr
                     }, Bt.createElement(ge._8, {
                         display: ge.R.InlineFlex,
                         padding: {
@@ -14070,9 +14072,9 @@ webpackJsonp([95], {
                         padding: {
                             right: .5
                         },
-                        "data-test-selector": wr
+                        "data-test-selector": kr
                     }, Bt.createElement(ge.v, {
-                        "data-test-selector": Tr,
+                        "data-test-selector": Dr,
                         onClick: this.onDownload,
                         icon: ge._25.Download,
                         type: ge.B.Text,
@@ -14093,8 +14095,8 @@ webpackJsonp([95], {
                     return confirm(Object(l.d)("Are you sure you want to stop editing? All unsaved changes will be lost.", "VideoManagerEdit"))
                 }, t
             }(Bt.Component),
-            Sr = Object(rn.d)("EditVideoPropertiesModalPresentation")(Er);
-        var Or = Object(a.b)(function(e) {
+            Er = Object(rn.d)("EditVideoPropertiesModalPresentation")(Yr);
+        var Sr = Object(a.b)(function(e) {
                 return {
                     isLoggedIn: Object(o.d)(e),
                     saving: e.videoManager.editingVideo.saving,
@@ -14114,16 +14116,16 @@ webpackJsonp([95], {
                     clearEditingVideo: st,
                     changeChannel: lt,
                     fetchVideoData: Nt,
-                    saveVideoAndThumbnails: Ka,
+                    saveVideoAndThumbnails: Ba,
                     addVideoToVodcastQueue: yt,
                     clearEditModalErrors: dt,
                     downloadVideo: Dt,
                     immediatePublish: vt
                 }, e)
-            })(Sr),
-            Cr = n("W3SG");
+            })(Er),
+            Or = n("W3SG");
 
-        function jr() {
+        function Cr() {
             return {
                 type: At
             }
@@ -14161,20 +14163,20 @@ webpackJsonp([95], {
                     return e
             }
         });
-        var xr, Pr = n("wuJz"),
-            Hr = n("XN1B"),
-            Ar = n("cyXw"),
-            Ir = n("kcRx"),
-            Vr = n("P7im"),
-            Fr = n("droQ"),
-            Rr = n("y1dp"),
-            Nr = n("W3Pa"),
-            Wr = n("p0Ym");
+        var jr, xr = n("wuJz"),
+            Pr = n("XN1B"),
+            Hr = n("cyXw"),
+            Ar = n("kcRx"),
+            Ir = n("P7im"),
+            Vr = n("droQ"),
+            Fr = n("y1dp"),
+            Rr = n("W3Pa"),
+            Nr = n("p0Ym");
         n("6z1A");
         ! function(e) {
             e.EditDescriptionField = "EDIT_DESCRIPTION_FIELD", e.CancelTestSelector = "CANCEL_TEST_SELECTOR", e.SaveTestSelector = "SAVE_TEST_SELECTOR", e.ModalAnimationTestSelector = "MODAL_ANIMATION_TEST_SELECTOR", e.StartDateFields = "START_DATE_FIELDS", e.EndDateFields = "END_DATE_FIELDS", e.SubmitErrorSelector = "SUBMIT_ERROR_SELECTOR"
-        }(xr || (xr = {}));
-        var Ur = function(e) {
+        }(jr || (jr = {}));
+        var Wr = function(e) {
                 function t(n) {
                     var a = e.call(this, n) || this;
                     return a.state = {
@@ -14188,9 +14190,9 @@ webpackJsonp([95], {
                         isDirty: !1,
                         startNow: !1,
                         isEventUrlCopied: !1,
-                        validator: new Rr.b(t.instantiateEventEdits())
+                        validator: new Fr.b(t.instantiateEventEdits())
                     }, a.copyEventUrlToClipboard = function() {
-                        Object(pr.a)(a.eventUrlInput.value), a.setState({
+                        Object(_r.a)(a.eventUrlInput.value), a.setState({
                             isEventUrlCopied: !0
                         })
                     }, a.highlightEventUrlText = function(e) {
@@ -14232,7 +14234,7 @@ webpackJsonp([95], {
                         var t = new Date;
                         a.setState(function(n) {
                             var a = n.startNow;
-                            return e.startTime && e.startTime !== n.eventEdits.startTime && (a = Object(Pr.isValid)(e.startTime) && Object(Pr.isWithinRange)(e.startTime, Object(Pr.subMinutes)(t, 1), Object(Pr.addMinutes)(t, 1))), {
+                            return e.startTime && e.startTime !== n.eventEdits.startTime && (a = Object(xr.isValid)(e.startTime) && Object(xr.isWithinRange)(e.startTime, Object(xr.subMinutes)(t, 1), Object(xr.addMinutes)(t, 1))), {
                                 isDirty: !0,
                                 startNow: a,
                                 eventEdits: d.__assign({}, n.eventEdits, e)
@@ -14246,15 +14248,15 @@ webpackJsonp([95], {
                             return d.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return (e = new Rr.b(this.state.eventEdits)).addValidatorForField(Pr.isValid, Rr.a.StartTime), this.setState({
+                                        return (e = new Fr.b(this.state.eventEdits)).addValidatorForField(xr.isValid, Fr.a.StartTime), this.setState({
                                             validator: e
                                         }), e.editsAreValid() ? (t = this.state.eventEdits, this.state.startNow && (t = d.__assign({}, t, {
-                                            startTime: Object(Pr.addMinutes)(new Date, 1)
-                                        })), this.props.clearErrors(), this.props.event || !this.props.onCreate ? [3, 2] : [4, this.props.onCreate(Object(Cr.b)(t, this.props.user.id, this.props.event), this.props.video.id)]) : [2];
+                                            startTime: Object(xr.addMinutes)(new Date, 1)
+                                        })), this.props.clearErrors(), this.props.event || !this.props.onCreate ? [3, 2] : [4, this.props.onCreate(Object(Or.b)(t, this.props.user.id, this.props.event), this.props.video.id)]) : [2];
                                     case 1:
                                         return n.sent(), [3, 4];
                                     case 2:
-                                        return this.props.onUpdate && t ? [4, this.props.onUpdate(Object(Cr.b)(t, this.props.user.id, this.props.event), this.props.video.id)] : [3, 4];
+                                        return this.props.onUpdate && t ? [4, this.props.onUpdate(Object(Or.b)(t, this.props.user.id, this.props.event), this.props.video.id)] : [3, 4];
                                     case 3:
                                         n.sent(), n.label = 4;
                                     case 4:
@@ -14273,10 +14275,10 @@ webpackJsonp([95], {
                         })
                     }, a.urlTemplateToUrlString = function(e) {
                         if (e) {
-                            var t = e.replace("{width}", Ar.c).replace("{height}", Ar.b);
+                            var t = e.replace("{width}", Hr.c).replace("{height}", Hr.b);
                             return new URL(t)
                         }
-                    }, n.event ? a.state.eventEdits = Object(Cr.a)(n.event) : n.initialValues && n.initialValues.game && (a.state.eventEdits.gameID = n.initialValues.game.objectID, a.state.eventEdits.gameName = n.initialValues.game.name), a
+                    }, n.event ? a.state.eventEdits = Object(Or.a)(n.event) : n.initialValues && n.initialValues.game && (a.state.eventEdits.gameID = n.initialValues.game.objectID, a.state.eventEdits.gameName = n.initialValues.game.name), a
                 }
                 return d.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -14285,10 +14287,10 @@ webpackJsonp([95], {
                         t = this.props.errors.find(function(e) {
                             return e.origin === jt.Submit
                         });
-                    return t && (e = zr(t.message)), Bt.createElement(ge._8, {
+                    return t && (e = Ur(t.message)), Bt.createElement(ge._8, {
                         className: "event-modal"
                     }, Bt.createElement(ge.e, d.__assign({}, this.state.animationProps, {
-                        "data-test-selector": xr.ModalAnimationTestSelector
+                        "data-test-selector": jr.ModalAnimationTestSelector
                     }), Bt.createElement(ge._35, {
                         className: "event-modal__content",
                         background: ge.n.Base
@@ -14296,7 +14298,7 @@ webpackJsonp([95], {
                         fullWidth: !0,
                         fullHeight: !0,
                         padding: 4
-                    }, Bt.createElement(qn.a, {
+                    }, Bt.createElement(Qn.a, {
                         onClickOut: this.onCancel
                     }, Bt.createElement(ge._35, {
                         display: ge.R.Flex,
@@ -14321,10 +14323,10 @@ webpackJsonp([95], {
                     }, Bt.createElement(ge.v, {
                         type: ge.B.Text,
                         onClick: this.onCancel,
-                        "data-test-selector": xr.CancelTestSelector
+                        "data-test-selector": jr.CancelTestSelector
                     }, Object(l.d)("Cancel", "EventModal")), " ", Bt.createElement(ge.v, {
                         onClick: this.onConfirm,
-                        "data-test-selector": xr.SaveTestSelector,
+                        "data-test-selector": jr.SaveTestSelector,
                         "data-a-target": "save-button"
                     }, Object(l.d)("Save", "EventModal")))), Bt.createElement(Qt.b, null, this.renderFormFields()))))))
                 }, t.prototype.renderEventUrl = function() {
@@ -14368,7 +14370,7 @@ webpackJsonp([95], {
                             md: 6,
                             lg: 5
                         }
-                    }, Bt.createElement(Ar.a, {
+                    }, Bt.createElement(Hr.a, {
                         user: this.props.user,
                         onFinishUploading: this.onFinishUploading,
                         initialImageData: this.urlTemplateToUrlString(this.props.event && this.props.event.imageUrl)
@@ -14386,7 +14388,7 @@ webpackJsonp([95], {
                         id: "event-title",
                         label: Object(l.d)("Event Title", "EventModal"),
                         error: Boolean(this.state.validator.errorsForMissingFields.title),
-                        errorMessage: this.state.validator.errorMessageFor(Rr.a.Title)
+                        errorMessage: this.state.validator.errorMessageFor(Fr.a.Title)
                     }, Bt.createElement(ge._4, {
                         "data-a-target": "event-title",
                         onChange: this.onTitleChange,
@@ -14403,38 +14405,38 @@ webpackJsonp([95], {
                     }, Bt.createElement(ge.W, {
                         label: Object(l.d)("Event Description", "EventModal"),
                         error: Boolean(this.state.validator.errorsForMissingFields.description),
-                        errorMessage: this.state.validator.errorMessageFor(Rr.a.Description)
+                        errorMessage: this.state.validator.errorMessageFor(Fr.a.Description)
                     }, Bt.createElement(ge._46, {
                         placeholder: Object(l.d)("Tell viewers why they should watch your event", "EventModal"),
                         onChange: this.onDescriptionChange,
                         value: this.state.eventEdits.description || "",
                         disabled: !1,
-                        "data-test-selector": xr.EditDescriptionField,
+                        "data-test-selector": jr.EditDescriptionField,
                         "data-a-target": "event-description"
-                    }))), Bt.createElement(Hr.a, {
-                        "data-test-selector": xr.StartDateFields,
+                    }))), Bt.createElement(Pr.a, {
+                        "data-test-selector": jr.StartDateFields,
                         defaultDate: this.state.eventEdits.startTime,
                         video: this.props.video,
                         onChange: this.onChangeStartDate,
                         dateLabel: Object(l.d)("Start Date", "EventModal"),
                         timeLabel: Object(l.d)("Start Time ({localeName})", {
-                            localeName: Object(Fr.b)()
+                            localeName: Object(Vr.b)()
                         }, "EventModal"),
                         dateErrorMessage: Object(l.d)("The start date is invalid", "EventModalDateTimePicker"),
                         timeErrorMessage: Object(l.d)("The start time is invalid", "EventMOdalDateTimePicker")
                     }), e, Bt.createElement(ge.W, {
                         label: "",
                         error: Boolean(this.state.validator.errorsForMissingFields.language),
-                        errorMessage: this.state.validator.errorMessageFor(Rr.a.Language)
+                        errorMessage: this.state.validator.errorMessageFor(Fr.a.Language)
                     }, Bt.createElement(ge._8, {
                         display: ge.R.Flex,
                         margin: {
                             bottom: 2
                         }
-                    }, Bt.createElement(Vr.a, {
+                    }, Bt.createElement(Ir.a, {
                         onChange: this.onLanguageChange,
                         disabled: !1,
-                        defaultLanguage: this.state.eventEdits.language || Object(Wr.a)()
+                        defaultLanguage: this.state.eventEdits.language || Object(Nr.a)()
                     }))), Bt.createElement(ge._8, {
                         margin: {
                             bottom: 2
@@ -14443,8 +14445,8 @@ webpackJsonp([95], {
                         id: "event-game",
                         label: Object(l.d)("Event Category/Game", "EventModal"),
                         error: Boolean(this.state.validator.errorsForMissingFields.gameID || this.state.validator.errorsForMissingFields.gameName),
-                        errorMessage: this.state.validator.errorMessageFor(Rr.a.GameID) || this.state.validator.errorMessageFor(Rr.a.GameName)
-                    }, Bt.createElement(Ir.a, {
+                        errorMessage: this.state.validator.errorMessageFor(Fr.a.GameID) || this.state.validator.errorMessageFor(Fr.a.GameName)
+                    }, Bt.createElement(Ar.a, {
                         currentGameTitle: this.state.eventEdits.gameName || "",
                         onChange: this.onGameChange
                     }))))))
@@ -14455,26 +14457,26 @@ webpackJsonp([95], {
                         description: "",
                         gameID: "",
                         gameName: "",
-                        language: Object(Wr.a)(),
-                        startTime: Object(Pr.setMinutes)(Object(Pr.addHours)(new Date, 3), 0),
-                        timeZoneID: Object(Nr.a)(),
+                        language: Object(Nr.a)(),
+                        startTime: Object(xr.setMinutes)(Object(xr.addHours)(new Date, 3), 0),
+                        timeZoneID: Object(Rr.a)(),
                         title: ""
                     }
                 }, t
             }(Bt.Component),
-            zr = function(e) {
+            Ur = function(e) {
                 return Bt.createElement(ge._8, {
                     flexGrow: 0,
                     flexShrink: 1,
                     display: ge.R.Flex,
                     alignItems: ge.c.Center,
-                    "data-test-selector": xr.SubmitErrorSelector
+                    "data-test-selector": jr.SubmitErrorSelector
                 }, Bt.createElement(ge.Q, {
                     color: ge.K.Error
                 }, e))
             },
-            Gr = Object(rn.d)("PremiereModal")(Ur);
-        var Jr, Br = Object(a.b)(function(e) {
+            zr = Object(rn.d)("PremiereModal")(Wr);
+        var Gr, Jr = Object(a.b)(function(e) {
                 return {
                     isLoggedIn: Object(o.d)(e),
                     saving: e.eventModal.saving,
@@ -14484,17 +14486,17 @@ webpackJsonp([95], {
             }, function(e) {
                 return Object(r.b)({
                     closeModal: i.c,
-                    clearErrors: jr
+                    clearErrors: Cr
                 }, e)
-            })(Gr),
-            Kr = (n("/psY"), "PremiereCard"),
-            Qr = Object(rn.d)("PremiereCard", {
+            })(zr),
+            Br = (n("/psY"), "PremiereCard"),
+            Kr = Object(rn.d)("PremiereCard", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.video.thumbnails[0];
                 return Bt.createElement(ge._35, {
                     className: "premiere-card",
-                    "data-test-selector": Kr,
+                    "data-test-selector": Br,
                     background: ge.n.Alt,
                     elevation: 1
                 }, Bt.createElement(ge.C, {
@@ -14506,7 +14508,7 @@ webpackJsonp([95], {
                     },
                     background: ge.n.Alt2
                 }, Bt.createElement(ge.E, {
-                    src: qr(t),
+                    src: Qr(t),
                     alt: "",
                     size: ge.F.Size16
                 })), Bt.createElement(ge.D, {
@@ -14530,15 +14532,15 @@ webpackJsonp([95], {
                         left: .5
                     }
                 }, Bt.createElement(ge.Q, {
-                    title: Object(oa.b)(e.video.lengthSeconds),
+                    title: Object(ia.b)(e.video.lengthSeconds),
                     color: ge.K.Alt2,
                     ellipsis: !0
-                }, Object(oa.b)(e.video.lengthSeconds)))))))
+                }, Object(ia.b)(e.video.lengthSeconds)))))))
             }),
-            qr = function(e) {
+            Qr = function(e) {
                 return e ? e.url.replace("{width}", "160").replace("{height}", "90") : ""
             },
-            Zr = function(e) {
+            qr = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCreateEvent = function(e, t) {
@@ -14591,7 +14593,7 @@ webpackJsonp([95], {
                         name: e.game.name
                     });
                     var a = this.renderPremiereCard(this.state.video);
-                    return Bt.createElement(Br, {
+                    return Bt.createElement(Jr, {
                         user: this.props.user,
                         channelName: this.props.channelName,
                         onCancel: this.props.closeModal,
@@ -14612,22 +14614,22 @@ webpackJsonp([95], {
                         }
                     }, Bt.createElement(ge.W, {
                         label: Object(l.d)("Selected Upload", "VideoManagerPage")
-                    }, Bt.createElement(Qr, {
+                    }, Bt.createElement(Kr, {
                         video: e
                     })))
                 }, t
             }(Bt.Component),
-            Xr = function(e) {
+            Zr = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderScheduleModal = function() {
-                        return t.props.user && t.props.videoID ? Bt.createElement(ka, {
+                        return t.props.user && t.props.videoID ? Bt.createElement(Ta, {
                             isOpen: !0,
                             contentLabel: "Modal",
                             className: "modal__content",
-                            overlayClassName: "modal__backdrop js-modal-backdrop " + Object(Ea.c)(t.props.theme),
+                            overlayClassName: "modal__backdrop js-modal-backdrop " + Object(Ya.c)(t.props.theme),
                             shouldCloseOnOverlayClick: !1
-                        }, Bt.createElement(Zr, {
+                        }, Bt.createElement(qr, {
                             videoID: t.props.videoID,
                             user: t.props.user,
                             channelName: t.props.channelName,
@@ -14638,13 +14640,13 @@ webpackJsonp([95], {
                             updateEvent: t.props.updateEvent
                         })) : null
                     }, t.renderAppealModal = function() {
-                        return t.props.user && t.props.currentUser && t.props.videoID ? Bt.createElement(ka, {
+                        return t.props.user && t.props.currentUser && t.props.videoID ? Bt.createElement(Ta, {
                             isOpen: !0,
                             contentLabel: "Modal",
                             className: "modal__content",
-                            overlayClassName: "modal__backdrop js-modal-backdrop " + Object(Ea.c)(t.props.theme),
+                            overlayClassName: "modal__backdrop js-modal-backdrop " + Object(Ya.c)(t.props.theme),
                             shouldCloseOnOverlayClick: !1
-                        }, Bt.createElement(Ba, {
+                        }, Bt.createElement(Ja, {
                             videoID: t.props.videoID,
                             user: t.props.user,
                             currentUser: t.props.currentUser,
@@ -14655,13 +14657,13 @@ webpackJsonp([95], {
                     }, t.renderEditModal = function(e) {
                         if (!(t.props.user && t.props.currentUser && t.props.videoID)) return null;
                         var n = e.match.path.indexOf("publish") > -1;
-                        return Bt.createElement(ka, {
+                        return Bt.createElement(Ta, {
                             isOpen: !0,
                             contentLabel: "Modal",
                             className: "modal__content",
-                            overlayClassName: "modal__backdrop js-modal-backdrop " + Object(Ea.c)(t.props.theme),
+                            overlayClassName: "modal__backdrop js-modal-backdrop " + Object(Ya.c)(t.props.theme),
                             shouldCloseOnOverlayClick: !1
-                        }, Bt.createElement(Or, {
+                        }, Bt.createElement(Sr, {
                             videoID: t.props.videoID,
                             user: t.props.user,
                             currentUser: t.props.currentUser,
@@ -14676,30 +14678,30 @@ webpackJsonp([95], {
                     }, t
                 }
                 return d.__extends(t, e), t.prototype.render = function() {
-                    return Bt.createElement(Ya.e, null, Bt.createElement(wa.c, {
+                    return Bt.createElement(wa.e, null, Bt.createElement(ka.c, {
                         path: "/:channelName/manager/schedule/:videoID",
                         render: this.renderScheduleModal
-                    }), Bt.createElement(wa.c, {
+                    }), Bt.createElement(ka.c, {
                         path: "/:channelName/manager/appeal/:videoID",
                         render: this.renderAppealModal
-                    }), Bt.createElement(wa.c, {
+                    }), Bt.createElement(ka.c, {
                         path: "/:channelName/manager/publish/:videoID",
                         render: this.renderEditModal
-                    }), Bt.createElement(wa.c, {
+                    }), Bt.createElement(ka.c, {
                         path: "/:channelName/manager/edit/:videoID",
                         render: this.renderEditModal
                     }))
                 }, t
             }(Bt.Component),
-            $r = (n("Gk0Q"), 900),
-            ei = "save",
-            ti = "cancel",
-            ni = "over-capacity-notice",
-            ai = function(e) {
+            Xr = (n("Gk0Q"), 900),
+            $r = "save",
+            ei = "cancel",
+            ti = "over-capacity-notice",
+            ni = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderSplitOption = function() {
-                        if (n.props.video.lengthSeconds > $r) return Bt.createElement(ge._8, {
+                        if (n.props.video.lengthSeconds > Xr) return Bt.createElement(ge._8, {
                             margin: {
                                 y: 1
                             }
@@ -14759,7 +14761,7 @@ webpackJsonp([95], {
                             return d.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return t = this.props.video.id, n = this.props.video.broadcastType, a = p.ExportDestination.Youtube, r = l.n.getLastPageview(), i = r && r.location || an.PageviewLocation.None, l.n.track(xn.a.VODExportClick, {
+                                        return t = this.props.video.id, n = this.props.video.broadcastType, a = p.ExportDestination.Youtube, r = l.n.getLastPageview(), i = r && r.location || an.PageviewLocation.None, l.n.track(jn.a.VODExportClick, {
                                             vod_id: t,
                                             vod_type: n,
                                             export_destination: a,
@@ -14798,7 +14800,7 @@ webpackJsonp([95], {
                         justifyContent: ge._7.Center,
                         background: ge.n.Base,
                         padding: 4,
-                        "data-test-selector": ni
+                        "data-test-selector": ti
                     }, Bt.createElement(ge.Q, null, Object(l.d)("Our YouTube exporter is over capacity right now. We'll be back soon. Follow <x:link>@TwitchSupport</x:link> on Twitter for updates and assistance.", {
                         "x:link": function(e) {
                             return Bt.createElement("a", {
@@ -14910,7 +14912,7 @@ webpackJsonp([95], {
                     }, Bt.createElement(ge.v, {
                         type: ge.B.Text,
                         onClick: this.onCancel,
-                        "data-test-selector": ti
+                        "data-test-selector": ei
                     }, e)), Bt.createElement(ge._8, {
                         flexGrow: 0,
                         flexShrink: 0,
@@ -14919,8 +14921,8 @@ webpackJsonp([95], {
                         }
                     }, Bt.createElement(ge.v, {
                         onClick: this.onConfirm,
-                        "data-test-selector": ei
-                    }, Object(l.d)("Start Export", "VideoManagerYoutubeExport")))), Bt.createElement(Xn.a, {
+                        "data-test-selector": $r
+                    }, Object(l.d)("Start Export", "VideoManagerYoutubeExport")))), Bt.createElement(Zn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t.prototype.onSettingsChange = function(e) {
@@ -14929,9 +14931,9 @@ webpackJsonp([95], {
                     })
                 }, t
             }(Bt.PureComponent),
-            ri = n("e9pz"),
-            ii = (n("k7+4"), "ON_CONFIRM"),
-            oi = function(e) {
+            ai = n("e9pz"),
+            ri = (n("k7+4"), "ON_CONFIRM"),
+            ii = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onConfirm = function() {
@@ -14956,21 +14958,21 @@ webpackJsonp([95], {
                     }, Bt.createElement(ge._8, null, Bt.createElement(ge.v, {
                         type: ge.B.Default,
                         onClick: this.onConfirm,
-                        "data-test-selector": ii
+                        "data-test-selector": ri
                     }, Object(l.d)("OK", "VideoManagerConfirmation"))))))
                 }, t
             }(Bt.PureComponent);
         ! function(e) {
             e[e.Modal = 0] = "Modal", e[e.Alert = 1] = "Alert"
-        }(Jr || (Jr = {}));
-        var si, di = function() {
+        }(Gr || (Gr = {}));
+        var oi, si = function() {
                 function e(e, t) {
                     var n = this;
                     this.maybeShowModal = function() {
                         if (n.messages && 0 !== n.messages.length && !n.isOpen) {
                             n.isOpen = !0;
                             var e = n.messages.pop();
-                            e && n.showModal(oi, {
+                            e && n.showModal(ii, {
                                 body: e.body,
                                 closeModal: function() {
                                     n.closeModalAndScheduleNextTick(e)
@@ -14979,22 +14981,22 @@ webpackJsonp([95], {
                         }
                     }, this.closeModalAndScheduleNextTick = function(e) {
                         n.closeModal(), n.isOpen = !1, e.onClose && e.onClose(), n.maybeShowModal()
-                    }, this.mode = Jr.Modal, this.messages = [], this.showModal = e, this.closeModal = t, this.isOpen = !1
+                    }, this.mode = Gr.Modal, this.messages = [], this.showModal = e, this.closeModal = t, this.isOpen = !1
                 }
                 return e.prototype.push = function(e, t) {
-                    this.mode !== Jr.Alert ? (this.messages.push({
+                    this.mode !== Gr.Alert ? (this.messages.push({
                         body: e,
                         onClose: t
                     }), this.maybeShowModal()) : alert(e)
                 }, e.prototype.setAlertMode = function() {
-                    this.mode = Jr.Alert
+                    this.mode = Gr.Alert
                 }, e.prototype.setModalMode = function() {
-                    this.mode = Jr.Modal
+                    this.mode = Gr.Modal
                 }, e
             }(),
-            li = (n("Ke7B"), "no-videos"),
-            ui = "load-more-processing",
-            ci = function(e) {
+            di = (n("Ke7B"), "no-videos"),
+            li = "load-more-processing",
+            ui = function(e) {
                 return {
                     title: Object(l.d)("Delete Video", "DeleteVideoConfirmationModal"),
                     body: Object(l.d)("Are you sure you want to delete {title}?", {
@@ -15004,7 +15006,7 @@ webpackJsonp([95], {
                     cancelText: Object(l.d)("No", "DeleteVideoConfirmationModal")
                 }
             },
-            mi = function(e) {
+            ci = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.vodcastQueueUnavailable = function() {
@@ -15026,7 +15028,7 @@ webpackJsonp([95], {
                             activeFilter: e
                         }), n)
                     }, t.onDeleteVideo = function(e, n) {
-                        t.props.showModal(on.a, d.__assign({}, ci(e.title), {
+                        t.props.showModal(on.a, d.__assign({}, ui(e.title), {
                             onConfirm: function() {
                                 n ? t.props.removeVideoUpload(e.id) : t.props.deleteVideo(e.id, t.notificationService)
                             },
@@ -15034,7 +15036,7 @@ webpackJsonp([95], {
                             closeModal: t.props.closeModal
                         }))
                     }, t.onWatch = function(e) {
-                        t.props.history.push(Object(Rn.e)(e.id))
+                        t.props.history.push(Object(Fn.e)(e.id))
                     }, t.onDownloadVideo = function(e) {
                         return d.__awaiter(t, void 0, void 0, function() {
                             return d.__generator(this, function(t) {
@@ -15062,7 +15064,7 @@ webpackJsonp([95], {
                             })
                         })
                     }, t.showExportModal = function(e) {
-                        t.props.showModal(ai, {
+                        t.props.showModal(ni, {
                             video: e,
                             exportVideo: t.props.exportVideo,
                             closeModal: t.props.closeModal
@@ -15084,7 +15086,7 @@ webpackJsonp([95], {
                 }, t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.props.beginPollingProcessingVideos()
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    if (e.showModal && e.closeModal && !this.notificationService && (e.overrideNotificationService ? this.notificationService = e.overrideNotificationService : this.notificationService = new di(this.props.showModal, this.props.closeModal)), Boolean(!this.props.data.user && e.data.user) && (this.props.fetchProcessingVideosData(this.propsToPageContext(e), 0, this.notificationService), this.fetchData(this.propsToPageContext(e), this.propsToPageContext(this.props))), e.pubsub && e.pubsub.messages.videoThumbnailProcessed && this.props.data.user) {
+                    if (e.showModal && e.closeModal && !this.notificationService && (e.overrideNotificationService ? this.notificationService = e.overrideNotificationService : this.notificationService = new si(this.props.showModal, this.props.closeModal)), Boolean(!this.props.data.user && e.data.user) && (this.props.fetchProcessingVideosData(this.propsToPageContext(e), 0, this.notificationService), this.fetchData(this.propsToPageContext(e), this.propsToPageContext(this.props))), e.pubsub && e.pubsub.messages.videoThumbnailProcessed && this.props.data.user) {
                         var t = this.props.pubsub && this.props.pubsub.messages.videoThumbnailProcessed,
                             n = e.pubsub.messages.videoThumbnailProcessed;
                         (!t || t.upload_id !== n.upload_id) && this.props.fetchVideo(this.props.data.user.id, n.video_id)
@@ -15121,7 +15123,7 @@ webpackJsonp([95], {
                     }, Object(l.d)("Upload queue", "VideoManagerPage"))), Bt.createElement(ge._8, {
                         position: ge._15.Relative,
                         fullWidth: !0
-                    }, Bt.createElement(gn, {
+                    }, Bt.createElement(fn, {
                         errors: this.props.uploadValidationErrors,
                         onFilesSubmitted: this.handleUploadFilesSubmitted
                     })), Bt.createElement(ge._8, {
@@ -15296,16 +15298,16 @@ webpackJsonp([95], {
                         linkTo: "http://link.twitch.tv/premieres-help",
                         type: ge.B.Text,
                         fullWidth: !0
-                    }, Bt.createElement(ge.Q, null, Object(l.d)("Learn more about Premieres", "VideoManagerPage"))))), Bt.createElement(cn, {
+                    }, Bt.createElement(ge.Q, null, Object(l.d)("Learn more about Premieres", "VideoManagerPage"))))), Bt.createElement(un, {
                         activeFilter: this.props.activeFilter,
                         changeFilter: this.onChangeFilter
-                    }), this.showMiniStats() ? Bt.createElement(_n, {
+                    }), this.showMiniStats() ? Bt.createElement(mn, {
                         channelID: this.props.data.user && this.props.data.user.id
                     }) : null))), Bt.createElement(Qt.a, {
                         enabled: !!this.props.apiData.videos.data && this.props.apiData.videos.moreDataAvailable,
                         key: this.props.activeFilter || "",
                         loadMore: this.loadMore
-                    }), Bt.createElement(Xr, {
+                    }), Bt.createElement(Zr, {
                         user: this.props.data.user,
                         currentUser: this.props.data.currentUser,
                         videoID: this.props.match.params.videoID,
@@ -15330,20 +15332,20 @@ webpackJsonp([95], {
                     var t = this.props.apiData.videos.data.map(function(t) {
                         return e.getVideoRow(t)
                     });
-                    return this.props.apiData.videos.loading && t.push(Bt.createElement(Ta.a, {
+                    return this.props.apiData.videos.loading && t.push(Bt.createElement(Da.a, {
                         key: "VideoCardPlaceholder" + this.props.apiData.videos.data.length
                     })), t
                 }, t.prototype.renderLoadingState = function() {
-                    return Bt.createElement(ge._8, null, Bt.createElement(Ta.a, {
+                    return Bt.createElement(ge._8, null, Bt.createElement(Da.a, {
                         key: "VideoCardPlaceholderLoading1"
-                    }), Bt.createElement(Ta.a, {
+                    }), Bt.createElement(Da.a, {
                         key: "VideoCardPlaceholderLoading2"
-                    }), Bt.createElement(Ta.a, {
+                    }), Bt.createElement(Da.a, {
                         key: "VideoCardPlaceholderLoading3"
                     }))
                 }, t.prototype.renderEmptyState = function() {
                     return Bt.createElement(ge._8, {
-                        "data-test-selector": li
+                        "data-test-selector": di
                     }, Object(l.d)("You have no videos which match these filters.", "VideoManagerPage"))
                 }, t.prototype.renderErrorState = function() {
                     return Bt.createElement(ge._8, {
@@ -15383,7 +15385,7 @@ webpackJsonp([95], {
                                 fullWidth: !0,
                                 justifyContent: ge._7.Center
                             }, Bt.createElement(ge.v, {
-                                "data-test-selector": ui,
+                                "data-test-selector": li,
                                 state: n,
                                 type: ge.B.Hollow,
                                 onClick: this.loadMoreProcessing
@@ -15396,7 +15398,7 @@ webpackJsonp([95], {
                 }, t.prototype.getVideoRow = function(e, t) {
                     if (!this.props.data.user || !this.props.data.currentUser) return null;
                     var n = this.props.data.user.id === this.props.data.currentUser.id;
-                    return Bt.createElement(Da, {
+                    return Bt.createElement(ba, {
                         video: e,
                         videoDownloads: this.props.videoDownloads,
                         videoUpload: t,
@@ -15430,7 +15432,7 @@ webpackJsonp([95], {
                     return this.props.fetchVideosData(e, t)
                 }, t
             }(Bt.Component),
-            _i = Object(r.d)(Object(qt.a)(ri, {
+            mi = Object(r.d)(Object(qt.a)(ai, {
                 options: function(e) {
                     return {
                         variables: {
@@ -15446,9 +15448,9 @@ webpackJsonp([95], {
                 topic: function(e) {
                     return e.data.user ? Object(en.z)(e.data.user.id) : ""
                 },
-                mapMessageTypesToProps: (si = {}, si[$t.PubsubMessageType.VideoThumbnailProcessingComplete] = "videoThumbnailProcessed", si[$t.PubsubMessageType.VideoThumbnailProcessingError] = "videoThumbnailError", si)
-            }]))(mi);
-        var pi = Object(a.b)(function(e) {
+                mapMessageTypesToProps: (oi = {}, oi[$t.PubsubMessageType.VideoThumbnailProcessingComplete] = "videoThumbnailProcessed", oi[$t.PubsubMessageType.VideoThumbnailProcessingError] = "videoThumbnailError", oi)
+            }]))(ci);
+        var _i = Object(a.b)(function(e) {
             return {
                 activeFilter: e.videoManager.activeFilter,
                 apiData: {
@@ -15494,9 +15496,9 @@ webpackJsonp([95], {
                 submitVideoUploadFiles: wt,
                 updateEvent: Vt
             }, e)
-        })(_i);
+        })(mi);
         n.d(t, "VideoManagerPage", function() {
-            return pi
+            return _i
         })
     },
     aM0x: function(e, t, n) {
@@ -22378,4 +22380,4 @@ webpackJsonp([95], {
             r = "public"
     }
 });
-//# sourceMappingURL=pages.video-manager-f50ec30493ce9007af6b0c76bbf96cf6.js.map
+//# sourceMappingURL=pages.video-manager-64c5b90fbf2ecd4b6d81175ef28720bf.js.map

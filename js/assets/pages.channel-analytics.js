@@ -1,4 +1,4 @@
-webpackJsonp([93], {
+webpackJsonp([92], {
     "+27R": function(e, t, a) {
         (function(e) {
             "use strict";
@@ -7112,18 +7112,18 @@ webpackJsonp([93], {
                 };
                 var P = {};
 
-                function H(e, t) {
+                function A(e, t) {
                     var a = e.toLowerCase();
                     P[a] = P[a + "s"] = P[t] = e
                 }
 
-                function A(e) {
+                function H(e) {
                     return "string" == typeof e ? P[e] || P[e.toLowerCase()] : void 0
                 }
 
                 function E(e) {
                     var t, a, n = {};
-                    for (a in e) u(e, a) && (t = A(a)) && (n[t] = e[a]);
+                    for (a in e) u(e, a) && (t = H(a)) && (n[t] = e[a]);
                     return n
                 }
                 var F = {};
@@ -7264,7 +7264,7 @@ webpackJsonp([93], {
                     return this.localeData().monthsShort(this, e)
                 }), G("MMMM", 0, 0, function(e) {
                     return this.localeData().months(this, e)
-                }), H("month", "M"), R("month", 8), he("M", te), he("MM", te, X), he("MMM", function(e, t) {
+                }), A("month", "M"), R("month", 8), he("M", te), he("MM", te, X), he("MMM", function(e, t) {
                     return t.monthsShortRegex(e)
                 }), he("MMMM", function(e, t) {
                     return t.monthsRegex(e)
@@ -7278,7 +7278,7 @@ webpackJsonp([93], {
                     Oe = "January_February_March_April_May_June_July_August_September_October_November_December".split("_");
                 var Pe = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_");
 
-                function He(e, t) {
+                function Ae(e, t) {
                     var a;
                     if (!e.isValid()) return e;
                     if ("string" == typeof t)
@@ -7287,8 +7287,8 @@ webpackJsonp([93], {
                     return a = Math.min(e.date(), Ce(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, a), e
                 }
 
-                function Ae(e) {
-                    return null != e ? (He(this, e), n.updateOffset(this, !0), this) : I(this, "Month")
+                function He(e) {
+                    return null != e ? (Ae(this, e), n.updateOffset(this, !0), this) : I(this, "Month")
                 }
                 var Ee = ce;
                 var Fe = ce;
@@ -7318,7 +7318,7 @@ webpackJsonp([93], {
                     return e <= 9999 ? "" + e : "+" + e
                 }), G(0, ["YY", 2], 0, function() {
                     return this.year() % 100
-                }), G(0, ["YYYY", 4], 0, "year"), G(0, ["YYYYY", 5], 0, "year"), G(0, ["YYYYYY", 6, !0], 0, "year"), H("year", "y"), R("year", 1), he("Y", le), he("YY", te, X), he("YYYY", ie, $), he("YYYYY", se, ee), he("YYYYYY", se, ee), ge(["YYYYY", "YYYYYY"], be), ge("YYYY", function(e, t) {
+                }), G(0, ["YYYY", 4], 0, "year"), G(0, ["YYYYY", 5], 0, "year"), G(0, ["YYYYYY", 6, !0], 0, "year"), A("year", "y"), R("year", 1), he("Y", le), he("YY", te, X), he("YYYY", ie, $), he("YYYYY", se, ee), he("YYYYYY", se, ee), ge(["YYYYY", "YYYYYY"], be), ge("YYYY", function(e, t) {
                     t[be] = 2 === e.length ? n.parseTwoDigitYear(e) : k(e)
                 }), ge("YY", function(e, t) {
                     t[be] = n.parseTwoDigitYear(e)
@@ -7361,7 +7361,7 @@ webpackJsonp([93], {
                         r = Ve(e + 1, t, a);
                     return (We(e) - n + r) / 7
                 }
-                G("w", ["ww", 2], "wo", "week"), G("W", ["WW", 2], "Wo", "isoWeek"), H("week", "w"), H("isoWeek", "W"), R("week", 5), R("isoWeek", 5), he("w", te), he("ww", te, X), he("W", te), he("WW", te, X), ye(["w", "ww", "W", "WW"], function(e, t, a, n) {
+                G("w", ["ww", 2], "wo", "week"), G("W", ["WW", 2], "Wo", "isoWeek"), A("week", "w"), A("isoWeek", "W"), R("week", 5), R("isoWeek", 5), he("w", te), he("ww", te, X), he("W", te), he("WW", te, X), ye(["w", "ww", "W", "WW"], function(e, t, a, n) {
                     t[n.substr(0, 1)] = k(e)
                 });
                 G("d", 0, "do", "day"), G("dd", 0, 0, function(e) {
@@ -7370,7 +7370,7 @@ webpackJsonp([93], {
                     return this.localeData().weekdaysShort(this, e)
                 }), G("dddd", 0, 0, function(e) {
                     return this.localeData().weekdays(this, e)
-                }), G("e", 0, 0, "weekday"), G("E", 0, 0, "isoWeekday"), H("day", "d"), H("weekday", "e"), H("isoWeekday", "E"), R("day", 11), R("weekday", 11), R("isoWeekday", 11), he("d", te), he("e", te), he("E", te), he("dd", function(e, t) {
+                }), G("e", 0, 0, "weekday"), G("E", 0, 0, "isoWeekday"), A("day", "d"), A("weekday", "e"), A("isoWeekday", "E"), R("day", 11), R("weekday", 11), R("isoWeekday", 11), he("d", te), he("e", te), he("E", te), he("dd", function(e, t) {
                     return t.weekdaysMinRegex(e)
                 }), he("ddd", function(e, t) {
                     return t.weekdaysShortRegex(e)
@@ -7425,7 +7425,7 @@ webpackJsonp([93], {
                     return "" + this.hours() + N(this.minutes(), 2)
                 }), G("Hmmss", 0, 0, function() {
                     return "" + this.hours() + N(this.minutes(), 2) + N(this.seconds(), 2)
-                }), tt("a", !0), tt("A", !1), H("hour", "h"), R("hour", 13), he("a", at), he("A", at), he("H", te), he("h", te), he("k", te), he("HH", te, X), he("hh", te, X), he("kk", te, X), he("hmm", ae), he("hmmss", ne), he("Hmm", ae), he("Hmmss", ne), ge(["H", "HH"], ke), ge(["k", "kk"], function(e, t, a) {
+                }), tt("a", !0), tt("A", !1), A("hour", "h"), R("hour", 13), he("a", at), he("A", at), he("H", te), he("h", te), he("k", te), he("HH", te, X), he("hh", te, X), he("kk", te, X), he("hmm", ae), he("hmmss", ne), he("Hmm", ae), he("Hmmss", ne), ge(["H", "HH"], ke), ge(["k", "kk"], function(e, t, a) {
                     var n = k(e);
                     t[ke] = 24 === n ? 0 : n
                 }), ge(["a", "A"], function(e, t, a) {
@@ -7773,11 +7773,11 @@ webpackJsonp([93], {
                     }(t), this._milliseconds = +u + 1e3 * d + 6e4 * l + 1e3 * o * 60 * 60, this._days = +s + 7 * i, this._months = +r + 3 * n + 12 * a, this._data = {}, this._locale = mt(), this._bubble()
                 }
 
-                function Ht(e) {
+                function At(e) {
                     return e instanceof Pt
                 }
 
-                function At(e) {
+                function Ht(e) {
                     return e < 0 ? -1 * Math.round(-1 * e) : Math.round(e)
                 }
 
@@ -7820,7 +7820,7 @@ webpackJsonp([93], {
                 function Bt(e, t) {
                     var a, n, r, i = e,
                         s = null;
-                    return Ht(e) ? i = {
+                    return At(e) ? i = {
                         ms: e._milliseconds,
                         d: e._days,
                         M: e._months
@@ -7830,7 +7830,7 @@ webpackJsonp([93], {
                         h: k(s[ke]) * a,
                         m: k(s[De]) * a,
                         s: k(s[Ye]) * a,
-                        ms: k(At(1e3 * s[Se])) * a
+                        ms: k(Ht(1e3 * s[Se])) * a
                     }) : (s = Vt.exec(e)) ? (a = "-" === s[1] ? -1 : 1, i = {
                         y: Jt(s[2], a),
                         M: Jt(s[3], a),
@@ -7847,7 +7847,7 @@ webpackJsonp([93], {
                         };
                         t = Wt(t, e), e.isBefore(t) ? a = Ut(e, t) : ((a = Ut(t, e)).milliseconds = -a.milliseconds, a.months = -a.months);
                         return a
-                    }(Tt(i.from), Tt(i.to)), (i = {}).ms = r.milliseconds, i.M = r.months), n = new Pt(i), Ht(e) && u(e, "_locale") && (n._locale = e._locale), n
+                    }(Tt(i.from), Tt(i.to)), (i = {}).ms = r.milliseconds, i.M = r.months), n = new Pt(i), At(e) && u(e, "_locale") && (n._locale = e._locale), n
                 }
 
                 function Jt(e, t) {
@@ -7872,9 +7872,9 @@ webpackJsonp([93], {
 
                 function qt(e, t, a, r) {
                     var i = t._milliseconds,
-                        s = At(t._days),
-                        o = At(t._months);
-                    e.isValid() && (r = null == r || r, i && e._d.setTime(e._d.valueOf() + i * a), s && z(e, "Date", I(e, "Date") + s * a), o && He(e, I(e, "Month") + o * a), r && n.updateOffset(e, s || o))
+                        s = Ht(t._days),
+                        o = Ht(t._months);
+                    e.isValid() && (r = null == r || r, i && e._d.setTime(e._d.valueOf() + i * a), s && z(e, "Date", I(e, "Date") + s * a), o && Ae(e, I(e, "Month") + o * a), r && n.updateOffset(e, s || o))
                 }
                 Bt.fn = Pt.prototype, Bt.invalid = function() {
                     return Bt(NaN)
@@ -7911,23 +7911,23 @@ webpackJsonp([93], {
                     return this.weekYear() % 100
                 }), G(0, ["GG", 2], 0, function() {
                     return this.isoWeekYear() % 100
-                }), ea("gggg", "weekYear"), ea("ggggg", "weekYear"), ea("GGGG", "isoWeekYear"), ea("GGGGG", "isoWeekYear"), H("weekYear", "gg"), H("isoWeekYear", "GG"), R("weekYear", 1), R("isoWeekYear", 1), he("G", le), he("g", le), he("GG", te, X), he("gg", te, X), he("GGGG", ie, $), he("gggg", ie, $), he("GGGGG", se, ee), he("ggggg", se, ee), ye(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, a, n) {
+                }), ea("gggg", "weekYear"), ea("ggggg", "weekYear"), ea("GGGG", "isoWeekYear"), ea("GGGGG", "isoWeekYear"), A("weekYear", "gg"), A("isoWeekYear", "GG"), R("weekYear", 1), R("isoWeekYear", 1), he("G", le), he("g", le), he("GG", te, X), he("gg", te, X), he("GGGG", ie, $), he("gggg", ie, $), he("GGGGG", se, ee), he("ggggg", se, ee), ye(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, a, n) {
                     t[n.substr(0, 2)] = k(e)
                 }), ye(["gg", "GG"], function(e, t, a, r) {
                     t[r] = n.parseTwoDigitYear(e)
-                }), G("Q", 0, "Qo", "quarter"), H("quarter", "Q"), R("quarter", 7), he("Q", Q), ge("Q", function(e, t) {
+                }), G("Q", 0, "Qo", "quarter"), A("quarter", "Q"), R("quarter", 7), he("Q", Q), ge("Q", function(e, t) {
                     t[ve] = 3 * (k(e) - 1)
-                }), G("D", ["DD", 2], "Do", "date"), H("date", "D"), R("date", 9), he("D", te), he("DD", te, X), he("Do", function(e, t) {
+                }), G("D", ["DD", 2], "Do", "date"), A("date", "D"), R("date", 9), he("D", te), he("DD", te, X), he("Do", function(e, t) {
                     return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient
                 }), ge(["D", "DD"], Le), ge("Do", function(e, t) {
                     t[Le] = k(e.match(te)[0])
                 });
                 var aa = W("Date", !0);
-                G("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), H("dayOfYear", "DDD"), R("dayOfYear", 4), he("DDD", re), he("DDDD", Z), ge(["DDD", "DDDD"], function(e, t, a) {
+                G("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), A("dayOfYear", "DDD"), R("dayOfYear", 4), he("DDD", re), he("DDDD", Z), ge(["DDD", "DDDD"], function(e, t, a) {
                     a._dayOfYear = k(e)
-                }), G("m", ["mm", 2], 0, "minute"), H("minute", "m"), R("minute", 14), he("m", te), he("mm", te, X), ge(["m", "mm"], De);
+                }), G("m", ["mm", 2], 0, "minute"), A("minute", "m"), R("minute", 14), he("m", te), he("mm", te, X), ge(["m", "mm"], De);
                 var na = W("Minutes", !1);
-                G("s", ["ss", 2], 0, "second"), H("second", "s"), R("second", 15), he("s", te), he("ss", te, X), ge(["s", "ss"], Ye);
+                G("s", ["ss", 2], 0, "second"), A("second", "s"), R("second", 15), he("s", te), he("ss", te, X), ge(["s", "ss"], Ye);
                 var ra, ia = W("Seconds", !1);
                 for (G("S", 0, 0, function() {
                         return ~~(this.millisecond() / 100)
@@ -7945,7 +7945,7 @@ webpackJsonp([93], {
                         return 1e5 * this.millisecond()
                     }), G(0, ["SSSSSSSSS", 9], 0, function() {
                         return 1e6 * this.millisecond()
-                    }), H("millisecond", "ms"), R("millisecond", 16), he("S", re, Q), he("SS", re, X), he("SSS", re, Z), ra = "SSSS"; ra.length <= 9; ra += "S") he(ra, oe);
+                    }), A("millisecond", "ms"), R("millisecond", 16), he("S", re, Q), he("SS", re, X), he("SSS", re, Z), ra = "SSSS"; ra.length <= 9; ra += "S") he(ra, oe);
 
                 function sa(e, t) {
                     t[Se] = k(1e3 * ("0." + e))
@@ -7968,10 +7968,10 @@ webpackJsonp([93], {
                     return new b(this)
                 }, la.diff = function(e, t, a) {
                     var n, r, i, s;
-                    return this.isValid() && (n = Wt(e, this)).isValid() ? (r = 6e4 * (n.utcOffset() - this.utcOffset()), "year" === (t = A(t)) || "month" === t || "quarter" === t ? (o = this, l = n, c = 12 * (l.year() - o.year()) + (l.month() - o.month()), m = o.clone().add(c, "months"), l - m < 0 ? (d = o.clone().add(c - 1, "months"), u = (l - m) / (m - d)) : (d = o.clone().add(c + 1, "months"), u = (l - m) / (d - m)), s = -(c + u) || 0, "quarter" === t ? s /= 3 : "year" === t && (s /= 12)) : (i = this - n, s = "second" === t ? i / 1e3 : "minute" === t ? i / 6e4 : "hour" === t ? i / 36e5 : "day" === t ? (i - r) / 864e5 : "week" === t ? (i - r) / 6048e5 : i), a ? s : L(s)) : NaN;
+                    return this.isValid() && (n = Wt(e, this)).isValid() ? (r = 6e4 * (n.utcOffset() - this.utcOffset()), "year" === (t = H(t)) || "month" === t || "quarter" === t ? (o = this, l = n, c = 12 * (l.year() - o.year()) + (l.month() - o.month()), m = o.clone().add(c, "months"), l - m < 0 ? (d = o.clone().add(c - 1, "months"), u = (l - m) / (m - d)) : (d = o.clone().add(c + 1, "months"), u = (l - m) / (d - m)), s = -(c + u) || 0, "quarter" === t ? s /= 3 : "year" === t && (s /= 12)) : (i = this - n, s = "second" === t ? i / 1e3 : "minute" === t ? i / 6e4 : "hour" === t ? i / 36e5 : "day" === t ? (i - r) / 864e5 : "week" === t ? (i - r) / 6048e5 : i), a ? s : L(s)) : NaN;
                     var o, l, d, u, c, m
                 }, la.endOf = function(e) {
-                    return void 0 === (e = A(e)) || "millisecond" === e ? this : ("date" === e && (e = "day"), this.startOf(e).add(1, "isoWeek" === e ? "week" : e).subtract(1, "ms"))
+                    return void 0 === (e = H(e)) || "millisecond" === e ? this : ("date" === e && (e = "day"), this.startOf(e).add(1, "isoWeek" === e ? "week" : e).subtract(1, "ms"))
                 }, la.format = function(e) {
                     e || (e = this.isUtc() ? n.defaultFormatUtc : n.defaultFormat);
                     var t = q(this, e);
@@ -7991,20 +7991,20 @@ webpackJsonp([93], {
                 }, la.toNow = function(e) {
                     return this.to(Tt(), e)
                 }, la.get = function(e) {
-                    return x(this[e = A(e)]) ? this[e]() : this
+                    return x(this[e = H(e)]) ? this[e]() : this
                 }, la.invalidAt = function() {
                     return h(this).overflow
                 }, la.isAfter = function(e, t) {
                     var a = v(e) ? e : Tt(e);
-                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = A(s(t) ? "millisecond" : t)) ? this.valueOf() > a.valueOf() : a.valueOf() < this.clone().startOf(t).valueOf())
+                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = H(s(t) ? "millisecond" : t)) ? this.valueOf() > a.valueOf() : a.valueOf() < this.clone().startOf(t).valueOf())
                 }, la.isBefore = function(e, t) {
                     var a = v(e) ? e : Tt(e);
-                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = A(s(t) ? "millisecond" : t)) ? this.valueOf() < a.valueOf() : this.clone().endOf(t).valueOf() < a.valueOf())
+                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = H(s(t) ? "millisecond" : t)) ? this.valueOf() < a.valueOf() : this.clone().endOf(t).valueOf() < a.valueOf())
                 }, la.isBetween = function(e, t, a, n) {
                     return ("(" === (n = n || "()")[0] ? this.isAfter(e, a) : !this.isBefore(e, a)) && (")" === n[1] ? this.isBefore(t, a) : !this.isAfter(t, a))
                 }, la.isSame = function(e, t) {
                     var a, n = v(e) ? e : Tt(e);
-                    return !(!this.isValid() || !n.isValid()) && ("millisecond" === (t = A(t || "millisecond")) ? this.valueOf() === n.valueOf() : (a = n.valueOf(), this.clone().startOf(t).valueOf() <= a && a <= this.clone().endOf(t).valueOf()))
+                    return !(!this.isValid() || !n.isValid()) && ("millisecond" === (t = H(t || "millisecond")) ? this.valueOf() === n.valueOf() : (a = n.valueOf(), this.clone().startOf(t).valueOf() <= a && a <= this.clone().endOf(t).valueOf()))
                 }, la.isSameOrAfter = function(e, t) {
                     return this.isSame(e, t) || this.isAfter(e, t)
                 }, la.isSameOrBefore = function(e, t) {
@@ -8025,10 +8025,10 @@ webpackJsonp([93], {
                                     return e.priority - t.priority
                                 }), t
                             }(e = E(e)), n = 0; n < a.length; n++) this[a[n].unit](e[a[n].unit]);
-                    else if (x(this[e = A(e)])) return this[e](t);
+                    else if (x(this[e = H(e)])) return this[e](t);
                     return this
                 }, la.startOf = function(e) {
-                    switch (e = A(e)) {
+                    switch (e = H(e)) {
                         case "year":
                             this.month(0);
                         case "quarter":
@@ -8100,7 +8100,7 @@ webpackJsonp([93], {
                     return ta.call(this, e, this.isoWeek(), this.isoWeekday(), 1, 4)
                 }, la.quarter = la.quarters = function(e) {
                     return null == e ? Math.ceil((this.month() + 1) / 3) : this.month(3 * (e - 1) + this.month() % 3)
-                }, la.month = Ae, la.daysInMonth = function() {
+                }, la.month = He, la.daysInMonth = function() {
                     return Ce(this.year(), this.month())
                 }, la.week = la.weeks = function(e) {
                     var t = this.localeData().week(this);
@@ -8168,7 +8168,7 @@ webpackJsonp([93], {
                     return this._isUTC ? "UTC" : ""
                 }, la.zoneName = function() {
                     return this._isUTC ? "Coordinated Universal Time" : ""
-                }, la.dates = S("dates accessor is deprecated. Use date instead.", aa), la.months = S("months accessor is deprecated. Use month instead", Ae), la.years = S("years accessor is deprecated. Use year instead", ze), la.zone = S("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
+                }, la.dates = S("dates accessor is deprecated. Use date instead.", aa), la.months = S("months accessor is deprecated. Use month instead", He), la.years = S("years accessor is deprecated. Use year instead", ze), la.zone = S("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
                     return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
                 }), la.isDSTShifted = S("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
                     if (!s(this._isDSTShifted)) return this._isDSTShifted;
@@ -8333,8 +8333,8 @@ webpackJsonp([93], {
                     ja = Ta("minutes"),
                     Oa = Ta("hours"),
                     Pa = Ta("days"),
-                    Ha = Ta("months"),
-                    Aa = Ta("years");
+                    Aa = Ta("months"),
+                    Ha = Ta("years");
                 var Ea = Math.round,
                     Fa = {
                         ss: 44,
@@ -8374,7 +8374,7 @@ webpackJsonp([93], {
                 }, Ia.as = function(e) {
                     if (!this.isValid()) return NaN;
                     var t, a, n = this._milliseconds;
-                    if ("month" === (e = A(e)) || "year" === e) return t = this._days + n / 864e5, a = this._months + ga(t), "month" === e ? a : a / 12;
+                    if ("month" === (e = H(e)) || "year" === e) return t = this._days + n / 864e5, a = this._months + ga(t), "month" === e ? a : a / 12;
                     switch (t = this._days + Math.round(ya(this._months)), e) {
                         case "week":
                             return t / 7 + n / 6048e5;
@@ -8400,10 +8400,10 @@ webpackJsonp([93], {
                         l = this._data;
                     return i >= 0 && s >= 0 && o >= 0 || i <= 0 && s <= 0 && o <= 0 || (i += 864e5 * fa(ya(o) + s), s = 0, o = 0), l.milliseconds = i % 1e3, e = L(i / 1e3), l.seconds = e % 60, t = L(e / 60), l.minutes = t % 60, a = L(t / 60), l.hours = a % 24, o += r = L(ga(s += L(a / 24))), s -= fa(ya(r)), n = L(o / 12), o %= 12, l.days = s, l.months = o, l.years = n, this
                 }, Ia.get = function(e) {
-                    return e = A(e), this.isValid() ? this[e + "s"]() : NaN
+                    return e = H(e), this.isValid() ? this[e + "s"]() : NaN
                 }, Ia.milliseconds = xa, Ia.seconds = Ca, Ia.minutes = ja, Ia.hours = Oa, Ia.days = Pa, Ia.weeks = function() {
                     return L(this.days() / 7)
-                }, Ia.months = Ha, Ia.years = Aa, Ia.humanize = function(e) {
+                }, Ia.months = Aa, Ia.years = Ha, Ia.humanize = function(e) {
                     if (!this.isValid()) return this.localeData().invalidDate();
                     var t = this.localeData(),
                         a = function(e, t, a) {
@@ -8439,7 +8439,7 @@ webpackJsonp([93], {
                     return ha(e, t, a, "weekdays")
                 }, n.parseZone = function() {
                     return Tt.apply(null, arguments).parseZone()
-                }, n.localeData = mt, n.isDuration = Ht, n.monthsShort = function(e, t) {
+                }, n.localeData = mt, n.isDuration = At, n.monthsShort = function(e, t) {
                     return ma(e, t, "monthsShort")
                 }, n.weekdaysMin = function(e, t, a) {
                     return ha(e, t, a, "weekdaysMin")
@@ -8453,7 +8453,7 @@ webpackJsonp([93], {
                     return O(st)
                 }, n.weekdaysShort = function(e, t, a) {
                     return ha(e, t, a, "weekdaysShort")
-                }, n.normalizeUnits = A, n.relativeTimeRounding = function(e) {
+                }, n.normalizeUnits = H, n.relativeTimeRounding = function(e) {
                     return void 0 === e ? Ea : "function" == typeof e && (Ea = e, !0)
                 }, n.relativeTimeThreshold = function(e, t) {
                     return void 0 !== Fa[e] && (void 0 === t ? Fa[e] : (Fa[e] = t, "s" === e && (Fa.ss = t - 1), !0))
@@ -9349,19 +9349,19 @@ webpackJsonp([93], {
                             C = "bottom" === r.position ? t.top + v : t.bottom;
                         if (i.each(f, function(a, n) {
                                 if (!i.isNullOrUndef(a.label)) {
-                                    var s, o, c, h, g, y, M, b, L, k, D, j, O, P, H = a.label;
+                                    var s, o, c, h, g, y, M, b, L, k, D, j, O, P, A = a.label;
                                     n === t.zeroLineIndex && r.offset === m.offsetGridLines ? (s = m.zeroLineWidth, o = m.zeroLineColor, c = m.zeroLineBorderDash, h = m.zeroLineBorderDashOffset) : (s = i.valueAtIndexOrDefault(m.lineWidth, n), o = i.valueAtIndexOrDefault(m.color, n), c = i.valueOrDefault(m.borderDash, d.borderDash), h = i.valueOrDefault(m.borderDashOffset, d.borderDashOffset));
-                                    var A = "middle",
+                                    var H = "middle",
                                         E = "middle",
                                         F = u.padding;
                                     if (p) {
                                         var R = v + F;
-                                        "bottom" === r.position ? (E = _ ? "middle" : "top", A = _ ? "right" : "center", P = t.top + R) : (E = _ ? "middle" : "bottom", A = _ ? "left" : "center", P = t.bottom - R);
+                                        "bottom" === r.position ? (E = _ ? "middle" : "top", H = _ ? "right" : "center", P = t.top + R) : (E = _ ? "middle" : "bottom", H = _ ? "left" : "center", P = t.bottom - R);
                                         var W = l(t, n, m.offsetGridLines && f.length > 1);
                                         W < t.left && (o = "rgba(0,0,0,0)"), W += i.aliasPixel(s), O = t.getPixelForTick(n) + u.labelOffset, g = M = L = D = W, y = x, b = C, k = e.top, j = e.bottom
                                     } else {
                                         var I, z = "left" === r.position;
-                                        u.mirror ? (A = z ? "left" : "right", I = F) : (A = z ? "right" : "left", I = v + F), O = z ? t.right - I : t.left + I;
+                                        u.mirror ? (H = z ? "left" : "right", I = F) : (H = z ? "right" : "left", I = v + F), O = z ? t.right - I : t.left + I;
                                         var N = l(t, n, m.offsetGridLines && f.length > 1);
                                         N < t.top && (o = "rgba(0,0,0,0)"), N += i.aliasPixel(s), P = t.getPixelForTick(n) + u.labelOffset, g = w, M = T, L = e.left, D = e.right, y = b = k = j = N
                                     }
@@ -9381,10 +9381,10 @@ webpackJsonp([93], {
                                         glBorderDash: c,
                                         glBorderDashOffset: h,
                                         rotation: -1 * Y,
-                                        label: H,
+                                        label: A,
                                         major: a.major,
                                         textBaseline: E,
-                                        textAlign: A
+                                        textAlign: H
                                     })
                                 }
                             }), i.each(S, function(e) {
@@ -9398,11 +9398,11 @@ webpackJsonp([93], {
                                 }
                             }), h.display) {
                             var j, O, P = 0,
-                                H = s(h) / 2;
-                            if (p) j = t.left + (t.right - t.left) / 2, O = "bottom" === r.position ? t.bottom - H - D.bottom : t.top + H + D.top;
+                                A = s(h) / 2;
+                            if (p) j = t.left + (t.right - t.left) / 2, O = "bottom" === r.position ? t.bottom - A - D.bottom : t.top + A + D.top;
                             else {
-                                var A = "left" === r.position;
-                                j = A ? t.left + H + D.top : t.right - H - D.top, O = t.top + (t.bottom - t.top) / 2, P = A ? -.5 * Math.PI : .5 * Math.PI
+                                var H = "left" === r.position;
+                                j = H ? t.left + A + D.top : t.right - A - D.top, O = t.top + (t.bottom - t.top) / 2, P = H ? -.5 * Math.PI : .5 * Math.PI
                             }
                             o.save(), o.translate(j, O), o.rotate(P), o.textAlign = "center", o.textBaseline = "middle", o.fillStyle = L, o.font = k.font, o.fillText(h.labelString, 0, 0), o.restore()
                         }
@@ -11642,8 +11642,8 @@ webpackJsonp([93], {
         }! function(e) {
             e.OpenDatePicker = "open_date_picker", e.VisitPreviousDateRange = "visit_previous_date_range", e.VisitNextDateRange = "visit_next_date_range", e.ExportDataRevenue = "export_data_revenue", e.ExportDataStream = "export_data_stream", e.ViewDetailsReferrers = "view_details_referrers", e.ViewDetailsClips = "view_details_clips", e.TopStreamsSelectAvgViewers = "topstreams_select_avg_viewers", e.TopStreamsSelectNewFollowers = "topstreams_select_new_followers", e.TopStreamsSelectNewSubscribers = "topstreams_select_new_subscribers", e.TopStreamsStream = "topstreams_stream", e.TopClipsClip = "topclips_clip", e.EmailMeMySubs = "email_me_my_subs", e.EmailToSubs = "email_to_subs"
         }(T || (T = {}));
-        var H = a("ylrR"),
-            A = a("9uzc"),
+        var A = a("ylrR"),
+            H = a("9uzc"),
             E = a("u4Vk"),
             F = {
                 "data-test-selector": "time-range"
@@ -11676,7 +11676,7 @@ webpackJsonp([93], {
                         t = this.props.urlStore.params;
                     return i.createElement(b._8, {
                         position: b._15.Relative
-                    }, i.createElement(H.a, {
+                    }, i.createElement(A.a, {
                         onOpen: this.handleDatePickerOpen,
                         control: function(a) {
                             var n = a.toggle;
@@ -11684,7 +11684,7 @@ webpackJsonp([93], {
                                 padding: {
                                     bottom: 2
                                 }
-                            }, i.createElement(A.a, {
+                            }, i.createElement(H.a, {
                                 previousPath: e.pathWithShiftedInterval(-1),
                                 nextPath: e.pathWithShiftedInterval(1),
                                 onPrevious: e.handlePrevious,
@@ -12860,6 +12860,27 @@ webpackJsonp([93], {
                     }), this.datesAsNumbers.map(function(e) {
                         return n.get(e) || 0
                     })
+                }, e.prototype.ratio = function(e, t) {
+                    var a = this,
+                        n = new Map;
+                    return e.forEach(function(e) {
+                        var r = t(e),
+                            i = r.numerator,
+                            s = r.denominator,
+                            o = r.date,
+                            l = a.startOf(o).getTime(),
+                            d = n.get(l);
+                        d || (d = {
+                            numerator: 0,
+                            denominator: 0
+                        }, n.set(l, d)), d.numerator += i, d.denominator += s
+                    }), this.datesAsNumbers.map(function(e) {
+                        var t = n.get(e) || {
+                            numerator: 0,
+                            denominator: 1
+                        };
+                        return Math.round(t.numerator / t.denominator)
+                    })
                 }, Object.defineProperty(e.prototype, "isByDay", {
                     get: function() {
                         return this.aggregationInterval === we.a.Day
@@ -12952,7 +12973,7 @@ webpackJsonp([93], {
                     var e = this;
                     return i.createElement(b._8, {
                         position: b._15.Relative
-                    }, i.createElement(H.a, {
+                    }, i.createElement(A.a, {
                         control: function(e) {
                             var t = e.toggle;
                             return i.createElement(b._8, {
@@ -12985,14 +13006,14 @@ webpackJsonp([93], {
                     }))
                 }, t
             }(i.Component),
-            He = {
+            Ae = {
                 "data-test-selector": "current-chart"
             },
-            Ae = function(e) {
+            He = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.chart = function(e) {
-                        return i.createElement(e.definition.Chart, r.__assign({}, He, {
+                        return i.createElement(e.definition.Chart, r.__assign({}, Ae, {
                             analyticsResponse: t.props.analyticsResponse,
                             aggregation: e.aggregation
                         }))
@@ -13360,7 +13381,7 @@ webpackJsonp([93], {
                     return i.createElement(Ue.a, null, i.createElement(I, {
                         urlStore: a,
                         onDateSelect: this.handleDateSelect
-                    }), i.createElement(Ae, {
+                    }), i.createElement(He, {
                         channel: r,
                         urlStore: a,
                         analyticsResponse: n,
@@ -14690,21 +14711,21 @@ webpackJsonp([93], {
                         });
                         var P = Math.max(Y - x, 0);
                         x += P, C += Math.max(S - C, 0);
-                        var H = Math.max(w - j, 0);
-                        j += H, O += Math.max(T - O, 0);
-                        var A = i - j - O,
+                        var A = Math.max(w - j, 0);
+                        j += A, O += Math.max(T - O, 0);
+                        var H = i - j - O,
                             E = r - x - C;
-                        E === L && A === k || (n.each(m, function(e) {
-                            e.height = A
+                        E === L && H === k || (n.each(m, function(e) {
+                            e.height = H
                         }), n.each(h, function(e) {
-                            e.height = A
+                            e.height = H
                         }), n.each(_, function(e) {
                             e.fullWidth || (e.width = E)
                         }), n.each(p, function(e) {
                             e.fullWidth || (e.width = E)
-                        }), k = A, L = E);
+                        }), k = H, L = E);
                         var F = l + P,
-                            R = u + H;
+                            R = u + A;
                         n.each(m.concat(_), I), F += L, R += k, n.each(h, I), n.each(p, I), e.chartArea = {
                             left: x,
                             top: j,
@@ -17457,7 +17478,8 @@ webpackJsonp([93], {
                                             maxTicksLimit: 6,
                                             fontColor: c,
                                             fontSize: 10,
-                                            padding: 5
+                                            padding: 5,
+                                            callback: t.formatYAxis
                                         },
                                         gridLines: {
                                             borderDash: [5, 5],
@@ -17509,6 +17531,8 @@ webpackJsonp([93], {
                             month: "short",
                             day: "numeric"
                         })
+                    }, t.formatYAxis = function(e) {
+                        return t.props.formatYAxis ? t.props.formatYAxis(e) : e
                     }, t.handleDatasetClick = function(e, a) {
                         if (t.props.onDatasetClick) return t.props.onDatasetClick(e, a)
                     }, t.formatTooltipTitle = function(e) {
@@ -17646,6 +17670,7 @@ webpackJsonp([93], {
                         formatTooltipLabel: this.props.formatTooltipLabel,
                         formatTooltipTitle: this.formatTooltipTitle,
                         formatXAxis: this.props.aggregation.formatShortDateFromLabel,
+                        formatYAxis: this.props.formatYAxis,
                         onDatasetClick: this.handleDatasetClick
                     })) : i.createElement(M, null)
                 }, t
@@ -17654,19 +17679,24 @@ webpackJsonp([93], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
-                        return e.commercialLengthTotal / 60
+                        return e.commercialLengthTotal
                     }, t.aggregateData = function(e) {
                         return t.props.aggregation.sum(e, function(e) {
                             return {
-                                value: e.commercialLengthTotal / 60,
+                                value: e.commercialLengthTotal,
                                 date: e.interval.start
                             }
                         })
                     }, t.formatTooltipLabel = function(e) {
-                        var t = 60 * e.value;
+                        var t = e.value;
                         return Object(n.d)("{adTime} Ad Breaks", {
                             adTime: Object(s.b)(t, s.a.HumanizedShort)
                         }, "ChannelAnalyticsAdBreaks")
+                    }, t.formatYAxis = function(e) {
+                        var t = Number(e);
+                        if (isNaN(t)) return e;
+                        var a = Math.floor(t);
+                        return Object(s.b)(a, s.a.HumanizedShort)
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
@@ -17678,11 +17708,54 @@ webpackJsonp([93], {
                             getDataFromSession: this.getDataFromSession,
                             aggregateDataFromSessions: this.aggregateData
                         }],
-                        formatTooltipLabel: this.formatTooltipLabel
+                        formatTooltipLabel: this.formatTooltipLabel,
+                        formatYAxis: this.formatYAxis
                     })
                 }, t
             }(i.Component),
-            k = function(e) {
+            k = 60,
+            D = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getDataFromSession = function(e) {
+                        var t = Object(b.a)(e.interval) / k;
+                        return t && Math.round(e.commercialLengthTotal / t)
+                    }, t.aggregateData = function(e) {
+                        return t.props.aggregation.ratio(e, function(e) {
+                            var t = Object(b.a)(e.interval) / k;
+                            return {
+                                numerator: e.commercialLengthTotal,
+                                denominator: t,
+                                date: e.interval.start
+                            }
+                        })
+                    }, t.formatTooltipLabel = function(e) {
+                        var t = e.value;
+                        return Object(n.d)("{adTime} Ad Time Per Hour", {
+                            adTime: Object(s.b)(t, s.a.HumanizedShort)
+                        }, "ChannelAnalyticsAdTimePerHour")
+                    }, t.formatYAxis = function(e) {
+                        var t = Number(e);
+                        if (isNaN(t)) return e;
+                        var a = Math.floor(t);
+                        return Object(s.b)(a, s.a.HumanizedShort)
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return i.createElement(v, {
+                        streamSessionsResponse: this.props.analyticsResponse.streamSessions,
+                        aggregation: this.props.aggregation,
+                        datasetBuilders: [{
+                            label: Object(n.d)("Ad Time Per Hour", "ChannelAnalyticsAdTimePerHour"),
+                            getDataFromSession: this.getDataFromSession,
+                            aggregateDataFromSessions: this.aggregateData
+                        }],
+                        formatTooltipLabel: this.formatTooltipLabel,
+                        formatYAxis: this.formatYAxis
+                    })
+                }, t
+            }(i.Component),
+            Y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatTooltipLabel = function(e) {
@@ -17716,7 +17789,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            D = function(e) {
+            S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatTooltipLabel = function(e) {
@@ -17749,7 +17822,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            Y = function(e) {
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
@@ -17782,7 +17855,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            S = function(e) {
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
@@ -17815,7 +17888,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            w = function(e) {
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatTooltipLabel = function(e) {
@@ -17894,7 +17967,7 @@ webpackJsonp([93], {
                     }
                 }, t
             }(i.Component),
-            T = function(e) {
+            C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
@@ -17926,7 +17999,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            x = function(e) {
+            j = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
@@ -17958,7 +18031,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            C = function(e) {
+            O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
@@ -17990,7 +18063,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            j = function(e) {
+            P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
@@ -18022,7 +18095,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            O = function(e) {
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
@@ -18053,7 +18126,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            P = function(e) {
+            H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatTooltipLabel = function(e) {
@@ -18119,8 +18192,8 @@ webpackJsonp([93], {
                     }
                 }, t
             }(i.Component),
-            H = a("dNsn"),
-            A = function(e) {
+            E = a("dNsn"),
+            F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatTooltipLabel = function(e) {
@@ -18144,7 +18217,7 @@ webpackJsonp([93], {
                                     void 0 === a[r] && (a[r] = 0), a[r] += n.count
                                 }
                             }), Object.keys(a).map(function(e) {
-                                return Object(H.a)(Number(e), a[e])
+                                return Object(E.a)(Number(e), a[e])
                             })
                         }
                     }, t
@@ -18188,8 +18261,8 @@ webpackJsonp([93], {
                     }
                 }, t
             }(i.Component),
-            E = a("yiqh"),
-            F = function(e) {
+            R = a("yiqh"),
+            W = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDataFromSession = function(e) {
@@ -18203,7 +18276,7 @@ webpackJsonp([93], {
                         })
                     }, t.formatTooltipLabel = function(e) {
                         var t = Math.floor(e.value);
-                        return Object(E.a)(t)
+                        return Object(R.a)(t)
                     }, t.formatTooltipTitle = function(e) {
                         if (t.props.aggregation.isByDay) {
                             var a = new Date(Number(e.label));
@@ -18214,6 +18287,11 @@ webpackJsonp([93], {
                             })
                         }
                         return t.props.aggregation.formatDateFromLabel(e.label)
+                    }, t.formatYAxis = function(e) {
+                        var t = Number(e);
+                        if (isNaN(t)) return e;
+                        var a = Math.floor(60 * t);
+                        return Object(s.b)(a, s.a.HumanizedShort)
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
@@ -18222,6 +18300,7 @@ webpackJsonp([93], {
                         aggregation: this.props.aggregation,
                         formatTooltipLabel: this.formatTooltipLabel,
                         formatTooltipTitle: this.formatTooltipTitle,
+                        formatYAxis: this.formatYAxis,
                         datasetBuilders: [{
                             label: Object(n.d)("Live Views", "ChannelAnalyticsTimeStreamed"),
                             getDataFromSession: this.getDataFromSession,
@@ -18230,34 +18309,34 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            R = a("HW6M"),
-            W = a("F8kA"),
-            I = (a("fnik"), {
+            I = a("HW6M"),
+            z = a("F8kA"),
+            N = (a("fnik"), {
                 "data-test-selector": "up-trend-indicator"
             }),
-            z = {
+            V = {
                 "data-test-selector": "down-trend-indicator"
             },
-            N = {
+            B = {
                 "data-test-selector": "tab-selector"
             },
-            V = function(e) {
+            J = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    var e = R("top-stats-tab", {
+                    var e = I("top-stats-tab", {
                         "top-stats-tab--active": this.props.isActive
                     });
                     return i.createElement(u._8, r.__assign({
                         className: e,
                         display: u.R.Flex,
                         flexGrow: 1
-                    }, N), i.createElement(u._2, {
+                    }, B), i.createElement(u._2, {
                         flexGrow: 1,
                         flexDirection: u.T.Column,
                         textAlign: u._45.Center
-                    }, i.createElement(W.a, {
+                    }, i.createElement(z.a, {
                         onClick: this.props.onClick,
                         to: this.props.linkTo,
                         className: "top-stats-tab__link",
@@ -18290,7 +18369,7 @@ webpackJsonp([93], {
                     }, i.createElement(u._24, r.__assign({
                         asset: u._25.GlyphArrUp,
                         type: u._26.Success
-                    }, I))) : this.props.trend < 0 ? i.createElement(u._8, {
+                    }, N))) : this.props.trend < 0 ? i.createElement(u._8, {
                         display: u.R.Inline,
                         margin: {
                             left: .5
@@ -18298,10 +18377,10 @@ webpackJsonp([93], {
                     }, i.createElement(u._24, r.__assign({
                         asset: u._25.GlyphArrDown,
                         type: u._26.Warn
-                    }, z))) : null : null
+                    }, V))) : null : null
                 }, t
             }(i.Component),
-            B = function(e) {
+            U = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18309,7 +18388,7 @@ webpackJsonp([93], {
                     var e, t = this.adBreaks,
                         a = this.previousAdBreaks,
                         r = this.props.analyticsResponse.streamSessions.sessions;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(s.b)(t, s.a.HumanizedShort), i.createElement(V, {
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(s.b)(t, s.a.HumanizedShort), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Ad Breaks", "ChannelAnalyticsTopStats"),
@@ -18335,7 +18414,45 @@ webpackJsonp([93], {
                     configurable: !0
                 }), t
             }(i.Component),
-            J = function(e) {
+            G = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e, t = this.adTimePerHour,
+                        a = this.previousAdTimePerHour,
+                        r = this.props.analyticsResponse.streamSessions.sessions;
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(s.b)(t, s.a.HumanizedShort), i.createElement(J, {
+                        title: e,
+                        trend: r.length ? Math.sign(t - a) : 0,
+                        subtitle: Object(n.d)("Ad Time Per Hour", "ChannelAnalyticsTopStats"),
+                        linkTo: this.props.linkTo,
+                        isActive: this.props.isActive,
+                        onClick: this.props.onClick
+                    }, this.props.children)
+                }, Object.defineProperty(t.prototype, "adTimePerHour", {
+                    get: function() {
+                        var e = 0,
+                            t = 0;
+                        return (this.props.analyticsResponse.streamSessions.sessions || []).forEach(function(a) {
+                            e += a.commercialLengthTotal, t += Object(b.a)(a.interval) / 60
+                        }), t && Math.round(e / t)
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "previousAdTimePerHour", {
+                    get: function() {
+                        var e = 0,
+                            t = 0;
+                        return (this.props.analyticsResponse.streamSessions.lookbackSessions || []).forEach(function(a) {
+                            e += a.commercialLengthTotal, t += Object(b.a)(a.interval) / 60
+                        }), t && Math.round(e / t)
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t
+            }(i.Component),
+            q = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18343,7 +18460,7 @@ webpackJsonp([93], {
                     var e, t = this.averageUniqueViewers(this.props.analyticsResponse.streamSessions.sessions || []),
                         a = this.averageUniqueViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
                         r = this.props.analyticsResponse.streamSessions.sessions;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), i.createElement(V, {
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Average Unique Viewers", "ChannelAnalyticsTopStats"),
@@ -18365,7 +18482,7 @@ webpackJsonp([93], {
                 }, t
             }(i.Component);
 
-        function U(e, t) {
+        function K(e, t) {
             var a = 0,
                 n = 0;
             return e.forEach(function(e) {
@@ -18373,7 +18490,7 @@ webpackJsonp([93], {
                 n += r.weight * r.value, a += r.weight
             }), 0 === a ? 0 : n / a
         }
-        var G = function(e) {
+        var Q = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18381,7 +18498,7 @@ webpackJsonp([93], {
                     var e, t = this.averageViewers(this.props.analyticsResponse.streamSessions.sessions || []),
                         a = this.averageViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
                         r = this.props.analyticsResponse.streamSessions.sessions;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), i.createElement(V, {
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Average Viewers", "ChannelAnalyticsTopStats"),
@@ -18390,7 +18507,7 @@ webpackJsonp([93], {
                         onClick: this.props.onClick
                     }, this.props.children)
                 }, t.prototype.averageViewers = function(e) {
-                    return U(e, function(e) {
+                    return K(e, function(e) {
                         return {
                             weight: Object(b.a)(e.interval),
                             value: e.avgViewerCount
@@ -18405,7 +18522,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            q = function(e) {
+            X = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18415,7 +18532,7 @@ webpackJsonp([93], {
                         r = this.props.analyticsResponse.streamSessions.sessions;
                     return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t, {
                         maximumFractionDigits: 0
-                    }), i.createElement(V, {
+                    }), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Average Chat Messages", "ChannelAnalyticsTopStats"),
@@ -18424,7 +18541,7 @@ webpackJsonp([93], {
                         onClick: this.props.onClick
                     }, this.props.children)
                 }, t.prototype.averageMessages = function(e) {
-                    return U(e, function(e) {
+                    return K(e, function(e) {
                         return {
                             weight: Object(b.a)(e.interval),
                             value: e.messagesTotal
@@ -18432,7 +18549,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            K = function(e) {
+            Z = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18442,7 +18559,7 @@ webpackJsonp([93], {
                         r = this.props.analyticsResponse.streamSessions.sessions;
                     return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t, {
                         maximumFractionDigits: 0
-                    }), i.createElement(V, {
+                    }), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Average Chatters", "ChannelAnalyticsTopStats"),
@@ -18451,7 +18568,7 @@ webpackJsonp([93], {
                         onClick: this.props.onClick
                     }, this.props.children)
                 }, t.prototype.averageUniqueChatters = function(e) {
-                    return U(e, function(e) {
+                    return K(e, function(e) {
                         return {
                             weight: Object(b.a)(e.interval),
                             value: e.uniqueChatters
@@ -18459,7 +18576,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component),
-            Q = function(e) {
+            $ = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18469,7 +18586,7 @@ webpackJsonp([93], {
                         r = this.props.analyticsResponse.streamSessions.sessions;
                     return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(a, {
                         maximumFractionDigits: 0
-                    }), i.createElement(V, {
+                    }), i.createElement(J, {
                         title: e,
                         subtitle: Object(n.d)("Clip Views", "ChannelAnalyticsTopStats"),
                         linkTo: this.props.linkTo,
@@ -18495,7 +18612,7 @@ webpackJsonp([93], {
                     configurable: !0
                 }), t
             }(i.Component),
-            X = function(e) {
+            ee = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18503,7 +18620,7 @@ webpackJsonp([93], {
                     var e, t = this.clipsCreated,
                         a = this.previousClipsCreated,
                         r = this.props.analyticsResponse.streamSessions.sessions;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t), i.createElement(V, {
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Clips Created", "ChannelAnalyticsTopStats"),
@@ -18529,7 +18646,7 @@ webpackJsonp([93], {
                     configurable: !0
                 }), t
             }(i.Component),
-            Z = function(e) {
+            te = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18537,7 +18654,7 @@ webpackJsonp([93], {
                     var e, t = this.liveViews,
                         a = this.previousLiveViews,
                         r = this.props.analyticsResponse.streamSessions.sessions;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t), i.createElement(V, {
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Live Views", "ChannelAnalyticsTopStats"),
@@ -18563,7 +18680,7 @@ webpackJsonp([93], {
                     configurable: !0
                 }), t
             }(i.Component),
-            $ = function(e) {
+            ae = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18571,7 +18688,7 @@ webpackJsonp([93], {
                     var e, t = this.maxViewers,
                         a = this.previousMaxViewers,
                         r = this.props.analyticsResponse.streamSessions.sessions;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t), i.createElement(V, {
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Max Viewers", "ChannelAnalyticsTopStats"),
@@ -18597,7 +18714,7 @@ webpackJsonp([93], {
                     configurable: !0
                 }), t
             }(i.Component),
-            ee = function(e) {
+            ne = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18605,7 +18722,7 @@ webpackJsonp([93], {
                     var e, t = this.minutesWatched,
                         a = this.previousMinutesWatched,
                         r = this.props.analyticsResponse.streamSessions.sessions;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t), i.createElement(V, {
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(n.e)(t), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Minutes Watched", "ChannelAnalyticsTopStats"),
@@ -18631,7 +18748,7 @@ webpackJsonp([93], {
                     configurable: !0
                 }), t
             }(i.Component),
-            te = function(e) {
+            re = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18646,7 +18763,7 @@ webpackJsonp([93], {
                             followersDiff: Math.abs(e),
                             sign: t
                         }, "ChannelAnalyticsTopStats")
-                    }(t), i.createElement(V, {
+                    }(t), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("New Followers", "ChannelAnalyticsTopStats"),
@@ -18672,15 +18789,15 @@ webpackJsonp([93], {
                     configurable: !0
                 }), t
             }(i.Component);
-        var ae, ne, re = a("jqvb"),
-            ie = (a("w5Qh"), function(e) {
+        var ie, se, oe = a("jqvb"),
+            le = (a("w5Qh"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.analyticsResponse.revenue.lookbackStreams.getTotalAmountAllStreams(),
                         t = this.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams();
-                    return i.createElement(V, {
+                    return i.createElement(J, {
                         title: this.renderTitle(t),
                         trend: t ? Math.sign(t - e) : 0,
                         subtitle: Object(n.d)("Revenue", "ChannelAnalyticsTopStats"),
@@ -18689,7 +18806,7 @@ webpackJsonp([93], {
                         onClick: this.props.onClick
                     }, this.props.children)
                 }, t.prototype.renderTitle = function(e) {
-                    return this.props.analyticsResponse.revenue.isLoading || !this.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() ? "—" : Object(re.a)(e, function(e, t) {
+                    return this.props.analyticsResponse.revenue.isLoading || !this.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() ? "—" : Object(oe.a)(e, function(e, t) {
                         switch (e.type) {
                             case "currency":
                                 return i.createElement(u.Q, {
@@ -18714,7 +18831,7 @@ webpackJsonp([93], {
                     })
                 }, t
             }(i.Component)),
-            se = function(e) {
+            de = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18723,7 +18840,7 @@ webpackJsonp([93], {
                         a = this.props.analyticsResponse.subCounts.lookbackStreams.getTotalSubCount();
                     return e = this.props.analyticsResponse.subCounts.isLoading || !t ? "—" : Object(n.e)(t, {
                         maximumFractionDigits: 0
-                    }), i.createElement(V, {
+                    }), i.createElement(J, {
                         title: e,
                         trend: t ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Subscriptions", "ChannelAnalyticsTopStats"),
@@ -18733,7 +18850,7 @@ webpackJsonp([93], {
                     }, this.props.children)
                 }, t
             }(i.Component),
-            oe = function(e) {
+            ue = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -18741,7 +18858,7 @@ webpackJsonp([93], {
                     var e, t = this.timeStreamed,
                         a = this.previousTimeStreamed,
                         r = this.props.analyticsResponse.streamSessions.sessions;
-                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(E.a)(t), i.createElement(V, {
+                    return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(R.a)(t), i.createElement(J, {
                         title: e,
                         trend: r.length ? Math.sign(t - a) : 0,
                         subtitle: Object(n.d)("Time Streamed", "ChannelAnalyticsTopStats"),
@@ -18768,114 +18885,121 @@ webpackJsonp([93], {
                 }), t
             }(i.Component);
         ! function(e) {
-            e.AdBreaks = "ad-breaks", e.AverageUniqueViewers = "avg-unique-viewers", e.AverageViewers = "avg-viewers", e.ChatMessages = "avg-chat-messages", e.Chatters = "avg-chatters", e.ClipsCreated = "clips-created", e.ClipViews = "clip-views", e.LiveViews = "live-views", e.MaxViewers = "max-viewers", e.MinutesWatched = "minutes-watched", e.NewFollowers = "new-followers", e.Revenue = "revenue", e.Subscriptions = "subscriptions", e.TimeStreamed = "time-streamed"
-        }(ae || (ae = {})),
+            e.AdBreaks = "ad-breaks", e.AdTimePerHour = "ad-time-per-hour", e.AverageUniqueViewers = "avg-unique-viewers", e.AverageViewers = "avg-viewers", e.ChatMessages = "avg-chat-messages", e.Chatters = "avg-chatters", e.ClipsCreated = "clips-created", e.ClipViews = "clip-views", e.LiveViews = "live-views", e.MaxViewers = "max-viewers", e.MinutesWatched = "minutes-watched", e.NewFollowers = "new-followers", e.Revenue = "revenue", e.Subscriptions = "subscriptions", e.TimeStreamed = "time-streamed"
+        }(ie || (ie = {})),
         function(e) {
             e[e.StreamSummaries = 0] = "StreamSummaries", e[e.Revenue = 1] = "Revenue"
-        }(ne || (ne = {}));
-        var le, de = ((le = {})[ae.AverageViewers] = {
+        }(se || (se = {}));
+        var ce, me = ((ce = {})[ie.AverageViewers] = {
                 title: function() {
                     return Object(n.d)("Average Viewers", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: G,
-                Chart: D,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.LiveViews] = {
+                Tab: Q,
+                Chart: S,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.LiveViews] = {
                 title: function() {
                     return Object(n.d)("Live Views", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: Z,
-                Chart: x,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.NewFollowers] = {
+                Tab: te,
+                Chart: j,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.NewFollowers] = {
                 title: function() {
                     return Object(n.d)("New Followers", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: te,
-                Chart: O,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.Subscriptions] = {
+                Tab: re,
+                Chart: A,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.Subscriptions] = {
                 title: function() {
                     return Object(n.d)("Subscriptions", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: se,
-                Chart: A,
-                dataGroup: ne.Revenue
-            }, le[ae.Revenue] = {
+                Tab: de,
+                Chart: F,
+                dataGroup: se.Revenue
+            }, ce[ie.Revenue] = {
                 title: function() {
                     return Object(n.d)("Revenue", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: ie,
-                Chart: P,
-                dataGroup: ne.Revenue
-            }, le[ae.MinutesWatched] = {
+                Tab: le,
+                Chart: H,
+                dataGroup: se.Revenue
+            }, ce[ie.MinutesWatched] = {
                 title: function() {
                     return Object(n.d)("Minutes Watched", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: ee,
-                Chart: j,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.TimeStreamed] = {
+                Tab: ne,
+                Chart: P,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.TimeStreamed] = {
                 title: function() {
                     return Object(n.d)("Time Streamed", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: oe,
-                Chart: F,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.MaxViewers] = {
+                Tab: ue,
+                Chart: W,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.MaxViewers] = {
                 title: function() {
                     return Object(n.d)("Max Viewers", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: $,
-                Chart: C,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.AverageUniqueViewers] = {
+                Tab: ae,
+                Chart: O,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.AverageUniqueViewers] = {
                 title: function() {
                     return Object(n.d)("Average Unique Viewers", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: J,
-                Chart: k,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.Chatters] = {
+                Tab: q,
+                Chart: Y,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.Chatters] = {
                 title: function() {
                     return Object(n.d)("Average Chatters", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: K,
-                Chart: S,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.ChatMessages] = {
+                Tab: Z,
+                Chart: T,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.ChatMessages] = {
                 title: function() {
                     return Object(n.d)("Average Chat Messages", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: q,
-                Chart: Y,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.ClipsCreated] = {
+                Tab: X,
+                Chart: w,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.ClipsCreated] = {
                 title: function() {
                     return Object(n.d)("Clips Created", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: X,
-                Chart: T,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.ClipViews] = {
+                Tab: ee,
+                Chart: C,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.ClipViews] = {
                 title: function() {
                     return Object(n.d)("Clip Views", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: Q,
-                Chart: w,
-                dataGroup: ne.StreamSummaries
-            }, le[ae.AdBreaks] = {
+                Tab: $,
+                Chart: x,
+                dataGroup: se.StreamSummaries
+            }, ce[ie.AdBreaks] = {
                 title: function() {
                     return Object(n.d)("Ad Breaks", "ChannelAnalyticsTopStatsDropdown")
                 },
-                Tab: B,
+                Tab: U,
                 Chart: L,
-                dataGroup: ne.StreamSummaries
-            }, le),
-            ue = [ae.AverageViewers, ae.LiveViews, ae.NewFollowers, ae.Subscriptions, ae.Revenue],
-            ce = [ae.AverageViewers, ae.LiveViews, ae.NewFollowers, ae.ChatMessages, ae.MinutesWatched],
-            me = [ae.AverageViewers, ae.LiveViews, ae.NewFollowers, ae.MinutesWatched, ae.TimeStreamed, ae.MaxViewers, ae.AverageUniqueViewers, ae.Chatters, ae.ChatMessages, ae.ClipsCreated, ae.ClipViews, ae.AdBreaks],
-            he = [{
+                dataGroup: se.StreamSummaries
+            }, ce[ie.AdTimePerHour] = {
+                title: function() {
+                    return Object(n.d)("Ad Time Per Hour", "ChannelAnalyticsTopStatsDropdown")
+                },
+                Tab: G,
+                Chart: D,
+                dataGroup: se.StreamSummaries
+            }, ce),
+            he = [ie.AverageViewers, ie.LiveViews, ie.NewFollowers, ie.Subscriptions, ie.Revenue],
+            _e = [ie.AverageViewers, ie.LiveViews, ie.NewFollowers, ie.ChatMessages, ie.MinutesWatched],
+            pe = [ie.AverageViewers, ie.LiveViews, ie.NewFollowers, ie.MinutesWatched, ie.TimeStreamed, ie.MaxViewers, ie.AverageUniqueViewers, ie.Chatters, ie.ChatMessages, ie.ClipsCreated, ie.ClipViews, ie.AdBreaks, ie.AdTimePerHour],
+            fe = [{
                 defaultPrice: 499,
                 productID: "",
                 timeseries: []
@@ -18889,21 +19013,21 @@ webpackJsonp([93], {
                 timeseries: []
             }];
         a.d(t, !1, function() {
-            return ae
+            return ie
         }), a.d(t, "b", function() {
-            return ne
+            return se
         }), a.d(t, "g", function() {
-            return de
+            return me
         }), a.d(t, "d", function() {
             return 5
         }), a.d(t, "a", function() {
-            return ue
-        }), a.d(t, "e", function() {
-            return ce
-        }), a.d(t, "f", function() {
-            return me
-        }), a.d(t, "c", function() {
             return he
+        }), a.d(t, "e", function() {
+            return _e
+        }), a.d(t, "f", function() {
+            return pe
+        }), a.d(t, "c", function() {
+            return fe
         })
     },
     tkWw: function(e, t, a) {
@@ -20201,4 +20325,4 @@ webpackJsonp([93], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-analytics-185df81b8bb673e06fab7c0ac5e3a047.js.map
+//# sourceMappingURL=pages.channel-analytics-920c42cbee06ea4314b050a3d13d1b3e.js.map

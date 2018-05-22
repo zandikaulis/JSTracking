@@ -1,4 +1,4 @@
-webpackJsonp([100], {
+webpackJsonp([99], {
     "+GT7": function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -7043,6 +7043,9 @@ webpackJsonp([100], {
                 code: "pt",
                 label: "Português"
             }, {
+                code: "ro",
+                label: "Română"
+            }, {
                 code: "ru",
                 label: "Русский"
             }, {
@@ -8007,7 +8010,7 @@ webpackJsonp([100], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(130).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -8019,7 +8022,7 @@ webpackJsonp([100], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(129).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -8031,7 +8034,7 @@ webpackJsonp([100], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(128).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -8043,7 +8046,7 @@ webpackJsonp([100], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(127).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -8055,7 +8058,7 @@ webpackJsonp([100], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(126).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -8067,7 +8070,7 @@ webpackJsonp([100], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(126).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(125).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -14297,4 +14300,4 @@ webpackJsonp([100], {
     },
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-success-075942cb1e9909e06b17716daef7555a.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-success-fe8c0da3707b844cec766d93fe3b651a.js.map

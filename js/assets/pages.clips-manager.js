@@ -1,4 +1,4 @@
-webpackJsonp([89], {
+webpackJsonp([88], {
     "1OO3": function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -683,42 +683,41 @@ webpackJsonp([89], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.props.data.clip,
-                        n = t && t.curator && t.curator.login === this.props.userLogin,
-                        i = "";
+                        n = "";
                     if (t && t.videoQualities) {
-                        var r = t.videoQualities[0];
-                        i = r.sourceURL
+                        var i = t.videoQualities[0];
+                        n = i.sourceURL
                     }
-                    var a = this.props,
-                        c = a.broadcasterId,
-                        u = a.broadcasterLogin,
-                        p = a.forceShow;
+                    var r = this.props,
+                        a = r.broadcasterId,
+                        c = r.broadcasterLogin,
+                        u = r.forceShow;
                     return s.createElement(l.a, {
                         ownerLogin: this.props.broadcasterLogin,
                         permittedRoles: {
                             editor: !0,
                             staff: !0
                         }
-                    }, function(r) {
-                        var a = r.permitted;
-                        return i && (a || n || p) ? s.createElement(o.a, {
+                    }, function(i) {
+                        var r = i.permitted;
+                        return n && (r || u) ? s.createElement(o.a, {
                             type: o.b.Download,
                             text: e.props.slug,
-                            url: i,
-                            onShareClick: t ? Object(d.c)(t.id, t.game && t.game.name, c, u, e.props.pageType) : void 0
+                            url: n,
+                            onShareClick: t ? Object(d.c)(t.id, t.game && t.game.name, a, c, e.props.pageType) : void 0
                         }) : null
                     })
                 }, t
             }(s.Component),
             m = Object(c.a)(u)(p);
-        var g = Object(i.b)(function(e) {
+        var h = Object(i.b)(function(e) {
             var t = Object(r.c)(e);
             return {
                 userLogin: t ? t.login : ""
             }
         })(m);
         n.d(t, "a", function() {
-            return g
+            return h
         })
     },
     QIXk: function(e, t, n) {
@@ -744,7 +743,7 @@ webpackJsonp([89], {
                     location: r
                 })
             },
-            g = function(e, t, n, i, r) {
+            h = function(e, t, n, i, r) {
                 var a = Date.now() / 1e3;
                 o.o.tracking.track(p.SpadeEventType.ClipEdit, {
                     channel_id: e,
@@ -758,7 +757,7 @@ webpackJsonp([89], {
                     location: r
                 })
             },
-            h = n("CIox");
+            g = n("CIox");
         ! function(e) {
             e.AlreadyPublished = "already_published", e.EditingWindowExpired = "editing_window_expired", e.InvalidSpeedDuration = "invalid_speed_duration", e.InvalidDuration = "invalid_duration", e.InvalidTitle = "invalid_title", e.Unknown = "unknown"
         }(i || (i = {})),
@@ -806,7 +805,7 @@ webpackJsonp([89], {
                                             title: this.props.title
                                         }))];
                                     case 2:
-                                        return (t = r.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (g(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.slug, this.props.title, p.PageviewLocation.ClipsEditing), this.setState({
+                                        return (t = r.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (h(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.slug, this.props.title, p.PageviewLocation.ClipsEditing), this.setState({
                                             publishState: a.Successful
                                         }), this.props.history.push("/create", {
                                             isPostEdit: !0,
@@ -837,7 +836,7 @@ webpackJsonp([89], {
                     name: "publishClip"
                 })], t)
             }(l.Component),
-            y = Object(h.f)(E),
+            y = Object(g.f)(E),
             _ = n("2TZ0"),
             w = {
                 TITLE_INPUT: "cmgr-title-input",
@@ -1230,34 +1229,6 @@ webpackJsonp([89], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
-                                    value: "curator"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "login"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
                                     value: "broadcaster"
                                 },
                                 arguments: [],
@@ -1329,11 +1300,11 @@ webpackJsonp([89], {
             }],
             loc: {
                 start: 0,
-                end: 152
+                end: 131
             }
         };
         n.loc.source = {
-            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\ncurator {\nid\nlogin\n}\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
+            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -1544,11 +1515,11 @@ webpackJsonp([89], {
         ! function(e) {
             e[e.ViewsAscending = 0] = "ViewsAscending", e[e.ViewsDescending = 1] = "ViewsDescending", e[e.CreatedAtAscending = 2] = "CreatedAtAscending", e[e.CreatedAtDescending = 3] = "CreatedAtDescending"
         }(i || (i = {}));
-        var u, p = ((g = {})[i.CreatedAtAscending] = "CREATED_AT_ASC", g[i.CreatedAtDescending] = "CREATED_AT_DESC", g[i.ViewsAscending] = "VIEWS_ASC", g[i.ViewsDescending] = "VIEWS_DESC", g);
+        var u, p = ((h = {})[i.CreatedAtAscending] = "CREATED_AT_ASC", h[i.CreatedAtDescending] = "CREATED_AT_DESC", h[i.ViewsAscending] = "VIEWS_ASC", h[i.ViewsDescending] = "VIEWS_DESC", h);
         ! function(e) {
             e[e.Day = 0] = "Day", e[e.Week = 1] = "Week", e[e.Month = 2] = "Month", e[e.All = 3] = "All"
         }(u || (u = {}));
-        var m, g, h, f = ((h = {})[u.Day] = "LAST_DAY", h[u.Week] = "LAST_WEEK", h[u.Month] = "LAST_MONTH", h[u.All] = "ALL_TIME", h);
+        var m, h, g, f = ((g = {})[u.Day] = "LAST_DAY", g[u.Week] = "LAST_WEEK", g[u.Month] = "LAST_MONTH", g[u.All] = "ALL_TIME", g);
         ! function(e) {
             e[e.Broadcaster = 0] = "Broadcaster", e[e.Curator = 1] = "Curator"
         }(m || (m = {}));
@@ -2541,8 +2512,8 @@ webpackJsonp([89], {
                 }, t
             }(a.Component),
             me = (n("EDaX"), "clips-manager-select-all"),
-            ge = "clips-manager-batch-delete",
-            he = "clips-manager-views-sort",
+            he = "clips-manager-batch-delete",
+            ge = "clips-manager-views-sort",
             fe = "clips-manager-createdat-sort",
             ve = "clips-manager-empty-body",
             be = function(e) {
@@ -2750,7 +2721,7 @@ webpackJsonp([89], {
                         ariaLabel: Object(_.d)("Delete Clip", "ClipsManagerTable"),
                         icon: V._25.Trash,
                         onClick: this.renderBatchDeleteModal,
-                        "data-test-selector": ge
+                        "data-test-selector": he
                     })))));
                     var r = this.props.sort,
                         s = r === i.ViewsAscending || r === i.ViewsDescending,
@@ -2820,8 +2791,8 @@ webpackJsonp([89], {
                     }, a.createElement(V._6, {
                         alpha: !0,
                         onClick: this.toggleViewsSort,
-                        "data-test-selector": he,
-                        "data-a-target": he
+                        "data-test-selector": ge,
+                        "data-a-target": ge
                     }, a.createElement(V._8, {
                         display: V.R.Flex,
                         flexWrap: V.U.NoWrap,
@@ -3799,16 +3770,16 @@ webpackJsonp([89], {
                     })
                 }, t
             }(r.Component),
-            g = Object(u.d)("ClipsModalBanUser")(Object(d.b)(function(e) {
+            h = Object(u.d)("ClipsModalBanUser")(Object(d.b)(function(e) {
                 return {
                     channelID: e.broadcasterID
                 }
             })(m)),
-            h = n("7vx8"),
+            g = n("7vx8"),
             f = n("wnjK");
 
         function v(e) {
-            return Object(h.a)(f, e)
+            return Object(g.a)(f, e)
         }
         var b = n("LnKh"),
             C = (n("lTii"), this),
@@ -3904,7 +3875,7 @@ webpackJsonp([89], {
                     })
                 }, t
             }(r.Component),
-            E = Object(h.a)(b)(v({
+            E = Object(g.a)(b)(v({
                 props: function(e) {
                     return {
                         deleteClip: function(t) {
@@ -4041,7 +4012,7 @@ webpackJsonp([89], {
                         }
                     }
                 }
-            }), Object(h.a)(_, {
+            }), Object(g.a)(_, {
                 props: function(e) {
                     var t = e.data.clip;
                     return t ? {
@@ -4155,7 +4126,7 @@ webpackJsonp([89], {
         n.d(t, "a", function() {
             return c
         }), n.d(t, "b", function() {
-            return g
+            return h
         }), n.d(t, "d", function() {
             return E
         }), n.d(t, "e", function() {
@@ -4709,4 +4680,4 @@ webpackJsonp([89], {
         })), e.exports = i
     }
 });
-//# sourceMappingURL=pages.clips-manager-870d49ca3fb7f30d78429c28a3e48083.js.map
+//# sourceMappingURL=pages.clips-manager-2ef43d7c3ecfdfd07e17b1e9e0640b41.js.map

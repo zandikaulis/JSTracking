@@ -2645,7 +2645,7 @@ webpackJsonp([42], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this.props,
                         n = !1;
-                    if (e.isHidden && !t.isHidden || !e.rightColumnExpanded && t.rightColumnExpanded ? this.disconnect() : (n = e.channelLogin !== t.channelLogin || e.userLogin !== t.userLogin || e.authToken !== t.authToken || !e.isHidden && t.isHidden || e.rightColumnExpanded && !t.rightColumnExpanded) && (this.logger.debug("Reconnecting..."), this.registerCustomLatencyEvents(), this.connect(e), this.setState({
+                    if (e.isHidden && !t.isHidden || !e.rightColumnExpanded && t.rightColumnExpanded && !e.inlineRightColumnExpanded ? this.disconnect() : (n = e.channelLogin !== t.channelLogin || e.userLogin !== t.userLogin || e.authToken !== t.authToken || !e.isHidden && t.isHidden || e.rightColumnExpanded && !t.rightColumnExpanded && !t.inlineRightColumnExpanded) && (this.logger.debug("Reconnecting..."), this.registerCustomLatencyEvents(), this.connect(e), this.setState({
                             hostedChannelLogin: null
                         })), this.props.isBackground && !e.isBackground) {
                         var i = u.l.getOptional("roomsFastChatThresholdOverride");
@@ -2732,7 +2732,7 @@ webpackJsonp([42], {
                         channelID: this.props.channelID
                     }))
                 }, t.prototype.shouldConnectOnMount = function() {
-                    return (this.props.isEmbedded || this.props.isPopout || this.props.rightColumnExpanded) && !this.chatService.disabled
+                    return (this.props.isEmbedded || this.props.isPopout || this.props.rightColumnExpanded || this.props.inlineRightColumnExpanded) && !this.chatService.disabled
                 }, t.prototype.registerCustomLatencyEvents = function() {
                     this.logger.debug("Registering custom latency events"), this.props.latencyTracking.resetCustomEvents(f.a.Chat), this.chatInitialized = this.registerInitEvent(), this.props.latencyTracking.reportCustomEvent(this.chatInitialized), this.shouldConnectOnMount() && (this.chatConnected = this.registerConnectedEvent())
                 }, t.prototype.registerInitEvent = function() {
@@ -2763,6 +2763,7 @@ webpackJsonp([42], {
                     isHidden: e.chat.isHidden,
                     isLoggedIn: Object(r.d)(e),
                     rightColumnExpanded: e.ui.rightColumnExpanded,
+                    inlineRightColumnExpanded: e.ui.inlineRightColumnExpanded,
                     theme: Object(v.a)(e)
                 }
             }, function(e, t) {
@@ -35673,4 +35674,4 @@ webpackJsonp([42], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-events-036b5617b32d162be0b236bb4e1599b6.js.map
+//# sourceMappingURL=pages.channel-events-0f9dd01fbcc4a38804d96e54d7d2f93f.js.map

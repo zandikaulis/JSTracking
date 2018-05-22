@@ -231,7 +231,7 @@ webpackJsonp([67], {
             d = n("tnNl"),
             p = n("Odds"),
             u = s.a.wrap(function() {
-                return n.e(106).then(n.bind(null, "HQb3"))
+                return n.e(105).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             m = function(e) {
                 function t() {
@@ -532,4 +532,4 @@ webpackJsonp([67], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.bits-e6d21e7c7f22977e763754cf6c3947bd.js.map
+//# sourceMappingURL=pages.bits-1c2b9347d278dac07155ad154a10e6ac.js.map

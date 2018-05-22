@@ -1,4 +1,4 @@
-webpackJsonp([98], {
+webpackJsonp([97], {
     "+bIS": function(e, t, n) {
         "use strict";
 
@@ -3781,13 +3781,22 @@ webpackJsonp([98], {
             }))(De),
             Ae = function(e) {
                 function t() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleModerationRoute = function() {
+                        return s.createElement(i.b, {
+                            to: "/" + t.props.match.params.channelName + "/dashboard/settings"
+                        })
+                    }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     return this.props.match.params.channelName === this.props.userLogin || this.props.isStaff ? s.createElement(u.b, null, s.createElement(N._8, {
                         padding: 2,
                         fullHeight: !0
                     }, s.createElement(l.e, null, s.createElement(i.c, {
+                        path: "/:channelName/dashboard/settings/moderation",
+                        exact: !0,
+                        render: this.handleModerationRoute
+                    }), s.createElement(i.c, {
                         path: "/:channelName/dashboard/settings/autohost",
                         exact: !0,
                         component: X
@@ -4756,4 +4765,4 @@ webpackJsonp([98], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-settings-e3aa5afbb8ba98d39d6072598f50aea9.js.map
+//# sourceMappingURL=pages.dashboard-settings-73a888f0042b423faecc41116993055c.js.map

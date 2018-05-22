@@ -3010,6 +3010,13 @@ webpackJsonp([48], {
                 e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open"
             }(i || (i = {}))
     },
+    "5a05": function(e, t, n) {
+        "use strict";
+        var i = n("sADG");
+        n.d(t, "a", function() {
+            return i.a
+        })
+    },
     "6O9f": function(e, t) {},
     "6uxC": function(e, t) {
         var n = {
@@ -4023,7 +4030,7 @@ webpackJsonp([48], {
             }(a.Component));
         n("UKw0");
         var Y = n("+p4h"),
-            X = function(e) {
+            Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4269,7 +4276,7 @@ webpackJsonp([48], {
                     }
                 }), Object(l.d)("SubscribeBalloon")], t)
             }(a.Component),
-            Z = n("4MRZ"),
+            X = n("4MRZ"),
             J = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4355,7 +4362,7 @@ webpackJsonp([48], {
                         size: y.s.Large,
                         direction: v,
                         "data-a-target": "sub-balloon"
-                    }, a.createElement(X, {
+                    }, a.createElement(Z, {
                         authToken: this.props.authToken,
                         channelLogin: this.props.channelLogin || "",
                         inPrimeRegion: e,
@@ -4374,7 +4381,7 @@ webpackJsonp([48], {
                     return e.data && e.data.user && !e.data.loading && !e.data.error
                 }, t.prototype.isSubscriptionProductInvalid = function(e) {
                     return !e.emoteSetID
-                }, t = r.__decorate([Object(u.a)(Z, {
+                }, t = r.__decorate([Object(u.a)(X, {
                     options: function(e) {
                         return {
                             variables: {
@@ -5013,8 +5020,8 @@ webpackJsonp([48], {
                     }), t)))
                 }, t
             }(o.Component)),
-            X = n("mVDO"),
-            Z = n("f8OD"),
+            Z = n("mVDO"),
+            X = n("f8OD"),
             J = (n("D9gI"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -5132,7 +5139,7 @@ webpackJsonp([48], {
                         position: C._15.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, o.createElement(X.a, {
+                    }, o.createElement(Z.a, {
                         slug: this.props.slug,
                         onLoaded: this.onLoaded,
                         playerType: v.b.ClipsEditing,
@@ -5147,7 +5154,7 @@ webpackJsonp([48], {
                     (t || n) && g.o.history.push("/" + e.slug)
                 }, t
             }(o.Component)),
-            ee = Object(f.compose)(Object(b.a)(Z, {
+            ee = Object(f.compose)(Object(b.a)(X, {
                 options: function(e) {
                     return {
                         pollInterval: 1e3,
@@ -7527,12 +7534,12 @@ webpackJsonp([48], {
                 "intellectual property": D.legal,
                 "violating developer agreement": D.legal
             },
-            X = {
+            Z = {
                 selfharm: D.selfharm,
                 harm: D.violence,
                 other: $
             },
-            Z = {
+            X = {
                 CHANNEL_FEED_POST_REPORT: U.content,
                 COMMUNITY_REPORT: U.content,
                 CHAT_REPORT: L.content,
@@ -7552,7 +7559,7 @@ webpackJsonp([48], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        currentCard: t.props.currentCard || Z[t.props.reportContentType] || Q,
+                        currentCard: t.props.currentCard || X[t.props.reportContentType] || Q,
                         prevCards: [],
                         currentSelection: null,
                         prevSelections: [],
@@ -7669,7 +7676,7 @@ webpackJsonp([48], {
                                                 });
                                                 break;
                                             case E.b.Success:
-                                                i = $, X[t] && (i = X[t]), this.state.currentCard.nextCard && (i = this.state.currentCard.nextCard), this.setState({
+                                                i = $, Z[t] && (i = Z[t]), this.state.currentCard.nextCard && (i = this.state.currentCard.nextCard), this.setState({
                                                     currentCard: i,
                                                     prevCards: [],
                                                     prevSelections: [],
@@ -8452,6 +8459,15 @@ webpackJsonp([48], {
         }
     },
     GHQc: function(e, t) {},
+    GSZ7: function(e, t, n) {
+        "use strict";
+        t.b = function() {
+            return i.b.get("gdpr_consent_enabled", !1)
+        }, t.a = function() {
+            return i.b.get("gdpr_disabled_eea_consent", !1)
+        };
+        var i = n("6sO2")
+    },
     HZww: function(e, t, n) {
         "use strict";
         t.c = function(e) {
@@ -10652,7 +10668,7 @@ webpackJsonp([48], {
                     configurable: !0
                 }), t
             }(a.Component)),
-            X = Object(o.compose)(Object(c.a)($, {
+            Z = Object(o.compose)(Object(c.a)($, {
                 name: "offersData",
                 options: function() {
                     return {
@@ -10670,13 +10686,13 @@ webpackJsonp([48], {
                     return !e.firstPageLoaded && !e.ignoreFirstPageLoad
                 }
             }), Object(d.d)("PrimeOfferList"))(Y);
-        var Z = Object(i.b)(function(e) {
+        var X = Object(i.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded
             }
-        })(X);
+        })(Z);
         n.d(t, "a", function() {
-            return Z
+            return X
         })
     },
     M5Tl: function(e, t) {},
@@ -11114,29 +11130,28 @@ webpackJsonp([48], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.props.data.clip,
-                        n = t && t.curator && t.curator.login === this.props.userLogin,
-                        i = "";
+                        n = "";
                     if (t && t.videoQualities) {
-                        var r = t.videoQualities[0];
-                        i = r.sourceURL
+                        var i = t.videoQualities[0];
+                        n = i.sourceURL
                     }
-                    var a = this.props,
-                        c = a.broadcasterId,
-                        u = a.broadcasterLogin,
-                        p = a.forceShow;
+                    var r = this.props,
+                        a = r.broadcasterId,
+                        c = r.broadcasterLogin,
+                        u = r.forceShow;
                     return o.createElement(s.a, {
                         ownerLogin: this.props.broadcasterLogin,
                         permittedRoles: {
                             editor: !0,
                             staff: !0
                         }
-                    }, function(r) {
-                        var a = r.permitted;
-                        return i && (a || n || p) ? o.createElement(l.a, {
+                    }, function(i) {
+                        var r = i.permitted;
+                        return n && (r || u) ? o.createElement(l.a, {
                             type: l.b.Download,
                             text: e.props.slug,
-                            url: i,
-                            onShareClick: t ? Object(d.c)(t.id, t.game && t.game.name, c, u, e.props.pageType) : void 0
+                            url: n,
+                            onShareClick: t ? Object(d.c)(t.id, t.game && t.game.name, a, c, e.props.pageType) : void 0
                         }) : null
                     })
                 }, t
@@ -12401,34 +12416,6 @@ webpackJsonp([48], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
-                                    value: "curator"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "login"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
                                     value: "broadcaster"
                                 },
                                 arguments: [],
@@ -12500,11 +12487,11 @@ webpackJsonp([48], {
             }],
             loc: {
                 start: 0,
-                end: 152
+                end: 131
             }
         };
         n.loc.source = {
-            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\ncurator {\nid\nlogin\n}\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
+            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -12834,12 +12821,13 @@ webpackJsonp([48], {
     UKw0: function(e, t) {},
     UvtE: function(e, t, n) {
         "use strict";
-        var i = n("sADG"),
-            r = n("nWgz");
+        var i = n("5a05");
         n.d(t, "b", function() {
             return i.a
-        }), n.d(t, !1, function() {}), n.d(t, "a", function() {
-            return r.a
+        });
+        var r = n("GSZ7");
+        n.d(t, "a", function() {
+            return r.b
         })
     },
     VCvu: function(e, t, n) {
@@ -14427,6 +14415,7 @@ webpackJsonp([48], {
             return i.b
         })
     },
+    bhwk: function(e, t) {},
     bnNq: function(e, t) {
         var n = {
             kind: "Document",
@@ -17461,13 +17450,6 @@ webpackJsonp([48], {
             return c
         })
     },
-    nWgz: function(e, t, n) {
-        "use strict";
-        t.a = function() {
-            return i.b.get("gdpr_consent_enabled", !1)
-        };
-        var i = n("6sO2")
-    },
     nmYW: function(e, t) {
         var n = {
             kind: "Document",
@@ -17871,20 +17853,20 @@ webpackJsonp([48], {
                         var e = null !== t && t.apply(this, arguments) || this;
                         return e.state = {
                             consentGiven: Object(c.a)()
-                        }, e.dynamicSettingsEnabled = Object(d.a)(), e.logger = s.j.withCategory("with-gdpr-consent"), e.initializeEvidon = function() {
+                        }, e.logger = s.j.withCategory("with-gdpr-consent"), e.initializeEvidon = function() {
                             e.logger.debug("Listening to EvidonManager", {
                                 displayName: n.displayName
-                            }), u.a.addListeners({
+                            }), d.a.addListeners({
                                 consent: e.onConsentChange
-                            }), u.a.loadScripts()
+                            }), d.a.loadScripts()
                         }, e.onConsentChange = function(t) {
                             e.setState({
                                 consentGiven: t
                             })
                         }, e.canInitializeEvidon = function(t) {
-                            return !!(e.isEnabled() && t.data && t.data.requestInfo && (t.data.requestInfo.isFromEEA || e.hasQueryParamOverride()))
-                        }, e.isEnabled = function() {
-                            return e.hasQueryParamOverride() || e.dynamicSettingsEnabled
+                            return !!(e.isGDPRConsentEnabled() && t.data && t.data.requestInfo && (t.data.requestInfo.isFromEEA || e.hasQueryParamOverride()))
+                        }, e.isGDPRConsentEnabled = function() {
+                            return e.hasQueryParamOverride() || Object(u.b)()
                         }, e
                     }
                     return i.__extends(n, t), n.prototype.componentDidMount = function() {
@@ -17893,20 +17875,19 @@ webpackJsonp([48], {
                         var t = this.props.data && !this.props.data.loading && (!e.data || e.data.loading);
                         t && this.canInitializeEvidon(this.props) && this.initializeEvidon()
                     }, n.prototype.componentWillUnmount = function() {
-                        u.a.removeListeners({
+                        d.a.removeListeners({
                             consent: this.onConsentChange
                         })
                     }, n.prototype.render = function() {
-                        var t = !1,
+                        var t = this.isGDPRConsentEnabled(),
                             n = this.props.data && this.props.data.requestInfo,
-                            a = n && (n.isFromEEA || this.hasQueryParamOverride()),
-                            o = n && !a;
-                        (!this.isEnabled() || o || a && this.state.consentGiven) && (t = !0);
-                        var s = {
-                            gdpr: {
-                                consentGiven: t
-                            }
-                        };
+                            a = n && !n.isFromEEA && !this.hasQueryParamOverride(),
+                            o = a || (t ? this.state.consentGiven : Object(u.a)()),
+                            s = {
+                                gdpr: {
+                                    consentGiven: o
+                                }
+                            };
                         return r.createElement(e, i.__assign({}, s, this.props))
                     }, n.prototype.hasQueryParamOverride = function() {
                         return window.location.search.includes("gdpr_override")
@@ -17932,10 +17913,11 @@ webpackJsonp([48], {
             s = n("6sO2"),
             l = n("7vx8"),
             c = n("u2Hz"),
-            d = n("nWgz"),
-            u = n("VCvu"),
-            p = n("mZoE");
-        n.n(p)
+            d = n("VCvu"),
+            u = n("GSZ7"),
+            p = n("mZoE"),
+            m = (n.n(p), n("bhwk"));
+        n.n(m)
     },
     sEID: function(e, t, n) {
         "use strict";
@@ -19624,4 +19606,4 @@ webpackJsonp([48], {
     zAvr: function(e, t) {},
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.create-49ca6bb306c97dcb01281fc50bc597e0.js.map
+//# sourceMappingURL=sites.clips.pages.create-9340d953d54469fb26dc6ea1b46cf90b.js.map

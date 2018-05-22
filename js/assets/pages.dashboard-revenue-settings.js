@@ -1,4 +1,4 @@
-webpackJsonp([101], {
+webpackJsonp([100], {
     "+0KR": function(e, t, n) {
         "use strict";
         var a = n("oR9V");
@@ -5837,6 +5837,14 @@ webpackJsonp([101], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
                                                     value: "badges"
                                                 },
                                                 arguments: [],
@@ -5978,11 +5986,11 @@ webpackJsonp([101], {
             }],
             loc: {
                 start: 0,
-                end: 274
+                end: 277
             }
         };
         n.loc.source = {
-            body: "query ChatBadgeTiersForm_GetBadgeTiers($login: String!) {\nuser(login: $login) {\nid\nlogin\nsettings {\ncheer {\nbadges {\ntiers {\nisEnabled\nthreshold\nbadge {\nid\ntitle\nimage1x: imageURL(size: NORMAL)\nimage2x: imageURL(size: DOUBLE)\nimage4x: imageURL(size: QUADRUPLE)\n}\n}\n}\n}\n}\n}\n}",
+            body: "query ChatBadgeTiersForm_GetBadgeTiers($login: String!) {\nuser(login: $login) {\nid\nlogin\nsettings {\ncheer {\nid\nbadges {\ntiers {\nisEnabled\nthreshold\nbadge {\nid\ntitle\nimage1x: imageURL(size: NORMAL)\nimage2x: imageURL(size: DOUBLE)\nimage4x: imageURL(size: QUADRUPLE)\n}\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -7096,6 +7104,14 @@ webpackJsonp([101], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
                                                     value: "badges"
                                                 },
                                                 arguments: [],
@@ -7249,11 +7265,11 @@ webpackJsonp([101], {
             }],
             loc: {
                 start: 0,
-                end: 277
+                end: 280
             }
         };
         n.loc.source = {
-            body: "query ChatBadgeUploadForm_GetBadgeTiers($login: String!) {\nuser(login: $login) {\nid\nlogin\nsettings {\ncheer {\nbadges {\ntiers {\nthreshold\nbadge {\nid\ntitle\nimage1x: imageURL(size: NORMAL)\nimage2x: imageURL(size: DOUBLE)\nimage4x: imageURL(size: QUADRUPLE)\nuser {\nid\n}\n}\n}\n}\n}\n}\n}\n}",
+            body: "query ChatBadgeUploadForm_GetBadgeTiers($login: String!) {\nuser(login: $login) {\nid\nlogin\nsettings {\ncheer {\nid\nbadges {\ntiers {\nthreshold\nbadge {\nid\ntitle\nimage1x: imageURL(size: NORMAL)\nimage2x: imageURL(size: DOUBLE)\nimage4x: imageURL(size: QUADRUPLE)\nuser {\nid\n}\n}\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -16068,4 +16084,4 @@ webpackJsonp([101], {
     },
     z1LJ: function(e, t) {}
 });
-//# sourceMappingURL=pages.dashboard-revenue-settings-6793513bf397bfb59b140ea48a2b88f6.js.map
+//# sourceMappingURL=pages.dashboard-revenue-settings-2295f08fab8cc684a7f360f6e10073ff.js.map

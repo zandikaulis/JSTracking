@@ -429,16 +429,16 @@ webpackJsonp([58], {
                 autoReportInteractive: !0
             })(x),
             P = c.a.wrap(function() {
-                return n.e(115).then(n.bind(null, "o0He"))
+                return n.e(114).then(n.bind(null, "o0He"))
             }, "TwitchPrimeOffersPage"),
             T = c.a.wrap(function() {
-                return n.e(100).then(n.bind(null, "9GX+"))
+                return n.e(99).then(n.bind(null, "9GX+"))
             }, "TwitchPrimeSuccessPage"),
             L = c.a.wrap(function() {
-                return n.e(111).then(n.bind(null, "Uen5"))
+                return n.e(110).then(n.bind(null, "Uen5"))
             }, "TwitchPrimeLinkingPage"),
             w = c.a.wrap(function() {
-                return n.e(112).then(n.bind(null, "HnrI"))
+                return n.e(111).then(n.bind(null, "HnrI"))
             }, "TwitchPrimeFortnitePage"),
             R = function(e) {
                 function t() {
@@ -3424,4 +3424,4 @@ webpackJsonp([58], {
             }(i.Component))
     }
 });
-//# sourceMappingURL=pages.prime-56fdc411c57e6c5d62439cb7e3dffcc4.js.map
+//# sourceMappingURL=pages.prime-f16bda642cd6ed137361aceeb9bb0c0b.js.map

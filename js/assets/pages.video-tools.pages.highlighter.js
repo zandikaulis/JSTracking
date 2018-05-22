@@ -1,4 +1,4 @@
-webpackJsonp([103], {
+webpackJsonp([102], {
     "/1dg": function(e, t, n) {
         "use strict";
         var i, r = n("TToO"),
@@ -1597,6 +1597,9 @@ webpackJsonp([103], {
             }, {
                 code: "pt",
                 label: "Português"
+            }, {
+                code: "ro",
+                label: "Română"
             }, {
                 code: "ru",
                 label: "Русский"
@@ -4035,4 +4038,4 @@ webpackJsonp([103], {
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.highlighter-abdf567c279681a1feca12a1083eee51.js.map
+//# sourceMappingURL=pages.video-tools.pages.highlighter-b7bc2304527e80463fd6ce70390191e9.js.map

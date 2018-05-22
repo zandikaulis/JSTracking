@@ -1,4 +1,4 @@
-webpackJsonp([90], {
+webpackJsonp([89], {
     "0mrB": function(e, n) {},
     "1ZLG": function(e, n, t) {
         "use strict";
@@ -12,18 +12,26 @@ webpackJsonp([90], {
             l = t("N221"),
             c = t("Odds"),
             d = t("6sO2"),
-            u = t("q7Ag");
+            u = t("vH/s"),
+            m = t("q7Ag");
 
-        function m(e) {
+        function p(e) {
             var n = e.channelName,
-                t = e.selectedTab;
+                t = e.selectedTab,
+                a = {
+                    medium: u.PageviewMedium.ExtensionDashboardTopNav,
+                    content: u.PageviewContent.ExtensionNavTabLink
+                };
             return o.createElement(c._8, {
                 display: c.R.InlineBlock,
                 padding: {
                     bottom: 2
                 }
             }, o.createElement(c._37, null, o.createElement(c._36, {
-                linkTo: Object(u.e)(n),
+                linkTo: {
+                    pathname: Object(m.e)(n),
+                    state: a
+                },
                 active: t === i.Store
             }, o.createElement(c._2, {
                 padding: {
@@ -32,7 +40,10 @@ webpackJsonp([90], {
             }, o.createElement(c.Q, {
                 type: c._49.H4
             }, Object(d.d)("Store", "DiscoveryNavBar")))), o.createElement(c._36, {
-                linkTo: Object(u.f)(n),
+                linkTo: {
+                    pathname: Object(m.f)(n),
+                    state: a
+                },
                 active: t === i.MyExtensions
             }, o.createElement(c._2, {
                 padding: {
@@ -41,7 +52,10 @@ webpackJsonp([90], {
             }, o.createElement(c.Q, {
                 type: c._49.H4
             }, Object(d.d)("My Extensions", "DiscoveryNavBar")))), o.createElement(c._36, {
-                linkTo: Object(u.h)(n),
+                linkTo: {
+                    pathname: Object(m.h)(n),
+                    state: a
+                },
                 active: t === i.Whitelisted
             }, o.createElement(c._2, {
                 padding: {
@@ -53,17 +67,16 @@ webpackJsonp([90], {
         }! function(e) {
             e[e.Store = 0] = "Store", e[e.MyExtensions = 1] = "MyExtensions", e[e.Whitelisted = 2] = "Whitelisted"
         }(i || (i = {}));
-        var p = t("RH2O"),
+        var v = t("RH2O"),
             E = t("2KeS"),
-            v = t("V5M+"),
-            g = t("9Gfr"),
-            h = t("SfDx"),
+            g = t("V5M+"),
+            h = t("9Gfr"),
+            x = t("SfDx"),
             f = t("3zLD"),
-            x = t("7vx8"),
-            k = t("j7/Y"),
-            y = t("oIkB"),
-            b = t("w9tK"),
-            _ = t("vH/s"),
+            k = t("7vx8"),
+            y = t("j7/Y"),
+            b = t("oIkB"),
+            _ = t("w9tK"),
             N = t("gAaz"),
             C = t("G8hb"),
             S = t("CSlQ"),
@@ -110,7 +123,13 @@ webpackJsonp([90], {
                     }, "Category Name"), o.createElement(c._35, {
                         fontSize: c.V.Size5
                     }, o.createElement(c.O, {
-                        to: Object(u.a)(e)
+                        to: {
+                            pathname: Object(m.a)(e),
+                            state: {
+                                medium: u.PageviewMedium.ExtensionDiscovery,
+                                content: u.PageviewContent.ExtensionCategoryPreview
+                            }
+                        }
                     }, Object(d.d)("View all", "ExtensionCategoryCarousel")))), o.createElement(c._2, {
                         margin: {
                             top: 1,
@@ -121,18 +140,38 @@ webpackJsonp([90], {
                         insetStyle: !0
                     })))
                 }, n.prototype.renderCards = function() {
-                    return this.props.extensions.map(function(e) {
+                    var e = this;
+                    return this.props.extensions.map(function(n, t) {
                         return o.createElement(c._8, {
                             margin: {
                                 right: 2
                             },
-                            key: e.extensionID
-                        }, o.createElement(D.a, a.__assign({}, e)))
+                            key: n.extensionID
+                        }, o.createElement(D.a, {
+                            authorName: n.authorName,
+                            extensionClientID: n.extensionClientID,
+                            extensionID: n.extensionID,
+                            extensionName: n.extensionName,
+                            extensionVersion: n.extensionVersion,
+                            iconURL: n.iconURL,
+                            isInstalled: n.isInstalled,
+                            installExtension: e.props.installExtension,
+                            extensionState: n.extensionState,
+                            trackingContext: {
+                                medium: u.PageviewMedium.ExtensionDiscovery,
+                                content: u.PageviewContent.ExtensionCategoryPreview,
+                                contentIndex: t
+                            },
+                            splashImageURL: n.splashImageURL,
+                            summary: n.summary,
+                            supportedAnchors: n.supportedAnchors,
+                            supportedPlatforms: n.supportedPlatforms
+                        }))
                     })
                 }, n
             }(o.Component),
-            T = t("L2iG"),
-            P = t("Igge"),
+            P = t("L2iG"),
+            T = t("Igge"),
             w = function(e) {
                 function n() {
                     var n = null !== e && e.apply(this, arguments) || this;
@@ -145,12 +184,12 @@ webpackJsonp([90], {
                                         if (n = this.props, t = n.extensionDiscoveryData, i = n.installExtension, o = n.showExtensionErrorModal, r = n.showExtensionInstalledModal, !(s = t.currentUser) || !s.id || !s.login) return [2];
                                         a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, i(Object(y.a)({
+                                        return a.trys.push([1, 3, , 4]), [4, i(Object(b.a)({
                                             channelID: s.id,
                                             extensionID: e
                                         }))];
                                     case 2:
-                                        return (l = a.sent().data).installExtension && l.installExtension.installedExtension && (c = l.installExtension.installedExtension, Object(y.e)(P, {}, function(e) {
+                                        return (l = a.sent().data).installExtension && l.installExtension.installedExtension && (c = l.installExtension.installedExtension, Object(b.e)(T, {}, function(e) {
                                             return e.currentUser && e.currentUser.installedExtensions && e.currentUser.installedExtensions.push(c), e
                                         }), r({
                                             extensionClientID: c.extension.clientID,
@@ -166,8 +205,10 @@ webpackJsonp([90], {
                         })
                     }, n
                 }
-                return a.__extends(n, e), n.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
+                return a.__extends(n, e), n.prototype.componentDidUpdate = function() {
+                    this.checkAndReportPageInteractive()
+                }, n.prototype.componentDidMount = function() {
+                    this.checkAndReportPageInteractive()
                 }, n.prototype.render = function() {
                     var e, n = this,
                         t = this.props.extensionDiscoveryData,
@@ -180,7 +221,7 @@ webpackJsonp([90], {
                         }))
                     } else {
                         var r = [];
-                        i && i.edges && i.edges.forEach(function(e) {
+                        i && i.edges.forEach(function(e) {
                             var t = e.node;
                             t && r.push({
                                 authorName: t.authorName,
@@ -205,11 +246,20 @@ webpackJsonp([90], {
                             })
                         })
                     }
-                    return o.createElement(c._8, null, o.createElement(N.a, null), o.createElement(c._8, {
+                    return o.createElement(c._8, null, o.createElement(N.a, {
+                        trackingContext: {
+                            medium: u.PageviewMedium.ExtensionDiscovery
+                        }
+                    }), o.createElement(c._8, {
                         padding: {
                             top: 2
                         }
                     }, e))
+                }, n.prototype.checkAndReportPageInteractive = function() {
+                    var e = this.props,
+                        n = e.extensionDiscoveryData,
+                        t = e.latencyTracking;
+                    n.loading || t.reportInteractive()
                 }, n.prototype.isExtensionInstalled = function(e) {
                     var n = this.props.extensionDiscoveryData.currentUser;
                     return !(!n || !n.installedExtensions) && n.installedExtensions.some(function(n) {
@@ -218,22 +268,22 @@ webpackJsonp([90], {
                 }, n
             }(o.Component),
             F = Object(f.compose)(Object(S.d)("ExtensionDiscoveryPage", {
-                destination: b.a.ChannelDashboardExtensions
-            }), Object(k.a)({
-                location: _.PageviewLocation.DashboardExtensions
-            }), Object(x.a)(P, {
+                destination: _.a.ExtensionsDiscovery
+            }), Object(y.a)({
+                location: u.PageviewLocation.ExtensionsDiscovery
+            }), Object(k.a)(T, {
                 name: "extensionDiscoveryData"
-            }), Object(x.a)(T, {
+            }), Object(k.a)(P, {
                 name: "installExtension"
             }))(w);
-        var j = Object(p.b)(null, function(e) {
+        var j = Object(v.b)(null, function(e) {
                 return Object(E.b)({
                     showExtensionErrorModal: function() {
-                        return Object(v.d)(g.a, {})
+                        return Object(g.d)(h.a, {})
                     },
                     showExtensionInstalledModal: function(e) {
                         var n = a.__rest(e, []);
-                        return Object(v.d)(h.a, n)
+                        return Object(g.d)(x.a, n)
                     }
                 }, e)
             })(F),
@@ -438,7 +488,8 @@ webpackJsonp([90], {
                         t = e.extensionClientID,
                         i = e.extensionName,
                         a = e.extensionState,
-                        r = e.extensionVersion;
+                        r = e.extensionVersion,
+                        s = e.trackingContext;
                     return o.createElement(c._35, {
                         background: c.n.Base,
                         border: !0
@@ -456,8 +507,14 @@ webpackJsonp([90], {
                         onError: this.onCardImageError
                     }), o.createElement(c.D, null, o.createElement(c._8, {
                         padding: 1
-                    }, o.createElement(s.a, {
-                        to: Object(u.d)(t, r)
+                    }, o.createElement(c.O, {
+                        to: {
+                            pathname: Object(m.d)(t, r),
+                            state: {
+                                medium: s.medium,
+                                content: u.PageviewContent.InstalledExtensionCard
+                            }
+                        }
                     }, o.createElement(c.Q, {
                         type: c._49.H5
                     }, i)), this.renderExtensionTagPills(), a !== C.f.Released && o.createElement(W.a, {
@@ -473,12 +530,17 @@ webpackJsonp([90], {
                         requiredActions: this.props.requiredActions,
                         activateExtension: this.activateExtension,
                         deactivateExtension: this.deactivateExtension
-                    }), o.createElement(c._8, null, o.createElement(s.a, {
-                        to: Object(u.b)(n, t, r)
-                    }, o.createElement(c.w, {
+                    }), o.createElement(c._8, null, o.createElement(c.w, {
                         ariaLabel: Object(d.d)("Configure", "InstalledExtensionCardComponent"),
-                        icon: c._25.Gear
-                    })), o.createElement(c.w, {
+                        icon: c._25.Gear,
+                        linkTo: {
+                            pathname: Object(m.b)(n, t, r),
+                            state: {
+                                medium: s.medium,
+                                content: u.PageviewContent.InstalledExtensionCard
+                            }
+                        }
+                    }), o.createElement(c.w, {
                         ariaLabel: Object(d.d)("Uninstall", "InstalledExtensionCardComponent"),
                         icon: c._25.Trash,
                         onClick: this.uninstallExtension
@@ -670,7 +732,7 @@ webpackJsonp([90], {
                                         if (n = this.props, t = n.extensionManagementPageData, i = n.showExtensionActivatedModal, o = n.showExtensionErrorModal, !t.currentUser || !t.currentUser.id) return [2];
                                         a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, this.props.applyExtensionActivations(Object(y.a)({
+                                        return a.trys.push([1, 3, , 4]), [4, this.props.applyExtensionActivations(Object(b.a)({
                                             activations: e,
                                             channelID: t.currentUser.id
                                         }))];
@@ -710,7 +772,7 @@ webpackJsonp([90], {
                                     case 1:
                                         return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, C.c.Deactivate)];
                                     case 2:
-                                        return a.sent(), [4, t(Object(y.a)({
+                                        return a.sent(), [4, t(Object(b.a)({
                                             channelID: r.id,
                                             activations: [{
                                                 installationID: e
@@ -736,11 +798,11 @@ webpackJsonp([90], {
                                     case 1:
                                         return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, C.c.Uninstall)];
                                     case 2:
-                                        return a.sent(), [4, o(Object(y.a)({
+                                        return a.sent(), [4, o(Object(b.a)({
                                             extensionInstallationID: e
                                         }))];
                                     case 3:
-                                        return (s = a.sent().data).uninstallExtension && s.uninstallExtension.id && Object(y.e)(te, {}, function(e) {
+                                        return (s = a.sent().data).uninstallExtension && s.uninstallExtension.id && Object(b.e)(te, {}, function(e) {
                                             return e.currentUser && e.currentUser.installedExtensions && (e.currentUser.installedExtensions = e.currentUser.installedExtensions.filter(function(e) {
                                                 var n = e.id;
                                                 return s.uninstallExtension && s.uninstallExtension.id !== n
@@ -755,7 +817,11 @@ webpackJsonp([90], {
                         })
                     }, n
                 }
-                return a.__extends(n, e), n.prototype.render = function() {
+                return a.__extends(n, e), n.prototype.componentDidUpdate = function() {
+                    this.checkAndReportPageInteractive()
+                }, n.prototype.componentDidMount = function() {
+                    this.checkAndReportPageInteractive()
+                }, n.prototype.render = function() {
                     var e, n = this,
                         t = this.props.extensionManagementPageData,
                         i = t.loading,
@@ -789,6 +855,9 @@ webpackJsonp([90], {
                                 extensionState: a.state,
                                 extensionVersion: a.version,
                                 installationID: r,
+                                trackingContext: {
+                                    medium: u.PageviewMedium.ExtensionManagement
+                                },
                                 supportedAnchors: Object(C.i)(a.views),
                                 supportPlatforms: Object(C.j)(a.views),
                                 activationConfig: i,
@@ -821,13 +890,18 @@ webpackJsonp([90], {
                     }, o.createElement(c.Q, {
                         type: c._49.H4
                     }, Object(d.d)("My Extensions", "ExtensionManagementPagePresentation"))), o.createElement(c._8, null, a))
+                }, n.prototype.checkAndReportPageInteractive = function() {
+                    var e = this.props,
+                        n = e.extensionManagementPageData,
+                        t = e.latencyTracking;
+                    n.loading || t.reportInteractive()
                 }, n.prototype.createPanel = function() {
                     return a.__awaiter(this, void 0, void 0, function() {
                         var e, n, t;
                         return a.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return (e = this.props.extensionManagementPageData.currentUser) && e.id ? [4, this.props.createPanel(Object(y.a)({
+                                    return (e = this.props.extensionManagementPageData.currentUser) && e.id ? [4, this.props.createPanel(Object(b.a)({
                                         channelID: e.id,
                                         type: $.EXTENSION
                                     }))] : [2, Promise.reject("No user id.")];
@@ -898,31 +972,35 @@ webpackJsonp([90], {
                     })
                 }, n
             }(o.Component),
-            oe = Object(f.compose)(Object(x.a)(te, {
+            oe = Object(f.compose)(Object(S.d)("ExtensionManagementPage", {
+                destination: _.a.ChannelDashboardExtensionsManagement
+            }), Object(y.a)({
+                location: u.PageviewLocation.DashboardExtensionsManagement
+            }), Object(k.a)(te, {
                 name: "extensionManagementPageData"
-            }), Object(x.a)(ee, {
+            }), Object(k.a)(ee, {
                 name: "createPanel"
-            }), Object(x.a)(Z, {
+            }), Object(k.a)(Z, {
                 name: "applyExtensionActivations"
-            }), Object(x.a)(ne, {
+            }), Object(k.a)(ne, {
                 name: "uninstallExtension"
             }))(ae);
-        var re = Object(p.b)(null, function(e) {
+        var re = Object(v.b)(null, function(e) {
                 return Object(E.b)({
                     showComponentActivationModal: function(e) {
                         var n = a.__rest(e, []);
-                        return Object(v.d)(L.a, n)
+                        return Object(g.d)(L.a, n)
                     },
                     showExtensionActivatedModal: function(e) {
                         var n = a.__rest(e, []);
-                        return Object(v.d)(M.a, n)
+                        return Object(g.d)(M.a, n)
                     },
                     showExtensionDestructionWarningModal: function(e) {
                         var n = a.__rest(e, []);
-                        return Object(v.d)(U.a, n)
+                        return Object(g.d)(U.a, n)
                     },
                     showExtensionErrorModal: function() {
-                        return Object(v.d)(g.a, {})
+                        return Object(g.d)(h.a, {})
                     }
                 }, e)
             })(oe),
@@ -931,7 +1009,7 @@ webpackJsonp([90], {
                     var n = null !== e && e.apply(this, arguments) || this;
                     return n.renderExtensionManagementPage = function(e) {
                         var n = e.match;
-                        return o.createElement(o.Fragment, null, o.createElement(m, {
+                        return o.createElement(o.Fragment, null, o.createElement(p, {
                             channelName: n.params.channelName,
                             selectedTab: i.MyExtensions
                         }), o.createElement(re, {
@@ -939,7 +1017,7 @@ webpackJsonp([90], {
                         }))
                     }, n.renderExtensionDiscoveryPage = function(e) {
                         var n = e.match;
-                        return o.createElement(o.Fragment, null, o.createElement(m, {
+                        return o.createElement(o.Fragment, null, o.createElement(p, {
                             channelName: n.params.channelName,
                             selectedTab: i.Store
                         }), o.createElement(j, null))
@@ -2137,7 +2215,7 @@ webpackJsonp([90], {
     KqsW: function(e, n, t) {
         "use strict";
         t.d(n, "a", function() {
-            return E
+            return v
         });
         var i, a = t("TToO"),
             o = t("HW6M"),
@@ -2151,7 +2229,7 @@ webpackJsonp([90], {
             e.Previous = "previous", e.Next = "next"
         }(i || (i = {}));
         var m, p = ((m = {})[i.Previous] = c._25.AngleLeft, m[i.Next] = c._25.AngleRight, m),
-            E = function(e) {
+            v = function(e) {
                 function n() {
                     var n = null !== e && e.apply(this, arguments) || this;
                     return n.state = {
@@ -2677,16 +2755,17 @@ webpackJsonp([90], {
             l = t("V5M+"),
             c = t("sfWM"),
             d = t("6sO2"),
-            u = t("q7Ag"),
-            m = t("Odds"),
-            p = function(e) {
+            u = t("vH/s"),
+            m = t("q7Ag"),
+            p = t("Odds"),
+            v = function(e) {
                 var n = e.closeModal,
                     t = e.extensionClientID,
                     i = e.extensionVersion,
                     o = e.login;
-                return a.createElement(m._8, null, a.createElement(m.Q, {
-                    type: m._49.H5
-                }, Object(d.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), a.createElement(m._35, {
+                return a.createElement(p._8, null, a.createElement(p.Q, {
+                    type: p._49.H5
+                }, Object(d.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), a.createElement(p._35, {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: {
@@ -2695,32 +2774,38 @@ webpackJsonp([90], {
                     margin: {
                         y: 1
                     }
-                }, a.createElement(m.Q, null, Object(d.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), a.createElement(m._8, {
+                }, a.createElement(p.Q, null, Object(d.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), a.createElement(p._8, {
                     margin: {
                         y: 1
                     }
-                }, a.createElement(m.Q, null, Object(d.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), a.createElement(m.Q, null, Object(d.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), a.createElement(m._8, {
-                    display: m.R.Flex,
-                    justifyContent: m._7.Center
-                }, a.createElement(m._8, {
+                }, a.createElement(p.Q, null, Object(d.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), a.createElement(p.Q, null, Object(d.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), a.createElement(p._8, {
+                    display: p.R.Flex,
+                    justifyContent: p._7.Center
+                }, a.createElement(p._8, {
                     padding: {
                         right: 1
                     }
-                }, a.createElement(m.v, {
-                    type: m.B.Hollow,
+                }, a.createElement(p.v, {
+                    type: p.B.Hollow,
                     onClick: n
-                }, Object(d.d)("Continue Browsing", "ExtensionInstalledModal"))), a.createElement(m.v, {
-                    linkTo: Object(u.b)(o, t, i),
+                }, Object(d.d)("Continue Browsing", "ExtensionInstalledModal"))), a.createElement(p.v, {
+                    linkTo: {
+                        pathname: Object(m.b)(o, t, i),
+                        state: {
+                            medium: u.PageviewMedium.ExtensionInstalledModal,
+                            content: u.PageviewContent.ExtensionConfigureButton
+                        }
+                    },
                     onClick: n
                 }, Object(d.d)("Configure", "ExtensionInstalledModal"))))
             };
-        p.displayName = "ExtensionInstalledModalPresentation";
+        v.displayName = "ExtensionInstalledModalPresentation";
         var E = function(e) {
             function n() {
                 return null !== e && e.apply(this, arguments) || this
             }
             return i.__extends(n, e), n.prototype.render = function() {
-                return a.createElement(c.a, null, a.createElement(p, {
+                return a.createElement(c.a, null, a.createElement(v, {
                     closeModal: this.props.closeModal,
                     extensionClientID: this.props.extensionClientID,
                     extensionVersion: this.props.extensionVersion,
@@ -2730,7 +2815,7 @@ webpackJsonp([90], {
                 }))
             }, n
         }(a.Component);
-        var v = Object(o.b)(null, function(e) {
+        var g = Object(o.b)(null, function(e) {
             return Object(r.b)({
                 closeModal: l.c
             }, e)
@@ -2738,7 +2823,7 @@ webpackJsonp([90], {
         t.d(n, !1, function() {
             return E
         }), t.d(n, "a", function() {
-            return v
+            return g
         })
     },
     UIT8: function(e, n, t) {
@@ -2746,75 +2831,87 @@ webpackJsonp([90], {
         var i = t("TToO"),
             a = t("BwgW"),
             o = t("GiK3"),
-            r = t("F8kA"),
-            s = t("6sO2"),
-            l = t("zGVe"),
-            c = t.n(l),
+            r = t("6sO2"),
+            s = t("zGVe"),
+            l = t.n(s),
+            c = t("vH/s"),
             d = t("5Neo"),
             u = t("G8hb"),
-            m = t("ry+I"),
-            p = t("Odds"),
+            m = t("q7Ag"),
+            p = t("ry+I"),
+            v = t("Odds"),
             E = (t("Ar47"), function(e) {
                 function n() {
                     var n = null !== e && e.apply(this, arguments) || this;
                     return n.state = {
-                        imageURL: n.props.splashImageURL || n.props.iconURL || c.a,
+                        imageURL: n.props.splashImageURL || n.props.iconURL || l.a,
                         isInstalling: !1
                     }, n.renderHoverElement = function() {
                         var e = n.state.isInstalling,
                             t = n.props,
                             i = t.extensionClientID,
                             a = t.extensionVersion,
-                            l = t.isInstalled,
-                            c = t.summary;
-                        return o.createElement(p._35, {
+                            s = t.isInstalled,
+                            l = t.trackingContext,
+                            d = t.summary,
+                            u = l.content,
+                            p = l.contentIndex,
+                            E = l.medium;
+                        return o.createElement(v._35, {
                             className: "extension-card__details-preview",
-                            background: p.n.Alt2,
-                            position: p._15.Absolute,
+                            background: v.n.Alt2,
+                            position: v._15.Absolute,
                             attachRight: !0,
                             attachTop: !0,
                             attachLeft: !0,
                             attachBottom: !0
-                        }, o.createElement(p._8, {
-                            display: p.R.Flex,
-                            flexDirection: p.T.Column,
-                            justifyContent: p._7.Between,
-                            alignItems: p.c.Center,
+                        }, o.createElement(v._8, {
+                            display: v.R.Flex,
+                            flexDirection: v.T.Column,
+                            justifyContent: v._7.Between,
+                            alignItems: v.c.Center,
                             padding: 4,
                             fullHeight: !0
-                        }, o.createElement(p._8, {
+                        }, o.createElement(v._8, {
                             className: "extension-card__summary",
-                            overflow: p._11.Hidden
-                        }, o.createElement(p.Q, {
-                            type: p._49.P
-                        }, c)), o.createElement(p._8, {
-                            display: p.R.Flex,
-                            flexWrap: p.U.NoWrap,
+                            overflow: v._11.Hidden
+                        }, o.createElement(v.Q, {
+                            type: v._49.P
+                        }, d)), o.createElement(v._8, {
+                            display: v.R.Flex,
+                            flexWrap: v.U.NoWrap,
                             padding: {
                                 top: 1
                             }
-                        }, o.createElement(r.a, {
-                            to: "/ext/" + i + "-" + a
-                        }, o.createElement(p.v, {
-                            type: p.B.Hollow
-                        }, Object(s.d)("Details", "ExtensionCard"))), o.createElement(p._8, {
+                        }, o.createElement(v.O, {
+                            to: {
+                                pathname: Object(m.d)(i, a),
+                                state: {
+                                    medium: E,
+                                    content: u || c.PageviewContent.ExtensionCard,
+                                    content_index: p
+                                }
+                            }
+                        }, o.createElement(v.v, {
+                            type: v.B.Hollow
+                        }, Object(r.d)("Details", "ExtensionCard"))), o.createElement(v._8, {
                             padding: {
                                 left: 1
                             }
-                        }, l ? o.createElement(p.v, {
+                        }, s ? o.createElement(v.v, {
                             disabled: !0
-                        }, Object(s.d)("Installed", "ExtensionCard")) : o.createElement(p.v, {
+                        }, Object(r.d)("Installed", "ExtensionCard")) : o.createElement(v.v, {
                             onClick: n.installExtension,
-                            state: e ? p.A.Loading : p.A.Default
-                        }, Object(s.d)("Install", "ExtensionCard"))))))
+                            state: e ? v.A.Loading : v.A.Default
+                        }, Object(r.d)("Install", "ExtensionCard"))))))
                     }, n.renderAnchorTypePills = function() {
                         var e = n.props,
                             t = e.supportedAnchors,
                             i = e.supportedPlatforms,
                             r = t.map(function(e) {
-                                return o.createElement(p._8, {
+                                return o.createElement(v._8, {
                                     key: e,
-                                    display: p.R.InlineBlock,
+                                    display: v.R.InlineBlock,
                                     padding: {
                                         right: .5
                                     }
@@ -2822,9 +2919,9 @@ webpackJsonp([90], {
                                     anchorType: e
                                 }))
                             });
-                        return i.includes(a.ExtensionPlatform.Mobile) && r.push(o.createElement(p._8, {
+                        return i.includes(a.ExtensionPlatform.Mobile) && r.push(o.createElement(v._8, {
                             key: "mobile",
-                            display: p.R.InlineBlock,
+                            display: v.R.InlineBlock,
                             padding: {
                                 right: .5
                             }
@@ -2858,7 +2955,7 @@ webpackJsonp([90], {
                         })
                     }, n.onCardImageError = function() {
                         n.setState({
-                            imageURL: c.a
+                            imageURL: l.a
                         })
                     }, n
                 }
@@ -2870,49 +2967,49 @@ webpackJsonp([90], {
                         a = n.extensionState,
                         r = n.iconURL,
                         s = r && e === r;
-                    return o.createElement(p._8, {
+                    return o.createElement(v._8, {
                         className: "extension-card"
-                    }, o.createElement(p.C, null, o.createElement(p._35, {
+                    }, o.createElement(v.C, null, o.createElement(v._35, {
                         border: !0,
-                        background: p.n.Base,
-                        position: p._15.Relative,
-                        overflow: p._11.Hidden
-                    }, o.createElement(p._35, {
+                        background: v.n.Base,
+                        position: v._15.Relative,
+                        overflow: v._11.Hidden
+                    }, o.createElement(v._35, {
                         className: s ? "extension-card__icon-bg" : "",
-                        background: p.n.AccentAlt2
-                    }, o.createElement(p.E, {
+                        background: v.n.AccentAlt2
+                    }, o.createElement(v.E, {
                         src: e,
                         alt: i,
-                        aspect: p.l.Aspect3x2,
+                        aspect: v.l.Aspect3x2,
                         onError: this.onCardImageError
-                    })), s && o.createElement(p._8, {
-                        display: p.R.Flex,
-                        alignItems: p.c.Center,
-                        justifyContent: p._7.Center,
-                        position: p._15.Absolute,
+                    })), s && o.createElement(v._8, {
+                        display: v.R.Flex,
+                        alignItems: v.c.Center,
+                        justifyContent: v._7.Center,
+                        position: v._15.Absolute,
                         attachRight: !0,
                         attachTop: !0,
                         attachLeft: !0,
                         attachBottom: !0
-                    }, o.createElement(p.N, {
+                    }, o.createElement(v.N, {
                         className: "extension-card__icon",
                         src: e,
                         alt: i
-                    })), this.renderHoverElement()), o.createElement(p._8, {
+                    })), this.renderHoverElement()), o.createElement(v._8, {
                         padding: {
                             top: 1
                         }
-                    }, o.createElement(p.Q, {
-                        type: p._49.H6
-                    }, i), o.createElement(p.Q, {
-                        type: p._49.Span,
-                        color: p.K.Alt2,
-                        fontSize: p.V.Size7
-                    }, t), o.createElement(p._8, {
+                    }, o.createElement(v.Q, {
+                        type: v._49.H6
+                    }, i), o.createElement(v.Q, {
+                        type: v._49.Span,
+                        color: v.K.Alt2,
+                        fontSize: v.V.Size7
+                    }, t), o.createElement(v._8, {
                         padding: {
                             top: .5
                         }
-                    }, this.renderAnchorTypePills(), a !== u.f.RELEASED && o.createElement(m.a, {
+                    }, this.renderAnchorTypePills(), a !== u.f.RELEASED && o.createElement(p.a, {
                         state: a
                     })))))
                 }, n
@@ -3007,7 +3104,7 @@ webpackJsonp([90], {
                 }))
             }, n
         }(a.Component);
-        var E = Object(o.b)(null, function(e) {
+        var v = Object(o.b)(null, function(e) {
             return Object(r.b)({
                 closeModal: l.c
             }, e)
@@ -3015,7 +3112,7 @@ webpackJsonp([90], {
         t.d(n, !1, function() {
             return p
         }), t.d(n, "a", function() {
-            return E
+            return v
         })
     },
     bcqU: function(e, n, t) {
@@ -3034,12 +3131,12 @@ webpackJsonp([90], {
             u = t("7vx8"),
             m = t("j7/Y"),
             p = t("w9tK"),
-            E = t("vH/s"),
-            v = t("zezF"),
+            v = t("vH/s"),
+            E = t("zezF"),
             g = t("HrG2"),
             h = t("q7Ag"),
-            f = t("CSlQ"),
-            x = t("Odds"),
+            x = t("CSlQ"),
+            f = t("Odds"),
             k = t("yjkL"),
             y = function(e) {
                 function n() {
@@ -3079,31 +3176,31 @@ webpackJsonp([90], {
                         var l = this.state.installation,
                             u = l.extension,
                             m = l.activationConfig;
-                        s = r.createElement(x._8, {
+                        s = r.createElement(f._8, {
                             fullWidth: !0
-                        }, r.createElement(x._8, {
+                        }, r.createElement(f._8, {
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(x.C, {
+                        }, r.createElement(f.C, {
                             row: !0,
                             border: !1
-                        }, r.createElement(x.E, {
+                        }, r.createElement(f.E, {
                             alt: u.name,
                             src: this.state.hasCardImageError ? c.a.defaultAvatarURL : u.iconUrl,
-                            aspect: x.l.Aspect1x1,
-                            size: x.F.Size6,
+                            aspect: f.l.Aspect1x1,
+                            size: f.F.Size6,
                             onError: this.onCardImageError
-                        }), r.createElement(x.D, null, r.createElement(x._8, {
+                        }), r.createElement(f.D, null, r.createElement(f._8, {
                             padding: 1
-                        }, r.createElement(x.Q, {
-                            type: x._49.H4
-                        }, u.name), r.createElement(x.Q, {
-                            type: x._49.Span,
-                            color: x.K.Alt2
+                        }, r.createElement(f.Q, {
+                            type: f._49.H4
+                        }, u.name), r.createElement(f.Q, {
+                            type: f._49.Span,
+                            color: f.K.Alt2
                         }, Object(c.d)("Created by {extensionAuthor}", {
                             extensionAuthor: u.authorName
-                        }, "ExtensionConfigureComponent")))))), r.createElement(x._8, null, r.createElement(v.a, {
+                        }, "ExtensionConfigureComponent")))))), r.createElement(f._8, null, r.createElement(E.a, {
                             anchor: m.anchor,
                             className: "extension-configure-extension-frame",
                             extension: u,
@@ -3121,15 +3218,15 @@ webpackJsonp([90], {
                         dashboardURL: Object(h.c)(this.props.match.params.channelName),
                         title: Object(c.d)("Configure", "ExtensionConfigureComponent")
                     });
-                    return r.createElement(d.b, null, r.createElement(x._8, {
+                    return r.createElement(d.b, null, r.createElement(f._8, {
                         padding: 2
-                    }, r.createElement(x.Q, {
-                        type: x._49.H3
-                    }, this.getFormattedPageTitle()), r.createElement(x._8, {
+                    }, r.createElement(f.Q, {
+                        type: f._49.H3
+                    }, this.getFormattedPageTitle()), r.createElement(f._8, {
                         padding: {
                             top: 2
                         }
-                    }, p, r.createElement(x._35, {
+                    }, p, r.createElement(f._35, {
                         borderRight: !0,
                         borderLeft: !0,
                         borderBottom: !0,
@@ -3148,22 +3245,22 @@ webpackJsonp([90], {
                         to: Object(h.c)(e)
                     })
                 }, n.prototype.renderPlaceholders = function() {
-                    return r.createElement(x._8, {
+                    return r.createElement(f._8, {
                         fullWidth: !0
-                    }, r.createElement(x._8, {
-                        display: x.R.Flex,
-                        alignItems: x.c.Center,
+                    }, r.createElement(f._8, {
+                        display: f.R.Flex,
+                        alignItems: f.c.Center,
                         padding: {
                             y: 1
                         }
-                    }, r.createElement(x._8, null, r.createElement(x._14, {
+                    }, r.createElement(f._8, null, r.createElement(f._14, {
                         width: 60,
                         height: 60
-                    })), r.createElement(x._8, {
+                    })), r.createElement(f._8, {
                         padding: {
                             left: 1
                         }
-                    }, r.createElement(x._14, {
+                    }, r.createElement(f._14, {
                         lineCount: 2,
                         width: 200
                     }))))
@@ -3173,10 +3270,10 @@ webpackJsonp([90], {
                     return e || n
                 }, n
             }(r.Component),
-            b = Object(s.compose)(Object(f.d)("ExtensionConfigurePage", {
+            b = Object(s.compose)(Object(x.d)("ExtensionConfigurePage", {
                 destination: p.a.ChannelDashboardExtensionsConfigure
             }), Object(m.a)({
-                location: E.PageviewLocation.DashboardExtensionsConfigure
+                location: v.PageviewLocation.DashboardExtensionsConfigure
             }), Object(u.a)(k, {
                 options: function(e) {
                     return {
@@ -3185,7 +3282,7 @@ webpackJsonp([90], {
                         }
                     }
                 }
-            }), Object(v.c)({
+            }), Object(E.c)({
                 name: "extensionsForChannel",
                 options: function(e) {
                     return {
@@ -3225,8 +3322,8 @@ webpackJsonp([90], {
             u = t("6sO2"),
             m = t("Odds"),
             p = 768,
-            E = 432,
-            v = function(e) {
+            v = 432,
+            E = function(e) {
                 function n(n) {
                     var t = e.call(this, n) || this;
                     t.renderPositionPreview = function() {
@@ -3237,13 +3334,13 @@ webpackJsonp([90], {
                                     o = t.installationID,
                                     r = t.x,
                                     s = t.y,
-                                    l = Object(d.getComponentSizeFromView)(p, E, {
+                                    l = Object(d.getComponentSizeFromView)(p, v, {
                                         aspectHeight: i.aspectHeight,
                                         aspectWidth: i.aspectWidth,
                                         zoom: i.hasZoom,
                                         zoomPixels: i.zoomPixels || d.DefaultZoomPixelWidth
                                     }),
-                                    c = Object(d.getComponentPositionFromView)(p, E, {
+                                    c = Object(d.getComponentPositionFromView)(p, v, {
                                         x: 100 * r,
                                         y: 100 * s
                                     }),
@@ -3265,7 +3362,7 @@ webpackJsonp([90], {
                             className: "extension-component-player-preview",
                             style: {
                                 width: p,
-                                height: E
+                                height: v
                             }
                         }, n))
                     }, t.renderCoordinateInputs = function() {
@@ -3349,9 +3446,9 @@ webpackJsonp([90], {
                                 u = Math.max(0, Math.min(s, m));
                                 l.y = u
                             }
-                            var p, E = i.__assign({}, t.state.currentActivationSettings, ((p = {})[o] = l, p));
+                            var p, v = i.__assign({}, t.state.currentActivationSettings, ((p = {})[o] = l, p));
                             t.setState({
-                                currentActivationSettings: E
+                                currentActivationSettings: v
                             })
                         }
                     };
@@ -3428,7 +3525,7 @@ webpackJsonp([90], {
                 return i.__extends(n, e), n.prototype.render = function() {
                     return a.createElement(c.a, {
                         className: "extension-manager-modal-container--expand"
-                    }, a.createElement(v, {
+                    }, a.createElement(E, {
                         activatedComponentData: this.props.activatedComponentData,
                         componentConfigToActivate: this.props.componentConfigToActivate,
                         extensionNameToActivate: this.props.extensionNameToActivate,
@@ -3458,15 +3555,19 @@ webpackJsonp([90], {
             a = t("GiK3"),
             o = t("CIox"),
             r = t("6sO2"),
-            s = t("q7Ag"),
-            l = t("Odds"),
-            c = function(e) {
+            s = t("vH/s"),
+            l = t("q7Ag"),
+            c = t("Odds"),
+            d = function(e) {
                 function n() {
                     var n = null !== e && e.apply(this, arguments) || this;
                     return n.state = {
                         searchTerm: n.props.initialSearchTerm || ""
                     }, n.onSubmit = function(e) {
-                        e.preventDefault(), n.state.searchTerm && n.props.history.push(Object(s.g)(n.state.searchTerm))
+                        e.preventDefault(), n.state.searchTerm && n.props.history.push(Object(l.g)(n.state.searchTerm), {
+                            medium: n.props.trackingContext.medium,
+                            content: s.PageviewContent.ExtensionSearchBar
+                        })
                     }, n.onSearchInputChange = function(e) {
                         n.setState({
                             searchTerm: e.currentTarget.value
@@ -3474,28 +3575,28 @@ webpackJsonp([90], {
                     }, n
                 }
                 return i.__extends(n, e), n.prototype.render = function() {
-                    return a.createElement(l._35, {
+                    return a.createElement(c._35, {
                         border: !0,
-                        background: l.n.Base,
+                        background: c.n.Base,
                         padding: 1
-                    }, a.createElement(l.Y, null, a.createElement(l.L, {
+                    }, a.createElement(c.Y, null, a.createElement(c.L, {
                         cols: 8
-                    }), a.createElement(l.L, {
+                    }), a.createElement(c.L, {
                         cols: 4
                     }, a.createElement("form", {
                         onSubmit: this.onSubmit
-                    }, a.createElement(l._27, {
+                    }, a.createElement(c._27, {
                         placeholder: Object(r.d)("Search store", "ExtensionSearchBar"),
                         value: this.state.searchTerm,
                         onChange: this.onSearchInputChange
                     })))))
                 }, n
             }(a.Component),
-            d = Object(o.f)(c);
+            u = Object(o.f)(d);
         t.d(n, !1, function() {
-            return c
-        }), t.d(n, "a", function() {
             return d
+        }), t.d(n, "a", function() {
+            return u
         })
     },
     l0vj: function(e, n, t) {
@@ -3681,7 +3782,7 @@ webpackJsonp([90], {
                     onClick: o
                 }, Object(u.d)("Deactivate", "ExtensionDeactivationWarning"))))
             },
-            E = function(e) {
+            v = function(e) {
                 var n = e.existingExtensionName,
                     t = e.activationSlot,
                     i = e.existingMonetizationType,
@@ -3731,8 +3832,8 @@ webpackJsonp([90], {
                     onClick: r
                 }, Object(u.d)("Replace", "ExtensionReplacementWarning"))))
             };
-        E.displayName = "ExtensionReplacementWarning";
-        var v = function(e) {
+        v.displayName = "ExtensionReplacementWarning";
+        var E = function(e) {
                 var n = e.closeModal,
                     t = e.extensionName,
                     i = e.monetizationType,
@@ -3787,7 +3888,7 @@ webpackJsonp([90], {
                             onConfirm: e.onConfirm
                         });
                     case d.c.Replace:
-                        return a.createElement(E, {
+                        return a.createElement(v, {
                             closeModal: e.closeModal,
                             existingExtensionName: e.existingExtensionName,
                             existingMonetizationType: e.existingMonetizationType,
@@ -3795,7 +3896,7 @@ webpackJsonp([90], {
                             onConfirm: e.onConfirm
                         });
                     case d.c.Uninstall:
-                        return a.createElement(v, {
+                        return a.createElement(E, {
                             closeModal: e.closeModal,
                             extensionName: e.extensionName,
                             monetizationType: e.monetizationType,
@@ -3849,7 +3950,7 @@ webpackJsonp([90], {
                 }))
             }, n
         }(a.Component);
-        var f = Object(o.b)(null, function(e) {
+        var x = Object(o.b)(null, function(e) {
             return Object(r.b)({
                 closeModal: l.c
             }, e)
@@ -3857,7 +3958,7 @@ webpackJsonp([90], {
         t.d(n, !1, function() {
             return h
         }), t.d(n, "a", function() {
-            return f
+            return x
         })
     },
     yjkL: function(e, n) {
@@ -3976,4 +4077,4 @@ webpackJsonp([90], {
         e.exports = t.p + "assets/discovery-splash-fallback-d5c69de700c33441b513b34421ad3d16.png"
     }
 });
-//# sourceMappingURL=pages.extension-configure-8505042858fae5a821c363794d506648.js.map
+//# sourceMappingURL=pages.extension-configure-72d3382001e29f9a85da5b21f7ce4f6b.js.map

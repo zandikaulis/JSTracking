@@ -1726,7 +1726,7 @@ webpackJsonp([47], {
                 }, t = r.__decorate([Object(l.a)(A)], t)
             }(o.Component),
             V = n("mmqR"),
-            W = (n("NjaO"), function(e) {
+            G = (n("NjaO"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1907,12 +1907,12 @@ webpackJsonp([47], {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component));
-        var G = Object(I.b)(function(e) {
+        var W = Object(I.b)(function(e) {
                 var t = Object(D.c)(e);
                 return {
                     userLogin: t && t.login
                 }
-            })(W),
+            })(G),
             z = n("3T7g"),
             H = n("+V/3"),
             q = n("8RKZ"),
@@ -2243,7 +2243,7 @@ webpackJsonp([47], {
                         display: k.R.Flex,
                         flexDirection: k.T.Column,
                         justifyContent: k._7.Around
-                    }, o.createElement(G, {
+                    }, o.createElement(W, {
                         slug: e,
                         currentTime: this.props.currentTime
                     })), o.createElement(k._35, {
@@ -3880,6 +3880,13 @@ webpackJsonp([47], {
                 e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange", e.ExternalFullscreenChange = "externalfullscreenchange", e.ClipsModerationOpen = "clips-moderation-open"
             }(i || (i = {}))
     },
+    "5a05": function(e, t, n) {
+        "use strict";
+        var i = n("sADG");
+        n.d(t, "a", function() {
+            return i.a
+        })
+    },
     "6O9f": function(e, t) {},
     "6uxC": function(e, t) {
         var n = {
@@ -4494,7 +4501,7 @@ webpackJsonp([47], {
         ! function(e) {
             e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
         }(i || (i = {}));
-        var W = function(e) {
+        var G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goToPreviousPage = function() {
@@ -4531,7 +4538,7 @@ webpackJsonp([47], {
                     }) : null
                 }, t
             }(a.Component),
-            G = n("37Pp"),
+            W = n("37Pp"),
             z = n("JJaH"),
             H = function(e) {
                 var t = null,
@@ -4598,7 +4605,7 @@ webpackJsonp([47], {
                 }, i, a.createElement(k._8, null, a.createElement(k.Q, {
                     type: k._49.H4,
                     bold: !0
-                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(G.a, {
+                }, Object(c.d)("Paid Subscription", "NonSubbedTopPage")), a.createElement(W.a, {
                     subscriptionProduct: e.subscriptionProducts[0]
                 }), a.createElement(k._8, {
                     display: k.R.Flex
@@ -5113,7 +5120,7 @@ webpackJsonp([47], {
                 }, t.prototype.getEsportPage = function() {
                     return this.props.data.user ? a.createElement(k._8, {
                         key: "subscribe-balloon"
-                    }, a.createElement(W, {
+                    }, a.createElement(G, {
                         channelLogin: this.props.channelLogin,
                         handleTopPageSubButtonClick: this.handleTopPageSubButtonClick,
                         reportSubMenuAction: this.props.reportSubMenuAction,
@@ -7439,7 +7446,7 @@ webpackJsonp([47], {
                     value: "violence type"
                 }
             },
-            W = {
+            G = {
                 identifyLocation: {
                     getTitle: function(e) {
                         return Object(l.d)("Report {username} for something else...", {
@@ -7477,7 +7484,7 @@ webpackJsonp([47], {
                     nextCard: B.socialMedia
                 })
             },
-            G = {
+            W = {
                 getTitle: function(e) {
                     return Object(l.d)("Report {username}'s Spam or Malicious Links", {
                         username: e
@@ -7538,7 +7545,7 @@ webpackJsonp([47], {
                 chat: j.content,
                 profile: U.content,
                 room: M,
-                "somewhere else": W.identifyLocation,
+                "somewhere else": G.identifyLocation,
                 streamer: x.content,
                 "someone else in video": x.content,
                 "someone in chat": j.content,
@@ -7548,16 +7555,16 @@ webpackJsonp([47], {
                 "channel owner": U.content,
                 "community member": j.content,
                 "on twitch": U.content,
-                "another site": W.externalSite,
+                "another site": G.externalSite,
                 "twitch event": D.twitchEvent,
                 "brigading/raids": B.socialMedia,
-                threatening: W.external_violence,
-                "hateful/harassing": W.external_abusive,
-                "external site; threatening violence": W.external_violence,
-                "external site; committing violence": W.external_violence,
+                threatening: G.external_violence,
+                "hateful/harassing": G.external_abusive,
+                "external site; threatening violence": G.external_violence,
+                "external site; committing violence": G.external_violence,
                 "external site; scam": B.socialMedia,
                 "ban evasion": H,
-                spam: G,
+                spam: W,
                 hateful: V.content,
                 impersonation: q,
                 "violence/threats": V.violence,
@@ -8512,6 +8519,15 @@ webpackJsonp([47], {
         }
     },
     GHQc: function(e, t) {},
+    GSZ7: function(e, t, n) {
+        "use strict";
+        t.b = function() {
+            return i.b.get("gdpr_consent_enabled", !1)
+        }, t.a = function() {
+            return i.b.get("gdpr_disabled_eea_consent", !1)
+        };
+        var i = n("6sO2")
+    },
     HZww: function(e, t, n) {
         "use strict";
         t.c = function(e) {
@@ -10233,7 +10249,7 @@ webpackJsonp([47], {
             })(M),
             B = n("/3Cb"),
             V = (n("v+rJ"), "prime-offer__video"),
-            W = function(e) {
+            G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10445,11 +10461,11 @@ webpackJsonp([47], {
                     }).hasEntitlement
                 }, t
             }(a.Component),
-            G = Object(o.compose)(Object(c.a)(N, {
+            W = Object(o.compose)(Object(c.a)(N, {
                 name: "data"
             }), Object(c.a)(B, {
                 name: "claimPrimeOffer"
-            }), Object(d.d)("PrimeOffer"))(W),
+            }), Object(d.d)("PrimeOffer"))(G),
             z = (n("WC9X"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -10634,7 +10650,7 @@ webpackJsonp([47], {
                         var n = this.getSortedOffers(),
                             i = n[n.length - 1];
                         return n.map(function(t, n) {
-                            return a.createElement(G, {
+                            return a.createElement(W, {
                                 externalReftag: e.props.externalReftag,
                                 key: t.id,
                                 offer: t,
@@ -11172,29 +11188,28 @@ webpackJsonp([47], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.props.data.clip,
-                        n = t && t.curator && t.curator.login === this.props.userLogin,
-                        i = "";
+                        n = "";
                     if (t && t.videoQualities) {
-                        var r = t.videoQualities[0];
-                        i = r.sourceURL
+                        var i = t.videoQualities[0];
+                        n = i.sourceURL
                     }
-                    var a = this.props,
-                        c = a.broadcasterId,
-                        u = a.broadcasterLogin,
-                        p = a.forceShow;
+                    var r = this.props,
+                        a = r.broadcasterId,
+                        c = r.broadcasterLogin,
+                        u = r.forceShow;
                     return o.createElement(s.a, {
                         ownerLogin: this.props.broadcasterLogin,
                         permittedRoles: {
                             editor: !0,
                             staff: !0
                         }
-                    }, function(r) {
-                        var a = r.permitted;
-                        return i && (a || n || p) ? o.createElement(l.a, {
+                    }, function(i) {
+                        var r = i.permitted;
+                        return n && (r || u) ? o.createElement(l.a, {
                             type: l.b.Download,
                             text: e.props.slug,
-                            url: i,
-                            onShareClick: t ? Object(d.c)(t.id, t.game && t.game.name, c, u, e.props.pageType) : void 0
+                            url: n,
+                            onShareClick: t ? Object(d.c)(t.id, t.game && t.game.name, a, c, e.props.pageType) : void 0
                         }) : null
                     })
                 }, t
@@ -12493,34 +12508,6 @@ webpackJsonp([47], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
-                                    value: "curator"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "login"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
                                     value: "broadcaster"
                                 },
                                 arguments: [],
@@ -12592,11 +12579,11 @@ webpackJsonp([47], {
             }],
             loc: {
                 start: 0,
-                end: 152
+                end: 131
             }
         };
         n.loc.source = {
-            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\ncurator {\nid\nlogin\n}\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
+            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -12926,12 +12913,13 @@ webpackJsonp([47], {
     UKw0: function(e, t) {},
     UvtE: function(e, t, n) {
         "use strict";
-        var i = n("sADG"),
-            r = n("nWgz");
+        var i = n("5a05");
         n.d(t, "b", function() {
             return i.a
-        }), n.d(t, !1, function() {}), n.d(t, "a", function() {
-            return r.a
+        });
+        var r = n("GSZ7");
+        n.d(t, "a", function() {
+            return r.b
         })
     },
     VCvu: function(e, t, n) {
@@ -15195,6 +15183,7 @@ webpackJsonp([47], {
             return i.b
         })
     },
+    bhwk: function(e, t) {},
     bnNq: function(e, t) {
         var n = {
             kind: "Document",
@@ -16124,8 +16113,8 @@ webpackJsonp([47], {
             A = n("CSlQ"),
             B = n("L3z0"),
             V = n("5MsU"),
-            W = n("ijOz"),
-            G = n("Tjmd"),
+            G = n("ijOz"),
+            W = n("Tjmd"),
             z = (n("4NZK"), n("Ryxq")),
             H = {
                 allowfullscreen: !0,
@@ -16136,7 +16125,7 @@ webpackJsonp([47], {
                 controls: !0,
                 height: "100%",
                 playsinline: !0,
-                player: W.c.Site,
+                player: G.c.Site,
                 showInfo: !1,
                 showtheatre: !1,
                 trackingProperties: {
@@ -16166,7 +16155,7 @@ webpackJsonp([47], {
                             playSessionID: e.playSessionId
                         }))
                     }, n.onOpenStream = function() {
-                        if (n.props.playerTypeOverride === W.c.Frontpage && n.player)
+                        if (n.props.playerTypeOverride === G.c.Frontpage && n.player)
                             if (n.props.channelLogin) o.o.history.push("/" + n.props.channelLogin);
                             else if (n.props.vodID) {
                             var e = Math.floor(n.player.getCurrentTime());
@@ -16283,7 +16272,7 @@ webpackJsonp([47], {
                             }
                             this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && e.gdpr.consentGiven !== this.lastGDPRConsent && (this.player.setGDPRConsent(e.gdpr.consentGiven), this.lastGDPRConsent = e.gdpr.consentGiven);
                             var c = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (c || Object(G.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void o.n.setVideoPlayerTrackingData({
+                            if (this.player && e.channelLogin && (c || Object(W.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void o.n.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
                             var d = e.collectionID && this.props.collectionID !== e.collectionID,
@@ -16312,7 +16301,7 @@ webpackJsonp([47], {
                             "video-player--fullscreen": this.state.isFullScreen
                         }),
                         t = I("video-player__container", {
-                            "video-player__container--clips": W.a.includes(this.playerType)
+                            "video-player__container--clips": G.a.includes(this.playerType)
                         });
                     return r.createElement("div", {
                         className: I(e),
@@ -16335,7 +16324,7 @@ webpackJsonp([47], {
                         autoplay: !this.props.paused,
                         gdprConsent: this.props.gdpr.consentGiven
                     });
-                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride, this.props.playerTypeOverride === W.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(U.b)(this.props.vodID), o.n.setVideoPlayerTrackingData({
+                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride, this.props.playerTypeOverride === G.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(U.b)(this.props.vodID), o.n.setVideoPlayerTrackingData({
                         vodID: this.props.vodID
                     })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(z.a)(this.props.nextVideoOffset)), this.lastPausedProp = this.props.paused, e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
                     var t = new window.Twitch.Player(this.playerRef, e);
@@ -16475,7 +16464,7 @@ webpackJsonp([47], {
         }), n.d(t, "d", function() {
             return Y
         }), n.d(t, "b", function() {
-            return W.c
+            return G.c
         })
     },
     hdYS: function(e, t, n) {
@@ -17957,13 +17946,6 @@ webpackJsonp([47], {
             return c
         })
     },
-    nWgz: function(e, t, n) {
-        "use strict";
-        t.a = function() {
-            return i.b.get("gdpr_consent_enabled", !1)
-        };
-        var i = n("6sO2")
-    },
     nmYW: function(e, t) {
         var n = {
             kind: "Document",
@@ -18405,20 +18387,20 @@ webpackJsonp([47], {
                         var e = null !== t && t.apply(this, arguments) || this;
                         return e.state = {
                             consentGiven: Object(c.a)()
-                        }, e.dynamicSettingsEnabled = Object(d.a)(), e.logger = s.j.withCategory("with-gdpr-consent"), e.initializeEvidon = function() {
+                        }, e.logger = s.j.withCategory("with-gdpr-consent"), e.initializeEvidon = function() {
                             e.logger.debug("Listening to EvidonManager", {
                                 displayName: n.displayName
-                            }), u.a.addListeners({
+                            }), d.a.addListeners({
                                 consent: e.onConsentChange
-                            }), u.a.loadScripts()
+                            }), d.a.loadScripts()
                         }, e.onConsentChange = function(t) {
                             e.setState({
                                 consentGiven: t
                             })
                         }, e.canInitializeEvidon = function(t) {
-                            return !!(e.isEnabled() && t.data && t.data.requestInfo && (t.data.requestInfo.isFromEEA || e.hasQueryParamOverride()))
-                        }, e.isEnabled = function() {
-                            return e.hasQueryParamOverride() || e.dynamicSettingsEnabled
+                            return !!(e.isGDPRConsentEnabled() && t.data && t.data.requestInfo && (t.data.requestInfo.isFromEEA || e.hasQueryParamOverride()))
+                        }, e.isGDPRConsentEnabled = function() {
+                            return e.hasQueryParamOverride() || Object(u.b)()
                         }, e
                     }
                     return i.__extends(n, t), n.prototype.componentDidMount = function() {
@@ -18427,20 +18409,19 @@ webpackJsonp([47], {
                         var t = this.props.data && !this.props.data.loading && (!e.data || e.data.loading);
                         t && this.canInitializeEvidon(this.props) && this.initializeEvidon()
                     }, n.prototype.componentWillUnmount = function() {
-                        u.a.removeListeners({
+                        d.a.removeListeners({
                             consent: this.onConsentChange
                         })
                     }, n.prototype.render = function() {
-                        var t = !1,
+                        var t = this.isGDPRConsentEnabled(),
                             n = this.props.data && this.props.data.requestInfo,
-                            a = n && (n.isFromEEA || this.hasQueryParamOverride()),
-                            o = n && !a;
-                        (!this.isEnabled() || o || a && this.state.consentGiven) && (t = !0);
-                        var s = {
-                            gdpr: {
-                                consentGiven: t
-                            }
-                        };
+                            a = n && !n.isFromEEA && !this.hasQueryParamOverride(),
+                            o = a || (t ? this.state.consentGiven : Object(u.a)()),
+                            s = {
+                                gdpr: {
+                                    consentGiven: o
+                                }
+                            };
                         return r.createElement(e, i.__assign({}, s, this.props))
                     }, n.prototype.hasQueryParamOverride = function() {
                         return window.location.search.includes("gdpr_override")
@@ -18466,10 +18447,11 @@ webpackJsonp([47], {
             s = n("6sO2"),
             l = n("7vx8"),
             c = n("u2Hz"),
-            d = n("nWgz"),
-            u = n("VCvu"),
-            p = n("mZoE");
-        n.n(p)
+            d = n("VCvu"),
+            u = n("GSZ7"),
+            p = n("mZoE"),
+            m = (n.n(p), n("bhwk"));
+        n.n(m)
     },
     sEID: function(e, t, n) {
         "use strict";
@@ -20568,4 +20550,4 @@ webpackJsonp([47], {
     zAvr: function(e, t) {},
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-1c55a6cedbdd341df602b6b566fdc000.js.map
+//# sourceMappingURL=sites.clips.pages.view-7c863f5e0b7493564c827cba2eb2238c.js.map

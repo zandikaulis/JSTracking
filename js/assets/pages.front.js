@@ -6069,7 +6069,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(131).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(130).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6081,7 +6081,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(129).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6093,7 +6093,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(128).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6105,7 +6105,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(127).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6117,7 +6117,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(126).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6129,7 +6129,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(126).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(125).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6496,29 +6496,28 @@ webpackJsonp([51], {
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.props.data.clip,
-                        n = t && t.curator && t.curator.login === this.props.userLogin,
-                        i = "";
+                        n = "";
                     if (t && t.videoQualities) {
-                        var a = t.videoQualities[0];
-                        i = a.sourceURL
+                        var i = t.videoQualities[0];
+                        n = i.sourceURL
                     }
-                    var r = this.props,
-                        d = r.broadcasterId,
-                        u = r.broadcasterLogin,
-                        m = r.forceShow;
+                    var a = this.props,
+                        r = a.broadcasterId,
+                        d = a.broadcasterLogin,
+                        u = a.forceShow;
                     return o.createElement(s.a, {
                         ownerLogin: this.props.broadcasterLogin,
                         permittedRoles: {
                             editor: !0,
                             staff: !0
                         }
-                    }, function(a) {
-                        var r = a.permitted;
-                        return i && (r || n || m) ? o.createElement(l.a, {
+                    }, function(i) {
+                        var a = i.permitted;
+                        return n && (a || u) ? o.createElement(l.a, {
                             type: l.b.Download,
                             text: e.props.slug,
-                            url: i,
-                            onShareClick: t ? Object(c.c)(t.id, t.game && t.game.name, d, u, e.props.pageType) : void 0
+                            url: n,
+                            onShareClick: t ? Object(c.c)(t.id, t.game && t.game.name, r, d, e.props.pageType) : void 0
                         }) : null
                     })
                 }, t
@@ -7737,34 +7736,6 @@ webpackJsonp([51], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
-                                    value: "curator"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "login"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
                                     value: "broadcaster"
                                 },
                                 arguments: [],
@@ -7836,11 +7807,11 @@ webpackJsonp([51], {
             }],
             loc: {
                 start: 0,
-                end: 152
+                end: 131
             }
         };
         n.loc.source = {
-            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\ncurator {\nid\nlogin\n}\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
+            body: "query ClipsDownloadButton($slug: ID!) {\nclip(slug: $slug) {\nid\nbroadcaster {\nid\n}\ngame {\nid\nname\n}\nvideoQualities {\nsourceURL\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -14764,4 +14735,4 @@ webpackJsonp([51], {
     },
     yF5J: function(e, t) {}
 });
-//# sourceMappingURL=pages.front-a570c3998d697d119a519dc83e52f921.js.map
+//# sourceMappingURL=pages.front-33add0f3bd2266ef949025274451d09b.js.map
